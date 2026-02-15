@@ -3,7 +3,7 @@
 <div class="week-list">
     {{ range .Pages.ByWeight.Reverse }}
     <a href="{{ .RelPermalink }}" class="week-list-card{{ if .Params.current }} current{{ end }}{{ if .Params.upcoming }} upcoming{{ end }}">
-        {{ with .Params.image }}<img src="{{ . }}" alt="" class="week-list-img">{{ end }}
+        {{ with .Params.image }}<img src="{{ . | relURL }}" alt="" class="week-list-img">{{ end }}
         <div class="week-list-body">
             <div class="week-list-meta">
                 <span class="week-num">Week {{ .Params.week_num }}</span>

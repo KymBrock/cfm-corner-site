@@ -1,12 +1,12 @@
 {{ define "main" }}
 <div class="week-nav">
     {{ with .PrevInSection }}<a href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>{{ else }}<span></span>{{ end }}
-    <a href="/weeks/">All Weeks</a>
+    <a href="{{ "weeks/" | relURL }}">All Weeks</a>
     {{ with .NextInSection }}<a href="{{ .RelPermalink }}">{{ .Title }} &rarr;</a>{{ else }}<span></span>{{ end }}
 </div>
 
 <div class="week-header">
-    {{ with .Params.image }}<img src="{{ . }}" alt="{{ $.Params.image_alt }}" class="week-header-img">{{ end }}
+    {{ with .Params.image }}<img src="{{ . | relURL }}" alt="{{ $.Params.image_alt }}" class="week-header-img">{{ end }}
     <div class="week-num" style="font-size: 0.9em; color: var(--sage-mid); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Week {{ .Params.week_num }}</div>
     <h1>{{ .Title }}</h1>
     <div class="week-scripture-ref">{{ .Params.scripture }}</div>
@@ -64,7 +64,7 @@
 
 <div class="week-nav" style="margin-top: 40px;">
     {{ with .PrevInSection }}<a href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>{{ else }}<span></span>{{ end }}
-    <a href="/weeks/">All Weeks</a>
+    <a href="{{ "weeks/" | relURL }}">All Weeks</a>
     {{ with .NextInSection }}<a href="{{ .RelPermalink }}">{{ .Title }} &rarr;</a>{{ else }}<span></span>{{ end }}
 </div>
 {{ end }}

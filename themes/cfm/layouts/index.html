@@ -1,10 +1,10 @@
 {{ define "main" }}
 <!-- Banner -->
 <div class="hero-banner">
-    <video class="hero-video" autoplay muted playsinline poster="/images/banner-poster.jpg">
-        <source src="/images/banner-video.mp4" type="video/mp4">
+    <video class="hero-video" autoplay muted playsinline poster="{{ "images/banner-poster.jpg" | relURL }}">
+        <source src="{{ "images/banner-video.mp4" | relURL }}" type="video/mp4">
     </video>
-    <img src="/images/banner.svg" alt="Come Follow Me Corner" class="hero-svg">
+    <img src="{{ "images/banner.svg" | relURL }}" alt="Come Follow Me Corner" class="hero-svg">
 </div>
 
 <!-- Welcome -->
@@ -36,7 +36,7 @@
     {{ range (where .Site.RegularPages "Section" "weeks") }}
     <a href="{{ .RelPermalink }}" class="week-card{{ if .Params.current }} current{{ end }}{{ if .Params.upcoming }} upcoming{{ end }}">
         {{ if .Params.image }}
-        <img src="{{ .Params.image }}" alt="{{ .Title }}" class="week-card-img" loading="lazy">
+        <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" class="week-card-img" loading="lazy">
         {{ end }}
         <div class="week-card-body">
             <div class="week-num">Week {{ .Params.week_num }}</div>
@@ -52,22 +52,22 @@
 <div class="curriculum-section">
     <h2 class="section-heading">CFM Curriculum</h2>
     <div class="curriculum-grid">
-        <a href="/weeks/" class="curriculum-card active-year">
+        <a href="{{ "weeks/" | relURL }}" class="curriculum-card active-year">
             <div class="curr-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#4a6b52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8L22 12V44L8 40Z"/><path d="M40 8L26 12V44L40 40Z"/><line x1="22" y1="12" x2="26" y2="12"/><line x1="22" y1="44" x2="26" y2="44"/></svg></div>
             <div class="curr-label">Old Testament</div>
             <div class="curr-year">2026</div>
         </a>
-        <a href="/archive/new-testament/" class="curriculum-card">
+        <a href="{{ "archive/new-testament/" | relURL }}" class="curriculum-card">
             <div class="curr-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8L22 12V44L8 40Z"/><path d="M40 8L26 12V44L40 40Z"/><line x1="22" y1="12" x2="26" y2="12"/><line x1="22" y1="44" x2="26" y2="44"/></svg></div>
             <div class="curr-label">New Testament</div>
             <div class="curr-year">Archive</div>
         </a>
-        <a href="/archive/book-of-mormon/" class="curriculum-card">
+        <a href="{{ "archive/book-of-mormon/" | relURL }}" class="curriculum-card">
             <div class="curr-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8L22 12V44L8 40Z"/><path d="M40 8L26 12V44L40 40Z"/><line x1="22" y1="12" x2="26" y2="12"/><line x1="22" y1="44" x2="26" y2="44"/></svg></div>
             <div class="curr-label">Book of Mormon</div>
             <div class="curr-year">Archive</div>
         </a>
-        <a href="/archive/doctrine-covenants/" class="curriculum-card">
+        <a href="{{ "archive/doctrine-covenants/" | relURL }}" class="curriculum-card">
             <div class="curr-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8L22 12V44L8 40Z"/><path d="M40 8L26 12V44L40 40Z"/><line x1="22" y1="12" x2="26" y2="12"/><line x1="22" y1="44" x2="26" y2="44"/></svg></div>
             <div class="curr-label">D &amp; C</div>
             <div class="curr-year">Archive</div>
