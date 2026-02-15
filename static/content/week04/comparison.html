@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Fall: Genesis & Moses Side-by-Side | Week 04</title>
+    <style>
+        :root {
+            --genesis-bg: #DBEAFE;
+            --genesis-border: #3B82F6;
+            --moses-bg: #D1FAE5;
+            --moses-border: #10B981;
+            --header-bg: #1E3A5F;
+            --text-primary: #1F2937;
+            --text-secondary: #4B5563;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: #F8FAFC;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--header-bg) 0%, #2D4A6F 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header .subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .nav-bar {
+            background: #334155;
+            padding: 0.75rem;
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 85px;
+            z-index: 99;
+        }
+
+        .nav-btn {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-family: -apple-system, sans-serif;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .section-header {
+            background: linear-gradient(135deg, var(--header-bg) 0%, #2D4A6F 100%);
+            color: white;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-header h2 {
+            font-size: 1.2rem;
+            font-family: -apple-system, sans-serif;
+        }
+
+        .section-header .toggle {
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+        }
+
+        .section.collapsed .toggle {
+            transform: rotate(-90deg);
+        }
+
+        .section.collapsed .section-content {
+            display: none;
+        }
+
+        .section-content {
+            padding: 1.5rem;
+        }
+
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 900px) {
+            .comparison-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .column-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .col-title {
+            padding: 0.75rem 1rem;
+            font-weight: bold;
+            text-align: center;
+            font-size: 1rem;
+            font-family: -apple-system, sans-serif;
+            border-radius: 8px;
+        }
+
+        .col-title.genesis {
+            background: var(--genesis-bg);
+            color: #1E40AF;
+            border: 2px solid var(--genesis-border);
+        }
+
+        .col-title.moses {
+            background: var(--moses-bg);
+            color: #065F46;
+            border: 2px solid var(--moses-border);
+        }
+
+        .verse-box {
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            min-height: 60px;
+        }
+
+        .verse-box.genesis {
+            background: var(--genesis-bg);
+            border-left: 4px solid var(--genesis-border);
+        }
+
+        .verse-box.moses {
+            background: var(--moses-bg);
+            border-left: 4px solid var(--moses-border);
+        }
+
+        .verse-box.empty {
+            background: #F3F4F6;
+            border-left: 4px solid #9CA3AF;
+            color: #6B7280;
+            font-style: italic;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .verse-box.unique-moses {
+            background: linear-gradient(135deg, #D1FAE5 0%, #A7F3D0 100%);
+            border-left: 4px solid var(--moses-border);
+        }
+
+        .verse-num {
+            font-weight: bold;
+            color: var(--header-bg);
+            margin-right: 0.25rem;
+        }
+
+        .chapter-ref {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-family: -apple-system, sans-serif;
+            margin-bottom: 0.25rem;
+        }
+
+        .topic-divider {
+            background: linear-gradient(135deg, var(--header-bg) 0%, #2D4A6F 100%);
+            color: white;
+            padding: 0.75rem 1rem;
+            margin: 1.5rem 0 1rem 0;
+            border-radius: 8px;
+            font-weight: bold;
+            font-family: -apple-system, sans-serif;
+            text-align: center;
+        }
+
+        /* Thematic highlight colors for text DIFFERENCES between versions */
+        /* Satan/Serpent identity - Red/Coral */
+        .diff-satan {
+            background: #FCA5A5;
+            padding: 1px 3px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+
+        /* Divine identity/voice (I, the Lord God) - Purple */
+        .diff-divine {
+            background: #DDD6FE;
+            padding: 1px 3px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+
+        /* Redemption/Gospel/Christ - Gold */
+        .diff-redemption {
+            background: #FDE68A;
+            padding: 1px 3px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+
+        /* Consequences/Curses/Agency - Orange */
+        .diff-consequence {
+            background: #FDBA74;
+            padding: 1px 3px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+
+        /* Clarifying details/narrative additions - Teal */
+        .diff-detail {
+            background: #99F6E4;
+            padding: 1px 3px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+
+        /* Secret combinations/murder for gain - Dark red */
+        .diff-secret {
+            background: #F9A8D4;
+            padding: 1px 3px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+
+        /* Blue Letter Bible links */
+        .blb-link {
+            color: #2563EB;
+            text-decoration: none;
+            border-bottom: 1px dotted #2563EB;
+            font-weight: 500;
+        }
+
+        .blb-link:hover {
+            color: #1D4ED8;
+            border-bottom-style: solid;
+        }
+
+        .blb-chapter {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            color: #2563EB;
+            text-decoration: none;
+            font-size: 0.75rem;
+            padding: 0.15rem 0.4rem;
+            background: rgba(37, 99, 235, 0.1);
+            border-radius: 4px;
+            margin-left: 0.5rem;
+        }
+
+        .blb-chapter:hover {
+            background: rgba(37, 99, 235, 0.2);
+        }
+
+        .hebrew-word {
+            font-family: 'SBL Hebrew', 'Ezra SIL', 'Times New Roman', serif;
+            font-size: 1.1em;
+            direction: rtl;
+            unicode-bidi: isolate;
+        }
+
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            padding: 1rem;
+            background: #F1F5F9;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            font-family: -apple-system, sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+
+        .legend-color.genesis-unique { background: var(--genesis-bg); border: 2px solid var(--genesis-border); }
+        .legend-color.moses-unique { background: linear-gradient(135deg, #D1FAE5 0%, #A7F3D0 100%); border: 2px solid var(--moses-border); }
+        .legend-color.empty { background: #F3F4F6; border: 1px solid #9CA3AF; }
+        /* Thematic color legend */
+        .legend-color.satan { background: #FCA5A5; }
+        .legend-color.divine { background: #DDD6FE; }
+        .legend-color.redemption { background: #FDE68A; }
+        .legend-color.consequence { background: #FDBA74; }
+        .legend-color.detail { background: #99F6E4; }
+        .legend-color.secret { background: #F9A8D4; }
+
+        .note-box {
+            background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+            border: 1px solid var(--genesis-border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            font-family: -apple-system, sans-serif;
+        }
+
+        .note-box strong {
+            color: #1D4ED8;
+        }
+
+        .key-insight {
+            background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+            border: 2px solid #F59E0B;
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .key-insight h3 {
+            color: #92400E;
+            margin-bottom: 0.5rem;
+            font-family: -apple-system, sans-serif;
+            font-size: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            font-family: -apple-system, sans-serif;
+        }
+
+        footer a {
+            color: var(--genesis-border);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 { font-size: 1.4rem; }
+            .nav-btn { padding: 0.3rem 0.6rem; font-size: 0.7rem; }
+            .verse-box { font-size: 0.9rem; }
+        }
+
+        @media print {
+            .header, .nav-bar { position: relative; }
+            .section { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>The Fall: Two Witnesses Side-by-Side</h1>
+        <div class="subtitle">Genesis 3–4 & Moses 4–5 | Come Follow Me Week 04</div>
+    </div>
+
+    <div class="nav-bar">
+        <a class="nav-btn" href="#premortal">Pre-Fall Context</a>
+        <a class="nav-btn" href="#temptation">Temptation</a>
+        <a class="nav-btn" href="#fall">The Fall</a>
+        <a class="nav-btn" href="#consequences">Consequences</a>
+        <a class="nav-btn" href="#expulsion">Expulsion</a>
+        <a class="nav-btn" href="#postfall">After Eden</a>
+        <a class="nav-btn" href="#offerings">Offerings</a>
+        <a class="nav-btn" href="#murder">Murder</a>
+        <a class="nav-btn" href="#aftermath">Aftermath</a>
+    </div>
+
+    <div class="container">
+
+        <div class="legend" style="flex-direction: column; gap: 1rem;">
+            <div style="display: flex; flex-wrap: wrap; gap: 1.5rem;">
+                <div class="legend-item">
+                    <div class="legend-color genesis-unique"></div>
+                    <span>Genesis text</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color moses-unique"></div>
+                    <span>Moses text (unique sections)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color empty"></div>
+                    <span>No parallel in this account</span>
+                </div>
+            </div>
+            <div style="border-top: 1px solid #CBD5E1; padding-top: 0.75rem;">
+                <strong style="display: block; margin-bottom: 0.5rem;">Highlighted text = Unique wording between versions, color-coded by theme:</strong>
+                <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                    <div class="legend-item">
+                        <div class="legend-color satan"></div>
+                        <span>Satan/Serpent Identity</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color divine"></div>
+                        <span>Divine Voice ("I, the Lord God")</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color redemption"></div>
+                        <span>Redemption/Gospel/Christ</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color consequence"></div>
+                        <span>Consequences/Agency</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color detail"></div>
+                        <span>Clarifying Details</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color secret"></div>
+                        <span>Secret Combinations</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRE-FALL CONTEXT -->
+        <div class="section" id="premortal">
+            <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+                <h2>Pre-Fall Context: Satan's Origin (Moses 4:1-4)</h2>
+                <span class="toggle">▼</span>
+            </div>
+            <div class="section-content">
+                <div class="column-header">
+                    <div class="col-title genesis">Genesis</div>
+                    <div class="col-title moses">Moses 4:1-4</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box empty">No parallel — Genesis begins with the serpent in the garden</div>
+                    <div class="verse-box unique-moses">
+                        <div class="chapter-ref">Moses 4:1</div>
+                        <span class="verse-num">1</span> <span class="diff-divine">And I, the Lord God, spake unto Moses, saying:</span> That <span class="diff-satan">Satan</span>, whom thou hast commanded in the name of <span class="diff-redemption">mine Only Begotten</span>, is the same which was from the beginning, and he came before me, saying—Behold, here am I, send me, I will be thy son, and <span class="diff-redemption">I will redeem all mankind</span>, that one soul shall not be lost, and surely I will do it; wherefore <span class="diff-consequence">give me thine honor</span>.
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box empty"></div>
+                    <div class="verse-box unique-moses">
+                        <div class="chapter-ref">Moses 4:2</div>
+                        <span class="verse-num">2</span> But, behold, <span class="diff-redemption">my Beloved Son, which was my Beloved and Chosen from the beginning</span>, said unto me—<span class="diff-redemption">Father, thy will be done, and the glory be thine forever.</span>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box empty"></div>
+                    <div class="verse-box unique-moses">
+                        <div class="chapter-ref">Moses 4:3</div>
+                        <span class="verse-num">3</span> Wherefore, because that <span class="diff-satan">Satan rebelled against me</span>, and <span class="diff-consequence">sought to destroy the agency of man</span>, which <span class="diff-divine">I, the Lord God</span>, had given him, and also, that I should give unto him mine own power; by the power of <span class="diff-redemption">mine Only Begotten</span>, I caused that <span class="diff-satan">he should be cast down</span>;
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box empty"></div>
+                    <div class="verse-box unique-moses">
+                        <div class="chapter-ref">Moses 4:4</div>
+                        <span class="verse-num">4</span> And <span class="diff-satan">he became Satan, yea, even the devil, the father of all lies, to deceive and to blind men, and to lead them captive at his will</span>, even as many as would not hearken unto my voice.
+                    </div>
+                </div>
+
+                <div class="key-insight">
+                    <h3>Key Restoration</h3>
+                    <p>These four verses are entirely unique to Moses. Genesis provides no backstory about Satan's identity, his premortal rebellion, or his motivation to destroy human agency.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- THE TEMPTATION -->
+        <div class="section" id="temptation">
+            <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+                <h2>The Serpent & The Temptation</h2>
+                <span class="toggle">▼</span>
+            </div>
+            <div class="section-content">
+                <div class="column-header">
+                    <div class="col-title genesis">Genesis 3:1-5 <a href="https://www.blueletterbible.org/kjv/gen/3/1/t_concl_3001" target="_blank" class="blb-chapter" title="View Genesis 3 Interlinear">BLB</a></div>
+                    <div class="col-title moses">Moses 4:5-11</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 3:1</div>
+                        <span class="verse-num">1</span> Now the <a href="https://www.blueletterbible.org/lexicon/h5175/kjv/wlc/0-1/" target="_blank" class="blb-link" title="נָחָשׁ (nachash) - serpent">serpent</a> was more <span class="diff-detail"><a href="https://www.blueletterbible.org/lexicon/h6175/kjv/wlc/0-1/" target="_blank" class="blb-link" title="עָרוּם (arum) - subtle, cunning">subtil</a></span> than any beast of the field which the <span class="diff-divine">LORD God</span> had made. And he said unto the <a href="https://www.blueletterbible.org/lexicon/h802/kjv/wlc/0-1/" target="_blank" class="blb-link" title="אִשָּׁה (ishshah) - woman, wife">woman</a>, Yea, hath God said, Ye shall not <a href="https://www.blueletterbible.org/lexicon/h398/kjv/wlc/0-1/" target="_blank" class="blb-link" title="אָכַל (akal) - to eat, consume">eat</a> of every <a href="https://www.blueletterbible.org/lexicon/h6086/kjv/wlc/0-1/" target="_blank" class="blb-link" title="עֵץ (etz) - tree">tree</a> of the <a href="https://www.blueletterbible.org/lexicon/h1588/kjv/wlc/0-1/" target="_blank" class="blb-link" title="גַּן (gan) - garden, enclosure">garden</a>?
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 4:5</div>
+                        <span class="verse-num">5</span> And now the serpent was more <span class="diff-detail">subtle</span> than any beast of the field which <span class="diff-divine">I, the Lord God</span>, had made.
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box empty"></div>
+                    <div class="verse-box unique-moses">
+                        <div class="chapter-ref">Moses 4:6</div>
+                        <span class="verse-num">6</span> And <span class="diff-satan">Satan put it into the heart of the serpent</span>, (for he had drawn away many after him,) and he sought also to beguile Eve, for <span class="diff-satan">he knew not the mind of God</span>, wherefore he sought to destroy the world.
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box empty"></div>
+                    <div class="verse-box unique-moses">
+                        <div class="chapter-ref">Moses 4:7</div>
+                        <span class="verse-num">7</span> And he said unto the woman: Yea, hath God said—Ye shall not eat of every tree of the garden? <span class="diff-satan">(And he spake by the mouth of the serpent.)</span>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 3:2-3</div>
+                        <span class="verse-num">2</span> And the woman said unto the serpent, We may eat of the fruit of the trees of the garden:
+                        <span class="verse-num">3</span> But of the fruit of the tree which is in the midst of the garden, God hath said, Ye shall not eat of it, neither shall ye touch it, lest ye die.
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 4:8-9</div>
+                        <span class="verse-num">8</span> And the woman said unto the serpent: We may eat of the fruit of the trees of the garden;
+                        <span class="verse-num">9</span> But of the fruit of the tree which <span class="diff-detail">thou beholdest</span> in the midst of the garden, God hath said—Ye shall not eat of it, neither shall ye touch it, lest ye die.
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 3:4-5</div>
+                        <span class="verse-num">4</span> And the serpent said unto the woman, Ye shall not surely <a href="https://www.blueletterbible.org/lexicon/h4191/kjv/wlc/0-1/" target="_blank" class="blb-link" title="מוּת (muth) - to die">die</a>:
+                        <span class="verse-num">5</span> For God doth know that in the day ye eat thereof, then your eyes shall be opened, and ye shall be as gods, knowing good and evil.
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 4:10-11</div>
+                        <span class="verse-num">10</span> And the serpent said unto the woman: Ye shall not surely die;
+                        <span class="verse-num">11</span> For God doth know that in the day ye eat thereof, then your eyes shall be opened, and ye shall be as gods, knowing good and evil.
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <strong>Key Differences:</strong> Moses 4:6 reveals Satan "put it into the heart of the serpent" and "knew not the mind of God." Moses 4:7 adds "he spake by the mouth of the serpent." These explain who was really speaking—information Genesis does not provide.
+                </div>
+            </div>
+        </div>
+
+        <!-- THE FALL -->
+        <div class="section" id="fall">
+            <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+                <h2>The Fall: The Choice & Awakening</h2>
+                <span class="toggle">▼</span>
+            </div>
+            <div class="section-content">
+                <div class="column-header">
+                    <div class="col-title genesis">Genesis 3:6-13 <a href="https://www.blueletterbible.org/kjv/gen/3/6/t_concl_3006" target="_blank" class="blb-chapter" title="View Genesis 3 Interlinear">BLB</a></div>
+                    <div class="col-title moses">Moses 4:12-19</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 3:6</div>
+                        <span class="verse-num">6</span> And when the woman saw that the tree was good for food, and that it was pleasant to the eyes, and a tree to be desired to make <span class="diff-detail">one</span> wise, she took of the fruit thereof, and did eat, and gave also unto her husband with her; and he did eat.
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 4:12</div>
+                        <span class="verse-num">12</span> And when the woman saw that the tree was good for food, and that it <span class="diff-detail">became</span> pleasant to the eyes, and a tree to be desired to make <span class="diff-detail">her</span> wise, she took of the fruit thereof, and did eat, and also gave unto her husband with her, and he did eat.
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 3:7</div>
+                        <span class="verse-num">7</span> And the eyes of them both were opened, and they knew that they were <a href="https://www.blueletterbible.org/lexicon/h5903/kjv/wlc/0-1/" target="_blank" class="blb-link" title="עֵירֹם (eyrom) - naked, nakedness">naked</a>; and they sewed fig leaves together, and made themselves aprons.
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 4:13</div>
+                        <span class="verse-num">13</span> And the eyes of them both were opened, and they knew that they <span class="diff-detail">had been</span> naked. And they sewed fig leaves together and made themselves aprons.
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 3:8</div>
+                        <span class="verse-num">8</span> And they heard the voice of the LORD God walking in the garden in the cool of the day: and Adam and his wife hid themselves from the presence of the LORD God amongst the trees of the garden.
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 4:14</div>
+                        <span class="verse-num">14</span> And they heard the voice of the Lord God, <span class="diff-detail">as they were walking</span> in the garden, in the cool of the day; and Adam and his wife <span class="diff-detail">went to hide</span> themselves from the presence of the Lord God amongst the trees of the garden.
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 3:9</div>
+                        <span class="verse-num">9</span> And the LORD God called unto Adam, and said unto him, <span class="diff-detail">Where art thou?</span>
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 4:15</div>
+                        <span class="verse-num">15</span> And <span class="diff-divine">I,</span> the Lord God, called unto Adam, and said unto him: <span class="diff-detail">Where goest thou?</span>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 3:10</div>
+                        <span class="verse-num">10</span> And he said, I heard thy voice in the garden, and I was afraid, because I was naked; and I hid myself.
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 4:16</div>
+                        <span class="verse-num">16</span> And he said: I heard thy voice in the garden, and I was afraid, because I <span class="diff-detail">beheld that I was</span> naked, and I hid myself.
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 3:11</div>
+                        <span class="verse-num">11</span> And he said, Who told thee that thou wast naked? Hast thou eaten of the tree, whereof I commanded thee that thou shouldest not eat?
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 4:17</div>
+                        <span class="verse-num">17</span> And <span class="diff-divine">I,</span> the Lord God, said unto Adam: Who told thee thou wast naked? Hast thou eaten of the tree whereof I commanded thee that thou shouldst not eat, <span class="diff-consequence">if so thou shouldst surely die?</span>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 3:12</div>
+                        <span class="verse-num">12</span> And the man said, The woman whom thou gavest <span class="diff-detail">to be with me</span>, she gave me of the tree, and I did eat.
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 4:18</div>
+                        <span class="verse-num">18</span> And the man said: The woman thou gavest me, <span class="diff-consequence">and commandest that she should remain with me</span>, she gave me of the fruit of the tree and I did eat.
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 3:13</div>
+                        <span class="verse-num">13</span> And the LORD God said unto the woman, What is this that thou hast done? And the woman said, The serpent <a href="https://www.blueletterbible.org/lexicon/h5377/kjv/wlc/0-1/" target="_blank" class="blb-link" title="נָשָׁא (nasha) - to beguile, deceive">beguiled</a> me, and I did eat.
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 4:19</div>
+                        <span class="verse-num">19</span> And <span class="diff-divine">I,</span> the Lord God, said unto the woman: What is this <span class="diff-detail">thing</span> which thou hast done? And the woman said: The serpent beguiled me, and I did eat.
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <strong>Key Addition (Moses 4:18):</strong> Adam says God "commandest that she should remain with me"—a commandment not mentioned in Genesis. This reframes Adam's choice: he stayed with Eve because God commanded it, not merely because he preferred her company.
+                </div>
+            </div>
+        </div>
+
+        <!-- CONSEQUENCES -->
+        <div class="section" id="consequences">
+            <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+                <h2>The Consequences: Curses & Promises</h2>
+                <span class="toggle">▼</span>
+            </div>
+            <div class="section-content">
+                <div class="column-header">
+                    <div class="col-title genesis">Genesis 3:14-19 <a href="https://www.blueletterbible.org/kjv/gen/3/14/t_concl_3014" target="_blank" class="blb-chapter" title="View Genesis 3 Interlinear">BLB</a></div>
+                    <div class="col-title moses">Moses 4:20-25</div>
+                </div>
+
+                <div class="topic-divider">To the Serpent</div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 3:14</div>
+                        <span class="verse-num">14</span> And the LORD God said unto the serpent, Because thou hast done this, thou art <a href="https://www.blueletterbible.org/lexicon/h779/kjv/wlc/0-1/" target="_blank" class="blb-link" title="אָרַר (arar) - to curse">cursed</a> above all cattle, and above every beast of the field; upon thy belly shalt thou go, and dust shalt thou eat all the days of thy life:
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 4:20</div>
+                        <span class="verse-num">20</span> And <span class="diff-divine">I,</span> the Lord God, said unto the serpent: Because thou hast done this thou <span class="diff-detail">shalt be</span> cursed above all cattle, and above every beast of the field; upon thy belly shalt thou go, and dust shalt thou eat all the days of thy life;
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 3:15</div>
+                        <span class="verse-num">15</span> And I will put <a href="https://www.blueletterbible.org/lexicon/h342/kjv/wlc/0-1/" target="_blank" class="blb-link" title="אֵיבָה (eybah) - enmity, hostility">enmity</a> between thee and the woman, and between thy <a href="https://www.blueletterbible.org/lexicon/h2233/kjv/wlc/0-1/" target="_blank" class="blb-link" title="זֶרַע (zera) - seed, offspring">seed</a> and her seed; <span class="diff-redemption">it</span> shall <a href="https://www.blueletterbible.org/lexicon/h7779/kjv/wlc/0-1/" target="_blank" class="blb-link" title="שׁוּף (shuph) - bruise, crush">bruise</a> thy <a href="https://www.blueletterbible.org/lexicon/h7218/kjv/wlc/0-1/" target="_blank" class="blb-link" title="רֹאשׁ (rosh) - head">head</a>, and thou shalt bruise his <a href="https://www.blueletterbible.org/lexicon/h6119/kjv/wlc/0-1/" target="_blank" class="blb-link" title="עָקֵב (aqeb) - heel">heel</a>.
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 4:21</div>
+                        <span class="verse-num">21</span> And I will put enmity between thee and the woman, between thy seed and her seed; and <span class="diff-redemption">he</span> shall bruise thy head, and thou shalt bruise his heel.
+                    </div>
+                </div>
+
+                <div class="topic-divider">To the Woman</div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 3:16</div>
+                        <span class="verse-num">16</span> Unto the woman he said, I will greatly multiply thy <a href="https://www.blueletterbible.org/lexicon/h6093/kjv/wlc/0-1/" target="_blank" class="blb-link" title="עִצָּבוֹן (itstsabon) - pain, toil, sorrow">sorrow</a> and thy <a href="https://www.blueletterbible.org/lexicon/h2032/kjv/wlc/0-1/" target="_blank" class="blb-link" title="הֵרוֹן (herown) - conception, pregnancy">conception</a>; in sorrow thou shalt bring forth <a href="https://www.blueletterbible.org/lexicon/h1121/kjv/wlc/0-1/" target="_blank" class="blb-link" title="בֵּן (ben) - son, children">children</a>; and thy <a href="https://www.blueletterbible.org/lexicon/h8669/kjv/wlc/0-1/" target="_blank" class="blb-link" title="תְּשׁוּקָה (teshuqah) - desire, longing">desire</a> shall be to thy <a href="https://www.blueletterbible.org/lexicon/h376/kjv/wlc/0-1/" target="_blank" class="blb-link" title="אִישׁ (ish) - man, husband">husband</a>, and he shall <a href="https://www.blueletterbible.org/lexicon/h4910/kjv/wlc/0-1/" target="_blank" class="blb-link" title="מָשַׁל (mashal) - to rule, have dominion">rule</a> over thee.
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 4:22</div>
+                        <span class="verse-num">22</span> Unto the woman, <span class="diff-divine">I,</span> the Lord God, said: I will greatly multiply thy sorrow and thy conception. In sorrow thou shalt bring forth children, and thy desire shall be to thy husband, and he shall rule over thee.
+                    </div>
+                </div>
+
+                <div class="topic-divider">To Adam</div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 3:17</div>
+                        <span class="verse-num">17</span> And unto Adam he said, Because thou hast hearkened unto the voice of thy wife, and hast eaten of the tree, of which I commanded thee, saying, Thou shalt not eat of it: cursed is the ground for thy sake; in sorrow shalt thou eat of it all the days of thy life;
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 4:23</div>
+                        <span class="verse-num">23</span> And unto Adam, <span class="diff-divine">I,</span> the Lord God, said: Because thou hast hearkened unto the voice of thy wife, and hast eaten of the <span class="diff-detail">fruit of the</span> tree of which I commanded thee, saying—Thou shalt not eat of it, cursed <span class="diff-detail">shall be</span> the ground for thy sake; in sorrow shalt thou eat of it all the days of thy life.
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 3:18</div>
+                        <span class="verse-num">18</span> <a href="https://www.blueletterbible.org/lexicon/h6975/kjv/wlc/0-1/" target="_blank" class="blb-link" title="קוֹץ (qots) - thorn, thornbush">Thorns</a> also and <a href="https://www.blueletterbible.org/lexicon/h1863/kjv/wlc/0-1/" target="_blank" class="blb-link" title="דַּרְדַּר (dardar) - thistle, thorn">thistles</a> shall it bring forth to thee; and thou shalt eat the herb of the field;
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 4:24</div>
+                        <span class="verse-num">24</span> Thorns also, and thistles shall it bring forth to thee, and thou shalt eat the herb of the field.
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 3:19</div>
+                        <span class="verse-num">19</span> In the sweat of thy <a href="https://www.blueletterbible.org/lexicon/h639/kjv/wlc/0-1/" target="_blank" class="blb-link" title="אַף (aph) - face, nose, nostril">face</a> shalt thou eat <a href="https://www.blueletterbible.org/lexicon/h3899/kjv/wlc/0-1/" target="_blank" class="blb-link" title="לֶחֶם (lechem) - bread, food">bread</a>, till thou return unto the <a href="https://www.blueletterbible.org/lexicon/h127/kjv/wlc/0-1/" target="_blank" class="blb-link" title="אֲדָמָה (adamah) - ground, land, earth">ground</a>; for out of it wast thou taken: for <a href="https://www.blueletterbible.org/lexicon/h6083/kjv/wlc/0-1/" target="_blank" class="blb-link" title="עָפָר (aphar) - dust, dry earth">dust</a> thou art, and unto dust shalt thou return.
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 4:25</div>
+                        <span class="verse-num">25</span> <span class="diff-detail">By</span> the sweat of thy face shalt thou eat bread, until thou shalt return unto the ground—<span class="diff-consequence">for thou shalt surely die</span>—for out of it wast thou taken: for dust thou <span class="diff-detail">wast</span>, and unto dust shalt thou return.
+                    </div>
+                </div>
+
+                <div class="key-insight">
+                    <h3>The Protoevangelium (First Gospel)</h3>
+                    <p>Genesis 3:15 says "<span class="diff-redemption">it</span> shall bruise thy head" while Moses 4:21 says "<span class="diff-redemption">he</span> shall bruise thy head"—clarifying this is a person (Christ), not just an abstract "seed." This is the first prophecy of the Savior.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EXPULSION -->
+        <div class="section" id="expulsion">
+            <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+                <h2>Expulsion from Eden</h2>
+                <span class="toggle">▼</span>
+            </div>
+            <div class="section-content">
+                <div class="column-header">
+                    <div class="col-title genesis">Genesis 3:20-24 <a href="https://www.blueletterbible.org/kjv/gen/3/20/t_concl_3020" target="_blank" class="blb-chapter" title="View Genesis 3 Interlinear">BLB</a></div>
+                    <div class="col-title moses">Moses 4:26-32</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 3:20</div>
+                        <span class="verse-num">20</span> And Adam called his <a href="https://www.blueletterbible.org/lexicon/h802/kjv/wlc/0-1/" target="_blank" class="blb-link" title="אִשָּׁה (ishshah) - woman, wife">wife</a>'s name <a href="https://www.blueletterbible.org/lexicon/h2332/kjv/wlc/0-1/" target="_blank" class="blb-link" title="חַוָּה (Chavvah) - Eve, meaning 'life-giver'">Eve</a>; because she was the <a href="https://www.blueletterbible.org/lexicon/h517/kjv/wlc/0-1/" target="_blank" class="blb-link" title="אֵם (em) - mother">mother</a> of all <a href="https://www.blueletterbible.org/lexicon/h2416/kjv/wlc/0-1/" target="_blank" class="blb-link" title="חַי (chay) - living, alive">living</a>.
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 4:26</div>
+                        <span class="verse-num">26</span> And Adam called his wife's name Eve, because she was the mother of all living; <span class="diff-divine">for thus have I, the Lord God, called the first of all women, which are many</span>.
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 3:21</div>
+                        <span class="verse-num">21</span> Unto Adam also and to his wife did the LORD God make <a href="https://www.blueletterbible.org/lexicon/h3801/kjv/wlc/0-1/" target="_blank" class="blb-link" title="כְּתֹנֶת (kethoneth) - coat, tunic, garment">coats</a> of <a href="https://www.blueletterbible.org/lexicon/h5785/kjv/wlc/0-1/" target="_blank" class="blb-link" title="עוֹר (or) - skin, hide">skins</a>, and <a href="https://www.blueletterbible.org/lexicon/h3847/kjv/wlc/0-1/" target="_blank" class="blb-link" title="לָבַשׁ (labash) - to clothe, put on garments">clothed</a> them.
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 4:27</div>
+                        <span class="verse-num">27</span> Unto Adam, and also unto his wife, did <span class="diff-divine">I,</span> the Lord God, make coats of skins, and clothed them.
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 3:22</div>
+                        <span class="verse-num">22</span> And the LORD God said, Behold, the man is become as one of us, to know <a href="https://www.blueletterbible.org/lexicon/h2896/kjv/wlc/0-1/" target="_blank" class="blb-link" title="טוֹב (tov) - good">good</a> and <a href="https://www.blueletterbible.org/lexicon/h7451/kjv/wlc/0-1/" target="_blank" class="blb-link" title="רַע (ra) - evil, bad">evil</a>: and now, lest he put forth his hand, and take also of the <a href="https://www.blueletterbible.org/lexicon/h6086/kjv/wlc/0-1/" target="_blank" class="blb-link" title="עֵץ (etz) - tree">tree</a> of <a href="https://www.blueletterbible.org/lexicon/h2416/kjv/wlc/0-1/" target="_blank" class="blb-link" title="חַי (chay) - life, living">life</a>, and eat, and live for ever:
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 4:28</div>
+                        <span class="verse-num">28</span> And <span class="diff-divine">I,</span> the Lord God, said <span class="diff-redemption">unto mine Only Begotten</span>: Behold, the man is become as one of us to know good and evil; and now lest he put forth his hand and <span class="diff-detail">partake</span> also of the tree of life, and eat and live forever,
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 3:23</div>
+                        <span class="verse-num">23</span> Therefore the LORD God sent him forth from the garden of Eden, to till the ground from whence he was taken.
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 4:29</div>
+                        <span class="verse-num">29</span> Therefore <span class="diff-divine">I,</span> the Lord God, <span class="diff-detail">will send</span> him forth from the Garden of Eden, to till the ground from whence he was taken;
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box empty"></div>
+                    <div class="verse-box unique-moses">
+                        <div class="chapter-ref">Moses 4:30</div>
+                        <span class="verse-num">30</span> <span class="diff-divine">For as I, the Lord God, liveth, even so my words cannot return void, for as they go forth out of my mouth they must be fulfilled.</span>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 3:24</div>
+                        <span class="verse-num">24</span> So he drove out the man; and he placed at the east of the garden of Eden <a href="https://www.blueletterbible.org/lexicon/h3742/kjv/wlc/0-1/" target="_blank" class="blb-link" title="כְּרוּב (keruv) - cherub, angelic being">Cherubims</a>, and a <a href="https://www.blueletterbible.org/lexicon/h3858/kjv/wlc/0-1/" target="_blank" class="blb-link" title="לַהַט (lahat) - flame, flaming">flaming</a> <a href="https://www.blueletterbible.org/lexicon/h2719/kjv/wlc/0-1/" target="_blank" class="blb-link" title="חֶרֶב (chereb) - sword">sword</a> which <a href="https://www.blueletterbible.org/lexicon/h2015/kjv/wlc/0-1/" target="_blank" class="blb-link" title="הָפַךְ (haphak) - to turn, overturn">turned</a> every <a href="https://www.blueletterbible.org/lexicon/h1870/kjv/wlc/0-1/" target="_blank" class="blb-link" title="דֶּרֶךְ (derek) - way, road, path">way</a>, to keep the way of the tree of life.
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 4:31</div>
+                        <span class="verse-num">31</span> So <span class="diff-divine">I</span> drove out the man, and <span class="diff-divine">I</span> placed at the east of the Garden of Eden, cherubim and a flaming sword, which turned every way to keep the way of the tree of life.
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box empty"></div>
+                    <div class="verse-box unique-moses">
+                        <div class="chapter-ref">Moses 4:32</div>
+                        <span class="verse-num">32</span> <span class="diff-detail">(And these are the words which I spake unto my servant Moses, and they are true even as I will; and I have spoken them unto you. See thou show them unto no man, until I command you, except to them that believe. Amen.)</span>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <strong>Key Differences:</strong> Moses 4:28 adds "unto mine Only Begotten"—Christ is present. Moses 4:30 is entirely unique: God's words "cannot return void." Moses 4:32 is a colophon explaining the text's origin and sacred nature.
+                </div>
+            </div>
+        </div>
+
+        <!-- POST-FALL: LIFE AFTER EDEN -->
+        <div class="section" id="postfall">
+            <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+                <h2>Life After Eden: The Gospel Restored (Moses 5:1-15)</h2>
+                <span class="toggle">▼</span>
+            </div>
+            <div class="section-content">
+                <div class="column-header">
+                    <div class="col-title genesis">Genesis 4:1-2 <a href="https://www.blueletterbible.org/kjv/gen/4/1/t_concl_4001" target="_blank" class="blb-chapter" title="View Genesis 4 Interlinear">BLB</a></div>
+                    <div class="col-title moses">Moses 5:1-15</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box empty">Genesis 4 skips directly to Cain and Abel. All 15 verses of Moses 5:1-15 are unique restoration with no parallel in Genesis.</div>
+                    <div class="verse-box unique-moses">
+                        <div class="chapter-ref">Moses 5:1</div>
+                        <span class="verse-num">1</span> And it came to pass that after <span class="diff-divine">I, the Lord God</span>, had driven them out, that Adam began to till the earth, and to have dominion over all the beasts of the field, and to eat his bread by the sweat of his brow, as <span class="diff-divine">I the Lord</span> had commanded him. And Eve, also, his wife, did labor with him.
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box empty"></div>
+                    <div class="verse-box unique-moses">
+                        <div class="chapter-ref">Moses 5:2-3</div>
+                        <span class="verse-num">2</span> <span class="diff-detail">And Adam knew his wife, and she bare unto him sons and daughters, and they began to multiply and to replenish the earth.</span>
+                        <span class="verse-num">3</span> <span class="diff-detail">And from that time forth, the sons and daughters of Adam began to divide two and two in the land, and to till the land, and to tend flocks, and they also begat sons and daughters.</span>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box empty"></div>
+                    <div class="verse-box unique-moses">
+                        <div class="chapter-ref">Moses 5:4-5</div>
+                        <span class="verse-num">4</span> And Adam and Eve, his wife, called upon the name of the Lord, and they heard <span class="diff-divine">the voice of the Lord</span> from the way toward the Garden of Eden, speaking unto them, and they saw him not; for they were shut out from his presence.
+                        <span class="verse-num">5</span> And he gave unto them commandments, that they should worship the Lord their God, and <span class="diff-redemption">should offer the firstlings of their flocks, for an offering unto the Lord</span>. And Adam was obedient unto the commandments of the Lord.
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box empty"></div>
+                    <div class="verse-box unique-moses">
+                        <div class="chapter-ref">Moses 5:6-7</div>
+                        <span class="verse-num">6</span> And after many days an angel of the Lord appeared unto Adam, saying: Why dost thou offer sacrifices unto the Lord? And Adam said unto him: I know not, save the Lord commanded me.
+                        <span class="verse-num">7</span> And then the angel spake, saying: <span class="diff-redemption">This thing is a similitude of the sacrifice of the Only Begotten of the Father, which is full of grace and truth.</span>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box empty"></div>
+                    <div class="verse-box unique-moses">
+                        <div class="chapter-ref">Moses 5:8-9</div>
+                        <span class="verse-num">8</span> Wherefore, <span class="diff-redemption">thou shalt do all that thou doest in the name of the Son</span>, and thou shalt repent and call upon God in the name of the Son forevermore.
+                        <span class="verse-num">9</span> And in that day <span class="diff-redemption">the Holy Ghost fell upon Adam</span>, which beareth record of the Father and the Son, saying: <span class="diff-redemption">I am the Only Begotten of the Father from the beginning, henceforth and forever, that as thou hast fallen thou mayest be redeemed, and all mankind, even as many as will.</span>
+                    </div>
+                </div>
+
+                <div class="key-insight">
+                    <h3>THE FORTUNATE FALL — Adam's Testimony (Moses 5:10)</h3>
+                    <p style="font-size: 1.05rem; line-height: 1.8;"><span class="verse-num">10</span> <span class="diff-redemption">And in that day Adam blessed God and was filled, and began to prophesy concerning all the families of the earth, saying: <strong>Blessed be the name of God, for because of my transgression my eyes are opened, and in this life I shall have joy, and again in the flesh I shall see God.</strong></span></p>
+                </div>
+
+                <div class="key-insight">
+                    <h3>THE FORTUNATE FALL — Eve's Testimony (Moses 5:11)</h3>
+                    <p style="font-size: 1.05rem; line-height: 1.8;"><span class="verse-num">11</span> <span class="diff-redemption">And Eve, his wife, heard all these things and was glad, saying: <strong>Were it not for our transgression we never should have had seed, and never should have known good and evil, and the joy of our redemption, and the eternal life which God giveth unto all the obedient.</strong></span></p>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box empty"></div>
+                    <div class="verse-box unique-moses">
+                        <div class="chapter-ref">Moses 5:12-15</div>
+                        <span class="verse-num">12</span> And Adam and Eve blessed the name of God, and they made all things known unto their sons and their daughters.
+                        <span class="verse-num">13</span> And <span class="diff-satan">Satan came among them, saying: I am also a son of God; and he commanded them, saying: Believe it not; and they believed it not, and they loved Satan more than God</span>. And men began from that time forth to be carnal, sensual, and devilish.
+                        <span class="verse-num">14</span> And <span class="diff-divine">the Lord God</span> called upon men by <span class="diff-redemption">the Holy Ghost</span> everywhere and commanded them that they should repent;
+                        <span class="verse-num">15</span> And <span class="diff-redemption">as many as believed in the Son, and repented of their sins, should be saved; and as many as believed not and repented not, should be damned</span>; and the words went forth out of the mouth of God in a firm decree; wherefore they must be fulfilled.
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <strong>15 Verses of Pure Restoration:</strong> None of Moses 5:1-15 appears in Genesis. This section reveals Adam and Eve received the gospel—sacrifice as a similitude of Christ, the Holy Ghost, and the doctrine of redemption. Their testimonies (vv. 10-11) transform the Fall from tragedy to blessing.
+                </div>
+            </div>
+        </div>
+
+        <!-- THE OFFERINGS -->
+        <div class="section" id="offerings">
+            <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+                <h2>Cain and Abel: The Offerings</h2>
+                <span class="toggle">▼</span>
+            </div>
+            <div class="section-content">
+                <div class="column-header">
+                    <div class="col-title genesis">Genesis 4:1-7 <a href="https://www.blueletterbible.org/kjv/gen/4/1/t_concl_4001" target="_blank" class="blb-chapter" title="View Genesis 4 Interlinear">BLB</a></div>
+                    <div class="col-title moses">Moses 5:16-25</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 4:1</div>
+                        <span class="verse-num">1</span> And Adam knew Eve his wife; and she conceived, and bare <a href="https://www.blueletterbible.org/lexicon/h7014/kjv/wlc/0-1/" target="_blank" class="blb-link" title="קַיִן (Qayin) - Cain, meaning 'acquired' or 'spear'">Cain</a>, and said, I have <a href="https://www.blueletterbible.org/lexicon/h7069/kjv/wlc/0-1/" target="_blank" class="blb-link" title="קָנָה (qanah) - to get, acquire">gotten</a> a man from the LORD.
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 5:16</div>
+                        <span class="verse-num">16</span> <span class="diff-detail">And Adam and Eve, his wife, ceased not to call upon God.</span> And Adam knew Eve his wife, and she conceived and bare Cain, and said: I have gotten a man from the Lord; <span class="diff-satan">wherefore he may not reject his words. But behold, Cain hearkened not, saying: Who is the Lord that I should know him?</span>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 4:2</div>
+                        <span class="verse-num">2</span> And she again bare his brother <a href="https://www.blueletterbible.org/lexicon/h1893/kjv/wlc/0-1/" target="_blank" class="blb-link" title="הֶבֶל (Hevel) - Abel, meaning 'breath, vapor'">Abel</a>. And Abel was a <a href="https://www.blueletterbible.org/lexicon/h8104/kjv/wlc/0-1/" target="_blank" class="blb-link" title="שָׁמַר (shamar) - to keep, watch, preserve">keeper</a> of sheep, but Cain was a <a href="https://www.blueletterbible.org/lexicon/h5647/kjv/wlc/0-1/" target="_blank" class="blb-link" title="עָבַד (abad) - to work, serve, till">tiller</a> of the ground.
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 5:17</div>
+                        <span class="verse-num">17</span> And she again conceived and bare his brother Abel. <span class="diff-detail">And Abel hearkened unto the voice of the Lord.</span> And Abel was a keeper of sheep, but Cain was a tiller of the ground.
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box empty"></div>
+                    <div class="verse-box unique-moses">
+                        <div class="chapter-ref">Moses 5:18</div>
+                        <span class="verse-num">18</span> And <span class="diff-satan">Cain loved Satan more than God. And Satan commanded him, saying: Make an offering unto the Lord.</span>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 4:3-4</div>
+                        <span class="verse-num">3</span> And in process of time it came to pass, that Cain brought of the fruit of the ground an <a href="https://www.blueletterbible.org/lexicon/h4503/kjv/wlc/0-1/" target="_blank" class="blb-link" title="מִנְחָה (minchah) - gift, tribute, offering">offering</a> unto the LORD.
+                        <span class="verse-num">4</span> And Abel, he also brought of the <a href="https://www.blueletterbible.org/lexicon/h1062/kjv/wlc/0-1/" target="_blank" class="blb-link" title="בְּכוֹר (bekor) - firstborn, firstling">firstlings</a> of his flock and of the fat thereof. And the LORD had <a href="https://www.blueletterbible.org/lexicon/h8159/kjv/wlc/0-1/" target="_blank" class="blb-link" title="שָׁעָה (sha'ah) - to look at, regard, have respect">respect</a> unto Abel and to his offering:
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 5:19-20</div>
+                        <span class="verse-num">19</span> And in process of time it came to pass that Cain brought of the fruit of the ground an offering unto the Lord.
+                        <span class="verse-num">20</span> And Abel, he also brought of the firstlings of his flock, and of the fat thereof. And the Lord had respect unto Abel, and to his offering;
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 4:5</div>
+                        <span class="verse-num">5</span> But unto Cain and to his offering he had not respect. And Cain was very wroth, and his countenance fell.
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 5:21</div>
+                        <span class="verse-num">21</span> But unto Cain, and to his offering, he had not respect. <span class="diff-satan">Now Satan knew this, and it pleased him.</span> And Cain was very wroth, and his countenance fell.
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 4:6-7</div>
+                        <span class="verse-num">6</span> And the LORD said unto Cain, Why art thou wroth? and why is thy countenance fallen?
+                        <span class="verse-num">7</span> If thou doest well, shalt thou not be accepted? and if thou doest not well, <a href="https://www.blueletterbible.org/lexicon/h2403/kjv/wlc/0-1/" target="_blank" class="blb-link" title="חַטָּאת (chattath) - sin, sin offering">sin</a> lieth at the door. And unto thee shall be his desire, and thou shalt rule over him.
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 5:22-23</div>
+                        <span class="verse-num">22</span> And the Lord said unto Cain: Why art thou wroth? Why is thy countenance fallen?
+                        <span class="verse-num">23</span> If thou doest well, thou shalt be accepted. And if thou doest not well, sin lieth at the door, <span class="diff-satan">and Satan desireth to have thee</span>; <span class="diff-consequence">and except thou shalt hearken unto my commandments, I will deliver thee up, and it shall be unto thee according to his desire.</span> And thou shalt rule over him;
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box empty"></div>
+                    <div class="verse-box unique-moses">
+                        <div class="chapter-ref">Moses 5:24-25</div>
+                        <span class="verse-num">24</span> <span class="diff-consequence">For from this time forth thou shalt be the father of his lies; thou shalt be called Perdition; for thou wast also before the world.</span>
+                        <span class="verse-num">25</span> <span class="diff-consequence">And it shall be said in time to come—That these abominations were had from Cain; for he rejected the greater counsel which was had from God; and this is a cursing which I will put upon thee, except thou repent.</span>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <strong>Why was Cain's offering rejected?</strong> Genesis never explains. Moses 5:18 reveals: "Satan commanded him." Cain offered at Satan's direction. Moses 5:24 also reveals Cain's premortal identity: "thou wast also before the world."
+                </div>
+            </div>
+        </div>
+
+        <!-- THE MURDER -->
+        <div class="section" id="murder">
+            <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+                <h2>The Murder: Cain Slays Abel</h2>
+                <span class="toggle">▼</span>
+            </div>
+            <div class="section-content">
+                <div class="column-header">
+                    <div class="col-title genesis">Genesis 4:8-15 <a href="https://www.blueletterbible.org/kjv/gen/4/8/t_concl_4008" target="_blank" class="blb-chapter" title="View Genesis 4 Interlinear">BLB</a></div>
+                    <div class="col-title moses">Moses 5:26-40</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box empty"></div>
+                    <div class="verse-box unique-moses">
+                        <div class="chapter-ref">Moses 5:26-28</div>
+                        <span class="verse-num">26</span> <span class="diff-satan">And Cain was wroth, and listened not any more to the voice of the Lord</span>, neither to Abel, his brother, who walked in holiness before the Lord.
+                        <span class="verse-num">27</span> <span class="diff-detail">And Adam and his wife mourned before the Lord, because of Cain and his brethren.</span>
+                        <span class="verse-num">28</span> And it came to pass that Cain took one of his brothers' daughters to wife, and <span class="diff-satan">they loved Satan more than God</span>.
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box empty"></div>
+                    <div class="verse-box unique-moses">
+                        <div class="chapter-ref">Moses 5:29-31 — The Secret Combination</div>
+                        <span class="verse-num">29</span> <span class="diff-secret">And Satan said unto Cain: Swear unto me by thy throat, and if thou tell it thou shalt die; and swear thy brethren by their heads, and by the living God, that they tell it not; for if they tell it, they shall surely die; and this that thy father may not know it; and this day I will deliver thy brother Abel into thine hands.</span>
+                        <span class="verse-num">30</span> <span class="diff-secret">And Satan sware unto Cain that he would do according to his commands. And all these things were done in secret.</span>
+                        <span class="verse-num">31</span> <span class="diff-secret">And Cain said: Truly I am Mahan, the master of this great secret, that I may murder and get gain. Wherefore Cain was called Master Mahan, and he gloried in his wickedness.</span>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 4:8</div>
+                        <span class="verse-num">8</span> And Cain talked with Abel his brother: and it came to pass, when they were in the field, that Cain rose up against Abel his brother, and slew him.
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 5:32</div>
+                        <span class="verse-num">32</span> And Cain <span class="diff-detail">went into the field, and Cain</span> talked with Abel, his brother. And it came to pass that while they were in the field, Cain rose up against Abel, his brother, and slew him.
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box empty"></div>
+                    <div class="verse-box unique-moses">
+                        <div class="chapter-ref">Moses 5:33</div>
+                        <span class="verse-num">33</span> <span class="diff-secret">And Cain gloried in that which he had done, saying: I am free; surely the flocks of my brother falleth into my hands.</span>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 4:9-10</div>
+                        <span class="verse-num">9</span> And the LORD said unto Cain, Where is Abel thy brother? And he said, I know not: Am I my brother's <a href="https://www.blueletterbible.org/lexicon/h8104/kjv/wlc/0-1/" target="_blank" class="blb-link" title="שָׁמַר (shamar) - to keep, watch, preserve">keeper</a>?
+                        <span class="verse-num">10</span> And he said, What hast thou done? the voice of thy brother's <a href="https://www.blueletterbible.org/lexicon/h1818/kjv/wlc/0-1/" target="_blank" class="blb-link" title="דָּם (dam) - blood">blood</a> crieth unto me from the ground.
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 5:34-35</div>
+                        <span class="verse-num">34</span> And the Lord said unto Cain: Where is Abel, thy brother? And he said: I know not. Am I my brother's keeper?
+                        <span class="verse-num">35</span> And the Lord said: What hast thou done? The voice of thy brother's blood cries unto me from the ground.
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 4:11-12</div>
+                        <span class="verse-num">11</span> And now art thou cursed from the earth, which hath opened her mouth to receive thy brother's blood from thy hand;
+                        <span class="verse-num">12</span> When thou tillest the ground it shall not henceforth yield unto thee her strength; a <a href="https://www.blueletterbible.org/lexicon/h5128/kjv/wlc/0-1/" target="_blank" class="blb-link" title="נוּעַ (nua) - to wander, move to and fro">fugitive</a> and a <a href="https://www.blueletterbible.org/lexicon/h5110/kjv/wlc/0-1/" target="_blank" class="blb-link" title="נוּד (nud) - to wander, flee">vagabond</a> shalt thou be in the earth.
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 5:36-37</div>
+                        <span class="verse-num">36</span> And now thou shalt be cursed from the earth which hath opened her mouth to receive thy brother's blood from thy hand.
+                        <span class="verse-num">37</span> When thou tillest the ground it shall not henceforth yield unto thee her strength. A fugitive and a vagabond shalt thou be in the earth.
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 4:13</div>
+                        <span class="verse-num">13</span> And Cain said unto the LORD, My punishment is greater than I can bear.
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 5:38</div>
+                        <span class="verse-num">38</span> And Cain said unto the Lord: <span class="diff-satan">Satan tempted me because of my brother's flocks</span>. And I was wroth also; for his offering thou didst accept and not mine; my punishment is greater than I can bear.
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 4:14-15</div>
+                        <span class="verse-num">14</span> Behold, thou hast driven me out this day from the face of the earth; and from thy face shall I be hid; and I shall be a fugitive and a vagabond in the earth; and it shall come to pass, that every one that findeth me shall slay me.
+                        <span class="verse-num">15</span> And the LORD said unto him, Therefore whosoever slayeth Cain, vengeance shall be taken on him sevenfold. And the LORD set a <a href="https://www.blueletterbible.org/lexicon/h226/kjv/wlc/0-1/" target="_blank" class="blb-link" title="אוֹת (oth) - sign, mark, token">mark</a> upon Cain, lest any finding him should kill him.
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 5:39-40</div>
+                        <span class="verse-num">39</span> Behold thou hast driven me out this day from the face of <span class="diff-divine">the Lord</span>, and from thy face shall I be hid; and I shall be a fugitive and a vagabond in the earth; and it shall come to pass, that he that findeth me will slay me, <span class="diff-consequence">because of mine iniquities, for these things are not hid from the Lord.</span>
+                        <span class="verse-num">40</span> And <span class="diff-divine">I</span> the Lord said unto him: Whosoever slayeth <span class="diff-detail">thee</span>, vengeance shall be taken on him sevenfold. And <span class="diff-divine">I</span> the Lord set a mark upon Cain, lest any finding him should kill him.
+                    </div>
+                </div>
+
+                <div class="key-insight">
+                    <h3>The First Secret Combination</h3>
+                    <p>Moses 5:29-31 reveals what Genesis hides: this was a premeditated covenant with Satan. Cain becomes "Master Mahan"—master of the secret of "murder and get gain." In Genesis, the murder appears sudden; in Moses, it's calculated.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- AFTERMATH -->
+        <div class="section" id="aftermath">
+            <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+                <h2>The Aftermath: Descendants & Secret Combinations</h2>
+                <span class="toggle">▼</span>
+            </div>
+            <div class="section-content">
+                <div class="column-header">
+                    <div class="col-title genesis">Genesis 4:16-26 <a href="https://www.blueletterbible.org/kjv/gen/4/16/t_concl_4016" target="_blank" class="blb-chapter" title="View Genesis 4 Interlinear">BLB</a></div>
+                    <div class="col-title moses">Moses 5:41-59</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 4:16-22</div>
+                        <span class="verse-num">16</span> And Cain went out from the presence of the LORD, and dwelt in the land of <a href="https://www.blueletterbible.org/lexicon/h5113/kjv/wlc/0-1/" target="_blank" class="blb-link" title="נוֹד (Nod) - wandering, from same root as 'vagabond'">Nod</a>, on the east of Eden.
+                        <span class="verse-num">17</span> And Cain knew his wife; and she conceived, and bare Enoch: and he builded a city, and called the name of the city, after the name of his son, Enoch.
+                        <span class="verse-num">18-22</span> [Genealogy of Cain's descendants through Lamech]
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 5:41-46</div>
+                        <span class="verse-num">41</span> And Cain was <span class="diff-consequence">shut out from</span> the presence of the Lord, and with his wife <span class="diff-detail">and many of his brethren</span> dwelt in the land of Nod, on the east of Eden.
+                        <span class="verse-num">42-46</span> [Parallel genealogy with additions: "and other sons and daughters" repeated]
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 4:23-24</div>
+                        <span class="verse-num">23</span> And Lamech said unto his wives, Adah and Zillah, Hear my voice; ye wives of Lamech, hearken unto my speech: for I have slain a man to my wounding, and a young man to my hurt.
+                        <span class="verse-num">24</span> If Cain shall be <a href="https://www.blueletterbible.org/lexicon/h5358/kjv/wlc/0-1/" target="_blank" class="blb-link" title="נָקַם (naqam) - to avenge, take vengeance">avenged</a> <a href="https://www.blueletterbible.org/lexicon/h7659/kjv/wlc/0-1/" target="_blank" class="blb-link" title="שִׁבְעָתַיִם (shib'athayim) - sevenfold">sevenfold</a>, truly Lamech <a href="https://www.blueletterbible.org/lexicon/h7657/kjv/wlc/0-1/" target="_blank" class="blb-link" title="שִׁבְעִים (shib'iym) - seventy">seventy</a> and sevenfold.
+                    </div>
+                    <div class="verse-box moses">
+                        <div class="chapter-ref">Moses 5:47-48</div>
+                        <span class="verse-num">47</span> And Lamech said unto his wives, Adah and Zillah: Hear my voice, ye wives of Lamech, hearken unto my speech; for I have slain a man to my wounding, and a young man to my hurt.
+                        <span class="verse-num">48</span> If Cain shall be avenged sevenfold, truly Lamech shall be seventy and seven fold;
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box empty">Genesis does not explain Lamech's boast</div>
+                    <div class="verse-box unique-moses">
+                        <div class="chapter-ref">Moses 5:49-55 — The Secret Spreads</div>
+                        <span class="verse-num">49</span> <span class="diff-secret">For Lamech having entered into a covenant with Satan, after the manner of Cain, wherein he became Master Mahan, master of that great secret which was administered unto Cain by Satan</span>; and Irad, the son of Enoch, having known their secret, began to reveal it unto the sons of Adam;
+                        <span class="verse-num">50</span> <span class="diff-secret">Wherefore Lamech, being angry, slew him, not like unto Cain, his brother Abel, for the sake of getting gain, but he slew him for the oath's sake.</span>
+                        <span class="verse-num">51</span> <span class="diff-secret">For, from the days of Cain, there was a secret combination, and their works were in the dark, and they knew every man his brother.</span>
+                        <span class="verse-num">52-55</span> <span class="diff-secret">[Lamech cursed; his wives expose the secret; "the works of darkness began to prevail"]</span>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="verse-box genesis">
+                        <div class="chapter-ref">Genesis 4:25-26</div>
+                        <span class="verse-num">25</span> And Adam knew his wife again; and she bare a son, and called his name <a href="https://www.blueletterbible.org/lexicon/h8352/kjv/wlc/0-1/" target="_blank" class="blb-link" title="שֵׁת (Sheth) - Seth, meaning 'appointed, substituted'">Seth</a>: For God, said she, hath <a href="https://www.blueletterbible.org/lexicon/h7896/kjv/wlc/0-1/" target="_blank" class="blb-link" title="שִׁית (shith) - to set, appoint">appointed</a> me another seed instead of Abel, whom Cain slew.
+                        <span class="verse-num">26</span> And to Seth, to him also there was born a son; and he called his name <a href="https://www.blueletterbible.org/lexicon/h583/kjv/wlc/0-1/" target="_blank" class="blb-link" title="אֱנוֹשׁ (Enosh) - Enos, meaning 'man, mortal'">Enos</a>: then began men to call upon the name of the LORD.
+                    </div>
+                    <div class="verse-box unique-moses">
+                        <div class="chapter-ref">Moses 5:56-59 — The Gospel From the Beginning</div>
+                        <span class="verse-num">56-57</span> And God cursed the earth with a sore curse... For they would not hearken unto his voice, nor <span class="diff-redemption">believe on his Only Begotten Son, even him whom he declared should come in the meridian of time, who was prepared from before the foundation of the world.</span>
+                        <span class="verse-num">58</span> <span class="diff-redemption">And thus the Gospel began to be preached, from the beginning, being declared by holy angels sent forth from the presence of God, and by his own voice, and by the gift of the Holy Ghost.</span>
+                        <span class="verse-num">59</span> <span class="diff-redemption">And thus all things were confirmed unto Adam, by an holy ordinance, and the Gospel preached, and a decree sent forth, that it should be in the world, until the end thereof; and thus it was. Amen.</span>
+                    </div>
+                </div>
+
+                <div class="key-insight">
+                    <h3>The Grand Conclusion</h3>
+                    <p>Moses 5:58-59 declares what Genesis never states: "the Gospel began to be preached, from the beginning." The plan of salvation wasn't revealed gradually—it was taught to Adam and Eve from the start.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Week 04 Study Resource | <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-individuals-and-families-old-testament-2026" target="_blank">Come, Follow Me 2026</a></p>
+            <p>Genesis 3–4; Moses 4–5 | January 19–25, 2026</p>
+        </footer>
+    </div>
+
+    <!-- Collapse functionality handled by inline onclick handlers -->
+</body>
+</html>

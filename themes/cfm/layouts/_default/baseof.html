@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+    <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta property="og:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}https://www.cfmcorner.com/images/tree-logo.png{{ end }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="stylesheet" href="/css/style.css?v={{ now.Unix }}">
+    {{ block "head" . }}{{ end }}
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">
+                <img src="/images/tree-logo.png" alt="" class="nav-tree">
+                <span class="nav-title">Come Follow Me Corner</span>
+            </a>
+            <div class="nav-links">
+                <a href="/"{{ if .IsHome }} class="active"{{ end }}>Home</a>
+                <a href="/about/"{{ if hasPrefix .RelPermalink "/about/" }} class="active"{{ end }}>About</a>
+                <a href="/weeks/"{{ if hasPrefix .RelPermalink "/weeks/" }} class="active"{{ end }}>Weekly Lessons</a>
+                <a href="/resources/"{{ if hasPrefix .RelPermalink "/resources/" }} class="active"{{ end }}>Resources</a>
+                <a href="/search/"{{ if hasPrefix .RelPermalink "/search/" }} class="active"{{ end }}>Search</a>
+            </div>
+            <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+        </div>
+    </nav>
+
+    <main class="site-main">
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">COME FOLLOW ME CORNER</div>
+            <div class="footer-li">
+                <a href="https://learninginspired.com" target="_blank" rel="noopener">
+                    <img src="/images/learning-inspired-logo.png" alt="Learning Inspired" class="footer-li-logo">
+                </a>
+            </div>
+            <p>&copy; {{ now.Year }} Learning Inspired LLC</p>
+            <p class="footer-disclaimer">Not affiliated with The Church of Jesus Christ of Latter-day Saints</p>
+        </div>
+    </footer>
+
+    {{ block "scripts" . }}{{ end }}
+</body>
+</html>

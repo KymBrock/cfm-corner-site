@@ -1,0 +1,301 @@
+/* === CFM Corner — Core Styles === */
+
+:root {
+    --green-dark: #5a6d5f;
+    --green-mid: #7c9885;
+    --green-light: #c6d4c8;
+    --green-pale: #e8ede9;
+    --green-bg: #f4f7f5;
+    --text-primary: #2d3748;
+    --text-secondary: #4a5568;
+    --text-muted: #718096;
+    --border: #d1ddd4;
+    --white: #ffffff;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+    --radius: 8px;
+    --max-width: 1100px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--text-primary);
+    background: var(--green-bg);
+    line-height: 1.6;
+}
+
+/* === Navigation === */
+.site-nav {
+    background: linear-gradient(135deg, var(--green-mid) 0%, var(--green-dark) 100%);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-md);
+}
+.nav-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-logo { text-decoration: none; color: white; }
+.nav-title { font-family: Georgia, serif; font-size: 1.3em; font-weight: 600; display: block; }
+.nav-subtitle { font-size: 0.75em; opacity: 0.8; }
+.nav-links { display: flex; gap: 24px; }
+.nav-links a { color: white; text-decoration: none; font-size: 0.95em; opacity: 0.9; transition: opacity 0.2s; }
+.nav-links a:hover { opacity: 1; text-decoration: underline; }
+.nav-toggle { display: none; background: none; border: none; color: white; font-size: 1.5em; cursor: pointer; }
+
+/* === Main Content === */
+.site-main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* === Homepage === */
+.hero-banner { text-align: center; margin-bottom: 0; }
+.hero-banner .hero-img { width: 100%; max-width: var(--max-width); height: auto; border-radius: 0 0 var(--radius) var(--radius); }
+
+.welcome-section { text-align: center; padding: 40px 20px 30px; background: linear-gradient(135deg, var(--green-pale) 0%, var(--white) 100%); border-radius: var(--radius); margin-bottom: 35px; border: 1px solid var(--border); }
+.welcome-section h1 { font-family: Georgia, serif; color: var(--green-dark); font-size: 2.2em; margin-bottom: 12px; font-weight: normal; }
+.welcome-section p { color: var(--text-secondary); font-size: 1.05em; max-width: 650px; margin: 0 auto 20px; }
+.search-box input {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 20px;
+    border: 2px solid var(--border);
+    border-radius: 30px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.2s;
+}
+.search-box input:focus { border-color: var(--green-mid); }
+
+/* Current Week Highlight */
+.current-week-highlight { margin-bottom: 40px; }
+.current-week-highlight h2 { font-family: Georgia, serif; color: var(--green-dark); font-weight: normal; margin-bottom: 15px; }
+.current-week-card {
+    display: block;
+    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--radius);
+    padding: 30px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: var(--shadow-md);
+}
+.current-week-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+.cw-week { font-size: 0.85em; text-transform: uppercase; letter-spacing: 1px; opacity: 0.8; margin-bottom: 6px; }
+.cw-title { font-family: Georgia, serif; font-size: 1.5em; margin-bottom: 8px; }
+.cw-scripture { font-size: 1em; opacity: 0.9; }
+.cw-dates { font-size: 0.9em; opacity: 0.7; margin-bottom: 12px; }
+.cw-cta { font-size: 0.95em; font-weight: 600; opacity: 0.9; }
+
+.section-heading { font-family: Georgia, serif; color: var(--green-dark); font-weight: normal; margin-bottom: 20px; }
+
+/* Curriculum Section */
+.curriculum-section { margin: 45px 0; }
+.curriculum-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.curriculum-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 25px 15px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: var(--shadow-sm);
+}
+.curriculum-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.curriculum-card.active-year { border-color: var(--green-mid); border-width: 2px; background: linear-gradient(135deg, var(--white) 0%, var(--green-pale) 100%); }
+.curr-icon { font-size: 2.5em; margin-bottom: 8px; }
+.curr-label { font-family: Georgia, serif; color: var(--green-dark); font-size: 1em; }
+.curr-year { font-size: 0.8em; color: var(--text-muted); margin-top: 4px; }
+
+/* Subscribe Section */
+.subscribe-section {
+    text-align: center;
+    background: linear-gradient(135deg, #5a6d5f, #4a5a4d);
+    color: white;
+    padding: 45px 20px;
+    border-radius: var(--radius);
+    margin-top: 40px;
+}
+.subscribe-section h2 { font-family: Georgia, serif; font-weight: normal; margin-bottom: 8px; }
+.subscribe-section p { opacity: 0.85; margin-bottom: 20px; }
+.subscribe-form { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.subscribe-form input {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    width: 300px;
+    outline: none;
+}
+.subscribe-form button {
+    padding: 12px 28px;
+    background: var(--green-mid);
+    color: white;
+    border: 2px solid white;
+    border-radius: 30px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.subscribe-form button:hover { background: var(--green-light); color: var(--green-dark); }
+
+/* === Week Grid (Homepage) === */
+.week-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+    margin-bottom: 40px;
+}
+.week-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: var(--shadow-sm);
+}
+.week-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.week-card .week-num { font-family: Georgia, serif; color: var(--green-mid); font-size: 0.85em; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+.week-card .week-title { font-family: Georgia, serif; font-size: 1.1em; color: var(--green-dark); margin: 6px 0; }
+.week-card .week-dates { font-size: 0.85em; color: var(--text-muted); }
+.week-card .week-scripture { font-size: 0.9em; color: var(--text-secondary); margin-top: 4px; }
+.week-card.current { border-color: var(--green-mid); border-width: 2px; background: linear-gradient(135deg, var(--white) 0%, var(--green-pale) 100%); }
+.week-card.upcoming { opacity: 0.5; }
+
+/* === Week Landing Page === */
+.week-header {
+    background: linear-gradient(135deg, var(--green-pale) 0%, var(--white) 100%);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 35px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.week-header h1 { font-family: Georgia, serif; color: var(--green-dark); font-size: 2em; font-weight: normal; margin-bottom: 8px; }
+.week-header .week-scripture-ref { font-size: 1.15em; color: var(--text-secondary); margin-bottom: 5px; }
+.week-header .week-dates-range { font-size: 0.95em; color: var(--text-muted); }
+
+.week-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    font-size: 0.9em;
+}
+.week-nav a { color: var(--green-mid); text-decoration: none; }
+.week-nav a:hover { text-decoration: underline; }
+
+/* Quick Summary */
+.quick-summary {
+    background: var(--white);
+    border: 2px solid var(--green-light);
+    border-radius: var(--radius);
+    padding: 25px;
+    margin-bottom: 30px;
+}
+.quick-summary h2 { font-family: Georgia, serif; color: var(--green-dark); font-size: 1.2em; margin-bottom: 12px; }
+.quick-summary p { color: var(--text-secondary); }
+
+/* === Content Tabs === */
+.tab-nav {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid var(--border);
+    margin-bottom: 25px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.tab-btn {
+    padding: 12px 20px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-family: Georgia, serif;
+    font-size: 0.95em;
+    color: var(--text-muted);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color 0.2s, border-color 0.2s;
+}
+.tab-btn:hover { color: var(--green-dark); }
+.tab-btn.active { color: var(--green-dark); border-bottom-color: var(--green-mid); font-weight: 600; }
+
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* Content panels */
+.content-panel {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 25px;
+    box-shadow: var(--shadow-sm);
+}
+
+/* === Charts Page === */
+.chart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+}
+.chart-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.chart-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.chart-card h3 { font-family: Georgia, serif; color: var(--green-dark); font-size: 1em; margin-bottom: 6px; }
+.chart-card p { font-size: 0.85em; color: var(--text-muted); }
+
+/* === Footer === */
+.site-footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 50px;
+    background: #3d4a40;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.85em;
+}
+.footer-brand { font-family: Georgia, serif; font-size: 1.3em; letter-spacing: 3px; color: rgba(255,255,255,0.9); margin-bottom: 10px; }
+.footer-disclaimer { margin-top: 5px; font-style: italic; font-size: 0.9em; }
+
+/* === Embedded Content (existing HTML) === */
+.embedded-content { all: initial; font-family: inherit; }
+
+/* === Print === */
+@media print {
+    .site-nav, .site-footer, .tab-nav, .week-nav { display: none; }
+    .tab-content { display: block !important; page-break-before: always; }
+    .content-panel { border: none; box-shadow: none; padding: 0; }
+    body { background: white; }
+}
+
+/* === Mobile === */
+@media (max-width: 768px) {
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--green-dark); padding: 15px 20px; gap: 12px; }
+    .nav-links.open { display: flex; }
+    .nav-toggle { display: block; }
+    .welcome-section h1 { font-size: 1.7em; }
+    .curriculum-grid { grid-template-columns: repeat(2, 1fr); }
+    .week-header h1 { font-size: 1.5em; }
+    .week-header { padding: 25px 20px; }
+    .tab-btn { padding: 10px 14px; font-size: 0.85em; }
+    .quick-summary { padding: 18px; }
+}

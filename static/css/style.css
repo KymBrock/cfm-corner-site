@@ -1,0 +1,626 @@
+/* === CFM Corner — Unified Brand Styles === */
+/* Learning Inspired palette + CFM Corner sage greens */
+
+:root {
+    /* Primary: Sage green (from CFM tree + LI logo) */
+    --sage-dark: #4a6b52;
+    --sage-mid: #7c9885;
+    --sage-light: #aac1a7;
+    --sage-pale: #dce8dd;
+    --sage-bg: #f2f5f2;
+
+    /* Accent: Gold/Amber (from LI logo) */
+    --gold: #d5a93c;
+    --gold-light: #e8cc7a;
+    --gold-pale: #f5ecd0;
+
+    /* Secondary: Slate blue (from LI logo) */
+    --slate: #57899c;
+    --slate-light: #8ab0be;
+
+    /* Warm accents (from LI logo, for future use) */
+    --terracotta: #c65528;
+    --copper: #c37c3c;
+    --mauve: #9f6578;
+    --plum: #6a5983;
+
+    /* Neutrals */
+    --text-dark: #383731;
+    --text-primary: #2d3748;
+    --text-secondary: #4a5568;
+    --text-muted: #718096;
+    --border: #c6d4c8;
+    --white: #ffffff;
+
+    /* Effects */
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+    --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+    --radius: 8px;
+    --radius-lg: 12px;
+    --max-width: 1100px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--text-primary);
+    background: var(--sage-bg);
+    line-height: 1.6;
+}
+
+/* === Navigation === */
+.site-nav {
+    background: linear-gradient(135deg, var(--sage-dark) 0%, var(--sage-mid) 100%);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-md);
+}
+.nav-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-logo { text-decoration: none; color: white; display: flex; align-items: center; gap: 10px; }
+.nav-tree {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+    background: var(--sage-pale);
+    padding: 3px;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.3);
+}
+.nav-title {
+    font-family: Georgia, serif;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+.nav-links { display: flex; gap: 24px; }
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95em;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+    padding: 4px 0;
+    border-bottom: 2px solid transparent;
+}
+.nav-links a:hover { opacity: 1; border-bottom-color: var(--gold); }
+.nav-links a.active { opacity: 1; border-bottom-color: var(--gold); font-weight: 600; }
+.nav-toggle { display: none; background: none; border: none; color: white; font-size: 1.5em; cursor: pointer; }
+
+/* === Main Content === */
+.site-main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* === Homepage === */
+.hero-banner {
+    position: relative;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 0 0 var(--radius) var(--radius);
+    box-shadow: var(--shadow-md);
+    aspect-ratio: 16 / 9;
+    background: #c8c3a7;
+}
+.hero-video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transition: opacity 2s ease-in-out;
+}
+.hero-video.ended {
+    opacity: 0;
+    pointer-events: none;
+}
+.hero-svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.welcome-section {
+    text-align: center;
+    padding: 40px 20px 30px;
+    background: linear-gradient(135deg, var(--sage-pale) 0%, var(--white) 100%);
+    border-radius: var(--radius-lg);
+    margin-bottom: 35px;
+    border: 1px solid var(--border);
+}
+.welcome-section h1 {
+    font-family: Georgia, serif;
+    color: var(--sage-dark);
+    font-size: 2.2em;
+    margin-bottom: 12px;
+    font-weight: normal;
+}
+.welcome-section p {
+    color: var(--text-secondary);
+    font-size: 1.05em;
+    max-width: 650px;
+    margin: 0 auto 20px;
+}
+
+.search-box input {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 20px;
+    border: 2px solid var(--border);
+    border-radius: 30px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.2s;
+}
+.search-box input:focus { border-color: var(--gold); }
+
+/* Current Week Highlight */
+.current-week-highlight { margin-bottom: 40px; }
+.current-week-highlight h2 {
+    font-family: Georgia, serif;
+    color: var(--sage-dark);
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+.current-week-card {
+    display: block;
+    background: linear-gradient(135deg, var(--sage-dark) 0%, var(--sage-mid) 60%, var(--slate) 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--radius-lg);
+    padding: 35px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: var(--shadow-md);
+    border-left: 5px solid var(--gold);
+}
+.current-week-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+.cw-week {
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    margin-bottom: 6px;
+}
+.cw-title {
+    font-family: Georgia, serif;
+    font-size: 1.5em;
+    margin-bottom: 8px;
+}
+.cw-scripture { font-size: 1em; opacity: 0.9; }
+.cw-dates { font-size: 0.9em; opacity: 0.7; margin-bottom: 14px; }
+.cw-cta {
+    display: inline-block;
+    font-size: 0.9em;
+    font-weight: 600;
+    background: var(--gold);
+    color: var(--text-dark);
+    padding: 8px 20px;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+
+.section-heading {
+    font-family: Georgia, serif;
+    color: var(--sage-dark);
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+/* === Week Grid (Homepage + All Weeks) === */
+.week-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 18px;
+    margin-bottom: 40px;
+}
+.week-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.week-card-img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid var(--border);
+}
+.week-card-body {
+    padding: 16px;
+}
+/* Cards without images get top padding to match visual weight */
+.week-card:not(:has(.week-card-img)) {
+    padding: 0;
+}
+.week-card:not(:has(.week-card-img)) .week-card-body {
+    padding: 20px;
+}
+.week-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--sage-mid);
+}
+.week-card .week-num {
+    font-family: Georgia, serif;
+    color: var(--sage-mid);
+    font-size: 0.85em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.week-card .week-title {
+    font-family: Georgia, serif;
+    font-size: 1.1em;
+    color: var(--sage-dark);
+    margin: 6px 0;
+}
+.week-card .week-dates { font-size: 0.85em; color: var(--text-muted); }
+.week-card .week-scripture { font-size: 0.9em; color: var(--text-secondary); margin-top: 4px; }
+.week-card.current {
+    border-color: var(--gold);
+    border-width: 2px;
+    border-left-width: 4px;
+    background: linear-gradient(135deg, var(--white) 0%, var(--gold-pale) 100%);
+}
+.week-card.upcoming { opacity: 0.5; }
+
+/* === Week List (horizontal cards for /weeks/) === */
+.week-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 900px;
+}
+.week-list-card {
+    display: flex;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: var(--shadow-sm);
+}
+.week-list-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+.week-list-card.current {
+    border-color: var(--gold);
+    border-width: 2px;
+    background: linear-gradient(135deg, var(--white) 0%, var(--gold-pale) 100%);
+}
+.week-list-card.upcoming { opacity: 0.5; }
+.week-list-img {
+    width: 240px;
+    min-height: 180px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.week-list-body {
+    padding: 18px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+.week-list-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 6px;
+}
+.week-list-meta .week-num {
+    font-size: 0.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--gold);
+}
+.week-list-dates {
+    font-size: 0.8em;
+    color: var(--text-muted);
+}
+.week-list-title {
+    font-family: Georgia, serif;
+    font-size: 1.25em;
+    color: var(--sage-dark);
+    margin-bottom: 4px;
+}
+.week-list-scripture {
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+.week-list-summary {
+    font-size: 0.88em;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0 0 10px;
+}
+.week-list-cta {
+    font-size: 0.85em;
+    color: var(--sage-dark);
+    font-weight: 600;
+}
+@media (max-width: 600px) {
+    .week-list-card { flex-direction: column; }
+    .week-list-img { width: 100%; min-height: 160px; max-height: 200px; }
+    .week-list-body { padding: 14px 16px; }
+}
+
+/* Curriculum Section */
+.curriculum-section { margin: 45px 0; }
+.curriculum-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+.curriculum-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 25px 15px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: var(--shadow-sm);
+}
+.curriculum-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+.curriculum-card.active-year {
+    border-color: var(--gold);
+    border-width: 2px;
+    background: linear-gradient(135deg, var(--white) 0%, var(--gold-pale) 100%);
+}
+.curr-icon { font-size: 2.5em; margin-bottom: 8px; }
+.curr-label { font-family: Georgia, serif; color: var(--sage-dark); font-size: 1em; }
+.curr-year { font-size: 0.8em; color: var(--text-muted); margin-top: 4px; }
+
+/* Subscribe Section */
+.subscribe-section {
+    text-align: center;
+    background: linear-gradient(135deg, var(--sage-dark), #3d5242);
+    color: white;
+    padding: 45px 20px;
+    border-radius: var(--radius-lg);
+    margin-top: 40px;
+}
+.subscribe-section h2 { font-family: Georgia, serif; font-weight: normal; margin-bottom: 8px; }
+.subscribe-section p { opacity: 0.85; margin-bottom: 20px; }
+.subscribe-form { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.subscribe-form input {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    width: 300px;
+    outline: none;
+}
+.subscribe-form button {
+    padding: 12px 28px;
+    background: var(--gold);
+    color: var(--text-dark);
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.subscribe-form button:hover { background: var(--gold-light); }
+
+/* === Week Landing Page === */
+.week-header {
+    background: linear-gradient(135deg, var(--sage-pale) 0%, var(--white) 100%);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 35px;
+    margin-bottom: 30px;
+    text-align: center;
+    overflow: hidden;
+}
+.week-header-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    margin-bottom: 20px;
+}
+.week-header h1 {
+    font-family: Georgia, serif;
+    color: var(--sage-dark);
+    font-size: 2em;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+.week-header .week-scripture-ref { font-size: 1.15em; color: var(--text-secondary); margin-bottom: 5px; }
+.week-header .week-dates-range { font-size: 0.95em; color: var(--text-muted); }
+
+.week-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    font-size: 0.9em;
+}
+.week-nav a { color: var(--sage-mid); text-decoration: none; }
+.week-nav a:hover { text-decoration: underline; color: var(--sage-dark); }
+
+/* Quick Summary */
+.quick-summary {
+    background: var(--white);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow-sm);
+}
+.quick-summary h2 {
+    font-family: Georgia, serif;
+    color: var(--sage-dark);
+    font-size: 1.2em;
+    margin-bottom: 12px;
+}
+.quick-summary p { color: var(--text-secondary); }
+
+/* === Content Tabs === */
+.tab-nav {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid var(--border);
+    margin-bottom: 25px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.tab-btn {
+    padding: 12px 20px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-family: Georgia, serif;
+    font-size: 0.95em;
+    color: var(--text-muted);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color 0.2s, border-color 0.2s;
+}
+.tab-btn:hover { color: var(--sage-dark); }
+.tab-btn.active {
+    color: var(--sage-dark);
+    border-bottom-color: var(--gold);
+    font-weight: 600;
+}
+
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* Content panels */
+.content-panel {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 25px;
+    box-shadow: var(--shadow-sm);
+}
+
+/* === Charts Page === */
+.chart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+}
+.chart-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.chart-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--sage-mid);
+}
+.chart-card h3 { font-family: Georgia, serif; color: var(--sage-dark); font-size: 1em; margin-bottom: 6px; }
+.chart-card p { font-size: 0.85em; color: var(--text-muted); }
+
+/* === Footer === */
+.site-footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 50px;
+    background: var(--text-dark);
+    color: rgba(255,255,255,0.7);
+    font-size: 0.85em;
+}
+.footer-brand {
+    font-family: Georgia, serif;
+    font-size: 1.3em;
+    letter-spacing: 3px;
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+.footer-li { margin: 15px 0; }
+.footer-li-logo {
+    height: 50px;
+    width: auto;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+}
+.footer-li-logo:hover { opacity: 1; }
+.footer-disclaimer { margin-top: 5px; font-style: italic; font-size: 0.9em; }
+
+/* === Embedded Content (existing HTML) === */
+.embedded-content { all: initial; font-family: inherit; }
+
+/* === Print === */
+@media print {
+    .site-nav, .site-footer, .tab-nav, .week-nav { display: none; }
+    .tab-content { display: block !important; page-break-before: always; }
+    .content-panel { border: none; box-shadow: none; padding: 0; }
+    body { background: white; }
+}
+
+/* === Mobile === */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--sage-dark);
+        padding: 15px 20px;
+        gap: 12px;
+        box-shadow: var(--shadow-md);
+    }
+    .nav-links.open { display: flex; }
+    .nav-toggle { display: block; }
+    .welcome-section h1 { font-size: 1.7em; }
+    .week-header h1 { font-size: 1.5em; }
+    .week-header { padding: 25px 20px; }
+    .tab-btn { padding: 10px 14px; font-size: 0.85em; }
+    .quick-summary { padding: 18px; }
+    .curriculum-grid { grid-template-columns: repeat(2, 1fr); }
+    .current-week-card { padding: 25px 20px; }
+    .cw-title { font-size: 1.2em; }
+    .subscribe-form input { width: 100%; }
+}
+
+@media (max-width: 480px) {
+    .curriculum-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .week-grid { grid-template-columns: 1fr; }
+}

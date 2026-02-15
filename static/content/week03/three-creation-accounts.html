@@ -1,0 +1,2331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Creation Accounts Comparison | Genesis, Moses, Abraham</title>
+    <style>
+        :root {
+            --genesis-bg: #DBEAFE;
+            --genesis-border: #3B82F6;
+            --moses-bg: #D1FAE5;
+            --moses-border: #10B981;
+            --abraham-bg: #FEF3C7;
+            --abraham-border: #F59E0B;
+            --header-bg: #1E3A5F;
+            --text-primary: #1F2937;
+            --text-secondary: #4B5563;
+            --border-color: #E5E7EB;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            color: var(--header-bg);
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .scripture-refs {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .scripture-ref {
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .genesis-ref {
+            background: var(--genesis-bg);
+            color: #1E40AF;
+            border: 2px solid var(--genesis-border);
+        }
+
+        .moses-ref {
+            background: var(--moses-bg);
+            color: #065F46;
+            border: 2px solid var(--moses-border);
+        }
+
+        .abraham-ref {
+            background: var(--abraham-bg);
+            color: #92400E;
+            border: 2px solid var(--abraham-border);
+        }
+
+        section {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--header-bg);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid var(--header-bg);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        h2 .icon {
+            font-size: 1.75rem;
+        }
+
+        h3 {
+            color: var(--header-bg);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+
+        th {
+            background: var(--header-bg);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th:first-child { border-radius: 8px 0 0 0; }
+        th:last-child { border-radius: 0 8px 0 0; }
+
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: top;
+        }
+
+        tr:last-child td:first-child { border-radius: 0 0 0 8px; }
+        tr:last-child td:last-child { border-radius: 0 0 8px 0; }
+        tr:hover td { filter: brightness(0.97); }
+
+        .col-genesis {
+            background: var(--genesis-bg);
+            border-left: 4px solid var(--genesis-border);
+        }
+
+        .col-moses {
+            background: var(--moses-bg);
+            border-left: 4px solid var(--moses-border);
+        }
+
+        .col-abraham {
+            background: var(--abraham-bg);
+            border-left: 4px solid var(--abraham-border);
+        }
+
+        .col-label {
+            font-weight: 600;
+            background: #F3F4F6;
+            text-align: center;
+        }
+
+        .col-verse {
+            font-weight: 700;
+            background: #E5E7EB;
+            text-align: center;
+            width: 50px;
+        }
+
+        .highlight {
+            background: #FEF08A;
+            padding: 0.125rem 0.375rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .highlight-abraham { background: #FDE68A; }
+        .highlight-moses { background: #A7F3D0; }
+
+        /* Category-specific highlights for Full Text Comparison */
+        .hl-divine {
+            background: #E9D5FF;
+            padding: 0.125rem 0.375rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-verb {
+            background: #FDBA74;
+            padding: 0.125rem 0.375rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-eval {
+            background: #5EEAD4;
+            padding: 0.125rem 0.375rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-time {
+            background: #FDA4AF;
+            padding: 0.125rem 0.375rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-unique {
+            background: #BEF264;
+            padding: 0.125rem 0.375rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hl-sky {
+            background: #7DD3FC;
+            padding: 0.125rem 0.375rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        /* Difference legend */
+        .diff-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: #F9FAFB;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .diff-legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        .diff-legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            border: 1px solid rgba(0,0,0,0.2);
+        }
+
+        .diff-legend-color.divine { background: #E9D5FF; }
+        .diff-legend-color.verb { background: #FDBA74; }
+        .diff-legend-color.eval { background: #5EEAD4; }
+        .diff-legend-color.time { background: #FDA4AF; }
+        .diff-legend-color.unique { background: #BEF264; }
+        .diff-legend-color.sky { background: #7DD3FC; }
+
+        .verse-ref {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            display: block;
+            margin-top: 0.5rem;
+        }
+
+        .key-insight {
+            background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+            border-left: 4px solid #F59E0B;
+            padding: 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+
+        .key-insight h3 {
+            color: #92400E;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .key-insight blockquote {
+            font-style: italic;
+            color: #78350F;
+            margin: 0;
+            padding-left: 1rem;
+            border-left: 2px solid #D97706;
+        }
+
+        /* DROPDOWN STYLES */
+        .analysis-dropdown {
+            margin-top: 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .analysis-dropdown summary {
+            padding: 1rem 1.5rem;
+            background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--header-bg);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            list-style: none;
+            transition: background 0.2s ease;
+        }
+
+        .analysis-dropdown summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .analysis-dropdown summary::before {
+            content: "▶";
+            font-size: 0.75rem;
+            transition: transform 0.3s ease;
+            color: var(--genesis-border);
+        }
+
+        .analysis-dropdown[open] summary::before {
+            transform: rotate(90deg);
+        }
+
+        .analysis-dropdown summary:hover {
+            background: linear-gradient(135deg, #EDF2F7 0%, #E2E8F0 100%);
+        }
+
+        .analysis-dropdown .dropdown-icon {
+            font-size: 1.25rem;
+        }
+
+        .analysis-content {
+            padding: 1.5rem;
+            background: #FEFEFE;
+            border-top: 1px solid var(--border-color);
+            line-height: 1.8;
+        }
+
+        .analysis-content h4 {
+            color: var(--header-bg);
+            margin: 1.5rem 0 0.75rem 0;
+            font-size: 1.1rem;
+            border-left: 4px solid var(--genesis-border);
+            padding-left: 0.75rem;
+        }
+
+        .analysis-content h4:first-child {
+            margin-top: 0;
+        }
+
+        .analysis-content p {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .analysis-content ul, .analysis-content ol {
+            margin: 1rem 0 1rem 1.5rem;
+        }
+
+        .analysis-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .analysis-content blockquote {
+            margin: 1rem 0;
+            padding: 1rem 1.5rem;
+            background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+            border-left: 4px solid #F59E0B;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: #78350F;
+        }
+
+        .analysis-content .scripture-quote {
+            background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%);
+            border-left-color: var(--genesis-border);
+            color: #1E3A5F;
+        }
+
+        .analysis-content .significance-box {
+            margin: 1rem 0;
+            padding: 1rem 1.25rem;
+            background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
+            border: 1px solid var(--moses-border);
+            border-radius: 8px;
+        }
+
+        .analysis-content .significance-box strong {
+            color: #065F46;
+        }
+
+        .analysis-content table {
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+
+        .analysis-content a {
+            color: var(--genesis-border);
+            text-decoration: none;
+        }
+
+        .analysis-content a:hover {
+            text-decoration: underline;
+        }
+
+        /* Video container */
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 560px;
+            margin: 1.5rem auto;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 12px;
+        }
+
+        .video-caption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-top: 0.75rem;
+        }
+
+        .theological-card {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .theo-item {
+            background: #F9FAFB;
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .theo-item h4 {
+            color: var(--header-bg);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .theo-item ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .theo-item li {
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed var(--border-color);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .theo-item li:last-child { border-bottom: none; }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            min-width: 70px;
+            text-align: center;
+        }
+
+        .badge-genesis { background: var(--genesis-bg); color: #1E40AF; }
+        .badge-moses { background: var(--moses-bg); color: #065F46; }
+        .badge-abraham { background: var(--abraham-bg); color: #92400E; }
+
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .legend-color {
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            border: 2px solid;
+        }
+
+        .legend-genesis { background: var(--genesis-bg); border-color: var(--genesis-border); }
+        .legend-moses { background: var(--moses-bg); border-color: var(--moses-border); }
+        .legend-abraham { background: var(--abraham-bg); border-color: var(--abraham-border); }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        footer a {
+            color: var(--genesis-border);
+            text-decoration: none;
+        }
+
+        footer a:hover { text-decoration: underline; }
+
+        .toc {
+            background: #F9FAFB;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .toc h3 {
+            margin-bottom: 1rem;
+            color: var(--header-bg);
+        }
+
+        .toc ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.5rem;
+            list-style: none;
+        }
+
+        .toc a {
+            color: var(--text-primary);
+            text-decoration: none;
+            padding: 0.5rem;
+            border-radius: 6px;
+            display: block;
+            transition: background 0.2s;
+        }
+
+        .toc a:hover {
+            background: var(--genesis-bg);
+        }
+
+        /* Hebrew styling */
+        .hebrew {
+            font-family: 'SBL Hebrew', 'Ezra SIL', 'Times New Roman', serif;
+            font-size: 1.2em;
+            direction: rtl;
+            unicode-bidi: bidi-override;
+        }
+
+        .hebrew-term {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #F3F4F6;
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            margin: 0.25rem 0;
+        }
+
+        .hebrew-term a {
+            color: #1E40AF;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .hebrew-term a:hover {
+            text-decoration: underline;
+        }
+
+        .blb-link {
+            color: #3B82F6;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+
+        .blb-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Hebrew terms table */
+        .hebrew-table td {
+            vertical-align: middle;
+        }
+
+        .hebrew-table .hebrew {
+            font-size: 1.4em;
+        }
+
+        /* Full text comparison */
+        .scripture-text {
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .scripture-text .highlight {
+            font-weight: 600;
+        }
+
+        .verse-num {
+            font-weight: 700;
+            color: var(--header-bg);
+            margin-right: 0.25rem;
+        }
+
+        .day-header {
+            background: var(--header-bg) !important;
+            color: white !important;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .day-header td {
+            background: var(--header-bg) !important;
+            color: white !important;
+            padding: 0.75rem;
+            font-size: 1rem;
+        }
+
+        .scroll-container {
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        .full-text-table {
+            min-width: 1000px;
+        }
+
+        .full-text-table th {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .full-text-table td {
+            width: 33%;
+            padding: 0.75rem 1rem;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 1rem; }
+            h1 { font-size: 1.75rem; }
+            table { font-size: 0.85rem; }
+            th, td { padding: 0.75rem 0.5rem; }
+            .scripture-refs { flex-direction: column; align-items: center; }
+            .hebrew { font-size: 1.1em; }
+            .analysis-dropdown summary { padding: 0.75rem 1rem; font-size: 0.95rem; }
+            .analysis-content { padding: 1rem; }
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            section { box-shadow: none; break-inside: avoid; page-break-inside: avoid; }
+            .toc { display: none; }
+            .scroll-container { overflow: visible; }
+            .full-text-table { min-width: auto; }
+            .analysis-dropdown { break-inside: avoid; }
+            .analysis-dropdown[open] .analysis-content { display: block; }
+            nav.sticky-nav { display: none; }
+        }
+
+        /* STICKY NAVIGATION */
+        nav.sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--header-bg);
+            padding: 0.75rem 1rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        nav.sticky-nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav.sticky-nav li {
+            margin: 0;
+        }
+
+        nav.sticky-nav a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        nav.sticky-nav a:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-1px);
+        }
+
+        nav.sticky-nav a.nav-primary {
+            background: var(--genesis-border);
+            font-weight: 600;
+        }
+
+        nav.sticky-nav a.nav-primary:hover {
+            background: #2563EB;
+        }
+
+        /* COLLAPSIBLE SECTION STYLES */
+        .collapsible-section {
+            background: white;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .collapsible-section > summary {
+            padding: 1.5rem 2rem;
+            background: linear-gradient(135deg, var(--header-bg) 0%, #2D4A6F 100%);
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            list-style: none;
+            transition: background 0.2s ease;
+        }
+
+        .collapsible-section > summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .collapsible-section > summary::before {
+            content: "▶";
+            font-size: 1rem;
+            transition: transform 0.3s ease;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .collapsible-section[open] > summary::before {
+            transform: rotate(90deg);
+        }
+
+        .collapsible-section > summary:hover {
+            background: linear-gradient(135deg, #2D4A6F 0%, #3D5A7F 100%);
+        }
+
+        .collapsible-section > summary .icon {
+            font-size: 1.75rem;
+        }
+
+        .collapsible-section .section-content {
+            padding: 2rem;
+        }
+
+        .collapsible-section .section-content > h2:first-child {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            nav.sticky-nav {
+                padding: 0.5rem;
+                border-radius: 8px;
+            }
+            nav.sticky-nav a {
+                padding: 0.4rem 0.75rem;
+                font-size: 0.75rem;
+            }
+            .collapsible-section > summary {
+                padding: 1rem 1.5rem;
+                font-size: 1.1rem;
+            }
+            .collapsible-section .section-content {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Three Creation Accounts Comparison</h1>
+            <p class="subtitle">A Comprehensive Textual Analysis</p>
+            <div class="scripture-refs">
+                <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/1" target="_blank" class="scripture-ref genesis-ref">Genesis 1-2</a>
+                <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/2" target="_blank" class="scripture-ref moses-ref">Moses 2-3</a>
+                <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/4" target="_blank" class="scripture-ref abraham-ref">Abraham 4-5</a>
+            </div>
+        </header>
+
+        <!-- STICKY NAVIGATION -->
+        <nav class="sticky-nav">
+            <ul>
+                <li><a href="#fulltext" class="nav-primary">&#x1F4D6; Full Text</a></li>
+                <li><a href="#intro">Intro</a></li>
+                <li><a href="#hebrew">Hebrew Terms</a></li>
+                <li><a href="#summary">Summary</a></li>
+                <li><a href="#divine">Divine Identity</a></li>
+                <li><a href="#vocabulary">Vocabulary</a></li>
+                <li><a href="#time">Time</a></li>
+                <li><a href="#evaluation">Evaluation</a></li>
+                <li><a href="#planning">Planning</a></li>
+                <li><a href="#spirit-creation">Spirit</a></li>
+                <li><a href="#soul-spirit">Soul</a></li>
+                <li><a href="#agency">Agency</a></li>
+                <li><a href="#firmament">Firmament</a></li>
+                <li><a href="#light">Light</a></li>
+                <li><a href="#help-meet">Help Meet</a></li>
+                <li><a href="#naming">Naming</a></li>
+                <li><a href="#nakedness">Clothing</a></li>
+                <li><a href="#unique">Unique</a></li>
+                <li><a href="#theological">Theology</a></li>
+            </ul>
+        </nav>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color legend-genesis"></div>
+                <span>Genesis</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color legend-moses"></div>
+                <span>Moses</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color legend-abraham"></div>
+                <span>Abraham</span>
+            </div>
+        </div>
+
+        <!-- SECTION: Full Text Comparison (COLLAPSIBLE) -->
+        <details class="collapsible-section" id="fulltext">
+            <summary>📖 Full Text Comparison: Genesis, Moses & Abraham Side-by-Side</summary>
+            <div class="section-content">
+
+            <div class="diff-legend">
+                <div class="diff-legend-item">
+                    <div class="diff-legend-color divine"></div>
+                    <span><strong>Divine Actor</strong> (God/Gods)</span>
+                </div>
+                <div class="diff-legend-item">
+                    <div class="diff-legend-color verb"></div>
+                    <span><strong>Creation Verbs</strong> (created/organized)</span>
+                </div>
+                <div class="diff-legend-item">
+                    <div class="diff-legend-color eval"></div>
+                    <span><strong>Evaluation</strong> (good/obeyed)</span>
+                </div>
+                <div class="diff-legend-item">
+                    <div class="diff-legend-color time"></div>
+                    <span><strong>Time</strong> (day/time)</span>
+                </div>
+                <div class="diff-legend-item">
+                    <div class="diff-legend-color sky"></div>
+                    <span><strong>Sky</strong> (firmament/expanse)</span>
+                </div>
+                <div class="diff-legend-item">
+                    <div class="diff-legend-color unique"></div>
+                    <span><strong>Unique Content</strong></span>
+                </div>
+            </div>
+
+            <div class="scroll-container">
+                <table class="full-text-table">
+                    <thead>
+                        <tr>
+                            <th style="background: var(--genesis-border);">Genesis 1</th>
+                            <th style="background: var(--moses-border);">Moses 2</th>
+                            <th style="background: var(--abraham-border); color: #78350F;">Abraham 4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Verse 1 -->
+                        <tr>
+                            <td class="col-genesis scripture-text"><span class="verse-num">1</span> In the beginning God <span class="hl-verb">created</span> the heaven and the earth.</td>
+                            <td class="col-moses scripture-text"><span class="verse-num">1</span> And it came to pass that the Lord spake unto Moses, saying: Behold, <span class="hl-unique">I reveal unto you</span> concerning this heaven, and this earth; write the words which I speak. <span class="hl-unique">I am the Beginning and the End, the Almighty God; by mine Only Begotten I created these things</span>; yea, in the beginning I <span class="hl-verb">created</span> the heaven,</td>
+                            <td class="col-abraham scripture-text"><span class="verse-num">1</span> And then the Lord said: <span class="hl-divine">Let us go down</span>. And they went down at the beginning, and they, that is <span class="hl-divine">the Gods</span>, <span class="hl-verb">organized</span> and formed the heavens and the earth.</td>
+                        </tr>
+                        <!-- Verse 2 -->
+                        <tr>
+                            <td class="col-genesis scripture-text"><span class="verse-num">2</span> And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.</td>
+                            <td class="col-moses scripture-text">and the earth upon which thou standest.<br><span class="verse-num">2</span> And the earth was without form, and void; and <span class="hl-unique">I caused darkness to come up</span> upon the face of the deep; and <span class="hl-divine">my Spirit</span> moved upon the face of the water; <span class="hl-unique">for I am God</span>.</td>
+                            <td class="col-abraham scripture-text"><span class="verse-num">2</span> And the earth, <span class="hl-verb">after it was formed</span>, was empty and desolate, because <span class="hl-unique">they had not formed anything but the earth</span>; and darkness <span class="hl-unique">reigned</span> upon the face of the deep, and the Spirit of <span class="hl-divine">the Gods was brooding</span> upon the face of the waters.</td>
+                        </tr>
+                        <!-- Day 1 Header -->
+                        <tr class="day-header">
+                            <td colspan="3">DAY 1 / FIRST TIME: Light</td>
+                        </tr>
+                        <!-- Verse 3 -->
+                        <tr>
+                            <td class="col-genesis scripture-text"><span class="verse-num">3</span> And God said, Let there be light: and there was light.</td>
+                            <td class="col-moses scripture-text"><span class="verse-num">3</span> And <span class="hl-divine">I, God</span>, said: Let there be light; and there was light.</td>
+                            <td class="col-abraham scripture-text"><span class="verse-num">3</span> And <span class="hl-divine">they (the Gods)</span> said: Let there be light; and there was light.</td>
+                        </tr>
+                        <!-- Verse 4 -->
+                        <tr>
+                            <td class="col-genesis scripture-text"><span class="verse-num">4</span> And God <span class="hl-eval">saw</span> the light, that it <span class="hl-eval">was good</span>: and God divided the light from the darkness.</td>
+                            <td class="col-moses scripture-text"><span class="verse-num">4</span> And I, God, <span class="hl-eval">saw</span> the light; and that light <span class="hl-eval">was good</span>. And I, God, divided the light from the darkness.</td>
+                            <td class="col-abraham scripture-text"><span class="verse-num">4</span> And they (the Gods) <span class="hl-eval">comprehended</span> the light, for it <span class="hl-eval">was bright</span>; and they divided the light, <span class="hl-unique">or caused it to be divided</span>, from the darkness.</td>
+                        </tr>
+                        <!-- Verse 5 -->
+                        <tr>
+                            <td class="col-genesis scripture-text"><span class="verse-num">5</span> And God called the light Day, and the darkness he called Night. And the evening and the morning were the <span class="hl-time">first day</span>.</td>
+                            <td class="col-moses scripture-text"><span class="verse-num">5</span> And I, God, called the light Day; and the darkness, I called Night; and <span class="hl-unique">this I did by the word of my power, and it was done as I spake</span>; and the evening and the morning were the <span class="hl-time">first day</span>.</td>
+                            <td class="col-abraham scripture-text"><span class="verse-num">5</span> And the Gods called the light Day, and the darkness they called Night. And <span class="hl-unique">it came to pass that from the evening until morning they called night; and from the morning until the evening they called day</span>; and this was the <span class="hl-time">first, or the beginning, of that which they called day and night</span>.</td>
+                        </tr>
+                        <!-- Day 2 Header -->
+                        <tr class="day-header">
+                            <td colspan="3">DAY 2 / SECOND TIME: Firmament/Expanse</td>
+                        </tr>
+                        <!-- Verse 6-8 -->
+                        <tr>
+                            <td class="col-genesis scripture-text"><span class="verse-num">6</span> And God said, Let there be a <span class="hl-sky">firmament</span> in the midst of the waters, and let it divide the waters from the waters.<br><span class="verse-num">7</span> And God made the firmament, and divided the waters which were under the firmament from the waters which were above the firmament: and it was so.<br><span class="verse-num">8</span> And God called the firmament Heaven. And the evening and the morning were the <span class="hl-time">second day</span>.</td>
+                            <td class="col-moses scripture-text"><span class="verse-num">6</span> And again, I, God, said: Let there be a <span class="hl-sky">firmament</span> in the midst of the water, <span class="hl-unique">and it was so, even as I spake</span>; and I said: Let it divide the waters from the waters; <span class="hl-unique">and it was done</span>;<br><span class="verse-num">7</span> And I, God, made the firmament and divided the waters, <span class="hl-unique">yea, the great waters</span> under the firmament from the waters which were above the firmament, <span class="hl-unique">and it was so even as I spake</span>.<br><span class="verse-num">8</span> And I, God, called the firmament Heaven; and the evening and the morning were the <span class="hl-time">second day</span>.</td>
+                            <td class="col-abraham scripture-text"><span class="verse-num">6</span> And the Gods also said: Let there be an <span class="hl-sky">expanse</span> in the midst of the waters, and it <span class="hl-unique">shall</span> divide the waters from the waters.<br><span class="verse-num">7</span> And the Gods <span class="hl-verb">ordered</span> the <span class="hl-sky">expanse</span>, so that it divided the waters which were under the expanse from the waters which were above the expanse; and it was so, <span class="hl-eval">even as they ordered</span>.<br><span class="verse-num">8</span> And the Gods called the expanse, Heaven. And it came to pass that it was from evening until morning that they called night; and it came to pass that it was from morning until evening that they called day; and this was the <span class="hl-time">second time</span> that they called night and day.</td>
+                        </tr>
+                        <!-- Day 3 Header -->
+                        <tr class="day-header">
+                            <td colspan="3">DAY 3 / THIRD TIME: Land, Seas, Plants</td>
+                        </tr>
+                        <!-- Verse 9-13 -->
+                        <tr>
+                            <td class="col-genesis scripture-text"><span class="verse-num">9</span> And God said, Let the waters under the heaven be gathered together unto one place, and let the dry land appear: and it was so.<br><span class="verse-num">10</span> And God called the dry land Earth; and the gathering together of the waters called he Seas: and God saw that it <span class="hl-eval">was good</span>.<br><span class="verse-num">11</span> And God said, Let the earth bring forth grass, the herb yielding seed, and the fruit tree yielding fruit after his kind, whose seed is in itself, upon the earth: and it was so.<br><span class="verse-num">12</span> And the earth brought forth grass, and herb yielding seed after his kind, and the tree yielding fruit, whose seed was in itself, after his kind: and God saw that it <span class="hl-eval">was good</span>.<br><span class="verse-num">13</span> And the evening and the morning were the <span class="hl-time">third day</span>.</td>
+                            <td class="col-moses scripture-text"><span class="verse-num">9</span> And I, God, said: Let the waters under the heaven be gathered together unto one place, <span class="hl-unique">and it was so</span>; and I, God, said: Let there be dry land; <span class="hl-unique">and it was so</span>.<br><span class="verse-num">10</span> And I, God, called the dry land Earth; and the gathering together of the waters, called I the Sea; and I, God, saw that <span class="hl-eval">all things which I had made were good</span>.<br><span class="verse-num">11</span> And I, God, said: Let the earth bring forth grass, the herb yielding seed, the fruit tree yielding fruit, after his kind, <span class="hl-unique">and the tree yielding fruit</span>, whose seed should be in itself upon the earth, <span class="hl-unique">and it was so even as I spake</span>.<br><span class="verse-num">12</span> And the earth brought forth grass, every herb yielding seed after his kind, and the tree yielding fruit, whose seed should be in itself, after his kind; and I, God, saw that <span class="hl-eval">all things which I had made were good</span>;<br><span class="verse-num">13</span> And the evening and the morning were the <span class="hl-time">third day</span>.</td>
+                            <td class="col-abraham scripture-text"><span class="verse-num">9</span> And the Gods <span class="hl-verb">ordered</span>, saying: Let the waters under the heaven be gathered together unto one place, and let the earth come up dry; and it was so <span class="hl-eval">as they ordered</span>;<br><span class="verse-num">10</span> And the Gods <span class="hl-verb">pronounced</span> the dry land, Earth; and the gathering together of the waters, <span class="hl-verb">pronounced</span> they, Great Waters; and the Gods saw that <span class="hl-eval">they were obeyed</span>.<br><span class="verse-num">11</span> And the Gods said: <span class="hl-verb">Let us prepare</span> the earth to bring forth grass; the herb yielding seed; the fruit tree yielding fruit, after his kind, whose seed in itself yieldeth its own likeness upon the earth; and it was so, <span class="hl-eval">even as they ordered</span>.<br><span class="verse-num">12</span> And the Gods <span class="hl-verb">organized</span> the earth to bring forth grass from its own seed, and the herb to bring forth herb from its own seed, yielding seed after his kind; and the earth to bring forth the tree from its own seed, yielding fruit, whose seed could only bring forth the same in itself, after his kind; and the Gods saw that <span class="hl-eval">they were obeyed</span>.<br><span class="verse-num">13</span> And it came to pass that they numbered the days; from the evening until the morning they called night; and it came to pass, from the morning until the evening they called day; and it was the <span class="hl-time">third time</span>.</td>
+                        </tr>
+                        <!-- Day 4 Header -->
+                        <tr class="day-header">
+                            <td colspan="3">DAY 4 / FOURTH TIME: Sun, Moon, Stars</td>
+                        </tr>
+                        <!-- Verse 14-19 -->
+                        <tr>
+                            <td class="col-genesis scripture-text"><span class="verse-num">14</span> And God said, Let there be lights in the <span class="hl-sky">firmament</span> of the heaven to divide the day from the night; and let them be for signs, and for seasons, and for days, and years:<br><span class="verse-num">15</span> And let them be for lights in the firmament of the heaven to give light upon the earth: and it was so.<br><span class="verse-num">16</span> And God made two great lights; the greater light to rule the day, and the lesser light to rule the night: he made the stars also.<br><span class="verse-num">17</span> And God set them in the firmament of the heaven to give light upon the earth,<br><span class="verse-num">18</span> And to rule over the day and over the night, and to divide the light from the darkness: and God saw that it <span class="hl-eval">was good</span>.<br><span class="verse-num">19</span> And the evening and the morning were the <span class="hl-time">fourth day</span>.</td>
+                            <td class="col-moses scripture-text"><span class="verse-num">14</span> And I, God, said: Let there be lights in the <span class="hl-sky">firmament</span> of the heaven, to divide the day from the night, and let them be for signs, and for seasons, and for days, and for years;<br><span class="verse-num">15</span> And let them be for lights in the firmament of the heaven to give light upon the earth; <span class="hl-unique">and it was so</span>.<br><span class="verse-num">16</span> And I, God, made two great lights; the greater light to rule the day, and the lesser light to rule the night, <span class="hl-unique">and the greater light was the sun, and the lesser light was the moon</span>; and the stars also were made <span class="hl-unique">even according to my word</span>.<br><span class="verse-num">17</span> And I, God, set them in the firmament of the heaven to give light upon the earth,<br><span class="verse-num">18</span> And the sun to rule over the day, and the moon to rule over the night, and to divide the light from the darkness; and I, God, saw that all things which I had made <span class="hl-eval">were good</span>;<br><span class="verse-num">19</span> And the evening and the morning were the <span class="hl-time">fourth day</span>.</td>
+                            <td class="col-abraham scripture-text"><span class="verse-num">14</span> And the Gods <span class="hl-verb">organized</span> the lights in the <span class="hl-sky">expanse</span> of the heaven, and <span class="hl-unique">caused them to</span> divide the day from the night; and <span class="hl-verb">organized them</span> to be for signs and for seasons, and for days and for years;<br><span class="verse-num">15</span> And <span class="hl-verb">organized them</span> to be for lights in the expanse of the heaven to give light upon the earth; and it was so.<br><span class="verse-num">16</span> And the Gods <span class="hl-verb">organized</span> the two great lights, the greater light to rule the day, and the lesser light to rule the night; <span class="hl-unique">with the lesser light they set the stars also</span>;<br><span class="verse-num">17</span> And the Gods <span class="hl-verb">set them</span> in the expanse of the heavens, to give light upon the earth, and to rule over the day and over the night, and to <span class="hl-unique">cause to</span> divide the light from the darkness.<br><span class="verse-num">18</span> And the Gods <span class="hl-eval">watched those things which they had ordered until they obeyed</span>.<br><span class="verse-num">19</span> And it came to pass that it was from evening until morning that it was night; and it came to pass that it was from morning until evening that it was day; and it was the <span class="hl-time">fourth time</span>.</td>
+                        </tr>
+                        <!-- Day 5 Header -->
+                        <tr class="day-header">
+                            <td colspan="3">DAY 5 / FIFTH TIME: Fish, Fowl</td>
+                        </tr>
+                        <!-- Verse 20-23 -->
+                        <tr>
+                            <td class="col-genesis scripture-text"><span class="verse-num">20</span> And God said, Let the waters bring forth abundantly the moving creature that hath life, and fowl that may fly above the earth in the open <span class="hl-sky">firmament</span> of heaven.<br><span class="verse-num">21</span> And God created great whales, and every living creature that moveth, which the waters brought forth abundantly, after their kind, and every winged fowl after his kind: and God saw that it <span class="hl-eval">was good</span>.<br><span class="verse-num">22</span> And God blessed them, saying, Be fruitful, and multiply, and fill the waters in the seas, and let fowl multiply in the earth.<br><span class="verse-num">23</span> And the evening and the morning were the <span class="hl-time">fifth day</span>.</td>
+                            <td class="col-moses scripture-text"><span class="verse-num">20</span> And I, God, said: Let the waters bring forth abundantly the moving creature that hath life, and fowl <span class="hl-unique">which</span> may fly above the earth in the open <span class="hl-sky">firmament</span> of heaven.<br><span class="verse-num">21</span> And I, God, created great whales, and every living creature that moveth, which the waters brought forth abundantly, after their kind, and every winged fowl after his kind; and I, God, saw that all things which I had <span class="hl-verb">created</span> <span class="hl-eval">were good</span>.<br><span class="verse-num">22</span> And I, God, blessed them, saying: Be fruitful, and multiply, and fill the waters in the sea; and let fowl multiply in the earth;<br><span class="verse-num">23</span> And the evening and the morning were the <span class="hl-time">fifth day</span>.</td>
+                            <td class="col-abraham scripture-text"><span class="verse-num">20</span> And the Gods said: <span class="hl-verb">Let us prepare</span> the waters to bring forth abundantly the moving creatures that have life; and the fowl, that they may fly above the earth in the open <span class="hl-sky">expanse</span> of heaven.<br><span class="verse-num">21</span> And the Gods <span class="hl-verb">prepared</span> the waters that they might bring forth great whales, and every living creature that moveth, which the waters were to bring forth abundantly after their kind; and every winged fowl after their kind. And the Gods saw that <span class="hl-eval">they would be obeyed</span>, and that <span class="hl-eval">their plan was good</span>.<br><span class="verse-num">22</span> And the Gods said: <span class="hl-divine">We will</span> bless them to be fruitful and multiply, and fill the waters in the seas or great waters; and <span class="hl-unique">cause the fowl to multiply</span> in the earth.<br><span class="verse-num">23</span> And it came to pass that it was from evening until morning that they called night; and it came to pass that it was from morning until evening that they called day; and it was the <span class="hl-time">fifth time</span>.</td>
+                        </tr>
+                        <!-- Day 6 Header -->
+                        <tr class="day-header">
+                            <td colspan="3">DAY 6 / SIXTH TIME: Animals, Man</td>
+                        </tr>
+                        <!-- Verse 24-31 -->
+                        <tr>
+                            <td class="col-genesis scripture-text"><span class="verse-num">24</span> And God said, Let the earth bring forth the living creature after his kind, cattle, and creeping thing, and beast of the earth after his kind: and it was so.<br><span class="verse-num">25</span> And God made the beast of the earth after his kind, and cattle after their kind, and every thing that creepeth upon the earth after his kind: and God saw that it <span class="hl-eval">was good</span>.<br><span class="verse-num">26</span> And God said, Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea, and over the fowl of the air, and over the cattle, and over all the earth, and over every creeping thing that creepeth upon the earth.<br><span class="verse-num">27</span> So God <span class="hl-verb">created</span> man in his own image, in the image of God created he him; male and female created he them.<br><span class="verse-num">28</span> And God blessed them, and God said unto them, Be fruitful, and multiply, and replenish the earth, and subdue it: and have dominion over the fish of the sea, and over the fowl of the air, and over every living thing that moveth upon the earth.<br><span class="verse-num">29</span> And God said, Behold, I have given you every herb bearing seed, which is upon the face of all the earth, and every tree, in the which is the fruit of a tree yielding seed; to you it shall be for meat.<br><span class="verse-num">30</span> And to every beast of the earth, and to every fowl of the air, and to every thing that creepeth upon the earth, wherein there is life, I have given every green herb for meat: and it was so.<br><span class="verse-num">31</span> And God saw every thing that he had made, and, behold, it <span class="hl-eval">was very good</span>. And the evening and the morning were the <span class="hl-time">sixth day</span>.</td>
+                            <td class="col-moses scripture-text"><span class="verse-num">24</span> And I, God, said: Let the earth bring forth the living creature after his kind, cattle, and creeping things, and beasts of the earth after their kind, <span class="hl-unique">and it was so</span>;<br><span class="verse-num">25</span> And I, God, made the beasts of the earth after their kind, and cattle after their kind, and everything which creepeth upon the earth after his kind; and I, God, saw that all these things <span class="hl-eval">were good</span>.<br><span class="verse-num">26</span> And I, God, said unto mine Only Begotten, <span class="hl-unique">which was with me from the beginning</span>: Let us make man in our image, after our likeness; and it was so. And I, God, said: Let them have dominion over the fishes of the sea, and over the fowl of the air, and over the cattle, and over all the earth, and over every creeping thing that creepeth upon the earth.<br><span class="verse-num">27</span> And I, God, <span class="hl-verb">created</span> man in mine own image, in the image of mine Only Begotten created I him; male and female created I them.<br><span class="verse-num">28</span> And I, God, blessed them, and said unto them: Be fruitful, and multiply, and replenish the earth, and subdue it, and have dominion over the fish of the sea, and over the fowl of the air, and over every living thing that moveth upon the earth.<br><span class="verse-num">29</span> And I, God, said unto man: Behold, I have given you every herb bearing seed, which is upon the face of all the earth, and every tree in the which shall be the fruit of a tree yielding seed; to you it shall be for meat.<br><span class="verse-num">30</span> And to every beast of the earth, and to every fowl of the air, and to everything that creepeth upon the earth, wherein <span class="hl-unique">I grant life, there shall be given every clean herb</span> for meat; <span class="hl-unique">and it was so, even as I spake</span>.<br><span class="verse-num">31</span> And I, God, saw everything that I had made, and, behold, <span class="hl-eval">all things which I had made were very good</span>; and the evening and the morning were the <span class="hl-time">sixth day</span>.</td>
+                            <td class="col-abraham scripture-text"><span class="verse-num">24</span> And the Gods <span class="hl-verb">prepared</span> the earth to bring forth the living creature after his kind, cattle and creeping things, and beasts of the earth after their kind; and it was so, <span class="hl-eval">as they had said</span>.<br><span class="verse-num">25</span> And the Gods <span class="hl-verb">organized</span> the earth to bring forth the beasts after their kind, and cattle after their kind, and every thing that creepeth upon the earth after its kind; and the Gods saw <span class="hl-eval">they would obey</span>.<br><span class="verse-num">26</span> And the Gods <span class="hl-verb">took counsel among themselves</span> and said: <span class="hl-divine">Let us go down</span> and form man in <span class="hl-divine">our</span> image, after <span class="hl-divine">our</span> likeness; and <span class="hl-divine">we will give them</span> dominion over the fish of the sea, and over the fowl of the air, and over the cattle, and over all the earth, and over every creeping thing that creepeth upon the earth.<br><span class="verse-num">27</span> So the Gods went down to <span class="hl-verb">organize</span> man in <span class="hl-divine">their own</span> image, in the image of the Gods to form they him, male and female to form they them.<br><span class="verse-num">28</span> And the Gods said: <span class="hl-divine">We will</span> bless them. And the Gods said: <span class="hl-divine">We will cause them to</span> be fruitful and multiply, and replenish the earth, and subdue it, and to have dominion over the fish of the sea, and over the fowl of the air, and over every living thing that moveth upon the earth.<br><span class="verse-num">29</span> And the Gods said: Behold, <span class="hl-divine">we will give them</span> every herb bearing seed <span class="hl-unique">that shall come</span> upon the face of all the earth, and every tree <span class="hl-unique">which shall have</span> fruit upon it; <span class="hl-unique">yea, the fruit of the tree yielding seed to them we will give it; it shall be for their</span> meat.<br><span class="verse-num">30</span> And to every beast of the earth, and to every fowl of the air, and to every thing that creepeth upon the earth, behold, <span class="hl-divine">we will give them life, and also we will give to them</span> every green herb for meat, <span class="hl-verb">and all these things shall be thus organized</span>.<br><span class="verse-num">31</span> And the Gods said: <span class="hl-divine">We will do everything that we have said</span>, and <span class="hl-verb">organize them</span>; and behold, <span class="hl-eval">they shall be very obedient</span>. And it came to pass that it was from evening until morning they called night; and it came to pass that it was from morning until evening that they called day; and <span class="hl-time">they numbered the sixth time</span>.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="key-insight" style="margin-top: 1.5rem;">
+                <h3>Patterns to Notice</h3>
+                <p style="margin: 0.75rem 0; font-size: 0.95rem;">Each account follows a consistent formula that reveals its theological emphasis:</p>
+                <ul style="margin-top: 0.75rem; margin-left: 1.5rem;">
+                    <li><strong>Genesis:</strong> "God said...and it was so...God <span class="hl-eval">saw</span> that it <span class="hl-eval">was good</span>"</li>
+                    <li><strong>Moses:</strong> "<span class="hl-divine">I, God</span>, said...and it was so, <span class="hl-unique">even as I spake</span>...I, God, <span class="hl-eval">saw</span> that all things which I had made <span class="hl-eval">were good</span>"</li>
+                    <li><strong>Abraham:</strong> "<span class="hl-divine">The Gods</span> said...and it was so, <span class="hl-eval">as they ordered</span>...the Gods saw that <span class="hl-eval">they were/would be obeyed</span>"</li>
+                </ul>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #78350F;"><strong>Key pattern:</strong> Notice how Abraham's <span class="hl-verb">creation verbs</span> (organized, prepared, ordered) cluster throughout, while the <span class="hl-divine">divine plurality language</span> (the Gods, we will, let us) appears consistently. The <span class="hl-time">time terminology</span> shifts from "day" to "time" reveal different conceptions of the creation period.</p>
+            </div>
+
+            </div>
+        </details>
+
+        <!-- INTRODUCTION -->
+        <section id="intro">
+            <h2><span class="icon">&#x1F4D6;</span> Introduction</h2>
+            <p>The Latter-day Saint canon preserves three parallel creation accounts included in scripture: Genesis (the biblical text), the Book of Moses (revealed to Joseph Smith, June&ndash;October 1830), and the Book of Abraham (translated from Egyptian papyri). While sharing a common narrative structure, each account contains distinctive vocabulary, theological emphases, and unique content that rewards careful comparative study.</p>
+            <p style="margin-top: 1rem;">This analysis examines the major textual and theological differences across all three accounts.</p>
+        </section>
+
+        <!-- SECTION: Hebrew Terms Reference (COLLAPSIBLE) -->
+        <details class="collapsible-section" id="hebrew">
+            <summary>📜 Hebrew Terms Reference: Key Words and Their Meanings</summary>
+            <div class="section-content">
+            <p style="margin-bottom: 1rem; color: var(--text-secondary);">Understanding Hebrew morphology reveals layers of meaning often lost in translation. Click Hebrew terms to view full lexicon entries at Blue Letter Bible.</p>
+
+            <!-- GENESIS 1:1 MORPHOLOGY -->
+            <div class="key-insight" style="margin-bottom: 1.5rem; background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%); border-left-color: #3B82F6;">
+                <h3 style="color: #1E40AF;">Genesis 1:1 &mdash; The Opening Words</h3>
+                <p style="font-size: 1.3em; text-align: center; margin: 1rem 0; direction: rtl;">
+                    <span class="hebrew" style="font-size: 1.2em;">בְּרֵאשִׁית</span>
+                    <span class="hebrew" style="font-size: 1.2em;">בָּרָא</span>
+                    <span class="hebrew" style="font-size: 1.2em;">אֱלֹהִים</span>
+                </p>
+                <p style="text-align: center; font-style: italic; margin-bottom: 1rem;">"In the beginning God created..." (KJV)</p>
+
+                <table style="width: 100%; margin: 1rem 0; font-size: 0.95rem;">
+                    <tr style="background: rgba(255,255,255,0.5);">
+                        <td style="padding: 0.5rem; font-weight: bold; width: 25%;"><span class="hebrew">בְּרֵאשִׁית</span></td>
+                        <td style="padding: 0.5rem;"><a href="https://www.blueletterbible.org/lexicon/h7225/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>bereshit</em></a> &mdash; "In [a/the] beginning" or "When [God] began to create"</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.5rem; font-weight: bold;"><span class="hebrew">בָּרָא</span></td>
+                        <td style="padding: 0.5rem;"><a href="https://www.blueletterbible.org/lexicon/h1254/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>bara</em></a> &mdash; "created" (3rd person masculine singular, perfect)</td>
+                    </tr>
+                    <tr style="background: rgba(255,255,255,0.5);">
+                        <td style="padding: 0.5rem; font-weight: bold;"><span class="hebrew">אֱלֹהִים</span></td>
+                        <td style="padding: 0.5rem;"><a href="https://www.blueletterbible.org/lexicon/h430/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>Elohim</em></a> &mdash; "God" (grammatically plural, used with singular verb)</td>
+                    </tr>
+                </table>
+
+                <p style="margin-top: 1rem;"><strong>Morphological Insight:</strong> The word <span class="hebrew">בְּרֵאשִׁית</span> (<em>bereshit</em>) is built from multiple components:</p>
+
+                <table style="width: 100%; margin: 0.75rem 0; font-size: 0.9rem; border-collapse: collapse;">
+                    <tr style="background: rgba(255,255,255,0.6);">
+                        <td style="padding: 0.4rem; border: 1px solid rgba(0,0,0,0.1); width: 15%;"><strong>בְּ</strong></td>
+                        <td style="padding: 0.4rem; border: 1px solid rgba(0,0,0,0.1); width: 15%;"><em>be-</em></td>
+                        <td style="padding: 0.4rem; border: 1px solid rgba(0,0,0,0.1);">Preposition: "in, at, with, by"</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.4rem; border: 1px solid rgba(0,0,0,0.1);"><strong><span class="hebrew">רֵאשִׁית</span></strong></td>
+                        <td style="padding: 0.4rem; border: 1px solid rgba(0,0,0,0.1);"><a href="https://www.blueletterbible.org/lexicon/h7225/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>reshit</em></a></td>
+                        <td style="padding: 0.4rem; border: 1px solid rgba(0,0,0,0.1);">"Beginning, first, chief, firstfruits" (<a href="https://www.blueletterbible.org/lexicon/h7225/kjv/wlc/0-1/" target="_blank" class="blb-link">H7225</a>)</td>
+                    </tr>
+                    <tr style="background: rgba(255,255,255,0.6);">
+                        <td style="padding: 0.4rem; border: 1px solid rgba(0,0,0,0.1);"><strong><span class="hebrew">רֹאשׁ</span></strong></td>
+                        <td style="padding: 0.4rem; border: 1px solid rgba(0,0,0,0.1);"><a href="https://www.blueletterbible.org/lexicon/h7218/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>rosh</em></a></td>
+                        <td style="padding: 0.4rem; border: 1px solid rgba(0,0,0,0.1);">"Head, top, summit, chief, leader" &mdash; the root of <em>reshit</em> (<a href="https://www.blueletterbible.org/lexicon/h7218/kjv/wlc/0-1/" target="_blank" class="blb-link">H7218</a>)</td>
+                    </tr>
+                </table>
+
+                <p style="margin-top: 0.75rem;"><strong>The <em>Reshit</em> Connection:</strong> <span class="hebrew">רֵאשִׁית</span> (<em>reshit</em>) derives from <span class="hebrew">רֹאשׁ</span> (<em>rosh</em>, "head"). In Israelite worship, <em>reshit</em> designated the <strong>firstfruits</strong> offered to God&mdash;the first and best portion of the harvest (Ex 23:19, Lev 23:10, Deut 18:4). This creates a remarkable resonance: creation itself is God's "firstfruits," the first and best offering of divine creative power.</p>
+
+                <p style="margin-top: 0.75rem;"><strong>Root Wordplay:</strong> Hebrew readers would hear the echo between <span class="hebrew">בְּרֵאשִׁית</span> (<em>bereshit</em>, from <em>rosh</em> "head") and <span class="hebrew">בָּרָא</span> (<em>bara</em>, "created")&mdash;though from different roots, the similar sounds create poetic resonance at the Torah's opening.</p>
+
+                <p style="margin-top: 0.75rem;"><strong>Alternate Translations:</strong></p>
+                <ul style="margin: 0.5rem 0 0 1.5rem;">
+                    <li><strong>"In the beginning"</strong> &mdash; Traditional (KJV, NKJV)</li>
+                    <li><strong>"In a beginning"</strong> &mdash; The Hebrew lacks a definite article; this may not be <em>the</em> absolute beginning</li>
+                    <li><strong>"When God began to create"</strong> &mdash; NRSV, JPS; treats <em>bereshit</em> as a temporal clause</li>
+                    <li><strong>"In the beginning of God's creating"</strong> &mdash; Rashi's interpretation; creation as ongoing action</li>
+                    <li><strong>"In the head/chief [portion]"</strong> &mdash; Reflecting the <em>rosh</em> root; creation as the "head" of all that follows</li>
+                    <li><strong>"As firstfruits"</strong> &mdash; Reflecting the <em>reshit</em> meaning; creation as God's first offering</li>
+                </ul>
+            </div>
+
+            <!-- CREATION VERBS TABLE -->
+            <h3 style="margin: 1.5rem 0 1rem; color: var(--header-bg);">Creation Verbs &mdash; Root Analysis</h3>
+            <table class="hebrew-table">
+                <thead>
+                    <tr>
+                        <th>Root</th>
+                        <th>Dictionary Form</th>
+                        <th>As It Appears</th>
+                        <th>Meaning &amp; Usage</th>
+                        <th>Strong's</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="font-weight: bold;">ב-ר-א</td>
+                        <td><span class="hebrew">בָּרָא</span><br><a href="https://www.blueletterbible.org/lexicon/h1254/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>bara</em></a></td>
+                        <td>
+                            <span class="hebrew">בָּרָא</span> <em>bara</em> (1:1, 21, 27)<br>
+                            <span class="hebrew">בְּרֵאשִׁית</span> <em>bereshit</em> (1:1)<br>
+                            <span class="hebrew">בְּהִבָּרְאָם</span> <em>behibar'am</em> (2:4)
+                        </td>
+                        <td>To create; used exclusively of divine creative action. <strong>Note:</strong> Scholars debate whether <em>bara</em> implies <em>ex nihilo</em>. Genesis actually presumes pre-existing materials: waters and the deep (1:2), the Spirit moving upon the face of the waters, dust for forming man (2:7). The concept of creation from absolute nothing developed later when Hebrew and Hellenistic thought merged.</td>
+                        <td><a href="https://www.blueletterbible.org/lexicon/h1254/kjv/wlc/0-1/" target="_blank" class="blb-link">H1254</a></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;">ע-ש-ה</td>
+                        <td><span class="hebrew">עָשָׂה</span><br><a href="https://www.blueletterbible.org/lexicon/h6213/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>asah</em></a></td>
+                        <td>
+                            <span class="hebrew">וַיַּעַשׂ</span> <em>vaya'as</em> (1:7, 16, 25, 31)<br>
+                            <span class="hebrew">נַעֲשֶׂה</span> <em>na'aseh</em> (1:26)
+                        </td>
+                        <td>To make, do, fashion. General term for making; can involve pre-existing materials. "Let <strong>us make</strong>" (1:26) uses this root.</td>
+                        <td><a href="https://www.blueletterbible.org/lexicon/h6213/kjv/wlc/0-1/" target="_blank" class="blb-link">H6213</a></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;">י-צ-ר</td>
+                        <td><span class="hebrew">יָצַר</span><br><a href="https://www.blueletterbible.org/lexicon/h3335/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>yatsar</em></a></td>
+                        <td>
+                            <span class="hebrew">וַיִּיצֶר</span> <em>vayitser</em> (2:7, 8, 19)
+                        </td>
+                        <td>To form, shape (as a potter shapes clay). Implies hands-on craftsmanship with existing matter. Used for forming man and animals.</td>
+                        <td><a href="https://www.blueletterbible.org/lexicon/h3335/kjv/wlc/0-1/" target="_blank" class="blb-link">H3335</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- DIVINE NAMES -->
+            <h3 style="margin: 1.5rem 0 1rem; color: var(--header-bg);">Divine Names</h3>
+            <table class="hebrew-table">
+                <thead>
+                    <tr>
+                        <th>Hebrew</th>
+                        <th>Transliteration</th>
+                        <th>Appears In Text As</th>
+                        <th>Significance</th>
+                        <th>Strong's</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="hebrew">אֱלֹהִים</span></td>
+                        <td><a href="https://www.blueletterbible.org/lexicon/h430/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>Elohim</em></a></td>
+                        <td>Used 35&times; in Genesis 1:1&ndash;2:3</td>
+                        <td>Grammatically plural (-im ending) but paired with singular verbs. Suggests majesty/fullness. Abraham renders this as "the Gods" (plural verbs).</td>
+                        <td><a href="https://www.blueletterbible.org/lexicon/h430/kjv/wlc/0-1/" target="_blank" class="blb-link">H430</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="hebrew">יְהוָה</span></td>
+                        <td><a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>YHWH</em></a> (Yahweh)</td>
+                        <td><span class="hebrew">יְהוָה אֱלֹהִים</span> "LORD God" (Gen 2:4ff)</td>
+                        <td>The covenant name; appears only in Gen 2 (after creation narrative). Combined with Elohim as "LORD God."</td>
+                        <td><a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/" target="_blank" class="blb-link">H3068</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- OTHER KEY TERMS -->
+            <h3 style="margin: 1.5rem 0 1rem; color: var(--header-bg);">Other Key Terms</h3>
+            <table class="hebrew-table">
+                <thead>
+                    <tr>
+                        <th>Hebrew</th>
+                        <th>Transliteration</th>
+                        <th>Textual Forms</th>
+                        <th>Meaning &amp; Notes</th>
+                        <th>Strong's</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="hebrew">יוֹם</span></td>
+                        <td><a href="https://www.blueletterbible.org/lexicon/h3117/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>yom</em></a></td>
+                        <td>
+                            <span class="hebrew">יוֹם</span> "day" (1:5)<br>
+                            <span class="hebrew">בְּיוֹם</span> "in the day" (2:4)
+                        </td>
+                        <td>Day, time, period. Gen 2:4 uses <em>yom</em> to summarize all six "days" as one <em>yom</em>&mdash;showing flexibility. Abraham replaces with "time."</td>
+                        <td><a href="https://www.blueletterbible.org/lexicon/h3117/kjv/wlc/0-1/" target="_blank" class="blb-link">H3117</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="hebrew">רָקִיעַ</span></td>
+                        <td><a href="https://www.blueletterbible.org/lexicon/h7549/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>raqia</em></a></td>
+                        <td><span class="hebrew">הָרָקִיעַ</span> "the firmament" (1:6-8, 14-17, 20)</td>
+                        <td>From root meaning "to beat/spread out" (as metal). Traditionally "firmament" (solid dome); Abraham uses "expanse" (open space).</td>
+                        <td><a href="https://www.blueletterbible.org/lexicon/h7549/kjv/wlc/0-1/" target="_blank" class="blb-link">H7549</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="hebrew">טוֹב</span></td>
+                        <td><a href="https://www.blueletterbible.org/lexicon/h2896/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>tov</em></a></td>
+                        <td>
+                            <span class="hebrew">כִּי־טוֹב</span> "that [it was] good" (1:4, 10, etc.)<br>
+                            <span class="hebrew">טוֹב מְאֹד</span> "very good" (1:31)
+                        </td>
+                        <td>Good, pleasant, fitting, beautiful. Evaluation of quality/purpose. Abraham replaces with "they obeyed" (compliance, not quality).</td>
+                        <td><a href="https://www.blueletterbible.org/lexicon/h2896/kjv/wlc/0-1/" target="_blank" class="blb-link">H2896</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="hebrew">רוּחַ</span></td>
+                        <td><a href="https://www.blueletterbible.org/lexicon/h7307/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>ruach</em></a></td>
+                        <td><span class="hebrew">וְרוּחַ אֱלֹהִים</span> "and the Spirit of God" (1:2)</td>
+                        <td>Spirit, breath, wind. Same word for all three concepts. "The Spirit of God moved" &mdash; or "a wind from God swept."</td>
+                        <td><a href="https://www.blueletterbible.org/lexicon/h7307/kjv/wlc/0-1/" target="_blank" class="blb-link">H7307</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="hebrew">תֹּהוּ וָבֹהוּ</span></td>
+                        <td><a href="https://www.blueletterbible.org/lexicon/h8414/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>tohu va-vohu</em></a></td>
+                        <td><span class="hebrew">תֹהוּ וָבֹהוּ</span> "without form and void" (1:2)</td>
+                        <td>Formless and empty; chaos. Rhyming pair emphasizing total disorder. Abraham: "empty and desolate."</td>
+                        <td><a href="https://www.blueletterbible.org/lexicon/h8414/kjv/wlc/0-1/" target="_blank" class="blb-link">H8414</a> + <a href="https://www.blueletterbible.org/lexicon/h922/kjv/wlc/0-1/" target="_blank" class="blb-link">H922</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="hebrew">צֶלֶם</span></td>
+                        <td><a href="https://www.blueletterbible.org/lexicon/h6754/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>tselem</em></a></td>
+                        <td>
+                            <span class="hebrew">בְּצַלְמֵנוּ</span> "in our image" (1:26)<br>
+                            <span class="hebrew">בְּצַלְמוֹ</span> "in his image" (1:27)
+                        </td>
+                        <td><strong>Image</strong> &mdash; A concrete representation, physical form. Used elsewhere for idols/statues (Num 33:52). Emphasizes visible, tangible resemblance to God.</td>
+                        <td><a href="https://www.blueletterbible.org/lexicon/h6754/kjv/wlc/0-1/" target="_blank" class="blb-link">H6754</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="hebrew">דְּמוּת</span></td>
+                        <td><a href="https://www.blueletterbible.org/lexicon/h1823/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>demut</em></a></td>
+                        <td>
+                            <span class="hebrew">כִּדְמוּתֵנוּ</span> "after our likeness" (1:26)<br>
+                            <span class="hebrew">בִּדְמוּת</span> "in the likeness of" (5:1, 3)
+                        </td>
+                        <td><strong>Likeness</strong> &mdash; Abstract similarity, pattern, model. From root ד-מ-ה "to be like." Emphasizes nature, character, qualities rather than form. Together with <em>tselem</em>: both form <em>and</em> nature.</td>
+                        <td><a href="https://www.blueletterbible.org/lexicon/h1823/kjv/wlc/0-1/" target="_blank" class="blb-link">H1823</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="hebrew">עֵזֶר כְּנֶגְדּוֹ</span></td>
+                        <td><a href="https://www.blueletterbible.org/lexicon/h5828/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>ezer kenegdo</em></a></td>
+                        <td><span class="hebrew">עֵזֶר כְּנֶגְדּוֹ</span> "help meet for him" (2:18, 20)</td>
+                        <td><em>Ezer</em> = helper (same word for God as Israel's helper!). <em>Kenegdo</em> = corresponding to, counterpart. Not subordinate&mdash;essential partner.</td>
+                        <td><a href="https://www.blueletterbible.org/lexicon/h5828/kjv/wlc/0-1/" target="_blank" class="blb-link">H5828</a> + <a href="https://www.blueletterbible.org/lexicon/h5048/kjv/wlc/0-1/" target="_blank" class="blb-link">H5048</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="hebrew">נֶפֶשׁ חַיָּה</span></td>
+                        <td><a href="https://www.blueletterbible.org/lexicon/h5315/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>nephesh chayyah</em></a></td>
+                        <td><span class="hebrew">לְנֶפֶשׁ חַיָּה</span> "a living soul" (2:7)</td>
+                        <td>Living being/creature. <em>Nephesh</em> = soul, self, life-breath. Used for animals (1:20, 21, 24) and humans (2:7)&mdash;same term.</td>
+                        <td><a href="https://www.blueletterbible.org/lexicon/h5315/kjv/wlc/0-1/" target="_blank" class="blb-link">H5315</a> + <a href="https://www.blueletterbible.org/lexicon/h2416/kjv/wlc/0-1/" target="_blank" class="blb-link">H2416</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-insight" style="margin-top: 1.5rem;">
+                <h3>Key Vocabulary Shift in Abraham</h3>
+                <p>Abraham does not use the Hebrew creation vocabulary. Instead, it uses English terms that imply different theological concepts:</p>
+                <ul style="margin-top: 0.75rem; margin-left: 1.5rem;">
+                    <li><strong>"Organized"</strong> replaces "created" (<em>bara</em>) &mdash; explicitly emphasizing pre-existing matter (<em>ex materia</em>)</li>
+                    <li><strong>"Prepared"</strong> replaces "made" (<em>asah</em>) &mdash; implying planning and intention</li>
+                    <li><strong>"They obeyed"</strong> replaces "was good" (<em>tov</em>) &mdash; matter responds to divine will</li>
+                    <li><strong>"Expanse"</strong> replaces "firmament" (<em>raqia</em>) &mdash; open space rather than solid dome</li>
+                    <li><strong>"Time"</strong> replaces "day" (<em>yom</em>) &mdash; relative/cosmic time rather than 24-hour periods</li>
+                    <li><strong>"The Gods"</strong> treats <em>Elohim</em> as grammatically plural &mdash; divine council working together</li>
+                </ul>
+                <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-secondary);"><strong>Scholarly note:</strong> The idea that <em>bara</em> implies creation <em>ex nihilo</em> (from absolute nothing) developed later, when Hebrew and Hellenistic thought merged. Genesis itself presumes pre-existing materials: waters, the deep, the Spirit moving upon waters (1:2), and dust for forming man (2:7). Abraham's "organized" makes explicit what many scholars see as implicit in Genesis.</p>
+            </div>
+            </div>
+        </details>
+
+        <!-- SECTION: Key Differences Summary -->
+        <section id="summary">
+            <h2><span class="icon">&#x1F4CA;</span> Key Differences Summary</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Element</th>
+                        <th>Genesis</th>
+                        <th>Moses</th>
+                        <th>Abraham</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-label">Divine Actor</td>
+                        <td class="col-genesis">God (<span class="hebrew" style="font-size: 1em;">אֱלֹהִים</span> <a href="https://www.blueletterbible.org/lexicon/h430/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>Elohim</em></a>)</td>
+                        <td class="col-moses">I, God</td>
+                        <td class="col-abraham"><span class="highlight">The Gods</span></td>
+                    </tr>
+                    <tr>
+                        <td class="col-label">Creation Verb</td>
+                        <td class="col-genesis">Created (<span class="hebrew" style="font-size: 1em;">בָּרָא</span> <a href="https://www.blueletterbible.org/lexicon/h1254/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>bara</em></a>)</td>
+                        <td class="col-moses">Created (<em>bara</em>)</td>
+                        <td class="col-abraham"><span class="highlight">Organized</span></td>
+                    </tr>
+                    <tr>
+                        <td class="col-label">Time Unit</td>
+                        <td class="col-genesis">Day (<span class="hebrew" style="font-size: 1em;">יוֹם</span> <a href="https://www.blueletterbible.org/lexicon/h3117/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>yom</em></a>)</td>
+                        <td class="col-moses">Day (<em>yom</em>)</td>
+                        <td class="col-abraham"><span class="highlight">Time</span></td>
+                    </tr>
+                    <tr>
+                        <td class="col-label">Evaluation</td>
+                        <td class="col-genesis">Was good (<span class="hebrew" style="font-size: 1em;">טוֹב</span> <a href="https://www.blueletterbible.org/lexicon/h2896/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>tov</em></a>)</td>
+                        <td class="col-moses">Was good (<em>tov</em>)</td>
+                        <td class="col-abraham"><span class="highlight">They obeyed</span></td>
+                    </tr>
+                    <tr>
+                        <td class="col-label">Planning Language</td>
+                        <td class="col-genesis">Implicit</td>
+                        <td class="col-moses">Implicit</td>
+                        <td class="col-abraham"><span class="highlight">Explicit council</span></td>
+                    </tr>
+                    <tr>
+                        <td class="col-label">Spirit Creation</td>
+                        <td class="col-genesis">Absent</td>
+                        <td class="col-moses"><span class="highlight highlight-moses">Explicit</span></td>
+                        <td class="col-abraham">Implicit</td>
+                    </tr>
+                    <tr>
+                        <td class="col-label">Agency Teaching</td>
+                        <td class="col-genesis">Absent</td>
+                        <td class="col-moses"><span class="highlight highlight-moses">Explicit</span></td>
+                        <td class="col-abraham">Absent</td>
+                    </tr>
+                    <tr>
+                        <td class="col-label">Sky Terminology</td>
+                        <td class="col-genesis">Firmament (<span class="hebrew" style="font-size: 1em;">רָקִיעַ</span> <a href="https://www.blueletterbible.org/lexicon/h7549/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>raqia</em></a>)</td>
+                        <td class="col-moses">Firmament (<em>raqia</em>)</td>
+                        <td class="col-abraham"><span class="highlight">Expanse</span></td>
+                    </tr>
+                    <tr>
+                        <td class="col-label">Kolob/Cosmic Time</td>
+                        <td class="col-genesis">Absent</td>
+                        <td class="col-moses">Absent</td>
+                        <td class="col-abraham"><span class="highlight">Explicit</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- SECTION: Divine Identity -->
+        <section id="divine">
+            <h2><span class="icon">&#x2728;</span> I. Divine Identity and Plurality</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Account</th>
+                        <th>Divine Actor</th>
+                        <th>Plurality Language</th>
+                        <th>Council References</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-label">Genesis</td>
+                        <td class="col-genesis">God (<span class="hebrew" style="font-size: 1em;">אֱלֹהִים</span> <a href="https://www.blueletterbible.org/lexicon/h430/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>Elohim</em></a>)</td>
+                        <td class="col-genesis">"Let <strong>us</strong> make man in <strong>our</strong> image" (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/1?lang=eng&id=p26#p26" target="_blank">1:26</a>)</td>
+                        <td class="col-genesis">None explicit</td>
+                    </tr>
+                    <tr>
+                        <td class="col-label">Moses</td>
+                        <td class="col-moses">I, God</td>
+                        <td class="col-moses">"I, God, said unto <strong>mine Only Begotten</strong>...Let us make man" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/2?lang=eng&id=p26#p26" target="_blank">2:26</a>)</td>
+                        <td class="col-moses">Only Begotten identified as partner</td>
+                    </tr>
+                    <tr>
+                        <td class="col-label">Abraham</td>
+                        <td class="col-abraham">The Gods</td>
+                        <td class="col-abraham">"<strong>Let us go down</strong>" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/4?lang=eng&id=p1#p1" target="_blank">4:1</a>); "<strong>Let us</strong> make man" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/4?lang=eng&id=p26#p26" target="_blank">4:26</a>)</td>
+                        <td class="col-abraham">"Gods <strong>took counsel among themselves</strong>" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/4?lang=eng&id=p26#p26" target="_blank">4:26</a>); "Gods <strong>said among themselves</strong>" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/5?lang=eng&id=p2#p2" target="_blank">5:2</a>)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <details class="analysis-dropdown">
+                <summary><span class="dropdown-icon">&#x1F4D6;</span> In-Depth Analysis: Divine Plurality</summary>
+                <div class="analysis-content">
+                    <h4>Genesis</h4>
+                    <p>Uses singular "God" (Hebrew: <a href="https://www.blueletterbible.org/lexicon/h430/kjv/wlc/0-1/" target="_blank"><em>Elohim</em></a>, <span class="hebrew">&#x05D0;&#x05B1;&#x05DC;&#x05B9;&#x05D4;&#x05B4;&#x05D9;&#x05DD;</span>), grammatically plural but used with singular verbs and treated as singular. Pattern is generally regarded as a token of respect.</p>
+                    <ul>
+                        <li>Introduces plurality only at key moments: "Let <strong>us</strong> make man in <strong>our</strong> image" (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/1?lang=eng&id=p26#p26" target="_blank">Genesis 1:26</a>)</li>
+                        <li>"LORD God" (<a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/" target="_blank"><em>Yahweh</em></a> <a href="https://www.blueletterbible.org/lexicon/h430/kjv/wlc/0-1/" target="_blank"><em>Elohim</em></a>, <span class="hebrew">&#x05D9;&#x05B0;&#x05D4;&#x05D5;&#x05B8;&#x05D4; &#x05D0;&#x05B1;&#x05DC;&#x05B9;&#x05D4;&#x05B4;&#x05D9;&#x05DD;</span>) appears in chapter 2</li>
+                    </ul>
+
+                    <h4>Moses</h4>
+                    <p>Retains singular "God" but adds first-person narrative: "<strong>I, God</strong>". Explicitly introduces the Only Begotten:</p>
+                    <blockquote class="scripture-quote">
+                        "I, God, said unto <strong>mine Only Begotten</strong>, which was with me from the beginning: Let us make man"
+                        <span class="verse-ref">&mdash; <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/2?lang=eng&id=p26#p26" target="_blank">Moses 2:26</a></span>
+                    </blockquote>
+                    <p>This clarifies the "us"&mdash;it is God speaking to Christ. Also adds: "<strong>I am the Beginning and the End, the Almighty God</strong>" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/2?lang=eng&id=p1#p1" target="_blank">Moses 2:1</a>)</p>
+
+                    <h4>Abraham</h4>
+                    <p>Consistently uses plural "<strong>the Gods</strong>" throughout:</p>
+                    <ul>
+                        <li>"<strong>They</strong> (the Gods) said," "the Gods organized," "the Gods watched"</li>
+                        <li>Council language: "the Gods <strong>took counsel among themselves</strong>" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/4?lang=eng&id=p26#p26" target="_blank">Abraham 4:26</a>)</li>
+                        <li>"The Gods <strong>said among themselves</strong>" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/5?lang=eng&id=p2#p2" target="_blank">Abraham 5:2</a>)</li>
+                        <li>Deliberative language: "<strong>Let us go down</strong>" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/4?lang=eng&id=p1#p1" target="_blank">Abraham 4:1</a>)</li>
+                    </ul>
+
+                    <div class="significance-box">
+                        <strong>Significance:</strong> Abraham presents creation as a collaborative divine council; Moses clarifies the Godhead relationship; Genesis leaves the plurality ambiguous.
+                    </div>
+                </div>
+            </details>
+        </section>
+
+        <!-- SECTION: Creation Vocabulary -->
+        <section id="vocabulary">
+            <h2><span class="icon">&#x1F4D6;</span> II. Creation Verbs: Created vs. Organized</h2>
+            <p>This represents one of the most theologically significant differences across the accounts.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Genesis/Moses Term</th>
+                        <th>Hebrew</th>
+                        <th>Abraham Term</th>
+                        <th>Theological Shift</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-genesis"><strong>Created</strong></td>
+                        <td><span class="hebrew">בָּרָא</span> <a href="https://www.blueletterbible.org/lexicon/h1254/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>bara</em></a></td>
+                        <td class="col-abraham"><strong>Organized</strong></td>
+                        <td><em>Ex nihilo</em> &#x2192; <em>Ex materia</em></td>
+                    </tr>
+                    <tr>
+                        <td class="col-genesis"><strong>Made</strong></td>
+                        <td><span class="hebrew">עָשָׂה</span> <a href="https://www.blueletterbible.org/lexicon/h6213/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>asah</em></a></td>
+                        <td class="col-abraham"><strong>Prepared</strong></td>
+                        <td>Command &#x2192; Planning</td>
+                    </tr>
+                    <tr>
+                        <td class="col-genesis"><strong>Formed</strong></td>
+                        <td><span class="hebrew">יָצַר</span> <a href="https://www.blueletterbible.org/lexicon/h3335/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>yatsar</em></a></td>
+                        <td class="col-abraham"><strong>Formed</strong></td>
+                        <td>Retained for physical shaping</td>
+                    </tr>
+                    <tr>
+                        <td class="col-genesis"><strong>Commanded</strong></td>
+                        <td>&mdash;</td>
+                        <td class="col-abraham"><strong>Ordered</strong></td>
+                        <td>"the Gods <strong>ordered</strong> the expanse" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/4?lang=eng&id=p7#p7" target="_blank">Abraham 4:7</a>)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <details class="analysis-dropdown">
+                <summary><span class="dropdown-icon">&#x1F4D6;</span> In-Depth Analysis: Created vs. Organized</summary>
+                <div class="analysis-content">
+                    <h4>Genesis</h4>
+                    <table>
+                        <tr>
+                            <td><strong><a href="https://www.blueletterbible.org/lexicon/h1254/kjv/wlc/0-1/" target="_blank">Created</a></strong> (Hebrew: <em>bara</em>, <span class="hebrew">&#x05D1;&#x05B8;&#x05BC;&#x05E8;&#x05B8;&#x05D0;</span>)</td>
+                            <td>"God created the heaven and the earth" (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/1?lang=eng&id=p1#p1" target="_blank">Genesis 1:1</a>)</td>
+                        </tr>
+                        <tr>
+                            <td><strong><a href="https://www.blueletterbible.org/lexicon/h6213/kjv/wlc/0-1/" target="_blank">Made</a></strong> (Hebrew: <em>asah</em>, <span class="hebrew">&#x05E2;&#x05B8;&#x05E9;&#x05B8;&#x05C2;&#x05D4;</span>)</td>
+                            <td>"God made the firmament" (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/1?lang=eng&id=p7#p7" target="_blank">Genesis 1:7</a>)</td>
+                        </tr>
+                        <tr>
+                            <td><strong><a href="https://www.blueletterbible.org/lexicon/h3335/kjv/wlc/0-1/" target="_blank">Formed</a></strong> (Hebrew: <em>yatsar</em>, <span class="hebrew">&#x05D9;&#x05B8;&#x05E6;&#x05B7;&#x05E8;</span>)</td>
+                            <td>"LORD God formed man of the dust" (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/2?lang=eng&id=p7#p7" target="_blank">Genesis 2:7</a>)</td>
+                        </tr>
+                    </table>
+
+                    <h4>Moses</h4>
+                    <p>Mirrors Genesis closely: "<strong>created</strong>," "<strong>made</strong>," "<strong>formed</strong>". Adds emphasis on divine power: "this I did by <strong>the word of my power</strong>" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/2?lang=eng&id=p5#p5" target="_blank">Moses 2:5</a>)</p>
+
+                    <h4>Abraham</h4>
+                    <p><strong>Key passage (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/4?lang=eng&id=p1#p1" target="_blank">Abraham 4:1</a>):</strong> "they, that is the Gods, <strong>organized and formed</strong> the heavens and the earth"</p>
+
+                    <div class="significance-box">
+                        <strong>Significance:</strong> Abraham explicitly uses "organized" rather than "created," emphasizing work with pre-existing materials (<em>creatio ex materia</em>). This has major implications for Latter-day Saint cosmology and the doctrine of eternal matter.
+                    </div>
+
+                    <blockquote>
+                        <strong>Scholarly note on <em>creatio ex nihilo</em>:</strong> The doctrine that God created from absolute nothing developed later&mdash;most scholars trace its explicit formulation to the late second century CE, when Christian apologists like Tatian, Theophilus, and Irenaeus articulated it in debates with Gnostics. Genesis itself presumes pre-existing materials: waters, the deep (<a href="https://www.blueletterbible.org/lexicon/h8415/kjv/wlc/0-1/" target="_blank"><em>tehom</em></a>, <span class="hebrew">&#x05EA;&#x05B0;&#x05D4;&#x05D5;&#x05B9;&#x05DD;</span>), and the Spirit moving upon the waters (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/1?lang=eng&id=p2#p2" target="_blank">Genesis 1:2</a>), plus dust for forming man (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/2?lang=eng&id=p7#p7" target="_blank">Genesis 2:7</a>). As John J. Scullion notes in <em>The Anchor Bible Dictionary</em>: "the problem of <em>creatio ex nihilo</em>, creation out of nothing, is not a problem [in Genesis 1]; it became one for later generations when Hebrew and Helenistic culture blended together." Abraham's "organized" makes explicit what many scholars see as implicit in the Hebrew text.
+                    </blockquote>
+                </div>
+            </details>
+
+            <div class="key-insight">
+                <h3>Key Insight</h3>
+                <blockquote>
+                    "The Gods <strong>watched</strong> those things which they had ordered <strong>until they obeyed</strong>." (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/4?lang=eng&id=p18#p18" target="_blank">Abraham 4:18</a>)
+                </blockquote>
+                <p style="margin-top: 1rem; font-size: 0.95rem;">
+                    Abraham presents creation as matter responding to divine will rather than instantaneous command&mdash;implying pre-existing material with inherent capacity to obey.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION: Time & Sequence -->
+        <section id="time">
+            <h2><span class="icon">&#x23F0;</span> III. Time and Sequence: Days vs. Times</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Account</th>
+                        <th>Time Terminology</th>
+                        <th>Formula</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-label">Genesis</td>
+                        <td class="col-genesis"><strong>Day</strong> (Hebrew: <a href="https://www.blueletterbible.org/lexicon/h3117/kjv/wlc/0-1/" target="_blank"><em>yom</em></a>, <span class="hebrew">&#x05D9;&#x05D5;&#x05B9;&#x05DD;</span>)</td>
+                        <td class="col-genesis">"the evening and the morning were the <strong>first day</strong>" (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/1?lang=eng&id=p5#p5" target="_blank">Genesis 1:5</a>)</td>
+                    </tr>
+                    <tr>
+                        <td class="col-label">Moses</td>
+                        <td class="col-moses"><strong>Day</strong> (<em>yom</em>)</td>
+                        <td class="col-moses">"the evening and the morning were the <strong>first day</strong>" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/2?lang=eng&id=p5#p5" target="_blank">Moses 2:5</a>)</td>
+                    </tr>
+                    <tr>
+                        <td class="col-label">Abraham</td>
+                        <td class="col-abraham"><strong>Time</strong></td>
+                        <td class="col-abraham">"this was the <strong>first</strong>, or the beginning, of that which they called day and night" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/4?lang=eng&id=p5#p5" target="_blank">Abraham 4:5</a>)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <details class="analysis-dropdown">
+                <summary><span class="dropdown-icon">&#x1F4D6;</span> In-Depth Analysis: Cosmic Time</summary>
+                <div class="analysis-content">
+                    <h4>Genesis & Moses</h4>
+                    <p>Standard formula: "the evening and the morning were the <strong>first day</strong>". Uses "day" (Hebrew: <a href="https://www.blueletterbible.org/lexicon/h3117/kjv/wlc/0-1/" target="_blank"><em>yom</em></a>, <span class="hebrew">&#x05D9;&#x05D5;&#x05B9;&#x05DD;</span>) consistently. No elaboration on time duration.</p>
+
+                    <h4>Abraham</h4>
+                    <ul>
+                        <li>Replaces "day" with "<strong>time</strong>": "this was the <strong>first</strong>, or the beginning, of that which they called day and night" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/4?lang=eng&id=p5#p5" target="_blank">Abraham 4:5</a>)</li>
+                        <li>Expanded formula: "And it came to pass that from the evening until morning they called night; and from the morning until the evening they called day"</li>
+                        <li>"they <strong>numbered</strong> the days" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/4?lang=eng&id=p13#p13" target="_blank">4:13</a>)&mdash;suggesting deliberate counting/designation</li>
+                        <li>Progressive numbering: "<strong>third time</strong>" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/4?lang=eng&id=p13#p13" target="_blank">4:13</a>), "<strong>fourth time</strong>" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/4?lang=eng&id=p19#p19" target="_blank">4:19</a>), "<strong>fifth time</strong>" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/4?lang=eng&id=p23#p23" target="_blank">4:23</a>), "<strong>sixth time</strong>" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/5?lang=eng&id=p31#p31" target="_blank">5:31</a>)</li>
+                    </ul>
+
+                    <h4>Critical Addition</h4>
+                    <blockquote class="scripture-quote">
+                        "Now I, Abraham, saw that it was after <strong>the Lord's time</strong>, which was after <strong>the time of Kolob</strong>; for as yet the Gods had not appointed unto Adam his reckoning."
+                        <span class="verse-ref">&mdash; <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/5?lang=eng&id=p13#p13" target="_blank">Abraham 5:13</a></span>
+                    </blockquote>
+
+                    <div class="significance-box">
+                        <strong>Significance:</strong> Abraham explicitly relativizes time, connecting creation periods to celestial time (Kolob) rather than earthly 24-hour days. This opens interpretation toward longer creative periods and establishes that mortal time-reckoning was not yet instituted.
+                    </div>
+
+                    <h4>Light before the Sun: A Deeper Principle</h4>
+                    <p>A striking feature of the creation narrative is that light (<a href="https://www.blueletterbible.org/lexicon/h216/kjv/wlc/0-1/" target="_blank"><em>or</em></a>, <span class="hebrew">&#x05D0;&#x05D5;&#x05B9;&#x05E8;</span>) is called forth on Day 1 (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/1?lang=eng&id=p3-p5#p3" target="_blank">Genesis 1:3&ndash;5</a>), along with the separation of light from darkness and the naming of "day" and "night"&mdash;yet the sun, moon, and stars are not organized until Day 4 (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/1?lang=eng&id=p14-p19#p14" target="_blank">Genesis 1:14&ndash;19</a>).</p>
+                    <p>This sequence demonstrates that the concepts of light, darkness, day, and night represent principles more fundamental than the solar cycle. They precede and transcend the physical luminaries that would later govern earthly time. Light in this context is not merely photons from a star&mdash;it is a primordial ordering principle, perhaps connected to the divine presence itself (compare <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/1-jn/1?lang=eng&id=p5#p5" target="_blank">1 John 1:5</a>: "God is light").</p>
+                    <p>The "days" of creation are therefore not defined by Earth's rotation relative to the sun, but by divine demarcation of ordered periods&mdash;reinforcing Abraham's teaching that these are "times" measured by celestial, not terrestrial, reckoning.</p>
+                </div>
+            </details>
+        </section>
+
+        <!-- SECTION: Evaluation Phrases -->
+        <section id="evaluation">
+            <h2><span class="icon">&#x2705;</span> IV. Evaluation Phrases: "Good" vs. "Obeyed"</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day/Time</th>
+                        <th>Genesis</th>
+                        <th>Moses</th>
+                        <th>Abraham</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-label">1<br><small>Light</small></td>
+                        <td class="col-genesis">God <strong>saw</strong> the light, that it <strong>was good</strong> (<span class="hebrew" style="font-size: 0.9em;">טוֹב</span> <a href="https://www.blueletterbible.org/lexicon/h2896/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>tov</em></a>)</td>
+                        <td class="col-moses">I, God, <strong>saw</strong> the light; and that light <strong>was good</strong></td>
+                        <td class="col-abraham">They (the Gods) <strong>comprehended</strong> the light, for it <strong>was bright</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="col-label">2<br><small>Firmament</small></td>
+                        <td class="col-genesis"><em>No evaluation stated</em></td>
+                        <td class="col-moses"><em>No evaluation stated</em></td>
+                        <td class="col-abraham">It was so, even <strong>as they ordered</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="col-label">3<br><small>Land &amp; Plants</small></td>
+                        <td class="col-genesis">God saw that it <strong>was good</strong> (x2)</td>
+                        <td class="col-moses">I, God, saw that all things which I had made <strong>were good</strong></td>
+                        <td class="col-abraham">The Gods saw that <strong>they were obeyed</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="col-label">4<br><small>Sun, Moon, Stars</small></td>
+                        <td class="col-genesis">God saw that it <strong>was good</strong></td>
+                        <td class="col-moses">I, God, saw that all things which I had made <strong>were good</strong></td>
+                        <td class="col-abraham">The Gods <strong>watched</strong> those things which they had ordered <strong>until they obeyed</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="col-label">5<br><small>Sea &amp; Birds</small></td>
+                        <td class="col-genesis">God saw that it <strong>was good</strong></td>
+                        <td class="col-moses">I, God, saw that all things which I had created <strong>were good</strong></td>
+                        <td class="col-abraham">The Gods saw that <strong>they would be obeyed</strong>, and that <strong>their plan was good</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="col-label">6<br><small>Animals &amp; Man</small></td>
+                        <td class="col-genesis">God saw that it was good; behold, it <strong>was very good</strong></td>
+                        <td class="col-moses">All things which I had made <strong>were very good</strong></td>
+                        <td class="col-abraham">They shall be <strong>very obedient</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <details class="analysis-dropdown">
+                <summary><span class="dropdown-icon">&#x1F4D6;</span> In-Depth Analysis: Good vs. Obeyed</summary>
+                <div class="analysis-content">
+                    <h4>Genesis</h4>
+                    <ul>
+                        <li>"God saw that it <strong>was good</strong>" (Hebrew: <a href="https://www.blueletterbible.org/lexicon/h2896/kjv/wlc/0-1/" target="_blank"><em>tov</em></a>, <span class="hebrew">&#x05D8;&#x05D5;&#x05B9;&#x05D1;</span>) (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/1?lang=eng&id=p4#p4" target="_blank">Genesis 1:4, 10, 12, 18, 21, 25</a>)</li>
+                        <li>"behold, it <strong>was very good</strong>" (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/1?lang=eng&id=p31#p31" target="_blank">Genesis 1:31</a>)</li>
+                        <li>Passive observation of quality</li>
+                    </ul>
+
+                    <h4>Moses</h4>
+                    <ul>
+                        <li>"I, God, saw that <strong>all things which I had made were good</strong>" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/2?lang=eng&id=p10#p10" target="_blank">Moses 2:10, 12</a>, etc.)</li>
+                        <li>Slightly expanded but same meaning</li>
+                        <li>Emphasizes divine satisfaction</li>
+                    </ul>
+
+                    <h4>Abraham &mdash; Radically Different Formulation</h4>
+                    <ul>
+                        <li>"the Gods saw that <strong>they were obeyed</strong>" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/4?lang=eng&id=p10#p10" target="_blank">Abraham 4:10, 12, 18</a>)</li>
+                        <li>"the Gods saw that <strong>they would be obeyed</strong>, and that <strong>their plan was good</strong>" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/4?lang=eng&id=p21#p21" target="_blank">Abraham 4:21</a>)</li>
+                        <li>"the Gods saw <strong>they would obey</strong>" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/4?lang=eng&id=p25#p25" target="_blank">Abraham 4:25</a>)</li>
+                        <li>"they shall be <strong>very obedient</strong>" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/4?lang=eng&id=p31#p31" target="_blank">Abraham 4:31</a>)</li>
+                        <li>"the Gods <strong>watched</strong> those things which they had ordered <strong>until they obeyed</strong>" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/4?lang=eng&id=p18#p18" target="_blank">Abraham 4:18</a>)</li>
+                    </ul>
+
+                    <div class="significance-box">
+                        <strong>Significance:</strong> Abraham presents creation as following a pre-established plan that matter/elements obey. The focus shifts from aesthetic evaluation ("good") to functional compliance ("obeyed"). This suggests:
+                        <ol>
+                            <li>Pre-existing matter with inherent properties and capacity to respond</li>
+                            <li>An emphasis on matter's responsive obedience to divine will (complementing, not replacing, the creative word)</li>
+                            <li>A planning phase preceding execution</li>
+                        </ol>
+                    </div>
+
+                    <h4>A Physical Analogy: Cymatics and the Chladni Plate</h4>
+                    <p>The phenomenon of <a href="https://en.wikipedia.org/wiki/Cymatics" target="_blank">cymatics</a>&mdash;where sound frequencies cause particles to organize into geometric patterns&mdash;offers a striking physical parallel to Abraham's creation language. When sand is placed on a vibrating metal plate (a <a href="https://sciencedemonstrations.fas.harvard.edu/presentations/big-chladni-plate" target="_blank">Chladni plate</a>), specific frequencies cause the particles to move into ordered patterns along nodal lines. The sand "obeys" the frequency, organizing itself according to the vibrational pattern.</p>
+                    <p>This illustrates how "speaking" and "obeying" work together: the sound provides the organizing pattern; matter with inherent properties responds by conforming to it. The divine word and matter's responsive obedience are complementary aspects of the same creative process&mdash;not competing explanations.</p>
+
+                    <div class="video-thumbnail" style="max-width: 560px; margin: 1.5rem auto; text-align: center;">
+                        <a href="https://www.youtube.com/watch?v=Q3oItpVa9fs" target="_blank" style="display: block; position: relative;">
+                            <img src="https://img.youtube.com/vi/Q3oItpVa9fs/maxresdefault.jpg" alt="CYMATICS: Science Vs. Music - Nigel Stanford" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 68px; height: 48px; background: rgba(255,0,0,0.8); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <div style="width: 0; height: 0; border-left: 18px solid white; border-top: 11px solid transparent; border-bottom: 11px solid transparent; margin-left: 4px;"></div>
+                            </div>
+                        </a>
+                        <p class="video-caption" style="margin-top: 0.75rem;"><a href="https://www.youtube.com/watch?v=Q3oItpVa9fs" target="_blank">CYMATICS: Science Vs. Music - Nigel Stanford</a> (2014) &mdash; A visual demonstration of sound frequencies organizing matter into patterns.</p>
+                    </div>
+                </div>
+            </details>
+        </section>
+
+        <!-- SECTION: The Planning Phase (Unique to Abraham) -->
+        <section id="planning">
+            <h2><span class="icon">&#x1F4CB;</span> V. The Planning Phase (Unique to Abraham)</h2>
+            <p style="margin-bottom: 1rem; color: var(--text-secondary);">Abraham introduces a clear distinction between <strong>planning</strong> and <strong>execution</strong>.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 35%;">Planning Language</th>
+                        <th>Key Verse</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-abraham">"Let us <strong>prepare</strong> the earth"</td>
+                        <td><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/4?lang=eng&id=p11#p11" target="_blank">Abraham 4:11, 20, 24</a></td>
+                    </tr>
+                    <tr>
+                        <td class="col-abraham">"their <strong>plan</strong> was good"</td>
+                        <td><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/4?lang=eng&id=p21#p21" target="_blank">Abraham 4:21</a></td>
+                    </tr>
+                    <tr>
+                        <td class="col-abraham">"We will do everything that <strong>we have said</strong>"</td>
+                        <td><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/4?lang=eng&id=p31#p31" target="_blank">Abraham 4:31</a></td>
+                    </tr>
+                    <tr>
+                        <td class="col-abraham">"which <strong>we have counseled</strong>"</td>
+                        <td><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/5?lang=eng&id=p2#p2" target="_blank">Abraham 5:2</a></td>
+                    </tr>
+                    <tr>
+                        <td class="col-abraham">"<strong>thus were their decisions</strong> at the time that they counseled"</td>
+                        <td><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/5?lang=eng&id=p3#p3" target="_blank">Abraham 5:3</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="margin: 1.5rem 0 1rem; color: var(--header-bg);">Council Deliberation</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 35%;">Council Language</th>
+                        <th>Key Verse</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-abraham">"the Gods <strong>took counsel among themselves</strong>"</td>
+                        <td><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/4?lang=eng&id=p26#p26" target="_blank">Abraham 4:26</a></td>
+                    </tr>
+                    <tr>
+                        <td class="col-abraham">"the Gods <strong>said among themselves</strong>"</td>
+                        <td><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/5?lang=eng&id=p2#p2" target="_blank">Abraham 5:2</a></td>
+                    </tr>
+                    <tr>
+                        <td class="col-abraham">"they (the Gods) <strong>counseled among themselves</strong> to form"</td>
+                        <td><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/5?lang=eng&id=p3#p3" target="_blank">Abraham 5:3</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-insight" style="margin-top: 1.5rem; background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); border-left-color: #F59E0B;">
+                <h3>Significance</h3>
+                <p>This presents creation as following a deliberate council decision&mdash;a plan formulated, discussed, and then executed. This aligns with the Latter-day Saint concept of a pre-mortal council in heaven.</p>
+            </div>
+        </section>
+
+        <!-- SECTION: Spirit Creation (Unique to Moses) -->
+        <section id="spirit-creation">
+            <h2><span class="icon">&#x1F4A0;</span> VI. Spirit Creation (Unique to Moses)</h2>
+            <p style="margin-bottom: 1rem; color: var(--text-secondary);"><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/3?lang=eng&id=p5#p5" target="_blank">Moses 3:5</a> contains material absent from both Genesis and Abraham.</p>
+
+            <blockquote style="background: #ECFDF5; border-left: 4px solid #10B981; padding: 1.5rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+                "For I, the Lord God, <strong>created all things, of which I have spoken, spiritually, before they were naturally upon the face of the earth</strong>. For I, the Lord God, had not caused it to rain upon the face of the earth. And I, the Lord God, <strong>had created all the children of men; and not yet a man to till the ground</strong>; for <strong>in heaven created I them</strong>; and there was not yet flesh upon the earth, neither in the water, neither in the air."
+            </blockquote>
+
+            <p style="margin: 1rem 0;">Also <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/3?lang=eng&id=p7#p7" target="_blank">Moses 3:7</a>:</p>
+            <blockquote style="background: #ECFDF5; border-left: 4px solid #10B981; padding: 1.5rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+                "man became a living soul, <strong>the first flesh upon the earth, the first man also; nevertheless, all things were before created; but spiritually were they created and made according to my word</strong>"
+            </blockquote>
+
+            <p style="margin: 1rem 0;">And <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/3?lang=eng&id=p9#p9" target="_blank">Moses 3:9</a>:</p>
+            <blockquote style="background: #ECFDF5; border-left: 4px solid #10B981; padding: 1.5rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+                "I, the Lord God, to grow every tree, <strong>naturally</strong>, that is pleasant to the sight of man; and man could behold it. And <strong>it became also a living soul. For it was spiritual in the day that I created it</strong>"
+            </blockquote>
+
+            <details class="analysis-dropdown">
+                <summary><span class="dropdown-icon">&#x1F4D6;</span> In-Depth Analysis: Spirit Creation and "First Flesh"</summary>
+                <div class="analysis-content">
+                    <h4>Moses Uniquely Teaches:</h4>
+                    <ol>
+                        <li>A spiritual creation preceded the physical</li>
+                        <li>All things (including plants) have spiritual existence</li>
+                        <li>Humans existed spiritually in heaven before physical creation</li>
+                        <li>Adam was "the first flesh"&mdash;though the meaning of this phrase remains genuinely ambiguous</li>
+                    </ol>
+
+                    <h4 style="margin-top: 1.5rem;">A Note on "First Flesh"</h4>
+                    <p>The phrase "first flesh upon the earth" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/3?lang=eng&id=p7#p7" target="_blank">Moses 3:7</a>) invites careful consideration. Combined with God breathing the "breath of life" (<a href="https://www.blueletterbible.org/lexicon/h5397/kjv/wlc/0-1/" target="_blank"><em>neshamah</em></a>, <span class="hebrew">נְשָׁמָה</span>) into Adam, this could mean:</p>
+                    <ul>
+                        <li>The first physically embodied being on earth</li>
+                        <li>The first to receive a covenant relationship with God</li>
+                        <li>The first being capable of language, writing, and transmitting knowledge across generations</li>
+                        <li>The first to bear the divine image in a way that distinguished humanity from other creatures</li>
+                    </ul>
+
+                    <div class="significance-box" style="margin-top: 1.5rem;">
+                        <strong>The <em>Reshit</em> Connection:</strong> The Hebrew word "first" often carries the sense of <a href="https://www.blueletterbible.org/lexicon/h7225/kjv/wlc/0-1/" target="_blank"><em>reshit</em></a> (<span class="hebrew">רֵאשִׁית</span>)&mdash;not merely chronological priority, but <em>firstfruits</em>: the choicest portion, the consecrated offering set apart for God. Genesis itself opens with this root: <em>Bereshit</em> (<span class="hebrew">בְּרֵאשִׁית</span>, "In the beginning"). If "first flesh" carries this connotation, Adam may be understood as the <em>reshit</em> of the "noble and great ones" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/3?lang=eng&id=p22#p22" target="_blank">Abraham 3:22</a>)&mdash;the firstfruits of those intelligences "organized before the world was" to receive mortal embodiment. "First" would then denote consecrated status rather than (or in addition to) temporal sequence.
+                    </div>
+
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-secondary);">The text does not resolve this ambiguity. The <em>neshamah</em> ("breath of life") breathed into Adam is linguistically distinct from the <em>nephesh</em> ("living soul") attributed to animals elsewhere&mdash;suggesting a qualitative distinction, though its precise nature remains open. We should be cautious about reading our interpretations and assumptions into the text where scripture itself preserves ambiguity.</p>
+                </div>
+            </details>
+        </section>
+
+        <!-- SECTION: The Soul and Spirit (Abraham's Detail) -->
+        <section id="soul-spirit">
+            <h2><span class="icon">&#x2728;</span> VII. The Soul and Spirit (Abraham's Unique Detail)</h2>
+
+            <div class="key-insight" style="background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); border-left-color: #F59E0B;">
+                <h3><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/5?lang=eng&id=p7#p7" target="_blank">Abraham 5:7</a></h3>
+                <blockquote style="background: rgba(255,255,255,0.5); padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+                    "And the Gods formed man from the dust of the ground, and <strong>took his spirit (that is, the man's spirit), and put it into him</strong>; and breathed into his nostrils the breath of life, and man became a living soul."
+                </blockquote>
+            </div>
+
+            <h3 style="margin: 1.5rem 0 1rem; color: var(--header-bg);">Compare to Other Accounts:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Account</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-genesis"><strong>Genesis 2:7</strong></td>
+                        <td>"breathed into his nostrils the breath of life; and man became a living soul"</td>
+                    </tr>
+                    <tr>
+                        <td class="col-moses"><strong>Moses 3:7</strong></td>
+                        <td>Same as Genesis, plus "the first flesh upon the earth"</td>
+                    </tr>
+                    <tr>
+                        <td class="col-abraham"><strong>Abraham 5:7</strong></td>
+                        <td>Adds: "<strong>took his spirit (that is, the man's spirit), and put it into him</strong>"</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-insight" style="margin-top: 1.5rem;">
+                <h3>Significance</h3>
+                <p>Abraham explicitly describes a pre-existing spirit being placed into a physical body&mdash;not merely "breath of life" animating dust, but a distinct spirit entity uniting with matter. This aligns with Moses's teaching of prior spiritual creation while providing additional mechanical detail.</p>
+            </div>
+        </section>
+
+        <!-- SECTION: Agency Language (Moses) -->
+        <section id="agency">
+            <h2><span class="icon">&#x2696;</span> VIII. Agency Language (Moses's Unique Addition)</h2>
+
+            <div class="key-insight" style="background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%); border-left-color: #10B981;">
+                <h3><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/3?lang=eng&id=p17#p17" target="_blank">Moses 3:17</a> on the forbidden tree:</h3>
+                <blockquote style="background: rgba(255,255,255,0.5); padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+                    "thou shalt not eat of it, <strong>nevertheless, thou mayest choose for thyself, for it is given unto thee</strong>; but, remember that I forbid it, for in the day thou eatest thereof thou shalt surely die."
+                </blockquote>
+            </div>
+
+            <h3 style="margin: 1.5rem 0 1rem; color: var(--header-bg);">Compare to Other Accounts:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Account</th>
+                        <th>Text</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-genesis"><strong>Genesis 2:17</strong></td>
+                        <td>"thou shalt not eat of it: for in the day that thou eatest thereof thou shalt surely die"</td>
+                    </tr>
+                    <tr>
+                        <td class="col-moses"><strong>Moses 3:17</strong></td>
+                        <td>"thou shalt not eat of it, <span class="highlight highlight-moses">nevertheless, thou mayest choose for thyself, for it is given unto thee</span>; but, remember that I forbid it..."</td>
+                    </tr>
+                    <tr>
+                        <td class="col-abraham"><strong>Abraham 5:13</strong></td>
+                        <td>"thou shalt not eat of it; for in the time that thou eatest thereof, thou shalt surely die"</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-insight" style="margin-top: 1.5rem;">
+                <h3>Significance</h3>
+                <p>Moses alone explicitly adds the principle of <strong>agency</strong>&mdash;Adam has the power to choose, the commandment is given, but the choice remains his. This transforms the prohibition from pure command to informed choice and establishes agency as a foundational principle before the Fall.</p>
+            </div>
+        </section>
+
+        <!-- SECTION: Firmament vs. Expanse -->
+        <section id="firmament">
+            <h2><span class="icon">&#x1F30C;</span> IX. Terminology Shifts: Firmament vs. Expanse</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Account</th>
+                        <th>Term Used</th>
+                        <th>Implications</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-genesis"><strong>Genesis &amp; Moses</strong></td>
+                        <td>"<strong>firmament</strong>" (<span class="hebrew">רָקִיעַ</span> <a href="https://www.blueletterbible.org/lexicon/h7549/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>raqia</em></a>)</td>
+                        <td>Traditionally understood as suggesting a solid dome (ancient Near Eastern cosmology)</td>
+                    </tr>
+                    <tr>
+                        <td class="col-abraham"><strong>Abraham</strong></td>
+                        <td>"<strong>expanse</strong>"</td>
+                        <td>A more open, spatial concept compatible with modern cosmology</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-insight" style="margin-top: 1.5rem;">
+                <h3>Significance</h3>
+                <p>"Expanse" aligns better with modern cosmological understanding of space, while "firmament" reflects ancient Near Eastern cosmology of a solid sky-dome. Abraham's terminology is more scientifically compatible.</p>
+            </div>
+        </section>
+
+        <!-- SECTION: The Role of Light -->
+        <section id="light">
+            <h2><span class="icon">&#x1F31E;</span> X. The Role of Light</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Account</th>
+                        <th>Verse</th>
+                        <th>Language</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-genesis"><strong>Genesis 1:4</strong></td>
+                        <td><a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/1?lang=eng&id=p4#p4" target="_blank">Genesis 1:4</a></td>
+                        <td>"God <strong>saw</strong> the light, that it <strong>was good</strong>"</td>
+                    </tr>
+                    <tr>
+                        <td class="col-moses"><strong>Moses 2:4</strong></td>
+                        <td><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/2?lang=eng&id=p4#p4" target="_blank">Moses 2:4</a></td>
+                        <td>"I, God, <strong>saw</strong> the light; and that light <strong>was good</strong>"</td>
+                    </tr>
+                    <tr>
+                        <td class="col-abraham"><strong>Abraham 4:4</strong></td>
+                        <td><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/4?lang=eng&id=p4#p4" target="_blank">Abraham 4:4</a></td>
+                        <td>"they (the Gods) <strong>comprehended</strong> the light, for it <strong>was bright</strong>"</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <details class="analysis-dropdown">
+                <summary><span class="dropdown-icon">&#x1F4D6;</span> In-Depth Analysis: Comprehension and Light Before the Sun</summary>
+                <div class="analysis-content">
+                    <h4>Abraham's Unique Language</h4>
+                    <p>Abraham uses "<strong>comprehended</strong>" rather than "saw"&mdash;suggesting intellectual/divine understanding rather than mere observation. "<strong>Bright</strong>" is a physical description rather than moral evaluation, shifting from qualitative assessment to descriptive observation.</p>
+
+                    <h4 style="margin-top: 1.5rem;">Light Before the Sun: A Deeper Principle</h4>
+                    <p>A striking feature of the creation narrative is that light (<a href="https://www.blueletterbible.org/lexicon/h216/kjv/wlc/0-1/" target="_blank"><em>or</em></a>, <span class="hebrew">אוֹר</span>) is called forth on Day 1 (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/1?lang=eng&id=p3-p5#p3" target="_blank">Genesis 1:3&ndash;5</a>), along with the separation of light from darkness and the naming of "day" and "night"&mdash;yet the sun, moon, and stars are not organized until Day 4 (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/1?lang=eng&id=p14-p19#p14" target="_blank">Genesis 1:14&ndash;19</a>).</p>
+
+                    <div class="significance-box">
+                        <strong>This sequence demonstrates:</strong> The concepts of light, darkness, day, and night represent principles more fundamental than the solar cycle. They precede and transcend the physical luminaries that would later govern earthly time. Light in this context is not merely photons from a star&mdash;it is a primordial ordering principle, perhaps connected to the divine presence itself (compare <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/1-jn/1?lang=eng&id=p5#p5" target="_blank">1 John 1:5</a>: "God is light"). The "days" of creation are therefore not defined by Earth's rotation relative to the sun, but by divine demarcation of ordered periods&mdash;reinforcing Abraham's teaching that these are "times" measured by celestial, not terrestrial, reckoning.
+                    </div>
+                </div>
+            </details>
+        </section>
+
+        <!-- SECTION: The Help Meet Passage -->
+        <section id="help-meet">
+            <h2><span class="icon">&#x1F46B;</span> XI. The "Help Meet" Passage</h2>
+            <p style="margin-bottom: 1rem; color: var(--text-secondary);">The Hebrew phrase <a href="https://www.blueletterbible.org/lexicon/h5828/kjv/wlc/0-1/" target="_blank"><em>ezer kenegdo</em></a> (<span class="hebrew">עֵזֶר כְּנֶגְדּוֹ</span>) is traditionally translated "help meet."</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Account</th>
+                        <th>Text</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-genesis"><strong>Genesis 2:18</strong></td>
+                        <td>"I will <strong>make</strong> him an help meet for him"</td>
+                    </tr>
+                    <tr>
+                        <td class="col-moses"><strong>Moses 3:18</strong></td>
+                        <td>"I will <strong>make</strong> an help meet for him"</td>
+                    </tr>
+                    <tr>
+                        <td class="col-abraham"><strong>Abraham 5:14</strong></td>
+                        <td>"we will <strong>form</strong> an help meet for him"</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-insight" style="margin-top: 1.5rem;">
+                <h3>Understanding <em>Ezer</em></h3>
+                <p>Abraham uses "<strong>form</strong>" (consistent with its creation-as-organization theme) rather than "make." The term <a href="https://www.blueletterbible.org/lexicon/h5828/kjv/wlc/0-1/" target="_blank"><em>ezer</em></a> (<span class="hebrew">עֵזֶר</span>, "helper") is the same word used of God as Israel's helper&mdash;not a subordinate role, but a powerful partnership. This is like the knight in shining armor coming to save the day, the reinforcements that arrive when all seems lost.</p>
+            </div>
+        </section>
+
+        <!-- SECTION: Naming -->
+        <section id="naming">
+            <h2><span class="icon">&#x1F4DB;</span> XII. Naming: Purpose, Identity, and Revelation</h2>
+
+            <details class="analysis-dropdown" open>
+                <summary><span class="dropdown-icon">&#x1F4D6;</span> What "Name" Means in Hebrew</summary>
+                <div class="analysis-content">
+                    <p>In Hebrew thought, a name (<a href="https://www.blueletterbible.org/lexicon/h8034/kjv/wlc/0-1/" target="_blank"><em>shem</em></a>, <span class="hebrew">שֵׁם</span>) is far more than a label&mdash;it signifies <strong>reputation, purpose, and mission</strong>. To know someone's <em>shem</em> is to understand what they are known for, their essential character, their role in the world. This is why God's "name" in scripture represents His nature, His covenant relationship, and His purposes (see <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ex/3?lang=eng&id=p13-p15#p13" target="_blank">Exodus 3:13-15</a>).</p>
+                    <p style="margin-top: 1rem;">When Adam names the animals, and later Eve (depending on the account), he is not merely assigning arbitrary labels&mdash;he is discerning and declaring their <strong>essence and purpose</strong>.</p>
+                </div>
+            </details>
+
+            <details class="analysis-dropdown">
+                <summary><span class="dropdown-icon">&#x1F43E;</span> Adam Naming the Animals: Divine Instruction</summary>
+                <div class="analysis-content">
+                    <p>The naming of animals was not a casual exercise but divine instruction. God brought the animals to Adam (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/2?lang=eng&id=p19#p19" target="_blank">Genesis 2:19</a>), teaching him to perceive and articulate the nature of each creature. This was training in spiritual discernment&mdash;learning to recognize and name what things truly are.</p>
+
+                    <p style="margin-top: 1rem;">Hebrew animal names demonstrate this principle&mdash;they describe what the creature <em>is</em>, its essential character:</p>
+
+                    <table style="margin-top: 1rem;">
+                        <thead>
+                            <tr>
+                                <th>Animal</th>
+                                <th>Hebrew</th>
+                                <th>Root Meaning</th>
+                                <th>Character Defined</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lion</td>
+                                <td><a href="https://www.blueletterbible.org/lexicon/h738/kjv/wlc/0-1/" target="_blank"><em>aryeh</em></a> (<span class="hebrew">אַרְיֵה</span>)</td>
+                                <td>From <em>arah</em> ("to gather, pluck")</td>
+                                <td>The gatherer/plunderer&mdash;one who hoards prey</td>
+                            </tr>
+                            <tr>
+                                <td>Young lion</td>
+                                <td><a href="https://www.blueletterbible.org/lexicon/h3715/kjv/wlc/0-1/" target="_blank"><em>kephir</em></a> (<span class="hebrew">כְּפִיר</span>)</td>
+                                <td>From <em>kaphar</em> ("to cover")</td>
+                                <td>"Covered with a mane"&mdash;the maturing lion</td>
+                            </tr>
+                            <tr>
+                                <td>Serpent</td>
+                                <td><a href="https://www.blueletterbible.org/lexicon/h5175/kjv/wlc/0-1/" target="_blank"><em>nachash</em></a> (<span class="hebrew">נָחָשׁ</span>)</td>
+                                <td>Related to <em>nachash</em> ("to hiss, whisper, divine")</td>
+                                <td>The whisperer/enchanter&mdash;one who deceives through speech</td>
+                            </tr>
+                            <tr>
+                                <td>Dove</td>
+                                <td><a href="https://www.blueletterbible.org/lexicon/h3123/kjv/wlc/0-1/" target="_blank"><em>yonah</em></a> (<span class="hebrew">יוֹנָה</span>)</td>
+                                <td>From <em>yanah</em> ("to oppress") or related to moaning</td>
+                                <td>The mourner&mdash;known for its plaintive cooing</td>
+                            </tr>
+                            <tr>
+                                <td>Raven</td>
+                                <td><a href="https://www.blueletterbible.org/lexicon/h6158/kjv/wlc/0-1/" target="_blank"><em>orev</em></a> (<span class="hebrew">עֹרֵב</span>)</td>
+                                <td>From <em>arav</em> ("evening, darkness")</td>
+                                <td>The dark one&mdash;black as twilight</td>
+                            </tr>
+                            <tr>
+                                <td>Lamb</td>
+                                <td><a href="https://www.blueletterbible.org/lexicon/h3532/kjv/wlc/0-1/" target="_blank"><em>keves</em></a> (<span class="hebrew">כֶּבֶשׂ</span>)</td>
+                                <td>Related to <em>kavash</em> ("to subdue, tread down")</td>
+                                <td>The subdued/docile one&mdash;easily led</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p style="margin-top: 1rem;">These names are not arbitrary sounds but symbolic declarations. When Adam named the <em>nachash</em>, he identified its essential nature: the whisperer, the one who speaks with a forked tongue, which can demonstrate opposing concepts: wisdom and/or deception. When he named the <em>aryeh</em>, he recognized its predatory gathering instinct. Each name was an act of intellectual, and in some cases, spiritual discernment&mdash;perceiving and declaring truth about the creature's nature.</p>
+                </div>
+            </details>
+
+            <details class="analysis-dropdown">
+                <summary><span class="dropdown-icon">&#x1F4DD;</span> Sequence Differences Across Accounts</summary>
+                <div class="analysis-content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Account</th>
+                                <th>Sequence</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="col-genesis"><strong>Genesis/Moses</strong></td>
+                                <td>Animals formed &rarr; brought to Adam &rarr; Adam names them &rarr; no help meet found &rarr; Eve created</td>
+                            </tr>
+                            <tr>
+                                <td class="col-abraham"><strong>Abraham</strong></td>
+                                <td>Help meet declared necessary &rarr; Eve created &rarr; Marriage instituted &rarr; Nakedness noted &rarr; Adam names animals &rarr; "there <strong>was found</strong> an help meet for him"</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="significance-box" style="margin-top: 1rem;">
+                        <strong>Abraham's reversal is significant:</strong> Eve is created <em>before</em> Adam names the animals, and the naming concludes with <em>finding</em> (rather than not finding) a help meet. The naming of animals becomes confirmation of what God had already provided, not a search for what was lacking.
+                    </div>
+                </div>
+            </details>
+
+            <details class="analysis-dropdown">
+                <summary><span class="dropdown-icon">&#x1F469;</span> Adam Naming Eve: The Culmination</summary>
+                <div class="analysis-content">
+                    <p>Adam's naming of Eve represents a test of his learning progress. Having been instructed by God in discerning the nature and purpose of the creatures, Adam now exercises that same capacity with his wife. The name he gives her&mdash;Chavah&mdash;reveals that he understood her nature and mission.</p>
+
+                    <h4 style="margin-top: 1.5rem;">Adam: <a href="https://www.blueletterbible.org/lexicon/h120/kjv/wlc/0-1/" target="_blank"><em>adam</em></a> (<span class="hebrew">אָדָם</span>)</h4>
+                    <p>The Hebrew <em>adam</em> functions both as a proper name and as a generic term for "humanity" or "humankind" (<em>benei adam</em>, <span class="hebrew">בְּנֵי אָדָם</span>, "<a href="https://www.bibleodyssey.org/articles/adam-adamah/" target="_blank">children of Adam</a>" = human beings). The name connects to several related Hebrew words:</p>
+
+                    <table style="margin-top: 1rem;">
+                        <thead>
+                            <tr>
+                                <th>Term</th>
+                                <th>Hebrew</th>
+                                <th>Meaning</th>
+                                <th>Connection</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="https://www.blueletterbible.org/lexicon/h127/kjv/wlc/0-1/" target="_blank"><em>adamah</em></a></td>
+                                <td><span class="hebrew">אֲדָמָה</span></td>
+                                <td>Ground, earth, soil</td>
+                                <td>Adam formed from the <em>adamah</em> (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/2?lang=eng&id=p7#p7" target="_blank">Genesis 2:7</a>)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.blueletterbible.org/lexicon/h122/kjv/wlc/0-1/" target="_blank"><em>adom</em></a></td>
+                                <td><span class="hebrew">אָדֹם</span></td>
+                                <td>Red</td>
+                                <td>The "red earth" or clay</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.blueletterbible.org/lexicon/h1818/kjv/wlc/0-1/" target="_blank"><em>dam</em></a></td>
+                                <td><span class="hebrew">דָּם</span></td>
+                                <td>Blood</td>
+                                <td>Life force within the flesh</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p style="margin-top: 1rem;">This wordplay&mdash;<em>adam</em> from <em>adamah</em>&mdash;parallels the English "human" from Latin <em>humus</em> (ground), or "earthling" from "earth." The name embodies humanity's origin from and return to the earth: "dust thou art, and unto dust shalt thou return" (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/3?lang=eng&id=p19#p19" target="_blank">Genesis 3:19</a>).</p>
+
+                    <h4 style="margin-top: 1.5rem;">Chavah/Eve: <a href="https://www.blueletterbible.org/lexicon/h2332/kjv/wlc/0-1/" target="_blank"><em>Chavvah</em></a> (<span class="hebrew">חַוָּה</span>)</h4>
+                    <p>Eve's Hebrew name carries multiple layers of meaning through related roots:</p>
+
+                    <table style="margin-top: 1rem;">
+                        <thead>
+                            <tr>
+                                <th>Term</th>
+                                <th>Hebrew</th>
+                                <th>Meaning</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="https://www.blueletterbible.org/lexicon/h2331/kjv/wlc/0-1/" target="_blank"><em>chavah</em></a></td>
+                                <td><span class="hebrew">חָוָה</span></td>
+                                <td>To declare, show, reveal, make known</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.blueletterbible.org/lexicon/h2332/kjv/wlc/0-1/" target="_blank"><em>Chavvah</em></a></td>
+                                <td><span class="hebrew">חַוָּה</span></td>
+                                <td>Life-giver (Eve's name, causative from <em>chavah</em>)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.blueletterbible.org/lexicon/h2416/kjv/wlc/0-1/" target="_blank"><em>chai</em></a></td>
+                                <td><span class="hebrew">חַי</span></td>
+                                <td>Living, alive</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.blueletterbible.org/lexicon/h2421/kjv/wlc/0-1/" target="_blank"><em>chayah</em></a></td>
+                                <td><span class="hebrew">חַיָּה</span></td>
+                                <td>To live, give life</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p style="margin-top: 1rem;"><a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/3?lang=eng&id=p20#p20" target="_blank">Genesis 3:20</a> explicitly connects the name to its meaning: "Adam called his wife's name Eve [Chavah]; because she was the <strong>mother of all living</strong> [<em>em kol chai</em>]."</p>
+
+                    <p style="margin-top: 1rem;">The dual etymology is theologically rich:</p>
+                    <ul>
+                        <li>From <em>chayah</em> (to live): Eve as <strong>life-giver</strong>, the mother through whom all human life comes</li>
+                        <li>From <em>chavah</em> (to declare/reveal): Eve as <strong>revealer</strong>, one who makes known or brings to light</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details class="analysis-dropdown">
+                <summary><span class="dropdown-icon">&#x1F31F;</span> Eve's Revelatory Mission</summary>
+                <div class="analysis-content">
+                    <p>The second meaning&mdash;often overlooked&mdash;illuminates Eve's essential role. Her name reflects not only biological motherhood but a <strong>revelatory function</strong>: she brings forth understanding as well as life.</p>
+
+                    <p style="margin-top: 1rem;">In the Garden narrative, Eve perceived what Adam had not yet grasped&mdash;the necessity of the Fall for fulfilling God's purposes. As the Book of Moses records her testimony:</p>
+
+                    <blockquote style="background: #ECFDF5; border-left: 4px solid #10B981; padding: 1rem; margin: 1rem 0; border-radius: 0 8px 8px 0;">
+                        "Were it not for our transgression we never should have had seed, and never should have known good and evil, and the joy of our redemption" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/5?lang=eng&id=p11#p11" target="_blank">Moses 5:11</a>)
+                    </blockquote>
+
+                    <p style="margin-top: 1rem;">Eve's <em>shem</em>&mdash;her name, her reputation, her mission&mdash;was to <strong>reveal</strong> this truth to Adam, helping him see and understand what was necessary. She brought forth not only physical life but the understanding that made mortal progression possible. The Septuagint understood the life-giving dimension, translating her name as "Zoe" (Greek for "life"), but the revelatory dimension (<em>chavah</em>) deserves equal emphasis.</p>
+
+                    <div class="significance-box" style="margin-top: 1rem;">
+                        <strong>Significance:</strong> Adam's naming of Eve demonstrates that he recognized her purpose. In calling her <em>Chavvah</em>, he declared her mission: to give life and to reveal truth. These names are not mere labels but theological statements&mdash;Adam embodying humanity's connection to the earth (<em>adam</em>/<em>adamah</em>), Chavah embodying the propagation and revelation of life itself (<em>Chavvah</em>/<em>chai</em>/<em>chavah</em>). Together, they represent the full scope of human existence: earthly origin and living, revelatory purpose.
+                    </div>
+                </div>
+            </details>
+        </section>
+
+        <!-- SECTION: Nakedness & Clothing -->
+        <section id="nakedness">
+            <h2><span class="icon">&#x1F45A;</span> XIII. Nakedness, Clothing, and Covenantal Investiture</h2>
+
+            <details class="analysis-dropdown" open>
+                <summary><span class="dropdown-icon">&#x1F4D6;</span> In-Depth Analysis: Nakedness and Clothing as Covenant</summary>
+                <div class="analysis-content">
+                    <p>The placement of "nakedness" (<a href="https://www.blueletterbible.org/lexicon/h6174/kjv/wlc/0-1/" target="_blank"><em>arom</em></a>, <span class="hebrew">עָרוֹם</span>) in the Abraham sequence&mdash;<em>after</em> marriage is instituted but <em>before</em> Adam exercises dominion through naming&mdash;invites deeper reflection. In Hebrew thought, <em>arom</em> signifies more than physical exposure; it carries connotations of <a href="https://hebrewwordlessons.com/2020/07/19/arom-erom-ervah-naked-and-exposed/" target="_blank">vulnerability, openness, and lack of covering and protection</a>.</p>
+
+                    <h4 style="margin-top: 1.5rem;">Clothing as Investiture</h4>
+                    <p>Conversely, the Hebrew <a href="https://www.blueletterbible.org/lexicon/h3847/kjv/wlc/0-1/" target="_blank"><em>labash</em></a> (<span class="hebrew">לָבַשׁ</span>, "to clothe") carries profound covenantal meaning. When priests are clothed with their sacred garments, they receive not merely fabric but <em>authority</em>. The Talmud states: "<a href="https://rabbisacks.org/covenant-conversation/tetzaveh/do-clothes-make-the-man/" target="_blank">While they are clothed in the priestly garments, they are clothed in the priesthood</a>" (BT Zevachim 17:B). Clothing functions as investiture&mdash;conferring power, authority, and sacred status.</p>
+
+                    <h4 style="margin-top: 1.5rem;">God Clothing Adam and Eve</h4>
+                    <p>When God later makes "coats of skins" and clothes Adam and Eve (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/3?lang=eng&id=p21#p21" target="_blank">Genesis 3:21</a>), this may represent far more than covering physical nakedness:</p>
+                    <ul>
+                        <li>Transition from an uncovenanted to a covenanted state</li>
+                        <li>Investiture with divine authority (like priestly robing)</li>
+                        <li>An endowment with power to fulfill their mortal mission</li>
+                        <li>The covering protection of the Lord himself, the Lamb of God</li>
+                    </ul>
+
+                    <div class="significance-box" style="margin-top: 1rem;">
+                        <strong>The <em>Kuttonet</em> Connection:</strong> The Hebrew term for the garments in <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/3?lang=eng&id=p21#p21" target="_blank">Genesis 3:21</a> is <a href="https://www.blueletterbible.org/lexicon/h3801/kjv/wlc/0-1/" target="_blank"><em>kuttonet</em></a> (<span class="hebrew">כֻּתֹּנֶת</span>)&mdash;the same word used for the priestly tunic (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ex/28?lang=eng&id=p4#p4" target="_blank">Exodus 28:4</a>). This linguistic connection suggests the clothing of Adam and Eve may parallel priestly consecration&mdash;a coronation-like endowment preparing them for their sacred work.
+                    </div>
+                </div>
+            </details>
+        </section>
+
+        <!-- SECTION: Unique Content -->
+        <section id="unique">
+            <h2><span class="icon">&#x1F48E;</span> Unique Content by Account</h2>
+
+            <h3 style="margin: 1.5rem 0 1rem; color: #065F46; border-left: 4px solid var(--moses-border); padding-left: 1rem;">Unique to Moses</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Teaching</th>
+                        <th>Key Verse</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-moses"><strong>Spirit creation preceded physical</strong></td>
+                        <td>"For I, the Lord God, <strong>created all things...spiritually, before they were naturally</strong> upon the face of the earth" <span class="verse-ref"><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/3?lang=eng&id=p5#p5" target="_blank">Moses 3:5</a></span></td>
+                    </tr>
+                    <tr>
+                        <td class="col-moses"><strong>Agency explicitly granted</strong></td>
+                        <td>"thou shalt not eat of it, <strong>nevertheless, thou mayest choose for thyself</strong>, for it is given unto thee" <span class="verse-ref"><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/3?lang=eng&id=p17#p17" target="_blank">Moses 3:17</a></span></td>
+                    </tr>
+                    <tr>
+                        <td class="col-moses"><strong>All things have living souls</strong> (<span class="hebrew" style="font-size: 1em;">נֶפֶשׁ</span> <a href="https://www.blueletterbible.org/lexicon/h5315/kjv/wlc/0-1/" target="_blank" class="blb-link"><em>nephesh</em></a>)</td>
+                        <td>"it became also a <strong>living soul</strong>. For it was spiritual in the day that I created it" <span class="verse-ref"><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/3?lang=eng&id=p9#p9" target="_blank">Moses 3:9</a></span></td>
+                    </tr>
+                    <tr>
+                        <td class="col-moses"><strong>Adam first flesh on earth</strong></td>
+                        <td>"man became a living soul, <strong>the first flesh upon the earth</strong>, the first man also" <span class="verse-ref"><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/3?lang=eng&id=p7#p7" target="_blank">Moses 3:7</a></span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="margin: 2rem 0 1rem; color: #92400E; border-left: 4px solid var(--abraham-border); padding-left: 1rem;">Unique to Abraham</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Teaching</th>
+                        <th>Key Verse</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-abraham"><strong>Pre-existing spirit placed in body</strong></td>
+                        <td>"the Gods formed man from the dust of the ground, and <strong>took his spirit (that is, the man's spirit), and put it into him</strong>" <span class="verse-ref"><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/5?lang=eng&id=p7#p7" target="_blank">Abraham 5:7</a></span></td>
+                    </tr>
+                    <tr>
+                        <td class="col-abraham"><strong>Kolob time reference</strong></td>
+                        <td>"it was after <strong>the Lord's time, which was after the time of Kolob</strong>; for as yet the Gods had not appointed unto Adam his reckoning" <span class="verse-ref"><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/5?lang=eng&id=p13#p13" target="_blank">Abraham 5:13</a></span></td>
+                    </tr>
+                    <tr>
+                        <td class="col-abraham"><strong>Explicit council planning</strong></td>
+                        <td>"the Gods <strong>took counsel among themselves</strong>" <span class="verse-ref"><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/4?lang=eng&id=p26#p26" target="_blank">Abraham 4:26</a></span></td>
+                    </tr>
+                    <tr>
+                        <td class="col-abraham"><strong>Matter obeys divine will</strong></td>
+                        <td>"the Gods <strong>watched those things which they had ordered until they obeyed</strong>" <span class="verse-ref"><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/4?lang=eng&id=p18#p18" target="_blank">Abraham 4:18</a></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- SECTION: Theological Implications -->
+        <section id="theological">
+            <h2><span class="icon">&#x1F4AD;</span> Theological Implications</h2>
+
+            <div class="theological-card">
+                <div class="theo-item">
+                    <h4>&#x1F31F; Nature of God</h4>
+                    <ul>
+                        <li><span class="badge badge-genesis">Genesis</span> Monotheistic ambiguity with plurality hints</li>
+                        <li><span class="badge badge-moses">Moses</span> Clarified Godhead (Father &amp; Only Begotten)</li>
+                        <li><span class="badge badge-abraham">Abraham</span> Divine council of multiple Gods in unity</li>
+                    </ul>
+                </div>
+
+                <div class="theo-item">
+                    <h4>&#x1F30D; Nature of Creation</h4>
+                    <ul>
+                        <li><span class="badge badge-genesis">Genesis</span> Presumes pre-existing materials (waters, deep, dust); <em>ex nihilo</em> interpretation developed later</li>
+                        <li><span class="badge badge-moses">Moses</span> Spiritual precedes physical; word has creative power</li>
+                        <li><span class="badge badge-abraham">Abraham</span> Organization of pre-existing matter</li>
+                    </ul>
+                </div>
+
+                <div class="theo-item">
+                    <h4>&#x1F9D1; Nature of Humanity</h4>
+                    <ul>
+                        <li><span class="badge badge-genesis">Genesis</span> Formed from dust, animated by breath</li>
+                        <li><span class="badge badge-moses">Moses</span> Spiritually pre-existent; given agency</li>
+                        <li><span class="badge badge-abraham">Abraham</span> Pre-existing spirit placed into body</li>
+                    </ul>
+                </div>
+
+                <div class="theo-item">
+                    <h4>&#x23F0; Nature of Time</h4>
+                    <ul>
+                        <li><span class="badge badge-genesis">Genesis</span> Earth-referenced "days" (<em>yom</em>)</li>
+                        <li><span class="badge badge-moses">Moses</span> Earth-referenced "days" (<em>yom</em>)</li>
+                        <li><span class="badge badge-abraham">Abraham</span> Relative time; measured by Kolob</li>
+                    </ul>
+                </div>
+
+                <div class="theo-item">
+                    <h4>&#x2697;&#xFE0F; Nature of Matter</h4>
+                    <ul>
+                        <li><span class="badge badge-genesis">Genesis</span> Created/made by divine command</li>
+                        <li><span class="badge badge-moses">Moses</span> Created/made by divine command</li>
+                        <li><span class="badge badge-abraham">Abraham</span> Ordered; obeys divine will; has inherent capacity to respond</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <footer>
+            <p><strong>CFM Corner</strong> | Come, Follow Me 2026: Old Testament</p>
+            <p>Week 3: Genesis 1&ndash;2; Moses 2&ndash;3; Abraham 4&ndash;5</p>
+            <p style="margin-top: 1rem;">
+                <a href="Three_Creation_Accounts_Analysis.md">Full Analysis (Markdown)</a> |
+                <a href="Creation_Accounts_Comparison.xlsx">Download Spreadsheet</a>
+            </p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">January 2026</p>
+        </footer>
+    </div>
+</body>
+</html>

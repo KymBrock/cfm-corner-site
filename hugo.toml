@@ -1,0 +1,14 @@
+baseURL = 'https://www.cfmcorner.com/'
+languageCode = 'en-us'
+title = 'Come Follow Me Corner'
+theme = 'cfm'
+
+[params]
+  description = 'In-depth study guides, Hebrew word studies, interactive charts, and curated video resources for the Come Follow Me Old Testament 2026 curriculum.'
+  year = '2026'
+  testament = 'Old Testament'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

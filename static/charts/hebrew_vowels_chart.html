@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hebrew Vowels Chart | Matres Lectionis & Niqqud</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #553c9a 0%, #805ad5 100%);
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.2em;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .timeline-item {
+            background: rgba(255,255,255,0.15);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+        }
+
+        .section-container {
+            padding: 30px 40px;
+        }
+
+        .section-title {
+            color: #553c9a;
+            font-size: 1.5em;
+            margin: 0 0 10px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e9d8fd;
+        }
+
+        .section-intro {
+            color: #4a5568;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        /* Matres Lectionis Section */
+        .matres-section {
+            background: linear-gradient(135deg, #faf5ff 0%, #e9d8fd 100%);
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .matres-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .matres-table thead {
+            background: linear-gradient(135deg, #553c9a 0%, #6b46c1 100%);
+            color: white;
+        }
+
+        .matres-table th {
+            padding: 15px 12px;
+            text-align: center;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.8em;
+            letter-spacing: 1px;
+        }
+
+        .matres-table td {
+            padding: 18px 12px;
+            text-align: center;
+            vertical-align: middle;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .matres-table tr:nth-child(even) {
+            background: #faf5ff;
+        }
+
+        .matres-table tr:hover {
+            background: #f3e8ff;
+        }
+
+        .hebrew-large {
+            font-family: 'SBL Hebrew', 'Times New Roman', 'Ezra SIL', serif;
+            font-size: 2.8em;
+            color: #553c9a;
+            direction: rtl;
+        }
+
+        .letter-name {
+            font-weight: 600;
+            color: #2d3748;
+            font-size: 1.1em;
+        }
+
+        .example-word {
+            font-family: 'SBL Hebrew', 'Times New Roman', 'Ezra SIL', serif;
+            font-size: 1.8em;
+            color: #6b46c1;
+            direction: rtl;
+        }
+
+        .transliteration {
+            font-style: italic;
+            color: #718096;
+            font-size: 0.9em;
+        }
+
+        .function-desc {
+            text-align: left;
+            padding-left: 15px;
+            color: #4a5568;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        /* Niqqud Section */
+        .niqqud-section {
+            background: linear-gradient(135deg, #ebf8ff 0%, #bee3f8 100%);
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .niqqud-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .niqqud-table thead {
+            background: linear-gradient(135deg, #2c5282 0%, #3182ce 100%);
+            color: white;
+        }
+
+        .niqqud-table th {
+            padding: 15px 12px;
+            text-align: center;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.8em;
+            letter-spacing: 1px;
+        }
+
+        .niqqud-table td {
+            padding: 16px 12px;
+            text-align: center;
+            vertical-align: middle;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .niqqud-table tr:nth-child(even) {
+            background: #ebf8ff;
+        }
+
+        .niqqud-table tr:hover {
+            background: #bee3f8;
+        }
+
+        .vowel-symbol {
+            font-family: 'SBL Hebrew', 'Times New Roman', 'Ezra SIL', serif;
+            font-size: 2.5em;
+            color: #2c5282;
+            direction: rtl;
+        }
+
+        .vowel-name {
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .vowel-class {
+            font-size: 0.85em;
+            padding: 4px 10px;
+            border-radius: 12px;
+            display: inline-block;
+        }
+
+        .class-a { background: #fed7d7; color: #c53030; }
+        .class-e { background: #fefcbf; color: #b7791f; }
+        .class-i { background: #c6f6d5; color: #276749; }
+        .class-o { background: #bee3f8; color: #2c5282; }
+        .class-u { background: #e9d8fd; color: #553c9a; }
+        .class-sheva { background: #e2e8f0; color: #4a5568; }
+
+        .sound-desc {
+            text-align: left;
+            padding-left: 10px;
+            color: #4a5568;
+        }
+
+        .audio-btn {
+            background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+            border: none;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            font-size: 14px;
+            cursor: pointer;
+            padding: 0;
+            margin: 0 3px;
+            transition: all 0.2s ease;
+            vertical-align: middle;
+        }
+
+        .audio-btn:hover {
+            background: linear-gradient(135deg, #3182ce 0%, #2c5282 100%);
+            transform: scale(1.1);
+        }
+
+        .audio-btn:active {
+            transform: scale(0.95);
+        }
+
+        .audio-btn.playing {
+            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+            animation: pulse 0.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+
+        /* Masoretic Schools Section */
+        .schools-section {
+            background: #f7fafc;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .schools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .school-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 4px solid;
+        }
+
+        .school-babylonian { border-left-color: #e53e3e; }
+        .school-palestinian { border-left-color: #dd6b20; }
+        .school-tiberian { border-left-color: #38a169; }
+
+        .school-card h4 {
+            margin: 0 0 10px 0;
+            color: #2d3748;
+        }
+
+        .school-card .location {
+            font-size: 0.9em;
+            color: #718096;
+            margin-bottom: 8px;
+        }
+
+        .school-card .period {
+            font-size: 0.85em;
+            background: #edf2f7;
+            padding: 4px 10px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        .school-card p {
+            margin: 0;
+            color: #4a5568;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        .standard-badge {
+            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+
+        /* Example Section */
+        .example-section {
+            background: linear-gradient(135deg, #fffaf0 0%, #feebc8 100%);
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .example-word-large {
+            font-family: 'SBL Hebrew', 'Times New Roman', 'Ezra SIL', serif;
+            font-size: 4em;
+            color: #744210;
+            direction: rtl;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .example-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .letter-breakdown {
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .letter-breakdown .hebrew {
+            font-family: 'SBL Hebrew', 'Times New Roman', 'Ezra SIL', serif;
+            font-size: 2.2em;
+            color: #744210;
+            direction: rtl;
+        }
+
+        .letter-breakdown .name {
+            font-weight: 600;
+            color: #2d3748;
+            font-size: 0.9em;
+            margin: 8px 0 4px 0;
+        }
+
+        .letter-breakdown .sound {
+            color: #718096;
+            font-size: 0.85em;
+        }
+
+        .pronunciation-result {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 1.3em;
+            color: #744210;
+        }
+
+        .pronunciation-result strong {
+            font-family: monospace;
+            background: white;
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-size: 1.2em;
+        }
+
+        /* Divine Name Section */
+        .divine-name-section {
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            color: white;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .divine-name-section .section-title {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.3);
+        }
+
+        .divine-name-section .section-intro {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .tetragrammaton {
+            font-family: 'SBL Hebrew', 'Times New Roman', 'Ezra SIL', serif;
+            font-size: 5em;
+            text-align: center;
+            margin: 30px 0;
+            direction: rtl;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .divine-name-explanation {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .explanation-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 25px;
+            backdrop-filter: blur(10px);
+        }
+
+        .explanation-card h4 {
+            margin: 0 0 12px 0;
+            color: #90cdf4;
+        }
+
+        .explanation-card p {
+            margin: 0;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.85);
+        }
+
+        /* Legend */
+        .legend {
+            padding: 25px 40px;
+            background: #f7fafc;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .legend h3 {
+            margin: 0 0 15px 0;
+            color: #2d3748;
+        }
+
+        .legend-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .legend-symbol {
+            font-size: 1.5em;
+            width: 40px;
+            text-align: center;
+        }
+
+        .legend-desc {
+            color: #4a5568;
+            font-size: 0.9em;
+        }
+
+        /* Footer */
+        footer {
+            background: #2d3748;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #90cdf4;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header, .section-container, .legend, footer {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.6em;
+            }
+
+            .hebrew-large, .vowel-symbol {
+                font-size: 2em;
+            }
+
+            .tetragrammaton {
+                font-size: 3em;
+            }
+
+            .example-word-large {
+                font-size: 3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hebrew Vowels Chart</h1>
+            <p class="subtitle">Matres Lectionis & The Masoretic Niqqud System</p>
+            <div class="timeline">
+                <span class="timeline-item">📜 Matres Lectionis: ~1000 BCE</span>
+                <span class="timeline-item">✡️ Masoretic Niqqud: 5th–10th c. CE</span>
+                <span class="timeline-item">📖 Leningrad Codex: 1008 CE</span>
+            </div>
+        </header>
+
+        <!-- Matres Lectionis Section -->
+        <div class="section-container matres-section">
+            <h2 class="section-title">The Mother Letters: Matres Lectionis</h2>
+            <p class="section-intro">
+                Long before the Masoretes added vowel marks, Hebrew scribes used three consonants to <em>hint</em> at vowel sounds. These <strong>matres lectionis</strong> (Latin for "mothers of reading") are letters that "give birth" to vowels. When they appear without their consonantal sound, they signal a vowel.
+            </p>
+
+            <table class="matres-table">
+                <thead>
+                    <tr>
+                        <th>Letter</th>
+                        <th>Name</th>
+                        <th>As Consonant</th>
+                        <th>As Vowel Marker</th>
+                        <th>Example</th>
+                        <th>Function</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="hebrew-large">א</span></td>
+                        <td><span class="letter-name">Aleph</span></td>
+                        <td>[ʔ] glottal stop <button class="audio-btn" onclick="playAudio('https://upload.wikimedia.org/wikipedia/commons/4/4d/Glottal_stop.ogg')" title="Glottal stop">🔊</button></td>
+                        <td>Often silent, marks /a/ or /e/</td>
+                        <td><span class="example-word">רֹאשׁ</span><br><span class="transliteration">rosh (head)</span></td>
+                        <td class="function-desc">Often appears at word beginnings or as a placeholder for vowels. In רֹאשׁ, the Aleph is silent, supporting the /o/ vowel.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="hebrew-large">ו</span></td>
+                        <td><span class="letter-name">Vav</span></td>
+                        <td>[v] or [w] <button class="audio-btn" onclick="playAudio('https://upload.wikimedia.org/wikipedia/commons/8/85/Voiced_labiodental_fricative.ogg')" title="v sound">🔊</button> <button class="audio-btn" onclick="playAudio('https://upload.wikimedia.org/wikipedia/commons/f/f2/Voiced_labio-velar_approximant.ogg')" title="w sound">🔊</button></td>
+                        <td>Marks /o/ or /u/</td>
+                        <td><span class="example-word">תּוֹרָה</span><br><span class="transliteration">Torah</span> <button class="audio-btn" onclick="playAudio('audio/torah.wav')" title="Listen to Torah">🔊</button></td>
+                        <td class="function-desc">The most common mater lectionis. When Vav carries a dot above (חוֹלֵם) it signals /o/; with a dot in the middle (שׁוּרֵק) it signals /u/.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="hebrew-large">י</span></td>
+                        <td><span class="letter-name">Yod</span></td>
+                        <td>[j] as in "yes" <button class="audio-btn" onclick="playAudio('https://upload.wikimedia.org/wikipedia/commons/e/e8/Palatal_approximant.ogg')" title="y sound">🔊</button></td>
+                        <td>Marks /i/ or /e/</td>
+                        <td><span class="example-word">הִיא</span><br><span class="transliteration">hi (she)</span> <button class="audio-btn" onclick="playAudio('audio/hi.wav')" title="Listen to Hi">🔊</button></td>
+                        <td class="function-desc">Frequently signals the /i/ vowel. In הִיא, the Yod marks the long /i/ sound rather than functioning as /y/.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p style="margin-top: 20px; color: #553c9a; font-style: italic;">
+                <strong>Why these three?</strong> Aleph, Vav, and Yod are linguistically "weak" consonants—semivowels that naturally glide into vowel sounds. Their dual nature made them perfect candidates for vowel markers.
+            </p>
+        </div>
+
+        <!-- Tiberian Vowel System Section -->
+        <div class="section-container niqqud-section">
+            <h2 class="section-title">The Tiberian Vowel System (Niqqud)</h2>
+            <p class="section-intro">
+                Between the 5th and 10th centuries CE, Jewish scholars called <strong>Masoretes</strong> developed a system of dots and dashes called <strong>niqqud</strong> (נִקּוּד, "dotting") to preserve the traditional pronunciation of Hebrew scripture. These marks float around the consonants without changing the sacred text itself.
+            </p>
+
+            <table class="niqqud-table">
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Name</th>
+                        <th>Class</th>
+                        <th>IPA</th>
+                        <th>Sound</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- A-class vowels -->
+                    <tr>
+                        <td><span class="vowel-symbol">בָ</span></td>
+                        <td><span class="vowel-name">Qamats</span></td>
+                        <td><span class="vowel-class class-a">A-class</span></td>
+                        <td>[ɑ] <button class="audio-btn" onclick="playAudio('https://upload.wikimedia.org/wikipedia/commons/e/e5/Open_back_unrounded_vowel.ogg')" title="Open back vowel">🔊</button></td>
+                        <td class="sound-desc">"a" as in "father" (long)</td>
+                        <td><span class="example-word">בָּרָא</span> <span class="transliteration">bara</span> (created) <button class="audio-btn" onclick="playAudio('audio/bara.wav')" title="Listen to Bara">🔊</button></td>
+                    </tr>
+                    <tr>
+                        <td><span class="vowel-symbol">בַ</span></td>
+                        <td><span class="vowel-name">Patach</span></td>
+                        <td><span class="vowel-class class-a">A-class</span></td>
+                        <td>[a] <button class="audio-btn" onclick="playAudio('https://upload.wikimedia.org/wikipedia/commons/0/0e/PR-open_front_unrounded_vowel.ogg')" title="Open front vowel">🔊</button></td>
+                        <td class="sound-desc">"a" as in "father" (short)</td>
+                        <td><span class="example-word">בַּת</span> <span class="transliteration">bat</span> (daughter) <button class="audio-btn" onclick="playAudio('audio/Bat.m4a')" title="Listen to Bat">🔊</button></td>
+                    </tr>
+                    <tr>
+                        <td><span class="vowel-symbol">בֲ</span></td>
+                        <td><span class="vowel-name">Chataf Patach</span></td>
+                        <td><span class="vowel-class class-a">A-class</span></td>
+                        <td>[ă] <button class="audio-btn" onclick="playAudio('https://upload.wikimedia.org/wikipedia/commons/0/0e/PR-open_front_unrounded_vowel.ogg')" title="Ultra-short a">🔊</button></td>
+                        <td class="sound-desc">"a" ultra-short (reduced)</td>
+                        <td><span class="example-word">אֲנִי</span> <span class="transliteration">ani</span> (I) <button class="audio-btn" onclick="playAudio('audio/ani.wav')" title="Listen to Ani">🔊</button></td>
+                    </tr>
+
+                    <!-- E-class vowels -->
+                    <tr>
+                        <td><span class="vowel-symbol">בֵ</span></td>
+                        <td><span class="vowel-name">Tsere</span></td>
+                        <td><span class="vowel-class class-e">E-class</span></td>
+                        <td>[e] <button class="audio-btn" onclick="playAudio('https://upload.wikimedia.org/wikipedia/commons/6/6c/Close-mid_front_unrounded_vowel.ogg')" title="Close-mid front vowel">🔊</button></td>
+                        <td class="sound-desc">"e" as in "they" (long)</td>
+                        <td><span class="example-word">בֵּן</span> <span class="transliteration">ben</span> (son) <button class="audio-btn" onclick="playAudio('audio/ben.wav')" title="Listen to Ben">🔊</button></td>
+                    </tr>
+                    <tr>
+                        <td><span class="vowel-symbol">בֶ</span></td>
+                        <td><span class="vowel-name">Segol</span></td>
+                        <td><span class="vowel-class class-e">E-class</span></td>
+                        <td>[ɛ] <button class="audio-btn" onclick="playAudio('https://upload.wikimedia.org/wikipedia/commons/7/71/Open-mid_front_unrounded_vowel.ogg')" title="Open-mid front vowel">🔊</button></td>
+                        <td class="sound-desc">"e" as in "bed" (short)</td>
+                        <td><span class="example-word">מֶלֶךְ</span> <span class="transliteration">melekh</span> (king) <button class="audio-btn" onclick="playAudio('audio/melekh.wav')" title="Listen to Melekh">🔊</button></td>
+                    </tr>
+                    <tr>
+                        <td><span class="vowel-symbol">בֱ</span></td>
+                        <td><span class="vowel-name">Chataf Segol</span></td>
+                        <td><span class="vowel-class class-e">E-class</span></td>
+                        <td>[ĕ] <button class="audio-btn" onclick="playAudio('https://upload.wikimedia.org/wikipedia/commons/7/71/Open-mid_front_unrounded_vowel.ogg')" title="Ultra-short e">🔊</button></td>
+                        <td class="sound-desc">"e" ultra-short (reduced)</td>
+                        <td><span class="example-word">אֱלֹהִים</span> <span class="transliteration">Elohim</span> (God) <button class="audio-btn" onclick="playAudio('audio/elohim.ogg')" title="Listen to Elohim">🔊</button></td>
+                    </tr>
+
+                    <!-- I-class vowels -->
+                    <tr>
+                        <td><span class="vowel-symbol">בִ</span></td>
+                        <td><span class="vowel-name">Chiriq</span></td>
+                        <td><span class="vowel-class class-i">I-class</span></td>
+                        <td>[i] <button class="audio-btn" onclick="playAudio('https://upload.wikimedia.org/wikipedia/commons/9/91/Close_front_unrounded_vowel.ogg')" title="Close front vowel">🔊</button></td>
+                        <td class="sound-desc">"i" as in "machine"</td>
+                        <td><span class="example-word">מִי</span> <span class="transliteration">mi</span> (who) <button class="audio-btn" onclick="playAudio('audio/Mi.m4a')" title="Listen to Mi">🔊</button></td>
+                    </tr>
+                    <tr>
+                        <td><span class="vowel-symbol">בִי</span></td>
+                        <td><span class="vowel-name">Chiriq Malei</span></td>
+                        <td><span class="vowel-class class-i">I-class</span></td>
+                        <td>[iː] <button class="audio-btn" onclick="playAudio('https://upload.wikimedia.org/wikipedia/commons/9/91/Close_front_unrounded_vowel.ogg')" title="Long close front vowel">🔊</button></td>
+                        <td class="sound-desc">"i" long (with Yod)</td>
+                        <td><span class="example-word">שִׁיר</span> <span class="transliteration">shir</span> (song) <button class="audio-btn" onclick="playAudio('audio/Shir.m4a')" title="Listen to Shir">🔊</button></td>
+                    </tr>
+
+                    <!-- O-class vowels -->
+                    <tr>
+                        <td><span class="vowel-symbol">בֹ</span></td>
+                        <td><span class="vowel-name">Cholem</span></td>
+                        <td><span class="vowel-class class-o">O-class</span></td>
+                        <td>[o] <button class="audio-btn" onclick="playAudio('https://upload.wikimedia.org/wikipedia/commons/8/84/Close-mid_back_rounded_vowel.ogg')" title="Close-mid back rounded vowel">🔊</button></td>
+                        <td class="sound-desc">"o" as in "go"</td>
+                        <td><span class="example-word">קֹדֶשׁ</span> <span class="transliteration">qodesh</span> (holy) <button class="audio-btn" onclick="playAudio('audio/Kodesh.m4a')" title="Listen to Qodesh">🔊</button></td>
+                    </tr>
+                    <tr>
+                        <td><span class="vowel-symbol">בוֹ</span></td>
+                        <td><span class="vowel-name">Cholem Malei</span></td>
+                        <td><span class="vowel-class class-o">O-class</span></td>
+                        <td>[oː] <button class="audio-btn" onclick="playAudio('https://upload.wikimedia.org/wikipedia/commons/8/84/Close-mid_back_rounded_vowel.ogg')" title="Long o vowel">🔊</button></td>
+                        <td class="sound-desc">"o" long (with Vav)</td>
+                        <td><span class="example-word">שָׁלוֹם</span> <span class="transliteration">shalom</span> (peace) <button class="audio-btn" onclick="playAudio('audio/shalom.ogg')" title="Listen to Shalom">🔊</button></td>
+                    </tr>
+                    <tr>
+                        <td><span class="vowel-symbol">בָ</span></td>
+                        <td><span class="vowel-name">Qamats Qatan</span></td>
+                        <td><span class="vowel-class class-o">O-class</span></td>
+                        <td>[ɔ] <button class="audio-btn" onclick="playAudio('https://upload.wikimedia.org/wikipedia/commons/d/d0/PR-open-mid_back_rounded_vowel.ogg')" title="Open-mid back rounded vowel">🔊</button></td>
+                        <td class="sound-desc">"o" as in "all" (closed syllable)</td>
+                        <td><span class="example-word">כָּל</span> <span class="transliteration">kol</span> (all) <button class="audio-btn" onclick="playAudio('audio/kol.wav')" title="Listen to Kol">🔊</button></td>
+                    </tr>
+                    <tr>
+                        <td><span class="vowel-symbol">בֳ</span></td>
+                        <td><span class="vowel-name">Chataf Qamats</span></td>
+                        <td><span class="vowel-class class-o">O-class</span></td>
+                        <td>[ŏ] <button class="audio-btn" onclick="playAudio('https://upload.wikimedia.org/wikipedia/commons/8/84/Close-mid_back_rounded_vowel.ogg')" title="Ultra-short o">🔊</button></td>
+                        <td class="sound-desc">"o" ultra-short (reduced)</td>
+                        <td><span class="example-word">צָהֳרַיִם</span> <span class="transliteration">tsohorayim</span> (noon) <button class="audio-btn" onclick="playAudio('audio/tsohorayim.m4a')" title="Listen to Tsohorayim">🔊</button></td>
+                    </tr>
+
+                    <!-- U-class vowels -->
+                    <tr>
+                        <td><span class="vowel-symbol">בֻ</span></td>
+                        <td><span class="vowel-name">Qibbuts</span></td>
+                        <td><span class="vowel-class class-u">U-class</span></td>
+                        <td>[u] <button class="audio-btn" onclick="playAudio('https://upload.wikimedia.org/wikipedia/commons/5/5d/Close_back_rounded_vowel.ogg')" title="Close back rounded vowel">🔊</button></td>
+                        <td class="sound-desc">"u" as in "flute" (short)</td>
+                        <td><span class="example-word">קֻדָּשׁ</span> <span class="transliteration">quddash</span> (sanctified) <button class="audio-btn" onclick="playAudio('audio/quddash.m4a')" title="Listen to Quddash">🔊</button></td>
+                    </tr>
+                    <tr>
+                        <td><span class="vowel-symbol">בּוּ</span></td>
+                        <td><span class="vowel-name">Shureq</span></td>
+                        <td><span class="vowel-class class-u">U-class</span></td>
+                        <td>[uː] <button class="audio-btn" onclick="playAudio('https://upload.wikimedia.org/wikipedia/commons/5/5d/Close_back_rounded_vowel.ogg')" title="Long close back rounded vowel">🔊</button></td>
+                        <td class="sound-desc">"u" as in "flute" (long, with Vav)</td>
+                        <td><span class="example-word">בָּרוּךְ</span> <span class="transliteration">barukh</span> (blessed) <button class="audio-btn" onclick="playAudio('audio/barukh.wav')" title="Listen to Barukh">🔊</button></td>
+                    </tr>
+
+                    <!-- Sheva -->
+                    <tr>
+                        <td><span class="vowel-symbol">בְ</span></td>
+                        <td><span class="vowel-name">Sheva</span></td>
+                        <td><span class="vowel-class class-sheva">Reduced</span></td>
+                        <td>[ə] or ∅ <button class="audio-btn" onclick="playAudio('https://upload.wikimedia.org/wikipedia/commons/d/d9/Mid-central_vowel.ogg')" title="Schwa">🔊</button></td>
+                        <td class="sound-desc">Very short "uh" or silent</td>
+                        <td><span class="example-word">בְּרֵאשִׁית</span> <span class="transliteration">b'reshit</span> (in beginning)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Three Schools Section -->
+        <div class="section-container schools-section">
+            <h2 class="section-title">The Three Masoretic Schools</h2>
+            <p class="section-intro">
+                Three centers of Masoretic activity developed different vowel systems. The Tiberian system eventually became the standard used in Hebrew Bibles today.
+            </p>
+
+            <div class="schools-grid">
+                <div class="school-card school-babylonian">
+                    <h4>Babylonian</h4>
+                    <div class="location">📍 Mesopotamia</div>
+                    <span class="period">6th–8th century CE</span>
+                    <p>Placed vowels <strong>above</strong> the letters. Now obsolete, but valuable for understanding textual variants.</p>
+                </div>
+
+                <div class="school-card school-palestinian">
+                    <h4>Palestinian</h4>
+                    <div class="location">📍 Israel</div>
+                    <span class="period">6th–8th century CE</span>
+                    <p>An intermediate system between Babylonian and Tiberian. Only fragments survive in ancient manuscripts.</p>
+                </div>
+
+                <div class="school-card school-tiberian">
+                    <h4>Tiberian <span class="standard-badge">STANDARD</span></h4>
+                    <div class="location">📍 Tiberias, Galilee</div>
+                    <span class="period">8th–10th century CE</span>
+                    <p>Placed vowels above and below letters. Became the universal standard. The <strong>Leningrad Codex</strong> (1008 CE) is the oldest complete Tiberian manuscript.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Example Breakdown Section -->
+        <div class="section-container example-section">
+            <h2 class="section-title">Reading Pointed Hebrew: An Example</h2>
+            <p class="section-intro">
+                Let's break down the opening word of Genesis to see how consonants, matres lectionis, and niqqud work together:
+            </p>
+
+            <div class="example-word-large">בְּרֵאשִׁית <button class="audio-btn" onclick="playAudio('audio/bereshit.ogg')" title="Listen to B'reshit" style="width: 48px; height: 48px; font-size: 24px; vertical-align: middle;">🔊</button></div>
+            <p style="text-align: center; font-size: 1.3em; color: #744210;"><em>"In the beginning"</em> — Genesis 1:1</p>
+
+            <div class="example-breakdown">
+                <div class="letter-breakdown">
+                    <div class="hebrew">בְּ</div>
+                    <div class="name">Bet + Sheva + Dagesh</div>
+                    <div class="sound">/b/ + schwa = "bə"</div>
+                </div>
+                <div class="letter-breakdown">
+                    <div class="hebrew">רֵ</div>
+                    <div class="name">Resh + Tsere</div>
+                    <div class="sound">/r/ + /e/ = "re"</div>
+                </div>
+                <div class="letter-breakdown">
+                    <div class="hebrew">א</div>
+                    <div class="name">Aleph</div>
+                    <div class="sound">Root consonant (ר-א-שׁ)</div>
+                </div>
+                <div class="letter-breakdown">
+                    <div class="hebrew">שִׁ</div>
+                    <div class="name">Shin + Chiriq</div>
+                    <div class="sound">/sh/ + /i/ = "shi"</div>
+                </div>
+                <div class="letter-breakdown">
+                    <div class="hebrew">י</div>
+                    <div class="name">Yod (silent)</div>
+                    <div class="sound">Mater lectionis for /i/</div>
+                </div>
+                <div class="letter-breakdown">
+                    <div class="hebrew">ת</div>
+                    <div class="name">Tav</div>
+                    <div class="sound">/t/</div>
+                </div>
+            </div>
+
+            <div class="pronunciation-result">
+                Pronounced: <strong>bə-re-SHEET</strong>
+                <button class="audio-btn" onclick="playAudio('audio/bereshit.ogg')" title="Listen to B'reshit" style="margin-left: 10px; width: 36px; height: 36px; font-size: 18px;">🔊</button>
+            </div>
+        </div>
+
+        <!-- Divine Name Section -->
+        <div class="section-container divine-name-section">
+            <h2 class="section-title">The Divine Name: A Special Case</h2>
+            <p class="section-intro">
+                The most famous example involving Hebrew vowels is the divine name—the Tetragrammaton. Understanding its pointing reveals how reverence shaped scribal practice.
+            </p>
+
+            <div class="tetragrammaton">יהוה</div>
+
+            <div class="divine-name-explanation">
+                <div class="explanation-card">
+                    <h4>The Four Letters (YHWH)</h4>
+                    <p>The name revealed to Moses at the burning bush consists of four consonants: <strong>Yod-He-Vav-He</strong>. This "Tetragrammaton" appears nearly 7,000 times in the Hebrew Bible.</p>
+                </div>
+
+                <div class="explanation-card">
+                    <h4>The Reverent Substitution</h4>
+                    <p>Out of reverence, Jews stopped pronouncing this name aloud, substituting <strong>Adonai</strong> (אֲדֹנָי, "Lord") when reading scripture. The Masoretes placed Adonai's vowels around YHWH as a reminder.</p>
+                </div>
+
+                <div class="explanation-card">
+                    <h4>The Origin of "Jehovah"</h4>
+                    <p>Medieval Christian scholars read YHWH with Adonai's vowels, producing the hybrid "Jehovah"—a form that never existed in ancient Hebrew but became embedded in English tradition.</p>
+                </div>
+
+                <div class="explanation-card">
+                    <h4>Modern Reconstruction</h4>
+                    <p>Scholars generally reconstruct the original as <strong>Yahweh</strong>, based on early Greek transcriptions and theophoric names. But certainty is impossible—the name wasn't spoken aloud for millennia.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Legend -->
+        <div class="legend">
+            <h3>Understanding This Chart</h3>
+            <div class="legend-grid">
+                <div class="legend-item">
+                    <span class="legend-symbol">🔊</span>
+                    <span class="legend-desc"><strong>Audio:</strong> Click to hear the vowel sound (from Wikimedia Commons)</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-symbol" style="font-family: 'SBL Hebrew'; direction: rtl;">בָ</span>
+                    <span class="legend-desc"><strong>Symbol:</strong> Shows the vowel mark with the letter Bet as example</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-symbol">[ɑ]</span>
+                    <span class="legend-desc"><strong>IPA:</strong> International Phonetic Alphabet notation</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-symbol">מָלֵא</span>
+                    <span class="legend-desc"><strong>Malei:</strong> "Full" spelling—vowel written with a mater lectionis</span>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Hebrew Vowels Chart | CFM Corner | Week 06: Moses 7</p>
+            <p>Audio samples from <a href="https://commons.wikimedia.org/" target="_blank">Wikimedia Commons</a> and <a href="https://lingualibre.org/" target="_blank">Lingua Libre</a> (CC0/CC-BY-SA)</p>
+            <p>For use with <a href="hebrew_alphabet_development_chart.html">Hebrew Alphabet Development Chart</a></p>
+        </footer>
+    </div>
+
+    <script>
+        // Audio player for vowel pronunciation files
+        let currentAudio = null;
+        let currentButton = null;
+
+        function playAudio(url) {
+            // Stop any currently playing audio
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+                if (currentButton) {
+                    currentButton.classList.remove('playing');
+                }
+            }
+
+            // Get the button that was clicked
+            const button = event.currentTarget;
+
+            // Create and play new audio
+            currentAudio = new Audio(url);
+            currentButton = button;
+
+            button.classList.add('playing');
+
+            currentAudio.play().catch(function(error) {
+                console.log('Audio playback error:', error);
+                button.classList.remove('playing');
+            });
+
+            currentAudio.onended = function() {
+                button.classList.remove('playing');
+                currentAudio = null;
+                currentButton = null;
+            };
+
+            currentAudio.onerror = function() {
+                console.log('Audio failed to load');
+                button.classList.remove('playing');
+                currentAudio = null;
+                currentButton = null;
+            };
+        }
+    </script>
+</body>
+</html>

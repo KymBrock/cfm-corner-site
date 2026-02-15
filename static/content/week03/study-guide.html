@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3: Genesis 1-2; Moses 2-3; Abraham 4-5 - Come Follow Me Study Guide</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Georgia, serif; line-height: 1.7; color: #374151; background-color: #f9fafb; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+        .site-header {
+            background: linear-gradient(135deg, #d4c4a8 0%, #8B7355 100%);
+            color: white; padding: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px;
+        }
+        .site-header-content { max-width: 1000px; margin: 0 auto; padding: 0 20px; text-align: center; }
+        .site-title { font-size: 2em; margin-bottom: 5px; }
+        .site-subtitle { font-size: 1.1em; opacity: 0.9; }
+
+        .header-section {
+            background-color: #8B7355; color: white; padding: 40px; border-radius: 12px;
+            margin-bottom: 30px; text-align: center;
+        }
+        .header-section .week-label { font-size: 1em; text-transform: uppercase; letter-spacing: 2px; opacity: 0.9; margin-bottom: 10px; }
+        .header-section h1 { font-size: 2.5em; font-weight: 300; margin-bottom: 10px; }
+        .header-section .subtitle { font-size: 1.3em; font-style: italic; margin-bottom: 20px; }
+        .header-section .date-location { font-size: 1.1em; opacity: 0.95; }
+
+        .quick-links { text-align: center; margin: 20px 0; }
+        .quick-link {
+            display: inline-block; background: #8B7355; color: white; padding: 10px 20px;
+            border-radius: 8px; text-decoration: none; margin: 5px; transition: all 0.3s;
+        }
+        .quick-link:hover { background: #6B5344; transform: translateY(-2px); }
+
+        .button-container { text-align: center; margin: 30px 0; }
+        .expand-button {
+            background-color: #8B7355; color: white; border: none; padding: 12px 24px;
+            margin: 0 10px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em;
+        }
+        .expand-button:hover { background-color: #6B5344; }
+
+        .accordion-section {
+            background-color: #8B7355; color: white; cursor: pointer; padding: 18px; width: 100%;
+            border: none; text-align: left; font-size: 1.2em; font-weight: 600; font-family: Georgia, serif;
+            border-radius: 8px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center;
+        }
+        .accordion-section:hover { background-color: #6B5344; }
+        .accordion-section::after { content: '▼'; font-size: 0.9em; transition: transform 0.3s; }
+        .accordion-section.active::after { transform: rotate(180deg); }
+
+        .content-panel {
+            background-color: white; border-radius: 0 0 8px 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;
+        }
+        .content-panel.active { max-height: none; overflow: visible; }
+        .panel-content { padding: 30px; }
+        .panel-content h2 { color: #8B7355; margin-bottom: 20px; font-size: 1.8em; }
+        .panel-content h3 { color: #6B5344; margin-top: 25px; margin-bottom: 15px; font-size: 1.4em; }
+        .panel-content h4 { color: #5a4a3a; margin-top: 20px; margin-bottom: 12px; font-size: 1.2em; }
+        .panel-content ul, .panel-content ol { margin-left: 25px; margin-bottom: 15px; }
+        .panel-content li { margin-bottom: 8px; }
+        .panel-content p { margin-bottom: 15px; text-align: justify; }
+        .panel-content a { color: #8B7355; }
+        .panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .info-table th, .info-table td { border: 1px solid #d4c4a8; padding: 12px; text-align: left; }
+        .info-table th { background-color: #f5f0e8; color: #6B5344; font-weight: bold; }
+        .info-table tr:nth-child(even) { background-color: #faf8f5; }
+
+        .nav-bar {
+            background-color: white; padding: 15px 20px; margin: 0 0 20px 0;
+            border-bottom: 2px solid #8B7355; display: flex; justify-content: center;
+        }
+        .nav-links { display: flex; gap: 15px; align-items: center; flex-wrap: wrap; justify-content: center; }
+        .nav-btn {
+            background-color: #8B7355; color: white; padding: 10px 20px; text-decoration: none;
+            border-radius: 6px; font-size: 0.95em; transition: all 0.3s;
+        }
+        .nav-btn:hover { background-color: #6B5344; transform: translateY(-2px); color: white; }
+        .nav-btn.disabled { background-color: #d1d5db; cursor: not-allowed; }
+
+        .section-navigation {
+            background: white; border-radius: 12px; padding: 30px; margin: 40px auto;
+            max-width: 1000px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-top: 3px solid #8B7355;
+        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
+        .nav-link {
+            background: #8B7355; color: white; padding: 12px 24px; text-decoration: none;
+            border-radius: 8px; font-weight: bold; transition: all 0.3s;
+        }
+        .nav-link:hover { background: #6B5344; transform: translateY(-2px); color: white; }
+        .nav-link.index { background: #6B5344; }
+        .nav-disabled { background: #d1d5db; color: #9ca3af; padding: 12px 24px; border-radius: 8px; }
+
+        .sub-accordion {
+            background-color: #f5f0e8; color: #5a4a3a; cursor: pointer; padding: 14px 18px; width: 100%;
+            text-align: left; border: 1px solid #d4c4a8; border-radius: 6px; font-size: 1.1em;
+            font-weight: 600; font-family: Georgia, serif; margin-top: 10px;
+            display: flex; justify-content: space-between; align-items: center; transition: background-color 0.2s;
+        }
+        .sub-accordion:hover { background-color: #e8e0d4; }
+        .sub-accordion::after { content: '▼'; font-size: 0.8em; color: #8B7355; transition: transform 0.3s; }
+        .sub-accordion.active::after { transform: rotate(180deg); }
+
+        .sub-panel {
+            background-color: #fafafa; border-radius: 0 0 6px 6px; border: 1px solid #d4c4a8; border-top: none;
+            max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; margin-bottom: 10px;
+        }
+        .sub-panel.active { max-height: none; overflow: visible; transition: max-height 0.3s ease-in; }
+        .sub-panel-content { padding: 20px 25px; }
+        .sub-panel-content h3 { color: #6B5344; margin-top: 20px; margin-bottom: 12px; font-size: 1.3em; }
+        .sub-panel-content h4 { color: #5a4a3a; margin-top: 15px; margin-bottom: 10px; font-size: 1.15em; }
+        .sub-panel-content p { margin-bottom: 12px; text-align: justify; }
+        .sub-panel-content ul, .sub-panel-content ol { margin-left: 25px; margin-bottom: 12px; }
+        .sub-panel-content li { margin-bottom: 6px; }
+        .sub-panel-content a { color: #8B7355; }
+        .sub-panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .inner-accordion {
+            background-color: #faf8f5; color: #6B5344; cursor: pointer; padding: 12px 16px; width: 100%;
+            text-align: left; border: 1px solid #e8e0d4; border-radius: 5px; font-size: 1em;
+            font-weight: 600; font-family: Georgia, serif; margin-top: 8px;
+            display: flex; justify-content: space-between; align-items: center; transition: background-color 0.2s;
+        }
+        .inner-accordion:hover { background-color: #f0e8dc; }
+        .inner-accordion::after { content: '▼'; font-size: 0.7em; color: #8B7355; transition: transform 0.3s; }
+        .inner-accordion.active::after { transform: rotate(180deg); }
+
+        .inner-panel {
+            background-color: #ffffff; border-radius: 0 0 5px 5px; border: 1px solid #e8e0d4; border-top: none;
+            max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; margin-bottom: 8px;
+        }
+        .inner-panel.active { max-height: none; overflow: visible; transition: max-height 0.3s ease-in; }
+        .inner-panel-content { padding: 15px 20px; }
+        .inner-panel-content h4 { color: #5a4a3a; margin-top: 12px; margin-bottom: 8px; font-size: 1.1em; }
+        .inner-panel-content p { margin-bottom: 10px; }
+        .inner-panel-content ul, .inner-panel-content ol { margin-left: 20px; margin-bottom: 10px; }
+        .inner-panel-content li { margin-bottom: 5px; }
+
+        blockquote { background: #f5f0e8; border-left: 4px solid #8B7355; margin: 15px 0; padding: 15px 20px; font-style: italic; }
+
+        @media (max-width: 768px) {
+            .header-section h1 { font-size: 1.8em; }
+            .panel-content { padding: 20px; }
+            .sub-panel-content { padding: 15px 18px; }
+            .inner-panel-content { padding: 12px 15px; }
+            .nav-container { flex-direction: column; }
+            .nav-link, .nav-disabled { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Site Header -->
+    <div class="site-header">
+        <div class="site-header-content">
+            <h1 class="site-title">Come Follow Me Corner</h1>
+            <p class="site-subtitle">Old Testament 2026</p>
+        </div>
+    </div>
+
+    <!-- Top Navigation -->
+    <div class="nav-bar">
+        <div class="nav-links">
+            <a href="index.html" class="nav-btn">Study Guide Index</a>
+            <a href="week02.html" class="nav-btn">← Week 2</a>
+            <a href="week04.html" class="nav-btn">Week 4 →</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <p class="week-label">Week 3</p>
+            <h1>Genesis 1–2; Moses 2–3; Abraham 4–5</h1>
+            <div class="subtitle">The Creation: God's Temple-Building and Humanity's Divine Purpose</div>
+            <div class="date-location">January 12–18, 2026</div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/03?lang=eng" target="_blank" class="quick-link">CFM Manual</a>
+            <a href="index.html" class="quick-link">Study Guide Index</a>
+        </div>
+
+        <!-- Expand/Collapse Buttons -->
+        <div class="button-container">
+            <button class="expand-button" onclick="expandAll()">Expand All</button>
+            <button class="expand-button" onclick="collapseAll()">Collapse All</button>
+        </div>
+
+        <!-- SECTION 1: WEEK OVERVIEW -->
+        <button class="accordion-section">1. Week Overview</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <button class="sub-accordion">Week Information</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <table class="info-table">
+                            <tr><th>Element</th><th>Details</th></tr>
+                            <tr><td><strong>Week</strong></td><td>03</td></tr>
+                            <tr><td><strong>Dates</strong></td><td>January 12–18, 2026</td></tr>
+                            <tr><td><strong>Reading</strong></td><td>Genesis 1–2; Moses 2–3; Abraham 4–5</td></tr>
+                            <tr><td><strong>CFM Manual</strong></td><td><a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/03?lang=eng" target="_blank">Genesis 1–2; Moses 2–3; Abraham 4–5 Lesson</a></td></tr>
+                            <tr><td><strong>Total Chapters</strong></td><td>6 (across 3 books)</td></tr>
+                            <tr><td><strong>Approximate Verses</strong></td><td>Genesis 1–2 (56), Moses 2–3 (51), Abraham 4–5 (50) = ~157 verses</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <button class="sub-accordion">Reading Summary</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p>This week we encounter the most foundational narrative in scripture: the Creation. We read this account not once, but three times—in Genesis, Moses, and Abraham—each offering unique perspectives that illuminate different aspects of God's creative work.</p>
+                        <p><strong>Genesis 1–2</strong> provides the familiar biblical account, structured around seven days of creative work and rest. Chapter 1 presents a cosmic, ordered creation, while Chapter 2 zooms in on the garden, the creation of Adam, and the forming of Eve as his perfect companion.</p>
+                        <p><strong>Moses 2–3</strong> offers the same narrative but through the lens of Moses's vision (introduced in Moses 1). Here we learn that Christ ("mine Only Begotten") was the Creator under the Father's direction. Moses adds clarifying details, such as the spiritual creation preceding the physical.</p>
+                        <p><strong>Abraham 4–5</strong> provides the most distinctive account. The language shifts from "God" to "the Gods" (reflecting the divine council introduced in Abraham 3), and the vocabulary changes from "created" to "organized." Here creation is explicitly a collaborative work of the Godhead preparing a place for Abraham's posterity—and by extension, all of God's children.</p>
+                        <p>Together, these three accounts reveal creation as temple-building, identity-establishing, and covenant-inaugurating. The pattern of seven, the divine rest, the image of God in humanity, and the institution of marriage all carry profound theological weight.</p>
+                    </div>
+                </div>
+
+                <button class="sub-accordion">Central Themes</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <button class="inner-accordion">Theme 1: Creation as Temple-Building</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <p>The creation narrative is fundamentally a temple text. Taylor Halverson (Scripture Central) notes that the number seven appears throughout as a "covenant signature"—the same pattern seen in Israelite temple construction. God doesn't merely make a world; He constructs a cosmic temple where He will dwell with His children.</p>
+                                <p>The garden of Eden, with its eastward orientation, its guarded entrance, its precious materials, and its divine presence, prefigures every temple that will follow. When God "rested" on the seventh day, the Hebrew <em>shabbat</em> (שָׁבַת) implies not exhaustion but <em>enthronement</em>—the divine King taking His seat in His completed palace.</p>
+                            </div>
+                        </div>
+                        <button class="inner-accordion">Theme 2: Humanity in God's Image</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <p>"Let us make man in our image, after our likeness" (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/1?lang=eng&id=26" target="_blank">Genesis 1:26</a>). This declaration is the theological climax of the creation week. The Hebrew <em>tselem</em> (צֶלֶם, "image") refers to a representative statue or likeness—in the ancient Near East, kings placed their images throughout their kingdoms to represent their authority and presence. Humanity is God's living image, placed in creation to represent Him and exercise stewardship on His behalf.</p>
+                                <p>The paired term <em>demut</em> (דְּמוּת, "likeness") adds the dimension of resemblance. Together, the terms convey both <strong>function</strong> (we represent God) and <strong>nature</strong> (we are like Him). This is not mere metaphor—Latter-day revelation confirms that God the Father and Jesus Christ possess glorified, tangible bodies (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/130?lang=eng&id=22" target="_blank">D&C 130:22</a>), and we are literally created in that image.</p>
+                            </div>
+                        </div>
+                        <button class="inner-accordion">Theme 3: Marriage as Creation Ordinance</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <p>The formation of Eve and the institution of marriage in Genesis 2/Moses 3/Abraham 5 establishes the eternal pattern. The Hebrew phrase <em>ezer kenegdo</em> (עֵזֶר כְּנֶגְדּוֹ), often translated "help meet," actually means something like "a power/strength corresponding to him." Eve is not subordinate help but essential counterpart—without whom Adam cannot fulfill the divine mandate.</p>
+                                <p>The "one flesh" union (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/2?lang=eng&id=24" target="_blank">Genesis 2:24</a>) is the first covenant established in Eden, instituted before the Fall, making marriage the oldest ordinance in human history.</p>
+                            </div>
+                        </div>
+                        <button class="inner-accordion">Theme 4: Organized, Not Created</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <p>Abraham's account introduces crucial vocabulary. The Gods "organized" rather than creating <em>ex nihilo</em> (from nothing). This aligns with <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/93?lang=eng&id=29" target="_blank">D&C 93:29</a>: "Intelligence, or the light of truth, was not created or made." God works with eternal materials, organizing chaos into cosmos.</p>
+                                <p>This has profound implications: we ourselves were not created from nothing but organized from eternal intelligence. Our core identity is as old as God Himself.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="sub-accordion">Key Figures</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <table class="info-table">
+                            <tr><th>Person</th><th>Role</th><th>Significance This Week</th></tr>
+                            <tr><td>Elohim (God the Father)</td><td>The Father, Director of Creation</td><td>Presides over the creative work; commands "Let us..."</td></tr>
+                            <tr><td>Jehovah (Christ)</td><td>The Creator, "Only Begotten"</td><td>Executes the Father's will; creates under direction (Moses 2:1)</td></tr>
+                            <tr><td>The Gods</td><td>Divine Council</td><td>Abraham 4–5 reveals creation as collaborative divine work</td></tr>
+                            <tr><td>Adam</td><td>First Man</td><td>Created in God's image; given dominion; named the animals</td></tr>
+                            <tr><td>Eve</td><td>First Woman</td><td>Created as Adam's essential counterpart; completes the divine pattern</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <button class="sub-accordion">Books Featured This Week</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <h4>Book of Genesis (Chapters 1–2)</h4>
+                        <ul>
+                            <li><strong>Author:</strong> Moses (traditional attribution)</li>
+                            <li><strong>Original Audience:</strong> Israel</li>
+                            <li><strong>Purpose:</strong> To establish God as Creator, humanity as His image-bearers, and the fundamental patterns of life</li>
+                            <li><strong>Key Themes:</strong> Seven-day pattern, image of God, blessing, rest, marriage</li>
+                        </ul>
+                        <h4>Book of Moses (Chapters 2–3)</h4>
+                        <ul>
+                            <li><strong>Author:</strong> Moses, restored through Joseph Smith</li>
+                            <li><strong>Source Date:</strong> Original to Moses (~1446 BC); restored June 1830</li>
+                            <li><strong>Purpose:</strong> To reveal Christ as Creator and add clarifying details to Genesis</li>
+                            <li><strong>Key Themes:</strong> Christ as Creator, spiritual/physical creation distinction</li>
+                        </ul>
+                        <h4>Book of Abraham (Chapters 4–5)</h4>
+                        <ul>
+                            <li><strong>Author:</strong> Abraham, restored through Joseph Smith</li>
+                            <li><strong>Source Date:</strong> Original to Abraham (~2000 BC); restored 1835</li>
+                            <li><strong>Purpose:</strong> To reveal creation as organized by the divine council</li>
+                            <li><strong>Key Themes:</strong> "The Gods," organization vs. creation, council work</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 2: HISTORICAL & CULTURAL CONTEXT -->
+        <button class="accordion-section">2. Historical & Cultural Context</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <button class="sub-accordion">Ancient Near Eastern Background</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p>The creation accounts were not written in a vacuum. They entered a world full of competing creation stories—Egyptian, Babylonian, Canaanite, and Sumerian myths that Israel would have known. Understanding these alternatives reveals what Genesis/Moses/Abraham affirm and deny.</p>
+
+                        <h4>Egyptian Creation Myths (Moses's Context)</h4>
+                        <table class="info-table">
+                            <tr><th>Tradition</th><th>Creator God</th><th>Method of Creation</th></tr>
+                            <tr><td>Heliopolitan</td><td>Atum/Ra</td><td>Self-generation, then emanation</td></tr>
+                            <tr><td>Memphite</td><td>Ptah</td><td>Creation by word and thought</td></tr>
+                            <tr><td>Hermopolitan</td><td>Ogdoad (eight gods)</td><td>Emergence from chaos</td></tr>
+                        </table>
+
+                        <h4>What Moses/Genesis Corrects:</h4>
+                        <ul>
+                            <li><strong>One God, not many:</strong> Clarifies one divine God, not the plethora of competing gods</li>
+                            <li><strong>Matter unorganized, not deified chaos:</strong> Genesis presents formless material as simply that—material, not a god</li>
+                            <li><strong>Purpose for humanity:</strong> Humans are the pinnacle, made in God's image, not afterthoughts to serve the gods</li>
+                            <li><strong>No divine combat:</strong> Unlike myths where creation results from cosmic battles between gods</li>
+                        </ul>
+
+                        <h4>Mesopotamian Creation Myths (Abraham's Context)</h4>
+                        <p>The <em>Enuma Elish</em> (Babylonian Creation Epic):</p>
+                        <ul>
+                            <li><strong>Divine combat:</strong> Marduk kills Tiamat (chaos dragon) and creates the world from her corpse</li>
+                            <li><strong>Humanity's purpose:</strong> Humans created to serve gods and relieve them of labor</li>
+                            <li><strong>Polytheism:</strong> Multiple generations of gods with conflict and intrigue</li>
+                        </ul>
+
+                        <h4>What Abraham 4–5 Corrects:</h4>
+                        <ul>
+                            <li><strong>"The Gods" ≠ polytheism:</strong> The divine council works in unity under the Father</li>
+                            <li><strong>Creation ≠ divine combat:</strong> Creation results from deliberate organization, not violence</li>
+                            <li><strong>Humanity's dignity:</strong> Not servants to relieve gods, but children to inherit</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <button class="sub-accordion">The "Image of God" in Ancient Context</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p>In the ancient Near East, a king would place images (<em>selem</em>, צֶלֶם in Hebrew) of himself throughout his kingdom. These statues represented his authority and presence in places he couldn't physically be.</p>
+                        <ul>
+                            <li><strong>Egypt:</strong> Pharaohs erected statues; the statue <em>was</em> the pharaoh for purposes of worship and presence</li>
+                            <li><strong>Mesopotamia:</strong> Kings placed images at borders and in temples as extensions of their rule</li>
+                        </ul>
+                        <p><strong>Radical Implications of Genesis:</strong></p>
+                        <ul>
+                            <li>Not just <em>kings</em> but <em>all humans</em> are in God's image</li>
+                            <li>Humanity is God's representatives, not His servants or slaves</li>
+                            <li>This grounds human dignity, worth, and purpose</li>
+                        </ul>
+                        <table class="info-table">
+                            <tr><th>Hebrew</th><th>Transliteration</th><th>Meaning</th></tr>
+                            <tr><td>צֶלֶם</td><td><em>tselem</em></td><td>Image, representative figure → we represent God</td></tr>
+                            <tr><td>דְּמוּת</td><td><em>demut</em></td><td>Likeness, pattern → we resemble God</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <button class="sub-accordion">Literary Structure of Genesis 1</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <h4>The Seven-Day Framework</h4>
+                        <table class="info-table">
+                            <tr><th>Day</th><th>Creation Act</th><th>Corresponding Day</th><th>Filling Act</th></tr>
+                            <tr><td>Day 1</td><td>Light/darkness</td><td>Day 4</td><td>Sun, moon, stars</td></tr>
+                            <tr><td>Day 2</td><td>Sky/waters divided</td><td>Day 5</td><td>Birds and sea creatures</td></tr>
+                            <tr><td>Day 3</td><td>Land/vegetation</td><td>Day 6</td><td>Land animals and humans</td></tr>
+                            <tr><td colspan="4" style="text-align: center;"><strong>Day 7:</strong> Sabbath rest—God's enthronement</td></tr>
+                        </table>
+                        <p><strong>The Pattern:</strong></p>
+                        <ul>
+                            <li>Days 1–3: Creating <em>realms</em> (forming)</li>
+                            <li>Days 4–6: Creating <em>rulers/inhabitants</em> for those realms (filling)</li>
+                            <li>Day 7: The goal—God dwelling in His completed temple</li>
+                        </ul>
+                        <h4>The "And It Was Good" Refrain</h4>
+                        <p>The Hebrew <em>tov</em> (טוֹב) appears seven times in Genesis 1: verses 4, 10, 12, 18, 21, 25, and verse 31 adds "very good" (<em>tov me'od</em>). This sevenfold "good" is a covenant signature.</p>
+                    </div>
+                </div>
+
+                <button class="sub-accordion">Differences Between the Three Accounts</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <table class="info-table">
+                            <tr><th>Element</th><th>Genesis</th><th>Moses</th><th>Abraham</th></tr>
+                            <tr><td><strong>Divine name</strong></td><td>"God" (<em>Elohim</em>)</td><td>"I, the Lord God"</td><td>"The Gods"</td></tr>
+                            <tr><td><strong>Perspective</strong></td><td>Historical narrative</td><td>Revealed to Moses</td><td>Council deliberation</td></tr>
+                            <tr><td><strong>Creation verb</strong></td><td>"Created" (<em>bara</em>)</td><td>"Created"</td><td>"Organized"</td></tr>
+                            <tr><td><strong>Christ's role</strong></td><td>Implicit</td><td>Explicit: "mine Only Begotten"</td><td>"Those who were with him"</td></tr>
+                            <tr><td><strong>Unique additions</strong></td><td>Foundation text</td><td>Spiritual creation noted</td><td>Council language</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 3: KEY PASSAGES STUDY -->
+        <button class="accordion-section">3. Key Passages Study</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <button class="sub-accordion">Passage 1: Creation of Humanity in God's Image (Gen 1:26–28)</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <blockquote>
+                            <p><strong>Genesis 1:26–28:</strong> "And God said, Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea... So God created man in his own image, in the image of God created he him; male and female created he them. And God blessed them..."</p>
+                        </blockquote>
+                        <blockquote>
+                            <p><strong>Abraham 4:26–27:</strong> "And the Gods took counsel among themselves and said: Let us go down and form man in our image, after our likeness... So the Gods went down to organize man in their own image, in the image of the Gods to form they him, male and female to form they them."</p>
+                        </blockquote>
+
+                        <h4>Doctrinal Analysis</h4>
+                        <p><strong>"Let us" — Plural Deliberation:</strong> Genesis uses <em>Elohim</em> (plural form) with singular verbs—hinting at plurality in unity. Abraham makes this explicit: "the Gods took counsel among themselves." This is not polytheism but the united Godhead.</p>
+                        <p><strong>Image and Likeness:</strong> <em>Tselem</em> (image) = we represent God. <em>Demut</em> (likeness) = we resemble God. Together: We both represent and resemble our Creator.</p>
+                        <p><strong>Male and Female:</strong> The image of God is incomplete in isolated humanity. Both genders together reflect divine completeness.</p>
+                        <p><strong>Dominion:</strong> Hebrew <em>radah</em> = rule, reign, govern. Not exploitation but stewardship. We govern creation on God's behalf.</p>
+
+                        <h4>Cross-References</h4>
+                        <ul>
+                            <li><a href="https://www.blueletterbible.org/kjv/psa/8/4/s_486004" target="_blank">Psalm 8:4–6</a> — "Thou hast crowned him with glory and honour"</li>
+                            <li><a href="https://www.blueletterbible.org/kjv/col/1/15/s_1108015" target="_blank">Colossians 1:15</a> — Christ is "the image of the invisible God"</li>
+                            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/3?lang=eng&id=15-16" target="_blank">Ether 3:15–16</a> — "Seest thou that ye are created after mine own image?"</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <button class="sub-accordion">Passage 2: Creation of Eve and Institution of Marriage (Gen 2:18–24)</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <blockquote>
+                            <p><strong>Genesis 2:18, 21–24:</strong> "And the Lord God said, It is not good that the man should be alone; I will make him an help meet for him... And the Lord God caused a deep sleep to fall upon Adam... and he took one of his ribs... And the rib... made he a woman, and brought her unto the man... Therefore shall a man leave his father and his mother, and shall cleave unto his wife: and they shall be one flesh."</p>
+                        </blockquote>
+
+                        <h4>The Phrase "Help Meet" — <em>Ezer Kenegdo</em></h4>
+                        <table class="info-table">
+                            <tr><th>Hebrew</th><th>Meaning</th><th>Implication</th></tr>
+                            <tr><td>עֵזֶר (<em>ezer</em>)</td><td>Help, strength, rescue, power</td><td>Used of GOD 16 times in OT — not weakness but essential strength</td></tr>
+                            <tr><td>כְּנֶגְדּוֹ (<em>kenegdo</em>)</td><td>Corresponding to, counterpart</td><td>Equal partner, not subordinate</td></tr>
+                        </table>
+                        <p><strong>Key Insight:</strong> <em>Ezer</em> is used predominantly of God in the Old Testament: "The Lord is our <em>ezer</em> and our shield" (Psalm 33:20). If <em>ezer</em> implies subordination, then God is subordinate to Israel! Eve is essential, powerful counterpart.</p>
+
+                        <h4>"One Flesh" — Covenant Union</h4>
+                        <p>Marriage in Eden is the first human covenant—instituted <em>before</em> the Fall, therefore part of God's original, unfallen design for humanity.</p>
+
+                        <h4>Cross-References</h4>
+                        <ul>
+                            <li><a href="https://www.blueletterbible.org/kjv/mat/19/4/s_948004" target="_blank">Matthew 19:4–6</a> — Jesus quotes Genesis 2:24: "What therefore God hath joined together, let not man put asunder"</li>
+                            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/132?lang=eng&id=19" target="_blank">D&C 132:19</a> — Celestial marriage sealed by the Holy Spirit of Promise</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <button class="sub-accordion">Passage 3: The Sabbath — Divine Rest (Gen 2:1–3)</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <blockquote>
+                            <p><strong>Genesis 2:1–3:</strong> "Thus the heavens and the earth were finished, and all the host of them. And on the seventh day God ended his work which he had made; and he rested on the seventh day from all his work which he had made. And God blessed the seventh day, and sanctified it."</p>
+                        </blockquote>
+
+                        <h4>Key Hebrew Terms</h4>
+                        <ul>
+                            <li><strong><em>Shabbat</em></strong> (שָׁבַת) — To cease, desist, rest. Not exhaustion but completion. In ancient cosmology, divine rest meant enthronement—the deity taking up residence in his completed temple.</li>
+                            <li><strong><em>Qadash</em></strong> (קָדַשׁ) — To sanctify, set apart. The Sabbath is the first thing declared holy in Scripture—time is sanctified before space.</li>
+                        </ul>
+
+                        <h4>The Open-Ended Seventh Day</h4>
+                        <p>The seventh day has no "evening and morning"—it remains open, unclosed. The Sabbath is ongoing divine invitation. Hebrews 4:9–11 develops this: "There remaineth therefore a rest to the people of God."</p>
+
+                        <h4>Cross-References</h4>
+                        <ul>
+                            <li><a href="https://www.blueletterbible.org/kjv/exo/20/8/s_70008" target="_blank">Exodus 20:8–11</a> — The Sabbath commandment rooted in creation rest</li>
+                            <li><a href="https://www.blueletterbible.org/kjv/heb/4/9/s_1137009" target="_blank">Hebrews 4:9–11</a> — "There remaineth therefore a rest to the people of God"</li>
+                            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/59?lang=eng&id=9-13" target="_blank">D&C 59:9–13</a> — "On this, the Lord's day... offer thine oblations"</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <button class="sub-accordion">Passage 4: "The Gods" — Creation as Divine Council Work (Abraham 4:1–3, 26–27)</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <blockquote>
+                            <p><strong>Abraham 4:1–3:</strong> "And then the Lord said: Let us go down. And they went down at the beginning, and they, that is the Gods, organized and formed the heavens and the earth. And the earth, after it was formed, was empty and desolate... and the Spirit of the Gods was brooding upon the face of the waters."</p>
+                        </blockquote>
+
+                        <h4>Doctrinal Analysis</h4>
+                        <p><strong>"The Gods" — Plurality in Unity:</strong> Hebrew <em>Elohim</em> is grammatically plural. Abraham makes the plurality explicit. NOT polytheism but the Godhead and council working in unity.</p>
+                        <p><strong>"Organized" vs. "Created":</strong> Abraham uses "organized" and "formed"—implying working with existing materials. D&C 93:29: "Intelligence... was not created or made." God is the great Organizer, not creator <em>ex nihilo</em>.</p>
+                        <p><strong>"Took Counsel Among Themselves":</strong> Deliberation precedes action. Creation is planned, intentional, purposeful. Links to Abraham 3:22–28's council scene.</p>
+
+                        <h4>Cross-References</h4>
+                        <ul>
+                            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/3?lang=eng&id=22-24" target="_blank">Abraham 3:22–24</a> — The premortal council; "we will go down"</li>
+                            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/93?lang=eng&id=29" target="_blank">D&C 93:29</a> — "Intelligence... was not created or made"</li>
+                            <li><a href="https://www.blueletterbible.org/kjv/jhn/1/1/s_998001" target="_blank">John 1:1–3</a> — "In the beginning was the Word... all things were made by him"</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 4: WORD STUDIES -->
+        <button class="accordion-section">4. Word Studies</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <p style="margin-bottom: 20px; font-style: italic; color: #6B5344;">Each word study includes five layers: Hebrew foundation, Greek (Septuagint), Latin (Vulgate), English etymology, and Webster 1828 definition. Click the inner accordions to explore each layer.</p>
+
+                <!-- BARA - CREATE -->
+                <button class="sub-accordion">bara (בָּרָא) — Create</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p style="text-align: center; font-size: 2.5em; font-family: 'Times New Roman', serif; margin-bottom: 15px;">בָּרָא</p>
+
+                        <button class="inner-accordion">Layer 1: Hebrew Foundation</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <table class="info-table">
+                                    <tr><th>Element</th><th>Details</th></tr>
+                                    <tr><td><strong>Strong's Number</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h1254/kjv/wlc/0-1/" target="_blank">H1254</a></td></tr>
+                                    <tr><td><strong>Transliteration</strong></td><td><em>bara</em></td></tr>
+                                    <tr><td><strong>Pronunciation</strong></td><td>baw-RAW</td></tr>
+                                    <tr><td><strong>Root</strong></td><td>b-r-ʾ (ב-ר-א)</td></tr>
+                                    <tr><td><strong>Root Meaning</strong></td><td>To create, shape, form; used exclusively of divine activity</td></tr>
+                                    <tr><td><strong>Part of Speech</strong></td><td>Verb (Qal perfect)</td></tr>
+                                </table>
+                                <p><strong>Key Insight:</strong> <em>Bara</em> is used only of God as the acting subject—never of human activity. Its significance lies in marking <strong>discontinuity</strong>—moments where something genuinely new appears that cannot be derived from what came before.</p>
+                                <p><strong>Occurrences This Week:</strong></p>
+                                <ul>
+                                    <li>Genesis 1:1 — "God created (בָּרָא) the heaven and the earth"</li>
+                                    <li>Genesis 1:21 — "God created (בָּרָא) great whales"</li>
+                                    <li>Genesis 1:27 — "God created (בָּרָא) man... male and female created (בָּרָא) he them"</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <button class="inner-accordion">Layer 2: Greek (Septuagint)</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <table class="info-table">
+                                    <tr><th>Element</th><th>Details</th></tr>
+                                    <tr><td><strong>LXX Translation</strong></td><td><a href="https://logeion.uchicago.edu/ποιέω" target="_blank">ἐποίησεν</a> (<em>epoiēsen</em>) from ποιέω (<em>poieō</em>)</td></tr>
+                                    <tr><td><strong>Meaning</strong></td><td>To make, do, create, produce</td></tr>
+                                </table>
+                                <p><strong>Why This Matters:</strong> The LXX translators chose <em>poieō</em>, a general term for "making," rather than a more specialized word. This broadens the semantic range but loses the Hebrew distinction between <em>bara</em> (divine-only creation) and <em>asah</em> (general making). New Testament writers inherit this translation choice.</p>
+                            </div>
+                        </div>
+
+                        <button class="inner-accordion">Layer 3: Latin (Vulgate)</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <table class="info-table">
+                                    <tr><th>Element</th><th>Details</th></tr>
+                                    <tr><td><strong>Vulgate Translation</strong></td><td><a href="https://logeion.uchicago.edu/creo" target="_blank">creavit</a> from <em>creo</em></td></tr>
+                                    <tr><td><strong>Meaning</strong></td><td>To create, bring forth, make, produce</td></tr>
+                                </table>
+                                <p><strong>Influence on English:</strong> Latin <em>creo</em> gives us English "create," "creature," "creation." Jerome's choice of <em>creo</em> (rather than <em>facio</em>, "to make") preserves some of the Hebrew distinction—<em>creo</em> carries more theological weight than general "making."</p>
+                            </div>
+                        </div>
+
+                        <button class="inner-accordion">Layer 4: English Etymology</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <table class="info-table">
+                                    <tr><th>Element</th><th>Details</th></tr>
+                                    <tr><td><strong>Etymology</strong></td><td><a href="https://www.etymonline.com/word/create" target="_blank">create</a> — From Latin <em>creāre</em> "to make, bring forth, produce"</td></tr>
+                                    <tr><td><strong>Development</strong></td><td>Middle English <em>createn</em> (14th c.) from Latin <em>creātus</em>, past participle of <em>creāre</em></td></tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <button class="inner-accordion">Layer 5: Webster 1828 Definition</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <blockquote>
+                                    <p><strong><a href="https://webstersdictionary1828.com/Dictionary/create" target="_blank">CREATE</a></strong>, v.t.</p>
+                                    <p>1. To produce; to bring into being from nothing; to cause to exist. "In the beginning, God created the heaven and the earth." Gen. 1.</p>
+                                    <p>2. To make or form, by investing with a new character; as, to create one a peer or baron.</p>
+                                    <p>3. To produce; to cause; to be the occasion of.</p>
+                                </blockquote>
+                                <p><strong>Joseph Smith Era Understanding:</strong> The 1828 definition emphasizes "bringing into being from nothing," reflecting the theological interpretation dominant in Joseph Smith's time. The Book of Abraham's use of "organized" provides restored clarity on the nature of creation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TSELEM - IMAGE -->
+                <button class="sub-accordion">tselem (צֶלֶם) — Image</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p style="text-align: center; font-size: 2.5em; font-family: 'Times New Roman', serif; margin-bottom: 15px;">צֶלֶם</p>
+
+                        <button class="inner-accordion">Layer 1: Hebrew Foundation</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <table class="info-table">
+                                    <tr><th>Element</th><th>Details</th></tr>
+                                    <tr><td><strong>Strong's Number</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h6754/kjv/wlc/0-1/" target="_blank">H6754</a></td></tr>
+                                    <tr><td><strong>Transliteration</strong></td><td><em>tselem</em></td></tr>
+                                    <tr><td><strong>Pronunciation</strong></td><td>TSEH-lem</td></tr>
+                                    <tr><td><strong>Root</strong></td><td>ts-l-m (צ-ל-מ)</td></tr>
+                                    <tr><td><strong>Root Meaning</strong></td><td>Image, likeness, resemblance; idol, statue</td></tr>
+                                    <tr><td><strong>Part of Speech</strong></td><td>Noun (masculine)</td></tr>
+                                </table>
+                                <p><strong>Key Insight:</strong> In the ancient Near East, a <em>tselem</em> was a statue representing a king's authority throughout his realm. When Genesis says humanity is made in God's <em>tselem</em>, it declares every human is God's living representative—His "statue" in creation.</p>
+                                <p><strong>Other Uses in Scripture:</strong></p>
+                                <ul>
+                                    <li>Genesis 5:3 — Adam begets Seth "in his own likeness, after his image (צֶלֶם)"</li>
+                                    <li>Numbers 33:52 — Israelites commanded to destroy the "images (צֶלֶם)" of Canaanite gods</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <button class="inner-accordion">Layer 2: Greek (Septuagint)</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <table class="info-table">
+                                    <tr><th>Element</th><th>Details</th></tr>
+                                    <tr><td><strong>LXX Translation</strong></td><td><a href="https://logeion.uchicago.edu/εἰκών" target="_blank">εἰκών</a> (<em>eikōn</em>)</td></tr>
+                                    <tr><td><strong>Meaning</strong></td><td>Image, likeness, portrait, representation</td></tr>
+                                </table>
+                                <p><strong>Why This Matters:</strong> Greek <em>eikōn</em> carries strong visual/representational connotations. This word appears in the New Testament when Paul calls Christ "the image of the invisible God" (Colossians 1:15; 2 Corinthians 4:4). English "icon" derives from this word.</p>
+                            </div>
+                        </div>
+
+                        <button class="inner-accordion">Layer 3: Latin (Vulgate)</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <table class="info-table">
+                                    <tr><th>Element</th><th>Details</th></tr>
+                                    <tr><td><strong>Vulgate Translation</strong></td><td><a href="https://logeion.uchicago.edu/imago" target="_blank">imago</a> (accusative: <em>imaginem</em>)</td></tr>
+                                    <tr><td><strong>Meaning</strong></td><td>Image, likeness, representation, copy</td></tr>
+                                </table>
+                                <p><strong>Influence on English:</strong> Latin <em>imago</em> gives us "image," "imagine," "imagination." The theological concept of <em>imago Dei</em> (image of God) became central to Christian anthropology.</p>
+                            </div>
+                        </div>
+
+                        <button class="inner-accordion">Layer 4: English Etymology</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <table class="info-table">
+                                    <tr><th>Element</th><th>Details</th></tr>
+                                    <tr><td><strong>Etymology</strong></td><td><a href="https://www.etymonline.com/word/image" target="_blank">image</a> — From Latin <em>imago</em> "copy, likeness, picture"</td></tr>
+                                    <tr><td><strong>Development</strong></td><td>Old French <em>image</em> (12th c.); related to <em>imitate</em></td></tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <button class="inner-accordion">Layer 5: Webster 1828 Definition</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <blockquote>
+                                    <p><strong><a href="https://webstersdictionary1828.com/Dictionary/image" target="_blank">IMAGE</a></strong>, n.</p>
+                                    <p>1. A representation or similitude of any person or thing, formed of a material substance; as an image wrought out of stone, wood or wax.</p>
+                                    <p>2. A statue.</p>
+                                    <p>3. An idol; a pagan deity.</p>
+                                    <p>4. The likeness of any thing; hence, an idea; a representation of any thing to the mind.</p>
+                                </blockquote>
+                                <p><strong>Joseph Smith Era Understanding:</strong> The 1828 definition includes both "statue/idol" and "likeness/idea," encompassing the full ANE background of <em>tselem</em>. The Latter-day Saint understanding of humanity's divine potential enriches this concept.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EZER KENEGDO - HELP MEET -->
+                <button class="sub-accordion">ezer kenegdo (עֵזֶר כְּנֶגְדּוֹ) — Help Meet</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p style="text-align: center; font-size: 2.5em; font-family: 'Times New Roman', serif; margin-bottom: 15px;">עֵזֶר כְּנֶגְדּוֹ</p>
+
+                        <button class="inner-accordion">Layer 1: Hebrew Foundation</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <table class="info-table">
+                                    <tr><th>Element</th><th>Details</th></tr>
+                                    <tr><td><strong>Strong's Numbers</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h5828/kjv/wlc/0-1/" target="_blank">H5828</a> + <a href="https://www.blueletterbible.org/lexicon/h5048/kjv/wlc/0-1/" target="_blank">H5048</a></td></tr>
+                                    <tr><td><strong>Transliteration</strong></td><td><em>ezer kenegdo</em></td></tr>
+                                    <tr><td><strong>Pronunciation</strong></td><td>EH-zer keh-neg-DOH</td></tr>
+                                    <tr><td><strong>Root</strong></td><td>ʿ-z-r (ע-ז-ר) + n-g-d (נ-ג-ד)</td></tr>
+                                    <tr><td><strong>Root Meaning</strong></td><td>A strength/power corresponding to him</td></tr>
+                                </table>
+                                <p><strong>Key Insight:</strong> <em>Ezer</em> appears 21 times in the Hebrew Bible. Of these, 16 refer to <strong>God</strong> as helper/strength. If <em>ezer</em> implies subordination, then God is subordinate to Israel! The term denotes essential, rescuing strength.</p>
+                                <p><strong>God as <em>Ezer</em>:</strong></p>
+                                <ul>
+                                    <li>Exodus 18:4 — "The God of my father was mine help (עֵזֶר)"</li>
+                                    <li>Psalm 33:20 — "He is our help (עֵזֶר) and our shield"</li>
+                                    <li>Psalm 70:5 — "Thou art my help (עֵזֶר) and my deliverer"</li>
+                                    <li>Psalm 121:1–2 — "My help (עֵזֶר) cometh from the Lord"</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <button class="inner-accordion">Layer 2: Greek (Septuagint)</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <table class="info-table">
+                                    <tr><th>Element</th><th>Details</th></tr>
+                                    <tr><td><strong>LXX Translation</strong></td><td><a href="https://logeion.uchicago.edu/βοηθός" target="_blank">βοηθός</a> (<em>boēthos</em>)</td></tr>
+                                    <tr><td><strong>Meaning</strong></td><td>Helper, one who aids, ally</td></tr>
+                                </table>
+                                <p><strong>Why This Matters:</strong> Greek <em>boēthos</em> is used in the LXX for God as Israel's helper. The word implies coming to aid someone in need—rescuing strength, not servile assistance.</p>
+                            </div>
+                        </div>
+
+                        <button class="inner-accordion">Layer 3: Latin (Vulgate)</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <table class="info-table">
+                                    <tr><th>Element</th><th>Details</th></tr>
+                                    <tr><td><strong>Vulgate Translation</strong></td><td><em>adiutorium simile sibi</em> (helper like himself)</td></tr>
+                                    <tr><td><strong>Meaning</strong></td><td>Help, assistance, aid — similar to him</td></tr>
+                                </table>
+                                <p><strong>Influence on English:</strong> Latin <em>adiutorium</em> gives us "adjutant" (military assistant). The Vulgate's phrase "adiutorium simile sibi" emphasizes correspondence and equality.</p>
+                            </div>
+                        </div>
+
+                        <button class="inner-accordion">Layer 4: English Etymology</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <table class="info-table">
+                                    <tr><th>Element</th><th>Details</th></tr>
+                                    <tr><td><strong>Etymology</strong></td><td><a href="https://www.etymonline.com/word/help" target="_blank">help</a> — Old English <em>helpan</em> "to help, support"</td></tr>
+                                    <tr><td><strong>Development</strong></td><td>From Proto-Germanic <em>helpan</em>; original sense involved rescue/support</td></tr>
+                                </table>
+                                <p><strong>Note on "Meet":</strong> The word "meet" in "help meet" is an adjective meaning "suitable, fitting, proper" — not part of a compound noun. Eve is a "help" that is "meet" (suitable) for Adam.</p>
+                            </div>
+                        </div>
+
+                        <button class="inner-accordion">Layer 5: Webster 1828 Definition</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <blockquote>
+                                    <p><strong><a href="https://webstersdictionary1828.com/Dictionary/helper" target="_blank">HELPER</a></strong>, n.</p>
+                                    <p>1. One that helps, aids or assists; an assistant; an auxiliary.</p>
+                                    <p>2. One that furnishes or administers a remedy.</p>
+                                    <p>3. One that supplies with any thing wanted; a supporter.</p>
+                                    <p>4. A supernatural being.</p>
+                                </blockquote>
+                                <blockquote>
+                                    <p><strong><a href="https://webstersdictionary1828.com/Dictionary/meet" target="_blank">MEET</a></strong>, a.</p>
+                                    <p>Fit; suitable; proper; qualified; convenient; adapted, as to a use or purpose.</p>
+                                </blockquote>
+                                <p><strong>Joseph Smith Era Understanding:</strong> The 1828 definition includes "auxiliary" and "supporter"—words implying strength and essential assistance. Webster's entries clarify that "help meet" means "suitable helper."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TOV - GOOD -->
+                <button class="sub-accordion">tov (טוֹב) — Good</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p style="text-align: center; font-size: 2.5em; font-family: 'Times New Roman', serif; margin-bottom: 15px;">טוֹב</p>
+
+                        <button class="inner-accordion">Layer 1: Hebrew Foundation</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <table class="info-table">
+                                    <tr><th>Element</th><th>Details</th></tr>
+                                    <tr><td><strong>Strong's Number</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h2896/kjv/wlc/0-1/" target="_blank">H2896</a></td></tr>
+                                    <tr><td><strong>Transliteration</strong></td><td><em>tov</em></td></tr>
+                                    <tr><td><strong>Pronunciation</strong></td><td>TOHV</td></tr>
+                                    <tr><td><strong>Root</strong></td><td>ṭ-w-b (ט-ו-ב)</td></tr>
+                                    <tr><td><strong>Root Meaning</strong></td><td>Good, pleasant, beautiful, excellent, fitting</td></tr>
+                                    <tr><td><strong>Part of Speech</strong></td><td>Adjective / Noun</td></tr>
+                                </table>
+                                <p><strong>Key Insight:</strong> <em>Tov</em> appears seven times in Genesis 1 (vv. 4, 10, 12, 18, 21, 25, 31)—a covenant signature number. The final occurrence adds <em>me'od</em> (מְאֹד, "very/exceedingly"), creating the superlative "very good."</p>
+                                <p><strong>What "Good" Means Here:</strong> <em>Tov</em> doesn't primarily mean morally good. It means <em>fitting, suitable, fulfilling its purpose</em>. Each creation is <em>tov</em> because it does what God designed it to do.</p>
+                            </div>
+                        </div>
+
+                        <button class="inner-accordion">Layer 2: Greek (Septuagint)</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <table class="info-table">
+                                    <tr><th>Element</th><th>Details</th></tr>
+                                    <tr><td><strong>LXX Translation</strong></td><td><a href="https://logeion.uchicago.edu/καλός" target="_blank">καλός</a> (<em>kalos</em>)</td></tr>
+                                    <tr><td><strong>Meaning</strong></td><td>Beautiful, noble, good, fine</td></tr>
+                                </table>
+                                <p><strong>Why This Matters:</strong> Greek <em>kalos</em> emphasizes aesthetic beauty and excellence. Creation is not merely functional but beautiful. The repeated "God saw that it was <em>kalos</em>" declares creation is aesthetically pleasing to God.</p>
+                            </div>
+                        </div>
+
+                        <button class="inner-accordion">Layer 3: Latin (Vulgate)</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <table class="info-table">
+                                    <tr><th>Element</th><th>Details</th></tr>
+                                    <tr><td><strong>Vulgate Translation</strong></td><td><a href="https://logeion.uchicago.edu/bonus" target="_blank">bonus</a> (neuter: <em>bonum</em>)</td></tr>
+                                    <tr><td><strong>Meaning</strong></td><td>Good, excellent, virtuous</td></tr>
+                                </table>
+                                <p><strong>Influence on English:</strong> Latin <em>bonus</em> gives us "bonus," "boon," "bounty." The theological phrase <em>summum bonum</em> ("highest good") shaped Western ethics.</p>
+                            </div>
+                        </div>
+
+                        <button class="inner-accordion">Layer 4: English Etymology</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <table class="info-table">
+                                    <tr><th>Element</th><th>Details</th></tr>
+                                    <tr><td><strong>Etymology</strong></td><td><a href="https://www.etymonline.com/word/good" target="_blank">good</a> — Old English <em>gōd</em> "virtuous, desirable, valid"</td></tr>
+                                    <tr><td><strong>Development</strong></td><td>From Proto-Germanic <em>gōda-</em> "fitting, suitable"; related to "gather"</td></tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <button class="inner-accordion">Layer 5: Webster 1828 Definition</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <blockquote>
+                                    <p><strong><a href="https://webstersdictionary1828.com/Dictionary/good" target="_blank">GOOD</a></strong>, a.</p>
+                                    <p>1. Valid; legally firm; not weak or defective.</p>
+                                    <p>2. Complete or sufficiently perfect in its kind.</p>
+                                    <p>3. Having moral qualities best adapted to its design and use.</p>
+                                    <p>4. Useful; valuable; having qualities or a tendency to produce a good effect.</p>
+                                    <p>5. Pleasant; agreeable; as a good voyage; good weather.</p>
+                                </blockquote>
+                                <p><strong>Joseph Smith Era Understanding:</strong> The 1828 definition includes "complete/sufficiently perfect in its kind"—precisely the meaning of <em>tov</em> in Genesis 1. Each creation is good because it is complete and fulfilling its purpose.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SHABBAT - REST -->
+                <button class="sub-accordion">shabbat (שָׁבַת) — Rest</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p style="text-align: center; font-size: 2.5em; font-family: 'Times New Roman', serif; margin-bottom: 15px;">שָׁבַת</p>
+
+                        <button class="inner-accordion">Layer 1: Hebrew Foundation</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <table class="info-table">
+                                    <tr><th>Element</th><th>Details</th></tr>
+                                    <tr><td><strong>Strong's Number</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h7673/kjv/wlc/0-1/" target="_blank">H7673</a></td></tr>
+                                    <tr><td><strong>Transliteration</strong></td><td><em>shabbat</em></td></tr>
+                                    <tr><td><strong>Pronunciation</strong></td><td>shaw-BAT</td></tr>
+                                    <tr><td><strong>Root</strong></td><td>š-b-t (שׁ-ב-ת)</td></tr>
+                                    <tr><td><strong>Root Meaning</strong></td><td>To cease, desist, rest</td></tr>
+                                    <tr><td><strong>Part of Speech</strong></td><td>Verb</td></tr>
+                                </table>
+                                <p><strong>Key Insight:</strong> <em>Shabbat</em> doesn't imply exhaustion but completion and cessation. In ancient cosmology, divine rest meant enthronement—the deity taking up residence in his completed temple.</p>
+                                <p><strong>Related Words:</strong></p>
+                                <ul>
+                                    <li><a href="https://www.blueletterbible.org/lexicon/h7676/kjv/wlc/0-1/" target="_blank">שַׁבָּת</a> (<em>shabbat</em>, H7676) — Sabbath (noun)</li>
+                                    <li><a href="https://www.blueletterbible.org/lexicon/h7651/kjv/wlc/0-1/" target="_blank">שֶׁבַע</a> (<em>sheva</em>, H7651) — Seven</li>
+                                    <li><a href="https://www.blueletterbible.org/lexicon/h7621/kjv/wlc/0-1/" target="_blank">שְׁבוּעָה</a> (<em>shevuah</em>, H7621) — Oath</li>
+                                </ul>
+                                <p>The interconnection of <em>shabbat</em> (rest), <em>sheva</em> (seven), and <em>shevuah</em> (oath/covenant) creates a web of meaning. The Sabbath is the seventh day, and seven is the number of covenant oath.</p>
+                            </div>
+                        </div>
+
+                        <button class="inner-accordion">Layer 2: Greek (Septuagint)</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <table class="info-table">
+                                    <tr><th>Element</th><th>Details</th></tr>
+                                    <tr><td><strong>LXX Translation</strong></td><td><a href="https://logeion.uchicago.edu/καταπαύω" target="_blank">κατέπαυσεν</a> (<em>katepausen</em>) from καταπαύω (<em>katapauō</em>)</td></tr>
+                                    <tr><td><strong>Meaning</strong></td><td>To cause to cease, to rest, to settle down</td></tr>
+                                </table>
+                                <p><strong>Why This Matters:</strong> Greek <em>katapauō</em> emphasizes cessation and settlement. Hebrews 4:1–11 develops this theologically: entering God's rest (<em>katapausis</em>) becomes a metaphor for salvation and entering God's presence.</p>
+                            </div>
+                        </div>
+
+                        <button class="inner-accordion">Layer 3: Latin (Vulgate)</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <table class="info-table">
+                                    <tr><th>Element</th><th>Details</th></tr>
+                                    <tr><td><strong>Vulgate Translation</strong></td><td><a href="https://logeion.uchicago.edu/requiesco" target="_blank">requievit</a> from <em>requiesco</em></td></tr>
+                                    <tr><td><strong>Meaning</strong></td><td>To rest, repose, take one's ease</td></tr>
+                                </table>
+                                <p><strong>Influence on English:</strong> Latin <em>requiesco</em> gives us "requiem" (mass for the dead), "rest," and "repose." The theological overtones of final rest and peace derive from this word.</p>
+                            </div>
+                        </div>
+
+                        <button class="inner-accordion">Layer 4: English Etymology</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <table class="info-table">
+                                    <tr><th>Element</th><th>Details</th></tr>
+                                    <tr><td><strong>Etymology</strong></td><td><a href="https://www.etymonline.com/word/rest" target="_blank">rest</a> — Old English <em>rest</em> "cessation of motion, quiet"</td></tr>
+                                    <tr><td><strong>Development</strong></td><td>From Proto-Germanic <em>rastō</em>; related to "refresh" and implies restoration</td></tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <button class="inner-accordion">Layer 5: Webster 1828 Definition</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <blockquote>
+                                    <p><strong><a href="https://webstersdictionary1828.com/Dictionary/rest" target="_blank">REST</a></strong>, n.</p>
+                                    <p>1. Cessation of motion or action of any kind, and applicable to any body or being.</p>
+                                    <p>2. Quiet; repose; a state free from motion or disturbance.</p>
+                                    <p>3. Sleep; as, retire to rest.</p>
+                                    <p>4. Peace; freedom from disturbance or molestation by enemies.</p>
+                                    <p>5. Final hope; as, the rest of the weary.</p>
+                                </blockquote>
+                                <p><strong>Joseph Smith Era Understanding:</strong> The 1828 definition includes "cessation" and "final hope"—both relevant to God's Sabbath rest. The Latter-day Saint concept of entering God's rest (Alma 12:34; D&C 84:24) enriches this term.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- QADASH - SANCTIFY -->
+                <button class="sub-accordion">qadash (קָדַשׁ) — Sanctify</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <p style="text-align: center; font-size: 2.5em; font-family: 'Times New Roman', serif; margin-bottom: 15px;">קָדַשׁ</p>
+
+                        <button class="inner-accordion">Layer 1: Hebrew Foundation</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <table class="info-table">
+                                    <tr><th>Element</th><th>Details</th></tr>
+                                    <tr><td><strong>Strong's Number</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h6942/kjv/wlc/0-1/" target="_blank">H6942</a></td></tr>
+                                    <tr><td><strong>Transliteration</strong></td><td><em>qadash</em></td></tr>
+                                    <tr><td><strong>Pronunciation</strong></td><td>kaw-DASH</td></tr>
+                                    <tr><td><strong>Root</strong></td><td>q-d-š (ק-ד-שׁ)</td></tr>
+                                    <tr><td><strong>Root Meaning</strong></td><td>To be set apart, holy, consecrated</td></tr>
+                                    <tr><td><strong>Part of Speech</strong></td><td>Verb</td></tr>
+                                </table>
+                                <p><strong>Key Insight:</strong> When God "sanctified" (<em>qadash</em>) the seventh day, He set it apart from ordinary time. Before there were temples, priests, or holy objects, there was holy <em>time</em>. The Sabbath is the first thing declared holy in Scripture.</p>
+                                <p><strong>Related Words:</strong></p>
+                                <ul>
+                                    <li><a href="https://www.blueletterbible.org/lexicon/h6944/kjv/wlc/0-1/" target="_blank">קֹדֶשׁ</a> (<em>qodesh</em>, H6944) — Holiness, sacred thing, sanctuary</li>
+                                    <li><a href="https://www.blueletterbible.org/lexicon/h6918/kjv/wlc/0-1/" target="_blank">קָדוֹשׁ</a> (<em>qadosh</em>, H6918) — Holy, sacred</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <button class="inner-accordion">Layer 2: Greek (Septuagint)</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <table class="info-table">
+                                    <tr><th>Element</th><th>Details</th></tr>
+                                    <tr><td><strong>LXX Translation</strong></td><td><a href="https://logeion.uchicago.edu/ἁγιάζω" target="_blank">ἡγίασεν</a> (<em>hēgiasen</em>) from ἁγιάζω (<em>hagiazō</em>)</td></tr>
+                                    <tr><td><strong>Meaning</strong></td><td>To make holy, sanctify, consecrate</td></tr>
+                                </table>
+                                <p><strong>Why This Matters:</strong> Greek <em>hagiazō</em> is used throughout the New Testament for sanctification. "Hallowed be thy name" (Matthew 6:9) uses this word. Christians are called <em>hagioi</em> (saints/holy ones).</p>
+                            </div>
+                        </div>
+
+                        <button class="inner-accordion">Layer 3: Latin (Vulgate)</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <table class="info-table">
+                                    <tr><th>Element</th><th>Details</th></tr>
+                                    <tr><td><strong>Vulgate Translation</strong></td><td><a href="https://logeion.uchicago.edu/sanctifico" target="_blank">sanctificavit</a> from <em>sanctifico</em></td></tr>
+                                    <tr><td><strong>Meaning</strong></td><td>To make holy, sanctify</td></tr>
+                                </table>
+                                <p><strong>Influence on English:</strong> Latin <em>sanctifico</em> gives us "sanctify," "sanctuary," "saint." The theological vocabulary of holiness in English derives primarily from Latin through ecclesiastical usage.</p>
+                            </div>
+                        </div>
+
+                        <button class="inner-accordion">Layer 4: English Etymology</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <table class="info-table">
+                                    <tr><th>Element</th><th>Details</th></tr>
+                                    <tr><td><strong>Etymology</strong></td><td><a href="https://www.etymonline.com/word/sanctify" target="_blank">sanctify</a> — From Latin <em>sanctificare</em> "to make holy"</td></tr>
+                                    <tr><td><strong>Development</strong></td><td><em>sanctus</em> (holy) + <em>facere</em> (to make); 14th century via Old French</td></tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <button class="inner-accordion">Layer 5: Webster 1828 Definition</button>
+                        <div class="inner-panel">
+                            <div class="inner-panel-content">
+                                <blockquote>
+                                    <p><strong><a href="https://webstersdictionary1828.com/Dictionary/sanctify" target="_blank">SANCTIFY</a></strong>, v.t.</p>
+                                    <p>1. In a general sense, to make holy; to set apart to a sacred office or to religious use or purification. "God blessed the seventh day and sanctified it." Gen. 2.</p>
+                                    <p>2. To cleanse from corruption; to purify from sin.</p>
+                                    <p>3. To make free from guilt.</p>
+                                    <p>4. To secure from violation.</p>
+                                </blockquote>
+                                <p><strong>Joseph Smith Era Understanding:</strong> The 1828 definition emphasizes "setting apart" as the primary meaning—precisely the sense of Hebrew <em>qadash</em>. The temple concept of "setting apart" people, places, and times connects directly to this meaning.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COMPARATIVE TABLE -->
+                <button class="sub-accordion">Comparative Table: Week 3 Key Terms</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <table class="info-table" style="font-size: 0.9em;">
+                            <tr>
+                                <th>Hebrew</th>
+                                <th>Greek (LXX)</th>
+                                <th>Latin (Vulgate)</th>
+                                <th>English</th>
+                                <th>Meaning</th>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.blueletterbible.org/lexicon/h1254/kjv/wlc/0-1/" target="_blank">בָּרָא</a> <em>bara</em></td>
+                                <td><a href="https://logeion.uchicago.edu/ποιέω" target="_blank">ποιέω</a> <em>poieō</em></td>
+                                <td><a href="https://logeion.uchicago.edu/creo" target="_blank">creo</a></td>
+                                <td><a href="https://webstersdictionary1828.com/Dictionary/create" target="_blank">create</a></td>
+                                <td>Divine creative act; marks discontinuity</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.blueletterbible.org/lexicon/h6754/kjv/wlc/0-1/" target="_blank">צֶלֶם</a> <em>tselem</em></td>
+                                <td><a href="https://logeion.uchicago.edu/εἰκών" target="_blank">εἰκών</a> <em>eikōn</em></td>
+                                <td><a href="https://logeion.uchicago.edu/imago" target="_blank">imago</a></td>
+                                <td><a href="https://webstersdictionary1828.com/Dictionary/image" target="_blank">image</a></td>
+                                <td>Image, likeness; representative form</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.blueletterbible.org/lexicon/h5828/kjv/wlc/0-1/" target="_blank">עֵזֶר</a> <em>ezer</em></td>
+                                <td><a href="https://logeion.uchicago.edu/βοηθός" target="_blank">βοηθός</a> <em>boēthos</em></td>
+                                <td>adiutorium</td>
+                                <td><a href="https://webstersdictionary1828.com/Dictionary/helper" target="_blank">helper</a></td>
+                                <td>One who aids; powerful rescue (used of God 16×)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.blueletterbible.org/lexicon/h2896/kjv/wlc/0-1/" target="_blank">טוֹב</a> <em>tov</em></td>
+                                <td><a href="https://logeion.uchicago.edu/καλός" target="_blank">καλός</a> <em>kalos</em></td>
+                                <td><a href="https://logeion.uchicago.edu/bonus" target="_blank">bonus</a></td>
+                                <td><a href="https://webstersdictionary1828.com/Dictionary/good" target="_blank">good</a></td>
+                                <td>Good, valid, beautiful; fit for purpose</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.blueletterbible.org/lexicon/h7673/kjv/wlc/0-1/" target="_blank">שָׁבַת</a> <em>shabbat</em></td>
+                                <td><a href="https://logeion.uchicago.edu/καταπαύω" target="_blank">καταπαύω</a> <em>katapauō</em></td>
+                                <td><a href="https://logeion.uchicago.edu/requiesco" target="_blank">requiesco</a></td>
+                                <td><a href="https://webstersdictionary1828.com/Dictionary/rest" target="_blank">rest</a></td>
+                                <td>To cease, rest; sabbath rest</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.blueletterbible.org/lexicon/h6942/kjv/wlc/0-1/" target="_blank">קָדַשׁ</a> <em>qadash</em></td>
+                                <td><a href="https://logeion.uchicago.edu/ἁγιάζω" target="_blank">ἁγιάζω</a> <em>hagiazō</em></td>
+                                <td><a href="https://logeion.uchicago.edu/sanctifico" target="_blank">sanctifico</a></td>
+                                <td><a href="https://webstersdictionary1828.com/Dictionary/sanctify" target="_blank">sanctify</a></td>
+                                <td>To set apart, make holy</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 5: TEACHING APPLICATIONS -->
+        <button class="accordion-section">5. Teaching Applications</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <button class="sub-accordion">Personal Study</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <h4>Focus: Understanding Your Identity and Purpose</h4>
+                        <p><strong>Central Application:</strong> You are made in God's image—this defines who you are and what you're for.</p>
+                        <h4>Study Approach:</h4>
+                        <ul>
+                            <li><strong>Day 1–2:</strong> Read Genesis 1–2 completely. Chart what God created each day. Note how many times "good" appears.</li>
+                            <li><strong>Day 3–4:</strong> Read Moses 2–3 alongside Genesis. Note additions: "mine Only Begotten," spiritual creation.</li>
+                            <li><strong>Day 5–6:</strong> Read Abraham 4–5 and note "the Gods" and "organized."</li>
+                            <li><strong>Day 7:</strong> Journal: What does it mean that I am made in God's <em>image</em>?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <button class="sub-accordion">Couples & Marriage</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <h4>Focus: Marriage as Creation Ordinance</h4>
+                        <p><strong>Central Application:</strong> Your marriage is not a social construct but a creation pattern—instituted before the Fall as part of God's original design.</p>
+                        <h4>Discussion Topics:</h4>
+                        <ul>
+                            <li><strong>The "Not Good" Moment:</strong> Genesis 2:18 is the only "not good" in creation. What does this say about our need for each other?</li>
+                            <li><strong><em>Ezer Kenegdo</em>:</strong> Eve is essential strength, not subordinate assistant. What does it mean to be each other's <em>strength</em>?</li>
+                            <li><strong>"One Flesh" — Before the Fall:</strong> Marriage was instituted in Eden's perfection. How does this change how we view it?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <button class="sub-accordion">Family Home Evening</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <h4>Focus: We Are God's Children, Made in His Image</h4>
+                        <p><strong>Opening Song:</strong> "I Am a Child of God" (Hymns, 301)</p>
+                        <p><strong>Scripture:</strong> Genesis 1:26–27</p>
+                        <h4>Object Lesson: The Family Photo</h4>
+                        <p>Show a family photo or look in a mirror together. Ask: "What do you see when you look at yourself?" Explain: We don't just <em>look</em> like each other—we look like God! When He made us, He put His own likeness in us.</p>
+                        <h4>Activity Options:</h4>
+                        <ul>
+                            <li><strong>Young Children:</strong> Draw a picture of yourself and label it "Child of God"</li>
+                            <li><strong>Older Children:</strong> Create a family crest showing values that reflect God's image</li>
+                            <li><strong>Teens:</strong> Discuss: Social media encourages us to create our own image. How is this different from receiving our identity from God?</li>
+                        </ul>
+                        <p><strong>Treat:</strong> Something creative—let the kids help "create" it!</p>
+                    </div>
+                </div>
+
+                <button class="sub-accordion">Sunday School / Gospel Doctrine</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <h4>Lesson Objective:</h4>
+                        <p>Class members will understand how Genesis, Moses, and Abraham together reveal God's nature, humanity's purpose, and the pattern of covenant.</p>
+                        <h4>Attention Activity (5 min):</h4>
+                        <p>Display three photos of the same scene from different angles. Ask: "Which is the 'real' photo?" Discuss: All are real—each captures a different perspective. This is what we have with three creation accounts.</p>
+                        <h4>Main Discussion Sections:</h4>
+                        <ol>
+                            <li><strong>The Genesis Foundation:</strong> Seven-day structure, "good" appears 7 times (covenant signature), creation as temple-building</li>
+                            <li><strong>Moses Adds Christ:</strong> "mine Only Begotten"—everything in Genesis is Christ's work</li>
+                            <li><strong>Abraham Reveals the Council:</strong> "The Gods," "organized" vocabulary, connection to Abraham 3's premortal council</li>
+                            <li><strong>Image of God Application:</strong> How should this doctrine change how we see ourselves and others?</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <button class="sub-accordion">Youth (Young Men / Young Women)</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <h4>Focus: Your Identity Is Received, Not Created</h4>
+                        <p><strong>Central Application:</strong> In a world that tells you to "create your own image," God has already placed His image in you.</p>
+                        <h4>Opening Discussion:</h4>
+                        <ul>
+                            <li>How much time do people spend curating their image on social media?</li>
+                            <li>What if your identity wasn't something you had to create but something you received?</li>
+                        </ul>
+                        <h4>Key Points:</h4>
+                        <ul>
+                            <li><strong>You are God's living statue:</strong> His representative on earth. This isn't something you earn; it's something you ARE.</li>
+                            <li><strong>You were in the council:</strong> Abraham 3:22—you were there. You were chosen. You have purpose.</li>
+                            <li><strong>For YW:</strong> Eve was <em>ezer</em>—same word used for GOD. You bring essential power. You're not decoration; you're strength.</li>
+                            <li><strong>For YM:</strong> "Dominion" is royal language—you're meant to govern, lead, care. But dominion isn't domination. It's responsibility.</li>
+                        </ul>
+                        <p><strong>Commitment Activity:</strong> Write one way you'll live as God's image-bearer this week.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 6: STUDY QUESTIONS -->
+        <button class="accordion-section">6. Study Questions</button>
+        <div class="content-panel">
+            <div class="panel-content">
+                <button class="sub-accordion">Observation Questions (What does the text say?)</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <ol>
+                            <li>What does God say before creating humanity that He doesn't say before creating anything else?</li>
+                            <li>In whose image is humanity created?</li>
+                            <li>What two terms are used to describe humanity's relationship to God?</li>
+                            <li>What three commands does God give to the newly created humans in Genesis 1:28?</li>
+                            <li>How does Abraham 4:26 describe the divine deliberation before creating humanity?</li>
+                            <li>What verb does Abraham use instead of "created"?</li>
+                            <li>What did God say was "not good" in Genesis 2:18?</li>
+                            <li>From what part of Adam was Eve formed?</li>
+                            <li>On which day did God rest?</li>
+                            <li>What two things did God do to the seventh day?</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <button class="sub-accordion">Interpretation Questions (What does the text mean?)</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <ol>
+                            <li>What does it mean to be made in God's "image"?</li>
+                            <li>Why do you think God deliberated ("Let us") before creating humanity but not before other creations?</li>
+                            <li>What is the difference between <em>tselem</em> (image) and <em>demut</em> (likeness)?</li>
+                            <li>Why does Abraham's account use "organized" rather than "created"?</li>
+                            <li>How does knowing <em>ezer</em> is used of God change your view of Eve's role?</li>
+                            <li>Why is marriage instituted before the Fall?</li>
+                            <li>Did God rest because He was tired?</li>
+                            <li>What does divine "rest" mean in ancient cosmology?</li>
+                            <li>Does "the Gods" mean there are many gods?</li>
+                            <li>What is the relationship between "the Gods" and the Godhead?</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <button class="sub-accordion">Application Questions (How does this apply to life?)</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <ol>
+                            <li>How should knowing you bear God's image affect your self-image?</li>
+                            <li>What changes when you view every person you meet as bearing God's image?</li>
+                            <li>How can you exercise "dominion" over creation in a godly way today?</li>
+                            <li>How does the "image of God" doctrine shape how you treat your body?</li>
+                            <li>How does understanding <em>ezer</em> as "strength" change how you view women's roles?</li>
+                            <li>What does "one flesh" require of married couples today?</li>
+                            <li>How can you make the Sabbath the climax of your week?</li>
+                            <li>What does godly "rest" look like in your life?</li>
+                            <li>How does knowing you were in the premortal council affect your sense of purpose?</li>
+                            <li>What aspects of your life need to be "organized" rather than discarded?</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <button class="sub-accordion">Discussion Questions (For Groups)</button>
+                <div class="sub-panel">
+                    <div class="sub-panel-content">
+                        <ol>
+                            <li>Why do you think God gave us three creation accounts instead of one?</li>
+                            <li>What surprises you most about the creation accounts when you read them carefully?</li>
+                            <li>How should the "image of God" doctrine shape our response to social issues?</li>
+                            <li>What would change in your church if everyone truly believed they were made in God's image?</li>
+                            <li>How does the creation account prepare us for the rest of scripture?</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="section-navigation">
+            <div class="nav-container">
+                <a href="week02.html" class="nav-link">← Week 2: Moses 1; Abraham 3</a>
+                <a href="index.html" class="nav-link index">Study Guide Index</a>
+                <a href="week04.html" class="nav-link">Week 4: Genesis 3–4; Moses 4–5 →</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Accordion functionality
+        document.querySelectorAll('.accordion-section').forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('active');
+                const panel = button.nextElementSibling;
+                panel.classList.toggle('active');
+            });
+        });
+
+        document.querySelectorAll('.sub-accordion').forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('active');
+                const panel = button.nextElementSibling;
+                panel.classList.toggle('active');
+            });
+        });
+
+        document.querySelectorAll('.inner-accordion').forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('active');
+                const panel = button.nextElementSibling;
+                panel.classList.toggle('active');
+            });
+        });
+
+        function expandAll() {
+            document.querySelectorAll('.accordion-section').forEach(btn => {
+                btn.classList.add('active');
+                btn.nextElementSibling.classList.add('active');
+            });
+            document.querySelectorAll('.sub-accordion').forEach(btn => {
+                btn.classList.add('active');
+                btn.nextElementSibling.classList.add('active');
+            });
+            document.querySelectorAll('.inner-accordion').forEach(btn => {
+                btn.classList.add('active');
+                btn.nextElementSibling.classList.add('active');
+            });
+        }
+
+        function collapseAll() {
+            document.querySelectorAll('.accordion-section').forEach(btn => {
+                btn.classList.remove('active');
+                btn.nextElementSibling.classList.remove('active');
+            });
+            document.querySelectorAll('.sub-accordion').forEach(btn => {
+                btn.classList.remove('active');
+                btn.nextElementSibling.classList.remove('active');
+            });
+            document.querySelectorAll('.inner-accordion').forEach(btn => {
+                btn.classList.remove('active');
+                btn.nextElementSibling.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>

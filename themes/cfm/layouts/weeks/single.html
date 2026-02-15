@@ -1,0 +1,90 @@
+{{ define "main" }}
+<div class="week-nav">
+    {{ with .PrevInSection }}<a href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>{{ else }}<span></span>{{ end }}
+    <a href="/weeks/">All Weeks</a>
+    {{ with .NextInSection }}<a href="{{ .RelPermalink }}">{{ .Title }} &rarr;</a>{{ else }}<span></span>{{ end }}
+</div>
+
+<div class="week-header">
+    {{ with .Params.image }}<img src="{{ . }}" alt="{{ $.Params.image_alt }}" class="week-header-img">{{ end }}
+    <div class="week-num" style="font-size: 0.9em; color: var(--sage-mid); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Week {{ .Params.week_num }}</div>
+    <h1>{{ .Title }}</h1>
+    <div class="week-scripture-ref">{{ .Params.scripture }}</div>
+    <div class="week-dates-range">{{ .Params.dates }}</div>
+</div>
+
+{{ if .Params.quick_summary }}
+<div class="quick-summary">
+    <h2>5-Minute Overview</h2>
+    <p>{{ .Params.quick_summary }}</p>
+</div>
+{{ end }}
+
+<!-- Tabs -->
+<div class="tab-nav">
+    <button class="tab-btn active" onclick="showTab('resources', this)">Resources</button>
+    <button class="tab-btn" onclick="showTab('insights', this)">Weekly Insights</button>
+    <button class="tab-btn" onclick="showTab('study-guide', this)">Study Guide</button>
+    <button class="tab-btn" onclick="showTab('charts', this)">Charts &amp; Tools</button>
+</div>
+
+<div id="tab-resources" class="tab-content active">
+    <div class="content-panel embedded-content">
+        {{ readFile (printf "static/content/week%s/resources.html" .Params.week_num) | safeHTML }}
+    </div>
+</div>
+
+<div id="tab-insights" class="tab-content">
+    <div class="content-panel embedded-content">
+        {{ readFile (printf "static/content/week%s/insights.html" .Params.week_num) | safeHTML }}
+    </div>
+</div>
+
+<div id="tab-study-guide" class="tab-content">
+    <div class="content-panel embedded-content">
+        {{ $sgFile := printf "static/content/week%s/study-guide.html" .Params.week_num }}
+        {{ if (fileExists $sgFile) }}
+            {{ readFile $sgFile | safeHTML }}
+        {{ else }}
+            <p style="text-align: center; color: var(--text-muted); padding: 40px;">Study guide coming soon.</p>
+        {{ end }}
+    </div>
+</div>
+
+<div id="tab-charts" class="tab-content">
+    <div class="chart-grid">
+        {{ range .Params.charts }}
+        <a href="{{ .url }}" class="chart-card">
+            <h3>{{ .title }}</h3>
+            <p>{{ .description }}</p>
+        </a>
+        {{ end }}
+    </div>
+</div>
+
+<div class="week-nav" style="margin-top: 40px;">
+    {{ with .PrevInSection }}<a href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>{{ else }}<span></span>{{ end }}
+    <a href="/weeks/">All Weeks</a>
+    {{ with .NextInSection }}<a href="{{ .RelPermalink }}">{{ .Title }} &rarr;</a>{{ else }}<span></span>{{ end }}
+</div>
+{{ end }}
+
+{{ define "scripts" }}
+<script>
+function showTab(tabId, btn) {
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById('tab-' + tabId).classList.add('active');
+    btn.classList.add('active');
+    history.replaceState(null, '', '#' + tabId);
+}
+// Restore tab from URL hash
+window.addEventListener('load', function() {
+    var hash = location.hash.replace('#', '');
+    if (hash) {
+        var btn = document.querySelector('.tab-btn[onclick*="' + hash + '"]');
+        if (btn) showTab(hash, btn);
+    }
+});
+</script>
+{{ end }}
