@@ -9,7 +9,7 @@ hide_title: true
 <p style="color: var(--text-secondary); max-width: 650px; margin: 15px auto 0;">Click on the links below to access additional materials pertaining to the CFM lessons.</p>
 </div>
 
-<div class="chart-grid" style="margin-top: 30px; grid-template-columns: repeat(3, 1fr);">
+<div class="chart-grid" style="margin-top: 30px; grid-template-columns: repeat(3, 1fr); max-width: 900px; margin-left: auto; margin-right: auto;">
 
 <a href="digital-tools/" class="chart-card" style="text-align: center; padding: 30px 20px;">
 <img src="../icons/digital-tools.svg" width="64" height="64" alt="Digital Tools">
@@ -24,15 +24,9 @@ hide_title: true
 </a>
 
 <a href="culture-traditions/" class="chart-card" style="text-align: center; padding: 30px 20px;">
-<img src="../icons/culture-traditions.svg" width="64" height="64" alt="Culture and Traditions">
-<h3 style="margin-top: 12px;">Culture &amp; Traditions</h3>
-<p>Historical and cultural context</p>
-</a>
-
-<a href="language-learning/" class="chart-card" style="text-align: center; padding: 30px 20px;">
-<img src="../icons/language-learning.svg" width="64" height="64" alt="Language Learning">
-<h3 style="margin-top: 12px;">Language Learning</h3>
-<p>Hebrew, Greek, and other language tools</p>
+<img src="../icons/culture-traditions.svg" width="64" height="64" alt="Culture, Traditions & Language">
+<h3 style="margin-top: 12px;">Culture, Traditions &amp; Language</h3>
+<p>Hebrew, Greek, biblical feasts, ancient customs</p>
 </a>
 
 <a href="printed-material/" class="chart-card" style="text-align: center; padding: 30px 20px;">
