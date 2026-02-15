@@ -586,7 +586,7 @@ body {
 .footer-disclaimer { margin-top: 5px; font-style: italic; font-size: 0.9em; }
 
 /* === Embedded Content (existing HTML) === */
-.embedded-content { all: initial; font-family: inherit; }
+.embedded-content { font-family: inherit; }
 
 /* === Print === */
 @media print {
