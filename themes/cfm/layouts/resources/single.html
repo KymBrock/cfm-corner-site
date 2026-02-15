@@ -116,6 +116,20 @@
         background: #3a5a42;
         color: white;
     }
+    @media (max-width: 768px) {
+        .resource-page { padding: 24px 16px; }
+        .resource-page h1 { font-size: 1.6em; }
+        .resource-page h2 { font-size: 1.2em; }
+        .resource-page ul li { padding: 12px 14px; font-size: 0.9em; }
+        .resource-page blockquote { padding: 16px 18px; }
+    }
+    @media (max-width: 480px) {
+        .resource-page { padding: 16px 12px; }
+        .resource-page h1 { font-size: 1.35em; }
+        .resource-page h2 { font-size: 1.1em; margin-top: 28px; }
+        .resource-page ul li { padding: 10px 12px; }
+        .resource-back { width: 100%; text-align: center; }
+    }
 </style>
 {{ end }}
 

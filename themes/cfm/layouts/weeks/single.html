@@ -81,31 +81,31 @@
 </div>
 
 <!-- Old Testament Timeline -->
-<div style="margin-top: 50px; background: linear-gradient(135deg, #1e3a4f 0%, #2a4f6a 100%); border-radius: 12px; overflow: hidden;">
+<div class="ot-timeline-section" style="margin-top: 50px; background: linear-gradient(135deg, #1e3a4f 0%, #2a4f6a 100%); border-radius: 12px; overflow: hidden;">
     <!-- Clickable timeline image -->
     <div style="cursor: pointer; position: relative;" onclick="document.getElementById('timeline-lightbox').style.display='flex'">
         <img src="{{ "images/ot-timeline-thumb.jpg" | relURL }}" alt="Old Testament Timeline" style="width: 100%; display: block;">
         <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(30,58,79,0.7) 0%, transparent 40%); display: flex; align-items: flex-end; justify-content: center; padding-bottom: 12px;">
-            <span style="color: white; font-size: 0.85em; opacity: 0.9;">Click to expand</span>
+            <span style="color: white; font-size: 0.85em; opacity: 0.9;">Tap to expand</span>
         </div>
     </div>
     <!-- Info bar with download -->
-    <div style="padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
-        <div>
-            <h3 style="color: #d5a93c; font-family: Georgia, serif; font-size: 1.05em; margin: 0;">📜 Old Testament Timeline</h3>
-            <p style="color: #c8d8e4; font-size: 0.8em; margin: 4px 0 0; line-height: 1.4;">From Creation through the Persian Period — click the image to zoom, or download the full PDF.</p>
+    <div class="ot-timeline-info" style="padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+        <div style="min-width: 0; flex: 1;">
+            <h3 style="color: #d5a93c; font-family: Georgia, serif; font-size: 1.05em; margin: 0;">Old Testament Timeline</h3>
+            <p style="color: #c8d8e4; font-size: 0.8em; margin: 4px 0 0; line-height: 1.4;">From Creation through the Persian Period — tap the image to zoom, or download the full PDF.</p>
         </div>
-        <div style="display: flex; gap: 10px; flex-shrink: 0;">
-            <a href="{{ "resources/ot-timeline/" | relURL }}" style="background: #4a6b52; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 0.85em; font-weight: 600; white-space: nowrap;">View Full Page</a>
-            <a href="{{ "downloads/ot-timeline.pdf" | relURL }}" download style="background: transparent; color: #d5a93c; border: 1.5px solid #d5a93c; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 0.85em; font-weight: 600; white-space: nowrap;">Download PDF</a>
+        <div class="ot-timeline-buttons" style="display: flex; gap: 10px; flex-shrink: 0;">
+            <a href="{{ "resources/ot-timeline/" | relURL }}" style="background: #4a6b52; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 0.85em; font-weight: 600; white-space: nowrap; text-align: center;">View Full Page</a>
+            <a href="{{ "downloads/ot-timeline.pdf" | relURL }}" download style="background: transparent; color: #d5a93c; border: 1.5px solid #d5a93c; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 0.85em; font-weight: 600; white-space: nowrap; text-align: center;">Download PDF</a>
         </div>
     </div>
 </div>
 
 <!-- Timeline Lightbox -->
-<div id="timeline-lightbox" onclick="this.style.display='none'" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.92); flex-direction:column; align-items:center; justify-content:center; cursor:zoom-out; padding:20px;">
-    <div style="color:white; font-size:0.85em; margin-bottom:10px; opacity:0.7;">Click anywhere to close · Scroll to zoom</div>
-    <div style="overflow:auto; max-width:95vw; max-height:85vh; cursor:grab;" onclick="event.stopPropagation()">
+<div id="timeline-lightbox" onclick="this.style.display='none'" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.92); flex-direction:column; align-items:center; justify-content:center; cursor:zoom-out; padding:10px;">
+    <div style="color:white; font-size:0.85em; margin-bottom:8px; opacity:0.7;">Tap anywhere to close · Pinch to zoom</div>
+    <div class="timeline-lightbox-inner" style="overflow:auto; max-width:95vw; max-height:85vh; -webkit-overflow-scrolling: touch; cursor:grab;" onclick="event.stopPropagation()">
         <img src="{{ "images/ot-timeline-full.png" | relURL }}" alt="Old Testament Timeline" style="max-width:none; width:9639px; display:block;">
     </div>
 </div>
