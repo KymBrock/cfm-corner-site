@@ -65,6 +65,12 @@ A compilation of audio and visual resources to assist individuals and families w
 
 - **[The Interpreter Foundation](https://interpreterfoundation.org/come-follow-me/old-testament-2026/)** — Extensive scholarly resources for OT 2026 including 90+ Book of Moses essays by Jeffrey M. Bradshaw, KnoWhy OTL articles, and weekly lesson resources.
 
+- **[Ten Minute Bible Hour](https://www.youtube.com/@MattWhitmanTMBH)** — Matt Whitman. Not LDS but incredibly accessible Old Testament context. Outstanding archaeological and cultural videos. Respectful of all faith traditions.
+
+- **[Inspiring Philosophy](https://www.youtube.com/@InspiringPhilosophy)** — Strong on Ancient Near East context, creation accounts, and Genesis historicity. Academic but faith-affirming.
+
+- **[Yale Open Course — Introduction to the Old Testament](https://oyc.yale.edu/religious-studies/rlst-145)** — Free Yale lectures by Dr. Christine Hayes. Excellent academic perspective on the Old Testament for more advanced students.
+
 ## Women's Perspectives
 
 - **[Grounded](https://www.youtube.com/@DrBarbaraMorganGardner)** — Dr. Barbara Morgan Gardner.

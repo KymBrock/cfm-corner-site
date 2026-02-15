@@ -21,6 +21,10 @@ References for exploring the time periods and events of Biblical history.
 
 - **[Jewish Virtual Library — History](https://www.jewishvirtuallibrary.org/history)** — Comprehensive encyclopedia of ancient Israelite and Jewish history.
 
+- **[Biblical Archaeology Society](https://www.biblicalarchaeology.org/)** — Articles on archaeological discoveries illuminating the biblical world.
+
+- **[Dead Sea Scrolls Digital Library](https://www.deadseascrolls.org.il/)** — High-resolution images of the Dead Sea Scroll manuscripts from the Israel Museum.
+
 ## New Testament History
 
 - **[NT Chronological History (PDF)](https://www.churchofjesuschrist.org/bc/content/shared/content/images/gospel-library/manual/32474/32474_000_028_06-historynew.pdf)**

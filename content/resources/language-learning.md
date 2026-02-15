@@ -18,6 +18,14 @@ Joseph Smith himself emphasized the importance of studying the scriptures in the
   - [Dagesh Chart](/charts/dagesh.html) — Understanding the Dagesh and BeGaDKePhaT letters.
   - [Hebrew Root System](/charts/root-system.html) — How Hebrew three-letter roots work.
 
+### Hebrew Study Tools
+
+- **[Pealim (Pa'alim)](https://www.pealim.com/)** — Comprehensive Hebrew verb conjugation tables. Essential for understanding the binyanim (verb patterns) and how Hebrew verbs work.
+
+- **[2-Letter Lookup](https://www.2letterlookup.com/)** — A lexicon for Biblical Hebrew and Greek organized by two-letter roots. An excellent companion to the Hebrew root system — look up any two-letter combination to find related words.
+
+- **[Logion](https://www.logion.org/)** — Biblical Greek word study resource focused on the Logos and key New Testament Greek terms.
+
 *Additional course materials and recommendations coming soon.*
 
 ## Koine Greek
