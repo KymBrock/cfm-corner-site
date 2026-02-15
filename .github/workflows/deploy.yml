@@ -25,7 +25,7 @@ jobs:
           hugo-version: 'latest'
           extended: true
       - name: Build
-        run: hugo --minify --baseURL "https://www.cfmcorner.com/"
+        run: hugo --minify --baseURL "https://kymbrock.github.io/cfm-corner-site/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
