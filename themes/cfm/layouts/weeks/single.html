@@ -276,5 +276,44 @@ function initInsights() {
     });
     document.querySelectorAll('.sub-arrow').forEach(function(a) { a.style.transform = 'rotate(90deg)'; });
 }
+
+// Resources tab accordion toggle
+function toggleResourcesSection(header) {
+    var content = header.nextElementSibling;
+    var arrow = header.querySelector('.arrow');
+    var isCollapsed = content.style.maxHeight === '0px' || content.style.maxHeight === '';
+    if (isCollapsed) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        arrow.innerHTML = '\u25BC';
+        content.dataset.expanded = 'true';
+        setTimeout(function() {
+            if (content.dataset.expanded === 'true') {
+                content.style.maxHeight = 'none';
+            }
+        }, 500);
+    } else {
+        content.dataset.expanded = 'false';
+        content.style.maxHeight = content.scrollHeight + 'px';
+        setTimeout(function() {
+            content.style.maxHeight = '0px';
+        }, 10);
+        arrow.innerHTML = '\u25B6';
+    }
+}
+
+function toggleAll(expand) {
+    document.querySelectorAll('.cfm-resources-section .section-content').forEach(function(content) {
+        if (expand) {
+            content.style.maxHeight = 'none';
+            content.dataset.expanded = 'true';
+        } else {
+            content.dataset.expanded = 'false';
+            content.style.maxHeight = '0px';
+        }
+    });
+    document.querySelectorAll('.cfm-resources-section .arrow').forEach(function(arrow) {
+        arrow.innerHTML = expand ? '\u25BC' : '\u25B6';
+    });
+}
 </script>
 {{ end }}

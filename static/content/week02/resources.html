@@ -704,48 +704,7 @@
 
 <!-- Modal JavaScript -->
 
-<script>
 
-    function toggleResourcesSection(header) {
-        const content = header.nextElementSibling;
-        const arrow = header.querySelector('.arrow');
-        const isCollapsed = content.style.maxHeight === '0px' || content.style.maxHeight === '';
-
-        if (isCollapsed) {
-            content.style.maxHeight = content.scrollHeight + 'px';
-            arrow.innerHTML = '&#9660;';
-            content.dataset.expanded = 'true';
-            setTimeout(() => {
-                if (content.dataset.expanded === 'true') {
-                    content.style.maxHeight = 'none';
-                }
-            }, 500);
-        } else {
-            content.dataset.expanded = 'false';
-            content.style.maxHeight = content.scrollHeight + 'px';
-            setTimeout(() => {
-                content.style.maxHeight = '0px';
-            }, 10);
-            arrow.innerHTML = '&#9654;';
-        }
-    }
-
-    function toggleAll(expand) {
-        document.querySelectorAll('.cfm-resources-section .section-content').forEach(content => {
-            if (expand) {
-                content.style.maxHeight = 'none';
-                content.dataset.expanded = 'true';
-            } else {
-                content.dataset.expanded = 'false';
-                content.style.maxHeight = '0px';
-            }
-        });
-        document.querySelectorAll('.cfm-resources-section .arrow').forEach(arrow => {
-            arrow.innerHTML = expand ? '&#9660;' : '&#9654;';
-        });
-    }
-
-</script>
 
 <script>
 
