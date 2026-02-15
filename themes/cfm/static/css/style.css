@@ -28,28 +28,79 @@ body {
 
 /* === Navigation === */
 .site-nav {
-    background: linear-gradient(135deg, var(--green-mid) 0%, var(--green-dark) 100%);
+    background: linear-gradient(135deg, var(--green-dark) 0%, #3d4a40 100%);
     color: white;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
 }
 .nav-inner {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 12px 20px;
+    padding: 0 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 24px;
+    height: 60px;
 }
-.nav-logo { text-decoration: none; color: white; }
-.nav-title { font-family: Georgia, serif; font-size: 1.3em; font-weight: 600; display: block; }
-.nav-subtitle { font-size: 0.75em; opacity: 0.8; }
-.nav-links { display: flex; gap: 24px; }
-.nav-links a { color: white; text-decoration: none; font-size: 0.95em; opacity: 0.9; transition: opacity 0.2s; }
-.nav-links a:hover { opacity: 1; text-decoration: underline; }
-.nav-toggle { display: none; background: none; border: none; color: white; font-size: 1.5em; cursor: pointer; }
+.nav-logo {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+.nav-tree {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+.nav-logo-text { display: flex; flex-direction: column; line-height: 1.2; }
+.nav-title { font-family: Georgia, serif; font-size: 1.15em; font-weight: 600; letter-spacing: 0.3px; }
+.nav-subtitle { font-size: 0.7em; opacity: 0.65; font-weight: 400; letter-spacing: 0.5px; }
+.nav-links { display: flex; gap: 6px; margin-left: auto; }
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.88em;
+    opacity: 0.85;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: opacity 0.2s, background 0.2s;
+}
+.nav-links a:hover { opacity: 1; background: rgba(255,255,255,0.1); }
+.nav-links a.active { opacity: 1; background: rgba(255,255,255,0.15); font-weight: 600; }
+.nav-search {
+    display: flex;
+    align-items: center;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 0 12px;
+    height: 34px;
+    flex-shrink: 0;
+    transition: background 0.2s, border-color 0.2s;
+}
+.nav-search:focus-within {
+    background: rgba(255,255,255,0.2);
+    border-color: rgba(255,255,255,0.4);
+}
+.nav-search-icon { color: rgba(255,255,255,0.6); flex-shrink: 0; }
+.nav-search input {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 0.85em;
+    padding: 0 8px;
+    width: 130px;
+    outline: none;
+}
+.nav-search input::placeholder { color: rgba(255,255,255,0.5); }
+.nav-toggle { display: none; background: none; border: none; color: white; font-size: 1.5em; cursor: pointer; padding: 8px; }
+.nav-search-mobile { display: none; }
 
 /* === Main Content === */
 .site-main {
@@ -290,9 +341,30 @@ body {
 /* === Tablet (≤768px) === */
 @media (max-width: 768px) {
     /* Nav */
-    .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--green-dark); padding: 15px 20px; gap: 12px; z-index: 101; }
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #3d4a40; padding: 12px 20px; gap: 4px; z-index: 101; box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
     .nav-links.open { display: flex; }
-    .nav-toggle { display: block; }
+    .nav-links a { padding: 10px 14px; border-radius: 6px; }
+    .nav-links a:hover, .nav-links a.active { background: rgba(255,255,255,0.1); }
+    .nav-search { display: none; }
+    .nav-search-mobile {
+        display: block;
+        margin-top: 4px;
+        padding-top: 8px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .nav-search-mobile input {
+        width: 100%;
+        padding: 10px 14px;
+        border: 1px solid rgba(255,255,255,0.2);
+        border-radius: 20px;
+        background: rgba(255,255,255,0.1);
+        color: white;
+        font-size: 0.9em;
+        outline: none;
+    }
+    .nav-search-mobile input::placeholder { color: rgba(255,255,255,0.5); }
+    .nav-search-mobile input:focus { border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.15); }
+    .nav-toggle { display: block; margin-left: auto; }
 
     /* Homepage */
     .welcome-section { padding: 30px 16px 24px; }
