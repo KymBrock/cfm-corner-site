@@ -75,12 +75,12 @@
 
 <!-- Subscribe -->
 <div class="subscribe-section">
-    <h2>Subscribe for Updates</h2>
-    <p>Get notified when new weekly study guides are published.</p>
-    <form class="subscribe-form" action="#" method="post">
-        <input type="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-    </form>
+    <h2>Stay Connected</h2>
+    <p>New study guides are published each week. Bookmark this page or reach out to share feedback.</p>
+    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 10px;">
+        <a href="{{ "weeks/" | relURL }}" style="padding: 12px 28px; background: var(--sage-mid); color: white; border: 2px solid white; border-radius: 30px; text-decoration: none; font-size: 1em; font-weight: 600;">Browse All Weeks</a>
+        <a href="{{ "contact/" | relURL }}" style="padding: 12px 28px; background: transparent; color: white; border: 2px solid white; border-radius: 30px; text-decoration: none; font-size: 1em; font-weight: 600;">Contact Us</a>
+    </div>
 </div>
 
 <script>
