@@ -1,0 +1,81 @@
+{{ define "head" }}
+<link href="{{ "pagefind/pagefind-ui.css" | relURL }}" rel="stylesheet">
+<style>
+    .search-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+    .search-container h1 {
+        font-family: Georgia, serif;
+        color: #1e3a4f;
+        margin-bottom: 24px;
+    }
+    /* Pagefind UI overrides to match site brand */
+    .pagefind-ui .pagefind-ui__search-input {
+        border: 2px solid #57899c !important;
+        border-radius: 8px !important;
+        font-family: Georgia, serif !important;
+        font-size: 1.05em !important;
+        padding: 12px 16px !important;
+    }
+    .pagefind-ui .pagefind-ui__search-input:focus {
+        border-color: #1e3a4f !important;
+        outline: none !important;
+        box-shadow: 0 0 0 3px rgba(87, 137, 156, 0.2) !important;
+    }
+    .pagefind-ui .pagefind-ui__search-clear {
+        color: #57899c !important;
+    }
+    .pagefind-ui .pagefind-ui__result-link {
+        color: #1e3a4f !important;
+        font-family: Georgia, serif !important;
+    }
+    .pagefind-ui .pagefind-ui__result-link:hover {
+        color: #57899c !important;
+    }
+    .pagefind-ui .pagefind-ui__result-excerpt {
+        color: #444 !important;
+    }
+    .pagefind-ui .pagefind-ui__button {
+        background: #4a6b52 !important;
+        color: white !important;
+        border-radius: 6px !important;
+    }
+    .pagefind-ui .pagefind-ui__button:hover {
+        background: #3a5a42 !important;
+    }
+    .pagefind-ui .pagefind-ui__message {
+        font-family: Georgia, serif !important;
+        color: #57899c !important;
+    }
+</style>
+{{ end }}
+
+{{ define "main" }}
+<div class="search-container">
+    <h1>Search</h1>
+    <div id="search"></div>
+</div>
+{{ end }}
+
+{{ define "scripts" }}
+<script src="{{ "pagefind/pagefind-ui.js" | relURL }}"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+        var pf = new PagefindUI({
+            element: "#search",
+            showSubResults: true,
+            showImages: false
+        });
+        // Pick up query from URL hash (from homepage search box)
+        var hash = decodeURIComponent(window.location.hash.substring(1));
+        if (hash) {
+            pf.triggerSearch(hash);
+        } else {
+            var input = document.querySelector('.pagefind-ui__search-input');
+            if (input) input.focus();
+        }
+    });
+</script>
+{{ end }}

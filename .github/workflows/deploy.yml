@@ -26,6 +26,8 @@ jobs:
           extended: true
       - name: Build
         run: hugo --minify --baseURL "https://kymbrock.github.io/cfm-corner-site/"
+      - name: Build search index
+        run: npx pagefind@latest --site public
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
