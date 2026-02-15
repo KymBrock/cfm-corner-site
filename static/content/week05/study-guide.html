@@ -35,14 +35,14 @@
         }
         .expand-button:hover { background-color: #6B5344; }
 
-        .accordion-section {
+        .sg-accordion-section {
             background-color: #8B7355; color: white; cursor: pointer; padding: 18px; width: 100%;
             border: none; text-align: left; font-size: 1.2em; font-weight: 600; font-family: Georgia, serif;
             border-radius: 8px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center;
         }
-        .accordion-section:hover { background-color: #6B5344; }
-        .accordion-section::after { content: '▼'; font-size: 0.9em; transition: transform 0.3s; }
-        .accordion-section.active::after { transform: rotate(180deg); }
+        .sg-accordion-section:hover { background-color: #6B5344; }
+        .sg-accordion-section::after { content: '▼'; font-size: 0.9em; transition: transform 0.3s; }
+        .sg-accordion-section.active::after { transform: rotate(180deg); }
 
         .sg-panel {
             background-color: white; border-radius: 0 0 8px 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -90,7 +90,7 @@
         .nav-disabled { background: #d1d5db; color: #9ca3af; padding: 12px 24px; border-radius: 8px; }
 
         /* Sub-accordions for nested sections */
-        .sub-accordion {
+        .sg-sub-accordion {
             background-color: #f5f0e8;
             color: #5a4a3a;
             cursor: pointer;
@@ -107,11 +107,11 @@
             transition: background-color 0.2s;
         }
 
-        .sub-accordion:hover {
+        .sg-sub-accordion:hover {
             background-color: #e8e0d4;
         }
 
-        .sub-accordion::after {
+        .sg-sub-accordion::after {
             content: '▼';
             font-size: 0.8em;
             color: #8B7355;
@@ -122,12 +122,12 @@
             transition: transform 0.3s;
         }
 
-        .sub-accordion.active::after {
+        .sg-sub-accordion.active::after {
             transform: translateY(-50%) rotate(180deg);
         }
 
         /* Sub-panels */
-        .sub-panel {
+        .sg-sub-panel {
             background-color: #fafafa;
             border-radius: 0 0 6px 6px;
             border: 1px solid #d4c4a8;
@@ -138,26 +138,26 @@
             margin-bottom: 10px;
         }
 
-        .sub-panel.active {
+        .sg-sub-panel.active {
             max-height: none;
             overflow: visible;
             transition: max-height 0.3s ease-in;
         }
 
-        .sub-panel-content {
+        .sg-sub-panel-content {
             padding: 20px 25px;
         }
 
-        .sub-panel-content h3 { color: #6B5344; margin-top: 20px; margin-bottom: 12px; font-size: 1.3em; }
-        .sub-panel-content h4 { color: #5a4a3a; margin-top: 15px; margin-bottom: 10px; font-size: 1.15em; }
-        .sub-panel-content p { margin-bottom: 12px; text-align: justify; }
-        .sub-panel-content ul, .sub-panel-content ol { margin-left: 25px; margin-bottom: 12px; }
-        .sub-panel-content li { margin-bottom: 6px; }
-        .sub-panel-content a { color: #8B7355; }
-        .sub-panel-content a:hover { color: #6B5344; text-decoration: underline; }
+        .sg-sub-panel-content h3 { color: #6B5344; margin-top: 20px; margin-bottom: 12px; font-size: 1.3em; }
+        .sg-sub-panel-content h4 { color: #5a4a3a; margin-top: 15px; margin-bottom: 10px; font-size: 1.15em; }
+        .sg-sub-panel-content p { margin-bottom: 12px; text-align: justify; }
+        .sg-sub-panel-content ul, .sg-sub-panel-content ol { margin-left: 25px; margin-bottom: 12px; }
+        .sg-sub-panel-content li { margin-bottom: 6px; }
+        .sg-sub-panel-content a { color: #8B7355; }
+        .sg-sub-panel-content a:hover { color: #6B5344; text-decoration: underline; }
 
         /* Inner accordions (third level - for lengthy subsections) */
-        .inner-accordion {
+        .sg-inner-accordion {
             background-color: #faf8f5;
             color: #6B5344;
             cursor: pointer;
@@ -174,11 +174,11 @@
             transition: background-color 0.2s;
         }
 
-        .inner-accordion:hover {
+        .sg-inner-accordion:hover {
             background-color: #f0e8dc;
         }
 
-        .inner-accordion::after {
+        .sg-inner-accordion::after {
             content: '▼';
             font-size: 0.7em;
             color: #8B7355;
@@ -189,12 +189,12 @@
             transition: transform 0.3s;
         }
 
-        .inner-accordion.active::after {
+        .sg-inner-accordion.active::after {
             transform: translateY(-50%) rotate(180deg);
         }
 
         /* Inner panels (third level) */
-        .inner-panel {
+        .sg-inner-panel {
             background-color: #ffffff;
             border-radius: 0 0 5px 5px;
             border: 1px solid #e8e0d4;
@@ -205,26 +205,26 @@
             margin-bottom: 8px;
         }
 
-        .inner-panel.active {
+        .sg-inner-panel.active {
             max-height: none;
             overflow: visible;
             transition: max-height 0.3s ease-in;
         }
 
-        .inner-panel-content {
+        .sg-inner-panel-content {
             padding: 15px 20px;
         }
 
-        .inner-panel-content h4 { color: #5a4a3a; margin-top: 12px; margin-bottom: 8px; font-size: 1.1em; }
-        .inner-panel-content p { margin-bottom: 10px; }
-        .inner-panel-content ul, .inner-panel-content ol { margin-left: 20px; margin-bottom: 10px; }
-        .inner-panel-content li { margin-bottom: 5px; }
+        .sg-inner-panel-content h4 { color: #5a4a3a; margin-top: 12px; margin-bottom: 8px; font-size: 1.1em; }
+        .sg-inner-panel-content p { margin-bottom: 10px; }
+        .sg-inner-panel-content ul, .sg-inner-panel-content ol { margin-left: 20px; margin-bottom: 10px; }
+        .sg-inner-panel-content li { margin-bottom: 5px; }
 
         @media (max-width: 768px) {
             .header-section h1 { font-size: 1.8em; }
             .panel-content { padding: 20px; }
-            .sub-panel-content { padding: 15px 18px; }
-            .inner-panel-content { padding: 12px 15px; }
+            .sg-sub-panel-content { padding: 15px 18px; }
+            .sg-inner-panel-content { padding: 12px 15px; }
             .nav-container { flex-direction: column; }
             .nav-link, .nav-disabled { width: 100%; text-align: center; }
         }
@@ -253,12 +253,12 @@
         </div>
 
         <!-- SECTION 1: WEEK OVERVIEW -->
-        <button class="accordion-section">1. Week Overview</button>
+        <button class="sg-accordion-section">1. Week Overview</button>
         <div class="sg-panel">
             <div class="panel-content">
-                <button class="sub-accordion"><span>Week Information</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+                <button class="sg-sub-accordion"><span>Week Information</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <table class="info-table">
 <tr>
 <th>Element</th>
@@ -291,26 +291,26 @@
 </table>
 </div>
 </div>
-<button class="sub-accordion"><span>Reading Summary</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Reading Summary</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p>This week we encounter what may appear at first glance to be the least interesting chapter in Genesis—a genealogy listing ten patriarchs from Adam to Noah with their lifespans and descendants. Yet <a href="https://www.blueletterbible.org/kjv/gen/5/1/s_5001" target="_blank">Genesis 5</a> is far more than a list of names. It is theological architecture, connecting the creation account to the flood narrative while making a profound statement about human mortality and divine purpose. The relentless refrain "and he died... and he died... and he died" echoes through the chapter like a funeral drum—until one man breaks the pattern. Of Enoch alone the text says, "he was not; for God took him" (<a href="https://www.blueletterbible.org/kjv/gen/5/24/s_5024" target="_blank">Genesis 5:24</a>). Those four words in Genesis generated more speculation in Jewish and Christian tradition than almost any other passage.</p>
 <p><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng" target="_blank">Moses 6</a> transforms our understanding of this era completely. Where Genesis gives us 32 verses of genealogy with a cryptic four-verse note about Enoch, Moses 6 provides 68 verses revealing the full gospel—the plan of redemption, baptism, the gift of the Holy Ghost, and the role of Jesus Christ—all taught to Adam and his descendants from the very beginning. Moses 6 answers the question: What did Adam actually know about salvation? The answer is stunning: everything. Adam knew Christ by name (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p52#p52" target="_blank">Moses 6:52</a>), was baptized by immersion (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p64-p65#p64" target="_blank">Moses 6:64–65</a>), received the Holy Ghost (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p66#p66" target="_blank">Moses 6:66</a>), and understood the doctrine of the Fall and redemption in detail (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p48-p62#p48" target="_blank">Moses 6:48–62</a>).</p>
 <p>Moses 6 also introduces us to Enoch as more than a mysterious figure who "walked with God." We meet him as a young, reluctant prophet who felt inadequate: "I am but a lad, and all the people hate me; for I am slow of speech" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p31#p31" target="_blank">Moses 6:31</a>). This pattern of prophetic inadequacy—echoing Moses, Jeremiah, and Joseph Smith—reveals that God consistently chooses those who feel unqualified. The calling precedes the capacity.</p>
 <p>Together, these chapters establish three foundational truths: (1) The gospel of Jesus Christ has been known since Adam, (2) genealogical records carry theological weight, and (3) God's covenant purposes continue through faithful families despite a world descending into wickedness.</p>
 </div>
 </div>
-<button class="sub-accordion"><span>Central Themes</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>Theme 1: Genealogy as Theology</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>Central Themes</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Theme 1: Genealogy as Theology</span></button>
+<div class="sg-inner-panel">
 <p>The <em>toledot</em> (תּוֹלְדֹת, "generations") formula that opens <a href="https://www.blueletterbible.org/kjv/gen/5/1/s_5001" target="_blank">Genesis 5:1</a>—"This is the book of the generations of Adam"—is not merely a record-keeping device. It is a theological statement. The Hebrew word <a href="https://www.blueletterbible.org/lexicon/h8435/kjv/wlc/0-1/" target="_blank"><em>toledot</em></a> appears eleven times in Genesis as a structural marker, dividing the book into its major sections. Each <em>toledot</em> advances God's covenant purposes: from Adam to Noah, from Noah to Abraham, from Abraham to Isaac, from Isaac to Jacob. The genealogy demonstrates that God's plan unfolds through human history via specific and predictable patterns.</p>
 <p>The ten-generation structure (Adam to Noah) parallels the ten-generation list from Shem to Abraham in <a href="https://www.blueletterbible.org/kjv/gen/11/1/s_11001" target="_blank">Genesis 11</a>, and both point forward to Matthew's genealogy of Christ (<a href="https://www.blueletterbible.org/kjv/mat/1/1/s_930001" target="_blank">Matthew 1:1–17</a>). The number ten in Hebrew thought often signifies completeness—a full measure. From Adam to the Flood represents a complete era; from the Flood to Abraham represents another. Christ is the culmination of all these genealogical threads.</p>
 <p>The parallel between <a href="https://www.blueletterbible.org/kjv/gen/5/1/s_5001" target="_blank">Genesis 5:1</a> ("This is the book of the generations [<em>sefer toledot</em>] of Adam") and <a href="https://www.blueletterbible.org/kjv/mat/1/1/s_930001" target="_blank">Matthew 1:1</a> ("The book of the generation [<em>biblos geneseōs</em>] of Jesus Christ") is deliberate. Matthew presents Jesus as the new Adam, inaugurating a new creation and a new humanity.</p>
 </div>
-<button class="inner-accordion"><span>Theme 2: The Book of Remembrance</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Theme 2: The Book of Remembrance</span></button>
+<div class="sg-inner-panel">
 <p><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p5-p6#p5" target="_blank">Moses 6:5–6</a> introduces a concept with profound implications for Latter-day Saints:</p>
 <p>> "And a book of remembrance was kept, in the which was recorded, in the language of Adam, for it was given unto as many as called upon God to write by the spirit of inspiration; And by them their children were taught to read and write, having a language which was pure and undefiled."</p>
 <p>This passage establishes several remarkable truths:</p>
@@ -322,8 +322,8 @@
 </ul>
 <p>The Hebrew phrase <a href="https://www.blueletterbible.org/lexicon/h5612/kjv/wlc/0-1/" target="_blank"><em>sefer zikkaron</em></a> (<span dir="rtl">סֵפֶר זִכָּרוֹן</span>) appears in <a href="https://www.blueletterbible.org/kjv/mal/3/16/s_929016" target="_blank">Malachi 3:16</a>: "A book of remembrance was written before him for them that feared the LORD." This connects Adam's record-keeping to the celestial records God maintains. Temple work, family history, and personal journals all participate in this ancient pattern of sacred record-keeping.</p>
 </div>
-<button class="inner-accordion"><span>Theme 3: Walking with God</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Theme 3: Walking with God</span></button>
+<div class="sg-inner-panel">
 <p>The phrase "walked with God" (<a href="https://www.blueletterbible.org/kjv/gen/5/22/s_5022" target="_blank">Genesis 5:22, 24</a>) is reserved for only two people in Genesis: Enoch and Noah (<a href="https://www.blueletterbible.org/kjv/gen/6/9/s_6009" target="_blank">Genesis 6:9</a>). The Hebrew uses the Hithpael stem of <a href="https://www.blueletterbible.org/lexicon/h1980/kjv/wlc/0-1/" target="_blank"><em>halak</em></a> (הָלַךְ), indicating continuous, reflexive action—a lifestyle of walking, not a single event.</p>
 <p>Scripture distinguishes between walking <em>with</em>, <em>before</em>, and <em>after</em> God:</p>
 <ul>
@@ -333,8 +333,8 @@
 </ul>
 <p>Note: Hebrew has two particles spelled אֵת—one is the definite direct object marker (<a href="https://www.blueletterbible.org/lexicon/h853/kjv/wlc/0-1/" target="_blank">H853</a>, untranslated), the other is a preposition meaning "with" (<a href="https://www.blueletterbible.org/lexicon/h854/kjv/wlc/0-1/" target="_blank">H854</a>). Genesis 5:22 uses the preposition (H854), which the lexicon notes expresses "closer association than עִם" (the more common word for "with"). The Septuagint remarkably translates the phrase not as "walked with" but as "pleased God" (<a href="https://www.blueletterbible.org/lexicon/g2100/kjv/lxx/0-1/" target="_blank">εὐηρέστησεν τῷ θεῷ</a>), interpreting the walking as a life that delighted the Lord—the same language used in <a href="https://www.blueletterbible.org/kjv/heb/11/5/s_1144005" target="_blank">Hebrews 11:5</a>: "before his translation he had this testimony, that he pleased God."</p>
 </div>
-<button class="inner-accordion"><span>Theme 4: The Reluctant Prophet Pattern</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Theme 4: The Reluctant Prophet Pattern</span></button>
+<div class="sg-inner-panel">
 <p>Moses 6 reveals Enoch as a reluctant prophet, following a pattern seen throughout scripture:</p>
 <table class="info-table">
 <tr>
@@ -365,8 +365,8 @@
 </table>
 <p>God's response to each is essentially the same: divine empowerment overcomes human inadequacy. To Enoch: "Go forth and do as I have commanded thee, and no man shall pierce thee. Open thy mouth, and it shall be filled" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p32#p32" target="_blank">Moses 6:32</a>). To Moses: "I will be with thy mouth, and teach thee what thou shalt say" (<a href="https://www.blueletterbible.org/kjv/exo/4/12/s_54012" target="_blank">Exodus 4:12</a>). The pattern reveals that God does not call the qualified; He qualifies the called.</p>
 </div>
-<button class="inner-accordion"><span>Theme 5: The Gospel Taught from Adam</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Theme 5: The Gospel Taught from Adam</span></button>
+<div class="sg-inner-panel">
 <p>Perhaps the most significant contribution of Moses 6 is revealing the antiquity of the gospel. <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p48-p68#p48" target="_blank">Moses 6:48–68</a> contains one of the clearest expositions of the plan of salvation in all scripture—and it was taught to Adam:</p>
 <table class="info-table">
 <tr>
@@ -419,9 +419,9 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>Key Figures</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Key Figures</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <table class="info-table">
 <tr>
 <th>Person</th>
@@ -464,19 +464,19 @@
 <td>Would "comfort us" from the cursed ground (<a href="https://www.blueletterbible.org/kjv/gen/5/29/s_5029" target="_blank">Genesis 5:29</a>)</td>
 </tr>
 </table>
-<button class="inner-accordion"><span>Enoch's Unique Position</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Enoch's Unique Position</span></button>
+<div class="sg-inner-panel">
 <p>Enoch is the <strong>seventh from Adam</strong>—a number of covenant significance. <a href="https://www.blueletterbible.org/kjv/jde/1/14/s_1167014" target="_blank">Jude 1:14</a> specifically identifies him this way: "Enoch also, the seventh from Adam, prophesied..." The number seven signifies completion and covenant. Being seventh from Adam, Enoch stands at a position of spiritual completeness in the patriarchal line.</p>
 <p>The <em>Book of Enoch</em> (1 Enoch), though not canonical, was known to the New Testament authors. <a href="https://www.blueletterbible.org/kjv/jde/1/14/s_1167014" target="_blank">Jude 1:14–15</a> quotes 1 Enoch 1:9, and the letter shows familiarity with Enochic traditions. The Restoration scriptures provide an independent witness that Enoch was indeed a prophet of cosmic significance—but present him as a builder of Zion rather than a cosmic tour guide through heavenly realms.</p>
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>Evidence of Antiquity: Ancient Parallels to Moses 6–7</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Evidence of Antiquity: Ancient Parallels to Moses 6–7</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p>One of the most remarkable aspects of the Book of Moses Enoch account is its correspondence with ancient manuscripts that Joseph Smith could not possibly have known. These parallels provide powerful evidence for the ancient origins of this restoration scripture.</p>
-<button class="inner-accordion"><span>The Problem for Critics</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>The Problem for Critics</span></button>
+<div class="sg-inner-panel">
 <p>Jeffrey Bradshaw and other Interpreter Foundation scholars have documented that <strong>it would have been virtually impossible for Joseph Smith in 1830 to have been aware of the most important resemblances to ancient literature in his Enoch revelations.</strong></p>
 <table class="info-table">
 <tr>
@@ -511,8 +511,8 @@
 </tr>
 </table>
 </div>
-<button class="inner-accordion"><span>The Book of Giants: Most Extensive Parallels</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>The Book of Giants: Most Extensive Parallels</span></button>
+<div class="sg-inner-panel">
 <p>The Book of Giants, discovered at Qumran among the Dead Sea Scrolls in 1948, provides <strong>the most extensive series of significant parallels between a single ancient text and Joseph Smith's account</strong>:</p>
 <table class="info-table">
 <tr>
@@ -552,14 +552,14 @@
 </tr>
 </table>
 </div>
-<button class="inner-accordion"><span>The Mahijah/Mahujah Evidence</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>The Mahijah/Mahujah Evidence</span></button>
+<div class="sg-inner-panel">
 <p>The names "Mahijah" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p40#p40" target="_blank">Moses 6:40</a>) and "Mahujah" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=p2#p2" target="_blank">Moses 7:2</a>) in the Book of Moses correspond remarkably to <strong>Mahaway</strong> (MHWY) in the Book of Giants—a text not discovered until 1948 and not translated into English until 1976.</p>
 <p>Non-Latter-day Saint scholar Salvatore Cirillo concluded: "The name Mahawai in the Book of Giants and the names Mahujah and Mahijah in the Book of Moses represent the strongest similarity between the Latter-day Saint revelations on Enoch and the pseudepigraphal books of Enoch."</p>
 <p>When renowned Aramaic scholar Matthew Black was confronted with this evidence, he reportedly said: "Well, someday we will find out the source that Joseph Smith used." No such source has ever been found.</p>
 </div>
-<button class="inner-accordion"><span>Enoch as "Lad" in Ancient Tradition</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Enoch as "Lad" in Ancient Tradition</span></button>
+<div class="sg-inner-panel">
 <p>The Book of Moses describes Enoch protesting: "I am but a lad" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p31#p31" target="_blank">Moses 6:31</a>). This is the only use of "lad" in all of Joseph Smith's revelations—yet it corresponds precisely to ancient Enochic tradition:</p>
 <ul>
 <li><strong>2 Enoch</strong> and <strong>3 Enoch</strong> both feature Enoch with the title "lad" or "youth"</li>
@@ -567,8 +567,8 @@
 <li>Neither text was available in English in 1830</li>
 </ul>
 </div>
-<button class="inner-accordion"><span>Heavenly Books in Jewish Tradition</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Heavenly Books in Jewish Tradition</span></button>
+<div class="sg-inner-panel">
 <p>The "book of remembrance" in Moses 6 fits precisely into ancient Jewish categories of heavenly books:</p>
 <table class="info-table">
 <tr>
@@ -589,17 +589,17 @@
 </table>
 <p>The Testament of Abraham depicts Enoch as "the heavenly being who is responsible for recording the deeds of mankind." Jubilees 10:17 states: "Enoch had been created as a witness to the generations of the world so that he might report every deed of each generation in the day of judgment." <strong>Thus, Enoch as a scribe and witness of the heavenly book of remembrance, as described in the Book of Moses, fits squarely into ancient Jewish teachings about Enoch.</strong></p>
 </div>
-<button class="inner-accordion"><span>Hugh Nibley's Assessment</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Hugh Nibley's Assessment</span></button>
+<div class="sg-inner-panel">
 <p>Hugh Nibley, who spent decades comparing the Book of Moses with ancient Enoch literature, observed:</p>
 <p>> "A Victor Hugo or an Anatole France can tell a convincing story when he is near to his own land and time, but let any writer, even the most learned, slip back a couple of thousand years and a few thousand miles around the globe, and he finds himself in a treacherous terrain from which the only escape lies in taking to the wings of fantasy. ... [The author of Moses 6–7] imparts his information in such simple, effortless, and matter-of-fact discourse that the reader easily overlooks the vast amount of detail that is woven into the natural and uncomplicated pattern. What writer of historical fiction has ever remotely approached such an achievement?"</p>
 <p><em>Sources: Jeffrey M. Bradshaw, <a href="https://interpreterfoundation.org/book-of-moses-essays/" target="_blank">Book of Moses Essay Series</a> (Interpreter Foundation); Hugh W. Nibley, Enoch the Prophet.</em></p>
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>Timeline Placement</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Timeline Placement</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p><strong>Historical Period:</strong> Primordial History (Pre-Flood Era)</p>
 <p><strong>Biblical Era:</strong> The age of the antediluvian patriarchs</p>
 <p><strong>Traditional Chronology (Anno Mundi):</strong></p>
@@ -647,17 +647,17 @@
 </table>
 <p>*AM = Anno Mundi (Year of the World), counting from creation</p>
 <p><strong>Remarkable Overlap:</strong> According to this chronology, Adam lived long enough to know Lamech (Noah's father). Methuselah, who knew Adam, lived until the year of the Flood. This means the knowledge of the creation and the garden could have passed through only a few links to Noah.</p>
-<button class="inner-accordion"><span>Relationship to Week 04</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Relationship to Week 04</span></button>
+<div class="sg-inner-panel">
 <p>Week 04 covered the Fall and its aftermath—the expulsion from Eden, Cain and Abel, and the beginning of human civilization outside the garden. Week 05 picks up the genealogical thread from <a href="https://www.blueletterbible.org/kjv/gen/4/25/s_4025" target="_blank">Genesis 4:25–26</a> (Seth's birth) and expands it through ten generations to Noah. Moses 6 fills in what Genesis 4–5 omits: the gospel that was being taught alongside the genealogical succession.</p>
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>Books Featured This Week</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>Book of Genesis (Chapter 5)</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>Books Featured This Week</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Book of Genesis (Chapter 5)</span></button>
+<div class="sg-inner-panel">
 <ul>
 <li><strong>Author:</strong> Moses (traditional attribution)</li>
 <li><strong>Original Audience:</strong> Israel in the wilderness</li>
@@ -667,8 +667,8 @@
 <li><strong>Literary Genre:</strong> Genealogy (<em>toledot</em>)</li>
 </ul>
 </div>
-<button class="inner-accordion"><span>Book of Moses (Chapter 6)</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Book of Moses (Chapter 6)</span></button>
+<div class="sg-inner-panel">
 <ul>
 <li><strong>Author:</strong> Moses, restored through Joseph Smith</li>
 <li><strong>Source Date:</strong> Original to Moses (~1446 BC); restored June–October 1830</li>
@@ -681,11 +681,11 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>Temple Connections</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>The Veil Pattern</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>Temple Connections</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>The Veil Pattern</span></button>
+<div class="sg-inner-panel">
 <p>Adam's baptism (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p64-p66#p64" target="_blank">Moses 6:64–66</a>) establishes a pattern that temple worshippers recognize:</p>
 <ul>
 <li>Being "caught away by the Spirit" and "carried down into the water"</li>
@@ -694,21 +694,21 @@
 </ul>
 <p>This pattern—ordinance, spiritual transformation, divine confirmation—echoes through temple worship.</p>
 </div>
-<button class="inner-accordion"><span>Enoch's Access to God's Presence</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Enoch's Access to God's Presence</span></button>
+<div class="sg-inner-panel">
 <p>Enoch "walked with God"—language suggesting access to the divine presence that later becomes associated with the temple. <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107?lang=eng&id=p49#p49" target="_blank">D&C 107:49</a> clarifies: "And he saw the Lord, and he walked with him, and was before his face continually." This is temple language—being "before his face" continually.</p>
 </div>
-<button class="inner-accordion"><span>The Book of Remembrance</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>The Book of Remembrance</span></button>
+<div class="sg-inner-panel">
 <p>The <em>sefer zikkaron</em> (book of remembrance) connects to temple record-keeping. <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/128?lang=eng&id=p24#p24" target="_blank">D&C 128:24</a> teaches that "whatsoever you record on earth shall be recorded in heaven." Temple records—baptisms, sealings, ordinations—participate in this ancient pattern of sacred record-keeping begun by Adam.</p>
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>Connection to Restoration Scripture</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>Book of Mormon Connections</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>Connection to Restoration Scripture</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Book of Mormon Connections</span></button>
+<div class="sg-inner-panel">
 <ul>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/2?lang=eng&id=p22-p25#p22" target="_blank">2 Nephi 2:22–25</a></strong> — Lehi's explanation of the Fall, closely paralleling Moses 6:48–49</li>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/31?lang=eng&id=p5-p21#p5" target="_blank">2 Nephi 31:5–21</a></strong> — The doctrine of Christ: faith, repentance, baptism, Holy Ghost</li>
@@ -717,8 +717,8 @@
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p31-p40#p31" target="_blank">3 Nephi 11:31–40</a></strong> — Christ's doctrine, matching Moses 6's pattern</li>
 </ul>
 </div>
-<button class="inner-accordion"><span>Doctrine and Covenants Connections</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Doctrine and Covenants Connections</span></button>
+<div class="sg-inner-panel">
 <ul>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/20?lang=eng&id=p17-p31#p17" target="_blank">D&C 20:17–31</a></strong> — The Fall, justification, and sanctification</li>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/29?lang=eng&id=p36-p45#p36" target="_blank">D&C 29:36–45</a></strong> — Fall of man, redemption through Christ</li>
@@ -727,8 +727,8 @@
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/128?lang=eng&id=p24#p24" target="_blank">D&C 128:24</a></strong> — Record-keeping as essential to salvation</li>
 </ul>
 </div>
-<button class="inner-accordion"><span>Pearl of Great Price Connections</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Pearl of Great Price Connections</span></button>
+<div class="sg-inner-panel">
 <ul>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/5?lang=eng&id=p4-p12#p4" target="_blank">Moses 5:4–12</a></strong> — Adam and Eve taught the gospel after the Fall</li>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng" target="_blank">Moses 7</a></strong> — Enoch's expanded ministry and Zion (next week)</li>
@@ -737,18 +737,18 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>Suggested Reading Approach</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Suggested Reading Approach</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p><strong>Monday–Tuesday:</strong> Read <a href="https://www.blueletterbible.org/kjv/gen/5/1/s_5001" target="_blank">Genesis 5</a> slowly. Notice the repeated pattern: lived, begat, died. Then note Enoch's disruption of that pattern.</p>
 <p><strong>Wednesday–Thursday:</strong> Read <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p1-p47#p1" target="_blank">Moses 6:1–47</a>. Focus on the book of remembrance (vv. 5–6) and Enoch's call and preaching (vv. 26–47).</p>
 <p><strong>Friday–Saturday:</strong> Read <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p48-p68#p48" target="_blank">Moses 6:48–68</a>. This is the doctrinal heart of the week—the plan of salvation taught to Adam.</p>
 <p><strong>Sunday:</strong> Review the CFM lesson. Consider: What does Moses 6 reveal about the gospel that Genesis 5 does not? How does knowing the gospel was taught from Adam change your understanding of "the restoration"?</p>
 </div>
 </div>
-<button class="sub-accordion"><span>CFM Manual Emphasis</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>CFM Manual Emphasis</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p>The Come, Follow Me manual emphasizes:</p>
 <ul>
 <li><strong>The antiquity of the gospel</strong>: "The gospel of Jesus Christ has been on the earth since the days of Adam"</li>
@@ -757,11 +757,11 @@
 </ul>
 </div>
 </div>
-<button class="sub-accordion"><span>Additional Resources</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>Video and Audio Resources</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>Additional Resources</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Video and Audio Resources</span></button>
+<div class="sg-inner-panel">
 <ul>
 <li><strong><a href="https://archive.interpreterfoundation.org/nibley/audio/Pearl-of-Great-Price-Class/PGP-22-Enoch.mp3" target="_blank">Hugh Nibley Lecture 22: Enoch</a></strong> (Interpreter Foundation) — Foundational scholarly analysis connecting the Book of Moses to ancient Enoch traditions. Also available as <a href="https://www.youtube.com/watch?v=ehBxXyk-Ots&list=PLOrN0FV73AsIeKPG48pi390UWWdOVyIgi" target="_blank">video</a>.</li>
 <li><strong>Follow Him Podcast</strong> — Discussion of the "and he died" refrain and Enoch's disruption of the mortality pattern</li>
@@ -769,8 +769,8 @@
 <li><strong>Pearl of Great Price Central</strong> — Scholarly articles on Adam's full gospel knowledge</li>
 </ul>
 </div>
-<button class="inner-accordion"><span>Key Scholarly Sources</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Key Scholarly Sources</span></button>
+<div class="sg-inner-panel">
 <ul>
 <li>Bradshaw, Jeffrey M. "Could Joseph Smith have drawn on ancient manuscripts when he translated the story of Enoch?" <em>Interpreter</em> 33 (2019): 305–373.</li>
 <li>Nibley, Hugh W. <em>Enoch the Prophet</em>. The Collected Works of Hugh Nibley 2. Salt Lake City: Deseret Book, 1986.</li>
@@ -783,12 +783,12 @@
         </div>
 
         <!-- SECTION 2: HISTORICAL & CULTURAL CONTEXT -->
-        <button class="accordion-section">2. Historical & Cultural Context</button>
+        <button class="sg-accordion-section">2. Historical & Cultural Context</button>
         <div class="sg-panel">
             <div class="panel-content">
-                <button class="sub-accordion"><span>Genesis 5; Moses 6 | Adam's Posterity and the Gospel's Antiquity</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+                <button class="sg-sub-accordion"><span>Genesis 5; Moses 6 | Adam's Posterity and the Gospel's Antiquity</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p><strong>What This Section Covers:</strong></p>
 <ul>
 <li><a href="#evidence-of-antiquity-why-moses-6-matters" target="_blank">Evidence of Antiquity</a> — Why Moses 6 contains details Joseph Smith couldn't have known</li>
@@ -803,9 +803,9 @@
 </ul>
 </div>
 </div>
-<button class="sub-accordion"><span>Historical Setting</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Historical Setting</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <table class="info-table">
 <tr>
 <th>Aspect</th>
@@ -831,12 +831,12 @@
 <p>Genesis 5 and Moses 6 describe an era before recorded history—the "primeval" or "antediluvian" (pre-Flood) period. Yet the <em>recording</em> of these traditions occurred within specific cultural contexts. When Moses compiled the genealogy of Genesis 5, his Israelite audience had just emerged from Egypt—a culture obsessed with ancestral records, king lists, and the perpetuation of names. The emphasis on genealogy would have resonated powerfully with an audience who understood that names matter, lineage carries weight, and the past shapes the present.</p>
 </div>
 </div>
-<button class="sub-accordion"><span>Evidence of Antiquity: Why Moses 6 Matters</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Evidence of Antiquity: Why Moses 6 Matters</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p>Recent scholarship has identified striking parallels between specific details in Moses 6 and ancient texts that Joseph Smith could not have known. These parallels strengthen the case for the ancient origins of the Book of Moses.</p>
-<button class="inner-accordion"><span>Summary of Ancient Parallels</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Summary of Ancient Parallels</span></button>
+<div class="sg-inner-panel">
 <table class="info-table">
 <tr>
 <th>Detail in Moses 6</th>
@@ -871,8 +871,8 @@
 </table>
 <p><em>Each of these parallels is explored in detail below.</em></p>
 </div>
-<button class="inner-accordion"><span>The "Wild Man" Designation (Moses 6:38)</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>The "Wild Man" Designation (Moses 6:38)</span></button>
+<div class="sg-inner-panel">
 <p>When Enoch began preaching, the people described him with a curious phrase:</p>
 <p>> "And they came forth to hear him, upon the high places, saying unto the tent-keepers: Tarry ye here and keep the tents, while we go yonder to behold the seer, for he prophesieth, and there is a strange thing in the land; <strong>a wild man hath come among us</strong>." (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p38#p38" target="_blank">Moses 6:38</a>)</p>
 <p>The term "wild man" appears only once elsewhere in scripture—describing Ishmael (<a href="https://www.blueletterbible.org/kjv/gen/16/12/s_16012" target="_blank">Genesis 16:12</a>). However, a far more significant parallel exists in the <strong>Book of Giants</strong> from Qumran:</p>
@@ -900,8 +900,8 @@
 </ol>
 <p><strong>Why This Matters:</strong> The single occurrence of "wild man" in Joseph Smith's scripture translations parallels the single occurrence in extant ancient Enoch literature (Book of Giants). The Book of Giants was not discovered until 1948 and not translated into English until 1976.</p>
 </div>
-<button class="inner-accordion"><span>Enoch's Power Over the Elements (Moses 6:32, 34)</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Enoch's Power Over the Elements (Moses 6:32, 34)</span></button>
+<div class="sg-inner-panel">
 <p>God promised Enoch remarkable power:</p>
 <p>> "Open thy mouth, and it shall be filled... <strong>the mountains shall flee before thee, and the rivers shall turn from their course</strong>." (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p34#p34" target="_blank">Moses 6:34</a>)</p>
 <p>This is fulfilled in Moses 7:13: "He spake the word of the Lord, and the earth trembled, and <strong>the mountains fled</strong>, even according to his command; and <strong>the rivers of water were turned out of their course</strong>."</p>
@@ -910,8 +910,8 @@
 <p>> "The [Supreme] Life replied, Arise, take thy way to the source of the waters, <strong>turn it from its course</strong>. … At this command Tauriel indeed <strong>turned the sweet water from its course</strong>."</p>
 <p><strong>We find no account of a river's course being turned by anyone in the Bible.</strong> It is thus remarkable that this precise event appears in both the Mandaean account (connected to Enoch/Enosh traditions) and in the Book of Moses.</p>
 </div>
-<button class="inner-accordion"><span>Divine Protection: "No Man Shall Pierce Thee" (Moses 6:32)</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Divine Protection: "No Man Shall Pierce Thee" (Moses 6:32)</span></button>
+<div class="sg-inner-panel">
 <p>God reassured the newly commissioned Enoch:</p>
 <p>> "Go forth and do as I have commanded thee, and <strong>no man shall pierce thee</strong>." (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p32#p32" target="_blank">Moses 6:32</a>)</p>
 <p><strong>The Mandaean Parallel:</strong></p>
@@ -919,19 +919,19 @@
 <p>> "Little Enosh, fear not. You dread the dangers of this world; <strong>I am come to you to deliver you from them</strong>. Fear not the wicked... <strong>it shall not be given them to do any harm to thee</strong>."</p>
 <p>Later, Enoch's enemies lament: "In vain have we attempted murder and fire against them; <strong>nothing has been able to overcome them</strong>."</p>
 </div>
-<button class="inner-accordion"><span>The Book of Remembrance as a "Book of Deeds" (Moses 6:46–47)</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>The Book of Remembrance as a "Book of Deeds" (Moses 6:46–47)</span></button>
+<div class="sg-inner-panel">
 <p><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p46-p47#p46" target="_blank">Moses 6:46–47</a> describes Enoch reading from the "book of remembrance" to his wicked audience, causing them to tremble.</p>
 <p>In the Book of Giants, Enoch similarly reads from a heavenly book—"two stone tablets" given to Mahujah as a witness of "their fallen state and betrayal of their ancient covenants." The Testament of Abraham depicts Enoch as the heavenly being responsible for recording mankind's deeds.</p>
 <p><em>Sources: Jeffrey M. Bradshaw, Enoch's Preaching Mission essay series: Essays <a href="https://interpreterfoundation.org/book-of-moses-essays-005" target="_blank">#5</a>–<a href="https://interpreterfoundation.org/book-of-moses-essays-013" target="_blank">#13</a> (Interpreter Foundation); Hugh W. Nibley, Enoch the Prophet.</em></p>
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>Ancient Near Eastern (ANE) Genealogies</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>The Purpose of Genealogies in the Ancient World</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>Ancient Near Eastern (ANE) Genealogies</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>The Purpose of Genealogies in the Ancient World</span></button>
+<div class="sg-inner-panel">
 <p>In the ancient Near East, genealogies served multiple essential functions far beyond mere record-keeping:</p>
 <table class="info-table">
 <tr>
@@ -971,8 +971,8 @@
 </tr>
 </table>
 </div>
-<button class="inner-accordion"><span>The Sumerian King List: A Striking Parallel</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>The Sumerian King List: A Striking Parallel</span></button>
+<div class="sg-inner-panel">
 <p>One of the most significant ANE parallels to Genesis 5 is the <strong>Sumerian King List</strong>, an ancient Mesopotamian text that records kings who ruled "before the Flood" and those who ruled after. The parallels with Genesis 5 are remarkable:</p>
 <table class="info-table">
 <tr>
@@ -1045,8 +1045,8 @@
 <li>Enoch's knowledge comes from covenant relationship, not divination</li>
 </ul>
 </div>
-<button class="inner-accordion"><span>The Number Ten: Symbolic Completeness</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>The Number Ten: Symbolic Completeness</span></button>
+<div class="sg-inner-panel">
 <p>The ten-generation structure of Genesis 5 (Adam to Noah) is mirrored by a parallel ten-generation structure in Genesis 11 (Shem to Abraham). This is not coincidental:</p>
 <p>``` Adam → Seth → Enosh → Kenan → Mahalalel → Jared → Enoch → Methuselah → Lamech → NOAH (10) ↓ FLOOD ↓ Shem → Arphaxad → Shelah → Eber → Peleg → Reu → Serug → Nahor → Terah → ABRAHAM (10) ```</p>
 <p><strong>The Number Ten in ANE Thought:</strong></p>
@@ -1057,8 +1057,8 @@
 </ul>
 <p><strong>Theological Function:</strong> The ten-generation structure suggests that each era from Adam to Noah, and from Noah to Abraham, represents a <em>complete</em> epoch. When the ten generations are fulfilled, God acts decisively—the Flood in one case, the Abrahamic covenant in the other.</p>
 </div>
-<button class="inner-accordion"><span>Genealogical Formulae: The "And He Died" Pattern</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Genealogical Formulae: The "And He Died" Pattern</span></button>
+<div class="sg-inner-panel">
 <p>Genesis 5 employs a rigid formulaic structure:</p>
 <p>> "[X] lived [Y] years and begat [Z]. And [X] lived after he begat [Z] [W] years, and begat sons and daughters. And all the days of [X] were [Y+W] years: <strong>and he died</strong>."</p>
 <p>This formula repeats with drum-like regularity—"<em>and he died... and he died... and he died</em>"—creating a literary effect. The mortality of humanity, even in an age of extraordinary lifespans, is pounded into the reader's consciousness. Death is universal. Death is relentless. Death is the defining feature of post-Fall existence.</p>
@@ -1067,16 +1067,16 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>The "Book of Remembrance" in Ancient Context</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>Moses 6:5–6 and Sacred Record-Keeping</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>The "Book of Remembrance" in Ancient Context</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Moses 6:5–6 and Sacred Record-Keeping</span></button>
+<div class="sg-inner-panel">
 <p><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p5-p6#p5" target="_blank">Moses 6:5–6</a> introduces a concept with profound implications:</p>
 <p>> "And a book of remembrance was kept, in the which was recorded, in the language of Adam, for it was given unto as many as called upon God to write by the spirit of inspiration; And by them their children were taught to read and write, having a language which was pure and undefiled."</p>
 </div>
-<button class="inner-accordion"><span>Ancient Royal Annals and Temple Records</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Ancient Royal Annals and Temple Records</span></button>
+<div class="sg-inner-panel">
 <p>Sacred record-keeping was central to ANE cultures:</p>
 <table class="info-table">
 <tr>
@@ -1111,8 +1111,8 @@
 </tr>
 </table>
 </div>
-<button class="inner-accordion"><span>The Hebrew Concept: <em>Sefer Zikkaron</em></span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>The Hebrew Concept: <em>Sefer Zikkaron</em></span></button>
+<div class="sg-inner-panel">
 <p>The phrase "book of remembrance" translates the Hebrew <a href="https://www.blueletterbible.org/lexicon/h5612/kjv/wlc/0-1/" target="_blank"><em>sefer zikkaron</em></a> (<span dir="rtl">סֵפֶר זִכָּרוֹן</span>). This exact phrase appears in <a href="https://www.blueletterbible.org/kjv/mal/3/16/s_929016" target="_blank">Malachi 3:16</a>:</p>
 <p>> "Then they that feared the LORD spake often one to another: and the LORD hearkened, and heard it, and a <strong>book of remembrance</strong> was written before him for them that feared the LORD, and that thought upon his name."</p>
 <p><strong>Related Concepts:</strong></p>
@@ -1151,8 +1151,8 @@
 <li><strong>God remembers</strong> — The book mirrors heavenly record-keeping</li>
 </ol>
 </div>
-<button class="inner-accordion"><span>The "Language of Adam": Pure and Undefiled</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>The "Language of Adam": Pure and Undefiled</span></button>
+<div class="sg-inner-panel">
 <p>Moses 6:5–6 specifies that the book was written "in the language of Adam" — a language that was "pure and undefiled."</p>
 <p><strong>ANE and Jewish Traditions about Primordial Language:</strong></p>
 <table class="info-table">
@@ -1181,8 +1181,8 @@
 <p>Zephaniah prophesies that in the last days, God will restore a "pure language" — possibly pointing to a restoration of what was lost at Babel or a renewed unity of understanding among God's covenant people.</p>
 <p><strong>Book of Mormon Parallel:</strong> Mormon describes his people's writing system as "reformed Egyptian" that had been "altered" over time (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/morm/9?lang=eng&id=p32-p33#p32" target="_blank">Mormon 9:32–33</a>). Moroni adds: "none other people knoweth our language" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/morm/9?lang=eng&id=p34#p34" target="_blank">Mormon 9:34</a>). The idea of a sacred language known only to the covenant community parallels Adam's "pure and undefiled" tongue.</p>
 </div>
-<button class="inner-accordion"><span>The Origin of Writing: Divine Gift or Human Invention?</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>The Origin of Writing: Divine Gift or Human Invention?</span></button>
+<div class="sg-inner-panel">
 <p>Moses 6:5's claim of early literacy challenges evolutionary assumptions about writing. Hugh Nibley explores this question in his essay <a href="obsidian://open?vault=K%20Master%20Vault&file=Master%20Project%20Folder%2FOngoing%2FAlphabet%20Book%2FSEMANTIC_COMPANION%2F02_SOURCE_PASSAGES%2FNibley%2FNIBLEY_Genesis_Written_Word" target="_blank">"The Genesis of the Written Word"</a> (<em>Nibley on the Timely and the Timeless</em>, 1978).</p>
 <p><strong>The Archaeological Problem:</strong></p>
 <p>Modern scholarship assumes writing evolved gradually from pictures to phonetic systems over millennia. Yet Nibley documents a striking problem:</p>
@@ -1241,11 +1241,11 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>Patriarchal Lifespans: Historical Perspectives</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>The Long Lives of Genesis 5</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>Patriarchal Lifespans: Historical Perspectives</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>The Long Lives of Genesis 5</span></button>
+<div class="sg-inner-panel">
 <p>The lifespans recorded in Genesis 5 present a puzzle:</p>
 <table class="info-table">
 <tr>
@@ -1305,8 +1305,8 @@
 </tr>
 </table>
 </div>
-<button class="inner-accordion"><span>Three Major Interpretive Approaches</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Three Major Interpretive Approaches</span></button>
+<div class="sg-inner-panel">
 <p><strong>1. Literalist View:</strong> The ages are historically accurate. Proponents suggest:</p>
 <ul>
 <li>Different pre-Flood atmospheric or environmental conditions</li>
@@ -1326,8 +1326,8 @@
 <li>Scribal errors or intentional adjustments may have occurred</li>
 </ul>
 </div>
-<button class="inner-accordion"><span>Latter-day Saint Perspective</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Latter-day Saint Perspective</span></button>
+<div class="sg-inner-panel">
 <p>The Church has not taken an official position on the exact interpretation of the ages. However:</p>
 <ul>
 <li>Prophets have generally accepted the historicity of the patriarchs themselves</li>
@@ -1336,8 +1336,8 @@
 </ul>
 <p><strong>President Brigham Young:</strong> President Young taught that the earth's age and early history may differ from traditional calculations, leaving room for various interpretations while maintaining the scriptural narrative's reliability.</p>
 </div>
-<button class="inner-accordion"><span>The Remarkable Overlap</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>The Remarkable Overlap</span></button>
+<div class="sg-inner-panel">
 <p>If the Genesis 5 chronology is taken at face value, the patriarchs' lifespans create remarkable overlaps:</p>
 <table class="info-table">
 <tr>
@@ -1361,11 +1361,11 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>Enoch in Ancient Traditions</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>The Biblical Enoch (Genesis 5:21–24)</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>Enoch in Ancient Traditions</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>The Biblical Enoch (Genesis 5:21–24)</span></button>
+<div class="sg-inner-panel">
 <p>Genesis devotes only four verses to Enoch, yet his brief mention generated more speculation than almost any other passage:</p>
 <p>> "And Enoch lived sixty and five years, and begat Methuselah: And Enoch <strong>walked with God</strong> after he begat Methuselah three hundred years, and begat sons and daughters: And all the days of Enoch were three hundred sixty and five years: And Enoch walked with God: and <strong>he was not; for God took him</strong>."</p>
 <p><strong>Key Phrases:</strong></p>
@@ -1375,8 +1375,8 @@
 <li>"God took him" — Hebrew: <em>laqach</em> (<span dir="rtl">לָקַח</span>) — the same verb used for Elijah's translation</li>
 </ul>
 </div>
-<button class="inner-accordion"><span>Extra-Biblical Enoch Literature</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Extra-Biblical Enoch Literature</span></button>
+<div class="sg-inner-panel">
 <p>The cryptic Genesis reference generated extensive elaboration in Second Temple Judaism:</p>
 <h4>1 Enoch (Ethiopic Enoch)</h4>
 <p><strong>Date:</strong> Composed in stages, 3rd century BC – 1st century AD <strong>Preservation:</strong> Complete text survives in Ethiopic (Ge'ez); fragments in Aramaic from Qumran</p>
@@ -1433,8 +1433,8 @@
 <li>Serves as heavenly scribe and intermediary</li>
 </ul>
 </div>
-<button class="inner-accordion"><span>The Book of Moses: A Distinctive Portrait</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>The Book of Moses: A Distinctive Portrait</span></button>
+<div class="sg-inner-panel">
 <p>Moses 6–7 presents Enoch differently from these extra-biblical traditions:</p>
 <table class="info-table">
 <tr>
@@ -1466,11 +1466,11 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>Translation vs. Death: Ancient Concepts</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>"God Took Him" — The Hebrew <em>Laqach</em></span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>Translation vs. Death: Ancient Concepts</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>"God Took Him" — The Hebrew <em>Laqach</em></span></button>
+<div class="sg-inner-panel">
 <p>The Hebrew verb <a href="https://www.blueletterbible.org/lexicon/h3947/kjv/wlc/0-1/" target="_blank"><em>laqach</em></a> (<span dir="rtl">לָקַח</span>) in <a href="https://www.blueletterbible.org/kjv/gen/5/24/s_5024" target="_blank">Genesis 5:24</a> ("God took him") is the same word used for:</p>
 <ul>
 <li>Elijah being "taken" in <a href="https://www.blueletterbible.org/kjv/2ki/2/3/s_315003" target="_blank">2 Kings 2:3, 5, 9–10</a></li>
@@ -1479,8 +1479,8 @@
 </ul>
 <p><strong>The Range of Meaning:</strong> <em>Laqach</em> suggests acquisition, selection, removal from one state to another. When God <em>laqach</em> Enoch, He removed him from mortality without death—selecting him for a different state of existence.</p>
 </div>
-<button class="inner-accordion"><span>Translation in ANE and Mediterranean Traditions</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Translation in ANE and Mediterranean Traditions</span></button>
+<div class="sg-inner-panel">
 <p>The idea of humans being taken to divine realms without dying appears across cultures:</p>
 <table class="info-table">
 <tr>
@@ -1526,8 +1526,8 @@
 <li><strong>Prophetic function:</strong> Enoch is taken to continue serving God, not to escape mortality</li>
 </ul>
 </div>
-<button class="inner-accordion"><span>Latter-day Understanding of Translation</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Latter-day Understanding of Translation</span></button>
+<div class="sg-inner-panel">
 <p>Joseph Smith clarified the doctrine of translation:</p>
 <p>> "Many have supposed that the doctrine of translation was a doctrine whereby men were taken immediately into the presence of God, and into an eternal fulness, but this is a mistaken idea. Their place of habitation is that of the terrestrial order, and a place prepared for such characters He held in reserve to be ministering angels unto many planets." (TPJS, p. 170)</p>
 <p><strong>Key Points:</strong></p>
@@ -1540,11 +1540,11 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>The "Walking with God" Pattern</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>Hebrew Analysis of <em>Halak</em> + <em>Eth</em></span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>The "Walking with God" Pattern</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Hebrew Analysis of <em>Halak</em> + <em>Eth</em></span></button>
+<div class="sg-inner-panel">
 <p>The phrase "walked with God" deserves careful attention:</p>
 <p><strong>Hebrew:</strong> <span dir="rtl">וַיִּתְהַלֵּךְ... אֶת־הָאֱלֹהִים</span> (<em>wayyithallekh... eth ha-Elohim</em>)</p>
 <table class="info-table">
@@ -1571,8 +1571,8 @@
 </table>
 <p><strong>The Hithpael Stem:</strong> The Hithpael indicates not a single walk but a lifestyle—continuous, habitual walking. Enoch's entire life was characterized by this intimate companionship.</p>
 </div>
-<button class="inner-accordion"><span>Three Prepositions, Three Relationships</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Three Prepositions, Three Relationships</span></button>
+<div class="sg-inner-panel">
 <p>Scripture distinguishes between walking <em>with</em>, <em>before</em>, and <em>after</em> God:</p>
 <table class="info-table">
 <tr>
@@ -1602,8 +1602,8 @@
 </table>
 <p>*<em>The Preposition </em>Eth<em>:</em><em> Walking </em>with<em> (</em>eth<em>) God suggests the closest relationship—not following behind, not living under observation, but walking </em>alongside*. This is the language of friendship, partnership, shared direction.</p>
 </div>
-<button class="inner-accordion"><span>The Septuagint's Remarkable Translation</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>The Septuagint's Remarkable Translation</span></button>
+<div class="sg-inner-panel">
 <p>The Greek Septuagint (LXX) translates "walked with God" not literally but interpretively:</p>
 <p><strong>Genesis 5:22 LXX:</strong> <em>euērestēsen... tō theō</em> (εὐηρέστησεν... τῷ θεῷ) — "<strong>pleased God</strong>"</p>
 <p>This interpretation shapes <a href="https://www.blueletterbible.org/kjv/heb/11/5/s_1144005" target="_blank">Hebrews 11:5</a>: > "By faith Enoch was translated that he should not see death; and was not found, because God had translated him: for before his translation he had this testimony, that <strong>he pleased God</strong>."</p>
@@ -1611,17 +1611,17 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>The Reluctant Prophet Pattern</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>Enoch's Call and Objection (Moses 6:26–34)</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>The Reluctant Prophet Pattern</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Enoch's Call and Objection (Moses 6:26–34)</span></button>
+<div class="sg-inner-panel">
 <p>Moses 6 reveals Enoch as a reluctant prophet:</p>
 <p>> "And it came to pass that Enoch journeyed in the land... and as he journeyed... the Spirit of God descended out of heaven, and abode upon him. And he heard a voice from heaven, saying: <strong>Enoch, my son, prophesy unto this people</strong>, and say unto them—Repent..." (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p26-p27#p26" target="_blank">Moses 6:26–27</a>)</p>
 <p><strong>Enoch's Response:</strong> > "And when Enoch had heard these words, he bowed himself to the earth, before the Lord, and spake before the Lord, saying: <strong>Why is it that I have found favor in thy sight, and am but a lad, and all the people hate me; for I am slow of speech</strong>; wherefore am I thy servant?" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p31#p31" target="_blank">Moses 6:31</a>)</p>
 </div>
-<button class="inner-accordion"><span>The Biblical Pattern of Prophetic Inadequacy</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>The Biblical Pattern of Prophetic Inadequacy</span></button>
+<div class="sg-inner-panel">
 <p>Enoch's objection follows a pattern seen throughout scripture:</p>
 <table class="info-table">
 <tr>
@@ -1669,8 +1669,8 @@
 </table>
 <p><strong>The Theological Point:</strong> God does not call the qualified; He qualifies the called. Human inadequacy becomes the canvas for divine empowerment. The pattern reveals that prophetic authority comes not from human credentials but from divine commissioning.</p>
 </div>
-<button class="inner-accordion"><span>God's Response to Enoch</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>God's Response to Enoch</span></button>
+<div class="sg-inner-panel">
 <p>> "And the Lord said unto Enoch: Go forth and do as I have commanded thee, and <strong>no man shall pierce thee</strong>. Open thy mouth, and <strong>it shall be filled</strong>, and I will give thee utterance... Behold my Spirit is upon thee, wherefore all thy words will I justify; and the mountains shall flee before thee, and the rivers shall turn from their course; and thou shalt abide in me, and I in thee; therefore <strong>walk with me</strong>." (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p32-p34#p32" target="_blank">Moses 6:32–34</a>)</p>
 <p><strong>Key Elements:</strong></p>
 <ul>
@@ -1683,16 +1683,16 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>Adam's Gospel Knowledge (Moses 6:48–68)</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>The Antiquity of the Gospel</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>Adam's Gospel Knowledge (Moses 6:48–68)</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>The Antiquity of the Gospel</span></button>
+<div class="sg-inner-panel">
 <p>One of the most significant contributions of Moses 6 is revealing that the gospel of Jesus Christ was known from the beginning:</p>
 <p>> "And he also said unto him: If thou wilt turn unto me, and hearken unto my voice, and believe, and repent of all thy transgressions, and be baptized, even in water, in the name of mine Only Begotten Son, who is full of grace and truth, which is <strong>Jesus Christ</strong>, the only name which shall be given under heaven, whereby salvation shall come unto the children of men, ye shall receive the gift of the Holy Ghost..." (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p52#p52" target="_blank">Moses 6:52</a>)</p>
 </div>
-<button class="inner-accordion"><span>The Doctrines Adam Knew</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>The Doctrines Adam Knew</span></button>
+<div class="sg-inner-panel">
 <table class="info-table">
 <tr>
 <th>Doctrine</th>
@@ -1746,8 +1746,8 @@
 </tr>
 </table>
 </div>
-<button class="inner-accordion"><span>The Three-Part Birth Symbolism</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>The Three-Part Birth Symbolism</span></button>
+<div class="sg-inner-panel">
 <p><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p59-p60#p59" target="_blank">Moses 6:59–60</a> presents a remarkable threefold birth symbolism:</p>
 <p>> "By reason of transgression cometh the fall, which fall bringeth death, and inasmuch as ye were born into the world by water, and blood, and the spirit, which I have made, and so became of dust a living soul, even so ye must be born again into the kingdom of heaven, <strong>of water, and of the Spirit</strong>, and be cleansed by blood, even the blood of mine Only Begotten..."</p>
 <table class="info-table">
@@ -1772,9 +1772,9 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>Questions for Further Study</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Questions for Further Study</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <ol>
 <li><strong>Ancient Parallels:</strong> What does it mean for your testimony that specific details in Moses 6 (wild man, rivers turned, divine protection) have parallels in texts discovered after Joseph Smith's death?</li>
 <li><strong>Walking with God:</strong> What does it mean that Enoch "walked <em>with</em> God" (אֵת) rather than "before" or "after" God? How might you walk <em>with</em> God today?</li>
@@ -1784,26 +1784,26 @@
 </ol>
 </div>
 </div>
-<button class="sub-accordion"><span>For Further Study</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>Recommended Resources</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>For Further Study</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Recommended Resources</span></button>
+<div class="sg-inner-panel">
 <ul>
 <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bd/enoch?lang=eng" target="_blank">Bible Dictionary: "Enoch"</a></li>
 <li><a href="https://www.churchofjesuschrist.org/study/scriptures/gs/translated-beings?lang=eng" target="_blank">Guide to the Scriptures: "Translation"</a></li>
 <li><a href="https://www.churchofjesuschrist.org/study/manual/the-pearl-of-great-price-student-manual-2018/the-book-of-moses/moses-6?lang=eng" target="_blank">Pearl of Great Price Student Manual: Moses 6</a></li>
 </ul>
 </div>
-<button class="inner-accordion"><span>Bible Project Videos</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Bible Project Videos</span></button>
+<div class="sg-inner-panel">
 <ul>
 <li><a href="https://www.youtube.com/watch?v=GQI72THyO5I" target="_blank">Genesis 1–11 Overview</a> — Includes genealogy context</li>
 <li><a href="https://www.youtube.com/watch?v=yEJdqjkCQ9g" target="_blank">The Book of Enoch Explained</a> — Extra-biblical traditions (not Bible Project; use discernment)</li>
 </ul>
 </div>
-<button class="inner-accordion"><span>Academic Resources</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Academic Resources</span></button>
+<div class="sg-inner-panel">
 <ul>
 <li><a href="https://scripturecentral.org/" target="_blank">Scripture Central: Moses 6 Commentary</a></li>
 <li><a href="https://www.pearlofgreatpricecentral.org/" target="_blank">Pearl of Great Price Central: Enoch Resources</a></li>
@@ -1811,8 +1811,8 @@
 <li>George W.E. Nickelsburg, <em>1 Enoch: A Commentary</em> — Standard academic commentary</li>
 </ul>
 </div>
-<button class="inner-accordion"><span>Hugh Nibley on Writing Origins</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Hugh Nibley on Writing Origins</span></button>
+<div class="sg-inner-panel">
 <ul>
 <li><strong>"Genesis of the Written Word"</strong> — In <em>Nibley on the Timely and the Timeless</em> (1978), pp. 111–141. Challenges evolutionary assumptions about writing's development; documents universal ancient testimony that writing came from heaven. <a href="obsidian://open?vault=K%20Master%20Vault&file=Master%20Project%20Folder%2FOngoing%2FAlphabet%20Book%2FSEMANTIC_COMPANION%2F02_SOURCE_PASSAGES%2FNibley%2FNIBLEY_Genesis_Written_Word" target="_blank">[Vault Notes</a>]</li>
 <li>Key arguments:</li>
@@ -1823,8 +1823,8 @@
 <li>Jewish tradition credits Abraham (or Enoch) as the alphabet inventor</li>
 </ul>
 </div>
-<button class="inner-accordion"><span>Interpreter Foundation Resources</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Interpreter Foundation Resources</span></button>
+<div class="sg-inner-panel">
 <ul>
 <li><a href="https://interpreterfoundation.org/book-of-moses-essays/" target="_blank">Book of Moses Essay Series</a> — Jeffrey M. Bradshaw's comprehensive essay series</li>
 <li><a href="https://interpreterfoundation.org/book-of-moses-essays-004" target="_blank">Essay #4: Enoch's Power Over the Elements</a> — Mandaean parallels</li>
@@ -1834,8 +1834,8 @@
 <li><a href="https://archive.interpreterfoundation.org/nibley/audio/Pearl-of-Great-Price-Class/PGP-22-Enoch.mp3" target="_blank">Hugh Nibley Lecture 22: Enoch</a> — Audio lecture on Enoch traditions</li>
 </ul>
 </div>
-<button class="inner-accordion"><span>Babylonian Tablets of Destiny</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Babylonian Tablets of Destiny</span></button>
+<div class="sg-inner-panel">
 <p>The "Tablets of Destiny" mentioned by Nibley appear in two major Mesopotamian myths. These tablets conferred supreme authority—"whoever possessed the tablet ruled the universe."</p>
 <p><strong>Primary Source Translations (Free Online):</strong></p>
 <ul>
@@ -1852,8 +1852,8 @@
 <li>Sophus Helle, <em>Enuma Elish</em> (Bloomsbury, 2024) — Most recent translation</li>
 </ul>
 </div>
-<button class="inner-accordion"><span>Primary Texts</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Primary Texts</span></button>
+<div class="sg-inner-panel">
 <ul>
 <li><a href="https://www.sacred-texts.com/bib/boe/index.htm" target="_blank">1 Enoch (R.H. Charles translation)</a> — Full text of Ethiopic Enoch</li>
 <li><a href="https://www.blueletterbible.org/kjv/gen/5/1/s_5001" target="_blank">Blue Letter Bible: Genesis 5</a> — Hebrew text with lexicon</li>
@@ -1865,12 +1865,12 @@
         </div>
 
         <!-- SECTION 3: KEY PASSAGES STUDY -->
-        <button class="accordion-section">3. Key Passages Study</button>
+        <button class="sg-accordion-section">3. Key Passages Study</button>
         <div class="sg-panel">
             <div class="panel-content">
-                <button class="sub-accordion"><span>Genesis 5; Moses 6 | Adam's Posterity and the Gospel's Antiquity</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+                <button class="sg-sub-accordion"><span>Genesis 5; Moses 6 | Adam's Posterity and the Gospel's Antiquity</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p><strong>Key Passages in This Study:</strong></p>
 <ol>
 <li><a href="#passage-1-the-book-of-remembrance" target="_blank">The Book of Remembrance</a> — Moses 6:5–6</li>
@@ -1881,9 +1881,9 @@
 </ol>
 </div>
 </div>
-<button class="sub-accordion"><span>Selection Criteria</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Selection Criteria</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p>This week's key passages were selected based on:</p>
 <ol>
 <li><strong>Foundational Doctrine</strong> — Core teachings about genealogy, record-keeping, and the antiquity of the gospel</li>
@@ -1894,15 +1894,15 @@
 </ol>
 </div>
 </div>
-<button class="sub-accordion"><span>Passage 1: The Book of Remembrance</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>Complete Scripture Text</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>Passage 1: The Book of Remembrance</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Complete Scripture Text</span></button>
+<div class="sg-inner-panel">
 <p><strong>Moses 6:5–6:</strong> > ⁵ And a <strong>book of remembrance</strong> was kept, in the which was recorded, <strong>in the language of Adam</strong>, for it was given unto as many as called upon God to write by the spirit of inspiration; > > ⁶ And by them their children were <strong>taught to read and write</strong>, having a language which was <strong>pure and undefiled</strong>.</p>
 </div>
-<button class="inner-accordion"><span>Literary Structure Analysis</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Literary Structure Analysis</span></button>
+<div class="sg-inner-panel">
 <p><strong>The Elements of Sacred Record-Keeping:</strong></p>
 <p>Moses 6:5–6 presents four interconnected components of the earliest record-keeping:</p>
 <table class="info-table">
@@ -1937,8 +1937,8 @@
 <p>> "Then they that feared the LORD spake often one to another: and the LORD hearkened, and heard it, and a <strong>book of remembrance</strong> was written before him for them that feared the LORD, and that thought upon his name."</p>
 <p>Both passages describe heavenly record-keeping that mirrors earthly covenant faithfulness.</p>
 </div>
-<button class="inner-accordion"><span>Hebrew Insights</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Hebrew Insights</span></button>
+<div class="sg-inner-panel">
 <table class="info-table">
 <tr>
 <th>Hebrew</th>
@@ -2003,8 +2003,8 @@
 <p>The Book of Moses account most closely resembles a <strong>Book of Deeds</strong>—a heavenly record that Enoch reads aloud, causing his wicked audience to tremble. The Zohar teaches that Enoch had a copy of the "book of the generations of Adam" from the same heavenly source that revealed it to Adam.</p>
 <p><em>Source: Jeffrey M. Bradshaw, "<a href="https://interpreterfoundation.org/book-of-moses-essays-010" target="_blank">Enoch Reads from a Book of Remembrance</a>" (Interpreter Foundation, Essay #10)</em></p>
 </div>
-<button class="inner-accordion"><span>Historical & Cultural Context</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Historical & Cultural Context</span></button>
+<div class="sg-inner-panel">
 <p><strong>The Silas John Case: A Modern Parallel</strong></p>
 <p>In his essay "Genesis of the Written Word," Hugh Nibley opens with a remarkable case: In 1904, an Apache named <strong>Silas John</strong> claimed to receive a complete writing system through divine revelation. Documented in <em>Science</em> magazine, the system proved "highly efficient" and functional—emerging suddenly, with no evolutionary development, for a sacred purpose.</p>
 <p>Nibley's point: If a complete writing system could emerge through revelation in 1904 to a "semiliterate Apache," why couldn't it have happened earlier? Moses 6:5's claim that Adam's posterity wrote "by the spirit of inspiration" describes exactly this pattern.</p>
@@ -2024,8 +2024,8 @@
 <li><strong>Zephaniah's prophecy:</strong> God will restore "a pure language" (<a href="https://www.blueletterbible.org/kjv/zep/3/9/s_906009" target="_blank">Zephaniah 3:9</a>)</li>
 </ul>
 </div>
-<button class="inner-accordion"><span>Doctrinal Analysis</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Doctrinal Analysis</span></button>
+<div class="sg-inner-panel">
 <p><strong>What This Passage Establishes:</strong></p>
 <ol>
 <li><strong>Literacy from the Beginning:</strong> Contrary to assumptions that writing was a late human development, Moses 6 claims Adam's descendants could read and write.</li>
@@ -2036,8 +2036,8 @@
 <p><strong>Temple Connection:</strong></p>
 <p>The "book of remembrance" concept connects directly to temple work. <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/128?lang=eng&id=p24#p24" target="_blank">D&C 128:24</a> teaches that temple records on earth correspond to records in heaven: "Whatsoever you record on earth shall be recorded in heaven."</p>
 </div>
-<button class="inner-accordion"><span>Cross-References</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Cross-References</span></button>
+<div class="sg-inner-panel">
 <table class="info-table">
 <tr>
 <th>Scripture</th>
@@ -2065,21 +2065,21 @@
 </tr>
 </table>
 </div>
-<button class="inner-accordion"><span>Latter-day Saint Connections</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Latter-day Saint Connections</span></button>
+<div class="sg-inner-panel">
 <p><strong>Family History and Temple Work:</strong></p>
 <p>The "book of remembrance" is the scriptural foundation for modern family history work. Adam's descendants kept records; we continue that pattern. The names recorded in temple ordinances participate in the heavenly record-keeping begun in Eden.</p>
 <p><strong>Personal Journals:</strong></p>
 <p>Prophets have consistently encouraged journal-keeping as a continuation of this ancient pattern:</p>
 <p>> "Get a notebook... and begin to write to yourself... Write your blessings to yourself. Note your achievements. You will find as time goes on that you can indeed write... It will become increasingly easier to write." > > — President Spencer W. Kimball, "The Angels May Quote from It," <em>New Era</em>, February 1975</p>
 </div>
-<button class="inner-accordion"><span>Modern Prophets on This Passage</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Modern Prophets on This Passage</span></button>
+<div class="sg-inner-panel">
 <p>> "A young man I know is compiling a 'Dad journal.' Years ago, a car hit and killed his father. Now, to know his father, this courageous young man is preserving childhood memories and stories from family and friends."</p>
 <p><strong>Reference (General Conference):</strong> Elder Gerrit W. Gong, "We Each Have a Story," General Conference (April 2022), para. 18. Full talk: https://www.churchofjesuschrist.org/study/general-conference/2022/04/26gong?lang=eng</p>
 </div>
-<button class="inner-accordion"><span>Reflection Questions</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Reflection Questions</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>What does it mean that Adam's family wrote "by the spirit of inspiration"? How does this apply to your own journal-keeping?</li>
 <li>Why would God preserve the concept of a "pure and undefiled" language?</li>
@@ -2090,15 +2090,15 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>Passage 2: Enoch's Walk with God</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>Complete Scripture Text</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>Passage 2: Enoch's Walk with God</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Complete Scripture Text</span></button>
+<div class="sg-inner-panel">
 <p><strong>Genesis 5:21–24 (KJV):</strong> > ²¹ And Enoch lived sixty and five years, and begat Methuselah: > > ²² And Enoch <strong>walked with God</strong> after he begat Methuselah three hundred years, and begat sons and daughters: > > ²³ And all the days of Enoch were three hundred sixty and five years: > > ²⁴ And Enoch walked with God: and <strong>he was not</strong>; for <strong>God took him</strong>.</p>
 </div>
-<button class="inner-accordion"><span>Literary Structure Analysis</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Literary Structure Analysis</span></button>
+<div class="sg-inner-panel">
 <p><strong>The Disruption of the Death Formula:</strong></p>
 <p>Genesis 5 employs a rigid pattern for each patriarch:</p>
 <ol>
@@ -2114,8 +2114,8 @@
 <p><strong>The 365-Year Lifespan:</strong></p>
 <p>Enoch lived 365 years — the number of days in a solar year. Whether literal or symbolic, this number connects Enoch to cosmic order, heavenly cycles, and completeness.</p>
 </div>
-<button class="inner-accordion"><span>Hebrew Insights</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Hebrew Insights</span></button>
+<div class="sg-inner-panel">
 <table class="info-table">
 <tr>
 <th>Hebrew</th>
@@ -2189,8 +2189,8 @@
 <p>This interpretation shapes <a href="https://www.blueletterbible.org/kjv/heb/11/5/s_1144005" target="_blank">Hebrews 11:5</a>: > "By faith Enoch was translated that he should not see death; and was not found, because God had translated him: for before his translation he had this testimony, that <strong>he pleased God</strong>."</p>
 <p>The LXX translators understood "walking with God" as a life that delighted the Lord.</p>
 </div>
-<button class="inner-accordion"><span>Historical & Cultural Context</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Historical & Cultural Context</span></button>
+<div class="sg-inner-panel">
 <p><strong>"God Took Him" — Translation Traditions:</strong></p>
 <p>The Hebrew verb <em>laqach</em> (<span dir="rtl">לָקַח</span>) is the same word used for:</p>
 <ul>
@@ -2239,8 +2239,8 @@
 <li>His translation serves <strong>prophetic purposes</strong>, not escape from mortality</li>
 </ul>
 </div>
-<button class="inner-accordion"><span>Doctrinal Analysis</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Doctrinal Analysis</span></button>
+<div class="sg-inner-panel">
 <p><strong>Why Only Two "Walked with God":</strong></p>
 <p>Genesis reserves the phrase "walked with God" (<em>eth ha-Elohim</em>) for only two people:</p>
 <ol>
@@ -2262,8 +2262,8 @@
 <li>Later examples: Elijah, Three Nephites, John the Beloved</li>
 </ul>
 </div>
-<button class="inner-accordion"><span>Cross-References</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Cross-References</span></button>
+<div class="sg-inner-panel">
 <table class="info-table">
 <tr>
 <th>Scripture</th>
@@ -2291,20 +2291,20 @@
 </tr>
 </table>
 </div>
-<button class="inner-accordion"><span>Latter-day Saint Connections</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Latter-day Saint Connections</span></button>
+<div class="sg-inner-panel">
 <p><strong>Temple Language:</strong></p>
 <p>"Walked with God... was before his face continually" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107?lang=eng&id=p49#p49" target="_blank">D&C 107:49</a>) is temple language. To be "before the face" of God describes the ultimate goal of temple worship — returning to God's presence.</p>
 <p><strong>The Pattern for Zion:</strong></p>
 <p>Enoch's walk with God wasn't merely individual. <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=p69#p69" target="_blank">Moses 7:69</a> extends the pattern: "And Enoch <strong>and all his people</strong> walked with God." The entire city achieved this relationship — the pattern for the last-days Zion.</p>
 </div>
-<button class="inner-accordion"><span>Modern Prophets on This Passage</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Modern Prophets on This Passage</span></button>
+<div class="sg-inner-panel">
 <p>> "We know that the Savior will come to a people who have been gathered and prepared to live as the people did in the city of Enoch. The people there were united in faith in Jesus Christ and had become so completely pure that they were taken up to heaven."</p>
 <p><strong>Reference (General Conference):</strong> President Henry B. Eyring, "Sisters in Zion," General Conference (October 2020), para. 2. Full talk: https://www.churchofjesuschrist.org/study/general-conference/2020/10/35eyring?lang=eng</p>
 </div>
-<button class="inner-accordion"><span>Reflection Questions</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Reflection Questions</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>What does it mean to "walk with" God rather than "before" or "after" Him?</li>
 <li>Why does Genesis 5's "and he died" pattern make Enoch's exception so striking?</li>
@@ -2315,15 +2315,15 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>Passage 3: Enoch's Prophetic Call</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>Complete Scripture Text</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>Passage 3: Enoch's Prophetic Call</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Complete Scripture Text</span></button>
+<div class="sg-inner-panel">
 <p><strong>Moses 6:26–27, 31–34:</strong> > ²⁶ And it came to pass that Enoch journeyed in the land, among the people... and as he journeyed, the <strong>Spirit of God descended out of heaven</strong>, and abode upon him. > > ²⁷ And he heard a voice from heaven, saying: <strong>Enoch, my son</strong>, prophesy unto this people, and say unto them—Repent... > > ³¹ And when Enoch had heard these words, he bowed himself to the earth, before the Lord, and spake before the Lord, saying: <strong>Why is it that I have found favor in thy sight, and am but a lad</strong>, and all the people hate me; <strong>for I am slow of speech</strong>; wherefore am I thy servant? > > ³² And the Lord said unto Enoch: Go forth and do as I have commanded thee, and <strong>no man shall pierce thee</strong>. Open thy mouth, and <strong>it shall be filled</strong>, and I will give thee utterance... > > ³³ Behold <strong>my Spirit is upon thee</strong>, wherefore all thy words will I justify; and the mountains shall flee before thee, and the rivers shall turn from their course; > > ³⁴ And thou shalt abide in me, and I in thee; therefore <strong>walk with me</strong>.</p>
 </div>
-<button class="inner-accordion"><span>Literary Structure Analysis</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Literary Structure Analysis</span></button>
+<div class="sg-inner-panel">
 <p><strong>The Call Narrative Pattern:</strong></p>
 <p>Enoch's call follows the classic prophetic call pattern seen throughout scripture:</p>
 <table class="info-table">
@@ -2367,8 +2367,8 @@
 <p><strong>The Divine Invitation:</strong></p>
 <p>The call concludes with the remarkable phrase "therefore <strong>walk with me</strong>" (v. 34). This connects Enoch's commission to the Genesis 5 description ("walked with God"). The invitation to intimate companionship is both the source and the result of Enoch's prophetic power.</p>
 </div>
-<button class="inner-accordion"><span>Hebrew Insights</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Hebrew Insights</span></button>
+<div class="sg-inner-panel">
 <table class="info-table">
 <tr>
 <th>Term</th>
@@ -2416,8 +2416,8 @@
 <p>Non-canonical Enoch sources corroborate that Enoch had speech challenges. Some accounts portray Enoch as "deliberate in his speech" and "often silent." Being "slow of speech" is not a common motif among biblical prophets—only Moses and Enoch are specifically described this way. In both cases, "it is the stammerer whose task it is to bring down God's word to the human world."</p>
 <p><em>Source: Jeffrey M. Bradshaw, "<a href="https://interpreterfoundation.org/book-of-moses-essays-003" target="_blank">Enoch As a Lad</a>" (Essay #3) and "<a href="https://interpreterfoundation.org/book-of-moses-essays-002" target="_blank">The Opening of Enoch's Mouth and Eyes</a>" (Essay #2), Interpreter Foundation</em></p>
 </div>
-<button class="inner-accordion"><span>Historical & Cultural Context</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Historical & Cultural Context</span></button>
+<div class="sg-inner-panel">
 <p><strong>The Reluctant Prophet Pattern:</strong></p>
 <p>God consistently calls those who feel unqualified:</p>
 <table class="info-table">
@@ -2467,8 +2467,8 @@
 <p><strong>The Theological Point:</strong></p>
 <p>God does not call the qualified; He qualifies the called. Human inadequacy becomes the canvas for divine empowerment.</p>
 </div>
-<button class="inner-accordion"><span>Doctrinal Analysis</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Doctrinal Analysis</span></button>
+<div class="sg-inner-panel">
 <p><strong>Four Elements of Divine Enabling:</strong></p>
 <p>Moses 6:32–34 reveals four components of God's response to prophetic inadequacy:</p>
 <table class="info-table">
@@ -2501,8 +2501,8 @@
 <p><strong>"Walk with Me":</strong></p>
 <p>The invitation "walk with me" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p34#p34" target="_blank">Moses 6:34</a>) is remarkable. God doesn't merely command Enoch to obey; He invites him into intimate relationship. This invitation is the key that unlocks Enoch's transformation from reluctant youth to mighty prophet.</p>
 </div>
-<button class="inner-accordion"><span>Cross-References</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Cross-References</span></button>
+<div class="sg-inner-panel">
 <table class="info-table">
 <tr>
 <th>Scripture</th>
@@ -2530,15 +2530,15 @@
 </tr>
 </table>
 </div>
-<button class="inner-accordion"><span>Modern Prophets on This Passage</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Modern Prophets on This Passage</span></button>
+<div class="sg-inner-panel">
 <p>> "Please notice that at the time of Enoch's call to serve, he became acutely aware of his personal inadequacies and limitations. And I suspect all of us at one time or another in our Church service have felt much like Enoch... Enoch ultimately became a mighty prophet and a tool in God's hands to accomplish a great work, but he did not start his ministry that way! Rather, his capacity over time was magnified as he learned to abide in and walk with the Son of God."</p>
 <p><strong>Reference (General Conference):</strong> Elder David A. Bednar, "Abide in Me, and I in You; Therefore Walk with Me," General Conference (April 2023), para. 4, 7. Full talk: https://www.churchofjesuschrist.org/study/general-conference/2023/04/57bednar?lang=eng</p>
 <p>> "When the Lord called Enoch to journey through the land and testify of Him, Enoch hesitated. He was just a lad, slow of speech. How could he walk that path in his condition? He was blinded by what was broken in him. The Lord's answer to what hindered him was simple and immediate: 'Walk with me.'"</p>
 <p><strong>Reference (General Conference):</strong> Sister Emily Belle Freeman, "Walking in Covenant Relationship with Christ," General Conference (October 2023), para. 6. Full talk: https://www.churchofjesuschrist.org/study/general-conference/2023/10/42freeman?lang=eng</p>
 </div>
-<button class="inner-accordion"><span>Reflection Questions</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Reflection Questions</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>Why does God consistently choose those who feel inadequate?</li>
 <li>How does the invitation "walk with me" differ from a command to obey?</li>
@@ -2549,15 +2549,15 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>Passage 4: The Doctrine of the Fall Explained</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>Complete Scripture Text</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>Passage 4: The Doctrine of the Fall Explained</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Complete Scripture Text</span></button>
+<div class="sg-inner-panel">
 <p><strong>Moses 6:48–52, 55–56:</strong> > ⁴⁸ And he said unto them: <strong>Because that Adam fell, we are</strong>; and by his fall came death; and we are made partakers of misery and woe. > > ⁴⁹ Behold <strong>Satan hath come among the children of men</strong>, and tempteth them to worship him; and men have become <strong>carnal, sensual, and devilish</strong>, and are shut out from the presence of God. > > ⁵⁰ But God hath made known unto our fathers that <strong>all men must repent</strong>. > > ⁵¹ And he called upon our father Adam by his own voice, saying: <strong>I am God; I made the world, and men before they were in the flesh</strong>. > > ⁵² And he also said unto him: If thou wilt turn unto me, and hearken unto my voice, and believe, and repent of all thy transgressions, and be baptized, even in water, in the name of mine Only Begotten Son, who is full of grace and truth, which is <strong>Jesus Christ</strong>, the only name which shall be given under heaven, whereby salvation shall come unto the children of men, ye shall receive the gift of the Holy Ghost... > > ⁵⁵ And the Lord spake unto Adam, saying: Inasmuch as thy children are <strong>conceived in sin</strong>, even so when they begin to grow up, <strong>sin conceiveth in their hearts</strong>, and they taste the bitter, that they may know to prize the good. > > ⁵⁶ And it is given unto them to know good from evil; wherefore they are <strong>agents unto themselves</strong>, and I have given unto you another law and commandment.</p>
 </div>
-<button class="inner-accordion"><span>Literary Structure Analysis</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Literary Structure Analysis</span></button>
+<div class="sg-inner-panel">
 <p><strong>The Doctrinal Progression:</strong></p>
 <p>Moses 6:48–56 presents a complete theological framework:</p>
 <table class="info-table">
@@ -2599,8 +2599,8 @@
 </table>
 <p>This is one of the clearest, most systematic presentations of the plan of salvation in all scripture — and it was given to Adam.</p>
 </div>
-<button class="inner-accordion"><span>Hebrew Insights</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Hebrew Insights</span></button>
+<div class="sg-inner-panel">
 <table class="info-table">
 <tr>
 <th>English</th>
@@ -2630,8 +2630,8 @@
 <p><strong>"Conceived in Sin":</strong></p>
 <p>Moses 6:55's phrase "conceived in sin" has been misunderstood. Note: it does NOT mean children are sinful at birth. The very next verse (6:54) clarifies: children are "whole from the foundation of the world." Rather, "conceived in sin" describes the mortal environment into which children are born — a fallen world where sin exists.</p>
 </div>
-<button class="inner-accordion"><span>Historical & Cultural Context</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Historical & Cultural Context</span></button>
+<div class="sg-inner-panel">
 <p><strong>The Antiquity of the Gospel:</strong></p>
 <p>Moses 6 makes a revolutionary claim: the full gospel — including Christ's name, baptism, and the Holy Ghost — was known to Adam. This challenges evolutionary assumptions about religious development:</p>
 <table class="info-table">
@@ -2657,8 +2657,8 @@
 </tr>
 </table>
 </div>
-<button class="inner-accordion"><span>Doctrinal Analysis</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Doctrinal Analysis</span></button>
+<div class="sg-inner-panel">
 <p><strong>"Because Adam Fell, We Are":</strong></p>
 <p>This phrase (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p48#p48" target="_blank">Moses 6:48</a>) is the Latter-day Saint answer to Augustine's "original sin." Rather than condemning humanity, the Fall enabled human existence. Compare <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/2?lang=eng&id=p25#p25" target="_blank">2 Nephi 2:25</a>: "Adam fell that men might be."</p>
 <p><strong>Christ Named to Adam:</strong></p>
@@ -2668,8 +2668,8 @@
 <p><strong>Agency:</strong></p>
 <p>Moses 6:56 introduces the crucial term "agents unto themselves" — the doctrine of moral agency. Humans are not determined by nature or environment; they are genuine moral actors who choose between good and evil.</p>
 </div>
-<button class="inner-accordion"><span>Cross-References</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Cross-References</span></button>
+<div class="sg-inner-panel">
 <table class="info-table">
 <tr>
 <th>Scripture</th>
@@ -2697,15 +2697,15 @@
 </tr>
 </table>
 </div>
-<button class="inner-accordion"><span>Modern Prophets on This Passage</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Modern Prophets on This Passage</span></button>
+<div class="sg-inner-panel">
 <p>> "It takes persistent, rigorous spiritual work to repent and to put off the natural man through the Atonement of Jesus Christ."</p>
 <p><strong>Reference (General Conference):</strong> President Russell M. Nelson, "Let God Prevail," General Conference (October 2020), para. 29. Full talk: https://www.churchofjesuschrist.org/study/general-conference/2020/10/46nelson?lang=eng</p>
 <p>> "Some are wont to say, 'The Savior loves me just as I am,' and that is certainly true. But He cannot take any of us into His kingdom just as we are, 'for no unclean thing can dwell there, or dwell in his presence' [Moses 6:57]. Our sins must first be resolved."</p>
 <p><strong>Reference (General Conference):</strong> Elder Kevin S. Hamilton (quoting Elder D. Todd Christofferson), "Then Will I Make Weak Things Become Strong," General Conference (April 2022), para. 11. Full talk: https://www.churchofjesuschrist.org/study/general-conference/2022/04/28hamilton?lang=eng</p>
 </div>
-<button class="inner-accordion"><span>Reflection Questions</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Reflection Questions</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>How does "Because Adam fell, we are" differ from the doctrine of "original sin"?</li>
 <li>What does it mean that Adam knew Christ by name?</li>
@@ -2716,15 +2716,15 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>Passage 5: Adam's Baptism and the Holy Ghost</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>Complete Scripture Text</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>Passage 5: Adam's Baptism and the Holy Ghost</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Complete Scripture Text</span></button>
+<div class="sg-inner-panel">
 <p><strong>Moses 6:64–68:</strong> > ⁶⁴ And it came to pass, when the Lord had spoken with Adam, our father, that Adam cried unto the Lord, and he was <strong>caught away by the Spirit of the Lord</strong>, and was <strong>carried down into the water</strong>, and was <strong>laid under the water</strong>, and was <strong>brought forth out of the water</strong>. > > ⁶⁵ And thus <strong>he was baptized</strong>, and the Spirit of God descended upon him, and thus he was <strong>born of the Spirit</strong>, and became <strong>quickened in the inner man</strong>. > > ⁶⁶ And he heard <strong>a voice out of heaven</strong>, saying: Thou art <strong>baptized with fire, and with the Holy Ghost</strong>. This is <strong>the record of the Father, and the Son</strong>, from henceforth and forever; > > ⁶⁷ And thou art after the order of him who was without beginning of days or end of years, from all eternity to all eternity. > > ⁶⁸ Behold, thou art one in me, <strong>a son of God</strong>; and thus may all become my sons. Amen.</p>
 </div>
-<button class="inner-accordion"><span>Literary Structure Analysis</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Literary Structure Analysis</span></button>
+<div class="sg-inner-panel">
 <p><strong>The Baptismal Sequence:</strong></p>
 <p>Moses 6:64–66 presents a careful sequence:</p>
 <table class="info-table">
@@ -2794,8 +2794,8 @@
 </table>
 <p>Adam's baptism establishes the pattern that Christ Himself follows.</p>
 </div>
-<button class="inner-accordion"><span>Hebrew Insights</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Hebrew Insights</span></button>
+<div class="sg-inner-panel">
 <table class="info-table">
 <tr>
 <th>English</th>
@@ -2869,8 +2869,8 @@
 <p>Scholar David Calabro has explored connections between Moses 6 and the "molten sea" in Solomon's Temple, noting that while "there is no evidence that the temple laver was used as a baptismal font, it was definitely large enough to suggest such a use." Joseph Smith's specifications for the Nauvoo Temple baptismal font were modeled after the Solomonic laver.</p>
 <p><em>Source: Jeffrey M. Bradshaw & Matthew L. Bowen, "<a href="https://interpreterfoundation.org/book-of-moses-essays-017" target="_blank">By the Water Ye Keep the Commandment</a>" (Interpreter Foundation, Essay #17)</em></p>
 </div>
-<button class="inner-accordion"><span>Doctrinal Analysis</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Doctrinal Analysis</span></button>
+<div class="sg-inner-panel">
 <p><strong>The First Recorded Baptism:</strong></p>
 <p>Moses 6:64–65 describes the first baptism in scripture. Key implications:</p>
 <ol>
@@ -2902,8 +2902,8 @@
 <p><strong>"A Son of God":</strong></p>
 <p>The passage culminates in divine adoption: "Thou art one in me, a son of God; and thus may all become my sons" (v. 68). Baptism and the Holy Ghost make us children of Christ (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/5?lang=eng&id=p7#p7" target="_blank">Mosiah 5:7</a>).</p>
 </div>
-<button class="inner-accordion"><span>Cross-References</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Cross-References</span></button>
+<div class="sg-inner-panel">
 <table class="info-table">
 <tr>
 <th>Scripture</th>
@@ -2931,8 +2931,8 @@
 </tr>
 </table>
 </div>
-<button class="inner-accordion"><span>Latter-day Saint Connections</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Latter-day Saint Connections</span></button>
+<div class="sg-inner-panel">
 <p><strong>Temple Parallels:</strong></p>
 <p>Adam's experience follows a pattern temple worshippers recognize:</p>
 <ul>
@@ -2945,13 +2945,13 @@
 <p><strong>The Gift of the Holy Ghost:</strong></p>
 <p>Adam received the Holy Ghost immediately after baptism — the same pattern followed in the Church today. The two ordinances are linked but distinct.</p>
 </div>
-<button class="inner-accordion"><span>Modern Prophets on This Passage</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Modern Prophets on This Passage</span></button>
+<div class="sg-inner-panel">
 <p>> "What is the covenant path? It is the one path that leads to the celestial kingdom of God. We embark upon the path at the gate of baptism and then 'press forward with a steadfastness in Christ, having a perfect brightness of hope, and a love of God and of all men... to the end.'... What, then, is the difference of the covenant path?"</p>
 <p><strong>Reference (General Conference):</strong> Elder D. Todd Christofferson, "Why the Covenant Path," General Conference (April 2021), para. 4, 8. Full talk: https://www.churchofjesuschrist.org/study/general-conference/2021/04/54christofferson?lang=eng</p>
 </div>
-<button class="inner-accordion"><span>Reflection Questions</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Reflection Questions</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>Why does Adam's baptism matter for understanding the gospel's antiquity?</li>
 <li>What does "laid under the water... brought forth out of the water" teach about baptismal mode?</li>
@@ -2962,9 +2962,9 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>Summary Chart: Key Doctrines in Genesis 5 and Moses 6</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Summary Chart: Key Doctrines in Genesis 5 and Moses 6</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <table class="info-table">
 <tr>
 <th>Doctrine</th>
@@ -3029,12 +3029,12 @@
         </div>
 
         <!-- SECTION 4: WORD STUDIES -->
-        <button class="accordion-section">4. Word Studies</button>
+        <button class="sg-accordion-section">4. Word Studies</button>
         <div class="sg-panel">
             <div class="panel-content">
-                <button class="sub-accordion"><span>Week 05 | January 26–February 1, 2026</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+                <button class="sg-sub-accordion"><span>Week 05 | January 26–February 1, 2026</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p><strong>Key Terms in This Study:</strong></p>
 <ol>
 <li><a href="#1-toledot--generations" target="_blank"><em>toledot</em></a> — Generations (the book's structuring formula)</li>
@@ -3052,12 +3052,12 @@
 </ul>
 </div>
 </div>
-<button class="sub-accordion"><span>Hebrew-First Approach</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Hebrew-First Approach</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p>This week's readings introduce us to the antediluvian patriarchs and Enoch's remarkable ministry. Key terms like <em>toledot</em> (generations), <em>halak</em> (walked), and <em>laqach</em> (took) reveal rich theological meanings beneath the surface of genealogical lists.</p>
-<button class="inner-accordion"><span>Why Study Hebrew for Genesis 5 and Moses 6?</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Why Study Hebrew for Genesis 5 and Moses 6?</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li><strong>Genealogy as theology</strong> — <em>Toledot</em> is more than a list; it establishes covenantal continuity</li>
 <li><strong>Walking with God</strong> — <em>Halak</em> describes a lifestyle, not a single event</li>
@@ -3067,11 +3067,11 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>Key Terms This Week</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>1. <em>toledot</em> — Generations</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>Key Terms This Week</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>1. <em>toledot</em> — Generations</span></button>
+<div class="sg-inner-panel">
 <p><div style="text-align: center; font-size: 2em; font-family: 'Times New Roman', 'SBL Hebrew', serif;">תּוֹלְדֹת</div></p>
 <h4>Layer 1: Hebrew Foundation</h4>
 <table class="info-table">
@@ -3163,8 +3163,8 @@
 <p>> <strong><a href="https://webstersdictionary1828.com/Dictionary/generation" target="_blank">GENERATION</a></strong>, n. > 1. The act of begetting; procreation. > 2. A race; a family; the people of the same period. > 3. The people living at a particular period. > 4. Progeny; offspring.</p>
 <p><strong>Joseph Smith Era Understanding:</strong> In the 1828 context, "generation" carried both biological (offspring) and temporal (contemporaries) meanings—both relevant to Genesis 5's genealogy.</p>
 </div>
-<button class="inner-accordion"><span>2. <em>halak</em> — Walked</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>2. <em>halak</em> — Walked</span></button>
+<div class="sg-inner-panel">
 <p><div style="text-align: center; font-size: 2em; font-family: 'Times New Roman', 'SBL Hebrew', serif;">הָלַךְ</div></p>
 <h4>Layer 1: Hebrew Foundation</h4>
 <table class="info-table">
@@ -3257,8 +3257,8 @@
 <p>> <strong><a href="https://webstersdictionary1828.com/Dictionary/walk" target="_blank">WALK</a></strong>, v.i. > 1. To move slowly on the feet; to advance by steps. > 2. To move or go on the feet for exercise or amusement. > 3. To appear, as a specter. > 4. To act or move on the legs. > 5. In Scripture, to live and act or behave; to pursue a particular course of life.</p>
 <p><strong>Joseph Smith Era Understanding:</strong> Webster's fifth definition captures the scriptural usage—to "pursue a particular course of life." Enoch's walking with God was a lifelong pattern of righteous living.</p>
 </div>
-<button class="inner-accordion"><span>3. <em>laqach</em> — Took (Translated)</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>3. <em>laqach</em> — Took (Translated)</span></button>
+<div class="sg-inner-panel">
 <p><div style="text-align: center; font-size: 2em; font-family: 'Times New Roman', 'SBL Hebrew', serif;">לָקַח</div></p>
 <h4>Layer 1: Hebrew Foundation</h4>
 <table class="info-table">
@@ -3350,8 +3350,8 @@
 <p>> <strong><a href="https://webstersdictionary1828.com/Dictionary/translate" target="_blank">TRANSLATE</a></strong>, v.t. > 1. To bear, carry or remove from one place to another. > 2. To remove or convey to heaven, as a human being, without death. > 3. To transfer; to convey from one to another. > 4. To cause to remove from one part of the body to another. > 5. To change. > 6. To interpret; to render into another language.</p>
 <p><strong>Joseph Smith Era Understanding:</strong> Webster's second definition specifically addresses Enoch-type translation: "to convey to heaven, as a human being, without death." This theological use was standard in 1828 English.</p>
 </div>
-<button class="inner-accordion"><span>4. <em>sefer zikkaron</em> — Book of Remembrance</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>4. <em>sefer zikkaron</em> — Book of Remembrance</span></button>
+<div class="sg-inner-panel">
 <p><div style="text-align: center; font-size: 2em; font-family: 'Times New Roman', 'SBL Hebrew', serif;">סֵפֶר זִכָּרוֹן</div></p>
 <h4>Layer 1: Hebrew Foundation</h4>
 <table class="info-table">
@@ -3443,8 +3443,8 @@
 <p>> <strong><a href="https://webstersdictionary1828.com/Dictionary/remembrance" target="_blank">REMEMBRANCE</a></strong>, n. > 1. The retaining or having in mind an idea which had been present before. > 2. Recollection; revival of any past idea or image in the mind. > 3. That which is remembered. > 4. Memorial; that which serves to bring to mind or keep in mind. > 5. The power of remembering; memory.</p>
 <p><strong>Joseph Smith Era Understanding:</strong> "Memorial; that which serves to bring to mind" aligns perfectly with the scriptural function of the book of remembrance—a sacred record designed to perpetuate spiritual memory across generations.</p>
 </div>
-<button class="inner-accordion"><span>5. <em>na'ar</em> — Lad, Youth</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>5. <em>na'ar</em> — Lad, Youth</span></button>
+<div class="sg-inner-panel">
 <p><div style="text-align: center; font-size: 2em; font-family: 'Times New Roman', 'SBL Hebrew', serif;">נַעַר</div></p>
 <h4>Layer 1: Hebrew Foundation</h4>
 <table class="info-table">
@@ -3536,8 +3536,8 @@
 <p>> <strong><a href="https://webstersdictionary1828.com/Dictionary/lad" target="_blank">LAD</a></strong>, n. > 1. A young man or boy; a stripling. > 2. A companion; used in the north of England.</p>
 <p><strong>Joseph Smith Era Understanding:</strong> "Lad" in 1828 usage emphasized youth and inexperience—exactly Enoch's point when he protested his prophetic calling.</p>
 </div>
-<button class="inner-accordion"><span>6. <em>einenu</em> — He was not</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>6. <em>einenu</em> — He was not</span></button>
+<div class="sg-inner-panel">
 <p><div style="text-align: center; font-size: 2em; font-family: 'Times New Roman', 'SBL Hebrew', serif;">אֵינֶנּוּ</div></p>
 <h4>Layer 1: Hebrew Foundation</h4>
 <table class="info-table">
@@ -3631,9 +3631,9 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>Summary: Hebrew Terms in Genesis 5 and Moses 6</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Summary: Hebrew Terms in Genesis 5 and Moses 6</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <table class="info-table">
 <tr>
 <th>Term</th>
@@ -3680,11 +3680,11 @@
 </table>
 </div>
 </div>
-<button class="sub-accordion"><span>Scholarly Insights: Names in the Enoch Account</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>Mahijah and Mahujah: Evidence of Antiquity</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>Scholarly Insights: Names in the Enoch Account</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Mahijah and Mahujah: Evidence of Antiquity</span></button>
+<div class="sg-inner-panel">
 <p>One of the most remarkable evidences for the ancient origins of the Book of Moses Enoch account comes from an obscure name that appears only in Joseph Smith's translation.</p>
 <h4>The Names in Moses 6–7</h4>
 <p>In the Book of Moses, Mahijah appears as the only named character besides Enoch himself:</p>
@@ -3720,8 +3720,8 @@
 <h4>Akkadian Connection</h4>
 <p>Scholars have identified a potential common root behind these similar names in Akkadian <em>maḫḫû</em>, denoting a class of priests and seers who served as intermediaries and messengers bearing words of warning from the gods. This role parallels Mahaway's function in the Book of Giants and Mahijah's role in interrogating the prophet Enoch.</p>
 </div>
-<button class="inner-accordion"><span>Enoch as "Lad" in Ancient Tradition</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Enoch as "Lad" in Ancient Tradition</span></button>
+<div class="sg-inner-panel">
 <p>The title "lad" (<em>na'ar</em>) for Enoch has deep roots in ancient Jewish mystical literature:</p>
 <table class="info-table">
 <tr>
@@ -3744,8 +3744,8 @@
 <p>In 3 Enoch, the angels challenge Enoch's status precisely because he is a "lad"—a newcomer to the divine realm. Yet Enoch's explanation matches Moses 6:31: he was called "lad" because "I was the youngest among them... with respect to days, months, and years."</p>
 <p>This is the only use of the word "lad" in all of Joseph Smith's revelations—yet it corresponds precisely to ancient Enochic tradition unavailable in 1830.</p>
 </div>
-<button class="inner-accordion"><span>Water, Blood, and Spirit: A Unique Doctrinal Formula</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Water, Blood, and Spirit: A Unique Doctrinal Formula</span></button>
+<div class="sg-inner-panel">
 <p>Moses 6:59–60 presents a distinctive threefold formula for spiritual rebirth:</p>
 <p>> "By the water ye keep the commandment; by the Spirit ye are justified, and by the blood ye are sanctified."</p>
 <p>This combination of water, blood, and Spirit appears together in only one other place in scripture: <a href="https://www.blueletterbible.org/kjv/1jo/5/6/s_1164006" target="_blank">1 John 5:6–8</a>:</p>
@@ -3771,12 +3771,12 @@
         </div>
 
         <!-- SECTION 5: TEACHING APPLICATIONS -->
-        <button class="accordion-section">5. Teaching Applications</button>
+        <button class="sg-accordion-section">5. Teaching Applications</button>
         <div class="sg-panel">
             <div class="panel-content">
-                <button class="sub-accordion"><span>Genesis 5; Moses 6 | Genealogy, Enoch's Call, and the Plan of Redemption</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+                <button class="sg-sub-accordion"><span>Genesis 5; Moses 6 | Genealogy, Enoch's Call, and the Plan of Redemption</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p><strong>Teaching Contexts in This Guide:</strong></p>
 <ol>
 <li><a href="#1-personal-study-applications" target="_blank">Personal Study</a> — Individual reflection and application</li>
@@ -3787,9 +3787,9 @@
 </ol>
 </div>
 </div>
-<button class="sub-accordion"><span>Overview</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Overview</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p>This week's readings may seem like a simple genealogy, but they contain profound truths about covenant continuity, prophetic calling, sacred record-keeping, and the doctrine of redemption taught from Adam forward. The following applications are organized by teaching context to help you adapt these powerful truths for your specific audience.</p>
 <p><strong>Teaching Insight: The Meaning of "Enoch"</strong></p>
 <p>The name "Enoch" (Hebrew <em>ḥănôk</em>) sounds identical to the Hebrew word for "train up" or "dedicate" (<em>ḥnk</em>). For a Hebrew speaker, the name would evoke "trained up" or "initiated"—bringing to mind someone familiar with the temple who could train and initiate others.</p>
@@ -3797,11 +3797,11 @@
 <p><em>Source: Jeffrey M. Bradshaw & Matthew L. Bowen, "<a href="https://interpreterfoundation.org/book-of-moses-essays-014" target="_blank">Enoch as a Teacher</a>" (Interpreter Foundation, Essay #14)</em></p>
 </div>
 </div>
-<button class="sub-accordion"><span>1. Personal Study Applications</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>Individual Reflection and Application</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>1. Personal Study Applications</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Individual Reflection and Application</span></button>
+<div class="sg-inner-panel">
 <p><strong>Theme: Walking with God</strong></p>
 <p>Enoch "walked with God" (<a href="https://www.blueletterbible.org/kjv/gen/5/22/s_5022" target="_blank">Genesis 5:22, 24</a>)—a phrase used for only two people in Genesis (Enoch and Noah). This week invites us to consider what it means to walk with God in our daily lives.</p>
 <p><strong>Personal Application Ideas:</strong></p>
@@ -3846,11 +3846,11 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>2. Family Home Evening Applications</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>Family Activities and Discussions</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>2. Family Home Evening Applications</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Family Activities and Discussions</span></button>
+<div class="sg-inner-panel">
 <p><strong>Theme: Connecting Generations</strong></p>
 <p>The genealogy of <a href="https://www.blueletterbible.org/kjv/gen/5/1/s_5001" target="_blank">Genesis 5</a> is about family connections across time—exactly what family history work is about today.</p>
 <p><strong>Activity Ideas:</strong></p>
@@ -3906,11 +3906,11 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>3. Sunday School Teaching Applications</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>Class Discussion and Engagement</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>3. Sunday School Teaching Applications</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Class Discussion and Engagement</span></button>
+<div class="sg-inner-panel">
 <p><strong>Theme: The Plan of Salvation Taught from Adam</strong></p>
 <p><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng" target="_blank">Moses 6</a> reveals that Adam knew the full plan of salvation, including Christ's name and the ordinances of baptism and the gift of the Holy Ghost.</p>
 <p><strong>Discussion Approaches:</strong></p>
@@ -3984,11 +3984,11 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>4. Seminary/Institute Teaching Applications</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>Youth and Young Adult Engagement</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>4. Seminary/Institute Teaching Applications</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Youth and Young Adult Engagement</span></button>
+<div class="sg-inner-panel">
 <p><strong>Theme: Translation and Zion</strong></p>
 <p>Enoch's story goes far beyond Genesis 5's four verses. <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng" target="_blank">Moses 6–7</a> reveals Enoch as a mighty prophet who built Zion.</p>
 <p><strong>Teaching Approaches:</strong></p>
@@ -4043,11 +4043,11 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>5. Missionary Teaching Applications</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>Investigator-Focused Teaching</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>5. Missionary Teaching Applications</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Investigator-Focused Teaching</span></button>
+<div class="sg-inner-panel">
 <p><strong>Theme: Christ Was Known from the Beginning</strong></p>
 <p><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng" target="_blank">Moses 6</a> demonstrates that the gospel of Jesus Christ is not a New Testament invention—Adam knew Christ by name.</p>
 <p><strong>Teaching Approaches:</strong></p>
@@ -4080,11 +4080,11 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>6. Cross-Reference Summary</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>Key Doctrinal Connections</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>6. Cross-Reference Summary</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Key Doctrinal Connections</span></button>
+<div class="sg-inner-panel">
 <table class="info-table">
 <tr>
 <th>Topic</th>
@@ -4136,12 +4136,12 @@
         </div>
 
         <!-- SECTION 6: STUDY QUESTIONS -->
-        <button class="accordion-section">6. Study Questions</button>
+        <button class="sg-accordion-section">6. Study Questions</button>
         <div class="sg-panel">
             <div class="panel-content">
-                <button class="sub-accordion"><span>Genesis 5; Moses 6 | Genealogy, Enoch's Call, and the Plan of Redemption</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+                <button class="sg-sub-accordion"><span>Genesis 5; Moses 6 | Genealogy, Enoch's Call, and the Plan of Redemption</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p><strong>Question Categories:</strong></p>
 <ol>
 <li><a href="#category-1-understanding-the-text-60-questions" target="_blank">Understanding the Text</a> (60) — Comprehension, observation, textual analysis</li>
@@ -4154,9 +4154,9 @@
 </ol>
 </div>
 </div>
-<button class="sub-accordion"><span>Question Categories Overview</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Question Categories Overview</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <table class="info-table">
 <tr>
 <th>Category</th>
@@ -4205,11 +4205,11 @@
 </table>
 </div>
 </div>
-<button class="sub-accordion"><span>Category 1: Understanding the Text (60 Questions)</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>The Genealogy of Adam (<a href="https://www.blueletterbible.org/kjv/gen/5/1/s_5001" target="_blank">Genesis 5:1–32</a>)</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>Category 1: Understanding the Text (60 Questions)</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>The Genealogy of Adam (<a href="https://www.blueletterbible.org/kjv/gen/5/1/s_5001" target="_blank">Genesis 5:1–32</a>)</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>What phrase opens Genesis 5:1, and where else does this phrase appear in Genesis?</li>
 <li>In whose image was Adam created (<a href="https://www.blueletterbible.org/kjv/gen/5/1/s_5001" target="_blank">Genesis 5:1</a>)?</li>
@@ -4233,8 +4233,8 @@
 <li>What comfort was Noah expected to bring?</li>
 </ol>
 </div>
-<button class="inner-accordion"><span>The Book of Remembrance (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p1-p12#p1" target="_blank">Moses 6:1–12</a>)</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>The Book of Remembrance (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p1-p12#p1" target="_blank">Moses 6:1–12</a>)</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>What was kept from the beginning according to <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p5#p5" target="_blank">Moses 6:5</a>?</li>
 <li>In what language was the book of remembrance written?</li>
@@ -4247,8 +4247,8 @@
 <li>How is Enos described in <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p13#p13" target="_blank">Moses 6:13</a>?</li>
 </ol>
 </div>
-<button class="inner-accordion"><span>Enoch's Call (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p26-p36#p26" target="_blank">Moses 6:26–36</a>)</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Enoch's Call (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p26-p36#p26" target="_blank">Moses 6:26–36</a>)</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>What descended from heaven and abode upon Enoch (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p26#p26" target="_blank">Moses 6:26</a>)?</li>
 <li>What did the voice from heaven command Enoch to do?</li>
@@ -4263,8 +4263,8 @@
 <li>What command does God give Enoch in <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p34#p34" target="_blank">Moses 6:34</a>?</li>
 </ol>
 </div>
-<button class="inner-accordion"><span>The Doctrine of Redemption (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p48-p68#p48" target="_blank">Moses 6:48–68</a>)</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>The Doctrine of Redemption (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p48-p68#p48" target="_blank">Moses 6:48–68</a>)</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>What does <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p48#p48" target="_blank">Moses 6:48</a> identify as the reason "we are"?</li>
 <li>What three things came because of Adam's fall (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p48#p48" target="_blank">Moses 6:48</a>)?</li>
@@ -4290,11 +4290,11 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>Category 2: Personal Application (30 Questions)</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>Walking with God</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>Category 2: Personal Application (30 Questions)</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Walking with God</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>What does it mean to "walk with God" in your daily life?</li>
 <li>Enoch's walk intensified after becoming a father—how have your responsibilities drawn you closer to God?</li>
@@ -4304,8 +4304,8 @@
 <li>Who in your life models what it means to walk with God?</li>
 </ol>
 </div>
-<button class="inner-accordion"><span>Sacred Record-Keeping</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Sacred Record-Keeping</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>Do you keep a personal journal or spiritual record?</li>
 <li>What spiritual experiences should you record for your descendants?</li>
@@ -4315,8 +4315,8 @@
 <li>What might your great-grandchildren want to know about your spiritual life?</li>
 </ol>
 </div>
-<button class="inner-accordion"><span>Prophetic Inadequacy</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Prophetic Inadequacy</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>When have you felt unqualified to serve in the Church?</li>
 <li>How did God help you serve despite your limitations?</li>
@@ -4326,8 +4326,8 @@
 <li>How can you claim God's promise that He will fill your mouth?</li>
 </ol>
 </div>
-<button class="inner-accordion"><span>Understanding Redemption</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Understanding Redemption</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>How clearly did you understand the plan of salvation before joining the Church or gaining a testimony?</li>
 <li>Which aspect of the doctrine in <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p48-p68#p48" target="_blank">Moses 6:48–68</a> is most meaningful to you?</li>
@@ -4337,8 +4337,8 @@
 <li>When have you felt the presence of the Holy Ghost most strongly?</li>
 </ol>
 </div>
-<button class="inner-accordion"><span>Family History</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Family History</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>How do the genealogies of Genesis 5 connect to modern family history work?</li>
 <li>What does it mean that your ancestors are "waiting" for temple work?</li>
@@ -4350,11 +4350,11 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>Category 3: Doctrinal Understanding (30 Questions)</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>The Nature of Translation</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>Category 3: Doctrinal Understanding (30 Questions)</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>The Nature of Translation</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>What does it mean that Enoch was "translated"?</li>
 <li>How does <a href="https://www.blueletterbible.org/kjv/heb/11/5/s_1144005" target="_blank">Hebrews 11:5</a> interpret Genesis 5:24?</li>
@@ -4364,8 +4364,8 @@
 <li>Why might God translate some individuals rather than letting them die?</li>
 </ol>
 </div>
-<button class="inner-accordion"><span>Premortal Existence</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Premortal Existence</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>What does <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p51#p51" target="_blank">Moses 6:51</a> teach about where we existed before mortality?</li>
 <li>How does this doctrine affect your understanding of human identity?</li>
@@ -4373,8 +4373,8 @@
 <li>How does this doctrine differ from traditional Christian teaching?</li>
 </ol>
 </div>
-<button class="inner-accordion"><span>The Fall and Redemption</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>The Fall and Redemption</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>According to <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p48#p48" target="_blank">Moses 6:48</a>, what did the Fall make possible?</li>
 <li>What does "carnal, sensual, and devilish" mean (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p49#p49" target="_blank">Moses 6:49</a>)?</li>
@@ -4383,8 +4383,8 @@
 <li>Why must we be "born again" to enter the kingdom of God?</li>
 </ol>
 </div>
-<button class="inner-accordion"><span>Baptism from the Beginning</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Baptism from the Beginning</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>What does Adam's baptism teach about the antiquity of the ordinance?</li>
 <li>Why would God establish baptism from Adam onward?</li>
@@ -4393,8 +4393,8 @@
 <li>How does Adam's baptism connect to your own?</li>
 </ol>
 </div>
-<button class="inner-accordion"><span>The Gift of the Holy Ghost</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>The Gift of the Holy Ghost</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>What happened to Adam after his baptism (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p65-p66#p65" target="_blank">Moses 6:65–66</a>)?</li>
 <li>What does it mean to be "quickened in the inner man"?</li>
@@ -4403,8 +4403,8 @@
 <li>Why is the Holy Ghost called the "baptism of fire"?</li>
 </ol>
 </div>
-<button class="inner-accordion"><span>Gospel Continuity</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Gospel Continuity</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>What does <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng" target="_blank">Moses 6</a> reveal about Adam's knowledge of Christ?</li>
 <li>How does knowing Adam knew Christ by name affect your understanding of gospel history?</li>
@@ -4415,11 +4415,11 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>Category 4: Modern Relevance (30 Questions)</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>Record-Keeping in the Digital Age</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>Category 4: Modern Relevance (30 Questions)</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Record-Keeping in the Digital Age</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>How can modern technology help us keep better spiritual records?</li>
 <li>What digital tools could serve as a "book of remembrance"?</li>
@@ -4428,8 +4428,8 @@
 <li>How is FamilySearch a modern "book of remembrance"?</li>
 </ol>
 </div>
-<button class="inner-accordion"><span>Youth and Inadequacy</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Youth and Inadequacy</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>How might a modern teenager relate to Enoch's feelings of inadequacy?</li>
 <li>What do we tell young people who feel unqualified to share the gospel?</li>
@@ -4438,8 +4438,8 @@
 <li>How can youth leaders help young people embrace their callings?</li>
 </ol>
 </div>
-<button class="inner-accordion"><span>Genealogy and Family History</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Genealogy and Family History</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>How has DNA testing changed our understanding of genealogy?</li>
 <li>What are the spiritual purposes of family history beyond "dead names"?</li>
@@ -4448,8 +4448,8 @@
 <li>How does family history work relate to temple covenants?</li>
 </ol>
 </div>
-<button class="inner-accordion"><span>Translation and Modern Questions</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Translation and Modern Questions</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>Why doesn't translation happen in our dispensation?</li>
 <li>How do translated beings fit into the plan of salvation?</li>
@@ -4458,8 +4458,8 @@
 <li>What do translated beings teach us about the relationship between mortality and immortality?</li>
 </ol>
 </div>
-<button class="inner-accordion"><span>Walking with God Today</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Walking with God Today</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>What does it look like to "walk with God" in a busy modern life?</li>
 <li>How do modern conveniences help or hinder our walk with God?</li>
@@ -4468,8 +4468,8 @@
 <li>What role does covenant-keeping play in walking with God?</li>
 </ol>
 </div>
-<button class="inner-accordion"><span>The Plan of Salvation Today</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>The Plan of Salvation Today</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>How does <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng" target="_blank">Moses 6</a> help us teach the plan of salvation to investigators?</li>
 <li>Why is premortal existence a distinctive Latter-day Saint doctrine?</li>
@@ -4480,11 +4480,11 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>Category 5: Synthesis and Commitment (20 Questions)</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>Integration Questions</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>Category 5: Synthesis and Commitment (20 Questions)</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Integration Questions</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>How does Genesis 5's genealogy connect Adam to Christ?</li>
 <li>What does the parallel structure of genealogies (Adam–Noah, Shem–Abraham) suggest about God's purposes?</li>
@@ -4493,8 +4493,8 @@
 <li>How does <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng" target="_blank">Moses 6</a>'s clarity about Christ compare to traditional Christian assumptions about Old Testament knowledge?</li>
 </ol>
 </div>
-<button class="inner-accordion"><span>Commitment Questions</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Commitment Questions</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>What specific action will you take this week to "walk with God"?</li>
 <li>How will you improve your personal record-keeping?</li>
@@ -4503,8 +4503,8 @@
 <li>What doctrine from <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng" target="_blank">Moses 6</a> will you share with someone this week?</li>
 </ol>
 </div>
-<button class="inner-accordion"><span>Transformation Questions</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Transformation Questions</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>How has studying these chapters changed your understanding of the gospel's antiquity?</li>
 <li>What new insight about Enoch will you carry forward?</li>
@@ -4513,8 +4513,8 @@
 <li>How has your view of genealogy changed this week?</li>
 </ol>
 </div>
-<button class="inner-accordion"><span>Deepening Questions</span></button>
-<div class="inner-panel">
+<button class="sg-inner-accordion"><span>Deepening Questions</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>What questions remain after studying these chapters?</li>
 <li>What would you like to study further about Enoch?</li>
@@ -4525,11 +4525,11 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>Category 6: Discussion Starters (10 Questions)</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>Group/Class Discussion Questions</span></button>
-<div class="inner-panel">
+<button class="sg-sub-accordion"><span>Category 6: Discussion Starters (10 Questions)</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Group/Class Discussion Questions</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li><strong>Opening Question:</strong> If you could ask Enoch one question, what would it be?</li>
 <li><strong>Textual Analysis:</strong> Why does Genesis devote only four verses to Enoch when he's one of only two people who "walked with God"?</li>
@@ -4545,9 +4545,9 @@
 </div>
 </div>
 </div>
-<button class="sub-accordion"><span>Bonus: Evidence of Antiquity Questions</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Bonus: Evidence of Antiquity Questions</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p>These questions explore the remarkable parallels between Moses 6 and ancient texts discovered after Joseph Smith's death—parallels that strengthen testimony of the Book of Moses as ancient scripture.</p>
 <ol>
 <li><strong>The "Wild Man" Parallel:</strong> Moses 6:38 calls Enoch "a wild man." This exact term appears in only one other ancient Enoch text—the Book of Giants from the Dead Sea Scrolls (discovered 1948). What does this correspondence suggest about the Book of Moses?</li>
@@ -4588,7 +4588,7 @@
 <script>
 
         // Main accordion sections
-        const accordionSections = document.querySelectorAll('.accordion-section');
+        const accordionSections = document.querySelectorAll('.sg-accordion-section');
         accordionSections.forEach(section => {
             section.addEventListener('click', function() {
                 this.classList.toggle('active');
@@ -4598,7 +4598,7 @@
         });
 
         // Sub-accordions (nested within main panels)
-        const subAccordions = document.querySelectorAll('.sub-accordion');
+        const subAccordions = document.querySelectorAll('.sg-sub-accordion');
         subAccordions.forEach(subAccordion => {
             subAccordion.addEventListener('click', function() {
                 this.classList.toggle('active');
@@ -4607,8 +4607,8 @@
             });
         });
 
-        // Inner accordions (third level - nested within sub-panels)
-        const innerAccordions = document.querySelectorAll('.inner-accordion');
+        // Inner accordions (third level - nested within sg-sub-panels)
+        const innerAccordions = document.querySelectorAll('.sg-inner-accordion');
         innerAccordions.forEach(innerAccordion => {
             innerAccordion.addEventListener('click', function() {
                 this.classList.toggle('active');
@@ -4623,7 +4623,7 @@
                 section.classList.add('active');
                 section.nextElementSibling.classList.add('active');
             });
-            // Expand sub-accordions
+            // Expand sg-sub-accordions
             subAccordions.forEach(sub => {
                 sub.classList.add('active');
                 sub.nextElementSibling.classList.add('active');
@@ -4641,7 +4641,7 @@
                 section.classList.remove('active');
                 section.nextElementSibling.classList.remove('active');
             });
-            // Collapse sub-accordions
+            // Collapse sg-sub-accordions
             subAccordions.forEach(sub => {
                 sub.classList.remove('active');
                 sub.nextElementSibling.classList.remove('active');

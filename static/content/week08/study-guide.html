@@ -35,14 +35,14 @@
         }
         .expand-button:hover { background-color: #6B5344; }
 
-        .accordion-section {
+        .sg-accordion-section {
             background-color: #8B7355; color: white; cursor: pointer; padding: 18px; width: 100%;
             border: none; text-align: left; font-size: 1.2em; font-weight: 600; font-family: Georgia, serif;
             border-radius: 8px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center;
         }
-        .accordion-section:hover { background-color: #6B5344; }
-        .accordion-section::after { content: '▼'; font-size: 0.9em; transition: transform 0.3s; }
-        .accordion-section.active::after { transform: rotate(180deg); }
+        .sg-accordion-section:hover { background-color: #6B5344; }
+        .sg-accordion-section::after { content: '▼'; font-size: 0.9em; transition: transform 0.3s; }
+        .sg-accordion-section.active::after { transform: rotate(180deg); }
 
         .sg-panel {
             background-color: white; border-radius: 0 0 8px 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -126,7 +126,7 @@
         .nav-link.index { background: #6B5344; }
         .nav-disabled { background: #d1d5db; color: #9ca3af; padding: 12px 24px; border-radius: 8px; }
 
-        .sub-accordion {
+        .sg-sub-accordion {
             background-color: #f5f0e8;
             color: #5a4a3a;
             cursor: pointer;
@@ -143,11 +143,11 @@
             transition: background-color 0.2s;
         }
 
-        .sub-accordion:hover {
+        .sg-sub-accordion:hover {
             background-color: #e8e0d4;
         }
 
-        .sub-accordion::after {
+        .sg-sub-accordion::after {
             content: '▼';
             font-size: 0.8em;
             color: #8B7355;
@@ -158,11 +158,11 @@
             transition: transform 0.3s;
         }
 
-        .sub-accordion.active::after {
+        .sg-sub-accordion.active::after {
             transform: translateY(-50%) rotate(180deg);
         }
 
-        .sub-panel {
+        .sg-sub-panel {
             background-color: #fafafa;
             border-radius: 0 0 6px 6px;
             border: 1px solid #d4c4a8;
@@ -173,25 +173,25 @@
             margin-bottom: 10px;
         }
 
-        .sub-panel.active {
+        .sg-sub-panel.active {
             max-height: none;
             overflow: visible;
             transition: max-height 0.3s ease-in;
         }
 
-        .sub-panel-content {
+        .sg-sub-panel-content {
             padding: 20px 25px;
         }
 
-        .sub-panel-content h3 { color: #6B5344; margin-top: 20px; margin-bottom: 12px; font-size: 1.3em; }
-        .sub-panel-content h4 { color: #5a4a3a; margin-top: 15px; margin-bottom: 10px; font-size: 1.15em; }
-        .sub-panel-content p { margin-bottom: 12px; text-align: justify; }
-        .sub-panel-content ul, .sub-panel-content ol { margin-left: 25px; margin-bottom: 12px; }
-        .sub-panel-content li { margin-bottom: 6px; }
-        .sub-panel-content a { color: #8B7355; }
-        .sub-panel-content a:hover { color: #6B5344; text-decoration: underline; }
+        .sg-sub-panel-content h3 { color: #6B5344; margin-top: 20px; margin-bottom: 12px; font-size: 1.3em; }
+        .sg-sub-panel-content h4 { color: #5a4a3a; margin-top: 15px; margin-bottom: 10px; font-size: 1.15em; }
+        .sg-sub-panel-content p { margin-bottom: 12px; text-align: justify; }
+        .sg-sub-panel-content ul, .sg-sub-panel-content ol { margin-left: 25px; margin-bottom: 12px; }
+        .sg-sub-panel-content li { margin-bottom: 6px; }
+        .sg-sub-panel-content a { color: #8B7355; }
+        .sg-sub-panel-content a:hover { color: #6B5344; text-decoration: underline; }
 
-        .sub-panel-content blockquote {
+        .sg-sub-panel-content blockquote {
             margin: 15px 0 15px 15px;
             padding: 12px 18px;
             border-left: 3px solid #8B7355;
@@ -200,12 +200,12 @@
             color: #5a4a3a;
             border-radius: 0 6px 6px 0;
         }
-        .sub-panel-content blockquote p { margin-bottom: 6px; }
-        .sub-panel-content blockquote p:last-child { margin-bottom: 0; }
-        .sub-panel-content strong { color: #6B5344; }
-        .sub-panel-content hr { border: none; border-top: 1px solid #e8e0d5; margin: 20px 0; }
+        .sg-sub-panel-content blockquote p { margin-bottom: 6px; }
+        .sg-sub-panel-content blockquote p:last-child { margin-bottom: 0; }
+        .sg-sub-panel-content strong { color: #6B5344; }
+        .sg-sub-panel-content hr { border: none; border-top: 1px solid #e8e0d5; margin: 20px 0; }
 
-        .inner-accordion {
+        .sg-inner-accordion {
             background-color: #faf8f5;
             color: #6B5344;
             cursor: pointer;
@@ -222,11 +222,11 @@
             transition: background-color 0.2s;
         }
 
-        .inner-accordion:hover {
+        .sg-inner-accordion:hover {
             background-color: #f0e8dc;
         }
 
-        .inner-accordion::after {
+        .sg-inner-accordion::after {
             content: '▼';
             font-size: 0.7em;
             color: #8B7355;
@@ -237,11 +237,11 @@
             transition: transform 0.3s;
         }
 
-        .inner-accordion.active::after {
+        .sg-inner-accordion.active::after {
             transform: translateY(-50%) rotate(180deg);
         }
 
-        .inner-panel {
+        .sg-inner-panel {
             background-color: #ffffff;
             border-radius: 0 0 5px 5px;
             border: 1px solid #e8e0d4;
@@ -252,26 +252,26 @@
             margin-bottom: 8px;
         }
 
-        .inner-panel.active {
+        .sg-inner-panel.active {
             max-height: none;
             overflow: visible;
             transition: max-height 0.3s ease-in;
         }
 
-        .inner-panel-content {
+        .sg-inner-panel-content {
             padding: 15px 20px;
         }
 
-        .inner-panel-content h4 { color: #5a4a3a; margin-top: 12px; margin-bottom: 8px; font-size: 1.1em; }
-        .inner-panel-content p { margin-bottom: 10px; }
-        .inner-panel-content ul, .inner-panel-content ol { margin-left: 20px; margin-bottom: 10px; }
-        .inner-panel-content li { margin-bottom: 5px; }
+        .sg-inner-panel-content h4 { color: #5a4a3a; margin-top: 12px; margin-bottom: 8px; font-size: 1.1em; }
+        .sg-inner-panel-content p { margin-bottom: 10px; }
+        .sg-inner-panel-content ul, .sg-inner-panel-content ol { margin-left: 20px; margin-bottom: 10px; }
+        .sg-inner-panel-content li { margin-bottom: 5px; }
 
         @media (max-width: 768px) {
             .header-section h1 { font-size: 1.8em; }
             .panel-content { padding: 20px; }
-            .sub-panel-content { padding: 15px 18px; }
-            .inner-panel-content { padding: 12px 15px; }
+            .sg-sub-panel-content { padding: 15px 18px; }
+            .sg-inner-panel-content { padding: 12px 15px; }
             .nav-container { flex-direction: column; }
             .nav-link, .nav-disabled { width: 100%; text-align: center; }
         }
@@ -302,13 +302,13 @@
         <!-- ============================================================ -->
         <!-- SECTION 1: WEEK OVERVIEW -->
         <!-- ============================================================ -->
-        <button class="accordion-section">1. Week Overview</button>
+        <button class="sg-accordion-section">1. Week Overview</button>
         <div class="sg-panel">
             <div class="panel-content">
 
-<button class="sub-accordion"><span>Week Information</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Week Information</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <table class="info-table">
 <tr><th>Element</th><th>Details</th></tr>
 <tr><td><strong>Week</strong></td><td>08</td></tr>
@@ -321,9 +321,9 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>Reading Summary</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Reading Summary</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p>This week marks a pivotal transition in the biblical narrative—from the primeval history (Creation, Fall, Flood, Babel) to the patriarchal narratives that will dominate the rest of Genesis. We meet Abram (later Abraham), a man whose desire was "to be a greater follower of righteousness" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/1?lang=eng&id=2" target="_blank">Abraham 1:2</a>) despite coming from an idolatrous family. God's call to Abraham and the covenant He established with him became the foundation for all subsequent covenants in scripture—and the pattern for our own covenant relationship with God.</p>
 
 <p><strong>Abraham 1</strong> reveals the backstory unknown from Genesis alone. We learn that Abraham's father Terah had "turned from his righteousness" to idol worship (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/1?lang=eng&id=5" target="_blank">Abraham 1:5</a>), and that Abraham himself narrowly escaped being sacrificed on an altar by the priest of Pharaoh (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/1?lang=eng&id=7-15" target="_blank">vv. 7–15</a>). The Lord delivered Abraham, destroyed the altar and its priest, and promised to lead Abraham "by my hand" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/1?lang=eng&id=18" target="_blank">v. 18</a>). This chapter also introduces the facsimiles from the Book of Abraham, providing visual representations of Egyptian religious contexts.</p>
@@ -344,13 +344,13 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>Central Themes</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Central Themes</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 
-<button class="inner-accordion"><span>Theme 1: The Abrahamic Covenant—Foundation of All Covenants</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-inner-accordion"><span>Theme 1: The Abrahamic Covenant—Foundation of All Covenants</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <p>The covenant God made with Abraham is not merely an ancient agreement—it is the pattern for the covenant relationship God offers to each of us. The promises God made to Abraham continue in his posterity, "and as many as receive this Gospel shall be called after thy name, and shall be accounted thy seed" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/2?lang=eng&id=10" target="_blank">Abraham 2:10</a>).</p>
 <p>The covenant includes several interconnected promises:</p>
 <ol>
@@ -364,9 +364,9 @@
 </div>
 </div>
 
-<button class="inner-accordion"><span>Theme 2: Righteous Desires Amid Unrighteous Circumstances</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-inner-accordion"><span>Theme 2: Righteous Desires Amid Unrighteous Circumstances</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <p>Abraham's story demonstrates that personal righteousness is possible regardless of family background. His father Terah worshiped idols and conspired to have Abraham killed. Yet Abraham's "desire was to be a greater follower of righteousness" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/1?lang=eng&id=2" target="_blank">Abraham 1:2</a>).</p>
 <p>Elder Neil L. Andersen taught: "We are all influenced by our families [and] our culture, and yet I believe there is a place inside of us that we uniquely and individually control and create. … Eventually, our inner desires are given life and they are seen in our choices and in our actions."</p>
 <p>Abraham desired:</p>
@@ -381,9 +381,9 @@
 </div>
 </div>
 
-<button class="inner-accordion"><span>Theme 3: Melchizedek—A Type of Christ</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-inner-accordion"><span>Theme 3: Melchizedek—A Type of Christ</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <p>The brief mention of Melchizedek in Genesis 14 introduces one of the most enigmatic and significant figures in scripture. The Joseph Smith Translation (<a href="https://www.churchofjesuschrist.org/study/scriptures/jst/jst-gen/14?lang=eng" target="_blank">JST Genesis 14:25–40</a>) reveals that Melchizedek was:</p>
 <ul>
 <li>Ordained under the hand of God</li>
@@ -403,9 +403,9 @@
 </div>
 </div>
 
-<button class="inner-accordion"><span>Theme 4: "God Hears"—El Shaddai and Divine Care</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-inner-accordion"><span>Theme 4: "God Hears"—El Shaddai and Divine Care</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <p>This week introduces two important divine names:</p>
 <p><strong>El Shaddai</strong> (אֵל שַׁדַּי) — "God Almighty" (<a href="https://www.blueletterbible.org/kjv/gen/17/1/s_17001" target="_blank">Genesis 17:1</a>). This name emphasizes God's power to fulfill seemingly impossible promises. The root may relate to mountains or breasts (as a nursing mother), suggesting both strength and nurture.</p>
 <p><strong>El Roi</strong> (אֵל רֳאִי) — "God Who Sees" (<a href="https://www.blueletterbible.org/kjv/gen/16/13/s_16013" target="_blank">Genesis 16:13</a>). Hagar, alone in the wilderness, discovered that God sees the marginalized and afflicted.</p>
@@ -413,9 +413,9 @@
 </div>
 </div>
 
-<button class="inner-accordion"><span>Theme 5: The Tithe—Acknowledging God as the Source</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-inner-accordion"><span>Theme 5: The Tithe—Acknowledging God as the Source</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <p>When Melchizedek blessed Abraham, "he gave him tithes of all" (<a href="https://www.blueletterbible.org/kjv/gen/14/20/s_14020" target="_blank">Genesis 14:20</a>). This is the first mention of tithing in scripture, predating the Mosaic law by centuries.</p>
 <p>Abraham's response to the king of Sodom is equally instructive. The king offered Abraham all the spoils of war, but Abraham refused: "I will not take from a thread even to a shoelatchet, and that I will not take any thing that is thine, lest thou shouldest say, I have made Abram rich" (<a href="https://www.blueletterbible.org/kjv/gen/14/23/s_14023" target="_blank">Genesis 14:23</a>).</p>
 <p>Abraham's prosperity came from God, not from worldly sources. His payment of tithes acknowledged this truth.</p>
@@ -425,9 +425,9 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>Key Figures</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Key Figures</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <table class="info-table">
 <tr><th>Person</th><th>Role</th><th>Significance This Week</th></tr>
 <tr><td>Abraham (Abram)</td><td>Patriarch, Prophet</td><td>Receives the foundational covenant; demonstrates faith despite family idolatry</td></tr>
@@ -441,16 +441,16 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>Timeline Placement</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Timeline Placement</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p><strong>Historical Period:</strong> Middle Bronze Age / Patriarchal Period</p>
 <p><strong>Approximate Dates:</strong> Traditional dating places Abraham circa 2000–1800 BC. Abraham was 75 years old when he left Haran (<a href="https://www.blueletterbible.org/kjv/gen/12/4/s_12004" target="_blank">Genesis 12:4</a>) and 99 when circumcision was instituted (<a href="https://www.blueletterbible.org/kjv/gen/17/1/s_17001" target="_blank">Genesis 17:1</a>).</p>
 <p><strong>Biblical Timeline Position:</strong> This marks the transition from "primeval history" (Genesis 1–11) to "patriarchal history" (Genesis 12–50). The genealogies of Genesis 11 connect Noah to Abraham.</p>
 
-<button class="inner-accordion"><span>Relationship to Previous Weeks</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-inner-accordion"><span>Relationship to Previous Weeks</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <p><strong>Week 07 (Genesis 6–11; Moses 8):</strong> The Tower of Babel scattering and the genealogy from Shem to Abram set the stage for Abraham's call. The themes of scattering and gathering continue—Babel scattered humanity; the Abrahamic covenant initiates God's gathering.</p>
 <p><strong>Week 08 (Genesis 12–17; Abraham 1–2):</strong> Abraham's call and covenant.</p>
 <p><strong>Week 09 (Genesis 18–23):</strong> Abraham's continued journey, Isaac's birth, the sacrifice of Isaac.</p>
@@ -459,12 +459,12 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>Books Featured This Week</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>Book of Abraham (Chapters 1–2)</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-sub-accordion"><span>Books Featured This Week</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Book of Abraham (Chapters 1–2)</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <ul>
 <li><strong>Author:</strong> Abraham, translated by Joseph Smith</li>
 <li><strong>Translation Date:</strong> 1835–1842</li>
@@ -476,9 +476,9 @@
 </ul>
 </div>
 </div>
-<button class="inner-accordion"><span>Book of Genesis (Chapters 12–17)</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-inner-accordion"><span>Book of Genesis (Chapters 12–17)</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <ul>
 <li><strong>Author:</strong> Traditionally Moses; from earlier patriarchal records</li>
 <li><strong>Source Date:</strong> Patriarchal sources possibly dating to Abraham's time</li>
@@ -493,12 +493,12 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>Connection to Restoration Scripture</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
-<button class="inner-accordion"><span>Book of Mormon Connections</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-sub-accordion"><span>Connection to Restoration Scripture</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Book of Mormon Connections</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <ul>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/8?lang=eng&id=2" target="_blank">2 Nephi 8:2</a>:</strong> "Look unto Abraham your father, and unto Sarah that bare you"</li>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/13?lang=eng&id=14-19" target="_blank">Alma 13:14–19</a>:</strong> Melchizedek as a type of Christ and exemplar of faith</li>
@@ -506,9 +506,9 @@
 </ul>
 </div>
 </div>
-<button class="inner-accordion"><span>Doctrine and Covenants Connections</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-inner-accordion"><span>Doctrine and Covenants Connections</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <ul>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84?lang=eng&id=14" target="_blank">D&C 84:14</a>:</strong> Abraham received priesthood from Melchizedek</li>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107?lang=eng&id=1-4" target="_blank">D&C 107:1–4</a>:</strong> The Melchizedek Priesthood named to avoid too frequent use of the name of Deity</li>
@@ -517,9 +517,9 @@
 </ul>
 </div>
 </div>
-<button class="inner-accordion"><span>Pearl of Great Price Connections</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-inner-accordion"><span>Pearl of Great Price Connections</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <ul>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/1?lang=eng" target="_blank">Abraham 1–2</a>:</strong> Primary reading this week</li>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/3?lang=eng" target="_blank">Abraham 3</a>:</strong> Abraham's vision of the premortal existence (referenced in covenant)</li>
@@ -529,9 +529,9 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>This Week's Key Doctrines</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>This Week's Key Doctrines</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <ol>
 <li><strong>The Abrahamic Covenant:</strong> God's promise of land, posterity, priesthood, and gospel blessings—the pattern for all subsequent covenants (<a href="https://www.blueletterbible.org/kjv/gen/12/1-3/s_12001" target="_blank">Genesis 12:1–3</a>; <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/2?lang=eng&id=9-11" target="_blank">Abraham 2:9–11</a>).</li>
 <li><strong>Melchizedek Priesthood:</strong> The higher priesthood, named after a righteous king who was both priest and king, a type of Christ (<a href="https://www.blueletterbible.org/kjv/gen/14/18-20/s_14018" target="_blank">Genesis 14:18–20</a>; <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/13?lang=eng&id=14-19" target="_blank">Alma 13:14–19</a>).</li>
@@ -544,9 +544,9 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>Temple Connections</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Temple Connections</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p>The temple themes in this week's reading are abundant:</p>
 <ul>
 <li><strong>Covenant Making:</strong> The ceremony in Genesis 15 (passing between divided animals) reflects ancient covenant-making rituals echoed in temple worship</li>
@@ -559,9 +559,9 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>CFM Manual Emphasis</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>CFM Manual Emphasis</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p><strong>Manual Focus:</strong> Abraham's desire for righteousness despite his family background; the Abrahamic covenant and its application to us; Melchizedek as a man of faith; tithing; God's hearing and seeing of those in need.</p>
 <p><strong>Key Questions from Manual:</strong></p>
 <ul>
@@ -580,9 +580,9 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>Suggested Reading Approach</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Suggested Reading Approach</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p><strong>If You Have Limited Time (Essential Reading):</strong></p>
 <ul>
 <li><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/1?lang=eng&id=1-19" target="_blank">Abraham 1:1–19</a> — Abraham's background and deliverance</li>
@@ -607,9 +607,9 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>For Further Study: Interpreter Foundation Resources</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>For Further Study: Interpreter Foundation Resources</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p>The following scholarly essays provide deep background on this week's readings:</p>
 <table class="info-table">
 <tr><th>Resource</th><th>Title</th><th>Focus</th></tr>
@@ -619,9 +619,9 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>Study Guide Files This Week</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Study Guide Files This Week</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <table class="info-table">
 <tr><th>File</th><th>Content Focus</th></tr>
 <tr><td>01_Week_Overview</td><td>This overview document</td></tr>
@@ -641,17 +641,17 @@
         <!-- ============================================================ -->
         <!-- SECTION 2: HISTORICAL & CULTURAL CONTEXT -->
         <!-- ============================================================ -->
-        <button class="accordion-section">2. Historical &amp; Cultural Context</button>
+        <button class="sg-accordion-section">2. Historical &amp; Cultural Context</button>
         <div class="sg-panel">
             <div class="panel-content">
 
-<button class="sub-accordion"><span>Historical Setting</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Historical Setting</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 
-<button class="inner-accordion"><span>Time Period and Geographic Setting</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-inner-accordion"><span>Time Period and Geographic Setting</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <table class="info-table">
 <tr><th>Element</th><th>Details</th></tr>
 <tr><td><strong>Period</strong></td><td>~2000–1800 BC (Middle Bronze Age)</td></tr>
@@ -673,9 +673,9 @@
 </div>
 </div>
 
-<button class="inner-accordion"><span>Political Context</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-inner-accordion"><span>Political Context</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <p>The early second millennium BC was a period of movement and migration across the Fertile Crescent. The Amorite migrations brought Semitic-speaking peoples from the Syrian steppe into Mesopotamia and Canaan. The region had no unified empire—Canaan consisted of independent city-states, Egypt was recovering from the First Intermediate Period, and Mesopotamia was divided among competing kingdoms.</p>
 <p>Abraham's travels reflect this era's mobility. His journey from Ur to Haran to Canaan followed established trade routes. His dealings with various kings (the Pharaoh of Egypt, the kings of Sodom, Gomorrah, and Salem) reflect the political fragmentation of the time.</p>
 </div>
@@ -683,21 +683,21 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>Ancient Near Eastern Background</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Ancient Near Eastern Background</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 
-<button class="inner-accordion"><span>Covenant-Making Rituals</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-inner-accordion"><span>Covenant-Making Rituals</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <p>The ceremony described in Genesis 15:9–17, where animals were divided and God passed between them as "a smoking furnace and a burning lamp," reflects ancient covenant-making practices. In the ANE, covenant partners would pass between divided animals, symbolically invoking the fate of the animals upon themselves if they broke the covenant.</p>
 <p><strong>Significance:</strong> What's remarkable is that only God passed between the animals—not Abraham. This was a unilateral covenant; God bound Himself unconditionally. The Hebrew idiom is <em>karat berith</em> (כָּרַת בְּרִית), literally "to cut a covenant." Jeremiah 34:18–20 explicitly connects covenant breaking with the fate of the divided animals.</p>
 </div>
 </div>
 
-<button class="inner-accordion"><span>Adoption, Surrogate Motherhood, and Circumcision</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-inner-accordion"><span>Adoption, Surrogate Motherhood, and Circumcision</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <h4>Adoption and Heir Designation</h4>
 <p>In ancient Mesopotamia, childless couples could adopt an heir, often a servant. Legal texts from Nuzi (15th century BC) show similar practices to what we see with Abraham and Eliezer. The adopted son would inherit unless a natural heir was later born. Abraham's concern about Eliezer of Damascus becoming his heir (<a href="https://www.blueletterbible.org/kjv/gen/15/2-4/s_15002" target="_blank">Genesis 15:2–4</a>) reflects actual legal practice.</p>
 <h4>Surrogate Motherhood</h4>
@@ -707,9 +707,9 @@
 </div>
 </div>
 
-<button class="inner-accordion"><span>Religious Context of Surrounding Cultures</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-inner-accordion"><span>Religious Context of Surrounding Cultures</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <p><strong>Mesopotamian Religion:</strong> Abraham came from Ur, a major center of moon worship. The moon god Sin (Sumerian: Nanna) was the patron deity of Ur. His father Terah's name may derive from <em>yeraḥ</em> (moon), suggesting family involvement in lunar worship. Abraham 1 confirms that Abraham's family had "turned from their righteousness" to idol worship.</p>
 <p><strong>Canaanite Religion:</strong> Canaan was home to the worship of El (the high god), Baal (storm god), and various fertility deities. The "terebinth of Moreh" at Shechem (<a href="https://www.blueletterbible.org/kjv/gen/12/6/s_12006" target="_blank">Genesis 12:6</a>) was likely a sacred tree associated with Canaanite religion. By building an altar to YHWH at these locations, Abraham was establishing the worship of the true God in the land.</p>
 <p><strong>Egyptian Religion:</strong> During Abraham's sojourn in Egypt (Genesis 12:10–20), he encountered a polytheistic culture with elaborate temples and priesthoods. The facsimiles in the Book of Abraham depict Egyptian religious contexts.</p>
@@ -725,9 +725,9 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>Social and Daily Life Context</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Social and Daily Life Context</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <h4>Family Structure</h4>
 <p>Patriarchal society centered on the <em>beit av</em> (father's house). Abraham's household was large enough to muster 318 trained servants for battle (<a href="https://www.blueletterbible.org/kjv/gen/14/14/s_14014" target="_blank">Genesis 14:14</a>)—indicating substantial wealth and a household of perhaps 1,000+ people.</p>
 <h4>Economic Realities</h4>
@@ -737,9 +737,9 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>Evidence of Antiquity</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Evidence of Antiquity</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p><em>This section highlights details in the Book of Abraham confirmed by ancient texts discovered AFTER Joseph Smith's time.</em></p>
 <table class="info-table">
 <tr><th>Detail in Abraham</th><th>Ancient Parallel</th><th>Discovery Date</th></tr>
@@ -752,9 +752,9 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>Archaeological Discoveries</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Archaeological Discoveries</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <table class="info-table">
 <tr><th>Discovery</th><th>Date Found</th><th>Significance</th></tr>
 <tr><td>Ur excavations</td><td>1922–1934</td><td>Revealed Ur as a sophisticated city with ziggurats and moon worship</td></tr>
@@ -766,9 +766,9 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>Jewish Interpretive Traditions</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Jewish Interpretive Traditions</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p><strong>Midrash Genesis Rabbah</strong> contains extensive traditions about Abraham:</p>
 <ul>
 <li>Abraham's father Terah was an idol-maker</li>
@@ -780,9 +780,9 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>Latter-day Prophetic Commentary</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Latter-day Prophetic Commentary</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p>The JST Genesis 14:25–40 reveals extensive material about Melchizedek unknown from the KJV text. Joseph Smith taught that the Melchizedek Priesthood was so named "because Melchizedek was such a great high priest" and to avoid frequent repetition of the name of the Supreme Being.</p>
 <p><strong>President Russell M. Nelson</strong> has emphasized the covenant path and Abraham as the exemplar of covenant living: "God's everlasting covenant with Abraham... is the same covenant that God offers to each of us today."</p>
 <p><strong>Elder D. Todd Christofferson:</strong> "The blessings of the Abrahamic covenant are available to all who will come unto the Lord and keep His commandments."</p>
@@ -795,13 +795,13 @@
         <!-- ============================================================ -->
         <!-- SECTION 3: KEY PASSAGES STUDY -->
         <!-- ============================================================ -->
-        <button class="accordion-section">3. Key Passages Study</button>
+        <button class="sg-accordion-section">3. Key Passages Study</button>
         <div class="sg-panel">
             <div class="panel-content">
 
-<button class="sub-accordion"><span>Reading Overview</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Reading Overview</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p>This week marks a dramatic transition in the biblical narrative—from the primeval history of creation, fall, flood, and scattering to the intimate story of one family chosen to bless all the earth. We meet Abraham, a man born into an idolatrous culture who desired "to be a greater follower of righteousness" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/1?lang=eng&id=2" target="_blank">Abraham 1:2</a>).</p>
 <table class="info-table">
 <tr><th>Chapter</th><th>Summary</th></tr>
@@ -825,18 +825,18 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>Passage 1: The Call of Abraham (Genesis 12:1–3; Abraham 2:3–6)</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Passage 1: The Call of Abraham (Genesis 12:1–3; Abraham 2:3–6)</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <blockquote>
 <p>"1 Now the Lord had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father's house, unto a land that I will shew thee:</p>
 <p>2 And I will make of thee a great nation, and I will bless thee, and make thy name great; and thou shalt be a blessing:</p>
 <p>3 And I will bless them that bless thee, and curse him that curseth thee: and in thee shall all families of the earth be blessed." — <a href="https://www.blueletterbible.org/kjv/gen/12/1-3/s_12001" target="_blank">Genesis 12:1–3</a></p>
 </blockquote>
 
-<button class="inner-accordion"><span>Literary Structure and Hebrew Insights</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-inner-accordion"><span>Literary Structure and Hebrew Insights</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <p>The command <strong><em>lekh-lekha</em></strong> (לֶךְ־לְךָ, "go forth" or "go to yourself") contains a linguistic intensification. The doubling suggests "go for yourself" or "go to your true self"—this journey will reveal Abraham's identity. This phrase appears only twice in Torah: here and at the Akedah (Gen. 22:2)—both moments of radical obedience.</p>
 <p>The seven "I will" statements in verses 2–3 signal covenant completeness:</p>
 <ol>
@@ -854,9 +854,9 @@
 </div>
 </div>
 
-<button class="inner-accordion"><span>Doctrinal Analysis and Cross-References</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-inner-accordion"><span>Doctrinal Analysis and Cross-References</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <p><strong>The Nature of Divine Calling:</strong> God calls; humans respond. Abraham didn't choose God; God chose Abraham. Separation from worldly systems is often required. Faith precedes sight—"a land that I will shew thee."</p>
 <p><strong>The Missionary Dimension:</strong> The ultimate promise—"in thee shall all families of the earth be blessed"—transforms Abraham's calling from personal blessing to universal mission. Abraham 2:11 clarifies: "all the families of the earth [shall] be blessed, even with the blessings of the Gospel, which are the blessings of salvation, even of life eternal."</p>
 <table class="info-table">
@@ -871,16 +871,16 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>Passage 2: Abraham's Righteous Desires (Abraham 1:1–4)</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Passage 2: Abraham's Righteous Desires (Abraham 1:1–4)</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <blockquote>
 <p>"2 And, finding there was greater happiness and peace and rest for me, I sought for the blessings of the fathers, and the right whereunto I should be ordained to administer the same; having been myself a follower of righteousness, desiring also to be one who possessed great knowledge, and to be a greater follower of righteousness, and to possess a greater knowledge, and to be a father of many nations, a prince of peace, and desiring to receive instructions, and to keep the commandments of God, I became a rightful heir, a High Priest, holding the right belonging to the fathers." — <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/1?lang=eng&id=2" target="_blank">Abraham 1:2</a></p>
 </blockquote>
 
-<button class="inner-accordion"><span>Analysis</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-inner-accordion"><span>Analysis</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <p>The passage exhibits <strong>climactic parallelism</strong>—Abraham was already "a follower of righteousness" but desired to be "a GREATER follower of righteousness." He already possessed knowledge but desired "GREATER knowledge." "Fathers" appears 7 times in verses 2–4. "Desiring" appears 3 times. "Greater" appears 3 times.</p>
 <p>The Hebrew equivalent of "follower of righteousness" would be <em>rodef tsedeq</em> (רֹדֵף צֶדֶק)—literally "pursuer of righteousness." The verb <em>radaf</em> means to chase, pursue, follow hard after. This isn't passive acquiescence but active pursuit.</p>
 <p><strong>Joseph Smith's Parallel:</strong> Abraham's situation parallels Joseph Smith's. Both lived in religiously confused environments, both questioned family traditions, both sought truth directly from God. Like Abraham, Joseph <em>desired</em> greater knowledge, sought the blessings of the fathers (priesthood), and became a rightful heir.</p>
@@ -890,9 +890,9 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>Passage 3: The Abrahamic Covenant (Abraham 2:9–11; Genesis 17:1–8)</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Passage 3: The Abrahamic Covenant (Abraham 2:9–11; Genesis 17:1–8)</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <blockquote>
 <p>"9 And I will make of thee a great nation, and I will bless thee above measure, and make thy name great among all nations, and thou shalt be a blessing unto thy seed after thee, that in their hands they shall bear this ministry and Priesthood unto all nations;</p>
 <p>10 And I will bless them through thy name; for as many as receive this Gospel shall be called after thy name, and shall be accounted thy seed, and shall rise up and bless thee, as their father;</p>
@@ -902,9 +902,9 @@
 <p>"1 And when Abram was ninety years old and nine, the Lord appeared to Abram, and said unto him, I am the Almighty God; walk before me, and be thou perfect. 2 And I will make my covenant between me and thee, and will multiply thee exceedingly... 5 Neither shall thy name any more be called Abram, but thy name shall be Abraham; for a father of many nations have I made thee... 7 And I will establish my covenant between me and thee and thy seed after thee in their generations for an everlasting covenant, to be a God unto thee, and to thy seed after thee." — <a href="https://www.blueletterbible.org/kjv/gen/17/1-8/s_17001" target="_blank">Genesis 17:1–8</a></p>
 </blockquote>
 
-<button class="inner-accordion"><span>Four Pillars of the Covenant</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-inner-accordion"><span>Four Pillars of the Covenant</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <ol>
 <li><strong>Land</strong> — "All the land of Canaan, for an everlasting possession" (Gen. 17:8). The temporal land of Canaan pointed to eternal inheritance.</li>
 <li><strong>Seed/Posterity</strong> — "I will multiply thee exceedingly" (Gen. 17:2). Includes literal/biological seed, adopted/spiritual seed ("as many as receive this Gospel"), and eternal seed (D&C 132:19–20).</li>
@@ -914,9 +914,9 @@
 </div>
 </div>
 
-<button class="inner-accordion"><span>Hebrew Insights</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-inner-accordion"><span>Hebrew Insights</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <p><strong><em>berith</em></strong> (<a href="https://www.blueletterbible.org/lexicon/h1285/kjv/wlc/0-1/" target="_blank">H1285</a>) — "Covenant." Appears 11 times in Genesis 17 alone. Not merely a contract but a divine decree which God establishes and humans accept.</p>
 <p><strong>Avraham</strong> (<a href="https://www.blueletterbible.org/lexicon/h85/kjv/wlc/0-1/" target="_blank">H85</a>) — From Abram (אַבְרָם, "exalted father") to Abraham (אַבְרָהָם, "father of a multitude"). The added ה (<em>heh</em>) is from God's name יהוה (YHWH)—God inserted part of His own name into Abraham's.</p>
 <p><strong><em>'olam</em></strong> (<a href="https://www.blueletterbible.org/lexicon/h5769/kjv/wlc/0-1/" target="_blank">H5769</a>) — "Everlasting." From root <em>'alam</em> (to hide, conceal)—the hidden time, beyond mortal sight. "Everlasting covenant" (<em>berith 'olam</em>).</p>
@@ -924,9 +924,9 @@
 </div>
 </div>
 
-<button class="inner-accordion"><span>Cross-References</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-inner-accordion"><span>Cross-References</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <table class="info-table">
 <tr><th>Reference</th><th>Connection</th></tr>
 <tr><td><a href="https://www.blueletterbible.org/kjv/gal/3/7-9/s_1092007" target="_blank">Galatians 3:7–9, 29</a></td><td>"They which are of faith... are the children of Abraham... heirs according to the promise"</td></tr>
@@ -939,9 +939,9 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>Passage 4: Melchizedek and the Priesthood (Genesis 14:18–20; JST Genesis 14:25–40)</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Passage 4: Melchizedek and the Priesthood (Genesis 14:18–20; JST Genesis 14:25–40)</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <blockquote>
 <p>"18 And Melchizedek king of Salem brought forth bread and wine: and he was the priest of the most high God. 19 And he blessed him, and said, Blessed be Abram of the most high God, possessor of heaven and earth: 20 And blessed be the most high God, which hath delivered thine enemies into thy hand. And he gave him tithes of all." — <a href="https://www.blueletterbible.org/kjv/gen/14/18-20/s_14018" target="_blank">Genesis 14:18–20</a></p>
 </blockquote>
@@ -949,9 +949,9 @@
 <p>"26 Now Melchizedek was a man of faith, who wrought righteousness; and when a child he feared God, and stopped the mouths of lions, and quenched the violence of fire. 27 And thus, having been approved of God, he was ordained an high priest after the order of the covenant which God made with Enoch, 28 It being after the order of the Son of God..." — <a href="https://www.churchofjesuschrist.org/study/scriptures/jst/jst-gen/14?lang=eng&id=25-40" target="_blank">JST Genesis 14:25–40</a></p>
 </blockquote>
 
-<button class="inner-accordion"><span>Analysis and Type of Christ</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-inner-accordion"><span>Analysis and Type of Christ</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <table class="info-table">
 <tr><th>Melchizedek</th><th>Jesus Christ</th></tr>
 <tr><td>King of Righteousness (name meaning)</td><td>"The LORD Our Righteousness" (Jer. 23:6)</td></tr>
@@ -967,9 +967,9 @@
 </div>
 </div>
 
-<button class="inner-accordion"><span>Hebrew Insights</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-inner-accordion"><span>Hebrew Insights</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <p><strong>מַלְכִּי־צֶדֶק</strong> (<a href="https://www.blueletterbible.org/lexicon/h4442/kjv/wlc/0-1/" target="_blank">H4442</a>) — <em>Malki-Tsedeq</em>, compound: <em>malki</em> (my king) + <em>tsedeq</em> (righteousness). Meaning: "My king is righteousness" or "King of Righteousness."</p>
 <p><strong>שָׁלֵם</strong> (<a href="https://www.blueletterbible.org/lexicon/h8004/kjv/wlc/0-1/" target="_blank">H8004</a>) — <em>Shalem</em>, related to <em>shalom</em> (שָׁלוֹם)—peace. Psalm 76:2: "In Salem also is his tabernacle"—identified with Jerusalem.</p>
 <p><strong>אֵל עֶלְיוֹן</strong> — <em>El 'Elyon</em>, "God Most High." Appears four times in Genesis 14:18–22. Abraham identifies <em>El 'Elyon</em> with YHWH (Gen. 14:22).</p>
@@ -979,18 +979,18 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>Passage 5: Abraham Counted Righteous (Genesis 15:1–6)</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Passage 5: Abraham Counted Righteous (Genesis 15:1–6)</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <blockquote>
 <p>"1 After these things the word of the Lord came unto Abram in a vision, saying, Fear not, Abram: I am thy shield, and thy exceeding great reward.</p>
 <p>5 And he brought him forth abroad, and said, Look now toward heaven, and tell the stars, if thou be able to number them: and he said unto him, So shall thy seed be.</p>
 <p>6 And he believed in the Lord; and he counted it to him for righteousness." — <a href="https://www.blueletterbible.org/kjv/gen/15/1-6/s_15001" target="_blank">Genesis 15:1–6</a></p>
 </blockquote>
 
-<button class="inner-accordion"><span>Analysis: Faith Counted as Righteousness</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-inner-accordion"><span>Analysis: Faith Counted as Righteousness</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <p>This verse is quoted more often in the New Testament than almost any OT verse outside the Psalms. Abraham could have doubted—he was 75 when called, childless, married to a barren wife. Every year without Isaac could have weakened faith. But "he staggered not at the promise of God through unbelief" (<a href="https://www.blueletterbible.org/kjv/rom/4/20/s_1050020" target="_blank">Romans 4:20</a>).</p>
 <p><strong>Hebrew Insights:</strong></p>
 <ul>
@@ -1003,9 +1003,9 @@
 </div>
 </div>
 
-<button class="inner-accordion"><span>Cross-References</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-inner-accordion"><span>Cross-References</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <table class="info-table">
 <tr><th>Reference</th><th>Connection</th></tr>
 <tr><td><a href="https://www.blueletterbible.org/kjv/rom/4/1-25/s_1050001" target="_blank">Romans 4:1–25</a></td><td>Entire chapter on Abraham's faith counted as righteousness</td></tr>
@@ -1019,9 +1019,9 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>Additional Notable Verses</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Additional Notable Verses</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 
 <h4>Genesis 12:6–7 — "Unto thy seed will I give this land"</h4>
 <p>Abram's first action in Canaan was to build an altar to the LORD at Shechem. God appeared and reaffirmed the promise. The "plain of Moreh" (<em>Moreh</em> means "teacher" or "oracle") may be the same location where Jacob later bought property and Joshua renewed the covenant (<a href="https://www.blueletterbible.org/kjv/jos/24/25-26/s_231025" target="_blank">Joshua 24:25–26</a>).</p>
@@ -1053,13 +1053,13 @@
         <!-- ============================================================ -->
         <!-- SECTION 4: WORD STUDIES -->
         <!-- ============================================================ -->
-        <button class="accordion-section">4. Word Studies</button>
+        <button class="sg-accordion-section">4. Word Studies</button>
         <div class="sg-panel">
             <div class="panel-content">
 
-<button class="sub-accordion"><span>Quick Reference Table</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Quick Reference Table</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <table class="info-table">
 <tr><th>Hebrew</th><th>Transliteration</th><th>Strong's</th><th>Primary Meaning</th><th>Key Passage</th></tr>
 <tr><td dir="rtl">בְּרִית</td><td><em>berith</em></td><td><a href="https://www.blueletterbible.org/lexicon/h1285/kjv/wlc/0-1/" target="_blank">H1285</a></td><td>Covenant</td><td>Genesis 17:2</td></tr>
@@ -1071,9 +1071,9 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>בְּרִית (Berith) — "Covenant"</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>בְּרִית (Berith) — "Covenant"</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p><strong>Hebrew:</strong> <span dir="rtl">בְּרִית</span> (<em>berith</em>) | <strong>Strong's:</strong> <a href="https://www.blueletterbible.org/lexicon/h1285/kjv/wlc/0-1/" target="_blank">H1285</a> | <strong>Pronunciation:</strong> beh-REET</p>
 <p><strong>Root:</strong> Possibly related to <em>barah</em> (בָּרָה, <a href="https://www.blueletterbible.org/lexicon/h1262/kjv/wlc/0-1/" target="_blank">H1262</a>) — "to cut, to select food"</p>
 <p><strong>Definition:</strong> Covenant, alliance, pledge. Between men: treaty, alliance, agreement. Between God and man: covenant, compact. The Hebrew idiom is <em>karat berith</em> (כָּרַת בְּרִית) — literally "to cut a covenant," from the ancient ritual of dividing animals and passing between the pieces (Genesis 15:9–18).</p>
@@ -1091,9 +1091,9 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>זֶרַע (Zera') — "Seed"</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>זֶרַע (Zera') — "Seed"</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p><strong>Hebrew:</strong> <span dir="rtl">זֶרַע</span> (<em>zera'</em>) | <strong>Strong's:</strong> <a href="https://www.blueletterbible.org/lexicon/h2233/kjv/wlc/0-1/" target="_blank">H2233</a> | <strong>Pronunciation:</strong> ZEH-rah</p>
 <p><strong>Root:</strong> <em>zara</em> (זָרַע, <a href="https://www.blueletterbible.org/lexicon/h2232/kjv/wlc/0-1/" target="_blank">H2232</a>) — "to sow, scatter seed"</p>
 <p><strong>Semantic Range:</strong> Physical seed for planting, semen, offspring, descendants, future generations. <em>Zera'</em> appears <strong>17 times</strong> in Genesis 12–17.</p>
@@ -1102,9 +1102,9 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>צְדָקָה (Tsedaqah) — "Righteousness"</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>צְדָקָה (Tsedaqah) — "Righteousness"</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p><strong>Hebrew:</strong> <span dir="rtl">צְדָקָה</span> (<em>tsedaqah</em>) | <strong>Strong's:</strong> <a href="https://www.blueletterbible.org/lexicon/h6666/kjv/wlc/0-1/" target="_blank">H6666</a> | <strong>Pronunciation:</strong> tsed-ah-KAH</p>
 <p><strong>Root:</strong> <em>tsadaq</em> (צָדַק, <a href="https://www.blueletterbible.org/lexicon/h6663/kjv/wlc/0-1/" target="_blank">H6663</a>) — "to be just, righteous"</p>
 <p><strong>Semantic Range:</strong> Legal (justice), moral (uprightness), relational (right standing with God), salvific (God's saving intervention), covenantal (faithfulness to obligations).</p>
@@ -1114,9 +1114,9 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>מַלְכִּי־צֶדֶק (Malki-Tsedeq) — "Melchizedek"</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>מַלְכִּי־צֶדֶק (Malki-Tsedeq) — "Melchizedek"</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p><strong>Hebrew:</strong> <span dir="rtl">מַלְכִּי־צֶדֶק</span> (<em>Malki-Tsedeq</em>) | <strong>Strong's:</strong> <a href="https://www.blueletterbible.org/lexicon/h4442/kjv/wlc/0-1/" target="_blank">H4442</a></p>
 <p><strong>Components:</strong> מֶלֶךְ (<em>melek</em>, "king") + צֶדֶק (<em>tsedeq</em>, "righteousness"). Literal meaning: "My king is righteousness" or "King of Righteousness." <a href="https://www.blueletterbible.org/kjv/heb/7/2/s_1140002" target="_blank">Hebrews 7:2</a> translates it: "King of righteousness."</p>
 <p><strong>OT Occurrences:</strong> Only 2 times — <a href="https://www.blueletterbible.org/kjv/gen/14/18/s_14018" target="_blank">Genesis 14:18</a> and <a href="https://www.blueletterbible.org/kjv/psa/110/4/s_588004" target="_blank">Psalm 110:4</a>.</p>
@@ -1125,9 +1125,9 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>כֹּהֵן (Kohen) — "Priest"</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>כֹּהֵן (Kohen) — "Priest"</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p><strong>Hebrew:</strong> <span dir="rtl">כֹּהֵן</span> (<em>kohen</em>) | <strong>Strong's:</strong> <a href="https://www.blueletterbible.org/lexicon/h3548/kjv/wlc/0-1/" target="_blank">H3548</a> | <strong>Pronunciation:</strong> ko-HAYN</p>
 <p><strong>Definition:</strong> Priest, one who officiates at the altar. Used for patriarchal priests (Melchizedek), Levitical priests (Aaron), and pagan priests. OT occurrences: 750 times.</p>
 <p><strong>This Week:</strong> The only use is Genesis 14:18 — "priest of the most high God." This predates the Aaronic priesthood by centuries, demonstrating that priesthood authority existed from the beginning.</p>
@@ -1135,9 +1135,9 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>Additional Hebrew Terms</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Additional Hebrew Terms</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <table class="info-table">
 <tr><th>Hebrew</th><th>Term</th><th>Meaning</th><th>Key Passage</th></tr>
 <tr><td dir="rtl">אַבְרָהָם</td><td><em>Avraham</em> (<a href="https://www.blueletterbible.org/lexicon/h85/kjv/wlc/0-1/" target="_blank">H85</a>)</td><td>"Father of a multitude." God inserted ה (<em>heh</em>) from His own name YHWH into Abram's name.</td><td>Genesis 17:5</td></tr>
@@ -1162,13 +1162,13 @@
         <!-- ============================================================ -->
         <!-- SECTION 5: TEACHING APPLICATIONS -->
         <!-- ============================================================ -->
-        <button class="accordion-section">5. Teaching Applications</button>
+        <button class="sg-accordion-section">5. Teaching Applications</button>
         <div class="sg-panel">
             <div class="panel-content">
 
-<button class="sub-accordion"><span>Personal Study Applications</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Personal Study Applications</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 
 <h4>Theme: Righteous Desires Amid Unrighteous Circumstances</h4>
 <p>Abraham 1:2 reveals Abraham's desire "to be a greater follower of righteousness" despite family idolatry. Abraham couldn't control his family's apostasy, but he could control his own desires and responses.</p>
@@ -1189,31 +1189,31 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>Family Home Evening Activities</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Family Home Evening Activities</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 
-<button class="inner-accordion"><span>Activity 1: The Call to Leave — Following God into the Unknown</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-inner-accordion"><span>Activity 1: The Call to Leave — Following God into the Unknown</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <p><strong>Materials:</strong> Blindfold, masking tape, small obstacles</p>
 <p><strong>Activity:</strong> Create a simple obstacle course. Blindfold one family member and have another guide them verbally through the course. Discuss: Abraham left Ur not knowing where God would lead him (<a href="https://www.blueletterbible.org/kjv/heb/11/8/s_1144008" target="_blank">Hebrews 11:8</a>).</p>
 <p><strong>Discussion:</strong> God told Abraham: "Go to a land that I will shew thee" (Gen. 12:1). The destination wasn't revealed at first. What has God asked our family to do without showing us the full outcome?</p>
 </div>
 </div>
 
-<button class="inner-accordion"><span>Activity 2: Counting Stars — Faith in God's Impossible Promises</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-inner-accordion"><span>Activity 2: Counting Stars — Faith in God's Impossible Promises</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <p><strong>Materials:</strong> Access to night sky (or photos of stars), paper, markers</p>
 <p><strong>Activity:</strong> Go outside and try to count stars. Read Genesis 15:5 together. Make a family "covenant chart" listing promises God has made (baptismal covenant, temple sealing, patriarchal blessings).</p>
 <p><strong>Discussion:</strong> Abraham was 75 when God first promised seed, 100 when Isaac was born. That's 25 years of waiting! What promises are we waiting for God to fulfill?</p>
 </div>
 </div>
 
-<button class="inner-accordion"><span>Activity 3: Covenant Signs — Physical Reminders of Spiritual Promises</span></button>
-<div class="inner-panel">
-<div class="inner-panel-content">
+<button class="sg-inner-accordion"><span>Activity 3: Covenant Signs — Physical Reminders of Spiritual Promises</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel-content">
 <p><strong>Materials:</strong> Pictures/objects representing covenant signs</p>
 <p><strong>Activity:</strong> Discuss circumcision as the sign of Abraham's covenant (Gen. 17:11). Identify modern covenant signs: Baptism (white clothing, water), Sacrament (bread and water), Temple (garments, rings). Create a family "covenant reminder."</p>
 <p><strong>Discussion:</strong> Physical signs remind us of spiritual realities. How do our covenant signs function like Abraham's circumcision—as tokens of our covenant relationship with God?</p>
@@ -1222,18 +1222,18 @@
 </div>
 </div>
 
-<button class="sub-accordion"><span>Sunday School Teaching</span></button>
-<div class="sub-panel">
-<div class="sub-panel-content">
+<button class="sg-sub-accordion"><span>Sunday School Teaching</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 
-<button class="inner-accordion"><span>Lesson Focus 1: We Are Abraham's Seed</span></button>
-<div class="inner-panel">
-<div class="inner-panel
+<button class="sg-inner-accordion"><span>Lesson Focus 1: We Are Abraham's Seed</span></button>
+<div class="sg-inner-panel">
+<div class="sg-inner-panel
 
 <script>
 
         // Main accordion sections
-        const accordionSections = document.querySelectorAll('.accordion-section');
+        const accordionSections = document.querySelectorAll('.sg-accordion-section');
         accordionSections.forEach(section => {
             section.addEventListener('click', function() {
                 this.classList.toggle('active');
@@ -1243,7 +1243,7 @@
         });
 
         // Sub-accordions (nested within main panels)
-        const subAccordions = document.querySelectorAll('.sub-accordion');
+        const subAccordions = document.querySelectorAll('.sg-sub-accordion');
         subAccordions.forEach(subAccordion => {
             subAccordion.addEventListener('click', function() {
                 this.classList.toggle('active');
@@ -1252,8 +1252,8 @@
             });
         });
 
-        // Inner accordions (third level - nested within sub-panels)
-        const innerAccordions = document.querySelectorAll('.inner-accordion');
+        // Inner accordions (third level - nested within sg-sub-panels)
+        const innerAccordions = document.querySelectorAll('.sg-inner-accordion');
         innerAccordions.forEach(innerAccordion => {
             innerAccordion.addEventListener('click', function() {
                 this.classList.toggle('active');
@@ -1268,7 +1268,7 @@
                 section.classList.add('active');
                 section.nextElementSibling.classList.add('active');
             });
-            // Expand sub-accordions
+            // Expand sg-sub-accordions
             subAccordions.forEach(sub => {
                 sub.classList.add('active');
                 sub.nextElementSibling.classList.add('active');
@@ -1286,7 +1286,7 @@
                 section.classList.remove('active');
                 section.nextElementSibling.classList.remove('active');
             });
-            // Collapse sub-accordions
+            // Collapse sg-sub-accordions
             subAccordions.forEach(sub => {
                 sub.classList.remove('active');
                 sub.nextElementSibling.classList.remove('active');

@@ -587,6 +587,9 @@ body {
 
 /* === Embedded Content (existing HTML) === */
 .embedded-content { font-family: inherit; }
+.embedded-content details > summary { list-style: none; }
+.embedded-content details > summary::-webkit-details-marker { display: none; }
+.embedded-content details > summary::marker { display: none; content: ""; }
 
 /* === Print === */
 @media print {
