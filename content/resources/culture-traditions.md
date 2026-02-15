@@ -88,17 +88,99 @@ Understanding the Bible on its own terms means stepping into the world that prod
 
 The Hebrew word **מועדים** (*moedim*) means "appointed times" — divine appointments woven into creation itself (Genesis 1:14). The seven feasts of Leviticus 23 trace God's redemptive plan:
 
-| | Feast | Hebrew | 2026 Date |
-|---|---|---|---|
-| Spring | **Passover** (Pesach) | פסח | April 2 |
-| | **Unleavened Bread** (Matzot) | מצות | April 2–9 |
-| | **Firstfruits** (Bikkurim) | ביכורים | April 5 |
-| | **Pentecost** (Shavuot) | שבועות | May 22 |
-| Fall | **Trumpets** (Yom Teruah) | יום תרועה | Sept 12 |
-| | **Atonement** (Yom Kippur) | יום כיפור | Sept 21 |
-| | **Tabernacles** (Sukkot) | סוכות | Sept 26 |
+<div style="margin: 24px 0;">
 
-*More detailed feast day studies are coming soon.*
+<div style="margin-bottom: 8px; padding: 8px 16px; background: linear-gradient(135deg, #4a6b52 0%, #5a7d62 100%); color: white; border-radius: 8px 8px 0 0; font-family: Georgia, serif; font-size: 0.95em; letter-spacing: 0.5px;">Spring Feasts — Fulfilled in Christ</div>
+
+<div style="display: grid; grid-template-columns: 1fr; gap: 0; margin-bottom: 20px;">
+
+<div style="display: flex; align-items: center; padding: 14px 18px; background: #f7f9f7; border-left: 4px solid #4a6b52; border-bottom: 1px solid #e8ede9;">
+  <div style="flex: 1;">
+    <div style="font-weight: 700; color: #1e3a4f; font-size: 1.05em;">Passover</div>
+    <div style="font-size: 0.85em; color: #57899c;">Pesach · פסח</div>
+  </div>
+  <div style="text-align: right;">
+    <div style="font-weight: 600; color: #1e3a4f;">April 2</div>
+    <div style="font-size: 0.8em; color: #57899c;">15 Nisan</div>
+  </div>
+</div>
+
+<div style="display: flex; align-items: center; padding: 14px 18px; background: white; border-left: 4px solid #4a6b52; border-bottom: 1px solid #e8ede9;">
+  <div style="flex: 1;">
+    <div style="font-weight: 700; color: #1e3a4f; font-size: 1.05em;">Unleavened Bread</div>
+    <div style="font-size: 0.85em; color: #57899c;">Matzot · מצות</div>
+  </div>
+  <div style="text-align: right;">
+    <div style="font-weight: 600; color: #1e3a4f;">April 2–9</div>
+    <div style="font-size: 0.8em; color: #57899c;">15–22 Nisan</div>
+  </div>
+</div>
+
+<div style="display: flex; align-items: center; padding: 14px 18px; background: #f7f9f7; border-left: 4px solid #4a6b52; border-bottom: 1px solid #e8ede9;">
+  <div style="flex: 1;">
+    <div style="font-weight: 700; color: #1e3a4f; font-size: 1.05em;">Firstfruits</div>
+    <div style="font-size: 0.85em; color: #57899c;">Bikkurim · ביכורים</div>
+  </div>
+  <div style="text-align: right;">
+    <div style="font-weight: 600; color: #1e3a4f;">April 5</div>
+    <div style="font-size: 0.8em; color: #57899c;">18 Nisan</div>
+  </div>
+</div>
+
+<div style="display: flex; align-items: center; padding: 14px 18px; background: white; border-left: 4px solid #4a6b52; border-radius: 0 0 8px 0;">
+  <div style="flex: 1;">
+    <div style="font-weight: 700; color: #1e3a4f; font-size: 1.05em;">Pentecost</div>
+    <div style="font-size: 0.85em; color: #57899c;">Shavuot · שבועות</div>
+  </div>
+  <div style="text-align: right;">
+    <div style="font-weight: 600; color: #1e3a4f;">May 22</div>
+    <div style="font-size: 0.8em; color: #57899c;">6 Sivan</div>
+  </div>
+</div>
+
+</div>
+
+<div style="margin-bottom: 8px; padding: 8px 16px; background: linear-gradient(135deg, #1e3a4f 0%, #2a4f6a 100%); color: white; border-radius: 8px 8px 0 0; font-family: Georgia, serif; font-size: 0.95em; letter-spacing: 0.5px;">Fall Feasts — Yet to Be Fulfilled</div>
+
+<div style="display: grid; grid-template-columns: 1fr; gap: 0;">
+
+<div style="display: flex; align-items: center; padding: 14px 18px; background: #f5f7fa; border-left: 4px solid #1e3a4f; border-bottom: 1px solid #e0e5ea;">
+  <div style="flex: 1;">
+    <div style="font-weight: 700; color: #1e3a4f; font-size: 1.05em;">Trumpets</div>
+    <div style="font-size: 0.85em; color: #57899c;">Yom Teruah · יום תרועה</div>
+  </div>
+  <div style="text-align: right;">
+    <div style="font-weight: 600; color: #1e3a4f;">Sept 12</div>
+    <div style="font-size: 0.8em; color: #57899c;">1 Tishri</div>
+  </div>
+</div>
+
+<div style="display: flex; align-items: center; padding: 14px 18px; background: white; border-left: 4px solid #1e3a4f; border-bottom: 1px solid #e0e5ea;">
+  <div style="flex: 1;">
+    <div style="font-weight: 700; color: #1e3a4f; font-size: 1.05em;">Atonement</div>
+    <div style="font-size: 0.85em; color: #57899c;">Yom Kippur · יום כיפור</div>
+  </div>
+  <div style="text-align: right;">
+    <div style="font-weight: 600; color: #1e3a4f;">Sept 21</div>
+    <div style="font-size: 0.8em; color: #57899c;">10 Tishri</div>
+  </div>
+</div>
+
+<div style="display: flex; align-items: center; padding: 14px 18px; background: #f5f7fa; border-left: 4px solid #1e3a4f; border-radius: 0 0 8px 0;">
+  <div style="flex: 1;">
+    <div style="font-weight: 700; color: #1e3a4f; font-size: 1.05em;">Tabernacles</div>
+    <div style="font-size: 0.85em; color: #57899c;">Sukkot · סוכות</div>
+  </div>
+  <div style="text-align: right;">
+    <div style="font-weight: 600; color: #1e3a4f;">Sept 26</div>
+    <div style="font-size: 0.8em; color: #57899c;">15 Tishri</div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<p style="font-style: italic; color: var(--text-muted); font-size: 0.9em;">More detailed feast day studies are coming soon.</p>
 
 ### Resources
 
