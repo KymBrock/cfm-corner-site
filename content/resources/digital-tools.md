@@ -21,6 +21,10 @@ A curated collection of digital tools for in-depth scripture study — from free
 
 - **[Mechon Mamre](https://mechon-mamre.org/)** — Free Hebrew-English parallel Old Testament text. Clean and uncluttered — ideal for side-by-side reading with the original Hebrew.
 
+- **[Bible Gateway — NRSVue](https://www.biblegateway.com/versions/New-Revised-Standard-Version-Updated-Edition-NRSVue-Bible/)** — The New Revised Standard Version Updated Edition, widely regarded as the standard academic English translation. Excellent for comparing with the KJV to clarify difficult Old Testament passages. Free to read online.
+
+- **[Biblia Hebraica Stuttgartensia (BHS) — Academic Bible](https://www.academic-bible.com/en/home/)** — The critical edition of the Hebrew Bible used by scholars worldwide, based on the Leningrad Codex (oldest complete Hebrew manuscript). Published by the German Bible Society. Also accessible through STEP Bible, Accordance, and LOGOS. The foundational text for serious Hebrew study.
+
 ### Paid
 
 - **[Scripture Notes](https://scripturenotes.com/)** — Developed by Oak Norton. Robust study tool valuable for in-depth research in the Triple Combination. Integrates with Blue Letter Bible, Bible Hub, and Webster's 1828 Dictionary. Free and premium ($5/month or $50/year) versions.
