@@ -104,5 +104,74 @@ window.addEventListener('load', function() {
         if (btn) showTab(hash, btn);
     }
 });
+
+// Study Guide accordions
+document.querySelectorAll('.sg-accordion-section').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        this.classList.toggle('active');
+        var panel = this.nextElementSibling;
+        if (panel) panel.classList.toggle('active');
+    });
+});
+document.querySelectorAll('.sg-sub-accordion').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        this.classList.toggle('active');
+        var panel = this.nextElementSibling;
+        if (panel) panel.classList.toggle('active');
+    });
+});
+document.querySelectorAll('.sg-inner-accordion').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        this.classList.toggle('active');
+        var panel = this.nextElementSibling;
+        if (panel) panel.classList.toggle('active');
+    });
+});
+
+// Insights accordions
+document.querySelectorAll('.section-header').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        this.classList.toggle('active');
+        var panel = this.nextElementSibling;
+        if (panel) panel.classList.toggle('active');
+    });
+});
+document.querySelectorAll('.sub-accordion').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        this.classList.toggle('active');
+        var panel = this.nextElementSibling;
+        if (panel) panel.classList.toggle('active');
+    });
+});
+
+// Expand/Collapse All buttons
+function expandAll() {
+    document.querySelectorAll('.sg-accordion-section, .sg-sub-accordion, .sg-inner-accordion').forEach(function(btn) {
+        btn.classList.add('active');
+        var panel = btn.nextElementSibling;
+        if (panel) panel.classList.add('active');
+    });
+}
+function collapseAll() {
+    document.querySelectorAll('.sg-accordion-section, .sg-sub-accordion, .sg-inner-accordion').forEach(function(btn) {
+        btn.classList.remove('active');
+        var panel = btn.nextElementSibling;
+        if (panel) panel.classList.remove('active');
+    });
+}
+function expandAllInsights() {
+    document.querySelectorAll('.section-header, .sub-accordion').forEach(function(btn) {
+        btn.classList.add('active');
+        var panel = btn.nextElementSibling;
+        if (panel) panel.classList.add('active');
+    });
+}
+function collapseAllInsights() {
+    document.querySelectorAll('.section-header, .sub-accordion').forEach(function(btn) {
+        btn.classList.remove('active');
+        var panel = btn.nextElementSibling;
+        if (panel) panel.classList.remove('active');
+    });
+}
 </script>
 {{ end }}
