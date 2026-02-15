@@ -78,7 +78,7 @@ Understanding the Bible on its own terms means stepping into the world that prod
 <div id="calendar-lightbox" onclick="this.style.display='none'" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.92); flex-direction:column; align-items:center; justify-content:center; cursor:zoom-out; padding:20px;">
   <div style="color:white; font-size:0.85em; margin-bottom:10px; opacity:0.7;">Tap anywhere to close</div>
   <div style="overflow:auto; max-width:95vw; max-height:85vh; -webkit-overflow-scrolling:touch;" onclick="event.stopPropagation()">
-    <img src="../../images/moedim-calendar-full.png" alt="Biblical Calendar — full resolution" style="max-width: none; width: 3840px; display:block;">
+    <img src="../../images/moedim-calendar-full.png" alt="Biblical Calendar — full resolution" style="max-width: none; width: 3840px; display:block; background: white; border-radius: 8px; padding: 20px;">
   </div>
 </div>
 
