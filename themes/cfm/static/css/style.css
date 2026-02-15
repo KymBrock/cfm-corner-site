@@ -35,72 +35,75 @@ body {
     z-index: 100;
     box-shadow: 0 2px 12px rgba(0,0,0,0.15);
 }
-.nav-inner {
+.nav-top {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 14px 20px 8px;
     display: flex;
     align-items: center;
-    gap: 24px;
-    height: 60px;
+    gap: 28px;
 }
 .nav-logo {
     text-decoration: none;
     color: white;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     flex-shrink: 0;
 }
 .nav-tree {
-    width: 36px;
-    height: 36px;
+    width: 46px;
+    height: 46px;
     object-fit: contain;
-    border-radius: 4px;
 }
-.nav-logo-text { display: flex; flex-direction: column; line-height: 1.2; }
-.nav-title { font-family: Georgia, serif; font-size: 1.15em; font-weight: 600; letter-spacing: 0.3px; }
-.nav-subtitle { font-size: 0.7em; opacity: 0.65; font-weight: 400; letter-spacing: 0.5px; }
+.nav-title { font-family: Georgia, serif; font-size: 1.3em; font-weight: 600; letter-spacing: 0.3px; }
 .nav-links { display: flex; gap: 6px; margin-left: auto; }
 .nav-links a {
     color: white;
     text-decoration: none;
-    font-size: 0.88em;
+    font-size: 0.9em;
     opacity: 0.85;
-    padding: 6px 12px;
+    padding: 6px 14px;
     border-radius: 6px;
     transition: opacity 0.2s, background 0.2s;
 }
 .nav-links a:hover { opacity: 1; background: rgba(255,255,255,0.1); }
 .nav-links a.active { opacity: 1; background: rgba(255,255,255,0.15); font-weight: 600; }
+.nav-search-row {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px 12px;
+    display: flex;
+    justify-content: center;
+}
 .nav-search {
     display: flex;
     align-items: center;
     background: rgba(255,255,255,0.12);
     border: 1px solid rgba(255,255,255,0.2);
     border-radius: 20px;
-    padding: 0 12px;
+    padding: 0 14px;
     height: 34px;
-    flex-shrink: 0;
+    width: 100%;
+    max-width: 400px;
     transition: background 0.2s, border-color 0.2s;
 }
 .nav-search:focus-within {
     background: rgba(255,255,255,0.2);
     border-color: rgba(255,255,255,0.4);
 }
-.nav-search-icon { color: rgba(255,255,255,0.6); flex-shrink: 0; }
+.nav-search-icon { color: rgba(255,255,255,0.55); flex-shrink: 0; }
 .nav-search input {
     background: none;
     border: none;
     color: white;
-    font-size: 0.85em;
+    font-size: 0.88em;
     padding: 0 8px;
-    width: 130px;
+    width: 100%;
     outline: none;
 }
-.nav-search input::placeholder { color: rgba(255,255,255,0.5); }
+.nav-search input::placeholder { color: rgba(255,255,255,0.45); }
 .nav-toggle { display: none; background: none; border: none; color: white; font-size: 1.5em; cursor: pointer; padding: 8px; }
-.nav-search-mobile { display: none; }
 
 /* === Main Content === */
 .site-main {
@@ -341,29 +344,15 @@ body {
 /* === Tablet (≤768px) === */
 @media (max-width: 768px) {
     /* Nav */
+    .nav-top { padding: 10px 16px 6px; gap: 12px; }
+    .nav-tree { width: 38px; height: 38px; }
+    .nav-title { font-size: 1.1em; }
     .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #3d4a40; padding: 12px 20px; gap: 4px; z-index: 101; box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
     .nav-links.open { display: flex; }
     .nav-links a { padding: 10px 14px; border-radius: 6px; }
     .nav-links a:hover, .nav-links a.active { background: rgba(255,255,255,0.1); }
-    .nav-search { display: none; }
-    .nav-search-mobile {
-        display: block;
-        margin-top: 4px;
-        padding-top: 8px;
-        border-top: 1px solid rgba(255,255,255,0.1);
-    }
-    .nav-search-mobile input {
-        width: 100%;
-        padding: 10px 14px;
-        border: 1px solid rgba(255,255,255,0.2);
-        border-radius: 20px;
-        background: rgba(255,255,255,0.1);
-        color: white;
-        font-size: 0.9em;
-        outline: none;
-    }
-    .nav-search-mobile input::placeholder { color: rgba(255,255,255,0.5); }
-    .nav-search-mobile input:focus { border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.15); }
+    .nav-search-row { padding: 0 16px 10px; }
+    .nav-search { max-width: none; }
     .nav-toggle { display: block; margin-left: auto; }
 
     /* Homepage */

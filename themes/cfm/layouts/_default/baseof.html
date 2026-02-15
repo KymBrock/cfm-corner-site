@@ -25,7 +25,7 @@
 </head>
 <body>
     <nav class="site-nav">
-        <div class="nav-inner">
+        <div class="nav-top">
             <a href="{{ "" | relURL }}/" class="nav-logo">
                 <img src="{{ "images/tree-logo.png" | relURL }}" alt="" class="nav-tree">
                 <span class="nav-title">Come Follow Me Corner</span>
@@ -35,15 +35,14 @@
                 <a href="{{ "about/" | relURL }}"{{ if hasPrefix .RelPermalink "/about/" }} class="active"{{ end }}>About</a>
                 <a href="{{ "weeks/" | relURL }}"{{ if hasPrefix .RelPermalink "/weeks/" }} class="active"{{ end }}>Weekly Lessons</a>
                 <a href="{{ "resources/" | relURL }}"{{ if hasPrefix .RelPermalink "/resources/" }} class="active"{{ end }}>Resources</a>
-                <form class="nav-search-mobile" action="{{ "search/" | relURL }}" method="get" onsubmit="event.preventDefault(); window.location.href=this.action + '#' + encodeURIComponent(this.querySelector('input').value);">
-                    <input type="text" placeholder="Search the site..." aria-label="Search site">
-                </form>
             </div>
-            <form class="nav-search" action="{{ "search/" | relURL }}" method="get" onsubmit="event.preventDefault(); window.location.href=this.action + '#' + encodeURIComponent(this.querySelector('input').value);">
-                <svg class="nav-search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                <input type="text" placeholder="Search..." aria-label="Search site">
-            </form>
             <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+        </div>
+        <div class="nav-search-row">
+            <form class="nav-search" action="{{ "search/" | relURL }}" method="get" onsubmit="event.preventDefault(); window.location.href=this.action + '#' + encodeURIComponent(this.querySelector('input').value);">
+                <svg class="nav-search-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="text" placeholder="Search the site..." aria-label="Search site">
+            </form>
         </div>
     </nav>
 
