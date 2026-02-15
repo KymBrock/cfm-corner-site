@@ -7,11 +7,32 @@ Understanding the Bible on its own terms means stepping into the world that prod
 
 ---
 
+### The Biblical Calendar
+
+<div style="margin: 24px 0; text-align: center;">
+  <div style="cursor: pointer; position: relative; display: inline-block; max-width: 100%;" onclick="document.getElementById('calendar-lightbox').style.display='flex'">
+    <img src="../../images/moedim-calendar.jpg" alt="Biblical Calendar showing the Hebrew months, agricultural seasons, and feast days" style="width: 100%; max-width: 800px; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
+    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(30,58,79,0.7) 0%, transparent 60%); border-radius: 0 0 10px 10px; padding: 12px; text-align: center;">
+      <span style="color: white; font-size: 0.8em; opacity: 0.9;">Tap to enlarge</span>
+    </div>
+  </div>
+  <p style="font-size: 0.8em; color: var(--text-muted); margin-top: 8px; font-style: italic;">The Hebrew calendar with agricultural seasons and appointed times. From <em>The Parable of Music</em> by Kymber Brockbank.</p>
+</div>
+
+<!-- Calendar Lightbox -->
+<div id="calendar-lightbox" onclick="this.style.display='none'" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.92); flex-direction:column; align-items:center; justify-content:center; cursor:zoom-out; padding:20px;">
+  <div style="color:white; font-size:0.85em; margin-bottom:10px; opacity:0.7;">Tap anywhere to close</div>
+  <div style="overflow:auto; max-width:95vw; max-height:85vh; -webkit-overflow-scrolling:touch;" onclick="event.stopPropagation()">
+    <img src="../../images/moedim-calendar-full.png" alt="Biblical Calendar — full resolution" style="max-width: none; width: 3840px; display:block; background: white; border-radius: 8px; padding: 20px;">
+  </div>
+</div>
+
 <div id="feast-countdown" style="background: linear-gradient(135deg, #1e3a4f 0%, #2a4f6a 100%); border-radius: 12px; padding: 28px 32px; margin: 30px 0; color: white; text-align: center;">
   <div style="font-size: 0.8em; text-transform: uppercase; letter-spacing: 2px; opacity: 0.7; margin-bottom: 6px;">Next Appointed Time</div>
   <div id="feast-name" style="font-family: Georgia, serif; font-size: 1.6em; margin-bottom: 2px; color: #d5a93c;"></div>
   <div id="feast-hebrew" style="font-family: Georgia, serif; font-size: 1.1em; opacity: 0.8; margin-bottom: 4px;"></div>
-  <div id="feast-date" style="font-size: 0.85em; opacity: 0.6; margin-bottom: 16px;"></div>
+  <div id="feast-hdate" style="font-size: 0.9em; opacity: 0.7; margin-bottom: 4px;"></div>
+  <div id="feast-date" style="font-size: 0.85em; opacity: 0.5; margin-bottom: 16px;"></div>
   <div id="feast-timer" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;"></div>
   <div id="feast-desc" style="font-size: 0.85em; opacity: 0.7; margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;"></div>
 </div>
@@ -19,15 +40,15 @@ Understanding the Bible on its own terms means stepping into the world that prod
 <script>
 (function() {
   var feasts = [
-    { name: "Purim", hebrew: "פורים", date: "2026-03-03", desc: "Celebration of deliverance as told in the Book of Esther." },
-    { name: "Pesach (Passover)", hebrew: "פסח", date: "2026-04-02", desc: "The Feast of Unleavened Bread — commemorating the Exodus and freedom from Egypt. The lamb's blood on the doorposts points to Christ, the Lamb of God." },
-    { name: "Shavuot (Pentecost)", hebrew: "שבועות", date: "2026-05-22", desc: "The Feast of Weeks — 50 days after Passover. Commemorates the giving of the Torah at Sinai. The Holy Spirit was poured out on Pentecost (Acts 2)." },
-    { name: "Rosh Hashanah", hebrew: "ראש השנה", date: "2026-09-12", desc: "The Day of Trumpets — the shofar blast calls God's people to repentance and points toward the Second Coming." },
-    { name: "Yom Kippur", hebrew: "יום כיפור", date: "2026-09-21", desc: "The Day of Atonement — the holiest day, when the High Priest entered the Holy of Holies. Points to final judgment and reconciliation." },
-    { name: "Sukkot (Tabernacles)", hebrew: "סוכות", date: "2026-09-26", desc: "The Feast of Tabernacles — dwelling in temporary shelters, remembering the wilderness. Points to the Millennium — God tabernacling with His people." },
-    { name: "Hanukkah", hebrew: "חנוכה", date: "2026-12-05", desc: "The Festival of Lights — celebrating the rededication of the Second Temple and the miracle of the oil." },
-    { name: "Purim", hebrew: "פורים", date: "2027-03-24", desc: "Celebration of deliverance as told in the Book of Esther." },
-    { name: "Pesach (Passover)", hebrew: "פסח", date: "2027-04-22", desc: "The Feast of Unleavened Bread — commemorating the Exodus and freedom from Egypt." }
+    { name: "Purim", hebrew: "פורים", hdate: "14 Adar 5786", date: "2026-03-03", desc: "Celebration of deliverance as told in the Book of Esther." },
+    { name: "Pesach (Passover)", hebrew: "פסח", hdate: "15 Nisan 5786", date: "2026-04-02", desc: "The Feast of Unleavened Bread — commemorating the Exodus and freedom from Egypt. The lamb's blood on the doorposts points to Christ, the Lamb of God." },
+    { name: "Shavuot (Pentecost)", hebrew: "שבועות", hdate: "6 Sivan 5786", date: "2026-05-22", desc: "The Feast of Weeks — 50 days after Passover. Commemorates the giving of the Torah at Sinai. The Holy Spirit was poured out on Pentecost (Acts 2)." },
+    { name: "Rosh Hashanah", hebrew: "ראש השנה", hdate: "1 Tishri 5787", date: "2026-09-12", desc: "The Day of Trumpets — the shofar blast calls God's people to repentance and points toward the Second Coming." },
+    { name: "Yom Kippur", hebrew: "יום כיפור", hdate: "10 Tishri 5787", date: "2026-09-21", desc: "The Day of Atonement — the holiest day, when the High Priest entered the Holy of Holies. Points to final judgment and reconciliation." },
+    { name: "Sukkot (Tabernacles)", hebrew: "סוכות", hdate: "15 Tishri 5787", date: "2026-09-26", desc: "The Feast of Tabernacles — dwelling in temporary shelters, remembering the wilderness. Points to the Millennium — God tabernacling with His people." },
+    { name: "Hanukkah", hebrew: "חנוכה", hdate: "25 Kislev 5787", date: "2026-12-05", desc: "The Festival of Lights — celebrating the rededication of the Second Temple and the miracle of the oil." },
+    { name: "Purim", hebrew: "פורים", hdate: "14 Adar 5787", date: "2027-03-24", desc: "Celebration of deliverance as told in the Book of Esther." },
+    { name: "Pesach (Passover)", hebrew: "פסח", hdate: "15 Nisan 5787", date: "2027-04-22", desc: "The Feast of Unleavened Bread — commemorating the Exodus and freedom from Egypt." }
   ];
 
   function update() {
@@ -41,6 +62,7 @@ Understanding the Bible on its own terms means stepping into the world that prod
 
     document.getElementById("feast-name").textContent = next.name;
     document.getElementById("feast-hebrew").textContent = next.hebrew;
+    document.getElementById("feast-hdate").textContent = next.hdate;
     document.getElementById("feast-date").textContent = next._date.toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
     document.getElementById("feast-desc").textContent = next.desc;
 
@@ -61,26 +83,6 @@ Understanding the Bible on its own terms means stepping into the world that prod
   setInterval(update, 1000);
 })();
 </script>
-
-### The Biblical Calendar
-
-<div style="margin: 24px 0; text-align: center;">
-  <div style="cursor: pointer; position: relative; display: inline-block; max-width: 100%;" onclick="document.getElementById('calendar-lightbox').style.display='flex'">
-    <img src="../../images/moedim-calendar.jpg" alt="Biblical Calendar showing the Hebrew months, agricultural seasons, and feast days" style="width: 100%; max-width: 800px; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
-    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(30,58,79,0.7) 0%, transparent 60%); border-radius: 0 0 10px 10px; padding: 12px; text-align: center;">
-      <span style="color: white; font-size: 0.8em; opacity: 0.9;">Tap to enlarge</span>
-    </div>
-  </div>
-  <p style="font-size: 0.8em; color: var(--text-muted); margin-top: 8px; font-style: italic;">The Hebrew calendar with agricultural seasons and appointed times. From <em>The Parable of Music</em> by Kymber Brockbank.</p>
-</div>
-
-<!-- Calendar Lightbox -->
-<div id="calendar-lightbox" onclick="this.style.display='none'" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.92); flex-direction:column; align-items:center; justify-content:center; cursor:zoom-out; padding:20px;">
-  <div style="color:white; font-size:0.85em; margin-bottom:10px; opacity:0.7;">Tap anywhere to close</div>
-  <div style="overflow:auto; max-width:95vw; max-height:85vh; -webkit-overflow-scrolling:touch;" onclick="event.stopPropagation()">
-    <img src="../../images/moedim-calendar-full.png" alt="Biblical Calendar — full resolution" style="max-width: none; width: 3840px; display:block; background: white; border-radius: 8px; padding: 20px;">
-  </div>
-</div>
 
 ### The Seven Moedim at a Glance
 
