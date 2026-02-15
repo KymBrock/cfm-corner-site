@@ -130,14 +130,14 @@
             border-radius: 0 0 6px 6px;
             border: 1px solid #d4c4a8;
             border-top: none;
-            max-height: 0;
-            overflow: hidden;
+            display: none;
+           
             transition: max-height 0.3s ease-out;
             margin-bottom: 10px;
         }
 
         .sg-sub-panel.active {
-            max-height: none;
+            display: block;
             overflow: visible;
             transition: max-height 0.3s ease-in;
         }
@@ -197,14 +197,14 @@
             border-radius: 0 0 5px 5px;
             border: 1px solid #e8e0d4;
             border-top: none;
-            max-height: 0;
-            overflow: hidden;
+            display: none;
+           
             transition: max-height 0.3s ease-out;
             margin-bottom: 8px;
         }
 
         .sg-inner-panel.active {
-            max-height: none;
+            display: block;
             overflow: visible;
             transition: max-height 0.3s ease-in;
         }

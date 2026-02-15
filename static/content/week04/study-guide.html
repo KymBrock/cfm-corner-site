@@ -62,12 +62,12 @@
             border-radius: 0 0 5px 5px;
             border: 1px solid #e8e0d4;
             border-top: none;
-            max-height: 0;
-            overflow: hidden;
+            display: none;
+           
             transition: max-height 0.3s ease-out;
             margin-bottom: 4px;
         }
-        .sg-inner-panel.active { max-height: none; overflow: visible; transition: max-height 0.3s ease-in; }
+        .sg-inner-panel.active { display: block; overflow: visible; transition: max-height 0.3s ease-in; }
         .sg-inner-panel-content { padding: 15px 20px; }
         .sg-inner-panel-content h4 { color: #5a4a3a; margin-top: 12px; margin-bottom: 8px; font-size: 1.1em; }
         .sg-inner-panel-content p { margin-bottom: 10px; }
