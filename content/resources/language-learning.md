@@ -4,49 +4,65 @@ description: "Resources for learning Biblical Hebrew and Koine Greek"
 ---
 
 > *"Reading the Bible in translation is like kissing your bride through a veil."*
-> — Rabbi Haim Nacham Bialik
+> — Rabbi Haim Nachman Bialik
 
-Learning the original languages of scripture — Biblical Hebrew and Koine Greek — opens a deeper dimension of understanding that no translation can fully convey. Even a basic familiarity with the alphabet and key vocabulary can transform your study.
+Learning the original languages of scripture — Biblical Hebrew and Koine Greek — opens a deeper dimension of understanding that no translation can fully convey. Even a basic familiarity with the alphabet and key vocabulary can transform your study. Joseph Smith himself emphasized the importance of studying the scriptures in their original tongues, recognizing that translation inevitably involves interpretation.
 
-Joseph Smith himself emphasized the importance of studying the scriptures in their original tongues, recognizing that translation inevitably involves interpretation. The resources below can help you begin — or deepen — that journey.
+---
 
 ## Biblical Hebrew
 
-- **Hebrew Alphabet** — Start by learning to read and write the Hebrew characters. See our reference charts:
-  - [Hebrew Alphabet Chart](/charts/hebrew-alphabet.html) — Interactive chart with audio pronunciation for all 22 Hebrew letters.
-  - [Hebrew Vowels Chart](/charts/vowels.html) — Guide to the Hebrew vowel system (Matres Lectionis and Niqqud).
-  - [Dagesh Chart](/charts/dagesh.html) — Understanding the Dagesh and BeGaDKePhaT letters.
-  - [Hebrew Root System](/charts/root-system.html) — How Hebrew three-letter roots work.
+### Getting Started: The Alphabet
 
-### Hebrew Study Tools
+- **[Hebrew Alphabet Development Chart](/charts/hebrew_alphabet_development_chart.html)** — Interactive chart tracing the evolution of Hebrew letters from ancient pictographs to modern forms, with audio pronunciation
+- **[Hebrew Vowels Chart](/charts/hebrew_vowels_chart.html)** — Guide to the Hebrew vowel system (Matres Lectionis and Niqqud)
+- **[Dagesh & Letter Classifications](/charts/hebrew_dagesh_letter_classifications.html)** — Understanding the Dagesh and BeGaDKePhaT letters
 
-- **[Pealim (Pa'alim)](https://www.pealim.com/)** — Comprehensive Hebrew verb conjugation tables. Essential for understanding the binyanim (verb patterns) and how Hebrew verbs work.
+### Study Tools
 
-- **[2-Letter Lookup](https://www.2letterlookup.com/)** — A lexicon for Biblical Hebrew and Greek organized by two-letter roots. An excellent companion to the Hebrew root system — look up any two-letter combination to find related words.
+- **[STEP Bible](https://www.stepbible.org/)** — Free, powerful interlinear Bible with Strong's numbers, original language parsing, and cross-references. One of the best free tools available for serious word study.
 
-- **[Logion](https://www.logion.org/)** — Biblical Greek word study resource focused on the Logos and key New Testament Greek terms.
+- **[Pealim (Pa'alim)](https://www.pealim.com/)** — Comprehensive Hebrew verb conjugation tables. Essential for understanding the *binyanim* (verb patterns) and how Hebrew verbs work.
 
-*Additional course materials and recommendations coming soon.*
+- **[2-Letter Lookup](https://www.2letterlookup.com/)** — A lexicon for Biblical Hebrew organized by two-letter roots. Look up any two-letter combination to find related words.
+
+- **[Mechon Mamre](https://mechon-mamre.org/)** — Complete Hebrew Bible in pointed Hebrew with parallel English (JPS 1917). The gold standard for reading the Tanakh in its original language.
+
+### Courses & Learning
+
+- **[Hebrew University — Biblical Hebrew (edX)](https://www.edx.org/school/hebrewux)** — Free online courses from the Hebrew University of Jerusalem
+- **[Daily Dose of Hebrew](https://dailydoseofhebrew.com/)** — Short daily lessons focused on Biblical Hebrew vocabulary
+- **[Aleph with Beth](https://www.youtube.com/@AlephwithBeth)** — YouTube series teaching Biblical Hebrew through immersive, visual methods
+
+---
 
 ## Koine Greek
 
-- **[Greek for All](https://greekforall.com/)** — Our favorite resource for Koine Greek online. Videos on [YouTube](https://www.youtube.com/@GreekForAll/featured). The Quest Video Course (~$200) is well worth the investment.
+The language of the New Testament and the Septuagint (the Greek Old Testament that New Testament authors quoted).
 
-- **[Omniglot](https://www.omniglot.com/)** — Encyclopedia of writing systems and languages, covering 1,760+ languages.
+- **[Greek for All](https://greekforall.com/)** — Our favorite resource for Koine Greek. Their Quest Video Course (~$200) is well worth the investment. Free videos on [YouTube](https://www.youtube.com/@GreekForAll/featured).
 
-- **[Erasmian Pronunciation](https://www.youtube.com/watch?v=GvQxB3NdiNQ)** — The pronunciation system usually used for Biblical Greek (Koine).
+- **[Logion](https://www.logion.org/)** — Biblical Greek word study resource focused on the Logos and key New Testament Greek terms.
 
-- **[Modern Greek Pronunciation](https://www.youtube.com/watch?v=G_iQkFMHNiM)** — How Greek is spoken today, useful for comparison.
+- **[Daily Dose of Greek](https://dailydoseofgreek.com/)** — Short daily lessons in the Greek New Testament
 
-- **[Language Transfer (Greek)](https://www.languagetransfer.org/greek)** and **[GreekPod101](https://www.greekpod101.com)** — Resources for Modern Greek, which can serve as a helpful bridge to Koine.
+- **Pronunciation Resources:**
+  - [Erasmian Pronunciation](https://www.youtube.com/watch?v=GvQxB3NdiNQ) — The system typically used for Biblical Greek
+  - [Modern Greek Pronunciation](https://www.youtube.com/watch?v=G_iQkFMHNiM) — How Greek is spoken today, useful for comparison
 
-*A detailed article comparing pronunciation methods (Erasmian vs. Modern) is available — check back for the link.*
+---
+
+## Other Ancient Languages
+
+- **[Omniglot](https://www.omniglot.com/)** — Encyclopedia of writing systems and languages, covering 1,760+ languages
+
+---
 
 ## Local Resources
 
-Local churches and religious communities often offer language classes that provide wonderful immersive learning opportunities:
+Local faith communities often offer wonderful immersive learning opportunities:
 
-- **[Congregation Kol Ami](https://conkolami.org/)** — Salt Lake City synagogue that periodically offers Hebrew classes.
-- **St. Sophia Hellenic Orthodox Cathedral** — The Greek school in Salt Lake City offers Modern Greek language instruction.
+- **[Congregation Kol Ami](https://conkolami.org/)** — Salt Lake City synagogue that periodically offers Hebrew classes
+- **St. Sophia Hellenic Orthodox Cathedral** — Greek school in Salt Lake City offering Modern Greek instruction
 
 Check with Greek Orthodox parishes and Jewish synagogues in your area for similar offerings.

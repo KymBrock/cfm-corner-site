@@ -24,9 +24,15 @@ hide_title: true
 </a>
 
 <a href="culture-traditions/" class="chart-card" style="text-align: center; padding: 30px 20px;">
-<img src="../icons/culture-traditions.svg" width="64" height="64" alt="Culture, Traditions & Language">
-<h3 style="margin-top: 12px;">Culture, Traditions &amp; Language</h3>
-<p>Hebrew, Greek, biblical feasts, ancient customs</p>
+<img src="../icons/culture-traditions.svg" width="64" height="64" alt="Culture & Traditions">
+<h3 style="margin-top: 12px;">Culture &amp; Traditions</h3>
+<p>Biblical feasts, Hebrew calendar, ancient customs</p>
+</a>
+
+<a href="language-learning/" class="chart-card" style="text-align: center; padding: 30px 20px;">
+<img src="../icons/language-learning.svg" width="64" height="64" alt="Language Learning">
+<h3 style="margin-top: 12px;">Language Learning</h3>
+<p>Biblical Hebrew &amp; Koine Greek</p>
 </a>
 
 <a href="printed-material/" class="chart-card" style="text-align: center; padding: 30px 20px;">
