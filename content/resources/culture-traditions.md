@@ -62,6 +62,26 @@ Understanding the Bible on its own terms means stepping into the world that prod
 })();
 </script>
 
+### The Biblical Calendar
+
+<div style="margin: 24px 0; text-align: center;">
+  <div style="cursor: pointer; position: relative; display: inline-block; max-width: 100%;" onclick="document.getElementById('calendar-lightbox').style.display='flex'">
+    <img src="../../images/moedim-calendar.jpg" alt="Biblical Calendar showing the Hebrew months, agricultural seasons, and feast days" style="width: 100%; max-width: 800px; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
+    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(30,58,79,0.7) 0%, transparent 60%); border-radius: 0 0 10px 10px; padding: 12px; text-align: center;">
+      <span style="color: white; font-size: 0.8em; opacity: 0.9;">Tap to enlarge</span>
+    </div>
+  </div>
+  <p style="font-size: 0.8em; color: var(--text-muted); margin-top: 8px; font-style: italic;">The Hebrew calendar with agricultural seasons and appointed times. From <em>The Parable of Music</em> by Kymber Brockbank.</p>
+</div>
+
+<!-- Calendar Lightbox -->
+<div id="calendar-lightbox" onclick="this.style.display='none'" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.92); flex-direction:column; align-items:center; justify-content:center; cursor:zoom-out; padding:20px;">
+  <div style="color:white; font-size:0.85em; margin-bottom:10px; opacity:0.7;">Tap anywhere to close</div>
+  <div style="overflow:auto; max-width:95vw; max-height:85vh; -webkit-overflow-scrolling:touch;" onclick="event.stopPropagation()">
+    <img src="../../images/moedim-calendar-full.png" alt="Biblical Calendar — full resolution" style="max-width: none; width: 2400px; display:block;">
+  </div>
+</div>
+
 ### The Seven Moedim at a Glance
 
 The Hebrew word **מועדים** (*moedim*) means "appointed times" — divine appointments woven into creation itself (Genesis 1:14). The seven feasts of Leviticus 23 trace God's redemptive plan:
