@@ -23,7 +23,7 @@ A curated collection of digital tools for in-depth scripture study — from free
 
 - **[Bible Gateway — NRSVue](https://www.biblegateway.com/versions/New-Revised-Standard-Version-Updated-Edition-NRSVue-Bible/)** — The New Revised Standard Version Updated Edition, widely regarded as the standard academic English translation. Excellent for comparing with the KJV to clarify difficult Old Testament passages. Free to read online.
 
-- **[Biblia Hebraica Stuttgartensia (BHS) — Academic Bible](https://www.academic-bible.com/en/home/)** — The critical edition of the Hebrew Bible used by scholars worldwide, based on the Leningrad Codex (oldest complete Hebrew manuscript). Published by the German Bible Society. Also accessible through STEP Bible, Accordance, and LOGOS. The foundational text for serious Hebrew study.
+- **[Biblia Hebraica Stuttgartensia (BHS) — Academic Bible](https://www.die-bibel.de/en/)** — The critical edition of the Hebrew Bible used by scholars worldwide, based on the Leningrad Codex (oldest complete Hebrew manuscript). Published by the German Bible Society. Also accessible through STEP Bible, Accordance, and LOGOS. The foundational text for serious Hebrew study.
 
 ### Paid
 
@@ -37,7 +37,7 @@ A curated collection of digital tools for in-depth scripture study — from free
 
 - **[Gospel Library](https://www.churchofjesuschrist.org/study/lib?lang=eng)** — Official Church app/site. Includes Topical Guide, Bible Dictionary, JST, Index, Chronologies, Harmonies of the Gospels, Maps, Videos, and more.
 
-- **[SOAR](https://rsc.byu.edu/soar)** — Online transcription service from BYU's Religious Studies Center.
+- **[SOAR](https://rsc.byu.edu/)** — Online transcription service from BYU's Religious Studies Center.
 
 - **[LDS Scripture Citation Index](https://scriptures.byu.edu/)** — Digital index for all LDS Standard works, General Conference talks, Journal of Discourses, and Teachings of the Prophet Joseph Smith.
 
@@ -51,7 +51,7 @@ A curated collection of digital tools for in-depth scripture study — from free
 
 - **[Bible Mapper](https://www.biblemapper.com/)** — Interactive 3D maps of the biblical world. Visualize journeys, battles, and geography.
 
-- **[Treasury of Scripture Knowledge](https://www.treasury-of-scripture-knowledge.com/)** — Online index and cross-referencing tool used by Biblical scholars.
+- **[Treasury of Scripture Knowledge](https://www.studylight.org/concordances/tsk.html)** — Online index and cross-referencing tool used by Biblical scholars.
 
 - **[Evidence Central (Scripture Central)](https://evidencecentral.org/)** — Bite-sized evidence summaries for the Book of Mormon, Bible, and Pearl of Great Price. Quick, accessible reads that pair well with weekly study.
 
@@ -67,7 +67,7 @@ A curated collection of digital tools for in-depth scripture study — from free
 
 - **[Latter Day Kids](https://latterdaykids.com/)** — Lesson plans and activities for teaching kids.
 
-- **[Daniel Rona's CFM Study Guides](https://www.ensignisraeltours.com/)** — Daniel Rona is the only LDS-licensed Israeli tour guide in Jerusalem, offering insights about the Holy Land and Jewish culture.
+- **[Daniel Rona's CFM Study Guides](https://danielrona.com/)** — Daniel Rona is the only LDS-licensed Israeli tour guide in Jerusalem, offering insights about the Holy Land and Jewish culture.
 
 - **[Book of Abraham Project (BYU)](https://bookofabraham.info/)** — Dedicated scholarly resources for the Book of Abraham, relevant for early OT 2026 weeks.
 

@@ -49,7 +49,7 @@ A compilation of audio and visual resources to assist individuals and families w
 
 ## Community & Academic
 
-- **[BYU Religious Education Podcasts](https://rsc.byu.edu/podcasts)** — Wide range of religious and academic topics.
+- **[BYU Religious Education Podcasts](https://rsc.byu.edu/media)** — Wide range of religious and academic topics.
 
 - **[Messages of Christ](https://www.youtube.com/@messagesofchrist)** — Daniel Smith. Essential videos on Ancient Israelite culture including festivals, temple worship, archaeology, geography of the Holy Land, and how Jewish traditions testify of Christ. Excellent companion to OT study.
 
@@ -67,15 +67,15 @@ A compilation of audio and visual resources to assist individuals and families w
 
 - **[FAIR](https://www.fairlatterdaysaints.org/)** — Well-documented answers to criticisms of LDS doctrine, belief, and practice. Extensive articles, videos, and podcast episodes addressing historical and doctrinal questions. [FAIR Podcast](https://www.fairlatterdaysaints.org/blog/category/podcast)
 
-- **[SOAR (BYU Religious Studies Center)](https://rsc.byu.edu/soar)** — Online transcription and research service providing access to decades of BYU devotionals, conferences, and religious education content.
+- **[SOAR (BYU Religious Studies Center)](https://rsc.byu.edu/)** — Online transcription and research service providing access to decades of BYU devotionals, conferences, and religious education content.
 
-- **[Seekers & Dwellers](https://www.youtube.com/@SeekersAndDwellers)** — Stephen Smoot, LDS scholar. Ancient texts, temple theology, and Pearl of Great Price deep dives. Highly relevant to OT study.
+- **[Seekers & Dwellers](https://www.youtube.com/@StephenSmoot)** — Stephen Smoot, LDS scholar. Ancient texts, temple theology, and Pearl of Great Price deep dives. Highly relevant to OT study.
 
-- **[Cwic Media](https://www.youtube.com/@CwicMedia)** — Greg Matsen. In-depth discussions on temple symbolism, Isaiah, and ancient covenant patterns. Strong OT content.
+- **[Cwic Media](https://www.youtube.com/@CwicShow)** — Greg Matsen. In-depth discussions on temple symbolism, Isaiah, and ancient covenant patterns. Strong OT content.
 
 - **[The Ancient Tradition](https://www.youtube.com/@TheAncientTradition)** — Ancient religious traditions, temple symbolism, and connections to the restored gospel. Scholarly and thought-provoking.
 
-- **[The Treasure of the Scriptures](https://www.youtube.com/@TreasureOfTheScriptures)** — Jeffrey Bradshaw (author of the 90+ Book of Moses essays on Interpreter). Temple symbolism, ancient texts, and deep doctrinal exploration.
+- **[The Treasure of the Scriptures](https://www.youtube.com/@jeffreybradshaw)** — Jeffrey Bradshaw (author of the 90+ Book of Moses essays on Interpreter). Temple symbolism, ancient texts, and deep doctrinal exploration.
 
 - **[Evidence Central (Scripture Central)](https://evidencecentral.org/)** — Bite-sized evidence summaries for the Book of Mormon, Bible, and Pearl of Great Price. Quick, accessible reads that pair well with weekly study.
 
@@ -89,7 +89,7 @@ A compilation of audio and visual resources to assist individuals and families w
 
 - **[Digital Hammurabi](https://www.youtube.com/@DigitalHammurabi)** — Assyriologists covering Mesopotamian culture, cuneiform, and Ancient Near East history. Direct context for Genesis and early OT.
 
-- **[Esoterica](https://www.youtube.com/@ESOTERICAchannel)** — Dr. Justin Sledge. Academic deep dives into ancient religious traditions, mysticism, and textual history. Excellent Hebrew and Kabbalistic content.
+- **[Esoterica](https://www.youtube.com/@TheEsoterica)** — Dr. Justin Sledge. Academic deep dives into ancient religious traditions, mysticism, and textual history. Excellent Hebrew and Kabbalistic content.
 
 - **[AlephBeta](https://alephbeta.org/)** — Rabbi David Fohrman. Brilliant literary analysis of the Torah, finding patterns in the Hebrew text. Some free content; premium subscription for full library.
 
