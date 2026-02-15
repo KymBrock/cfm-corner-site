@@ -10,13 +10,33 @@ Learning the original languages of scripture — Biblical Hebrew and Koine Greek
 
 ---
 
+## Interactive Charts
+
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0;">
+
+<a href="../../charts/hebrew_alphabet_development_chart.html" style="text-decoration: none; background: white; border: 1px solid #c6d4c8; border-radius: 10px; padding: 24px 16px; text-align: center; transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; align-items: center;">
+  <div style="font-size: 2.5em; margin-bottom: 10px;">אבג</div>
+  <div style="font-family: Georgia, serif; color: #1e3a4f; font-size: 1.05em; font-weight: 600; margin-bottom: 6px;">Hebrew Alphabet</div>
+  <div style="font-size: 0.8em; color: #57899c; line-height: 1.5;">Trace the evolution from ancient pictographs to modern forms — with audio pronunciation</div>
+</a>
+
+<a href="../../charts/hebrew_vowels_chart.html" style="text-decoration: none; background: white; border: 1px solid #c6d4c8; border-radius: 10px; padding: 24px 16px; text-align: center; transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; align-items: center;">
+  <div style="font-size: 2.5em; margin-bottom: 10px;">בָּ בִ בֻ</div>
+  <div style="font-family: Georgia, serif; color: #1e3a4f; font-size: 1.05em; font-weight: 600; margin-bottom: 6px;">Hebrew Vowels</div>
+  <div style="font-size: 0.8em; color: #57899c; line-height: 1.5;">Guide to the vowel system — Matres Lectionis and Niqqud points</div>
+</a>
+
+<a href="../../charts/hebrew_dagesh_letter_classifications.html" style="text-decoration: none; background: white; border: 1px solid #c6d4c8; border-radius: 10px; padding: 24px 16px; text-align: center; transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; align-items: center;">
+  <div style="font-size: 2.5em; margin-bottom: 10px;">בּ כּ פּ</div>
+  <div style="font-family: Georgia, serif; color: #1e3a4f; font-size: 1.05em; font-weight: 600; margin-bottom: 6px;">Dagesh & Classifications</div>
+  <div style="font-size: 0.8em; color: #57899c; line-height: 1.5;">Understanding the Dagesh marks and BeGaDKePhaT letters</div>
+</a>
+
+</div>
+
+---
+
 ## Biblical Hebrew
-
-### Getting Started: The Alphabet
-
-- **[Hebrew Alphabet Development Chart](/charts/hebrew_alphabet_development_chart.html)** — Interactive chart tracing the evolution of Hebrew letters from ancient pictographs to modern forms, with audio pronunciation
-- **[Hebrew Vowels Chart](/charts/hebrew_vowels_chart.html)** — Guide to the Hebrew vowel system (Matres Lectionis and Niqqud)
-- **[Dagesh & Letter Classifications](/charts/hebrew_dagesh_letter_classifications.html)** — Understanding the Dagesh and BeGaDKePhaT letters
 
 ### Study Tools
 
