@@ -46,7 +46,9 @@ Learning the original languages of scripture — Biblical Hebrew and Koine Greek
 
 ### Study Tools
 
-- **[STEP Bible](https://www.stepbible.org/)** — Free, powerful interlinear Bible with Strong's numbers, original language parsing, and cross-references. One of the best free tools available for serious word study.
+- **[STEP Bible (KJV + Leningrad Codex)](https://www.stepbible.org/?q=version=KJV|version=THOT&options=VHUNG)** — Free, powerful interlinear Bible with Strong's numbers, original language parsing, and cross-references. This link opens with the KJV and Leningrad Codex (pointed Hebrew) side by side.
+
+- **[Blue Letter Bible](https://www.blueletterbible.org/)** — Excellent study tool with Strong's Concordance, interlinear views, commentaries, and word study resources. Great for tracing a word through every occurrence in scripture.
 
 - **[Pealim (Pa'alim)](https://www.pealim.com/)** — Comprehensive Hebrew verb conjugation tables. Essential for understanding the *binyanim* (verb patterns) and how Hebrew verbs work.
 
