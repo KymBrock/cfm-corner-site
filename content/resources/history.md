@@ -7,6 +7,8 @@ References for exploring the time periods and events of Biblical history.
 
 ## Old Testament History
 
+- **[Old Testament Timeline (CFM Corner)](../ot-timeline/)** — Our visual overview of OT history from Creation through the Persian Period. [Download PDF](../../downloads/ot-timeline.pdf)
+
 - **[Old Testament Timeline (Church)](https://www.churchofjesuschrist.org/study/scriptures/bible-chron?lang=eng)** — Chronological overview of Old Testament events published by the Church.
 
 - **[Ancient Near East Maps](https://www.churchofjesuschrist.org/study/scriptures/bible-maps?lang=eng)** — Maps of the Biblical world published by the Church.

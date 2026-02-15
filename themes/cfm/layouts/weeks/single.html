@@ -80,6 +80,18 @@
     </div>
 </div>
 
+<!-- Old Testament Timeline -->
+<div style="margin-top: 50px; background: linear-gradient(135deg, #1e3a4f 0%, #2a4f6a 100%); border-radius: 12px; padding: 28px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 200px;">
+        <h3 style="color: #d5a93c; font-family: Georgia, serif; font-size: 1.15em; margin: 0 0 6px;">📜 Old Testament Timeline</h3>
+        <p style="color: #c8d8e4; font-size: 0.9em; margin: 0; line-height: 1.5;">A visual overview of Old Testament history — from Creation through the Persian Period. Download or view full-size to zoom in on key events and figures.</p>
+    </div>
+    <div style="display: flex; gap: 12px; flex-shrink: 0;">
+        <a href="{{ "resources/ot-timeline/" | relURL }}" style="background: #4a6b52; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-size: 0.9em; font-weight: 600; white-space: nowrap;">View Timeline</a>
+        <a href="{{ "downloads/ot-timeline.pdf" | relURL }}" download style="background: transparent; color: #d5a93c; border: 1.5px solid #d5a93c; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-size: 0.9em; font-weight: 600; white-space: nowrap;">Download PDF</a>
+    </div>
+</div>
+
 <div class="week-nav" style="margin-top: 40px;">
     {{ with .NextInSection }}<a href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>{{ else }}<span></span>{{ end }}
     <a href="{{ "weeks/" | relURL }}">All Weeks</a>
