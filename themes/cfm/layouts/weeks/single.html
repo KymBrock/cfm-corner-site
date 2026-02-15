@@ -52,13 +52,31 @@
 </div>
 
 <div id="tab-charts" class="tab-content">
+    {{ with .Params.charts }}
     <div class="chart-grid">
-        {{ range .Params.charts }}
+        {{ range . }}
         <a href="{{ .url | relURL }}" class="chart-card">
             <h3>{{ .title }}</h3>
             <p>{{ .description }}</p>
         </a>
         {{ end }}
+    </div>
+    {{ end }}
+
+    <h2 style="margin: 30px 0 15px; color: var(--sage-dark, #5a4a3a); font-size: 1.4em;">Hebrew Language Tools</h2>
+    <div class="chart-grid">
+        <a href="{{ "charts/hebrew_alphabet_development_chart.html" | relURL }}" class="chart-card">
+            <h3>Hebrew Alphabet Development Chart</h3>
+            <p>Trace the evolution of Hebrew letters from ancient pictographs to modern forms.</p>
+        </a>
+        <a href="{{ "charts/hebrew_vowels_chart.html" | relURL }}" class="chart-card">
+            <h3>Hebrew Vowels Chart</h3>
+            <p>Reference guide for Hebrew vowel points (nikkud) and their pronunciation.</p>
+        </a>
+        <a href="{{ "charts/hebrew_dagesh_letter_classifications.html" | relURL }}" class="chart-card">
+            <h3>Hebrew Dagesh &amp; Letter Classifications</h3>
+            <p>Understanding dagesh marks and the classification system for Hebrew letters.</p>
+        </a>
     </div>
 </div>
 

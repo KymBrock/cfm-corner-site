@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 4: Genesis 3–4; Moses 4–5 - Come Follow Me Study Guide</title>
-    <style>
+<style>
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: Georgia, serif; line-height: 1.7; color: #374151; background-color: #f9fafb; }
         .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
@@ -99,24 +94,10 @@
         .nav-link.index { background: #6B5344; }
         .nav-disabled { background: #d1d5db; color: #9ca3af; padding: 12px 24px; border-radius: 8px; }
         @media (max-width: 768px) { .header-section h1 { font-size: 1.8em; } .panel-content { padding: 20px; } .nav-bar { flex-direction: column; gap: 10px; } .nav-links { flex-direction: column; width: 100%; } .nav-btn { width: 100%; text-align: center; } .nav-container { flex-direction: column; } .nav-link, .nav-disabled { width: 100%; text-align: center; } }
-        </style>
-</head>
-<body>
-    <div class="site-header">
-        <div class="site-header-content">
-            <h1 class="site-title">Come Follow Me Corner</h1>
-            <p class="site-subtitle">Old Testament 2026</p>
-        </div>
-    </div>
-    <div class="nav-bar">
-        <div class="nav-links">
-            <a href="index.html" class="nav-btn">Study Guide Index</a>
-            <a href="week03.html" class="nav-btn">← Week 3</a>
-            <a href="week05.html" class="nav-btn">Week 5 →</a>
-        </div>
-    </div>
+        
+</style>
 
-    <div class="container">
+<div class="container">
         <div class="header-section">
             <p class="week-label">Week 4</p>
             <h1>Genesis 3–4; Moses 4–5</h1>
@@ -2567,7 +2548,18 @@
 </div>
 </div></div></div>
     </div>
-    <script>
+    
+
+    <div class="section-navigation">
+        <div class="nav-container">
+            <a href="week03.html" class="nav-link">← Week 3</a>
+            <a href="index.html" class="nav-link index">Study Guide Index</a>
+            <a href="week05.html" class="nav-link">Week 5 →</a>
+        </div>
+    </div>
+
+<script>
+
         const accordionSections = document.querySelectorAll('.accordion-section');
         accordionSections.forEach(section => {
             section.addEventListener('click', function() {
@@ -2602,15 +2594,5 @@
             subAccordions.forEach(subAccordion => { subAccordion.classList.remove('active'); subAccordion.nextElementSibling.classList.remove('active'); });
             innerAccordions.forEach(innerAccordion => { innerAccordion.classList.remove('active'); innerAccordion.nextElementSibling.classList.remove('active'); });
         }
-        </script>
-
-    <div class="section-navigation">
-        <div class="nav-container">
-            <a href="week03.html" class="nav-link">← Week 3</a>
-            <a href="index.html" class="nav-link index">Study Guide Index</a>
-            <a href="week05.html" class="nav-link">Week 5 →</a>
-        </div>
-    </div>
-
-</body>
-</html>
+        
+</script>

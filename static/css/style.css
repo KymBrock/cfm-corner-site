@@ -496,29 +496,32 @@ body {
 /* === Content Tabs === */
 .tab-nav {
     display: flex;
-    gap: 0;
-    border-bottom: 2px solid var(--border);
+    gap: 4px;
+    background: var(--sage-pale);
+    border-radius: var(--radius) var(--radius) 0 0;
+    padding: 6px 6px 0;
     margin-bottom: 25px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
 }
 .tab-btn {
     padding: 12px 20px;
-    background: none;
+    background: transparent;
     border: none;
-    border-bottom: 3px solid transparent;
+    border-radius: var(--radius) var(--radius) 0 0;
     font-family: Georgia, serif;
     font-size: 0.95em;
     color: var(--text-muted);
     cursor: pointer;
     white-space: nowrap;
-    transition: color 0.2s, border-color 0.2s;
+    transition: all 0.2s;
 }
-.tab-btn:hover { color: var(--sage-dark); }
+.tab-btn:hover { color: var(--sage-dark); background: rgba(255,255,255,0.5); }
 .tab-btn.active {
     color: var(--sage-dark);
-    border-bottom-color: var(--gold);
+    background: var(--white);
     font-weight: 600;
+    box-shadow: 0 -2px 0 var(--gold) inset;
 }
 
 .tab-content { display: none; }
