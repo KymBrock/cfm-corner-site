@@ -38,7 +38,7 @@ body {
 .nav-top {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 14px 20px 8px;
+    padding: 18px 20px 8px;
     display: flex;
     align-items: center;
     gap: 28px;
@@ -72,9 +72,9 @@ body {
 .nav-search-row {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 20px 12px;
+    padding: 0 20px 14px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 .nav-search {
     display: flex;
