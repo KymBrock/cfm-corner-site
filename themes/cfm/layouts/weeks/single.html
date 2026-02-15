@@ -105,72 +105,51 @@ window.addEventListener('load', function() {
     }
 });
 
+// Generic accordion toggle using inline styles
+function setupAccordions(selector) {
+    document.querySelectorAll(selector).forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var panel = this.nextElementSibling;
+            if (!panel) return;
+            var isOpen = panel.style.display === 'block';
+            panel.style.display = isOpen ? 'none' : 'block';
+            this.classList.toggle('active', !isOpen);
+        });
+    });
+}
+
 // Study Guide accordions
-document.querySelectorAll('.sg-accordion-section').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-        this.classList.toggle('active');
-        var panel = this.nextElementSibling;
-        if (panel) panel.classList.toggle('active');
-    });
-});
-document.querySelectorAll('.sg-sub-accordion').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-        this.classList.toggle('active');
-        var panel = this.nextElementSibling;
-        if (panel) panel.classList.toggle('active');
-    });
-});
-document.querySelectorAll('.sg-inner-accordion').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-        this.classList.toggle('active');
-        var panel = this.nextElementSibling;
-        if (panel) panel.classList.toggle('active');
-    });
-});
+setupAccordions('.sg-accordion-section');
+setupAccordions('.sg-sub-accordion');
+setupAccordions('.sg-inner-accordion');
 
 // Insights accordions
-document.querySelectorAll('.section-header').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-        this.classList.toggle('active');
-        var panel = this.nextElementSibling;
-        if (panel) panel.classList.toggle('active');
-    });
-});
-document.querySelectorAll('.sub-accordion').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-        this.classList.toggle('active');
-        var panel = this.nextElementSibling;
-        if (panel) panel.classList.toggle('active');
-    });
-});
+setupAccordions('.section-header');
+setupAccordions('.sub-accordion');
 
-// Expand/Collapse All buttons
+// Expand/Collapse All
 function expandAll() {
     document.querySelectorAll('.sg-accordion-section, .sg-sub-accordion, .sg-inner-accordion').forEach(function(btn) {
         btn.classList.add('active');
-        var panel = btn.nextElementSibling;
-        if (panel) panel.classList.add('active');
+        var p = btn.nextElementSibling; if (p) p.style.display = 'block';
     });
 }
 function collapseAll() {
     document.querySelectorAll('.sg-accordion-section, .sg-sub-accordion, .sg-inner-accordion').forEach(function(btn) {
         btn.classList.remove('active');
-        var panel = btn.nextElementSibling;
-        if (panel) panel.classList.remove('active');
+        var p = btn.nextElementSibling; if (p) p.style.display = 'none';
     });
 }
 function expandAllInsights() {
     document.querySelectorAll('.section-header, .sub-accordion').forEach(function(btn) {
         btn.classList.add('active');
-        var panel = btn.nextElementSibling;
-        if (panel) panel.classList.add('active');
+        var p = btn.nextElementSibling; if (p) p.style.display = 'block';
     });
 }
 function collapseAllInsights() {
     document.querySelectorAll('.section-header, .sub-accordion').forEach(function(btn) {
         btn.classList.remove('active');
-        var panel = btn.nextElementSibling;
-        if (panel) panel.classList.remove('active');
+        var p = btn.nextElementSibling; if (p) p.style.display = 'none';
     });
 }
 </script>
