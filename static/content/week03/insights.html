@@ -29,14 +29,6 @@
 </style>
 
 <div class="cfm-insights" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
-
-    <!-- Header Box -->
-    <div style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); border: 2px solid #7c9885; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-        <h1 style="font-family: Georgia, serif; color: #5a6d5f; font-size: 2.2em; margin-bottom: 10px; font-weight: normal;">Weekly Insights: Week 03</h1>
-        <p style="font-family: Georgia, serif; color: #7c9885; font-size: 1.3em; font-style: italic; margin-bottom: 15px;">Genesis 1&ndash;2; Moses 2&ndash;3; Abraham 4&ndash;5</p>
-        <p style="font-family: Georgia, serif; color: #5a6d5f; font-size: 1em; margin: 0;">January 12&ndash;18, 2026</p>
-    </div>
-
     <!-- Personal Letter Section -->
     <div style="background: #fefefe; border: 1px solid #d1ddd4; border-radius: 10px; padding: 30px; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
 
@@ -77,69 +69,14 @@
 
     <!-- Expand/Collapse Controls -->
     <div style="text-align: center; margin: 20px 0 30px 0;">
-        <button onclick="expandAllInsights()" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 0 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Expand All</button>
-        <button onclick="collapseAllInsights()" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 0 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Collapse All</button>
+        <button onclick="expandAllInsights()" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 0 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">&#x229E; Expand All</button>
+        <button onclick="collapseAllInsights()" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 0 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">&#x229F; Collapse All</button>
     </div>
-
-    <!-- Featured Resources Section -->
-    <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
-        <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-            <span>&#11088; This Week's Featured Resources</span>
-            <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
-        </div>
-        <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
-            <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
-
-                <p style="margin: 0 0 1.5em 0; line-height: 1.7;">The creation accounts deserve careful study. These two original resources go deep:</p>
-
-                <!-- Three Creation Accounts Card -->
-                <div style="background: linear-gradient(135deg, #f8faf8 0%, #eef3ef 100%); border: 2px solid #7c9885; border-radius: 10px; padding: 20px; margin-bottom: 20px;">
-                    <h4 style="font-family: Georgia, serif; color: #5a6d5f; font-size: 1.15em; margin: 0 0 10px 0;">
-                        <a href="../02_Weekly_Insights/Original_Content/Three_Creation_Accounts_Comparison_Enhanced.html" style="color: #5a6d5f; text-decoration: none; border-bottom: 2px solid #7c9885;">&#128220; Three Creation Accounts: Side-by-Side Comparison</a>
-                    </h4>
-                    <p style="margin: 0 0 12px 0; color: #4a5d4f; line-height: 1.6;"><strong>What it includes:</strong></p>
-                    <ul style="margin: 0; padding-left: 20px; color: #4a5d4f; line-height: 1.6;">
-                        <li style="margin-bottom: 4px;">Full parallel text of Genesis 1&ndash;2, Moses 2&ndash;3, and Abraham 4&ndash;5</li>
-                        <li style="margin-bottom: 4px;">Color-coded columns for easy comparison</li>
-                        <li style="margin-bottom: 4px;">Hebrew terms with Blue Letter Bible links</li>
-                        <li style="margin-bottom: 4px;">Analysis of divine names (<em>Elohim</em> vs. <em>YHWH</em> vs. <em>the Gods</em>)</li>
-                        <li style="margin-bottom: 4px;">Creation verbs comparison (<em>bara</em> vs. <em>asah</em> vs. "organized")</li>
-                        <li style="margin-bottom: 4px;">Unique doctrinal contributions from each account</li>
-                    </ul>
-                    <p style="margin: 15px 0 0 0;">
-                        <a href="../02_Weekly_Insights/Original_Content/Three_Creation_Accounts_Comparison_Enhanced.html" style="display: inline-block; background: #7c9885; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-size: 0.95em;">Open Comparison &rarr;</a>
-                    </p>
-                </div>
-
-                <!-- Time, Number, and Creation Card -->
-                <div style="background: linear-gradient(135deg, #f8faf8 0%, #eef3ef 100%); border: 2px solid #7c9885; border-radius: 10px; padding: 20px; margin-bottom: 20px;">
-                    <h4 style="font-family: Georgia, serif; color: #5a6d5f; font-size: 1.15em; margin: 0 0 10px 0;">
-                        <a href="../02_Weekly_Insights/Original_Content/Time_Number_and_Creation.html" style="color: #5a6d5f; text-decoration: none; border-bottom: 2px solid #7c9885;">&#128336; Time, Number, and Creation</a>
-                    </h4>
-                    <p style="margin: 0 0 8px 0; color: #4a5d4f; line-height: 1.6;"><em>Why Genesis Was Never Meant to Be Read with Modern Math</em></p>
-                    <p style="margin: 0 0 12px 0; color: #4a5d4f; line-height: 1.6;"><strong>What it includes:</strong></p>
-                    <ul style="margin: 0; padding-left: 20px; color: #4a5d4f; line-height: 1.6;">
-                        <li style="margin-bottom: 4px;">How ancient numeracy differs from modern mathematics</li>
-                        <li style="margin-bottom: 4px;">Why zero as a number didn't exist until the 7th century AD</li>
-                        <li style="margin-bottom: 4px;">Hebrew <em>yom</em> (day) and its flexible meanings</li>
-                        <li style="margin-bottom: 4px;">Qualitative vs. quantitative number concepts</li>
-                        <li style="margin-bottom: 4px;">Creation as harmonically related phases, not mechanical time units</li>
-                        <li style="margin-bottom: 4px;">Why the "Genesis vs. science" debate often misses the point</li>
-                    </ul>
-                    <p style="margin: 15px 0 0 0;">
-                        <a href="../02_Weekly_Insights/Original_Content/Time_Number_and_Creation.html" style="display: inline-block; background: #7c9885; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-size: 0.95em;">Read Article &rarr;</a>
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
     <!-- Week at a Glance Section -->
     <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
         <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
             <span>At a Glance: Creation Week</span>
-            <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
+            <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
         </div>
         <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
             <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
@@ -164,7 +101,7 @@
     <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
         <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
             <span>Closing Thought</span>
-            <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
+            <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
         </div>
         <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
             <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
@@ -189,51 +126,3 @@
     </div>
 
 </div>
-
-<script>
-
-    function toggleInsightsSection(header) {
-        const content = header.nextElementSibling;
-        const arrow = header.querySelector('.arrow');
-        const isCollapsed = content.style.maxHeight === '0px' || content.style.maxHeight === '';
-
-        if (isCollapsed) {
-            content.style.maxHeight = content.scrollHeight + 'px';
-            arrow.innerHTML = '&#9660;';
-            content.dataset.expanded = 'true';
-            setTimeout(() => {
-                if (content.dataset.expanded === 'true') {
-                    content.style.maxHeight = 'none';
-                }
-            }, 500);
-        } else {
-            content.dataset.expanded = 'false';
-            content.style.maxHeight = content.scrollHeight + 'px';
-            setTimeout(() => {
-                content.style.maxHeight = '0px';
-            }, 10);
-            arrow.innerHTML = '&#9654;';
-        }
-    }
-
-    function expandAllInsights() {
-        document.querySelectorAll('.cfm-insights-section .section-content').forEach(content => {
-            content.style.maxHeight = 'none';
-            content.dataset.expanded = 'true';
-        });
-        document.querySelectorAll('.cfm-insights-section .arrow').forEach(arrow => {
-            arrow.innerHTML = '&#9660;';
-        });
-    }
-
-    function collapseAllInsights() {
-        document.querySelectorAll('.cfm-insights-section .section-content').forEach(content => {
-            content.dataset.expanded = 'false';
-            content.style.maxHeight = '0px';
-        });
-        document.querySelectorAll('.cfm-insights-section .arrow').forEach(arrow => {
-            arrow.innerHTML = '&#9654;';
-        });
-    }
-
-</script>

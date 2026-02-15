@@ -151,79 +151,62 @@
         .sg-sub-panel-content li { margin-bottom: 6px; }
         .sg-sub-panel-content a { color: #8B7355; }
         .sg-sub-panel-content a:hover { color: #6B5344; text-decoration: underline; }
-
-        /* Inner accordions (third level - for lengthy subsections) */
-        .sg-inner-accordion {
-            background-color: #faf8f5;
-            color: #6B5344;
-            cursor: pointer;
-            padding: 12px 16px;
-            width: 100%;
-            text-align: left;
-            border: 1px solid #e8e0d4;
-            border-radius: 5px;
-            font-size: 1em;
+        /* Section headings (converted from inner accordions) */
+        .sg-section-heading {
+            margin: 1.2em 0 0.6em 0;
+            padding: 0.4em 0 0.4em 0.8em;
+            border-left: 3px solid #8B9D77;
+            color: #5a6b4f;
+            font-size: 1.05em;
             font-weight: 600;
-            font-family: Georgia, serif;
-            margin-top: 8px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background-color 0.2s;
         }
 
-        .sg-inner-accordion:hover {
-            background-color: #f0e8dc;
-        }
-
-        .sg-inner-accordion::after {
-            content: '▼';
-            font-size: 0.7em;
-            color: #8B7355;
-            transition: transform 0.3s;
-        }
-
-        .sg-inner-accordion.active::after {
-            transform: rotate(180deg);
-        }
-
-        /* Inner panels (third level) */
-        .sg-inner-panel {
-            background-color: #ffffff;
-            border-radius: 0 0 5px 5px;
-            border: 1px solid #e8e0d4;
-            border-top: none;
-            display: none;
-           
-            transition: max-height 0.3s ease-out;
-            margin-bottom: 8px;
-        }
-
-        .sg-inner-panel.active {
-            display: block;
-            overflow: visible;
-            transition: max-height 0.3s ease-in;
-        }
-
-        .sg-inner-panel-content {
-            padding: 15px 20px;
-        }
-
-        .sg-inner-panel-content h4 { color: #5a4a3a; margin-top: 12px; margin-bottom: 8px; font-size: 1.1em; }
-        .sg-inner-panel-content p { margin-bottom: 10px; }
-        .sg-inner-panel-content ul, .sg-inner-panel-content ol { margin-left: 20px; margin-bottom: 10px; }
-        .sg-inner-panel-content li { margin-bottom: 5px; }
 
         @media (max-width: 768px) {
             .header-section h1 { font-size: 1.8em; }
             .panel-content { padding: 20px; }
             .sg-sub-panel-content { padding: 15px 18px; }
-            .sg-inner-panel-content { padding: 12px 15px; }
-            .nav-container { flex-direction: column; }
+.nav-container { flex-direction: column; }
             .nav-link, .nav-disabled { width: 100%; text-align: center; }
         }
         
-</style>
+
+        .sg-section-heading {
+            margin: 1.2em 0 0.6em 0;
+            padding: 0.4em 0 0.4em 0.8em;
+            border-left: 3px solid #8B9D77;
+            color: #5a6b4f;
+            font-size: 1.05em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+        }
+        .sg-section-actions {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 28px;
+        }
+        .sg-section-actions .sg-action-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.35);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            padding: 0;
+            line-height: 1;
+        }
+        .sg-section-actions .sg-action-btn:hover {
+            background: rgba(255,255,255,0.35);
+        }
+    </style>
 
 <div class="container">
         <!-- Header Section -->
@@ -237,22 +220,21 @@
         <!-- Quick Links -->
         <div class="quick-links">
             <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/01?lang=eng" target="_blank" class="quick-link">CFM Manual</a>
-            <a href="index.html" class="quick-link">Study Guide Index</a>
         </div>
 
         <!-- Expand/Collapse Buttons -->
         <div class="button-container">
-            <button class="expand-button" onclick="expandAll()">Expand All</button>
-            <button class="expand-button" onclick="collapseAll()">Collapse All</button>
+            <button class="expand-button" onclick="expandAll()"><span class="btn-icon">&#x229E;</span> Expand All</button>
+            <button class="expand-button" onclick="collapseAll()"><span class="btn-icon">&#x229F;</span> Collapse All</button>
         </div>
 
         <!-- SECTION 1: WEEK OVERVIEW -->
-        <button class="sg-accordion-section">1. Week Overview</button>
-        <div class="sg-panel">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">1. Week Overview</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
             <div class="panel-content">
-                <button class="sg-sub-accordion">Week Information</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">Week Information</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <table class="info-table">
 <tr>
 <th>Element</th>
@@ -285,34 +267,28 @@
 </table>
 </div>
 </div>
-<button class="sg-sub-accordion">Reading Summary</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active">Reading Summary</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p>This opening week serves as a foundation for an entire year of studying the Old Testament—one of the oldest and most influential collections of writings in human history. Rather than diving directly into specific chapters, this week invites us to step back and consider <em>how</em> we will approach this ancient text and <em>why</em> it matters for our covenant journey today.</p>
 <p>The Come, Follow Me manual acknowledges that feelings about studying the Old Testament may range from eager anticipation to genuine uncertainty. This is natural. The Old Testament comes from an ancient Near Eastern culture that can seem foreign, and its stories sometimes contain difficult or uncomfortable elements. Yet within these pages, we encounter people remarkably like ourselves—experiencing family joy and discord, moments of faith and doubt, successes and failures.</p>
 <p>More importantly, this week establishes the central lens through which Latter-day Saints approach the Old Testament: it is a witness of Jesus Christ. From the sacrificial lamb to the brass serpent, from manna in the wilderness to Jonah in the belly of the great fish—the Old Testament is filled with symbols, types, and prophecies that point us toward the Savior and His Atonement.</p>
 </div>
 </div>
-<button class="sg-sub-accordion">Central Themes</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Theme 1: The Old Testament Testifies of Jesus Christ</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">Central Themes</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Theme 1: The Old Testament Testifies of Jesus Christ</h4>
 <p>President Marion G. Romney declared: "The message of the Old Testament is the message of Christ and his coming and his atonement." Every prophecy, symbol, and covenant in these ancient texts ultimately points to the Redeemer. As Moses taught: "All things have their likeness, and all things are created and made to bear record of me" (Moses 6:63). Learning to see Christ in the Old Testament transforms these ancient writings from historical curiosity into living scripture.</p>
-</div>
-<button class="sg-inner-accordion">Theme 2: Jesus Christ is Jehovah</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Theme 2: Jesus Christ is Jehovah</h4>
 <p>A foundational understanding for Latter-day Saint study: the God who speaks throughout the Old Testament is Jesus Christ in His premortal state. When we read "the LORD God" (Hebrew: <em>Yahweh Elohim</em>), we are reading about Jehovah—the premortal Christ who created the world, spoke to Moses, led Israel through the wilderness, and covenanted with Abraham. President Dallin H. Oaks taught that "the scriptural records of words spoken by 'God' or the 'Lord' are almost always the words of Jehovah, our risen Lord, Jesus Christ."</p>
-</div>
-<button class="sg-inner-accordion">Theme 3: Covenants Connect Us to God</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Theme 3: Covenants Connect Us to God</h4>
 <p>The Old Testament is fundamentally the story of God seeking to make His people a "peculiar treasure" through covenant (Exodus 19:5). The Hebrew word for covenant (<em>berit</em>) appears over 280 times in the Old Testament. Understanding covenants—their nature, their promises, their requirements—is essential to understanding everything from Abraham's journey to Israel's wanderings to the prophets' warnings. President Russell M. Nelson has emphasized that the "everlasting covenant" reveals a God desperately seeking relationship with His children.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">Key Figures</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active">Key Figures</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <table class="info-table">
 <tr>
 <th>Person</th>
@@ -342,9 +318,9 @@
 </table>
 </div>
 </div>
-<button class="sg-sub-accordion">Timeline Placement</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active">Timeline Placement</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p><strong>Historical Period:</strong> Introductory/Overview</p>
 <p><strong>Approximate Dates:</strong> The Old Testament covers approximately 4,000 years of history—from Creation through the post-exilic period (roughly 400 BC)</p>
 <p><strong>World Context:</strong> The Old Testament world spans from the earliest civilizations of Mesopotamia and Egypt through the Persian Empire. Understanding Ancient Near Eastern context illuminates these texts.</p>
@@ -360,11 +336,10 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion">Understanding the Old Testament's Structure</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">The Christian Old Testament (39 books)</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">Understanding the Old Testament's Structure</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">The Christian Old Testament (39 books)</h4>
 <p>Arranged in four sections:</p>
 <ol>
 <li><strong>Pentateuch/Torah</strong> (5 books): Genesis–Deuteronomy</li>
@@ -372,9 +347,7 @@
 <li><strong>Poetic/Wisdom Books</strong> (5 books): Job–Song of Solomon</li>
 <li><strong>Prophets</strong> (17 books): Isaiah–Malachi</li>
 </ol>
-</div>
-<button class="sg-inner-accordion">The Jewish TaNaK (24 books, same content arranged differently)</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">The Jewish TaNaK (24 books, same content arranged differently)</h4>
 <ul>
 <li><strong>Torah</strong> (תורה) – "Instruction" – Genesis–Deuteronomy</li>
 <li><strong>Nevi'im</strong> (נביאים) – "Prophets" – Joshua–Malachi (arranged differently)</li>
@@ -383,28 +356,22 @@
 <p>This three-part structure is ancient, referenced in the Dead Sea Scrolls and even by Jesus Himself (Luke 24:44).</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">Connection to Restoration Scripture</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Book of Mormon Connections</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">Connection to Restoration Scripture</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Book of Mormon Connections</h4>
 <ul>
 <li><strong>1 Nephi 13:21-29, 38-42</strong> – Nephi's vision explains how "many plain and precious things" were taken from the Bible and how the Lord planned to restore them through "other books"</li>
 <li><strong>2 Nephi 3:12</strong> – The Bible and Book of Mormon work together to establish truth</li>
 <li><strong>2 Nephi 11:4</strong> – "All things which have been given of God from the beginning of the world, unto man, are the typifying of [Christ]"</li>
 <li><strong>Mosiah 3:15</strong> – The Lord showed His people "many signs, and wonders, and types, and shadows... concerning his coming"</li>
 </ul>
-</div>
-<button class="sg-inner-accordion">Doctrine and Covenants Connections</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrine and Covenants Connections</h4>
 <ul>
 <li><strong>D&C 84:20</strong> – "In the ordinances... the power of godliness is manifest"</li>
 <li><strong>D&C 132:29</strong> – Abraham's faithfulness to covenants led to his exaltation</li>
 </ul>
-</div>
-<button class="sg-inner-accordion">Pearl of Great Price Connections</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Pearl of Great Price Connections</h4>
 <p>The Book of Moses and Book of Abraham provide essential restored context for Genesis:</p>
 <ul>
 <li><strong>Moses 1</strong> – Pre-Genesis vision of Moses revealing God's purposes</li>
@@ -414,10 +381,9 @@
 </ul>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">This Week's Key Doctrines</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active">This Week's Key Doctrines</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <ol>
 <li><strong>Christ as Jehovah:</strong> Jesus Christ is the God of the Old Testament, acting under the Father's direction as Creator, Lawgiver, and Covenant-maker.</li>
 <li><strong>Types and Shadows:</strong> The Old Testament uses symbols, ordinances, and events as "types" pointing to Christ—the sacrificial lamb, the brass serpent, manna, the temple, and countless others.</li>
@@ -426,9 +392,9 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion">Temple Connections</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active">Temple Connections</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p>The temple is perhaps the most significant through-line connecting the Old Testament to Latter-day Saint worship. This year's study will reveal:</p>
 <ul>
 <li><strong>The Garden of Eden</strong> as the first temple—a place of God's presence</li>
@@ -440,9 +406,9 @@
 <p>The Old Testament is, in many ways, a temple text. President Russell M. Nelson has taught that understanding the temple helps us understand the scriptures, and vice versa.</p>
 </div>
 </div>
-<button class="sg-sub-accordion">CFM Manual Emphasis</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active">CFM Manual Emphasis</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p><strong>Manual Focus:</strong> Approaching the Old Testament with faith, looking for Jesus Christ, and understanding covenants</p>
 <p><strong>Key Questions from Manual:</strong></p>
 <ul>
@@ -458,9 +424,9 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion">Suggested Reading Approach</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active">Suggested Reading Approach</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p><strong>If You Have Limited Time (Essential Reading):</strong></p>
 <ul>
 <li>CFM Manual Introduction lesson</li>
@@ -481,29 +447,20 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion">Insights from Video Resources</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Seeing Jehovah in Real-Time (<a href="https://followhim.co/show-note/3-31/" target="_blank">Follow Him</a> | <a href="https://followhim.co/show-note/3-30/" target="_blank">Part 2</a>)</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">Insights from Video Resources</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Seeing Jehovah in Real-Time (<a href="https://followhim.co/show-note/3-31/" target="_blank">Follow Him</a> | <a href="https://followhim.co/show-note/3-30/" target="_blank">Part 2</a>)</h4>
 <p>Dr. Josh Sears offers a transformative reframe: the tendency when reading the Old Testament is to "hunt for Messianic prophecies" and skip over everything else. But <strong>Jehovah IS Jesus Christ acting in real-time throughout the narrative.</strong> When Moses encounters God at the burning bush, that's not just "pointing to" Christ—that IS Christ. In Isaiah 7, there are 13+ references to "the LORD" (Jehovah) versus just one Messianic prophecy (v. 14). Reading for Jehovah rather than just for prophecies transforms every chapter.</p>
 <p><strong>Practical Application:</strong> Whenever you see "LORD" (all caps), substitute "Jesus" and see how the narrative changes.</p>
-</div>
-<button class="sg-inner-accordion">Belonging Before Believing (<a href="https://taylorhalverson.podbean.com/" target="_blank">Scripture Insights</a>)</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Belonging Before Believing (<a href="https://taylorhalverson.podbean.com/" target="_blank">Scripture Insights</a>)</h4>
 <p>Taylor Halverson and Mike Harris offer a reframe on God's relationship with Israel: <strong>Belonging > Belief + Behavior.</strong> God doesn't wait for Israel to get their act together before claiming them. He says "you are my people" first. This grace-first framework, rooted in the Hebrew words <em>chesed</em> (covenantal loyalty) and <em>chen</em> (favor/grace), colors how we should read every Old Testament story.</p>
-</div>
-<button class="sg-inner-accordion">Satan Removed from the Text (<a href="https://scripturecentral.org/shows/finding-christ-in-the-old-testament/episodes/finding-christ-in-the-old-testament-come-follow-me-dec-29-jan-4-john-hilton-iii" target="_blank">Finding Christ</a>)</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Satan Removed from the Text (<a href="https://scripturecentral.org/shows/finding-christ-in-the-old-testament/episodes/finding-christ-in-the-old-testament-come-follow-me-dec-29-jan-4-john-hilton-iii" target="_blank">Finding Christ</a>)</h4>
 <p>Dr. Lynne Wilson makes a surprising discovery: the book of Genesis <strong>never mentions</strong> temptation, Satan, or devil. The entire Old Testament uses "devil" zero times and "Satan" only appears in Job and Chronicles. Dr. Wilson suggests this is "one of those precious things that were removed from the scriptures." This is why Moses 1's revelation about Satan as deceiver is so essential—it's restored truth that helps us understand the adversary in ways other Abrahamic faiths don't.</p>
 <p>President James E. Faust reinforced why this restored knowledge matters: Satan is "the great imitator, the master deceiver, the arch counterfeiter, and the great forger." He "comes as a thief in the night; he is a wolf in sheep's clothing" with "such perfect disguise that many do not recognize either him or his methods" ("<a href="https://www.churchofjesuschrist.org/study/general-conference/1987/10/the-great-imitator?lang=eng" target="_blank">The Great Imitator</a>," October 1987 General Conference).</p>
-</div>
-<button class="sg-inner-accordion">Interpretive Lenses Matter (<a href="https://podcasts.apple.com/us/podcast/the-scriptures-are-real/id1600496638" target="_blank">Scriptures Are Real</a>)</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Interpretive Lenses Matter (<a href="https://podcasts.apple.com/us/podcast/the-scriptures-are-real/id1600496638" target="_blank">Scriptures Are Real</a>)</h4>
 <p>Dr. Kerry Muhlestein encourages readers to recognize the lens they bring before reading the Old Testament. Are you reading with assumptions about God's character? Expectations about what scripture "should" say? Let God tell you who He is rather than imposing expectations. The Old Testament reveals a God who is both "divine warrior" with sword in hand AND gentle shepherd—both fully present, not contradictory.</p>
-</div>
-<button class="sg-inner-accordion">The Olive Tree Framework (<a href="https://podcasts.apple.com/us/podcast/introduction-to-the-old-testament-dr-barbara-morgan/id1722783794?i=1000742958433" target="_blank">Grounded</a>)</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">The Olive Tree Framework (<a href="https://podcasts.apple.com/us/podcast/introduction-to-the-old-testament-dr-barbara-morgan/id1722783794?i=1000742958433" target="_blank">Grounded</a>)</h4>
 <p>For those wanting a systematic approach to Old Testament study, Dr. Barbara Morgan Gardner offers an organizing framework based on the olive tree (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/rom/11?lang=eng" target="_blank">Romans 11</a>, <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/jacob/5?lang=eng" target="_blank">Jacob 5</a>):</p>
 <ul>
 <li><strong>Doctrines</strong> = The roots (unchanging truths)</li>
@@ -512,9 +469,7 @@
 <li><strong>Covenants</strong> = The anchor pins holding roots to bedrock</li>
 </ul>
 <p>This framework helps distinguish between eternal doctrines and cultural applications that may have changed.</p>
-</div>
-<button class="sg-inner-accordion">Using Modern Translations (<a href="https://scripturecentral.org/shows/finding-christ-in-the-old-testament/episodes/finding-christ-in-the-old-testament-come-follow-me-dec-29-jan-4-john-hilton-iii" target="_blank">Finding Christ</a>)</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Using Modern Translations (<a href="https://scripturecentral.org/shows/finding-christ-in-the-old-testament/episodes/finding-christ-in-the-old-testament-come-follow-me-dec-29-jan-4-john-hilton-iii" target="_blank">Finding Christ</a>)</h4>
 <p>The Church officially encourages studying from modern translations alongside the King James Version. John Hilton III provides practical recommendations:</p>
 <ul>
 <li><strong>NIV</strong> reads at 7th-grade level (vs. KJV at 12th grade)</li>
@@ -525,20 +480,16 @@
 <p>This isn't replacing scripture—it's accessing the same truths in clearer language.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">Preparing for the Year Ahead</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Key Restoration Resources for Old Testament Study</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">Preparing for the Year Ahead</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Key Restoration Resources for Old Testament Study</h4>
 <ol>
 <li><strong>Book of Moses</strong> – Restored portions of Genesis 1-6</li>
 <li><strong>Book of Abraham</strong> – Restored text expanding Genesis 11-25</li>
 <li><strong>Joseph Smith Translation (JST)</strong> – Clarifications throughout (see footnotes and appendix)</li>
 </ol>
-</div>
-<button class="sg-inner-accordion">Study Tools Available</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Study Tools Available</h4>
 <ul>
 <li>Scripture Helps: Old Testament (churchofjesuschrist.org)</li>
 <li>Seminary Teacher Manual: Old Testament</li>
@@ -548,23 +499,19 @@
 <p><strong>File Status:</strong> Complete <strong>Created:</strong> January 4, 2026 <strong>Last Updated:</strong> January 4, 2026 <strong>Next File:</strong> 02_Historical_Cultural_Context.md</p>
 </div>
 </div>
-</div>
             </div>
         </div>
 
         <!-- SECTION 2: HISTORICAL & CULTURAL CONTEXT -->
-        <button class="sg-accordion-section">2. Historical & Cultural Context</button>
-        <div class="sg-panel">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">2. Historical & Cultural Context</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
             <div class="panel-content">
-                <button class="sg-sub-accordion">Historical Setting</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Time Period</button>
-<div class="sg-inner-panel">
+                <button class="sg-sub-accordion active">Historical Setting</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Time Period</h4>
 <p><strong>Approximate Dates:</strong> The Old Testament spans from Creation through approximately 400 BC <strong>Biblical Era:</strong> All eras—from pre-history through post-exile (this is an overview week) <strong>World Historical Context:</strong> The Old Testament was composed against the backdrop of the great civilizations of the Ancient Near East: Egypt, Mesopotamia (Sumer, Akkad, Babylon, Assyria), the Hittites, Persians, and various Canaanite city-states.</p>
-</div>
-<button class="sg-inner-accordion">Geographic Setting</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Geographic Setting</h4>
 <p><strong>Primary Locations:</strong></p>
 <table class="info-table">
 <tr>
@@ -599,9 +546,7 @@
 </tr>
 </table>
 <p><strong>Map Reference:</strong> LDS Bible Maps 1-6 provide overview of Old Testament world</p>
-</div>
-<button class="sg-inner-accordion">Political Context</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Political Context</h4>
 <p>The Old Testament unfolds across multiple political eras:</p>
 <ul>
 <li><strong>Patriarchal Period (~2000-1700 BC):</strong> Small clans moving through lands controlled by Canaanite city-states and Egyptian influence</li>
@@ -613,12 +558,10 @@
 </ul>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">Ancient Near Eastern (ANE) Background</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Understanding Why ANE Context Matters</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">Ancient Near Eastern (ANE) Background</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Understanding Why ANE Context Matters</h4>
 <p>The Old Testament was written <em>by</em> people in the Ancient Near East <em>for</em> people in the Ancient Near East. The original audience understood cultural practices, literary conventions, and religious concepts that modern Western readers often miss. Learning about the ANE world helps us:</p>
 <ol>
 <li><strong>Avoid anachronism</strong> — Reading modern ideas back into ancient texts</li>
@@ -626,9 +569,7 @@
 <li><strong>Appreciate uniqueness</strong> — Recognizing what made Israelite faith distinctive</li>
 <li><strong>Grasp meaning</strong> — Understanding practices like covenant rituals, temple worship, sacrifice</li>
 </ol>
-</div>
-<button class="sg-inner-accordion">Key ANE Concepts for the Year Ahead</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Key ANE Concepts for the Year Ahead</h4>
 <h4>Covenant (<em>Berit</em>)</h4>
 <p><strong>Description:</strong> In the ANE, covenants were binding agreements between parties—often between a greater king (suzerain) and a lesser king (vassal). These treaties followed recognizable patterns: historical prologue, stipulations, blessings/curses, witnesses, and document deposit in a temple.</p>
 <p><strong>Biblical Significance:</strong> God's covenants with Noah, Abraham, Moses, and David follow similar patterns, but with crucial differences—particularly God's gracious initiative and His binding Himself to bless His people.</p>
@@ -638,9 +579,7 @@
 <h4>Sacrifice and Atonement</h4>
 <p><strong>Description:</strong> All ANE cultures practiced animal sacrifice as a means of approaching deity, making restitution, or securing favor. Blood was considered the carrier of life.</p>
 <p><strong>Biblical Significance:</strong> The Israelite sacrificial system shares surface similarities with neighbors but serves fundamentally different purposes—particularly as types pointing to Christ's ultimate sacrifice.</p>
-</div>
-<button class="sg-inner-accordion">Religious Context of Surrounding Cultures</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Religious Context of Surrounding Cultures</h4>
 <p><strong>Egyptian Religion:</strong></p>
 <ul>
 <li>Polytheistic pantheon with Ra (sun), Osiris (afterlife), Isis, Horus, etc.</li>
@@ -674,16 +613,12 @@
 </ul>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">Literary Context</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Understanding the Old Testament as Literature</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">Literary Context</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Understanding the Old Testament as Literature</h4>
 <p>The Old Testament is not a single book but a library of diverse writings composed over centuries in various genres. Approaching it requires genre awareness.</p>
-</div>
-<button class="sg-inner-accordion">Major Genres in the Old Testament</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Major Genres in the Old Testament</h4>
 <table class="info-table">
 <tr>
 <th>Genre</th>
@@ -716,9 +651,7 @@
 <td>Symbolic language, cosmic scope, vindication</td>
 </tr>
 </table>
-</div>
-<button class="sg-inner-accordion">Hebrew Literary Techniques</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Hebrew Literary Techniques</h4>
 <p><strong>Parallelism (especially in poetry):</strong></p>
 <ul>
 <li>Synonymous: Second line echoes first (Psalm 24:1)</li>
@@ -731,13 +664,11 @@
 <p><strong>Wordplay:</strong> Hebrew uses puns, alliteration, and sound patterns often lost in translation.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">Interpretive Frameworks for Scripture Study</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active">Interpretive Frameworks for Scripture Study</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p>Understanding <em>how</em> to read scripture is as important as <em>what</em> we read. Two frameworks prove particularly valuable for Old Testament study.</p>
-<button class="sg-inner-accordion">The Jewish PaRDeS Model</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">The Jewish PaRDeS Model</h4>
 <p>Jewish tradition identifies four levels of scriptural meaning, forming an acronym that spells <em>PaRDeS</em> (פַּרְדֵּס)—Hebrew for "garden" or "paradise":</p>
 <table class="info-table">
 <tr>
@@ -778,9 +709,7 @@
 <li><em>Derash</em> — What does this mean for my life?</li>
 <li><em>Sod</em> — What does the Spirit reveal? What temple connections exist?</li>
 </ul>
-</div>
-<button class="sg-inner-accordion">Elder Gerald N. Lund's Seven Principles</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Elder Gerald N. Lund's Seven Principles</h4>
 <p>In his October 1986 <em>Ensign</em> article, "<a href="https://www.churchofjesuschrist.org/study/ensign/1986/10/understanding-scriptural-symbols" target="_blank">Understanding Scriptural Symbols</a>," Gerald N. Lund offered six principles for interpreting scriptural symbolism, to which a seventh has been added:</p>
 <ol>
 <li><strong>Do the Scriptures give an interpretation?</strong> — Check if the Bible interprets the symbol elsewhere</li>
@@ -794,16 +723,12 @@
 <p><strong>Joseph Smith's Foundation:</strong> > "Whenever God gives a vision of an image, or beast, or figure of any kind, He always holds Himself responsible to give a revelation or interpretation of the meaning thereof." > — <em>Teachings of the Prophet Joseph Smith</em>, p. 291</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">The Old Testament's Composition</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Traditional Attribution</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">The Old Testament's Composition</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Traditional Attribution</h4>
 <p><strong>Author:</strong> Moses traditionally credited with the Torah (Genesis-Deuteronomy); various prophets and scribes for other books <strong>Writing Period:</strong> Spans from Moses (~1400 BC) through post-exilic period (~400 BC) <strong>LDS Perspective:</strong> Modern prophets affirm Moses as the foundational author of the Torah while acknowledging that prophetic scribes may have made additions and preserved the texts over time</p>
-</div>
-<button class="sg-inner-accordion">The TaNaK vs. Christian Old Testament</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">The TaNaK vs. Christian Old Testament</h4>
 <p>The same books are arranged differently:</p>
 <p><strong>TaNaK (Jewish):</strong></p>
 <ul>
@@ -820,18 +745,14 @@
 <li>Minor Prophets (12)</li>
 </ul>
 <p>The TaNaK order is more ancient and may reflect original compositional intent. For example, Chronicles as the final book ends with hope for return, while the Christian order ends with Malachi's prophecy of Elijah's return.</p>
-</div>
-<button class="sg-inner-accordion">Transmission History</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Transmission History</h4>
 <p>The Hebrew text was carefully preserved by Jewish scribes, eventually standardized as the Masoretic Text (MT). The Greek Septuagint (LXX) translation (~250-100 BC) was widely used in Jesus' day and by New Testament authors. The Dead Sea Scrolls (discovered 1947) confirmed remarkable preservation of the biblical text.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">Restoration Insights on Old Testament Origins</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Joseph Smith's Contributions</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">Restoration Insights on Old Testament Origins</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Joseph Smith's Contributions</h4>
 <p><strong>Book of Moses:</strong> Received through revelation 1830-1831, restores significant portions of Genesis, including:</p>
 <ul>
 <li>Moses 1: A pre-Genesis vision establishing context</li>
@@ -847,17 +768,14 @@
 <li>Abraham 4-5: Creation account with additional details</li>
 </ul>
 <p><strong>Joseph Smith Translation (JST):</strong> Clarifications throughout the Bible, many included in LDS footnotes and appendix. Key changes appear in Genesis, Exodus, Psalms, Isaiah, and throughout.</p>
-</div>
-<button class="sg-inner-accordion">Prophetic Teachings on Old Testament Study</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Prophetic Teachings on Old Testament Study</h4>
 <p><strong>Joseph Smith:</strong> "The Old Testament is one of the best books in the world" and should be studied to understand covenants, prophecy, and types of Christ.</p>
 <p><strong>Modern Prophets:</strong> Have consistently emphasized that the Old Testament, properly understood through the Spirit and restoration texts, witnesses of Christ and teaches covenant principles central to temple worship.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">Key Questions This Context Answers</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active">Key Questions This Context Answers</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <ol>
 <li><strong>Why does the Old Testament sometimes seem strange or foreign?</strong></li>
 </ol>
@@ -876,25 +794,20 @@
 <p>Monotheism, ethical emphasis, covenant relationship, historical revelation, and prophetic tradition distinguish Israel's faith from surrounding religions.</p>
 </div>
 </div>
-<button class="sg-sub-accordion">For Further Study</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Recommended Resources</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">For Further Study</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Recommended Resources</h4>
 <ul>
 <li>Bible Dictionary (LDS scriptures) — Excellent overviews of books, people, and concepts</li>
 <li>Scripture Helps: Old Testament (churchofjesuschrist.org) — Weekly study aids</li>
 <li><em>Old Testament Student Manual</em> (CES) — Comprehensive background</li>
 </ul>
-</div>
-<button class="sg-inner-accordion">Bible Project Videos</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Bible Project Videos</h4>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=ALsluAKBZ-c" target="_blank">Old Testament Overview</a> — Comprehensive animated introduction</li>
 </ul>
-</div>
-<button class="sg-inner-accordion">Scripture Central Resources</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Scripture Central Resources</h4>
 <ul>
 <li>Multiple KnoWhy articles on Old Testament backgrounds</li>
 <li>Lynne Hilton Wilson's "Come, Follow Me" video series</li>
@@ -902,38 +815,30 @@
 <p><strong>File Status:</strong> Complete <strong>Created:</strong> January 4, 2026 <strong>Last Updated:</strong> January 4, 2026 <strong>Next File:</strong> 03_Key_Passages_Study.md</p>
 </div>
 </div>
-</div>
             </div>
         </div>
 
         <!-- SECTION 3: KEY PASSAGES STUDY -->
-        <button class="sg-accordion-section">3. Key Passages Study</button>
-        <div class="sg-panel">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">3. Key Passages Study</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
             <div class="panel-content">
-                <button class="sg-sub-accordion">Reading Overview</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">What This Week Covers</button>
-<div class="sg-inner-panel">
+                <button class="sg-sub-accordion active">Reading Overview</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">What This Week Covers</h4>
 <p>This introductory week does not have a specific scripture reading assignment in the traditional sense. Instead, the Come, Follow Me manual focuses on preparing hearts and minds for the year-long journey through the Old Testament. The emphasis is on understanding <em>how</em> to approach these ancient texts and <em>why</em> they matter for Latter-day Saints.</p>
 <p>The CFM manual highlights four foundational concepts: (1) The Old Testament testifies of Jesus Christ through types, symbols, and prophecies; (2) Jesus Christ is Jehovah, the God of the Old Testament; (3) Joseph Smith restored "plain and precious things" that clarify Old Testament passages; and (4) Covenants are the central theme connecting God to His people throughout scripture.</p>
 <p>This week's key passages are drawn from the scriptures referenced in the CFM manual and preparatory materials rather than from a sequential reading assignment.</p>
-</div>
-<button class="sg-inner-accordion">Why These Key Passages Were Selected</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Why These Key Passages Were Selected</h4>
 <p>These passages were chosen because the CFM manual explicitly references them as foundational for understanding the entire Old Testament. They establish the interpretive framework Latter-day Saints use to approach these ancient texts—seeing Christ in types and symbols, understanding Jesus as Jehovah, recognizing restored truths, and appreciating covenant theology.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">Week-Level Literary Features</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Genre & Form</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">Week-Level Literary Features</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Genre & Form</h4>
 <p>This week's passages span multiple genres: law/instruction (Moses 6:63), historical narrative with prophetic vision (1 Nephi 13), and prophetic discourse (Exodus 3, 6). Reading across genres requires flexibility—poetry is meant to evoke and inspire, narrative is meant to show rather than tell, and prophetic vision uses symbolic imagery.</p>
-</div>
-<button class="sg-inner-accordion">Key Literary Patterns to Watch For</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Key Literary Patterns to Watch For</h4>
 <ul>
 <li><strong>Divine Self-Disclosure:</strong> When God reveals His names and character (Exodus 3:14; 6:3)</li>
 <li><strong>Typology:</strong> How physical elements point to spiritual realities (Moses 6:63)</li>
@@ -941,20 +846,14 @@
 </ul>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">KEY PASSAGE 1: All Things Testify of Christ</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Scripture Reference</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">KEY PASSAGE 1: All Things Testify of Christ</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Scripture Reference</h4>
 <p><strong>Moses 6:63</strong></p>
-</div>
-<button class="sg-inner-accordion">Scripture Text</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Scripture Text</h4>
 <p>> And behold, all things have their likeness, and all things are created and made to bear record of me, both things which are temporal, and things which are spiritual; things which are in the heavens above, and things which are on the earth, and things which are in the earth, and things which are under the earth, both above and beneath: all things bear record of me.</p>
-</div>
-<button class="sg-inner-accordion">Literary Structure</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Literary Structure</h4>
 <p><strong>Structure Type:</strong> Comprehensive Enumeration with Inclusio</p>
 <p>The verse opens with "all things" and closes with "all things," creating an inclusio that emphasizes totality. Between these bookends, the passage systematically lists every realm of creation:</p>
 <ul>
@@ -963,13 +862,9 @@
 <li>Above / Beneath</li>
 </ul>
 <p><strong>Significance of Structure:</strong> The exhaustive listing leaves no category uncovered. There is nothing in all creation that does not point to Christ. This totalizing structure mirrors the universal scope of Christ's Atonement.</p>
-</div>
-<button class="sg-inner-accordion">Historical & Cultural Context</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Historical & Cultural Context</h4>
 <p>This verse appears in the restored account of Adam receiving instruction about sacrificial ordinances. In the Ancient Near East, sacrifice was universal but often served to appease capricious gods. Here, God explains that sacrifice is <em>pedagogical</em>—it teaches about the coming Redeemer.</p>
-</div>
-<button class="sg-inner-accordion">Doctrinal Analysis</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrinal Analysis</h4>
 <p>This is one of the most sweeping Christological statements in scripture. It establishes that:</p>
 <ol>
 <li><strong>Creation is revelatory</strong> — The physical world points beyond itself to spiritual truth</li>
@@ -977,13 +872,9 @@
 <li><strong>Types and shadows are intentional</strong> — God designed the world as a teaching tool</li>
 </ol>
 <p>This verse provides the lens for reading the entire Old Testament. Every sacrifice, every deliverance, every prophetic promise participates in a grand testimony of Jesus Christ.</p>
-</div>
-<button class="sg-inner-accordion">Hebrew Insights</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Hebrew Insights</h4>
 <p>While this passage comes from restoration scripture rather than biblical Hebrew, the concept aligns with the Hebrew understanding of <em>mashal</em> (מָשָׁל) — parable, likeness, or comparison. Creation functions as God's living parable.</p>
-</div>
-<button class="sg-inner-accordion">Cross-References</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Cross-References</h4>
 <p><strong>Old Testament:</strong></p>
 <ul>
 <li><strong><a href="https://www.blueletterbible.org/kjv/psa/19/1/s_497001" target="_blank">Psalm 19:1-4</a></strong> — "The heavens declare the glory of God"</li>
@@ -999,13 +890,9 @@
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/11.4" target="_blank">2 Nephi 11:4</a></strong> — "All things which have been given of God... are the typifying of him"</li>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/30.44" target="_blank">Alma 30:44</a></strong> — "All things denote there is a God"</li>
 </ul>
-</div>
-<button class="sg-inner-accordion">Latter-day Saint Connections</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Latter-day Saint Connections</h4>
 <p>This verse is central to temple understanding. Temple symbolism—from the veil to the ordinances—participates in the cosmic testimony of Christ. President Russell M. Nelson has taught that the temple helps us see symbols in scripture, and scripture helps us see symbols in the temple.</p>
-</div>
-<button class="sg-inner-accordion">Reflection Questions</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Reflection Questions</h4>
 <ol>
 <li>What elements of creation have taught you about Christ?</li>
 <li>How might this perspective change how you approach difficult or seemingly mundane passages in the Old Testament?</li>
@@ -1014,30 +901,20 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">KEY PASSAGE 2: The Divine Name Revealed</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Scripture Reference</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">KEY PASSAGE 2: The Divine Name Revealed</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Scripture Reference</h4>
 <p><strong>Exodus 3:13-15</strong></p>
-</div>
-<button class="sg-inner-accordion">Scripture Text</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Scripture Text</h4>
 <p>> 13 And Moses said unto God, Behold, when I come unto the children of Israel, and shall say unto them, The God of your fathers hath sent me unto you; and they shall say to me, What is his name? what shall I say unto them? > > 14 And God said unto Moses, I AM THAT I AM: and he said, Thus shalt thou say unto the children of Israel, I AM hath sent me unto you. > > 15 And God said moreover unto Moses, Thus shalt thou say unto the children of Israel, The LORD God of your fathers, the God of Abraham, the God of Isaac, and the God of Jacob, hath sent me unto you: this is my name for ever, and this is my memorial unto all generations.</p>
-</div>
-<button class="sg-inner-accordion">Literary Structure</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Literary Structure</h4>
 <p><strong>Structure Type:</strong> Call Narrative with Divine Self-Disclosure</p>
 <p>This passage follows the biblical call narrative pattern but reaches its climax in divine self-revelation. The structure moves from question (v.13) → answer (v.14) → expansion and perpetual declaration (v.15).</p>
 <p><strong>Significance of Structure:</strong> Moses asks for information to share with Israel; God responds with revelation about His own nature. The name is not merely identification—it is theology.</p>
-</div>
-<button class="sg-inner-accordion">Historical & Cultural Context</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Historical & Cultural Context</h4>
 <p>In Ancient Near Eastern culture, knowing a god's name meant having access to that god's power. Names revealed character and function. Pharaoh's gods had names tied to natural phenomena (Ra = sun, Hapi = Nile). By contrast, YHWH's name reveals being itself—existence, presence, reliability.</p>
-</div>
-<button class="sg-inner-accordion">Doctrinal Analysis</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrinal Analysis</h4>
 <p><strong>The Divine Name (YHWH/Jehovah):</strong> The Hebrew אֶהְיֶה אֲשֶׁר אֶהְיֶה (<em>ehyeh asher ehyeh</em>) is notoriously difficult to translate. Options include:</p>
 <ul>
 <li>"I AM THAT I AM" — emphasizing eternal self-existence</li>
@@ -1046,9 +923,7 @@
 </ul>
 <p>The name <em>Yahweh</em> (יהוה) derives from the same root (<em>hayah</em> = to be). It appears over 6,800 times in the Old Testament, rendered as "LORD" (all caps) in English Bibles.</p>
 <p><strong>Jesus as Jehovah:</strong> This passage is foundational for understanding that Jesus Christ is the God of the Old Testament. When Jesus declared "Before Abraham was, I AM" (John 8:58), He claimed the divine name for Himself—and the Jews understood this, picking up stones to kill Him for blasphemy.</p>
-</div>
-<button class="sg-inner-accordion">Hebrew Insights</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Hebrew Insights</h4>
 <p><strong><a href="https://www.blueletterbible.org/lexicon/h1961/kjv/wlc/0-1/" target="_blank">ehyeh</a></strong> (אֶהְיֶה)</p>
 <ul>
 <li><strong>Definition:</strong> "I am" or "I will be" — first person singular imperfect of <em>hayah</em></li>
@@ -1063,9 +938,7 @@
 <li><strong>Usage:</strong> Third person form — "He is" or "He causes to be"</li>
 <li><strong>Significance:</strong> So sacred that Jews eventually stopped pronouncing it, substituting <em>Adonai</em> (Lord)</li>
 </ul>
-</div>
-<button class="sg-inner-accordion">Cross-References</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Cross-References</h4>
 <p><strong>Old Testament:</strong></p>
 <ul>
 <li><strong><a href="https://www.blueletterbible.org/kjv/exo/6/2/s_56002" target="_blank">Exodus 6:2-3</a></strong> — "I am the LORD: And I appeared unto Abraham, unto Isaac, and unto Jacob, by the name of God Almighty, but by my name JEHOVAH was I not known to them"</li>
@@ -1083,13 +956,9 @@
 <ul>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/110.3-4" target="_blank">D&C 110:3-4</a></strong> — "I am the first and the last; I am he who liveth, I am he who was slain; I am your advocate with the Father"</li>
 </ul>
-</div>
-<button class="sg-inner-accordion">Latter-day Saint Connections</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Latter-day Saint Connections</h4>
 <p>Latter-day revelation clarifies what the Bible hints: Jehovah/YHWH is the premortal Jesus Christ, acting under the direction of the Father. This understanding transforms Old Testament reading—every interaction with "the LORD" is an interaction with Christ before His mortal birth.</p>
-</div>
-<button class="sg-inner-accordion">Reflection Questions</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Reflection Questions</h4>
 <ol>
 <li>What does it mean that God identifies Himself as the "I AM"?</li>
 <li>How does knowing Jesus is Jehovah change how you read Old Testament stories?</li>
@@ -1098,20 +967,14 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">KEY PASSAGE 3: Plain and Precious Truths Restored</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Scripture Reference</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">KEY PASSAGE 3: Plain and Precious Truths Restored</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Scripture Reference</h4>
 <p><strong>1 Nephi 13:28-29, 40</strong></p>
-</div>
-<button class="sg-inner-accordion">Scripture Text</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Scripture Text</h4>
 <p>> 28 Wherefore, thou seest that after the book hath gone forth through the hands of the great and abominable church, that there are many plain and precious things taken away from the book, which is the book of the Lamb of God. > > 29 And after these plain and precious things were taken away it goeth forth unto all the nations of the Gentiles; and after it goeth forth unto all the nations of the Gentiles, yea, even across the many waters which thou hast seen with the Gentiles which have gone forth out of captivity, thou seest—because of the many plain and precious things which have been taken out of the book, which were plain unto the understanding of the children of men, according to the plainness which is in the Lamb of God—because of these things which are taken away out of the gospel of the Lamb, an exceedingly great many do stumble, yea, insomuch that Satan hath great power over them. > > 40 And the angel spake unto me, saying: These last records, which thou hast seen among the Gentiles, shall establish the truth of the first, which are of the twelve apostles of the Lamb, and shall make known the plain and precious things which have been taken away from them; and shall make known to all kindreds, tongues, and people, that the Lamb of God is the Son of the Eternal Father, and the Savior of the world; and that all men must come unto him, or they cannot be saved.</p>
-</div>
-<button class="sg-inner-accordion">Doctrinal Analysis</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrinal Analysis</h4>
 <p>This vision explains why the Bible (including the Old Testament) sometimes seems unclear, contradictory, or incomplete. It was not originally so—"plain and precious things" were removed through transmission and intentional alteration.</p>
 <p>The solution is not to abandon the Bible but to read it alongside restoration scriptures—the Book of Mormon, Book of Moses, Book of Abraham, and Doctrine and Covenants—which restore what was lost.</p>
 <p><strong>Implications for Old Testament Study:</strong></p>
@@ -1122,9 +985,7 @@
 <li>The Book of Mormon quotes extensively from Isaiah with clearer readings</li>
 <li>Doctrine and Covenants provides prophetic commentary on Old Testament passages</li>
 </ol>
-</div>
-<button class="sg-inner-accordion">Cross-References</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Cross-References</h4>
 <p><strong>Old Testament:</strong></p>
 <ul>
 <li><strong><a href="https://www.blueletterbible.org/kjv/isa/29/11/s_708011" target="_blank">Isaiah 29:11-14</a></strong> — The sealed book prophecy</li>
@@ -1139,13 +1000,9 @@
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/35.20" target="_blank">D&C 35:20</a></strong> — Bible to be translated/corrected</li>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/45.60-61" target="_blank">D&C 45:60-61</a></strong> — New Testament first, then Old Testament</li>
 </ul>
-</div>
-<button class="sg-inner-accordion">Latter-day Saint Connections</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Latter-day Saint Connections</h4>
 <p>This passage provides the theological rationale for the LDS scripture canon. We treasure the Bible while acknowledging its transmission challenges. Restoration scripture doesn't replace the Bible—it restores, clarifies, and validates it.</p>
-</div>
-<button class="sg-inner-accordion">Reflection Questions</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Reflection Questions</h4>
 <ol>
 <li>How does this vision shape your expectations for Old Testament study?</li>
 <li>Where have you seen restoration scriptures clarify a confusing Old Testament passage?</li>
@@ -1154,20 +1011,14 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">KEY PASSAGE 4: Symbols That Testify of Christ</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Scripture Reference</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">KEY PASSAGE 4: Symbols That Testify of Christ</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Scripture Reference</h4>
 <p><strong>Exodus 12:3-5; John 1:29</strong></p>
-</div>
-<button class="sg-inner-accordion">Scripture Text</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Scripture Text</h4>
 <p>> <strong>Exodus 12:3-5:</strong> Speak ye unto all the congregation of Israel, saying, In the tenth day of this month they shall take to them every man a lamb, according to the house of their fathers, a lamb for an house: And if the household be too little for the lamb, let him and his neighbour next unto his house take it according to the number of the souls; every man according to his eating shall make your count for the lamb. Your lamb shall be without blemish, a male of the first year: ye shall take it out from the sheep, or from the goats. > > <strong>John 1:29:</strong> The next day John seeth Jesus coming unto him, and saith, Behold the Lamb of God, which taketh away the sin of the world.</p>
-</div>
-<button class="sg-inner-accordion">Doctrinal Analysis</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrinal Analysis</h4>
 <p>The Passover lamb is the paradigmatic Old Testament type of Christ. Every element points forward:</p>
 <ul>
 <li><strong>Without blemish</strong> — Christ's sinlessness</li>
@@ -1177,9 +1028,7 @@
 <li><strong>Bones not broken</strong> — Fulfilled at the cross (John 19:36)</li>
 </ul>
 <p>John the Baptist's declaration explicitly connected Jesus to this type, helping his hearers understand Christ's mission through the lens of Exodus.</p>
-</div>
-<button class="sg-inner-accordion">Cross-References</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Cross-References</h4>
 <p><strong>Old Testament:</strong></p>
 <ul>
 <li><strong><a href="https://www.blueletterbible.org/kjv/isa/53/7/s_732007" target="_blank">Isaiah 53:7</a></strong> — "He is brought as a lamb to the slaughter"</li>
@@ -1195,9 +1044,7 @@
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/3.15" target="_blank">Mosiah 3:15</a></strong> — The Lord showed His people "many signs, and wonders, and types, and shadows... concerning his coming"</li>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/11.4" target="_blank">2 Nephi 11:4</a></strong> — "All things which have been given of God... are the typifying of him"</li>
 </ul>
-</div>
-<button class="sg-inner-accordion">Reflection Questions</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Reflection Questions</h4>
 <ol>
 <li>What other Old Testament symbols remind you of Christ?</li>
 <li>How does understanding typology change how you read the Law of Moses?</li>
@@ -1206,46 +1053,32 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">Additional Notable Verses</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Psalm 119:105 — "Thy word is a lamp unto my feet"</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">Additional Notable Verses</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Psalm 119:105 — "Thy word is a lamp unto my feet"</h4>
 <p><strong>Key insight:</strong> This verse captures the purpose of scripture study—divine guidance for life's path. The psalmist describes scripture not as a searchlight revealing distant horizons but as a lamp for the next step. <strong>Connection:</strong> Referenced in CFM manual as expressing the attitude we should bring to Old Testament study.</p>
-</div>
-<button class="sg-inner-accordion">Deuteronomy 6:4 — "Hear, O Israel: The LORD our God is one LORD"</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Deuteronomy 6:4 — "Hear, O Israel: The LORD our God is one LORD"</h4>
 <p><strong>Key insight:</strong> The <em>Shema</em> is the foundational creed of Israelite faith, declaring monotheism amid a polytheistic world. Jesus called this the first and greatest commandment. <strong>Hebrew note:</strong> The word <em>echad</em> (אֶחָד) means "one" but can imply unity (as in Genesis 2:24, "one flesh"). <strong>Connection:</strong> <a href="https://www.blueletterbible.org/kjv/mar/12/29/s_969029" target="_blank">Mark 12:29</a> — Jesus quotes this as the greatest commandment.</p>
-</div>
-<button class="sg-inner-accordion">Jeremiah 31:31-34 — "I will make a new covenant"</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Jeremiah 31:31-34 — "I will make a new covenant"</h4>
 <p><strong>Key insight:</strong> This prophecy anticipates a covenant written on hearts rather than stone—a prophecy Latter-day Saints see fulfilled in the Restoration. <strong>Connection:</strong> <a href="https://www.blueletterbible.org/kjv/heb/8/8/s_1141008" target="_blank">Hebrews 8:8-12</a> — Directly quotes this passage as fulfilled in Christ.</p>
-</div>
-<button class="sg-inner-accordion">Isaiah 7:14 — "A virgin shall conceive"</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Isaiah 7:14 — "A virgin shall conceive"</h4>
 <p><strong>Key insight:</strong> One of the great Messianic prophecies, looking forward to Christ's miraculous birth. <strong>Hebrew note:</strong> The Hebrew word <em>almah</em> (עַלְמָה) means "young woman of marriageable age"; the Septuagint translated it as <em>parthenos</em> (virgin), which Matthew affirms. <strong>Connection:</strong> <a href="https://www.blueletterbible.org/kjv/mat/1/22/s_930022" target="_blank">Matthew 1:22-23</a></p>
-</div>
-<button class="sg-inner-accordion">Isaiah 9:6 — "For unto us a child is born"</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Isaiah 9:6 — "For unto us a child is born"</h4>
 <p><strong>Key insight:</strong> This beloved passage names the coming Messiah with divine titles: Wonderful Counselor, Mighty God, Everlasting Father, Prince of Peace. <strong>Connection:</strong> This passage is a major theme in Handel's <em>Messiah</em> and is referenced throughout Latter-day prophetic teachings.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">Week Summary</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Key Doctrinal Takeaways</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">Week Summary</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Key Doctrinal Takeaways</h4>
 <ol>
 <li><strong>Christ-Centered Reading:</strong> The Old Testament's primary purpose is to testify of Jesus Christ through types, symbols, prophecies, and direct revelation.</li>
 <li><strong>Jesus is Jehovah:</strong> The pre-mortal Christ is the God who spoke to Moses, covenanted with Abraham, and led Israel.</li>
 <li><strong>Restoration Enriches:</strong> The Book of Moses, Book of Abraham, and JST restore "plain and precious things" that clarify and deepen Old Testament understanding.</li>
 <li><strong>Covenant Framework:</strong> Understanding covenants is the key to understanding the Old Testament's narrative structure and God's purposes.</li>
 </ol>
-</div>
-<button class="sg-inner-accordion">Literary Patterns to Remember</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Literary Patterns to Remember</h4>
 <table class="info-table">
 <tr>
 <th>Pattern</th>
@@ -1268,9 +1101,7 @@
 <td>Lost truth → Prophetic restoration</td>
 </tr>
 </table>
-</div>
-<button class="sg-inner-accordion">Hebrew Terms to Remember</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Hebrew Terms to Remember</h4>
 <table class="info-table">
 <tr>
 <th>Term</th>
@@ -1303,16 +1134,12 @@
 <td>God's unmerited favor; same root as "Hannah" (Scripture Insights)</td>
 </tr>
 </table>
-</div>
-<button class="sg-inner-accordion">Insights from Video Resources</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Insights from Video Resources</h4>
 <p><strong>Jehovah in Real-Time, Not Just Prophecy (Follow Him):</strong> Dr. Josh Sears emphasizes that rather than "hunting for Messianic prophecies," we should recognize Jehovah acting throughout the narrative. Isaiah 7 has 13+ references to "the LORD" versus one Messianic prophecy—every reference to Jehovah IS a reference to Christ.</p>
 <p><strong>The Belonging Framework (Scripture Insights):</strong> Taylor Halverson notes that in the Old Testament, <strong>Belonging comes before Belief + Behavior.</strong> God claims Israel as "my people" before they've earned anything. This reframes difficult passages where Israel fails—God's covenant love (<em>chesed</em>) persists.</p>
 <p><strong>Moses 1 as Temple Text (Lynne Wilson):</strong> The introduction to Genesis through Moses 1 is essentially temple text—Moses on a mountain, receiving revelation about God's purposes, being taught to discern Satan. Mountains in the Old Testament are temples.</p>
 <p><strong>Symbol Literacy Crisis (Kerry Muhlestein):</strong> We face a crisis of symbol literacy. Ancient people understood that lions, lambs, serpents, and temples all carried meaning. Recovering this literacy unlocks the Old Testament.</p>
-</div>
-<button class="sg-inner-accordion">For Further Study</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">For Further Study</h4>
 <ul>
 <li>"The Everlasting Covenant" by President Russell M. Nelson (Liahona, Oct. 2022)</li>
 <li>"Jesus Christ Is the Treasure" by Elder Dale G. Renlund (Liahona, Nov. 2023)</li>
@@ -1321,17 +1148,16 @@
 <p><strong>File Status:</strong> Complete <strong>Created:</strong> January 4, 2026 <strong>Last Updated:</strong> January 4, 2026 <strong>Next File:</strong> 04_Word_Studies.md</p>
 </div>
 </div>
-</div>
             </div>
         </div>
 
         <!-- SECTION 4: WORD STUDIES -->
-        <button class="sg-accordion-section">4. Word Studies</button>
-        <div class="sg-panel">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">4. Word Studies</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
             <div class="panel-content">
-                <button class="sg-sub-accordion">Introduction: Understanding the Language of Scripture</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">Introduction: Understanding the Language of Scripture</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p>The Old Testament was written primarily in Hebrew (with some Aramaic sections). This introductory week establishes foundational terms that will recur throughout the year. Understanding these Hebrew words from the start provides a framework for deeper study all year long.</p>
 <p>Our <strong>Hebrew-first approach</strong> examines:</p>
 <ol>
@@ -1342,11 +1168,10 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion">Key Hebrew Terms This Week</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Quick Reference Table</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">Key Hebrew Terms This Week</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Quick Reference Table</h4>
 <table class="info-table">
 <tr>
 <th>Hebrew</th>
@@ -1393,12 +1218,10 @@
 </table>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">TERM 1: YHWH / Yahweh (יהוה)</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Hebrew Foundation (PRIMARY)</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">TERM 1: YHWH / Yahweh (יהוה)</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Hebrew Foundation (PRIMARY)</h4>
 <p><strong>Strong's Number:</strong> <a href="https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/" target="_blank">H3068</a></p>
 <p><strong>Hebrew Script:</strong> יהוה</p>
 <p><strong>Transliteration:</strong> YHWH (pronounced Yahweh or Jehovah)</p>
@@ -1421,32 +1244,22 @@
 <li><strong>Deuteronomy 6:4</strong> - "Hear, O Israel: The LORD our God is one LORD"</li>
 </ul>
 <p><strong>Usage in This Week's Reading:</strong> This divine name appears when God reveals Himself to Moses at the burning bush. The name encapsulates God's eternal self-existence and His covenant faithfulness. Every time we see "LORD" (all caps) in English Bibles, the underlying Hebrew is YHWH.</p>
-</div>
-<button class="sg-inner-accordion">Greek Analysis (Septuagint)</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Greek Analysis (Septuagint)</h4>
 <p><strong>LXX Translation:</strong> κύριος (kyrios) - <a href="https://www.blueletterbible.org/lexicon/g2962/kjv/tr/0-1/" target="_blank">G2962</a></p>
 <p><strong>Why This Translation Matters:</strong> Ancient Jewish translators substituted the divine name with <em>kyrios</em> (Lord) out of reverence, just as they substituted <em>Adonai</em> when reading aloud in Hebrew. This practice influenced the New Testament, where <em>kyrios</em> applied to Jesus carries divine implications.</p>
 <p><strong>New Testament Usage:</strong> When Thomas calls Jesus "My Lord (kyrios) and my God" (John 20:28), he uses the same term the Septuagint used for YHWH—a stunning declaration of Christ's divinity.</p>
-</div>
-<button class="sg-inner-accordion">English Etymology</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">English Etymology</h4>
 <p><strong>English Equivalent:</strong> <a href="https://www.etymonline.com/word/Jehovah" target="_blank">Jehovah / LORD</a></p>
 <p><strong>Etymology:</strong> "Jehovah" arose from combining the consonants YHWH with the vowels from <em>Adonai</em> (a-o-a). This hybrid form appeared in medieval Latin texts and entered English via William Tyndale's translation.</p>
 <p><strong>Why "LORD" in English Bibles:</strong> Following Jewish reverence for the divine name, English translators render YHWH as "LORD" (all capitals) to distinguish it from <em>Adonai</em> (Lord, mixed case).</p>
-</div>
-<button class="sg-inner-accordion">Webster 1828 Definition</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Webster 1828 Definition</h4>
 <p><strong>JEHOVAH</strong> - "The Scripture name of the Supreme Being. If, as is supposed, this name is from the Hebrew substantive verb, the word denotes the Permanent Being, or the self-existent Being; the eternal God."</p>
 <p><strong>Joseph Smith Era Understanding:</strong> Early Latter-day Saints understood Jehovah as the pre-mortal name of Jesus Christ—an understanding confirmed by modern revelation (D&C 110:3-4).</p>
-</div>
-<button class="sg-inner-accordion">Doctrinal Significance</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrinal Significance</h4>
 <p>YHWH is the most sacred name in the Hebrew Bible. Its revelation at the burning bush (Exodus 3) represents a pivotal moment—God not only commissions Moses but reveals His essential nature: eternal, self-existent, and faithful to His promises.</p>
 <p>For Latter-day Saints, this name carries additional weight. Modern revelation confirms that Jehovah is Jesus Christ in His pre-mortal state. When we read "the LORD" in the Old Testament, we are reading about Christ before Bethlehem. This transforms our reading—every covenant God makes, every deliverance He accomplishes, every word He speaks through prophets—these are the words and acts of Jesus Christ.</p>
 <p>This understanding connects temple worship to scripture study. In the temple, we encounter symbols and covenants that connect us to the same God who spoke to Moses from the burning bush.</p>
-</div>
-<button class="sg-inner-accordion">Cross-References</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Cross-References</h4>
 <p><strong>Old Testament:</strong></p>
 <ul>
 <li><strong><a href="https://www.blueletterbible.org/kjv/exo/6/2/s_56002" target="_blank">Exodus 6:2-3</a></strong> — Progressive revelation of the divine name</li>
@@ -1463,12 +1276,10 @@
 </ul>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">TERM 2: Berit (בְּרִית)</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Hebrew Foundation (PRIMARY)</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">TERM 2: Berit (בְּרִית)</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Hebrew Foundation (PRIMARY)</h4>
 <p><strong>Strong's Number:</strong> <a href="https://www.blueletterbible.org/lexicon/h1285/kjv/wlc/0-1/" target="_blank">H1285</a></p>
 <p><strong>Hebrew Script:</strong> בְּרִית</p>
 <p><strong>Transliteration:</strong> berit (also spelled berith or brit)</p>
@@ -1492,31 +1303,21 @@
 <li><strong>Deuteronomy 4:13</strong> - "He declared unto you his covenant"</li>
 </ul>
 <p><strong>Usage in This Week's Reading:</strong> The CFM introduction emphasizes covenant as the central organizing theme of the Old Testament. Understanding <em>berit</em> is essential for everything that follows—from God's covenant with Noah, to Abraham, to Moses at Sinai, to David, to the "new covenant" promised in Jeremiah.</p>
-</div>
-<button class="sg-inner-accordion">Greek Analysis (Septuagint)</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Greek Analysis (Septuagint)</h4>
 <p><strong>LXX Translation:</strong> διαθήκη (diathēkē) - <a href="https://www.blueletterbible.org/lexicon/g1242/kjv/tr/0-1/" target="_blank">G1242</a></p>
 <p><strong>Why This Translation Matters:</strong> Greek <em>diathēkē</em> can mean either "covenant" (mutual agreement) or "testament" (unilateral disposition, as in "last will and testament"). The Septuagint's choice emphasizes that biblical covenants, while involving human response, are fundamentally God's gracious initiative—He sets the terms.</p>
 <p><strong>New Testament Usage:</strong> The word appears throughout Hebrews discussing the "new covenant" (Hebrews 8-10) and in Jesus' words at the Last Supper: "This is my blood of the new covenant" (Matthew 26:28).</p>
-</div>
-<button class="sg-inner-accordion">English Etymology</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">English Etymology</h4>
 <p><strong>English Equivalent:</strong> <a href="https://www.etymonline.com/word/covenant" target="_blank">Covenant</a></p>
 <p><strong>Etymology:</strong> From Old French <em>covenant</em> "agreement," from Latin <em>convenire</em> "to come together, agree." The English word emphasizes the "coming together" of parties, though biblical covenants are primarily about God coming down to humanity.</p>
-</div>
-<button class="sg-inner-accordion">Webster 1828 Definition</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Webster 1828 Definition</h4>
 <p><strong>COVENANT</strong> - "A mutual consent or agreement of two or more persons, to do or to forbear some act or thing; a contract; stipulation. A covenant is created by deed in writing, sealed and executed; or it may be implied in the contract."</p>
 <p><strong>Joseph Smith Era Understanding:</strong> Early Saints understood covenants as central to the Restoration. The "new and everlasting covenant" (D&C 132) encompasses all saving ordinances.</p>
-</div>
-<button class="sg-inner-accordion">Doctrinal Significance</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrinal Significance</h4>
 <p><em>Berit</em> appears at every crucial turning point in Israel's story. God's covenants are not mere contracts but relationships—He binds Himself to His people with promises of blessing, protection, and eternal life.</p>
 <p>President Russell M. Nelson's emphasis on the "everlasting covenant" draws directly from this Hebrew concept. When we make temple covenants, we enter the same <em>berit</em> tradition that began with Adam and continued through every prophet.</p>
 <p>The Hebrew etymology connecting <em>berit</em> to "cutting" illuminates Genesis 15, where God passes between cut animals—a ceremony that meant "may I become like these animals if I fail to keep my word." God literally stakes His existence on His faithfulness.</p>
-</div>
-<button class="sg-inner-accordion">Cross-References</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Cross-References</h4>
 <p><strong>Old Testament:</strong></p>
 <ul>
 <li><strong><a href="https://www.blueletterbible.org/kjv/gen/9/9/s_9009" target="_blank">Genesis 9:9-17</a></strong> — Noahic covenant</li>
@@ -1534,12 +1335,10 @@
 </ul>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">TERM 3: Torah (תּוֹרָה)</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Hebrew Foundation (PRIMARY)</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">TERM 3: Torah (תּוֹרָה)</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Hebrew Foundation (PRIMARY)</h4>
 <p><strong>Strong's Number:</strong> <a href="https://www.blueletterbible.org/lexicon/h8451/kjv/wlc/0-1/" target="_blank">H8451</a></p>
 <p><strong>Hebrew Script:</strong> תּוֹרָה</p>
 <p><strong>Transliteration:</strong> torah</p>
@@ -1562,20 +1361,14 @@
 <li><strong>Psalm 119:97</strong> - "O how love I thy law (torah)!"</li>
 </ul>
 <p><strong>Usage in This Week's Reading:</strong> Understanding Torah as "instruction" rather than merely "law" transforms how we approach the Pentateuch. These are not arbitrary rules but loving guidance from a Father.</p>
-</div>
-<button class="sg-inner-accordion">Greek Analysis (Septuagint)</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Greek Analysis (Septuagint)</h4>
 <p><strong>LXX Translation:</strong> νόμος (nomos) - <a href="https://www.blueletterbible.org/lexicon/g3551/kjv/tr/0-1/" target="_blank">G3551</a></p>
 <p><strong>Why This Translation Matters:</strong> The Greek <em>nomos</em> emphasizes the legal/regulatory aspect of Torah, which unfortunately narrowed the Hebrew concept. Many New Testament passages about "law" reflect this Greek lens rather than the fuller Hebrew meaning.</p>
 <p><strong>New Testament Usage:</strong> Paul's discussions of "the law" must be read understanding that <em>nomos</em> translates <em>torah</em>—he's discussing Israel's divine instruction, not legalism in the abstract.</p>
-</div>
-<button class="sg-inner-accordion">Doctrinal Significance</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrinal Significance</h4>
 <p>Recovering the meaning of <em>torah</em> as "instruction" changes how we read the first five books. These are not primarily legal codes but divine teaching for covenant life. A father instructs his children because he loves them and wants them to flourish.</p>
 <p>The root <em>yarah</em> (to throw, point out) suggests a teacher pointing the way, like an archer pointing an arrow toward the target. Torah shows us the direction of life with God.</p>
-</div>
-<button class="sg-inner-accordion">Cross-References</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Cross-References</h4>
 <p><strong>Old Testament:</strong></p>
 <ul>
 <li><strong><a href="https://www.blueletterbible.org/kjv/psa/19/7/s_497007" target="_blank">Psalm 19:7</a></strong> — "The law of the LORD is perfect, converting the soul"</li>
@@ -1587,12 +1380,10 @@
 </ul>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">TERM 4: Mashiach (מָשִׁיחַ)</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Hebrew Foundation (PRIMARY)</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">TERM 4: Mashiach (מָשִׁיחַ)</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Hebrew Foundation (PRIMARY)</h4>
 <p><strong>Strong's Number:</strong> <a href="https://www.blueletterbible.org/lexicon/h4899/kjv/wlc/0-1/" target="_blank">H4899</a></p>
 <p><strong>Hebrew Script:</strong> מָשִׁיחַ</p>
 <p><strong>Transliteration:</strong> mashiach</p>
@@ -1614,24 +1405,18 @@
 <li><strong>Psalm 2:2</strong> - "Against the LORD, and against his anointed (mashiach)"</li>
 <li><strong>Daniel 9:25-26</strong> - "Unto the Messiah (mashiach) the Prince"</li>
 </ul>
-</div>
-<button class="sg-inner-accordion">Greek Analysis (Septuagint)</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Greek Analysis (Septuagint)</h4>
 <p><strong>LXX Translation:</strong> χριστός (christos) - <a href="https://www.blueletterbible.org/lexicon/g5547/kjv/tr/0-1/" target="_blank">G5547</a></p>
 <p><strong>Why This Translation Matters:</strong> <em>Christos</em> (from <em>chriō</em> "to anoint") is the direct Greek equivalent of <em>mashiach</em>. When the New Testament calls Jesus "the Christ," it is calling Him "the Messiah"—the Anointed One promised throughout the Old Testament.</p>
-</div>
-<button class="sg-inner-accordion">Doctrinal Significance</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrinal Significance</h4>
 <p>Every time the Old Testament mentions anointed priests or kings, it foreshadows the ultimate Mashiach—Jesus Christ. The anointing with oil symbolized empowerment by God's Spirit for sacred service. Jesus was anointed not with oil but with the Holy Spirit without measure.</p>
 <p>Understanding that "Christ" means "Messiah/Anointed One" helps us see the continuity between Testaments. The promised deliverer of the Old Testament is the Jesus of the New.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">TERM 5: Qadosh (קָדוֹשׁ)</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Hebrew Foundation (PRIMARY)</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">TERM 5: Qadosh (קָדוֹשׁ)</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Hebrew Foundation (PRIMARY)</h4>
 <p><strong>Strong's Number:</strong> <a href="https://www.blueletterbible.org/lexicon/h6918/kjv/wlc/0-1/" target="_blank">H6918</a></p>
 <p><strong>Hebrew Script:</strong> קָדוֹשׁ</p>
 <p><strong>Transliteration:</strong> qadosh</p>
@@ -1653,37 +1438,27 @@
 <li><strong>Isaiah 6:3</strong> - "Holy (qadosh), holy (qadosh), holy (qadosh) is the LORD of hosts"</li>
 <li><strong>Psalm 99:9</strong> - "For the LORD our God is holy (qadosh)"</li>
 </ul>
-</div>
-<button class="sg-inner-accordion">Doctrinal Significance</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrinal Significance</h4>
 <p><em>Qadosh</em> is fundamentally about separation and dedication—being set apart for God's purposes. Israel was called to be <em>qadosh</em> (holy) because their God was <em>qadosh</em> (Leviticus 19:2).</p>
 <p>This concept permeates temple worship. Temple space is <em>qadosh</em>—set apart from ordinary space. Priests were <em>qadosh</em>—set apart for sacred service. Covenant people are <em>qadosh</em>—a holy nation (Exodus 19:6).</p>
 <p>Understanding holiness as "set-apartness" helps us see that it's not primarily about moral perfection (though it includes that) but about belonging to God and being dedicated to His purposes.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">Additional Hebrew Terms (Brief Treatment)</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Elohim (אֱלֹהִים) - God, gods</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">Additional Hebrew Terms (Brief Treatment)</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Elohim (אֱלֹהִים) - God, gods</h4>
 <p><strong>Strong's:</strong> <a href="https://www.blueletterbible.org/lexicon/h430/kjv/wlc/0-1/" target="_blank">H430</a> <strong>Key Insight:</strong> Grammatically plural but takes singular verbs when referring to the God of Israel. Used in Genesis 1:1 ("In the beginning God created..."). The plural form may hint at divine majesty or plurality within deity. <strong>LDS Connection:</strong> Abraham 4-5 uses "the Gods," which some connect to this plural form.</p>
-</div>
-<button class="sg-inner-accordion">Nabi (נָבִיא) - Prophet</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Nabi (נָבִיא) - Prophet</h4>
 <p><strong>Strong's:</strong> <a href="https://www.blueletterbible.org/lexicon/h5030/kjv/wlc/0-1/" target="_blank">H5030</a> <strong>Key Insight:</strong> From a root meaning "to bubble up, pour forth." A prophet is one from whom divine words "bubble up"—one called by God to speak His message. <strong>Where It Appears:</strong> Over 300 times; central to understanding prophetic literature.</p>
-</div>
-<button class="sg-inner-accordion">Hesed (חֶסֶד) - Lovingkindness, Covenant Love</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Hesed (חֶסֶד) - Lovingkindness, Covenant Love</h4>
 <p><strong>Strong's:</strong> <a href="https://www.blueletterbible.org/lexicon/h2617/kjv/wlc/0-1/" target="_blank">H2617</a> <strong>Key Insight:</strong> One of the richest words in Hebrew—combining love, loyalty, mercy, and covenant faithfulness. Often describes God's attitude toward His covenant people. <strong>Key Passage:</strong> Exodus 34:6-7 — "Abundant in goodness (hesed) and truth"</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">Theological Word Clusters</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Covenant Vocabulary</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">Theological Word Clusters</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Covenant Vocabulary</h4>
 <table class="info-table">
 <tr>
 <th>Hebrew</th>
@@ -1714,12 +1489,10 @@
 <p><strong>Why These Words Cluster:</strong> Covenant theology in the Old Testament requires this vocabulary constellation. God initiates covenant (<em>berit</em>) out of covenant love (<em>hesed</em>), demonstrates faithfulness (<em>emet</em>), and calls His people to keep (<em>shamar</em>) their commitments. These terms appear together repeatedly (e.g., Deuteronomy 7:9, 12).</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">Week Summary: Hebrew Insights</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Key Terms to Remember</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">Week Summary: Hebrew Insights</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Key Terms to Remember</h4>
 <table class="info-table">
 <tr>
 <th>Term</th>
@@ -1752,14 +1525,10 @@
 <td>Temple vocabulary; our calling</td>
 </tr>
 </table>
-</div>
-<button class="sg-inner-accordion">What Hebrew Reveals This Week</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">What Hebrew Reveals This Week</h4>
 <p>This introductory week establishes vocabulary that will recur throughout the entire Old Testament. Understanding that YHWH is Jesus Christ in His premortal ministry transforms how we read every chapter. Understanding <em>berit</em> as covenant—a binding relationship rather than mere contract—helps us see God's relational purposes throughout scripture.</p>
 <p>Perhaps most transformative is understanding <em>torah</em> as "instruction" rather than "law." The God of Israel is not primarily a legislator enforcing rules but a Father teaching His children how to live. This perspective prepares us to read Leviticus and Deuteronomy not as tedious legal code but as loving parental guidance.</p>
-</div>
-<button class="sg-inner-accordion">Temple Connections Through Language</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Temple Connections Through Language</h4>
 <p>Several key terms directly connect to temple experience:</p>
 <ul>
 <li><strong>Qadosh</strong> (holy) describes temple space, temple workers, and covenant people</li>
@@ -1770,20 +1539,16 @@
 <p>As we study the Old Testament this year, these Hebrew terms will deepen our temple understanding, and temple experience will illuminate these ancient texts.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">Resources for Further Hebrew Study</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Online Tools</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">Resources for Further Hebrew Study</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Online Tools</h4>
 <ul>
 <li><a href="https://www.blueletterbible.org/" target="_blank">Blue Letter Bible</a> - Lexicon and concordance</li>
 <li><a href="https://www.sefaria.org/" target="_blank">Sefaria</a> - Hebrew text with translations</li>
 <li><a href="https://www.ancient-hebrew.org/" target="_blank">Ancient Hebrew Research Center</a> - Word studies</li>
 </ul>
-</div>
-<button class="sg-inner-accordion">Bible Project Word Studies</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Bible Project Word Studies</h4>
 <ul>
 <li><a href="https://bibleproject.com/explore/video/covenant/" target="_blank">Covenant (Berith)</a> - Animated word study</li>
 <li><a href="https://bibleproject.com/explore/video/holy/" target="_blank">Holy (Qadosh)</a> - Animated word study</li>
@@ -1791,17 +1556,16 @@
 <p><strong>File Status:</strong> Complete <strong>Terms Analyzed:</strong> 5 major terms, 3 brief terms <strong>Created:</strong> January 4, 2026 <strong>Last Updated:</strong> January 4, 2026 <strong>Next File:</strong> 05_Teaching_Applications.md</p>
 </div>
 </div>
-</div>
             </div>
         </div>
 
         <!-- SECTION 5: TEACHING APPLICATIONS -->
-        <button class="sg-accordion-section">5. Teaching Applications</button>
-        <div class="sg-panel">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">5. Teaching Applications</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
             <div class="panel-content">
-                <button class="sg-sub-accordion">Introduction: Teaching the Old Testament Effectively</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">Introduction: Teaching the Old Testament Effectively</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p>This introductory week sets the tone for an entire year of study. Rather than rushing to cover content, focus on building excitement, establishing key interpretive principles, and helping learners see the Old Testament as relevant, accessible, and Christ-centered.</p>
 <p>The four foundational principles from the CFM manual provide the framework for all teaching this week: (1) The Old Testament testifies of Jesus Christ; (2) Jesus Christ is Jehovah; (3) The Restoration clarifies the Old Testament; and (4) Covenants connect us to God.</p>
 <p><strong>Key Teaching Principles:</strong></p>
@@ -1814,19 +1578,16 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion">1. PERSONAL STUDY APPLICATIONS</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Five Specific Study Techniques</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">1. PERSONAL STUDY APPLICATIONS</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Five Specific Study Techniques</h4>
 <p><strong>Technique 1: Christ-Centered Reading Practice</strong> This week, before diving into any Old Testament passage, pause and ask: "How might this point to Christ?" Practice with the examples from the CFM manual (manna, sacrificial lamb, brass serpent, Jonah). Then extend this practice to other passages. Keep a journal of "Types of Christ" you discover throughout the year.</p>
 <p><strong>Technique 2: Name Recognition Exercise</strong> Read Exodus 3:13-15 and John 8:58 together. Note that "I AM" connects Jesus to Jehovah. For the next week, whenever you see "LORD" (all caps) in the Old Testament, consciously recognize it as referring to the pre-mortal Christ. Let this awareness transform your reading.</p>
 <p><strong>Technique 3: Restoration Cross-Reference Study</strong> Choose one passage from the Book of Moses or Book of Abraham. Compare it carefully with its Genesis parallel. Note what the restoration adds. Use the JST footnotes throughout the week to see how Joseph Smith clarified difficult passages.</p>
 <p><strong>Technique 4: Covenant Tracing</strong> Begin a "Covenant Journal." This week, research the Abrahamic covenant (Genesis 12, 15, 17). Each week going forward, note how that covenant appears, is renewed, or is fulfilled. By year's end, you'll have traced the covenant thread through all of scripture.</p>
 <p><strong>Technique 5: Hebrew Word Study</strong> Choose one Hebrew term from this week's word studies (YHWH, <em>berit</em>, <em>torah</em>, <em>mashiach</em>, <em>qadosh</em>). Use Blue Letter Bible to study its occurrences. Write a one-page reflection on what you learned. This practice prepares you for deeper study all year.</p>
-</div>
-<button class="sg-inner-accordion">Five Personal Reflection Questions</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Five Personal Reflection Questions</h4>
 <ol>
 <li><strong>Anticipation:</strong> What excites or concerns you about studying the Old Testament this year? How might understanding that it testifies of Christ change your approach?</li>
 <li><strong>Covenant:</strong> What covenants have you made with God? How does understanding ancient covenant-making (like Genesis 15) deepen your appreciation for your own covenants?</li>
@@ -1834,21 +1595,17 @@
 <li><strong>Application:</strong> The psalmist called God's word "a lamp unto my feet" (Psalm 119:105). What specific guidance are you seeking this year? How might the Old Testament provide that lamp?</li>
 <li><strong>Identity:</strong> Knowing that Jesus is Jehovah, how might you read differently the story of God leading Israel through the wilderness, giving the law, or speaking to prophets?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion">Four Practical Exercises</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Four Practical Exercises</h4>
 <p><strong>Exercise 1: Old Testament Reading Plan</strong> Create your personal reading plan for the year. Will you read the full text or focus on the CFM selections? Set a realistic daily time commitment. Consider using the Church's Gospel Library app to track progress.</p>
 <p><strong>Exercise 2: Temple Preparation</strong> Attend the temple this week with Old Testament themes in mind. Bring a small notebook for reflections afterward (not in the temple itself). Note any connections you sense between temple worship and Old Testament themes.</p>
 <p><strong>Exercise 3: Symbol Awareness Week</strong> For seven days, look for "likenesses" in daily life that point to Christ (Moses 6:63). Sunrise, meals, seasons, relationships—how might these testify of the Savior? Record at least one observation daily.</p>
 <p><strong>Exercise 4: Share Your Learning</strong> Share one insight from this week's study with someone—a family member, friend, or on social media. Teaching reinforces learning and invites the Spirit.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">2. FAMILY HOME EVENING APPLICATIONS</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Opening Activity: "Hidden Christ" Picture Hunt</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">2. FAMILY HOME EVENING APPLICATIONS</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Opening Activity: "Hidden Christ" Picture Hunt</h4>
 <p><strong>Materials:</strong> Multiple pictures depicting Old Testament scenes (from Gospel Art Book or printed from Gospel Library)</p>
 <p><strong>Activity:</strong></p>
 <ol>
@@ -1863,9 +1620,7 @@
 <li>Which was hardest? (Helps identify where we need to learn more)</li>
 <li>How might looking for Jesus make Old Testament stories more meaningful?</li>
 </ul>
-</div>
-<button class="sg-inner-accordion">Scripture Story Presentation</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Scripture Story Presentation</h4>
 <p><strong>Title:</strong> "The God Who Introduced Himself"</p>
 <p><strong>Story Framework:</strong> "Moses was taking care of sheep in the desert when something amazing happened. He saw a bush that was on fire—but it wasn't burning up! When Moses went closer to see, God spoke to him from the bush. Moses asked, 'What is your name?' And God said something mysterious: 'I AM THAT I AM.' This special name tells us that God has always existed and always will. Here's the amazing part: Jesus told people that name was HIS name too! When He said 'Before Abraham was, I AM,' He was telling everyone that He is the same God who spoke to Moses."</p>
 <p><strong>Interactive Elements:</strong></p>
@@ -1876,9 +1631,7 @@
 <li>Read John 8:58 and discuss the connection</li>
 </ul>
 <p><strong>Application Discussion:</strong> "How does knowing that Jesus is the God of the Old Testament change how we might read these ancient stories?"</p>
-</div>
-<button class="sg-inner-accordion">Discussion Points for Families</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Discussion Points for Families</h4>
 <p><strong>For Younger Children (Ages 3-8):</strong></p>
 <ul>
 <li>Jesus loves us so much He's been helping people for a very, very long time</li>
@@ -1911,34 +1664,26 @@
 <li>President Nelson's emphasis on covenant and how it connects to Old Testament themes</li>
 <li>Approaching difficult passages with faith, context, and prophetic guidance</li>
 </ul>
-</div>
-<button class="sg-inner-accordion">Object Lessons</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Object Lessons</h4>
 <p><strong>Object Lesson 1: The Treasure Hunt Map</strong> <strong>Materials:</strong> A simple treasure map, a small prize <strong>Lesson:</strong> Show the map. "This map leads to treasure, but it uses symbols—X marks the spot, dotted lines show the path. The Old Testament is like a treasure map pointing to Jesus. The symbols (sacrifices, temples, prophets) lead to the ultimate treasure: our Savior." <strong>Application:</strong> This year, we're learning to read the map!</p>
 <p><strong>Object Lesson 2: The Missing Puzzle Pieces</strong> <strong>Materials:</strong> A jigsaw puzzle with 5-10 pieces removed <strong>Lesson:</strong> Try to see the full picture with missing pieces. "The Bible is amazing, but some pieces were lost over time. Joseph Smith received those missing pieces through the Book of Moses, Book of Abraham, and JST. Now we can see the fuller picture!" <strong>Application:</strong> Read restored scriptures alongside the Bible this year.</p>
 <p><strong>Object Lesson 3: The Lamp and the Path</strong> <strong>Materials:</strong> Flashlight, darkened room <strong>Lesson:</strong> Turn off lights. "Try walking across the room." (Difficult!) Turn on flashlight pointed at feet. "Now try." (Easier!) "The scriptures are 'a lamp unto our feet'—not a spotlight showing the whole road, but enough light for the next step." <strong>Application:</strong> We study daily for daily guidance.</p>
-</div>
-<button class="sg-inner-accordion">Family Activities</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Family Activities</h4>
 <p><strong>Activity 1: Old Testament Timeline (Ages 5+)</strong> Create a large timeline on poster board spanning from Creation to Malachi. Each week, add events and figures from your reading. By year's end, you'll have a visual overview of the entire Old Testament narrative.</p>
 <p><strong>Activity 2: Covenant Ceremony (Ages 8+)</strong> Discuss what covenant means. Create a simple family covenant for the year (e.g., "We will read together, serve together, grow together in Christ"). Have family members sign it. Revisit at year's end.</p>
 <p><strong>Activity 3: "LORD" Highlight Study (All Ages)</strong> Print a page from the Old Testament. Have everyone highlight or circle every "LORD" (all caps). Discuss: "Each of these is Jehovah—Jesus before His birth. What is He doing in this passage?"</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">3. SUNDAY SCHOOL TEACHING APPLICATIONS</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Three Class Opening Questions</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">3. SUNDAY SCHOOL TEACHING APPLICATIONS</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Three Class Opening Questions</h4>
 <ol>
 <li><strong>Experience-Based:</strong> "When you hear 'Old Testament,' what feelings or thoughts come up? Excitement? Intimidation? Confusion?" (Acknowledge mixed feelings, then transition to how the CFM manual addresses them...)</li>
 <li><strong>Connection-Based:</strong> "Have you ever discovered something new about a person you thought you knew well? The Old Testament may feel familiar, but this year we'll discover something amazing: every 'LORD' is Jesus Christ. How might that change your reading?"</li>
 <li><strong>Doctrinal:</strong> "If someone asked you, 'Why should I read the Old Testament when we have the Book of Mormon and modern revelation?'—how would you respond?" (Discuss, then explore the CFM manual's answer...)</li>
 </ol>
-</div>
-<button class="sg-inner-accordion">Key Teaching Points with Methods</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Key Teaching Points with Methods</h4>
 <p><strong>Teaching Point 1: The Old Testament Testifies of Jesus Christ</strong></p>
 <p><strong>Method - Symbol Exploration:</strong></p>
 <ul>
@@ -1970,19 +1715,15 @@
 <li>Reference 1 Nephi 13:28-29, 40</li>
 </ul>
 <p><strong>Application:</strong> Use the JST footnotes whenever you study Genesis this year.</p>
-</div>
-<button class="sg-inner-accordion">Small Group Activities</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Small Group Activities</h4>
 <p><strong>Activity 1: Types of Christ Gallery Walk (15 minutes)</strong> Post 6 images around the room representing Old Testament types (lamb, manna, temple, high priest, David, Jonah). Groups rotate, spending 2 minutes at each station discussing how it points to Christ. Share findings.</p>
 <p><strong>Activity 2: Covenant Definition Workshop (10 minutes)</strong> In groups of 3-4, define "covenant" in your own words. Then read the Bible Dictionary entry. Refine your definition. Share: "Why are covenants central to both the Old Testament and our lives today?"</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">4. SEMINARY TEACHING APPLICATIONS</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Daily Devotional Themes (5 days)</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">4. SEMINARY TEACHING APPLICATIONS</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Daily Devotional Themes (5 days)</h4>
 <p><strong>Day 1: Looking for Jesus</strong></p>
 <ul>
 <li><strong>Scripture:</strong> Moses 6:63</li>
@@ -2018,9 +1759,7 @@
 <li><strong>Question:</strong> What guidance are you seeking this year?</li>
 <li><strong>Challenge:</strong> Set your Old Testament reading goal for the year.</li>
 </ul>
-</div>
-<button class="sg-inner-accordion">Youth-Relevant Discussions</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Youth-Relevant Discussions</h4>
 <p><strong>Discussion 1: "Why Should I Care About Old Stories?"</strong> <strong>Situation:</strong> A friend says, "The Old Testament is too old and weird to be relevant." <strong>Questions:</strong></p>
 <ul>
 <li>What makes ancient stories relevant?</li>
@@ -2037,12 +1776,10 @@
 <p><strong>Application:</strong> Same God, same love, same plan—fully revealed in Christ.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">5. RELIEF SOCIETY & PRIESTHOOD APPLICATIONS</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Discussion Topics</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">5. RELIEF SOCIETY & PRIESTHOOD APPLICATIONS</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Discussion Topics</h4>
 <p><strong>Discussion Topic 1: The Everlasting Covenant</strong> <strong>Opening:</strong> Read President Russell M. Nelson's statement that the "everlasting covenant" is "the most important concept we can learn in this life." <strong>Deep Dive:</strong></p>
 <ul>
 <li>What is the everlasting covenant?</li>
@@ -2065,9 +1802,7 @@
 <li>Keep a "questions journal" this year</li>
 <li>Trust that prophetic guidance and ongoing study will bring answers</li>
 </ul>
-</div>
-<button class="sg-inner-accordion">Personal Development Goals</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Personal Development Goals</h4>
 <p><strong>Development Goal 1: Consistent Old Testament Study</strong> <strong>Goal:</strong> Read from the Old Testament or related restoration scriptures daily for the year. <strong>Plan:</strong></p>
 <ul>
 <li>Choose a realistic time commitment (10-30 minutes)</li>
@@ -2084,23 +1819,17 @@
 <p><strong>Progress Tracking:</strong> Monthly journal entry.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">6. CHILDREN'S TEACHING IDEAS</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Songs and Activities</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">6. CHILDREN'S TEACHING IDEAS</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Songs and Activities</h4>
 <p><strong>Song 1: "I Am a Child of God" (Children's Songbook 2)</strong> <strong>Activity:</strong> The God who loves us in this song is the same God who spoke to Moses, led Israel, and sent prophets. He's been loving His children for a very long time!</p>
 <p><strong>Song 2: "I Love to See the Temple" (Children's Songbook 95)</strong> <strong>Activity:</strong> The Old Testament tells us about the very first temples! This year we'll learn about the tabernacle and Solomon's temple—places where God met His people.</p>
 <p><strong>Song 3: "Search, Ponder, and Pray" (Children's Songbook 109)</strong> <strong>Activity:</strong> This is how we'll study the Old Testament—searching for Jesus, pondering what we learn, and praying for understanding.</p>
-</div>
-<button class="sg-inner-accordion">Simple Object Lessons</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Simple Object Lessons</h4>
 <p><strong>Object Lesson 1: Flashlight Faith (Ages 4-7)</strong> <strong>Materials:</strong> Flashlight, dark room <strong>Lesson:</strong> Turn off lights. "Can you see?" (No!) Turn on flashlight. "Now where do you look?" (At the light!) "The scriptures are like this flashlight. They help us see Jesus and know where to go!" <strong>Application:</strong> We read scriptures to see Jesus better.</p>
 <p><strong>Object Lesson 2: The Promise Bracelet (Ages 5-9)</strong> <strong>Materials:</strong> String, beads <strong>Lesson:</strong> Make simple bracelets together. "This is like a covenant—a special promise. God made promises to people in the Old Testament, and He keeps His promises. We make promises to Him too, like at baptism." <strong>Application:</strong> Wear the bracelet as a reminder of promises.</p>
-</div>
-<button class="sg-inner-accordion">Art and Crafts</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Art and Crafts</h4>
 <p><strong>Craft 1: Burning Bush (Ages 4-8)</strong> <strong>Materials:</strong> Brown paper (trunk), red/orange/yellow tissue paper (flames), green paper (bush), glue <strong>Instructions:</strong></p>
 <ol>
 <li>Create bush shape from green paper</li>
@@ -2117,12 +1846,10 @@
 <p><strong>Teaching:</strong> Use this bookmark all year as you read!</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">7. MISSION APPLICATIONS</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Teaching Principles</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">7. MISSION APPLICATIONS</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Teaching Principles</h4>
 <p><strong>Principle 1: God Has Always Loved His Children</strong> <strong>Teaching Approach:</strong></p>
 <ul>
 <li>Use Old Testament stories to show God's consistent love across time</li>
@@ -2144,39 +1871,27 @@
 <li>Investigators can enter covenant relationship with God</li>
 </ul>
 <p><strong>Scripture to Share:</strong> The Abrahamic covenant (Genesis 12:1-3) and its fulfillment through the Restoration</p>
-</div>
-<button class="sg-inner-accordion">Finding Applications</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Finding Applications</h4>
 <p><strong>Application 1: Common Ground</strong> Many people (Jews, Christians, Muslims) revere the Old Testament. Use shared stories as conversation starters: "What's your favorite Old Testament story? Here's what we learn from it..."</p>
 <p><strong>Application 2: Life Questions</strong> The Old Testament addresses universal questions: Why am I here? Why is there suffering? Is there hope? Use these entry points for gospel conversations.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">8. INSIGHTS FROM VIDEO RESOURCES FOR TEACHING</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">From Follow Him (Dr. Josh Sears)</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">8. INSIGHTS FROM VIDEO RESOURCES FOR TEACHING</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">From Follow Him (Dr. Josh Sears)</h4>
 <p><strong>Teaching Insight - Jehovah Mode:</strong> Rather than hunting for Messianic prophecies, teach students to see Jehovah (Jesus) acting in every chapter. In Isaiah 7, there are 13+ references to "the LORD" versus one Messianic prophecy. Every interaction with Jehovah IS an interaction with Christ.</p>
 <p><strong>Teaching Insight - Covenant as Relationship:</strong> Use President Nelson's framework—covenant is about relationship, not just rules. Sacrament is a weekly "date" with the Lord; repentance is relationship repair, not punishment.</p>
-</div>
-<button class="sg-inner-accordion">From Scripture Insights (Taylor & Mike)</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">From Scripture Insights (Taylor & Mike)</h4>
 <p><strong>Teaching Insight - Belonging First:</strong> God says "you are my people" BEFORE Israel earns it. Belonging > Belief + Behavior. This is the <em>chesed</em> (covenantal love) framework.</p>
 <p><strong>Teaching Insight - OT as Love Story:</strong> Reframe the Old Testament as God's love story with humanity, not a rule book. Even difficult passages show a God desperately pursuing His children.</p>
-</div>
-<button class="sg-inner-accordion">From Lynne Wilson</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">From Lynne Wilson</h4>
 <p><strong>Teaching Insight - Satan Removed:</strong> Genesis never mentions Satan, temptation, or devil. This is why Moses 1 is so crucial—it restores the understanding of the adversary that was lost from the text.</p>
 <p><strong>Teaching Insight - Temple Text:</strong> Moses 1 is temple text. Mountains = temples. Use this framework throughout the year when mountains appear.</p>
-</div>
-<button class="sg-inner-accordion">From Kerry Muhlestein (Scriptures Are Real)</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">From Kerry Muhlestein (Scriptures Are Real)</h4>
 <p><strong>Teaching Insight - Divine Warrior with Two Hands:</strong> The Old Testament shows God with both a "sword hand" (justice) and a "gentle hand" (mercy). Both are equally present. Don't pick one and ignore the other.</p>
 <p><strong>Teaching Insight - Symbol Literacy:</strong> We face a crisis of symbol literacy. Teach students to read symbols (lions, lambs, serpents, water, mountains) as ancient people would have understood them.</p>
-</div>
-<button class="sg-inner-accordion">From Barbara Morgan Gardner (Grounded)</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">From Barbara Morgan Gardner (Grounded)</h4>
 <p><strong>Teaching Insight - Olive Tree Framework:</strong> Distinguish between:</p>
 <ul>
 <li><strong>Doctrines</strong> (roots) = unchanging</li>
@@ -2186,9 +1901,7 @@
 </ul>
 <p>This helps with difficult OT passages—some were applications for their time, not eternal doctrines.</p>
 <p><strong>Teaching Insight - Women's Voices:</strong> President Ballard said the Lord needs women "who will speak up." The OT is filled with women whose voices we can elevate.</p>
-</div>
-<button class="sg-inner-accordion">From John Hilton III (Finding Christ)</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">From John Hilton III (Finding Christ)</h4>
 <p><strong>Teaching Insight - Modern Translations:</strong> The Church officially supports using modern translations. NIV reads at 7th-grade level vs. KJV at 12th. This isn't replacing scripture—it's accessing the same truth in clearer language.</p>
 <p><strong>Teaching Insight - 9 Periods of OT History:</strong> Use this framework to help students understand where they are in the story:</p>
 <ol>
@@ -2205,17 +1918,16 @@
 <p><strong>File Status:</strong> Complete <strong>Subsections:</strong> Personal Study, Family Home Evening, Sunday School, Seminary, Relief Society/Priesthood, Children, Mission <strong>Created:</strong> January 4, 2026 <strong>Last Updated:</strong> January 4, 2026 <strong>Next File:</strong> 06_Study_Questions.md</p>
 </div>
 </div>
-</div>
             </div>
         </div>
 
         <!-- SECTION 6: STUDY QUESTIONS -->
-        <button class="sg-accordion-section">6. Study Questions</button>
-        <div class="sg-panel">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">6. Study Questions</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
             <div class="panel-content">
-                <button class="sg-sub-accordion">Introduction: Using These Study Questions</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">Introduction: Using These Study Questions</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p>These questions are designed for multiple contexts:</p>
 <ul>
 <li><strong>Personal Study:</strong> Journal responses, meditation, prayer</li>
@@ -2226,11 +1938,10 @@
 <p>This introductory week focuses on establishing the framework for the entire year. Questions emphasize the four foundational principles from the CFM manual: (1) The Old Testament testifies of Jesus Christ; (2) Jesus Christ is Jehovah; (3) The Restoration clarifies the Old Testament; and (4) Covenants connect us to God.</p>
 </div>
 </div>
-<button class="sg-sub-accordion">CATEGORY 1: UNDERSTANDING THE FRAMEWORK</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Foundational Comprehension Questions</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">CATEGORY 1: UNDERSTANDING THE FRAMEWORK</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Foundational Comprehension Questions</h4>
 <p><strong>Questions 1-10: Christ-Centered Reading</strong></p>
 <ol>
 <li>What does Moses 6:63 teach about how to read the Old Testament?</li>
@@ -2285,12 +1996,10 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">CATEGORY 2: PERSONAL APPLICATION</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Self-Reflection Questions</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">CATEGORY 2: PERSONAL APPLICATION</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Self-Reflection Questions</h4>
 <p><strong>Questions 41-50: Approaching the Year Ahead</strong></p>
 <ol>
 <li>What is your current attitude toward the Old Testament? Excitement? Anxiety? Curiosity? Boredom?</li>
@@ -2319,12 +2028,10 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">CATEGORY 3: DOCTRINAL UNDERSTANDING</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Core Doctrine Questions</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">CATEGORY 3: DOCTRINAL UNDERSTANDING</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Core Doctrine Questions</h4>
 <p><strong>Questions 61-70: The Nature of God</strong></p>
 <ol>
 <li>What does the name YHWH ("I AM") teach about God's nature?</li>
@@ -2353,12 +2060,10 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">CATEGORY 4: PRACTICAL APPLICATION</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">This Week's Action Questions</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">CATEGORY 4: PRACTICAL APPLICATION</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">This Week's Action Questions</h4>
 <p><strong>Questions 81-90: Immediate Application</strong></p>
 <ol>
 <li>What specific insight from this week will you apply immediately?</li>
@@ -2387,12 +2092,10 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">CATEGORY 5: DISCUSSION STARTERS</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">For Class and Family Discussion</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">CATEGORY 5: DISCUSSION STARTERS</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">For Class and Family Discussion</h4>
 <p><strong>Questions 101-110: Group Discussion</strong></p>
 <ol>
 <li>What excites you most about studying the Old Testament this year?</li>
@@ -2421,12 +2124,10 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">CATEGORY 6: SYNTHESIS AND COMMITMENT</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion">Integration Questions</button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active">CATEGORY 6: SYNTHESIS AND COMMITMENT</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Integration Questions</h4>
 <p><strong>Questions 121-130: Bringing It Together</strong></p>
 <ol>
 <li>What is the single most important principle from this week's introduction?</li>
@@ -2440,9 +2141,7 @@
 <li>Who is your study companion or accountability partner for the year?</li>
 <li>What is your "word" or theme for your Old Testament study this year?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion">Commitment Questions</button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Commitment Questions</h4>
 <p><strong>Questions 131-140: Action Steps</strong></p>
 <ol>
 <li>I commit to read from the Old Testament or related restoration scripture _____ minutes daily.</li>
@@ -2458,10 +2157,9 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion">Week 01 Summary Question</button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active">Week 01 Summary Question</button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p><strong>Question 141: The One Thing</strong></p>
 <p>If you could only remember ONE thing from this week's introduction to carry through the entire year of Old Testament study, what would it be? Why?</p>
 <p>[Space for reflection]</p>
@@ -2481,77 +2179,6 @@
     <div class="section-navigation">
         <div class="nav-container">
             <span class="nav-disabled">← Previous</span>
-            <a href="index.html" class="nav-link index">Study Guide Index</a>
             <a href="week02.html" class="nav-link">Week 2 →</a>
         </div>
     </div>
-
-<script>
-
-        // Main accordion sections
-        const accordionSections = document.querySelectorAll('.sg-accordion-section');
-        accordionSections.forEach(section => {
-            section.addEventListener('click', function() {
-                this.classList.toggle('active');
-                const panel = this.nextElementSibling;
-                panel.classList.toggle('active');
-            });
-        });
-
-        // Sub-accordions (nested within main panels)
-        const subAccordions = document.querySelectorAll('.sg-sub-accordion');
-        subAccordions.forEach(subAccordion => {
-            subAccordion.addEventListener('click', function() {
-                this.classList.toggle('active');
-                const subPanel = this.nextElementSibling;
-                subPanel.classList.toggle('active');
-            });
-        });
-
-        // Inner accordions (third level - nested within sg-sub-panels)
-        const innerAccordions = document.querySelectorAll('.sg-inner-accordion');
-        innerAccordions.forEach(innerAccordion => {
-            innerAccordion.addEventListener('click', function() {
-                this.classList.toggle('active');
-                const innerPanel = this.nextElementSibling;
-                innerPanel.classList.toggle('active');
-            });
-        });
-
-        function expandAll() {
-            // Expand main sections
-            accordionSections.forEach(section => {
-                section.classList.add('active');
-                section.nextElementSibling.classList.add('active');
-            });
-            // Expand sg-sub-accordions
-            subAccordions.forEach(sub => {
-                sub.classList.add('active');
-                sub.nextElementSibling.classList.add('active');
-            });
-            // Expand inner accordions
-            innerAccordions.forEach(inner => {
-                inner.classList.add('active');
-                inner.nextElementSibling.classList.add('active');
-            });
-        }
-
-        function collapseAll() {
-            // Collapse main sections
-            accordionSections.forEach(section => {
-                section.classList.remove('active');
-                section.nextElementSibling.classList.remove('active');
-            });
-            // Collapse sg-sub-accordions
-            subAccordions.forEach(sub => {
-                sub.classList.remove('active');
-                sub.nextElementSibling.classList.remove('active');
-            });
-            // Collapse inner accordions
-            innerAccordions.forEach(inner => {
-                inner.classList.remove('active');
-                inner.nextElementSibling.classList.remove('active');
-            });
-        }
-        
-</script>

@@ -1,8 +1,8 @@
 {{ define "main" }}
 <div class="week-nav">
-    {{ with .PrevInSection }}<a href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>{{ else }}<span></span>{{ end }}
+    {{ with .NextInSection }}<a href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>{{ else }}<span></span>{{ end }}
     <a href="{{ "weeks/" | relURL }}">All Weeks</a>
-    {{ with .NextInSection }}<a href="{{ .RelPermalink }}">{{ .Title }} &rarr;</a>{{ else }}<span></span>{{ end }}
+    {{ with .PrevInSection }}<a href="{{ .RelPermalink }}">{{ .Title }} &rarr;</a>{{ else }}<span></span>{{ end }}
 </div>
 
 <div class="week-header">
@@ -81,9 +81,9 @@
 </div>
 
 <div class="week-nav" style="margin-top: 40px;">
-    {{ with .PrevInSection }}<a href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>{{ else }}<span></span>{{ end }}
+    {{ with .NextInSection }}<a href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>{{ else }}<span></span>{{ end }}
     <a href="{{ "weeks/" | relURL }}">All Weeks</a>
-    {{ with .NextInSection }}<a href="{{ .RelPermalink }}">{{ .Title }} &rarr;</a>{{ else }}<span></span>{{ end }}
+    {{ with .PrevInSection }}<a href="{{ .RelPermalink }}">{{ .Title }} &rarr;</a>{{ else }}<span></span>{{ end }}
 </div>
 {{ end }}
 
@@ -103,6 +103,7 @@ window.addEventListener('load', function() {
         var btn = document.querySelector('.tab-btn[onclick*="' + hash + '"]');
         if (btn) showTab(hash, btn);
     }
+    initInsights();
 });
 
 // Generic accordion toggle using inline styles
@@ -118,39 +119,162 @@ function setupAccordions(selector) {
     });
 }
 
-// Study Guide accordions
-setupAccordions('.sg-accordion-section');
+// Study Guide accordions (sub-accordions only; top-level uses onclick on div)
 setupAccordions('.sg-sub-accordion');
-setupAccordions('.sg-inner-accordion');
 
 // Insights accordions
 setupAccordions('.section-header');
 setupAccordions('.sub-accordion');
 
+// Section-level toggle (for div-based accordion headers with onclick)
+function toggleSection(el) {
+    var panel = el.nextElementSibling;
+    if (!panel) return;
+    var isOpen = panel.style.display === 'block';
+    panel.style.display = isOpen ? 'none' : 'block';
+    el.classList.toggle('active', !isOpen);
+}
+
+// Per-section expand/collapse (for ⊞ ⊟ buttons on section bars)
+function expandSection(btn) {
+    var sectionBar = btn.closest('.sg-accordion-section');
+    var panel = sectionBar.nextElementSibling;
+    // Open the section itself if closed
+    if (panel && panel.style.display !== 'block') {
+        panel.style.display = 'block';
+        sectionBar.classList.add('active');
+    }
+    // Expand all sub-accordions within
+    if (panel) {
+        panel.querySelectorAll('.sg-sub-accordion').forEach(function(sub) {
+            sub.classList.add('active');
+            var p = sub.nextElementSibling; if (p) p.style.display = 'block';
+        });
+    }
+}
+
+function collapseSection(btn) {
+    var sectionBar = btn.closest('.sg-accordion-section');
+    var panel = sectionBar.nextElementSibling;
+    if (panel) {
+        panel.querySelectorAll('.sg-sub-accordion').forEach(function(sub) {
+            sub.classList.remove('active');
+            var p = sub.nextElementSibling; if (p) p.style.display = 'none';
+        });
+    }
+}
+
 // Expand/Collapse All
 function expandAll() {
-    document.querySelectorAll('.sg-accordion-section, .sg-sub-accordion, .sg-inner-accordion').forEach(function(btn) {
+    document.querySelectorAll('.sg-accordion-section, .sg-sub-accordion').forEach(function(btn) {
         btn.classList.add('active');
         var p = btn.nextElementSibling; if (p) p.style.display = 'block';
     });
 }
 function collapseAll() {
-    document.querySelectorAll('.sg-accordion-section, .sg-sub-accordion, .sg-inner-accordion').forEach(function(btn) {
+    document.querySelectorAll('.sg-accordion-section, .sg-sub-accordion').forEach(function(btn) {
         btn.classList.remove('active');
         var p = btn.nextElementSibling; if (p) p.style.display = 'none';
     });
 }
+// Insights accordion toggle (uses max-height)
+function toggleInsightsSection(header) {
+    var content = header.nextElementSibling;
+    var arrow = header.querySelector('.arrow');
+    var isCollapsed = content.style.maxHeight === '0px' || content.style.maxHeight === '';
+    if (isCollapsed) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        if (arrow) arrow.style.transform = 'rotate(90deg)';
+        content.dataset.expanded = 'true';
+        setTimeout(function() {
+            if (content.dataset.expanded === 'true') content.style.maxHeight = 'none';
+        }, 500);
+    } else {
+        content.dataset.expanded = 'false';
+        content.style.maxHeight = content.scrollHeight + 'px';
+        setTimeout(function() { content.style.maxHeight = '0px'; }, 10);
+        if (arrow) arrow.style.transform = 'rotate(0deg)';
+    }
+}
+
+function toggleSubAccordion(header) {
+    var content = header.nextElementSibling;
+    var arrow = header.querySelector('.sub-arrow');
+    var isCollapsed = content.style.maxHeight === '0px' || content.style.maxHeight === '';
+    if (isCollapsed) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        if (arrow) arrow.style.transform = 'rotate(90deg)';
+        content.dataset.expanded = 'true';
+        setTimeout(function() {
+            if (content.dataset.expanded === 'true') content.style.maxHeight = 'none';
+        }, 400);
+    } else {
+        content.dataset.expanded = 'false';
+        content.style.maxHeight = content.scrollHeight + 'px';
+        setTimeout(function() { content.style.maxHeight = '0px'; }, 10);
+        if (arrow) arrow.style.transform = 'rotate(0deg)';
+    }
+}
+
 function expandAllInsights() {
-    document.querySelectorAll('.section-header, .sub-accordion').forEach(function(btn) {
-        btn.classList.add('active');
-        var p = btn.nextElementSibling; if (p) p.style.display = 'block';
+    document.querySelectorAll('.cfm-insights-section .section-content').forEach(function(c) {
+        c.style.maxHeight = 'none'; c.dataset.expanded = 'true';
     });
+    document.querySelectorAll('.cfm-insights-section .arrow').forEach(function(a) { a.style.transform = 'rotate(90deg)'; });
+    document.querySelectorAll('.sub-accordion-content').forEach(function(c) {
+        c.style.maxHeight = 'none'; c.dataset.expanded = 'true';
+    });
+    document.querySelectorAll('.sub-arrow').forEach(function(a) { a.style.transform = 'rotate(90deg)'; });
 }
 function collapseAllInsights() {
-    document.querySelectorAll('.section-header, .sub-accordion').forEach(function(btn) {
-        btn.classList.remove('active');
-        var p = btn.nextElementSibling; if (p) p.style.display = 'none';
+    document.querySelectorAll('.sub-accordion-content').forEach(function(c) {
+        c.dataset.expanded = 'false'; c.style.maxHeight = '0px';
     });
+    document.querySelectorAll('.sub-arrow').forEach(function(a) { a.style.transform = 'rotate(0deg)'; });
+    document.querySelectorAll('.cfm-insights-section .section-content').forEach(function(c) {
+        c.dataset.expanded = 'false'; c.style.maxHeight = '0px';
+    });
+    document.querySelectorAll('.cfm-insights-section .arrow').forEach(function(a) { a.style.transform = 'rotate(0deg)'; });
+}
+
+// Per-section expand/collapse for insights
+function expandInsightsSection(btn) {
+    var section = btn.closest('.cfm-insights-section');
+    if (!section) return;
+    // Open the section itself if closed
+    var content = section.querySelector('.section-content');
+    if (content && (content.style.maxHeight === '0px' || content.style.maxHeight === '')) {
+        var header = section.querySelector('.section-header');
+        if (header) toggleInsightsSection(header);
+    }
+    // Expand all sub-accordions within
+    section.querySelectorAll('.sub-accordion-content').forEach(function(c) {
+        c.style.maxHeight = 'none'; c.dataset.expanded = 'true';
+    });
+    section.querySelectorAll('.sub-arrow').forEach(function(a) { a.style.transform = 'rotate(90deg)'; });
+}
+
+function collapseInsightsSection(btn) {
+    var section = btn.closest('.cfm-insights-section');
+    if (!section) return;
+    section.querySelectorAll('.sub-accordion-content').forEach(function(c) {
+        c.dataset.expanded = 'false'; c.style.maxHeight = '0px';
+    });
+    section.querySelectorAll('.sub-arrow').forEach(function(a) { a.style.transform = 'rotate(0deg)'; });
+}
+
+// Auto-open first insights section and all sub-accordions when insights tab is shown
+function initInsights() {
+    var firstSection = document.querySelector('.cfm-insights-section');
+    if (firstSection) {
+        var header = firstSection.querySelector('.section-header');
+        if (header) toggleInsightsSection(header);
+    }
+    // Start all sub-accordions expanded
+    document.querySelectorAll('.sub-accordion-content').forEach(function(c) {
+        c.style.maxHeight = 'none'; c.dataset.expanded = 'true';
+    });
+    document.querySelectorAll('.sub-arrow').forEach(function(a) { a.style.transform = 'rotate(90deg)'; });
 }
 </script>
 {{ end }}

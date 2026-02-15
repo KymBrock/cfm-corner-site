@@ -111,39 +111,63 @@
         .sg-sub-panel-content a { color: #8B7355; }
         .sg-sub-panel-content a:hover { color: #6B5344; text-decoration: underline; }
 
-        .sg-inner-accordion {
-            background-color: #faf8f5; color: #6B5344; cursor: pointer; padding: 12px 16px; width: 100%;
-            text-align: left; border: 1px solid #e8e0d4; border-radius: 5px; font-size: 1em;
-            font-weight: 600; font-family: Georgia, serif; margin-top: 8px;
-            display: flex; justify-content: space-between; align-items: center; transition: background-color 0.2s;
-        }
-        .sg-inner-accordion:hover { background-color: #f0e8dc; }
-        .sg-inner-accordion::after { content: '▼'; font-size: 0.7em; color: #8B7355; transition: transform 0.3s; }
-        .sg-inner-accordion.active::after { transform: rotate(180deg); }
-
-        .sg-inner-panel {
-            background-color: #ffffff; border-radius: 0 0 5px 5px; border: 1px solid #e8e0d4; border-top: none;
-            display: none; margin-bottom: 8px;
-        }
-        .sg-inner-panel.active { display: block; overflow: visible; transition: max-height 0.3s ease-in; }
-        .sg-inner-panel-content { padding: 15px 20px; }
-        .sg-inner-panel-content h4 { color: #5a4a3a; margin-top: 12px; margin-bottom: 8px; font-size: 1.1em; }
-        .sg-inner-panel-content p { margin-bottom: 10px; }
-        .sg-inner-panel-content ul, .sg-inner-panel-content ol { margin-left: 20px; margin-bottom: 10px; }
-        .sg-inner-panel-content li { margin-bottom: 5px; }
-
         blockquote { background: #f5f0e8; border-left: 4px solid #8B7355; margin: 15px 0; padding: 15px 20px; font-style: italic; }
+        /* Section headings (converted from inner accordions) */
+        .sg-section-heading {
+            margin: 1.2em 0 0.6em 0;
+            padding: 0.4em 0 0.4em 0.8em;
+            border-left: 3px solid #8B9D77;
+            color: #5a6b4f;
+            font-size: 1.05em;
+            font-weight: 600;
+        }
+
 
         @media (max-width: 768px) {
             .header-section h1 { font-size: 1.8em; }
             .panel-content { padding: 20px; }
             .sg-sub-panel-content { padding: 15px 18px; }
-            .sg-inner-panel-content { padding: 12px 15px; }
-            .nav-container { flex-direction: column; }
+.nav-container { flex-direction: column; }
             .nav-link, .nav-disabled { width: 100%; text-align: center; }
         }
     
-</style>
+
+        .sg-section-heading {
+            margin: 1.2em 0 0.6em 0;
+            padding: 0.4em 0 0.4em 0.8em;
+            border-left: 3px solid #8B9D77;
+            color: #5a6b4f;
+            font-size: 1.05em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+        }
+        .sg-section-actions {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 28px;
+        }
+        .sg-section-actions .sg-action-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.35);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            padding: 0;
+            line-height: 1;
+        }
+        .sg-section-actions .sg-action-btn:hover {
+            background: rgba(255,255,255,0.35);
+        }
+    </style>
 
 <div class="container">
         <!-- Header Section -->
@@ -157,22 +181,21 @@
         <!-- Quick Links -->
         <div class="quick-links">
             <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/03?lang=eng" target="_blank" class="quick-link">CFM Manual</a>
-            <a href="index.html" class="quick-link">Study Guide Index</a>
         </div>
 
         <!-- Expand/Collapse Buttons -->
         <div class="button-container">
-            <button class="expand-button" onclick="expandAll()">Expand All</button>
-            <button class="expand-button" onclick="collapseAll()">Collapse All</button>
+            <button class="expand-button" onclick="expandAll()"><span class="btn-icon">&#x229E;</span> Expand All</button>
+            <button class="expand-button" onclick="collapseAll()"><span class="btn-icon">&#x229F;</span> Collapse All</button>
         </div>
 
         <!-- SECTION 1: WEEK OVERVIEW -->
-        <button class="sg-accordion-section">1. Week Overview</button>
-        <div class="sg-panel">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">1. Week Overview</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
             <div class="panel-content">
-                <button class="sg-sub-accordion">Week Information</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">Week Information</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
                         <table class="info-table">
                             <tr><th>Element</th><th>Details</th></tr>
                             <tr><td><strong>Week</strong></td><td>03</td></tr>
@@ -185,9 +208,9 @@
                     </div>
                 </div>
 
-                <button class="sg-sub-accordion">Reading Summary</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">Reading Summary</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
                         <p>This week we encounter the most foundational narrative in scripture: the Creation. We read this account not once, but three times—in Genesis, Moses, and Abraham—each offering unique perspectives that illuminate different aspects of God's creative work.</p>
                         <p><strong>Genesis 1–2</strong> provides the familiar biblical account, structured around seven days of creative work and rest. Chapter 1 presents a cosmic, ordered creation, while Chapter 2 zooms in on the garden, the creation of Adam, and the forming of Eve as his perfect companion.</p>
                         <p><strong>Moses 2–3</strong> offers the same narrative but through the lens of Moses's vision (introduced in Moses 1). Here we learn that Christ ("mine Only Begotten") was the Creator under the Father's direction. Moses adds clarifying details, such as the spiritual creation preceding the physical.</p>
@@ -196,43 +219,27 @@
                     </div>
                 </div>
 
-                <button class="sg-sub-accordion">Central Themes</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
-                        <button class="sg-inner-accordion">Theme 1: Creation as Temple-Building</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                <button class="sg-sub-accordion active">Central Themes</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
+                        <h4 class="sg-section-heading">Theme 1: Creation as Temple-Building</h4>
                                 <p>The creation narrative is fundamentally a temple text. Taylor Halverson (Scripture Central) notes that the number seven appears throughout as a "covenant signature"—the same pattern seen in Israelite temple construction. God doesn't merely make a world; He constructs a cosmic temple where He will dwell with His children.</p>
                                 <p>The garden of Eden, with its eastward orientation, its guarded entrance, its precious materials, and its divine presence, prefigures every temple that will follow. When God "rested" on the seventh day, the Hebrew <em>shabbat</em> (שָׁבַת) implies not exhaustion but <em>enthronement</em>—the divine King taking His seat in His completed palace.</p>
-                            </div>
-                        </div>
-                        <button class="sg-inner-accordion">Theme 2: Humanity in God's Image</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Theme 2: Humanity in God's Image</h4>
                                 <p>"Let us make man in our image, after our likeness" (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/1?lang=eng&id=26" target="_blank">Genesis 1:26</a>). This declaration is the theological climax of the creation week. The Hebrew <em>tselem</em> (צֶלֶם, "image") refers to a representative statue or likeness—in the ancient Near East, kings placed their images throughout their kingdoms to represent their authority and presence. Humanity is God's living image, placed in creation to represent Him and exercise stewardship on His behalf.</p>
                                 <p>The paired term <em>demut</em> (דְּמוּת, "likeness") adds the dimension of resemblance. Together, the terms convey both <strong>function</strong> (we represent God) and <strong>nature</strong> (we are like Him). This is not mere metaphor—Latter-day revelation confirms that God the Father and Jesus Christ possess glorified, tangible bodies (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/130?lang=eng&id=22" target="_blank">D&C 130:22</a>), and we are literally created in that image.</p>
-                            </div>
-                        </div>
-                        <button class="sg-inner-accordion">Theme 3: Marriage as Creation Ordinance</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Theme 3: Marriage as Creation Ordinance</h4>
                                 <p>The formation of Eve and the institution of marriage in Genesis 2/Moses 3/Abraham 5 establishes the eternal pattern. The Hebrew phrase <em>ezer kenegdo</em> (עֵזֶר כְּנֶגְדּוֹ), often translated "help meet," actually means something like "a power/strength corresponding to him." Eve is not subordinate help but essential counterpart—without whom Adam cannot fulfill the divine mandate.</p>
                                 <p>The "one flesh" union (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/2?lang=eng&id=24" target="_blank">Genesis 2:24</a>) is the first covenant established in Eden, instituted before the Fall, making marriage the oldest ordinance in human history.</p>
-                            </div>
-                        </div>
-                        <button class="sg-inner-accordion">Theme 4: Organized, Not Created</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Theme 4: Organized, Not Created</h4>
                                 <p>Abraham's account introduces crucial vocabulary. The Gods "organized" rather than creating <em>ex nihilo</em> (from nothing). This aligns with <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/93?lang=eng&id=29" target="_blank">D&C 93:29</a>: "Intelligence, or the light of truth, was not created or made." God works with eternal materials, organizing chaos into cosmos.</p>
                                 <p>This has profound implications: we ourselves were not created from nothing but organized from eternal intelligence. Our core identity is as old as God Himself.</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
-                <button class="sg-sub-accordion">Key Figures</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">Key Figures</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
                         <table class="info-table">
                             <tr><th>Person</th><th>Role</th><th>Significance This Week</th></tr>
                             <tr><td>Elohim (God the Father)</td><td>The Father, Director of Creation</td><td>Presides over the creative work; commands "Let us..."</td></tr>
@@ -244,9 +251,9 @@
                     </div>
                 </div>
 
-                <button class="sg-sub-accordion">Books Featured This Week</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">Books Featured This Week</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
                         <h4>Book of Genesis (Chapters 1–2)</h4>
                         <ul>
                             <li><strong>Author:</strong> Moses (traditional attribution)</li>
@@ -274,12 +281,12 @@
         </div>
 
         <!-- SECTION 2: HISTORICAL & CULTURAL CONTEXT -->
-        <button class="sg-accordion-section">2. Historical & Cultural Context</button>
-        <div class="sg-panel">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">2. Historical & Cultural Context</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
             <div class="panel-content">
-                <button class="sg-sub-accordion">Ancient Near Eastern Background</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">Ancient Near Eastern Background</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
                         <p>The creation accounts were not written in a vacuum. They entered a world full of competing creation stories—Egyptian, Babylonian, Canaanite, and Sumerian myths that Israel would have known. Understanding these alternatives reveals what Genesis/Moses/Abraham affirm and deny.</p>
 
                         <h4>Egyptian Creation Myths (Moses's Context)</h4>
@@ -315,9 +322,9 @@
                     </div>
                 </div>
 
-                <button class="sg-sub-accordion">The "Image of God" in Ancient Context</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">The "Image of God" in Ancient Context</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
                         <p>In the ancient Near East, a king would place images (<em>selem</em>, צֶלֶם in Hebrew) of himself throughout his kingdom. These statues represented his authority and presence in places he couldn't physically be.</p>
                         <ul>
                             <li><strong>Egypt:</strong> Pharaohs erected statues; the statue <em>was</em> the pharaoh for purposes of worship and presence</li>
@@ -337,9 +344,9 @@
                     </div>
                 </div>
 
-                <button class="sg-sub-accordion">Literary Structure of Genesis 1</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">Literary Structure of Genesis 1</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
                         <h4>The Seven-Day Framework</h4>
                         <table class="info-table">
                             <tr><th>Day</th><th>Creation Act</th><th>Corresponding Day</th><th>Filling Act</th></tr>
@@ -359,9 +366,9 @@
                     </div>
                 </div>
 
-                <button class="sg-sub-accordion">Differences Between the Three Accounts</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">Differences Between the Three Accounts</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
                         <table class="info-table">
                             <tr><th>Element</th><th>Genesis</th><th>Moses</th><th>Abraham</th></tr>
                             <tr><td><strong>Divine name</strong></td><td>"God" (<em>Elohim</em>)</td><td>"I, the Lord God"</td><td>"The Gods"</td></tr>
@@ -376,12 +383,12 @@
         </div>
 
         <!-- SECTION 3: KEY PASSAGES STUDY -->
-        <button class="sg-accordion-section">3. Key Passages Study</button>
-        <div class="sg-panel">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">3. Key Passages Study</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
             <div class="panel-content">
-                <button class="sg-sub-accordion">Passage 1: Creation of Humanity in God's Image (Gen 1:26–28)</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">Passage 1: Creation of Humanity in God's Image (Gen 1:26–28)</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
                         <blockquote>
                             <p><strong>Genesis 1:26–28:</strong> "And God said, Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea... So God created man in his own image, in the image of God created he him; male and female created he them. And God blessed them..."</p>
                         </blockquote>
@@ -404,9 +411,9 @@
                     </div>
                 </div>
 
-                <button class="sg-sub-accordion">Passage 2: Creation of Eve and Institution of Marriage (Gen 2:18–24)</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">Passage 2: Creation of Eve and Institution of Marriage (Gen 2:18–24)</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
                         <blockquote>
                             <p><strong>Genesis 2:18, 21–24:</strong> "And the Lord God said, It is not good that the man should be alone; I will make him an help meet for him... And the Lord God caused a deep sleep to fall upon Adam... and he took one of his ribs... And the rib... made he a woman, and brought her unto the man... Therefore shall a man leave his father and his mother, and shall cleave unto his wife: and they shall be one flesh."</p>
                         </blockquote>
@@ -430,9 +437,9 @@
                     </div>
                 </div>
 
-                <button class="sg-sub-accordion">Passage 3: The Sabbath — Divine Rest (Gen 2:1–3)</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">Passage 3: The Sabbath — Divine Rest (Gen 2:1–3)</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
                         <blockquote>
                             <p><strong>Genesis 2:1–3:</strong> "Thus the heavens and the earth were finished, and all the host of them. And on the seventh day God ended his work which he had made; and he rested on the seventh day from all his work which he had made. And God blessed the seventh day, and sanctified it."</p>
                         </blockquote>
@@ -455,9 +462,9 @@
                     </div>
                 </div>
 
-                <button class="sg-sub-accordion">Passage 4: "The Gods" — Creation as Divine Council Work (Abraham 4:1–3, 26–27)</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">Passage 4: "The Gods" — Creation as Divine Council Work (Abraham 4:1–3, 26–27)</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
                         <blockquote>
                             <p><strong>Abraham 4:1–3:</strong> "And then the Lord said: Let us go down. And they went down at the beginning, and they, that is the Gods, organized and formed the heavens and the earth. And the earth, after it was formed, was empty and desolate... and the Spirit of the Gods was brooding upon the face of the waters."</p>
                         </blockquote>
@@ -479,20 +486,18 @@
         </div>
 
         <!-- SECTION 4: WORD STUDIES -->
-        <button class="sg-accordion-section">4. Word Studies</button>
-        <div class="sg-panel">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">4. Word Studies</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
             <div class="panel-content">
                 <p style="margin-bottom: 20px; font-style: italic; color: #6B5344;">Each word study includes five layers: Hebrew foundation, Greek (Septuagint), Latin (Vulgate), English etymology, and Webster 1828 definition. Click the inner accordions to explore each layer.</p>
 
                 <!-- BARA - CREATE -->
-                <button class="sg-sub-accordion">bara (בָּרָא) — Create</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">bara (בָּרָא) — Create</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
                         <p style="text-align: center; font-size: 2.5em; font-family: 'Times New Roman', serif; margin-bottom: 15px;">בָּרָא</p>
 
-                        <button class="sg-inner-accordion">Layer 1: Hebrew Foundation</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 1: Hebrew Foundation</h4>
                                 <table class="info-table">
                                     <tr><th>Element</th><th>Details</th></tr>
                                     <tr><td><strong>Strong's Number</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h1254/kjv/wlc/0-1/" target="_blank">H1254</a></td></tr>
@@ -509,47 +514,31 @@
                                     <li>Genesis 1:21 — "God created (בָּרָא) great whales"</li>
                                     <li>Genesis 1:27 — "God created (בָּרָא) man... male and female created (בָּרָא) he them"</li>
                                 </ul>
-                            </div>
-                        </div>
 
-                        <button class="sg-inner-accordion">Layer 2: Greek (Septuagint)</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 2: Greek (Septuagint)</h4>
                                 <table class="info-table">
                                     <tr><th>Element</th><th>Details</th></tr>
                                     <tr><td><strong>LXX Translation</strong></td><td><a href="https://logeion.uchicago.edu/ποιέω" target="_blank">ἐποίησεν</a> (<em>epoiēsen</em>) from ποιέω (<em>poieō</em>)</td></tr>
                                     <tr><td><strong>Meaning</strong></td><td>To make, do, create, produce</td></tr>
                                 </table>
                                 <p><strong>Why This Matters:</strong> The LXX translators chose <em>poieō</em>, a general term for "making," rather than a more specialized word. This broadens the semantic range but loses the Hebrew distinction between <em>bara</em> (divine-only creation) and <em>asah</em> (general making). New Testament writers inherit this translation choice.</p>
-                            </div>
-                        </div>
 
-                        <button class="sg-inner-accordion">Layer 3: Latin (Vulgate)</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 3: Latin (Vulgate)</h4>
                                 <table class="info-table">
                                     <tr><th>Element</th><th>Details</th></tr>
                                     <tr><td><strong>Vulgate Translation</strong></td><td><a href="https://logeion.uchicago.edu/creo" target="_blank">creavit</a> from <em>creo</em></td></tr>
                                     <tr><td><strong>Meaning</strong></td><td>To create, bring forth, make, produce</td></tr>
                                 </table>
                                 <p><strong>Influence on English:</strong> Latin <em>creo</em> gives us English "create," "creature," "creation." Jerome's choice of <em>creo</em> (rather than <em>facio</em>, "to make") preserves some of the Hebrew distinction—<em>creo</em> carries more theological weight than general "making."</p>
-                            </div>
-                        </div>
 
-                        <button class="sg-inner-accordion">Layer 4: English Etymology</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 4: English Etymology</h4>
                                 <table class="info-table">
                                     <tr><th>Element</th><th>Details</th></tr>
                                     <tr><td><strong>Etymology</strong></td><td><a href="https://www.etymonline.com/word/create" target="_blank">create</a> — From Latin <em>creāre</em> "to make, bring forth, produce"</td></tr>
                                     <tr><td><strong>Development</strong></td><td>Middle English <em>createn</em> (14th c.) from Latin <em>creātus</em>, past participle of <em>creāre</em></td></tr>
                                 </table>
-                            </div>
-                        </div>
 
-                        <button class="sg-inner-accordion">Layer 5: Webster 1828 Definition</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 5: Webster 1828 Definition</h4>
                                 <blockquote>
                                     <p><strong><a href="https://webstersdictionary1828.com/Dictionary/create" target="_blank">CREATE</a></strong>, v.t.</p>
                                     <p>1. To produce; to bring into being from nothing; to cause to exist. "In the beginning, God created the heaven and the earth." Gen. 1.</p>
@@ -557,20 +546,16 @@
                                     <p>3. To produce; to cause; to be the occasion of.</p>
                                 </blockquote>
                                 <p><strong>Joseph Smith Era Understanding:</strong> The 1828 definition emphasizes "bringing into being from nothing," reflecting the theological interpretation dominant in Joseph Smith's time. The Book of Abraham's use of "organized" provides restored clarity on the nature of creation.</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
                 <!-- TSELEM - IMAGE -->
-                <button class="sg-sub-accordion">tselem (צֶלֶם) — Image</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">tselem (צֶלֶם) — Image</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
                         <p style="text-align: center; font-size: 2.5em; font-family: 'Times New Roman', serif; margin-bottom: 15px;">צֶלֶם</p>
 
-                        <button class="sg-inner-accordion">Layer 1: Hebrew Foundation</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 1: Hebrew Foundation</h4>
                                 <table class="info-table">
                                     <tr><th>Element</th><th>Details</th></tr>
                                     <tr><td><strong>Strong's Number</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h6754/kjv/wlc/0-1/" target="_blank">H6754</a></td></tr>
@@ -586,47 +571,31 @@
                                     <li>Genesis 5:3 — Adam begets Seth "in his own likeness, after his image (צֶלֶם)"</li>
                                     <li>Numbers 33:52 — Israelites commanded to destroy the "images (צֶלֶם)" of Canaanite gods</li>
                                 </ul>
-                            </div>
-                        </div>
 
-                        <button class="sg-inner-accordion">Layer 2: Greek (Septuagint)</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 2: Greek (Septuagint)</h4>
                                 <table class="info-table">
                                     <tr><th>Element</th><th>Details</th></tr>
                                     <tr><td><strong>LXX Translation</strong></td><td><a href="https://logeion.uchicago.edu/εἰκών" target="_blank">εἰκών</a> (<em>eikōn</em>)</td></tr>
                                     <tr><td><strong>Meaning</strong></td><td>Image, likeness, portrait, representation</td></tr>
                                 </table>
                                 <p><strong>Why This Matters:</strong> Greek <em>eikōn</em> carries strong visual/representational connotations. This word appears in the New Testament when Paul calls Christ "the image of the invisible God" (Colossians 1:15; 2 Corinthians 4:4). English "icon" derives from this word.</p>
-                            </div>
-                        </div>
 
-                        <button class="sg-inner-accordion">Layer 3: Latin (Vulgate)</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 3: Latin (Vulgate)</h4>
                                 <table class="info-table">
                                     <tr><th>Element</th><th>Details</th></tr>
                                     <tr><td><strong>Vulgate Translation</strong></td><td><a href="https://logeion.uchicago.edu/imago" target="_blank">imago</a> (accusative: <em>imaginem</em>)</td></tr>
                                     <tr><td><strong>Meaning</strong></td><td>Image, likeness, representation, copy</td></tr>
                                 </table>
                                 <p><strong>Influence on English:</strong> Latin <em>imago</em> gives us "image," "imagine," "imagination." The theological concept of <em>imago Dei</em> (image of God) became central to Christian anthropology.</p>
-                            </div>
-                        </div>
 
-                        <button class="sg-inner-accordion">Layer 4: English Etymology</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 4: English Etymology</h4>
                                 <table class="info-table">
                                     <tr><th>Element</th><th>Details</th></tr>
                                     <tr><td><strong>Etymology</strong></td><td><a href="https://www.etymonline.com/word/image" target="_blank">image</a> — From Latin <em>imago</em> "copy, likeness, picture"</td></tr>
                                     <tr><td><strong>Development</strong></td><td>Old French <em>image</em> (12th c.); related to <em>imitate</em></td></tr>
                                 </table>
-                            </div>
-                        </div>
 
-                        <button class="sg-inner-accordion">Layer 5: Webster 1828 Definition</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 5: Webster 1828 Definition</h4>
                                 <blockquote>
                                     <p><strong><a href="https://webstersdictionary1828.com/Dictionary/image" target="_blank">IMAGE</a></strong>, n.</p>
                                     <p>1. A representation or similitude of any person or thing, formed of a material substance; as an image wrought out of stone, wood or wax.</p>
@@ -635,20 +604,16 @@
                                     <p>4. The likeness of any thing; hence, an idea; a representation of any thing to the mind.</p>
                                 </blockquote>
                                 <p><strong>Joseph Smith Era Understanding:</strong> The 1828 definition includes both "statue/idol" and "likeness/idea," encompassing the full ANE background of <em>tselem</em>. The Latter-day Saint understanding of humanity's divine potential enriches this concept.</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
                 <!-- EZER KENEGDO - HELP MEET -->
-                <button class="sg-sub-accordion">ezer kenegdo (עֵזֶר כְּנֶגְדּוֹ) — Help Meet</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">ezer kenegdo (עֵזֶר כְּנֶגְדּוֹ) — Help Meet</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
                         <p style="text-align: center; font-size: 2.5em; font-family: 'Times New Roman', serif; margin-bottom: 15px;">עֵזֶר כְּנֶגְדּוֹ</p>
 
-                        <button class="sg-inner-accordion">Layer 1: Hebrew Foundation</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 1: Hebrew Foundation</h4>
                                 <table class="info-table">
                                     <tr><th>Element</th><th>Details</th></tr>
                                     <tr><td><strong>Strong's Numbers</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h5828/kjv/wlc/0-1/" target="_blank">H5828</a> + <a href="https://www.blueletterbible.org/lexicon/h5048/kjv/wlc/0-1/" target="_blank">H5048</a></td></tr>
@@ -665,48 +630,32 @@
                                     <li>Psalm 70:5 — "Thou art my help (עֵזֶר) and my deliverer"</li>
                                     <li>Psalm 121:1–2 — "My help (עֵזֶר) cometh from the Lord"</li>
                                 </ul>
-                            </div>
-                        </div>
 
-                        <button class="sg-inner-accordion">Layer 2: Greek (Septuagint)</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 2: Greek (Septuagint)</h4>
                                 <table class="info-table">
                                     <tr><th>Element</th><th>Details</th></tr>
                                     <tr><td><strong>LXX Translation</strong></td><td><a href="https://logeion.uchicago.edu/βοηθός" target="_blank">βοηθός</a> (<em>boēthos</em>)</td></tr>
                                     <tr><td><strong>Meaning</strong></td><td>Helper, one who aids, ally</td></tr>
                                 </table>
                                 <p><strong>Why This Matters:</strong> Greek <em>boēthos</em> is used in the LXX for God as Israel's helper. The word implies coming to aid someone in need—rescuing strength, not servile assistance.</p>
-                            </div>
-                        </div>
 
-                        <button class="sg-inner-accordion">Layer 3: Latin (Vulgate)</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 3: Latin (Vulgate)</h4>
                                 <table class="info-table">
                                     <tr><th>Element</th><th>Details</th></tr>
                                     <tr><td><strong>Vulgate Translation</strong></td><td><em>adiutorium simile sibi</em> (helper like himself)</td></tr>
                                     <tr><td><strong>Meaning</strong></td><td>Help, assistance, aid — similar to him</td></tr>
                                 </table>
                                 <p><strong>Influence on English:</strong> Latin <em>adiutorium</em> gives us "adjutant" (military assistant). The Vulgate's phrase "adiutorium simile sibi" emphasizes correspondence and equality.</p>
-                            </div>
-                        </div>
 
-                        <button class="sg-inner-accordion">Layer 4: English Etymology</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 4: English Etymology</h4>
                                 <table class="info-table">
                                     <tr><th>Element</th><th>Details</th></tr>
                                     <tr><td><strong>Etymology</strong></td><td><a href="https://www.etymonline.com/word/help" target="_blank">help</a> — Old English <em>helpan</em> "to help, support"</td></tr>
                                     <tr><td><strong>Development</strong></td><td>From Proto-Germanic <em>helpan</em>; original sense involved rescue/support</td></tr>
                                 </table>
                                 <p><strong>Note on "Meet":</strong> The word "meet" in "help meet" is an adjective meaning "suitable, fitting, proper" — not part of a compound noun. Eve is a "help" that is "meet" (suitable) for Adam.</p>
-                            </div>
-                        </div>
 
-                        <button class="sg-inner-accordion">Layer 5: Webster 1828 Definition</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 5: Webster 1828 Definition</h4>
                                 <blockquote>
                                     <p><strong><a href="https://webstersdictionary1828.com/Dictionary/helper" target="_blank">HELPER</a></strong>, n.</p>
                                     <p>1. One that helps, aids or assists; an assistant; an auxiliary.</p>
@@ -719,20 +668,16 @@
                                     <p>Fit; suitable; proper; qualified; convenient; adapted, as to a use or purpose.</p>
                                 </blockquote>
                                 <p><strong>Joseph Smith Era Understanding:</strong> The 1828 definition includes "auxiliary" and "supporter"—words implying strength and essential assistance. Webster's entries clarify that "help meet" means "suitable helper."</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
                 <!-- TOV - GOOD -->
-                <button class="sg-sub-accordion">tov (טוֹב) — Good</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">tov (טוֹב) — Good</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
                         <p style="text-align: center; font-size: 2.5em; font-family: 'Times New Roman', serif; margin-bottom: 15px;">טוֹב</p>
 
-                        <button class="sg-inner-accordion">Layer 1: Hebrew Foundation</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 1: Hebrew Foundation</h4>
                                 <table class="info-table">
                                     <tr><th>Element</th><th>Details</th></tr>
                                     <tr><td><strong>Strong's Number</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h2896/kjv/wlc/0-1/" target="_blank">H2896</a></td></tr>
@@ -744,47 +689,31 @@
                                 </table>
                                 <p><strong>Key Insight:</strong> <em>Tov</em> appears seven times in Genesis 1 (vv. 4, 10, 12, 18, 21, 25, 31)—a covenant signature number. The final occurrence adds <em>me'od</em> (מְאֹד, "very/exceedingly"), creating the superlative "very good."</p>
                                 <p><strong>What "Good" Means Here:</strong> <em>Tov</em> doesn't primarily mean morally good. It means <em>fitting, suitable, fulfilling its purpose</em>. Each creation is <em>tov</em> because it does what God designed it to do.</p>
-                            </div>
-                        </div>
 
-                        <button class="sg-inner-accordion">Layer 2: Greek (Septuagint)</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 2: Greek (Septuagint)</h4>
                                 <table class="info-table">
                                     <tr><th>Element</th><th>Details</th></tr>
                                     <tr><td><strong>LXX Translation</strong></td><td><a href="https://logeion.uchicago.edu/καλός" target="_blank">καλός</a> (<em>kalos</em>)</td></tr>
                                     <tr><td><strong>Meaning</strong></td><td>Beautiful, noble, good, fine</td></tr>
                                 </table>
                                 <p><strong>Why This Matters:</strong> Greek <em>kalos</em> emphasizes aesthetic beauty and excellence. Creation is not merely functional but beautiful. The repeated "God saw that it was <em>kalos</em>" declares creation is aesthetically pleasing to God.</p>
-                            </div>
-                        </div>
 
-                        <button class="sg-inner-accordion">Layer 3: Latin (Vulgate)</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 3: Latin (Vulgate)</h4>
                                 <table class="info-table">
                                     <tr><th>Element</th><th>Details</th></tr>
                                     <tr><td><strong>Vulgate Translation</strong></td><td><a href="https://logeion.uchicago.edu/bonus" target="_blank">bonus</a> (neuter: <em>bonum</em>)</td></tr>
                                     <tr><td><strong>Meaning</strong></td><td>Good, excellent, virtuous</td></tr>
                                 </table>
                                 <p><strong>Influence on English:</strong> Latin <em>bonus</em> gives us "bonus," "boon," "bounty." The theological phrase <em>summum bonum</em> ("highest good") shaped Western ethics.</p>
-                            </div>
-                        </div>
 
-                        <button class="sg-inner-accordion">Layer 4: English Etymology</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 4: English Etymology</h4>
                                 <table class="info-table">
                                     <tr><th>Element</th><th>Details</th></tr>
                                     <tr><td><strong>Etymology</strong></td><td><a href="https://www.etymonline.com/word/good" target="_blank">good</a> — Old English <em>gōd</em> "virtuous, desirable, valid"</td></tr>
                                     <tr><td><strong>Development</strong></td><td>From Proto-Germanic <em>gōda-</em> "fitting, suitable"; related to "gather"</td></tr>
                                 </table>
-                            </div>
-                        </div>
 
-                        <button class="sg-inner-accordion">Layer 5: Webster 1828 Definition</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 5: Webster 1828 Definition</h4>
                                 <blockquote>
                                     <p><strong><a href="https://webstersdictionary1828.com/Dictionary/good" target="_blank">GOOD</a></strong>, a.</p>
                                     <p>1. Valid; legally firm; not weak or defective.</p>
@@ -794,20 +723,16 @@
                                     <p>5. Pleasant; agreeable; as a good voyage; good weather.</p>
                                 </blockquote>
                                 <p><strong>Joseph Smith Era Understanding:</strong> The 1828 definition includes "complete/sufficiently perfect in its kind"—precisely the meaning of <em>tov</em> in Genesis 1. Each creation is good because it is complete and fulfilling its purpose.</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
                 <!-- SHABBAT - REST -->
-                <button class="sg-sub-accordion">shabbat (שָׁבַת) — Rest</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">shabbat (שָׁבַת) — Rest</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
                         <p style="text-align: center; font-size: 2.5em; font-family: 'Times New Roman', serif; margin-bottom: 15px;">שָׁבַת</p>
 
-                        <button class="sg-inner-accordion">Layer 1: Hebrew Foundation</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 1: Hebrew Foundation</h4>
                                 <table class="info-table">
                                     <tr><th>Element</th><th>Details</th></tr>
                                     <tr><td><strong>Strong's Number</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h7673/kjv/wlc/0-1/" target="_blank">H7673</a></td></tr>
@@ -825,47 +750,31 @@
                                     <li><a href="https://www.blueletterbible.org/lexicon/h7621/kjv/wlc/0-1/" target="_blank">שְׁבוּעָה</a> (<em>shevuah</em>, H7621) — Oath</li>
                                 </ul>
                                 <p>The interconnection of <em>shabbat</em> (rest), <em>sheva</em> (seven), and <em>shevuah</em> (oath/covenant) creates a web of meaning. The Sabbath is the seventh day, and seven is the number of covenant oath.</p>
-                            </div>
-                        </div>
 
-                        <button class="sg-inner-accordion">Layer 2: Greek (Septuagint)</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 2: Greek (Septuagint)</h4>
                                 <table class="info-table">
                                     <tr><th>Element</th><th>Details</th></tr>
                                     <tr><td><strong>LXX Translation</strong></td><td><a href="https://logeion.uchicago.edu/καταπαύω" target="_blank">κατέπαυσεν</a> (<em>katepausen</em>) from καταπαύω (<em>katapauō</em>)</td></tr>
                                     <tr><td><strong>Meaning</strong></td><td>To cause to cease, to rest, to settle down</td></tr>
                                 </table>
                                 <p><strong>Why This Matters:</strong> Greek <em>katapauō</em> emphasizes cessation and settlement. Hebrews 4:1–11 develops this theologically: entering God's rest (<em>katapausis</em>) becomes a metaphor for salvation and entering God's presence.</p>
-                            </div>
-                        </div>
 
-                        <button class="sg-inner-accordion">Layer 3: Latin (Vulgate)</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 3: Latin (Vulgate)</h4>
                                 <table class="info-table">
                                     <tr><th>Element</th><th>Details</th></tr>
                                     <tr><td><strong>Vulgate Translation</strong></td><td><a href="https://logeion.uchicago.edu/requiesco" target="_blank">requievit</a> from <em>requiesco</em></td></tr>
                                     <tr><td><strong>Meaning</strong></td><td>To rest, repose, take one's ease</td></tr>
                                 </table>
                                 <p><strong>Influence on English:</strong> Latin <em>requiesco</em> gives us "requiem" (mass for the dead), "rest," and "repose." The theological overtones of final rest and peace derive from this word.</p>
-                            </div>
-                        </div>
 
-                        <button class="sg-inner-accordion">Layer 4: English Etymology</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 4: English Etymology</h4>
                                 <table class="info-table">
                                     <tr><th>Element</th><th>Details</th></tr>
                                     <tr><td><strong>Etymology</strong></td><td><a href="https://www.etymonline.com/word/rest" target="_blank">rest</a> — Old English <em>rest</em> "cessation of motion, quiet"</td></tr>
                                     <tr><td><strong>Development</strong></td><td>From Proto-Germanic <em>rastō</em>; related to "refresh" and implies restoration</td></tr>
                                 </table>
-                            </div>
-                        </div>
 
-                        <button class="sg-inner-accordion">Layer 5: Webster 1828 Definition</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 5: Webster 1828 Definition</h4>
                                 <blockquote>
                                     <p><strong><a href="https://webstersdictionary1828.com/Dictionary/rest" target="_blank">REST</a></strong>, n.</p>
                                     <p>1. Cessation of motion or action of any kind, and applicable to any body or being.</p>
@@ -875,20 +784,16 @@
                                     <p>5. Final hope; as, the rest of the weary.</p>
                                 </blockquote>
                                 <p><strong>Joseph Smith Era Understanding:</strong> The 1828 definition includes "cessation" and "final hope"—both relevant to God's Sabbath rest. The Latter-day Saint concept of entering God's rest (Alma 12:34; D&C 84:24) enriches this term.</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
                 <!-- QADASH - SANCTIFY -->
-                <button class="sg-sub-accordion">qadash (קָדַשׁ) — Sanctify</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">qadash (קָדַשׁ) — Sanctify</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
                         <p style="text-align: center; font-size: 2.5em; font-family: 'Times New Roman', serif; margin-bottom: 15px;">קָדַשׁ</p>
 
-                        <button class="sg-inner-accordion">Layer 1: Hebrew Foundation</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 1: Hebrew Foundation</h4>
                                 <table class="info-table">
                                     <tr><th>Element</th><th>Details</th></tr>
                                     <tr><td><strong>Strong's Number</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h6942/kjv/wlc/0-1/" target="_blank">H6942</a></td></tr>
@@ -904,47 +809,31 @@
                                     <li><a href="https://www.blueletterbible.org/lexicon/h6944/kjv/wlc/0-1/" target="_blank">קֹדֶשׁ</a> (<em>qodesh</em>, H6944) — Holiness, sacred thing, sanctuary</li>
                                     <li><a href="https://www.blueletterbible.org/lexicon/h6918/kjv/wlc/0-1/" target="_blank">קָדוֹשׁ</a> (<em>qadosh</em>, H6918) — Holy, sacred</li>
                                 </ul>
-                            </div>
-                        </div>
 
-                        <button class="sg-inner-accordion">Layer 2: Greek (Septuagint)</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 2: Greek (Septuagint)</h4>
                                 <table class="info-table">
                                     <tr><th>Element</th><th>Details</th></tr>
                                     <tr><td><strong>LXX Translation</strong></td><td><a href="https://logeion.uchicago.edu/ἁγιάζω" target="_blank">ἡγίασεν</a> (<em>hēgiasen</em>) from ἁγιάζω (<em>hagiazō</em>)</td></tr>
                                     <tr><td><strong>Meaning</strong></td><td>To make holy, sanctify, consecrate</td></tr>
                                 </table>
                                 <p><strong>Why This Matters:</strong> Greek <em>hagiazō</em> is used throughout the New Testament for sanctification. "Hallowed be thy name" (Matthew 6:9) uses this word. Christians are called <em>hagioi</em> (saints/holy ones).</p>
-                            </div>
-                        </div>
 
-                        <button class="sg-inner-accordion">Layer 3: Latin (Vulgate)</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 3: Latin (Vulgate)</h4>
                                 <table class="info-table">
                                     <tr><th>Element</th><th>Details</th></tr>
                                     <tr><td><strong>Vulgate Translation</strong></td><td><a href="https://logeion.uchicago.edu/sanctifico" target="_blank">sanctificavit</a> from <em>sanctifico</em></td></tr>
                                     <tr><td><strong>Meaning</strong></td><td>To make holy, sanctify</td></tr>
                                 </table>
                                 <p><strong>Influence on English:</strong> Latin <em>sanctifico</em> gives us "sanctify," "sanctuary," "saint." The theological vocabulary of holiness in English derives primarily from Latin through ecclesiastical usage.</p>
-                            </div>
-                        </div>
 
-                        <button class="sg-inner-accordion">Layer 4: English Etymology</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 4: English Etymology</h4>
                                 <table class="info-table">
                                     <tr><th>Element</th><th>Details</th></tr>
                                     <tr><td><strong>Etymology</strong></td><td><a href="https://www.etymonline.com/word/sanctify" target="_blank">sanctify</a> — From Latin <em>sanctificare</em> "to make holy"</td></tr>
                                     <tr><td><strong>Development</strong></td><td><em>sanctus</em> (holy) + <em>facere</em> (to make); 14th century via Old French</td></tr>
                                 </table>
-                            </div>
-                        </div>
 
-                        <button class="sg-inner-accordion">Layer 5: Webster 1828 Definition</button>
-                        <div class="sg-inner-panel">
-                            <div class="sg-inner-panel-content">
+                        <h4 class="sg-section-heading">Layer 5: Webster 1828 Definition</h4>
                                 <blockquote>
                                     <p><strong><a href="https://webstersdictionary1828.com/Dictionary/sanctify" target="_blank">SANCTIFY</a></strong>, v.t.</p>
                                     <p>1. In a general sense, to make holy; to set apart to a sacred office or to religious use or purification. "God blessed the seventh day and sanctified it." Gen. 2.</p>
@@ -953,15 +842,13 @@
                                     <p>4. To secure from violation.</p>
                                 </blockquote>
                                 <p><strong>Joseph Smith Era Understanding:</strong> The 1828 definition emphasizes "setting apart" as the primary meaning—precisely the sense of Hebrew <em>qadash</em>. The temple concept of "setting apart" people, places, and times connects directly to this meaning.</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
                 <!-- COMPARATIVE TABLE -->
-                <button class="sg-sub-accordion">Comparative Table: Week 3 Key Terms</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">Comparative Table: Week 3 Key Terms</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
                         <table class="info-table" style="font-size: 0.9em;">
                             <tr>
                                 <th>Hebrew</th>
@@ -1019,12 +906,12 @@
         </div>
 
         <!-- SECTION 5: TEACHING APPLICATIONS -->
-        <button class="sg-accordion-section">5. Teaching Applications</button>
-        <div class="sg-panel">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">5. Teaching Applications</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
             <div class="panel-content">
-                <button class="sg-sub-accordion">Personal Study</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">Personal Study</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
                         <h4>Focus: Understanding Your Identity and Purpose</h4>
                         <p><strong>Central Application:</strong> You are made in God's image—this defines who you are and what you're for.</p>
                         <h4>Study Approach:</h4>
@@ -1037,9 +924,9 @@
                     </div>
                 </div>
 
-                <button class="sg-sub-accordion">Couples & Marriage</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">Couples & Marriage</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
                         <h4>Focus: Marriage as Creation Ordinance</h4>
                         <p><strong>Central Application:</strong> Your marriage is not a social construct but a creation pattern—instituted before the Fall as part of God's original design.</p>
                         <h4>Discussion Topics:</h4>
@@ -1051,9 +938,9 @@
                     </div>
                 </div>
 
-                <button class="sg-sub-accordion">Family Home Evening</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">Family Home Evening</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
                         <h4>Focus: We Are God's Children, Made in His Image</h4>
                         <p><strong>Opening Song:</strong> "I Am a Child of God" (Hymns, 301)</p>
                         <p><strong>Scripture:</strong> Genesis 1:26–27</p>
@@ -1069,9 +956,9 @@
                     </div>
                 </div>
 
-                <button class="sg-sub-accordion">Sunday School / Gospel Doctrine</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">Sunday School / Gospel Doctrine</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
                         <h4>Lesson Objective:</h4>
                         <p>Class members will understand how Genesis, Moses, and Abraham together reveal God's nature, humanity's purpose, and the pattern of covenant.</p>
                         <h4>Attention Activity (5 min):</h4>
@@ -1086,9 +973,9 @@
                     </div>
                 </div>
 
-                <button class="sg-sub-accordion">Youth (Young Men / Young Women)</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">Youth (Young Men / Young Women)</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
                         <h4>Focus: Your Identity Is Received, Not Created</h4>
                         <p><strong>Central Application:</strong> In a world that tells you to "create your own image," God has already placed His image in you.</p>
                         <h4>Opening Discussion:</h4>
@@ -1110,12 +997,12 @@
         </div>
 
         <!-- SECTION 6: STUDY QUESTIONS -->
-        <button class="sg-accordion-section">6. Study Questions</button>
-        <div class="sg-panel">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">6. Study Questions</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
             <div class="panel-content">
-                <button class="sg-sub-accordion">Observation Questions (What does the text say?)</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">Observation Questions (What does the text say?)</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
                         <ol>
                             <li>What does God say before creating humanity that He doesn't say before creating anything else?</li>
                             <li>In whose image is humanity created?</li>
@@ -1131,9 +1018,9 @@
                     </div>
                 </div>
 
-                <button class="sg-sub-accordion">Interpretation Questions (What does the text mean?)</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">Interpretation Questions (What does the text mean?)</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
                         <ol>
                             <li>What does it mean to be made in God's "image"?</li>
                             <li>Why do you think God deliberated ("Let us") before creating humanity but not before other creations?</li>
@@ -1149,9 +1036,9 @@
                     </div>
                 </div>
 
-                <button class="sg-sub-accordion">Application Questions (How does this apply to life?)</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">Application Questions (How does this apply to life?)</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
                         <ol>
                             <li>How should knowing you bear God's image affect your self-image?</li>
                             <li>What changes when you view every person you meet as bearing God's image?</li>
@@ -1167,9 +1054,9 @@
                     </div>
                 </div>
 
-                <button class="sg-sub-accordion">Discussion Questions (For Groups)</button>
-                <div class="sg-sub-panel">
-                    <div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active">Discussion Questions (For Groups)</button>
+                <div class="sg-sub-panel active">
+                    <div class="sg-sub-panel-content" style="display: block;">
                         <ol>
                             <li>Why do you think God gave us three creation accounts instead of one?</li>
                             <li>What surprises you most about the creation accounts when you read them carefully?</li>
@@ -1183,62 +1070,4 @@
         </div>
 
         <!-- Bottom Navigation -->
-
-<script>
-
-        // Accordion functionality
-        document.querySelectorAll('.sg-accordion-section').forEach(button => {
-            button.addEventListener('click', () => {
-                button.classList.toggle('active');
-                const panel = button.nextElementSibling;
-                panel.classList.toggle('active');
-            });
-        });
-
-        document.querySelectorAll('.sg-sub-accordion').forEach(button => {
-            button.addEventListener('click', () => {
-                button.classList.toggle('active');
-                const panel = button.nextElementSibling;
-                panel.classList.toggle('active');
-            });
-        });
-
-        document.querySelectorAll('.sg-inner-accordion').forEach(button => {
-            button.addEventListener('click', () => {
-                button.classList.toggle('active');
-                const panel = button.nextElementSibling;
-                panel.classList.toggle('active');
-            });
-        });
-
-        function expandAll() {
-            document.querySelectorAll('.sg-accordion-section').forEach(btn => {
-                btn.classList.add('active');
-                btn.nextElementSibling.classList.add('active');
-            });
-            document.querySelectorAll('.sg-sub-accordion').forEach(btn => {
-                btn.classList.add('active');
-                btn.nextElementSibling.classList.add('active');
-            });
-            document.querySelectorAll('.sg-inner-accordion').forEach(btn => {
-                btn.classList.add('active');
-                btn.nextElementSibling.classList.add('active');
-            });
-        }
-
-        function collapseAll() {
-            document.querySelectorAll('.sg-accordion-section').forEach(btn => {
-                btn.classList.remove('active');
-                btn.nextElementSibling.classList.remove('active');
-            });
-            document.querySelectorAll('.sg-sub-accordion').forEach(btn => {
-                btn.classList.remove('active');
-                btn.nextElementSibling.classList.remove('active');
-            });
-            document.querySelectorAll('.sg-inner-accordion').forEach(btn => {
-                btn.classList.remove('active');
-                btn.nextElementSibling.classList.remove('active');
-            });
-        }
-    
-</script>
+</div>

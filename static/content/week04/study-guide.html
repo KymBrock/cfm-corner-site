@@ -36,44 +36,6 @@
         .sg-sub-panel.active { display: block; }
         .sg-sub-panel-content { padding: 20px 25px; }
 
-        .sg-inner-accordion {
-            background-color: #faf8f5;
-            color: #6B5344;
-            cursor: pointer;
-            padding: 12px 16px;
-            padding-right: 35px;
-            width: 100%;
-            text-align: left;
-            border: 1px solid #e8e0d4;
-            border-radius: 5px;
-            font-size: 1em;
-            font-weight: 600;
-            font-family: Georgia, serif;
-            margin-top: 4px;
-            position: relative;
-            transition: background-color 0.2s;
-        }
-        .sg-inner-accordion:hover { background-color: #f0e8dc; }
-        .sg-inner-accordion::after { content: '▼'; font-size: 0.7em; color: #8B7355; position: absolute; right: 16px; top: 50%; transform: translateY(-50%); transition: transform 0.3s; }
-        .sg-inner-accordion.active::after { transform: translateY(-50%) rotate(180deg); }
-
-        .sg-inner-panel {
-            background-color: #ffffff;
-            border-radius: 0 0 5px 5px;
-            border: 1px solid #e8e0d4;
-            border-top: none;
-            display: none;
-           
-            transition: max-height 0.3s ease-out;
-            margin-bottom: 4px;
-        }
-        .sg-inner-panel.active { display: block; overflow: visible; transition: max-height 0.3s ease-in; }
-        .sg-inner-panel-content { padding: 15px 20px; }
-        .sg-inner-panel-content h4 { color: #5a4a3a; margin-top: 12px; margin-bottom: 8px; font-size: 1.1em; }
-        .sg-inner-panel-content p { margin-bottom: 10px; }
-        .sg-inner-panel-content ul, .sg-inner-panel-content ol { margin-left: 20px; margin-bottom: 10px; }
-        .sg-inner-panel-content li { margin-bottom: 5px; }
-
         .panel-content h2 { color: #8B7355; margin-bottom: 20px; font-size: 1.8em; }
         .panel-content h3 { color: #6B5344; margin-top: 25px; margin-bottom: 15px; font-size: 1.4em; }
         .panel-content h4 { color: #5a4a3a; margin-top: 20px; margin-bottom: 12px; font-size: 1.2em; }
@@ -91,9 +53,55 @@
         .nav-link:hover { background: #6B5344; color: white; }
         .nav-link.index { background: #6B5344; }
         .nav-disabled { background: #d1d5db; color: #9ca3af; padding: 12px 24px; border-radius: 8px; }
+        /* Section headings (converted from inner accordions) */
+        .sg-section-heading {
+            margin: 1.2em 0 0.6em 0;
+            padding: 0.4em 0 0.4em 0.8em;
+            border-left: 3px solid #8B9D77;
+            color: #5a6b4f;
+            font-size: 1.05em;
+            font-weight: 600;
+        }
+
         @media (max-width: 768px) { .header-section h1 { font-size: 1.8em; } .panel-content { padding: 20px; } .nav-bar { flex-direction: column; gap: 10px; } .nav-links { flex-direction: column; width: 100%; } .nav-btn { width: 100%; text-align: center; } .nav-container { flex-direction: column; } .nav-link, .nav-disabled { width: 100%; text-align: center; } }
         
-</style>
+
+        .sg-section-heading {
+            margin: 1.2em 0 0.6em 0;
+            padding: 0.4em 0 0.4em 0.8em;
+            border-left: 3px solid #8B9D77;
+            color: #5a6b4f;
+            font-size: 1.05em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+        }
+        .sg-section-actions {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 28px;
+        }
+        .sg-section-actions .sg-action-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.35);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            padding: 0;
+            line-height: 1;
+        }
+        .sg-section-actions .sg-action-btn:hover {
+            background: rgba(255,255,255,0.35);
+        }
+    </style>
 
 <div class="container">
         <div class="header-section">
@@ -104,23 +112,22 @@
         </div>
         <div class="quick-links">
             <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/04?lang=eng" target="_blank" class="quick-link">CFM Manual</a>
-            <a href="index.html" class="quick-link">Study Guide Index</a>
         </div>
         <div class="button-container">
-            <button class="expand-button" onclick="expandAll()">Expand All</button>
-            <button class="expand-button" onclick="collapseAll()">Collapse All</button>
+            <button class="expand-button" onclick="expandAll()"><span class="btn-icon">&#x229E;</span> Expand All</button>
+            <button class="expand-button" onclick="collapseAll()"><span class="btn-icon">&#x229F;</span> Collapse All</button>
         </div>
-        <button class="sg-accordion-section">1. Week Overview</button>
-        <div class="sg-panel"><div class="panel-content"><button class="sg-sub-accordion"><span>Theme</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">1. Week Overview</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;"><div class="panel-content"><button class="sg-sub-accordion active"><span>Theme</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p><strong>"The Fall of Adam and Eve"</strong></p>
 <p>This week we encounter one of the most consequential narratives in all of scripture: the Fall of Adam and Eve, followed by the tragic story of Cain and Abel. These chapters establish the pattern of agency, consequence, and redemption that echoes throughout the entire biblical narrative.</p>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Reading Assignments</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Reading Assignments</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>Primary Texts</h3>
 <table class="data-table">
 <tr><th>Scripture</th><th>Chapter(s)</th><th>Focus</th></tr>
@@ -141,9 +148,9 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Key Themes</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Key Themes</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>1. The Fortunate Fall</h3>
 <p>The Latter-day Saint understanding transforms the Fall from tragedy to necessity. Eve's choice opened the door to mortality, agency, and ultimately exaltation.</p>
 <p>> "Adam fell that men might be; and men are, that they might have joy." (2 Nephi 2:25)</p>
@@ -161,9 +168,9 @@
 <p>Cain's infamous question—"Am I my brother's keeper?"—raises enduring questions about human responsibility and community.</p>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Unique Contributions of Each Account</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Unique Contributions of Each Account</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <table class="data-table">
 <tr><th>Element</th><th>Genesis</th><th>Moses</th></tr>
 <tr><td>Serpent's identity</td><td>Unnamed "serpent"</td><td>Explicitly Satan (Moses 4:4)</td></tr>
@@ -174,9 +181,9 @@
 </table>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>This Week's Resources</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>This Week's Resources</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>Featured Original Content</h3>
 <ul>
 <li><strong>The Fall: Tragedy or Triumph?</strong> — Exploring the "fortunate fall" doctrine</li>
@@ -193,9 +200,9 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Questions to Consider This Week</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Questions to Consider This Week</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <ol>
 <li>Why was the Fall necessary for God's plan?</li>
 <li>What does Moses 4 reveal about Satan's motives that Genesis omits?</li>
@@ -205,9 +212,9 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Come Follow Me Manual Focus</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Come Follow Me Manual Focus</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p>The official manual emphasizes:</p>
 <ul>
 <li>The Fall as part of God's plan</li>
@@ -220,10 +227,10 @@
 </table>
 </div>
 </div></div></div>
-        <button class="sg-accordion-section">2. Historical & Cultural Context</button>
-        <div class="sg-panel"><div class="panel-content"><button class="sg-sub-accordion"><span>Historical Setting</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">2. Historical & Cultural Context</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;"><div class="panel-content"><button class="sg-sub-accordion active"><span>Historical Setting</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>Time Period</h3>
 <p><strong>Approximate Dates:</strong></p>
 <ul>
@@ -245,9 +252,9 @@
 <p><strong>Note on Eden's Geography:</strong> The eastward movement in Genesis 3–4 is theologically significant. Adam and Eve are expelled "eastward" (Genesis 3:24); Cain goes "east of Eden" (Genesis 4:16). In temple geography, east represents departure from God's presence, while west (toward the Holy of Holies) represents approach to God.</p>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Ancient Near Eastern (ANE) Background</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Ancient Near Eastern (ANE) Background</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>Why ANE Context Matters for These Chapters</h3>
 <p>The Fall narrative entered a world filled with competing explanations for human mortality, suffering, and evil. Egyptian, Mesopotamian, and Canaanite cultures all had stories about serpents, divine knowledge, and the origins of death. Understanding these alternatives reveals what Genesis affirms and denies.</p>
 <h3>Serpent Symbolism in the Ancient World</h3>
@@ -508,9 +515,9 @@
 <p>The serpent and the lamb — the venom and the antivenom — converge in Christ. He took upon Himself the venom of sin, and His blood produces the healing that saves all who will look to Him and live.</p>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>The Fall Narrative: Unique Elements</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>The Fall Narrative: Unique Elements</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>Comparing Genesis and Moses Accounts</h3>
 <h3>The "Fortunate Fall" Doctrine</h3>
 <table class="data-table">
@@ -536,9 +543,9 @@
 <p>This is the clearest scriptural statement of the "fortunate fall" — Adam and Eve themselves bless God for the transgression that opened their eyes.</p>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Cain and Abel: Cultural Context</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Cain and Abel: Cultural Context</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>Sacrifice in the Ancient World</h3>
 <p><strong>ANE Sacrifice Practices:</strong></p>
 <table class="data-table">
@@ -578,9 +585,9 @@
 <p><strong>Book of Mormon Commentary:</strong> > "And whatsoever nation shall uphold such secret combinations... shall be destroyed" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/8?lang=eng&id=22" target="_blank">Ether 8:22</a>)</p>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Literary Structure</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Literary Structure</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>Chiastic Patterns in the Fall Narrative</h3>
 <p><strong>Genesis 3 exhibits careful literary structure:</strong></p>
 <p>``` A  Serpent questions God's word (3:1) B  Woman responds about the tree (3:2–3) C  Serpent's promise: "You shall be as gods" (3:4–5) D  Woman sees, takes, eats, gives to husband (3:6) E  Eyes opened, they know nakedness (3:7) D' God comes walking; they hide (3:8) C' God's question: "Where are you?" (3:9) B' Man responds about nakedness and hiding (3:10) A' God questions about the tree (3:11) ```</p>
@@ -630,9 +637,9 @@
 <p>Where pagan traditions saw the serpent as a symbol of eternal cycles (death leading to rebirth leading to death), the biblical narrative sees the serpent's power as <em>broken</em> — not recycled but ended. The Atonement is not one turn of an eternal wheel but the decisive act that shatters the wheel itself.</p>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Theological Themes</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Theological Themes</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>Agency and Accountability</h3>
 <p><strong>Central to Both Narratives:</strong></p>
 <table class="data-table">
@@ -663,9 +670,9 @@
 <p><strong>Elder Orson F. Whitney:</strong> > "The Fall had a twofold direction — downward, yet forward. It brought man into the world and set his feet upon progression's highway."</p>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>For Further Study</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>For Further Study</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>Recommended Resources</h3>
 <ul>
 <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bd/fall-of-adam-and-eve?lang=eng" target="_blank">Bible Dictionary: "Fall of Adam"</a></li>
@@ -696,10 +703,10 @@
 <p><strong>File Status:</strong> Complete <strong>Created:</strong> January 14, 2026 <strong>Last Updated:</strong> January 14, 2026 (Enhanced with throne theophany, serpent symbolism, and venom/antivenom sections) <strong>Next File:</strong> 03_Key_Passages_Study.md</p>
 </div>
 </div></div></div>
-        <button class="sg-accordion-section">3. Key Passages Study</button>
-        <div class="sg-panel"><div class="panel-content"><button class="sg-sub-accordion"><span>Selection Criteria</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">3. Key Passages Study</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;"><div class="panel-content"><button class="sg-sub-accordion active"><span>Selection Criteria</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p>This week's key passages were selected based on:</p>
 <ol>
 <li><strong>Foundational Doctrine</strong> — Core teachings about the Fall, agency, and redemption</li>
@@ -710,9 +717,9 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Passage 1: The Serpent's Temptation</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Passage 1: The Serpent's Temptation</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>Genesis 3:1–5 | Moses 4:5–11</h3>
 <h3>Complete Scripture Text</h3>
 <p><strong>Genesis 3:1–5 (KJV):</strong> > ¹ Now the serpent was more subtil than any beast of the field which the LORD God had made. And he said unto the woman, Yea, hath God said, Ye shall not eat of every tree of the garden? > > ² And the woman said unto the serpent, We may eat of the fruit of the trees of the garden: > > ³ But of the fruit of the tree which is in the midst of the garden, God hath said, Ye shall not eat of it, neither shall ye touch it, lest ye die. > > ⁴ And the serpent said unto the woman, Ye shall not surely die: > > ⁵ For God doth know that in the day ye eat thereof, then your eyes shall be opened, and ye shall be as gods, knowing good and evil.</p>
@@ -812,9 +819,9 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Passage 2: The Protoevangelium (First Gospel Promise)</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Passage 2: The Protoevangelium (First Gospel Promise)</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>Genesis 3:14–15</h3>
 <h3>Complete Scripture Text</h3>
 <p><strong>Genesis 3:14–15 (KJV):</strong> > ¹⁴ And the LORD God said unto the serpent, Because thou hast done this, thou art cursed above all cattle, and above every beast of the field; upon thy belly shalt thou go, and dust shalt thou eat all the days of thy life: > > ¹⁵ And I will put enmity between thee and the woman, and between thy seed and her seed; it shall bruise thy head, and thou shalt bruise his heel.</p>
@@ -896,9 +903,9 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Passage 3: Adam and Eve's Testimony</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Passage 3: Adam and Eve's Testimony</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>Moses 5:10–11</h3>
 <h3>Complete Scripture Text</h3>
 <p><strong>Moses 5:10–11:</strong> > ¹⁰ And in that day Adam blessed God and was filled, and began to prophesy concerning all the families of the earth, saying: Blessed be the name of God, for because of my transgression my eyes are opened, and in this life I shall have joy, and again in the flesh I shall see God. > > ¹¹ And Eve, his wife, heard all these things and was glad, saying: Were it not for our transgression we never should have had seed, and never should have known good and evil, and the joy of our redemption, and the eternal life which God giveth unto all the obedient.</p>
@@ -974,9 +981,9 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Passage 4: Cain's Offering and Rejection</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Passage 4: Cain's Offering and Rejection</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>Genesis 4:3–7 | Moses 5:18–23</h3>
 <h3>Complete Scripture Text</h3>
 <p><strong>Genesis 4:3–7 (KJV):</strong> > ³ And in process of time it came to pass, that Cain brought of the fruit of the ground an offering unto the LORD. > > ⁴ And Abel, he also brought of the firstlings of his flock and of the fat thereof. And the LORD had respect unto Abel and to his offering: > > ⁵ But unto Cain and to his offering he had not respect. And Cain was very wroth, and his countenance fell. > > ⁶ And the LORD said unto Cain, Why art thou wroth? and why is thy countenance fallen? > > ⁷ If thou doest well, shalt thou not be accepted? and if thou doest not well, sin lieth at the door. And unto thee shall be his desire, and thou shalt rule over him.</p>
@@ -1053,9 +1060,9 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Passage 5: "Am I My Brother's Keeper?"</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Passage 5: "Am I My Brother's Keeper?"</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>Genesis 4:8–12</h3>
 <h3>Complete Scripture Text</h3>
 <p><strong>Genesis 4:8–12 (KJV):</strong> > ⁸ And Cain talked with Abel his brother: and it came to pass, when they were in the field, that Cain rose up against Abel his brother, and slew him. > > ⁹ And the LORD said unto Cain, Where is Abel thy brother? And he said, I know not: Am I my brother's keeper? > > ¹⁰ And he said, What hast thou done? the voice of thy brother's blood crieth unto me from the ground. > > ¹¹ And now art thou cursed from the earth, which hath opened her mouth to receive thy brother's blood from thy hand; > > ¹² When thou tillest the ground, it shall not henceforth yield unto thee her strength; a fugitive and a vagabond shalt thou be in the earth.</p>
@@ -1135,9 +1142,9 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Summary: Week 04 Key Passages</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Summary: Week 04 Key Passages</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <table class="data-table">
 <tr><th>Passage</th><th>Central Theme</th><th>Key Hebrew Term</th></tr>
 <tr><td>Genesis 3:1–5 / Moses 4:5–11</td><td>The nature of temptation</td><td><em>arum</em> (cunning)</td></tr>
@@ -1149,10 +1156,10 @@
 <p><strong>File Status:</strong> Complete <strong>Created:</strong> January 14, 2026 <strong>Last Updated:</strong> January 14, 2026 <strong>Next File:</strong> 04_Word_Studies.md</p>
 </div>
 </div></div></div>
-        <button class="sg-accordion-section">4. Word Studies</button>
-        <div class="sg-panel"><div class="panel-content"><button class="sg-sub-accordion"><span>Hebrew-First Approach</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">4. Word Studies</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;"><div class="panel-content"><button class="sg-sub-accordion active"><span>Hebrew-First Approach</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p>This week's Fall narrative contains some of the most theologically loaded vocabulary in Scripture. Key terms like <em>nachash</em> (serpent), <em>arum</em> (cunning), and <em>shomer</em> (keeper) carry layers of meaning that English translations can only approximate.</p>
 <h3>Why Study Hebrew for the Fall Narrative?</h3>
 <ol>
@@ -1163,13 +1170,11 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Key Terms This Week (11 Hebrew Terms)</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Key Terms This Week (11 Hebrew Terms)</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p><em>Click each term to expand its full 5-layer analysis: Hebrew → Greek → Latin → English → 1828 Webster</em></p>
-<button class="sg-inner-accordion">1. <em>nachash</em> — Serpent (נָחָשׁ)</button>
-<div class="sg-inner-panel">
-<div class="sg-inner-panel-content">
+<h4 class="sg-section-heading">1. <em>nachash</em> — Serpent (נָחָשׁ)</h4>
 <div style="text-align: center; font-size: 2em; font-family: 'Times New Roman', 'SBL Hebrew', serif;">נָחָשׁ</div>
 <h4>Layer 1: Hebrew Foundation</h4>
 <table class="data-table">
@@ -1221,9 +1226,7 @@
 <p>> <strong><a href="https://webstersdictionary1828.com/Dictionary/serpent" target="_blank">SERPENT</a></strong>, n. > 1. An animal of the order of Serpentes, the Ophidia of Linnaeus. > 2. In Scripture, Satan is called the serpent, and also the old serpent. > 3. A subtle, malicious person. > 4. A species of firework.</p>
 <p><strong>Joseph Smith Era Understanding:</strong> The 1828 definition explicitly identifies the serpent with Satan, reflecting standard Christian interpretation in Joseph Smith's day. The Restoration provides additional clarity about Satan's use of the serpent.</p>
 </div></div>
-<button class="sg-inner-accordion">2. <em>arum</em> — Cunning, Shrewd (עָרוּם)</button>
-<div class="sg-inner-panel">
-<div class="sg-inner-panel-content">
+<h4 class="sg-section-heading">2. <em>arum</em> — Cunning, Shrewd (עָרוּם)</h4>
 <div style="text-align: center; font-size: 2em; font-family: 'Times New Roman', 'SBL Hebrew', serif;">עָרוּם</div>
 <h4>Layer 1: Hebrew Foundation</h4>
 <table class="data-table">
@@ -1272,9 +1275,7 @@
 <p>> <strong><a href="https://webstersdictionary1828.com/Dictionary/subtil" target="_blank">SUBTIL</a></strong>, a. > 1. Thin; not dense or gross. > 2. Nice; fine; delicate. > 3. Acute; piercing; as subtil pain. > 4. Sly; artful; cunning; crafty; insinuating. > 5. Deceitful. > 6. Refined; fine; acute; as a subtil argument.</p>
 <p><strong>Joseph Smith Era Understanding:</strong> The 1828 definition includes both "cunning" and "deceitful" — capturing the negative sense of <em>arum</em> in Genesis 3.</p>
 </div></div>
-<button class="sg-inner-accordion">3. <em>chavvah</em> — Eve, Life (חַוָּה)</button>
-<div class="sg-inner-panel">
-<div class="sg-inner-panel-content">
+<h4 class="sg-section-heading">3. <em>chavvah</em> — Eve, Life (חַוָּה)</h4>
 <div style="text-align: center; font-size: 2em; font-family: 'Times New Roman', 'SBL Hebrew', serif;">חַוָּה</div>
 <h4>Layer 1: Hebrew Foundation</h4>
 <table class="data-table">
@@ -1318,9 +1319,7 @@
 <p>> <strong><a href="https://webstersdictionary1828.com/Dictionary/eve" target="_blank">EVE</a></strong>, n. > The consort of Adam, and mother of the human race; so called by Adam, because she was the mother of all living. In Hebrew, the word signifies life, or living.</p>
 <p><strong>Joseph Smith Era Understanding:</strong> The 1828 definition correctly identifies the Hebrew meaning. Joseph Smith's audience may have understood "Eve" meant "Life."</p>
 </div></div>
-<button class="sg-inner-accordion">4. <em>da'at tov vara</em> — Knowledge of Good and Evil (דַּעַת טוֹב וָרָע)</button>
-<div class="sg-inner-panel">
-<div class="sg-inner-panel-content">
+<h4 class="sg-section-heading">4. <em>da'at tov vara</em> — Knowledge of Good and Evil (דַּעַת טוֹב וָרָע)</h4>
 <div style="text-align: center; font-size: 2em; font-family: 'Times New Roman', 'SBL Hebrew', serif;">דַּעַת טוֹב וָרָע</div>
 <h4>Layer 1: Hebrew Foundation</h4>
 <table class="data-table">
@@ -1371,9 +1370,7 @@
 <p>> <strong><a href="https://webstersdictionary1828.com/Dictionary/knowledge" target="_blank">KNOWLEDGE</a></strong>, n. > 1. A clear and certain perception of that which exists, or of truth and fact. > 2. Learning; illumination of mind. > 3. Skill; as a knowledge of seamanship. > 4. Acquaintance with any fact or person.</p>
 <p><strong>Joseph Smith Era Understanding:</strong> The 1828 definition emphasizes "clear perception" and "acquaintance" — Hebrew <em>da'at</em> includes experiential knowledge, not just intellectual awareness.</p>
 </div></div>
-<button class="sg-inner-accordion">5. <em>shomer</em> — Keeper, Guardian (שֹׁמֵר)</button>
-<div class="sg-inner-panel">
-<div class="sg-inner-panel-content">
+<h4 class="sg-section-heading">5. <em>shomer</em> — Keeper, Guardian (שֹׁמֵר)</h4>
 <div style="text-align: center; font-size: 2em; font-family: 'Times New Roman', 'SBL Hebrew', serif;">שֹׁמֵר</div>
 <h4>Layer 1: Hebrew Foundation</h4>
 <table class="data-table">
@@ -1429,9 +1426,7 @@
 <p>> <strong><a href="https://webstersdictionary1828.com/Dictionary/keeper" target="_blank">KEEPER</a></strong>, n. > 1. One who keeps; one that holds or has possession of any thing. > 2. One who retains in custody; one who has the care of a prison and the custody of prisoners. > 3. One who has the care, custody or superintendence of any thing. > 4. One who keeps or observes.</p>
 <p><strong>Joseph Smith Era Understanding:</strong> The 1828 definition emphasizes "care," "custody," and "superintendence" — exactly what Cain denied owing his brother.</p>
 </div></div>
-<button class="sg-inner-accordion">6. <em>dam</em> — Blood (דָּם)</button>
-<div class="sg-inner-panel">
-<div class="sg-inner-panel-content">
+<h4 class="sg-section-heading">6. <em>dam</em> — Blood (דָּם)</h4>
 <div style="text-align: center; font-size: 2em; font-family: 'Times New Roman', 'SBL Hebrew', serif;">דָּם</div>
 <h4>Layer 1: Hebrew Foundation</h4>
 <table class="data-table">
@@ -1485,9 +1480,7 @@
 <p>> <strong><a href="https://webstersdictionary1828.com/Dictionary/blood" target="_blank">BLOOD</a></strong>, n. > 1. The fluid which circulates through the arteries and veins of the human body. > 2. Kindred; relation by natural descent from a common ancestor. > 3. Royal lineage; blood royal; as a prince of the blood. > 4. Guilt, and punishment of bloodshed. > "The voice of thy brother's blood crieth to me from the ground." Gen. 4.</p>
 <p><strong>Joseph Smith Era Understanding:</strong> The 1828 definition explicitly cites Genesis 4:10, showing how this passage shaped the understanding of bloodguilt.</p>
 </div></div>
-<button class="sg-inner-accordion">7. <em>qorban / minchah</em> — Offering (קָרְבָּן / מִנְחָה)</button>
-<div class="sg-inner-panel">
-<div class="sg-inner-panel-content">
+<h4 class="sg-section-heading">7. <em>qorban / minchah</em> — Offering (קָרְבָּן / מִנְחָה)</h4>
 <div style="text-align: center; font-size: 2em; font-family: 'Times New Roman', 'SBL Hebrew', serif;">קָרְבָּן</div>
 <h4>Layer 1: Hebrew Foundation</h4>
 <table class="data-table">
@@ -1532,9 +1525,7 @@
 <p>> <strong><a href="https://webstersdictionary1828.com/Dictionary/offering" target="_blank">OFFERING</a></strong>, n. > 1. That which is presented in divine service; an animal or a portion of bread or corn, or of gold and silver, presented to God as an atonement for sin, or as a return of thanks for his favors, or for other religious purpose. > 2. A sacrifice; a victim. > 3. Anything presented in divine worship.</p>
 <p><strong>Joseph Smith Era Understanding:</strong> The 1828 definition emphasizes "atonement for sin" and "return of thanks" — both purposes are relevant to Cain and Abel's offerings.</p>
 </div></div>
-<button class="sg-inner-accordion">8. <em>qayin</em> — Cain, Acquired (קַיִן)</button>
-<div class="sg-inner-panel">
-<div class="sg-inner-panel-content">
+<h4 class="sg-section-heading">8. <em>qayin</em> — Cain, Acquired (קַיִן)</h4>
 <div style="text-align: center; font-size: 2em; font-family: 'Times New Roman', 'SBL Hebrew', serif;">קַיִן</div>
 <h4>Layer 1: Hebrew Foundation</h4>
 <table class="data-table">
@@ -1585,9 +1576,7 @@
 <p>> <strong><a href="https://webstersdictionary1828.com/Dictionary/cain" target="_blank">CAIN</a></strong>, n. > The name of the first son of Adam and Eve, who killed his brother Abel. Hence, in Scripture, a murderer.</p>
 <p><strong>Joseph Smith Era Understanding:</strong> The 1828 definition associates Cain primarily with murder, but the Hebrew name's "acquisition" meaning provides the tragic irony—the one acquired brought death.</p>
 </div></div>
-<button class="sg-inner-accordion">9. <em>hevel</em> — Abel, Breath, Vapor (הֶבֶל)</button>
-<div class="sg-inner-panel">
-<div class="sg-inner-panel-content">
+<h4 class="sg-section-heading">9. <em>hevel</em> — Abel, Breath, Vapor (הֶבֶל)</h4>
 <div style="text-align: center; font-size: 2em; font-family: 'Times New Roman', 'SBL Hebrew', serif;">הֶבֶל</div>
 <h4>Layer 1: Hebrew Foundation</h4>
 <table class="data-table">
@@ -1644,9 +1633,7 @@
 <p>> <strong><a href="https://webstersdictionary1828.com/Dictionary/abel" target="_blank">ABEL</a></strong>, n. > In Hebrew, vanity, vapor. The second son of Adam, who was slain by his brother Cain.</p>
 <p><strong>Joseph Smith Era Understanding:</strong> The 1828 definition correctly identifies the Hebrew meaning ("vanity, vapor")—readers in Joseph Smith's day may have understood the prophetic significance of the name.</p>
 </div></div>
-<button class="sg-inner-accordion">10. <em>shet</em> — Seth, Appointed (שֵׁת)</button>
-<div class="sg-inner-panel">
-<div class="sg-inner-panel-content">
+<h4 class="sg-section-heading">10. <em>shet</em> — Seth, Appointed (שֵׁת)</h4>
 <div style="text-align: center; font-size: 2em; font-family: 'Times New Roman', 'SBL Hebrew', serif;">שֵׁת</div>
 <h4>Layer 1: Hebrew Foundation</h4>
 <table class="data-table">
@@ -1697,9 +1684,7 @@
 <p>> <strong><a href="https://webstersdictionary1828.com/Dictionary/seth" target="_blank">SETH</a></strong>, n. > In Hebrew, put, placed. The third son of Adam and Eve.</p>
 <p><strong>Joseph Smith Era Understanding:</strong> The 1828 definition correctly identifies the Hebrew meaning ("put, placed")—the sense of divine appointment and substitution.</p>
 </div></div>
-<button class="sg-inner-accordion">11. <em>chattat</em> — Sin (חַטָּאת)</button>
-<div class="sg-inner-panel">
-<div class="sg-inner-panel-content">
+<h4 class="sg-section-heading">11. <em>chattat</em> — Sin (חַטָּאת)</h4>
 <div style="text-align: center; font-size: 2em; font-family: 'Times New Roman', 'SBL Hebrew', serif;">חַטָּאת</div>
 <h4>Layer 1: Hebrew Foundation</h4>
 <table class="data-table">
@@ -1742,11 +1727,9 @@
 <p>> <strong><a href="https://webstersdictionary1828.com/Dictionary/sin" target="_blank">SIN</a></strong>, n. > 1. The voluntary departure of a moral agent from a known rule of rectitude or duty, prescribed by God. > 2. Any violation of God's will, either in purpose or conduct. > 3. A sin-offering; an offering made to atone for sin.</p>
 <p><strong>Joseph Smith Era Understanding:</strong> The 1828 definition emphasizes "voluntary departure" and "known rule" — accountability requires knowledge and choice, both present in Cain's situation.</p>
 </div></div>
-</div>
-</div>
-<button class="sg-sub-accordion"><span>Comparative Table: Week 04 Key Terms</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Comparative Table: Week 04 Key Terms</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <table class="data-table">
 <tr><th>Hebrew</th><th>Greek (LXX)</th><th>Latin (Vulgate)</th><th>English</th><th>Meaning</th></tr>
 <tr><td><a href="https://www.blueletterbible.org/lexicon/h5175/kjv/wlc/0-1/" target="_blank"><em>nachash</em></a> (<span style="unicode-bidi: isolate;">נָחָשׁ</span>, H5175)</th><th><a href="https://logeion.uchicago.edu/ὄφις" target="_blank">ὄφις</a> (<em>ophis</em>)</th><th><a href="https://logeion.uchicago.edu/serpens" target="_blank">serpens</a></th><th><a href="https://webstersdictionary1828.com/Dictionary/serpent" target="_blank">serpent</a></th><th>Serpent; associated with divination</th></tr>
@@ -1761,11 +1744,9 @@
 <tr><td><a href="https://www.blueletterbible.org/lexicon/h1893/kjv/wlc/0-1/" target="_blank"><em>hevel</em></a> (<span style="unicode-bidi: isolate;">הֶבֶל</span>, H1893)</td><td>Ἄβελ (<em>Abel</em>)</td><td>Abel</td><td><a href="https://webstersdictionary1828.com/Dictionary/abel" target="_blank">Abel</a></td><td>Breath, vapor, vanity</td></tr>
 <tr><td><a href="https://www.blueletterbible.org/lexicon/h8352/kjv/wlc/0-1/" target="_blank"><em>shet</em></a> (<span style="unicode-bidi: isolate;">שֵׁת</span>, H8352)</td><td>Σήθ (<em>Sēth</em>)</td><td>Seth</td><td><a href="https://webstersdictionary1828.com/Dictionary/seth" target="_blank">Seth</a></td><td>Appointed, placed</td></tr>
 </table>
-</div>
-</div>
-<button class="sg-sub-accordion"><span>Hebrew Wordplay Summary</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Hebrew Wordplay Summary</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>The <em>arum</em> / <em>erom</em> Connection</h3>
 <ul>
 <li><span style="unicode-bidi: isolate;">עָרוּם</span> (<em>arum</em>) — cunning</li>
@@ -1792,11 +1773,9 @@
 <li><span style="unicode-bidi: isolate;">שֵׁת</span> (<em>shet</em>) — Seth = Appointed, Placed, Substituted</li>
 </ul>
 <p><strong>The Ironic Reversal:</strong> The "substantial" one (Cain) becomes a wanderer with no home, while the "fleeting" one (Abel) is remembered forever. The "appointed" one (Seth) carries forward the covenant line to Christ.</p>
-</div>
-</div>
-<button class="sg-sub-accordion"><span>For Further Study</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>For Further Study</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>Recommended Lexicons</h3>
 <ul>
 <li><a href="https://www.blueletterbible.org/lexicon/" target="_blank">Blue Letter Bible Hebrew Lexicon</a></li>
@@ -1815,18 +1794,15 @@
 <li><a href="https://webstersdictionary1828.com/" target="_blank">Webster's Dictionary 1828</a> — American Dictionary of the English Language</li>
 </ul>
 <p><strong>File Status:</strong> Complete <strong>Created:</strong> January 14, 2026 <strong>Last Updated:</strong> January 19, 2026 (Added Cain, Abel, Seth name studies with letter analysis) <strong>Next File:</strong> 05_Teaching_Applications.md</p>
-</div>
 </div></div></div>
-        <button class="sg-accordion-section">5. Teaching Applications</button>
-        <div class="sg-panel"><div class="panel-content"><button class="sg-sub-accordion"><span>Overview</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">5. Teaching Applications</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;"><div class="panel-content"><button class="sg-sub-accordion active"><span>Overview</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p>This week's readings address some of the most foundational doctrines in the gospel: the Fall of Adam and Eve, agency and accountability, the first messianic prophecy, and our responsibility to one another. The following applications are organized by teaching context to help you adapt these powerful truths for your specific audience.</p>
-</div>
-</div>
-<button class="sg-sub-accordion"><span>1. Personal Study Applications</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>1. Personal Study Applications</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>Individual Reflection and Application</h3>
 <p><strong>Theme: Understanding the Fall as a Blessing</strong></p>
 <p>The Latter-day Saint understanding of the Fall transforms how we view our mortal experience. Rather than seeing life as punishment, we can embrace it as opportunity.</p>
@@ -1869,11 +1845,9 @@
 <li>In what ways am I tempted to substitute my own approach for God's revealed patterns?</li>
 <li>Who in my life needs me to be their "keeper" right now?</li>
 </ul>
-</div>
-</div>
-<button class="sg-sub-accordion"><span>2. Family Home Evening Applications</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>2. Family Home Evening Applications</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>Family Activities and Discussions</h3>
 <p><strong>Theme: Choices and Consequences</strong></p>
 <p>The Fall narrative is fundamentally about choice — and so is family life. These activities help families explore agency in age-appropriate ways.</p>
@@ -1925,11 +1899,9 @@
 <li>How do you feel about being your siblings' "keeper"?</li>
 <li>What does it mean that Eve is the "mother of all living"?</li>
 </ul>
-</div>
-</div>
-<button class="sg-sub-accordion"><span>3. Sunday School Teaching Applications</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>3. Sunday School Teaching Applications</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>Class Discussion and Engagement</h3>
 <p><strong>Theme: Agency, Atonement, and Accountability</strong></p>
 <p>Sunday School provides opportunity for deeper doctrinal exploration with adults and youth.</p>
@@ -1982,11 +1954,9 @@
 <li>How does the promise in Genesis 3:15 give hope even in the midst of judgment?</li>
 <li>What responsibilities do we have as "keepers" of one another?</li>
 </ul>
-</div>
-</div>
-<button class="sg-sub-accordion"><span>4. Seminary Teaching Applications</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>4. Seminary Teaching Applications</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>Youth-Focused Approaches</h3>
 <p><strong>Theme: Making Good Choices in a World of Temptation</strong></p>
 <p>Seminary students face real temptations daily. This week's content directly addresses the nature of temptation and the power to overcome.</p>
@@ -2044,11 +2014,9 @@
 <li>How can knowing the serpent's tactics help you resist?</li>
 <li>What would change if you treated every choice as "firstfruits or leftovers"?</li>
 </ul>
-</div>
-</div>
-<button class="sg-sub-accordion"><span>5. Relief Society & Priesthood Applications</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>5. Relief Society & Priesthood Applications</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>Adult Discussion and Doctrinal Depth</h3>
 <p><strong>Theme: The Fall, The Family, and Our Responsibility to Each Other</strong></p>
 <p>Adult classes can explore deeper doctrinal nuances and real-life application.</p>
@@ -2099,11 +2067,9 @@
 <li>In what ways might we be giving God "leftovers" rather than "firstfruits"?</li>
 <li>What responsibilities come with being our brother's (and sister's) keeper?</li>
 </ul>
-</div>
-</div>
-<button class="sg-sub-accordion"><span>6. Children's Teaching Ideas</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>6. Children's Teaching Ideas</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>Age-Appropriate Activities</h3>
 <p><strong>Theme: Good Choices and Helping Others</strong></p>
 <p>Young children can grasp core concepts through simple stories and activities.</p>
@@ -2167,11 +2133,9 @@
 <li>We take care of our brothers and sisters</li>
 <li>Jesus helps us when we make mistakes</li>
 </ul>
-</div>
-</div>
-<button class="sg-sub-accordion"><span>7. Mission Applications</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>7. Mission Applications</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>Sharing the Gospel Using These Teachings</h3>
 <p><strong>Theme: The Plan of Salvation and the Atonement</strong></p>
 <p>The Fall narrative is central to missionary discussions about the plan of salvation.</p>
@@ -2224,10 +2188,9 @@
 <li>What do you think it means that God wanted us to have agency?</li>
 </ul>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Summary: Key Teaching Points by Context</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Summary: Key Teaching Points by Context</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <table class="data-table">
 <tr><th>Context</th><th>Primary Theme</th><th>Key Scripture</th><th>Central Application</th></tr>
 <tr><td><strong>Personal Study</strong></td><td>Reframing trials as blessings</td><td>Moses 5:10–11</td><td>View mortality as gift, not punishment</td></tr>
@@ -2241,10 +2204,10 @@
 <p><strong>File Status:</strong> Complete <strong>Created:</strong> January 14, 2026 <strong>Last Updated:</strong> January 14, 2026 <strong>Next File:</strong> 06_Study_Questions.md</p>
 </div>
 </div></div></div>
-        <button class="sg-accordion-section">6. Study Questions</button>
-        <div class="sg-panel"><div class="panel-content"><button class="sg-sub-accordion"><span>Question Categories Overview</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">6. Study Questions</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;"><div class="panel-content"><button class="sg-sub-accordion active"><span>Question Categories Overview</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <table class="data-table">
 <tr><th>Category</th><th>Count</th><th>Purpose</th></tr>
 <tr><td>Understanding the Text</td><td>60</td><td>Comprehension, observation, textual analysis</td></tr>
@@ -2257,9 +2220,9 @@
 </table>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Category 1: Understanding the Text (60 Questions)</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Category 1: Understanding the Text (60 Questions)</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>The Serpent and the Temptation (Genesis 3:1–7; Moses 4:5–12)</h3>
 <ol>
 <li>What characteristic of the serpent is emphasized in Genesis 3:1?</li>
@@ -2334,9 +2297,9 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Category 2: Personal Application (30 Questions)</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Category 2: Personal Application (30 Questions)</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>Temptation and Choice</h3>
 <ol>
 <li>In what areas of your life do you hear the serpent's question "Hath God said...?"</li>
@@ -2378,9 +2341,9 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Category 3: Doctrinal Understanding (30 Questions)</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Category 3: Doctrinal Understanding (30 Questions)</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>The Nature of the Fall</h3>
 <ol>
 <li>Why do Latter-day Saints view the Fall as necessary rather than tragic?</li>
@@ -2422,9 +2385,9 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Category 4: Modern Relevance (30 Questions)</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Category 4: Modern Relevance (30 Questions)</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>Temptation in the Modern World</h3>
 <ol>
 <li>How does Satan use the same tactics today that the serpent used in Eden?</li>
@@ -2466,9 +2429,9 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Category 5: Synthesis and Commitment (20 Questions)</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Category 5: Synthesis and Commitment (20 Questions)</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>Integrating the Week's Teachings</h3>
 <ol>
 <li>How do the themes of the Fall connect to the themes of the Creation (Week 03)?</li>
@@ -2497,9 +2460,9 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Category 6: Discussion Starters (10 Questions)</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Category 6: Discussion Starters (10 Questions)</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>For Group Conversations</h3>
 <ol>
 <li><strong>The Fortunate Fall:</strong> Why do Latter-day Saints see the Fall as a blessing while many Christians see it as a tragedy? What difference does this make in how we live?</li>
@@ -2515,9 +2478,9 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Study Tips for Using These Questions</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Study Tips for Using These Questions</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <h3>Personal Study</h3>
 <ul>
 <li>Select 5–10 questions per study session</li>
@@ -2551,46 +2514,6 @@
     <div class="section-navigation">
         <div class="nav-container">
             <a href="week03.html" class="nav-link">← Week 3</a>
-            <a href="index.html" class="nav-link index">Study Guide Index</a>
             <a href="week05.html" class="nav-link">Week 5 →</a>
         </div>
     </div>
-
-<script>
-
-        const accordionSections = document.querySelectorAll('.sg-accordion-section');
-        accordionSections.forEach(section => {
-            section.addEventListener('click', function() {
-                this.classList.toggle('active');
-                const panel = this.nextElementSibling;
-                panel.classList.toggle('active');
-            });
-        });
-        const subAccordions = document.querySelectorAll('.sg-sub-accordion');
-        subAccordions.forEach(subAccordion => {
-            subAccordion.addEventListener('click', function() {
-                this.classList.toggle('active');
-                const subPanel = this.nextElementSibling;
-                subPanel.classList.toggle('active');
-            });
-        });
-        const innerAccordions = document.querySelectorAll('.sg-inner-accordion');
-        innerAccordions.forEach(innerAccordion => {
-            innerAccordion.addEventListener('click', function() {
-                this.classList.toggle('active');
-                const innerPanel = this.nextElementSibling;
-                innerPanel.classList.toggle('active');
-            });
-        });
-        function expandAll() {
-            accordionSections.forEach(section => { section.classList.add('active'); section.nextElementSibling.classList.add('active'); });
-            subAccordions.forEach(subAccordion => { subAccordion.classList.add('active'); subAccordion.nextElementSibling.classList.add('active'); });
-            innerAccordions.forEach(innerAccordion => { innerAccordion.classList.add('active'); innerAccordion.nextElementSibling.classList.add('active'); });
-        }
-        function collapseAll() {
-            accordionSections.forEach(section => { section.classList.remove('active'); section.nextElementSibling.classList.remove('active'); });
-            subAccordions.forEach(subAccordion => { subAccordion.classList.remove('active'); subAccordion.nextElementSibling.classList.remove('active'); });
-            innerAccordions.forEach(innerAccordion => { innerAccordion.classList.remove('active'); innerAccordion.nextElementSibling.classList.remove('active'); });
-        }
-        
-</script>

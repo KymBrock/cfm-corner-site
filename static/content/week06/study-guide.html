@@ -153,81 +153,62 @@
         .sg-sub-panel-content li { margin-bottom: 6px; }
         .sg-sub-panel-content a { color: #8B7355; }
         .sg-sub-panel-content a:hover { color: #6B5344; text-decoration: underline; }
-
-        /* Inner accordions (third level - for lengthy subsections) */
-        .sg-inner-accordion {
-            background-color: #faf8f5;
-            color: #6B5344;
-            cursor: pointer;
-            padding: 12px 36px 12px 16px;
-            width: 100%;
-            text-align: left;
-            border: 1px solid #e8e0d4;
-            border-radius: 5px;
-            font-size: 1em;
+        /* Section headings (converted from inner accordions) */
+        .sg-section-heading {
+            margin: 1.2em 0 0.6em 0;
+            padding: 0.4em 0 0.4em 0.8em;
+            border-left: 3px solid #8B9D77;
+            color: #5a6b4f;
+            font-size: 1.05em;
             font-weight: 600;
-            font-family: Georgia, serif;
-            margin-top: 8px;
-            position: relative;
-            transition: background-color 0.2s;
         }
 
-        .sg-inner-accordion:hover {
-            background-color: #f0e8dc;
-        }
-
-        .sg-inner-accordion::after {
-            content: '▼';
-            font-size: 0.7em;
-            color: #8B7355;
-            position: absolute;
-            right: 16px;
-            top: 50%;
-            transform: translateY(-50%);
-            transition: transform 0.3s;
-        }
-
-        .sg-inner-accordion.active::after {
-            transform: translateY(-50%) rotate(180deg);
-        }
-
-        /* Inner panels (third level) */
-        .sg-inner-panel {
-            background-color: #ffffff;
-            border-radius: 0 0 5px 5px;
-            border: 1px solid #e8e0d4;
-            border-top: none;
-            display: none;
-           
-            transition: max-height 0.3s ease-out;
-            margin-bottom: 8px;
-        }
-
-        .sg-inner-panel.active {
-            display: block;
-            overflow: visible;
-            transition: max-height 0.3s ease-in;
-        }
-
-        .sg-inner-panel-content {
-            padding: 15px 20px;
-        }
-
-        .sg-inner-panel-content h4 { color: #5a4a3a; margin-top: 12px; margin-bottom: 8px; font-size: 1.1em; }
-        .sg-inner-panel-content p { margin-bottom: 10px; }
-        .sg-inner-panel-content ul, .sg-inner-panel-content ol { margin-left: 20px; margin-bottom: 10px; }
-        .sg-inner-panel-content li { margin-bottom: 5px; }
 
         @media (max-width: 768px) {
             .header-section h1 { font-size: 1.8em; }
             .panel-content { padding: 20px; }
             .sg-sub-panel-content { padding: 15px 18px; }
-            .sg-inner-panel-content { padding: 12px 15px; }
-            .nav-container { flex-direction: column; }
+.nav-container { flex-direction: column; }
             .nav-link, .nav-disabled { width: 100%; text-align: center; }
         }
         
-</style>
+
+        .sg-section-heading {
+            margin: 1.2em 0 0.6em 0;
+            padding: 0.4em 0 0.4em 0.8em;
+            border-left: 3px solid #8B9D77;
+            color: #5a6b4f;
+            font-size: 1.05em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+        }
+        .sg-section-actions {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 28px;
+        }
+        .sg-section-actions .sg-action-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.35);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            padding: 0;
+            line-height: 1;
+        }
+        .sg-section-actions .sg-action-btn:hover {
+            background: rgba(255,255,255,0.35);
+        }
+    </style>
 
 <div class="container">
         <!-- Header Section -->
@@ -241,22 +222,21 @@
         <!-- Quick Links -->
         <div class="quick-links">
             <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/06?lang=eng" target="_blank" class="quick-link">CFM Manual</a>
-            <a href="index.html" class="quick-link">Study Guide Index</a>
         </div>
 
         <!-- Expand/Collapse Buttons -->
         <div class="button-container">
-            <button class="expand-button" onclick="expandAll()">Expand All</button>
-            <button class="expand-button" onclick="collapseAll()">Collapse All</button>
+            <button class="expand-button" onclick="expandAll()"><span class="btn-icon">&#x229E;</span> Expand All</button>
+            <button class="expand-button" onclick="collapseAll()"><span class="btn-icon">&#x229F;</span> Collapse All</button>
         </div>
 
         <!-- SECTION 1: WEEK OVERVIEW -->
-        <button class="sg-accordion-section">1. Week Overview</button>
-        <div class="sg-panel">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">1. Week Overview</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
             <div class="panel-content">
-                <button class="sg-sub-accordion"><span>Week Information</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active"><span>Week Information</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <table class="info-table">
 <tr>
 <th>Element</th>
@@ -289,9 +269,9 @@
 </table>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Reading Summary</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Reading Summary</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p>This week we encounter one of the most theologically significant chapters in all Restoration scripture. Moses 7 transforms four cryptic verses about Enoch in Genesis 5 into a 69-verse panoramic vision spanning from the pre-Flood world to the Second Coming. Where Genesis merely says Enoch "walked with God... and was not; for God took him" (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/5?lang=eng&id=24" target="_blank">Genesis 5:24</a>), Moses 7 reveals what that walk entailed: a reluctant prophet becoming a mighty preacher, the establishment of a Zion community so righteous that an entire city was translated, and most remarkably, a vision in which Enoch beholds something unprecedented—God weeping.</p>
 <p><strong>Moses 7:1–20</strong> continues from Moses 6, showing Enoch's prophetic ministry expanding to global scope. The prophet who once considered himself "but a lad" now speaks with power that shakes nations. Mountains flee, rivers change course, and enemies are terrified as Enoch preaches repentance. Yet the emphasis is not on miraculous power but on the community Enoch builds—a people who achieve a state of righteousness that warrants a special designation.</p>
 <p><strong>Moses 7:21–31</strong> contains the defining verse for Latter-day Saint understanding of Zion: "The Lord called his people Zion, because they were of one heart and one mind, and dwelt in righteousness; and there was no poor among them" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=18" target="_blank">Moses 7:18</a>). This Zion community is then "taken up into heaven" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=21" target="_blank">v. 21</a>)—not just Enoch individually, but the entire city. Following this translation, Enoch's vision shifts to the "residue of the people" left behind, and he witnesses something that stops him in his tracks: God weeps.</p>
@@ -300,35 +280,28 @@
 <p><strong>Moses 7:58–69</strong> brings the vision to its climax with the promise of a latter-day Zion. Righteousness will "sweep the earth as with a flood" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=62" target="_blank">v. 62</a>), gathering the elect to a prepared place. And then Enoch's ancient city—held in reserve for thousands of years—will return: "Then shalt thou and all thy city meet them there... and we will fall upon their necks, and they shall fall upon our necks, and we will kiss each other" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=63" target="_blank">v. 63</a>). The chapter ends with this reunion as the ultimate hope: two Zion communities embracing after millennia of separation.</p>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Central Themes</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Theme 1: The Weeping God—Divine Passibility and the Nature of Godhood</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Central Themes</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Theme 1: The Weeping God—Divine Passibility and the Nature of Godhood</h4>
 <p>Perhaps no passage in Restoration scripture more directly challenges traditional Christian theology than Moses 7:28–37. The doctrine of divine impassibility—that God cannot suffer, change, or be affected by creatures—had been a cornerstone of classical theism since the Church Fathers merged biblical revelation with Greek philosophical categories. Augustine, Anselm, and Thomas Aquinas all affirmed that God is "without passions in the proper sense," incapable of emotional disturbance.</p>
 <p>Enoch's question to God perfectly articulates this classical position: "How is it that thou canst weep, seeing thou art holy, and from all eternity to all eternity? And were it possible that man could number the particles of the earth, yea, millions of earths like this, it would not be a beginning to the number of thy creations; and thy curtains are stretched out still; and yet... the heavens weep, and shed forth their tears as the rain upon the mountains?" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=29-31" target="_blank">Moses 7:29–31</a>). How can a Being so vast, so eternal, so holy, be moved to tears by the actions of creatures so small?</p>
 <p>God's response revolutionizes our understanding of divine nature. He does not deny His weeping or explain it away as anthropomorphism. Instead, He reveals the <em>reason</em>: these are "the workmanship of mine own hands" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=32" target="_blank">v. 32</a>). They are His children, to whom He gave agency "in the Garden of Eden" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=32" target="_blank">v. 32</a>). He commanded them to love and to choose Him as Father. But "they are without affection, and they hate their own blood" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=33" target="_blank">v. 33</a>).</p>
 <p>The theological implications are profound. God's weeping is not weakness but love. A God who cannot grieve cannot truly love—love requires vulnerability to the beloved. President Spencer W. Kimball taught: "The Lord is not a static, impassive being. He has feelings, deep feelings, and He is affected by the conduct of His children" (as cited in <em>Teachings of Presidents of the Church: Spencer W. Kimball</em>). The weeping God is not diminished by His tears; He is revealed as a Father whose children's choices genuinely matter to Him.</p>
 <p>This theme connects directly to Week 05's teaching on the Fall and agency (Moses 6:48–56). The same agency that enables progression also enables rebellion. God cannot give agency without accepting that some will use it to choose misery. His weeping is the consequence of love that grants genuine freedom.</p>
-</div>
-<button class="sg-inner-accordion"><span>Theme 2: The Definition of Zion—One Heart, One Mind, No Poor</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Theme 2: The Definition of Zion—One Heart, One Mind, No Poor</h4>
 <p>Moses 7:18 provides the scriptural definition that shapes Latter-day Saint understanding of Zion: "The Lord called his people Zion, because they were of one heart and one mind, and dwelt in righteousness; and there was no poor among them."</p>
 <p>Notice what Zion is <em>not</em> in this definition. It is not primarily a geographical location, a political system, or even a temple. Zion is a <em>people</em> characterized by three qualities:</p>
 <p><strong>Unity ("one heart and one mind")</strong>: The Hebrew concept behind this phrase involves <em>levav</em> (לֵבָב, heart—the seat of will and emotion) and the unity of communal intention. The early Church in Acts achieved something similar: "the multitude of them that believed were of one heart and of one soul" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/acts/4?lang=eng&id=32" target="_blank">Acts 4:32</a>). The Nephites after Christ's visit "were in one, the children of Christ" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/4-ne/1?lang=eng&id=17" target="_blank">4 Nephi 1:17</a>). This is not uniformity that erases individuality but unity of purpose, covenantal commitment, and mutual love.</p>
 <p><strong>Righteousness ("dwelt in righteousness")</strong>: The Hebrew <em><a href="https://www.blueletterbible.org/lexicon/h6666/kjv/wlc/0-1/" target="_blank">tsedaqah</a></em> (צְדָקָה) implies right relationship—with God and with each other. Zion righteousness is not merely personal piety but covenantal fidelity that shapes community life.</p>
 <p><strong>Economic equality ("no poor among them")</strong>: This phrase echoes Deuteronomy 15:4—"there shall be no poor among you"—which describes the result of faithful observance of sabbatical year and jubilee laws. In Enoch's Zion, this equality came through consecration: "every man dealt justly with his neighbor" (implied in the broader context). The law of consecration revealed in D&C 42 and 82 follows this Enochian pattern.</p>
 <p>President Brigham Young frequently referenced this verse: "We should have no poor; we should all be alike partakers of the good things of this world" (<em>Journal of Discourses</em> 19:47). The modern effort to build Zion involves not just personal sanctification but the creation of communities characterized by these three qualities.</p>
-</div>
-<button class="sg-inner-accordion"><span>Theme 3: Translation of an Entire City—Collective Righteousness and Collective Destiny</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Theme 3: Translation of an Entire City—Collective Righteousness and Collective Destiny</h4>
 <p>The translation of Enoch's city presents a remarkable doctrine: "Zion, in process of time, was taken up into heaven" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=21" target="_blank">Moses 7:21</a>). This was not merely Enoch's individual translation (as recorded in Genesis 5:24) but the collective translation of an entire community.</p>
 <p>The phrase "in process of time" is significant. Translation was not instantaneous but gradual—the community grew in righteousness until reaching a threshold that qualified them for removal from the terrestrial sphere. Joseph Smith taught that translated beings inhabit "a place prepared for such characters... of the terrestrial order" (TPJS, 170), serving as "ministering angels unto many planets."</p>
 <p>The theological significance is that righteousness can be communal, not just individual. Latter-day Saint theology emphasizes that we are saved as families and as covenant communities, not merely as isolated individuals. The celestial kingdom is described as a social order: "the same sociality which exists among us here will exist among us there, only it will be coupled with eternal glory" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/130?lang=eng&id=2" target="_blank">D&C 130:2</a>).</p>
 <p>Enoch's translated city becomes the prototype for the latter-day Zion. The promise is that these two communities will eventually reunite: "Then shalt thou and all thy city meet them there, and we will receive them into our bosom, and they shall see us; and we will fall upon their necks, and they shall fall upon our necks, and we will kiss each other" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=63" target="_blank">Moses 7:63</a>). The embrace imagery suggests intimate reunion after long separation—the culmination of the gathering of Israel.</p>
-</div>
-<button class="sg-inner-accordion"><span>Theme 4: Prophetic Vision—From the Flood to the Second Coming</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Theme 4: Prophetic Vision—From the Flood to the Second Coming</h4>
 <p>Moses 7 places Enoch among the great visionary prophets who saw the entire sweep of human history. Like Nephi (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/11" target="_blank">1 Nephi 11–14</a>), the brother of Jared (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/3?lang=eng&id=25" target="_blank">Ether 3:25</a>), and John the Revelator, Enoch received a panoramic vision extending from his day to the end of time.</p>
 <p>The vision includes:</p>
 <ul>
@@ -343,18 +316,15 @@
 <li><strong>The End of Wickedness</strong>: The final judgment (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=65-67" target="_blank">Moses 7:65–67</a>)</li>
 </ul>
 <p>This panoramic vision demonstrates that prophets throughout history understood the plan of salvation in its fullness. The Atonement was not a late addition to God's plan but anticipated from before the foundation of the world.</p>
-</div>
-<button class="sg-inner-accordion"><span>Theme 5: The Earth's Covenant Relationship—A Living, Speaking, Suffering Creation</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Theme 5: The Earth's Covenant Relationship—A Living, Speaking, Suffering Creation</h4>
 <p>A remarkable feature of Moses 7 is the personification of the earth as a speaking, suffering, covenantal being. In <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=48" target="_blank">Moses 7:48</a>, Enoch hears "the earth ... saying: Wo, wo is me, the mother of men; I am pained, I am weary, because of the wickedness of my children. When shall I rest, and be cleansed from the filthiness which is gone forth out of me?"</p>
 <p>This is not merely poetic personification. The earth speaks, mourns, and anticipates rest. At the crucifixion, "the earth groaned" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=56" target="_blank">Moses 7:56</a>). The earth has a covenantal relationship with its Creator and will eventually "rest" for a thousand years (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=64" target="_blank">Moses 7:64</a>).</p>
 <p>This theme connects to the broader Restoration teaching about creation's sentience. <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/88?lang=eng&id=25-26" target="_blank">D&C 88:25–26</a> teaches that "the earth abideth the law of a celestial kingdom" and "shall be sanctified... and given to them who have kept the law." <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/77?lang=eng&id=2" target="_blank">D&C 77:2</a> reveals that even animals "shall be saved" and "shall dwell in eternal felicity."</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Key Figures</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Key Figures</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <table class="info-table">
 <tr>
 <th>Person</th>
@@ -394,25 +364,22 @@
 </table>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Timeline Placement</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Timeline Placement</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p><strong>Historical Period:</strong> Pre-Flood Era (Antediluvian World)</p>
 <p><strong>Approximate Dates:</strong> Traditional chronology places Enoch approximately seven generations after Adam. The genealogies in Genesis 5 suggest Enoch was born around 622 years after creation (using Masoretic text chronology) and was translated after 365 years of life.</p>
 <p><strong>Biblical Timeline Position:</strong> Moses 7 continues the Enoch material from Moses 6, covering the period between Enoch's prophetic call and the Flood (which comes in Moses 8 / Genesis 6–9).</p>
-<button class="sg-inner-accordion"><span>Relationship to Previous Weeks</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Relationship to Previous Weeks</h4>
 <p><strong>Week 04 (Genesis 3–4; Moses 4–5):</strong> Established the consequences of the Fall and the beginning of human wickedness through Cain's rebellion and the founding of secret combinations.</p>
 <p><strong>Week 05 (Genesis 5; Moses 6):</strong> Introduced Enoch's call, his reluctant acceptance of prophetic ministry, and the fundamental doctrines of the Fall, repentance, and baptism.</p>
 <p><strong>Week 06 (Moses 7):</strong> Brings Enoch's ministry to fulfillment. The doctrines taught in Moses 6 now produce fruit: a community righteous enough to be translated. The wickedness introduced in Moses 4–5 now reaches a level requiring divine intervention (the Flood).</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Books Featured This Week</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Book of Moses (Chapter 7)</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Books Featured This Week</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Book of Moses (Chapter 7)</h4>
 <ul>
 <li><strong>Author:</strong> Moses, restored through Joseph Smith</li>
 <li><strong>Source Date:</strong> Original to Moses (~1446 BC); restored December 1830</li>
@@ -422,9 +389,7 @@
 <li><strong>Key Themes:</strong> Zion, divine emotion, translation, prophetic vision, latter-day gathering</li>
 <li><strong>Literary Genre:</strong> Prophetic vision / apocalyptic narrative</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Comparison with Genesis</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Comparison with Genesis</h4>
 <table class="info-table">
 <tr>
 <th>Genesis 5:21–24</th>
@@ -457,39 +422,32 @@
 </table>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Connection to Restoration Scripture</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Book of Mormon Connections</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Connection to Restoration Scripture</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Book of Mormon Connections</h4>
 <ul>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/4-ne/1?lang=eng&id=1-3,15-17" target="_blank">4 Nephi 1:1–3, 15–17</a>:</strong> The post-Christ Nephite society achieved a Zion-like state: "no contentions... no poor among them"</li>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng&id=21-22" target="_blank">3 Nephi 17:21–22</a>:</strong> Jesus weeps among the Nephites—divine emotion displayed</li>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/13?lang=eng&id=2-6" target="_blank">Ether 13:2–6</a>:</strong> The New Jerusalem and the return of Enoch's city</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Doctrine and Covenants Connections</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrine and Covenants Connections</h4>
 <ul>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/38?lang=eng&id=4" target="_blank">D&C 38:4</a>:</strong> "I am the same which have taken the Zion of Enoch into mine own bosom"</li>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/45?lang=eng&id=11-14" target="_blank">D&C 45:11–14</a>:</strong> The return of Enoch's city</li>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84?lang=eng&id=99-100" target="_blank">D&C 84:99–100</a>:</strong> "The Lord hath brought again Zion"</li>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/97?lang=eng&id=21" target="_blank">D&C 97:21</a>:</strong> "Zion is the pure in heart"</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Pearl of Great Price Connections</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Pearl of Great Price Connections</h4>
 <ul>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=27-36" target="_blank">Moses 6:27–36</a>:</strong> Enoch's call (continues into Moses 7)</li>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/2?lang=eng&id=6" target="_blank">Abraham 2:6</a>:</strong> The promise to gather the elect (echoes Moses 7:62)</li>
 </ul>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>This Week's Key Doctrines</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>This Week's Key Doctrines</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <ol>
 <li><strong>Divine Passibility:</strong> God has emotions; He can and does weep over His children's choices (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=28-37" target="_blank">Moses 7:28–37</a>).</li>
 <li><strong>The Definition of Zion:</strong> Zion is a people of one heart and one mind, dwelling in righteousness, with no poor among them (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=18" target="_blank">Moses 7:18</a>).</li>
@@ -501,9 +459,9 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Temple Connections</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Temple Connections</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p>Moses 7 contains significant temple themes:</p>
 <ul>
 <li><strong>Translation as Temple Ascent:</strong> The translation of Zion parallels temple imagery of ascending to God's presence. Just as priests ascend through temple spaces of increasing holiness, Enoch's community ascends to God's "abode" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=21" target="_blank">Moses 7:21</a>).</li>
@@ -513,9 +471,9 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>CFM Manual Emphasis</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>CFM Manual Emphasis</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p><strong>Manual Focus:</strong> Understanding Zion and how we can help build it today.</p>
 <p><strong>Key Questions from Manual:</strong></p>
 <ul>
@@ -532,9 +490,9 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Suggested Reading Approach</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Suggested Reading Approach</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p><strong>If You Have Limited Time (Essential Reading):</strong></p>
 <ul>
 <li><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=18" target="_blank">Moses 7:18</a> — Definition of Zion</li>
@@ -556,30 +514,22 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Insights from Video Resources</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>The Weeping God (<a href="https://scripturecentral.org" target="_blank">Scripture Central</a>)</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Insights from Video Resources</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">The Weeping God (<a href="https://scripturecentral.org" target="_blank">Scripture Central</a>)</h4>
 <p>Taylor Halverson and Tyler Griffin discuss how Moses 7:28–37 challenges classical theology's doctrine of divine impassibility. The weeping God reveals a Father whose love makes Him vulnerable to His children's choices. This is not weakness but the necessary corollary of genuine love.</p>
-</div>
-<button class="sg-inner-accordion"><span>Zion as Community (<a href="https://followhim.co" target="_blank">Follow Him Podcast</a>)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Zion as Community (<a href="https://followhim.co" target="_blank">Follow Him Podcast</a>)</h4>
 <p>Hank Smith and John Bytheway explore how Moses 7:18 defines Zion in relational rather than geographical terms. Building Zion today means creating communities characterized by unity, righteousness, and economic equality—starting in our own homes.</p>
-</div>
-<button class="sg-inner-accordion"><span>The Return of Enoch's City (<a href="https://interpreterfoundation.org" target="_blank">Interpreter Foundation</a>)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">The Return of Enoch's City (<a href="https://interpreterfoundation.org" target="_blank">Interpreter Foundation</a>)</h4>
 <p>Jeffrey M. Bradshaw's essays on Moses 7 explore the ancient Enoch traditions and how Moses 7 both draws from and transforms them. The promise of Zion's return provides the hope that sustains the gathering of Israel.</p>
-</div>
-<button class="sg-inner-accordion"><span>Translation and Terrestrial Order (<a href="https://ldsperspectives.com" target="_blank">LDS Perspectives</a>)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Translation and Terrestrial Order (<a href="https://ldsperspectives.com" target="_blank">LDS Perspectives</a>)</h4>
 <p>Discussion of Joseph Smith's teachings on translated beings and their role as "ministering angels unto many planets." Enoch's city has not been idle during its millennia of separation from earth.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Study Guide Files This Week</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Study Guide Files This Week</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <table class="info-table">
 <tr>
 <th>File</th>
@@ -616,12 +566,12 @@
         </div>
 
         <!-- SECTION 2: HISTORICAL & CULTURAL CONTEXT -->
-        <button class="sg-accordion-section">2. Historical & Cultural Context</button>
-        <div class="sg-panel">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">2. Historical & Cultural Context</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
             <div class="panel-content">
-                <button class="sg-sub-accordion"><span>Moses 7 | February 2–8, 2026</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active"><span>Moses 7 | February 2–8, 2026</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p><strong>What This Section Covers:</strong></p>
 <ul>
 <li><a href="#historical-setting" target="_blank">Historical Setting</a> — Quick-reference overview of dates and context</li>
@@ -638,9 +588,9 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Historical Setting</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Historical Setting</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <table class="info-table">
 <tr>
 <th>Aspect</th>
@@ -674,12 +624,11 @@
 <p>Moses 7 presents Enoch's sweeping vision of human history—from the wickedness that surrounded him to the triumphant return of Zion at the Second Coming. This chapter is unparalleled in scripture for its emotional intensity (a God who weeps), its communal theology (an entire city translated), and its eschatological scope (spanning millennia in a single vision). The <em>recording</em> of this vision came through Joseph Smith in 1830, but the <em>content</em> resonates with ancient Enoch traditions preserved across multiple cultures—traditions largely unavailable to Joseph Smith.</p>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Evidence of Antiquity: Why Moses 7 Matters</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Evidence of Antiquity: Why Moses 7 Matters</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p>Recent scholarship has identified striking parallels between specific details in Moses 7 and ancient texts that Joseph Smith could not have known. These parallels strengthen the case for the ancient origins of the Book of Moses.</p>
-<button class="sg-inner-accordion"><span>Summary of Ancient Parallels</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Summary of Ancient Parallels</h4>
 <table class="info-table">
 <tr>
 <th>Detail in Moses 7</th>
@@ -728,9 +677,7 @@
 </tr>
 </table>
 <p><em>Each parallel is explored in detail below and in the Key Passages file.</em></p>
-</div>
-<button class="sg-inner-accordion"><span>The Weeping God: An Ancient Motif (Moses 7:28–37)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">The Weeping God: An Ancient Motif (Moses 7:28–37)</h4>
 <p>The portrayal of a weeping God in Moses 7 has no parallel in the Bible—yet it appears prominently in ancient Jewish and early Christian sources unknown to Joseph Smith:</p>
 <p><strong>1 Enoch (Book of Parables):</strong> Enoch "wept bitterly" over the wickedness of mankind, and heaven joins in his sorrow.</p>
 <p><strong>Midrash Rabbah on Lamentations:</strong> God Himself weeps at the destruction of the temple. When the angels try to stop Him, God replies: "If thou lettest Me not weep now, I will repair to a place which thou hast not permission to enter, and will weep there."</p>
@@ -738,9 +685,7 @@
 <p><strong>Zohar:</strong> A full "chorus of weeping" begins with the Messiah and expands to include all heaven.</p>
 <p>As Hugh Nibley observed: "There is, to say the least, no gloating in heaven over the fate of the wicked world. [And it] is Enoch who leads the weeping."</p>
 <p><em>Source: Jeffrey M. Bradshaw, "<a href="https://interpreterfoundation.org/book-of-moses-essays-028" target="_blank">The Weeping of Enoch</a>" (Interpreter Foundation, Essay #28)</em></p>
-</div>
-<button class="sg-inner-accordion"><span>The Complaining Earth: "Mother of Men" (Moses 7:48)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">The Complaining Earth: "Mother of Men" (Moses 7:48)</h4>
 <p>Moses 7:48 presents the earth speaking as "the mother of men," asking to be cleansed from wickedness. This precise motif appears nowhere in the Bible—but it does appear in the Dead Sea Scrolls:</p>
 <p><strong>Book of Giants (4Q203, Frag. 8:6–12):</strong> > "Through your fornication on the earth, and it (the earth) has [risen up ag]ainst y[ou and is crying out] and raising accusation against you."</p>
 <p><strong>1 Enoch 7:4–6; 8:4:</strong> > "The earth, devoid (of inhabitants), raises the voice of their cries to the gates of heaven."</p>
@@ -752,9 +697,7 @@
 </ol>
 <p><strong>Why This Matters:</strong> The Book of Giants was not discovered until 1948 at Qumran and not translated until decades later. Joseph Smith could not have known this text.</p>
 <p><em>Source: Jeffrey M. Bradshaw, "<a href="https://interpreterfoundation.org/book-of-moses-essays-026" target="_blank">The Complaining Voice of the Earth</a>" (Interpreter Foundation, Essay #26); Andrew C. Skinner, "Joseph Smith Vindicated Again"</em></p>
-</div>
-<button class="sg-inner-accordion"><span>Enoch's Transfiguration and Throne Rights (Moses 7:3, 59)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Enoch's Transfiguration and Throne Rights (Moses 7:3, 59)</h4>
 <p>Moses 7:3 describes Enoch being "clothed upon with glory," and 7:59 states that God has "given unto me a right to thy throne." Both concepts have striking ancient parallels:</p>
 <p><strong>2 Enoch 22:8–10 (Slavonic):</strong> > "And the Lord said to Michael, 'Go, and extract Enoch from his earthly clothing. And anoint him with my delightful oil, and put him into the clothes of my glory.' ... And I looked at myself, and I had become like one of his glorious ones."</p>
 <p><strong>Nineveh Tablet (pre-1100 BC):</strong> An ancient tablet describes Enmeduranki (identified with Enoch by scholars) being "set on a large throne of gold" by the gods.</p>
@@ -762,17 +705,13 @@
 <p><strong>3 Enoch:</strong> > Enoch declares: "He (God) made me a throne like the throne of glory."</p>
 <p>Hugh Nibley showed these parallels to Matthew Black, a prominent Enoch scholar. Nibley later reported that they "really knocked Professor Black over. … It really staggered him."</p>
 <p><em>Source: Jeffrey M. Bradshaw, "<a href="https://interpreterfoundation.org/book-of-moses-essays-022" target="_blank">Enoch's Transfiguration</a>" (Interpreter Foundation, Essay #22)</em></p>
-</div>
-<button class="sg-inner-accordion"><span>Collective Translation: Unique to Moses 7</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Collective Translation: Unique to Moses 7</h4>
 <p>While individual translation (Enoch, Elijah) appears across cultures, the translation of an entire community is virtually unique to Moses 7—yet ancient sources hint at this possibility:</p>
 <p><strong>Mandaean Enoch Fragments:</strong> Describe others besides Enoch ascending bodily with him.</p>
 <p><strong>Late Midrash:</strong> Contains traditions of group ascension with righteous leaders.</p>
 <p>As David Larsen notes: "Can an entire community ascend to heaven?" Moses 7 answers affirmatively—a concept with few parallels in world literature but attested in fragmentary ancient sources.</p>
 <p><em>Source: Jeffrey M. Bradshaw, "<a href="https://interpreterfoundation.org/book-of-moses-essays-030" target="_blank">God Receives Zion</a>" (Interpreter Foundation, Essay #30); David J. Larsen, "Enoch and the City of Zion" (BYU Studies)</em></p>
-</div>
-<button class="sg-inner-accordion"><span>For Further Study: Interpreter Foundation Essays</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">For Further Study: Interpreter Foundation Essays</h4>
 <p>The following essays from Jeffrey M. Bradshaw's "Book of Moses Essay Series" directly address Moses 7's ancient parallels:</p>
 <table class="info-table">
 <tr>
@@ -824,37 +763,31 @@
 <p><a href="https://interpreterfoundation.org/book-of-moses-essays/" target="_blank">Access the full essay series at Interpreter Foundation</a></p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Overview of Ancient Enoch Traditions</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Overview of Ancient Enoch Traditions</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p>The figure of Enoch occupies a unique place in ancient religious imagination. Despite receiving only four verses in Genesis (5:21–24), Enoch generated more extra-biblical literature than perhaps any other Old Testament figure. The cryptic phrase "Enoch walked with God: and he was not; for God took him" sparked centuries of speculation about what this patriarch experienced, learned, and revealed.</p>
 <p>Moses 7 enters this rich tradition not as a late invention but as a Restoration of what was always known about Enoch among the covenant people—knowledge preserved in fragmentary form across multiple ancient traditions and now restored in fullness through prophetic revelation.</p>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>The Biblical Foundation: Genesis 5:21–24</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>The Mysterious Four Verses</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>The Biblical Foundation: Genesis 5:21–24</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">The Mysterious Four Verses</h4>
 <p>The Hebrew text of <a href="https://www.blueletterbible.org/kjv/gen/5/21/s_5021" target="_blank">Genesis 5:21–24</a> reads:</p>
 <p>> וַיְחִי חֲנוֹךְ חָמֵשׁ וְשִׁשִּׁים שָׁנָה וַיּוֹלֶד אֶת־מְתוּשָׁלַח׃ וַיִּתְהַלֵּךְ חֲנוֹךְ אֶת־הָאֱלֹהִים אַחֲרֵי הוֹלִידוֹ אֶת־מְתוּשֶׁלַח שְׁלֹשׁ מֵאוֹת שָׁנָה וַיּוֹלֶד בָּנִים וּבָנוֹת׃ וַיְהִי כָּל־יְמֵי חֲנוֹךְ חָמֵשׁ וְשִׁשִּׁים שָׁנָה וּשְׁלֹשׁ מֵאוֹת שָׁנָה׃ וַיִּתְהַלֵּךְ חֲנוֹךְ אֶת־הָאֱלֹהִים וְאֵינֶנּוּ כִּי־לָקַח אֹתוֹ אֱלֹהִים׃</p>
 <p><strong>Translation:</strong> "And Enoch lived sixty-five years and begat Methuselah. And Enoch walked with God after he begat Methuselah three hundred years, and begat sons and daughters. And all the days of Enoch were three hundred sixty-five years. And Enoch walked with God, and he was not, for God took him."</p>
-</div>
-<button class="sg-inner-accordion"><span>Key Phrases and Their Significance</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Key Phrases and Their Significance</h4>
 <p><strong>"Walked with God" (וַיִּתְהַלֵּךְ... אֶת־הָאֱלֹהִים):</strong> The verb <em><a href="https://www.blueletterbible.org/lexicon/h1980/kjv/wlc/0-1/" target="_blank">hithallek</a></em> (הִתְהַלֵּךְ) is the hithpael (reflexive) form of <em>halak</em> (to walk). This form appears only twice in Genesis 5 (for Enoch) and is also used of Noah (<a href="https://www.blueletterbible.org/kjv/gen/6/9/s_6009" target="_blank">Genesis 6:9</a>). The preposition <em>et</em> (אֶת) suggests intimate companionship—walking "with" God rather than merely "before" Him.</p>
 <p><strong>"He was not" (וְאֵינֶנּוּ):</strong> This phrase (<em>einenu</em>) literally means "and-he-was-not-there." It does not say he died; it says he ceased to be present. The contrast with other Genesis 5 patriarchs is stark—each ends with "and he died" (וַיָּמֹת), but Enoch's entry conspicuously lacks this formula.</p>
 <p><strong>"God took him" (לָקַח אֹתוֹ אֱלֹהִים):</strong> The verb <em><a href="https://www.blueletterbible.org/lexicon/h3947/kjv/wlc/0-1/" target="_blank">laqach</a></em> (לָקַח) means "to take, receive, fetch." It is used for taking a wife (Genesis 4:19), receiving instruction (Proverbs 4:2), and being taken by God. The same root appears when Elijah is "taken" (2 Kings 2:10). God actively removed Enoch from earthly existence.</p>
 <p><strong>365 Years:</strong> The number 365—the days in a solar year—may carry symbolic weight. In Mesopotamian tradition, the sun god Shamash was associated with cosmic knowledge. Enoch's lifespan matching the solar year may hint at his acquisition of celestial/cosmological wisdom.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Extra-Biblical Enoch Literature</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>1 Enoch (Ethiopic Enoch)</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Extra-Biblical Enoch Literature</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">1 Enoch (Ethiopic Enoch)</h4>
 <p>The most extensive and influential Enoch text is 1 Enoch, preserved in Ethiopic (Ge'ez) and representing traditions that may date to the 3rd century BC. It was considered scripture by the Ethiopian Orthodox Church and was quoted in the New Testament (<a href="https://www.blueletterbible.org/kjv/jde/1/14/s_1167014" target="_blank">Jude 1:14–15</a>).</p>
 <h4>Structure of 1 Enoch</h4>
 <table class="info-table">
@@ -925,15 +858,11 @@
 <td>Enoch as community builder and prophet</td>
 </tr>
 </table>
-</div>
-<button class="sg-inner-accordion"><span>2 Enoch (Slavonic Enoch)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">2 Enoch (Slavonic Enoch)</h4>
 <p>2 Enoch, preserved in Old Church Slavonic, describes Enoch's ascent through seven (or ten) heavens. In the seventh heaven, Enoch encounters God's throne and is transformed:</p>
 <p>> "And the Lord said to Michael, 'Go, and extract Enoch from his earthly clothing. And anoint him with my delightful oil, and put him into the clothes of my glory.' And Michael did as the Lord had said to him. He anointed me and he clothed me. And the appearance of that oil is greater than the greatest light, and its ointment is like sweet dew, and its fragrance like myrrh; and it is like the rays of the glittering sun. And I looked at myself, and I had become like one of his glorious ones, and there was no observable difference." (2 Enoch 22:8–10, Andersen translation)</p>
 <p>This transformation motif—a mortal becoming glorious—resonates with Latter-day Saint temple theology but is absent from Moses 7's emphasis on community rather than individual transformation.</p>
-</div>
-<button class="sg-inner-accordion"><span>3 Enoch (Hebrew Enoch / Sefer Hekhalot)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">3 Enoch (Hebrew Enoch / Sefer Hekhalot)</h4>
 <p>3 Enoch, a later Jewish mystical text (perhaps 5th–6th century AD), presents Enoch as transformed into the angel Metatron, "the lesser YHWH." Rabbi Ishmael ascends to heaven and learns from Metatron/Enoch the secrets of the heavenly realm.</p>
 <p>Key features:</p>
 <ul>
@@ -942,9 +871,7 @@
 <li>He is called "Prince of the Divine Presence"</li>
 <li>He serves as heavenly scribe</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>The Book of Giants</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">The Book of Giants</h4>
 <p>Among the Dead Sea Scrolls (Qumran), fragments of the "Book of Giants" survive. This text, related to 1 Enoch, expands the Watchers narrative and includes the giants having troubling dreams that Enoch interprets. Hugh Nibley extensively analyzed parallels between the Book of Giants and the Book of Moses.</p>
 <h4>The Nephilim as "Fallen Ones"</h4>
 <p>The term <strong>Nephilim</strong> (נְפִילִים) in Genesis 6:4 and Numbers 13:33 is often translated as "giants," but this may obscure the deeper meaning embedded in the Hebrew root. The word derives from <strong>naphal</strong> (נָפַל), meaning "to fall." This etymology suggests that the Nephilim were not primarily defined by their physical stature but by their <em>spiritual condition</em>—they were "the fallen ones."</p>
@@ -1003,10 +930,9 @@
 <p>Understanding the Nephilim as "fallen ones" deepens our appreciation for Enoch's achievement. While the Nephilim used their knowledge to dominate and destroy, Enoch used his to build Zion—a community "of one heart and one mind" with "no poor among them" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=18" target="_blank">Moses 7:18</a>). The contrast is deliberate: the same generation that produced the Nephilim also produced Zion. Access to divine knowledge does not determine outcomes; how we <em>use</em> that knowledge does.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Comparison: Ancient Enoch Traditions vs. Moses 7</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Comparison: Ancient Enoch Traditions vs. Moses 7</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <table class="info-table">
 <tr>
 <th>Feature</th>
@@ -1049,18 +975,15 @@
 <td>Zion's return, reunion of communities</td>
 </tr>
 </table>
-<button class="sg-inner-accordion"><span>Significance of the Differences</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Significance of the Differences</h4>
 <p>Moses 7 does not simply copy from ancient Enoch traditions—it transforms them. Where 1 Enoch emphasizes Enoch's acquisition of secret knowledge, Moses 7 emphasizes his creation of a righteous community. Where 2 Enoch focuses on individual transformation, Moses 7 focuses on collective translation. Where traditional Enoch literature presents God as distant cosmic ruler, Moses 7 reveals a weeping Father.</p>
 <p>These differences suggest that Moses 7 represents an independent tradition—or, in Latter-day Saint understanding, the original tradition from which the others derive in fragmentary, corrupted form.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>The Weeping God in Historical Perspective</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Classical Theism and Divine Impassibility</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>The Weeping God in Historical Perspective</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Classical Theism and Divine Impassibility</h4>
 <p>The doctrine of divine impassibility—that God cannot suffer, change, or be affected by creatures—became a cornerstone of classical Christian theology as the Church Fathers synthesized biblical revelation with Greek philosophical categories.</p>
 <h4>Key Figures</h4>
 <p><strong>Philo of Alexandria (c. 20 BC – 50 AD):</strong> Jewish philosopher who heavily influenced Christian thought. Philo argued that God is utterly transcendent and unchanging. Anthropomorphic language about God (hands, eyes, emotions) must be understood allegorically.</p>
@@ -1072,9 +995,7 @@
 <p><strong>Plato:</strong> The ideal Forms are perfect, unchanging, beyond affection by the material world. If God is perfect, He must be similarly unchanging.</p>
 <p><strong>Aristotle:</strong> The "Unmoved Mover" is pure actuality, with no potentiality. Change implies movement from potential to actual, which would indicate imperfection in God.</p>
 <p><strong>Stoicism:</strong> The goal of the sage is <em>apatheia</em>—freedom from passion. If human perfection involves emotional detachment, divine perfection must even more so.</p>
-</div>
-<button class="sg-inner-accordion"><span>Moses 7's Radical Alternative</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Moses 7's Radical Alternative</h4>
 <p>Against this entire tradition, Moses 7 presents a God who weeps. The text offers no apology, no allegorical interpretation. God Himself explains the reason for His weeping: His children—"the workmanship of mine own hands"—have rejected Him and become "without affection" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=32-33" target="_blank">Moses 7:32–33</a>).</p>
 <p>Latter-day Saint theology, informed by additional revelation, rejects divine impassibility:</p>
 <ul>
@@ -1085,12 +1006,10 @@
 <p>Elder Jeffrey R. Holland taught: "I am convinced that in the garden and on the cross, the weight of human sin and sorrow was placed upon a Being who knew no sin, who felt with perfect clarity every one of our transgressions and shortcomings" ("<a href="https://www.churchofjesuschrist.org/study/general-conference/2009/04/none-were-with-him?lang=eng" target="_blank">None Were With Him</a>," General Conference, April 2009). A God who can suffer in the Atonement is a God who can weep over His children's choices.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>The Concept of Zion in Ancient and Modern Context</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Biblical Development of "Zion"</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>The Concept of Zion in Ancient and Modern Context</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Biblical Development of "Zion"</h4>
 <p>The term <em>Tsiyon</em> (צִיּוֹן) appears 152 times in the Hebrew Bible, undergoing significant semantic development:</p>
 <table class="info-table">
 <tr>
@@ -1124,18 +1043,14 @@
 <td><a href="https://www.blueletterbible.org/kjv/isa/52/2/s_731002" target="_blank">Isaiah 52:2</a>: "Shake thyself from the dust... O captive daughter of Zion"</td>
 </tr>
 </table>
-</div>
-<button class="sg-inner-accordion"><span>Etymology Debate</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Etymology Debate</h4>
 <p>The etymology of <em>Tsiyon</em> remains uncertain:</p>
 <ol>
 <li>*<em>From </em>tsun<em> (צון):</em>* "to protect" — Zion as fortress/citadel</li>
 <li>*<em>From </em>tsiyyah<em> (צִיָּה):</em>* "dry/parched land" — possibly referring to terrain</li>
 <li>*<em>From </em>tsiyun<em> (צִיּוּן):</em>* "marker/monument" — Zion as memorial or sign</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Moses 7's Redefinition</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Moses 7's Redefinition</h4>
 <p>Moses 7:18 provides a definition unique in scripture: "The Lord called his people Zion, because they were of one heart and one mind, and dwelt in righteousness; and there was no poor among them."</p>
 <p>This shifts Zion from geography to character:</p>
 <ul>
@@ -1146,12 +1061,10 @@
 <p>This redefinition has profound implications for Latter-day Saint theology. President Spencer W. Kimball taught: "May I suggest three things that we must do to establish Zion... First, we must eliminate the individual tendency to selfishness... Second, we must cooperate completely and work in harmony... Third, we must lay on the altar and sacrifice whatever is required by the Lord" ("<a href="https://www.churchofjesuschrist.org/study/general-conference/1978/04/becoming-the-pure-in-heart?lang=eng" target="_blank">Becoming the Pure in Heart</a>," General Conference, April 1978).</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Translation: Ancient Concepts and Restoration Clarification</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Ancient Near Eastern and Biblical Parallels</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Translation: Ancient Concepts and Restoration Clarification</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Ancient Near Eastern and Biblical Parallels</h4>
 <p>The concept of humans being taken to heaven without dying appears across cultures:</p>
 <table class="info-table">
 <tr>
@@ -1190,9 +1103,7 @@
 <td>Granted immortality after Flood</td>
 </tr>
 </table>
-</div>
-<button class="sg-inner-accordion"><span>Collective Translation: Unique to Moses 7</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Collective Translation: Unique to Moses 7</h4>
 <p>What sets Moses 7 apart is the translation of an entire community, not just an individual. "Zion, in process of time, was taken up into heaven" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=21" target="_blank">Moses 7:21</a>).</p>
 <p>This collective translation has few if any parallels in world literature. It establishes a pattern:</p>
 <ul>
@@ -1200,9 +1111,7 @@
 <li>Salvation involves covenant community</li>
 <li>The celestial goal is social, not solitary</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Joseph Smith's Clarification</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Joseph Smith's Clarification</h4>
 <p>Joseph Smith taught that translated beings:</p>
 <ul>
 <li>Do not immediately enter God's presence in fullness</li>
@@ -1212,12 +1121,10 @@
 <p>This suggests that Enoch's city has not been idle during the millennia since translation. The community continues its work of ministry on a cosmic scale.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>The Flood in Ancient Context</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Mesopotamian Flood Traditions</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>The Flood in Ancient Context</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Mesopotamian Flood Traditions</h4>
 <p>Moses 7:38–52 positions the Flood within Enoch's prophetic vision. This narrative connects to broader ANE traditions:</p>
 <h4>Gilgamesh Epic (Tablet XI)</h4>
 <p>Utnapishtim, the Babylonian Noah figure, tells Gilgamesh how he survived the divine flood:</p>
@@ -1239,9 +1146,7 @@
 </ul>
 <h4>Sumerian Flood Story</h4>
 <p>The oldest version, featuring Ziusudra as the hero.</p>
-</div>
-<button class="sg-inner-accordion"><span>Distinctive Elements in Moses 7</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Distinctive Elements in Moses 7</h4>
 <p>Moses 7's flood narrative differs from ANE parallels in crucial ways:</p>
 <table class="info-table">
 <tr>
@@ -1272,17 +1177,13 @@
 <p>The "spirits in prison" concept anticipates <a href="https://www.blueletterbible.org/kjv/1pe/3/19/s_1154019" target="_blank">1 Peter 3:19–20</a> and the Latter-day Saint doctrine of work for the dead. Even those destroyed in the Flood are not beyond redemption's reach.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>The Earth as Covenantal Being</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Personification in Moses 7</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>The Earth as Covenantal Being</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Personification in Moses 7</h4>
 <p>Moses 7:48–49 presents a remarkable personification:</p>
 <p>> "And it came to pass that Enoch looked upon the earth; and he heard a voice from the bowels thereof, saying: Wo, wo is me, the mother of men; I am pained, I am weary, because of the wickedness of my children. When shall I rest, and be cleansed from the filthiness which is gone forth out of me? When will my Creator sanctify me, that I may rest, and righteousness for a season abide upon my face?"</p>
-</div>
-<button class="sg-inner-accordion"><span>Ancient Near Eastern Background</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Ancient Near Eastern Background</h4>
 <p>Personification of the earth appears in various ANE traditions:</p>
 <ul>
 <li><strong>Sumerian:</strong> Ki (earth) as divine being, mother of gods</li>
@@ -1290,9 +1191,7 @@
 <li><strong>Greek:</strong> Gaia as primordial earth goddess</li>
 </ul>
 <p>However, these are typically deities in their own right. Moses 7 presents the earth as a covenantal being in relationship with its Creator—not a goddess but a created entity with sentience and moral concern.</p>
-</div>
-<button class="sg-inner-accordion"><span>Restoration Expansion</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Restoration Expansion</h4>
 <p>Latter-day revelation expands this concept:</p>
 <ul>
 <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/88?lang=eng&id=25-26" target="_blank">D&C 88:25–26</a>: "The earth abideth the law of a celestial kingdom... it shall be sanctified"</li>
@@ -1302,12 +1201,10 @@
 <p>The earth's groaning (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=56" target="_blank">Moses 7:56</a>) at the crucifixion and its promised "rest" for a thousand years (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=64" target="_blank">Moses 7:64</a>) suggest ongoing covenantal relationship between creation and Creator.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Apocalyptic Literature: Genre Context</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Characteristics of Jewish Apocalyptic</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Apocalyptic Literature: Genre Context</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Characteristics of Jewish Apocalyptic</h4>
 <p>Moses 7 shares features with Jewish apocalyptic literature (Daniel, 1 Enoch, 4 Ezra, 2 Baruch):</p>
 <ol>
 <li><strong>Heavenly Visions:</strong> Prophet sees from cosmic/divine perspective</li>
@@ -1317,9 +1214,7 @@
 <li><strong>Dualistic Conflict:</strong> Good vs. evil on universal scale</li>
 <li><strong>Eschatological Hope:</strong> Vindication of the righteous at the end</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Unique Elements in Moses 7</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Unique Elements in Moses 7</h4>
 <p>While sharing apocalyptic features, Moses 7 differs significantly:</p>
 <table class="info-table">
 <tr>
@@ -1350,10 +1245,9 @@
 <p>Moses 7 uses apocalyptic framework but fills it with prophetic (ethical) content. The goal is not esoteric knowledge but Zion community.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Questions for Further Study</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Questions for Further Study</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <ol>
 <li>Why might Genesis preserve only four verses about Enoch when such extensive traditions existed?</li>
 <li>How does Moses 7's portrait of a weeping God affect your understanding of divine nature?</li>
@@ -1364,35 +1258,28 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Resources for Further Study</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Ancient Enoch Literature</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Resources for Further Study</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Ancient Enoch Literature</h4>
 <ul>
 <li>R.H. Charles, <em>The Book of Enoch</em> (1917) — Classic translation of 1 Enoch</li>
 <li>F.I. Andersen, "2 Enoch" in <em>The Old Testament Pseudepigrapha</em>, vol. 1</li>
 <li>P.S. Alexander, "3 Enoch" in <em>The Old Testament Pseudepigrapha</em>, vol. 1</li>
 <li>J.T. Milik, <em>The Books of Enoch: Aramaic Fragments from Qumran</em></li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Hugh Nibley on Enoch</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Hugh Nibley on Enoch</h4>
 <ul>
 <li><em>Enoch the Prophet</em> (Collected Works of Hugh Nibley, Vol. 2)</li>
 <li>"A Strange Thing in the Land: The Return of the Book of Enoch" in <em>Ensign</em> (1975–1977)</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Interpreter Foundation Essays</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Interpreter Foundation Essays</h4>
 <ul>
 <li>Jeffrey M. Bradshaw, "Book of Moses Essays" #21–30 on Enoch's Grand Vision</li>
 <li><a href="https://interpreterfoundation.org/knowhy-otl05b-how-does-moses-5-8-illustrate-the-consequences-of-keeping-and-breaking-temple-covenants-one-by-one/" target="_blank">KnoWhy OTL05B</a> — Temple Covenants in Moses 5–8</li>
 <li><a href="https://interpreterfoundation.org/knowhy-otl05c-could-joseph-smith-have-drawn-on-ancient-manuscripts-when-he-translated-the-story-of-enoch" target="_blank">KnoWhy OTL05C</a> — Joseph Smith and Ancient Enoch Manuscripts</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Divine Impassibility Debate</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Divine Impassibility Debate</h4>
 <ul>
 <li>Thomas G. Weinandy, <em>Does God Suffer?</em> (2000)</li>
 <li>Terence E. Fretheim, <em>The Suffering of God</em> (1984)</li>
@@ -1407,17 +1294,16 @@
 </table>
 </div>
 </div>
-</div>
             </div>
         </div>
 
         <!-- SECTION 3: KEY PASSAGES STUDY -->
-        <button class="sg-accordion-section">3. Key Passages Study</button>
-        <div class="sg-panel">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">3. Key Passages Study</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
             <div class="panel-content">
-                <button class="sg-sub-accordion"><span>Moses 7 | February 2–8, 2026</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active"><span>Moses 7 | February 2–8, 2026</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p><strong>Key Passages in This File:</strong></p>
 <ul>
 <li><a href="#passage-1-the-definition-of-zion" target="_blank">Passage 1: The Definition of Zion</a> — Moses 7:18</li>
@@ -1428,16 +1314,13 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Passage 1: The Definition of Zion</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Complete Scripture Text</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Passage 1: The Definition of Zion</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Complete Scripture Text</h4>
 <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=18" target="_blank">Moses 7:18</a></strong></p>
 <p>> "And the Lord called his people Zion, because they were of one heart and one mind, and dwelt in righteousness; and there was no poor among them."</p>
-</div>
-<button class="sg-inner-accordion"><span>Literary Structure Analysis</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Literary Structure Analysis</h4>
 <p>This single verse contains a fourfold definition structured as:</p>
 <p>``` SUBJECT: "The Lord called his people Zion" REASON ("because"):</p>
 <ol>
@@ -1447,9 +1330,7 @@
 </ol>
 <p>```</p>
 <p>The structure moves from internal state (heart/mind) to external behavior (dwelling in righteousness) to social condition (no poor). This is not accidental—Zion begins with interior transformation and manifests in community life.</p>
-</div>
-<button class="sg-inner-accordion"><span>Hebrew Insights</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Hebrew Insights</h4>
 <table class="info-table">
 <tr>
 <th>English</th>
@@ -1488,26 +1369,20 @@
 </tr>
 </table>
 <p>The word <em>echad</em> is particularly significant. It describes a unity that does not erase distinction—the same word used in "the LORD is one" (Deuteronomy 6:4) and "they shall be one flesh" (Genesis 2:24). Zion's unity is not uniformity but harmony.</p>
-</div>
-<button class="sg-inner-accordion"><span>Historical & Cultural Context</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Historical & Cultural Context</h4>
 <h4>Deuteronomy 15:4 Background</h4>
 <p>Moses 7:18 echoes <a href="https://www.blueletterbible.org/kjv/deu/15/4/s_168004" target="_blank">Deuteronomy 15:4</a>: "Save when there shall be no poor among you; for the LORD shall greatly bless thee." The context there is sabbatical year laws—every seventh year, debts were released and provision made for the poor. If Israel faithfully observed these laws, poverty would be eliminated.</p>
 <p>Enoch's Zion achieved what Israel was promised through covenant faithfulness: complete economic justice through voluntary consecration.</p>
 <h4>Acts 4:32-35 Parallel</h4>
 <p>The early Christian church briefly achieved a similar state: "the multitude of them that believed were of one heart and of one soul: neither said any of them that ought of the things which he possessed was his own; but they had all things common" (<a href="https://www.blueletterbible.org/kjv/act/4/32/s_1022032" target="_blank">Acts 4:32</a>).</p>
-</div>
-<button class="sg-inner-accordion"><span>Doctrinal Analysis</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrinal Analysis</h4>
 <h4>Three Marks of Zion</h4>
 <p><strong>1. Unity ("one heart and one mind")</strong> This is not uniformity of opinion but unity of purpose and love. President Henry B. Eyring taught: "The Lord requires that His people be one in heart. He sets for them the high standard of being one with Him and the Father" ("<a href="https://www.churchofjesuschrist.org/study/general-conference/1998/04/that-we-may-be-one?lang=eng" target="_blank">That We May Be One</a>," General Conference, April 1998).</p>
 <p><strong>2. Righteousness ("dwelt in righteousness")</strong> The Hebrew concept of <em>tsedaqah</em> implies right relationships—with God (vertical) and with each other (horizontal). Righteousness in Hebrew thought is always covenantal and communal.</p>
 <p><strong>3. Economic Equality ("no poor among them")</strong> This was achieved not through compulsion but through consecration. <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/42?lang=eng&id=30" target="_blank">D&C 42:30</a> describes the law of consecration: "Thou shalt consecrate of thy properties for their support."</p>
 <h4>Zion as People, Not Place</h4>
 <p>This verse fundamentally redefines Zion. While "Zion" in biblical usage typically refers to a location (the hill, the temple mount, Jerusalem), Moses 7:18 makes Zion a description of a people's character. <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/97?lang=eng&id=21" target="_blank">D&C 97:21</a> confirms this: "Zion is the pure in heart."</p>
-</div>
-<button class="sg-inner-accordion"><span>Cross-References</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Cross-References</h4>
 <table class="info-table">
 <tr>
 <th>Reference</th>
@@ -1538,9 +1413,7 @@
 <td>"There shall be no poor among you"</td>
 </tr>
 </table>
-</div>
-<button class="sg-inner-accordion"><span>Latter-day Saint Connections</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Latter-day Saint Connections</h4>
 <h4>The Law of Consecration</h4>
 <p>Moses 7:18 provides the scriptural foundation for the law of consecration revealed in D&C 42 and 82. The early Saints in Kirtland and Missouri attempted to establish this order, with varying success.</p>
 <h4>Modern Application</h4>
@@ -1551,16 +1424,12 @@
 <li>"Lay on the altar and sacrifice whatever is required by the Lord"</li>
 </ol>
 <p>("<a href="https://www.churchofjesuschrist.org/study/general-conference/1978/04/becoming-the-pure-in-heart?lang=eng" target="_blank">Becoming the Pure in Heart</a>," General Conference, April 1978)</p>
-</div>
-<button class="sg-inner-accordion"><span>Modern Prophets on This Passage</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Modern Prophets on This Passage</h4>
 <p>> "We know that the Savior will come to a people who have been gathered and prepared to live as the people did in the city of Enoch. The people there were united in faith in Jesus Christ and had become so completely pure that they were taken up to heaven."</p>
 <p><strong>Reference:</strong> President Henry B. Eyring, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2020/10/35eyring?lang=eng" target="_blank">Sisters in Zion</a>," General Conference (October 2020).</p>
 <p>> "If men are to be brought again into the presence of the Father, they must be sanctified; they must be pure. The people of Enoch were of one heart and of one mind and dwelt in righteousness, and there was no poor among them, and the Lord called His people Zion."</p>
 <p><strong>Reference:</strong> President Dallin H. Oaks, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2000/10/the-challenge-to-become?lang=eng" target="_blank">The Challenge to Become</a>," General Conference (October 2000).</p>
-</div>
-<button class="sg-inner-accordion"><span>Reflection Questions</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Reflection Questions</h4>
 <ol>
 <li>In what specific ways could your family become more "of one heart and one mind"?</li>
 <li>How does the Hebrew meaning of "one" (<em>echad</em>—unity in diversity) change your understanding of Zion?</li>
@@ -1570,22 +1439,16 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Passage 2: God Weeps</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Complete Scripture Text</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Passage 2: God Weeps</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Complete Scripture Text</h4>
 <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=28-29" target="_blank">Moses 7:28-29</a></strong></p>
 <p>> "And it came to pass that the God of heaven looked upon the residue of the people, and he wept; and Enoch bore record of it, saying: How is it that the heavens weep, and shed forth their tears as the rain upon the mountains? > > And Enoch said unto the Lord: How is it that thou canst weep, seeing thou art holy, and from all eternity to all eternity?"</p>
-</div>
-<button class="sg-inner-accordion"><span>Literary Structure Analysis</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Literary Structure Analysis</h4>
 <p>``` NARRATIVE: "The God of heaven looked... and he wept" WITNESS: "Enoch bore record of it" FIRST QUESTION (poetic): "How is it that the heavens weep, and shed forth their tears as the rain upon the mountains?" SECOND QUESTION (theological): "How is it that thou canst weep, seeing thou art holy, and from all eternity to all eternity?" ```</p>
 <p>Enoch's questions move from observation (the heavens weeping) to theological problem (how can an eternal, holy Being weep?). The second question articulates the classical doctrine of divine impassibility, which the passage then overturns.</p>
-</div>
-<button class="sg-inner-accordion"><span>Hebrew Insights</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Hebrew Insights</h4>
 <table class="info-table">
 <tr>
 <th>English</th>
@@ -1620,9 +1483,7 @@
 <li>Israel weeping in Egypt (<a href="https://www.blueletterbible.org/kjv/exo/2/6/s_52006" target="_blank">Exodus 2:6</a>)</li>
 </ul>
 <p>This is not a metaphor for divine displeasure but genuine emotional grief.</p>
-</div>
-<button class="sg-inner-accordion"><span>Historical & Cultural Context</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Historical & Cultural Context</h4>
 <h4>Divine Impassibility in Classical Theology</h4>
 <p>Enoch's question articulates the classical theological position that God cannot suffer or be affected by creatures. This doctrine developed as Christian theologians synthesized biblical revelation with Greek philosophy:</p>
 <ul>
@@ -1634,9 +1495,7 @@
 <h4>Biblical Anthropomorphisms</h4>
 <p>Traditional theology explained passages attributing emotions to God as "anthropomorphisms"—human language accommodating our limited understanding. When Scripture says God is "angry" or "pleased," this was understood as God willing certain effects, not experiencing emotional states.</p>
 <p>Moses 7:28-37 directly challenges this interpretation by having God Himself explain why He weeps.</p>
-</div>
-<button class="sg-inner-accordion"><span>Doctrinal Analysis</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrinal Analysis</h4>
 <h4>The Theological Problem</h4>
 <p>Enoch perfectly articulates the difficulty:</p>
 <ol>
@@ -1662,9 +1521,7 @@
 <li>The Atonement involved infinite suffering</li>
 <li>Divine love is not merely willing good but actually caring</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Evidence of Antiquity: The Weeping God Motif</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Evidence of Antiquity: The Weeping God Motif</h4>
 <p><strong>Ancient Parallels Discovered After 1830:</strong></p>
 <p>The portrayal of a weeping God has no parallel in the Bible—yet it appears in ancient Jewish and early Christian sources unavailable to Joseph Smith:</p>
 <table class="info-table">
@@ -1697,9 +1554,7 @@
 <p>Hugh Nibley observed: "There is, to say the least, no gloating in heaven over the fate of the wicked world. [And it] is Enoch who leads the weeping."</p>
 <p><strong>Why This Matters:</strong> The "weeping prophet" motif is well-attested in ancient Enoch traditions but appears nowhere in sources available to Joseph Smith in 1830. The Book of Moses independently preserves this ancient pattern.</p>
 <p><em>Source: Jeffrey M. Bradshaw, "<a href="https://interpreterfoundation.org/book-of-moses-essays-028" target="_blank">The Weeping of Enoch</a>" (Interpreter Foundation, Essay #28)</em></p>
-</div>
-<button class="sg-inner-accordion"><span>Cross-References</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Cross-References</h4>
 <table class="info-table">
 <tr>
 <th>Reference</th>
@@ -1726,9 +1581,7 @@
 <td>God's purpose: "to see if they will do all things"</td>
 </tr>
 </table>
-</div>
-<button class="sg-inner-accordion"><span>Latter-day Saint Connections</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Latter-day Saint Connections</h4>
 <h4>Jesus Weeping</h4>
 <p>The New Testament records Jesus weeping on at least two occasions:</p>
 <ul>
@@ -1738,16 +1591,12 @@
 <p>If Jesus Christ—who perfectly reflects the Father's character—can weep, then the Father's weeping in Moses 7 is consistent.</p>
 <h4>The Atonement</h4>
 <p>A God who cannot suffer cannot atone. The Atonement required that Christ experience the full range of human pain. Elder Jeffrey R. Holland taught: "I am convinced that in the garden and on the cross, the weight of human sin and sorrow was placed upon a Being who knew no sin, who felt with perfect clarity every one of our transgressions and shortcomings" ("<a href="https://www.churchofjesuschrist.org/study/general-conference/2009/04/none-were-with-him?lang=eng" target="_blank">None Were With Him</a>," General Conference, April 2009).</p>
-</div>
-<button class="sg-inner-accordion"><span>Modern Prophets on This Passage</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Modern Prophets on This Passage</h4>
 <p>> "In the Pearl of Great Price is found an account in which Enoch was shown a vision of the generations of humanity down to and past the time of the Great Flood. He observed that 'the God of heaven looked upon the residue of the people, and he wept.' An overwhelmed Enoch asked, 'How is it that thou canst weep?' He could not understand how a Being so great could shed tears."</p>
 <p><strong>Reference:</strong> Elder D. Todd Christofferson, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2019/10/14christofferson?lang=eng" target="_blank">The Joy of the Saints</a>," General Conference (October 2019).</p>
 <p>> "This doctrine—that God can weep—teaches us volumes about the divine character. Our Father in Heaven feels what we feel. He weeps when we make choices that lead to misery. But He also rejoices when we choose the path of happiness."</p>
 <p><strong>Reference:</strong> Elder Gerrit W. Gong, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2021/04/16gong?lang=eng" target="_blank">Room in the Inn</a>," General Conference (April 2021).</p>
-</div>
-<button class="sg-inner-accordion"><span>Reflection Questions</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Reflection Questions</h4>
 <ol>
 <li>How does knowing that God can weep change your relationship with Him?</li>
 <li>Why might it be important that God experiences genuine emotion rather than merely "willing" certain effects?</li>
@@ -1757,17 +1606,13 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Passage 3: The Reason for God's Sorrow</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Complete Scripture Text</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Passage 3: The Reason for God's Sorrow</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Complete Scripture Text</h4>
 <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=32-33" target="_blank">Moses 7:32-33</a></strong></p>
 <p>> "The Lord said unto Enoch: Behold these thy brethren; they are the workmanship of mine own hands, and I gave unto them their knowledge, in the day I created them; and in the Garden of Eden, gave I unto man his agency; > > And unto thy brethren have I said, and also given commandment, that they should love one another, and that they should choose me, their Father; but behold, they are without affection, and they hate their own blood."</p>
-</div>
-<button class="sg-inner-accordion"><span>Literary Structure Analysis</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Literary Structure Analysis</h4>
 <p>``` IDENTITY: "They are the workmanship of mine own hands" GIFTS GIVEN:</p>
 <ul>
 <li>Knowledge: "I gave unto them their knowledge"</li>
@@ -1785,9 +1630,7 @@
 </ul>
 <p>```</p>
 <p>The structure shows God's investment (creation, knowledge, agency, commandment) contrasted with humanity's response (rejection, hatred). The tragedy is not that creatures fail their Creator but that children reject their Father.</p>
-</div>
-<button class="sg-inner-accordion"><span>Hebrew Insights</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Hebrew Insights</h4>
 <table class="info-table">
 <tr>
 <th>English</th>
@@ -1825,9 +1668,7 @@
 </tr>
 </table>
 <p>The phrase "hate their own blood" uses <em>dam</em> (blood) to indicate kinship—they hate their own family, their own kindred. This is the ultimate inversion of God's command to "love one another."</p>
-</div>
-<button class="sg-inner-accordion"><span>Historical & Cultural Context</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Historical & Cultural Context</h4>
 <h4>Agency in Eden</h4>
 <p>The phrase "in the Garden of Eden, gave I unto man his agency" places the gift of agency at creation itself, not at the Fall. Adam and Eve possessed agency before partaking of the forbidden fruit—they chose to partake using that agency.</p>
 <p>This differs from some traditional Christian theologies that see human freedom as corrupted or lost at the Fall. Latter-day Saint theology holds that agency was the gift, and the Fall was its first major exercise.</p>
@@ -1838,9 +1679,7 @@
 <li>"Thou shalt love thy neighbour as thyself" (<a href="https://www.blueletterbible.org/kjv/mat/22/39/s_951039" target="_blank">Matthew 22:39</a>)</li>
 </ol>
 <p>These were not new commandments in Jesus's day; they were already given in Eden.</p>
-</div>
-<button class="sg-inner-accordion"><span>Doctrinal Analysis</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrinal Analysis</h4>
 <h4>"Workmanship of Mine Own Hands"</h4>
 <p>This phrase emphasizes personal investment. God is not a distant watchmaker; He is a craftsman who formed these beings personally. The phrase echoes:</p>
 <ul>
@@ -1857,9 +1696,7 @@
 <p>This connects to <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/2?lang=eng&id=27" target="_blank">2 Nephi 2:27</a>: "Wherefore, men are free according to the flesh... free to choose liberty and eternal life... or to choose captivity and death."</p>
 <h4>The Inversion</h4>
 <p>God commanded love; they became "without affection." God commanded choosing the Father; they "hate their own blood." The rejection is complete—not just neglect but active hatred.</p>
-</div>
-<button class="sg-inner-accordion"><span>Cross-References</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Cross-References</h4>
 <table class="info-table">
 <tr>
 <th>Reference</th>
@@ -1886,9 +1723,7 @@
 <td>"Pray unto the Father... that ye may be filled with this love"</td>
 </tr>
 </table>
-</div>
-<button class="sg-inner-accordion"><span>Latter-day Saint Connections</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Latter-day Saint Connections</h4>
 <h4>The Plan of Salvation</h4>
 <p>This passage illuminates the plan:</p>
 <ol>
@@ -1898,16 +1733,12 @@
 <li>We can choose to accept or reject</li>
 </ol>
 <p>The entire plan depends on agency being real. A plan that forced obedience would not produce "workmanship" worthy of God.</p>
-</div>
-<button class="sg-inner-accordion"><span>Modern Prophets on This Passage</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Modern Prophets on This Passage</h4>
 <p>> "Agency is the ability and freedom God gives us to choose and to act for ourselves. Agency is essential in the plan of salvation... Without agency, we would be unable to make right choices and progress."</p>
 <p><strong>Reference:</strong> <em>True to the Faith: A Gospel Reference</em> (2004), "Agency." <a href="https://www.churchofjesuschrist.org/study/manual/true-to-the-faith/agency" target="_blank">Full entry</a></p>
 <p>> "God gave us moral agency, and we used it before we were born to choose to come to earth and be subject to the experiences of mortality. God will never force us to be righteous; our choices must be free."</p>
 <p><strong>Reference:</strong> Elder D. Todd Christofferson, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2014/10/free-forever-to-act-for-themselves?lang=eng" target="_blank">Free Forever, to Act for Themselves</a>," General Conference (October 2014).</p>
-</div>
-<button class="sg-inner-accordion"><span>Reflection Questions</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Reflection Questions</h4>
 <ol>
 <li>What does it mean to you that you are "the workmanship of [God's] own hands"?</li>
 <li>How does knowing that agency was given in Eden affect your understanding of the Fall?</li>
@@ -1917,22 +1748,16 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Passage 4: Zion Taken Up</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Complete Scripture Text</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Passage 4: Zion Taken Up</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Complete Scripture Text</h4>
 <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=21" target="_blank">Moses 7:21</a></strong></p>
 <p>> "And it came to pass that the Lord showed unto Enoch all the inhabitants of the earth; and he beheld, and lo, Zion, in process of time, was taken up into heaven. And the Lord said unto Enoch: Behold mine abode forever."</p>
-</div>
-<button class="sg-inner-accordion"><span>Literary Structure Analysis</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Literary Structure Analysis</h4>
 <p>``` VISION SCOPE: "The Lord showed unto Enoch all the inhabitants of the earth" OBSERVATION: "He beheld, and lo" EVENT: "Zion, in process of time, was taken up into heaven" DIVINE DECLARATION: "Behold mine abode forever" ```</p>
 <p>The phrase "in process of time" is significant—translation was gradual, not instantaneous. The community grew in righteousness until reaching a threshold that qualified them for removal from the mortal sphere.</p>
-</div>
-<button class="sg-inner-accordion"><span>Hebrew Insights</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Hebrew Insights</h4>
 <table class="info-table">
 <tr>
 <th>English</th>
@@ -1956,9 +1781,7 @@
 </tr>
 </table>
 <p>The verb <em>laqach</em> connects this collective translation to Enoch's individual translation in Genesis 5:24 ("God took him"). The same divine action that removed Enoch now removes his entire city.</p>
-</div>
-<button class="sg-inner-accordion"><span>Historical & Cultural Context</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Historical & Cultural Context</h4>
 <h4>Translation in Ancient Traditions</h4>
 <p>Individual translation (removal to heaven without death) appears in:</p>
 <ul>
@@ -1971,9 +1794,7 @@
 <h4>Joseph Smith on Translated Beings</h4>
 <p>Joseph Smith taught: "Many have supposed that the doctrine of translation was a doctrine whereby men were taken immediately into the presence of God, and into an eternal fulness, but this is a mistaken idea. Their place of habitation is that of the terrestrial order, and a place prepared for such characters He held in reserve to be ministering angels unto many planets" (TPJS, 170).</p>
 <p>This clarifies that Enoch's city was not immediately glorified but holds a terrestrial status, engaged in ongoing ministry.</p>
-</div>
-<button class="sg-inner-accordion"><span>Doctrinal Analysis</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrinal Analysis</h4>
 <h4>Collective Righteousness</h4>
 <p>The translation of an entire city demonstrates that righteousness can be communal:</p>
 <ul>
@@ -1991,9 +1812,7 @@
 <p>This offers hope: Zion is built incrementally, choice by choice, covenant by covenant.</p>
 <h4>"Mine Abode Forever"</h4>
 <p>God's declaration suggests that Zion becomes His dwelling place. This connects to temple theology—the temple is God's house, and Zion is ultimately an extended temple-community where God can dwell.</p>
-</div>
-<button class="sg-inner-accordion"><span>Evidence of Antiquity: Collective Translation</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Evidence of Antiquity: Collective Translation</h4>
 <p><strong>An Unusual Claim with Ancient Echoes:</strong></p>
 <p>While individual translation appears across cultures (Enoch, Elijah, Heracles, Romulus), the collective translation of an entire city is virtually unique to Moses 7. Yet fragmentary ancient sources hint at this possibility:</p>
 <p><strong>Mandaean Enoch Fragments:</strong> Describe others besides Enoch ascending bodily with him.</p>
@@ -2003,9 +1822,7 @@
 <p><strong>The "Bosom" Imagery:</strong> Moses 7 uses "bosom" six times—a term connected to Second Temple traditions of Abraham's bosom as the gathering place of the righteous. The imagery of God receiving Zion "into his own bosom" echoes these ancient concepts.</p>
 <p>As David J. Larsen asks: "Can an entire community ascend to heaven?" Moses 7 answers affirmatively—a concept with few parallels in world literature but attested in fragmentary ancient sources.</p>
 <p><em>Source: Jeffrey M. Bradshaw, "<a href="https://interpreterfoundation.org/book-of-moses-essays-030" target="_blank">God Receives Zion</a>" (Interpreter Foundation, Essay #30)</em></p>
-</div>
-<button class="sg-inner-accordion"><span>Cross-References</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Cross-References</h4>
 <table class="info-table">
 <tr>
 <th>Reference</th>
@@ -2032,9 +1849,7 @@
 <td>"By faith Enoch was translated that he should not see death"</td>
 </tr>
 </table>
-</div>
-<button class="sg-inner-accordion"><span>Latter-day Saint Connections</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Latter-day Saint Connections</h4>
 <h4>The City Will Return</h4>
 <p>Moses 7:62-64 promises that Enoch's translated city will return to meet the latter-day Zion. This return is part of the restoration of all things.</p>
 <h4>Temple Pattern</h4>
@@ -2044,16 +1859,12 @@
 <li>Movement from earthly to heavenly sphere</li>
 <li>Entering God's presence ("mine abode")</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Modern Prophets on This Passage</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Modern Prophets on This Passage</h4>
 <p>> "The Lord has taken into His care this city, the City of Zion. And it is reserved, along with the earth that was translated with it, to come again at the time of the Second Coming of the Savior."</p>
 <p><strong>Reference:</strong> Elder Bruce R. McConkie, <em>The Millennial Messiah</em> (1982), p. 119.</p>
 <p>> "In the future, the Lord will bring Zion and the New Jerusalem together. At that day, 'the city of Enoch which was taken up, and the city of holiness, even Zion' will come down from heaven."</p>
 <p><strong>Reference:</strong> Encyclopedia of Mormonism, "Enoch: LDS Sources."</p>
-</div>
-<button class="sg-inner-accordion"><span>Reflection Questions</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Reflection Questions</h4>
 <ol>
 <li>What does "in process of time" teach about how Zion is achieved?</li>
 <li>How does collective translation challenge individualistic views of salvation?</li>
@@ -2063,22 +1874,16 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Passage 5: The Return of Zion</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Complete Scripture Text</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Passage 5: The Return of Zion</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Complete Scripture Text</h4>
 <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=62-64" target="_blank">Moses 7:62-64</a></strong></p>
 <p>> "And righteousness will I send down out of heaven; and truth will I cause to sweep the earth as with a flood, to gather out mine elect from the four quarters of the earth, unto a place which I shall prepare, an Holy City, that my people may gird up their loins, and be looking forth for the time of my coming; for there shall be my tabernacle, and it shall be called Zion, a New Jerusalem. > > And the Lord said unto Enoch: Then shalt thou and all thy city meet them there, and we will receive them into our bosom, and they shall see us; and we will fall upon their necks, and they shall fall upon our necks, and we will kiss each other; > > And there shall be mine abode, and it shall be Zion, which shall come forth out of all the creations which I have made; and for the space of a thousand years the earth shall rest."</p>
-</div>
-<button class="sg-inner-accordion"><span>Literary Structure Analysis</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Literary Structure Analysis</h4>
 <p>``` PROMISE 1: "Righteousness will I send down out of heaven" PROMISE 2: "Truth will I cause to sweep the earth as with a flood" PURPOSE: "To gather out mine elect from the four quarters of the earth" DESTINATION: "An Holy City... Zion, a New Jerusalem" REUNION: "Thou and all thy city meet them there" EMBRACE: "We will fall upon their necks... kiss each other" CULMINATION: "For the space of a thousand years the earth shall rest" ```</p>
 <p>The passage moves from divine action (sending righteousness and truth) through gathering and reunion to millennial rest. The imagery of embrace ("fall upon their necks... kiss each other") suggests intimate reunion after long separation.</p>
-</div>
-<button class="sg-inner-accordion"><span>Hebrew Insights</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Hebrew Insights</h4>
 <table class="info-table">
 <tr>
 <th>English</th>
@@ -2112,9 +1917,7 @@
 </tr>
 </table>
 <p>The imagery of truth "sweeping the earth as with a flood" reverses the destruction of Noah's flood. Where water destroyed, truth will restore.</p>
-</div>
-<button class="sg-inner-accordion"><span>Historical & Cultural Context</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Historical & Cultural Context</h4>
 <h4>The Embrace Imagery</h4>
 <p>"Fall upon their necks... kiss each other" echoes reunion scenes in the Hebrew Bible:</p>
 <ul>
@@ -2130,9 +1933,7 @@
 <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/21?lang=eng&id=23-24" target="_blank">3 Nephi 21:23-24</a>: New Jerusalem built on American continent</li>
 <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/13?lang=eng&id=3-6" target="_blank">Ether 13:3-6</a>: New Jerusalem as fulfillment of promises</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Doctrinal Analysis</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrinal Analysis</h4>
 <h4>Righteousness from Heaven</h4>
 <p>"Righteousness will I send down out of heaven" has been interpreted as:</p>
 <ul>
@@ -2163,9 +1964,7 @@
 <li>Six thousand years of mortality, seventh thousand of millennial rest</li>
 <li>The earth's "rest" connects to Moses 7:48 where the earth asked, "When shall I rest?"</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Cross-References</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Cross-References</h4>
 <table class="info-table">
 <tr>
 <th>Reference</th>
@@ -2192,24 +1991,18 @@
 <td>The seventh seal opens the seventh thousand years</td>
 </tr>
 </table>
-</div>
-<button class="sg-inner-accordion"><span>Latter-day Saint Connections</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Latter-day Saint Connections</h4>
 <h4>The Tenth Article of Faith</h4>
 <p>"We believe... that Zion (the New Jerusalem) will be built upon the American continent; that Christ will reign personally upon the earth; and, that the earth will be renewed and receive its paradisiacal glory."</p>
 <p>This encapsulates Moses 7:62-64: Zion built, Christ reigning, earth renewed.</p>
 <h4>Independence, Missouri</h4>
 <p><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/57?lang=eng&id=1-3" target="_blank">D&C 57:1-3</a> identifies Independence, Missouri, as the "center place" of Zion, where the New Jerusalem will be built.</p>
-</div>
-<button class="sg-inner-accordion"><span>Modern Prophets on This Passage</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Modern Prophets on This Passage</h4>
 <p>> "The city of Enoch will return and will be joined with a city, or cities of Zion here. That will complete the restoration of all things. What a glorious day that will be!"</p>
 <p><strong>Reference:</strong> President Joseph Fielding Smith, <em>Doctrines of Salvation</em>, vol. 3, p. 68.</p>
 <p>> "In the future, the Lord will bring Zion and the New Jerusalem together. At that day, 'the city of Enoch which was taken up, and the city of holiness, even Zion' will come down from heaven, and 'the Lord shall be in their midst, and his glory shall be upon them, and he will be their king and their lawgiver.'"</p>
 <p><strong>Reference:</strong> Encyclopedia of Mormonism, "Enoch: LDS Sources."</p>
-</div>
-<button class="sg-inner-accordion"><span>Reflection Questions</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Reflection Questions</h4>
 <ol>
 <li>What does it mean that truth will "sweep the earth as with a flood"—reversing the destruction of Noah's day?</li>
 <li>How are you participating in the gathering of the elect?</li>
@@ -2219,10 +2012,9 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Summary Chart: Key Doctrines in Moses 7</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Summary Chart: Key Doctrines in Moses 7</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <table class="info-table">
 <tr>
 <th>Passage</th>
@@ -2268,15 +2060,14 @@
         </div>
 
         <!-- SECTION 4: WORD STUDIES -->
-        <button class="sg-accordion-section">4. Word Studies</button>
-        <div class="sg-panel">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">4. Word Studies</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
             <div class="panel-content">
-                <button class="sg-sub-accordion"><span>Hebrew-First Approach</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active"><span>Hebrew-First Approach</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng" target="_blank">Moses 7</a> contains some of the most theologically significant vocabulary in Restoration scripture. Key terms like <em>Tsiyon</em> (Zion), <em>bakah</em> (weep), <em>echad</em> (one), and <em>lev</em> (heart) carry rich meanings that deepen our understanding of Enoch's vision.</p>
-<button class="sg-inner-accordion"><span>Why Study Hebrew for Moses 7?</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Why Study Hebrew for Moses 7?</h4>
 <ol>
 <li><strong>Zion defined</strong> — Understanding <em>Tsiyon</em>'s Hebrew background illuminates what Zion truly means</li>
 <li><strong>Divine emotion</strong> — The Hebrew vocabulary of weeping and grief reveals God's heart</li>
@@ -2285,12 +2076,10 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Key Terms This Week</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>1. <em>Tsiyon</em> — Zion</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Key Terms This Week</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">1. <em>Tsiyon</em> — Zion</h4>
 <p><div style="text-align: center; font-size: 2em; font-family: 'Times New Roman', 'SBL Hebrew', serif;">צִיּוֹן</div></p>
 <h4>Layer 1: Hebrew Foundation</h4>
 <table class="info-table">
@@ -2388,9 +2177,7 @@
 <h4>Layer 5: Webster 1828 Definition</h4>
 <p>> <strong><a href="https://webstersdictionary1828.com/Dictionary/zion" target="_blank">ZION</a></strong>, n. > A hill in Jerusalem, on which the temple was built. > In Scripture, the church of God; the kingdom of heaven; heaven.</p>
 <p><strong>Joseph Smith Era Understanding:</strong> "Zion" in 1828 already carried both geographical (Jerusalem) and spiritual (God's people, heaven) meanings—preparing the ground for Restoration revelation.</p>
-</div>
-<button class="sg-inner-accordion"><span>2. <em>bakah</em> — Weep</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">2. <em>bakah</em> — Weep</h4>
 <p><div style="text-align: center; font-size: 2em; font-family: 'Times New Roman', 'SBL Hebrew', serif;">בָּכָה</div></p>
 <h4>Layer 1: Hebrew Foundation</h4>
 <table class="info-table">
@@ -2478,9 +2265,7 @@
 <h4>Layer 5: Webster 1828 Definition</h4>
 <p>> <strong><a href="https://webstersdictionary1828.com/Dictionary/weep" target="_blank">WEEP</a></strong>, v.i. > 1. To express sorrow by shedding tears; to lament. > 2. To shed tears from any passion. > 3. To lament; to complain. > 4. To flow in drops; to drip.</p>
 <p><strong>Joseph Smith Era Understanding:</strong> "Weep" in 1828 meant shedding tears in genuine sorrow—exactly what Moses 7 attributes to God.</p>
-</div>
-<button class="sg-inner-accordion"><span>3. <em>echad</em> — One</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">3. <em>echad</em> — One</h4>
 <p><div style="text-align: center; font-size: 2em; font-family: 'Times New Roman', 'SBL Hebrew', serif;">אֶחָד</div></p>
 <h4>Layer 1: Hebrew Foundation</h4>
 <table class="info-table">
@@ -2567,9 +2352,7 @@
 <h4>Layer 5: Webster 1828 Definition</h4>
 <p>> <strong><a href="https://webstersdictionary1828.com/Dictionary/one" target="_blank">ONE</a></strong>, a. > 1. Single in number. > 2. Indefinitely, a single person or thing. > 3. Closely united; as, one heart and soul. > 4. The same; identical.</p>
 <p><strong>Joseph Smith Era Understanding:</strong> Webster's third definition—"closely united; as, one heart and soul"—exactly matches Moses 7:18's description of Zion.</p>
-</div>
-<button class="sg-inner-accordion"><span>4. <em>lev</em> — Heart</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">4. <em>lev</em> — Heart</h4>
 <p><div style="text-align: center; font-size: 2em; font-family: 'Times New Roman', 'SBL Hebrew', serif;">לֵב</div></p>
 <h4>Layer 1: Hebrew Foundation</h4>
 <table class="info-table">
@@ -2657,9 +2440,7 @@
 <h4>Layer 5: Webster 1828 Definition</h4>
 <p>> <strong><a href="https://webstersdictionary1828.com/Dictionary/heart" target="_blank">HEART</a></strong>, n. > 1. A muscular viscus... > 2. The seat of the affections and passions. > 3. The seat of the understanding. > 4. The seat of the will. > 5. The seat of courage. > 6. The inner part of any thing; the middle part or interior.</p>
 <p><strong>Joseph Smith Era Understanding:</strong> Webster captures the Hebrew range: seat of affection, understanding, and will. "One heart" thus means unified in all these dimensions.</p>
-</div>
-<button class="sg-inner-accordion"><span>5. <em>laqach</em> — Took (Translated)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">5. <em>laqach</em> — Took (Translated)</h4>
 <p><div style="text-align: center; font-size: 2em; font-family: 'Times New Roman', 'SBL Hebrew', serif;">לָקַח</div></p>
 <h4>Layer 1: Hebrew Foundation</h4>
 <table class="info-table">
@@ -2746,9 +2527,7 @@
 <h4>Layer 5: Webster 1828 Definition</h4>
 <p>> <strong><a href="https://webstersdictionary1828.com/Dictionary/translate" target="_blank">TRANSLATE</a></strong>, v.t. > 1. To bear, carry or remove from one place to another. > 2. To remove or convey to heaven, as a human being, without death. > 3. To transfer; to convey from one to another.</p>
 <p><strong>Joseph Smith Era Understanding:</strong> Webster's second definition addresses translation in Enoch's sense: "to convey to heaven, as a human being, without death."</p>
-</div>
-<button class="sg-inner-accordion"><span>6. <em>Nephilim</em> — Giants / Fallen Ones</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">6. <em>Nephilim</em> — Giants / Fallen Ones</h4>
 <p><div style="text-align: center; font-size: 2em; font-family: 'Times New Roman', 'SBL Hebrew', serif;">נְפִילִים</div></p>
 <h4>Layer 1: Hebrew Foundation</h4>
 <table class="info-table">
@@ -2886,10 +2665,9 @@
 <p>The warning for modern readers: spiritual gifts and knowledge bring responsibility. The greater the light received, the greater the fall when that light is rejected. The <em>Nephilim</em> were "giants" not primarily in stature but in <strong>capacity for either good or evil</strong>.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Summary: Hebrew Terms in Moses 7</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Summary: Hebrew Terms in Moses 7</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <table class="info-table">
 <tr>
 <th>Term</th>
@@ -2947,12 +2725,12 @@
         </div>
 
         <!-- SECTION 5: TEACHING APPLICATIONS -->
-        <button class="sg-accordion-section">5. Teaching Applications</button>
-        <div class="sg-panel">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">5. Teaching Applications</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
             <div class="panel-content">
-                <button class="sg-sub-accordion"><span>Moses 7 | Enoch's Vision of Zion</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active"><span>Moses 7 | Enoch's Vision of Zion</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p><strong>What This Section Covers:</strong></p>
 <ul>
 <li><a href="#1-personal-study-applications" target="_blank">Personal Study Applications</a> — Individual reflection and application</li>
@@ -2964,17 +2742,16 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Overview</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Overview</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng" target="_blank">Moses 7</a> presents one of the most emotionally powerful chapters in all scripture—a God who weeps, a city taken to heaven, and a vision spanning from creation to the Second Coming. The following applications are organized by teaching context to help you adapt these profound truths for your specific audience.</p>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>1. Personal Study Applications</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Individual Reflection and Application</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>1. Personal Study Applications</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Individual Reflection and Application</h4>
 <p><strong>Theme: Understanding God's Heart</strong></p>
 <p><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=p28-p37#p28" target="_blank">Moses 7:28–37</a> reveals a God who weeps over His children—a doctrine that transforms how we relate to our Heavenly Father.</p>
 <p><strong>Personal Application Ideas:</strong></p>
@@ -3018,12 +2795,10 @@
 </ul>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>2. Family Home Evening Applications</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Family Activities and Discussions</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>2. Family Home Evening Applications</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Family Activities and Discussions</h4>
 <p><strong>Theme: Building Zion at Home</strong></p>
 <p>The family is the first Zion community. <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=p18#p18" target="_blank">Moses 7:18</a>'s definition applies directly to family life.</p>
 <p><strong>Activity Ideas:</strong></p>
@@ -3080,12 +2855,10 @@
 </ul>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>3. Sunday School Teaching Applications</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Class Discussion and Engagement</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>3. Sunday School Teaching Applications</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Class Discussion and Engagement</h4>
 <p><strong>Theme: The Weeping God and Zion's Pattern</strong></p>
 <p><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng" target="_blank">Moses 7</a> challenges traditional assumptions about God while providing a pattern for community.</p>
 <p><strong>Discussion Approaches:</strong></p>
@@ -3153,12 +2926,10 @@
 </table>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>4. Seminary/Institute Teaching Applications</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Youth and Young Adult Engagement</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>4. Seminary/Institute Teaching Applications</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Youth and Young Adult Engagement</h4>
 <p><strong>Theme: God's Emotions and Our Response</strong></p>
 <p>Young people often struggle with a distant, impersonal God. Moses 7 reveals a Father who feels deeply.</p>
 <p><strong>Teaching Approaches:</strong></p>
@@ -3241,12 +3012,10 @@
 <p><em>Sources: Jeffrey M. Bradshaw's Book of Moses Essays <a href="https://interpreterfoundation.org/book-of-moses-essays-022" target="_blank">#22</a>–<a href="https://interpreterfoundation.org/book-of-moses-essays-030" target="_blank">#30</a> (Interpreter Foundation)</em></p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>5. Missionary Teaching Applications</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Investigator-Focused Teaching</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>5. Missionary Teaching Applications</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Investigator-Focused Teaching</h4>
 <p><strong>Theme: A God Who Cares</strong></p>
 <p>Many people believe in a distant, impersonal God or no God at all. Moses 7 reveals a Father who weeps.</p>
 <p><strong>Teaching Approaches:</strong></p>
@@ -3277,12 +3046,10 @@
 </ul>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>6. Cross-Reference Summary</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Key Doctrinal Connections</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>6. Cross-Reference Summary</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Key Doctrinal Connections</h4>
 <table class="info-table">
 <tr>
 <th>Topic</th>
@@ -3324,17 +3091,16 @@
 </table>
 </div>
 </div>
-</div>
             </div>
         </div>
 
         <!-- SECTION 6: STUDY QUESTIONS -->
-        <button class="sg-accordion-section">6. Study Questions</button>
-        <div class="sg-panel">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">6. Study Questions</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
             <div class="panel-content">
-                <button class="sg-sub-accordion"><span>Moses 7 | February 2–8, 2026</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active"><span>Moses 7 | February 2–8, 2026</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p><strong>Sections in This File:</strong></p>
 <ul>
 <li><a href="#section-1-understanding-the-text-60-questions" target="_blank">Section 1: Understanding the Text</a> — 60 questions</li>
@@ -3347,12 +3113,11 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Overview</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Overview</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p>This document provides <strong>187 questions</strong> for studying Moses 7, organized by category and difficulty. Use these questions for personal study, family discussions, Sunday School lessons, or seminary/institute classes.</p>
-<button class="sg-inner-accordion"><span>Question Categories</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Question Categories</h4>
 <table class="info-table">
 <tr>
 <th>Category</th>
@@ -3397,12 +3162,10 @@
 </table>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Section 1: Understanding the Text (60 Questions)</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Enoch's Ministry (Moses 7:1–20)</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Section 1: Understanding the Text (60 Questions)</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Enoch's Ministry (Moses 7:1–20)</h4>
 <ol>
 <li>According to Moses 7:13, what happened when Enoch spoke the word of the Lord?</li>
 <li>How did the nations respond to Enoch's preaching (Moses 7:13–15)?</li>
@@ -3415,9 +3178,7 @@
 <li>According to Moses 7:16, how long did the people of the land dwell "in righteousness"?</li>
 <li>What weapons did the enemies of God's people use (Moses 7:15)?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>The Definition of Zion (Moses 7:18–21)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">The Definition of Zion (Moses 7:18–21)</h4>
 <ol>
 <li>What three characteristics defined Zion according to Moses 7:18?</li>
 <li>What does "one heart and one mind" mean in the context of Moses 7:18?</li>
@@ -3430,9 +3191,7 @@
 <li>According to Moses 7:19, why couldn't enemies come against Zion?</li>
 <li>What does "mine abode forever" indicate about Zion's significance?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>God Weeps (Moses 7:28–37)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">God Weeps (Moses 7:28–37)</h4>
 <ol>
 <li>What did Enoch see that caused him to ask, "How is it that the heavens weep?" (Moses 7:28–29)?</li>
 <li>How does Enoch describe God's extent—"millions of earths" (Moses 7:30)?</li>
@@ -3445,9 +3204,7 @@
 <li>What does it mean that they "hate their own blood" (Moses 7:33)?</li>
 <li>According to Moses 7:34–35, what else did God give besides commandments?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>The Flood Vision (Moses 7:38–52)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">The Flood Vision (Moses 7:38–52)</h4>
 <ol>
 <li>What did Enoch see happening among "the rest of the people" (Moses 7:38)?</li>
 <li>What does "a prison have I prepared for them" refer to (Moses 7:38)?</li>
@@ -3460,9 +3217,7 @@
 <li>What is meant by "the meridian of time" (Moses 7:46)?</li>
 <li>In what days would the Son of Man come in the flesh (Moses 7:46)?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>The Crucifixion and Aftermath (Moses 7:47–57)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">The Crucifixion and Aftermath (Moses 7:47–57)</h4>
 <ol>
 <li>What did Enoch see the Son of Man doing among the dead (Moses 7:47)?</li>
 <li>What voice did Enoch hear "from the bowels" of the earth (Moses 7:48)?</li>
@@ -3475,9 +3230,7 @@
 <li>What physical phenomena occurred when Christ was lifted up (Moses 7:56)?</li>
 <li>How long did "darkness" cover the earth (Moses 7:56)?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>The Return of Zion (Moses 7:62–69)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">The Return of Zion (Moses 7:62–69)</h4>
 <ol>
 <li>What will God send "down out of heaven" (Moses 7:62)?</li>
 <li>What will truth do to the earth according to Moses 7:62?</li>
@@ -3492,12 +3245,10 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Section 2: Personal Application (30 Questions)</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Unity and Community</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Section 2: Personal Application (30 Questions)</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Unity and Community</h4>
 <ol>
 <li>In what specific ways can you become "of one heart" with your family members?</li>
 <li>How can you contribute to having "no poor" among your immediate community?</li>
@@ -3505,9 +3256,7 @@
 <li>How do you balance individual identity with community unity?</li>
 <li>What sacrifices might be required to achieve the Zion condition of "no poor among them"?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Divine Emotion and Relationships</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Divine Emotion and Relationships</h4>
 <ol>
 <li>How does knowing that God can weep affect your relationship with Him?</li>
 <li>When have you sensed Heavenly Father's grief over your choices?</li>
@@ -3515,9 +3264,7 @@
 <li>If God weeps over human wickedness, how should you respond to wickedness around you?</li>
 <li>How does the "weeping God" contrast with distant or indifferent images of deity?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Agency and Accountability</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Agency and Accountability</h4>
 <ol>
 <li>How does knowing that agency was given "in the Garden of Eden" affect your understanding of accountability?</li>
 <li>In what ways might you be "without affection" toward those around you?</li>
@@ -3525,9 +3272,7 @@
 <li>What does it mean to "choose [God], their Father" in your daily decisions?</li>
 <li>How can you use your agency to build rather than destroy community?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Building Zion Today</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Building Zion Today</h4>
 <ol>
 <li>What would it look like if your family achieved Moses 7:18's characteristics for one day?</li>
 <li>How can you help eliminate emotional or spiritual "poverty" in your relationships?</li>
@@ -3535,9 +3280,7 @@
 <li>How does personal righteousness contribute to or hinder community Zion?</li>
 <li>What modern-day equivalents of "Zion being taken up" might you experience spiritually?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Hope and Endurance</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Hope and Endurance</h4>
 <ol>
 <li>How does the promise of Zion's return (Moses 7:62–64) give you hope during trials?</li>
 <li>What does "in process of time" teach about patience in spiritual growth?</li>
@@ -3545,9 +3288,7 @@
 <li>What does the embrace imagery ("fall upon their necks") suggest about the joy of reunion?</li>
 <li>How does knowing the earth will "rest" for a thousand years affect your perspective on current struggles?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Personal Reflection</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Personal Reflection</h4>
 <ol>
 <li>If God asked you, "How is it that thou canst [your struggle]?" how would you answer?</li>
 <li>What would change if you truly believed you are "the workmanship of [God's] own hands"?</li>
@@ -3557,12 +3298,10 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Section 3: Doctrinal Understanding (30 Questions)</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Divine Nature</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Section 3: Doctrinal Understanding (30 Questions)</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Divine Nature</h4>
 <ol>
 <li>How does Moses 7:28–37 challenge the classical doctrine of divine impassibility?</li>
 <li>What does God's weeping reveal about the nature of divine love?</li>
@@ -3571,9 +3310,7 @@
 <li>How does divine weeping relate to the Atonement of Jesus Christ?</li>
 <li>What is the relationship between God's holiness and His ability to weep?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Agency and the Plan of Salvation</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Agency and the Plan of Salvation</h4>
 <ol>
 <li>Why would God create beings capable of rejecting Him?</li>
 <li>How does the statement "in the Garden of Eden, gave I unto man his agency" relate to the Fall?</li>
@@ -3582,9 +3319,7 @@
 <li>What does "they are without affection" suggest about the consequences of rejecting God?</li>
 <li>How does agency make God vulnerable to grief?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Zion Theology</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Zion Theology</h4>
 <ol>
 <li>How does Moses 7:18's definition of Zion differ from geographical definitions?</li>
 <li>What is the relationship between individual righteousness and collective Zion?</li>
@@ -3593,9 +3328,7 @@
 <li>How does Moses 7:18 relate to the law of consecration (D&C 42, 82)?</li>
 <li>What does "in process of time" teach about how Zion is achieved?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Eschatology (Last Things)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Eschatology (Last Things)</h4>
 <ol>
 <li>What does "righteousness... out of heaven" meeting "truth... from the earth" signify?</li>
 <li>How does the gathering of the elect relate to the building of Zion?</li>
@@ -3604,9 +3337,7 @@
 <li>What happens "at the end" of the millennial rest (Moses 7:64)?</li>
 <li>How does the promise of Zion's return provide hope during apostasy?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Christology</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Christology</h4>
 <ol>
 <li>How does Moses 7:47 demonstrate that ancient prophets understood Christ's mission?</li>
 <li>What is the significance of calling Christ "the Righteous" in Moses 7:47?</li>
@@ -3617,12 +3348,10 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Section 4: Modern Relevance (30 Questions)</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Contemporary Applications</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Section 4: Modern Relevance (30 Questions)</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Contemporary Applications</h4>
 <ol>
 <li>How do modern media and technology make it easier or harder to become "of one heart and one mind"?</li>
 <li>What economic systems today best reflect the Zion condition of "no poor among them"?</li>
@@ -3630,9 +3359,7 @@
 <li>What modern examples of community righteousness have you observed?</li>
 <li>How do current global challenges relate to the wickedness that caused God to weep?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Church Applications</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Church Applications</h4>
 <ol>
 <li>How can your ward or branch better reflect the Zion characteristics of Moses 7:18?</li>
 <li>What role do ministering brothers and sisters play in achieving "no poor among them"?</li>
@@ -3640,9 +3367,7 @@
 <li>What might "collective translation" look like spiritually for a congregation?</li>
 <li>How can church members balance diverse opinions with "one heart and one mind"?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Family Applications</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Family Applications</h4>
 <ol>
 <li>How can families work toward the Zion condition of Moses 7:18?</li>
 <li>What family practices contribute to being "of one heart and one mind"?</li>
@@ -3650,9 +3375,7 @@
 <li>What would a "translated" family look like spiritually?</li>
 <li>How does family scripture study contribute to Zion-building?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Societal Applications</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Societal Applications</h4>
 <ol>
 <li>How might Moses 7:18 principles apply to civic engagement?</li>
 <li>What would a Zion community look like in terms of criminal justice?</li>
@@ -3660,9 +3383,7 @@
 <li>What political or economic systems best align with "no poor among them"?</li>
 <li>How should believers respond when society becomes "without affection"?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Personal Challenges</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Personal Challenges</h4>
 <ol>
 <li>How can you maintain hope when society seems far from Zion?</li>
 <li>What personal changes would help you contribute to community unity?</li>
@@ -3670,9 +3391,7 @@
 <li>What does "loving one another" look like in a polarized society?</li>
 <li>How can you "choose [God], their Father" amid competing loyalties?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Missionary Applications</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Missionary Applications</h4>
 <ol>
 <li>How does understanding divine emotion enhance missionary teaching?</li>
 <li>What does the gathering promise (Moses 7:62) mean for missionary work?</li>
@@ -3682,12 +3401,10 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Section 5: Synthesis Questions (20 Questions)</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Connecting Themes</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Section 5: Synthesis Questions (20 Questions)</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Connecting Themes</h4>
 <ol>
 <li>How does God's weeping in Moses 7 connect to Christ's weeping in the New Testament and Book of Mormon?</li>
 <li>What is the relationship between the "spirits in prison" (Moses 7:38) and vicarious ordinances?</li>
@@ -3695,9 +3412,7 @@
 <li>What connections exist between Enoch's Zion and the New Jerusalem of Revelation 21?</li>
 <li>How does Moses 7 relate to the temple themes in Moses 1–6?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Across Dispensations</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Across Dispensations</h4>
 <ol>
 <li>How does Enoch's prophetic reluctance (Moses 6:31) parallel Moses at the burning bush?</li>
 <li>What similarities exist between Enoch's vision and Nephi's vision (1 Nephi 11–14)?</li>
@@ -3705,9 +3420,7 @@
 <li>What parallels exist between God's weeping and Jesus's lament over Jerusalem (Matthew 23:37)?</li>
 <li>How does the earth's groaning (Moses 7:48, 56) connect to Romans 8:22?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Doctrinal Integration</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrinal Integration</h4>
 <ol>
 <li>How does Moses 7's agency teaching (v. 32) relate to 2 Nephi 2's discussion of agency?</li>
 <li>What is the relationship between the Flood (Moses 7:43) and baptism symbolism?</li>
@@ -3715,9 +3428,7 @@
 <li>What connections exist between Zion's translation and the three Nephites' transformation?</li>
 <li>How does Moses 7's eschatology relate to D&C 45's Second Coming prophecies?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Personal Synthesis</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Personal Synthesis</h4>
 <ol>
 <li>How do the themes of divine emotion, agency, and Zion connect in Moses 7?</li>
 <li>What is the relationship between individual righteousness and collective translation?</li>
@@ -3727,12 +3438,10 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Section 6: Discussion Questions (10 Questions)</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Open-Ended Conversation Starters</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Section 6: Discussion Questions (10 Questions)</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Open-Ended Conversation Starters</h4>
 <ol>
 <li><strong>The Weeping God:</strong> A prominent theologian once said that if God can suffer, He is not truly God. How would you respond to this claim based on Moses 7? What does divine emotion teach us about the nature of love and perfection?</li>
 <li><strong>Zion and Politics:</strong> Some have argued that Moses 7:18 ("no poor among them") supports certain political or economic systems. What do you think is the best way to understand and apply this verse in a diverse society? Is Zion primarily a spiritual or social achievement?</li>
@@ -3747,10 +3456,9 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Bonus: Evidence of Antiquity Questions</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Bonus: Evidence of Antiquity Questions</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p>The following questions explore ancient parallels to Moses 7 discovered in texts unavailable to Joseph Smith. These parallels strengthen the case for the ancient origins of the Book of Moses.</p>
 <ol>
 <li><strong>The Weeping God Motif:</strong> Moses 7:28 describes God weeping over His children—a concept absent from the Bible but found in Jewish sources like the Midrash Rabbah ("If thou lettest Me not weep now, I will repair to a place which thou hast not permission to enter"). What does it mean that this ancient Jewish tradition independently attests to a weeping God? How does this affect your view of Joseph Smith's prophetic work?</li>
@@ -3764,44 +3472,35 @@
 <p><em>Sources: Jeffrey M. Bradshaw, Book of Moses Essays <a href="https://interpreterfoundation.org/book-of-moses-essays-022" target="_blank">#22</a>–<a href="https://interpreterfoundation.org/book-of-moses-essays-030" target="_blank">#30</a> (Interpreter Foundation); Andrew C. Skinner, "Joseph Smith Vindicated Again: Enoch, Moses 7:48, and Apocryphal Sources"; Hugh W. Nibley, Enoch the Prophet</em></p>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>How to Use These Questions</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Personal Study</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>How to Use These Questions</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Personal Study</h4>
 <ul>
 <li>Select 5–10 questions that address your current needs</li>
 <li>Journal your responses</li>
 <li>Cross-reference suggested scriptures</li>
 <li>Return to questions as understanding deepens</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Family Home Evening</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Family Home Evening</h4>
 <ul>
 <li>Choose 2–3 questions appropriate for your family's ages</li>
 <li>Encourage each family member to share their perspective</li>
 <li>Focus on application questions for practical takeaways</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Sunday School / Quorum/Relief Society</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Sunday School / Quorum/Relief Society</h4>
 <ul>
 <li>Use discussion questions (Section 6) for group conversation</li>
 <li>Pair understanding questions with application questions</li>
 <li>Allow time for participants to formulate responses</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Seminary / Institute</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Seminary / Institute</h4>
 <ul>
 <li>Work through sections systematically over multiple days</li>
 <li>Use synthesis questions to help students connect ideas</li>
 <li>Assign doctrinal understanding questions for deeper study</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Personal Scripture Study Journal Prompts</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Personal Scripture Study Journal Prompts</h4>
 <p>Select one question per study session and write a full response, including:</p>
 <ol>
 <li>Your initial thoughts</li>
@@ -3819,7 +3518,6 @@
 <p><strong>Total Questions:</strong> 187 (including 7 Evidence of Antiquity bonus questions)</p>
 </div>
 </div>
-</div>
             </div>
         </div>
 
@@ -3833,77 +3531,6 @@
     <div class="section-navigation">
         <div class="nav-container">
             <span class="nav-disabled">← Previous</span>
-            <a href="index.html" class="nav-link index">Study Guide Index</a>
             <span class="nav-disabled">Next →</span>
         </div>
     </div>
-
-<script>
-
-        // Main accordion sections
-        const accordionSections = document.querySelectorAll('.sg-accordion-section');
-        accordionSections.forEach(section => {
-            section.addEventListener('click', function() {
-                this.classList.toggle('active');
-                const panel = this.nextElementSibling;
-                panel.classList.toggle('active');
-            });
-        });
-
-        // Sub-accordions (nested within main panels)
-        const subAccordions = document.querySelectorAll('.sg-sub-accordion');
-        subAccordions.forEach(subAccordion => {
-            subAccordion.addEventListener('click', function() {
-                this.classList.toggle('active');
-                const subPanel = this.nextElementSibling;
-                subPanel.classList.toggle('active');
-            });
-        });
-
-        // Inner accordions (third level - nested within sg-sub-panels)
-        const innerAccordions = document.querySelectorAll('.sg-inner-accordion');
-        innerAccordions.forEach(innerAccordion => {
-            innerAccordion.addEventListener('click', function() {
-                this.classList.toggle('active');
-                const innerPanel = this.nextElementSibling;
-                innerPanel.classList.toggle('active');
-            });
-        });
-
-        function expandAll() {
-            // Expand main sections
-            accordionSections.forEach(section => {
-                section.classList.add('active');
-                section.nextElementSibling.classList.add('active');
-            });
-            // Expand sg-sub-accordions
-            subAccordions.forEach(sub => {
-                sub.classList.add('active');
-                sub.nextElementSibling.classList.add('active');
-            });
-            // Expand inner accordions
-            innerAccordions.forEach(inner => {
-                inner.classList.add('active');
-                inner.nextElementSibling.classList.add('active');
-            });
-        }
-
-        function collapseAll() {
-            // Collapse main sections
-            accordionSections.forEach(section => {
-                section.classList.remove('active');
-                section.nextElementSibling.classList.remove('active');
-            });
-            // Collapse sg-sub-accordions
-            subAccordions.forEach(sub => {
-                sub.classList.remove('active');
-                sub.nextElementSibling.classList.remove('active');
-            });
-            // Collapse inner accordions
-            innerAccordions.forEach(inner => {
-                inner.classList.remove('active');
-                inner.nextElementSibling.classList.remove('active');
-            });
-        }
-        
-</script>

@@ -36,32 +36,17 @@
 </style>
 
 <div class="cfm-insights" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
-
-    <!-- Header Box -->
-    <div style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); border: 2px solid #7c9885; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-        <h1 style="font-family: Georgia, serif; color: #5a6d5f; font-size: 2.2em; margin-bottom: 10px; font-weight: normal;">Weekly Insights: Week 04</h1>
-        <p style="font-family: Georgia, serif; color: #7c9885; font-size: 1.3em; font-style: italic; margin-bottom: 15px;">Genesis 3&ndash;4; Moses 4&ndash;5</p>
-        <p style="font-family: Georgia, serif; color: #5a6d5f; font-size: 1em; margin: 0;">Jan 19&ndash;25</p>
-    </div>
-
     <!-- Expand/Collapse Controls -->
     <div style="text-align: center; margin: 20px 0 20px 0;">
-        <button onclick="expandAllInsights()" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 0 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Expand All</button>
-        <button onclick="collapseAllInsights()" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 0 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Collapse All</button>
+        <button onclick="expandAllInsights()" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 0 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">&#x229E; Expand All</button>
+        <button onclick="collapseAllInsights()" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 0 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">&#x229F; Collapse All</button>
     </div>
-
-
-    <!-- Featured Resources -->
-    <div style="text-align: center; margin: 0 0 20px 0;">
-        <a href="/content/week04/comparison.html" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #5a7d65 0%, #4a6d55 100%); color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-family: Georgia, serif; font-size: 1em; margin: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Genesis vs Moses: Fall Accounts</a>
-    </div>
-
     <!-- Content Sections -->
 
         <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
             <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
                 <span>A Letter to Fellow Students</span>
-                <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
             </div>
             <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
                 <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
@@ -86,7 +71,7 @@
         <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
             <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
                 <span>Why the Hebrew Lens Matters</span>
-                <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
             </div>
             <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
                 <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
@@ -209,7 +194,7 @@
         <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
             <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
                 <span>Introducing the Aleph-Bet: A Brief History</span>
-                <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
             </div>
             <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
                 <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
@@ -327,7 +312,7 @@
         <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
             <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
                 <span>The Moedim: God's Appointed Times</span>
-                <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
             </div>
             <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
                 <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
@@ -423,7 +408,7 @@
         <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
             <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
                 <span>Remembering Both Covenants</span>
-                <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
             </div>
             <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
                 <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
@@ -448,7 +433,7 @@
         <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
             <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
                 <span>At a Glance: This Week's Themes</span>
-                <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
             </div>
             <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
                 <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
@@ -477,7 +462,7 @@
         <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
             <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
                 <span>Be Careful What You Ask For: Desire, Consequence, and Divine Wisdom</span>
-                <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
             </div>
             <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
                 <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
@@ -651,7 +636,7 @@
         <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
             <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
                 <span>The Fortunate Fall: Adam and Eve's Testimony</span>
-                <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
             </div>
             <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
                 <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
@@ -676,7 +661,7 @@
         <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
             <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
                 <span>Word Studies: Names That Prophesy</span>
-                <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
             </div>
             <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
                 <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
@@ -861,7 +846,7 @@
         <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
             <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
                 <span>Serpent Symbolism: From Curse to Healing</span>
-                <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
             </div>
             <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
                 <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
@@ -1011,7 +996,7 @@
         <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
             <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
                 <span>The Protoevangelium: The First Gospel</span>
-                <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
             </div>
             <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
                 <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
@@ -1055,7 +1040,7 @@
         <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
             <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
                 <span>Cain and Abel: The Offering and the Keeper</span>
-                <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
             </div>
             <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
                 <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
@@ -1106,7 +1091,7 @@
         <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
             <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
                 <span>Temple Connections</span>
-                <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
             </div>
             <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
                 <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
@@ -1135,7 +1120,7 @@
         <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
             <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
                 <span>Practical Applications</span>
-                <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
             </div>
             <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
                 <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
@@ -1197,7 +1182,7 @@
         <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
             <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
                 <span>Looking Ahead: Building Your Hebrew Toolkit</span>
-                <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
             </div>
             <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
                 <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
@@ -1225,7 +1210,7 @@
         <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
             <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
                 <span>Closing Thought</span>
-                <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
             </div>
             <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
                 <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
@@ -1259,7 +1244,7 @@
         <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
             <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
                 <span>Sources</span>
-                <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em;">&#9654;</span>
             </div>
             <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
                 <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
@@ -1278,89 +1263,3 @@
 
 
 </div>
-
-<script>
-
-        function toggleInsightsSection(header) {
-            const content = header.nextElementSibling;
-            const arrow = header.querySelector('.arrow');
-            const isCollapsed = content.style.maxHeight === '0px' || content.style.maxHeight === '';
-
-            if (isCollapsed) {
-                content.style.maxHeight = content.scrollHeight + 'px';
-                arrow.innerHTML = '&#9660;';
-                content.dataset.expanded = 'true';
-                setTimeout(() => {
-                    if (content.dataset.expanded === 'true') {
-                        content.style.maxHeight = 'none';
-                    }
-                }, 500);
-            } else {
-                content.dataset.expanded = 'false';
-                content.style.maxHeight = content.scrollHeight + 'px';
-                setTimeout(() => {
-                    content.style.maxHeight = '0px';
-                }, 10);
-                arrow.innerHTML = '&#9654;';
-            }
-        }
-
-        function toggleSubAccordion(header) {
-            const content = header.nextElementSibling;
-            const arrow = header.querySelector('.sub-arrow');
-            const isCollapsed = content.style.maxHeight === '0px' || content.style.maxHeight === '';
-
-            if (isCollapsed) {
-                content.style.maxHeight = content.scrollHeight + 'px';
-                arrow.innerHTML = '&#9660;';
-                content.dataset.expanded = 'true';
-                setTimeout(() => {
-                    if (content.dataset.expanded === 'true') {
-                        content.style.maxHeight = 'none';
-                    }
-                }, 400);
-            } else {
-                content.dataset.expanded = 'false';
-                content.style.maxHeight = content.scrollHeight + 'px';
-                setTimeout(() => {
-                    content.style.maxHeight = '0px';
-                }, 10);
-                arrow.innerHTML = '&#9654;';
-            }
-        }
-
-        function expandAllInsights() {
-            document.querySelectorAll('.cfm-insights-section .section-content').forEach(content => {
-                content.style.maxHeight = 'none';
-                content.dataset.expanded = 'true';
-            });
-            document.querySelectorAll('.cfm-insights-section .arrow').forEach(arrow => {
-                arrow.innerHTML = '&#9660;';
-            });
-            document.querySelectorAll('.sub-accordion-content').forEach(content => {
-                content.style.maxHeight = 'none';
-                content.dataset.expanded = 'true';
-            });
-            document.querySelectorAll('.sub-arrow').forEach(arrow => {
-                arrow.innerHTML = '&#9660;';
-            });
-        }
-
-        function collapseAllInsights() {
-            document.querySelectorAll('.sub-accordion-content').forEach(content => {
-                content.dataset.expanded = 'false';
-                content.style.maxHeight = '0px';
-            });
-            document.querySelectorAll('.sub-arrow').forEach(arrow => {
-                arrow.innerHTML = '&#9654;';
-            });
-            document.querySelectorAll('.cfm-insights-section .section-content').forEach(content => {
-                content.dataset.expanded = 'false';
-                content.style.maxHeight = '0px';
-            });
-            document.querySelectorAll('.cfm-insights-section .arrow').forEach(arrow => {
-                arrow.innerHTML = '&#9654;';
-            });
-        }
-    
-</script>
