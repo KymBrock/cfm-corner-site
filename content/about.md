@@ -4,7 +4,7 @@ description: "About Come Follow Me Corner"
 ---
 
 <div style="text-align: center; margin-bottom: 30px;">
-    <img src="/images/tree-banner.jpg" alt="Come Follow Me Corner" style="max-width: 100%; border-radius: 8px;">
+    <img src="../images/tree-banner.jpg" alt="Come Follow Me Corner" style="max-width: 100%; border-radius: 8px;">
 </div>
 
 The purpose of this website is to combine and organize resources and study materials that correspond with the Come Follow Me Curriculum.
