@@ -61,15 +61,43 @@ A compilation of audio and visual resources to assist individuals and families w
 
 - **[BYU Easter Conference](https://rsc.byu.edu/conferences/easter)** — Annual conference with General Authority emeritus keynotes, focused on the Savior.
 
-- **[FAIR](https://www.fairlatterdaysaints.org/)** — Well-documented answers to criticisms of LDS doctrine, belief, and practice.
+### LDS Scholarly & Apologetics
 
 - **[The Interpreter Foundation](https://interpreterfoundation.org/come-follow-me/old-testament-2026/)** — Extensive scholarly resources for OT 2026 including 90+ Book of Moses essays by Jeffrey M. Bradshaw, KnoWhy OTL articles, and weekly lesson resources.
 
-- **[Ten Minute Bible Hour](https://www.youtube.com/@MattWhitmanTMBH)** — Matt Whitman. Not LDS but incredibly accessible Old Testament context. Outstanding archaeological and cultural videos. Respectful of all faith traditions.
+- **[FAIR](https://www.fairlatterdaysaints.org/)** — Well-documented answers to criticisms of LDS doctrine, belief, and practice. Extensive articles, videos, and podcast episodes addressing historical and doctrinal questions. [FAIR Podcast](https://www.fairlatterdaysaints.org/blog/category/podcast)
+
+- **[SOAR (BYU Religious Studies Center)](https://rsc.byu.edu/soar)** — Online transcription and research service providing access to decades of BYU devotionals, conferences, and religious education content.
+
+- **[Seekers & Dwellers](https://www.youtube.com/@SeekersAndDwellers)** — Stephen Smoot, LDS scholar. Ancient texts, temple theology, and Pearl of Great Price deep dives. Highly relevant to OT study.
+
+- **[Cwic Media](https://www.youtube.com/@CwicMedia)** — Greg Matsen. In-depth discussions on temple symbolism, Isaiah, and ancient covenant patterns. Strong OT content.
+
+- **[The Ancient Tradition](https://www.youtube.com/@TheAncientTradition)** — Ancient religious traditions, temple symbolism, and connections to the restored gospel. Scholarly and thought-provoking.
+
+- **[The Treasure of the Scriptures](https://www.youtube.com/@TreasureOfTheScriptures)** — Jeffrey Bradshaw (author of the 90+ Book of Moses essays on Interpreter). Temple symbolism, ancient texts, and deep doctrinal exploration.
+
+- **[Evidence Central (Scripture Central)](https://evidencecentral.org/)** — Bite-sized evidence summaries for the Book of Mormon, Bible, and Pearl of Great Price. Quick, accessible reads that pair well with weekly study.
+
+### Ancient World, Archaeology & Language
+
+- **[Religion for Breakfast](https://www.youtube.com/@ReligionForBreakfast)** — Dr. Andrew Henry (PhD Religious Studies). Academic but very accessible. Excellent on ancient Israelite religion, temple practices, and the origins of monotheism.
+
+- **[Data over Dogma](https://www.youtube.com/@DataOverDogma)** — Dan McClellan, PhD in Theology and Religion and Bible scholar for the Church's translation department. Rigorous, data-driven approach to biblical texts. Popular for accessible Hebrew Bible content.
+
+- **[World of Antiquity](https://www.youtube.com/@WorldofAntiquity)** — Archaeological discoveries and ancient civilizations. Excellent Ancient Near East content directly relevant to OT study.
+
+- **[Digital Hammurabi](https://www.youtube.com/@DigitalHammurabi)** — Assyriologists covering Mesopotamian culture, cuneiform, and Ancient Near East history. Direct context for Genesis and early OT.
+
+- **[Esoterica](https://www.youtube.com/@ESOTERICAchannel)** — Dr. Justin Sledge. Academic deep dives into ancient religious traditions, mysticism, and textual history. Excellent Hebrew and Kabbalistic content.
+
+- **[AlephBeta](https://alephbeta.org/)** — Rabbi David Fohrman. Brilliant literary analysis of the Torah, finding patterns in the Hebrew text. Some free content; premium subscription for full library.
+
+- **[Ten Minute Bible Hour](https://www.youtube.com/@MattWhitmanTMBH)** — Matt Whitman. Incredibly accessible Old Testament context with outstanding archaeological and cultural videos. Respectful of all faith traditions.
 
 - **[Inspiring Philosophy](https://www.youtube.com/@InspiringPhilosophy)** — Strong on Ancient Near East context, creation accounts, and Genesis historicity. Academic but faith-affirming.
 
-- **[Yale Open Course — Introduction to the Old Testament](https://oyc.yale.edu/religious-studies/rlst-145)** — Free Yale lectures by Dr. Christine Hayes. Excellent academic perspective on the Old Testament for more advanced students.
+- **[Yale Open Course — Introduction to the Old Testament](https://oyc.yale.edu/religious-studies/rlst-145)** — Free Yale lectures by Dr. Christine Hayes. Excellent academic perspective for more advanced students.
 
 ## Women's Perspectives
 
