@@ -48,6 +48,10 @@ body {
     color: var(--text-primary);
     background: var(--sage-bg);
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* === Navigation === */
@@ -58,6 +62,7 @@ body {
     top: 0;
     z-index: 100;
     box-shadow: var(--shadow-md);
+    width: 100%;
 }
 .nav-top {
     max-width: var(--max-width);
