@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Dagesh & Letter Classifications | CFM Corner</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f7f8fa 0%, #e8ecf0 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border: 2px solid #1e3a4f;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3a4f 0%, #57899c 100%);
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.2em;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .timeline-item {
+            background: rgba(255,255,255,0.15);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+        }
+
+        .section-container {
+            padding: 30px 40px;
+        }
+
+        .section-title {
+            color: #1e3a4f;
+            font-size: 1.5em;
+            margin: 0 0 10px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #8ab0be;
+        }
+
+        .section-intro {
+            color: #4a5568;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        /* Hebrew text styling */
+        .hebrew-large {
+            font-family: 'SBL Hebrew', 'Times New Roman', 'Ezra SIL', serif;
+            font-size: 2.8em;
+            color: #57899c;
+            direction: rtl;
+        }
+
+        .hebrew-word {
+            font-family: 'SBL Hebrew', 'Times New Roman', 'Ezra SIL', serif;
+            font-size: 1.8em;
+            color: #57899c;
+            direction: rtl;
+        }
+
+        .hebrew-inline {
+            font-family: 'SBL Hebrew', 'Times New Roman', 'Ezra SIL', serif;
+            font-size: 1.3em;
+            color: #57899c;
+            direction: rtl;
+        }
+
+        .transliteration {
+            font-style: italic;
+            color: #718096;
+            font-size: 0.9em;
+        }
+
+        .letter-name {
+            font-weight: 600;
+            color: #2d3748;
+            font-size: 1.1em;
+        }
+
+        /* Section 1: What Is the Dagesh */
+        .dagesh-intro-section {
+            background: linear-gradient(135deg, #eef3f6 0%, #dbe4e9 100%);
+            border-top: 1px solid #dce0e5;
+        }
+
+        .dagesh-comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .dagesh-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-top: 4px solid;
+        }
+
+        .dagesh-card-qal {
+            border-top-color: #57899c;
+        }
+
+        .dagesh-card-chazaq {
+            border-top-color: #1e3a4f;
+        }
+
+        .dagesh-card h3 {
+            margin: 0 0 5px 0;
+            color: #2d3748;
+            font-size: 1.2em;
+        }
+
+        .dagesh-card .dagesh-subtitle {
+            color: #57899c;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .dagesh-card ul {
+            margin: 0;
+            padding-left: 20px;
+            color: #4a5568;
+            line-height: 1.8;
+        }
+
+        .dagesh-card ul li {
+            margin-bottom: 4px;
+        }
+
+        /* Section 2: BeGaD KePhaT Table */
+        .begadkephat-section {
+            background: linear-gradient(135deg, #f4f6f0 0%, #dce8dd 100%);
+            border-top: 1px solid #dce0e5;
+        }
+
+        .begadkephat-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .begadkephat-table thead {
+            background: linear-gradient(135deg, #1e3a4f 0%, #57899c 100%);
+            color: white;
+        }
+
+        .begadkephat-table th {
+            padding: 15px 12px;
+            text-align: center;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.8em;
+            letter-spacing: 1px;
+        }
+
+        .begadkephat-table td {
+            padding: 18px 12px;
+            text-align: center;
+            vertical-align: middle;
+            border-bottom: 1px solid #dce0e5;
+        }
+
+        .begadkephat-table tr:nth-child(even) {
+            background: #f7f8fa;
+        }
+
+        .begadkephat-table tr:hover {
+            background: #edf0f3;
+        }
+
+        .note-box {
+            background: white;
+            border-left: 4px solid #d5a93c;
+            border-radius: 0 12px 12px 0;
+            padding: 20px 25px;
+            margin-top: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .note-box strong {
+            color: #2d3e4a;
+        }
+
+        .note-box p {
+            margin: 0;
+            color: #4a5568;
+            line-height: 1.7;
+        }
+
+        /* Section 3: Letter Classifications */
+        .classifications-section {
+            background: linear-gradient(135deg, #f7f8fa 0%, #edf0f3 100%);
+            border-top: 1px solid #dce0e5;
+        }
+
+        .classification-row-wide {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .classification-row-narrow {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 1000px) {
+            .classification-row-narrow {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .classification-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 4px solid;
+        }
+
+        .class-guttural { border-left-color: #c65528; }
+        .class-resh { border-left-color: #c37c3c; }
+        .class-begadkephat { border-left-color: #57899c; }
+        .class-weak { border-left-color: #6a5983; }
+        .class-regular { border-left-color: #4a6b52; }
+
+        .classification-card h4 {
+            margin: 0 0 8px 0;
+            color: #2d3748;
+            font-size: 1.1em;
+        }
+
+        .classification-card .letters-display {
+            font-family: 'SBL Hebrew', 'Times New Roman', 'Ezra SIL', serif;
+            font-size: 1.6em;
+            color: #57899c;
+            direction: rtl;
+            margin-bottom: 12px;
+            letter-spacing: 4px;
+        }
+
+        .classification-card ul {
+            margin: 0;
+            padding-left: 18px;
+            color: #4a5568;
+            font-size: 0.95em;
+            line-height: 1.7;
+        }
+
+        .classification-card ul li {
+            margin-bottom: 4px;
+        }
+
+        /* Section 4: Decision Flowchart */
+        .flowchart-section {
+            background: linear-gradient(135deg, #f7f8fa 0%, #edf0f3 100%);
+            border-top: 1px solid #dce0e5;
+        }
+
+        .flowchart-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .flow-step {
+            background: white;
+            border-radius: 12px;
+            padding: 20px 25px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, #1e3a4f 0%, #57899c 100%);
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1em;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-content strong {
+            color: #2d3e4a;
+        }
+
+        .step-content p {
+            margin: 6px 0 0 0;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .step-arrow {
+            color: #57899c;
+            font-weight: 700;
+        }
+
+        .rule-of-thumb {
+            background: linear-gradient(135deg, #1e3a4f 0%, #57899c 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .rule-of-thumb strong {
+            color: #8ab0be;
+        }
+
+        .rule-of-thumb p {
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        /* Section 5: Scripture Examples (dark amber) */
+        .scripture-section {
+            background: linear-gradient(135deg, #1e3a4f 0%, #2d3e4a 100%);
+            color: white;
+            border-top: 1px solid #dce0e5;
+        }
+
+        .scripture-section .section-title {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.3);
+        }
+
+        .scripture-section .section-intro {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .scripture-examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .scripture-example-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 25px;
+            backdrop-filter: blur(10px);
+        }
+
+        .scripture-word-large {
+            font-family: 'SBL Hebrew', 'Times New Roman', 'Ezra SIL', serif;
+            font-size: 3.2em;
+            text-align: center;
+            direction: rtl;
+            margin: 10px 0 8px 0;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .scripture-transliteration {
+            text-align: center;
+            font-style: italic;
+            font-size: 1.1em;
+            color: #8ab0be;
+            margin-bottom: 15px;
+        }
+
+        .dagesh-breakdown {
+            margin-top: 10px;
+        }
+
+        .dagesh-breakdown-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .dagesh-breakdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .breakdown-letter {
+            font-family: 'SBL Hebrew', 'Times New Roman', 'Ezra SIL', serif;
+            font-size: 1.6em;
+            direction: rtl;
+            width: 40px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .breakdown-info {
+            font-size: 0.9em;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.5;
+        }
+
+        .dagesh-type-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 8px;
+            font-size: 0.75em;
+            font-weight: 600;
+            margin-left: 4px;
+        }
+
+        .badge-qal {
+            background: #63b3ed;
+            color: #2a4365;
+        }
+
+        .badge-chazaq {
+            background: #2b6cb0;
+            color: white;
+        }
+
+        .badge-none {
+            background: rgba(255,255,255,0.2);
+            color: rgba(255,255,255,0.8);
+        }
+
+        /* Section 6: Shin Dot */
+        .shin-section {
+            background: #f7fafc;
+            border-top: 1px solid #dce0e5;
+        }
+
+        .shin-comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .shin-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-top: 3px solid #1a365d;
+        }
+
+        .shin-letter {
+            font-family: 'SBL Hebrew', 'Times New Roman', 'Ezra SIL', serif;
+            font-size: 4em;
+            color: #1a365d;
+            direction: rtl;
+            margin: 10px 0;
+        }
+
+        .shin-card h4 {
+            margin: 0 0 6px 0;
+            color: #2d3748;
+        }
+
+        .shin-card .dot-position {
+            font-size: 0.9em;
+            color: #718096;
+            margin-bottom: 12px;
+        }
+
+        .shin-card .example {
+            font-family: 'SBL Hebrew', 'Times New Roman', 'Ezra SIL', serif;
+            font-size: 1.8em;
+            color: #2c5282;
+            direction: rtl;
+        }
+
+        .shin-card .example-label {
+            font-size: 0.9em;
+            color: #718096;
+            margin-top: 4px;
+        }
+
+        /* Footer */
+        footer {
+            background: #2d3748;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #63b3ed;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header, .section-container, footer {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.6em;
+            }
+
+            .hebrew-large {
+                font-size: 2em;
+            }
+
+            .hebrew-word {
+                font-size: 1.4em;
+            }
+
+            .scripture-word-large {
+                font-size: 2.4em;
+            }
+
+            .shin-letter {
+                font-size: 3em;
+            }
+
+            .dagesh-comparison-grid,
+            .classification-row-wide,
+            .classification-row-narrow,
+            .scripture-examples-grid,
+            .shin-comparison {
+                grid-template-columns: 1fr;
+            }
+
+            .flow-step {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .begadkephat-table {
+                font-size: 0.85em;
+            }
+
+            .begadkephat-table th,
+            .begadkephat-table td {
+                padding: 12px 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 10px;">
+            <div style="width: 70px; height: 70px; border-radius: 50%; background: white; padding: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);"><img src="../images/tree-logo.png" alt="CFM Corner" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;"></div>
+            <div style="text-align: left;">
+                <h1>The Dagesh &amp; Letter Classifications</h1>
+                <p class="subtitle">Understanding the Dot That Changes Everything</p>
+            </div>
+        </div>
+            <div class="timeline">
+                <span class="timeline-item">&#x1F4DC; BeGaD KePhaT Letters: Ancient Pronunciation</span>
+                <span class="timeline-item">&#x2721; Dagesh System: Masoretic Tradition</span>
+                <span class="timeline-item">&#x1F4D6; Week 7: Genesis 6&#x2013;11; Moses 8</span>
+            </div>
+        </header>
+
+        <!-- Section 1: What Is the Dagesh? -->
+        <div class="section-container dagesh-intro-section">
+            <h2 class="section-title">What Is the Dagesh?</h2>
+            <p class="section-intro">
+                The <strong>dagesh</strong> is a small dot placed <em>inside</em> a Hebrew letter. Though it looks simple, this single dot serves three distinct functions depending on context: it can <strong>harden a letter's pronunciation</strong>, it can signal a <strong>grammatical doubling</strong> of the consonant, or it can <strong>mark the assimilation</strong> of a dropped weak letter&mdash;serving as a forensic trace that a consonant was once present in the word. Mastering the dagesh is essential for reading Hebrew accurately.
+            </p>
+            <div style="background: #edf0f3; border: 1px solid #4299e1; border-radius: 10px; padding: 16px 20px; margin-bottom: 25px;">
+                <p style="margin: 0 0 6px 0; font-weight: 700; color: #1a365d; font-size: 0.95em;">&#x1F4D6; Terminology You May Encounter</p>
+                <p style="margin: 0; color: #2a4365; font-size: 0.9em; line-height: 1.7;">
+                    Hebrew grammars use two naming systems interchangeably. The <strong>Hebrew names</strong> (Qal / Chazaq) and the <strong>Latin names</strong> (Lene / Forte) mean the same thing:<br>
+                    &bull; <strong>Dagesh Qal</strong> = <strong>Dagesh Lene</strong> (light / gentle) &#x2014; changes pronunciation<br>
+                    &bull; <strong>Dagesh Chazaq</strong> = <strong>Dagesh Forte</strong> (strong) &#x2014; doubles the letter<br>
+                    &bull; <strong>Dagesh Forte Conjunctivum</strong> / <strong>Compensatory Dagesh</strong> &#x2014; special cases (see below)
+                </p>
+            </div>
+
+            <div class="dagesh-comparison-grid">
+                <div class="dagesh-card dagesh-card-qal">
+                    <h3>Dagesh Qal <bdi><span class="hebrew-inline">(דָּגֵשׁ קַל)</span></bdi></h3>
+                    <div class="dagesh-subtitle">Light / Weak Dagesh</div>
+                    <div style="background: rgba(0,0,0,0.06); padding: 6px 12px; border-radius: 8px; margin-bottom: 12px; font-size: 0.88em; color: #2a4365;">
+                        <strong>Also called:</strong> <em>Dagesh Lene</em> (Latin: "gentle/soft dagesh")
+                    </div>
+                    <ul>
+                        <li><strong>Changes pronunciation only</strong></li>
+                        <li>Found only in the 6 BeGaD KePhaT letters</li>
+                        <li>Changes a <em>fricative</em> (soft) sound to a <em>plosive</em> (hard) sound</li>
+                        <li>Example: <bdi><span class="hebrew-inline">ב</span></bdi> = [v] &rarr; <bdi><span class="hebrew-inline">בּ</span></bdi> = [b]</li>
+                    </ul>
+                </div>
+
+                <div class="dagesh-card dagesh-card-chazaq">
+                    <h3>Dagesh Chazaq <bdi><span class="hebrew-inline">(דָּגֵשׁ חָזָק)</span></bdi></h3>
+                    <div class="dagesh-subtitle">Strong / Hard Dagesh</div>
+                    <div style="background: rgba(0,0,0,0.06); padding: 6px 12px; border-radius: 8px; margin-bottom: 12px; font-size: 0.88em; color: #2a4365;">
+                        <strong>Also called:</strong> <em>Dagesh Forte</em> (Latin: "strong dagesh")
+                    </div>
+                    <ul>
+                        <li><strong>Doubles the consonant</strong> (gemination) &#x2014; the consonant is pronounced twice</li>
+                        <li>Can appear in almost any letter (except gutturals and Resh)</li>
+                        <li>The Dagesh Chazaq can signal several different grammatical situations:
+                            <div style="margin: 8px 0 4px 10px; font-size: 0.95em; line-height: 2;">
+                                <strong>1. Verb-stem doubling</strong> &#x2014; marks the intensive Piel, Pual, and Hitpael stems<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<bdi><span class="hebrew-inline">דִּבֵּר</span></bdi> <em>dibber</em> (he spoke) &#x2014; the <bdi><span class="hebrew-inline">בּ</span></bdi> is doubled as a Piel marker<br>
+                                <strong>2. Assimilated letter</strong> &#x2014; a weak consonant (usually Nun) drops out and merges into the next letter, which then doubles<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<bdi><span class="hebrew-inline">נָתַן</span></bdi> &rarr; <bdi><span class="hebrew-inline">יִתֵּן</span></bdi> <em>yitten</em> (he will give) &#x2014; the Nun merges into Tav<br>
+                                <strong>3. Definite article</strong> &#x2014; the prefix <bdi><span class="hebrew-inline">הַ</span></bdi> triggers doubling of the following letter<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<bdi><span class="hebrew-inline">הַמֶּלֶךְ</span></bdi> <em>ham-melekh</em> (the king) &#x2014; Mem is doubled after the article<br>
+                                <strong>4. Wayyiqtol (Vav consecutive)</strong> &#x2014; the narrative-past prefix <bdi><span class="hebrew-inline">וַ</span></bdi> doubles the following prefix letter<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<bdi><span class="hebrew-inline">וַיִּתֵּן</span></bdi> <em>wayyitten</em> (and he gave) &#x2014; the Yod is doubled by the Vav consecutive, <em>and</em> the Tav is doubled by Nun assimilation
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top: 25px;">
+                <div class="dagesh-card" style="background: linear-gradient(135deg, #ebf8ff 0%, #bee3f8 100%); border: 2px solid #4299e1; border-radius: 12px; padding: 25px;">
+                    <h3 style="color: #1a365d; margin-top: 0;">Dagesh Forte Conjunctivum <span style="font-weight: 400; font-size: 0.85em;">(Compensatory Dagesh)</span></h3>
+                    <p style="color: #2a4365; line-height: 1.7; margin-bottom: 12px;">
+                        When a guttural letter or Resh <strong>should</strong> receive a Dagesh Chazaq (Forte) but <strong>cannot</strong> (because gutturals reject doubling), the preceding vowel is often <em>lengthened</em> to compensate for the missing doubling. This is called <strong>compensatory lengthening</strong>.
+                    </p>
+                    <p style="color: #2a4365; line-height: 1.7; margin-bottom: 12px;">
+                        In some grammars, when a word is closely joined to the next word (conjunctive accent), a dagesh may appear in the <em>first letter</em> of the following word to strengthen the connection. This is called a <strong>Dagesh Forte Conjunctivum</strong> &#x2014; it marks phonetic linking between words rather than doubling within a word.
+                    </p>
+                    <div class="note-box" style="margin-top: 12px;">
+                        <p>
+                            <strong>Example of compensatory lengthening:</strong> The definite article <bdi><span class="hebrew-inline">הַ</span></bdi> normally triggers a Dagesh Chazaq in the next letter (e.g., <bdi><span class="hebrew-inline">הַמֶּלֶךְ</span></bdi>, <em>ham-melekh</em>). But before a guttural, the dagesh is rejected and the <span style="color: #e53e3e; font-weight: 700;">Patach</span> vowel lengthens to <span style="color: #e53e3e; font-weight: 700;">Qamats</span>:
+                        </p>
+                        <div style="display: flex; gap: 30px; align-items: center; justify-content: center; margin: 16px 0; flex-wrap: wrap;">
+                            <div style="text-align: center;">
+                                <div style="font-size: 0.8em; color: #718096; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 1px;">Expected (but wrong)</div>
+                                <bdi><span style="font-family: 'SBL Hebrew', 'Times New Roman', 'Ezra SIL', serif; font-size: 2.8em; color: #a0aec0; direction: rtl; text-decoration: line-through; text-decoration-color: #e53e3e;">הַאָרֶץ</span></bdi>
+                                <div style="font-size: 0.85em; color: #a0aec0; margin-top: 2px;">*<em>ha&#x2019;arets</em></div>
+                                <div style="margin-top: 4px;"><span style="font-family: 'SBL Hebrew', serif; font-size: 1.6em; color: #e53e3e; font-weight: 700;">&#x5B7;</span> <span style="font-size: 0.8em; color: #e53e3e; font-weight: 600;">Patach (short "a")</span></div>
+                            </div>
+                            <div style="font-size: 2em; color: #2c5282;">&rarr;</div>
+                            <div style="text-align: center;">
+                                <div style="font-size: 0.8em; color: #1a365d; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">Actual (correct)</div>
+                                <bdi><span style="font-family: 'SBL Hebrew', 'Times New Roman', 'Ezra SIL', serif; font-size: 2.8em; color: #1a365d; direction: rtl;">הָאָרֶץ</span></bdi>
+                                <div style="font-size: 0.85em; color: #4a5568; margin-top: 2px;"><em>ha&#x2019;arets</em> ("the land")</div>
+                                <div style="margin-top: 4px;"><span style="font-family: 'SBL Hebrew', serif; font-size: 1.6em; color: #e53e3e; font-weight: 700;">&#x5B8;</span> <span style="font-size: 0.8em; color: #e53e3e; font-weight: 600;">Qamats (long "a")</span></div>
+                            </div>
+                        </div>
+                        <p style="margin-top: 8px;">
+                            The vowel under <bdi><span class="hebrew-inline">ה</span></bdi> <span style="color: #e53e3e; font-weight: 600;">lengthens from Patach <bdi><span style="font-family: 'SBL Hebrew', serif; font-size: 1.2em;">&#x5B7;</span></bdi> to Qamats <bdi><span style="font-family: 'SBL Hebrew', serif; font-size: 1.2em;">&#x5B8;</span></bdi></span> to compensate for the doubling that the guttural Aleph cannot accept.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: The BeGaD KePhaT Letters -->
+        <div class="section-container begadkephat-section">
+            <h2 class="section-title">The BeGaD KePhaT Letters</h2>
+            <p class="section-intro">
+                The name <strong>BeGaD KePhaT</strong> (<bdi><span class="hebrew-inline">בֶּגֶד כֶּפֶת</span></bdi>) is a mnemonic for the six letters that change pronunciation with a Dagesh Qal. The mnemonic itself means "garment of silver" &#x2014; a beautiful image of letters clothed in different sounds.
+            </p>
+
+            <div style="overflow-x: auto;">
+                <table class="begadkephat-table">
+                    <thead>
+                        <tr>
+                            <th>Letter</th>
+                            <th>Name</th>
+                            <th>Without Dagesh<br>(Fricative / Soft)</th>
+                            <th>With Dagesh<br>(Plosive / Hard)</th>
+                            <th>Example Without</th>
+                            <th>Example With</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <bdi><span class="hebrew-large">בּ</span></bdi> / <bdi><span class="hebrew-large">ב</span></bdi>
+                            </td>
+                            <td><span class="letter-name">Bet / Vet</span></td>
+                            <td>[v] as in "vine"</td>
+                            <td>[b] as in "boy"</td>
+                            <td>
+                                <bdi><span class="hebrew-word">אָב</span></bdi><br>
+                                <span class="transliteration">av (father)</span>
+                            </td>
+                            <td>
+                                <bdi><span class="hebrew-word">בַּיִת</span></bdi><br>
+                                <span class="transliteration">bayit (house)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <bdi><span class="hebrew-large">גּ</span></bdi> / <bdi><span class="hebrew-large">ג</span></bdi>
+                            </td>
+                            <td><span class="letter-name">Gimel</span></td>
+                            <td>[&#x263;] (soft g)*</td>
+                            <td>[g] as in "go"</td>
+                            <td colspan="2" style="text-align: center;">
+                                <bdi><span class="hebrew-word">גָּדוֹל</span></bdi><br>
+                                <span class="transliteration">gadol (great)</span><br>
+                                <span style="font-size: 0.85em; color: #718096;">*In modern Hebrew, Gimel is always [g]</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <bdi><span class="hebrew-large">דּ</span></bdi> / <bdi><span class="hebrew-large">ד</span></bdi>
+                            </td>
+                            <td><span class="letter-name">Dalet</span></td>
+                            <td>[&eth;] as in "this"</td>
+                            <td>[d] as in "door"</td>
+                            <td colspan="2" style="text-align: center;">
+                                <bdi><span class="hebrew-word">דָּבָר</span></bdi><br>
+                                <span class="transliteration">davar (word)</span><br>
+                                <span style="font-size: 0.85em; color: #718096;">*In modern Hebrew, Dalet is always [d]</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <bdi><span class="hebrew-large">כּ</span></bdi> / <bdi><span class="hebrew-large">כ</span></bdi>
+                            </td>
+                            <td><span class="letter-name">Kaf / Khaf</span></td>
+                            <td>[x/kh] as in "Bach"</td>
+                            <td>[k] as in "king"</td>
+                            <td>
+                                <bdi><span class="hebrew-word">מֶלֶךְ</span></bdi><br>
+                                <span class="transliteration">melekh (king)</span>
+                            </td>
+                            <td>
+                                <bdi><span class="hebrew-word">כֹּל</span></bdi><br>
+                                <span class="transliteration">kol (all)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <bdi><span class="hebrew-large">פּ</span></bdi> / <bdi><span class="hebrew-large">פ</span></bdi>
+                            </td>
+                            <td><span class="letter-name">Pe / Fe</span></td>
+                            <td>[f] as in "for"</td>
+                            <td>[p] as in "park"</td>
+                            <td>
+                                <bdi><span class="hebrew-word">סוֹפֵר</span></bdi><br>
+                                <span class="transliteration">sofer (scribe)</span>
+                            </td>
+                            <td>
+                                <bdi><span class="hebrew-word">פָּנִים</span></bdi><br>
+                                <span class="transliteration">panim (face)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <bdi><span class="hebrew-large">תּ</span></bdi> / <bdi><span class="hebrew-large">ת</span></bdi>
+                            </td>
+                            <td><span class="letter-name">Tav</span></td>
+                            <td>[&theta;] as in "think"</td>
+                            <td>[t] as in "top"</td>
+                            <td>
+                                <bdi><span class="hebrew-word">שַׁבָּת</span></bdi><br>
+                                <span class="transliteration">Shabbat</span>
+                            </td>
+                            <td>
+                                <bdi><span class="hebrew-word">תּוֹרָה</span></bdi><br>
+                                <span class="transliteration">Torah</span><br>
+                                <span style="font-size: 0.85em; color: #718096;">*In modern Hebrew, Tav is always [t]</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="note-box">
+                <p>
+                    <strong>Note:</strong> In modern Israeli Hebrew, only three of the six still have audible sound changes: <strong>Bet/Vet</strong>, <strong>Kaf/Khaf</strong>, and <strong>Pe/Fe</strong>. The other three (Gimel, Dalet, Tav) have lost their fricative forms in everyday speech, though the Masoretic tradition preserves them.
+                </p>
+            </div>
+        </div>
+
+        <!-- Section 3: Hebrew Letter Classifications -->
+        <div class="section-container classifications-section">
+            <h2 class="section-title">Hebrew Letter Classifications</h2>
+            <p class="section-intro">
+                Hebrew letters are grouped into categories based on where and how they are pronounced. Understanding these groups helps with reading, grammar, and appreciating the dagesh system.
+            </p>
+
+            <!-- Row 1: Longer cards — 2 across -->
+            <div class="classification-row-wide">
+                <div class="classification-card class-guttural">
+                    <h4>Guttural Letters</h4>
+                    <div class="letters-display"><bdi>א &nbsp; ה &nbsp; ח &nbsp; ע</bdi></div>
+                    <ul>
+                        <li><strong>Letters:</strong> Aleph (<bdi><span class="hebrew-inline">א</span></bdi>), He (<bdi><span class="hebrew-inline">ה</span></bdi>), Chet (<bdi><span class="hebrew-inline">ח</span></bdi>), Ayin (<bdi><span class="hebrew-inline">ע</span></bdi>)</li>
+                        <li>Produced in the throat (<em>guttur</em> = throat in Latin)</li>
+                        <li>These letters <strong>cannot</strong> take a Dagesh Chazaq (they cannot be doubled)</li>
+                        <li>They prefer A-class vowels (Patach / Chataf Patach) &#x2014; called "patach furtivum"</li>
+                        <li>Gutturals <strong>reject a simple sheva</strong> (<bdi><span class="hebrew-inline">שְׁ</span></bdi>). Instead they take a <strong>chataf</strong> (<bdi><span class="hebrew-inline">חֲטָף</span></bdi>, "snatched") &#x2014; a <em>compound</em> sheva that pairs the sheva with a short vowel:
+                            <div style="margin: 8px 0 4px 10px; font-size: 0.95em; line-height: 2;">
+                                <bdi><span class="hebrew-inline" style="font-size: 1.4em;">חֲ</span></bdi> <strong>Chataf Patach</strong> &#x2014; sheva + patach (ultra-short "a") &mdash; e.g. <bdi><span class="hebrew-inline">אֲנִי</span></bdi> <em>ani</em> (I)<br>
+                                <bdi><span class="hebrew-inline" style="font-size: 1.4em;">חֱ</span></bdi> <strong>Chataf Segol</strong> &#x2014; sheva + segol (ultra-short "e") &mdash; e.g. <bdi><span class="hebrew-inline">אֱלֹהִים</span></bdi> <em>Elohim</em> (God)<br>
+                                <bdi><span class="hebrew-inline" style="font-size: 1.4em;">חֳ</span></bdi> <strong>Chataf Qamats</strong> &#x2014; sheva + qamats qatan (ultra-short "o") &mdash; e.g. <bdi><span class="hebrew-inline">חֳלִי</span></bdi> <em>choli</em> (sickness)
+                            </div>
+                            These are sometimes called "half shevas" because they combine the reduced sheva mark with a vowel sign, giving the guttural a brief but audible vowel color.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="classification-card class-weak">
+                    <h4>Weak Letters (Assimilating Consonants)</h4>
+                    <div class="letters-display"><bdi>נ &nbsp; י &nbsp; ו &nbsp; א &nbsp; ה</bdi></div>
+                    <ul>
+                        <li><strong>These letters tend to "drop out"</strong> of a word under certain grammatical conditions &#x2014; and when they do, they frequently leave behind a <strong>Dagesh Forte</strong> in the following letter as a trace of their presence</li>
+                        <li><strong>Nun (<bdi><span class="hebrew-inline">נ</span></bdi>)</strong> is the most common assimilating letter. When Nun closes a syllable before another consonant, it drops out and doubles the next letter:
+                            <div style="margin: 8px 0 4px 10px; font-size: 0.95em; line-height: 2;">
+                                <bdi><span class="hebrew-inline" style="font-size: 1.3em;">נָתַן</span></bdi> <em>natan</em> (he gave) &rarr; <bdi><span class="hebrew-inline" style="font-size: 1.3em;">יִתֵּן</span></bdi> <em>yitten</em> (he will give) &#x2014; the Nun drops, Tav gets Dagesh Forte<br>
+                                <bdi><span class="hebrew-inline" style="font-size: 1.3em;">מִן</span></bdi> + <bdi><span class="hebrew-inline" style="font-size: 1.3em;">מִקְדָּשׁ</span></bdi> &rarr; <bdi><span class="hebrew-inline" style="font-size: 1.3em;">מִמִּקְדָּשׁ</span></bdi> <em>mimmikdash</em> &#x2014; the Nun of <em>min</em> drops, Mem gets Dagesh Forte
+                            </div>
+                        </li>
+                        <li><strong>Yod (<bdi><span class="hebrew-inline">י</span></bdi>)</strong> and <strong>Vav (<bdi><span class="hebrew-inline">ו</span></bdi>)</strong> are weak as root letters &#x2014; they may drop, contract, or change form in verb conjugations, often triggering a dagesh in an adjacent letter</li>
+                        <li><strong>Aleph (<bdi><span class="hebrew-inline">א</span></bdi>)</strong> and <strong>He (<bdi><span class="hebrew-inline">ה</span></bdi>)</strong> can become <em>quiescent</em> (silent) at the end of roots, effectively disappearing from pronunciation</li>
+                        <li><strong>Key principle:</strong> When you see a Dagesh Forte and no obvious reason for doubling, ask: <em>"Did a weak letter drop out here?"</em> The dagesh is often the only clue that a letter was once present</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Row 2: Shorter cards — 3 across -->
+            <div class="classification-row-narrow">
+                <div class="classification-card class-resh">
+                    <h4>Resh</h4>
+                    <div class="letters-display"><bdi>ר</bdi></div>
+                    <ul>
+                        <li>Behaves like a guttural in most grammatical respects</li>
+                        <li><strong>Cannot</strong> take Dagesh Chazaq (no doubling)</li>
+                        <li>Sometimes called a "semi-guttural"</li>
+                        <li>Produced as a trill or flap (not a throat sound, but shares guttural grammar rules)</li>
+                    </ul>
+                </div>
+
+                <div class="classification-card class-begadkephat">
+                    <h4>BeGaD KePhaT Letters</h4>
+                    <div class="letters-display"><bdi>ב &nbsp; ג &nbsp; ד &nbsp; כ &nbsp; פ &nbsp; ת</bdi></div>
+                    <ul>
+                        <li>The 6 letters that change pronunciation with Dagesh Qal</li>
+                        <li>Hard (plosive) with dagesh, soft (fricative) without</li>
+                        <li>These also <strong>can</strong> take Dagesh Chazaq (which doubles them AND hardens them)</li>
+                    </ul>
+                </div>
+
+                <div class="classification-card class-regular">
+                    <h4>Sibilants / Regular Letters</h4>
+                    <div class="letters-display"><bdi>ז &nbsp; ס &nbsp; שׁ &nbsp; שׂ &nbsp; צ &nbsp; ...</bdi></div>
+                    <ul>
+                        <li>All remaining letters behave regularly</li>
+                        <li>Can take Dagesh Chazaq (doubling)</li>
+                        <li>Pronunciation does not change with or without dagesh</li>
+                        <li>Includes: Zayin (<bdi><span class="hebrew-inline">ז</span></bdi>), Samekh (<bdi><span class="hebrew-inline">ס</span></bdi>), Shin/Sin (<bdi><span class="hebrew-inline">שׁ/שׂ</span></bdi>), Tsade (<bdi><span class="hebrew-inline">צ</span></bdi>), and others</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: How to Tell: Dagesh Qal vs. Dagesh Chazaq -->
+        <div class="section-container flowchart-section">
+            <h2 class="section-title">How to Tell: Dagesh Qal vs. Dagesh Chazaq</h2>
+            <p class="section-intro">
+                Since Dagesh Qal (Lene) and Dagesh Chazaq (Forte) look identical &#x2014; both are a dot inside the letter &#x2014; how do you tell them apart? Follow these steps:
+            </p>
+
+            <div class="flowchart-steps">
+                <div class="flow-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <strong>Is it a BeGaD KePhaT letter?</strong>
+                        <p><span class="step-arrow">&rarr;</span> If <strong>NO</strong>, it must be <strong>Dagesh Chazaq</strong>. Only the six BG"D KP"T letters can take a Dagesh Qal. Any other letter with a dot inside has a Dagesh Chazaq (doubling).</p>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <strong>If YES: Does it come at the beginning of a word?</strong>
+                        <p><span class="step-arrow">&rarr;</span> <strong>Dagesh Qal</strong> (hardening the initial sound). A BG"D KP"T letter at the start of a word almost always has a Dagesh Qal.</p>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <strong>If YES: Does it come after a closed syllable?</strong>
+                        <p><span class="step-arrow">&rarr;</span> <strong>Dagesh Qal</strong>. When the preceding syllable ends with a consonant (a "closed" syllable), the BG"D KP"T letter hardens.</p>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <strong>If YES: Does it come after an open syllable with a long vowel?</strong>
+                        <p><span class="step-arrow">&rarr;</span> Could be either &#x2014; context and grammar determine. In this case, you need to analyze the word's morphology to decide.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rule-of-thumb">
+                <p>
+                    <strong>Rule of Thumb:</strong> If the letter is being <em>doubled</em> (you can hear it repeated), it is Chazaq / Forte. If it is just <em>hardened</em> (changing from a soft to a hard sound), it is Qal / Lene. If a guttural <em>should</em> be doubled but can't, look for compensatory vowel lengthening instead.
+                </p>
+            </div>
+        </div>
+
+        <!-- Section 5: Dagesh in Scripture -->
+        <div class="section-container scripture-section">
+            <h2 class="section-title">Dagesh in Scripture &#x2014; This Week's Examples</h2>
+            <p class="section-intro">
+                Here are examples from this week's reading (Genesis 6&#x2013;11) that illustrate the dagesh in action. Notice how the same-looking dot serves different purposes in different words.
+            </p>
+
+            <div class="scripture-examples-grid">
+                <!-- Example 1: tevah -->
+                <div class="scripture-example-card">
+                    <div class="scripture-word-large">תֵּבָה</div>
+                    <div class="scripture-transliteration">tevah &#x2014; "ark"</div>
+                    <div class="dagesh-breakdown">
+                        <div class="dagesh-breakdown-item">
+                            <div class="breakdown-letter">תּ</div>
+                            <div class="breakdown-info">
+                                <strong>Tav</strong> &#x2014; Dagesh Qal <span class="dagesh-type-badge badge-qal">QAL / LENE</span><br>
+                                Hardens to [t] (hard T sound)
+                            </div>
+                        </div>
+                        <div class="dagesh-breakdown-item">
+                            <div class="breakdown-letter">ב</div>
+                            <div class="breakdown-info">
+                                <strong>Bet</strong> &#x2014; No dagesh <span class="dagesh-type-badge badge-none">NONE</span><br>
+                                Remains soft [v] (vet sound)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example 2: berit -->
+                <div class="scripture-example-card">
+                    <div class="scripture-word-large">בְּרִית</div>
+                    <div class="scripture-transliteration">berit &#x2014; "covenant"</div>
+                    <div class="dagesh-breakdown">
+                        <div class="dagesh-breakdown-item">
+                            <div class="breakdown-letter">בּ</div>
+                            <div class="breakdown-info">
+                                <strong>Bet</strong> &#x2014; Dagesh Qal <span class="dagesh-type-badge badge-qal">QAL / LENE</span><br>
+                                At word start; hardens to [b]
+                            </div>
+                        </div>
+                        <div class="dagesh-breakdown-item">
+                            <div class="breakdown-letter">ת</div>
+                            <div class="breakdown-info">
+                                <strong>Tav</strong> &#x2014; No dagesh <span class="dagesh-type-badge badge-none">NONE</span><br>
+                                Final letter, no hardening needed
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example 3: barakh -->
+                <div class="scripture-example-card">
+                    <div class="scripture-word-large">בָּרַךְ</div>
+                    <div class="scripture-transliteration">barakh &#x2014; "blessed"</div>
+                    <div class="dagesh-breakdown">
+                        <div class="dagesh-breakdown-item">
+                            <div class="breakdown-letter">בּ</div>
+                            <div class="breakdown-info">
+                                <strong>Bet</strong> &#x2014; Dagesh Qal <span class="dagesh-type-badge badge-qal">QAL / LENE</span><br>
+                                At word start; hardens to [b]
+                            </div>
+                        </div>
+                        <div class="dagesh-breakdown-item">
+                            <div class="breakdown-letter">ךְ</div>
+                            <div class="breakdown-info">
+                                <strong>Kaf Sofit</strong> &#x2014; No dagesh <span class="dagesh-type-badge badge-none">NONE</span><br>
+                                Final form, remains soft [kh]
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example 4: hammabbul -->
+                <div class="scripture-example-card">
+                    <div class="scripture-word-large">הַמַּבּוּל</div>
+                    <div class="scripture-transliteration">hammabbul &#x2014; "the flood"</div>
+                    <div class="dagesh-breakdown">
+                        <div class="dagesh-breakdown-item">
+                            <div class="breakdown-letter">מּ</div>
+                            <div class="breakdown-info">
+                                <strong>Mem</strong> &#x2014; Dagesh Chazaq <span class="dagesh-type-badge badge-chazaq">CHAZAQ / FORTE</span><br>
+                                Doubled: pronounced "mm"
+                            </div>
+                        </div>
+                        <div class="dagesh-breakdown-item">
+                            <div class="breakdown-letter">בּ</div>
+                            <div class="breakdown-info">
+                                <strong>Bet</strong> &#x2014; Dagesh Chazaq <span class="dagesh-type-badge badge-chazaq">CHAZAQ / FORTE</span><br>
+                                Doubled AND hardened: pronounced "bb"
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 6: The Shin Dot -->
+        <div class="section-container shin-section">
+            <h2 class="section-title">The Shin Dot &#x2014; A Special Case</h2>
+            <p class="section-intro">
+                The letter Shin (<bdi><span class="hebrew-inline">שׁ</span></bdi>) and Sin (<bdi><span class="hebrew-inline">שׂ</span></bdi>) are distinguished by a dot placed over the top of the letter. This dot is <strong>not</strong> a dagesh &#x2014; it is a separate diacritical mark that distinguishes two different letters that share the same base form.
+            </p>
+
+            <div class="shin-comparison">
+                <div class="shin-card">
+                    <div class="shin-letter">שׁ</div>
+                    <h4>Shin</h4>
+                    <div class="dot-position">Dot on the <strong>right</strong> branch</div>
+                    <div>Pronounced: <strong>[sh]</strong> as in "show"</div>
+                    <div class="example">שָׁלוֹם</div>
+                    <div class="example-label"><em>shalom</em> (peace)</div>
+                </div>
+
+                <div class="shin-card">
+                    <div class="shin-letter">שׂ</div>
+                    <h4>Sin</h4>
+                    <div class="dot-position">Dot on the <strong>left</strong> branch</div>
+                    <div>Pronounced: <strong>[s]</strong> as in "sun"</div>
+                    <div class="example">שָׂרָה</div>
+                    <div class="example-label"><em>Sarah</em></div>
+                </div>
+            </div>
+
+            <div class="note-box" style="margin-top: 25px;">
+                <p>
+                    <strong>Remember:</strong> The shin/sin dot sits <em>above</em> the letter on one of its branches. A dagesh, by contrast, sits <em>inside</em> the body of the letter. A Shin can actually have <em>both</em> a shin dot (on the right branch) and a dagesh (inside the letter body) at the same time &#x2014; for example: <bdi><span class="hebrew-inline">שּׁ</span></bdi>, where the dot on the right marks it as Shin [sh] and the dot in the center is a Dagesh Chazaq (doubling).
+                </p>
+            </div>
+        </div>
+
+        <footer>
+            <p>The Dagesh &amp; Letter Classifications | CFM Corner | Week 07: Genesis 6&#x2013;11; Moses 8</p>
+            <p>Part 3 of the Hebrew Language Series &#x2014; Use with <a href="../../Week_05_Genesis_5_Moses_6/HTML/hebrew_alphabet_development_chart.html">Hebrew Consonants Chart</a> and <a href="../../Week_06_Moses_7/HTML/hebrew_vowels_chart.html">Hebrew Vowels Chart</a></p>
+        </footer>
+
+    <div style="padding: 15px 40px; background: #2d3e4a; display: flex; align-items: center; justify-content: center; gap: 15px;">
+        <a href="https://learninginspired.com" target="_blank" style="text-decoration: none;">
+            <img src="../images/learning-inspired-logo.png" alt="Learning Inspired" style="height: 28px; opacity: 0.9;">
+        </a>
+        <span style="color: rgba(255,255,255,0.3);">|</span>
+        <a href="https://www.cfmcorner.com" style="color: rgba(255,255,255,0.7); font-size: 0.85em; text-decoration: none; letter-spacing: 0.5px;">cfmcorner.com</a>
+    </div>
+    </div>
+</body>
+</html>
