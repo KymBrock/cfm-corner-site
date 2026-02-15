@@ -7,46 +7,82 @@ Understanding the Bible on its own terms means stepping into the world that prod
 
 ---
 
-## The Moedim: God's Appointed Times
+<div id="feast-countdown" style="background: linear-gradient(135deg, #1e3a4f 0%, #2a4f6a 100%); border-radius: 12px; padding: 28px 32px; margin: 30px 0; color: white; text-align: center;">
+  <div style="font-size: 0.8em; text-transform: uppercase; letter-spacing: 2px; opacity: 0.7; margin-bottom: 6px;">Next Appointed Time</div>
+  <div id="feast-name" style="font-family: Georgia, serif; font-size: 1.6em; margin-bottom: 2px; color: #d5a93c;"></div>
+  <div id="feast-hebrew" style="font-family: Georgia, serif; font-size: 1.1em; opacity: 0.8; margin-bottom: 4px;"></div>
+  <div id="feast-date" style="font-size: 0.85em; opacity: 0.6; margin-bottom: 16px;"></div>
+  <div id="feast-timer" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;"></div>
+  <div id="feast-desc" style="font-size: 0.85em; opacity: 0.7; margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;"></div>
+</div>
 
-The Hebrew word **מועדים** (*moedim*, singular *moed*) means "appointed times" — from the root **יעד** (*ya'ad*), meaning to summon, to engage, even to betroth. These aren't just holidays; they are divine appointments woven into the fabric of creation itself.
+<script>
+(function() {
+  var feasts = [
+    { name: "Purim", hebrew: "פורים", date: "2026-03-03", desc: "Celebration of deliverance as told in the Book of Esther." },
+    { name: "Pesach (Passover)", hebrew: "פסח", date: "2026-04-02", desc: "The Feast of Unleavened Bread — commemorating the Exodus and freedom from Egypt. The lamb's blood on the doorposts points to Christ, the Lamb of God." },
+    { name: "Shavuot (Pentecost)", hebrew: "שבועות", date: "2026-05-22", desc: "The Feast of Weeks — 50 days after Passover. Commemorates the giving of the Torah at Sinai. The Holy Spirit was poured out on Pentecost (Acts 2)." },
+    { name: "Rosh Hashanah", hebrew: "ראש השנה", date: "2026-09-12", desc: "The Day of Trumpets — the shofar blast calls God's people to repentance and points toward the Second Coming." },
+    { name: "Yom Kippur", hebrew: "יום כיפור", date: "2026-09-21", desc: "The Day of Atonement — the holiest day, when the High Priest entered the Holy of Holies. Points to final judgment and reconciliation." },
+    { name: "Sukkot (Tabernacles)", hebrew: "סוכות", date: "2026-09-26", desc: "The Feast of Tabernacles — dwelling in temporary shelters, remembering the wilderness. Points to the Millennium — God tabernacling with His people." },
+    { name: "Hanukkah", hebrew: "חנוכה", date: "2026-12-05", desc: "The Festival of Lights — celebrating the rededication of the Second Temple and the miracle of the oil." },
+    { name: "Purim", hebrew: "פורים", date: "2027-03-24", desc: "Celebration of deliverance as told in the Book of Esther." },
+    { name: "Pesach (Passover)", hebrew: "פסח", date: "2027-04-22", desc: "The Feast of Unleavened Bread — commemorating the Exodus and freedom from Egypt." }
+  ];
 
-> *"And God said, Let there be lights in the expanse of the heavens to separate the day from the night, and let them be for **signs** and for **appointed times** (moedim), and for days and for years."*
-> — Genesis 1:14
+  function update() {
+    var now = new Date();
+    var next = null;
+    for (var i = 0; i < feasts.length; i++) {
+      var d = new Date(feasts[i].date + "T00:00:00");
+      if (d > now) { next = feasts[i]; next._date = d; break; }
+    }
+    if (!next) return;
 
-The seven biblical feasts of Leviticus 23 outline a prophetic pattern — a roadmap of God's redemptive plan from the Exodus to the final gathering:
+    document.getElementById("feast-name").textContent = next.name;
+    document.getElementById("feast-hebrew").textContent = next.hebrew;
+    document.getElementById("feast-date").textContent = next._date.toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
+    document.getElementById("feast-desc").textContent = next.desc;
 
-### The Spring Feasts (Fulfilled)
+    var diff = next._date - now;
+    var days = Math.floor(diff / 86400000);
+    var hours = Math.floor((diff % 86400000) / 3600000);
+    var mins = Math.floor((diff % 3600000) / 60000);
+    var secs = Math.floor((diff % 60000) / 1000);
 
-- **Pesach (Passover)** — 14 Nisan — The lamb's blood on the doorposts. Christ, the Lamb of God, was crucified on Passover.
-- **Matzot (Unleavened Bread)** — 15–21 Nisan — Removing leaven (sin) from the home. Christ's sinless body lay in the tomb.
-- **Bikkurim (Firstfruits)** — Sunday after Passover — The first sheaf of the harvest waved before the Lord. Christ rose on Firstfruits — "the firstfruits of them that slept" (1 Corinthians 15:20).
-- **Shavuot (Pentecost)** — 50 days after Firstfruits — The giving of the Torah at Sinai. The Holy Spirit was poured out on Pentecost (Acts 2).
+    document.getElementById("feast-timer").innerHTML =
+      '<div><div style="font-size:2em;font-weight:700;">' + days + '</div><div style="font-size:0.7em;text-transform:uppercase;letter-spacing:1px;opacity:0.6;">Days</div></div>' +
+      '<div><div style="font-size:2em;font-weight:700;">' + hours + '</div><div style="font-size:0.7em;text-transform:uppercase;letter-spacing:1px;opacity:0.6;">Hours</div></div>' +
+      '<div><div style="font-size:2em;font-weight:700;">' + mins + '</div><div style="font-size:0.7em;text-transform:uppercase;letter-spacing:1px;opacity:0.6;">Minutes</div></div>' +
+      '<div><div style="font-size:2em;font-weight:700;">' + secs + '</div><div style="font-size:0.7em;text-transform:uppercase;letter-spacing:1px;opacity:0.6;">Seconds</div></div>';
+  }
 
-### The Fall Feasts (Yet to Be Fulfilled)
+  update();
+  setInterval(update, 1000);
+})();
+</script>
 
-- **Yom Teruah (Day of Trumpets)** — 1 Tishri — A day of blasting the shofar. Points toward the Second Coming — "the trump of God" (1 Thessalonians 4:16).
-- **Yom Kippur (Day of Atonement)** — 10 Tishri — The holiest day. The High Priest enters the Holy of Holies. Points to final judgment and reconciliation.
-- **Sukkot (Tabernacles)** — 15–22 Tishri — Dwelling in temporary shelters, remembering the wilderness. Points to the Millennium — God "tabernacling" with His people (Revelation 21:3).
+### The Seven Moedim at a Glance
 
-### Latter-day Saint Connections
+The Hebrew word **מועדים** (*moedim*) means "appointed times" — divine appointments woven into creation itself (Genesis 1:14). The seven feasts of Leviticus 23 trace God's redemptive plan:
 
-The Restoration itself echoes these patterns in remarkable ways:
+| | Feast | Hebrew | 2026 Date |
+|---|---|---|---|
+| Spring | **Passover** (Pesach) | פסח | April 2 |
+| | **Unleavened Bread** (Matzot) | מצות | April 2–9 |
+| | **Firstfruits** (Bikkurim) | ביכורים | April 5 |
+| | **Pentecost** (Shavuot) | שבועות | May 22 |
+| Fall | **Trumpets** (Yom Teruah) | יום תרועה | Sept 12 |
+| | **Atonement** (Yom Kippur) | יום כיפור | Sept 21 |
+| | **Tabernacles** (Sukkot) | סוכות | Sept 26 |
 
-- **The Kirtland Temple was dedicated on Easter Sunday 1836** (March 27)
-- **One week later, on the first day of Passover** (April 3, 1836), Christ, Moses, Elias, and Elijah appeared in the temple (D&C 110)
-- **Elijah appeared on the very night** when Jewish families worldwide open the door for Elijah at the Seder table
-- **The four heavenly messengers** parallel the four cups of the Passover Seder — Sanctification, Deliverance, Redemption, and Restoration
+*More detailed feast day studies are coming soon.*
 
-> The traditional Seder ends with *Nirtzah* — acceptance. On April 3, 1836, the Lord declared: *"I have accepted this house"* (D&C 110:7).
+### Resources
 
-### Resources for Further Study
-
-- **[The Moedim: Appointed Times (119 Ministries)](https://www.youtube.com/watch?v=eF0s3xhQhk0)** — Thorough introduction to all seven feasts with Hebrew context
-- **[Chabad.org — Jewish Holidays](https://www.chabad.org/holidays/default_cdo/jewish/holidays.htm)** — Authoritative Jewish perspective on the observance and meaning of each feast
-- **[The Feasts of the Lord (Zola Levitt)](https://www.youtube.com/playlist?list=PLcqci3Fy8g6ZtNWkzQbDq-K7FMfOnK_BI)** — Classic series connecting the feasts to Christ's life and ministry
+- **[Chabad.org — Jewish Holidays](https://www.chabad.org/holidays/default_cdo/jewish/holidays.htm)** — Authoritative Jewish perspective on each feast's observance and meaning
+- **[Hebrew for Christians — The Feasts](https://www.hebrew4christians.com/Holidays/holidays.html)** — Each feast with Hebrew vocabulary and Christ-centered application
 - **[My Jewish Learning — Holidays](https://www.myjewishlearning.com/article/jewish-holidays/)** — Accessible overview of the Jewish calendar year
-- **[Hebrew for Christians — The Feasts](https://www.hebrew4christians.com/Holidays/holidays.html)** — Each feast explained with Hebrew vocabulary and Christ-centered application
 
 ---
 
@@ -69,7 +105,7 @@ Learning the original language of the Old Testament opens a dimension of underst
 
 - **[Pealim (Pa'alim)](https://www.pealim.com/)** — Comprehensive Hebrew verb conjugation tables. Essential for understanding the *binyanim* (verb patterns) and how Hebrew verbs work.
 
-- **[2-Letter Lookup](https://www.2letterlookup.com/)** — A lexicon for Biblical Hebrew organized by two-letter roots. Look up any two-letter combination to find related words — an excellent companion to the root system.
+- **[2-Letter Lookup](https://www.2letterlookup.com/)** — A lexicon for Biblical Hebrew organized by two-letter roots. Look up any two-letter combination to find related words.
 
 - **[Mechon Mamre](https://mechon-mamre.org/)** — Complete Hebrew Bible in pointed Hebrew with parallel English (JPS 1917). The gold standard for reading the Tanakh in its original language.
 
@@ -101,7 +137,7 @@ The language of the New Testament and the Septuagint (the Greek Old Testament th
 
 Understanding the daily life, social structures, and worldview of ancient Israel illuminates countless passages that otherwise feel distant or confusing.
 
-### Daily Life & Society
+### Daily Life & Archaeology
 
 - **[Bible Project — Cultural Context Videos](https://bibleproject.com/)** — Beautifully animated videos exploring themes, word studies, and cultural context throughout the Bible
 - **[Biblical Archaeology Society](https://www.biblicalarchaeology.org/)** — The leading popular publication connecting archaeological discoveries to biblical texts. Their free *Bible History Daily* newsletter is excellent.
@@ -112,11 +148,6 @@ Understanding the daily life, social structures, and worldview of ancient Israel
 - **[Chabad.org — Torah & Mitzvot](https://www.chabad.org/library/article_cdo/aid/1426382/jewish/Torah.htm)** — Gateway to Jewish law, custom, and Torah commentary, including Rashi's classic verse-by-verse commentary
 - **[My Jewish Learning](https://www.myjewishlearning.com/)** — Accessible articles on Jewish practice, belief, history, and culture
 - **[Sefaria](https://www.sefaria.org/)** — Free digital library of Jewish texts — Torah, Mishnah, Talmud, Midrash, commentaries — all interconnected and searchable
-
-### Temple & Worship
-
-- **[The Temple Institute](https://www.templeinstitute.org/)** — Dedicated to research and education about the Holy Temple in Jerusalem. Detailed resources on the priesthood, sacrifices, and temple vessels.
-- **[Virtual Tabernacle Tour](https://www.youtube.com/watch?v=NU40NE2_Fpc)** — Walk through the Tabernacle and understand each element's symbolism
 
 ---
 
