@@ -13,9 +13,10 @@ Joseph Smith himself emphasized the importance of studying the scriptures in the
 ## Biblical Hebrew
 
 - **Hebrew Alphabet** — Start by learning to read and write the Hebrew characters. See our reference charts:
-  - [Hebrew Alphabet Chart](/charts/hebrew-alphabet.html)
-  - [Vowels Chart](/charts/vowels.html)
-  - [Dagesh Chart](/charts/dagesh.html)
+  - [Hebrew Alphabet Chart](/charts/hebrew-alphabet.html) — Interactive chart with audio pronunciation for all 22 Hebrew letters.
+  - [Hebrew Vowels Chart](/charts/vowels.html) — Guide to the Hebrew vowel system (Matres Lectionis and Niqqud).
+  - [Dagesh Chart](/charts/dagesh.html) — Understanding the Dagesh and BeGaDKePhaT letters.
+  - [Hebrew Root System](/charts/root-system.html) — How Hebrew three-letter roots work.
 
 *Additional course materials and recommendations coming soon.*
 

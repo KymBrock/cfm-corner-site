@@ -35,6 +35,14 @@ A curated collection of digital tools for in-depth scripture study — from free
 
 - **[BYU Scriptures Mapped](https://scriptures.byu.edu/mapscrip/)** — Interactive map linking scriptures to geography, developed by Taylor Halverson and Stephen W. Liddle.
 
+- **[My Jewish Learning](https://www.myjewishlearning.com/)** — Accessible articles on Jewish history, culture, holidays, and biblical interpretation. Excellent for understanding the Jewish context of the Old Testament.
+
+- **[Jewish Virtual Library](https://www.jewishvirtuallibrary.org/)** — Comprehensive encyclopedia of Jewish history, politics, and culture with strong biblical content.
+
+- **[Holy Land Site](https://www.holylandsite.com/all-biblical-sites)** — Directory of all biblical archaeological sites with photos, maps, and historical context.
+
+- **[Bible Mapper](https://www.biblemapper.com/)** — Interactive 3D maps of the biblical world. Visualize journeys, battles, and geography.
+
 - **[Treasury of Scripture Knowledge](https://www.treasury-of-scripture-knowledge.com/)** — Online index and cross-referencing tool used by Biblical scholars.
 
 - **[ScripturePlus App](https://www.scriptureplus.org/)** — By Book of Mormon Central. Interactive scripture platform with related videos, cultural information, commentary, maps, and research.
@@ -58,3 +66,7 @@ A curated collection of digital tools for in-depth scripture study — from free
 - **[Internet Archive](https://archive.org/)** — Non-profit online library with millions of public domain references. Useful for looking up ancient church writers like Josephus, Eusebius, Justin Martyr, Philo of Alexandria, Herodotus, and Origen.
 
 - **[Reynolds' Concordance to the Book of Mormon](https://archive.bookofmormoncentral.org/content/complete-concordance-book-mormon)** — 1900 digital copy available through Scripture Central.
+
+- **[Pearl of Great Price Central](https://www.pearlofgreatpricecentral.org/)** — Scholarly resources dedicated to the Book of Moses and Book of Abraham. Essential for early OT 2026 weeks covering the Pearl of Great Price.
+
+- **[Interpreter Foundation](https://interpreterfoundation.org/)** — Independent scholarly foundation with extensive OT resources including 90+ Book of Moses essays and weekly CFM lesson materials. [OT 2026 Resources](https://interpreterfoundation.org/come-follow-me/old-testament-2026/)

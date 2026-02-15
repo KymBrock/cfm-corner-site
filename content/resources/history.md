@@ -15,6 +15,12 @@ References for exploring the time periods and events of Biblical history.
 
 - **[World History Encyclopedia](https://www.worldhistory.org/)** — Free, non-profit online encyclopedia with excellent articles on ancient history, cultures, and events.
 
+- **[Holy Land Site](https://www.holylandsite.com/all-biblical-sites)** — Photos and descriptions of all biblical archaeological sites.
+
+- **[Bible Mapper](https://www.biblemapper.com/)** — Interactive 3D biblical geography tool.
+
+- **[Jewish Virtual Library — History](https://www.jewishvirtuallibrary.org/history)** — Comprehensive encyclopedia of ancient Israelite and Jewish history.
+
 ## New Testament History
 
 - **[NT Chronological History (PDF)](https://www.churchofjesuschrist.org/bc/content/shared/content/images/gospel-library/manual/32474/32474_000_028_06-historynew.pdf)**
