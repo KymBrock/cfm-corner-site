@@ -54,7 +54,7 @@
 <div id="tab-charts" class="tab-content">
     <div class="chart-grid">
         {{ range .Params.charts }}
-        <a href="{{ .url }}" class="chart-card">
+        <a href="{{ .url | relURL }}" class="chart-card">
             <h3>{{ .title }}</h3>
             <p>{{ .description }}</p>
         </a>
