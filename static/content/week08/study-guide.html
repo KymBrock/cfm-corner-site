@@ -44,11 +44,11 @@
         .accordion-section::after { content: '▼'; font-size: 0.9em; transition: transform 0.3s; }
         .accordion-section.active::after { transform: rotate(180deg); }
 
-        .content-panel {
+        .sg-panel {
             background-color: white; border-radius: 0 0 8px 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;
         }
-        .content-panel.active { max-height: none; overflow: visible; }
+        .sg-panel.active { max-height: none; overflow: visible; }
         .panel-content { padding: 30px; }
         .panel-content h2 { color: #8B7355; margin-bottom: 20px; font-size: 1.8em; }
         .panel-content h3 { color: #6B5344; margin-top: 25px; margin-bottom: 15px; font-size: 1.4em; }
@@ -303,7 +303,7 @@
         <!-- SECTION 1: WEEK OVERVIEW -->
         <!-- ============================================================ -->
         <button class="accordion-section">1. Week Overview</button>
-        <div class="content-panel">
+        <div class="sg-panel">
             <div class="panel-content">
 
 <button class="sub-accordion"><span>Week Information</span></button>
@@ -642,7 +642,7 @@
         <!-- SECTION 2: HISTORICAL & CULTURAL CONTEXT -->
         <!-- ============================================================ -->
         <button class="accordion-section">2. Historical &amp; Cultural Context</button>
-        <div class="content-panel">
+        <div class="sg-panel">
             <div class="panel-content">
 
 <button class="sub-accordion"><span>Historical Setting</span></button>
@@ -796,7 +796,7 @@
         <!-- SECTION 3: KEY PASSAGES STUDY -->
         <!-- ============================================================ -->
         <button class="accordion-section">3. Key Passages Study</button>
-        <div class="content-panel">
+        <div class="sg-panel">
             <div class="panel-content">
 
 <button class="sub-accordion"><span>Reading Overview</span></button>
@@ -1054,7 +1054,7 @@
         <!-- SECTION 4: WORD STUDIES -->
         <!-- ============================================================ -->
         <button class="accordion-section">4. Word Studies</button>
-        <div class="content-panel">
+        <div class="sg-panel">
             <div class="panel-content">
 
 <button class="sub-accordion"><span>Quick Reference Table</span></button>
@@ -1163,7 +1163,7 @@
         <!-- SECTION 5: TEACHING APPLICATIONS -->
         <!-- ============================================================ -->
         <button class="accordion-section">5. Teaching Applications</button>
-        <div class="content-panel">
+        <div class="sg-panel">
             <div class="panel-content">
 
 <button class="sub-accordion"><span>Personal Study Applications</span></button>
@@ -1229,3 +1229,73 @@
 <button class="inner-accordion"><span>Lesson Focus 1: We Are Abraham's Seed</span></button>
 <div class="inner-panel">
 <div class="inner-panel
+
+<script>
+
+        // Main accordion sections
+        const accordionSections = document.querySelectorAll('.accordion-section');
+        accordionSections.forEach(section => {
+            section.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const panel = this.nextElementSibling;
+                panel.classList.toggle('active');
+            });
+        });
+
+        // Sub-accordions (nested within main panels)
+        const subAccordions = document.querySelectorAll('.sub-accordion');
+        subAccordions.forEach(subAccordion => {
+            subAccordion.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const subPanel = this.nextElementSibling;
+                subPanel.classList.toggle('active');
+            });
+        });
+
+        // Inner accordions (third level - nested within sub-panels)
+        const innerAccordions = document.querySelectorAll('.inner-accordion');
+        innerAccordions.forEach(innerAccordion => {
+            innerAccordion.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const innerPanel = this.nextElementSibling;
+                innerPanel.classList.toggle('active');
+            });
+        });
+
+        function expandAll() {
+            // Expand main sections
+            accordionSections.forEach(section => {
+                section.classList.add('active');
+                section.nextElementSibling.classList.add('active');
+            });
+            // Expand sub-accordions
+            subAccordions.forEach(sub => {
+                sub.classList.add('active');
+                sub.nextElementSibling.classList.add('active');
+            });
+            // Expand inner accordions
+            innerAccordions.forEach(inner => {
+                inner.classList.add('active');
+                inner.nextElementSibling.classList.add('active');
+            });
+        }
+
+        function collapseAll() {
+            // Collapse main sections
+            accordionSections.forEach(section => {
+                section.classList.remove('active');
+                section.nextElementSibling.classList.remove('active');
+            });
+            // Collapse sub-accordions
+            subAccordions.forEach(sub => {
+                sub.classList.remove('active');
+                sub.nextElementSibling.classList.remove('active');
+            });
+            // Collapse inner accordions
+            innerAccordions.forEach(inner => {
+                inner.classList.remove('active');
+                inner.nextElementSibling.classList.remove('active');
+            });
+        }
+        
+</script>
