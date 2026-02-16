@@ -7,8 +7,19 @@ theme = 'cfm'
   description = 'In-depth study guides, Hebrew word studies, interactive charts, and curated video resources for the Come Follow Me Old Testament 2026 curriculum.'
   year = '2026'
   testament = 'Old Testament'
+  # Google Analytics - replace with your Measurement ID
+  googleAnalytics = 'G-ZJ6L0WK2K8'
 
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+# Sitemap configuration
+[sitemap]
+  changefreq = 'weekly'
+  priority = 0.5
+  filename = 'sitemap.xml'
+
+# Enable robots.txt generation
+enableRobotsTXT = true

@@ -21,6 +21,42 @@
     <meta name="twitter:card" content="summary">
 
     <link rel="stylesheet" href="{{ (printf "css/style.css?v=%d" now.Unix) | relURL }}">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ .Permalink }}">
+
+    <!-- Google Analytics 4 -->
+    {{ with .Site.Params.googleAnalytics }}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ . }}');
+    </script>
+    {{ end }}
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "{{ if .IsHome }}WebSite{{ else }}Article{{ end }}",
+      "name": "{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}",
+      "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}",
+      "url": "{{ .Permalink }}"{{ if not .IsHome }},
+      "publisher": {
+        "@type": "Organization",
+        "name": "Come Follow Me Corner",
+        "url": "https://www.cfmcorner.com"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Kymber Brockbank"
+      }{{ with .Date }},
+      "datePublished": "{{ .Format "2006-01-02" }}"{{ end }}{{ end }}
+    }
+    </script>
+
     {{ block "head" . }}{{ end }}
 </head>
 <body>
