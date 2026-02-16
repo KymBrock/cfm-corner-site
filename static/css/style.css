@@ -408,11 +408,6 @@ body {
     color: var(--sage-dark);
     font-weight: 600;
 }
-@media (max-width: 600px) {
-    .week-list-card { flex-direction: column; }
-    .week-list-img { width: 100%; min-height: 160px; max-height: 200px; }
-    .week-list-body { padding: 14px 16px; }
-}
 
 /* Curriculum Section */
 .curriculum-section { margin: 45px 0; }
@@ -637,11 +632,34 @@ body {
     body { background: white; }
 }
 
-/* === Mobile === */
+/* === Tablet (601–768px) — compact nav but keep links visible === */
 @media (max-width: 768px) {
     .nav-top { padding: 10px 16px; }
     .nav-tree { width: 38px; height: 38px; }
     .nav-title { font-size: 1.1em; }
+    .nav-right { gap: 6px; }
+    .nav-links a { font-size: 0.82em; padding: 5px 10px; }
+    .nav-search { width: 200px; height: 30px; }
+    .welcome-section h1 { font-size: 1.7em; }
+    .week-grid { grid-template-columns: repeat(2, 1fr); }
+    .week-header h1 { font-size: 1.5em; }
+    .week-header { padding: 25px 20px; }
+    .tab-btn { padding: 10px 14px; font-size: 0.85em; }
+    .quick-summary { padding: 18px; }
+    .curriculum-grid { grid-template-columns: repeat(2, 1fr); }
+    .current-week-card { padding: 25px 20px; }
+    .cw-title { font-size: 1.2em; }
+    .subscribe-form input { width: 100%; }
+    .content-panel { padding: 20px; }
+    .site-main { padding: 20px 16px; }
+    .hero-banner { aspect-ratio: 16 / 7; }
+}
+
+/* === Phone (≤600px) — hamburger nav, single-column layouts === */
+@media (max-width: 600px) {
+    .nav-top { padding: 10px 14px; }
+    .nav-tree { width: 34px; height: 34px; }
+    .nav-title { font-size: 1em; }
     .nav-right {
         display: none;
         flex-direction: column;
@@ -658,21 +676,51 @@ body {
     }
     .nav-right.open { display: flex; }
     .nav-links { flex-direction: column; gap: 4px; }
-    .nav-links a { padding: 10px 14px; border-radius: 6px; }
+    .nav-links a { padding: 10px 14px; border-radius: 6px; font-size: 0.95em; }
     .nav-search { width: 100%; margin-top: 4px; }
     .nav-toggle { display: block; margin-left: auto; }
-    .welcome-section h1 { font-size: 1.7em; }
-    .week-header h1 { font-size: 1.5em; }
-    .week-header { padding: 25px 20px; }
-    .tab-btn { padding: 10px 14px; font-size: 0.85em; }
-    .quick-summary { padding: 18px; }
-    .curriculum-grid { grid-template-columns: repeat(2, 1fr); }
-    .current-week-card { padding: 25px 20px; }
-    .cw-title { font-size: 1.2em; }
-    .subscribe-form input { width: 100%; }
+    .welcome-section { padding: 25px 16px 20px; }
+    .welcome-section h1 { font-size: 1.5em; }
+    .welcome-section p { font-size: 0.95em; }
+    .hero-banner { aspect-ratio: 4 / 3; }
+    .week-grid { grid-template-columns: 1fr; gap: 14px; }
+    .week-header h1 { font-size: 1.3em; }
+    .week-header { padding: 20px 16px; }
+    .week-header .week-scripture-ref { font-size: 1em; }
+    .tab-nav { padding: 4px 4px 0; gap: 2px; }
+    .tab-btn { padding: 9px 12px; font-size: 0.82em; }
+    .quick-summary { padding: 16px; }
+    .quick-summary h2 { font-size: 1.1em; }
+    .content-panel { padding: 16px; }
+    .site-main { padding: 16px 12px; }
+    .curriculum-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .current-week-card { padding: 20px 16px; }
+    .cw-title { font-size: 1.1em; }
+    .cw-week { font-size: 0.8em; }
+    .subscribe-section { padding: 30px 16px; margin-top: 30px; }
+    .subscribe-form { flex-direction: column; align-items: center; gap: 8px; }
+    .subscribe-form input { width: 100%; max-width: 320px; }
+    .subscribe-form button { width: 100%; max-width: 320px; }
+    /* Resource page grid override (inline styles use repeat(3)) */
+    .chart-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    .chart-card { padding: 20px 14px !important; }
+    /* Embedded content: constrain iframes/images */
+    .embedded-content iframe,
+    .embedded-content img { max-width: 100%; height: auto; }
+    .embedded-content table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .section-heading { font-size: 1.2em; }
+    .site-footer { padding: 30px 16px; margin-top: 35px; }
+    .footer-brand { font-size: 1.1em; letter-spacing: 2px; }
+    /* Week list cards (all weeks page) */
+    .week-list-card { flex-direction: column; }
+    .week-list-img { width: 100%; min-height: 160px; max-height: 200px; }
+    .week-list-body { padding: 14px 16px; }
 }
 
-@media (max-width: 480px) {
-    .curriculum-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
-    .week-grid { grid-template-columns: 1fr; }
+/* === Small phone (≤340px) — tightest layout === */
+@media (max-width: 340px) {
+    .chart-grid { grid-template-columns: 1fr !important; max-width: 280px !important; margin-left: auto !important; margin-right: auto !important; }
+    .curriculum-grid { grid-template-columns: 1fr; }
+    .tab-btn { padding: 8px 8px; font-size: 0.78em; }
+    .nav-title { font-size: 0.9em; }
 }
