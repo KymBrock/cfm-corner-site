@@ -11,7 +11,7 @@ The purpose of this website is to combine and organize resources and study mater
 
 This website includes links and materials that are published by the Church of Jesus Christ of Latter-Day Saints, as well as other materials that are published through other persons and organizations (private, academic, podcasts, videos, etc.) However, this website is not endorsed by the Church, nor is it endorsed by any of the affiliated links that are provided.
 
-As a Sunday School teacher, I simply wanted to provide my class with the source materials that I use and include in my weekly Lessons. Creating a website, that combines all of these resources into a single location seemed like a logical and helpful service.
+This site grew out of a Sunday School calling. I simply wanted to provide my class with some of the source materials I was using in my lessons. Creating a website that combined these resources into a single location seemed like a logical and helpful service. The site just grew from there.
 
 ---
 
