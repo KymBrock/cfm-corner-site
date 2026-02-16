@@ -62,13 +62,13 @@
 <body>
     <nav class="site-nav">
         <div class="nav-top">
-            <a href="{{ "" | relURL }}/" class="nav-logo">
+            <a href="/" class="nav-logo">
                 <img src="{{ "images/tree-logo.png" | relURL }}" alt="" class="nav-tree">
                 <span class="nav-title">Come Follow Me Corner</span>
             </a>
             <div class="nav-right">
                 <div class="nav-links">
-                    <a href="{{ "" | relURL }}/"{{ if .IsHome }} class="active"{{ end }}>Home</a>
+                    <a href="/"{{ if .IsHome }} class="active"{{ end }}>Home</a>
                     <a href="{{ "about/" | relURL }}"{{ if hasPrefix .RelPermalink "/about/" }} class="active"{{ end }}>About</a>
                     <a href="{{ "weeks/" | relURL }}"{{ if hasPrefix .RelPermalink "/weeks/" }} class="active"{{ end }}>Weekly Lessons</a>
                     <a href="{{ "resources/" | relURL }}"{{ if hasPrefix .RelPermalink "/resources/" }} class="active"{{ end }}>Resources</a>
