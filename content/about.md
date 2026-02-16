@@ -20,7 +20,7 @@ As a Sunday School teacher, I simply wanted to provide my class with the source 
 <h2 style="font-family: Georgia, serif; color: #1e3a4f; font-weight: normal; margin-bottom: 12px;">Support CFM Corner</h2>
 
 <p style="color: #4a5568; max-width: 550px; margin: 0 auto 25px; line-height: 1.7;">
-CFM Corner is a labor of love. Every week we gather study guides, video summaries, charts, and resources — all free and always will be. If these materials have blessed your scripture study, consider supporting the project so we can keep creating.
+CFM Corner is a labor of love. Every week we gather study guides, video summaries, charts, and resources — all free and always will be. We're also developing an animated video series and other projects designed to bring significant cultural and historical insights to life, helping deepen your understanding of the world behind the scriptures. If these materials have blessed your study, consider supporting the project so we can keep creating.
 </p>
 
 <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; margin-bottom: 20px;">
