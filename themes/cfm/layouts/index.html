@@ -78,42 +78,43 @@
     <h2>Stay Connected</h2>
     <p>Get weekly lesson notifications delivered to your inbox. New study guides, charts, and resources every week.</p>
     
-    <div class="ml-embedded" data-form="suju5N"></div>
-    <style>
-    /* Hide MailerLite default heading/description */
-    .subscribe-section .ml-embedded h4,
-    .subscribe-section .ml-embedded p:not(.ml-form-successBody p),
-    .subscribe-section [class*="ml-form"] h4,
-    .subscribe-section [class*="ml-form"] .ml-form-embedDescription { display: none !important; }
-    /* Transparent backgrounds */
-    .subscribe-section .ml-embedded,
-    .subscribe-section .ml-embedded div,
-    .subscribe-section [class*="ml-form-embed"] { background: transparent !important; border: none !important; box-shadow: none !important; }
-    .subscribe-section .ml-embedded .ml-form-embedWrapper { max-width: 500px; margin: 0 auto; }
-    /* Email input */
-    .subscribe-section .ml-embedded input[type="email"],
-    .subscribe-section .ml-embedded input[type="text"] {
-        padding: 12px 20px !important; border: 2px solid rgba(255,255,255,0.6) !important;
-        border-radius: 30px !important; background: rgba(255,255,255,0.15) !important;
-        color: white !important; font-size: 1em !important; font-family: inherit !important;
-        height: auto !important;
+    <form class="subscribe-form" id="cfm-subscribe" onsubmit="return cfmSubscribe(event)">
+        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin: 15px 0;">
+            <input type="email" id="cfm-email" placeholder="Your email address" required style="padding: 12px 20px; border: 2px solid rgba(255,255,255,0.6); border-radius: 30px; background: rgba(255,255,255,0.15); color: white; font-size: 1em; width: 280px; outline: none; font-family: inherit;" onfocus="this.style.borderColor='white'" onblur="this.style.borderColor='rgba(255,255,255,0.6)'">
+            <button type="submit" id="cfm-btn" style="padding: 12px 28px; background: #d5a93c; color: white; border: none; border-radius: 30px; font-size: 1em; font-weight: 600; cursor: pointer; font-family: inherit;">Subscribe</button>
+        </div>
+        <div id="cfm-msg" style="display:none; margin-top: 8px; font-size: 0.95em; text-align: center;"></div>
+    </form>
+    <script>
+    function cfmSubscribe(e) {
+        e.preventDefault();
+        var email = document.getElementById('cfm-email').value;
+        var btn = document.getElementById('cfm-btn');
+        var msg = document.getElementById('cfm-msg');
+        btn.textContent = 'Subscribing...'; btn.disabled = true;
+        msg.style.display = 'none';
+        // Submit via MailerLite universal JS
+        if (window.ml) { ml('subscribe', 'suju5N', { email: email }); }
+        // Hidden MailerLite form submission as backup
+        var iframe = document.createElement('iframe');
+        iframe.name = 'ml-submit'; iframe.style.display = 'none';
+        document.body.appendChild(iframe);
+        var f = document.createElement('form');
+        f.method = 'POST'; f.target = 'ml-submit';
+        f.action = 'https://assets.mailerlite.com/jsonp/2118385/forms/suju5N/subscribe';
+        var i = document.createElement('input');
+        i.name = 'fields[email]'; i.value = email;
+        f.appendChild(i); document.body.appendChild(f); f.submit();
+        setTimeout(function() {
+            msg.style.display = 'block'; msg.style.color = '#d5a93c';
+            msg.textContent = '✓ Thank you for subscribing!';
+            btn.textContent = 'Subscribed!';
+            document.getElementById('cfm-email').value = '';
+            setTimeout(function() { btn.textContent = 'Subscribe'; btn.disabled = false; msg.style.display = 'none'; }, 4000);
+        }, 1200);
+        return false;
     }
-    .subscribe-section .ml-embedded input::placeholder { color: rgba(255,255,255,0.7) !important; }
-    .subscribe-section .ml-embedded input:focus { border-color: white !important; outline: none !important; box-shadow: none !important; }
-    /* Subscribe button */
-    .subscribe-section .ml-embedded button,
-    .subscribe-section .ml-embedded .ml-form-embedSubmit button,
-    .subscribe-section .ml-embedded button[type="submit"] {
-        padding: 12px 28px !important; background: #d5a93c !important;
-        color: white !important; border: none !important; border-radius: 30px !important;
-        font-size: 1em !important; font-weight: 600 !important; cursor: pointer !important;
-        font-family: inherit !important; width: auto !important; display: inline-block !important;
-    }
-    .subscribe-section .ml-embedded [class*="Submit"] { text-align: center !important; }
-    /* Success state */
-    .subscribe-section .ml-embedded [class*="success"] h4 { display: block !important; color: #d5a93c !important; }
-    .subscribe-section .ml-embedded [class*="success"] p { display: block !important; color: white !important; }
-    </style>
+    </script>
     <p style="font-size: 0.85em; opacity: 0.8; margin-top: 5px;">No spam. Unsubscribe anytime.</p>
 
     <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 15px;">
