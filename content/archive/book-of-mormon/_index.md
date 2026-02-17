@@ -11,6 +11,6 @@ description: "Come Follow Me Book of Mormon study resources"
 
 <p style="color: var(--text-secondary); max-width: 500px; margin: 0 auto 24px; line-height: 1.7;">We're in the process of migrating our Book of Mormon study materials to this new site. In the meantime, you can access all previous content on our original site.</p>
 
-<a href="https://cfmcorner.wixsite.com/comefollowmecorner/book-of-mormon" target="_blank" style="display: inline-block; background: var(--sage-dark); color: white; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95em;">Visit Archive on Original Site →</a>
+<a href="https://cfmcorner.wixsite.com/comefollowmecorner/blog/categories/book-of-mormon" target="_blank" style="display: inline-block; background: var(--sage-dark); color: white; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95em;">Visit Archive on Original Site →</a>
 
 </div>
