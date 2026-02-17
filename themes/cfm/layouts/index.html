@@ -78,42 +78,14 @@
     <h2>Stay Connected</h2>
     <p>Get weekly lesson notifications delivered to your inbox. New study guides, charts, and resources every week.</p>
     
-    <form class="subscribe-form" id="cfm-subscribe" onsubmit="return cfmSubscribe(event)">
+    <form action="https://cfmcorner.us19.list-manage.com/subscribe/post?u=6074bb2e8a5b4a52150832446&amp;id=e9c7976bc7" method="post" class="subscribe-form" target="_blank" novalidate>
         <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin: 15px 0;">
-            <input type="email" id="cfm-email" name="fields[email]" placeholder="Your email address" required autocomplete="email" style="padding: 12px 20px; border: 2px solid rgba(255,255,255,0.6); border-radius: 30px; background: rgba(255,255,255,0.15); color: white; font-size: 1em; width: 280px; outline: none; font-family: inherit;" onfocus="this.style.borderColor='white'" onblur="this.style.borderColor='rgba(255,255,255,0.6)'">
-            <button type="submit" id="cfm-btn" style="padding: 12px 28px; background: #d5a93c; color: white; border: none; border-radius: 30px; font-size: 1em; font-weight: 600; cursor: pointer; font-family: inherit;">Subscribe</button>
+            <input type="email" name="EMAIL" placeholder="Your email address" required style="padding: 12px 20px; border: 2px solid rgba(255,255,255,0.6); border-radius: 30px; background: rgba(255,255,255,0.15); color: white; font-size: 1em; width: 280px; outline: none; font-family: inherit;" onfocus="this.style.borderColor='white'" onblur="this.style.borderColor='rgba(255,255,255,0.6)'">
+            <button type="submit" style="padding: 12px 28px; background: #d5a93c; color: white; border: none; border-radius: 30px; font-size: 1em; font-weight: 600; cursor: pointer; font-family: inherit;">Subscribe</button>
         </div>
-        <div id="cfm-msg" style="display:none; margin-top: 8px; font-size: 0.95em; text-align: center;"></div>
+        <!-- Bot protection -->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6074bb2e8a5b4a52150832446_e9c7976bc7" tabindex="-1" value=""></div>
     </form>
-    <iframe name="ml-hidden" style="display:none;"></iframe>
-    <script>
-    function cfmSubscribe(e) {
-        e.preventDefault();
-        var email = document.getElementById('cfm-email').value;
-        var btn = document.getElementById('cfm-btn');
-        var msg = document.getElementById('cfm-msg');
-        btn.textContent = 'Subscribing...'; btn.disabled = true;
-        msg.style.display = 'none';
-        // Submit to MailerLite via hidden form POST
-        var f = document.createElement('form');
-        f.method = 'POST';
-        f.action = 'https://assets.mailerlite.com/jsonp/2118385/forms/179601558187541759/subscribe';
-        f.target = 'ml-hidden';
-        var i1 = document.createElement('input'); i1.name = 'fields[email]'; i1.value = email;
-        var i2 = document.createElement('input'); i2.name = 'ml-submit'; i2.value = '1';
-        var i3 = document.createElement('input'); i3.name = 'anticsrf'; i3.value = 'true';
-        f.appendChild(i1); f.appendChild(i2); f.appendChild(i3);
-        document.body.appendChild(f); f.submit(); f.remove();
-        setTimeout(function() {
-            msg.style.display = 'block'; msg.style.color = '#d5a93c';
-            msg.textContent = '✓ Thank you for subscribing!';
-            btn.textContent = 'Subscribed!';
-            document.getElementById('cfm-email').value = '';
-            setTimeout(function() { btn.textContent = 'Subscribe'; btn.disabled = false; msg.style.display = 'none'; }, 4000);
-        }, 1500);
-        return false;
-    }
-    </script>
     <p style="font-size: 0.85em; opacity: 0.8; margin-top: 5px;">No spam. Unsubscribe anytime.</p>
 
     <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 15px;">
