@@ -146,7 +146,7 @@ cat > "$OUTPUT" << EMAILEOF
     <!-- LESSON IMAGE — upload to Mailchimp Content Studio each week -->
     <tr>
         <td style="padding: 20px 40px;">
-            <img src="lesson-image.jpg" width="520" alt="$IMAGE_ALT" style="width: 100%; max-width: 520px; display: block; border-radius: 6px; border: 1px solid #e8e8e4;">
+            <img src="https://www.cfmcorner.com/images/weeks/week${WEEK_NUM}.jpg" width="520" alt="$IMAGE_ALT" style="width: 100%; max-width: 520px; display: block; border-radius: 6px; border: 1px solid #e8e8e4;">
         </td>
     </tr>
 
@@ -251,7 +251,7 @@ echo ""
 echo "📋 Next steps:"
 echo "   1. Open $OUTPUT in your browser to preview"
 echo "   2. Upload the lesson image to Mailchimp Content Studio"
-echo "   3. Replace 'lesson-image.jpg' src with the Mailchimp hosted URL"
+echo "   3. Lesson image auto-set from cfmcorner.com/images/weeks/week${WEEK_NUM}.jpg"
 echo "   4. Replace 'CFMClogo.jpg' and 'CFMbannet.jpg' with Mailchimp hosted URLs"
 echo "   5. Copy the HTML into Mailchimp: Campaigns → Email → Code your own → Paste in code"
 echo ""
