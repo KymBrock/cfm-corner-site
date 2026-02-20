@@ -7,11 +7,15 @@ description: "About Come Follow Me Corner"
     <img src="../images/tree-banner.jpg" alt="Come Follow Me Corner" style="max-width: 100%; border-radius: 8px;">
 </div>
 
-The purpose of this website is to combine and organize resources and study materials that correspond with the Come Follow Me Curriculum.
+<div style="max-width: 650px; margin: 0 auto; line-height: 1.8; color: #2d3748; font-size: 1.02em;">
 
-This website includes links and materials that are published by the Church of Jesus Christ of Latter-Day Saints, as well as other materials that are published through other persons and organizations (private, academic, podcasts, videos, etc.) However, this website is not endorsed by the Church, nor is it endorsed by any of the affiliated links that are provided.
+<p style="margin-bottom: 1.4em;">Come Follow Me Corner combines and organizes resources and study materials that correspond with the Come Follow Me curriculum — study guides, video summaries, Hebrew language insights, historical context, original charts, and more.</p>
 
-This site grew out of a Sunday School calling. I simply wanted to provide my class with some of the source materials I was using in my lessons. Creating a website that combined these resources into a single location seemed like a logical and helpful service. The site just grew from there.
+<p style="margin-bottom: 1.4em;">This site includes links and materials published by The Church of Jesus Christ of Latter-day Saints, as well as materials from other persons and organizations (private, academic, podcasts, videos, etc.). However, this website is not endorsed by the Church, nor is it endorsed by any of the affiliated links provided.</p>
+
+<p style="margin-bottom: 2em;">This site grew out of a Sunday School calling. I simply wanted to provide my class with some of the source materials I was using in my lessons. Creating a website that combined these resources into a single location seemed like a logical and helpful service. The site just grew from there.</p>
+
+</div>
 
 ---
 
@@ -20,7 +24,7 @@ This site grew out of a Sunday School calling. I simply wanted to provide my cla
 <h2 id="support" style="font-family: Georgia, serif; color: #1e3a4f; font-weight: normal; margin-bottom: 12px;">Support CFM Corner</h2>
 
 <p style="color: #4a5568; max-width: 550px; margin: 0 auto 25px; line-height: 1.7;">
-CFM Corner is a labor of love. Every week we gather study guides, video summaries, charts, and resources — all free and always will be. We're also developing an animated video series and other projects designed to bring significant cultural and historical insights to life, helping deepen your understanding of the world behind the scriptures. If these materials have blessed your study, consider supporting the project — whether through a one-time contribution or ongoing monthly support, every bit helps us keep creating.
+CFM Corner is a passion project — the study guides, charts, and weekly resources are created on our own time, and the hosting, research, and development are funded out of pocket. We're not a nonprofit yet (ironically, that takes money), but we'd love to get there someday. In the meantime, any support you offer goes directly back into the project: hosting, tools, production costs, and building out the resources you see here. We're also developing an animated video series and other projects designed to bring significant cultural and historical insights to life, helping deepen your understanding of the world behind the scriptures.
 </p>
 
 <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; margin-bottom: 20px;">

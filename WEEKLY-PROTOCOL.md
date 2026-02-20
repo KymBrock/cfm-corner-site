@@ -33,7 +33,22 @@ Write or review these files:
 - [ ] `Weekly_Insights_WeekNN.md` — Narrative synthesis of the week
 
 ### 1.3 Video Resources (folder: `Video_Resources/`)
-- [ ] Update `VIDEO_URL_TRACKER.md` with this week's video URLs
+1. Run the video collector:
+   ```bash
+   cd /Users/kymberbrockbank/Developer/cfm-corner-tools
+   rm -rf ingesters/.cache/
+   .venv/bin/python3 ingesters/collect_and_distill_videos.py --week N --collect-only
+   ```
+2. Manually add any missing URLs the collector didn't find
+3. Pre-fill static channels (Scripture Gems 2022, Messages of Christ) if not already done:
+   ```bash
+   python3 /Users/kymberbrockbank/.openclaw/workspace/scripts/prefill-static-channels.py
+   ```
+4. Verify `academic_resources_urls.json` has the current week's slug:
+   ```
+   cfm-corner-tools/generators/weekly_resources/academic_resources_urls.json
+   ```
+5. The **cron job** handles ongoing backfill automatically (Wed–Sat, 10am & 6pm MST)
 - [ ] Verify all links are live and correct
 - [ ] Add summaries in `Distilled/` folder if needed
 
@@ -72,11 +87,34 @@ charts:
 **Important:** The email generator reads these fields, so fill them all in.
 
 ### 2.2 Static Content Files (`static/content/weekNN/`)
-Convert Obsidian content to HTML and place in:
+Convert Obsidian content to HTML and deploy using **cfm-corner-tools**:
+
+**Primary Command (generates ALL three + deploys to Hugo site):**
+```bash
+cd /Users/kymberbrockbank/Developer/cfm-corner-tools
+.venv/bin/python3 cfm_cli.py generate --week NN --book ot --deploy
+```
+This generates `study-guide.html`, `insights.html`, and `resources.html` (with thumbnails + logo cards) and copies them directly to `cfm-corner-site/static/content/weekNN/`.
+
+**Alternative: GUI Converter** (when you need more control):
+```bash
+cd /Users/kymberbrockbank/Developer/cfm-corner-tools/converters && ./run_converter_ui.sh
+```
+
+**Check status of all weeks:**
+```bash
+.venv/bin/python3 cfm_cli.py status --book ot
+```
+
+Verify outputs:
 - [ ] `study-guide.html` — from Study Guide markdown files
 - [ ] `insights.html` — from Weekly Insights markdown
-- [ ] `resources.html` — from Video Resources / VIDEO_URL_TRACKER
+- [ ] `resources.html` — from Video Resources / VIDEO_URL_TRACKER (**must match `RESOURCES-HTML-SPEC.md`**)
 - [ ] Any chart HTML files referenced in front matter
+
+> **Important:** The resources HTML must follow the format in [`RESOURCES-HTML-SPEC.md`](RESOURCES-HTML-SPEC.md). Canonical example: `static/content/week08/resources.html`. Every week must include: Church Media for Families section, video thumbnail cards (never plain text links), Bible Project theme + word study videos, and all accordion sections.
+
+> **Hebrew/Greek lexicon links** must use hover popups per [`LEXICON-POPUP-SPEC.md`](LEXICON-POPUP-SPEC.md). All BLB lexicon links in study guides and insights get `data-lexicon` attributes. New terms must be added to `cfm-corner-tools/data/lexicon-popups.json`. The GUI converter handles this automatically for links in Obsidian markdown.
 
 ### 2.3 Lesson Image
 - [ ] Add lesson image to `static/images/weeks/weekNN.jpg`
@@ -93,8 +131,9 @@ Convert Obsidian content to HTML and place in:
 ### 3.1 Local Preview
 ```bash
 cd /Users/kymberbrockbank/Developer/cfm-corner-site
-hugo server --noHTTPCache --disableFastRender --renderToMemory
+hugo server --noHTTPCache --disableFastRender --renderToMemory -p 1314
 ```
+**⚠️ Must restart after major content edits** — `renderToMemory` can serve stale content.
 - [ ] Check all 4 tabs load (Study Guide, Insights, Resources, Charts)
 - [ ] Check lesson image displays
 - [ ] Check mobile layout
@@ -142,9 +181,10 @@ Output: `~/Desktop/cfm-email-weekNN.html`
 8. **Preview & Test** — send a test to yourself
 9. **Send** (or schedule for Saturday/Sunday morning)
 
-### Mailchimp Image URLs (fill in once, reuse weekly)
-- **Header (CFMClogo.jpg):** `________________`
-- **Footer (CFMbannet.jpg):** `________________`
+### Mailchimp Image URLs (reuse weekly)
+- **Header (CFMClogo.jpg):** `https://mcusercontent.com/6074bb2e8a5b4a52150832446/images/5cf0c4cd-300b-66a8-bab1-2c326c39f2b3.jpg`
+- **Footer (CFMbannet.jpg):** `https://mcusercontent.com/6074bb2e8a5b4a52150832446/images/0ae702ea-fca6-a65c-501c-5972c12aeaf7.jpg`
+- **CAN-SPAM address:** 5725 S. Valley Blvd. Ste 5 PMB 266598, Las Vegas, NV 89118-3122
 
 ---
 
@@ -168,17 +208,21 @@ Output: `~/Desktop/cfm-email-weekNN.html`
 | Generated emails | `~/Desktop/cfm-email-weekNN.html` |
 | Master Resource Tracker | `OT_2026/Resources/MASTER_RESOURCE_TRACKER.md` |
 | Video URL Trackers | `OT_2026/WeeklyLessons/Week_NN_*/Video_Resources/VIDEO_URL_TRACKER.md` |
+| **cfm-corner-tools** | `/Users/kymberbrockbank/Developer/cfm-corner-tools/` |
+| Tools config | `cfm-corner-tools/config.yaml` |
+| Academic URLs config | `cfm-corner-tools/generators/weekly_resources/academic_resources_urls.json` |
+| Static channel pre-fill | `/Users/kymberbrockbank/.openclaw/workspace/scripts/prefill-static-channels.py` |
 
 ---
 
 ## Future Automation (TODO)
 
-- [ ] **Obsidian → Hugo converter**: Auto-convert study guide markdown files to `study-guide.html`
-- [ ] **Video URL auto-update**: Pull from `VIDEO_URL_TRACKER.md` into `resources.html`
+- [x] **Obsidian → Hugo converter**: ✅ GUI converter (`cfm-corner-tools/converters/run_converter_ui.sh`) + CLI (`md_to_html_converter.py`)
+- [x] **Video URL auto-update**: ✅ Video collector pipeline + resources HTML generator + cron automation
 - [ ] **Mailchimp API integration**: Auto-create campaign from generated HTML
 - [ ] **One-command publish**: Single script that does Phase 2–4 in sequence
 - [ ] **Mailchimp saved template**: Upload header/footer once, use template ID for campaigns
 
 ---
 
-*Last updated: 2026-02-15*
+*Last updated: 2026-02-19*

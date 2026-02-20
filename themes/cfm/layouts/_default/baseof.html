@@ -71,6 +71,7 @@
                     <a href="/"{{ if .IsHome }} class="active"{{ end }}>Home</a>
                     <a href="{{ "about/" | relURL }}"{{ if hasPrefix .RelPermalink "/about/" }} class="active"{{ end }}>About</a>
                     <a href="{{ "weeks/" | relURL }}"{{ if hasPrefix .RelPermalink "/weeks/" }} class="active"{{ end }}>Weekly Lessons</a>
+                    <a href="{{ "hebrew/" | relURL }}"{{ if hasPrefix .RelPermalink "/hebrew/" }} class="active"{{ end }}>Hebrew</a>
                     <a href="{{ "resources/" | relURL }}"{{ if hasPrefix .RelPermalink "/resources/" }} class="active"{{ end }}>Resources</a>
                 </div>
                 <form class="nav-search" action="{{ "search/" | relURL }}" method="get" onsubmit="event.preventDefault(); window.location.href=this.action + '#' + encodeURIComponent(this.querySelector('input').value);">
@@ -90,9 +91,7 @@
         <div class="footer-inner">
             <div class="footer-brand">COME FOLLOW ME CORNER</div>
             <div class="footer-li">
-                <a href="https://learninginspired.com" target="_blank" rel="noopener">
-                    <img src="{{ "images/learning-inspired-logo.png" | relURL }}" alt="Learning Inspired" class="footer-li-logo">
-                </a>
+                <img src="{{ "images/learning-inspired-logo.png" | relURL }}" alt="Learning Inspired" class="footer-li-logo">
             </div>
             <div style="margin: 16px 0;">
                 <a href="{{ "about/#support" | relURL }}" style="display: inline-block; background: var(--gold); color: var(--text-dark); padding: 8px 22px; border-radius: 20px; text-decoration: none; font-size: 0.85em; font-weight: 600; transition: opacity 0.2s;">Support CFM Corner</a>
@@ -101,6 +100,135 @@
             <p class="footer-disclaimer">Not affiliated with The Church of Jesus Christ of Latter-day Saints</p>
         </div>
     </footer>
+
+    <!-- BLB ScriptTagger: inline scripture popups -->
+    <script>
+      var defined_BLB = { version: "KJV", hyperlink: true, style: "par", tooltipStyle: "light" };
+    </script>
+    <script src="https://www.blueletterbible.org/assets/scripts/blbToolTip/BLB_ScriptTagger-min.js"></script>
+
+    <!-- Lexicon hover popups (like ScriptTagger but for Hebrew/Greek dictionary links) -->
+    <style>
+      .lexicon-popup {
+        position: absolute;
+        z-index: 10000;
+        background: #fff;
+        border: 1px solid var(--sage-dark, #4a6b52);
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+        padding: 14px 18px;
+        max-width: 340px;
+        min-width: 200px;
+        font-size: 0.92em;
+        line-height: 1.5;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.15s;
+      }
+      .lexicon-popup.visible { opacity: 1; pointer-events: auto; }
+      .lexicon-popup .lp-word { font-size: 1.3em; font-weight: 700; color: var(--sage-dark, #4a6b52); }
+      .lexicon-popup .lp-hebrew { font-size: 1.4em; font-family: 'SBL Hebrew', 'Ezra SIL', 'Times New Roman', serif; direction: rtl; }
+      .lexicon-popup .lp-greek { font-size: 1.2em; font-family: 'SBL Greek', 'Times New Roman', serif; }
+      .lexicon-popup .lp-strongs { font-size: 0.82em; color: #888; margin-left: 6px; }
+      .lexicon-popup .lp-def { margin-top: 6px; color: #333; }
+      .lexicon-popup .lp-ref { margin-top: 4px; font-size: 0.85em; color: #666; font-style: italic; }
+      .lexicon-popup .lp-link { margin-top: 8px; font-size: 0.82em; }
+      .lexicon-popup .lp-link a { color: var(--sage-dark, #4a6b52); text-decoration: underline; pointer-events: auto; }
+      a[data-lexicon] { cursor: help; }
+    </style>
+    <script>
+    (function() {
+      var popup = document.createElement('div');
+      popup.className = 'lexicon-popup';
+      document.body.appendChild(popup);
+      var hideTimer, activeEl = null;
+      var isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+
+      function show(el) {
+        clearTimeout(hideTimer);
+        activeEl = el;
+        var d = el.dataset;
+        var wordClass = d.lang === 'greek' ? 'lp-greek' : 'lp-hebrew';
+        popup.innerHTML =
+          '<div><span class="lp-word">' + (d.translit || '') + '</span>' +
+          (d.strongs ? ' <span class="lp-strongs">(' + d.strongs + ')</span>' : '') + '</div>' +
+          (d.original ? '<div class="' + wordClass + '">' + d.original + '</div>' : '') +
+          (d.lexicon ? '<div class="lp-def">' + d.lexicon + '</div>' : '') +
+          (d.verse ? '<div class="lp-ref">' + d.verse + '</div>' : '') +
+          '<div class="lp-link"><a href="' + el.href + '" target="_blank">Full entry at Blue Letter Bible →</a></div>';
+
+        var r = el.getBoundingClientRect();
+        var popupWidth = Math.min(340, window.innerWidth - 20);
+        popup.style.maxWidth = popupWidth + 'px';
+
+        // Position: try below, fall back to above if near bottom
+        var top = r.bottom + window.scrollY + 6;
+        var left = r.left + window.scrollX;
+
+        // Keep within viewport horizontally
+        if (left + popupWidth > window.innerWidth) left = window.innerWidth - popupWidth - 10;
+        if (left < 10) left = 10;
+
+        // On mobile, center horizontally for cleaner look
+        if (isTouch) {
+          left = Math.max(10, (window.innerWidth - popupWidth) / 2);
+        }
+
+        popup.style.top = top + 'px';
+        popup.style.left = left + 'px';
+        popup.classList.add('visible');
+      }
+
+      function hide() {
+        hideTimer = setTimeout(function() {
+          popup.classList.remove('visible');
+          activeEl = null;
+        }, 200);
+      }
+
+      function hideNow() {
+        clearTimeout(hideTimer);
+        popup.classList.remove('visible');
+        activeEl = null;
+      }
+
+      // Desktop: hover behavior
+      document.addEventListener('mouseover', function(e) {
+        var el = e.target.closest('a[data-lexicon]');
+        if (el) { e.preventDefault(); show(el); }
+      });
+      document.addEventListener('mouseout', function(e) {
+        var el = e.target.closest('a[data-lexicon]');
+        if (el) hide();
+      });
+      popup.addEventListener('mouseover', function() { clearTimeout(hideTimer); });
+      popup.addEventListener('mouseout', hide);
+
+      // Both desktop and mobile: click/tap behavior
+      document.addEventListener('click', function(e) {
+        var el = e.target.closest('a[data-lexicon]');
+
+        // If tapping inside the popup (e.g. the BLB link), let it through
+        if (popup.contains(e.target)) return;
+
+        if (el) {
+          e.preventDefault();
+          e.stopPropagation();
+          // If this link's popup is already showing, hide it (toggle)
+          if (activeEl === el && popup.classList.contains('visible')) {
+            hideNow();
+          } else {
+            show(el);
+          }
+        } else {
+          // Tapped outside — dismiss any visible popup
+          if (popup.classList.contains('visible')) {
+            hideNow();
+          }
+        }
+      });
+    })();
+    </script>
 
     {{ block "scripts" . }}{{ end }}
 </body>

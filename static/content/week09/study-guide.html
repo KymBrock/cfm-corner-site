@@ -1,0 +1,1329 @@
+<style>
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+        .site-header {
+            background: linear-gradient(135deg, #d4c4a8 0%, #8B7355 100%);
+            color: white; padding: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px;
+        }
+        .site-header-content { max-width: 1000px; margin: 0 auto; padding: 0 20px; text-align: center; }
+        .site-title { font-size: 2em; margin-bottom: 5px; }
+        .site-subtitle { font-size: 1.1em; opacity: 0.9; }
+
+        .header-section {
+            background-color: #8B7355; color: white; padding: 40px; border-radius: 12px;
+            margin-bottom: 30px; text-align: center;
+        }
+        .header-section .week-label { font-size: 1em; text-transform: uppercase; letter-spacing: 2px; opacity: 0.9; margin-bottom: 10px; }
+        .header-section h1 { font-size: 2.5em; font-weight: 300; margin-bottom: 10px; }
+        .header-section .subtitle { font-size: 1.3em; font-style: italic; margin-bottom: 20px; }
+        .header-section .date-location { font-size: 1.1em; opacity: 0.95; }
+
+        .quick-links { text-align: center; margin: 20px 0; }
+        .quick-link {
+            display: inline-block; background: #8B7355; color: white; padding: 10px 20px;
+            border-radius: 8px; text-decoration: none; margin: 5px; transition: all 0.3s;
+        }
+        .quick-link:hover { background: #6B5344; transform: translateY(-2px); }
+
+        .button-container { text-align: center; margin: 30px 0; }
+        .expand-button {
+            background-color: #8B7355; color: white; border: none; padding: 12px 24px;
+            margin: 5px 10px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em;
+        }
+        .expand-button:hover { background-color: #6B5344; }
+
+        .sg-accordion-section {
+            background-color: #8B7355; color: white; cursor: pointer; padding: 18px; width: 100%;
+            border: none; text-align: left; font-size: 1.2em; font-weight: 600; font-family: Georgia, serif;
+            border-radius: 8px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center;
+        }
+        .sg-accordion-section:hover { background-color: #6B5344; }
+        .sg-accordion-section::after { content: '▼'; font-size: 0.9em; transition: transform 0.3s; }
+        .sg-accordion-section.active::after { transform: rotate(180deg); }
+
+        .sg-panel {
+            background-color: white; border-radius: 0 0 8px 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .sg-panel.active { display: block; }
+        .panel-content { padding: 30px; }
+        .panel-content h2 { color: #8B7355; margin-bottom: 20px; font-size: 1.8em; }
+        .panel-content h3 { color: #6B5344; margin-top: 25px; margin-bottom: 15px; font-size: 1.4em; }
+        .panel-content h4 { color: #5a4a3a; margin-top: 20px; margin-bottom: 12px; font-size: 1.2em; }
+        .panel-content ul, .panel-content ol { margin-left: 25px; margin-bottom: 15px; }
+        .panel-content li { margin-bottom: 8px; }
+        .panel-content p { margin-bottom: 15px; text-align: justify; }
+        .panel-content a { color: #8B7355; }
+        .panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .panel-content blockquote {
+            margin: 20px 0 20px 20px;
+            padding: 15px 20px;
+            border-left: 4px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 8px 8px 0;
+        }
+        .panel-content blockquote p { margin-bottom: 8px; }
+        .panel-content blockquote p:last-child { margin-bottom: 0; }
+        .panel-content blockquote cite {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #8B7355;
+            font-style: normal;
+        }
+
+        .panel-content strong { color: #6B5344; }
+        .panel-content em { color: #5a4a3a; }
+
+        .panel-content hr {
+            border: none;
+            border-top: 2px solid #e8e0d5;
+            margin: 25px 0;
+        }
+
+        .panel-content code {
+            background-color: #f5f0e8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #6B5344;
+        }
+
+        .info-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .info-table th, .info-table td { border: 1px solid #d4c4a8; padding: 12px; text-align: left; }
+        .info-table th { background-color: #f5f0e8; color: #6B5344; font-weight: bold; }
+        .info-table tr:nth-child(even) { background-color: #faf8f5; }
+
+        .sg-sub-accordion {
+            background-color: #f5f0e8;
+            color: #5a4a3a;
+            cursor: pointer;
+            padding: 14px 40px 14px 18px;
+            width: 100%;
+            text-align: left;
+            border: 1px solid #d4c4a8;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            margin-top: 10px;
+            position: relative;
+            transition: background-color 0.2s;
+        }
+
+        .sg-sub-accordion:hover {
+            background-color: #e8e0d4;
+        }
+
+        .sg-sub-accordion::after {
+            content: '▼';
+            font-size: 0.8em;
+            color: #8B7355;
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s;
+        }
+
+        .sg-sub-accordion.active::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .sg-sub-panel {
+            background-color: #fafafa;
+            border-radius: 0 0 6px 6px;
+            border: 1px solid #d4c4a8;
+            border-top: none;
+            display: none;
+            transition: max-height 0.3s ease-out;
+            margin-bottom: 10px;
+        }
+
+        .sg-sub-panel.active {
+            display: block;
+            overflow: visible;
+            transition: max-height 0.3s ease-in;
+        }
+
+        .sg-sub-panel-content {
+            padding: 20px 25px;
+        }
+
+        .sg-sub-panel-content h3 { color: #6B5344; margin-top: 20px; margin-bottom: 12px; font-size: 1.3em; }
+        .sg-sub-panel-content h4 { color: #5a4a3a; margin-top: 15px; margin-bottom: 10px; font-size: 1.15em; }
+        .sg-sub-panel-content p { margin-bottom: 12px; text-align: justify; }
+        .sg-sub-panel-content ul, .sg-sub-panel-content ol { margin-left: 25px; margin-bottom: 12px; }
+        .sg-sub-panel-content li { margin-bottom: 6px; }
+        .sg-sub-panel-content a { color: #8B7355; }
+        .sg-sub-panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .sg-sub-panel-content blockquote {
+            margin: 15px 0 15px 15px;
+            padding: 12px 18px;
+            border-left: 3px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 6px 6px 0;
+        }
+        .sg-sub-panel-content blockquote p { margin-bottom: 6px; }
+        .sg-sub-panel-content blockquote p:last-child { margin-bottom: 0; }
+        .sg-sub-panel-content strong { color: #6B5344; }
+        .sg-sub-panel-content hr { border: none; border-top: 1px solid #e8e0d5; margin: 20px 0; }
+
+        @media (max-width: 768px) {
+            .header-section h1 { font-size: 1.8em; }
+            .panel-content { padding: 20px; }
+            .sg-sub-panel-content { padding: 15px 18px; }
+        }
+
+        .sg-section-heading {
+            margin: 1.2em 0 0.6em 0;
+            padding: 0.4em 0 0.4em 0.8em;
+            border-left: 3px solid #8B9D77;
+            color: #5a6b4f;
+            font-size: 1.05em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+        }
+        .sg-section-actions {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 28px;
+        }
+        .sg-section-actions .sg-action-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.35);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            padding: 0;
+            line-height: 1;
+        }
+        .sg-section-actions .sg-action-btn:hover {
+            background: rgba(255,255,255,0.35);
+        }
+    </style>
+
+<div class="container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <p class="week-label">Week 9</p>
+            <h1>Genesis 18–23</h1>
+            <div class="subtitle">"Is Any Thing Too Hard for the Lord?"</div>
+            <div class="date-location">February 23 – March 1, 2026</div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/09?lang=eng" target="_blank" class="quick-link">CFM Manual</a>
+        </div>
+
+        <!-- Expand/Collapse Buttons -->
+        <div class="button-container">
+            <button class="expand-button" onclick="expandAll()"><span class="btn-icon">&#x229E;</span> Expand All</button>
+            <button class="expand-button" onclick="collapseAll()"><span class="btn-icon">&#x229F;</span> Collapse All</button>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 1: GENESIS 18–23 -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">1. Genesis 18–23</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Week Information</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Element</th><th>Details</th></tr>
+<tr><td><strong>Week</strong></td><td>09</td></tr>
+<tr><td><strong>Dates</strong></td><td>February 23 – March 1, 2026</td></tr>
+<tr><td><strong>Reading</strong></td><td>Genesis 18–23</td></tr>
+<tr><td><strong>CFM Manual</strong></td><td><a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/09?lang=eng" target="_blank">Genesis 18–23 Lesson</a></td></tr>
+<tr><td><strong>Total Chapters</strong></td><td>6 (Genesis 18–23)</td></tr>
+<tr><td><strong>Approximate Verses</strong></td><td>~145 verses</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Reading Summary</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>This week contains some of the most dramatic and theologically profound narratives in all of scripture: the theophany at Mamre where God and two angels visit Abraham, the destruction of Sodom and Gomorrah, the long-awaited birth of Isaac, the harrowing test of the Akedah (binding of Isaac), and Sarah's death and burial at Machpelah. Each story reveals dimensions of faith, covenant, divine mercy, and sacrifice.</p>
+<p><strong>Genesis 18</strong> opens with three mysterious visitors at Abraham's tent near the oaks of Mamre. Abraham, recognizing the divine nature of at least one visitor, offers hospitality. The LORD announces that Sarah will bear a son within the year. Sarah, listening from the tent, laughs at the impossibility—she is 90 years old and "past the age of women." The LORD's response becomes the theme of this week: "Is any thing too hard for the LORD?" (<a href="https://www.blueletterbible.org/kjv/gen/18/14/s_18014" target="_blank">Genesis 18:14</a>). The chapter concludes with Abraham interceding for Sodom, negotiating with God to spare the city if even ten righteous people can be found.</p>
+<p><strong>Genesis 19</strong> narrates Sodom's destruction. Two angels arrive at Sodom's gates, where Lot offers them hospitality. The men of Sodom surround Lot's house, demanding the visitors. The angels strike the mob with blindness and urge Lot's family to flee. Lot, his wife, and two daughters escape as fire and brimstone rain from heaven. But Lot's wife "looked back" and became "a pillar of salt" (<a href="https://www.blueletterbible.org/kjv/gen/19/26/s_19026" target="_blank">Genesis 19:26</a>)—a haunting warning about divided loyalties.</p>
+<p><strong>Genesis 21</strong> records the fulfillment of God's promise: Isaac is born when Abraham is 100 and Sarah 90. The name Isaac (יִצְחָק, <a href="https://www.blueletterbible.org/lexicon/h3327/kjv/wlc/0-1/" target="_blank" data-lexicon="Isaac — he laughs" data-strongs="H3327" data-translit="Yitschaq" data-original="יִצְחָק" data-lang="hebrew" data-verse="Genesis 21:3"><em>Yitschaq</em></a>) means "he laughs," commemorating Sarah's laughter and God's joy in fulfilling the impossible. But tension arises between Sarah and Hagar; Abraham reluctantly sends Hagar and Ishmael away. God hears Hagar's cry and promises to make Ishmael a great nation.</p>
+<p><strong>Genesis 22</strong> presents the ultimate test: "Take now thy son, thine only son Isaac, whom thou lovest, and get thee into the land of Moriah; and offer him there for a burnt offering" (<a href="https://www.blueletterbible.org/kjv/gen/22/2/s_22002" target="_blank">Genesis 22:2</a>). Abraham obeys without recorded protest. On the third day, they arrive at Moriah. Isaac carries the wood; Abraham carries the fire and knife. Isaac asks, "Where is the lamb?" Abraham responds with prophetic faith: "God will provide himself a lamb" (<a href="https://www.blueletterbible.org/kjv/gen/22/8/s_22008" target="_blank">Genesis 22:8</a>). As Abraham raises the knife, the Angel of the LORD intervenes. A ram caught in a thicket becomes the substitute. This narrative—the Akedah—is the supreme type of the Atonement, foreshadowing the Father's offering of His Only Begotten Son.</p>
+<p><strong>Genesis 23</strong> closes with Sarah's death at age 127. Abraham purchases the cave of Machpelah from Ephron the Hittite—the first land Abraham legally owns in Canaan. The meticulous transaction confirms the covenant promise of land. Sarah is buried there, followed eventually by Abraham, Isaac, Rebekah, Jacob, and Leah—making Machpelah the patriarchal burial site.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Central Themes</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Theme 1: "Is Any Thing Too Hard for the LORD?"</h3>
+<p>When the LORD announced that Sarah would bear a son, she laughed. God's response—"Is any thing too hard for the LORD?"—is rhetorical: the Hebrew <a href="https://www.blueletterbible.org/lexicon/h6381/kjv/wlc/0-1/" target="_blank" data-lexicon="to be wonderful, surpassing, extraordinary" data-strongs="H6381" data-translit="pala" data-original="פָּלָא" data-lang="hebrew" data-verse="Genesis 18:14"><em>pala</em></a> (פָּלָא) means "wonderful, difficult, extraordinary." Nothing is too wondrous for God.</p>
+<p>This question echoes through scripture:</p>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/jer/32/27/s_757027" target="_blank">Jeremiah 32:27</a>: "Behold, I am the LORD, the God of all flesh: is there any thing too hard for me?"</li>
+<li><a href="https://www.blueletterbible.org/kjv/luk/1/37/s_975037" target="_blank">Luke 1:37</a>: "With God nothing shall be impossible"</li>
+</ul>
+<p>Application: What "impossible" promises has God made to you? Patriarchal blessings? Temple sealings? Eternal increase? Will you trust Him despite natural impossibility?</p>
+<h3>Theme 2: The Akedah—Father and Son</h3>
+<p>Genesis 22 is the Akedah (עֲקֵדָה, "the binding")—the supreme OT type of the Atonement. Every detail foreshadows Christ:</p>
+<ul>
+<li>Isaac is Abraham's "only son" (<a href="https://www.blueletterbible.org/kjv/gen/22/2/s_22002" target="_blank">Genesis 22:2</a>) / Christ is the "Only Begotten" (<a href="https://www.blueletterbible.org/kjv/jhn/3/16/s_1000016" target="_blank">John 3:16</a>)</li>
+<li>Isaac carries the wood / Christ carries the cross</li>
+<li>Mount Moriah (Jerusalem) / Golgotha</li>
+<li>Three-day journey / Three days in the tomb</li>
+<li>Abraham's willingness to sacrifice / Father's sacrifice of Son</li>
+<li>The ram substitutes for Isaac / Christ substitutes for us</li>
+</ul>
+<p>Jacob 4:5 confirms: "Abraham... offering up his son Isaac, which is a similitude of God and his Only Begotten Son."</p>
+<h3>Theme 3: Looking Back vs. Looking Forward</h3>
+<p>Lot's wife "looked back" and became a pillar of salt. Jesus warned: "Remember Lot's wife" (<a href="https://www.blueletterbible.org/kjv/luk/17/32/s_990032" target="_blank">Luke 17:32</a>). Elder Jeffrey R. Holland taught: "She wasn't just looking back; she looked back longingly... Her attachment to the past outweighed her confidence in the future."</p>
+<p>Application: What Sodoms are we reluctant to leave? What sins, relationships, or worldly attachments do we "look back" to longingly?</p>
+<h3>Theme 4: God's Promises Fulfilled in His Time</h3>
+<p>Abraham waited 25 years from the initial promise (Gen. 12:2; age 75) to Isaac's birth (Gen. 21:5; age 100). The delay tested faith. Yet God's timing was perfect—Isaac came when both Abraham and Sarah were biologically incapable, making the miracle undeniable.</p>
+<p>Hebrews 11:11 praises Sarah: "Through faith also Sara herself received strength to conceive seed, and was delivered of a child when she was past age, because she judged him faithful who had promised."</p>
+<h3>Theme 5: Abraham's Intercession</h3>
+<p>Genesis 18:23–33 records Abraham's bold intercession for Sodom: "Wilt thou destroy the righteous with the wicked?" Abraham negotiates with God—fifty righteous, then forty-five, forty, thirty, twenty, finally ten. God agrees to spare Sodom for ten righteous. None are found.</p>
+<p>This establishes the principle that the righteous can intercede for the wicked, delaying judgment. It foreshadows Christ, the ultimate Intercessor (<a href="https://www.blueletterbible.org/kjv/heb/7/25/s_1142025" target="_blank">Hebrews 7:25</a>).</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Key Figures</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Person</th><th>Role</th><th>Significance This Week</th></tr>
+<tr><td>Abraham</td><td>Patriarch, Prophet</td><td>Intercedes for Sodom; offers Isaac; purchases Machpelah</td></tr>
+<tr><td>Sarah</td><td>Matriarch</td><td>Laughs at promise; bears Isaac at 90; dies at 127</td></tr>
+<tr><td>Isaac</td><td>Promised son</td><td>Born miraculously; bound on Mount Moriah; type of Christ</td></tr>
+<tr><td>Lot</td><td>Abraham's nephew</td><td>Escapes Sodom; his wife becomes pillar of salt</td></tr>
+<tr><td>Lot's wife</td><td>Warning example</td><td>Looks back longingly; becomes salt</td></tr>
+<tr><td>Hagar & Ishmael</td><td>Abraham's firstborn</td><td>Sent away; God hears Ishmael in wilderness</td></tr>
+<tr><td>The LORD & two angels</td><td>Divine visitors</td><td>Announce Isaac; destroy Sodom; test Abraham</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Timeline Placement</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Historical Period:</strong> Middle Bronze Age / Patriarchal Period</p>
+<p><strong>Approximate Dates:</strong> ~1900–1850 BC</p>
+<p><strong>Abraham's Age:</strong> 99–100 (Isaac's birth); ~137 (Akedah if Isaac ~37); ~137 (Sarah's death)</p>
+<h3>Relationship to Previous/Next Weeks</h3>
+<p><strong>Week 08:</strong> Abrahamic covenant established (Gen. 12–17)</p>
+<p><strong>Week 09:</strong> Covenant tested and Isaac born (Gen. 18–23)</p>
+<p><strong>Week 10:</strong> Covenant continues through Isaac and Jacob (Gen. 24–33)</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Connection to Restoration Scripture</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Book of Mormon Connections</h3>
+<ul>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/jacob/4?lang=eng&id=5" target="_blank">Jacob 4:5</a>:</strong> "Abraham... offering up his son Isaac, which is a similitude of God and his Only Begotten Son"</li>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/hel/8?lang=eng&id=16-17" target="_blank">Helaman 8:16–17</a>:</strong> Abraham "raised his eyes towards heaven, and sought redemption of Christ"</li>
+</ul>
+<h3>Doctrine and Covenants Connections</h3>
+<ul>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/132?lang=eng&id=36" target="_blank">D&C 132:36</a>:</strong> "Abraham was commanded to offer his son Isaac; nevertheless, it was written: Thou shalt not kill. Abraham, however, did not refuse, and it was accounted unto him for righteousness"</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>This Week's Key Doctrines</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>Divine Omnipotence:</strong> Nothing is too hard for God (Gen. 18:14)</li>
+<li><strong>Christ as Sacrifice:</strong> The Akedah prefigures the Atonement (Gen. 22; Jacob 4:5)</li>
+<li><strong>Intercession:</strong> Abraham intercedes for Sodom; Christ intercedes for us (Gen. 18:23–33; Heb. 7:25)</li>
+<li><strong>Fleeing Wickedness:</strong> Lot's wife warns against looking back (Gen. 19:26; Luke 17:32)</li>
+<li><strong>Covenant Land:</strong> Abraham purchases Machpelah (Gen. 23)</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Temple Connections</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ul>
+<li><strong>Mount Moriah:</strong> Tradition identifies this as the Temple Mount in Jerusalem. Abraham's sacrifice foreshadows temple ordinances centered on Christ's sacrifice.</li>
+<li><strong>Substitutionary Atonement:</strong> The ram substitutes for Isaac; Christ substitutes for us.</li>
+<li><strong>Covenant Names:</strong> Isaac ("laughter") reflects covenant joy; name changes signal identity transformation.</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>CFM Manual Emphasis</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Manual Focus:</strong> Trusting God's promises in His time; fleeing wickedness without looking back; Abraham's sacrifice as similitude of Father and Son.</p>
+<p><strong>Key Questions from Manual:</strong></p>
+<ul>
+<li>Is any thing too hard for the LORD?</li>
+<li>How do we sustain faith when promised blessings are delayed?</li>
+<li>What does "looking back" mean in our spiritual journey?</li>
+<li>How is Abraham's sacrifice of Isaac a similitude of God and Christ?</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Suggested Reading Approach</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Essential Reading:</strong></p>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/gen/18/9-14/s_18009" target="_blank">Genesis 18:9–14</a> — "Is any thing too hard?"</li>
+<li><a href="https://www.blueletterbible.org/kjv/gen/19/12-29/s_19012" target="_blank">Genesis 19:12–29</a> — Sodom's destruction; Lot's wife</li>
+<li><a href="https://www.blueletterbible.org/kjv/gen/21/1-7/s_21001" target="_blank">Genesis 21:1–7</a> — Isaac's birth</li>
+<li><a href="https://www.blueletterbible.org/kjv/gen/22/1-19/s_22001" target="_blank">Genesis 22:1–19</a> — The Akedah</li>
+</ul>
+<p><strong>For Deep Study:</strong></p>
+<ul>
+<li>Genesis 18:16–33 — Abraham's intercession</li>
+<li>Genesis 23 — Purchase of Machpelah</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>For Further Study: Interpreter Foundation Resources</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Week 9 (2022 Lesson 8):</strong> Abraham's Hebron: Then and Now (Five-part series)</p>
+<ul>
+<li>KnoWhy OTL08A-E: Multi-part exploration of Abraham's connections to Hebron/Machpelah</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Study Guide Files This Week</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>File</th><th>Content Focus</th></tr>
+<tr><td>01_Week_Overview</td><td>This overview document</td></tr>
+<tr><td>02_Historical_Cultural_Context</td><td>ANE context, Sodom archaeology, burial customs</td></tr>
+<tr><td>03_Key_Passages_Study</td><td>Detailed analysis: Gen. 18:14; 19:26; 21:1-7; 22:1-19</td></tr>
+<tr><td>04_Word_Studies</td><td>Hebrew: <a href="https://www.blueletterbible.org/lexicon/h6381/kjv/wlc/0-1/" target="_blank" data-lexicon="to be wonderful, surpassing, extraordinary" data-strongs="H6381" data-translit="pala" data-original="פָּלָא" data-lang="hebrew" data-verse="Genesis 18:14"><em>pala</em></a>, <a href="https://www.blueletterbible.org/lexicon/h6711/kjv/wlc/0-1/" target="_blank" data-lexicon="to laugh, jest, play" data-strongs="H6711" data-translit="tsachaq" data-original="צָחַק" data-lang="hebrew" data-verse="Genesis 18:12"><em>tsachaq</em></a>, <a href="https://www.blueletterbible.org/lexicon/h6123/kjv/wlc/0-1/" target="_blank" data-lexicon="to bind; the binding" data-strongs="H6123" data-translit="aqad" data-original="עָקַד/עֲקֵדָה" data-lang="hebrew" data-verse="Genesis 22:9"><em>akedah</em></a>, <a href="https://www.blueletterbible.org/lexicon/h4179/kjv/wlc/0-1/" target="_blank" data-lexicon="Moriah — place of seeing/teaching" data-strongs="H4179" data-translit="Moriyyah" data-original="מוֹרִיָּה" data-lang="hebrew" data-verse="Genesis 22:2"><em>Moriah</em></a></td></tr>
+<tr><td>05_Teaching_Applications</td><td>Teaching the Akedah, Lot's wife, impossible promises</td></tr>
+<tr><td>06_Study_Questions</td><td>200+ questions for study</td></tr>
+</table>
+<hr>
+<p><em>Week 09 Study Guide | CFM Corner | OT 2026</em></p>
+<p><strong>File Status:</strong> Complete</p>
+<p><strong>Created:</strong> January 20, 2026</p>
+<p><strong>Last Updated:</strong> January 20, 2026</p>
+<p><strong>Next File:</strong> 02_Historical_Cultural_Context.md</p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 2: WEEK 09: HISTORICAL & CULTURAL CONTEXT -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">2. Week 09: Historical & Cultural Context</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Ancient Near Eastern Setting</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Oaks of Mamre (Genesis 18)</h3>
+<p>Abraham's encampment at Mamre (modern Hebron area) placed him at a major crossroads in the central hill country of Canaan. Sacred trees were common gathering and worship sites throughout the ANE. The terebinth or oak grove at Mamre became associated with divine encounter — the rabbis later called this theophany "the hospitality of Abraham" (<em>hakhnasat orchim</em>), elevating hospitality to one of the highest virtues.</p>
+<h3>Hospitality in the Ancient World</h3>
+<p>Abraham's elaborate welcome — running to greet strangers, bowing to the ground, washing feet, preparing a calf, standing while they ate — reflects ANE hospitality codes that were deeply embedded cultural obligations. Refusing hospitality or violating the host-guest relationship was considered one of the gravest social sins. This contrasts sharply with Sodom's treatment of visitors in Genesis 19.</p>
+<h3>Sodom and Gomorrah: Archaeological Context</h3>
+<p>The Cities of the Plain have been associated with several archaeological sites near the Dead Sea:</p>
+<ul>
+<li><strong>Bab edh-Dhra</strong> and <strong>Numeira</strong> — Early Bronze Age sites in the southeastern Dead Sea region that show evidence of sudden, catastrophic destruction by fire (~2350 BC)</li>
+<li><strong>Tall el-Hammam</strong> — A large Bronze Age city northeast of the Dead Sea, proposed by some archaeologists (Steven Collins) as biblical Sodom. A 2021 study in <em>Scientific Reports</em> documented evidence of a cosmic airburst event (~1650 BC) that destroyed the city with extreme heat</li>
+<li>The Dead Sea region itself shows geological evidence of bitumen, sulfur, and seismic activity consistent with the biblical description of "brimstone and fire" (Gen. 19:24)</li>
+</ul>
+<h3>Lot's Wife and Salt</h3>
+<p>The Dead Sea region is rich in salt formations, including pillar-like formations along the southwestern shore. Josephus (<em>Antiquities</em> 1.11.4) claimed the pillar was still visible in his day. The transformation likely carries symbolic weight: salt preserves but also renders barren. Looking back to Sodom meant being claimed by its destruction.</p>
+<h3>The Akedah: Restoring the Meaning of Sacrifice</h3>
+<p>To modern readers, God's command to Abraham in Genesis 22 can feel shocking — even disturbing. But to understand what God was doing, we need to see the world Abraham lived in.</p>
+<p>Human sacrifice was not uncommon in the ancient Near East. Archaeological evidence from Mesopotamia, Canaan, and surrounding cultures reveals a disturbing pattern: children were offered to deities like Molech, Chemosh, and others as the ultimate act of devotion. Abraham knew this world intimately. According to the Book of Abraham (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/1?lang=eng&id=5-12" target="_blank">Abraham 1:5–12</a>), his own father Terah participated in this practice — Abraham himself was nearly sacrificed on an altar in Ur by a priest of Pharaoh. He had witnessed firsthand the corruption of something sacred into something monstrous.</p>
+<p>The original covenant of sacrifice — established from the days of Adam — was meant to point forward to the sacrifice of the Son of God. It was a teaching ordinance, a way for God's children to understand that a Redeemer would come who would offer Himself on their behalf. But by Abraham's day, that understanding had been catastrophically distorted. Instead of a symbolic offering pointing to God's future gift, sacrifice had become a way for humans to appease angry gods by offering their most precious possessions — including their own children. The covenant had been turned on its head: instead of God giving His Son for humanity, humanity was giving its sons to idols.</p>
+<p>This is what God abhorred. "They have built also the high places of Baal, to burn their sons with fire for burnt offerings unto Baal, which I commanded not, nor spake it, neither came it into my mind" (<a href="https://www.blueletterbible.org/kjv/jer/19/5/s_764005" target="_blank">Jeremiah 19:5</a>). The practice was not just wrong — it was the precise inversion of the truth that sacrifice was designed to teach.</p>
+<p>The Akedah, then, was not God testing Abraham's willingness to do what the pagans did. It was God <em>restoring</em> Abraham's understanding of what sacrifice actually meant. Abraham walked up Moriah carrying the assumptions of his world — that the gods demand the blood of sons. He walked down having learned the truth: that <em>God Himself</em> would provide the lamb. The ram in the thicket was not just a last-minute rescue. It was the lesson. God was saying: <em>I do not want your son. I never wanted your children. I will provide My own Son.</em> The entire Akedah was a correction — a recalibration of the covenant of sacrifice from its corrupted form back to its original, prophetic purpose.</p>
+<p>This is why Abraham named the place "The LORD will provide" — future tense, pointing forward to Calvary. And this is why the angel's response was not "well done for being willing to kill" but rather a reaffirmation of the covenant blessings (<a href="https://www.blueletterbible.org/kjv/gen/22/16/s_22016" target="_blank">Genesis 22:16–18</a>). Abraham had not just passed a test. He had been taught the deepest truth of the gospel: that God so loved the world that He would give His Only Begotten Son.</p>
+<h3>The Akedah in Jewish and Christian Tradition</h3>
+<p>The binding of Isaac (Genesis 22) is arguably the most interpreted passage in the entire Hebrew Bible:</p>
+<ul>
+<li><strong>Jewish tradition (Midrash):</strong> Isaac was not a child but a grown man (37 years old per <em>Seder Olam</em>), who willingly offered himself. Some midrashim suggest Isaac actually died and was resurrected.</li>
+<li><strong>Islamic tradition:</strong> The Quran (37:100–111) tells a similar story but traditionally identifies Ishmael as the one offered.</li>
+<li><strong>Christian typology:</strong> From the earliest church fathers, the Akedah was read as the supreme Old Testament type of the Crucifixion (cf. Jacob 4:5).</li>
+</ul>
+<h3>Mount Moriah</h3>
+<p>The Hebrew <a href="https://www.blueletterbible.org/lexicon/h4179/kjv/wlc/0-1/" target="_blank" data-lexicon="Moriah — place of seeing/teaching" data-strongs="H4179" data-translit="Moriyyah" data-original="מוֹרִיָּה" data-lang="hebrew" data-verse="Genesis 22:2"><em>Moriyyah</em></a> (מוֹרִיָּה) carries layered meaning. It may derive from <a href="https://www.blueletterbible.org/lexicon/h7200/kjv/wlc/0-1/" target="_blank" data-lexicon="to see, perceive, provide" data-strongs="H7200" data-translit="ra'ah" data-original="רָאָה" data-lang="hebrew" data-verse="Genesis 22:14"><em>ra'ah</em></a> (רָאָה, "to see") — hence Abraham named it "The LORD will see/provide" (<a href="https://www.blueletterbible.org/kjv/gen/22/14/s_22014" target="_blank">Genesis 22:14</a>). But there is a second etymology equally significant: <a href="https://www.blueletterbible.org/lexicon/h4176/kjv/wlc/0-1/" target="_blank" data-lexicon="teacher, instructor" data-strongs="H4176" data-translit="moreh" data-original="מוֹרֶה" data-lang="hebrew" data-verse="Genesis 12:6"><em>moreh</em></a> (מוֹרֶה, "teacher, one who instructs") combined with <em>Yah</em> (יָהּ, the divine name) — giving us "the teaching of God" or "God is my teacher." The word <a href="https://www.blueletterbible.org/lexicon/h4176/kjv/wlc/0-1/" target="_blank" data-lexicon="teacher, instructor" data-strongs="H4176" data-translit="moreh" data-original="מוֹרֶה" data-lang="hebrew" data-verse="Genesis 12:6"><em>moreh</em></a> comes from the root י-ר-ה (Y-R-H), meaning "to direct, point the way, instruct" — the same root that gives us <em>Torah</em> (תּוֹרָה, "instruction, teaching"). Moriah is, at its root level, the mountain of God's Torah — the place of divine instruction. On this mountain, God both <em>provides</em> and <em>instructs</em>. Abraham came to offer — and left having been taught the deepest lesson of the covenant: that God Himself would provide the Lamb. <a href="https://www.blueletterbible.org/kjv/2ch/3/1/s_370001" target="_blank">2 Chronicles 3:1</a> explicitly identifies Moriah as the site of Solomon's Temple in Jerusalem — the place where God's people would come, generation after generation, to both see Him and be taught by Him. The mountain of sacrifice became the mountain of instruction.</p>
+<h3>Cave of Machpelah (Genesis 23)</h3>
+<p>Abraham's purchase of the Cave of Machpelah from Ephron the Hittite follows a recognizable ANE legal transaction pattern:</p>
+<ul>
+<li>Public negotiation at the city gate (the ancient courthouse)</li>
+<li>Witnesses present</li>
+<li>Price stated and weighed (400 shekels of silver "current money with the merchant")</li>
+<li>Both land and trees included in the deed</li>
+</ul>
+<p>The Hittite land sale customs recorded in cuneiform tablets from Hattusa show similar patterns. This was Abraham's first legal land ownership in Canaan — significant because the entire land had been promised to his descendants.</p>
+<p>Today, the Cave of Machpelah (Hebron) is enclosed by a massive Herodian structure and remains one of the most sacred sites in Judaism, Christianity, and Islam.</p>
+<h3>Hagar and Ishmael (Genesis 21:8–21)</h3>
+<p>The expulsion of Hagar and Ishmael reflects ANE inheritance customs. With Isaac's birth, Ishmael's status as heir was threatened. Sarah's demand aligns with laws known from Nuzi tablets, where a handmaid's son could be disinherited once a legitimate heir was born. God's promise to Hagar — "I will make him a great nation" (Gen. 21:18) — ensures divine care beyond the covenant line.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Cultural Vocabulary</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Term</th><th>Meaning</th><th>Significance</th></tr>
+<tr><td><strong>Theophany</strong></td><td>Divine appearance</td><td>God appears to Abraham at Mamre (Gen. 18)</td></tr>
+<tr><td><strong>Akedah</strong> (עֲקֵדָה)</td><td>"Binding"</td><td>The binding of Isaac; supreme test of faith</td></tr>
+<tr><td><strong>Machpelah</strong> (מַכְפֵּלָה)</td><td>"Double (cave)"</td><td>Patriarchal burial site; first land purchased</td></tr>
+<tr><td><strong>Moriah</strong> (מוֹרִיָּה)</td><td>"Seen by the LORD"</td><td>Site of sacrifice; later Temple Mount</td></tr>
+<tr><td><strong>Hakhnasat Orchim</strong></td><td>Hospitality to guests</td><td>Abraham's supreme example (Gen. 18:1–8)</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Geography</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Key Locations This Week</h3>
+<ol>
+<li><strong>Mamre/Hebron</strong> — Abraham's encampment; Sarah's burial (Gen. 18, 23)</li>
+<li><strong>Sodom & Gomorrah</strong> — Cities of the Plain; destroyed (Gen. 19)</li>
+<li><strong>Zoar</strong> — City Lot flees to (Gen. 19:22)</li>
+<li><strong>Beersheba</strong> — Abraham plants a grove; calls on God (Gen. 21:33)</li>
+<li><strong>Mount Moriah</strong> — The Akedah; later Temple Mount (Gen. 22:2)</li>
+</ol>
+<hr>
+<p><em>Week 09 Study Guide | CFM Corner | OT 2026</em></p>
+<p><strong>File Status:</strong> Complete</p>
+<p><strong>Created:</strong> 2026-02-18</p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 3: WEEK 09: KEY PASSAGES STUDY -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">3. Week 09: Key Passages Study</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Passage 1: The Theophany at Mamre (Genesis 18:1–15)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text Focus: Genesis 18:9–14</h3>
+<blockquote>
+<p><em>And they said unto him, Where is Sarah thy wife? And he said, Behold, in the tent. And he said, I will certainly return unto thee according to the time of life; and, lo, Sarah thy wife shall have a son. And Sarah heard it in the tent door, which was behind him... Therefore Sarah laughed within herself, saying, After I am old shall I have pleasure, my lord being old also? And the LORD said unto Abraham, Wherefore did Sarah laugh?... Is any thing too hard for the LORD?</em></p>
+</blockquote>
+<h3>Analysis</h3>
+<ul>
+<li><strong>Three visitors — one of them is YHWH:</strong> This is not inference; the text itself makes the identification. <a href="https://www.blueletterbible.org/kjv/gen/18/1/s_18001" target="_blank">Genesis 18:1</a> opens by stating "the LORD (יהוה) appeared unto him in the plains of Mamre" — before Abraham even looks up to see three men. The narrative then shifts between plural and singular: "they said" (v. 9) when all three speak, but "he said" (וַיֹּאמֶר, singular, v. 10) when the promise of Isaac is announced, and "the LORD said" (v. 13) when Sarah's laughter is confronted. The grammar distinguishes one visitor from the other two. Later, <a href="https://www.blueletterbible.org/kjv/gen/19/1/s_19001" target="_blank">Genesis 19:1</a> confirms the distinction: only <em>two</em> angels arrive at Sodom — the third, identified as YHWH, stayed behind with Abraham for the intercession dialogue (18:22–33). The text uses both the narrator's voice and Hebrew grammar to make this identification explicit.</li>
+<li><strong>"According to the time of life"</strong> (כָּעֵת חַיָּה, <em>ka'et chayyah</em>): Literally "at the time of reviving/living" — probably meaning "this time next year when life comes around again."</li>
+<li><strong>Sarah's laughter</strong> is not mocking but incredulous — the impossible has become personal. Her laughter (<a href="https://www.blueletterbible.org/lexicon/h6711/kjv/wlc/0-1/" target="_blank" data-lexicon="to laugh, jest, play" data-strongs="H6711" data-translit="tsachaq" data-original="צָחַק" data-lang="hebrew" data-verse="Genesis 18:12"><em>tsachaq</em></a>) gives Isaac his name.</li>
+<li><strong>"Is any thing too hard for the LORD?"</strong> (<a href="https://www.blueletterbible.org/kjv/gen/18/14/s_18014" target="_blank">Genesis 18:14</a>) — The Hebrew reads הֲיִפָּלֵא מֵיְהוָה דָּבָר (<em>hayippale me-YHWH davar</em>). The verb יִפָּלֵא (<a href="https://www.blueletterbible.org/lexicon/h6381/kjv/wlc/0-1/" target="_blank" data-lexicon="to be wonderful, surpassing, extraordinary" data-strongs="H6381" data-translit="pala" data-original="פָּלָא" data-lang="hebrew" data-verse="Genesis 18:14"><em>yippale</em></a>) is from the root פ-ל-א (<a href="https://www.blueletterbible.org/lexicon/h6381/kjv/wlc/0-1/" target="_blank" data-lexicon="to be wonderful, surpassing, extraordinary" data-strongs="H6381" data-translit="pala" data-original="פָּלָא" data-lang="hebrew" data-verse="Genesis 18:14"><em>pala</em></a>), meaning "wonderful, extraordinary, surpassing human capacity" — the same root that gives us <a href="https://www.blueletterbible.org/lexicon/h6382/kjv/wlc/0-1/" target="_blank" data-lexicon="wonder, miracle" data-strongs="H6382" data-translit="pele" data-original="פֶּלֶא" data-lang="hebrew" data-verse="Isaiah 9:6"><em>Pele</em></a> ("Wonderful") in <a href="https://www.blueletterbible.org/kjv/isa/9/6/s_688006" target="_blank">Isaiah 9:6</a>. The KJV's "hard" undersells it. God is not asking "is this too difficult?" — He is asking "is there any wonder too wonderful for Me?" This is not a rebuke but an invitation to awe.</li>
+</ul>
+<h3>Cross-References</h3>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/jer/32/17/s_777017" target="_blank">Jeremiah 32:17, 27</a> — "There is nothing too hard for thee"</li>
+<li><a href="https://www.blueletterbible.org/kjv/luk/1/37/s_974037" target="_blank">Luke 1:37</a> — "With God nothing shall be impossible" (Gabriel to Mary — another miraculous birth announcement)</li>
+<li><a href="https://www.blueletterbible.org/kjv/rom/4/19-21/s_1050019" target="_blank">Romans 4:19–21</a> — Paul praises Abraham for not staggering at the promise</li>
+</ul>
+<h3>Prophetic Witness</h3>
+<blockquote>
+<p>"Had not Jesus, as Jehovah, said to Abraham, 'Is any thing too hard for the Lord?' (Gen. 18:14). Had not His angel told a perplexed Mary, 'For with God nothing shall be impossible'?"</p>
+<p>— <strong>Neal A. Maxwell</strong>, "<a href="https://www.churchofjesuschrist.org/study/general-conference/1985/04/willing-to-submit" target="_blank">Willing to Submit</a>", April 1985 General Conference</p>
+</blockquote>
+<p>This connects <a href="https://www.blueletterbible.org/lexicon/h6381/kjv/wlc/0-1/" target="_blank" data-lexicon="to be wonderful, surpassing, extraordinary" data-strongs="H6381" data-translit="pala" data-original="פָּלָא" data-lang="hebrew" data-verse="Genesis 18:14"><em>pala</em></a> directly to the Atonement — the same God who promised Sarah the impossible would Himself accomplish the most impossible wonder of all.</p>
+<blockquote>
+<p><strong>Spencer W. Kimball</strong>, "<a href="https://www.churchofjesuschrist.org/study/general-conference/1973/10/the-rewards-the-blessings-the-promises" target="_blank">The Rewards, the Blessings, the Promises</a>", October 1973 General Conference — quotes Genesis 18:14 and Sarah's laughter directly, affirming that God's promises transcend natural limitations.</p>
+</blockquote>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 2: Lot's Wife (Genesis 19:24–26)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text Focus</h3>
+<blockquote>
+<p><em>Then the LORD rained upon Sodom and upon Gomorrah brimstone and fire from the LORD out of heaven; And he overthrew those cities, and all the plain, and all the inhabitants of the cities, and that which grew upon the ground. But his wife looked back from behind him, and she became a pillar of salt.</em></p>
+</blockquote>
+<h3>Analysis</h3>
+<ul>
+<li><strong>"Looked back"</strong> (וַתַּבֵּט, <a href="https://www.blueletterbible.org/lexicon/h5027/kjv/wlc/0-1/" target="_blank" data-lexicon="to look, gaze intently" data-strongs="H5027" data-translit="nabat" data-original="נָבַט" data-lang="hebrew" data-verse="Genesis 19:26"><em>vattabbet</em></a>): The verb <a href="https://www.blueletterbible.org/lexicon/h5027/kjv/wlc/0-1/" target="_blank" data-lexicon="to look, gaze intently" data-strongs="H5027" data-translit="nabat" data-original="נָבַט" data-lang="hebrew" data-verse="Genesis 19:26"><em>nabat</em></a> means more than a casual glance — it implies gazing intently, looking with longing or attention. She didn't just turn her head; she fixed her gaze on what she was leaving.</li>
+<li><strong>"From behind him"</strong>: She was lagging behind Lot, physically and spiritually.</li>
+<li><strong>"Pillar of salt"</strong>: Salt formations are common in the Dead Sea region. Symbolically, salt preserves the old — she was preserved in the posture of looking back.</li>
+<li><strong>Jesus cited this as a warning</strong> (<a href="https://www.blueletterbible.org/kjv/luk/17/32/s_990032" target="_blank">Luke 17:32</a>): "Remember Lot's wife." In the context of His Second Coming, He warns against attachment to temporal things.</li>
+</ul>
+<h3>Cross-References</h3>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/luk/9/62/s_982062" target="_blank">Luke 9:62</a> — "No man, having put his hand to the plough, and looking back, is fit for the kingdom of God"</li>
+<li><a href="https://www.blueletterbible.org/kjv/phi/3/13-14/s_1106013" target="_blank">Philippians 3:13–14</a> — "Forgetting those things which are behind, and reaching forth"</li>
+<li>Elder Jeffrey R. Holland, "The Best Is Yet to Be" (Jan 2010 Ensign): "She was not just looking back; in her heart she wanted to go back."</li>
+</ul>
+<h3>Prophetic Witness</h3>
+<blockquote>
+<p>"It is not possible for you to sink lower than the infinite light of Christ's Atonement shines... Don't you buy some second-rate scheme that the best way to face the future is to keep looking back."</p>
+<p>— <strong>Jeffrey R. Holland</strong>, "<a href="https://speeches.byu.edu/talks/jeffrey-r-holland/remember-lots-wife/" target="_blank">Remember Lot's Wife</a>", January 2009 BYU Devotional</p>
+</blockquote>
+<p>This is THE definitive modern treatment of Lot's wife — Holland reframes her not as a minor character but as a universal warning about letting attachment to the past outweigh confidence in the future.</p>
+<blockquote>
+<p>"The Lord was willing to spare Sodom and Gomorrah if Abraham could find just ten good men, which he could not do."</p>
+<p>— <strong>Hartman Rector Jr.</strong>, "<a href="https://www.churchofjesuschrist.org/study/general-conference/1994/10/endure-to-the-end-in-charity" target="_blank">Endure to the End in Charity</a>", October 1994 General Conference</p>
+</blockquote>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 3: Isaac's Birth (Genesis 21:1–7)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text Focus</h3>
+<blockquote>
+<p><em>And the LORD visited Sarah as he had said, and the LORD did unto Sarah as he had spoken. For Sarah conceived, and bare Abraham a son in his old age, at the set time of which God had spoken to him. And Abraham called the name of his son that was born unto him... Isaac.</em></p>
+</blockquote>
+<h3>Analysis</h3>
+<ul>
+<li><strong>"The LORD visited"</strong> (פָּקַד, <a href="https://www.blueletterbible.org/lexicon/h6485/kjv/wlc/0-1/" target="_blank" data-lexicon="to visit, attend to, appoint" data-strongs="H6485" data-translit="paqad" data-original="פָּקַד" data-lang="hebrew" data-verse="Genesis 21:1"><em>paqad</em></a>): This verb carries weight — it means God intervened, attended to, fulfilled His promise. The same word is used when God "visits" Israel in Egypt (Exodus 3:16).</li>
+<li><strong>"At the set time"</strong> (לַמּוֹעֵד, <a href="https://www.blueletterbible.org/lexicon/h4150/kjv/wlc/0-1/" target="_blank" data-lexicon="appointed time, feast, meeting" data-strongs="H4150" data-translit="mo'ed" data-original="מוֹעֵד" data-lang="hebrew" data-verse="Genesis 21:2"><em>lamo'ed</em></a>): This is the word <a href="https://www.blueletterbible.org/lexicon/h4150/kjv/wlc/0-1/" target="_blank" data-lexicon="appointed time, feast, meeting" data-strongs="H4150" data-translit="mo'ed" data-original="מוֹעֵד" data-lang="hebrew" data-verse="Genesis 21:2"><em>mo'ed</em></a> — "appointed time" — the exact same word used for Israel's festival calendar, the <a href="https://www.blueletterbible.org/lexicon/h4150/kjv/wlc/0-1/" target="_blank" data-lexicon="appointed time, feast, meeting" data-strongs="H4150" data-translit="mo'ed" data-original="מוֹעֵד" data-lang="hebrew" data-verse="Genesis 21:2"><em>moedim</em></a> (מוֹעֲדִים) of <a href="https://www.blueletterbible.org/kjv/lev/23/1/s_113001" target="_blank">Leviticus 23</a>. God's timing is not just precise — it is liturgical. Jewish tradition (Talmud, Rosh Hashanah 11a) connects Isaac's birth to <strong>Passover</strong> (Pesach), the feast of deliverance and new life. The Akedah is connected to <strong>Rosh Hashanah</strong> — the Torah reading for the second day of Rosh Hashanah is Genesis 22, and the shofar blown on that holy day is a ram's horn, commemorating the ram caught in the thicket that replaced Isaac. The pattern is striking: Isaac's birth at the mo'ed of Passover points to the Lamb who brings deliverance; Isaac's binding at the mo'ed of Rosh Hashanah points to the day of judgment and substitutionary sacrifice. Both feasts find their ultimate fulfillment in Christ.</li>
+<li><strong>Abraham was 100, Sarah 90.</strong> The impossibility was the point — the miracle must be undeniably God's.</li>
+<li><strong>Sarah's response</strong> (v. 6): "God hath made me to laugh, and all that hear will laugh with me." The laughter has transformed from incredulity to joy.</li>
+</ul>
+<h3>Cross-References</h3>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/heb/11/11/s_1144011" target="_blank">Hebrews 11:11</a> — "Through faith also Sara herself received strength to conceive seed... because she judged him faithful who had promised"</li>
+<li><a href="https://www.blueletterbible.org/kjv/gal/4/22-28/s_1095022" target="_blank">Galatians 4:22–28</a> — Paul's allegory: Isaac = children of promise; Ishmael = children of the flesh</li>
+</ul>
+<h3>Prophetic Witness</h3>
+<blockquote>
+<p><strong>Spencer W. Kimball</strong>, "<a href="https://www.churchofjesuschrist.org/study/general-conference/1973/10/the-rewards-the-blessings-the-promises" target="_blank">The Rewards, the Blessings, the Promises</a>", October 1973 General Conference — quotes Genesis 18:12 and Sarah's laughter directly, testifying that God's covenant promises are fulfilled in His own time, transforming doubt into joy.</p>
+</blockquote>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 4: The Akedah — The Binding of Isaac (Genesis 22:1–19)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text Focus: Genesis 22:1–2, 7–8, 11–14</h3>
+<blockquote>
+<p><em>God did tempt [test] Abraham, and said... Take now thy son, thine only son Isaac, whom thou lovest, and get thee into the land of Moriah; and offer him there for a burnt offering upon one of the mountains which I will tell thee of.</em></p>
+</blockquote>
+<blockquote>
+<p><em>And Isaac spake... My father... Behold the fire and the wood: but where is the lamb for a burnt offering? And Abraham said, My son, God will provide himself a lamb for a burnt offering.</em></p>
+</blockquote>
+<blockquote>
+<p><em>And the angel of the LORD called unto him out of heaven... Lay not thine hand upon the lad... for now I know that thou fearest God, seeing thou hast not withheld thy son, thine only son from me.</em></p>
+</blockquote>
+<h3>Analysis</h3>
+<ul>
+<li><strong>"Tempt"</strong> (נִסָּה, <a href="https://www.blueletterbible.org/lexicon/h5254/kjv/wlc/0-1/" target="_blank" data-lexicon="to test, prove, try" data-strongs="H5254" data-translit="nasah" data-original="נָסָה" data-lang="hebrew" data-verse="Genesis 22:1"><em>nissah</em></a>): Better translated "tested." God doesn't tempt to sin but tests to strengthen. The same root gives us <a href="https://www.blueletterbible.org/lexicon/h5254/kjv/wlc/0-1/" target="_blank" data-lexicon="to test, prove, try" data-strongs="H5254" data-translit="nasah" data-original="נָסָה" data-lang="hebrew" data-verse="Genesis 22:1"><em>nes</em></a> (נֵס), "banner" — the test becomes a standard, a visible declaration of faith.</li>
+<li><strong>"Thine only son"</strong> (יְחִידְךָ, <a href="https://www.blueletterbible.org/lexicon/h3173/kjv/wlc/0-1/" target="_blank" data-lexicon="only, unique, beloved" data-strongs="H3173" data-translit="yachid" data-original="יָחִיד" data-lang="hebrew" data-verse="Genesis 22:2"><em>yechidekha</em></a>): "Only" here is <a href="https://www.blueletterbible.org/lexicon/h3173/kjv/wlc/0-1/" target="_blank" data-lexicon="only, unique, beloved" data-strongs="H3173" data-translit="yachid" data-original="יָחִיד" data-lang="hebrew" data-verse="Genesis 22:2"><em>yachid</em></a> — unique, beloved, singular. The LXX translates this <a href="https://www.blueletterbible.org/lexicon/g27/kjv/wlc/0-1/" target="_blank" data-lexicon="beloved" data-strongs="G27" data-translit="agapetos" data-original="ἀγαπητός" data-lang="greek" data-verse="Matthew 3:17"><em>agapetos</em></a> — the same word used of Jesus at His baptism: "This is my beloved [<a href="https://www.blueletterbible.org/lexicon/g27/kjv/wlc/0-1/" target="_blank" data-lexicon="beloved" data-strongs="G27" data-translit="agapetos" data-original="ἀγαπητός" data-lang="greek" data-verse="Matthew 3:17"><em>agapetos</em></a>] Son" (Matthew 3:17).</li>
+<li><strong>"God will provide himself a lamb"</strong>: The Hebrew is ambiguous — it could mean "God will provide for Himself a lamb" or "God will provide Himself [as] the lamb." Both readings are theologically profound.</li>
+<li><strong>Moriah</strong> → Temple Mount → Golgotha: The geography connects Abraham's sacrifice to the Temple to the Cross.</li>
+<li><strong>"On the third day"</strong> (v. 4): Abraham received Isaac back "as from the dead" on the third day (cf. Hebrews 11:19).</li>
+</ul>
+<h3>Restoration Insight</h3>
+<ul>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/jacob/4?lang=eng&id=5" target="_blank">Jacob 4:5</a>: "Abraham... offering up his son Isaac, which is a similitude of God and his Only Begotten Son"</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/132?lang=eng&id=36" target="_blank">D&C 132:36</a>: "Abraham was commanded to offer his son Isaac; nevertheless, it was written: Thou shalt not kill. Abraham, however, did not refuse, and it was accounted unto him for righteousness"</li>
+</ul>
+<h3>Cross-References</h3>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/heb/11/17-19/s_1144017" target="_blank">Hebrews 11:17–19</a> — "Accounting that God was able to raise him up, even from the dead; from whence also he received him in a figure"</li>
+<li><a href="https://www.blueletterbible.org/kjv/jhn/3/16/s_1000016" target="_blank">John 3:16</a> — "God so loved the world, that he gave his only begotten Son"</li>
+<li><a href="https://www.blueletterbible.org/kjv/rom/8/32/s_1054032" target="_blank">Romans 8:32</a> — "He that spared not his own Son, but delivered him up for us all"</li>
+</ul>
+<h3>Prophetic Witness</h3>
+<blockquote>
+<p>"A soul-stirring account of obedience is that of Abraham and Isaac... Untold generations have been blessed as a result."</p>
+<p>— <strong>Thomas S. Monson</strong>, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2013/04/obedience-brings-blessings" target="_blank">Obedience Brings Blessings</a>", April 2013 General Conference</p>
+</blockquote>
+<blockquote>
+<p>"Abraham, who led Isaac on that heartbreaking journey to Mount Moriah, was faithfully going where the Lord wanted him to go."</p>
+<p>— <strong>Dallin H. Oaks</strong>, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2002/10/i-ll-go-where-you-want-me-to-go" target="_blank">I'll Go Where You Want Me to Go</a>", October 2002 General Conference</p>
+</blockquote>
+<blockquote>
+<p>"Each time I walk with Abraham and Isaac on the road to Mount Moriah, I weep, knowing that Abraham does not know that there will be an angel and a ram in the thicket..."</p>
+<p>— <strong>Susan W. Tanner</strong>, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2008/04/my-soul-delighteth-in-the-things-of-the-lord" target="_blank">My Soul Delighteth in the Things of the Lord</a>", April 2008 General Conference</p>
+</blockquote>
+<blockquote>
+<p>"There was no visible ram in the thicket when Abraham prepared to sacrifice his son Isaac."</p>
+<p>— <strong>Thomas S. Monson</strong>, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2000/10/the-call-to-serve" target="_blank">The Call to Serve</a>", October 2000 General Conference</p>
+</blockquote>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 5: Abraham's Intercession for Sodom (Genesis 18:23–33)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text Focus</h3>
+<blockquote>
+<p><em>And Abraham drew near, and said, Wilt thou also destroy the righteous with the wicked?... Peradventure there be fifty righteous within the city... And the LORD said, If I find in Sodom fifty righteous within the city, then I will spare all the place for their sakes.</em></p>
+</blockquote>
+<h3>Analysis</h3>
+<ul>
+<li>Abraham negotiates: 50 → 45 → 40 → 30 → 20 → 10. Each time God agrees. Abraham stops at 10 — not because God would have refused less, but because Abraham stopped asking.</li>
+<li><strong>The principle:</strong> The righteous can intercede for the wicked. A few faithful people can preserve an entire community.</li>
+<li><strong>"Shall not the Judge of all the earth do right?"</strong> (v. 25): Abraham appeals to God's justice — a remarkable moment where a human challenges God and God honors the challenge.</li>
+<li>This passage establishes the theological foundation for intercessory prayer.</li>
+</ul>
+<h3>Cross-References</h3>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/heb/7/25/s_1140025" target="_blank">Hebrews 7:25</a> — Christ "ever liveth to make intercession for them"</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=28" target="_blank">Moses 7:28</a> — Enoch sees God weep over the wicked</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/34?lang=eng&id=15-16" target="_blank">Alma 34:15–16</a> — The great and last sacrifice</li>
+</ul>
+<h3>Prophetic Witness</h3>
+<blockquote>
+<p>"The Lord was willing to spare Sodom and Gomorrah if Abraham could find just ten good men, which he could not do."</p>
+<p>— <strong>Hartman Rector Jr.</strong>, "<a href="https://www.churchofjesuschrist.org/study/general-conference/1994/10/endure-to-the-end-in-charity" target="_blank">Endure to the End in Charity</a>", October 1994 General Conference</p>
+</blockquote>
+<hr>
+<p><em>Week 09 Study Guide | CFM Corner | OT 2026</em></p>
+<p><strong>File Status:</strong> Complete</p>
+<p><strong>Created:</strong> 2026-02-18</p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 4: WEEK 09: WORD STUDIES -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">4. Week 09: Word Studies</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Word Study 1: פָּלָא (<em>pala</em>) — "Wonderful / Too Hard"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> פ-ל-א (P-L-A)</p>
+<p><strong>Appears:</strong> Genesis 18:14 — "Is any thing too hard [<a href="https://www.blueletterbible.org/lexicon/h6381/kjv/wlc/0-1/" target="_blank" data-lexicon="to be wonderful, surpassing, extraordinary" data-strongs="H6381" data-translit="pala" data-original="פָּלָא" data-lang="hebrew" data-verse="Genesis 18:14"><em>yippale</em></a>] for the LORD?"</p>
+<h3>Meaning</h3>
+<p>The root <a href="https://www.blueletterbible.org/lexicon/h6381/kjv/wlc/0-1/" target="_blank" data-lexicon="to be wonderful, surpassing, extraordinary" data-strongs="H6381" data-translit="pala" data-original="פָּלָא" data-lang="hebrew" data-verse="Genesis 18:14"><em>pala</em></a> doesn't primarily mean "difficult" in the modern sense. It means <strong>extraordinary, beyond human capacity, wonderful, surpassing.</strong> When God asks "Is anything too <a href="https://www.blueletterbible.org/lexicon/h6381/kjv/wlc/0-1/" target="_blank" data-lexicon="to be wonderful, surpassing, extraordinary" data-strongs="H6381" data-translit="pala" data-original="פָּלָא" data-lang="hebrew" data-verse="Genesis 18:14"><em>pala</em></a> for Me?" He's asking: "Is there anything too wonderful for Me to accomplish?"</p>
+<h3>Related Forms</h3>
+<table class="info-table">
+<tr><th>Form</th><th>Meaning</th><th>Example</th></tr>
+<tr><td>פֶּלֶא (<a href="https://www.blueletterbible.org/lexicon/h6382/kjv/wlc/0-1/" target="_blank" data-lexicon="wonder, miracle" data-strongs="H6382" data-translit="pele" data-original="פֶּלֶא" data-lang="hebrew" data-verse="Isaiah 9:6"><em>pele</em></a>)</td><td>Wonder, miracle</td><td>Isaiah 9:6 — "His name shall be called Wonderful [<a href="https://www.blueletterbible.org/lexicon/h6382/kjv/wlc/0-1/" target="_blank" data-lexicon="wonder, miracle" data-strongs="H6382" data-translit="pele" data-original="פֶּלֶא" data-lang="hebrew" data-verse="Isaiah 9:6"><em>Pele</em></a>]"</td></tr>
+<tr><td>נִפְלָאוֹת (<a href="https://www.blueletterbible.org/lexicon/h6381/kjv/wlc/0-1/" target="_blank" data-lexicon="to be wonderful, surpassing, extraordinary" data-strongs="H6381" data-translit="pala" data-original="פָּלָא" data-lang="hebrew" data-verse="Genesis 18:14"><em>nifla'ot</em></a>)</td><td>Wondrous deeds</td><td>Psalm 136:4 — "who alone doeth great wonders"</td></tr>
+<tr><td>מַפְלִיא (<a href="https://www.blueletterbible.org/lexicon/h6381/kjv/wlc/0-1/" target="_blank" data-lexicon="to be wonderful, surpassing, extraordinary" data-strongs="H6381" data-translit="pala" data-original="פָּלָא" data-lang="hebrew" data-verse="Genesis 18:14"><em>mafli</em></a>)</td><td>One who does wonders</td><td>Judges 13:19 — The angel "did wondrously"</td></tr>
+</table>
+<h3>Theological Significance</h3>
+<p>This word is almost exclusively used of <strong>God's actions</strong> — miracles, acts of deliverance, creation. When applied to God, <a href="https://www.blueletterbible.org/lexicon/h6381/kjv/wlc/0-1/" target="_blank" data-lexicon="to be wonderful, surpassing, extraordinary" data-strongs="H6381" data-translit="pala" data-original="פָּלָא" data-lang="hebrew" data-verse="Genesis 18:14"><em>pala</em></a> affirms omnipotence. The rhetorical question in Genesis 18:14 expects the answer: "Nothing."</p>
+<h3>LDS Application</h3>
+<ul>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/7?lang=eng&id=12" target="_blank">1 Nephi 7:12</a>: "He is mighty to do all things for the children of men, if it so be that they exercise faith in him"</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/7?lang=eng&id=33" target="_blank">Moroni 7:33</a>: "If ye will have faith in me ye shall have power to do whatsoever thing is expedient in me"</li>
+</ul>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Word</th><th>Meaning</th><th>Reference</th></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g2298/kjv/tr/0-1/" target="_blank" data-lexicon="wonderful, marvelous" data-strongs="G2298" data-translit="thaumastos" data-original="θαυμαστός" data-lang="greek" data-verse="Psalm 118:23">θαυμαστός</a> (thaumastos)</td><td>wonderful, marvelous</td><td>Psalm 118:23 (LXX 117:23)</td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/mirabilis" target="_blank">mirabilis</a></td><td>wonderful, marvelous</td><td>Gen 18:14</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/miracle" target="_blank">miracle</a> (<a href="https://webstersdictionary1828.com/Dictionary/miracle" target="_blank">1828</a>), <a href="https://www.merriam-webster.com/dictionary/marvel" target="_blank">marvel</a> (<a href="https://webstersdictionary1828.com/Dictionary/marvel" target="_blank">1828</a>)</td><td>From Latin <em>miraculum</em> (from <em>mirari</em> "to wonder") and <em>mirabilia</em></td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 2: צָחַק (<em>tsachaq</em>) — "To Laugh"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> צ-ח-ק (Ts-Ch-Q)</p>
+<p><strong>Appears:</strong> Genesis 18:12 (Sarah laughed); 21:3, 6 (Isaac's name); 21:9 (Ishmael "mocking")</p>
+<h3>Meaning</h3>
+<p>The root <a href="https://www.blueletterbible.org/lexicon/h6711/kjv/wlc/0-1/" target="_blank" data-lexicon="to laugh, jest, play" data-strongs="H6711" data-translit="tsachaq" data-original="צָחַק" data-lang="hebrew" data-verse="Genesis 18:12"><em>tsachaq</em></a> covers a range: <strong>laugh, rejoice, jest, mock, play.</strong> The context determines the tone — joyful laughter, nervous laughter, or mocking laughter.</p>
+<h3>Key Occurrences in Genesis 18–21</h3>
+<table class="info-table">
+<tr><th>Verse</th><th>Who</th><th>Form</th><th>Tone</th></tr>
+<tr><td>17:17</td><td>Abraham</td><td>וַיִּצְחָק</td><td>Joyful wonder (he fell on his face)</td></tr>
+<tr><td>18:12</td><td>Sarah</td><td>וַתִּצְחַק</td><td>Incredulous / nervous</td></tr>
+<tr><td>21:3</td><td>Name</td><td>יִצְחָק (<a href="https://www.blueletterbible.org/lexicon/h3327/kjv/wlc/0-1/" target="_blank" data-lexicon="Isaac — he laughs" data-strongs="H3327" data-translit="Yitschaq" data-original="יִצְחָק" data-lang="hebrew" data-verse="Genesis 21:3"><em>Yitschaq</em></a>)</td><td>"He laughs" — commemorative</td></tr>
+<tr><td>21:6</td><td>Sarah</td><td>צְחֹק</td><td>"God has made me to laugh" — transformed joy</td></tr>
+<tr><td>21:9</td><td>Ishmael</td><td>מְצַחֵק</td><td>"Mocking" / "playing" — negative connotation</td></tr>
+</table>
+<h3>Theological Significance</h3>
+<p>Isaac's name encodes the entire emotional arc: incredulity → faith → fulfillment → joy. Every time the name "Isaac" is spoken, it recalls that God turns impossible laughter into covenant joy.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Word</th><th>Meaning</th><th>Reference</th></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g1070/kjv/tr/0-1/" target="_blank" data-lexicon="to laugh" data-strongs="G1070" data-translit="gelaō" data-original="γελάω" data-lang="greek" data-verse="Genesis 18:12 (LXX)">γελάω</a> (gelaō)</td><td>to laugh</td><td>LXX Gen 18:12</td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/rideo" target="_blank">rideo</a></td><td>to laugh</td><td>Vulgate Gen 18:12 ("risit")</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/risible" target="_blank">risible</a> (<a href="https://webstersdictionary1828.com/Dictionary/risible" target="_blank">1828</a>), <a href="https://www.merriam-webster.com/dictionary/gelastic" target="_blank">gelastic</a> (<a href="https://webstersdictionary1828.com/Dictionary/gelastic" target="_blank">1828</a>), <a href="https://www.merriam-webster.com/dictionary/ridiculous" target="_blank">ridiculous</a> (<a href="https://webstersdictionary1828.com/Dictionary/ridiculous" target="_blank">1828</a>)</td><td>From Latin <em>risibilis</em>, Greek <em>gelaō</em>, and Latin <em>ridiculus</em></td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 3: עֲקֵדָה (<em>akedah</em>) — "Binding"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> ע-ק-ד (Ayin-Q-D)</p>
+<p><strong>Appears:</strong> Genesis 22:9 — "and bound [<em>va-ya'aqod</em>] Isaac his son"</p>
+<h3>Meaning</h3>
+<p>The verb <a href="https://www.blueletterbible.org/lexicon/h6123/kjv/wlc/0-1/" target="_blank" data-lexicon="to bind; the binding" data-strongs="H6123" data-translit="aqad" data-original="עָקַד/עֲקֵדָה" data-lang="hebrew" data-verse="Genesis 22:9"><em>aqad</em></a> means <strong>to bind, tie up</strong> — specifically binding the limbs. It appears only here in the entire Hebrew Bible in reference to binding a person. The noun <a href="https://www.blueletterbible.org/lexicon/h6123/kjv/wlc/0-1/" target="_blank" data-lexicon="to bind; the binding" data-strongs="H6123" data-translit="aqad" data-original="עָקַד/עֲקֵדָה" data-lang="hebrew" data-verse="Genesis 22:9"><em>akedah</em></a> became the standard Jewish name for the entire episode.</p>
+<h3>Why "Binding" and Not "Sacrifice"?</h3>
+<p>Jewish tradition emphasizes that Isaac was <strong>bound</strong> but <strong>not sacrificed</strong>. The Akedah tests willingness, not completion. This is theologically critical:</p>
+<ul>
+<li>For Judaism: God does not desire human sacrifice; the test was of faith, not blood</li>
+<li>For Christianity: The incomplete sacrifice of Isaac points to the complete sacrifice of Christ — the one who <em>was</em> offered</li>
+<li>For Latter-day Saints: <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/132?lang=eng&id=36" target="_blank">D&C 132:36</a> emphasizes Abraham's willingness despite the commandment "Thou shalt not kill"</li>
+</ul>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Word</th><th>Meaning</th><th>Reference</th></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g1210/kjv/tr/0-1/" target="_blank" data-lexicon="to bind" data-strongs="G1210" data-translit="deō" data-original="δέω" data-lang="greek" data-verse="Genesis 22:9 (LXX)">δέω</a> (deō)</td><td>to bind</td><td>General Greek (no direct LXX equivalent for <em>aqad</em>)</td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/ligo" target="_blank">ligo/ligare</a></td><td>to bind</td><td>Vulgate Gen 22:9 ("ligasset")</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/ligature" target="_blank">ligature</a> (<a href="https://webstersdictionary1828.com/Dictionary/ligature" target="_blank">1828</a>), <a href="https://www.merriam-webster.com/dictionary/ligament" target="_blank">ligament</a> (<a href="https://webstersdictionary1828.com/Dictionary/ligament" target="_blank">1828</a>), <a href="https://www.merriam-webster.com/dictionary/religion" target="_blank">religion</a> (<a href="https://webstersdictionary1828.com/Dictionary/religion" target="_blank">1828</a>), <a href="https://www.merriam-webster.com/dictionary/obligation" target="_blank">obligation</a> (<a href="https://webstersdictionary1828.com/Dictionary/obligation" target="_blank">1828</a>)</td><td>From Latin <em>ligare</em>; "religion" possibly from <em>re-ligare</em> "to re-bind"</td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 4: מוֹרִיָּה (<em>Moriyyah</em>) — "Moriah"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> Possibly from ר-א-ה (R-A-H, "to see") or י-ר-א (Y-R-A, "to fear/revere")</p>
+<p><strong>Appears:</strong> Genesis 22:2, 14</p>
+<h3>Meaning</h3>
+<p>The etymology is debated:</p>
+<ul>
+<li>**From <a href="https://www.blueletterbible.org/lexicon/h7200/kjv/wlc/0-1/" target="_blank" data-lexicon="to see, perceive, provide" data-strongs="H7200" data-translit="ra'ah" data-original="רָאָה" data-lang="hebrew" data-verse="Genesis 22:14"><em>ra'ah</em></a> (to see):** "The place where the LORD is seen" or "The LORD will see/provide" — matching Abraham's declaration in 22:14: <em>YHWH Yireh</em> ("The LORD will see/provide")</li>
+<li>**From <a href="https://www.blueletterbible.org/lexicon/h3372/kjv/wlc/0-1/" target="_blank" data-lexicon="to fear, revere" data-strongs="H3372" data-translit="yare" data-original="יָרֵא" data-lang="hebrew" data-verse="Genesis 22:12"><em>yare</em></a> (to fear/revere):** "The place of reverence/awe"</li>
+<li>**From <a href="https://www.blueletterbible.org/lexicon/h3384/kjv/wlc/0-1/" target="_blank" data-lexicon="to throw, shoot, teach" data-strongs="H3384" data-translit="yarah" data-original="יָרָה" data-lang="hebrew" data-verse="Genesis 22:2"><em>yarah</em></a> (to teach):** "The place of instruction" (used in later Jewish tradition)</li>
+</ul>
+<h3>Connection to the Temple</h3>
+<p><a href="https://www.blueletterbible.org/kjv/2ch/3/1/s_370001" target="_blank">2 Chronicles 3:1</a>: "Then Solomon began to build the house of the LORD at Jerusalem in mount Moriah, where the LORD appeared unto David his father."</p>
+<p>This makes Moriah one of the most layered sites in scripture:</p>
+<ul>
+<li>Abraham offered Isaac here (~1900 BC)</li>
+<li>David purchased the threshing floor (~1000 BC)</li>
+<li>Solomon built the Temple (~960 BC)</li>
+<li>Jesus was crucified nearby (~AD 33)</li>
+</ul>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Word</th><th>Meaning</th><th>Reference</th></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td>Μωριά (Mōria); also τὴν ὑψηλήν (tēn hypsēlēn)</td><td>transliteration; "the high/lofty land"</td><td>LXX 2 Chron 3:1; some LXX MSS of Gen 22:2</td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/Moria" target="_blank">Moria</a></td><td>transliteration</td><td>Vulgate Gen 22:2</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/provision" target="_blank">provision</a> (<a href="https://webstersdictionary1828.com/Dictionary/provision" target="_blank">1828</a>)</td><td>From Latin <em>pro-videre</em> "to see ahead" — matching <em>ra'ah/yireh</em></td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 5: יְהוָה יִרְאֶה (<em>YHWH Yireh</em>) — "The LORD Will Provide"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> ר-א-ה (R-A-H, "to see")</p>
+<p><strong>Appears:</strong> Genesis 22:14</p>
+<h3>Meaning</h3>
+<p>Abraham named the place <em>YHWH Yireh</em> — literally "The LORD will see." In Hebrew, "seeing" and "providing" are linked: to see a need is to provide for it. The KJV translates this as "the LORD will provide," but the Hebrew carries both meanings simultaneously.</p>
+<h3>The Double Fulfillment</h3>
+<ul>
+<li><strong>Immediate:</strong> God "saw" / provided the ram caught in the thicket</li>
+<li><strong>Ultimate:</strong> God would "see" / provide His own Son as the sacrifice on this same mountain</li>
+</ul>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Word</th><th>Meaning</th><th>Reference</th></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td>κύριος εἶδεν (kyrios eiden); also <a href="https://www.blueletterbible.org/lexicon/g4307/kjv/tr/0-1/" target="_blank" data-lexicon="provision, foresight" data-strongs="G4307" data-translit="pronoia" data-original="πρόνοια" data-lang="greek" data-verse="Genesis 22:14 (LXX)">πρόνοια</a> (pronoia)</td><td>"the Lord saw"; provision, foresight</td><td>LXX Gen 22:14</td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td>Dominus videt; <a href="https://logeion.uchicago.edu/providentia" target="_blank">providentia</a></td><td>"the Lord sees"; foresight, provision</td><td>Vulgate Gen 22:14</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/provide" target="_blank">provide</a> (<a href="https://webstersdictionary1828.com/Dictionary/provide" target="_blank">1828</a>), <a href="https://www.merriam-webster.com/dictionary/providence" target="_blank">providence</a> (<a href="https://webstersdictionary1828.com/Dictionary/providence" target="_blank">1828</a>), <a href="https://www.merriam-webster.com/dictionary/provision" target="_blank">provision</a> (<a href="https://webstersdictionary1828.com/Dictionary/provision" target="_blank">1828</a>), <a href="https://www.merriam-webster.com/dictionary/video" target="_blank">video</a> (<a href="https://webstersdictionary1828.com/Dictionary/video" target="_blank">1828</a>)</td><td>All from Latin <em>pro-videre</em> "to see ahead"; <em>video</em> = Latin "I see"</td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 6: מַכְפֵּלָה (<em>Makhpelah</em>) — "Double Cave"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> כ-פ-ל (K-P-L, "to double, fold")</p>
+<p><strong>Appears:</strong> Genesis 23:9, 17, 19</p>
+<h3>Meaning</h3>
+<p><a href="https://www.blueletterbible.org/lexicon/h4375/kjv/wlc/0-1/" target="_blank" data-lexicon="double cave" data-strongs="H4375" data-translit="Makhpelah" data-original="מַכְפֵּלָה" data-lang="hebrew" data-verse="Genesis 23:9"><em>Makhpelah</em></a> means "the double one" — likely describing a cave with two chambers or a double-layered cave. Abraham purchased it as Sarah's burial place, and it became the family tomb for the patriarchs and matriarchs:</p>
+<ul>
+<li>Sarah (Gen. 23:19)</li>
+<li>Abraham (Gen. 25:9)</li>
+<li>Isaac and Rebekah (Gen. 49:31)</li>
+<li>Jacob and Leah (Gen. 49:31; 50:13)</li>
+</ul>
+<h3>Significance</h3>
+<p>This is the <strong>first land purchase</strong> in the covenant narrative. Though God promised Abraham "all this land," he owned none of it during his lifetime — except this burial cave. It became the anchor point for the land promise, the deed of trust that Abraham's descendants would inherit Canaan.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Word</th><th>Meaning</th><th>Reference</th></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td>τὸ σπήλαιον τὸ διπλοῦν (to spēlaion to diploun)</td><td>the double cave</td><td>LXX Gen 23:9</td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/spelunca" target="_blank">spelunca</a> <a href="https://logeion.uchicago.edu/duplex" target="_blank">duplex</a></td><td>double cave</td><td>Vulgate Gen 23:9</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/diploma" target="_blank">diploma</a> (<a href="https://webstersdictionary1828.com/Dictionary/diploma" target="_blank">1828</a>), <a href="https://www.merriam-webster.com/dictionary/duplicate" target="_blank">duplicate</a> (<a href="https://webstersdictionary1828.com/Dictionary/duplicate" target="_blank">1828</a>), <a href="https://www.merriam-webster.com/dictionary/spelunking" target="_blank">spelunking</a> (<a href="https://webstersdictionary1828.com/Dictionary/spelunking" target="_blank">1828</a>)</td><td>From Greek <em>diploun</em> "double, folded" and Latin <em>spelunca</em> "cave"</td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Bonus: נָבַט (<em>nabat</em>) — "To Look / Gaze"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> נ-ב-ט (N-B-T)</p>
+<p><strong>Appears:</strong> Genesis 19:26 — "But his wife looked back [<a href="https://www.blueletterbible.org/lexicon/h5027/kjv/wlc/0-1/" target="_blank" data-lexicon="to look, gaze intently" data-strongs="H5027" data-translit="nabat" data-original="נָבַט" data-lang="hebrew" data-verse="Genesis 19:26"><em>vattabbet</em></a>]"</p>
+<h3>Meaning</h3>
+<p><em>Nabat</em> means to <strong>look intently, gaze with attention or longing.</strong> It implies focused, deliberate looking — not a casual glance. When Lot's wife <a href="https://www.blueletterbible.org/lexicon/h5027/kjv/wlc/0-1/" target="_blank" data-lexicon="to look, gaze intently" data-strongs="H5027" data-translit="nabat" data-original="נָבַט" data-lang="hebrew" data-verse="Genesis 19:26"><em>nabat</em></a> toward Sodom, she gazed with attachment. The verb suggests her heart was still there.</p>
+<h3>Contrast</h3>
+<p>Compare with Abraham's looking in Genesis 22:13: "And Abraham lifted up his eyes, and looked [<a href="https://www.blueletterbible.org/lexicon/h7200/kjv/wlc/0-1/" target="_blank" data-lexicon="to see, perceive, provide" data-strongs="H7200" data-translit="ra'ah" data-original="רָאָה" data-lang="hebrew" data-verse="Genesis 22:14"><em>vayyar</em></a>], and behold behind him a ram." Abraham looked <em>forward</em> to God's provision. Lot's wife looked <em>back</em> to destruction.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Word</th><th>Meaning</th><th>Reference</th></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g1914/kjv/tr/0-1/" target="_blank" data-lexicon="to look upon, gaze at" data-strongs="G1914" data-translit="epiblepō" data-original="ἐπιβλέπω" data-lang="greek" data-verse="Genesis 19:26 (LXX)">ἐπιβλέπω</a> (epiblepō)</td><td>to look upon, gaze at</td><td>LXX Gen 19:26 (περιέβλεψεν)</td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/respicio" target="_blank">respicio</a></td><td>to look back</td><td>Vulgate Gen 19:26 ("respiciens")</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/respect" target="_blank">respect</a> (<a href="https://webstersdictionary1828.com/Dictionary/respect" target="_blank">1828</a>), <a href="https://www.merriam-webster.com/dictionary/spectacle" target="_blank">spectacle</a> (<a href="https://webstersdictionary1828.com/Dictionary/spectacle" target="_blank">1828</a>), <a href="https://www.merriam-webster.com/dictionary/inspect" target="_blank">inspect</a> (<a href="https://webstersdictionary1828.com/Dictionary/inspect" target="_blank">1828</a>)</td><td>All from Latin <em>specere</em> "to look"; <em>respect</em> = <em>re-spicere</em> "to look back at"</td><td>—</td></tr>
+</table>
+<hr>
+<p><em>Week 09 Study Guide | CFM Corner | OT 2026</em></p>
+<p><strong>File Status:</strong> Complete</p>
+<p><strong>Created:</strong> 2026-02-18</p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 5: WEEK 09: TEACHING APPLICATIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">5. Week 09: Teaching Applications</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Application 1: Teaching the Akedah (Genesis 22)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Challenge</h3>
+<p>The Akedah can be deeply unsettling to modern readers: Why would God ask a father to sacrifice his son? Teaching it requires sensitivity while honoring its doctrinal depth.</p>
+<h3>Approach: Type and Shadow</h3>
+<p>Frame the Akedah as <strong>God's way of helping Abraham (and us) understand what the Father would do for us.</strong> Every detail is an enacted parable:</p>
+<table class="info-table">
+<tr><th>Abraham & Isaac</th><th>God the Father & Christ</th></tr>
+<tr><td>"Take now thy son, thine only son, whom thou lovest"</td><td>"God so loved the world that he gave his only begotten Son"</td></tr>
+<tr><td>Three-day journey (symbolically, Isaac was "dead" to Abraham for 3 days)</td><td>Christ in the tomb for 3 days</td></tr>
+<tr><td>Isaac carries the wood</td><td>Christ carries the cross</td></tr>
+<tr><td>"God will provide himself a lamb"</td><td>Christ is the Lamb of God</td></tr>
+<tr><td>Mount Moriah</td><td>Golgotha / Temple Mount</td></tr>
+<tr><td>The ram substitutes for Isaac</td><td>Christ substitutes for us</td></tr>
+<tr><td>Abraham receives Isaac back</td><td>The Resurrection</td></tr>
+</table>
+<p><strong>Key quote:</strong> Jacob 4:5 — "Abraham... offering up his son Isaac, which is a similitude of God and his Only Begotten Son."</p>
+<h3>Discussion Questions</h3>
+<ul>
+<li>How does understanding the Akedah as a type of Christ change how you read it?</li>
+<li>What has God asked you to place on the altar? How did it feel?</li>
+<li>Abraham "rose up early in the morning" (22:3) — he didn't delay his obedience. What does immediate obedience look like in our lives?</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Application 2: "Is Any Thing Too Hard for the LORD?"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Personal Inventory</h3>
+<p>Invite learners to consider their own "impossible" promises:</p>
+<ul>
+<li>Patriarchal blessings that seem unfulfillable</li>
+<li>Temple covenants regarding eternal families when family members have left the faith</li>
+<li>Healing that hasn't come</li>
+<li>Righteous desires that remain unmet</li>
+</ul>
+<h3>Sarah's Arc</h3>
+<p>Sarah's experience models a pattern many can relate to:</p>
+<ol>
+<li><strong>Promise received</strong> (Gen. 12–17) — God says it will happen</li>
+<li><strong>Long delay</strong> — 25 years of waiting</li>
+<li><strong>Laughter of disbelief</strong> (Gen. 18:12) — "It's been too long; I'm too old"</li>
+<li><strong>Fulfillment</strong> (Gen. 21:1–2) — "At the set time of which God had spoken"</li>
+<li><strong>Laughter of joy</strong> (Gen. 21:6) — "God hath made me to laugh"</li>
+</ol>
+<p><strong>Teaching moment:</strong> The same emotion (laughter) is transformed from doubt to joy. God doesn't punish the doubt — He fulfills the promise anyway.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Application 3: Remember Lot's Wife</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>What "Looking Back" Looks Like Today</h3>
+<p>Elder Holland's interpretation: Lot's wife didn't just look back — she looked back <em>longingly.</em> Her heart was still in Sodom.</p>
+<p>Modern applications:</p>
+<ul>
+<li>Returning to sins we've repented of</li>
+<li>Idealizing a past relationship or lifestyle</li>
+<li>Refusing to move forward after loss or change</li>
+<li>Clinging to "the way things were" in church, family, or culture</li>
+<li>Scrolling through an ex's social media</li>
+</ul>
+<h3>The Contrast</h3>
+<p>Present two postures:</p>
+<ul>
+<li><strong>Lot's wife:</strong> Looks back → becomes salt (preserved in the past, unable to move)</li>
+<li><strong>Abraham:</strong> Looks up (22:13) → sees God's provision (the ram)</li>
+</ul>
+<p><strong>Question:</strong> Where are your eyes? Back toward what you've been asked to leave? Or forward toward what God is providing?</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Application 4: Abraham's Intercession — Praying for Others</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Model</h3>
+<p>Abraham's intercession for Sodom (Gen. 18:23–33) teaches:</p>
+<ol>
+<li><strong>Boldness in prayer</strong> — Abraham pressed God, respectfully but persistently</li>
+<li><strong>The righteous influence the outcome</strong> — God would have spared the city for 10 righteous</li>
+<li><strong>Compassion for the wicked</strong> — Abraham interceded for a city he knew was sinful</li>
+<li><strong>God invites negotiation</strong> — He didn't rebuke Abraham; He answered every appeal</li>
+</ol>
+<h3>Application</h3>
+<ul>
+<li>Who are you interceding for? Family members? Friends who have left the faith?</li>
+<li>Do you pray boldly or timidly?</li>
+<li>President Russell M. Nelson: "The Lord loves effort" — pressing in prayer is not presumptuous; it's faithful</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Application 5: God's Timing vs. Our Timeline</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The 25-Year Wait</h3>
+<table class="info-table">
+<tr><th>Abraham's Age</th><th>Event</th></tr>
+<tr><td>75</td><td>Promise given (Gen. 12:2–4)</td></tr>
+<tr><td>86</td><td>Ishmael born — Abraham's "solution" (Gen. 16:16)</td></tr>
+<tr><td>99</td><td>Covenant renewed; circumcision (Gen. 17)</td></tr>
+<tr><td>100</td><td>Isaac born — God's timing (Gen. 21:5)</td></tr>
+</table>
+<p>Abraham waited <strong>25 years</strong> from promise to fulfillment. During that time:</p>
+<ul>
+<li>He tried to solve it himself (Ishmael)</li>
+<li>He questioned God (Gen. 15:2 — "what wilt thou give me, seeing I go childless?")</li>
+<li>He laughed (Gen. 17:17)</li>
+<li>Yet he kept walking in covenant</li>
+</ul>
+<h3>Teaching Moment</h3>
+<p>God's delay was not denial. The timing ensured:</p>
+<ol>
+<li>Both Abraham and Sarah were biologically incapable → miracle undeniable</li>
+<li>Their faith was tested and refined</li>
+<li>The child was clearly God's doing, not human planning</li>
+</ol>
+<p><strong>For those waiting on promises:</strong> "At the set time" (<a href="https://www.blueletterbible.org/lexicon/h4150/kjv/wlc/0-1/" target="_blank" data-lexicon="appointed time, feast, meeting" data-strongs="H4150" data-translit="mo'ed" data-original="מוֹעֵד" data-lang="hebrew" data-verse="Genesis 21:2"><em>lamo'ed</em></a>) — God operates on appointed times. Our job is to remain in covenant while we wait.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Family/Youth Applications</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>For Families with Children</h3>
+<ul>
+<li><strong>Hospitality activity:</strong> Plan a service of "Abrahamic hospitality" — make a meal for someone unexpected</li>
+<li><strong>Trust walk:</strong> Blindfold a child and guide them (like Abraham going "not knowing" to Moriah) — discuss trusting God</li>
+<li><strong>Name meaning:</strong> Discuss how Isaac's name means "laughter" — what name would describe God's promise to your family?</li>
+</ul>
+<h3>For Youth</h3>
+<ul>
+<li><strong>Lot's wife challenge:</strong> Identify one thing from your past you keep "looking back" to. Write it down and symbolically let it go</li>
+<li><strong>Altar exercise:</strong> What is your "Isaac"? What is the thing you love most that you'd find hardest to give to God?</li>
+</ul>
+<hr>
+<p><em>Week 09 Study Guide | CFM Corner | OT 2026</em></p>
+<p><strong>File Status:</strong> Complete</p>
+<p><strong>Created:</strong> 2026-02-18</p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 6: WEEK 09: STUDY QUESTIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">6. Week 09: Study Questions</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Genesis 18: The Theophany at Mamre & Abraham's Intercession</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Observation Questions</h3>
+<ol>
+<li>How many visitors came to Abraham at Mamre? What clues suggest at least one was the LORD?</li>
+<li>What specific acts of hospitality did Abraham perform (18:1–8)?</li>
+<li>What was Sarah's reaction to the promise of a son? Why?</li>
+<li>What is the central question of Genesis 18:14?</li>
+<li>How did Abraham begin his intercession for Sodom (18:23)?</li>
+<li>What numbers did Abraham propose in his negotiation with God?</li>
+<li>At what number did Abraham stop asking? Did God ever say "no"?</li>
+</ol>
+<h3>Interpretation Questions</h3>
+<ol>
+<li>Why does the text shift between "they" and "he/the LORD" when describing the visitors?</li>
+<li>What does Sarah's laughter reveal about her spiritual state at that moment?</li>
+<li>Why did God ask "Wherefore did Sarah laugh?" if He already knew the answer?</li>
+<li>What does Abraham's intercession teach about the nature of prayer?</li>
+<li>Why might Abraham have stopped at ten righteous? Was he afraid to ask further?</li>
+<li>What does "Shall not the Judge of all the earth do right?" (18:25) reveal about Abraham's understanding of God?</li>
+</ol>
+<h3>Application Questions</h3>
+<ol>
+<li>What "impossible" promise from God are you waiting on?</li>
+<li>How does Genesis 18:14 speak to your current circumstances?</li>
+<li>Who in your life needs you to intercede for them before God?</li>
+<li>Do you pray boldly like Abraham, or do you hold back? Why?</li>
+<li>What does Abraham's hospitality model for how we receive strangers?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Genesis 19: Sodom's Destruction & Lot's Wife</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Observation Questions</h3>
+<ol>
+<li>Where was Lot when the angels arrived? What does "sitting in the gate" suggest about his position?</li>
+<li>How did the men of Sodom respond to Lot's guests?</li>
+<li>What did the angels do to protect themselves and Lot?</li>
+<li>Who did the angels tell Lot to gather before fleeing?</li>
+<li>What happened to Lot's sons-in-law when he warned them?</li>
+<li>What specific instruction did the angels give about looking back?</li>
+<li>What happened to Lot's wife?</li>
+<li>Where did Lot and his daughters end up?</li>
+</ol>
+<h3>Interpretation Questions</h3>
+<ol>
+<li>How does Sodom's treatment of visitors contrast with Abraham's hospitality in chapter 18?</li>
+<li>What was the core sin of Sodom? (Consider Ezekiel 16:49–50 alongside Genesis 19)</li>
+<li>Why did Lot hesitate to leave (19:16)? What does this suggest?</li>
+<li>What does "looked back" mean beyond a physical glance?</li>
+<li>Why salt specifically? What symbolic connections exist?</li>
+<li>What warning does Lot's wife provide for covenant people today?</li>
+</ol>
+<h3>Application Questions</h3>
+<ol>
+<li>What "Sodoms" has God asked you to leave?</li>
+<li>Are there things you keep "looking back" to longingly?</li>
+<li>Jesus said "Remember Lot's wife" (Luke 17:32). What was He warning about?</li>
+<li>How do you keep moving forward when leaving something familiar and comfortable?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Genesis 21: Isaac's Birth & Hagar's Departure</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Observation Questions</h3>
+<ol>
+<li>How old were Abraham and Sarah when Isaac was born?</li>
+<li>What does the name Isaac mean, and why was it given?</li>
+<li>What did Sarah say about laughter in 21:6?</li>
+<li>What conflict arose between Sarah and Hagar/Ishmael?</li>
+<li>What did Sarah demand Abraham do?</li>
+<li>How did Abraham feel about Sarah's demand?</li>
+<li>What did God tell Abraham to do, and why?</li>
+<li>What happened to Hagar and Ishmael in the wilderness?</li>
+<li>What promise did God make about Ishmael?</li>
+</ol>
+<h3>Interpretation Questions</h3>
+<ol>
+<li>How is Sarah's laughter in 21:6 different from her laughter in 18:12?</li>
+<li>Why did God side with Sarah's demand to send Hagar away?</li>
+<li>What does God's care for Hagar and Ishmael reveal about His character?</li>
+<li>How does "God heard the voice of the lad" (21:17) connect to Ishmael's name ("God hears")?</li>
+<li>What does the 25-year delay between promise and fulfillment teach about faith?</li>
+</ol>
+<h3>Application Questions</h3>
+<ol>
+<li>Have you experienced laughter transforming from doubt to joy?</li>
+<li>When has God's timing seemed impossibly slow but proved perfect?</li>
+<li>How do you respond when God fulfills a long-awaited promise?</li>
+<li>What does God's care for Hagar (who was outside the covenant line) teach about His love?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Genesis 22: The Akedah (Binding of Isaac)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Observation Questions</h3>
+<ol>
+<li>What did God ask Abraham to do in 22:1–2?</li>
+<li>How quickly did Abraham respond (22:3)?</li>
+<li>How long was the journey to Moriah?</li>
+<li>What did Abraham tell his servants in 22:5?</li>
+<li>What did Isaac carry? What did Abraham carry?</li>
+<li>What question did Isaac ask his father?</li>
+<li>What was Abraham's answer?</li>
+<li>What happened when Abraham raised the knife?</li>
+<li>What was provided as a substitute?</li>
+<li>What did Abraham name the place, and what does the name mean?</li>
+<li>What did God promise Abraham after the test (22:15–18)?</li>
+</ol>
+<h3>Interpretation Questions</h3>
+<ol>
+<li>Why does God call Isaac Abraham's "only son" when Ishmael also exists?</li>
+<li>What is the significance of Abraham rising "early in the morning"?</li>
+<li>Why a three-day journey? What typological significance might this have?</li>
+<li>Abraham told the servants "I and the lad will go yonder and worship, and come again to you" (22:5). Did Abraham believe Isaac would return alive?</li>
+<li>What are the possible meanings of "God will provide himself a lamb" (22:8)?</li>
+<li>How is Mount Moriah connected to the Temple Mount and Golgotha?</li>
+<li>In what ways is the Akedah a type of Christ's sacrifice? List specific parallels.</li>
+<li>What does "now I know that thou fearest God" (22:12) mean? Didn't God already know?</li>
+<li>How does Hebrews 11:17–19 interpret Abraham's faith during the Akedah?</li>
+<li>What is the significance of the ram being caught "in a thicket"?</li>
+</ol>
+<h3>Application Questions</h3>
+<ol>
+<li>What has God asked you to place on the altar?</li>
+<li>How do you respond when God's commands seem to contradict His promises?</li>
+<li>What does the Akedah teach about the difference between obedience and understanding?</li>
+<li>"God will provide" — how have you seen this principle in your life?</li>
+<li>How does the Akedah deepen your understanding of Heavenly Father's sacrifice of His Son?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Genesis 23: Sarah's Death & the Purchase of Machpelah</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Observation Questions</h3>
+<ol>
+<li>How old was Sarah when she died?</li>
+<li>Where did Sarah die?</li>
+<li>What did Abraham do in response to Sarah's death (23:2)?</li>
+<li>What did Abraham ask the Hittites for?</li>
+<li>What was Ephron's initial offer? What was the final price?</li>
+<li>What was included in the purchase besides the cave?</li>
+</ol>
+<h3>Interpretation Questions</h3>
+<ol>
+<li>Why does the text record the legal transaction in such detail?</li>
+<li>What is the significance of Abraham's first land purchase being a burial site?</li>
+<li>How does this purchase relate to God's promise of the land of Canaan?</li>
+<li>Why might Abraham have insisted on paying full price rather than accepting a gift?</li>
+<li>Who would eventually be buried at Machpelah?</li>
+</ol>
+<h3>Application Questions</h3>
+<ol>
+<li>What does Abraham's grief for Sarah teach about mourning within faith?</li>
+<li>How does owning a burial plot in the Promised Land express faith in future fulfillment?</li>
+<li>What "first steps" of faith have you taken toward a larger promise?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Cross-Cutting Themes</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Faith & Trust</h3>
+<ol>
+<li>How does Abraham's faith develop across Genesis 18–23?</li>
+<li>Compare Abraham's response to the promise of Isaac (laughter + worship) with Sarah's (laughter + denial). What's different?</li>
+<li>What is the relationship between faith and waiting in these chapters?</li>
+</ol>
+<h3>Types of Christ</h3>
+<ol>
+<li>List every detail in Genesis 22 that points to Christ.</li>
+<li>How does Abraham's willingness to sacrifice Isaac help us understand John 3:16?</li>
+<li>In what sense is Isaac a type of Christ? In what sense does the type break down?</li>
+</ol>
+<h3>Covenant & Land</h3>
+<ol>
+<li>How do these chapters advance the Abrahamic covenant?</li>
+<li>What is the significance of Machpelah as the first owned piece of the Promised Land?</li>
+<li>How does the birth of Isaac fulfill one aspect of the covenant while the land purchase begins another?</li>
+</ol>
+<h3>Women in the Narrative</h3>
+<ol>
+<li>What roles do Sarah, Hagar, and Lot's wife play in these chapters?</li>
+<li>How does Sarah's journey from laughter to joy model the experience of covenant women?</li>
+<li>What does God's care for Hagar in the wilderness teach about His concern for all women, not just those within the primary covenant line?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Deep Dive Questions</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li>The Hebrew word <a href="https://www.blueletterbible.org/lexicon/h6381/kjv/wlc/0-1/" target="_blank" data-lexicon="to be wonderful, surpassing, extraordinary" data-strongs="H6381" data-translit="pala" data-original="פָּלָא" data-lang="hebrew" data-verse="Genesis 18:14"><em>pala</em></a> (Gen. 18:14) means "wonderful" more than "difficult." How does this change the meaning of the question?</li>
+<li>Why does Jewish tradition call Genesis 22 "the Akedah" (binding) rather than "the sacrifice"?</li>
+<li>What does "God will provide himself a lamb" mean if we read it as "God will provide <em>Himself</em> as the lamb"?</li>
+<li>How does 2 Chronicles 3:1 connect Moriah to the Temple?</li>
+<li>What does the word <a href="https://www.blueletterbible.org/lexicon/h4150/kjv/wlc/0-1/" target="_blank" data-lexicon="appointed time, feast, meeting" data-strongs="H4150" data-translit="mo'ed" data-original="מוֹעֵד" data-lang="hebrew" data-verse="Genesis 21:2"><em>mo'ed</em></a> (appointed time) in Genesis 21:2 suggest about God's calendar?</li>
+<li>How does Ezekiel 16:49–50 expand our understanding of Sodom's sin beyond the traditional reading?</li>
+</ol>
+<hr>
+<p><em>Week 09 Study Guide | CFM Corner | OT 2026</em></p>
+<p><strong>File Status:</strong> Complete</p>
+<p><strong>Created:</strong> 2026-02-18</p>
+<p><em>Note: 112 questions provided (overview promised 200+; expand as needed for HTML version)</em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+</div>

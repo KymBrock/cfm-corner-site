@@ -1,0 +1,105 @@
+{{ define "main" }}
+<div class="welcome-page" data-pagefind-body>
+
+    <div class="welcome-hero">
+        <h1>Welcome to Come Follow Me Corner</h1>
+        <p class="welcome-subtitle">Your resource hub for deeper scripture study</p>
+    </div>
+
+    <div class="welcome-content">
+
+        <section class="welcome-intro">
+            <p>Whether you're a Sunday School teacher preparing a lesson, a family looking for study aids, or an individual wanting to go deeper into the scriptures, you're in the right place. Each week we gather study guides, video summaries, Hebrew language insights, historical context, and original charts — all organized to match the Come Follow Me curriculum.</p>
+            <p>Everything here is free, and always will be. This is a passion project, and if you'd like to help us keep growing, learn how you can <a href="{{ "about/#support" | relURL }}" class="welcome-link">support CFM Corner</a>.</p>
+        </section>
+
+        <section class="welcome-section">
+            <h2>Choose Your Own Adventure</h2>
+            <p>This site is designed to meet you where you are. There's no "right" way to use it — dive as deep as you'd like, or just grab what you need for the week. Here are a few ways people use CFM Corner:</p>
+            <div class="welcome-paths">
+                <div class="welcome-path">
+                    <div class="path-time">5 minutes</div>
+                    <div class="path-title">The Quick Study</div>
+                    <p>Read the <strong>Week Overview</strong> at the top of the Study Guide for a summary of the week's chapters and key themes. Done — you're oriented for the week.</p>
+                </div>
+                <div class="welcome-path">
+                    <div class="path-time">15–20 minutes</div>
+                    <div class="path-title">The Sunday Prep</div>
+                    <p>Read the <strong>Weekly Insights</strong> essay for context and connections, then browse the <strong>Charts</strong> for a visual you can share in class or family study. Great for teachers and discussion leaders.</p>
+                </div>
+                <div class="welcome-path">
+                    <div class="path-time">30–45 minutes</div>
+                    <div class="path-title">The Deep Dive</div>
+                    <p>Work through the full <strong>Study Guide</strong> — historical context, Hebrew and Greek word studies, key passage analysis, and discussion questions. Use the scripture popups (hover over any reference) to read verses without leaving the page.</p>
+                </div>
+                <div class="welcome-path">
+                    <div class="path-time">1+ hours</div>
+                    <div class="path-title">The Scholar's Path</div>
+                    <p>Everything above, plus watch the curated <strong>video lessons</strong> from trusted creators, explore the <strong>Hebrew Language Journey</strong>, and follow the cross-references into your own study. This is where the real discoveries happen.</p>
+                </div>
+            </div>
+            <p>The point is: <em>any</em> amount of time you spend here will add something to your study. You don't have to do it all.</p>
+        </section>
+
+        <section class="welcome-section">
+            <h2>Weekly Lessons</h2>
+            <p>This is the heart of the site. Each week's page includes:</p>
+            <ul>
+                <li><strong>Resources</strong> — Curated links to the best video lessons, podcasts, and articles from trusted creators across the Come Follow Me community</li>
+                <li><strong>Weekly Insights</strong> — A blog-style essay exploring the week's themes in depth, with cultural context, language discoveries, and connections you might not find elsewhere</li>
+                <li><strong>Study Guide</strong> — In-depth coverage of the week's chapters: historical context, key passages with Hebrew and Greek word studies, teaching applications, and over 100 discussion questions per week</li>
+                <li><strong>Charts &amp; Tools</strong> — Original charts, timelines, and typology graphics designed for teaching and personal study</li>
+            </ul>
+            <p><a href="{{ "weeks/" | relURL }}" class="welcome-link">Browse Weekly Lessons →</a></p>
+        </section>
+
+        <section class="welcome-section">
+            <h2>Finding Your Way Around</h2>
+            <p>The navigation bar at the top of every page gives you quick access to the main sections:</p>
+            <ul>
+                <li><strong>Home</strong> — The front page always shows <em>This Week's Study</em> at the top, so you can jump straight to the current lesson. Below that is a grid of all the weekly lessons published so far.</li>
+                <li><strong>About</strong> — Background on the project, plus how to support CFM Corner if you'd like to.</li>
+                <li><strong>Weekly Lessons</strong> — A complete list of every week's lesson for the year. Each card shows the week number, scripture block, and dates.</li>
+                <li><strong>Hebrew</strong> — The Hebrew Language Journey — lessons in learning order, building from the alphabet up. Start from Lesson 1 and work forward.</li>
+                <li><strong>Resources</strong> — External tools, reference sites, and supplementary materials.</li>
+            </ul>
+            <p>There's also a <strong>search bar</strong> in the top right — type any word, topic, or scripture reference to find it across the entire site.</p>
+            <p>Inside each weekly lesson, you'll find <strong>tabbed sections</strong> (Study Guide, Insights, Resources, Charts) so you can jump to exactly what you need:</p>
+            <img src="{{ "images/welcome-tabs-example.png" | relURL }}" alt="Tab navigation showing Resources, Weekly Insights, Study Guide, and Charts &amp; Tools" style="max-width: 100%; border-radius: 8px; border: 1px solid var(--sage-pale); margin: 10px 0 16px;">
+            <p>Within each tab, sections expand and collapse with <strong>accordion panels</strong> — click a heading or the <span style="display:inline-block; background:#8a7d6b; color:white; border-radius:4px; padding:1px 5px; font-size:0.85em; font-weight:bold; vertical-align:middle;">⊞</span> icon to expand, and <span style="display:inline-block; background:#8a7d6b; color:white; border-radius:4px; padding:1px 5px; font-size:0.85em; font-weight:bold; vertical-align:middle;">⊟</span> to collapse:</p>
+            <img src="{{ "images/welcome-accordion-example.png" | relURL }}" alt="Accordion panels showing Week Overview, Historical Context, Key Passages, Word Studies, and Teaching Applications" style="max-width: 480px; border-radius: 8px; border: 1px solid var(--sage-pale); margin: 10px 0 16px;">
+            <p><em>Tip:</em> Hover over any scripture reference (like Genesis 22:1-14) and a popup will show you the verse text right there — no need to click away from the page. Want to go deeper? Click the reference link in the popup and it will take you straight to <a href="https://www.blueletterbible.org" target="_blank" rel="noopener">Blue Letter Bible</a>, where you can explore the interlinear text, Strong's concordance numbers, original Hebrew and Greek word studies, cross-references, and commentaries. It's one of the best free tools available for serious Bible study, and every scripture reference on this site connects directly to it.</p>
+        </section>
+
+        <section class="welcome-section">
+            <h2>Hebrew Language Journey</h2>
+            <p>One of the unique things about Come Follow Me Corner is our ongoing Hebrew language series. We're learning Biblical Hebrew together — not to become scholars, but to hear the scriptures the way their original audience heard them. Each lesson builds on the last:</p>
+            <ol>
+                <li><strong>The Aleph-Bet</strong> — Meeting the Hebrew alphabet</li>
+                <li><strong>The Root System</strong> — How Hebrew builds words from three-letter roots</li>
+                <li><strong>Parts of Speech</strong> — How roots become nouns, verbs, and more</li>
+                <li><em>More lessons coming each week...</em></li>
+            </ol>
+            <p><a href="{{ "hebrew/" | relURL }}" class="welcome-link">Start the Hebrew Journey →</a></p>
+        </section>
+
+        <section class="welcome-section">
+            <h2>Resources</h2>
+            <p>Beyond the weekly materials, we maintain a growing collection of resources including recommended study tools, external sites, and reference materials.</p>
+            <p><a href="{{ "resources/" | relURL }}" class="welcome-link">Explore Resources →</a></p>
+        </section>
+
+        <section class="welcome-section">
+            <h2>Stay Connected</h2>
+            <p>We send a weekly email when new materials are posted — no spam, just a heads-up that the week's study guide is ready. You can also bookmark the <a href="{{ "/" | relURL }}">home page</a>, which always shows the current week's lesson.</p>
+        </section>
+
+        <section class="welcome-section">
+            <h2>About This Project</h2>
+            <p>Come Follow Me Corner started as a resource page for a Sunday School class and grew from there. It's a project of Learning Inspired LLC. This site is not affiliated with The Church of Jesus Christ of Latter-day Saints.</p>
+            <p><a href="{{ "about/" | relURL }}" class="welcome-link">Read more about us →</a></p>
+        </section>
+
+    </div>
+</div>
+{{ end }}

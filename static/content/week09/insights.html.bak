@@ -1,0 +1,381 @@
+<div class="cfm-insights" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+
+    <!-- Expand/Collapse Controls -->
+    <div style="text-align: center; margin: 20px 0 30px 0;">
+        <button onclick="expandAllInsights()" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 0 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">&#x229E; Expand All</button>
+        <button onclick="collapseAllInsights()" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 0 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">&#x229F; Collapse All</button>
+    </div>
+
+    <!-- Content Sections -->
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Genesis 18–23: "Is Any Thing Too Hard for the Lord?"</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em; transition: transform 0.3s ease; display: inline-block;">&#9654;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>February 23 – March 1, 2026</span>
+<span class="sub-arrow" style="font-size: 0.7em; transition: transform 0.3s ease; color: #7c9885; display: inline-block;">&#9654;</span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+</div>
+</div>
+</div>
+
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>A Letter to Fellow Students</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em; transition: transform 0.3s ease; display: inline-block;">&#9654;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">"Is any thing too hard for the LORD?"</p>
+<p style="margin-bottom: 15px;">I've been sitting with that question all week, and I want to be honest with you: it's one of those verses I've read a hundred times without really <em>hearing</em> it. It sits so comfortably in our spiritual vocabulary — of course nothing is too hard for God — that we can nod past it without letting it cut.</p>
+<p style="margin-bottom: 15px;">But this week, I think the text wants us to stop nodding.</p>
+<p style="margin-bottom: 15px;">Because the question wasn't addressed to theologians debating omnipotence in the abstract. It was addressed to a ninety-year-old woman who had just laughed — laughed! — at the idea that her body could do what God said it would do. Sarah's laughter wasn't irreverent. It was the sound of someone who had lived too long with disappointment to risk hoping again. And God's response wasn't a rebuke. It was an invitation: <em>Is anything too wonderful for Me?</em></p>
+<p style="margin-bottom: 15px;">That Hebrew word — <em>pala</em> (פָּלָא) — doesn't really mean "hard" the way we use it. It means <em>extraordinary, surpassing, beyond what you thought possible.</em> God wasn't asking Sarah whether He was strong enough. He was asking whether she could imagine a world bigger than her disappointments.</p>
+<p style="margin-bottom: 15px;">This week we walk through some of the most dramatic chapters in all of scripture. We'll watch Abraham welcome divine visitors under the oaks of Mamre and then bargain boldly for Sodom's survival. We'll flee with Lot through fire and sulfur while his wife turns to look back — and becomes a monument to divided loyalty. We'll hear Sarah's laughter transform from incredulity to joy when Isaac arrives, the child whose very name means "he laughs." And then, in the devastating silence of Genesis 22, we'll climb Mount Moriah with a father and his son, carrying wood and fire and a question that echoes across millennia: <em>Where is the lamb?</em></p>
+<p style="margin-bottom: 15px;">Every story this week asks the same thing in a different key: Will you trust God with the impossible? Will you walk forward without looking back? Will you let Him do what only He can do?</p>
+<p style="margin-bottom: 15px;">Let's find out together.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>How to Navigate This Week's Materials</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em; transition: transform 0.3s ease; display: inline-block;">&#9654;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<div style="background: linear-gradient(135deg, #f0f4f1 0%, #e4ebe6 100%); border: 2px solid #7c9885; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+<p style="margin-bottom: 15px; font-size: 1.1em; font-weight: 600; color: #4a5d4f;">Welcome to the New CFM Corner!</p>
+<p style="margin-bottom: 15px;">If you're a returning reader, you might have noticed things look a little different around here. A <em>lot</em> different, actually.</p>
+<p style="margin-bottom: 15px;">This is something I've been planning for a while. The issues I was having with the old hosting platform were driving me nuts &mdash; limitations on layout, formatting headaches, slow load times, things breaking for no reason. I knew I needed to rebuild the entire site from the ground up.</p>
+<p style="margin-bottom: 15px;">A little confession: when I started this website four years ago, I barely knew how to find a folder on my hard drive. And that is <em>not</em> an exaggeration. I've learned a lot since then, and it was time to put that learning to work.</p>
+<p style="margin-bottom: 15px;">I am so excited with how this has come together. You'll find a cleaner layout, faster pages, better mobile experience, and some exciting new features &mdash; including a brand new <a href="/hebrew/" style="color: #7c9885; font-weight: 600;">Hebrew Language section</a> for those wanting to dip their toes into biblical Hebrew. And we have some exciting things currently in the works that are still a bit down the road, but they are going to be <em>so</em> helpful for our scriptural journeys together.</p>
+<p style="margin-bottom: 0;">Thank you for being here. Thank you for studying with me. Now let's dig in.</p>
+</div>
+
+<p style="margin-bottom: 15px;">A full study guide is prepared with six files, interactive charts, and this Weekly Insights document. Here's how to find what works best for you:</p>
+<table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em;">
+<thead><tr style="background: #7c9885; color: white;">
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;"><strong>If you are...</strong></th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;"><strong>Start here</strong></th>
+</tr></thead><tbody>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Short on time?</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Start with the <strong>Week Overview</strong> — it gives you a complete reading summary, central themes, key figures, and a suggested reading approach for every time level. Pair it with the <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/09?lang=eng" target="_blank">CFM Manual lesson</a> for a focused, manageable study session.</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Love deep study?</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Historical & Cultural Context</strong> — The ancient world behind these stories: ANE hospitality codes (why Abraham's welcome matters), Sodom archaeology (including the remarkable Tall el-Hammam airburst evidence), Akedah traditions in Judaism and Christianity, Hittite land sale customs, and the Cave of Machpelah. <strong>Key Passages Study</strong> — Five passages in extraordinary detail: the divine announcement, Sodom's destruction, Isaac's birth, the Akedah, and Machpelah. Each includes Hebrew word analysis, literary structure, ancient context, and Latter-day Saint connections. <strong>Word Studies</strong> — Six key Hebrew terms: <em>pala</em> (wonderful/too hard), <em>tsachaq</em> (laugh), <em>akedah</em> (binding), <em>Moriah</em>, <em>YHWH Yireh</em> (the LORD will provide), and <em>Makhpelah</em> (double cave).</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Visual learner?</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">The study guide charts map the typological parallels between the Akedah and the Atonement, and the geographic journey from Mamre to Moriah to Machpelah.</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Following our Hebrew journey?</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Big update! The <a href="/hebrew/" style="color: #7c9885; font-weight: 600;">Hebrew Language Journey</a> section now has <strong>eight full lessons</strong> &mdash; from the Aleph-Bet all the way through Parts of Speech, with interactive charts, audio pronunciation guides, and IPA breakdowns. More details below.</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Learn best by watching?</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">The <strong>Weekly Resources</strong> page has curated video commentaries with summaries to help you choose which to watch. From short overviews to scholarly deep dives, there's something for every schedule.</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Teaching this week?</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">The <strong>Teaching Applications</strong> file has ready-to-use ideas for 7 contexts — personal study, Family Home Evening, Sunday School, Seminary/Institute, Relief Society/Elders Quorum, Primary, and Missionary Teaching. Each includes specific activities, discussion questions, and scripture selections.</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Want study questions?</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">The <strong>Study Questions</strong> file has 200+ questions organized by category for individual reflection, group discussion, or journal prompts.</td>
+</tr>
+</tbody></table>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Our Hebrew Journey: Eight Lessons and Counting</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em; transition: transform 0.3s ease; display: inline-block;">&#9654;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">If you've visited the new <a href="/hebrew/" style="color: #7c9885; font-weight: 600;">Hebrew Language Journey</a> section, you may have noticed &mdash; it's grown! What started as a simple alphabet chart a few weeks ago has expanded into a full introductory curriculum. We now have <strong>eight lessons</strong> available, each building on the last:</p>
+
+<div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>The Eight Lessons So Far</span>
+<span class="sub-arrow" style="font-size: 0.7em; transition: transform 0.3s ease; color: #7c9885; display: inline-block;">&#9654;</span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+
+<table style="width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.95em;">
+<thead><tr style="background: #7c9885; color: white;">
+<th style="padding: 10px 15px; text-align: left; font-weight: 600;">Lesson</th>
+<th style="padding: 10px 15px; text-align: left; font-weight: 600;">Topic</th>
+<th style="padding: 10px 15px; text-align: left; font-weight: 600;">What You'll Learn</th>
+</tr></thead><tbody>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="/hebrew/01-aleph-bet/" style="color: #7c9885;">1</a></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>The Aleph-Bet</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">All 22 consonants, their names, sounds, and how the script evolved from ancient pictographs</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="/hebrew/02-pronunciation/" style="color: #7c9885;">2</a></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Pronunciation</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">How to actually say each letter, with audio examples and transliteration guides</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="/hebrew/03-ipa/" style="color: #7c9885;">3</a></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>IPA (Sound System)</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">The International Phonetic Alphabet &mdash; precise sound descriptions for every Hebrew consonant</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="/hebrew/04-articulation/" style="color: #7c9885;">4</a></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>How Sounds Are Made</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Your mouth as an instrument &mdash; where and how each Hebrew sound is physically produced</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="/hebrew/05-vowels/" style="color: #7c9885;">5</a></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Vowels &amp; Nikud</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">The dot-and-dash system that gives Hebrew its vowels &mdash; how to read the marks beneath the letters</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="/hebrew/06-dagesh/" style="color: #7c9885;">6</a></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Dagesh &amp; Letter Types</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">The little dot that changes everything &mdash; hard vs. soft letters, and how Hebrew classifies its consonants</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="/hebrew/07-root-system/" style="color: #7c9885;">7</a></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>The Root System</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">How three-letter roots form the backbone of Hebrew vocabulary &mdash; and why <em>Jerusalem</em>, <em>shalom</em>, and <em>Solomon</em> are all related</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="/hebrew/08-parts-of-speech/" style="color: #7c9885;">8</a></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Parts of Speech</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Nouns, verbs, prepositions &mdash; with a full parsing of Genesis 1:1 that reveals layers no English translation can show</td>
+</tr>
+</tbody></table>
+
+<p style="margin-bottom: 15px;">Each lesson includes written teaching content (not just charts), interactive visual aids, and cross-references to the others. They're designed to be warm and accessible &mdash; you don't need any background in Hebrew or linguistics. If you've ever been curious about the original language behind the scriptures you're reading each week, this is your on-ramp.</p>
+</div>
+</div>
+</div>
+
+<div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>How the Hebrew Lessons Connect to This Week</span>
+<span class="sub-arrow" style="font-size: 0.7em; transition: transform 0.3s ease; color: #7c9885; display: inline-block;">&#9654;</span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<p style="margin-bottom: 15px;">If you've been working through the lessons, you're already equipped to see things in this week's reading that most English readers miss. For example:</p>
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 10px;"><strong>Root system (Lesson 7):</strong> The root צ-ח-ק (<em>tsachaq</em>, "laugh") threads through the entire narrative &mdash; Abraham's laughter, Sarah's laughter, Isaac's very name (<em>Yitschaq</em> = "he laughs"), and Ishmael's mocking. Same three letters, different contexts, telling a story no translation can fully capture.</li>
+<li style="margin-bottom: 10px;"><strong>Parts of speech (Lesson 8):</strong> When God asks "Is any thing too hard for the LORD?" the word translated "hard" is <em>yippale</em> from the root פ-ל-א (<em>pala</em>) &mdash; meaning <em>wonderful, extraordinary, beyond human capacity.</em> The same root gives us "Wonderful" in Isaiah 9:6. God wasn't asking if He was strong enough. He was asking if anything is too <em>wonderful</em> for the One whose name is Wonder.</li>
+<li style="margin-bottom: 10px;"><strong>Root system (Lesson 7):</strong> <em>Moriah</em> carries two etymologies &mdash; from ר-א-ה (<em>ra'ah</em>, "to see/provide") and from <em>moreh</em> + <em>Yah</em> ("God teaches"). The place where Abraham offers Isaac is both the place where "the LORD will provide" and the place where "God teaches." Both are true.</li>
+</ul>
+<p style="margin-bottom: 15px;">You don't need the Hebrew lessons to study Genesis 18&ndash;23. But if you've been working through them, you'll find that the language itself is telling a richer story than any translation alone can deliver.</p>
+</div>
+</div>
+</div>
+
+<div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>What's Coming Next</span>
+<span class="sub-arrow" style="font-size: 0.7em; transition: transform 0.3s ease; color: #7c9885; display: inline-block;">&#9654;</span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<p style="margin-bottom: 15px;">Now that we have the foundations in place &mdash; alphabet, sounds, vowels, roots, and parts of speech &mdash; the next lessons will start putting it all together. We'll be looking at how Hebrew <strong>verb stems</strong> (the <em>binyanim</em>) work, which is where the root system truly comes alive. You'll see how the same three-letter root can mean "to guard," "to be guarded," or "to cause someone to guard" just by changing its pattern. It's one of the most elegant features of Hebrew, and it's going to make passages like the Akedah even richer.</p>
+<p style="margin-bottom: 15px;">At your own pace. No rush. The lessons will be there when you're ready.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+</div>
+</div>
+</div>
+
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>"Is Any Thing Too Hard for the LORD?" — The Theology of Impossible Promises</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em; transition: transform 0.3s ease; display: inline-block;">&#9654;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">The scene at Mamre begins with hospitality so extravagant it became the Jewish paradigm for welcoming strangers. Abraham sees three visitors, runs to meet them, bows to the ground, prepares a feast of calf and cakes and curds. He stands while they eat — the host serving, not presiding. The rabbis would later call this <em>hakhnasat orchim</em>, the welcoming of guests, and rank it among the highest of all virtues.</p>
+<p style="margin-bottom: 15px;">But the hospitality is a frame for revelation. One of the visitors — identified as the LORD Himself — makes an announcement: "I will certainly return unto thee according to the time of life; and, lo, Sarah thy wife shall have a son" (<a href="https://www.blueletterbible.org/kjv/gen/18/10/s_18010" target="_blank">Genesis 18:10</a>).</p>
+<p style="margin-bottom: 15px;">Sarah, listening at the tent door, laughed within herself. "After I am waxed old shall I have pleasure, my lord being old also?" (<a href="https://www.blueletterbible.org/kjv/gen/18/12/s_18012" target="_blank">Genesis 18:12</a>). Her laughter is deeply human. She had waited twenty-five years since God first promised Abraham a son. She was ninety years old, well past the age of childbearing. She had watched her body refuse what her faith longed for. At some point, most of us learn to protect ourselves from hoping too much. Sarah's laughter was the sound of self-protection.</p>
+<p style="margin-bottom: 15px;">And God's response was not anger but astonishment: "Wherefore did Sarah laugh? ... Is any thing too hard for the LORD?" (<a href="https://www.blueletterbible.org/kjv/gen/18/13-14/s_18013" target="_blank">Genesis 18:13-14</a>).</p>
+<p style="margin-bottom: 15px;">The Hebrew word translated "hard" is <em>yippale</em> — from the root <em>pala</em> (פָּלָא), which means <em>wonderful, extraordinary, surpassing human capacity</em>. The same root gives us <em>Pele</em> in <a href="https://www.blueletterbible.org/kjv/isa/9/6/s_688006" target="_blank">Isaiah 9:6</a>: "His name shall be called Wonderful." When God asked Sarah, "Is anything too <em>pala</em> for Me?" He wasn't flexing divine muscle. He was saying: <em>Is there any wonder too wonderful for the One whose very name is Wonder?</em></p>
+<p style="margin-bottom: 15px;">This question reverberates through the rest of scripture:</p>
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;">Jeremiah, watching Jerusalem fall: "Behold, I am the LORD, the God of all flesh: is there any thing too hard for me?" (<a href="https://www.blueletterbible.org/kjv/jer/32/27/s_777027" target="_blank">Jeremiah 32:27</a>)</li>
+<li style="margin-bottom: 8px;">The angel Gabriel to Mary: "For with God nothing shall be impossible" (<a href="https://www.blueletterbible.org/kjv/luk/1/37/s_974037" target="_blank">Luke 1:37</a>)</li>
+<li style="margin-bottom: 8px;">Nephi, to his doubting brothers: "He is mighty to do all things for the children of men, if it so be that they exercise faith in him" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/7?lang=eng&id=12" target="_blank">1 Nephi 7:12</a>)</li>
+</ul>
+<p style="margin-bottom: 15px;">The pattern is always the same: God makes a promise that exceeds human capacity. Humans doubt. God delivers — not despite the impossibility, but <em>through</em> it, so that no one can mistake the source.</p>
+<p style="margin-bottom: 15px;">Abraham waited twenty-five years between God's first promise of a son (<a href="https://www.blueletterbible.org/kjv/gen/12/2/s_12002" target="_blank">Genesis 12:2</a>, when Abraham was 75) and Isaac's birth (<a href="https://www.blueletterbible.org/kjv/gen/21/5/s_21005" target="_blank">Genesis 21:5</a>, when Abraham was 100). Twenty-five years. That's not a brief trial. That's a quarter of a lifetime spent holding a promise that biology contradicted more with every passing year. And God's timing was deliberate — Isaac came when <em>both</em> parents were biologically incapable, making the miracle undeniable.</p>
+<p style="margin-bottom: 15px;"><a href="https://www.blueletterbible.org/kjv/heb/11/11/s_1144011" target="_blank">Hebrews 11:11</a> praises Sarah specifically: "Through faith also Sara herself received strength to conceive seed, and was delivered of a child when she was past age, because she judged him faithful who had promised."</p>
+<p style="margin-bottom: 15px;">She judged Him faithful. Not because the evidence supported it. Not because the timeline made sense. But because she came to know the character of the One who promised.</p>
+<p style="margin-bottom: 15px;">What "impossible" promises has God made to you? A patriarchal blessing that seems wildly beyond your current trajectory? A temple sealing that binds you to people who feel unreachable? A promise of healing, or reunion, or peace that your circumstances flatly contradict? The question is not whether it's hard. The question is whether anything is too <em>pala</em> — too wonderful — for the God who names Himself Wonder.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>The Akedah: A Father and His Son on Moriah</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em; transition: transform 0.3s ease; display: inline-block;">&#9654;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">Genesis 22 is one of the most carefully constructed narratives in all of literature. Every word bears weight. Every silence speaks.</p>
+<p style="margin-bottom: 15px;">"And it came to pass after these things, that God did tempt Abraham" (<a href="https://www.blueletterbible.org/kjv/gen/22/1/s_22001" target="_blank">Genesis 22:1</a>). The Hebrew word for "tempt" here is <em>nissah</em> (נִסָּה) — better translated "tested" or "proved." God was not enticing Abraham to evil. He was revealing the depth of Abraham's faith — not to God, who already knew it, but to Abraham himself, and to every soul who would ever read this story.</p>
+<p style="margin-bottom: 15px;">"Take now thy son, thine only son Isaac, whom thou lovest, and get thee into the land of Moriah; and offer him there for a burnt offering" (<a href="https://www.blueletterbible.org/kjv/gen/22/2/s_22002" target="_blank">Genesis 22:2</a>).</p>
+<p style="margin-bottom: 15px;">Notice the agonizing precision: <em>thy son</em> — <em>thine only son</em> — <em>Isaac</em> — <em>whom thou lovest</em>. Four phrases, each narrowing the focus, each twisting the knife. God doesn't say "sacrifice a child." He names Isaac. He names the love. He makes sure Abraham cannot mistake what is being asked.</p>
+<p style="margin-bottom: 15px;">And Abraham's response? Silence. No protest. No negotiation. No "remember when I bargained You down to ten righteous in Sodom?" The man who argued for strangers says nothing when it's his own son. He rises early in the morning, saddles his donkey, and goes.</p>
+<p style="margin-bottom: 15px;">The journey takes three days. Three days of walking with the knowledge of what awaits. Three days — the same period Christ would spend in the tomb. Jewish tradition (<em>Seder Olam</em>) holds that Isaac was not a small child but a grown man of thirty-seven, making his participation willing. Whether or not we accept that specific age, the text strongly implies Isaac's cooperation: he carries the wood himself, and he does not resist when Abraham binds him.</p>
+<p style="margin-bottom: 15px;">Then comes the question that breaks the heart of every parent who has ever read it:</p>
+<p style="margin-bottom: 15px;">"My father... Behold the fire and the wood: but where is the lamb for a burnt offering?" (<a href="https://www.blueletterbible.org/kjv/gen/22/7/s_22007" target="_blank">Genesis 22:7</a>)</p>
+<p style="margin-bottom: 15px;">And Abraham's answer — the most prophetic sentence in the Old Testament: "My son, God will provide himself a lamb for a burnt offering" (<a href="https://www.blueletterbible.org/kjv/gen/22/8/s_22008" target="_blank">Genesis 22:8</a>).</p>
+<p style="margin-bottom: 15px;"><em>God will provide himself a lamb.</em> Read it both ways: God will provide <em>for Himself</em> a lamb, and God will provide <em>Himself as</em> the lamb. The ambiguity is the prophecy. On that same mountain range, two thousand years later, God would do exactly both.</p>
+<p style="margin-bottom: 15px;">The typological parallels are staggering, and the Book of Mormon confirms them explicitly. <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/jacob/4?lang=eng&id=5" target="_blank">Jacob 4:5</a>: "Abraham... offering up his son Isaac, which is a similitude of God and his Only Begotten Son."</p>
+<p style="margin-bottom: 15px;">Consider the correspondences:</p>
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;">Isaac is Abraham's "only son" (Gen. 22:2) — Christ is the Father's "Only Begotten" (<a href="https://www.blueletterbible.org/kjv/jhn/3/16/s_1000016" target="_blank">John 3:16</a>)</li>
+<li style="margin-bottom: 8px;">Isaac carries the wood of his own sacrifice — Christ carries the cross</li>
+<li style="margin-bottom: 8px;">The journey to Moriah takes three days — Christ rises on the third day</li>
+<li style="margin-bottom: 8px;">Mount Moriah is traditionally the Temple Mount in Jerusalem (<a href="https://www.blueletterbible.org/kjv/2ch/3/1/s_370001" target="_blank">2 Chronicles 3:1</a>) — Golgotha is just outside those walls</li>
+<li style="margin-bottom: 8px;">A ram is caught in a thicket (thorns) and becomes the substitute — Christ wears a crown of thorns and becomes our substitute</li>
+<li style="margin-bottom: 8px;">Abraham names the place <em>YHWH Yireh</em> — "The LORD will provide/see" (<a href="https://www.blueletterbible.org/kjv/gen/22/14/s_22014" target="_blank">Genesis 22:14</a>)</li>
+</ul>
+<p style="margin-bottom: 15px;">That name — <em>YHWH Yireh</em> — deserves its own moment. The Hebrew root <em>ra'ah</em> (ר-א-ה) means "to see," but in Hebrew, seeing and providing are linked. To see a need is to meet it. When Abraham declared "The LORD will see," he meant "The LORD will provide." And the text adds: "as it is said to this day, In the mount of the LORD it shall be seen" (Gen. 22:14). Future tense. Still pointing forward. Still waiting for the ultimate provision.</p>
+<p style="margin-bottom: 15px;">The Akedah is not just a story about obedience. It is the Old Testament's most intimate portrait of what it cost the Father to offer the Son. When we read Genesis 22, we are not simply watching Abraham's faith. We are watching a rehearsal — a living, breathing prophecy enacted in real time — of the event that would redeem the world.</p>
+<p style="margin-bottom: 15px;"><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/132?lang=eng&id=36" target="_blank">D&C 132:36</a> adds the Restoration's witness: "Abraham was commanded to offer his son Isaac; nevertheless, it was written: Thou shalt not kill. Abraham, however, did not refuse, and it was accounted unto him for righteousness."</p>
+<p style="margin-bottom: 15px;">Abraham held two truths simultaneously: God's command to offer Isaac, and God's prohibition against killing. He did not resolve the contradiction. He walked into it, trusting that the God who gave both commands could reconcile them. That is what faith looks like at its most refined — not the absence of tension, but the willingness to walk forward <em>within</em> the tension, trusting the One who holds all things together.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>"Remember Lot's Wife": The Danger of Looking Back</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em; transition: transform 0.3s ease; display: inline-block;">&#9654;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">In the midst of this week's grandest narratives — divine visitors, impossible births, the binding of Isaac — one of the most haunting moments comes in a single verse:</p>
+<p style="margin-bottom: 15px;">"But his wife looked back from behind him, and she became a pillar of salt." (<a href="https://www.blueletterbible.org/kjv/gen/19/26/s_19026" target="_blank">Genesis 19:26</a>)</p>
+<p style="margin-bottom: 15px;">One verse. No name given. No dialogue. Just a backward glance and a transformation into salt.</p>
+<p style="margin-bottom: 15px;">The Hebrew verb for "looked back" is <em>vattabbet</em>, from the root <em>nabat</em> (נ-ב-ט), which means to gaze intently, to look with focused attention or longing. This wasn't a casual glance over the shoulder. This was a woman <em>fixing her gaze</em> on what she'd been told to leave. The verb tells us her heart was still in Sodom even as her feet carried her away.</p>
+<p style="margin-bottom: 15px;">Jesus made this single verse into a sermon: "Remember Lot's wife" (<a href="https://www.blueletterbible.org/kjv/luk/17/32/s_990032" target="_blank">Luke 17:32</a>). Three words. The shortest sermon He ever preached, and one of the most piercing.</p>
+<p style="margin-bottom: 15px;">Elder Jeffrey R. Holland gave this image its fullest modern expression: "She wasn't just looking back; she looked back <em>longingly</em>... Her attachment to the past outweighed her confidence in the future. It would not be the last time that the leaving of Sodom would be difficult for people."</p>
+<p style="margin-bottom: 15px;">The contrast in this week's reading is striking. Abraham consistently looks <em>forward</em> — forward to the promised son, forward to Moriah, forward to God's provision. In Genesis 22:13, "Abraham lifted up his eyes, and looked [<em>vayyar</em>], and behold behind him a ram." He looked and saw provision. Lot's wife looked and saw only what she was losing.</p>
+<p style="margin-bottom: 15px;">Salt preserves — but it also renders barren. The Dead Sea region where this story takes place is rich in salt formations, including pillar-like structures along the shore that ancient travelers would have known well. The symbolism is layered: Lot's wife became a monument to preservation without life. She was <em>preserved</em> in the posture of her longing, frozen in the moment of her divided loyalty, standing forever at the threshold between deliverance and destruction.</p>
+<p style="margin-bottom: 15px;">What are our Sodoms? Not necessarily great sins — sometimes they're comfortable compromises, familiar mediocrity, relationships or habits we've been told to leave but can't stop gazing at longingly. The question isn't whether we've physically left. The question is where our eyes are fixed.</p>
+<p style="margin-bottom: 15px;">The angels' command to Lot's family was not just "leave" but "escape for thy life; look not behind thee, neither stay thou in all the plain" (<a href="https://www.blueletterbible.org/kjv/gen/19/17/s_19017" target="_blank">Genesis 19:17</a>). Don't look back. Don't linger. Don't negotiate with the thing God is delivering you from. The deliverance is total, or it isn't deliverance at all.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>From Laughter to Joy: Sarah, Isaac, and the Name That Remembers</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em; transition: transform 0.3s ease; display: inline-block;">&#9654;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">There is a thread of laughter woven through Genesis 17–21 that culminates in one of the most beautiful name-theology moments in all of scripture.</p>
+<p style="margin-bottom: 15px;">It begins with Abraham. When God told him — at ninety-nine years old — that Sarah would bear a son, "Abraham fell upon his face, and laughed" (<a href="https://www.blueletterbible.org/kjv/gen/17/17/s_17017" target="_blank">Genesis 17:17</a>). His laughter accompanied prostration — falling on his face before God. This was not mockery. It was the laughter of stunned wonder, the involuntary response to a promise so extravagant it overflowed the mind's capacity to hold it.</p>
+<p style="margin-bottom: 15px;">Then Sarah. Listening at the tent door as the divine visitor repeated the promise, "Sarah laughed within herself" (<a href="https://www.blueletterbible.org/kjv/gen/18/12/s_18012" target="_blank">Genesis 18:12</a>). Her laughter was interior, private, protective. She laughed <em>within herself</em> — the Hebrew emphasizes the inwardness of it. This was the laughter of someone who had stopped hoping aloud.</p>
+<p style="margin-bottom: 15px;">When confronted, Sarah denied it: "I laughed not." And the LORD said simply: "Nay; but thou didst laugh" (<a href="https://www.blueletterbible.org/kjv/gen/18/15/s_18015" target="_blank">Genesis 18:15</a>). He didn't condemn the laughter. He just named it. He saw her.</p>
+<p style="margin-bottom: 15px;">And then the fulfillment. Isaac is born. And his name — יִצְחָק (<em>Yitschaq</em>) — means "he laughs." Every single time anyone spoke Isaac's name, they were saying the word "laughter." The child's identity <em>was</em> the memory of what God had done with human doubt.</p>
+<p style="margin-bottom: 15px;">Sarah's response at Isaac's birth is one of the most joyful moments in the Old Testament: "God hath made me to laugh, so that all that hear will laugh with me" (<a href="https://www.blueletterbible.org/kjv/gen/21/6/s_21006" target="_blank">Genesis 21:6</a>). The Hebrew here uses an intensive form — this isn't a chuckle. This is covenant-sized, overflowing, infectious laughter. God <em>made</em> her laugh. He took her incredulous, self-protective, interior laughter and transformed it into something communal and celebratory. All who hear will laugh <em>with</em> her.</p>
+<p style="margin-bottom: 15px;">This is the emotional arc the root <em>tsachaq</em> traces across four chapters:</p>
+<ol style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;"><strong>Abraham's laughter</strong> (17:17) — stunned wonder</li>
+<li style="margin-bottom: 8px;"><strong>Sarah's laughter</strong> (18:12) — self-protective doubt</li>
+<li style="margin-bottom: 8px;"><strong>Isaac's name</strong> (21:3) — divine commemoration</li>
+<li style="margin-bottom: 8px;"><strong>Sarah's laughter reborn</strong> (21:6) — transformed, communal joy</li>
+<li style="margin-bottom: 8px;"><strong>Ishmael's laughter</strong> (21:9) — mocking, the shadow side</li>
+</ol>
+<p style="margin-bottom: 15px;">The same root. The same three letters. But the meaning transforms as the story unfolds — from disbelief to delight, from private doubt to public testimony. Isaac's name is a monument to the journey. Every time it's spoken, it says: <em>God took what seemed laughable and made it the source of joy.</em></p>
+<p style="margin-bottom: 15px;">There is something profoundly reassuring in the fact that God didn't choose a name meaning "faith" or "obedience" for the child of promise. He chose <em>laughter</em>. He chose to memorialize the very doubt that preceded the miracle — not to shame Sarah, but to celebrate the transformation. The name says: <em>Yes, you laughed. And now the laughter is real.</em></p>
+<p style="margin-bottom: 15px;">If you have ever laughed — not with joy but with the bitter, tired laughter of someone who has waited too long — Isaac's name is for you. God doesn't erase the doubt. He redeems it. He turns the laughter of "that's impossible" into the laughter of "look what God has done."</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Machpelah: The First Stake in the Ground</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em; transition: transform 0.3s ease; display: inline-block;">&#9654;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">We should not leave this week without pausing at Genesis 23, which can feel anticlimactic after the drama of the Akedah but carries its own quiet theological weight.</p>
+<p style="margin-bottom: 15px;">Sarah dies at 127. Abraham mourns, weeps, and then does something remarkable: he negotiates, publicly and meticulously, for a burial plot. He approaches the Hittites at the city gate — the ancient equivalent of a courthouse. He asks to purchase the cave of Machpelah (מַכְפֵּלָה, "the double cave") from Ephron. The negotiation follows formal ANE legal customs: public witnesses, stated price, recorded transaction. Abraham pays 400 shekels of silver — likely an inflated price — without bargaining.</p>
+<p style="margin-bottom: 15px;">Why does this matter?</p>
+<p style="margin-bottom: 15px;">Because God had promised Abraham "all this land" (<a href="https://www.blueletterbible.org/kjv/gen/13/15/s_13015" target="_blank">Genesis 13:15</a>). And at the end of Abraham's life, the only land he legally owned was a burial cave. The man to whom God had said "all the land which thou seest, to thee will I give it" died owning nothing but a tomb.</p>
+<p style="margin-bottom: 15px;">And yet that tomb became the anchor of everything. Sarah was buried there. Then Abraham. Then Isaac and Rebekah. Then Jacob and Leah. The cave of Machpelah became the patriarchal burial site — the place where the family of the covenant was gathered, generation after generation, in death as in life.</p>
+<p style="margin-bottom: 15px;">The name itself — <em>Makhpelah</em>, from the root כ-פ-ל (K-P-L), "to double" — suggests a cave with two chambers. But the doubling resonates beyond architecture. This is a place where promise and patience are doubled: the promise of the land, and the patience to wait for its fulfillment. Abraham held the deed to a grave while believing in a kingdom. He planted his family in the earth of Canaan while trusting God for a celestial inheritance.</p>
+<p style="margin-bottom: 15px;">There is something deeply faithful about burying your dead in the land of promise when you haven't yet received the promise. It's an act of investment in a future you can't see. It says: <em>We belong here. Not because we possess it, but because God said so.</em></p>
+<p style="margin-bottom: 15px;">For us, the Machpelah principle might look like temple sealings that bind us to people whose return we can't guarantee. Or callings we serve in faithfully when we can't see the fruit. Or covenants we keep in seasons when keeping them feels like owning a cave instead of a kingdom. The deed is small. The promise is not.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<p style="margin-bottom: 15px;"><em>Week 09 Weekly Insights | CFM Corner | OT 2026</em></p>
+<p style="margin-bottom: 15px;"><em>Created: February 19, 2026</em></p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+
+</div>

@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="hebrew-landing" data-pagefind-body>
+
+    <div class="hebrew-hero">
+        <h1>{{ .Title }}</h1>
+        <p class="hebrew-subtitle">Learning Biblical Hebrew together — one lesson at a time</p>
+    </div>
+
+    <div class="hebrew-intro">
+        <p>You don't need to become a Hebrew scholar to let the original language transform your scripture study. This series is designed for Come Follow Me students with no prior experience. Each lesson builds on the last, so start from the beginning and work forward at your own pace.</p>
+        <p>New lessons appear alongside the weekly study materials, but this page always keeps them in learning order.</p>
+    </div>
+
+    <div class="hebrew-lessons">
+        {{ range .Pages.ByParam "lesson_num" }}
+        <a href="{{ .RelPermalink }}" class="hebrew-lesson-card{{ if .Params.coming_soon }} coming-soon{{ end }}">
+            <div class="hl-number">Lesson {{ .Params.lesson_num }}</div>
+            <div class="hl-body">
+                <div class="hl-title">{{ .Title }}</div>
+                <div class="hl-desc">{{ .Description }}</div>
+                {{ with .Params.week_ref }}<div class="hl-week">Introduced in Week {{ . }}</div>{{ end }}
+            </div>
+            {{ if .Params.coming_soon }}<div class="hl-badge">Coming Soon</div>{{ end }}
+        </a>
+        {{ end }}
+    </div>
+
+</div>
+{{ end }}

@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Hebrew Sounds Are Made - CFM Corner</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+--sage-dark:#4a6b52;--sage-mid:#7c9885;--sage-pale:#dce8dd;
+--gold:#d5a93c;--gold-light:#f5e6b8;--gold-bg:rgba(213,169,60,0.12);
+--slate:#57899c;--navy:#1e3a4f;--plum:#6a5983;--copper:#c37c3c;--terracotta:#c65528;
+--bg:#f7f5f0;--card:#fff;--text:#2c2c2c;--text-light:#5a5a5a;
+--guttural-bg:rgba(74,107,82,0.10);
+--radius:10px;--shadow:0 2px 12px rgba(0,0,0,0.08);
+}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding:0 16px 60px}
+.container{max-width:960px;margin:0 auto}
+header{text-align:center;padding:40px 0 30px}
+h1{font-size:clamp(1.6rem,4vw,2.4rem);color:var(--navy);margin-bottom:6px}
+.subtitle{font-size:clamp(0.95rem,2vw,1.15rem);color:var(--sage-dark);font-weight:400}
+h2{font-size:1.4rem;color:var(--navy);margin:40px 0 16px;padding-bottom:8px;border-bottom:2px solid var(--sage-pale)}
+h3{font-size:1.1rem;color:var(--sage-dark);margin:20px 0 10px}
+.card{background:var(--card);border-radius:var(--radius);padding:24px;margin-bottom:24px;box-shadow:var(--shadow)}
+/* Audio button */
+.audio-btn{
+display:inline-flex;align-items:center;justify-content:center;
+width:28px;height:28px;border-radius:50%;border:1.5px solid var(--sage-mid);
+background:var(--sage-pale);cursor:pointer;font-size:13px;color:var(--sage-dark);
+transition:all .2s;vertical-align:middle;margin:0 2px;padding:0;
+}
+.audio-btn:hover{background:var(--sage-dark);color:#fff;border-color:var(--sage-dark)}
+.audio-btn:active{transform:scale(0.92)}
+.hebrew{font-size:1.3em;font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif;direction:rtl}
+.ipa{font-family:'Gentium Plus','Doulos SIL','Times New Roman',serif;color:var(--plum)}
+
+/* SVG Vocal Tract */
+.tract-wrap{position:relative;display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start}
+.tract-svg-box{flex:1 1 400px;min-width:280px;max-width:520px}
+.tract-svg-box svg{width:100%;height:auto}
+.tract-info{flex:1 1 300px;min-width:260px}
+.tract-info-panel{min-height:180px}
+.tract-info-panel .letter-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.tract-info-panel .letter-card{
+border-radius:8px;padding:8px 14px;text-align:center;
+display:flex;flex-direction:column;align-items:center;gap:4px;min-width:70px;
+}
+.tract-info-panel .letter-card .hebrew{font-size:1.6em}
+.region{cursor:pointer;transition:all .25s;opacity:0.7}
+.region:hover,.region.active{opacity:1}
+.region circle,.region ellipse,.region rect{transition:fill .25s,stroke .25s}
+
+/* Manner table */
+.manner-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.manner-card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);border-left:4px solid var(--sage-mid)}
+.manner-card h4{color:var(--navy);margin-bottom:4px;font-size:1.05rem}
+.manner-card .desc{color:var(--text-light);font-size:0.9rem;margin-bottom:10px}
+.manner-card .sounds{display:flex;flex-wrap:wrap;gap:8px}
+.sound-chip{
+display:inline-flex;align-items:center;gap:5px;
+background:var(--sage-pale);border-radius:20px;padding:4px 12px 4px 8px;font-size:0.92rem;
+}
+.sound-chip.voiced{background:rgba(195,124,60,0.15)}
+.sound-chip.voiceless{background:rgba(87,137,156,0.15)}
+
+/* Begadkephat */
+.bgdk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.bgdk-card{
+background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);
+display:flex;align-items:center;gap:16px;border:1.5px solid var(--gold-light);
+}
+.bgdk-pair{display:flex;align-items:center;gap:10px;flex:1}
+.bgdk-letter{text-align:center}
+.bgdk-letter .hebrew{font-size:2rem;display:block}
+.bgdk-letter .label{font-size:0.75rem;color:var(--text-light)}
+.bgdk-arrow{color:var(--gold);font-size:1.5rem;font-weight:bold}
+.bgdk-desc{font-size:0.82rem;color:var(--text-light);flex:1}
+.bgdk-desc .from{color:var(--navy);font-weight:600}
+.bgdk-desc .to{color:var(--sage-dark);font-weight:600}
+.air-indicator{display:flex;align-items:center;gap:4px;margin-top:4px}
+.air-blocked{width:30px;height:4px;background:var(--navy);border-radius:2px}
+.air-flowing{width:30px;height:4px;background:repeating-linear-gradient(90deg,var(--sage-mid) 0 4px,transparent 4px 7px);border-radius:2px}
+
+/* Classification Table */
+.class-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table.class-table{
+width:100%;border-collapse:collapse;font-size:0.88rem;min-width:680px;
+}
+table.class-table th{
+background:var(--navy);color:#fff;padding:10px 8px;font-weight:600;
+text-align:center;position:sticky;top:0;
+}
+table.class-table th:first-child{text-align:left;min-width:110px}
+table.class-table td{
+padding:8px;text-align:center;border-bottom:1px solid var(--sage-pale);border-right:1px solid rgba(200,210,200,0.4);vertical-align:middle;
+}
+table.class-table td:last-child{border-right:none}
+table.class-table tr:hover td{background:rgba(220,232,221,0.3)}
+table.class-table td:first-child{text-align:left;font-weight:600;color:var(--navy);background:rgba(220,232,221,0.15)}
+.cell-letter{display:inline-flex;flex-direction:column;align-items:center;gap:2px;margin:3px}
+.cell-letter .hebrew{font-size:1.2em}
+.cell-letter .name{font-size:0.7rem;color:var(--text-light)}
+.highlight-gold{background:var(--gold-bg) !important}
+.highlight-guttural{background:var(--guttural-bg) !important}
+.weak-mark{position:relative}
+.weak-mark::after{content:"*";font-size:0.7em;color:var(--plum);vertical-align:super}
+
+/* Responsive */
+@media(max-width:600px){
+ .card{padding:16px}
+ .bgdk-card{flex-direction:column;align-items:flex-start}
+ .manner-grid{grid-template-columns:1fr}
+ .bgdk-grid{grid-template-columns:1fr}
+}
+.legend{display:flex;flex-wrap:wrap;gap:16px;margin:12px 0 20px;font-size:0.88rem}
+.legend-item{display:flex;align-items:center;gap:6px}
+.legend-swatch{width:18px;height:18px;border-radius:4px;border:1px solid #ccc}
+.note{font-size:0.85rem;color:var(--text-light);margin-top:8px;font-style:italic}
+.section-intro{color:var(--text-light);margin-bottom:16px;font-size:0.95rem}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+<h1>How Hebrew Sounds Are Made</h1>
+<p class="subtitle">Places &amp; Manners of Articulation in Biblical Hebrew</p>
+</header>
+
+<!-- SECTION 1: VOCAL TRACT -->
+<section>
+<h2>Where Sounds Are Formed</h2>
+<p class="section-intro">Click or tap a region on the diagram to see which Hebrew letters are produced there.</p>
+<div class="card">
+<div class="tract-wrap">
+<div class="tract-svg-box" style="position:relative">
+<img src="/images/charts/places_of_articulation.png" alt="Cross-section of the human vocal tract showing places of articulation" style="width:100%;height:auto;display:block;border-radius:8px">
+<svg viewBox="0 0 500 625" style="position:absolute;top:0;left:0;width:100%;height:100%" xmlns="http://www.w3.org/2000/svg">
+<!-- Clickable overlay regions aligned to Wikipedia numbered positions -->
+<!-- Upper articulators (along roof of mouth): 1=lips, 2=inner lips/teeth, 3=dental, 4=alveolar, 5=post-alveolar, 6=pre-palatal, 7=palatal, 8=velar -->
+<!-- Lower/throat: 9=uvular, 10=pharyngeal, 11=glottal -->
+
+<!-- Positions calibrated to Wikipedia image numbers -->
+<!-- Upper row of numbers (1-8) runs along the mouth opening area ~y=280-310 -->
+<!-- "1" is at far left lips ~x=55,y=310 -->
+<!-- "2","3" are at teeth ~x=85,y=295 -->
+<!-- "4","5" are at alveolar ridge ~x=118,y=275 -->
+<!-- "6" is at front palate ~x=165,y=260 -->
+<!-- "7" is mid palate ~x=200,y=260 -->
+<!-- "8" is at velum ~x=290,y=270 -->
+<!-- "9" is uvula ~x=340,y=330 -->
+<!-- "10" is pharynx wall ~x=375,y=370 -->
+<!-- "11" is glottis ~x=370,y=490 -->
+
+<!-- Coordinates from actual pixel positions in the 500x625 image -->
+
+<!-- 1. Bilabial — upper "1" on upper lip, lower "1" on lower lip -->
+<g class="region" data-place="bilabial" onclick="showPlace('bilabial')" onmouseenter="showPlace('bilabial')" style="cursor:pointer">
+  <ellipse cx="52" cy="272" rx="16" ry="12" fill="var(--gold)" opacity="0.4" stroke="var(--gold)" stroke-width="2"/>
+  <ellipse cx="28" cy="455" rx="16" ry="12" fill="var(--gold)" opacity="0.4" stroke="var(--gold)" stroke-width="2"/>
+  <text x="4" y="478" font-size="10" fill="var(--navy)" font-weight="700">Bilabial</text>
+</g>
+
+<!-- 2/3. Labiodental — upper "2" and "3" at teeth, lower "2" at lower teeth -->
+<g class="region" data-place="labiodental" onclick="showPlace('labiodental')" onmouseenter="showPlace('labiodental')" style="cursor:pointer">
+  <ellipse cx="100" cy="266" rx="30" ry="14" fill="var(--slate)" opacity="0.3" stroke="var(--slate)" stroke-width="2" transform="rotate(-20 100 266)"/>
+  <ellipse cx="60" cy="420" rx="16" ry="12" fill="var(--slate)" opacity="0.3" stroke="var(--slate)" stroke-width="2"/>
+  <text x="4" y="402" font-size="10" fill="var(--slate)" font-weight="700">Labiodental</text>
+</g>
+
+<!-- 4/5. Dental/Alveolar -->
+<g class="region" data-place="dental" onclick="showPlace('dental')" onmouseenter="showPlace('dental')" style="cursor:pointer">
+  <ellipse cx="150" cy="248" rx="24" ry="14" fill="var(--plum)" opacity="0.25" stroke="var(--plum)" stroke-width="2" transform="rotate(-15 150 248)"/>
+  <text x="145" y="268" font-size="10" fill="var(--plum)" font-weight="700">Dental/Alveolar</text>
+</g>
+
+<!-- 6/7. Palatal -->
+<g class="region" data-place="palatal" onclick="showPlace('palatal')" onmouseenter="showPlace('palatal')" style="cursor:pointer">
+  <ellipse cx="225" cy="238" rx="48" ry="16" fill="var(--sage-dark)" opacity="0.25" stroke="var(--sage-dark)" stroke-width="2"/>
+  <text x="210" y="236" font-size="10" fill="var(--sage-dark)" font-weight="700">Palatal</text>
+</g>
+
+<!-- 8. Velar -->
+<g class="region" data-place="velar" onclick="showPlace('velar')" onmouseenter="showPlace('velar')" style="cursor:pointer">
+  <ellipse cx="315" cy="250" rx="16" ry="14" fill="#c0392b" opacity="0.35" stroke="#c0392b" stroke-width="2"/>
+  <text x="340" y="250" font-size="10" fill="#c0392b" font-weight="700">Velar</text>
+</g>
+
+<!-- 9. Uvular -->
+<g class="region" data-place="uvular" onclick="showPlace('uvular')" onmouseenter="showPlace('uvular')" style="cursor:pointer">
+  <ellipse cx="370" cy="330" rx="18" ry="16" fill="#c37c3c" opacity="0.7" stroke="#c37c3c" stroke-width="2.5"/>
+  <text x="390" y="334" font-size="10" fill="var(--copper)" font-weight="700">Uvular</text>
+</g>
+
+<!-- 10. Pharyngeal -->
+<g class="region" data-place="pharyngeal" onclick="showPlace('pharyngeal')" onmouseenter="showPlace('pharyngeal')" style="cursor:pointer">
+  <ellipse cx="400" cy="425" rx="20" ry="18" fill="#2a9d8f" opacity="0.6" stroke="#2a9d8f" stroke-width="2.5"/>
+  <text x="385" y="455" font-size="10" fill="#2a9d8f" font-weight="700">Pharyngeal</text>
+</g>
+
+<!-- 11. Glottal -->
+<g class="region" data-place="glottal" onclick="showPlace('glottal')" onmouseenter="showPlace('glottal')" style="cursor:pointer">
+  <ellipse cx="405" cy="565" rx="22" ry="18" fill="#264653" opacity="0.6" stroke="#264653" stroke-width="2.5"/>
+  <text x="410" y="605" font-size="10" fill="#264653" font-weight="700">Glottal</text>
+</g>
+</svg>
+</div>
+<div class="tract-info">
+<div class="tract-info-panel" id="place-panel">
+<h3 id="place-title" style="color:var(--navy)">Select a region</h3>
+<p id="place-desc" style="color:var(--text-light);font-size:0.93rem">Click or hover over a colored region on the diagram to explore which Hebrew consonants are formed there.</p>
+<div class="letter-row" id="place-letters"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SECTION 2: MANNER OF ARTICULATION -->
+<section>
+<h2>How Sounds Are Shaped</h2>
+<p class="section-intro">The manner of articulation describes how airflow is controlled to produce each sound.</p>
+
+<div class="card" style="margin-bottom:24px">
+<h3 style="color:var(--navy);margin-bottom:8px">Voiced vs. Voiceless</h3>
+<p style="margin-bottom:12px">Every consonant is either <strong>voiced</strong> or <strong>voiceless</strong>. The difference is whether your vocal cords vibrate when you make the sound. Place your fingers on your throat and try it:</p>
+<div style="display:flex;gap:24px;flex-wrap:wrap;margin-bottom:12px">
+<div style="flex:1;min-width:200px;padding:12px;border-radius:8px;background:rgba(195,124,60,0.12);border-left:4px solid var(--copper)">
+<strong style="color:var(--copper)">Voiced</strong> — vocal cords vibrate<br>
+<span style="font-size:0.95rem">Say <strong>/b/</strong> or <strong>/z/</strong> and feel the buzz in your throat</span>
+</div>
+<div style="flex:1;min-width:200px;padding:12px;border-radius:8px;background:rgba(87,137,156,0.12);border-left:4px solid var(--slate)">
+<strong style="color:var(--slate)">Voiceless</strong> — vocal cords still<br>
+<span style="font-size:0.95rem">Say <strong>/p/</strong> or <strong>/s/</strong> — just air, no vibration</span>
+</div>
+</div>
+<p style="font-size:0.9rem;color:var(--text-light)">In the cards below, <span style="background:rgba(195,124,60,0.15);padding:2px 6px;border-radius:4px">voiced sounds</span> and <span style="background:rgba(87,137,156,0.15);padding:2px 6px;border-radius:4px">voiceless sounds</span> are color-coded so you can see the pairs.</p>
+</div>
+<div class="manner-grid">
+
+<div class="manner-card" style="border-color:var(--navy)">
+<h4>Plosive (Stop)</h4>
+<p class="desc">Airflow is completely blocked, then released in a burst.</p>
+<div class="sounds">
+<span class="sound-chip voiced"><span class="hebrew">בּ</span> <span class="ipa">/b/</span> <button class="audio-btn" onclick="playAudio('b')" title="Play /b/">&#9654;</button></span>
+<span class="sound-chip voiceless"><span class="hebrew">פּ</span> <span class="ipa">/p/</span> <button class="audio-btn" onclick="playAudio('p')" title="Play /p/">&#9654;</button></span>
+<span class="sound-chip voiced"><span class="hebrew">דּ</span> <span class="ipa">/d/</span> <button class="audio-btn" onclick="playAudio('d')" title="Play /d/">&#9654;</button></span>
+<span class="sound-chip voiceless"><span class="hebrew">תּ</span> <span class="ipa">/t/</span> <button class="audio-btn" onclick="playAudio('t')" title="Play /t/">&#9654;</button></span>
+<span class="sound-chip voiceless"><span class="hebrew">כּ</span> <span class="ipa">/k/</span> <button class="audio-btn" onclick="playAudio('k')" title="Play /k/">&#9654;</button></span>
+<span class="sound-chip voiced"><span class="hebrew">גּ</span> <span class="ipa">/g/</span> <button class="audio-btn" onclick="playAudio('g')" title="Play /g/">&#9654;</button></span>
+<span class="sound-chip voiceless"><span class="hebrew">ט</span> <span class="ipa">/t&#803;/</span> <button class="audio-btn" onclick="playAudio('t')" title="Play /t/">&#9654;</button></span>
+<span class="sound-chip voiceless"><span class="hebrew">ק</span> <span class="ipa">/q/</span> <button class="audio-btn" onclick="playAudio('q')" title="Play /q/">&#9654;</button></span>
+</div>
+</div>
+
+<div class="manner-card" style="border-color:var(--sage-dark)">
+<h4>Fricative</h4>
+<p class="desc">Airflow is narrowed but continues flowing, creating friction.</p>
+<div class="sounds">
+<span class="sound-chip voiced"><span class="hebrew">ב</span> <span class="ipa">/v/</span> <button class="audio-btn" onclick="playAudio('v')" title="Play /v/">&#9654;</button></span>
+<span class="sound-chip voiceless"><span class="hebrew">פ</span> <span class="ipa">/f/</span> <button class="audio-btn" onclick="playAudio('f')" title="Play /f/">&#9654;</button></span>
+<span class="sound-chip voiceless"><span class="hebrew">ס</span> <span class="ipa">/s/</span> <button class="audio-btn" onclick="playAudio('s')" title="Play /s/">&#9654;</button></span>
+<span class="sound-chip voiceless"><span class="hebrew">שׁ</span> <span class="ipa">/&#643;/</span> <button class="audio-btn" onclick="playAudio('sh')" title="Play /sh/">&#9654;</button></span>
+<span class="sound-chip voiceless"><span class="hebrew">שׂ</span> <span class="ipa">/s/</span> <button class="audio-btn" onclick="playAudio('s')" title="Play /s/">&#9654;</button></span>
+<span class="sound-chip voiced"><span class="hebrew">ז</span> <span class="ipa">/z/</span> <button class="audio-btn" onclick="playAudio('z')" title="Play /z/">&#9654;</button></span>
+<span class="sound-chip voiceless"><span class="hebrew">כ</span> <span class="ipa">/x/</span> <button class="audio-btn" onclick="playAudio('x')" title="Play /x/">&#9654;</button></span>
+<span class="sound-chip voiceless"><span class="hebrew">ח</span> <span class="ipa">/&#295;/</span> <button class="audio-btn" onclick="playAudio('h_pharyngeal')" title="Play pharyngeal fricative">&#9654;</button></span>
+<span class="sound-chip voiceless"><span class="hebrew">ה</span> <span class="ipa">/h/</span> <button class="audio-btn" onclick="playAudio('h')" title="Play /h/">&#9654;</button></span>
+<span class="sound-chip voiced"><span class="hebrew">ג</span> <span class="ipa">/&#611;/</span> <button class="audio-btn" onclick="playAudio('gh')" title="Play voiced velar fricative">&#9654;</button></span>
+<span class="sound-chip voiced"><span class="hebrew">ד</span> <span class="ipa">/&eth;/</span> <button class="audio-btn" onclick="playAudio('dh')" title="Play /dh/">&#9654;</button></span>
+<span class="sound-chip voiceless"><span class="hebrew">ת</span> <span class="ipa">/&theta;/</span> <button class="audio-btn" onclick="playAudio('th')" title="Play /th/">&#9654;</button></span>
+</div>
+</div>
+
+<div class="manner-card" style="border-color:var(--plum)">
+<h4>Nasal</h4>
+<p class="desc">Air flows through the nose while the mouth is blocked.</p>
+<div class="sounds">
+<span class="sound-chip voiced"><span class="hebrew">מ</span> <span class="ipa">/m/</span> <button class="audio-btn" onclick="playAudio('m')" title="Play /m/">&#9654;</button></span>
+<span class="sound-chip voiced"><span class="hebrew">נ</span> <span class="ipa">/n/</span> <button class="audio-btn" onclick="playAudio('n')" title="Play /n/">&#9654;</button></span>
+</div>
+</div>
+
+<div class="manner-card" style="border-color:var(--slate)">
+<h4>Lateral</h4>
+<p class="desc">Air flows around the sides of the tongue.</p>
+<div class="sounds">
+<span class="sound-chip voiced"><span class="hebrew">ל</span> <span class="ipa">/l/</span> <button class="audio-btn" onclick="playAudio('l')" title="Play /l/">&#9654;</button></span>
+</div>
+</div>
+
+<div class="manner-card" style="border-color:var(--gold)">
+<h4>Trill / Tap</h4>
+<p class="desc">The tongue vibrates rapidly against the ridge or uvula.</p>
+<div class="sounds">
+<span class="sound-chip voiced"><span class="hebrew">ר</span> <span class="ipa">/r/</span> <button class="audio-btn" onclick="playAudio('r')" title="Play /r/">&#9654;</button></span>
+</div>
+</div>
+
+<div class="manner-card" style="border-color:var(--navy)">
+<h4>Affricate</h4>
+<p class="desc">A stop and fricative combined into one sound.</p>
+<div class="sounds">
+<span class="sound-chip voiceless"><span class="hebrew">צ</span> <span class="ipa">/ts/</span> <button class="audio-btn" onclick="playAudio('ts')" title="Play /ts/">&#9654;</button></span>
+</div>
+</div>
+
+<div class="manner-card" style="border-color:var(--sage-mid)">
+<h4>Approximant</h4>
+<p class="desc">Minimal obstruction -- the sound glides through.</p>
+<div class="sounds">
+<span class="sound-chip"><span class="hebrew">י</span> <span class="ipa">/j/</span> <button class="audio-btn" onclick="playAudio('j')" title="Play /j/">&#9654;</button></span>
+<span class="sound-chip"><span class="hebrew">ו</span> <span class="ipa">/w/</span> <button class="audio-btn" onclick="playAudio('w')" title="Play /w/">&#9654;</button></span>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- SECTION 3: BEGADKEPHAT -->
+<section>
+<h2>The Begadkephat Connection</h2>
+<p class="section-intro">Six Hebrew letters change their sound depending on whether they carry a dagesh (dot). With the dagesh, they are <strong>plosives</strong> (air is stopped). Without it, they become <strong>fricatives</strong> (air flows continuously).</p>
+<div class="bgdk-grid" id="bgdk-grid"></div>
+<p class="note">* In modern Israeli Hebrew, only three pairs are still distinguished: Bet/Vet, Kaf/Khaf, and Pe/Fe. The ancient distinctions for Gimel, Dalet, and Tav are preserved in some Yemenite and Sephardic traditions.</p>
+</section>
+
+<!-- SECTION 4: FULL CLASSIFICATION TABLE -->
+<section>
+<h2>Hebrew Consonant Classification</h2>
+<p class="section-intro">All 22 Hebrew consonants organized by where and how they are produced.</p>
+<div class="legend">
+<span class="legend-item"><span class="legend-swatch" style="background:var(--gold-bg);border-color:var(--gold)"></span> Begadkephat letter</span>
+<span class="legend-item"><span class="legend-swatch" style="background:var(--guttural-bg);border-color:var(--sage-dark)"></span> Guttural letter</span>
+<span class="legend-item"><span style="font-size:0.8em;color:var(--plum)">*</span> Weak letter</span>
+</div>
+<div class="card class-table-wrap">
+<table class="class-table" id="class-table"></table>
+</div>
+</section>
+
+</div>
+
+<script>
+// Audio URLs
+const audioMap = {
+  'glottal_stop': 'https://upload.wikimedia.org/wikipedia/commons/4/4d/Glottal_stop.ogg',
+  'b': 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Voiced_bilabial_plosive.ogg',
+  'p': 'https://upload.wikimedia.org/wikipedia/commons/5/51/Voiceless_bilabial_plosive.ogg',
+  'v': 'https://upload.wikimedia.org/wikipedia/commons/8/85/Voiced_labiodental_fricative.ogg',
+  'f': 'https://upload.wikimedia.org/wikipedia/commons/3/33/Voiceless_labiodental_fricative.ogg',
+  'g': 'https://upload.wikimedia.org/wikipedia/commons/b/b4/Voiced_velar_plosive.ogg',
+  'k': 'https://upload.wikimedia.org/wikipedia/commons/e/e3/Voiceless_velar_plosive.ogg',
+  'd': 'https://upload.wikimedia.org/wikipedia/commons/0/01/Voiced_alveolar_plosive.ogg',
+  't': 'https://upload.wikimedia.org/wikipedia/commons/0/02/Voiceless_alveolar_plosive.ogg',
+  'z': 'https://upload.wikimedia.org/wikipedia/commons/c/c0/Voiced_alveolar_sibilant.ogg',
+  's': 'https://upload.wikimedia.org/wikipedia/commons/a/ac/Voiceless_alveolar_sibilant.ogg',
+  'sh':'https://upload.wikimedia.org/wikipedia/commons/c/cc/Voiceless_palato-alveolar_sibilant.ogg',
+  'j': 'https://upload.wikimedia.org/wikipedia/commons/e/e8/Palatal_approximant.ogg',
+  'x': 'https://upload.wikimedia.org/wikipedia/commons/0/0f/Voiceless_velar_fricative.ogg',
+  'gh':'https://upload.wikimedia.org/wikipedia/commons/4/47/Voiced_velar_fricative.ogg',
+  'q': 'https://upload.wikimedia.org/wikipedia/commons/1/19/Voiceless_uvular_plosive.ogg',
+  'x_uvular':'https://upload.wikimedia.org/wikipedia/commons/c/c8/Voiceless_uvular_fricative.ogg',
+  'h_pharyngeal':'https://upload.wikimedia.org/wikipedia/commons/b/b2/Voiceless_pharyngeal_fricative.ogg',
+  'ayin':'https://upload.wikimedia.org/wikipedia/commons/c/cd/Voiced_pharyngeal_fricative.ogg',
+  'h': 'https://upload.wikimedia.org/wikipedia/commons/d/da/Voiceless_glottal_fricative.ogg',
+  'm': 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Bilabial_nasal.ogg',
+  'n': 'https://upload.wikimedia.org/wikipedia/commons/2/29/Alveolar_nasal.ogg',
+  'l': 'https://upload.wikimedia.org/wikipedia/commons/b/bc/Alveolar_lateral_approximant.ogg',
+  'r': 'https://upload.wikimedia.org/wikipedia/commons/c/ce/Alveolar_trill.ogg',
+  'r_uvular':'https://upload.wikimedia.org/wikipedia/commons/c/cb/Uvular_trill.ogg',
+  'ts':'https://upload.wikimedia.org/wikipedia/commons/9/9d/Voiceless_alveolar_sibilant_affricate.oga',
+  'w': 'https://upload.wikimedia.org/wikipedia/commons/f/f2/Voiced_labio-velar_approximant.ogg',
+  'dh':'https://upload.wikimedia.org/wikipedia/commons/6/6a/Voiced_dental_fricative.ogg',
+  'th':'https://upload.wikimedia.org/wikipedia/commons/8/80/Voiceless_dental_fricative.ogg'
+};
+
+let currentAudio = null;
+function playAudio(key) {
+  if (currentAudio) { currentAudio.pause(); currentAudio = null; }
+  const url = audioMap[key];
+  if (!url) return;
+  currentAudio = new Audio(url);
+  currentAudio.play().catch(()=>{});
+}
+
+// Place data
+const placeData = {
+  bilabial: {
+    title: 'Bilabial (Lips)',
+    desc: 'Both lips come together. This is how you naturally make a "b" or "m" sound.',
+    letters: [
+      {h:'\u05D1\u05BC',name:'Bet',ipa:'/b/',audio:'b',bgdk:true},
+      {h:'\u05DE',name:'Mem',ipa:'/m/',audio:'m'},
+      {h:'\u05E4\u05BC',name:'Pe',ipa:'/p/',audio:'p',bgdk:true},
+    ]
+  },
+  labiodental: {
+    title: 'Labiodental (Lip + Teeth)',
+    desc: 'The lower lip touches the upper teeth. In modern Hebrew, Vet and Fe are produced here.',
+    letters: [
+      {h:'\u05D1',name:'Vet (soft)',ipa:'/v/',audio:'v',bgdk:true},
+      {h:'\u05E4',name:'Fe (soft)',ipa:'/f/',audio:'f',bgdk:true},
+    ]
+  },
+  dental: {
+    title: 'Dental / Alveolar (Tongue + Teeth Ridge)',
+    desc: 'The tongue touches or approaches the teeth or the ridge just behind them. Most Hebrew consonants are formed here.',
+    letters: [
+      {h:'\u05D3\u05BC',name:'Dalet',ipa:'/d/',audio:'d',bgdk:true},
+      {h:'\u05EA\u05BC',name:'Tav',ipa:'/t/',audio:'t',bgdk:true},
+      {h:'\u05D8',name:'Tet',ipa:'/t\u0323/',audio:'t'},
+      {h:'\u05E0',name:'Nun',ipa:'/n/',audio:'n'},
+      {h:'\u05DC',name:'Lamed',ipa:'/l/',audio:'l'},
+      {h:'\u05E1',name:'Samekh',ipa:'/s/',audio:'s'},
+      {h:'\u05E9\u05C1',name:'Shin',ipa:'/\u0283/',audio:'sh'},
+      {h:'\u05E9\u05C2',name:'Sin',ipa:'/s/',audio:'s'},
+      {h:'\u05E6',name:'Tsade',ipa:'/ts/',audio:'ts'},
+      {h:'\u05D6',name:'Zayin',ipa:'/z/',audio:'z'},
+      {h:'\u05E8',name:'Resh',ipa:'/r/',audio:'r'},
+    ]
+  },
+  palatal: {
+    title: 'Palatal (Tongue + Hard Palate)',
+    desc: 'The middle of the tongue rises toward the hard palate (roof of the mouth).',
+    letters: [
+      {h:'\u05D9',name:'Yod',ipa:'/j/',audio:'j',weak:true},
+    ]
+  },
+  velar: {
+    title: 'Velar (Tongue + Soft Palate)',
+    desc: 'The back of the tongue touches the soft palate (velum).',
+    letters: [
+      {h:'\u05D2\u05BC',name:'Gimel',ipa:'/g/',audio:'g',bgdk:true},
+      {h:'\u05D2',name:'Gimel (soft)',ipa:'/\u0263/',audio:'gh',bgdk:true},
+      {h:'\u05DB\u05BC',name:'Kaf',ipa:'/k/',audio:'k',bgdk:true},
+      {h:'\u05DB',name:'Khaf (soft)',ipa:'/x/',audio:'x',bgdk:true},
+    ]
+  },
+  uvular: {
+    title: 'Uvular (Back of Tongue + Uvula)',
+    desc: 'The back of the tongue approaches the uvula. Qof is a voiceless uvular plosive — deeper than Kaf. In modern Hebrew, Resh is often produced here as a uvular trill.',
+    letters: [
+      {h:'\u05E7',name:'Qof',ipa:'/q/',audio:'q'},
+      {h:'\u05E8',name:'Resh',ipa:'/\u0280/',audio:'r_uvular'},
+    ]
+  },
+  pharyngeal: {
+    title: 'Pharyngeal (Throat)',
+    desc: 'Sounds formed deep in the throat by constricting the pharynx. These are the distinctly Semitic "guttural" sounds.',
+    letters: [
+      {h:'\u05E2',name:'Ayin',ipa:'/\u0295/',audio:'ayin',guttural:true},
+      {h:'\u05D7',name:'Chet',ipa:'/\u0127/',audio:'h_pharyngeal',guttural:true},
+    ]
+  },
+  glottal: {
+    title: 'Glottal (Vocal Cords)',
+    desc: 'Formed at the vocal cords themselves. Aleph is a brief closure (like the pause in "uh-oh"), and He is a gentle breath.',
+    letters: [
+      {h:'\u05D0',name:'Aleph',ipa:'/\u0294/',audio:'glottal_stop',guttural:true,weak:true},
+      {h:'\u05D4',name:'He',ipa:'/h/',audio:'h',guttural:true,weak:true},
+    ]
+  }
+};
+
+function showPlace(place) {
+  const d = placeData[place];
+  if (!d) return;
+  document.getElementById('place-title').textContent = d.title;
+  document.getElementById('place-desc').textContent = d.desc;
+  const container = document.getElementById('place-letters');
+  container.innerHTML = '';
+  const regionColors = {
+    bilabial: 'rgba(213,169,60,0.18)',
+    labiodental: 'rgba(87,137,156,0.18)',
+    dental: 'rgba(106,89,131,0.18)',
+    palatal: 'rgba(74,107,82,0.18)',
+    velar: 'rgba(192,57,43,0.18)',
+    uvular: 'rgba(195,124,60,0.18)',
+    pharyngeal: 'rgba(42,157,143,0.18)',
+    glottal: 'rgba(38,70,83,0.2)'
+  };
+  d.letters.forEach(lt => {
+    const card = document.createElement('div');
+    card.className = 'letter-card';
+    card.style.background = regionColors[place] || 'var(--card)';
+    card.innerHTML = `<span class="hebrew">${lt.h}</span>
+      <span style="font-size:0.8rem;color:var(--text-light)">${lt.name}</span>
+      <span class="ipa" style="font-size:0.85rem">${lt.ipa}</span>
+      <button class="audio-btn" onclick="playAudio('${lt.audio}')" title="Play ${lt.ipa}">&#9654;</button>`;
+    container.appendChild(card);
+  });
+  // highlight region
+  document.querySelectorAll('.region').forEach(r => r.classList.remove('active'));
+  const el = document.querySelector(`.region[data-place="${place}"]`);
+  if (el) el.classList.add('active');
+}
+
+// Begadkephat section
+const bgdkPairs = [
+  {hard:'\u05D1\u05BC',soft:'\u05D1',hIpa:'/b/',sIpa:'/v/',hAudio:'b',sAudio:'v',hName:'Bet',sName:'Vet',
+   from:'Bilabial plosive',to:'Labiodental fricative'},
+  {hard:'\u05D2\u05BC',soft:'\u05D2',hIpa:'/g/',sIpa:'/\u0263/',hAudio:'g',sAudio:'gh',hName:'Gimel',sName:'Ghimel',
+   from:'Velar plosive',to:'Velar fricative'},
+  {hard:'\u05D3\u05BC',soft:'\u05D3',hIpa:'/d/',sIpa:'/\u00F0/',hAudio:'d',sAudio:'dh',hName:'Dalet',sName:'Dhalet',
+   from:'Alveolar plosive',to:'Dental fricative'},
+  {hard:'\u05DB\u05BC',soft:'\u05DB',hIpa:'/k/',sIpa:'/x/',hAudio:'k',sAudio:'x',hName:'Kaf',sName:'Khaf',
+   from:'Velar plosive',to:'Uvular fricative'},
+  {hard:'\u05E4\u05BC',soft:'\u05E4',hIpa:'/p/',sIpa:'/f/',hAudio:'p',sAudio:'f',hName:'Pe',sName:'Fe',
+   from:'Bilabial plosive',to:'Labiodental fricative'},
+  {hard:'\u05EA\u05BC',soft:'\u05EA',hIpa:'/t/',sIpa:'/\u03B8/',hAudio:'t',sAudio:'th',hName:'Tav',sName:'Thav',
+   from:'Alveolar plosive',to:'Dental fricative'},
+];
+
+(function buildBgdk(){
+  const grid = document.getElementById('bgdk-grid');
+  bgdkPairs.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'bgdk-card';
+    card.innerHTML = `
+      <div class="bgdk-pair">
+        <div class="bgdk-letter">
+          <span class="hebrew">${p.hard}</span>
+          <span class="label">${p.hName}</span>
+          <span class="ipa">${p.hIpa}</span>
+          <button class="audio-btn" onclick="playAudio('${p.hAudio}')" title="Play ${p.hIpa}">&#9654;</button>
+        </div>
+        <span class="bgdk-arrow">&#8594;</span>
+        <div class="bgdk-letter">
+          <span class="hebrew">${p.soft}</span>
+          <span class="label">${p.sName}</span>
+          <span class="ipa">${p.sIpa}</span>
+          <button class="audio-btn" onclick="playAudio('${p.sAudio}')" title="Play ${p.sIpa}">&#9654;</button>
+        </div>
+      </div>
+      <div class="bgdk-desc">
+        <div><span class="from">${p.from}</span></div>
+        <div class="air-indicator"><span class="air-blocked"></span> <span style="font-size:0.75rem;color:var(--text-light)">stopped</span></div>
+        <div style="margin:3px 0;color:var(--gold);font-weight:600;font-size:0.8rem">&#8595;</div>
+        <div><span class="to">${p.to}</span></div>
+        <div class="air-indicator"><span class="air-flowing"></span> <span style="font-size:0.75rem;color:var(--text-light)">flowing</span></div>
+      </div>`;
+    grid.appendChild(card);
+  });
+})();
+
+// Classification table
+const manners = ['Plosive','Fricative','Nasal','Lateral','Trill','Affricate','Approximant'];
+const places = [
+  {name:'Bilabial',letters:{
+    'Plosive':[{h:'\u05D1\u05BC',n:'Bet',a:'b',ipa:'b',bgdk:1},{h:'\u05E4\u05BC',n:'Pe',a:'p',ipa:'p',bgdk:1}],
+    'Fricative':[{h:'\u05D1',n:'Vet',a:'v',ipa:'v',bgdk:1},{h:'\u05E4',n:'Fe',a:'f',ipa:'f',bgdk:1}],
+    'Nasal':[{h:'\u05DE',n:'Mem',a:'m',ipa:'m'}],
+  }},
+  {name:'Dental/Alveolar',letters:{
+    'Plosive':[{h:'\u05D3\u05BC',n:'Dalet',a:'d',ipa:'d',bgdk:1},{h:'\u05EA\u05BC',n:'Tav',a:'t',ipa:'t',bgdk:1},{h:'\u05D8',n:'Tet',a:'t',ipa:'t\u0323'}],
+    'Fricative':[{h:'\u05D3',n:'Dh',a:'dh',ipa:'\u00F0',bgdk:1},{h:'\u05EA',n:'Th',a:'th',ipa:'\u03B8',bgdk:1},{h:'\u05E1',n:'Samekh',a:'s',ipa:'s'},{h:'\u05E9\u05C1',n:'Shin',a:'sh',ipa:'\u0283'},{h:'\u05E9\u05C2',n:'Sin',a:'s',ipa:'s'},{h:'\u05D6',n:'Zayin',a:'z',ipa:'z'}],
+    'Nasal':[{h:'\u05E0',n:'Nun',a:'n',ipa:'n'}],
+    'Lateral':[{h:'\u05DC',n:'Lamed',a:'l',ipa:'l'}],
+    'Trill':[{h:'\u05E8',n:'Resh',a:'r',ipa:'r'}],
+    'Affricate':[{h:'\u05E6',n:'Tsade',a:'ts',ipa:'ts'}],
+  }},
+  {name:'Palatal',letters:{
+    'Approximant':[{h:'\u05D9',n:'Yod',a:'j',ipa:'j',weak:1}],
+  }},
+  {name:'Velar',letters:{
+    'Plosive':[{h:'\u05D2\u05BC',n:'Gimel',a:'g',ipa:'g',bgdk:1},{h:'\u05DB\u05BC',n:'Kaf',a:'k',ipa:'k',bgdk:1}],
+    'Fricative':[{h:'\u05D2',n:'Ghimel',a:'gh',ipa:'\u0263',bgdk:1}],
+    'Approximant':[{h:'\u05D5',n:'Vav',a:'w',ipa:'w',weak:1}],
+  }},
+  {name:'Uvular',g:0,letters:{
+    'Plosive':[{h:'\u05E7',n:'Qof',a:'q',ipa:'q'}],
+    'Fricative':[{h:'\u05DB',n:'Khaf',a:'x',ipa:'x',bgdk:1}],
+  }},
+  {name:'Pharyngeal',g:1,letters:{
+    'Fricative':[{h:'\u05D7',n:'Chet',a:'h_pharyngeal',ipa:'\u0127',gut:1},{h:'\u05E2',n:'Ayin',a:'ayin',ipa:'\u0295',gut:1}],
+  }},
+  {name:'Glottal',g:1,letters:{
+    'Plosive':[{h:'\u05D0',n:'Aleph',a:'glottal_stop',ipa:'\u0294',gut:1,weak:1}],
+    'Fricative':[{h:'\u05D4',n:'He',a:'h',ipa:'h',gut:1,weak:1}],
+  }},
+];
+
+(function buildTable(){
+  const tbl = document.getElementById('class-table');
+  let hdr = '<thead><tr><th>Place</th>';
+  manners.forEach(m => hdr += `<th>${m}</th>`);
+  hdr += '</tr></thead>';
+  const placeColors = {
+    'Bilabial':'var(--gold)',
+    'Dental/Alveolar':'var(--plum)',
+    'Palatal':'var(--sage-dark)',
+    'Velar':'#c0392b',
+    'Uvular':'var(--copper)',
+    'Pharyngeal':'#2a9d8f',
+    'Glottal':'#264653'
+  };
+  let body = '<tbody>';
+  places.forEach(pl => {
+    const isGut = pl.g;
+    const pc = placeColors[pl.name] || 'var(--navy)';
+    body += `<tr>`;
+    body += `<td style="border-left:4px solid ${pc};color:${pc};font-weight:700">${pl.name}</td>`;
+    manners.forEach(m => {
+      const ltrs = (pl.letters||{})[m] || [];
+      body += `<td>`;
+      if (!ltrs.length) { body += '<span style="color:#ccc">--</span>'; }
+      else {
+        ltrs.forEach(l => {
+          body += `<span class="cell-letter${l.weak?' weak-mark':''}">`;
+          body += `<span class="hebrew">${l.h}</span>`;
+          body += `<span class="name">${l.n}</span>`;
+          body += `<button class="audio-btn" onclick="playAudio('${l.a}')" title="Play /${l.ipa}/" style="width:22px;height:22px;font-size:10px">&#9654;</button>`;
+          body += `</span>`;
+        });
+      }
+      body += '</td>';
+    });
+    body += '</tr>';
+  });
+  body += '</tbody>';
+  tbl.innerHTML = hdr + body;
+})();
+</script>
+
+<!-- IPA REFERENCE CHART -->
+<section>
+<h2>IPA Reference</h2>
+<p class="section-intro">For a complete view of all human speech sounds classified by place and manner, see the full International Phonetic Alphabet chart below.</p>
+<div style="text-align:center">
+<img src="/images/charts/ipa_chart_2020.png" alt="International Phonetic Alphabet consonant chart (2020)" style="max-width:100%;height:auto;border-radius:8px;box-shadow:var(--shadow)">
+<p style="font-size:0.8rem;color:var(--text-light);margin-top:8px">© 2020 <a href="https://www.internationalphoneticassociation.org/content/ipa-chart" target="_blank" rel="noopener" style="color:var(--slate)">International Phonetic Association</a></p>
+</div>
+</section>
+
+</body>
+</html>

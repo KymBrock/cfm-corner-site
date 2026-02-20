@@ -9,8 +9,8 @@
     src: url('/fonts/proto-sinaitic-13.ttf') format('truetype');
     font-display: swap;
 }
-.proto-sin { font-family: 'ProtoSinaitic15', serif; font-size: var(--text-xl); }
-.proto-sin-13 { font-family: 'ProtoSinaitic13', serif; font-size: var(--text-xl); }
+.proto-sin { font-family: 'ProtoSinaitic15', serif; font-size: 1.6em; }
+.proto-sin-13 { font-family: 'ProtoSinaitic13', serif; font-size: 1.6em; }
 
 /* === CFM Corner — Unified Brand Styles === */
 /* Learning Inspired palette + CFM Corner sage greens */
@@ -107,7 +107,7 @@ body {
 }
 .nav-title {
     font-family: Georgia, serif;
-    font-size: var(--text-lg);
+    font-size: 1.3em;
     font-weight: 600;
 }
 .nav-right {
@@ -121,7 +121,7 @@ body {
 .nav-links a {
     color: white;
     text-decoration: none;
-    font-size: var(--text-sm);
+    font-size: 0.92em;
     opacity: 0.85;
     padding: 6px 14px;
     border-radius: 6px;
@@ -149,13 +149,13 @@ body {
     background: none;
     border: none;
     color: white;
-    font-size: var(--text-sm);
+    font-size: 0.85em;
     padding: 0 8px;
     width: 100%;
     outline: none;
 }
 .nav-search input::placeholder { color: rgba(255,255,255,0.45); }
-.nav-toggle { display: none; background: none; border: none; color: white; font-size: var(--text-lg); cursor: pointer; padding: 8px; }
+.nav-toggle { display: none; background: none; border: none; color: white; font-size: 1.5em; cursor: pointer; padding: 8px; }
 
 /* === Main Content === */
 .site-main {
@@ -207,13 +207,13 @@ body {
 .welcome-section h1 {
     font-family: Georgia, serif;
     color: var(--sage-dark);
-    font-size: var(--text-2xl);
+    font-size: 2.2em;
     margin-bottom: 12px;
     font-weight: normal;
 }
 .welcome-section p {
     color: var(--text-secondary);
-    font-size: var(--text-base);
+    font-size: 1.05em;
     max-width: 650px;
     margin: 0 auto 20px;
 }
@@ -224,7 +224,7 @@ body {
     padding: 12px 20px;
     border: 2px solid var(--border);
     border-radius: 30px;
-    font-size: var(--text-base);
+    font-size: 1em;
     outline: none;
     transition: border-color 0.2s;
 }
@@ -254,7 +254,7 @@ body {
     box-shadow: var(--shadow-lg);
 }
 .cw-week {
-    font-size: var(--text-sm);
+    font-size: 0.85em;
     text-transform: uppercase;
     letter-spacing: 1px;
     opacity: 0.8;
@@ -262,14 +262,14 @@ body {
 }
 .cw-title {
     font-family: Georgia, serif;
-    font-size: var(--text-lg);
+    font-size: 1.5em;
     margin-bottom: 8px;
 }
-.cw-scripture { font-size: var(--text-base); opacity: 0.9; }
-.cw-dates { font-size: var(--text-sm); opacity: 0.7; margin-bottom: 14px; }
+.cw-scripture { font-size: 1em; opacity: 0.9; }
+.cw-dates { font-size: 0.9em; opacity: 0.7; margin-bottom: 14px; }
 .cw-cta {
     display: inline-block;
-    font-size: var(--text-sm);
+    font-size: 0.9em;
     font-weight: 600;
     background: var(--gold);
     color: var(--text-dark);
@@ -330,19 +330,19 @@ body {
 .week-card .week-num {
     font-family: Georgia, serif;
     color: var(--sage-mid);
-    font-size: var(--text-sm);
+    font-size: 0.85em;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 .week-card .week-title {
     font-family: Georgia, serif;
-    font-size: var(--text-md);
+    font-size: 1.1em;
     color: var(--sage-dark);
     margin: 6px 0;
 }
-.week-card .week-dates { font-size: var(--text-sm); color: var(--text-muted); }
-.week-card .week-scripture { font-size: var(--text-sm); color: var(--text-secondary); margin-top: 4px; }
+.week-card .week-dates { font-size: 0.85em; color: var(--text-muted); }
+.week-card .week-scripture { font-size: 0.9em; color: var(--text-secondary); margin-top: 4px; }
 .week-card.current {
     border-color: var(--gold);
     border-width: 2px;
@@ -399,35 +399,35 @@ body {
     margin-bottom: 6px;
 }
 .week-list-meta .week-num {
-    font-size: var(--text-xs);
+    font-size: 0.8em;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: var(--gold);
 }
 .week-list-dates {
-    font-size: var(--text-xs);
+    font-size: 0.8em;
     color: var(--text-muted);
 }
 .week-list-title {
     font-family: Georgia, serif;
-    font-size: var(--text-md);
+    font-size: 1.25em;
     color: var(--sage-dark);
     margin-bottom: 4px;
 }
 .week-list-scripture {
-    font-size: var(--text-sm);
+    font-size: 0.9em;
     color: var(--text-secondary);
     margin-bottom: 8px;
 }
 .week-list-summary {
-    font-size: var(--text-sm);
+    font-size: 0.88em;
     color: var(--text-secondary);
     line-height: 1.5;
     margin: 0 0 10px;
 }
 .week-list-cta {
-    font-size: var(--text-sm);
+    font-size: 0.85em;
     color: var(--sage-dark);
     font-weight: 600;
 }
@@ -459,9 +459,9 @@ body {
     border-width: 2px;
     background: linear-gradient(135deg, var(--white) 0%, var(--gold-pale) 100%);
 }
-.curr-icon { font-size: var(--text-2xl); margin-bottom: 8px; }
-.curr-label { font-family: Georgia, serif; color: var(--sage-dark); font-size: var(--text-base); }
-.curr-year { font-size: var(--text-xs); color: var(--text-muted); margin-top: 4px; }
+.curr-icon { font-size: 2.5em; margin-bottom: 8px; }
+.curr-label { font-family: Georgia, serif; color: var(--sage-dark); font-size: 1em; }
+.curr-year { font-size: 0.8em; color: var(--text-muted); margin-top: 4px; }
 
 /* Subscribe Section */
 .subscribe-section {
@@ -479,7 +479,7 @@ body {
     padding: 12px 20px;
     border: none;
     border-radius: 30px;
-    font-size: var(--text-base);
+    font-size: 1em;
     width: 300px;
     outline: none;
 }
@@ -489,7 +489,7 @@ body {
     color: var(--text-dark);
     border: none;
     border-radius: 30px;
-    font-size: var(--text-base);
+    font-size: 1em;
     font-weight: 600;
     cursor: pointer;
     transition: background 0.2s;
@@ -516,18 +516,18 @@ body {
 .week-header h1 {
     font-family: Georgia, serif;
     color: var(--sage-dark);
-    font-size: var(--text-2xl);
+    font-size: 2em;
     font-weight: normal;
     margin-bottom: 8px;
 }
-.week-header .week-scripture-ref { font-size: var(--text-md); color: var(--text-secondary); margin-bottom: 5px; }
-.week-header .week-dates-range { font-size: var(--text-sm); color: var(--text-muted); }
+.week-header .week-scripture-ref { font-size: 1.15em; color: var(--text-secondary); margin-bottom: 5px; }
+.week-header .week-dates-range { font-size: 0.95em; color: var(--text-muted); }
 
 .week-nav {
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
-    font-size: var(--text-sm);
+    font-size: 0.9em;
 }
 .week-nav a { color: var(--sage-mid); text-decoration: none; }
 .week-nav a:hover { text-decoration: underline; color: var(--sage-dark); }
@@ -544,7 +544,7 @@ body {
 .quick-summary h2 {
     font-family: Georgia, serif;
     color: var(--sage-dark);
-    font-size: var(--text-md);
+    font-size: 1.2em;
     margin-bottom: 12px;
 }
 .quick-summary p { color: var(--text-secondary); }
@@ -566,7 +566,7 @@ body {
     border: none;
     border-radius: var(--radius) var(--radius) 0 0;
     font-family: Georgia, serif;
-    font-size: var(--text-sm);
+    font-size: 0.95em;
     color: var(--text-muted);
     cursor: pointer;
     white-space: nowrap;
@@ -612,8 +612,8 @@ body {
     box-shadow: var(--shadow-md);
     border-color: var(--sage-mid);
 }
-.chart-card h3 { font-family: Georgia, serif; color: var(--sage-dark); font-size: var(--text-base); margin-bottom: 6px; }
-.chart-card p { font-size: var(--text-sm); color: var(--text-muted); }
+.chart-card h3 { font-family: Georgia, serif; color: var(--sage-dark); font-size: 1em; margin-bottom: 6px; }
+.chart-card p { font-size: 0.85em; color: var(--text-muted); }
 
 /* === Footer === */
 .site-footer {
@@ -622,11 +622,11 @@ body {
     margin-top: 50px;
     background: var(--text-dark);
     color: rgba(255,255,255,0.7);
-    font-size: var(--text-sm);
+    font-size: 0.85em;
 }
 .footer-brand {
     font-family: Georgia, serif;
-    font-size: var(--text-lg);
+    font-size: 1.3em;
     letter-spacing: 3px;
     color: var(--gold);
     margin-bottom: 15px;
@@ -639,55 +639,13 @@ body {
     transition: opacity 0.2s;
 }
 .footer-li-logo:hover { opacity: 1; }
-.footer-disclaimer { margin-top: 5px; font-style: italic; font-size: var(--text-sm); }
+.footer-disclaimer { margin-top: 5px; font-style: italic; font-size: 0.9em; }
 
 /* === Embedded Content (existing HTML) === */
 .embedded-content { font-family: inherit; }
 .embedded-content details > summary { list-style: none; }
 .embedded-content details > summary::-webkit-details-marker { display: none; }
 .embedded-content details > summary::marker { display: none; content: ""; }
-
-/* === Content-area links: sage green, subtle underline === */
-.embedded-content a {
-    color: var(--sage-dark);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(74, 107, 82, 0.35);
-    transition: border-color 0.2s ease, color 0.2s ease;
-}
-.embedded-content a:hover {
-    color: var(--sage-dark);
-    border-bottom-color: var(--sage-dark);
-}
-/* Buttons and styled links inside embedded content keep their own colors */
-.embedded-content .section-header a,
-.embedded-content a[style*="background"],
-.embedded-content a[style*="padding"],
-.embedded-content .quick-access-btn,
-.embedded-content a.quick-link {
-    color: inherit;
-    border-bottom: none;
-}
-/* Hebrew lexicon links — visually distinct clickable terms */
-.embedded-content a[href*="lexicon"] {
-    color: var(--sage-dark);
-    border-bottom: 1.5px solid var(--gold);
-    text-decoration: none;
-    padding-bottom: 1px;
-}
-.embedded-content a[href*="lexicon"]:hover {
-    color: var(--sage-dark);
-    border-bottom-color: var(--sage-dark);
-    background: rgba(213, 169, 60, 0.08);
-}
-/* Scripture references styled by ScriptTagger */
-.embedded-content a.BLBScriptRef {
-    color: var(--sage-dark) !important;
-    text-decoration: none !important;
-    border-bottom: 1px dotted rgba(74, 107, 82, 0.4);
-}
-.embedded-content a.BLBScriptRef:hover {
-    border-bottom-color: var(--sage-dark);
-}
 
 /* Expand/Collapse button container — flex-wrap with gap for mobile stacking */
 .toggle-all-buttons { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin: 30px 0; }
@@ -705,19 +663,19 @@ body {
 @media (max-width: 768px) {
     .nav-top { padding: 10px 16px; }
     .nav-tree { width: 38px; height: 38px; }
-    .nav-title { font-size: var(--text-md); }
+    .nav-title { font-size: 1.1em; }
     .nav-right { gap: 6px; }
-    .nav-links a { font-size: var(--text-xs); padding: 5px 10px; }
+    .nav-links a { font-size: 0.82em; padding: 5px 10px; }
     .nav-search { width: 200px; height: 30px; }
-    .welcome-section h1 { font-size: var(--text-xl); }
+    .welcome-section h1 { font-size: 1.7em; }
     .week-grid { grid-template-columns: repeat(2, 1fr); }
-    .week-header h1 { font-size: var(--text-lg); }
+    .week-header h1 { font-size: 1.5em; }
     .week-header { padding: 25px 20px; }
-    .tab-btn { padding: 10px 14px; font-size: var(--text-sm); }
+    .tab-btn { padding: 10px 14px; font-size: 0.85em; }
     .quick-summary { padding: 18px; }
     .curriculum-grid { grid-template-columns: repeat(2, 1fr); }
     .current-week-card { padding: 25px 20px; }
-    .cw-title { font-size: var(--text-md); }
+    .cw-title { font-size: 1.2em; }
     .subscribe-form input { width: 100%; }
     .content-panel { padding: 20px; }
     .site-main { padding: 20px 16px; }
@@ -728,7 +686,7 @@ body {
 @media (max-width: 600px) {
     .nav-top { padding: 10px 14px; }
     .nav-tree { width: 34px; height: 34px; }
-    .nav-title { font-size: var(--text-base); }
+    .nav-title { font-size: 1em; }
     .nav-right {
         display: none;
         flex-direction: column;
@@ -745,27 +703,27 @@ body {
     }
     .nav-right.open { display: flex; }
     .nav-links { flex-direction: column; gap: 4px; }
-    .nav-links a { padding: 10px 14px; border-radius: 6px; font-size: var(--text-sm); }
+    .nav-links a { padding: 10px 14px; border-radius: 6px; font-size: 0.95em; }
     .nav-search { width: 100%; margin-top: 4px; }
     .nav-toggle { display: block; margin-left: auto; }
     .welcome-section { padding: 25px 16px 20px; }
-    .welcome-section h1 { font-size: var(--text-lg); }
-    .welcome-section p { font-size: var(--text-sm); }
+    .welcome-section h1 { font-size: 1.5em; }
+    .welcome-section p { font-size: 0.95em; }
     .hero-banner { aspect-ratio: 4 / 3; }
     .week-grid { grid-template-columns: 1fr; gap: 14px; }
-    .week-header h1 { font-size: var(--text-lg); }
+    .week-header h1 { font-size: 1.3em; }
     .week-header { padding: 20px 16px; }
-    .week-header .week-scripture-ref { font-size: var(--text-base); }
+    .week-header .week-scripture-ref { font-size: 1em; }
     .tab-nav { padding: 4px 4px 0; gap: 2px; }
-    .tab-btn { padding: 9px 12px; font-size: var(--text-xs); }
+    .tab-btn { padding: 9px 12px; font-size: 0.82em; }
     .quick-summary { padding: 16px; }
-    .quick-summary h2 { font-size: var(--text-md); }
+    .quick-summary h2 { font-size: 1.1em; }
     .content-panel { padding: 16px; }
     .site-main { padding: 16px 12px; }
     .curriculum-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
     .current-week-card { padding: 20px 16px; }
-    .cw-title { font-size: var(--text-md); }
-    .cw-week { font-size: var(--text-xs); }
+    .cw-title { font-size: 1.1em; }
+    .cw-week { font-size: 0.8em; }
     .subscribe-section { padding: 30px 16px; margin-top: 30px; }
     .subscribe-form { flex-direction: column; align-items: center; gap: 8px; }
     .subscribe-form input { width: 100%; max-width: 320px; }
@@ -777,9 +735,9 @@ body {
     .embedded-content iframe,
     .embedded-content img { max-width: 100%; height: auto; }
     .embedded-content table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-    .section-heading { font-size: var(--text-md); }
+    .section-heading { font-size: 1.2em; }
     .site-footer { padding: 30px 16px; margin-top: 35px; }
-    .footer-brand { font-size: var(--text-md); letter-spacing: 2px; }
+    .footer-brand { font-size: 1.1em; letter-spacing: 2px; }
     /* Timeline info bar — stack on phone */
     .ot-timeline-info { flex-direction: column !important; text-align: center; padding: 14px 16px !important; }
     .ot-timeline-buttons { width: 100%; justify-content: center; }
@@ -793,31 +751,31 @@ body {
 /* === Welcome / Start Here Page === */
 .welcome-page { max-width: 780px; margin: 0 auto; padding: 30px 20px 60px; }
 .welcome-hero { text-align: center; margin-bottom: 30px; }
-.welcome-hero h1 { font-family: Georgia, serif; color: var(--sage-dark); font-size: var(--text-2xl); font-weight: normal; }
-.welcome-subtitle { color: var(--text-secondary); font-size: var(--text-md); margin-top: 8px; }
-.welcome-intro { font-size: var(--text-base); line-height: 1.8; color: var(--text-primary); margin-bottom: 30px; }
+.welcome-hero h1 { font-family: Georgia, serif; color: var(--sage-dark); font-size: 2em; font-weight: normal; }
+.welcome-subtitle { color: var(--text-secondary); font-size: 1.1em; margin-top: 8px; }
+.welcome-intro { font-size: 1.05em; line-height: 1.8; color: var(--text-primary); margin-bottom: 30px; }
 .welcome-section { margin-bottom: 32px; }
-.welcome-section h2 { font-family: Georgia, serif; color: var(--sage-dark); font-size: var(--text-lg); font-weight: normal; margin-bottom: 10px; }
+.welcome-section h2 { font-family: Georgia, serif; color: var(--sage-dark); font-size: 1.3em; font-weight: normal; margin-bottom: 10px; }
 .welcome-section ul, .welcome-section ol { padding-left: 22px; line-height: 1.8; text-align: left; display: inline-block; }
 .welcome-section li { margin-bottom: 4px; }
 .welcome-link { color: var(--sage-dark); font-weight: 600; text-decoration: none; border-bottom: 2px solid var(--gold); padding-bottom: 1px; }
 .welcome-link:hover { color: var(--gold); }
 .welcome-paths { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; text-align: left; }
 .welcome-path { background: white; border: 1px solid var(--sage-pale); border-radius: 10px; padding: 20px; }
-.welcome-path p { font-size: var(--text-sm); line-height: 1.6; color: var(--text-secondary); margin: 8px 0 0; }
-.path-time { font-size: var(--text-xs); color: var(--slate); font-weight: 600; letter-spacing: 0.02em; }
-.path-title { font-family: Georgia, serif; font-size: var(--text-md); color: var(--sage-dark); margin-top: 4px; }
+.welcome-path p { font-size: 0.93em; line-height: 1.6; color: var(--text-secondary); margin: 8px 0 0; }
+.path-time { font-size: 0.82em; color: var(--slate); font-weight: 600; letter-spacing: 0.02em; }
+.path-title { font-family: Georgia, serif; font-size: 1.1em; color: var(--sage-dark); margin-top: 4px; }
 @media (max-width: 600px) { .welcome-paths { grid-template-columns: 1fr; } }
 
 /* === Hebrew Language Journey === */
 .hebrew-landing { max-width: 780px; margin: 0 auto; padding: 30px 20px 60px; }
 .hebrew-hero { text-align: center; margin-bottom: 20px; }
-.hebrew-hero h1 { font-family: Georgia, serif; color: var(--sage-dark); font-size: var(--text-2xl); font-weight: normal; }
-.hebrew-subtitle { color: var(--text-secondary); font-size: var(--text-md); margin-top: 8px; }
-.hebrew-intro { font-size: var(--text-base); line-height: 1.8; color: var(--text-primary); margin-bottom: 30px; }
+.hebrew-hero h1 { font-family: Georgia, serif; color: var(--sage-dark); font-size: 2em; font-weight: normal; }
+.hebrew-subtitle { color: var(--text-secondary); font-size: 1.1em; margin-top: 8px; }
+.hebrew-intro { font-size: 1.02em; line-height: 1.8; color: var(--text-primary); margin-bottom: 30px; }
 .hebrew-lessons { display: flex; flex-direction: column; gap: 14px; }
 .hebrew-lesson-card {
-    display: flex; align-items: flex-start; gap: 18px;
+    display: flex; align-items: center; gap: 18px;
     padding: 20px 24px; border-radius: 10px;
     background: white; border: 1px solid var(--sage-pale);
     text-decoration: none; color: inherit;
@@ -825,56 +783,26 @@ body {
 }
 .hebrew-lesson-card:hover { border-color: var(--sage-mid); box-shadow: 0 2px 12px rgba(74,107,82,0.1); }
 .hebrew-lesson-card.coming-soon { opacity: 0.6; pointer-events: none; }
-.hl-number { font-family: Georgia, serif; font-size: var(--text-xl); color: var(--sage-dark); min-width: 60px; text-align: center; flex-shrink: 0; padding-top: 4px; }
-@media (max-width: 500px) {
-    .hebrew-lesson-card { flex-direction: column; gap: 6px; text-align: center; }
-    .hl-number { min-width: unset; padding-top: 0; }
-}
-.hl-title { font-weight: 600; color: var(--text-dark); font-size: var(--text-md); }
-.hl-desc { color: var(--text-secondary); font-size: var(--text-sm); margin-top: 4px; line-height: 1.5; }
-.hl-week { font-size: var(--text-xs); color: var(--slate); margin-top: 6px; }
-.hl-badge { background: var(--gold-pale); color: var(--copper); font-size: var(--text-xs); font-weight: 600; padding: 4px 12px; border-radius: 12px; white-space: nowrap; margin-left: auto; }
-
-/* Nikud highlight color — soft red for vowel marks */
-.nq { color: #c0392b; font-size: 1.2em; }
+.hl-number { font-family: Georgia, serif; font-size: 1.6em; color: var(--sage-dark); min-width: 40px; text-align: center; }
+.hl-title { font-weight: 600; color: var(--text-dark); font-size: 1.1em; }
+.hl-desc { color: var(--text-secondary); font-size: 0.92em; margin-top: 4px; line-height: 1.5; }
+.hl-week { font-size: 0.82em; color: var(--slate); margin-top: 6px; }
+.hl-badge { background: var(--gold-pale); color: var(--copper); font-size: 0.78em; font-weight: 600; padding: 4px 12px; border-radius: 12px; white-space: nowrap; margin-left: auto; }
 
 /* Hebrew lesson single page */
 .hebrew-lesson-page { max-width: 780px; margin: 0 auto; padding: 30px 20px 60px; }
 .hebrew-lesson-header { margin-bottom: 30px; }
-.hebrew-back { color: var(--sage-dark); text-decoration: none; font-size: var(--text-sm); }
-.hebrew-lesson-num { font-family: Georgia, serif; font-size: var(--text-lg); color: var(--sage-mid); margin: 12px 0 6px; }
-.hebrew-lesson-header h1 { font-family: Georgia, serif; color: var(--sage-dark); font-size: var(--text-xl); font-weight: normal; }
-.hebrew-week-ref { color: var(--text-secondary); font-size: var(--text-sm); margin-top: 6px; }
+.hebrew-back { color: var(--sage-dark); text-decoration: none; font-size: 0.9em; }
+.hebrew-lesson-num { font-family: Georgia, serif; font-size: 1.4em; color: var(--sage-mid); margin: 12px 0 6px; }
+.hebrew-lesson-header h1 { font-family: Georgia, serif; color: var(--sage-dark); font-size: 1.8em; font-weight: normal; }
+.hebrew-week-ref { color: var(--text-secondary); font-size: 0.9em; margin-top: 6px; }
 .hebrew-week-ref a { color: var(--sage-dark); }
-.hebrew-lesson-content { line-height: 1.8; color: var(--text-primary); font-size: var(--text-base); }
+.hebrew-lesson-content { line-height: 1.8; color: var(--text-primary); font-size: 1.02em; }
 .hebrew-lesson-content p { margin-bottom: 1.4em; }
 .hebrew-lesson-content hr { margin: 2.5em 0; border: none; border-top: 1px solid var(--sage-pale); }
-.hebrew-lesson-content table { margin: 1.2em 0; border-collapse: separate; border-spacing: 0; width: 100%; }
+.hebrew-lesson-content table { margin: 1.2em 0; border-collapse: collapse; width: 100%; }
 .hebrew-lesson-content th, .hebrew-lesson-content td { padding: 10px 14px; border: 1px solid var(--sage-pale); text-align: left; }
-/* Lesson 1: script columns in 7-column alphabet tables (cols 2-4: Proto-Sinaitic, Early Hebrew, Letter) */
-.hebrew-lesson-content table:has(th:nth-child(7)) td:nth-child(2),
-.hebrew-lesson-content table:has(th:nth-child(7)) td:nth-child(3),
-.hebrew-lesson-content table:has(th:nth-child(7)) td:nth-child(4) { font-size: var(--text-xl); text-align: center; line-height: 1.2; }
-/* Prevent Proto-Sinaitic from compounding */
-.hebrew-lesson-content td .proto-sin,
-.hebrew-lesson-content td .proto-sin-13 { font-size: inherit; }
-/* Transliteration tables (4-col): uniform Hebrew letter sizing */
-.hebrew-lesson-content table:has(th:nth-child(4):last-child) td:first-child { font-size: var(--text-lg); line-height: 1.3; }
-/* Pretty Hebrew lesson tables */
-.hebrew-lesson-content th {
-    background: var(--text-dark);
-    color: var(--white);
-    font-family: Georgia, serif;
-    font-weight: normal;
-    letter-spacing: 0.03em;
-    border-color: var(--sage-dark) !important;
-}
-.hebrew-lesson-content tr:nth-child(even) td { background: var(--sage-bg); }
-.hebrew-lesson-content tr:nth-child(odd) td { background: var(--white); }
-.hebrew-lesson-content tr:hover td { background: var(--gold-pale); transition: background 0.2s; }
-.hebrew-lesson-content table { border: 2px solid var(--sage-dark); border-radius: var(--radius); overflow: hidden; }
-.hebrew-lesson-content td { border: 1px solid var(--border); }
-.hebrew-lesson-content th { background: var(--sage-dark); color: var(--white); font-weight: 600; }
+.hebrew-lesson-content th { background: var(--sage-bg); font-weight: 600; }
 .hebrew-lesson-content h2 { margin-top: 2.2em; margin-bottom: 0.8em; }
 .hebrew-lesson-content h3 { margin-top: 1.8em; margin-bottom: 0.6em; }
 .hebrew-lesson-content h2 { font-family: Georgia, serif; color: var(--sage-dark); font-weight: normal; margin-top: 36px; }
@@ -898,6 +826,6 @@ a.RTBData:hover, a.BLBST_a:hover {
 @media (max-width: 340px) {
     .chart-grid { grid-template-columns: 1fr !important; max-width: 280px !important; margin-left: auto !important; margin-right: auto !important; }
     .curriculum-grid { grid-template-columns: 1fr; }
-    .tab-btn { padding: 8px 8px; font-size: var(--text-xs); }
-    .nav-title { font-size: var(--text-sm); }
+    .tab-btn { padding: 8px 8px; font-size: 0.78em; }
+    .nav-title { font-size: 0.9em; }
 }

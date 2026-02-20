@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hebrew Parts of Speech</title>
+<style>
+:root{
+--navy:#1e3a4f;--slate:#57899c;--sage-dark:#4a6b52;--sage-mid:#7a9e7e;--sage-pale:#dce8dd;
+--gold:#d5a93c;--plum:#6a5983;--copper:#c37c3c;--terracotta:#c65528;
+--card:#fff;--text:#2c3e50;--text-light:#6b7c8a;--shadow:0 2px 8px rgba(0,0,0,0.08);
+--radius:12px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Georgia','Times New Roman',serif;color:var(--text);line-height:1.7;padding:24px;max-width:900px;margin:0 auto}
+h1{color:var(--navy);font-size:1.6em;margin-bottom:8px}
+.subtitle{color:var(--text-light);margin-bottom:24px;font-size:0.95rem}
+
+.pos-grid{display:grid;grid-template-columns:1fr;gap:16px}
+
+.pos-card{
+  background:var(--card);border-radius:var(--radius);padding:20px 24px;
+  box-shadow:var(--shadow);border-left:5px solid var(--sage-dark);
+  display:grid;grid-template-columns:140px 1fr;gap:16px;align-items:start;
+}
+@media(max-width:600px){
+  .pos-card{grid-template-columns:1fr;gap:8px}
+}
+
+.pos-label{
+  font-weight:700;font-size:1.1em;
+}
+.pos-hebrew{
+  font-size:0.85em;color:var(--text-light);margin-top:2px;
+}
+.pos-body{}
+.pos-what{margin-bottom:8px}
+.pos-english{color:var(--text-light);font-size:0.9em;margin-bottom:6px}
+.pos-hebrew-ex{
+  font-size:0.9em;background:rgba(74,107,82,0.08);
+  padding:6px 12px;border-radius:6px;display:inline-block;margin-top:4px;
+}
+.pos-hebrew-ex .hebrew{font-size:1.2em}
+
+/* Color accents by category */
+.pos-card[data-cat="action"]{border-left-color:var(--navy)}
+.pos-card[data-cat="thing"]{border-left-color:var(--sage-dark)}
+.pos-card[data-cat="describe"]{border-left-color:var(--gold)}
+.pos-card[data-cat="connect"]{border-left-color:var(--plum)}
+.pos-card[data-cat="structure"]{border-left-color:var(--slate)}
+.pos-card[data-cat="special"]{border-left-color:var(--copper)}
+
+.cat-label{
+  display:inline-block;font-size:0.7em;font-weight:600;
+  padding:2px 8px;border-radius:10px;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.5px;
+}
+.cat-action .cat-label{background:rgba(30,58,79,0.12);color:var(--navy)}
+.cat-thing .cat-label{background:rgba(74,107,82,0.12);color:var(--sage-dark)}
+.cat-describe .cat-label{background:rgba(213,169,60,0.15);color:#8a6d1b}
+.cat-connect .cat-label{background:rgba(106,89,131,0.12);color:var(--plum)}
+.cat-structure .cat-label{background:rgba(87,137,156,0.12);color:var(--slate)}
+.cat-special .cat-label{background:rgba(195,124,60,0.12);color:var(--copper)}
+
+.legend{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px}
+.legend-item{display:flex;align-items:center;gap:6px;font-size:0.85em}
+.legend-swatch{width:16px;height:16px;border-radius:4px;border:1px solid rgba(0,0,0,0.15)}
+</style>
+</head>
+<body>
+
+<h1>Parts of Speech — A Plain-Language Guide</h1>
+<p class="subtitle">What each grammatical term means, with examples in English and Hebrew.</p>
+
+<div class="legend">
+  <span class="legend-item"><span class="legend-swatch" style="background:rgba(30,58,79,0.2)"></span> Action words</span>
+  <span class="legend-item"><span class="legend-swatch" style="background:rgba(74,107,82,0.2)"></span> Things &amp; people</span>
+  <span class="legend-item"><span class="legend-swatch" style="background:rgba(213,169,60,0.25)"></span> Describing words</span>
+  <span class="legend-item"><span class="legend-swatch" style="background:rgba(106,89,131,0.2)"></span> Connecting words</span>
+  <span class="legend-item"><span class="legend-swatch" style="background:rgba(87,137,156,0.2)"></span> Structure words</span>
+  <span class="legend-item"><span class="legend-swatch" style="background:rgba(195,124,60,0.2)"></span> Unique to Hebrew</span>
+</div>
+
+<div class="pos-grid">
+
+<!-- VERB -->
+<div class="pos-card cat-action" data-cat="action">
+<div>
+  <span class="cat-label">Action</span>
+  <div class="pos-label">Verb</div>
+  <div class="pos-hebrew">פֹּעַל (po'al)</div>
+</div>
+<div class="pos-body">
+  <div class="pos-what"><strong>What it is:</strong> A word that describes an action, an occurrence, or a state of being. Verbs are the engines of sentences — they tell you what is happening.</div>
+  <div class="pos-english"><strong>English examples:</strong> create, walk, speak, know, be</div>
+  <div class="pos-hebrew-ex"><span class="hebrew">בָּרָא</span> <em>(bara)</em> — "he created" &nbsp;|&nbsp; <span class="hebrew">אָמַר</span> <em>(amar)</em> — "he said"</div>
+  <div style="margin-top:8px;font-size:0.88em;color:var(--text-light)">In Hebrew, a single verb form tells you the action, who is doing it, their gender, and whether they are one person or many.</div>
+</div>
+</div>
+
+<!-- NOUN -->
+<div class="pos-card cat-thing" data-cat="thing">
+<div>
+  <span class="cat-label">Thing / Person</span>
+  <div class="pos-label">Noun</div>
+  <div class="pos-hebrew">שֵׁם (shem)</div>
+</div>
+<div class="pos-body">
+  <div class="pos-what"><strong>What it is:</strong> A word that names a person, place, thing, or idea. If you can put "the" in front of it, it is probably a noun.</div>
+  <div class="pos-english"><strong>English examples:</strong> king, land, covenant, peace, God</div>
+  <div class="pos-hebrew-ex"><span class="hebrew">מֶלֶךְ</span> <em>(melekh)</em> — "king" &nbsp;|&nbsp; <span class="hebrew">אֶרֶץ</span> <em>(erets)</em> — "land"</div>
+  <div style="margin-top:8px;font-size:0.88em;color:var(--text-light)">Hebrew nouns have gender (masculine or feminine) and number (singular, plural, or dual).</div>
+</div>
+</div>
+
+<!-- PRONOUN -->
+<div class="pos-card cat-thing" data-cat="thing">
+<div>
+  <span class="cat-label">Thing / Person</span>
+  <div class="pos-label">Pronoun</div>
+  <div class="pos-hebrew">כִּנּוּי (kinnui)</div>
+</div>
+<div class="pos-body">
+  <div class="pos-what"><strong>What it is:</strong> A word that stands in for a noun, so you do not have to repeat the same name over and over. Instead of saying "Abraham went where Abraham was told," you say "Abraham went where <em>he</em> was told."</div>
+  <div class="pos-english"><strong>English examples:</strong> he, she, it, they, I, you, we, this, that</div>
+  <div class="pos-hebrew-ex"><span class="hebrew">הוּא</span> <em>(hu)</em> — "he" &nbsp;|&nbsp; <span class="hebrew">הִיא</span> <em>(hi)</em> — "she" &nbsp;|&nbsp; <span class="hebrew">אֲנִי</span> <em>(ani)</em> — "I"</div>
+  <div style="margin-top:8px;font-size:0.88em;color:var(--text-light)">Hebrew pronouns often attach directly to other words as suffixes — "his book" becomes a single word.</div>
+</div>
+</div>
+
+<!-- ADJECTIVE -->
+<div class="pos-card cat-describe" data-cat="describe">
+<div>
+  <span class="cat-label">Describing</span>
+  <div class="pos-label">Adjective</div>
+  <div class="pos-hebrew">תֹּאַר (to'ar)</div>
+</div>
+<div class="pos-body">
+  <div class="pos-what"><strong>What it is:</strong> A word that describes or modifies a noun — it tells you <em>what kind</em> or <em>which one</em>. Adjectives answer questions like "What kind of king?" or "Which land?"</div>
+  <div class="pos-english"><strong>English examples:</strong> great, holy, good, righteous, new</div>
+  <div class="pos-hebrew-ex"><span class="hebrew">גָּדוֹל</span> <em>(gadol)</em> — "great" &nbsp;|&nbsp; <span class="hebrew">טוֹב</span> <em>(tov)</em> — "good"</div>
+  <div style="margin-top:8px;font-size:0.88em;color:var(--text-light)">In Hebrew, adjectives must match their noun in gender and number: a great king (גָּדוֹל) vs. a great queen (גְּדוֹלָה).</div>
+</div>
+</div>
+
+<!-- ADVERB -->
+<div class="pos-card cat-describe" data-cat="describe">
+<div>
+  <span class="cat-label">Describing</span>
+  <div class="pos-label">Adverb</div>
+  <div class="pos-hebrew">תֹּאַר הַפֹּעַל</div>
+</div>
+<div class="pos-body">
+  <div class="pos-what"><strong>What it is:</strong> A word that modifies a verb, an adjective, or another adverb. If adjectives describe <em>things</em>, adverbs describe <em>actions</em> and <em>qualities</em>. They answer questions like "How?" "When?" "Where?"</div>
+  <div class="pos-english"><strong>English examples:</strong> quickly, very, now, here, greatly</div>
+  <div class="pos-hebrew-ex"><span class="hebrew">מְאֹד</span> <em>(me'od)</em> — "very, greatly" &nbsp;|&nbsp; <span class="hebrew">שָׁם</span> <em>(sham)</em> — "there"</div>
+  <div style="margin-top:8px;font-size:0.88em;color:var(--text-light)">Hebrew uses adverbs less frequently than English — context and word order often do the work instead.</div>
+</div>
+</div>
+
+<!-- PREPOSITION -->
+<div class="pos-card cat-connect" data-cat="connect">
+<div>
+  <span class="cat-label">Connecting</span>
+  <div class="pos-label">Preposition</div>
+  <div class="pos-hebrew">מִלַּת יַחַס</div>
+</div>
+<div class="pos-body">
+  <div class="pos-what"><strong>What it is:</strong> A word that shows the relationship between a noun and the rest of the sentence — usually involving location, direction, time, or means. Think of prepositions as arrows pointing to <em>where</em>, <em>when</em>, or <em>how</em>.</div>
+  <div class="pos-english"><strong>English examples:</strong> in, on, to, from, with, before, after</div>
+  <div class="pos-hebrew-ex"><span class="hebrew">בְּ</span> <em>(be-)</em> — "in" &nbsp;|&nbsp; <span class="hebrew">לְ</span> <em>(le-)</em> — "to" &nbsp;|&nbsp; <span class="hebrew">מִן</span> <em>(min)</em> — "from"</div>
+  <div style="margin-top:8px;font-size:0.88em;color:var(--text-light)">Three common Hebrew prepositions (בְּ, לְ, כְּ) attach directly to the front of a word as single-letter prefixes.</div>
+</div>
+</div>
+
+<!-- CONJUNCTION -->
+<div class="pos-card cat-connect" data-cat="connect">
+<div>
+  <span class="cat-label">Connecting</span>
+  <div class="pos-label">Conjunction</div>
+  <div class="pos-hebrew">מִלַּת חִבּוּר</div>
+</div>
+<div class="pos-body">
+  <div class="pos-what"><strong>What it is:</strong> A word that joins words, phrases, or sentences together. Conjunctions are the glue of language.</div>
+  <div class="pos-english"><strong>English examples:</strong> and, but, or, because, when, if</div>
+  <div class="pos-hebrew-ex"><span class="hebrew">וְ</span> <em>(ve-)</em> — "and" &nbsp;|&nbsp; <span class="hebrew">כִּי</span> <em>(ki)</em> — "because / that / when"</div>
+  <div style="margin-top:8px;font-size:0.88em;color:var(--text-light)">The vav (וְ) is by far the most common conjunction in Hebrew. It can mean "and," "but," "then," or "so" — and as the <em>vav consecutive</em>, it can even reverse a verb's tense.</div>
+</div>
+</div>
+
+<!-- ARTICLE -->
+<div class="pos-card cat-structure" data-cat="structure">
+<div>
+  <span class="cat-label">Structure</span>
+  <div class="pos-label">Definite Article</div>
+  <div class="pos-hebrew">הַ (ha-)</div>
+</div>
+<div class="pos-body">
+  <div class="pos-what"><strong>What it is:</strong> English has two articles: "a" (indefinite — any one) and "the" (definite — a specific one). Hebrew has only the definite article הַ, which attaches to the front of a noun. When there is no הַ, the noun is indefinite.</div>
+  <div class="pos-english"><strong>English:</strong> "a king" vs. "the king"</div>
+  <div class="pos-hebrew-ex"><span class="hebrew">מֶלֶךְ</span> — "a king" &nbsp;→&nbsp; <span class="hebrew">הַמֶּלֶךְ</span> — "<em>the</em> king"</div>
+  <div style="margin-top:8px;font-size:0.88em;color:var(--text-light)">Hebrew has no indefinite article — the absence of הַ is itself the signal that a noun is indefinite.</div>
+</div>
+</div>
+
+<!-- DIRECT OBJECT MARKER -->
+<div class="pos-card cat-special" data-cat="special">
+<div>
+  <span class="cat-label">Unique to Hebrew</span>
+  <div class="pos-label">Direct Object Marker</div>
+  <div class="pos-hebrew">אֵת (et)</div>
+</div>
+<div class="pos-body">
+  <div class="pos-what"><strong>What it is:</strong> A small word with no English translation. It appears before a definite direct object (the thing being acted upon) to mark it grammatically. English does not need this because word order tells us which noun is the object. Hebrew word order is more flexible, so אֵת provides the signal instead.</div>
+  <div class="pos-english"><strong>English equivalent:</strong> none — English uses word order instead</div>
+  <div class="pos-hebrew-ex"><span class="hebrew">בָּרָא אֱלֹהִים <strong>אֵת</strong> הַשָּׁמַיִם</span> — "God created <strong>[mark]</strong> the heavens"</div>
+  <div style="margin-top:8px;font-size:0.88em;color:var(--text-light)">You will see אֵת constantly in biblical text. It is one of the most common words in the Hebrew Bible.</div>
+</div>
+</div>
+
+<!-- CONSTRUCT STATE -->
+<div class="pos-card cat-special" data-cat="special">
+<div>
+  <span class="cat-label">Unique to Hebrew</span>
+  <div class="pos-label">Construct Chain</div>
+  <div class="pos-hebrew">סְמִיכוּת (semikhut)</div>
+</div>
+<div class="pos-body">
+  <div class="pos-what"><strong>What it is:</strong> A way of linking two nouns to show possession or relationship — like English "of" phrases, but without a separate word for "of." The first noun changes its form slightly and leans into the second noun. The two become a single unit of meaning.</div>
+  <div class="pos-english"><strong>English equivalent:</strong> "the word <em>of</em> God" or "God's word"</div>
+  <div class="pos-hebrew-ex"><span class="hebrew">דְּבַר יהוה</span> <em>(devar YHWH)</em> — "the word of the LORD"</div>
+  <div style="margin-top:8px;font-size:0.88em;color:var(--text-light)">Construct chains appear everywhere in biblical Hebrew — names, titles, descriptions. Learning to spot them is one of the most practical skills in reading the text.</div>
+</div>
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+<div class="chart-embed" style="margin: 30px 0;">
+    <iframe src="{{ printf "/charts/%s.html" (.Get 0) }}" style="width: 100%; min-height: 600px; border: 1px solid var(--sage-pale); border-radius: 10px;" loading="lazy"></iframe>
+    <p style="text-align: center; margin-top: 10px;">
+        <a href="{{ printf "/charts/%s.html" (.Get 0) }}" target="_blank" style="color: var(--sage-dark); font-weight: 600; text-decoration: none; border-bottom: 2px solid var(--gold);">Open full chart in new tab</a>
+    </p>
+</div>

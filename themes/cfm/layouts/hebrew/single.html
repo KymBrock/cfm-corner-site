@@ -1,0 +1,25 @@
+{{ define "main" }}
+<div class="hebrew-lesson-page" data-pagefind-body>
+
+    <div class="hebrew-lesson-header">
+        <a href="{{ "hebrew/" | relURL }}" class="hebrew-back">← All Lessons</a>
+        <div class="hebrew-lesson-num">Lesson {{ .Params.lesson_num }}</div>
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.week_ref }}<p class="hebrew-week-ref">First introduced in <a href="{{ printf "weeks/%s/" . | relURL }}">Week {{ . }}</a></p>{{ end }}
+    </div>
+
+    <div class="hebrew-lesson-content">
+        {{ .Content }}
+    </div>
+
+    <div class="hebrew-lesson-nav">
+        {{ with .NextInSection }}
+        <a href="{{ .RelPermalink }}" class="hebrew-nav-prev">← Lesson {{ .Params.lesson_num }}: {{ .Title }}</a>
+        {{ end }}
+        {{ with .PrevInSection }}
+        <a href="{{ .RelPermalink }}" class="hebrew-nav-next">Lesson {{ .Params.lesson_num }}: {{ .Title }} →</a>
+        {{ end }}
+    </div>
+
+</div>
+{{ end }}
