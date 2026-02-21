@@ -10,7 +10,7 @@ week_ref: "08"
 
 If you have been following along since Lesson 1, you have already accomplished something remarkable. You know the twenty-two consonants of the Hebrew alphabet. You understand how vowel marks bring those consonants to life. You have met the dagesh and learned how a single dot can change a letter's sound. All of that was preparation for what we are about to learn now.
 
-This lesson introduces the single most important concept in Biblical Hebrew: the **three-letter root**, called the שֹׁרֶשׁ (*shoresh*). The word itself means "root" in the botanical sense — the underground source from which a living thing grows. And that image is exactly right. In Hebrew, nearly every word in the language grows from a root of three consonants. Master this concept, and you will begin to see connections in scripture that are completely invisible in English translation.
+This lesson introduces the single most important concept in Biblical Hebrew: the **three-letter root**, called the שֹׁרֶשׁ  ([*shoresh*](https://www.blueletterbible.org/lexicon/h8328/kjv/wlc/0-1/)). The word itself means "root" in the botanical sense — the underground source from which a living thing grows. And that image is exactly right. In Hebrew, nearly every word in the language grows from a root of three consonants. Master this concept, and you will begin to see connections in scripture that are completely invisible in English translation.
 
 This is where Hebrew stops being an academic exercise and starts transforming how you read the Bible.
 
@@ -36,11 +36,11 @@ The best way to understand roots is to watch them work. Let us take four roots t
 
 The root M-L-K carries the core idea of kingship and royal authority. From these three consonants, Hebrew builds:
 
-- **מֶלֶךְ** (*melekh*) — king
-- **מַלְכָּה** (*malkah*) — queen
-- **מַלְכוּת** (*malkhut*) — kingdom, reign, sovereignty
-- **מָלַךְ** (*malakh*) — he reigned, he became king
-- **מַלְכִּי-צֶדֶק** (*Malki-Tsedeq*) — Melchizedek, literally "my king is righteousness"
+- **מֶלֶךְ** ([*melekh*](https://www.blueletterbible.org/lexicon/h4428/kjv/wlc/0-1/)) — king
+- **מַלְכָּה** ([*malkah*](https://www.blueletterbible.org/lexicon/h4436/kjv/wlc/0-1/)) — queen
+- **מַלְכוּת** ([*malkhut*](https://www.blueletterbible.org/lexicon/h4438/kjv/wlc/0-1/)) — kingdom, reign, sovereignty
+- **מָלַךְ** ([*malakh*](https://www.blueletterbible.org/lexicon/h4427/kjv/wlc/0-1/)) — he reigned, he became king
+- **מַלְכִּי-צֶדֶק** ([*Malki-Tsedeq*](https://www.blueletterbible.org/lexicon/h4442/kjv/wlc/0-1/)) — Melchizedek, literally "my king is righteousness"
 
 That last one is worth lingering over. When you encounter Melchizedek in Genesis 14, his name is not just a label. It is a theological statement built from two roots: M-L-K (king) and Ts-D-Q (righteous). His very name declares that his king — or his kingship — is righteousness itself. English translations usually just say "Melchizedek" without comment. Hebrew readers heard a sermon in two words.
 
@@ -48,40 +48,40 @@ That last one is worth lingering over. When you encounter Melchizedek in Genesis
 
 The root Q-D-Sh carries the idea of being set apart, consecrated, made distinct from the ordinary. Its family includes:
 
-- **קָדוֹשׁ** (*qadosh*) — holy, sacred
-- **קֹדֶשׁ** (*qodesh*) — holiness, a holy thing, sacredness
-- **מִקְדָּשׁ** (*miqdash*) — sanctuary, temple, holy place
-- **קִדֵּשׁ** (*qiddesh*) — to sanctify, to consecrate, to make holy
-- **לְהַקְדִּישׁ** (*lehaqdish*) — to dedicate, to set apart for sacred use
+- **קָדוֹשׁ** ([*qadosh*](https://www.blueletterbible.org/lexicon/h6918/kjv/wlc/0-1/)) — holy, sacred
+- **קֹדֶשׁ** ([*qodesh*](https://www.blueletterbible.org/lexicon/h6944/kjv/wlc/0-1/)) — holiness, a holy thing, sacredness
+- **מִקְדָּשׁ** ([*miqdash*](https://www.blueletterbible.org/lexicon/h4720/kjv/wlc/0-1/)) — sanctuary, temple, holy place
+- **קִדֵּשׁ** ([*qiddesh*](https://www.blueletterbible.org/lexicon/h6942/kjv/wlc/0-1/)) — to sanctify, to consecrate, to make holy
+- **לְהַקְדִּישׁ** ([*lehaqdish*](https://www.blueletterbible.org/lexicon/h6942/kjv/wlc/0-1/)) — to dedicate, to set apart for sacred use
 
-Notice the word *miqdash* — sanctuary or temple. It is built from the root Q-D-Sh with a מ (*mem*) prefix, which in Hebrew often creates a "place of" noun. So *miqdash* literally means "a place of holiness." Every time the Old Testament mentions the sanctuary or the temple, this root is humming underneath the surface, reminding the reader that this is not merely a building. It is a place defined by its set-apartness.
+Notice the word *miqdash* — sanctuary or temple. It is built from the root Q-D-Sh with a מ  ([*mem*](https://www.blueletterbible.org/search/search.cfm?Criteria=mem&t=KJV#s=s_primary_0_1)) prefix, which in Hebrew often creates a "place of" noun. So *miqdash* literally means "a place of holiness." Every time the Old Testament mentions the sanctuary or the temple, this root is humming underneath the surface, reminding the reader that this is not merely a building. It is a place defined by its set-apartness.
 
-And when Isaiah records the angels crying "Holy, holy, holy" (*qadosh, qadosh, qadosh*) in Isaiah 6:3, the threefold repetition of this root is the Hebrew way of expressing the superlative. God is not just holy. He is the holiest of all — set apart beyond all set-apartness.
+And when Isaiah records the angels crying "Holy, holy, holy" ([*qadosh, qadosh, qadosh*](https://www.blueletterbible.org/search/search.cfm?Criteria=qadosh%2C%20qadosh%2C%20qadosh&t=KJV#s=s_primary_0_1)) in [Isaiah 6:3](https://www.blueletterbible.org/kjv/isa/6/3/), the threefold repetition of this root is the Hebrew way of expressing the superlative. God is not just holy. He is the holiest of all — set apart beyond all set-apartness.
 
 ### ב-ר-כ (B-R-K) — Bless, Kneel
 
 The root B-R-K is one of the most important in the entire Bible, especially in the story of Abraham. Its family includes:
 
-- **בְּרָכָה** (*berakhah*) — blessing
-- **בָּרוּךְ** (*barukh*) — blessed
-- **בָּרַךְ** (*barakh*) — to bless, to praise
-- **בֶּרֶךְ** (*berekh*) — knee
+- **בְּרָכָה** ([*berakhah*](https://www.blueletterbible.org/lexicon/h1293/kjv/wlc/0-1/)) — blessing
+- **בָּרוּךְ** ([*barukh*](https://www.blueletterbible.org/lexicon/h1288/kjv/wlc/0-1/)) — blessed
+- **בָּרַךְ** ([*barakh*](https://www.blueletterbible.org/lexicon/h1288/kjv/wlc/0-1/)) — to bless, to praise
+- **בֶּרֶךְ** ([*berekh*](https://www.blueletterbible.org/lexicon/h1290/kjv/wlc/0-1/)) — knee
 
 That last word is the one that stops people in their tracks. The Hebrew word for "knee" shares its root with the word for "blessing." Why? Because in the ancient world, you knelt to receive a blessing. You bowed your knee before a king or a priest, and they placed their hands on your head and spoke words of power and favor over you. The physical posture of humility and the spiritual reality of blessing were so intertwined in Hebrew thought that they grew from the same root.
 
-This root appears **five times** in Genesis 12:2-3 alone — God's covenant call to Abraham. "I will *bless* you... you shall be a *blessing*... I will *bless* those who *bless* you... in you all families of the earth shall be *blessed*." The Abrahamic covenant is, at its linguistic core, a cascade of B-R-K.
+This root appears **five times** in [Genesis 12:2-3](https://www.blueletterbible.org/kjv/gen/12/2/) alone — God's covenant call to Abraham. "I will *bless* you... you shall be a *blessing*... I will *bless* those who *bless* you... in you all families of the earth shall be *blessed*." The Abrahamic covenant is, at its linguistic core, a cascade of B-R-K.
 
 ### שׁ-ל-מ (Sh-L-M) — Peace, Wholeness, Completion
 
 The root Sh-L-M may be the most beloved in Hebrew. It carries the idea of completeness, wholeness, and well-being. Its family includes:
 
-- **שָׁלוֹם** (*shalom*) — peace, wholeness, well-being
-- **שָׁלֵם** (*shalem*) — complete, whole, at peace
-- **יְרוּשָׁלַיִם** (*Yerushalayim*) — Jerusalem, traditionally understood as "foundation of peace" or "city of peace"
-- **שְׁלֹמֹה** (*Shelomoh*) — Solomon, meaning "his peace"
-- **שִׁלֵּם** (*shillem*) — to repay, to make whole, to complete
+- **שָׁלוֹם** ([*shalom*](https://www.blueletterbible.org/lexicon/h7965/kjv/wlc/0-1/)) — peace, wholeness, well-being
+- **שָׁלֵם** ([*shalem*](https://www.blueletterbible.org/lexicon/h8003/kjv/wlc/0-1/)) — complete, whole, at peace
+- **יְרוּשָׁלַיִם** ([*Yerushalayim*](https://www.blueletterbible.org/lexicon/h3389/kjv/wlc/0-1/)) — Jerusalem, traditionally understood as "foundation of peace" or "city of peace"
+- **שְׁלֹמֹה** ([*Shelomoh*](https://www.blueletterbible.org/lexicon/h8010/kjv/wlc/0-1/)) — Solomon, meaning "his peace"
+- **שִׁלֵּם** ([*shillem*](https://www.blueletterbible.org/lexicon/h7999/kjv/wlc/0-1/)) — to repay, to make whole, to complete
 
-When Melchizedek appears in Genesis 14:18 as "king of Salem," the word Salem is שָׁלֵם — built from this root. So Melchizedek is simultaneously the "King of Righteousness" (from his name) and the "King of Peace" (from his city). Hebrews 7:2 makes this double meaning explicit. Two roots, woven together in one figure who points forward to Christ, the true Prince of Peace.
+When Melchizedek appears in [Genesis 14:18](https://www.blueletterbible.org/kjv/gen/14/18/) as "king of Salem," the word Salem is שָׁלֵם — built from this root. So Melchizedek is simultaneously the "King of Righteousness" (from his name) and the "King of Peace" (from his city). [Hebrews 7:2](https://www.blueletterbible.org/kjv/heb/7/2/) makes this double meaning explicit. Two roots, woven together in one figure who points forward to Christ, the true Prince of Peace.
 
 And notice *shalom*. In English, we translate it as "peace," which we tend to think of as the absence of conflict. But the Hebrew root means *completeness* — nothing missing, nothing broken. *Shalom* is the state of things being exactly as they should be. It is a far richer concept than our English word can carry.
 
@@ -95,7 +95,7 @@ You may be thinking: this is interesting, but does it actually change how I read
 
 **The blessing-knee connection reveals covenant theology.** When you understand that *berakhah* (blessing) and *berekh* (knee) share the root B-R-K, you begin to see why kneeling matters in covenant contexts. Blessing in Hebrew is not abstract. It flows through physical acts of reverence, through embodied worship, through the posture of humility before God. The next time you kneel in prayer, you are, in a very Hebrew sense, placing yourself in the posture of blessing.
 
-**"Amen" connects to faith, truth, and faithfulness.** The word "amen" (אָמֵן) comes from the root א-מ-נ (Aleph-M-N), the same root that gives us *emunah* (faithfulness), *emet* (truth), and the verb *he'emin* (to believe). When Genesis 15:6 says Abraham "believed" in the Lord, it uses this root. And when you say "amen" at the end of a prayer, you are using the same root — affirming that what has been said is firm, reliable, and true. Abraham's faith and your "amen" are branches of the same tree.
+**"Amen" connects to faith, truth, and faithfulness.** The word "amen" (אָמֵן, [*amen*](https://www.blueletterbible.org/lexicon/h543/kjv/wlc/0-1/)) comes from the root א-מ-נ (Aleph-M-N), the same root that gives us [*emunah*](https://www.blueletterbible.org/lexicon/h530/kjv/wlc/0-1/) (faithfulness), [*emet*](https://www.blueletterbible.org/lexicon/h571/kjv/wlc/0-1/) (truth), and the verb [*he'emin*](https://www.blueletterbible.org/lexicon/h539/kjv/wlc/0-1/) (to believe). When [Genesis 15:6](https://www.blueletterbible.org/kjv/gen/15/6/) says Abraham "believed" in the Lord, it uses this root. And when you say "amen" at the end of a prayer, you are using the same root — affirming that what has been said is firm, reliable, and true. Abraham's faith and your "amen" are branches of the same tree.
 
 ---
 
@@ -103,7 +103,7 @@ You may be thinking: this is interesting, but does it actually change how I read
 
 You do not need to be a Hebrew scholar to start noticing roots. Here are some practical tips:
 
-**Strip the prefixes and suffixes.** Hebrew commonly attaches short prefixes like בְּ (*be-*, "in"), לְ (*le-*, "to"), and מ (*mi-/me-*, "from" or "place of"). It also adds suffixes for gender, number, and possession. Once you remove those outer layers, the three core consonants that remain are usually the root.
+**Strip the prefixes and suffixes.** Hebrew commonly attaches short prefixes like בְּ ([*be-*](https://www.blueletterbible.org/lexicon/h9002/kjv/wlc/0-1/), "in"), לְ ([*le-*](https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/), "to"), and מ ([*mi-/me-*](https://www.blueletterbible.org/search/search.cfm?Criteria=mi-/me-&t=KJV#s=s_primary_0_1), "from" or "place of"). It also adds suffixes for gender, number, and possession. Once you remove those outer layers, the three core consonants that remain are usually the root.
 
 **Look for the three consonants that stay constant.** When you see *melekh*, *malkah*, and *malkhut*, notice that M, L, and K appear in all three. Those are your root letters. The vowels change, but the consonants hold steady.
 

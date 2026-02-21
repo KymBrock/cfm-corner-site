@@ -1,0 +1,74 @@
+{
+  "mappiq": {
+    "title": "Mappiq",
+    "original": "מַפִּיק",
+    "definition": "A dot in a final ה that indicates the consonant is pronounced (not silent). Often discussed in forms like בָּהּ (bah, ‘in her’).",
+    "type": "Hebrew Grammar Term"
+  },
+  "dagesh": {
+    "title": "Dagesh",
+    "original": "דָּגֵשׁ",
+    "definition": "A dot placed inside a Hebrew consonant. Depending on context it can mark hardening (dagesh qal/lene) or doubling/gemination (dagesh chazaq/forte).",
+    "type": "Hebrew Grammar Term"
+  },
+  "sheva": {
+    "title": "Sheva",
+    "original": "שְׁוָא",
+    "definition": "Two vertical dots under a consonant. Can be vocal (very short vowel) or silent (no vowel), depending on position and phonological context.",
+    "type": "Hebrew Grammar Term"
+  },
+  "niqqud": {
+    "title": "Niqqud",
+    "original": "נִקּוּד",
+    "definition": "The Hebrew vowel-pointing system added by the Masoretes to preserve pronunciation without changing the consonantal text.",
+    "type": "Hebrew Grammar Term"
+  },
+  "chataf": {
+    "title": "Chataf",
+    "original": "חֲטַף",
+    "definition": "A reduced (‘ultra-short’) vowel sign used primarily with guttural letters (e.g., chataf patach, chataf segol, chataf qamats).",
+    "type": "Hebrew Grammar Term"
+  },
+  "qamats qatan": {
+    "title": "Qamats Qatan",
+    "original": "קָמַץ קָטָן",
+    "definition": "A short ‘o’ value of qamats that appears in specific closed, unaccented syllable environments.",
+    "type": "Hebrew Grammar Term"
+  },
+  "shemot": {
+    "title": "Shemot",
+    "original": "שֵׁמוֹת",
+    "definition": "Plural of shem (name). In grammar context: ‘nouns’/‘names,’ often used as a label category in Hebrew instruction.",
+    "type": "Hebrew Grammar Term"
+  },
+  "be-": {
+    "title": "be-",
+    "original": "בְּ",
+    "definition": "Inseparable preposition prefix meaning ‘in, with, by’. Often attached directly to the following noun.",
+    "type": "Hebrew Grammar Prefix"
+  },
+  "le-": {
+    "title": "le-",
+    "original": "לְ",
+    "definition": "Inseparable preposition prefix meaning ‘to, for’. Often attached directly to the following noun.",
+    "type": "Hebrew Grammar Prefix"
+  },
+  "min-": {
+    "title": "min-",
+    "original": "מִן",
+    "definition": "Preposition meaning ‘from’. Commonly assimilates/shortens to מִ or מֵ depending on the following letter.",
+    "type": "Hebrew Grammar Prefix"
+  },
+  "ha-": {
+    "title": "ha-",
+    "original": "הַ",
+    "definition": "Definite article prefix meaning 'the'. It attaches to a noun and often triggers predictable vowel/dagesh changes.",
+    "type": "Hebrew Grammar Prefix"
+  },
+  "ve-": {
+    "title": "ve-",
+    "original": "וְ",
+    "definition": "Conjunction prefix meaning 'and'. Often attached directly to the following word.",
+    "type": "Hebrew Grammar Prefix"
+  }
+}

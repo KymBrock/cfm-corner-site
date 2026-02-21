@@ -102,17 +102,17 @@ A few things to notice. First, aleph and ayin are both often represented by an a
 
 You already know more Hebrew than you think. Many Hebrew words have passed into English through the Bible and centuries of religious tradition. Let us look at a few and connect the dots.
 
-**Amen** — Hebrew: אָמֵן — Transliteration: *amen* — Meaning: "So be it," "truly," or "it is firm." From the root aleph-mem-nun, which carries the idea of faithfulness and solidity. When you say "amen," you are speaking Hebrew.
+**Amen** — Hebrew: אָמֵן — Transliteration: [*amen*](https://www.blueletterbible.org/lexicon/h543/kjv/wlc/0-1/) — Meaning: "So be it," "truly," or "it is firm." From the root aleph-mem-nun, which carries the idea of faithfulness and solidity. When you say "amen," you are speaking Hebrew.
 
-**Hallelujah** — Hebrew: הַלְלוּיָהּ — Transliteration: *halleluyah* — Meaning: "Praise Yah" (Yah being a shortened form of the divine name). This is a compound word: *hallelu* (praise, plural imperative) plus *Yah*. The Psalms are full of it.
+**Hallelujah** — Hebrew: הַלְלוּיָהּ — Transliteration: [*halleluyah*](https://www.blueletterbible.org/lexicon/h1984/kjv/wlc/0-1/) — Meaning: "Praise Yah" (Yah being a shortened form of the divine name). This is a compound word: [*hallelu*](https://www.blueletterbible.org/lexicon/h1984/kjv/wlc/0-1/) (praise, plural imperative) plus [*Yah*](https://www.blueletterbible.org/lexicon/h3050/kjv/wlc/0-1/). The Psalms are full of it.
 
-**Shalom** — Hebrew: שָׁלוֹם — Transliteration: *shalom* — Meaning: "Peace," but far richer than the English word suggests. Shalom implies wholeness, completeness, well-being, and harmony. It comes from the root shin-lamed-mem.
+**Shalom** — Hebrew: שָׁלוֹם — Transliteration: [*shalom*](https://www.blueletterbible.org/lexicon/h7965/kjv/wlc/0-1/) — Meaning: "Peace," but far richer than the English word suggests. Shalom implies wholeness, completeness, well-being, and harmony. It comes from the root shin-lamed-mem.
 
-**Sabbath** — Hebrew: שַׁבָּת — Transliteration: *shabbat* — Meaning: "Cessation" or "rest." From the root shin-bet-tav, meaning to cease or stop. The English word "Sabbath" is a direct borrowing, softened slightly in pronunciation over the centuries.
+**Sabbath** — Hebrew: שַׁבָּת — Transliteration: [*shabbat*](https://www.blueletterbible.org/lexicon/h7676/kjv/wlc/0-1/) — Meaning: "Cessation" or "rest." From the root shin-bet-tav, meaning to cease or stop. The English word "Sabbath" is a direct borrowing, softened slightly in pronunciation over the centuries.
 
-**Messiah** — Hebrew: מָשִׁיחַ — Transliteration: *mashiach* — Meaning: "Anointed one." From the root mem-shin-chet, meaning to smear or anoint with oil. The Greek equivalent is *Christos*, from which we get "Christ."
+**Messiah** — Hebrew: מָשִׁיחַ — Transliteration: [*mashiach*](https://www.blueletterbible.org/lexicon/h4899/kjv/wlc/0-1/) — Meaning: "Anointed one." From the root mem-shin-chet, meaning to smear or anoint with oil. The Greek equivalent is *Christos*, from which we get "Christ."
 
-**Torah** — Hebrew: תּוֹרָה — Transliteration: *torah* — Meaning: "Instruction" or "teaching." Often translated as "law," but the Hebrew word is warmer than that — it is guidance from a loving source. From the root yod-resh-he, meaning to throw or direct.
+**Torah** — Hebrew: תּוֹרָה — Transliteration: [*torah*](https://www.blueletterbible.org/lexicon/h8451/kjv/wlc/0-1/) — Meaning: "Instruction" or "teaching." Often translated as "law," but the Hebrew word is warmer than that — it is guidance from a loving source. From the root yod-resh-he, meaning to throw or direct.
 
 Notice how each of these words opens a small window into the theology of the Hebrew Bible. That is the gift of even a little Hebrew: the familiar becomes richer.
 

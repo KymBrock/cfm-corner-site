@@ -115,37 +115,37 @@ Let us put the tables to work. Below are several biblical Hebrew words shown fou
 
 **In the beginning:**
 - Hebrew: בְּרֵאשִׁית
-- Transliteration: *bereshit*
+- Transliteration: [*bereshit*](https://www.blueletterbible.org/lexicon/h7225/kjv/wlc/0-1/)
 - IPA: /beʁeˈʃit/
 - The first word of Genesis. "In the beginning." The stress falls on the final syllable.
 
 **The divine name:**
 - Hebrew: יהוה
-- Transliteration: *YHWH* (the Tetragrammaton)
+- Transliteration: [*YHWH*](https://www.blueletterbible.org/lexicon/h3068/kjv/wlc/0-1/) (the Tetragrammaton)
 - IPA: /jahˈwe/ (reconstructed scholarly pronunciation)
 - The sacred four-letter name of God, usually not spoken aloud in Jewish tradition. The reconstructed pronunciation remains a matter of scholarly discussion.
 
 **Anointed one:**
 - Hebrew: מָשִׁיחַ
-- Transliteration: *mashiach*
+- Transliteration: [*mashiach*](https://www.blueletterbible.org/lexicon/h4899/kjv/wlc/0-1/)
 - IPA: /maˈʃiaχ/
 - "Messiah." Notice the final sound — /χ/, that throaty chet — which is often lost when English speakers say "Messiah."
 
 **Peace:**
 - Hebrew: שָׁלוֹם
-- Transliteration: *shalom*
+- Transliteration: [*shalom*](https://www.blueletterbible.org/lexicon/h7965/kjv/wlc/0-1/)
 - IPA: /ʃaˈlom/
 - Wholeness, completeness, peace. The /ʃ/ at the beginning is the shin sound, identical to English "sh."
 
 **Praise Yah:**
 - Hebrew: הַלְלוּיָהּ
-- Transliteration: *halleluyah*
+- Transliteration: [*halleluyah*](https://www.blueletterbible.org/lexicon/h1984/kjv/wlc/0-1/)
 - IPA: /halːeluˈja/
 - "Hallelujah." A compound word — the imperative "praise" plus the divine name "Yah." The double-l represents a geminated (lengthened) lamed.
 
 **Instruction:**
 - Hebrew: תּוֹרָה
-- Transliteration: *torah*
+- Transliteration: [*torah*](https://www.blueletterbible.org/lexicon/h8451/kjv/wlc/0-1/)
 - IPA: /toˈʁa/
 - "Torah." Teaching, instruction, guidance. Often translated as "law," though the Hebrew is warmer than that English word suggests.
 

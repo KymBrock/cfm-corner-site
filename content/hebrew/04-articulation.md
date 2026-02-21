@@ -91,7 +91,7 @@ You have already seen that small dot — the dagesh — sitting inside certain H
 
 The pattern is consistent: the dagesh marks a full stop of airflow; without it, the air continues as friction. Same place, different manner. This is not an accident — it is a natural phonetic process called **lenition** (softening). When a consonant appears between vowels in flowing speech, the mouth tends to relax the closure slightly. Instead of a full stop-and-release, the articulators come close but let air through. The dagesh, in this context, is a written record of a physical reality.
 
-We will explore the dagesh and these letter classifications in much more detail in [Lesson 6](/hebrew/06-dagesh/). For now, the important thing is this: understanding place and manner of articulation turns the begadkephat pattern from something you memorize into something you can *feel*.
+We will explore the dagesh and these letter classifications in much more detail in [Lesson 6: The Dagesh & Letter Classifications](/hebrew/06-dagesh/). For now, the important thing is this: understanding place and manner of articulation turns the begadkephat pattern from something you memorize into something you can *feel*.
 
 ## Why This Matters for Hebrew
 

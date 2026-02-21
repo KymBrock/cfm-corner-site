@@ -28,7 +28,7 @@ The Hebrew alphabet did not appear out of nowhere. It has a history stretching b
 
 The earliest known alphabetic writing appeared around 1850–1550 BCE in the Sinai Peninsula, likely among Semitic-speaking workers who labored in Egyptian turquoise mines. These workers were surrounded by the complex hieroglyphic system of Egypt — thousands of symbols that required years of training to master. What they did was brilliantly simple: they took familiar Egyptian pictographs and adapted them using what scholars call the **acrophonic principle**.
 
-The acrophonic principle works like this: each picture represents only the *first sound* of the word it depicts. A picture of an ox-head was called *'alpu* (the word for "ox"), so it came to represent just the sound at the beginning of that word — the glottal stop. A picture of a house floor plan was called *baytu* ("house"), so it represented just the /b/ sound. A picture of water (*mayim*) represented /m/.
+The acrophonic principle works like this: each picture represents only the *first sound* of the word it depicts. A picture of an ox-head was called *'alpu* (the word for "ox"), so it came to represent just the sound at the beginning of that word — the glottal stop. A picture of a house floor plan was called *baytu* ("house"), so it represented just the /b/ sound. A picture of water ([*mayim*](https://www.blueletterbible.org/lexicon/h4325/kjv/wlc/0-1/)) represented /m/.
 
 This was a cognitive breakthrough of the highest order. Instead of thousands of signs, the entire range of spoken language could be captured with just 22 characters. For the first time in known history, writing became accessible beyond the priestly and scribal elite.
 
@@ -93,7 +93,7 @@ Here are all 22 letters, presented in their traditional order:
 | 12 | <span class="proto-sin">l</span> | 𐤋 | **ל** | Lamed | l | Goad / staff |
 
 - **Tet** is an emphatic "t" — spoken with more force than the ordinary Tav.
-- **Yod** is the smallest letter in the alphabet, just a tiny mark, yet it is one of the most important. It was a picture of a hand and arm, and it is the ancestor of our letters I and J. When Jesus said "not one jot" would pass from the law (Matthew 5:18), he was referring to the Yod — a powerful reminder that even the smallest detail of God's word matters.
+- **Yod** is the smallest letter in the alphabet, just a tiny mark, yet it is one of the most important. It was a picture of a hand and arm, and it is the ancestor of our letters I and J. When Jesus said "not one jot" would pass from the law ([Matthew 5:18](https://www.blueletterbible.org/kjv/mat/5/18/)), he was referring to the Yod — a powerful reminder that even the smallest detail of God's word matters.
 - **Kaf** was the palm of a hand (think of the "cupping" gesture) and gave us our K.
 - **Lamed** was an ox-goad or staff — the tall shepherd's crook used to guide animals — and it is the ancestor of our L. It is also the tallest letter in the Hebrew alphabet, rising above the line.
 
@@ -133,7 +133,7 @@ Here are all 22 letters, presented in their traditional order:
 
 - **Resh** was a head (seen in profile) and became our R.
 - **Shin** was a tooth — and the three points at the top of the modern letter still suggest teeth. It produces either a "sh" or an "s" sound depending on where the dot is placed.
-- **Tav**, the last letter, was a mark or cross — a signature. It is the ancestor of our T. In Ezekiel 9:4, God commands that a *tav* be placed on the foreheads of the righteous — a mark of protection. In the ancient script, that mark would have looked like a simple cross.
+- **Tav**, the last letter, was a mark or cross — a signature. It is the ancestor of our T. In [Ezekiel 9:4](https://www.blueletterbible.org/kjv/ezk/9/4/), God commands that a [*tav*](https://www.blueletterbible.org/lexicon/h8420/kjv/wlc/0-1/) be placed on the foreheads of the righteous — a mark of protection. In the ancient script, that mark would have looked like a simple cross.
 
 ---
 
@@ -159,11 +159,11 @@ When these letters appear at the end of a word or in certain positions, they may
 
 You might wonder whether learning 22 ancient letters is truly worth the effort. Here are a few glimpses of what opens up when you can recognize them.
 
-**Names become transparent.** The name Isaac (*Yitschaq*, יצחק) shares its root letters with the Hebrew word for laughter (*tsachaq*, צחק). When you can see those shared letters — Tsade, Chet, Qof — the connection between the name and the story of Sarah's laughter (Genesis 18:12) leaps off the page. The name is not just a label; it is a narrative compressed into a single word.
+**Names become transparent.** The name Isaac ([*Yitschaq*](https://www.blueletterbible.org/lexicon/h3327/kjv/wlc/0-1/), יצחק) shares its root letters with the Hebrew word for laughter ([*tsachaq*](https://www.blueletterbible.org/lexicon/h6711/kjv/wlc/0-1/), צחק). When you can see those shared letters — Tsade, Chet, Qof — the connection between the name and the story of Sarah's laughter ([Genesis 18:12](https://www.blueletterbible.org/kjv/gen/18/12/)) leaps off the page. The name is not just a label; it is a narrative compressed into a single word.
 
-**Wordplay becomes visible.** The Hebrew prophets were masters of wordplay, and much of it depends on the consonantal structure of words. In Isaiah 5:7, God looked for *mishpat* (justice) but found *mispach* (bloodshed); he looked for *tsedaqah* (righteousness) but heard *tse'aqah* (a cry of distress). The near-identical sounds create a devastating contrast — but you can only hear it if you can see the letters.
+**Wordplay becomes visible.** The Hebrew prophets were masters of wordplay, and much of it depends on the consonantal structure of words. In [Isaiah 5:7](https://www.blueletterbible.org/kjv/isa/5/7/), God looked for [*mishpat*](https://www.blueletterbible.org/lexicon/h4941/kjv/wlc/0-1/) (justice) but found [*mispach*](https://www.blueletterbible.org/lexicon/h4938/kjv/wlc/0-1/) (bloodshed); he looked for [*tsedaqah*](https://www.blueletterbible.org/lexicon/h6666/kjv/wlc/0-1/) (righteousness) but heard [*tse'aqah*](https://www.blueletterbible.org/lexicon/h6818/kjv/wlc/0-1/) (a cry of distress). The near-identical sounds create a devastating contrast — but you can only hear it if you can see the letters.
 
-**The structure of the text comes alive.** Several psalms (including Psalm 119, the longest chapter in the Bible) are *acrostic* — each section begins with a successive letter of the Hebrew alphabet. Without knowing the aleph-bet, you would never notice this elegant structure or understand why the psalm has exactly 22 sections.
+**The structure of the text comes alive.** Several psalms (including [Psalm 119](https://www.blueletterbible.org/kjv/psa/119/1/), the longest chapter in the Bible) are *acrostic* — each section begins with a successive letter of the Hebrew alphabet. Without knowing the aleph-bet, you would never notice this elegant structure or understand why the psalm has exactly 22 sections.
 
 Even at this early stage, you are beginning to build the foundation for a richer, deeper encounter with the word of God.
 

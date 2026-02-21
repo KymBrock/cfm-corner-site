@@ -848,6 +848,25 @@ body {
 .hebrew-week-ref a { color: var(--sage-dark); }
 .hebrew-lesson-content { line-height: 1.8; color: var(--text-primary); font-size: var(--text-base); }
 .hebrew-lesson-content p { margin-bottom: 1.4em; }
+
+/* Hebrew lesson links — consistent site styling */
+.hebrew-lesson-content a {
+    color: var(--sage-dark);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(74, 107, 82, 0.35);
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+.hebrew-lesson-content a:hover {
+    color: var(--sage-dark);
+    border-bottom-color: var(--sage-dark);
+}
+/* Keep navigation/chart/button links from inheriting inline content styling */
+.hebrew-lesson-content .quick-access-btn,
+.hebrew-lesson-content [class*="btn"],
+.hebrew-lesson-content a[style*="background"],
+.hebrew-lesson-content a[style*="padding"] {
+    border-bottom: none;
+}
 .hebrew-lesson-content hr { margin: 2.5em 0; border: none; border-top: 1px solid var(--sage-pale); }
 .hebrew-lesson-content table { margin: 1.2em 0; border-collapse: separate; border-spacing: 0; width: 100%; }
 .hebrew-lesson-content th, .hebrew-lesson-content td { padding: 10px 14px; border: 1px solid var(--sage-pale); text-align: left; }

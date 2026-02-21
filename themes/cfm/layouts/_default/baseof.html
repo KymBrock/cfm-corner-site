@@ -101,81 +101,287 @@
         </div>
     </footer>
 
-    <!-- BLB ScriptTagger: inline scripture popups -->
-    <script>
-      var defined_BLB = { version: "KJV", hyperlink: true, style: "par", tooltipStyle: "light" };
-    </script>
-    <script src="https://www.blueletterbible.org/assets/scripts/blbToolTip/BLB_ScriptTagger-min.js"></script>
-
-    <!-- Lexicon hover popups (like ScriptTagger but for Hebrew/Greek dictionary links) -->
+    <!-- Unified BLB popup layer (scripture + lexicon) -->
     <style>
-      .lexicon-popup {
+      .blb-popup {
         position: absolute;
         z-index: 10000;
         background: #fff;
         border: 1px solid var(--sage-dark, #4a6b52);
         border-radius: 8px;
         box-shadow: 0 4px 20px rgba(0,0,0,0.18);
-        padding: 14px 18px;
-        max-width: 340px;
-        min-width: 200px;
+        padding: 12px 14px;
+        max-width: 420px;
+        min-width: 220px;
         font-size: 0.92em;
-        line-height: 1.5;
+        line-height: 1.45;
         pointer-events: none;
         opacity: 0;
-        transition: opacity 0.15s;
+        transition: opacity 0.12s;
       }
-      .lexicon-popup.visible { opacity: 1; pointer-events: auto; }
-      .lexicon-popup .lp-word { font-size: 1.3em; font-weight: 700; color: var(--sage-dark, #4a6b52); }
-      .lexicon-popup .lp-hebrew { font-size: 1.4em; font-family: 'SBL Hebrew', 'Ezra SIL', 'Times New Roman', serif; direction: rtl; }
-      .lexicon-popup .lp-greek { font-size: 1.2em; font-family: 'SBL Greek', 'Times New Roman', serif; }
-      .lexicon-popup .lp-strongs { font-size: 0.82em; color: #888; margin-left: 6px; }
-      .lexicon-popup .lp-def { margin-top: 6px; color: #333; }
-      .lexicon-popup .lp-ref { margin-top: 4px; font-size: 0.85em; color: #666; font-style: italic; }
-      .lexicon-popup .lp-link { margin-top: 8px; font-size: 0.82em; }
-      .lexicon-popup .lp-link a { color: var(--sage-dark, #4a6b52); text-decoration: underline; pointer-events: auto; }
-      a[data-lexicon] { cursor: help; }
+      .blb-popup.visible { opacity: 1; pointer-events: auto; }
+      .blb-popup .bp-title { font-weight: 700; color: var(--sage-dark, #4a6b52); margin-bottom: 6px; }
+      .blb-popup .bp-original { font-size: 1.25em; margin-bottom: 4px; }
+      .blb-popup .bp-hebrew { font-family: 'SBL Hebrew', 'Ezra SIL', 'Times New Roman', serif; direction: rtl; }
+      .blb-popup .bp-greek { font-family: 'SBL Greek', 'Times New Roman', serif; }
+      .blb-popup .bp-strongs { color: #888; font-size: 0.85em; margin-left: 6px; }
+      .blb-popup .bp-body { color: #222; }
+      .blb-popup .bp-ref { margin-top: 6px; font-size: 0.85em; color: #666; font-style: italic; }
+      .blb-popup .bp-link { margin-top: 8px; font-size: 0.82em; }
+      .blb-popup .bp-link a { color: var(--sage-dark, #4a6b52); text-decoration: underline; pointer-events: auto; }
+      a[href*="blueletterbible.org/"],
+      a[href*="churchofjesuschrist.org/study/"] {
+        color: var(--sage-dark, #4a6b52);
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
+      }
+      a[href*="blueletterbible.org/"], a[href*="sefaria.org/"] { cursor: help; }
     </style>
     <script>
     (function() {
       var popup = document.createElement('div');
-      popup.className = 'lexicon-popup';
+      popup.className = 'blb-popup';
       document.body.appendChild(popup);
+
       var hideTimer, activeEl = null;
       var isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+      var lexiconData = null;
+      var grammarData = null;
+      var scriptureData = null;
 
-      function show(el) {
+      // BLB URL abbreviations → display names (covers both WLC and KJV styles)
+      var bookMap = {
+        gen:'Genesis', exo:'Exodus', lev:'Leviticus', num:'Numbers', deu:'Deuteronomy', jos:'Joshua', jdg:'Judges', rut:'Ruth',
+        '1sa':'1 Samuel','2sa':'2 Samuel','1ki':'1 Kings','2ki':'2 Kings','1ch':'1 Chronicles','2ch':'2 Chronicles',
+        ezr:'Ezra', neh:'Nehemiah', est:'Esther', job:'Job', psa:'Psalms', pro:'Proverbs', ecc:'Ecclesiastes', sng:'Song of Solomon',
+        isa:'Isaiah', jer:'Jeremiah', lam:'Lamentations',
+        eze:'Ezekiel', ezk:'Ezekiel',
+        dan:'Daniel', hos:'Hosea', joe:'Joel', jol:'Joel', amo:'Amos', oba:'Obadiah',
+        jon:'Jonah', mic:'Micah', nah:'Nahum', nam:'Nahum', hab:'Habakkuk', zep:'Zephaniah', hag:'Haggai', zec:'Zechariah', mal:'Malachi',
+        mat:'Matthew', mar:'Mark', mrk:'Mark', luk:'Luke', jhn:'John', act:'Acts', rom:'Romans',
+        '1co':'1 Corinthians', '2co':'2 Corinthians',
+        gal:'Galatians', eph:'Ephesians', phi:'Philippians', php:'Philippians', col:'Colossians',
+        '1th':'1 Thessalonians', '2th':'2 Thessalonians',
+        '1ti':'1 Timothy', '2ti':'2 Timothy', tit:'Titus', phm:'Philemon',
+        heb:'Hebrews', jam:'James', jas:'James',
+        '1pe':'1 Peter', '2pe':'2 Peter',
+        '1jo':'1 John', '1jn':'1 John', '2jn':'2 John', '3jn':'3 John',
+        jde:'Jude', jud:'Jude', rev:'Revelation'
+      };
+
+      function getLinkType(el) {
+        if (!el || !el.href) return null;
+        if (/blueletterbible\.org\/lexicon\//i.test(el.href)) return 'lexicon';
+        if (/blueletterbible\.org\/kjv\//i.test(el.href)) return 'scripture';
+        if (/blueletterbible\.org\/search\/search\.cfm/i.test(el.href)) return 'blbsearch';
+        if (/sefaria\.org\//i.test(el.href)) return 'sefaria';
+        return null;
+      }
+
+      function parseLexiconCode(href) {
+        var m = href.match(/\/lexicon\/([gh]\d+)\//i);
+        return m ? String(m[1]).toUpperCase().trim() : null;
+      }
+
+      function getLexiconEntry(db, code) {
+        if (!db || !code) return {};
+        var c = String(code).toUpperCase().trim();
+        if (db[c]) return db[c];
+        if (db[c.toLowerCase()]) return db[c.toLowerCase()];
+        // defensive fallback: case-insensitive key match
+        var keys = Object.keys(db);
+        for (var i = 0; i < keys.length; i++) {
+          if (String(keys[i]).toUpperCase().trim() === c) return db[keys[i]];
+        }
+        return {};
+      }
+
+      function parseScriptureRef(href) {
+        try {
+          var u = new URL(href, window.location.origin);
+          var parts = u.pathname.split('/').filter(Boolean); // /kjv/gen/18/14/...
+          if (parts.length < 4) return null;
+          var abbr = (parts[1] || '').toLowerCase();
+          var chapter = parts[2];
+          var verse = (parts[3] || '').split('-')[0];
+          var book = bookMap[abbr];
+          if (!book) return null;
+          return book + ' ' + chapter + ':' + verse;
+        } catch (_) { return null; }
+      }
+
+      function parseSefariaQuery(href) {
+        try {
+          var u = new URL(href, window.location.origin);
+          var q = u.searchParams.get('q') || '';
+          return decodeURIComponent(q || '').replace(/\+/g, ' ').trim();
+        } catch (_) { return ''; }
+      }
+
+      function parseBLBSearchCriteria(href) {
+        try {
+          var u = new URL(href, window.location.origin);
+          var q = u.searchParams.get('Criteria') || '';
+          return decodeURIComponent(q || '').replace(/\+/g, ' ').trim();
+        } catch (_) { return ''; }
+      }
+
+      async function ensureLexiconData() {
+        if (lexiconData) return lexiconData;
+        try {
+          var res = await fetch('/data/lexicon-popups.json?v=20260220b', { cache: 'no-store' });
+          lexiconData = res.ok ? await res.json() : {};
+        } catch (_) {
+          lexiconData = {};
+        }
+        return lexiconData;
+      }
+
+      async function ensureGrammarData() {
+        if (grammarData) return grammarData;
+        try {
+          var res = await fetch('/data/hebrew-grammar-popups.json?v=20260220a', { cache: 'no-store' });
+          grammarData = res.ok ? await res.json() : {};
+        } catch (_) {
+          grammarData = {};
+        }
+        return grammarData;
+      }
+
+      function normTerm(t) {
+        return String(t || '').toLowerCase().replace(/[’']/g, "'").replace(/\s+/g, ' ').trim();
+      }
+
+      function getGrammarEntry(db, translitOrQuery) {
+        if (!db) return null;
+        var key = normTerm(translitOrQuery);
+        if (!key) return null;
+        if (db[key]) return db[key];
+        // loose fallback without apostrophes/spaces
+        var loose = key.replace(/[\s']/g, '');
+        var keys = Object.keys(db);
+        for (var i = 0; i < keys.length; i++) {
+          var k = keys[i];
+          if (k.replace(/[\s']/g, '') === loose) return db[k];
+        }
+        return null;
+      }
+
+      async function ensureScriptureData() {
+        if (scriptureData) return scriptureData;
+        try {
+          var res = await fetch('/data/scripture-verses.json?v=20260221', { cache: 'default' });
+          scriptureData = res.ok ? await res.json() : {};
+        } catch (_) { scriptureData = {}; }
+        return scriptureData;
+      }
+
+      async function getVerse(ref) {
+        if (!ref) return 'Verse preview unavailable.';
+        var db = await ensureScriptureData();
+        return db[ref] || 'Verse preview unavailable.';
+      }
+
+      function place(el) {
+        var r = el.getBoundingClientRect();
+        var w = Math.min(420, window.innerWidth - 20);
+        var left = r.left + window.scrollX;
+        var top = r.bottom + window.scrollY + 6;
+        if (left + w > window.innerWidth) left = window.innerWidth - w - 10;
+        if (left < 10) left = 10;
+        if (isTouch) left = Math.max(10, (window.innerWidth - w) / 2);
+        popup.style.maxWidth = w + 'px';
+        popup.style.left = left + 'px';
+        popup.style.top = top + 'px';
+      }
+
+      async function show(el) {
         clearTimeout(hideTimer);
         activeEl = el;
-        var d = el.dataset;
-        var wordClass = d.lang === 'greek' ? 'lp-greek' : 'lp-hebrew';
-        popup.innerHTML =
-          '<div><span class="lp-word">' + (d.translit || '') + '</span>' +
-          (d.strongs ? ' <span class="lp-strongs">(' + d.strongs + ')</span>' : '') + '</div>' +
-          (d.original ? '<div class="' + wordClass + '">' + d.original + '</div>' : '') +
-          (d.lexicon ? '<div class="lp-def">' + d.lexicon + '</div>' : '') +
-          (d.verse ? '<div class="lp-ref">' + d.verse + '</div>' : '') +
-          '<div class="lp-link"><a href="' + el.href + '" target="_blank">Full entry at Blue Letter Bible →</a></div>';
 
-        var r = el.getBoundingClientRect();
-        var popupWidth = Math.min(340, window.innerWidth - 20);
-        popup.style.maxWidth = popupWidth + 'px';
+        var type = getLinkType(el);
+        if (!type) return;
 
-        // Position: try below, fall back to above if near bottom
-        var top = r.bottom + window.scrollY + 6;
-        var left = r.left + window.scrollX;
+        if (type === 'lexicon') {
+          var d = el.dataset || {};
+          var code = parseLexiconCode(el.href);
+          var db = await ensureLexiconData();
+          var e = getLexiconEntry(db, code);
+          var translit = d.translit || e.translit || '';
+          var original = d.original || e.original || (el.textContent || '').trim();
+          var dataDef = d.lexicon || '';
+          if (dataDef && /preview unavailable/i.test(dataDef)) dataDef = '';
+          var definition = dataDef || e.definition || '';
+          var verse = d.verse || e.verse || '';
+          var lang = d.lang || e.lang || 'hebrew';
 
-        // Keep within viewport horizontally
-        if (left + popupWidth > window.innerWidth) left = window.innerWidth - popupWidth - 10;
-        if (left < 10) left = 10;
+          if (!definition) {
+            var gdb1 = await ensureGrammarData();
+            var g1 = getGrammarEntry(gdb1, translit || original);
+            if (g1) {
+              definition = g1.definition || 'Grammar term.';
+              if (!translit && g1.title) translit = g1.title;
+              if (!original && g1.original) original = g1.original;
+            }
+          }
+          if (!definition) definition = 'Lexicon entry preview unavailable.';
+          var wordClass = lang === 'greek' ? 'bp-greek' : 'bp-hebrew';
 
-        // On mobile, center horizontally for cleaner look
-        if (isTouch) {
-          left = Math.max(10, (window.innerWidth - popupWidth) / 2);
+          popup.innerHTML =
+            '<div class="bp-title">' + (translit || 'Lexicon Entry') +
+            (code ? ' <span class="bp-strongs">(' + code + ')</span>' : '') +
+            '</div>' +
+            '<div class="bp-original ' + wordClass + '">' + original + '</div>' +
+            '<div class="bp-body">' + definition + '</div>' +
+            (verse ? '<div class="bp-ref">' + verse + '</div>' : '') +
+            '<div class="bp-link"><a href="' + el.href + '" target="_blank" rel="noopener">Full entry at Blue Letter Bible →</a></div>';
+
+          place(el);
+          popup.classList.add('visible');
+          return;
         }
 
-        popup.style.top = top + 'px';
-        popup.style.left = left + 'px';
+        if (type === 'blbsearch') {
+          var qblb = parseBLBSearchCriteria(el.href);
+          var labelBlb = ((el.textContent || '').trim() || qblb || 'BLB Search');
+          var gdbBlb = await ensureGrammarData();
+          var gBlb = getGrammarEntry(gdbBlb, labelBlb) || getGrammarEntry(gdbBlb, qblb);
+
+          popup.innerHTML =
+            '<div class="bp-title">' + (gBlb && gBlb.title ? gBlb.title : labelBlb) + '</div>' +
+            (gBlb && gBlb.original ? '<div class="bp-original bp-hebrew">' + gBlb.original + '</div>' : '') +
+            '<div class="bp-body">' + (gBlb && gBlb.definition ? gBlb.definition : (qblb ? 'BLB search term: ' + qblb : 'Open this term in Blue Letter Bible search.')) + '</div>' +
+            '<div class="bp-link"><a href="' + el.href + '" target="_blank" rel="noopener">Open in Blue Letter Bible →</a></div>';
+          place(el);
+          popup.classList.add('visible');
+          return;
+        }
+
+        if (type === 'sefaria') {
+          var q = parseSefariaQuery(el.href);
+          var label = ((el.textContent || '').trim() || q || 'Sefaria Resource');
+          var gdb = await ensureGrammarData();
+          var g = getGrammarEntry(gdb, label) || getGrammarEntry(gdb, q);
+
+          popup.innerHTML =
+            '<div class="bp-title">' + (g && g.title ? g.title : label) + '</div>' +
+            (g && g.original ? '<div class="bp-original bp-hebrew">' + g.original + '</div>' : '') +
+            '<div class="bp-body">' + (g && g.definition ? g.definition : (q ? 'Search term: ' + q : 'Open this term in Sefaria for references and context.')) + '</div>' +
+            '<div class="bp-link"><a href="' + el.href + '" target="_blank" rel="noopener">Open in Sefaria →</a></div>';
+          place(el);
+          popup.classList.add('visible');
+          return;
+        }
+
+        // scripture — instant from local JSON
+        var ref = parseScriptureRef(el.href);
+        var txt = await getVerse(ref);
+        popup.innerHTML =
+          '<div class="bp-title">' + (ref || (el.textContent || '').trim()) + '</div>' +
+          '<div class="bp-body">' + txt + '</div>' +
+          '<div class="bp-link"><a href="' + el.href + '" target="_blank" rel="noopener">Open in Blue Letter Bible →</a></div>';
+        place(el);
         popup.classList.add('visible');
       }
 
@@ -183,48 +389,190 @@
         hideTimer = setTimeout(function() {
           popup.classList.remove('visible');
           activeEl = null;
-        }, 200);
+        }, 170);
       }
-
       function hideNow() {
         clearTimeout(hideTimer);
         popup.classList.remove('visible');
         activeEl = null;
       }
 
-      // Desktop: hover behavior
+      function getTargetAnchor(target) {
+        return target && target.closest ? target.closest('a[href*="blueletterbible.org/kjv/"], a[href*="blueletterbible.org/lexicon/"], a[href*="blueletterbible.org/search/search.cfm"], a[href*="sefaria.org/"]') : null;
+      }
+
+      // Desktop hover — guard against events originating inside the popup itself
       document.addEventListener('mouseover', function(e) {
-        var el = e.target.closest('a[data-lexicon]');
+        if (popup.contains(e.target)) return;
+        var el = getTargetAnchor(e.target);
         if (el) { e.preventDefault(); show(el); }
       });
       document.addEventListener('mouseout', function(e) {
-        var el = e.target.closest('a[data-lexicon]');
+        if (popup.contains(e.target)) return;
+        var el = getTargetAnchor(e.target);
         if (el) hide();
       });
       popup.addEventListener('mouseover', function() { clearTimeout(hideTimer); });
       popup.addEventListener('mouseout', hide);
 
-      // Both desktop and mobile: click/tap behavior
+      // Mobile tap toggle (and desktop click support)
       document.addEventListener('click', function(e) {
-        var el = e.target.closest('a[data-lexicon]');
-
-        // If tapping inside the popup (e.g. the BLB link), let it through
         if (popup.contains(e.target)) return;
-
+        var el = getTargetAnchor(e.target);
         if (el) {
           e.preventDefault();
           e.stopPropagation();
-          // If this link's popup is already showing, hide it (toggle)
+          // First tap/click shows popup, second tap/click opens the destination.
           if (activeEl === el && popup.classList.contains('visible')) {
+            window.open(el.href, '_blank', 'noopener');
             hideNow();
           } else {
             show(el);
           }
-        } else {
-          // Tapped outside — dismiss any visible popup
-          if (popup.classList.contains('visible')) {
-            hideNow();
-          }
+        } else if (popup.classList.contains('visible')) {
+          hideNow();
+        }
+      });
+    })();
+    </script>
+
+    <style>
+      .lds-popup {
+        position: absolute;
+        z-index: 9999;
+        background: #fff;
+        border: 1px solid var(--sage-dark, #4a6b52);
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+        padding: 12px 14px;
+        max-width: 390px;
+        font-size: 0.9em;
+        line-height: 1.4;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.12s;
+      }
+      .lds-popup.visible { opacity: 1; pointer-events: auto; }
+      .lds-popup .lp-title { font-weight: 700; color: var(--sage-dark, #4a6b52); }
+      .lds-popup .lp-type { color: #666; font-size: 0.83em; margin: 4px 0 6px; }
+      .lds-popup .lp-summary { color: #222; }
+      .lds-popup .lp-link { margin-top: 8px; font-size: 0.82em; }
+      .lds-popup .lp-link a { color: var(--sage-dark, #4a6b52); text-decoration: underline; pointer-events: auto; }
+    </style>
+    <script>
+    (function() {
+      var popup = document.createElement('div');
+      popup.className = 'lds-popup';
+      document.body.appendChild(popup);
+      var data = null;
+      var hideTimer, active = null;
+      var isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+
+      async function ensureData() {
+        if (data) return data;
+        try {
+          var r = await fetch('/data/lds-popups.json', { cache: 'no-store' });
+          data = r.ok ? await r.json() : {};
+        } catch (_) { data = {}; }
+        return data;
+      }
+
+      function normalizePath(href) {
+        try {
+          var u = new URL(href, window.location.origin);
+          return u.pathname.replace(/\/$/, '');
+        } catch (_) { return ''; }
+      }
+
+      function titleFromPath(path) {
+        var slug = (path.split('/').pop() || '').replace(/-/g, ' ');
+        return slug ? slug.replace(/\b\w/g, function(c){ return c.toUpperCase(); }) : 'LDS Resource';
+      }
+
+      function place(el) {
+        var r = el.getBoundingClientRect();
+        var w = Math.min(390, window.innerWidth - 20);
+        var left = r.left + window.scrollX;
+        var top = r.bottom + window.scrollY + 6;
+        if (left + w > window.innerWidth) left = window.innerWidth - w - 10;
+        if (left < 10) left = 10;
+        if (isTouch) left = Math.max(10, (window.innerWidth - w) / 2);
+        popup.style.maxWidth = w + 'px';
+        popup.style.left = left + 'px';
+        popup.style.top = top + 'px';
+      }
+
+      async function show(el) {
+        clearTimeout(hideTimer);
+        active = el;
+        var db = await ensureData();
+        var path = normalizePath(el.href);
+        var entry = db[path] || null;
+
+        var labelText = (el.textContent || '').trim();
+        var inferredType = 'LDS Resource';
+        var inferredSummary = 'Open this Church resource for the full passage, context, and study tools.';
+
+        if (path.includes('/study/scriptures/')) {
+          inferredType = 'Scripture';
+          inferredSummary = 'Scripture reference on ChurchofJesusChrist.org. Tap to open the full chapter and verse context.';
+        } else if (path.includes('/study/general-conference/')) {
+          inferredType = 'General Conference';
+          inferredSummary = 'General Conference message on ChurchofJesusChrist.org. Tap to open full talk text and references.';
+        } else if (path.includes('/study/manual/')) {
+          inferredType = 'Manual';
+          inferredSummary = 'Church manual resource. Tap to open lesson context, references, and study helps.';
+        }
+
+        var verseLikeLabel = /\d+[:]\d+/.test(labelText);
+        var title = (path.includes('/study/scriptures/') && verseLikeLabel)
+          ? labelText
+          : ((entry && entry.title) || labelText || titleFromPath(path));
+        var type = (entry && entry.type) || inferredType;
+        var summary = (entry && entry.summary) || inferredSummary;
+
+        popup.innerHTML =
+          '<div class="lp-title">' + title + '</div>' +
+          '<div class="lp-type">' + type + '</div>' +
+          '<div class="lp-summary">' + summary + '</div>' +
+          '<div class="lp-link"><a href="' + el.href + '" target="_blank" rel="noopener">Open on ChurchofJesusChrist.org →</a></div>';
+        place(el);
+        popup.classList.add('visible');
+      }
+
+      function hide() {
+        hideTimer = setTimeout(function() {
+          popup.classList.remove('visible');
+          active = null;
+        }, 170);
+      }
+      function hideNow() { clearTimeout(hideTimer); popup.classList.remove('visible'); active = null; }
+
+      function targetAnchor(t) {
+        return t && t.closest ? t.closest('a[href*="churchofjesuschrist.org/"]') : null;
+      }
+
+      document.addEventListener('mouseover', function(e) {
+        var el = targetAnchor(e.target);
+        if (el) { e.preventDefault(); show(el); }
+      });
+      document.addEventListener('mouseout', function(e) {
+        var el = targetAnchor(e.target);
+        if (el) hide();
+      });
+      popup.addEventListener('mouseover', function(){ clearTimeout(hideTimer); });
+      popup.addEventListener('mouseout', hide);
+
+      document.addEventListener('click', function(e) {
+        if (popup.contains(e.target)) return;
+        var el = targetAnchor(e.target);
+        if (el) {
+          e.preventDefault();
+          e.stopPropagation();
+          if (active === el && popup.classList.contains('visible')) hideNow();
+          else show(el);
+        } else if (popup.classList.contains('visible')) {
+          hideNow();
         }
       });
     })();

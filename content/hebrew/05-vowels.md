@@ -20,11 +20,11 @@ That is the question the Masoretes set out to answer.
 
 ## The Masoretes: Guardians of Tradition
 
-Between roughly the fifth and tenth centuries of the Common Era, Jewish scholars known as the **Masoretes** (from *masorah*, מָסוֹרָה, meaning "tradition") undertook one of the most remarkable preservation projects in human history. Their mission was simple to state and staggering in scope: to fix the exact pronunciation of every word in the Hebrew Bible for all time.
+Between roughly the fifth and tenth centuries of the Common Era, Jewish scholars known as the **Masoretes** (from [*masorah*](https://www.blueletterbible.org/lexicon/h4562/kjv/wlc/0-1/), מָסוֹרָה, meaning "tradition") undertook one of the most remarkable preservation projects in human history. Their mission was simple to state and staggering in scope: to fix the exact pronunciation of every word in the Hebrew Bible for all time.
 
 By this period, Hebrew had ceased to be a living spoken language for most Jewish communities. Aramaic had replaced it centuries earlier as the common tongue; Greek and later Arabic were widely spoken as well. The Masoretes recognized that the traditional pronunciation of scripture -- handed down orally from teacher to student across generations -- was in danger of being lost forever.
 
-Their solution was both brilliant and reverent. They invented a system of dots, dashes, and small marks called **niqqud** (נִקּוּד, "dotting") that could be placed *around* the consonantal letters without altering the sacred text itself. The consonants remained untouched. The vowel marks simply floated above, below, and within them -- a layer of pronunciation guidance added to the ancient letters like annotations in the margin of a beloved book.
+Their solution was both brilliant and reverent. They invented a system of dots, dashes, and small marks called **niqqud** ([*niqqud*](https://www.blueletterbible.org/lexicon/h5359/kjv/wlc/0-1/), נִקּוּד, "dotting") that could be placed *around* the consonantal letters without altering the sacred text itself. The consonants remained untouched. The vowel marks simply floated above, below, and within them -- a layer of pronunciation guidance added to the ancient letters like annotations in the margin of a beloved book.
 
 Three major schools of Masoretic notation developed in different Jewish communities. The **Babylonian school** placed marks above the letters. The **Palestinian school** developed an intermediate system. But it was the **Tiberian school**, centered in Tiberias on the Sea of Galilee, that produced the system we still use today. The Tiberian Masoretes, particularly the Ben Asher family, refined their notation over several generations until it became the standard for all Hebrew Bibles. The oldest complete manuscript using this system is the Leningrad Codex, dated to 1008 CE, which remains the basis for most modern Hebrew Bible editions.
 
@@ -34,9 +34,9 @@ Even before the Masoretes, Hebrew scribes had developed a partial solution to th
 
 Three consonants serve this role most prominently:
 
-**Vav** (ו), normally a /v/ or /w/ sound, could signal an /o/ or /u/ vowel. In the word תּוֹרָה (*Torah*), the Vav is not pronounced as a consonant -- it marks the /o/ sound.
+**Vav** (ו), normally a /v/ or /w/ sound, could signal an /o/ or /u/ vowel. In the word תּוֹרָה  ([*Torah*](https://www.blueletterbible.org/lexicon/h8451/kjv/wlc/0-1/)), the Vav is not pronounced as a consonant -- it marks the /o/ sound.
 
-**Yod** (י), normally a /y/ sound, could signal an /i/ or /e/ vowel. In the word הִיא (*hi*, "she"), the Yod marks the long /i/ sound rather than functioning as the consonant /y/.
+**Yod** (י), normally a /y/ sound, could signal an /i/ or /e/ vowel. In the word הִיא ([*hi*](https://www.blueletterbible.org/lexicon/h1931/kjv/wlc/0-1/), "she"), the Yod marks the long /i/ sound rather than functioning as the consonant /y/.
 
 **Aleph** (א), a glottal stop barely audible as a consonant, sometimes appears as a silent placeholder supporting a vowel sound.
 
@@ -48,41 +48,41 @@ The Tiberian vowel system organizes its marks into five vowel classes -- A, E, I
 
 ### A-Class Vowels
 
-**Qamats** (<span class="nq">בָ</span>) -- a small T-shape beneath the letter. This is the long "a" sound, as in "father." You will encounter it constantly. Example: בָּרָא (*bara*, "created").
+**Qamats** (<span class="nq">בָ</span>) -- a small T-shape beneath the letter. This is the long "a" sound, as in "father." You will encounter it constantly. Example: בָּרָא ([*bara*](https://www.blueletterbible.org/lexicon/h1254/kjv/wlc/0-1/), "created").
 
-**Patach** (<span class="nq">בַ</span>) -- a single horizontal line beneath the letter. This is the short "a," also like "father" but briefer. Example: בַּת (*bat*, "daughter").
+**Patach** (<span class="nq">בַ</span>) -- a single horizontal line beneath the letter. This is the short "a," also like "father" but briefer. Example: בַּת ([*bat*](https://www.blueletterbible.org/lexicon/h1323/kjv/wlc/0-1/), "daughter").
 
-**Chataf Patach** (<span class="nq">בֲ</span>) -- an ultra-short, reduced "a" that appears on guttural letters. Example: אֲנִי (*ani*, "I").
+**Chataf Patach** (<span class="nq">בֲ</span>) -- an ultra-short, reduced "a" that appears on guttural letters. Example: אֲנִי ([*ani*](https://www.blueletterbible.org/lexicon/h589/kjv/wlc/0-1/), "I").
 
 ### E-Class Vowels
 
-**Tsere** (<span class="nq">בֵ</span>) -- two dots side by side beneath the letter. This is the long "e" sound, as in "they." Example: בֵּן (*ben*, "son").
+**Tsere** (<span class="nq">בֵ</span>) -- two dots side by side beneath the letter. This is the long "e" sound, as in "they." Example: בֵּן ([*ben*](https://www.blueletterbible.org/lexicon/h1121/kjv/wlc/0-1/), "son").
 
-**Segol** (<span class="nq">בֶ</span>) -- three dots in a triangle beneath the letter. This is the short "e," as in "bed." Example: מֶלֶךְ (*melekh*, "king").
+**Segol** (<span class="nq">בֶ</span>) -- three dots in a triangle beneath the letter. This is the short "e," as in "bed." Example: מֶלֶךְ ([*melekh*](https://www.blueletterbible.org/lexicon/h4428/kjv/wlc/0-1/), "king").
 
-**Chataf Segol** (<span class="nq">בֱ</span>) -- an ultra-short "e" on guttural letters. Example: אֱלֹהִים (*Elohim*, "God").
+**Chataf Segol** (<span class="nq">בֱ</span>) -- an ultra-short "e" on guttural letters. Example: אֱלֹהִים ([*Elohim*](https://www.blueletterbible.org/lexicon/h430/kjv/wlc/0-1/), "God").
 
 ### I-Class Vowels
 
-**Chiriq** (<span class="nq">בִ</span>) -- a single dot beneath the letter. This is the "i" sound, as in "machine." When short (chiriq qatan), it appears alone: מִי (*mi*, "who"). When long (chiriq gadol), it appears with a Yod as mater lectionis: שִׁיר (*shir*, "song"), written בִי.
+**Chiriq** (<span class="nq">בִ</span>) -- a single dot beneath the letter. This is the "i" sound, as in "machine." When short (chiriq qatan), it appears alone: מִי ([*mi*](https://www.blueletterbible.org/lexicon/h4310/kjv/wlc/0-1/), "who"). When long (chiriq gadol), it appears with a Yod as mater lectionis: שִׁיר ([*shir*](https://www.blueletterbible.org/lexicon/h7892/kjv/wlc/0-1/), "song"), written בִי.
 
 ### O-Class Vowels
 
-**Cholem** (<span class="nq">בֹ</span>) -- a single dot *above* the upper-left corner of the letter. This is the "o" sound, as in "go." Example: קֹדֶשׁ (*qodesh*, "holy"). When written with a Vav (cholem malei), it appears as בוֹ: שָׁלוֹם (*shalom*, "peace").
+**Cholem** (<span class="nq">בֹ</span>) -- a single dot *above* the upper-left corner of the letter. This is the "o" sound, as in "go." Example: קֹדֶשׁ ([*qodesh*](https://www.blueletterbible.org/lexicon/h6944/kjv/wlc/0-1/), "holy"). When written with a Vav (cholem malei), it appears as בוֹ: שָׁלוֹם ([*shalom*](https://www.blueletterbible.org/lexicon/h7965/kjv/wlc/0-1/), "peace").
 
-**Qamats Qatan** (<span class="nq">בָ</span>) -- visually identical to the regular qamats, but pronounced as a short "o," as in "all." It appears in closed, unaccented syllables. Example: כָּל (*kol*, "all"). This is one of the trickier aspects of the vowel system -- you must use context to distinguish it from the regular qamats.
+**Qamats Qatan** (<span class="nq">בָ</span>) -- visually identical to the regular qamats, but pronounced as a short "o," as in "all." It appears in closed, unaccented syllables. Example: כָּל ([*kol*](https://www.blueletterbible.org/lexicon/h3605/kjv/wlc/0-1/), "all"). This is one of the trickier aspects of the vowel system -- you must use context to distinguish it from the regular qamats.
 
-**Chataf Qamats** (<span class="nq">בֳ</span>) -- an ultra-short "o" on guttural letters. Example: צָהֳרַיִם (*tsohorayim*, "noon").
+**Chataf Qamats** (<span class="nq">בֳ</span>) -- an ultra-short "o" on guttural letters. Example: צָהֳרַיִם ([*tsohorayim*](https://www.blueletterbible.org/lexicon/h6672/kjv/wlc/0-1/), "noon").
 
 ### U-Class Vowels
 
-**Qibbuts** (<span class="nq">בֻ</span>) -- three diagonal dots beneath the letter. This is the short "u" sound, as in "flute." Example: קֻדָּשׁ (*quddash*, "sanctified").
+**Qibbuts** (<span class="nq">בֻ</span>) -- three diagonal dots beneath the letter. This is the short "u" sound, as in "flute." Example: קֻדָּשׁ ([*quddash*](https://www.blueletterbible.org/lexicon/h6942/kjv/wlc/0-1/), "sanctified").
 
-**Shuruq** (<span class="nq">וּ</span>) -- a Vav with a dot in its center. This is the long "u," also as in "flute." Example: בָּרוּךְ (*barukh*, "blessed"). Note that the shuruq is not a mark placed under a consonant -- it *is* a Vav with an internal dot, making it one of the few vowels that occupies its own letter-space.
+**Shuruq** (<span class="nq">וּ</span>) -- a Vav with a dot in its center. This is the long "u," also as in "flute." Example: בָּרוּךְ ([*barukh*](https://www.blueletterbible.org/lexicon/h1288/kjv/wlc/0-1/), "blessed"). Note that the shuruq is not a mark placed under a consonant -- it *is* a Vav with an internal dot, making it one of the few vowels that occupies its own letter-space.
 
 ### The Sheva
 
-**Sheva** (<span class="nq">בְ</span>) -- two vertical dots beneath a letter. The sheva is a special case. It can be either *vocal* (a very brief "uh" sound, like the first vowel in "believe") or *silent* (indicating the absence of a vowel -- a closed syllable). Context determines which. Example: בְּרֵאשִׁית (*b'reshit*, "in the beginning"), where the sheva under the Bet is vocal.
+**Sheva** (<span class="nq">בְ</span>) -- two vertical dots beneath a letter. The sheva is a special case. It can be either *vocal* (a very brief "uh" sound, like the first vowel in "believe") or *silent* (indicating the absence of a vowel -- a closed syllable). Context determines which. Example: בְּרֵאשִׁית ([*b'reshit*](https://www.blueletterbible.org/lexicon/h7225/kjv/wlc/0-1/), "in the beginning"), where the sheva under the Bet is vocal.
 
 ## Where the Vowels Sit
 
@@ -102,11 +102,11 @@ Hebrew is built on a system of three-letter roots (which we will explore in dept
 
 Consider the root **D-B-R** (דבר), which carries a broad meaning related to speaking or matters:
 
-- דָּבָר (*davar*) -- "word" or "thing"
-- דֶּבֶר (*dever*) -- "plague" or "pestilence"
-- דְּבַר (*devar*) -- "word of" (in construct form, linking to the next word)
-- דִּבֵּר (*dibber*) -- "he spoke" (intensive verb form)
-- מִדְבָּר (*midbar*) -- "wilderness" or "desert" (from the same root, with a prefix)
+- דָּבָר  ([*davar*](https://www.blueletterbible.org/lexicon/h1697/kjv/wlc/0-1/)) -- "word" or "thing"
+- דֶּבֶר  ([*dever*](https://www.blueletterbible.org/lexicon/h1698/kjv/wlc/0-1/)) -- "plague" or "pestilence"
+- דְּבַר  ([*devar*](https://www.blueletterbible.org/lexicon/h1697/kjv/wlc/0-1/)) -- "word of" (in construct form, linking to the next word)
+- דִּבֵּר  ([*dibber*](https://www.blueletterbible.org/lexicon/h1696/kjv/wlc/0-1/)) -- "he spoke" (intensive verb form)
+- מִדְבָּר  ([*midbar*](https://www.blueletterbible.org/lexicon/h4057/kjv/wlc/0-1/)) -- "wilderness" or "desert" (from the same root, with a prefix)
 
 The consonants D-B-R remain the same in every case. Only the vowels change. And those vowel changes are not random -- they follow patterns that reflect grammar, verb form, and syntactic function. A reader without vowel marks would need to determine from context alone whether דבר in a given sentence meant "word," "plague," or "he spoke." The Masoretic pointing removes that ambiguity.
 

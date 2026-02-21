@@ -146,6 +146,9 @@ git commit -m "Week NN: Scripture Reference"
 git push
 ```
 GitHub Actions will automatically build Hugo + Pagefind and deploy to GitHub Pages.
+The post-commit hook will also auto-update `CODE_INDEX_AUTO.md` in Obsidian.
+
+> **Full Git protocol** (commit conventions, repo overview, hook setup): `GIT-PROTOCOL.md`
 
 ### 3.3 Verify Live Site
 - [ ] Check `www.cfmcorner.com/weeks/NN/` (or `kymbrock.github.io/cfm-corner-site/weeks/NN/`)

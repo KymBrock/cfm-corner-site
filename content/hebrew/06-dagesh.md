@@ -8,9 +8,9 @@ week_ref: "07"
 
 ## A Dot That Changes Everything
 
-You have been learning the Hebrew consonants and vowels. In [Lesson 4](/hebrew/04-articulation/), you explored *where* and *how* sounds are made — the places and manners of articulation — and saw that certain letters shift between a hard stop and a softer friction sound. Now it is time to look closely at the mark that signals that shift: a small dot sitting *inside* the letter itself.
+You have been learning the Hebrew consonants and vowels. In [Lesson 4: How Sounds Are Made](/hebrew/04-articulation/), you explored *where* and *how* sounds are made — the places and manners of articulation — and saw that certain letters shift between a hard stop and a softer friction sound. Now it is time to look closely at the mark that signals that shift: a small dot sitting *inside* the letter itself.
 
-This is the **dagesh** (דָּגֵשׁ, from a root meaning "to pierce" or "to thrust"). It looks simple enough — just a dot. But despite its small size, the dagesh is one of the most important marks in the Hebrew writing system. It can change how a letter sounds. It can signal that a consonant is doubled. It can even serve as the only remaining trace of a letter that has dropped out of a word entirely.
+This is the **dagesh** (דָּגֵשׁ, [*dagesh*](https://www.blueletterbible.org/lexicon/h1708/kjv/wlc/0-1/), from a root meaning "to pierce" or "to thrust"). It looks simple enough — just a dot. But despite its small size, the dagesh is one of the most important marks in the Hebrew writing system. It can change how a letter sounds. It can signal that a consonant is doubled. It can even serve as the only remaining trace of a letter that has dropped out of a word entirely.
 
 Understanding the dagesh will help you read Hebrew text accurately, make sense of why biblical names are transliterated so differently in English, and eventually recognize grammatical patterns that shape the meaning of words.
 
@@ -22,12 +22,12 @@ When one of these six letters carries a dagesh, it is pronounced with a "hard" o
 
 Here are the six:
 
-- **Bet / Vet** (<span class="nq">בּ</span> / ב) — With dagesh: /b/ as in "boy." Without dagesh: /v/ as in "vine." This is the most commonly encountered pair, and both sounds remain fully distinct in modern Hebrew. The word בַּיִת (*bayit*, "house") uses the hard /b/. The word אָב (*av*, "father") uses the soft /v/.
+- **Bet / Vet** (<span class="nq">בּ</span> / ב) — With dagesh: /b/ as in "boy." Without dagesh: /v/ as in "vine." This is the most commonly encountered pair, and both sounds remain fully distinct in modern Hebrew. The word בַּיִת ([*bayit*](https://www.blueletterbible.org/search/search.cfm?Criteria=bayit&t=KJV#s=s_primary_0_1), "house") uses the hard /b/. The word אָב ([*av*](https://www.blueletterbible.org/lexicon/h1/kjv/wlc/0-1/), "father") uses the soft /v/.
 - **Gimel** (<span class="nq">גּ</span> / ג) — With dagesh: /g/ as in "go." Without dagesh: historically a soft, throaty sound. In modern Israeli Hebrew, gimel is always pronounced /g/ regardless of the dagesh, but ancient and Yemenite traditions preserve the distinction.
 - **Dalet** (<span class="nq">דּ</span> / ד) — With dagesh: /d/ as in "door." Without dagesh: historically /th/ as in "this." Again, modern Hebrew has lost this distinction, pronouncing dalet always as /d/.
-- **Kaf / Khaf** (<span class="nq">כּ</span> / כ) — With dagesh: /k/ as in "king." Without dagesh: /kh/ as in the German "Bach." Both sounds remain fully distinct in modern Hebrew. The word כֹּל (*kol*, "all") uses the hard /k/. The final letter in מֶלֶךְ (*melekh*, "king") uses the soft /kh/.
-- **Pe / Fe** (<span class="nq">פּ</span> / פ) — With dagesh: /p/ as in "pen." Without dagesh: /f/ as in "phone." Both sounds remain fully distinct. The word פָּנִים (*panim*, "face") uses the hard /p/. The word סוֹפֵר (*sofer*, "scribe") uses the soft /f/.
-- **Tav** (<span class="nq">תּ</span> / ת) — With dagesh: /t/ as in "top." Without dagesh: historically /th/ as in "think." Modern Hebrew always pronounces tav as /t/. The word תּוֹרָה (*Torah*) carries the dagesh; the final tav in שַׁבָּת (*Shabbat*) historically would have been soft.
+- **Kaf / Khaf** (<span class="nq">כּ</span> / כ) — With dagesh: /k/ as in "king." Without dagesh: /kh/ as in the German "Bach." Both sounds remain fully distinct in modern Hebrew. The word כֹּל ([*kol*](https://www.blueletterbible.org/lexicon/h3605/kjv/wlc/0-1/), "all") uses the hard /k/. The final letter in מֶלֶךְ ([*melekh*](https://www.blueletterbible.org/lexicon/h4428/kjv/wlc/0-1/), "king") uses the soft /kh/.
+- **Pe / Fe** (<span class="nq">פּ</span> / פ) — With dagesh: /p/ as in "pen." Without dagesh: /f/ as in "phone." Both sounds remain fully distinct. The word פָּנִים ([*panim*](https://www.blueletterbible.org/lexicon/h6440/kjv/wlc/0-1/), "face") uses the hard /p/. The word סוֹפֵר ([*sofer*](https://www.blueletterbible.org/lexicon/h5608/kjv/wlc/0-1/), "scribe") uses the soft /f/.
+- **Tav** (<span class="nq">תּ</span> / ת) — With dagesh: /t/ as in "top." Without dagesh: historically /th/ as in "think." Modern Hebrew always pronounces tav as /t/. The word תּוֹרָה  ([*Torah*](https://www.blueletterbible.org/lexicon/h8451/kjv/wlc/0-1/)) carries the dagesh; the final tav in שַׁבָּת  ([*Shabbat*](https://www.blueletterbible.org/lexicon/h7676/kjv/wlc/0-1/)) historically would have been soft.
 
 &nbsp;
 
@@ -37,7 +37,7 @@ Of these six, only three pairs — Bet/Vet, Kaf/Khaf, and Pe/Fe — retain audib
 
 When does a begadkephat letter take a dagesh? The simplified rule: at the **beginning of a word** or after a **closed syllable** (a syllable that ends with a consonant), the letter hardens. After an **open syllable** (one that ends with a vowel sound), the letter softens.
 
-Consider the word מִדְבָּר (*midbar*, "wilderness"). The dalet has no dagesh because it follows the vowel /i/ — the syllable *mi-* is open, so the dalet softens. The bet carries a dagesh because it follows the closed syllable *mid-* — the dalet closes that syllable, so the bet hardens to /b/.
+Consider the word מִדְבָּר ([*midbar*](https://www.blueletterbible.org/lexicon/h4057/kjv/wlc/0-1/), "wilderness"). The dalet has no dagesh because it follows the vowel /i/ — the syllable *mi-* is open, so the dalet softens. The bet carries a dagesh because it follows the closed syllable *mid-* — the dalet closes that syllable, so the bet hardens to /b/.
 
 ## Dagesh Chazaq: The Strong Dagesh
 
@@ -45,10 +45,10 @@ The dagesh chazaq (also called dagesh forte, "strong dagesh") is a different ani
 
 This doubling is not arbitrary. It signals specific grammatical information:
 
-- **The definite article.** When Hebrew adds the prefix הַ (*ha-*, "the") to a word, it triggers doubling of the following consonant. The word מֶלֶךְ (*melekh*, "king") becomes הַ<span class="nq">מֶּ</span>לֶךְ (*hammelekh*, "the king") — the Mem carries a dagesh chazaq, indicating it is formally doubled. In classical Hebrew, this would have been pronounced *ham-melekh*, with the /m/ sound held across the syllable boundary. In modern spoken Hebrew, the doubling is rarely heard — most speakers simply say *ha-melekh* — but the dagesh remains in the written text as a grammatical marker.
-- **Intensive verb stems.** Hebrew has a verb pattern called Piel that intensifies or modifies the basic meaning of a root. This pattern is marked by doubling the middle root letter. The root ד-ב-ר becomes דִּ<span class="nq">בֵּ</span>ר (*dibber*, "he spoke") in the Piel — the Bet is doubled, indicated by its dagesh chazaq.
-- **Assimilated letters.** When a weak consonant (most commonly Nun) drops out of a word, the dagesh chazaq in the following letter is often the only trace left behind. The verb נָתַן (*natan*, "he gave") becomes יִ<span class="nq">תֵּ</span>ן (*yitten*, "he will give") in the imperfect form — the Nun disappears entirely, and the Tav doubles to compensate.
-- **The narrative past.** The prefix וַ (*va-*, the "vav consecutive") that drives biblical Hebrew narrative triggers doubling of the following consonant. וַ<span class="nq">יִּ</span>תֵּן (*vayyitten*, "and he gave") has the Yod doubled by the vav consecutive.
+- **The definite article.** When Hebrew adds the prefix הַ ([*ha-*](https://www.blueletterbible.org/search/search.cfm?Criteria=ha-&t=KJV#s=s_primary_0_1), "the") to a word, it triggers doubling of the following consonant. The word מֶלֶךְ ([*melekh*](https://www.blueletterbible.org/lexicon/h4428/kjv/wlc/0-1/), "king") becomes הַ<span class="nq">מֶּ</span>לֶךְ ([*hammelekh*](https://www.blueletterbible.org/lexicon/h4428/kjv/wlc/0-1/), "the king") — the Mem carries a dagesh chazaq, indicating it is formally doubled. In classical Hebrew, this would have been pronounced *ham-melekh*, with the /m/ sound held across the syllable boundary. In modern spoken Hebrew, the doubling is rarely heard — most speakers simply say *ha-melekh* — but the dagesh remains in the written text as a grammatical marker.
+- **Intensive verb stems.** Hebrew has a verb pattern called Piel that intensifies or modifies the basic meaning of a root. This pattern is marked by doubling the middle root letter. The root ד-ב-ר becomes דִּ<span class="nq">בֵּ</span>ר ([*dibber*](https://www.blueletterbible.org/lexicon/h1696/kjv/wlc/0-1/), "he spoke") in the Piel — the Bet is doubled, indicated by its dagesh chazaq.
+- **Assimilated letters.** When a weak consonant (most commonly Nun) drops out of a word, the dagesh chazaq in the following letter is often the only trace left behind. The verb נָתַן ([*natan*](https://www.blueletterbible.org/lexicon/h5414/kjv/wlc/0-1/), "he gave") becomes יִ<span class="nq">תֵּ</span>ן ([*yitten*](https://www.blueletterbible.org/lexicon/h5414/kjv/wlc/0-1/), "he will give") in the imperfect form — the Nun disappears entirely, and the Tav doubles to compensate.
+- **The narrative past.** The prefix וַ ([*va-*](https://www.blueletterbible.org/search/search.cfm?Criteria=va-&t=KJV#s=s_primary_0_1), the "vav consecutive") that drives biblical Hebrew narrative triggers doubling of the following consonant. וַ<span class="nq">יִּ</span>תֵּן ([*vayyitten*](https://www.blueletterbible.org/lexicon/h5414/kjv/wlc/0-1/), "and he gave") has the Yod doubled by the vav consecutive.
 
 &nbsp;
 
@@ -56,7 +56,7 @@ Much of this grammatical detail will become clearer as we progress through later
 
 ### Which Letters Cannot Take the Strong Dagesh?
 
-The **guttural letters** — Aleph (א), He (ה), Chet (ח), and Ayin (ע) — cannot be doubled. They reject the dagesh chazaq entirely. When grammar requires doubling and the next letter is a guttural, Hebrew compensates by lengthening the preceding vowel instead. This is called **compensatory lengthening**. For example, the definite article before a guttural changes its vowel from patach to qamats. With a normal (non-guttural) noun, you would expect הַ<span class="nq">אֶּ</span>רֶץ — the patach under the He and a dagesh in the next letter. But Aleph is a guttural and rejects the dagesh, so Hebrew compensates by lengthening the vowel: <span class="nq">הָ</span>אָרֶץ (*ha'arets*, "the land") — the patach becomes a qamats (the longer "a"), standing in for the missing doubling.
+The **guttural letters** — Aleph (א), He (ה), Chet (ח), and Ayin (ע) — cannot be doubled. They reject the dagesh chazaq entirely. When grammar requires doubling and the next letter is a guttural, Hebrew compensates by lengthening the preceding vowel instead. This is called **compensatory lengthening**. For example, the definite article before a guttural changes its vowel from patach to qamats. With a normal (non-guttural) noun, you would expect הַ<span class="nq">אֶּ</span>רֶץ — the patach under the He and a dagesh in the next letter. But Aleph is a guttural and rejects the dagesh, so Hebrew compensates by lengthening the vowel: <span class="nq">הָ</span>אָרֶץ ([*ha'arets*](https://www.blueletterbible.org/lexicon/h776/kjv/wlc/0-1/), "the land") — the patach becomes a qamats (the longer "a"), standing in for the missing doubling.
 
 **Resh** (ר) also generally rejects the dagesh chazaq, behaving like a "semi-guttural" in this respect.
 
@@ -68,7 +68,7 @@ In ancient Hebrew, all six pairs were fully distinct. A listener in the time of 
 
 Over the centuries, modern Israeli Hebrew collapsed three of these pairs. Gimel, Dalet, and Tav lost their fricative forms and are now always pronounced as /g/, /d/, and /t/ respectively. But Yemenite Jewish communities — which maintained a largely unbroken chain of oral tradition — preserved all six distinctions into the modern era. Their pronunciation likely reflects something closer to what ancient Hebrew sounded like.
 
-This matters for understanding English transliterations of biblical names. The name "David" in Hebrew is דָּוִד. The middle letter, Vav, gives the /v/ sound, while the initial Dalet carries a dagesh (hard /d/). "Abraham" in Hebrew is אַבְרָהָם (*Avraham*) — the Bet has no dagesh, giving the soft /v/ sound. English tradition preserves the /b/ because the name entered English through Greek and Latin, which did not distinguish between the two forms.
+This matters for understanding English transliterations of biblical names. The name "David" in Hebrew is דָּוִד. The middle letter, Vav, gives the /v/ sound, while the initial Dalet carries a dagesh (hard /d/). "Abraham" in Hebrew is אַבְרָהָם  ([*Avraham*](https://www.blueletterbible.org/lexicon/h85/kjv/wlc/0-1/)) — the Bet has no dagesh, giving the soft /v/ sound. English tradition preserves the /b/ because the name entered English through Greek and Latin, which did not distinguish between the two forms.
 
 ## Letter Classifications
 
@@ -97,7 +97,7 @@ These letters matter especially in certain verb conjugations where sibilants tri
 
 ### Other Groupings
 
-Hebrew grammarians also classify letters by their place of articulation — the physical location in the mouth where each sound is produced. You explored this in detail in [Lesson 4: How Sounds Are Made](/hebrew/04-articulation/). Here is a quick summary of the main families:
+Hebrew grammarians also classify letters by their place of articulation — the physical location in the mouth where each sound is produced. You explored this in detail in [Hebrew Vowels Chart](/charts/hebrew_vowels_chart/). Here is a quick summary of the main families:
 
 **Labials** — produced with the lips: Bet (ב), Mem (מ), Pe (פ). These letters share phonetic territory and occasionally influence each other in grammar.
 
@@ -113,7 +113,7 @@ There is one more dot to know about, and it is easy to confuse with the dagesh. 
 
 Normally, a He at the end of a word is silent — it serves as a mater lectionis, marking the preceding vowel. But when a final He carries a mappiq, it is *not* silent. It is a fully pronounced consonant, a distinct /h/ sound.
 
-The most common place you will encounter the mappiq is in possessive forms. The word מַלְכָּהּ (*malkah*, "her king") ends with a He-with-mappiq, indicating the pronoun "her." Without the mappiq, מַלְכָּה (*malkah*) would simply be "queen" — the final He marking the feminine ending but making no consonant sound of its own.
+The most common place you will encounter the mappiq is in possessive forms. The word מַלְכָּהּ ([*malkah*](https://www.blueletterbible.org/lexicon/h4436/kjv/wlc/0-1/), "her king") ends with a He-with-mappiq, indicating the pronoun "her." Without the mappiq, מַלְכָּה  ([*malkah*](https://www.blueletterbible.org/lexicon/h4436/kjv/wlc/0-1/)) would simply be "queen" — the final He marking the feminine ending but making no consonant sound of its own.
 
 The mappiq is a small detail, but it illustrates an important principle: in Hebrew, every mark matters. A dot inside a letter might be a dagesh qal (changing pronunciation), a dagesh chazaq (doubling the consonant), or a mappiq (pronouncing a final He). Context tells you which.
 
