@@ -789,21 +789,7 @@ const videoData = {
     }
 };
 
-function showModal(videoId) {
-    const data = videoData[videoId];
-    if (!data) return;
 
-    document.getElementById('modalTitle').textContent = data.title + (data.guest ? ' (' + data.guest + ')' : '');
-    document.getElementById('modalDuration').textContent = data.duration;
-    document.getElementById('modalFocusText').textContent = data.focus;
-    document.getElementById('modalTopics').innerHTML = data.topics.map(t => '<li>' + t + '</li>').join('');
-    document.getElementById('modalQuote').textContent = '"' + data.quote + '"';
-    document.getElementById('modalBestFor').textContent = data.bestFor;
-    document.getElementById('modalWatchBtn').href = data.url;
-
-    document.getElementById('modalOverlay').classList.add('active');
-    document.body.style.overflow = 'hidden';
-}
 
 function closeModal(event) {
     if (event && event.target !== event.currentTarget) return;
