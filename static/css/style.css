@@ -667,6 +667,15 @@ body {
 .cfm-insights-section .sub-accordion-header {
     -webkit-tap-highlight-color: transparent;
 }
+/* Force text rendering on arrow icons — iOS renders ▶ ▼ as colored emoji without this */
+.embedded-content .arrow,
+.embedded-content .sub-arrow,
+.cfm-insights-section .arrow,
+.cfm-insights-section .sub-arrow {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-variant-emoji: text;
+    -webkit-font-variant-emoji: text;
+}
 /* Fix blockquote text-align on mobile (Safari default is justify) */
 .embedded-content blockquote,
 .embedded-content blockquote p {
