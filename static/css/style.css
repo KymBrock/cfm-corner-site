@@ -590,6 +590,9 @@ body {
     border-radius: var(--radius);
     padding: 25px;
     box-shadow: var(--shadow-sm);
+    overflow-x: hidden;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 /* === Charts Page === */
@@ -642,7 +645,21 @@ body {
 .footer-disclaimer { margin-top: 5px; font-style: italic; font-size: var(--text-sm); }
 
 /* === Embedded Content (existing HTML) === */
-.embedded-content { font-family: inherit; }
+.embedded-content {
+    font-family: inherit;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+/* Neutralize the injected resources HTML body style */
+.embedded-content body,
+.embedded-content > div {
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
 .embedded-content details > summary { list-style: none; }
 .embedded-content details > summary::-webkit-details-marker { display: none; }
 .embedded-content details > summary::marker { display: none; content: ""; }
@@ -719,7 +736,7 @@ body {
     .current-week-card { padding: 25px 20px; }
     .cw-title { font-size: var(--text-md); }
     .subscribe-form input { width: 100%; }
-    .content-panel { padding: 20px; }
+    .content-panel { padding: 20px; overflow-x: hidden; }
     .site-main { padding: 20px 16px; }
     .hero-banner { aspect-ratio: 16 / 7; }
 }
@@ -760,7 +777,7 @@ body {
     .tab-btn { padding: 9px 12px; font-size: var(--text-xs); }
     .quick-summary { padding: 16px; }
     .quick-summary h2 { font-size: var(--text-md); }
-    .content-panel { padding: 16px; }
+    .content-panel { padding: 12px; overflow-x: hidden; }
     .site-main { padding: 16px 12px; }
     .curriculum-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
     .current-week-card { padding: 20px 16px; }
