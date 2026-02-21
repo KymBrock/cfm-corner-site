@@ -120,7 +120,10 @@ Both tools let you explore root families without needing to read Hebrew fluently
 
 The interactive chart below maps how these roots connect — explore the word families, see how they branch, and discover the covenant vocabulary that Genesis weaves through its text.
 
-{{< chart "hebrew_root_system" >}}
+<div class="chart-embed" style="margin: 30px 0;">
+<iframe src="/charts/hebrew_root_system.html" style="width: 100%; min-height: 600px; border: 1px solid var(--sage-pale); border-radius: 10px;" loading="lazy"></iframe>
+<p style="text-align: center; margin-top: 10px;"><a href="/charts/hebrew_root_system.html" target="_blank" style="color: var(--sage-dark); font-weight: 600; text-decoration: none; border-bottom: 2px solid var(--gold);">Open full chart in new tab</a></p>
+</div>
 
 ---
 
