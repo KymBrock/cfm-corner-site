@@ -1,491 +1,791 @@
-<!-- Header Box -->
-<div style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); border: 2px solid #7c9885; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-    <h1 style="font-family: Georgia, serif; color: #5a6d5f; font-size: 2.2em; margin-bottom: 10px; font-weight: normal;">Weekly Resources: Week 01</h1>
-    <p style="font-family: Georgia, serif; color: #7c9885; font-size: 1.3em; font-style: italic; margin-bottom: 15px;">Introduction to the Old Testament</p>
-    <p style="font-family: Georgia, serif; color: #5a6d5f; font-size: 1em; margin-bottom: 10px;">December 29, 2025 – January 4, 2026</p>
-</div>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Introduction & Overview - Resources</title></head><body><div data-pagefind-body><style>
 
-<!-- Quick Access Buttons -->
+        body {
+            font-family: Georgia, serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0;
+            background: transparent;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+        /* Responsive styles for tablets and phones */
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+            }
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 10px !important;
+            }
+            .quick-access-btn {
+                padding: 8px 12px !important;
+                font-size: 0.85em !important;
+            }
+            .section-header {
+                font-size: 1em !important;
+                padding: 12px 16px !important;
+            }
+        }
+        @media (max-width: 480px) {
+            body {
+                padding: 0;
+            }
+            .video-grid {
+                grid-template-columns: 1fr !important;
+                gap: 8px !important;
+            }
+            h1 {
+                font-size: 1.5em !important;
+            }
+            h2 {
+                font-size: 1.1em !important;
+            }
+            table {
+                font-size: 0.85em !important;
+            }
+            td {
+                padding: 6px 8px !important;
+            }
+            .quick-access-btn {
+                width: 100% !important;
+                margin: 4px 0 !important;
+            }
+            .section-header {
+                font-size: 0.95em !important;
+                padding: 10px 14px !important;
+            }
+        }
+    
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+.modal-overlay.active {
+    display: flex;
+}
+.modal-content {
+    background: white;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+.modal-header {
+    background: linear-gradient(135deg, #7c9885 0%, #6b8774 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 12px 12px 0 0;
+}
+.modal-header h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.3em;
+}
+.modal-header .duration {
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+.modal-body {
+    padding: 20px;
+}
+.modal-body h4 {
+    color: #4a5568;
+    margin: 15px 0 10px 0;
+    font-size: 1em;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 5px;
+}
+.modal-body ul {
+    margin: 0;
+    padding-left: 20px;
+}
+.modal-body li {
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+.modal-body .best-for {
+    background: #f4f5f7;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    color: #555;
+}
+.modal-body .quote {
+    font-style: italic;
+    color: #666;
+    padding: 10px 15px;
+    border-left: 3px solid #7c9885;
+    background: #f9fafb;
+    margin: 10px 0;
+    font-size: 0.9em;
+}
+.modal-footer {
+    padding: 15px 20px;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+.btn-watch {
+    background: #7c9885;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: Georgia, serif;
+    font-size: 0.95em;
+    text-decoration: none;
+}
+.btn-watch:hover {
+    background: #6b8774;
+}
+.btn-close {
+    background: #e5e7eb;
+    color: #555;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: Georgia, serif;
+    font-size: 0.95em;
+}
+.btn-close:hover {
+    background: #d1d5db;
+}
+
+</style>
+
+
+<!-- Quick Links -->
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 25px;">
-    <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/01?lang=eng" target="_blank" class="quick-access-btn" style="background: #7c9885; color: white; padding: 10px 16px; text-decoration: none; border-radius: 8px; font-size: 0.9em; font-weight: 600; display: inline-block; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Come Follow Me Manual</a>
+    <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/01?lang=eng" target="_blank" style="background: #7c9885; color: white; padding: 10px 16px; text-decoration: none; border-radius: 8px; font-size: 0.9em; font-weight: 600; display: inline-block; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Come Follow Me Manual</a>
+    <a href="https://www.churchofjesuschrist.org/study/manual/scripture-helps-old-testament?lang=eng" target="_blank" style="background: #7c9885; color: white; padding: 10px 16px; text-decoration: none; border-radius: 8px; font-size: 0.9em; font-weight: 600; display: inline-block; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Scripture Helps</a>
 </div>
-
-<div class="cfm-resources-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 15px; overflow: hidden;">
+<!-- OFFICIAL CHURCH RESOURCES -->
+<h2 style="color: #4a5568; font-size: 1.3em; margin: 25px 0 15px 0; padding-bottom: 8px; border-bottom: 2px solid #7c9885; font-weight: 600;"> Official Church Resources</h2>
+<div class="cfm-resources-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin: 10px 0; overflow: hidden;">
     <div class="section-header" onclick="toggleResourcesSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 14px 20px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center; letter-spacing: 0.5px;">
-        <span>PRE-MAPPED VIDEOS BY BOOK AND THEME</span>
-        <span class="arrow"></span>
+        <span>OFFICIAL CHURCH RESOURCES</span>
+        <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
     </div>
     <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
-        <div style="padding: 15px;">
-<div class="video-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=GQI72THyO5I" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/GQI72THyO5I/mqdefault.jpg" alt="Genesis" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Genesis</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=F4isSyennFo" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/F4isSyennFo/mqdefault.jpg" alt="Genesis" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Genesis</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=jH_aojNJM3E" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/jH_aojNJM3E/mqdefault.jpg" alt="Exodus" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Exodus</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=oNpTha80yyE" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/oNpTha80yyE/mqdefault.jpg" alt="Exodus" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Exodus</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=WmvyrLXoQio" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/WmvyrLXoQio/mqdefault.jpg" alt="Leviticus" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Leviticus</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=tp5MIrMZFqo" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/tp5MIrMZFqo/mqdefault.jpg" alt="Numbers" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Numbers</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=q5QEH9bH8AU" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/q5QEH9bH8AU/mqdefault.jpg" alt="Deuteronomy" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Deuteronomy</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=JqOqJlFF_eU" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/JqOqJlFF_eU/mqdefault.jpg" alt="Joshua" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Joshua</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=kOYy8iCfIJ4" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/kOYy8iCfIJ4/mqdefault.jpg" alt="Judges" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Judges</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=0h1eoBeR4Jk" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/0h1eoBeR4Jk/mqdefault.jpg" alt="Ruth" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Ruth</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=QJOju5Dw0V0" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/QJOju5Dw0V0/mqdefault.jpg" alt="1 Samuel" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">1 Samuel</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=YvoWDXNDJgs" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/YvoWDXNDJgs/mqdefault.jpg" alt="2 Samuel" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">2 Samuel</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=bVFW3wbi9pk" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/bVFW3wbi9pk/mqdefault.jpg" alt="1 Kings" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">1 Kings</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=zMyMntDj-m4" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/zMyMntDj-m4/mqdefault.jpg" alt="2 Kings" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">2 Kings</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=HR7xaHv3Ias" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/HR7xaHv3Ias/mqdefault.jpg" alt="1-2 Chronicles" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">1-2 Chronicles</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=MkETkRv9tG8" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/MkETkRv9tG8/mqdefault.jpg" alt="Ezra-Nehemiah" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Ezra-Nehemiah</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=JydNSlufRIs" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/JydNSlufRIs/mqdefault.jpg" alt="Esther" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Esther</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=GswSg2ohqmA" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/GswSg2ohqmA/mqdefault.jpg" alt="Job" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Job</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=j9phNEaPrv8" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/j9phNEaPrv8/mqdefault.jpg" alt="Psalms" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Psalms</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=AzmYV8GNAIM" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/AzmYV8GNAIM/mqdefault.jpg" alt="Proverbs" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Proverbs</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=VeUiuSK81-0" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/VeUiuSK81-0/mqdefault.jpg" alt="Ecclesiastes" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Ecclesiastes</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=4KC7xE4fgOw" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/4KC7xE4fgOw/mqdefault.jpg" alt="Song of Songs" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Song of Songs</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=d0A6Uchb1F8" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/d0A6Uchb1F8/mqdefault.jpg" alt="Isaiah" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Isaiah</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=_TzdEPuqgQg" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/_TzdEPuqgQg/mqdefault.jpg" alt="Isaiah" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Isaiah</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=RSK36cHbrk0" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/RSK36cHbrk0/mqdefault.jpg" alt="Jeremiah" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Jeremiah</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=p8GDFPdaQZQ" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/p8GDFPdaQZQ/mqdefault.jpg" alt="Lamentations" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Lamentations</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=R-CIPu1nko8" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/R-CIPu1nko8/mqdefault.jpg" alt="Ezekiel" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Ezekiel</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=SDeCWW_Ez3Q" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/SDeCWW_Ez3Q/mqdefault.jpg" alt="Ezekiel" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Ezekiel</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=9cSC9uobtPM" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/9cSC9uobtPM/mqdefault.jpg" alt="Daniel" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Daniel</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=kE6SZ1ogOVU" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/kE6SZ1ogOVU/mqdefault.jpg" alt="Hosea" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Hosea</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=zQLazbgz90c" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/zQLazbgz90c/mqdefault.jpg" alt="Joel" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Joel</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=mGgWaPGpGz4" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/mGgWaPGpGz4/mqdefault.jpg" alt="Amos" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Amos</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=i4ogCrEoG5s" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/i4ogCrEoG5s/mqdefault.jpg" alt="Obadiah" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Obadiah</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=dLIabZc0O4c" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/dLIabZc0O4c/mqdefault.jpg" alt="Jonah" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Jonah</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=MFEUEcylwLc" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/MFEUEcylwLc/mqdefault.jpg" alt="Micah" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Micah</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=Y30DanA5EhU" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/Y30DanA5EhU/mqdefault.jpg" alt="Nahum" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Nahum</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=OPMaRqGJPUU" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/OPMaRqGJPUU/mqdefault.jpg" alt="Habakkuk" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Habakkuk</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=oFZknKPNvz8" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/oFZknKPNvz8/mqdefault.jpg" alt="Zephaniah" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Zephaniah</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=juPvv_xcX-U" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/juPvv_xcX-U/mqdefault.jpg" alt="Haggai" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Haggai</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=_106IfO6Kc0" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/_106IfO6Kc0/mqdefault.jpg" alt="Zechariah" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Zechariah</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=HPGShWZ4Jvk" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/HPGShWZ4Jvk/mqdefault.jpg" alt="Malachi" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Malachi</span>
-                </div>
-            </a>
-        </div>
-            </div>
+        <div style="padding: 10px;">
+            <table style="width: 100%; border-collapse: collapse;">
+            <tr>
+                <td style="padding: 6px 12px; background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); font-weight: 600; color: #4a5d4f; font-size: 0.9em;" colspan="2">Church Manuals</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: left; font-size: 0.9em;">Come Follow Me Manual</td>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: right; width: 60px;"><a href="#" target="_blank" style="color: #9ca3af; font-size: 0.9em;">&mdash;</a></td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: left; font-size: 0.9em;">Scripture Helps</td>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: right; width: 60px;"><a href="https://www.churchofjesuschrist.org/study/manual/scripture-helps-old-testament?lang=eng" target="_blank" style="color: #7c9885; text-decoration: none; font-size: 0.9em;">View</a></td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: left; font-size: 0.9em;">OT Seminary Teacher Manual</td>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: right; width: 60px;"><a href="https://www.churchofjesuschrist.org/study/manual/old-testament-seminary-teacher-manual?lang=eng" target="_blank" style="color: #7c9885; text-decoration: none; font-size: 0.9em;">View</a></td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: left; font-size: 0.9em;">OT Institute Manual</td>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: right; width: 60px;"><a href="https://www.churchofjesuschrist.org/study/manual/old-testament-student-manual-genesis-2-samuel?lang=eng" target="_blank" style="color: #7c9885; text-decoration: none; font-size: 0.9em;">View</a></td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: left; font-size: 0.9em;">Pearl of Great Price Manual</td>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: right; width: 60px;"><a href="https://www.churchofjesuschrist.org/study/manual/the-pearl-of-great-price-student-manual-2018?lang=eng" target="_blank" style="color: #7c9885; text-decoration: none; font-size: 0.9em;">View</a></td>
+            </tr>
+            <tr>
+                <td style="padding: 6px 12px; background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); font-weight: 600; color: #4a5d4f; font-size: 0.9em;" colspan="2">Scripture Reference</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: left; font-size: 0.9em;">Bible Dictionary</td>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: right; width: 60px;"><a href="https://www.churchofjesuschrist.org/study/scriptures/bd?lang=eng" target="_blank" style="color: #7c9885; text-decoration: none; font-size: 0.9em;">View</a></td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: left; font-size: 0.9em;">Topical Guide</td>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: right; width: 60px;"><a href="https://www.churchofjesuschrist.org/study/scriptures/tg?lang=eng" target="_blank" style="color: #7c9885; text-decoration: none; font-size: 0.9em;">View</a></td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: left; font-size: 0.9em;">Guide to the Scriptures</td>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: right; width: 60px;"><a href="https://www.churchofjesuschrist.org/study/scriptures/gs?lang=eng" target="_blank" style="color: #7c9885; text-decoration: none; font-size: 0.9em;">View</a></td>
+            </tr>
+            <tr>
+                <td style="padding: 6px 12px; background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); font-weight: 600; color: #4a5d4f; font-size: 0.9em;" colspan="2">Church Media</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: left; font-size: 0.9em;">Gospel for Kids</td>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: right; width: 60px;"><a href="https://www.youtube.com/c/GospelforKids" target="_blank" style="color: #7c9885; text-decoration: none; font-size: 0.9em;">View</a></td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: left; font-size: 0.9em;">Bible Videos</td>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: right; width: 60px;"><a href="https://www.churchofjesuschrist.org/bible-videos" target="_blank" style="color: #7c9885; text-decoration: none; font-size: 0.9em;">View</a></td>
+            </tr>
+            <tr>
+                <td style="padding: 6px 12px; background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); font-weight: 600; color: #4a5d4f; font-size: 0.9em;" colspan="2">Church Publications & Library</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: left; font-size: 0.9em;">Church Magazines</td>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: right; width: 60px;"><a href="https://www.churchofjesuschrist.org/study/magazines?lang=eng" target="_blank" style="color: #7c9885; text-decoration: none; font-size: 0.9em;">View</a></td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: left; font-size: 0.9em;">Gospel Library</td>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: right; width: 60px;"><a href="https://www.churchofjesuschrist.org/study?lang=eng" target="_blank" style="color: #7c9885; text-decoration: none; font-size: 0.9em;">View</a></td>
+            </tr>
+            </table>
         </div>
     </div>
 </div>
 
-<div class="cfm-resources-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 15px; overflow: hidden;">
-    <div class="section-header" onclick="toggleResourcesSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 14px 20px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center; letter-spacing: 0.5px;">
-        <span>🔄 WEEKLY CONTENT (FIND & ADD URLS)</span>
-        <span class="arrow"></span>
+<hr style="border: none; border-top: 2px solid #e5e7eb; margin: 25px 0;">
+
+<!-- VIDEO COMMENTARY -->
+<h2 style="color: #4a5568; font-size: 1.3em; margin: 25px 0 15px 0; padding-bottom: 8px; border-bottom: 2px solid #7c9885; font-weight: 600;"> Video Commentary</h2>
+<!-- Video Commentary Accordion -->
+<div class="cfm-resources-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+    <div class="section-header" onclick="toggleResourcesSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 14px 20px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+        <span>Video Commentary <span style="font-size: 0.75em; color: #d1ddd4; font-weight: normal;">(click [i] for details)</span></span>
+        <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9660;&#xFE0E;</span>
     </div>
-    <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+    <div class="section-content" style="max-height: none; overflow: hidden; transition: max-height 0.5s ease; background: transparent;" data-expanded="true">
         <div style="padding: 15px;">
-<div class="video-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=8FCMjFR_l1I" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/8FCMjFR_l1I/mqdefault.jpg" alt="Finding Christ (Scripture Central)" style="width: 100%; height: auto; display: block;">
+    <div class="video-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+        <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: all 0.2s ease;" onmouseover="this.style.borderColor='#7c9885';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e5e7eb';this.style.transform='translateY(0)'"><a href="https://www.youtube.com/watch?v=8FCMjFR_l1I" target="_blank" style="text-decoration: none; display: block;">
+                <div style="position: relative;">
+                    <img src="https://img.youtube.com/vi/8FCMjFR_l1I/mqdefault.jpg" alt="Finding Christ (Scripture Central)" style="width: 100%; height: auto; display: block;">
+                    <span style="position: absolute; top: 5px; right: 5px; background: rgba(124,152,133,0.9); color: white; font-size: 0.65em; padding: 2px 5px; border-radius: 3px;">[i]</span>
+                </div></a>
                 <div style="padding: 8px 10px; text-align: center;">
                     <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Finding Christ (Scripture Central)</span>
                 </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=roMEHOIZmS8" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/roMEHOIZmS8/mqdefault.jpg" alt="Lynne Hilton Wilson (Scripture Central)" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Lynne Hilton Wilson (Scripture Central)</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=S-9CBYZxe9E" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/S-9CBYZxe9E/mqdefault.jpg" alt="Follow Him - Part 1" style="width: 100%; height: auto; display: block;">
+            </div><div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: all 0.2s ease;" onmouseover="this.style.borderColor='#7c9885';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e5e7eb';this.style.transform='translateY(0)'"><a href="https://www.youtube.com/watch?v=S-9CBYZxe9E" target="_blank" style="text-decoration: none; display: block;">
+                <div style="position: relative;">
+                    <img src="https://img.youtube.com/vi/S-9CBYZxe9E/mqdefault.jpg" alt="Follow Him - Part 1" style="width: 100%; height: auto; display: block;">
+                    <span style="position: absolute; top: 5px; right: 5px; background: rgba(124,152,133,0.9); color: white; font-size: 0.65em; padding: 2px 5px; border-radius: 3px;">[i]</span>
+                </div></a>
                 <div style="padding: 8px 10px; text-align: center;">
                     <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Follow Him - Part 1</span>
                 </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=o76_n5be9e8" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/o76_n5be9e8/mqdefault.jpg" alt="Follow Him - Part 2" style="width: 100%; height: auto; display: block;">
+            </div><div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: all 0.2s ease;" onmouseover="this.style.borderColor='#7c9885';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e5e7eb';this.style.transform='translateY(0)'"><a href="https://www.youtube.com/watch?v=o76_n5be9e8" target="_blank" style="text-decoration: none; display: block;">
+                <div style="position: relative;">
+                    <img src="https://img.youtube.com/vi/o76_n5be9e8/mqdefault.jpg" alt="Follow Him - Part 2" style="width: 100%; height: auto; display: block;">
+                    <span style="position: absolute; top: 5px; right: 5px; background: rgba(124,152,133,0.9); color: white; font-size: 0.65em; padding: 2px 5px; border-radius: 3px;">[i]</span>
+                </div></a>
                 <div style="padding: 8px 10px; text-align: center;">
                     <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Follow Him - Part 2</span>
                 </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=inLZsH3Jnro" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/inLZsH3Jnro/mqdefault.jpg" alt="Scripture Gems" style="width: 100%; height: auto; display: block;">
+            </div><div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: all 0.2s ease;" onmouseover="this.style.borderColor='#7c9885';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e5e7eb';this.style.transform='translateY(0)'"><a href="https://www.youtube.com/watch?v=roMEHOIZmS8" target="_blank" style="text-decoration: none; display: block;">
+                <div style="position: relative;">
+                    <img src="https://img.youtube.com/vi/roMEHOIZmS8/mqdefault.jpg" alt="Lynne Hilton Wilson (Scripture Central)" style="width: 100%; height: auto; display: block;">
+                    <span style="position: absolute; top: 5px; right: 5px; background: rgba(124,152,133,0.9); color: white; font-size: 0.65em; padding: 2px 5px; border-radius: 3px;">[i]</span>
+                </div></a>
                 <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Scripture Gems</span>
+                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Lynne Hilton Wilson (Scripture Central)</span>
                 </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=jtDo3fZsYf4" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/jtDo3fZsYf4/mqdefault.jpg" alt="Scripture Insights" style="width: 100%; height: auto; display: block;">
+            </div><div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                <a href="https://www.youtube.com/watch?v=inLZsH3Jnro" target="_blank" style="text-decoration: none;">
+                    <img src="https://img.youtube.com/vi/inLZsH3Jnro/mqdefault.jpg" alt="Scripture Gems" style="width: 100%; height: auto; display: block;">
+                    <div style="padding: 8px 10px; text-align: center;">
+                        <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Scripture Gems</span>
+                    </div>
+                </a>
+            </div><div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: all 0.2s ease;" onmouseover="this.style.borderColor='#7c9885';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e5e7eb';this.style.transform='translateY(0)'"><a href="https://www.youtube.com/watch?v=jtDo3fZsYf4" target="_blank" style="text-decoration: none; display: block;">
+                <div style="position: relative;">
+                    <img src="https://img.youtube.com/vi/jtDo3fZsYf4/mqdefault.jpg" alt="Scripture Insights" style="width: 100%; height: auto; display: block;">
+                    <span style="position: absolute; top: 5px; right: 5px; background: rgba(124,152,133,0.9); color: white; font-size: 0.65em; padding: 2px 5px; border-radius: 3px;">[i]</span>
+                </div></a>
                 <div style="padding: 8px 10px; text-align: center;">
                     <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Scripture Insights</span>
                 </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=6Ho1C0tifQc" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/6Ho1C0tifQc/mqdefault.jpg" alt="Talking Scripture" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Talking Scripture</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=kh5V6GGqB1g" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/kh5V6GGqB1g/mqdefault.jpg" alt="Teaching With Power" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Teaching With Power</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=HsU5SBfEJjc" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/HsU5SBfEJjc/mqdefault.jpg" alt="The Scriptures Are Real" style="width: 100%; height: auto; display: block;">
+            </div><div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                <a href="https://www.youtube.com/watch?v=6Ho1C0tifQc" target="_blank" style="text-decoration: none;">
+                    <img src="https://img.youtube.com/vi/6Ho1C0tifQc/mqdefault.jpg" alt="Talking Scripture" style="width: 100%; height: auto; display: block;">
+                    <div style="padding: 8px 10px; text-align: center;">
+                        <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Talking Scripture</span>
+                    </div>
+                </a>
+            </div><div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                <a href="https://www.youtube.com/watch?v=kh5V6GGqB1g" target="_blank" style="text-decoration: none;">
+                    <img src="https://img.youtube.com/vi/kh5V6GGqB1g/mqdefault.jpg" alt="Teaching With Power" style="width: 100%; height: auto; display: block;">
+                    <div style="padding: 8px 10px; text-align: center;">
+                        <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Teaching With Power</span>
+                    </div>
+                </a>
+            </div><div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: all 0.2s ease;" onmouseover="this.style.borderColor='#7c9885';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e5e7eb';this.style.transform='translateY(0)'"><a href="https://www.youtube.com/watch?v=K_pGvipM71E" target="_blank" style="text-decoration: none; display: block;">
+                <div style="position: relative;">
+                    <img src="https://img.youtube.com/vi/K_pGvipM71E/mqdefault.jpg" alt="The Scriptures Are Real" style="width: 100%; height: auto; display: block;">
+                    <span style="position: absolute; top: 5px; right: 5px; background: rgba(124,152,133,0.9); color: white; font-size: 0.65em; padding: 2px 5px; border-radius: 3px;">[i]</span>
+                </div></a>
                 <div style="padding: 8px 10px; text-align: center;">
                     <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">The Scriptures Are Real</span>
                 </div>
-            </a>
+            </div><div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                <a href="https://www.youtube.com/watch?v=QKwb546xtM4" target="_blank" style="text-decoration: none;">
+                    <img src="https://img.youtube.com/vi/QKwb546xtM4/mqdefault.jpg" alt="Unshaken" style="width: 100%; height: auto; display: block;">
+                    <div style="padding: 8px 10px; text-align: center;">
+                        <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Unshaken</span>
+                    </div>
+                </a>
+            </div>
+    </div>
         </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=K_pGvipM71E" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/K_pGvipM71E/mqdefault.jpg" alt="The Scriptures Are Real" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">The Scriptures Are Real</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=QKwb546xtM4" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/QKwb546xtM4/mqdefault.jpg" alt="Unshaken" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Unshaken</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=YbJ4rIiwJSc" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/YbJ4rIiwJSc/mqdefault.jpg" alt="Grounded" style="width: 100%; height: auto; display: block;">
+    </div>
+</div>
+
+<!-- SPECIALIZED AUDIENCES -->
+<h2 style="color: #4a5568; font-size: 1.3em; margin: 25px 0 15px 0; padding-bottom: 8px; border-bottom: 2px solid #7c9885; font-weight: 600;"> Specialized Audiences</h2>
+
+<div class="cfm-resources-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 15px; overflow: hidden;">
+    <div class="section-header" onclick="toggleResourcesSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 14px 20px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+        <span>Women's Perspectives</span>
+        <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+    </div>
+    <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;" >
+        <div style="padding: 15px;">
+            <div class="video-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: all 0.2s ease;" onmouseover="this.style.borderColor='#7c9885';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e5e7eb';this.style.transform='translateY(0)'"><a href="https://www.youtube.com/watch?v=YbJ4rIiwJSc" target="_blank" style="text-decoration: none; display: block;">
+                <div style="position: relative;">
+                    <img src="https://img.youtube.com/vi/YbJ4rIiwJSc/mqdefault.jpg" alt="Grounded" style="width: 100%; height: auto; display: block;">
+                    <span style="position: absolute; top: 5px; right: 5px; background: rgba(124,152,133,0.9); color: white; font-size: 0.65em; padding: 2px 5px; border-radius: 3px;">[i]</span>
+                </div></a>
                 <div style="padding: 8px 10px; text-align: center;">
                     <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Grounded</span>
                 </div>
-            </a>
+            </div><div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                <a href="https://www.youtube.com/watch?v=l02sREZb-uo&t=7sw.youtube.com/watch?v=q0H-z-l6TEk" target="_blank" style="text-decoration: none;">
+                    <img src="https://img.youtube.com/vi/l02sREZb-uo/mqdefault.jpg" alt="Our Mothers Knew It" style="width: 100%; height: auto; display: block;">
+                    <div style="padding: 8px 10px; text-align: center;">
+                        <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Our Mothers Knew It</span>
+                    </div>
+                </a>
+            </div>
+            </div>
         </div>
+    </div>
+</div>
+<div class="cfm-resources-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 15px; overflow: hidden;">
+    <div class="section-header" onclick="toggleResourcesSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 14px 20px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+        <span>Family & Children's Resources</span>
+        <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+    </div>
+    <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;" >
+        <div style="padding: 15px;">
+            <div class="video-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
                 <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=l02sREZb-uo" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/l02sREZb-uo/mqdefault.jpg" alt="Our Mothers Knew It" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Our Mothers Knew It</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=-U3zfdDvUV8" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/-U3zfdDvUV8/mqdefault.jpg" alt="Latter Day Kids" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Latter Day Kids</span>
-                </div>
-            </a>
-        </div>
-                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <a href="https://www.youtube.com/watch?v=3fHavMUFkLg" target="_blank" style="text-decoration: none;">
-                <img src="https://img.youtube.com/vi/3fHavMUFkLg/mqdefault.jpg" alt="Scripture Explorers" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 8px 10px; text-align: center;">
-                    <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Scripture Explorers</span>
-                </div>
-            </a>
-        </div>
+                <a href="https://www.youtube.com/watch?v=-U3zfdDvUV8" target="_blank" style="text-decoration: none;">
+                    <img src="https://img.youtube.com/vi/-U3zfdDvUV8/mqdefault.jpg" alt="Latter Day Kids" style="width: 100%; height: auto; display: block;">
+                    <div style="padding: 8px 10px; text-align: center;">
+                        <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Latter Day Kids</span>
+                    </div>
+                </a>
+            </div><div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                <a href="https://www.youtube.com/@lineupon" target="_blank" style="text-decoration: none; display: block;">
+                    <div style="background: linear-gradient(135deg, #4a7c59, #4a7c59cc); padding: 25px 15px; text-align: center;">
+                        <span style="font-size: 2.5em;">LUL</span>
+                    </div>
+                    <div style="padding: 10px; text-align: center;">
+                        <span style="color: #7c9885; font-weight: 600; font-size: 0.8em; display: block;">Line Upon Line</span>
+                        <span style="color: #9ca3af; font-size: 0.65em;">Children's scripture videos</span>
+                    </div>
+                </a>
+            </div><div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                <a href="https://www.youtube.com/watch?v=3fHavMUFkLg" target="_blank" style="text-decoration: none;">
+                    <img src="https://img.youtube.com/vi/3fHavMUFkLg/mqdefault.jpg" alt="Scripture Explorers" style="width: 100%; height: auto; display: block;">
+                    <div style="padding: 8px 10px; text-align: center;">
+                        <span style="color: #7c9885; font-weight: 600; font-size: 0.8em;">Scripture Explorers</span>
+                    </div>
+                </a>
+            </div><div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                <a href="https://www.youtube.com/playlist?list=PLDF5gvmBMmuWnVvuniah6KgQYYD-bfdRz" target="_blank" style="text-decoration: none; display: block;">
+                    <div style="background: linear-gradient(135deg, #6b5b95, #6b5b95cc); padding: 25px 15px; text-align: center;">
+                        <span style="font-size: 2.5em;">TFM</span>
+                    </div>
+                    <div style="padding: 10px; text-align: center;">
+                        <span style="color: #7c9885; font-weight: 600; font-size: 0.8em; display: block;">Thumb Follow Me</span>
+                        <span style="color: #9ca3af; font-size: 0.65em;">Toddler-friendly lessons</span>
+                    </div>
+                </a>
+            </div><div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                <a href="https://www.comefollowmefhe.com/lessons/" target="_blank" style="text-decoration: none; display: block;">
+                    <div style="background: linear-gradient(135deg, #d4a373, #d4a373cc); padding: 25px 15px; text-align: center;">
+                        <span style="font-size: 2.5em;">FHE</span>
+                    </div>
+                    <div style="padding: 10px; text-align: center;">
+                        <span style="color: #7c9885; font-weight: 600; font-size: 0.8em; display: block;">Come Follow Me FHE</span>
+                        <span style="color: #9ca3af; font-size: 0.65em;">Family Home Evening ideas</span>
+                    </div>
+                </a>
+            </div>
             </div>
         </div>
     </div>
 </div>
 
+<hr style="border: none; border-top: 2px solid #e5e7eb; margin: 25px 0;">
+
+<!-- REFERENCE & STUDY -->
+<h2 style="color: #4a5568; font-size: 1.3em; margin: 25px 0 15px 0; padding-bottom: 8px; border-bottom: 2px solid #7c9885; font-weight: 600;"> Reference & Study Materials</h2>
+<!-- ACADEMIC STUDY GUIDE BUTTONS -->
+<!-- Academic Study Guide Buttons -->
+<div class="video-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 20px;">
+    <a href="https://scripturecentral.org/come-follow-me/old-testament-sunday-school-2026/introduction-to-the-old-testament" target="_blank" style="text-decoration: none; display: block;">
+            <div style="background: linear-gradient(135deg, #1a365d 0%, #2d4a6f 100%); border-radius: 10px; padding: 15px; color: white; text-align: center; transition: all 0.2s ease; box-shadow: 0 3px 10px rgba(0,0,0,0.15);" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 6px 15px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 3px 10px rgba(0,0,0,0.15)'">
+                <div style="background: white; border-radius: 6px; padding: 10px; margin-bottom: 10px;">
+                    <img src="https://scripturecentral.org/assets/scripture-central-logo-black.png" alt="Scripture Central" style="height: 35px; width: auto;">
+                </div>
+                <div style="font-size: 0.85em; opacity: 0.95;">Introduction to the Old Testament</div>
+                <div style="font-size: 0.75em; opacity: 0.7; margin-top: 4px;">Weekly videos, articles, and study helps from Scripture Central scholars</div>
+            </div>
+        </a><a href="https://interpreterfoundation.org/come-follow-me/old-testament-2026/introduction-to-the-old-testament" target="_blank" style="text-decoration: none; display: block;">
+            <div style="background: linear-gradient(135deg, #2c1810 0%, #4a2c20 100%); border-radius: 10px; padding: 15px; color: white; text-align: center; transition: all 0.2s ease; box-shadow: 0 3px 10px rgba(0,0,0,0.15);" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 6px 15px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 3px 10px rgba(0,0,0,0.15)'">
+                <div style="padding: 8px 10px; margin-bottom: 10px;">
+                    <img src="https://cms.interpreterfoundation.org/wp-content/uploads/2024/06/logo-light.png" alt="Interpreter Foundation" style="height: 40px; width: auto;">
+                </div>
+                <div style="font-size: 0.85em; opacity: 0.95;">Introduction to the Old Testament</div>
+                <div style="font-size: 0.75em; opacity: 0.7; margin-top: 4px;">Study and Teaching Helps from Interpreter Foundation</div>
+            </div>
+        </a><a href="https://www.youtube.com/watch?v=ALsluAKBZ-c" target="_blank" style="text-decoration: none; display: block;">
+            <div style="background: white; border-radius: 10px; overflow: hidden; transition: all 0.2s ease; box-shadow: 0 3px 10px rgba(0,0,0,0.15);" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 6px 15px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 3px 10px rgba(0,0,0,0.15)'">
+                <div style="position: relative;">
+                    <img src="https://img.youtube.com/vi/ALsluAKBZ-c/hqdefault.jpg" alt="Bible Project" style="width: 100%; height: auto; display: block;">
+                    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(45,80,22,0.95)); padding: 15px 10px 10px;">
+                        <div style="color: white; font-weight: 700; font-size: 1em;">Bible Project</div>
+                        <div style="color: white; font-size: 0.8em; opacity: 0.9;">1 Video This Week</div>
+                    </div>
+                </div>
+            </div>
+        </a>
+</div>
+
 <!-- Expand/Collapse Controls -->
-<div style="text-align: center; margin: 30px 0;">
+<div class="toggle-all-buttons">
     <button onclick="toggleAll(true)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 0 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Expand All Sections</button>
     <button onclick="toggleAll(false)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 0 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Collapse All Sections</button>
 </div>
+
+<!-- ACADEMIC RESOURCES -->
+<div class="cfm-resources-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin: 10px 0; overflow: hidden;">
+    <div class="section-header" onclick="toggleResourcesSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 14px 20px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center; letter-spacing: 0.5px;">
+        <span>ACADEMIC & SCHOLARLY SITES (Homepages)</span>
+        <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+    </div>
+    <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+        <div style="padding: 10px;">
+            <table style="width: 100%; border-collapse: collapse;">
+            <tr>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: left; font-size: 0.9em;">Scripture Central</td>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: right; width: 60px;"><a href="https://scripturecentral.org/" target="_blank" style="color: #7c9885; text-decoration: none; font-size: 0.9em;">View</a></td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: left; font-size: 0.9em;">Interpreter Foundation</td>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: right; width: 60px;"><a href="https://interpreterfoundation.org/" target="_blank" style="color: #7c9885; text-decoration: none; font-size: 0.9em;">View</a></td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: left; font-size: 0.9em;">Bible Project</td>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: right; width: 60px;"><a href="https://bibleproject.com/" target="_blank" style="color: #7c9885; text-decoration: none; font-size: 0.9em;">View</a></td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: left; font-size: 0.9em;">BYU Religious Studies Center</td>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: right; width: 60px;"><a href="https://rsc.byu.edu/" target="_blank" style="color: #7c9885; text-decoration: none; font-size: 0.9em;">View</a></td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: left; font-size: 0.9em;">Pearl of Great Price Central</td>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: right; width: 60px;"><a href="https://www.pearlofgreatpricecentral.org/" target="_blank" style="color: #7c9885; text-decoration: none; font-size: 0.9em;">View</a></td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: left; font-size: 0.9em;">Messages of Christ</td>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: right; width: 60px;"><a href="https://www.youtube.com/@messagesofchrist" target="_blank" style="color: #7c9885; text-decoration: none; font-size: 0.9em;">View</a></td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: left; font-size: 0.9em;">Women in the Scriptures</td>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: right; width: 60px;"><a href="https://www.womeninthescriptures.com/" target="_blank" style="color: #7c9885; text-decoration: none; font-size: 0.9em;">View</a></td>
+            </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- MAPS & BIBLICAL LOCATIONS -->
+<div class="cfm-resources-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin: 10px 0; overflow: hidden;">
+    <div class="section-header" onclick="toggleResourcesSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 14px 20px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center; letter-spacing: 0.5px;">
+        <span>MAPS & BIBLICAL LOCATIONS</span>
+        <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+    </div>
+    <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+        <div style="padding: 10px;">
+            <table style="width: 100%; border-collapse: collapse;">
+            <tr>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: left; font-size: 0.9em;">BYU Scriptures Mapped</td>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: right; width: 60px;"><a href="https://scriptures.byu.edu/mapscrip/" target="_blank" style="color: #7c9885; text-decoration: none; font-size: 0.9em;">View</a></td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: left; font-size: 0.9em;">Holy Land Site - All Biblical Sites</td>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: right; width: 60px;"><a href="https://www.holylandsite.com/all-biblical-sites" target="_blank" style="color: #7c9885; text-decoration: none; font-size: 0.9em;">View</a></td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: left; font-size: 0.9em;">Bible Mapper</td>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: right; width: 60px;"><a href="https://biblemapper.com" target="_blank" style="color: #7c9885; text-decoration: none; font-size: 0.9em;">View</a></td>
+            </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- JEWISH & SCHOLARLY RESOURCES -->
+<div class="cfm-resources-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin: 10px 0; overflow: hidden;">
+    <div class="section-header" onclick="toggleResourcesSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 14px 20px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center; letter-spacing: 0.5px;">
+        <span>JEWISH & SCHOLARLY RESOURCES</span>
+        <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+    </div>
+    <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+        <div style="padding: 10px;">
+            <table style="width: 100%; border-collapse: collapse;">
+            <tr>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: left; font-size: 0.9em;">Blue Letter Bible</td>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: right; width: 60px;"><a href="https://www.blueletterbible.org/" target="_blank" style="color: #7c9885; text-decoration: none; font-size: 0.9em;">View</a></td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: left; font-size: 0.9em;">Sefaria (Hebrew Texts)</td>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: right; width: 60px;"><a href="https://www.sefaria.org/" target="_blank" style="color: #7c9885; text-decoration: none; font-size: 0.9em;">View</a></td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: left; font-size: 0.9em;">My Jewish Learning</td>
+                <td style="padding: 8px 12px; border-bottom: 1px solid #f0f0f0; text-align: right; width: 60px;"><a href="https://www.myjewishlearning.com/" target="_blank" style="color: #7c9885; text-decoration: none; font-size: 0.9em;">View</a></td>
+            </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript for Accordion Expand/Collapse -->
+
+
+
+<!-- Modal Styles -->
+<style>
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+.modal-overlay.active {
+    display: flex;
+}
+.modal-content {
+    background: white;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+.modal-header {
+    background: linear-gradient(135deg, #7c9885 0%, #6b8774 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 12px 12px 0 0;
+}
+.modal-header h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.3em;
+}
+.modal-header .duration {
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+.modal-body {
+    padding: 20px;
+}
+.modal-body h4 {
+    color: #4a5568;
+    margin: 15px 0 10px 0;
+    font-size: 1em;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 5px;
+}
+.modal-body ul {
+    margin: 0;
+    padding-left: 20px;
+}
+.modal-body li {
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+.modal-body .best-for {
+    background: #f4f5f7;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    color: #555;
+}
+.modal-body .quote {
+    font-style: italic;
+    color: #666;
+    padding: 10px 15px;
+    border-left: 3px solid #7c9885;
+    background: #f9fafb;
+    margin: 10px 0;
+    font-size: 0.9em;
+}
+.modal-footer {
+    padding: 15px 20px;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+.btn-watch {
+    background: #7c9885;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: Georgia, serif;
+    font-size: 0.95em;
+    text-decoration: none;
+}
+.btn-watch:hover {
+    background: #6b8774;
+}
+.btn-close {
+    background: #e5e7eb;
+    color: #555;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: Georgia, serif;
+    font-size: 0.95em;
+}
+.btn-close:hover {
+    background: #d1d5db;
+}
+</style>
+
+<!-- Modal Overlay -->
+<div id="modalOverlay" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <div class="modal-header">
+            <h3 id="modalTitle">Video Title</h3>
+            <span class="duration" id="modalDuration">Duration</span>
+        </div>
+        <div class="modal-body">
+            <div class="best-for" style="margin-bottom: 15px;">
+                <strong>Focus:</strong> <span id="modalFocusText"></span>
+            </div>
+            <h4>Unique Topics Covered</h4>
+            <ul id="modalTopics"></ul>
+            <h4>Notable Quote</h4>
+            <div class="quote" id="modalQuote"></div>
+            <h4>Best For</h4>
+            <div class="best-for" id="modalBestFor"></div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn-close" onclick="closeModal()">Close</button>
+            <a id="modalWatchBtn" href="#" target="_blank" class="btn-watch">Watch Video</a>
+        </div>
+    </div>
+</div>
+
+<!-- Modal JavaScript -->
+
+
+
+<script>
+
+const videoData = {
+    scripturecentral: {
+        title: "Scripture Central",
+        guest: "John Hilton III",
+        duration: "45 min",
+        url: "https://www.youtube.com/watch?v=8FCMjFR_l1I&list=PLhfh21X9suLeJgxN1WpXSDs5RFKCU4601&index=2",
+        focus: "9 periods of OT, study tools, translations",
+        topics: ["<strong>Nine Periods Framework</strong> - Clear historical timeline from Creation to Persian Period", "<strong>Modern Bible Translations</strong> - Strong advocacy with church leader support", "<strong>AI as Study Tool</strong> - Demonstrates using ChatGPT for scripture questions"],
+        quote: "The Old Testament doesn't just prophesy of Christ, it proclaims him on every page.",
+        bestFor: "Beginners needing historical overview, those wanting practical tools"
+    },
+    followhim: {
+        title: "Follow Him",
+        guest: "Dr. Joshua Sears",
+        duration: "90 min (2 parts)",
+        url: "https://www.youtube.com/watch?v=o76_n5be9e8",
+        focus: "Jehovah Mode, covenant as relationship",
+        topics: ["<strong>\"Jehovah Mode\" vs. Prophecy Hunting</strong> - See Jesus acting in real-time as Jehovah throughout the OT", "<strong>Substitution Exercise</strong> - Replace \"LORD\" with \"Jesus\" to see Christ on every page", "<strong>Covenant as Relationship</strong> - Baptism as initial ordinance, sacrament as weekly date"],
+        quote: "The central message of the Old Testament is redemption through a God who has bound himself to us by covenant.",
+        bestFor: "Scholarly approach to OT, understanding covenant as relationship, seeing Christ throughout"
+    },
+    lynnewilson: {
+        title: "Lynne Wilson",
+        guest: "Dr. Lynne Hilton Wilson",
+        duration: "45 min",
+        url: "https://www.youtube.com/watch?v=roMEHOIZmS8",
+        focus: "Satan removed from text, Moses 1 as temple",
+        topics: ["<strong>Satan Removed from Text</strong> - Genesis never mentions devil/Satan\u2014a \"plain and precious\" loss", "<strong>Moses 1 as Temple Text</strong> - Prepares us to return to God's presence", "<strong>Mountain = Temple</strong> - High places for seeing holy things"],
+        quote: "The book of Genesis never mentions temptation, Satan, or devil. In fact, the entire Old Testament never uses the word 'devil.'",
+        bestFor: "Temple workers, women seeking representation, textual history"
+    },
+    scriptureinsights: {
+        title: "Scripture Insights",
+        guest: "Taylor Halverson & Mike Harris",
+        duration: "50 min",
+        url: "https://www.youtube.com/watch?v=jtDo3fZsYf4",
+        focus: "Hebrew terms (chesed, chen), belonging framework",
+        topics: ["<strong>OT as God's Love Story</strong> - Reframing narrative from violence to love", "<strong>Belonging > Belief + Behavior</strong> - Revolutionary framework for understanding gospel", "<strong>Hebrew Terms</strong> - Chesed (covenantal loyalty) and Chen (grace/favor)"],
+        quote: "There is nothing you can do to destroy or earn God's chesed. It is always there.",
+        bestFor: "Hebrew language enthusiasts, understanding belonging as foundation"
+    },
+    scripturesarereal: {
+        title: "The Scriptures Are Real",
+        guest: "Kerry Muhlestein",
+        duration: "60 min",
+        url: "https://www.youtube.com/watch?v=K_pGvipM71E",
+        focus: "Interpretive lenses, divine warrior",
+        topics: ["<strong>Lenses to REMOVE</strong> - Time, history, geography, culture, Western thinking, expectations of God", "<strong>Divine Warrior</strong> - Christ with sword AND wiping away tears", "<strong>Symbolic Literacy Crisis</strong> - Youth uncomfortable in temple because symbol-illiterate"],
+        quote: "The reason that Christ can reach out with one hand and wipe away our tears is because in the other hand he holds a great and terrible and mighty sword.",
+        bestFor: "Advanced students, those wanting to remove modern biases"
+    },
+    grounded: {
+        title: "Grounded",
+        guest: "Barbara Morgan Gardner",
+        duration: "45 min",
+        url: "https://www.youtube.com/watch?v=YbJ4rIiwJSc&list=PLNY8uYCAb6ukQKxAYDekqsOroJg-siN2w&index=2",
+        focus: "Doctrine/principle/application tree, women's calling",
+        topics: ["<strong>Olive Tree Framework</strong> - Roots (covenants) \u2192 Trunk (doctrines) \u2192 Branches (principles) \u2192 Leaves (applications)", "<strong>Covenants as Anchor Pins</strong> - Elder Bednar's building foundation metaphor", "<strong>Women's Covenant Calling</strong> - Ballard and Nelson on women's voices needed"],
+        quote: "The power of a converted woman's voice is immeasurable, and the church needs your voices now more than ever.",
+        bestFor: "Those wanting systematic framework, women seeking empowerment"
+    }
+};
+
+
+function closeModal(event) {
+    if (event && event.target !== event.currentTarget) return;
+    document.getElementById('modalOverlay').classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+});
+
+</script>
+</div></body></html>
