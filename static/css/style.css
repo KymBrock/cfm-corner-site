@@ -651,6 +651,149 @@ body {
     overflow-x: hidden;
     box-sizing: border-box;
 }
+
+/* === Study Guide Styles (warm brown theme) === */
+.embedded-content .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+.embedded-content .header-section {
+    background-color: #8B7355; color: white; padding: 40px; border-radius: 12px;
+    margin-bottom: 30px; text-align: center;
+}
+.embedded-content .header-section .week-label { font-size: 1em; text-transform: uppercase; letter-spacing: 2px; opacity: 0.9; margin-bottom: 10px; }
+.embedded-content .header-section h1 { font-size: 2.5em; font-weight: 300; margin-bottom: 10px; color: white; }
+.embedded-content .header-section .subtitle { font-size: 1.3em; font-style: italic; margin-bottom: 20px; }
+.embedded-content .header-section .date-location { font-size: 1.1em; opacity: 0.95; }
+
+.embedded-content .quick-links { text-align: center; margin: 20px 0; }
+.embedded-content .quick-link {
+    display: inline-block; background: #8B7355; color: white; padding: 10px 20px;
+    border-radius: 8px; text-decoration: none; margin: 5px; transition: all 0.3s;
+}
+.embedded-content .quick-link:hover { background: #6B5344; transform: translateY(-2px); }
+
+.embedded-content .button-container { text-align: center; margin: 30px 0; }
+.embedded-content .expand-button {
+    background-color: #8B7355; color: white; border: none; padding: 12px 24px;
+    margin: 0 10px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em;
+}
+.embedded-content .expand-button:hover { background-color: #6B5344; }
+
+.embedded-content .sg-accordion-section {
+    background-color: #8B7355; color: white; cursor: pointer; padding: 18px; width: 100%;
+    border: none; text-align: left; font-size: 1.2em; font-weight: 600; font-family: Georgia, serif;
+    border-radius: 8px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center;
+}
+.embedded-content .sg-accordion-section:hover { background-color: #6B5344; }
+/* CSS border-triangle arrow instead of Unicode ▼ */
+.embedded-content .sg-accordion-section::after {
+    content: '';
+    display: inline-block;
+    width: 0; height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 9px;
+    border-color: transparent transparent transparent white;
+    flex-shrink: 0;
+    transition: transform 0.3s;
+}
+.embedded-content .sg-accordion-section.active::after { transform: rotate(90deg); }
+
+.embedded-content .sg-panel {
+    background-color: white; border-radius: 0 0 8px 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: none;
+}
+.embedded-content .sg-panel.active { display: block; }
+.embedded-content .panel-content { padding: 30px; }
+.embedded-content .panel-content h2 { color: #8B7355; margin-bottom: 20px; font-size: 1.8em; }
+.embedded-content .panel-content h3 { color: #6B5344; margin-top: 25px; margin-bottom: 15px; font-size: 1.4em; }
+.embedded-content .panel-content h4 { color: #5a4a3a; margin-top: 20px; margin-bottom: 12px; font-size: 1.2em; }
+.embedded-content .panel-content ul, .embedded-content .panel-content ol { margin-left: 25px; margin-bottom: 15px; }
+.embedded-content .panel-content li { margin-bottom: 8px; }
+.embedded-content .panel-content p { margin-bottom: 15px; text-align: justify; }
+.embedded-content .panel-content a { color: #8B7355; }
+.embedded-content .panel-content a:hover { color: #6B5344; text-decoration: underline; }
+.embedded-content .panel-content blockquote {
+    margin: 20px 0 20px 20px; padding: 15px 20px;
+    border-left: 4px solid #8B7355; background-color: #faf8f5;
+    font-style: italic; color: #5a4a3a; border-radius: 0 8px 8px 0;
+}
+.embedded-content .panel-content blockquote p { margin-bottom: 8px; }
+.embedded-content .panel-content blockquote p:last-child { margin-bottom: 0; }
+.embedded-content .panel-content blockquote cite {
+    display: block; margin-top: 10px; font-size: 0.9em; color: #8B7355; font-style: normal;
+}
+.embedded-content .panel-content strong { color: #6B5344; }
+.embedded-content .panel-content em { color: #5a4a3a; }
+.embedded-content .panel-content hr { border: none; border-top: 2px solid #e8e0d5; margin: 25px 0; }
+.embedded-content .panel-content code {
+    background-color: #f5f0e8; padding: 2px 6px; border-radius: 4px;
+    font-family: 'Courier New', monospace; font-size: 0.9em; color: #6B5344;
+}
+
+.embedded-content .info-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+.embedded-content .info-table th, .embedded-content .info-table td { border: 1px solid #d4c4a8; padding: 12px; text-align: left; }
+.embedded-content .info-table th { background-color: #f5f0e8; color: #6B5344; font-weight: bold; }
+.embedded-content .info-table tr:nth-child(even) { background-color: #faf8f5; }
+
+/* Sub-accordions for study guide nested sections */
+.embedded-content .sg-sub-accordion {
+    background-color: #f5f0e8; color: #5a4a3a; cursor: pointer;
+    padding: 14px 40px 14px 18px; width: 100%; text-align: left;
+    border: 1px solid #d4c4a8; border-radius: 6px;
+    font-size: 1.1em; font-weight: 600; font-family: Georgia, serif;
+    margin-top: 10px; position: relative; transition: background-color 0.2s;
+}
+.embedded-content .sg-sub-accordion:hover { background-color: #e8e0d4; }
+/* CSS border-triangle arrow instead of Unicode ▼ */
+.embedded-content .sg-sub-accordion::after {
+    content: '';
+    display: inline-block;
+    width: 0; height: 0;
+    border-style: solid;
+    border-width: 4px 0 4px 7px;
+    border-color: transparent transparent transparent #8B7355;
+    position: absolute; right: 18px; top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s;
+}
+.embedded-content .sg-sub-accordion.active::after { transform: translateY(-50%) rotate(90deg); }
+
+.embedded-content .sg-sub-panel {
+    background-color: #fafafa; border-radius: 0 0 6px 6px;
+    border: 1px solid #d4c4a8; border-top: none;
+    display: none; margin-bottom: 10px;
+}
+.embedded-content .sg-sub-panel.active { display: block; }
+.embedded-content .sg-sub-panel-content { padding: 20px 25px; }
+.embedded-content .sg-sub-panel-content h3 { color: #6B5344; margin-top: 20px; margin-bottom: 12px; font-size: 1.3em; }
+.embedded-content .sg-sub-panel-content h4 { color: #5a4a3a; margin-top: 15px; margin-bottom: 10px; font-size: 1.15em; }
+.embedded-content .sg-sub-panel-content p { margin-bottom: 12px; text-align: justify; }
+.embedded-content .sg-sub-panel-content ul, .embedded-content .sg-sub-panel-content ol { margin-left: 25px; margin-bottom: 12px; }
+.embedded-content .sg-sub-panel-content li { margin-bottom: 6px; }
+.embedded-content .sg-sub-panel-content a { color: #8B7355; }
+.embedded-content .sg-sub-panel-content a:hover { color: #6B5344; text-decoration: underline; }
+.embedded-content .sg-sub-panel-content blockquote {
+    margin: 15px 0 15px 15px; padding: 12px 18px;
+    border-left: 3px solid #8B7355; background-color: #faf8f5;
+    font-style: italic; color: #5a4a3a; border-radius: 0 6px 6px 0;
+}
+.embedded-content .sg-sub-panel-content blockquote p { margin-bottom: 6px; }
+.embedded-content .sg-sub-panel-content blockquote p:last-child { margin-bottom: 0; }
+.embedded-content .sg-sub-panel-content strong { color: #6B5344; }
+.embedded-content .sg-sub-panel-content hr { border: none; border-top: 1px solid #e8e0d5; margin: 20px 0; }
+
+.embedded-content .sg-section-heading {
+    margin: 1.2em 0 0.6em 0; padding: 0.4em 0 0.4em 0.8em;
+    border-left: 3px solid #8B9D77; color: #5a6b4f;
+    font-size: 1.05em; font-weight: 600;
+}
+.embedded-content .sg-section-title { flex: 1; }
+.embedded-content .sg-section-actions { display: inline-flex; gap: 4px; margin-right: 8px; }
+.embedded-content .sg-action-btn {
+    background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35);
+    color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer;
+    font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;
+}
+.embedded-content .sg-action-btn:hover { background: rgba(255,255,255,0.35); }
 /* Neutralize the injected resources HTML body style */
 .embedded-content body,
 .embedded-content > div {
@@ -824,6 +967,10 @@ body {
     .subscribe-form { flex-direction: column; align-items: center; gap: 8px; }
     .subscribe-form input { width: 100%; max-width: 320px; }
     .subscribe-form button { width: 100%; max-width: 320px; }
+    /* Study guide embedded responsive */
+    .embedded-content .header-section h1 { font-size: 1.8em; }
+    .embedded-content .panel-content { padding: 20px; }
+    .embedded-content .sg-sub-panel-content { padding: 15px 18px; }
     /* Resource page grid override (inline styles use repeat(3)) */
     .chart-grid { grid-template-columns: repeat(2, 1fr) !important; }
     .chart-card { padding: 20px 14px !important; }

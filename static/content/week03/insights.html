@@ -1,129 +1,626 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Genesis 1-2; Moses 2-3; Abraham 4-5 - Historical Insights</title></head><body><div data-pagefind-body><style>
-
-        body {
-            font-family: Georgia, serif;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0;
-            background: transparent;
-            color: #1f2937;
-            line-height: 1.7;
-        }
-        /* RTL/Hebrew text support */
-        [dir="rtl"], .hebrew {
-            direction: rtl;
-            font-family: 'SBL Hebrew', 'Ezra SIL', 'Times New Roman', serif;
-            font-size: 1.15em;
-        }
-        /* Responsive adjustments */
-        @media (max-width: 600px) {
-            body {
-                padding: 0;
-            }
-            .section-header {
-                font-size: 1.1em !important;
-                padding: 14px 18px !important;
-            }
-        }
-    
-</style>
-
 <div class="cfm-insights" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
-    <!-- Personal Letter Section -->
-    <div style="background: #fefefe; border: 1px solid #d1ddd4; border-radius: 10px; padding: 30px; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-
-        <h2 style="font-family: Georgia, serif; color: #5a6d5f; font-size: 1.4em; margin: 0 0 20px 0; font-weight: normal;">A Note to Our Readers</h2>
-
-        <p style="margin: 0 0 1.2em 0; line-height: 1.8;">Dear friends,</p>
-
-        <p style="margin: 0 0 1.2em 0; line-height: 1.8;">Thank you for your patience as we navigate a challenging season. Between ongoing hospitalizations and some home challenges that need attention, keeping up with CFM Corner has been more difficult than anticipated. I appreciate your understanding as we work to find our rhythm.</p>
-
-        <p style="margin: 0 0 1.2em 0; line-height: 1.8;">The good news: I've updated my process with AI assistance, which should make compiling these resources more manageable going forward. This allows me to focus my limited energy on the content that matters most while still providing you with quality study materials.</p>
-
-        <p style="margin: 0 0 1.2em 0; line-height: 1.8;">This week's approach is a bit different. Rather than duplicating information across multiple formats, I'm pointing you directly to our in-depth resources. The creation accounts deserve more than surface treatment, and the HTML documents linked below go deep&mdash;with side-by-side text comparisons, Hebrew word studies, and insights you won't find elsewhere.</p>
-
-        <p style="margin: 0 0 1.2em 0; line-height: 1.8;">Thank you for being part of this community. Your study matters, your questions matter, and your growth matters.</p>
-
-        <p style="margin: 1.5em 0 0 0; line-height: 1.8; font-style: italic;">Warmly,<br>The CFM Corner Team</p>
-
-    </div>
-
-    <!-- Lay of the Land Section -->
-    <div style="background: linear-gradient(135deg, #f0f4f1 0%, #e4ebe5 100%); border: 1px solid #c6d4c8; border-radius: 10px; padding: 25px; margin-bottom: 30px;">
-        <h3 style="font-family: Georgia, serif; color: #5a6d5f; font-size: 1.2em; margin: 0 0 15px 0;">
-            <span style="margin-right: 10px;">&#128218;</span> What's New in 2026
-        </h3>
-        <p style="font-family: Georgia, serif; color: #4a5d4f; font-size: 0.95em; line-height: 1.7; margin: 0 0 15px 0;">
-            We're reorganizing CFM Corner to serve you better. Here's how to navigate:
-        </p>
-        <ul style="font-family: Georgia, serif; color: #4a5d4f; font-size: 0.95em; line-height: 1.8; margin: 0; padding-left: 22px;">
-            <li style="margin-bottom: 8px;"><strong>Weekly Insights</strong> (this page) &ndash; Personal commentary, theme overview, and links to deeper resources</li>
-            <li style="margin-bottom: 8px;"><strong>Weekly Resources</strong> &ndash; Curated external links to videos, podcasts, and scholarly articles</li>
-            <li style="margin-bottom: 8px;"><strong>Original Content HTMLs</strong> &ndash; Our in-depth studies with interactive features, Hebrew analysis, and comparative tools</li>
-            <li style="margin-bottom: 8px;"><strong>Study Guide</strong> &ndash; Word studies, teaching applications, and discussion questions</li>
-        </ul>
-        <p style="font-family: Georgia, serif; color: #6b7c6f; font-size: 0.9em; font-style: italic; margin: 15px 0 0 0;">
-            This structure lets you choose your depth&mdash;quick overview or deep dive, depending on your time and needs.
-        </p>
-    </div>
 
     <!-- Expand/Collapse Controls -->
     <div style="text-align: center; margin: 20px 0 30px 0;">
         <button onclick="expandAllInsights()" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 0 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">&#x229E; Expand All</button>
         <button onclick="collapseAllInsights()" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 0 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">&#x229F; Collapse All</button>
     </div>
-    <!-- Week at a Glance Section -->
-    <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
-        <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-            <span>At a Glance: Creation Week</span>
-            <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em;">&#9654;&#xFE0E;</span>
-        </div>
-        <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
-            <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
 
-                <p style="margin: 0 0 1em 0; line-height: 1.7;">This week we encounter not one but <strong>three creation narratives</strong>&mdash;Genesis 1&ndash;2, Moses 2&ndash;3, and Abraham 4&ndash;5. Rather than viewing these as competing accounts, we're invited to see them as complementary windows into profound truths about God's nature, our divine identity, and the ongoing creative process in our lives.</p>
+    <!-- Content Sections -->
 
-                <h4 style="color: #5a6d5f; margin: 1.5em 0 0.8em 0;">Key Questions to Consider:</h4>
-                <ul style="margin: 0; padding-left: 22px;">
-                    <li style="margin-bottom: 8px; line-height: 1.6;">Why does Moses emphasize "I, God" while Abraham speaks of "the Gods"?</li>
-                    <li style="margin-bottom: 8px; line-height: 1.6;">Why does Abraham use "organized" instead of "created"?</li>
-                    <li style="margin-bottom: 8px; line-height: 1.6;">What unique doctrines does each account contribute?</li>
-                    <li style="margin-bottom: 8px; line-height: 1.6;">How does the creation pattern apply to our own lives?</li>
-                </ul>
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Genesis 1–2; Moses 2–3; Abraham 4–5 | The Creation</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow"></span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>January 12–18, 2026</span>
+<span class="sub-arrow"></span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+</div>
+</div>
+</div>
 
-                <p style="margin: 1.5em 0 0 0; line-height: 1.7; font-style: italic; color: #5a6d5f;">The <strong>Three Creation Accounts</strong> comparison above explores these questions with side-by-side text. Hebrew word studies are available in the Study Guide.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
 
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Closing Section -->
-    <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
-        <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-            <span>Closing Thought</span>
-            <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em;">&#9654;&#xFE0E;</span>
-        </div>
-        <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
-            <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>At a Glance</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow"></span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">This week we dive into the creation accounts—not one, but three parallel narratives in Genesis, Moses, and Abraham. Rather than viewing these as competing scientific accounts, scholars and teachers this week invite us to see them as complementary windows into profound theological truths about God's nature, our divine identity, and the ongoing creative process in our own lives.</p>
+<p style="margin-bottom: 15px;"><strong>Key Themes Emerging:</strong></p>
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;">Creation as an ongoing, messy, beautiful process</li>
+<li style="margin-bottom: 8px;">The divine council and Christ's eternal presence</li>
+<li style="margin-bottom: 8px;">Eve reinterpreted: from "helper" to powerful partner</li>
+<li style="margin-bottom: 8px;">Separating light from darkness as a life principle</li>
+<li style="margin-bottom: 8px;">Joy found in the creative process, not just the finished product</li>
+</ul>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
 
-                <p style="margin: 0 0 1em 0; line-height: 1.7;">President Emily Bell Freeman's insight captures the spirit of this week:</p>
-
-                <blockquote style="border-left: 4px solid #7c9885; margin: 1.5em 0; padding: 15px 20px; background: #f4f7f5; font-style: italic; color: #555; border-radius: 0 8px 8px 0;">
-                    "Within the beautiful imagery of the creation, in the midst of every step, there is an oft-repeated phrase: God saw that it was good."
-                </blockquote>
-
-                <p style="margin: 1em 0 0 0; line-height: 1.7;">God doesn't wait for perfection to pronounce His work good. Neither should we. The very act of striving, learning, and growing&mdash;messy as it is&mdash;is pleasing to Him.</p>
-
-                <hr style="border: none; border-top: 1px solid #d1ddd4; margin: 2em 0;">
-
-                <p style="margin: 0; font-size: 0.9em; color: #6b7c6f; font-style: italic;">
-                    Weekly Insights v3.1 | January 12, 2026<br>
-                    Original content by CFM Corner
-                </p>
-
+                </div>
             </div>
         </div>
-    </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Why These Scriptures Matter</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow"></span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">The creation narratives are not merely ancient cosmology—they establish foundational truths about who we are and why we're here. As John Hilton III emphasized: <strong>"Before you were ever born, Christ was there and he is not going anywhere."</strong> These chapters reveal that we existed before this life, that we participated in the pre-mortal council, and that creation itself was an act of profound joy.</p>
+<p style="margin-bottom: 15px;">The temple endowment centers on these creation accounts for good reason. Understanding them deepens our appreciation for our own divine potential and the covenants we make.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Major Themes from This Week's Commentary</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow"></span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>1. Creation as Ongoing Process</span>
+<span class="sub-arrow"></span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<p style="margin-bottom: 15px;"><strong>Dr. Rebekah Call (Follow Him)</strong> offers a paradigm-shifting perspective: creation isn't a finished event—it's an ongoing process that includes us.</p>
+<blockquote style="border-left: 4px solid #7c9885; padding-left: 20px; margin: 20px 0; font-style: italic; color: #4a4a4a;">
+<p>"Sometimes it's easy to forget that the creative process is messy."</p>
+</blockquote>
+<p style="margin-bottom: 15px;">Life's messiness—our mistakes, struggles, and disorder—isn't a deviation from God's plan; it IS the plan. We came here to learn good from evil through experience, and that requires the opportunity to make mistakes.</p>
+<p style="margin-bottom: 15px;"><strong>Application:</strong> When life feels chaotic, remember that God works through the mess to create something beautiful in us.</p>
+</div>
+</div>
+</div>
+<div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>2. Christ's Eternal Presence</span>
+<span class="sub-arrow"></span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<p style="margin-bottom: 15px;"><strong>John Hilton III (Scripture Central)</strong> beautifully articulates Christ's role from the beginning:</p>
+<blockquote style="border-left: 4px solid #7c9885; padding-left: 20px; margin: 20px 0; font-style: italic; color: #4a4a4a;">
+<p>"In the beginning was the Word, and the Word was with God, and the Word was God."</p>
+</blockquote>
+<p style="margin-bottom: 15px;">Christ wasn't an afterthought added to address the fall—He was central to creation itself. The joy that accompanied creation (Job 38:7) continues in Christ's work with us today.</p>
+<p style="margin-bottom: 15px;"><strong>Key Insight:</strong> Every step of our personal "creation" is valuable to God. He doesn't just care about the finished product—He celebrates our day-to-day progress.</p>
+</div>
+</div>
+</div>
+<div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>3. Reinterpreting Eve: <em>Ezer Kenegdo</em></span>
+<span class="sub-arrow"></span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<p style="margin-bottom: 15px;"><strong>Dr. Rebekah Call</strong> shared groundbreaking research on the Hebrew phrase traditionally translated "help meet" (<span dir="rtl">עֵזֶר כְּנֶגְדּוֹ</span>, <em>ezer kenegdo</em>):</p>
+<blockquote style="border-left: 4px solid #7c9885; padding-left: 20px; margin: 20px 0; font-style: italic; color: #4a4a4a;">
+<p>"What our theology does for Eve. That's what I'm so excited about. Changes everything."</p>
+</blockquote>
+<p style="margin-bottom: 15px;">The word <em>ezer</em> (helper) is the same word used to describe God himself as Israel's helper. This isn't a subordinate role—it's a powerful, essential partnership. Latter-day revelation restores Eve's agency and wisdom in choosing to partake of the fruit.</p>
+</div>
+</div>
+</div>
+<div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>4. Separating Light from Darkness</span>
+<span class="sub-arrow"></span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<p style="margin-bottom: 15px;"><strong>Scripture Central</strong> highlighted a practical principle from Day 1 of creation:</p>
+<blockquote style="border-left: 4px solid #7c9885; padding-left: 20px; margin: 20px 0; font-style: italic; color: #4a4a4a;">
+<p>"When we separate out the light from the darkness, remember that the Savior said, 'I am the light of the world.'"</p>
+</blockquote>
+<p style="margin-bottom: 15px;">Just as God's first creative act was separating light from darkness, we're invited to do the same in our lives—prioritizing what truly matters over lesser distractions.</p>
+<blockquote style="border-left: 4px solid #7c9885; padding-left: 20px; margin: 20px 0; font-style: italic; color: #4a4a4a;">
+<p>"Sometimes the very good is the biggest enemy of the best."</p>
+</blockquote>
+<p style="margin-bottom: 15px;"><strong>Application:</strong> What "good" things might be crowding out the "best" things in your life? Temple attendance? Meaningful scripture study? Quality family time?</p>
+</div>
+</div>
+</div>
+<div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>5. The Divine Council</span>
+<span class="sub-arrow"></span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<p style="margin-bottom: 15px;"><strong>Talking Scripture</strong> explored the rich Hebrew of Genesis 1:1, revealing that creation involved a divine council:</p>
+<blockquote style="border-left: 4px solid #7c9885; padding-left: 20px; margin: 20px 0; font-style: italic; color: #4a4a4a;">
+<p>"The concept of a grand council where Elohim (Heavenly Father) and other divine beings participate in creation aligns with LDS beliefs about Heavenly Mother, Jesus Christ, Holy Ghost, and the noble and great ones."</p>
+</blockquote>
+<p style="margin-bottom: 15px;">The plural "let us" in Genesis reflects this council—we were there, we participated, and we shouted for joy at the plan.</p>
+</div>
+</div>
+</div>
+<div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>6. Time, Number, and Creation: Reading Genesis with Ancient Eyes</span>
+<span class="sub-arrow"></span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<p style="margin-bottom: 15px;">One of the most persistent tensions in modern religious discourse is the apparent conflict between the biblical creation account and contemporary scientific models. This tension, however, does not arise from the biblical text itself—it emerges from a <strong>mismatch of mathematical languages</strong>.</p>
+<p style="margin-bottom: 15px;"><strong>The Modern Assumption vs. Ancient Reality</strong></p>
+<p style="margin-bottom: 15px;">Modern readers instinctively assume time consists of uniform, measurable units. But this way of thinking depends on mathematical concepts that were <strong>not available to the biblical world</strong>:</p>
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;">Positional decimal notation</li>
+<li style="margin-bottom: 8px;">Zero as a placeholder</li>
+<li style="margin-bottom: 8px;">Zero as a number</li>
+</ul>
+<p style="margin-bottom: 15px;">These concepts developed very late—zero as a true mathematical number emerges only in the 7th century AD with Brahmagupta. The biblical texts were written <strong>more than a millennium earlier</strong>.</p>
+<p style="margin-bottom: 15px;"><strong>What Ancient Numbers Meant</strong></p>
+<p style="margin-bottom: 15px;">In the ancient Mediterranean world, Hebrew, Greek, and Roman cultures used letters to represent numbers. There was no symbol for zero, and numbers often carried <strong>qualitative meaning</strong> in addition to quantity.</p>
+<p style="margin-bottom: 15px;">The Hebrew term <span dir="rtl">אֶלֶף</span> (<em>eleph</em>, "thousand") could denote:</p>
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;">A literal thousand</li>
+<li style="margin-bottom: 8px;">A clan or military unit</li>
+<li style="margin-bottom: 8px;">A large organized group under a single leader</li>
+</ul>
+<p style="margin-bottom: 15px;">When Psalm 90:4 declares that "a thousand years" in God's sight are like a single day, it expresses a <strong>relational truth</strong> about divine time—not a conversion formula.</p>
+<p style="margin-bottom: 15px;">**The Meaning of <em>Yom</em> (Day)**</p>
+<p style="margin-bottom: 15px;">The Hebrew word <span dir="rtl">יוֹם</span> (<em>yom</em>), translated "day" in Genesis 1, does not intrinsically mean a twenty-four-hour period. Throughout the Hebrew Bible, <em>yom</em> may refer to:</p>
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;">Daylight hours</li>
+<li style="margin-bottom: 8px;">A full day-night cycle</li>
+<li style="margin-bottom: 8px;">An unspecified period</li>
+<li style="margin-bottom: 8px;">An extended era</li>
+</ul>
+<p style="margin-bottom: 15px;">Genesis itself uses <em>yom</em> flexibly. Genesis 2:4 speaks of "the day" in which God made heaven and earth—summarizing the entire creation sequence in a single <em>yom</em>.</p>
+<p style="margin-bottom: 15px;"><strong>A Harmonic Model of Creation</strong></p>
+<p style="margin-bottom: 15px;">A musical analogy illuminates the structure: In the harmonic overtone series, a fundamental tone establishes identity, overtones emerge in ordered relationship, each with different wavelengths—yet all belong to one coherent system.</p>
+<p style="margin-bottom: 15px;">Applied to creation, this suggests the "days" of Genesis are not equal temporal units but <strong>harmonically related stages</strong>. Creation unfolds <strong>harmonically</strong>, not mechanically.</p>
+<p style="margin-bottom: 15px;"><strong>No Necessary Conflict</strong></p>
+<p style="margin-bottom: 15px;">Modern science investigates mechanisms, processes, and durations. Scripture proclaims order, purpose, and meaning. These are <strong>different questions</strong>, addressed through different languages.</p>
+<p style="margin-bottom: 15px;">The biblical creation account was composed in a world without zero, without decimal place value, and without uniform units of time. Its numbers are symbolic and relational; its "days" are ordered phases of divine activity.</p>
+<p style="margin-bottom: 15px;">Read this way, Genesis does not compress creation into six short days—it <strong>expands our understanding of time itself</strong>.</p>
+<blockquote style="border-left: 4px solid #7c9885; padding-left: 20px; margin: 20px 0; font-style: italic; color: #4a4a4a;">
+<p>The problem was never the text. The problem was the math we brought with us.</p>
+</blockquote>
+<p style="margin-bottom: 15px;"><em>For the complete article with full footnotes, see: <a href="02_Weekly_Insights/Original_Content/Time_Number_and_Creation.md" target="_blank">Time, Number, and Creation</a></em></p>
+</div>
+</div>
+</div>
+<div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>7. Comprehensive Textual Comparison: Three Creation Accounts</span>
+<span class="sub-arrow"></span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<p style="margin-bottom: 15px;">A detailed verse-by-verse analysis reveals systematic differences across Genesis, Moses, and Abraham that illuminate distinct theological emphases:</p>
+<p style="margin-bottom: 15px;"><strong>Divine Identity:</strong></p>
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;">Genesis uses singular "God" with hints of plurality ("Let us")</li>
+<li style="margin-bottom: 8px;">Moses clarifies the Godhead: "I, God, said unto mine Only Begotten"</li>
+<li style="margin-bottom: 8px;">Abraham consistently employs plural "the Gods" with council language</li>
+</ul>
+<p style="margin-bottom: 15px;"><strong>Creation Vocabulary:</strong></p>
+<table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em;">
+<thead><tr style="background: #7c9885; color: white;">
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Genesis/Moses</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Abraham</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Theological Shift</th>
+</tr></thead><tbody>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Created</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Organized</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Implicit → Explicit <em>ex materia</em></td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Made</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Prepared</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Command → Planning</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Was good</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">They obeyed</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Quality → Compliance</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Day</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Time</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Earth time → Kolob time</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Firmament</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Expanse</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Solid dome → Open space</td>
+</tr>
+</tbody></table>
+<p style="margin-bottom: 15px;"><strong>Unique Content:</strong></p>
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;"><strong>Moses alone</strong> teaches: spirit creation preceded physical; agency explicitly granted ("thou mayest choose for thyself")</li>
+<li style="margin-bottom: 8px;"><strong>Abraham alone</strong> teaches: explicit council planning; relative time (Kolob); spirit placed into body</li>
+</ul>
+<p style="margin-bottom: 15px;"><strong>Key Insight (Abraham 4:18):</strong> "The Gods <strong>watched</strong> those things which they had ordered <strong>until they obeyed</strong>"—creation as matter responding to divine will rather than instantaneous command.</p>
+<p style="margin-bottom: 15px;"><em>For the complete 16-section analysis with all comparisons, see: <a href="02_Weekly_Insights/Original_Content/Three_Creation_Accounts_Analysis.md" target="_blank">Three Creation Accounts Analysis</a></em></p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+</div>
+</div>
+</div>
+
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Word Studies</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow"></span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>Key Creation Terms Across Languages</span>
+<span class="sub-arrow"></span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em;">
+<thead><tr style="background: #7c9885; color: white;">
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Hebrew</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Greek (LXX)</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Latin (Vulgate)</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">English</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Meaning</th>
+</tr></thead><tbody>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="https://www.blueletterbible.org/lexicon/h1254/kjv/wlc/0-1/" target="_blank" data-lexicon="to create" data-strongs="H1254" data-translit="bara" data-original="בָּרָא" data-lang="hebrew" data-verse="Genesis 1:1"><em>bara</em></a> (בָּרָא)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="https://logeion.uchicago.edu/ποιέω" target="_blank"><em>poieō</em></a> (ἐποίησεν)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="https://logeion.uchicago.edu/creo" target="_blank"><em>creo</em></a> (creavit)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="https://webstersdictionary1828.com/Dictionary/create" target="_blank">create</a></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Divine creative act; marks discontinuity—something genuinely new</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="https://www.blueletterbible.org/lexicon/h2896/kjv/wlc/0-1/" target="_blank"><em>tov</em></a> (טוֹב)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="https://logeion.uchicago.edu/καλός" target="_blank"><em>kalos</em></a> (καλόν)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="https://logeion.uchicago.edu/bonus" target="_blank"><em>bonus</em></a> (bonum)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="https://webstersdictionary1828.com/Dictionary/good" target="_blank">good</a></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Valid, sound, having qualities adapted to design and use</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="https://www.blueletterbible.org/lexicon/h430/kjv/wlc/0-1/" target="_blank" data-lexicon="God, gods" data-strongs="H430" data-translit="Elohim" data-original="אֱלֹהִים" data-lang="hebrew" data-verse="Genesis 1:1"><em>Elohim</em></a> (אֱלֹהִים)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="https://logeion.uchicago.edu/θεός" target="_blank"><em>Theos</em></a> (ὁ θεός)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><em>Deus</em></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="https://webstersdictionary1828.com/Dictionary/God" target="_blank">God</a></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Divine being; Hebrew plural form with singular verb = majesty</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="https://www.blueletterbible.org/lexicon/h3117/kjv/wlc/0-1/" target="_blank"><em>yom</em></a> (יוֹם)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="https://logeion.uchicago.edu/ἡμέρα" target="_blank"><em>hēmera</em></a> (ἡμέρα)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><em>dies</em></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="https://webstersdictionary1828.com/Dictionary/day" target="_blank">day</a></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Day, period, era; flexible timeframe in Hebrew usage</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="https://www.blueletterbible.org/lexicon/h5828/kjv/wlc/0-1/" target="_blank"><em>ezer</em></a> (עֵזֶר)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="https://logeion.uchicago.edu/βοηθός" target="_blank"><em>boēthos</em></a> (βοηθόν)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><em>adiutorium</em></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="https://webstersdictionary1828.com/Dictionary/helper" target="_blank">helper</a></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">One who aids; used of God 16× in OT—powerful rescue, not servitude</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="https://www.blueletterbible.org/lexicon/h7225/kjv/wlc/0-1/" target="_blank" data-lexicon="beginning, first" data-strongs="H7225" data-translit="reshit" data-original="רֵאשִׁית" data-lang="hebrew" data-verse="Genesis 1:1"><em>bereshit</em></a> (בְּרֵאשִׁית)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="https://logeion.uchicago.edu/ἀρχή" target="_blank"><em>archē</em></a> (ἐν ἀρχῇ)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><em>principium</em></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="https://webstersdictionary1828.com/Dictionary/beginning" target="_blank">beginning</a></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">First existence; the origin or commencement</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="https://www.blueletterbible.org/lexicon/h505/kjv/wlc/0-1/" target="_blank"><em>eleph</em></a> (אֶלֶף)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="https://logeion.uchicago.edu/χιλιάς" target="_blank"><em>chilias</em></a> (χιλιάς)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><em>mille</em></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="https://webstersdictionary1828.com/Dictionary/thousand" target="_blank">thousand</a></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Thousand, clan, military unit; symbolic fullness</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+<div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>Notes on Key Terms</span>
+<span class="sub-arrow"></span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<p style="margin-bottom: 15px;">**On <em>bara</em> (create):** The Hebrew <em>bara</em> is used only of God as the acting subject—never of human activity. But its significance lies not in "creation from nothing" (a later theological interpretation) but in marking <strong>discontinuity</strong>. <em>Bara</em> appears at three key moments in Genesis 1: the creation of the cosmos (v. 1), the creation of animal life (v. 21), and the creation of humanity (v. 27). These mark the three great discontinuities—where something genuinely new appears that cannot be derived from what came before. Humans <em>make</em> (<em>asah</em>); only God <em>creates</em> (<em>bara</em>). The Septuagint translates this with <em>epoiēsen</em> (from <em>poieō</em>, "to make"), while the Vulgate uses <em>creavit</em> (from <em>creo</em>, "to create").</p>
+<p style="margin-bottom: 15px;">**On <em>ezer</em> (helper):** Far from implying subordination, <em>ezer</em> describes powerful, rescuing aid. Of its 21 occurrences in the Hebrew Bible, 16 refer to God as Israel's helper. The Greek <em>boēthos</em> literally means "one who runs to the cry"—urgent, vital rescue. The Latin <em>adiutorium</em> (whence English "aid") appears in the liturgical prayer <em>Deus, in adiutorium meum intende</em> ("O God, come to my assistance").</p>
+<p style="margin-bottom: 15px;">**On <em>yom</em> (day):** The Hebrew <em>yom</em> appears over 2,300 times in the Old Testament with meanings ranging from daylight hours to extended eras. Genesis 2:4 uses <em>yom</em> to describe the entire creation sequence as a single "day," demonstrating its flexibility. The Greek <em>hēmera</em> and Latin <em>dies</em> carry similar semantic range.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+</div>
+</div>
+</div>
+
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Patterns Across Sources</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow"></span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">Several themes emerged independently across multiple video commentators:</p>
+<table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em;">
+<thead><tr style="background: #7c9885; color: white;">
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Theme</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Follow Him</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Scripture Central</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Talking Scripture</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Original</th>
+</tr></thead><tbody>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Creation as process</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">✓</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">✓</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">✓</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"></td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Christ's central role</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">✓</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">✓</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">✓</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"></td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Eve's elevated status</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">✓</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"></td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Divine council</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">✓</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">✓</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Temple connections</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">✓</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">✓</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">✓</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"></td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Messiness as growth</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">✓</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"></td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Ancient numeracy/time</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">✓</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">✓</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Three-account comparison</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">✓</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Created vs. organized</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">✓</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Spirit creation doctrine</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">✓</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Agency in Eden</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">✓</td>
+</tr>
+</tbody></table>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Temple Connections</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow"></span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">This week's readings are foundational to the temple endowment. Key connections:</p>
+<ol style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;"><strong>The Creation Narrative</strong> - The endowment presents creation as the context for understanding our mortal journey</li>
+<li style="margin-bottom: 8px;"><strong>Divine Council</strong> - We learn that we participated in premortality and accepted this plan</li>
+<li style="margin-bottom: 8px;"><strong>Adam and Eve's Choice</strong> - The fall is presented as necessary progression, not failure</li>
+<li style="margin-bottom: 8px;"><strong>Covenants</strong> - The everlasting covenant includes creation, fall, and redemption</li>
+</ol>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Practical Applications</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow"></span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>For Personal Study</span>
+<span class="sub-arrow"></span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;">Read the three accounts (Genesis, Moses, Abraham) side by side. Note the differences—what unique insights does each provide? (See the <a href="02_Weekly_Insights/Original_Content/Three_Creation_Accounts_Analysis.md" target="_blank">Three Creation Accounts Analysis</a> for a detailed comparison)</li>
+<li style="margin-bottom: 8px;">Notice how Abraham uses "organized" where Genesis uses "created"—what does this teach about the nature of matter?</li>
+<li style="margin-bottom: 8px;">Consider: What areas of your life feel "messy" right now? How might God be working through that chaos?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>For Family Discussion</span>
+<span class="sub-arrow"></span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;">What does it mean that we are created in God's image?</li>
+<li style="margin-bottom: 8px;">Why do you think God called His creation "good" at each stage, not just at the end?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>For Teaching</span>
+<span class="sub-arrow"></span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;">Use the doctrine-principle-application framework: Doctrine (we are created in God's image) → Principle (our divine nature gives us infinite worth) → Application (treat yourself and others accordingly)</li>
+</ul>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+</div>
+</div>
+</div>
+
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Video Resource Highlights</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow"></span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em;">
+<thead><tr style="background: #7c9885; color: white;">
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Source</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Key Takeaway</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Watch Time</th>
+</tr></thead><tbody>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Follow Him Part 1</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Creation is messy—and that's the point</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">67 min</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Follow Him Part 2</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Eve's role reinterpreted through Hebrew linguistics</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">64 min</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Scripture Central</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Joy in every step of creation, not just the end</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">35 min</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Talking Scripture</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">The Old Testament's complexity and divine council</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">120 min</td>
+</tr>
+</tbody></table>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Closing Thought</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow"></span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">President Emily Bell Freeman's insight captures the spirit of this week's study:</p>
+<blockquote style="border-left: 4px solid #7c9885; padding-left: 20px; margin: 20px 0; font-style: italic; color: #4a4a4a;">
+<p>"Within the beautiful imagery of the creation, in the midst of every step, there is an oft-repeated phrase: God saw that it was good."</p>
+</blockquote>
+<p style="margin-bottom: 15px;">God doesn't wait for perfection to pronounce His work good. Neither should we. The very act of striving, learning, and growing—messy as it is—is pleasing to Him. We are, each of us, works in progress, and that is exactly how it should be.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<p style="margin-bottom: 15px;"><em>Compiled from video commentaries by Follow Him, Scripture Central, and Talking Scripture</em></p>
+<p style="margin-bottom: 15px;"><em>Original content: "Time, Number, and Creation" and "Three Creation Accounts Analysis" by CFM Corner</em></p>
+<p style="margin-bottom: 15px;"><em>Distilled using Ollama (qwen2.5:14b) - Local processing, no API fees</em></p>
+<p style="margin-bottom: 15px;"><em>Weekly Insights Version 1.2 | January 11, 2026</em></p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
 
 </div>
-</div></body></html>
