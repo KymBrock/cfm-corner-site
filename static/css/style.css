@@ -718,7 +718,7 @@ body {
 .embedded-content a[style*="padding"],
 .embedded-content .quick-access-btn,
 .embedded-content a.quick-link {
-    color: inherit;
+    color: white;
     border-bottom: none;
 }
 /* Hebrew lexicon links — visually distinct clickable terms */
