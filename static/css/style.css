@@ -660,6 +660,18 @@ body {
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
+/* Fix Safari blue tap highlight on accordion clickable divs */
+.embedded-content .section-header,
+.embedded-content .sub-accordion-header,
+.cfm-insights-section .section-header,
+.cfm-insights-section .sub-accordion-header {
+    -webkit-tap-highlight-color: transparent;
+}
+/* Fix blockquote text-align on mobile (Safari default is justify) */
+.embedded-content blockquote,
+.embedded-content blockquote p {
+    text-align: left !important;
+}
 .embedded-content details > summary { list-style: none; }
 .embedded-content details > summary::-webkit-details-marker { display: none; }
 .embedded-content details > summary::marker { display: none; content: ""; }
@@ -794,6 +806,8 @@ body {
     .embedded-content iframe,
     .embedded-content img { max-width: 100%; height: auto; }
     .embedded-content table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .embedded-content table td,
+    .embedded-content table th { padding: 6px 8px !important; font-size: 0.9em; }
     .section-heading { font-size: var(--text-md); }
     .site-footer { padding: 30px 16px; margin-top: 35px; }
     .footer-brand { font-size: var(--text-md); letter-spacing: 2px; }
