@@ -72,6 +72,8 @@
                     <a href="{{ "about/" | relURL }}"{{ if hasPrefix .RelPermalink "/about/" }} class="active"{{ end }}>About</a>
                     <a href="{{ "weeks/" | relURL }}"{{ if hasPrefix .RelPermalink "/weeks/" }} class="active"{{ end }}>Weekly Lessons</a>
                     <a href="{{ "hebrew/" | relURL }}"{{ if hasPrefix .RelPermalink "/hebrew/" }} class="active"{{ end }}>Hebrew</a>
+                    <a href="{{ "culture/" | relURL }}"{{ if hasPrefix .RelPermalink "/culture/" }} class="active"{{ end }}>Culture</a>
+                    <a href="{{ "study-library/" | relURL }}"{{ if hasPrefix .RelPermalink "/study-library/" }} class="active"{{ end }}>Study Library</a>
                     <a href="{{ "resources/" | relURL }}"{{ if hasPrefix .RelPermalink "/resources/" }} class="active"{{ end }}>Resources</a>
                 </div>
                 <form class="nav-search" action="{{ "search/" | relURL }}" method="get" onsubmit="event.preventDefault(); window.location.href=this.action + '#' + encodeURIComponent(this.querySelector('input').value);">

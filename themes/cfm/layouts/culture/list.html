@@ -1,0 +1,56 @@
+{{ define "main" }}
+<div class="culture-landing" data-pagefind-body>
+
+    <div class="culture-hero">
+        <h1>{{ .Title }}</h1>
+        <p class="culture-subtitle">{{ .Description }}</p>
+    </div>
+
+    {{ with .Content }}
+    <div class="culture-intro">
+        {{ . }}
+    </div>
+    {{ end }}
+
+    <!-- Child sections (e.g., Jewish, Greek) -->
+    {{ $sections := .Sections }}
+    {{ if $sections }}
+    <div class="culture-sections">
+        {{ range $sections }}
+        <a href="{{ .RelPermalink }}" class="culture-section-card">
+            <div class="cs-title">{{ .Title }}</div>
+            <div class="cs-desc">{{ .Description }}</div>
+            {{ $childCount := len .Pages }}
+            {{ $sectionCount := len .Sections }}
+            {{ $total := add $childCount $sectionCount }}
+            {{ if gt $total 0 }}<div class="cs-count">{{ $total }} {{ if eq $total 1 }}topic{{ else }}topics{{ end }}</div>{{ end }}
+        </a>
+        {{ end }}
+    </div>
+    {{ end }}
+
+    <!-- Child pages at this level -->
+    {{ $pages := .RegularPages }}
+    {{ if $pages }}
+    <div class="culture-articles">
+        {{ range $pages }}
+        <a href="{{ .RelPermalink }}" class="culture-article-card">
+            <div class="ca-title">{{ .Title }}</div>
+            <div class="ca-desc">{{ .Description }}</div>
+            {{ with .Params.related_weeks }}<div class="ca-weeks">Related: Week {{ delimit . ", Week " }}</div>{{ end }}
+        </a>
+        {{ end }}
+    </div>
+    {{ end }}
+
+    <!-- Breadcrumb back link for subsections -->
+    {{ if .Parent }}
+    {{ if ne .Parent.Kind "home" }}
+    <div class="culture-back">
+        <a href="{{ .Parent.RelPermalink }}">← Back to {{ .Parent.Title }}</a>
+    </div>
+    {{ end }}
+    {{ end }}
+
+</div>
+{{ end }}

@@ -1,0 +1,54 @@
+{{ define "main" }}
+<div class="library-landing" data-pagefind-body>
+
+    <div class="library-hero">
+        <h1>{{ .Title }}</h1>
+        <p class="library-subtitle">{{ .Description }}</p>
+    </div>
+
+    {{ with .Content }}
+    <div class="library-intro">
+        {{ . }}
+    </div>
+    {{ end }}
+
+    <!-- Child sections (e.g., Articles, Themes, Types & Shadows) -->
+    {{ $sections := .Sections }}
+    {{ if $sections }}
+    <div class="library-sections">
+        {{ range $sections }}
+        <a href="{{ .RelPermalink }}" class="library-section-card">
+            <div class="ls-title">{{ .Title }}</div>
+            <div class="ls-desc">{{ .Description }}</div>
+            {{ $count := len .RegularPages }}
+            {{ if gt $count 0 }}<div class="ls-count">{{ $count }} {{ if eq $count 1 }}article{{ else }}articles{{ end }}</div>{{ end }}
+        </a>
+        {{ end }}
+    </div>
+    {{ end }}
+
+    <!-- Articles at this level -->
+    {{ $pages := .RegularPages }}
+    {{ if $pages }}
+    <div class="library-articles">
+        {{ range $pages }}
+        <a href="{{ .RelPermalink }}" class="library-article-card">
+            <div class="la-title">{{ .Title }}</div>
+            <div class="la-desc">{{ .Description }}</div>
+            {{ with .Params.related_weeks }}<div class="la-weeks">Related: Week {{ delimit . ", Week " }}</div>{{ end }}
+        </a>
+        {{ end }}
+    </div>
+    {{ end }}
+
+    <!-- Back link for subsections -->
+    {{ if .Parent }}
+    {{ if ne .Parent.Kind "home" }}
+    <div class="library-back">
+        <a href="{{ .Parent.RelPermalink }}">← Back to {{ .Parent.Title }}</a>
+    </div>
+    {{ end }}
+    {{ end }}
+
+</div>
+{{ end }}

@@ -1,0 +1,35 @@
+{{ define "main" }}
+<div class="library-article-page" data-pagefind-body>
+
+    <div class="library-article-header">
+        {{ with .Parent }}
+        <a href="{{ .RelPermalink }}" class="library-back-link">← {{ .Title }}</a>
+        {{ end }}
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}<p class="library-article-desc">{{ . }}</p>{{ end }}
+        {{ with .Params.related_weeks }}
+        <div class="library-article-weeks">
+            Related weeks:
+            {{ range . }}
+            <a href="{{ printf "/weeks/%s/" . | relURL }}">Week {{ . }}</a>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+
+    <div class="library-article-content">
+        {{ .Content }}
+    </div>
+
+    <!-- Prev/Next navigation within section -->
+    <div class="library-article-nav">
+        {{ with .PrevInSection }}
+        <a href="{{ .RelPermalink }}" class="library-nav-prev">← {{ .Title }}</a>
+        {{ end }}
+        {{ with .NextInSection }}
+        <a href="{{ .RelPermalink }}" class="library-nav-next">{{ .Title }} →</a>
+        {{ end }}
+    </div>
+
+</div>
+{{ end }}
