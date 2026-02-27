@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hebrew Verb Forms — PGN Conjugation Grid</title>
+<style>
+:root{
+--navy:#1e3a4f;--slate:#57899c;--sage-dark:#4a6b52;--sage-mid:#7a9e7e;--sage-pale:#dce8dd;
+--gold:#d5a93c;--plum:#6a5983;--copper:#c37c3c;--terracotta:#c65528;
+--card:#fff;--text:#2c3e50;--text-light:#6b7c8a;--shadow:0 2px 8px rgba(0,0,0,0.08);
+--radius:12px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Georgia','Times New Roman',serif;color:var(--text);line-height:1.7;padding:24px;max-width:960px;margin:0 auto;background:#fafbfc}
+
+.header{
+  background:linear-gradient(135deg,var(--navy),var(--slate));
+  color:#fff;padding:28px 32px;border-radius:var(--radius);margin-bottom:24px;
+}
+.header h1{color:#fff;font-size:1.5em;margin-bottom:4px}
+.header .subtitle{color:rgba(255,255,255,0.8);font-size:0.95em;margin:0}
+
+.controls{
+  display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;
+}
+.root-btn{
+  padding:10px 20px;border:2px solid var(--sage-pale);border-radius:8px;
+  background:var(--card);cursor:pointer;font-family:inherit;font-size:0.95em;
+  transition:all 0.2s;
+}
+.root-btn:hover{border-color:var(--sage-mid);background:var(--sage-pale)}
+.root-btn.active{
+  border-color:var(--sage-dark);background:var(--sage-dark);color:#fff;
+}
+.root-btn .hebrew{font-size:1.3em;display:block;text-align:center;margin-bottom:2px}
+.root-btn .english{font-size:0.8em;color:var(--text-light);text-align:center}
+.root-btn.active .english{color:rgba(255,255,255,0.85)}
+
+.section-label{
+  font-weight:700;font-size:1.1em;color:var(--navy);margin:20px 0 10px;
+}
+
+.grid-wrapper{
+  background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);
+  overflow:hidden;margin-bottom:24px;
+}
+.grid-wrapper h3{
+  background:linear-gradient(135deg,var(--navy),var(--slate));
+  color:#fff;padding:12px 20px;font-size:1em;font-weight:600;
+}
+
+table{width:100%;border-collapse:collapse}
+th{
+  background:rgba(74,107,82,0.12);color:var(--sage-dark);
+  padding:10px 14px;text-align:left;font-size:0.85em;
+  font-weight:700;text-transform:uppercase;letter-spacing:0.5px;
+  border-bottom:2px solid var(--sage-pale);
+}
+td{
+  padding:12px 14px;border-bottom:1px solid #eef1f3;font-size:0.95em;
+  vertical-align:middle;
+}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(213,169,60,0.06)}
+
+.hebrew-form{
+  font-size:1.4em;direction:rtl;
+  font-family:'SBL Hebrew','David','Frank Ruehl','Times New Roman',serif;
+}
+.rl{color:var(--navy);font-weight:700}
+.pm{color:var(--terracotta);font-weight:700}
+.root-letter{color:var(--navy);font-weight:700}
+.pgn-marker{color:var(--terracotta);font-weight:700}
+.transliteration{
+  color:var(--text-light);font-style:italic;font-size:0.9em;
+}
+.pgn-tag{
+  display:inline-block;font-size:0.7em;font-weight:700;
+  padding:2px 8px;border-radius:10px;
+  background:rgba(87,137,156,0.12);color:var(--slate);
+  letter-spacing:0.5px;
+}
+.meaning{color:var(--text);font-size:0.9em}
+
+.legend{
+  background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:20px 24px;margin-bottom:24px;
+}
+.legend h3{color:var(--navy);font-size:1em;margin-bottom:10px}
+.legend-items{display:flex;gap:20px;flex-wrap:wrap}
+.legend-item{display:flex;align-items:center;gap:8px;font-size:0.9em}
+.legend-swatch{
+  width:16px;height:16px;border-radius:4px;display:inline-block;
+}
+.swatch-root{background:var(--navy)}
+.swatch-pgn{background:var(--terracotta)}
+
+.note{
+  background:rgba(74,107,82,0.08);border-left:4px solid var(--sage-dark);
+  border-radius:8px;padding:14px 18px;margin-bottom:20px;font-size:0.9em;
+}
+
+@media(max-width:700px){
+  body{padding:12px}
+  .header{padding:20px}
+  .controls{justify-content:center}
+  .grid-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{min-width:580px}
+  td,th{padding:8px 10px;font-size:0.85em}
+  .hebrew-form{font-size:1.2em}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Hebrew Verb Forms — PGN Conjugation Grid</h1>
+  <p class="subtitle">Person, Gender, and Number in the Perfect (Qatal) and Imperfect (Yiqtol)</p>
+</div>
+
+<div class="note">
+  <strong>How to read this chart:</strong> Select a root below to see how it conjugates across all Person, Gender, and Number combinations. <span class="root-letter" style="font-size:1.1em">Root letters</span> stay constant while <span class="pgn-marker" style="font-size:1.1em">PGN markers</span> (in red-orange) show the prefixes and suffixes that change.
+</div>
+
+<p class="section-label">Choose a root:</p>
+<div class="controls">
+  <button class="root-btn active" data-root="shamar">
+    <span class="hebrew">שׁמר</span>
+    <span class="english">guard / keep</span>
+  </button>
+  <button class="root-btn" data-root="barakh">
+    <span class="hebrew">ברך</span>
+    <span class="english">bless</span>
+  </button>
+  <button class="root-btn" data-root="halakh">
+    <span class="hebrew">הלך</span>
+    <span class="english">go / walk</span>
+  </button>
+</div>
+
+<div class="legend">
+  <h3>Color Key</h3>
+  <div class="legend-items">
+    <div class="legend-item"><span class="legend-swatch swatch-root"></span> Root consonants (constant)</div>
+    <div class="legend-item"><span class="legend-swatch swatch-pgn"></span> PGN markers (change with person/gender/number)</div>
+  </div>
+</div>
+
+<!-- Perfect (Qatal) Table -->
+<div class="grid-wrapper">
+  <h3 id="qatal-header">Perfect (Qatal) — Completed Action · "he guarded"</h3>
+  <table id="qatal-table">
+    <thead>
+      <tr>
+        <th>PGN</th>
+        <th>Hebrew</th>
+        <th>Transliteration</th>
+        <th>Meaning</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<!-- Imperfect (Yiqtol) Table -->
+<div class="grid-wrapper">
+  <h3 id="yiqtol-header">Imperfect (Yiqtol) — Incomplete / Future Action · "he will guard"</h3>
+  <table id="yiqtol-table">
+    <thead>
+      <tr>
+        <th>PGN</th>
+        <th>Hebrew</th>
+        <th>Transliteration</th>
+        <th>Meaning</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<div class="note" style="margin-top:24px;">
+  <strong>Pattern to notice:</strong> In the Perfect (Qatal), PGN is marked by <em>suffixes</em> — endings added after the root. In the Imperfect (Yiqtol), PGN is marked by <em>prefixes</em> — letters added before the root (sometimes with suffixes too). This prefix-vs-suffix pattern is one of the most important things to recognize in Hebrew verbs.
+</div>
+
+<script>
+// rl = root-letter (navy), pm = pgn-marker (terracotta)
+// Hebrew is RTL — source order = logical reading order (right to left visually)
+// In RTL layout, first span appears rightmost
+
+const data = {
+  shamar: {
+    label: "שׁ-מ-ר (Sh-M-R) — guard, keep",
+    qatal: [
+      { pgn:"3ms", tag:"he",
+        hebHtml:'<span class="rl">שָׁמַר</span>',
+        trans:"shamar", mean:"he guarded" },
+      { pgn:"3fs", tag:"she",
+        hebHtml:'<span class="rl">שָׁמְרָ</span><span class="pm">ה</span>',
+        trans:"shamrah", mean:"she guarded" },
+      { pgn:"2ms", tag:"you·m",
+        hebHtml:'<span class="rl">שָׁמַרְ</span><span class="pm">תָּ</span>',
+        trans:"shamarta", mean:"you guarded (m)" },
+      { pgn:"2fs", tag:"you·f",
+        hebHtml:'<span class="rl">שָׁמַרְ</span><span class="pm">תְּ</span>',
+        trans:"shamart", mean:"you guarded (f)" },
+      { pgn:"1cs", tag:"I",
+        hebHtml:'<span class="rl">שָׁמַרְ</span><span class="pm">תִּי</span>',
+        trans:"shamarti", mean:"I guarded" },
+      { pgn:"3cp", tag:"they",
+        hebHtml:'<span class="rl">שָׁמְר</span><span class="pm">וּ</span>',
+        trans:"shamru", mean:"they guarded" },
+      { pgn:"2mp", tag:"you·m·pl",
+        hebHtml:'<span class="rl">שְׁמַרְ</span><span class="pm">תֶּם</span>',
+        trans:"shmartem", mean:"you guarded (m·pl)" },
+      { pgn:"2fp", tag:"you·f·pl",
+        hebHtml:'<span class="rl">שְׁמַרְ</span><span class="pm">תֶּן</span>',
+        trans:"shmarten", mean:"you guarded (f·pl)" },
+      { pgn:"1cp", tag:"we",
+        hebHtml:'<span class="rl">שָׁמַרְ</span><span class="pm">נוּ</span>',
+        trans:"shamarnu", mean:"we guarded" }
+    ],
+    yiqtol: [
+      { pgn:"3ms", tag:"he",
+        hebHtml:'<span class="pm">יִ</span><span class="rl">שְׁמֹר</span>',
+        trans:"yishmor", mean:"he will guard" },
+      { pgn:"3fs", tag:"she",
+        hebHtml:'<span class="pm">תִּ</span><span class="rl">שְׁמֹר</span>',
+        trans:"tishmor", mean:"she will guard" },
+      { pgn:"2ms", tag:"you·m",
+        hebHtml:'<span class="pm">תִּ</span><span class="rl">שְׁמֹר</span>',
+        trans:"tishmor", mean:"you will guard (m)" },
+      { pgn:"2fs", tag:"you·f",
+        hebHtml:'<span class="pm">תִּ</span><span class="rl">שְׁמְרִ</span><span class="pm">י</span>',
+        trans:"tishmeri", mean:"you will guard (f)" },
+      { pgn:"1cs", tag:"I",
+        hebHtml:'<span class="pm">אֶ</span><span class="rl">שְׁמֹר</span>',
+        trans:"eshmor", mean:"I will guard" },
+      { pgn:"3mp", tag:"they·m",
+        hebHtml:'<span class="pm">יִ</span><span class="rl">שְׁמְר</span><span class="pm">וּ</span>',
+        trans:"yishmeru", mean:"they will guard (m)" },
+      { pgn:"3fp", tag:"they·f",
+        hebHtml:'<span class="pm">תִּ</span><span class="rl">שְׁמֹרְ</span><span class="pm">נָה</span>',
+        trans:"tishmornah", mean:"they will guard (f)" },
+      { pgn:"2mp", tag:"you·m·pl",
+        hebHtml:'<span class="pm">תִּ</span><span class="rl">שְׁמְר</span><span class="pm">וּ</span>',
+        trans:"tishmeru", mean:"you will guard (m·pl)" },
+      { pgn:"2fp", tag:"you·f·pl",
+        hebHtml:'<span class="pm">תִּ</span><span class="rl">שְׁמֹרְ</span><span class="pm">נָה</span>',
+        trans:"tishmornah", mean:"you will guard (f·pl)" },
+      { pgn:"1cp", tag:"we",
+        hebHtml:'<span class="pm">נִ</span><span class="rl">שְׁמֹר</span>',
+        trans:"nishmor", mean:"we will guard" }
+    ]
+  },
+  barakh: {
+    label: "ב-ר-ך (B-R-Kh) — bless",
+    qatal: [
+      { pgn:"3ms", tag:"he",
+        hebHtml:'<span class="rl">בֵּרַךְ</span>',
+        trans:"berakh", mean:"he blessed" },
+      { pgn:"3fs", tag:"she",
+        hebHtml:'<span class="rl">בֵּרְכָ</span><span class="pm">ה</span>',
+        trans:"berekhah", mean:"she blessed" },
+      { pgn:"2ms", tag:"you·m",
+        hebHtml:'<span class="rl">בֵּרַכְ</span><span class="pm">תָּ</span>',
+        trans:"berakhta", mean:"you blessed (m)" },
+      { pgn:"2fs", tag:"you·f",
+        hebHtml:'<span class="rl">בֵּרַכְ</span><span class="pm">תְּ</span>',
+        trans:"berakht", mean:"you blessed (f)" },
+      { pgn:"1cs", tag:"I",
+        hebHtml:'<span class="rl">בֵּרַכְ</span><span class="pm">תִּי</span>',
+        trans:"berakhti", mean:"I blessed" },
+      { pgn:"3cp", tag:"they",
+        hebHtml:'<span class="rl">בֵּרְכ</span><span class="pm">וּ</span>',
+        trans:"berekhu", mean:"they blessed" },
+      { pgn:"2mp", tag:"you·m·pl",
+        hebHtml:'<span class="rl">בֵּרַכְ</span><span class="pm">תֶּם</span>',
+        trans:"berakhtem", mean:"you blessed (m·pl)" },
+      { pgn:"2fp", tag:"you·f·pl",
+        hebHtml:'<span class="rl">בֵּרַכְ</span><span class="pm">תֶּן</span>',
+        trans:"berakhten", mean:"you blessed (f·pl)" },
+      { pgn:"1cp", tag:"we",
+        hebHtml:'<span class="rl">בֵּרַכְ</span><span class="pm">נוּ</span>',
+        trans:"berakhnu", mean:"we blessed" }
+    ],
+    yiqtol: [
+      { pgn:"3ms", tag:"he",
+        hebHtml:'<span class="pm">יְ</span><span class="rl">בָרֵךְ</span>',
+        trans:"yevarekh", mean:"he will bless" },
+      { pgn:"3fs", tag:"she",
+        hebHtml:'<span class="pm">תְּ</span><span class="rl">בָרֵךְ</span>',
+        trans:"tevarekh", mean:"she will bless" },
+      { pgn:"2ms", tag:"you·m",
+        hebHtml:'<span class="pm">תְּ</span><span class="rl">בָרֵךְ</span>',
+        trans:"tevarekh", mean:"you will bless (m)" },
+      { pgn:"2fs", tag:"you·f",
+        hebHtml:'<span class="pm">תְּ</span><span class="rl">בָרְכִ</span><span class="pm">י</span>',
+        trans:"tevarekhi", mean:"you will bless (f)" },
+      { pgn:"1cs", tag:"I",
+        hebHtml:'<span class="pm">אֲ</span><span class="rl">בָרֵךְ</span>',
+        trans:"avarekh", mean:"I will bless" },
+      { pgn:"3mp", tag:"they·m",
+        hebHtml:'<span class="pm">יְ</span><span class="rl">בָרְכ</span><span class="pm">וּ</span>',
+        trans:"yevarekhu", mean:"they will bless (m)" },
+      { pgn:"3fp", tag:"they·f",
+        hebHtml:'<span class="pm">תְּ</span><span class="rl">בָרַכְ</span><span class="pm">נָה</span>',
+        trans:"tevarakhna", mean:"they will bless (f)" },
+      { pgn:"2mp", tag:"you·m·pl",
+        hebHtml:'<span class="pm">תְּ</span><span class="rl">בָרְכ</span><span class="pm">וּ</span>',
+        trans:"tevarekhu", mean:"you will bless (m·pl)" },
+      { pgn:"2fp", tag:"you·f·pl",
+        hebHtml:'<span class="pm">תְּ</span><span class="rl">בָרַכְ</span><span class="pm">נָה</span>',
+        trans:"tevarakhna", mean:"you will bless (f·pl)" },
+      { pgn:"1cp", tag:"we",
+        hebHtml:'<span class="pm">נְ</span><span class="rl">בָרֵךְ</span>',
+        trans:"nevarekh", mean:"we will bless" }
+    ]
+  },
+  halakh: {
+    label: "ה-ל-ך (H-L-Kh) — go, walk",
+    qatal: [
+      { pgn:"3ms", tag:"he",
+        hebHtml:'<span class="rl">הָלַךְ</span>',
+        trans:"halakh", mean:"he went" },
+      { pgn:"3fs", tag:"she",
+        hebHtml:'<span class="rl">הָלְכָ</span><span class="pm">ה</span>',
+        trans:"halekhah", mean:"she went" },
+      { pgn:"2ms", tag:"you·m",
+        hebHtml:'<span class="rl">הָלַכְ</span><span class="pm">תָּ</span>',
+        trans:"halakhta", mean:"you went (m)" },
+      { pgn:"2fs", tag:"you·f",
+        hebHtml:'<span class="rl">הָלַכְ</span><span class="pm">תְּ</span>',
+        trans:"halakht", mean:"you went (f)" },
+      { pgn:"1cs", tag:"I",
+        hebHtml:'<span class="rl">הָלַכְ</span><span class="pm">תִּי</span>',
+        trans:"halakhti", mean:"I went" },
+      { pgn:"3cp", tag:"they",
+        hebHtml:'<span class="rl">הָלְכ</span><span class="pm">וּ</span>',
+        trans:"halekhu", mean:"they went" },
+      { pgn:"2mp", tag:"you·m·pl",
+        hebHtml:'<span class="rl">הֲלַכְ</span><span class="pm">תֶּם</span>',
+        trans:"halakhtem", mean:"you went (m·pl)" },
+      { pgn:"2fp", tag:"you·f·pl",
+        hebHtml:'<span class="rl">הֲלַכְ</span><span class="pm">תֶּן</span>',
+        trans:"halakhten", mean:"you went (f·pl)" },
+      { pgn:"1cp", tag:"we",
+        hebHtml:'<span class="rl">הָלַכְ</span><span class="pm">נוּ</span>',
+        trans:"halakhnu", mean:"we went" }
+    ],
+    yiqtol: [
+      { pgn:"3ms", tag:"he",
+        hebHtml:'<span class="pm">יֵ</span><span class="rl">לֵךְ</span>',
+        trans:"yelekh", mean:"he will go" },
+      { pgn:"3fs", tag:"she",
+        hebHtml:'<span class="pm">תֵּ</span><span class="rl">לֵךְ</span>',
+        trans:"telekh", mean:"she will go" },
+      { pgn:"2ms", tag:"you·m",
+        hebHtml:'<span class="pm">תֵּ</span><span class="rl">לֵךְ</span>',
+        trans:"telekh", mean:"you will go (m)" },
+      { pgn:"2fs", tag:"you·f",
+        hebHtml:'<span class="pm">תֵּ</span><span class="rl">לְכִ</span><span class="pm">י</span>',
+        trans:"telekhi", mean:"you will go (f)" },
+      { pgn:"1cs", tag:"I",
+        hebHtml:'<span class="pm">אֵ</span><span class="rl">לֵךְ</span>',
+        trans:"elekh", mean:"I will go" },
+      { pgn:"3mp", tag:"they·m",
+        hebHtml:'<span class="pm">יֵ</span><span class="rl">לְכ</span><span class="pm">וּ</span>',
+        trans:"yelekhu", mean:"they will go (m)" },
+      { pgn:"3fp", tag:"they·f",
+        hebHtml:'<span class="pm">תֵּ</span><span class="rl">לַכְ</span><span class="pm">נָה</span>',
+        trans:"telakhna", mean:"they will go (f)" },
+      { pgn:"2mp", tag:"you·m·pl",
+        hebHtml:'<span class="pm">תֵּ</span><span class="rl">לְכ</span><span class="pm">וּ</span>',
+        trans:"telekhu", mean:"you will go (m·pl)" },
+      { pgn:"2fp", tag:"you·f·pl",
+        hebHtml:'<span class="pm">תֵּ</span><span class="rl">לַכְ</span><span class="pm">נָה</span>',
+        trans:"telakhna", mean:"you will go (f·pl)" },
+      { pgn:"1cp", tag:"we",
+        hebHtml:'<span class="pm">נֵ</span><span class="rl">לֵךְ</span>',
+        trans:"nelekh", mean:"we will go" }
+    ]
+  }
+};
+
+function renderTable(tableId, forms) {
+  const tbody = document.querySelector(`#${tableId} tbody`);
+  tbody.innerHTML = '';
+  forms.forEach(f => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td><span class="pgn-tag">${f.pgn}</span> <span style="color:var(--text-light);font-size:0.85em">${f.tag}</span></td>
+      <td><span class="hebrew-form">${f.hebHtml}</span></td>
+      <td><span class="transliteration">${f.trans}</span></td>
+      <td><span class="meaning">${f.mean}</span></td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+function selectRoot(rootKey) {
+  document.querySelectorAll('.root-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector(`[data-root="${rootKey}"]`).classList.add('active');
+  const d = data[rootKey];
+  document.getElementById('qatal-header').textContent =
+    `Perfect (Qatal) — Completed Action · "${d.qatal[0].mean}"`;
+  document.getElementById('yiqtol-header').textContent =
+    `Imperfect (Yiqtol) — Incomplete / Future Action · "${d.yiqtol[0].mean}"`;
+  renderTable('qatal-table', d.qatal);
+  renderTable('yiqtol-table', d.yiqtol);
+}
+
+document.querySelectorAll('.root-btn').forEach(btn => {
+  btn.addEventListener('click', () => selectRoot(btn.dataset.root));
+});
+
+// Initial render
+selectRoot('shamar');
+</script>
+</body>
+</html>
