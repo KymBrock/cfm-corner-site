@@ -6,7 +6,7 @@ Complete format specification for CFM Corner weekly study guides. Canonical exam
 
 ## Overview
 
-Each study guide is a single HTML file embedded via Hugo into the site layout. It contains inline `<style>`, a header section, quick links, expand/collapse buttons, and 6 major accordion sections. No external CSS file — all styles are self-contained in the HTML.
+Each study guide is a single HTML file embedded via Hugo into the site layout. It contains inline `<style>`, a header section, quick links, expand/collapse buttons, and 7 major accordion sections. No external CSS file — all styles are self-contained in the HTML.
 
 ---
 
@@ -34,14 +34,14 @@ Each study guide is a single HTML file embedded via Hugo into the site layout. I
     <button class="expand-button" onclick="collapseAll()">⊟ Collapse All</button>
   </div>
 
-  <!-- SECTION 1–6: Major Accordion Sections -->
+  <!-- SECTION 1–7: Major Accordion Sections -->
   ...
 </div>
 ```
 
 ---
 
-## Major Accordion Sections (6 total)
+## Major Accordion Sections (7 total)
 
 Each major section uses this pattern:
 
@@ -62,7 +62,7 @@ Each major section uses this pattern:
 </div>
 ```
 
-### The 6 Sections
+### The 7 Sections
 
 | # | Title Pattern | Contains |
 |---|--------------|----------|
@@ -70,8 +70,9 @@ Each major section uses this pattern:
 | 2 | `Week NN: Historical & Cultural Context` | ANE context, archaeology, tradition |
 | 3 | `Week NN: Key Passages Study` | Verse-by-verse analysis per passage |
 | 4 | `Week NN: Word Studies` | Hebrew word studies with cross-language tables |
-| 5 | `Week NN: Teaching Applications` | Per-setting teaching ideas |
-| 6 | `Week NN: Study Questions` | Grouped by question type |
+| 5 | `Week NN: Jewish Perspective` | Ancient Jewish insights with LDS connections |
+| 6 | `Week NN: Teaching Applications` | Per-setting teaching ideas |
+| 7 | `Week NN: Study Questions` | Grouped by question type |
 
 ---
 
@@ -243,7 +244,64 @@ This is the most structured section. Each word study follows this exact pattern:
 
 ---
 
-## Section 5: Teaching Applications
+## Section 5: Jewish Perspective
+
+Sub-accordions per insight topic (e.g., "Isaac's Evening Devotion", "Twelve Stones Becoming One"). Each insight follows this pattern:
+
+```html
+<button class="sg-sub-accordion"><span>Example N: Insight Title</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+
+<h3>The Biblical Text</h3>
+<blockquote><p><em>Key verse quotation (KJV)...</em></p></blockquote>
+
+<h3>The Jewish Insight</h3>
+<p><strong>Source Name</strong> (e.g., Targum Onkelos, Midrash Rabbah, Pirke de-Rabbi Eliezer):</p>
+<blockquote><p>Quote or paraphrase from the Jewish source...</p></blockquote>
+<p>Explanation of the tradition and its significance...</p>
+
+<h3>Why This Matters for LDS Readers</h3>
+<p><strong>Connection to LDS Practice/Theology:</strong></p>
+<p>How this insight connects to Latter-day Saint beliefs, practices, or scripture...</p>
+<ul>
+  <li>Specific LDS scripture connections</li>
+  <li>Practical applications</li>
+</ul>
+
+<h3>Discussion Questions</h3>
+<ul>
+  <li>Question connecting the insight to personal application...</li>
+</ul>
+
+<hr>
+</div>
+</div>
+```
+
+### Content Guidelines for Section 5
+
+1. **Introduction sub-accordion** — Brief explanation of why Jewish sources matter for OT study, with a respectful framing note
+2. **3–6 insight examples** per week — Each presenting a specific Jewish interpretive tradition with:
+   - The biblical text it illuminates
+   - The Jewish source and its insight
+   - A clear connection to LDS theology or practice
+   - Discussion questions for personal/class study
+3. **Conclusion sub-accordion** — Summary and encouragement to respectfully engage with these traditions
+4. **Source attribution** — Always name the specific Jewish source (Targum Onkelos, Talmud Bavli tractate/page, Midrash Rabbah section, etc.)
+5. **Respectful framing** — Present as "enriching context," not as competing with or superseding LDS doctrine
+6. **Cross-links** — Link to relevant Culture section articles (e.g., Jewish Texts Primer, PaRDeS Model) where appropriate
+
+### Source File Convention
+
+Jewish Perspective content for each week should be authored in the Obsidian vault at:
+```
+WeeklyLessons/Week_NN_.../03_Study_Guide/07_Jewish_Perspective.md
+```
+
+---
+
+## Section 6: Teaching Applications
 
 Sub-accordions per teaching context:
 
@@ -261,7 +319,7 @@ Sub-accordions per teaching context:
 
 ---
 
-## Section 6: Study Questions
+## Section 7: Study Questions
 
 Sub-accordions grouped by question type (e.g., "Comprehension Questions", "Analysis Questions", "Application Questions", "Synthesis Questions"):
 
@@ -484,11 +542,19 @@ Sub-accordion toggle is handled by click event listeners that toggle `.active` c
 - [ ] `<hr>` separator between word studies
 - [ ] New terms added to `lexicon-popups.json`
 
-### Section 5: Teaching Applications
+### Section 5: Jewish Perspective
+- [ ] Introduction with respectful framing note
+- [ ] 3–6 insight examples from Jewish sources
+- [ ] Each has: Biblical Text, Jewish Insight, LDS Connection, Discussion Questions
+- [ ] Sources properly attributed (specific text, tractate, chapter)
+- [ ] Cross-links to Culture section articles where relevant
+- [ ] Conclusion with summary
+
+### Section 6: Teaching Applications
 - [ ] 3–5 teaching settings/activities
 - [ ] Practical, actionable suggestions
 
-### Section 6: Study Questions
+### Section 7: Study Questions
 - [ ] Grouped by type (Comprehension, Analysis, Application, Synthesis)
 - [ ] 20+ questions total
 - [ ] Scripture references in questions

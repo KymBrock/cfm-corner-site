@@ -9,10 +9,12 @@ All spec documents for the CFM Corner site content pipeline. Read these before c
 | Document | What It Covers | Canonical Example |
 |----------|---------------|-------------------|
 | `WEEKLY-PROTOCOL.md` | End-to-end weekly workflow (Obsidian → Hugo → Deploy → Email) | — |
-| `STUDY-GUIDE-SPEC.md` | Study guide HTML format, accordion structure, word studies, linking system | Week 09 |
+| `STUDY-GUIDE-SPEC.md` | Study guide HTML format, 7 accordion sections (incl. Jewish Perspective), word studies, linking system | Week 09 (Sections 1-4, 6-7); Week 10+ (all 7 sections) |
 | `RESOURCES-HTML-SPEC.md` | Resources page HTML format, video cards, accordions | Week 08 |
 | `LEXICON-POPUP-SPEC.md` | Hebrew/Greek hover popups, data attributes, dictionary linking patterns | — |
 | `CHART-STANDARDS.md` | Chart HTML standards: logo pattern, mobile responsive, region colors, CSS vars | Week 09 charts |
+| `CULTURE-SPEC.md` | Culture section structure, layout templates, content guidelines | Purim moedim page |
+| `STUDY-LIBRARY-SPEC.md` | Study Library section structure, article format, front matter | Seven Sermons article |
 | `CONTENT-SPECS-INDEX.md` | This file — master index and quick reference | — |
 
 ---
@@ -48,6 +50,10 @@ All spec documents for the CFM Corner site content pipeline. Read these before c
 |------|-------------|
 | `static/content/weekNN/` | Weekly content directory (study-guide.html, resources.html, insights.html) |
 | `content/weeks/weekNN.md` | Hugo page for weekly content (front matter + shortcodes) |
+| `content/culture/` | Culture section (Jewish tradition, feast days, interpretive frameworks) |
+| `content/study-library/` | Study Library section (in-depth articles and thematic studies) |
+| `themes/cfm/layouts/culture/` | Culture section Hugo templates (list.html, single.html) |
+| `themes/cfm/layouts/study-library/` | Study Library Hugo templates (list.html, single.html) |
 | `layouts/shortcodes/` | Hugo shortcodes for embedding content |
 | `cfm-corner-tools/data/lexicon-popups.json` | Shared lexicon data for popup generation |
 | `static/js/` | Site JavaScript (accordion, lexicon popup, ScriptTagger) |

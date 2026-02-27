@@ -28,6 +28,7 @@ Write or review these files:
 - [ ] `04_Word_Studies.md` — Hebrew/Greek word studies
 - [ ] `05_Teaching_Applications.md` — Teaching ideas for 7 settings
 - [ ] `06_Study_Questions.md` — Discussion/reflection questions
+- [ ] `07_Jewish_Perspective.md` — Jewish interpretive insights with LDS connections (Section 5 in study guide)
 
 ### 1.2 Weekly Insights (folder: `02_Weekly_Insights/`)
 - [ ] `Weekly_Insights_WeekNN.md` — Narrative synthesis of the week
