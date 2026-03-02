@@ -1,0 +1,154 @@
+<div class="cfm-insights" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+
+    <!-- Expand/Collapse Controls -->
+    <div style="text-align: center; margin: 20px 0 30px 0;">
+        <button onclick="expandAllInsights()" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 8px 10px; display: block; width: fit-content; margin-left: auto; margin-right: auto; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">&#x229E; Expand All</button>
+        <button onclick="collapseAllInsights()" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 8px 10px; display: block; width: fit-content; margin-left: auto; margin-right: auto; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">&#x229F; Collapse All</button>
+    </div>
+
+    <!-- Content Sections -->
+
+        <!-- SECTION 1: Thank You -->
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Thank You for Spreading the Word</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em; transition: transform 0.3s ease; display: inline-block;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+
+<p style="margin-bottom: 15px;">Before we dig into this week&rsquo;s reading, I want to take a moment to say <em>thank you</em>.</p>
+<p style="margin-bottom: 15px;">Something wonderful happened this week. Many of you shared the new CFM Corner website with friends, family members, ward members, and study groups &mdash; and our little community has <strong>more than doubled</strong> in size. That&rsquo;s not a small thing. That means people are finding these resources helpful, and that means the work we&rsquo;re doing here together matters.</p>
+<p style="margin-bottom: 15px;">I started this project four years ago as a personal study tool. It has grown into something I never imagined &mdash; a community of people who care deeply about digging into the scriptures together. Every time one of you shares a link, recommends the site to your Sunday School class, or forwards the email to a friend, you&rsquo;re helping someone else fall in love with the word of God. And I can&rsquo;t think of anything more important than that.</p>
+<p style="margin-bottom: 15px;">So thank you. Thank you for being here. Thank you for sharing. And thank you for studying with me.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 2: What's New -->
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>What&rsquo;s New at CFM Corner This Week</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em; transition: transform 0.3s ease; display: inline-block;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+
+<p style="margin-bottom: 15px;">We&rsquo;ve been busy behind the scenes this week, and I&rsquo;m excited to share some new features and content with you.</p>
+
+<div style="background: linear-gradient(135deg, #f0f4f1 0%, #e4ebe6 100%); border: 2px solid #7c9885; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+<p style="margin-bottom: 15px; font-size: 1.1em; font-weight: 600; color: #4a5d4f;">New: Culture Section</p>
+<p style="margin-bottom: 15px;">You may have noticed a new <strong>Culture</strong> section appearing in the site navigation. This is where we&rsquo;re building a library of resources that help us understand the cultural world behind the Old Testament &mdash; particularly the Jewish traditions, practices, and interpretive frameworks that illuminate these ancient texts.</p>
+<p style="margin-bottom: 15px;">Right now, you&rsquo;ll find two featured articles in the Jewish Perspective collection:</p>
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;"><a href="/culture/jewish/perspective/pardes-model/" style="color: #7c9885; font-weight: 600;">The PaRDeS Model: Four Levels of Biblical Interpretation</a> &mdash; How Jewish tradition reads scripture on four levels, from plain meaning to hidden mystery, and what Latter-day Saints can learn from this ancient framework.</li>
+<li style="margin-bottom: 8px;"><a href="/culture/jewish/perspective/jewish-texts-primer/" style="color: #7c9885; font-weight: 600;">Seeking Out the Best Books: A Latter-day Saint Introduction to Jewish Sacred Literature</a> &mdash; What is the Talmud? When was it written, and why does it matter for Bible study? This introduction opens the door to a rich tradition of scriptural commentary that spans millennia.</li>
+</ul>
+</div>
+
+<div style="background: linear-gradient(135deg, #f0f4f1 0%, #e4ebe6 100%); border: 2px solid #7c9885; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+<p style="margin-bottom: 15px; font-size: 1.1em; font-weight: 600; color: #4a5d4f;">New: Study Library</p>
+<p style="margin-bottom: 15px;">We&rsquo;ve also launched a <strong>Study Library</strong> section where you&rsquo;ll find in-depth articles that go beyond what we can fit into the weekly study guide. Two new articles are available this week:</p>
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;"><a href="/study-library/articles/seven-sermons/" style="color: #7c9885; font-weight: 600;">The Savior&rsquo;s Sermon From the Cross: Seven Words of Ultimate Love</a> &mdash; An exploration of Jesus&rsquo; seven final phrases from the cross, their roots in the Psalms, and what they teach us about forgiveness, salvation, and trust.</li>
+<li style="margin-bottom: 8px;"><a href="/study-library/articles/purim-hidden-providence/" style="color: #7c9885; font-weight: 600;">Purim: Hidden Providence, Unlikely Deliverance</a> &mdash; How the Jewish festival of Purim illuminates themes of divine providence, covenant faithfulness, and deliverance through unlikely channels.</li>
+</ul>
+</div>
+
+<div style="background: linear-gradient(135deg, #f0f4f1 0%, #e4ebe6 100%); border: 2px solid #7c9885; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+<p style="margin-bottom: 15px; font-size: 1.1em; font-weight: 600; color: #4a5d4f;">Hebrew Lesson 9</p>
+<p style="margin-bottom: 0;">Our Hebrew journey continues! <a href="/hebrew/09-person-gender-number/" style="color: #7c9885; font-weight: 600;">Lesson 9: Person, Gender, and Number</a> introduces the three-part code built into every Hebrew verb &mdash; and Rebekah&rsquo;s story in Genesis 24 is the perfect place to see it in action.</p>
+</div>
+
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 3: Preparing for Easter -->
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Preparing for Easter: Lessons from Purim and Lent</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em; transition: transform 0.3s ease; display: inline-block;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+
+<p style="margin-bottom: 15px;">Something happened in my Relief Society lesson last week that I haven&rsquo;t been able to stop thinking about.</p>
+<p style="margin-bottom: 15px;">In our lesson, our amazing teacher talked about Lent. She acknowledged that Lent is not a tradition that members of The Church of Jesus Christ of Latter-day Saints typically observe, but she made a beautiful point: Lent serves as a kind of <em>advent countdown</em> &mdash; a season of preparation that helps Christians turn their hearts toward the Savior in the weeks leading up to Easter.</p>
+<p style="margin-bottom: 15px;">That made me think of <strong>Purim</strong>.</p>
+<p style="margin-bottom: 15px;">Purim is coming up soon, and I wanted to include information about it in this week&rsquo;s lesson because the parallels are striking. Just as Lent prepares Christians for Easter, Purim helps our Jewish brothers and sisters prepare for Passover. The festival of Purim &mdash; celebrating the deliverance of the Jewish people through Esther and Mordechai &mdash; comes roughly a month before Passover, and it begins a season of reflection on God&rsquo;s saving power that builds toward the great remembrance of the Exodus.</p>
+<p style="margin-bottom: 15px;">Sitting there in Relief Society, listening to this sister talk about Lent, I found myself connecting dots I hadn&rsquo;t connected before. Both traditions &mdash; one Christian, one Jewish &mdash; create a <em>season</em> of preparation before sacred spring observances. And both point to the same truth: that great spiritual moments don&rsquo;t just happen to us. We prepare for them. We make space for them. We build traditions that turn our hearts in the right direction.</p>
+
+<div style="background: linear-gradient(135deg, #f0f4f1 0%, #e4ebe6 100%); border: 2px solid #7c9885; border-radius: 10px; padding: 25px; margin: 25px 0;">
+<p style="margin-bottom: 15px; font-size: 1.1em; font-weight: 600; color: #4a5d4f;">An Apostolic Invitation to Elevate Easter</p>
+<p style="margin-bottom: 15px;">This is exactly what our Church leaders have been asking us to do. In April 2023, <strong>Elder Gary E. Stevenson</strong> gave a General Conference talk called <a href="https://www.churchofjesuschrist.org/study/general-conference/2023/04/11stevenson?lang=eng" target="_blank" style="color: #7c9885; font-weight: 600;">&ldquo;The Greatest Easter Story Ever Told&rdquo;</a> in which he posed a powerful question: How do we celebrate the Resurrection of Jesus Christ with the same richness and tradition that we bring to Christmas? He recommended that families make 3 Nephi 11&ndash;17 &mdash; the resurrected Christ&rsquo;s appearance to the Nephites &mdash; their Easter tradition, the way Luke 2 is part of our Christmas tradition.</p>
+<p style="margin-bottom: 15px;">Two years later, in April 2025, Elder Stevenson returned to this theme in his talk <a href="https://www.churchofjesuschrist.org/study/general-conference/2025/04/31stevenson?lang=eng" target="_blank" style="color: #7c9885; font-weight: 600;">&ldquo;And We Talk of Christ.&rdquo;</a> He encouraged us to make Easter <em>a season rather than just a day</em> and to be more thoughtful and celebratory of Palm Sunday, Good Friday, and the sacred events of Holy Week. He shared how his own family had created an Easter Day play with scriptures, music, and palm fronds &mdash; a beautiful parallel to the nativity traditions many of us cherish at Christmas.</p>
+<p style="margin-bottom: 0;">In February 2025, <strong>President Dallin H. Oaks</strong> echoed this counsel in the <a href="https://newsroom.churchofjesuschrist.org/article/president-oaks-easter-greater-love" target="_blank" style="color: #7c9885; font-weight: 600;">First Presidency&rsquo;s Easter message</a>, urging members to study Christ&rsquo;s teachings and establish Christ-centered Easter traditions.</p>
+</div>
+
+<p style="margin-bottom: 15px;">So here we are, in early March, with Easter still a few weeks away. We have an opportunity right now &mdash; <em>this</em> week &mdash; to begin preparing. As we look at how Purim leads to Passover and how Lent leads to Easter, we can ask ourselves: <em>What am I doing to prepare my heart for Resurrection Sunday?</em></p>
+<p style="margin-bottom: 15px;">Maybe it&rsquo;s starting a family reading of 3 Nephi 11&ndash;17, as Elder Stevenson suggested. Maybe it&rsquo;s beginning a study of the Savior&rsquo;s last week &mdash; our new article on <a href="/study-library/articles/seven-sermons/" style="color: #7c9885; font-weight: 600;">The Savior&rsquo;s Sermon From the Cross</a> might be a good place to start. Maybe it&rsquo;s simply setting aside a few quiet minutes each day to reflect on what the Resurrection means to <em>you</em>.</p>
+<p style="margin-bottom: 15px;">Whatever it looks like, the invitation is the same one God has been extending since the days of Esther and Mordechai, since the oaks of Mamre and the ladder at Bethel: <em>Prepare. Make space. Turn your heart toward Me.</em></p>
+<p style="margin-bottom: 15px;">If you&rsquo;d like to learn more about Purim and its connections to these themes, check out our new article: <a href="/study-library/articles/purim-hidden-providence/" style="color: #7c9885; font-weight: 600;">Purim: Hidden Providence, Unlikely Deliverance</a>.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 4: This Week's Resources -->
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>&ldquo;Let God Prevail&rdquo; &mdash; Your Guide to This Week&rsquo;s Resources</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em; transition: transform 0.3s ease; display: inline-block;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+
+<p style="margin-bottom: 15px;">This week we&rsquo;re in <strong>Genesis 24&ndash;33</strong>, and the scope is breathtaking. From Rebekah&rsquo;s providential calling at the well to Jacob&rsquo;s transformation at the Jabbok, these chapters trace the covenant line through marriage, birthright, and blessing. Jacob dreams of heaven&rsquo;s ladder at Bethel, wrestles with God at Peniel, and reconciles with Esau &mdash; learning that God&rsquo;s greatest blessings come not by grasping but by surrendering.</p>
+<p style="margin-bottom: 15px;">The theme we&rsquo;ve chosen for this week is <em>&ldquo;Let God Prevail&rdquo;</em> &mdash; drawn from Jacob&rsquo;s name change. The name <em>Jacob</em> (<a href="https://www.blueletterbible.org/lexicon/h3290/kjv/wlc/0-1/" target="_blank" data-lexicon="supplanter, heel-grabber" data-strongs="H3290" data-translit="Ya'aqov" data-original="&#x05D9;&#x05B7;&#x05E2;&#x05B2;&#x05E7;&#x05B9;&#x05D1;" data-lang="hebrew" data-verse="Genesis 25:26"><em>Ya&rsquo;aqov</em></a>) means &ldquo;supplanter&rdquo; or &ldquo;heel-grabber&rdquo; &mdash; the one who strives and grasps. But <em>Israel</em> (<a href="https://www.blueletterbible.org/lexicon/h3478/kjv/wlc/0-1/" target="_blank" data-lexicon="God prevails, he who strives with God" data-strongs="H3478" data-translit="Yisra'el" data-original="&#x05D9;&#x05B4;&#x05E9;&#x05C2;&#x05B0;&#x05E8;&#x05B8;&#x05D0;&#x05B5;&#x05DC;" data-lang="hebrew" data-verse="Genesis 32:28"><em>Yisra&rsquo;el</em></a>) means &ldquo;God prevails&rdquo; or &ldquo;let God prevail.&rdquo; That name change is the spiritual arc of the entire reading: from grasping to surrendering, from striving in our own strength to letting God be God.</p>
+<p style="margin-bottom: 15px;">Here&rsquo;s an overview of what&rsquo;s available to you this week:</p>
+
+<div style="background: linear-gradient(135deg, #f0f4f1 0%, #e4ebe6 100%); border: 2px solid #7c9885; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+<p style="margin-bottom: 15px; font-size: 1.1em; font-weight: 600; color: #4a5d4f;">In the Study Guide</p>
+<p style="margin-bottom: 15px;">This week&rsquo;s study guide has seven sections, each building on the last:</p>
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;"><strong>Week Overview</strong> &mdash; A bird&rsquo;s-eye view of Genesis 24&ndash;33, including central themes, key figures, timeline placement, and a suggested reading approach whether you have 15 minutes or two hours.</li>
+<li style="margin-bottom: 8px;"><strong>Historical &amp; Cultural Context</strong> &mdash; The ancient Near Eastern world behind these stories: betrothal customs, birthright inheritance, the significance of wells and stones, and the geography of Jacob&rsquo;s journeys.</li>
+<li style="margin-bottom: 8px;"><strong>Key Passages Study</strong> &mdash; Deep dives into passages like Rebekah&rsquo;s &ldquo;I will go&rdquo; (Genesis 24:58), Jacob&rsquo;s ladder (Genesis 28:12&ndash;17), and the wrestling at Peniel (Genesis 32:24&ndash;30).</li>
+<li style="margin-bottom: 8px;"><strong>Word Studies</strong> &mdash; Hebrew word studies that unlock layers of meaning &mdash; words like <a href="https://www.blueletterbible.org/lexicon/h2617/kjv/wlc/0-1/" target="_blank" data-lexicon="covenant loyalty, lovingkindness, mercy" data-strongs="H2617" data-translit="chesed" data-original="&#x05D7;&#x05B6;&#x05E1;&#x05B6;&#x05D3;" data-lang="hebrew" data-verse="Genesis 24:12"><em>chesed</em></a> (covenant loyalty), <a href="https://www.blueletterbible.org/lexicon/h1062/kjv/wlc/0-1/" target="_blank" data-lexicon="birthright, right of firstborn" data-strongs="H1062" data-translit="bekorah" data-original="&#x05D1;&#x05B0;&#x05DB;&#x05B9;&#x05E8;&#x05B8;&#x05D4;" data-lang="hebrew" data-verse="Genesis 25:31"><em>bechorah</em></a> (birthright), <a href="https://www.blueletterbible.org/lexicon/h5551/kjv/wlc/0-1/" target="_blank" data-lexicon="ladder, stairway" data-strongs="H5551" data-translit="sullam" data-original="&#x05E1;&#x05BB;&#x05DC;&#x05B8;&#x05BC;&#x05DD;" data-lang="hebrew" data-verse="Genesis 28:12"><em>sulam</em></a> (ladder), and <a href="https://www.blueletterbible.org/lexicon/h6439/kjv/wlc/0-1/" target="_blank" data-lexicon="face of God" data-strongs="H6439" data-translit="Peniy'el" data-original="&#x05E4;&#x05B0;&#x05E0;&#x05B4;&#x05D9;&#x05D0;&#x05B5;&#x05DC;" data-lang="hebrew" data-verse="Genesis 32:30"><em>Peniel</em></a> (face of God).</li>
+<li style="margin-bottom: 8px;"><strong>Jewish Perspective</strong> &mdash; This is a new section we&rsquo;re debuting this week! Rabbinic commentary on key passages from sources like the Midrash, Talmud, and Targumim, with connections to Latter-day Saint insights.</li>
+<li style="margin-bottom: 8px;"><strong>Teaching Applications</strong> &mdash; Practical ideas for personal study, family home evening, Sunday School, Seminary, Relief Society, children&rsquo;s classes, and missionary teaching.</li>
+<li style="margin-bottom: 8px;"><strong>Study Questions</strong> &mdash; Dozens of questions organized by type: comprehension, analysis, application, and synthesis.</li>
+</ul>
+</div>
+
+<div style="background: linear-gradient(135deg, #f0f4f1 0%, #e4ebe6 100%); border: 2px solid #7c9885; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+<p style="margin-bottom: 15px; font-size: 1.1em; font-weight: 600; color: #4a5d4f;">In the Charts &amp; Tools Tab</p>
+<p style="margin-bottom: 15px;">This week&rsquo;s interactive charts and articles provide deeper context on topics connected to our reading:</p>
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;"><a href="/culture/jewish/perspective/pardes-model/" style="color: #7c9885; font-weight: 600;">The PaRDeS Model</a> &mdash; Learn the four-level framework Jewish readers use to find meaning in scripture, from the plain sense to the hidden mystery.</li>
+<li style="margin-bottom: 8px;"><a href="/culture/jewish/perspective/jewish-texts-primer/" style="color: #7c9885; font-weight: 600;">Jewish Sacred Literature Primer</a> &mdash; A beginner&rsquo;s guide to the Talmud, Midrash, and other Jewish texts that illuminate the Old Testament.</li>
+<li style="margin-bottom: 8px;"><a href="/hebrew/09-person-gender-number/" style="color: #7c9885; font-weight: 600;">Hebrew Lesson 9: Person, Gender, and Number</a> &mdash; Discover the three-part code embedded in every Hebrew verb, using Rebekah&rsquo;s story as our classroom text.</li>
+<li style="margin-bottom: 8px;"><a href="/study-library/articles/seven-sermons/" style="color: #7c9885; font-weight: 600;">The Savior&rsquo;s Sermon From the Cross</a> &mdash; Seven final words of love from the cross, and what they teach about forgiveness and trust.</li>
+<li style="margin-bottom: 8px;"><a href="/study-library/articles/purim-hidden-providence/" style="color: #7c9885; font-weight: 600;">Purim: Hidden Providence, Unlikely Deliverance</a> &mdash; The story of Esther and Mordechai, and how Purim illuminates God&rsquo;s hidden hand in history.</li>
+</ul>
+</div>
+
+<p style="margin-bottom: 15px;">Whether you have fifteen minutes or an entire evening, there&rsquo;s something here for you. Start with whatever catches your eye, follow the threads that pull at your heart, and don&rsquo;t feel like you have to read everything. The goal isn&rsquo;t to check boxes &mdash; it&rsquo;s to let the scriptures change you.</p>
+<p style="margin-bottom: 15px;">And this week, more than most, the scriptures are asking a very personal question: <em>Are you ready to let God prevail?</em></p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+</div>

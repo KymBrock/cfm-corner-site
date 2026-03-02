@@ -1,0 +1,1838 @@
+<style>
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+        .site-header {
+            background: linear-gradient(135deg, #d4c4a8 0%, #8B7355 100%);
+            color: white; padding: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px;
+        }
+        .site-header-content { max-width: 1000px; margin: 0 auto; padding: 0 20px; text-align: center; }
+        .site-title { font-size: 2em; margin-bottom: 5px; }
+        .site-subtitle { font-size: 1.1em; opacity: 0.9; }
+
+        .header-section {
+            background-color: #8B7355; color: white; padding: 40px; border-radius: 12px;
+            margin-bottom: 30px; text-align: center;
+        }
+        .header-section .week-label { font-size: 1em; text-transform: uppercase; letter-spacing: 2px; opacity: 0.9; margin-bottom: 10px; }
+        .header-section h1 { font-size: 2.5em; font-weight: 300; margin-bottom: 10px; }
+        .header-section .subtitle { font-size: 1.3em; font-style: italic; margin-bottom: 20px; }
+        .header-section .date-location { font-size: 1.1em; opacity: 0.95; }
+
+        .quick-links { text-align: center; margin: 20px 0; }
+        .quick-link {
+            display: inline-block; background: #8B7355; color: white; padding: 10px 20px;
+            border-radius: 8px; text-decoration: none; margin: 5px; transition: all 0.3s;
+        }
+        .quick-link:hover { background: #6B5344; transform: translateY(-2px); }
+
+        .button-container { text-align: center; margin: 30px 0; }
+        .expand-button {
+            background-color: #8B7355; color: white; border: none; padding: 12px 24px;
+            margin: 5px 10px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em;
+        }
+        .expand-button:hover { background-color: #6B5344; }
+
+        .sg-accordion-section {
+            background-color: #8B7355; color: white; cursor: pointer; padding: 18px; width: 100%;
+            border: none; text-align: left; font-size: 1.2em; font-weight: 600; font-family: Georgia, serif;
+            border-radius: 8px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center;
+        }
+        .sg-accordion-section:hover { background-color: #6B5344; }
+        .sg-accordion-section::after { content: '▼'; font-size: 0.9em; transition: transform 0.3s; }
+        .sg-accordion-section.active::after { transform: rotate(180deg); }
+
+        .sg-panel {
+            background-color: white; border-radius: 0 0 8px 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .sg-panel.active { display: block; }
+        .panel-content { padding: 30px; }
+        .panel-content h2 { color: #8B7355; margin-bottom: 20px; font-size: 1.8em; }
+        .panel-content h3 { color: #6B5344; margin-top: 25px; margin-bottom: 15px; font-size: 1.4em; }
+        .panel-content h4 { color: #5a4a3a; margin-top: 20px; margin-bottom: 12px; font-size: 1.2em; }
+        .panel-content ul, .panel-content ol { margin-left: 25px; margin-bottom: 15px; }
+        .panel-content li { margin-bottom: 8px; }
+        .panel-content p { margin-bottom: 15px; text-align: justify; }
+        .panel-content a { color: #8B7355; }
+        .panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .panel-content blockquote {
+            margin: 20px 0 20px 20px;
+            padding: 15px 20px;
+            border-left: 4px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 8px 8px 0;
+        }
+        .panel-content blockquote p { margin-bottom: 8px; }
+        .panel-content blockquote p:last-child { margin-bottom: 0; }
+        .panel-content blockquote cite {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #8B7355;
+            font-style: normal;
+        }
+
+        .panel-content strong { color: #6B5344; }
+        .panel-content em { color: #5a4a3a; }
+
+        .panel-content hr {
+            border: none;
+            border-top: 2px solid #e8e0d5;
+            margin: 25px 0;
+        }
+
+        .panel-content code {
+            background-color: #f5f0e8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #6B5344;
+        }
+
+        .info-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .info-table th, .info-table td { border: 1px solid #d4c4a8; padding: 12px; text-align: left; }
+        .info-table th { background-color: #f5f0e8; color: #6B5344; font-weight: bold; }
+        .info-table tr:nth-child(even) { background-color: #faf8f5; }
+
+        .sg-sub-accordion {
+            background-color: #f5f0e8;
+            color: #5a4a3a;
+            cursor: pointer;
+            padding: 14px 40px 14px 18px;
+            width: 100%;
+            text-align: left;
+            border: 1px solid #d4c4a8;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            margin-top: 10px;
+            position: relative;
+            transition: background-color 0.2s;
+        }
+
+        .sg-sub-accordion:hover {
+            background-color: #e8e0d4;
+        }
+
+        .sg-sub-accordion::after {
+            content: '▼';
+            font-size: 0.8em;
+            color: #8B7355;
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s;
+        }
+
+        .sg-sub-accordion.active::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .sg-sub-panel {
+            background-color: #fafafa;
+            border-radius: 0 0 6px 6px;
+            border: 1px solid #d4c4a8;
+            border-top: none;
+            display: none;
+            transition: max-height 0.3s ease-out;
+            margin-bottom: 10px;
+        }
+
+        .sg-sub-panel.active {
+            display: block;
+            overflow: visible;
+            transition: max-height 0.3s ease-in;
+        }
+
+        .sg-sub-panel-content {
+            padding: 20px 25px;
+        }
+
+        .sg-sub-panel-content h3 { color: #6B5344; margin-top: 20px; margin-bottom: 12px; font-size: 1.3em; }
+        .sg-sub-panel-content h4 { color: #5a4a3a; margin-top: 15px; margin-bottom: 10px; font-size: 1.15em; }
+        .sg-sub-panel-content p { margin-bottom: 12px; text-align: justify; }
+        .sg-sub-panel-content ul, .sg-sub-panel-content ol { margin-left: 25px; margin-bottom: 12px; }
+        .sg-sub-panel-content li { margin-bottom: 6px; }
+        .sg-sub-panel-content a { color: #8B7355; }
+        .sg-sub-panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .sg-sub-panel-content blockquote {
+            margin: 15px 0 15px 15px;
+            padding: 12px 18px;
+            border-left: 3px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 6px 6px 0;
+        }
+        .sg-sub-panel-content blockquote p { margin-bottom: 6px; }
+        .sg-sub-panel-content blockquote p:last-child { margin-bottom: 0; }
+        .sg-sub-panel-content strong { color: #6B5344; }
+        .sg-sub-panel-content hr { border: none; border-top: 1px solid #e8e0d5; margin: 20px 0; }
+
+        @media (max-width: 768px) {
+            .header-section h1 { font-size: 1.8em; }
+            .panel-content { padding: 20px; }
+            .sg-sub-panel-content { padding: 15px 18px; }
+        }
+
+        .sg-section-heading {
+            margin: 1.2em 0 0.6em 0;
+            padding: 0.4em 0 0.4em 0.8em;
+            border-left: 3px solid #8B9D77;
+            color: #5a6b4f;
+            font-size: 1.05em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+        }
+        .sg-section-actions {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 28px;
+        }
+        .sg-section-actions .sg-action-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.35);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            padding: 0;
+            line-height: 1;
+        }
+        .sg-section-actions .sg-action-btn:hover {
+            background: rgba(255,255,255,0.35);
+        }
+    </style>
+
+<div class="container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <p class="week-label">Week 10</p>
+            <h1>Genesis 24–33</h1>
+            <div class="subtitle">"Let God Prevail"</div>
+            <div class="date-location">March 2–8, 2026</div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/10?lang=eng" target="_blank" class="quick-link">CFM Manual</a>
+        </div>
+
+        <!-- Expand/Collapse Buttons -->
+        <div class="button-container">
+            <button class="expand-button" onclick="expandAll()"><span class="btn-icon">&#x229E;</span> Expand All</button>
+            <button class="expand-button" onclick="collapseAll()"><span class="btn-icon">&#x229F;</span> Collapse All</button>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 1: GENESIS 24–33 -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">1. Genesis 24–33</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Week Information</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Element</th><th>Details</th></tr>
+<tr><td><strong>Week</strong></td><td>10</td></tr>
+<tr><td><strong>Dates</strong></td><td>March 2–8, 2026</td></tr>
+<tr><td><strong>Reading</strong></td><td>Genesis 24–33</td></tr>
+<tr><td><strong>CFM Manual</strong></td><td><a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/10?lang=eng" target="_blank">Genesis 24–33 Lesson</a></td></tr>
+<tr><td><strong>Total Chapters</strong></td><td>10 (Genesis 24–33)</td></tr>
+<tr><td><strong>Approximate Verses</strong></td><td>~340 verses</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Reading Summary</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>This week traces the covenant line from Abraham through Isaac to Jacob, covering nearly a century of patriarchal history. We witness the providential marriage of Isaac and Rebekah, the birth and rivalry of twin brothers, Jacob's flight and transformation, and his eventual reconciliation with Esau. The central transformation is Jacob becoming Israel—a name change that encapsulates the week's theme: learning to let God prevail.</p>
+<p><strong>Genesis 24</strong> opens with Abraham, now old, commissioning his servant to find a wife for Isaac from among Abraham's kindred in Mesopotamia. The servant's prayer at the well—and its immediate, precise answer through Rebekah—demonstrates divine providence in covenant marriage. Rebekah's response ("I will go") shows the same faith-leap Abraham made when he left Haran.</p>
+<p><strong>Genesis 25</strong> records Abraham's death and burial at Machpelah beside Sarah. The narrative then shifts to Isaac and Rebekah, who struggle with infertility for twenty years before the birth of twins: Esau (the firstborn, red and hairy) and Jacob (grasping Esau's heel). The famous birthright exchange—Esau selling his inheritance for a bowl of red stew—reveals Esau's disregard for eternal things.</p>
+<p><strong>Genesis 26</strong> briefly focuses on Isaac, who faces famine, deception, and conflict with the Philistines. God renews the Abrahamic covenant with Isaac: "I will be with thee, and will bless thee; for unto thee, and unto thy seed, I will give all these countries" (<a href="https://www.blueletterbible.org/kjv/gen/26/3/s_26003" target="_blank">Genesis 26:3</a>).</p>
+<p><strong>Genesis 27</strong> narrates the dramatic deception where Jacob, at Rebekah's instigation, disguises himself as Esau to receive Isaac's blessing. The blessing, once given, cannot be revoked. Esau's anguished cry—"Hast thou but one blessing, my father?"—leads to murderous intent, and Jacob must flee for his life.</p>
+<p><strong>Genesis 28</strong> transforms the fugitive into a prophet. Sleeping on a stone pillow at Bethel, Jacob dreams of a ladder (<a href="https://www.blueletterbible.org/lexicon/h5551/kjv/wlc/0-1/" target="_blank" data-lexicon="ladder, stairway" data-strongs="H5551" data-translit="sullam" data-original="סֻלָּם" data-lang="hebrew" data-verse="Genesis 28:12"><em>sullam</em></a>) reaching to heaven, with angels ascending and descending. The LORD stands above it, renewing the Abrahamic covenant: "I am with thee, and will keep thee in all places whither thou goest" (<a href="https://www.blueletterbible.org/kjv/gen/28/15/s_28015" target="_blank">Genesis 28:15</a>). Jacob awakes declaring, "Surely the LORD is in this place; and I knew it not... This is none other but the house of God, and this is the gate of heaven" (<a href="https://www.blueletterbible.org/kjv/gen/28/16-17/s_28016" target="_blank">Genesis 28:16–17</a>).</p>
+<p><strong>Genesis 29–30</strong> chronicles Jacob's twenty years with Laban: the seven years of labor for Rachel, the wedding-night deception that gave him Leah instead, another seven years for Rachel, and the births of eleven sons and one daughter who will become the tribes of Israel. The names of these children—Reuben ("see, a son"), Simeon ("heard"), Levi ("joined"), Judah ("praise"), and so on—tell the story of two women seeking their husband's love through childbearing.</p>
+<p><strong>Genesis 31</strong> records Jacob's departure from Laban, complete with divine command, Rachel's theft of the household gods, and Laban's pursuit. The two men make a covenant at Mizpah: "The LORD watch between me and thee, when we are absent one from another" (<a href="https://www.blueletterbible.org/kjv/gen/31/49/s_31049" target="_blank">Genesis 31:49</a>).</p>
+<p><strong>Genesis 32</strong> brings the climactic encounter. As Jacob approaches Canaan, dreading reunion with Esau, he sends gifts ahead and divides his company. That night, alone by the Jabbok River, a mysterious figure wrestles with him until dawn. Jacob refuses to release his opponent: "I will not let thee go, except thou bless me" (<a href="https://www.blueletterbible.org/kjv/gen/32/26/s_32026" target="_blank">Genesis 32:26</a>). The figure touches Jacob's hip, dislocating it, then asks his name. "Jacob," he answers—"supplanter." The figure responds: "Thy name shall be called no more Jacob, but Israel: for as a prince hast thou power with God and with men, and hast prevailed" (<a href="https://www.blueletterbible.org/kjv/gen/32/28/s_32028" target="_blank">Genesis 32:28</a>). Jacob names the place Peniel—"face of God"—declaring, "I have seen God face to face, and my life is preserved" (<a href="https://www.blueletterbible.org/kjv/gen/32/30/s_32030" target="_blank">Genesis 32:30</a>).</p>
+<p><strong>Genesis 33</strong> resolves the brotherly conflict with unexpected grace. Esau runs to meet Jacob, embraces him, and weeps. Jacob's response is stunning: "I have seen thy face, as though I had seen the face of God, and thou wast pleased with me" (<a href="https://www.blueletterbible.org/kjv/gen/33/10/s_33010" target="_blank">Genesis 33:10</a>). The same night Jacob saw God's face at Peniel, he now sees a reflection of divine mercy in his brother's forgiveness.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Central Themes</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Theme 1: "Let God Prevail" — The Name Israel</h3>
+<p>The name change from Jacob to Israel is the spiritual climax of this week. Jacob (<a href="https://www.blueletterbible.org/lexicon/h3290/kjv/wlc/0-1/" target="_blank" data-lexicon="heel-grasper, supplanter" data-strongs="H3290" data-translit="Ya'aqov" data-original="יַעֲקֹב" data-lang="hebrew" data-verse="Genesis 25:26">יַעֲקֹב</a>, <em>Ya'aqov</em>) means "heel-grasper" or "supplanter"—one who takes by trickery. Israel (<a href="https://www.blueletterbible.org/lexicon/h3478/kjv/wlc/0-1/" target="_blank" data-lexicon="he strives with God, let God prevail" data-strongs="H3478" data-translit="Yisra'el" data-original="יִשְׂרָאֵל" data-lang="hebrew" data-verse="Genesis 32:28">יִשְׂרָאֵל</a>, <em>Yisra'el</em>) is typically translated "he who strives with God" or "God prevails."</p>
+<p>President Russell M. Nelson offered this interpretation: "The name <em>Israel</em>... can mean 'let God prevail.' Thus, our very name—the children of Israel—speaks of a wrestle each of us must face... Are you willing to let God prevail in your life?"</p>
+<p>The transformation is not about Jacob defeating God in a wrestling match. It's about Jacob finally surrendering—clinging not to take but to receive, not to supplant but to submit. The blessing comes when Jacob stops fighting <em>against</em> God and starts holding <em>onto</em> Him.</p>
+<p>Application: What needs to change in your life for God to prevail? What patterns of grasping, manipulating, or controlling must be surrendered?</p>
+<h3>Theme 2: Covenant Marriage and Divine Providence</h3>
+<p>Genesis 24 offers the most detailed narrative of divinely guided marriage in scripture. The servant's specific prayer ("Let her offer to water my camels also" — Gen. 24:14) and its immediate fulfillment through Rebekah demonstrates that God is intimately involved in covenant unions.</p>
+<p>Rebekah's response—"I will go" (Gen. 24:58)—echoes Abraham's faith-journey. She leaves everything familiar for a husband she's never met, trusting the covenant.</p>
+<p>Application: How do we seek divine guidance in our most important decisions? What does covenant marriage mean in our dispensation?</p>
+<h3>Theme 3: The Birthright and What We Truly Value</h3>
+<p>Esau sold his birthright for a bowl of stew "and did eat and drink, and rose up, and went his way: thus Esau despised his birthright" (<a href="https://www.blueletterbible.org/kjv/gen/25/34/s_25034" target="_blank">Genesis 25:34</a>). The Hebrew <a href="https://www.blueletterbible.org/lexicon/h959/kjv/wlc/0-1/" target="_blank" data-lexicon="to despise, hold in contempt" data-strongs="H959" data-translit="bazah" data-original="בָּזָה" data-lang="hebrew" data-verse="Genesis 25:34"><em>bazah</em> (בָּזָה)</a> means "to hold in contempt, to consider worthless."</p>
+<p>The birthright wasn't just extra inheritance—it was spiritual leadership, covenant responsibility, and the Messianic line. Esau traded eternal things for momentary appetite.</p>
+<p>Application: What "birthrights" are we tempted to trade for immediate gratification? What eternal blessings might we be undervaluing?</p>
+<h3>Theme 4: Bethel — "The House of God and Gate of Heaven"</h3>
+<p>Jacob's dream at Bethel establishes one of scripture's most powerful images: a ladder connecting earth to heaven, with angels ascending and descending, and the LORD standing above it. Jesus later identified Himself as this ladder: "Ye shall see heaven open, and the angels of God ascending and descending upon the Son of man" (<a href="https://www.blueletterbible.org/kjv/jhn/1/51/s_998051" target="_blank">John 1:51</a>).</p>
+<p>The imagery connects directly to temple worship. Jacob's response—setting up a pillar, anointing it with oil, making covenants, promising tithes—prefigures temple ordinances. Bethel literally means "house of God" (<a href="https://www.blueletterbible.org/lexicon/h1008/kjv/wlc/0-1/" target="_blank" data-lexicon="house of God" data-strongs="H1008" data-translit="Beyth-'El" data-original="בֵּית־אֵל" data-lang="hebrew" data-verse="Genesis 28:19">בֵּית־אֵל</a>).</p>
+<p>Application: How does the temple function as Bethel for us—a place where heaven and earth connect, where we make covenants, where we encounter God?</p>
+<h3>Theme 5: Wrestling and Transformation</h3>
+<p>The Jabbok wrestling match (Genesis 32:24–32) is profoundly mysterious. Who was Jacob's opponent? The text says "a man" (<a href="https://www.blueletterbible.org/lexicon/h376/kjv/wlc/0-1/" target="_blank" data-lexicon="man, husband" data-strongs="H376" data-translit="iysh" data-original="אִישׁ" data-lang="hebrew" data-verse="Genesis 32:24">אִישׁ</a>, <em>ish</em>), but Jacob later declares, "I have seen God face to face" (<a href="https://www.blueletterbible.org/lexicon/h6440/kjv/wlc/0-1/" target="_blank" data-lexicon="face, presence" data-strongs="H6440" data-translit="panim" data-original="פָּנִים" data-lang="hebrew" data-verse="Genesis 32:30">פָּנִים אֶל־פָּנִים</a>). Hosea 12:4 says Jacob "had power over the angel, and prevailed." This divine encounter—too close for comfort, leaving Jacob permanently limping—represents the transformative struggle of faith.</p>
+<p>Application: What does it mean to wrestle with God? How do our struggles, when we cling to God through them, become the very means of transformation?</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Key Figures</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Person</th><th>Role</th><th>Significance This Week</th></tr>
+<tr><td>Abraham</td><td>Patriarch</td><td>Commissions servant; dies at 175; buried at Machpelah</td></tr>
+<tr><td>Isaac</td><td>Son of Promise</td><td>Marries Rebekah; receives covenant; blesses Jacob</td></tr>
+<tr><td>Rebekah</td><td>Matriarch</td><td>Chosen by providence; favors Jacob; orchestrates blessing</td></tr>
+<tr><td>Esau</td><td>Firstborn twin</td><td>Sells birthright; loses blessing; later reconciles</td></tr>
+<tr><td>Jacob/Israel</td><td>Covenant heir</td><td>Deceives; flees; dreams at Bethel; wrestles God; becomes Israel</td></tr>
+<tr><td>Laban</td><td>Jacob's uncle</td><td>Gives daughters to Jacob; deceives him in return</td></tr>
+<tr><td>Leah</td><td>Jacob's first wife</td><td>Unloved but fruitful; mother of Judah</td></tr>
+<tr><td>Rachel</td><td>Jacob's beloved wife</td><td>Long barren; mother of Joseph and Benjamin</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Timeline Placement</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Historical Period:</strong> Middle Bronze Age / Patriarchal Period</p>
+<p><strong>Approximate Dates:</strong> ~1900–1800 BC</p>
+<p><strong>Jacob's Age:</strong> Born when Isaac is 60; flees to Haran ~77; returns to Canaan ~97</p>
+<h3>Relationship to Previous/Next Weeks</h3>
+<p><strong>Week 09:</strong> Abraham tested (Akedah); Sarah's death (Gen. 18–23)</p>
+<p><strong>Week 10:</strong> Covenant continues through Isaac and Jacob (Gen. 24–33)</p>
+<p><strong>Week 11:</strong> Joseph's story begins (Gen. 37–41)</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Connection to Restoration Scripture</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Book of Mormon Connections</h3>
+<ul>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/9?lang=eng&id=21" target="_blank">2 Nephi 9:21</a>:</strong> Christ suffered for all, that "he may bring to pass the resurrection of the dead"—the ultimate "blessing" that cannot be taken</li>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/5?lang=eng&id=14-16" target="_blank">1 Nephi 5:14–16</a>:</strong> Lehi traces his lineage to Joseph, son of Jacob</li>
+</ul>
+<h3>Doctrine and Covenants Connections</h3>
+<ul>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/27?lang=eng&id=10" target="_blank">D&C 27:10</a>:</strong> Elias committed to Joseph the dispensation of "Abraham, Isaac, and Jacob"</li>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/132?lang=eng&id=37" target="_blank">D&C 132:37</a>:</strong> Abraham, Isaac, and Jacob "have entered into their exaltation"</li>
+</ul>
+<h3>Pearl of Great Price</h3>
+<ul>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/2?lang=eng&id=11" target="_blank">Abraham 2:11</a>:</strong> The covenant blessings that pass through Isaac and Jacob</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>This Week's Key Doctrines</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>Divine Providence in Marriage:</strong> God guides covenant unions (Gen. 24)</li>
+<li><strong>The Birthright:</strong> Eternal things must not be traded for temporal (Gen. 25:29–34)</li>
+<li><strong>Bethel — House of God:</strong> Temple as connection between heaven and earth (Gen. 28:10–22)</li>
+<li><strong>Transformation through Struggle:</strong> We become new through wrestling with God (Gen. 32)</li>
+<li><strong>Reconciliation and Grace:</strong> Forgiveness heals families (Gen. 33)</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Temple Connections</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ul>
+<li><strong>Bethel as Prototype:</strong> Jacob's pillar, anointing, covenant-making, and tithing promise prefigure temple ordinances</li>
+<li><strong>"Gate of Heaven":</strong> The temple is where heaven and earth intersect, just as Jacob's ladder</li>
+<li><strong>Name Change:</strong> Jacob becomes Israel at a sacred site; we receive new names in the temple</li>
+<li><strong>Face to Face with God:</strong> Peniel ("face of God") anticipates the temple promise of divine encounter</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>CFM Manual Emphasis</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Manual Focus:</strong> Learning to let God prevail; valuing eternal things over temporal; covenants of the Lord's house; family healing through the Savior.</p>
+<p><strong>Key Questions from Manual:</strong></p>
+<ul>
+<li>Why is covenant marriage essential to God's plan?</li>
+<li>How can I value eternal things over temporal things?</li>
+<li>How do the covenants of the Lord's house bring God's power into my life?</li>
+<li>How can the Savior heal my family relationships?</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Suggested Reading Approach</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Essential Reading:</strong></p>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/gen/24/10/s_24010" target="_blank">Genesis 24:10–27, 57–67</a> — Rebekah's calling and response</li>
+<li><a href="https://www.blueletterbible.org/kjv/gen/25/29/s_25029" target="_blank">Genesis 25:29–34</a> — Birthright exchanged</li>
+<li><a href="https://www.blueletterbible.org/kjv/gen/28/10/s_28010" target="_blank">Genesis 28:10–22</a> — Jacob's ladder at Bethel</li>
+<li><a href="https://www.blueletterbible.org/kjv/gen/32/24/s_32024" target="_blank">Genesis 32:24–32</a> — Wrestling at the Jabbok; Israel</li>
+<li><a href="https://www.blueletterbible.org/kjv/gen/33/1/s_33001" target="_blank">Genesis 33:1–11</a> — Jacob and Esau reconcile</li>
+</ul>
+<p><strong>For Deep Study:</strong></p>
+<ul>
+<li>Genesis 27 — The stolen blessing</li>
+<li>Genesis 29–30 — Leah, Rachel, and the tribes</li>
+<li>Genesis 31:43–55 — Mizpah covenant</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>For Further Study: Interpreter Foundation Resources</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Week 10 (2022 Lesson 9):</strong> Check Scripture Central / Book of Mormon Central KnoWhy articles on Jacob, Bethel, and covenant marriages.</p>
+<hr>
+</div>
+</div>
+
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 2: WEEK 10: HISTORICAL & CULTURAL CONTEXT -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">2. Week 10: Historical & Cultural Context</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Ancient Near Eastern Setting</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Marriage Customs in the Patriarchal Period (Genesis 24)</h3>
+<p>Abraham's commission to his servant reveals key elements of ANE marriage practices:</p>
+<p><strong>Endogamy (Marriage within the Clan)</strong></p>
+<p>Abraham insists Isaac not marry "of the daughters of the Canaanites" (Gen. 24:3) but from his own kindred in Mesopotamia. This wasn't mere ethnic preference—it was covenant preservation. Canaanite culture was deeply intertwined with fertility religion, including cultic prostitution. Abraham knew that religious syncretism would follow intermarriage. Later, Esau's Hittite wives "were a grief of mind unto Isaac and to Rebekah" (<a href="https://www.blueletterbible.org/kjv/gen/26/35/s_26035" target="_blank">Genesis 26:35</a>).</p>
+<p>**The Bride Price (<a href="https://www.blueletterbible.org/lexicon/h4119/kjv/wlc/0-1/" target="_blank" data-lexicon="purchase price, bride price" data-strongs="H4119" data-translit="mohar" data-original="מֹהַר" data-lang="hebrew" data-verse="Genesis 34:12"><em>mohar</em></a>)**</p>
+<p>The servant brought substantial gifts: gold and silver jewelry, garments, and "precious things" for Rebekah's family (Gen. 24:53). This wasn't purchase of a woman but compensation to her family for losing a valuable member and confirmation of the groom's ability to provide.</p>
+<p><strong>The Woman's Consent</strong></p>
+<p>Remarkably, Rebekah is asked directly: "Wilt thou go with this man?" (Gen. 24:58). Her answer—"I will go"—demonstrates that despite patriarchal structures, the woman's consent mattered. This echoes Abraham's own call: leaving family and homeland for an unknown destination based on divine promise.</p>
+<h3>Haran and Paddan-Aram</h3>
+<p>The servant traveled to "the city of Nahor" in Mesopotamia, likely Haran (modern Turkey, near the Syrian border). This was Abraham's ancestral homeland, where his family settled after leaving Ur. The region, called Paddan-Aram ("field of Aram"), was a cultural crossroads between Mesopotamian civilization and the Levant.</p>
+<p>Archaeological evidence from sites like Mari reveals thriving communities along the Euphrates during this period, with legal customs, marriage contracts, and inheritance practices remarkably consistent with Genesis narratives.</p>
+<h3>Birthright and Blessing in ANE Culture</h3>
+<p>The birthright (<a href="https://www.blueletterbible.org/lexicon/h1062/kjv/wlc/0-1/" target="_blank" data-lexicon="birthright, right of firstborn" data-strongs="H1062" data-translit="bekorah" data-original="בְּכֹרָה" data-lang="hebrew" data-verse="Genesis 25:31"><em>bekorah</em></a>) and blessing (<a href="https://www.blueletterbible.org/lexicon/h1293/kjv/wlc/0-1/" target="_blank" data-lexicon="blessing" data-strongs="H1293" data-translit="berakhah" data-original="בְּרָכָה" data-lang="hebrew" data-verse="Genesis 12:2"><em>berakah</em></a>) were distinct but related:</p>
+<table class="info-table">
+<tr><th>Element</th><th><em>Bekorah</em> (Birthright)</th><th><em>Berakah</em> (Blessing)</th></tr>
+<tr><td><strong>Nature</strong></td><td>Legal/economic</td><td>Spiritual/prophetic</td></tr>
+<tr><td><strong>Content</strong></td><td>Double portion of inheritance</td><td>Divine favor, prophecy over future</td></tr>
+<tr><td><strong>Transfer</strong></td><td>Could be sold or traded (as Esau did)</td><td>Once pronounced, irrevocable</td></tr>
+<tr><td><strong>Timing</strong></td><td>Operative at father's death</td><td>Given during father's lifetime</td></tr>
+</table>
+<p>Nuzi tablets (15th century BC) from northern Mesopotamia confirm that birthright transfer for goods was legally recognized in patriarchal culture—Esau's sale to Jacob, while morally questionable, was legally binding.</p>
+<h3>Bethel: Sacred Geography</h3>
+<p>The location Jacob named Bethel (<a href="https://www.blueletterbible.org/lexicon/h1008/kjv/wlc/0-1/" target="_blank" data-lexicon="house of God" data-strongs="H1008" data-translit="Beyth-'El" data-original="בֵּית־אֵל" data-lang="hebrew" data-verse="Genesis 28:19">בֵּית־אֵל</a>, "house of God") was already a significant site. Its earlier Canaanite name was Luz (<a href="https://www.blueletterbible.org/kjv/gen/28/19/s_28019" target="_blank">Genesis 28:19</a>). Archaeological excavations at modern Beitin have revealed continuous occupation from the Middle Bronze Age through the Iron Age.</p>
+<p>Sacred stone pillars (<a href="https://www.blueletterbible.org/lexicon/h4676/kjv/wlc/0-1/" target="_blank" data-lexicon="pillar, sacred stone" data-strongs="H4676" data-translit="matstsebah" data-original="מַצֵּבָה" data-lang="hebrew" data-verse="Genesis 28:18"><em>masseboth</em></a>) like the one Jacob erected were common throughout Canaan as markers of divine encounter. Later Israelite law prohibited such pillars when associated with Canaanite worship (<a href="https://www.blueletterbible.org/kjv/deu/16/22/s_169022" target="_blank">Deuteronomy 16:22</a>), but Jacob's pillar predates this and serves a different function—commemorating YHWH's appearance, not Canaanite deities.</p>
+<h3>The Jabbok River and Peniel</h3>
+<p>The Jabbok (modern Zarqa River in Jordan) formed a natural boundary. Jacob crossed it heading west toward Canaan, leaving Laban's territory and entering the region controlled by Esau. The name Jabbok (<a href="https://www.blueletterbible.org/lexicon/h2999/kjv/wlc/0-1/" target="_blank" data-lexicon="Jabbok, a river east of the Jordan" data-strongs="H2999" data-translit="Yabboq" data-original="יַבֹּק" data-lang="hebrew" data-verse="Genesis 32:22">יַבֹּק</a>) may pun on the Hebrew for "wrestling" (<a href="https://www.blueletterbible.org/lexicon/h79/kjv/wlc/0-1/" target="_blank" data-lexicon="to wrestle, grapple" data-strongs="H79" data-translit="avaq" data-original="אָבַק" data-lang="hebrew" data-verse="Genesis 32:24">אָבַק</a>, <em>avaq</em>) and Jacob's name (<a href="https://www.blueletterbible.org/lexicon/h3290/kjv/wlc/0-1/" target="_blank" data-lexicon="heel-grasper, supplanter" data-strongs="H3290" data-translit="Ya'aqov" data-original="יַעֲקֹב" data-lang="hebrew" data-verse="Genesis 25:26">יַעֲקֹב</a>).</p>
+<p>Peniel (<a href="https://www.blueletterbible.org/lexicon/h6439/kjv/wlc/0-1/" target="_blank" data-lexicon="face of God" data-strongs="H6439" data-translit="Peniy'el" data-original="פְּנִיאֵל" data-lang="hebrew" data-verse="Genesis 32:30">פְּנִיאֵל</a>, "face of God") or Penuel was later fortified by Jeroboam I (<a href="https://www.blueletterbible.org/kjv/1ki/12/25/s_303025" target="_blank">1 Kings 12:25</a>). The site controlled a major ford across the Jabbok, making it strategically vital—and symbolically appropriate for Jacob's transformative encounter.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Cultural Vocabulary</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Term</th><th>Meaning</th><th>Significance</th></tr>
+<tr><td><strong>Bekorah</strong> (<a href="https://www.blueletterbible.org/lexicon/h1062/kjv/wlc/0-1/" target="_blank" data-lexicon="birthright, right of firstborn" data-strongs="H1062" data-translit="bekorah" data-original="בְּכֹרָה" data-lang="hebrew" data-verse="Genesis 25:31">בְּכֹרָה</a>)</td><td>Birthright</td><td>Firstborn's inheritance rights; traded by Esau</td></tr>
+<tr><td><strong>Berakah</strong> (<a href="https://www.blueletterbible.org/lexicon/h1293/kjv/wlc/0-1/" target="_blank" data-lexicon="blessing" data-strongs="H1293" data-translit="berakhah" data-original="בְּרָכָה" data-lang="hebrew" data-verse="Genesis 12:2">בְּרָכָה</a>)</td><td>Blessing</td><td>Prophetic pronouncement; given by Isaac</td></tr>
+<tr><td><strong>Bethel</strong> (<a href="https://www.blueletterbible.org/lexicon/h1008/kjv/wlc/0-1/" target="_blank" data-lexicon="house of God" data-strongs="H1008" data-translit="Beyth-'El" data-original="בֵּית־אֵל" data-lang="hebrew" data-verse="Genesis 28:19">בֵּית־אֵל</a>)</td><td>House of God</td><td>Sacred site of Jacob's ladder vision</td></tr>
+<tr><td><strong>Sullam</strong> (<a href="https://www.blueletterbible.org/lexicon/h5551/kjv/wlc/0-1/" target="_blank" data-lexicon="ladder, stairway" data-strongs="H5551" data-translit="sullam" data-original="סֻלָּם" data-lang="hebrew" data-verse="Genesis 28:12">סֻלָּם</a>)</td><td>Ladder/stairway</td><td>Connection between heaven and earth</td></tr>
+<tr><td><strong>Peniel</strong> (<a href="https://www.blueletterbible.org/lexicon/h6439/kjv/wlc/0-1/" target="_blank" data-lexicon="face of God" data-strongs="H6439" data-translit="Peniy'el" data-original="פְּנִיאֵל" data-lang="hebrew" data-verse="Genesis 32:30">פְּנִיאֵל</a>)</td><td>Face of God</td><td>Site of Jacob's wrestling encounter</td></tr>
+<tr><td><strong>Yisra'el</strong> (<a href="https://www.blueletterbible.org/lexicon/h3478/kjv/wlc/0-1/" target="_blank" data-lexicon="Israel" data-strongs="H3478" data-translit="Yisra'el" data-original="יִשְׂרָאֵל" data-lang="hebrew" data-verse="Genesis 32:28">יִשְׂרָאֵל</a>)</td><td>He strives with God / Let God prevail</td><td>Jacob's new covenant name</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Wrestling Match: Who Was Jacob's Opponent?</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Genesis 32:24 says "a man" (<a href="https://www.blueletterbible.org/lexicon/h376/kjv/wlc/0-1/" target="_blank" data-lexicon="man, husband" data-strongs="H376" data-translit="iysh" data-original="אִישׁ" data-lang="hebrew" data-verse="Genesis 32:24"><em>ish</em></a>) wrestled with Jacob. But Jacob later declares, "I have seen God face to face" (v. 30), and Hosea 12:3–4 says Jacob "had power over the angel, and prevailed."</p>
+<p>Jewish interpretations include:</p>
+<ul>
+<li><strong>Esau's guardian angel</strong> (Midrash Rabbah) — representing Jacob's conflict with his brother</li>
+<li><strong>The Angel of the LORD</strong> — a theophanic manifestation</li>
+<li><strong>God Himself</strong> — in a form Jacob could survive</li>
+</ul>
+<p>Christian interpretation generally sees this as a Christophany—a pre-incarnate appearance of Christ. The mysterious figure has divine authority to rename Jacob and bless him, yet Jacob wrestles and "prevails."</p>
+<p><strong>The paradox:</strong> Jacob prevails by clinging, not by defeating. His "victory" is demanding a blessing—refusing to let go until transformed. The dislocated hip ensures Jacob will carry this encounter in his body forever. He walks away limping—and worshiping.</p>
+<h3>LDS Perspective</h3>
+<p>Joseph Smith taught that "the Lord appeared unto [Jacob] and he wrestled with him" (Words of Joseph Smith, 12 May 1844). The encounter was literal, physical, and transformative. Jacob's new name—Israel—became the name of God's covenant people.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Leah, Rachel, and Polygamy in Context</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Jacob's marriages to sisters Leah and Rachel (plus their servants Bilhah and Zilpah) require historical and theological context:</p>
+<p><strong>Ancient Context:</strong></p>
+<ul>
+<li>Polygamy was common in patriarchal societies, especially among the wealthy</li>
+<li>Sororal polygamy (marrying sisters) was later forbidden in Mosaic law (<a href="https://www.blueletterbible.org/kjv/lev/18/18/s_108018" target="_blank">Leviticus 18:18</a>)</li>
+<li>Laban's deception (substituting Leah for Rachel) was wrong, but Jacob was bound by the bridal veil custom</li>
+</ul>
+<p><strong>The Narrative's Honesty:</strong></p>
+<p>Genesis does not sanitize the dysfunction. The Hebrew is blunt: Jacob "hated" (<a href="https://www.blueletterbible.org/lexicon/h8130/kjv/wlc/0-1/" target="_blank" data-lexicon="to hate, to be unloved" data-strongs="H8130" data-translit="sane" data-original="שָׂנֵא" data-lang="hebrew" data-verse="Genesis 29:31">שָׂנֵא</a>, <em>sane</em>) Leah (<a href="https://www.blueletterbible.org/kjv/gen/29/31/s_29031" target="_blank">Genesis 29:31</a>—KJV softens this to "less loved"). The sister rivalry, the manipulation through childbearing, the mandrake bargaining (Gen. 30:14–16)—all reveal the pain polygamy produced.</p>
+<p><strong>Divine Compassion:</strong></p>
+<p>"The LORD saw that Leah was hated" and opened her womb (Gen. 29:31). God's response to the unloved wife is tenderness, not judgment. Through Leah—not Rachel—came Judah, ancestor of David and Christ, and Levi, ancestor of the priesthood.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Names of Jacob's Children</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Each son's name tells a story of his mother's experience:</p>
+<table class="info-table">
+<tr><th>Son</th><th>Mother</th><th>Meaning</th><th>Significance</th></tr>
+<tr><td><strong>Reuben</strong></td><td>Leah</td><td>"See, a son!"</td><td>Leah hopes this will earn Jacob's love</td></tr>
+<tr><td><strong>Simeon</strong></td><td>Leah</td><td>"Hearing"</td><td>The LORD heard she was unloved</td></tr>
+<tr><td><strong>Levi</strong></td><td>Leah</td><td>"Joined/Attached"</td><td>Now her husband will be joined to her</td></tr>
+<tr><td><strong>Judah</strong></td><td>Leah</td><td>"Praise"</td><td>Leah finally praises God for Himself</td></tr>
+<tr><td><strong>Dan</strong></td><td>Bilhah</td><td>"He judged"</td><td>God vindicated Rachel</td></tr>
+<tr><td><strong>Naphtali</strong></td><td>Bilhah</td><td>"My wrestling"</td><td>Rachel has wrestled with her sister</td></tr>
+<tr><td><strong>Gad</strong></td><td>Zilpah</td><td>"Fortune/Troop"</td><td>Good fortune has come</td></tr>
+<tr><td><strong>Asher</strong></td><td>Zilpah</td><td>"Happy"</td><td>Women will call me blessed</td></tr>
+<tr><td><strong>Issachar</strong></td><td>Leah</td><td>"Wages/Reward"</td><td>God gave wages for the mandrakes</td></tr>
+<tr><td><strong>Zebulun</strong></td><td>Leah</td><td>"Honor/Dwelling"</td><td>Now Jacob will honor/dwell with me</td></tr>
+<tr><td><strong>Joseph</strong></td><td>Rachel</td><td>"He adds"</td><td>May God add another son</td></tr>
+<tr><td><strong>Benjamin</strong></td><td>Rachel</td><td>"Son of the right hand"</td><td>Named by Jacob after Rachel's death</td></tr>
+</table>
+<p>Dinah, Jacob's daughter by Leah, is also mentioned (Gen. 30:21).</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Geography</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Key Locations This Week</h3>
+<ol>
+<li><strong>Haran / Paddan-Aram</strong> — Abraham's homeland; where servant finds Rebekah; where Jacob flees (Gen. 24; 28–31) <span style="font-size: 0.85em; white-space: nowrap;">&#x1F5FA;&#xFE0E; <a href="https://bibleatlas.org/haran.htm" target="_blank" style="color: #8B7355;" title="Bible Atlas: Haran">Atlas</a> · <a href="https://scriptures.byu.edu/mapscrip/" target="_blank" style="color: #8B7355;" title="BYU Scriptures Mapped">BYU</a></span></li>
+<li><strong>Beer-lahai-roi</strong> — Where Isaac dwelt; where he first sees Rebekah (Gen. 24:62) <span style="font-size: 0.85em; white-space: nowrap;">&#x1F5FA;&#xFE0E; <a href="https://www.holylandsite.com/beersheba" target="_blank" style="color: #8B7355;" title="Holy Land Site: Beersheba region">HLS</a> · <a href="https://bibleatlas.org/beer-lahai-roi.htm" target="_blank" style="color: #8B7355;" title="Bible Atlas: Beer-lahai-roi">Atlas</a> · <a href="https://scriptures.byu.edu/mapscrip/" target="_blank" style="color: #8B7355;" title="BYU Scriptures Mapped">BYU</a></span></li>
+<li><strong>Bethel (Luz)</strong> — Jacob's ladder vision (Gen. 28:10–22) <span style="font-size: 0.85em; white-space: nowrap;">&#x1F5FA;&#xFE0E; <a href="https://www.holylandsite.com/bethel" target="_blank" style="color: #8B7355;" title="Holy Land Site: Bethel">HLS</a> · <a href="https://bibleatlas.org/bethel.htm" target="_blank" style="color: #8B7355;" title="Bible Atlas: Bethel">Atlas</a> · <a href="https://scriptures.byu.edu/mapscrip/" target="_blank" style="color: #8B7355;" title="BYU Scriptures Mapped">BYU</a></span></li>
+<li><strong>Jabbok River</strong> — Jacob wrestles with God (Gen. 32:22–32) <span style="font-size: 0.85em; white-space: nowrap;">&#x1F5FA;&#xFE0E; <a href="https://bibleatlas.org/jabbok.htm" target="_blank" style="color: #8B7355;" title="Bible Atlas: Jabbok River">Atlas</a> · <a href="https://scriptures.byu.edu/mapscrip/" target="_blank" style="color: #8B7355;" title="BYU Scriptures Mapped">BYU</a></span></li>
+<li><strong>Peniel</strong> — "Face of God"; renamed by Jacob (Gen. 32:30) <span style="font-size: 0.85em; white-space: nowrap;">&#x1F5FA;&#xFE0E; <a href="https://bibleatlas.org/penuel.htm" target="_blank" style="color: #8B7355;" title="Bible Atlas: Penuel">Atlas</a> · <a href="https://scriptures.byu.edu/mapscrip/" target="_blank" style="color: #8B7355;" title="BYU Scriptures Mapped">BYU</a></span></li>
+<li><strong>Succoth</strong> — Where Jacob builds booths after meeting Esau (Gen. 33:17) <span style="font-size: 0.85em; white-space: nowrap;">&#x1F5FA;&#xFE0E; <a href="https://bibleatlas.org/succoth.htm" target="_blank" style="color: #8B7355;" title="Bible Atlas: Succoth">Atlas</a> · <a href="https://scriptures.byu.edu/mapscrip/" target="_blank" style="color: #8B7355;" title="BYU Scriptures Mapped">BYU</a></span></li>
+<li><strong>Shechem</strong> — Where Jacob purchases land (Gen. 33:18–19) <span style="font-size: 0.85em; white-space: nowrap;">&#x1F5FA;&#xFE0E; <a href="https://www.holylandsite.com/shechem" target="_blank" style="color: #8B7355;" title="Holy Land Site: Shechem">HLS</a> · <a href="https://bibleatlas.org/shechem.htm" target="_blank" style="color: #8B7355;" title="Bible Atlas: Shechem">Atlas</a> · <a href="https://scriptures.byu.edu/mapscrip/" target="_blank" style="color: #8B7355;" title="BYU Scriptures Mapped">BYU</a></span></li>
+</ol>
+<p style="font-size: 0.85em; color: #8B7355; margin-top: 10px;"><strong>Map Resources:</strong> <a href="https://www.holylandsite.com/all-biblical-sites" target="_blank" style="color: #8B7355;">Holy Land Site</a> · <a href="https://bibleatlas.org/" target="_blank" style="color: #8B7355;">Bible Atlas</a> · <a href="https://scriptures.byu.edu/mapscrip/" target="_blank" style="color: #8B7355;">BYU Scriptures Mapped</a></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Archaeological Notes</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Nuzi Tablets</h3>
+<p>Discovered in 1925–31 at Nuzi (near Kirkuk, Iraq), these 15th-century BC tablets illuminate patriarchal customs:</p>
+<ul>
+<li>Adoption of heirs (cf. Abraham and Eliezer, Gen. 15:2)</li>
+<li>Transfer of birthright for payment</li>
+<li>Household gods (<a href="https://www.blueletterbible.org/lexicon/h8655/kjv/wlc/0-1/" target="_blank" data-lexicon="household idols, teraphim" data-strongs="H8655" data-translit="teraphim" data-original="תְּרָפִים" data-lang="hebrew" data-verse="Genesis 31:19"><em>teraphim</em></a>) as inheritance claim (cf. Rachel's theft, Gen. 31:19)</li>
+<li>Marriage contracts and bride prices</li>
+</ul>
+<h3>The Mari Archives</h3>
+<p>Thousands of cuneiform tablets from Mari (18th century BC) describe the region where Abraham's family settled. They reference "Habiru" peoples (possibly connected to "Hebrew"), tribal movements, and pastoral customs consistent with Genesis.</p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 3: WEEK 10: KEY PASSAGES STUDY -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">3. Week 10: Key Passages Study</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Passage 1: Rebekah at the Well (Genesis 24:10–27)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text Focus: Genesis 24:14, 17–20, 58</h3>
+<blockquote>
+<p><em>And let it come to pass, that the damsel to whom I shall say, Let down thy pitcher, I pray thee, that I may drink; and she shall say, Drink, and I will give thy camels drink also: let the same be she that thou hast appointed for thy servant Isaac.</em> (v. 14)</p>
+</blockquote>
+<blockquote>
+<p><em>And the servant ran to meet her, and said, Let me, I pray thee, drink a little water of thy pitcher. And she said, Drink, my lord: and she hasted, and let down her pitcher upon her hand, and gave him drink. And when she had done giving him drink, she said, I will draw water for thy camels also, until they have done drinking.</em> (vv. 17–19)</p>
+</blockquote>
+<blockquote>
+<p><em>And they called Rebekah, and said unto her, Wilt thou go with this man? And she said, I will go.</em> (v. 58)</p>
+</blockquote>
+<h3>Analysis</h3>
+<ul>
+<li><strong>The specific sign:</strong> The servant's test was remarkably specific—not just that a woman offer him water, but that she <em>voluntarily</em> offer to water all ten camels. A camel can drink 25 gallons after a journey; this would mean drawing hundreds of gallons by hand. The sign tested generosity, initiative, and servant-heartedness.</li>
+</ul>
+<ul>
+<li><strong>"Before I had done speaking"</strong> (v. 15): Rebekah appears while the servant is still praying. The answer comes with supernatural speed and precision—every detail matches.</li>
+</ul>
+<ul>
+<li><strong>"I will go"</strong> (<a href="https://www.blueletterbible.org/kjv/gen/24/58/s_24058" target="_blank">Genesis 24:58</a>): Rebekah's response echoes Abraham's own call. She leaves family, homeland, and everything familiar for a husband she's never met, trusting in covenant providence. The Hebrew is emphatic: <a href="https://www.blueletterbible.org/lexicon/h3212/kjv/wlc/0-1/" target="_blank" data-lexicon="to go, walk, come" data-strongs="H3212" data-translit="yalak" data-original="אֵלֵךְ" data-lang="hebrew" data-verse="Genesis 24:58">אֵלֵךְ</a> (<em>elekh</em>)—"I myself will go."</li>
+</ul>
+<h3>Cross-References</h3>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/pro/31/10/s_659010" target="_blank">Proverbs 31:10–31</a> — The virtuous woman; Rebekah embodies many of these qualities</li>
+<li><a href="https://www.blueletterbible.org/kjv/gen/12/1/s_12001" target="_blank">Genesis 12:1</a> — "Get thee out" — Abraham's parallel call to leave homeland</li>
+</ul>
+<h3>Prophetic Witness</h3>
+<blockquote>
+<p>"Remember Rebekah. When Abraham sent his servant to find a bride for Isaac, Rebekah showed her loyalty, integrity, and goodness by offering water for the servant and for his camels... She was willing to do hard work."</p>
+<p>— <strong>M. Russell Ballard</strong>, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2010/04/mothers-and-daughters" target="_blank">Mothers and Daughters</a>", April 2010 General Conference</p>
+</blockquote>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 2: Esau Sells His Birthright (Genesis 25:29–34)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text Focus</h3>
+<blockquote>
+<p><em>And Jacob sod pottage: and Esau came from the field, and he was faint: And Esau said to Jacob, Feed me, I pray thee, with that same red pottage; for I am faint... And Jacob said, Sell me this day thy birthright. And Esau said, Behold, I am at the point to die: and what profit shall this birthright do to me?... Thus Esau despised his birthright.</em></p>
+</blockquote>
+<h3>Analysis</h3>
+<ul>
+<li><strong>"Red pottage"</strong> (<a href="https://www.blueletterbible.org/lexicon/h122/kjv/wlc/0-1/" target="_blank" data-lexicon="red" data-strongs="H122" data-translit="adom" data-original="אָדֹם" data-lang="hebrew" data-verse="Genesis 25:30">אָדֹם</a>, <em>adom</em>): This red lentil stew gives Esau his nickname "Edom" (<a href="https://www.blueletterbible.org/lexicon/h123/kjv/wlc/0-1/" target="_blank" data-lexicon="Edom, red" data-strongs="H123" data-translit="Edom" data-original="אֱדוֹם" data-lang="hebrew" data-verse="Genesis 25:30">אֱדוֹם</a>). The wordplay connects Esau's impulsiveness to his descendants' identity.</li>
+</ul>
+<ul>
+<li><strong>"I am at the point to die"</strong>: Esau's hyperbole reveals his thinking—immediate physical need trumps long-term spiritual inheritance. He wasn't actually dying; he was hungry after hunting.</li>
+</ul>
+<ul>
+<li><strong>"Thus Esau despised"</strong> (<a href="https://www.blueletterbible.org/lexicon/h959/kjv/wlc/0-1/" target="_blank" data-lexicon="to despise, hold in contempt" data-strongs="H959" data-translit="bazah" data-original="וַיִּבֶז" data-lang="hebrew" data-verse="Genesis 25:34">וַיִּבֶז</a>, <em>vayivez</em>): The narrator's verdict is blunt. The Hebrew <em>bazah</em> means "to hold in contempt, to treat as worthless." Esau didn't just trade—he <em>despised</em>.</li>
+</ul>
+<ul>
+<li><strong>"And did eat and drink, and rose up, and went his way"</strong>: Five rapid verbs convey Esau's casualness. He satisfied his belly, stood up, and walked off—no hesitation, no regret, no recognition of what he'd forfeited.</li>
+</ul>
+<h3>Cross-References</h3>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/heb/12/16-17/s_1145016" target="_blank">Hebrews 12:16–17</a> — "Lest there be any fornicator, or profane person, as Esau, who for one morsel of meat sold his birthright"</li>
+<li><a href="https://www.blueletterbible.org/kjv/mat/16/26/s_945026" target="_blank">Matthew 16:26</a> — "What is a man profited, if he shall gain the whole world, and lose his own soul?"</li>
+</ul>
+<h3>Prophetic Witness</h3>
+<blockquote>
+<p>"Instant gratification is not in God's plan. Don't trade eternal blessings for temporary comfort."</p>
+<p>— <strong>Dallin H. Oaks</strong>, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2007/10/good-better-best" target="_blank">Good, Better, Best</a>", October 2007 General Conference</p>
+</blockquote>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 3: Jacob's Ladder at Bethel (Genesis 28:10–22)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text Focus: Genesis 28:12–17</h3>
+<blockquote>
+<p><em>And he dreamed, and behold a ladder set up on the earth, and the top of it reached to heaven: and behold the angels of God ascending and descending on it. And, behold, the LORD stood above it, and said, I am the LORD God of Abraham thy father, and the God of Isaac: the land whereon thou liest, to thee will I give it, and to thy seed... And Jacob awaked out of his sleep, and he said, Surely the LORD is in this place; and I knew it not. And he was afraid, and said, How dreadful is this place! this is none other but the house of God, and this is the gate of heaven.</em></p>
+</blockquote>
+<h3>Analysis</h3>
+<ul>
+<li><strong>"A ladder set up on the earth"</strong> (<a href="https://www.blueletterbible.org/lexicon/h5551/kjv/wlc/0-1/" target="_blank" data-lexicon="ladder, stairway" data-strongs="H5551" data-translit="sullam" data-original="סֻלָּם" data-lang="hebrew" data-verse="Genesis 28:12">סֻלָּם</a>, <em>sullam</em>): This word appears only here in the entire Bible. It may describe a stairway like those on Mesopotamian ziggurats—but with a crucial difference: this one is given by God, not built by humans.</li>
+</ul>
+<ul>
+<li><strong>"Ascending and descending"</strong>: The order is significant—angels go <em>up</em> first, then down. This suggests angels were already on earth, ministering, now ascending to report and descending with instructions. Heaven's activity on earth is continuous.</li>
+</ul>
+<ul>
+<li><strong>"The LORD stood above it"</strong> (<a href="https://www.blueletterbible.org/kjv/gen/28/13/s_28013" target="_blank">עָלָיו</a>, <em>alav</em>): Could also be translated "beside him." Either way, YHWH is present, speaking directly to Jacob, confirming the Abrahamic covenant will pass through him.</li>
+</ul>
+<ul>
+<li><strong>"House of God... gate of heaven"</strong>: Jacob's response establishes the theology of sacred space. Certain places become thin—where heaven and earth overlap. This is temple language.</li>
+</ul>
+<ul>
+<li><strong>Jacob's vow</strong> (vv. 20–22): He promises to worship YHWH, give tithes, and recognize Bethel as sacred. This is covenant-making in response to divine encounter.</li>
+</ul>
+<h3>Cross-References</h3>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/jhn/1/51/s_998051" target="_blank">John 1:51</a> — "Ye shall see heaven open, and the angels of God ascending and descending upon the Son of man"</li>
+<li><a href="https://www.blueletterbible.org/kjv/1ti/2/5/s_1121005" target="_blank">1 Timothy 2:5</a> — "One mediator between God and men, the man Christ Jesus"</li>
+</ul>
+<h3>Prophetic Witness</h3>
+<blockquote>
+<p>"The house of the Lord is like Jacob's ladder. It's the place where heaven and earth meet, where we can feel God's presence and receive sacred ordinances."</p>
+<p>— <strong>Russell M. Nelson</strong>, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2021/10/47nelson" target="_blank">The Temple and Your Spiritual Foundation</a>", October 2021 General Conference</p>
+</blockquote>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 4: Jacob Wrestles with God (Genesis 32:24–30)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text Focus</h3>
+<blockquote>
+<p><em>And Jacob was left alone; and there wrestled a man with him until the breaking of the day. And when he saw that he prevailed not against him, he touched the hollow of his thigh; and the hollow of Jacob's thigh was out of joint, as he wrestled with him. And he said, Let me go, for the day breaketh. And he said, I will not let thee go, except thou bless me. And he said unto him, What is thy name? And he said, Jacob. And he said, Thy name shall be called no more Jacob, but Israel: for as a prince hast thou power with God and with men, and hast prevailed... And Jacob called the name of the place Peniel: for I have seen God face to face, and my life is preserved.</em></p>
+</blockquote>
+<h3>Analysis</h3>
+<ul>
+<li><strong>"Jacob was left alone"</strong>: This is the necessary condition for transformation. Alone, at night, between his past (Laban) and his feared future (Esau), Jacob encounters God.</li>
+</ul>
+<ul>
+<li><strong>"A man"</strong> (<a href="https://www.blueletterbible.org/lexicon/h376/kjv/wlc/0-1/" target="_blank" data-lexicon="man, husband" data-strongs="H376" data-translit="iysh" data-original="אִישׁ" data-lang="hebrew" data-verse="Genesis 32:24">אִישׁ</a>, <em>ish</em>): The opponent is called simply "a man"—yet Jacob later declares he has seen God face to face. This tension (human form, divine identity) points toward Christophany.</li>
+</ul>
+<ul>
+<li><strong>"Touched the hollow of his thigh"</strong>: The hip socket dislocates with a divine touch. Jacob's opponent could have overpowered him at any moment—the wounding proves this—but chose instead to struggle all night. The purpose was not victory but transformation.</li>
+</ul>
+<ul>
+<li><strong>"I will not let thee go, except thou bless me"</strong>: This is Jacob's turning point. He's done grasping what isn't his; now he clings for what only God can give. The supplanter becomes the supplicant.</li>
+</ul>
+<ul>
+<li><strong>"What is thy name?"</strong>: The question invites confession. To say "Jacob" is to admit "I am the heel-grasper, the deceiver." Only then can the new name come.</li>
+</ul>
+<ul>
+<li><strong>"Israel"</strong> (<a href="https://www.blueletterbible.org/lexicon/h3478/kjv/wlc/0-1/" target="_blank" data-lexicon="Israel" data-strongs="H3478" data-translit="Yisra'el" data-original="יִשְׂרָאֵל" data-lang="hebrew" data-verse="Genesis 32:28">יִשְׂרָאֵל</a>): "For as a prince hast thou power with God and with men, and hast prevailed." Or, as President Nelson teaches: "Let God prevail."</li>
+</ul>
+<h3>Cross-References</h3>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/hos/12/3-4/s_874003" target="_blank">Hosea 12:3–4</a> — "He had power over the angel, and prevailed: he wept, and made supplication unto him"</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/4?lang=eng&id=24" target="_blank">2 Nephi 4:24</a> — Nephi wrestles in prayer and supplication</li>
+</ul>
+<h3>Prophetic Witness</h3>
+<blockquote>
+<p>"The very name <em>Israel</em> refers to a person who is willing to let God prevail in his or her life... Are you willing to let God prevail?"</p>
+<p>— <strong>Russell M. Nelson</strong>, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2020/10/46nelson" target="_blank">Let God Prevail</a>", October 2020 General Conference</p>
+</blockquote>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 5: Jacob and Esau Reconcile (Genesis 33:1–10)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text Focus: Genesis 33:4, 10</h3>
+<blockquote>
+<p><em>And Esau ran to meet him, and embraced him, and fell on his neck, and kissed him: and they wept.</em> (v. 4)</p>
+</blockquote>
+<blockquote>
+<p><em>And Jacob said... I have seen thy face, as though I had seen the face of God, and thou wast pleased with me.</em> (v. 10)</p>
+</blockquote>
+<h3>Analysis</h3>
+<ul>
+<li><strong>"Esau ran... embraced... fell on his neck... kissed... wept"</strong>: Five verbs of reconciliation counter the five verbs of Esau's careless departure in 25:34. The brother who once sought Jacob's life now runs to embrace him.</li>
+</ul>
+<ul>
+<li><strong>"As though I had seen the face of God"</strong>: Jacob's words are theologically loaded. The night before, he saw God's face at Peniel. Now he sees that same divine mercy reflected in his brother's forgiveness. God's face appears in human reconciliation.</li>
+</ul>
+<ul>
+<li><strong>Grace unexpected</strong>: Jacob prepared elaborate gifts and defensive strategies (dividing his company, sending waves of presents). Esau needs none of it. His forgiveness is freely given, overwhelming Jacob's calculations.</li>
+</ul>
+<h3>Cross-References</h3>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/luk/15/20/s_988020" target="_blank">Luke 15:20</a> — The prodigal son's father "ran, and fell on his neck, and kissed him" — language deliberately echoing Esau</li>
+<li><a href="https://www.blueletterbible.org/kjv/mat/5/23-24/s_934023" target="_blank">Matthew 5:23–24</a> — "First be reconciled to thy brother, and then come and offer thy gift"</li>
+</ul>
+<h3>Prophetic Witness</h3>
+<blockquote>
+<p>"The Savior offers to all... the power to heal relationships, to forgive, and to be forgiven."</p>
+<p>— <strong>Neil L. Andersen</strong>, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2019/04/41andersen" target="_blank">The Divine Gift of Forgiveness</a>", April 2019 General Conference</p>
+</blockquote>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 4: WEEK 10: WORD STUDIES -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">4. Week 10: Word Studies</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Word Study 1: יִשְׂרָאֵל (<em>Yisra'el</em>) — "Israel"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> Compound of <a href="https://www.blueletterbible.org/lexicon/h8280/kjv/wlc/0-1/" target="_blank" data-lexicon="to persist, exert oneself, persevere" data-strongs="H8280" data-translit="sarah" data-original="שָׂרָה" data-lang="hebrew" data-verse="Genesis 32:28">שָׂרָה</a> (<em>sarah</em>, "to strive, contend, persevere") + <a href="https://www.blueletterbible.org/lexicon/h410/kjv/wlc/0-1/" target="_blank" data-lexicon="God, mighty one" data-strongs="H410" data-translit="El" data-original="אֵל" data-lang="hebrew" data-verse="Genesis 32:28">אֵל</a> (<em>El</em>, "God")</p>
+<p><strong>Appears:</strong> Genesis 32:28 — "Thy name shall be called no more Jacob, but Israel"</p>
+<h3>Meaning</h3>
+<p>The name <em>Yisra'el</em> has been interpreted multiple ways:</p>
+<table class="info-table">
+<tr><th>Translation</th><th>Meaning</th><th>Emphasis</th></tr>
+<tr><td>"He strives with God"</td><td>Jacob wrestled with the divine</td><td>Human effort</td></tr>
+<tr><td>"God strives"</td><td>God contends on behalf of His people</td><td>Divine action</td></tr>
+<tr><td>"Prince of God"</td><td>From <a href="https://www.blueletterbible.org/lexicon/h8269/kjv/wlc/0-1/" target="_blank" data-lexicon="prince, ruler, captain" data-strongs="H8269" data-translit="sar" data-original="שַׂר" data-lang="hebrew" data-verse="Genesis 32:28"><em>sar</em></a> (prince) + <a href="https://www.blueletterbible.org/lexicon/h410/kjv/wlc/0-1/" target="_blank" data-lexicon="God, mighty one" data-strongs="H410" data-translit="El" data-original="אֵל" data-lang="hebrew" data-verse="Genesis 32:28"><em>El</em></a></td><td>Royal status</td></tr>
+<tr><td>"Let God prevail"</td><td>May God's will triumph</td><td>Surrender</td></tr>
+</table>
+<p>President Russell M. Nelson emphasized the last reading: "The very name <em>Israel</em> refers to a person who is willing to let God prevail in his or her life."</p>
+<h3>Theological Significance</h3>
+<p>The name change marks Jacob's transformation from "supplanter" (<em>Ya'aqov</em>, from <a href="https://www.blueletterbible.org/lexicon/h6117/kjv/wlc/0-1/" target="_blank" data-lexicon="to follow at the heel, supplant" data-strongs="H6117" data-translit="aqab" data-original="עָקַב" data-lang="hebrew" data-verse="Genesis 27:36">עָקַב</a>, "heel/deceive") to one who has encountered God and been changed. Unlike Abraham's name change (Abram → Abraham), which was announced before the covenant act, Jacob's comes <em>after</em> the struggle—a reward for perseverance and surrender.</p>
+<h3>LDS Application</h3>
+<ul>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/132?lang=eng&id=37" target="_blank">D&C 132:37</a>: "Abraham, Isaac, and Jacob... have entered into their exaltation"</li>
+<li>The name Israel is given to temple-worthy Saints: we are literally "children of Israel"</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 2: סֻלָּם (<em>sullam</em>) — "Ladder"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> Possibly from <a href="https://www.blueletterbible.org/lexicon/h5549/kjv/wlc/0-1/" target="_blank" data-lexicon="to lift up, cast up, exalt" data-strongs="H5549" data-translit="salal" data-original="סָלַל" data-lang="hebrew" data-verse="Isaiah 57:14">סָלַל</a> (<em>salal</em>, "to lift up, cast up, build")</p>
+<p><strong>Appears:</strong> Genesis 28:12 — "behold a ladder set up on the earth"</p>
+<h3>Meaning</h3>
+<p>The word <em>sullam</em> appears <strong>only once</strong> in the entire Hebrew Bible—here in Genesis 28:12. This makes determining its precise meaning challenging. Options include:</p>
+<ul>
+<li><strong>Ladder</strong> — the traditional translation</li>
+<li><strong>Stairway/Ramp</strong> — like a Mesopotamian ziggurat staircase</li>
+<li><strong>Incline/Ascending way</strong> — a path upward</li>
+</ul>
+<h3>ANE Context</h3>
+<p>Mesopotamian ziggurats (stepped temple towers) featured external staircases believed to allow gods to descend to earth and worshipers to approach the divine. Jacob, sleeping between Canaan and Haran, may have seen a vision that subverted pagan temple architecture: not a man-made tower to reach God, but a God-given connection from heaven to earth.</p>
+<h3>Jesus and the Ladder</h3>
+<p>In John 1:51, Jesus identifies Himself with Jacob's ladder: "Ye shall see heaven open, and the angels of God ascending and descending upon the Son of man." Christ is the connection between heaven and earth—the true <em>sullam</em>.</p>
+<h3>Temple Symbolism</h3>
+<p>The ladder represents what temples accomplish: connecting mortal and divine realms, providing a way of ascent, enabling covenant encounters with God.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 3: בְּכֹרָה (<em>bekorah</em>) — "Birthright"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> ב-כ-ר (<em>B-K-R</em>), related to <a href="https://www.blueletterbible.org/lexicon/h1060/kjv/wlc/0-1/" target="_blank" data-lexicon="firstborn" data-strongs="H1060" data-translit="bekor" data-original="בְּכוֹר" data-lang="hebrew" data-verse="Genesis 25:25">בְּכוֹר</a> (<em>bekor</em>, "firstborn")</p>
+<p><strong>Appears:</strong> Genesis 25:31–34 — "Sell me this day thy birthright"</p>
+<h3>Meaning</h3>
+<p>The <em>bekorah</em> was the firstborn son's special inheritance portion and status:</p>
+<ul>
+<li><strong>Double portion</strong> of the father's estate (cf. Deuteronomy 21:17)</li>
+<li><strong>Family leadership</strong> after the father's death</li>
+<li><strong>Covenant responsibility</strong> — carrying the Abrahamic promises forward</li>
+<li><strong>Priestly role</strong> — before the Levitical priesthood, firstborns served as family priests</li>
+</ul>
+<h3>What Esau Traded</h3>
+<p>When Esau sold his <em>bekorah</em> for a bowl of red stew (<a href="https://www.blueletterbible.org/lexicon/h5138/kjv/wlc/0-1/" target="_blank" data-lexicon="something boiled, pottage, stew" data-strongs="H5138" data-translit="nazid" data-original="נָזִיד" data-lang="hebrew" data-verse="Genesis 25:29"><em>nazid</em></a>, pottage), he wasn't just giving up extra property. He was relinquishing:</p>
+<ul>
+<li>His place in the Messianic lineage</li>
+<li>His responsibility for covenant leadership</li>
+<li>His role as spiritual head of the family</li>
+</ul>
+<h3>The Verdict</h3>
+<p>Genesis 25:34 delivers the narrator's judgment: "thus Esau <strong>despised</strong> his birthright." The Hebrew <a href="https://www.blueletterbible.org/lexicon/h959/kjv/wlc/0-1/" target="_blank" data-lexicon="to despise, hold in contempt" data-strongs="H959" data-translit="bazah" data-original="בָּזָה" data-lang="hebrew" data-verse="Genesis 25:34"><em>bazah</em> (בָּזָה)</a> means "to hold in contempt, to consider worthless." Hebrews 12:16 calls Esau "a profane person" (<em>bebelos</em> — treating sacred things as common).</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 4: בְּרָכָה (<em>berakah</em>) — "Blessing"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> ב-ר-כ (<em>B-R-K</em>, "to bless, kneel")</p>
+<p><strong>Appears:</strong> Genesis 27:36 — "he hath taken away my blessing"</p>
+<h3>Meaning</h3>
+<p>The <em>berakah</em> is more than a wish—it is a prophetic declaration that shapes the future. In the ANE worldview, words spoken by patriarchs (especially deathbed blessings) carried performative power. Once spoken, they could not be recalled.</p>
+<h3>Key Occurrences This Week</h3>
+<table class="info-table">
+<tr><th>Verse</th><th>Speaker</th><th>Recipient</th><th>Content</th></tr>
+<tr><td>Gen. 27:27–29</td><td>Isaac</td><td>Jacob (disguised)</td><td>Fertility, dominion, nations bow</td></tr>
+<tr><td>Gen. 27:39–40</td><td>Isaac</td><td>Esau</td><td>Dwelling away from fertility; service, then freedom</td></tr>
+<tr><td>Gen. 28:3–4</td><td>Isaac</td><td>Jacob</td><td>Blessing of Abraham passed</td></tr>
+<tr><td>Gen. 32:29</td><td>The Angel</td><td>Jacob/Israel</td><td>Unnamed blessing after wrestling</td></tr>
+</table>
+<h3>Irrevocability</h3>
+<p>When Esau arrives and Isaac realizes the deception, his response is striking: "I have blessed him [Jacob]? yea, and he shall be blessed" (<a href="https://www.blueletterbible.org/kjv/gen/27/33/s_27033" target="_blank">Genesis 27:33</a>). The blessing, once given, cannot be withdrawn—even though it was obtained by fraud.</p>
+<h3>Connection to <em>Barak</em></h3>
+<p>The root <em>B-R-K</em> connects blessing with kneeling (<em>barak</em> also means "knee"). To bless is to kneel before God's sovereignty, acknowledging that all blessing comes from Him.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 5: פָּנִים (<em>panim</em>) — "Face"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> פ-נ-ה (<em>P-N-H</em>, "to turn toward")</p>
+<p><strong>Appears:</strong> Genesis 32:30 — "I have seen God face to face (<em>panim el panim</em>)"</p>
+<h3>Meaning</h3>
+<p><em>Panim</em> is always plural in Hebrew (like "water" in English), perhaps reflecting the multiple expressions a face can show or the complexity of personal presence. To see someone's <em>panim</em> is to encounter them directly, intimately.</p>
+<h3>Key Occurrences This Week</h3>
+<table class="info-table">
+<tr><th>Verse</th><th>Context</th></tr>
+<tr><td>Gen. 32:20</td><td>Jacob hopes gifts will "appease" (lit. "cover the face of") Esau</td></tr>
+<tr><td>Gen. 32:30</td><td>Jacob names the site Peniel — "face of God"</td></tr>
+<tr><td>Gen. 33:10</td><td>Jacob to Esau: "I have seen thy face, as though I had seen the face of God"</td></tr>
+</table>
+<h3>Theological Depth</h3>
+<p>Jacob's progression is stunning:</p>
+<ol>
+<li>Night: Sees <strong>God's face</strong> at Peniel and survives</li>
+<li>Morning: Sees <strong>Esau's face</strong> and recognizes divine mercy reflected there</li>
+</ol>
+<p>The brother who sought to kill him now embraces him with tears. In Esau's forgiveness, Jacob sees what he saw at the Jabbok: the face of God.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 6: אָבַק (<em>avaq</em>) — "To Wrestle / Grapple"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> א-ב-ק (<em>A-B-Q</em>)</p>
+<p><strong>Appears:</strong> Genesis 32:24–25 — "there wrestled a man with him"</p>
+<h3>Meaning</h3>
+<p>The verb <em>avaq</em> (or <em>ye'aveq</em>) appears only here and in the derived noun "dust" (<em>avaq</em>). The image is of two wrestlers rolling in the dust, locked in struggle. Some scholars connect this to the Akkadian <em>abāku</em>, "to embrace."</p>
+<h3>Wordplay</h3>
+<p>The Hebrew creates a threefold pun:</p>
+<ul>
+<li><strong>Jacob</strong> (<a href="https://www.blueletterbible.org/lexicon/h3290/kjv/wlc/0-1/" target="_blank" data-lexicon="heel-grasper, supplanter" data-strongs="H3290" data-translit="Ya'aqov" data-original="יַעֲקֹב" data-lang="hebrew" data-verse="Genesis 25:26">יַעֲקֹב</a>, <em>Ya'aqov</em>)</li>
+<li><strong>Jabbok</strong> (<a href="https://www.blueletterbible.org/lexicon/h2999/kjv/wlc/0-1/" target="_blank" data-lexicon="Jabbok, a river east of the Jordan" data-strongs="H2999" data-translit="Yabboq" data-original="יַבֹּק" data-lang="hebrew" data-verse="Genesis 32:22">יַבֹּק</a>, <em>Yabboq</em>)</li>
+<li><strong>Wrestled</strong> (<a href="https://www.blueletterbible.org/lexicon/h79/kjv/wlc/0-1/" target="_blank" data-lexicon="to wrestle, grapple" data-strongs="H79" data-translit="avaq" data-original="יֵאָבֵק" data-lang="hebrew" data-verse="Genesis 32:24">יֵאָבֵק</a>, <em>ye'aveq</em>)</li>
+</ul>
+<p>At the Jabbok, Jacob (Ya'aqov) wrestled (ye'aveq). The sound echoes reinforce the narrative: this is Jacob's defining moment.</p>
+<h3>Physical and Spiritual</h3>
+<p>The wrestling is literal—Jacob's hip is permanently damaged. But it's also spiritual—this is the struggle to receive God's blessing, to be transformed, to let God prevail.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 7: צָלַע (<em>tsala</em>) — "To Limp"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> צ-ל-ע (<em>Ts-L-A</em>)</p>
+<p><strong>Appears:</strong> Genesis 32:31 — "he halted upon his thigh"</p>
+<h3>Meaning</h3>
+<p>After the wrestling, Jacob <em>tsala</em>—he limped. The same root appears in Micah 4:6–7, where God promises to gather "her that halteth" (<em>tsole'ah</em>) and make the lame a strong nation.</p>
+<h3>Theological Significance</h3>
+<p>Jacob's limp is not a punishment but a memorial. He carries in his body the evidence of divine encounter. Like Paul's thorn, like Christ's scars, the wound becomes testimony.</p>
+<p>The blessing came with a cost. Transformation leaves marks.</p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 5: WEEK 10: TEACHING APPLICATIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">5. Jewish Perspective: Genesis 24-33</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Introduction: Why Jewish Sources Matter</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The Old Testament is fundamentally a <strong>Jewish text</strong>, written by Jewish prophets, for Jewish audiences, within Jewish cultural contexts. When we read Genesis through Latter-day Saint eyes, we bring our own theological framework—and rightly so. But we can also enrich our understanding by learning how Jewish tradition has interpreted these same passages for thousands of years.</p>
+<p><strong>Sources like the Targumim</strong> (Aramaic translations with clarifications), <strong>Midrash</strong> (narrative expansions and teaching stories), and <strong>medieval commentaries</strong> preserve ancient interpretive traditions that often illuminate details we might otherwise miss. These aren't competing with LDS doctrine—they're offering cultural context, theological depth, and additional perspectives that can deepen our appreciation for the scriptures we share.</p>
+<p><strong>A Word About Approach:</strong></p>
+<ul>
+<li>We respect these as <strong>Jewish interpretive traditions</strong>, not LDS scripture</li>
+<li>We learn from their insights while maintaining our own theological framework</li>
+<li>We appreciate the cultural/historical context they provide</li>
+<li>We recognize common ground while honoring differences</li>
+</ul>
+<p>With that foundation, let's explore how Jewish sources can illuminate Genesis 24-33.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Example 1: "To Pray" — Isaac's Evening Devotion</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Biblical Text</h3>
+<blockquote>
+<p>"And Isaac went out <strong>to meditate</strong> in the field at the eventide" (Genesis 24:63, KJV)</p>
+</blockquote>
+<h3>The Jewish Insight</h3>
+<p><strong>Targum Onkelos</strong> (ancient Aramaic translation) renders this phrase as: "Isaac went out <strong>to pray</strong> (letzalaya) in the field."</p>
+<p>The Hebrew word <a href="https://www.blueletterbible.org/lexicon/h7878/kjv/wlc/0-1/" target="_blank" data-lexicon="to meditate, muse, commune" data-strongs="H7878" data-translit="siyach" data-original="לָשׂוּחַ" data-lang="hebrew" data-verse="Genesis 24:63"><em>lasuach</em> (לָשׂוּחַ)</a> appears only here in the entire Bible, creating translation challenges. Jewish tradition understood it as referring to <strong>formal prayer</strong>—specifically the <strong>afternoon prayer</strong> (mincha). The Talmud cites this verse as evidence that Isaac <strong>instituted the afternoon prayer service</strong>, just as Abraham instituted morning prayers and Jacob instituted evening prayers (Talmud, Berakhot 26b).</p>
+<h3>Why This Matters for LDS Readers</h3>
+<p><strong>Connection to LDS Practice:</strong></p>
+<p>This insight helps us see Isaac not just taking a contemplative walk, but engaging in <strong>structured, intentional prayer</strong>—something Latter-day Saints deeply value. We emphasize daily personal prayer, family prayer, and prayer in our meetings. Seeing Isaac establish a <strong>pattern</strong> of afternoon prayer resonates with our own emphasis on regular devotional habits.</p>
+<p><strong>Deepening the Narrative:</strong></p>
+<p>When Rebekah arrives, Isaac isn't just wandering aimlessly—he's in the <strong>middle of prayer</strong>. Imagine the scene: Isaac is communing with God about his future, perhaps praying about the wife his father's servant has gone to find, and at that very moment, <strong>she arrives</strong>. The timing isn't coincidental; it's providential. God answers Isaac's prayer by bringing Rebekah to him <strong>while he prays</strong>.</p>
+<p><strong>Practical Application:</strong></p>
+<ul>
+<li><strong>Establish prayer patterns</strong>: Isaac's example encourages us to set specific times for prayer, not just pray randomly when convenient</li>
+<li><strong>Pray about what matters</strong>: Isaac prayed about his future spouse—we should pray about major life decisions</li>
+<li><strong>Watch for answers</strong>: Sometimes God's answers arrive while we're still praying</li>
+<li><strong>Create sacred moments</strong>: Isaac went to a specific place (the field) for prayer—we might benefit from having our own prayer spots</li>
+</ul>
+<p><strong>Discussion Questions:</strong></p>
+<ul>
+<li>When do you find it most meaningful to pray during the day?</li>
+<li>Have you experienced God answering prayers in unexpected timing?</li>
+<li>How might establishing regular prayer patterns (like Isaac's afternoon prayer) strengthen your spiritual life?</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Example 2: Twelve Stones Becoming One</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Biblical Text</h3>
+<blockquote>
+<p>"And Jacob... took of the stones of that place, and put them for his pillows, and lay down in that place to sleep." (Genesis 28:11, KJV)</p>
+</blockquote>
+<p>The next morning:</p>
+<blockquote>
+<p>"And Jacob... took the stone that he had put for his pillows, and set it up for a pillar" (Genesis 28:18, KJV)</p>
+</blockquote>
+<p>Notice the shift: <strong>stones</strong> (plural) become <strong>stone</strong> (singular).</p>
+<h3>The Jewish Insight</h3>
+<p><strong>Pirke de-Rabbi Eliezer</strong> (8th-9th century midrashic text) explains:</p>
+<blockquote>
+<p>Jacob set <strong>twelve stones</strong> for pillows, saying: "Abraham took three stones [when he built altars], Isaac took three, and I will take twelve. <strong>If these stones unite into one, I am destined to build the twelve tribes.</strong>"</p>
+<p>In the morning, the twelve stones had become <strong>one stone</strong>—a sign that the twelve tribes would become one nation.</p>
+</blockquote>
+<h3>Why This Matters for LDS Readers</h3>
+<p><strong>Connection to LDS Theology:</strong></p>
+<p>This tradition beautifully illustrates a theme central to Latter-day Saint belief: <strong>unity in diversity</strong>. The twelve stones represent twelve distinct individuals (eventually twelve tribes), yet they must become <strong>one</strong> to fulfill God's purposes. This mirrors:</p>
+<ul>
+<li><strong>The Twelve Apostles</strong>: Distinct individuals, one Quorum, unified in purpose</li>
+<li><strong>Stakes and Wards</strong>: Different congregations, one Church</li>
+<li><strong>Zion</strong>: "And the Lord called his people <strong>Zion</strong>, because they were <strong>of one heart and one mind</strong>" (Moses 7:18)</li>
+<li><strong>Temple covenants</strong>: Making us one with God and each other</li>
+</ul>
+<p><strong>Symbolic Depth:</strong></p>
+<p>The <strong>stone</strong> (singular) that Jacob anointed and made into a pillar represents the unified nation built on covenant. According to Jewish tradition, this stone eventually became the <strong>Foundation Stone</strong> (Even Hashtiyah) beneath the Temple's Holy of Holies—the center point from which the world was created.</p>
+<p>For Latter-day Saints, this connects powerfully to temple theology. The temple is where we become unified with God, where twelve (representing completeness, the tribes of Israel) becomes one (representing divine unity, Zion).</p>
+<p><strong>Practical Application:</strong></p>
+<ul>
+<li><strong>Unity requires divine intervention</strong>: The stones didn't merge by human effort—God caused them to unite overnight</li>
+<li><strong>Individual identity preserved in unity</strong>: The twelve stones became one stone, but they began as twelve—unity doesn't erase individuality</li>
+<li><strong>Covenant creates unity</strong>: Jacob's covenant vision at Bethel was the context for the stones uniting</li>
+<li><strong>Family unity</strong>: Jacob would have twelve sons who needed to function as one family despite differences</li>
+</ul>
+<p><strong>Discussion Questions:</strong></p>
+<ul>
+<li>How do you see the principle of "many becoming one" in your ward or stake?</li>
+<li>What helps you feel unified with other Church members despite differences?</li>
+<li>How does making covenants create unity among diverse people?</li>
+<li>In your family, how can distinct individuals become unified in purpose?</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Example 3: Jacob's Tithe of His Sons — The Selection of Levi</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Biblical Text</h3>
+<p>The Bible tells us the Levites were chosen for priestly service (Numbers 3:12), but doesn't explain <strong>why</strong> the tribe of Levi specifically.</p>
+<h3>The Jewish Insight</h3>
+<p><strong>Pirke de-Rabbi Eliezer</strong> (Chapter 37) provides a remarkable tradition:</p>
+<blockquote>
+<p>Jacob vowed to tithe everything he owned to God. First, he tithed from his cattle—5,500 animals yielded 550 for the tithe. Then he tithed from his sons.</p>
+<p>He excluded the four firstborns [since firstborns already belong to God], and counted from Simeon through Benjamin [still in Rachel's womb]. When he counted, <strong>Levi was the tenth</strong>.</p>
+<p>Immediately, the angel <strong>Michael</strong> descended, took Levi before the Throne of Glory, and God said: "You have given him to Me—I designate the <strong>Levites</strong> as My servants on earth, parallel to the angels who serve Me in heaven."</p>
+</blockquote>
+<h3>Why This Matters for LDS Readers</h3>
+<p><strong>Connection to the Law of Consecration:</strong></p>
+<p>Latter-day Saints believe in consecrating all we have to God—our time, talents, resources, and even our children. Jacob didn't just tithe his wealth; he tithed <strong>his family</strong>. This echoes LDS parents dedicating their children to God, supporting them in missions, and raising them in covenant.</p>
+<p>When we pay tithing, we acknowledge that <strong>everything</strong> belongs to God—not just our money, but our lives. Jacob's example takes this principle to its fullest expression.</p>
+<p><strong>Why Levi?</strong></p>
+<p>According to this tradition, Levi wasn't chosen arbitrarily—he was the <strong>tenth</strong> in the counting, the tithe portion. God honored Jacob's consecration by accepting Levi and his descendants for temple service.</p>
+<p><strong>Foreordination and Confirmation:</strong></p>
+<p>Some may wonder how this tradition relates to Exodus 32:26-29, where the Levites are chosen because they rallied to Moses during the Golden Calf incident. Rather than contradicting, these two traditions complement each other—a pattern Latter-day Saints recognize well.</p>
+<p>According to the midrash, Levi was <em>designated</em> for divine service through Jacob's tithe, but this designation wasn't automatic fulfillment. When the test came at Sinai, the tribe had to <em>prove worthy</em> of their calling. The Levites' faithfulness during the Golden Calf incident confirmed and activated what had been prepared generations earlier.</p>
+<p>This mirrors the LDS doctrine of <strong>foreordination</strong>: Abraham 3:22-23 teaches that noble spirits were chosen before mortality for specific callings—but those callings must still be fulfilled through mortal faithfulness. Foreordination creates <em>potential</em>; agency determines <em>actualization</em>.</p>
+<p><strong>Connection to Modern Levites:</strong></p>
+<p>While we don't have a separate Levitical priesthood in the LDS Church, we do have principles this illuminates:</p>
+<ul>
+<li><strong>Setting apart for service</strong>: Just as Levi was designated for tabernacle/temple work, we set apart bishops, temple workers, and missionaries for specific service</li>
+<li><strong>Families giving children</strong>: Jacob gave Levi; LDS families support children serving missions</li>
+<li><strong>Angels and earthly servants</strong>: The midrash notes Levites parallel angels—temple workers today perform sacred service that connects heaven and earth</li>
+<li><strong>Consecration honored</strong>: When we truly consecrate, God accepts and magnifies our offering</li>
+</ul>
+<p><strong>Practical Application:</strong></p>
+<ul>
+<li><strong>Tithe with intention</strong>: Jacob's tithe was deliberate and comprehensive—not just convenient</li>
+<li><strong>Dedicate children to God</strong>: Not forcing them, but raising them to choose service</li>
+<li><strong>Support those called to serve</strong>: Honor bishops, Relief Society presidents, missionaries as set apart for divine service</li>
+<li><strong>Temple service as Levitical work</strong>: When serving in temples, we're continuing the pattern of earthly servants doing heavenly work</li>
+</ul>
+<p><strong>Discussion Questions:</strong></p>
+<ul>
+<li>How does the principle of tithing extend beyond money to all aspects of life?</li>
+<li>What does it mean to "consecrate" your children to God while respecting their agency?</li>
+<li>How are temple workers today similar to ancient Levites?</li>
+<li>What does it mean that Levites parallel angels—servants connecting heaven and earth?</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Example 4: Rebekah's Deeds Established Like Sarah's</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Biblical Text</h3>
+<blockquote>
+<p>"And Isaac brought her into his mother Sarah's tent, and took Rebekah, and she became his wife; and he loved her: and <strong>Isaac was comforted after his mother's death</strong>" (Genesis 24:67, KJV)</p>
+</blockquote>
+<p>The text says Isaac was "comforted"—but why? What about Rebekah comforted him?</p>
+<h3>The Jewish Insight</h3>
+<p><strong>Targum Onkelos</strong> expands verse 67:</p>
+<blockquote>
+<p>"<strong>He saw and behold, her deeds were established like the deeds of Sarah his mother</strong>"</p>
+</blockquote>
+<p><strong>Midrash Rabbah</strong> adds three specific signs that returned when Rebekah entered Sarah's tent:</p>
+<ol>
+<li>The <strong>candles</strong> Sarah lit for Shabbat, which had gone out at her death, were relit</li>
+<li>The <strong>blessing</strong> in the dough (Sarah's bread was miraculously abundant) returned</li>
+<li>The <strong>cloud of glory</strong> that hovered over Sarah's tent reappeared</li>
+</ol>
+<p>These signs demonstrated that Rebekah's <strong>righteousness matched Sarah's spiritual stature</strong>.</p>
+<h3>Why This Matters for LDS Readers</h3>
+<p><strong>Connection to LDS Succession:</strong></p>
+<p>This principle resonates powerfully with Latter-day Saint understanding of prophetic succession and continuing revelation. When a prophet dies, we don't just replace him administratively—we look for evidence that <strong>God's spirit</strong> rests upon the successor.</p>
+<p>Similarly, when Sarah died, Isaac didn't just need a wife—he needed someone whose <strong>spiritual gifts</strong> and <strong>righteous character</strong> would continue the covenant work Sarah had begun.</p>
+<p><strong>The Three Signs and Modern Parallels:</strong></p>
+<p><strong>1. The Candles (Light):</strong></p>
+<p>Sarah brought spiritual light to her home through Shabbat observance. Rebekah continued this pattern.</p>
+<p><strong>LDS Application</strong>: When mothers (or fathers) establish patterns of family prayer, scripture study, and Sabbath observance, those practices bring spiritual light. When children establish these same patterns in their own homes, the light continues across generations.</p>
+<p><strong>2. The Blessing in the Dough (Abundance):</strong></p>
+<p>Sarah's bread was blessed—physical provision flowing from spiritual faithfulness.</p>
+<p><strong>LDS Application</strong>: "Seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you" (Matthew 6:33). When we live righteously, temporal blessings often follow—not prosperity gospel, but God's care for those who prioritize His work.</p>
+<p><strong>3. The Cloud of Glory (Divine Presence):</strong></p>
+<p>The Shekhinah (God's presence) dwelt with Sarah and returned with Rebekah.</p>
+<p><strong>LDS Application</strong>: Homes where the Spirit dwells have a tangible difference. When children establish their own homes with prayer, covenant-keeping, and righteousness, the <strong>same Spirit</strong> that blessed their parents' home blesses theirs.</p>
+<p><strong>Why Isaac Was Comforted:</strong></p>
+<p>Isaac's comfort came from recognizing that <strong>God's work would continue</strong>. His mother's spiritual legacy wasn't lost—Rebekah would carry it forward. The covenant chain remained unbroken.</p>
+<p><strong>Practical Application:</strong></p>
+<ul>
+<li><strong>Establish spiritual patterns</strong>: Like Sarah's Shabbat candles, create consistent family worship</li>
+<li><strong>Look for evidence of character</strong>: Isaac recognized Rebekah's righteousness through her actions</li>
+<li><strong>Continue family legacies</strong>: When parents die, honor their spiritual legacy by maintaining their righteous traditions</li>
+<li><strong>Recognize divine confirmation</strong>: The three signs were God's confirmation that Rebekah was chosen—watch for God's confirmations in your own life decisions</li>
+</ul>
+<p><strong>Discussion Questions:</strong></p>
+<ul>
+<li>What spiritual patterns from your parents or ancestors do you want to continue?</li>
+<li>How can you tell when someone's character is truly righteous versus just appearing good?</li>
+<li>What are modern equivalents of the "three signs"—evidence that God's Spirit dwells in a home?</li>
+<li>How does continuing family spiritual traditions comfort us during transitions and losses?</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Example 5: The Foundation Stone — Jacob's Pillow Becomes the Temple's Cornerstone</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Biblical Text</h3>
+<blockquote>
+<p>"And Jacob rose up early in the morning, and took the stone that he had put for his pillows, and set it up for a pillar, and poured oil upon the top of it... And this stone, which I have set for a pillar, <strong>shall be God's house</strong>" (Genesis 28:18, 22, KJV)</p>
+</blockquote>
+<h3>The Jewish Insight</h3>
+<p><strong>Pirke de-Rabbi Eliezer</strong> (Chapter 35):</p>
+<blockquote>
+<p>Jacob's pillar stone <strong>sank into the earth</strong> and became the <strong>Foundation Stone</strong> (Even Hashtiyah)—the earth's navel, the keystone beneath the Temple's Holy of Holies, the point from which the world was founded.</p>
+</blockquote>
+<p>Jewish tradition holds that this Foundation Stone marks the cosmic center:</p>
+<ul>
+<li>The point where creation began</li>
+<li>Where Adam was created</li>
+<li>Where Abraham offered Isaac</li>
+<li>Where Jacob saw the ladder connecting heaven and earth</li>
+<li>Where the Ark of the Covenant rested in Solomon's Temple</li>
+<li>Where God's presence (Shekhinah) dwelled most intensely</li>
+</ul>
+<h3>Why This Matters for LDS Readers</h3>
+<p><strong>Connection to LDS Temple Theology:</strong></p>
+<p>Latter-day Saints believe temples are literally <strong>houses of God</strong>—places where heaven and earth connect, where the veil between mortality and eternity is thin. Jacob's declaration that his stone pillar "shall be God's house" takes on profound meaning when we understand it as marking the future Temple site.</p>
+<p><strong>The Ladder and the Temple:</strong></p>
+<p>Jacob saw angels ascending and descending (Genesis 28:12)—a vision of heaven and earth connected. He declared, "This is none other but the house of God, and this is the gate of heaven" (Genesis 28:17).</p>
+<p>For Latter-day Saints, temples are precisely this: <strong>gates of heaven</strong>, places where we pass between mortal and eternal realms, where covenants connect us to celestial glory.</p>
+<p><strong>The Center Point:</strong></p>
+<p>Just as the Foundation Stone marked the cosmic center in Jewish thought, LDS temples serve as spiritual centers:</p>
+<ul>
+<li>Centers of covenant communities (stakes built around temples)</li>
+<li>Centers of family history work (connecting generations)</li>
+<li>Centers where creation, fall, and atonement are taught</li>
+<li>Centers where we encounter God's presence</li>
+</ul>
+<p><strong>Anointing the Stone:</strong></p>
+<p>Jacob poured oil on the stone, consecrating it. In LDS temples, we likewise anoint and consecrate—recognizing that ordinary things (stones, people, places) become holy through covenant and consecration.</p>
+<p><strong>Practical Application:</strong></p>
+<ul>
+<li><strong>Create sacred spaces</strong>: Just as Jacob marked Bethel as holy ground, we can designate places in our homes for prayer and scripture study</li>
+<li><strong>Temples as cosmic centers</strong>: Understanding temples as "foundation stones" deepens appreciation for temple worship</li>
+<li><strong>Personal foundation stones</strong>: What spiritual experiences in your life serve as "foundation stones"—moments you return to for strength?</li>
+<li><strong>Consecration makes the ordinary sacred</strong>: Jacob's pillow stone became the Temple's foundation—our ordinary lives become sacred through covenant</li>
+</ul>
+<p><strong>Discussion Questions:</strong></p>
+<ul>
+<li>Have you had a spiritual experience at a specific place that became "holy ground" for you?</li>
+<li>How does understanding temples as "gates of heaven" affect your temple worship?</li>
+<li>What does it mean that the same stone that was Jacob's pillow became the Temple's foundation?</li>
+<li>How can creating sacred spaces in your home strengthen your family spiritually?</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Example 6: Earth Contracted for Eliezer — God Bending Time and Space</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Biblical Text</h3>
+<p>Genesis 24 describes Abraham's servant traveling from Canaan to Mesopotamia to find Isaac a wife. The journey should take weeks—yet the narrative suggests he arrived remarkably quickly.</p>
+<h3>The Jewish Insight</h3>
+<p><strong>Midrash Rabbah</strong> (Genesis Rabbah 59):</p>
+<blockquote>
+<p>The servant experienced <strong>kefitzat haderech</strong> (קְפִיצַת הַדֶּרֶךְ) — literally "the jumping/contracting of the road." He left in the morning and arrived the same day. The earth miraculously shortened beneath his feet.</p>
+</blockquote>
+<p>This tradition appears elsewhere in Jewish sources:</p>
+<ul>
+<li><strong>Jacob</strong> experienced it traveling from Beersheba to Haran (Genesis 28:10-11)</li>
+<li><strong>Elijah</strong> ran ahead of Ahab's chariot supernaturally (1 Kings 18:46)</li>
+<li><strong>Talmud</strong> discusses righteous individuals for whom distances contract</li>
+</ul>
+<h3>Why This Matters for LDS Readers</h3>
+<p><strong>Connection to LDS Miracles:</strong></p>
+<p>Latter-day Saints believe God can and does intervene in natural laws when necessary for His purposes. We have accounts of:</p>
+<ul>
+<li>Missionaries arriving at appointments with miraculous timing</li>
+<li>Three Nephites and John the Beloved translated and transported</li>
+<li>Prophets moved by the Spirit to be at the right place at the right time</li>
+<li>Personal experiences of "divine appointments" where timing seems impossible yet perfect</li>
+</ul>
+<p><strong>Why Did God Contract the Earth for Eliezer?</strong></p>
+<p>The servant was on a <strong>covenant mission</strong>—finding a wife for Isaac to continue Abraham's covenant line. When we're engaged in God's work, He can bend natural laws to accomplish His purposes.</p>
+<p><strong>The Principle:</strong></p>
+<p>This isn't about expecting constant miracles. Rather, it teaches that when we're aligned with God's will, doing His work in His timing, <strong>He smooths the path</strong>. Sometimes literally (contracted distance), sometimes figuratively (obstacles removed, connections made, timing perfected).</p>
+<p><strong>Modern Application:</strong></p>
+<p>LDS missionaries often report experiences where they "happened" to knock on exactly the right door at exactly the right time, or were prompted to change their plans and encountered someone prepared to hear the gospel. While we don't usually experience literal distance-contracting, we do experience <strong>providential timing</strong>—God arranging circumstances so His work can proceed.</p>
+<p><strong>Practical Application:</strong></p>
+<ul>
+<li><strong>Trust divine timing</strong>: When doing God's work, watch for miracles in logistics and timing</li>
+<li><strong>Recognize when God intervenes</strong>: Keep a record of "impossible coincidences"—they reveal God's hand</li>
+<li><strong>Don't demand miracles</strong>: Eliezer didn't pray for kefitzat haderech; God provided it because the mission mattered</li>
+<li><strong>Righteous purpose invites divine help</strong>: The more aligned we are with God's purposes, the more He can assist</li>
+</ul>
+<p><strong>Discussion Questions:</strong></p>
+<ul>
+<li>Have you experienced "impossible timing" that you recognized as divine intervention?</li>
+<li>Why might God contract distance for Eliezer but not for others on different errands?</li>
+<li>How do miracles of timing differ from miracles of healing or physical manifestations?</li>
+<li>What does it mean to be "on God's errand" versus merely doing good things?</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Conclusion: Learning from Our Spiritual Ancestors</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Jewish interpretive traditions offer Latter-day Saints a rich resource for understanding the Old Testament. These insights don't replace LDS doctrine or modern revelation—they <strong>complement</strong> them, providing:</p>
+<ul>
+<li><strong>Cultural context</strong> we'd otherwise miss</li>
+<li><strong>Ancient interpretations</strong> preserved for millennia</li>
+<li><strong>Theological depth</strong> on covenant themes</li>
+<li><strong>Narrative details</strong> that illuminate character and purpose</li>
+<li><strong>Symbolic connections</strong> that resonate with LDS temple theology</li>
+</ul>
+<p>As we study Genesis 24-33, let us approach these texts with:</p>
+<ul>
+<li><strong>Humility</strong> to learn from traditions not our own</li>
+<li><strong>Discernment</strong> to recognize truth wherever it appears</li>
+<li><strong>Gratitude</strong> for the Jewish prophets and sages who preserved these scriptures</li>
+<li><strong>Reverence</strong> for the God who reveals truth to all His children across time</li>
+</ul>
+<p>"And [God] inviteth them all to come unto him and partake of his goodness; and he denieth none that come unto him, black and white, bond and free, male and female; <strong>and he remembereth the heathen; and all are alike unto God</strong>, both Jew and Gentile" (2 Nephi 26:33).</p>
+<p>May these ancient insights deepen our love for the scriptures, strengthen our covenant walk, and draw us closer to the God of Abraham, Isaac, and Jacob—who is also our Heavenly Father.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>How to Use This Section</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>For Individual Study:</strong></p>
+<ul>
+<li>Read the biblical passage first</li>
+<li>Consider the Jewish insight and its cultural context</li>
+<li>Reflect on the LDS connections</li>
+<li>Apply the principles to your own life</li>
+</ul>
+<p><strong>For Family Home Evening:</strong></p>
+<ul>
+<li>Choose one example</li>
+<li>Read the scripture together</li>
+<li>Discuss the Jewish tradition (appropriate for children)</li>
+<li>Focus on the practical application questions</li>
+</ul>
+<p><strong>For Gospel Doctrine Classes:</strong></p>
+<ul>
+<li>Use as supplemental material to enrich discussion</li>
+<li>Emphasize respect for Jewish tradition while making LDS connections</li>
+<li>Invite class members to share experiences related to the principles</li>
+<li>Avoid treating Jewish sources as "lesser" or merely preparatory to LDS understanding</li>
+</ul>
+<p><strong>For Personal Journaling:</strong></p>
+<ul>
+<li>Which insight resonated most with you?</li>
+<li>How does understanding the Jewish context change your reading of Genesis?</li>
+<li>What modern experiences parallel these ancient principles?</li>
+<li>How can you apply these teachings in your covenant walk?</li>
+</ul>
+<hr>
+<p><em>This section demonstrates how to respectfully engage with Jewish interpretive traditions while maintaining an LDS theological framework. Each example provides cultural context, makes meaningful connections to LDS belief and practice, and offers practical application for modern covenant-keeping.</em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">6. Week 10: Teaching Applications</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Application 1: Teaching the Birthright Exchange (Genesis 25:29–34)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Challenge</h3>
+<p>The birthright story can seem like a clever trick by Jacob. Teaching it requires reframing the focus: the problem isn't Jacob's opportunism—it's Esau's contempt for eternal things.</p>
+<h3>Approach: The "Pottage" Inventory</h3>
+<p>Invite learners to make two lists:</p>
+<p><strong>Eternal "Birthrights":</strong></p>
+<ul>
+<li>Temple covenants and sealings</li>
+<li>Personal relationship with God</li>
+<li>Eternal family</li>
+<li>Priesthood responsibilities</li>
+<li>Spiritual gifts and callings</li>
+</ul>
+<p><strong>Modern "Pottage":</strong></p>
+<ul>
+<li>Career advancement at any cost</li>
+<li>Entertainment that crowds out worship</li>
+<li>Relationships that draw us from covenant</li>
+<li>Comfort that requires compromise</li>
+<li>Immediate gratification</li>
+</ul>
+<p><strong>Discussion prompt:</strong> "What birthrights are we tempted to trade for which pottages? What feels urgent but isn't eternal?"</p>
+<h3>Key Insight</h3>
+<p>The text's verdict is devastating: "Thus Esau <strong>despised</strong> his birthright" (Gen. 25:34). He didn't just trade it—he held it in contempt. The warning isn't against making bad deals; it's against losing sight of what actually matters.</p>
+<p><strong>Hebrews 12:16</strong> calls Esau "profane" (<a href="https://www.blueletterbible.org/lexicon/g952/kjv/tr/0-1/" target="_blank" data-lexicon="profane, unhallowed" data-strongs="G952" data-translit="bebelos" data-original="βέβηλος" data-lang="greek" data-verse="Hebrews 12:16"><em>bebelos</em></a>)—treating sacred things as common. The opposite of profane is <em>sacred</em>: recognizing the weight and worth of what God has given.</p>
+<h3>Discussion Questions</h3>
+<ul>
+<li>Have you ever traded something eternal for something temporary? How did it feel afterward?</li>
+<li>What helps you remember the value of spiritual things when physical needs feel urgent?</li>
+<li>Esau said, "I am at the point to die." When do we exaggerate our needs to justify bad choices?</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Application 2: Teaching Bethel — The Temple as Gate of Heaven</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Model</h3>
+<p>Jacob's experience at Bethel (Gen. 28:10–22) is the Old Testament's clearest prefiguration of temple worship:</p>
+<table class="info-table">
+<tr><th>Bethel Element</th><th>Temple Connection</th></tr>
+<tr><td>Ladder connecting heaven and earth</td><td>Temple as axis mundi (world center)</td></tr>
+<tr><td>Angels ascending and descending</td><td>Ministering spirits; temple workers</td></tr>
+<tr><td>"The LORD stood above it"</td><td>Divine presence in holy places</td></tr>
+<tr><td>"House of God"</td><td>Literal meaning of "Bethel"</td></tr>
+<tr><td>"Gate of heaven"</td><td>Temple as portal to eternity</td></tr>
+<tr><td>Stone pillar anointed with oil</td><td>Consecration; sacred objects</td></tr>
+<tr><td>Vow and covenant</td><td>Temple covenants</td></tr>
+<tr><td>Promise of tithes</td><td>Law of tithing</td></tr>
+</table>
+<h3>Teaching Strategy</h3>
+<p>If possible, teach this lesson near a temple or with temple images available. Walk through Jacob's experience step by step, asking: "Where do we experience this today?"</p>
+<h3>Personal Application</h3>
+<blockquote>
+<p>"Jacob had nothing to offer God—no wealth, no reputation, no home. He was a fugitive fleeing for his life, sleeping on rocks. Yet God appeared to him and made covenant promises. What does this teach about who can approach God?"</p>
+</blockquote>
+<p>The temple is not for the perfect; it's for the seeking. Jacob came with nothing and left with everything.</p>
+<h3>Discussion Questions</h3>
+<ul>
+<li>What makes a place sacred? Is holiness in the location or the experience?</li>
+<li>Jacob said, "Surely the LORD is in this place; and I knew it not." Have you ever realized later that God was present in a moment you initially missed?</li>
+<li>How does the temple function as your "Bethel"—your gate of heaven?</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Application 3: Teaching the Wrestling — Transformation Through Struggle</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Challenge</h3>
+<p>The wrestling at the Jabbok is mysterious: Who was Jacob's opponent? Why did God wrestle him instead of simply blessing him? Why the injury?</p>
+<h3>Approach: The Paradox of Victory</h3>
+<p>Frame the story around its paradox: Jacob "prevails" not by defeating his opponent but by <strong>refusing to let go until he's blessed.</strong> This is not combat victory—it's tenacious dependence.</p>
+<table class="info-table">
+<tr><th>What Jacob Did</th><th>What It Teaches</th></tr>
+<tr><td>Wrestled all night</td><td>Spiritual transformation takes time and effort</td></tr>
+<tr><td>Was wounded</td><td>Encounter with God leaves marks</td></tr>
+<tr><td>Refused to release</td><td>Persistence in seeking God</td></tr>
+<tr><td>Admitted his name ("Jacob")</td><td>Honest confession before transformation</td></tr>
+<tr><td>Received new name ("Israel")</td><td>God renames those He transforms</td></tr>
+<tr><td>Limped away</td><td>Carried evidence of encounter forever</td></tr>
+</table>
+<h3>Key Teaching Moment</h3>
+<blockquote>
+<p>"The blessing came with a cost. Jacob walked away limping. What might your 'limp' be—the evidence of your wrestle with God?"</p>
+</blockquote>
+<p>Some wounds become testimonies. Scars prove we've struggled and survived.</p>
+<h3>President Nelson's Application</h3>
+<blockquote>
+<p>"Are you willing to let God prevail in your life? Are you willing to let God be the most important influence in your life?"</p>
+</blockquote>
+<p>The name Israel means "let God prevail." The wrestling wasn't about defeating God—it was about surrendering to Him.</p>
+<h3>Discussion Questions</h3>
+<ul>
+<li>What have you "wrestled" with in your relationship with God?</li>
+<li>How has struggle transformed you spiritually?</li>
+<li>Jacob's hip never fully healed. What spiritual "limps" do you carry that remind you of divine encounter?</li>
+<li>What would it mean for God to "prevail" in your life this week?</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Application 4: Teaching Reconciliation — Seeing God's Face in Forgiveness</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Model</h3>
+<p>Jacob and Esau's reconciliation (Gen. 33:1–10) demonstrates:</p>
+<ol>
+<li><strong>Preparation:</strong> Jacob sent gifts ahead, prayed, divided his family protectively</li>
+<li><strong>Humility:</strong> Jacob bowed seven times approaching Esau</li>
+<li><strong>Grace:</strong> Esau ran, embraced, kissed, wept—none of Jacob's preparations were necessary</li>
+<li><strong>Theological insight:</strong> "I have seen thy face, as though I had seen the face of God"</li>
+</ol>
+<h3>Teaching Strategy</h3>
+<p>Connect the two "face" encounters:</p>
+<ul>
+<li><strong>Night:</strong> Jacob sees <strong>God's face</strong> at Peniel</li>
+<li><strong>Morning:</strong> Jacob sees <strong>God's face</strong> reflected in Esau's forgiveness</li>
+</ul>
+<p>When someone forgives us, we encounter something divine. Forgiveness is God's face made visible in human relationship.</p>
+<h3>For Those Needing to Reconcile</h3>
+<p>Invite personal reflection:</p>
+<ul>
+<li>Is there an "Esau" in your life—someone you've wronged, or who has wronged you?</li>
+<li>What would it take to approach them, like Jacob did, with humility and openness?</li>
+<li>Are you willing to be like Esau—running toward reconciliation rather than holding onto grievance?</li>
+</ul>
+<h3>Discussion Questions</h3>
+<ul>
+<li>Why does Jacob say Esau's face is "like the face of God"?</li>
+<li>What does this story teach about the connection between forgiving others and encountering God?</li>
+<li>Who do you need to reconcile with? What's the first step?</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Application 5: Teaching Divine Providence in Marriage (Genesis 24)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Model</h3>
+<p>The servant's prayer (Gen. 24:12–14) and Rebekah's response demonstrate covenant marriage principles:</p>
+<ol>
+<li><strong>Specific, faithful prayer:</strong> The servant asked for a precise sign</li>
+<li><strong>Immediate answer:</strong> Rebekah appeared "before he had done speaking"</li>
+<li><strong>Character revealed:</strong> Rebekah's willingness to water ten camels (hundreds of gallons) showed servant-heartedness</li>
+<li><strong>Faith response:</strong> "I will go" — leaving everything for covenant promise</li>
+</ol>
+<h3>For Youth and Young Adults</h3>
+<p><strong>Discussion prompt:</strong> "What qualities did the servant seek in a wife for Isaac? What does this suggest about what God values in covenant partners?"</p>
+<p>Note: The sign wasn't beauty or wealth—it was generosity, initiative, and willingness to serve.</p>
+<p><strong>For those seeking marriage:</strong></p>
+<ul>
+<li>Are you becoming the kind of person the servant would have recognized?</li>
+<li>Do you pray specifically about your future spouse?</li>
+<li>Are you willing to say "I will go" when God directs?</li>
+</ul>
+<h3>For Married Couples</h3>
+<p>Rebekah and Isaac's marriage wasn't perfect (they favored different children, leading to family dysfunction). But it began with covenant intent and divine guidance.</p>
+<p><strong>Discussion prompt:</strong> "How can you invite God's providence into your marriage decisions today?"</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Family/Youth Applications</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>For Families with Children</h3>
+<ul>
+<li><strong>"I Will Go" activity:</strong> Have children practice saying "I will go" when asked to help, like Rebekah</li>
+<li><strong>Ladder craft:</strong> Build a simple ladder; discuss how Jesus connects us to heaven</li>
+<li><strong>Reconciliation role-play:</strong> Act out Jacob and Esau meeting; discuss saying sorry and forgiving</li>
+</ul>
+<h3>For Youth</h3>
+<ul>
+<li><strong>Birthright reflection:</strong> Write down three eternal blessings you've received. What "pottage" might tempt you to trade them?</li>
+<li><strong>Wrestling journal:</strong> Write about a spiritual struggle you're currently facing. What would "letting God prevail" look like?</li>
+<li><strong>Name exercise:</strong> If God were to rename you based on who you're becoming, what might the name be?</li>
+</ul>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 6: WEEK 10: STUDY QUESTIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">7. Week 10: Study Questions</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Genesis 24: A Wife for Isaac</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Observation Questions</h3>
+<ol>
+<li>Why did Abraham not want Isaac to marry a Canaanite woman?</li>
+<li>What oath did Abraham require of his servant?</li>
+<li>What specific sign did the servant request from God at the well?</li>
+<li>How did Rebekah respond to the servant's request for water?</li>
+<li>What gifts did the servant give Rebekah?</li>
+<li>How did Rebekah's family respond to the servant's story?</li>
+<li>What was Rebekah's answer when asked if she would go?</li>
+<li>How did Isaac and Rebekah meet?</li>
+</ol>
+<h3>Interpretation Questions</h3>
+<ol>
+<li>Why is the servant's prayer considered a model of faithful, specific prayer?</li>
+<li>What character qualities did the sign reveal about Rebekah?</li>
+<li>How does Rebekah's "I will go" echo Abraham's original call?</li>
+<li>What does this chapter teach about God's role in covenant marriages?</li>
+<li>Why does the text devote an entire chapter (67 verses) to finding Isaac's wife?</li>
+</ol>
+<h3>Application Questions</h3>
+<ol>
+<li>How do you seek divine guidance in important decisions?</li>
+<li>What character qualities should define a covenant partner?</li>
+<li>Have you ever experienced an answer to prayer "before you had done speaking"?</li>
+<li>What would it mean to say "I will go" to God's direction in your life?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Genesis 25: Esau and Jacob</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Observation Questions</h3>
+<ol>
+<li>How old was Abraham when he died? Where was he buried?</li>
+<li>How long were Isaac and Rebekah married before having children?</li>
+<li>What did the LORD tell Rebekah about the twins before their birth?</li>
+<li>How is Esau described at birth? How is Jacob described?</li>
+<li>What was Jacob doing when Esau came from the field?</li>
+<li>What did Esau ask for? What did Jacob demand in exchange?</li>
+<li>What did Esau say about his birthright?</li>
+<li>What verdict does the text give about Esau's choice?</li>
+</ol>
+<h3>Interpretation Questions</h3>
+<ol>
+<li>What is the significance of Jacob holding Esau's heel at birth?</li>
+<li>What does the prophecy "the elder shall serve the younger" foreshadow?</li>
+<li>Why was the birthright valuable? What did it include?</li>
+<li>Was Esau really "at the point to die," or was he exaggerating?</li>
+<li>What does "despised his birthright" mean in Hebrew (<em>bazah</em>)?</li>
+<li>Why does the narrator list Esau's five actions ("did eat and drink, rose up, went his way") so bluntly?</li>
+</ol>
+<h3>Application Questions</h3>
+<ol>
+<li>What "birthrights" do you have that you might undervalue?</li>
+<li>What "pottages" tempt you to trade eternal for temporal?</li>
+<li>How can you cultivate proper appreciation for spiritual blessings?</li>
+<li>When have you made a decision based on immediate appetite that you later regretted?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Genesis 26: Isaac in Gerar</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Observation Questions</h3>
+<ol>
+<li>Why did Isaac go to Gerar?</li>
+<li>What did God promise Isaac in the covenant renewal?</li>
+<li>What deception did Isaac use regarding Rebekah?</li>
+<li>How did Abimelech discover the truth?</li>
+<li>Why did the Philistines become jealous of Isaac?</li>
+<li>What happened at each well Isaac dug?</li>
+</ol>
+<h3>Interpretation Questions</h3>
+<ol>
+<li>How does Isaac's lie about Rebekah parallel Abraham's deceptions?</li>
+<li>What pattern do you see in how Isaac handles conflict (moving, not fighting)?</li>
+<li>What is the significance of the wells' names (Esek, Sitnah, Rehoboth)?</li>
+</ol>
+<h3>Application Questions</h3>
+<ol>
+<li>How do we respond to conflict—fighting or finding another way?</li>
+<li>What does it mean that God's promises to Abraham continued through Isaac?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Genesis 27: The Stolen Blessing</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Observation Questions</h3>
+<ol>
+<li>What did Isaac ask Esau to do before receiving the blessing?</li>
+<li>What was Rebekah's plan?</li>
+<li>What were Jacob's concerns about the plan?</li>
+<li>How did Jacob disguise himself?</li>
+<li>What did Isaac bless Jacob with?</li>
+<li>How did Esau react when he discovered the deception?</li>
+<li>What blessing did Isaac give Esau?</li>
+<li>What did Esau determine to do to Jacob?</li>
+</ol>
+<h3>Interpretation Questions</h3>
+<ol>
+<li>Why couldn't Isaac take back the blessing once given?</li>
+<li>Was Rebekah right to orchestrate this deception? Why or why not?</li>
+<li>How does this story illustrate the principle "the elder shall serve the younger"?</li>
+<li>What does Esau's cry "Hast thou but one blessing, my father?" reveal?</li>
+<li>How might this have played out differently if everyone had trusted God's prophecy?</li>
+</ol>
+<h3>Application Questions</h3>
+<ol>
+<li>When have you tried to "help" God's plan through deception?</li>
+<li>What family dysfunction resulted from Isaac's preferential love for Esau?</li>
+<li>How can families avoid the favoritism that damaged this family?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Genesis 28: Bethel</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Observation Questions</h3>
+<ol>
+<li>Where did Isaac send Jacob? Why?</li>
+<li>What blessing did Isaac give Jacob before he left?</li>
+<li>Where did Jacob stop for the night?</li>
+<li>What did Jacob see in his dream?</li>
+<li>Who stood above the ladder?</li>
+<li>What promises did God make to Jacob?</li>
+<li>What did Jacob do when he woke up?</li>
+<li>What did Jacob name the place? What does it mean?</li>
+<li>What vow did Jacob make?</li>
+</ol>
+<h3>Interpretation Questions</h3>
+<ol>
+<li>Why did Jacob use a stone as a pillow?</li>
+<li>What is the significance of angels ascending <em>then</em> descending (not descending first)?</li>
+<li>What does "Surely the LORD is in this place; and I knew it not" reveal about Jacob?</li>
+<li>Why did Jacob call the place "dreadful" (KJV) or "awesome"?</li>
+<li>How does Bethel ("house of God") connect to temple worship?</li>
+<li>What is the connection between Jacob's ladder and John 1:51?</li>
+</ol>
+<h3>Application Questions</h3>
+<ol>
+<li>When have you been surprised to discover God's presence somewhere unexpected?</li>
+<li>How does the temple function as your "Bethel" — gate of heaven, house of God?</li>
+<li>What covenants do we make that parallel Jacob's vow?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Genesis 29–30: Jacob, Leah, and Rachel</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Observation Questions</h3>
+<ol>
+<li>How did Jacob meet Rachel?</li>
+<li>What bargain did Jacob make with Laban?</li>
+<li>How did Laban deceive Jacob on the wedding night?</li>
+<li>How did Jacob respond to the deception?</li>
+<li>How many years total did Jacob work for Laban?</li>
+<li>Why was Leah "hated" (or "less loved")?</li>
+<li>List the sons born to Leah, Rachel, Bilhah, and Zilpah.</li>
+<li>What do the sons' names reveal about their mothers' experiences?</li>
+</ol>
+<h3>Interpretation Questions</h3>
+<ol>
+<li>How does Laban's deception parallel Jacob's deception of Isaac?</li>
+<li>What does "the LORD saw that Leah was hated" reveal about God's character?</li>
+<li>Why did God open Leah's womb while Rachel remained barren?</li>
+<li>What does the mandrake incident (Gen. 30:14–16) reveal about the sisters' relationship?</li>
+</ol>
+<h3>Application Questions</h3>
+<ol>
+<li>When has a deception you committed come back to you?</li>
+<li>How does God show compassion to those who feel unloved?</li>
+<li>What does Leah's progression from "Now my husband will love me" to "Now will I praise the LORD" (Judah's name) teach?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Genesis 31: Flight from Laban</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Observation Questions</h3>
+<ol>
+<li>Why did God tell Jacob to return to Canaan?</li>
+<li>How did Rachel and Leah respond to Jacob's plan?</li>
+<li>What did Rachel steal from her father?</li>
+<li>How did Laban catch up with Jacob?</li>
+<li>What did God tell Laban in a dream?</li>
+<li>What covenant did Jacob and Laban make?</li>
+<li>What does Mizpah mean?</li>
+</ol>
+<h3>Interpretation Questions</h3>
+<ol>
+<li>Why would Rachel steal the household gods (<em>teraphim</em>)?</li>
+<li>What does the Mizpah covenant reveal about broken trust?</li>
+<li>How has Jacob changed from the man who fled to Haran?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Genesis 32: Wrestling at the Jabbok</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Observation Questions</h3>
+<ol>
+<li>What did Jacob learn about Esau's approach?</li>
+<li>How did Jacob prepare for meeting Esau?</li>
+<li>What did Jacob pray in Genesis 32:9–12?</li>
+<li>What gifts did Jacob send ahead?</li>
+<li>Who wrestled with Jacob?</li>
+<li>What injury did Jacob receive?</li>
+<li>What did Jacob demand before releasing his opponent?</li>
+<li>What question did the figure ask Jacob?</li>
+<li>What new name did Jacob receive?</li>
+<li>What did Jacob name the place?</li>
+</ol>
+<h3>Interpretation Questions</h3>
+<ol>
+<li>Why was Jacob "greatly afraid and distressed"?</li>
+<li>What does dividing his company reveal about Jacob's mindset?</li>
+<li>Why did the figure ask "What is thy name?" when he presumably already knew?</li>
+<li>What does "Israel" mean? What interpretations exist?</li>
+<li>Who was Jacob's wrestling opponent? (Consider Gen. 32:30 and Hosea 12:3–4)</li>
+<li>Why did Jacob's opponent wound him instead of overpowering him?</li>
+<li>What does "I will not let thee go, except thou bless me" reveal about Jacob's transformation?</li>
+<li>Why did Jacob receive the blessing only <em>after</em> admitting his name?</li>
+</ol>
+<h3>Application Questions</h3>
+<ol>
+<li>What are you currently wrestling with spiritually?</li>
+<li>What would "letting God prevail" look like in your current struggles?</li>
+<li>What "limps" do you carry from spiritual encounters?</li>
+<li>If God asked "What is thy name?" what would honest confession sound like?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Genesis 33: Reconciliation</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Observation Questions</h3>
+<ol>
+<li>How did Jacob arrange his family as they approached Esau?</li>
+<li>How did Esau receive Jacob?</li>
+<li>What did Jacob say about seeing Esau's face?</li>
+<li>Did Esau accept Jacob's gifts at first?</li>
+<li>Where did Jacob eventually settle?</li>
+</ol>
+<h3>Interpretation Questions</h3>
+<ol>
+<li>Why does Jacob compare Esau's face to "the face of God"?</li>
+<li>How does Esau's response defy Jacob's (and the reader's) expectations?</li>
+<li>What does this reconciliation teach about forgiveness?</li>
+<li>How does Genesis 33 resolve the conflict begun in Genesis 25?</li>
+</ol>
+<h3>Application Questions</h3>
+<ol>
+<li>Is there someone you need to reconcile with?</li>
+<li>Have you experienced unexpected grace from someone you wronged?</li>
+<li>What does it mean to see God's face in human forgiveness?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Cross-Cutting Themes</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Let God Prevail</h3>
+<ol>
+<li>How does Jacob's transformation from "supplanter" to "Israel" model spiritual growth?</li>
+<li>What areas of your life need to shift from "grasping" to "surrendering"?</li>
+<li>What does President Nelson's definition of Israel—"let God prevail"—mean practically?</li>
+</ol>
+<h3>Covenant Continuity</h3>
+<ol>
+<li>How do the promises to Abraham, Isaac, and Jacob connect?</li>
+<li>What themes persist across all three generations?</li>
+<li>How does your family participate in covenant continuity?</li>
+</ol>
+<h3>Struggle and Transformation</h3>
+<ol>
+<li>How do Jacob's struggles (deception, exile, wrestling) become the means of his transformation?</li>
+<li>What struggles in your life might God be using to transform you?</li>
+<li>Why does blessing often come through difficulty?</li>
+</ol>
+<h3>Women in the Narrative</h3>
+<ol>
+<li>Compare Rebekah, Leah, and Rachel. What do their stories teach?</li>
+<li>How does God show compassion to Leah?</li>
+<li>What does Rebekah's "I will go" reveal about her faith?</li>
+</ol>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 7: JEWISH PERSPECTIVE: GENESIS 24-33 -->
+        <!-- ============================================================ -->
