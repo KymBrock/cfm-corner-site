@@ -81,13 +81,19 @@ The `h` or `g` prefix in the URL determines Hebrew vs Greek.
 
 ## Where Lexicon Links Appear
 
-1. **Study Guide** (`study-guide.html`)
-   - Inline in narrative text (first meaningful occurrence of each term)
-   - Word Study sections (all occurrences)
-   - Cross-Language Connections tables (Greek entries)
+1. **Study Guide** (`study-guide.html`) — ALL sections:
+   - Section 1 (Week Overview): Reading Summary, Central Themes — any Hebrew/Greek terms
+   - Section 2 (Historical & Cultural Context): ANE setting, archaeology, sacred geography
+   - Section 3 (Key Passages Study): Analysis, cross-references — Hebrew terms in commentary
+   - Section 4 (Word Studies): All occurrences, Related Forms tables, Cross-Language tables
+   - Section 5 (Jewish Perspective): Hebrew terms in source citations and commentary
+   - Section 6 (Teaching Applications): Any Hebrew/Greek terms that appear
+   - Section 7 (Study Questions): Rarely, but link if present
 2. **Weekly Insights** (`insights.html`)
    - Hebrew section spotlight terms
-3. **Hebrew Lessons** (`/hebrew/` section) — future
+   - Any Hebrew/Greek terms in narrative text
+3. **Resources** (`resources.html`) — any Hebrew/Greek terms in video descriptions or resource annotations
+4. **Hebrew Lessons** (`/hebrew/` section) — future
 
 ---
 
@@ -142,21 +148,34 @@ This file grows as new terms are introduced each week. The converter reads it du
 
 ---
 
+## Comprehensive Coverage Rule
+
+> **Every occurrence of Hebrew/Greek Unicode characters in body text must be inside a lexicon `<a>` tag with full `data-*` attributes.** The only exception is accordion `<button>` headings, where nesting `<a>` inside `<button>` causes click-handler conflicts.
+
+This rule was established after Week 10 (March 2026), when 23 bare Hebrew terms were found across multiple study guide sections that the audit script had not been scanning.
+
+---
+
 ## Checklist for Each Week
 
-- [ ] Identify all Hebrew terms that appear in word studies, key passages, and insights
-- [ ] Look up Strong's numbers via BLB
+- [ ] Identify **every** Hebrew/Greek term across **all** study guide and insights sections
+- [ ] Look up Strong's numbers via BLB for each term
 - [ ] Add entries to `lexicon-popups.json` for any new terms
-- [ ] First meaningful occurrence of each term gets a lexicon link
+- [ ] **Every Hebrew/Greek Unicode character** in body text (outside `<button>` headings) has a lexicon link with all `data-*` attributes
 - [ ] Word study sections link all occurrences
-- [ ] Cross-Language tables include Greek lexicon links
+- [ ] Cross-Language tables include Greek lexicon links with popup attributes
+- [ ] Run `link-audit.py` on **all three** files (study-guide, insights, resources) — zero BARE HEBREW, BARE ROOT, and BARE BLB LINK issues
+- [ ] If issues found, run `link-audit.py --fix --week weekNN` to auto-link bare terms
 - [ ] Test hover popups in local preview
+- [ ] Check for BLB lexicon `<a>` tags missing `data-lexicon` attributes (the audit script catches these as BARE BLB LINK)
 
 ---
 
 ---
 
 ## Cross-Language Connections Table Pattern
+
+> **MANDATORY:** Every word study MUST include a Cross-Language Connections table. The `link-audit.py` script enforces this (`MISSING CROSS-LANG` issue type). There are no exceptions.
 
 Word studies include a 3-row cross-language table connecting Hebrew roots to Greek, Latin, and English cognates. Each row uses a different link type:
 
@@ -227,4 +246,4 @@ Word studies include a 3-row cross-language table connecting Hebrew roots to Gre
 
 ---
 
-*Version 1.1 — 2026-02-19*
+*Version 1.2 — 2026-03-01*

@@ -29,6 +29,8 @@ Write or review these files:
 - [ ] `05_Teaching_Applications.md` — Teaching ideas for 7 settings
 - [ ] `06_Study_Questions.md` — Discussion/reflection questions
 - [ ] `07_Jewish_Perspective.md` — Jewish interpretive insights with LDS connections (Section 5 in study guide)
+- [ ] All Hebrew/Greek terms in body text have lexicon links (not just word studies)
+- [ ] Each word study has a Cross-Language Connections table (Greek/Latin/English)
 
 ### 1.2 Weekly Insights (folder: `02_Weekly_Insights/`)
 - [ ] `Weekly_Insights_WeekNN.md` — Narrative synthesis of the week
@@ -58,6 +60,22 @@ Write or review these files:
 
 ### 1.5 Update Progress Tracker
 - [ ] Update `Week_NN_Progress_Tracker.md` status for each item
+
+### 1.6 Culture & Study Library Content (as needed)
+
+These sections are **not per-week tasks** — they're published independently as the content is ready. See the dedicated specs for full details.
+
+**Culture Section** (`content/culture/`):
+- Jewish tradition articles, feast days (mo'edim), interpretive frameworks
+- See `CULTURE-SPEC.md` for front matter, layout, and content guidelines
+- Canonical example: Purim mo'edim page
+
+**Study Library** (`content/study-library/`):
+- In-depth articles, thematic studies, deep dives
+- See `STUDY-LIBRARY-SPEC.md` for article format and front matter
+- Canonical example: Seven Sermons article
+
+> **Tip:** If Culture or Study Library articles relate to the current week's scripture, mention them in the study guide's Teaching Applications section or link to them from relevant subsections.
 
 ---
 
@@ -112,10 +130,17 @@ Verify outputs:
 - [ ] `insights.html` — from Weekly Insights markdown
 - [ ] `resources.html` — from Video Resources / VIDEO_URL_TRACKER (**must match `RESOURCES-HTML-SPEC.md`**)
 - [ ] Any chart HTML files referenced in front matter
+- [ ] Run `link-audit.py` on **all three** files (study-guide, insights, resources) — zero issues
+- [ ] If issues found, run `link-audit.py --fix --week weekNN` to auto-link bare terms
+- [ ] All BLB lexicon links have `data-lexicon` popup attributes (no bare BLB links)
+- [ ] Every word study has a Cross-Language Connections table (Greek/Latin/English)
+- [ ] Key Locations section has multi-source map links (HLS, Atlas, BYU)
 
 > **Important:** The resources HTML must follow the format in [`RESOURCES-HTML-SPEC.md`](RESOURCES-HTML-SPEC.md). Canonical example: `static/content/week08/resources.html`. Every week must include: Church Media for Families section, video thumbnail cards (never plain text links), Bible Project theme + word study videos, and all accordion sections.
 
-> **Hebrew/Greek lexicon links** must use hover popups per [`LEXICON-POPUP-SPEC.md`](LEXICON-POPUP-SPEC.md). All BLB lexicon links in study guides and insights get `data-lexicon` attributes. New terms must be added to `cfm-corner-tools/data/lexicon-popups.json`. The GUI converter handles this automatically for links in Obsidian markdown.
+> **Hebrew/Greek lexicon links** must use hover popups per [`LEXICON-POPUP-SPEC.md`](LEXICON-POPUP-SPEC.md). **Every Hebrew/Greek Unicode character in body text** must be inside a lexicon `<a>` tag with all `data-*` attributes — not just first occurrences and not just in Word Studies. New terms must be added to `cfm-corner-tools/data/lexicon-popups.json`. The GUI converter handles this automatically for links in Obsidian markdown.
+
+> **Cross-Language Connections** are mandatory for every word study — see [`LEXICON-POPUP-SPEC.md`](LEXICON-POPUP-SPEC.md) for the 3-row table pattern (Greek/Latin/English). The `link-audit.py` script checks for missing tables.
 
 ### 2.3 Lesson Image
 - [ ] Add lesson image to `static/images/weeks/weekNN.jpg`
@@ -212,6 +237,10 @@ Output: `~/Desktop/cfm-email-weekNN.html`
 | Generated emails | `~/Desktop/cfm-email-weekNN.html` |
 | Master Resource Tracker | `OT_2026/Resources/MASTER_RESOURCE_TRACKER.md` |
 | Video URL Trackers | `OT_2026/WeeklyLessons/Week_NN_*/Video_Resources/VIDEO_URL_TRACKER.md` |
+| Culture section content | `content/culture/` |
+| Study Library content | `content/study-library/` |
+| Culture spec | `CULTURE-SPEC.md` |
+| Study Library spec | `STUDY-LIBRARY-SPEC.md` |
 | **cfm-corner-tools** | `/Users/kymberbrockbank/Developer/cfm-corner-tools/` |
 | Tools config | `cfm-corner-tools/config.yaml` |
 | Academic URLs config | `cfm-corner-tools/generators/weekly_resources/academic_resources_urls.json` |
@@ -229,4 +258,4 @@ Output: `~/Desktop/cfm-email-weekNN.html`
 
 ---
 
-*Last updated: 2026-02-19*
+*Last updated: 2026-03-01*

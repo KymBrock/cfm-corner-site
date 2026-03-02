@@ -26,7 +26,7 @@ This first word establishes the purpose of the cross: forgiveness. Before anythi
 
 It is truly astounding to witness the Savior's boundless generosity and compassion as He pleaded for mercy on behalf of those who were actively piercing nails through His body. In this moment, Jesus exemplified the teachings He shared during the Sermon on the Mount, where He encouraged us to love our enemies and pray for those who mistreat and persecute us (Matthew 5:44). Christ's profound act serves as a powerful lesson for us all, demonstrating the importance of extending forgiveness and mercy, even when it is undeserved, unrequested, or unrecognized.
 
-#### The Word: aphiemi - "Forgive"
+#### The Word: <a href="https://www.blueletterbible.org/lexicon/g863/kjv/tr/0-1/" target="_blank" data-lexicon="to send away, forgive, leave, let go" data-strongs="G863" data-translit="aphiēmi" data-original="ἀφίημι" data-lang="greek" data-verse="Luke 23:34">aphiemi</a> - "Forgive"
 
 The Greek word Jesus used carries layers of meaning:
 - To send away
@@ -61,7 +61,7 @@ This second word reveals the immediacy and accessibility of salvation. No probat
 
 The thief had no opportunity for baptism, no chance to make restitution, no time to prove his reformation. He had only his recognition of Christ and his faith in Christ's mercy. It was enough.
 
-#### The Word: paradeisos - "Paradise"
+#### The Word: <a href="https://www.blueletterbible.org/lexicon/g3857/kjv/tr/0-1/" target="_blank" data-lexicon="paradise, a park, a garden" data-strongs="G3857" data-translit="paradeisos" data-original="παράδεισος" data-lang="greek" data-verse="Luke 23:43">paradeisos</a> - "Paradise"
 
 This word appears only three times in the New Testament, each illuminating a different aspect of God's glory:
 
@@ -92,9 +92,9 @@ This third word reveals Christ's concern for practical, earthly relationships ev
 
 The form of address—"Woman" rather than "Mother"—has been understood in multiple ways. Some see it as maintaining the boundary between His divine mission and human relationships. Others note it echoes His words at Cana: "Woman, what have I to do with thee? mine hour is not yet come" (John 2:4). At Cana, His hour had not yet come; now, on the cross, His hour had fully arrived.
 
-#### The Word: idou - "Behold"
+#### The Word: <a href="https://www.blueletterbible.org/lexicon/g2400/kjv/tr/0-1/" target="_blank" data-lexicon="behold, see, lo" data-strongs="G2400" data-translit="idou" data-original="ἰδού" data-lang="greek" data-verse="John 19:26">idou</a> - "Behold"
 
-This word (Hebrew: hinneh) means far more than casual observation. From the root eido, it carries profound implications:
+This word (Hebrew: <a href="https://www.blueletterbible.org/lexicon/h2009/kjv/wlc/0-1/" target="_blank" data-lexicon="behold, lo, here" data-strongs="H2009" data-translit="hinneh" data-original="הִנֵּה" data-lang="hebrew">hinneh</a>) means far more than casual observation. From the root eido, it carries profound implications:
 - To perceive by any of the senses
 - To notice, discern, discover
 - To turn the eyes, the mind, the attention to anything
@@ -209,7 +209,7 @@ John notes that Jesus said this "knowing that all things were now accomplished, 
 
 Someone lifted a sponge soaked in sour wine on a branch of hyssop to His lips—fulfilling the very words of Psalm 69:21. And hyssop—the same plant used to apply the Passover blood to the doorposts in Egypt (Exodus 12:22). Even in this small detail, layers of Scripture converge: Jesus is the true Passover Lamb, the righteous sufferer of the Psalms, the one who thirsts that we might drink living water.
 
-#### The Word: dipsao - "Thirst" (Hebrew: tsame)
+#### The Word: <a href="https://www.blueletterbible.org/lexicon/g1372/kjv/tr/0-1/" target="_blank" data-lexicon="to thirst, to suffer thirst" data-strongs="G1372" data-translit="dipsaō" data-original="διψάω" data-lang="greek" data-verse="John 19:28">dipsao</a> - "Thirst" (Hebrew: <a href="https://www.blueletterbible.org/lexicon/h6770/kjv/wlc/0-1/" target="_blank" data-lexicon="to thirst, be thirsty" data-strongs="H6770" data-translit="tsame" data-original="צָמֵא" data-lang="hebrew">tsame</a>)
 
 This profound statement echoes through multiple psalms of righteous suffering:
 - **Psalm 42:1-3** - "As the hart panteth after the water brooks, so panteth my soul after thee, O God. My soul thirsteth for God, for the living God: when shall I come and appear before God? My tears have been my meat day and night, while they continually say unto me, Where is thy God?"
@@ -249,7 +249,7 @@ In Greek commercial language, *tetelestai* was stamped on receipts when debts we
 
 Jesus did not say, "I am finished"—as though He were merely dying. He said, "It is finished"—the work of redemption, planned before the foundation of the world, executed in time and space, accomplished once for all.
 
-#### The Word: Tetelestai from teleo and telos
+#### The Word: <a href="https://www.blueletterbible.org/lexicon/g5055/kjv/tr/0-1/" target="_blank" data-lexicon="to bring to an end, complete, fulfill" data-strongs="G5055" data-translit="teleō" data-original="τελέω" data-lang="greek" data-verse="John 19:30">Tetelestai</a> from teleo and telos
 
 This rich word family encompasses:
 - To bring to a close, to finish, to end

@@ -49,7 +49,7 @@ All spec documents for the CFM Corner site content pipeline. Read these before c
 | Path | Description |
 |------|-------------|
 | `static/content/weekNN/` | Weekly content directory (study-guide.html, resources.html, insights.html) |
-| `content/weeks/weekNN.md` | Hugo page for weekly content (front matter + shortcodes) |
+| `content/weeks/NN.md` | Hugo page for weekly content (front matter + shortcodes) |
 | `content/culture/` | Culture section (Jewish tradition, feast days, interpretive frameworks) |
 | `content/study-library/` | Study Library section (in-depth articles and thematic studies) |
 | `themes/cfm/layouts/culture/` | Culture section Hugo templates (list.html, single.html) |
@@ -73,6 +73,23 @@ All spec documents for the CFM Corner site content pipeline. Read these before c
 
 **Study guide palette** uses a brown family (`#8B7355` primary, `#6B5344` dark, `#5a4a3a` deep) rather than the main site palette.
 
+### Word Study Required Components
+
+Each word study (Section 4) must include ALL of the following:
+
+| Component | Description | Enforced By |
+|-----------|-------------|-------------|
+| Root & Meaning | Hebrew root consonants, Strong's number, definition | Manual |
+| Related Forms table | Conjugations and derived forms | Manual |
+| Theological Significance | Doctrinal connections | Manual |
+| LDS Application | Restoration scripture links | Manual |
+| **Cross-Language Connections table** | **MANDATORY** 3-row table: Greek (LXX) + Latin (Vulgate) + English | `link-audit.py` (`MISSING CROSS-LANG`) |
+
+**Cross-Language table links:**
+- **Greek row:** BLB lexicon link with `data-lexicon` popup attributes
+- **Latin row:** Logeion link (regular navigation)
+- **English row:** MW link + `(1828)` link in parentheses for each word
+
 ### Design Rules
 
 - **No emojis** — monochromatic icons only (Unicode symbols like ⊞ ⊟)
@@ -83,7 +100,8 @@ All spec documents for the CFM Corner site content pipeline. Read these before c
 - **Scripture links:** handled by BLB ScriptTagger (dotted underline via `.BLBScriptRef` CSS)
 - **Blockquotes:** left border accent, cream background, italic text, rounded right corners
 - **`<hr>` separators:** between sub-sections and between word studies
+- **Auto-linking:** `hugo_converter.py` auto-links bare scriptures and Hebrew/Greek terms during generation; `link-audit.py --fix` applies the same auto-linkers post-hoc
 
 ---
 
-*Version 1.0 — 2026-02-19*
+*Version 1.2 — 2026-03-01*

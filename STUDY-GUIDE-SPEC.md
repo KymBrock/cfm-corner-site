@@ -235,12 +235,13 @@ This is the most structured section. Each word study follows this exact pattern:
 ### Key Rules for Word Studies
 
 1. **Every Hebrew term** gets full `data-lexicon` popup attributes on BLB links
-2. **Greek (LXX) row** — BLB link with `data-lexicon` popup attributes (`data-lang="greek"`)
-3. **Latin (Vulgate) row** — Plain link to `logeion.uchicago.edu/WORD` (no popup attributes)
-4. **English row** — Each English word gets MW link + `(1828)` link in parentheses; multiple words separated by commas
-5. **English Reference column** — Always `—` (dash)
-6. **`<hr>` separator** between word studies (after the closing `</table>`)
-7. **Sub-headings** within word studies use `<h3>` (Meaning, Related Forms, Theological Significance, LDS Application, Cross-Language Connections)
+2. **Cross-Language Connections table is MANDATORY** for every word study — no exceptions. The `link-audit.py` script checks for this automatically (`MISSING CROSS-LANG` issue type).
+3. **Greek (LXX) row** — BLB link with `data-lexicon` popup attributes (`data-lang="greek"`)
+4. **Latin (Vulgate) row** — Plain link to `logeion.uchicago.edu/WORD` (no popup attributes)
+5. **English row** — Each English word gets MW link + `(1828)` link in parentheses; multiple words separated by commas
+6. **English Reference column** — Always `—` (dash)
+7. **`<hr>` separator** between word studies (after the closing `</table>`)
+8. **Sub-headings** within word studies use `<h3>` (Meaning, Related Forms, Theological Significance, LDS Application, Cross-Language Connections)
 
 ---
 
@@ -567,8 +568,10 @@ Sub-accordion toggle is handled by click event listeners that toggle `.active` c
 - [ ] Test lexicon hover popups
 - [ ] Test ScriptTagger scripture detection
 - [ ] Verify all external links open in new tab (`target="_blank"`)
+- [ ] Run `link-audit.py --type study-guide` — zero BARE HEBREW, BARE ROOT, BARE BLB LINK, and MISSING CROSS-LANG issues
+- [ ] If issues found, run `link-audit.py --fix --week weekNN` to auto-link bare terms (Cross-Language tables require manual creation)
 
 ---
 
-*Version 1.0 — 2026-02-19*
+*Version 1.1 — 2026-03-01*
 *Canonical Example: Week 09 (`static/content/week09/study-guide.html`)*
