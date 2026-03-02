@@ -114,22 +114,73 @@ That moment — Rebekah's solitary, decisive **אֵלֵךְ** ([*elekh*](https:/
 
 When you combine Person, Gender, and Number, you get a grid that maps every possible verb form. Hebrew grammarians call this the **PGN grid**, and it is the conjugation table that every Hebrew student learns.
 
-Here is what the grid looks like:
+Here is what the grid looks like — singular forms on the left, plural on the right, color-coded by gender:
 
-| Person | Gender | Number | Abbreviation |
-|--------|--------|--------|--------------|
-| 1st | Common (no gender distinction) | Singular | 1cs |
-| 1st | Common | Plural | 1cp |
-| 2nd | Masculine | Singular | 2ms |
-| 2nd | Feminine | Singular | 2fs |
-| 2nd | Masculine | Plural | 2mp |
-| 2nd | Feminine | Plural | 2fp |
-| 3rd | Masculine | Singular | 3ms |
-| 3rd | Feminine | Singular | 3fs |
-| 3rd | Masculine | Plural | 3mp |
-| 3rd | Feminine | Plural | 3fp |
+<div style="display:grid; grid-template-columns:1fr 1fr; border:1px solid #dce8dd; border-radius:12px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#fff; margin:20px 0 24px;">
+  <!-- Column Headers -->
+  <div style="background:rgba(74,107,82,0.12); color:#4a6b52; padding:10px 16px; font-size:0.85em; font-weight:700; text-transform:uppercase; letter-spacing:0.8px; text-align:center; border-bottom:2px solid #dce8dd;">Singular</div>
+  <div style="background:rgba(74,107,82,0.12); color:#4a6b52; padding:10px 16px; font-size:0.85em; font-weight:700; text-transform:uppercase; letter-spacing:0.8px; text-align:center; border-bottom:2px solid #dce8dd;">Plural</div>
+  <!-- 1st Person -->
+  <div style="grid-column:1/-1; background:linear-gradient(135deg,#1e3a4f,#57899c); color:#fff; padding:9px 18px; font-size:0.92em; font-weight:600;">1st Person</div>
+  <div style="padding:14px 16px; background:rgba(122,158,126,0.10); border-left:4px solid #4a6b52; border-bottom:1px solid #eef1f3;">
+    <span style="display:inline-block; font-size:0.75em; font-weight:700; padding:3px 10px; border-radius:10px; background:rgba(74,107,82,0.15); color:#4a6b52; letter-spacing:0.5px; text-transform:uppercase;">1cs</span>
+    <span style="display:block; font-size:1.2em; font-weight:600; margin:4px 0 2px;">"I"</span>
+    <span style="font-size:0.8em; color:#6b7c8a; font-style:italic;">1st common singular</span>
+  </div>
+  <div style="padding:14px 16px; background:rgba(122,158,126,0.10); border-right:4px solid #4a6b52; border-left:1px solid #eef1f3; border-bottom:1px solid #eef1f3;">
+    <span style="display:inline-block; font-size:0.75em; font-weight:700; padding:3px 10px; border-radius:10px; background:rgba(74,107,82,0.15); color:#4a6b52; letter-spacing:0.5px; text-transform:uppercase;">1cp</span>
+    <span style="display:block; font-size:1.2em; font-weight:600; margin:4px 0 2px;">"we"</span>
+    <span style="font-size:0.8em; color:#6b7c8a; font-style:italic;">1st common plural</span>
+  </div>
+  <!-- 2nd Person -->
+  <div style="grid-column:1/-1; background:linear-gradient(135deg,#1e3a4f,#57899c); color:#fff; padding:9px 18px; font-size:0.92em; font-weight:600;">2nd Person</div>
+  <div style="padding:14px 16px; background:rgba(87,137,156,0.10); border-left:4px solid #57899c; border-bottom:1px solid #eef1f3;">
+    <span style="display:inline-block; font-size:0.75em; font-weight:700; padding:3px 10px; border-radius:10px; background:rgba(87,137,156,0.15); color:#1e3a4f; letter-spacing:0.5px; text-transform:uppercase;">2ms</span>
+    <span style="display:block; font-size:1.2em; font-weight:600; margin:4px 0 2px;">"you" <span style="font-size:0.65em; font-weight:400; color:#6b7c8a;">(m)</span></span>
+    <span style="font-size:0.8em; color:#6b7c8a; font-style:italic;">2nd masculine singular</span>
+  </div>
+  <div style="padding:14px 16px; background:rgba(87,137,156,0.10); border-right:4px solid #57899c; border-left:1px solid #eef1f3; border-bottom:1px solid #eef1f3;">
+    <span style="display:inline-block; font-size:0.75em; font-weight:700; padding:3px 10px; border-radius:10px; background:rgba(87,137,156,0.15); color:#1e3a4f; letter-spacing:0.5px; text-transform:uppercase;">2mp</span>
+    <span style="display:block; font-size:1.2em; font-weight:600; margin:4px 0 2px;">"you all" <span style="font-size:0.65em; font-weight:400; color:#6b7c8a;">(m)</span></span>
+    <span style="font-size:0.8em; color:#6b7c8a; font-style:italic;">2nd masculine plural</span>
+  </div>
+  <div style="padding:14px 16px; background:rgba(106,89,131,0.10); border-left:4px solid #6a5983; border-bottom:1px solid #eef1f3;">
+    <span style="display:inline-block; font-size:0.75em; font-weight:700; padding:3px 10px; border-radius:10px; background:rgba(106,89,131,0.15); color:#6a5983; letter-spacing:0.5px; text-transform:uppercase;">2fs</span>
+    <span style="display:block; font-size:1.2em; font-weight:600; margin:4px 0 2px;">"you" <span style="font-size:0.65em; font-weight:400; color:#6b7c8a;">(f)</span></span>
+    <span style="font-size:0.8em; color:#6b7c8a; font-style:italic;">2nd feminine singular</span>
+  </div>
+  <div style="padding:14px 16px; background:rgba(106,89,131,0.10); border-right:4px solid #6a5983; border-left:1px solid #eef1f3; border-bottom:1px solid #eef1f3;">
+    <span style="display:inline-block; font-size:0.75em; font-weight:700; padding:3px 10px; border-radius:10px; background:rgba(106,89,131,0.15); color:#6a5983; letter-spacing:0.5px; text-transform:uppercase;">2fp</span>
+    <span style="display:block; font-size:1.2em; font-weight:600; margin:4px 0 2px;">"you all" <span style="font-size:0.65em; font-weight:400; color:#6b7c8a;">(f)</span></span>
+    <span style="font-size:0.8em; color:#6b7c8a; font-style:italic;">2nd feminine plural</span>
+  </div>
+  <!-- 3rd Person -->
+  <div style="grid-column:1/-1; background:linear-gradient(135deg,#1e3a4f,#57899c); color:#fff; padding:9px 18px; font-size:0.92em; font-weight:600;">3rd Person</div>
+  <div style="padding:14px 16px; background:rgba(87,137,156,0.10); border-left:4px solid #57899c; border-bottom:1px solid #eef1f3;">
+    <span style="display:inline-block; font-size:0.75em; font-weight:700; padding:3px 10px; border-radius:10px; background:rgba(87,137,156,0.15); color:#1e3a4f; letter-spacing:0.5px; text-transform:uppercase;">3ms</span>
+    <span style="display:block; font-size:1.2em; font-weight:600; margin:4px 0 2px;">"he / it"</span>
+    <span style="font-size:0.8em; color:#6b7c8a; font-style:italic;">3rd masculine singular</span>
+  </div>
+  <div style="padding:14px 16px; background:rgba(87,137,156,0.10); border-right:4px solid #57899c; border-left:1px solid #eef1f3; border-bottom:1px solid #eef1f3;">
+    <span style="display:inline-block; font-size:0.75em; font-weight:700; padding:3px 10px; border-radius:10px; background:rgba(87,137,156,0.15); color:#1e3a4f; letter-spacing:0.5px; text-transform:uppercase;">3mp</span>
+    <span style="display:block; font-size:1.2em; font-weight:600; margin:4px 0 2px;">"they" <span style="font-size:0.65em; font-weight:400; color:#6b7c8a;">(m)</span></span>
+    <span style="font-size:0.8em; color:#6b7c8a; font-style:italic;">3rd masculine plural</span>
+  </div>
+  <div style="padding:14px 16px; background:rgba(106,89,131,0.10); border-left:4px solid #6a5983;">
+    <span style="display:inline-block; font-size:0.75em; font-weight:700; padding:3px 10px; border-radius:10px; background:rgba(106,89,131,0.15); color:#6a5983; letter-spacing:0.5px; text-transform:uppercase;">3fs</span>
+    <span style="display:block; font-size:1.2em; font-weight:600; margin:4px 0 2px;">"she"</span>
+    <span style="font-size:0.8em; color:#6b7c8a; font-style:italic;">3rd feminine singular</span>
+  </div>
+  <div style="padding:14px 16px; background:rgba(106,89,131,0.10); border-right:4px solid #6a5983; border-left:1px solid #eef1f3;">
+    <span style="display:inline-block; font-size:0.75em; font-weight:700; padding:3px 10px; border-radius:10px; background:rgba(106,89,131,0.15); color:#6a5983; letter-spacing:0.5px; text-transform:uppercase;">3fp</span>
+    <span style="display:block; font-size:1.2em; font-weight:600; margin:4px 0 2px;">"they" <span style="font-size:0.65em; font-weight:400; color:#6b7c8a;">(f)</span></span>
+    <span style="font-size:0.8em; color:#6b7c8a; font-style:italic;">3rd feminine plural</span>
+  </div>
+</div>
 
 That looks like a lot — ten possible forms. But notice the patterns. First person has no gender split, so it collapses to just two forms (singular and plural). The abbreviations (1cs, 2ms, 3fp, etc.) are the standard shorthand you will see in lexicons, concordances, and interlinear Bibles. If you have ever looked up a Hebrew word in a study tool and seen "3ms" next to it, now you know what that means: third person, masculine, singular — "he."
+
+{{< chart "hebrew_pgn_grid" >}}
 
 {{< chart "hebrew_verb_forms" >}}
 

@@ -10,6 +10,10 @@
 --gold:#d5a93c;--plum:#6a5983;--copper:#c37c3c;--terracotta:#c65528;
 --card:#fff;--text:#2c3e50;--text-light:#6b7c8a;--shadow:0 2px 8px rgba(0,0,0,0.08);
 --radius:12px;
+/* PGN Gender Colors */
+--masc-bg:rgba(87,137,156,0.10);--masc-border:#57899c;
+--fem-bg:rgba(106,89,131,0.10);--fem-border:#6a5983;
+--common-bg:rgba(122,158,126,0.10);--common-border:#4a6b52;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Georgia','Times New Roman',serif;color:var(--text);line-height:1.7;padding:24px;max-width:960px;margin:0 auto;background:#fafbfc}
@@ -62,10 +66,18 @@ td{
   vertical-align:middle;
 }
 tr:last-child td{border-bottom:none}
-tr:hover td{background:rgba(213,169,60,0.06)}
+tr:hover td{filter:brightness(0.97)}
+
+/* Gender row colors */
+tr.row-masc td{background:var(--masc-bg);border-left:none}
+tr.row-masc td:first-child{border-left:4px solid var(--masc-border)}
+tr.row-fem td{background:var(--fem-bg);border-left:none}
+tr.row-fem td:first-child{border-left:4px solid var(--fem-border)}
+tr.row-common td{background:var(--common-bg);border-left:none}
+tr.row-common td:first-child{border-left:4px solid var(--common-border)}
 
 .hebrew-form{
-  font-size:1.4em;direction:rtl;
+  font-size:1.4em;direction:rtl;unicode-bidi:embed;
   font-family:'SBL Hebrew','David','Frank Ruehl','Times New Roman',serif;
 }
 .rl{color:var(--navy);font-weight:700}
@@ -81,7 +93,17 @@ tr:hover td{background:rgba(213,169,60,0.06)}
   background:rgba(87,137,156,0.12);color:var(--slate);
   letter-spacing:0.5px;
 }
+.pgn-tag--masc{background:rgba(87,137,156,0.18);color:var(--navy)}
+.pgn-tag--fem{background:rgba(106,89,131,0.18);color:var(--plum)}
+.pgn-tag--common{background:rgba(74,107,82,0.18);color:var(--sage-dark)}
 .meaning{color:var(--text);font-size:0.9em}
+.root-box{
+  color:var(--navy);font-size:0.85em;
+}
+.box-niqqud{
+  color:var(--terracotta);font-weight:700;
+  position:relative;left:0.15em;
+}
 
 .legend{
   background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);
@@ -95,6 +117,9 @@ tr:hover td{background:rgba(213,169,60,0.06)}
 }
 .swatch-root{background:var(--navy)}
 .swatch-pgn{background:var(--terracotta)}
+.swatch-masc{background:var(--masc-bg);border:2px solid var(--masc-border)}
+.swatch-fem{background:var(--fem-bg);border:2px solid var(--fem-border)}
+.swatch-common{background:var(--common-bg);border:2px solid var(--common-border)}
 
 .note{
   background:rgba(74,107,82,0.08);border-left:4px solid var(--sage-dark);
@@ -125,7 +150,11 @@ tr:hover td{background:rgba(213,169,60,0.06)}
 
 <p class="section-label">Choose a root:</p>
 <div class="controls">
-  <button class="root-btn active" data-root="shamar">
+  <button class="root-btn active" data-root="pattern" style="border-style:dashed">
+    <span class="hebrew" style="font-size:1.1em;letter-spacing:2px">□□□</span>
+    <span class="english">pattern only</span>
+  </button>
+  <button class="root-btn" data-root="shamar">
     <span class="hebrew">שׁמר</span>
     <span class="english">guard / keep</span>
   </button>
@@ -141,9 +170,14 @@ tr:hover td{background:rgba(213,169,60,0.06)}
 
 <div class="legend">
   <h3>Color Key</h3>
-  <div class="legend-items">
+  <div class="legend-items" style="margin-bottom:10px">
     <div class="legend-item"><span class="legend-swatch swatch-root"></span> Root consonants (constant)</div>
     <div class="legend-item"><span class="legend-swatch swatch-pgn"></span> PGN markers (change with person/gender/number)</div>
+  </div>
+  <div class="legend-items">
+    <div class="legend-item"><span class="legend-swatch swatch-masc"></span> Masculine</div>
+    <div class="legend-item"><span class="legend-swatch swatch-fem"></span> Feminine</div>
+    <div class="legend-item"><span class="legend-swatch swatch-common"></span> Common</div>
   </div>
 </div>
 
@@ -192,9 +226,9 @@ const data = {
   shamar: {
     label: "שׁ-מ-ר (Sh-M-R) — guard, keep",
     qatal: [
-      { pgn:"3ms", tag:"he",
+      { pgn:"3ms", tag:"he/it",
         hebHtml:'<span class="rl">שָׁמַר</span>',
-        trans:"shamar", mean:"he guarded" },
+        trans:"shamar", mean:"he/it guarded" },
       { pgn:"3fs", tag:"she",
         hebHtml:'<span class="rl">שָׁמְרָ</span><span class="pm">ה</span>',
         trans:"shamrah", mean:"she guarded" },
@@ -221,9 +255,9 @@ const data = {
         trans:"shamarnu", mean:"we guarded" }
     ],
     yiqtol: [
-      { pgn:"3ms", tag:"he",
+      { pgn:"3ms", tag:"he/it",
         hebHtml:'<span class="pm">יִ</span><span class="rl">שְׁמֹר</span>',
-        trans:"yishmor", mean:"he will guard" },
+        trans:"yishmor", mean:"he/it will guard" },
       { pgn:"3fs", tag:"she",
         hebHtml:'<span class="pm">תִּ</span><span class="rl">שְׁמֹר</span>',
         trans:"tishmor", mean:"she will guard" },
@@ -256,9 +290,9 @@ const data = {
   barakh: {
     label: "ב-ר-ך (B-R-Kh) — bless",
     qatal: [
-      { pgn:"3ms", tag:"he",
+      { pgn:"3ms", tag:"he/it",
         hebHtml:'<span class="rl">בֵּרַךְ</span>',
-        trans:"berakh", mean:"he blessed" },
+        trans:"berakh", mean:"he/it blessed" },
       { pgn:"3fs", tag:"she",
         hebHtml:'<span class="rl">בֵּרְכָ</span><span class="pm">ה</span>',
         trans:"berekhah", mean:"she blessed" },
@@ -285,9 +319,9 @@ const data = {
         trans:"berakhnu", mean:"we blessed" }
     ],
     yiqtol: [
-      { pgn:"3ms", tag:"he",
+      { pgn:"3ms", tag:"he/it",
         hebHtml:'<span class="pm">יְ</span><span class="rl">בָרֵךְ</span>',
-        trans:"yevarekh", mean:"he will bless" },
+        trans:"yevarekh", mean:"he/it will bless" },
       { pgn:"3fs", tag:"she",
         hebHtml:'<span class="pm">תְּ</span><span class="rl">בָרֵךְ</span>',
         trans:"tevarekh", mean:"she will bless" },
@@ -320,9 +354,9 @@ const data = {
   halakh: {
     label: "ה-ל-ך (H-L-Kh) — go, walk",
     qatal: [
-      { pgn:"3ms", tag:"he",
+      { pgn:"3ms", tag:"he/it",
         hebHtml:'<span class="rl">הָלַךְ</span>',
-        trans:"halakh", mean:"he went" },
+        trans:"halakh", mean:"he/it went" },
       { pgn:"3fs", tag:"she",
         hebHtml:'<span class="rl">הָלְכָ</span><span class="pm">ה</span>',
         trans:"halekhah", mean:"she went" },
@@ -349,9 +383,9 @@ const data = {
         trans:"halakhnu", mean:"we went" }
     ],
     yiqtol: [
-      { pgn:"3ms", tag:"he",
+      { pgn:"3ms", tag:"he/it",
         hebHtml:'<span class="pm">יֵ</span><span class="rl">לֵךְ</span>',
-        trans:"yelekh", mean:"he will go" },
+        trans:"yelekh", mean:"he/it will go" },
       { pgn:"3fs", tag:"she",
         hebHtml:'<span class="pm">תֵּ</span><span class="rl">לֵךְ</span>',
         trans:"telekh", mean:"she will go" },
@@ -380,16 +414,88 @@ const data = {
         hebHtml:'<span class="pm">נֵ</span><span class="rl">לֵךְ</span>',
         trans:"nelekh", mean:"we will go" }
     ]
+  },
+  pattern: {
+    label: "□□□ — Pattern Only (suffixes & prefixes)",
+    qatal: [
+      { pgn:"3ms", tag:"he/it",
+        hebHtml:'<span class="rl"><span class="root-box">&#x25A2;&#x25A2;&#x25A2;</span></span>',
+        trans:"(base form)", mean:"he/it ___" },
+      { pgn:"3fs", tag:"she",
+        hebHtml:'<span class="rl"><span class="root-box">&#x25A2;&#x25A2;&#x25A2;</span></span><span style="color:#c65528;font-weight:700;position:relative;left:0.15em">ָ</span><span class="pm">ה</span>',
+        trans:"-ah", mean:"she ___" },
+      { pgn:"2ms", tag:"you·m",
+        hebHtml:'<span class="rl"><span class="root-box">&#x25A2;&#x25A2;&#x25A2;</span></span><span class="pm">תָּ</span>',
+        trans:"-ta", mean:"you ___ (m)" },
+      { pgn:"2fs", tag:"you·f",
+        hebHtml:'<span class="rl"><span class="root-box">&#x25A2;&#x25A2;&#x25A2;</span></span><span class="pm">תְּ</span>',
+        trans:"-t", mean:"you ___ (f)" },
+      { pgn:"1cs", tag:"I",
+        hebHtml:'<span class="rl"><span class="root-box">&#x25A2;&#x25A2;&#x25A2;</span></span><span class="pm">תִּי</span>',
+        trans:"-ti", mean:"I ___" },
+      { pgn:"3cp", tag:"they",
+        hebHtml:'<span class="rl"><span class="root-box">&#x25A2;&#x25A2;&#x25A2;</span></span><span class="pm">וּ</span>',
+        trans:"-u", mean:"they ___" },
+      { pgn:"2mp", tag:"you·m·pl",
+        hebHtml:'<span class="rl"><span class="root-box">&#x25A2;&#x25A2;&#x25A2;</span></span><span class="pm">תֶּם</span>',
+        trans:"-tem", mean:"you ___ (m·pl)" },
+      { pgn:"2fp", tag:"you·f·pl",
+        hebHtml:'<span class="rl"><span class="root-box">&#x25A2;&#x25A2;&#x25A2;</span></span><span class="pm">תֶּן</span>',
+        trans:"-ten", mean:"you ___ (f·pl)" },
+      { pgn:"1cp", tag:"we",
+        hebHtml:'<span class="rl"><span class="root-box">&#x25A2;&#x25A2;&#x25A2;</span></span><span class="pm">נוּ</span>',
+        trans:"-nu", mean:"we ___" }
+    ],
+    yiqtol: [
+      { pgn:"3ms", tag:"he/it",
+        hebHtml:'<span class="pm">יִ</span><span class="rl"><span class="root-box">&#x25A2;&#x25A2;&#x25A2;</span></span>',
+        trans:"yi-___", mean:"he/it will ___" },
+      { pgn:"3fs", tag:"she",
+        hebHtml:'<span class="pm">תִּ</span><span class="rl"><span class="root-box">&#x25A2;&#x25A2;&#x25A2;</span></span>',
+        trans:"ti-___", mean:"she will ___" },
+      { pgn:"2ms", tag:"you·m",
+        hebHtml:'<span class="pm">תִּ</span><span class="rl"><span class="root-box">&#x25A2;&#x25A2;&#x25A2;</span></span>',
+        trans:"ti-___", mean:"you will ___ (m)" },
+      { pgn:"2fs", tag:"you·f",
+        hebHtml:'<span class="pm">תִּ</span><span class="rl"><span class="root-box">&#x25A2;&#x25A2;&#x25A2;</span></span><span style="color:#c65528;font-weight:700;position:relative;left:0.15em">ִ</span><span class="pm">י</span>',
+        trans:"ti-___-i", mean:"you will ___ (f)" },
+      { pgn:"1cs", tag:"I",
+        hebHtml:'<span class="pm">אֶ</span><span class="rl"><span class="root-box">&#x25A2;&#x25A2;&#x25A2;</span></span>',
+        trans:"e-___", mean:"I will ___" },
+      { pgn:"3mp", tag:"they·m",
+        hebHtml:'<span class="pm">יִ</span><span class="rl"><span class="root-box">&#x25A2;&#x25A2;&#x25A2;</span></span><span class="pm">וּ</span>',
+        trans:"yi-___-u", mean:"they will ___ (m)" },
+      { pgn:"3fp", tag:"they·f",
+        hebHtml:'<span class="pm">תִּ</span><span class="rl"><span class="root-box">&#x25A2;&#x25A2;&#x25A2;</span></span><span class="pm">נָה</span>',
+        trans:"ti-___-nah", mean:"they will ___ (f)" },
+      { pgn:"2mp", tag:"you·m·pl",
+        hebHtml:'<span class="pm">תִּ</span><span class="rl"><span class="root-box">&#x25A2;&#x25A2;&#x25A2;</span></span><span class="pm">וּ</span>',
+        trans:"ti-___-u", mean:"you will ___ (m·pl)" },
+      { pgn:"2fp", tag:"you·f·pl",
+        hebHtml:'<span class="pm">תִּ</span><span class="rl"><span class="root-box">&#x25A2;&#x25A2;&#x25A2;</span></span><span class="pm">נָה</span>',
+        trans:"ti-___-nah", mean:"you will ___ (f·pl)" },
+      { pgn:"1cp", tag:"we",
+        hebHtml:'<span class="pm">נִ</span><span class="rl"><span class="root-box">&#x25A2;&#x25A2;&#x25A2;</span></span>',
+        trans:"ni-___", mean:"we will ___" }
+    ]
   }
 };
+
+function getGender(pgn) {
+  if (pgn.includes('cs') || pgn.includes('cp')) return 'common';
+  if (pgn.includes('fs') || pgn.includes('fp')) return 'fem';
+  return 'masc';
+}
 
 function renderTable(tableId, forms) {
   const tbody = document.querySelector(`#${tableId} tbody`);
   tbody.innerHTML = '';
   forms.forEach(f => {
+    const g = getGender(f.pgn);
     const tr = document.createElement('tr');
+    tr.className = `row-${g}`;
     tr.innerHTML = `
-      <td><span class="pgn-tag">${f.pgn}</span> <span style="color:var(--text-light);font-size:0.85em">${f.tag}</span></td>
+      <td><span class="pgn-tag pgn-tag--${g}">${f.pgn}</span> <span style="color:var(--text-light);font-size:0.85em">${f.tag}</span></td>
       <td><span class="hebrew-form">${f.hebHtml}</span></td>
       <td><span class="transliteration">${f.trans}</span></td>
       <td><span class="meaning">${f.mean}</span></td>
@@ -414,8 +520,8 @@ document.querySelectorAll('.root-btn').forEach(btn => {
   btn.addEventListener('click', () => selectRoot(btn.dataset.root));
 });
 
-// Initial render
-selectRoot('shamar');
+// Initial render — show pattern first, then users explore with real roots
+selectRoot('pattern');
 </script>
 </body>
 </html>

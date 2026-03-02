@@ -1,0 +1,274 @@
+<!-- PGN Grid Template v1 — Reusable for any Person-Gender-Number layout -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The PGN Grid — Person, Gender, and Number</title>
+<style>
+:root{
+  --navy:#1e3a4f;--slate:#57899c;--sage-dark:#4a6b52;--sage-mid:#7a9e7e;--sage-pale:#dce8dd;
+  --gold:#d5a93c;--plum:#6a5983;--copper:#c37c3c;--terracotta:#c65528;
+  --card:#fff;--text:#2c3e50;--text-light:#6b7c8a;--shadow:0 2px 8px rgba(0,0,0,0.08);
+  --radius:12px;
+
+  /* PGN Gender Colors */
+  --masc-bg:rgba(87,137,156,0.10);
+  --masc-border:#57899c;
+  --fem-bg:rgba(106,89,131,0.10);
+  --fem-border:#6a5983;
+  --common-bg:rgba(122,158,126,0.10);
+  --common-border:#4a6b52;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Georgia','Times New Roman',serif;color:var(--text);line-height:1.7;
+  padding:24px;max-width:720px;margin:0 auto;background:#fafbfc}
+
+.header{
+  background:linear-gradient(135deg,var(--navy),var(--slate));
+  color:#fff;padding:28px 32px;border-radius:var(--radius);margin-bottom:24px;
+}
+.header h1{color:#fff;font-size:1.45em;margin-bottom:4px}
+.header .subtitle{color:rgba(255,255,255,0.8);font-size:0.95em;margin:0}
+
+.note{
+  background:rgba(74,107,82,0.08);border-left:4px solid var(--sage-dark);
+  border-radius:8px;padding:14px 18px;margin-bottom:24px;font-size:0.92em;line-height:1.6;
+}
+
+/* Legend */
+.legend{
+  background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:16px 20px;margin-bottom:24px;
+}
+.legend h3{color:var(--navy);font-size:0.95em;margin-bottom:10px}
+.legend-items{display:flex;gap:20px;flex-wrap:wrap}
+.legend-item{display:flex;align-items:center;gap:8px;font-size:0.88em}
+.legend-swatch{width:20px;height:20px;border-radius:4px;display:inline-block;border:2px solid transparent}
+.swatch-masc{background:var(--masc-bg);border-color:var(--masc-border)}
+.swatch-fem{background:var(--fem-bg);border-color:var(--fem-border)}
+.swatch-common{background:var(--common-bg);border-color:var(--common-border)}
+
+/* Grid */
+.pgn-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  border:1px solid var(--sage-pale);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  background:var(--card);
+  margin-bottom:24px;
+}
+
+/* Column headers */
+.pgn-col-header{
+  background:rgba(74,107,82,0.12);
+  color:var(--sage-dark);
+  padding:12px 16px;
+  font-size:0.85em;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.8px;
+  text-align:center;
+  border-bottom:2px solid var(--sage-pale);
+}
+
+/* Person group headers */
+.pgn-person-header{
+  grid-column:1 / -1;
+  background:linear-gradient(135deg,var(--navy),var(--slate));
+  color:#fff;
+  padding:10px 20px;
+  font-size:0.95em;
+  font-weight:600;
+}
+
+/* Cells */
+.pgn-cell{
+  padding:16px 18px;
+  border-bottom:1px solid #eef1f3;
+  border-left:4px solid transparent;
+  transition:background 0.15s;
+}
+.pgn-cell:hover{filter:brightness(0.97)}
+
+.pgn-cell--masc{background:var(--masc-bg);border-left-color:var(--masc-border)}
+.pgn-cell--fem{background:var(--fem-bg);border-left-color:var(--fem-border)}
+.pgn-cell--common{background:var(--common-bg);border-left-color:var(--common-border)}
+
+/* Right column cells get right border instead */
+.pgn-cell--right{border-left:none;border-right:4px solid transparent}
+.pgn-cell--right.pgn-cell--masc{border-right-color:var(--masc-border)}
+.pgn-cell--right.pgn-cell--fem{border-right-color:var(--fem-border)}
+.pgn-cell--right.pgn-cell--common{border-right-color:var(--common-border)}
+
+/* Add left border between columns */
+.pgn-cell--right{border-left:1px solid #eef1f3}
+
+.pgn-abbrev{
+  display:inline-block;font-size:0.75em;font-weight:700;
+  padding:3px 10px;border-radius:10px;
+  background:rgba(87,137,156,0.15);color:var(--navy);
+  letter-spacing:0.5px;text-transform:uppercase;
+  margin-bottom:4px;
+}
+.pgn-cell--fem .pgn-abbrev{background:rgba(106,89,131,0.15);color:var(--plum)}
+.pgn-cell--common .pgn-abbrev{background:rgba(74,107,82,0.15);color:var(--sage-dark)}
+
+.pgn-pronoun{
+  font-size:1.25em;font-weight:600;color:var(--text);
+  display:block;margin:4px 0 2px;
+}
+
+.pgn-label{
+  font-size:0.8em;color:var(--text-light);font-style:italic;
+}
+
+/* Last row in each group — no bottom border */
+.pgn-grid .pgn-cell:last-child{border-bottom:none}
+
+/* Footer note */
+.footer-note{
+  background:rgba(74,107,82,0.08);border-left:4px solid var(--sage-dark);
+  border-radius:8px;padding:14px 18px;font-size:0.88em;line-height:1.6;
+  color:var(--text-light);
+}
+
+@media(max-width:700px){
+  body{padding:12px}
+  .header{padding:20px}
+  .pgn-grid{grid-template-columns:1fr}
+
+  /* On mobile, hide the duplicate column headers — show just one label per section */
+  .pgn-col-header.col-plural{display:none}
+  .pgn-col-header.col-singular{
+    grid-column:1 / -1;
+    display:none;
+  }
+
+  /* Show mobile section labels */
+  .pgn-mobile-label{display:block !important}
+
+  .pgn-cell{padding:14px 16px}
+  .pgn-cell--right{border-left:none;border-right:none;border-left:4px solid transparent}
+  .pgn-cell--right.pgn-cell--masc{border-left-color:var(--masc-border)}
+  .pgn-cell--right.pgn-cell--fem{border-left-color:var(--fem-border)}
+  .pgn-cell--right.pgn-cell--common{border-left-color:var(--common-border)}
+}
+
+.pgn-mobile-label{
+  display:none;
+  grid-column:1 / -1;
+  background:var(--sage-pale);
+  color:var(--sage-dark);
+  padding:8px 16px;
+  font-size:0.8em;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.8px;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>The PGN Grid</h1>
+  <p class="subtitle">Person, Gender, and Number — The 10 Forms of Every Hebrew Verb</p>
+</div>
+
+<div class="note">
+  <strong>How to read this chart:</strong> Hebrew verbs change form based on <em>who</em> is doing the action. This grid maps every combination of Person (1st, 2nd, 3rd), Gender (masculine, feminine, common), and Number (singular, plural). The abbreviations shown here (1cs, 2ms, 3fp, etc.) are the standard shorthand used in lexicons and concordances.
+</div>
+
+<div class="legend">
+  <h3>Color Key</h3>
+  <div class="legend-items">
+    <div class="legend-item"><span class="legend-swatch swatch-masc"></span> Masculine</div>
+    <div class="legend-item"><span class="legend-swatch swatch-fem"></span> Feminine</div>
+    <div class="legend-item"><span class="legend-swatch swatch-common"></span> Common (no gender distinction)</div>
+  </div>
+</div>
+
+<div class="pgn-grid">
+  <!-- Column Headers -->
+  <div class="pgn-col-header col-singular">Singular</div>
+  <div class="pgn-col-header col-plural">Plural</div>
+
+  <!-- 1st Person -->
+  <div class="pgn-person-header">1st Person</div>
+
+  <div class="pgn-mobile-label">Singular</div>
+  <div class="pgn-cell pgn-cell--common">
+    <span class="pgn-abbrev">1cs</span>
+    <span class="pgn-pronoun">"I"</span>
+    <span class="pgn-label">1st person, common, singular</span>
+  </div>
+  <div class="pgn-mobile-label">Plural</div>
+  <div class="pgn-cell pgn-cell--common pgn-cell--right">
+    <span class="pgn-abbrev">1cp</span>
+    <span class="pgn-pronoun">"we"</span>
+    <span class="pgn-label">1st person, common, plural</span>
+  </div>
+
+  <!-- 2nd Person -->
+  <div class="pgn-person-header">2nd Person</div>
+
+  <div class="pgn-mobile-label">Singular</div>
+  <div class="pgn-cell pgn-cell--masc">
+    <span class="pgn-abbrev">2ms</span>
+    <span class="pgn-pronoun">"you" <span style="font-size:0.7em;font-weight:400;color:var(--text-light)">(m)</span></span>
+    <span class="pgn-label">2nd person, masculine, singular</span>
+  </div>
+  <div class="pgn-mobile-label">Plural</div>
+  <div class="pgn-cell pgn-cell--masc pgn-cell--right">
+    <span class="pgn-abbrev">2mp</span>
+    <span class="pgn-pronoun">"you all" <span style="font-size:0.7em;font-weight:400;color:var(--text-light)">(m)</span></span>
+    <span class="pgn-label">2nd person, masculine, plural</span>
+  </div>
+
+  <div class="pgn-cell pgn-cell--fem">
+    <span class="pgn-abbrev">2fs</span>
+    <span class="pgn-pronoun">"you" <span style="font-size:0.7em;font-weight:400;color:var(--text-light)">(f)</span></span>
+    <span class="pgn-label">2nd person, feminine, singular</span>
+  </div>
+  <div class="pgn-cell pgn-cell--fem pgn-cell--right">
+    <span class="pgn-abbrev">2fp</span>
+    <span class="pgn-pronoun">"you all" <span style="font-size:0.7em;font-weight:400;color:var(--text-light)">(f)</span></span>
+    <span class="pgn-label">2nd person, feminine, plural</span>
+  </div>
+
+  <!-- 3rd Person -->
+  <div class="pgn-person-header">3rd Person</div>
+
+  <div class="pgn-mobile-label">Singular</div>
+  <div class="pgn-cell pgn-cell--masc">
+    <span class="pgn-abbrev">3ms</span>
+    <span class="pgn-pronoun">"he / it"</span>
+    <span class="pgn-label">3rd person, masculine, singular</span>
+  </div>
+  <div class="pgn-mobile-label">Plural</div>
+  <div class="pgn-cell pgn-cell--masc pgn-cell--right">
+    <span class="pgn-abbrev">3mp</span>
+    <span class="pgn-pronoun">"they" <span style="font-size:0.7em;font-weight:400;color:var(--text-light)">(m)</span></span>
+    <span class="pgn-label">3rd person, masculine, plural</span>
+  </div>
+
+  <div class="pgn-cell pgn-cell--fem">
+    <span class="pgn-abbrev">3fs</span>
+    <span class="pgn-pronoun">"she"</span>
+    <span class="pgn-label">3rd person, feminine, singular</span>
+  </div>
+  <div class="pgn-cell pgn-cell--fem pgn-cell--right">
+    <span class="pgn-abbrev">3fp</span>
+    <span class="pgn-pronoun">"they" <span style="font-size:0.7em;font-weight:400;color:var(--text-light)">(f)</span></span>
+    <span class="pgn-label">3rd person, feminine, plural</span>
+  </div>
+</div>
+
+<div class="footer-note">
+  <strong>Pattern to notice:</strong> First person has no gender split — it collapses to just two forms (singular and plural), labeled "common." Second and third person each split into masculine and feminine, giving four forms apiece. These 10 abbreviations (1cs, 2ms, 3fp, etc.) are the standard shorthand you will encounter in every Hebrew lexicon, concordance, and interlinear Bible.
+</div>
+
+</body>
+</html>
