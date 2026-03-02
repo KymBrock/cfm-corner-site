@@ -29,8 +29,9 @@ All spec documents for the CFM Corner site content pipeline. Read these before c
 | 4 | Latin dictionary (Logeion) | Regular link, opens new tab | `logeion.uchicago.edu/WORD` |
 | 5 | English dictionary (MW) | Regular link, opens new tab | `merriam-webster.com/dictionary/WORD` |
 | 6 | English dictionary (1828) | Regular link in parentheses after MW | `webstersdictionary1828.com/Dictionary/WORD` |
-| 7 | Google Maps satellite | Regular link with `&t=k` param | `google.com/maps/place/...&t=k` |
-| 8 | Content-area links | Sage-green with subtle border-bottom | Varies |
+| 7 | Location maps (multi-source) | Inline icon links per location: HLS, Atlas, BYU | See Location Map Sources below |
+| 8 | Google Maps satellite | Regular link with `&t=k` param (legacy, use multi-source for new content) | `google.com/maps/place/...&t=k` |
+| 9 | Content-area links | Sage-green with subtle border-bottom | Varies |
 
 ### Dictionary Sources
 
@@ -41,6 +42,20 @@ All spec documents for the CFM Corner site content pipeline. Read these before c
 | Logeion | `https://logeion.uchicago.edu/WORD` | Latin (Vulgate) cross-language rows | No |
 | Merriam-Webster | `https://www.merriam-webster.com/dictionary/WORD` | English etymology connections | No |
 | Webster's 1828 | `https://webstersdictionary1828.com/Dictionary/WORD` | Historical English definitions | No |
+
+### Location Map Sources
+
+Used in study guide Key Locations sections. Each location gets compact inline links to available sources.
+
+| Source | URL Pattern | Abbreviation | Per-Location? |
+|--------|-------------|--------------|---------------|
+| Holy Land Site | `https://www.holylandsite.com/{location}` | HLS | Yes (when page exists) |
+| Bible Atlas | `https://bibleatlas.org/{location}.htm` | Atlas | Yes |
+| BYU Scriptures Mapped | `https://scriptures.byu.edu/mapscrip/` | BYU | No (general tool) |
+
+**Inline pattern:** `&#x1F5FA;&#xFE0E; HLS · Atlas · BYU` after each location name. See `STUDY-GUIDE-SPEC.md` for full HTML pattern.
+
+**Planning doc:** `OT_2026/Planning/Content_Maps/OT_Location_Map_by_Week.md` has per-week Holy Land Site URLs.
 
 ### Key Paths
 
@@ -77,7 +92,10 @@ All spec documents for the CFM Corner site content pipeline. Read these before c
 - **Scripture links:** handled by BLB ScriptTagger (dotted underline via `.BLBScriptRef` CSS)
 - **Blockquotes:** left border accent, cream background, italic text, rounded right corners
 - **`<hr>` separators:** between sub-sections and between word studies
+- **Location map links:** compact inline format (`HLS · Atlas · BYU`) at 0.85em, styled in section color (#8B7355 for study guide, #7c9885 for resources)
+- **Lexicon coverage:** every Hebrew/Greek Unicode character in body text (including dash-separated roots) must have a lexicon link (see `LEXICON-POPUP-SPEC.md`)
+- **Auto-linking:** `hugo_converter.py` auto-links bare scriptures and Hebrew/Greek terms during generation; `link-audit.py --fix` applies the same auto-linkers post-hoc
 
 ---
 
-*Version 1.0 — 2026-02-19*
+*Version 1.1 — 2026-03-01*

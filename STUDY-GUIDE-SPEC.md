@@ -6,7 +6,7 @@ Complete format specification for CFM Corner weekly study guides. Canonical exam
 
 ## Overview
 
-Each study guide is a single HTML file embedded via Hugo into the site layout. It contains inline `<style>`, a header section, quick links, expand/collapse buttons, and 6 major accordion sections. No external CSS file — all styles are self-contained in the HTML.
+Each study guide is a single HTML file embedded via Hugo into the site layout. It contains inline `<style>`, a header section, quick links, expand/collapse buttons, and 7 major accordion sections. No external CSS file — all styles are self-contained in the HTML. The `<style>` block is generated automatically by `hugo_converter.py` (stored as `SG_STYLE_BLOCK` class constant).
 
 ---
 
@@ -34,14 +34,14 @@ Each study guide is a single HTML file embedded via Hugo into the site layout. I
     <button class="expand-button" onclick="collapseAll()">⊟ Collapse All</button>
   </div>
 
-  <!-- SECTION 1–6: Major Accordion Sections -->
+  <!-- SECTION 1–7: Major Accordion Sections -->
   ...
 </div>
 ```
 
 ---
 
-## Major Accordion Sections (6 total)
+## Major Accordion Sections (7 total)
 
 Each major section uses this pattern:
 
@@ -62,16 +62,19 @@ Each major section uses this pattern:
 </div>
 ```
 
-### The 6 Sections
+### The 7 Sections
 
-| # | Title Pattern | Contains |
-|---|--------------|----------|
-| 1 | `Book Chapter–Chapter` (e.g., "Genesis 18–23") | Week Overview sub-sections |
-| 2 | `Week NN: Historical & Cultural Context` | ANE context, archaeology, tradition |
-| 3 | `Week NN: Key Passages Study` | Verse-by-verse analysis per passage |
-| 4 | `Week NN: Word Studies` | Hebrew word studies with cross-language tables |
-| 5 | `Week NN: Teaching Applications` | Per-setting teaching ideas |
-| 6 | `Week NN: Study Questions` | Grouped by question type |
+| # | Title Pattern | Source File | Contains |
+|---|--------------|------------|----------|
+| 1 | `Book Chapter–Chapter` (e.g., "Genesis 24–33") | `01_Week_Overview.md` | Week Overview sub-sections |
+| 2 | `Week NN: Historical & Cultural Context` | `02_Historical_Cultural_Context.md` | ANE context, archaeology, tradition |
+| 3 | `Week NN: Key Passages Study` | `03_Key_Passages_Study.md` | Verse-by-verse analysis per passage |
+| 4 | `Week NN: Word Studies` | `04_Word_Studies.md` | Hebrew word studies with cross-language tables |
+| 5 | `Jewish Perspective: Book Chapter–Chapter` | `05_Jewish_Perspective.md` | Jewish interpretive traditions with LDS connections |
+| 6 | `Week NN: Teaching Applications` | `06_Teaching_Applications.md` | Per-setting teaching ideas |
+| 7 | `Week NN: Study Questions` | `07_Study_Questions.md` | Grouped by question type |
+
+**Section numbering:** The converter (`hugo_converter.py`) numbers sections dynamically based on the alphabetical sort order of `*.md` files in `03_Study_Guide/`. Adding or removing files automatically renumbers all sections.
 
 ---
 
@@ -101,9 +104,10 @@ Each sub-accordion ends with `<hr>`.
 Sub-accordions per topic (e.g., "Ancient Near Eastern Setting", "The Akedah in Jewish and Christian Tradition"). Content is narrative prose with:
 - `<h3>` sub-headings within each sub-panel
 - Bullet lists for archaeological evidence, traditions
-- Inline lexicon links for Hebrew terms
+- Inline lexicon links for Hebrew terms (every Hebrew/Greek Unicode character must be linked)
 - Blockquotes for prophetic/scholarly quotes
 - Scripture links (auto-detected by ScriptTagger + manual BLB links)
+- Location links with multi-source map resources (Key Locations sub-section)
 
 ---
 
@@ -243,7 +247,87 @@ This is the most structured section. Each word study follows this exact pattern:
 
 ---
 
-## Section 5: Teaching Applications
+## Section 5: Jewish Perspective
+
+Sub-accordions per topic, exploring how Jewish interpretive traditions illuminate the week's reading. Content respectfully engages Jewish sources while maintaining an LDS theological framework.
+
+**Source file:** `05_Jewish_Perspective.md`
+
+**Required sub-sections (minimum):**
+1. **Introduction: Why Jewish Sources Matter** — Brief framing of the value of Jewish interpretive traditions for LDS readers
+2. **3–5 topical sub-accordions** — Each examines a specific passage or theme through Jewish lenses (Targumim, Midrash, Talmud, medieval commentators like Rashi, Ramban, etc.)
+3. **Each topical section includes:**
+   - Jewish source citation and explanation
+   - LDS doctrinal connection or parallel
+   - Practical application for modern covenant-keeping
+4. **Reflection Questions** — Closing questions that bridge Jewish and LDS perspectives
+
+```html
+<button class="sg-sub-accordion"><span>Introduction: Why Jewish Sources Matter</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Framing paragraph on the value of Jewish interpretive traditions...</p>
+<p><strong>A Word About Approach:</strong></p>
+<ul>
+<li>We respect these as <strong>Jewish interpretive traditions</strong>, not LDS scripture</li>
+<li>We look for <strong>genuine parallels</strong> rather than forced comparisons</li>
+<li>We let Jewish voices speak in their own terms before connecting to our framework</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Topic Title (e.g., "The Birthright in Jewish Tradition")</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Jewish Source</h3>
+<p>Citation and explanation from Targum, Midrash, or commentary...</p>
+<h3>LDS Connection</h3>
+<p>How this illuminates LDS doctrine or practice...</p>
+<h3>Application</h3>
+<p>Practical takeaway for covenant living...</p>
+<hr>
+</div>
+</div>
+```
+
+### Guidelines for Jewish Perspective Content
+- **Always cite sources** by name: Targum Onkelos, Midrash Rabbah, Rashi, Ramban, etc.
+- **Respect Jewish tradition** — present interpretations in their own terms before drawing LDS parallels
+- **Avoid forced comparisons** — genuine connections are more valuable than superficial similarities
+- **Mark non-LDS sources clearly** — readers should always know when they're reading Jewish vs. LDS interpretation
+- **Focus on enrichment** — this section adds depth, not replacement, to LDS scriptural understanding
+
+### ⛔ Sourcing & Verification Requirements (Anti-Hallucination)
+
+**NEVER fabricate, paraphrase from memory, or improvise rabbinic quotes.** Every claim attributed to a Jewish source MUST be verified against actual text in the Sacred Texts vault before inclusion.
+
+**Sacred Texts vault:** `/Users/kymberbrockbank/Obsidian/Sacred Texts/`
+
+**Required workflow:**
+1. **Search** the Sacred Texts vault for commentary on the week's chapters:
+   - Midrash Rabbah: `04_Midrash/Midrash_Rabbah/` (Genesis Rabbah for Genesis weeks, etc.)
+   - Talmud Bavli: `03_Talmud/Bavli/` (34 tractates)
+   - Targumim: `05_Targumim/` (Onkelos, Jonathan, Pseudo-Jonathan)
+   - Mishnah: `03_Talmud/Mishnah/`
+   - Additional: `04_Midrash/Tanchuma/`, `04_Midrash/Pirke_deRabbi_Eliezer/`, `06_Mystical/Zohar/`
+2. **Extract** relevant passages verbatim from vault files; record the file path for traceability
+3. **Cite** each source with verification status:
+   - `✓ Vault` — text found and confirmed in Sacred Texts vault
+   - `⚠ External` — general scholarly knowledge not verified against vault text; mark as `[UNVERIFIED — needs manual confirmation]`
+4. **Kymber reviews** all Jewish Perspective content before publication — this section is never auto-deployed
+
+**What counts as verified:**
+- ✅ Text found in Sacred Texts vault file and quoted/paraphrased from it
+- ✅ Tractate/chapter reference confirmed against vault file contents
+- ⚠ General knowledge about a commentator's position without vault text → mark External
+- ⛔ "Rashi says..." from AI memory with no vault search → **NEVER acceptable**
+
+See `INSTRUCTIONS_FOR_CLAUDE.md` → "Jewish Perspective Sourcing Protocol" for full details, vault path table, and search examples.
+
+---
+
+## Section 6: Teaching Applications
 
 Sub-accordions per teaching context:
 
@@ -261,7 +345,7 @@ Sub-accordions per teaching context:
 
 ---
 
-## Section 6: Study Questions
+## Section 7: Study Questions
 
 Sub-accordions grouped by question type (e.g., "Comprehension Questions", "Analysis Questions", "Application Questions", "Synthesis Questions"):
 
@@ -333,14 +417,59 @@ For explicit BLB scripture links (used in lists, specific formatting):
 ```
 - Always in parentheses, always immediately after the MW link for the same word
 
-### 7. Google Maps Satellite Links
+### 7. Location Map Links (Multi-Source)
+
+Each biblical location in the Key Locations sub-section gets compact inline links to up to three map sources:
+
+```html
+<li><strong>Bethel (Luz)</strong> — Jacob's ladder vision (Gen. 28:10-22)
+  <span style="font-size: 0.85em; white-space: nowrap;">&#x1F5FA;&#xFE0E;
+    <a href="https://www.holylandsite.com/bethel" target="_blank"
+       style="color: #8B7355;" title="Holy Land Site: Bethel">HLS</a> ·
+    <a href="https://bibleatlas.org/bethel.htm" target="_blank"
+       style="color: #8B7355;" title="Bible Atlas: Bethel">Atlas</a> ·
+    <a href="https://scriptures.byu.edu/mapscrip/" target="_blank"
+       style="color: #8B7355;" title="BYU Scriptures Mapped">BYU</a>
+  </span>
+</li>
+```
+
+**Footer** at the end of the Key Locations section:
+```html
+<p style="font-size: 0.85em; color: #8B7355; margin-top: 10px;">
+  <strong>Map Resources:</strong>
+  <a href="https://www.holylandsite.com/all-biblical-sites" target="_blank" style="color: #8B7355;">Holy Land Site</a> ·
+  <a href="https://bibleatlas.org/" target="_blank" style="color: #8B7355;">Bible Atlas</a> ·
+  <a href="https://scriptures.byu.edu/mapscrip/" target="_blank" style="color: #8B7355;">BYU Scriptures Mapped</a>
+</p>
+```
+
+**Rules:**
+- **HLS** — include only when holylandsite.com has a page for that location (check `OT_Location_Map_by_Week.md`)
+- **Atlas** — bibleatlas.org has most biblical locations; always include
+- **BYU** — general tool (no per-location URLs); always include
+- Use `&#x1F5FA;&#xFE0E;` (map icon with text variation selector) before link set
+- Style links in section color (`#8B7355` for study guide)
+
+### 8. Google Maps Satellite Links (Legacy)
 ```html
 <a href="https://www.google.com/maps/place/COORDS&t=k" target="_blank">Place Name</a>
 ```
 - `&t=k` parameter for satellite view
+- For new content, prefer multi-source location maps (Link Type 7) instead
 
-### 8. Content-Area Links (General)
+### 9. Content-Area Links (General)
 - Styled via CSS `.panel-content a` and `.sg-sub-panel-content a` — sage-brown (`#8B7355`), hover underline
+
+---
+
+## Comprehensive Lexicon Coverage Rule
+
+> **Every Hebrew/Greek Unicode character in body text must be inside a lexicon `<a>` tag with full `data-*` attributes.** The only exception is accordion `<button>` headings, where nesting `<a>` inside `<button>` causes click-handler conflicts. Run `link-audit.py` to verify zero bare terms before publishing.
+
+This applies across ALL 7 study guide sections, not just Word Studies. Includes both contiguous Hebrew/Greek text AND dash-separated root consonants (e.g., ב-ר-כ). See `LEXICON-POPUP-SPEC.md` for the full list of sections where links are required.
+
+**Auto-Linker:** The `hugo_converter.py` auto-linkers run automatically during generation, linking bare scriptures (`_auto_link_scriptures()`) and Hebrew/Greek terms including roots (`_auto_link_hebrew_greek()`). For post-hoc fixes: `python3 scripts/link-audit.py --fix --week weekNN`.
 
 ---
 
@@ -484,11 +613,18 @@ Sub-accordion toggle is handled by click event listeners that toggle `.active` c
 - [ ] `<hr>` separator between word studies
 - [ ] New terms added to `lexicon-popups.json`
 
-### Section 5: Teaching Applications
+### Section 5: Jewish Perspective
+- [ ] Rabbinic commentary on key passages (Rashi, Ramban, Midrash)
+- [ ] Jewish interpretive traditions relevant to the week's reading
+- [ ] Connections to Jewish liturgy, practice, or holidays where applicable
+- [ ] Cross-references between Jewish and Latter-day Saint insights
+- [ ] Proper source citations for all rabbinic/scholarly quotes
+
+### Section 6: Teaching Applications
 - [ ] 3–5 teaching settings/activities
 - [ ] Practical, actionable suggestions
 
-### Section 6: Study Questions
+### Section 7: Study Questions
 - [ ] Grouped by type (Comprehension, Analysis, Application, Synthesis)
 - [ ] 20+ questions total
 - [ ] Scripture references in questions
@@ -496,13 +632,17 @@ Sub-accordion toggle is handled by click event listeners that toggle `.active` c
 ### Final Checks
 - [ ] All sub-panels have `style="display: block;"` (open by default)
 - [ ] All sections end with `<hr>` before closing tags
-- [ ] File status footer at end of Section 1
+- [ ] No backend metadata visible (File Status, Created, Last Updated, Next File)
 - [ ] Test expand/collapse functionality
 - [ ] Test lexicon hover popups
 - [ ] Test ScriptTagger scripture detection
 - [ ] Verify all external links open in new tab (`target="_blank"`)
+- [ ] Run `link-audit.py` — zero BARE HEBREW, BARE ROOT, and BARE BLB LINK issues
+- [ ] If issues found, run `link-audit.py --fix --week weekNN` to auto-link bare terms
+- [ ] All Key Locations have multi-source map links (HLS where available, Atlas, BYU)
+- [ ] Every Hebrew/Greek Unicode character in body text is inside a lexicon `<a>` tag
 
 ---
 
-*Version 1.0 — 2026-02-19*
-*Canonical Example: Week 09 (`static/content/week09/study-guide.html`)*
+*Version 1.2 — 2026-03-01*
+*Canonical Examples: Week 09 (`static/content/week09/study-guide.html`), Week 10 (`static/content/week10/study-guide.html`)*

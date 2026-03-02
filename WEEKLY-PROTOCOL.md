@@ -28,6 +28,7 @@ Write or review these files:
 - [ ] `04_Word_Studies.md` — Hebrew/Greek word studies
 - [ ] `05_Teaching_Applications.md` — Teaching ideas for 7 settings
 - [ ] `06_Study_Questions.md` — Discussion/reflection questions
+- [ ] All Hebrew/Greek terms in body text have lexicon links (not just word studies)
 
 ### 1.2 Weekly Insights (folder: `02_Weekly_Insights/`)
 - [ ] `Weekly_Insights_WeekNN.md` — Narrative synthesis of the week
@@ -111,10 +112,14 @@ Verify outputs:
 - [ ] `insights.html` — from Weekly Insights markdown
 - [ ] `resources.html` — from Video Resources / VIDEO_URL_TRACKER (**must match `RESOURCES-HTML-SPEC.md`**)
 - [ ] Any chart HTML files referenced in front matter
+- [ ] Run `link-audit.py` on **all three** files (study-guide, insights, resources) — zero issues
+- [ ] If issues found, run `link-audit.py --fix --week weekNN` to auto-link bare terms
+- [ ] All BLB lexicon links have `data-lexicon` popup attributes (no bare BLB links)
+- [ ] Key Locations section has multi-source map links (HLS, Atlas, BYU)
 
 > **Important:** The resources HTML must follow the format in [`RESOURCES-HTML-SPEC.md`](RESOURCES-HTML-SPEC.md). Canonical example: `static/content/week08/resources.html`. Every week must include: Church Media for Families section, video thumbnail cards (never plain text links), Bible Project theme + word study videos, and all accordion sections.
 
-> **Hebrew/Greek lexicon links** must use hover popups per [`LEXICON-POPUP-SPEC.md`](LEXICON-POPUP-SPEC.md). All BLB lexicon links in study guides and insights get `data-lexicon` attributes. New terms must be added to `cfm-corner-tools/data/lexicon-popups.json`. The GUI converter handles this automatically for links in Obsidian markdown.
+> **Hebrew/Greek lexicon links** must use hover popups per [`LEXICON-POPUP-SPEC.md`](LEXICON-POPUP-SPEC.md). **Every Hebrew/Greek Unicode character in body text** must be inside a lexicon `<a>` tag with all `data-*` attributes — not just first occurrences and not just in Word Studies. New terms must be added to `cfm-corner-tools/data/lexicon-popups.json`. The GUI converter handles this automatically for links in Obsidian markdown.
 
 ### 2.3 Lesson Image
 - [ ] Add lesson image to `static/images/weeks/weekNN.jpg`
@@ -228,4 +233,4 @@ Output: `~/Desktop/cfm-email-weekNN.html`
 
 ---
 
-*Last updated: 2026-02-19*
+*Last updated: 2026-03-01*

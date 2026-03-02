@@ -198,6 +198,22 @@ Thumbnails: fetch from page source (`assets.churchofjesuschrist.org/...`)
 
 ---
 
+## Maps & Biblical Locations Section
+
+The MAPS & BIBLICAL LOCATIONS accordion section uses the same multi-source map pattern as the study guide Key Locations. Three map resources are included:
+
+| Source | URL Pattern | Abbreviation |
+|--------|-------------|--------------|
+| Holy Land Site | `https://www.holylandsite.com/{location}` | HLS |
+| Bible Atlas | `https://bibleatlas.org/{location}.htm` | Atlas |
+| BYU Scriptures Mapped | `https://scriptures.byu.edu/mapscrip/` | BYU |
+
+Table rows in this section should link to individual location pages on Holy Land Site and Bible Atlas where available, plus the general BYU Scriptures Mapped tool. Style links in resources palette (`#7c9885`).
+
+See `STUDY-GUIDE-SPEC.md` for the full inline HTML pattern used in study guide Key Locations.
+
+---
+
 ## Table Pattern (for reference lists)
 
 Used in: Official Church Resources, Academic Sites, Maps, Jewish Resources.
@@ -344,7 +360,14 @@ Only these things change per week:
 
 Everything else (static reference links, collection links, JS, CSS) is identical.
 
+### Auto-Linking
+The `hugo_converter.py` auto-linkers run on `resources.html` during generation, automatically linking bare scripture references and any Hebrew/Greek terms. The `link-audit.py` script now scans resources.html alongside study-guide.html and insights.html:
+```bash
+python3 scripts/link-audit.py --week weekNN              # audits all three files
+python3 scripts/link-audit.py --fix --week weekNN         # auto-links bare terms
+```
+
 ---
 
 *Canonical example: `static/content/week08/resources.html`*
-*Spec version: 1.0 — 2026-02-19*
+*Spec version: 1.2 — 2026-03-01*
