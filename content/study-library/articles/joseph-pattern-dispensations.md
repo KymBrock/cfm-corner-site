@@ -1,5 +1,5 @@
 ---
-title: "The Joseph Pattern: How God Recycles His Covenants Across Dispensations"
+title: "The Joseph Pattern: How God Renews His Covenants Across Dispensations"
 description: "The story of Joseph of Egypt is not merely ancient biography — it is a prophetic map whose lines run forward with remarkable precision to Lehi's family, to Joseph Smith, and to us. Exploring how God embeds dispensational patterns into scripture as a recurring covenant language."
 weight: 3
 related_weeks: ["11"]
