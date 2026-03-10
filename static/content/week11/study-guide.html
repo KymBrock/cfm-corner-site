@@ -1,0 +1,2052 @@
+<style>
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+        .site-header {
+            background: linear-gradient(135deg, #d4c4a8 0%, #8B7355 100%);
+            color: white; padding: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px;
+        }
+        .site-header-content { max-width: 1000px; margin: 0 auto; padding: 0 20px; text-align: center; }
+        .site-title { font-size: 2em; margin-bottom: 5px; }
+        .site-subtitle { font-size: 1.1em; opacity: 0.9; }
+
+        .header-section {
+            background-color: #8B7355; color: white; padding: 40px; border-radius: 12px;
+            margin-bottom: 30px; text-align: center;
+        }
+        .header-section .week-label { font-size: 1em; text-transform: uppercase; letter-spacing: 2px; opacity: 0.9; margin-bottom: 10px; }
+        .header-section h1 { font-size: 2.5em; font-weight: 300; margin-bottom: 10px; }
+        .header-section .subtitle { font-size: 1.3em; font-style: italic; margin-bottom: 20px; }
+        .header-section .date-location { font-size: 1.1em; opacity: 0.95; }
+
+        .quick-links { text-align: center; margin: 20px 0; }
+        .quick-link {
+            display: inline-block; background: #8B7355; color: white; padding: 10px 20px;
+            border-radius: 8px; text-decoration: none; margin: 5px; transition: all 0.3s;
+        }
+        .quick-link:hover { background: #6B5344; transform: translateY(-2px); }
+
+        .button-container { text-align: center; margin: 30px 0; }
+        .expand-button {
+            background-color: #8B7355; color: white; border: none; padding: 12px 24px;
+            margin: 5px 10px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em;
+        }
+        .expand-button:hover { background-color: #6B5344; }
+
+        .sg-accordion-section {
+            background-color: #8B7355; color: white; cursor: pointer; padding: 18px; width: 100%;
+            border: none; text-align: left; font-size: 1.2em; font-weight: 600; font-family: Georgia, serif;
+            border-radius: 8px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center;
+        }
+        .sg-accordion-section:hover { background-color: #6B5344; }
+        .sg-accordion-section::after { content: '\25BC'; font-size: 0.9em; transition: transform 0.3s; }
+        .sg-accordion-section.active::after { transform: rotate(180deg); }
+
+        .sg-panel {
+            background-color: white; border-radius: 0 0 8px 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .sg-panel.active { display: block; }
+        .panel-content { padding: 30px; }
+        .panel-content h2 { color: #8B7355; margin-bottom: 20px; font-size: 1.8em; }
+        .panel-content h3 { color: #6B5344; margin-top: 25px; margin-bottom: 15px; font-size: 1.4em; }
+        .panel-content h4 { color: #5a4a3a; margin-top: 20px; margin-bottom: 12px; font-size: 1.2em; }
+        .panel-content ul, .panel-content ol { margin-left: 25px; margin-bottom: 15px; }
+        .panel-content li { margin-bottom: 8px; }
+        .panel-content p { margin-bottom: 15px; text-align: justify; }
+        .panel-content a { color: #8B7355; }
+        .panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .panel-content blockquote {
+            margin: 20px 0 20px 20px;
+            padding: 15px 20px;
+            border-left: 4px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 8px 8px 0;
+        }
+        .panel-content blockquote p { margin-bottom: 8px; }
+        .panel-content blockquote p:last-child { margin-bottom: 0; }
+        .panel-content blockquote cite {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #8B7355;
+            font-style: normal;
+        }
+
+        .panel-content strong { color: #6B5344; }
+        .panel-content em { color: #5a4a3a; }
+
+        .panel-content hr {
+            border: none;
+            border-top: 2px solid #e8e0d5;
+            margin: 25px 0;
+        }
+
+        .panel-content code {
+            background-color: #f5f0e8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #6B5344;
+        }
+
+        .info-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .info-table th, .info-table td { border: 1px solid #d4c4a8; padding: 12px; text-align: left; }
+        .info-table th { background-color: #f5f0e8; color: #6B5344; font-weight: bold; }
+        .info-table tr:nth-child(even) { background-color: #faf8f5; }
+
+        .sg-sub-accordion {
+            background-color: #f5f0e8;
+            color: #5a4a3a;
+            cursor: pointer;
+            padding: 14px 40px 14px 18px;
+            width: 100%;
+            text-align: left;
+            border: 1px solid #d4c4a8;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            margin-top: 10px;
+            position: relative;
+            transition: background-color 0.2s;
+        }
+
+        .sg-sub-accordion:hover {
+            background-color: #e8e0d4;
+        }
+
+        .sg-sub-accordion::after {
+            content: '\25BC';
+            font-size: 0.8em;
+            color: #8B7355;
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s;
+        }
+
+        .sg-sub-accordion.active::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .sg-sub-panel {
+            background-color: #fafafa;
+            border-radius: 0 0 6px 6px;
+            border: 1px solid #d4c4a8;
+            border-top: none;
+            display: none;
+            transition: max-height 0.3s ease-out;
+            margin-bottom: 10px;
+        }
+
+        .sg-sub-panel.active {
+            display: block;
+            overflow: visible;
+            transition: max-height 0.3s ease-in;
+        }
+
+        .sg-sub-panel-content {
+            padding: 20px 25px;
+        }
+
+        .sg-sub-panel-content h3 { color: #6B5344; margin-top: 20px; margin-bottom: 12px; font-size: 1.3em; }
+        .sg-sub-panel-content h4 { color: #5a4a3a; margin-top: 15px; margin-bottom: 10px; font-size: 1.15em; }
+        .sg-sub-panel-content p { margin-bottom: 12px; text-align: justify; }
+        .sg-sub-panel-content ul, .sg-sub-panel-content ol { margin-left: 25px; margin-bottom: 12px; }
+        .sg-sub-panel-content li { margin-bottom: 6px; }
+        .sg-sub-panel-content a { color: #8B7355; }
+        .sg-sub-panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .sg-sub-panel-content blockquote {
+            margin: 15px 0 15px 15px;
+            padding: 12px 18px;
+            border-left: 3px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 6px 6px 0;
+        }
+        .sg-sub-panel-content blockquote p { margin-bottom: 6px; }
+        .sg-sub-panel-content blockquote p:last-child { margin-bottom: 0; }
+        .sg-sub-panel-content strong { color: #6B5344; }
+        .sg-sub-panel-content hr { border: none; border-top: 1px solid #e8e0d5; margin: 20px 0; }
+
+        @media (max-width: 768px) {
+            .header-section h1 { font-size: 1.8em; }
+            .panel-content { padding: 20px; }
+            .sg-sub-panel-content { padding: 15px 18px; }
+        }
+
+        .sg-section-heading {
+            margin: 1.2em 0 0.6em 0;
+            padding: 0.4em 0 0.4em 0.8em;
+            border-left: 3px solid #8B9D77;
+            color: #5a6b4f;
+            font-size: 1.05em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+        }
+        .sg-section-actions {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 28px;
+        }
+        .sg-section-actions .sg-action-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.35);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            padding: 0;
+            line-height: 1;
+        }
+        .sg-section-actions .sg-action-btn:hover {
+            background: rgba(255,255,255,0.35);
+        }
+    </style>
+
+
+<div class="container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <p class="week-label">Week 11</p>
+            <h1>Genesis 37–41</h1>
+            <div class="subtitle">"The Lord Was with Joseph"</div>
+            <div class="date-location">March 9–15, 2026</div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/11?lang=eng" target="_blank" class="quick-link">CFM Manual</a>
+        </div>
+
+        <!-- Expand/Collapse Buttons -->
+        <div class="button-container">
+            <button class="expand-button" onclick="expandAll()"><span class="btn-icon">&#x229E;</span> Expand All</button>
+            <button class="expand-button" onclick="collapseAll()"><span class="btn-icon">&#x229F;</span> Collapse All</button>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 1: GENESIS 37–41 -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">1. Genesis 37–41</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Week Information</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Element</th><th>Details</th></tr>
+<tr><td><strong>Week</strong></td><td>11</td></tr>
+<tr><td><strong>Dates</strong></td><td>March 9–15, 2026</td></tr>
+<tr><td><strong>Reading</strong></td><td><a href="https://www.blueletterbible.org/kjv/gen/37/1/s_37001" target="_blank">Genesis 37–41</a></td></tr>
+<tr><td><strong>CFM Manual</strong></td><td><a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/11?lang=eng" target="_blank">Genesis 37–41 Lesson</a></td></tr>
+<tr><td><strong>Total Chapters</strong></td><td>5 (<a href="https://www.blueletterbible.org/kjv/gen/37/1/s_37001" target="_blank">Genesis 37–41</a>)</td></tr>
+<tr><td><strong>Approximate Verses</strong></td><td>~170 verses</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Reading Summary</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>This week begins the Joseph cycle—one of the most literarily sophisticated and theologically rich narratives in the Hebrew Bible. Joseph's story spans <a href="https://www.blueletterbible.org/kjv/gen/37/1/s_37001" target="_blank">Genesis 37–50</a>, but these opening chapters establish the themes of divine providence, faithfulness amid adversity, and the refrain that echoes through every circumstance: "The LORD was with Joseph."</p>
+<p><strong><a href="https://www.blueletterbible.org/kjv/gen/37/1/s_37001" target="_blank">Genesis 37</a></strong> introduces Joseph as Jacob's favorite son, born to Rachel in his old age. Jacob's preferential gift—the famous "coat of many colors" (<em>ketonet passim</em>)—inflames his brothers' jealousy. Joseph's dreams, in which his brothers and even his parents bow to him, deepen the hatred. The brothers conspire to kill him but ultimately sell him to Midianite traders for twenty pieces of silver. They dip his coat in goat's blood and present it to Jacob, who mourns Joseph as dead.</p>
+<p><strong><a href="https://www.blueletterbible.org/kjv/gen/38/1/s_38001" target="_blank">Genesis 38</a></strong> interrupts Joseph's narrative with the story of Judah and Tamar—a disturbing account that nonetheless plays a critical role in the Messianic lineage. Judah's sons Er and Onan die, and Tamar, denied her right to levirate marriage, disguises herself as a prostitute to conceive by Judah. The twins Perez and Zerah are born; through Perez descends the line of David and Christ.</p>
+<p><strong><a href="https://www.blueletterbible.org/kjv/gen/39/1/s_39001" target="_blank">Genesis 39</a></strong> resumes Joseph's story in Egypt. Sold to Potiphar, captain of Pharaoh's guard, Joseph rises to oversee his entire household—"The LORD was with him, and that which he did, the LORD made it to prosper" (<a href="https://www.blueletterbible.org/kjv/gen/39/3/s_39003" target="_blank">Genesis 39:3</a>). But Potiphar's wife pursues Joseph relentlessly. When he refuses her advances—"How then can I do this great wickedness, and sin against God?" (<a href="https://www.blueletterbible.org/kjv/gen/39/9/s_39009" target="_blank">Genesis 39:9</a>)—she falsely accuses him. Joseph is thrown into prison.</p>
+<p>Yet even in prison, "the LORD was with Joseph" (<a href="https://www.blueletterbible.org/kjv/gen/39/21/s_39021" target="_blank">Genesis 39:21</a>). He rises to manage the prison itself.</p>
+<p><strong><a href="https://www.blueletterbible.org/kjv/gen/40/1/s_40001" target="_blank">Genesis 40</a></strong> introduces two fellow prisoners: Pharaoh's butler (cupbearer) and baker. Each has a troubling dream. Joseph interprets them accurately—the butler will be restored, the baker executed. Joseph asks the butler to remember him to Pharaoh, but "the chief butler did not remember Joseph, but forgat him" (<a href="https://www.blueletterbible.org/kjv/gen/40/23/s_40023" target="_blank">Genesis 40:23</a>). Two more years pass.</p>
+<p><strong><a href="https://www.blueletterbible.org/kjv/gen/41/1/s_41001" target="_blank">Genesis 41</a></strong> brings the climax of this section. Pharaoh dreams of seven fat cows devoured by seven thin cows, and seven plump ears of grain consumed by seven withered ears. None of Egypt's wise men can interpret the dreams. Now the butler remembers Joseph. Brought from prison, Joseph declares, "It is not in me: God shall give Pharaoh an answer" (<a href="https://www.blueletterbible.org/kjv/gen/41/16/s_41016" target="_blank">Genesis 41:16</a>). He interprets the dream—seven years of plenty followed by seven years of famine—and proposes a plan for national survival. Pharaoh elevates Joseph to second-in-command over all Egypt: "Can we find such a one as this is, a man in whom the Spirit of God is?" (<a href="https://www.blueletterbible.org/kjv/gen/41/38/s_41038" target="_blank">Genesis 41:38</a>).</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Central Themes</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Theme 1: "The LORD Was with Joseph"</h3>
+<p>The phrase "the LORD was with Joseph" (or variants) appears repeatedly:</p>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/gen/39/2/s_39002" target="_blank">Genesis 39:2</a> — "The LORD was with Joseph, and he was a prosperous man"</li>
+<li><a href="https://www.blueletterbible.org/kjv/gen/39/3/s_39003" target="_blank">Genesis 39:3</a> — "His master saw that the LORD was with him"</li>
+<li><a href="https://www.blueletterbible.org/kjv/gen/39/21/s_39021" target="_blank">Genesis 39:21</a> — "The LORD was with Joseph, and shewed him mercy"</li>
+<li><a href="https://www.blueletterbible.org/kjv/gen/39/23/s_39023" target="_blank">Genesis 39:23</a> — "The LORD was with him, and that which he did, the LORD made it to prosper"</li>
+</ul>
+<p>This refrain doesn't mean Joseph avoided suffering. He was sold into slavery, falsely accused, and imprisoned for years. But God's presence wasn't contingent on favorable circumstances. Divine companionship sustained Joseph <em>through</em> adversity, not <em>around</em> it.</p>
+<p>Application: How do we recognize God's presence when life is hard? What evidence do you have that the Lord has been with you in trials?</p>
+<h3>Theme 2: Joseph as Type of Christ</h3>
+<p>Joseph is the Old Testament's most detailed type of Christ. The parallels are remarkable:</p>
+<table class="info-table">
+<tr><th>Joseph</th><th>Christ</th></tr>
+<tr><td>Beloved son of his father</td><td>Beloved Son of the Father</td></tr>
+<tr><td>Sent to check on his brothers</td><td>Sent to His brethren (Israel)</td></tr>
+<tr><td>Stripped of his coat</td><td>Stripped of His garments</td></tr>
+<tr><td>Sold for silver (20 pieces)</td><td>Sold for silver (30 pieces)</td></tr>
+<tr><td>Falsely accused</td><td>Falsely accused</td></tr>
+<tr><td>Bound as a prisoner</td><td>Bound before Pilate</td></tr>
+<tr><td>Numbered with transgressors (butler, baker)</td><td>Numbered with transgressors</td></tr>
+<tr><td>Raised to right hand of Pharaoh</td><td>Raised to right hand of the Father</td></tr>
+<tr><td>Given authority over all Egypt</td><td>Given all authority in heaven and earth</td></tr>
+<tr><td>Provides bread during famine</td><td>Bread of Life</td></tr>
+<tr><td>Hidden identity revealed to brothers</td><td>Christ revealed to Israel</td></tr>
+<tr><td>Saves the very ones who rejected him</td><td>Saves those who rejected Him</td></tr>
+</table>
+<p>The Joseph story teaches that rejection and suffering can be the path to exaltation and salvation—for oneself and for those who caused the suffering.</p>
+<h3>Theme 3: Fleeing Temptation</h3>
+<p>Joseph's response to Potiphar's wife is a masterclass in resisting temptation:</p>
+<ol>
+<li><strong>He recognized sin as sin</strong> (v. 9): "How then can I do this great wickedness?"</li>
+<li><strong>He defined it as sin against God</strong>, not just against Potiphar: "and sin against God?"</li>
+<li><strong>He avoided lingering situations</strong> (v. 10): "he hearkened not unto her, to lie by her, or to be with her"</li>
+<li><strong>He fled</strong> (v. 12): When escape was the only option, "he left his garment in her hand, and fled"</li>
+</ol>
+<p>The Hebrew word for "fled" is <em>vayanas</em> (וַיָּנָס)—the same word used when Israel flees Egypt, when David flees Saul. It implies urgent, decisive departure. Joseph didn't negotiate, rationalize, or gradually distance himself. He ran.</p>
+<p>Application: What temptations require not resistance but flight? What situations should you simply leave?</p>
+<h3>Theme 4: God's Gifts for God's Purposes</h3>
+<p>Joseph had a gift for interpreting dreams. But notice how he used it:</p>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/gen/40/8/s_40008" target="_blank">Genesis 40:8</a> — "Do not interpretations belong to God?"</li>
+<li><a href="https://www.blueletterbible.org/kjv/gen/41/16/s_41016" target="_blank">Genesis 41:16</a> — "It is not in me: God shall give Pharaoh an answer"</li>
+</ul>
+<p>Joseph never claimed personal power. He consistently redirected credit to God. This humility positioned him to be trusted with greater responsibility.</p>
+<p>Application: What gifts has God given you? How do you use them for His purposes while giving Him credit?</p>
+<h3>Theme 5: Providence in the Pattern</h3>
+<p>Looking back, we can see how each disaster positioned Joseph for his ultimate role:</p>
+<ul>
+<li>Sold to traders → brought to Egypt</li>
+<li>Sold to Potiphar → learned household management</li>
+<li>Falsely imprisoned → met the butler</li>
+<li>Forgotten for two years → brought to Pharaoh at the perfect moment</li>
+</ul>
+<p>Joseph couldn't see the pattern while living it. Neither can we. But the narrative invites trust: God is weaving together what seems random and painful.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Key Figures</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Person</th><th>Role</th><th>Significance This Week</th></tr>
+<tr><td>Joseph</td><td>Jacob's favored son</td><td>Sold by brothers; rises in Egypt</td></tr>
+<tr><td>Jacob (Israel)</td><td>Patriarch</td><td>Mourns Joseph; deceived by his sons</td></tr>
+<tr><td>Joseph's brothers</td><td>Sons of Leah, Bilhah, Zilpah</td><td>Conspire against Joseph; sell him</td></tr>
+<tr><td>Reuben</td><td>Firstborn</td><td>Attempts to save Joseph</td></tr>
+<tr><td>Judah</td><td>Fourth son</td><td>Proposes selling Joseph instead of killing him</td></tr>
+<tr><td>Potiphar</td><td>Egyptian officer</td><td>Purchases Joseph; imprisons him on wife's lie</td></tr>
+<tr><td>Potiphar's wife</td><td>Temptress</td><td>Attempts to seduce Joseph; falsely accuses him</td></tr>
+<tr><td>Butler (cupbearer)</td><td>Pharaoh's servant</td><td>Dreams; forgets Joseph; later remembers</td></tr>
+<tr><td>Baker</td><td>Pharaoh's servant</td><td>Dreams; executed as Joseph foretold</td></tr>
+<tr><td>Pharaoh</td><td>King of Egypt</td><td>Dreams; elevates Joseph to vizier</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Timeline Placement</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Historical Period:</strong> Middle Bronze Age</p>
+<p><strong>Approximate Dates:</strong> (Most scholars suggest ~ 1700–1600 BC for Joseph</p>
+<p><strong>Joseph's Age:</strong> 17 when sold; 30 when elevated by Pharaoh</p>
+<h3>Relationship to Previous/Next Weeks</h3>
+<p><strong>Week 10:</strong> Jacob becomes Israel; reconciles with Esau (<a href="https://www.blueletterbible.org/kjv/gen/24/1/s_24001" target="_blank">Gen. 24–33</a>)</p>
+<p><strong>Week 11:</strong> Joseph sold and rises in Egypt (<a href="https://www.blueletterbible.org/kjv/gen/37/1/s_37001" target="_blank">Gen. 37–41</a>)</p>
+<p><strong>Week 12:</strong> Joseph reveals himself; family reunited (<a href="https://www.blueletterbible.org/kjv/gen/42/1/s_42001" target="_blank">Gen. 42–50</a>)</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Connection to Restoration Scripture</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Book of Mormon Connections</h3>
+<ul>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/3?lang=eng&id=4-15" target="_blank">2 Nephi 3:4–15</a>:</strong> Joseph's prophecy of Joseph Smith—a "choice seer" from his lineage</li>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/46?lang=eng&id=24-25" target="_blank">Alma 46:24–25</a>:</strong> Jacob's prophecy that Joseph's coat represents his remnant being preserved</li>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/5?lang=eng&id=14" target="_blank">1 Nephi 5:14</a>:</strong> Lehi traces his lineage through Joseph</li>
+</ul>
+<h3>Doctrine and Covenants Connections</h3>
+<ul>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/27?lang=eng&id=10" target="_blank">D&C 27:10</a>:</strong> "Joseph, who was sold into Egypt"</li>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/132?lang=eng&id=37" target="_blank">D&C 132:37</a>:</strong> Joseph among those who have "entered into their exaltation"</li>
+</ul>
+<h3>JST Additions</h3>
+<ul>
+<li><strong>JST <a href="https://www.blueletterbible.org/kjv/gen/40/9-12/s_40009" target="_blank">Genesis 40:9–12</a>:</strong> Additional details clarifying Joseph's prophetic role</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>This Week's Key Doctrines</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>Divine Presence in Adversity:</strong> The Lord is with His faithful even in suffering (<a href="https://www.blueletterbible.org/kjv/gen/39/2/s_39002" target="_blank">Gen. 39:2, 21</a>)</li>
+<li><strong>Joseph as Type of Christ:</strong> The most detailed Old Testament foreshadowing of the Savior</li>
+<li><strong>Fleeing Temptation:</strong> Some sins require escape, not resistance (<a href="https://www.blueletterbible.org/kjv/gen/39/12/s_39012" target="_blank">Gen. 39:12</a>)</li>
+<li><strong>Spiritual Gifts:</strong> Interpretations belong to God; use gifts humbly (<a href="https://www.blueletterbible.org/kjv/gen/40/8/s_40008" target="_blank">Gen. 40:8; 41:16</a>)</li>
+<li><strong>Providence:</strong> God weaves suffering into salvation's pattern</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Temple Connections</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ul>
+<li><strong>Clothing Symbolism:</strong> Joseph receives Egyptian garments and Pharaoh's signet ring (<a href="https://www.blueletterbible.org/kjv/gen/41/42/s_41042" target="_blank">Gen. 41:42</a>), symbolizing new identity and authority—like sacred vestments</li>
+<li><strong>From Pit to Palace:</strong> Joseph's journey from pit (<a href="https://www.blueletterbible.org/kjv/gen/37/24/s_37024" target="_blank">Gen. 37:24</a>) to prison to Pharaoh's throne parallels temple themes of death, descent, and exaltation</li>
+<li><strong>Name Change:</strong> Joseph receives an Egyptian name, Zaphnath-paaneah (<a href="https://www.blueletterbible.org/kjv/gen/41/45/s_41045" target="_blank">Gen. 41:45</a>)—new name accompanying new role</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>CFM Manual Emphasis</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Manual Focus:</strong> The Lord's presence during adversity; revelation through dreams; fleeing temptation; preparing for hardship.</p>
+<p><strong>Key Questions from Manual:</strong></p>
+<ul>
+<li>How was the Lord "with" Joseph even when bad things happened?</li>
+<li>How can Joseph's example help me resist temptation?</li>
+<li>What can I do now to prepare for future trials?</li>
+<li>How do I receive and understand revelation?</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Suggested Reading Approach</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Essential Reading:</strong></p>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/gen/37/1/s_37001" target="_blank">Genesis 37:1–28</a> — Joseph sold by his brothers</li>
+<li><a href="https://www.blueletterbible.org/kjv/gen/39/1/s_39001" target="_blank">Genesis 39:1–23</a> — Potiphar's house and prison (the full chapter)</li>
+<li><a href="https://www.blueletterbible.org/kjv/gen/41/14/s_41014" target="_blank">Genesis 41:14–45</a> — Joseph interprets Pharaoh's dreams and is elevated</li>
+</ul>
+<p><strong>For Deep Study:</strong></p>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/gen/38/1/s_38001" target="_blank">Genesis 38</a> — Judah and Tamar (difficult but important for Messianic line)</li>
+<li><a href="https://www.blueletterbible.org/kjv/gen/40/1/s_40001" target="_blank">Genesis 40</a> — Butler and baker's dreams</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Study Guide Files This Week</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>File</th><th>Content Focus</th></tr>
+<tr><td>01_Week_Overview</td><td>This overview document</td></tr>
+<tr><td>02_Historical_Cultural_Context</td><td>Egypt in the patriarchal period, slavery, dreams in ANE</td></tr>
+<tr><td>03_Key_Passages_Study</td><td>Detailed analysis: coat, pit, Potiphar's wife, dreams, elevation</td></tr>
+<tr><td>04_Word_Studies</td><td>Hebrew: <em>ketonet passim</em>, <em>chalom</em>, <em>sar</em>, <em>avad</em></td></tr>
+<tr><td>05_Teaching_Applications</td><td>Teaching Joseph as type; fleeing sin; providence</td></tr>
+<tr><td>06_Study_Questions</td><td>Comprehensive questions for study</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 2: WEEK 11: HISTORICAL & CULTURAL CONTEXT -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">2. Week 11: Historical & Cultural Context</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Ancient Near Eastern Setting</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Egypt in the Patriarchal Period</h3>
+<p>Joseph's story is set in Egypt during what scholars call the Second Intermediate Period or early New Kingdom. Several features of the narrative align remarkably well with Egyptian culture:</p>
+<p><strong>Slavery and Servitude</strong></p>
+<p>Foreign slaves were common in Egyptian households, often obtained through trade with Canaanite merchants (exactly how Joseph arrived). Egyptian texts from this period record purchases of Asiatic slaves for household service. The price of twenty pieces of silver (<a href="https://www.blueletterbible.org/kjv/gen/37/28/s_37028" target="_blank">Genesis 37:28</a>) aligns with slave prices attested in Middle Bronze Age documents.</p>
+<p><strong>Titles and Administration</strong></p>
+<p>Potiphar is called "captain of the guard" (שַׂר הַטַּבָּחִים, <em>sar hatabachim</em>—literally "chief of the slaughterers/executioners"). This corresponds to known Egyptian titles for officers responsible for royal security. The term <em>sar</em> (captain/chief) appears throughout the Joseph narrative for various officials.</p>
+<p><strong>Dreams and Interpretation</strong></p>
+<p>Dreams were taken extremely seriously in ancient Egypt. Professional dream interpreters held court positions. The title <em>chartom</em> (חַרְטֹם), used for Pharaoh's "magicians" in <a href="https://www.blueletterbible.org/kjv/gen/41/8/s_41008" target="_blank">Genesis 41:8</a>, may derive from an Egyptian term for priest-scribes who practiced dream interpretation and divination. That Joseph could interpret when they could not demonstrated divine superiority.</p>
+<h3>The Coat of Many Colors (<em>ketonet passim</em>)</h3>
+<p>The famous "coat of many colors" (KJV) translates the Hebrew <em>ketonet passim</em> (<a href="https://www.blueletterbible.org/lexicon/h3801/kjv/wlc/0-1/" target="_blank" data-lexicon="tunic, under-garmenta long shirt-like garment usually of linen" data-strongs="H3801" data-translit="kutōneṯ" data-original="כֻּתֹּנֶת" data-lang="hebrew" data-verse="">כְּתֹנֶת פַּסִּים</a>). The meaning is debated:</p>
+<table class="info-table">
+<tr><th>Translation</th><th>Basis</th><th>Support</th></tr>
+<tr><td>"Coat of many colors"</td><td>Traditional (LXX: <em>poikilos</em>)</td><td>Septuagint reads "variegated"</td></tr>
+<tr><td>"Long-sleeved robe"</td><td>Hebrew <em>pas</em> = "palm/flat"</td><td>May refer to length reaching palms and soles</td></tr>
+<tr><td>"Ornamented tunic"</td><td>ANE royal garments</td><td>Similar language in <a href="https://www.blueletterbible.org/kjv/2sa/13/18-19/s_280018" target="_blank">2 Sam. 13:18–19</a> (Tamar's garment)</td></tr>
+</table>
+<p>Whatever the exact translation, the garment marked Joseph as favored—set apart from his brothers who wore ordinary working tunics. It functioned as a public declaration of Jacob's preference, explaining the brothers' rage.</p>
+<p><strong>The same phrase appears only one other place:</strong> <a href="https://www.blueletterbible.org/kjv/2sa/13/18-19/s_280018" target="_blank">2 Samuel 13:18–19</a>, describing the robe worn by King David's virgin daughters. This suggests the <em>ketonet passim</em> was a garment of royal or noble status.</p>
+<h3>The Priestly Dimension of the <em>Ketonet</em></h3>
+<p>The significance of Jacob's gift runs deeper than royal favoritism. The root word <em>ketonet</em> (<a href="https://www.blueletterbible.org/lexicon/h3801/kjv/wlc/0-1/" target="_blank" data-lexicon="tunic, under-garmenta long shirt-like garment usually of linen" data-strongs="H3801" data-translit="kutōneṯ" data-original="כֻּתֹּנֶת" data-lang="hebrew" data-verse="">כְּתֹנֶת</a>) is the same word used throughout <a href="https://www.blueletterbible.org/kjv/exo/28/1/s_78001" target="_blank">Exodus 28–29</a> and 39 for the foundational tunic of Aaron and his sons — the priestly investiture garment God commanded Moses to place on them at their ordination (<a href="https://www.blueletterbible.org/kjv/exo/28/4/s_78004" target="_blank">Exodus 28:4, 29</a>:5, 29:8). Scholar Richard Davison notes that the specific Hebrew pairing of <em>lavash</em> (<a href="https://www.blueletterbible.org/lexicon/h3847/kjv/wlc/0-1/" target="_blank" data-lexicon="to dress, wear, clothe, put on clothing, be clothed (Qal) to put on clothes, be clothed, wear to put on, be clothed w..." data-strongs="H3847" data-translit="lāḇaš" data-original="לָבַשׁ" data-lang="hebrew" data-verse="">לָבַשׁ</a>, "to clothe") with <em>ketonet</em> appears in the Old Testament almost exclusively in contexts of priestly investiture (<em>"The Ancient Tradition"</em>, citing "Earth's First Sanctuary"). This creates a remarkable chain of three investiture moments across Genesis and Exodus:</p>
+<ol>
+<li><strong>Adam and Eve (<a href="https://www.blueletterbible.org/kjv/gen/3/21/s_3021" target="_blank">Genesis 3:21</a>)</strong> — Before expelling them from the garden, God himself clothed Adam and Eve in <em>ketonot</em> (plural of <em>ketonet</em>) made from animal skins. Davison identifies this as a priestly ordination act: the skin of sacrificial animals belonged exclusively to the priests in the Mosaic cultus, so by bestowing it on Adam and Eve, God was inaugurating them as the earth's first priest and priestess, charged with continuing His temple worship outside the garden.</li>
+</ol>
+<ol>
+<li><strong>Joseph (<a href="https://www.blueletterbible.org/kjv/gen/37/3/s_37003" target="_blank">Genesis 37:3</a>)</strong> — Jacob gives Joseph a <em>ketonet passim</em>, the marked or ornamented tunic — the same priestly word, now functioning as the visible sign of birthright and covenant transfer to the son chosen to carry the patriarchal authority forward.</li>
+</ol>
+<ol>
+<li><strong>Aaron and his sons (<a href="https://www.blueletterbible.org/kjv/exo/28/4/s_78004" target="_blank">Exodus 28:4, 29</a>:8)</strong> — God formally codifies the <em>ketonet</em> as the foundational garment of the Levitical priesthood. The continuity of the word is not accidental; it ties the Mosaic priesthood back through Joseph to Adam himself.</li>
+</ol>
+<p>This three-part chain means the <em>ketonet</em> in <a href="https://www.blueletterbible.org/kjv/gen/3/1/s_3001" target="_blank">Genesis 3</a> and <a href="https://www.blueletterbible.org/kjv/gen/37/1/s_37001" target="_blank">Genesis 37</a> are not merely clothing stories — they are ordination accounts using the same covenant vocabulary. In the pre-Levitical patriarchal period, priestly and covenant authority passed through the birthright heir. By clothing Joseph in a <em>ketonet passim</em>, Jacob was making a public, visible declaration — not merely of personal affection, but of covenant transfer. The brothers understood exactly what was at stake, which is why their reaction was not merely jealousy but something closer to outrage at a perceived usurpation of their priestly standing.</p>
+<h3>Why Joseph? The Cascade of Disqualifications</h3>
+<p>The question of why Joseph — rather than Judah, Levi, or any of the older brothers — received the coat has a precise answer written across several texts. <a href="https://www.blueletterbible.org/kjv/1ch/5/1-2/s_343001" target="_blank">1 Chronicles 5:1–2</a> states the conclusion explicitly:</p>
+<blockquote>
+<p><em>"Now the sons of Reuben the firstborn of Israel — for he was the firstborn, but because he defiled his father's bed, his birthright was given to the sons of Joseph the son of Israel... Though Judah became strong among his brothers and a ruler came from him, yet the birthright belonged to Joseph."</em></p>
+</blockquote>
+<p>The succession moved through a cascade of disqualifications:</p>
+<p><strong>Reuben (1st)</strong> — The natural firstborn and first heir, disqualified when he defiled Bilhah, his father's concubine (<a href="https://www.blueletterbible.org/kjv/gen/35/22/s_35022" target="_blank">Genesis 35:22</a>). Jacob's deathbed blessing confirms the verdict: <em>"thou shalt not excel"</em> (<a href="https://www.blueletterbible.org/kjv/gen/49/4/s_49004" target="_blank">Genesis 49:4</a>).</p>
+<p><strong>Simeon (2nd) and Levi (3rd)</strong> — Both disqualified together by the massacre at Shechem (<a href="https://www.blueletterbible.org/kjv/gen/34/1/s_34001" target="_blank">Genesis 34</a>), where they killed every male in the city in revenge for their sister Dinah. Jacob's final words are severe: <em>"their swords are instruments of violence... I will divide them in Jacob and scatter them in Israel"</em> (<a href="https://www.blueletterbible.org/kjv/gen/49/5-7/s_49005" target="_blank">Genesis 49:5–7</a>). Neither could hold the birthright.</p>
+<p><strong>Judah (4th)</strong> — Here the succession deliberately <em>splits into two</em>. Judah received the <strong>scepter</strong> — the kingly line: <em>"The scepter shall not depart from Judah... until Shiloh come"</em> (<a href="https://www.blueletterbible.org/kjv/gen/49/10/s_49010" target="_blank">Genesis 49:10</a>), the royal authority through which David and ultimately the Messiah would come. But <a href="https://www.blueletterbible.org/kjv/1ch/5/1/s_343001" target="_blank">1 Chronicles 5</a> is explicit: the <strong>birthright</strong> — the double portion, the covenant authority, the priestly-patriarchal mantle — was not Judah's. It went to Joseph.</p>
+<p>This division between scepter and birthright was not incidental. It was deliberate and prophetically significant (see <em>The Deeper Split</em> below).</p>
+<p><strong>Why Joseph specifically?</strong> Two reasons converge. First, the disqualifications above left him as the next viable heir by birth order. But second — and more theologically significant — Joseph was the <strong>firstborn of Rachel</strong>, the wife Jacob had originally covenanted to marry. Leah had been substituted by Laban's deception. In the covenant logic of the narrative, Rachel was Jacob's true wife, and Joseph her firstborn was the son he had waited and labored fourteen years for. The JST restoration of Jacob's blessing makes this explicit: Joseph had been <em>raised up by God</em> as a servant to save the house of Israel — language of divine appointment, not merely paternal favoritism.</p>
+<h3>The Deeper Split: Scepter and Birthright</h3>
+<p>The deliberate separation of royal authority (Judah) from covenant birthright (Joseph) generated one of the most significant theological concepts in Jewish messianic thought: the expectation of <strong>two messianic figures</strong>.</p>
+<ul>
+<li><strong>Mashiach ben David</strong> (from Judah) — the king, the ruler, the one who comes in glory to reign</li>
+<li><strong>Mashiach ben Joseph</strong> (from Joseph) — the suffering servant, the one who is rejected, dies, and is mourned before the final redemption. <a href="https://www.blueletterbible.org/kjv/zec/12/10/s_923010" target="_blank">Zechariah 12:10</a>'s mourning for <em>"him whom they pierced"</em> is traditionally associated with Mashiach ben Joseph in rabbinic literature.</li>
+</ul>
+<p>Latter-day Saint readers will recognize immediately that both roles were fulfilled in Jesus Christ — the suffering servant foreshadowed by Joseph's type, and the King of David's throne. His lineage in the New Testament reflects exactly this dual inheritance: Matthew traces the royal legal claim through Solomon → David → Judah; Luke traces the biological line through Nathan → David, and some scholars argue through Mary back through Judah as well.</p>
+<p>The coat, then, was Jacob publicly investing the <strong>birthright heir</strong> — not the future king (that was always Judah's line), but the priest, the covenant carrier, the suffering servant, the one through whose seed the gathering of all Israel would eventually be accomplished. The brothers weren't angry because they wanted a colorful coat. They were angry because Jacob had just publicly ordained Joseph over all of them — and they understood precisely what that meant.</p>
+<h3>The Blood on the Coat: A Type of Sacrifice</h3>
+<p>When the brothers stripped Joseph of his coat and dipped it in the blood of a <strong>goat</strong> (<em>se'ir</em>, <a href="https://www.blueletterbible.org/lexicon/h8164/kjv/wlc/0-1/" target="_blank" data-lexicon="raindrops, rain showers" data-strongs="H8164" data-translit="śāʿîr" data-original="שָׂעִיר" data-lang="hebrew" data-verse="">שָׂעִיר</a>) to deceive their father (<a href="https://www.blueletterbible.org/kjv/gen/37/31/s_37031" target="_blank">Genesis 37:31</a>), they unwittingly layered the type with even greater prophetic weight. The <em>se'ir</em> — the goat — is the precise animal appointed for the Yom Kippur sin offering: one goat slaughtered before the Lord, one sent away as the scapegoat bearing the sins of Israel into the wilderness (<a href="https://www.blueletterbible.org/kjv/lev/16/7-10/s_106007" target="_blank">Leviticus 16:7–10</a>). The brothers used the blood of a sin-offering animal to cover a priestly garment — and presented it to a father as evidence of his son's death.</p>
+<p>The scene contains, in miniature, the entire logic of the Atonement: a beloved son, stripped of his priestly garment, whose apparent death is witnessed through the blood of a sacrificial animal, while the father mourns. Jacob "rent his clothes, and put sackcloth upon his loins, and mourned for his son many days" (<a href="https://www.blueletterbible.org/kjv/gen/37/34/s_37034" target="_blank">Genesis 37:34</a>) — a father grieving a son he believed was slain. Read through the lens of <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/11?lang=eng&id=p4#p4" target="_blank">2 Nephi 11:4</a> — "all things... are the typifying of him" — the blood on the coat was not merely a deception. It was a covenant marker, placed on a priestly garment, pointing forward to the day when the true Firstborn Son would offer His own blood, fulfilling every covenant the garment represented.</p>
+<h3>The Pit (<em>bor</em>)</h3>
+<p>The brothers threw Joseph into a <em>bor</em> (<a href="https://www.blueletterbible.org/lexicon/h953/kjv/wlc/0-1/" target="_blank" data-lexicon="pit, well, cistern" data-strongs="H953" data-translit="bôr" data-original="בּוֹר" data-lang="hebrew" data-verse="">בּוֹר</a>)—a cistern or pit used for water storage. These were common throughout Canaan, carved into rock to collect rainwater. The text notes "the pit was empty, there was no water in it" (<a href="https://www.blueletterbible.org/kjv/gen/37/24/s_37024" target="_blank">Gen. 37:24</a>)—important because an empty cistern could serve as an impromptu prison.</p>
+<p>The pit becomes theologically significant: Joseph descends into a death-like state before being "raised" to Egypt. This descent-ascent pattern prefigures Christ's death and resurrection.</p>
+<h3>The Ishmaelites and Midianites</h3>
+<p><a href="https://www.blueletterbible.org/kjv/gen/37/25-28/s_37025" target="_blank">Genesis 37:25–28</a> refers to both Ishmaelites and Midianites, creating apparent confusion:</p>
+<ul>
+<li>v. 25: "A company of Ishmaelites came from Gilead"</li>
+<li>v. 28: "Midianite merchantmen passed by"</li>
+<li>v. 28: "They... sold Joseph to the Ishmaelites"</li>
+</ul>
+<p>Possible explanations:</p>
+<ol>
+<li><strong>Interchangeable terms:</strong> Both groups were Arabian traders; the names may have been used loosely</li>
+<li><strong>Two groups involved:</strong> Midianites drew Joseph up; sold him to passing Ishmaelites</li>
+<li><strong>Descent connection:</strong> Midian was Abraham's son by Keturah; Ishmael was Abraham's son by Hagar—both descended from Abraham</li>
+</ol>
+<p>The narrative point is clear: Joseph was sold by foreign traders into Egypt.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Judah and Tamar (Genesis 38)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>This chapter seems to interrupt Joseph's story, but its placement is deliberate:</p>
+<h3>Levirate Marriage</h3>
+<p>Tamar was entitled to levirate marriage (<em>yibum</em>)—the obligation of a deceased man's brother to marry the widow and raise up offspring in the dead brother's name (<a href="https://www.blueletterbible.org/kjv/deu/25/5/s_178005" target="_blank">Deuteronomy 25:5–10</a>). Judah failed to provide his third son, Shelah, as required.</p>
+<h3>Tamar's Deception</h3>
+<p>Tamar disguised herself as a prostitute to conceive by Judah himself—a desperate act to secure her rights. When Judah discovered her pregnancy and ordered her execution, she produced his signet, cord, and staff as evidence. Judah's verdict: "She hath been more righteous than I" (<a href="https://www.blueletterbible.org/kjv/gen/38/26/s_38026" target="_blank">Gen. 38:26</a>).</p>
+<h3>Messianic Significance</h3>
+<p>Through Tamar's twins, Perez and Zerah, comes the line of David—and ultimately Christ. <a href="https://www.blueletterbible.org/kjv/mat/1/3/s_930003" target="_blank">Matthew 1:3</a> includes Tamar in Jesus' genealogy. The chapter demonstrates that the Messianic line passes through morally complicated circumstances, foreshadowing grace that works through human brokenness.</p>
+<h3>Thematic Parallels with Joseph</h3>
+<table class="info-table">
+<tr><th>Joseph (<a href="https://www.blueletterbible.org/kjv/gen/37/1/s_37001" target="_blank">Gen. 37, 39</a>)</th><th>Judah (<a href="https://www.blueletterbible.org/kjv/gen/38/1/s_38001" target="_blank">Gen. 38</a>)</th></tr>
+<tr><td>Coat dipped in blood</td><td>Signet, cord, staff as evidence</td></tr>
+<tr><td>False accusation by woman</td><td>Tamar's deception reveals Judah's failure</td></tr>
+<tr><td>Joseph resists sexual sin</td><td>Judah commits sexual sin</td></tr>
+<tr><td>Joseph descends (pit, prison)</td><td>Judah descends morally</td></tr>
+</table>
+<p>The juxtaposition highlights Joseph's integrity against Judah's failure—while showing God works through both.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Joseph in Potiphar's House</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Hebrew Word <em>bayit</em> (House)</h3>
+<p>The word <em>bayit</em> (<a href="https://www.blueletterbible.org/lexicon/h1004/kjv/wlc/0-1/" target="_blank" data-lexicon="house" data-strongs="H1004" data-translit="bayit" data-original="בַּיִת" data-lang="hebrew" data-verse="Genesis 7:1">בַּיִת</a>) appears repeatedly in <a href="https://www.blueletterbible.org/kjv/gen/39/1/s_39001" target="_blank">Genesis 39</a>: "in the house" (v. 2), "over his house" (v. 4), "over all that he had in the house" (v. 5), "left all that he had in Joseph's hand" (v. 6). Joseph managed the entire household—finances, servants, land, provisions.</p>
+<p>This management experience prepared him to manage Egypt during famine.</p>
+<h3>Potiphar's Wife</h3>
+<p>Her persistent pursuit ("day by day," v. 10) and Joseph's consistent refusal demonstrate spiritual discipline. Joseph's reasoning (v. 9) shows his moral framework:</p>
+<ol>
+<li>Potiphar trusted me completely</li>
+<li>He has held nothing back except you</li>
+<li>You are his wife</li>
+<li>This would be "great wickedness" (<em>ra'ah gedolah</em>)</li>
+<li>It would be sin against <strong>God</strong>—not just Potiphar</li>
+</ol>
+<p>Joseph identified sexual sin as primarily a violation against God. This theological understanding grounded his resistance.</p>
+<h3>The Accusation and Imprisonment</h3>
+<p>Joseph's garment in her hand becomes false evidence—echoing the coat in his brothers' hands. Both times, Joseph loses a garment; both times, the garment is used against him; both times, Joseph ends up in a lower place (pit, prison).</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Dreams in the Ancient Near East</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Dreams held enormous significance throughout the ANE:</p>
+<h3>Egyptian Dream Interpretation</h3>
+<ul>
+<li>Professional interpreters (<em>chartummim</em>) served at court</li>
+<li>Dream manuals categorized symbols and their meanings</li>
+<li>Pharaoh's dreams were considered divine communication about Egypt's fate</li>
+</ul>
+<h3>Joseph's Approach</h3>
+<p>Joseph consistently credits God:</p>
+<ul>
+<li>"Do not interpretations belong to God?" (40:8)</li>
+<li>"It is not in me: God shall give Pharaoh an answer" (41:16)</li>
+</ul>
+<p>This distinguishes Israel's prophetic gift from pagan divination. Joseph doesn't consult manuals or use techniques—he receives direct revelation.</p>
+<h3>The Dreams' Structure</h3>
+<p>Both Pharaoh's dreams and the servants' dreams feature:</p>
+<ul>
+<li><strong>Pairs:</strong> Two dreams, same meaning (7 cows/7 ears; vine/baskets)</li>
+<li><strong>Numbers:</strong> Three branches/baskets = three days; seven cows/ears = seven years</li>
+<li><strong>Contrast:</strong> Fat/lean, plump/withered, life/death</li>
+</ul>
+<p>The doubling of Pharaoh's dream indicates certainty and imminence: "The dream is doubled because the thing is established by God, and God will shortly bring it to pass" (41:32).</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Joseph's Elevation</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Egyptian Elements</h3>
+<p>When Pharaoh elevates Joseph, the details are authentically Egyptian:</p>
+<ul>
+<li><strong>Pharaoh's ring</strong> (<em>tabba'at</em>, <a href="https://www.blueletterbible.org/lexicon/h2884/kjv/wlc/0-1/" target="_blank" data-lexicon="Tabbaoth = &quot;rings&quot;a family of temple slaves who returned from exile with Zerubbabel" data-strongs="H2884" data-translit="ṭabāʿôṯ" data-original="טַבַּעַת" data-lang="hebrew" data-verse="">טַבַּעַת</a>)—the signet ring conferring royal authority to sign documents</li>
+<li><strong>Vestures of fine linen</strong> (<em>bigdey shesh</em>)—the white linen (<em>shesh</em>) characteristic of Egyptian upper-class dress</li>
+<li><strong>Gold chain</strong> (<em>rebid hazahav</em>)—symbol of high office; frequently depicted in Egyptian art</li>
+<li><strong>Second chariot</strong> (<em>merkevah hammishne</em>)—Joseph rides in the chariot immediately following Pharaoh's</li>
+<li><strong>Bow the knee</strong> (<em>avrekh</em>)—possibly Egyptian <em>ab-rek</em> ("attention!" or "make way!")</li>
+<li><strong>New name</strong> (<em>Zaphenath-paneah</em>)—Egyptian name (meaning debated: "the god speaks and he lives" or "revealer of secrets")</li>
+<li><strong>Egyptian wife</strong> (<em>Asenath</em>)—daughter of a priest of On (Heliopolis), center of sun worship</li>
+</ul>
+<p>These details suggest the author had genuine knowledge of Egyptian court protocol.</p>
+<h3>Age at Elevation</h3>
+<p>Joseph was thirty years old when he stood before Pharaoh (<a href="https://www.blueletterbible.org/kjv/gen/41/46/s_41046" target="_blank">Gen. 41:46</a>). He had been in Egypt for thirteen years (sold at 17). The seven years of plenty plus at least two years of famine mean Joseph was nearly forty when his brothers arrived.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Cultural Vocabulary</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Term</th><th>Meaning</th><th>Significance</th></tr>
+<tr><td><em><strong>Ketonet passim</strong></em></td><td>Ornamented/long-sleeved tunic</td><td>Mark of Jacob's favoritism</td></tr>
+<tr><td><em><strong>Bor</strong></em></td><td>Pit/cistern</td><td>Joseph's first "death"</td></tr>
+<tr><td><em><strong>Sar</strong></em></td><td>Captain/chief</td><td>Title for Egyptian officers</td></tr>
+<tr><td><em><strong>Chartom</strong></em></td><td>Magician/diviner</td><td>Egyptian dream interpreters</td></tr>
+<tr><td><em><strong>Chalom</strong></em></td><td>Dream</td><td>Vehicle for divine revelation</td></tr>
+<tr><td><em><strong>Mashqeh</strong></em></td><td>Cupbearer/butler</td><td>Restored to office</td></tr>
+<tr><td><em><strong>Opheh</strong></em></td><td>Baker</td><td>Executed as foretold</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Geography</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Key Locations This Week</h3>
+<ol>
+<li><strong>Shechem</strong> — Where Joseph's brothers were pasturing flocks (<a href="https://www.blueletterbible.org/kjv/gen/37/12/s_37012" target="_blank">Gen. 37:12</a>)</li>
+<li><strong>Dothan</strong> — Where Joseph found his brothers (<a href="https://www.blueletterbible.org/kjv/gen/37/17/s_37017" target="_blank">Gen. 37:17</a>)</li>
+<li><strong>Egypt</strong> — Joseph's destination and place of elevation</li>
+<li><strong>On (Heliopolis)</strong> — Where Joseph's wife Asenath was from (<a href="https://www.blueletterbible.org/kjv/gen/41/45/s_41045" target="_blank">Gen. 41:45</a>)</li>
+</ol>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 3: WEEK 11: KEY PASSAGES STUDY -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">3. Week 11: Key Passages Study</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Passage 1: Joseph Sold by His Brothers (Genesis 37:18–28)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text Focus: Genesis 37:23–28</h3>
+<blockquote>
+<p><em>And it came to pass, when Joseph was come unto his brethren, that they stript Joseph out of his coat, his coat of many colours that was on him; And they took him, and cast him into a pit: and the pit was empty, there was no water in it. And they sat down to eat bread... and sold Joseph to the Ishmeelites for twenty pieces of silver: and they brought Joseph into Egypt.</em></p>
+</blockquote>
+<h3>Analysis</h3>
+<ul>
+<li><strong>"They stript Joseph"</strong> (<a href="https://www.blueletterbible.org/lexicon/h6584/kjv/wlc/0-1/" target="_blank" data-lexicon="to strip, invade, strip off, make a dash, raid, spread out(Qal)to strip off, put offto put off (one's shelter), make ..." data-strongs="H6584" data-translit="pāšaṭ" data-original="פָּשַׁט" data-lang="hebrew" data-verse="">וַיַּפְשִׁיטוּ</a>): The brothers strip the symbol of favoritism. The verb <em>pashat</em> can mean to strip off (clothing) or to invade/raid. There's violence in the action—they're not just removing a coat; they're stripping Joseph of his identity and status.</li>
+</ul>
+<ul>
+<li><strong>"Cast him into a pit"</strong> (<a href="https://www.blueletterbible.org/lexicon/h953/kjv/wlc/0-1/" target="_blank" data-lexicon="pit, well, cistern" data-strongs="H953" data-translit="bôr" data-original="בּוֹר" data-lang="hebrew" data-verse="">הַבּוֹר</a>, <em>habor</em>): The <em>bor</em> was a cistern—a death-like space. Joseph descends into darkness, abandoned. This is his first "death."</li>
+</ul>
+<ul>
+<li><strong>"They sat down to eat bread"</strong>: The casual cruelty is stunning. While their brother cries from the pit, they eat lunch. The Hebrew narrative simply states it without comment—letting readers feel the horror.</li>
+</ul>
+<ul>
+<li><strong>"Twenty pieces of silver"</strong>: The price of a slave in the Middle Bronze Age. <a href="https://www.blueletterbible.org/kjv/lev/27/5/s_117005" target="_blank">Leviticus 27:5</a> values a male between 5-20 years at twenty shekels. Centuries later, Judas would sell Jesus for thirty pieces of silver.</li>
+</ul>
+<h3>Christological Type</h3>
+<table class="info-table">
+<tr><th>Joseph</th><th>Christ</th></tr>
+<tr><td>Sent by his father to check on brothers</td><td>Sent by Father to His own</td></tr>
+<tr><td>Brothers "saw him afar off" and conspired (v. 18)</td><td>Chief priests conspired against Jesus</td></tr>
+<tr><td>Stripped of his garment</td><td>Soldiers stripped Jesus' garments</td></tr>
+<tr><td>Cast into a pit</td><td>Descended to the grave</td></tr>
+<tr><td>Sold for silver</td><td>Sold for silver</td></tr>
+</table>
+<h3>Cross-References</h3>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/psa/105/17-19/s_583017" target="_blank">Psalm 105:17–19</a> — "He sent a man before them, even Joseph, who was sold for a servant"</li>
+<li><a href="https://www.blueletterbible.org/kjv/act/7/9/s_1025009" target="_blank">Acts 7:9</a> — "The patriarchs, moved with envy, sold Joseph into Egypt: but God was with him"</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 2: "The LORD Was with Joseph" (Genesis 39:1–6, 21–23)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text Focus</h3>
+<blockquote>
+<p><em>And the LORD was with Joseph, and he was a prosperous man... And his master saw that the LORD was with him, and that the LORD made all that he did to prosper in his hand... The keeper of the prison looked not to any thing that was under his hand; because the LORD was with him, and that which he did, the LORD made it to prosper.</em></p>
+</blockquote>
+<h3>Analysis</h3>
+<ul>
+<li><strong>The refrain:</strong> "The LORD was with Joseph" appears four times in chapter 39 (vv. 2, 3, 21, 23). It frames the entire chapter—before and after the crisis with Potiphar's wife.</li>
+</ul>
+<ul>
+<li><strong>"A prosperous man"</strong> (<a href="https://www.blueletterbible.org/lexicon/h6743/kjv/wlc/0-1/" target="_blank" data-lexicon="(Qal) to rushto advance, prosper, make progress, succeed, be profitable(Qal) to prosper(Hiphil)to make prosperous, br..." data-strongs="H6743" data-translit="ṣālēaḥ" data-original="צְלוּל" data-lang="hebrew" data-verse="">אִישׁ מַצְלִיחַ</a>, <em>ish matsliach</em>): The verb <em>tsalach</em> means to advance, prosper, succeed. But Joseph was a slave, then a prisoner. His "prosperity" was internal—the favor of God and the trust of his overseers.</li>
+</ul>
+<ul>
+<li><strong>"His master saw"</strong> (v. 3): Potiphar recognized something divine in Joseph. Even a pagan Egyptian could see that God was with this Hebrew slave. Faithfulness is visible.</li>
+</ul>
+<ul>
+<li><strong>Even in prison</strong> (vv. 21–23): The pattern repeats. Joseph descends again—from steward to prisoner—and again God is with him, and again he rises to manage everything.</li>
+</ul>
+<h3>Theological Significance</h3>
+<p>The text doesn't say God <em>rescued</em> Joseph from hardship. God was <em>with</em> Joseph <em>in</em> hardship. Divine presence doesn't guarantee comfort; it guarantees companionship. This is a profound theology of suffering.</p>
+<h3>Cross-References</h3>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/isa/43/2/s_722002" target="_blank">Isaiah 43:2</a> — "When thou passest through the waters, I will be with thee"</li>
+<li><a href="https://www.blueletterbible.org/kjv/heb/13/5/s_1146005" target="_blank">Hebrews 13:5</a> — "I will never leave thee, nor forsake thee"</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122?lang=eng&id=7-9" target="_blank">D&C 122:7–9</a> — "Know thou, my son, that all these things shall give thee experience"</li>
+</ul>
+<h3>Conference Address</h3>
+<blockquote>
+<p>"Joseph had arrayed himself in the whole armor of God, and God was with him through his tribulations, which he withstood; and, continuing to keep the commandments and to call upon God for help and strength, he was blessed and able to do what God required of him."</p>
+<p>— N. Eldon Tanner, <a href="https://www.churchofjesuschrist.org/study/general-conference/1979/04/put-on-the-whole-armor-of-god?lang=eng" target="_blank">"Put on the Whole Armor of God"</a>, April 1979</p>
+</blockquote>
+<p><strong>Teaching note:</strong> Tanner's framing complements the theological point of Passage 2 precisely: God was <em>with</em> Joseph <em>through</em> tribulations, not instead of them. The text of <a href="https://www.blueletterbible.org/kjv/gen/39/1/s_39001" target="_blank">Genesis 39</a> and this talk speak with one voice — divine presence does not equal divine removal of hardship.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 3: Joseph Flees Temptation (Genesis 39:7–12)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text Focus</h3>
+<blockquote>
+<p><em>And it came to pass after these things, that his master's wife cast her eyes upon Joseph; and she said, Lie with me. But he refused... How then can I do this great wickedness, and sin against God?... And it came to pass, as she spake to Joseph day by day, that he hearkened not unto her... he left his garment in her hand, and fled, and got him out.</em></p>
+</blockquote>
+<h3>Analysis</h3>
+<ul>
+<li><strong>"Cast her eyes upon Joseph"</strong> (<a href="https://www.blueletterbible.org/kjv/gen/39/7/s_39007" target="_blank">וַתִּשָּׂא</a>): The Hebrew verb <em>nasa</em> implies more than glancing—it's fixing attention, desiring. The temptation began with her gaze.</li>
+</ul>
+<ul>
+<li><strong>Joseph's reasoning</strong> (v. 9): His refusal is theological, not pragmatic:</li>
+</ul>
+<p>  1. My master trusts me completely</p>
+<p>  2. He's withheld nothing but you</p>
+<p>  3. You are his wife</p>
+<p>  4. This would be "great wickedness" (<em>ra'ah gedolah</em>)</p>
+<p>  5. It would be sin against <strong>God</strong></p>
+<p>Joseph defined sin primarily as offense against God, not just social violation. This theocentric morality gave him strength to resist.</p>
+<ul>
+<li><strong>"Day by day"</strong> (v. 10): The temptation was persistent, not a single moment. Joseph maintained discipline over time. This required daily choices.</li>
+</ul>
+<ul>
+<li><strong>"He hearkened not unto her"</strong>: The Hebrew construction is emphatic—he did not listen to her <em>at all</em>. He refused to be in compromising situations ("to lie by her, or to be with her").</li>
+</ul>
+<ul>
+<li><strong>"Fled, and got him out"</strong> (<a href="https://www.blueletterbible.org/lexicon/h5127/kjv/wlc/0-1/" target="_blank" data-lexicon="to flee, escape(Qal)to fleeto escapeto take flight,m depart, disappearto fly (to the attack) on horseback(Polel) to d..." data-strongs="H5127" data-translit="nûs" data-original="נוּס" data-lang="hebrew" data-verse="">וַיָּנָס</a>, <em>vayanas</em>): The verb <em>nus</em> means to flee urgently. Joseph didn't gradually extricate himself; he ran. Flight was his strategy.</li>
+</ul>
+<h3>Application</h3>
+<p>Some sins require not resistance but escape. When Joseph had to choose between his garment and his integrity, he chose integrity. The loss of his coat led to false accusation—but he kept his soul.</p>
+<h3>Cross-References</h3>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/1co/6/18/s_1068018" target="_blank">1 Corinthians 6:18</a> — "Flee fornication"</li>
+<li><a href="https://www.blueletterbible.org/kjv/2ti/2/22/s_1127022" target="_blank">2 Timothy 2:22</a> — "Flee also youthful lusts"</li>
+<li><a href="https://www.blueletterbible.org/kjv/1co/10/13/s_1072013" target="_blank">1 Corinthians 10:13</a> — "God is faithful, who will not suffer you to be tempted above that ye are able"</li>
+</ul>
+<h3>Prophetic Witness</h3>
+<blockquote>
+<p>"Another example of the protection which comes from the whole armor of God is found in the life of Joseph who was sold into Egypt... Joseph refused her advances, and he fled from her... Long before the moment of temptation comes we should have determined that we will resist... anything that will keep us from enjoying the companionship of the Spirit of the Lord."</p>
+<p>— N. Eldon Tanner, <a href="https://www.churchofjesuschrist.org/study/general-conference/1979/04/put-on-the-whole-armor-of-god?lang=eng" target="_blank">"Put on the Whole Armor of God"</a>, April 1979</p>
+</blockquote>
+<blockquote>
+<p>"Joseph, though a slave in Egypt, stood true under pressure of the greatest temptation. As a reward he received the choicest blessings of all the sons of Jacob: he became the progenitor of the two favored tribes of Israel."</p>
+<p>— Marion G. Romney, <a href="https://www.churchofjesuschrist.org/study/general-conference/1979/04/trust-in-the-lord?lang=eng" target="_blank">"Trust in the Lord"</a>, April 1979</p>
+</blockquote>
+<p><strong>Teaching note:</strong> Romney's comparison of Joseph and David is gold for classroom application: same era, same covenant background, same temptations of power and status — but opposite responses. The contrast illuminates how birthright blessings and exaltation hinge on moral integrity, not only priestly lineage.</p>
+<blockquote>
+<p>⚠ <em>A quote previously attributed here to David A. Bednar ("Flee immorality. Don't flirt with it...") was not located in the General Conference archive. It may originate from a CES devotional or other non-conference address. Remove or verify before publishing.</em></p>
+</blockquote>
+<blockquote>
+<p>"When we are confronted with that which is evil and degrading—whether it be the wrong kind of music, a television program, or the Internet which places us in the wrong environment—how strengthening it is to remember the story of Joseph: 'And [he] fled, and got him out.' He removed himself from the temptation."</p>
+<p>— L. Tom Perry, <a href="https://www.churchofjesuschrist.org/study/general-conference/2002/04/becoming-men-in-whom-the-spirit-of-god-is?lang=eng" target="_blank">"Becoming Men in Whom the Spirit of God Is"</a>, April 2002</p>
+</blockquote>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 4: "Interpretations Belong to God" (Genesis 40:8; 41:16)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text Focus</h3>
+<blockquote>
+<p><em>And they said unto him, We have dreamed a dream, and there is no interpreter of it. And Joseph said unto them, Do not interpretations belong to God? tell me them, I pray you.</em> (40:8)</p>
+</blockquote>
+<blockquote>
+<p><em>And Joseph answered Pharaoh, saying, It is not in me: God shall give Pharaoh an answer of peace.</em> (41:16)</p>
+</blockquote>
+<h3>Analysis</h3>
+<ul>
+<li><strong>"Do not interpretations belong to God?"</strong> (<a href="https://www.blueletterbible.org/kjv/gen/40/8/s_40008" target="_blank">הֲלוֹא לֵאלֹהִים פִּתְרֹנִים</a>): Joseph's question is rhetorical—of course they belong to God. He redirects credit before even hearing the dreams.</li>
+</ul>
+<ul>
+<li><strong>"It is not in me"</strong> (<a href="https://www.blueletterbible.org/kjv/gen/41/16/s_41016" target="_blank">בִּלְעָדָי</a>, <em>bil'adai</em>): Standing before Pharaoh, Joseph could have claimed personal power. Instead: "Apart from me"—God will provide the answer. This humility before the most powerful man in Egypt is remarkable.</li>
+</ul>
+<ul>
+<li><strong>Contrast with Egypt's magicians</strong> (41:8): The <em>chartummim</em> failed. Their interpretive techniques—consulting dream manuals, performing rituals—produced nothing. Joseph's revelation came directly from God.</li>
+</ul>
+<h3>Theological Significance</h3>
+<p>Spiritual gifts are given for God's purposes, not personal glory. Joseph's consistent humility positioned him for greater responsibility. By acknowledging God's role, he demonstrated trustworthiness with God's power.</p>
+<h3>Cross-References</h3>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/dan/2/27-28/s_852027" target="_blank">Daniel 2:27–28</a> — Daniel similarly credits God before Nebuchadnezzar</li>
+<li><a href="https://www.blueletterbible.org/kjv/1pe/4/10-11/s_1155010" target="_blank">1 Peter 4:10–11</a> — "If any man speak, let him speak as the oracles of God"</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 5: Joseph's Elevation (Genesis 41:38–45)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text Focus</h3>
+<blockquote>
+<p><em>And Pharaoh said unto his servants, Can we find such a one as this is, a man in whom the Spirit of God is? And Pharaoh said unto Joseph... Thou shalt be over my house, and according unto thy word shall all my people be ruled: only in the throne will I be greater than thou.</em></p>
+</blockquote>
+<h3>Analysis</h3>
+<ul>
+<li><strong>"A man in whom the Spirit of God is"</strong> (<a href="https://www.blueletterbible.org/kjv/gen/41/38/s_41038" target="_blank">אֲשֶׁר רוּחַ אֱלֹהִים בּוֹ</a>): Pharaoh—a pagan king—recognizes the divine Spirit in Joseph. This is one of the earliest references to the Spirit of God operating in an individual.</li>
+</ul>
+<ul>
+<li><strong>"Over my house"</strong>: Joseph, the slave who ran another man's house, now runs Egypt's house. God's training ground in Potiphar's household prepared Joseph for this.</li>
+</ul>
+<ul>
+<li><strong>"Only in the throne will I be greater"</strong>: Joseph becomes vizier—second only to Pharaoh. This parallels Christ at the Father's right hand.</li>
+</ul>
+<ul>
+<li><strong>Ring, vestures, chain</strong> (v. 42): The symbols of authority—exactly what Joseph lost when stripped by his brothers and by Potiphar's wife. God restored and multiplied what was taken.</li>
+</ul>
+<ul>
+<li><strong>New name: Zaphenath-paneah</strong> (v. 45): Egyptian name, possibly meaning "the god speaks and he lives" or "revealer of secrets." Joseph receives a new identity with his new role.</li>
+</ul>
+<h3>Christological Type</h3>
+<table class="info-table">
+<tr><th>Joseph</th><th>Christ</th></tr>
+<tr><td>Spirit of God in him</td><td>Anointed with Holy Spirit</td></tr>
+<tr><td>Elevated to right hand of Pharaoh</td><td>Seated at right hand of Father</td></tr>
+<tr><td>Given authority over all Egypt</td><td>Given all authority in heaven and earth</td></tr>
+<tr><td>Provides bread during famine</td><td>Bread of Life</td></tr>
+<tr><td>Revealed as savior to those who rejected him</td><td>Revealed to Israel at Second Coming</td></tr>
+</table>
+<h3>Cross-References</h3>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/phi/2/9-11/s_1105009" target="_blank">Philippians 2:9–11</a> — "God also hath highly exalted him, and given him a name above every name"</li>
+<li><a href="https://www.blueletterbible.org/kjv/act/2/33/s_1020033" target="_blank">Acts 2:33</a> — "Being by the right hand of God exalted"</li>
+</ul>
+<h3>Conference Address</h3>
+<blockquote>
+<p>"You will notice in each situation in which Joseph found himself that the Lord was with him. It was easy to recognize the special spirit in him because of the way he lived and heeded the voice of the Lord to direct him. That same recognition will surely be with each of us as we are led and directed by His Holy Spirit."</p>
+<p>— L. Tom Perry, <a href="https://www.churchofjesuschrist.org/study/general-conference/2002/04/becoming-men-in-whom-the-spirit-of-god-is?lang=eng" target="_blank">"Becoming Men in Whom the Spirit of God Is"</a>, April 2002</p>
+</blockquote>
+<p><strong>Teaching note:</strong> Perry's talk is the ideal companion piece for the entire Week 11 lesson — it walks through <a href="https://www.blueletterbible.org/kjv/gen/37/1/s_37001" target="_blank">Genesis 37–41</a> from the coat of many colors through Joseph's elevation before Pharaoh, drawing Pharaoh's words ("a man in whom the Spirit of God is") as the culminating question we should be asking about ourselves. Perry applies the narrative directly to modern young men navigating moral temptations in their own digital age.</p>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 4: WEEK 11: WORD STUDIES -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">4. Week 11: Word Studies</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Word Study 1: כְּתֹנֶת פַּסִּים (<em>ketonet passim</em>) — "Coat of Many Colors"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h3801/kjv/wlc/0-1/" target="_blank" data-lexicon="tunic, under-garmenta long shirt-like garment usually of linen" data-strongs="H3801" data-translit="kutōneṯ" data-original="כֻּתֹּנֶת" data-lang="hebrew" data-verse="">כ-ת-נ</a> (<em>K-T-N</em>, "tunic") + <a href="https://www.blueletterbible.org/lexicon/h6446/kjv/wlc/0-1/" target="_blank" data-lexicon="flat (of the hand or foot), palm, soleof the tunic reaching to palms and soles (fig.)" data-strongs="H6446" data-translit="pas" data-original="פַּס" data-lang="hebrew" data-verse="">פַּס</a> (<em>pas</em>, disputed meaning)</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/gen/37/3/s_37003" target="_blank">Genesis 37:3</a> — "he made him a coat of many colours"</p>
+<h3>Meaning</h3>
+<p>The phrase <em>ketonet passim</em> has been translated various ways:</p>
+<table class="info-table">
+<tr><th>Translation</th><th>Basis</th></tr>
+<tr><td>"Coat of many colors"</td><td>LXX (<em>poikilos</em>) and Vulgate</td></tr>
+<tr><td>"Long robe with sleeves"</td><td><em>Pas</em> = "palm of hand" (reaching to extremities)</td></tr>
+<tr><td>"Ornamented tunic"</td><td>Royal/noble garment</td></tr>
+<tr><td>"Striped tunic"</td><td><em>Pas</em> = "stripe"</td></tr>
+</table>
+<p>The exact meaning is uncertain, but the function is clear: it marked Joseph as special, set apart from his brothers.</p>
+<h3>Only Other Occurrence</h3>
+<p><a href="https://www.blueletterbible.org/kjv/2sa/13/18-19/s_280018" target="_blank">2 Samuel 13:18–19</a> uses the same phrase for the garment worn by "the king's daughters that were virgins." This was royal clothing—not working attire. Jacob dressed Joseph like a prince.</p>
+<h3>Theological Significance</h3>
+<p>Joseph's coat becomes a symbol throughout the narrative:</p>
+<ul>
+<li>Given by his father (love)</li>
+<li>Stripped by brothers (rejection)</li>
+<li>Dipped in blood (false death)</li>
+<li>Garment left with Potiphar's wife (false accusation)</li>
+<li>New garments from Pharaoh (restoration)</li>
+</ul>
+<p>The cycle of clothing lost and restored mirrors Joseph's journey: stripped, descending, then clothed with honor.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g5509/kjv/tr/0-1/" target="_blank" data-lexicon="a tunic, an undergarment, usually worn next to the skin, a garment, a vestment" data-strongs="G5509" data-translit="chitōn" data-original="χιτών" data-lang="greek" data-verse=""><em>chitōn</em> (χιτών)</a> — tunic, undergarment worn next to skin</td><td><a href="https://www.blueletterbible.org/kjv/gen/37/3/s_37003" target="_blank">Gen. 37:3</a> (LXX)</td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/tunica" target="_blank"><em>tunica</em></a> — tunic, undergarment</td><td><a href="https://www.blueletterbible.org/kjv/gen/37/3/s_37003" target="_blank">Gen. 37:3</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/tunic" target="_blank">tunic</a> (<a href="https://webstersdictionary1828.com/Dictionary/tunic" target="_blank">1828</a>)</td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 2: חֲלוֹם (<em>chalom</em>) — "Dream"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h2492/kjv/wlc/0-1/" target="_blank" data-lexicon="to dream (Qal) to dream (ordinary) to dream (prophetic) to dream (of false prophets) (Hiphil) to dream to be healthy,..." data-strongs="H2492" data-translit="ḥālam" data-original="חָלַם" data-lang="hebrew" data-verse="">ח-ל-מ</a> (<em>Ch-L-M</em>, "to dream")</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/gen/37/5/s_37005" target="_blank">Genesis 37:5, 9; 40:5, 8; 41:1, 7, 8, 11, 12, 15, 17, 22, 25, 26, 32</a></p>
+<h3>Meaning</h3>
+<p>The word <em>chalom</em> appears over twenty times in the Joseph narrative—more than in any other biblical section. Dreams are the primary vehicle for divine communication in this story.</p>
+<h3>Dreams in the Joseph Narrative</h3>
+<table class="info-table">
+<tr><th>Dreamer</th><th>Content</th><th>Interpretation</th><th>Outcome</th></tr>
+<tr><td>Joseph (1)</td><td>Brothers' sheaves bow</td><td>Brothers will bow</td><td>Fulfilled (<a href="https://www.blueletterbible.org/kjv/gen/42/1/s_42001" target="_blank">Gen. 42–44</a>)</td></tr>
+<tr><td>Joseph (2)</td><td>Sun, moon, stars bow</td><td>Family will bow</td><td>Fulfilled (<a href="https://www.blueletterbible.org/kjv/gen/46/1/s_46001" target="_blank">Gen. 46–47</a>)</td></tr>
+<tr><td>Butler</td><td>Vine, three branches, cup</td><td>Restored in three days</td><td>Fulfilled (40:20–21)</td></tr>
+<tr><td>Baker</td><td>Three baskets, birds</td><td>Hanged in three days</td><td>Fulfilled (40:22)</td></tr>
+<tr><td>Pharaoh (1)</td><td>Seven fat/thin cows</td><td>Seven years plenty/famine</td><td>Fulfilled (41:47–57)</td></tr>
+<tr><td>Pharaoh (2)</td><td>Seven plump/thin ears</td><td>Same as above</td><td>Fulfilled</td></tr>
+</table>
+<h3>Doubling of Dreams</h3>
+<p><a href="https://www.blueletterbible.org/kjv/gen/41/32/s_41032" target="_blank">Genesis 41:32</a>: "The dream was doubled unto Pharaoh twice; it is because the thing is established by God, and God will shortly bring it to pass."</p>
+<p>When God repeats a dream (Pharaoh's two dreams; Joseph's two dreams), it indicates certainty and imminent fulfillment.</p>
+<h3>LDS Application</h3>
+<p>Revelation can come through dreams, but interpretation belongs to God and His servants:</p>
+<ul>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/8?lang=eng" target="_blank">1 Nephi 8</a> — Lehi's dream</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/11?lang=eng" target="_blank">1 Nephi 11</a> — Nephi's interpretation</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/5?lang=eng&id=p16#p16" target="_blank">D&C 5:16</a> — "Dreams... are from God"</li>
+</ul>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g1798/kjv/tr/0-1/" target="_blank" data-lexicon="a dream" data-strongs="G1798" data-translit="enypnion" data-original="ἐνύπνιον" data-lang="greek" data-verse=""><em>enypnion</em> (ἐνύπνιον)</a> — a dream; what appears in sleep</td><td><a href="https://www.blueletterbible.org/kjv/gen/37/5/s_37005" target="_blank">Gen. 37:5</a> (LXX)</td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/somnium" target="_blank"><em>somnium</em></a> — a dream; from <em>somnus</em> (sleep)</td><td><a href="https://www.blueletterbible.org/kjv/gen/37/5/s_37005" target="_blank">Gen. 37:5</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/somnolent" target="_blank">somnolent</a> (<a href="https://webstersdictionary1828.com/Dictionary/somnolent" target="_blank">1828</a>), <a href="https://www.merriam-webster.com/dictionary/insomnia" target="_blank">insomnia</a> (<a href="https://webstersdictionary1828.com/Dictionary/insomnia" target="_blank">1828</a>)</td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 3: שַׂר (<em>sar</em>) — "Captain / Chief / Prince"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h8323/kjv/wlc/0-1/" target="_blank" data-lexicon="to be or act as prince, rule, contend, have power, prevail over, reign, govern(Qal) to rule over, govern(Hithpael) to..." data-strongs="H8323" data-translit="śārar" data-original="שָׂרַר" data-lang="hebrew" data-verse="">ש-ר-ר</a> (<em>S-R-R</em>, "to rule, have dominion")</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/gen/37/36/s_37036" target="_blank">Genesis 37:36; 39:1; 40:2, 4, 9, 16, 20, 21, 22; 41:9</a></p>
+<h3>Meaning</h3>
+<p>The title <em>sar</em> appears frequently in the Joseph narrative for various officials:</p>
+<ul>
+<li><strong>Potiphar:</strong> <em>sar hatabachim</em> — "captain of the guard" (lit. "chief of the slaughterers/executioners")</li>
+<li><strong>Butler:</strong> <em>sar hamashqim</em> — "chief butler" (chief of cupbearers)</li>
+<li><strong>Baker:</strong> <em>sar ha'ophim</em> — "chief baker"</li>
+</ul>
+<h3>Administrative Structure</h3>
+<p>The repeated use of <em>sar</em> reflects Egyptian bureaucratic hierarchy. Joseph learns to navigate this system, eventually becoming <em>sar</em> over all Egypt (second only to Pharaoh).</p>
+<h3>Theological Connection</h3>
+<p>The name <em>Israel</em> includes the element <em>sar</em>: <a href="https://www.blueletterbible.org/lexicon/h3481/kjv/wlc/0-1/" target="_blank" data-lexicon="Israelite = see Israel &quot;God prevails&quot;a descendant or inhabitant of the nation of Israel" data-strongs="H3481" data-translit="yiśrᵊ&#x27;ēlî" data-original="יִשְׂרָאֵל" data-lang="hebrew" data-verse="">יִשְׂרָאֵל</a> (<em>Yisra'el</em>)—"prince with God" or "God prevails." Joseph, son of Israel, becomes a prince in Egypt—fulfilling in type what his father's name suggested.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g758/kjv/tr/0-1/" target="_blank" data-lexicon="a ruler, commander, chief, leader" data-strongs="G758" data-translit="archōn" data-original="ἄρχων" data-lang="greek" data-verse=""><em>archōn</em> (ἄρχων)</a> — ruler, commander, chief, leader</td><td><a href="https://www.blueletterbible.org/kjv/gen/39/1/s_39001" target="_blank">Gen. 39:1</a> (LXX)</td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/princeps" target="_blank"><em>princeps</em></a> — first, chief, leader; from <em>primus</em> + <em>capio</em></td><td><a href="https://www.blueletterbible.org/kjv/gen/39/1/s_39001" target="_blank">Gen. 39:1</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/prince" target="_blank">prince</a> (<a href="https://webstersdictionary1828.com/Dictionary/prince" target="_blank">1828</a>), <a href="https://www.merriam-webster.com/dictionary/principal" target="_blank">principal</a> (<a href="https://webstersdictionary1828.com/Dictionary/principal" target="_blank">1828</a>)</td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 4: נוּס (<em>nus</em>) — "To Flee"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h5127/kjv/wlc/0-1/" target="_blank" data-lexicon="to flee, escape(Qal)to fleeto escapeto take flight,m depart, disappearto fly (to the attack) on horseback(Polel) to d..." data-strongs="H5127" data-translit="nûs" data-original="נוּס" data-lang="hebrew" data-verse="">נ-ו-ס</a> (<em>N-W-S</em>)</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/gen/39/12/s_39012" target="_blank">Genesis 39:12</a> — "he left his garment in her hand, and fled (<em>vayanas</em>)"</p>
+<h3>Meaning</h3>
+<p>The verb <em>nus</em> means to flee, escape, run away urgently. It implies rapid, decisive departure—not gradual withdrawal.</p>
+<h3>Key Usages in Scripture</h3>
+<table class="info-table">
+<tr><th>Passage</th><th>Context</th></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/gen/39/12/s_39012" target="_blank">Genesis 39:12</a></td><td>Joseph flees Potiphar's wife</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/14/25/s_64025" target="_blank">Exodus 14:25</a></td><td>Egyptians say "Let us flee from Israel"</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/num/35/6/s_152006" target="_blank">Numbers 35:6</a></td><td>Cities of refuge for those who flee</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/1sa/19/10/s_255010" target="_blank">1 Samuel 19:10</a></td><td>David flees from Saul's spear</td></tr>
+</table>
+<h3>Theological Significance</h3>
+<p>Some temptations cannot be resisted by standing firm—they require flight. Joseph's example teaches that leaving a situation is sometimes the most faithful response. Losing the garment was better than losing integrity.</p>
+<h3>New Testament Echo</h3>
+<p>Paul uses similar language: "Flee fornication" (<a href="https://www.blueletterbible.org/kjv/1co/6/18/s_1068018" target="_blank">φεύγετε</a>, <em>pheugete</em>, <a href="https://www.blueletterbible.org/kjv/1co/6/18/s_1068018" target="_blank">1 Cor. 6:18</a>); "Flee also youthful lusts" (<a href="https://www.blueletterbible.org/kjv/2ti/2/22/s_1127022" target="_blank">2 Tim. 2:22</a>). The pattern Joseph established becomes apostolic counsel.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g5343/kjv/tr/0-1/" target="_blank" data-lexicon="to flee away, seek safety by flightmetaph. to flee (to shun or avoid by flight) something abhorrent, esp. vicesto be ..." data-strongs="G5343" data-translit="pheugō" data-original="φεύγω" data-lang="greek" data-verse=""><em>pheugō</em> (φεύγω)</a> — to flee, seek safety by flight; to shun or avoid</td><td><a href="https://www.blueletterbible.org/kjv/gen/39/12/s_39012" target="_blank">Gen. 39:12</a> (LXX); <a href="https://www.blueletterbible.org/kjv/1co/6/18/s_1068018" target="_blank">1 Cor. 6:18</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/fugio" target="_blank"><em>fugio</em></a> — to flee, run away; root of <em>fuga</em> (flight)</td><td><a href="https://www.blueletterbible.org/kjv/gen/39/12/s_39012" target="_blank">Gen. 39:12</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/fugitive" target="_blank">fugitive</a> (<a href="https://webstersdictionary1828.com/Dictionary/fugitive" target="_blank">1828</a>), <a href="https://www.merriam-webster.com/dictionary/refugee" target="_blank">refugee</a> (<a href="https://webstersdictionary1828.com/Dictionary/refugee" target="_blank">1828</a>)</td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 5: פִּתְרוֹן (<em>pitron</em>) — "Interpretation"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h6622/kjv/wlc/0-1/" target="_blank" data-lexicon="(Qal) to interpret (dreams)" data-strongs="H6622" data-translit="pāṯar" data-original="פָּתַר" data-lang="hebrew" data-verse="">פ-ת-ר</a> (<em>P-T-R</em>, "to interpret")</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/gen/40/5/s_40005" target="_blank">Genesis 40:5, 8, 12, 18; 41:11, 12, 15</a></p>
+<h3>Meaning</h3>
+<p>The word <em>pitron</em> means interpretation or solution—specifically of dreams. It appears only in <a href="https://www.blueletterbible.org/kjv/gen/40/1/s_40001" target="_blank">Genesis 40–41</a> and <a href="https://www.blueletterbible.org/kjv/dan/2/1/s_852001" target="_blank">Daniel 2–5</a>, both contexts involving divinely-given dream interpretation.</p>
+<h3>"Interpretations Belong to God"</h3>
+<p><a href="https://www.blueletterbible.org/kjv/gen/40/8/s_40008" target="_blank">Genesis 40:8</a>: הֲלוֹא לֵאלֹהִים פִּתְרֹנִים (<em>halo l'Elohim pitronim</em>) — "Do not interpretations belong to God?"</p>
+<p>Joseph's question makes a theological claim: the ability to decode divine messages belongs to God alone. Human techniques fail (Egypt's <em>chartummim</em> couldn't interpret); only revelation succeeds.</p>
+<h3>Joseph vs. Magicians</h3>
+<table class="info-table">
+<tr><th>Egyptian Magicians</th><th>Joseph</th></tr>
+<tr><td>Used dream manuals</td><td>Received direct revelation</td></tr>
+<tr><td>Employed divination techniques</td><td>Prayed and listened</td></tr>
+<tr><td>Failed before Pharaoh</td><td>Succeeded immediately</td></tr>
+<tr><td>Credited their arts</td><td>Credited God</td></tr>
+</table>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g4793/kjv/tr/0-1/" target="_blank" data-lexicon="to joint together fitly, compound, combineto interpretto compare" data-strongs="G4793" data-translit="sygkrinō" data-original="συγκρίνω" data-lang="greek" data-verse=""><em>sygkrinō</em> (συγκρίνω)</a> — to interpret; to compare, combine, join together</td><td><a href="https://www.blueletterbible.org/kjv/gen/40/8/s_40008" target="_blank">Gen. 40:8</a> (LXX)</td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/interpretatio" target="_blank"><em>interpretatio</em></a> — interpretation, explanation; from <em>interpres</em> (go-between, explainer)</td><td><a href="https://www.blueletterbible.org/kjv/gen/40/8/s_40008" target="_blank">Gen. 40:8</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/interpret" target="_blank">interpret</a> (<a href="https://webstersdictionary1828.com/Dictionary/interpret" target="_blank">1828</a>), <a href="https://www.merriam-webster.com/dictionary/interpretation" target="_blank">interpretation</a> (<a href="https://webstersdictionary1828.com/Dictionary/interpretation" target="_blank">1828</a>)</td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 6: צָלַח (<em>tsalach</em>) — "To Prosper / Succeed"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h6744/kjv/wlc/0-1/" target="_blank" data-lexicon="to prosper(Aphel)to cause to prospershow prosperity, be prosperous, have success, be successful" data-strongs="H6744" data-translit="ṣᵊlaḥ" data-original="צְלַח" data-lang="hebrew" data-verse="">צ-ל-ח</a> (<em>Ts-L-Ch</em>)</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/gen/39/2/s_39002" target="_blank">Genesis 39:2, 3, 23</a> — "the LORD made all that he did to prosper"</p>
+<h3>Meaning</h3>
+<p>The verb <em>tsalach</em> means to advance, prosper, be successful, push forward. In the hiphil (causative) form used here, it means "to cause to prosper"—God actively makes Joseph's work succeed.</p>
+<h3>Context of Prosperity</h3>
+<p>Remarkably, the text says Joseph "prospered" as:</p>
+<ol>
+<li>A slave in Potiphar's house (39:2–3)</li>
+<li>A prisoner in jail (39:23)</li>
+</ol>
+<p>This redefines prosperity. Joseph owned nothing; he had no freedom. Yet he prospered because God's favor rested on him and his work bore fruit.</p>
+<h3>LDS Application</h3>
+<p>Prosperity in God's economy is not about circumstances but about divine presence and fruitful labor. Joseph's <em>tsalach</em> was real even in prison.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g2137/kjv/tr/0-1/" target="_blank" data-lexicon="to grant a prosperous and expeditious journey, to lead by a direct and easy way to grant a successful issue, to cause..." data-strongs="G2137" data-translit="euodoō" data-original="εὐοδόω" data-lang="greek" data-verse=""><em>euodoō</em> (εὐοδόω)</a> — to grant a prosperous journey; to lead by a direct and easy way; to prosper</td><td><a href="https://www.blueletterbible.org/kjv/gen/39/2/s_39002" target="_blank">Gen. 39:2</a> (LXX)</td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/prospero" target="_blank"><em>prospero</em></a> — to cause to succeed, make prosperous; from <em>pro</em> + <em>spes</em> (hope)</td><td><a href="https://www.blueletterbible.org/kjv/gen/39/2/s_39002" target="_blank">Gen. 39:2</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/prosper" target="_blank">prosper</a> (<a href="https://webstersdictionary1828.com/Dictionary/prosper" target="_blank">1828</a>), <a href="https://www.merriam-webster.com/dictionary/prosperity" target="_blank">prosperity</a> (<a href="https://webstersdictionary1828.com/Dictionary/prosperity" target="_blank">1828</a>)</td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 7: רוּחַ אֱלֹהִים (<em>ruach Elohim</em>) — "Spirit of God"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h7304/kjv/wlc/0-1/" target="_blank" data-lexicon="to be wide, be spacious, breathe(Qal) to breathe easily, be relieved(Pual) spacious (participle)" data-strongs="H7304" data-translit="rāvaḥ" data-original="רָוַח" data-lang="hebrew" data-verse="">ר-ו-ח</a> (<em>R-W-Ch</em>, "breath, wind, spirit")</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/gen/41/38/s_41038" target="_blank">Genesis 41:38</a> — "a man in whom the Spirit of God is"</p>
+<h3>Meaning</h3>
+<p><em>Ruach Elohim</em> is the Hebrew phrase for "Spirit of God"—the same phrase used in <a href="https://www.blueletterbible.org/kjv/gen/1/2/s_1002" target="_blank">Genesis 1:2</a> where the Spirit "moved upon the face of the waters." Pharaoh recognized this divine spirit operating in Joseph.</p>
+<h3>Significance</h3>
+<p>This is one of the earliest biblical references to the Spirit of God dwelling <em>in</em> a specific person. It connects:</p>
+<ul>
+<li>Creation (<a href="https://www.blueletterbible.org/kjv/gen/1/2/s_1002" target="_blank">Gen. 1:2</a>) — Spirit creating</li>
+<li>Joseph (<a href="https://www.blueletterbible.org/kjv/gen/41/38/s_41038" target="_blank">Gen. 41:38</a>) — Spirit revealing</li>
+<li>Prophets — Spirit inspiring</li>
+<li>Jesus — Spirit anointing (<a href="https://www.blueletterbible.org/kjv/luk/4/18/s_977018" target="_blank">Luke 4:18</a>)</li>
+<li>Believers — Spirit indwelling (<a href="https://www.blueletterbible.org/kjv/act/2/1/s_1020001" target="_blank">Acts 2</a>)</li>
+</ul>
+<p>Pharaoh, though pagan, could perceive the divine presence. The Spirit's work is recognizable even to those outside covenant.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g4151/kjv/tr/0-1/" target="_blank" data-lexicon="the third person of the triune God, the Holy Spirit, coequal, coeternal with the Father and the Son sometimes referre..." data-strongs="G4151" data-translit="pneuma" data-original="πνεῦμα" data-lang="greek" data-verse=""><em>pneuma</em> (πνεῦμα)</a> — spirit, breath, wind; the Holy Spirit</td><td><a href="https://www.blueletterbible.org/kjv/gen/41/38/s_41038" target="_blank">Gen. 41:38</a> (LXX); <a href="https://www.blueletterbible.org/kjv/gen/1/2/s_1002" target="_blank">Gen. 1:2</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/spiritus" target="_blank"><em>spiritus</em></a> — breath, air, spirit; the animating principle</td><td><a href="https://www.blueletterbible.org/kjv/gen/41/38/s_41038" target="_blank">Gen. 41:38</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/spirit" target="_blank">spirit</a> (<a href="https://webstersdictionary1828.com/Dictionary/spirit" target="_blank">1828</a>), <a href="https://www.merriam-webster.com/dictionary/inspire" target="_blank">inspire</a> (<a href="https://webstersdictionary1828.com/Dictionary/inspire" target="_blank">1828</a>), <a href="https://www.merriam-webster.com/dictionary/pneumatic" target="_blank">pneumatic</a> (<a href="https://webstersdictionary1828.com/Dictionary/pneumatic" target="_blank">1828</a>)</td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 5: WEEK 11: JEWISH PERSPECTIVES -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">5. Week 11: Jewish Perspectives</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Overview: Joseph as the Mirror of Israel</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>In Jewish tradition, the Joseph narrative is not merely a family drama — it is a paradigm for Israel's entire experience in exile and redemption. The rabbis read every detail of these chapters through a lens of divine providence, moral accountability, and prophetic symbolism. From the coat of many colors to Pharaoh's dreams, nothing is accidental. Every wound becomes a doorway.</p>
+<p>Genesis Rabbah (Bereshit Rabbah), the great midrashic anthology compiled in late antiquity, devotes seven full chapters (84–90) to this material. The passages below represent the tradition's most striking interpretations of <a href="https://www.blueletterbible.org/kjv/gen/37/1/s_37001" target="_blank">Genesis 37–41</a>.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>1. Why Did Jacob Seek Tranquility? (Genesis 37:1–2)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The parashah opens oddly: "Jacob dwelt in the land where his father was a stranger" — a statement of rest after a lifetime of trials. The rabbis find this suspicious.</p>
+<blockquote>
+<p>"When the righteous live in tranquility and seek to live in tranquility in this world, the accuser comes and accuses them. He says: Is what is prepared for them in the World to Come not sufficient for them, that they seek to live in tranquility in this world? Know that it is so: Jacob our patriarch, because he sought to live in tranquility in this world, was confronted by the accuser regarding Joseph."</p>
+<p>— <a href="https://www.sefaria.org/Bereishit_Rabbah.84.3" target="_blank">Genesis Rabbah 84:3</a></p>
+</blockquote>
+<p><strong>Teaching implication:</strong> Rest is not the goal of the righteous — it is a temporary gift that, when clung to, often precedes a refining storm. The patriarchs' greatest growth came not in their settled moments but in their disrupted ones.</p>
+<h3>LDS Connection</h3>
+<p>This midrash aligns precisely with the LDS understanding of mortality as a school, not a sanctuary. <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/3?lang=eng&id=p25#p25" target="_blank">Abraham 3:25</a> frames earth life as a testing ground — "we will prove them herewith" — and Latter-day Saints are explicitly taught that opposition is built into the plan rather than being evidence of its failure. The Accuser's logic in this midrash — "Is what is prepared for them in the World to Come not sufficient?" — is a recognizable temptation: to collapse eternity into a demand for comfort now.</p>
+<p>Elder Neal A. Maxwell's phrase "patient discipleship" captures the same principle: the Lord calibrates trials not to break us but to form us. Jacob's seventeen years of relative peace after wrestling at Peniel produced a man who had <em>stopped</em> wrestling — and the disruption that followed was precisely designed to restart the process in his son.</p>
+<p>The deeper LDS resonance is in the phrase "the accuser comes." Latter-day Saints understand that a genuine adversary is at work in human suffering — not God's absence, but an active opposition that God <em>permits</em> because the formation it produces cannot be achieved any other way. Joseph's story begins in exactly this tension: a father at rest, a son about to be tested, and a divine plan that requires the disruption of both.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>2. Twenty-Two Parallels: Joseph as Jacob Revisited (Genesis 37:2–3)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Rabbi Shmuel bar Naḥman observes a remarkable structural symmetry: Jacob and Joseph's life stories mirror each other in twenty-two distinct ways. The rabbis understood this as intentional — Joseph was not merely Jacob's son, he was Jacob's spiritual continuation.</p>
+<p><strong>The Twenty-Two Parallels (<a href="https://www.sefaria.org/Bereishit_Rabbah.84.7" target="_blank">Genesis Rabbah 84:7</a>):</strong></p>
+<table class="info-table">
+<tr><th>#</th><th>Jacob</th><th>Joseph</th></tr>
+<tr><td>1</td><td>Born circumcised</td><td>Born circumcised</td></tr>
+<tr><td>2</td><td>Mother was barren</td><td>Mother was barren</td></tr>
+<tr><td>3</td><td>Mother bore two sons</td><td>Mother bore two sons</td></tr>
+<tr><td>4</td><td>Was firstborn [of his mother]</td><td>Was firstborn [of his mother]</td></tr>
+<tr><td>5</td><td>Mother had difficult birth</td><td>Mother had difficult birth</td></tr>
+<tr><td>6</td><td>Hated by his brother</td><td>Hated by his brothers</td></tr>
+<tr><td>7</td><td>Brother sought to kill him</td><td>Brothers sought to kill him</td></tr>
+<tr><td>8</td><td>Was a shepherd</td><td>Was a shepherd</td></tr>
+<tr><td>9</td><td>Was robbed twice</td><td>Was robbed twice</td></tr>
+<tr><td>10</td><td>Was blessed with wealth</td><td>Was blessed with wealth</td></tr>
+<tr><td>11</td><td>Went outside the Land of Israel</td><td>Went outside the Land of Israel</td></tr>
+<tr><td>12</td><td>Married outside the Land</td><td>Married outside the Land</td></tr>
+<tr><td>13</td><td>Bore children outside the Land</td><td>Bore children outside the Land</td></tr>
+<tr><td>14</td><td>Accompanied by angels</td><td>Accompanied by angels</td></tr>
+<tr><td>15</td><td>Rose to greatness through dreams</td><td>Rose to greatness through dreams</td></tr>
+<tr><td>16</td><td>Blessed his father-in-law's house</td><td>Blessed his master's house</td></tr>
+<tr><td>17</td><td>Descended to Egypt</td><td>Descended to Egypt</td></tr>
+<tr><td>18</td><td>Ended a famine</td><td>Ended a famine</td></tr>
+<tr><td>19</td><td>Administered oaths</td><td>Administered oaths</td></tr>
+<tr><td>20</td><td>Was commanded [by God]</td><td>Was commanded [by his father]</td></tr>
+<tr><td>21</td><td>Died in Egypt</td><td>Died in Egypt</td></tr>
+<tr><td>22</td><td>Was embalmed; bones taken up</td><td>Was embalmed; bones taken up</td></tr>
+</table>
+<p><strong>Note:</strong> The number twenty-two is almost certainly intentional — it equals the number of letters in the Hebrew alphabet, suggesting completeness. Joseph does not merely resemble Jacob; he <em>fulfills</em> him.</p>
+<h3>LDS Connection</h3>
+<p>Latter-day Saints are perhaps uniquely prepared to appreciate this tradition. <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/3?lang=eng&id=p14#p14" target="_blank">D&C 3:14</a> explicitly names Joseph Smith as a fulfillment of the Joseph of Egypt prophecy: <em>"thou art Joseph, and thou wast chosen to do the work of the Lord."</em> The twenty-two-parallel structure in Genesis Rabbah is doing exactly what LDS theology does with Joseph Smith — identifying a pattern of covenant continuation in which each dispensational head <em>re-lives</em> the trials, exile, and vindication of those who came before.</p>
+<p>The parallels that most directly illuminate LDS typology: both Josephs were beloved of their fathers and estranged from their brothers; both had their work rejected and were spiritually "cast into a pit" (the early persecutions of the Restoration mirror Joseph of Egypt's early suffering almost point for point); both became conduits of providential preservation for people who had rejected them; and both commissioned the gathering of records and bones — the Restoration's recovery of scripture, and Joseph of Egypt's instruction that his own bones be carried out of Egypt (<a href="https://www.blueletterbible.org/kjv/gen/50/25/s_50025" target="_blank">Gen 50:25</a>, cited in <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/3?lang=eng&id=p17#p17" target="_blank">2 Nephi 3:17</a>).</p>
+<p>The number twenty-two — the complete alphabet — suggests the rabbis saw Joseph as the <em>full spelling-out</em> of Jacob. In LDS terms: Joseph Smith doesn't just resemble the ancient pattern, he completes a dispensational alphabet that was always building toward him.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>3. The Coat: An Acrostic of Trouble (Genesis 37:3)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The <em>ketonet passim</em> — translated variously as "coat of many colors," "long-sleeved tunic," or "richly ornamented robe" — generates extensive midrashic discussion. The rabbis offer at least five interpretations of the word <em>passim</em>:</p>
+<p><strong><a href="https://www.sefaria.org/Bereishit_Rabbah.84.8" target="_blank">Genesis Rabbah 84:8</a>:</strong></p>
+<ol>
+<li><strong>Priestly designation:</strong> <em>Pas</em> = "palm of the hand" — the robe reached the palms, indicating Joseph did no manual labor. The midrash reads this as status, but the layers go deeper.</li>
+</ol>
+<p>   The <em>ketonet</em> (<a href="https://www.blueletterbible.org/lexicon/h3801/kjv/wlc/0-1/" target="_blank" data-lexicon="tunic, under-garmenta long shirt-like garment usually of linen" data-strongs="H3801" data-translit="kutōneṯ" data-original="כֻּתֹּנֶת" data-lang="hebrew" data-verse="">כְּתֹנֶת</a>) is the precise word used for the Aaronic priestly tunic in <a href="https://www.blueletterbible.org/kjv/exo/28/1/s_78001" target="_blank">Exodus 28</a> — Jacob is clothing Joseph in priestly garb. A garment extending to the <em>palms</em> is essentially full-body coverage: nothing of the wearer's own flesh exposed except the face. This is the posture of priestly investiture — clothed entirely in covenant identity rather than one's own.</p>
+<p>   The palm itself is theologically loaded. In the Aaronic blessing (<a href="https://www.blueletterbible.org/kjv/num/6/24-26/s_123024" target="_blank">Numbers 6:24–26</a>), priests lift their open palms outward toward Israel — the palm is the organ of receiving and transmitting divine blessing. A coat <em>reaching</em> to the palms marks Joseph as a conduit prepared for that role.</p>
+<p>   Most strikingly: <a href="https://www.blueletterbible.org/kjv/isa/49/16/s_728016" target="_blank">Isaiah 49:16</a> — <em>"Behold, I have engraved thee upon the palms of my hands"</em> (חַקֹּתִיךָ עַל-כַּפַּיִם) — the Suffering Servant is identified by what is inscribed on the palms. Joseph, whose coat <em>reaches</em> to the palms, prefigures the Messiah whose identity is <em>written there</em>. The coat signals designation; the passion fulfills it.</p>
+<p>   When the brothers strip the coat, they expose Joseph's palms to labor and bondage — but paradoxically, the stripping initiates the very destiny the coat declared.</p>
+<ol>
+<li><strong>Delicacy:</strong> The garment was so thin and light it could be hidden in one's palm.</li>
+</ol>
+<ol>
+<li><strong>Appeasement / Lots:</strong> The midrash uses <em>shehefisu</em> (שֶׁהֵפִיסוּ) — the brothers drew lots to determine who would bring the coat back to Jacob. But the root <strong>פ-י-ס</strong> is itself significant: it underlies both "casting lots" and <em>piyus</em> (פִּיּוּס), the Rabbinic word for <strong>appeasement, reconciliation, and conciliation</strong>. The coat that shattered the family through favoritism becomes, by this wordplay, the seed of the reconciliation it will eventually produce. Jacob's gift of love was simultaneously the wound that would need healing — and <em>passim</em> carries that tension in its very letters.</li>
+</ol>
+<ol>
+<li><strong>Acrostic of sorrows:</strong> Each letter of <em>PaSiM</em> stands for one of Joseph's future trials:</li>
+</ol>
+<p><table style="border: none; margin: 0.5em 0 0.5em 2em; border-collapse: collapse;"></p>
+<p><tr><td style="padding: 2px 6px; font-weight: bold; font-size: 1.1em;">פ</td><td style="padding: 2px 6px;">— <em>Potifar</em> (Potiphar, his master)</td></tr></p>
+<p><tr><td style="padding: 2px 6px; font-weight: bold; font-size: 1.1em;">ס</td><td style="padding: 2px 6px;">— <em>Soḥarim</em> (merchants who bought him)</td></tr></p>
+<p><tr><td style="padding: 2px 6px; font-weight: bold; font-size: 1.1em;">י</td><td style="padding: 2px 6px;">— <em>Yishmaelim</em> (Ishmaelites who transported him)</td></tr></p>
+<p><tr><td style="padding: 2px 6px; font-weight: bold; font-size: 1.1em;">מ</td><td style="padding: 2px 6px;">— <em>Midyanim</em> (Midianites who first pulled him from the pit)</td></tr></p>
+<p></table></p>
+<ol>
+<li><strong>Sea connection:</strong> <em>Pas yam</em> (פַּס יָם) means "strips of the sea" — and the wordplay is precise. The same root <em>pas</em> that described the coat <em>reaching to the palms</em> now describes the sea being <em>peeled open at its borders</em>. The coat and the Red Sea splitting share their linguistic DNA.</li>
+</ol>
+<p>   The Rashash (cited in <a href="https://www.sefaria.org/Bereishit_Rabbah.84.8" target="_blank">Gen Rabbah 84:8</a>) makes the causal chain explicit: God <em>arranged</em> the brothers' hatred of Joseph so that he would end up as a slave in Egypt — specifically in Potiphar's household — specifically so he would face Potiphar's wife's temptation. Joseph's act of <em>fleeing</em> that temptation generated a reservoir of spiritual merit (<em>zechut</em>) sufficient to split the sea for all Israel. The coat is the first link in a chain that ends at the Exodus.</p>
+<p>   But the wordplay goes deeper than causation. The verb used when the brothers strip the coat is וַיַּפְשִׁיטוּ — <em>they stripped him.</em> This stripping is the first of three in the Joseph narrative: the brothers strip the coat (<a href="https://www.blueletterbible.org/kjv/gen/37/23/s_37023" target="_blank">Gen 37:23</a>); Potiphar's wife seizes Joseph's garment and he flees <em>leaving it in her hand</em> (<a href="https://www.blueletterbible.org/kjv/gen/39/12/s_39012" target="_blank">Gen 39:12</a>) — a second stripping, this time voluntary; and finally, the sea is stripped open at its <em>pasim</em> — its strips, its borders. Three strippings: one by hatred, one by temptation resisted, one by divine power. Each one takes something from Joseph — and each one advances the plan.</p>
+<p>   The midrash anchors this in <a href="https://www.sefaria.org/Psalms.66.5" target="_blank">Psalm 66:5–6</a>: <em>"Come and see the works of God — He turned the sea into dry land."</em> The works of God you are invited to see begin with what God orchestrated through a father's gift and brothers' jealousy. <em>Passim</em> contains the end of the story it begins.</p>
+<p><strong>Reish Lakish's warning (<a href="https://www.sefaria.org/Bereishit_Rabbah.84.8" target="_blank">Gen Rabbah 84:8</a>):</strong></p>
+<blockquote>
+<p>"A person must refrain from treating one of his children differently from the others, for due to the fine tunic that Jacob crafted for Joseph, 'they hated him and could not speak peaceably to him.'"</p>
+</blockquote>
+<p>The coat is simultaneously a gift of love and a wound of favoritism — and the rabbis refuse to let either meaning go.</p>
+<h3>LDS Connection</h3>
+<p>The five interpretations of <em>passim</em> together form a complete LDS typological portrait. The <strong>priestly reading</strong> connects directly to the temple garment — a sacred vestment that covers the body, marks covenant identity, and signals to the wearer that they belong to God rather than the world. When Jacob clothes Joseph in the <em>ketonet</em>, he is, in the rabbinic understanding, doing what LDS parents hope to do: marking a child as holy, set apart, designated for covenant service.</p>
+<p>The <strong>piyus (appeasement/reconciliation) reading</strong> resonates with the central LDS understanding of the Atonement. The Atonement is the ultimate act of <em>piyus</em> — not a lottery, but a deliberate, divinely orchestrated act of reconciliation that heals the fracture caused by the Fall. The coat that fractured the family through favoritism is also, by this wordplay, the coat that points toward the healing. Joseph's story ends in the greatest reconciliation scene in all of Genesis — <em>"you intended it for evil; God intended it for good"</em> — and the word for that reconciliation was hidden in the coat's name from the start.</p>
+<p>The <strong>acrostic reading</strong> — in which the letters of <em>passim</em> spell out Joseph's four oppressors — speaks directly to LDS teachings on foreordination. <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/3?lang=eng&id=p23#p23" target="_blank">Abraham 3:23</a> records that God saw the noble and great ones before the world was and said, "These I will make my rulers." Foreordination is not the removal of suffering; it is the divine framing of suffering as purposeful. The coat that marks Joseph as chosen also maps out the trials through which his choosing will be tested.</p>
+<p>The <strong>sea connection</strong> — that Joseph's virtue in Egypt opened the Red Sea for Israel — reflects the LDS understanding that individual righteousness has collective consequences. The choices Joseph made alone in Potiphar's house were not private matters. They were, according to the midrash, the very act that redeemed a nation. Latter-day Saints who feel their personal discipleship is small or invisible would do well to sit with this: the sea opened because one person fled.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>4. Joseph's Slander and Measure-for-Measure Justice (Genesis 37:2)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Before the brothers sin against Joseph, the rabbis ask: did Joseph sin against them?</p>
+<p>The answer, uncomfortably, is yes. <a href="https://www.blueletterbible.org/kjv/gen/37/2/s_37002" target="_blank">Genesis 37:2</a> says Joseph "brought an evil report" about his brothers to their father. The Hebrew is דִּבָּה רָעָה (<em>dibbah ra'ah</em>) — not idle gossip, but the same term used in <a href="https://www.blueletterbible.org/kjv/num/13/32/s_130032" target="_blank">Numbers 13:32</a> when the spies delivered their devastating report against Canaan. It is formal, accusatory speech with legal weight. Joseph did not merely complain; he <em>indicted</em> his brothers before their father. Rabbi Meir, Rabbi Shimon, and Rabbi Yehuda identify three specific charges, and trace each one to its corresponding consequence:</p>
+<p><strong><a href="https://www.sefaria.org/Bereishit_Rabbah.84.7" target="_blank">Genesis Rabbah 84:7</a>:</strong></p>
+<table class="info-table">
+<tr><th>Joseph's Accusation</th><th>Consequence (Measure for Measure)</th></tr>
+<tr><td>Accused brothers of eating a limb torn from a living animal (forbidden flesh)</td><td>Brothers slaughtered a goat and dipped his coat in its blood (<a href="https://www.blueletterbible.org/kjv/gen/37/31/s_37031" target="_blank">Gen 37:31</a>)</td></tr>
+<tr><td>Demeaned the sons of the maidservants (Bilhah and Zilpah), calling them slaves</td><td>Joseph himself was sold as a slave (Ps 105:17)</td></tr>
+<tr><td>Accused brothers of directing glances at girls (sexual immodesty)</td><td>Potiphar's wife "cast her eyes" on Joseph (<a href="https://www.blueletterbible.org/kjv/gen/39/7/s_39007" target="_blank">Gen 39:7</a>)</td></tr>
+</table>
+<p>The precision is deliberate and worth sitting with. Joseph accused his brothers of using an animal wrongly — a slaughtered animal's blood is then used to destroy <em>him</em>. He stripped the maidservant sons of their status as sons by calling them slaves — he is stripped of his own status and sold as one. He accused his brothers of looking at women with improper desire — now those same eyes, that same verbal root, turns on him from Potiphar's wife. The mirror is exact. Each consequence has the same <em>shape</em> as the original offense.</p>
+<p>This is <em>midah k'neged midah</em> (מִדָּה כְּנֶגֶד מִדָּה) — measure for measure — and the rabbis treat it not as punishment but as pedagogy. God does not simply repay; God <em>teaches</em>. The precise form of your failure is the precise curriculum of your formation. You cannot fully understand what you did to others until you have lived inside its mirror.</p>
+<p>This is why the table matters for Joseph's story — not as a verdict against him, but as the map of his transformation. The young Joseph who opened the narrative with an accusatory report is nowhere present in the man who closes it. By Egypt, Joseph never once accuses. He tests his brothers, but he does not expose them. He has the full power to destroy them and instead weeps. When he finally speaks, he frames everything in terms of God's providence — <em>"you did not send me here; God did"</em> (<a href="https://www.blueletterbible.org/kjv/gen/45/8/s_45008" target="_blank">Gen 45:8</a>). The man who once reported his brothers' sins to their father has become someone who cannot find it in himself to report anything at all. <em>Midah k'neged midah</em> is not the end of the Joseph story. It is the beginning of his formation into the man who can say: "You intended it for evil. God intended it for good."</p>
+<h3>LDS Connection</h3>
+<p><em>Midah k'neged midah</em> is not a doctrine Latter-day Saints explicitly teach by that name, but the principle runs through LDS theology under different vocabulary: the law of the harvest, divine tutoring, and — most powerfully — the Atonement itself.</p>
+<p>President Russell M. Nelson has taught that the purpose of mortality is to give us experiences that <em>form</em> us toward godhood. The midrash's refusal to call <em>midah k'neged midah</em> a punishment — insisting instead that it is a <em>mirror</em> — aligns exactly with this. God does not simply repay Joseph for his slanders; he places Joseph inside each accusation until Joseph can see it from the inside. The man who called his brothers slaves becomes a slave. There is no more efficient teacher than lived experience.</p>
+<p>The most stunning LDS resonance comes in <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122?lang=eng" target="_blank">D&C 122</a>, where the Lord speaks to Joseph Smith in Liberty Jail: <em>"All these things shall give thee experience, and shall be for thy good."</em> Joseph Smith, like Joseph of Egypt, was experiencing an exact-shape return — his accusers, his prison, his apparent abandonment — and the Lord's answer was not rescue but reframing. Both Josephs were being formed, not merely punished.</p>
+<p>The deeper theological significance is this: the Atonement is the ultimate <em>midah k'neged midah</em>. Christ enters into the precise shape of every human sin, suffering, and failure — not to repay, but to <em>know from the inside</em> what each person has experienced, and thereby have the power to heal it. The mirror that formed Joseph is the same mirror through which Christ descended into all human experience. Measure for measure, in both directions.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>5. Reuben: The World's First Penitent (Genesis 37:21–22)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Reuben alone among the brothers attempts to save Joseph. The rabbis celebrate this, but note that Reuben's motivation was itself complex — he hoped to restore Joseph to Jacob and thus atone for his earlier sin against Bilhah.</p>
+<p>But the bigger teaching is about Reuben's historical significance:</p>
+<p><strong><a href="https://www.sefaria.org/Bereishit_Rabbah.84.19" target="_blank">Genesis Rabbah 84:19</a>:</strong></p>
+<blockquote>
+<p>"A person has never sinned before Me and repented, and you are the first to initiate repentance. As you live, your descendant will arise and be the first to initiate repentance. Who is that? It is Hosea, as it is stated: 'Return, Israel, to the Lord your God' (<a href="https://www.sefaria.org/Hosea.14.2" target="_blank">Hosea 14:2</a>)."</p>
+</blockquote>
+<p>Reuben invented <em>teshuvah</em> — the act of turning back. Because he was first, his tribe inherited the prophetic calling to invite all Israel to return. Hosea's entire ministry of repentance is traced to this moment by the pit.</p>
+<h3>LDS Connection</h3>
+<p>The LDS concept of repentance maps closely onto the Hebrew <em>teshuvah</em> — the word literally means "turning," a reorientation of one's whole self toward God. But this midrash adds something that LDS teaching echoes but rarely states so plainly: <em>the first person to repent establishes a lineage of repentance.</em> Reuben's singular act at the pit does not merely save him; it creates a prophetic inheritance that runs through Hosea and ultimately forward to all who hear his call to "return."</p>
+<p>This has direct application to LDS family and covenant theology. The decisions of parents — and their repentance — create spiritual patterns that children inherit. The midrash is not saying Hosea repented <em>because</em> Reuben repented; it is saying that Reuben's turning opened a channel in that tribe through which God could place a prophet of returning. The principle for Latter-day Saints: one person's genuine <em>teshuvah</em> may reorient a family line for generations.</p>
+<p>Reuben's motivation is also important. He wanted to restore Joseph to Jacob <em>in order to atone for his own prior sin against Bilhah.</em> He was not yet a selfless hero — he was a repentant sinner trying to undo damage. The midrash honors this anyway. God did not wait for Reuben's motives to be pure before crediting his turning. This aligns with the LDS understanding that God honors the first sincere step toward repentance, even when the process is incomplete and the motives are mixed.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>6. Twenty Pieces of Silver and the Redemption of the Firstborn (Genesis 37:28)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Joseph is sold for twenty pieces of silver — five shekels per brother (there were ten brothers making the sale; Reuben had left). The rabbis find a striking legal connection:</p>
+<p><strong><a href="https://www.sefaria.org/Bereishit_Rabbah.84.18" target="_blank">Genesis Rabbah 84:18</a>:</strong></p>
+<blockquote>
+<p>"You sold Rachel's son for twenty <em>maot</em>, which are five <em>sela'im</em>. That is why each and every one of you will separate, as the value of his son, five <em>sela'im</em> of the Tyrian <em>maneh</em>."</p>
+</blockquote>
+<p>The five <em>sela'im</em> is the exact price commanded in Torah for <em>pidyon haben</em> — the redemption of the firstborn (<a href="https://www.blueletterbible.org/kjv/num/18/16/s_135016" target="_blank">Numbers 18:16</a>). Each brother's share of the silver equaled the value of a son's redemption. The rabbis read this as divine irony encoded into the numbers: the brothers sold Joseph for <em>his</em> redemption price, and therefore each family line was required to pay that price forward in every generation.</p>
+<p>Joseph the firstborn of Rachel, sold for the price of a firstborn's redemption, became the means by which Israel would one day be redeemed.</p>
+<h3>LDS Connection</h3>
+<p>The typological connection to Christ is unmistakable here, and Latter-day Saints are uniquely positioned to draw it out. Jesus Christ is the Firstborn of the Father (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/93?lang=eng&id=p21#p21" target="_blank">D&C 93:21</a>, <a href="https://www.blueletterbible.org/kjv/col/1/15/s_1108015" target="_blank">Colossians 1:15</a>) — the one "sold" into suffering and death for thirty pieces of silver (<a href="https://www.blueletterbible.org/kjv/mat/26/15/s_955015" target="_blank">Matthew 26:15</a>). The price is different in number but identical in meaning: both Josephs were sold for the <em>exact legal value</em> of a covenant redemption. The betrayal price was the ransom price all along.</p>
+<p><em>Pidyon haben</em> — the redemption of the firstborn — is itself grounded in the Exodus: the firstborn of Israel were saved when the angel of death passed over Egypt, and in gratitude (and covenant memory), every subsequent firstborn male was to be symbolically "redeemed" back from God through a payment to the Levites. The firstborn belong to God; they are bought back for mortality by a sacrificial price.</p>
+<p>Joseph being sold <em>for that exact price</em> is the midrash's way of saying: this transaction was never really about silver. It was about a Firstborn entering Egypt, entering slavery, entering the pit — so that Israel could be saved. Every <em>pidyon haben</em> payment made by Jewish families throughout history was an echo of the twenty pieces of silver, which was itself an echo forward to Calvary.</p>
+<p>For LDS readers, this connects to the doctrine of the Firstborn not merely as Christological title but as covenantal category. Those who receive the highest ordinances are described as "heirs... and joint-heirs with Christ" (<a href="https://www.blueletterbible.org/kjv/rom/8/17/s_1054017" target="_blank">Romans 8:17</a>), adopted into the family of the Firstborn. Joseph's sale at the price of the firstborn's redemption is the Old Testament's compressed statement of that entire theology.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>7. The Divine Presence Descended with Joseph (Genesis 39:2–3)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>When Joseph arrived in Egypt, he was alone, enslaved, and far from his father. Yet the text says twice: "The Lord was with Joseph."</p>
+<p><strong><a href="https://www.sefaria.org/Bereishit_Rabbah.86.2" target="_blank">Genesis Rabbah 86:2</a>:</strong></p>
+<p>Rabbi Pinḥas in the name of Rabbi Simon:</p>
+<blockquote>
+<p>"From where do we derive that the Divine Presence descended with him? From what is written: 'The Lord was with Joseph' (<a href="https://www.blueletterbible.org/kjv/gen/39/2/s_39002" target="_blank">Genesis 39:2</a>)."</p>
+</blockquote>
+<p>This is not a generic theological statement. The Shechinah — God's indwelling presence — followed Joseph into Egypt itself. Where Israel's most beloved son went, God went. The midrash holds this up as a promise: exile does not mean abandonment. The Presence travels with the righteous even into slavery.</p>
+<h3>LDS Connection</h3>
+<p>The doctrine of the Holy Ghost as a constant companion — "the right to the constant companionship of the Holy Ghost" given at confirmation — is the LDS parallel to this teaching, but the midrash goes further. The Shechinah is not merely an influence or a still small voice; it is the <em>indwelling divine Presence</em>, the same that filled the Tabernacle and later Solomon's Temple. The claim that it descended with Joseph into Egypt is a profound theological statement: wherever the covenant person goes, the temple follows in miniature.</p>
+<p>This connects to <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/88?lang=eng&id=p6#p6" target="_blank">D&C 88:6</a>: "He that ascended up on high, as also he descended below all things, in that he comprehended all things, that he might be in all and through all things." The Lord's Presence does not stop at the edge of consecrated territory. It accompanies the righteous into precisely the places where they are most vulnerable — slavery, prison, exile — because those are exactly the places where its witness is most needed.</p>
+<p>For Latter-day Saints who have felt spiritually displaced — by life circumstances, by moves, by loss, by persecution — this midrash is a direct address. The God who went down to Egypt with Joseph goes wherever you go. The Presence is not conditional on your zip code, your calling, or your social standing. Joseph was a slave in a foreign country, and the Lord was with him so visibly that a pagan master could perceive it. That is a high-water mark for what divine accompaniment looks like when it is real.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>8. Potiphar: A Castration and a Clue (Genesis 39:1)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The text introduces Potiphar with the curious word <em>saris</em> — usually translated "officer" but literally meaning "eunuch." The rabbis take this literally:</p>
+<p><strong><a href="https://www.sefaria.org/Bereishit_Rabbah.86.3" target="_blank">Genesis Rabbah 86:3</a>:</strong></p>
+<blockquote>
+<p>"This teaches that [Potiphar] purchased [Joseph] only for intercourse, but the Holy One blessed be He castrated him. That is what is written: 'For the Lord loves justice and does not forsake His pious ones [ḥasidav]' (<a href="https://www.sefaria.org/Psalms.37.28" target="_blank">Psalms 37:28</a>)."</p>
+</blockquote>
+<p>Potiphar's intentions were impure. God's intervention was surgical. Joseph was protected before the threat had even materialized.</p>
+<h3>LDS Connection</h3>
+<p>This midrash will strike modern readers — LDS or otherwise — as blunt to the point of jarring. The physical mechanism described is not something we would emphasize in a class setting, and it is worth noting that the rabbis themselves were not offering a historical claim so much as a theological one: <em>God protects covenant-keepers from threats they do not yet know are coming.</em></p>
+<p>That principle is deeply consonant with LDS teaching. The Word of Wisdom is given as a "word of wisdom" rather than a commandment precisely because God sees threats on the horizon that the Saints do not yet perceive (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/89?lang=eng&id=p4#p4" target="_blank">D&C 89:4</a>). The law of chastity is not merely a prohibition — it is, in LDS understanding, a covenant of protection that hedges about sacred capacities and relationships. When Latter-day Saints speak of God's laws as protective rather than restrictive, this midrash is an unusually vivid illustration of that claim.</p>
+<p>The quotation from <a href="https://www.blueletterbible.org/kjv/psa/37/28/s_515028" target="_blank">Psalm 37:28</a> — "the Lord loves justice and does not forsake His pious ones" — is the interpretive key. Potiphar's intentions were real. The threat was real. And God acted <em>before</em> Joseph was even aware of it. The psalmist's word for "pious ones" is <em>ḥasidav</em> — those who are in a covenant loyalty relationship with God. Joseph's protection was not random. It was the specific fruit of his covenant identity.</p>
+<p>For teachers: this section can be approached without dwelling on the mechanism by asking simply: <em>when has God protected you from a threat you didn't know was coming?</em> The midrashic form is graphic precisely because the rabbis wanted their students to feel the weight of what they were saying — that divine protection is active, not passive.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>9. Joseph's Service: Torah Whispered in the House (Genesis 39:3–4)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>How did Potiphar perceive the divine blessing on Joseph so clearly? The rabbis describe it in intimate detail:</p>
+<p><strong><a href="https://www.sefaria.org/Bereishit_Rabbah.86.5" target="_blank">Genesis Rabbah 86:5</a>:</strong></p>
+<p>Rav Huna in the name of Rav Aḥa:</p>
+<blockquote>
+<p>"He would whisper and enter, and whisper and exit. [Potiphar] would say to him: 'Pour me boiling water,' and it would be boiling; 'lukewarm water,' and it would be lukewarm."</p>
+</blockquote>
+<p>Joseph was quietly reciting Torah as he worked — perhaps Psalms, perhaps blessings — and Potiphar observed that everything Joseph touched prospered in exact proportion to his prayers. The Divine Presence was literally visible standing over him.</p>
+<h3>LDS Connection</h3>
+<p>This image — a covenant person whispering scripture quietly while performing the most ordinary tasks — is one of the most intimate portraits of integrated discipleship in all of rabbinic literature, and it resonates strongly with LDS teachings on the Spirit. The First Presidency and Quorum of the Twelve have repeatedly taught that the Holy Ghost flees from contention and darkness but rests upon those who maintain an attitude of prayer and reverence. Joseph didn't light incense or stop work to kneel; he whispered Torah while he poured water and the Spirit <em>stayed</em>.</p>
+<p>The practical application is direct: Latter-day Saints who bring scripture and prayer into their ordinary workday — who hum hymns, who speak kindly, who maintain an internal orientation toward God — are doing exactly what this midrash describes. And the result, according to the midrash, is observable. Potiphar was a pagan master, not a theological observer. He didn't understand what he was seeing — but he could see it. The Spirit accompanying Joseph's labor was visible enough to produce tangible, measurable blessing on everything in the house.</p>
+<p>This section also bears on the LDS theology of consecration: work done while consecrated to God — even the work of a slave, even the work of serving someone who does not share your faith — can be infused with divine presence. Joseph's slavery was not a suspension of his covenant identity. It was the context in which his covenant identity was most radiantly expressed.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>10. Potiphar's Wife: The She-Bear Test (Genesis 39:7–12)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The encounter with Potiphar's wife is given extensive midrashic treatment in Genesis Rabbah 87. The rabbis ask: why did this temptation come to Joseph at all?</p>
+<p><strong>Two answers (<a href="https://www.sefaria.org/Bereishit_Rabbah.87.3" target="_blank">Genesis Rabbah 87:3</a>):</strong></p>
+<ol>
+<li>Joseph was "grooming himself" — curling his hair, walking with a certain confidence. God said: <em>"You think yourself fair? I will send the she-bear against you."</em> The beauty that made him attractive became the trial that would test his virtue.</li>
+</ol>
+<ol>
+<li>Joseph had thought: <em>"My grandfather Abraham was tested, my father Jacob was tested — shall I not be tested?"</em> God replied: <em>"As you live, I will subject you to ordeals greater than theirs."</em></li>
+</ol>
+<p><strong>Joseph's Five Reasons to Refuse (<a href="https://www.sefaria.org/Bereishit_Rabbah.87.5" target="_blank">Genesis Rabbah 87:5</a>):</strong></p>
+<p>When Potiphar's wife pressed Joseph, the midrash records five distinct lines of reasoning with which he refused:</p>
+<table class="info-table">
+<tr><th>Reason</th><th>Joseph's Logic</th></tr>
+<tr><td>His master's trust</td><td>Potiphar had entrusted him with everything — betrayal would be theft</td></tr>
+<tr><td>Risk of being chosen for sacrifice</td><td>God had taken the beloved sons of his fathers as offerings; Joseph feared being disqualified</td></tr>
+<tr><td>God appears at night</td><td>The patriarchs received visions in the night; to sin would make him impure for such a revelation</td></tr>
+<tr><td>Adam's lesson</td><td>Adam violated a minor commandment and was expelled from Eden; sexual immorality is far graver</td></tr>
+<tr><td>Reuben's precedent</td><td>Reuben lost his birthright for sexual sin; Joseph had received Reuben's birthright and would not repeat his mistake</td></tr>
+</table>
+<p><strong>The idol episode (<a href="https://www.sefaria.org/Bereishit_Rabbah.87.7" target="_blank">Genesis Rabbah 87:7</a>):</strong></p>
+<p>Rabbi Avin records that Potiphar's wife finally led Joseph through room after room until she positioned him at her bed. Her idol was carved above it. She then covered the idol's face with a sheet. Joseph said:</p>
+<blockquote>
+<p>"You have done well to cover its face. The one of whom it is written: 'They are the eyes of the Lord, roving throughout the earth' (<a href="https://www.sefaria.org/Zechariah.4.10" target="_blank">Zechariah 4:10</a>) — all the more so [does He see what you are doing]."</p>
+</blockquote>
+<p>She tried to escape divine observation; Joseph reminded her it was impossible.</p>
+<h3>LDS Connection</h3>
+<p>The five reasons Joseph gave for refusing are a remarkable pre-modern articulation of what LDS leaders now teach as "pre-deciding" — the principle that moral commitments should be made <em>before</em> the moment of temptation, not in it. Elder Richard G. Scott taught that decisions made in advance, in clarity and spiritual strength, protect us in the moment when judgment is clouded by desire. Joseph had already decided. The five reasons were not calculated on the spot; they were the natural output of a person whose moral architecture was already built.</p>
+<p>The <strong>idol episode</strong> is rich with LDS meaning. Potiphar's wife covers her idol's face — trying to eliminate the divine witness to her sin. This impulse (If no one is watching, it doesn't count) is exactly what LDS temple theology addresses at its core. One of the most significant things a Latter-day Saint receives in the temple is a heightened sense of divine omnipresence — the teaching that God sees everything, always, and that this is not a threat but a covenant relationship. Joseph's response — "the One of whom it is written that His eyes rove throughout the earth sees all the more" — is a statement of that covenant orientation. Cover the idol if you like. <em>He</em> still sees.</p>
+<p>The table of five reasons also connects to LDS purity teaching in a specific way: three of Joseph's five reasons are <em>relational</em> rather than rule-based. He would not betray Potiphar's trust, he would not risk being disqualified from divine visitation, and he would not repeat Reuben's pattern. None of these is "because it's against the rules." They are "because of who I am, who this man is to me, and who I want to be before God." Latter-day Saints are similarly taught that the law of chastity is not primarily a prohibition — it is a covenant of identity and relationship.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>11. Why Joseph Fled — And What Split the Sea (Genesis 39:12)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>When Joseph fled from Potiphar's wife, leaving his garment in her hand, the rabbis see something cosmic:</p>
+<p><strong><a href="https://www.sefaria.org/Bereishit_Rabbah.87.8" target="_blank">Genesis Rabbah 87:8</a>:</strong></p>
+<blockquote>
+<p>"He leapt by the merit of the patriarchs."</p>
+</blockquote>
+<p>And then Shimon of Kitron adds:</p>
+<blockquote>
+<p>"By the merit of Joseph's bones, the sea was split for Israel. That is what is written: 'The sea saw and fled' (<a href="https://www.sefaria.org/Psalms.114.3" target="_blank">Psalms 114:3</a>) — by the merit of: 'He left his garment in her hand <em>and fled</em>.'"</p>
+</blockquote>
+<p>The same verb — <em>vayanas</em>, "and he fled" — connects Joseph fleeing from sin to the sea fleeing before Israel. Joseph's act of moral courage, encoded in a single word, became the spiritual capital that redeemed a nation centuries later.</p>
+<h3>LDS Connection</h3>
+<p>This midrash makes explicit what LDS theology implies but rarely states so boldly: individual righteousness has collective, multi-generational consequences. The choices Joseph made alone in a room in Egypt were not private. They were, in the rabbinic reading, a cosmic transaction that shaped what became possible for an entire people centuries later.</p>
+<p>This connects to the LDS doctrine of <em>zechut</em> by another name — the principle that the faithfulness of covenant ancestors creates spiritual inheritance for their descendants. Abraham's faith opens something for Isaac and Jacob. Joseph's fleeing opens something for Israel. In LDS terms, this is the theology behind the sealing ordinances: righteous choices made in mortality by covenant persons create binding spiritual connections that cross time. The LDS practice of proxy temple work for ancestors rests on exactly this principle — that what one person does in faithfulness can extend grace backward and forward across generations.</p>
+<p>The LDS pioneer narrative is also an echo of this structure. Early Latter-day Saints fled — often literally, as Joseph did — from situations that would have compromised their covenant identity. They left Nauvoo as Joseph left his garment. And the midrash would say: <em>that fleeing was not loss. That fleeing split a sea.</em> The sacrifice of the pioneers is not merely historical sentiment in LDS culture; it is understood to have opened a spiritual path that subsequent generations walk.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>12. Prison, Persistence, and Psalms (Genesis 39:20–23)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Even in prison, Potiphar's wife continued to harass Joseph. The midrash describes a remarkable sequence:</p>
+<p><strong><a href="https://www.sefaria.org/Bereishit_Rabbah.87.9" target="_blank">Genesis Rabbah 87:9</a> — Joseph's Psalms Against Threats:</strong></p>
+<table class="info-table">
+<tr><th>Her Threat</th><th>Joseph's Response (from <a href="https://www.sefaria.org/Psalms.146" target="_blank">Psalms 146</a>)</th></tr>
+<tr><td>"I mistreated you — I'll mistreat you more"</td><td>"God performs justice for the oppressed" (v. 7)</td></tr>
+<tr><td>"I will cut off your food"</td><td>"God provides bread for the hungry" (v. 7)</td></tr>
+<tr><td>"I will shackle you"</td><td>"The Lord frees the imprisoned" (v. 7)</td></tr>
+<tr><td>"I will make you bend over"</td><td>"The Lord straightens the bent" (v. 8)</td></tr>
+<tr><td>"I will blind your eyes"</td><td>"The Lord opens the eyes of the blind" (v. 8)</td></tr>
+</table>
+<p>She eventually placed an iron bar beneath his neck so he would be forced to look at her. He still refused.</p>
+<p>The prison was not a pause in Joseph's story. It was where he learned to answer every human threat with a divine promise.</p>
+<h3>LDS Connection</h3>
+<p>The parallel to Liberty Jail is so direct it needs little elaboration — but it deserves full treatment. Joseph Smith, imprisoned in the winter of 1838–1839, wrote letters from Liberty Jail that became canonized scripture. <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?lang=eng" target="_blank">D&C 121–123</a> are the product of a prophet doing exactly what this midrash describes Joseph of Egypt doing: answering every threat and indignity with a covenant promise drawn from scripture. "If thou be cast into the deep... if fierce winds... if the very jaws of hell shall gape open the mouth wide after thee — <em>know thou, my son, that all these things shall give thee experience, and shall be for thy good</em>" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122?lang=eng" target="_blank">D&C 122:7–8</a>). That is Joseph Smith's version of the <a href="https://www.sefaria.org/Psalms.146" target="_blank">Psalm 146</a> table.</p>
+<p>The structure itself is worth teaching: the midrash records each of Potiphar's wife's specific threats and then Joseph's specific scriptural response. This is not passive resignation — it is <em>active reframing</em>. Joseph doesn't simply endure her threats; he names each one and immediately relocates it within the framework of what God does. "You will cut off my food — <em>God provides bread for the hungry.</em>" This is a spiritual discipline, not a natural reaction. It must be learned.</p>
+<p>For LDS learners, the practical teaching is: know enough scripture to have an answer for your worst moments. Joseph in prison and Joseph Smith in the jail both demonstrate that the covenant person's deepest resource is not stoicism but <em>specific divine promises</em>. The covenant language is what converts suffering into formation.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>13. The Butler's Dream: A Cup and a Vine (Genesis 40:9–11)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>When the butler described his dream of the vine and three tendrils, Joseph correctly interpreted it as three days. But the rabbis saw much more:</p>
+<p><strong><a href="https://www.sefaria.org/Bereishit_Rabbah.88.5" target="_blank">Genesis Rabbah 88:5</a>:</strong></p>
+<blockquote>
+<p>"The vine" = Israel (cf. <a href="https://www.sefaria.org/Psalms.80.9" target="_blank">Psalms 80:9</a>: "You transported a vine from Egypt")</p>
+<p>"Three tendrils" = Moses, Aaron, and Miriam</p>
+<p>"It was budding" = Israel's redemption was budding</p>
+<p>"Clusters ripened" = The redemption came to full fruition</p>
+</blockquote>
+<p><strong>The Four Cups of Passover (<a href="https://www.sefaria.org/Bereishit_Rabbah.88.5" target="_blank">Genesis Rabbah 88:5</a>):</strong></p>
+<blockquote>
+<p>"And Pharaoh's cup was in my hand" — on this basis the Sages instituted the four cups on Passover eve.</p>
+</blockquote>
+<p>Four opinions are given for why four cups:</p>
+<ul>
+<li>Rav Huna / Rabbi Benaya: Corresponding to the four expressions of redemption in <a href="https://www.blueletterbible.org/kjv/exo/6/6-7/s_56006" target="_blank">Exodus 6:6–7</a></li>
+<li>Rabbi Shmuel bar Naḥman: Corresponding to the four mentions of <em>cup</em> in the butler's dream</li>
+<li>Rabbi Levi: Corresponding to the four kingdoms</li>
+<li>Rabbi Yehoshua ben Levi: Corresponding to the four cups of bewilderment God will give to the nations, balanced by four cups of salvation for Israel</li>
+</ul>
+<p>The cup Joseph held in a dream became the cup Israel drinks on Passover. From slavery to Seder in a single image.</p>
+<h3>LDS Connection</h3>
+<p>The LDS tradition has always drawn a direct line from Passover to the Sacrament, and this midrash deepens that connection beautifully. The four cups of the Passover Seder are traced here directly to Joseph's prison dream — they originate not in the Exodus events themselves, but in a cup held in a dream by a slave who was interpreting another man's vision in darkness. That is a striking origin for one of Judaism's most sacred ritual acts.</p>
+<p>For Latter-day Saints, the Sacrament is similarly traced back through layers of typology — to the Last Supper, to Passover, and ultimately to the covenant meals of the Abrahamic tradition. The midrash's instinct to find the Passover cup inside Joseph's story is exactly the kind of typological layering that LDS readers should feel at home with. The pattern was embedded before the institution.</p>
+<p>The rabbinic interpretation of the vine as Israel ("You transported a vine from Egypt," <a href="https://www.sefaria.org/Psalms.80.9" target="_blank">Psalm 80:9</a>) and the three tendrils as Moses, Aaron, and Miriam brings an additional LDS resonance: Joseph was interpreting not just a personal dream but a prophetic <em>roadmap</em> of Israel's redemption. He was doing what the Lord's prophets have always done — reading the signs of the times embedded in ordinary images. The ability to see redemptive meaning inside ordinary things (a vine, a cup, a baker's basket) is itself a gift of the Spirit, and the midrash honors Joseph as a bearer of that gift long before his elevation to Egyptian power.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>14. The Butler Forgets — But God Does Not (Genesis 40:23)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>"And the chief butler did not remember Joseph, but forgot him."</p>
+<p>This is one of the most poignant verses in all of Genesis. The midrash responds with defiance:</p>
+<p><strong><a href="https://www.sefaria.org/Bereishit_Rabbah.88.7" target="_blank">Genesis Rabbah 88:7</a>:</strong></p>
+<blockquote>
+<p>"The Holy One blessed be He said to him: 'You forget him, but I will not forget him.'"</p>
+</blockquote>
+<p>The midrash then expands into a stunning meditation on the list of those who seemed forgotten but were not:</p>
+<ul>
+<li>Abraham and Sarah — old and barren, yet expected to bear a son</li>
+<li>Jacob — who crossed the Jordan with only his staff, expected to become wealthy</li>
+<li>Joseph — who suffered every conceivable trouble, expected to become king</li>
+<li>Moses — cast into the Nile, expected to lead a nation</li>
+<li>Ruth — a stranger, expected to become the mother of kings</li>
+<li>David — a shepherd boy, expected to be king until the end of generations</li>
+<li>Yehoyakhin — in prison, expected to be released</li>
+<li>Hananiah, Mishael, and Azariah — in the furnace, expected to emerge alive</li>
+</ul>
+<p>The rabbis conclude: <em>Who was waiting for all these? God.</em> He waits in the silences between human forgetting and divine remembrance.</p>
+<h3>LDS Connection</h3>
+<p>This may be the most emotionally resonant section in the entire Week 11 document for a Latter-day Saint audience, because the list the rabbis construct is precisely the kind of list the LDS tradition builds its testimony of God's faithfulness around. Abraham and Sarah barren. Jacob with only his staff. Joseph in every trouble imaginable. Moses in the Nile. Ruth a stranger. David a shepherd boy. And God waiting — not having forgotten, not having changed his mind, not having been distracted.</p>
+<p><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122?lang=eng&id=p7-p8#p7" target="_blank">D&C 122:7–8</a> is the LDS version of this midrash, spoken directly to a prophet in his own pit: <em>"all these things shall give thee experience."</em> That phrase — "give thee experience" — is the LDS equivalent of the midrash's entire list. It is God saying: I have not forgotten you. I am waiting. The gap between human forgetting and divine remembrance is exactly where formation happens.</p>
+<p>The practical teaching is profound: there is often a gap — sometimes years long — between the promise and the fulfillment. The butler forgets Joseph for two full years. During those two years Joseph is not forgotten by God, but he is invisible to the human systems that might have helped him. Latter-day Saints know this experience. Prayers that seem unanswered. Promises that seem delayed. Patriarchal blessings whose fulfillment is not yet visible. The list in this midrash — from Abraham to Yehoyakhin — is the rabbis' way of saying: <em>this is the pattern, not the exception.</em> The gap is not God's failure. It is God's timing.</p>
+<p>The list ends with Hananiah, Mishael, and Azariah emerging from the furnace — which brings the Joseph narrative into direct contact with its later echo in Daniel. Latter-day Saints who love the Book of Daniel will notice that this midrash weaves Joseph's pit and Daniel's furnace into the same theological fabric. God waits in both. God remembers in both. And in both, the waiting ends in vindication visible to a pagan king.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>15. The Angelic Guides and the Virtue of Joseph</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Three Angels at Genesis 37:15</h3>
+<p><strong><a href="https://www.sefaria.org/Bereishit_Rabbah.84.14" target="_blank">Genesis Rabbah 84:14</a>:</strong></p>
+<blockquote>
+<p>"A man found him, and behold, he was wandering in the field. The man asked him, saying: What do you seek? He said: I seek my brothers… The man said: They traveled from here."</p>
+</blockquote>
+<p>Rabbi Yannai: <strong>Three angels came to his assistance</strong> — one for each clause: "a man found him"; "the man asked him"; "the man said."</p>
+<p>The three appearances of "the man" in <a href="https://www.blueletterbible.org/kjv/gen/37/15-17/s_37015" target="_blank">Genesis 37:15–17</a> are not a single person but three distinct angelic interventions. Each clause represents a different angel guiding Joseph one step closer to Dothan — and therefore toward his destiny. Nothing in Joseph's journey to his brothers was coincidental.</p>
+<hr>
+<h3>Joseph's Virtue at Genesis 39:11</h3>
+<p>The text says Joseph entered the house "to do his work" — and Jewish tradition asks: what work, exactly?</p>
+<p><strong><a href="https://www.sefaria.org/Sotah.36b" target="_blank">b. Sotah 36b</a>:</strong></p>
+<blockquote>
+<p>"Rav and Shmuel engage in a dispute: One says — it means that he went into the house to do his work, literally. And one says — he entered the house in order to fulfill his sexual needs."</p>
+</blockquote>
+<p>The Talmud records this as a genuine dispute. The tradition that Joseph came to attend to his legitimate duties — preserving the virtue reading — is the first position, attributed to one of the two sages. It is confirmed as an ancient interpretation, though not the only one in the tradition.</p>
+<h3>LDS Connection</h3>
+<p>Both traditions speak to the same principle: <strong>divine guidance does not announce itself.</strong> Three angels appeared to Joseph as an ordinary man. Joseph's routine work was the context for his most consequential moral choice. Neither the guidance nor the virtue was spectacular in form — both were embedded in the ordinary texture of a day.</p>
+<p>This is consonant with how the Holy Ghost works in LDS experience. The Spirit rarely announces itself. It comes as a feeling, a prompting, a word from an unexpected person, a nudge toward a different road. When Latter-day Saints speak of "following promptings," they are describing the same mechanism these traditions name: angelic accompaniment in ordinary clothing.</p>
+<p>The Talmudic dispute about <a href="https://www.blueletterbible.org/kjv/gen/39/11/s_39011" target="_blank">Genesis 39:11</a> is itself instructive. The rabbis honored the question. They did not flatten Joseph's character into an icon — they asked honestly what he was doing in that house. The virtue-preserving interpretation wins not by denying the ambiguity of the verse but by taking the text seriously enough to argue about it. That intellectual honesty is itself a model for scripture study.*</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>16. Connections to Latter-day Saint Teaching</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The following connections are offered for teaching enrichment. They represent thematic parallels, not claims of identical doctrine.</p>
+<h3>Providence and Unanticipated Paths</h3>
+<p>The rabbinic insistence that "the Holy One does not forget" maps directly onto Latter-day Saint teachings on divine providence. Elder Neal A. Maxwell wrote extensively on "the mathematics of eternity" — the idea that no suffering is wasted in God's economy. The midrash on the butler's forgetting (Gen Rabbah 88:7) expresses the same conviction through narrative rather than theology.</p>
+<h3>Types of Christ</h3>
+<p>The rabbis counted twenty-two parallels between Jacob and Joseph; LDS teachers often list twenty or more parallels between Joseph and Jesus Christ (see the Teaching Applications file for the full typology chart). Neither tradition invented this typology independently — both recognized that the Joseph narrative was deliberately constructed as a pattern of a greater story.</p>
+<h3>Moral Agency and Measure for Measure</h3>
+<p>The tradition that Joseph's early slanders led to his later trials (Gen Rabbah 84:7) aligns with LDS teachings on the law of the harvest. The universe does not ignore choices — it reflects them back, sometimes in surprising forms. This is not mechanical karma but a testimony that God takes our choices seriously enough to let them echo.</p>
+<h3>The Shechinah Travels</h3>
+<p>The teaching that the Divine Presence accompanied Joseph into Egypt carries a profound implication: no place is beyond sacred. Just as God's presence was with Joseph in Potiphar's house and in prison, LDS theology affirms that the Spirit can dwell in and sanctify unexpected places and circumstances.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Primary Sources Used in This Document</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Source</th><th>Reference</th><th>Sefaria</th></tr>
+<tr><td>Genesis Rabbah</td><td>84:3</td><td><a href="https://www.sefaria.org/Bereishit_Rabbah.84.3" target="_blank">Link</a></td></tr>
+<tr><td>Genesis Rabbah</td><td>84:7</td><td><a href="https://www.sefaria.org/Bereishit_Rabbah.84.7" target="_blank">Link</a></td></tr>
+<tr><td>Genesis Rabbah</td><td>84:8</td><td><a href="https://www.sefaria.org/Bereishit_Rabbah.84.8" target="_blank">Link</a></td></tr>
+<tr><td>Genesis Rabbah</td><td>84:14</td><td><a href="https://www.sefaria.org/Bereishit_Rabbah.84.14" target="_blank">Link</a></td></tr>
+<tr><td>Genesis Rabbah</td><td>84:18</td><td><a href="https://www.sefaria.org/Bereishit_Rabbah.84.18" target="_blank">Link</a></td></tr>
+<tr><td>Genesis Rabbah</td><td>84:19</td><td><a href="https://www.sefaria.org/Bereishit_Rabbah.84.19" target="_blank">Link</a></td></tr>
+<tr><td>Genesis Rabbah</td><td>86:2</td><td><a href="https://www.sefaria.org/Bereishit_Rabbah.86.2" target="_blank">Link</a></td></tr>
+<tr><td>Genesis Rabbah</td><td>86:3</td><td><a href="https://www.sefaria.org/Bereishit_Rabbah.86.3" target="_blank">Link</a></td></tr>
+<tr><td>Genesis Rabbah</td><td>86:5</td><td><a href="https://www.sefaria.org/Bereishit_Rabbah.86.5" target="_blank">Link</a></td></tr>
+<tr><td>Genesis Rabbah</td><td>87:3</td><td><a href="https://www.sefaria.org/Bereishit_Rabbah.87.3" target="_blank">Link</a></td></tr>
+<tr><td>Genesis Rabbah</td><td>87:5</td><td><a href="https://www.sefaria.org/Bereishit_Rabbah.87.5" target="_blank">Link</a></td></tr>
+<tr><td>Genesis Rabbah</td><td>87:7</td><td><a href="https://www.sefaria.org/Bereishit_Rabbah.87.7" target="_blank">Link</a></td></tr>
+<tr><td>Genesis Rabbah</td><td>87:8</td><td><a href="https://www.sefaria.org/Bereishit_Rabbah.87.8" target="_blank">Link</a></td></tr>
+<tr><td>Genesis Rabbah</td><td>87:9</td><td><a href="https://www.sefaria.org/Bereishit_Rabbah.87.9" target="_blank">Link</a></td></tr>
+<tr><td>Genesis Rabbah</td><td>88:5</td><td><a href="https://www.sefaria.org/Bereishit_Rabbah.88.5" target="_blank">Link</a></td></tr>
+<tr><td>Genesis Rabbah</td><td>88:7</td><td><a href="https://www.sefaria.org/Bereishit_Rabbah.88.7" target="_blank">Link</a></td></tr>
+<tr><td>b. Sotah</td><td>36b</td><td><a href="https://www.sefaria.org/Sotah.36b" target="_blank">Link</a></td></tr>
+</table>
+<hr>
+<p><em>Document created: March 2026 | Week 11 Study Guide — File 5 of 7</em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 6: WEEK 11: TEACHING APPLICATIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">6. Week 11: Teaching Applications</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Application 1: Teaching Joseph as a Type of Christ</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Challenge</h3>
+<p>Joseph's story is beloved, but students may miss its Christological depth. Teaching the typology enriches both Joseph's story and our understanding of Christ.</p>
+<h3>Approach: Side-by-Side Comparison</h3>
+<p>Present a table or visual comparing Joseph and Christ:</p>
+<table class="info-table">
+<tr><th>Joseph</th><th>Christ</th></tr>
+<tr><td>Beloved son of his father</td><td>Only Begotten, beloved Son</td></tr>
+<tr><td>Sent by father to his brothers</td><td>Sent by Father to His people</td></tr>
+<tr><td>Rejected and conspired against</td><td>Rejected by His own</td></tr>
+<tr><td>Stripped of his garment</td><td>Soldiers stripped His garments</td></tr>
+<tr><td>Sold for silver (20 pieces)</td><td>Betrayed for silver (30 pieces)</td></tr>
+<tr><td>Cast into a pit</td><td>Descended below all things</td></tr>
+<tr><td>Falsely accused</td><td>Falsely accused</td></tr>
+<tr><td>Bound as a prisoner</td><td>Bound and led to Pilate</td></tr>
+<tr><td>Numbered with transgressors (butler, baker)</td><td>Crucified between two thieves</td></tr>
+<tr><td>One transgressor saved, one lost</td><td>One thief saved, one lost</td></tr>
+<tr><td>Raised to right hand of Pharaoh</td><td>Raised to right hand of God</td></tr>
+<tr><td>Given all authority in Egypt</td><td>Given all authority in heaven and earth</td></tr>
+<tr><td>Provides bread during famine</td><td>The Bread of Life</td></tr>
+<tr><td>Hidden identity, later revealed</td><td>Will be revealed to Israel</td></tr>
+<tr><td>Saves those who rejected him</td><td>Saves those who rejected Him</td></tr>
+</table>
+<h3>Discussion Questions</h3>
+<ul>
+<li>How does seeing Joseph as a type of Christ change how you read the story?</li>
+<li>Which parallel strikes you most? Why?</li>
+<li>How does Joseph's suffering serve God's larger plan? How does Christ's?</li>
+</ul>
+<h3>Key Quote</h3>
+<blockquote>
+<p>"The story of Joseph is a prophetic shadow of the story of Jesus Christ. Every element of rejection, suffering, and exaltation finds its fulfillment in the Savior."</p>
+</blockquote>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Application 2: Teaching "The Lord Was with Joseph"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Core Truth</h3>
+<p>The phrase "the LORD was with Joseph" (<a href="https://www.blueletterbible.org/kjv/gen/39/2/s_39002" target="_blank">Gen. 39:2, 3, 21, 23</a>) appears during:</p>
+<ul>
+<li>Slavery in Potiphar's house</li>
+<li>Imprisonment after false accusation</li>
+</ul>
+<p>This is a theology of <em>presence</em>, not <em>rescue</em>. God didn't prevent Joseph's suffering—He accompanied him through it.</p>
+<h3>Teaching Strategy</h3>
+<p><strong>Three-Column Exercise:</strong></p>
+<table class="info-table">
+<tr><th>Joseph's Situation</th><th>What God Did NOT Do</th><th>What God DID Do</th></tr>
+<tr><td>Sold into slavery</td><td>Prevent the sale</td><td>Went with Joseph to Egypt</td></tr>
+<tr><td>Potiphar's house</td><td>Take him home</td><td>Made him prosper</td></tr>
+<tr><td>Falsely accused</td><td>Vindicate him immediately</td><td>Showed him mercy in prison</td></tr>
+<tr><td>Prison</td><td>Release him</td><td>Made all his work prosper</td></tr>
+<tr><td>Forgotten 2 years</td><td>Remind the butler</td><td>Prepared Joseph for Pharaoh</td></tr>
+</table>
+<p>The pattern: God's presence doesn't eliminate hardship but transforms it.</p>
+<h3>Application Questions</h3>
+<ul>
+<li>When have you felt God was <em>with</em> you even when circumstances were hard?</li>
+<li>How is divine presence different from divine rescue?</li>
+<li>What evidence of God's presence can you recognize in your current trials?</li>
+</ul>
+<h3>President Christofferson's Insight</h3>
+<blockquote>
+<p>"Our relationship with God is a journey through time... He is patient with us, and His plan is for our growth, not merely our comfort."</p>
+<p>— <strong>D. Todd Christofferson</strong>, "Our Relationship with God," May 2022</p>
+</blockquote>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Application 3: Teaching Fleeing Temptation (Genesis 39)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Model</h3>
+<p>Joseph's response to Potiphar's wife offers a template:</p>
+<ol>
+<li><strong>Recognize the sin</strong> (v. 9): "How can I do this great wickedness?"</li>
+<li><strong>Define it theologically</strong>: "and sin against God"</li>
+<li><strong>Avoid lingering situations</strong> (v. 10): "he hearkened not unto her, to lie by her, or to be with her"</li>
+<li><strong>Flee when necessary</strong> (v. 12): "fled, and got him out"</li>
+</ol>
+<h3>Teaching Strategy: The Temptation Response Plan</h3>
+<p>Invite learners to create a personal plan using Joseph's model:</p>
+<table class="info-table">
+<tr><th>Element</th><th>Joseph's Example</th><th>My Plan</th></tr>
+<tr><td><strong>Recognize</strong></td><td>"Great wickedness"</td><td>How will I name sin as sin?</td></tr>
+<tr><td><strong>Define</strong></td><td>"Sin against God"</td><td>Why does this matter to God?</td></tr>
+<tr><td><strong>Avoid</strong></td><td>Refused to be near her</td><td>What situations will I avoid?</td></tr>
+<tr><td><strong>Flee</strong></td><td>"Fled, and got him out"</td><td>When will I simply leave?</td></tr>
+</table>
+<h3>Discussion Questions</h3>
+<ul>
+<li>Why did Joseph define this as sin against God, not just against Potiphar?</li>
+<li>What does "day by day" temptation teach about the need for daily discipline?</li>
+<li>What might be your "garment"—something you'd lose by fleeing, but worth losing?</li>
+</ul>
+<h3>For Youth</h3>
+<p>Connect to practical situations:</p>
+<ul>
+<li>What does it mean to "flee" in the digital age?</li>
+<li>How do you avoid "being with" temptation when it's on your phone?</li>
+<li>Joseph lost his coat but kept his integrity. What might you lose—and what would you keep?</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Application 4: Teaching Spiritual Gifts and Humility</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Joseph's Pattern</h3>
+<p>Joseph consistently credits God:</p>
+<ul>
+<li>"Do not interpretations belong to God?" (40:8)</li>
+<li>"It is not in me: God shall give Pharaoh an answer" (41:16)</li>
+</ul>
+<p>Standing before the most powerful man on earth, Joseph could have claimed personal power. Instead, he deflected glory to God.</p>
+<h3>Teaching Strategy</h3>
+<p><strong>Compare Joseph and Pharaoh's Magicians:</strong></p>
+<table class="info-table">
+<tr><th>Magicians</th><th>Joseph</th></tr>
+<tr><td>Used techniques and manuals</td><td>Received direct revelation</td></tr>
+<tr><td>Claimed personal skill</td><td>Credited God explicitly</td></tr>
+<tr><td>Failed</td><td>Succeeded</td></tr>
+<tr><td>Sought personal glory</td><td>Sought God's glory</td></tr>
+</table>
+<h3>Application Questions</h3>
+<ul>
+<li>What gifts has God given you?</li>
+<li>How do you use them while giving God credit?</li>
+<li>When are you tempted to take credit for what God has done through you?</li>
+</ul>
+<h3>The Result of Humility</h3>
+<p>Pharaoh's response: "Can we find such a one as this, a man in whom the Spirit of God is?" (41:38)</p>
+<p>Joseph's humility didn't diminish him—it elevated him. By pointing to God, he became more trustworthy, not less.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Application 5: Teaching Providence and the Bigger Picture</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Pattern</h3>
+<p>Joseph's disasters positioned him for his purpose:</p>
+<ul>
+<li>Sold → brought to Egypt</li>
+<li>Potiphar's house → learned administration</li>
+<li>Prison → met the butler</li>
+<li>Two-year delay → brought to Pharaoh at the perfect moment</li>
+</ul>
+<p>None of this was visible to Joseph at the time. Only looking back could he see God's hand weaving the threads.</p>
+<h3>Teaching Strategy: The Providence Timeline</h3>
+<p>Draw a timeline of Joseph's life, marking each low point:</p>
+<ul>
+<li>Age 17: Sold into slavery</li>
+<li>Potiphar's house: False accusation, prison</li>
+<li>Prison: Forgotten for two years</li>
+<li>Age 30: Elevated to vizier</li>
+</ul>
+<p>Then overlay what God was doing:</p>
+<ul>
+<li>Positioning in Egypt</li>
+<li>Training in management</li>
+<li>Connecting with royal household</li>
+<li>Perfect timing for famine</li>
+</ul>
+<h3>Discussion Questions</h3>
+<ul>
+<li>When have you seen (looking back) that a disaster was actually preparation?</li>
+<li>How do we trust God's pattern when we can't see it?</li>
+<li>What might God be doing right now that you'll understand later?</li>
+</ul>
+<h3>The Later Revelation</h3>
+<p><a href="https://www.blueletterbible.org/kjv/gen/50/20/s_50020" target="_blank">Genesis 50:20</a> (next week): "Ye thought evil against me; but God meant it unto good, to bring to pass, as it is this day, to save much people alive."</p>
+<p>Joseph's theology of providence comes from living it.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Family/Youth Applications</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>For Families with Children</h3>
+<ul>
+<li><strong>"God was with me" chart:</strong> Throughout the week, have children identify moments when they felt God's presence—even during hard things</li>
+<li><strong>Coat activity:</strong> Make a paper "coat" and write on it things that make each child special; discuss how God sees us</li>
+<li><strong>Dream discussion:</strong> Share family dreams and hopes; discuss how God guides our futures</li>
+</ul>
+<h3>For Youth</h3>
+<ul>
+<li><strong>Temptation mapping:</strong> Identify specific temptations; create plans for recognizing, avoiding, and fleeing</li>
+<li><strong>Prison journal:</strong> Write about a time you felt "stuck" or "forgotten"—how did God show up?</li>
+<li><strong>"It is not in me":</strong> Practice responding to compliments by acknowledging God's role</li>
+</ul>
+<h3>For Sunday School / Institute</h3>
+<ul>
+<li><strong>Type of Christ deep dive:</strong> Work through the full typology table; discuss which parallels are strongest</li>
+<li><strong>Case study:</strong> Present modern scenarios requiring moral courage; apply Joseph's framework</li>
+<li><strong>Providence testimony sharing:</strong> Invite members to share "Joseph moments" where disaster became preparation</li>
+</ul>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 7: WEEK 11: STUDY QUESTIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">7. Week 11: Study Questions</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Genesis 37: Joseph and His Brothers</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Observation Questions</h3>
+<ol>
+<li>How old was Joseph when this chapter begins?</li>
+<li>Why did Jacob love Joseph more than his other sons?</li>
+<li>What did Jacob give Joseph that angered his brothers?</li>
+<li>What was the first dream Joseph told his brothers?</li>
+<li>What was the second dream, and who appeared in it?</li>
+<li>How did his father respond to the second dream?</li>
+<li>Where were Joseph's brothers pasturing their flocks?</li>
+<li>Where did Joseph eventually find them?</li>
+<li>What did the brothers initially plan to do with Joseph?</li>
+<li>Who intervened, and what was his alternative suggestion?</li>
+<li>What did the brothers do while Joseph was in the pit?</li>
+<li>Who suggested selling Joseph instead of killing him?</li>
+<li>To whom was Joseph sold? For how much?</li>
+<li>What did the brothers do with Joseph's coat?</li>
+<li>How did Jacob respond to the bloody coat?</li>
+</ol>
+<h3>Interpretation Questions</h3>
+<ol>
+<li>Why does the narrator mention Joseph's "evil report" about his brothers (v. 2)?</li>
+<li>What does the "coat of many colors" (<em>ketonet passim</em>) symbolize?</li>
+<li>Were Joseph's dreams from God? How do you know?</li>
+<li>Should Joseph have shared his dreams with his brothers? Why or why not?</li>
+<li>Why did Reuben, the firstborn, try to save Joseph?</li>
+<li>What is the significance of Judah's suggestion to sell rather than kill Joseph?</li>
+<li>How does the brothers' deception of Jacob (with the bloody coat) echo an earlier deception in Genesis?</li>
+<li>What is the dramatic irony in Jacob's mourning—what does the reader know that Jacob doesn't?</li>
+</ol>
+<h3>Application Questions</h3>
+<ol>
+<li>Have you experienced jealousy from family members? How did you handle it?</li>
+<li>When has God given you a glimpse of your future that others didn't understand?</li>
+<li>How do you respond when others don't appreciate your gifts or calling?</li>
+<li>What does this chapter teach about the danger of favoritism in families?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Genesis 38: Judah and Tamar</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Observation Questions</h3>
+<ol>
+<li>Why did Judah leave his brothers and settle elsewhere?</li>
+<li>Who were Judah's three sons?</li>
+<li>Who was Er's wife? What happened to Er?</li>
+<li>What was Onan's sin, and what was the consequence?</li>
+<li>Why did Judah withhold Shelah from Tamar?</li>
+<li>What did Tamar do when she realized Judah wouldn't give her Shelah?</li>
+<li>What items did Tamar obtain as a pledge?</li>
+<li>When Judah heard Tamar was pregnant, what did he order?</li>
+<li>How did Tamar prove Judah was the father?</li>
+<li>What was Judah's response?</li>
+<li>What were the names of Tamar's twin sons?</li>
+</ol>
+<h3>Interpretation Questions</h3>
+<ol>
+<li>Why is this chapter placed here, interrupting Joseph's story?</li>
+<li>What was Tamar's right under levirate marriage custom?</li>
+<li>Was Tamar justified in her deception? Why or why not?</li>
+<li>Why did Judah say Tamar was "more righteous" than he?</li>
+<li>How does Perez fit into the Messianic lineage?</li>
+<li>What contrasts do you see between Joseph (<a href="https://www.blueletterbible.org/kjv/gen/39/1/s_39001" target="_blank">Gen. 39</a>) and Judah (<a href="https://www.blueletterbible.org/kjv/gen/38/1/s_38001" target="_blank">Gen. 38</a>)?</li>
+</ol>
+<h3>Application Questions</h3>
+<ol>
+<li>How does God work through morally complicated situations?</li>
+<li>What does Judah's confession ("She is more righteous than I") teach about accountability?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Genesis 39: Joseph in Potiphar's House</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Observation Questions</h3>
+<ol>
+<li>Who purchased Joseph in Egypt?</li>
+<li>What phrase is repeated about Joseph in this chapter?</li>
+<li>What did Potiphar observe about Joseph?</li>
+<li>What position did Potiphar give Joseph?</li>
+<li>What happened to Potiphar's house because of Joseph?</li>
+<li>What did Potiphar's wife repeatedly demand of Joseph?</li>
+<li>What reasons did Joseph give for refusing?</li>
+<li>How long did her pursuit continue?</li>
+<li>What happened on the day "none of the men of the house" were present?</li>
+<li>What did Joseph leave behind when he fled?</li>
+<li>How did Potiphar's wife use the garment?</li>
+<li>What was Potiphar's response?</li>
+<li>Where was Joseph sent?</li>
+<li>What happened to Joseph in prison?</li>
+</ol>
+<h3>Interpretation Questions</h3>
+<ol>
+<li>What does "the LORD was with Joseph" mean, given his circumstances?</li>
+<li>How did Potiphar know "the LORD was with" Joseph?</li>
+<li>Why did Joseph define adultery as sin against God, not just Potiphar?</li>
+<li>What does "day by day" reveal about the nature of temptation?</li>
+<li>Why does Joseph flee rather than try to reason with her?</li>
+<li>How is the garment left behind parallel to the coat lost earlier?</li>
+<li>Why doesn't God vindicate Joseph immediately?</li>
+<li>How does Joseph "prosper" even in prison?</li>
+</ol>
+<h3>Application Questions</h3>
+<ol>
+<li>How do you recognize God's presence during hard times?</li>
+<li>What temptations require fleeing rather than fighting?</li>
+<li>How can you prepare now for moments when temptation is sudden?</li>
+<li>What does Joseph's faithfulness in small responsibilities teach about character?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Genesis 40: The Butler and Baker's Dreams</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Observation Questions</h3>
+<ol>
+<li>Who were the two new prisoners who joined Joseph?</li>
+<li>Why had they been imprisoned?</li>
+<li>Who was assigned to serve them?</li>
+<li>What did Joseph notice about them one morning?</li>
+<li>What question did Joseph ask about their sadness?</li>
+<li>What did the butler dream?</li>
+<li>What was Joseph's interpretation?</li>
+<li>What request did Joseph make of the butler?</li>
+<li>What did the baker dream?</li>
+<li>What was Joseph's interpretation for the baker?</li>
+<li>Were the interpretations fulfilled? How?</li>
+<li>What did the butler do after his restoration?</li>
+</ol>
+<h3>Interpretation Questions</h3>
+<ol>
+<li>Why did Joseph say "Interpretations belong to God"?</li>
+<li>What does Joseph's question about their sadness reveal about him?</li>
+<li>Why do you think Joseph told the baker the bad news honestly?</li>
+<li>What is significant about the "three days" in both interpretations?</li>
+<li>Why did the butler forget Joseph?</li>
+<li>How might Joseph have felt during the two years of being forgotten?</li>
+</ol>
+<h3>Application Questions</h3>
+<ol>
+<li>How do you respond when people forget their promises to you?</li>
+<li>When has God's timing been different from your hoped-for timing?</li>
+<li>How do you use your gifts to serve others, even when you're suffering?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Genesis 41: Pharaoh's Dreams and Joseph's Elevation</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Observation Questions</h3>
+<ol>
+<li>How long after the butler's restoration did Pharaoh have his dreams?</li>
+<li>What was Pharaoh's first dream?</li>
+<li>What was Pharaoh's second dream?</li>
+<li>Who tried to interpret the dreams? Did they succeed?</li>
+<li>Who finally remembered Joseph?</li>
+<li>How did Joseph appear before Pharaoh?</li>
+<li>What did Joseph say when Pharaoh asked him to interpret?</li>
+<li>What did the seven fat cows and plump ears represent?</li>
+<li>What did the seven thin cows and withered ears represent?</li>
+<li>What advice did Joseph give Pharaoh?</li>
+<li>How did Pharaoh respond to Joseph's interpretation?</li>
+<li>What did Pharaoh say about Joseph?</li>
+<li>What position did Pharaoh give Joseph?</li>
+<li>What symbols of authority did Joseph receive?</li>
+<li>What new name did Joseph receive?</li>
+<li>Who did Joseph marry?</li>
+<li>How old was Joseph when he stood before Pharaoh?</li>
+<li>What did Joseph do during the seven years of plenty?</li>
+<li>What were Joseph's sons named, and what do the names mean?</li>
+</ol>
+<h3>Interpretation Questions</h3>
+<ol>
+<li>Why were the dreams doubled?</li>
+<li>What does "It is not in me" reveal about Joseph's character?</li>
+<li>Why could Pharaoh, a pagan, recognize "the Spirit of God" in Joseph?</li>
+<li>How did Joseph's earlier experiences prepare him for this role?</li>
+<li>What is the significance of Joseph being 30 when elevated (same age as Jesus beginning ministry)?</li>
+<li>Why would Joseph name his sons Manasseh ("forgetting") and Ephraim ("fruitful")?</li>
+<li>How does Joseph's elevation compare to Christ's exaltation?</li>
+</ol>
+<h3>Application Questions</h3>
+<ol>
+<li>How do you acknowledge God when He works through you?</li>
+<li>What experiences in your life might be preparation for future roles?</li>
+<li>How do you "store up" during times of plenty to prepare for times of scarcity?</li>
+<li>What does it mean to "forget" past suffering while remaining fruitful?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Cross-Cutting Themes</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Joseph as Type of Christ</h3>
+<ol>
+<li>List at least ten parallels between Joseph's life and Christ's.</li>
+<li>How does Joseph's rejection and exaltation prefigure Christ's?</li>
+<li>In what ways does Joseph save those who rejected him?</li>
+<li>How does the butler-baker scene parallel the two thieves at the cross?</li>
+</ol>
+<h3>Divine Providence</h3>
+<ol>
+<li>Trace how each setback positioned Joseph for his ultimate role.</li>
+<li>At what point could Joseph see God's hand? At what points was it hidden?</li>
+<li>How does Joseph's story teach us to trust God during unexplained suffering?</li>
+<li>What does <a href="https://www.blueletterbible.org/kjv/rom/8/28/s_1054028" target="_blank">Romans 8:28</a> mean in light of Joseph's experience?</li>
+</ol>
+<h3>Faithfulness in Adversity</h3>
+<ol>
+<li>What choices did Joseph make that kept him close to God?</li>
+<li>How did Joseph maintain integrity when no one was watching?</li>
+<li>What sustained Joseph during the two years the butler forgot him?</li>
+<li>How does Joseph demonstrate that prosperity is about presence, not circumstances?</li>
+</ol>
+<h3>Spiritual Gifts</h3>
+<ol>
+<li>How did Joseph use his gift of interpretation?</li>
+<li>What distinguished Joseph's approach from the Egyptian magicians?</li>
+<li>How did Joseph's humility about his gift lead to greater trust?</li>
+<li>What gifts has God given you, and how are you using them for His purposes?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+</div>
