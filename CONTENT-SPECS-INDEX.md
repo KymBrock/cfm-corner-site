@@ -10,7 +10,7 @@ All spec documents for the CFM Corner site content pipeline. Read these before c
 |----------|---------------|-------------------|
 | `WEEKLY-PROTOCOL.md` | End-to-end weekly workflow (Obsidian → Hugo → Deploy → Email) | — |
 | `STUDY-GUIDE-SPEC.md` | Study guide HTML format, 7 accordion sections (incl. Jewish Perspective), word studies, linking system | Week 09 (Sections 1-4, 6-7); Week 10+ (all 7 sections) |
-| `RESOURCES-HTML-SPEC.md` | Resources page HTML format, video cards, accordions | Week 08 |
+| `RESOURCES-HTML-SPEC.md` | Resources page HTML format, video cards, accordions | Week 11 |
 | `LEXICON-POPUP-SPEC.md` | Hebrew/Greek hover popups, data attributes, dictionary linking patterns | — |
 | `CHART-STANDARDS.md` | Chart HTML standards: logo pattern, mobile responsive, region colors, CSS vars | Week 09 charts |
 | `CULTURE-SPEC.md` | Culture section structure, layout templates, content guidelines | Purim moedim page |
@@ -104,4 +104,4 @@ Each word study (Section 4) must include ALL of the following:
 
 ---
 
-*Version 1.2 — 2026-03-01*
+*Version 1.3 — 2026-03-10*

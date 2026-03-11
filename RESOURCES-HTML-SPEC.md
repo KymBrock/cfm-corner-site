@@ -1,6 +1,6 @@
 # Resources HTML Specification
 
-The definitive format reference for `static/content/weekNN/resources.html`. Week 08 is the canonical example. Every future week must match this structure.
+The definitive format reference for `static/content/weekNN/resources.html`. Week 11 is the canonical example. Every future week must match this structure.
 
 ---
 
@@ -64,8 +64,24 @@ body { font-family: Georgia, serif; max-width: 900px; margin: 0 auto; padding: 0
     <p style="color: #7c9885; font-size: 1.3em; font-style: italic; margin-bottom: 15px;">Scripture Reference</p>
     <p style="color: #5a6d5f; font-size: 1em; margin-bottom: 10px;">Date Range</p>
     <p style="color: #666; font-size: 1em; font-style: italic; margin: 0;">&ldquo;Quote&rdquo;</p>
+    <p style="color: #888; font-size: 0.85em; margin-top: 8px;">&mdash; Attribution</p>
 </div>
 ```
+
+---
+
+## Quick Links Buttons
+
+Two sage-green buttons centered below the header box:
+
+```html
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 25px;">
+    <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/NN?lang=eng" target="_blank" style="background: #7c9885; color: white; padding: 10px 16px; text-decoration: none; border-radius: 8px; font-size: 0.9em; font-weight: 600; display: inline-block; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Come Follow Me Manual</a>
+    <a href="https://www.churchofjesuschrist.org/study/manual/scripture-helps-old-testament?lang=eng" target="_blank" style="background: #7c9885; color: white; padding: 10px 16px; text-decoration: none; border-radius: 8px; font-size: 0.9em; font-weight: 600; display: inline-block; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Scripture Helps</a>
+</div>
+```
+
+The CFM Manual URL changes per week (`/NN?lang=eng`). The Scripture Helps URL is static.
 
 ---
 
@@ -146,7 +162,6 @@ For "All OT Stories", "All Come Learn With Me", "Church Video Library":
 <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
     <a href="COLLECTION_URL" target="_blank" style="text-decoration: none; display: block;">
         <div style="background: linear-gradient(135deg, #1e3a5f, #2d5a87); padding: 25px 15px; text-align: center;">
-            <span style="font-size: 2em; color: white;">&#128218;</span>
             <div style="color: white; font-size: 0.7em; margin-top: 5px; opacity: 0.9;">Full Collection</div>
         </div>
         <div style="padding: 10px; text-align: center;">
@@ -156,6 +171,8 @@ For "All OT Stories", "All Come Learn With Me", "Church Video Library":
     </a>
 </div>
 ```
+
+> **No emojis.** The collection card uses only text ("Full Collection" / "Full Library"). The previous `&#128218;` emoji has been removed to match the site-wide design rule.
 
 ---
 
@@ -346,5 +363,5 @@ Everything else (static reference links, collection links, JS, CSS) is identical
 
 ---
 
-*Canonical example: `static/content/week08/resources.html`*
-*Spec version: 1.0 — 2026-02-19*
+*Canonical example: `static/content/week11/resources.html`*
+*Spec version: 1.1 — 2026-03-10*
