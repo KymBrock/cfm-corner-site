@@ -555,10 +555,12 @@
       }
 
       document.addEventListener('mouseover', function(e) {
+        if (popup.contains(e.target)) return;
         var el = targetAnchor(e.target);
         if (el) { e.preventDefault(); show(el); }
       });
       document.addEventListener('mouseout', function(e) {
+        if (popup.contains(e.target)) return;
         var el = targetAnchor(e.target);
         if (el) hide();
       });
@@ -571,8 +573,12 @@
         if (el) {
           e.preventDefault();
           e.stopPropagation();
-          if (active === el && popup.classList.contains('visible')) hideNow();
-          else show(el);
+          if (active === el && popup.classList.contains('visible')) {
+            window.open(el.href, '_blank', 'noopener');
+            hideNow();
+          } else {
+            show(el);
+          }
         } else if (popup.classList.contains('visible')) {
           hideNow();
         }

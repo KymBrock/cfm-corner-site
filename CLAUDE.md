@@ -32,3 +32,104 @@ content files. Use `--no-verify` ONLY with Kymber's explicit approval.
 ## Recovery
 
 If disaster strikes, the tag `stable-2026-02-21` marks a known-good state.
+
+---
+
+## ⛔ CONTENT INTEGRITY — ABSOLUTE RULE ⛔
+
+**NOTHING in any CFM Corner lesson, insight, study guide, or resource may be
+fabricated, assumed, inferred, or written from general knowledge.**
+
+Every claim, description, summary, or characterization of content MUST be
+sourced from one of the following:
+
+1. **Scripture text** — direct reference to the biblical passage
+2. **Vault source files** — study guides, overviews, word studies, or
+   other documents in the K Master Vault that Kymber has written or approved
+3. **Processed video transcripts** — distilled content in `Video_Distilled/`
+   that has been processed through Knowlchemy
+4. **Conference talk text** — verified against the actual published talk
+   at ChurchofJesusChrist.org before being cited or described
+5. **Explicit user instruction** — Kymber has directly provided or
+   confirmed the information in the current session
+6. **Approved Hebrew grammar references** — the following textbooks are
+   approved sources for Hebrew grammatical claims, linguistic terminology,
+   and grammatical classifications. When citing, reference the author,
+   chapter/section, and page number:
+
+   - **Gesenius' Hebrew Grammar (GKC)** — H.F.W. Gesenius, ed. E. Kautzsch,
+     trans. A.E. Cowley. Oxford: Clarendon Press, 2nd English ed. 1910.
+     *The universal standard reference grammar for Biblical Hebrew.*
+     Vault: `Books/EPUB/Gesenius_Hebrew_Grammar_GKC.pdf`
+
+   - **A Practical Grammar for Classical Hebrew** — J. Weingreen.
+     Oxford University Press, 2nd ed. 1959.
+     *The standard grammar used in Jewish studies programs and seminaries.*
+     Vault: `Books/EPUB/Weingreen_Practical_Grammar_Classical_Hebrew.pdf`
+
+   - **A Grammar for Biblical Hebrew** — William D. Barrick & Irvin A.
+     Busenitz. The Master's Seminary, rev. July 2004.
+     *Seminary-level grammar with exegetical insights per chapter.*
+     Vault: `Books/EPUB/B_B_Hebrew_Grammar_2005.pdf`
+
+   - **Simplified Hebrew Grammar** — Justin T. Alfred. Blue Letter Bible.
+     *Accessible introduction hosted by BLB; covers conjunction,
+     consecutive, prepositions, article, and verb tenses.*
+     Vault: `Books/EPUB/BLB_Simplified_Hebrew_Grammar_Alfred.pdf`
+
+   - **Blue Letter Bible online tools** — blueletterbible.org.
+     Lexicon entries, interlinear, and grammar pages are approved sources.
+
+7. **Approved rabbinic primary sources for letter symbolism** — the
+   following texts are approved sources for claims about the Jewish
+   tradition of finding meaning in Hebrew letter forms. These are
+   *midrashic* sources (homily and meditation), NOT grammar references.
+   Never conflate them with linguistic analysis.
+
+   - **Babylonian Talmud, Shabbat 104a** — The children's alphabet
+     homily. Young students derive moral and symbolic lessons from the
+     names, forms, and sequences of the Hebrew letters.
+     Sefaria (bilingual): https://www.sefaria.org/Shabbat.104a
+     Vault: `Books/EPUB/Shabbat_104a_Letter_Symbolism_Sefaria.md`
+
+   - **Otiyot de-Rabbi Akiva (Alphabet of Rabbi Akiva)** — Post-Talmudic
+     midrashic text building extended homilies around each letter. Version 1
+     features the letters petitioning God to begin creation.
+     Sefaria (Version 1): https://www.sefaria.org/Otzar_Midrashim,_Midrashim_of_Rabbi_Akiba,_Aleph_Bet_of_Rabbi_Akiba_(Version_1)
+     Sefaria (Version 2): https://www.sefaria.org/Otzar_Midrashim,_Midrashim_of_Rabbi_Akiba,_Aleph_Bet_of_Rabbi_Akiba_(Version_2)
+     Vault: `Books/EPUB/Otiyot_de_Rabbi_Akiva_Sefaria.md`
+
+### What this means in practice:
+
+- **Video descriptions** — NEVER describe what a video "covers" or
+  "focuses on" unless the transcript has been processed and is in
+  `Video_Distilled/`. If no distillation exists, list the title only
+  and direct readers to the Resources tab.
+
+- **Conference talk quotes** — NEVER paraphrase or characterize a talk
+  without verifying the actual text. If uncertain, link to the talk
+  and let readers read it themselves.
+
+- **Hebrew/Greek claims** — NEVER assert a linguistic meaning, root, or
+  connection that is not sourced from BLB, an approved grammar reference,
+  a vault word study, or Kymber's direct instruction.
+
+- **Pictographic claims** — The connection between ancient pictographic
+  letter forms and grammatical function is Kymber's personal mnemonic
+  approach. It is NOT conventional grammar pedagogy. Always present
+  pictographic connections as memory aids, never as scholarly consensus.
+  The grammar itself (sourced from approved references) is what matters.
+
+- **Historical/cultural claims** — NEVER add "enriching" context that
+  comes from training data alone. Source it from vault files or flag it
+  as needing verification.
+
+### When in doubt:
+
+Leave a placeholder and flag it explicitly, e.g.:
+`[VIDEO SUMMARY PENDING — awaiting Knowlchemy distillation]`
+`[QUOTE PENDING VERIFICATION]`
+
+**It is always better to publish less and be accurate than to publish
+more and be wrong. Kymber's readers trust this content for scripture
+study. That trust must never be violated.**

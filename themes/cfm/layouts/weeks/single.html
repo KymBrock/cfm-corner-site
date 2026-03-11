@@ -6,7 +6,7 @@
 </div>
 
 <div class="week-header">
-    {{ with .Params.image }}<img src="{{ . | relURL }}" alt="{{ $.Params.image_alt }}" class="week-header-img">{{ end }}
+    {{ with .Params.image }}<img src="{{ . | relURL }}" alt="{{ $.Params.image_alt }}" class="week-header-img"{{ with $.Params.image_position }} style="object-position: {{ . }};"{{ end }}>{{ end }}
     <div class="week-num" style="font-size: 0.9em; color: var(--sage-mid); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Week {{ .Params.week_num }}</div>
     <h1>{{ .Title }}</h1>
     <div class="week-scripture-ref">{{ .Params.scripture }}</div>
