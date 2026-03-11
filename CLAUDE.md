@@ -35,6 +35,38 @@ If disaster strikes, the tag `stable-2026-02-21` marks a known-good state.
 
 ---
 
+## Deployment Checklist
+
+When deploying a new week, follow these steps in order:
+
+### Week Front Matter (`content/weeks/NN.md`)
+- [ ] Set `current: true` on the **new** week's `.md`
+- [ ] Set `current: false` on the **previous** week's `.md`
+- [ ] Verify all `charts:` entries match their actual article titles and descriptions
+  — title and description must come from the article's own front matter, not be invented
+- [ ] Verify chart `url:` paths resolve correctly (e.g., `study-library/articles/slug/`)
+
+### Static Content (`static/content/weekNN/`)
+- [ ] Run `link-audit.py` on all three files (study-guide, insights, resources) — zero issues
+- [ ] Verify no emojis in any HTML files (monochromatic icons only)
+- [ ] Verify all video cards use thumbnail format (never plain text links)
+
+### Hugo Preview
+- [ ] **Restart the Hugo server** after editing any file in `static/content/` — Hugo's
+  `readFile` function caches at build time, so changes to static HTML files are NOT
+  visible until the server is restarted
+- [ ] Check all tabs load (Study Guide, Insights, Resources, Charts)
+- [ ] Check lesson image displays
+- [ ] Verify charts are interactive
+
+### Git & Deploy
+- [ ] Run `git diff` and review before committing
+- [ ] Commit with message format: `Week NN: Scripture Reference`
+- [ ] Push to main — GitHub Actions auto-deploys
+- [ ] Verify live site at `www.cfmcorner.com/weeks/NN/`
+
+---
+
 ## ⛔ CONTENT INTEGRITY — ABSOLUTE RULE ⛔
 
 **NOTHING in any CFM Corner lesson, insight, study guide, or resource may be
