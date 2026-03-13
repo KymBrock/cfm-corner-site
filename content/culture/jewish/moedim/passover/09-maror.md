@@ -11,7 +11,7 @@ image: /images/culture/passover/09-maror.png
 
 ## Root Word
 
-מָרַר (*marar*) — to be bitter, grieved, sorrowful
+<a href="https://www.blueletterbible.org/lexicon/h4843/kjv/wlc/0-1/" target="_blank" data-lexicon="to be bitter" data-strongs="H4843" data-translit="marar" data-original="מָרַר" data-lang="hebrew">מָרַר</a> (*marar*) — to be bitter, grieved, sorrowful
 
 ---
 

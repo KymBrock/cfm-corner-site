@@ -11,7 +11,7 @@ image: /images/culture/passover/07-motzi.png
 
 ## Root Word
 
-יָצָא (*yatsa*) — to bring forth, to go out
+<a href="https://www.blueletterbible.org/lexicon/h3318/kjv/wlc/0-1/" target="_blank" data-lexicon="to go out, come out, bring forth" data-strongs="H3318" data-translit="yatsa" data-original="יָצָא" data-lang="hebrew">יָצָא</a> (*yatsa*) — to bring forth, to go out
 
 ---
 

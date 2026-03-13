@@ -8,7 +8,7 @@ week_ref: "12"
 
 ## When Prepositions Carry Pronouns
 
-In English, "against me" is two words. In [Genesis 50:20](https://www.blueletterbible.org/kjv/gen/50/20/), Hebrew says עָלַי ([*alai*](https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/)) — one word. The preposition and the pronoun have fused together.
+In English, "against me" is two words. In [Genesis 50:20](https://www.blueletterbible.org/kjv/gen/50/20/), Hebrew says <a href="https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/" target="_blank" data-lexicon="upon, above, over, against" data-strongs="H5921" data-translit="al" data-original="עַל" data-lang="hebrew" data-verse="Genesis 50:20">עָלַי</a> (*alai*) — one word. The preposition and the pronoun have fused together.
 
 This is not a quirk of one verse. It happens *thousands* of times in the Hebrew Bible. Every time the text says "with him," "to me," "from them," "upon us," or "in her," Hebrew collapses the preposition and pronoun into a single word. Two English words become one.
 
@@ -44,7 +44,7 @@ Don't memorize this chart in isolation. Instead, watch these patterns come alive
 
 ## לְ (le-) — to / for
 
-The preposition [לְ](https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/) (*le-*, "to" or "for") is one of the most common words in the entire Hebrew Bible. In Lesson 10 you met it as an inseparable prefix: לַמֶּלֶךְ ("to the king"), לְיִשְׂרָאֵל ("for Israel"). When a pronoun replaces the noun, the suffix attaches directly:
+The preposition <a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" target="_blank" data-lexicon="to, for, in regard to" data-strongs="H413" data-translit="le" data-original="לְ" data-lang="hebrew">לְ</a> (*le-*, "to" or "for") is one of the most common words in the entire Hebrew Bible. In Lesson 10 you met it as an inseparable prefix: לַמֶּלֶךְ ("to the king"), לְיִשְׂרָאֵל ("for Israel"). When a pronoun replaces the noun, the suffix attaches directly:
 
 <div style="overflow-x: auto; margin: 20px 0;">
 <table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
@@ -64,7 +64,7 @@ The preposition [לְ](https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/
 
 <div style="background: rgba(74,107,82,0.08); border-left: 4px solid var(--sage-dark); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
 
-**In this week's reading:** [Genesis 45:5](https://www.blueletterbible.org/kjv/gen/45/5/) — Joseph reassures his brothers: **כִּי לְמִחְיָה שְׁלָחַנִי אֱלֹהִים לִפְנֵיכֶם** — "for God sent me before you to preserve life." The final word **לִפְנֵיכֶם** ([*lifneikhem*](https://www.blueletterbible.org/lexicon/h6440/kjv/wlc/0-1/)) packs three elements into one: the preposition לְ ("to/before") + פָּנִים ([*panim*](https://www.blueletterbible.org/lexicon/h6440/kjv/wlc/0-1/), "face") + the 2mp suffix כֶם ("your"). One word carrying "to-the-face-of-you-all" — "before you."
+**In this week's reading:** [Genesis 45:5](https://www.blueletterbible.org/kjv/gen/45/5/) — Joseph reassures his brothers: **כִּי לְמִחְיָה שְׁלָחַנִי אֱלֹהִים לִפְנֵיכֶם** — "for God sent me before you to preserve life." The final word **<a href="https://www.blueletterbible.org/lexicon/h6440/kjv/wlc/0-1/" target="_blank" data-lexicon="face, presence, before" data-strongs="H6440" data-translit="panim" data-original="פָּנִים" data-lang="hebrew" data-verse="Genesis 45:5">לִפְנֵיכֶם</a>** (*lifneikhem*) packs three elements into one: the preposition לְ ("to/before") + <a href="https://www.blueletterbible.org/lexicon/h6440/kjv/wlc/0-1/" target="_blank" data-lexicon="face, presence, before" data-strongs="H6440" data-translit="panim" data-original="פָּנִים" data-lang="hebrew">פָּנִים</a> (*panim*, "face") + the 2mp suffix כֶם ("your"). One word carrying "to-the-face-of-you-all" — "before you."
 
 </div>
 
@@ -72,7 +72,7 @@ The preposition [לְ](https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/
 
 ## אֵת / עִם — with
 
-Hebrew has two prepositions meaning "with": [אֵת](https://www.blueletterbible.org/lexicon/h854/kjv/wlc/0-1/) (*et*) and [עִם](https://www.blueletterbible.org/lexicon/h5973/kjv/wlc/0-1/) (*im*). They are largely interchangeable. Both take pronominal suffixes, and the forms of אֵת are the ones you will encounter most in Genesis.
+Hebrew has two prepositions meaning "with": <a href="https://www.blueletterbible.org/lexicon/h854/kjv/wlc/0-1/" target="_blank" data-lexicon="with, near, together with" data-strongs="H854" data-translit="et" data-original="אֵת" data-lang="hebrew">אֵת</a> (*et*) and <a href="https://www.blueletterbible.org/lexicon/h5973/kjv/wlc/0-1/" target="_blank" data-lexicon="with, together with" data-strongs="H5973" data-translit="im" data-original="עִם" data-lang="hebrew">עִם</a> (*im*). They are largely interchangeable. Both take pronominal suffixes, and the forms of אֵת are the ones you will encounter most in Genesis.
 
 <div style="background: rgba(195,124,60,0.1); border-left: 4px solid var(--copper); border-radius: 8px; padding: 16px 20px; margin-bottom: 16px;">
 
@@ -103,9 +103,9 @@ The vowels and context tell them apart. When you see a suffix attached (אִתִ
 
 <div style="background: rgba(74,107,82,0.08); border-left: 4px solid var(--sage-dark); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
 
-**In this week's reading:** [Genesis 48:21](https://www.blueletterbible.org/kjv/gen/48/21/) — Jacob's deathbed promise to Joseph: **וְהָיָה אֱלֹהִים עִמָּכֶם** — "God will be **with you**." The word **עִמָּכֶם** ([*immakhem*](https://www.blueletterbible.org/lexicon/h5973/kjv/wlc/0-1/)) is the preposition עִם ("with") fused with the 2mp suffix כֶם ("you all"). One word carries a dying patriarch's entire theology of promise: God's presence will continue with the next generation.
+**In this week's reading:** [Genesis 48:21](https://www.blueletterbible.org/kjv/gen/48/21/) — Jacob's deathbed promise to Joseph: **וְהָיָה אֱלֹהִים עִמָּכֶם** — "God will be **with you**." The word **<a href="https://www.blueletterbible.org/lexicon/h5973/kjv/wlc/0-1/" target="_blank" data-lexicon="with, together with" data-strongs="H5973" data-translit="im" data-original="עִם" data-lang="hebrew" data-verse="Genesis 48:21">עִמָּכֶם</a>** (*immakhem*) is the preposition עִם ("with") fused with the 2mp suffix כֶם ("you all"). One word carries a dying patriarch's entire theology of promise: God's presence will continue with the next generation.
 
-This is the same grammar we see in [Genesis 39:2–3](https://www.blueletterbible.org/kjv/gen/39/2/), where the narrator repeats **אִתּוֹ** ([*itto*](https://www.blueletterbible.org/lexicon/h854/kjv/wlc/0-1/)) — "with him" — four times: "the LORD was **with him**." The refrain that carried Joseph through slavery and prison is now handed forward as a covenant inheritance.
+This is the same grammar we see in [Genesis 39:2–3](https://www.blueletterbible.org/kjv/gen/39/2/), where the narrator repeats **<a href="https://www.blueletterbible.org/lexicon/h854/kjv/wlc/0-1/" target="_blank" data-lexicon="with, near, together with" data-strongs="H854" data-translit="et" data-original="אֵת" data-lang="hebrew" data-verse="Genesis 39:2">אִתּוֹ</a>** (*itto*) — "with him" — four times: "the LORD was **with him**." The refrain that carried Joseph through slavery and prison is now handed forward as a covenant inheritance.
 
 </div>
 
@@ -117,7 +117,7 @@ Four more prepositions take pronominal suffixes in exactly the same way. We will
 
 ### אֶל (el-) — to / toward
 
-[אֶל](https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/) (*el-*, "to, toward") is distinct from לְ (*le-*, "to, for"). The difference is subtle: לְ tends toward **purpose** ("for him"), while אֶל tends toward **direction** ("toward him"). With suffixes it expands to **אֵלַ-** / **אֵלֶ-** / **אֵלָ-**:
+<a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" target="_blank" data-lexicon="to, toward, unto" data-strongs="H413" data-translit="el" data-original="אֶל" data-lang="hebrew">אֶל</a> (*el-*, "to, toward") is distinct from לְ (*le-*, "to, for"). The difference is subtle: לְ tends toward **purpose** ("for him"), while אֶל tends toward **direction** ("toward him"). With suffixes it expands to **אֵלַ-** / **אֵלֶ-** / **אֵלָ-**:
 
 <div style="overflow-x: auto; margin: 20px 0;">
 <table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
@@ -132,11 +132,11 @@ Four more prepositions take pronominal suffixes in exactly the same way. We will
 </table>
 </div>
 
-In [Genesis 45:3](https://www.blueletterbible.org/kjv/gen/45/3/), when Joseph reveals his identity, the text says: **וְלֹא-יָכְלוּ אֶחָיו לַעֲנוֹת אֹתוֹ כִּי נִבְהֲלוּ מִפָּנָיו** — "his brothers could not answer him, for they were terrified **before him**." The word **מִפָּנָיו** ([*mippanav*](https://www.blueletterbible.org/lexicon/h6440/kjv/wlc/0-1/)) is a compound: the preposition מִן ("from") + פָּנִים (*panim*, "face") + the 3ms suffix יו ("his"). Three layers packed into one word: "from-face-of-him" — that is, "from before him."
+In [Genesis 45:3](https://www.blueletterbible.org/kjv/gen/45/3/), when Joseph reveals his identity, the text says: **וְלֹא-יָכְלוּ אֶחָיו לַעֲנוֹת אֹתוֹ כִּי נִבְהֲלוּ מִפָּנָיו** — "his brothers could not answer him, for they were terrified **before him**." The word **<a href="https://www.blueletterbible.org/lexicon/h6440/kjv/wlc/0-1/" target="_blank" data-lexicon="face, presence, before" data-strongs="H6440" data-translit="panim" data-original="פָּנִים" data-lang="hebrew" data-verse="Genesis 45:3">מִפָּנָיו</a>** (*mippanav*) is a compound: the preposition מִן ("from") + פָּנִים (*panim*, "face") + the 3ms suffix יו ("his"). Three layers packed into one word: "from-face-of-him" — that is, "from before him."
 
 ### עַל (al-) — on / upon / over / concerning
 
-[עַל](https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/) (*al-*, "on, upon, over, concerning") has remarkable range. It can be physical ("upon the altar"), relational ("over his brothers"), or emotional ("concerning this matter"). With suffixes it expands to **עָלַ-** / **עָלֶ-** / **עָלָ-**:
+<a href="https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/" target="_blank" data-lexicon="upon, above, over, against" data-strongs="H5921" data-translit="al" data-original="עַל" data-lang="hebrew">עַל</a> (*al-*, "on, upon, over, concerning") has remarkable range. It can be physical ("upon the altar"), relational ("over his brothers"), or emotional ("concerning this matter"). With suffixes it expands to **עָלַ-** / **עָלֶ-** / **עָלָ-**:
 
 <div style="overflow-x: auto; margin: 20px 0;">
 <table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
@@ -151,11 +151,11 @@ In [Genesis 45:3](https://www.blueletterbible.org/kjv/gen/45/3/), when Joseph re
 </table>
 </div>
 
-In [Genesis 42:36](https://www.blueletterbible.org/kjv/gen/42/36/), Jacob cries out: **עָלַי הָיוּ כֻלָּנָה** — "**Upon me** are all these things come." The word **עָלַי** ([*alai*](https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/)) is עַל + the 1cs suffix: "upon-me." In a single word, Jacob expresses the weight of every loss pressing down on him. We will return to this exact form in the scripture anchor below — where Joseph transforms its meaning entirely.
+In [Genesis 42:36](https://www.blueletterbible.org/kjv/gen/42/36/), Jacob cries out: **עָלַי הָיוּ כֻלָּנָה** — "**Upon me** are all these things come." The word **<a href="https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/" target="_blank" data-lexicon="upon, above, over, against" data-strongs="H5921" data-translit="al" data-original="עַל" data-lang="hebrew" data-verse="Genesis 42:36">עָלַי</a>** (*alai*) is עַל + the 1cs suffix: "upon-me." In a single word, Jacob expresses the weight of every loss pressing down on him. We will return to this exact form in the scripture anchor below — where Joseph transforms its meaning entirely.
 
 ### בְּ (be-) — in / with / by / through
 
-[בְּ](https://www.blueletterbible.org/lexicon/h9002/kjv/wlc/0-1/) (*be-*, "in, with, by, through") is one of the three inseparable prepositions from Lesson 10. When a pronominal suffix attaches, the vowel pattern shifts:
+<a href="https://www.blueletterbible.org/lexicon/h9002/kjv/wlc/0-1/" target="_blank" data-lexicon="in, at, with, by, through" data-strongs="H9002" data-translit="be" data-original="בְּ" data-lang="hebrew">בְּ</a> (*be-*, "in, with, by, through") is one of the three inseparable prepositions from Lesson 10. When a pronominal suffix attaches, the vowel pattern shifts:
 
 <div style="overflow-x: auto; margin: 20px 0;">
 <table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
@@ -170,11 +170,11 @@ In [Genesis 42:36](https://www.blueletterbible.org/kjv/gen/42/36/), Jacob cries 
 </table>
 </div>
 
-In [Genesis 44:5](https://www.blueletterbible.org/kjv/gen/44/5/), Joseph's steward says of the silver cup: **הֲלוֹא זֶה אֲשֶׁר יִשְׁתֶּה אֲדֹנִי בּוֹ** — "Is not this it from which my lord drinks, **and by which he tests**?" The word **בּוֹ** ([*bo*](https://www.blueletterbible.org/lexicon/h9002/kjv/wlc/0-1/)) is the preposition בְּ fused with the 3ms suffix: "in-it / by-it." The Targum Onkelos renders this as *badaqa mevadeq beh* — "testing, he tests **by it**" — protecting Joseph's character by replacing "divination" with "testing" ([Targum Onkelos, Genesis 44:5](https://www.sefaria.org/Onkelos_Genesis.44.5)).
+In [Genesis 44:5](https://www.blueletterbible.org/kjv/gen/44/5/), Joseph's steward says of the silver cup: **הֲלוֹא זֶה אֲשֶׁר יִשְׁתֶּה אֲדֹנִי בּוֹ** — "Is not this it from which my lord drinks, **and by which he tests**?" The word **<a href="https://www.blueletterbible.org/lexicon/h9002/kjv/wlc/0-1/" target="_blank" data-lexicon="in, at, with, by, through" data-strongs="H9002" data-translit="be" data-original="בְּ" data-lang="hebrew" data-verse="Genesis 44:5">בּוֹ</a>** (*bo*) is the preposition בְּ fused with the 3ms suffix: "in-it / by-it." The Targum Onkelos renders this as *badaqa mevadeq beh* — "testing, he tests **by it**" — protecting Joseph's character by replacing "divination" with "testing" ([Targum Onkelos, Genesis 44:5](https://www.sefaria.org/Onkelos_Genesis.44.5)).
 
 ### מִן (min-) — from / out of
 
-[מִן](https://www.blueletterbible.org/lexicon/h4480/kjv/wlc/0-1/) (*min-*, "from, out of, because of") behaves distinctively. Rather than keeping its simple form, the נ (*nun*) assimilates and the suffix attaches to **מִמּ-**:
+<a href="https://www.blueletterbible.org/lexicon/h4480/kjv/wlc/0-1/" target="_blank" data-lexicon="from, out of, because of, more than" data-strongs="H4480" data-translit="min" data-original="מִן" data-lang="hebrew">מִן</a> (*min-*, "from, out of, because of") behaves distinctively. Rather than keeping its simple form, the נ (*nun*) assimilates and the suffix attaches to **מִמּ-**:
 
 <div style="overflow-x: auto; margin: 20px 0;">
 <table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
@@ -213,9 +213,9 @@ Everything we have studied in this lesson converges in the most theologically im
 
 Two prepositions carry the entire weight of this verse:
 
-- **עָלַי** ([*alai*](https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/)) — the preposition עַל ("upon/against") fused with the 1cs suffix ("me"). One word: "against-me." This is the same form Jacob used in [Genesis 42:36](https://www.blueletterbible.org/kjv/gen/42/36/) when he cried **עָלַי הָיוּ כֻלָּנָה** — "upon me are all these things come." Father and son both felt the weight of עָלַי. But Joseph speaks it with a different grammar surrounding it.
+- **<a href="https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/" target="_blank" data-lexicon="upon, above, over, against" data-strongs="H5921" data-translit="al" data-original="עַל" data-lang="hebrew" data-verse="Genesis 50:20">עָלַי</a>** (*alai*) — the preposition עַל ("upon/against") fused with the 1cs suffix ("me"). One word: "against-me." This is the same form Jacob used in [Genesis 42:36](https://www.blueletterbible.org/kjv/gen/42/36/) when he cried **עָלַי הָיוּ כֻלָּנָה** — "upon me are all these things come." Father and son both felt the weight of עָלַי. But Joseph speaks it with a different grammar surrounding it.
 
-- **לְטֹבָה** ([*letovah*](https://www.blueletterbible.org/lexicon/h2896/kjv/wlc/0-1/)) — the preposition לְ ("to/for") fused with טוֹבָה ([*tovah*](https://www.blueletterbible.org/lexicon/h2896/kjv/wlc/0-1/), "good/goodness"). One word: "for-good."
+- **<a href="https://www.blueletterbible.org/lexicon/h2896/kjv/wlc/0-1/" target="_blank" data-lexicon="good, pleasant, agreeable" data-strongs="H2896" data-translit="tov" data-original="טוֹב" data-lang="hebrew" data-verse="Genesis 50:20">לְטֹבָה</a>** (*letovah*) — the preposition לְ ("to/for") fused with <a href="https://www.blueletterbible.org/lexicon/h2896/kjv/wlc/0-1/" target="_blank" data-lexicon="good, pleasant, agreeable" data-strongs="H2896" data-translit="tov" data-original="טוֹב" data-lang="hebrew">טוֹבָה</a> (*tovah*, "good/goodness"). One word: "for-good."
 
 <div style="background: rgba(74,107,82,0.08); border-left: 4px solid var(--sage-dark); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
 

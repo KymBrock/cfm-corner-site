@@ -23,7 +23,7 @@ We approach the Seder with deep respect and gratitude for the Jewish tradition t
 
 ## Overview
 
-**Hebrew Name:** פֶּסַח (*Pesach*, "Passover")
+**Hebrew Name:** <a href="https://www.blueletterbible.org/lexicon/h6453/kjv/wlc/0-1/" target="_blank" data-lexicon="passover, the sacrifice or festival" data-strongs="H6453" data-translit="pesach" data-original="פֶּסַח" data-lang="hebrew" data-verse="Exodus 12:11">פֶּסַח</a> (*Pesach*, "Passover")
 
 **When:** 15th of Nisan (typically March or April)
 

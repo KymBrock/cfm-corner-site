@@ -11,7 +11,7 @@ image: /images/culture/passover/11-shulchan-orech.png
 
 ## Root Word
 
-שׁוּלְחָן (*shulchan*) — table; עוֹרֵךְ (*orech*) — arranged, prepared
+<a href="https://www.blueletterbible.org/lexicon/h7979/kjv/wlc/0-1/" target="_blank" data-lexicon="table" data-strongs="H7979" data-translit="shulchan" data-original="שֻׁלְחָן" data-lang="hebrew">שׁוּלְחָן</a> (*shulchan*) — table; <a href="https://www.blueletterbible.org/lexicon/h6186/kjv/wlc/0-1/" target="_blank" data-lexicon="to arrange, set in order, prepare" data-strongs="H6186" data-translit="arakh" data-original="עָרַךְ" data-lang="hebrew">עוֹרֵךְ</a> (*orech*) — arranged, prepared
 
 ---
 
@@ -23,7 +23,7 @@ Share a simple symbolic meal as a family or group.
 
 ## Suggested Symbolic Foods
 
-- **Lamb (Zeroa)** — Symbol of the Passover sacrifice. The Hebrew word *zeroa* (זְרוֹעַ) means "arm," recalling the "outstretched arm" with which God redeemed Israel.
+- **Lamb (Zeroa)** — Symbol of the Passover sacrifice. The Hebrew word *zeroa* (<a href="https://www.blueletterbible.org/lexicon/h2220/kjv/wlc/0-1/" target="_blank" data-lexicon="arm, shoulder, strength" data-strongs="H2220" data-translit="zeroa" data-original="זְרוֹעַ" data-lang="hebrew" data-verse="Exodus 6:6">זְרוֹעַ</a>) means "arm," recalling the "outstretched arm" with which God redeemed Israel.
 
   > "I will redeem you with a stretched-out arm..." — Exodus 6:6
 

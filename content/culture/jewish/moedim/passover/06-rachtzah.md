@@ -11,7 +11,7 @@ image: /images/culture/passover/06-rachtzah.png
 
 ## Root Word
 
-רָחַץ (*rachatz*) — to wash
+<a href="https://www.blueletterbible.org/lexicon/h7364/kjv/wlc/0-1/" target="_blank" data-lexicon="to wash, bathe" data-strongs="H7364" data-translit="rachatz" data-original="רָחַץ" data-lang="hebrew">רָחַץ</a> (*rachatz*) — to wash
 (Feminine form, reflecting inward sanctification)
 
 ---

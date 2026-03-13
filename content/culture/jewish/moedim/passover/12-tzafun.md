@@ -11,7 +11,7 @@ image: /images/culture/passover/12-tzafun.png
 
 ## Root Word
 
-צָפַן (*tsaphan*) — to hide, treasure, conceal
+<a href="https://www.blueletterbible.org/lexicon/h6845/kjv/wlc/0-1/" target="_blank" data-lexicon="to hide, treasure up, store up" data-strongs="H6845" data-translit="tsaphan" data-original="צָפַן" data-lang="hebrew">צָפַן</a> (*tsaphan*) — to hide, treasure, conceal
 
 ---
 

@@ -11,7 +11,7 @@ image: /images/culture/passover/13-barech.png
 
 ## Root Word
 
-בָּרַךְ (*barak*) — to bless, to kneel, to give thanks
+<a href="https://www.blueletterbible.org/lexicon/h1288/kjv/wlc/0-1/" target="_blank" data-lexicon="to bless, kneel" data-strongs="H1288" data-translit="barak" data-original="בָּרַךְ" data-lang="hebrew" data-verse="Genesis 12:3">בָּרַךְ</a> (*barak*) — to bless, to kneel, to give thanks
 
 ---
 
@@ -57,7 +57,7 @@ In this moment, we do more than remember — we renew our covenant with Christ, 
 
 **In the Nephite Assembly:** The sacrament prayer over the water echoes the same covenant of remembrance: "in remembrance of the blood of thy Son, which was shed for them... that they do always remember him" (Moroni 5:2). The same cup, the same blood, the same covenant of remembrance — carried from Jerusalem to the Americas.
 
-**On the Covenant Path Today:** President Nelson teaches that the Hebrew word *hesed* — a unique form of covenantal love — describes "a special kind of love and mercy that God feels for and extends to those who have made a covenant with Him" ("The Everlasting Covenant," 2022). The cup of blessing is the cup of *hesed* — God's lovingkindness poured out to those who are His, in every age.
+**On the Covenant Path Today:** President Nelson teaches that the Hebrew word *<a href="https://www.blueletterbible.org/lexicon/h2617/kjv/wlc/0-1/" target="_blank" data-lexicon="goodness, kindness, faithfulness, covenant loyalty" data-strongs="H2617" data-translit="chesed" data-original="חֶסֶד" data-lang="hebrew">hesed</a>* — a unique form of covenantal love — describes "a special kind of love and mercy that God feels for and extends to those who have made a covenant with Him" ("The Everlasting Covenant," 2022). The cup of blessing is the cup of *hesed* — God's lovingkindness poured out to those who are His, in every age.
 
 ---
 

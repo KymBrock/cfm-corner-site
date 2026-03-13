@@ -11,7 +11,7 @@ image: /images/culture/passover/05-maggid.png
 
 ## Root Word
 
-נָגַד (*nagad*) — to declare, to bring forth, to make known
+<a href="https://www.blueletterbible.org/lexicon/h5046/kjv/wlc/0-1/" target="_blank" data-lexicon="to declare, tell, make known" data-strongs="H5046" data-translit="nagad" data-original="נָגַד" data-lang="hebrew">נָגַד</a> (*nagad*) — to declare, to bring forth, to make known
 
 ---
 

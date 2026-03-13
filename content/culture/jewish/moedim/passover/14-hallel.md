@@ -11,7 +11,7 @@ image: /images/culture/passover/14-hallel.png
 
 ## Root Word
 
-הָלַל (*halal*) — to praise, shine, boast joyfully
+<a href="https://www.blueletterbible.org/lexicon/h1984/kjv/wlc/0-1/" target="_blank" data-lexicon="to praise, boast, celebrate" data-strongs="H1984" data-translit="halal" data-original="הָלַל" data-lang="hebrew" data-verse="Psalm 150:1">הָלַל</a> (*halal*) — to praise, shine, boast joyfully
 
 ---
 

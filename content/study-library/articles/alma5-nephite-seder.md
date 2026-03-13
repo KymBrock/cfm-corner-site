@@ -155,7 +155,8 @@ Christ Himself drank the bitter cup: "which suffering caused myself, even God, t
 
 **Psalm of Ascent:** Psalm 129 | **Theme:** Binding together the bitter and the sweet
 
-In the Seder, <a href="https://www.blueletterbible.org/lexicon/h3738/kjv/wlc/0-1/" target="_blank" data-lexicon="to bind, wrap" data-strongs="H3738" data-translit="karak" data-original="כָּרַךְ" data-lang="hebrew">*korech*</a> combines the matzah and bitter herbs together in a single bite — a tradition attributed to Hillel. The bitter and the unleavened are bound together, teaching that suffering and humility are inseparable companions on the path to redemption. Alma weaves together warnings and promises, judgment and mercy, calling his people to hold both realities simultaneously.
+In the Seder, <!-- NOTE: כרך (karakh, "to wrap/bind") is rabbinic Hebrew — no Strong's number exists. Link points to BLB search. -->
+<a href="https://www.blueletterbible.org/search/search.cfm?Criteria=%D7%9B%D7%A8%D7%9A&t=KJV" target="_blank" data-lexicon="to bind, wrap, encompass" data-translit="karakh" data-original="כָּרַךְ" data-lang="hebrew">*korech*</a> combines the matzah and bitter herbs together in a single bite — a tradition attributed to Hillel. The bitter and the unleavened are bound together, teaching that suffering and humility are inseparable companions on the path to redemption. Alma weaves together warnings and promises, judgment and mercy, calling his people to hold both realities simultaneously.
 
 > "For every shepherd that doth not raise his voice to warn shall be held accountable." — Alma 5:59 (paraphrase)
 

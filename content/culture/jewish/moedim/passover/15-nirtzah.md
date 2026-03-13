@@ -11,7 +11,7 @@ image: /images/culture/passover/15-nirtzah.png
 
 ## Root Word
 
-רָצָה (*ratzah*) — to accept, to delight in, to take pleasure in
+<a href="https://www.blueletterbible.org/lexicon/h7521/kjv/wlc/0-1/" target="_blank" data-lexicon="to be pleased with, accept favourably" data-strongs="H7521" data-translit="ratsah" data-original="רָצָה" data-lang="hebrew">רָצָה</a> (*ratzah*) — to accept, to delight in, to take pleasure in
 
 ---
 
@@ -43,7 +43,7 @@ We remember that Christ, our High Priest, makes our offerings acceptable — not
 
 ## The Covenant Pattern
 
-**At the Seder Table:** The sacred closing — everything offered tonight may be accepted by God. The word *nirtzah* shares its root with *ratzon* (will, desire) — suggesting that the offering has been received with divine pleasure. The evening ends with the ancient declaration: *"L'shanah haba'ah b'Yerushalayim!"* — "Next year in Jerusalem!" It is a cry of hope, exile, and longing for the day when God's people will gather in His holy city.
+**At the Seder Table:** The sacred closing — everything offered tonight may be accepted by God. The word *nirtzah* shares its root with *<a href="https://www.blueletterbible.org/lexicon/h7522/kjv/wlc/0-1/" target="_blank" data-lexicon="goodwill, favour, acceptance, desire" data-strongs="H7522" data-translit="ratson" data-original="רָצוֹן" data-lang="hebrew">ratzon</a>* (will, desire) — suggesting that the offering has been received with divine pleasure. The evening ends with the ancient declaration: *"L'shanah haba'ah b'Yerushalayim!"* — "Next year in Jerusalem!" It is a cry of hope, exile, and longing for the day when God's people will gather in His holy city.
 
 **At the Last Supper:** In Gethsemane, Jesus prays: "Not my will, but thine, be done" (Luke 22:42). He seeks the Father's acceptance of His offering — and receives it. He is the one whose offering makes ours acceptable. The entire 15-step pattern of the Seder — from sanctification through suffering, from bread and wine to praise — finds its completion here: the Son offers Himself, and the Father accepts.
 

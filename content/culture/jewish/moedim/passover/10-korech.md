@@ -11,7 +11,8 @@ image: /images/culture/passover/10-korech.png
 
 ## Root Word
 
-כָּרַךְ (*karach*) — to bind, wrap, encompass
+<!-- NOTE: כרך (karakh, "to wrap/bind") is rabbinic Hebrew — no Strong's number exists. Link points to BLB search. -->
+<a href="https://www.blueletterbible.org/search/search.cfm?Criteria=%D7%9B%D7%A8%D7%9A&t=KJV" target="_blank" data-lexicon="to bind, wrap, encompass" data-translit="karakh" data-original="כָּרַךְ" data-lang="hebrew">כָּרַךְ</a> (*karach*) — to bind, wrap, encompass
 
 ---
 
