@@ -46,17 +46,9 @@ Can you imagine? Even as He faced betrayal, suffering, and the cross, He praised
 
 ---
 
-## The Covenant Pattern
+## Scripture Connection
 
-Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
-
-**At the Seder Table:** The Hallel psalms (113–118) are sung responsively — Levites leading, people answering "Hallelujah!" Edersheim describes the threefold trumpet blast sounding as the Paschal lambs were slain, the Hallel rising continuously throughout the offering. The Fourth Cup — the Cup of Praise — corresponds to God's promise: "I will take you as my people, and I will be your God" (Exodus 6:7). Praise is the response to belonging.
-
-**At the Last Supper:** "And when they had sung a hymn, they went out into the mount of Olives" (Matthew 26:30). Jesus and His disciples sang the Hallel psalms together — the same words Israel had sung for centuries — before He walked into Gethsemane. The last thing they did together before the Atonement began was sing. Even facing the bitter cup, He praised.
-
-**In the Nephite Assembly:** Alma asks: "If ye have experienced a change of heart, and if ye have felt to sing the song of redeeming love, I would ask, can ye feel so now?" (Alma 5:26). The "song of redeeming love" echoes the Hallel — praise that rises after deliverance. But Alma presses further: not *did* you sing it, but *can you feel it now?* The song must be a living, present experience.
-
-**On the Covenant Path Today:** President Nelson teaches that "yoking yourself with the Savior means you have access to His strength and redeeming power" ("Overcome the World and Find Rest," 2022). The song of redeeming love is not a relic of ancient Israel or the Nephites — it is the lived experience of every covenant-keeper who feels the power of the Atonement alive in their life today. The Hallel continues wherever the redeemed lift their voices.
+The fifteen Songs of Ascents (Psalms 120–134) were part of the feast day traditions at the Temple, with records indicating the Levites sang them on the fifteen steps between the courts. Each psalm is paired here with its corresponding Seder step. For more on the connections between the Seder and Alma's sermon, see [Alma 5: The Nephite Seder](/study-library/articles/alma5-nephite-seder/).
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 133: A Song of Ascents</summary>
@@ -73,6 +65,16 @@ Psalm 133 celebrates the goodness and pleasantness of unity — like the anointi
 </div>
 </details>
 
+---
+
+## The Covenant Pattern
+
+Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
+
+**At the Seder Table:** The Hallel psalms (113–118) are sung responsively — Levites leading, people answering "Hallelujah!" Edersheim describes the threefold trumpet blast sounding as the Paschal lambs were slain, the Hallel rising continuously throughout the offering. The Fourth Cup — the Cup of Praise — corresponds to God's promise: "I will take you as my people, and I will be your God" (Exodus 6:7). Praise is the response to belonging.
+
+**At the Last Supper:** "And when they had sung a hymn, they went out into the mount of Olives" (Matthew 26:30). Jesus and His disciples sang the Hallel psalms together — the same words Israel had sung for centuries — before He walked into Gethsemane. The last thing they did together before the Atonement began was sing. Even facing the bitter cup, He praised.
+
 <details class="seder-dropdown seder-dropdown--supper">
 <summary>At the Last Supper — The Hymn Before Gethsemane</summary>
 <div class="seder-dropdown-body">
@@ -87,6 +89,8 @@ Psalm 118 — the climax of the Hallel — contains the very words the crowds ha
 
 </div>
 </details>
+
+**In the Nephite Assembly:** Alma asks: "If ye have experienced a change of heart, and if ye have felt to sing the song of redeeming love, I would ask, can ye feel so now?" (Alma 5:26). The "song of redeeming love" echoes the Hallel — praise that rises after deliverance. But Alma presses further: not *did* you sing it, but *can you feel it now?* The song must be a living, present experience.
 
 <details class="seder-dropdown seder-dropdown--alma">
 <summary>In the Nephite Assembly — Alma 5: Praise and Pride</summary>
@@ -104,6 +108,8 @@ The Hallel calls us to lift our voices in praise to God — but Alma reminds us 
 
 </div>
 </details>
+
+**On the Covenant Path Today:** President Nelson teaches that "yoking yourself with the Savior means you have access to His strength and redeeming power" ("Overcome the World and Find Rest," 2022). The song of redeeming love is not a relic of ancient Israel or the Nephites — it is the lived experience of every covenant-keeper who feels the power of the Atonement alive in their life today. The Hallel continues wherever the redeemed lift their voices.
 
 <details class="seder-dropdown seder-dropdown--temple">
 <summary>Temple Covenant — The Law of Consecration</summary>
