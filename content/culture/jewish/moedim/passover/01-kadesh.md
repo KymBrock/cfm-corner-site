@@ -37,7 +37,7 @@ Pour and bless the first cup.
 
 This first cup sets the night apart — it is the **cup of sanctification**. Jesus likely began the Last Supper with this very cup, giving thanks and setting apart the evening for sacred purpose.
 
-In our day, this cup mirrors the **sacrament** and **baptism** — the beginning of our covenant journey.
+This cup represents the beginning of our covenant journey, distinguished with authority.
 
 ---
 
