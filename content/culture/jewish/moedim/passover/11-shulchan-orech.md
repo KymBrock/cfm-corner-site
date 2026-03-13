@@ -57,17 +57,9 @@ The table is also a prophetic symbol — pointing forward to the Marriage Supper
 
 ---
 
-## The Covenant Pattern
+## Scripture Connection
 
-Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
-
-**At the Seder Table:** The festive meal is shared in community — the lamb, the egg, the charoset, the wine. "Thou preparest a table before me in the presence of mine enemies: my cup runneth over" (Psalm 23:5). The set table is a declaration: God provides, even in the midst of adversity.
-
-**At the Last Supper:** "With desire I have desired to eat this Passover with you before I suffer" (Luke 22:15). Jesus sits at a Seder table and transforms a Passover meal into the sacrament of the new covenant. The bread becomes His body. The wine becomes His blood. The meal becomes eternal.
-
-**In the Nephite Assembly:** Alma extends a direct invitation: "Behold, he sendeth an invitation unto all men, for the arms of mercy are extended towards them" (Alma 5:33). And when the risen Christ appears to the Nephites, He personally administers the sacrament to the multitude (3 Nephi 18:1–7). The table is set on a new continent. The invitation is the same.
-
-**On the Covenant Path Today:** Elder Bednar calls the sacrament "a holy and repeated invitation to repent sincerely and to be renewed spiritually" ("Always Retain a Remission of Your Sins," 2016). Every Sabbath, the table is set again. The bread is blessed, broken, and passed. The covenant is renewed. The same sacred meal, the same invitation, in every dispensation — from the Seder table to the sacrament table.
+The fifteen Songs of Ascents (Psalms 120–134) were part of the feast day traditions at the Temple, with records indicating the Levites sang them on the fifteen steps between the courts. Each psalm is paired here with its corresponding Seder step. For more on the connections between the Seder and Alma's sermon, see [Alma 5: The Nephite Seder](/study-library/articles/alma5-nephite-seder/).
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 130: A Song of Ascents</summary>
@@ -89,6 +81,18 @@ Psalm 130 is a cry from the depths — waiting for the Lord, trusting in His mer
 </div>
 </details>
 
+---
+
+## The Covenant Pattern
+
+Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
+
+**At the Seder Table:** The festive meal is shared in community — the lamb, the egg, the charoset, the wine. "Thou preparest a table before me in the presence of mine enemies: my cup runneth over" (Psalm 23:5). The set table is a declaration: God provides, even in the midst of adversity.
+
+**At the Last Supper:** "With desire I have desired to eat this Passover with you before I suffer" (Luke 22:15). Jesus sits at a Seder table and transforms a Passover meal into the sacrament of the new covenant. The bread becomes His body. The wine becomes His blood. The meal becomes eternal.
+
+**In the Nephite Assembly:** Alma extends a direct invitation: "Behold, he sendeth an invitation unto all men, for the arms of mercy are extended towards them" (Alma 5:33). And when the risen Christ appears to the Nephites, He personally administers the sacrament to the multitude (3 Nephi 18:1–7). The table is set on a new continent. The invitation is the same.
+
 <details class="seder-dropdown seder-dropdown--alma">
 <summary>In the Nephite Assembly — Alma 5: Partake of the Fruit of the Tree of Life</summary>
 <div class="seder-dropdown-body">
@@ -101,6 +105,8 @@ The table is set. The bread and the waters of life are offered freely. The only 
 
 </div>
 </details>
+
+**On the Covenant Path Today:** Elder Bednar calls the sacrament "a holy and repeated invitation to repent sincerely and to be renewed spiritually" ("Always Retain a Remission of Your Sins," 2016). Every Sabbath, the table is set again. The bread is blessed, broken, and passed. The covenant is renewed. The same sacred meal, the same invitation, in every dispensation — from the Seder table to the sacrament table.
 
 ---
 
