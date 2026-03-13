@@ -47,6 +47,43 @@ In Gethsemane, Jesus drank the full bitterness of mortality — pain, loneliness
 
 ---
 
+## Explore Further
+
+<details class="seder-dropdown seder-dropdown--psalm">
+<summary>Shir HaMa'alot — Psalm 128: A Song of Ascents</summary>
+<div class="seder-dropdown-body">
+
+Psalm 128 blesses the one who fears the Lord — a fruitful vine, olive plants around the table, peace upon Israel. Sung at the Maror step, this psalm provides the counterpoint to bitterness: the sorrow of bondage and sin is contrasted with the blessing of walking in the Lord's ways. Even while tasting the bitter herbs, the psalm holds forth the promise of fruitfulness and peace for those who choose the covenant path.
+
+**1** Blessed is every one that feareth the LORD; that walketh in his ways.
+**2** For thou shalt eat the labour of thine hands: happy shalt thou be, and it shall be well with thee.
+**3** Thy wife shall be as a fruitful vine by the sides of thine house: thy children like olive plants round about thy table.
+**4** Behold, that thus shall the man be blessed that feareth the LORD.
+**5** The LORD shall bless thee out of Zion: and thou shalt see the good of Jerusalem all the days of thy life.
+**6** Yea, thou shalt see thy children's children, and peace upon Israel.
+
+<a href="https://www.blueletterbible.org/tools/interlinear/wlc-kjv/psa/128/1-6/" target="_blank">Study the Hebrew interlinear at Blue Letter Bible</a>
+
+</div>
+</details>
+
+<details class="seder-dropdown seder-dropdown--alma">
+<summary>In the Nephite Assembly — Alma 5: The Bitter Wages of Sin</summary>
+<div class="seder-dropdown-body">
+
+The bitter herbs remind us that sin carries bitter wages — and that the path of the wicked leads to sorrow. Alma warns plainly:
+
+> "And again I say unto you, is there one among you that doth make a mock of his brother, or that doth heap upon him persecutions? Wo unto such an one, for he is not prepared, and the time is at hand that he must repent or he cannot be saved!" — Alma 5:30–31
+
+> "Whosoever bringeth forth evil works, the same becometh a child of the devil... And whosoever doeth this must receive his wages of him; therefore, for his wages he receiveth death, as to things pertaining unto righteousness, being dead unto all good works." — Alma 5:41–42
+
+The Maror is tasted within the Seder — within the covenant meal — which means even the bitterness is held within the framework of redemption. The Savior did not remove the bitter cup; He drank it. And because He did, our own bitter moments can become the pathway to transformation.
+
+</div>
+</details>
+
+---
+
 ## Reflection Questions
 
 - What "bitter cup" have I been asked to drink in my life? How has the Savior strengthened me through it?

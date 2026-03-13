@@ -59,6 +59,43 @@ And just as bread is placed in the earth and rises, so too did the Savior:
 
 ---
 
+## Explore Further
+
+<details class="seder-dropdown seder-dropdown--psalm">
+<summary>Shir HaMa'alot — Psalm 126: A Song of Ascents</summary>
+<div class="seder-dropdown-body">
+
+Psalm 126 celebrates the reversal of captivity — mouths filled with laughter, tongues with singing. It speaks of sowing in tears and reaping in joy, of bearing precious seed and returning with sheaves. The Motzi step blesses the bread that God brings forth from the earth — the same God who brings forth joy from weeping, harvest from sowing, and life from the tomb.
+
+**1** When the LORD turned again the captivity of Zion, we were like them that dream.
+**2** Then was our mouth filled with laughter, and our tongue with singing: then said they among the heathen, The LORD hath done great things for them.
+**3** The LORD hath done great things for us; whereof we are glad.
+**4** Turn again our captivity, O LORD, as the streams in the south.
+**5** They that sow in tears shall reap in joy.
+**6** He that goeth forth and weepeth, bearing precious seed, shall doubtless come again with rejoicing, bringing his sheaves with him.
+
+<a href="https://www.blueletterbible.org/tools/interlinear/wlc-kjv/psa/126/1-6/" target="_blank">Study the Hebrew interlinear at Blue Letter Bible</a>
+
+</div>
+</details>
+
+<details class="seder-dropdown seder-dropdown--alma">
+<summary>In the Nephite Assembly — Alma 5: Bring Forth Works of Righteousness</summary>
+<div class="seder-dropdown-body">
+
+The Motzi blessing acknowledges God as the one who *brings forth* bread from the earth. The Hebrew root *yatsa* — to bring forth, to go out — carries a sense of active production. Alma uses this same language to call his people to action:
+
+> "Yea, come unto me and bring forth works of righteousness." — Alma 5:35
+
+> "For behold, the time is at hand that whosoever bringeth forth not good fruit, or whosoever doeth not the works of righteousness, the same have cause to wail and mourn." — Alma 5:36
+
+Just as God brings forth bread from the earth, we are called to bring forth the fruit of our lives — works of righteousness that testify of the covenant within us.
+
+</div>
+</details>
+
+---
+
 ## Reflection Questions
 
 - What does it mean to call Christ the "Bread of Life"? How does He feed my spirit today?

@@ -43,6 +43,42 @@ Every time we partake of the sacrament bread, we echo this ancient Passover mome
 
 ---
 
+## Explore Further
+
+<details class="seder-dropdown seder-dropdown--psalm">
+<summary>Shir HaMa'alot — Psalm 127: A Song of Ascents</summary>
+<div class="seder-dropdown-body">
+
+Psalm 127 teaches that unless the Lord builds the house, the builders labor in vain. The matzah — flat and unleavened — embodies this truth: self-reliance, pride, and puffing up are futile. True nourishment comes not from our own efforts but from the Lord. The "bread of sorrows" mentioned in the psalm echoes the bread of affliction that is the matzah itself.
+
+**1** Except the LORD build the house, they labour in vain that build it: except the LORD keep the city, the watchman waketh but in vain.
+**2** It is vain for you to rise up early, to sit up late, to eat the bread of sorrows: for so he giveth his beloved sleep.
+**3** Lo, children are an heritage of the LORD: and the fruit of the womb is his reward.
+**4** As arrows are in the hand of a mighty man; so are children of the youth.
+**5** Happy is the man that hath his quiver full of them: they shall not be ashamed, but they shall speak with the enemies in the gate.
+
+<a href="https://www.blueletterbible.org/tools/interlinear/wlc-kjv/psa/127/1-5/" target="_blank">Study the Hebrew interlinear at Blue Letter Bible</a>
+
+</div>
+</details>
+
+<details class="seder-dropdown seder-dropdown--alma">
+<summary>In the Nephite Assembly — Alma 5: Puffed Up Like Leaven</summary>
+<div class="seder-dropdown-body">
+
+The matzah is unleavened — flat, humble, free from the puffing of pride. Alma uses the imagery of leaven and pride to warn those who have strayed from the covenant:
+
+> "O ye workers of iniquity; ye that are puffed up in the vain things of the world, ye that have professed to have known the ways of righteousness nevertheless have gone astray, as sheep having no shepherd, notwithstanding a shepherd hath called after you and is still calling after you, but ye will not hearken unto his voice!" — Alma 5:37
+
+> "Behold, I say unto you, that the good shepherd doth call you; yea, and in his own name he doth call you, which is the name of Christ." — Alma 5:38
+
+To be "puffed up" is to be leavened — full of the world's vanity and self-importance. The matzah invites us to strip away that leaven and listen for the voice of the Good Shepherd calling us by name.
+
+</div>
+</details>
+
+---
+
 ## Reflection Questions
 
 - What does it mean that the bread of the Passover — and the sacrament — is unleavened? What "leaven" do I need to remove from my life?
