@@ -58,6 +58,40 @@ Here, Christ was teaching us to submit to His sanctifying grace, and to do likew
 
 ---
 
+## Explore Further
+
+<details class="seder-dropdown seder-dropdown--psalm">
+<summary>Shir HaMa'alot — Psalm 125: A Song of Ascents</summary>
+<div class="seder-dropdown-body">
+
+Psalm 125 speaks of the security of those who trust in the Lord — as unshakeable as Mount Zion, surrounded by mountains of protection. Rachtzah, the second washing, consecrates us for sacred communion. This psalm assures us that the Lord surrounds His people as the mountains surround Jerusalem — those who are washed and sanctified are held in His care.
+
+**1** They that trust in the LORD shall be as mount Zion, which cannot be removed, but abideth for ever.
+**2** As the mountains are round about Jerusalem, so the LORD is round about his people from henceforth even for ever.
+**3** For the rod of the wicked shall not rest upon the lot of the righteous; lest the righteous put forth their hands unto iniquity.
+**4** Do good, O LORD, unto those that be good, and to them that are upright in their hearts.
+**5** As for such as turn aside unto their crooked ways, the LORD shall lead them forth with the workers of iniquity: but peace shall be upon Israel.
+
+<a href="https://www.blueletterbible.org/tools/interlinear/wlc-kjv/psa/125/1-5/" target="_blank">Study the Hebrew interlinear at Blue Letter Bible</a>
+
+</div>
+</details>
+
+<details class="seder-dropdown seder-dropdown--alma">
+<summary>In the Nephite Assembly — Alma 5: The Song of Redeeming Love</summary>
+<div class="seder-dropdown-body">
+
+Rachtzah is the deeper washing — the sanctification that follows the initial covenant. Alma connects this inner transformation to the question that defines ongoing faithfulness:
+
+> "And now behold, I say unto you, my brethren, if ye have experienced a change of heart, and if ye have felt to sing the song of redeeming love, I would ask, can ye feel so now?" — Alma 5:26
+
+The second washing is not a one-time event but a continuous renewal. Alma does not ask whether they *once* felt it — he asks whether they *can feel so now*. The song of redeeming love must be sung again and again, just as the hands are washed again at Rachtzah.
+
+</div>
+</details>
+
+---
+
 ## Reflection Questions
 
 - Why do we wash again now? How is this different from the first time?

@@ -47,6 +47,39 @@ This act marks a **turning point** in the Seder: the bread is broken *before* th
 
 ---
 
+## Explore Further
+
+<details class="seder-dropdown seder-dropdown--psalm">
+<summary>Shir HaMa'alot — Psalm 123: A Song of Ascents</summary>
+<div class="seder-dropdown-body">
+
+Psalm 123 turns the pilgrim's eyes upward to the One who dwells in the heavens, waiting upon the Lord with the expectation of a servant looking to the hand of a master. At Yachatz, the bread is broken — an act of humility and dependence. Like the psalmist who is "exceedingly filled with contempt" from the proud, the breaking of the matzah reminds us that brokenness and humility precede deliverance.
+
+**1** Unto thee lift I up mine eyes, O thou that dwellest in the heavens.
+**2** Behold, as the eyes of servants look unto the hand of their masters, and as the eyes of a maiden unto the hand of her mistress; so our eyes wait upon the LORD our God, until that he have mercy upon us.
+**3** Have mercy upon us, O LORD, have mercy upon us: for we are exceedingly filled with contempt.
+**4** Our soul is exceedingly filled with the scorning of those that are at ease, and with the contempt of the proud.
+
+<a href="https://www.blueletterbible.org/tools/interlinear/wlc-kjv/psa/123/1-4/" target="_blank">Study the Hebrew interlinear at Blue Letter Bible</a>
+
+</div>
+</details>
+
+<details class="seder-dropdown seder-dropdown--alma">
+<summary>In the Nephite Assembly — Alma 5: Bands of Death Broken</summary>
+<div class="seder-dropdown-body">
+
+At Yachatz, the matzah is broken — and from that breaking comes the hidden promise of the Afikoman, the redemption yet to be revealed. Alma echoes this pattern, pointing to a breaking that brings freedom:
+
+> "And again I ask, were the bands of death broken, and the chains of hell which encircled them about, were they loosed? I say unto you, Yea, they were loosed, and their souls did expand, and they did sing redeeming love." — Alma 5:9
+
+The bands of death were broken — just as the bread is broken. From that breaking came liberation, expansion, and song.
+
+</div>
+</details>
+
+---
+
 ## Reflection Questions
 
 - Why must the bread be **broken before the meal** begins? What does this teach us about **sacrifice and humility**?

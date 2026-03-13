@@ -146,6 +146,58 @@ The plagues can also be viewed as a symbolic judgment against **idolatry** — s
 
 ---
 
+## Explore Further
+
+<details class="seder-dropdown seder-dropdown--psalm">
+<summary>Shir HaMa'alot — Psalm 124: A Song of Ascents</summary>
+<div class="seder-dropdown-body">
+
+Psalm 124 is a hymn of gratitude for deliverance — "If it had not been the LORD who was on our side." This is the psalm of the Maggid, the telling: the psalmist recounts the peril and celebrates the escape. The snare is broken. The soul is escaped. This is the very story told at the Seder table — God's intervention when all seemed lost.
+
+**1** If it had not been the LORD who was on our side, now may Israel say;
+**2** If it had not been the LORD who was on our side, when men rose up against us:
+**3** Then they had swallowed us up quick, when their wrath was kindled against us:
+**4** Then the waters had overwhelmed us, the stream had gone over our soul:
+**5** Then the proud waters had gone over our soul.
+**6** Blessed be the LORD, who hath not given us as a prey to their teeth.
+**7** Our soul is escaped as a bird out of the snare of the fowlers: the snare is broken, and we are escaped.
+**8** Our help is in the name of the LORD, who made heaven and earth.
+
+<a href="https://www.blueletterbible.org/tools/interlinear/wlc-kjv/psa/124/1-8/" target="_blank">Study the Hebrew interlinear at Blue Letter Bible</a>
+
+</div>
+</details>
+
+<details class="seder-dropdown seder-dropdown--alma">
+<summary>In the Nephite Assembly — Alma 5: Believe the Words</summary>
+<div class="seder-dropdown-body">
+
+The Maggid is the telling — the sacred retelling of the story of deliverance. Alma does the same, bringing his people back to the foundational account of their faith:
+
+> "Behold, I can tell you — did not my father Alma believe in the words which were delivered by the mouth of Abinadi?" — Alma 5:11
+
+The Maggid depends on someone having believed the words and passed them on. Abinadi declared, Alma believed, and the story was preserved. This is the chain of testimony that every Seder and every sacrament meeting continues.
+
+</div>
+</details>
+
+<details class="seder-dropdown seder-dropdown--temple">
+<summary>Temple Covenant — The Law of the Gospel</summary>
+<div class="seder-dropdown-body">
+
+The second cup of the Seder corresponds to the second promise of Exodus 6:6: *"I will rid you out of their bondage."* Deliverance alone is not enough — the delivered must be taught how to live, lest they return to old patterns.
+
+In the temple, the **Law of the Gospel** provides the instruction — the Torah, the teaching — that guides us after deliverance. At Sinai, God did not simply bring Israel out of Egypt; He gave them the law. The Maggid retells the story of deliverance *and* the giving of instruction. The Torah is the map that prevents us from wandering back into bondage.
+
+> "And now, if ye have been taught, ye know that ye must observe to do them." — Mosiah 12:25 (Abinadi, quoting the commandments)
+
+The second cup is raised in gratitude not only for freedom but for the divine instruction that sustains it.
+
+</div>
+</details>
+
+---
+
 ## Reflection Questions
 
 - How does retelling the story of deliverance strengthen my own faith?
