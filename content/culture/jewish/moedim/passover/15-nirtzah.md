@@ -53,6 +53,42 @@ We remember that Christ, our High Priest, makes our offerings acceptable — not
 
 ---
 
+## Explore Further
+
+<details class="seder-dropdown seder-dropdown--psalm">
+<summary>Shir HaMa'alot — Psalm 134: A Song of Ascents</summary>
+<div class="seder-dropdown-body">
+
+Psalm 134 is the final Song of Ascents — a brief, tender benediction. The servants of the Lord stand in His house by night, lifting their hands in the sanctuary. This is the psalm of Nirtzah — the closing, the acceptance, the final offering. The pilgrimage is complete. The ascent is done. All that remains is to bless the Lord and receive His blessing in return.
+
+**1** Behold, bless ye the LORD, all ye servants of the LORD, which by night stand in the house of the LORD.
+**2** Lift up your hands in the sanctuary, and bless the LORD.
+**3** The LORD that made heaven and earth bless thee out of Zion.
+
+<a href="https://www.blueletterbible.org/tools/interlinear/wlc-kjv/psa/134/1-3/" target="_blank">Study the Hebrew interlinear at Blue Letter Bible</a>
+
+</div>
+</details>
+
+<details class="seder-dropdown seder-dropdown--alma">
+<summary>In the Nephite Assembly — Alma 5: Acceptance and the Book of Life</summary>
+<div class="seder-dropdown-body">
+
+Nirtzah — the final step — asks whether the offering has been accepted. Alma brings his entire sermon to the same climactic question: will we be found among the righteous?
+
+> "And now, my brethren, I would that ye should hear me, for I speak in the energy of my soul... I say unto you, that I know that Jesus Christ shall come, yea, the Son, the Only Begotten of the Father." — Alma 5:46
+
+> "And now I say unto you, all you that are desirous to follow the voice of the good shepherd, come ye out from the wicked, and be ye separate, and touch not their unclean things." — Alma 5:57
+
+> "For the names of the righteous shall be written in the book of life, and unto them will I grant an inheritance at my right hand." — Alma 5:58
+
+The Seder ends with the declaration *"L'shanah haba'ah b'Yerushalayim!"* — "Next year in Jerusalem!" Alma's sermon ends with the same forward-looking hope: the righteous shall receive an inheritance at the Lord's right hand. The journey from Kadesh to Nirtzah, from sanctification to acceptance, is complete.
+
+</div>
+</details>
+
+---
+
 ## Reflection Questions
 
 - Has this Seder helped me feel closer to Christ? What offering have I given Him from my heart tonight?

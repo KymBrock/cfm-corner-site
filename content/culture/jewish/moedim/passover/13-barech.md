@@ -61,6 +61,57 @@ In this moment, we do more than remember — we renew our covenant with Christ, 
 
 ---
 
+## Explore Further
+
+<details class="seder-dropdown seder-dropdown--psalm">
+<summary>Shir HaMa'alot — Psalm 132: A Song of Ascents</summary>
+<div class="seder-dropdown-body">
+
+Psalm 132 celebrates David's oath to find a habitation for the Lord and God's answering covenant to establish David's throne forever. At Barech — the blessing after the meal, with the Cup of Redemption — this psalm resonates with the covenant of eternal promise. The LORD chose Zion; He desires to dwell among His people. The priests are clothed with salvation, and the saints shout for joy.
+
+**1** LORD, remember David, and all his afflictions:
+**2** How he sware unto the LORD, and vowed unto the mighty God of Jacob;
+**3** Surely I will not come into the tabernacle of my house, nor go up into my bed;
+**4** I will not give sleep to mine eyes, or slumber to mine eyelids,
+**5** Until I find out a place for the LORD, an habitation for the mighty God of Jacob.
+**6** Lo, we heard of it at Ephratah: we found it in the fields of the wood.
+**7** We will go into his tabernacles: we will worship at his footstool.
+**8** Arise, O LORD, into thy rest; thou, and the ark of thy strength.
+**9** Let thy priests be clothed with righteousness; and let thy saints shout for joy.
+**10** For thy servant David's sake turn not away the face of thine anointed.
+**11** The LORD hath sworn in truth unto David; he will not turn from it; Of the fruit of thy body will I set upon thy throne.
+**12** If thy children will keep my covenant and my testimony that I shall teach them, their children shall also sit upon thy throne for evermore.
+**13** For the LORD hath chosen Zion; he hath desired it for his habitation.
+**14** This is my rest for ever: here will I dwell; for I have desired it.
+**15** I will abundantly bless her provision: I will satisfy her poor with bread.
+**16** I will also clothe her priests with salvation: and her saints shall shout aloud for joy.
+**17** There will I make the horn of David to bud: I have ordained a lamp for mine anointed.
+**18** His enemies will I clothe with shame: but upon himself shall his crown flourish.
+
+<a href="https://www.blueletterbible.org/tools/interlinear/wlc-kjv/psa/132/1-18/" target="_blank">Study the Hebrew interlinear at Blue Letter Bible</a>
+
+</div>
+</details>
+
+<details class="seder-dropdown seder-dropdown--temple">
+<summary>Temple Covenant — The Law of Chastity</summary>
+<div class="seder-dropdown-body">
+
+The third cup is the Cup of Redemption, corresponding to the third promise: *"I will redeem you with a stretched-out arm"* (Exodus 6:6). The Hebrew concept of the *goel* — the kinsman redeemer — is central to this cup.
+
+In the book of Ruth, Boaz fulfills the role of *goel*, redeeming Ruth and taking her under his name and protection:
+
+> "I am Ruth thine handmaid: spread therefore thy skirt over thine handmaid; for thou art a near kinsman." — Ruth 3:9
+
+In the temple, the **Law of Chastity** is a covenant of exclusive devotion and fidelity — the promise to belong wholly to the Lord, as Ruth belonged to Boaz, as Israel belongs to God. The Cup of Redemption seals this relationship. As the bride takes the name of the redeemer, so we take upon us the name of Christ.
+
+> "I will redeem you... and I will take you to me for a people." — Exodus 6:6–7
+
+</div>
+</details>
+
+---
+
 ## Reflection Questions
 
 - What does it mean to be redeemed of God — not just rescued, but purchased and made new?
