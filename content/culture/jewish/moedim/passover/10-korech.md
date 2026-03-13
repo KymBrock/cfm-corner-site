@@ -54,6 +54,30 @@ This layered bite reminds us that even the bitterness of life can become sacred 
 
 ---
 
+## Explore Further
+
+<details class="seder-dropdown seder-dropdown--psalm">
+<summary>Shir HaMa'alot — Psalm 129: A Song of Ascents</summary>
+<div class="seder-dropdown-body">
+
+Psalm 129 speaks of affliction endured from youth — "The plowers plowed upon my back: they made long their furrows." Yet the affliction did not prevail. The Lord cut asunder the cords of the wicked. This is the psalm of Korech — the binding together of suffering and redemption. The furrows plowed on Israel's back echo the stripes of the Savior, and the cords cut asunder recall the bands of death broken at the tomb.
+
+**1** Many a time have they afflicted me from my youth, may Israel now say:
+**2** Many a time have they afflicted me from my youth: yet they have not prevailed against me.
+**3** The plowers plowed upon my back: they made long their furrows.
+**4** The LORD is righteous: he hath cut asunder the cords of the wicked.
+**5** Let them all be confounded and turned back that hate Zion.
+**6** Let them be as the grass upon the housetops, which withereth afore it groweth up:
+**7** Wherewith the mower filleth not his hand; nor he that bindeth sheaves his bosom.
+**8** Neither do they which go by say, The blessing of the LORD be upon you: we bless you in the name of the LORD.
+
+<a href="https://www.blueletterbible.org/tools/interlinear/wlc-kjv/psa/129/1-8/" target="_blank">Study the Hebrew interlinear at Blue Letter Bible</a>
+
+</div>
+</details>
+
+---
+
 ## Reflection Questions
 
 - Why do we eat bitterness and sweetness together? What does this teach me about Christ's atonement?

@@ -69,6 +69,43 @@ The table is also a prophetic symbol — pointing forward to the Marriage Supper
 
 ---
 
+## Explore Further
+
+<details class="seder-dropdown seder-dropdown--psalm">
+<summary>Shir HaMa'alot — Psalm 130: A Song of Ascents</summary>
+<div class="seder-dropdown-body">
+
+Psalm 130 is a cry from the depths — waiting for the Lord, trusting in His mercy and plenteous redemption. At the Shulchan Orech, the table is set and the meal shared. This psalm brings the longing of a people who cry out from the depths, yet find that with the Lord there is forgiveness, mercy, and redemption — the very sustenance laid before them at the set table.
+
+**1** Out of the depths have I cried unto thee, O LORD.
+**2** Lord, hear my voice: let thine ears be attentive to the voice of my supplications.
+**3** If thou, LORD, shouldest mark iniquities, O Lord, who shall stand?
+**4** But there is forgiveness with thee, that thou mayest be feared.
+**5** I wait for the LORD, my soul doth wait, and in his word do I hope.
+**6** My soul waiteth for the Lord more than they that watch for the morning: I say, more than they that watch for the morning.
+**7** Let Israel hope in the LORD: for with the LORD there is mercy, and with him is plenteous redemption.
+**8** And he shall redeem Israel from all his iniquities.
+
+<a href="https://www.blueletterbible.org/tools/interlinear/wlc-kjv/psa/130/1-8/" target="_blank">Study the Hebrew interlinear at Blue Letter Bible</a>
+
+</div>
+</details>
+
+<details class="seder-dropdown seder-dropdown--alma">
+<summary>In the Nephite Assembly — Alma 5: Partake of the Fruit of the Tree of Life</summary>
+<div class="seder-dropdown-body">
+
+The set table is an invitation to partake — of the meal, of the covenant, of the blessings God has prepared. Alma extends this same invitation in language that echoes the Seder's festive meal:
+
+> "Yea, he saith: Come unto me and ye shall partake of the fruit of the tree of life; yea, ye shall eat and drink of the bread and the waters of life freely." — Alma 5:34
+
+The table is set. The bread and the waters of life are offered freely. The only question is whether we will come and partake.
+
+</div>
+</details>
+
+---
+
 ## Reflection Questions
 
 - What does it mean to me that Jesus sat and ate with those He loved — even knowing one would betray Him?

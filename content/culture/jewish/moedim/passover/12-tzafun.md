@@ -49,6 +49,40 @@ This moment is a joyful rediscovery — a sacred echo of the Resurrection. As we
 
 ---
 
+## Explore Further
+
+<details class="seder-dropdown seder-dropdown--psalm">
+<summary>Shir HaMa'alot — Psalm 131: A Song of Ascents</summary>
+<div class="seder-dropdown-body">
+
+Psalm 131 is the shortest and most tender of the Songs of Ascents — a psalm of childlike trust, quieted and weaned. At the Tzafun step, the hidden Afikoman is found by the children with joy. This psalm captures the spirit of that moment: humility, simplicity, and trust. The hidden bread is revealed to those who seek with childlike faith, not with haughty hearts or lofty eyes.
+
+**1** LORD, my heart is not haughty, nor mine eyes lofty: neither do I exercise myself in great matters, or in things too high for me.
+**2** Surely I have behaved and quieted myself, as a child that is weaned of his mother: my soul is even as a weaned child.
+**3** Let Israel hope in the LORD from henceforth and for ever.
+
+<a href="https://www.blueletterbible.org/tools/interlinear/wlc-kjv/psa/131/1-3/" target="_blank">Study the Hebrew interlinear at Blue Letter Bible</a>
+
+</div>
+</details>
+
+<details class="seder-dropdown seder-dropdown--alma">
+<summary>In the Nephite Assembly — Alma 5: Pure Heart, Clean Hands</summary>
+<div class="seder-dropdown-body">
+
+Tzafun reveals what has been hidden — and Alma warns that all things shall ultimately be revealed before God. He presses his people to consider whether they will be ready for that day:
+
+> "I say unto you, can ye look up to God at that day with a pure heart and clean hands? I say unto you, can ye look up, having the image of God engraven upon your countenances?" — Alma 5:19
+
+> "I say unto you, ye will know at that day that ye cannot be saved; for there can no man be saved except his garments are washed white; yea, his garments must be purified until they are cleansed from all stain, through the blood of him of whom it has been spoken by our fathers, who should come to redeem his people from their sins." — Alma 5:21
+
+Just as the Afikoman is brought from hiding into the light, our hidden selves will one day stand revealed. The question is whether we will have allowed Christ's blood to wash our garments white — cleansed, purified, and ready to be found.
+
+</div>
+</details>
+
+---
+
 ## Reflection Questions
 
 - What does it mean that Christ was hidden in the tomb — and revealed again in power?
