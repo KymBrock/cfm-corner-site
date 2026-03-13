@@ -48,6 +48,8 @@ Here, Christ was teaching us to submit to His sanctifying grace, and to do likew
 
 ## The Covenant Pattern
 
+Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
+
 **At the Seder Table:** This second washing comes *after* the Maggid — after the story of deliverance has been told. It is deeper than the first. A blessing is now spoken. The participant is preparing not just for the meal, but for sacred communion with God.
 
 **At the Last Supper:** Jesus washes His disciples' feet at this stage of the meal (John 13:4–5, 10): "He that is washed needeth not save to wash his feet, but is clean every whit." The initial cleansing of the covenant is not enough. A deeper purification — one that reaches the most intimate and humble parts of us — is required.
@@ -55,10 +57,6 @@ Here, Christ was teaching us to submit to His sanctifying grace, and to do likew
 **In the Nephite Assembly:** Alma presses his people: "Can ye look up to God at that day with a pure heart and clean hands?" (Alma 5:19). The initial baptism (Urchatz) opened the covenant. But ongoing purification — the Rachtzah — is what sustains it.
 
 **On the Covenant Path Today:** Elder Bednar teaches that "by the sanctifying power of the Holy Ghost as our constant companion, we can always retain a remission of our sins" ("Always Retain a Remission of Your Sins," 2016). The second washing is the ongoing work of sanctification — the covenant renewed each week through the sacrament, each day through repentance, each moment we turn to the Lord.
-
----
-
-## Explore Further
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 125: A Song of Ascents</summary>

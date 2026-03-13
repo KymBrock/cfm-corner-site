@@ -136,6 +136,8 @@ The plagues can also be viewed as a symbolic judgment against **idolatry** — s
 
 ## The Covenant Pattern
 
+Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
+
 **At the Seder Table:** The Maggid is the heart of the Seder — the retelling of the Exodus through questions, the parable of the Four Sons, and the recounting of the plagues. The Zohar (Bo) teaches that the one who relates the story "fervently and joyously" shall "be found worthy to rejoice in the Shekinah." The telling itself is a sacred act.
 
 **At the Last Supper:** Jesus reinterprets the entire Exodus narrative at the table. He is the Passover Lamb, the unleavened bread, the cup of redemption. The story is retold with a new center — not Moses, but the Messiah Himself. Everything the Maggid has pointed to for centuries now sits at the table, breaking bread.
@@ -143,10 +145,6 @@ The plagues can also be viewed as a symbolic judgment against **idolatry** — s
 **In the Nephite Assembly:** Alma asks nearly fifty questions in a single sermon — far exceeding the Seder's traditional four. "Have ye sufficiently retained in remembrance the captivity of your fathers?" (Alma 5:6). His relentless questioning is the Maggid of the Nephite Seder — pressing his audience to internalize the pattern of deliverance not as distant history but as present spiritual reality.
 
 **On the Covenant Path Today:** President Nelson traces the covenant story from Adam's baptism through Abraham's promises through the Nephites to us, teaching that the Hebrew word *hesed* — covenantal lovingkindness — describes the unique love God extends to those in covenant ("The Everlasting Covenant," 2022). We retell the story of the Restoration just as Israel retells the Exodus — because the telling binds us to the covenant.
-
----
-
-## Explore Further
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 124: A Song of Ascents</summary>
