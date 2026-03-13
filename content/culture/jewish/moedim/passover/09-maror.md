@@ -35,17 +35,9 @@ In Gethsemane, Jesus drank the full bitterness of mortality — pain, loneliness
 
 ---
 
-## The Covenant Pattern
+## Scripture Connection
 
-Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
-
-**At the Seder Table:** The bitter herbs recall the bitterness of bondage in Egypt — tasted and remembered, not avoided. The covenant does not promise the absence of suffering. It promises deliverance *through* suffering.
-
-**At the Last Supper:** Gethsemane follows immediately after the Seder meal. The bitter herbs at the table foreshadow the bitter cup: "O my Father, if it be possible, let this cup pass from me: nevertheless not as I will, but as thou wilt" (Matthew 26:39). Jesus tasted the full bitterness of mortality so that He could succor those who taste it after Him.
-
-**In the Nephite Assembly:** Alma prophesies that Christ "shall go forth, suffering pains and afflictions and temptations of every kind... He will take upon him the pains and the sicknesses of his people" (Alma 7:11–12). And the Lord Himself declares: "which suffering caused myself, even God, the greatest of all, to tremble because of pain, and to bleed at every pore" (D&C 19:18).
-
-**On the Covenant Path Today:** President Nelson assures covenant-keepers that they receive "heavenly power — power that strengthens us to withstand our trials, temptations, and heartaches better" ("Overcome the World and Find Rest," 2022). The bitterness of mortality is real — but the covenant provides the power to endure it and be transformed by it.
+The fifteen Songs of Ascents (Psalms 120–134) were part of the feast day traditions at the Temple, with records indicating the Levites sang them on the fifteen steps between the courts. Each psalm is paired here with its corresponding Seder step. For more on the connections between the Seder and Alma's sermon, see [Alma 5: The Nephite Seder](/study-library/articles/alma5-nephite-seder/).
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 128: A Song of Ascents</summary>
@@ -65,20 +57,15 @@ Psalm 128 blesses the one who fears the Lord — a fruitful vine, olive plants a
 </div>
 </details>
 
-<details class="seder-dropdown seder-dropdown--alma">
-<summary>In the Nephite Assembly — Alma 5: The Bitter Wages of Sin</summary>
-<div class="seder-dropdown-body">
+---
 
-The bitter herbs remind us that sin carries bitter wages — and that the path of the wicked leads to sorrow. Alma warns plainly:
+## The Covenant Pattern
 
-> "And again I say unto you, is there one among you that doth make a mock of his brother, or that doth heap upon him persecutions? Wo unto such an one, for he is not prepared, and the time is at hand that he must repent or he cannot be saved!" — Alma 5:30–31
+Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
 
-> "Whosoever bringeth forth evil works, the same becometh a child of the devil... And whosoever doeth this must receive his wages of him; therefore, for his wages he receiveth death, as to things pertaining unto righteousness, being dead unto all good works." — Alma 5:41–42
+**At the Seder Table:** The bitter herbs recall the bitterness of bondage in Egypt — tasted and remembered, not avoided. The covenant does not promise the absence of suffering. It promises deliverance *through* suffering.
 
-The Maror is tasted within the Seder — within the covenant meal — which means even the bitterness is held within the framework of redemption. The Savior did not remove the bitter cup; He drank it. And because He did, our own bitter moments can become the pathway to transformation.
-
-</div>
-</details>
+**At the Last Supper:** Gethsemane follows immediately after the Seder meal. The bitter herbs at the table foreshadow the bitter cup: "O my Father, if it be possible, let this cup pass from me: nevertheless not as I will, but as thou wilt" (Matthew 26:39). Jesus tasted the full bitterness of mortality so that He could succor those who taste it after Him.
 
 <details class="seder-dropdown seder-dropdown--supper">
 <summary>At the Last Supper — The Bitter Cup</summary>
@@ -94,6 +81,25 @@ After the meal ended, Jesus went forth into Gethsemane, where the bitter herbs f
 
 </div>
 </details>
+
+**In the Nephite Assembly:** Alma prophesies that Christ "shall go forth, suffering pains and afflictions and temptations of every kind... He will take upon him the pains and the sicknesses of his people" (Alma 7:11–12). And the Lord Himself declares: "which suffering caused myself, even God, the greatest of all, to tremble because of pain, and to bleed at every pore" (D&C 19:18).
+
+<details class="seder-dropdown seder-dropdown--alma">
+<summary>In the Nephite Assembly — Alma 5: The Bitter Wages of Sin</summary>
+<div class="seder-dropdown-body">
+
+The bitter herbs remind us that sin carries bitter wages — and that the path of the wicked leads to sorrow. Alma warns plainly:
+
+> "And again I say unto you, is there one among you that doth make a mock of his brother, or that doth heap upon him persecutions? Wo unto such an one, for he is not prepared, and the time is at hand that he must repent or he cannot be saved!" — Alma 5:30–31
+
+> "Whosoever bringeth forth evil works, the same becometh a child of the devil... And whosoever doeth this must receive his wages of him; therefore, for his wages he receiveth death, as to things pertaining unto righteousness, being dead unto all good works." — Alma 5:41–42
+
+The Maror is tasted within the Seder — within the covenant meal — which means even the bitterness is held within the framework of redemption. The Savior did not remove the bitter cup; He drank it. And because He did, our own bitter moments can become the pathway to transformation.
+
+</div>
+</details>
+
+**On the Covenant Path Today:** President Nelson assures covenant-keepers that they receive "heavenly power — power that strengthens us to withstand our trials, temptations, and heartaches better" ("Overcome the World and Find Rest," 2022). The bitterness of mortality is real — but the covenant provides the power to endure it and be transformed by it.
 
 ---
 
