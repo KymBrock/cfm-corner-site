@@ -44,6 +44,46 @@ Joseph's story reminds us that **grief and betrayal can become the gateway to de
 
 ---
 
+## Explore Further
+
+<details class="seder-dropdown seder-dropdown--psalm">
+<summary>Shir HaMa'alot — Psalm 122: A Song of Ascents</summary>
+<div class="seder-dropdown-body">
+
+Psalm 122 celebrates the joy of gathering to the house of the Lord and prays for the peace of Jerusalem. The Karpas step — with its tears and greens — holds this tension between grief and hope. We dip in sorrow, but we gather in gladness. The psalm's vision of unified tribes ascending to the temple resonates with the covenant hope that even after scattering, God gathers His people.
+
+**1** I was glad when they said unto me, Let us go into the house of the LORD.
+**2** Our feet shall stand within thy gates, O Jerusalem.
+**3** Jerusalem is builded as a city that is compact together:
+**4** Whither the tribes go up, the tribes of the LORD, unto the testimony of Israel, to give thanks unto the name of the LORD.
+**5** For there are set thrones of judgment, the thrones of the house of David.
+**6** Pray for the peace of Jerusalem: they shall prosper that love thee.
+**7** Peace be within thy walls, and prosperity within thy palaces.
+**8** For my brethren and companions' sakes, I will now say, Peace be within thee.
+**9** Because of the house of the LORD our God I will seek thy good.
+
+<a href="https://www.blueletterbible.org/tools/interlinear/wlc-kjv/psa/122/1-9/" target="_blank">Study the Hebrew interlinear at Blue Letter Bible</a>
+
+</div>
+</details>
+
+<details class="seder-dropdown seder-dropdown--alma">
+<summary>In the Nephite Assembly — Alma 5: Bondage and Deliverance</summary>
+<div class="seder-dropdown-body">
+
+The Karpas step recalls the tears and bondage of Israel in Egypt — and the new life that sprang from that sorrow. Alma draws his people back to their own story of bondage and deliverance, asking them to remember:
+
+> "I say unto you, they were in captivity, and again the Lord did deliver them out of bondage by the power of his word; and we were brought into this land, and here we began to establish the church of God throughout this land also." — Alma 5:5
+
+> "Have ye sufficiently retained in remembrance that he has delivered their souls from hell?" — Alma 5:6
+
+Just as the green herbs dipped in salt water remind us that sorrow and hope are intertwined, Alma reminds the Nephites that their bitter bondage became the gateway to God's deliverance — and asks whether they have retained that remembrance in their hearts.
+
+</div>
+</details>
+
+---
+
 ## Reflection Questions
 
 - What **tears** — past or present — do I bring to this table tonight? How has Christ shared in those sorrows?

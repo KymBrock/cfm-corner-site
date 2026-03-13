@@ -55,6 +55,44 @@ The pattern has not changed. The holy order endures.
 
 ---
 
+## Explore Further
+
+<details class="seder-dropdown seder-dropdown--psalm">
+<summary>Shir HaMa'alot — Psalm 120: A Song of Ascents</summary>
+<div class="seder-dropdown-body">
+
+The first Song of Ascents begins in distress — the pilgrim cries out to the Lord from among those who speak falsehood and pursue war. This mirrors the opening of the Seder: we begin in a state of bondage, surrounded by the lies of the world, and cry out to God to be set apart. Kadesh — sanctification — is the answer to this cry.
+
+**1** In my distress I cried unto the LORD, and he heard me.
+**2** Deliver my soul, O LORD, from lying lips, and from a deceitful tongue.
+**3** What shall be given unto thee? or what shall be done unto thee, thou false tongue?
+**4** Sharp arrows of the mighty, with coals of juniper.
+**5** Woe is me, that I sojourn in Mesech, that I dwell in the tents of Kedar!
+**6** My soul hath long dwelt with him that hateth peace.
+**7** I am for peace: but when I speak, they are for war.
+
+<a href="https://www.blueletterbible.org/tools/interlinear/wlc-kjv/psa/120/1-7/" target="_blank">Study the Hebrew interlinear at Blue Letter Bible</a>
+
+</div>
+</details>
+
+<details class="seder-dropdown seder-dropdown--temple">
+<summary>Temple Covenant — The Law of Sacrifice</summary>
+<div class="seder-dropdown-body">
+
+The first cup of the Seder corresponds to the first promise of Exodus 6:6: *"I will bring you out from under the burdens of the Egyptians."* To be brought out requires leaving something behind.
+
+In the temple, the **Law of Sacrifice** invites us to offer up something of value for something of greater worth. The Israelites could not leave Egypt and keep Egypt at the same time. Abraham was asked to offer Isaac — the very thing he treasured most:
+
+> "Take now thy son, thine only son Isaac, whom thou lovest... and offer him there for a burnt offering." — Genesis 22:2
+
+In that willingness, Abraham received back everything and more. The pattern of the first cup is the pattern of sacrifice: we raise the cup, consecrate the evening, and declare our willingness to leave behind the familiar, the comfortable, and the false — to be sanctified, set apart, and brought out.
+
+</div>
+</details>
+
+---
+
 ## Reflection Questions
 
 - How does the Lord lead us out of spiritual bondage today?

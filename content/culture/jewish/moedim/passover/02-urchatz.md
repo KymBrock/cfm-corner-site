@@ -39,6 +39,30 @@ Just as the Israelites passed through the Red Sea to begin their journey toward 
 
 ---
 
+## Explore Further
+
+<details class="seder-dropdown seder-dropdown--psalm">
+<summary>Shir HaMa'alot — Psalm 121: A Song of Ascents</summary>
+<div class="seder-dropdown-body">
+
+The second Song of Ascents is the pilgrim's assurance — the Lord who watches over Israel neither slumbers nor sleeps. As Urchatz washes the hands in preparation for the sacred, this psalm reminds us that the Lord preserves our going out and our coming in. The initial washing is an act of trust: we place ourselves in His hands.
+
+**1** I will lift up mine eyes unto the hills, from whence cometh my help.
+**2** My help cometh from the LORD, which made heaven and earth.
+**3** He will not suffer thy foot to be moved: he that keepeth thee will not slumber.
+**4** Behold, he that keepeth Israel shall neither slumber nor sleep.
+**5** The LORD is thy keeper: the LORD is thy shade upon thy right hand.
+**6** The sun shall not smite thee by day, nor the moon by night.
+**7** The LORD shall preserve thee from all evil: he shall preserve thy soul.
+**8** The LORD shall preserve thy going out and thy coming in from this time forth, and even for evermore.
+
+<a href="https://www.blueletterbible.org/tools/interlinear/wlc-kjv/psa/121/1-8/" target="_blank">Study the Hebrew interlinear at Blue Letter Bible</a>
+
+</div>
+</details>
+
+---
+
 ## Reflection Questions
 
 - What does this simple act of washing teach me about **spiritual readiness**?
