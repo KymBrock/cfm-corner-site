@@ -31,30 +31,6 @@ Pour and bless the first cup.
 > "Lay aside every sin, which easily doth beset you... and come and be baptized unto repentance."
 > — Alma 7:15
 
----
-
-## Meaning and Symbolism
-
-This first cup sets the night apart — it is the **cup of sanctification**. Jesus likely began the Last Supper with this very cup, giving thanks and setting apart the evening for sacred purpose.
-
-This cup represents the beginning of our covenant journey, distinguished with authority.
-
----
-
-## The Covenant Pattern
-
-Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
-
-**At the Seder Table:** The first cup is the Cup of Sanctification — corresponding to God's first promise in Exodus 6:6: "I will bring you out from under the burdens of the Egyptians." Before anything else, the evening is consecrated. The sacred cannot begin without setting apart.
-
-**At the Last Supper:** Jesus took this cup, gave thanks, and declared He would not drink of the fruit of the vine until the kingdom comes (Luke 22:17–18). He sanctified the evening for its sacred, final purpose — transforming the Passover into the institution of the new covenant.
-
-**In the Nephite Assembly:** Alma opens his great sermon by establishing his priestly authority: "I, Alma, having been *consecrated* by my father, Alma, to be a high priest over the church of God" (Alma 5:3). The Hebrew root is the same — *kadesh*. The Nephite Seder begins, like every Seder, with sanctification.
-
-**On the Covenant Path Today:** President Nelson teaches that baptism is "the gate that leads to becoming joint heirs to all the promises given anciently by the Lord to Abraham, Isaac, Jacob, and their posterity" ("The Everlasting Covenant," 2022). Our covenant journey begins, like the Seder, with sanctification — being set apart for a sacred purpose.
-
-The pattern has not changed. The holy order endures.
-
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 120: A Song of Ascents</summary>
 <div class="seder-dropdown-body">
@@ -74,20 +50,23 @@ The first Song of Ascents begins in distress — the pilgrim cries out to the Lo
 </div>
 </details>
 
-<details class="seder-dropdown seder-dropdown--temple">
-<summary>Temple Covenant — The Law of Sacrifice</summary>
-<div class="seder-dropdown-body">
+---
 
-The first cup of the Seder corresponds to the first promise of Exodus 6:6: *"I will bring you out from under the burdens of the Egyptians."* To be brought out requires leaving something behind.
+## Meaning and Symbolism
 
-In the temple, the **Law of Sacrifice** invites us to offer up something of value for something of greater worth. The Israelites could not leave Egypt and keep Egypt at the same time. Abraham was asked to offer Isaac — the very thing he treasured most:
+This first cup sets the night apart — it is the **cup of sanctification**. Jesus likely began the Last Supper with this very cup, giving thanks and setting apart the evening for sacred purpose.
 
-> "Take now thy son, thine only son Isaac, whom thou lovest... and offer him there for a burnt offering." — Genesis 22:2
+This cup represents the beginning of our covenant journey, distinguished with authority.
 
-In that willingness, Abraham received back everything and more. The pattern of the first cup is the pattern of sacrifice: we raise the cup, consecrate the evening, and declare our willingness to leave behind the familiar, the comfortable, and the false — to be sanctified, set apart, and brought out.
+---
 
-</div>
-</details>
+## The Covenant Pattern
+
+Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
+
+**At the Seder Table:** The first cup is the Cup of Sanctification — corresponding to God's first promise in Exodus 6:6: "I will bring you out from under the burdens of the Egyptians." Before anything else, the evening is consecrated. The sacred cannot begin without setting apart.
+
+**At the Last Supper:** Jesus took this cup, gave thanks, and declared He would not drink of the fruit of the vine until the kingdom comes (Luke 22:17–18). He sanctified the evening for its sacred, final purpose — transforming the Passover into the institution of the new covenant.
 
 <details class="seder-dropdown seder-dropdown--supper">
 <summary>At the Last Supper — The First Cup</summary>
@@ -103,6 +82,27 @@ The four cups of the Seder correspond to four promises in Exodus 6:6-7. The firs
 
 </div>
 </details>
+
+**In the Nephite Assembly:** Alma opens his great sermon by establishing his priestly authority: "I, Alma, having been *consecrated* by my father, Alma, to be a high priest over the church of God" (Alma 5:3). The Hebrew root is the same — *kadesh*. The Nephite Seder begins, like every Seder, with sanctification.
+
+**On the Covenant Path Today:** President Nelson teaches that baptism is "the gate that leads to becoming joint heirs to all the promises given anciently by the Lord to Abraham, Isaac, Jacob, and their posterity" ("The Everlasting Covenant," 2022). Our covenant journey begins, like the Seder, with sanctification — being set apart for a sacred purpose.
+
+<details class="seder-dropdown seder-dropdown--temple">
+<summary>Temple Covenant — The Law of Sacrifice</summary>
+<div class="seder-dropdown-body">
+
+The first cup of the Seder corresponds to the first promise of Exodus 6:6: *"I will bring you out from under the burdens of the Egyptians."* To be brought out requires leaving something behind.
+
+In the temple, the **Law of Sacrifice** invites us to offer up something of value for something of greater worth. The Israelites could not leave Egypt and keep Egypt at the same time. Abraham was asked to offer Isaac — the very thing he treasured most:
+
+> "Take now thy son, thine only son Isaac, whom thou lovest... and offer him there for a burnt offering." — Genesis 22:2
+
+In that willingness, Abraham received back everything and more. The pattern of the first cup is the pattern of sacrifice: we raise the cup, consecrate the evening, and declare our willingness to leave behind the familiar, the comfortable, and the false — to be sanctified, set apart, and brought out.
+
+</div>
+</details>
+
+The pattern has not changed. The holy order endures.
 
 ---
 

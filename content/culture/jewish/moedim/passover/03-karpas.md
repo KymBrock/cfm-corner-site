@@ -32,17 +32,7 @@ Joseph's story reminds us that **grief and betrayal can become the gateway to de
 
 ---
 
-## The Covenant Pattern
-
-Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
-
-**At the Seder Table:** The green herbs dipped in salt water unite new life with tears — spring growth meeting the bitterness of bondage. The Midrash (Exodus Rabbah 17:3) teaches that even the hyssop — the lowliest of plants — accomplished the greatest redemption, for it was used to apply the Paschal blood to the doorposts.
-
-**At the Last Supper:** At the table, Jesus dipped a morsel and gave it to Judas (John 13:26). The salt water of betrayal met the green of new life in a single act. What seemed like the end — the betrayal — became the gateway to the greatest deliverance in all of history.
-
-**In the Nephite Assembly:** Alma recalls that his fathers "were in the midst of darkness; nevertheless, their souls were illuminated by the light of the everlasting word" (Alma 5:7). Tears and new life together. And as he later teaches: "by small and simple things are great things brought to pass" (Alma 37:6) — the lowly hyssop, the simple herb, the small act of faith.
-
-**On the Covenant Path Today:** President Nelson promises that "the reward for keeping covenants with God is heavenly power — power that strengthens us to withstand our trials, temptations, and heartaches better" ("Overcome the World and Find Rest," 2022). The salt water of our own tears meets the green of covenant hope — and from that meeting, new life springs.
+## Scripture Connection
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 122: A Song of Ascents</summary>
@@ -65,20 +55,15 @@ Psalm 122 celebrates the joy of gathering to the house of the Lord and prays for
 </div>
 </details>
 
-<details class="seder-dropdown seder-dropdown--alma">
-<summary>In the Nephite Assembly — Alma 5: Bondage and Deliverance</summary>
-<div class="seder-dropdown-body">
+---
 
-The Karpas step recalls the tears and bondage of Israel in Egypt — and the new life that sprang from that sorrow. Alma draws his people back to their own story of bondage and deliverance, asking them to remember:
+## The Covenant Pattern
 
-> "I say unto you, they were in captivity, and again the Lord did deliver them out of bondage by the power of his word; and we were brought into this land, and here we began to establish the church of God throughout this land also." — Alma 5:5
+Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
 
-> "Have ye sufficiently retained in remembrance that he has delivered their souls from hell?" — Alma 5:6
+**At the Seder Table:** The green herbs dipped in salt water unite new life with tears — spring growth meeting the bitterness of bondage. The Midrash (Exodus Rabbah 17:3) teaches that even the hyssop — the lowliest of plants — accomplished the greatest redemption, for it was used to apply the Paschal blood to the doorposts.
 
-Just as the green herbs dipped in salt water remind us that sorrow and hope are intertwined, Alma reminds the Nephites that their bitter bondage became the gateway to God's deliverance — and asks whether they have retained that remembrance in their hearts.
-
-</div>
-</details>
+**At the Last Supper:** At the table, Jesus dipped a morsel and gave it to Judas (John 13:26). The salt water of betrayal met the green of new life in a single act. What seemed like the end — the betrayal — became the gateway to the greatest deliverance in all of history.
 
 <details class="seder-dropdown seder-dropdown--supper">
 <summary>At the Last Supper — The Dipping</summary>
@@ -94,6 +79,25 @@ The double dipping became the sign by which Jesus identified His betrayer. When 
 
 </div>
 </details>
+
+**In the Nephite Assembly:** Alma recalls that his fathers "were in the midst of darkness; nevertheless, their souls were illuminated by the light of the everlasting word" (Alma 5:7). Tears and new life together. And as he later teaches: "by small and simple things are great things brought to pass" (Alma 37:6) — the lowly hyssop, the simple herb, the small act of faith.
+
+<details class="seder-dropdown seder-dropdown--alma">
+<summary>In the Nephite Assembly — Alma 5: Bondage and Deliverance</summary>
+<div class="seder-dropdown-body">
+
+The Karpas step recalls the tears and bondage of Israel in Egypt — and the new life that sprang from that sorrow. Alma draws his people back to their own story of bondage and deliverance, asking them to remember:
+
+> "I say unto you, they were in captivity, and again the Lord did deliver them out of bondage by the power of his word; and we were brought into this land, and here we began to establish the church of God throughout this land also." — Alma 5:5
+
+> "Have ye sufficiently retained in remembrance that he has delivered their souls from hell?" — Alma 5:6
+
+Just as the green herbs dipped in salt water remind us that sorrow and hope are intertwined, Alma reminds the Nephites that their bitter bondage became the gateway to God's deliverance — and asks whether they have retained that remembrance in their hearts.
+
+</div>
+</details>
+
+**On the Covenant Path Today:** President Nelson promises that "the reward for keeping covenants with God is heavenly power — power that strengthens us to withstand our trials, temptations, and heartaches better" ("Overcome the World and Find Rest," 2022). The salt water of our own tears meets the green of covenant hope — and from that meeting, new life springs.
 
 ---
 
