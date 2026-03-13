@@ -43,6 +43,8 @@ We remember that Christ, our High Priest, makes our offerings acceptable — not
 
 ## The Covenant Pattern
 
+Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
+
 **At the Seder Table:** The sacred closing — everything offered tonight may be accepted by God. The word *nirtzah* shares its root with *<a href="https://www.blueletterbible.org/lexicon/h7522/kjv/wlc/0-1/" target="_blank" data-lexicon="goodwill, favour, acceptance, desire" data-strongs="H7522" data-translit="ratson" data-original="רָצוֹן" data-lang="hebrew">ratzon</a>* (will, desire) — suggesting that the offering has been received with divine pleasure. The evening ends with the ancient declaration: *"L'shanah haba'ah b'Yerushalayim!"* — "Next year in Jerusalem!" It is a cry of hope, exile, and longing for the day when God's people will gather in His holy city.
 
 **At the Last Supper:** In Gethsemane, Jesus prays: "Not my will, but thine, be done" (Luke 22:42). He seeks the Father's acceptance of His offering — and receives it. He is the one whose offering makes ours acceptable. The entire 15-step pattern of the Seder — from sanctification through suffering, from bread and wine to praise — finds its completion here: the Son offers Himself, and the Father accepts.
@@ -50,10 +52,6 @@ We remember that Christ, our High Priest, makes our offerings acceptable — not
 **In the Nephite Assembly:** Alma asks: "Could ye say, if ye were called to die at this time, that ye have been sufficiently humble?" (Alma 5:27). The entire 15-step pattern leads to this: will you be accepted before God? The Seder, the Supper, and the Sermon all culminate in the same question — not of performance, but of the heart's posture before the Almighty.
 
 **On the Covenant Path Today:** President Nelson promises: "Those who keep their covenants with God will become a strain of sin-resistant souls" ("The Everlasting Covenant," 2022). The culmination of the covenant path — from sanctification through suffering, through the sacrament, through praise — is acceptance before God. "Next year in Jerusalem!" becomes "Zion — the pure in heart" (D&C 97:21). The pattern holds. The holy order endures. And the covenant — unchanged from the beginning — carries us home.
-
----
-
-## Explore Further
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 134: A Song of Ascents</summary>
