@@ -39,6 +39,8 @@ This moment is a joyful rediscovery — a sacred echo of the Resurrection. As we
 
 ## The Covenant Pattern
 
+Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
+
 **At the Seder Table:** The hidden *afikomen* — the broken piece of matzah concealed during Yachatz — is now found, brought forth, and eaten. What was broken and hidden is revealed and shared. The children search for it with joy. The lost is found.
 
 **At the Last Supper:** The *afikomen* is widely understood as the last bread shared at the Supper — the bread over which Jesus said, "Do this in remembrance of me" (Luke 22:19). The One who was broken and hidden in the tomb is brought forth in resurrection: "He is not here: for He is risen" (Matthew 28:6).
@@ -46,10 +48,6 @@ This moment is a joyful rediscovery — a sacred echo of the Resurrection. As we
 **In the Nephite Assembly:** Alma teaches that the hidden things of the heart shall be revealed: "Our words will condemn us, yea, all our works will condemn us... and our thoughts will also condemn us" (Alma 12:14). What is hidden will be brought to light — both the sins of the heart and the glory of the Risen Lord.
 
 **On the Covenant Path Today:** Elder Bednar speaks of "an inner spiritual stillness of the soul that enables us to know and remember that God is our Heavenly Father, we are His children, and Jesus Christ is our Savior" ("Be Still, and Know That I Am God," 2024). What was hidden is revealed — not only at the resurrection, but in the quiet stillness of covenant relationship, where the Lord makes Himself known to those who seek Him.
-
----
-
-## Explore Further
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 131: A Song of Ascents</summary>

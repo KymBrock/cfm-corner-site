@@ -44,6 +44,8 @@ This layered bite reminds us that even the bitterness of life can become sacred 
 
 ## The Covenant Pattern
 
+Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
+
 **At the Seder Table:** Hillel's tradition of binding bitter herbs and matzah together in a single bite teaches that sorrow and humility are inseparable companions on the path to redemption. The bitter is not discarded — it is held together with the bread of covenant.
 
 **At the Last Supper:** At the table, Jesus dipped a morsel and gave it to Judas (John 13:26–27) — betrayal and love at the same table. The bitter and the sacred were bound together in a single act. Even in the moment of greatest treachery, Christ's love encompassed it.
@@ -51,10 +53,6 @@ This layered bite reminds us that even the bitterness of life can become sacred 
 **In the Nephite Assembly:** Alma binds together warning and invitation, judgment and mercy, in the same sermon: "For I say unto you that whatsoever is good cometh from God, and whatsoever is evil cometh from the devil" (Alma 5:40). The prophet holds both realities simultaneously — because the covenant demands honesty about both.
 
 **On the Covenant Path Today:** Elder Bednar teaches that "the power of the Savior's gospel to transform and bless us flows from discerning and applying the interrelatedness of its doctrine, principles, and practices" ("Gather Together in One All Things in Christ," 2018). The bitter and the sweet, the trial and the blessing, the justice and the mercy — they are bound together in one covenant, and the power comes from embracing them as one.
-
----
-
-## Explore Further
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 129: A Song of Ascents</summary>
