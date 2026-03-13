@@ -49,6 +49,8 @@ And just as bread is placed in the earth and rises, so too did the Savior:
 
 ## The Covenant Pattern
 
+Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
+
 **At the Seder Table:** The blessing *hamotzi* acknowledges God as the One who "brings forth bread from the earth." Before the matzah is eaten, it is blessed. Before it is consumed, it is consecrated. The provision comes from God.
 
 **At the Last Supper:** "Jesus took bread, and blessed it" (Matthew 26:26). He gave thanks for the Father's provision — and then transformed it. The bread that God brings forth from the earth becomes the body that God brings forth from the tomb.
@@ -56,10 +58,6 @@ And just as bread is placed in the earth and rises, so too did the Savior:
 **In the Nephite Assembly:** The risen Christ Himself administers bread to the Nephite multitude: "He brake bread... and blessed it, and gave it to the disciples, and commanded that they should eat" (3 Nephi 18:3). The same action, the same covenant, a new continent. The pattern holds.
 
 **On the Covenant Path Today:** Elder Bednar describes how "every time we faithfully receive, review, remember, and renew sacred covenants, our spiritual anchors are secured ever more firmly and steadfastly to the 'rock' of Jesus Christ" ("Be Still, and Know That I Am God," 2024). The bread is blessed and given again each Sabbath — the same provision, the same pattern, the same God who brings forth bread from the earth.
-
----
-
-## Explore Further
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 126: A Song of Ascents</summary>

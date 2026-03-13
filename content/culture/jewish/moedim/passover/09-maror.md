@@ -37,6 +37,8 @@ In Gethsemane, Jesus drank the full bitterness of mortality — pain, loneliness
 
 ## The Covenant Pattern
 
+Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
+
 **At the Seder Table:** The bitter herbs recall the bitterness of bondage in Egypt — tasted and remembered, not avoided. The covenant does not promise the absence of suffering. It promises deliverance *through* suffering.
 
 **At the Last Supper:** Gethsemane follows immediately after the Seder meal. The bitter herbs at the table foreshadow the bitter cup: "O my Father, if it be possible, let this cup pass from me: nevertheless not as I will, but as thou wilt" (Matthew 26:39). Jesus tasted the full bitterness of mortality so that He could succor those who taste it after Him.
@@ -44,10 +46,6 @@ In Gethsemane, Jesus drank the full bitterness of mortality — pain, loneliness
 **In the Nephite Assembly:** Alma prophesies that Christ "shall go forth, suffering pains and afflictions and temptations of every kind... He will take upon him the pains and the sicknesses of his people" (Alma 7:11–12). And the Lord Himself declares: "which suffering caused myself, even God, the greatest of all, to tremble because of pain, and to bleed at every pore" (D&C 19:18).
 
 **On the Covenant Path Today:** President Nelson assures covenant-keepers that they receive "heavenly power — power that strengthens us to withstand our trials, temptations, and heartaches better" ("Overcome the World and Find Rest," 2022). The bitterness of mortality is real — but the covenant provides the power to endure it and be transformed by it.
-
----
-
-## Explore Further
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 128: A Song of Ascents</summary>
