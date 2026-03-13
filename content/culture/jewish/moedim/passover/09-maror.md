@@ -82,6 +82,21 @@ The Maror is tasted within the Seder — within the covenant meal — which mean
 </div>
 </details>
 
+<details class="seder-dropdown seder-dropdown--supper">
+<summary>At the Last Supper — The Bitter Cup</summary>
+<div class="seder-dropdown-body">
+
+Edersheim records that "pieces of the broken cake with 'bitter herbs' between them, and 'dipped' in the Charoseth, were next handed to each in the company." This was the beginning of the Paschal Supper proper — everything before it had been introduction.
+
+It was at this very moment, as Jesus handled the bitter herbs and the bread, that "He was troubled in spirit" about "the root of bitterness about to spring up among, and to trouble them." Edersheim writes that the concern of the disciples as to which of them should betray Him found expression in the gesture of Peter — beckoning to John, who leaned back on Jesus' breast to ask the whispered question.
+
+After the meal ended, Jesus went forth into Gethsemane, where the bitter herbs found their ultimate fulfilment: "O my Father, if it be possible, let this cup pass from me" (Matthew 26:39). The Talmud speaks of the "cup of vengeance" that God would give the nations to drink (Jeremiah 25:15). But Christ drank the bitterest cup Himself — "and when He had offered up prayers and supplications with strong crying and tears unto Him that was able to save Him from death... though He were a Son, yet learned He obedience by the things which He suffered" (Hebrews 5:7-8).
+
+*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
+</div>
+</details>
+
 ---
 
 ## Reflection Questions

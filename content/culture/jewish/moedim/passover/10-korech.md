@@ -76,6 +76,21 @@ Psalm 129 speaks of affliction endured from youth — "The plowers plowed upon m
 </div>
 </details>
 
+<details class="seder-dropdown seder-dropdown--supper">
+<summary>At the Last Supper — The Sop Given to Judas</summary>
+<div class="seder-dropdown-body">
+
+Edersheim identifies the Korech — the sop of unleavened bread with bitter herbs, dipped in the Charoseth — as "in all probability, 'the sop' which, in answer to John's inquiry about the betrayer, the Lord 'gave' to Judas" (John 13:25-26; Matthew 26:21; Mark 14:18).
+
+The Korech was normally handed first to the chief guest at the table. From Edersheim's reconstruction of the seating arrangement, Judas occupied the place of honour at Jesus' left — "above Him" at the table. This explains how Jesus could hand the sop to Judas without anyone else knowing its significance, and how Judas could whisper "Is it I?" and receive the affirmative answer without the other disciples hearing (Matthew 26:25).
+
+"And after the sop Satan entered into him," and Judas "went out immediately. And it was night" (John 13:27, 30). The sop that bound the bitter and the sweet in covenant fellowship became the moment of severance. What Hillel had intended as a binding together, Judas turned into a tearing apart.
+
+*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12; Life and Times of Jesus the Messiah, Book 5, Ch. 10*
+
+</div>
+</details>
+
 ---
 
 ## Reflection Questions
