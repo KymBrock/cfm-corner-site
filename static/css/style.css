@@ -1517,6 +1517,70 @@ a.RTBData:hover, a.BLBST_a:hover {
     font-style: italic;
 }
 
+/* === Seder Dropdown — collapsible "Explore Further" sections === */
+.culture-article-content details.seder-dropdown,
+.library-article-content details.seder-dropdown {
+    border: 1px solid var(--border, #c6d4c8);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    background: #fff;
+}
+.culture-article-content details.seder-dropdown > summary,
+.library-article-content details.seder-dropdown > summary {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary, #1a2a1c);
+    background: linear-gradient(135deg, #f4f7f5 0%, #fafbfa 100%);
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    transition: background 0.2s ease;
+}
+.culture-article-content details.seder-dropdown > summary::-webkit-details-marker,
+.library-article-content details.seder-dropdown > summary::-webkit-details-marker { display: none; }
+.culture-article-content details.seder-dropdown > summary::marker,
+.library-article-content details.seder-dropdown > summary::marker { display: none; content: ''; }
+.culture-article-content details.seder-dropdown > summary::before,
+.library-article-content details.seder-dropdown > summary::before {
+    content: "\25B6";
+    font-size: 0.7em;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+    color: var(--sage-mid, #7c9885);
+}
+.culture-article-content details.seder-dropdown[open] > summary::before,
+.library-article-content details.seder-dropdown[open] > summary::before {
+    transform: rotate(90deg);
+}
+.culture-article-content details.seder-dropdown > summary:hover,
+.library-article-content details.seder-dropdown > summary:hover {
+    background: linear-gradient(135deg, #eef2ef 0%, #f4f7f5 100%);
+}
+.culture-article-content .seder-dropdown-body,
+.library-article-content .seder-dropdown-body {
+    padding: 16px 20px;
+    border-top: 1px solid var(--border, #c6d4c8);
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+.culture-article-content .seder-dropdown-body blockquote,
+.library-article-content .seder-dropdown-body blockquote {
+    margin: 12px 0;
+    padding: 8px 16px;
+    border-left: 3px solid var(--sage-mid, #7c9885);
+    background: rgba(74, 107, 82, 0.04);
+    font-size: 0.93rem;
+}
+/* Color-coded accent borders per dropdown type */
+.seder-dropdown--psalm { border-left: 4px solid var(--sage-dark, #4a6b52); }
+.seder-dropdown--alma { border-left: 4px solid var(--gold, #d5a93c); }
+.seder-dropdown--temple { border-left: 4px solid var(--copper, #c37c3c); }
+.seder-dropdown--supper { border-left: 4px solid #5a7a9a; }
+
 /* Culture & Library responsive */
 @media (max-width: 768px) {
     .culture-hero, .library-hero { padding: 32px 16px 16px; }
@@ -1531,6 +1595,10 @@ a.RTBData:hover, a.BLBST_a:hover {
     .culture-article-content table th,
     .library-article-content table td,
     .library-article-content table th { padding: 8px 10px; font-size: 0.9em; }
+    .culture-article-content details.seder-dropdown > summary,
+    .library-article-content details.seder-dropdown > summary { padding: 10px 14px; font-size: 0.93rem; }
+    .culture-article-content .seder-dropdown-body,
+    .library-article-content .seder-dropdown-body { padding: 12px 14px; }
 }
 
 /* === Small phone (≤340px) — tightest layout === */
