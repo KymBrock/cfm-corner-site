@@ -29,6 +29,8 @@ Just as the Israelites passed through the Red Sea to begin their journey toward 
 
 ## The Covenant Pattern
 
+Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
+
 **At the Seder Table:** The hands are washed silently — no blessing is spoken. This first washing is preparation, not completion. It readies the participant to handle the sacred herbs that follow.
 
 **At the Last Supper:** Ritual purity was observed at every Passover meal. This initial handwashing precedes the meal itself. The deeper washing — Jesus washing His disciples' feet — comes later at Rachtzah (Step 6), after the story has been told.
@@ -36,10 +38,6 @@ Just as the Israelites passed through the Red Sea to begin their journey toward 
 **In the Nephite Assembly:** Alma's father "baptized his brethren in the waters of Mormon" (Alma 5:3). The first act of entering Alma's covenant community was washing — water as the gate into the covenant. Alma reminds his people they must be "cleansed from all sin" (Alma 5:21).
 
 **On the Covenant Path Today:** Elder Bednar teaches that baptism and the sacrament "are not isolated and discrete events; rather, they are elements in an interrelated and additive pattern" ("Always Retain a Remission of Your Sins," 2016). The first washing is the beginning of the covenant journey — not the whole of it.
-
----
-
-## Explore Further
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 121: A Song of Ascents</summary>

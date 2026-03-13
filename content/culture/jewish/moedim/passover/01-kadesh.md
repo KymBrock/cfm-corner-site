@@ -43,6 +43,8 @@ In our day, this cup mirrors the **sacrament** and **baptism** — the beginning
 
 ## The Covenant Pattern
 
+Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
+
 **At the Seder Table:** The first cup is the Cup of Sanctification — corresponding to God's first promise in Exodus 6:6: "I will bring you out from under the burdens of the Egyptians." Before anything else, the evening is consecrated. The sacred cannot begin without setting apart.
 
 **At the Last Supper:** Jesus took this cup, gave thanks, and declared He would not drink of the fruit of the vine until the kingdom comes (Luke 22:17–18). He sanctified the evening for its sacred, final purpose — transforming the Passover into the institution of the new covenant.
@@ -52,10 +54,6 @@ In our day, this cup mirrors the **sacrament** and **baptism** — the beginning
 **On the Covenant Path Today:** President Nelson teaches that baptism is "the gate that leads to becoming joint heirs to all the promises given anciently by the Lord to Abraham, Isaac, Jacob, and their posterity" ("The Everlasting Covenant," 2022). Our covenant journey begins, like the Seder, with sanctification — being set apart for a sacred purpose.
 
 The pattern has not changed. The holy order endures.
-
----
-
-## Explore Further
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 120: A Song of Ascents</summary>
