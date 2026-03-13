@@ -23,10 +23,10 @@
 
     <!-- Prev/Next navigation within section -->
     <div class="culture-article-nav">
-        {{ with .PrevInSection }}
+        {{ with .NextInSection }}
         <a href="{{ .RelPermalink }}" class="culture-nav-prev">← {{ .Title }}</a>
         {{ end }}
-        {{ with .NextInSection }}
+        {{ with .PrevInSection }}
         <a href="{{ .RelPermalink }}" class="culture-nav-next">{{ .Title }} →</a>
         {{ end }}
     </div>
