@@ -61,6 +61,21 @@ The second Song of Ascents is the pilgrim's assurance — the Lord who watches o
 </div>
 </details>
 
+<details class="seder-dropdown seder-dropdown--supper">
+<summary>At the Last Supper — The Washing of Feet</summary>
+<div class="seder-dropdown-body">
+
+After the first cup was drunk, Edersheim notes that all washed their hands, using a prayer: *"Blessed art Thou, Jehovah our God, who hast sanctified us with Thy commandments, and hast enjoined us concerning the washing of our hands."* Two kinds of washing were prescribed by tradition — "dipping" and "pouring." At the Paschal Supper, the hands were to be "dipped" in water.
+
+Edersheim places the foot-washing at this very moment: "It was evidently at this time that the Saviour in His self-humiliation proceeded also to wash the disciples' feet" (John 13:5). He notes that the Authorised Version wrongly translates John 13:2 as "supper being ended" — it should read "when supper had come" or "was begun." The foot-washing occurred near the beginning of the evening, not the end.
+
+Peter's resistance to the washing — and then his eager overcorrection — makes more sense in this liturgical context. The washing was customary; what was extraordinary was the Master taking the servant's place. "If I then, your Lord and Master, have washed your feet; ye also ought to wash one another's feet" (John 13:14).
+
+*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
+</div>
+</details>
+
 ---
 
 ## Reflection Questions

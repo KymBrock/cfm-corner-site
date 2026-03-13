@@ -91,6 +91,21 @@ In that willingness, Abraham received back everything and more. The pattern of t
 </div>
 </details>
 
+<details class="seder-dropdown seder-dropdown--supper">
+<summary>At the Last Supper — The First Cup</summary>
+<div class="seder-dropdown-body">
+
+Edersheim records that the Paschal Supper commenced when the head of the company took the first cup of wine in his hand and spoke a blessing of sanctification: *"Blessed art Thou, Jehovah our God, who has created the fruit of the vine! Blessed art Thou, Jehovah our God King of the Universe, who hast chosen us from among all people, and exalted us from among all languages, and sanctified us with Thy commandments!"* The prayer concluded: *"Blessed art Thou, Jehovah, who sanctifiest Israel and the appointed seasons!"*
+
+The first cup was then drunk, and each washed his hands. Luke records what appears to be this moment: "And He took the cup, and gave thanks, and said, Take this, and divide it among yourselves" (Luke 22:17) — distinct from the later cup of the new covenant (Luke 22:20).
+
+The four cups of the Seder correspond to four promises in Exodus 6:6-7. The first — the Cup of Sanctification — answers to "I will bring you out from under the burdens of the Egyptians." The Jerusalem Talmud explains that even the poorest in Israel must have at least four cups, "though he were to receive the money for it from the poor's box." The joy of redemption belongs to all.
+
+*Sources: Edersheim, The Temple: Its Ministry and Services, Ch. 12; Weekly Insights, D&C 133-136*
+
+</div>
+</details>
+
 ---
 
 ## Reflection Questions

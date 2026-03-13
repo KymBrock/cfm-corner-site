@@ -82,6 +82,21 @@ Just as the green herbs dipped in salt water remind us that sorrow and hope are 
 </div>
 </details>
 
+<details class="seder-dropdown seder-dropdown--supper">
+<summary>At the Last Supper — The Dipping</summary>
+<div class="seder-dropdown-body">
+
+After the first cup and the washing of hands, Edersheim records that "the president of the feast first took some of the herbs, dipped them in salt water, ate of them, and gave to the others." Then the dishes were removed from the table — a deliberately strange act designed to provoke the child's questions.
+
+It was at this point that the second cup was filled and the son asked the four questions: *"Why is this night distinguished from all other nights?"* The questions included: why only unleavened bread? Why only bitter herbs? Why only roasted meat? And — significantly — "On all other nights we dip only once, but on this night twice?"
+
+The double dipping became the sign by which Jesus identified His betrayer. When Judas asked, "Is it I?" Jesus answered with the sop — the bread dipped in charoseth — handing it to the one who sat in the place of honour at His left: "He that dippeth his hand with me in the dish, the same shall betray me" (Matthew 26:23). What should have been a gesture of fellowship became the marker of treachery.
+
+*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
+</div>
+</details>
+
 ---
 
 ## Reflection Questions
