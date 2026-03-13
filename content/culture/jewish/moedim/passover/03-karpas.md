@@ -65,6 +65,21 @@ Each Seder step resonates across four covenant settings: the traditional Jewish 
 
 **At the Seder Table:** The green herbs dipped in salt water unite new life with tears — spring growth meeting the bitterness of bondage. The Midrash (Exodus Rabbah 17:3) teaches that even the hyssop — the lowliest of plants — accomplished the greatest redemption, for it was used to apply the Paschal blood to the doorposts.
 
+<details class="seder-dropdown seder-dropdown--seder">
+<summary>At the Seder Table — The Herbs and the Questions</summary>
+<div class="seder-dropdown-body">
+
+Edersheim records the sequence following the first washing: "The president of the feast first took some of the herbs, dipped them in salt water, ate of them, and gave to the others." Then came a deliberately provocative act — "all the dishes were removed from the table (as it was thought so strange a proceeding would tend to excite the more curiosity)."
+
+This strategic removal set the stage for the most important moment of the early Seder: the child's questions. The second cup was filled, and the youngest at the table was directed to ask: *"Why is this night distinguished from all other nights? On all other nights we eat leavened or unleavened bread, but on this night only unleavened bread? On all other nights we eat any kind of herbs, but on this night only bitter herbs? On all other nights we dip only once, but on this night twice?"*
+
+Everything in the Seder was designed to provoke curiosity — especially in the children. The strange act of removing the dishes, the unusual herbs in salt water — all of it was pedagogical, an invitation to ask and to learn.
+
+*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
+</div>
+</details>
+
 **At the Last Supper:** At the table, Jesus dipped a morsel and gave it to Judas (John 13:26). The salt water of betrayal met the green of new life in a single act. What seemed like the end — the betrayal — became the gateway to the greatest deliverance in all of history.
 
 <details class="seder-dropdown seder-dropdown--supper">
@@ -100,6 +115,21 @@ Just as the green herbs dipped in salt water remind us that sorrow and hope are 
 </details>
 
 **On the Covenant Path Today:** President Nelson promises that "the reward for keeping covenants with God is heavenly power — power that strengthens us to withstand our trials, temptations, and heartaches better" ("Overcome the World and Find Rest," 2022). The salt water of our own tears meets the green of covenant hope — and from that meeting, new life springs.
+
+<details class="seder-dropdown seder-dropdown--temple">
+<summary>On the Covenant Path — Leaving Babylon</summary>
+<div class="seder-dropdown-body">
+
+The salt water of Karpas recalls the tears of bondage — but it also points forward to the call to leave bondage behind. In the latter days, the Lord uses the same Exodus language: *"Go ye out from Babylon... go ye out from among the nations, even from Babylon, from the midst of wickedness"* (D&C 133:5, 14).
+
+The D&C Weekly Insights on the Four Cups explains that this is Exodus language applied to the latter days. Just as Israel left physical Egypt, we are called to leave spiritual Babylon. And just as Israel was led by the blood of the lamb, we are led by Christ, the Lamb of God.
+
+The Karpas dipping teaches that tears and deliverance are inseparable — the salt water of sorrow and the green of new life are tasted together. On the covenant path, leaving Babylon always involves grief for what we leave behind and hope for what we walk toward. The covenant does not promise a life without tears — it promises that the tears lead somewhere.
+
+*Source: Weekly Insights, D&C 133-136*
+
+</div>
+</details>
 
 ---
 

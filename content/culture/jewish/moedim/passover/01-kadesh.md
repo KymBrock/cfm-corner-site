@@ -68,6 +68,21 @@ Each Seder step resonates across four covenant settings: the traditional Jewish 
 
 **At the Seder Table:** The first cup is the Cup of Sanctification — corresponding to God's first promise in Exodus 6:6: "I will bring you out from under the burdens of the Egyptians." Before anything else, the evening is consecrated. The sacred cannot begin without setting apart.
 
+<details class="seder-dropdown seder-dropdown--seder">
+<summary>At the Seder Table — The Kiddush Prayer</summary>
+<div class="seder-dropdown-body">
+
+Edersheim records the full Kiddush prayer spoken over the first cup: *"Blessed art Thou, Jehovah our God, who has created the fruit of the vine! Blessed art Thou, Jehovah our God King of the Universe, who hast chosen us from among all people, and exalted us from among all languages, and sanctified us with Thy commandments! And Thou hast given us, O Jehovah our God, in love, the solemn days for joy, and the festivals and appointed seasons for gladness; and this the day of the feast of unleavened bread, the season of our freedom, a holy convocation, the memorial of our departure from Egypt."* The prayer concluded: *"Blessed art Thou, O Jehovah, who sanctifiest Israel and the appointed seasons!"*
+
+The guests came no longer as at the first Passover — with loins girded, shoes on feet, and staff in hand. Instead, Edersheim notes, "they were arrayed in their best festive garments, joyous and at rest, as became the children of a king." The Rabbis insisted on a recumbent posture: "For they use this leaning posture, as free men do, in memorial of their freedom." And again: "No, not the poorest in Israel may eat till he has sat down, leaning."
+
+Even the wine reflected this dignity. The Jerusalem Talmud records that even the poorest must have at least four cups, "though he were to receive the money for it from the poor's box." If he could not otherwise obtain it, "he must sell or pawn his coat, or hire himself out for these four cups of wine." The joy of redemption was not optional — it belonged to everyone.
+
+*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
+</div>
+</details>
+
 **At the Last Supper:** Jesus took this cup, gave thanks, and declared He would not drink of the fruit of the vine until the kingdom comes (Luke 22:17–18). He sanctified the evening for its sacred, final purpose — transforming the Passover into the institution of the new covenant.
 
 <details class="seder-dropdown seder-dropdown--supper">
@@ -86,6 +101,21 @@ The four cups of the Seder correspond to four promises in Exodus 6:6-7. The firs
 </details>
 
 **In the Nephite Assembly:** Alma opens his great sermon by establishing his priestly authority: "I, Alma, having been *consecrated* by my father, Alma, to be a high priest over the church of God" (Alma 5:3). The Hebrew root is the same — *kadesh*. The Nephite Seder begins, like every Seder, with sanctification.
+
+<details class="seder-dropdown seder-dropdown--alma">
+<summary>In the Nephite Assembly — Alma 5: Consecration and Authority</summary>
+<div class="seder-dropdown-body">
+
+The Hebrew root *kadesh* means "holy," "sanctified," or "consecrated." Alma opens his great sermon with precisely this concept — establishing both his authority and the sacred nature of the assembly:
+
+> "I, Alma, having been *consecrated* by my father, Alma, to be a high priest over the church of God, he having power and authority from God to do these things..." — Alma 5:3
+
+Just as Kadesh at the Seder table sets the evening apart as sacred before anything else can begin, Alma's first words consecrate his ministry and establish the covenantal context for everything that follows. The pattern holds: before the story can be told, before the questions can be asked, before the bread can be broken — there must first be sanctification.
+
+> "Have ye sufficiently retained in remembrance the captivity of your fathers? Yea, and have ye sufficiently retained in remembrance his mercy and long-suffering towards them?" — Alma 5:6
+
+</div>
+</details>
 
 **On the Covenant Path Today:** President Nelson teaches that baptism is "the gate that leads to becoming joint heirs to all the promises given anciently by the Lord to Abraham, Isaac, Jacob, and their posterity" ("The Everlasting Covenant," 2022). Our covenant journey begins, like the Seder, with sanctification — being set apart for a sacred purpose.
 

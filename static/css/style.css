@@ -1580,6 +1580,7 @@ a.RTBData:hover, a.BLBST_a:hover {
 .seder-dropdown--alma { border-left: 4px solid var(--gold, #d5a93c); }
 .seder-dropdown--temple { border-left: 4px solid var(--copper, #c37c3c); }
 .seder-dropdown--supper { border-left: 4px solid #5a7a9a; }
+.seder-dropdown--seder { border-left: 4px solid var(--terracotta, #c65528); }
 
 /* Culture & Library responsive */
 @media (max-width: 768px) {

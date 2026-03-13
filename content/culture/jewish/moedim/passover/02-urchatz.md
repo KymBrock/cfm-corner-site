@@ -59,6 +59,19 @@ Each Seder step resonates across four covenant settings: the traditional Jewish 
 
 **At the Seder Table:** The hands are washed silently — no blessing is spoken. This first washing is preparation, not completion. It readies the participant to handle the sacred herbs that follow.
 
+<details class="seder-dropdown seder-dropdown--seder">
+<summary>At the Seder Table — The First Washing</summary>
+<div class="seder-dropdown-body">
+
+After the first cup was drunk, Edersheim records that "each washed his hands." A customary prayer was repeated: *"Blessed art Thou, Jehovah our God, who hast sanctified us with Thy commandments, and hast enjoined us concerning the washing of our hands."*
+
+Two different kinds of washing were prescribed by tradition — "dipping" and "pouring." At the Paschal Supper, the hands were to be "dipped" in water. This first washing was preparatory — readying the participants to handle the sacred herbs that would follow.
+
+*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
+</div>
+</details>
+
 **At the Last Supper:** Ritual purity was observed at every Passover meal. This initial handwashing precedes the meal itself. The deeper washing — Jesus washing His disciples' feet — comes later at Rachtzah (Step 6), after the story has been told.
 
 <details class="seder-dropdown seder-dropdown--supper">
@@ -78,7 +91,39 @@ Peter's resistance to the washing — and then his eager overcorrection — make
 
 **In the Nephite Assembly:** Alma's father "baptized his brethren in the waters of Mormon" (Alma 5:3). The first act of entering Alma's covenant community was washing — water as the gate into the covenant. Alma reminds his people they must be "cleansed from all sin" (Alma 5:21).
 
+<details class="seder-dropdown seder-dropdown--alma">
+<summary>In the Nephite Assembly — Alma 5: The Waters of Mormon</summary>
+<div class="seder-dropdown-body">
+
+Urchatz — the first washing — finds its echo in the opening verses of Alma's sermon. Having just established his consecration (Kadesh), Alma immediately turns to the act of washing:
+
+> "Yea, and he did baptize his brethren in the waters of Mormon." — Alma 5:3
+
+The sequence mirrors the Seder exactly: first sanctification, then washing. Alma's father established the covenant community not with a sermon but with an act of immersion — a washing that marked the boundary between the old life and the new. The waters of Mormon were the Nephite Urchatz — the preparatory step that readied a people to receive the sacred things that would follow.
+
+> "Have ye sufficiently retained in remembrance his mercy and long-suffering towards them?" — Alma 5:6
+
+</div>
+</details>
+
 **On the Covenant Path Today:** Elder Bednar teaches that baptism and the sacrament "are not isolated and discrete events; rather, they are elements in an interrelated and additive pattern" ("Always Retain a Remission of Your Sins," 2016). The first washing is the beginning of the covenant journey — not the whole of it.
+
+<details class="seder-dropdown seder-dropdown--temple">
+<summary>On the Covenant Path — Entering the Covenant</summary>
+<div class="seder-dropdown-body">
+
+The first washing at the Seder table is a preparatory act — making oneself ready to handle sacred things. On the covenant path, baptism serves this same purpose: it is the gate through which we enter.
+
+The D&C Weekly Insights on the Four Cups describes the gospel covenant in the language of an ancient marriage: through sacred ordinances — baptism, confirmation, temple covenants — we enter into a covenant relationship with Christ that mirrors a marriage contract. We take upon ourselves His name, just as a bride takes her husband's name. We promise fidelity to Him alone. He promises to provide, protect, and redeem us.
+
+> "Except a man be born of water and of the Spirit, he cannot enter into the kingdom of God." — John 3:5
+
+The first washing is the beginning — not the end — of the covenant journey. It opens the door to everything that follows.
+
+*Source: Weekly Insights, D&C 133-136*
+
+</div>
+</details>
 
 ---
 
