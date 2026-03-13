@@ -46,17 +46,7 @@ Here, Christ was teaching us to submit to His sanctifying grace, and to do likew
 
 ---
 
-## The Covenant Pattern
-
-Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
-
-**At the Seder Table:** This second washing comes *after* the Maggid — after the story of deliverance has been told. It is deeper than the first. A blessing is now spoken. The participant is preparing not just for the meal, but for sacred communion with God.
-
-**At the Last Supper:** Jesus washes His disciples' feet at this stage of the meal (John 13:4–5, 10): "He that is washed needeth not save to wash his feet, but is clean every whit." The initial cleansing of the covenant is not enough. A deeper purification — one that reaches the most intimate and humble parts of us — is required.
-
-**In the Nephite Assembly:** Alma presses his people: "Can ye look up to God at that day with a pure heart and clean hands?" (Alma 5:19). The initial baptism (Urchatz) opened the covenant. But ongoing purification — the Rachtzah — is what sustains it.
-
-**On the Covenant Path Today:** Elder Bednar teaches that "by the sanctifying power of the Holy Ghost as our constant companion, we can always retain a remission of our sins" ("Always Retain a Remission of Your Sins," 2016). The second washing is the ongoing work of sanctification — the covenant renewed each week through the sacrament, each day through repentance, each moment we turn to the Lord.
+## Scripture Connection
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 125: A Song of Ascents</summary>
@@ -75,18 +65,15 @@ Psalm 125 speaks of the security of those who trust in the Lord — as unshakeab
 </div>
 </details>
 
-<details class="seder-dropdown seder-dropdown--alma">
-<summary>In the Nephite Assembly — Alma 5: The Song of Redeeming Love</summary>
-<div class="seder-dropdown-body">
+---
 
-Rachtzah is the deeper washing — the sanctification that follows the initial covenant. Alma connects this inner transformation to the question that defines ongoing faithfulness:
+## The Covenant Pattern
 
-> "And now behold, I say unto you, my brethren, if ye have experienced a change of heart, and if ye have felt to sing the song of redeeming love, I would ask, can ye feel so now?" — Alma 5:26
+Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
 
-The second washing is not a one-time event but a continuous renewal. Alma does not ask whether they *once* felt it — he asks whether they *can feel so now*. The song of redeeming love must be sung again and again, just as the hands are washed again at Rachtzah.
+**At the Seder Table:** This second washing comes *after* the Maggid — after the story of deliverance has been told. It is deeper than the first. A blessing is now spoken. The participant is preparing not just for the meal, but for sacred communion with God.
 
-</div>
-</details>
+**At the Last Supper:** Jesus washes His disciples' feet at this stage of the meal (John 13:4–5, 10): "He that is washed needeth not save to wash his feet, but is clean every whit." The initial cleansing of the covenant is not enough. A deeper purification — one that reaches the most intimate and humble parts of us — is required.
 
 <details class="seder-dropdown seder-dropdown--supper">
 <summary>At the Last Supper — The Second Washing</summary>
@@ -102,6 +89,23 @@ The deeper significance is that this second washing was not optional or merely c
 
 </div>
 </details>
+
+**In the Nephite Assembly:** Alma presses his people: "Can ye look up to God at that day with a pure heart and clean hands?" (Alma 5:19). The initial baptism (Urchatz) opened the covenant. But ongoing purification — the Rachtzah — is what sustains it.
+
+<details class="seder-dropdown seder-dropdown--alma">
+<summary>In the Nephite Assembly — Alma 5: The Song of Redeeming Love</summary>
+<div class="seder-dropdown-body">
+
+Rachtzah is the deeper washing — the sanctification that follows the initial covenant. Alma connects this inner transformation to the question that defines ongoing faithfulness:
+
+> "And now behold, I say unto you, my brethren, if ye have experienced a change of heart, and if ye have felt to sing the song of redeeming love, I would ask, can ye feel so now?" — Alma 5:26
+
+The second washing is not a one-time event but a continuous renewal. Alma does not ask whether they *once* felt it — he asks whether they *can feel so now*. The song of redeeming love must be sung again and again, just as the hands are washed again at Rachtzah.
+
+</div>
+</details>
+
+**On the Covenant Path Today:** Elder Bednar teaches that "by the sanctifying power of the Holy Ghost as our constant companion, we can always retain a remission of our sins" ("Always Retain a Remission of Your Sins," 2016). The second washing is the ongoing work of sanctification — the covenant renewed each week through the sacrament, each day through repentance, each moment we turn to the Lord.
 
 ---
 

@@ -33,6 +33,26 @@ This fulfills the commandment in Exodus 13:8:
 
 > "You shall tell your son on that day, saying, 'It is because of what the Lord did for me when I came out of Egypt.'"
 
+<details class="seder-dropdown seder-dropdown--psalm">
+<summary>Shir HaMa'alot — Psalm 124: A Song of Ascents</summary>
+<div class="seder-dropdown-body">
+
+Psalm 124 is a hymn of gratitude for deliverance — "If it had not been the LORD who was on our side." This is the psalm of the Maggid, the telling: the psalmist recounts the peril and celebrates the escape. The snare is broken. The soul is escaped. This is the very story told at the Seder table — God's intervention when all seemed lost.
+
+**1** If it had not been the LORD who was on our side, now may Israel say;
+**2** If it had not been the LORD who was on our side, when men rose up against us:
+**3** Then they had swallowed us up quick, when their wrath was kindled against us:
+**4** Then the waters had overwhelmed us, the stream had gone over our soul:
+**5** Then the proud waters had gone over our soul.
+**6** Blessed be the LORD, who hath not given us as a prey to their teeth.
+**7** Our soul is escaped as a bird out of the snare of the fowlers: the snare is broken, and we are escaped.
+**8** Our help is in the name of the LORD, who made heaven and earth.
+
+<a href="https://www.blueletterbible.org/tools/interlinear/wlc-kjv/psa/124/1-8/" target="_blank">Study the Hebrew interlinear at Blue Letter Bible</a>
+
+</div>
+</details>
+
 ---
 
 ## The Parable of the Four Sons
@@ -142,29 +162,22 @@ Each Seder step resonates across four covenant settings: the traditional Jewish 
 
 **At the Last Supper:** Jesus reinterprets the entire Exodus narrative at the table. He is the Passover Lamb, the unleavened bread, the cup of redemption. The story is retold with a new center — not Moses, but the Messiah Himself. Everything the Maggid has pointed to for centuries now sits at the table, breaking bread.
 
-**In the Nephite Assembly:** Alma asks nearly fifty questions in a single sermon — far exceeding the Seder's traditional four. "Have ye sufficiently retained in remembrance the captivity of your fathers?" (Alma 5:6). His relentless questioning is the Maggid of the Nephite Seder — pressing his audience to internalize the pattern of deliverance not as distant history but as present spiritual reality.
-
-**On the Covenant Path Today:** President Nelson traces the covenant story from Adam's baptism through Abraham's promises through the Nephites to us, teaching that the Hebrew word *hesed* — covenantal lovingkindness — describes the unique love God extends to those in covenant ("The Everlasting Covenant," 2022). We retell the story of the Restoration just as Israel retells the Exodus — because the telling binds us to the covenant.
-
-<details class="seder-dropdown seder-dropdown--psalm">
-<summary>Shir HaMa'alot — Psalm 124: A Song of Ascents</summary>
+<details class="seder-dropdown seder-dropdown--supper">
+<summary>At the Last Supper — The Telling and the Second Cup</summary>
 <div class="seder-dropdown-body">
 
-Psalm 124 is a hymn of gratitude for deliverance — "If it had not been the LORD who was on our side." This is the psalm of the Maggid, the telling: the psalmist recounts the peril and celebrates the escape. The snare is broken. The soul is escaped. This is the very story told at the Seder table — God's intervention when all seemed lost.
+Edersheim records that the head of the house was to relate the whole national history — "commencing with Terah, Abraham's father, and telling of his idolatry, and continuing, in due order, the story of Israel up to their deliverance from Egypt and the giving of the Law; and the more fully he explained it all, the better." Rabbi Gamaliel, the teacher of St. Paul, taught that whoever does not explain three things — the Passover lamb, the unleavened bread, and the bitter herbs — has not fulfilled his duty.
 
-**1** If it had not been the LORD who was on our side, now may Israel say;
-**2** If it had not been the LORD who was on our side, when men rose up against us:
-**3** Then they had swallowed us up quick, when their wrath was kindled against us:
-**4** Then the waters had overwhelmed us, the stream had gone over our soul:
-**5** Then the proud waters had gone over our soul.
-**6** Blessed be the LORD, who hath not given us as a prey to their teeth.
-**7** Our soul is escaped as a bird out of the snare of the fowlers: the snare is broken, and we are escaped.
-**8** Our help is in the name of the LORD, who made heaven and earth.
+The prescribed liturgy concluded with this declaration: "He brought us forth from bondage into freedom, from sorrow into joy, from mourning to a festival, from darkness to a great light, and from slavery to redemption. Therefore let us sing before Him: Hallelujah!" Then the first part of the Hallel (Psalms 113-114) was sung, and the second cup was drunk.
 
-<a href="https://www.blueletterbible.org/tools/interlinear/wlc-kjv/psa/124/1-8/" target="_blank">Study the Hebrew interlinear at Blue Letter Bible</a>
+Jesus sat at this table and reinterpreted the entire narrative. He was Himself the Passover Lamb, the Unleavened Bread, and the one who would drink the bitter cup. The Maggid had always pointed forward — and now the One to whom it pointed was telling the story.
+
+*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
 
 </div>
 </details>
+
+**In the Nephite Assembly:** Alma asks nearly fifty questions in a single sermon — far exceeding the Seder's traditional four. "Have ye sufficiently retained in remembrance the captivity of your fathers?" (Alma 5:6). His relentless questioning is the Maggid of the Nephite Seder — pressing his audience to internalize the pattern of deliverance not as distant history but as present spiritual reality.
 
 <details class="seder-dropdown seder-dropdown--alma">
 <summary>In the Nephite Assembly — Alma 5: Believe the Words</summary>
@@ -179,6 +192,8 @@ The Maggid depends on someone having believed the words and passed them on. Abin
 </div>
 </details>
 
+**On the Covenant Path Today:** President Nelson traces the covenant story from Adam's baptism through Abraham's promises through the Nephites to us, teaching that the Hebrew word *hesed* — covenantal lovingkindness — describes the unique love God extends to those in covenant ("The Everlasting Covenant," 2022). We retell the story of the Restoration just as Israel retells the Exodus — because the telling binds us to the covenant.
+
 <details class="seder-dropdown seder-dropdown--temple">
 <summary>Temple Covenant — The Law of the Gospel</summary>
 <div class="seder-dropdown-body">
@@ -190,21 +205,6 @@ In the temple, the **Law of the Gospel** provides the instruction — the Torah,
 > "And now, if ye have been taught, ye know that ye must observe to do them." — Mosiah 12:25 (Abinadi, quoting the commandments)
 
 The second cup is raised in gratitude not only for freedom but for the divine instruction that sustains it.
-
-</div>
-</details>
-
-<details class="seder-dropdown seder-dropdown--supper">
-<summary>At the Last Supper — The Telling and the Second Cup</summary>
-<div class="seder-dropdown-body">
-
-Edersheim records that the head of the house was to relate the whole national history — "commencing with Terah, Abraham's father, and telling of his idolatry, and continuing, in due order, the story of Israel up to their deliverance from Egypt and the giving of the Law; and the more fully he explained it all, the better." Rabbi Gamaliel, the teacher of St. Paul, taught that whoever does not explain three things — the Passover lamb, the unleavened bread, and the bitter herbs — has not fulfilled his duty.
-
-The prescribed liturgy concluded with this declaration: "He brought us forth from bondage into freedom, from sorrow into joy, from mourning to a festival, from darkness to a great light, and from slavery to redemption. Therefore let us sing before Him: Hallelujah!" Then the first part of the Hallel (Psalms 113-114) was sung, and the second cup was drunk.
-
-Jesus sat at this table and reinterpreted the entire narrative. He was Himself the Passover Lamb, the Unleavened Bread, and the one who would drink the bitter cup. The Maggid had always pointed forward — and now the One to whom it pointed was telling the story.
-
-*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
 
 </div>
 </details>

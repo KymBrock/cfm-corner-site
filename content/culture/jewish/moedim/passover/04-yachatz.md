@@ -35,17 +35,7 @@ This act marks a **turning point** in the Seder: the bread is broken *before* th
 
 ---
 
-## The Covenant Pattern
-
-Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
-
-**At the Seder Table:** The middle matzah is broken in two. The larger piece — the *afikomen* — is wrapped and hidden, to be found later. Brokenness precedes the story. The bread must be broken before the telling can begin.
-
-**At the Last Supper:** Jesus "took bread, and gave thanks, and brake it, and gave unto them, saying, This is my body which is given for you: this do in remembrance of me" (Luke 22:19). This is the moment of institution — the matzah that had been broken at every Seder now becomes the body of the Messiah, broken for the world.
-
-**In the Nephite Assembly:** Alma asks whether his people have experienced "a mighty change wrought in his heart" (Alma 5:12). The breaking of the heart precedes the mighty change. And when the risen Christ administers the sacrament among the Nephites, the language echoes the same covenant: "in remembrance of the body of thy Son" (Moroni 4:3).
-
-**On the Covenant Path Today:** Elder Bednar teaches that we partake of the sacrament "with a broken heart and a contrite spirit" — and that this is "a holy and repeated invitation to repent sincerely and to be renewed spiritually" ("Always Retain a Remission of Your Sins," 2016). Every Sabbath, we break bread again. The pattern repeats because the need for brokenness before redemption never changes.
+## Scripture Connection
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 123: A Song of Ascents</summary>
@@ -63,18 +53,15 @@ Psalm 123 turns the pilgrim's eyes upward to the One who dwells in the heavens, 
 </div>
 </details>
 
-<details class="seder-dropdown seder-dropdown--alma">
-<summary>In the Nephite Assembly — Alma 5: Bands of Death Broken</summary>
-<div class="seder-dropdown-body">
+---
 
-At Yachatz, the matzah is broken — and from that breaking comes the hidden promise of the Afikoman, the redemption yet to be revealed. Alma echoes this pattern, pointing to a breaking that brings freedom:
+## The Covenant Pattern
 
-> "And again I ask, were the bands of death broken, and the chains of hell which encircled them about, were they loosed? I say unto you, Yea, they were loosed, and their souls did expand, and they did sing redeeming love." — Alma 5:9
+Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
 
-The bands of death were broken — just as the bread is broken. From that breaking came liberation, expansion, and song.
+**At the Seder Table:** The middle matzah is broken in two. The larger piece — the *afikomen* — is wrapped and hidden, to be found later. Brokenness precedes the story. The bread must be broken before the telling can begin.
 
-</div>
-</details>
+**At the Last Supper:** Jesus "took bread, and gave thanks, and brake it, and gave unto them, saying, This is my body which is given for you: this do in remembrance of me" (Luke 22:19). This is the moment of institution — the matzah that had been broken at every Seder now becomes the body of the Messiah, broken for the world.
 
 <details class="seder-dropdown seder-dropdown--supper">
 <summary>At the Last Supper — The Breaking of Bread</summary>
@@ -88,6 +75,23 @@ This early breaking at Yachatz produces the Aphikomen — the piece hidden and f
 
 </div>
 </details>
+
+**In the Nephite Assembly:** Alma asks whether his people have experienced "a mighty change wrought in his heart" (Alma 5:12). The breaking of the heart precedes the mighty change. And when the risen Christ administers the sacrament among the Nephites, the language echoes the same covenant: "in remembrance of the body of thy Son" (Moroni 4:3).
+
+<details class="seder-dropdown seder-dropdown--alma">
+<summary>In the Nephite Assembly — Alma 5: Bands of Death Broken</summary>
+<div class="seder-dropdown-body">
+
+At Yachatz, the matzah is broken — and from that breaking comes the hidden promise of the Afikoman, the redemption yet to be revealed. Alma echoes this pattern, pointing to a breaking that brings freedom:
+
+> "And again I ask, were the bands of death broken, and the chains of hell which encircled them about, were they loosed? I say unto you, Yea, they were loosed, and their souls did expand, and they did sing redeeming love." — Alma 5:9
+
+The bands of death were broken — just as the bread is broken. From that breaking came liberation, expansion, and song.
+
+</div>
+</details>
+
+**On the Covenant Path Today:** Elder Bednar teaches that we partake of the sacrament "with a broken heart and a contrite spirit" — and that this is "a holy and repeated invitation to repent sincerely and to be renewed spiritually" ("Always Retain a Remission of Your Sins," 2016). Every Sabbath, we break bread again. The pattern repeats because the need for brokenness before redemption never changes.
 
 ---
 
