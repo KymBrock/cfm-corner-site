@@ -34,6 +34,8 @@ Joseph's story reminds us that **grief and betrayal can become the gateway to de
 
 ## Scripture Connection
 
+The fifteen Songs of Ascents (Psalms 120–134) were part of the feast day traditions at the Temple, with records indicating the Levites sang them on the fifteen steps between the courts. Each psalm is paired here with its corresponding Seder step. For more on the connections between the Seder and Alma's sermon, see [Alma 5: The Nephite Seder](/study-library/articles/alma5-nephite-seder/).
+
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 122: A Song of Ascents</summary>
 <div class="seder-dropdown-body">

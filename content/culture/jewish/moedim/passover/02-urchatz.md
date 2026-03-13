@@ -29,6 +29,8 @@ Just as the Israelites passed through the Red Sea to begin their journey toward 
 
 ## Scripture Connection
 
+The fifteen Songs of Ascents (Psalms 120–134) were part of the feast day traditions at the Temple, with records indicating the Levites sang them on the fifteen steps between the courts. Each psalm is paired here with its corresponding Seder step. For more on the connections between the Seder and Alma's sermon, see [Alma 5: The Nephite Seder](/study-library/articles/alma5-nephite-seder/).
+
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 121: A Song of Ascents</summary>
 <div class="seder-dropdown-body">
