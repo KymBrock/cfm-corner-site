@@ -75,6 +75,21 @@ Psalm 133 celebrates the goodness and pleasantness of unity — like the anointi
 </div>
 </details>
 
+<details class="seder-dropdown seder-dropdown--supper">
+<summary>At the Last Supper — The Hymn Before Gethsemane</summary>
+<div class="seder-dropdown-body">
+
+Edersheim records that "the service concluded with the fourth cup, over which the second portion of the 'Hallel' was sung, consisting of Psalms 115, 116, 117, and 118." The whole evening ended with the "blessing of the song" — two brief prayers that began: *"All Thy works shall praise Thee, Jehovah our God"* and *"The breath of all that lives shall praise Thy name, Jehovah our God."*
+
+"And when they had sung an hymn, they went out into the mount of Olives" (Matthew 26:30). This was the Hallel — the same psalms Israel had sung for centuries — now sung by Jesus and His disciples as their last act together before the Atonement began. In the Temple, the Hallel had been sung responsively while the Paschal lambs were slain, the Levites leading and the people answering "Hallelujah!" Now, in the Upper Room, the Lamb Himself sang the praise.
+
+Psalm 118 — the climax of the Hallel — contains the very words the crowds had shouted days earlier at His triumphal entry: "Blessed be he that cometh in the name of the Lord" (Psalm 118:26). And the declaration: "The stone which the builders refused is become the head stone of the corner" (Psalm 118:22). The rejected one would be exalted — but first, He would walk from this table into the garden.
+
+*Sources: Edersheim, The Temple: Its Ministry and Services, Ch. 11-12; POM Extract 16*
+
+</div>
+</details>
+
 <details class="seder-dropdown seder-dropdown--alma">
 <summary>In the Nephite Assembly — Alma 5: Praise and Pride</summary>
 <div class="seder-dropdown-body">

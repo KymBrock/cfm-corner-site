@@ -93,6 +93,21 @@ Psalm 132 celebrates David's oath to find a habitation for the Lord and God's an
 </div>
 </details>
 
+<details class="seder-dropdown seder-dropdown--supper">
+<summary>At the Last Supper — The Cup of Blessing</summary>
+<div class="seder-dropdown-body">
+
+Edersheim writes: "There cannot be any reasonable doubt that this was the cup which our Lord connected with His own Supper. It is called in Jewish writings, just as by St. Paul (1 Cor 10:16), 'the cup of blessing,' partly because it and the first cup required a special 'blessing,' and partly because it followed on the 'grace after meat.'" The Talmud notes ten peculiarities about this cup, showing the special value set upon it.
+
+After the Paschal meal was finished — the lamb eaten, the Aphikomen shared — hands were washed again and the third cup filled. A special blessing was spoken over it. Then Jesus, "using the Aphikomen 'when He had given thanks' (after meat), to symbolise His body, and the third cup, or 'cup of blessing which we bless' (1 Cor 10:16) — being 'the cup after supper' (Luke 22:20) — to symbolise His blood."
+
+The D&C Weekly Insights on the Four Cups describes the third cup as the Cup of Redemption, linked to the Hebrew *ga'al* — from which we get *goel*, the kinsman redeemer. Christ is our ultimate Goel: He redeems us from slavery, pays the bride price with His own blood, restores our lost inheritance, and takes us as His own in eternal covenant.
+
+*Sources: Edersheim, The Temple: Its Ministry and Services, Ch. 12; Weekly Insights, D&C 133-136*
+
+</div>
+</details>
+
 <details class="seder-dropdown seder-dropdown--temple">
 <summary>Temple Covenant — The Law of Chastity</summary>
 <div class="seder-dropdown-body">

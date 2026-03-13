@@ -70,6 +70,25 @@ Psalm 134 is the final Song of Ascents — a brief, tender benediction. The serv
 </div>
 </details>
 
+<details class="seder-dropdown seder-dropdown--supper">
+<summary>At the Last Supper — From the Table to Gethsemane</summary>
+<div class="seder-dropdown-body">
+
+"And when they had sung an hymn, they went out into the mount of Olives" (Matthew 26:30). The Seder was complete — the four cups drunk, the Hallel sung, the Paschal meal finished. What followed was not another step in the liturgy but the offering itself.
+
+Edersheim writes: "Then it was that the Lord's great heaviness and loneliness came upon Him; when all around seemed to give way, as if crushed under the terrible burden about to be lifted; when His disciples could not watch with Him even one hour." In the agony of His soul, "His sweat was as it were great drops of blood, falling down to the ground" (Luke 22:44). And He prayed: "O my Father, if it be possible, let this cup pass from Me: nevertheless not as I will, but as Thou wilt" (Matthew 26:39).
+
+The word *nirtzah* — acceptance — finds its deepest expression here. The Son offered Himself, and the Father accepted. "When He had offered up prayers and supplications with strong crying and tears unto Him that was able to save Him from death, and was heard in that He feared; though He were a Son, yet learned He obedience by the things which He suffered; and being made perfect, He became the author of eternal salvation unto all them that obey Him" (Hebrews 5:7–9).
+
+Edersheim concludes: "Thus the 'Lamb without blemish and without spot, who verily was foreordained before the foundation of the world' (1 Peter 1:20) — and, indeed, 'slain from the foundation of the world' (Revelation 13:8) — was selected, ready, willing, and waiting. It only remained, that it should be actually offered up as 'the propitiation for our sins: and not for ours only, but also for the whole world' (1 John 2:2)."
+
+The Seder that began with Kadesh — sanctification — ends with Nirtzah — acceptance. The Lamb who was set apart is now offered. The offering is accepted. The pattern is complete.
+
+*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
+</div>
+</details>
+
 <details class="seder-dropdown seder-dropdown--alma">
 <summary>In the Nephite Assembly — Alma 5: Acceptance and the Book of Life</summary>
 <div class="seder-dropdown-body">
