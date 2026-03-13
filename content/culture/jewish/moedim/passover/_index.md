@@ -112,6 +112,30 @@ The Seder is structured around four cups of wine (or grape juice), each tied to 
 
 <br>
 
+## Before the First Cup: The Covenant at the Door
+
+Before the Seder begins — before the first cup is poured — there was a covenant act at the threshold.
+
+On the night of the Passover, each family was commanded to take a lamb, slay it, and apply its blood to the doorposts and lintel of their home:
+
+> "And they shall take of the blood, and strike it on the two side posts and on the upper door post of the houses, wherein they shall eat it." — Exodus 12:7
+
+> "And the blood shall be to you for a token upon the houses where ye are: and when I see the blood, I will pass over you." — Exodus 12:13
+
+This was not merely ritual — it was a **choice**. Every household who marked their door was declaring: *We choose to hear and obey the Lord.* This act of obedience preceded the deliverance. Before God brought them out, before He delivered or redeemed them, before He took them as His people — they had to choose first. The blood on the doorpost was the sign of that choice.
+
+**The Temple Covenant:** In the temple, the first covenant we make is the **Law of Obedience** — a promise to hear the Lord's voice and keep His commandments. The Passover doorpost is the ancient echo of this covenant. Before the four cups of promise unfold, we stand at the door and choose: *Will I hear His voice and obey?*
+
+> "And I will walk among you, and will be your God, and ye shall be my people." — Leviticus 26:12
+
+This covenant at the door is the foundation upon which all that follows is built.
+
+<br>
+
+---
+
+<br>
+
 ## The 15 Steps of the Seder
 
 The Seder unfolds in a deliberate order — from sanctification to acceptance, from bondage to freedom. Each step below explores the Hebrew meaning, the action, the symbolism, and its connection to the Savior's mission.
