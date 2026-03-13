@@ -15,7 +15,7 @@ This observance is traditionally associated with the recitation of songs, which 
 
 This article presents an interpretive reading, not a claim of direct textual dependence. But the structural parallels are striking, and they invite us to read Alma 5 with fresh eyes — as a prophet leading his people through an ancient pattern of covenant renewal that points, at every step, toward the Savior.
 
-For a detailed exploration of each Seder step with its traditional Jewish context, see the [Passover Seder guide](/culture/jewish/moedim/passover/) in the Culture section.
+For a detailed exploration of each Seder step — including the Songs of Ascent (Psalms 120–134), expanded Last Supper connections from Edersheim, Temple covenant parallels, and additional Alma 5 citations — see the [Passover Seder guide](/culture/jewish/moedim/passover/) in the Culture section. Each step page includes collapsible "Explore Further" sections with primary source content.
 
 ---
 
@@ -48,6 +48,8 @@ If the Passover pattern is cosmic — woven into the fabric of creation, observe
 ---
 
 ## Part I: Preparation for the Coming of the Messiah
+
+*Explore these steps in detail: [Kadesh](/culture/jewish/moedim/passover/01-kadesh/) | [Urchatz](/culture/jewish/moedim/passover/02-urchatz/) | [Karpas](/culture/jewish/moedim/passover/03-karpas/) | [Yachatz](/culture/jewish/moedim/passover/04-yachatz/) | [Maggid](/culture/jewish/moedim/passover/05-maggid/)*
 
 ### Step 1: Kadesh — קֹדֶשׁ — "Sanctify"
 
@@ -106,6 +108,8 @@ The traditional Maggid also includes the telling of the Four Sons (the Wise, the
 ---
 
 ## Part II: The Life and Ministry of Jesus Christ
+
+*Explore these steps in detail: [Rachtzah](/culture/jewish/moedim/passover/06-rachtzah/) | [Motzi](/culture/jewish/moedim/passover/07-motzi/) | [Matzah](/culture/jewish/moedim/passover/08-matzah/) | [Maror](/culture/jewish/moedim/passover/09-maror/) | [Korech](/culture/jewish/moedim/passover/10-korech/) | [Shulchan Orech](/culture/jewish/moedim/passover/11-shulchan-orech/)*
 
 ### Step 6: Rachtzah — רָחַץ — "Wash Again"
 
@@ -175,6 +179,8 @@ Alma extends a direct invitation to partake: "Come and fear not, and lay aside e
 ---
 
 ## Part III: The Resurrection, Gathering of Israel, Second Coming, and Millennium
+
+*Explore these steps in detail: [Tzafun](/culture/jewish/moedim/passover/12-tzafun/) | [Barech](/culture/jewish/moedim/passover/13-barech/) | [Hallel](/culture/jewish/moedim/passover/14-hallel/) | [Nirtzah](/culture/jewish/moedim/passover/15-nirtzah/)*
 
 ### Step 12: Tzafun — צָפוּן — "Hidden"
 
@@ -271,7 +277,8 @@ Each question is a step in the ascending pattern — pressing deeper, demanding 
 
 **Scholarship:**
 - Liebreich, Leon J. "The Songs of Ascents and the Priestly Blessing." *Journal of Biblical Literature* 74, no. 1 (1955): 33–36.
-- Edersheim, Alfred. *The Temple: Its Ministry and Services*, Ch. 11: The Passover.
+- Edersheim, Alfred. *The Temple: Its Ministry and Services*, Ch. 11: The Passover; Ch. 12: The Paschal Feast and the Lord's Supper.
+- Edersheim, Alfred. *The Life and Times of Jesus the Messiah*, Book 5, Ch. 10: The Paschal Supper — The Institution of the Lord's Supper.
 
 **Related:**
-- [The Passover Seder — A Messianic Seder Guide](/culture/jewish/moedim/passover/) (CFM Corner Culture Section)
+- [The Passover Seder — A Messianic Seder Guide](/culture/jewish/moedim/passover/) (CFM Corner Culture Section — includes expanded Last Supper, Temple covenant, and Alma 5 dropdowns for each step)
