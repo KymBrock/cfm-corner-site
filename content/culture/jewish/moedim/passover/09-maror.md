@@ -65,6 +65,19 @@ Each Seder step resonates across four covenant settings: the traditional Jewish 
 
 **At the Seder Table:** The bitter herbs recall the bitterness of bondage in Egypt — tasted and remembered, not avoided. The covenant does not promise the absence of suffering. It promises deliverance *through* suffering.
 
+<details class="seder-dropdown seder-dropdown--seder">
+<summary>At the Seder Table — The Five Bitter Herbs</summary>
+<div class="seder-dropdown-body">
+
+The Mishnah (Pesachim ii. 6) names five kinds of herbs that fulfill the requirement of bitter herbs: lettuce, endive, succory, what is called *charchavina* (perhaps beets or urtica), and horehound (bitter coriander). The bitter herbs were eaten twice during the service — once dipped in salt water or vinegar, and a second time with *charoseth*, a paste of dates, raisins, and vinegar that represented the mortar of Egypt.
+
+Edersheim notes that although the Mishnah "expressly declares that Charoseth was not obligatory," its use gave the bitter herbs a sweet counterpoint — the mortar of slavery mixed with the sweetness of hope. The bitterness was real, but it was not the whole story. Even in Egypt's bondage, the promise of deliverance was present.
+
+*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
+</div>
+</details>
+
 **At the Last Supper:** Gethsemane follows immediately after the Seder meal. The bitter herbs at the table foreshadow the bitter cup: "O my Father, if it be possible, let this cup pass from me: nevertheless not as I will, but as thou wilt" (Matthew 26:39). Jesus tasted the full bitterness of mortality so that He could succor those who taste it after Him.
 
 <details class="seder-dropdown seder-dropdown--supper">
@@ -100,6 +113,21 @@ The Maror is tasted within the Seder — within the covenant meal — which mean
 </details>
 
 **On the Covenant Path Today:** President Nelson assures covenant-keepers that they receive "heavenly power — power that strengthens us to withstand our trials, temptations, and heartaches better" ("Overcome the World and Find Rest," 2022). The bitterness of mortality is real — but the covenant provides the power to endure it and be transformed by it.
+
+<details class="seder-dropdown seder-dropdown--temple">
+<summary>On the Covenant Path — The Bitter Cup and the Covenant</summary>
+<div class="seder-dropdown-body">
+
+The bitter herbs are tasted within the covenant meal — not outside it. The bitterness is real, but it is held within the framework of redemption. This is the pattern of the covenant path: suffering is not avoided but transformed.
+
+In Gethsemane, Christ prayed: *"O my Father, if it be possible, let this cup pass from me: nevertheless not as I will, but as thou wilt"* (Matthew 26:39). He drank the bitter cup — the full weight of mortal suffering — so that our bitter moments might lead somewhere. As the D&C Weekly Insights on the Four Cups teaches, the cup of vengeance that the prophets foretold (Jeremiah 25:15) was drunk not by the nations but by the Lamb Himself.
+
+On the covenant path, we are not promised a life without bitterness. We are promised that the One who drank the bitterest cup walks beside us, transforms our suffering, and brings us through. The bitter herbs at the Seder table are always followed by the Korech — the sandwich that binds bitterness and hope together.
+
+*Source: Weekly Insights, D&C 133-136*
+
+</div>
+</details>
 
 ---
 

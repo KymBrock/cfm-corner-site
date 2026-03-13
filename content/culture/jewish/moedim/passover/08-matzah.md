@@ -60,7 +60,35 @@ Each Seder step resonates across four covenant settings: the traditional Jewish 
 
 **At the Seder Table:** The matzah is the bread of affliction — flat, humble, without the puffing of leaven. The Midrash (Exodus Rabbah 15) maps each Paschal element to a patriarch: the matzah corresponds to Sarah, whose quick preparation of bread for the visiting angels (Genesis 18:6) exemplifies responsive faith. Humility and obedience, not display.
 
+<details class="seder-dropdown seder-dropdown--seder">
+<summary>At the Seder Table — The Paschal Lamb Served Whole</summary>
+<div class="seder-dropdown-body">
+
+Edersheim records that the Paschal lamb "was roasted on a spit made of pomegranate wood, the spit passing right through from mouth to vent." Special care was taken that the lamb did not touch the oven — "it was intended to carry out the idea that the lamb was to be undefiled by any contact with foreign matter." Everything was significant: not a bone was to be broken, it was not to be "sodden at all with water, but roast with fire — his head with his legs, and with the purtenance thereof," and none was to remain until morning.
+
+"All this was intended to express that it was to be a complete and unbroken sacrifice, on the ground of which there was complete and unbroken fellowship with the God who had passed by the blood-sprinkled doors, and with those who together formed but one family and one body." The matzah eaten alongside the lamb shared this character of wholeness and purity — unleavened, undefiled, and offered in complete integrity.
+
+*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
+</div>
+</details>
+
 **At the Last Supper:** The matzah Jesus held was unleavened — sinless, humble, broken for His disciples. "This is my body which is given for you" (Luke 22:19). The bread He shared was the bread He became: without sin, without pride, offered in full submission to the Father's will.
+
+<details class="seder-dropdown seder-dropdown--supper">
+<summary>At the Last Supper — His Body and the Paschal Sacrifice</summary>
+<div class="seder-dropdown-body">
+
+Edersheim emphasizes that the Paschal sacrifice was unique — "quite out of the order of all Levitical sacrifices. For it had been instituted and observed before Levitical sacrifices existed; before the Law was given; nay, before the Covenant was ratified by blood." It belonged to neither the sin-offering nor the peace-offering, but combined them both.
+
+"Just as the priesthood of Christ was a real Old Testament priesthood, yet not after the order of Aaron, but after the earlier, prophetic, and royal order of Melchisedek, so the sacrifice also of Christ was a real Old Testament sacrifice, yet not after the order of Levitical sacrifices, but after that of the earlier prophetic Passover sacrifice, by which Israel had become a royal nation."
+
+The matzah Jesus blessed and broke was not merely bread — it was the culmination of a sacrificial pattern that predated the Law itself. The Lamb and the Bread were one: sinless, unbroken in fellowship, offered for the whole family.
+
+*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
+</div>
+</details>
 
 **In the Nephite Assembly:** Alma warns directly: "Are ye stripped of pride? I say unto you, if ye are not ye are not prepared to meet God" (Alma 5:28). No leaven. No puffing up. The covenant requirement is the same in every dispensation — humility before God.
 
@@ -80,6 +108,21 @@ To be "puffed up" is to be leavened — full of the world's vanity and self-impo
 </details>
 
 **On the Covenant Path Today:** President Nelson teaches that overcoming the world means "overcoming the temptation to care more about the things of this world than the things of God" ("Overcome the World and Find Rest," 2022). Stripping away the leaven of worldly pride is the same covenant requirement today as it was at Sinai, at the Last Supper, and at Zarahemla.
+
+<details class="seder-dropdown seder-dropdown--temple">
+<summary>On the Covenant Path — Searching for Leaven</summary>
+<div class="seder-dropdown-body">
+
+The D&C Weekly Insights on the Four Cups describes the ancient practice of *bedikat chametz* — the meticulous search of the home to remove every trace of leaven before the Feast of Unleavened Bread. Paul taught the principle: *"Know ye not that a little leaven leaveneth the whole lump? Purge out therefore the old leaven, that ye may be a new lump, as ye are unleavened"* (1 Corinthians 5:6-7).
+
+This physical cleansing symbolized the spiritual cleansing required of the Bride: removing sin from our lives so we can dwell with a sinless Bridegroom. Christ, the "bread of life" (John 6:35), was without sin — unleavened, pure, uncorrupted. The matzah we eat is a reminder that the covenant path requires ongoing purification — searching our hearts for the hidden leaven of pride, selfishness, and worldliness.
+
+> "Are ye stripped of pride? I say unto you, if ye are not ye are not prepared to meet God." — Alma 5:28
+
+*Source: Weekly Insights, D&C 133-136*
+
+</div>
+</details>
 
 ---
 
