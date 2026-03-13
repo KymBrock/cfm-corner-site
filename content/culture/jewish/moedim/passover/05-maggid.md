@@ -162,6 +162,21 @@ Each Seder step resonates across four covenant settings: the traditional Jewish 
 
 **At the Seder Table:** The Maggid is the heart of the Seder — the retelling of the Exodus through questions, the parable of the Four Sons, and the recounting of the plagues. The Zohar (Bo) teaches that the one who relates the story "fervently and joyously" shall "be found worthy to rejoice in the Shekinah." The telling itself is a sacred act.
 
+<details class="seder-dropdown seder-dropdown--seder">
+<summary>At the Seder Table — Rabbi Gamaliel's Three Things</summary>
+<div class="seder-dropdown-body">
+
+Rabbi Gamaliel, the teacher of St. Paul, taught: *"Whoever does not explain three things in the Passover has not fulfilled the duty incumbent on him. These three things are: the Passover lamb, the unleavened bread, and the bitter herbs. The Passover lamb means that God passed over the blood-sprinkled place on the houses of our fathers in Egypt; the unleavened bread means that our fathers were delivered out of Egypt; and the bitter herbs mean that the Egyptians made bitter the lives of our fathers in Egypt."*
+
+The Mishnah records that the head of the house was to relate the whole national history — "commencing with Terah, Abraham's father, and telling of his idolatry, and continuing, in due order, the story of Israel up to their deliverance from Egypt and the giving of the Law; and the more fully he explained it all, the better." The central principle was this: "From generation to generation every man is bound to look upon himself not otherwise than if he had himself come forth out of Egypt."
+
+The prescribed liturgy concluded with a declaration: *"He brought us forth from bondage into freedom, from sorrow into joy, from mourning to a festival, from darkness to a great light, and from slavery to redemption. Therefore let us sing before Him: Hallelujah!"* Then the first part of the Hallel was sung (Psalms 113-114), and the second cup was drunk.
+
+*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
+</div>
+</details>
+
 **At the Last Supper:** Jesus reinterprets the entire Exodus narrative at the table. He is the Passover Lamb, the unleavened bread, the cup of redemption. The story is retold with a new center — not Moses, but the Messiah Himself. Everything the Maggid has pointed to for centuries now sits at the table, breaking bread.
 
 <details class="seder-dropdown seder-dropdown--supper">

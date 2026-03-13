@@ -75,6 +75,19 @@ Each Seder step resonates across four covenant settings: the traditional Jewish 
 
 **At the Seder Table:** This second washing comes *after* the Maggid — after the story of deliverance has been told. It is deeper than the first. A blessing is now spoken. The participant is preparing not just for the meal, but for sacred communion with God.
 
+<details class="seder-dropdown seder-dropdown--seder">
+<summary>At the Seder Table — The Second Washing</summary>
+<div class="seder-dropdown-body">
+
+After the Maggid was complete, the first part of the Hallel sung, and the second cup drunk, Edersheim records: "Hands were now washed a second time, with the same prayer as before, and one of the two unleavened cakes broken and 'thanks given.'"
+
+This second washing is a threshold moment — the transition from the telling to the eating. The story has been told. The plagues recounted. The deliverance celebrated. Now the hands are washed again with the same prayer: *"Blessed art Thou, Jehovah our God, who hast sanctified us with Thy commandments, and hast enjoined us concerning the washing of our hands."* But this time, it carries deeper weight — the participant is now preparing to handle the sacred meal itself. The washing matches the rising sanctity of what follows.
+
+*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
+</div>
+</details>
+
 **At the Last Supper:** Jesus washes His disciples' feet at this stage of the meal (John 13:4–5, 10): "He that is washed needeth not save to wash his feet, but is clean every whit." The initial cleansing of the covenant is not enough. A deeper purification — one that reaches the most intimate and humble parts of us — is required.
 
 <details class="seder-dropdown seder-dropdown--supper">
@@ -108,6 +121,23 @@ The second washing is not a one-time event but a continuous renewal. Alma does n
 </details>
 
 **On the Covenant Path Today:** Elder Bednar teaches that "by the sanctifying power of the Holy Ghost as our constant companion, we can always retain a remission of our sins" ("Always Retain a Remission of Your Sins," 2016). The second washing is the ongoing work of sanctification — the covenant renewed each week through the sacrament, each day through repentance, each moment we turn to the Lord.
+
+<details class="seder-dropdown seder-dropdown--temple">
+<summary>On the Covenant Path — The Bride Makes Herself Ready</summary>
+<div class="seder-dropdown-body">
+
+The D&C Weekly Insights on the Four Cups describes the Feast of Unleavened Bread as representing the sanctification of the Bride. Having been redeemed by the blood of the Lamb (Passover), she must now purge out the leaven — removing sin from her life to become worthy of her Bridegroom.
+
+This second washing at Rachtzah mirrors the ancient practice of *bedikat chametz* — the meticulous search of the home to remove every trace of leaven before the feast. Leaven represents sin — something that spreads, puffs up, and corrupts the whole. The Bride makes herself ready by searching her heart for hidden sin and responding with urgency to the call to leave Babylon.
+
+> "But as he which hath called you is holy, so be ye holy in all manner of conversation." — 1 Peter 1:15
+
+The second washing is not merely about removing outward impurity — it is about becoming holy, set apart, consecrated. A Bride made ready for her King.
+
+*Source: Weekly Insights, D&C 133-136*
+
+</div>
+</details>
 
 ---
 
