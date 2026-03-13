@@ -196,6 +196,21 @@ The second cup is raised in gratitude not only for freedom but for the divine in
 </div>
 </details>
 
+<details class="seder-dropdown seder-dropdown--supper">
+<summary>At the Last Supper — The Telling and the Second Cup</summary>
+<div class="seder-dropdown-body">
+
+Edersheim records that the head of the house was to relate the whole national history — "commencing with Terah, Abraham's father, and telling of his idolatry, and continuing, in due order, the story of Israel up to their deliverance from Egypt and the giving of the Law; and the more fully he explained it all, the better." Rabbi Gamaliel, the teacher of St. Paul, taught that whoever does not explain three things — the Passover lamb, the unleavened bread, and the bitter herbs — has not fulfilled his duty.
+
+The prescribed liturgy concluded with this declaration: "He brought us forth from bondage into freedom, from sorrow into joy, from mourning to a festival, from darkness to a great light, and from slavery to redemption. Therefore let us sing before Him: Hallelujah!" Then the first part of the Hallel (Psalms 113-114) was sung, and the second cup was drunk.
+
+Jesus sat at this table and reinterpreted the entire narrative. He was Himself the Passover Lamb, the Unleavened Bread, and the one who would drink the bitter cup. The Maggid had always pointed forward — and now the One to whom it pointed was telling the story.
+
+*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
+</div>
+</details>
+
 ---
 
 ## Reflection Questions

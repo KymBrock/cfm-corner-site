@@ -90,6 +90,21 @@ The second washing is not a one-time event but a continuous renewal. Alma does n
 </div>
 </details>
 
+<details class="seder-dropdown seder-dropdown--supper">
+<summary>At the Last Supper — The Second Washing</summary>
+<div class="seder-dropdown-body">
+
+Edersheim records that after the first part of the Hallel was sung and the second cup drunk, "hands were now washed a second time, with the same prayer as before, and one of the two unleavened cakes broken and 'thanks given.'" This second washing prepared the participants for the sacred meal itself.
+
+It was at this stage of the evening — after the telling and the singing — that Jesus "mingled teaching for the present with the customary lessons of the past" (John 13:12-20). The foot-washing, which Edersheim places earlier at the first cup, Peter's resistance, and Jesus' teaching about servanthood all unfolded within this liturgical framework of washing and preparation.
+
+The deeper significance is that this second washing was not optional or merely ceremonial — it was the threshold of the sacred meal. "He that is washed needeth not save to wash his feet, but is clean every whit" (John 13:10). The first washing (baptism) opens the covenant; the second (sanctification) prepares us to partake.
+
+*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
+</div>
+</details>
+
 ---
 
 ## Reflection Questions

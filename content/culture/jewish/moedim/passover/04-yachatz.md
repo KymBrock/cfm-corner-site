@@ -78,6 +78,19 @@ The bands of death were broken — just as the bread is broken. From that breaki
 </div>
 </details>
 
+<details class="seder-dropdown seder-dropdown--supper">
+<summary>At the Last Supper — The Breaking of Bread</summary>
+<div class="seder-dropdown-body">
+
+Edersheim notes a crucial distinction in the order of the breaking and the blessing. Rabbinical authorities taught that the thanksgiving was to follow, not precede, the breaking of the bread — "because it was the bread of poverty, and the poor have not whole cakes, but broken pieces." But since Jesus, "according to the uniform testimony of the three Gospels and of St. Paul (Matt 26:26; Mark 14:22; Luke 22:19; 1 Cor 11:24), first gave thanks and then brake the bread," this proves it was at a later point of the service — the Aphikomen — not this early breaking.
+
+This early breaking at Yachatz produces the Aphikomen — the piece hidden and found later. After the cessation of Paschal sacrifices, the Jews "conclude the Supper with a piece of unleavened cake, which they call the Aphikomen, or after-dish." Edersheim observes that Jesus "seems so far to have anticipated the present Jewish practice that He brake the bread 'when He had given thanks,' instead of adhering to the old injunction of not eating anything after the Passover lamb." In doing so, He carried out the spirit of the feast — for the symbolic cord had "stretched to its goal — the offering up of the Lamb of God."
+
+*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
+</div>
+</details>
+
 ---
 
 ## Reflection Questions
