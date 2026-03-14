@@ -105,14 +105,14 @@ The bands of death were broken — just as the bread is broken. But Alma presses
 
 > "And now behold, I ask of you, my brethren of the church, have ye spiritually been born of God? Have ye received his image in your countenances? Have ye experienced this mighty change in your hearts?" — Alma 5:14
 
-The Hebrew word *chatat* — to break, to shatter — reflects not only the dividing of the matzah but the scattering of Israel and the division of families that came from the bitterness of the earlier Karpas. Alma explores these serious consequences: "Were they destroyed?" and "On what conditions were they saved?" He answers: they were saved "according to their faith" — and the breaking produced a mighty change, a metamorphosis of the heart (Alma 5:12-13).
+The Hebrew word *chatzah* — to divide, to split in two — reflects not only the dividing of the matzah but the scattering of Israel and the division of families that came from the bitterness of the earlier Karpas. Alma explores these serious consequences: "Were they destroyed?" and "On what conditions were they saved?" He answers: they were saved "according to their faith" — and the breaking produced a mighty change, a metamorphosis of the heart (Alma 5:12-13).
 
 The Savior Himself connects Yachatz to the covenant requirement of brokenness: *"Ye shall offer for a sacrifice unto me a broken heart and a contrite spirit"* (3 Nephi 9:20, echoing Psalm 34:18). The bread must be broken before the telling can begin. The heart must be broken before the change can take root.
 
 </div>
 </details>
 
-**On the Covenant Path Today:** Elder Bednar teaches that we partake of the sacrament "with a broken heart and a contrite spirit" — and that this is "a holy and repeated invitation to repent sincerely and to be renewed spiritually" ("Always Retain a Remission of Your Sins," 2016). Every Sabbath, we break bread again. The pattern repeats because the need for brokenness before redemption never changes.
+**On the Covenant Path Today:** Elder Bednar teaches that "the ordinance of the sacrament is a holy and repeated invitation to repent sincerely and to be renewed spiritually," and that as we "participate in this holy ordinance with a broken heart and a contrite spirit, then the promise is that we may always have the Spirit of the Lord to be with us" ("Always Retain a Remission of Your Sins," 2016). Every Sabbath, we break bread again. The pattern repeats because the need for brokenness before redemption never changes.
 
 <details class="seder-dropdown seder-dropdown--temple">
 <summary>On the Covenant Path — The Broken Bread and the Bride</summary>

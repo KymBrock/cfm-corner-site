@@ -106,7 +106,7 @@ The sequence mirrors the Seder exactly: first sanctification, then washing. Alma
 </div>
 </details>
 
-**On the Covenant Path Today:** Elder Bednar teaches that baptism and the sacrament "are not isolated and discrete events; rather, they are elements in an interrelated and additive pattern" ("Always Retain a Remission of Your Sins," 2016). The first washing is the beginning of the covenant journey — not the whole of it.
+**On the Covenant Path Today:** Elder Bednar teaches that "the ordinances of baptism by immersion, the laying on of hands for the gift of the Holy Ghost, and the sacrament are not isolated and discrete events; rather, they are elements in an interrelated and additive pattern of redemptive progress" ("Always Retain a Remission of Your Sins," 2016). The first washing is the beginning of the covenant journey — not the whole of it.
 
 <details class="seder-dropdown seder-dropdown--temple">
 <summary>On the Covenant Path — Entering the Covenant</summary>
