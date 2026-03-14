@@ -74,6 +74,19 @@ Each Seder step resonates across four covenant settings: the traditional Jewish 
 
 **At the Seder Table:** Hillel's tradition of binding bitter herbs and matzah together in a single bite teaches that sorrow and humility are inseparable companions on the path to redemption. The bitter is not discarded — it is held together with the bread of covenant.
 
+<details class="seder-dropdown seder-dropdown--seder">
+<summary>At the Seder Table — The Beginning of the Paschal Supper</summary>
+<div class="seder-dropdown-body">
+
+Edersheim records that "pieces of the broken cake with 'bitter herbs' between them, and 'dipped' in the Charoseth, were next handed to each in the company." This was the Hillel sandwich — and it marked the true beginning of the Paschal Supper: "The unleavened bread with bitter herbs constituted, in reality, the beginning of the Paschal Supper, to which the first part of the service had only served as a kind of introduction."
+
+Everything before this — the cups, the washing, the telling, the psalms — was preparation. Now the bitter and the bread are bound together and placed in the hand. The meal has begun, and the binding is complete.
+
+*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
+</div>
+</details>
+
 **At the Last Supper:** At the table, Jesus dipped a morsel and gave it to Judas (John 13:26–27) — betrayal and love at the same table. The bitter and the sacred were bound together in a single act. Even in the moment of greatest treachery, Christ's love encompassed it.
 
 <details class="seder-dropdown seder-dropdown--supper">
@@ -93,7 +106,35 @@ The Korech was normally handed first to the chief guest at the table. From Eders
 
 **In the Nephite Assembly:** Alma binds together warning and invitation, judgment and mercy, in the same sermon: "For I say unto you that whatsoever is good cometh from God, and whatsoever is evil cometh from the devil" (Alma 5:40). The prophet holds both realities simultaneously — because the covenant demands honesty about both.
 
+<details class="seder-dropdown seder-dropdown--alma">
+<summary>In the Nephite Assembly — Alma 5: Good and Evil Bound Together</summary>
+<div class="seder-dropdown-body">
+
+The Korech binds bitter and sweet, sorrow and hope, in a single bite. Alma holds both realities together throughout his sermon, insisting on the starkness of the contrast:
+
+> "For I say unto you that whatsoever is good cometh from God, and whatsoever is evil cometh from the devil." — Alma 5:40
+
+> "And now if ye are not the sheep of the good shepherd, of what fold are ye? Behold, I say unto you, that the devil is your shepherd, and ye are of his fold." — Alma 5:39
+
+Alma does not soften the categories. Good and evil, covenant and rebellion, the fold of the Shepherd and the fold of the devil — they are presented side by side, bound together in the same sermon, just as the matzah and the maror are bound together in the same bite. The covenant demands honesty about both.
+
+</div>
+</details>
+
 **On the Covenant Path Today:** Elder Bednar teaches that "the power of the Savior's gospel to transform and bless us flows from discerning and applying the interrelatedness of its doctrine, principles, and practices" ("Gather Together in One All Things in Christ," 2018). The bitter and the sweet, the trial and the blessing, the justice and the mercy — they are bound together in one covenant, and the power comes from embracing them as one.
+
+<details class="seder-dropdown seder-dropdown--temple">
+<summary>On the Covenant Path — Binding the Covenant Together</summary>
+<div class="seder-dropdown-body">
+
+The D&C Weekly Insights on the Four Cups describes the ancient wedding covenant as a binding of two lives — the Bride and the Bridegroom joining everything they have and are. Through sacred ordinances, we enter a covenant relationship with Christ that mirrors a marriage contract: we take upon ourselves His name, we promise fidelity, and He promises to provide, protect, and redeem.
+
+The Korech embodies this binding. The matzah (purity), the maror (suffering), and the charoseth (sweetness of hope) are not experienced separately — they are bound together in one bite, one covenant, one life. On the covenant path, we do not experience redemption apart from affliction, or joy apart from sacrifice. They are inseparable — held together by the covenant that binds us to a Savior who Himself was bound, pierced, and wrapped in linen for our sake.
+
+*Source: Weekly Insights, D&C 133-136*
+
+</div>
+</details>
 
 ---
 

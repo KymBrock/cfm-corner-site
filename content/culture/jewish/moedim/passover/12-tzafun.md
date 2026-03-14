@@ -64,7 +64,35 @@ Each Seder step resonates across four covenant settings: the traditional Jewish 
 
 **At the Seder Table:** The hidden *afikomen* — the broken piece of matzah concealed during Yachatz — is now found, brought forth, and eaten. What was broken and hidden is revealed and shared. The children search for it with joy. The lost is found.
 
+<details class="seder-dropdown seder-dropdown--seder">
+<summary>At the Seder Table — The Aphikomen Revealed</summary>
+<div class="seder-dropdown-body">
+
+Edersheim records that "since the cessation of the Paschal Sacrifice the Jews conclude the Supper with a piece of unleavened cake, which they call the Aphikomen, or after-dish." The term itself — from the Greek — may be rendered as "dessert" or "that which comes after."
+
+The principle was firm: "after the Paschal meal, they had no Aphikomen (after-dish)" — meaning nothing was to be eaten after the lamb. But when the temple sacrifices ceased, the Aphikomen matzah took the place of the lamb as the last morsel tasted. The hidden bread, broken earlier at Yachatz, was now brought forth, revealed, and shared — the final taste on every tongue.
+
+*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
+</div>
+</details>
+
 **At the Last Supper:** The *afikomen* is widely understood as the last bread shared at the Supper — the bread over which Jesus said, "Do this in remembrance of me" (Luke 22:19). The One who was broken and hidden in the tomb is brought forth in resurrection: "He is not here: for He is risen" (Matthew 28:6).
+
+<details class="seder-dropdown seder-dropdown--supper">
+<summary>At the Last Supper — The Institution of the Lord's Supper</summary>
+<div class="seder-dropdown-body">
+
+Edersheim argues that the institution of the Lord's Supper took place at this moment — the Aphikomen — not earlier at the Motzi. His reasoning: Rabbinical tradition held that thanksgiving was to follow, not precede, the breaking — "because it was the bread of poverty, and the poor have not whole cakes, but broken pieces." But Jesus "first gave thanks and then brake the bread," proving "it must have been at a later period of the service."
+
+At the Aphikomen, "the Lord instituted His own Supper, for the first time using the Aphikomen 'when He had given thanks' (after meat), to symbolise His body, and the third cup, or 'cup of blessing which we bless' (1 Cor 10:16) — being 'the cup after supper' (Luke 22:20) — to symbolise His blood."
+
+Edersheim writes: "The symbolical cord, if the figure may be allowed, had stretched to its goal — the offering up of the Lamb of God."
+
+*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
+</div>
+</details>
 
 **In the Nephite Assembly:** Alma teaches that the hidden things of the heart shall be revealed: "Our words will condemn us, yea, all our works will condemn us... and our thoughts will also condemn us" (Alma 12:14). What is hidden will be brought to light — both the sins of the heart and the glory of the Risen Lord.
 
@@ -84,6 +112,21 @@ Just as the Afikoman is brought from hiding into the light, our hidden selves wi
 </details>
 
 **On the Covenant Path Today:** Elder Bednar speaks of "an inner spiritual stillness of the soul that enables us to know and remember that God is our Heavenly Father, we are His children, and Jesus Christ is our Savior" ("Be Still, and Know That I Am God," 2024). What was hidden is revealed — not only at the resurrection, but in the quiet stillness of covenant relationship, where the Lord makes Himself known to those who seek Him.
+
+<details class="seder-dropdown seder-dropdown--temple">
+<summary>On the Covenant Path — The Hidden One Found</summary>
+<div class="seder-dropdown-body">
+
+The D&C Weekly Insights on the Four Cups describes the Afikomen symbolism: the three matzot represent the Godhead, the middle piece is removed, broken, wrapped in linen, and hidden — to be found later by the children. The broken, hidden bread is Christ: "He was declaring Himself the afikomen — the hidden one who would be found."
+
+But the Afikomen also represents the scattered body of Christ — His covenant family, broken and dispersed among the nations. D&C 133 echoes this: *"And they who are in the north countries shall come in remembrance before the Lord; and their prophets shall hear his voice"* (D&C 133:26). The scattered tribes — the broken matzah — will be found and gathered.
+
+At Tzafun, the children search for and find the hidden bread with joy. On the covenant path, we participate in this same gathering — finding those who are lost, gathering scattered Israel, and bringing forth what has been hidden until the appointed time.
+
+*Source: Weekly Insights, D&C 133-136*
+
+</div>
+</details>
 
 ---
 

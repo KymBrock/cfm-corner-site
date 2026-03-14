@@ -89,7 +89,33 @@ Each Seder step resonates across four covenant settings: the traditional Jewish 
 
 **At the Seder Table:** The festive meal is shared in community — the lamb, the egg, the charoset, the wine. "Thou preparest a table before me in the presence of mine enemies: my cup runneth over" (Psalm 23:5). The set table is a declaration: God provides, even in the midst of adversity.
 
+<details class="seder-dropdown seder-dropdown--seder">
+<summary>At the Seder Table — The Three Elements of the Feast</summary>
+<div class="seder-dropdown-body">
+
+Edersheim records that "the Paschal Supper itself consisted of the unleavened bread with bitter herbs, of the so-called Chagigah, or festive offering (when brought), and, lastly, of the Paschal lamb itself." After the lamb, nothing more was to be eaten, "so that the flesh of the Paschal Sacrifice might be the last meat partaken of."
+
+This careful ordering ensured that the taste of the Paschal lamb lingered on the palate — the last thing remembered from the meal. The lamb was the culmination. Everything else — the bread, the herbs, the festive offering — led to it. The Supper was not merely a meal; it was a sacred communion, ordered so that the sacrifice of the lamb would be the final and lasting impression.
+
+*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
+</div>
+</details>
+
 **At the Last Supper:** "With desire I have desired to eat this Passover with you before I suffer" (Luke 22:15). Jesus sits at a Seder table and transforms a Passover meal into the sacrament of the new covenant. The bread becomes His body. The wine becomes His blood. The meal becomes eternal.
+
+<details class="seder-dropdown seder-dropdown--supper">
+<summary>At the Last Supper — The Table-Talk and the Departure of Judas</summary>
+<div class="seder-dropdown-body">
+
+Edersheim records that after Judas received the sop and went out, "he could not even have partaken of the Paschal lamb, far less of the Lord's Supper." The one who betrayed the Lamb departed before the lamb was served.
+
+The remaining disciples ate the Paschal meal together with Jesus. Edersheim regards "the solemn discourses of the Lord recorded by St. John (John 13:31; 16) as His last 'table-talk,' and the intercessory prayer that followed (John 17) as His 'grace after meat.'" The set table became the setting for some of the most intimate teaching in all of scripture — the vine and the branches, the promise of the Comforter, and the great intercessory prayer for His own.
+
+*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
+</div>
+</details>
 
 **In the Nephite Assembly:** Alma extends a direct invitation: "Behold, he sendeth an invitation unto all men, for the arms of mercy are extended towards them" (Alma 5:33). And when the risen Christ appears to the Nephites, He personally administers the sacrament to the multitude (3 Nephi 18:1–7). The table is set on a new continent. The invitation is the same.
 
@@ -107,6 +133,21 @@ The table is set. The bread and the waters of life are offered freely. The only 
 </details>
 
 **On the Covenant Path Today:** Elder Bednar calls the sacrament "a holy and repeated invitation to repent sincerely and to be renewed spiritually" ("Always Retain a Remission of Your Sins," 2016). Every Sabbath, the table is set again. The bread is blessed, broken, and passed. The covenant is renewed. The same sacred meal, the same invitation, in every dispensation — from the Seder table to the sacrament table.
+
+<details class="seder-dropdown seder-dropdown--temple">
+<summary>On the Covenant Path — The Marriage Supper of the Lamb</summary>
+<div class="seder-dropdown-body">
+
+The D&C Weekly Insights on the Four Cups describes the autumn feast of Tabernacles (Sukkot) as the prophetic fulfillment of the Marriage Supper of the Lamb — "God dwelling with His people forever." The set table at the Seder is a foretaste of that eternal feast.
+
+At the Last Supper, Jesus told His disciples: *"I will not drink henceforth of this fruit of the vine, until that day when I drink it new with you in my Father's kingdom"* (Matthew 26:29). The Bridegroom sat at table with His Bride one last time before paying the bride price at Calvary — and He promised to return for the wedding feast.
+
+Every Sabbath, when the sacrament table is set and the bread and water are blessed and passed, we participate in a foretaste of that future feast — the Marriage Supper when the Bridegroom and His Bride will be reunited at last.
+
+*Source: Weekly Insights, D&C 133-136*
+
+</div>
+</details>
 
 ---
 
