@@ -108,14 +108,18 @@ The deeper significance is that this second washing was not optional or merely c
 **In the Nephite Assembly:** Alma presses his people: "Can ye look up to God at that day with a pure heart and clean hands?" (Alma 5:19). The initial baptism (Urchatz) opened the covenant. But ongoing purification — the Rachtzah — is what sustains it.
 
 <details class="seder-dropdown seder-dropdown--alma">
-<summary>In the Nephite Assembly — Alma 5: The Song of Redeeming Love</summary>
+<summary>In the Nephite Assembly — Alma 5: Garments Washed White</summary>
 <div class="seder-dropdown-body">
 
-Rachtzah is the deeper washing — the sanctification that follows the initial covenant. Alma connects this inner transformation to the question that defines ongoing faithfulness:
+Rachtzah is the deeper washing — the purification that goes beyond the initial baptism. Alma uses the language of washing directly, pressing his people to examine whether this second, deeper cleansing has taken place:
 
-> "And now behold, I say unto you, my brethren, if ye have experienced a change of heart, and if ye have felt to sing the song of redeeming love, I would ask, can ye feel so now?" — Alma 5:26
+> "I say unto you, ye will know at that day that ye cannot be saved; for there can no man be saved except his garments are washed white; yea, his garments must be purified until they are cleansed from all stain, through the blood of him of whom it has been spoken by our fathers, who should come to redeem his people from their sins." — Alma 5:21
 
-The second washing is not a one-time event but a continuous renewal. Alma does not ask whether they *once* felt it — he asks whether they *can feel so now*. The song of redeeming love must be sung again and again, just as the hands are washed again at Rachtzah.
+> "Could ye say, if ye were called to die at this time, within yourselves, that ye have been sufficiently humble? That your garments have been cleansed and made white through the blood of Christ, who will come to redeem his people from their sins?" — Alma 5:27
+
+This IS the Rachtzah — garments washed, purified, cleansed from *all stain* through the blood of the Redeemer. The priestly washing described in Exodus 29:4 — "thou shalt bring them unto the door of the tabernacle... and shalt wash them with water" — finds its spiritual parallel here. Alma's people have already been baptized (Urchatz). Now they must be washed *again*, more deeply, through the sanctifying blood of Christ.
+
+The consequence of this deeper washing is the song: *"If ye have experienced a change of heart, and if ye have felt to sing the song of redeeming love, I would ask, can ye feel so now?"* (Alma 5:26). The song of redeeming love is what follows the second washing — not a one-time event but a continuous renewal.
 
 </div>
 </details>

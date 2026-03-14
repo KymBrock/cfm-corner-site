@@ -197,14 +197,22 @@ Jesus sat at this table and reinterpreted the entire narrative. He was Himself t
 **In the Nephite Assembly:** Alma asks nearly fifty questions in a single sermon — far exceeding the Seder's traditional four. "Have ye sufficiently retained in remembrance the captivity of your fathers?" (Alma 5:6). His relentless questioning is the Maggid of the Nephite Seder — pressing his audience to internalize the pattern of deliverance not as distant history but as present spiritual reality.
 
 <details class="seder-dropdown seder-dropdown--alma">
-<summary>In the Nephite Assembly — Alma 5: Believe the Words</summary>
+<summary>In the Nephite Assembly — Alma 5: The Holy Order (Seder) of God</summary>
 <div class="seder-dropdown-body">
 
-The Maggid is the telling — the sacred retelling of the story of deliverance. Alma does the same, bringing his people back to the foundational account of their faith:
+Alma declares that he speaks *"according to the holy **order** of God"* (Alma 5:44). The Hebrew word for "order" is ***seder***. Alma is not merely preaching — he is conducting a Nephite Seder, following the sacred liturgical pattern his fathers brought from Jerusalem.
+
+The Maggid traditionally begins with four questions. Alma asks **nearly fifty** — an extraordinary expansion of the pattern that drives his audience deeper into self-examination than any Seder table has ever required. "Have ye sufficiently retained in remembrance?" "Have ye experienced a change of heart?" "Can ye feel so now?" The relentless questioning IS the Maggid.
+
+At the core of the Maggid is the chain of testimony:
 
 > "Behold, I can tell you — did not my father Alma believe in the words which were delivered by the mouth of Abinadi?" — Alma 5:11
 
-The Maggid depends on someone having believed the words and passed them on. Abinadi declared, Alma believed, and the story was preserved. This is the chain of testimony that every Seder and every sacrament meeting continues.
+Abinadi declared. Alma the Elder believed. The story was preserved and carried forward — the same chain the Haggadah depends upon. And Alma fulfills the Maggid's deepest requirement — telling the story as if *he himself* came out of Egypt — through personal experience:
+
+> "Behold, I say unto you they are made known unto me by the Holy Spirit of God. Behold, I have fasted and prayed many days that I might know these things of myself." — Alma 5:46
+
+The Maggid also includes the parable of the **Four Sons** — four children who respond differently to the covenant. In a later Passover season, Alma gives his own version: the accounts of his **three sons** in Alma 36-42 — Helaman (the wise), Shiblon (the faithful), and Corianton (the wayward) — each receiving instruction tailored to his spiritual state, just as the Haggadah tailors its response to each child.
 
 </div>
 </details>

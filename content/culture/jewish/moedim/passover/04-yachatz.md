@@ -96,14 +96,20 @@ This early breaking at Yachatz produces the Aphikomen — the piece hidden and f
 **In the Nephite Assembly:** Alma asks whether his people have experienced "a mighty change wrought in his heart" (Alma 5:12). The breaking of the heart precedes the mighty change. And when the risen Christ administers the sacrament among the Nephites, the language echoes the same covenant: "in remembrance of the body of thy Son" (Moroni 4:3).
 
 <details class="seder-dropdown seder-dropdown--alma">
-<summary>In the Nephite Assembly — Alma 5: Bands of Death Broken</summary>
+<summary>In the Nephite Assembly — Alma 5: The Mighty Change</summary>
 <div class="seder-dropdown-body">
 
-At Yachatz, the matzah is broken — and from that breaking comes the hidden promise of the Afikoman, the redemption yet to be revealed. Alma echoes this pattern, pointing to a breaking that brings freedom:
+At Yachatz, the matzah is broken — and from that breaking comes transformation. Alma echoes this pattern through several layers:
 
 > "And again I ask, were the bands of death broken, and the chains of hell which encircled them about, were they loosed? I say unto you, Yea, they were loosed, and their souls did expand, and they did sing redeeming love." — Alma 5:9
 
-The bands of death were broken — just as the bread is broken. From that breaking came liberation, expansion, and song.
+The bands of death were broken — just as the bread is broken. But Alma presses deeper. The physical breaking points to an inward one — the **mighty change** of heart:
+
+> "And now behold, I ask of you, my brethren of the church, have ye spiritually been born of God? Have ye received his image in your countenances? Have ye experienced this mighty change in your hearts?" — Alma 5:14
+
+The Hebrew word *chatat* — to break, to shatter — reflects not only the dividing of the matzah but the scattering of Israel and the division of families that came from the bitterness of the earlier Karpas. Alma explores these serious consequences: "Were they destroyed?" and "On what conditions were they saved?" He answers: they were saved "according to their faith" — and the breaking produced a mighty change, a metamorphosis of the heart (Alma 5:12-13).
+
+The Savior Himself connects Yachatz to the covenant requirement of brokenness: *"Ye shall offer for a sacrifice unto me a broken heart and a contrite spirit"* (3 Nephi 9:20, echoing Psalm 34:18). The bread must be broken before the telling can begin. The heart must be broken before the change can take root.
 
 </div>
 </details>
