@@ -163,16 +163,28 @@ Each Seder step resonates across four covenant settings: the traditional Jewish 
 **At the Seder Table:** The Maggid is the heart of the Seder — the retelling of the Exodus through questions, the parable of the Four Sons, and the recounting of the plagues. The Zohar (Bo) teaches that the one who relates the story "fervently and joyously" shall "be found worthy to rejoice in the Shekinah." The telling itself is a sacred act.
 
 <details class="seder-dropdown seder-dropdown--seder">
-<summary>At the Seder Table — Rabbi Gamaliel's Three Things</summary>
+<summary>At the Seder Table — The Telling</summary>
 <div class="seder-dropdown-body">
 
-Rabbi Gamaliel, the teacher of St. Paul, taught: *"Whoever does not explain three things in the Passover has not fulfilled the duty incumbent on him. These three things are: the Passover lamb, the unleavened bread, and the bitter herbs. The Passover lamb means that God passed over the blood-sprinkled place on the houses of our fathers in Egypt; the unleavened bread means that our fathers were delivered out of Egypt; and the bitter herbs mean that the Egyptians made bitter the lives of our fathers in Egypt."*
+The Maggid opens with the broken matzah displayed and a declaration in Aramaic:
 
-The Mishnah records that the head of the house was to relate the whole national history — "commencing with Terah, Abraham's father, and telling of his idolatry, and continuing, in due order, the story of Israel up to their deliverance from Egypt and the giving of the Law; and the more fully he explained it all, the better." The central principle was this: "From generation to generation every man is bound to look upon himself not otherwise than if he had himself come forth out of Egypt."
+> הָא לַחְמָא עַנְיָא דִּי אֲכָלוּ אַבְהָתָנָא בְּאַרְעָא דְמִצְרָיִם. כָּל דִכְפִין יֵיתֵי וְיֵיכֹל, כָּל דִצְרִיךְ יֵיתֵי וְיִפְסַח.
+>
+> *This is the bread of affliction our fathers ate in the land of Egypt. Let all who are hungry come in and eat; let all who are in need come and join us for the Pesach.*
 
-The prescribed liturgy concluded with a declaration: *"He brought us forth from bondage into freedom, from sorrow into joy, from mourning to a festival, from darkness to a great light, and from slavery to redemption. Therefore let us sing before Him: Hallelujah!"* Then the first part of the Hallel was sung (Psalms 113-114), and the second cup was drunk.
+Then comes the youngest child's question — מַה נִּשְׁתַּנָּה הַלַּיְלָה הַזֶּה מִכָּל הַלֵּילוֹת — *"What makes this night unlike all other nights?"* — followed by four specific questions about matzah, bitter herbs, dipping, and reclining.
 
-*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+The answer begins: עֲבָדִים הָיִינוּ — *"We were slaves to Pharaoh in Egypt, and the LORD our God brought us out of there with a strong hand and an outstretched arm."* The Haggadah insists: "Even were we all wise, all intelligent, all aged, and all knowledgeable in the Torah, still the command would be upon us to tell of the coming out of Egypt; and the more one tells of the coming out of Egypt, the more admirable it is."
+
+The telling culminates in Rabban Gamliel's three things — the irreducible core:
+
+> רַבָּן גַּמְלִיאֵל הָיָה אוֹמֵר: כָּל שֶׁלֹּא אָמַר שְׁלֹשָׁה דְּבָרִים אֵלּוּ בַּפֶּסַח, לֹא יָצָא יְדֵי חוֹבָתוֹ, וְאֵלּוּ הֵן: פֶּסַח, מַצָּה, וּמָרוֹר.
+>
+> *Rabban Gamliel used to say: Whoever does not explain these three things at Passover has not fulfilled his obligation — and these are they: Pesach, Matzah, and Maror.*
+
+The Maggid concludes with the duty of praise: *"Therefore it is our duty to thank, praise, laud, glorify, exalt, honor, bless, raise high, and acclaim the One who has performed all these miracles for our ancestors — and for us."* The first half of the Hallel (Psalms 113–114) is sung, and the second cup is drunk.
+
+*Sources: Pesach Haggadah (Sefaria/Koren); Edersheim, The Temple: Its Ministry and Services, Ch. 12*
 
 </div>
 </details>
@@ -180,14 +192,14 @@ The prescribed liturgy concluded with a declaration: *"He brought us forth from 
 **At the Last Supper:** Jesus reinterprets the entire Exodus narrative at the table. He is the Passover Lamb, the unleavened bread, the cup of redemption. The story is retold with a new center — not Moses, but the Messiah Himself. Everything the Maggid has pointed to for centuries now sits at the table, breaking bread.
 
 <details class="seder-dropdown seder-dropdown--supper">
-<summary>At the Last Supper — The Telling and the Second Cup</summary>
+<summary>At the Last Supper — The Story Fulfilled</summary>
 <div class="seder-dropdown-body">
 
-Edersheim records that the head of the house was to relate the whole national history — "commencing with Terah, Abraham's father, and telling of his idolatry, and continuing, in due order, the story of Israel up to their deliverance from Egypt and the giving of the Law; and the more fully he explained it all, the better." Rabbi Gamaliel, the teacher of St. Paul, taught that whoever does not explain three things — the Passover lamb, the unleavened bread, and the bitter herbs — has not fulfilled his duty.
+For centuries, every Seder leader had told the same story — commencing, as Edersheim records, "with Terah, Abraham's father, and telling of his idolatry, and continuing, in due order, the story of Israel up to their deliverance from Egypt." The central principle was this: "From generation to generation every man is bound to look upon himself not otherwise than if he had himself come forth out of Egypt."
 
-The prescribed liturgy concluded with this declaration: "He brought us forth from bondage into freedom, from sorrow into joy, from mourning to a festival, from darkness to a great light, and from slavery to redemption. Therefore let us sing before Him: Hallelujah!" Then the first part of the Hallel (Psalms 113-114) was sung, and the second cup was drunk.
+At this table, the One to whom the whole story pointed was telling it. Jesus was Himself the Passover Lamb, the Unleavened Bread, and the One who would drink the bitter cup. The Maggid had always asked: *Who is the Redeemer?* Rabban Gamliel's three things — Pesach, Matzah, Maror — had always pointed forward. Now the answer sat at the head of the table.
 
-Jesus sat at this table and reinterpreted the entire narrative. He was Himself the Passover Lamb, the Unleavened Bread, and the one who would drink the bitter cup. The Maggid had always pointed forward — and now the One to whom it pointed was telling the story.
+After the telling, the first half of the Hallel (Psalms 113–114) was sung and the second cup drunk. This second cup — the Cup of Deliverance — corresponds to God's promise: "I will rid you out of their bondage" (Exodus 6:6). Jesus drank the cup that sealed His promise to deliver.
 
 *Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
 

@@ -69,16 +69,32 @@ Each Seder step resonates across four covenant settings: the traditional Jewish 
 **At the Seder Table:** The first cup is the Cup of Sanctification — corresponding to God's first promise in Exodus 6:6: "I will bring you out from under the burdens of the Egyptians." Before anything else, the evening is consecrated. The sacred cannot begin without setting apart.
 
 <details class="seder-dropdown seder-dropdown--seder">
-<summary>At the Seder Table — The Kiddush Prayer</summary>
+<summary>At the Seder Table — The Kiddush</summary>
 <div class="seder-dropdown-body">
 
-Edersheim records the full Kiddush prayer spoken over the first cup: *"Blessed art Thou, Jehovah our God, who has created the fruit of the vine! Blessed art Thou, Jehovah our God King of the Universe, who hast chosen us from among all people, and exalted us from among all languages, and sanctified us with Thy commandments! And Thou hast given us, O Jehovah our God, in love, the solemn days for joy, and the festivals and appointed seasons for gladness; and this the day of the feast of unleavened bread, the season of our freedom, a holy convocation, the memorial of our departure from Egypt."* The prayer concluded: *"Blessed art Thou, O Jehovah, who sanctifiest Israel and the appointed seasons!"*
+The Haggadah instructs: מוזגים כוס ראשון. המצות מכוסות — *"The first cup of wine is poured. The matzot are covered."*
 
-The guests came no longer as at the first Passover — with loins girded, shoes on feet, and staff in hand. Instead, Edersheim notes, "they were arrayed in their best festive garments, joyous and at rest, as became the children of a king." The Rabbis insisted on a recumbent posture: "For they use this leaning posture, as free men do, in memorial of their freedom." And again: "No, not the poorest in Israel may eat till he has sat down, leaning."
+The leader asks permission of those gathered — סַבְרִי מָרָנָן וְרַבָּנָן וְרַבּוֹתַי — *"With your permission, masters and teachers"* — and speaks the blessing over the wine:
 
-Even the wine reflected this dignity. The Jerusalem Talmud records that even the poorest must have at least four cups, "though he were to receive the money for it from the poor's box." If he could not otherwise obtain it, "he must sell or pawn his coat, or hire himself out for these four cups of wine." The joy of redemption was not optional — it belonged to everyone.
+> בָּרוּךְ אַתָּה יְיָ, אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא פְּרִי הַגָּפֶן.
+>
+> *Blessed are You, LORD our God, King of the Universe, who creates the fruit of the vine.*
 
-*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+Then the Kiddush — the sanctification of the festival:
+
+> בָּרוּךְ אַתָּה יְיָ, אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר בָּחַר בָּנוּ מִכָּל עָם, וְרוֹמְמָנוּ מִכָּל לָשׁוֹן, וְקִדְּשָׁנוּ בְמִצְוֹתָיו...
+>
+> *Blessed are You, LORD our God, King of the Universe, who has chosen us from every people and raised us above every tongue, and made us holy through His commandments...*
+
+The blessing acknowledges God's selection of Israel, the gift of sacred festivals for rejoicing, and this night as "the time of our freedom" — a memorial to the Exodus from Egypt. The evening concludes with the Shehecheyanu:
+
+> בָּרוּךְ אַתָּה יְיָ, אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁהֶחֱיָנוּ וְקִיְּמָנוּ וְהִגִּיעָנוּ לַזְּמַן הַזֶּה.
+>
+> *Blessed are You, LORD our God, King of the Universe, who has given us life, sustained us, and brought us to this time.*
+
+The guests came no longer as at the first Passover — with loins girded, shoes on feet, and staff in hand. Instead, Edersheim notes, "they were arrayed in their best festive garments, joyous and at rest, as became the children of a king." The Rabbis insisted on a recumbent posture: "For they use this leaning posture, as free men do, in memorial of their freedom." Even the poorest must have at least four cups, "though he were to receive the money for it from the poor's box." The joy of redemption was not optional — it belonged to everyone.
+
+*Sources: Pesach Haggadah (Sefaria/Koren); Edersheim, The Temple: Its Ministry and Services, Ch. 12*
 
 </div>
 </details>
@@ -89,11 +105,11 @@ Even the wine reflected this dignity. The Jerusalem Talmud records that even the
 <summary>At the Last Supper — The First Cup</summary>
 <div class="seder-dropdown-body">
 
-Edersheim records that the Paschal Supper commenced when the head of the company took the first cup of wine in his hand and spoke a blessing of sanctification: *"Blessed art Thou, Jehovah our God, who has created the fruit of the vine! Blessed art Thou, Jehovah our God King of the Universe, who hast chosen us from among all people, and exalted us from among all languages, and sanctified us with Thy commandments!"* The prayer concluded: *"Blessed art Thou, Jehovah, who sanctifiest Israel and the appointed seasons!"*
+Luke records the moment when Jesus took this first cup into His hands: "And He took the cup, and gave thanks, and said, Take this, and divide it among yourselves: For I say unto you, I will not drink of the fruit of the vine, until the kingdom of God shall come" (Luke 22:17–18). This is distinct from the later cup of the new covenant (Luke 22:20).
 
-The first cup was then drunk, and each washed his hands. Luke records what appears to be this moment: "And He took the cup, and gave thanks, and said, Take this, and divide it among yourselves" (Luke 22:17) — distinct from the later cup of the new covenant (Luke 22:20).
+With these words, Jesus consecrated the evening for its final sacred purpose. Every Seder begins with the Cup of Sanctification — setting the night apart. But at this table, the One who would become the Paschal Lamb Himself raised the cup, knowing what the night would bring. He sanctified the evening not for remembrance alone but for the institution of the new covenant.
 
-The four cups of the Seder correspond to four promises in Exodus 6:6-7. The first — the Cup of Sanctification — answers to "I will bring you out from under the burdens of the Egyptians." The Jerusalem Talmud explains that even the poorest in Israel must have at least four cups, "though he were to receive the money for it from the poor's box." The joy of redemption belongs to all.
+The first cup answers to God's first promise in Exodus 6:6: "I will bring you out from under the burdens of the Egyptians." The D&C Weekly Insights on the Four Cups describes the four cups as corresponding to a covenant of marriage between God and His people — and this first cup is the Bridegroom's opening declaration of intent.
 
 *Sources: Edersheim, The Temple: Its Ministry and Services, Ch. 12; Weekly Insights, D&C 133-136*
 
