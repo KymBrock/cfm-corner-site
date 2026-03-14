@@ -128,11 +128,11 @@ Just as Joseph's brothers sold him into Egypt, the Lamanites — Lehi's own desc
 
 The salt water of Karpas recalls the tears of bondage — but it also points forward to the call to leave bondage behind. In the latter days, the Lord uses the same Exodus language: *"Go ye out from Babylon... go ye out from among the nations, even from Babylon, from the midst of wickedness"* (D&C 133:5, 14).
 
-The D&C Weekly Insights on the Four Cups explains that this is Exodus language applied to the latter days. Just as Israel left physical Egypt, we are called to leave spiritual Babylon. And just as Israel was led by the blood of the lamb, we are led by Christ, the Lamb of God.
+[The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/) explains that this is Exodus language applied to the latter days. Just as Israel left physical Egypt, we are called to leave spiritual Babylon. And just as Israel was led by the blood of the lamb, we are led by Christ, the Lamb of God.
 
 The Karpas dipping teaches that tears and deliverance are inseparable — the salt water of sorrow and the green of new life are tasted together. On the covenant path, leaving Babylon always involves grief for what we leave behind and hope for what we walk toward. The covenant does not promise a life without tears — it promises that the tears lead somewhere.
 
-*Source: Weekly Insights, D&C 133-136*
+*Source: [The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/)*
 
 </div>
 </details>

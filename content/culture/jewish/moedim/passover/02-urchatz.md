@@ -114,13 +114,13 @@ The sequence mirrors the Seder exactly: first sanctification, then washing. Alma
 
 The first washing at the Seder table is a preparatory act — making oneself ready to handle sacred things. On the covenant path, baptism serves this same purpose: it is the gate through which we enter.
 
-The D&C Weekly Insights on the Four Cups describes the gospel covenant in the language of an ancient marriage: through sacred ordinances — baptism, confirmation, temple covenants — we enter into a covenant relationship with Christ that mirrors a marriage contract. We take upon ourselves His name, just as a bride takes her husband's name. We promise fidelity to Him alone. He promises to provide, protect, and redeem us.
+[The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/) describes the gospel covenant in the language of an ancient marriage: through sacred ordinances — baptism, confirmation, temple covenants — we enter into a covenant relationship with Christ that mirrors a marriage contract. We take upon ourselves His name, just as a bride takes her husband's name. We promise fidelity to Him alone. He promises to provide, protect, and redeem us.
 
 > "Except a man be born of water and of the Spirit, he cannot enter into the kingdom of God." — John 3:5
 
 The first washing is the beginning — not the end — of the covenant journey. It opens the door to everything that follows.
 
-*Source: Weekly Insights, D&C 133-136*
+*Source: [The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/)*
 
 </div>
 </details>

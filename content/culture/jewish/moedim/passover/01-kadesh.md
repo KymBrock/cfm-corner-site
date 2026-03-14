@@ -109,9 +109,9 @@ Luke records the moment when Jesus took this first cup into His hands: "And He t
 
 With these words, Jesus consecrated the evening for its final sacred purpose. Every Seder begins with the Cup of Sanctification — setting the night apart. But at this table, the One who would become the Paschal Lamb Himself raised the cup, knowing what the night would bring. He sanctified the evening not for remembrance alone but for the institution of the new covenant.
 
-The first cup answers to God's first promise in Exodus 6:6: "I will bring you out from under the burdens of the Egyptians." The D&C Weekly Insights on the Four Cups describes the four cups as corresponding to a covenant of marriage between God and His people — and this first cup is the Bridegroom's opening declaration of intent.
+The first cup answers to God's first promise in Exodus 6:6: "I will bring you out from under the burdens of the Egyptians." [The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/) describes the four cups as corresponding to a covenant of marriage between God and His people — and this first cup is the Bridegroom's opening declaration of intent.
 
-*Sources: Edersheim, The Temple: Its Ministry and Services, Ch. 12; Weekly Insights, D&C 133-136*
+*Sources: Edersheim, The Temple: Its Ministry and Services, Ch. 12; [The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/)*
 
 </div>
 </details>
