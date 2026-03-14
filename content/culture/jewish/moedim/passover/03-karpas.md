@@ -69,13 +69,17 @@ Each Seder step resonates across four covenant settings: the traditional Jewish 
 <summary>At the Seder Table — The Herbs and the Questions</summary>
 <div class="seder-dropdown-body">
 
-Edersheim records the sequence following the first washing: "The president of the feast first took some of the herbs, dipped them in salt water, ate of them, and gave to the others." Then came a deliberately provocative act — "all the dishes were removed from the table (as it was thought so strange a proceeding would tend to excite the more curiosity)."
+The Haggadah prescribes a small quantity of greens dipped in salt water, with the following blessing:
 
-This strategic removal set the stage for the most important moment of the early Seder: the child's questions. The second cup was filled, and the youngest at the table was directed to ask: *"Why is this night distinguished from all other nights? On all other nights we eat leavened or unleavened bread, but on this night only unleavened bread? On all other nights we eat any kind of herbs, but on this night only bitter herbs? On all other nights we dip only once, but on this night twice?"*
+> בָּרוּךְ אַתָּה יְיָ, אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא פְּרִי הָאֲדָמָה.
+>
+> *Blessed are You, LORD our God, King of the Universe, who creates the fruit of the ground.*
 
-Everything in the Seder was designed to provoke curiosity — especially in the children. The strange act of removing the dishes, the unusual herbs in salt water — all of it was pedagogical, an invitation to ask and to learn.
+The rubric notes this blessing is spoken with the intent to include the maror (bitter herbs) eaten later — linking the two dippings liturgically.
 
-*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+Then came a deliberately provocative act: Edersheim records that "all the dishes were removed from the table (as it was thought so strange a proceeding would tend to excite the more curiosity)." This set the stage for the most important moment of the early Seder — the child's questions. Everything was pedagogical, an invitation to ask and to learn.
+
+*Sources: Pesach Haggadah (Sefaria/Koren); Edersheim, The Temple: Its Ministry and Services, Ch. 12*
 
 </div>
 </details>
@@ -86,11 +90,9 @@ Everything in the Seder was designed to provoke curiosity — especially in the 
 <summary>At the Last Supper — The Dipping</summary>
 <div class="seder-dropdown-body">
 
-After the first cup and the washing of hands, Edersheim records that "the president of the feast first took some of the herbs, dipped them in salt water, ate of them, and gave to the others." Then the dishes were removed from the table — a deliberately strange act designed to provoke the child's questions.
+The Seder's double dipping became the sign by which Jesus identified His betrayer. "He that dippeth his hand with me in the dish, the same shall betray me" (Matthew 26:23). When Judas asked, "Is it I?" Jesus answered with the sop — the bread dipped in charoseth — handing it to the one who sat in the place of honour at His left.
 
-It was at this point that the second cup was filled and the son asked the four questions: *"Why is this night distinguished from all other nights?"* The questions included: why only unleavened bread? Why only bitter herbs? Why only roasted meat? And — significantly — "On all other nights we dip only once, but on this night twice?"
-
-The double dipping became the sign by which Jesus identified His betrayer. When Judas asked, "Is it I?" Jesus answered with the sop — the bread dipped in charoseth — handing it to the one who sat in the place of honour at His left: "He that dippeth his hand with me in the dish, the same shall betray me" (Matthew 26:23). What should have been a gesture of fellowship became the marker of treachery.
+What should have been a gesture of fellowship became the marker of treachery. The Haggadah's four questions ask why this night requires *two* dippings. At Christ's table, the answer was devastating: one dipping united salt water with new life; the other united fellowship with betrayal.
 
 *Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
 
