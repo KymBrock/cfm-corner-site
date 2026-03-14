@@ -74,18 +74,32 @@ Each Seder step resonates across four covenant settings: the traditional Jewish 
 **At the Seder Table:** The Hallel psalms (113–118) are sung responsively — Levites leading, people answering "Hallelujah!" Edersheim describes the threefold trumpet blast sounding as the Paschal lambs were slain, the Hallel rising continuously throughout the offering. The Fourth Cup — the Cup of Praise — corresponds to God's promise: "I will take you as my people, and I will be your God" (Exodus 6:7). Praise is the response to belonging.
 
 <details class="seder-dropdown seder-dropdown--seder">
-<summary>At the Seder Table — The Blessing of the Song</summary>
+<summary>At the Seder Table — The Second Half of Hallel</summary>
 <div class="seder-dropdown-body">
 
-Edersheim records that "the service concluded with the fourth cup, over which the second portion of the 'Hallel' was sung, consisting of Psalms 115, 116, 117, and 118." The whole evening ended with the "blessing of the song," comprising two brief prayers:
+The fourth cup is poured and the Hallel is completed — Psalms 115–118. The Haggadah records the key declarations:
 
-*"All Thy works shall praise Thee, Jehovah our God. And Thy saints, the righteous, who do Thy good pleasure, and all Thy people, the house of Israel, with joyous song let them praise, and bless, and magnify, and glorify, and exalt, and reverence, and sanctify, and ascribe the kingdom to Thy name, O our King! For it is good to praise Thee, and pleasure to sing praises unto Thy name, for from everlasting to everlasting Thou art God."*
+> לֹא לָנוּ, יְיָ, לֹא לָנוּ, כִּי לְשִׁמְךָ תֵּן כָּבוֹד...
+>
+> *Not to us, LORD, not to us, but to Your name give glory...* (Psalm 115)
 
-*"The breath of all that lives shall praise Thy name, Jehovah our God. And the spirit of all flesh shall continually glorify and exalt Thy memorial, O our King! For from everlasting to everlasting Thou art God, and besides Thee we have no King, Redeemer, or Saviour."*
+> מִן־הַמֵּצַר קָרָאתִי יָּהּ, עָנָנִי בַמֶּרְחָב יָהּ.
+>
+> *In my distress I called on the LORD. The LORD answered me and set me free.* (Psalm 118)
 
-These ancient words — spoken after the fourth cup — declare that the One praised at this table is not merely a national deity, but the God from everlasting to everlasting, beside whom there is no other Redeemer.
+Then comes the Great Hallel (Psalm 136) and the Nishmat Kol Chai — one of the most ancient prayers in the liturgy:
 
-*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+> נִשְׁמַת כָּל חַי תְּבָרֵךְ אֶת שִׁמְךָ, יְיָ אֱלֹהֵינוּ.
+>
+> *The soul of all that lives shall bless Your name, LORD our God.*
+
+The fourth cup is then drunk, and the evening ends with what Edersheim calls "the blessing of the song" — two brief prayers declaring that the One praised at this table is not merely a national deity but the God from everlasting to everlasting: *"Besides Thee we have no King, Redeemer, or Saviour."*
+
+> בָּרוּךְ אַתָּה יְיָ, אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא פְּרִי הַגָּפֶן.
+>
+> *Blessed are You, LORD our God, King of the Universe, who creates the fruit of the vine.*
+
+*Sources: Pesach Haggadah (Sefaria/Koren); Edersheim, The Temple: Its Ministry and Services, Ch. 12*
 
 </div>
 </details>
@@ -96,9 +110,9 @@ These ancient words — spoken after the fourth cup — declare that the One pra
 <summary>At the Last Supper — The Hymn Before Gethsemane</summary>
 <div class="seder-dropdown-body">
 
-Edersheim records that "the service concluded with the fourth cup, over which the second portion of the 'Hallel' was sung, consisting of Psalms 115, 116, 117, and 118." The whole evening ended with the "blessing of the song" — two brief prayers that began: *"All Thy works shall praise Thee, Jehovah our God"* and *"The breath of all that lives shall praise Thy name, Jehovah our God."*
+"And when they had sung an hymn, they went out into the mount of Olives" (Matthew 26:30). This was the Hallel — the same psalms Israel had sung for centuries — now sung by Jesus and His disciples as their last act together before the Atonement began.
 
-"And when they had sung an hymn, they went out into the mount of Olives" (Matthew 26:30). This was the Hallel — the same psalms Israel had sung for centuries — now sung by Jesus and His disciples as their last act together before the Atonement began. In the Temple, the Hallel had been sung responsively while the Paschal lambs were slain, the Levites leading and the people answering "Hallelujah!" Now, in the Upper Room, the Lamb Himself sang the praise.
+In the Temple, the Hallel had been sung responsively while the Paschal lambs were slain — the Levites leading, the people answering "Hallelujah!", a threefold trumpet blast sounding at each section. Now, in the Upper Room, the Lamb Himself sang the praise.
 
 Psalm 118 — the climax of the Hallel — contains the very words the crowds had shouted days earlier at His triumphal entry: "Blessed be he that cometh in the name of the Lord" (Psalm 118:26). And the declaration: "The stone which the builders refused is become the head stone of the corner" (Psalm 118:22). The rejected one would be exalted — but first, He would walk from this table into the garden.
 

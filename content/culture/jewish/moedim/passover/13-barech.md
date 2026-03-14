@@ -95,13 +95,23 @@ Each Seder step resonates across four covenant settings: the traditional Jewish 
 <summary>At the Seder Table — The Cup of Blessing and the Door for Elijah</summary>
 <div class="seder-dropdown-body">
 
-Edersheim writes that the third cup — "the cup of blessing" — held special importance. The Talmud "notes ten peculiarities" about this cup, "sufficient to show the special value set upon it." It followed the grace after meat, and a special blessing was spoken over it.
+After the festive meal, the full Birkat Hamazon (grace after meals) is recited — four blessings covering nourishment, the land, Jerusalem, and God's goodness. Then the third cup is poured — the Cup of Redemption:
 
-Edersheim also records a remarkable custom: "just after the 'third cup,' or the 'cup of blessing,' has been drunk — the door is opened to admit Elijah the prophet as forerunner of the Messiah, while appropriate passages are at the same time read which foretell the destruction of all heathen nations." To this day, a cup is set aside for Elijah at every Seder table — a visible token of Israel's hope for the coming Redeemer.
+> בָּרוּךְ אַתָּה יְיָ, אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא פְּרִי הַגָּפֶן.
+>
+> *Blessed are You, LORD our God, King of the Universe, who creates the fruit of the vine.*
 
-"It is a remarkable coincidence," Edersheim notes, "that, in instituting His own Supper, the Lord Jesus connected the symbol, not of judgment, but of His dying love, with this 'third cup.'"
+This cup — "the cup of blessing" — held special importance. The Talmud "notes ten peculiarities" about it, "sufficient to show the special value set upon it."
 
-*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+After the third cup is drunk, a cup of wine is poured in honor of Elijah and the door is opened. The Haggadah prescribes these words:
+
+> שְׁפֹךְ חֲמָתְךָ אֶל־הַגּוֹיִם אֲשֶׁר לֹא יְדָעוּךָ וְעַל־מַמְלָכוֹת אֲשֶׁר בְּשִׁמְךָ לֹא קָרָאוּ.
+>
+> *Pour out Your wrath upon the nations that do not know You, and upon the kingdoms that have not called upon Your name.*
+
+To this day, a cup is set aside for Elijah at every Seder table — a visible token of Israel's hope for the coming Redeemer and the forerunner of the Messiah. "It is a remarkable coincidence," Edersheim notes, "that, in instituting His own Supper, the Lord Jesus connected the symbol, not of judgment, but of His dying love, with this 'third cup.'"
+
+*Sources: Pesach Haggadah (Sefaria/Koren); Edersheim, The Temple: Its Ministry and Services, Ch. 12*
 
 </div>
 </details>
@@ -112,11 +122,11 @@ Edersheim also records a remarkable custom: "just after the 'third cup,' or the 
 <summary>At the Last Supper — The Cup of Blessing</summary>
 <div class="seder-dropdown-body">
 
-Edersheim writes: "There cannot be any reasonable doubt that this was the cup which our Lord connected with His own Supper. It is called in Jewish writings, just as by St. Paul (1 Cor 10:16), 'the cup of blessing,' partly because it and the first cup required a special 'blessing,' and partly because it followed on the 'grace after meat.'" The Talmud notes ten peculiarities about this cup, showing the special value set upon it.
+"This cup is the new testament in my blood, which is shed for you" (Luke 22:20). St. Paul identifies this as "the cup of blessing which we bless" (1 Corinthians 10:16) — the same term used in Jewish writings for the third cup. It was "the cup after supper" (Luke 22:20), following the Aphikomen and the grace after meals.
 
-After the Paschal meal was finished — the lamb eaten, the Aphikomen shared — hands were washed again and the third cup filled. A special blessing was spoken over it. Then Jesus, "using the Aphikomen 'when He had given thanks' (after meat), to symbolise His body, and the third cup, or 'cup of blessing which we bless' (1 Cor 10:16) — being 'the cup after supper' (Luke 22:20) — to symbolise His blood."
+Edersheim writes that Jesus used "the Aphikomen 'when He had given thanks' (after meat), to symbolise His body, and the third cup, or 'cup of blessing which we bless' — being 'the cup after supper' — to symbolise His blood." The bread and the cup were paired: the hidden bread revealed, the cup of redemption raised — body and blood together sealing the new covenant.
 
-The D&C Weekly Insights on the Four Cups describes the third cup as the Cup of Redemption, linked to the Hebrew *ga'al* — from which we get *goel*, the kinsman redeemer. Christ is our ultimate Goel: He redeems us from slavery, pays the bride price with His own blood, restores our lost inheritance, and takes us as His own in eternal covenant.
+The D&C Weekly Insights on the Four Cups describes this as the Cup of Redemption, linked to the Hebrew *ga'al* — from which we get *goel*, the kinsman redeemer. Christ is our ultimate Goel: He redeems us from slavery, pays the bride price with His own blood, restores our lost inheritance, and takes us as His own in eternal covenant.
 
 *Sources: Edersheim, The Temple: Its Ministry and Services, Ch. 12; Weekly Insights, D&C 133-136*
 
