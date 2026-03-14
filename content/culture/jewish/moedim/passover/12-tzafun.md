@@ -97,16 +97,20 @@ Edersheim writes: "The symbolical cord, if the figure may be allowed, had stretc
 **In the Nephite Assembly:** Alma teaches that the hidden things of the heart shall be revealed: "Our words will condemn us, yea, all our works will condemn us... and our thoughts will also condemn us" (Alma 12:14). What is hidden will be brought to light — both the sins of the heart and the glory of the Risen Lord.
 
 <details class="seder-dropdown seder-dropdown--alma">
-<summary>In the Nephite Assembly — Alma 5: Pure Heart, Clean Hands</summary>
+<summary>In the Nephite Assembly — Alma 5: The Hidden Cleanser Revealed</summary>
 <div class="seder-dropdown-body">
 
-Tzafun reveals what has been hidden — and Alma warns that all things shall ultimately be revealed before God. He presses his people to consider whether they will be ready for that day:
+The word *tzafun* carries a remarkable second meaning. In the Talmud (Niddah 62b), *tzafun* (<a href="https://www.sefaria.org/Niddah.62b.1?lang=bi" target="_blank">צָפוֹן</a>) refers to a cleansing agent — a soap or detergent used specifically for washing away *blood*. At the Seder, the step called "hidden" is also the step of cleansing — and what is cleansed is blood itself.
+
+Alma presses this very question upon his people — whether they have been cleansed through the blood of the Redeemer:
 
 > "I say unto you, can ye look up to God at that day with a pure heart and clean hands? I say unto you, can ye look up, having the image of God engraven upon your countenances?" — Alma 5:19
 
-> "I say unto you, ye will know at that day that ye cannot be saved; for there can no man be saved except his garments are washed white; yea, his garments must be purified until they are cleansed from all stain, through the blood of him of whom it has been spoken by our fathers, who should come to redeem his people from their sins." — Alma 5:21
+> "There can no man be saved except his garments are washed white; yea, his garments must be purified until they are cleansed from all stain, through the blood of him of whom it has been spoken by our fathers, who should come to redeem his people from their sins." — Alma 5:21
 
-Just as the Afikoman is brought from hiding into the light, our hidden selves will one day stand revealed. The question is whether we will have allowed Christ's blood to wash our garments white — cleansed, purified, and ready to be found.
+The Afikoman — broken and hidden at Yachatz — now comes forth from concealment. Christians have long associated this moment with the Resurrection, and Paul describes Christ as "the firstfruits of them that slept" (1 Corinthians 15:20) — hidden in death, revealed in triumph over the grave.
+
+Just as the Afikoman is brought from hiding into the light, our hidden selves will one day stand revealed. The *tzafun* — the hidden cleanser — is Christ's own blood, which purifies us from all stain and prepares us to be found worthy at that day.
 
 </div>
 </details>

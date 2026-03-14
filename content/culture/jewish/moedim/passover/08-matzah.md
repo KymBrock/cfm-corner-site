@@ -93,16 +93,22 @@ The matzah Jesus blessed and broke was not merely bread — it was the culminati
 **In the Nephite Assembly:** Alma warns directly: "Are ye stripped of pride? I say unto you, if ye are not ye are not prepared to meet God" (Alma 5:28). No leaven. No puffing up. The covenant requirement is the same in every dispensation — humility before God.
 
 <details class="seder-dropdown seder-dropdown--alma">
-<summary>In the Nephite Assembly — Alma 5: Puffed Up Like Leaven</summary>
+<summary>In the Nephite Assembly — Alma 5: Simplicity of Heart and the Puffing of Pride</summary>
 <div class="seder-dropdown-body">
 
-The matzah is unleavened — flat, humble, free from the puffing of pride. Alma uses the imagery of leaven and pride to warn those who have strayed from the covenant:
+Matzah is simple — unleavened, flat, humble. It represents a heart free from the puffing of sin and self-reliance. Alma opens this theme with a question that strikes at the very core of matzah's symbolism — a call for the simplicity and purity of faith:
+
+> "Do ye exercise faith in the redemption of him who created you? Do you look forward with an eye of faith?" — Alma 5:15
+
+This is the matzah question: Do you trust in God alone? Is your faith simple, sincere, and undiluted — or has it been leavened with the world's complications?
+
+Alma then contrasts this purity with the pride of those who have become "puffed up" — leavened, risen with self-importance:
 
 > "O ye workers of iniquity; ye that are puffed up in the vain things of the world, ye that have professed to have known the ways of righteousness nevertheless have gone astray, as sheep having no shepherd, notwithstanding a shepherd hath called after you and is still calling after you, but ye will not hearken unto his voice!" — Alma 5:37
 
 > "Behold, I say unto you, that the good shepherd doth call you; yea, and in his own name he doth call you, which is the name of Christ." — Alma 5:38
 
-To be "puffed up" is to be leavened — full of the world's vanity and self-importance. The matzah invites us to strip away that leaven and listen for the voice of the Good Shepherd calling us by name.
+To be "puffed up" is to be leavened — full of the world's vanity and self-importance. The matzah invites us to strip away that leaven, return to the simplicity of faith, and listen for the voice of the Good Shepherd calling us by name.
 
 </div>
 </details>

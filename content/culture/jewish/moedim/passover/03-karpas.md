@@ -100,16 +100,22 @@ The double dipping became the sign by which Jesus identified His betrayer. When 
 **In the Nephite Assembly:** Alma recalls that his fathers "were in the midst of darkness; nevertheless, their souls were illuminated by the light of the everlasting word" (Alma 5:7). Tears and new life together. And as he later teaches: "by small and simple things are great things brought to pass" (Alma 37:6) — the lowly hyssop, the simple herb, the small act of faith.
 
 <details class="seder-dropdown seder-dropdown--alma">
-<summary>In the Nephite Assembly — Alma 5: Bondage and Deliverance</summary>
+<summary>In the Nephite Assembly — Alma 5: Bondage at the Hands of Their Brethren</summary>
 <div class="seder-dropdown-body">
 
-The Karpas step recalls the tears and bondage of Israel in Egypt — and the new life that sprang from that sorrow. Alma draws his people back to their own story of bondage and deliverance, asking them to remember:
+The word *karpas* itself carries a hidden layer. In Esther 1:6, the same Hebrew word (<a href="https://www.blueletterbible.org/lexicon/h3768/kjv/wlc/0-1/" target="_blank" data-lexicon="fine cotton or linen" data-strongs="H3768" data-translit="karpas" data-original="כַּרְפַּס" data-lang="hebrew">כַּרְפַּס</a>) is translated as "fine cotton" or "fine linen" — the fabric of priestly robes and royal garments. This links *karpas* to Joseph's coat, the garment Jacob gave to mark Joseph's birthright, which provoked his brothers' jealousy:
 
-> "I say unto you, they were in captivity, and again the Lord did deliver them out of bondage by the power of his word; and we were brought into this land, and here we began to establish the church of God throughout this land also." — Alma 5:5
+> "They took Joseph's coat... and dipped the coat in the blood of a goat." — Genesis 37:31
+
+The brothers stripped Joseph of his garment and *dipped* it in blood — staging his death and condemning him to bondage. At the Seder, we dip the karpas into salt water, reenacting the moment when jealousy and contention within a family led to slavery and tears.
+
+Alma draws this same pattern directly into his sermon. He does not describe a foreign oppressor — he specifies that the Nephites were brought into bondage *by their own brethren*:
+
+> "After that, they were brought into bondage by the hands of the Lamanites in the wilderness; yea, I say unto you, they were in captivity, and again the Lord did deliver them out of bondage by the power of his word." — Alma 5:5
 
 > "Have ye sufficiently retained in remembrance that he has delivered their souls from hell?" — Alma 5:6
 
-Just as the green herbs dipped in salt water remind us that sorrow and hope are intertwined, Alma reminds the Nephites that their bitter bondage became the gateway to God's deliverance — and asks whether they have retained that remembrance in their hearts.
+Just as Joseph's brothers sold him into Egypt, the Lamanites — Lehi's own descendants — brought their brethren into bondage. And just as God raised Joseph to save his family, God delivered the Nephites through the power of His word. The karpas reminds us that the deepest wounds often come from within our own families — and that God's deliverance reaches even there.
 
 </div>
 </details>
