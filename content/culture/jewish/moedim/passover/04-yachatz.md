@@ -67,11 +67,11 @@ Each Seder step resonates across four covenant settings: the traditional Jewish 
 
 Edersheim notes that "at present and for many centuries back the Paschal Supper has been thus laid out: three large unleavened cakes, wrapped in the folds of a napkin." The middle matzah is removed, broken, and the larger portion — the *afikomen* — is wrapped and hidden for the children to find later.
 
-The D&C Weekly Insights on the Four Cups describes the symbolism of the three matzot: they represent the Godhead — Father, Son, and Holy Ghost. The middle one — the Son — is removed from the Father's presence, broken, wrapped in linen (His burial cloths), and hidden (placed in the tomb). Later, it is found by the children — a joyful echo of the Resurrection discovered.
+[The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/) describes the symbolism of the three matzot: they represent the Godhead — Father, Son, and Holy Ghost. The middle one — the Son — is removed from the Father's presence, broken, wrapped in linen (His burial cloths), and hidden (placed in the tomb). Later, it is found by the children — a joyful echo of the Resurrection discovered.
 
 Edersheim also records the meaning of the term *afikomen*: it was a principle that "after the Paschal meal, they had no Aphikomen (after-dish)." Nothing was to be eaten after the Paschal lamb, so that its flavor would linger as the last taste. Yet after the cessation of sacrifices, "the Jews conclude the Supper with a piece of unleavened cake, which they call the Aphikomen" — the hidden bread revealed and shared as the final morsel of the evening.
 
-*Sources: Edersheim, The Temple: Its Ministry and Services, Ch. 12; Weekly Insights, D&C 133-136*
+*Sources: Edersheim, The Temple: Its Ministry and Services, Ch. 12; [The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/)*
 
 </div>
 </details>
@@ -118,13 +118,13 @@ The Savior Himself connects Yachatz to the covenant requirement of brokenness: *
 <summary>On the Covenant Path — The Broken Bread and the Bride</summary>
 <div class="seder-dropdown-body">
 
-The D&C Weekly Insights on the Four Cups teaches that the broken matzah represents not only Christ's physical body but also the body of Christ as His covenant family — the scattered tribes of Israel, broken and dispersed among the nations. The afikomen, hidden and found, is a prophetic enactment of the gathering.
+[The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/) teaches that the broken matzah represents not only Christ's physical body but also the body of Christ as His covenant family — the scattered tribes of Israel, broken and dispersed among the nations. The afikomen, hidden and found, is a prophetic enactment of the gathering.
 
 The Hebrew word *matza* means "to find." The Feast of Unleavened Bread is about finding: finding Christ (the children search for the hidden afikomen), finding the lost sheep, finding the scattered tribes. D&C 133 echoes this theme: *"And they who are in the north countries shall come in remembrance before the Lord"* (D&C 133:26).
 
 When Jesus broke bread at the Last Supper and said "This is my body which is broken for you" (1 Corinthians 11:24), He was declaring Himself the afikomen — the hidden one who would be found. But He was also prophesying the gathering of His body, His family, His Bride from every nation.
 
-*Source: Weekly Insights, D&C 133-136*
+*Source: [The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/)*
 
 </div>
 </details>

@@ -134,7 +134,7 @@ On the covenant path, we receive the same lesson: spiritual sustenance comes not
 
 The Bridegroom provides for His Bride — not once, but daily, faithfully, from the earth and from heaven.
 
-*Source: Weekly Insights, D&C 133-136*
+*Source: [The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/)*
 
 </div>
 </details>

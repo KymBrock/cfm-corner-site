@@ -130,7 +130,7 @@ The consequence of this deeper washing is the song: *"If ye have experienced a c
 <summary>On the Covenant Path — The Bride Makes Herself Ready</summary>
 <div class="seder-dropdown-body">
 
-The D&C Weekly Insights on the Four Cups describes the Feast of Unleavened Bread as representing the sanctification of the Bride. Having been redeemed by the blood of the Lamb (Passover), she must now purge out the leaven — removing sin from her life to become worthy of her Bridegroom.
+[The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/) describes the Feast of Unleavened Bread as representing the sanctification of the Bride. Having been redeemed by the blood of the Lamb (Passover), she must now purge out the leaven — removing sin from her life to become worthy of her Bridegroom.
 
 This second washing at Rachtzah mirrors the ancient practice of *bedikat chametz* — the meticulous search of the home to remove every trace of leaven before the feast. Leaven represents sin — something that spreads, puffs up, and corrupts the whole. The Bride makes herself ready by searching her heart for hidden sin and responding with urgency to the call to leave Babylon.
 
@@ -138,7 +138,7 @@ This second washing at Rachtzah mirrors the ancient practice of *bedikat chametz
 
 The second washing is not merely about removing outward impurity — it is about becoming holy, set apart, consecrated. A Bride made ready for her King.
 
-*Source: Weekly Insights, D&C 133-136*
+*Source: [The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/)*
 
 </div>
 </details>
