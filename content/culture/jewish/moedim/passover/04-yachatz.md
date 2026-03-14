@@ -29,15 +29,13 @@ This step is rich with **Messianic symbolism**.
 - One half is **broken**, representing the **body of Christ**, broken for us.
 - The **Afikoman**, hidden away, is a powerful image of **Christ's burial in the tomb**, waiting to be revealed again in glory.
 
-> "And he will take upon him death, that he may loose the bands of death..." — Alma 7:12
-
 This act marks a **turning point** in the Seder: the bread is broken *before* the meal to prepare our hearts for the sacred story of deliverance and redemption that will soon unfold.
 
 ---
 
 ## Scripture Connection
 
-The fifteen Songs of Ascents (Psalms 120–134) were part of the feast day traditions at the Temple, with records indicating the Levites sang them on the fifteen steps between the courts. Each psalm is paired here with its corresponding Seder step. For more on the connections between the Seder and Alma's sermon, see [Alma 5: The Nephite Seder](/study-library/articles/alma5-nephite-seder/).
+> "And he will take upon him death, that he may loose the bands of death..." — Alma 7:12
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 123: A Song of Ascents</summary>
@@ -84,9 +82,9 @@ Edersheim also records the meaning of the term *afikomen*: it was a principle th
 <summary>At the Last Supper — The Breaking of Bread</summary>
 <div class="seder-dropdown-body">
 
-This early breaking at Yachatz produces the Aphikomen — the piece hidden and found later. After the cessation of Paschal sacrifices, the Jews "conclude the Supper with a piece of unleavened cake, which they call the Aphikomen, or after-dish." The hidden bread, broken now and revealed later, would become the vehicle of Christ's covenant.
+At this point in the Seder, Jesus broke the middle matzah and set aside the larger half — the Aphikomen. What had been a ritual act at every Passover table now carried a deeper weight: the One who would be broken and hidden in the tomb was Himself performing the breaking.
 
-Edersheim observes that Jesus "seems so far to have anticipated the present Jewish practice that He brake the bread 'when He had given thanks,' instead of adhering to the old injunction of not eating anything after the Passover lamb." In doing so, He carried out the spirit of the feast — for "the symbolic cord had stretched to its goal — the offering up of the Lamb of God." The full institution of the Lord's Supper took place at the Aphikomen (Step 12), when the hidden bread was brought forth.
+The full institution of the Lord's Supper took place later, at the Aphikomen (Step 12), when the hidden bread was brought forth. Here at Yachatz, Jesus simply broke the bread and hid it — mirroring His own burial, preparing the symbol that would be revealed in glory.
 
 *Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
 

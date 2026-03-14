@@ -32,23 +32,21 @@ It mirrors the pattern of baptism followed by confirmation, where we not only be
 
 ### Jesus Washed Their Feet
 
-> "Jesus... rose from supper, laid aside his garments; and took a towel, and girded himself. After that he poureth water into a basin, and began to wash the disciples' feet..." — John 13:4–5
-
-At this deeper stage of the meal, Jesus Himself knelt to wash the feet of His disciples. This was no longer about outward preparation — it was an act of love, humility, cleansing, and sacred intimacy. Peter resisted at first, but Jesus responded:
-
-> "If I wash thee not, thou hast no part with me." — John 13:8
+At this deeper stage of the meal, Jesus Himself knelt to wash the feet of His disciples (John 13:4–5). This was no longer about outward preparation — it was an act of love, humility, cleansing, and sacred intimacy. Peter resisted at first, but Jesus responded: "If I wash thee not, thou hast no part with me" (John 13:8).
 
 Here, Christ was teaching us to submit to His sanctifying grace, and to do likewise in serving one another.
-
-> "Have ye been spiritually born of God?" — Alma 5:14
-
-> "Except a man be born of water and of the Spirit, he cannot enter into the kingdom of God." — John 3:5
 
 ---
 
 ## Scripture Connection
 
-The fifteen Songs of Ascents (Psalms 120–134) were part of the feast day traditions at the Temple, with records indicating the Levites sang them on the fifteen steps between the courts. Each psalm is paired here with its corresponding Seder step. For more on the connections between the Seder and Alma's sermon, see [Alma 5: The Nephite Seder](/study-library/articles/alma5-nephite-seder/).
+> "Jesus... rose from supper, laid aside his garments; and took a towel, and girded himself. After that he poureth water into a basin, and began to wash the disciples' feet..." — John 13:4–5
+
+> "If I wash thee not, thou hast no part with me." — John 13:8
+
+> "Have ye been spiritually born of God?" — Alma 5:14
+
+> "Except a man be born of water and of the Spirit, he cannot enter into the kingdom of God." — John 3:5
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 125: A Song of Ascents</summary>

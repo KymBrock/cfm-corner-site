@@ -33,7 +33,11 @@ Traditionally, matzah is:
 - **Pierced** — to prevent rising
 - **Unleavened** — without yeast, symbolizing freedom from sin
 
-Each of these attributes reflects Jesus Christ, the Bread of Life:
+Each of these attributes reflects Jesus Christ, the Bread of Life — pierced for our transgressions (Isaiah 53:5), striped for our healing (1 Peter 2:24), and without sin (2 Corinthians 5:21). And just as bread is placed in the earth and rises, so too did the Savior.
+
+---
+
+## Scripture Connection
 
 > "He was pierced..." — Isaiah 53:5
 
@@ -41,15 +45,7 @@ Each of these attributes reflects Jesus Christ, the Bread of Life:
 
 > "He knew no sin..." — 2 Corinthians 5:21
 
-And just as bread is placed in the earth and rises, so too did the Savior:
-
 > "I am the Bread of Life... He that cometh to me shall never hunger." — John 6:35
-
----
-
-## Scripture Connection
-
-The fifteen Songs of Ascents (Psalms 120–134) were part of the feast day traditions at the Temple, with records indicating the Levites sang them on the fifteen steps between the courts. Each psalm is paired here with its corresponding Seder step. For more on the connections between the Seder and Alma's sermon, see [Alma 5: The Nephite Seder](/study-library/articles/alma5-nephite-seder/).
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 126: A Song of Ascents</summary>

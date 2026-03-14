@@ -21,15 +21,13 @@ Urchatz is a symbolic act of **initial cleansing** — an outward preparation be
 
 Just as the Israelites passed through the Red Sea to begin their journey toward freedom, we pass through the waters of baptism to begin our journey toward Christ.
 
-> "Must be cleansed from all sin..." — Alma 5:21
-
-> "Except a man be born of water... he cannot enter into the kingdom of God." — John 3:5
-
 ---
 
 ## Scripture Connection
 
-The fifteen Songs of Ascents (Psalms 120–134) were part of the feast day traditions at the Temple, with records indicating the Levites sang them on the fifteen steps between the courts. Each psalm is paired here with its corresponding Seder step. For more on the connections between the Seder and Alma's sermon, see [Alma 5: The Nephite Seder](/study-library/articles/alma5-nephite-seder/).
+> "Must be cleansed from all sin..." — Alma 5:21
+
+> "Except a man be born of water... he cannot enter into the kingdom of God." — John 3:5
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 121: A Song of Ascents</summary>
