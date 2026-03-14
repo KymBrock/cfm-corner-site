@@ -165,3 +165,112 @@ Leave a placeholder and flag it explicitly, e.g.:
 **It is always better to publish less and be accurate than to publish
 more and be wrong. Kymber's readers trust this content for scripture
 study. That trust must never be violated.**
+
+
+---
+
+## ⚠️ Known Issues & Hard-Won Lessons (Updated 2026-03-14)
+
+### 1. Worktree Orphan Problem
+Claude Code creates `.claude/worktrees/<name>/` directories when using
+isolated agents. Content created in these worktrees does NOT automatically
+merge to the main working directory. **Before shipping any week, run:**
+```bash
+# Check all worktrees for content not in main
+for wt in .claude/worktrees/*/; do
+  name=$(basename "$wt")
+  diff -rq "$wt/content/" content/ 2>/dev/null | grep "^Only in $wt"
+  diff -rq "$wt/static/" static/ 2>/dev/null | grep "^Only in $wt"
+done
+```
+**History:** On 2026-03-14, the Passover Seder guide (15 pages + images),
+Four Cups article, Alma 5 Nephite Seder article, and Hebrew Lesson 11
+were all stranded in the `nice-leakey` worktree. Week 12 almost shipped
+without them.
+
+### 2. Desktop Commander `read_file` Returns Metadata
+The `mcp__desktop-commander__read_file` tool intermittently returns JSON
+metadata (`{"fileName":"...","filePath":"...","fileType":"text"}`) instead
+of file content. **Workaround:** Always use `cat` via
+`mcp__desktop-commander__start_process` for reliable file reads.
+
+### 3. Every New Week MUST Have Both Pieces
+Hugo requires TWO things to serve a week page:
+- `content/weeks/NN.md` — the Hugo content page with frontmatter
+- `static/content/weekNN/` — the generated HTML fragments (study-guide,
+  resources, insights)
+
+Missing the `.md` file → 404. Missing the static HTML → empty tabs.
+
+### 4. The `charts:` Section Is NOT Optional
+Every `content/weeks/NN.md` must include a `charts:` YAML list linking to
+that week's articles, Hebrew lesson, and cultural guides. Without it, the
+article cards don't appear on the week page. **Always populate charts from
+the actual articles that exist for that week.**
+
+### 5. Do NOT Mutate Previous Weeks Without Permission
+The `current: true/false` flag on week pages controls which week shows as
+"this week" on the site. **NEVER change a previous week's frontmatter
+unless Kymber explicitly asks.** The deployment checklist says to flip
+`current`, but that is a DEPLOYMENT step — not a content-generation step.
+Only flip flags when actually deploying to production.
+
+### 6. Hugo Static File Caching
+Hugo's `readFile` function caches static files at build time. After
+editing any file in `static/content/`, you MUST restart the Hugo server
+to see changes. Live reload does NOT pick up static file changes.
+
+### 7. macOS Dark Mode vs Tkinter (DIAGNOSED — NOT YET FIXED)
+Six styling attempts failed, but the root cause is NOT "macOS dark mode
+vs Tkinter" in general. The root cause is **global ttk style overrides**:
+- `style.configure(".", ...)` — overrides ALL widget colors, causes invisibility
+- `style.map(".", ...)` — same problem
+- `tk_setPalette()` — no effect on ttk, confuses widget rendering
+
+The current `hugo_gui.py` (restored from commit `dc55dd0`) has ZERO
+styling code and should render with default ttk appearance.
+
+**Next session approach (test-first, minimal fix):**
+1. Run a single diagnostic test (bare ttk widgets, no styling) to confirm
+   default rendering works
+2. Launch the current GUI as-is (it has no styling)
+3. Only then add CFM branding using ONLY named styles (`CFM.TButton`, etc.)
+4. NEVER use `style.configure(".", ...)` — this is what broke everything
+5. Add `--no-style` flag for future debugging
+
+See `Session_Handoffs/2026-03-14_Week12_Session_Handoff.md` §4 for
+full strategy with code examples.
+
+---
+
+## Weekly Content Generation Workflow
+
+### Step-by-step for each new week:
+
+1. **Generate content via CLI** (not the GUI until dark mode is fixed):
+   ```bash
+   cd /path/to/cfm-corner-tools
+   python3 -m converters.hugo_converter --week NN --type resources
+   python3 -m converters.hugo_converter --week NN --type study-guide
+   python3 -m converters.hugo_converter --week NN --type insights
+   ```
+
+2. **Audit worktrees** for any orphaned content (see §1 above)
+
+3. **Create `content/weeks/NN.md`** with:
+   - Full frontmatter (title, scripture, dates, week_num, weight, etc.)
+   - `charts:` section linking all articles, Hebrew lessons, cultural guides
+   - `current: true`
+
+4. **Verify in Hugo dev server:**
+   ```bash
+   hugo server --port 1326
+   # Check http://localhost:1326/weeks/NN/
+   # NOTE: Port 1326 matches HUGO_PORT in hugo_gui.py (line 32)
+   # Verify all tabs, article cards, images load
+   ```
+
+5. **Run link audit** on all generated HTML files
+
+6. **Only when deploying to production:** flip previous week's `current`
+   flag to `false` and commit everything together
