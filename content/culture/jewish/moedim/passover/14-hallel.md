@@ -73,6 +73,23 @@ Each Seder step resonates across four covenant settings: the traditional Jewish 
 
 **At the Seder Table:** The Hallel psalms (113–118) are sung responsively — Levites leading, people answering "Hallelujah!" Edersheim describes the threefold trumpet blast sounding as the Paschal lambs were slain, the Hallel rising continuously throughout the offering. The Fourth Cup — the Cup of Praise — corresponds to God's promise: "I will take you as my people, and I will be your God" (Exodus 6:7). Praise is the response to belonging.
 
+<details class="seder-dropdown seder-dropdown--seder">
+<summary>At the Seder Table — The Blessing of the Song</summary>
+<div class="seder-dropdown-body">
+
+Edersheim records that "the service concluded with the fourth cup, over which the second portion of the 'Hallel' was sung, consisting of Psalms 115, 116, 117, and 118." The whole evening ended with the "blessing of the song," comprising two brief prayers:
+
+*"All Thy works shall praise Thee, Jehovah our God. And Thy saints, the righteous, who do Thy good pleasure, and all Thy people, the house of Israel, with joyous song let them praise, and bless, and magnify, and glorify, and exalt, and reverence, and sanctify, and ascribe the kingdom to Thy name, O our King! For it is good to praise Thee, and pleasure to sing praises unto Thy name, for from everlasting to everlasting Thou art God."*
+
+*"The breath of all that lives shall praise Thy name, Jehovah our God. And the spirit of all flesh shall continually glorify and exalt Thy memorial, O our King! For from everlasting to everlasting Thou art God, and besides Thee we have no King, Redeemer, or Saviour."*
+
+These ancient words — spoken after the fourth cup — declare that the One praised at this table is not merely a national deity, but the God from everlasting to everlasting, beside whom there is no other Redeemer.
+
+*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
+</div>
+</details>
+
 **At the Last Supper:** "And when they had sung a hymn, they went out into the mount of Olives" (Matthew 26:30). Jesus and His disciples sang the Hallel psalms together — the same words Israel had sung for centuries — before He walked into Gethsemane. The last thing they did together before the Atonement began was sing. Even facing the bitter cup, He praised.
 
 <details class="seder-dropdown seder-dropdown--supper">

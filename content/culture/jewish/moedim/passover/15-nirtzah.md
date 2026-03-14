@@ -68,6 +68,19 @@ Each Seder step resonates across four covenant settings: the traditional Jewish 
 
 **At the Seder Table:** The sacred closing — everything offered tonight may be accepted by God. The word *nirtzah* shares its root with *<a href="https://www.blueletterbible.org/lexicon/h7522/kjv/wlc/0-1/" target="_blank" data-lexicon="goodwill, favour, acceptance, desire" data-strongs="H7522" data-translit="ratson" data-original="רָצוֹן" data-lang="hebrew">ratzon</a>* (will, desire) — suggesting that the offering has been received with divine pleasure. The evening ends with the ancient declaration: *"L'shanah haba'ah b'Yerushalayim!"* — "Next year in Jerusalem!" It is a cry of hope, exile, and longing for the day when God's people will gather in His holy city.
 
+<details class="seder-dropdown seder-dropdown--seder">
+<summary>At the Seder Table — Next Year in Jerusalem</summary>
+<div class="seder-dropdown-body">
+
+Edersheim notes that Jewish tradition connected "the most important events in Israel's history" with the Paschal season — from Abraham's covenant to the fall of Jericho, from the handwriting on Babylon's wall to the future deliverance of Israel. He writes: "in the last days it would be the Paschal night when the final judgments should come upon 'Edom,' and the glorious deliverance of Israel take place."
+
+This is why the Seder ends with the declaration *"L'shanah haba'ah b'Yerushalayim!"* — "Next year in Jerusalem!" It is a cry of exile, longing, and hope — a people still waiting for the final gathering, the final deliverance, the coming of the Messiah. Edersheim observes that "no other service contains within the same space the like ardent aspirations after a return to Jerusalem and the rebuilding of the Temple, nor so many allusions to the Messianic hope, as the liturgy for the night of the Passover."
+
+*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
+</div>
+</details>
+
 **At the Last Supper:** In Gethsemane, Jesus prays: "Not my will, but thine, be done" (Luke 22:42). He seeks the Father's acceptance of His offering — and receives it. He is the one whose offering makes ours acceptable. The entire 15-step pattern of the Seder — from sanctification through suffering, from bread and wine to praise — finds its completion here: the Son offers Himself, and the Father accepts.
 
 <details class="seder-dropdown seder-dropdown--supper">
@@ -109,6 +122,21 @@ The Seder ends with the declaration *"L'shanah haba'ah b'Yerushalayim!"* — "Ne
 </details>
 
 **On the Covenant Path Today:** President Nelson promises: "Those who keep their covenants with God will become a strain of sin-resistant souls" ("The Everlasting Covenant," 2022). The culmination of the covenant path — from sanctification through suffering, through the sacrament, through praise — is acceptance before God. "Next year in Jerusalem!" becomes "Zion — the pure in heart" (D&C 97:21). The pattern holds. The holy order endures. And the covenant — unchanged from the beginning — carries us home.
+
+<details class="seder-dropdown seder-dropdown--temple">
+<summary>On the Covenant Path — The Bridegroom Comes</summary>
+<div class="seder-dropdown-body">
+
+The D&C Weekly Insights on the Four Cups describes the Second Coming as a wedding — not a warning of doom, but a celebration. The cry goes forth: *"Behold, the Bridegroom cometh; go ye out to meet him"* (D&C 133:10).
+
+In ancient Israelite wedding customs, guests knocking at the door did not give their name — their voice had to be recognized. The Seder's closing cry — "Next year in Jerusalem!" — is the Bride's voice, calling out in hope for the Bridegroom's return. And the Bridegroom's promise is sure: *"I will go before your face. I will be on your right hand and on your left, and my Spirit shall be in your hearts, and mine angels round about you, to bear you up"* (D&C 136:22).
+
+The Nirtzah is the moment of acceptance — and it is also the moment of anticipation. The Seder ends, but the story does not. The Bride waits. The Bridegroom prepares. And when the Father gives the word, the trumpets will sound, and the cry will go forth: *"Go ye out to meet him."*
+
+*Source: Weekly Insights, D&C 133-136*
+
+</div>
+</details>
 
 ---
 

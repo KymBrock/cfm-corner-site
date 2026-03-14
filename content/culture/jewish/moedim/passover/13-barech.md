@@ -91,6 +91,21 @@ Each Seder step resonates across four covenant settings: the traditional Jewish 
 
 **At the Seder Table:** The Third Cup is the Cup of Redemption, corresponding to God's promise: "I will redeem you with a stretched-out arm" (Exodus 6:6). The Talmud (Pesachim 64a) records that the Hallel was sung continuously while the Paschal offerings were brought — the sacrificial act and the song of praise inseparable.
 
+<details class="seder-dropdown seder-dropdown--seder">
+<summary>At the Seder Table — The Cup of Blessing and the Door for Elijah</summary>
+<div class="seder-dropdown-body">
+
+Edersheim writes that the third cup — "the cup of blessing" — held special importance. The Talmud "notes ten peculiarities" about this cup, "sufficient to show the special value set upon it." It followed the grace after meat, and a special blessing was spoken over it.
+
+Edersheim also records a remarkable custom: "just after the 'third cup,' or the 'cup of blessing,' has been drunk — the door is opened to admit Elijah the prophet as forerunner of the Messiah, while appropriate passages are at the same time read which foretell the destruction of all heathen nations." To this day, a cup is set aside for Elijah at every Seder table — a visible token of Israel's hope for the coming Redeemer.
+
+"It is a remarkable coincidence," Edersheim notes, "that, in instituting His own Supper, the Lord Jesus connected the symbol, not of judgment, but of His dying love, with this 'third cup.'"
+
+*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
+</div>
+</details>
+
 **At the Last Supper:** "This cup is the new testament in my blood, which is shed for you" (Luke 22:20). The Cup of Redemption becomes the cup of the new covenant. What had pointed forward for centuries now arrives in the hands of the Messiah Himself. This is the cup from which the sacrament descends.
 
 <details class="seder-dropdown seder-dropdown--supper">
@@ -109,6 +124,19 @@ The D&C Weekly Insights on the Four Cups describes the third cup as the Cup of R
 </details>
 
 **In the Nephite Assembly:** The sacrament prayer over the water echoes the same covenant of remembrance: "in remembrance of the blood of thy Son, which was shed for them... that they do always remember him" (Moroni 5:2). The same cup, the same blood, the same covenant of remembrance — carried from Jerusalem to the Americas.
+
+<details class="seder-dropdown seder-dropdown--alma">
+<summary>In the Nephite Assembly — Alma 5: The Blessing Withheld</summary>
+<div class="seder-dropdown-body">
+
+Barech is the blessing after the meal — the moment of divine favor. But Alma, remarkably, withholds this blessing from the people of Zarahemla. Their pride and wickedness make them unprepared to receive it. Instead, he presses them with probing questions:
+
+> "I say unto you, can ye look up to God at that day with a pure heart and clean hands? I say unto you, can ye look up, having the image of God engraven upon your countenances?" — Alma 5:19
+
+The contrast comes in Alma 7, when Alma addresses the people of Gideon — a faithful community. There he speaks tenderly, prophesies of the coming Savior, and pronounces a blessing upon them. The drastic shift between the two sermons underscores the principle at the heart of Barech: divine blessing is real, but it is contingent upon the heart's readiness to receive it.
+
+</div>
+</details>
 
 **On the Covenant Path Today:** President Nelson teaches that the Hebrew word *<a href="https://www.blueletterbible.org/lexicon/h2617/kjv/wlc/0-1/" target="_blank" data-lexicon="goodness, kindness, faithfulness, covenant loyalty" data-strongs="H2617" data-translit="chesed" data-original="חֶסֶד" data-lang="hebrew">hesed</a>* — a unique form of covenantal love — describes "a special kind of love and mercy that God feels for and extends to those who have made a covenant with Him" ("The Everlasting Covenant," 2022). The cup of blessing is the cup of *hesed* — God's lovingkindness poured out to those who are His, in every age.
 
