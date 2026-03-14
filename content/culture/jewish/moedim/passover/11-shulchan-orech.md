@@ -142,13 +142,13 @@ The table is set. The bread and the waters of life are offered freely. Like the 
 <summary>On the Covenant Path — The Marriage Supper of the Lamb</summary>
 <div class="seder-dropdown-body">
 
-The D&C Weekly Insights on the Four Cups describes the autumn feast of Tabernacles (Sukkot) as the prophetic fulfillment of the Marriage Supper of the Lamb — "God dwelling with His people forever." The set table at the Seder is a foretaste of that eternal feast.
+[The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/) describes the autumn feast of Tabernacles (Sukkot) as the prophetic fulfillment of the Marriage Supper of the Lamb — "God dwelling with His people forever." The set table at the Seder is a foretaste of that eternal feast.
 
 At the Last Supper, Jesus told His disciples: *"I will not drink henceforth of this fruit of the vine, until that day when I drink it new with you in my Father's kingdom"* (Matthew 26:29). The Bridegroom sat at table with His Bride one last time before paying the bride price at Calvary — and He promised to return for the wedding feast.
 
 Every Sabbath, when the sacrament table is set and the bread and water are blessed and passed, we participate in a foretaste of that future feast — the Marriage Supper when the Bridegroom and His Bride will be reunited at last.
 
-*Source: Weekly Insights, D&C 133-136*
+*Source: [The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/)*
 
 </div>
 </details>

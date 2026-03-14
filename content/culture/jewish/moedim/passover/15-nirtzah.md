@@ -131,13 +131,13 @@ The Seder ends with the declaration *"L'shanah haba'ah b'Yerushalayim!"* — "Ne
 <summary>On the Covenant Path — The Bridegroom Comes</summary>
 <div class="seder-dropdown-body">
 
-The D&C Weekly Insights on the Four Cups describes the Second Coming as a wedding — not a warning of doom, but a celebration. The cry goes forth: *"Behold, the Bridegroom cometh; go ye out to meet him"* (D&C 133:10).
+[The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/) describes the Second Coming as a wedding — not a warning of doom, but a celebration. The cry goes forth: *"Behold, the Bridegroom cometh; go ye out to meet him"* (D&C 133:10).
 
 In ancient Israelite wedding customs, guests knocking at the door did not give their name — their voice had to be recognized. The Seder's closing cry — "Next year in Jerusalem!" — is the Bride's voice, calling out in hope for the Bridegroom's return. And the Bridegroom's promise is sure: *"I will go before your face. I will be on your right hand and on your left, and my Spirit shall be in your hearts, and mine angels round about you, to bear you up"* (D&C 136:22).
 
 The Nirtzah is the moment of acceptance — and it is also the moment of anticipation. The Seder ends, but the story does not. The Bride waits. The Bridegroom prepares. And when the Father gives the word, the trumpets will sound, and the cry will go forth: *"Go ye out to meet him."*
 
-*Source: Weekly Insights, D&C 133-136*
+*Source: [The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/)*
 
 </div>
 </details>

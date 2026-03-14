@@ -124,9 +124,9 @@ To this day, a cup is set aside for Elijah at every Seder table — a visible to
 
 Edersheim writes that Jesus used "the Aphikomen 'when He had given thanks' (after meat), to symbolise His body, and the third cup, or 'cup of blessing which we bless' — being 'the cup after supper' — to symbolise His blood." The bread and the cup were paired: the hidden bread revealed, the cup of redemption raised — body and blood together sealing the new covenant.
 
-The D&C Weekly Insights on the Four Cups describes this as the Cup of Redemption, linked to the Hebrew *ga'al* — from which we get *goel*, the kinsman redeemer. Christ is our ultimate Goel: He redeems us from slavery, pays the bride price with His own blood, restores our lost inheritance, and takes us as His own in eternal covenant.
+[The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/) describes this as the Cup of Redemption, linked to the Hebrew *ga'al* — from which we get *goel*, the kinsman redeemer. Christ is our ultimate Goel: He redeems us from slavery, pays the bride price with His own blood, restores our lost inheritance, and takes us as His own in eternal covenant.
 
-*Sources: Edersheim, The Temple: Its Ministry and Services, Ch. 12; Weekly Insights, D&C 133-136*
+*Sources: Edersheim, The Temple: Its Ministry and Services, Ch. 12; [The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/)*
 
 </div>
 </details>

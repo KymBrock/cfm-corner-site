@@ -117,13 +117,13 @@ Just as the Afikoman is brought from hiding into the light, our hidden selves wi
 <summary>On the Covenant Path — The Hidden One Found</summary>
 <div class="seder-dropdown-body">
 
-The D&C Weekly Insights on the Four Cups describes the Afikomen symbolism: the three matzot represent the Godhead, the middle piece is removed, broken, wrapped in linen, and hidden — to be found later by the children. The broken, hidden bread is Christ: "He was declaring Himself the afikomen — the hidden one who would be found."
+[The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/) describes the Afikomen symbolism: the three matzot represent the Godhead, the middle piece is removed, broken, wrapped in linen, and hidden — to be found later by the children. The broken, hidden bread is Christ: "He was declaring Himself the afikomen — the hidden one who would be found."
 
 But the Afikomen also represents the scattered body of Christ — His covenant family, broken and dispersed among the nations. D&C 133 echoes this: *"And they who are in the north countries shall come in remembrance before the Lord; and their prophets shall hear his voice"* (D&C 133:26). The scattered tribes — the broken matzah — will be found and gathered.
 
 At Tzafun, the children search for and find the hidden bread with joy. On the covenant path, we participate in this same gathering — finding those who are lost, gathering scattered Israel, and bringing forth what has been hidden until the appointed time.
 
-*Source: Weekly Insights, D&C 133-136*
+*Source: [The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/)*
 
 </div>
 </details>
