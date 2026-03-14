@@ -79,11 +79,15 @@ Each Seder step resonates across four covenant settings: the traditional Jewish 
 <summary>At the Seder Table — The Second Washing</summary>
 <div class="seder-dropdown-body">
 
-After the Maggid was complete, the first part of the Hallel sung, and the second cup drunk, Edersheim records: "Hands were now washed a second time, with the same prayer as before, and one of the two unleavened cakes broken and 'thanks given.'"
+The Haggadah instructs all participants to wash their hands, and this time the full blessing is recited:
 
-This second washing is a threshold moment — the transition from the telling to the eating. The story has been told. The plagues recounted. The deliverance celebrated. Now the hands are washed again with the same prayer: *"Blessed art Thou, Jehovah our God, who hast sanctified us with Thy commandments, and hast enjoined us concerning the washing of our hands."* But this time, it carries deeper weight — the participant is now preparing to handle the sacred meal itself. The washing matches the rising sanctity of what follows.
+> בָּרוּךְ אַתָּה יְיָ, אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְמִצְוֹתָיו וְצִוָּנוּ עַל נְטִילַת יָדַיִם.
+>
+> *Blessed are You, LORD our God, King of the Universe, who has made us holy through His commandments, and has commanded us about washing hands.*
 
-*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+Unlike Urchatz (Step 2), where hands were washed silently, this washing includes the full *al netilat yadayim* blessing — marking the transition from telling to eating, from narrative to sacred action. The story has been told. The plagues recounted. The deliverance celebrated. Now the hands are consecrated for the sacred meal itself.
+
+*Sources: Pesach Haggadah (Sefaria/Koren); Edersheim, The Temple: Its Ministry and Services, Ch. 12*
 
 </div>
 </details>
@@ -94,11 +98,9 @@ This second washing is a threshold moment — the transition from the telling to
 <summary>At the Last Supper — The Second Washing</summary>
 <div class="seder-dropdown-body">
 
-Edersheim records that after the first part of the Hallel was sung and the second cup drunk, "hands were now washed a second time, with the same prayer as before, and one of the two unleavened cakes broken and 'thanks given.'" This second washing prepared the participants for the sacred meal itself.
+"He that is washed needeth not save to wash his feet, but is clean every whit" (John 13:10). At this stage of the evening — after the telling and the singing — Jesus "mingled teaching for the present with the customary lessons of the past" (John 13:12-20).
 
-It was at this stage of the evening — after the telling and the singing — that Jesus "mingled teaching for the present with the customary lessons of the past" (John 13:12-20). The foot-washing, which Edersheim places earlier at the first cup, Peter's resistance, and Jesus' teaching about servanthood all unfolded within this liturgical framework of washing and preparation.
-
-The deeper significance is that this second washing was not optional or merely ceremonial — it was the threshold of the sacred meal. "He that is washed needeth not save to wash his feet, but is clean every whit" (John 13:10). The first washing (baptism) opens the covenant; the second (sanctification) prepares us to partake.
+The deeper significance is that this second washing was not optional or merely ceremonial — it was the threshold of the sacred meal. The first washing (baptism) opens the covenant; the second (sanctification) prepares us to partake. Jesus taught: "If I then, your Lord and Master, have washed your feet; ye also ought to wash one another's feet. For I have given you an example, that ye should do as I have done to you" (John 13:14–15).
 
 *Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
 

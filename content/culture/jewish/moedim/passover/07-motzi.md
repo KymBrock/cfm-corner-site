@@ -81,11 +81,15 @@ Each Seder step resonates across four covenant settings: the traditional Jewish 
 <summary>At the Seder Table — The Bread of Poverty</summary>
 <div class="seder-dropdown-body">
 
-After the second washing, Edersheim records that "one of the two unleavened cakes broken and 'thanks given.'" He notes a crucial detail from the Rabbinical authorities: the thanksgiving was to follow, not precede, the breaking of the bread — "because it was the bread of poverty, and the poor have not whole cakes, but broken pieces."
+The Haggadah instructs the leader to hold all three matzot and recite the Hamotzi — the general bread blessing:
 
-This detail is both practical and profound. The matzah is not the bread of kings — it is the bread of the poor, the humble, the afflicted. The blessing *hamotzi* ("who brings forth bread from the earth") acknowledges that even this flat, humble bread comes from God. The provision is divine, even when the bread is broken.
+> בָּרוּךְ אַתָּה יְיָ, אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, הַמּוֹצִיא לֶחֶם מִן הָאָרֶץ.
+>
+> *Blessed are You, LORD our God, King of the Universe, who brings forth bread from the earth.*
 
-*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+Edersheim notes a crucial detail: Rabbinical tradition held that the thanksgiving was to follow, not precede, the breaking — "because it was the bread of poverty, and the poor have not whole cakes, but broken pieces." The matzah is not the bread of kings — it is the bread of the poor, the humble, the afflicted. The provision is divine, even when the bread is broken.
+
+*Sources: Pesach Haggadah (Sefaria/Koren); Edersheim, The Temple: Its Ministry and Services, Ch. 12*
 
 </div>
 </details>
@@ -93,12 +97,12 @@ This detail is both practical and profound. The matzah is not the bread of kings
 **At the Last Supper:** "Jesus took bread, and blessed it" (Matthew 26:26). He gave thanks for the Father's provision — and then transformed it. The bread that God brings forth from the earth becomes the body that God brings forth from the tomb.
 
 <details class="seder-dropdown seder-dropdown--supper">
-<summary>At the Last Supper — The Timing of the Blessing</summary>
+<summary>At the Last Supper — The Bread Blessed</summary>
 <div class="seder-dropdown-body">
 
-Edersheim makes a careful distinction about the order of blessing and breaking. Rabbinical tradition held that the thanksgiving was to follow the breaking — "because it was the bread of poverty, and the poor have not whole cakes, but broken pieces." But Jesus, "according to the uniform testimony of the three Gospels and of St. Paul (Matt 26:26; Mark 14:22; Luke 22:19; 1 Cor 11:24), first gave thanks and then brake the bread."
+"Jesus took bread, and blessed it" (Matthew 26:26). At this point in the Seder, the Motzi blessing was the customary thanksgiving over bread — acknowledging God as the One who brings forth bread from the earth. Jesus spoke the same words that every head of household had spoken for centuries.
 
-This proves, Edersheim argues, that the institution of the Lord's Supper took place not at this early breaking but later — at the Aphikomen. The Motzi blessing at this point in the meal was the customary thanksgiving over bread. The greater act — "This is my body, which is given for you" — would come after the meal was complete, when the hidden bread was brought forth.
+But the bread He held was already marked for a greater purpose. The matzah at this table was striped by fire, pierced to prevent rising, and unleavened — pure. The bread that God brings forth from the earth would become the body that God brings forth from the tomb. The full institution — "This is my body, which is given for you" — would come later at the Aphikomen (Step 12), when the hidden bread was revealed.
 
 *Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
 
