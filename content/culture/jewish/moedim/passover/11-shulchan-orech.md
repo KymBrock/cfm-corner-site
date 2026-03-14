@@ -120,14 +120,20 @@ The remaining disciples ate the Paschal meal together with Jesus. Edersheim rega
 **In the Nephite Assembly:** Alma extends a direct invitation: "Behold, he sendeth an invitation unto all men, for the arms of mercy are extended towards them" (Alma 5:33). And when the risen Christ appears to the Nephites, He personally administers the sacrament to the multitude (3 Nephi 18:1–7). The table is set on a new continent. The invitation is the same.
 
 <details class="seder-dropdown seder-dropdown--alma">
-<summary>In the Nephite Assembly — Alma 5: Partake of the Fruit of the Tree of Life</summary>
+<summary>In the Nephite Assembly — Alma 5: The Table Set in Order</summary>
 <div class="seder-dropdown-body">
 
-The set table is an invitation to partake — of the meal, of the covenant, of the blessings God has prepared. Alma extends this same invitation in language that echoes the Seder's festive meal:
+The Hebrew word for "set in order" — <a href="https://www.blueletterbible.org/lexicon/h6186/kjv/wlc/0-1/" target="_blank" data-lexicon="to arrange, set in order" data-strongs="H6186" data-translit="arakh" data-original="עָרַךְ" data-lang="hebrew">*arakh*</a> — is the same concept that gives the Seder its very name. *Seder* means "order," and the act of setting a table is an act of arranging things according to a sacred pattern. This language echoes one of the most powerful foreshadowings in all of scripture:
+
+> "And they came to the place which God had told him of; and Abraham built an altar there, and laid the wood in **order**, and bound Isaac his son, and laid him on the altar upon the wood." — Genesis 22:9
+
+Abraham set the wood in *seder* — in order — preparing the sacrifice of his only begotten son. The set table at the Seder meal recalls this same pattern: the Father's careful preparation of the plan of salvation, which required the willing sacrifice of His Only Begotten Son.
+
+Alma extends the invitation to come and partake of what God has prepared:
 
 > "Yea, he saith: Come unto me and ye shall partake of the fruit of the tree of life; yea, ye shall eat and drink of the bread and the waters of life freely." — Alma 5:34
 
-The table is set. The bread and the waters of life are offered freely. The only question is whether we will come and partake.
+The table is set. The bread and the waters of life are offered freely. Like the three days Christ spent in the tomb before His resurrection — or the three days Jonah spent in the belly of the whale — the festive meal is also a time of faithful waiting, trusting that God's promised deliverance will come.
 
 </div>
 </details>

@@ -110,10 +110,10 @@ Psalm 118 — the climax of the Hallel — contains the very words the crowds ha
 **In the Nephite Assembly:** Alma asks: "If ye have experienced a change of heart, and if ye have felt to sing the song of redeeming love, I would ask, can ye feel so now?" (Alma 5:26). The "song of redeeming love" echoes the Hallel — praise that rises after deliverance. But Alma presses further: not *did* you sing it, but *can you feel it now?* The song must be a living, present experience.
 
 <details class="seder-dropdown seder-dropdown--alma">
-<summary>In the Nephite Assembly — Alma 5: Praise and Pride</summary>
+<summary>In the Nephite Assembly — Alma 5: Praise and Pride — Two Sides of Hallel</summary>
 <div class="seder-dropdown-body">
 
-The Hebrew root *hallel* carries a revealing duality — it means both "to praise" and "to boast." Alma addresses both sides of this coin in his sermon, warning against the pride that turns praise inward:
+The Hebrew root *hallel* carries a revealing duality — it means both "to praise" and "to boast." Alma addresses both sides of this coin across his sermons. In Zarahemla, he warns against the pride that turns praise inward:
 
 > "Can ye think of being saved when you have yielded yourselves to become subjects to the devil?" — Alma 5:20
 
@@ -121,7 +121,11 @@ The Hebrew root *hallel* carries a revealing duality — it means both "to prais
 
 > "Can ye be puffed up in the pride of your hearts; yea, will ye still persist in the wearing of costly apparel and setting your hearts upon the vain things of the world, upon your riches?" — Alma 5:53
 
-The Hallel calls us to lift our voices in praise to God — but Alma reminds us that praise can become pride if the heart turns from God to self. True Hallel is humble, grateful, and God-directed. Pride is its counterfeit.
+But there is another face of Hallel. In Alma 7, when Alma addresses the people of Gideon — a faithful community — his tone transforms completely. He expresses the *joy* he feels at seeing their faith and obedience. He teaches them about the coming birth of the Savior and commends their dedication to walking the covenant path of righteousness. The contrast between the two sermons is the contrast within *hallel* itself: when the heart turns to God, praise flows. When it turns to self, it curdles into pride.
+
+The word *hallel* is also linguistically related to the *Shir HaMa'alot* — the "songs of degrees" or songs of ascent — the very psalms sung by the Levites on the steps of the Temple Mount. In Alma 8, after his return from Gideon, Alma taught "many things which cannot be written" and established the order of the church. The mention of things that could not be written may reference oral traditions, including the musical recitations of the Hallel, which could not be preserved in written notation at that time.
+
+True Hallel is humble, grateful, and God-directed. Pride is its counterfeit. The difference between the two is not the volume of the voice but the posture of the heart.
 
 </div>
 </details>

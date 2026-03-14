@@ -105,16 +105,22 @@ The Seder that began with Kadesh — sanctification — ends with Nirtzah — ac
 **In the Nephite Assembly:** Alma asks: "Could ye say, if ye were called to die at this time, that ye have been sufficiently humble?" (Alma 5:27). The entire 15-step pattern leads to this: will you be accepted before God? The Seder, the Supper, and the Sermon all culminate in the same question — not of performance, but of the heart's posture before the Almighty.
 
 <details class="seder-dropdown seder-dropdown--alma">
-<summary>In the Nephite Assembly — Alma 5: Acceptance and the Book of Life</summary>
+<summary>In the Nephite Assembly — Alma 5: Accepted or Rejected</summary>
 <div class="seder-dropdown-body">
 
-Nirtzah — the final step — asks whether the offering has been accepted. Alma brings his entire sermon to the same climactic question: will we be found among the righteous?
+The word *nirtzah* carries a duality that matters: it can mean "accepted" — but its absence implies *rejection*. The question at the close of the Seder is not merely "Is the service finished?" but "Has it been received with divine pleasure — or not?" Alma poses this question with unflinching directness:
 
 > "And now, my brethren, I would that ye should hear me, for I speak in the energy of my soul... I say unto you, that I know that Jesus Christ shall come, yea, the Son, the Only Begotten of the Father." — Alma 5:46
 
 > "And now I say unto you, all you that are desirous to follow the voice of the good shepherd, come ye out from the wicked, and be ye separate, and touch not their unclean things." — Alma 5:57
 
 > "For the names of the righteous shall be written in the book of life, and unto them will I grant an inheritance at my right hand." — Alma 5:58
+
+The accepted have their names written in the book of life. The rejected are blotted out. There is no middle ground at Nirtzah.
+
+What follows Alma's sermon shows the practical outworking of this acceptance. In Alma 6, he establishes the order of the church — ordaining priests and elders by the laying on of hands. This is the divine commissioning that follows acceptance: the faithful are recognized, called, and appointed to serve. The Savior follows the same pattern in 3 Nephi when He calls and ordains His disciples.
+
+In Alma 8, after establishing the church in Gideon, Alma returns to Zarahemla and rests from his labors. This period of rest is the concluding peace of Nirtzah — the assurance that the work has been accepted and the servant may rest in the Lord.
 
 The Seder ends with the declaration *"L'shanah haba'ah b'Yerushalayim!"* — "Next year in Jerusalem!" Alma's sermon ends with the same forward-looking hope: the righteous shall receive an inheritance at the Lord's right hand. The journey from Kadesh to Nirtzah, from sanctification to acceptance, is complete.
 
