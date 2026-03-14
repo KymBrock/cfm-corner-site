@@ -23,17 +23,13 @@ The Israelites left Egypt in such haste that their dough had no time to rise. Th
 
 Leaven (yeast) often represents **sin and pride** in scripture. The matzah — flat, humble, without leaven — represents a life free from sin. It is the bread of **humility and purity**.
 
-When Jesus took bread at the Last Supper, He was almost certainly holding matzah:
-
-> "Take, eat: this is my body, which is broken for you: this do in remembrance of me." — 1 Corinthians 11:24
-
-Every time we partake of the sacrament bread, we echo this ancient Passover moment — remembering the One who was broken, pierced, and given for us.
+When Jesus took bread at the Last Supper, He was almost certainly holding matzah — and He said: "This is my body, which is broken for you: this do in remembrance of me" (1 Corinthians 11:24). Every time we partake of the sacrament bread, we echo this ancient Passover moment — remembering the One who was broken, pierced, and given for us.
 
 ---
 
 ## Scripture Connection
 
-The fifteen Songs of Ascents (Psalms 120–134) were part of the feast day traditions at the Temple, with records indicating the Levites sang them on the fifteen steps between the courts. Each psalm is paired here with its corresponding Seder step. For more on the connections between the Seder and Alma's sermon, see [Alma 5: The Nephite Seder](/study-library/articles/alma5-nephite-seder/).
+> "Take, eat: this is my body, which is broken for you: this do in remembrance of me." — 1 Corinthians 11:24
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 127: A Song of Ascents</summary>

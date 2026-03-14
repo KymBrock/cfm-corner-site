@@ -36,19 +36,15 @@ Suggested options:
 
 Hallel means "to praise" or "to shine." In this moment, we raise our voices in joyful thanksgiving — celebrating the God who delivered, redeemed, and accepted us.
 
-> "The Lord is my strength and my song, and is become my salvation." — Psalm 118:14
-
-This is the psalm Jesus likely sang with His disciples before walking into Gethsemane:
-
-> "And when they had sung a hymn, they went out into the mount of Olives." — Matthew 26:30
-
-Can you imagine? Even as He faced betrayal, suffering, and the cross, He praised. So tonight, we praise not because all is perfect — but because God is faithful, and His steadfast love endures forever.
+This is the psalm Jesus likely sang with His disciples before walking into Gethsemane. Can you imagine? Even as He faced betrayal, suffering, and the cross, He praised. So tonight, we praise not because all is perfect — but because God is faithful, and His steadfast love endures forever.
 
 ---
 
 ## Scripture Connection
 
-The fifteen Songs of Ascents (Psalms 120–134) were part of the feast day traditions at the Temple, with records indicating the Levites sang them on the fifteen steps between the courts. Each psalm is paired here with its corresponding Seder step. For more on the connections between the Seder and Alma's sermon, see [Alma 5: The Nephite Seder](/study-library/articles/alma5-nephite-seder/).
+> "The Lord is my strength and my song, and is become my salvation." — Psalm 118:14
+
+> "And when they had sung a hymn, they went out into the mount of Olives." — Matthew 26:30
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 133: A Song of Ascents</summary>
@@ -110,9 +106,7 @@ The fourth cup is then drunk, and the evening ends with what Edersheim calls "th
 <summary>At the Last Supper — The Hymn Before Gethsemane</summary>
 <div class="seder-dropdown-body">
 
-"And when they had sung an hymn, they went out into the mount of Olives" (Matthew 26:30). This was the Hallel — the same psalms Israel had sung for centuries — now sung by Jesus and His disciples as their last act together before the Atonement began.
-
-In the Temple, the Hallel had been sung responsively while the Paschal lambs were slain — the Levites leading, the people answering "Hallelujah!", a threefold trumpet blast sounding at each section. Now, in the Upper Room, the Lamb Himself sang the praise.
+"And when they had sung an hymn, they went out into the mount of Olives" (Matthew 26:30). This was the Hallel — the same psalms Israel had sung for centuries — now sung by Jesus and His disciples as their last act together before the Atonement began. In the Upper Room, the Lamb Himself sang the praise.
 
 Psalm 118 — the climax of the Hallel — contains the very words the crowds had shouted days earlier at His triumphal entry: "Blessed be he that cometh in the name of the Lord" (Psalm 118:26). And the declaration: "The stone which the builders refused is become the head stone of the corner" (Psalm 118:22). The rejected one would be exalted — but first, He would walk from this table into the garden.
 

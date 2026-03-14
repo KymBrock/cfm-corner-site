@@ -25,21 +25,19 @@ Find and eat the Afikoman — the piece of matzah that was earlier broken and co
 
 Earlier in the evening, the middle matzah was broken and the larger half hidden — just as Christ's body was broken and laid in a borrowed tomb. Now, it is time to search for it, reveal it, and partake.
 
-> "He is not here: for He is risen, as He said." — Matthew 28:6
+The Afikoman is often found by children, reminding us of Jesus' words: "Except ye be converted, and become as little children, ye shall not enter into the kingdom of heaven" (Matthew 18:3).
 
-The Afikoman is often found by children, reminding us of Jesus' words:
-
-> "Except ye be converted, and become as little children, ye shall not enter into the kingdom of heaven." — Matthew 18:3
-
-This moment is a joyful rediscovery — a sacred echo of the Resurrection. As we receive the hidden bread, we symbolically receive Christ into ourselves, and reflect on the personal question:
-
-> "Have ye received His image in your countenances?" — Alma 5:14
+This moment is a joyful rediscovery — a sacred echo of the Resurrection. As we receive the hidden bread, we symbolically receive Christ into ourselves.
 
 ---
 
 ## Scripture Connection
 
-The fifteen Songs of Ascents (Psalms 120–134) were part of the feast day traditions at the Temple, with records indicating the Levites sang them on the fifteen steps between the courts. Each psalm is paired here with its corresponding Seder step. For more on the connections between the Seder and Alma's sermon, see [Alma 5: The Nephite Seder](/study-library/articles/alma5-nephite-seder/).
+> "He is not here: for He is risen, as He said." — Matthew 28:6
+
+> "Except ye be converted, and become as little children, ye shall not enter into the kingdom of heaven." — Matthew 18:3
+
+> "Have ye received His image in your countenances?" — Alma 5:14
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 131: A Song of Ascents</summary>

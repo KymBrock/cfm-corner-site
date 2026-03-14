@@ -32,10 +32,6 @@ This symbolic sandwich is known as the Hillel sandwich, representing the binding
 
 Korech means "to wrap," "to bind," or "to encompass" — and in this step, we experience a taste of life's complexity: joy and pain, hope and sorrow, sweetness and suffering — all bound together in covenant.
 
-> "He was wounded for our transgressions, he was bruised for our iniquities..." — Isaiah 53:5
-
-> "Being in an agony he prayed more earnestly... his sweat was as it were great drops of blood..." — Luke 22:44
-
 Christ was bound and pierced for us. He encompassed every sorrow and every joy. His bitter crucifixion brought forth the sweetness of eternal life.
 
 This layered bite reminds us that even the bitterness of life can become sacred when we are in covenant with Christ.
@@ -44,7 +40,9 @@ This layered bite reminds us that even the bitterness of life can become sacred 
 
 ## Scripture Connection
 
-The fifteen Songs of Ascents (Psalms 120–134) were part of the feast day traditions at the Temple, with records indicating the Levites sang them on the fifteen steps between the courts. Each psalm is paired here with its corresponding Seder step. For more on the connections between the Seder and Alma's sermon, see [Alma 5: The Nephite Seder](/study-library/articles/alma5-nephite-seder/).
+> "He was wounded for our transgressions, he was bruised for our iniquities..." — Isaiah 53:5
+
+> "Being in an agony he prayed more earnestly... his sweat was as it were great drops of blood..." — Luke 22:44
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 129: A Song of Ascents</summary>

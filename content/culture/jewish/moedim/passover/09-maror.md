@@ -25,19 +25,15 @@ Eat a small portion of horseradish (or another bitter herb).
 
 The sharp bitterness we taste reminds us of the sorrow of slavery, the grief of sin, and the burden of suffering. It recalls the tears of the Israelites under Egyptian oppression, and the stinging regrets and sorrows we each carry in our own mortal journey.
 
-But Christ did not merely observe our bitterness — He entered into it fully.
-
-> "And he shall go forth, suffering pains and afflictions and temptations of every kind... that his bowels may be filled with mercy." — Alma 7:11
-
-> "Which suffering caused myself, even God... to tremble because of pain... and would that I might not drink the bitter cup, and shrink—" — D&C 19:18
-
-In Gethsemane, Jesus drank the full bitterness of mortality — pain, loneliness, betrayal, and death — without shrinking. Because He did, He can now walk beside us in every bitter moment, offering compassion, strength, and healing.
+But Christ did not merely observe our bitterness — He entered into it fully. In Gethsemane, Jesus drank the full bitterness of mortality — pain, loneliness, betrayal, and death — without shrinking. Because He did, He can now walk beside us in every bitter moment, offering compassion, strength, and healing.
 
 ---
 
 ## Scripture Connection
 
-The fifteen Songs of Ascents (Psalms 120–134) were part of the feast day traditions at the Temple, with records indicating the Levites sang them on the fifteen steps between the courts. Each psalm is paired here with its corresponding Seder step. For more on the connections between the Seder and Alma's sermon, see [Alma 5: The Nephite Seder](/study-library/articles/alma5-nephite-seder/).
+> "And he shall go forth, suffering pains and afflictions and temptations of every kind... that his bowels may be filled with mercy." — Alma 7:11
+
+> "Which suffering caused myself, even God... to tremble because of pain... and would that I might not drink the bitter cup, and shrink—" — D&C 19:18
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 128: A Song of Ascents</summary>
@@ -84,9 +80,7 @@ Edersheim notes that although the Mishnah "expressly declares that Charoseth was
 <summary>At the Last Supper — The Bitter Cup</summary>
 <div class="seder-dropdown-body">
 
-Edersheim records that "pieces of the broken cake with 'bitter herbs' between them, and 'dipped' in the Charoseth, were next handed to each in the company." This was the beginning of the Paschal Supper proper — everything before it had been introduction.
-
-It was at this very moment, as Jesus handled the bitter herbs and the bread, that "He was troubled in spirit" about "the root of bitterness about to spring up among, and to trouble them." Edersheim writes that the concern of the disciples as to which of them should betray Him found expression in the gesture of Peter — beckoning to John, who leaned back on Jesus' breast to ask the whispered question.
+As the bitter herbs were tasted at the table, Jesus "was troubled in spirit" — sensing "the root of bitterness about to spring up among, and to trouble them." Edersheim notes that the concern among the disciples as to which of them should betray Him found expression in the gesture of Peter — beckoning to John, who leaned back on Jesus' breast to ask the whispered question.
 
 After the meal ended, Jesus went forth into Gethsemane, where the bitter herbs found their ultimate fulfilment: "O my Father, if it be possible, let this cup pass from me" (Matthew 26:39). The Talmud speaks of the "cup of vengeance" that God would give the nations to drink (Jeremiah 25:15). But Christ drank the bitterest cup Himself — "and when He had offered up prayers and supplications with strong crying and tears unto Him that was able to save Him from death... though He were a Son, yet learned He obedience by the things which He suffered" (Hebrews 5:7-8).
 

@@ -37,13 +37,11 @@ We remember that Christ, our High Priest, makes our offerings acceptable — not
 
 > *"May our offering tonight be accepted by God. May we be accepted of Christ, who gave Himself that we might be sanctified and brought into His presence."*
 
-> "Have ye walked, keeping yourselves blameless before God? Could ye say... that ye have been sufficiently humble? ... Are ye stripped of pride?" — Alma 5:27
-
 ---
 
 ## Scripture Connection
 
-The fifteen Songs of Ascents (Psalms 120–134) were part of the feast day traditions at the Temple, with records indicating the Levites sang them on the fifteen steps between the courts. Each psalm is paired here with its corresponding Seder step. For more on the connections between the Seder and Alma's sermon, see [Alma 5: The Nephite Seder](/study-library/articles/alma5-nephite-seder/).
+> "Have ye walked, keeping yourselves blameless before God? Could ye say... that ye have been sufficiently humble? ... Are ye stripped of pride?" — Alma 5:27
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 134: A Song of Ascents</summary>

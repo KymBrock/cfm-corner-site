@@ -33,25 +33,23 @@ This is traditionally understood as the cup that Jesus blessed at the Last Suppe
 
 ## Meaning and Symbolism
 
-The third cup is called the Cup of Redemption, representing God's promise:
-
-> "I will redeem you with a stretched-out arm..." — Exodus 6:6
+The third cup is called the Cup of Redemption, representing God's promise: "I will redeem you with a stretched-out arm" (Exodus 6:6).
 
 As Jesus lifted this cup, He redefined redemption — not as rescue from Egypt, but as rescue from sin, shame, fear, death, and separation from God.
 
 He would stretch out His arms in Gethsemane and on the cross to make that redemption personal — for you.
 
-> "And now... if ye do this, and have faith in the redemption of Him who created you, ye shall be saved, and your sins washed away." — Alma 7:16
-
-In this moment, we do more than remember — we renew our covenant with Christ, gratefully drinking in His promise:
-
-> "Thy sins are forgiven thee." — Luke 7:48
+In this moment, we do more than remember — we renew our covenant with Christ, gratefully drinking in His promise.
 
 ---
 
 ## Scripture Connection
 
-The fifteen Songs of Ascents (Psalms 120–134) were part of the feast day traditions at the Temple, with records indicating the Levites sang them on the fifteen steps between the courts. Each psalm is paired here with its corresponding Seder step. For more on the connections between the Seder and Alma's sermon, see [Alma 5: The Nephite Seder](/study-library/articles/alma5-nephite-seder/).
+> "I will redeem you with a stretched-out arm..." — Exodus 6:6
+
+> "And now... if ye do this, and have faith in the redemption of Him who created you, ye shall be saved, and your sins washed away." — Alma 7:16
+
+> "Thy sins are forgiven thee." — Luke 7:48
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 132: A Song of Ascents</summary>

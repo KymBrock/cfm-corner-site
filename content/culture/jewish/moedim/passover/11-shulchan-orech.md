@@ -49,17 +49,15 @@ This is more than a meal — it is a sacred moment of covenant fellowship.
 
 At the Last Supper, Jesus sat at a table not just to eat, but to teach, to love, and to offer His very self. He broke bread and shared wine as symbols of His body and blood, inviting His disciples into the new covenant.
 
-> "With desire I have desired to eat this Passover with you..." — Luke 22:15
-
 The table is also a prophetic symbol — pointing forward to the Marriage Supper of the Lamb, when we will sit again with Christ in glory.
-
-> "Thou preparest a table before me... my cup runneth over." — Psalm 23:5
 
 ---
 
 ## Scripture Connection
 
-The fifteen Songs of Ascents (Psalms 120–134) were part of the feast day traditions at the Temple, with records indicating the Levites sang them on the fifteen steps between the courts. Each psalm is paired here with its corresponding Seder step. For more on the connections between the Seder and Alma's sermon, see [Alma 5: The Nephite Seder](/study-library/articles/alma5-nephite-seder/).
+> "With desire I have desired to eat this Passover with you..." — Luke 22:15
+
+> "Thou preparest a table before me... my cup runneth over." — Psalm 23:5
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 130: A Song of Ascents</summary>
