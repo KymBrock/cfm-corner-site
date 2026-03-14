@@ -116,7 +116,11 @@ The Korech binds bitter and sweet, sorrow and hope, in a single bite. Alma holds
 
 > "And now if ye are not the sheep of the good shepherd, of what fold are ye? Behold, I say unto you, that the devil is your shepherd, and ye are of his fold." — Alma 5:39
 
-Alma does not soften the categories. Good and evil, covenant and rebellion, the fold of the Shepherd and the fold of the devil — they are presented side by side, bound together in the same sermon, just as the matzah and the maror are bound together in the same bite. The covenant demands honesty about both.
+But even as Alma presents this stark contrast, he offers the hope that defines the Korech — the binding, encompassing love of God:
+
+> "Behold, he sendeth an invitation unto all men, for the arms of mercy are extended towards them." — Alma 5:33
+
+The word *korech* means to wrap, to encompass. The "arms of mercy" — stretched out, encompassing — are the Korech of the Atonement, binding the bitter and the sweet, the sinner and the Savior, in one redeeming embrace.
 
 </div>
 </details>

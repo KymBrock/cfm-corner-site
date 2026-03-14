@@ -101,7 +101,11 @@ After the meal ended, Jesus went forth into Gethsemane, where the bitter herbs f
 <summary>In the Nephite Assembly — Alma 5: The Bitter Wages of Sin</summary>
 <div class="seder-dropdown-body">
 
-The bitter herbs remind us that sin carries bitter wages — and that the path of the wicked leads to sorrow. Alma warns plainly:
+Alma describes the bitterness of bondage and sin in vivid language that echoes the maror:
+
+> "And they were in the midst of darkness; nevertheless, their souls were illuminated by the light of the everlasting word; yea, they were encircled about by the bands of death, and the chains of hell, and an everlasting destruction did await them." — Alma 5:7
+
+Encircled. Chained. Awaiting destruction. This is the taste of maror — the bitterness of a people in spiritual bondage. And Alma warns plainly that this bitterness carries real wages:
 
 > "And again I say unto you, is there one among you that doth make a mock of his brother, or that doth heap upon him persecutions? Wo unto such an one, for he is not prepared, and the time is at hand that he must repent or he cannot be saved!" — Alma 5:30–31
 
