@@ -9,7 +9,7 @@ This is not a traditional Jewish Seder. The Passover Seder is a sacred tradition
 
 <br>
 
-Rather, this guide is intended to show how ancient Passover traditions can help members of the Church today recognize these same themes in our own covenant theology — particularly in connection to the **Temple** and to the **Book of Mormon**. In Alma 5, Alma appears to lead the Nephites through what we might call a 15-step Nephite Seder — a structured sequence of repentance, sanctification, and being accepted by God. We explore this connection in our Study Library article: <a href="/study-library/articles/alma5-nephite-seder/">"Alma 5: The Nephite Seder"</a>
+Rather, this guide is intended to show how ancient Passover traditions can help members of the Church today recognize these same themes in our own covenant theology — particularly in connection to the **Temple** and to the **Book of Mormon**. In Alma 5, Alma appears to lead the Nephites through what we might call a 15-step Nephite Seder — a structured sequence of repentance, sanctification, and being accepted by God. We explore this connection in our Study Library article: <a href="/study-library/articles/alma5-nephite-seder/">"Alma 5: The Nephite Seder"</a>. For a deeper study of the four cups, the kinsman redeemer, and how the Passover reveals God's covenant as a marriage, see <a href="/study-library/articles/four-cups-wedding-covenant/">"The Four Cups and the Wedding Covenant"</a>
 
 <br>
 
