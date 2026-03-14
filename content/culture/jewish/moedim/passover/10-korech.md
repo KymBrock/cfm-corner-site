@@ -129,11 +129,11 @@ The word *korech* means to wrap, to encompass. The "arms of mercy" — stretched
 <summary>On the Covenant Path — Binding the Covenant Together</summary>
 <div class="seder-dropdown-body">
 
-The D&C Weekly Insights on the Four Cups describes the ancient wedding covenant as a binding of two lives — the Bride and the Bridegroom joining everything they have and are. Through sacred ordinances, we enter a covenant relationship with Christ that mirrors a marriage contract: we take upon ourselves His name, we promise fidelity, and He promises to provide, protect, and redeem.
+[The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/) describes the ancient wedding covenant as a binding of two lives — the Bride and the Bridegroom joining everything they have and are. Through sacred ordinances, we enter a covenant relationship with Christ that mirrors a marriage contract: we take upon ourselves His name, we promise fidelity, and He promises to provide, protect, and redeem.
 
 The Korech embodies this binding. The matzah (purity), the maror (suffering), and the charoseth (sweetness of hope) are not experienced separately — they are bound together in one bite, one covenant, one life. On the covenant path, we do not experience redemption apart from affliction, or joy apart from sacrifice. They are inseparable — held together by the covenant that binds us to a Savior who Himself was bound, pierced, and wrapped in linen for our sake.
 
-*Source: Weekly Insights, D&C 133-136*
+*Source: [The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/)*
 
 </div>
 </details>

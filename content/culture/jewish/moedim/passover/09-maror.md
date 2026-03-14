@@ -118,11 +118,11 @@ The Maror is tasted within the Seder — within the covenant meal — which mean
 
 The bitter herbs are tasted within the covenant meal — not outside it. The bitterness is real, but it is held within the framework of redemption. This is the pattern of the covenant path: suffering is not avoided but transformed.
 
-In Gethsemane, Christ prayed: *"O my Father, if it be possible, let this cup pass from me: nevertheless not as I will, but as thou wilt"* (Matthew 26:39). He drank the bitter cup — the full weight of mortal suffering — so that our bitter moments might lead somewhere. As the D&C Weekly Insights on the Four Cups teaches, the cup of vengeance that the prophets foretold (Jeremiah 25:15) was drunk not by the nations but by the Lamb Himself.
+In Gethsemane, Christ prayed: *"O my Father, if it be possible, let this cup pass from me: nevertheless not as I will, but as thou wilt"* (Matthew 26:39). He drank the bitter cup — the full weight of mortal suffering — so that our bitter moments might lead somewhere. As [The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/) teaches, the cup of vengeance that the prophets foretold (Jeremiah 25:15) was drunk not by the nations but by the Lamb Himself.
 
 On the covenant path, we are not promised a life without bitterness. We are promised that the One who drank the bitterest cup walks beside us, transforms our suffering, and brings us through. The bitter herbs at the Seder table are always followed by the Korech — the sandwich that binds bitterness and hope together.
 
-*Source: Weekly Insights, D&C 133-136*
+*Source: [The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/)*
 
 </div>
 </details>

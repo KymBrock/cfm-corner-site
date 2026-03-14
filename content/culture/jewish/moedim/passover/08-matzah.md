@@ -115,13 +115,13 @@ To be "puffed up" is to be leavened — full of the world's vanity and self-impo
 <summary>On the Covenant Path — Searching for Leaven</summary>
 <div class="seder-dropdown-body">
 
-The D&C Weekly Insights on the Four Cups describes the ancient practice of *bedikat chametz* — the meticulous search of the home to remove every trace of leaven before the Feast of Unleavened Bread. Paul taught the principle: *"Know ye not that a little leaven leaveneth the whole lump? Purge out therefore the old leaven, that ye may be a new lump, as ye are unleavened"* (1 Corinthians 5:6-7).
+[The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/) describes the ancient practice of *bedikat chametz* — the meticulous search of the home to remove every trace of leaven before the Feast of Unleavened Bread. Paul taught the principle: *"Know ye not that a little leaven leaveneth the whole lump? Purge out therefore the old leaven, that ye may be a new lump, as ye are unleavened"* (1 Corinthians 5:6-7).
 
 This physical cleansing symbolized the spiritual cleansing required of the Bride: removing sin from our lives so we can dwell with a sinless Bridegroom. Christ, the "bread of life" (John 6:35), was without sin — unleavened, pure, uncorrupted. The matzah we eat is a reminder that the covenant path requires ongoing purification — searching our hearts for the hidden leaven of pride, selfishness, and worldliness.
 
 > "Are ye stripped of pride? I say unto you, if ye are not ye are not prepared to meet God." — Alma 5:28
 
-*Source: Weekly Insights, D&C 133-136*
+*Source: [The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/)*
 
 </div>
 </details>
