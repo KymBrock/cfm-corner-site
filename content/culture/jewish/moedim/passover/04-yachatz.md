@@ -11,7 +11,7 @@ image: /images/culture/passover/04-yachatz.png
 
 ## Root Word
 
-<a href="https://www.blueletterbible.org/lexicon/h2865/kjv/wlc/0-1/" target="_blank" data-lexicon="to be shattered, dismayed, broken" data-strongs="H2865" data-translit="chatat" data-original="חָתַת" data-lang="hebrew">חָתַת</a> (*chatat*) — to break, to be humbled
+<a href="https://www.blueletterbible.org/lexicon/h2673/kjv/wlc/0-1/" target="_blank" data-lexicon="to cut or split in two, to halve" data-strongs="H2673" data-translit="chatzah" data-original="חָצָה" data-lang="hebrew">חָצָה</a> (*chatzah*) — to divide, to split in two
 
 ---
 

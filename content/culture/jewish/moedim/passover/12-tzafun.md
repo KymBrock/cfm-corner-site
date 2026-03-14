@@ -95,12 +95,10 @@ Edersheim writes: "The symbolical cord, if the figure may be allowed, had stretc
 **In the Nephite Assembly:** Alma teaches that the hidden things of the heart shall be revealed: "Our words will condemn us, yea, all our works will condemn us... and our thoughts will also condemn us" (Alma 12:14). What is hidden will be brought to light — both the sins of the heart and the glory of the Risen Lord.
 
 <details class="seder-dropdown seder-dropdown--alma">
-<summary>In the Nephite Assembly — Alma 5: The Hidden Cleanser Revealed</summary>
+<summary>In the Nephite Assembly — Alma 5: The Hidden One Revealed</summary>
 <div class="seder-dropdown-body">
 
-The word *tzafun* carries a remarkable second meaning. In the Talmud (Niddah 62b), *tzafun* (<a href="https://www.sefaria.org/Niddah.62b.1?lang=bi" target="_blank">צָפוֹן</a>) refers to a cleansing agent — a soap or detergent used specifically for washing away *blood*. At the Seder, the step called "hidden" is also the step of cleansing — and what is cleansed is blood itself.
-
-Alma presses this very question upon his people — whether they have been cleansed through the blood of the Redeemer:
+The word *tzafun* means "hidden" — but at this step, what emerges from hiding is the bread of redemption. Alma presses this very question upon his people — whether they have been cleansed through the blood of the Redeemer:
 
 > "I say unto you, can ye look up to God at that day with a pure heart and clean hands? I say unto you, can ye look up, having the image of God engraven upon your countenances?" — Alma 5:19
 
@@ -108,7 +106,7 @@ Alma presses this very question upon his people — whether they have been clean
 
 The Afikoman — broken and hidden at Yachatz — now comes forth from concealment. Christians have long associated this moment with the Resurrection, and Paul describes Christ as "the firstfruits of them that slept" (1 Corinthians 15:20) — hidden in death, revealed in triumph over the grave.
 
-Just as the Afikoman is brought from hiding into the light, our hidden selves will one day stand revealed. The *tzafun* — the hidden cleanser — is Christ's own blood, which purifies us from all stain and prepares us to be found worthy at that day.
+Just as the Afikoman is brought from hiding into the light, our hidden selves will one day stand revealed. Christ's own blood purifies us from all stain and prepares us to be found worthy at that day.
 
 </div>
 </details>

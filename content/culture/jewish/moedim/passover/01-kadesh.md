@@ -28,7 +28,7 @@ Pour and bless the first cup.
 > "I will bring you out from under the burdens of the Egyptians..."
 > — Exodus 6:6–7
 
-> "Lay aside every sin, which easily doth beset you... and come and be baptized unto repentance."
+> "Lay aside every sin, which easily doth beset you... come and go forth, and show unto your God that ye are willing to repent of your sins... by going into the waters of baptism."
 > — Alma 7:15
 
 The fifteen Songs of Ascents (Psalms 120–134) were part of the feast day traditions at the Temple, with records indicating the Levites sang them on the fifteen steps between the courts. Each psalm is paired here with its corresponding Seder step. For more on the connections between the Seder and Alma's sermon, see [Alma 5: The Nephite Seder](/study-library/articles/alma5-nephite-seder/).
@@ -150,7 +150,7 @@ In that willingness, Abraham received back everything and more. The pattern of t
 </div>
 </details>
 
-The pattern has not changed. The holy order endures.
+The interpretations differ, but the pattern is consistent. The holy order endures.
 
 ---
 
