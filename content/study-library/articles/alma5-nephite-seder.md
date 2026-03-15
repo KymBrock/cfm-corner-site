@@ -5,13 +5,27 @@ weight: 6
 related_weeks: ["27"]
 ---
 
-What if Alma 5 is not simply a sermon, but a structured liturgical sequence?
+> "Have ye felt to sing the song of redeeming love? ... I would ask, can ye feel so now?" — Alma 5:26
+
+Before there were books, there was song.
+
+In the ancient world of Israel, music was not entertainment — it was theology made audible. Alfred Edersheim, the 19th-century scholar of Jewish life in the time of Christ, observed that "the most important of these [Temple services], next to the sacrificial rites, was the hymnody of the sanctuary."[^edersheim-music] The Hebrew Bible itself carries musical notation woven into its very letters: the cantillation marks (*ta'amim*) that guided how every word was to be chanted. When pilgrims ascended to Jerusalem for the great feasts, they sang the fifteen *Shir HaMa'alot* — the Songs of Ascent (Psalms 120–134) — accompanied by flutes along the dusty roads.[^edersheim-ascent] Feast days were filled with music: responsive psalms sung by Levitical choirs, the blast of silver trumpets at the moment of sacrifice, the great Hallel echoing through the Temple courts.
+
+The early church father Origen, writing in the third century, understood these songs as a graduated spiritual curriculum — each one corresponding to a stage of the soul's ascent toward God. He wrote of "the fifteen Gradual Songs" and how, "by assessing the virtue of each song separately and collecting from them the grades of the soul's advance," one could trace the path by which the faithful soul "attains by way of all these to the nuptial chamber of the Bridegroom."[^origen-songs] Philo of Alexandria, a Jewish philosopher contemporary with the apostles, went further still, teaching that "the heaven is always singing melodies, perfecting an all-musical harmony" — a cosmic song that Moses himself heard during his forty days on Sinai.[^philo-heaven]
+
+When Alma asked whether his people had felt to sing the song of redeeming love — and whether they could feel so *now* — he may have been reaching into something ancient: a tradition where song was not merely emotional expression but spiritual transformation, where the act of singing was itself a means of ascent toward God.
+
+With this musical heritage in mind, we turn to Alma 5 — not to make definitive claims, but to consider a possibility worth exploring: What if this sermon is not simply a collection of questions, but a structured liturgical sequence? What if Alma, as high priest over a people who observed the Law of Moses, was leading his congregation through a pattern they would have recognized — a Nephite Seder of repentance, sanctification, and covenant renewal?
+
+---
+
+## The Seder and the Holy Order
 
 The Passover Seder is an ordered pattern of fifteen steps that moves its participants from bondage to deliverance, from impurity to sanctification, from estrangement to acceptance before God. The Hebrew word <a href="https://www.blueletterbible.org/lexicon/h5468/kjv/wlc/0-1/" target="_blank" data-lexicon="order" data-strongs="H5468" data-translit="seder" data-original="סֵדֶר" data-lang="hebrew">*seder*</a> means "order" — and Alma uses this very concept multiple times in his address, referring to what he calls the <a href="https://www.blueletterbible.org/lexicon/h6944/kjv/wlc/0-1/" target="_blank" data-lexicon="holy" data-strongs="H6944" data-translit="qodesh" data-original="קֹדֶשׁ" data-lang="hebrew">*Seder Kadosh*</a> — the "Holy Order." Specific references to this order appear in Alma 5:44, 49, and 54, and the concept is developed further in Alma 13, where the "holy order of God" becomes a central theological framework.
 
-Upon careful examination, Alma's sermon follows the traditional structured pattern of the Seder's fifteen steps as outlined in the Jewish Haggadah. The Nephites, as a community of Israelites who faithfully observed the Law of Moses, would have known these patterns intimately. Alma, as high priest, appears to lead his people through each step in sequence — a Nephite Seder of repentance, sanctification, and covenant renewal.
+Upon careful examination, Alma's sermon appears to follow the traditional structured pattern of the Seder's fifteen steps as outlined in the Jewish Haggadah. The Nephites, as a community of Israelites who faithfully observed the Law of Moses, would have known these patterns intimately. Alma, as high priest, seems to lead his people through each step in sequence.
 
-This observance is traditionally associated with the recitation of songs, which Alma may allude to when he refers to the "song of redeeming love" (Alma 5:26). The traditional music patterns of the Seder are reminiscent of the Songs of Moses (Exodus 15:1; Deuteronomy 31) and the fifteen *Shir HaMa'alot* — the Songs of Ascent found in Psalms 120–134.
+This observance is traditionally associated with the recitation of songs — which may illuminate Alma's reference to the "song of redeeming love" (Alma 5:26). The traditional music patterns of the Seder are reminiscent of the Songs of Moses (Exodus 15:1; Deuteronomy 32) and the fifteen *Shir HaMa'alot* — the Songs of Ascent found in Psalms 120–134.
 
 This article presents an interpretive reading, not a claim of direct textual dependence. But the structural parallels are striking, and they invite us to read Alma 5 with fresh eyes — as a prophet leading his people through an ancient pattern of covenant renewal that points, at every step, toward the Savior.
 
@@ -275,10 +289,26 @@ Each question is a step in the ascending pattern — pressing deeper, demanding 
 - Talmud Bavli, Pesachim 64a, 118a (Hallel during Paschal offering, the Great Hallel)
 - Tosefta Sotah VII.7 (Priestly Blessing pronounced on the Temple steps)
 
+**Classical Sources:**
+- Philo of Alexandria. *On Dreams*, trans. C. D. Yonge (1854). See especially §VI ¶1.35-36 on celestial music.
+- Origen of Alexandria. *Commentary on the Song of Songs*, trans. R. P. Lawson (1957). See Prologue §4 on songs as graduated spiritual ascent.
+
 **Scholarship:**
 - Liebreich, Leon J. "The Songs of Ascents and the Priestly Blessing." *Journal of Biblical Literature* 74, no. 1 (1955): 33–36.
-- Edersheim, Alfred. *The Temple: Its Ministry and Services*, Ch. 11: The Passover; Ch. 12: The Paschal Feast and the Lord's Supper.
+- Edersheim, Alfred. *The Temple: Its Ministry and Services* (1874), Ch. 3: Temple Order, Revenues, and Music; Ch. 11: The Passover; Ch. 12: The Paschal Feast and the Lord's Supper.
 - Edersheim, Alfred. *The Life and Times of Jesus the Messiah*, Book 5, Ch. 10: The Paschal Supper — The Institution of the Lord's Supper.
 
 **Related:**
 - [The Passover Seder — A Messianic Seder Guide](/culture/jewish/moedim/passover/) (CFM Corner Culture Section — includes expanded Last Supper, Temple covenant, and Alma 5 dropdowns for each step)
+
+---
+
+## Footnotes
+
+[^edersheim-music]: Alfred Edersheim, *The Temple: Its Ministry and Services* (1874), Chapter 3: "Temple Order, Revenues, and Music." Edersheim continues: "We can conceive what it must have been in the days of David and of Solomon. But even in New Testament times it was such that St. John could find no more adequate imagery to portray heavenly realities and the final triumph of the Church than that taken from the service of praise in the Temple."
+
+[^edersheim-ascent]: Edersheim, *The Temple*, Chapter 3: "The flute was also used by the festive pilgrim-bands on their journey to Jerusalem, to accompany 'the Psalms of Degrees,' or rather of 'Ascent' (Isaiah 30:29), sung on such occasions."
+
+[^origen-songs]: Origen of Alexandria, *Commentary on the Song of Songs*, Prologue §4 (c. 240 AD), trans. R. P. Lawson. Origen enumerates seven songs of Scripture as a graduated progression, culminating in the Song of Songs, and notes that the fifteen Gradual Songs (Psalms 120–134) offer an alternative framework for tracing "the grades of the soul's advance."
+
+[^philo-heaven]: Philo of Alexandria, *On Dreams* §VI ¶1.35-36, trans. C. D. Yonge. Philo writes that heaven produces "all-musical harmony, in accordance with the motions of all the bodies which exist therein," and suggests that Moses heard these celestial melodies during his forty days on Sinai, becoming an "incorporeal hearer" of divine song.
