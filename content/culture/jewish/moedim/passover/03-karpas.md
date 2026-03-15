@@ -88,7 +88,7 @@ Then came a deliberately provocative act: Edersheim records that "all the dishes
 <summary>At the Last Supper — The Dipping</summary>
 <div class="seder-dropdown-body">
 
-The Seder's double dipping became the sign by which Jesus identified His betrayer. "He that dippeth his hand with me in the dish, the same shall betray me" (Matthew 26:23). When Judas asked, "Is it I?" Jesus answered with the sop — the bread dipped in charoseth — handing it to the one who sat in the place of honour at His left.
+The Seder's double dipping became the sign by which Jesus identified His betrayer. "He that dippeth his hand with me in the dish, the same shall betray me" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=p23#p23" target="_blank">Matthew 26:23</a>). When Judas asked, "Is it I?" Jesus answered with the sop — the bread dipped in charoseth — handing it to the one who sat in the place of honour at His left.
 
 What should have been a gesture of fellowship became the marker of treachery. The Haggadah's four questions ask why this night requires *two* dippings. At Christ's table, the answer was devastating: one dipping united salt water with new life; the other united fellowship with betrayal.
 

@@ -29,7 +29,8 @@
     </div>
     {{ end }}
 
-    <!-- Child pages at this level -->
+    <!-- Child pages at this level (can be hidden with hide_children: true in front matter) -->
+    {{ if not .Params.hide_children }}
     {{ $pages := .RegularPages }}
     {{ if $pages }}
     <div class="culture-articles">
@@ -41,6 +42,7 @@
         </a>
         {{ end }}
     </div>
+    {{ end }}
     {{ end }}
 
     <!-- Breadcrumb back link for subsections -->

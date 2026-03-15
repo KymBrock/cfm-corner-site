@@ -141,7 +141,7 @@ Just as Kadesh at the Seder table sets the evening apart as sacred before anythi
 
 The first cup of the Seder corresponds to the first promise of Exodus 6:6: *"I will bring you out from under the burdens of the Egyptians."* To be brought out requires leaving something behind.
 
-In the temple, the **Law of Sacrifice** invites us to offer up something of value for something of greater worth. The Israelites could not leave Egypt and keep Egypt at the same time. Abraham was asked to offer Isaac — the very thing he treasured most:
+The **Law of Sacrifice** invites us to offer up something of value for something of greater worth. The Israelites could not leave Egypt and keep Egypt at the same time. Abraham was asked to offer Isaac — the very thing he treasured most:
 
 > "Take now thy son, thine only son Isaac, whom thou lovest... and offer him there for a burnt offering." — Genesis 22:2
 

@@ -96,9 +96,13 @@ Unlike Urchatz (Step 2), where hands were washed silently, this washing includes
 <summary>At the Last Supper — The Second Washing</summary>
 <div class="seder-dropdown-body">
 
-"He that is washed needeth not save to wash his feet, but is clean every whit" (John 13:10). At this stage of the evening — after the telling and the singing — Jesus "mingled teaching for the present with the customary lessons of the past" (John 13:12-20).
+Edersheim places the foot-washing at this very moment in the Seder: "It was evidently at this time that the Saviour in His self-humiliation proceeded also to wash the disciples' feet" (John 13:5). He notes that the Authorised Version wrongly translates John 13:2 as "supper being ended" — it should read "when supper had come" or "was begun." The foot-washing occurred near the beginning of the evening, not the end.
 
-The deeper significance is that this second washing was not optional or merely ceremonial — it was the threshold of the sacred meal. The first washing (baptism) opens the covenant; the second (sanctification) prepares us to partake. Jesus taught: "If I then, your Lord and Master, have washed your feet; ye also ought to wash one another's feet. For I have given you an example, that ye should do as I have done to you" (John 13:14–15).
+The handwashing was customary; what was extraordinary was the Master taking the servant's place. Peter's resistance — and then his eager overcorrection ("not my feet only, but also my hands and my head!") — makes more sense in this liturgical context. Jesus responded: "If I wash thee not, thou hast no part with me" (John 13:8). And then: "If I then, your Lord and Master, have washed your feet; ye also ought to wash one another's feet" (John 13:14).
+
+"He that is washed needeth not save to wash his feet, but is clean every whit" (John 13:10). The first washing (baptism) opens the covenant; the second (sanctification) prepares us to partake.
+
+**An LDS Perspective:** The washing of the feet more closely represents this *second* washing — a deeper consecration. This is reminiscent of the priests, the sons of Aaron, who were ritually washed before officiating in the ordinances of the Temple (Exodus 29:4; 40:12–13). The placement at Rachtzah (Step 6) aligns appropriately with the timeline of the Last Supper.
 
 *Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
 

@@ -139,6 +139,14 @@
         text-underline-offset: 2px;
       }
       a[href*="blueletterbible.org/"], a[href*="sefaria.org/"] { cursor: help; }
+      .scripture-ref {
+        color: var(--sage-dark, #4a6b52);
+        cursor: help;
+        border-bottom: 1px dotted var(--sage-dark, #4a6b52);
+      }
+      .scripture-ref:hover {
+        background-color: rgba(74, 107, 82, 0.1);
+      }
     </style>
     <script>
     (function() {
@@ -172,10 +180,43 @@
         jde:'Jude', jud:'Jude', rev:'Revelation'
       };
 
+      // Church scripture URL path → display names
+      var churchBookMap = {
+        'gen':'Genesis', 'ex':'Exodus', 'lev':'Leviticus', 'num':'Numbers', 'deut':'Deuteronomy',
+        'josh':'Joshua', 'judg':'Judges', 'ruth':'Ruth', '1-sam':'1 Samuel', '2-sam':'2 Samuel',
+        '1-kgs':'1 Kings', '2-kgs':'2 Kings', '1-chr':'1 Chronicles', '2-chr':'2 Chronicles',
+        'ezra':'Ezra', 'neh':'Nehemiah', 'esth':'Esther', 'job':'Job', 'ps':'Psalms',
+        'prov':'Proverbs', 'eccl':'Ecclesiastes', 'song':'Song of Solomon',
+        'isa':'Isaiah', 'jer':'Jeremiah', 'lam':'Lamentations', 'ezek':'Ezekiel', 'dan':'Daniel',
+        'hosea':'Hosea', 'joel':'Joel', 'amos':'Amos', 'obad':'Obadiah', 'jonah':'Jonah',
+        'micah':'Micah', 'nahum':'Nahum', 'hab':'Habakkuk', 'zeph':'Zephaniah', 'hag':'Haggai',
+        'zech':'Zechariah', 'mal':'Malachi',
+        'matt':'Matthew', 'mark':'Mark', 'luke':'Luke', 'john':'John', 'acts':'Acts', 'rom':'Romans',
+        '1-cor':'1 Corinthians', '2-cor':'2 Corinthians', 'gal':'Galatians', 'eph':'Ephesians',
+        'philip':'Philippians', 'col':'Colossians', '1-thes':'1 Thessalonians', '2-thes':'2 Thessalonians',
+        '1-tim':'1 Timothy', '2-tim':'2 Timothy', 'titus':'Titus', 'philem':'Philemon',
+        'heb':'Hebrews', 'james':'James', '1-pet':'1 Peter', '2-pet':'2 Peter',
+        '1-jn':'1 John', '2-jn':'2 John', '3-jn':'3 John', 'jude':'Jude', 'rev':'Revelation',
+        // Book of Mormon
+        '1-ne':'1 Nephi', '2-ne':'2 Nephi', 'jacob':'Jacob', 'enos':'Enos', 'jarom':'Jarom',
+        'omni':'Omni', 'w-of-m':'Words of Mormon', 'mosiah':'Mosiah', 'alma':'Alma',
+        'hel':'Helaman', '3-ne':'3 Nephi', '4-ne':'4 Nephi', 'morm':'Mormon', 'ether':'Ether', 'moro':'Moroni',
+        // D&C and Pearl of Great Price
+        'dc':'D&C', 'moses':'Moses', 'abr':'Abraham', 'js-m':'Joseph Smith—Matthew', 'js-h':'Joseph Smith—History',
+        'a-of-f':'Articles of Faith'
+      };
+
+      // Regex to find parenthetical scripture references in text
+      var scriptureRefRegex = /\(([1-4]?\s*[A-Z][a-zA-Z&]+(?:\s+[A-Z][a-zA-Z]+)*\s+\d+:\d+(?:[–\-]\d+)?)\)/g;
+
       function getLinkType(el) {
-        if (!el || !el.href) return null;
+        if (!el) return null;
+        // data-ref is first-class: any element with data-ref is a scripture reference
+        if (el.dataset && el.dataset.ref) return 'scripture-ref';
+        if (!el.href) return null;
         if (/blueletterbible\.org\/lexicon\//i.test(el.href)) return 'lexicon';
         if (/blueletterbible\.org\/kjv\//i.test(el.href)) return 'scripture';
+        if (/churchofjesuschrist\.org\/study\/scriptures\//i.test(el.href)) return 'scripture-church';
         if (/blueletterbible\.org\/search\/search\.cfm/i.test(el.href)) return 'blbsearch';
         if (/sefaria\.org\//i.test(el.href)) return 'sefaria';
         return null;
@@ -211,6 +252,50 @@
           if (!book) return null;
           return book + ' ' + chapter + ':' + verse;
         } catch (_) { return null; }
+      }
+
+      function parseChurchRef(href) {
+        // Parse churchofjesuschrist.org/study/scriptures/bofm/alma/5?lang=eng&id=p12#p12
+        try {
+          var u = new URL(href, window.location.origin);
+          var parts = u.pathname.split('/').filter(Boolean);
+          // Expected: study/scriptures/{canon}/{book}/{chapter}
+          var scripIdx = parts.indexOf('scriptures');
+          if (scripIdx < 0 || parts.length < scripIdx + 4) return null;
+          var bookAbbr = (parts[scripIdx + 2] || '').toLowerCase();
+          var chapter = parts[scripIdx + 3];
+          var book = churchBookMap[bookAbbr];
+          if (!book) return null;
+          // Extract verse from query param id=p12 or id=p12-p15
+          var idParam = u.searchParams.get('id') || '';
+          var verseMatch = idParam.match(/p(\d+)/);
+          var verse = verseMatch ? verseMatch[1] : null;
+          if (verse) {
+            return book + ' ' + chapter + ':' + verse;
+          }
+          return book + ' ' + chapter;
+        } catch (_) { return null; }
+      }
+
+      // Unified reference resolver: data-ref first, then URL parsing
+      function resolveScriptureRef(el) {
+        if (!el) return null;
+        // Explicit data-ref takes priority
+        if (el.dataset && el.dataset.ref) {
+          return normalizeRef(el.dataset.ref);
+        }
+        // Parse from URL
+        var href = el.href || '';
+        return parseScriptureRef(href) || parseChurchRef(href) || null;
+      }
+
+      function normalizeRef(ref) {
+        if (!ref) return null;
+        // Normalize common variations
+        return ref.trim()
+          .replace(/\s+/g, ' ')
+          .replace(/–/g, '-')  // en-dash to hyphen
+          .replace(/—/g, '-'); // em-dash to hyphen
       }
 
       function parseSefariaQuery(href) {
@@ -273,7 +358,7 @@
       async function ensureScriptureData() {
         if (scriptureData) return scriptureData;
         try {
-          var res = await fetch('/data/scripture-verses.json?v=20260221', { cache: 'default' });
+          var res = await fetch('/data/scripture-verses.json?v=20260314b', { cache: 'no-store' });
           scriptureData = res.ok ? await res.json() : {};
         } catch (_) { scriptureData = {}; }
         return scriptureData;
@@ -304,6 +389,8 @@
 
         var type = getLinkType(el);
         if (!type) return;
+        // scripture-ref, scripture, and scripture-church all fall through to scripture handling
+        var isScripture = (type === 'scripture' || type === 'scripture-ref' || type === 'scripture-church');
 
         if (type === 'lexicon') {
           var d = el.dataset || {};
@@ -376,13 +463,21 @@
           return;
         }
 
-        // scripture — instant from local JSON
-        var ref = parseScriptureRef(el.href);
+        // scripture — unified handling for BLB, Church, and data-ref
+        var ref = resolveScriptureRef(el);
         var txt = await getVerse(ref);
+        var linkHref = el.href || '';
+        var linkText = 'Open scripture →';
+        if (/blueletterbible\.org/i.test(linkHref)) {
+          linkText = 'Open in Blue Letter Bible →';
+        } else if (/churchofjesuschrist\.org/i.test(linkHref)) {
+          linkText = 'Open on Church website →';
+        }
+        var linkHtml = linkHref ? '<div class="bp-link"><a href="' + linkHref + '" target="_blank" rel="noopener">' + linkText + '</a></div>' : '';
         popup.innerHTML =
           '<div class="bp-title">' + (ref || (el.textContent || '').trim()) + '</div>' +
           '<div class="bp-body">' + txt + '</div>' +
-          '<div class="bp-link"><a href="' + el.href + '" target="_blank" rel="noopener">Open in Blue Letter Bible →</a></div>';
+          linkHtml;
         place(el);
         popup.classList.add('visible');
       }
@@ -400,7 +495,7 @@
       }
 
       function getTargetAnchor(target) {
-        return target && target.closest ? target.closest('a[href*="blueletterbible.org/kjv/"], a[href*="blueletterbible.org/lexicon/"], a[href*="blueletterbible.org/search/search.cfm"], a[href*="sefaria.org/"]') : null;
+        return target && target.closest ? target.closest('[data-ref], a[href*="blueletterbible.org/kjv/"], a[href*="blueletterbible.org/lexicon/"], a[href*="blueletterbible.org/search/search.cfm"], a[href*="sefaria.org/"], a[href*="churchofjesuschrist.org/study/scriptures/"]') : null;
       }
 
       // Desktop hover — guard against events originating inside the popup itself
@@ -435,6 +530,81 @@
           hideNow();
         }
       });
+
+      // Plain-text scripture wrapper: scan content and wrap parenthetical references
+      function wrapPlainTextScriptures() {
+        // Only process main content areas, skip nav, header, footer, buttons, etc.
+        var contentAreas = document.querySelectorAll('article, .content, .entry-content, main, .prose, .markdown, .seder-dropdown-body, .culture-article-body, .culture-article-content, .study-guide-content, [class*="content"]');
+        if (!contentAreas.length) contentAreas = [document.body];
+
+        contentAreas.forEach(function(container) {
+          wrapTextNodesInElement(container);
+        });
+      }
+
+      function wrapTextNodesInElement(element) {
+        // Skip elements that shouldn't be processed
+        var skipTags = ['SCRIPT', 'STYLE', 'TEXTAREA', 'INPUT', 'BUTTON', 'A', 'CODE', 'PRE', 'SPAN'];
+        if (skipTags.indexOf(element.tagName) >= 0) return;
+        if (element.hasAttribute && element.hasAttribute('data-ref')) return;
+        if (element.closest && element.closest('a, button, [data-ref]')) return;
+
+        var childNodes = Array.prototype.slice.call(element.childNodes);
+        childNodes.forEach(function(node) {
+          if (node.nodeType === Node.TEXT_NODE) {
+            var text = node.textContent;
+            if (!text || !scriptureRefRegex.test(text)) return;
+
+            // Reset regex
+            scriptureRefRegex.lastIndex = 0;
+
+            var frag = document.createDocumentFragment();
+            var lastIndex = 0;
+            var match;
+
+            while ((match = scriptureRefRegex.exec(text)) !== null) {
+              var fullMatch = match[0]; // "(Alma 5:12)"
+              var ref = match[1];       // "Alma 5:12"
+
+              // Add text before match
+              if (match.index > lastIndex) {
+                frag.appendChild(document.createTextNode(text.slice(lastIndex, match.index)));
+              }
+
+              // Create wrapped span with parentheses outside
+              frag.appendChild(document.createTextNode('('));
+              var span = document.createElement('span');
+              span.className = 'scripture-ref';
+              span.setAttribute('data-ref', ref);
+              span.textContent = ref;
+              span.style.cursor = 'help';
+              span.style.borderBottom = '1px dotted var(--sage-dark, #4a6b52)';
+              frag.appendChild(span);
+              frag.appendChild(document.createTextNode(')'));
+
+              lastIndex = match.index + fullMatch.length;
+            }
+
+            // Add remaining text
+            if (lastIndex < text.length) {
+              frag.appendChild(document.createTextNode(text.slice(lastIndex)));
+            }
+
+            if (frag.childNodes.length > 0) {
+              node.parentNode.replaceChild(frag, node);
+            }
+          } else if (node.nodeType === Node.ELEMENT_NODE) {
+            wrapTextNodesInElement(node);
+          }
+        });
+      }
+
+      // Run wrapper after DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', wrapPlainTextScriptures);
+      } else {
+        wrapPlainTextScriptures();
+      }
     })();
     </script>
 

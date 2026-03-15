@@ -1540,3 +1540,79 @@ a.RTBData:hover, a.BLBST_a:hover {
     .tab-btn { padding: 8px 8px; font-size: var(--text-xs); }
     .nav-title { font-size: var(--text-sm); }
 }
+
+/* === Seder Dropdown Styles === */
+.seder-dropdown {
+    margin: 8px 0 24px 0;
+    border: 1px solid var(--border, #c6d4c8);
+    border-radius: 8px;
+    background: var(--sage-bg, #f2f5f2);
+    overflow: hidden;
+}
+
+.seder-dropdown summary {
+    padding: 12px 16px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--sage-dark, #4a6b52);
+    background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%);
+    border-bottom: 1px solid var(--border, #c6d4c8);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.seder-dropdown summary::-webkit-details-marker {
+    display: none;
+}
+
+.seder-dropdown summary::before {
+    content: "▶";
+    font-size: 0.7em;
+    transition: transform 0.2s ease;
+}
+
+.seder-dropdown[open] summary::before {
+    transform: rotate(90deg);
+}
+
+.seder-dropdown[open] summary {
+    border-bottom: 1px solid var(--border, #c6d4c8);
+}
+
+.seder-dropdown-body {
+    padding: 16px 20px;
+    font-size: 0.95em;
+    line-height: 1.7;
+    color: var(--text-secondary, #4a5568);
+}
+
+.seder-dropdown-body p {
+    margin: 0 0 12px 0;
+}
+
+.seder-dropdown-body p:last-child {
+    margin-bottom: 0;
+}
+
+/* Variant colors for different dropdown types */
+.seder-dropdown--psalm summary {
+    background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+}
+
+.seder-dropdown--seder summary {
+    background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%);
+}
+
+.seder-dropdown--supper summary {
+    background: linear-gradient(135deg, #fef6e4 0%, #f8ecd0 100%);
+}
+
+.seder-dropdown--alma summary {
+    background: linear-gradient(135deg, #f0f5f2 0%, #dce8dd 100%);
+}
+
+.seder-dropdown--temple summary {
+    background: linear-gradient(135deg, #f8f6f3 0%, #f0ebe5 100%);
+}
