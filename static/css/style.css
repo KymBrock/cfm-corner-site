@@ -1382,6 +1382,7 @@ a.RTBData:hover, a.BLBST_a:hover {
 .library-article-content h3 + p {
     margin-top: 0.4em;
 }
+.culture-intro a,
 .culture-article-content a,
 .library-article-content a {
     color: var(--sage-dark);
@@ -1389,6 +1390,7 @@ a.RTBData:hover, a.BLBST_a:hover {
     border-bottom: 1px solid var(--sage-pale);
     transition: border-color 0.2s;
 }
+.culture-intro a:hover,
 .culture-article-content a:hover,
 .library-article-content a:hover {
     border-bottom-color: var(--sage-dark);
