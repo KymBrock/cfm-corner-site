@@ -37,53 +37,121 @@ CONTENT_TYPE_NAMES = {
 
 
 class ScriptureRefExtractor(HTMLParser):
-    """HTML parser that extracts data-ref attributes and section context."""
+    """HTML parser that extracts data-ref attributes and section context.
+
+    Handles multiple HTML patterns:
+    - insights/resources: <div class="section-header"> with <span>Title</span>
+    - study-guide: <div class="sg-accordion-section"> with <span class="sg-section-title">Title</span>
+    - study-guide sub-sections: <button class="sg-sub-accordion"><span>Title</span></button>
+    """
+
+    # Characters to skip when capturing section titles (arrows, expand/collapse icons)
+    SKIP_CHARS = {"⊞", "⊟", "▶︎", "▼", "◀", "▲", "▶", "►", "◄", "▶︎", "︎"}
 
     def __init__(self):
         super().__init__()
-        self.refs = []  # List of (ref, section, excerpt)
+        self.refs = []  # List of {ref, section, subsection}
         self.current_section = None
+        self.current_subsection = None
+
+        # Track section-header divs (insights/resources)
         self.in_section_header = False
         self.section_header_depth = 0
-        self.current_excerpt = []
-        self.capture_excerpt = False
-        self.excerpt_chars = 0
-        self.max_excerpt_chars = 80
+
+        # Track sg-accordion-section divs (study guides - main sections)
+        self.in_sg_accordion = False
+        self.sg_accordion_depth = 0
+        self.in_sg_section_title = False
+
+        # Track sg-sub-accordion buttons (study guides - sub-sections)
+        self.in_sg_sub_accordion = False
 
     def handle_starttag(self, tag, attrs):
         attrs_dict = dict(attrs)
+        css_class = attrs_dict.get("class", "")
 
-        # Track section headers
-        if tag == "div" and "section-header" in attrs_dict.get("class", ""):
+        # --- Section header patterns ---
+
+        # insights/resources: <div class="section-header">
+        if tag == "div" and "section-header" in css_class:
             self.in_section_header = True
             self.section_header_depth = 1
         elif self.in_section_header and tag == "div":
             self.section_header_depth += 1
 
-        # Extract data-ref
+        # study-guide: <div class="sg-accordion-section">
+        if tag == "div" and "sg-accordion-section" in css_class:
+            self.in_sg_accordion = True
+            self.sg_accordion_depth = 1
+        elif self.in_sg_accordion and tag == "div":
+            self.sg_accordion_depth += 1
+
+        # study-guide: <span class="sg-section-title"> within sg-accordion-section
+        if tag == "span" and "sg-section-title" in css_class:
+            self.in_sg_section_title = True
+
+        # study-guide sub-sections: <button class="sg-sub-accordion">
+        if tag == "button" and "sg-sub-accordion" in css_class:
+            self.in_sg_sub_accordion = True
+
+        # --- Extract data-ref ---
         if "data-ref" in attrs_dict:
             ref = attrs_dict["data-ref"]
             if ref:
                 normalized = normalize_ref(ref)
+                # Build combined section context
+                section_context = self._build_section_context()
                 self.refs.append({
                     "ref": normalized,
-                    "section": self.current_section,
-                    "excerpt": None  # Could capture surrounding text
+                    "section": section_context,
+                    "excerpt": None
                 })
 
     def handle_endtag(self, tag):
+        # section-header end
         if self.in_section_header and tag == "div":
             self.section_header_depth -= 1
             if self.section_header_depth == 0:
                 self.in_section_header = False
 
+        # sg-accordion-section end
+        if self.in_sg_accordion and tag == "div":
+            self.sg_accordion_depth -= 1
+            if self.sg_accordion_depth == 0:
+                self.in_sg_accordion = False
+
+        # sg-section-title span end
+        if self.in_sg_section_title and tag == "span":
+            self.in_sg_section_title = False
+
+        # sg-sub-accordion button end
+        if self.in_sg_sub_accordion and tag == "button":
+            self.in_sg_sub_accordion = False
+
     def handle_data(self, data):
-        # Capture section header text
+        text = data.strip()
+        if not text or text in self.SKIP_CHARS:
+            return
+
+        # Capture section-header text (insights/resources)
         if self.in_section_header:
-            text = data.strip()
-            # Skip button labels and arrows
-            if text and text not in ["⊞", "⊟", "▶︎", "▼", "◀", "▲"]:
-                self.current_section = text
+            self.current_section = text
+            self.current_subsection = None  # Reset subsection on new main section
+
+        # Capture sg-section-title text (study guides - main sections)
+        elif self.in_sg_section_title:
+            self.current_section = text
+            self.current_subsection = None  # Reset subsection on new main section
+
+        # Capture sg-sub-accordion text (study guides - sub-sections)
+        elif self.in_sg_sub_accordion:
+            self.current_subsection = text
+
+    def _build_section_context(self) -> str:
+        """Build combined section context string."""
+        if self.current_section and self.current_subsection:
+            return f"{self.current_section} > {self.current_subsection}"
+        return self.current_section or self.current_subsection
 
 
 def normalize_ref(ref: str) -> str:
@@ -231,6 +299,18 @@ def print_summary(index: dict):
     total_refs = len(index)
     total_occurrences = sum(len(occs) for occs in index.values())
 
+    # Count entries with section context
+    entries_with_section = 0
+    entries_with_subsection = 0
+    for occs in index.values():
+        for occ in occs:
+            if occ.get("section"):
+                entries_with_section += 1
+                if " > " in (occ["section"] or ""):
+                    entries_with_subsection += 1
+
+    section_pct = 100 * entries_with_section / total_occurrences if total_occurrences > 0 else 0
+
     # Find most-cited refs
     ref_counts = [(ref, sum(o["count"] for o in occs)) for ref, occs in index.items()]
     ref_counts.sort(key=lambda x: -x[1])
@@ -240,6 +320,8 @@ def print_summary(index: dict):
     print("=" * 60)
     print(f"\nUnique references indexed: {total_refs}")
     print(f"Total page/section entries: {total_occurrences}")
+    print(f"Entries with section context: {entries_with_section} ({section_pct:.1f}%)")
+    print(f"  - With subsection detail: {entries_with_subsection}")
 
     print("\n" + "-" * 60)
     print("Most-cited references (top 15):")
