@@ -358,7 +358,7 @@
       async function ensureScriptureData() {
         if (scriptureData) return scriptureData;
         try {
-          var res = await fetch('/data/scripture-verses.json?v=20260314b', { cache: 'no-store' });
+          var res = await fetch('/data/scripture-verses.json?v=20260315', { cache: 'no-store' });
           scriptureData = res.ok ? await res.json() : {};
         } catch (_) { scriptureData = {}; }
         return scriptureData;
