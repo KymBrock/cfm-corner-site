@@ -9,6 +9,12 @@ image: /images/culture/passover/02-urchatz.png
 <img src="/images/culture/passover/02-urchatz.png" alt="Urchatz — Wash" style="width: 150px; height: 150px; border-radius: 50%;">
 </div>
 
+## Root Word
+
+<a href="https://www.blueletterbible.org/lexicon/h7364/kjv/wlc/0-1/" target="_blank" data-lexicon="to wash, bathe" data-strongs="H7364" data-translit="rachatz" data-original="רָחַץ" data-lang="hebrew">רָחַץ</a> (*rachatz*) — to wash, bathe
+
+---
+
 ## Action
 
 Wash hands — *no blessing is recited at this stage.*

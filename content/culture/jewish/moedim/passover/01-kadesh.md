@@ -9,6 +9,12 @@ image: /images/culture/passover/01-kadesh.png
 <img src="/images/culture/passover/01-kadesh.png" alt="Kadesh — Sanctify" style="width: 150px; height: 150px; border-radius: 50%;">
 </div>
 
+## Root Word
+
+<a href="https://www.blueletterbible.org/lexicon/h6942/kjv/wlc/0-1/" target="_blank" data-lexicon="to be set apart, consecrated, holy" data-strongs="H6942" data-translit="qadash" data-original="קָדַשׁ" data-lang="hebrew">קָדַשׁ</a> (*qadash*) — to set apart, sanctify, consecrate
+
+---
+
 ## Opening Prayer and the First Cup: The Cup of Sanctification
 
 The Seder begins with *Kadesh* — to sanctify, to set apart. Before anything else, we consecrate the evening to God.

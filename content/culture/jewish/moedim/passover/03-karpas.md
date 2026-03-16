@@ -9,6 +9,12 @@ image: /images/culture/passover/03-karpas.png
 <img src="/images/culture/passover/03-karpas.png" alt="Karpas — Greens in Salt Water" style="width: 150px; height: 150px; border-radius: 50%;">
 </div>
 
+## Root Word
+
+<a href="https://www.blueletterbible.org/lexicon/h3768/kjv/wlc/0-1/" target="_blank" data-lexicon="fine cotton or linen" data-strongs="H3768" data-translit="karpas" data-original="כַּרְפַּס" data-lang="hebrew">כַּרְפַּס</a> (*karpas*) — fine linen; in modern Seder usage, a green vegetable representing spring and new life
+
+---
+
 ## Action
 
 Dip a piece of **parsley** (or another green vegetable) into **salt water** and eat it.

@@ -9,6 +9,12 @@ image: /images/culture/passover/08-matzah.png
 <img src="/images/culture/passover/08-matzah.png" alt="Matzah — Unleavened Bread" style="width: 150px; height: 150px; border-radius: 50%;">
 </div>
 
+## Root Word
+
+<a href="https://www.blueletterbible.org/lexicon/h4682/kjv/wlc/0-1/" target="_blank" data-lexicon="unleavened bread or cake" data-strongs="H4682" data-translit="matstsah" data-original="מַצָּה" data-lang="hebrew">מַצָּה</a> (*matzah*) — unleavened bread; related to <a href="https://www.blueletterbible.org/lexicon/h4672/kjv/wlc/0-1/" target="_blank" data-lexicon="to find, attain, acquire" data-strongs="H4672" data-translit="matsa" data-original="מָצָא" data-lang="hebrew">מָצָא</a> (*matsa*) — to find
+
+---
+
 ## Action
 
 Eat a piece of matzah — the unleavened bread.
