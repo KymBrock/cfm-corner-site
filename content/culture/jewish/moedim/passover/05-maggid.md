@@ -197,7 +197,7 @@ For centuries, every Seder leader had told the same story — commencing, as Ede
 
 At this table, the One to whom the whole story pointed was telling it. Jesus was Himself the Passover Lamb, the Unleavened Bread, and the One who would drink the bitter cup. The Maggid had always asked: *Who is the Redeemer?* Rabban Gamliel's three things — Pesach, Matzah, Maror — had always pointed forward. Now the answer sat at the head of the table.
 
-After the telling, the first half of the Hallel (Psalms 113–114) was sung and the second cup drunk. This second cup — the Cup of Deliverance — corresponds to God's promise: "I will rid you out of their bondage" (Exodus 6:6). Jesus drank the cup that sealed His promise to deliver.
+After the telling, the first half of the Hallel (Psalms 113–114) was sung and the second cup drunk. This second cup — the **Cup of Deliverance** — corresponds to God's promise: **"I will rid you out of their bondage"** (Exodus 6:6). Jesus drank the cup that sealed His promise to deliver.
 
 *Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
 
@@ -233,7 +233,7 @@ The Maggid also includes the parable of the **Four Sons** — four children who 
 <summary>Temple Covenant — The Law of the Gospel</summary>
 <div class="seder-dropdown-body">
 
-The second cup of the Seder corresponds to the second promise of Exodus 6:6: *"I will rid you out of their bondage."* Deliverance alone is not enough — the delivered must be taught how to live, lest they return to old patterns.
+The second cup of the Seder corresponds to the second promise of Exodus 6:6: **"I will rid you out of their bondage."** Deliverance alone is not enough — the delivered must be taught how to live, lest they return to old patterns.
 
 In the temple, the **Law of the Gospel** provides the instruction — the Torah, the teaching — that guides us after deliverance. At Sinai, God did not simply bring Israel out of Egypt; He gave them the law. The Maggid retells the story of deliverance *and* the giving of instruction. The Torah is the map that prevents us from wandering back into bondage.
 

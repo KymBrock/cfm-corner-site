@@ -67,7 +67,7 @@ Psalm 133 celebrates the goodness and pleasantness of unity — like the anointi
 
 Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
 
-**At the Seder Table:** The Hallel psalms (113–118) are sung responsively — Levites leading, people answering "Hallelujah!" Edersheim describes the threefold trumpet blast sounding as the Paschal lambs were slain, the Hallel rising continuously throughout the offering. The Fourth Cup — the Cup of Praise — corresponds to God's promise: "I will take you as my people, and I will be your God" (Exodus 6:7). Praise is the response to belonging.
+**At the Seder Table:** The Hallel psalms (113–118) are sung responsively — Levites leading, people answering "Hallelujah!" Edersheim describes the threefold trumpet blast sounding as the Paschal lambs were slain, the Hallel rising continuously throughout the offering. The Fourth Cup — the **Cup of Praise** — corresponds to God's promise: **"I will take you as my people, and I will be your God"** (Exodus 6:7). Praise is the response to belonging.
 
 <details class="seder-dropdown seder-dropdown--seder">
 <summary>At the Seder Table — The Second Half of Hallel</summary>
