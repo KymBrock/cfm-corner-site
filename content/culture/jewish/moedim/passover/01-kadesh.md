@@ -66,7 +66,7 @@ This cup represents the beginning of our covenant journey, distinguished with au
 
 Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
 
-**At the Seder Table:** The first cup is the **Cup of Sanctification** — corresponding to God's first promise in Exodus 6:6–7: **"I will bring you out from under the burdens of the Egyptians."** Before anything else, the evening is consecrated. The sacred cannot begin without setting apart.
+**At the Seder Table:** The first cup is the **Cup of Sanctification** — corresponding to God's first promise: **"I will bring you out from under the burdens of the Egyptians"** (Exodus 6:6–7). Before anything else, the evening is consecrated. The sacred cannot begin without setting apart.
 
 <details class="seder-dropdown seder-dropdown--seder">
 <summary>At the Seder Table — The Kiddush</summary>
