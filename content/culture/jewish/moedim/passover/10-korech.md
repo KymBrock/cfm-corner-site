@@ -102,7 +102,7 @@ The Korech was normally handed first to the chief guest at the table. From Eders
 </div>
 </details>
 
-**In the Nephite Assembly:** Alma binds together warning and invitation, judgment and mercy, in the same sermon: "For I say unto you that whatsoever is good cometh from God, and whatsoever is evil cometh from the devil" (Alma 5:40). The prophet holds both realities simultaneously — because the covenant demands honesty about both.
+**In the Nephite Assembly:** Alma binds these same elements together in a single invitation: "He sendeth an invitation unto all men, for the arms of mercy are extended towards them, and he saith: *Repent*, and I will receive you. Yea, he saith: Come unto me and ye shall partake of the fruit of the tree of life; yea, ye shall eat and drink of the *bread* and the waters of life freely" (Alma 5:33–34). Mercy extended (the sweetness), repentance required (the bitter acknowledgment of sin), bread offered (the matzah that binds them) — the korech in a single passage.
 
 <details class="seder-dropdown seder-dropdown--alma">
 <summary>In the Nephite Assembly — Alma 5: Good and Evil Bound Together</summary>

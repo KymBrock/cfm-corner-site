@@ -91,7 +91,7 @@ The full institution of the Lord's Supper took place later, at the Aphikomen (St
 </div>
 </details>
 
-**In the Nephite Assembly:** Alma asks whether his people have experienced "a mighty change wrought in his heart" (Alma 5:12). The breaking of the heart precedes the mighty change. And when the risen Christ administers the sacrament among the Nephites, the language echoes the same covenant: "in remembrance of the body of thy Son" (Moroni 4:3).
+**In the Nephite Assembly:** Alma uses the language of breaking explicitly: "Were the bands of death broken, and the chains of hell which encircled them about, were they loosed? I say unto you, Yea, they were loosed" (Alma 5:9). The chains that held them in bondage were *broken*. But breaking must also happen within: "According to his faith there was a mighty change wrought in his heart" (Alma 5:12). The pattern: bands broken outwardly, heart broken inwardly, mighty change as the result.
 
 <details class="seder-dropdown seder-dropdown--alma">
 <summary>In the Nephite Assembly — Alma 5: The Mighty Change</summary>

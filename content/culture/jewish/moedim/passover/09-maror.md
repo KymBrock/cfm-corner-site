@@ -89,7 +89,7 @@ After the meal ended, Jesus went forth into Gethsemane, where the bitter herbs f
 </div>
 </details>
 
-**In the Nephite Assembly:** Alma prophesies that Christ "shall go forth, suffering pains and afflictions and temptations of every kind... He will take upon him the pains and the sicknesses of his people" (Alma 7:11–12). And the Lord Himself declares: "which suffering caused myself, even God, the greatest of all, to tremble because of pain, and to bleed at every pore" (D&C 19:18).
+**In the Nephite Assembly:** Alma confronts his people with the bitter consequences of sin: "whosoever bringeth forth evil works, the same becometh a child of the devil... and for his wages he receiveth *death*" (Alma 5:41–42). The wages of sin are bitter indeed. But Christ Himself drank the bitter cup: "which suffering caused myself, even God, the greatest of all, to tremble because of pain, and to bleed at every pore" (D&C 19:18). His willingness to endure the bitter gives Him the unique capacity to succor those who taste bitterness in mortality.
 
 <details class="seder-dropdown seder-dropdown--alma">
 <summary>In the Nephite Assembly — Alma 5: The Bitter Wages of Sin</summary>

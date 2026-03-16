@@ -86,7 +86,7 @@ The matzah Jesus blessed and broke was not merely bread — it was the culminati
 </div>
 </details>
 
-**In the Nephite Assembly:** Alma warns directly: "Are ye stripped of pride? I say unto you, if ye are not ye are not prepared to meet God" (Alma 5:28). No leaven. No puffing up. The covenant requirement is the same in every dispensation — humility before God.
+**In the Nephite Assembly:** Alma warns against those who are "*puffed up* in the vain things of the world" (Alma 5:37) — the language of leavened bread, rising with pride. And he warns that "such an one is *not found* guiltless" (Alma 5:29). The word *matzah* shares a root with *matsa* — "to find." The question of matzah is twofold: Are you humble (unleavened)? And when examined, will you be *found* worthy?
 
 <details class="seder-dropdown seder-dropdown--alma">
 <summary>In the Nephite Assembly — Alma 5: Simplicity of Heart and the Puffing of Pride</summary>

@@ -105,7 +105,7 @@ But the bread He held was already marked for a greater purpose. The matzah at th
 </div>
 </details>
 
-**In the Nephite Assembly:** The risen Christ Himself administers bread to the Nephite multitude: "He brake bread... and blessed it, and gave it to the disciples, and commanded that they should eat" (3 Nephi 18:3). The same action, the same covenant, a new continent. The pattern holds.
+**In the Nephite Assembly:** Alma uses the exact "bring forth" language: "Yea, come unto me and *bring forth* works of righteousness" (Alma 5:35). The invitation is to bring forth fruit in response to what God has brought forth. And there is a warning: "whosoever *bringeth forth* not good fruit, or whosoever doeth not the works of righteousness, the same have cause to wail and mourn" (Alma 5:36). Divine provision demands a response.
 
 <details class="seder-dropdown seder-dropdown--alma">
 <summary>In the Nephite Assembly — Alma 5: Bring Forth Works of Righteousness</summary>

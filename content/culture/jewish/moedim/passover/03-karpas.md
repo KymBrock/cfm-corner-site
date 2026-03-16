@@ -97,7 +97,7 @@ What should have been a gesture of fellowship became the marker of treachery. Th
 </div>
 </details>
 
-**In the Nephite Assembly:** Alma recalls that his fathers "were in the midst of darkness; nevertheless, their souls were illuminated by the light of the everlasting word" (Alma 5:7). Tears and new life together. And as he later teaches: "by small and simple things are great things brought to pass" (Alma 37:6) — the lowly hyssop, the simple herb, the small act of faith.
+**In the Nephite Assembly:** Alma's audience lived the karpas pattern — twice. In Alma 5:4, he reminds them: "they were delivered out of the hands of the people of king Noah." A wicked *Nephite* king oppressing his own people. Then in verse 5: "they were brought into bondage by the hands of the Lamanites" — their own brothers, descendants of Laman and Lemuel, whose jealousy toward Nephi echoed the sons of Israel toward Joseph. The same story, repeated: brotherly contention leads to bondage. Bondage leads to tears.
 
 <details class="seder-dropdown seder-dropdown--alma">
 <summary>In the Nephite Assembly — Alma 5: Bondage at the Hands of Their Brethren</summary>

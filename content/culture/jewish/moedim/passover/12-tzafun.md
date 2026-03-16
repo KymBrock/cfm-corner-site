@@ -92,7 +92,7 @@ Edersheim writes: "The symbolical cord, if the figure may be allowed, had stretc
 </div>
 </details>
 
-**In the Nephite Assembly:** Alma teaches that the hidden things of the heart shall be revealed: "Our words will condemn us, yea, all our works will condemn us... and our thoughts will also condemn us" (Alma 12:14). What is hidden will be brought to light — both the sins of the heart and the glory of the Risen Lord.
+**In the Nephite Assembly:** Alma asks his people to envision the resurrection — the moment when the hidden is revealed: "Do you look forward with an eye of faith, and view this mortal body raised in immortality, and this corruption raised in incorruption, to stand before God to be judged?" (Alma 5:15). And when that day comes, nothing will remain concealed: "Can ye imagine yourselves brought before the tribunal of God... having a remembrance of all your guilt, yea, a *perfect* remembrance of all your wickedness?" (Alma 5:18). The broken, buried body — like the broken, hidden matzah — will be brought forth. The question is whether we will be found like the afikomen — broken, yes, but redeemed.
 
 <details class="seder-dropdown seder-dropdown--alma">
 <summary>In the Nephite Assembly — Alma 5: The Hidden One Revealed</summary>
