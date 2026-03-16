@@ -41,6 +41,8 @@ We remember that Christ, our High Priest, makes our offerings acceptable — not
 
 ## Scripture Connection
 
+> "Can you imagine to yourselves that ye hear the voice of the Lord, saying unto you, in that day: Come unto me ye blessed, for behold, your works have been the works of righteousness upon the face of the earth?" — Alma 5:16
+
 > "Have ye walked, keeping yourselves blameless before God? Could ye say... that ye have been sufficiently humble? ... Are ye stripped of pride?" — Alma 5:27
 
 <details class="seder-dropdown seder-dropdown--psalm">
@@ -106,7 +108,9 @@ The Seder that began with Kadesh — sanctification — ends with Nirtzah — ac
 <summary>In the Nephite Assembly — Alma 5: Accepted or Rejected</summary>
 <div class="seder-dropdown-body">
 
-The word *nirtzah* carries a duality that matters: it can mean "accepted" — but its absence implies *rejection*. The question at the close of the Seder is not merely "Is the service finished?" but "Has it been received with divine pleasure — or not?" Alma poses this question with unflinching directness:
+The word *nirtzah* carries a duality that matters: it can mean "accepted" — but its absence implies *rejection*. Alma invites his people to imagine this moment of acceptance: "Can you imagine to yourselves that ye hear the voice of the Lord, saying unto you, in that day: *Come unto me ye blessed*, for behold, your works have been the works of righteousness upon the face of the earth?" (Alma 5:16). This is Nirtzah — hearing the Lord pronounce you accepted, welcomed, blessed.
+
+The question at the close of the Seder is not merely "Is the service finished?" but "Has it been received with divine pleasure — or not?" Alma poses this question with unflinching directness:
 
 > "And now, my brethren, I would that ye should hear me, for I speak in the energy of my soul... I say unto you, that I know that Jesus Christ shall come, yea, the Son, the Only Begotten of the Father." — Alma 5:46
 

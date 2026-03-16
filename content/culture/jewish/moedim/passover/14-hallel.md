@@ -115,7 +115,7 @@ Psalm 118 — the climax of the Hallel — contains the very words the crowds ha
 </div>
 </details>
 
-**In the Nephite Assembly:** Alma asks: "If ye have experienced a change of heart, and if ye have felt to sing the song of redeeming love, I would ask, can ye feel so now?" (Alma 5:26). The "song of redeeming love" echoes the Hallel — praise that rises after deliverance. But Alma presses further: not *did* you sing it, but *can you feel it now?* The song must be a living, present experience.
+**In the Nephite Assembly:** Alma twice invokes this singing tradition. First, describing the deliverance of his fathers: "their souls did expand, and they did sing redeeming love" (Alma 5:9). Then, turning the question to his audience: "If ye have experienced a change of heart, and if ye have felt to sing the song of redeeming love, I would ask, can ye feel so now?" (Alma 5:26). The "song of redeeming love" echoes the Hallel — praise that rises after deliverance. But Alma presses further: not *did* you sing it, but *can you feel it now?* You cannot sing another person's song. You cannot coast on your fathers' praise. The song must be a living, present experience.
 
 <details class="seder-dropdown seder-dropdown--alma">
 <summary>In the Nephite Assembly — Alma 5: Praise and Pride — Two Sides of Hallel</summary>

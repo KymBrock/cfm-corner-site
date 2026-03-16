@@ -33,6 +33,8 @@ This is traditionally understood as the cup that Jesus blessed at the Last Suppe
 
 ## Meaning and Symbolism
 
+Barech is the blessing *after* the meal — one of the most distinctive practices in Jewish tradition. While modern Christians typically bless food before eating, the Torah commands the opposite: "When thou hast eaten and art full, then thou shalt bless the LORD thy God" (Deuteronomy 8:10). This practice, called *Birkat Hamazon* (Grace After Meals), remains central to Jewish liturgy today.
+
 The third cup is called the Cup of Redemption, representing God's promise: "I will redeem you with a stretched-out arm" (Exodus 6:6).
 
 As Jesus lifted this cup, He redefined redemption — not as rescue from Egypt, but as rescue from sin, shame, fear, death, and separation from God.
@@ -137,11 +139,15 @@ Edersheim writes that Jesus used "the Aphikomen 'when He had given thanks' (afte
 <summary>In the Nephite Assembly — Alma 5: The Blessing Withheld</summary>
 <div class="seder-dropdown-body">
 
-Barech is the blessing after the meal — the moment of divine favor. But Alma, remarkably, withholds this blessing from the people of Zarahemla. Their pride and wickedness make them unprepared to receive it. Instead, he presses them with probing questions:
+The Nephites knew the practice of blessing God after meals. When Alma visited Amulek's home, the text preserves the exact Deuteronomic pattern: "Alma ate bread and was *filled*; and he blessed Amulek and his house, and he gave thanks unto God" (Alma 8:22). First eating, then being filled, then blessing and thanking — the sequence matches Deuteronomy 8:10 precisely. Joseph Smith in 1829 would have had no way of knowing this distinctive Jewish custom, yet it appears in the Book of Mormon exactly as an observant Israelite would practice it.[^birkat]
+
+But in Alma 5, Alma withholds this blessing from the people of Zarahemla. Their pride and wickedness make them unprepared to receive it. Instead, he presses them with probing questions:
 
 > "I say unto you, can ye look up to God at that day with a pure heart and clean hands? I say unto you, can ye look up, having the image of God engraven upon your countenances?" — Alma 5:19
 
 The contrast comes in Alma 7, when Alma addresses the people of Gideon — a faithful community. There he speaks tenderly, prophesies of the coming Savior, and pronounces a blessing upon them. The drastic shift between the two sermons underscores the principle at the heart of Barech: divine blessing is real, but it is contingent upon the heart's readiness to receive it.
+
+[^birkat]: Angela M. Crowell and John A. Tvedtnes, "The Nephite and Jewish Practice of Blessing God after Eating One's Fill," *Journal of Book of Mormon Studies* 6, no. 2 (1997): 251–54.
 
 </div>
 </details>
