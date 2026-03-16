@@ -67,7 +67,7 @@ Psalm 133 celebrates the goodness and pleasantness of unity — like the anointi
 
 Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
 
-**At the Seder Table:** The Hallel psalms (113–118) are sung responsively — Levites leading, people answering "Hallelujah!" Edersheim describes the threefold trumpet blast sounding as the Paschal lambs were slain, the Hallel rising continuously throughout the offering. The Fourth Cup — the **Cup of Praise** — corresponds to God's promise: **"I will take you as my people, and I will be your God"** (Exodus 6:7). Praise is the response to belonging.
+**At the Seder Table:** The Hallel psalms (113–118) are sung responsively — Levites leading, people answering "Hallelujah!" Edersheim describes the threefold trumpet blast sounding as the Paschal lambs were slain, the Hallel rising continuously throughout the offering. The Fourth Cup — the **Cup of Praise** — corresponds to God's promise: **"I will take you as my people, and I will be your God"** (Exodus 6:6–7). Praise is the response to belonging.
 
 <details class="seder-dropdown seder-dropdown--seder">
 <summary>At the Seder Table — The Second Half of Hallel</summary>
@@ -144,7 +144,7 @@ True Hallel is humble, grateful, and God-directed. Pride is its counterfeit. The
 <summary>Temple Covenant — The Law of Consecration</summary>
 <div class="seder-dropdown-body">
 
-The fourth cup is the Cup of Praise, corresponding to the final promise: *"I will take you to me for a people, and I will be to you a God"* (Exodus 6:7). When God takes us as His own, we respond by giving everything back to Him.
+The fourth cup is the Cup of Praise, corresponding to the final promise: *"I will take you to me for a people, and I will be to you a God"* (Exodus 6:6–7). When God takes us as His own, we respond by giving everything back to Him.
 
 In the temple, the **Law of Consecration** is the covenant of complete dedication — giving all that we are and all that we have to the building of God's kingdom. The Hallel psalms are themselves an act of consecration — lifting every voice, every gift, every breath in praise to the One who has redeemed us.
 
