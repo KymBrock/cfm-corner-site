@@ -88,19 +88,17 @@ Unlike Urchatz (Step 2), where hands were washed silently, this washing includes
 </div>
 </details>
 
-**At the Last Supper:** Jesus washes His disciples' feet at this stage of the meal (John 13:4–5, 10): "He that is washed needeth not save to wash his feet, but is clean every whit." The initial cleansing of the covenant is not enough. A deeper purification — one that reaches the most intimate and humble parts of us — is required.
+**At the Last Supper:** Jesus washes His disciples' feet (John 13:4–5), transforming this moment of consecration into an unforgettable lesson. "He that is washed needeth not save to wash his feet, but is clean every whit" (John 13:10). The initial cleansing of baptism is not enough — a deeper purification, reaching the most intimate and humble parts of us, is required.
 
 <details class="seder-dropdown seder-dropdown--supper">
-<summary>At the Last Supper — The Second Washing</summary>
+<summary>At the Last Supper — The Washing of Feet</summary>
 <div class="seder-dropdown-body">
 
-Edersheim places the foot-washing at this very moment in the Seder: "It was evidently at this time that the Saviour in His self-humiliation proceeded also to wash the disciples' feet" (John 13:5). He notes that the Authorised Version wrongly translates John 13:2 as "supper being ended" — it should read "when supper had come" or "was begun." The foot-washing occurred near the beginning of the evening, not the end.
+The handwashing at Rachtzah was customary; what was extraordinary was the Master taking the servant's place. Peter's resistance — and then his eager overcorrection ("not my feet only, but also my hands and my head!") — makes sense in this liturgical context. Jesus responded: "If I wash thee not, thou hast no part with me" (John 13:8). And then: "If I then, your Lord and Master, have washed your feet; ye also ought to wash one another's feet" (John 13:14).
 
-The handwashing was customary; what was extraordinary was the Master taking the servant's place. Peter's resistance — and then his eager overcorrection ("not my feet only, but also my hands and my head!") — makes more sense in this liturgical context. Jesus responded: "If I wash thee not, thou hast no part with me" (John 13:8). And then: "If I then, your Lord and Master, have washed your feet; ye also ought to wash one another's feet" (John 13:14).
+The symbolism is profound: "He that is washed needeth not save to wash his feet, but is clean every whit." The first washing (baptism) opens the covenant; the second (sanctification) prepares us to partake of sacred things. This is why the foot-washing fits naturally at Rachtzah — the consecrating washing that comes after the story of deliverance has been told, preparing the participants for the sacred meal.
 
-"He that is washed needeth not save to wash his feet, but is clean every whit" (John 13:10). The first washing (baptism) opens the covenant; the second (sanctification) prepares us to partake.
-
-**An LDS Perspective:** The washing of the feet more closely represents this *second* washing — a deeper consecration. This is reminiscent of the priests, the sons of Aaron, who were ritually washed before officiating in the ordinances of the Temple (Exodus 29:4; 40:12–13). The placement at Rachtzah (Step 6) aligns appropriately with the timeline of the Last Supper.
+This pattern echoes the priests, the sons of Aaron, who were ritually washed before officiating in the ordinances of the Temple (Exodus 29:4; 40:12–13). The washing of the feet represents this deeper consecration — not initiation, but preparation for sacred service.
 
 *Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
 

@@ -78,15 +78,17 @@ This brevity is deliberate — no blessing is spoken. The washing is preparatory
 </div>
 </details>
 
-**At the Last Supper:** Ritual purity was observed at every Passover meal. This initial handwashing precedes the meal itself. The deeper washing — Jesus washing His disciples' feet — comes later at Rachtzah (Step 6), after the story has been told.
+**At the Last Supper:** Ritual purity was observed at every Passover meal. This initial handwashing — silent, preparatory — precedes the meal itself. The Seder includes two washings: *Urchatz* here (without a blessing) and *Rachtzah* at Step 6 (with a blessing, after the story has been told). Jesus' washing of His disciples' feet transformed one of these moments into a profound teaching about service and sanctification.
 
 <details class="seder-dropdown seder-dropdown--supper">
-<summary>At the Last Supper — The Washing of Feet</summary>
+<summary>At the Last Supper — The Initial Washing</summary>
 <div class="seder-dropdown-body">
 
-Edersheim places the foot-washing at this very moment in the Seder: "It was evidently at this time that the Saviour in His self-humiliation proceeded also to wash the disciples' feet" (John 13:5). He notes that the Authorised Version wrongly translates John 13:2 as "supper being ended" — it should read "when supper had come" or "was begun." The foot-washing occurred near the beginning of the evening, not the end.
+Edersheim notes that two kinds of washing were prescribed by tradition — "dipping" and "pouring" — and at the Paschal Supper, the hands were "dipped" in water. This initial washing at Urchatz was customary and silent — no blessing spoken.
 
-The handwashing was customary; what was extraordinary was the Master taking the servant's place. Peter's resistance — and then his eager overcorrection ("not my feet only, but also my hands and my head!") — makes more sense in this liturgical context. Jesus responded: "If I wash thee not, thou hast no part with me" (John 13:8). And then: "If I then, your Lord and Master, have washed your feet; ye also ought to wash one another's feet" (John 13:14).
+At some point during the Last Supper, Jesus transformed the ordinary into the extraordinary by washing His disciples' feet. Scholars debate the exact placement: Edersheim argues it occurred early in the evening, noting that John 13:2 should read "when supper had come" rather than "supper being ended." Whether at the first washing (Urchatz) or the second (Rachtzah), the meaning transcends the timing: the Master took the servant's place.
+
+The full significance of Jesus' foot-washing — and Peter's resistance — is explored at Rachtzah (Step 6), where the second washing with its spoken blessing represents a deeper consecration after the story of deliverance has been told.
 
 *Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
 
