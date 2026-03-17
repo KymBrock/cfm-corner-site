@@ -156,8 +156,6 @@ The plagues can also be viewed as a symbolic judgment against **idolatry** — s
 
 ## The Covenant Pattern
 
-Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
-
 **At the Seder Table:** The Maggid is the heart of the Seder — the retelling of the Exodus through questions, the parable of the Four Sons, and the recounting of the plagues. The Zohar (Bo) teaches that the one who relates the story "fervently and joyously" shall "be found worthy to rejoice in the Shekinah." The telling itself is a sacred act.
 
 <details class="seder-dropdown seder-dropdown--seder">

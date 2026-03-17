@@ -87,8 +87,6 @@ Psalm 132 celebrates David's oath to find a habitation for the Lord and God's an
 
 ## The Covenant Pattern
 
-Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
-
 **At the Seder Table:** The Third Cup is the **Cup of Redemption**, corresponding to God's promise: **"I will redeem you with a stretched-out arm"** (Exodus 6:6–7). The Talmud (Pesachim 64a) records that the Hallel was sung continuously while the Paschal offerings were brought — the sacrificial act and the song of praise inseparable.
 
 <details class="seder-dropdown seder-dropdown--seder">

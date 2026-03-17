@@ -69,8 +69,6 @@ Psalm 125 speaks of the security of those who trust in the Lord — as unshakeab
 
 ## The Covenant Pattern
 
-Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
-
 **At the Seder Table:** This second washing comes *after* the Maggid — after the story of deliverance has been told. It is deeper than the first. A blessing is now spoken. The participant is preparing not just for the meal, but for sacred communion with God.
 
 <details class="seder-dropdown seder-dropdown--seder">

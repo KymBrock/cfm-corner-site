@@ -69,8 +69,6 @@ Psalm 126 celebrates the reversal of captivity — mouths filled with laughter, 
 
 ## The Covenant Pattern
 
-Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
-
 **At the Seder Table:** The blessing *hamotzi* acknowledges God as the One who "brings forth bread from the earth." Before the matzah is eaten, it is blessed. Before it is consumed, it is consecrated. The provision comes from God.
 
 <details class="seder-dropdown seder-dropdown--seder">

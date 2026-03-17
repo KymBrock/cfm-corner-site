@@ -57,8 +57,6 @@ Psalm 128 blesses the one who fears the Lord — a fruitful vine, olive plants a
 
 ## The Covenant Pattern
 
-Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
-
 **At the Seder Table:** The bitter herbs recall the bitterness of bondage in Egypt — tasted and remembered, not avoided. The covenant does not promise the absence of suffering. It promises deliverance *through* suffering.
 
 <details class="seder-dropdown seder-dropdown--seder">

@@ -65,8 +65,6 @@ Psalm 122 celebrates the joy of gathering to the house of the Lord and prays for
 
 ## The Covenant Pattern
 
-Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
-
 **At the Seder Table:** The green herbs dipped in salt water unite new life with tears — spring growth meeting the bitterness of bondage. The Midrash (Exodus Rabbah 17:3) teaches that even the hyssop — the lowliest of plants — accomplished the greatest redemption, for it was used to apply the Paschal blood to the doorposts.
 
 <details class="seder-dropdown seder-dropdown--seder">

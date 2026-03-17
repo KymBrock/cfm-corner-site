@@ -68,8 +68,6 @@ Psalm 129 speaks of affliction endured from youth — "The plowers plowed upon m
 
 ## The Covenant Pattern
 
-Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
-
 **At the Seder Table:** Hillel's tradition of binding bitter herbs and matzah together in a single bite teaches that sorrow and humility are inseparable companions on the path to redemption. The bitter is not discarded — it is held together with the bread of covenant.
 
 <details class="seder-dropdown seder-dropdown--seder">

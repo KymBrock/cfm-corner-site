@@ -83,8 +83,6 @@ Psalm 130 is a cry from the depths — waiting for the Lord, trusting in His mer
 
 ## The Covenant Pattern
 
-Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
-
 **At the Seder Table:** The festive meal is shared in community — the lamb, the egg, the charoset, the wine. "Thou preparest a table before me in the presence of mine enemies: my cup runneth over" (Psalm 23:5). The set table is a declaration: God provides, even in the midst of adversity.
 
 <details class="seder-dropdown seder-dropdown--seder">

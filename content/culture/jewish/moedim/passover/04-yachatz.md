@@ -57,8 +57,6 @@ Psalm 123 turns the pilgrim's eyes upward to the One who dwells in the heavens, 
 
 ## The Covenant Pattern
 
-Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
-
 **At the Seder Table:** The middle matzah is broken in two. The larger piece — the *afikomen* — is wrapped and hidden, to be found later. Brokenness precedes the story. The bread must be broken before the telling can begin.
 
 <details class="seder-dropdown seder-dropdown--seder">

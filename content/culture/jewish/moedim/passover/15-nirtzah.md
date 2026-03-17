@@ -64,8 +64,6 @@ Psalm 134 is the final Song of Ascents — a brief, tender benediction. The serv
 
 ## The Covenant Pattern
 
-Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
-
 **At the Seder Table:** The sacred closing — everything offered tonight may be accepted by God. The word *nirtzah* shares its root with *<a href="https://www.blueletterbible.org/lexicon/h7522/kjv/wlc/0-1/" target="_blank" data-lexicon="goodwill, favour, acceptance, desire" data-strongs="H7522" data-translit="ratson" data-original="רָצוֹן" data-lang="hebrew">ratzon</a>* (will, desire) — suggesting that the offering has been received with divine pleasure. The evening ends with the ancient declaration: *"L'shanah haba'ah b'Yerushalayim!"* — "Next year in Jerusalem!" It is a cry of hope, exile, and longing for the day when God's people will gather in His holy city.
 
 <details class="seder-dropdown seder-dropdown--seder">

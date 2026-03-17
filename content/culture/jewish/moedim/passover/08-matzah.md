@@ -58,8 +58,6 @@ Psalm 127 teaches that unless the Lord builds the house, the builders labor in v
 
 ## The Covenant Pattern
 
-Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
-
 **At the Seder Table:** The matzah is the bread of affliction — flat, humble, without the puffing of leaven. The Midrash (Exodus Rabbah 15) maps each Paschal element to a patriarch: the matzah corresponds to Sarah, whose quick preparation of bread for the visiting angels (Genesis 18:6) exemplifies responsive faith. Humility and obedience, not display.
 
 <details class="seder-dropdown seder-dropdown--seder">

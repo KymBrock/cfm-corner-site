@@ -59,8 +59,6 @@ The second Song of Ascents is the pilgrim's assurance — the Lord who watches o
 
 ## The Covenant Pattern
 
-Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
-
 **At the Seder Table:** The hands are washed silently — no blessing is spoken. This first washing is preparation, not completion. It readies the participant to handle the sacred herbs that follow.
 
 <details class="seder-dropdown seder-dropdown--seder">

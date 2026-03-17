@@ -58,8 +58,6 @@ Psalm 131 is the shortest and most tender of the Songs of Ascents — a psalm of
 
 ## The Covenant Pattern
 
-Each Seder step resonates across four covenant settings: the traditional Jewish Seder table, Christ's Last Supper, Alma's prophetic address to the Nephites (Alma 5), and the covenant path we walk today.
-
 **At the Seder Table:** The hidden *afikomen* — the broken piece of matzah concealed during Yachatz — is now found, brought forth, and eaten. What was broken and hidden is revealed and shared. The children search for it with joy. The lost is found.
 
 <details class="seder-dropdown seder-dropdown--seder">
