@@ -1,0 +1,520 @@
+{{/* Seder Plate Interactive Component - Center Card + Detail Panel */}}
+<style>
+.seder-table-container {
+  max-width: 680px;
+  margin: 1.5rem auto;
+  padding: 0.5rem 1rem 1rem;
+}
+
+/* Title block */
+.seder-plate-title {
+  text-align: center;
+  margin-bottom: 0.6rem;
+}
+
+.seder-plate-title h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  color: #5c4a32;
+}
+
+.seder-plate-title .hebrew-title {
+  font-size: 1.5rem;
+  font-family: "SBL Hebrew", "Ezra SIL", serif;
+  direction: rtl;
+  color: #3d2e1e;
+  margin-bottom: 0.1rem;
+}
+
+/* Layout container */
+.seder-table-layout {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  aspect-ratio: 1 / 1.08;
+}
+
+/* The circular plate */
+.seder-plate {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 82%;
+  aspect-ratio: 1;
+  background: linear-gradient(145deg, #f5f0e6 0%, #e8dfd0 100%);
+  border-radius: 50%;
+  box-shadow:
+    0 4px 20px rgba(0,0,0,0.12),
+    inset 0 2px 10px rgba(255,255,255,0.5);
+  border: 3px solid #c9b896;
+}
+
+/* Inner plate items */
+.seder-item {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.seder-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.seder-item:hover {
+  z-index: 10;
+}
+
+.seder-item:hover img,
+.seder-item.active img {
+  transform: scale(1.1);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+}
+
+/* Radial positions - visual center at 46% */
+.seder-item.zeroa { top: 16%; left: 50%; }
+.seder-item.beitza { top: 31%; left: 76%; }
+.seder-item.maror { top: 61%; left: 76%; }
+.seder-item.charoset { top: 76%; left: 50%; }
+.seder-item.karpas { top: 61%; left: 24%; }
+.seder-item.chazeret { top: 31%; left: 24%; }
+
+/* Center Info Card - in the middle of the plate */
+.center-info-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110px;
+  background: rgba(255, 253, 248, 0.97);
+  border: 1px solid #c9b896;
+  border-radius: 12px;
+  padding: 12px 10px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.center-info-card.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.center-info-card .card-hebrew {
+  font-family: "SBL Hebrew", "Ezra SIL", serif;
+  direction: rtl;
+  font-size: 1.4rem;
+  color: #3d2e1e;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.center-info-card .card-translit {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #7a6b5a;
+  margin-top: 2px;
+}
+
+.center-info-card .card-english {
+  font-size: 0.8rem;
+  color: #5c4a32;
+  font-weight: 500;
+  margin-top: 3px;
+}
+
+/* Outer icons - Matzah and Wine */
+.seder-corner-item {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.seder-corner-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.seder-corner-item:hover {
+  z-index: 15;
+}
+
+.seder-corner-item:hover img,
+.seder-corner-item.active img {
+  transform: scale(1.1);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+}
+
+.seder-corner-item.matzah { top: 0; left: 8%; }
+.seder-corner-item.wine { top: 0; right: 8%; }
+
+/* Lower Detail Panel */
+.detail-panel {
+  max-width: 480px;
+  margin: 1.5rem auto 0;
+  background: #fffdf8;
+  border: 1px solid #d4c9b0;
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  min-height: 140px;
+  transition: opacity 0.2s ease;
+}
+
+.detail-panel .panel-hebrew {
+  font-family: "SBL Hebrew", "Ezra SIL", serif;
+  direction: rtl;
+  font-size: 1.6rem;
+  color: #3d2e1e;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.detail-panel .panel-translit {
+  font-size: 1rem;
+  font-style: italic;
+  color: #7a6b5a;
+}
+
+.detail-panel .panel-english {
+  font-size: 1.1rem;
+  color: #5c4a32;
+  font-weight: 600;
+  margin: 6px 0 12px;
+}
+
+.detail-panel .panel-description {
+  font-size: 0.95rem;
+  color: #5c4a32;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.detail-panel .panel-scripture {
+  font-size: 0.92rem;
+  color: #5c4a32;
+  line-height: 1.5;
+  font-style: italic;
+  background: #f8f5ef;
+  border-left: 3px solid #c9b896;
+  padding: 10px 14px;
+  margin: 12px 0;
+  border-radius: 0 6px 6px 0;
+}
+
+.detail-panel .panel-scripture a {
+  color: #7a6b5a;
+  text-decoration: none;
+}
+
+.detail-panel .panel-scripture a:hover {
+  color: #5c4a32;
+  text-decoration: underline;
+}
+
+.detail-panel .panel-significance {
+  font-size: 0.88rem;
+  color: #6b5d4d;
+  line-height: 1.5;
+  font-style: italic;
+  border-top: 1px solid #e8dfd0;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+/* Default state styling */
+.detail-panel.default .panel-title {
+  font-size: 1.15rem;
+  color: #5c4a32;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.detail-panel.default .panel-instruction {
+  font-size: 0.95rem;
+  color: #7a6b5a;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+  .seder-item {
+    width: 58px;
+    height: 58px;
+  }
+
+  .seder-corner-item {
+    width: 65px;
+    height: 65px;
+  }
+
+  .center-info-card {
+    width: 95px;
+    padding: 10px 8px;
+  }
+
+  .center-info-card .card-hebrew {
+    font-size: 1.2rem;
+  }
+
+  .center-info-card .card-translit {
+    font-size: 0.75rem;
+  }
+
+  .center-info-card .card-english {
+    font-size: 0.7rem;
+  }
+
+  .detail-panel {
+    padding: 16px 18px;
+    margin: 1rem auto 0;
+  }
+
+  .detail-panel .panel-hebrew {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .seder-table-layout {
+    max-width: 320px;
+  }
+
+  .seder-item {
+    width: 48px;
+    height: 48px;
+  }
+
+  .seder-corner-item {
+    width: 54px;
+    height: 54px;
+  }
+
+  .center-info-card {
+    width: 85px;
+    padding: 8px 6px;
+  }
+}
+</style>
+
+<div class="seder-table-container">
+  <div class="seder-plate-title">
+    <div class="hebrew-title">קְעָרָה</div>
+    <h3>The Seder Plate</h3>
+  </div>
+
+  <div class="seder-table-layout">
+    <!-- Matzah - Top Left -->
+    <div class="seder-corner-item matzah" data-item="matzah">
+      <img src="/images/culture/passover/seder-plate/matzah.png" alt="Matzah">
+    </div>
+
+    <!-- Wine - Top Right -->
+    <div class="seder-corner-item wine" data-item="wine">
+      <img src="/images/culture/passover/seder-plate/wine.png" alt="Wine">
+    </div>
+
+    <!-- The Seder Plate -->
+    <div class="seder-plate">
+      <!-- Center Info Card -->
+      <div class="center-info-card" id="centerCard">
+        <div class="card-hebrew"></div>
+        <div class="card-translit"></div>
+        <div class="card-english"></div>
+      </div>
+
+      <!-- Plate Items -->
+      <div class="seder-item zeroa" data-item="zeroa">
+        <img src="/images/culture/passover/seder-plate/zeroa.png" alt="Zeroa">
+      </div>
+      <div class="seder-item beitza" data-item="beitza">
+        <img src="/images/culture/passover/seder-plate/beitza.png" alt="Beitza">
+      </div>
+      <div class="seder-item maror" data-item="maror">
+        <img src="/images/culture/passover/seder-plate/maror.png" alt="Maror">
+      </div>
+      <div class="seder-item charoset" data-item="charoset">
+        <img src="/images/culture/passover/seder-plate/charoset.png" alt="Charoset">
+      </div>
+      <div class="seder-item karpas" data-item="karpas">
+        <img src="/images/culture/passover/seder-plate/karpas.png" alt="Karpas">
+      </div>
+      <div class="seder-item chazeret" data-item="chazeret">
+        <img src="/images/culture/passover/seder-plate/chazeret.png" alt="Chazeret">
+      </div>
+    </div>
+  </div>
+
+  <!-- Lower Detail Panel -->
+  <div class="detail-panel default" id="detailPanel">
+    <div class="panel-title">Explore the Seder Plate</div>
+    <div class="panel-instruction">Hover over or tap an item to learn its Hebrew name, meaning, and symbolic role in the Passover meal.</div>
+  </div>
+</div>
+
+<script>
+(function() {
+  // Item data with scripture references
+  const items = {
+    zeroa: {
+      hebrew: "זְרוֹעַ",
+      translit: "Zeroa",
+      english: "Lamb Shankbone",
+      description: "Symbol of the Passover sacrifice. The Hebrew word <em>zeroa</em> means \"arm,\" recalling the \"outstretched arm\" with which God redeemed Israel. A roasted shankbone or chicken bone is placed on the plate as a visual reminder — it is not eaten.",
+      significance: "Symbolizes the Paschal lamb sacrificed on the eve of the Exodus, and God's delivering power.",
+      scripture: "\"I will redeem you with a stretched-out arm...\" — <a href='https://www.blueletterbible.org/kjv/exo/6/6' target='_blank'>Exodus 6:6</a>"
+    },
+    beitza: {
+      hebrew: "בֵּיצָה",
+      translit: "Beitza",
+      english: "Roasted Egg",
+      description: "Symbol of mourning and rebirth. Its roundness represents the cycle of life, loss, and return. As new life emerges from what seems lifeless, the Resurrection of Christ fulfills this hope.",
+      significance: "Represents the festival offering brought to the Temple, and the promise that death is not the end.",
+      scripture: "\"I am the resurrection, and the life...\" — <a href='https://www.blueletterbible.org/kjv/jhn/11/25' target='_blank'>John 11:25</a>"
+    },
+    maror: {
+      hebrew: "מָרוֹר",
+      translit: "Maror",
+      english: "Bitter Herbs",
+      description: "Horseradish or another sharp, bitter herb. Its pungent taste brings tears and recalls the physical and emotional suffering of slavery.",
+      significance: "Represents the bitterness and harshness of bondage in Egypt — and the bitter cup Christ drank in Gethsemane for our sake.",
+      scripture: "\"Which suffering caused myself, even God... to tremble because of pain, and would that I might not drink the bitter cup...\" — <a href='https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/19?lang=eng&id=p18#p18' target='_blank'>D&C 19:18</a>"
+    },
+    charoset: {
+      hebrew: "חֲרֹסֶת",
+      translit: "Charoset",
+      english: "Sweet Paste",
+      description: "Symbol of the sweetness of deliverance. This fruit and spice mixture resembles mortar, reminding us of the Israelites' forced labor in Egypt. Its sweetness, however, teaches that even in bondage, there was hope — and that the Lord sweetens our suffering by giving it meaning and promise.",
+      significance: "Symbolizes the mortar of bondage, yet sweetened with hope — bitterness and deliverance bound together.",
+      scripture: "\"To give unto them beauty for ashes, the oil of joy for mourning...\" — <a href='https://www.blueletterbible.org/kjv/isa/61/3' target='_blank'>Isaiah 61:3</a>"
+    },
+    karpas: {
+      hebrew: "כַּרְפַּס",
+      translit: "Karpas",
+      english: "Green Vegetable",
+      description: "Parsley, celery, or another green vegetable dipped in salt water before eating. The greens represent spring and new life; the salt water represents the tears of bondage.",
+      significance: "Symbolizes renewal and hope — mingled with the tears of slavery and the sorrow of mortality. Even grief can lead to growth.",
+      scripture: "\"They that sow in tears shall reap in joy.\" — <a href='https://www.blueletterbible.org/kjv/psa/126/5' target='_blank'>Psalm 126:5</a>"
+    },
+    chazeret: {
+      hebrew: "חֲזֶרֶת",
+      translit: "Chazeret",
+      english: "Romaine Lettuce",
+      description: "A second bitter herb, often romaine lettuce, used in the Hillel sandwich along with matzah and charoset. Romaine starts sweet and turns bitter as it matures.",
+      significance: "Reinforces the memory of slavery's bitterness. Like Israel's experience in Egypt, what began sweetly turned bitter under Pharaoh's oppression.",
+      scripture: "\"And the Egyptians made the children of Israel to serve with rigour... and they made their lives bitter.\" — <a href='https://www.blueletterbible.org/kjv/exo/1/13-14' target='_blank'>Exodus 1:13–14</a>"
+    },
+    matzah: {
+      hebrew: "מַצָּה",
+      translit: "Matzah",
+      english: "Unleavened Bread",
+      description: "The Bread of Affliction — flat, unleavened bread made without yeast. Three matzot are placed on the table, representing priests, Levites, and Israelites. The middle matzah is broken as the Afikoman, a symbol of Christ's broken body.",
+      significance: "Represents haste, humility, and the Messiah's sinless sacrifice. Leaven symbolizes sin; matzah is pure and undefiled.",
+      scripture: "\"Take, eat: this is my body, which is broken for you.\" — <a href='https://www.blueletterbible.org/kjv/1co/11/24' target='_blank'>1 Corinthians 11:24</a>"
+    },
+    wine: {
+      hebrew: "יַיִן",
+      translit: "Yayin",
+      english: "Wine / Grape Juice",
+      description: "Symbol of joy and covenantal blessing. Four cups are drunk throughout the Seder, corresponding to the four promises of redemption in Exodus 6:6–7. The third cup — the Cup of Redemption — became the cup of the new covenant at the Last Supper.",
+      significance: "Represents the blood of the covenant, poured out for the remission of sins. Jesus promised to drink it new with us in His Father's kingdom.",
+      scripture: "\"This cup is the new testament in my blood, which is shed for you.\" — <a href='https://www.blueletterbible.org/kjv/luk/22/20' target='_blank'>Luke 22:20</a>"
+    }
+  };
+
+  const centerCard = document.getElementById('centerCard');
+  const detailPanel = document.getElementById('detailPanel');
+  const allItems = document.querySelectorAll('[data-item]');
+
+  let lastActiveItem = null;
+
+  function showItem(itemKey) {
+    const data = items[itemKey];
+    if (!data) return;
+
+    // Update center card
+    centerCard.querySelector('.card-hebrew').textContent = data.hebrew;
+    centerCard.querySelector('.card-translit').textContent = data.translit;
+    centerCard.querySelector('.card-english').textContent = data.english;
+    centerCard.classList.add('visible');
+
+    // Update detail panel
+    detailPanel.classList.remove('default');
+    detailPanel.innerHTML = `
+      <div class="panel-hebrew">${data.hebrew}</div>
+      <div class="panel-translit">${data.translit}</div>
+      <div class="panel-english">${data.english}</div>
+      <div class="panel-description">${data.description}</div>
+      ${data.scripture ? `<div class="panel-scripture">${data.scripture}</div>` : ''}
+      <div class="panel-significance">${data.significance}</div>
+    `;
+
+    // Track active item
+    lastActiveItem = itemKey;
+
+    // Update active class on items
+    allItems.forEach(el => {
+      el.classList.toggle('active', el.dataset.item === itemKey);
+    });
+  }
+
+  function hideCard() {
+    centerCard.classList.remove('visible');
+  }
+
+  function showDefault() {
+    detailPanel.classList.add('default');
+    detailPanel.innerHTML = `
+      <div class="panel-title">Explore the Seder Plate</div>
+      <div class="panel-instruction">Hover over or tap an item to learn its Hebrew name, meaning, and symbolic role in the Passover meal.</div>
+    `;
+    allItems.forEach(el => el.classList.remove('active'));
+  }
+
+  // Event listeners
+  allItems.forEach(item => {
+    const itemKey = item.dataset.item;
+
+    // Mouse events
+    item.addEventListener('mouseenter', () => showItem(itemKey));
+    item.addEventListener('mouseleave', () => {
+      hideCard();
+      // Keep last item in detail panel (don't revert to default on hover out)
+    });
+
+    // Touch/click events for mobile
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      showItem(itemKey);
+    });
+  });
+
+  // Optional: click outside to reset (uncomment if desired)
+  // document.addEventListener('click', (e) => {
+  //   if (!e.target.closest('[data-item]') && !e.target.closest('.detail-panel')) {
+  //     hideCard();
+  //     showDefault();
+  //   }
+  // });
+})();
+</script>
