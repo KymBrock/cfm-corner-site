@@ -87,7 +87,7 @@ Psalm 132 celebrates David's oath to find a habitation for the Lord and God's an
 
 ## The Covenant Pattern
 
-**At the Seder Table:** The Third Cup is the **Cup of Redemption**, corresponding to God's promise: **"I will redeem you with a stretched-out arm"** (Exodus 6:6–7). The Talmud (Pesachim 64a) records that the Hallel was sung continuously while the Paschal offerings were brought — the sacrificial act and the song of praise inseparable.
+**At the Seder Table:** The Third Cup is the **Cup of Redemption**, corresponding to God's promise: **"I will redeem you with a stretched-out arm"** (Exodus 6:6–7). The Talmud (<a href="https://www.sefaria.org/Pesachim.64a" target="_blank">Pesachim 64a</a>) records that the Hallel was sung continuously while the Paschal offerings were brought — the sacrificial act and the song of praise inseparable.
 
 <details class="seder-dropdown seder-dropdown--seder">
 <summary>At the Seder Table — The Cup of Blessing and the Door for Elijah</summary>
@@ -99,7 +99,20 @@ After the festive meal, the full Birkat Hamazon (grace after meals) is recited �
 >
 > *Blessed are You, LORD our God, King of the Universe, who creates the fruit of the vine.*
 
-This cup — "the cup of blessing" — held special importance. The Talmud "notes ten peculiarities" about it, "sufficient to show the special value set upon it."
+This cup — "the cup of blessing" — held special importance. The Talmud (<a href="https://www.sefaria.org/Berakhot.51a" target="_blank">Berakhot 51a</a>) lists ten requirements for the *kos shel bracha*:
+
+1. **Washing** (*hadacha*) — the inside of the cup
+2. **Rinsing** (*shetifa*) — the outside of the cup
+3. **Undiluted** (*chai*) — "live" wine, not yet mixed with water
+4. **Full** (*malei*) — filled to the brim
+5. **Crowning** (*itur*) — surrounded by disciples, or adorned
+6. **Wrapping** (*ituf*) — the one blessing wraps himself appropriately
+7. **Two hands** — receive it with both hands, then hold in the right
+8. **Elevated** — raised a handbreadth above the table
+9. **Gazing** — fix your eyes upon the cup
+10. **Gifting** — send it as a gift to members of the household
+
+Rabbi Yochanan held that only four are essential (washing, rinsing, undiluted, and full), but Edersheim notes these "peculiarities" as "sufficient to show the special value set upon it."
 
 After the third cup is drunk, a cup of wine is poured in honor of Elijah and the door is opened. The Haggadah prescribes these words:
 
@@ -150,10 +163,25 @@ The contrast comes in Alma 7, when Alma addresses the people of Gideon — a fai
 </div>
 </details>
 
-**On the Covenant Path Today:** President Nelson teaches that the Hebrew word *<a href="https://www.blueletterbible.org/lexicon/h2617/kjv/wlc/0-1/" target="_blank" data-lexicon="goodness, kindness, faithfulness, covenant loyalty" data-strongs="H2617" data-translit="chesed" data-original="חֶסֶד" data-lang="hebrew">hesed</a>* — a unique form of covenantal love — describes "a special kind of love and mercy that God feels for and extends to those who have made a covenant with Him" ("The Everlasting Covenant," 2022). The cup of blessing is the cup of *hesed* — God's lovingkindness poured out to those who are His, in every age.
+**On the Covenant Path Today:** President Nelson teaches that the Hebrew word *<a href="https://www.blueletterbible.org/lexicon/h2617/kjv/wlc/0-1/" target="_blank" data-lexicon="goodness, kindness, faithfulness, covenant loyalty" data-strongs="H2617" data-translit="chesed" data-original="חֶסֶד" data-lang="hebrew">hesed</a>* — a unique form of covenantal love — describes "a special kind of love and mercy that God feels for and extends to those who have made a covenant with Him" (<a href="https://www.churchofjesuschrist.org/study/liahona/2022/10/the-everlasting-covenant" target="_blank">"The Everlasting Covenant,"</a> 2022). The cup of blessing is the cup of *hesed* — God's lovingkindness poured out to those who are His, in every age.
 
 <details class="seder-dropdown seder-dropdown--temple">
-<summary>Temple Covenant — The Law of Chastity</summary>
+<summary>On the Covenant Path — Elijah at the Kirtland Temple</summary>
+<div class="seder-dropdown-body">
+
+At every Seder table, a cup is poured for Elijah and the door is opened — Israel's ancient hope that the prophet who was taken up without tasting death would return to herald the Messiah.
+
+On **April 3, 1836** — the last day of Passover, and also Easter Sunday — that hope was fulfilled. The prophet Elijah appeared to Joseph Smith and Oliver Cowdery in the Kirtland Temple and declared:
+
+> "Behold, the time has fully come, which was spoken of by the mouth of Malachi — testifying that he [Elijah] should be sent, before the great and dreadful day of the Lord come — to turn the hearts of the fathers to the children, and the children to the fathers, lest the whole earth be smitten with a curse." — <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/110?lang=eng&id=p14-p15#p14" target="_blank">D&C 110:14–15</a>
+
+The door that Israel had opened in hope for centuries was answered on Passover. Elijah came — not to a Seder table, but to a temple — restoring the sealing keys that bind families eternally. The cup poured in his honor at every Seder now points to a fulfilled promise.
+
+</div>
+</details>
+
+<details class="seder-dropdown seder-dropdown--temple">
+<summary>On the Covenant Path — The Law of Chastity</summary>
 <div class="seder-dropdown-body">
 
 The third cup is the Cup of Redemption, corresponding to the third promise: *"I will redeem you with a stretched-out arm"* (Exodus 6:6). The Hebrew concept of the *goel* — the kinsman redeemer — is central to this cup.
@@ -162,12 +190,16 @@ In the book of Ruth, Boaz fulfills the role of *goel*, redeeming Ruth and taking
 
 > "I am Ruth thine handmaid: spread therefore thy skirt over thine handmaid; for thou art a near kinsman." — Ruth 3:9
 
-In the temple, the **Law of Chastity** is a covenant of exclusive devotion and fidelity — the promise to belong wholly to the Lord, as Ruth belonged to Boaz, as Israel belongs to God. The Cup of Redemption seals this relationship. As the bride takes the name of the redeemer, so we take upon us the name of Christ.
+The **Law of Chastity** is a covenant of exclusive devotion and fidelity — the promise to belong wholly to the Lord, as Ruth belonged to Boaz, as Israel belongs to God. The Cup of Redemption seals this relationship. As the bride takes the name of the redeemer, so we take upon us the name of Christ.
 
 > "I will redeem you... and I will take you to me for a people." — Exodus 6:6–7
 
 </div>
 </details>
+
+---
+
+🍷 **Drink the Third Cup — The Cup of Redemption**
 
 ---
 

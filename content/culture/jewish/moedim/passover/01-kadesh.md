@@ -27,6 +27,8 @@ Pour and bless the first cup.
 
 > "Blessed are You, Lord our God, King of the Universe, who creates the fruit of the vine."
 
+🍷 **Drink the First Cup — The Cup of Sanctification**
+
 ---
 
 ## Scripture Connection
@@ -139,10 +141,10 @@ Just as Kadesh at the Seder table sets the evening apart as sacred before anythi
 </div>
 </details>
 
-**On the Covenant Path Today:** President Nelson teaches that baptism is "the gate that leads to becoming joint heirs to all the promises given anciently by the Lord to Abraham, Isaac, Jacob, and their posterity" ("The Everlasting Covenant," 2022). Our covenant journey begins, like the Seder, with sanctification — being set apart for a sacred purpose.
+**On the Covenant Path Today:** President Nelson teaches that baptism is "the gate that leads to becoming joint heirs to all the promises given anciently by the Lord to Abraham, Isaac, Jacob, and their posterity" (<a href="https://www.churchofjesuschrist.org/study/liahona/2022/10/the-everlasting-covenant" target="_blank">"The Everlasting Covenant,"</a> 2022). Our covenant journey begins, like the Seder, with sanctification — being set apart for a sacred purpose.
 
 <details class="seder-dropdown seder-dropdown--temple">
-<summary>Temple Covenant — The Law of Sacrifice</summary>
+<summary>On the Covenant Path — The Law of Sacrifice</summary>
 <div class="seder-dropdown-body">
 
 The first cup of the Seder corresponds to the first promise of Exodus 6:6: *"I will bring you out from under the burdens of the Egyptians."* To be brought out requires leaving something behind.

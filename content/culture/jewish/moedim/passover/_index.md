@@ -207,7 +207,9 @@ The Seder unfolds in a deliberate order — from sanctification to acceptance, f
 
 **Psalm:** <a href="https://www.blueletterbible.org/tools/interlinear/wlc-kjv/psa/120/1-7/" target="_blank">Psalm 120</a>
 
-The word *Kadesh* means "Holy," "Sanctified," or "Consecrated." The first cup of wine — the Cup of Sanctification — is drunk, declaring our intention to be set apart for God's purposes. This mirrors the temple covenant of obedience: we choose to hear the Lord's voice before He delivers us.
+The word *Kadesh* means "Holy," "Sanctified," or "Consecrated." The first cup of wine — the Cup of Sanctification — is poured, declaring our intention to be set apart for God's purposes.
+
+🍷 **Drink the First Cup — The Cup of Sanctification**
 
 <blockquote style="margin: 16px 0; padding: 12px 20px; background: #f8f6f3; border-left: 4px solid var(--sage-dark, #4a6b52); border-radius: 0 8px 8px 0;">
 <p style="margin: 0;">"Have ye sufficiently retained in remembrance the captivity of your fathers?"</p>
@@ -235,11 +237,11 @@ The word *Kadesh* means "Holy," "Sanctified," or "Consecrated." The first cup of
 
 **2. <a href="https://www.blueletterbible.org/lexicon/h7364/kjv/wlc/0-1/" target="_blank" data-lexicon="to wash, bathe" data-strongs="H7364" data-translit="rachats" data-original="רָחַץ" data-lang="hebrew" data-verse="Exodus 29:4">וּרְחַץ</a> Urchatz (Wash)**
 
-**Theme:** Spiritual cleanliness and purity.
+**Theme:** Baptism and the covenant of remembrance.
 
 **Psalm:** <a href="https://www.blueletterbible.org/tools/interlinear/wlc-kjv/psa/121/1-8/" target="_blank">Psalm 121</a>
 
-The first ritual hand washing occurs without a blessing — symbolic of baptism, the washing away of the old self. In Alma's account, this washing is directly connected to covenant entry: "Yea, and he did baptize his brethren in the waters of Mormon."
+The first ritual hand washing occurs without a blessing — symbolic of baptism, the washing away of the old self. At the waters of Mormon, the covenant promises were clear: to bear one another's burdens, mourn with those who mourn, comfort those in need, and stand as witnesses of God (Mosiah 18:8–10). We renew this covenant each week through the sacrament — *"that they may always remember him"* (Moroni 4:3).
 
 <blockquote style="margin: 16px 0; padding: 12px 20px; background: #f8f6f3; border-left: 4px solid var(--sage-dark, #4a6b52); border-radius: 0 8px 8px 0;">
 <p style="margin: 0;">"Have you sufficiently retained in remembrance his mercy and long-suffering towards them?"</p>
@@ -335,7 +337,9 @@ The middle matzah is broken. The larger piece — the *afikoman* (Greek: "that w
 
 **Psalm:** <a href="https://www.blueletterbible.org/tools/interlinear/wlc-kjv/psa/124/1-8/" target="_blank">Psalm 124</a>
 
-The story of the Exodus is told. The second cup — the Cup of Deliverance — is drunk. The Maggid traditionally includes the Four Questions and the story of the Four Sons. Alma describes the deliverance through Abinadi and asks nearly *fifty* questions throughout his sermon, far exceeding the traditional four.
+The story of the Exodus is told. The Maggid traditionally includes the Four Questions and the story of the Four Sons. Alma describes the deliverance through Abinadi and asks nearly *fifty* questions throughout his sermon, far exceeding the traditional four.
+
+🍷 **Drink the Second Cup — The Cup of Deliverance**
 
 <blockquote style="margin: 16px 0; padding: 12px 20px; background: #f8f6f3; border-left: 4px solid var(--sage-dark, #4a6b52); border-radius: 0 8px 8px 0;">
 <p style="margin: 0;">"Behold, I can tell you — did not my father Alma believe in the words which were delivered by the mouth of Abinadi?"</p>
@@ -599,7 +603,11 @@ The hidden *afikoman* is found and eaten. What was broken and hidden is now reve
 
 **Psalm:** <a href="https://www.blueletterbible.org/tools/interlinear/wlc-kjv/psa/132/1-18/" target="_blank">Psalm 132</a>
 
-The third cup — the Cup of Redemption — is drunk. Blessings of thanksgiving are recited. In Alma 5, Alma refrains from blessing the prideful people of Zarahemla; but in Alma 7, he pronounces blessings upon the faithful people of Gideon. The gathering of Israel is the fulfillment of these covenant blessings.
+Blessings of thanksgiving are recited. In Alma 5, Alma refrains from blessing the prideful people of Zarahemla; but in Alma 7, he pronounces blessings upon the faithful people of Gideon. The gathering of Israel is the fulfillment of these covenant blessings.
+
+🍷 **Drink the Third Cup — The Cup of Redemption**
+
+🚪 **Pour a cup for Elijah and open the door** — On April 3, 1836, the last day of Passover, Elijah appeared at the Kirtland Temple to restore the sealing keys (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/110?lang=eng&id=p13-p16#p13" target="_blank">D&C 110:13–16</a>).
 
 <blockquote style="margin: 16px 0; padding: 12px 20px; background: #f8f6f3; border-left: 4px solid var(--sage-dark, #4a6b52); border-radius: 0 8px 8px 0;">
 <p style="margin: 0;">"And may the Lord bless you, and keep your garments spotless, that ye may at last be brought to sit down with Abraham, Isaac, and Jacob... in the kingdom of heaven."</p>
@@ -631,7 +639,9 @@ The third cup — the Cup of Redemption — is drunk. Blessings of thanksgiving 
 
 **Psalm:** <a href="https://www.blueletterbible.org/tools/interlinear/wlc-kjv/psa/133/1-3/" target="_blank">Psalm 133</a>
 
-The fourth cup — the Cup of Praise — is drunk. The Hallel Psalms (113–118) are recited. Intriguingly, the Hebrew *hallel* can mean both "praise" and "pride" — two sides of the same coin. True worship requires a humble heart, not a puffed-up one.
+The Hallel Psalms (113–118) are recited. Intriguingly, the Hebrew *hallel* can mean both "praise" and "pride" — two sides of the same coin. True worship requires a humble heart, not a puffed-up one.
+
+🍷 **Drink the Fourth Cup — The Cup of Praise**
 
 <blockquote style="margin: 16px 0; padding: 12px 20px; background: #f8f6f3; border-left: 4px solid var(--sage-dark, #4a6b52); border-radius: 0 8px 8px 0;">
 <p style="margin: 0;">"Can ye think of being saved when you have yielded yourselves to become subjects to the devil?... Can ye be puffed up in the pride of your hearts?"</p>
@@ -693,3 +703,41 @@ For Latter-day Saints, recognizing these patterns in the Book of Mormon enriches
 </blockquote>
 
 The Hebrew word for "order" is *seder*. Alma speaks according to the *Seder Kadosh* — the Holy Order — guiding his people through the same sacred pattern that Israel has followed for millennia, and that leads every soul home to God.
+
+<br>
+
+---
+
+<br>
+
+<details class="seder-dropdown seder-dropdown--seder">
+<summary>Sources and Recommended Reading</summary>
+<div class="seder-dropdown-body" style="text-align: left;">
+
+<p><strong>Books:</strong></p>
+<ul style="margin: 12px 0 24px 0; padding-left: 24px;">
+<li><strong>Lynda Cherry</strong>, <em>The Redemption of the Bride</em></li>
+<li><strong>Lynda Cherry</strong>, <em>What Latter-day Saints Can Learn From Ancient Jewish Feasts & Festivals</em></li>
+<li><strong>Lynda Cherry</strong>, <em>Feasts and Festivals of the Messiah</em> (also available as video)</li>
+<li><strong>Gayle Boyd</strong>, <em>Days of Awe</em></li>
+<li><strong>Daniel Smith</strong>, <em>Symbols of the Messiah</em></li>
+<li><strong>Alfred Edersheim</strong>, <em>The Temple: Its Ministry and Services</em> — A classic 19th-century work by a Jewish convert to Christianity, providing detailed historical reconstruction of Temple worship and the Passover service.</li>
+</ul>
+
+<p><strong>Historical Sources:</strong></p>
+<ul style="margin: 12px 0 24px 0; padding-left: 24px;">
+<li><strong>The Bird's Head Haggadah</strong> — The oldest known illustrated Jewish Haggadah in existence, dating to the 13th century in Germany. (Although Alma's Nephite Seder predates this by over a millennium.)</li>
+<li><strong>Pesach Haggadah</strong> — Traditional liturgy preserved through centuries of Jewish practice (available on <a href="https://www.sefaria.org/Pesach_Haggadah" target="_blank">Sefaria</a>).</li>
+</ul>
+
+<p><strong>Recipe Resources:</strong></p>
+<ul style="margin: 12px 0 0 0; padding-left: 24px;">
+<li><a href="https://www.chabad.org/holidays/passover/pesach_cdo/aid/1747/jewish/Charoset-Recipes.htm" target="_blank"><strong>Chabad.org</strong> — Charoset Recipes</a> — Traditional recipes for the sweet paste representing mortar.</li>
+<li><a href="https://www.kosher.com/collections/passover-recipes" target="_blank"><strong>Kosher.com</strong> — Passover Recipes</a> — Extensive collection of kosher-for-Passover dishes.</li>
+<li><a href="https://www.jewishfoodsociety.org/recipes?category=passover" target="_blank"><strong>Jewish Food Society</strong> — Passover Recipes</a> — Traditional recipes from Jewish communities worldwide.</li>
+<li><a href="https://www.tasteofhome.com/collection/passover-side-dishes/" target="_blank"><strong>Taste of Home</strong> — Passover Side Dishes</a> — Family-friendly Passover recipes.</li>
+<li><a href="https://reformjudaism.org/jewish-holidays/passover/passover-recipes" target="_blank"><strong>Reform Judaism</strong> — Passover Recipes</a> — Modern and traditional Seder recipes.</li>
+</ul>
+
+</div>
+</details>

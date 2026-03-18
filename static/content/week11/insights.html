@@ -2,229 +2,202 @@
 
     <!-- Expand/Collapse Controls -->
     <div style="text-align: center; margin: 20px 0 30px 0;">
-        <button onclick="expandAllInsights()" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 8px 10px; display: block; width: fit-content; margin-left: auto; margin-right: auto; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">&#x229E; Expand All</button>
-        <button onclick="collapseAllInsights()" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 8px 10px; display: block; width: fit-content; margin-left: auto; margin-right: auto; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">&#x229F; Collapse All</button>
+        <button onclick="expandAllInsights()" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 0 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">&#x229E; Expand All</button>
+        <button onclick="collapseAllInsights()" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 0 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">&#x229F; Collapse All</button>
     </div>
 
-    <!-- SECTION 1: Opening Letter -->
-    <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
-        <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
-            <span>A Letter to Fellow Students</span>
-            <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em; transition: transform 0.3s ease; display: inline-block;">&#9654;&#xFE0E;</span>
-        </div>
-        <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
-            <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+    <!-- Content Sections -->
 
-<p style="margin-bottom: 15px;">There is a phrase that appears four times in a single chapter of Genesis &mdash; so many times that you cannot miss it, so quietly stated that you might almost read past it.</p>
-<p style="margin-bottom: 15px;"><em>&ldquo;The LORD was with Joseph.&rdquo;</em></p>
-<p style="margin-bottom: 15px;">That is the thesis of this entire week. Not that Joseph was special &mdash; though he was. Not that Joseph was perfect &mdash; he wasn&rsquo;t. Not that his life went smoothly once he had God&rsquo;s favor. It very much did not.</p>
-<p style="margin-bottom: 15px;">Joseph was stripped of his coat, thrown into a pit, and sold to strangers by his own brothers. He was carried into Egypt as a slave. He served faithfully, built trust, and was then falsely accused by the very household he had protected. He was thrown into prison with no trial, no appeal, no one to speak for him. He interpreted a dream for a man who had promised to remember him &mdash; and was forgotten for two more years.</p>
-<p style="margin-bottom: 15px;">And through all of it, the text simply notes: <em>the LORD was with him.</em></p>
-<p style="margin-bottom: 15px;">That is not the prosperity gospel. It is something much harder and much more beautiful. This is not a promise that God&rsquo;s presence will spare you from hardship. It is a promise that God&rsquo;s presence will accompany you <em>through</em> it. Isaiah wrote it centuries later: <a href="https://www.blueletterbible.org/kjv/isa/43/2/s_722002" target="_blank">&ldquo;When thou passest through the waters, I will be with thee.&rdquo;</a> Not around them. Through them.</p>
-<p style="margin-bottom: 15px;">This week we sit with that phrase and let it do its work.</p>
-
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>First, the Name</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">The story begins, as so many things do in scripture, with a name.</p>
+<p style="margin-bottom: 15px;">When Rachel gave birth to her firstborn son, she named him <strong><a href="https://www.blueletterbible.org/lexicon/h3084/kjv/wlc/0-1/" target="_blank" data-lexicon="Joseph = &quot;Jehovah has added&quot; the eldest son of Jacob by Rachel" data-strongs="H3084" data-translit="yᵊhôsēp̄" data-original="יוֹסֵף" data-lang="hebrew" data-verse="">יוֹסֵף</a></strong> — <em>Yosef</em> — with a declaration that contains within it the entire arc of the story to come: <em>"God has taken away my reproach; may He add to me another son"</em> (<a href="https://www.blueletterbible.org/kjv/gen/30/23-24/s_30023" target="_blank" data-ref="Genesis 30:23-24">Genesis 30:23–24</a>). The verb behind <em>Yosef</em> is <strong><a href="https://www.blueletterbible.org/lexicon/h3254/kjv/wlc/0-1/" target="_blank" data-lexicon="to add, increase, do again (Qal) to add, increase, do again (Niphal) to join, join oneself to to be joined, be added ..." data-strongs="H3254" data-translit="yāsap̄" data-original="יָסַף" data-lang="hebrew" data-verse="">יָסַף</a></strong> (<em>yasaf</em>) — to add, to increase, to multiply. Joseph's very name was a covenant promise in seed form: something given here will be multiplied and given again.</p>
+<p style="margin-bottom: 15px;">This is not incidental. In the Hebrew tradition, names are not labels — they are prophecies. And the name <em>Yosef</em> — <strong>he will add</strong> — turns out to be one of the most structurally important words in the entire Hebrew Bible. Every time Joseph's descendants appear in the story of redemption, they are doing exactly what the name says: <em>adding</em> — multiplying the covenant, extending it, carrying it to new peoples and new places, filling the earth with it.</p>
 <hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
-            </div>
-        </div>
-    </div>
-
-    <!-- SECTION 2: What's New -->
-    <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
-        <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
-            <span>What&rsquo;s New at CFM Corner This Week</span>
-            <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em; transition: transform 0.3s ease; display: inline-block;">&#9654;&#xFE0E;</span>
-        </div>
-        <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
-            <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
-
-<p style="margin-bottom: 15px;">Joseph&rsquo;s story has a way of generating new connections every time you come back to it. This week the site has new content on several fronts.</p>
-
-<div style="background: linear-gradient(135deg, #f0f4f1 0%, #e4ebe6 100%); border: 2px solid #7c9885; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
-<p style="margin-bottom: 15px; font-size: 1.1em; font-weight: 600; color: #4a5d4f;">Hebrew Lesson 10: The Little Letters That Change Everything</p>
-<p style="margin-bottom: 15px;">Our Hebrew journey has reached one of the most practical milestones yet. <a href="/hebrew/10-inseparable-prepositions/" style="color: #7c9885; font-weight: 600;">Lesson 10</a> introduces the inseparable prepositions, the conjunction, the definite article, and the direct object marker &mdash; the single-letter prefixes and particles that fuse directly onto Hebrew words and appear on virtually every line of the Old Testament.</p>
-<p style="margin-bottom: 15px;">What makes this lesson different is the approach: we explore each letter through its ancient pictographic form and use those images as memory aids for what each prefix does. The lesson includes a transparency section about this method &mdash; the Jewish tradition of finding meaning in letter forms reaches back to Psalm 119 itself (the longest chapter in the Bible, structured as a 22-letter acrostic), through the Babylonian Talmud (<em>Shabbat</em> 104a, 5th&ndash;6th century CE) and the mystical <em>Otiyot de-Rabbi Akiva</em> (7th&ndash;9th century CE). But modern grammarians do not connect the ancient pictographs to grammatical function. The pictographic connections in these lessons are personal mnemonics, not scholarly conclusions. The lesson explains why that distinction matters, why arbitrarily interpreting words through symbols alone &mdash; apart from context, grammar, and the broader literary framework &mdash; can lead to misunderstandings, and how the grammar itself, sourced from academically accredited references, should remain our foundation.</p>
-<p style="margin-bottom: 0;">Each letter section includes the full three-stage evolution card &mdash; Proto-Sinaitic pictograph, Early Paleo-Hebrew, and modern square script &mdash; so you can see the same images you first encountered in <a href="/hebrew/01-aleph-bet/" style="color: #7c9885; font-weight: 600;">Lesson 1</a> now doing grammatical work in the text. There is something satisfying about that. <a href="/hebrew/10-inseparable-prepositions/" style="color: #7c9885; font-weight: 600;">Read Lesson 10 &rarr;</a></p>
-</div>
-
-<div style="background: linear-gradient(135deg, #f0f4f1 0%, #e4ebe6 100%); border: 2px solid #7c9885; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
-<p style="margin-bottom: 15px; font-size: 1.1em; font-weight: 600; color: #4a5d4f;">New in the Study Library</p>
-<p style="margin-bottom: 15px;">Three new articles are available in the Study Library this week. The first two grow out of themes in Joseph&rsquo;s story; the third is a companion piece to this week&rsquo;s Hebrew lesson:</p>
-<ul style="margin: 15px 0; padding-left: 25px;">
-<li style="margin-bottom: 10px;"><a href="/study-library/articles/joseph-pattern-dispensations/" style="color: #7c9885; font-weight: 600;">The Joseph Pattern: How God Renews His Covenants Across Dispensations</a> &mdash; The story of Joseph of Egypt is not merely ancient biography &mdash; it is a prophetic map whose lines run forward with remarkable precision to Lehi&rsquo;s family, to Joseph Smith, and to us.</li>
-<li style="margin-bottom: 10px;"><a href="/study-library/articles/seven-as-covenant/" style="color: #7c9885; font-weight: 600;">Seven as Covenant: The Number at the Heart of the Bible</a> &mdash; Pharaoh&rsquo;s dream of seven cows and seven ears of grain is not arbitrary. This article traces the biblical and ancient Near Eastern significance of seven as the covenant number, from Creation through the Joseph narrative and beyond.</li>
-<li style="margin-bottom: 10px;"><a href="/study-library/articles/ancient-alphabet-traditions/" style="color: #7c9885; font-weight: 600;">More Than Modern: The Ancient Roots of Hebrew Letter Traditions</a> &mdash; Did the tradition of finding meaning in Hebrew letter forms begin with medieval Kabbalah? The primary sources tell a different story &mdash; one that stretches back to the biblical period itself. A deeper look at the evidence behind the transparency section in Lesson 10.</li>
-</ul>
-</div>
-
 <hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- SECTION 3: Guide to This Week's Resources -->
-    <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
-        <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
-            <span>&ldquo;The LORD Was with Joseph&rdquo; &mdash; Your Guide to This Week&rsquo;s Resources</span>
-            <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em; transition: transform 0.3s ease; display: inline-block;">&#9654;&#xFE0E;</span>
-        </div>
-        <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
-            <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
-
-<p style="margin-bottom: 15px;">This week we are in <strong><a href="https://www.blueletterbible.org/kjv/gen/37/1/s_37001" target="_blank">Genesis 37&ndash;41</a></strong> &mdash; five chapters, roughly 170 verses, and one of the most literarily sophisticated narratives in the entire Hebrew Bible. Joseph&rsquo;s story is familiar. But familiarity can make us read too quickly. Slow down this week. The details reward attention.</p>
-
-<div style="background: linear-gradient(135deg, #f0f4f1 0%, #e4ebe6 100%); border: 2px solid #7c9885; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
-<p style="margin-bottom: 15px; font-size: 1.1em; font-weight: 600; color: #4a5d4f;">The Reading</p>
-<p style="margin-bottom: 15px;">If you read nothing else this week, read these three sections:</p>
-<ul style="margin: 15px 0; padding-left: 25px;">
-<li style="margin-bottom: 10px;"><strong><a href="https://www.blueletterbible.org/kjv/gen/37/1/s_37001" target="_blank">Genesis 37:1&ndash;28</a></strong> &mdash; Joseph sold by his brothers. The pit. The twenty pieces of silver. The coat dipped in blood. The deception that breaks his father&rsquo;s heart.</li>
-<li style="margin-bottom: 10px;"><strong><a href="https://www.blueletterbible.org/kjv/gen/39/1/s_39001" target="_blank">Genesis 39</a></strong> (the complete chapter) &mdash; Potiphar&rsquo;s house, the daily temptation, the flight, the prison. And four times, quietly and without fanfare: <em>the LORD was with him.</em></li>
-<li style="margin-bottom: 10px;"><strong><a href="https://www.blueletterbible.org/kjv/gen/41/14/s_41014" target="_blank">Genesis 41:14&ndash;45</a></strong> &mdash; Joseph before Pharaoh. &ldquo;It is not in me: God shall give Pharaoh an answer.&rdquo; The elevation. The ring, the robe, the chain. Second only to the throne.</li>
-</ul>
-<p style="margin-bottom: 0;"><a href="https://www.blueletterbible.org/kjv/gen/38/1/s_38001" target="_blank">Genesis 38</a> &mdash; the Judah and Tamar interlude &mdash; seems jarring in the middle of Joseph&rsquo;s story. Don&rsquo;t skip it. It is there precisely because it is uncomfortable, and because the Messianic line runs straight through it. The Judah we meet in chapter 38 and the Judah who speaks in chapter 44 are not the same man. Chapter 38 is where his transformation begins.</p>
-</div>
-
-
-<div style="background: linear-gradient(135deg, #f0f4f1 0%, #e4ebe6 100%); border: 2px solid #7c9885; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
-<p style="margin-bottom: 15px; font-size: 1.1em; font-weight: 600; color: #4a5d4f;">In the Study Guide</p>
-<p style="margin-bottom: 15px;">All five study guide sections are complete. Here are the highlights worth turning to first:</p>
-<ul style="margin: 15px 0; padding-left: 25px;">
-<li style="margin-bottom: 10px;"><strong>The Joseph&ndash;Christ Typology Table</strong> (in the Week Overview) &mdash; Twelve parallel points laid out side by side, from &ldquo;beloved son of his father&rdquo; through &ldquo;saves the very ones who rejected him.&rdquo; If you have never seen this laid out in full, it is striking. Joseph is not just a good man who suffered and was vindicated. He is a portrait, placed in Genesis so that when we finally meet the One he foreshadows, we already know the shape of the story.</li>
-<li style="margin-bottom: 10px;"><strong>The Fleeing Temptation Analysis</strong> (Key Passages, Passage 3) &mdash; A close look at <a href="https://www.blueletterbible.org/kjv/gen/39/7/s_39007" target="_blank">Genesis 39:7&ndash;12</a>. The Hebrew word translated &ldquo;fled&rdquo; &mdash; <em>vayanas</em> (<span style="font-family: 'SBL Hebrew', 'Ezra SIL', 'Times New Roman', serif; direction: rtl; display: inline-block;">וַיָּנָס</span>) &mdash; is the same verb used when Israel flees Egypt, when David flees Saul. There is urgency in it. Joseph didn&rsquo;t negotiate or gradually distance himself. He ran.</li>
-<li style="margin-bottom: 10px;"><strong>Conference Talk Pairings</strong> &mdash; The guide includes two talks that pair perfectly with the text: L. Tom Perry&rsquo;s <a href="https://www.churchofjesuschrist.org/study/general-conference/2002/04/becoming-men-in-whom-the-spirit-of-god-is?lang=eng" target="_blank" style="color: #7c9885;">&ldquo;Becoming Men in Whom the Spirit of God Is&rdquo;</a> (2002), which walks through the entire Joseph narrative; and N. Eldon Tanner&rsquo;s <a href="https://www.churchofjesuschrist.org/study/general-conference/1979/04/put-on-the-whole-armor-of-god?lang=eng" target="_blank" style="color: #7c9885;">&ldquo;Put on the Whole Armor of God&rdquo;</a> (1979), which focuses on Joseph as a model of pre-determined moral commitment.</li>
-</ul>
-</div>
-
-<p style="margin-bottom: 15px;">Whether you have fifteen minutes or an entire evening, start with whatever draws you in. Follow the threads that pull at your heart. The goal isn&rsquo;t to cover everything &mdash; it&rsquo;s to let the scriptures do what they do best.</p>
-
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>The First Joseph: Beloved Son, Sold West, Saves the World</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">The outline of Joseph of Egypt's life is familiar. What may be less familiar is how precisely it encodes a divine pattern that will replay itself across the centuries.</p>
+<p style="margin-bottom: 15px;">Joseph was <strong>Jacob's beloved son</strong> — specifically of Rachel, the wife Jacob loved most. He was set apart from his brothers: given the famous coat, the dreams, the special standing. His brothers hated him for it.</p>
+<p style="margin-bottom: 15px;">They sold him. He was taken <strong>west</strong> — down into Egypt, the land to the west of Canaan, the land of "the world" in the ancient symbolic geography. He suffered unjustly: falsely accused, imprisoned, forgotten. He descended to the lowest point.</p>
+<p style="margin-bottom: 15px;">Then God reversed everything. Joseph rose from the dungeon to the palace in a single day, became the second-most powerful man in the greatest empire of the ancient world, and — here is the hinge — <strong>used that position to save the very brothers who had sold him.</strong> When he finally revealed himself to them, his words were not accusatory. They were theological: <em>"God did send me before you to preserve life... to preserve you a posterity in the earth, and to save your lives by a great deliverance"</em> (<a href="https://www.blueletterbible.org/kjv/gen/45/5-7/s_45005" target="_blank" data-ref="Genesis 45:5-7">Genesis 45:5–7</a>).</p>
+<p style="margin-bottom: 15px;">Joseph did not arrive in Egypt accidentally. He was sent. The suffering was not a detour — it was the route. And the destination was not his own glory but the salvation of his family, the preservation of the covenant lineage, and ultimately the survival of the very people through whom the Messiah would come.</p>
+<p style="margin-bottom: 15px;">The Interpreter Foundation's study guide on <a href="https://www.blueletterbible.org/kjv/gen/42/1/s_42001" target="_blank" data-ref="Genesis 42">Genesis 42–50</a> notes that this is the precise moment where Joseph explicitly connects his role to the broader mission of his lineage: <em>"All this may be taken as symbolic of our message to the latter-day world, a significant portion of it being borne by those whose declared lineage is of Ephraim and Manasseh — Joseph's two sons — through whom 'Joseph is yet alive'" (<a href="https://www.blueletterbible.org/kjv/gen/45/26/s_45026" target="_blank" data-ref="Genesis 45:26">Genesis 45:26</a>).</em></p>
+<p style="margin-bottom: 15px;">Joseph is not dead. He is alive in his seed. And his seed has a job to do.</p>
 <hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
-            </div>
-        </div>
-    </div>
-
-    <!-- SECTION 4: Hebrew Journey -->
-    <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
-        <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
-            <span>Our Hebrew Journey: What the Letters Are Telling Us</span>
-            <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em; transition: transform 0.3s ease; display: inline-block;">&#9654;&#xFE0E;</span>
-        </div>
-        <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
-            <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
-
-<p style="margin-bottom: 15px;">One of the things I love most about studying Hebrew is that the language has a way of rewarding patience. You learn a letter in Lesson 1, and it sits there quietly. Then ten lessons later it shows up in the grammar &mdash; and suddenly the letter you learned as a picture becomes a tool you use every time you open your Bible.</p>
-<p style="margin-bottom: 15px;">That is exactly what happens in <a href="/hebrew/10-inseparable-prepositions/" style="color: #7c9885; font-weight: 600;">Lesson 10</a>.</p>
-<p style="margin-bottom: 15px;">This lesson covers the inseparable prepositions, the conjunction, the definite article, and the direct object marker &mdash; the small building blocks that appear on virtually every line of the Hebrew Bible. They are not separate words &mdash; they are single letters (or in one case, a two-letter particle) that fuse directly onto whatever word follows. A house, a palm, an ox goad, water, a hook, raised arms, and the aleph-tav. Here is what each one means:</p>
-
-<div style="background: rgba(74,107,82,0.06); border: 1px solid #c6d4c8; border-radius: 10px; padding: 20px 25px; margin: 20px 0;">
-<p style="font-size: 0.8em; font-weight: 700; color: #5a3a6b; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;">The Definite Article &amp; Direct Object Marker</p>
-<table style="width: 100%; border-collapse: collapse; font-family: Georgia, serif;">
-    <thead>
-        <tr style="border-bottom: 2px solid #c6d4c8;">
-            <th style="text-align: left; padding: 10px 12px; color: #4a5d4f; font-weight: 600;">Letter</th>
-            <th style="text-align: left; padding: 10px 12px; color: #4a5d4f; font-weight: 600;">Name</th>
-            <th style="text-align: left; padding: 10px 12px; color: #4a5d4f; font-weight: 600;">Ancient Picture</th>
-            <th style="text-align: left; padding: 10px 12px; color: #4a5d4f; font-weight: 600;">Meaning</th>
-            <th style="text-align: left; padding: 10px 12px; color: #4a5d4f; font-weight: 600;">The Connection</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr style="border-bottom: 1px solid #dce8dd; background: rgba(90,58,107,0.04);">
-            <td style="padding: 10px 12px; font-size: 1.5em; font-family: 'SBL Hebrew', 'Ezra SIL', serif; text-align: center; direction: rtl;">הַ</td>
-            <td style="padding: 10px 12px;"><em>Hey</em></td>
-            <td style="padding: 10px 12px;">Arms raised</td>
-            <td style="padding: 10px 12px;"><em>the</em></td>
-            <td style="padding: 10px 12px; color: #555;">Behold! Look at <em>this</em> specific one! (No הַ = indefinite &mdash; Hebrew has no word for <em>a</em> or <em>an</em>)</td>
-        </tr>
-        <tr style="background: rgba(45,58,94,0.04);">
-            <td style="padding: 10px 12px; font-size: 1.5em; font-family: 'SBL Hebrew', 'Ezra SIL', serif; text-align: center; direction: rtl;">אֵת</td>
-            <td style="padding: 10px 12px;"><em>Et</em></td>
-            <td style="padding: 10px 12px;">Aleph + Tav</td>
-            <td style="padding: 10px 12px; font-size: 0.9em;"><em>direct object marker</em></td>
-            <td style="padding: 10px 12px; color: #555;">Marks <em>what</em> receives the action &mdash; needed because Hebrew word order is flexible, not fixed like English SVO</td>
-        </tr>
-    </tbody>
-</table>
-<p style="font-size: 0.8em; font-weight: 700; color: #4a5d4f; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 20px; margin-bottom: 10px;">The Prepositions &amp; Conjunction</p>
-<table style="width: 100%; border-collapse: collapse; font-family: Georgia, serif;">
-    <tbody>
-        <tr style="border-bottom: 1px solid #dce8dd; border-top: 2px solid #c6d4c8;">
-            <td style="padding: 10px 12px; font-size: 1.5em; font-family: 'SBL Hebrew', 'Ezra SIL', serif; text-align: center; direction: rtl;">בְּ</td>
-            <td style="padding: 10px 12px;"><em>Bet</em></td>
-            <td style="padding: 10px 12px;">House</td>
-            <td style="padding: 10px 12px;"><em>in, with, by</em></td>
-            <td style="padding: 10px 12px; color: #555;">You live <em>in</em> a house; you are <em>with</em> the people inside</td>
-        </tr>
-        <tr style="border-bottom: 1px solid #dce8dd; background: rgba(181,101,58,0.04);">
-            <td style="padding: 10px 12px; font-size: 1.5em; font-family: 'SBL Hebrew', 'Ezra SIL', serif; text-align: center; direction: rtl;">כְּ</td>
-            <td style="padding: 10px 12px;"><em>Kaph</em></td>
-            <td style="padding: 10px 12px;">Open palm</td>
-            <td style="padding: 10px 12px;"><em>like, as</em></td>
-            <td style="padding: 10px 12px; color: #555;">Hold your palm up to compare &mdash; <em>like</em> this, <em>as</em> that</td>
-        </tr>
-        <tr style="border-bottom: 1px solid #dce8dd;">
-            <td style="padding: 10px 12px; font-size: 1.5em; font-family: 'SBL Hebrew', 'Ezra SIL', serif; text-align: center; direction: rtl;">לְ</td>
-            <td style="padding: 10px 12px;"><em>Lamed</em></td>
-            <td style="padding: 10px 12px;">Ox goad / staff</td>
-            <td style="padding: 10px 12px;"><em>to, for, toward</em></td>
-            <td style="padding: 10px 12px; color: #555;">The goad directs and pushes <em>toward</em> a destination</td>
-        </tr>
-        <tr style="border-bottom: 1px solid #dce8dd; background: rgba(74,107,82,0.03);">
-            <td style="padding: 10px 12px; font-size: 1.5em; font-family: 'SBL Hebrew', 'Ezra SIL', serif; text-align: center; direction: rtl;">מִן</td>
-            <td style="padding: 10px 12px;"><em>Mem</em></td>
-            <td style="padding: 10px 12px;">Water / waves</td>
-            <td style="padding: 10px 12px;"><em>from, out of</em></td>
-            <td style="padding: 10px 12px; color: #555;">Things flow outward <em>from</em> water; life emerges <em>out of</em> the deep</td>
-        </tr>
-        <tr>
-            <td style="padding: 10px 12px; font-size: 1.5em; font-family: 'SBL Hebrew', 'Ezra SIL', serif; text-align: center; direction: rtl;">וְ</td>
-            <td style="padding: 10px 12px;"><em>Vav</em></td>
-            <td style="padding: 10px 12px;">Hook / nail</td>
-            <td style="padding: 10px 12px;"><em>and, but, then&hellip;</em></td>
-            <td style="padding: 10px 12px; color: #555;">A hook fastens things together &mdash; one nail, many jobs (conjunction, consecutive, adversative, and more)</td>
-        </tr>
-    </tbody>
-</table>
-</div>
-
-<p style="margin-bottom: 15px;">Now go back and read <a href="https://www.blueletterbible.org/kjv/gen/37/28/s_37028" target="_blank">Genesis 37:28</a> &mdash; the verse where Joseph is sold &mdash; with these tools in hand.</p>
-
-<div style="background: rgba(30,58,79,0.05); border: 1px solid #c5d5dc; border-radius: 10px; padding: 20px 25px; margin: 20px 0; text-align: center;">
-    <div style="font-size: 1.4em; line-height: 1.9; margin-bottom: 10px; font-family: 'SBL Hebrew', 'Ezra SIL', 'Times New Roman', serif; direction: rtl;">וַיִּמְכְּרוּ אֶת-יוֹסֵף לַיִּשְׁמְעֵאלִים בְּעֶשְׂרִים כָּסֶף</div>
-    <div style="font-style: italic; color: #555; font-size: 1.05em; margin-bottom: 8px;">&ldquo;And they sold Joseph to the Ishmaelites for twenty pieces of silver.&rdquo;</div>
-    <div style="font-size: 0.88em; color: #777;">Five of the building blocks are active in that single verse: the hook-and-nail consecutive verb (<em>vav</em>), the direct object marker (<em>et</em> &mdash; aleph to tav, alpha and omega, first to last) pointing to Joseph as the one being sold, the goad directing <em>toward</em> the Ishmaelites (<em>lamed</em>), the article pointing at <em>the</em> Ishmaelites (<em>hey</em>, merged into the compound), and the house surrounding the price paid (<em>bet</em>). The grammar itself is telling the story.</div>
-</div>
-
-<p style="margin-bottom: 15px;">Even if Hebrew linguistics isn&rsquo;t usually your thing, Lesson 10 was written for curious people who want to understand what they are reading &mdash; not for scholars. Give it fifteen minutes. You will see Genesis 37&ndash;41 differently after.</p>
-<p style="margin-bottom: 0;"><a href="/hebrew/10-inseparable-prepositions/" style="color: #7c9885; font-weight: 600;">Read Hebrew Lesson 10 &rarr;</a></p>
-
 <hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- SECTION 5: This Week's Central Theme -->
-    <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
-        <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
-            <span>What This Week Is Really Teaching</span>
-            <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 0.8em; transition: transform 0.3s ease; display: inline-block;">&#9654;&#xFE0E;</span>
-        </div>
-        <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
-            <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>The Prophecy Joseph's Father Gave Him</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">Before Jacob died, he called Joseph to him and pronounced a blessing that the Joseph Smith Translation restores in full — and that most readers of the standard Bible never encounter. JST <a href="https://www.blueletterbible.org/kjv/gen/48/8-11/s_48008" target="_blank" data-ref="Genesis 48:8-11">Genesis 48:8–11</a> records Jacob saying to Joseph:</p>
+<blockquote style="border-left: 4px solid #7c9885; padding-left: 20px; margin: 20px 0; font-style: italic; color: #4a4a4a;">
+<p><em>"He hath blessed me in raising thee up to be a servant unto me, in saving my house from death; in delivering my people, thy brethren, from famine which was sore in the land; wherefore the God of thy fathers shall bless thee, and the fruit of thy loins, that they shall be blessed above thy brethren, and above thy father's house... for thou shalt be a light unto my people, to deliver them in the days of their captivity, from bondage; and to bring salvation unto them, when they are altogether bowed down under sin."</em></p>
+</blockquote>
+<p style="margin-bottom: 15px;">Read this carefully. Jacob is not merely blessing Joseph. He is prophesying what Joseph's <strong>descendants</strong> will do — in a future time, when God's people are again in captivity, again bowed down under sin. The fruit of Joseph's loins will be a <strong>light</strong>. They will <strong>deliver</strong>. They will <strong>bring salvation</strong>. This is not a description of something that happened in Egypt. It is a description of something that was <em>still to come</em> when Jacob uttered these words.</p>
+<p style="margin-bottom: 15px;">Then came the most explicit prophecy of all. In JST <a href="https://www.blueletterbible.org/kjv/gen/50/1/s_50001" target="_blank" data-ref="Genesis 50">Genesis 50</a>, the dying Joseph himself looked forward and prophesied:</p>
+<blockquote style="border-left: 4px solid #7c9885; padding-left: 20px; margin: 20px 0; font-style: italic; color: #4a4a4a;">
+<p><em>"A seer shall the Lord my God raise up, who shall be a choice seer unto the fruit of my loins... his name shall be called after me; and it shall be after the name of his father. And he shall be like unto me; for the thing which the Lord shall bring forth by his hand shall bring my people unto salvation."</em></p>
+</blockquote>
+<p style="margin-bottom: 15px;">Joseph of Egypt, in his final hours, saw a latter-day prophet who would bear his name — born from his lineage, a seer, bringing God's word forth, performing a work of salvation for God's scattered people. He described Joseph Smith by name, by lineage, by calling, and by mission — thousands of years before Palmyra, New York existed on any map.</p>
+<p style="margin-bottom: 15px;">This is not typology in a loose, impressionistic sense. This is <em>explicit, named, prophetic recycling</em> — God announcing in advance that what He did through Joseph of Egypt, He would do again through another Joseph of the same seed, in a new dispensation, at a higher scale.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
 
-<p style="margin-bottom: 15px;">The phrase &ldquo;the LORD was with Joseph&rdquo; is not a reward statement. It does not mean: Joseph earned God&rsquo;s presence through his faithfulness. The chronology of <a href="https://www.blueletterbible.org/kjv/gen/39/1/s_39001" target="_blank">Genesis 39</a> makes this clear. The phrase appears at the very beginning of his time in Potiphar&rsquo;s house &mdash; before the temptation, before the prison. It frames everything that follows. God was with Joseph because God chose to be with Joseph.</p>
-<p style="margin-bottom: 15px;">What Joseph chose was how to respond.</p>
-<p style="margin-bottom: 15px;">He chose to serve faithfully when he could have sulked. He chose integrity when compromise was easy and escape was impossible. He chose humility before Pharaoh when he could have claimed power. He chose, again and again, to orient himself toward God in circumstances that gave him every reason to turn away.</p>
-<p style="margin-bottom: 15px;">Looking back from the end of the story, we can see how each disaster positioned Joseph for his ultimate role: sold to traders &rarr; brought to Egypt; sold to Potiphar &rarr; learned household management; falsely imprisoned &rarr; met the butler; forgotten for two years &rarr; brought to Pharaoh at precisely the right moment. Joseph could not see the pattern while living it. Neither can we. But the narrative is asking us to trust the same thing Joseph trusted &mdash; that God is weaving together what seems random and painful.</p>
-
-<div style="background: linear-gradient(135deg, #f0f4f1 0%, #e4ebe6 100%); border: 2px solid #7c9885; border-radius: 10px; padding: 20px 25px; margin: 20px 0;">
-<p style="margin-bottom: 0; font-style: italic; color: #4a5d4f; font-size: 1.05em;">&ldquo;When thou passest through the waters, I will be with thee; and through the rivers, they shall not overflow thee: when thou walkest through the fire, thou shalt not be burned; neither shall the flame kindle upon thee.&rdquo;</p>
-<p style="margin-bottom: 0; text-align: right; font-size: 0.9em; color: #777; margin-top: 8px;">&mdash; <a href="https://www.blueletterbible.org/kjv/isa/43/2/s_722002" target="_blank" style="color: #7c9885;">Isaiah 43:2</a></p>
-</div>
-
-<p style="margin-bottom: 15px;">Not around the waters. Through them. That is the promise. And that is what Genesis 37&ndash;41 is teaching.</p>
-<p style="margin-bottom: 0;">May you find Him with you this week &mdash; in whatever pit, whatever prison, whatever waiting room you are in right now.</p>
-
+                </div>
             </div>
         </div>
-    </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>The Seed Goes West Again: Lehi and the Americas</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">Between Joseph of Egypt and Joseph Smith, however, the pattern took one more remarkable turn.</p>
+<p style="margin-bottom: 15px;">Jacob's blessing to Joseph had placed the birthright upon Joseph's two sons — Ephraim and Manasseh. This was unusual: the birthright leapfrogged a whole generation. And in a pattern that runs through the entire book of Genesis — Isaac not Ishmael, Jacob not Esau, Joseph not Reuben, Ephraim not Manasseh — it was the <em>younger</em> son, Ephraim, who received the primary blessing.</p>
+<p style="margin-bottom: 15px;">But what happened to Manasseh?</p>
+<p style="margin-bottom: 15px;">The Book of Mormon answers this question directly. Lehi, the prophet who led his family from Jerusalem around 600 BCE, was a descendant of Manasseh (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/10?lang=eng&id=p3#p3" target="_blank" data-ref="Alma 10:3">Alma 10:3</a>). When Jerusalem fell to Babylon, the covenant seed of Joseph — specifically through Manasseh — did not go east with the captives. It went <strong>west</strong>. Across the sea. To the Americas.</p>
+<p style="margin-bottom: 15px;">Sound familiar?</p>
+<p style="margin-bottom: 15px;">Just as Joseph of Egypt was taken <em>west</em> into Egypt — the land of "the world" — to preserve the covenant lineage, Lehi and his family were taken <em>west</em> across the great waters to preserve the covenant record. Jacob's prophecy in <a href="https://www.blueletterbible.org/kjv/gen/49/22/s_49022" target="_blank" data-ref="Genesis 49:22">Genesis 49:22</a> — <em>"Joseph is a fruitful bough, even a fruitful bough by a well; whose branches run over the wall"</em> — was interpreted by Lehi himself to refer to this migration: the branches of Joseph would indeed run beyond the boundaries of the known world (see <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/3?lang=eng&id=p2-p5#p2" target="_blank" data-ref="2 Nephi 3:2-5">2 Nephi 3:2–5</a>).</p>
+<p style="margin-bottom: 15px;">In the Americas, Lehi's descendants preserved, recorded, and engraved a second set of covenant scriptures — the stick of Joseph (<a href="https://www.blueletterbible.org/kjv/ezk/37/16-19/s_839016" target="_blank" data-ref="Ezekiel 37:16-19">Ezekiel 37:16–19</a>), the record that would one day be joined to the stick of Judah (the Bible) as a unified witness of Jesus Christ. The seed of Joseph carried the covenant <strong>west</strong> and <strong>multiplied</strong> it — exactly as the name <em>Yosef</em> promised.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Ephraim's Irony: The Tribe That Divided, Then Gathered</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">Here is perhaps the most arresting dimension of the whole pattern — one that the ancient rabbis also noticed.</p>
+<p style="margin-bottom: 15px;">Ephraim, the birthright son of Joseph and the heir of the gathering mandate, had a catastrophic early history. It was a king from the tribe of Ephraim — Jeroboam — who split the kingdom of Israel in two after Solomon's death, dividing the ten northern tribes from the two southern ones. Ephraim, who was supposed to gather, was the one who <em>scattered</em>.</p>
+<p style="margin-bottom: 15px;">Yet Moses had prophesied: <em>"His glory is like the firstling of his bullock... he shall push the people together to the ends of the earth"</em> (<a href="https://www.blueletterbible.org/kjv/deu/33/17/s_186017" target="_blank" data-ref="Deuteronomy 33:17">Deuteronomy 33:17</a>). And Jeremiah, writing after the exile, still called Ephraim God's firstborn in the context of the great latter-day gathering: <em>"I am a father to Israel, and Ephraim is my firstborn"</em> (<a href="https://www.blueletterbible.org/kjv/jer/31/9/s_776009" target="_blank" data-ref="Jeremiah 31:9">Jeremiah 31:9</a>). The tribe that divided would be the instrument of reunion.</p>
+<p style="margin-bottom: 15px;">This is the same pattern as Joseph himself: the one who was rejected by his brothers became the one who saved them. The one who was scattered became the one who gathered. The wound and the healing came from the same hand.</p>
+<p style="margin-bottom: 15px;">In the Restoration, the birthright tribe of Ephraim was specifically identified as the primary carrier of the gathering mission. When converts came into the Church and received their patriarchal blessings, the overwhelming majority were declared to be of the tribe of Ephraim. This was not merely genealogical bookkeeping. It was a statement of calling: the seed of Joseph, through Ephraim, was being gathered <em>first</em> so that it could then serve as the instrument of gathering <em>everyone else</em> — exactly what Moses and Jeremiah had foretold.</p>
+<p style="margin-bottom: 15px;">The twelve oxen holding the baptismal font in every Latter-day Saint temple — facing all directions of the compass — are a physical embodiment of this promise. The waters of covenant go out to every tribe, in every direction. Ephraim bears the weight.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Joseph Smith: The Second Joseph</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">Into this ancient pattern, Joseph Smith was born — and the parallel is precise enough that it cannot be dismissed as coincidence.</p>
+<p style="margin-bottom: 15px;"><strong>Name:</strong> The second Joseph bore the name that Genesis promised. His father's name was also Joseph — fulfilling the JST <a href="https://www.blueletterbible.org/kjv/gen/50/1/s_50001" target="_blank" data-ref="Genesis 50">Genesis 50</a> detail, "his name shall be called after me, and it shall be after the name of his father."</p>
+<p style="margin-bottom: 15px;"><strong>Lineage:</strong> Joseph Smith was of the tribe of Ephraim — the birthright tribe, the gathering tribe, the tribe of Joseph's seed.</p>
+<p style="margin-bottom: 15px;"><strong>Beloved son and rejected:</strong> Like Joseph of Egypt, he was a young man favored with extraordinary visions that his own community could not accept. Like Joseph, he was mocked, betrayed, imprisoned, and ultimately killed by those who feared what God had given him.</p>
+<p style="margin-bottom: 15px;"><strong>Seer:</strong> The Book of Mormon explicitly defines a seer as one who can know things past, present, and future by the power of God — one whose gift exceeds that of a prophet (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/8?lang=eng&id=p15-p17#p15" target="_blank" data-ref="Mosiah 8:15-17">Mosiah 8:15–17</a>). Joseph of Egypt was the great interpreter of dreams, the revealer of hidden things. Joseph Smith was a seer in precisely the same mode: translating ancient records by divine gift, restoring lost scriptures, receiving revelations about things not seen for centuries.</p>
+<p style="margin-bottom: 15px;"><strong>Brought forth scripture from the West:</strong> Joseph of Egypt preserved life by administering the grain stored in Egypt — a physical sustenance. Joseph Smith brought forth the Book of Mormon from the hill Cumorah — a <em>spiritual</em> sustenance, a record preserved in the ground of the American continent for fourteen centuries, waiting for the appointed moment of its restoration.</p>
+<p style="margin-bottom: 15px;"><strong>Instrument of salvation for scattered brothers:</strong> Joseph of Egypt's brothers came to him — not knowing who he was — and received bread. Joseph Smith brought forth a record that is literally addressed to "the house of Israel" — specifically to the scattered tribes — inviting them to return to their covenants. His mission, like his namesake's, was to preserve and restore, not for himself, but for the family.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>What This Means for Us: "Joseph Is Yet Alive"</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">Joseph of Egypt, when he finally revealed himself to his brothers, said the most extraordinary thing: <em>"God did send me before you to preserve life"</em> (<a href="https://www.blueletterbible.org/kjv/gen/45/5/s_45005" target="_blank" data-ref="Genesis 45:5">Genesis 45:5</a>). He had not been taken to Egypt against God's will. He had been <em>sent</em>.</p>
+<p style="margin-bottom: 15px;">This reframing of suffering as mission is one of the most important theological moves in all of scripture — and it appears again and again across the pattern. Lehi did not flee Jerusalem under his own power; he was sent. Joseph Smith did not stumble into the First Vision; he was sent. The covenant was not scattered accidentally; it was distributed on purpose, so that when the time came to gather it, every corner of the earth would already have seeds of Joseph's lineage waiting to be called home.</p>
+<p style="margin-bottom: 15px;">Jonn Claybaugh, in his Interpreter Foundation study guide, captures the pivotal moment where Genesis turns this personal into the universal. Quoting the JST restoration of Jacob's blessing: <em>"Thou shalt be a light unto my people, to deliver them in the days of their captivity, from bondage; and to bring salvation unto them, when they are altogether bowed down under sin."</em></p>
+<p style="margin-bottom: 15px;">That prophecy has a present-tense application. We live in the days of captivity. We live in the time when God's people are, in many ways, bowed down. And the seed of Joseph — those who carry the covenant, those declared of Ephraim and Manasseh in their blessings — are still living out the mandate encoded in the name <em>Yosef</em>: He will add. He will multiply. He will gather.</p>
+<p style="margin-bottom: 15px;">President Russell M. Nelson has made this the defining call of the current dispensation: <em>"The choice to come unto Christ is not a matter of physical location; it is a matter of individual commitment."</em> The gathering is not a demographic project. It is a covenant renewal — and it happens one person at a time, as the seed of Joseph does what Joseph always did: goes out, suffers if necessary, and then turns back toward the family with bread.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>The Principle: Scripture Is a Recycling Engine</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">What unites all of this is something the ancient writers understood and modern readers must relearn: <strong>God does not simply tell stories. He writes patterns.</strong> And He writes them with the explicit intention that future readers — in future dispensations — will recognize themselves <em>inside</em> the pattern and know what to do next.</p>
+<p style="margin-bottom: 15px;">The KnoWhy scholars describe it this way: ancient biblical authors "took pains to help the reader detect that current happenings were consistent with divine patterns seen repeatedly within scriptural 'types' at other times in history — past and future." The physical details in the text are not there for realism. They are there as markers — road signs pointing backward and forward simultaneously along the same highway.</p>
+<p style="margin-bottom: 15px;">Joseph was sold for twenty pieces of silver. Jesus was betrayed for thirty. Both numbers are covenant markers in a specific economic register, calibrated for the time and place. The pattern is the same; the scale is increased. Joseph rose from prison to palace in one day; Christ rose from the tomb on the third day. The trajectory is identical; the magnitude is eternal.</p>
+<p style="margin-bottom: 15px;">When we read <a href="https://www.blueletterbible.org/kjv/gen/37/1/s_37001" target="_blank" data-ref="Genesis 37">Genesis 37</a> this week and encounter a young man in a coat of many colors, sold by his brothers and carried west into slavery — we are not reading ancient history in a dusty sense. We are reading <strong>our own story told in advance</strong>. We are reading the blueprint God laid down so that when His people would be scattered across the earth — across oceans, into new continents, into the American West — they would recognize the hand of God in it and understand their mission.</p>
+<p style="margin-bottom: 15px;">Joseph was sent. Lehi was sent. Joseph Smith was sent. And those who carry the covenant today — who have been declared of Ephraim, who bear the name of Joseph in their lineage and their calling — are also sent. Not to administer grain. But to carry light. To gather. To bring salvation to those who are bowed down.</p>
+<p style="margin-bottom: 15px;">He will add. He will multiply.</p>
+<p style="margin-bottom: 15px;"><strong>Yosef.</strong></p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Primary Sources for This Article</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;"><em>Scriptural: <a href="https://www.blueletterbible.org/kjv/gen/30/23-24/s_30023" target="_blank" data-ref="Genesis 30:23-24">Genesis 30:23–24; 37:3–28; 41:46; 45:4–8; 49:22–26</a>; JST <a href="https://www.blueletterbible.org/kjv/gen/48/8-11/s_48008" target="_blank" data-ref="Genesis 48:8-11">Genesis 48:8–11; 50:24–33</a>; <a href="https://www.blueletterbible.org/kjv/deu/33/17/s_186017" target="_blank" data-ref="Deuteronomy 33:17">Deuteronomy 33:17</a>; <a href="https://www.blueletterbible.org/kjv/jer/31/9/s_776009" target="_blank" data-ref="Jeremiah 31:9">Jeremiah 31:9</a>; <a href="https://www.blueletterbible.org/kjv/ezk/37/16-19/s_839016" target="_blank" data-ref="Ezekiel 37:16-19">Ezekiel 37:16–19</a>; <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/10?lang=eng&id=p3#p3" target="_blank" data-ref="Alma 10:3">Alma 10:3</a>; <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/3?lang=eng&id=p2-p20#p2" target="_blank" data-ref="2 Nephi 3:2-20">2 Nephi 3:2–20</a>; <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/8?lang=eng&id=p15-p17#p15" target="_blank" data-ref="Mosiah 8:15-17">Mosiah 8:15–17</a>; <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/27?lang=eng&id=p5#p5" target="_blank" data-ref="D&C 27:5">D&C 27:5; 128:18</a>.</em></p>
+<p style="margin-bottom: 15px;"><em>Latter-day Saint Sources: Interpreter Foundation CFM Study Aid, Lessons 11–12 (Jonn Claybaugh, 2022); Interpreter Foundation KnoWhy 06A, "Was Noah's Ark Designed as a Floating Temple?" (2022); Russell M. Nelson, "Hope of Israel" (2018 Worldwide Youth Devotional); <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/128?lang=eng&id=p18#p18" target="_blank" data-ref="D&C 128:18">D&C 128:18</a> (Joseph Smith).</em></p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<p style="margin-bottom: 15px;"><em>Draft completed: 2026-03-06 | Status: Draft — ready for editing</em></p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
 
 </div>

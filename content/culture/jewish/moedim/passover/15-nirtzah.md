@@ -13,6 +13,8 @@ image: /images/culture/passover/15-nirtzah.png
 
 <a href="https://www.blueletterbible.org/lexicon/h7521/kjv/wlc/0-1/" target="_blank" data-lexicon="to be pleased with, accept favourably" data-strongs="H7521" data-translit="ratsah" data-original="רָצָה" data-lang="hebrew">רָצָה</a> (*ratzah*) — to accept, to delight in, to take pleasure in
 
+*Nirtzah* (נִרְצָה) is the **passive form** of *ratzah* — meaning "to be accepted," "to be found pleasing." The one who is *nirtzah* is the one who brings pleasure and delight to God — the one whose offering has been received with divine favor.
+
 ---
 
 ## Action
@@ -74,7 +76,7 @@ Edersheim notes that Jewish tradition connected "the most important events in Is
 
 This is why the Seder ends with the declaration *"L'shanah haba'ah b'Yerushalayim!"* — "Next year in Jerusalem!" It is a cry of exile, longing, and hope — a people still waiting for the final gathering, the final deliverance, the coming of the Messiah. Edersheim observes that "no other service contains within the same space the like ardent aspirations after a return to Jerusalem and the rebuilding of the Temple, nor so many allusions to the Messianic hope, as the liturgy for the night of the Passover."
 
-*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
 
 </div>
 </details>
@@ -95,7 +97,7 @@ Edersheim concludes: "Thus the 'Lamb without blemish and without spot, who veril
 
 The Seder that began with Kadesh — sanctification — ends with Nirtzah — acceptance. The Lamb who was set apart is now offered. The offering is accepted. The pattern is complete.
 
-*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
 
 </div>
 </details>
@@ -127,7 +129,7 @@ The Seder ends with the declaration *"L'shanah haba'ah b'Yerushalayim!"* — "Ne
 </div>
 </details>
 
-**On the Covenant Path Today:** President Nelson promises: "Those who keep their covenants with God will become a strain of sin-resistant souls" ("The Everlasting Covenant," 2022). The culmination of the covenant path — from sanctification through suffering, through the sacrament, through praise — is acceptance before God. "Next year in Jerusalem!" becomes "Zion — the pure in heart" (D&C 97:21). The pattern holds. The holy order endures. And the covenant — unchanged from the beginning — carries us home.
+**On the Covenant Path Today:** President Nelson promises: "Those who keep their covenants with God will become a strain of sin-resistant souls" (<a href="https://www.churchofjesuschrist.org/study/liahona/2022/10/the-everlasting-covenant" target="_blank">"The Everlasting Covenant,"</a> 2022). The culmination of the covenant path — from sanctification through suffering, through the sacrament, through praise — is acceptance before God. "Next year in Jerusalem!" becomes "Zion — the pure in heart" (D&C 97:21). The pattern holds. The holy order endures. And the covenant — unchanged from the beginning — carries us home.
 
 <details class="seder-dropdown seder-dropdown--temple">
 <summary>On the Covenant Path — The Bridegroom Comes</summary>

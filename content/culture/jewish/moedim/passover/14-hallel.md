@@ -36,7 +36,36 @@ Suggested options:
 
 Hallel means "to praise" or "to shine." In this moment, we raise our voices in joyful thanksgiving — celebrating the God who delivered, redeemed, and accepted us.
 
-This is the psalm Jesus likely sang with His disciples before walking into Gethsemane. Can you imagine? Even as He faced betrayal, suffering, and the cross, He praised. So tonight, we praise not because all is perfect — but because God is faithful, and His steadfast love endures forever.
+These are the hymns Jesus likely sang with His disciples before walking into Gethsemane. Can you imagine? Even as He faced betrayal, suffering, and the cross, He praised. So tonight, we praise not because all is perfect — but because God is faithful, and His steadfast love endures forever.
+
+🎵 <a href="https://www.youtube.com/playlist?list=PLYjqYzKgvpDXhkqVkbiWLpSIxrCyXTiq4" target="_blank">Listen: Hallel Psalms Playlist</a> — *We cannot know if these are the actual melodies sung in ancient times, but we can be reasonably confident that these were the words.*
+
+<details class="seder-dropdown seder-dropdown--psalm">
+<summary>The Hallel Psalms (113–118)</summary>
+<div class="seder-dropdown-body">
+
+The **Hallel** consists of six psalms of praise, divided across the Seder:
+
+**First Half — Sung During Maggid (Step 5):**
+
+| Psalm | Theme | Key Verse |
+|-------|-------|-----------|
+| <a href="https://www.blueletterbible.org/kjv/psa/113/1" target="_blank">113</a> | God raises the lowly | *"He raiseth up the poor out of the dust"* (v. 7) |
+| <a href="https://www.blueletterbible.org/kjv/psa/114/1" target="_blank">114</a> | The Exodus itself | *"When Israel went out of Egypt..."* (v. 1) |
+
+**Second Half — Sung Now (Step 14):**
+
+| Psalm | Theme | Key Verse |
+|-------|-------|-----------|
+| <a href="https://www.blueletterbible.org/kjv/psa/115/1" target="_blank">115</a> | Glory belongs to God alone | *"Not unto us, O LORD, not unto us, but unto thy name give glory"* (v. 1) |
+| <a href="https://www.blueletterbible.org/kjv/psa/116/1" target="_blank">116</a> | Gratitude for deliverance | *"I love the LORD, because he hath heard my voice"* (v. 1) |
+| <a href="https://www.blueletterbible.org/kjv/psa/117/1" target="_blank">117</a> | Universal praise (shortest psalm) | *"O praise the LORD, all ye nations"* (v. 1) |
+| <a href="https://www.blueletterbible.org/kjv/psa/118/1" target="_blank">118</a> | The rejected stone becomes the cornerstone | *"The stone which the builders refused is become the head stone of the corner"* (v. 22) |
+
+After the Hallel, the **Great Hallel** (<a href="https://www.blueletterbible.org/kjv/psa/136/1" target="_blank">Psalm 136</a>) is sung — 26 verses, each ending with the refrain: *"For his mercy endureth for ever."*
+
+</div>
+</details>
 
 ---
 
@@ -129,22 +158,22 @@ The Hebrew root *hallel* carries a revealing duality — it means both "to prais
 
 But there is another face of Hallel. In Alma 7, when Alma addresses the people of Gideon — a faithful community — his tone transforms completely. He expresses the *joy* he feels at seeing their faith and obedience. He teaches them about the coming birth of the Savior and commends their dedication to walking the covenant path of righteousness. The contrast between the two sermons is the contrast within *hallel* itself: when the heart turns to God, praise flows. When it turns to self, it curdles into pride.
 
-The word *hallel* is also linguistically related to the *Shir HaMa'alot* — the "songs of degrees" or songs of ascent — the very psalms sung by the Levites on the steps of the Temple Mount. In Alma 8, after his return from Gideon, Alma taught "many things which cannot be written" and established the order of the church. The mention of things that could not be written may reference oral traditions, including the musical recitations of the Hallel, which could not be preserved in written notation at that time.
+The *Hallel* psalms are also thematically connected to the *Shir HaMa'alot* — the "songs of degrees" or songs of ascent — the very psalms sung by the Levites on the steps of the Temple Mount. Both were sung in Temple worship; both are psalms of praise and petition. In Alma 8, after his return from Gideon, Alma taught "many things which cannot be written" and established the order of the church. The mention of things that could not be written may reference oral traditions, including the musical recitations of the Hallel, which could not be preserved in written notation at that time.
 
 True Hallel is humble, grateful, and God-directed. Pride is its counterfeit. The difference between the two is not the volume of the voice but the posture of the heart.
 
 </div>
 </details>
 
-**On the Covenant Path Today:** President Nelson teaches that "yoking yourself with the Savior means you have access to His strength and redeeming power" ("Overcome the World and Find Rest," 2022). The song of redeeming love is not a relic of ancient Israel or the Nephites — it is the lived experience of every covenant-keeper who feels the power of the Atonement alive in their life today. The Hallel continues wherever the redeemed lift their voices.
+**On the Covenant Path Today:** President Nelson teaches that "yoking yourself with the Savior means you have access to His strength and redeeming power" (<a href="https://www.churchofjesuschrist.org/study/general-conference/2022/04/47nelson" target="_blank">"Overcome the World and Find Rest,"</a> 2022). The song of redeeming love is not a relic of ancient Israel or the Nephites — it is the lived experience of every covenant-keeper who feels the power of the Atonement alive in their life today. The Hallel continues wherever the redeemed lift their voices.
 
 <details class="seder-dropdown seder-dropdown--temple">
-<summary>Temple Covenant — The Law of Consecration</summary>
+<summary>On the Covenant Path — The Law of Consecration</summary>
 <div class="seder-dropdown-body">
 
 The fourth cup is the Cup of Praise, corresponding to the final promise: *"I will take you to me for a people, and I will be to you a God"* (Exodus 6:6–7). When God takes us as His own, we respond by giving everything back to Him.
 
-In the temple, the **Law of Consecration** is the covenant of complete dedication — giving all that we are and all that we have to the building of God's kingdom. The Hallel psalms are themselves an act of consecration — lifting every voice, every gift, every breath in praise to the One who has redeemed us.
+The **Law of Consecration** is the covenant of complete dedication — giving all that we are and all that we have to the building of God's kingdom. The Hallel psalms are themselves an act of consecration — lifting every voice, every gift, every breath in praise to the One who has redeemed us.
 
 > "Thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy mind." — Matthew 22:37
 
@@ -152,6 +181,10 @@ The fourth cup is raised, the Hallel is sung, and the people declare themselves 
 
 </div>
 </details>
+
+---
+
+🍷 **Drink the Fourth Cup — The Cup of Praise**
 
 ---
 

@@ -94,13 +94,15 @@ Unlike Urchatz (Step 2), where hands were washed silently, this washing includes
 <summary>At the Last Supper — The Washing of Feet</summary>
 <div class="seder-dropdown-body">
 
-The handwashing at Rachtzah was customary; what was extraordinary was the Master taking the servant's place. Peter's resistance — and then his eager overcorrection ("not my feet only, but also my hands and my head!") — makes sense in this liturgical context. Jesus responded: "If I wash thee not, thou hast no part with me" (John 13:8). And then: "If I then, your Lord and Master, have washed your feet; ye also ought to wash one another's feet" (John 13:14).
+Scholars have debated the timing of Jesus' foot-washing. Edersheim argues it occurred early in the evening, noting that John 13:2 should read "when supper had come" rather than "supper being ended." However, when we recognize the context of baptism and temple tradition, the later placement at Rachtzah makes profound sense.
 
-The symbolism is profound: "He that is washed needeth not save to wash his feet, but is clean every whit." The first washing (baptism) opens the covenant; the second (sanctification) prepares us to partake of sacred things. This is why the foot-washing fits naturally at Rachtzah — the consecrating washing that comes after the story of deliverance has been told, preparing the participants for the sacred meal.
+The disciples had already been baptized — they had passed through the first washing. Jesus acknowledged this: "He that is washed needeth not save to wash his feet, but is clean every whit" (John 13:10). The Greek <a href="https://www.blueletterbible.org/lexicon/g3068/kjv/tr/0-1/" target="_blank" data-lexicon="to wash, bathe the whole body" data-strongs="G3068" data-translit="louō" data-original="λούω" data-lang="greek">*louō*</a> (full bath) versus <a href="https://www.blueletterbible.org/lexicon/g3538/kjv/tr/0-1/" target="_blank" data-lexicon="to wash a part of the body" data-strongs="G3538" data-translit="niptō" data-original="νίπτω" data-lang="greek">*niptō*</a> (partial washing) makes the distinction clear. The disciples did not need another baptism; they needed the deeper, consecrating washing that prepares one to enter sacred space.
 
-This pattern echoes the priests, the sons of Aaron, who were ritually washed before officiating in the ordinances of the Temple (Exodus 29:4; 40:12–13). The washing of the feet represents this deeper consecration — not initiation, but preparation for sacred service.
+This pattern echoes the ancient temple, where the priests, the sons of Aaron, were first washed at the door of the tabernacle (Exodus 29:4) and then underwent further washings and anointings before officiating in sacred ordinances (Exodus 40:12–13). The washing of the feet represents this second consecration — not only an initiation, but preparation for sacred service and sacred communion.
 
-*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+Peter's resistance — and then his eager overcorrection ("not my feet only, but also my hands and my head!") — makes sense in this context. Jesus responded: "If I wash thee not, thou hast no part with me" (John 13:8). And then: "If I then, your Lord and Master, have washed your feet; ye also ought to wash one another's feet" (John 13:14).
+
+
 
 </div>
 </details>
@@ -124,7 +126,7 @@ The consequence of this deeper washing is the song: *"If ye have experienced a c
 </div>
 </details>
 
-**On the Covenant Path Today:** Elder Bednar teaches that "by the sanctifying power of the Holy Ghost as our constant companion, we can always retain a remission of our sins" ("Always Retain a Remission of Your Sins," 2016). The second washing is the ongoing work of sanctification — the covenant renewed each week through the sacrament, each day through repentance, each moment we turn to the Lord.
+**On the Covenant Path Today:** Elder Bednar teaches that "by the sanctifying power of the Holy Ghost as our constant companion, we can always retain a remission of our sins" (<a href="https://www.churchofjesuschrist.org/study/general-conference/2016/04/always-retain-a-remission-of-your-sins" target="_blank">"Always Retain a Remission of Your Sins,"</a> 2016). The second washing is the ongoing work of sanctification — the covenant renewed each week through the sacrament, each day through repentance, each moment we turn to the Lord.
 
 <details class="seder-dropdown seder-dropdown--temple">
 <summary>On the Covenant Path — The Bride Makes Herself Ready</summary>

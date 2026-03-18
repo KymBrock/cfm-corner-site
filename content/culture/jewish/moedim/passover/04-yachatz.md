@@ -63,28 +63,34 @@ Psalm 123 turns the pilgrim's eyes upward to the One who dwells in the heavens, 
 <summary>At the Seder Table — The Three Matzot and the Afikoman</summary>
 <div class="seder-dropdown-body">
 
-Edersheim notes that "at present and for many centuries back the Paschal Supper has been thus laid out: three large unleavened cakes, wrapped in the folds of a napkin." The middle matzah is removed, broken, and the larger portion — the *afikomen* — is wrapped and hidden for the children to find later.
+At present and for many centuries back, the Paschal Supper has been thus laid out: three large pieces of matzah, or unleavened cakes, are wrapped in the folds of a napkin. The middle matzah is removed, broken, and the larger portion — the *afikomen* — is wrapped and hidden for the children to find later.
 
-[The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/) describes the symbolism of the three matzot: they represent the Godhead — Father, Son, and Holy Ghost. The middle one — the Son — is removed from the Father's presence, broken, wrapped in linen (His burial cloths), and hidden (placed in the tomb). Later, it is found by the children — a joyful echo of the Resurrection discovered.
+[The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/) describes the symbolism of the three matzot from a Christian perspective: they represent the Godhead — Father, Son, and Holy Ghost. The middle one — the Son — is removed from the Father's presence, broken, wrapped in linen (His burial cloths), and hidden (placed in the tomb). Later, it is found by the children — a joyful echo of the Resurrection.
 
-Edersheim also records the meaning of the term *afikomen*: it was a principle that "after the Paschal meal, they had no Aphikomen (after-dish)." Nothing was to be eaten after the Paschal lamb, so that its flavor would linger as the last taste. Yet after the cessation of sacrifices, "the Jews conclude the Supper with a piece of unleavened cake, which they call the Aphikomen" — the hidden bread revealed and shared as the final morsel of the evening.
+Edersheim notes that it is uncertain whether the three-matzah tradition existed in Jesus' time, yet the symbolism resonates deeply for Christians.
 
 *Sources: Edersheim, The Temple: Its Ministry and Services, Ch. 12; [The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/)*
 
 </div>
 </details>
 
-**At the Last Supper:** Jesus "took bread, and gave thanks, and brake it, and gave unto them, saying, This is my body which is given for you: this do in remembrance of me" (Luke 22:19). This is the moment of institution — the matzah that had been broken at every Seder now becomes the body of the Messiah, broken for the world.
+**At the Last Supper:** The New Testament describes the breaking of bread later in the Seder, but the symbolism is profound. What had been a ritual act at every Passover table now carried a deeper weight: the One who would be broken and hidden in the tomb was Himself performing the breaking.
 
 <details class="seder-dropdown seder-dropdown--supper">
 <summary>At the Last Supper — The Breaking of Bread</summary>
 <div class="seder-dropdown-body">
 
-At this point in the Seder, Jesus broke the middle matzah and set aside the larger half — the Aphikomen. What had been a ritual act at every Passover table now carried a deeper weight: the One who would be broken and hidden in the tomb was Himself performing the breaking.
+The full arc of the Lord's Supper spans from the Yachatz to the Aphikomen (Step 12), when the hidden bread is brought forth.
 
-The full institution of the Lord's Supper took place later, at the Aphikomen (Step 12), when the hidden bread was brought forth. Here at Yachatz, Jesus simply broke the bread and hid it — mirroring His own burial, preparing the symbol that would be revealed in glory.
+The matzah itself — striped from the baking and pierced with holes to prevent any leavening — reminds Christians of the scourging of the whips and the piercing of the nails and spear. While this is clearly not intentional symbolism in Jewish tradition, these markings take on profound meaning when Jesus declares, "This is my body which is given for you" (Luke 22:19), and when Isaiah prophesies:
 
-*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+> "But he was wounded for our transgressions, he was bruised for our iniquities: the chastisement of our peace was upon him; and with his stripes we are healed." — Isaiah 53:5
+
+When Jesus broke bread at the Last Supper and said "This is my body which is broken for you" (1 Corinthians 11:24), He was declaring Himself the afikomen — the hidden one who would be found. But He was also prophesying the gathering of His body, His family, His Bride from every nation, kindred, tongue, and people.
+
+The broken portion is wrapped and hidden — like the broken body laid in the tomb. Later, at the Aphikomen, it is revealed and shared — mirroring His resurrection and the communion we share in remembrance of Him.
+
+
 
 </div>
 </details>
@@ -105,12 +111,12 @@ The bands of death were broken — just as the bread is broken. But Alma presses
 
 The Hebrew word *chatzah* — to divide, to split in two — reflects not only the dividing of the matzah but the scattering of Israel and the division of families that came from the bitterness of the earlier Karpas. Alma explores these serious consequences: "Were they destroyed?" and "On what conditions were they saved?" He answers: they were saved "according to their faith" — and the breaking produced a mighty change, a metamorphosis of the heart (Alma 5:12-13).
 
-The Savior Himself connects Yachatz to the covenant requirement of brokenness: *"Ye shall offer for a sacrifice unto me a broken heart and a contrite spirit"* (3 Nephi 9:20, echoing Psalm 34:18). The bread must be broken before the telling can begin. The heart must be broken before the change can take root.
+The Savior Himself connects Yachatz to the covenant requirement of brokenness: *"Ye shall offer for a sacrifice unto me a broken heart and a contrite spirit"* (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/9?lang=eng&id=p20#p20" target="_blank">3 Nephi 9:20</a>, echoing <a href="https://www.blueletterbible.org/kjv/psa/34/18" target="_blank">Psalm 34:18</a>). The bread must be broken before the telling can begin. The heart must be broken before the change can take root.
 
 </div>
 </details>
 
-**On the Covenant Path Today:** Elder Bednar teaches that "the ordinance of the sacrament is a holy and repeated invitation to repent sincerely and to be renewed spiritually," and that as we "participate in this holy ordinance with a broken heart and a contrite spirit, then the promise is that we may always have the Spirit of the Lord to be with us" ("Always Retain a Remission of Your Sins," 2016). Every Sabbath, we break bread again. The pattern repeats because the need for brokenness before redemption never changes.
+**On the Covenant Path Today:** Elder Bednar teaches that "the ordinance of the sacrament is a holy and repeated invitation to repent sincerely and to be renewed spiritually," and that as we "participate in this holy ordinance with a broken heart and a contrite spirit, then the promise is that we may always have the Spirit of the Lord to be with us" (<a href="https://www.churchofjesuschrist.org/study/general-conference/2016/04/always-retain-a-remission-of-your-sins" target="_blank">"Always Retain a Remission of Your Sins,"</a> 2016). Every Sabbath, we break bread again. The pattern repeats because the need for brokenness before redemption never changes.
 
 <details class="seder-dropdown seder-dropdown--temple">
 <summary>On the Covenant Path — The Broken Bread and the Bride</summary>

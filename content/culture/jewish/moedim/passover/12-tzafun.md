@@ -68,7 +68,7 @@ Edersheim records that "since the cessation of the Paschal Sacrifice the Jews co
 
 The principle was firm: "after the Paschal meal, they had no Aphikomen (after-dish)" — meaning nothing was to be eaten after the lamb. But when the temple sacrifices ceased, the Aphikomen matzah took the place of the lamb as the last morsel tasted. The hidden bread, broken earlier at Yachatz, was now brought forth, revealed, and shared — the final taste on every tongue.
 
-*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
 
 </div>
 </details>
@@ -79,13 +79,19 @@ The principle was firm: "after the Paschal meal, they had no Aphikomen (after-di
 <summary>At the Last Supper — The Institution of the Lord's Supper</summary>
 <div class="seder-dropdown-body">
 
-Edersheim argues that the institution of the Lord's Supper took place at this moment — the Aphikomen — not earlier at the Motzi. His reasoning: Rabbinical tradition held that thanksgiving was to follow, not precede, the breaking — "because it was the bread of poverty, and the poor have not whole cakes, but broken pieces." But Jesus "first gave thanks and then brake the bread," proving "it must have been at a later period of the service."
+When exactly did Jesus institute the Lord's Supper? Edersheim argues it happened here — at the Aphikomen — not earlier at the Motzi (the blessing of the bread).
 
-At the Aphikomen, "the Lord instituted His own Supper, for the first time using the Aphikomen 'when He had given thanks' (after meat), to symbolise His body, and the third cup, or 'cup of blessing which we bless' (1 Cor 10:16) — being 'the cup after supper' (Luke 22:20) — to symbolise His blood."
+His reasoning turns on a small but telling detail: the *order* of blessing and breaking.
 
-Edersheim writes: "The symbolical cord, if the figure may be allowed, had stretched to its goal — the offering up of the Lamb of God."
+In the traditional Seder, the matzah was broken *first*, and *then* thanks was given. Why? Because it was "the bread of poverty, and the poor have not whole cakes, but broken pieces." You don't bless a whole loaf when you're remembering affliction — you break it first, then give thanks over the fragments.
 
-*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+But the Gospels record that Jesus did the opposite. He "first gave thanks and *then* brake the bread." This reversal, Edersheim argues, proves "it must have been at a later period of the service" — specifically, at the Aphikomen, when the hidden bread is brought forth *after* the meal and blessed before being shared.
+
+Edersheim concludes: "The Lord instituted His own Supper, for the first time using the Aphikomen 'when He had given thanks' (after meat), to symbolise His body, and the third cup, or 'cup of blessing which we bless' (<a href="https://www.blueletterbible.org/kjv/1co/10/16" target="_blank">1 Corinthians 10:16</a>) — being 'the cup after supper' (<a href="https://www.blueletterbible.org/kjv/luk/22/20" target="_blank">Luke 22:20</a>) — to symbolise His blood."
+
+The hidden bread — broken and concealed, now revealed and blessed — became the bread of the new covenant. "The symbolical cord, if the figure may be allowed, had stretched to its goal — the offering up of the Lamb of God."
+
+
 
 </div>
 </details>
@@ -109,7 +115,7 @@ Just as the Afikoman is brought from hiding into the light, our hidden selves wi
 </div>
 </details>
 
-**On the Covenant Path Today:** Elder Bednar speaks of "an inner spiritual stillness of the soul that enables us to know and remember that God is our Heavenly Father, we are His children, and Jesus Christ is our Savior" ("Be Still, and Know That I Am God," 2024). What was hidden is revealed — not only at the resurrection, but in the quiet stillness of covenant relationship, where the Lord makes Himself known to those who seek Him.
+**On the Covenant Path Today:** Elder Bednar speaks of "an inner spiritual stillness of the soul that enables us to know and remember that God is our Heavenly Father, we are His children, and Jesus Christ is our Savior" (<a href="https://www.churchofjesuschrist.org/study/general-conference/2024/04/21bednar" target="_blank">"Be Still, and Know That I Am God,"</a> 2024). What was hidden is revealed — not only at the resurrection, but in the quiet stillness of covenant relationship, where the Lord makes Himself known to those who seek Him.
 
 <details class="seder-dropdown seder-dropdown--temple">
 <summary>On the Covenant Path — The Hidden One Found</summary>

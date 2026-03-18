@@ -31,9 +31,9 @@ But Christ did not merely observe our bitterness — He entered into it fully. I
 
 ## Scripture Connection
 
-> "And he shall go forth, suffering pains and afflictions and temptations of every kind... that his bowels may be filled with mercy." — Alma 7:11
+> "And he shall go forth, suffering pains and afflictions and temptations of every kind... that his bowels may be filled with mercy." — <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng&id=p11#p11" target="_blank">Alma 7:11</a>
 
-> "Which suffering caused myself, even God... to tremble because of pain... and would that I might not drink the bitter cup, and shrink—" — D&C 19:18
+> "Which suffering caused myself, even God... to tremble because of pain... and would that I might not drink the bitter cup, and shrink—" — <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/19?lang=eng&id=p18#p18" target="_blank">D&C 19:18</a>
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 128: A Song of Ascents</summary>
@@ -63,26 +63,26 @@ Psalm 128 blesses the one who fears the Lord — a fruitful vine, olive plants a
 <summary>At the Seder Table — The Five Bitter Herbs</summary>
 <div class="seder-dropdown-body">
 
-The Mishnah (Pesachim ii. 6) names five kinds of herbs that fulfill the requirement of bitter herbs: lettuce, endive, succory, what is called *charchavina* (perhaps beets or urtica), and horehound (bitter coriander). The bitter herbs were eaten twice during the service — once dipped in salt water or vinegar, and a second time with *charoseth*, a paste of dates, raisins, and vinegar that represented the mortar of Egypt.
+The Mishnah (Pesachim ii. 6) names five kinds of herbs that fulfill the requirement of bitter herbs: lettuce, endive, succory, what is called *charchavina* (perhaps beets or urtica), and horehound (bitter coriander). The bitter herbs were eaten twice during the service — once dipped in salt water or vinegar, and a second time with *<a href="https://www.blueletterbible.org/lexicon/h2563/kjv/wlc/0-1/" target="_blank" data-lexicon="clay, mortar" data-strongs="H2563" data-translit="chomer" data-original="חֹמֶר" data-lang="hebrew">charoset</a>*, a sweet paste representing the mortar of Egypt. Edersheim describes it as "a compound of dates, raisins, etc." — modern recipes typically include apples, nuts, honey, cinnamon, and red wine.
 
-Edersheim notes that although the Mishnah "expressly declares that Charoseth was not obligatory," its use gave the bitter herbs a sweet counterpoint — the mortar of slavery mixed with the sweetness of hope. The bitterness was real, but it was not the whole story. Even in Egypt's bondage, the promise of deliverance was present.
+Edersheim notes that although the Mishnah "expressly declares that charoset was not obligatory," its use gave the bitter herbs a sweet counterpoint — the mortar of slavery mixed with the sweetness of hope. The bitterness was real, but it was not the whole story. Even in Egypt's bondage, the promise of deliverance was present.
 
-*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
 
 </div>
 </details>
 
-**At the Last Supper:** Gethsemane follows immediately after the Seder meal. The bitter herbs at the table foreshadow the bitter cup: "O my Father, if it be possible, let this cup pass from me: nevertheless not as I will, but as thou wilt" (Matthew 26:39). Jesus tasted the full bitterness of mortality so that He could succor those who taste it after Him.
+**At the Last Supper:** Gethsemane follows immediately after the Seder meal. The bitter herbs at the table foreshadow the bitter cup: "O my Father, if it be possible, let this cup pass from me: nevertheless not as I will, but as thou wilt" (<a href="https://www.blueletterbible.org/kjv/mat/26/39" target="_blank">Matthew 26:39</a>). Jesus tasted the full bitterness of mortality so that He could succor those who taste it after Him.
 
 <details class="seder-dropdown seder-dropdown--supper">
 <summary>At the Last Supper — The Bitter Cup</summary>
 <div class="seder-dropdown-body">
 
-As the bitter herbs were tasted at the table, Jesus "was troubled in spirit" — sensing "the root of bitterness about to spring up among, and to trouble them." Edersheim notes that the concern among the disciples as to which of them should betray Him found expression in the gesture of Peter — beckoning to John, who leaned back on Jesus' breast to ask the whispered question.
+As the bitter herbs were tasted at the table, Jesus "was troubled in spirit" — sensing "the root of bitterness about to spring up among, and to trouble them." The disciples, "exceeding sorrowful," each asked, *"Lord, is it I?"* (<a href="https://www.blueletterbible.org/kjv/mat/26/22" target="_blank">Matthew 26:22</a>). Edersheim notes that the concern among the disciples found expression in Peter's gesture — beckoning to John, who leaned back on Jesus' breast to whisper, *"Lord, who is it?"* (<a href="https://www.blueletterbible.org/kjv/jhn/13/25" target="_blank">John 13:25</a>).
 
-After the meal ended, Jesus went forth into Gethsemane, where the bitter herbs found their ultimate fulfilment: "O my Father, if it be possible, let this cup pass from me" (Matthew 26:39). The Talmud speaks of the "cup of vengeance" that God would give the nations to drink (Jeremiah 25:15). But Christ drank the bitterest cup Himself — "and when He had offered up prayers and supplications with strong crying and tears unto Him that was able to save Him from death... though He were a Son, yet learned He obedience by the things which He suffered" (Hebrews 5:7-8).
+After the meal ended, Jesus went forth into Gethsemane, where the bitter herbs found their ultimate fulfilment: "O my Father, if it be possible, let this cup pass from me" (<a href="https://www.blueletterbible.org/kjv/mat/26/39" target="_blank">Matthew 26:39</a>). The Talmud speaks of the "cup of vengeance" that God would give the nations to drink (<a href="https://www.blueletterbible.org/kjv/jer/25/15" target="_blank">Jeremiah 25:15</a>). But Christ drank the bitterest cup Himself — "and when He had offered up prayers and supplications with strong crying and tears unto Him that was able to save Him from death... though He were a Son, yet learned He obedience by the things which He suffered" (<a href="https://www.blueletterbible.org/kjv/heb/5/7-8" target="_blank">Hebrews 5:7–8</a>).
 
-*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
 
 </div>
 </details>
@@ -95,20 +95,20 @@ After the meal ended, Jesus went forth into Gethsemane, where the bitter herbs f
 
 Alma describes the bitterness of bondage and sin in vivid language that echoes the maror:
 
-> "And they were in the midst of darkness; nevertheless, their souls were illuminated by the light of the everlasting word; yea, they were encircled about by the bands of death, and the chains of hell, and an everlasting destruction did await them." — Alma 5:7
+> "And they were in the midst of darkness; nevertheless, their souls were illuminated by the light of the everlasting word; yea, they were encircled about by the bands of death, and the chains of hell, and an everlasting destruction did await them." — <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/5?lang=eng&id=p7#p7" target="_blank">Alma 5:7</a>
 
 Encircled. Chained. Awaiting destruction. This is the taste of maror — the bitterness of a people in spiritual bondage. And Alma warns plainly that this bitterness carries real wages:
 
-> "And again I say unto you, is there one among you that doth make a mock of his brother, or that doth heap upon him persecutions? Wo unto such an one, for he is not prepared, and the time is at hand that he must repent or he cannot be saved!" — Alma 5:30–31
+> "And again I say unto you, is there one among you that doth make a mock of his brother, or that doth heap upon him persecutions? Wo unto such an one, for he is not prepared, and the time is at hand that he must repent or he cannot be saved!" — <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/5?lang=eng&id=p30-p31#p30" target="_blank">Alma 5:30–31</a>
 
-> "Whosoever bringeth forth evil works, the same becometh a child of the devil... And whosoever doeth this must receive his wages of him; therefore, for his wages he receiveth death, as to things pertaining unto righteousness, being dead unto all good works." — Alma 5:41–42
+> "Whosoever bringeth forth evil works, the same becometh a child of the devil... And whosoever doeth this must receive his wages of him; therefore, for his wages he receiveth death, as to things pertaining unto righteousness, being dead unto all good works." — <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/5?lang=eng&id=p41-p42#p41" target="_blank">Alma 5:41–42</a>
 
 The Maror is tasted within the Seder — within the covenant meal — which means even the bitterness is held within the framework of redemption. The Savior did not remove the bitter cup; He drank it. And because He did, our own bitter moments can become the pathway to transformation.
 
 </div>
 </details>
 
-**On the Covenant Path Today:** President Nelson assures covenant-keepers that they receive "heavenly power — power that strengthens us to withstand our trials, temptations, and heartaches better" ("Overcome the World and Find Rest," 2022). The bitterness of mortality is real — but the covenant provides the power to endure it and be transformed by it.
+**On the Covenant Path Today:** President Nelson assures covenant-keepers that they receive "heavenly power — power that strengthens us to withstand our trials, temptations, and heartaches better" (<a href="https://www.churchofjesuschrist.org/study/general-conference/2022/04/47nelson" target="_blank">"Overcome the World and Find Rest,"</a> 2022). The bitterness of mortality is real — but the covenant provides the power to endure it and be transformed by it.
 
 <details class="seder-dropdown seder-dropdown--temple">
 <summary>On the Covenant Path — The Bitter Cup and the Covenant</summary>
@@ -116,7 +116,7 @@ The Maror is tasted within the Seder — within the covenant meal — which mean
 
 The bitter herbs are tasted within the covenant meal — not outside it. The bitterness is real, but it is held within the framework of redemption. This is the pattern of the covenant path: suffering is not avoided but transformed.
 
-In Gethsemane, Christ prayed: *"O my Father, if it be possible, let this cup pass from me: nevertheless not as I will, but as thou wilt"* (Matthew 26:39). He drank the bitter cup — the full weight of mortal suffering — so that our bitter moments might lead somewhere. As [The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/) teaches, the cup of vengeance that the prophets foretold (Jeremiah 25:15) was drunk not by the nations but by the Lamb Himself.
+In Gethsemane, Christ prayed: *"O my Father, if it be possible, let this cup pass from me: nevertheless not as I will, but as thou wilt"* (<a href="https://www.blueletterbible.org/kjv/mat/26/39" target="_blank">Matthew 26:39</a>). He drank the bitter cup — the full weight of mortal suffering — so that our bitter moments might lead somewhere. As [The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/) teaches, the cup of vengeance that the prophets foretold (<a href="https://www.blueletterbible.org/kjv/jer/25/15" target="_blank">Jeremiah 25:15</a>) was drunk not by the nations but by the Lamb Himself.
 
 On the covenant path, we are not promised a life without bitterness. We are promised that the One who drank the bitterest cup walks beside us, transforms our suffering, and brings us through. The bitter herbs at the Seder table are always followed by the Korech — the sandwich that binds bitterness and hope together.
 
@@ -131,6 +131,6 @@ On the covenant path, we are not promised a life without bitterness. We are prom
 
 - What "bitter cup" have I been asked to drink in my life? How has the Savior strengthened me through it?
 - Do I believe that Christ truly understands my pain — even the parts no one else sees?
-- When I taste this bitter herb, can I choose to remember that He tasted it first?
+- When I taste this bitter herb, can I choose to remember that He tasted it for me?
 - What would it mean for me to not shrink in my own trials, trusting that Christ walks beside me?
 - How can I be more compassionate toward others who are experiencing bitter moments?

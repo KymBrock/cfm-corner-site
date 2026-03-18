@@ -3,7 +3,8 @@ title: "The Words That Carry a Whole Phrase"
 description: "Learn how Hebrew prepositions absorb their pronouns as suffixes — and hear a single word say 'with him' or 'upon me.'"
 lesson_num: 11
 weight: 11
-week_ref: "12"
+week_ref: "13"
+draft: true
 ---
 
 ## When Prepositions Carry Pronouns

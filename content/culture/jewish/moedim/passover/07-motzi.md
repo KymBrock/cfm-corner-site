@@ -94,16 +94,28 @@ Edersheim notes a crucial detail: Rabbinical tradition held that the thanksgivin
 <summary>At the Last Supper — The Bread Blessed</summary>
 <div class="seder-dropdown-body">
 
-"Jesus took bread, and blessed it" (Matthew 26:26). At this point in the Seder, the Motzi blessing was the customary thanksgiving over bread — acknowledging God as the One who brings forth bread from the earth. Jesus spoke the same words that every head of household had spoken for centuries.
+"Jesus took bread, and blessed it" (<a href="https://www.blueletterbible.org/kjv/mat/26/26" target="_blank">Matthew 26:26</a>). At this point in the Seder, the Motzi blessing was the customary thanksgiving over bread — acknowledging God as the One who brings forth bread from the earth. Jesus spoke the same words that every head of household had spoken for centuries.
 
 But the bread He held was already marked for a greater purpose. The matzah at this table was striped by fire, pierced to prevent rising, and unleavened — pure. The bread that God brings forth from the earth would become the body that God brings forth from the tomb. The full institution — "This is my body, which is given for you" — would come later at the Aphikomen (Step 12), when the hidden bread was revealed.
 
-*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+### Jesus: The Bread of Life
+
+The imagery of bread runs through the entire life and ministry of Jesus:
+
+**Born in <a href="https://www.blueletterbible.org/lexicon/h1035/kjv/wlc/0-1/" target="_blank" data-lexicon="house of bread" data-strongs="H1035" data-translit="beth lechem" data-original="בֵּית לֶחֶם" data-lang="hebrew">Bethlehem</a>** — The very name means "House of Bread" (<a href="https://www.blueletterbible.org/lexicon/h1004/kjv/wlc/0-1/" target="_blank" data-lexicon="house" data-strongs="H1004" data-translit="bayit" data-original="בַּיִת" data-lang="hebrew">בֵּית</a> + <a href="https://www.blueletterbible.org/lexicon/h3899/kjv/wlc/0-1/" target="_blank" data-lexicon="bread, food" data-strongs="H3899" data-translit="lechem" data-original="לֶחֶם" data-lang="hebrew">לֶחֶם</a>). The Bread of Life was born in the House of Bread.
+
+**Multiplied the loaves** — Twice Jesus miraculously provided bread for the multitudes: feeding 5,000 with five loaves (<a href="https://www.blueletterbible.org/kjv/mat/14/13-21" target="_blank">Matthew 14:13–21</a>) and feeding 4,000 with seven loaves (<a href="https://www.blueletterbible.org/kjv/mat/15/32-39" target="_blank">Matthew 15:32–39</a>). He blessed, broke, and gave — the same pattern He would follow at the Last Supper.
+
+**Declared Himself the Bread** — After feeding the 5,000, Jesus taught: *"I am the bread of life: he that cometh to me shall never hunger"* (<a href="https://www.blueletterbible.org/kjv/jhn/6/35" target="_blank">John 6:35</a>). He compared Himself to the manna from heaven: *"Your fathers did eat manna in the wilderness, and are dead. This is the bread which cometh down from heaven, that a man may eat thereof, and not die. I am the living bread which came down from heaven: if any man eat of this bread, he shall live for ever"* (<a href="https://www.blueletterbible.org/kjv/jhn/6/49-51" target="_blank">John 6:49–51</a>).
+
+At this table, the One who *is* the Bread blessed the bread that would become the symbol of His body, broken for us.
+
+
 
 </div>
 </details>
 
-**In the Nephite Assembly:** Alma uses the exact "bring forth" language: "Yea, come unto me and *bring forth* works of righteousness" (Alma 5:35). The invitation is to bring forth fruit in response to what God has brought forth. And there is a warning: "whosoever *bringeth forth* not good fruit, or whosoever doeth not the works of righteousness, the same have cause to wail and mourn" (Alma 5:36). Divine provision demands a response.
+**In the Nephite Assembly:** Alma uses the exact *motzi* "bring forth" language: "Yea, come unto me and *bring forth* works of righteousness" (Alma 5:35). The invitation is to bring forth fruit in response to what God has brought forth. And there is a warning: "whosoever *bringeth forth* not good fruit, or whosoever doeth not the works of righteousness, the same have cause to wail and mourn" (Alma 5:36). Divine provision demands a response.
 
 <details class="seder-dropdown seder-dropdown--alma">
 <summary>In the Nephite Assembly — Alma 5: Bring Forth Works of Righteousness</summary>
@@ -120,7 +132,7 @@ Just as God brings forth bread from the earth, we are called to bring forth the 
 </div>
 </details>
 
-**On the Covenant Path Today:** Elder Bednar describes how "every time we faithfully receive, review, remember, and renew sacred covenants, our spiritual anchors are secured ever more firmly and steadfastly to the 'rock' of Jesus Christ" ("Be Still, and Know That I Am God," 2024). The bread is blessed and given again each Sabbath — the same provision, the same pattern, the same God who brings forth bread from the earth.
+**On the Covenant Path Today:** Elder Bednar describes how "every time we faithfully receive, review, remember, and renew sacred covenants, our spiritual anchors are secured ever more firmly and steadfastly to the 'rock' of Jesus Christ" (<a href="https://www.churchofjesuschrist.org/study/general-conference/2024/04/21bednar" target="_blank">"Be Still, and Know That I Am God,"</a> 2024). The bread is blessed and given again each Sabbath — the same provision, the same pattern, the same God who brings forth bread from the earth.
 
 <details class="seder-dropdown seder-dropdown--temple">
 <summary>On the Covenant Path — The Bread of Heaven</summary>

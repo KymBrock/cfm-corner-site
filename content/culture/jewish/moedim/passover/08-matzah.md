@@ -11,7 +11,9 @@ image: /images/culture/passover/08-matzah.png
 
 ## Root Word
 
-<a href="https://www.blueletterbible.org/lexicon/h4682/kjv/wlc/0-1/" target="_blank" data-lexicon="unleavened bread or cake" data-strongs="H4682" data-translit="matstsah" data-original="מַצָּה" data-lang="hebrew">מַצָּה</a> (*matzah*) — unleavened bread; related to <a href="https://www.blueletterbible.org/lexicon/h4672/kjv/wlc/0-1/" target="_blank" data-lexicon="to find, attain, acquire" data-strongs="H4672" data-translit="matsa" data-original="מָצָא" data-lang="hebrew">מָצָא</a> (*matsa*) — to find
+<a href="https://www.blueletterbible.org/lexicon/h4682/kjv/wlc/0-1/" target="_blank" data-lexicon="unleavened bread or cake" data-strongs="H4682" data-translit="matstsah" data-original="מַצָּה" data-lang="hebrew">מַצָּה</a> (*matzah*) — unleavened bread
+
+*Note:* Though etymologically unrelated, *matzah* is a homonym of <a href="https://www.blueletterbible.org/lexicon/h4672/kjv/wlc/0-1/" target="_blank" data-lexicon="to find, attain, acquire" data-strongs="H4672" data-translit="matsa" data-original="מָצָא" data-lang="hebrew">מָצָא</a> (*matsa*) — "to find." Ancient teachers often used such word plays for symbolic connections.
 
 ---
 
@@ -43,6 +45,8 @@ When Jesus took bread at the Last Supper, He was almost certainly holding matzah
 
 Psalm 127 teaches that unless the Lord builds the house, the builders labor in vain. The matzah — flat and unleavened — embodies this truth: self-reliance, pride, and puffing up are futile. True nourishment comes not from our own efforts but from the Lord. The "bread of sorrows" mentioned in the psalm echoes the bread of affliction that is the matzah itself.
 
+The imagery of building carries a deeper resonance. In Egypt, the Israelites were forced to make bricks for Pharaoh's construction projects (<a href="https://www.blueletterbible.org/kjv/exo/1/14" target="_blank">Exodus 1:14</a>; <a href="https://www.blueletterbible.org/kjv/exo/5/7" target="_blank">5:7</a>). At the Seder, the flat matzah symbolically represents those bricks, while the <a href="https://www.blueletterbible.org/lexicon/h2563/kjv/wlc/0-1/" target="_blank" data-lexicon="clay, mortar" data-strongs="H2563" data-translit="chomer" data-original="חֹמֶר" data-lang="hebrew">*charoset*</a> — the sweet paste of apples, nuts, and wine — represents the mortar. Together they recall the bitter labor of bondage. Yet the psalm turns this image on its head: unless the *Lord* builds the house, all our laboring is in vain. The exodus was not Israel building their way to freedom — it was God delivering them from the brick pits of Egypt.
+
 **1** Except the LORD build the house, they labour in vain that build it: except the LORD keep the city, the watchman waketh but in vain.
 **2** It is vain for you to rise up early, to sit up late, to eat the bread of sorrows: for so he giveth his beloved sleep.
 **3** Lo, children are an heritage of the LORD: and the fruit of the womb is his reward.
@@ -64,11 +68,21 @@ Psalm 127 teaches that unless the Lord builds the house, the builders labor in v
 <summary>At the Seder Table — The Paschal Lamb Served Whole</summary>
 <div class="seder-dropdown-body">
 
-Edersheim records that the Paschal lamb "was roasted on a spit made of pomegranate wood, the spit passing right through from mouth to vent." Special care was taken that the lamb did not touch the oven — "it was intended to carry out the idea that the lamb was to be undefiled by any contact with foreign matter." Everything was significant: not a bone was to be broken, it was not to be "sodden at all with water, but roast with fire — his head with his legs, and with the purtenance thereof," and none was to remain until morning.
+Edersheim describes the careful preparation of the Paschal lamb — every detail carried meaning:
 
-"All this was intended to express that it was to be a complete and unbroken sacrifice, on the ground of which there was complete and unbroken fellowship with the God who had passed by the blood-sprinkled doors, and with those who together formed but one family and one body." The matzah eaten alongside the lamb shared this character of wholeness and purity — unleavened, undefiled, and offered in complete integrity.
+- **Roasted whole** on a pomegranate wood spit, passing "right through from mouth to vent"
+- **Never touching the oven** — if any part touched, it was cut away, keeping the lamb "undefiled by any contact with foreign matter"
+- **Not boiled** ("sodden") but roasted with fire — the flesh remaining pure, without the admixture of water
+- **No bone broken** — the lamb served complete, "his head with his legs, and with the purtenance thereof"
+- **Nothing left over** — all consumed by morning; those eating it forming "one family"
 
-*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+**Why did this matter?** Edersheim explains the profound significance:
+
+> "All this was intended to express that it was to be a **complete and unbroken sacrifice**, on the ground of which there was **complete and unbroken fellowship** with the God who had passed by the blood-sprinkled doors, and with those who together formed but one family and one body."
+
+The lamb's wholeness pointed to Christ — whose bones were not broken on the cross (<a href="https://www.blueletterbible.org/kjv/jhn/19/36" target="_blank">John 19:36</a>), whose sacrifice was complete and undefiled, and whose body — the Church — is called to be "one bread and one body" (<a href="https://www.blueletterbible.org/kjv/1co/10/16-17" target="_blank">1 Corinthians 10:16–17</a>). The matzah eaten alongside shared this character: unleavened, undefiled, offered in complete integrity.
+
+
 
 </div>
 </details>
@@ -85,12 +99,12 @@ Edersheim emphasizes that the Paschal sacrifice was unique — "quite out of the
 
 The matzah Jesus blessed and broke was not merely bread — it was the culmination of a sacrificial pattern that predated the Law itself. The Lamb and the Bread were one: sinless, unbroken in fellowship, offered for the whole family.
 
-*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+
 
 </div>
 </details>
 
-**In the Nephite Assembly:** Alma warns against those who are "*puffed up* in the vain things of the world" (Alma 5:37) — the language of leavened bread, rising with pride. And he warns that "such an one is *not found* guiltless" (Alma 5:29). The word *matzah* shares a root with *matsa* — "to find." The question of matzah is twofold: Are you humble (unleavened)? And when examined, will you be *found* worthy?
+**In the Nephite Assembly:** Alma warns against those who are "**puffed up** in the vain things of the world" (Alma 5:37) — the language of leavened bread, rising with pride. And he warns that "such an one is *not found* guiltless" (Alma 5:29). Though *matzah* (unleavened bread) and *matsa* (to find) are different roots, they sound alike — a homonym that ancient teachers used for poetic connection. The question of matzah becomes twofold: Are you humble/sinless (unleavened)? And when examined, will you be *found* worthy?
 
 <details class="seder-dropdown seder-dropdown--alma">
 <summary>In the Nephite Assembly — Alma 5: Simplicity of Heart and the Puffing of Pride</summary>
@@ -102,18 +116,18 @@ Matzah is simple — unleavened, flat, humble. It represents a heart free from t
 
 This is the matzah question: Do you trust in God alone? Is your faith simple, sincere, and undiluted — or has it been leavened with the world's complications?
 
-Alma then contrasts this purity with the pride of those who have become "puffed up" — leavened, risen with self-importance:
+Alma then contrasts this purity with the pride of those who have become "**puffed up**" — leavened, risen with self-importance:
 
 > "O ye workers of iniquity; ye that are puffed up in the vain things of the world, ye that have professed to have known the ways of righteousness nevertheless have gone astray, as sheep having no shepherd, notwithstanding a shepherd hath called after you and is still calling after you, but ye will not hearken unto his voice!" — Alma 5:37
 
 > "Behold, I say unto you, that the good shepherd doth call you; yea, and in his own name he doth call you, which is the name of Christ." — Alma 5:38
 
-To be "puffed up" is to be leavened — full of the world's vanity and self-importance. The matzah invites us to strip away that leaven, return to the simplicity of faith, and listen for the voice of the Good Shepherd calling us by name.
+To be "**puffed up**" is to be leavened — full of the world's vanity and self-importance. The matzah invites us to strip away that leaven, return to the simplicity of faith, and listen for the voice of the Good Shepherd calling us by name.
 
 </div>
 </details>
 
-**On the Covenant Path Today:** President Nelson teaches that overcoming the world means "overcoming the temptation to care more about the things of this world than the things of God" ("Overcome the World and Find Rest," 2022). Stripping away the leaven of worldly pride is the same covenant requirement today as it was at Sinai, at the Last Supper, and at Zarahemla.
+**On the Covenant Path Today:** President Nelson teaches that overcoming the world means "overcoming the temptation to care more about the things of this world than the things of God" (<a href="https://www.churchofjesuschrist.org/study/general-conference/2022/04/47nelson" target="_blank">"Overcome the World and Find Rest,"</a> 2022). Stripping away the leaven of worldly pride is the same covenant requirement today as it was at Sinai, at the Last Supper, and at Zarahemla.
 
 <details class="seder-dropdown seder-dropdown--temple">
 <summary>On the Covenant Path — Searching for Leaven</summary>
@@ -137,3 +151,4 @@ This physical cleansing symbolized the spiritual cleansing required of the Bride
 - What does it mean that the bread of the Passover — and the sacrament — is unleavened? What "leaven" do I need to remove from my life?
 - How does eating the bread of affliction connect me to those who have suffered before me?
 - When I partake of the sacrament, am I truly remembering the Savior's body broken for me?
+- Why is it significant that in the sacrament today, we generally use bread that is "risen"? What might this teach us about Christ's resurrection and our own transformation?

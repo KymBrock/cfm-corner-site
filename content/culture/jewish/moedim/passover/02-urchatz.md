@@ -78,19 +78,15 @@ This brevity is deliberate — no blessing is spoken. The washing is preparatory
 </div>
 </details>
 
-**At the Last Supper:** Ritual purity was observed at every Passover meal. This initial handwashing — silent, preparatory — precedes the meal itself. The Seder includes two washings: *Urchatz* here (without a blessing) and *Rachtzah* at Step 6 (with a blessing, after the story has been told). Jesus' washing of His disciples' feet transformed one of these moments into a profound teaching about service and sanctification.
+**At the Last Supper:** The traditional Seder includes two washings: *Urchatz* (first washing, no blessing) and *Rachtzah* (second washing, with blessing). If Jesus followed this pattern, the first washing would have occurred here. At some point during the meal, Jesus transformed the ritual into something extraordinary — washing His disciples' feet. The full significance of this act is explored at Rachtzah.
 
 <details class="seder-dropdown seder-dropdown--supper">
-<summary>At the Last Supper — The Initial Washing</summary>
+<summary>At the Last Supper — Born of Water</summary>
 <div class="seder-dropdown-body">
 
-Edersheim notes that two kinds of washing were prescribed by tradition — "dipping" and "pouring" — and at the Paschal Supper, the hands were "dipped" in water. This initial washing at Urchatz was customary and silent — no blessing spoken.
+While the Gospels do not explicitly describe the hand-washing rituals at the Last Supper, they provide solid grounding for the symbolism of the first washing. Jesus Himself was baptized by John in the Jordan (Matthew 3:13–17), and His disciples would have entered the covenant through the same waters. To Nicodemus, Jesus taught plainly: "Except a man be born of water and of the Spirit, he cannot enter into the kingdom of God" (John 3:5).
 
-At some point during the Last Supper, Jesus transformed the ordinary into the extraordinary by washing His disciples' feet. Scholars debate the exact placement: Edersheim argues it occurred early in the evening, noting that John 13:2 should read "when supper had come" rather than "supper being ended." Whether at the first washing (Urchatz) or the second (Rachtzah), the meaning transcends the timing: the Master took the servant's place.
-
-The full significance of Jesus' foot-washing — and Peter's resistance — is explored at Rachtzah (Step 6), where the second washing with its spoken blessing represents a deeper consecration after the story of deliverance has been told.
-
-*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+The disciples gathered at that table had already passed through this first washing — they had been born of water. Whatever hand-washing ritual occurred that evening, it pointed back to that foundational covenant act.
 
 </div>
 </details>
@@ -107,12 +103,16 @@ Urchatz — the first washing — finds its echo in the opening verses of Alma's
 
 The sequence mirrors the Seder exactly: first sanctification, then washing. Alma's father established the covenant community not with a sermon but with an act of immersion — a washing that marked the boundary between the old life and the new. The waters of Mormon were the Nephite Urchatz — the preparatory step that readied a people to receive the sacred things that would follow.
 
-> "Have ye sufficiently retained in remembrance his mercy and long-suffering towards them?" — Alma 5:6
+The baptismal covenant itself — recorded in Mosiah 18 — describes the promises made at that first washing:
+
+> "As ye are desirous to come into the fold of God, and to be called his people, and are willing to bear one another's burdens, that they may be light; yea, and are willing to mourn with those that mourn; yea, and comfort those that stand in need of comfort, and to stand as witnesses of God at all times and in all things, and in all places that ye may be in, even until death... that ye may have eternal life — what have you against being baptized in the name of the Lord?" — Mosiah 18:8–10
+
+This is the covenant of the first washing: to bear burdens, to mourn with the mourning, to comfort, and to witness. Alma's question becomes pointed: *"Have ye sufficiently retained in remembrance his mercy and long-suffering towards them?"* (Alma 5:6). We renew this baptismal covenant every time we partake of the sacrament — the prayer itself echoing this same principle: *"that they may always remember him and have his Spirit to be with them"* (Moroni 4:3). The first washing is not merely an initiation — it is a commitment to remember and to act upon that remembrance throughout life.
 
 </div>
 </details>
 
-**On the Covenant Path Today:** Elder Bednar teaches that "the ordinances of baptism by immersion, the laying on of hands for the gift of the Holy Ghost, and the sacrament are not isolated and discrete events; rather, they are elements in an interrelated and additive pattern of redemptive progress" ("Always Retain a Remission of Your Sins," 2016). The first washing is the beginning of the covenant journey — not the whole of it.
+**On the Covenant Path Today:** Elder Bednar teaches that "the ordinances of baptism by immersion, the laying on of hands for the gift of the Holy Ghost, and the sacrament are not isolated and discrete events; rather, they are elements in an interrelated and additive pattern of redemptive progress" (<a href="https://www.churchofjesuschrist.org/study/general-conference/2016/04/always-retain-a-remission-of-your-sins" target="_blank">"Always Retain a Remission of Your Sins,"</a> 2016). The first washing is the beginning of the covenant journey — not the whole of it.
 
 <details class="seder-dropdown seder-dropdown--temple">
 <summary>On the Covenant Path — Entering the Covenant</summary>
@@ -135,7 +135,8 @@ The first washing is the beginning — not the end — of the covenant journey. 
 
 ## Reflection Questions
 
-- What does this simple act of washing teach me about **spiritual readiness**?
-- In what ways does this mirror my own **baptismal covenant**?
-- What do I need to do to renew that covenant and recommit my heart to God tonight?
-- How can I more fully embrace the cleansing gift of repentance in my daily life?
+- What does this simple act of washing teach me about **spiritual readiness** — preparing to receive sacred things?
+- At my baptism, I covenanted to bear burdens, mourn with those who mourn, comfort those in need, and stand as a witness. How am I living these promises today?
+- Alma asked: *"Have ye sufficiently retained in remembrance?"* When I partake of the sacrament each week, what am I actively remembering?
+- The sacrament prayer promises that if I *"always remember him,"* I may *"always have his Spirit."* How does remembrance invite the Spirit into my life?
+- How can I more fully embrace the cleansing gift of repentance — not as a one-time event, but as an ongoing renewal?

@@ -30,15 +30,15 @@ This step may feel small, but it is rich in layered meaning.
 
 The contrast of the fresh green and the stinging salt reflects the dual nature of our journey: sorrow paired with hope, suffering mingled with redemption.
 
-Joseph's story reminds us that **grief and betrayal can become the gateway to deliverance**.
+Joseph's story reminds us that **grief and betrayal can become the gateway to deliverance**. (See [Alma 5 and the Nephite Seder](/study-library/articles/alma5-nephite-seder/) for more on these connections.)
 
 ---
 
 ## Scripture Connection
 
-> "And he shall go forth, suffering pains and afflictions... that his bowels may be filled with mercy." — Alma 7:11
+> "And he shall go forth, suffering pains and afflictions... that his bowels may be filled with mercy." — <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng&id=p11#p11" target="_blank">Alma 7:11</a>
 
-> "They took Joseph's coat... and dipped the coat in the blood of a goat." — Genesis 37:31
+> "They took Joseph's coat... and dipped the coat in the blood of a goat." — <a href="https://www.blueletterbible.org/kjv/gen/37/31" target="_blank">Genesis 37:31</a>
 
 <details class="seder-dropdown seder-dropdown--psalm">
 <summary>Shir HaMa'alot — Psalm 122: A Song of Ascents</summary>
@@ -71,32 +71,34 @@ Psalm 122 celebrates the joy of gathering to the house of the Lord and prays for
 <summary>At the Seder Table — The Herbs and the Questions</summary>
 <div class="seder-dropdown-body">
 
-The Haggadah prescribes a small quantity of greens dipped in salt water, with the following blessing:
+The Haggadah prescribes a small quantity of *karpas* — a green vegetable such as parsley or celery — dipped in salt water, with the following blessing:
 
 > בָּרוּךְ אַתָּה יְיָ, אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא פְּרִי הָאֲדָמָה.
 >
 > *Blessed are You, LORD our God, King of the Universe, who creates the fruit of the ground.*
 
-The rubric notes this blessing is spoken with the intent to include the maror (bitter herbs) eaten later — linking the two dippings liturgically.
+The *karpas* represents spring, new life, and hope — dipped in salt water to remember the tears of bondage. This is distinct from the *maror* (bitter herbs such as horseradish) eaten later at Step 9, which represents the bitterness of slavery itself.
 
-Then came a deliberately provocative act: Edersheim records that "all the dishes were removed from the table (as it was thought so strange a proceeding would tend to excite the more curiosity)." This set the stage for the most important moment of the early Seder — the child's questions. Everything was pedagogical, an invitation to ask and to learn.
+Following the dipping of the karpas, Edersheim records that a deliberately provocative act followed: "all the dishes were removed from the table (as it was thought so strange a proceeding would tend to excite the more curiosity)." This set the stage for the most important moment of the early Seder — the child's questions. Everything was pedagogical, an invitation to ask and to learn.
 
 *Sources: Pesach Haggadah (Sefaria/Koren); Edersheim, The Temple: Its Ministry and Services, Ch. 12*
 
 </div>
 </details>
 
-**At the Last Supper:** At the table, Jesus dipped a morsel and gave it to Judas (John 13:26). The salt water of betrayal met the green of new life in a single act. What seemed like the end — the betrayal — became the gateway to the greatest deliverance in all of history.
+**At the Last Supper:** The karpas — dipped in salt water — foreshadows a darker dipping to come. Later in the meal, at the Korech (Step 10), Jesus will dip a morsel and hand it to the betrayer. But here, at the first dipping, the ancient pattern of Joseph's coat already casts its shadow over the table.
 
 <details class="seder-dropdown seder-dropdown--supper">
-<summary>At the Last Supper — The Dipping</summary>
+<summary>At the Last Supper — The Foreshadowing of Betrayal</summary>
 <div class="seder-dropdown-body">
 
-The Seder's double dipping became the sign by which Jesus identified His betrayer. "He that dippeth his hand with me in the dish, the same shall betray me" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=p23#p23" target="_blank">Matthew 26:23</a>). When Judas asked, "Is it I?" Jesus answered with the sop — the bread dipped in charoseth — handing it to the one who sat in the place of honour at His left.
+The act of dipping at the Seder was meant to signify fellowship. But for those who knew the story of Joseph, the karpas carried a warning. Joseph's brothers dipped his coat in blood and sold him into bondage (<a href="https://www.blueletterbible.org/kjv/gen/37/31" target="_blank">Genesis 37:31</a>). The Seder's karpas — dipped in salt water — recalls those tears.
 
-What should have been a gesture of fellowship became the marker of treachery. The Haggadah's four questions ask why this night requires *two* dippings. At Christ's table, the answer was devastating: one dipping united salt water with new life; the other united fellowship with betrayal.
+At Christ's table, the ancient pattern would repeat. Joseph was sold for twenty pieces of silver (<a href="https://www.blueletterbible.org/kjv/gen/37/28" target="_blank">Genesis 37:28</a>); Jesus would be betrayed for thirty (<a href="https://www.blueletterbible.org/kjv/mat/26/15" target="_blank">Matthew 26:15</a>) — both the price of a slave in their respective eras. Joseph's betrayal led to the salvation of his family in Egypt. Judas' betrayal would lead to the salvation of the world through the Atonement.
 
-*Source: Edersheim, The Temple: Its Ministry and Services, Ch. 12*
+The karpas foreshadows what the Korech will reveal: *"He that dippeth his hand with me in the dish, the same shall betray me"* (<a href="https://www.blueletterbible.org/kjv/mat/26/23" target="_blank">Matthew 26:23</a>). The bitter tears of betrayal are tasted early — but the full identification comes later, when Jesus hands the sop to Judas (see [Step 10: Korech](/culture/jewish/moedim/passover/10-korech/)).
+
+*See also: [Alma 5 and the Nephite Seder](/study-library/articles/alma5-nephite-seder/)*
 
 </div>
 </details>
@@ -109,28 +111,28 @@ What should have been a gesture of fellowship became the marker of treachery. Th
 
 The word *karpas* itself carries a hidden layer. In Esther 1:6, the same Hebrew word (<a href="https://www.blueletterbible.org/lexicon/h3768/kjv/wlc/0-1/" target="_blank" data-lexicon="fine cotton or linen" data-strongs="H3768" data-translit="karpas" data-original="כַּרְפַּס" data-lang="hebrew">כַּרְפַּס</a>) is translated as "fine cotton" or "fine linen" — the fabric of priestly robes and royal garments. This links *karpas* to Joseph's coat, the garment Jacob gave to mark Joseph's birthright, which provoked his brothers' jealousy:
 
-> "They took Joseph's coat... and dipped the coat in the blood of a goat." — Genesis 37:31
+> "They took Joseph's coat... and dipped the coat in the blood of a goat." — <a href="https://www.blueletterbible.org/kjv/gen/37/31" target="_blank">Genesis 37:31</a>
 
 The brothers stripped Joseph of his garment and *dipped* it in blood — staging his death and condemning him to bondage. At the Seder, we dip the karpas into salt water, reenacting the moment when jealousy and contention within a family led to slavery and tears.
 
 Alma draws this same pattern directly into his sermon. He does not describe a foreign oppressor — he specifies that the Nephites were brought into bondage *by their own brethren*:
 
-> "After that, they were brought into bondage by the hands of the Lamanites in the wilderness; yea, I say unto you, they were in captivity, and again the Lord did deliver them out of bondage by the power of his word." — Alma 5:5
+> "After that, they were brought into bondage by the hands of the Lamanites in the wilderness; yea, I say unto you, they were in captivity, and again the Lord did deliver them out of bondage by the power of his word." — <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/5?lang=eng&id=p5#p5" target="_blank">Alma 5:5</a>
 
-> "Have ye sufficiently retained in remembrance that he has delivered their souls from hell?" — Alma 5:6
+> "Have ye sufficiently retained in remembrance that he has delivered their souls from hell?" — <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/5?lang=eng&id=p6#p6" target="_blank">Alma 5:6</a>
 
 Just as Joseph's brothers sold him into Egypt, the Lamanites — Lehi's own descendants — brought their brethren into bondage. And just as God raised Joseph to save his family, God delivered the Nephites through the power of His word. The karpas reminds us that the deepest wounds often come from within our own families — and that God's deliverance reaches even there.
 
 </div>
 </details>
 
-**On the Covenant Path Today:** President Nelson promises that "the reward for keeping covenants with God is heavenly power — power that strengthens us to withstand our trials, temptations, and heartaches better" ("Overcome the World and Find Rest," 2022). The salt water of our own tears meets the green of covenant hope — and from that meeting, new life springs.
+**On the Covenant Path Today:** President Nelson promises that "the reward for keeping covenants with God is heavenly power — power that strengthens us to withstand our trials, temptations, and heartaches better" (<a href="https://www.churchofjesuschrist.org/study/general-conference/2022/04/47nelson" target="_blank">"Overcome the World and Find Rest,"</a> 2022). The salt water of our own tears meets the green of covenant hope — and from that meeting, new life springs.
 
 <details class="seder-dropdown seder-dropdown--temple">
 <summary>On the Covenant Path — Leaving Babylon</summary>
 <div class="seder-dropdown-body">
 
-The salt water of Karpas recalls the tears of bondage — but it also points forward to the call to leave bondage behind. In the latter days, the Lord uses the same Exodus language: *"Go ye out from Babylon... go ye out from among the nations, even from Babylon, from the midst of wickedness"* (D&C 133:5, 14).
+The salt water of Karpas recalls the tears of bondage — but it also points forward to the call to leave bondage behind. In the latter days, the Lord uses the same Exodus language: *"Go ye out from Babylon... go ye out from among the nations, even from Babylon, from the midst of wickedness"* (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/133?lang=eng&id=p5#p5" target="_blank">D&C 133:5</a>, <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/133?lang=eng&id=p14#p14" target="_blank">14</a>).
 
 [The Four Cups and the Wedding Covenant](/study-library/articles/four-cups-wedding-covenant/) explains that this is Exodus language applied to the latter days. Just as Israel left physical Egypt, we are called to leave spiritual Babylon. And just as Israel was led by the blood of the lamb, we are led by Christ, the Lamb of God.
 
