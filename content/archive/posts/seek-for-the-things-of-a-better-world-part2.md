@@ -754,7 +754,7 @@ Hebrew/Greek Insights:
 
 Connotations:
 
-- Divine Communication: God’s “voice” reveals His presence or commandments (1 Kings 19:12–13, “a still small voice”).
+- Divine Communication: God’s “voice” reveals His presence or commandments (1 Kings 19:12–13, “a still small voice”).
 
 - Figurative Usage: “Voice” may also symbolize God’s will or spirit, not just audible speech.
 
