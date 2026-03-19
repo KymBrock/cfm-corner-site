@@ -1,0 +1,375 @@
+{
+  "metadata": {
+    "description": "CFM Corner Glossary - Hebrew and Greek terms from weekly lessons",
+    "version": "1.2",
+    "lastUpdated": "2026-03-19",
+    "organization": "Terms organized by CFM lesson week"
+  },
+  "weeks": {
+    "week01": {
+      "title": "Week 1: Introduction to the Old Testament",
+      "scripture": "Introduction",
+      "terms": [
+        {"strongs": "H8451", "translit": "Torah", "original": "תּוֹרָה", "lang": "hebrew", "meaning": "instruction, law, teaching"},
+        {"strongs": "", "translit": "Nevi'im", "original": "נְבִיאִים", "lang": "hebrew", "meaning": "Prophets (second division)"},
+        {"strongs": "", "translit": "Ketuvim", "original": "כְּתוּבִים", "lang": "hebrew", "meaning": "Writings (third division)"},
+        {"strongs": "", "translit": "Tanakh", "original": "תַּנַ״ךְ", "lang": "hebrew", "meaning": "Hebrew Bible (acronym)"},
+        {"strongs": "H1285", "translit": "berit", "original": "בְּרִית", "lang": "hebrew", "meaning": "covenant"},
+        {"strongs": "H6944", "translit": "qodesh", "original": "קֹדֶשׁ", "lang": "hebrew", "meaning": "holy, set apart, sacred"},
+        {"strongs": "H3444", "translit": "yeshu'ah", "original": "יְשׁוּעָה", "lang": "hebrew", "meaning": "salvation, deliverance"},
+        {"strongs": "H4899", "translit": "mashiach", "original": "מָשִׁיחַ", "lang": "hebrew", "meaning": "anointed one, Messiah"}
+      ]
+    },
+    "week02": {
+      "title": "Week 2: Moses 1; Abraham 3",
+      "scripture": "God's Work and Glory",
+      "terms": [
+        {"strongs": "H3519", "translit": "kavod", "original": "כָּבוֹד", "lang": "hebrew", "meaning": "glory, honor, weight"},
+        {"strongs": "H120", "translit": "adam", "original": "אָדָם", "lang": "hebrew", "meaning": "man, mankind, humanity"},
+        {"strongs": "H430", "translit": "Elohim", "original": "אֱלֹהִים", "lang": "hebrew", "meaning": "God, gods (plural of majesty)"},
+        {"strongs": "H1121", "translit": "ben", "original": "בֵּן", "lang": "hebrew", "meaning": "son"},
+        {"strongs": "H6440", "translit": "panim", "original": "פָּנִים", "lang": "hebrew", "meaning": "face, presence"},
+        {"strongs": "H8064", "translit": "shamayim", "original": "שָׁמַיִם", "lang": "hebrew", "meaning": "heavens, sky"},
+        {"strongs": "H3556", "translit": "kokhav", "original": "כּוֹכָב", "lang": "hebrew", "meaning": "star"},
+        {"strongs": "H7307", "translit": "ruach", "original": "רוּחַ", "lang": "hebrew", "meaning": "spirit, breath, wind"}
+      ]
+    },
+    "week03": {
+      "title": "Week 3: Genesis 1-2; Moses 2-3; Abraham 4-5",
+      "scripture": "The Creation",
+      "terms": [
+        {"strongs": "H1254", "translit": "bara", "original": "בָּרָא", "lang": "hebrew", "meaning": "to create (ex nihilo, only God as subject)"},
+        {"strongs": "H6213", "translit": "'asah", "original": "עָשָׂה", "lang": "hebrew", "meaning": "to make, do, fashion"},
+        {"strongs": "H3335", "translit": "yatsar", "original": "יָצַר", "lang": "hebrew", "meaning": "to form, fashion (like a potter)"},
+        {"strongs": "H8414", "translit": "tohu", "original": "תֹּהוּ", "lang": "hebrew", "meaning": "formless, chaos"},
+        {"strongs": "H216", "translit": "'or", "original": "אוֹר", "lang": "hebrew", "meaning": "light"},
+        {"strongs": "H2822", "translit": "choshek", "original": "חֹשֶׁךְ", "lang": "hebrew", "meaning": "darkness"},
+        {"strongs": "H3117", "translit": "yom", "original": "יוֹם", "lang": "hebrew", "meaning": "day, period of time"},
+        {"strongs": "H7676", "translit": "Shabbat", "original": "שַׁבָּת", "lang": "hebrew", "meaning": "Sabbath, rest, cease"},
+        {"strongs": "H1588", "translit": "gan", "original": "גַּן", "lang": "hebrew", "meaning": "garden"},
+        {"strongs": "H5731", "translit": "'Eden", "original": "עֵדֶן", "lang": "hebrew", "meaning": "Eden — delight, pleasure"},
+        {"strongs": "H5315", "translit": "nephesh", "original": "נֶפֶשׁ", "lang": "hebrew", "meaning": "soul, living being, life"},
+        {"strongs": "H2416", "translit": "chai", "original": "חַי", "lang": "hebrew", "meaning": "life, living"}
+      ]
+    },
+    "week04": {
+      "title": "Week 4: Genesis 3-4; Moses 4-5",
+      "scripture": "The Fall",
+      "terms": [
+        {"strongs": "H5175", "translit": "nachash", "original": "נָחָשׁ", "lang": "hebrew", "meaning": "serpent"},
+        {"strongs": "H2403", "translit": "chatta't", "original": "חַטָּאת", "lang": "hebrew", "meaning": "sin, sin offering"},
+        {"strongs": "H6175", "translit": "'arum", "original": "עָרוּם", "lang": "hebrew", "meaning": "crafty, shrewd, naked"},
+        {"strongs": "H1847", "translit": "da'at", "original": "דַּעַת", "lang": "hebrew", "meaning": "knowledge"},
+        {"strongs": "H2896", "translit": "tov", "original": "טוֹב", "lang": "hebrew", "meaning": "good"},
+        {"strongs": "H7451", "translit": "ra'", "original": "רַע", "lang": "hebrew", "meaning": "evil, bad"},
+        {"strongs": "H7014", "translit": "Qayin", "original": "קַיִן", "lang": "hebrew", "meaning": "Cain — acquired, smith"},
+        {"strongs": "H1893", "translit": "Hevel", "original": "הֶבֶל", "lang": "hebrew", "meaning": "Abel — breath, vapor"},
+        {"strongs": "H4503", "translit": "minchah", "original": "מִנְחָה", "lang": "hebrew", "meaning": "offering, gift, tribute"},
+        {"strongs": "H7133", "translit": "qorban", "original": "קָרְבָּן", "lang": "hebrew", "meaning": "offering, sacrifice"},
+        {"strongs": "H1818", "translit": "dam", "original": "דָּם", "lang": "hebrew", "meaning": "blood"},
+        {"strongs": "H8104", "translit": "shomer", "original": "שֹׁמֵר", "lang": "hebrew", "meaning": "keeper, guardian, watchman"}
+      ]
+    },
+    "week05": {
+      "title": "Week 5: Genesis 5; Moses 6",
+      "scripture": "Adam to Enoch",
+      "terms": [
+        {"strongs": "H8435", "translit": "toledot", "original": "תּוֹלְדוֹת", "lang": "hebrew", "meaning": "generations, account, history"},
+        {"strongs": "H2585", "translit": "Chanokh", "original": "חֲנוֹךְ", "lang": "hebrew", "meaning": "Enoch — dedicated, initiated"},
+        {"strongs": "H1980", "translit": "halakh", "original": "הָלַךְ", "lang": "hebrew", "meaning": "to walk (with God)"},
+        {"strongs": "H4968", "translit": "Metushelach", "original": "מְתוּשֶׁלַח", "lang": "hebrew", "meaning": "Methuselah — man of the dart"},
+        {"strongs": "H2889", "translit": "tahor", "original": "טָהוֹר", "lang": "hebrew", "meaning": "clean, pure"},
+        {"strongs": "H2931", "translit": "tame'", "original": "טָמֵא", "lang": "hebrew", "meaning": "unclean, impure"},
+        {"strongs": "H4723", "translit": "miqveh", "original": "מִקְוֶה", "lang": "hebrew", "meaning": "gathering of waters, ritual bath"},
+        {"strongs": "", "translit": "Ruach HaQodesh", "original": "רוּחַ הַקֹּדֶשׁ", "lang": "hebrew", "meaning": "Holy Spirit"},
+        {"strongs": "H5030", "translit": "navi", "original": "נָבִיא", "lang": "hebrew", "meaning": "prophet"},
+        {"strongs": "H6662", "translit": "tsaddiq", "original": "צַדִּיק", "lang": "hebrew", "meaning": "righteous one"}
+      ]
+    },
+    "week06": {
+      "title": "Week 6: Moses 7",
+      "scripture": "Zion, City of Enoch",
+      "terms": [
+        {"strongs": "H6726", "translit": "Tsiyon", "original": "צִיּוֹן", "lang": "hebrew", "meaning": "Zion"},
+        {"strongs": "", "translit": "lev echad", "original": "לֵב אֶחָד", "lang": "hebrew", "meaning": "one heart"},
+        {"strongs": "H1058", "translit": "bakhah", "original": "בָּכָה", "lang": "hebrew", "meaning": "to weep"},
+        {"strongs": "H7356", "translit": "rachamim", "original": "רַחֲמִים", "lang": "hebrew", "meaning": "compassion, mercy"},
+        {"strongs": "H160", "translit": "ahavah", "original": "אַהֲבָה", "lang": "hebrew", "meaning": "love"},
+        {"strongs": "H6664", "translit": "tsedeq", "original": "צֶדֶק", "lang": "hebrew", "meaning": "righteousness, justice"},
+        {"strongs": "H4941", "translit": "mishpat", "original": "מִשְׁפָּט", "lang": "hebrew", "meaning": "justice, judgment"},
+        {"strongs": "H7965", "translit": "shalom", "original": "שָׁלוֹם", "lang": "hebrew", "meaning": "peace, wholeness"},
+        {"strongs": "H259", "translit": "echad", "original": "אֶחָד", "lang": "hebrew", "meaning": "one, unity"},
+        {"strongs": "H6951", "translit": "qahal", "original": "קָהָל", "lang": "hebrew", "meaning": "congregation, assembly"}
+      ]
+    },
+    "week07": {
+      "title": "Week 7: Genesis 6-11; Moses 8",
+      "scripture": "Noah & Babel",
+      "terms": [
+        {"strongs": "H5146", "translit": "Noach", "original": "נֹחַ", "lang": "hebrew", "meaning": "Noah — rest, comfort"},
+        {"strongs": "H8392", "translit": "tevah", "original": "תֵּבָה", "lang": "hebrew", "meaning": "ark, chest"},
+        {"strongs": "H3999", "translit": "mabbul", "original": "מַבּוּל", "lang": "hebrew", "meaning": "flood, deluge"},
+        {"strongs": "H7198", "translit": "qeshet", "original": "קֶשֶׁת", "lang": "hebrew", "meaning": "bow, rainbow"},
+        {"strongs": "H226", "translit": "'ot", "original": "אוֹת", "lang": "hebrew", "meaning": "sign, token"},
+        {"strongs": "H894", "translit": "Bavel", "original": "בָּבֶל", "lang": "hebrew", "meaning": "Babel — confusion"},
+        {"strongs": "H1101", "translit": "balal", "original": "בָּלַל", "lang": "hebrew", "meaning": "to confuse, mix"},
+        {"strongs": "H8193", "translit": "saphah", "original": "שָׂפָה", "lang": "hebrew", "meaning": "lip, language, speech"},
+        {"strongs": "H6327", "translit": "puts", "original": "פּוּץ", "lang": "hebrew", "meaning": "to scatter, disperse"},
+        {"strongs": "H4026", "translit": "migdal", "original": "מִגְדָּל", "lang": "hebrew", "meaning": "tower"},
+        {"strongs": "H8034", "translit": "shem", "original": "שֵׁם", "lang": "hebrew", "meaning": "name, fame, reputation"}
+      ]
+    },
+    "week08": {
+      "title": "Week 8: Genesis 12-17; Abraham 1-2",
+      "scripture": "Call of Abraham",
+      "terms": [
+        {"strongs": "H85", "translit": "Avraham", "original": "אַבְרָהָם", "lang": "hebrew", "meaning": "Abraham — father of multitudes"},
+        {"strongs": "H87", "translit": "Avram", "original": "אַבְרָם", "lang": "hebrew", "meaning": "Abram — exalted father"},
+        {"strongs": "H1293", "translit": "berakhah", "original": "בְּרָכָה", "lang": "hebrew", "meaning": "blessing"},
+        {"strongs": "H1288", "translit": "barak", "original": "בָּרַךְ", "lang": "hebrew", "meaning": "to bless, kneel"},
+        {"strongs": "H2233", "translit": "zera'", "original": "זֶרַע", "lang": "hebrew", "meaning": "seed, offspring, descendant"},
+        {"strongs": "H5159", "translit": "nachalah", "original": "נַחֲלָה", "lang": "hebrew", "meaning": "inheritance, heritage"},
+        {"strongs": "H776", "translit": "'erets", "original": "אֶרֶץ", "lang": "hebrew", "meaning": "land, earth"},
+        {"strongs": "H1471", "translit": "goy", "original": "גּוֹי", "lang": "hebrew", "meaning": "nation"},
+        {"strongs": "H530", "translit": "emunah", "original": "אֱמוּנָה", "lang": "hebrew", "meaning": "faith, faithfulness"},
+        {"strongs": "H2803", "translit": "chashav", "original": "חָשַׁב", "lang": "hebrew", "meaning": "to reckon, account, think"},
+        {"strongs": "H6666", "translit": "tsedaqah", "original": "צְדָקָה", "lang": "hebrew", "meaning": "righteousness"},
+        {"strongs": "H4442", "translit": "Malki-Tsedeq", "original": "מַלְכִּי־צֶדֶק", "lang": "hebrew", "meaning": "Melchizedek — king of righteousness"},
+        {"strongs": "H3548", "translit": "kohen", "original": "כֹּהֵן", "lang": "hebrew", "meaning": "priest"},
+        {"strongs": "H4643", "translit": "ma'aser", "original": "מַעֲשֵׂר", "lang": "hebrew", "meaning": "tithe, tenth"}
+      ]
+    },
+    "week09": {
+      "title": "Week 9: Genesis 18-23",
+      "scripture": "Abraham & Isaac",
+      "terms": [
+        {"strongs": "H6381", "translit": "pala", "original": "פָּלָא", "lang": "hebrew", "meaning": "to be wonderful, surpassing, extraordinary"},
+        {"strongs": "H4150", "translit": "mo'ed", "original": "מוֹעֵד", "lang": "hebrew", "meaning": "appointed time, feast, meeting"},
+        {"strongs": "H3327", "translit": "Yitschaq", "original": "יִצְחָק", "lang": "hebrew", "meaning": "Isaac — he laughs"},
+        {"strongs": "H6711", "translit": "tsachaq", "original": "צָחַק", "lang": "hebrew", "meaning": "to laugh, jest, play"},
+        {"strongs": "H3173", "translit": "yachid", "original": "יָחִיד", "lang": "hebrew", "meaning": "only, unique, beloved"},
+        {"strongs": "H4179", "translit": "Moriyyah", "original": "מוֹרִיָּה", "lang": "hebrew", "meaning": "Moriah — place of seeing/teaching"},
+        {"strongs": "H4176", "translit": "moreh", "original": "מוֹרֶה", "lang": "hebrew", "meaning": "teacher, instructor"},
+        {"strongs": "H6123", "translit": "aqad", "original": "עָקַד/עֲקֵדָה", "lang": "hebrew", "meaning": "to bind; the binding"},
+        {"strongs": "H5254", "translit": "nasah", "original": "נָסָה", "lang": "hebrew", "meaning": "to test, prove, try"},
+        {"strongs": "H7200", "translit": "ra'ah", "original": "רָאָה", "lang": "hebrew", "meaning": "to see, perceive, provide"},
+        {"strongs": "H5027", "translit": "nabat", "original": "נָבַט", "lang": "hebrew", "meaning": "to look, gaze intently"},
+        {"strongs": "H3372", "translit": "yare", "original": "יָרֵא", "lang": "hebrew", "meaning": "to fear, revere"},
+        {"strongs": "H4375", "translit": "Makhpelah", "original": "מַכְפֵּלָה", "lang": "hebrew", "meaning": "double cave"},
+        {"strongs": "G27", "translit": "agapetos", "original": "ἀγαπητός", "lang": "greek", "meaning": "beloved"},
+        {"strongs": "G4307", "translit": "pronoia", "original": "πρόνοια", "lang": "greek", "meaning": "provision, foresight"}
+      ]
+    },
+    "week10": {
+      "title": "Week 10: Genesis 24-27",
+      "scripture": "Isaac & Jacob",
+      "terms": [
+        {"strongs": "H3291", "translit": "Ya'aqov", "original": "יַעֲקֹב", "lang": "hebrew", "meaning": "Jacob — heel-grabber, supplanter"},
+        {"strongs": "H1008", "translit": "bêṯ-'ēl", "original": "בֵּית־אֵל", "lang": "hebrew", "meaning": "Bethel — house of God"},
+        {"strongs": "H3478", "translit": "Yisra'el", "original": "יִשְׂרָאֵל", "lang": "hebrew", "meaning": "Israel — one who strives with God"},
+        {"strongs": "H1060", "translit": "bekhor", "original": "בְּכוֹר", "lang": "hebrew", "meaning": "firstborn, firstling"},
+        {"strongs": "H1062", "translit": "bekhorah", "original": "בְּכוֹרָה", "lang": "hebrew", "meaning": "birthright, right of the firstborn"},
+        {"strongs": "H5551", "translit": "sullām", "original": "סֻלָּם", "lang": "hebrew", "meaning": "ladder"},
+        {"strongs": "H1288", "translit": "barak", "original": "בָּרַךְ", "lang": "hebrew", "meaning": "to bless, kneel"},
+        {"strongs": "H1293", "translit": "berakhah", "original": "בְּרָכָה", "lang": "hebrew", "meaning": "blessing"},
+        {"strongs": "H959", "translit": "bazah", "original": "בָּזָה", "lang": "hebrew", "meaning": "to despise, hold in contempt"},
+        {"strongs": "H122", "translit": "'Adom", "original": "אָדֹם", "lang": "hebrew", "meaning": "Edom — red, ruddy"},
+        {"strongs": "H79", "translit": "avaq", "original": "אָבַק", "lang": "hebrew", "meaning": "to wrestle"},
+        {"strongs": "H6117", "translit": "'aqav", "original": "עָקַב", "lang": "hebrew", "meaning": "to follow at the heel, supplant"},
+        {"strongs": "H6439", "translit": "Penu'el", "original": "פְּנוּאֵל", "lang": "hebrew", "meaning": "Peniel — face of God"}
+      ]
+    },
+    "week11": {
+      "title": "Week 11: Genesis 28-33",
+      "scripture": "Jacob & Joseph",
+      "terms": [
+        {"strongs": "H3801", "translit": "ketonet", "original": "כֻּתֹּנֶת", "lang": "hebrew", "meaning": "tunic, under-garment"},
+        {"strongs": "H6446", "translit": "pas", "original": "פַּס", "lang": "hebrew", "meaning": "flat (palm/sole), reaching to extremities"},
+        {"strongs": "H2492", "translit": "chalam", "original": "חָלַם", "lang": "hebrew", "meaning": "to dream"},
+        {"strongs": "H6622", "translit": "patar", "original": "פָּתַר", "lang": "hebrew", "meaning": "to interpret (dreams)"},
+        {"strongs": "H953", "translit": "bor", "original": "בּוֹר", "lang": "hebrew", "meaning": "pit, well, cistern"},
+        {"strongs": "H5127", "translit": "nus", "original": "נוּס", "lang": "hebrew", "meaning": "to flee, escape"},
+        {"strongs": "H1004", "translit": "bayit", "original": "בַּיִת", "lang": "hebrew", "meaning": "house"},
+        {"strongs": "H2884", "translit": "tabba'at", "original": "טַבַּעַת", "lang": "hebrew", "meaning": "ring, signet ring"},
+        {"strongs": "H6743", "translit": "tsaleach", "original": "צָלֵחַ", "lang": "hebrew", "meaning": "to prosper, succeed"},
+        {"strongs": "H8323", "translit": "sarar", "original": "שָׂרַר", "lang": "hebrew", "meaning": "to rule, have power"},
+        {"strongs": "H3847", "translit": "lavash", "original": "לָבַשׁ", "lang": "hebrew", "meaning": "to dress, wear, clothe"},
+        {"strongs": "G1798", "translit": "enypnion", "original": "ἐνύπνιον", "lang": "greek", "meaning": "a dream"},
+        {"strongs": "G758", "translit": "archōn", "original": "ἄρχων", "lang": "greek", "meaning": "ruler, commander, leader"},
+        {"strongs": "G4151", "translit": "pneuma", "original": "πνεῦμα", "lang": "greek", "meaning": "spirit, breath"}
+      ]
+    },
+    "week12": {
+      "title": "Week 12: Genesis 42-50",
+      "scripture": "Joseph in Egypt",
+      "terms": [
+        {"strongs": "H7887", "translit": "Shiloh", "original": "שִׁילֹה", "lang": "hebrew", "meaning": "Shiloh — place of rest (Messianic title)"},
+        {"strongs": "H1657", "translit": "Goshen", "original": "גֹּשֶׁן", "lang": "hebrew", "meaning": "Goshen — drawing near"},
+        {"strongs": "H1471", "translit": "goy", "original": "גּוֹי", "lang": "hebrew", "meaning": "nation, people"},
+        {"strongs": "H5139", "translit": "nazir", "original": "נָזִיר", "lang": "hebrew", "meaning": "consecrated one, Nazirite"},
+        {"strongs": "H5144", "translit": "nazar", "original": "נָזַר", "lang": "hebrew", "meaning": "to dedicate, consecrate, separate"},
+        {"strongs": "H727", "translit": "'aron", "original": "אָרוֹן", "lang": "hebrew", "meaning": "chest, ark"},
+        {"strongs": "H2590", "translit": "chanat", "original": "חָנַט", "lang": "hebrew", "meaning": "to embalm, spice"},
+        {"strongs": "H5375", "translit": "nasa'", "original": "נָשָׂא", "lang": "hebrew", "meaning": "to lift, bear up, carry, forgive"},
+        {"strongs": "H5545", "translit": "salach", "original": "סָלַח", "lang": "hebrew", "meaning": "to forgive, pardon"},
+        {"strongs": "H7919", "translit": "sakal", "original": "שָׂכַל", "lang": "hebrew", "meaning": "to be prudent, prosper, understand"},
+        {"strongs": "H6578", "translit": "Perat", "original": "פְּרָת", "lang": "hebrew", "meaning": "Euphrates — fruitfulness"}
+      ]
+    },
+    "week13": {
+      "title": "Week 13: Exodus 1-6",
+      "scripture": "Moses & the Burning Bush",
+      "terms": [
+        {"strongs": "H1961", "translit": "hayah", "original": "הָיָה", "lang": "hebrew", "meaning": "to be, become, exist (I AM)"},
+        {"strongs": "H3068", "translit": "YHWH", "original": "יְהֹוָה", "lang": "hebrew", "meaning": "Jehovah, LORD — the self-existent One"},
+        {"strongs": "H136", "translit": "'Adonay", "original": "אֲדֹנָי", "lang": "hebrew", "meaning": "my Lord, Lord"},
+        {"strongs": "H5572", "translit": "seneh", "original": "סְנֶה", "lang": "hebrew", "meaning": "burning bush, thorny bush"},
+        {"strongs": "H5514", "translit": "Sinay", "original": "סִינַי", "lang": "hebrew", "meaning": "Sinai — thorny"},
+        {"strongs": "H8392", "translit": "tevah", "original": "תֵּבָה", "lang": "hebrew", "meaning": "ark, basket (Noah/Moses)"},
+        {"strongs": "H1350", "translit": "ga'al", "original": "גָּאַל", "lang": "hebrew", "meaning": "to redeem, act as kinsman-redeemer"},
+        {"strongs": "H2142", "translit": "zakar", "original": "זָכַר", "lang": "hebrew", "meaning": "to remember, recall"},
+        {"strongs": "H3513", "translit": "kavad", "original": "כָּבַד", "lang": "hebrew", "meaning": "to be heavy, weighty, glorious"},
+        {"strongs": "H4843", "translit": "marar", "original": "מָרַר", "lang": "hebrew", "meaning": "to be bitter"},
+        {"strongs": "H6531", "translit": "perek", "original": "פֶּרֶךְ", "lang": "hebrew", "meaning": "harshness, severity, cruelty"},
+        {"strongs": "H5656", "translit": "'avodah", "original": "עֲבֹדָה", "lang": "hebrew", "meaning": "labor, service, work"},
+        {"strongs": "H8236", "translit": "Shiphrah", "original": "שִׁפְרָה", "lang": "hebrew", "meaning": "Shiphrah — fair, beautiful"},
+        {"strongs": "H6326", "translit": "Pu'ah", "original": "פּוּעָה", "lang": "hebrew", "meaning": "Puah — splendid"}
+      ]
+    },
+    "week15": {
+      "title": "Week 15: Exodus 7-13",
+      "scripture": "Plagues & Passover",
+      "terms": [
+        {"strongs": "H4347", "translit": "makkah", "original": "מַכָּה", "lang": "hebrew", "meaning": "plague, blow, striking"},
+        {"strongs": "H6453", "translit": "pesach", "original": "פֶּסַח", "lang": "hebrew", "meaning": "Passover — to pass over, skip"},
+        {"strongs": "H1818", "translit": "dam", "original": "דָּם", "lang": "hebrew", "meaning": "blood"},
+        {"strongs": "H2822", "translit": "choshek", "original": "חֹשֶׁךְ", "lang": "hebrew", "meaning": "darkness"},
+        {"strongs": "H1060", "translit": "bekhor", "original": "בְּכוֹר", "lang": "hebrew", "meaning": "firstborn"},
+        {"strongs": "H4682", "translit": "matzah", "original": "מַצָּה", "lang": "hebrew", "meaning": "unleavened bread"}
+      ]
+    },
+    "holyWeek": {
+      "title": "Holy Week",
+      "scripture": "Passion Week",
+      "terms": [
+        {"strongs": "G5614", "translit": "hōsanna", "original": "ὡσαννά", "lang": "greek", "meaning": "Save now! Save, we pray!"},
+        {"strongs": "G5547", "translit": "christos", "original": "Χριστός", "lang": "greek", "meaning": "Anointed One, Christ, Messiah"},
+        {"strongs": "H4899", "translit": "mashiach", "original": "מָשִׁיחַ", "lang": "hebrew", "meaning": "Anointed One, Messiah"},
+        {"strongs": "G1068", "translit": "Gethsēmanē", "original": "Γεθσημανῆ", "lang": "greek", "meaning": "oil press"},
+        {"strongs": "G1453", "translit": "egeirō", "original": "ἐγείρω", "lang": "greek", "meaning": "to awaken, raise up, arise"},
+        {"strongs": "G3860", "translit": "paradidōmi", "original": "παραδίδωμι", "lang": "greek", "meaning": "to hand over, deliver, betray"},
+        {"strongs": "G3487", "translit": "nardos", "original": "νάρδος", "lang": "greek", "meaning": "spikenard, nard"},
+        {"strongs": "G5548", "translit": "chriō", "original": "χρίω", "lang": "greek", "meaning": "to anoint, consecrate"}
+      ]
+    },
+    "passoverSeder": {
+      "title": "Passover Seder",
+      "scripture": "15-Step Covenant Pattern",
+      "terms": [
+        {"strongs": "H6942", "translit": "qadash", "original": "קָדַשׁ", "lang": "hebrew", "meaning": "to sanctify, set apart (Kadesh)"},
+        {"strongs": "H7364", "translit": "rachatz", "original": "רָחַץ", "lang": "hebrew", "meaning": "to wash (Urchatz/Rachtzah)"},
+        {"strongs": "H3768", "translit": "karpas", "original": "כַּרְפַּס", "lang": "hebrew", "meaning": "fine linen, greens (Karpas)"},
+        {"strongs": "H2673", "translit": "chatzah", "original": "חָצָה", "lang": "hebrew", "meaning": "to divide, break in two (Yachatz)"},
+        {"strongs": "H5046", "translit": "nagad", "original": "נָגַד", "lang": "hebrew", "meaning": "to tell, declare (Maggid)"},
+        {"strongs": "H4682", "translit": "matzah", "original": "מַצָּה", "lang": "hebrew", "meaning": "unleavened bread"},
+        {"strongs": "H4844", "translit": "maror", "original": "מָרוֹר", "lang": "hebrew", "meaning": "bitter herbs"},
+        {"strongs": "H3318", "translit": "yatsa", "original": "יָצָא", "lang": "hebrew", "meaning": "to bring forth, go out (Motzi)"},
+        {"strongs": "H6845", "translit": "tsaphan", "original": "צָפַן", "lang": "hebrew", "meaning": "to hide, treasure up (Tzafun)"},
+        {"strongs": "H1288", "translit": "barak", "original": "בָּרַךְ", "lang": "hebrew", "meaning": "to bless, kneel (Barech)"},
+        {"strongs": "H1984", "translit": "halal", "original": "הָלַל", "lang": "hebrew", "meaning": "to praise, shine (Hallel)"},
+        {"strongs": "H7521", "translit": "ratsah", "original": "רָצָה", "lang": "hebrew", "meaning": "to accept, delight in (Nirtzah)"},
+        {"strongs": "H4100", "translit": "mah", "original": "מָה", "lang": "hebrew", "meaning": "what? (Ma Nishtana)"},
+        {"strongs": "H8138", "translit": "shanah", "original": "שָׁנָה", "lang": "hebrew", "meaning": "to change, be different"},
+        {"strongs": "H3915", "translit": "layil", "original": "לַיִל", "lang": "hebrew", "meaning": "night"},
+        {"strongs": "H2088", "translit": "zeh", "original": "זֶה", "lang": "hebrew", "meaning": "this"},
+        {"strongs": "H3605", "translit": "kol", "original": "כֹּל", "lang": "hebrew", "meaning": "all, every"},
+        {"strongs": "H5650", "translit": "eved", "original": "עֶבֶד", "lang": "hebrew", "meaning": "slave, servant"},
+        {"strongs": "H1961", "translit": "hayah", "original": "הָיָה", "lang": "hebrew", "meaning": "to be, become"},
+        {"strongs": "H5337", "translit": "natsal", "original": "נָצַל", "lang": "hebrew", "meaning": "to deliver, rescue"},
+        {"strongs": "H1035", "translit": "Beth Lechem", "original": "בֵּית לֶחֶם", "lang": "hebrew", "meaning": "Bethlehem — house of bread"},
+        {"strongs": "H1004", "translit": "bayit", "original": "בַּיִת", "lang": "hebrew", "meaning": "house"},
+        {"strongs": "H3899", "translit": "lechem", "original": "לֶחֶם", "lang": "hebrew", "meaning": "bread, food"},
+        {"strongs": "H4672", "translit": "matsa", "original": "מָצָא", "lang": "hebrew", "meaning": "to find, attain"},
+        {"strongs": "H2563", "translit": "chomer", "original": "חֹמֶר", "lang": "hebrew", "meaning": "clay, mortar"},
+        {"strongs": "H4843", "translit": "marar", "original": "מָרַר", "lang": "hebrew", "meaning": "to be bitter"},
+        {"strongs": "H7979", "translit": "shulchan", "original": "שֻׁלְחָן", "lang": "hebrew", "meaning": "table"},
+        {"strongs": "H6186", "translit": "arakh", "original": "עָרַךְ", "lang": "hebrew", "meaning": "to arrange, set in order"},
+        {"strongs": "H2617", "translit": "chesed", "original": "חֶסֶד", "lang": "hebrew", "meaning": "covenant loyalty, lovingkindness"},
+        {"strongs": "H7522", "translit": "ratson", "original": "רָצוֹן", "lang": "hebrew", "meaning": "will, favor, acceptance"},
+        {"strongs": "H8451", "translit": "torah", "original": "תּוֹרָה", "lang": "hebrew", "meaning": "law, instruction, teaching"},
+        {"strongs": "G3068", "translit": "louō", "original": "λούω", "lang": "greek", "meaning": "to wash (whole body)"},
+        {"strongs": "G3538", "translit": "niptō", "original": "νίπτω", "lang": "greek", "meaning": "to wash (extremities)"}
+      ]
+    },
+    "studyLibrary": {
+      "title": "Study Library Articles",
+      "scripture": "Hebrew & Greek Vocabulary",
+      "terms": [
+        {"strongs": "H5468", "translit": "seder", "original": "סֵדֶר", "lang": "hebrew", "meaning": "order, arrangement"},
+        {"strongs": "H6944", "translit": "qodesh", "original": "קֹדֶשׁ", "lang": "hebrew", "meaning": "holy, sacred"},
+        {"strongs": "H2940", "translit": "ta'amim", "original": "טְעָמִים", "lang": "hebrew", "meaning": "cantillation marks (musical notation)"},
+        {"strongs": "H5046", "translit": "haggadah", "original": "הַגָּדָה", "lang": "hebrew", "meaning": "the telling (from nagad)"},
+        {"strongs": "H7931", "translit": "shakan", "original": "שָׁכַן", "lang": "hebrew", "meaning": "to dwell (root of shekinah)"},
+        {"strongs": "H8104", "translit": "shamar", "original": "שָׁמַר", "lang": "hebrew", "meaning": "to keep, guard"},
+        {"strongs": "H2603", "translit": "chanan", "original": "חָנַן", "lang": "hebrew", "meaning": "to be gracious"},
+        {"strongs": "H7965", "translit": "shalom", "original": "שָׁלוֹם", "lang": "hebrew", "meaning": "peace, wholeness"},
+        {"strongs": "G863", "translit": "aphiēmi", "original": "ἀφίημι", "lang": "greek", "meaning": "to forgive, send away, release"},
+        {"strongs": "G3857", "translit": "paradeisos", "original": "παράδεισος", "lang": "greek", "meaning": "paradise, garden"},
+        {"strongs": "G2400", "translit": "idou", "original": "ἰδού", "lang": "greek", "meaning": "behold!"},
+        {"strongs": "H2009", "translit": "hinneh", "original": "הִנֵּה", "lang": "hebrew", "meaning": "behold!"},
+        {"strongs": "G1372", "translit": "dipsaō", "original": "διψάω", "lang": "greek", "meaning": "to thirst"},
+        {"strongs": "H6770", "translit": "tsame", "original": "צָמֵא", "lang": "hebrew", "meaning": "to thirst"},
+        {"strongs": "G5055", "translit": "teleō", "original": "τελέω", "lang": "greek", "meaning": "to finish, complete (tetelestai)"},
+        {"strongs": "H6332", "translit": "pur", "original": "פּוּר", "lang": "hebrew", "meaning": "lot (origin of Purim)"},
+        {"strongs": "H1919", "translit": "Hadassah", "original": "הֲדַסָּה", "lang": "hebrew", "meaning": "myrtle (Esther's Hebrew name)"}
+      ]
+    },
+    "alephBet": {
+      "title": "The Hebrew Alphabet",
+      "scripture": "22 Letters of the Aleph-Bet",
+      "terms": [
+        {"strongs": "", "translit": "Aleph", "original": "א", "lang": "hebrew", "meaning": "Glottal stop (silent) — Ox head", "proto": "a"},
+        {"strongs": "", "translit": "Bet", "original": "ב", "lang": "hebrew", "meaning": "B or V sound — House", "proto": "b"},
+        {"strongs": "", "translit": "Gimel", "original": "ג", "lang": "hebrew", "meaning": "G sound — Camel / throw stick", "proto": "g"},
+        {"strongs": "", "translit": "Dalet", "original": "ד", "lang": "hebrew", "meaning": "D sound — Door", "proto": "d"},
+        {"strongs": "", "translit": "He", "original": "ה", "lang": "hebrew", "meaning": "H sound — Window / raised arms", "proto": "h"},
+        {"strongs": "", "translit": "Vav", "original": "ו", "lang": "hebrew", "meaning": "V or W sound — Hook / nail", "proto": "w"},
+        {"strongs": "", "translit": "Zayin", "original": "ז", "lang": "hebrew", "meaning": "Z sound — Weapon / sword", "proto": "z"},
+        {"strongs": "", "translit": "Chet", "original": "ח", "lang": "hebrew", "meaning": "CH (guttural) — Fence / courtyard", "proto": "x"},
+        {"strongs": "", "translit": "Tet", "original": "ט", "lang": "hebrew", "meaning": "T (emphatic) — Basket / wheel", "proto": "J"},
+        {"strongs": "", "translit": "Yod", "original": "י", "lang": "hebrew", "meaning": "Y sound — Hand / arm", "proto": "y"},
+        {"strongs": "", "translit": "Kaf", "original": "כ", "lang": "hebrew", "meaning": "K or KH sound — Palm of hand", "proto": "k"},
+        {"strongs": "", "translit": "Lamed", "original": "ל", "lang": "hebrew", "meaning": "L sound — Goad / staff", "proto": "l"},
+        {"strongs": "", "translit": "Mem", "original": "מ", "lang": "hebrew", "meaning": "M sound — Water", "proto": "m"},
+        {"strongs": "", "translit": "Nun", "original": "נ", "lang": "hebrew", "meaning": "N sound — Fish / serpent", "proto": "n"},
+        {"strongs": "", "translit": "Samech", "original": "ס", "lang": "hebrew", "meaning": "S sound — Support / pillar", "proto": "S"},
+        {"strongs": "", "translit": "Ayin", "original": "ע", "lang": "hebrew", "meaning": "Silent (guttural) — Eye", "proto": "["},
+        {"strongs": "", "translit": "Pe", "original": "פ", "lang": "hebrew", "meaning": "P or F sound — Mouth", "proto": "p"},
+        {"strongs": "", "translit": "Tsade", "original": "צ", "lang": "hebrew", "meaning": "TS sound — Fishhook / plant", "proto": "C"},
+        {"strongs": "", "translit": "Qof", "original": "ק", "lang": "hebrew", "meaning": "K (uvular) — Back of head", "proto": "q"},
+        {"strongs": "", "translit": "Resh", "original": "ר", "lang": "hebrew", "meaning": "R sound — Head", "proto": "r"},
+        {"strongs": "", "translit": "Shin", "original": "ש", "lang": "hebrew", "meaning": "SH or S sound — Tooth", "proto": "v"},
+        {"strongs": "", "translit": "Tav", "original": "ת", "lang": "hebrew", "meaning": "T sound — Mark / cross", "proto": "t"}
+      ]
+    },
+    "niqqud": {
+      "title": "Hebrew Vowels (Niqqud)",
+      "scripture": "The Tiberian Vowel System",
+      "terms": [
+        {"strongs": "", "translit": "Qamats", "original": "בָ", "lang": "hebrew", "meaning": "Long A — as in 'father'"},
+        {"strongs": "", "translit": "Patach", "original": "בַ", "lang": "hebrew", "meaning": "Short A — as in 'father' (briefer)"},
+        {"strongs": "", "translit": "Chataf Patach", "original": "בֲ", "lang": "hebrew", "meaning": "Ultra-short A — reduced vowel"},
+        {"strongs": "", "translit": "Tsere", "original": "בֵ", "lang": "hebrew", "meaning": "Long E — as in 'they'"},
+        {"strongs": "", "translit": "Segol", "original": "בֶ", "lang": "hebrew", "meaning": "Short E — as in 'bed'"},
+        {"strongs": "", "translit": "Chataf Segol", "original": "בֱ", "lang": "hebrew", "meaning": "Ultra-short E — reduced vowel"},
+        {"strongs": "", "translit": "Chiriq", "original": "בִ", "lang": "hebrew", "meaning": "I sound — as in 'machine'"},
+        {"strongs": "", "translit": "Cholem", "original": "בֹ", "lang": "hebrew", "meaning": "Long O — as in 'go'"},
+        {"strongs": "", "translit": "Qamats Qatan", "original": "בָ", "lang": "hebrew", "meaning": "Short O — as in 'all'"},
+        {"strongs": "", "translit": "Chataf Qamats", "original": "בֳ", "lang": "hebrew", "meaning": "Ultra-short O — reduced vowel"},
+        {"strongs": "", "translit": "Qibbuts", "original": "בֻ", "lang": "hebrew", "meaning": "Short U — as in 'flute'"},
+        {"strongs": "", "translit": "Shuruq", "original": "וּ", "lang": "hebrew", "meaning": "Long U — as in 'flute'"},
+        {"strongs": "", "translit": "Sheva", "original": "בְ", "lang": "hebrew", "meaning": "Brief 'uh' or silent — depends on position"}
+      ]
+    }
+  }
+}

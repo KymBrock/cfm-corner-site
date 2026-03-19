@@ -137,3 +137,11 @@ Use the interactive chart below to explore all the vowel marks with audio pronun
 {{< chart "hebrew_vowels_chart" >}}
 
 As you continue your scripture study, you will begin to notice these tiny dots and dashes everywhere in pointed Hebrew text. They are not decoration. They are the voices of the Masoretes, reaching across a thousand years, whispering: *This is how it was spoken. This is how it was heard. Remember.*
+
+---
+
+## Practice with Flashcards
+
+Test your knowledge of the Hebrew vowel marks (niqqud). Click a card to reveal the vowel's sound. Use the shuffle button to randomize the order.
+
+{{< flashcards section="niqqud" >}}

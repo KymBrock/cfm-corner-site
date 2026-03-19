@@ -721,7 +721,12 @@
       function hideNow() { clearTimeout(hideTimer); popup.classList.remove('visible'); active = null; }
 
       function targetAnchor(t) {
-        return t && t.closest ? t.closest('a[href*="churchofjesuschrist.org/"]') : null;
+        // Find Church links, but EXCLUDE scripture links (handled by blb-popup)
+        var el = t && t.closest ? t.closest('a[href*="churchofjesuschrist.org/"]') : null;
+        if (el && /churchofjesuschrist\.org\/study\/scriptures\//i.test(el.href)) {
+          return null; // Let blb-popup handle scripture links
+        }
+        return el;
       }
 
       document.addEventListener('mouseover', function(e) {
