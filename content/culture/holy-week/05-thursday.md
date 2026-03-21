@@ -911,15 +911,7 @@ They nailed Him to the cross — spikes through the wrists and feet.
 
 Above His head, Pilate posted: **JESUS OF NAZARETH, THE KING OF THE JEWS**
 
-**The Seven Last Words from the Cross:**
-
-1. *"Father, forgive them; for they know not what they do."* — Forgiveness (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=34" target="_blank" data-ref="Luke 23:34">Luke 23:34</a>)
-2. *"Today shalt thou be with me in paradise."* — Salvation (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=43" target="_blank" data-ref="Luke 23:43">Luke 23:43</a>)
-3. *"Woman, behold thy son... Behold thy mother."* — Love (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/19?lang=eng&id=26-27" target="_blank" data-ref="John 19:26-27">John 19:26–27</a>)
-4. *"My God, my God, why hast thou forsaken me?"* — Abandonment (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/27?lang=eng&id=46" target="_blank" data-ref="Matthew 27:46">Matthew 27:46</a>)
-5. *"I thirst."* — Humanity (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/19?lang=eng&id=28" target="_blank" data-ref="John 19:28">John 19:28</a>)
-6. *"It is finished."* — Victory (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/19?lang=eng&id=30" target="_blank" data-ref="John 19:30">John 19:30</a>)
-7. *"Father, into thy hands I commend my spirit."* — Trust (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=46" target="_blank" data-ref="Luke 23:46">Luke 23:46</a>)
+From the cross, Jesus spoke seven final statements that fulfilled Messianic prophecies. See the detailed analysis with Psalm connections in **"The Seven Last Sermons of Christ"** section below.
 
 </div>
 </details>
