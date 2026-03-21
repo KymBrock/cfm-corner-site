@@ -93,7 +93,7 @@ There is scholarly debate regarding the exact chronology of Holy Week. The tradi
 <tbody>
 <tr style="background: #f0ebe5;">
 <td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>Saturday</strong></td>
-<td style="padding: 12px; border-bottom: 1px solid #ddd;">Arrival in Bethany; Mary anoints Jesus' feet (John 12:1-8)</td>
+<td style="padding: 12px; border-bottom: 1px solid #ddd;">Arrival in Bethany; Mary of Bethany anoints Jesus' feet (John 12:1-8)</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">9 Nisan</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center; color: #666; font-size: 0.9em;">—</td>
 </tr>
@@ -163,7 +163,7 @@ There is scholarly debate regarding the exact chronology of Holy Week. The tradi
 <tbody>
 <tr style="background: #f0ebe5;">
 <td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>Saturday</strong></td>
-<td style="padding: 12px; border-bottom: 1px solid #ddd;">Arrival in Bethany; Mary anoints Jesus' feet (John 12:1-8)</td>
+<td style="padding: 12px; border-bottom: 1px solid #ddd;">Arrival in Bethany; Mary of Bethany anoints Jesus' feet (John 12:1-8)</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">9 Nisan</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center; color: #666; font-size: 0.9em;">—</td>
 </tr>
@@ -383,7 +383,7 @@ Each day of Holy Week reveals Christ fulfilling His divine mission. Click any da
 <div style="padding: 20px;">
 <h3 style="margin: 0 0 8px 0; color: #5c7a54;">Pre-Holy Week</h3>
 <p style="margin: 0 0 12px 0; font-size: 0.9em; color: #666;">Saturday before Palm Sunday</p>
-<p style="margin: 0; font-size: 0.95em;">Arrival in Bethany. Mary anoints Jesus with costly spikenard. Lazarus, raised from the dead, becomes a living testimony.</p>
+<p style="margin: 0; font-size: 0.95em;">Jesus returns to Bethany where Lazarus lives — raised weeks earlier. Mary of Bethany anoints Jesus with costly spikenard.</p>
 <a href="/culture/holy-week/00-pre-week/" style="display: inline-block; margin-top: 16px; color: #5c7a54; font-weight: 600;">Explore →</a>
 </div>
 </div>
@@ -496,7 +496,7 @@ Each day of Holy Week reveals Christ fulfilling His divine mission. Click any da
 <div style="padding: 20px;">
 <h3 style="margin: 0 0 8px 0; color: #5c7a54;">Pre-Holy Week</h3>
 <p style="margin: 0 0 12px 0; font-size: 0.9em; color: #666;">Saturday before Palm Sunday</p>
-<p style="margin: 0; font-size: 0.95em;">Arrival in Bethany. Mary anoints Jesus with costly spikenard. Lazarus, raised from the dead, becomes a living testimony.</p>
+<p style="margin: 0; font-size: 0.95em;">Jesus returns to Bethany where Lazarus lives — raised weeks earlier. Mary of Bethany anoints Jesus with costly spikenard.</p>
 <a href="/culture/holy-week/00-pre-week/" style="display: inline-block; margin-top: 16px; color: #5c7a54; font-weight: 600;">Explore →</a>
 </div>
 </div>

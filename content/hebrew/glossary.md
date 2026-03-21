@@ -320,24 +320,6 @@ Click on any Hebrew or Greek term to study it at Blue Letter Bible. Use the **fl
 </div>
 </details>
 
-<details class="seder-dropdown">
-<summary>Week 15: Exodus 7-13 — Plagues & Passover</summary>
-<div class="seder-dropdown-body">
-
-{{< flashcards section="week15" >}}
-
-| Hebrew | Transliteration | Meaning |
-|:------:|-----------------|---------|
-| <a href="https://www.blueletterbible.org/lexicon/h4347/kjv/wlc/0-1/" target="_blank">מַכָּה</a> | *makkah* | plague, blow, striking |
-| <a href="https://www.blueletterbible.org/lexicon/h6453/kjv/wlc/0-1/" target="_blank">פֶּסַח</a> | *pesach* | Passover — to pass over, skip |
-| <a href="https://www.blueletterbible.org/lexicon/h1818/kjv/wlc/0-1/" target="_blank">דָּם</a> | *dam* | blood |
-| <a href="https://www.blueletterbible.org/lexicon/h2822/kjv/wlc/0-1/" target="_blank">חֹשֶׁךְ</a> | *choshek* | darkness |
-| <a href="https://www.blueletterbible.org/lexicon/h1060/kjv/wlc/0-1/" target="_blank">בְּכוֹר</a> | *bekhor* | firstborn |
-| <a href="https://www.blueletterbible.org/lexicon/h4682/kjv/wlc/0-1/" target="_blank">מַצָּה</a> | *matzah* | unleavened bread |
-
-</div>
-</details>
-
 ---
 
 ## Special Topics

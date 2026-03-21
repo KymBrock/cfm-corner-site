@@ -205,3 +205,43 @@ Understanding the daily life, social structures, and worldview of ancient Israel
 - **[Chabad.org — Torah & Mitzvot](https://www.chabad.org/library/article_cdo/aid/1426382/jewish/Torah.htm)** — Gateway to Jewish law, custom, and Torah commentary, including Rashi's classic verse-by-verse commentary
 - **[My Jewish Learning](https://www.myjewishlearning.com/)** — Accessible articles on Jewish practice, belief, history, and culture
 - **[Sefaria](https://www.sefaria.org/)** — Free digital library of Jewish texts — Torah, Mishnah, Talmud, Midrash, commentaries — all interconnected and searchable
+
+---
+
+## BYU & LDS Scholarly Resources
+
+Latter-day Saint scholars have produced exceptional work on biblical context, parables, and ancient Near Eastern culture. These peer-reviewed and faith-affirming resources bring academic rigor to gospel study.
+
+### BYU Religious Studies Center
+
+The [Religious Studies Center](https://rsc.byu.edu/) publishes scholarly articles, books, and the *Religious Educator* journal.
+
+**Parables & Teaching:**
+- **[The Savior's Questions: Teachings from the Last Week](https://rsc.byu.edu/vol-10-no-2-2009/saviors-questions-teachings-last-week-his-life)** — Rick B. Jorgensen on Christ's teaching methods during Holy Week
+- **[Names of the Parables](https://rsc.byu.edu/vol-4-no-1-2003/names-parables)** — Thomas A. Wayment on how parable titles shape interpretation
+- **[Revealing Parables: A Call to Action](https://rsc.byu.edu/you-shall-have-my-word/revealing-parables-call-action-within-doctrine-covenants)** — Amy Easton-Flake on parables in the Doctrine & Covenants
+- **[The Great Commandment: Principle or Platitude?](https://rsc.byu.edu/vol-3-no-1-2002/great-commandment-principle-platitude)** — Howard A. Christy on love as active discipleship
+
+**Olivet Discourse & Last Week:**
+- **[Discipleship in the Olivet Discourse](https://rsc.byu.edu/behold-lamb-god/discipleship-olivet-discourse-marks-gospel)** — Gaye Strathearn on Mark 13 and watchfulness
+
+### Neal A. Maxwell Institute
+
+The [Maxwell Institute](https://mi.byu.edu/) produces scholarly work on scripture, religion, and the ancient world.
+
+- **[Maxwell Institute Podcast](https://mi.byu.edu/maxwell-institute-podcast-series/)** — In-depth conversations with scholars on scripture and faith
+- **[Podcast #28: Parables with Amy-Jill Levine](https://mi.byu.edu/podcast-new-section/28-the-parables-of-jesus-with-amy-jill-levine-mipodcast)** — Jewish scholar perspective on Jesus' parables
+
+### Scripture Central
+
+[Scripture Central](https://scripturecentral.org/) provides free scholarly resources on the Bible and Book of Mormon.
+
+- **[KnoWhy Articles](https://scripturecentral.org/archive/knowhy)** — Brief scholarly insights on specific scripture passages
+- **[Ten Virgins KnoWhy](https://scripturecentral.org/knowhy/how-does-the-parable-of-the-ten-virgins-offer-us-direction-in-life)** — Parable of the Ten Virgins explained
+- **[Counting to Ten](https://scripturecentral.org/archive/periodicals/journal-article/counting-ten)** — John W. Welch on symbolic numbers in scripture
+
+### Other LDS Academic Sources
+
+- **[BYU Studies](https://byustudies.byu.edu/)** — Scholarly journal on LDS history, scripture, and theology
+- **[Interpreter Foundation](https://journal.interpreterfoundation.org/)** — Peer-reviewed journal on scripture and LDS topics
+- **[Book of Mormon Central](https://bookofmormoncentral.org/)** — Scholarly resources on the Book of Mormon
