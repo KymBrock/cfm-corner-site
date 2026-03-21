@@ -445,17 +445,25 @@ The Passover Lamb had been sacrificed. Now came the silence of the tomb.
 
 ---
 
-## The Seven Last Words of Christ
+## The Seven Last Sermons of Christ
 
-| # | Words | Scripture | Meaning |
-|---|-------|-----------|---------|
-| 1 | "Father, forgive them; for they know not what they do." | <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=34" target="_blank" data-ref="Luke 23:34">Luke 23:34</a> | Forgiveness |
-| 2 | "Today shalt thou be with me in paradise." | <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=43" target="_blank" data-ref="Luke 23:43">Luke 23:43</a> | Salvation |
-| 3 | "Woman, behold thy son... Behold thy mother!" | <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/19?lang=eng&id=26-27" target="_blank" data-ref="John 19:26-27">John 19:26–27</a> | Relationship |
-| 4 | "Eli, Eli, lama sabachthani?" (My God, why hast thou forsaken me?) | <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/27?lang=eng&id=46" target="_blank" data-ref="Matthew 27:46">Matthew 27:46</a> | Abandonment |
-| 5 | "I thirst." | <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/19?lang=eng&id=28" target="_blank" data-ref="John 19:28">John 19:28</a> | Humanity |
-| 6 | "It is finished." | <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/19?lang=eng&id=30" target="_blank" data-ref="John 19:30">John 19:30</a> | Victory |
-| 7 | "Father, into thy hands I commend my spirit." | <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=46" target="_blank" data-ref="Luke 23:46">Luke 23:46</a> | Trust |
+*Each statement from the cross connects to and fulfills the Messianic Psalms, demonstrating Christ's role as the prophesied Suffering Servant.*
+
+<div style="text-align: center; margin: 20px 0;">
+<a href="https://www.cfmcorner.com/study-library/articles/seven-sermons/" target="_blank" style="display: inline-block; padding: 12px 24px; background: #b1542f; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.2); transition: all 0.3s;">
+📖 Read Full Article: The Seven Last Sermons of Christ
+</a>
+</div>
+
+| # | Words | Scripture | Psalm Connection | Meaning |
+|---|-------|-----------|------------------|---------|
+| 1 | "Father, forgive them; for they know not what they do." | <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=34" target="_blank" data-ref="Luke 23:34">Luke 23:34</a> | <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/22?lang=eng&id=1-2" target="_blank" data-ref="Psalm 22:1-2" title="My God, my God, why hast thou forsaken me? why art thou so far from helping me, and from the words of my roaring? O my God, I cry in the daytime, but thou hearest not; and in the night season, and am not silent.">Psalm 22:1-2</a> | Forgiveness |
+| 2 | "Today shalt thou be with me in paradise." | <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=43" target="_blank" data-ref="Luke 23:43">Luke 23:43</a> | <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/32?lang=eng&id=1-2" target="_blank" data-ref="Psalm 32:1-2" title="Blessed is he whose transgression is forgiven, whose sin is covered. Blessed is the man unto whom the Lord imputeth not iniquity, and in whose spirit there is no guile.">Psalm 32:1-2</a> | Salvation |
+| 3 | "Woman, behold thy son... Behold thy mother!" | <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/19?lang=eng&id=26-27" target="_blank" data-ref="John 19:26-27">John 19:26–27</a> | <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/35?lang=eng&id=14" target="_blank" data-ref="Psalm 35:14" title="I behaved myself as though he had been my friend or brother: I bowed down heavily, as one that mourneth for his mother.">Psalm 35:14</a> | Relationship |
+| 4 | "Eli, Eli, lama sabachthani?" (My God, why hast thou forsaken me?) | <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/27?lang=eng&id=46" target="_blank" data-ref="Matthew 27:46">Matthew 27:46</a> | **<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/22?lang=eng&id=1" target="_blank" data-ref="Psalm 22:1" title="My God, my God, why hast thou forsaken me? why art thou so far from helping me, and from the words of my roaring?">Psalm 22:1</a>** (direct quote) | Abandonment |
+| 5 | "I thirst." | <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/19?lang=eng&id=28" target="_blank" data-ref="John 19:28">John 19:28</a> | **<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/69?lang=eng&id=21" target="_blank" data-ref="Psalm 69:21" title="They gave me also gall for my meat; and in my thirst they gave me vinegar to drink.">Psalm 69:21</a>** (fulfillment) | Humanity |
+| 6 | "It is finished." | <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/19?lang=eng&id=30" target="_blank" data-ref="John 19:30">John 19:30</a> | <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/22?lang=eng&id=31" target="_blank" data-ref="Psalm 22:31" title="They shall come, and shall declare his righteousness unto a people that shall be born, that he hath done this.">Psalm 22:31</a> | Victory |
+| 7 | "Father, into thy hands I commend my spirit." | <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=46" target="_blank" data-ref="Luke 23:46">Luke 23:46</a> | **<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/31?lang=eng&id=5" target="_blank" data-ref="Psalm 31:5" title="Into thine hand I commit my spirit: thou hast redeemed me, O Lord God of truth.">Psalm 31:5</a>** (direct quote) | Trust |
 
 ---
 
