@@ -451,7 +451,7 @@ The Passover Lamb had been sacrificed. Now came the silence of the tomb.
 
 <div style="text-align: center; margin: 20px 0;">
 <a href="https://www.cfmcorner.com/study-library/articles/seven-sermons/" target="_blank" style="display: inline-block; padding: 12px 24px; background: #b1542f; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.2); transition: all 0.3s;">
-📖 Read Full Article: The Seven Last Sermons of Christ
+Read Full Article: The Seven Last Sermons of Christ
 </a>
 </div>
 
