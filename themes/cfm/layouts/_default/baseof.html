@@ -206,8 +206,9 @@
         'a-of-f':'Articles of Faith'
       };
 
-      // Regex to find parenthetical scripture references in text
-      var scriptureRefRegex = /\(([1-4]?\s*[A-Z][a-zA-Z&]+(?:\s+[A-Z][a-zA-Z]+)*\s+\d+:\d+(?:[–\-]\d+)?)\)/g;
+      // Regex to find parenthetical scripture references in text.
+      // Kept intentionally narrow so the client-side wrapper doesn't create false positives.
+      var scriptureRefRegex = /\(((?:[1-4]\s+)?(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|1 Samuel|2 Samuel|1 Kings|2 Kings|1 Chronicles|2 Chronicles|Ezra|Nehemiah|Esther|Job|Psalm|Psalms|Proverbs|Ecclesiastes|Song of Solomon|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|Romans|1 Corinthians|2 Corinthians|Galatians|Ephesians|Philippians|Colossians|1 Thessalonians|2 Thessalonians|1 Timothy|2 Timothy|Titus|Philemon|Hebrews|James|1 Peter|2 Peter|1 John|2 John|3 John|Jude|Revelation|1 Nephi|2 Nephi|Jacob|Enos|Jarom|Omni|Words of Mormon|Mosiah|Alma|Helaman|3 Nephi|4 Nephi|Mormon|Ether|Moroni|D&C|Doctrine and Covenants|Moses|Abraham|Joseph Smith—Matthew|Joseph Smith—History|Articles of Faith|JST(?:\s+Genesis|\s+Exodus|\s+Matthew)?)\s+\d+(?::\d+(?:[–\-]\d+)?)?)\)/g;
 
       function getLinkType(el) {
         if (!el) return null;
@@ -266,9 +267,9 @@
           var chapter = parts[scripIdx + 3];
           var book = churchBookMap[bookAbbr];
           if (!book) return null;
-          // Extract verse from query param id=p12 or id=p12-p15
+          // Extract verse from query param id=p12, id=p12-p15, or id=12-15
           var idParam = u.searchParams.get('id') || '';
-          var verseMatch = idParam.match(/p(\d+)/);
+          var verseMatch = idParam.match(/p?(\d+)/);
           var verse = verseMatch ? verseMatch[1] : null;
           if (verse) {
             return book + ' ' + chapter + ':' + verse;
@@ -289,13 +290,93 @@
         return parseScriptureRef(href) || parseChurchRef(href) || null;
       }
 
+      var refAliases = [
+        [/^Ps\.\s+/i, 'Psalms '],
+        [/^Psa\.\s+/i, 'Psalms '],
+        [/^Psalm\s+/i, 'Psalms '],
+        [/^Prov\.\s+/i, 'Proverbs '],
+        [/^Eccl\.\s+/i, 'Ecclesiastes '],
+        [/^Song\s+/i, 'Song of Solomon '],
+        [/^Ex\.\s+/i, 'Exodus '],
+        [/^Lev\.\s+/i, 'Leviticus '],
+        [/^Num\.\s+/i, 'Numbers '],
+        [/^Deut\.\s+/i, 'Deuteronomy '],
+        [/^Josh\.\s+/i, 'Joshua '],
+        [/^Judg\.\s+/i, 'Judges '],
+        [/^1\s+Sam\.\s+/i, '1 Samuel '],
+        [/^2\s+Sam\.\s+/i, '2 Samuel '],
+        [/^1\s+Kgs\.\s+/i, '1 Kings '],
+        [/^2\s+Kgs\.\s+/i, '2 Kings '],
+        [/^1\s+Chr\.\s+/i, '1 Chronicles '],
+        [/^2\s+Chr\.\s+/i, '2 Chronicles '],
+        [/^Neh\.\s+/i, 'Nehemiah '],
+        [/^Esth\.\s+/i, 'Esther '],
+        [/^Isa\.\s+/i, 'Isaiah '],
+        [/^Jer\.\s+/i, 'Jeremiah '],
+        [/^Ezek\.\s+/i, 'Ezekiel '],
+        [/^Hos\.\s+/i, 'Hosea '],
+        [/^Obad\.\s+/i, 'Obadiah '],
+        [/^Zech\.\s+/i, 'Zechariah '],
+        [/^Mal\.\s+/i, 'Malachi '],
+        [/^Matt\.\s+/i, 'Matthew '],
+        [/^Jn\.\s+/i, 'John '],
+        [/^Rom\.\s+/i, 'Romans '],
+        [/^1\s+Cor\.\s+/i, '1 Corinthians '],
+        [/^2\s+Cor\.\s+/i, '2 Corinthians '],
+        [/^Phil\.\s+/i, 'Philippians '],
+        [/^Col\.\s+/i, 'Colossians '],
+        [/^1\s+Thes\.\s+/i, '1 Thessalonians '],
+        [/^2\s+Thes\.\s+/i, '2 Thessalonians '],
+        [/^1\s+Tim\.\s+/i, '1 Timothy '],
+        [/^2\s+Tim\.\s+/i, '2 Timothy '],
+        [/^Philem\.\s+/i, 'Philemon '],
+        [/^1\s+Pet\.\s+/i, '1 Peter '],
+        [/^2\s+Pet\.\s+/i, '2 Peter '],
+        [/^Rev\.\s+/i, 'Revelation '],
+        [/^1\s+Ne\.\s+/i, '1 Nephi '],
+        [/^2\s+Ne\.\s+/i, '2 Nephi '],
+        [/^Hel\.\s+/i, 'Helaman '],
+        [/^Moro\.\s+/i, 'Moroni '],
+        [/^Doc(?:trine)?\s+and\s+Covenants\s+/i, 'D&C '],
+        [/^JST\s+Ex\.\s+/i, 'JST Exodus '],
+        [/^JST\s+Gen\.\s+/i, 'JST Genesis '],
+        [/^JST\s+Matt\.\s+/i, 'JST Matthew ']
+      ];
+
       function normalizeRef(ref) {
         if (!ref) return null;
-        // Normalize common variations
-        return ref.trim()
+        var out = ref.trim()
           .replace(/\s+/g, ' ')
           .replace(/–/g, '-')  // en-dash to hyphen
           .replace(/—/g, '-'); // em-dash to hyphen
+        refAliases.forEach(function(pair) {
+          out = out.replace(pair[0], pair[1]);
+        });
+        return out;
+      }
+
+      function getReferenceCandidates(ref) {
+        var base = normalizeRef(ref);
+        if (!base) return [];
+        var candidates = [base];
+
+        function push(value) {
+          if (value && candidates.indexOf(value) < 0) candidates.push(value);
+        }
+
+        if (/^Psalms /i.test(base)) push(base.replace(/^Psalms /i, 'Psalm '));
+        if (/^Psalm /i.test(base)) push(base.replace(/^Psalm /i, 'Psalms '));
+        if (/^D&C /i.test(base)) push(base.replace(/^D&C /i, 'Doctrine and Covenants '));
+        if (/^Doctrine and Covenants /i.test(base)) push(base.replace(/^Doctrine and Covenants /i, 'D&C '));
+        if (/^JST Exodus /i.test(base)) push(base.replace(/^JST Exodus /i, 'Exodus '));
+        if (/^JST Genesis /i.test(base)) push(base.replace(/^JST Genesis /i, 'Genesis '));
+        if (/^JST Matthew /i.test(base)) push(base.replace(/^JST Matthew /i, 'Matthew '));
+
+        // If a range lookup fails, fall back to the opening verse rather than showing an error.
+        var rangeMatch = base.match(/^(.*?\d+:\d+)-\d+$/);
+        if (rangeMatch) push(rangeMatch[1]);
+
+        return candidates;
       }
 
       function parseSefariaQuery(href) {
@@ -365,23 +446,22 @@
       }
 
       async function getVerse(ref) {
-        if (!ref) return 'Verse preview unavailable.';
+        if (!ref) return null;
         var db = await ensureScriptureData();
-
-        // Try direct lookup first
-        if (db[ref]) return db[ref];
-
-        // Try normalized variations for Psalm/Psalms
-        var altRef = null;
-        if (ref.startsWith('Psalm ')) {
-          altRef = 'Psalms' + ref.substring(5); // "Psalm 23:1" -> "Psalms 23:1"
-        } else if (ref.startsWith('Psalms ')) {
-          altRef = 'Psalm' + ref.substring(6); // "Psalms 23:1" -> "Psalm 23:1"
+        var candidates = getReferenceCandidates(ref);
+        for (var i = 0; i < candidates.length; i++) {
+          if (db[candidates[i]]) return db[candidates[i]];
+          if (/^\S.* \d+$/.test(candidates[i])) {
+            var chapterPrefix = candidates[i] + ':';
+            var chapterKeys = Object.keys(db).filter(function(key) {
+              return key.indexOf(chapterPrefix) === 0;
+            }).sort();
+            if (chapterKeys.length) {
+              return 'Chapter reference. Click through to read the full chapter in context.';
+            }
+          }
         }
-
-        if (altRef && db[altRef]) return db[altRef];
-
-        return 'Verse preview unavailable.';
+        return null;
       }
 
       function place(el) {
@@ -481,9 +561,11 @@
         var ref = resolveScriptureRef(el);
         var txt = await getVerse(ref);
 
-        // Use data-popup-text attribute as fallback if verse preview is unavailable
-        if (txt === 'Verse preview unavailable.' && el.dataset && el.dataset.popupText) {
+        if (!txt && el.dataset && el.dataset.popupText) {
           txt = el.dataset.popupText;
+        }
+        if (!txt) {
+          txt = 'Preview unavailable for this reference. Verify the book, chapter, and verse format in the source content.';
         }
 
         var linkHref = el.href || '';

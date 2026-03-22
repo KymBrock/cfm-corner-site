@@ -983,7 +983,7 @@ Since the Temple's destruction, Bikkurim has continued to be observed among the 
 
 <blockquote style="background: rgba(255,255,255,0.15); border-radius: 8px; padding: 1.25rem; margin: 1.5rem auto; max-width: 600px; font-style: italic;">
 "Christ the firstfruits; afterward they that are Christ's at his coming."
-<div style="margin-top: 0.5rem; font-style: normal; font-size: 0.9rem;">— <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/15?lang=eng&id=23" target="_blank" style="color: #fef5e7;">1 Corinthians 15:23</a></div>
+<div style="margin-top: 0.5rem; font-style: normal; font-size: 0.9rem;">— <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/15?lang=eng&id=23" target="_blank" data-ref="1 Corinthians 15:23" style="color: #fef5e7;">1 Corinthians 15:23</a></div>
 </blockquote>
 
 <p style="font-size: 1.1rem; margin-bottom: 0;"><strong>The harvest has begun. Our resurrection is assured.</strong></p>

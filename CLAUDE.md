@@ -48,8 +48,17 @@ When deploying a new week, follow these steps in order:
 
 ### Static Content (`static/content/weekNN/`)
 - [ ] Run `link-audit.py` on all three files (study-guide, insights, resources) — zero issues
+- [ ] Run `python3 scripts/check_popup_links.py <touched files>` on every touched lesson/article file
+- [ ] Fix every flagged bare verse reference such as `(3:11)` or missing numeric prefix such as `Nephi 11:4` before handoff
 - [ ] Verify no emojis in any HTML files (monochromatic icons only)
 - [ ] Verify all video cards use thumbnail format (never plain text links)
+
+### Scripture & Term Link Contract
+- Every scripture citation in a touched file must include the full book name and chapter. Never leave bare references like `(3:11)` or partial references like `Nephi 11:4`.
+- Every scripture link must include a normalized `data-ref` with the full reference, e.g. `data-ref="Exodus 3:14"` or `data-ref="3 Nephi 11:1-17"`.
+- If linking to Church or BLB scripture pages, always add `data-ref` so the popup system can resolve the reference.
+- For chapter-only references such as `Exodus 3`, use the full book + chapter in `data-ref`; do not rely on shorthand.
+- Do not invent glossary/term links. If a term is not in the approved glossary data, leave it plain or flag it for glossary expansion rather than fabricating a popup.
 
 ### Hugo Preview
 - [ ] **Restart the Hugo server** after editing any file in `static/content/` — Hugo's
