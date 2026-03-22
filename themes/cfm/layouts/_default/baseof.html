@@ -108,15 +108,15 @@
       .blb-popup {
         position: absolute;
         z-index: 10000;
-        background: #fff;
-        border: 1px solid var(--sage-dark, #4a6b52);
-        border-radius: 8px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.18);
-        padding: 12px 14px;
-        max-width: 420px;
-        min-width: 220px;
-        font-size: 0.92em;
-        line-height: 1.45;
+        background: rgba(255, 255, 255, 0.98);
+        border: 1px solid rgba(122, 155, 126, 0.3);
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        padding: 10px 12px;
+        max-width: 380px;
+        min-width: 200px;
+        font-size: 0.88em;
+        line-height: 1.4;
         pointer-events: none;
         opacity: 0;
         transition: opacity 0.12s;
@@ -367,7 +367,21 @@
       async function getVerse(ref) {
         if (!ref) return 'Verse preview unavailable.';
         var db = await ensureScriptureData();
-        return db[ref] || 'Verse preview unavailable.';
+
+        // Try direct lookup first
+        if (db[ref]) return db[ref];
+
+        // Try normalized variations for Psalm/Psalms
+        var altRef = null;
+        if (ref.startsWith('Psalm ')) {
+          altRef = 'Psalms' + ref.substring(5); // "Psalm 23:1" -> "Psalms 23:1"
+        } else if (ref.startsWith('Psalms ')) {
+          altRef = 'Psalm' + ref.substring(6); // "Psalms 23:1" -> "Psalm 23:1"
+        }
+
+        if (altRef && db[altRef]) return db[altRef];
+
+        return 'Verse preview unavailable.';
       }
 
       function place(el) {
@@ -466,6 +480,12 @@
         // scripture — unified handling for BLB, Church, and data-ref
         var ref = resolveScriptureRef(el);
         var txt = await getVerse(ref);
+
+        // Use data-popup-text attribute as fallback if verse preview is unavailable
+        if (txt === 'Verse preview unavailable.' && el.dataset && el.dataset.popupText) {
+          txt = el.dataset.popupText;
+        }
+
         var linkHref = el.href || '';
         var linkText = 'Open scripture →';
         if (/blueletterbible\.org/i.test(linkHref)) {

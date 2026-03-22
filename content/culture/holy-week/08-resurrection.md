@@ -342,6 +342,70 @@ Literally "a standing up" — the Greek conveys physical rising. This was not me
 
 ---
 
+## The Feast of Firstfruits (Bikkurim)
+
+<div style="margin: 24px 0; padding: 20px; background: linear-gradient(135deg, #fdf6e8 0%, #f5eedd 100%); border-radius: 12px; border: 1px solid #d4c08a;">
+
+### Christ Rose on Bikkurim
+
+The resurrection occurred on **17 Nisan** — the very day of the **Feast of Firstfruits (Bikkurim)** in the Jewish calendar. This was no coincidence. Paul explicitly connects Christ's resurrection to this feast:
+
+> "But now is Christ risen from the dead, and become **the firstfruits of them that slept**." (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/15?lang=eng&id=20" target="_blank" data-ref="1 Corinthians 15:20" data-popup-text="But now is Christ risen from the dead, and become the firstfruits of them that slept.">1 Corinthians 15:20</a>)
+
+> "But every man in his own order: **Christ the firstfruits**; afterward they that are Christ's at his coming." (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/15?lang=eng&id=23" target="_blank" data-ref="1 Corinthians 15:23" data-popup-text="But every man in his own order: Christ the firstfruits; afterward they that are Christ's at his coming.">1 Corinthians 15:23</a>)
+
+### The Wave Sheaf Offering
+
+According to <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/lev/23?lang=eng&id=10-11" target="_blank" data-ref="Leviticus 23:10-11" data-popup-text="Speak unto the children of Israel, and say unto them, When ye be come into the land which I give unto you, and shall reap the harvest thereof, then ye shall bring a sheaf of the firstfruits of your harvest unto the priest: And he shall wave the sheaf before the Lord, to be accepted for you: on the morrow after the sabbath the priest shall wave it.">Leviticus 23:10-11</a>, on "the morrow after the sabbath" during Passover week, the priest would:
+
+1. Take the **first sheaf (omer) of barley** from the harvest
+2. **Wave it before the Lord** in the Temple
+3. Offer sacrifices of thanksgiving
+
+No one could eat from the new harvest until this firstfruits offering was made — acknowledging that all increase comes from God.
+
+### The Firstborn Connection
+
+The Hebrew word "bikor" (בִּכּוֹר) also means "firstborn" — the one who receives the birthright. Christ is both:
+- **The Firstfruits** of the resurrection harvest
+- **The Firstborn** of the Father, holding all rights and inheritance
+
+This dual meaning resonates throughout scripture, particularly in the gathering and harvest themes of the Book of Mormon and Doctrine & Covenants, where the Lord repeatedly speaks of gathering His elect as a harvest (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/33?lang=eng&id=7" target="_blank" data-ref="D&C 33:7" data-popup-text="Yea, verily, verily, I say unto you, that the field is white already to harvest; wherefore, thrust in your sickles, and reap with all your might, mind, and strength.">D&C 33:7</a>, <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/26?lang=eng&id=5" target="_blank" data-ref="Alma 26:5" data-popup-text="Behold, the field was ripe, and blessed are ye, for ye did thrust in the sickle, and did reap with your might, yea, all the day long did ye labor; and behold the number of your sheaves!">Alma 26:5</a>).
+
+### The Prophetic Fulfillment
+
+Just as the high priest was waving the firstfruits sheaf in the Temple that Sunday morning, Christ — our eternal High Priest — was presenting Himself to the Father as the firstfruits of the resurrection. Consider the parallels:
+
+- **The Sheaf:** A single bundle representing the entire harvest → **Christ:** The first to rise, guaranteeing our future resurrection
+- **The Wave Offering:** Lifted up before God → **The Ascension:** Christ presented Himself to the Father (see <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng&id=17" target="_blank" data-ref="John 20:17" data-popup-text="Jesus saith unto her, Touch me not; for I am not yet ascended to my Father: but go to my brethren, and say unto them, I ascend unto my Father, and your Father; and to my God, and your God.">John 20:17</a>)
+- **The Promise:** After firstfruits, the full harvest would come → **Our Hope:** "They that are Christ's at his coming"
+
+### The Forty Days and Other Sheep
+
+Christ tarried with His apostles for **forty days** after His resurrection (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/acts/1?lang=eng&id=3" target="_blank" data-ref="Acts 1:3" data-popup-text="To whom also he shewed himself alive after his passion by many infallible proofs, being seen of them forty days, and speaking of the things pertaining to the kingdom of God:">Acts 1:3</a>), teaching them and preparing them for their ministry. During this time, He spoke of visiting His "other sheep" that were not of the Jerusalem fold (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=16" target="_blank" data-ref="John 10:16" data-popup-text="And other sheep I have, which are not of this fold: them also I must bring, and they shall hear my voice; and there shall be one fold, and one shepherd.">John 10:16</a>).
+
+### The Nephite Gathering at Shavuot
+
+Consider this profound timing: The Nephites experienced catastrophic destruction at Christ's death — three days of darkness, cities destroyed, the land reshaped (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/8" target="_blank" data-ref="3 Nephi 8">3 Nephi 8</a>). As observant Israelites, they would have:
+
+1. **Counted the Omer** from Bikkurim (Firstfruits/Resurrection) — 49 days
+2. **Gathered at the temple** in Bountiful for **Shavuot** (the 50th day)
+3. **Expected divine manifestation** — Shavuot commemorates the giving of the law at Sinai
+
+It is no coincidence that "a great multitude" was gathered at the temple (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=1" target="_blank" data-ref="3 Nephi 11:1" data-popup-text="And now it came to pass that there were a great multitude gathered together, of the people of Nephi, round about the temple which was in the land Bountiful.">3 Nephi 11:1</a>). They were likely observing Shavuot — and at that very moment when the apostles in Jerusalem received cloven tongues of fire at Pentecost, the Nephites heard the Father's voice and received the resurrected Christ!
+
+The harvest had begun in two hemispheres simultaneously.
+
+<div style="text-align: center; margin: 20px 0;">
+<a href="/culture/jewish-festivals/bikkurim" style="display: inline-block; padding: 12px 24px; background: #7a9b7e; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.15); transition: all 0.3s; border: 1px solid #6a8b6e;">
+Learn More: The Feast of Firstfruits
+</a>
+</div>
+
+</div>
+
+---
+
 ## Reflection Questions
 
 1. Mary Magdalene was the first witness. What does it mean that Jesus chose her to bear His most important testimony?
