@@ -1,0 +1,1723 @@
+<style>
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+        .site-header {
+            background: linear-gradient(135deg, #d4c4a8 0%, #8B7355 100%);
+            color: white; padding: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px;
+        }
+        .site-header-content { max-width: 1000px; margin: 0 auto; padding: 0 20px; text-align: center; }
+        .site-title { font-size: 2em; margin-bottom: 5px; }
+        .site-subtitle { font-size: 1.1em; opacity: 0.9; }
+
+        .header-section {
+            background-color: #8B7355; color: white; padding: 40px; border-radius: 12px;
+            margin-bottom: 30px; text-align: center;
+        }
+        .header-section .week-label { font-size: 1em; text-transform: uppercase; letter-spacing: 2px; opacity: 0.9; margin-bottom: 10px; }
+        .header-section h1 { font-size: 2.5em; font-weight: 300; margin-bottom: 10px; }
+        .header-section .subtitle { font-size: 1.3em; font-style: italic; margin-bottom: 20px; }
+        .header-section .date-location { font-size: 1.1em; opacity: 0.95; }
+
+        .quick-links { text-align: center; margin: 20px 0; }
+        .quick-link {
+            display: inline-block; background: #8B7355; color: white; padding: 10px 20px;
+            border-radius: 8px; text-decoration: none; margin: 5px; transition: all 0.3s;
+        }
+        .quick-link:hover { background: #6B5344; transform: translateY(-2px); }
+
+        .button-container { text-align: center; margin: 30px 0; }
+        .expand-button {
+            background-color: #8B7355; color: white; border: none; padding: 12px 24px;
+            margin: 5px 10px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em;
+        }
+        .expand-button:hover { background-color: #6B5344; }
+
+        .sg-accordion-section {
+            background-color: #8B7355; color: white; cursor: pointer; padding: 18px; width: 100%;
+            border: none; text-align: left; font-size: 1.2em; font-weight: 600; font-family: Georgia, serif;
+            border-radius: 8px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center;
+        }
+        .sg-accordion-section:hover { background-color: #6B5344; }
+        .sg-accordion-section::after { content: '\25BC'; font-size: 0.9em; transition: transform 0.3s; }
+        .sg-accordion-section.active::after { transform: rotate(180deg); }
+
+        .sg-panel {
+            background-color: white; border-radius: 0 0 8px 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .sg-panel.active { display: block; }
+        .panel-content { padding: 30px; }
+        .panel-content h2 { color: #8B7355; margin-bottom: 20px; font-size: 1.8em; }
+        .panel-content h3 { color: #6B5344; margin-top: 25px; margin-bottom: 15px; font-size: 1.4em; }
+        .panel-content h4 { color: #5a4a3a; margin-top: 20px; margin-bottom: 12px; font-size: 1.2em; }
+        .panel-content ul, .panel-content ol { margin-left: 25px; margin-bottom: 15px; }
+        .panel-content li { margin-bottom: 8px; }
+        .panel-content p { margin-bottom: 15px; text-align: justify; }
+        .panel-content a { color: #8B7355; }
+        .panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .panel-content blockquote {
+            margin: 20px 0 20px 20px;
+            padding: 15px 20px;
+            border-left: 4px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 8px 8px 0;
+        }
+        .panel-content blockquote p { margin-bottom: 8px; }
+        .panel-content blockquote p:last-child { margin-bottom: 0; }
+        .panel-content blockquote cite {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #8B7355;
+            font-style: normal;
+        }
+
+        .panel-content strong { color: #6B5344; }
+        .panel-content em { color: #5a4a3a; }
+
+        .panel-content hr {
+            border: none;
+            border-top: 2px solid #e8e0d5;
+            margin: 25px 0;
+        }
+
+        .panel-content code {
+            background-color: #f5f0e8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #6B5344;
+        }
+
+        .info-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .info-table th, .info-table td { border: 1px solid #d4c4a8; padding: 12px; text-align: left; }
+        .info-table th { background-color: #f5f0e8; color: #6B5344; font-weight: bold; }
+        .info-table tr:nth-child(even) { background-color: #faf8f5; }
+
+        .sg-sub-accordion {
+            background-color: #f5f0e8;
+            color: #5a4a3a;
+            cursor: pointer;
+            padding: 14px 40px 14px 18px;
+            width: 100%;
+            text-align: left;
+            border: 1px solid #d4c4a8;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            margin-top: 10px;
+            position: relative;
+            transition: background-color 0.2s;
+        }
+
+        .sg-sub-accordion:hover {
+            background-color: #e8e0d4;
+        }
+
+        .sg-sub-accordion::after {
+            content: '\25BC';
+            font-size: 0.8em;
+            color: #8B7355;
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s;
+        }
+
+        .sg-sub-accordion.active::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .sg-sub-panel {
+            background-color: #fafafa;
+            border-radius: 0 0 6px 6px;
+            border: 1px solid #d4c4a8;
+            border-top: none;
+            display: none;
+            transition: max-height 0.3s ease-out;
+            margin-bottom: 10px;
+        }
+
+        .sg-sub-panel.active {
+            display: block;
+            overflow: visible;
+            transition: max-height 0.3s ease-in;
+        }
+
+        .sg-sub-panel-content {
+            padding: 20px 25px;
+        }
+
+        .sg-sub-panel-content h3 { color: #6B5344; margin-top: 20px; margin-bottom: 12px; font-size: 1.3em; }
+        .sg-sub-panel-content h4 { color: #5a4a3a; margin-top: 15px; margin-bottom: 10px; font-size: 1.15em; }
+        .sg-sub-panel-content p { margin-bottom: 12px; text-align: justify; }
+        .sg-sub-panel-content ul, .sg-sub-panel-content ol { margin-left: 25px; margin-bottom: 12px; }
+        .sg-sub-panel-content li { margin-bottom: 6px; }
+        .sg-sub-panel-content a { color: #8B7355; }
+        .sg-sub-panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .sg-sub-panel-content blockquote {
+            margin: 15px 0 15px 15px;
+            padding: 12px 18px;
+            border-left: 3px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 6px 6px 0;
+        }
+        .sg-sub-panel-content blockquote p { margin-bottom: 6px; }
+        .sg-sub-panel-content blockquote p:last-child { margin-bottom: 0; }
+        .sg-sub-panel-content strong { color: #6B5344; }
+        .sg-sub-panel-content hr { border: none; border-top: 1px solid #e8e0d5; margin: 20px 0; }
+
+        @media (max-width: 768px) {
+            .header-section h1 { font-size: 1.8em; }
+            .panel-content { padding: 20px; }
+            .sg-sub-panel-content { padding: 15px 18px; }
+        }
+
+        .sg-section-heading {
+            margin: 1.2em 0 0.6em 0;
+            padding: 0.4em 0 0.4em 0.8em;
+            border-left: 3px solid #8B9D77;
+            color: #5a6b4f;
+            font-size: 1.05em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+        }
+        .sg-section-actions {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 28px;
+        }
+        .sg-section-actions .sg-action-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.35);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            padding: 0;
+            line-height: 1;
+        }
+        .sg-section-actions .sg-action-btn:hover {
+            background: rgba(255,255,255,0.35);
+        }
+    </style>
+
+
+<div class="container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <p class="week-label">Week 13</p>
+            <h1>Exodus 1–6</h1>
+            <div class="subtitle">"I Have Remembered My Covenant"</div>
+            <div class="date-location">March 23–29, 2026</div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/13?lang=eng" target="_blank" class="quick-link">CFM Manual</a>
+        </div>
+
+        <!-- Expand/Collapse Buttons -->
+        <div class="button-container">
+            <button class="expand-button" onclick="expandAll()"><span class="btn-icon">&#x229E;</span> Expand All</button>
+            <button class="expand-button" onclick="collapseAll()"><span class="btn-icon">&#x229F;</span> Collapse All</button>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 1: EXODUS 1–6 -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">1. Exodus 1–6</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Week Information</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Element</th><th>Details</th></tr>
+<tr><td><strong>Week</strong></td><td>13</td></tr>
+<tr><td><strong>Dates</strong></td><td>March 23–29, 2026</td></tr>
+<tr><td><strong>Reading</strong></td><td><a href="https://www.blueletterbible.org/kjv/exo/1/1/s_51001" target="_blank" data-ref="Exodus 1">Exodus 1–6</a></td></tr>
+<tr><td><strong>CFM Manual</strong></td><td><a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/13?lang=eng" target="_blank">Exodus 1–6 Lesson</a></td></tr>
+<tr><td><strong>Total Chapters</strong></td><td>6 (<a href="https://www.blueletterbible.org/kjv/exo/1/1/s_51001" target="_blank" data-ref="Exodus 1">Exodus 1–6</a>)</td></tr>
+<tr><td><strong>Approximate Verses</strong></td><td>~150 verses</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Reading Summary</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>This week opens the Book of Exodus—<a href="https://www.blueletterbible.org/lexicon/h8054/kjv/wlc/0-1/" target="_blank" data-lexicon="Shammoth = &quot;desolations&quot;the Harodite, one of the 30 of David&#x27;s mighty warriors" data-strongs="H8054" data-translit="šammôṯ" data-original="שַׁמּוֹת" data-lang="hebrew" data-verse="">שְׁמוֹת</a> (<em>Shemot</em>, "Names")—the second book of the Torah. Between Genesis and Exodus, centuries have passed. Joseph's family of seventy has multiplied into a nation; the friendly Pharaoh who elevated Joseph has been replaced by one who "knew not Joseph." Israel is enslaved, and their cries rise to heaven. Into this darkness, God reveals Himself at the burning bush, speaks His sacred name, and commissions a reluctant prophet to deliver His people.</p>
+<p><strong><a href="https://www.blueletterbible.org/kjv/exo/1/1/s_51001" target="_blank" data-ref="Exodus 1">Exodus 1</a></strong> sets the stage. The children of Israel multiply "exceedingly" until they fill the land (v.7). A new Pharaoh, threatened by their numbers, enslaves them with bitter bondage—taskmasters, brick-making, and ruthless labor. When slavery fails to limit their growth, Pharaoh commands the Hebrew midwives Shiphrah and Puah to kill male infants at birth. These courageous women "feared God" and refused (v.17). Pharaoh then decrees that all male Hebrew babies be cast into the Nile.</p>
+<p><strong><a href="https://www.blueletterbible.org/kjv/exo/2/1/s_52001" target="_blank" data-ref="Exodus 2">Exodus 2</a></strong> tells Moses' origin. A Levite woman hides her infant three months, then places him in an <em>ark</em> (<a href="https://www.blueletterbible.org/lexicon/h8392/kjv/wlc/0-1/" target="_blank" data-lexicon="arkvessel which Noah builtbasket vessel in which Moses was placed" data-strongs="H8392" data-translit="tēḇâ" data-original="תֵּבָה" data-lang="hebrew" data-verse="">תֵּבָה</a>, <em>tevah</em>—the same word used for Noah's ark) among the reeds. Pharaoh's daughter discovers him, names him <em>Mosheh</em> ("drawn out"), and raises him in the palace. As an adult, Moses sees an Egyptian beating a Hebrew, kills the Egyptian, and flees to Midian when the deed is discovered. There he marries Zipporah, daughter of the priest Reuel (Jethro), and shepherds flocks for forty years. Meanwhile, in Egypt, "God heard their groaning, and God remembered his covenant" (v.24).</p>
+<p><strong><a href="https://www.blueletterbible.org/kjv/exo/3/1/s_53001" target="_blank" data-ref="Exodus 3">Exodus 3</a></strong> contains the burning bush theophany. At Horeb, the mountain of God, Moses sees a bush that burns but is not consumed. God declares: "I am the God of thy father, the God of Abraham, the God of Isaac, and the God of Jacob" (v.6). He commissions Moses to deliver Israel. When Moses asks God's name, the response is foundational: אֶהְיֶה אֲשֶׁר אֶהְיֶה (<em>Ehyeh asher Ehyeh</em>)—"I AM THAT I AM" (v.14). The sacred name YHWH (<a href="https://www.blueletterbible.org/lexicon/h3058/kjv/wlc/0-1/" target="_blank" data-lexicon="Jehu = &quot;Jehovah is He&quot; the king of the northern kingdom Israel who overthrew the dynasty of Omri son of Hanani and an..." data-strongs="H3058" data-translit="yêû&#x27;" data-original="יְהֹוָה" data-lang="hebrew" data-verse="">יהוה</a>) is revealed: "This is my name for ever, and this is my memorial unto all generations" (v.15).</p>
+<p><strong><a href="https://www.blueletterbible.org/kjv/exo/4/1/s_54001" target="_blank" data-ref="Exodus 4">Exodus 4</a></strong> records Moses' objections and God's answers. Moses protests his inadequacy: "Who am I, that I should go unto Pharaoh?" (<a href="https://www.blueletterbible.org/kjv/exo/3/11/s_53011" target="_blank" data-ref="Exodus 3:11">Exodus 3:11</a>). God answers: "Certainly I will be with thee." Moses then asks what he should tell Israel when they demand to know by whose authority he comes—"What is his name?" (<a href="https://www.blueletterbible.org/kjv/exo/3/13/s_53013" target="_blank" data-ref="Exodus 3:13">Exodus 3:13</a>). God responds with the revelation of His sacred name: I AM THAT I AM. Moses protests the people won't believe him: God gives three signs (rod-serpent, leprous hand, water-blood). Moses protests his lack of eloquence: "I am slow of speech." God responds: "Who hath made man's mouth? Have not I the LORD?" Finally Moses simply refuses: "Send someone else." God's anger kindles, but He provides Aaron as spokesman.</p>
+<p><strong><a href="https://www.blueletterbible.org/kjv/exo/5/1/s_55001" target="_blank" data-ref="Exodus 5">Exodus 5</a></strong> narrates the disastrous first encounter with Pharaoh. Moses and Aaron declare: "Thus saith the LORD God of Israel, Let my people go." Pharaoh responds: "Who is the LORD, that I should obey his voice? I know not the LORD, neither will I let Israel go" (v.2). Rather than release Israel, Pharaoh increases their burden—they must now gather their own straw while maintaining the same brick quota. The Israelite foremen blame Moses: "Ye have made our savour to be abhorred in the eyes of Pharaoh."</p>
+<p><strong><a href="https://www.blueletterbible.org/kjv/exo/6/1/s_56001" target="_blank" data-ref="Exodus 6">Exodus 6</a></strong> contains God's recommissioning of Moses. The Lord reaffirms the covenant: "I am the LORD: and I appeared unto Abraham, unto Isaac, and unto Jacob... but by my name JEHOVAH was I not known to them. And I have also established my covenant with them... I have also heard the groaning of the children of Israel... and <strong>I have remembered my covenant</strong>" (vv.2–5). God outlines seven "I will" promises (vv.6–8), culminating in: "I will bring you in unto the land... and I will give it you for an heritage: I am the LORD."</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Central Themes</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Theme 1: The Divine Name — I AM THAT I AM</h3>
+<p>The revelation of God's name at the burning bush is one of Scripture's most significant theological moments. When Moses asks, "What is his name?" God responds with אֶהְיֶה אֲשֶׁר אֶהְיֶה (<em>Ehyeh asher Ehyeh</em>).</p>
+<p>The Hebrew verb <a href="https://www.blueletterbible.org/lexicon/h1961/kjv/wlc/0-1/" target="_blank" data-lexicon="to be, become, come to pass, exist, happen, fall out (Qal) — to happen, fall out, occur, take place, come about, come..." data-strongs="H1961" data-translit="hāyâ" data-original="הָיָה" data-lang="hebrew" data-verse="">הָיָה</a> (<em>hayah</em>) means "to be" or "to become." <em>Ehyeh</em> is the first-person form: "I am" or "I will be." This is not a static philosophical statement about existence—it is a promise of presence: "I will be with you. I will be whatever you need me to be."</p>
+<p>The sacred name YHWH (<a href="https://www.blueletterbible.org/lexicon/h3058/kjv/wlc/0-1/" target="_blank" data-lexicon="Jehu = &quot;Jehovah is He&quot; the king of the northern kingdom Israel who overthrew the dynasty of Omri son of Hanani and an..." data-strongs="H3058" data-translit="yêû&#x27;" data-original="יְהֹוָה" data-lang="hebrew" data-verse="">יהוה</a>) is the third-person form: "He Is" or "He Will Be." This name appears over 6,800 times in the Hebrew Bible. Every time you see "LORD" in small capitals in English Bibles, you are reading this divine name.</p>
+<p><strong>Application:</strong> How does knowing God as "I AM"—the eternally present, covenant-keeping God—change how you approach Him in prayer?</p>
+<h3>Theme 2: Moses as Type of Christ</h3>
+<p>Dr. Ugo Perego observes the powerful Christological parallels between Moses and Jesus:</p>
+<table class="info-table">
+<tr><th>Moses</th><th>Christ</th></tr>
+<tr><td>Rescued as a baby from Pharaoh's decree</td><td>Rescued from Herod's massacre of innocents</td></tr>
+<tr><td>Rose to prominence in Egypt</td><td>Grew "in favour with God and man"</td></tr>
+<tr><td>Called as deliverer and lawgiver</td><td>The ultimate Deliverer and Lawgiver</td></tr>
+<tr><td>Provided water and manna</td><td>Living Water and Bread of Life</td></tr>
+<tr><td>Raised the brass serpent to heal</td><td>Lifted on the cross to save</td></tr>
+<tr><td>Power over the serpent (rod)</td><td>Power to crush the serpent's head</td></tr>
+</table>
+<p><em>Source: <a href="https://www.fairlatterdaysaints.org/come-follow-me-old-testament/come-follow-me-old-testament-ot13" target="_blank">FAIR Article, "Come, Follow Me — Old Testament: Exodus 1–6" by Ugo A. Perego</a></em></p>
+<h3>Theme 3: "I Have Remembered My Covenant"</h3>
+<p>God's statement "I have remembered my covenant" (<a href="https://www.blueletterbible.org/kjv/exo/6/5/s_56005" target="_blank" data-ref="Exodus 6:5">Exodus 6:5</a>) does not mean He had forgotten. In Hebrew thought, to "remember" (<em>zakar</em>) means to act on behalf of someone. God's remembering triggers His redemptive action.</p>
+<p>The covenant with Abraham included three promises:</p>
+<ol>
+<li><strong>Land</strong> — "I will bring you in unto the land" (<a href="https://www.blueletterbible.org/kjv/exo/6/8/s_56008" target="_blank" data-ref="Exodus 6:8">Exodus 6:8</a>)</li>
+<li><strong>Seed</strong> — Israel multiplied "exceedingly" (<a href="https://www.blueletterbible.org/kjv/exo/1/7/s_51007" target="_blank" data-ref="Exodus 1:7">Exodus 1:7</a>)</li>
+<li><strong>Blessing</strong> — "I will take you to me for a people" (<a href="https://www.blueletterbible.org/kjv/exo/6/7/s_56007" target="_blank" data-ref="Exodus 6:7">Exodus 6:7</a>)</li>
+</ol>
+<p>Exodus is the story of God fulfilling these covenant promises.</p>
+<h3>Theme 4: The Reluctant Prophet</h3>
+<p>Moses offers five objections to his calling—making him perhaps the most human of all the prophets:</p>
+<ol>
+<li><strong>"Who am I?"</strong> (<a href="https://www.blueletterbible.org/kjv/exo/3/11/s_53011" target="_blank" data-ref="Exodus 3:11">Exodus 3:11</a>) — Inadequacy</li>
+<li><strong>"What is his name?"</strong> (<a href="https://www.blueletterbible.org/kjv/exo/3/13/s_53013" target="_blank" data-ref="Exodus 3:13">Exodus 3:13</a>) — Authority</li>
+<li><strong>"They will not believe me"</strong> (<a href="https://www.blueletterbible.org/kjv/exo/4/1/s_54001" target="_blank" data-ref="Exodus 4:1">Exodus 4:1</a>) — Credibility</li>
+<li><strong>"I am not eloquent"</strong> (<a href="https://www.blueletterbible.org/kjv/exo/4/10/s_54010" target="_blank" data-ref="Exodus 4:10">Exodus 4:10</a>) — Ability</li>
+<li><strong>"Send someone else"</strong> (<a href="https://www.blueletterbible.org/kjv/exo/4/13/s_54013" target="_blank" data-ref="Exodus 4:13">Exodus 4:13</a>) — Refusal</li>
+</ol>
+<p>God answers each objection, sometimes with signs, sometimes with promises, and finally with righteous anger when Moses simply refuses. Yet God still works with Moses, providing Aaron as spokesman.</p>
+<p><strong>Application:</strong> God does not wait for perfect instruments. He works through reluctant, flawed people who finally say yes—even when that yes is sometimes halfhearted or inadequate.</p>
+<h3>Theme 5: Exodus as New Beginning — Burning Bush and Pillar of Light</h3>
+<p>As Dr. Perego observes, the Exodus narrative parallels the Restoration:</p>
+<blockquote>
+<p>"In the dispensation of the fullness of times, we found ourselves in a world compared to the telestial kingdom... born slaves of sin, corruption, appetites, and mortality into a spiritual Egypt. Thankfully, the Lord has remembered His children again. He came back to earth through what could be compared to a second condescension event. In the likeness of a man, the Father and the Son appeared to young Joseph Smith in the sacred grove, this time not in the form of a burning bush, but as a pillar of light."</p>
+</blockquote>
+<p><em>Source: <a href="https://www.fairlatterdaysaints.org/come-follow-me-old-testament/come-follow-me-old-testament-ot13" target="_blank">FAIR Article, "Come, Follow Me — Old Testament: Exodus 1–6" by Ugo A. Perego</a></em></p>
+<p>Just as Moses received commandments and covenants at the burning bush, Joseph Smith received them at the Sacred Grove. Both prophets were reluctant. Both were sent to deliver God's people from bondage—one physical, one spiritual.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Key Figures</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Person</th><th>Role</th><th>Significance This Week</th></tr>
+<tr><td>Moses</td><td>Deliverer-prophet</td><td>Called at burning bush; receives divine name; confronts Pharaoh</td></tr>
+<tr><td>Pharaoh</td><td>King of Egypt</td><td>"Knew not Joseph"; enslaves Israel; hardens heart</td></tr>
+<tr><td>Shiphrah & Puah</td><td>Hebrew midwives</td><td>Fear God; save infant boys; rewarded with households</td></tr>
+<tr><td>Jochebed</td><td>Moses' mother</td><td>Hides Moses; places him in ark; nurses him</td></tr>
+<tr><td>Miriam</td><td>Moses' sister</td><td>Watches over Moses; suggests Hebrew nurse</td></tr>
+<tr><td>Pharaoh's daughter</td><td>Egyptian princess</td><td>Draws Moses from water; adopts him</td></tr>
+<tr><td>Zipporah</td><td>Moses' wife</td><td>Daughter of Jethro; mother of Gershom</td></tr>
+<tr><td>Jethro (Reuel)</td><td>Priest of Midian</td><td>Moses' father-in-law; gives priesthood (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84?lang=eng&id=p6#p6" target="_blank" data-ref="D&C 84:6">D&C 84:6</a>)</td></tr>
+<tr><td>Aaron</td><td>Moses' brother</td><td>Called as Moses' spokesman</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Timeline Placement</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Historical Period:</strong> Late Bronze Age</p>
+<p><strong>Approximate Dates:</strong> ~1400–1300 BC (or ~1250 BC in some chronologies)</p>
+<p><strong>Moses' Life Stages:</strong> 40 years in Egypt, 40 years in Midian, 40 years leading Israel</p>
+<p><strong>Key Location:</strong> Egypt → Midian → Horeb (Sinai)</p>
+<h3>Relationship to Previous/Next Weeks</h3>
+<p><strong>Week 12:</strong> Joseph's death; Israel in Egypt; Genesis concludes</p>
+<p><strong>Week 13:</strong> Moses' birth; burning bush; Exodus begins (<a href="https://www.blueletterbible.org/kjv/exo/1/1/s_51001" target="_blank" data-ref="Exodus 1">Exodus 1–6</a>)</p>
+<p><strong>Week 14:</strong> The plagues begin; Passover instituted (<a href="https://www.blueletterbible.org/kjv/exo/7/1/s_57001" target="_blank" data-ref="Exodus 7">Exodus 7–13</a>)</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Connection to Restoration Scripture</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Book of Mormon Connections</h3>
+<ul>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/17?lang=eng&id=23-30" target="_blank" data-ref="1 Nephi 17:23-30">1 Nephi 17:23–30</a>:</strong> Nephi recounts Moses delivering Israel</li>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/13?lang=eng&id=33" target="_blank" data-ref="Mosiah 13:33">Mosiah 13:33</a>:</strong> "God himself shall come down among the children of men... Moses said"</li>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/hel/8?lang=eng&id=11" target="_blank" data-ref="Helaman 8:11">Helaman 8:11</a>:</strong> Moses' testimony of Christ</li>
+</ul>
+<h3>Doctrine and Covenants Connections</h3>
+<ul>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84?lang=eng&id=6" target="_blank" data-ref="D&C 84:6">D&C 84:6</a>:</strong> Moses received priesthood from Jethro</li>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/29?lang=eng&id=46" target="_blank" data-ref="D&C 29:46">D&C 29:46</a>:</strong> "I am the same that spake, and the world was made, and all things came by me"</li>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/39?lang=eng&id=1" target="_blank" data-ref="D&C 39:1">D&C 39:1</a>:</strong> Christ identifies as "I AM"</li>
+</ul>
+<h3>Pearl of Great Price Connections</h3>
+<ul>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=1-6" target="_blank" data-ref="Moses 1:1-6">Moses 1:1–6</a>:</strong> God reveals His glory to Moses</li>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/1?lang=eng&id=16-18" target="_blank" data-ref="Abraham 1:16-18">Abraham 1:16–18</a>:</strong> Jehovah identifies as God of Abraham, Isaac, Jacob</li>
+</ul>
+<h3>JST Additions</h3>
+<ul>
+<li><strong>JST <a href="https://www.blueletterbible.org/kjv/exo/3/2/s_53002" target="_blank" data-ref="Exodus 3:2">Exodus 3:2</a>:</strong> Changes "angel of the Lord" to "presence of the Lord"</li>
+<li><strong>JST <a href="https://www.blueletterbible.org/kjv/exo/4/21/s_54021" target="_blank" data-ref="Exodus 4:21">Exodus 4:21</a>:</strong> Clarifies Pharaoh chose to harden his own heart</li>
+<li><strong>JST <a href="https://www.blueletterbible.org/kjv/exo/6/3/s_56003" target="_blank" data-ref="Exodus 6:3">Exodus 6:3</a>:</strong> Changes from "was not known" to "was not my name known?"</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>This Week's Key Doctrines</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>The Divine Name:</strong> God reveals Himself as YHWH—I AM—the covenant-keeping, ever-present God</li>
+<li><strong>Covenant Faithfulness:</strong> "I have remembered my covenant" — God acts on His promises</li>
+<li><strong>Divine Commission:</strong> God calls imperfect people and equips them for His work</li>
+<li><strong>Deliverance from Bondage:</strong> Physical exodus foreshadows spiritual redemption</li>
+<li><strong>Restoration Parallel:</strong> Burning bush/Sacred Grove — God reveals Himself to deliver His people</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Temple Connections</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ul>
+<li><strong>Holy Ground:</strong> "Put off thy shoes from off thy feet, for the place whereon thou standest is holy ground" (<a href="https://www.blueletterbible.org/kjv/exo/3/5/s_53005" target="_blank" data-ref="Exodus 3:5">Exodus 3:5</a>) — temple protocol of reverence</li>
+<li><strong>Divine Presence:</strong> The bush burns but is not consumed — God's presence sanctifies rather than destroys</li>
+<li><strong>The Name:</strong> The sacred name YHWH connects to temple worship and covenant-making</li>
+<li><strong>Priesthood:</strong> Moses receives priesthood from Jethro (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84?lang=eng&id=p6#p6" target="_blank" data-ref="D&C 84:6">D&C 84:6</a>) — priesthood authority for temple ordinances</li>
+<li><strong>Covenant Renewal:</strong> "I will take you to me for a people, and I will be to you a God" (<a href="https://www.blueletterbible.org/kjv/exo/6/7/s_56007" target="_blank" data-ref="Exodus 6:7">Exodus 6:7</a>) — covenant formula</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>CFM Manual Emphasis</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Manual Focus:</strong> The burning bush experience; the divine name "I AM"; God's covenant faithfulness; overcoming feelings of inadequacy; Moses as type of Christ.</p>
+<p><strong>Key Questions from Manual:</strong></p>
+<ul>
+<li>How has God shown you that He remembers His covenant with you?</li>
+<li>What can I learn from Moses about accepting calls from God?</li>
+<li>How does knowing God as "I AM" strengthen my faith?</li>
+<li>In what ways is Moses a type of Christ?</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Suggested Reading Approach</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Essential Reading:</strong></p>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/exo/3/1/s_53001" target="_blank">Exodus 3:1–15</a> — Burning bush; divine name revealed</li>
+<li><a href="https://www.blueletterbible.org/kjv/exo/4/10/s_54010" target="_blank">Exodus 4:10–17</a> — Moses' objections and God's answers</li>
+<li><a href="https://www.blueletterbible.org/kjv/exo/6/2/s_56002" target="_blank">Exodus 6:2–8</a> — "I have remembered my covenant"</li>
+</ul>
+<p><strong>For Deep Study:</strong></p>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/exo/1/15-21/s_51015" target="_blank" data-ref="Exodus 1:15-21">Exodus 1:15–21</a> — The courageous midwives</li>
+<li><a href="https://www.blueletterbible.org/kjv/exo/2/1-10/s_52001" target="_blank" data-ref="Exodus 2:1-10">Exodus 2:1–10</a> — Moses' birth and rescue</li>
+<li><a href="https://www.blueletterbible.org/kjv/exo/5/1/s_55001" target="_blank" data-ref="Exodus 5">Exodus 5</a> — First confrontation with Pharaoh</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Study Guide Files This Week</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>File</th><th>Content Focus</th></tr>
+<tr><td>01_Week_Overview</td><td>This overview document</td></tr>
+<tr><td>02_Historical_Cultural_Context</td><td>Egyptian slavery, Midian, theophany traditions</td></tr>
+<tr><td>03_Key_Passages_Study</td><td>Burning bush, divine name, covenant promises</td></tr>
+<tr><td>04_Word_Studies</td><td><em>YHWH</em>, <em>Ehyeh</em>, <em>Seneh</em>, <em>Tevah</em>, <em>Goel</em></td></tr>
+<tr><td>05_Jewish_Perspective</td><td>Midrash on Moses, rabbinic name theology</td></tr>
+<tr><td>06_Teaching_Applications</td><td>Teaching across seven settings</td></tr>
+<tr><td>07_Study_Questions</td><td>Comprehensive reflection questions</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 2: WEEK 13: HISTORICAL AND CULTURAL CONTEXT -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">2. Week 13: Historical and Cultural Context</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Historical Setting</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Gap Between Genesis and Exodus</h3>
+<p><a href="https://www.blueletterbible.org/kjv/exo/1/1/s_51001" target="_blank" data-ref="Exodus 1:1">Exodus 1:1</a> opens with a list of Jacob's sons who came to Egypt—a direct link to <a href="https://www.blueletterbible.org/kjv/gen/46/1/s_46001" target="_blank" data-ref="Genesis 46">Genesis 46</a>. But between these two books, centuries have passed. The text provides few chronological markers, but estimates range from 215 to 430 years of Israelite residence in Egypt before the Exodus.</p>
+<p><strong>Key transitions:</strong></p>
+<ul>
+<li>Joseph's generation dies (Ex. 1:6)</li>
+<li>Israel multiplies exponentially (Ex. 1:7)</li>
+<li>A new dynasty rises: "a new king over Egypt, which knew not Joseph" (Ex. 1:8)</li>
+</ul>
+<h3>Who Was This Pharaoh?</h3>
+<p>The identity of the Exodus Pharaoh remains debated among scholars. Two main theories:</p>
+<table class="info-table">
+<tr><th>Theory</th><th>Pharaoh</th><th>Approximate Date</th></tr>
+<tr><td><strong>Early Date</strong></td><td>Thutmose III or Amenhotep II (18th Dynasty)</td><td>~1446 BC</td></tr>
+<tr><td><strong>Late Date</strong></td><td>Ramesses II (19th Dynasty)</td><td>~1250 BC</td></tr>
+</table>
+<p>The phrase "knew not Joseph" could mean:</p>
+<ol>
+<li>A literal new dynasty with no memory of Joseph's contribution</li>
+<li>A political choice to ignore Joseph's legacy for nationalistic reasons</li>
+<li>A deliberate erasure of foreign (Hyksos-era) influence from Egyptian memory</li>
+</ol>
+<p>The Hyksos—Semitic rulers who controlled Egypt during the Second Intermediate Period (1650–1550 BC)—may connect to Joseph's rise. Their expulsion could explain why a later Pharaoh felt threatened by a large Semitic population.</p>
+<h3>Egyptian Slavery — The Historical Reality</h3>
+<p>Exodus describes Israel's bondage with vivid terminology:</p>
+<table class="info-table">
+<tr><th>Hebrew Term</th><th>Meaning</th><th>Context</th></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h5656/kjv/wlc/0-1/" target="_blank" data-lexicon="labour, servicelabour, worklabour (of servant or slave)labour, service (of captives or subjects)service (of God)" data-strongs="H5656" data-translit="ʿăḇōḏâ" data-original="עֲבֹדָה" data-lang="hebrew" data-verse="">עֲבֹדָה</a> (<em>avodah</em>)</td><td>Labor, service, work</td><td>The same word used for worship</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h6531/kjv/wlc/0-1/" target="_blank" data-lexicon="harshness, severity, cruelty" data-strongs="H6531" data-translit="pereḵ" data-original="פֶּרֶךְ" data-lang="hebrew" data-verse="">פָּרֶךְ</a> (<em>parekh</em>)</td><td>Harshness, rigor</td><td>"With rigour" (<a href="https://www.blueletterbible.org/kjv/exo/1/13-14/s_51013" target="_blank" data-ref="Exodus 1:13-14">Exodus 1:13–14</a>)</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h4843/kjv/wlc/0-1/" target="_blank" data-lexicon="to be bitter (Qal) to be bitter (Piel) to show bitterness to make bitter (Hiphil) to make bitter, embitter (Hithpalpe..." data-strongs="H4843" data-translit="mārar" data-original="מָרַר" data-lang="hebrew" data-verse="">מָרַר</a> (<em>marar</em>)</td><td>Bitter</td><td>"Made their lives bitter" (<a href="https://www.blueletterbible.org/kjv/exo/1/14/s_51014" target="_blank" data-ref="Exodus 1:14">Exodus 1:14</a>)</td></tr>
+</table>
+<p>Israelites built "treasure cities, Pithom and Raamses" (<a href="https://www.blueletterbible.org/kjv/exo/1/11/s_51011" target="_blank" data-ref="Exodus 1:11">Exodus 1:11</a>). Archaeological evidence confirms:</p>
+<ul>
+<li><strong>Pithom</strong> (Tell el-Retaba or Tell el-Maskhuta): Storage city in eastern Delta</li>
+<li><strong>Raamses/Pi-Ramesses</strong>: Capital city built by Ramesses II, requiring massive labor</li>
+</ul>
+<p>Egyptian records depict Semitic workers making bricks, consistent with <a href="https://www.blueletterbible.org/kjv/exo/5/6-18/s_55006" target="_blank" data-ref="Exodus 5:6-18">Exodus 5:6–18</a>.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Key Locations</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>1. Goshen — Land of Plenty</h3>
+<p>Located in the eastern Nile Delta, Goshen (also called "the land of Rameses") was:</p>
+<ul>
+<li>Fertile grazing land suitable for Jacob's pastoral family</li>
+<li>Separate from main Egyptian population centers</li>
+<li>Eventually the site of Israelite oppression</li>
+</ul>
+<h3>2. Midian — Land of Refuge</h3>
+<p>When Moses fled Egypt, he traveled to Midian—a region east of the Gulf of Aqaba, in modern-day northwestern Saudi Arabia or southern Jordan.</p>
+<p>The Midianites were:</p>
+<ul>
+<li>Descendants of Abraham through Keturah (<a href="https://www.blueletterbible.org/kjv/gen/25/1-2/s_25001" target="_blank" data-ref="Genesis 25:1-2">Genesis 25:1–2</a>)</li>
+<li>A priestly clan (Jethro was "priest of Midian")</li>
+<li>Possibly connected to the worship of YHWH before the Exodus</li>
+</ul>
+<p><strong>Significance:</strong> Moses spent forty years in Midian, married Zipporah, and received priesthood from Jethro (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84?lang=eng&id=p6#p6" target="_blank" data-ref="D&C 84:6">D&C 84:6</a>).</p>
+<h3>3. Horeb/Sinai — The Mountain of God</h3>
+<p>Moses encountered God at "Horeb, the mountain of God" (<a href="https://www.blueletterbible.org/kjv/exo/3/1/s_53001" target="_blank" data-ref="Exodus 3:1">Exodus 3:1</a>). Horeb and Sinai appear to be two names for the same location—or different peaks of the same mountain range.</p>
+<p>Traditional identification: Jebel Musa in the southern Sinai Peninsula, where St. Catherine's Monastery now stands.</p>
+<p>The term "mountain of God" (<em>har ha'elohim</em>) suggests this site was already associated with divine presence before Moses' arrival—possibly known to Midianite priests.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Cultural Background</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Hebrew Midwives — Moral Courage</h3>
+<p>Shiphrah (<a href="https://www.blueletterbible.org/lexicon/h8236/kjv/wlc/0-1/" target="_blank" data-lexicon="Shiphrah = &quot;fair&quot;one of the two Hebrew midwives who were ordered by Pharaoh to kill all the male children born to the..." data-strongs="H8236" data-translit="šip̄râ" data-original="שִׁפְרָה" data-lang="hebrew" data-verse="">שִׁפְרָה</a>, "beauty") and Puah (<a href="https://www.blueletterbible.org/lexicon/h6326/kjv/wlc/0-1/" target="_blank" data-lexicon="Puah = &quot;splendid&quot;one of the 2 midwives of the Hebrews ordered by Pharaoh to kill all the male children born to Israel..." data-strongs="H6326" data-translit="pûʿâ" data-original="פּוּעָה" data-lang="hebrew" data-verse="">פּוּעָה</a>, "splendid") are among the first named heroines in Scripture. Their defiance of Pharaoh raises enduring questions:</p>
+<p><strong>Civil disobedience:</strong> When human law conflicts with divine law, whom do we obey? The midwives "feared God" more than Pharaoh (<a href="https://www.blueletterbible.org/kjv/exo/1/17/s_51017" target="_blank" data-ref="Exodus 1:17">Exodus 1:17</a>). Peter later articulated the same principle: "We ought to obey God rather than men" (<a href="https://www.blueletterbible.org/kjv/act/5/29/s_1023029" target="_blank" data-ref="Acts 5:29">Acts 5:29</a>).</p>
+<p><strong>The "lie" question:</strong> The midwives told Pharaoh that Hebrew women deliver before they arrive (<a href="https://www.blueletterbible.org/kjv/exo/1/19/s_51019" target="_blank" data-ref="Exodus 1:19">Exodus 1:19</a>). Was this deception justified? Rabbinic tradition generally defends them—protecting innocent life takes precedence over strict truthfulness to a murderous tyrant.</p>
+<p><strong>God's response:</strong> "Therefore God dealt well with the midwives... and made them houses" (<a href="https://www.blueletterbible.org/kjv/exo/1/20-21/s_51020" target="_blank" data-ref="Exodus 1:20-21">Exodus 1:20–21</a>). Whether "houses" means physical dwellings or family lines (בָּתִּים, <em>batim</em>, can mean both), God rewarded their courage.</p>
+<h3>The Ark in the Reeds — Echoes of Noah</h3>
+<p>Moses' mother places him in a <a href="https://www.blueletterbible.org/lexicon/h8392/kjv/wlc/0-1/" target="_blank" data-lexicon="arkvessel which Noah builtbasket vessel in which Moses was placed" data-strongs="H8392" data-translit="tēḇâ" data-original="תֵּבָה" data-lang="hebrew" data-verse="">תֵּבָה</a> (<em>tevah</em>)—the same Hebrew word used exclusively for Noah's ark (<a href="https://www.blueletterbible.org/kjv/gen/6/14/s_6014" target="_blank" data-ref="Genesis 6:14">Genesis 6:14</a>). This is not coincidence:</p>
+<table class="info-table">
+<tr><th>Noah's Ark</th><th>Moses' Ark</th></tr>
+<tr><td>Saves humanity through water</td><td>Saves deliverer through water</td></tr>
+<tr><td>Covered with pitch (<em>kopher</em>)</td><td>Covered with pitch (<em>chemar</em>)</td></tr>
+<tr><td>Preserves life during judgment</td><td>Preserves life despite judgment</td></tr>
+<tr><td>Emerges to covenant renewal</td><td>Emerges to covenant fulfillment</td></tr>
+</table>
+<p>Both <em>tevah</em> vessels carry salvation through destructive waters.</p>
+<h3>Theophany at the Burning Bush</h3>
+<p>The burning bush (<a href="https://www.blueletterbible.org/lexicon/h5572/kjv/wlc/0-1/" target="_blank" data-lexicon="a bush, thorny bushthe burning bush of Mosesperhaps a blackberry bush" data-strongs="H5572" data-translit="sᵊnê" data-original="סְנֶה" data-lang="hebrew" data-verse="">סְנֶה</a>, <em>seneh</em>) represents one of Scripture's classic theophanies—divine appearances that paradoxically reveal and conceal:</p>
+<p><strong>Fire that does not consume:</strong> The bush burns but is not destroyed. This signals God's holy presence that sanctifies rather than destroys. Later, God will appear as fire on Sinai, in the pillar of fire, and over the Tabernacle.</p>
+<p><strong>"Put off thy shoes":</strong> Removing sandals was an ancient Near Eastern sign of:</p>
+<ul>
+<li>Reverence in sacred space</li>
+<li>Submission and vulnerability</li>
+<li>Recognition of holy ground</li>
+</ul>
+<p>Egyptian priests went barefoot in temples; this command connected with Moses' Egyptian upbringing while establishing a new sacred protocol.</p>
+<h3>The Divine Name — Ancient Near Eastern Context</h3>
+<p>When Moses asks God's name (<a href="https://www.blueletterbible.org/kjv/exo/3/13/s_53013" target="_blank" data-ref="Exodus 3:13">Exodus 3:13</a>), he's not asking for information God lacks. In the ancient world, knowing a deity's name meant:</p>
+<ul>
+<li>Having a relationship with that deity</li>
+<li>Being able to invoke that deity legitimately</li>
+<li>Understanding that deity's character and domain</li>
+</ul>
+<p>God's response—"I AM THAT I AM"—both reveals and transcends ancient naming conventions. Unlike gods named for functions (sun god, storm god), YHWH's name declares His being: existence itself, eternal presence, covenant faithfulness.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Egyptian Religious Context</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Pharaoh as Divine</h3>
+<p>Egyptian Pharaohs were considered incarnations of Horus (falcon god) and, after death, merged with Osiris. Pharaoh was:</p>
+<ul>
+<li>The living god who mediated between heaven and earth</li>
+<li>The source of <em>ma'at</em> (cosmic order and justice)</li>
+<li>The ultimate authority over life and death</li>
+</ul>
+<p>This explains the stakes in Moses' confrontation: it wasn't merely political but cosmological. When Pharaoh asks, "Who is the LORD, that I should obey his voice?" (<a href="https://www.blueletterbible.org/kjv/exo/5/2/s_55002" target="_blank" data-ref="Exodus 5:2">Exodus 5:2</a>), he's asserting his own divine status against an unknown deity.</p>
+<h3>Polytheism and the Plagues</h3>
+<p>Egypt's pantheon included hundreds of deities:</p>
+<ul>
+<li><strong>Ra/Amon-Ra:</strong> Sun god, supreme deity</li>
+<li><strong>Hapi:</strong> Nile god</li>
+<li><strong>Khnum:</strong> Creator god (formed humans on potter's wheel)</li>
+<li><strong>Isis/Osiris:</strong> Death and resurrection deities</li>
+</ul>
+<p>The coming plagues (<a href="https://www.blueletterbible.org/kjv/exo/7/1/s_57001" target="_blank" data-ref="Exodus 7">Exodus 7–12</a>) will systematically challenge these gods. Each plague demonstrates YHWH's sovereignty over a domain Egyptians attributed to their deities.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Translation Notes</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Exodus 3:14 — "I AM THAT I AM"</h3>
+<p>The Hebrew אֶהְיֶה אֲשֶׁר אֶהְיֶה (<em>Ehyeh asher Ehyeh</em>) has been translated variously:</p>
+<table class="info-table">
+<tr><th>Translation</th><th>Emphasis</th></tr>
+<tr><td>"I AM THAT I AM" (KJV)</td><td>Self-existence, eternal being</td></tr>
+<tr><td>"I AM WHO I AM" (NIV, NRSV)</td><td>Self-determination</td></tr>
+<tr><td>"I WILL BE WHAT I WILL BE" (ASV margin)</td><td>Future-oriented promise</td></tr>
+<tr><td>"I cause to be what I cause to be"</td><td>Causative (creator emphasis)</td></tr>
+</table>
+<p>The Hebrew <em>ehyeh</em> (from <em>hayah</em>, "to be") is imperfect tense, which can indicate:</p>
+<ul>
+<li>Continuous state: "I am being"</li>
+<li>Future action: "I will be"</li>
+<li>Characteristic: "I am the one who is"</li>
+</ul>
+<h3>JST Exodus 4:21 — Hardening of Pharaoh's Heart</h3>
+<p>The King James reading—"I will harden his heart"—has troubled readers for millennia. The Joseph Smith Translation clarifies:</p>
+<p><strong>KJV:</strong> "And the LORD said unto Moses... I will harden his heart, that he shall not let the people go."</p>
+<p><strong>JST:</strong> "And the LORD said unto Moses... Pharaoh will harden his heart, that he will not let the people go."</p>
+<p>The Hebrew verb <a href="https://www.blueletterbible.org/lexicon/h3169/kjv/wlc/0-1/" target="_blank" data-lexicon="Hezekiah or Jehizkiah = &quot;Jehovah has made strong&quot; son of king Ahaz by Abi or Abijah and the 12th king of Judah; his r..." data-strongs="H3169" data-translit="yᵊḥizqîyâ" data-original="חָזַק" data-lang="hebrew" data-verse="">חָזַק</a> (<em>chazaq</em>) means "to strengthen" or "to make firm." The JST preserves human agency: Pharaoh strengthens his own resolve against God. God foreknows Pharaoh's choice without causing it.</p>
+<h3>JST Exodus 6:3 — Was the Name Unknown?</h3>
+<p><strong>KJV:</strong> "And I appeared unto Abraham, unto Isaac, and unto Jacob, by the name of God Almighty, but by my name JEHOVAH was I not known to them."</p>
+<p>This seems to contradict passages where the patriarchs used YHWH (<a href="https://www.blueletterbible.org/kjv/gen/15/7/s_15007" target="_blank" data-ref="Genesis 15:7">Genesis 15:7; 22:14; 28:13</a>).</p>
+<p><strong>JST:</strong> Changes to a rhetorical question: "And was not my name known unto them?"</p>
+<p>This resolves the tension: the patriarchs <em>did</em> know the name, but its full significance—as covenant deliverer—would be revealed through the Exodus.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>This Week's Key Locations</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Location</th><th>Significance</th></tr>
+<tr><td><strong>Egypt (Goshen)</strong></td><td>Israelite homeland in bondage; site of oppression</td></tr>
+<tr><td><strong>Pithom & Raamses</strong></td><td>Treasure cities built by slave labor</td></tr>
+<tr><td><strong>Midian</strong></td><td>Moses' refuge; receives priesthood from Jethro</td></tr>
+<tr><td><strong>Horeb/Sinai</strong></td><td>Mountain of God; burning bush theophany</td></tr>
+<tr><td><strong>The Nile</strong></td><td>River of life and death; Moses' basket placed here</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 3: WEEK 13: KEY PASSAGES STUDY -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">3. Week 13: Key Passages Study</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Passage 1: The Courageous Midwives (Exodus 1:15–21)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<blockquote>
+<p>"And the king of Egypt spake to the Hebrew midwives, of which the name of the one was Shiphrah, and the name of the other Puah: And he said, When ye do the office of a midwife to the Hebrew women, and see them upon the stools; if it be a son, then ye shall kill him: but if it be a daughter, then she shall live. But the midwives feared God, and did not as the king of Egypt commanded them, but saved the men children alive."</p>
+<p>— <a href="https://www.blueletterbible.org/kjv/exo/1/15/s_51015" target="_blank">Exodus 1:15–17</a></p>
+</blockquote>
+<h3>Literary Analysis</h3>
+<p>The narrative contrasts two authorities:</p>
+<ul>
+<li><strong>Pharaoh:</strong> Commands death ("ye shall kill him")</li>
+<li><strong>God:</strong> Commands life (implicitly, through creation mandate)</li>
+</ul>
+<p>The midwives' names are preserved while Pharaoh remains unnamed—a deliberate literary reversal. The powerful king fades into anonymity; the servant women receive eternal memorial.</p>
+<h3>Theological Significance</h3>
+<p><strong>Civil disobedience:</strong> When human law commands evil, divine law takes precedence. The midwives "feared God" (<em>yare' et ha'elohim</em>) rather than Pharaoh. This fear is not terror but reverential awe that produces moral courage.</p>
+<p><strong>Divine reward:</strong> "God dealt well with the midwives... and made them houses" (<a href="https://www.blueletterbible.org/kjv/exo/1/20-21/s_51020" target="_blank" data-ref="Exodus 1:20-21">Exodus 1:20–21</a>). The Hebrew בָּתִּים (<em>batim</em>, "houses") likely means family lines or households—God blessed them with the very thing Pharaoh tried to destroy: future generations.</p>
+<h3>LDS Connection</h3>
+<p>President Thomas S. Monson taught: "May we ever choose the harder right instead of the easier wrong" (<a href="https://www.churchofjesuschrist.org/study/general-conference/2016/04/choices?lang=eng" target="_blank">"Choices," April 2016 General Conference</a>). The midwives chose the harder right, risking their lives to obey God rather than man.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 2: Moses in the Ark (Exodus 2:1–10)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<blockquote>
+<p>"And there went a man of the house of Levi, and took to wife a daughter of Levi. And the woman conceived, and bare a son: and when she saw him that he was a goodly child, she hid him three months. And when she could not longer hide him, she took for him an ark of bulrushes, and daubed it with slime and with pitch, and put the child therein; and she laid it in the flags by the river's brink."</p>
+<p>— <a href="https://www.blueletterbible.org/kjv/exo/2/1/s_52001" target="_blank">Exodus 2:1–3</a></p>
+</blockquote>
+<h3>Literary Analysis</h3>
+<p>The word "ark" (<a href="https://www.blueletterbible.org/lexicon/h8392/kjv/wlc/0-1/" target="_blank" data-lexicon="arkvessel which Noah builtbasket vessel in which Moses was placed" data-strongs="H8392" data-translit="tēḇâ" data-original="תֵּבָה" data-lang="hebrew" data-verse="">תֵּבָה</a>, <em>tevah</em>) appears only twice in Scripture:</p>
+<ol>
+<li>Noah's ark (<a href="https://www.blueletterbible.org/kjv/gen/6/1/s_6001" target="_blank" data-ref="Genesis 6">Genesis 6–9</a>)</li>
+<li>Moses' basket (<a href="https://www.blueletterbible.org/kjv/exo/2/1/s_52001" target="_blank" data-ref="Exodus 2">Exodus 2</a>)</li>
+</ol>
+<p>This deliberate linguistic echo establishes Moses as a new Noah—one who will bring humanity (through Israel) through waters of judgment to covenant renewal.</p>
+<h3>The Women Who Saved Moses</h3>
+<p>Five women ensure Moses' survival:</p>
+<ol>
+<li><strong>Jochebed</strong> (mother) — Hides him, builds the ark</li>
+<li><strong>Miriam</strong> (sister) — Watches over him, suggests a nurse</li>
+<li><strong>Pharaoh's daughter</strong> — Rescues him, adopts him</li>
+<li><strong>Shiphrah</strong> — Refused to kill Hebrew boys</li>
+<li><strong>Puah</strong> — Refused to kill Hebrew boys</li>
+</ol>
+<p>The deliverer of Israel is saved by women working across ethnic and social boundaries.</p>
+<h3>Christological Type</h3>
+<table class="info-table">
+<tr><th>Moses</th><th>Christ</th></tr>
+<tr><td>Male child under death sentence</td><td>Male child under Herod's decree</td></tr>
+<tr><td>Rescued from water</td><td>Baptized in water</td></tr>
+<tr><td>Raised in foreign court</td><td>Fled to Egypt as infant</td></tr>
+<tr><td>Called to deliver God's people</td><td>Called to deliver all people</td></tr>
+</table>
+<h3>LDS Connection</h3>
+<p>Elder Jeffrey R. Holland taught: "Surely the thing God enjoys most about being God is the thrill of being merciful, especially to those who don't expect it and often feel they don't deserve it" (<a href="https://www.churchofjesuschrist.org/study/general-conference/2012/04/the-laborers-in-the-vineyard?lang=eng" target="_blank">"The Laborers in the Vineyard," April 2012</a>). Pharaoh's daughter extends mercy to an enemy's child—and God's purposes advance.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 3: The Burning Bush (Exodus 3:1–6)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<blockquote>
+<p>"Now Moses kept the flock of Jethro his father in law, the priest of Midian: and he led the flock to the backside of the desert, and came to the mountain of God, even to Horeb. And the angel of the LORD appeared unto him in a flame of fire out of the midst of a bush: and he looked, and, behold, the bush burned with fire, and the bush was not consumed."</p>
+<p>— <a href="https://www.blueletterbible.org/kjv/exo/3/1/s_53001" target="_blank">Exodus 3:1–2</a></p>
+</blockquote>
+<h3>Literary Analysis</h3>
+<p><strong>Setting:</strong> "The backside of the desert" (<em>achar hamidbar</em>) — Moses is in the most remote place possible. God finds him there.</p>
+<p><strong>The paradox:</strong> Fire that burns but does not consume. This signals divine presence that sanctifies rather than destroys—the same fire that will appear on Sinai, in the pillar, and over the Tabernacle.</p>
+<p><strong>JST clarification:</strong> The JST changes "angel of the LORD" to "presence of the LORD" (<a href="https://www.churchofjesuschrist.org/study/scriptures/jst/jst-ex/3?lang=eng&id=p2#p2" target="_blank" data-ref="Exodus 3:2">JST Exodus 3:2</a>), making clear this is a direct divine theophany, not a mediated angelic appearance.</p>
+<h3>The Command to Remove Sandals</h3>
+<p>"Put off thy shoes from off thy feet, for the place whereon thou standest is holy ground" (<a href="https://www.blueletterbible.org/kjv/exo/3/5/s_53005" target="_blank" data-ref="Exodus 3:5">Exodus 3:5</a>).</p>
+<p>This establishes a foundational principle: holiness belongs to places where God is present. The ground has not changed; God's presence makes it holy. Removing shoes signifies:</p>
+<ul>
+<li>Vulnerability before God</li>
+<li>Recognition of sacred space</li>
+<li>Submission to divine authority</li>
+</ul>
+<h3>LDS Connection</h3>
+<p>Dr. Ugo Perego connects the burning bush to the Sacred Grove: "The Father and the Son appeared to young Joseph Smith in the sacred grove, this time not in the form of a burning bush, but as a pillar of light" (<a href="https://www.fairlatterdaysaints.org/come-follow-me-old-testament/come-follow-me-old-testament-ot13" target="_blank">FAIR, Exodus 1–6</a>). Both revelations inaugurate new dispensations with personal theophany and prophetic calling.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 4: The Divine Name Revealed (Exodus 3:13–15)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<blockquote>
+<p>"And Moses said unto God, Behold, when I come unto the children of Israel, and shall say unto them, The God of your fathers hath sent me unto you; and they shall say to me, What is his name? what shall I say unto them? And God said unto Moses, I AM THAT I AM: and he said, Thus shalt thou say unto the children of Israel, I AM hath sent me unto you."</p>
+<p>— <a href="https://www.blueletterbible.org/kjv/exo/3/13/s_53013" target="_blank">Exodus 3:13–14</a></p>
+</blockquote>
+<h3>Linguistic Analysis</h3>
+<p><strong>Hebrew:</strong> אֶהְיֶה אֲשֶׁר אֶהְיֶה (<em>Ehyeh asher Ehyeh</em>)</p>
+<table class="info-table">
+<tr><th>Component</th><th>Meaning</th></tr>
+<tr><td>אֶהְיֶה (<em>Ehyeh</em>)</td><td>"I am" or "I will be" (1st person imperfect of <em>hayah</em>)</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h833/kjv/wlc/0-1/" target="_blank" data-lexicon="to go straight, walk, go on, advance, make progress" data-strongs="H833" data-translit="āšar" data-original="אָשַׁר" data-lang="hebrew" data-verse="">אֲשֶׁר</a> (<em>asher</em>)</td><td>"that which," "who," "what"</td></tr>
+<tr><td>אֶהְיֶה (<em>Ehyeh</em>)</td><td>Repeated — emphasizing self-existence</td></tr>
+</table>
+<p>The name YHWH (<a href="https://www.blueletterbible.org/lexicon/h3058/kjv/wlc/0-1/" target="_blank" data-lexicon="Jehu = &quot;Jehovah is He&quot; the king of the northern kingdom Israel who overthrew the dynasty of Omri son of Hanani and an..." data-strongs="H3058" data-translit="yêû&#x27;" data-original="יְהֹוָה" data-lang="hebrew" data-verse="">יהוה</a>) is derived from the same root but in third person: "He is" or "He causes to be."</p>
+<h3>Theological Significance</h3>
+<p>This is not a riddle or evasion. God reveals His essential character:</p>
+<ol>
+<li><strong>Self-existence:</strong> Unlike pagan gods derived from cosmic forces, YHWH simply IS</li>
+<li><strong>Eternal presence:</strong> "I AM" spans all time—past, present, future</li>
+<li><strong>Covenant faithfulness:</strong> This name is connected to "the God of Abraham, Isaac, and Jacob"</li>
+<li><strong>Personal relationship:</strong> God shares His name with Israel</li>
+</ol>
+<h3>New Testament Connection</h3>
+<p>Jesus applies this name to Himself: "Before Abraham was, I am" (<a href="https://www.blueletterbible.org/kjv/jhn/8/58/s_1005058" target="_blank" data-ref="John 8:58">John 8:58</a>). The Jews understood immediately—they picked up stones to kill Him for claiming divine identity.</p>
+<h3>LDS Connection</h3>
+<p><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/39?lang=eng&id=p1#p1" target="_blank" data-ref="D&C 39:1">D&C 39:1</a> records the Lord saying: "Hearken and listen to the voice of him who is from all eternity to all eternity, the Great I AM." The Restoration confirms Christ as the Jehovah of the Old Testament, the I AM who spoke to Moses.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 5: Moses' Objections and God's Answers (Exodus 4:10–17)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<blockquote>
+<p>"And Moses said unto the LORD, O my Lord, I am not eloquent, neither heretofore, nor since thou hast spoken unto thy servant: but I am slow of speech, and of a slow tongue. And the LORD said unto him, Who hath made man's mouth? or who maketh the dumb, or deaf, or the seeing, or the blind? have not I the LORD? Now therefore go, and I will be with thy mouth, and teach thee what thou shalt say."</p>
+<p>— <a href="https://www.blueletterbible.org/kjv/exo/4/10/s_54010" target="_blank">Exodus 4:10–12</a></p>
+</blockquote>
+<h3>Literary Analysis</h3>
+<p>Moses offers five objections throughout chapters 3–4:</p>
+<ol>
+<li>"Who am I?" (<a href="https://www.blueletterbible.org/kjv/exo/3/11/s_53011" target="_blank" data-ref="Exodus 3:11">Exodus 3:11</a>) — Inadequacy</li>
+<li>"What is his name?" (<a href="https://www.blueletterbible.org/kjv/exo/3/13/s_53013" target="_blank" data-ref="Exodus 3:13">Exodus 3:13</a>) — Authority</li>
+<li>"They will not believe me" (<a href="https://www.blueletterbible.org/kjv/exo/4/1/s_54001" target="_blank" data-ref="Exodus 4:1">Exodus 4:1</a>) — Credibility</li>
+<li>"I am not eloquent" (<a href="https://www.blueletterbible.org/kjv/exo/4/10/s_54010" target="_blank" data-ref="Exodus 4:10">Exodus 4:10</a>) — Ability</li>
+<li>"Send someone else" (<a href="https://www.blueletterbible.org/kjv/exo/4/13/s_54013" target="_blank" data-ref="Exodus 4:13">Exodus 4:13</a>) — Refusal</li>
+</ol>
+<p>God answers each with assurance, signs, or (finally) anger. But notice: God doesn't deny Moses' weakness. He simply promises His presence: "I will be with thy mouth."</p>
+<h3>The Hebrew Phrase</h3>
+<p>Moses describes himself as כְבַד־פֶּה וּכְבַד לָשׁוֹן (<em>kevad peh ukhevad lashon</em>) — "heavy of mouth and heavy of tongue."</p>
+<p>The word <a href="https://www.blueletterbible.org/lexicon/h3513/kjv/wlc/0-1/" target="_blank" data-lexicon="to be heavy, be weighty, be grievous, be hard, be rich, be honourable, be glorious, be burdensome, be honoured(Qal)to..." data-strongs="H3513" data-translit="kāḇaḏ" data-original="כָּבַד" data-lang="hebrew" data-verse="">כָּבֵד</a> (<em>kaved</em>, "heavy") is the same root as כָּבוֹד (<em>kavod</em>, "glory"). There's wordplay: Moses feels his mouth is <em>heavy</em> (burdened); God's <em>glory</em> (heavy with honor) will speak through it anyway.</p>
+<h3>God's Response</h3>
+<p>"Who hath made man's mouth?" The Creator who made the tongue can empower the tongue. The blind, deaf, and mute exist within God's sovereign design—not as mistakes but as part of His purposes.</p>
+<h3>LDS Connection</h3>
+<p>Elder David A. Bednar taught that the Savior's enabling power strengthens disciples "to do and be good and to serve beyond our own individual desire and natural capacity" (<a href="https://www.churchofjesuschrist.org/study/liahona/2015/03/youth/strength-beyond-our-own?lang=eng" target="_blank">"Strength beyond Our Own," Liahona, Mar. 2015</a>). Moses' weakness becomes a conduit for God's power—"my grace is sufficient for thee" (<a href="https://www.blueletterbible.org/kjv/2co/12/9/s_1090009" target="_blank" data-ref="2 Corinthians 12:9">2 Corinthians 12:9</a>).</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 6: "I Have Remembered My Covenant" (Exodus 6:2–8)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<blockquote>
+<p>"And God spake unto Moses, and said unto him, I am the LORD: And I appeared unto Abraham, unto Isaac, and unto Jacob, by the name of God Almighty, but by my name JEHOVAH was I not known to them. And I have also established my covenant with them, to give them the land of Canaan... And I have also heard the groaning of the children of Israel... and I have remembered my covenant."</p>
+<p>— <a href="https://www.blueletterbible.org/kjv/exo/6/2/s_56002" target="_blank">Exodus 6:2–5</a></p>
+</blockquote>
+<h3>Literary Analysis</h3>
+<p><strong>Seven "I will" Statements (<a href="https://www.blueletterbible.org/kjv/exo/6/6-8/s_56006" target="_blank" data-ref="Exodus 6:6-8">Exodus 6:6–8</a>):</strong></p>
+<ol>
+<li>"I will bring you out from under the burdens of the Egyptians"</li>
+<li>"I will rid you out of their bondage"</li>
+<li>"I will redeem you with a stretched out arm"</li>
+<li>"I will take you to me for a people"</li>
+<li>"I will be to you a God"</li>
+<li>"I will bring you in unto the land"</li>
+<li>"I will give it you for an heritage"</li>
+</ol>
+<p>This sevenfold structure suggests completeness and totality. God's redemption will be thorough.</p>
+<h3>The Covenant Formula</h3>
+<p>"I will take you to me for a people, and I will be to you a God" (<a href="https://www.blueletterbible.org/kjv/exo/6/7/s_56007" target="_blank" data-ref="Exodus 6:7">Exodus 6:7</a>) is the classic covenant formula appearing throughout Scripture:</p>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/lev/26/12/s_116012" target="_blank" data-ref="Leviticus 26:12">Leviticus 26:12</a></li>
+<li><a href="https://www.blueletterbible.org/kjv/jer/31/33/s_776033" target="_blank" data-ref="Jeremiah 31:33">Jeremiah 31:33</a></li>
+<li><a href="https://www.blueletterbible.org/kjv/2co/6/16/s_1084016" target="_blank" data-ref="2 Corinthians 6:16">2 Corinthians 6:16</a></li>
+<li><a href="https://www.blueletterbible.org/kjv/rev/21/3/s_1188003" target="_blank" data-ref="Revelation 21:3">Revelation 21:3</a></li>
+</ul>
+<p>This reciprocal relationship defines the entire biblical story: God choosing a people, people belonging to God.</p>
+<h3>"I Have Remembered"</h3>
+<p>The Hebrew <a href="https://www.blueletterbible.org/lexicon/h2142/kjv/wlc/0-1/" target="_blank" data-lexicon="to remember, recall, mention" data-strongs="H2142" data-translit="zâkar" data-original="זָכַר" data-lang="hebrew" data-verse="">זָכַר</a> (<em>zakar</em>, "to remember") does not mean God had forgotten. In Hebrew thought, to "remember" means to act on behalf of someone. God's remembering triggers redemptive action.</p>
+<p>The same word appears:</p>
+<ul>
+<li>"God remembered Noah" (<a href="https://www.blueletterbible.org/kjv/gen/8/1/s_8001" target="_blank" data-ref="Genesis 8:1">Gen. 8:1</a>) — and sent wind to recede the waters</li>
+<li>"God remembered Rachel" (<a href="https://www.blueletterbible.org/kjv/gen/30/22/s_30022" target="_blank" data-ref="Genesis 30:22">Gen. 30:22</a>) — and opened her womb</li>
+<li>"God remembered his covenant" (Ex. 6:5) — and sent Moses</li>
+</ul>
+<h3>LDS Connection</h3>
+<p>Elder Gerrit W. Gong taught that we can "always remember Him by having confidence in His covenants, promises, and assurances" (<a href="https://www.churchofjesuschrist.org/study/general-conference/2016/04/always-remember-him?lang=eng" target="_blank">"Always Remember Him," April 2016</a>). The God who remembered Israel in Egypt remembers His covenant people today.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Synthesis: Moses as Type of Christ</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The parallels between Moses and Christ established in these chapters form a foundation for understanding the entire Exodus narrative:</p>
+<table class="info-table">
+<tr><th>Moses</th><th>Christ</th></tr>
+<tr><td>Preserved as infant despite death decree</td><td>Preserved from Herod's massacre</td></tr>
+<tr><td>Drawn from water</td><td>Baptized in water</td></tr>
+<tr><td>Raised in royal household</td><td>King of kings</td></tr>
+<tr><td>Fled to foreign land (Midian)</td><td>Fled to Egypt</td></tr>
+<tr><td>Called at burning bush</td><td>Called at baptism</td></tr>
+<tr><td>Received divine name to declare</td><td>"I am the way, the truth, and the life"</td></tr>
+<tr><td>Reluctant prophet</td><td>"Father, if it be possible, let this cup pass"</td></tr>
+<tr><td>Sent to deliver Israel from bondage</td><td>Sent to deliver all from sin</td></tr>
+<tr><td>Pharaoh refused to acknowledge God</td><td>Religious leaders rejected Christ</td></tr>
+<tr><td>Signs and wonders confirmed calling</td><td>Signs and wonders confirmed ministry</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 4: WEEK 13: WORD STUDIES -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">4. Week 13: Word Studies</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Word Study 1: יהוה (YHWH) — The Sacred Name</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h1961/kjv/wlc/0-1/" target="_blank" data-lexicon="to be, become, come to pass, exist, happen, fall out (Qal) — to happen, fall out, occur, take place, come about, come..." data-strongs="H1961" data-translit="hāyâ" data-original="הָיָה" data-lang="hebrew" data-verse="">ה-י-ה</a> (<em>H-Y-H</em>, "to be")</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/3/15/s_53015" target="_blank" data-ref="Exodus 3:15">Exodus 3:15</a> — "The LORD God of your fathers... this is my name for ever"</p>
+<h3>Meaning</h3>
+<p>The divine name YHWH (<a href="https://www.blueletterbible.org/lexicon/h3058/kjv/wlc/0-1/" target="_blank" data-lexicon="Jehu = &quot;Jehovah is He&quot; the king of the northern kingdom Israel who overthrew the dynasty of Omri son of Hanani and an..." data-strongs="H3058" data-translit="yêû&#x27;" data-original="יְהֹוָה" data-lang="hebrew" data-verse="">יהוה</a>) is the personal name of Israel's God, appearing over 6,800 times in the Hebrew Bible. When you see "LORD" in small capitals in English Bibles, you are reading this name.</p>
+<p><strong>Greek / Latin / English parallels:</strong> Greek <a href="https://www.blueletterbible.org/lexicon/g2962/kjv/tr/0-1/" target="_blank">κύριος (<em>kyrios</em>, "Lord")</a>, Latin <a href="https://en.wiktionary.org/wiki/Dominus#Latin" target="_blank"><em>Dominus</em></a>, English <a href="https://www.etymonline.com/word/lord" target="_blank">lord</a>.</p>
+<h3>Pronunciation</h3>
+<p>The exact pronunciation was lost when Jews ceased speaking the name aloud out of reverence. The form "Jehovah" comes from combining YHWH's consonants with the vowels of <a href="https://www.blueletterbible.org/lexicon/h136/kjv/wlc/0-1/" target="_blank" data-lexicon="my lord, lord//" data-strongs="H136" data-translit="’Ăḏōnāy" data-original="אֲדֹנָי" data-lang="hebrew" data-verse="">אֲדֹנָי</a> (<em>Adonai</em>, "Lord"). Most scholars believe the original pronunciation was closer to "Yahweh."</p>
+<h3>Etymology</h3>
+<p>The name derives from the verb <a href="https://www.blueletterbible.org/lexicon/h1961/kjv/wlc/0-1/" target="_blank" data-lexicon="to be, become, come to pass, exist, happen, fall out (Qal) — to happen, fall out, occur, take place, come about, come..." data-strongs="H1961" data-translit="hāyâ" data-original="הָיָה" data-lang="hebrew" data-verse="">הָיָה</a> (<em>hayah</em>, "to be"). YHWH is the third-person form: "He is," "He will be," or "He causes to be." The name connects directly to God's self-revelation: "I AM THAT I AM" (<a href="https://www.blueletterbible.org/kjv/exo/3/14/s_53014" target="_blank" data-ref="Exodus 3:14">Exodus 3:14</a>).</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Self-existence:</strong> Unlike created beings, God simply IS</li>
+<li><strong>Eternality:</strong> YHWH transcends time—past, present, future</li>
+<li><strong>Covenant faithfulness:</strong> "The God of Abraham, Isaac, and Jacob"</li>
+<li><strong>Personal relationship:</strong> God shares His personal name with Israel</li>
+</ol>
+<h3>LDS Application</h3>
+<p><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/110?lang=eng&id=p3#p3" target="_blank" data-ref="D&C 110:3">D&C 110:3</a> records the resurrected Christ identifying Himself: "I am the first and the last; I am he who liveth, I am he who was slain; I am your advocate with the Father." The Latter-day Saints understand Jesus Christ as the Jehovah of the Old Testament—the YHWH who spoke to Moses.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 2: אֶהְיֶה (<em>Ehyeh</em>) — "I AM"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h1961/kjv/wlc/0-1/" target="_blank" data-lexicon="to be, become, come to pass, exist, happen, fall out (Qal) — to happen, fall out, occur, take place, come about, come..." data-strongs="H1961" data-translit="hāyâ" data-original="הָיָה" data-lang="hebrew" data-verse="">ה-י-ה</a> (<em>H-Y-H</em>, "to be")</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/3/14/s_53014" target="_blank" data-ref="Exodus 3:14">Exodus 3:14</a> — "I AM THAT I AM... I AM hath sent me unto you"</p>
+<h3>Meaning</h3>
+<p><em>Ehyeh</em> is the first-person singular form of the verb "to be" in the imperfect (or qal imperfect) tense. It can mean:</p>
+<ul>
+<li>"I am" (present continuous)</li>
+<li>"I will be" (future)</li>
+<li>"I am being" (ongoing state)</li>
+</ul>
+<p><strong>Greek / Latin / English parallels:</strong> Greek <a href="https://www.blueletterbible.org/lexicon/g1510/kjv/tr/0-1/" target="_blank">εἰμί (<em>eimi</em>, "I am / to be")</a>, Latin <a href="https://en.wiktionary.org/wiki/sum#Latin" target="_blank"><em>sum</em></a>, English <a href="https://www.etymonline.com/word/be" target="_blank">be / am</a>.</p>
+<h3>The Full Phrase</h3>
+<p>אֶהְיֶה אֲשֶׁר אֶהְיֶה (<em>Ehyeh asher Ehyeh</em>)</p>
+<table class="info-table">
+<tr><th>Translation</th><th>Emphasis</th></tr>
+<tr><td>"I AM THAT I AM" (KJV)</td><td>Self-existence</td></tr>
+<tr><td>"I AM WHO I AM" (NIV)</td><td>Self-definition</td></tr>
+<tr><td>"I WILL BE WHAT I WILL BE" (margin)</td><td>Promissory</td></tr>
+<tr><td>"I am the One who is"</td><td>Ontological</td></tr>
+</table>
+<h3>Why Two Forms?</h3>
+<p><em>Ehyeh</em> (first person): What God says about Himself — "I am"</p>
+<p>YHWH (third person): What Israel says about God — "He is"</p>
+<p>Moses asks for a name Israel can use. God gives His own self-designation (<em>Ehyeh</em>) and then translates it to third person (YHWH) for Israel's use.</p>
+<h3>New Testament Connection</h3>
+<p>Jesus' "I am" statements in John's Gospel echo this divine name:</p>
+<ul>
+<li>"I am the bread of life" (<a href="https://www.blueletterbible.org/kjv/jhn/6/35/s_1003035" target="_blank" data-ref="John 6:35">John 6:35</a>)</li>
+<li>"I am the light of the world" (<a href="https://www.blueletterbible.org/kjv/jhn/8/12/s_1005012" target="_blank" data-ref="John 8:12">John 8:12</a>)</li>
+<li>"Before Abraham was, I am" (<a href="https://www.blueletterbible.org/kjv/jhn/8/58/s_1005058" target="_blank" data-ref="John 8:58">John 8:58</a>)</li>
+</ul>
+<p>The Jews understood Jesus was claiming to be YHWH—hence their attempt to stone Him.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 3: סְנֶה (<em>Seneh</em>) — "Bush"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> Possibly <a href="https://www.blueletterbible.org/lexicon/h5572/kjv/wlc/0-1/" target="_blank" data-lexicon="a bush, thorny bushthe burning bush of Mosesperhaps a blackberry bush" data-strongs="H5572" data-translit="sᵊnê" data-original="סְנֶה" data-lang="hebrew" data-verse="">ס-נ-ה</a> (uncertain etymology)</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/3/2-4/s_53002" target="_blank" data-ref="Exodus 3:2-4">Exodus 3:2–4</a> — "The bush burned with fire, and the bush was not consumed"</p>
+<h3>Meaning</h3>
+<p>The <a href="https://www.blueletterbible.org/lexicon/h5572/kjv/wlc/0-1/" target="_blank" data-lexicon="a bush, thorny bushthe burning bush of Mosesperhaps a blackberry bush" data-strongs="H5572" data-translit="sᵊnê" data-original="סְנֶה" data-lang="hebrew" data-verse="">סְנֶה</a> (<em>seneh</em>) was likely a thorny acacia shrub common in the Sinai region. The word appears only in the burning bush account (<a href="https://www.blueletterbible.org/kjv/exo/3/2-4/s_53002" target="_blank" data-ref="Exodus 3:2-4">Exodus 3:2–4</a>) and in Moses' blessing (<a href="https://www.blueletterbible.org/kjv/deu/33/16/s_186016" target="_blank" data-ref="Deuteronomy 33:16">Deuteronomy 33:16</a>).</p>
+<p><strong>Greek / Latin / English parallels:</strong> Greek <a href="https://www.blueletterbible.org/lexicon/g942/kjv/tr/0-1/" target="_blank">βάτος (<em>batos</em>, "bush / bramble")</a>, Latin <a href="https://en.wiktionary.org/wiki/rubus#Latin" target="_blank"><em>rubus</em></a>, English <a href="https://www.etymonline.com/word/bush" target="_blank">bush / bramble</a>.</p>
+<h3>Wordplay</h3>
+<p>Some scholars note the similarity between <a href="https://www.blueletterbible.org/lexicon/h5572/kjv/wlc/0-1/" target="_blank" data-lexicon="a bush, thorny bushthe burning bush of Mosesperhaps a blackberry bush" data-strongs="H5572" data-translit="sᵊnê" data-original="סְנֶה" data-lang="hebrew" data-verse="">סְנֶה</a> (<em>seneh</em>, "bush") and <a href="https://www.blueletterbible.org/lexicon/h5514/kjv/wlc/0-1/" target="_blank" data-lexicon="Sinai = &quot;thorny&quot;the mountain where Moses received the Law from Jehovah; located at the southern end of the Sinai peni..." data-strongs="H5514" data-translit="sînay" data-original="סִינַי" data-lang="hebrew" data-verse="">סִינַי</a> (<em>Sinai</em>). Whether etymologically connected or not, the text links them:</p>
+<ul>
+<li>God appears in the <em>seneh</em> at <em>Sinai</em></li>
+<li>Both become sites of divine revelation</li>
+<li>Both involve fire that does not destroy</li>
+</ul>
+<h3>Theological Significance</h3>
+<p><strong>Fire that does not consume:</strong> The paradox signals divine presence. Ordinary fire destroys; divine fire sanctifies. This same fire will:</p>
+<ul>
+<li>Lead Israel as a pillar by night (Ex. 13:21)</li>
+<li>Descend on Sinai (Ex. 19:18)</li>
+<li>Dwell over the Tabernacle (Ex. 40:38)</li>
+<li>Appear at Pentecost (<a href="https://www.blueletterbible.org/kjv/act/2/3/s_1020003" target="_blank" data-ref="Acts 2:3">Acts 2:3</a>)</li>
+</ul>
+<h3>LDS Application</h3>
+<p>Just as the bush burned without being consumed, so the temple is the place where mortals encounter divine glory without destruction. We enter sacred space where God's presence dwells—like Moses, we are on holy ground.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 4: תֵּבָה (<em>Tevah</em>) — "Ark"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> Uncertain (possibly Egyptian origin)</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/2/3/s_52003" target="_blank" data-ref="Exodus 2:3">Exodus 2:3, 5</a> — "She took for him an ark of bulrushes"</p>
+<h3>Meaning</h3>
+<p><em>Tevah</em> refers to a box, chest, or vessel designed to protect and preserve. The word appears only twice in Scripture:</p>
+<ol>
+<li>Noah's ark (<a href="https://www.blueletterbible.org/kjv/gen/6/1/s_6001" target="_blank" data-ref="Genesis 6">Genesis 6–9</a>)</li>
+<li>Moses' basket (<a href="https://www.blueletterbible.org/kjv/exo/2/1/s_52001" target="_blank" data-ref="Exodus 2">Exodus 2</a>)</li>
+</ol>
+<p>This is <strong>not</strong> the word for the Ark of the Covenant, which is <a href="https://www.blueletterbible.org/lexicon/h727/kjv/wlc/0-1/" target="_blank" data-lexicon="chest, ark" data-strongs="H727" data-translit="&#x27;ārôn" data-original="אָרוֹן" data-lang="hebrew" data-verse="">אָרוֹן</a> (<em>aron</em>).</p>
+<p><strong>Greek / Latin / English parallels:</strong> Greek <a href="https://www.blueletterbible.org/lexicon/g2787/kjv/tr/0-1/" target="_blank">κιβωτός (<em>kibōtos</em>, "ark / chest")</a>, Latin <a href="https://en.wiktionary.org/wiki/arca#Latin" target="_blank"><em>arca</em></a>, English <a href="https://www.etymonline.com/word/ark" target="_blank">ark / chest</a>.</p>
+<h3>Theological Significance</h3>
+<p>The deliberate use of <em>tevah</em> for both Noah's ark and Moses' basket creates a literary and theological connection:</p>
+<table class="info-table">
+<tr><th>Noah's <em>Tevah</em></th><th>Moses' <em>Tevah</em></th></tr>
+<tr><td>Saves humanity through water</td><td>Saves deliverer through water</td></tr>
+<tr><td>Covered with pitch (<em>kopher</em>)</td><td>Covered with pitch (<em>chemar</em>/bitumen)</td></tr>
+<tr><td>Preserves life during judgment</td><td>Preserves life despite Pharaoh's decree</td></tr>
+<tr><td>Emerges to covenant renewal</td><td>Emerges to covenant fulfillment</td></tr>
+</table>
+<p>Both <em>tevah</em> vessels carry salvation through threatening waters.</p>
+<h3>LDS Application</h3>
+<p>Elder Ronald A. Rasband taught, "As we stay on the covenant path, we need not fear" (<a href="https://www.churchofjesuschrist.org/study/general-conference/2018/10/be-not-troubled?lang=eng" target="_blank">"Be Not Troubled," Oct. 2018</a>). Like Noah's ark and Moses' basket, the covenant community preserves and protects God's people through the waters of adversity.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 5: גָּאַל (<em>ga'al</em>) — "To Redeem"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h1350/kjv/wlc/0-1/" target="_blank" data-lexicon="to redeem, act as kinsman-redeemer, avenge, revenge, ransom, do the part of a kinsman" data-strongs="H1350" data-translit="gā&#x27;al" data-original="גָּאַל" data-lang="hebrew" data-verse="">ג-א-ל</a> (<em>G-'-L</em>)</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/6/6/s_56006" target="_blank" data-ref="Exodus 6:6">Exodus 6:6</a> — "I will redeem you with a stretched out arm"</p>
+<h3>Meaning</h3>
+<p><em>Ga'al</em> means to redeem, act as kinsman-redeemer, reclaim, or buy back. The related noun <a href="https://www.blueletterbible.org/lexicon/h1350/kjv/wlc/0-1/" target="_blank" data-lexicon="to redeem, act as kinsman-redeemer, avenge, revenge, ransom, do the part of a kinsman" data-strongs="H1350" data-translit="gā&#x27;al" data-original="גָּאַל" data-lang="hebrew" data-verse="">גֹּאֵל</a> (<em>go'el</em>) is the "redeemer" or "kinsman-redeemer."</p>
+<p><strong>Greek / Latin / English parallels:</strong> Greek <a href="https://www.blueletterbible.org/lexicon/g3084/kjv/tr/0-1/" target="_blank">λυτρόω (<em>lytroō</em>, "to redeem")</a>, Latin <a href="https://en.wiktionary.org/wiki/redimo#Latin" target="_blank"><em>redimere</em></a>, English <a href="https://www.etymonline.com/word/redeem" target="_blank">redeem</a>.</p>
+<h3>Key Usages</h3>
+<table class="info-table">
+<tr><th>Passage</th><th>Context</th></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/6/6/s_56006" target="_blank" data-ref="Exodus 6:6">Exodus 6:6</a></td><td>"I will redeem you" — God as Redeemer</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/lev/25/25/s_115025" target="_blank" data-ref="Leviticus 25:25">Leviticus 25:25</a></td><td>Kinsman buys back family land</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/rth/4/4-6/s_236004" target="_blank" data-ref="Ruth 4:4-6">Ruth 4:4–6</a></td><td>Boaz as kinsman-redeemer</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/isa/43/14/s_722014" target="_blank" data-ref="Isaiah 43:14">Isaiah 43:14</a></td><td>"Your Redeemer, the Holy One of Israel"</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/job/19/25/s_455025" target="_blank" data-ref="Job 19:25">Job 19:25</a></td><td>"I know that my redeemer liveth"</td></tr>
+</table>
+<h3>Theological Significance</h3>
+<p>The <em>go'el</em> (kinsman-redeemer) was the nearest relative who had:</p>
+<ol>
+<li><strong>Right</strong> to redeem (close family relationship)</li>
+<li><strong>Resources</strong> to redeem (able to pay the price)</li>
+<li><strong>Resolve</strong> to redeem (willing to act)</li>
+</ol>
+<p>God identifies Himself as Israel's <em>go'el</em>: He is near (covenant relationship), He is able (infinite power), He is willing (covenant faithfulness).</p>
+<h3>Christological Connection</h3>
+<p>Jesus Christ is the ultimate <em>Go'el</em>:</p>
+<ul>
+<li><strong>Near:</strong> He became our kinsman through incarnation</li>
+<li><strong>Able:</strong> His infinite Atonement covers all sin</li>
+<li><strong>Willing:</strong> "No man taketh [my life] from me, but I lay it down of myself" (<a href="https://www.blueletterbible.org/kjv/jhn/10/18/s_1007018" target="_blank" data-ref="John 10:18">John 10:18</a>)</li>
+</ul>
+<h3>LDS Application</h3>
+<p>In LDS theology, redemption involves both deliverance from sin (spiritual redemption) and resurrection (physical redemption). Christ as Redeemer accomplishes both—He "buyeth back" His people from bondage to death and sin.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 6: זָכַר (<em>zakar</em>) — "To Remember"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h2142/kjv/wlc/0-1/" target="_blank" data-lexicon="to remember, recall, mention" data-strongs="H2142" data-translit="zâkar" data-original="זָכַר" data-lang="hebrew" data-verse="">ז-כ-ר</a> (<em>Z-K-R</em>)</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/6/5/s_56005" target="_blank" data-ref="Exodus 6:5">Exodus 6:5</a> — "I have remembered my covenant"</p>
+<h3>Meaning</h3>
+<p><em>Zakar</em> means to remember, recall, or be mindful of. But in Hebrew thought, "remembering" is not merely cognitive—it leads to action.</p>
+<p><strong>Greek / Latin / English parallels:</strong> Greek <a href="https://www.blueletterbible.org/lexicon/g3403/kjv/tr/0-1/" target="_blank">μιμνῄσκομαι (<em>mimnēskomai</em>, "to remember")</a>, Latin <a href="https://en.wiktionary.org/wiki/recordor#Latin" target="_blank"><em>recordor</em></a>, English <a href="https://www.etymonline.com/word/remember" target="_blank">remember</a>.</p>
+<h3>Key Usages</h3>
+<table class="info-table">
+<tr><th>Passage</th><th>Context</th><th>Result</th></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/gen/8/1/s_8001" target="_blank" data-ref="Genesis 8:1">Genesis 8:1</a></td><td>"God remembered Noah"</td><td>Sent wind to recede waters</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/gen/30/22/s_30022" target="_blank" data-ref="Genesis 30:22">Genesis 30:22</a></td><td>"God remembered Rachel"</td><td>Opened her womb</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/2/24/s_52024" target="_blank" data-ref="Exodus 2:24">Exodus 2:24</a></td><td>"God remembered his covenant"</td><td>Heard Israel's groaning</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/psa/105/8/s_583008" target="_blank" data-ref="Psalm 105:8">Psalm 105:8</a></td><td>"He hath remembered his covenant for ever"</td><td>Ongoing faithfulness</td></tr>
+</table>
+<h3>Theological Significance</h3>
+<p>When Scripture says God "remembers," it does not mean He had forgotten. Divine remembering means:</p>
+<ol>
+<li><strong>Attention:</strong> God turns His focus toward someone</li>
+<li><strong>Action:</strong> God intervenes on their behalf</li>
+<li><strong>Covenant faithfulness:</strong> God honors His promises</li>
+</ol>
+<p>The opposite—"forgetting"—means withholding action, not ignorance.</p>
+<h3>LDS Application</h3>
+<p>The sacrament prayers use this concept: "that they may... always remember him" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/20?lang=eng&id=p77#p77" target="_blank" data-ref="D&C 20:77">D&C 20:77</a>). Our "remembering" Christ should lead to action—keeping His commandments. Similarly, when God "remembers" His covenant with us, redemptive action follows.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study Summary Table</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Word</th><th>Transliteration</th><th>Root</th><th>Basic Meaning</th><th>Key Verse</th></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h3058/kjv/wlc/0-1/" target="_blank" data-lexicon="Jehu = &quot;Jehovah is He&quot; the king of the northern kingdom Israel who overthrew the dynasty of Omri son of Hanani and an..." data-strongs="H3058" data-translit="yêû&#x27;" data-original="יְהֹוָה" data-lang="hebrew" data-verse="">יהוה</a></td><td>YHWH</td><td><a href="https://www.blueletterbible.org/lexicon/h1961/kjv/wlc/0-1/" target="_blank" data-lexicon="to be, become, come to pass, exist, happen, fall out (Qal) — to happen, fall out, occur, take place, come about, come..." data-strongs="H1961" data-translit="hāyâ" data-original="הָיָה" data-lang="hebrew" data-verse="">ה-י-ה</a></td><td>"He is" / The LORD</td><td>Ex. 3:15</td></tr>
+<tr><td>אֶהְיֶה</td><td>Ehyeh</td><td><a href="https://www.blueletterbible.org/lexicon/h1961/kjv/wlc/0-1/" target="_blank" data-lexicon="to be, become, come to pass, exist, happen, fall out (Qal) — to happen, fall out, occur, take place, come about, come..." data-strongs="H1961" data-translit="hāyâ" data-original="הָיָה" data-lang="hebrew" data-verse="">ה-י-ה</a></td><td>"I am" / "I will be"</td><td>Ex. 3:14</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h5572/kjv/wlc/0-1/" target="_blank" data-lexicon="a bush, thorny bushthe burning bush of Mosesperhaps a blackberry bush" data-strongs="H5572" data-translit="sᵊnê" data-original="סְנֶה" data-lang="hebrew" data-verse="">סְנֶה</a></td><td>Seneh</td><td>—</td><td>Bush (thornbush)</td><td>Ex. 3:2</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h8392/kjv/wlc/0-1/" target="_blank" data-lexicon="arkvessel which Noah builtbasket vessel in which Moses was placed" data-strongs="H8392" data-translit="tēḇâ" data-original="תֵּבָה" data-lang="hebrew" data-verse="">תֵּבָה</a></td><td>Tevah</td><td>—</td><td>Ark, vessel</td><td>Ex. 2:3</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h1350/kjv/wlc/0-1/" target="_blank" data-lexicon="to redeem, act as kinsman-redeemer, avenge, revenge, ransom, do the part of a kinsman" data-strongs="H1350" data-translit="gā&#x27;al" data-original="גָּאַל" data-lang="hebrew" data-verse="">גָּאַל</a></td><td>Ga'al</td><td><a href="https://www.blueletterbible.org/lexicon/h1350/kjv/wlc/0-1/" target="_blank" data-lexicon="to redeem, act as kinsman-redeemer, avenge, revenge, ransom, do the part of a kinsman" data-strongs="H1350" data-translit="gā&#x27;al" data-original="גָּאַל" data-lang="hebrew" data-verse="">ג-א-ל</a></td><td>Redeem, act as kinsman</td><td>Ex. 6:6</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h2142/kjv/wlc/0-1/" target="_blank" data-lexicon="to remember, recall, mention" data-strongs="H2142" data-translit="zâkar" data-original="זָכַר" data-lang="hebrew" data-verse="">זָכַר</a></td><td>Zakar</td><td><a href="https://www.blueletterbible.org/lexicon/h2142/kjv/wlc/0-1/" target="_blank" data-lexicon="to remember, recall, mention" data-strongs="H2142" data-translit="zâkar" data-original="זָכַר" data-lang="hebrew" data-verse="">ז-כ-ר</a></td><td>Remember (leading to action)</td><td>Ex. 6:5</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 5: WEEK 13: JEWISH PERSPECTIVE -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">5. Week 13: Jewish Perspective</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Introduction</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The opening chapters of Exodus (<em>Shemot</em>, "Names") have generated rich rabbinic commentary across millennia. The rabbis explored every detail of Moses' birth, the burning bush theophany, and the revelation of the divine name. This section draws from Exodus Rabbah, Talmud, and classical commentators to illuminate the text's deeper layers.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>1. The Significance of Names (<em>Shemot</em>)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The book opens: "Now these are the names (<em>shemot</em>) of the children of Israel" (<a href="https://www.sefaria.org/Exodus.1.1" target="_blank">Exodus 1:1</a>). The rabbis asked: Why list names we already know from Genesis?</p>
+<p><strong>Exodus Rabbah 1:3</strong> teaches that Israel merited redemption because they preserved four things in Egypt:</p>
+<ol>
+<li><strong>Their names</strong> — they did not adopt Egyptian names</li>
+<li><strong>Their language</strong> — they continued speaking Hebrew</li>
+<li><strong>Their modesty</strong> — they maintained moral standards</li>
+<li><strong>Their unity</strong> — they did not inform on one another</li>
+</ol>
+<blockquote>
+<p>"By the merit of these four things, Israel was redeemed from Egypt."</p>
+<p>— <a href="https://www.sefaria.org/Shemot_Rabbah.1.3" target="_blank">Exodus Rabbah 1:3</a></p>
+</blockquote>
+<h3>LDS Connection</h3>
+<p>President Russell M. Nelson has emphasized the covenant power of taking the Savior's name upon us (<a href="https://www.churchofjesuschrist.org/study/general-conference/2018/10/the-correct-name-of-the-church?lang=eng" target="_blank">"The Correct Name of the Church," Oct. 2018</a>). Just as Israel preserved their identity through names, Latter-day Saints take upon themselves the name of Christ at baptism and renew that covenant weekly in the sacrament.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>2. The Midwives' Courage</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The midwives Shiphrah and Puah defied Pharaoh's command to kill Hebrew boys (<a href="https://www.sefaria.org/Exodus.1.15-21" target="_blank">Exodus 1:15–21</a>).</p>
+<p><strong>Talmud Sotah 11b</strong> identifies these women:</p>
+<blockquote>
+<p>"Shiphrah—this is Jochebed... Puah—this is Miriam."</p>
+</blockquote>
+<p>The Talmud explains the names as epithets:</p>
+<ul>
+<li><em>Shiphrah</em>: from the root meaning "to beautify" — she would beautify (<a href="https://www.sefaria.org/Sotah.11b" target="_blank"><em>meshaperet</em></a>) the newborns</li>
+<li><em>Puah</em>: from the root meaning "to cry out" — she would speak (<a href="https://www.sefaria.org/Sotah.11b" target="_blank"><em>po'ah</em></a>) and coo to calm crying infants</li>
+</ul>
+<p>By this interpretation, Moses' own mother and sister worked as midwives, putting themselves at tremendous risk.</p>
+<p><a href="https://www.sefaria.org/Sotah.11b" target="_blank">Sotah 11b</a></p>
+<h3>LDS Connection</h3>
+<p>These women "feared God" more than Pharaoh (<a href="https://www.sefaria.org/Exodus.1.17" target="_blank">Exodus 1:17</a>). The doctrine of divine authority superseding human authority appears throughout scripture. Peter declared: "We ought to obey God rather than men" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/acts/5?lang=eng&id=29" target="_blank" data-ref="Acts 5:29">Acts 5:29</a>). In our day, prophets have taught that we must follow divine law even when human laws conflict.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>3. Moses in the Ark — Parallels to Noah</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Moses' basket is called a <a href="https://www.blueletterbible.org/lexicon/h8392/kjv/wlc/0-1/" target="_blank" data-lexicon="arkvessel which Noah builtbasket vessel in which Moses was placed" data-strongs="H8392" data-translit="tēḇâ" data-original="תֵּבָה" data-lang="hebrew" data-verse="">תֵּבָה</a> (<em>tevah</em>)—the same word used for Noah's ark (<a href="https://www.sefaria.org/Exodus.2.3" target="_blank">Exodus 2:3</a>).</p>
+<p><strong>Exodus Rabbah 1:20</strong> draws the connection:</p>
+<blockquote>
+<p>"Why is it called <em>tevah</em>? Because just as Noah's ark saved the world, so this ark would save one who would save Israel."</p>
+</blockquote>
+<p>The midrash notes additional parallels:</p>
+<ul>
+<li>Both arks are covered with pitch</li>
+<li>Both float on waters of judgment</li>
+<li>Both carry the means of salvation for humanity</li>
+</ul>
+<p><a href="https://www.sefaria.org/Shemot_Rabbah.1.20" target="_blank">Exodus Rabbah 1:20</a></p>
+<h3>LDS Connection</h3>
+<p>Modern apostles teach that disciples on the covenant path need not fear in perilous times (<a href="https://www.churchofjesuschrist.org/study/general-conference/2018/10/be-not-troubled?lang=eng" target="_blank">Ronald A. Rasband, "Be Not Troubled," Oct. 2018</a>). Just as the <em>tevah</em> carried Noah and Moses through destructive waters, the covenant path provides protection through the storms of mortality. The waters that threaten destruction become the means of deliverance for those inside the ark.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>4. Why the Burning Bush? Rabbinic Explanations</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The rabbis asked: Why did God reveal Himself in a lowly thornbush (<em>seneh</em>) rather than a majestic cedar or oak?</p>
+<p><strong>Exodus Rabbah 2:5</strong> offers several explanations:</p>
+<ol>
+<li><strong>Solidarity with Israel:</strong> Just as Israel was in lowliness (slavery), God revealed Himself in a lowly bush</li>
+<li><strong>Accessibility:</strong> The thornbush is common everywhere — so God is accessible everywhere</li>
+<li><strong>Indestructibility:</strong> The thornbush, though humble, is hard to destroy — so Israel, though persecuted, cannot be destroyed</li>
+</ol>
+<blockquote>
+<p>"Why the thornbush? To teach that there is no place devoid of the Divine Presence—even a thornbush."</p>
+<p>— <a href="https://www.sefaria.org/Shemot_Rabbah.2.5" target="_blank">Exodus Rabbah 2:5</a></p>
+</blockquote>
+<h3>LDS Connection</h3>
+<p>The idea that God reveals Himself in humble circumstances resonates with Restoration history. The First Vision occurred not in a cathedral but in a grove of trees. Joseph Smith was a farm boy, not a theologian. God chooses the weak things of the world to confound the mighty (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/1?lang=eng&id=27" target="_blank" data-ref="1 Corinthians 1:27">1 Corinthians 1:27</a>).</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>5. The Divine Name — Rabbinic Theology</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Moses asks God: "What is his name? What shall I say unto them?" (<a href="https://www.sefaria.org/Exodus.3.13" target="_blank">Exodus 3:13</a>).</p>
+<p><strong>Exodus Rabbah 3:6</strong> explains why Moses needed to know the name:</p>
+<blockquote>
+<p>"Moses said before the Holy One: 'Master of the Universe! They will say to me: What is His name? What shall I answer them?' God said: 'Tell them that I am who I was, I am who I am, I am who I will be.'"</p>
+</blockquote>
+<p>The midrash interprets "I AM THAT I AM" (<em>Ehyeh asher Ehyeh</em>) as encompassing all times:</p>
+<ul>
+<li>Past: "I was with them in this bondage"</li>
+<li>Present: "I am with them now"</li>
+<li>Future: "I will be with them in future oppressions"</li>
+</ul>
+<p><a href="https://www.sefaria.org/Shemot_Rabbah.3.6" target="_blank">Exodus Rabbah 3:6</a></p>
+<h3>LDS Connection</h3>
+<p>Latter-day revelation confirms that Christ is the eternal I AM. <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/39?lang=eng&id=p1#p1" target="_blank" data-ref="D&C 39:1">D&C 39:1</a> records: "Hearken and listen to the voice of him who is from all eternity to all eternity, the Great I AM." The same God who spoke to Moses spoke to Joseph Smith—unchanging, ever-present, covenant-keeping.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>6. Moses' Reluctance — The Humble Prophet</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Moses offered five objections to his calling (<a href="https://www.sefaria.org/Exodus.3.11-4.13" target="_blank">Exodus 3:11–4:13</a>). The rabbis viewed this not as cowardice but as profound humility.</p>
+<p><strong>Exodus Rabbah 3:4</strong> teaches:</p>
+<blockquote>
+<p>"Moses' humility is greater than Abraham's or David's. When Abraham was told to sacrifice Isaac, he rose early. When David was offered kingship, he accepted. But Moses said: 'Who am I?' — he was the humblest of all men."</p>
+</blockquote>
+<p>The midrash connects Moses' humility to his effectiveness:</p>
+<blockquote>
+<p>"Because he was humble, he was chosen. God does not choose the proud."</p>
+</blockquote>
+<p><a href="https://www.sefaria.org/Shemot_Rabbah.3.4" target="_blank">Exodus Rabbah 3:4</a></p>
+<h3>LDS Connection</h3>
+<p>The Lord revealed to Joseph Smith: "Be thou humble; and the Lord thy God shall lead thee by the hand" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/112?lang=eng&id=10" target="_blank" data-ref="D&C 112:10">D&C 112:10</a>). Moses' reluctance models appropriate humility before divine calling. The Prophet Joseph Smith similarly described his weaknesses—yet God worked through him.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>7. "Heavy of Tongue" — Moses' Speech</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Moses protests: "I am slow of speech, and of a slow tongue" (<a href="https://www.sefaria.org/Exodus.4.10" target="_blank">Exodus 4:10</a>).</p>
+<p><strong>Exodus Rabbah 1:26</strong> provides backstory:</p>
+<blockquote>
+<p>When Moses was a child in Pharaoh's palace, he reached for Pharaoh's crown. Pharaoh's advisors saw this as a sign Moses would seize the throne. To test the child, they placed a gold bowl and burning coals before him. If Moses chose gold, he was dangerous; if coals, he was innocent. Moses reached for the gold, but the angel Gabriel pushed his hand toward the coals. Moses put the coal to his mouth, burning his tongue.</p>
+</blockquote>
+<p>This legend explains Moses' speech impediment while preserving his character—he wasn't naturally greedy; divine intervention protected him.</p>
+<p><a href="https://www.sefaria.org/Shemot_Rabbah.1.26" target="_blank">Exodus Rabbah 1:26</a></p>
+<h3>LDS Connection</h3>
+<p>God works through imperfect instruments. Elder David A. Bednar taught that the Savior strengthens us "to do and be good and to serve beyond our own individual desire and natural capacity" (<a href="https://www.churchofjesuschrist.org/study/liahona/2015/03/youth/strength-beyond-our-own?lang=eng" target="_blank">"Strength beyond Our Own," Liahona, Mar. 2015</a>). Moses' weakness became the occasion for Aaron's partnership and for God's glory to be more evident. "My strength is made perfect in weakness" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/2-cor/12?lang=eng&id=9" target="_blank" data-ref="2 Corinthians 12:9">2 Corinthians 12:9</a>).</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>8. Pharaoh's Hardened Heart</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The text says God "hardened" Pharaoh's heart (<a href="https://www.sefaria.org/Exodus.4.21" target="_blank">Exodus 4:21</a>). The rabbis grappled with this apparent denial of free will.</p>
+<p><strong>Maimonides (Rambam)</strong> explains in his commentary:</p>
+<blockquote>
+<p>"Pharaoh's early refusals were his own choice. Only after he had repeatedly chosen evil did God 'strengthen' his heart—not to prevent repentance but as punishment for earlier sins. He lost the opportunity to repent because he had so thoroughly corrupted himself."</p>
+</blockquote>
+<p>The Hebrew <a href="https://www.blueletterbible.org/lexicon/h3169/kjv/wlc/0-1/" target="_blank" data-lexicon="Hezekiah or Jehizkiah = &quot;Jehovah has made strong&quot; son of king Ahaz by Abi or Abijah and the 12th king of Judah; his r..." data-strongs="H3169" data-translit="yᵊḥizqîyâ" data-original="חָזַק" data-lang="hebrew" data-verse="">חָזַק</a> (<em>chazaq</em>) means "to strengthen" — God strengthened Pharaoh's resolve in the direction Pharaoh had already chosen.</p>
+<p>The JST supports this reading: "Pharaoh will harden his heart" (JST <a href="https://www.blueletterbible.org/kjv/exo/4/21/s_54021" target="_blank" data-ref="Exodus 4:21">Exodus 4:21</a>) — preserving human agency.</p>
+<h3>LDS Connection</h3>
+<p>The Book of Mormon teaches this principle directly: "He that hardeneth his heart, the same receiveth the lesser portion of the word; and he that will not harden his heart, to him is given the greater portion" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/12?lang=eng&id=10" target="_blank" data-ref="Alma 12:10">Alma 12:10</a>). Pharaoh's hardening was the cumulative result of his choices, not divine coercion.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>9. "I Have Remembered My Covenant"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>God declares: "I have remembered (<em>zakarti</em>) my covenant" (<a href="https://www.sefaria.org/Exodus.6.5" target="_blank">Exodus 6:5</a>).</p>
+<p><strong>Exodus Rabbah 3:8</strong> teaches:</p>
+<blockquote>
+<p>"When does God 'remember'? When Israel cries out. Their groaning reached before Him, and He acted on the covenant."</p>
+</blockquote>
+<p>The midrash connects divine remembering to prayer:</p>
+<blockquote>
+<p>"The Holy One never forgets His promises. But when Israel prays, their prayers 'remind' God—not that He had forgotten, but that the time for action has come."</p>
+</blockquote>
+<p><a href="https://www.sefaria.org/Shemot_Rabbah.3.8" target="_blank">Exodus Rabbah 3:8</a></p>
+<h3>LDS Connection</h3>
+<p>The covenant remains operative even when circumstances seem hopeless. President Henry B. Eyring taught that covenant remembrance invites the Lord's sustaining presence (<a href="https://www.churchofjesuschrist.org/study/liahona/2005/12/remembering-him-always?lang=eng" target="_blank">"Remembering Him Always," Dec. 2005</a>). Israel's four hundred years of bondage did not void the Abrahamic covenant; God was working on His timetable.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>10. The Significance of Holy Ground</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>God commands: "Put off thy shoes from off thy feet, for the place whereon thou standest is holy ground" (<a href="https://www.sefaria.org/Exodus.3.5" target="_blank">Exodus 3:5</a>).</p>
+<p><strong>Exodus Rabbah 2:6</strong> asks: What made the ground holy?</p>
+<blockquote>
+<p>"It was not inherently holy. The Presence of God sanctified it. Wherever God reveals Himself, that place becomes holy."</p>
+</blockquote>
+<p>This principle would later apply to:</p>
+<ul>
+<li>Mount Sinai</li>
+<li>The Tabernacle</li>
+<li>The Temple in Jerusalem</li>
+</ul>
+<p><a href="https://www.sefaria.org/Shemot_Rabbah.2.6" target="_blank">Exodus Rabbah 2:6</a></p>
+<h3>LDS Connection</h3>
+<p>Temples are holy ground because God's presence dwells there. We remove shoes symbolically through proper temple dress and spiritual preparation. The ground of the Sacred Grove became holy when the Father and Son appeared there. Wherever God manifests Himself, we stand on holy ground.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Source Table</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Source</th><th>Citation</th><th>Sefaria Link</th><th>Notes</th></tr>
+<tr><td>Exodus Rabbah 1:3</td><td>Merit of four things</td><td><a href="https://www.sefaria.org/Shemot_Rabbah.1.3" target="_blank">Sefaria</a></td><td>Names, language, modesty, unity</td></tr>
+<tr><td>Talmud Sotah 11b</td><td>Midwives as Jochebed/Miriam</td><td><a href="https://www.sefaria.org/Sotah.11b" target="_blank">Sefaria</a></td><td>Etymology of names</td></tr>
+<tr><td>Exodus Rabbah 1:20</td><td>Moses' ark parallels Noah</td><td><a href="https://www.sefaria.org/Shemot_Rabbah.1.20" target="_blank">Sefaria</a></td><td><em>Tevah</em> connection</td></tr>
+<tr><td>Exodus Rabbah 2:5</td><td>Why the thornbush</td><td><a href="https://www.sefaria.org/Shemot_Rabbah.2.5" target="_blank">Sefaria</a></td><td>Divine accessibility</td></tr>
+<tr><td>Exodus Rabbah 3:6</td><td>Divine name explained</td><td><a href="https://www.sefaria.org/Shemot_Rabbah.3.6" target="_blank">Sefaria</a></td><td>Past, present, future</td></tr>
+<tr><td>Exodus Rabbah 3:4</td><td>Moses' humility</td><td><a href="https://www.sefaria.org/Shemot_Rabbah.3.4" target="_blank">Sefaria</a></td><td>Greater than Abraham/David</td></tr>
+<tr><td>Exodus Rabbah 1:26</td><td>Coal legend</td><td><a href="https://www.sefaria.org/Shemot_Rabbah.1.26" target="_blank">Sefaria</a></td><td>Moses' speech impediment</td></tr>
+<tr><td>Maimonides</td><td>Hardening of heart</td><td>Commentary on Exodus</td><td>Agency preserved</td></tr>
+<tr><td>Exodus Rabbah 3:8</td><td>Divine remembering</td><td><a href="https://www.sefaria.org/Shemot_Rabbah.3.8" target="_blank">Sefaria</a></td><td>Prayer activates covenant</td></tr>
+<tr><td>Exodus Rabbah 2:6</td><td>Holy ground</td><td><a href="https://www.sefaria.org/Shemot_Rabbah.2.6" target="_blank">Sefaria</a></td><td>Presence sanctifies place</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 6: WEEK 13: TEACHING APPLICATIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">6. Week 13: Teaching Applications</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Overview</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>This week's material offers rich teaching opportunities across all settings. The themes—divine calling, covenant faithfulness, overcoming inadequacy, and deliverance from bondage—resonate with learners of every age. The burning bush theophany and revelation of God's name provide powerful spiritual anchors.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Family Home Evening</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>For Young Children (Ages 3–7)</h3>
+<p><strong>Focus:</strong> God speaks to Moses at the burning bush</p>
+<p><strong>Object Lesson:</strong> Light a candle (with appropriate safety). Explain: "This fire burns the candle down. But Moses saw a bush that burned and burned but didn't get used up! God was in the fire. When God is with us, we don't get 'used up' either—He gives us strength."</p>
+<p><strong>Activity:</strong> Draw or color a picture of Moses at the burning bush. Practice saying: "I AM" — this is God's name!</p>
+<p><strong>Song:</strong> "I Am a Child of God" — connect to God telling Moses who He is</p>
+<p><strong>Discussion Question:</strong> "God said to Moses, 'I will be with you.' When do you feel like God is with you?"</p>
+<hr>
+<h3>For Older Children (Ages 8–11)</h3>
+<p><strong>Focus:</strong> Moses' five objections and God's answers</p>
+<p><strong>Activity:</strong> Create a two-column chart:</p>
+<ul>
+<li>Column 1: Moses' objections ("Who am I?" "What if they don't believe me?" etc.)</li>
+<li>Column 2: God's answers ("I will be with thee," signs given, etc.)</li>
+</ul>
+<p><strong>Discussion:</strong> "Have you ever felt like you couldn't do something God or your parents asked? What helped you try anyway?"</p>
+<p><strong>Scripture Chain:</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/4/10-12/s_54010" target="_blank" data-ref="Exodus 4:10-12">Exodus 4:10–12</a> together. God made Moses' mouth—He can help Moses speak.</p>
+<p><strong>Challenge:</strong> This week, try something that feels hard and ask Heavenly Father for help.</p>
+<hr>
+<h3>For Youth/Teens</h3>
+<p><strong>Focus:</strong> Responding to God's call despite feeling inadequate</p>
+<p><strong>Discussion Questions:</strong></p>
+<ol>
+<li>Moses gave five reasons why he couldn't do what God asked. Have you ever made excuses when asked to do something hard?</li>
+<li>God didn't remove Moses' weaknesses—He promised to be with him. How is that different from what we might expect?</li>
+<li>The midwives "feared God" more than Pharaoh. What does it mean to fear God more than people?</li>
+</ol>
+<p><strong>Application:</strong> Write in your journal about something you feel God is asking you to do but you feel unqualified for. What would it look like to say "yes" anyway?</p>
+<p><strong>Video:</strong> Consider "The Burning Bush" from the Church media library</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Sunday School (Adults)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Lesson Approach 1: The Divine Name</h3>
+<p><strong>Opening Question:</strong> "If someone asked you, 'Who is your God?'—not 'What do you believe?' but 'Who is He?'—what would you say?"</p>
+<p><strong>Key Scriptures:</strong></p>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/exo/3/13-15/s_53013" target="_blank" data-ref="Exodus 3:13-15">Exodus 3:13–15</a> — "I AM THAT I AM"</li>
+<li><a href="https://www.blueletterbible.org/kjv/jhn/8/58/s_1005058" target="_blank" data-ref="John 8:58">John 8:58</a> — "Before Abraham was, I am"</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/39?lang=eng&id=p1#p1" target="_blank" data-ref="D&C 39:1">D&C 39:1</a> — "The Great I AM"</li>
+</ul>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>Why did Moses need to know God's name?</li>
+<li>What does "I AM" reveal about God's character?</li>
+<li>How does knowing Jesus is the "I AM" of the Old Testament affect your relationship with Him?</li>
+</ol>
+<p><strong>Testimony:</strong> The God who spoke to Moses is the same God who speaks to us today. He is always present ("I AM"), always faithful ("I have remembered my covenant"), always accessible (even in a thornbush).</p>
+<hr>
+<h3>Lesson Approach 2: "I Have Remembered My Covenant"</h3>
+<p><strong>Opening:</strong> Display or draw a simple timeline: Abraham → Isaac → Jacob → Egypt (400 years) → Moses. Ask: "Did God forget His promises during those 400 years?"</p>
+<p><strong>Key Scripture:</strong> <a href="https://www.blueletterbible.org/kjv/exo/6/2-8/s_56002" target="_blank" data-ref="Exodus 6:2-8">Exodus 6:2–8</a> — The seven "I will" statements</p>
+<p><strong>Activity:</strong> List the seven "I will" promises on the board. Ask: Which of these apply to us today?</p>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>What does it mean that God "remembered" His covenant? (He didn't forget—to remember means to act)</li>
+<li>How has God shown that He remembers His covenant with you?</li>
+<li>The Israelites didn't believe Moses at first (<a href="https://www.blueletterbible.org/kjv/exo/6/9/s_56009" target="_blank" data-ref="Exodus 6:9">Exodus 6:9</a>). Why is it sometimes hard to believe God's promises when we're suffering?</li>
+</ol>
+<p><strong>Closing:</strong> God's promises to Israel were fulfilled. His promises to us will also be fulfilled—in His time, in His way.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Primary</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Junior Primary (Ages 3–7)</h3>
+<p><strong>Visual:</strong> Large picture of Moses at the burning bush</p>
+<p><strong>Story:</strong> Tell the story simply: "Moses was watching sheep. He saw a bush on fire—but it didn't burn up! God was in the fire. God said, 'Moses, I need you to help my people.' Moses was scared. He said, 'I can't talk very well.' But God said, 'I will help you.'"</p>
+<p><strong>Activity:</strong> Sing "I'm Trying to Be like Jesus" — discuss how Jesus helps us do hard things, just like God helped Moses.</p>
+<p><strong>Testimony:</strong> God asks us to do hard things too—be kind, share, tell the truth. And He promises to help us, just like He helped Moses.</p>
+<hr>
+<h3>Senior Primary (Ages 8–11)</h3>
+<p><strong>Focus:</strong> Standing for the right even when it's hard</p>
+<p><strong>Hero Spotlight:</strong> Shiphrah and Puah — the midwives who said "no" to Pharaoh because they feared God more.</p>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>What did Pharaoh tell the midwives to do? (Kill baby boys)</li>
+<li>What did they do instead? (Saved the babies)</li>
+<li>Were they scared? (Probably! Pharaoh was powerful!)</li>
+<li>Why did they disobey Pharaoh? (They feared God more)</li>
+</ol>
+<p><strong>Application:</strong> "Sometimes friends or even adults might ask us to do something wrong. Like the midwives, we can choose to obey God instead. What might that look like for us?"</p>
+<p><strong>CTR Connection:</strong> The midwives chose the right even when it was scary. We can too!</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Youth (Sunday School / Mutual)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>For Ages 12–14</h3>
+<p><strong>Focus:</strong> Feeling inadequate for God's work</p>
+<p><strong>Opening Activity:</strong> On slips of paper, have youth anonymously write something they've been asked to do (calling, assignment, family responsibility) that they feel unqualified for. Collect and read a few aloud (without identifying anyone).</p>
+<p><strong>Scripture Study:</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/4/10-17/s_54010" target="_blank" data-ref="Exodus 4:10-17">Exodus 4:10–17</a> together.</p>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>What was Moses' concern? (Not eloquent, slow of speech)</li>
+<li>Did God remove his weakness? (No—He promised to help and gave Aaron)</li>
+<li>What does this teach us about how God uses imperfect people?</li>
+</ol>
+<p><strong>Prophet Quote:</strong> Elder Jeffrey R. Holland taught, "Except in the case of His only perfect Begotten Son, imperfect people are all God has ever had to work with" (<a href="https://www.churchofjesuschrist.org/study/general-conference/2013/04/lord-i-believe?lang=eng" target="_blank">"Lord, I Believe," April 2013</a>).</p>
+<p><strong>Challenge:</strong> This week, accept an opportunity to serve even if you don't feel ready. Trust that God will equip you.</p>
+<hr>
+<h3>For Ages 15–18</h3>
+<p><strong>Focus:</strong> The burning bush as pattern for personal revelation</p>
+<p><strong>Discussion Questions:</strong></p>
+<ol>
+<li>Moses was "in the backside of the desert" — the most remote place possible. Yet God found him there. What does this teach about where revelation can come?</li>
+<li>God told Moses to remove his sandals. What do we "remove" to stand on holy ground? (Distractions, pride, unworthiness)</li>
+<li>Moses asked God's name—he wanted to know WHO he was dealing with. How well do you know the God you worship?</li>
+</ol>
+<p><strong>Personal Application:</strong> The burning bush wasn't searching for Moses. Moses was just doing his job (shepherding). Revelation often comes in ordinary moments when we're available.</p>
+<p><strong>Challenge:</strong> Create space for God to speak: put away phone, sit in silence, write in journal. See what happens.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Institute / Mission Preparation</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Focus: The Divine Name in LDS Theology</h3>
+<p><strong>Doctrinal Foundation:</strong></p>
+<ul>
+<li>YHWH (Jehovah) = Jesus Christ, the God of the Old Testament</li>
+<li>The Father is Elohim; the Son is Jehovah</li>
+<li>This is explicit LDS doctrine (Bible Dictionary, "Jehovah")</li>
+</ul>
+<p><strong>Key Scriptures:</strong></p>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/exo/3/14/s_53014" target="_blank" data-ref="Exodus 3:14">Exodus 3:14</a> — "I AM THAT I AM"</li>
+<li><a href="https://www.blueletterbible.org/kjv/jhn/8/58/s_1005058" target="_blank" data-ref="John 8:58">John 8:58</a> — Jesus claims this name</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/110?lang=eng&id=p3-p4#p3" target="_blank" data-ref="D&C 110:3-4">D&C 110:3–4</a> — Christ appears to Joseph Smith and Oliver Cowdery as Jehovah</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/15?lang=eng&id=p5#p5" target="_blank" data-ref="3 Nephi 15:5">3 Nephi 15:5</a> — Christ confirms He gave the law to Moses</li>
+</ul>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>Why does it matter doctrinally that Jesus is the Jehovah of the Old Testament?</li>
+<li>How does this affect how we read Old Testament passages about "the LORD"?</li>
+<li>What does it mean that the God who delivered Israel from Egypt is the same God who atoned for our sins?</li>
+</ol>
+<p><strong>Mission Application:</strong> When teaching investigators, be prepared to explain that Jesus Christ has always been our Savior—He ministered to prophets throughout history, not just during His mortal ministry.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Personal Study</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Daily Focus Guide</h3>
+<p><strong>Day 1 (Monday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/1/1/s_51001" target="_blank" data-ref="Exodus 1">Exodus 1</a>. Note the courage of the midwives. Journal: "When have I needed courage to obey God over people?"</p>
+<p><strong>Day 2 (Tuesday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/2/1/s_52001" target="_blank" data-ref="Exodus 2">Exodus 2</a>. Notice the <em>tevah</em> (ark) connection to Noah. Journal: "How is the covenant path like an ark of safety in my life?"</p>
+<p><strong>Day 3 (Wednesday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/3/1-10/s_53001" target="_blank" data-ref="Exodus 3:1-10">Exodus 3:1–10</a>. Focus on "holy ground." Journal: "Where do I encounter holy ground? How do I prepare to stand there?"</p>
+<p><strong>Day 4 (Thursday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/3/11-22/s_53011" target="_blank" data-ref="Exodus 3:11-22">Exodus 3:11–22</a>. List Moses' objections and God's answers. Journal: "What objections do I raise when God asks something of me?"</p>
+<p><strong>Day 5 (Friday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/4/1/s_54001" target="_blank" data-ref="Exodus 4">Exodus 4</a>. Notice God's patience with Moses' reluctance. Journal: "How has God been patient with me?"</p>
+<p><strong>Day 6 (Saturday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/5/1/s_55001" target="_blank" data-ref="Exodus 5">Exodus 5–6</a>. Notice that things got worse before they got better. Journal: "How do I respond when obedience seems to make things harder?"</p>
+<p><strong>Day 7 (Sunday):</strong> Review <a href="https://www.blueletterbible.org/kjv/exo/6/2-8/s_56002" target="_blank" data-ref="Exodus 6:2-8">Exodus 6:2–8</a> (the seven "I will" promises). Journal: "Which of God's promises do I need to trust more deeply?"</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Key Takeaways for All Settings</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>God remembers His covenants</strong> — even when centuries pass, even when circumstances seem hopeless.</li>
+</ol>
+<ol>
+<li><strong>God calls imperfect people</strong> — Moses' weaknesses didn't disqualify him; they became occasions for God's power.</li>
+</ol>
+<ol>
+<li><strong>"I AM" is always present</strong> — the divine name assures us that God was, is, and will be with us.</li>
+</ol>
+<ol>
+<li><strong>Deliverance requires faith before seeing results</strong> — things got worse for Israel after Moses first confronted Pharaoh.</li>
+</ol>
+<ol>
+<li><strong>Holy ground is wherever God's presence dwells</strong> — we can encounter it in temples, homes, and daily life.</li>
+</ol>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 7: WEEK 13: STUDY QUESTIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">7. Week 13: Study Questions</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Questions for Personal Reflection</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Midwives' Courage (Exodus 1:15–21)</h3>
+<ol>
+<li>The midwives "feared God" more than Pharaoh. What does it mean to "fear God" in a healthy, reverent way versus an unhealthy, anxious way?</li>
+</ol>
+<ol>
+<li>Have you ever faced a situation where obeying God meant disobeying human authority or social pressure? How did you respond?</li>
+</ol>
+<ol>
+<li>The midwives' names are preserved while Pharaoh remains anonymous in the text. What does this literary choice suggest about what God values?</li>
+</ol>
+<hr>
+<h3>Moses' Preparation (Exodus 2:1–22)</h3>
+<ol>
+<li>Moses spent forty years in Pharaoh's court and forty years as a shepherd in Midian before his calling. How might both experiences have prepared him for leadership?</li>
+</ol>
+<ol>
+<li>The word <em>tevah</em> (ark) connects Moses' basket to Noah's ark. How does the concept of an "ark of safety" apply to your life today?</li>
+</ol>
+<ol>
+<li>Moses fled Egypt after killing the Egyptian, then lived forty years in obscurity. Have you experienced seasons of waiting or "wilderness time" that later proved purposeful?</li>
+</ol>
+<hr>
+<h3>The Burning Bush (Exodus 3:1–15)</h3>
+<ol>
+<li>God appeared in a humble thornbush rather than a majestic tree. What does this suggest about where and how God might reveal Himself to you?</li>
+</ol>
+<ol>
+<li>"Put off thy shoes from off thy feet, for the place whereon thou standest is holy ground" (<a href="https://www.blueletterbible.org/kjv/exo/3/5/s_53005" target="_blank" data-ref="Exodus 3:5">Exodus 3:5</a>). What makes a place "holy"? How do you prepare yourself to encounter sacred space?</li>
+</ol>
+<ol>
+<li>Moses asked God, "What is his name?" Why is knowing God's name significant for a relationship with Him?</li>
+</ol>
+<ol>
+<li>"I AM THAT I AM" — what does this name reveal about God's character and His relationship to time, existence, and covenant?</li>
+</ol>
+<hr>
+<h3>Moses' Objections (Exodus 3:11–4:17)</h3>
+<ol>
+<li>Moses offered five objections to his calling. Which of his concerns do you most relate to?</li>
+</ol>
+<p>    - "Who am I?" (inadequacy)</p>
+<p>    - "What is his name?" (authority)</p>
+<p>    - "They will not believe me" (credibility)</p>
+<p>    - "I am not eloquent" (ability)</p>
+<p>    - "Send someone else" (refusal)</p>
+<ol>
+<li>God didn't remove Moses' weaknesses—He promised to be present through them. How does this approach differ from what we might expect or desire?</li>
+</ol>
+<ol>
+<li>God's anger "kindled" at Moses' final refusal (<a href="https://www.blueletterbible.org/kjv/exo/4/14/s_54014" target="_blank" data-ref="Exodus 4:14">Exodus 4:14</a>), yet He still provided Aaron as a helper. What does this teach about God's response to our reluctance?</li>
+</ol>
+<ol>
+<li>Have you ever said "yes" to something you felt unqualified for? What happened?</li>
+</ol>
+<hr>
+<h3>"I Have Remembered My Covenant" (Exodus 6:2–8)</h3>
+<ol>
+<li>God declares "I have remembered my covenant." In Hebrew thought, to "remember" means to act on behalf of someone. When have you felt God "remembering" you?</li>
+</ol>
+<ol>
+<li>God makes seven "I will" promises in <a href="https://www.blueletterbible.org/kjv/exo/6/6-8/s_56006" target="_blank" data-ref="Exodus 6:6-8">Exodus 6:6–8</a>. Which promise speaks most powerfully to your current circumstances?</li>
+</ol>
+<ol>
+<li>After God's assurances, the Israelites "hearkened not unto Moses for anguish of spirit, and for cruel bondage" (<a href="https://www.blueletterbible.org/kjv/exo/6/9/s_56009" target="_blank" data-ref="Exodus 6:9">Exodus 6:9</a>). How does prolonged suffering affect our ability to receive good news?</li>
+</ol>
+<ol>
+<li>Things got worse for Israel after Moses' first confrontation with Pharaoh (chapter 5). How do you respond when obedience seems to make things harder before they get better?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Questions for Group Discussion</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Covenant Faithfulness</h3>
+<ol>
+<li>Four hundred years passed between Joseph's death and Moses' calling. How do you maintain faith in God's promises when fulfillment seems impossibly distant?</li>
+</ol>
+<ol>
+<li>The Abrahamic covenant promised land, seed, and blessing. How do you see these promises working in your own covenant relationship with God?</li>
+</ol>
+<hr>
+<h3>Calling and Preparation</h3>
+<ol>
+<li>Moses was prepared by experiences in both Pharaoh's court and Midianite wilderness. How might "secular" experiences prepare us for "spiritual" callings?</li>
+</ol>
+<ol>
+<li>The rabbis taught that Moses' humility exceeded Abraham's and David's. How does humility relate to effective leadership or service?</li>
+</ol>
+<hr>
+<h3>The Divine Name</h3>
+<ol>
+<li>Jesus claimed the name "I AM" (<a href="https://www.blueletterbible.org/kjv/jhn/8/58/s_1005058" target="_blank" data-ref="John 8:58">John 8:58</a>), and the Jews understood this as a claim to divinity. How does knowing Jesus is the Jehovah of the Old Testament affect your understanding of either testament?</li>
+</ol>
+<ol>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/39?lang=eng&id=p1#p1" target="_blank" data-ref="D&C 39:1">D&C 39:1</a> identifies Christ as "the Great I AM." How does this identification help you understand the continuity of God's work across dispensations?</li>
+</ol>
+<hr>
+<h3>Types and Shadows</h3>
+<ol>
+<li>Moses is often identified as a "type of Christ." What parallels do you see between Moses' life and Jesus' life/mission?</li>
+</ol>
+<ol>
+<li>The burning bush experience has been compared to the First Vision. What similarities do you notice? What differences?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Questions for Deeper Study</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Historical and Cultural</h3>
+<ol>
+<li>Pharaoh "knew not Joseph" (<a href="https://www.blueletterbible.org/kjv/exo/1/8/s_51008" target="_blank" data-ref="Exodus 1:8">Exodus 1:8</a>). How might political changes and cultural memory loss explain the shift from honored guests to enslaved people?</li>
+</ol>
+<ol>
+<li>The JST changes "angel of the LORD" (<a href="https://www.blueletterbible.org/kjv/exo/3/2/s_53002" target="_blank" data-ref="Exodus 3:2">Exodus 3:2</a>) to "presence of the LORD." What theological difference does this make?</li>
+</ol>
+<ol>
+<li>The JST clarifies that Pharaoh hardened his own heart (JST Exodus 4:21). Why is this distinction important for understanding divine justice and human agency?</li>
+</ol>
+<hr>
+<h3>Theological</h3>
+<ol>
+<li>God reveals His name as connected to "the God of Abraham, Isaac, and Jacob" (<a href="https://www.blueletterbible.org/kjv/exo/3/15-16/s_53015" target="_blank" data-ref="Exodus 3:15-16">Exodus 3:15–16</a>). Why does God identify Himself through ancestral relationships rather than abstract attributes?</li>
+</ol>
+<ol>
+<li>"I will take you to me for a people, and I will be to you a God" (<a href="https://www.blueletterbible.org/kjv/exo/6/7/s_56007" target="_blank" data-ref="Exodus 6:7">Exodus 6:7</a>) is the classic covenant formula. How does this mutual belonging define your identity as a covenant person?</li>
+</ol>
+<ol>
+<li>Moses was called to deliver Israel from physical bondage. In what ways does Christ deliver us from spiritual bondage?</li>
+</ol>
+<hr>
+<h3>Application</h3>
+<ol>
+<li>The midwives' courage saved Moses, who saved Israel, who brought forth the Messiah. How might your small acts of faithfulness have unseen consequences?</li>
+</ol>
+<ol>
+<li>Moses encountered God while doing his ordinary job (shepherding). Where in your ordinary life might you be missing divine encounters?</li>
+</ol>
+<ol>
+<li>God promised to be "with" Moses' mouth and teach him what to say (<a href="https://www.blueletterbible.org/kjv/exo/4/12/s_54012" target="_blank" data-ref="Exodus 4:12">Exodus 4:12</a>). How have you experienced divine help in moments when you needed words?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Summary Reflection</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li>What is the single most important truth you learned from <a href="https://www.blueletterbible.org/kjv/exo/1/1/s_51001" target="_blank" data-ref="Exodus 1">Exodus 1–6</a> this week?</li>
+</ol>
+<ol>
+<li>What question do you still have that you want to explore further?</li>
+</ol>
+<ol>
+<li>What specific action will you take this week because of what you've studied?</li>
+</ol>
+<hr>
+<p><em>Note: 38 questions provided for comprehensive personal and group study.</em></p>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+</div>

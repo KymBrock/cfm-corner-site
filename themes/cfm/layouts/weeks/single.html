@@ -291,7 +291,9 @@ function initInsights() {
     var firstSection = document.querySelector('.cfm-insights-section');
     if (firstSection) {
         var header = firstSection.querySelector('.section-header');
-        if (header) toggleInsightsSection(header);
+        var content = firstSection.querySelector('.section-content');
+        var isCollapsed = content && (content.style.maxHeight === '0px' || content.style.maxHeight === '');
+        if (header && isCollapsed) toggleInsightsSection(header);
     }
     // Start all sub-accordions expanded
     document.querySelectorAll('.sub-accordion-content').forEach(function(c) {

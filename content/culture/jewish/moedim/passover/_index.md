@@ -4,6 +4,12 @@ description: "A Messianic Seder guide exploring the 15 steps of the Passover mea
 hide_children: true
 ---
 
+{{< rawhtml >}}
+<div style="max-width: 320px; margin: 1.25rem auto 2rem auto; text-align: center;">
+  <img src="/images/culture/passover/passover-guide-hero-icon-clean.png" alt="Passover guide icon" style="width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 18px; box-shadow: 0 10px 24px rgba(0,0,0,0.08);" />
+</div>
+{{< /rawhtml >}}
+
 ## A Note on This Guide
 
 This is not a traditional Jewish Seder. The Passover Seder is a sacred tradition that has been meticulously preserved by the Jewish people for centuries, and to re-render it for Christian or Latter-day Saint purposes could be seen as misappropriation. We want to honor that concern directly.

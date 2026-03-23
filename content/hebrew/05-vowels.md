@@ -50,7 +50,7 @@ The Tiberian vowel system organizes its marks into five vowel classes -- A, E, I
 
 **Qamats** (<span class="nq">בָ</span>) -- a small T-shape beneath the letter. This is the long "a" sound, as in "father." You will encounter it constantly. Example: בָּרָא ([*bara*](https://www.blueletterbible.org/lexicon/h1254/kjv/wlc/0-1/), "created").
 
-**Patach** (<span class="nq">בַ</span>) -- a single horizontal line beneath the letter. This is the short "a," also like "father" but briefer. Example: בַּת ([*bat*](https://www.blueletterbible.org/lexicon/h1323/kjv/wlc/0-1/), "daughter").
+**Patach** (<span class="nq">בַ</span>) -- a single horizontal line beneath the letter. This is the short "a," like the vowel in "apple" or "bat." Example: בַּת ([*bat*](https://www.blueletterbible.org/lexicon/h1323/kjv/wlc/0-1/), "daughter").
 
 **Chataf Patach** (<span class="nq">בֲ</span>) -- an ultra-short, reduced "a" that appears on guttural letters. Example: אֲנִי ([*ani*](https://www.blueletterbible.org/lexicon/h589/kjv/wlc/0-1/), "I").
 
