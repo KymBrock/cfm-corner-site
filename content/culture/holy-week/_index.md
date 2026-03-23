@@ -2,12 +2,13 @@
 title: "Holy Week — The Final Days of Christ"
 description: "An interactive journey through the last week of the Savior's mortal ministry — from the Triumphal Entry to the Resurrection — with maps, scripture harmonies, and connections to Passover and LDS temple theology."
 hide_children: true
+card_icon: "/images/culture/holy-week/card-icon.png"
 ---
 
 <div style="margin: -20px -20px 32px -20px; position: relative; overflow: hidden; border-radius: 0 0 12px 12px;">
 <img src="/images/culture/holy-week/hero-resurrection.jpg" alt="The Risen Christ appears to Mary Magdalene at the Garden Tomb" style="width: 100%; height: auto; display: block;">
 <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.6)); padding: 40px 24px 20px;">
-<p style="color: white; margin: 0; font-size: 1.1em; font-style: italic; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">"He is not here: for he is risen, as he said." — Matthew 28:6</p>
+<p style="color: white; margin: 0; font-size: 1.1em; font-style: italic; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">"He is not here: for he is risen, as he said." — <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/28?lang=eng&id=6" target="_blank" data-ref="Matthew 28:6" style="color: white;">Matthew 28:6</a></p>
 </div>
 </div>
 
@@ -56,11 +57,11 @@ There is scholarly debate regarding the exact chronology of Holy Week. The tradi
 </div>
 <div style="display: flex; align-items: flex-start; margin-bottom: 16px;">
 <span style="color: #923a23; font-size: 1.2em; margin-right: 12px; margin-top: 2px;">✦</span>
-<span>Matthew 28:1 uses the plural "Sabbaths" (σαββάτων), suggesting two consecutive rest days — the Passover Sabbath (Friday) and the weekly Sabbath (Saturday)</span>
+<span><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/28?lang=eng&id=1" target="_blank" data-ref="Matthew 28:1">Matthew 28:1</a> uses the plural "Sabbaths" (<a href="https://www.blueletterbible.org/lexicon/g4521/kjv/tr/0-1/" target="_blank" data-strongs="G4521" data-translit="sabbaton" data-original="σαββάτων" data-lang="greek">σαββάτων</a>), suggesting two consecutive rest days — the Passover Sabbath (Friday) and the weekly Sabbath (Saturday)</span>
 </div>
 <div style="display: flex; align-items: flex-start; margin-bottom: 16px;">
 <span style="color: #923a23; font-size: 1.2em; margin-right: 12px; margin-top: 2px;">✦</span>
-<span>This timeline aligns with Christ's prophecy of being in the tomb "three days and three nights" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/12?lang=eng&id=40" target="_blank">Matthew 12:40</a>)</span>
+<span>This timeline aligns with Christ's prophecy of being in the tomb "three days and three nights" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/12?lang=eng&id=40" target="_blank" data-ref="Matthew 12:40">Matthew 12:40</a>)</span>
 </div>
 </div>
 
@@ -93,7 +94,7 @@ There is scholarly debate regarding the exact chronology of Holy Week. The tradi
 <tbody>
 <tr style="background: #f0ebe5;">
 <td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>Saturday</strong></td>
-<td style="padding: 12px; border-bottom: 1px solid #ddd;">Arrival in Bethany; Mary of Bethany anoints Jesus' feet (John 12:1-8)</td>
+<td style="padding: 12px; border-bottom: 1px solid #ddd;">Arrival in Bethany; Mary of Bethany anoints Jesus' feet (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/12?lang=eng&id=1-8" target="_blank" data-ref="John 12:1-8">John 12:1-8</a>)</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">9 Nisan</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center; color: #666; font-size: 0.9em;">—</td>
 </tr>
@@ -101,7 +102,7 @@ There is scholarly debate regarding the exact chronology of Holy Week. The tradi
 <td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>Sunday</strong></td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd;">Triumphal Entry into Jerusalem; Jesus weeps over city</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">10 Nisan</td>
-<td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="color: #466758; font-weight: 600;">Lamb Selection</span><br><span style="font-size: 0.8em; color: #666;">Ex 12:3</span></td>
+<td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="color: #466758; font-weight: 600;">Lamb Selection</span><br><span style="font-size: 0.8em; color: #666;"><a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ex/12?lang=eng&id=3" target="_blank" data-ref="Exodus 12:3">Exodus 12:3</a></span></td>
 </tr>
 <tr style="background: #f0ebe5;">
 <td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>Monday</strong></td>
@@ -125,29 +126,29 @@ There is scholarly debate regarding the exact chronology of Holy Week. The tradi
 <td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>Thursday</strong></td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd;">Last Supper (Passover Seder); Washing feet; Gethsemane; Arrest</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">14 Nisan</td>
-<td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="color: #923a23; font-weight: 600;">פֶּסַח</span><br><span style="font-size: 0.8em;">Pesach (Passover)</span></td>
+<td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="color: #923a23; font-weight: 600;"><a href="https://www.blueletterbible.org/lexicon/h6453/kjv/wlc/0-1/" target="_blank" data-strongs="H6453" data-translit="pesach" data-original="פֶּסַח" data-lang="hebrew">פֶּסַח</a></span><br><span style="font-size: 0.8em;">Pesach (Passover)</span></td>
 </tr>
 <tr style="background: #f0ebe5;">
 <td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>Friday</strong><br><span style="font-size: 0.85em; color: #666;">(Good Friday)</span></td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd;">Trial; Crucifixion (~9 AM – 3 PM); Burial before sunset</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">15 Nisan</td>
-<td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="color: #c9a959; font-weight: 600;">מַצּוֹת</span><br><span style="font-size: 0.8em;">Matzot Day 1</span></td>
+<td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="color: #c9a959; font-weight: 600;"><a href="https://www.blueletterbible.org/lexicon/h4682/kjv/wlc/0-1/" target="_blank" data-strongs="H4682" data-translit="matstsah" data-original="מַצָּה" data-lang="hebrew">מַצּוֹת</a></span><br><span style="font-size: 0.8em;">Matzot Day 1</span></td>
 </tr>
 <tr style="background: white;">
 <td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>Saturday</strong><br><span style="font-size: 0.85em; color: #666;">(Sabbath)</span></td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd;">Tomb sealed; Roman guard; Christ's spirit in spirit world</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">16 Nisan</td>
-<td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="color: #c9a959;">מַצּוֹת</span><br><span style="font-size: 0.8em;">Matzot Day 2</span></td>
+<td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="color: #c9a959;"><a href="https://www.blueletterbible.org/lexicon/h4682/kjv/wlc/0-1/" target="_blank" data-strongs="H4682" data-translit="matstsah" data-original="מַצָּה" data-lang="hebrew">מַצּוֹת</a></span><br><span style="font-size: 0.8em;">Matzot Day 2</span></td>
 </tr>
 <tr style="background: #f0ebe5;">
 <td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>Sunday</strong><br><span style="font-size: 0.85em; color: #666;">(Easter)</span></td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>RESURRECTION</strong>; Women at tomb; Emmaus road</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">17 Nisan</td>
-<td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="color: #d4a84b; font-weight: 600;">בִּכּוּרִים</span><br><span style="font-size: 0.8em;">Bikkurim (Firstfruits)</span></td>
+<td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="color: #d4a84b; font-weight: 600;"><a href="https://www.blueletterbible.org/lexicon/h1061/kjv/wlc/0-1/" target="_blank" data-strongs="H1061" data-translit="bikkurim" data-original="בִּכּוּרִים" data-lang="hebrew">בִּכּוּרִים</a></span><br><span style="font-size: 0.8em;">Bikkurim (Firstfruits)</span></td>
 </tr>
 </tbody>
 </table>
-<p style="font-size: 0.9em; color: #666; margin-top: 12px;"><em>Note: In this view, Jesus is in the tomb approximately 36 hours (Friday evening to Sunday morning). Christ rises on Firstfruits — "the firstfruits of them that slept" (1 Cor 15:20).</em></p>
+<p style="font-size: 0.9em; color: #666; margin-top: 12px;"><em>Note: In this view, Jesus is in the tomb approximately 36 hours (Friday evening to Sunday morning). Christ rises on Firstfruits — "the firstfruits of them that slept" (<a href="https://www.blueletterbible.org/kjv/1co/15/20/" target="_blank" data-ref="1 Corinthians 15:20">1 Corinthians 15:20</a>).</em></p>
 </div>
 
 <div id="timeline-alternative" style="display: none;">
@@ -163,7 +164,7 @@ There is scholarly debate regarding the exact chronology of Holy Week. The tradi
 <tbody>
 <tr style="background: #f0ebe5;">
 <td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>Saturday</strong></td>
-<td style="padding: 12px; border-bottom: 1px solid #ddd;">Arrival in Bethany; Mary of Bethany anoints Jesus' feet (John 12:1-8)</td>
+<td style="padding: 12px; border-bottom: 1px solid #ddd;">Arrival in Bethany; Mary of Bethany anoints Jesus' feet (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/12?lang=eng&id=1-8" target="_blank" data-ref="John 12:1-8">John 12:1-8</a>)</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">9 Nisan</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center; color: #666; font-size: 0.9em;">—</td>
 </tr>
@@ -171,7 +172,7 @@ There is scholarly debate regarding the exact chronology of Holy Week. The tradi
 <td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>Sunday</strong></td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd;">Triumphal Entry into Jerusalem; Jesus weeps over city</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">10 Nisan</td>
-<td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="color: #466758; font-weight: 600;">Lamb Selection</span><br><span style="font-size: 0.8em; color: #666;">Ex 12:3</span></td>
+<td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="color: #466758; font-weight: 600;">Lamb Selection</span><br><span style="font-size: 0.8em; color: #666;"><a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ex/12?lang=eng&id=3" target="_blank" data-ref="Exodus 12:3">Exodus 12:3</a></span></td>
 </tr>
 <tr style="background: #f0ebe5;">
 <td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>Monday</strong></td>
@@ -187,7 +188,7 @@ There is scholarly debate regarding the exact chronology of Holy Week. The tradi
 </tr>
 <tr style="background: #f0ebe5;">
 <td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>Wednesday</strong><br><span style="font-size: 0.85em; color: #666;">(Evening)</span></td>
-<td style="padding: 12px; border-bottom: 1px solid #ddd;">Last Supper <em>"before the festival"</em> (John 13:1); Gethsemane; Arrest</td>
+<td style="padding: 12px; border-bottom: 1px solid #ddd;">Last Supper <em>"before the festival"</em> (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/13?lang=eng&id=1" target="_blank" data-ref="John 13:1">John 13:1</a>); Gethsemane; Arrest</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">13 Nisan</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center; font-size: 0.85em; color: #666;">Preparation begins</td>
 </tr>
@@ -195,29 +196,29 @@ There is scholarly debate regarding the exact chronology of Holy Week. The tradi
 <td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>Thursday</strong><br><span style="font-size: 0.85em; color: #923a23; font-weight: 600;">Crucifixion</span></td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd;">Trials; <strong>Jesus dies at 3 PM</strong> — same hour priests slaughter lambs</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">14 Nisan</td>
-<td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="color: #923a23; font-weight: 600;">פֶּסַח</span><br><span style="font-size: 0.8em;">Pesach (Passover)</span></td>
+<td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="color: #923a23; font-weight: 600;"><a href="https://www.blueletterbible.org/lexicon/h6453/kjv/wlc/0-1/" target="_blank" data-strongs="H6453" data-translit="pesach" data-original="פֶּסַח" data-lang="hebrew">פֶּסַח</a></span><br><span style="font-size: 0.8em;">Pesach (Passover)</span></td>
 </tr>
 <tr style="background: #f0ebe5;">
 <td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>Friday</strong><br><span style="font-size: 0.85em; color: #666;">(High Sabbath)</span></td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd;">Passover Sabbath; Jews eat Seder; <em>First day in tomb</em></td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">15 Nisan</td>
-<td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="color: #c9a959; font-weight: 600;">מַצּוֹת</span><br><span style="font-size: 0.8em;">Matzot Day 1</span></td>
+<td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="color: #c9a959; font-weight: 600;"><a href="https://www.blueletterbible.org/lexicon/h4682/kjv/wlc/0-1/" target="_blank" data-strongs="H4682" data-translit="matstsah" data-original="מַצָּה" data-lang="hebrew">מַצּוֹת</a></span><br><span style="font-size: 0.8em;">Matzot Day 1</span></td>
 </tr>
 <tr style="background: white;">
 <td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>Saturday</strong><br><span style="font-size: 0.85em; color: #666;">(Weekly Sabbath)</span></td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd;">Regular Sabbath; <em>Second day in tomb</em>; Christ in spirit world</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">16 Nisan</td>
-<td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="color: #c9a959;">מַצּוֹת</span><br><span style="font-size: 0.8em;">Matzot Day 2</span></td>
+<td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="color: #c9a959;"><a href="https://www.blueletterbible.org/lexicon/h4682/kjv/wlc/0-1/" target="_blank" data-strongs="H4682" data-translit="matstsah" data-original="מַצָּה" data-lang="hebrew">מַצּוֹת</a></span><br><span style="font-size: 0.8em;">Matzot Day 2</span></td>
 </tr>
 <tr style="background: #f0ebe5;">
 <td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>Sunday</strong><br><span style="font-size: 0.85em; color: #d4a53e; font-weight: 600;">Easter</span></td>
-<td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>RESURRECTION</strong> "after the Sabbaths" (Matt 28:1 — σαββάτων, plural)</td>
+<td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>RESURRECTION</strong> "after the Sabbaths" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/28?lang=eng&id=1" target="_blank" data-ref="Matthew 28:1">Matthew 28:1</a> — <a href="https://www.blueletterbible.org/lexicon/g4521/kjv/tr/0-1/" target="_blank" data-strongs="G4521" data-translit="sabbaton" data-original="σαββάτων" data-lang="greek">σαββάτων</a>, plural)</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">17 Nisan</td>
-<td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="color: #d4a84b; font-weight: 600;">בִּכּוּרִים</span><br><span style="font-size: 0.8em;">Bikkurim (Firstfruits)</span></td>
+<td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="color: #d4a84b; font-weight: 600;"><a href="https://www.blueletterbible.org/lexicon/h1061/kjv/wlc/0-1/" target="_blank" data-strongs="H1061" data-translit="bikkurim" data-original="בִּכּוּרִים" data-lang="hebrew">בִּכּוּרִים</a></span><br><span style="font-size: 0.8em;">Bikkurim (Firstfruits)</span></td>
 </tr>
 </tbody>
 </table>
-<p style="font-size: 0.9em; color: #666; margin-top: 12px;"><em>Note: In this view, Jesus dies as the Passover lambs are slaughtered (14 Nisan), rests through both Sabbaths, and rises on Firstfruits — "the firstfruits of them that slept" (1 Cor 15:20). Full 72 hours in the tomb fulfills "three days and three nights" (Matt 12:40).</em></p>
+<p style="font-size: 0.9em; color: #666; margin-top: 12px;"><em>Note: In this view, Jesus dies as the Passover lambs are slaughtered (14 Nisan), rests through both Sabbaths, and rises on Firstfruits — "the firstfruits of them that slept" (<a href="https://www.blueletterbible.org/kjv/1co/15/20/" target="_blank" data-ref="1 Corinthians 15:20">1 Corinthians 15:20</a>). Full 72 hours in the tomb fulfills "three days and three nights" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/12?lang=eng&id=40" target="_blank" data-ref="Matthew 12:40">Matthew 12:40</a>).</em></p>
 </div>
 </div>
 
@@ -544,7 +545,7 @@ Each day of Holy Week reveals Christ fulfilling His divine mission. Click any da
 <div style="padding: 20px;">
 <h3 style="margin: 0 0 8px 0; color: #4a3d6b;">Wednesday Evening</h3>
 <p style="margin: 0 0 12px 0; font-size: 0.9em; color: #666;">Last Supper • Gethsemane • Arrest</p>
-<p style="margin: 0; font-size: 0.95em;">"Before the festival of Passover" (John 13:1). The final meal. Feet washed, bread broken, wine blessed. Then Gethsemane and the arrest.</p>
+<p style="margin: 0; font-size: 0.95em;">"Before the festival of Passover" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/13?lang=eng&id=1" target="_blank" data-ref="John 13:1">John 13:1</a>). The final meal. Feet washed, bread broken, wine blessed. Then Gethsemane and the arrest.</p>
 <a href="/culture/holy-week/05-thursday/" style="display: inline-block; margin-top: 16px; color: #4a3d6b; font-weight: 600;">Explore →</a>
 </div>
 </div>
@@ -580,7 +581,7 @@ Each day of Holy Week reveals Christ fulfilling His divine mission. Click any da
 <div style="padding: 20px;">
 <h3 style="margin: 0 0 8px 0; color: #4a4a4a;">Saturday</h3>
 <p style="margin: 0 0 12px 0; font-size: 0.9em; color: #666;">Weekly Sabbath (Second Sabbath)</p>
-<p style="margin: 0; font-size: 0.95em;">Regular weekly Sabbath. Second day in tomb. Two consecutive Sabbaths explain Matthew 28:1's plural "Sabbaths" (σαββάτων).</p>
+<p style="margin: 0; font-size: 0.95em;">Regular weekly Sabbath. Second day in tomb. Two consecutive Sabbaths explain <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/28?lang=eng&id=1" target="_blank" data-ref="Matthew 28:1">Matthew 28:1</a>'s plural "Sabbaths" (<a href="https://www.blueletterbible.org/lexicon/g4521/kjv/tr/0-1/" target="_blank" data-strongs="G4521" data-translit="sabbaton" data-original="σαββάτων" data-lang="greek">σαββάτων</a>).</p>
 <a href="/culture/holy-week/07-saturday/" style="display: inline-block; margin-top: 16px; color: #4a4a4a; font-weight: 600;">Explore →</a>
 </div>
 </div>
@@ -592,7 +593,7 @@ Each day of Holy Week reveals Christ fulfilling His divine mission. Click any da
 <div style="padding: 20px;">
 <h3 style="margin: 0 0 8px 0; color: #c99a35;">Easter Sunday</h3>
 <p style="margin: 0 0 12px 0; font-size: 0.9em; color: #666;">The Resurrection — After 3 Days</p>
-<p style="margin: 0; font-size: 0.95em;">"After the Sabbaths" (Matt 28:1). Three days and three nights fulfilled (Matt 12:40). The empty tomb. Christ lives!</p>
+<p style="margin: 0; font-size: 0.95em;">"After the Sabbaths" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/28?lang=eng&id=1" target="_blank" data-ref="Matthew 28:1">Matthew 28:1</a>). Three days and three nights fulfilled (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/12?lang=eng&id=40" target="_blank" data-ref="Matthew 12:40">Matthew 12:40</a>). The empty tomb. Christ lives!</p>
 <a href="/culture/holy-week/08-resurrection/" style="display: inline-block; margin-top: 16px; color: #c99a35; font-weight: 600;">Explore →</a>
 </div>
 </div>
@@ -726,26 +727,26 @@ Jesus moved through specific locations during His final week, each carrying prof
 <div style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
 <img src="/images/culture/holy-week/jerusalem-detail-map.jpg" alt="Detailed map of New Testament Jerusalem" style="width: 100%; height: auto; display: block;">
 
-<!-- Hotspot: Garden Tomb -->
-<div class="map-hotspot" onclick="showLocation('tomb')" style="position: absolute; top: 16%; left: 48%; width: 26px; height: 26px; background: #d4a84b; border: 3px solid white; border-radius: 50%; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3); transform: translate(-50%, -50%); transition: transform 0.2s;" data-location="tomb"></div>
+<!-- Hotspot: Garden Tomb / Gordon's Calvary -->
+<div class="map-hotspot" onclick="showLocation('tomb')" style="position: absolute; top: 28%; left: 49.5%; width: 26px; height: 26px; background: #d4a84b; border: 3px solid white; border-radius: 50%; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3); transform: translate(-50%, -50%); transition: transform 0.2s;" data-location="tomb"></div>
 
-<!-- Hotspot: Golgotha -->
-<div class="map-hotspot" onclick="showLocation('golgotha')" style="position: absolute; top: 34%; left: 26%; width: 26px; height: 26px; background: #8c3a3a; border: 3px solid white; border-radius: 50%; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3); transform: translate(-50%, -50%); transition: transform 0.2s;" data-location="golgotha"></div>
+<!-- Hotspot: Golgotha (traditional location) -->
+<div class="map-hotspot" onclick="showLocation('golgotha')" style="position: absolute; top: 51%; left: 43.5%; width: 26px; height: 26px; background: #8c3a3a; border: 3px solid white; border-radius: 50%; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3); transform: translate(-50%, -50%); transition: transform 0.2s;" data-location="golgotha"></div>
 
 <!-- Hotspot: Antonia Fortress -->
-<div class="map-hotspot" onclick="showLocation('antonia')" style="position: absolute; top: 28%; left: 56%; width: 24px; height: 24px; background: #7a6b5b; border: 3px solid white; border-radius: 50%; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3); transform: translate(-50%, -50%); transition: transform 0.2s;" data-location="antonia"></div>
+<div class="map-hotspot" onclick="showLocation('antonia')" style="position: absolute; top: 39%; left: 64%; width: 24px; height: 24px; background: #7a6b5b; border: 3px solid white; border-radius: 50%; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3); transform: translate(-50%, -50%); transition: transform 0.2s;" data-location="antonia"></div>
 
 <!-- Hotspot: Temple -->
-<div class="map-hotspot" onclick="showLocation('temple')" style="position: absolute; top: 38%; left: 72%; width: 30px; height: 30px; background: #c9a959; border: 3px solid white; border-radius: 50%; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3); transform: translate(-50%, -50%); transition: transform 0.2s;" data-location="temple"></div>
+<div class="map-hotspot" onclick="showLocation('temple')" style="position: absolute; top: 47%; left: 75%; width: 22px; height: 22px; background: #c9a959; border: 3px solid white; border-radius: 50%; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3); transform: translate(-50%, -50%); transition: transform 0.2s;" data-location="temple"></div>
 
 <!-- Hotspot: Upper Room -->
-<div class="map-hotspot" onclick="showLocation('upperroom')" style="position: absolute; top: 72%; left: 32%; width: 26px; height: 26px; background: #6b5b8c; border: 3px solid white; border-radius: 50%; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3); transform: translate(-50%, -50%); transition: transform 0.2s;" data-location="upperroom"></div>
+<div class="map-hotspot" onclick="showLocation('upperroom')" style="position: absolute; top: 81%; left: 42.5%; width: 18px; height: 18px; background: #6b5b8c; border: 3px solid white; border-radius: 50%; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3); transform: translate(-50%, -50%); transition: transform 0.2s;" data-location="upperroom"></div>
 
 <!-- Hotspot: High Priest's House -->
-<div class="map-hotspot" onclick="showLocation('caiaphas')" style="position: absolute; top: 68%; left: 45%; width: 24px; height: 24px; background: #8b4d4d; border: 3px solid white; border-radius: 50%; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3); transform: translate(-50%, -50%); transition: transform 0.2s;" data-location="caiaphas"></div>
+<div class="map-hotspot" onclick="showLocation('caiaphas')" style="position: absolute; top: 77%; left: 40%; width: 18px; height: 18px; background: #8b4d4d; border: 3px solid white; border-radius: 50%; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3); transform: translate(-50%, -50%); transition: transform 0.2s;" data-location="caiaphas"></div>
 
 <!-- Hotspot: Herod's Palace -->
-<div class="map-hotspot" onclick="showLocation('herod')" style="position: absolute; top: 52%; left: 22%; width: 22px; height: 22px; background: #923a23; border: 3px solid white; border-radius: 50%; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3); transform: translate(-50%, -50%); transition: transform 0.2s;" data-location="herod"></div>
+<div class="map-hotspot" onclick="showLocation('herod')" style="position: absolute; top: 66%; left: 43.5%; width: 18px; height: 18px; background: #923a23; border: 3px solid white; border-radius: 50%; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3); transform: translate(-50%, -50%); transition: transform 0.2s;" data-location="herod"></div>
 
 </div>
 </div>

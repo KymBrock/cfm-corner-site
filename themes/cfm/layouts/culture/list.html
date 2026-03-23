@@ -13,11 +13,17 @@
     {{ end }}
 
     <!-- Child sections (e.g., Jewish, Greek) -->
-    {{ $sections := .Sections }}
-    {{ if $sections }}
+    {{ $sections := where .Sections "Params.hide_from_parent" "!=" true }}
+    {{ if and (not .Params.hide_sections) $sections }}
     <div class="culture-sections">
         {{ range $sections }}
+        {{ $section := . }}
         <a href="{{ .RelPermalink }}" class="culture-section-card">
+            {{ with .Params.card_icon }}
+            <div class="cs-icon-wrap">
+                <img src="{{ . }}" alt="{{ $section.Title }} icon" class="cs-icon">
+            </div>
+            {{ end }}
             <div class="cs-title">{{ .Title }}</div>
             <div class="cs-desc">{{ .Description }}</div>
             {{ $childCount := len .Pages }}
@@ -30,7 +36,7 @@
     {{ end }}
 
     <!-- Child pages at this level (can be hidden with hide_children: true in front matter) -->
-    {{ if not .Params.hide_children }}
+    {{ if and (not .Params.hide_children) (not .Params.hide_pages) }}
     {{ $pages := .RegularPages }}
     {{ if $pages }}
     <div class="culture-articles">

@@ -1,10 +1,12 @@
 ---
 title: "Bikkurim: The Feast of Firstfruits"
 description: "Understanding the biblical Feast of Firstfruits — its ancient observance, modern celebration, prophetic fulfillment in Christ's resurrection, and spiritual significance for believers today."
-weight: 3
+weight: 2
 draft: false
 image: /images/culture/jewish-festivals/feast-icons/bikkurim.png
 hide_nav: true
+aliases:
+  - /culture/jewish-festivals/bikkurim/
 ---
 
 <style>
@@ -414,9 +416,9 @@ As part of this tradition, seven species were brought to the Temple as the Israe
         </div>
         <div class="species-content">
             <h4>Wheat</h4>
-            <div class="hebrew">חיטה (Chittah)</div>
+            <div class="hebrew"><a href="https://www.blueletterbible.org/lexicon/h2406/kjv/wlc/0-1/" target="_blank" data-strongs="H2406" data-translit="chittah" data-original="חִטָּה" data-lang="hebrew">חיטה (Chittah)</a></div>
             <p>Sustenance and Torah. Requires grinding before becoming bread.</p>
-            <div class="christological">"I am the bread of life" (John 6:35)</div>
+            <div class="christological">"I am the bread of life" (<a href="https://www.blueletterbible.org/kjv/jhn/6/35/" target="_blank" data-ref="John 6:35">John 6:35</a>)</div>
         </div>
     </div>
     <div class="species-card">
@@ -425,9 +427,9 @@ As part of this tradition, seven species were brought to the Temple as the Israe
         </div>
         <div class="species-content">
             <h4>Barley</h4>
-            <div class="hebrew">שעורה (Se'orah)</div>
+            <div class="hebrew"><a href="https://www.blueletterbible.org/lexicon/h8184/kjv/wlc/0-1/" target="_blank" data-strongs="H8184" data-translit="seorah" data-original="שְׂעֹרָה" data-lang="hebrew">שעורה (Se'orah)</a></div>
             <p>The firstfruits offering — ripens first, representing new beginnings.</p>
-            <div class="christological">"The firstfruits of them that slept" (1 Cor 15:20)</div>
+            <div class="christological">"The firstfruits of them that slept" (<a href="https://www.blueletterbible.org/kjv/1co/15/20/" target="_blank" data-ref="1 Corinthians 15:20">1 Corinthians 15:20</a>)</div>
         </div>
     </div>
     <div class="species-card">
@@ -436,9 +438,9 @@ As part of this tradition, seven species were brought to the Temple as the Israe
         </div>
         <div class="species-content">
             <h4>Grapes</h4>
-            <div class="hebrew">גפן (Gefen)</div>
+            <div class="hebrew"><a href="https://www.blueletterbible.org/lexicon/h1612/kjv/wlc/0-1/" target="_blank" data-strongs="H1612" data-translit="gefen" data-original="גֶּפֶן" data-lang="hebrew">גפן (Gefen)</a></div>
             <p>Joy and covenant. Must be crushed to yield wine.</p>
-            <div class="christological">"I am the true vine" (John 15:1)</div>
+            <div class="christological">"I am the true vine" (<a href="https://www.blueletterbible.org/kjv/jhn/15/1/" target="_blank" data-ref="John 15:1">John 15:1</a>)</div>
         </div>
     </div>
     <div class="species-card">
@@ -447,7 +449,7 @@ As part of this tradition, seven species were brought to the Temple as the Israe
         </div>
         <div class="species-content">
             <h4>Figs</h4>
-            <div class="hebrew">תאנה (Te'enah)</div>
+            <div class="hebrew"><a href="https://www.blueletterbible.org/lexicon/h8384/kjv/wlc/0-1/" target="_blank" data-strongs="H8384" data-translit="teenah" data-original="תְּאֵנָה" data-lang="hebrew">תאנה (Te'enah)</a></div>
             <p>Peace and covering — fig leaves covered Adam and Eve.</p>
             <div class="christological">Christ covers our nakedness through atonement</div>
         </div>
@@ -458,9 +460,9 @@ As part of this tradition, seven species were brought to the Temple as the Israe
         </div>
         <div class="species-content">
             <h4>Pomegranate</h4>
-            <div class="hebrew">רימון (Rimmon)</div>
+            <div class="hebrew"><a href="https://www.blueletterbible.org/lexicon/h7416/kjv/wlc/0-1/" target="_blank" data-strongs="H7416" data-translit="rimmon" data-original="רִמּוֹן" data-lang="hebrew">רימון (Rimmon)</a></div>
             <p>Righteousness — tradition holds 613 seeds for 613 commandments.</p>
-            <div class="christological">"By their fruits ye shall know them" (Matt 7:20)</div>
+            <div class="christological">"By their fruits ye shall know them" (<a href="https://www.blueletterbible.org/kjv/mat/7/20/" target="_blank" data-ref="Matthew 7:20">Matthew 7:20</a>)</div>
         </div>
     </div>
     <div class="species-card">
@@ -469,7 +471,7 @@ As part of this tradition, seven species were brought to the Temple as the Israe
         </div>
         <div class="species-content">
             <h4>Olive</h4>
-            <div class="hebrew">זית (Zayit)</div>
+            <div class="hebrew"><a href="https://www.blueletterbible.org/lexicon/h2132/kjv/wlc/0-1/" target="_blank" data-strongs="H2132" data-translit="zayit" data-original="זַיִת" data-lang="hebrew">זית (Zayit)</a></div>
             <p>Light, anointing, and the Spirit. Oil lit the menorah.</p>
             <div class="christological">"Messiah" = "Anointed One"</div>
         </div>
@@ -480,9 +482,9 @@ As part of this tradition, seven species were brought to the Temple as the Israe
         </div>
         <div class="species-content">
             <h4>Dates (Honey)</h4>
-            <div class="hebrew">דבש (Devash)</div>
+            <div class="hebrew"><a href="https://www.blueletterbible.org/lexicon/h1706/kjv/wlc/0-1/" target="_blank" data-strongs="H1706" data-translit="devash" data-original="דְּבַשׁ" data-lang="hebrew">דבש (Devash)</a></div>
             <p>Sweetness of the Promised Land "flowing with milk and honey."</p>
-            <div class="christological">"Taste and see that the Lord is good" (Ps 34:8)</div>
+            <div class="christological">"Taste and see that the Lord is good" (<a href="https://www.blueletterbible.org/kjv/psa/34/8/" target="_blank" data-ref="Psalm 34:8">Psalm 34:8</a>)</div>
         </div>
     </div>
 </div>
@@ -505,7 +507,7 @@ A field across the Kidron Valley from Jerusalem was designated. As three stars b
 
 **The Bikkurim Procession:**
 
-Pilgrims traveled in festive processions with music, baskets decorated with the Seven Species. Each farmer recited the historical journey from Egypt to the Promised Land (Deuteronomy 26:5-10), then the priest took the basket and waved it before the altar.
+Pilgrims traveled in festive processions with music, baskets decorated with the Seven Species. Each farmer recited the historical journey from Egypt to the Promised Land (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/deut/26?lang=eng&id=5-10" target="_blank" data-ref="Deuteronomy 26:5-10">Deuteronomy 26:5-10</a>), then the priest took the basket and waved it before the altar.
 
 </div>
 </details>
@@ -514,7 +516,7 @@ Pilgrims traveled in festive processions with music, baskets decorated with the 
 
 ### The Great Debate: Which Sabbath?
 
-The phrase "the morrow after the sabbath" (מִמָּחֳרַת הַשַּׁבָּת) has been debated for millennia:
+The phrase "the morrow after the sabbath" (<a href="https://www.blueletterbible.org/kjv/lev/23/15/" target="_blank" data-ref="Leviticus 23:15"><span lang="he">מִמָּחֳרַת הַשַּׁבָּת</span></a>) has been debated for millennia:
 
 <div class="comparison-grid">
     <div class="compare-card">
@@ -549,16 +551,16 @@ The phrase "the morrow after the sabbath" (מִמָּחֳרַת הַשַּׁבָ
 
 <div class="info-box insight">
 
-The Hebrew root **בכר** (b-k-r) carries profound dual meaning:
+The Hebrew root <a href="https://www.blueletterbible.org/lexicon/h1069/kjv/wlc/0-1/" target="_blank" data-strongs="H1069" data-translit="bakar" data-original="בָּכַר" data-lang="hebrew"><strong>בכר</strong> (b-k-r)</a> carries profound dual meaning:
 
 <div style="display: flex; gap: 2rem; margin: 1rem 0; flex-wrap: wrap;">
 <div style="flex: 1; min-width: 200px; text-align: center; padding: 1rem; background: white; border-radius: 8px;">
-<div style="font-size: 2rem; color: #8b6914;">בִּכּוּרִים</div>
+<div style="font-size: 2rem; color: #8b6914;"><a href="https://www.blueletterbible.org/lexicon/h1061/kjv/wlc/0-1/" target="_blank" data-strongs="H1061" data-translit="bikkurim" data-original="בִּכּוּרִים" data-lang="hebrew">בִּכּוּרִים</a></div>
 <div style="font-weight: bold;">Bikkurim</div>
 <div style="font-size: 0.9rem; color: #666;">Firstfruits of harvest</div>
 </div>
 <div style="flex: 1; min-width: 200px; text-align: center; padding: 1rem; background: white; border-radius: 8px;">
-<div style="font-size: 2rem; color: #8b6914;">בְּכוֹר</div>
+<div style="font-size: 2rem; color: #8b6914;"><a href="https://www.blueletterbible.org/lexicon/h1060/kjv/wlc/0-1/" target="_blank" data-strongs="H1060" data-translit="bekhor" data-original="בְּכוֹר" data-lang="hebrew">בְּכוֹר</a></div>
 <div style="font-weight: bold;">Bechor</div>
 <div style="font-size: 0.9rem; color: #666;">Firstborn son</div>
 </div>
@@ -735,7 +737,7 @@ From Bikkurim begins the "Counting of the Omer" — 50 days until Shavuot (Pente
         </div>
         <div class="event-details">
             <h3 id="event-title">Day 1: Women at the Tomb</h3>
-            <p class="scripture-ref" id="event-scripture">Matthew 28:1-10</p>
+            <p class="scripture-ref" id="event-scripture"><a href="https://www.blueletterbible.org/kjv/mat/28/1/" target="_blank" data-ref="Matthew 28:1-10">Matthew 28:1-10</a></p>
             <p id="event-description">
                 The first day of the week - Sunday morning! The women come to the tomb and find it empty. Angels proclaim: "He is not here, He is risen!"
             </p>
@@ -834,6 +836,30 @@ const events = {
     }
 };
 
+function renderEventScriptureLinks(scriptureText) {
+    const bookMap = {
+        "Matthew": "mat",
+        "Mark": "mrk",
+        "Luke": "luk",
+        "John": "jhn",
+        "Acts": "act",
+        "1 Corinthians": "1co",
+        "3 Nephi": "3ne"
+    };
+
+    return scriptureText.split(';').map(ref => {
+        const trimmed = ref.trim();
+        const match = trimmed.match(/^((?:[1-3]\s)?[A-Za-z]+(?:\s[A-Za-z]+)*)\s(\d+):(\d+)(?:-\d+)?$/);
+        if (!match) return trimmed;
+        const book = match[1];
+        const chapter = match[2];
+        const verse = match[3];
+        const code = bookMap[book];
+        if (!code) return trimmed;
+        return `<a href="https://www.blueletterbible.org/kjv/${code}/${chapter}/${verse}/" target="_blank" data-ref="${trimmed}">${trimmed}</a>`;
+    }).join('; ');
+}
+
 document.getElementById('journey-slider').addEventListener('input', function(e) {
     const day = parseInt(e.target.value);
     let event = null;
@@ -851,7 +877,7 @@ document.getElementById('journey-slider').addEventListener('input', function(e) 
         else if (day === 50) titleText = `Day 50: ${event.title}`;
 
         document.getElementById('event-title').textContent = titleText;
-        document.getElementById('event-scripture').textContent = event.scripture;
+        document.getElementById('event-scripture').innerHTML = renderEventScriptureLinks(event.scripture);
         document.getElementById('event-description').textContent = event.description;
         document.getElementById('event-img').src = event.image;
         document.getElementById('event-img').alt = event.title;
@@ -939,7 +965,7 @@ Since the Temple's destruction, Bikkurim has continued to be observed among the 
 <img src="/images/culture/jewish-festivals/firstfruits-icons/gathering-harvest.png" alt="Gathering Harvest" style="width: 50px; height: 50px; object-fit: contain;">
 <h4 style="margin: 0; color: #1a6b74;">Gathering Harvest</h4>
 </div>
-<p style="font-size: 0.95rem; margin: 0;">"The field is white already to harvest" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/4?lang=eng&id=4" target="_blank">D&C 4:4</a>). The first converts in any area are firstfruits — consecrating the harvest to come. The Sons of Mosiah brought the firstfruits of Lamanite conversion. These themes remind us of the many gathering and harvest themes we read throughout scripture.</p>
+<p style="font-size: 0.95rem; margin: 0;">"The field is white already to harvest" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/4?lang=eng&id=4" target="_blank" data-ref="D&C 4:4">D&C 4:4</a>). The first converts in any area are firstfruits — consecrating the harvest to come. The Sons of Mosiah brought the firstfruits of Lamanite conversion. These themes remind us of the many gathering and harvest themes we read throughout scripture.</p>
 </div>
 
 <div style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-top: 4px solid #8b6914;">
@@ -947,7 +973,7 @@ Since the Temple's destruction, Bikkurim has continued to be observed among the 
 <img src="/images/culture/jewish-festivals/firstfruits-icons/gratitude-intention.png" alt="Gratitude & Intention" style="width: 50px; height: 50px; object-fit: contain;">
 <h4 style="margin: 0; color: #1a6b74;">Gratitude & Intention</h4>
 </div>
-<p style="font-size: 0.95rem; margin: 0;">The firstfruits declaration (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/deut/26?lang=eng&id=5-10" target="_blank">Deuteronomy 26:5-10</a>) was an act of remembrance — recounting God's hand from wandering Aramean to promised abundance. We too recognize His intentional design in our lives, offering gratitude before seeing the full harvest. Every soul is precious; every blessing acknowledged invites more.</p>
+<p style="font-size: 0.95rem; margin: 0;">The firstfruits declaration (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/deut/26?lang=eng&id=5-10" target="_blank" data-ref="Deuteronomy 26:5-10">Deuteronomy 26:5-10</a>) was an act of remembrance — recounting God's hand from wandering Aramean to promised abundance. We too recognize His intentional design in our lives, offering gratitude before seeing the full harvest. Every soul is precious; every blessing acknowledged invites more.</p>
 </div>
 
 </div>

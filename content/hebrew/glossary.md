@@ -371,7 +371,7 @@ The Masoretes added vowel marks (niqqud) to preserve the pronunciation of Biblic
 | Vowel | Name | Sound | Example |
 |:-----:|------|-------|---------|
 | בָ | Qamats | Long A (father) | בָּרָא *bara* |
-| בַ | Patach | Short A (father) | בַּת *bat* |
+| בַ | Patach | Short A (apple) | בַּת *bat* |
 | בֲ | Chataf Patach | Ultra-short A | אֲנִי *ani* |
 | בֵ | Tsere | Long E (they) | בֵּן *ben* |
 | בֶ | Segol | Short E (bed) | מֶלֶךְ *melekh* |

@@ -86,6 +86,36 @@
   color: #666;
 }
 
+.flashcard-audio {
+  margin-top: 0.7rem;
+  padding: 0.35rem 0.8rem;
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.14);
+  color: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.flashcard-front .flashcard-audio {
+  border-color: #d4c5a9;
+  background: #f5efe0;
+  color: #5a4b36;
+}
+
+.flashcard-audio:hover {
+  transform: translateY(-1px);
+}
+
+.flashcard-front .flashcard-audio:hover {
+  background: #ede4d0;
+}
+
+.flashcard-back .flashcard-audio:hover {
+  background: rgba(255,255,255,0.22);
+}
+
 .flashcard-proto {
   margin-bottom: 0.5rem;
 }

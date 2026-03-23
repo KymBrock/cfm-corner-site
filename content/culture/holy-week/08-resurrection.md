@@ -397,7 +397,7 @@ It is no coincidence that "a great multitude" was gathered at the temple (<a hre
 The harvest had begun in two hemispheres simultaneously.
 
 <div style="text-align: center; margin: 20px 0;">
-<a href="/culture/jewish-festivals/bikkurim" style="display: inline-block; padding: 12px 24px; background: #7a9b7e; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.15); transition: all 0.3s; border: 1px solid #6a8b6e;">
+<a href="/culture/jewish/moedim/bikkurim/" style="display: inline-block; padding: 12px 24px; background: #7a9b7e; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.15); transition: all 0.3s; border: 1px solid #6a8b6e;">
 Learn More: The Feast of Firstfruits
 </a>
 </div>

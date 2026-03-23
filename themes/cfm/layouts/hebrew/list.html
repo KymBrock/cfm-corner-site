@@ -11,8 +11,20 @@
         <p>New lessons appear alongside the weekly study materials, but this page always keeps them in learning order.</p>
     </div>
 
+    {{ with site.GetPage "/hebrew/glossary" }}
+    <div class="hebrew-feature-links">
+        <a href="{{ .RelPermalink }}" class="hebrew-feature-card">
+            <div class="hf-kicker">Reference Tool</div>
+            <div class="hf-title">{{ .Title }}</div>
+            <div class="hf-desc">{{ .Description }}</div>
+            <div class="hf-cta">Open Glossary &rarr;</div>
+        </a>
+    </div>
+    {{ end }}
+
     <div class="hebrew-lessons">
         {{ range .Pages.ByParam "lesson_num" }}
+        {{ if .Params.lesson_num }}
         <a href="{{ .RelPermalink }}" class="hebrew-lesson-card{{ if .Params.coming_soon }} coming-soon{{ end }}">
             <div class="hl-number">Lesson {{ .Params.lesson_num }}</div>
             <div class="hl-body">
@@ -22,6 +34,7 @@
             </div>
             {{ if .Params.coming_soon }}<div class="hl-badge">Coming Soon</div>{{ end }}
         </a>
+        {{ end }}
         {{ end }}
     </div>
 

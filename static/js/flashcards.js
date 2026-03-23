@@ -71,6 +71,7 @@ class Flashcards {
       front.innerHTML = `
         <div class="flashcard-original">${term.original}</div>
         <div class="flashcard-translit"><em>${term.translit}</em></div>
+        ${term.audio ? `<button class="flashcard-audio" type="button" aria-label="Play pronunciation for ${term.translit}" onclick="playFlashcardAudio('${term.audio}', event)">🔊 Listen</button>` : ''}
       `;
     }
 
@@ -78,6 +79,7 @@ class Flashcards {
       back.innerHTML = `
         ${term.proto ? `<div class="flashcard-proto"><span class="proto-sin">${term.proto}</span></div>` : ''}
         <div class="flashcard-meaning">${term.meaning}</div>
+        ${term.audio ? `<button class="flashcard-audio flashcard-audio-back" type="button" aria-label="Play pronunciation for ${term.translit}" onclick="playFlashcardAudio('${term.audio}', event)">🔊 Listen</button>` : ''}
         ${term.strongs ? `<div class="flashcard-strongs">${term.strongs}</div>` : ''}
       `;
     }
@@ -108,10 +110,12 @@ class Flashcards {
             <div class="flashcard-front">
               <div class="flashcard-original">${term.original}</div>
               <div class="flashcard-translit"><em>${term.translit}</em></div>
+              ${term.audio ? `<button class="flashcard-audio" type="button" aria-label="Play pronunciation for ${term.translit}" onclick="playFlashcardAudio('${term.audio}', event)">🔊 Listen</button>` : ''}
             </div>
             <div class="flashcard-back">
               ${term.proto ? `<div class="flashcard-proto"><span class="proto-sin">${term.proto}</span></div>` : ''}
               <div class="flashcard-meaning">${term.meaning}</div>
+              ${term.audio ? `<button class="flashcard-audio flashcard-audio-back" type="button" aria-label="Play pronunciation for ${term.translit}" onclick="playFlashcardAudio('${term.audio}', event)">🔊 Listen</button>` : ''}
               ${term.strongs ? `<div class="flashcard-strongs">${term.strongs}</div>` : ''}
             </div>
           </div>
@@ -156,6 +160,23 @@ class Flashcards {
       }
     });
   }
+}
+
+let currentFlashcardAudio = null;
+
+function playFlashcardAudio(url, event) {
+  if (event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+
+  if (currentFlashcardAudio) {
+    currentFlashcardAudio.pause();
+    currentFlashcardAudio = null;
+  }
+
+  currentFlashcardAudio = new Audio(url);
+  currentFlashcardAudio.play().catch(err => console.error('Failed to play flashcard audio:', err));
 }
 
 // Initialize flashcards from JSON data
