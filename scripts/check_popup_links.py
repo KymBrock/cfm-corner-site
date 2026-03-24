@@ -92,6 +92,14 @@ def candidates(ref: str) -> list[str]:
         out.append(base.replace("D&C ", "Doctrine and Covenants ", 1))
     if base.startswith("Doctrine and Covenants "):
         out.append(base.replace("Doctrine and Covenants ", "D&C ", 1))
+    if base.startswith("Joseph Smith-Matthew "):
+        out.append(base.replace("Joseph Smith-Matthew ", "Joseph Smith—Matthew ", 1))
+    if base.startswith("Joseph Smith—Matthew "):
+        out.append(base.replace("Joseph Smith—Matthew ", "Joseph Smith-Matthew ", 1))
+    if base.startswith("Joseph Smith-History "):
+        out.append(base.replace("Joseph Smith-History ", "Joseph Smith—History ", 1))
+    if base.startswith("Joseph Smith—History "):
+        out.append(base.replace("Joseph Smith—History ", "Joseph Smith-History ", 1))
     m = re.match(r"^(.*?\d+:\d+)-\d+$", base)
     if m:
         out.append(m.group(1))
@@ -118,6 +126,8 @@ def check_file(path: Path) -> list[str]:
     problems: list[str] = []
 
     for ref in DATA_REF_RE.findall(text):
+        if "${" in ref:
+            continue
         if not resolves(ref):
             problems.append(f"unresolved data-ref: {ref}")
 

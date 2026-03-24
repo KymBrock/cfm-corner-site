@@ -368,6 +368,10 @@
         if (/^Psalm /i.test(base)) push(base.replace(/^Psalm /i, 'Psalms '));
         if (/^D&C /i.test(base)) push(base.replace(/^D&C /i, 'Doctrine and Covenants '));
         if (/^Doctrine and Covenants /i.test(base)) push(base.replace(/^Doctrine and Covenants /i, 'D&C '));
+        if (/^Joseph Smith-Matthew /i.test(base)) push(base.replace(/^Joseph Smith-Matthew /i, 'Joseph Smith—Matthew '));
+        if (/^Joseph Smith—Matthew /i.test(base)) push(base.replace(/^Joseph Smith—Matthew /i, 'Joseph Smith-Matthew '));
+        if (/^Joseph Smith-History /i.test(base)) push(base.replace(/^Joseph Smith-History /i, 'Joseph Smith—History '));
+        if (/^Joseph Smith—History /i.test(base)) push(base.replace(/^Joseph Smith—History /i, 'Joseph Smith-History '));
         if (/^JST Exodus /i.test(base)) push(base.replace(/^JST Exodus /i, 'Exodus '));
         if (/^JST Genesis /i.test(base)) push(base.replace(/^JST Genesis /i, 'Genesis '));
         if (/^JST Matthew /i.test(base)) push(base.replace(/^JST Matthew /i, 'Matthew '));
