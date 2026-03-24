@@ -18,7 +18,15 @@
 <!-- Current Week Highlight -->
 <div class="current-week-highlight">
     <h2>This Week's Study</h2>
-    {{ range first 1 (where .Site.RegularPages "Params.current" true) }}
+    {{ $weekPages := where .Site.RegularPages "Section" "weeks" }}
+    {{ $currentWeeks := where $weekPages "Params.current" true }}
+    {{ $featuredWeeks := $currentWeeks }}
+    {{ if eq (len $featuredWeeks) 0 }}
+        {{ $featuredWeeks = first 1 (sort $weekPages "Params.weight" "desc") }}
+    {{ else }}
+        {{ $featuredWeeks = first 1 (sort $featuredWeeks "Params.weight" "desc") }}
+    {{ end }}
+    {{ range $featuredWeeks }}
     <a href="{{ .RelPermalink }}" class="current-week-card">
         <div class="cw-week">Week {{ .Params.week_num }}</div>
         <div class="cw-title">{{ .Title }}</div>
