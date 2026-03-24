@@ -138,6 +138,12 @@ Verify outputs:
 
 > **Important:** The resources HTML must follow the format in [`RESOURCES-HTML-SPEC.md`](RESOURCES-HTML-SPEC.md). Canonical example: `static/content/week08/resources.html`. Every week must include: Church Media for Families section, video thumbnail cards (never plain text links), Bible Project theme + word study videos, and all accordion sections.
 
+> **Weekly video cards must use direct weekly video URLs whenever available.** Do not leave a discovered weekly item as a plain channel link if a `watch?v=` URL exists. If the tracker has a direct YouTube video URL, the generated card must render with a thumbnail rather than plain text.
+
+> **Church Media for Families must use the OT planning map as source of truth.** When week sequencing around Easter/holidays causes drift, use `/Users/kymberbrockbank/Obsidian/K Master Vault/Master Project Folder/Ongoing/CFM Corner/OT_2026/Planning/Content_Maps/Church_Media_Video_Map.md` instead of inferred numbering.
+
+> **Bible Project must use the weekly tracker as source of truth.** If the week's `Video_Resources/VIDEO_URL_TRACKER.md` contains a Bible Project section, the generated accordion must mirror that documented weekly list rather than a reduced fallback subset.
+
 > **Hebrew/Greek lexicon links** must use hover popups per [`LEXICON-POPUP-SPEC.md`](LEXICON-POPUP-SPEC.md). **Every Hebrew/Greek Unicode character in body text** must be inside a lexicon `<a>` tag with all `data-*` attributes — not just first occurrences and not just in Word Studies. New terms must be added to `cfm-corner-tools/data/lexicon-popups.json`. The GUI converter handles this automatically for links in Obsidian markdown.
 
 > **Cross-Language Connections** are mandatory for every word study — see [`LEXICON-POPUP-SPEC.md`](LEXICON-POPUP-SPEC.md) for the 3-row table pattern (Greek/Latin/English). The `link-audit.py` script checks for missing tables.
