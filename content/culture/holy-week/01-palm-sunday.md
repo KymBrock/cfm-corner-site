@@ -99,7 +99,7 @@ They cut branches from trees — John specifically mentions palm branches — an
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #466758;">
 
-The palm branches carried explosive political symbolism. A century and a half earlier, the Maccabees had waved palms when they liberated the Temple from the pagan Greeks and rededicated it (1 Maccabees 13:51). Palm branches appeared on Jewish coins minted during periods of independence. They were a symbol of Jewish nationalism and divine deliverance.
+The palm branches carried explosive political symbolism. A century and a half earlier, the Maccabees had waved palms when they liberated the Temple from the pagan Greeks and rededicated it (<a href="https://www.sefaria.org/I_Maccabees.13.51?lang=bi" target="_blank" data-ref="1 Maccabees 13:51" data-popup-text="Simon entered with thanksgiving, palm branches, harps, cymbals, and hymns because a great enemy had been destroyed out of Israel.">1 Maccabees 13:51</a>). Palm branches appeared on Jewish coins minted during periods of independence. They were a symbol of Jewish nationalism and divine deliverance.
 
 By waving palms and shouting Hosanna ("Save now!"), the crowds were declaring Jesus the long-awaited liberator — the Messiah who would overthrow Rome as the Maccabees had overthrown the Greeks.
 
@@ -263,7 +263,7 @@ As scholar Jeffrey Rubenstein notes, there was "no ritual purpose for palm branc
 
 The palm branches carried explosive political meaning that modern readers often miss. BYU scholar John W. Welch notes that palm branches were indelibly associated with the Maccabean revolt (167–160 BC), when Jewish freedom fighters liberated Jerusalem from the Seleucid Greeks.
 
-When Judas Maccabeus rededicated the Temple, the people celebrated *"bearing branches, and fair boughs, and palms also, and sang psalms"* (2 Maccabees 10:7). Later, when Simon Maccabeus captured the Akra fortress, he entered *"with thanksgiving, and branches of palm trees, and with harps, and cymbals"* (1 Maccabees 13:51).
+When Judas Maccabeus rededicated the Temple, the people celebrated *"bearing branches, and fair boughs, and palms also, and sang psalms"* (<a href="https://www.sefaria.org/II_Maccabees.10.7?lang=bi" target="_blank" data-ref="2 Maccabees 10:7" data-popup-text="At the rededication of the Temple, the people carried branches, fair boughs, and palms, and sang psalms of thanksgiving to God.">2 Maccabees 10:7</a>). Later, when Simon Maccabeus captured the Akra fortress, he entered *"with thanksgiving, and branches of palm trees, and with harps, and cymbals"* (<a href="https://www.sefaria.org/I_Maccabees.13.51?lang=bi" target="_blank" data-ref="1 Maccabees 13:51" data-popup-text="Simon entered with thanksgiving, palm branches, harps, cymbals, and hymns because a great enemy had been destroyed out of Israel.">1 Maccabees 13:51</a>).
 
 **The crowds on Palm Sunday were making an unmistakable political statement:** they expected Jesus to be another Maccabeus — a warrior-liberator who would overthrow Rome as the Maccabees had overthrown the Greeks. The irony is that Jesus *would* liberate His people, but through sacrifice rather than military conquest.
 
