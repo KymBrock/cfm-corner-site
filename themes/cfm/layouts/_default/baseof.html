@@ -304,6 +304,59 @@
         return parseScriptureRef(href) || parseChurchRef(href) || null;
       }
 
+      var refAliases = [
+        [/^Ps\.\s+/i, 'Psalms '],
+        [/^Psa\.\s+/i, 'Psalms '],
+        [/^Psalm\s+/i, 'Psalms '],
+        [/^Prov\.\s+/i, 'Proverbs '],
+        [/^Eccl\.\s+/i, 'Ecclesiastes '],
+        [/^Song\s+/i, 'Song of Solomon '],
+        [/^Ex\.\s+/i, 'Exodus '],
+        [/^Lev\.\s+/i, 'Leviticus '],
+        [/^Num\.\s+/i, 'Numbers '],
+        [/^Deut\.\s+/i, 'Deuteronomy '],
+        [/^Josh\.\s+/i, 'Joshua '],
+        [/^Judg\.\s+/i, 'Judges '],
+        [/^1\s+Sam\.\s+/i, '1 Samuel '],
+        [/^2\s+Sam\.\s+/i, '2 Samuel '],
+        [/^1\s+Kgs\.\s+/i, '1 Kings '],
+        [/^2\s+Kgs\.\s+/i, '2 Kings '],
+        [/^1\s+Chr\.\s+/i, '1 Chronicles '],
+        [/^2\s+Chr\.\s+/i, '2 Chronicles '],
+        [/^Neh\.\s+/i, 'Nehemiah '],
+        [/^Esth\.\s+/i, 'Esther '],
+        [/^Isa\.\s+/i, 'Isaiah '],
+        [/^Jer\.\s+/i, 'Jeremiah '],
+        [/^Ezek\.\s+/i, 'Ezekiel '],
+        [/^Hos\.\s+/i, 'Hosea '],
+        [/^Obad\.\s+/i, 'Obadiah '],
+        [/^Zech\.\s+/i, 'Zechariah '],
+        [/^Mal\.\s+/i, 'Malachi '],
+        [/^Matt\.\s+/i, 'Matthew '],
+        [/^Jn\.\s+/i, 'John '],
+        [/^Rom\.\s+/i, 'Romans '],
+        [/^1\s+Cor\.\s+/i, '1 Corinthians '],
+        [/^2\s+Cor\.\s+/i, '2 Corinthians '],
+        [/^Phil\.\s+/i, 'Philippians '],
+        [/^Col\.\s+/i, 'Colossians '],
+        [/^1\s+Thes\.\s+/i, '1 Thessalonians '],
+        [/^2\s+Thes\.\s+/i, '2 Thessalonians '],
+        [/^1\s+Tim\.\s+/i, '1 Timothy '],
+        [/^2\s+Tim\.\s+/i, '2 Timothy '],
+        [/^Philem\.\s+/i, 'Philemon '],
+        [/^1\s+Pet\.\s+/i, '1 Peter '],
+        [/^2\s+Pet\.\s+/i, '2 Peter '],
+        [/^Rev\.\s+/i, 'Revelation '],
+        [/^1\s+Ne\.\s+/i, '1 Nephi '],
+        [/^2\s+Ne\.\s+/i, '2 Nephi '],
+        [/^Hel\.\s+/i, 'Helaman '],
+        [/^Moro\.\s+/i, 'Moroni '],
+        [/^Doc(?:trine)?\s+and\s+Covenants\s+/i, 'D&C '],
+        [/^JST\s+Ex\.\s+/i, 'JST Exodus '],
+        [/^JST\s+Gen\.\s+/i, 'JST Genesis '],
+        [/^JST\s+Matt\.\s+/i, 'JST Matthew ']
+      ];
+
       function normalizeRef(ref) {
         if (!ref) return null;
         var out = ref.trim()
@@ -411,9 +464,22 @@
       }
 
       async function getVerse(ref) {
-        if (!ref) return 'Verse preview unavailable.';
+        if (!ref) return null;
         var db = await ensureScriptureData();
-        return db[ref] || 'Verse preview unavailable.';
+        var candidates = getReferenceCandidates(ref);
+        for (var i = 0; i < candidates.length; i++) {
+          if (db[candidates[i]]) return db[candidates[i]];
+          if (/^\S.* \d+$/.test(candidates[i])) {
+            var chapterPrefix = candidates[i] + ':';
+            var chapterKeys = Object.keys(db).filter(function(key) {
+              return key.indexOf(chapterPrefix) === 0;
+            }).sort();
+            if (chapterKeys.length) {
+              return 'Chapter reference. Click through to read the full chapter in context.';
+            }
+          }
+        }
+        return null;
       }
 
       function place(el) {
@@ -512,6 +578,14 @@
         // scripture — unified handling for BLB, Church, and data-ref
         var ref = resolveScriptureRef(el);
         var txt = await getVerse(ref);
+
+        if (!txt && el.dataset && el.dataset.popupText) {
+          txt = el.dataset.popupText;
+        }
+        if (!txt) {
+          txt = 'Preview unavailable for this reference. Verify the book, chapter, and verse format in the source content.';
+        }
+
         var linkHref = el.href || '';
         var linkText = 'Open scripture →';
         if (/blueletterbible\.org/i.test(linkHref)) {
