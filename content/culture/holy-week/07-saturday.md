@@ -57,7 +57,7 @@ Alternative: In the Tomb — Weekly Sabbath
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #4f4f4f; font-size: 0.8em;">▶</span> Tomb sealed, guards posted</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/27?lang=eng&id=62-66" target="_blank" data-ref="Matthew 27:62-66">Matthew 27:62–66</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/27/62/" target="_blank" data-ref="Matthew 27:62-66">Matthew 27:62–66</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #4f4f4f;">
@@ -81,7 +81,7 @@ The irony was profound: every precaution they took to prevent a false resurrecti
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 0; cursor: pointer; background: white; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #4f4f4f; font-size: 0.8em;">▶</span> Women prepare spices</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=55-56" target="_blank" data-ref="Luke 23:55-56">Luke 23:55–56</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/23/55/" target="_blank" data-ref="Luke 23:55-56">Luke 23:55–56</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #4f4f4f;">
@@ -90,7 +90,7 @@ The women who had followed from Galilee — Mary Magdalene, Mary the mother of J
 
 Jewish burial customs required anointing the body with spices — a final act of love and honor. But the Sabbath had begun at sunset Friday, and no work could be done. The women had to wait.
 
-Luke records that they *"rested the sabbath day according to the commandment"* (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=56" target="_blank" data-ref="Luke 23:56">Luke 23:56</a>). Even in their grief, they kept the Law.
+Luke records that they *"rested the sabbath day according to the commandment"* (<a href="https://www.blueletterbible.org/kjv/luk/23/56/" target="_blank" data-ref="Luke 23:56">Luke 23:56</a>). Even in their grief, they kept the Law.
 
 As soon as the Sabbath ended at sunset Saturday, they could purchase additional spices. Then, at first light Sunday, they would go to the tomb to anoint the body.
 
@@ -109,7 +109,7 @@ They did not know that Sunday was coming.
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #4f4f4f; font-size: 0.8em;">▶</span> Christ preaches to spirits in prison</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/1-pet/3?lang=eng&id=18-20" target="_blank" data-ref="1 Peter 3:18-20">1 Peter 3:18–20</a>; <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/1-pet/4?lang=eng&id=6" target="_blank" data-ref="1 Peter 4:6">4:6</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/1pe/3/18/" target="_blank" data-ref="1 Peter 3:18-20">1 Peter 3:18–20</a>; <a href="https://www.blueletterbible.org/kjv/1pe/4/6/" target="_blank" data-ref="1 Peter 4:6">4:6</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #4f4f4f;">
@@ -122,7 +122,7 @@ What did Jesus do during those hours between death and resurrection? He descende
 
 **The Sabbath Rest — Deep Symbolism**
 
-Just as God rested on the seventh day after the six days of creation (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/2?lang=eng&id=2" target="_blank" data-ref="Genesis 2:2">Genesis 2:2</a>), so Christ rested on the seventh day after completing the work of redemption on the cross. The words *"It is finished"* echoed the completion of creation: the work was done.
+Just as God rested on the seventh day after the six days of creation (<a href="https://www.blueletterbible.org/kjv/gen/2/2/" target="_blank" data-ref="Genesis 2:2">Genesis 2:2</a>), so Christ rested on the seventh day after completing the work of redemption on the cross. The words *"It is finished"* echoed the completion of creation: the work was done.
 
 But this rest was not inactivity. In the spirit world, the great work of salvation was advancing. And on the first day of a new week, a new creation would begin.
 
@@ -191,7 +191,7 @@ They did not know that the stone would already be moved — and the tomb would b
 
 <a href="https://www.blueletterbible.org/lexicon/g5438/kjv/tr/0-1/" target="_blank" data-lexicon="prison, watch, guard" data-strongs="G5438" data-translit="phylakē" data-original="φυλακή" data-lang="greek">φυλακή</a> (*phylakē*) — prison, guard, watch
 
-Peter describes Christ preaching to "spirits in prison" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/1-pet/3?lang=eng&id=19" target="_blank" data-ref="1 Peter 3:19">1 Peter 3:19</a>). The Greek *phylakē* can mean a literal prison or a state of confinement. These spirits were held, awaiting the redemption Christ would bring.
+Peter describes Christ preaching to "spirits in prison" (<a href="https://www.blueletterbible.org/kjv/1pe/3/19/" target="_blank" data-ref="1 Peter 3:19">1 Peter 3:19</a>). The Greek *phylakē* can mean a literal prison or a state of confinement. These spirits were held, awaiting the redemption Christ would bring.
 </div>
 
 <div style="margin-bottom: 24px;">
@@ -199,7 +199,7 @@ Peter describes Christ preaching to "spirits in prison" (<a href="https://www.ch
 
 <a href="https://www.blueletterbible.org/lexicon/g4521/kjv/tr/0-1/" target="_blank" data-lexicon="sabbath, rest" data-strongs="G4521" data-translit="sabbaton" data-original="σάββατον" data-lang="greek">σάββατον</a> (*sabbaton*) — from Hebrew *shabbat*, "to cease, rest"
 
-The seventh day. Just as God rested on the seventh day after creation (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/2?lang=eng&id=2" target="_blank" data-ref="Genesis 2:2">Genesis 2:2</a>), Christ rested in the tomb on the seventh day after completing the work of redemption. The Sabbath rest was not inactivity — it was completion.
+The seventh day. Just as God rested on the seventh day after creation (<a href="https://www.blueletterbible.org/kjv/gen/2/2/" target="_blank" data-ref="Genesis 2:2">Genesis 2:2</a>), Christ rested in the tomb on the seventh day after completing the work of redemption. The Sabbath rest was not inactivity — it was completion.
 </div>
 
 <div>
@@ -207,7 +207,7 @@ The seventh day. Just as God rested on the seventh day after creation (<a href="
 
 <a href="https://www.blueletterbible.org/lexicon/g2227/kjv/tr/0-1/" target="_blank" data-lexicon="to make alive, give life" data-strongs="G2227" data-translit="zōopoieō" data-original="ζῳοποιέω" data-lang="greek">ζῳοποιέω</a> (*zōopoieō*) — to make alive, give life
 
-Peter says Christ was "put to death in the flesh, but quickened by the Spirit" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/1-pet/3?lang=eng&id=18" target="_blank" data-ref="1 Peter 3:18">1 Peter 3:18</a>). While His body lay dead, His spirit was alive and active — not merely existing, but working.
+Peter says Christ was "put to death in the flesh, but quickened by the Spirit" (<a href="https://www.blueletterbible.org/kjv/1pe/3/18/" target="_blank" data-ref="1 Peter 3:18">1 Peter 3:18</a>). While His body lay dead, His spirit was alive and active — not merely existing, but working.
 </div>
 
 </div>
@@ -251,12 +251,12 @@ Peter says Christ was "put to death in the flesh, but quickened by the Spirit" (
 
 <div style="margin-bottom: 16px;">
 <h4 style="margin-bottom: 8px; color: #1e4a6c;">Temple Work for the Dead</h4>
-<p style="margin-bottom: 0;">The doctrine of Christ preaching to spirits in prison is foundational to Latter-day Saint temple work. During Holy Saturday, we remember that Christ's work extends beyond mortality — reaching all who have ever lived. The gospel is preached to the dead (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/1-pet/4?lang=eng&id=6" target="_blank" data-ref="1 Peter 4:6">1 Peter 4:6</a>), and the living perform ordinances on their behalf.</p>
+<p style="margin-bottom: 0;">The doctrine of Christ preaching to spirits in prison is foundational to Latter-day Saint temple work. During Holy Saturday, we remember that Christ's work extends beyond mortality — reaching all who have ever lived. The gospel is preached to the dead (<a href="https://www.blueletterbible.org/kjv/1pe/4/6/" target="_blank" data-ref="1 Peter 4:6">1 Peter 4:6</a>), and the living perform ordinances on their behalf.</p>
 </div>
 
 <div>
 <h4 style="margin-bottom: 8px; color: #1e4a6c;">Baptism for the Dead</h4>
-<p style="margin-bottom: 0;">Paul's question echoes across the centuries: <em>"Else what shall they do which are baptized for the dead, if the dead rise not at all? why are they then baptized for the dead?"</em> (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/15?lang=eng&id=29" target="_blank" data-ref="1 Corinthians 15:29">1 Corinthians 15:29</a>). The Restoration answers this question — and Christ's ministry on Holy Saturday makes it possible.</p>
+<p style="margin-bottom: 0;">Paul's question echoes across the centuries: <em>"Else what shall they do which are baptized for the dead, if the dead rise not at all? why are they then baptized for the dead?"</em> (<a href="https://www.blueletterbible.org/kjv/1co/15/29/" target="_blank" data-ref="1 Corinthians 15:29">1 Corinthians 15:29</a>). The Restoration answers this question — and Christ's ministry on Holy Saturday makes it possible.</p>
 </div>
 </div>
 
@@ -381,14 +381,14 @@ Peter says Christ was "put to death in the flesh, but quickened by the Spirit" (
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #4f4f4f; font-size: 0.8em;">▶</span> Women prepare spices</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=55-56" target="_blank" data-ref="Luke 23:55-56">Luke 23:55–56</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/23/55/" target="_blank" data-ref="Luke 23:55-56">Luke 23:55–56</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #4f4f4f;">
 
 The women who had followed from Galilee had watched the crucifixion from a distance. They observed where Jesus was buried, noting the location of Joseph's tomb.
 
-Luke records that they *"rested the sabbath day according to the commandment"* (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=56" target="_blank" data-ref="Luke 23:56">Luke 23:56</a>). Even in their grief, they kept the Law.
+Luke records that they *"rested the sabbath day according to the commandment"* (<a href="https://www.blueletterbible.org/kjv/luk/23/56/" target="_blank" data-ref="Luke 23:56">Luke 23:56</a>). Even in their grief, they kept the Law.
 
 As soon as the Sabbath ended at sunset Saturday, they would purchase additional spices. Then, at first light Sunday, they would go to the tomb.
 

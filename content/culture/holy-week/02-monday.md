@@ -47,7 +47,7 @@ hide_nav: true
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #d4a53e; font-size: 0.8em;">▶</span> Fig tree cursed</div>
 <div style="padding: 12px; text-align: center;">—</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/11?lang=eng&id=12-14" target="_blank" data-ref="Mark 11:12-14">11:12–14</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/11/12/" target="_blank" data-ref="Mark 11:12-14">11:12–14</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
@@ -58,7 +58,7 @@ Early Monday morning, Jesus and His disciples left Bethany and began the two-mil
 
 But when He reached the tree, there was nothing but leaves. All show, no substance. Jesus spoke to the tree: *"No man eat fruit of thee hereafter for ever."* The disciples heard it, though they didn't yet understand. By Tuesday morning, they would find the tree withered from the roots.
 
-This was no random act of frustration. Jesus was performing a **prophetic sign** — an *acted parable* in the tradition of Isaiah and Jeremiah. The fig tree was a well-known symbol for Israel in prophetic literature: *"There will be no grapes on the vine. There will be no figs on the tree, and their leaves will wither"* (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/jer/8?lang=eng&id=13" target="_blank" data-ref="Jeremiah 8:13">Jeremiah 8:13</a>).
+This was no random act of frustration. Jesus was performing a **prophetic sign** — an *acted parable* in the tradition of Isaiah and Jeremiah. The fig tree was a well-known symbol for Israel in prophetic literature: *"There will be no grapes on the vine. There will be no figs on the tree, and their leaves will wither"* (<a href="https://www.blueletterbible.org/kjv/jer/8/13/" target="_blank" data-ref="Jeremiah 8:13">Jeremiah 8:13</a>).
 
 The tree represented Israel — and specifically the Temple establishment. It looked alive with religious activity, covered in the leaves of ritual observance, but produced no spiritual fruit. What happened to the fig tree would soon happen to the Temple.
 
@@ -69,9 +69,9 @@ The tree represented Israel — and specifically the Temple establishment. It lo
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: white; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #d4a53e; font-size: 0.8em;">▶</span> Temple cleansed</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/21?lang=eng&id=12-16" target="_blank" data-ref="Matthew 21:12-16">21:12–16</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/11?lang=eng&id=15-19" target="_blank" data-ref="Mark 11:15-19">11:15–19</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/19?lang=eng&id=45-48" target="_blank" data-ref="Luke 19:45-48">19:45–48</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/21/12/" target="_blank" data-ref="Matthew 21:12-16">21:12–16</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/11/15/" target="_blank" data-ref="Mark 11:15-19">11:15–19</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/19/45/" target="_blank" data-ref="Luke 19:45-48">19:45–48</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
@@ -94,9 +94,9 @@ Jesus made a whip of cords and drove them out — animals, merchants, moneychang
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #d4a53e; font-size: 0.8em;">▶</span> "House of prayer" declaration</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/21?lang=eng&id=13" target="_blank" data-ref="Matthew 21:13">21:13</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/11?lang=eng&id=17" target="_blank" data-ref="Mark 11:17">11:17</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/19?lang=eng&id=46" target="_blank" data-ref="Luke 19:46">19:46</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/21/13/" target="_blank" data-ref="Matthew 21:13">21:13</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/11/17/" target="_blank" data-ref="Mark 11:17">11:17</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/19/46/" target="_blank" data-ref="Luke 19:46">19:46</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
@@ -106,9 +106,9 @@ After overturning the tables, Jesus spoke, weaving together two prophets:
 
 *"Is it not written, My house shall be called a house of prayer for all nations? But ye have made it a den of thieves."*
 
-The first quotation comes from <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/isa/56?lang=eng&id=7" target="_blank" data-ref="Isaiah 56:7">Isaiah 56:7</a> — a promise that the Temple would be a place where **all peoples**, including foreigners and outcasts, could worship. By filling the Court of the Gentiles with commerce, the Temple leadership had effectively barred the nations from approaching God.
+The first quotation comes from <a href="https://www.blueletterbible.org/kjv/isa/56/7/" target="_blank" data-ref="Isaiah 56:7">Isaiah 56:7</a> — a promise that the Temple would be a place where **all peoples**, including foreigners and outcasts, could worship. By filling the Court of the Gentiles with commerce, the Temple leadership had effectively barred the nations from approaching God.
 
-The second quotation comes from <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/jer/7?lang=eng&id=11" target="_blank" data-ref="Jeremiah 7:11">Jeremiah 7:11</a> — part of Jeremiah's fierce "Temple Sermon" in which he warned that the Temple would be destroyed if the people continued to treat it as a safe house while practicing injustice. The word translated "thieves" (*lēstēs*) doesn't mean petty pickpockets — it means **violent robbers** or **brigands**. Jesus was accusing the Temple leadership of violent exploitation while hiding behind religious respectability.
+The second quotation comes from <a href="https://www.blueletterbible.org/kjv/jer/7/11/" target="_blank" data-ref="Jeremiah 7:11">Jeremiah 7:11</a> — part of Jeremiah's fierce "Temple Sermon" in which he warned that the Temple would be destroyed if the people continued to treat it as a safe house while practicing injustice. The word translated "thieves" (*lēstēs*) doesn't mean petty pickpockets — it means **violent robbers** or **brigands**. Jesus was accusing the Temple leadership of violent exploitation while hiding behind religious respectability.
 
 This was not merely a cleansing. It was a prophetic judgment. And everyone who heard recognized it.
 
@@ -119,7 +119,7 @@ This was not merely a cleansing. It was a prophetic judgment. And everyone who h
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: white; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #d4a53e; font-size: 0.8em;">▶</span> Blind and lame healed</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/21?lang=eng&id=14" target="_blank" data-ref="Matthew 21:14">21:14</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/21/14/" target="_blank" data-ref="Matthew 21:14">21:14</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
@@ -131,7 +131,7 @@ Yet in the midst of confrontation came compassion. Something remarkable happened
 
 *"And the blind and the lame came to him in the temple; and he healed them."*
 
-This detail, recorded only in Matthew, carries profound significance. According to Jewish tradition based on <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/2-sam/5?lang=eng&id=8" target="_blank" data-ref="2 Samuel 5:8">2 Samuel 5:8</a>, the blind and the lame were excluded from full Temple participation. The very people marginalized by the Temple system came to Jesus — and He healed them, right there in the Temple courts.
+This detail, recorded only in Matthew, carries profound significance. According to Jewish tradition based on <a href="https://www.blueletterbible.org/kjv/2sa/5/8/" target="_blank" data-ref="2 Samuel 5:8">2 Samuel 5:8</a>, the blind and the lame were excluded from full Temple participation. The very people marginalized by the Temple system came to Jesus — and He healed them, right there in the Temple courts.
 
 The contrast could not be sharper: the Temple leadership profited from exclusion and exploitation; Jesus welcomed the marginalized and healed the broken. The merchants had made the Temple a place of commerce; Jesus made it a place of healing.
 
@@ -142,7 +142,7 @@ The contrast could not be sharper: the Temple leadership profited from exclusion
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #d4a53e; font-size: 0.8em;">▶</span> Children cry Hosanna</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/21?lang=eng&id=15-16" target="_blank" data-ref="Matthew 21:15-16">21:15–16</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/21/15/" target="_blank" data-ref="Matthew 21:15-16">21:15–16</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
@@ -154,7 +154,7 @@ Children ran through the colonnade shouting *"Hosanna to the Son of David!"* —
 
 The chief priests and scribes were furious: *"Hearest thou what these say?"*
 
-They expected Jesus to silence the children. Instead, He quoted <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/8?lang=eng&id=2" target="_blank" data-ref="Psalm 8:2">Psalm 8:2</a>: *"Out of the mouth of babes and sucklings thou hast perfected praise."*
+They expected Jesus to silence the children. Instead, He quoted <a href="https://www.blueletterbible.org/kjv/psa/8/2/" target="_blank" data-ref="Psalm 8:2">Psalm 8:2</a>: *"Out of the mouth of babes and sucklings thou hast perfected praise."*
 
 In the original psalm, this verse describes how God has ordained praise from infants to silence His enemies. By applying this passage to Himself, Jesus was making a breathtaking claim: the praise that belongs to God — Yahweh — was rightly directed at Him. The children understood what the scholars refused to see.
 
@@ -165,8 +165,8 @@ In the original psalm, this verse describes how God has ordained praise from inf
 <details style="border-bottom: 1px solid #ddd; border-radius: 0 0 8px 8px;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: white; list-style: none; border-radius: 0 0 8px 8px;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #d4a53e; font-size: 0.8em;">▶</span> Returns to Bethany</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/21?lang=eng&id=17" target="_blank" data-ref="Matthew 21:17">21:17</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/11?lang=eng&id=19" target="_blank" data-ref="Mark 11:19">11:19</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/21/17/" target="_blank" data-ref="Matthew 21:17">21:17</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/11/19/" target="_blank" data-ref="Mark 11:19">11:19</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
@@ -202,7 +202,7 @@ As evening fell, Jesus left the city and returned to Bethany. He would return to
 
 <a href="https://www.blueletterbible.org/lexicon/g3027/kjv/tr/0-1/" target="_blank" data-lexicon="robber, brigand" data-strongs="G3027" data-translit="lēstēs" data-original="λῃστής" data-lang="greek">λῃστής</a> (*lēstēs*) — robber, brigand
 
-Jesus quotes <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/jer/7?lang=eng&id=11" target="_blank" data-ref="Jeremiah 7:11">Jeremiah 7:11</a>. The term *lēstēs* doesn't mean petty thief — it describes violent robbers or revolutionaries. Jesus accused the Temple leadership of turning sacred space into a headquarters for exploitation.
+Jesus quotes <a href="https://www.blueletterbible.org/kjv/jer/7/11/" target="_blank" data-ref="Jeremiah 7:11">Jeremiah 7:11</a>. The term *lēstēs* doesn't mean petty thief — it describes violent robbers or revolutionaries. Jesus accused the Temple leadership of turning sacred space into a headquarters for exploitation.
 
 ---
 
@@ -212,7 +212,7 @@ Jesus quotes <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/je
 
 <a href="https://www.blueletterbible.org/lexicon/g4335/kjv/tr/0-1/" target="_blank" data-lexicon="prayer" data-strongs="G4335" data-translit="proseuchē" data-original="προσευχή" data-lang="greek">προσευχή</a> (*proseuchē*) — prayer
 
-Jesus quotes <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/isa/56?lang=eng&id=7" target="_blank" data-ref="Isaiah 56:7">Isaiah 56:7</a>: "Mine house shall be called an house of prayer **for all people**." The Court of the Gentiles — where the merchants operated — was the only place non-Jews could worship. By filling it with commerce, the priests had excluded the nations from approaching God.
+Jesus quotes <a href="https://www.blueletterbible.org/kjv/isa/56/7/" target="_blank" data-ref="Isaiah 56:7">Isaiah 56:7</a>: "Mine house shall be called an house of prayer **for all people**." The Court of the Gentiles — where the merchants operated — was the only place non-Jews could worship. By filling it with commerce, the priests had excluded the nations from approaching God.
 
 ---
 
@@ -220,7 +220,7 @@ Jesus quotes <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/is
 
 <a href="https://www.blueletterbible.org/lexicon/g2540/kjv/tr/0-1/" target="_blank" data-lexicon="appointed time, season" data-strongs="G2540" data-translit="kairos" data-original="καιρός" data-lang="greek">καιρός</a> (*kairos*) — appointed time, opportune moment, season
 
-Mark notes that "the time [*kairos*] of figs was not yet" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/11?lang=eng&id=13" target="_blank" data-ref="Mark 11:13">Mark 11:13</a>). Unlike *chronos* (ordinary clock-time), *kairos* refers to a **divinely appointed moment** — the critical hour when God acts. The fig tree's fruitlessness during this *kairos* moment reflects that Israel's spiritual opportunity was passing. The appointed time for bearing fruit had come — and the Temple had none to offer.
+Mark notes that "the time [*kairos*] of figs was not yet" (<a href="https://www.blueletterbible.org/kjv/mrk/11/13/" target="_blank" data-ref="Mark 11:13">Mark 11:13</a>). Unlike *chronos* (ordinary clock-time), *kairos* refers to a **divinely appointed moment** — the critical hour when God acts. The fig tree's fruitlessness during this *kairos* moment reflects that Israel's spiritual opportunity was passing. The appointed time for bearing fruit had come — and the Temple had none to offer.
 
 </div>
 </details>
@@ -283,9 +283,9 @@ When Jesus overturned the tables, He was not just cleansing a sacred space — H
 
 In Mark's Gospel, the cursing of the fig tree and the Temple cleansing form a deliberate literary structure called an **intercalation** (or "Markan sandwich"):
 
-1. **Monday morning:** Jesus curses the fig tree for having no fruit (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/11?lang=eng&id=12-14" target="_blank" data-ref="Mark 11:12-14">Mark 11:12–14</a>)
-2. **Monday:** Jesus cleanses the Temple (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/11?lang=eng&id=15-19" target="_blank" data-ref="Mark 11:15-19">Mark 11:15–19</a>)
-3. **Tuesday morning:** Disciples see the fig tree withered (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/11?lang=eng&id=20-21" target="_blank" data-ref="Mark 11:20-21">Mark 11:20–21</a>)
+1. **Monday morning:** Jesus curses the fig tree for having no fruit (<a href="https://www.blueletterbible.org/kjv/mrk/11/12/" target="_blank" data-ref="Mark 11:12-14">Mark 11:12–14</a>)
+2. **Monday:** Jesus cleanses the Temple (<a href="https://www.blueletterbible.org/kjv/mrk/11/15/" target="_blank" data-ref="Mark 11:15-19">Mark 11:15–19</a>)
+3. **Tuesday morning:** Disciples see the fig tree withered (<a href="https://www.blueletterbible.org/kjv/mrk/11/20/" target="_blank" data-ref="Mark 11:20-21">Mark 11:20–21</a>)
 
 Mark uses this technique to show that **each event interprets the other**. The fig tree had leaves (the appearance of life) but no fruit. Similarly, the Temple had religious activity (the appearance of devotion) but had become spiritually barren — a "den of thieves" rather than a "house of prayer."
 
@@ -293,7 +293,7 @@ Just as the fruitless fig tree withered under Jesus' judgment, so too the fruitl
 
 ### Why No Fruit? The Biology of Fig Trees
 
-Middle Eastern fig trees bore two kinds of fruit: **nodules** came first in spring and were abundant and good to eat. If a tree had lots of nodules, it would produce a large harvest of the second fruit — the fig. But Mark tells us the tree had "nothing but leaves" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/11?lang=eng&id=13" target="_blank" data-ref="Mark 11:13">Mark 11:13</a>).
+Middle Eastern fig trees bore two kinds of fruit: **nodules** came first in spring and were abundant and good to eat. If a tree had lots of nodules, it would produce a large harvest of the second fruit — the fig. But Mark tells us the tree had "nothing but leaves" (<a href="https://www.blueletterbible.org/kjv/mrk/11/13/" target="_blank" data-ref="Mark 11:13">Mark 11:13</a>).
 
 Leaves without nodules meant **no fig harvest was coming**. Something was wrong with this tree on the inside — it looked healthy but was actually barren. This is precisely Jesus' point about the Temple leadership: they looked religious on the outside but produced no spiritual fruit.
 
@@ -302,11 +302,11 @@ Leaves without nodules meant **no fig harvest was coming**. Something was wrong 
 The fig tree was a powerful symbol of Israel in Hebrew prophetic literature. When the disciples saw the withered tree the next morning, a scripture they had heard growing up would have come rushing back:
 
 > "I will take away their harvest, declares the Lord. There will be no grapes on the vine. **There will be no figs on the tree, and their leaves will wither.** What I have given them will be taken from them."
-> — <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/jer/8?lang=eng&id=13" target="_blank" data-ref="Jeremiah 8:13">Jeremiah 8:13</a>
+> — <a href="https://www.blueletterbible.org/kjv/jer/8/13/" target="_blank" data-ref="Jeremiah 8:13">Jeremiah 8:13</a>
 
 Other prophetic fig tree passages include:
-- **<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/hosea/9?lang=eng&id=10,16" target="_blank" data-ref="Hosea 9:10">Hosea 9:10, 16</a>** — Israel as early figs, now bringing no fruit
-- **<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/micah/7?lang=eng&id=1-6" target="_blank" data-ref="Micah 7:1-6">Micah 7:1–6</a>** — "There is no cluster to eat: my soul desired the firstripe fruit"
+- **<a href="https://www.blueletterbible.org/kjv/hos/9/10/" target="_blank" data-ref="Hosea 9:10">Hosea 9:10, 16</a>** — Israel as early figs, now bringing no fruit
+- **<a href="https://www.blueletterbible.org/kjv/mic/7/1/" target="_blank" data-ref="Micah 7:1-6">Micah 7:1–6</a>** — "There is no cluster to eat: my soul desired the firstripe fruit"
 
 Jesus didn't randomly kill a tree — He was enacting prophetic judgment. The fig tree functioned as a **physical parable of the Temple's spiritual condition**.
 
@@ -341,7 +341,7 @@ President Howard W. Hunter taught that temples should be places of peace and rev
 ### Malachi's Prophecy
 
 > "The Lord, whom ye seek, shall suddenly come to his temple... But who may abide the day of his coming?"
-> — <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/mal/3?lang=eng&id=1-2" target="_blank" data-ref="Malachi 3:1-2">Malachi 3:1–2</a>
+> — <a href="https://www.blueletterbible.org/kjv/mal/3/1/" target="_blank" data-ref="Malachi 3:1-2">Malachi 3:1–2</a>
 
 Jesus' sudden arrival at the Temple fulfilled this prophecy — and foreshadows His Second Coming.
 

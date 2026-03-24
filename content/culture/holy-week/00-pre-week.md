@@ -48,12 +48,12 @@ hide_nav: true
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/12?lang=eng&id=1-2,9-11" target="_blank" data-ref="John 12:1-2">12:1–2, 9–11</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/12/1/" target="_blank" data-ref="John 12:1-2">12:1–2, 9–11</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #be8b55;">
 
-*"Then Jesus six days before the passover came to Bethany, where Lazarus was which had been dead, whom he raised from the dead."* (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/12?lang=eng&id=1" target="_blank" data-ref="John 12:1">John 12:1</a>)
+*"Then Jesus six days before the passover came to Bethany, where Lazarus was which had been dead, whom he raised from the dead."* (<a href="https://www.blueletterbible.org/kjv/jhn/12/1/" target="_blank" data-ref="John 12:1">John 12:1</a>)
 
 Jesus returned to the home of Mary, Martha, and Lazarus — a small village about two miles east of Jerusalem on the Mount of Olives. A dinner was prepared; Martha served, and Lazarus sat at the table with Jesus.
 
@@ -69,12 +69,12 @@ Word had spread about the man who had been four days in the tomb. Crowds came no
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/11?lang=eng&id=1-44" target="_blank" data-ref="John 11:1-44">11:1–44</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/11/1/" target="_blank" data-ref="John 11:1-44">11:1–44</a></div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=sfvzTm1mOCQ" target="_blank">Watch</a></div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #be8b55;">
 
-**Timeline:** This miracle occurred *weeks earlier*, not during Pre-Holy Week. Afterward, Jesus withdrew to Ephraim (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/11?lang=eng&id=54" target="_blank" data-ref="John 11:54">John 11:54</a>) until returning "six days before the Passover."
+**Timeline:** This miracle occurred *weeks earlier*, not during Pre-Holy Week. Afterward, Jesus withdrew to Ephraim (<a href="https://www.blueletterbible.org/kjv/jhn/11/54/" target="_blank" data-ref="John 11:54">John 11:54</a>) until returning "six days before the Passover."
 
 ---
 
@@ -96,7 +96,7 @@ At the tomb, Martha objected to removing the stone — *"Lord, by this time he s
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/12?lang=eng&id=1-8" target="_blank" data-ref="John 12:1-8">12:1–8</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/12/1/" target="_blank" data-ref="John 12:1-8">12:1–8</a></div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=cefttBItKic" target="_blank">Watch</a></div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #be8b55;">
@@ -117,7 +117,7 @@ Judas Iscariot objected to the "waste," but Jesus defended Mary: *"Let her alone
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/12?lang=eng&id=4-8" target="_blank" data-ref="John 12:4-8">12:4–8</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/12/4/" target="_blank" data-ref="John 12:4-8">12:4–8</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #be8b55;">
@@ -140,7 +140,7 @@ Where Judas saw waste, Jesus saw worship. Where Judas calculated worldly value, 
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/12?lang=eng&id=10-11" target="_blank" data-ref="John 12:10-11">12:10–11</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/12/10/" target="_blank" data-ref="John 12:10-11">12:10–11</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #be8b55; border-radius: 0 0 8px 8px;">
@@ -151,7 +151,7 @@ The chief priests began consulting together — not only to kill Jesus, but Laza
 
 Lazarus was living proof of Jesus' divine power. As long as he walked the streets of Bethany, people would keep believing. The religious leaders had no theological argument against a man who had been dead four days and now lived. Their only solution was to eliminate the evidence.
 
-The miracle that brought Lazarus from the grave would lead Jesus to His own. Scholar John W. Welch argues that when Christ raised Lazarus, He understood this act would likely result in His own execution. The Jewish leaders had been seeking a legal pretext against Jesus, and <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/deut/13?lang=eng&id=1-5" target="_blank" data-ref="Deuteronomy 13:1-5">Deuteronomy 13:1–5</a> warned against prophets who perform "signs" that lead people astray. By raising a man who had been dead four days, Jesus effectively signed His own death warrant.
+The miracle that brought Lazarus from the grave would lead Jesus to His own. Scholar John W. Welch argues that when Christ raised Lazarus, He understood this act would likely result in His own execution. The Jewish leaders had been seeking a legal pretext against Jesus, and <a href="https://www.blueletterbible.org/kjv/deu/13/1/" target="_blank" data-ref="Deuteronomy 13:1-5">Deuteronomy 13:1–5</a> warned against prophets who perform "signs" that lead people astray. By raising a man who had been dead four days, Jesus effectively signed His own death warrant.
 
 <div style="margin-top: 16px; padding: 12px 16px; background: #f5f0e8; border-radius: 6px; font-size: 0.9em;">
 <strong>See:</strong> John W. Welch, "<a href="https://www.byunewtestamentcommentary.com/raising-lazarus-jesuss-signing-of-his-own-death-warrant/" target="_blank" style="color: #be8b55;">Raising Lazarus: Jesus's Signing of His Own Death Warrant</a>," *BYU New Testament Commentary*, 2016.
@@ -201,7 +201,7 @@ Latter-day Saint scholar William J. Hamblin notes that John structures the event
 
 **The Resurrection as Temple Portal:** Jesus's declaration "I am the resurrection and the life" establishes resurrection as the threshold to God's presence — just as the high priest passed through the veil to enter the Holy of Holies, Christ offers Himself as the way.
 
-**The Anointing as Temple Incense:** When Mary anointed Jesus, "the house was filled with the odour of the ointment" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/12?lang=eng&id=3" target="_blank" data-ref="John 12:3">John 12:3</a>). Scholar John S. Thompson sees an allusion to Isaiah's vision of the heavenly temple "filled with smoke" from the incense altar (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/isa/6?lang=eng&id=4" target="_blank" data-ref="Isaiah 6:4">Isaiah 6:4</a>). The fragrance that filled the house symbolically transformed it into sacred space.
+**The Anointing as Temple Incense:** When Mary anointed Jesus, "the house was filled with the odour of the ointment" (<a href="https://www.blueletterbible.org/kjv/jhn/12/3/" target="_blank" data-ref="John 12:3">John 12:3</a>). Scholar John S. Thompson sees an allusion to Isaiah's vision of the heavenly temple "filled with smoke" from the incense altar (<a href="https://www.blueletterbible.org/kjv/isa/6/4/" target="_blank" data-ref="Isaiah 6:4">Isaiah 6:4</a>). The fragrance that filled the house symbolically transformed it into sacred space.
 
 <div style="margin-top: 16px; padding-top: 12px; border-top: 1px dashed #be8b55; font-size: 0.9em; color: #666;">
 <strong>Sources:</strong> John S. Thompson, "How John's Gospel Portrays Jesus as the Way of the Temple," in *The Temple: Ancient and Restored* (2016) | <a href="https://scripturecentral.org/knowhy/how-does-john-portray-jesus-as-the-way-of-the-temple" target="_blank" style="color: #be8b55;">KnoWhy #668</a> | <a href="https://interpreterfoundation.org/journal/i-have-revealed-your-name-the-hidden-temple-in-john-17" target="_blank" style="color: #be8b55;">Hamblin, "The Hidden Temple in John 17"</a>
@@ -223,10 +223,10 @@ In ancient Israel, **three groups** were set apart through anointing with holy o
 <h3 style="margin: 0 0 8px 0; color: #8b6914;">Prophet — נָבִיא</h3>
 <blockquote style="margin: 12px 0; padding: 12px 16px; background: #faf8f5; border-left: 3px solid #be8b55; font-style: italic; font-size: 0.95em;">
 "And Elisha... shalt thou <strong>anoint to be prophet</strong> in thy room."
-<div style="text-align: right; font-size: 0.85em; margin-top: 4px;">— <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/1-kgs/19?lang=eng&id=16" target="_blank" data-ref="1 Kings 19:16">1 Kings 19:16</a></div>
+<div style="text-align: right; font-size: 0.85em; margin-top: 4px;">— <a href="https://www.blueletterbible.org/kjv/1ki/19/16/" target="_blank" data-ref="1 Kings 19:16">1 Kings 19:16</a></div>
 </blockquote>
 <p style="margin: 12px 0 8px;"><strong>Purpose:</strong> Prophets spoke God's word to the people, revealing His will and calling them to repentance.</p>
-<p style="margin: 8px 0 0; color: #666; font-size: 0.95em;"><strong>Jesus fulfills this:</strong> Christ is "the Word made flesh" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/1?lang=eng&id=14" target="_blank" data-ref="John 1:14">John 1:14</a>), the ultimate revealer of the Father's will.</p>
+<p style="margin: 8px 0 0; color: #666; font-size: 0.95em;"><strong>Jesus fulfills this:</strong> Christ is "the Word made flesh" (<a href="https://www.blueletterbible.org/kjv/jhn/1/14/" target="_blank" data-ref="John 1:14">John 1:14</a>), the ultimate revealer of the Father's will.</p>
 </div>
 </div>
 
@@ -236,10 +236,10 @@ In ancient Israel, **three groups** were set apart through anointing with holy o
 <h3 style="margin: 0 0 8px 0; color: #8b6914;">Priest — כֹּהֵן</h3>
 <blockquote style="margin: 12px 0; padding: 12px 16px; background: #faf8f5; border-left: 3px solid #be8b55; font-style: italic; font-size: 0.95em;">
 "Take the anointing oil and <strong>pour it on his head and anoint him</strong>."
-<div style="text-align: right; font-size: 0.85em; margin-top: 4px;">— <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ex/29?lang=eng&id=7" target="_blank" data-ref="Exodus 29:7">Exodus 29:7</a></div>
+<div style="text-align: right; font-size: 0.85em; margin-top: 4px;">— <a href="https://www.blueletterbible.org/kjv/exo/29/7/" target="_blank" data-ref="Exodus 29:7">Exodus 29:7</a></div>
 </blockquote>
 <p style="margin: 12px 0 8px;"><strong>Purpose:</strong> Priests interceded between God and the people, offering sacrifices for sin.</p>
-<p style="margin: 8px 0 0; color: #666; font-size: 0.95em;"><strong>Jesus fulfills this:</strong> Christ is our "great high priest" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/heb/4?lang=eng&id=14" target="_blank" data-ref="Hebrews 4:14">Hebrews 4:14</a>) who entered the heavenly Holy of Holies with His own blood.</p>
+<p style="margin: 8px 0 0; color: #666; font-size: 0.95em;"><strong>Jesus fulfills this:</strong> Christ is our "great high priest" (<a href="https://www.blueletterbible.org/kjv/heb/4/14/" target="_blank" data-ref="Hebrews 4:14">Hebrews 4:14</a>) who entered the heavenly Holy of Holies with His own blood.</p>
 </div>
 </div>
 
@@ -249,10 +249,10 @@ In ancient Israel, **three groups** were set apart through anointing with holy o
 <h3 style="margin: 0 0 8px 0; color: #8b6914;">King — מֶלֶךְ</h3>
 <blockquote style="margin: 12px 0; padding: 12px 16px; background: #faf8f5; border-left: 3px solid #be8b55; font-style: italic; font-size: 0.95em;">
 "Samuel took the horn of oil, and <strong>anointed him</strong>... and the Spirit of the LORD came upon David."
-<div style="text-align: right; font-size: 0.85em; margin-top: 4px;">— <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/1-sam/16?lang=eng&id=13" target="_blank" data-ref="1 Samuel 16:13">1 Samuel 16:13</a></div>
+<div style="text-align: right; font-size: 0.85em; margin-top: 4px;">— <a href="https://www.blueletterbible.org/kjv/1sa/16/13/" target="_blank" data-ref="1 Samuel 16:13">1 Samuel 16:13</a></div>
 </blockquote>
 <p style="margin: 12px 0 8px;"><strong>Purpose:</strong> Kings ruled and protected God's people, establishing justice and righteousness.</p>
-<p style="margin: 8px 0 0; color: #666; font-size: 0.95em;"><strong>Jesus fulfills this:</strong> Christ is "KING OF KINGS, AND LORD OF LORDS" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/rev/19?lang=eng&id=16" target="_blank" data-ref="Revelation 19:16">Revelation 19:16</a>), whose kingdom shall have no end.</p>
+<p style="margin: 8px 0 0; color: #666; font-size: 0.95em;"><strong>Jesus fulfills this:</strong> Christ is "KING OF KINGS, AND LORD OF LORDS" (<a href="https://www.blueletterbible.org/kjv/rev/19/16/" target="_blank" data-ref="Revelation 19:16">Revelation 19:16</a>), whose kingdom shall have no end.</p>
 </div>
 </div>
 
@@ -271,7 +271,7 @@ The Gospel accounts preserve **two anointings** during Holy Week, each with dist
 <div style="position: absolute; top: -12px; left: 20px; background: #be8b55; color: white; padding: 4px 16px; border-radius: 20px; font-size: 0.85em; font-weight: bold;">SATURDAY</div>
 <h3 style="margin: 12px 0 16px; color: #8b6914;">Mary of Bethany Anoints His Feet</h3>
 <p style="margin: 0 0 12px;">John places this anointing the day before the Triumphal Entry — symbolically anointing Jesus as <strong>King</strong> before He rode into Jerusalem on a donkey.</p>
-<p style="margin: 0; font-size: 0.95em; color: #666;">Just as Solomon was anointed before riding David's mule to his coronation (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/1-kgs/1?lang=eng&id=33-39" target="_blank" data-ref="1 Kings 1:33-39">1 Kings 1:33–39</a>).</p>
+<p style="margin: 0; font-size: 0.95em; color: #666;">Just as Solomon was anointed before riding David's mule to his coronation (<a href="https://www.blueletterbible.org/kjv/1ki/1/33/" target="_blank" data-ref="1 Kings 1:33-39">1 Kings 1:33–39</a>).</p>
 <div style="margin-top: 16px; padding-top: 12px; border-top: 1px dashed #be8b55; text-align: center;">
 <span style="background: #f0ebe5; padding: 6px 14px; border-radius: 20px; font-size: 0.9em; color: #8b6914;">👑 King</span>
 </div>
@@ -305,7 +305,7 @@ Together, these women unknowingly testified that Jesus was both <strong>King and
 <p>Mary of Bethany performed what Jesus called a "good work" — anointing Him for His burial before His death. While others missed the significance of what was coming, Mary seemed to understand, at some level, that Jesus would soon die.</p>
 <blockquote style="margin: 16px 0 0; padding: 12px 16px; background: #faf8f5; border-left: 3px solid #be8b55; font-style: italic;">
 "Wheresoever this gospel shall be preached throughout the whole world, this also that she hath done shall be spoken of for a memorial of her."
-<div style="text-align: right; font-size: 0.85em; margin-top: 4px;">— <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/14?lang=eng&id=9" target="_blank" data-ref="Mark 14:9">Mark 14:9</a></div>
+<div style="text-align: right; font-size: 0.85em; margin-top: 4px;">— <a href="https://www.blueletterbible.org/kjv/mrk/14/9/" target="_blank" data-ref="Mark 14:9">Mark 14:9</a></div>
 </blockquote>
 </div>
 

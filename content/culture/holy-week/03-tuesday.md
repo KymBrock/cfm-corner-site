@@ -46,9 +46,9 @@ hide_nav: true
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(4, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #3f6438; font-size: 0.8em;">▶</span> Fig tree cursed/withered</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/21?lang=eng&id=18-22" target="_blank" data-ref="Matthew 21:18-22">21:18–22</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/11?lang=eng&id=12-14,20-26" target="_blank" data-ref="Mark 11:12-14">11:12–14, 20–26</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/13?lang=eng&id=6-9" target="_blank" data-ref="Luke 13:6-9">13:6–9</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/21/18/" target="_blank" data-ref="Matthew 21:18-22">21:18–22</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/11/12/" target="_blank" data-ref="Mark 11:12-14">11:12–14, 20–26</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/13/6/" target="_blank" data-ref="Luke 13:6-9">13:6–9</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #3f6438;">
@@ -64,9 +64,9 @@ But the fig tree was more than an object lesson about prayer. Mark deliberately 
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(4, 1fr); padding: 0; cursor: pointer; background: white; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #3f6438; font-size: 0.8em;">▶</span> Authority questioned</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/21?lang=eng&id=23-27" target="_blank" data-ref="Matthew 21:23-27">21:23–27</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/11?lang=eng&id=27-33" target="_blank" data-ref="Mark 11:27-33">11:27–33</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/20?lang=eng&id=1-8" target="_blank" data-ref="Luke 20:1-8">20:1–8</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/21/23/" target="_blank" data-ref="Matthew 21:23-27">21:23–27</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/11/27/" target="_blank" data-ref="Mark 11:27-33">11:27–33</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/20/1/" target="_blank" data-ref="Luke 20:1-8">20:1–8</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #3f6438;">
@@ -86,7 +86,7 @@ Jesus replied: *"Neither do I tell you by what authority I do these things."* Th
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(4, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #3f6438; font-size: 0.8em;">▶</span> Parable: Two sons</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/21?lang=eng&id=28-32" target="_blank" data-ref="Matthew 21:28-32">21:28–32</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/21/28/" target="_blank" data-ref="Matthew 21:28-32">21:28–32</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=ZI8JWMNyEN0" target="_blank">Watch</a></div>
@@ -108,9 +108,9 @@ Then came the sting. The tax collectors and prostitutes were like that first son
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(4, 1fr); padding: 0; cursor: pointer; background: white; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #3f6438; font-size: 0.8em;">▶</span> Parable: Wicked husbandmen</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/21?lang=eng&id=33-46" target="_blank" data-ref="Matthew 21:33-46">21:33–46</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/12?lang=eng&id=1-12" target="_blank" data-ref="Mark 12:1-12">12:1–12</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/20?lang=eng&id=9-20" target="_blank" data-ref="Luke 20:9-20">20:9–20</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/21/33/" target="_blank" data-ref="Matthew 21:33-46">21:33–46</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/12/1/" target="_blank" data-ref="Mark 12:1-12">12:1–12</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/20/9/" target="_blank" data-ref="Luke 20:9-20">20:9–20</a></div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=7MqbjfhEHF0" target="_blank">Watch</a></div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #3f6438;">
@@ -128,9 +128,9 @@ The chief priests answered — condemning themselves: *"He will miserably destro
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(4, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #3f6438; font-size: 0.8em;">▶</span> Parable: Wedding feast</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/22?lang=eng&id=1-14" target="_blank" data-ref="Matthew 22:1-14">22:1–14</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/22/1/" target="_blank" data-ref="Matthew 22:1-14">22:1–14</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/14?lang=eng&id=1-24" target="_blank" data-ref="Luke 14:1-24">14:1–24</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/14/1/" target="_blank" data-ref="Luke 14:1-24">14:1–24</a></div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=nB0BD03aliU" target="_blank">Watch</a></div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #3f6438;">
@@ -148,9 +148,9 @@ Yet one man arrived without a wedding garment and was cast out. In ancient custo
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(4, 1fr); padding: 0; cursor: pointer; background: white; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #3f6438; font-size: 0.8em;">▶</span> Tribute to Caesar</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/22?lang=eng&id=15-22" target="_blank" data-ref="Matthew 22:15-22">22:15–22</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/12?lang=eng&id=13-17" target="_blank" data-ref="Mark 12:13-17">12:13–17</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/20?lang=eng&id=21-26" target="_blank" data-ref="Luke 20:21-26">20:21–26</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/22/15/" target="_blank" data-ref="Matthew 22:15-22">22:15–22</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/12/13/" target="_blank" data-ref="Mark 12:13-17">12:13–17</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/20/21/" target="_blank" data-ref="Luke 20:21-26">20:21–26</a></div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=URifKLvlx8s" target="_blank">Watch</a></div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #3f6438;">
@@ -161,7 +161,7 @@ Jesus asked for a denarius: *"Whose is this image and superscription?"* — *"Ca
 
 *"Render therefore unto Caesar the things which are Caesar's; and unto God the things that are God's."*
 
-The answer was brilliant: give Caesar his coins — they bear his image. But give God what bears *His* image: human beings. We were created *b'tselem Elohim* — in the image of God (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/gen/1?lang=eng&id=27" target="_blank" data-ref="Genesis 1:27">Genesis 1:27</a>). Caesar claims our coins; God claims our very selves.
+The answer was brilliant: give Caesar his coins — they bear his image. But give God what bears *His* image: human beings. We were created *b'tselem Elohim* — in the image of God (<a href="https://www.blueletterbible.org/kjv/gen/1/27/" target="_blank" data-ref="Genesis 1:27">Genesis 1:27</a>). Caesar claims our coins; God claims our very selves.
 
 </div>
 </details>
@@ -170,9 +170,9 @@ The answer was brilliant: give Caesar his coins — they bear his image. But giv
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(4, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #3f6438; font-size: 0.8em;">▶</span> Sadducees: Marriage/Resurrection</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/22?lang=eng&id=23-33" target="_blank" data-ref="Matthew 22:23-33">22:23–33</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/12?lang=eng&id=18-27" target="_blank" data-ref="Mark 12:18-27">12:18–27</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/20?lang=eng&id=27-38" target="_blank" data-ref="Luke 20:27-38">20:27–38</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/22/23/" target="_blank" data-ref="Matthew 22:23-33">22:23–33</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/12/18/" target="_blank" data-ref="Mark 12:18-27">12:18–27</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/20/27/" target="_blank" data-ref="Luke 20:27-38">20:27–38</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #3f6438;">
@@ -192,9 +192,9 @@ Then Jesus proved resurrection from Moses himself: God said *"I am"* — not "I 
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(4, 1fr); padding: 0; cursor: pointer; background: white; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #3f6438; font-size: 0.8em;">▶</span> Great Commandment</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/22?lang=eng&id=34-40" target="_blank" data-ref="Matthew 22:34-40">22:34–40</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/12?lang=eng&id=28-31" target="_blank" data-ref="Mark 12:28-31">12:28–31</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/10?lang=eng&id=25-37" target="_blank" data-ref="Luke 10:25-37">10:25–37</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/22/34/" target="_blank" data-ref="Matthew 22:34-40">22:34–40</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/12/28/" target="_blank" data-ref="Mark 12:28-31">12:28–31</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/10/25/" target="_blank" data-ref="Luke 10:25-37">10:25–37</a></div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=db-lE_f2U5I" target="_blank">Watch</a></div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #3f6438;">
@@ -214,16 +214,16 @@ Jesus saw that this man understood what the Temple establishment had forgotten: 
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(4, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #3f6438; font-size: 0.8em;">▶</span> Pharisees put to silence</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/22?lang=eng&id=41-46" target="_blank" data-ref="Matthew 22:41-46">22:41–46</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/12?lang=eng&id=35-37" target="_blank" data-ref="Mark 12:35-37">12:35–37</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/20?lang=eng&id=39-44" target="_blank" data-ref="Luke 20:39-44">20:39–44</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/22/41/" target="_blank" data-ref="Matthew 22:41-46">22:41–46</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/12/35/" target="_blank" data-ref="Mark 12:35-37">12:35–37</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/20/39/" target="_blank" data-ref="Luke 20:39-44">20:39–44</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #3f6438;">
 
 Now Jesus asked *them*: *"What think ye of Christ? Whose son is he?"* — *"The Son of David."*
 
-*"How then doth David in spirit call him Lord?"* Jesus quoted <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/110?lang=eng&id=1" target="_blank" data-ref="Psalm 110:1">Psalm 110:1</a>: *"The LORD said unto my Lord, Sit thou on my right hand."*
+*"How then doth David in spirit call him Lord?"* Jesus quoted <a href="https://www.blueletterbible.org/kjv/psa/110/1/" target="_blank" data-ref="Psalm 110:1">Psalm 110:1</a>: *"The LORD said unto my Lord, Sit thou on my right hand."*
 
 In Jewish culture, fathers did not call their sons "Lord." If David called the Messiah "my Lord," the Messiah must be something *more* than human — David's Lord as well as David's son. Jesus was revealing His divine identity: not just a human king from David's line, but the pre-existent Lord whom David himself worshipped.
 
@@ -237,8 +237,8 @@ No one could answer Him a word. From that day forward, no one dared ask Him anyt
 <summary style="display: grid; grid-template-columns: 2fr repeat(4, 1fr); padding: 0; cursor: pointer; background: white; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #3f6438; font-size: 0.8em;">▶</span> Widow's mite</div>
 <div style="padding: 12px; text-align: center;">—</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/12?lang=eng&id=41-44" target="_blank" data-ref="Mark 12:41-44">12:41–44</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/21?lang=eng&id=1-4" target="_blank" data-ref="Luke 21:1-4">21:1–4</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/12/41/" target="_blank" data-ref="Mark 12:41-44">12:41–44</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/21/1/" target="_blank" data-ref="Luke 21:1-4">21:1–4</a></div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=e1G-aZIempw" target="_blank">Watch</a></div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #3f6438;">
@@ -256,9 +256,9 @@ God measures giving not by the amount, but by the sacrifice. By heaven's account
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(4, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #3f6438; font-size: 0.8em;">▶</span> Denunciation of hypocrisy</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/23?lang=eng&id=1-36" target="_blank" data-ref="Matthew 23:1-36">23:1–36</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/12?lang=eng&id=38-40" target="_blank" data-ref="Mark 12:38-40">12:38–40</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/20?lang=eng&id=45-47" target="_blank" data-ref="Luke 20:45-47">20:45–47</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/23/1/" target="_blank" data-ref="Matthew 23:1-36">23:1–36</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/12/38/" target="_blank" data-ref="Mark 12:38-40">12:38–40</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/20/45/" target="_blank" data-ref="Luke 20:45-47">20:45–47</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #3f6438;">
@@ -280,9 +280,9 @@ Jesus pronounced seven "woes" against the scribes and Pharisees — funeral lame
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(4, 1fr); padding: 0; cursor: pointer; background: white; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #3f6438; font-size: 0.8em;">▶</span> Jesus' lament over Jerusalem</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/23?lang=eng&id=37-39" target="_blank" data-ref="Matthew 23:37-39">23:37–39</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/23/37/" target="_blank" data-ref="Matthew 23:37-39">23:37–39</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/13?lang=eng&id=34-35" target="_blank" data-ref="Luke 13:34-35">13:34–35</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/13/34/" target="_blank" data-ref="Luke 13:34-35">13:34–35</a></div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=xGugBjiJdfg" target="_blank">Watch</a></div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #3f6438;">
@@ -300,9 +300,9 @@ This was not cold condemnation. It was a broken heart. The Lord who had sent pro
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(4, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #3f6438; font-size: 0.8em;">▶</span> Olivet Discourse</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/24?lang=eng" target="_blank" data-ref="Matthew 24">24</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/13?lang=eng" target="_blank" data-ref="Mark 13">13</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/21?lang=eng&id=5-38" target="_blank" data-ref="Luke 21:5-38">21:5–38</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/24/1/" target="_blank" data-ref="Matthew 24">24</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/13/1/" target="_blank" data-ref="Mark 13">13</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/21/5/" target="_blank" data-ref="Luke 21:5-38">21:5–38</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #3f6438;">
@@ -322,7 +322,7 @@ But He also gave warning: *"Of that day and that hour knoweth no man, no, not th
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(4, 1fr); padding: 0; cursor: pointer; background: white; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #3f6438; font-size: 0.8em;">▶</span> Parable: Ten Virgins</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/25?lang=eng&id=1-13" target="_blank" data-ref="Matthew 25:1-13">25:1–13</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/25/1/" target="_blank" data-ref="Matthew 25:1-13">25:1–13</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=mwCavwlkp0A" target="_blank">Watch</a></div>
@@ -342,7 +342,7 @@ The oil represents spiritual preparation that cannot be borrowed at the last min
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(4, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #3f6438; font-size: 0.8em;">▶</span> Parable: Talents</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/25?lang=eng&id=14-30" target="_blank" data-ref="Matthew 25:14-30">25:14–30</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/25/14/" target="_blank" data-ref="Matthew 25:14-30">25:14–30</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=Havcr-2Kx30" target="_blank">Watch</a></div>
@@ -364,7 +364,7 @@ God entrusts us with gifts to be multiplied, not preserved fearfully. He expects
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(4, 1fr); padding: 0; cursor: pointer; background: white; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #3f6438; font-size: 0.8em;">▶</span> Sheep and Goats</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/25?lang=eng&id=31-46" target="_blank" data-ref="Matthew 25:31-46">25:31–46</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/25/31/" target="_blank" data-ref="Matthew 25:31-46">25:31–46</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=-0AUXzG-nfo" target="_blank">Watch</a></div>
@@ -390,7 +390,7 @@ Christ so identifies with the suffering that serving them is serving Him — and
 <details style="border-bottom: 1px solid #ddd; border-radius: 0 0 8px 8px;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(4, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none; border-radius: 0 0 8px 8px;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #3f6438; font-size: 0.8em;">▶</span> Jesus prophesies His crucifixion</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=2" target="_blank" data-ref="Matthew 26:2">26:2</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/26/2/" target="_blank" data-ref="Matthew 26:2">26:2</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
@@ -403,7 +403,7 @@ As the day ended, He told His disciples: *"Ye know that after two days is the fe
 
 **Traditional chronology:** Tomorrow — Wednesday — there would be silence. Jesus would rest in Bethany while His enemies conspired. The Last Supper would occur Thursday evening, with the crucifixion on Friday.
 
-**Alternative chronology:** Some scholars, drawing on evidence from the Book of Mormon and the "three days and three nights" prophecy (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/12?lang=eng&id=40" target="_blank" data-ref="Matthew 12:40">Matthew 12:40</a>), propose that the Last Supper occurred Wednesday evening, with Jesus arrested that night and crucified Thursday. This would place His death precisely as the Passover lambs were slaughtered and allow a full three days in the tomb before Sunday's resurrection. (See our <a href="/culture/holy-week/06-friday/">Good Friday</a> page for more on this dating question.)
+**Alternative chronology:** Some scholars, drawing on evidence from the Book of Mormon and the "three days and three nights" prophecy (<a href="https://www.blueletterbible.org/kjv/mat/12/40/" target="_blank" data-ref="Matthew 12:40">Matthew 12:40</a>), propose that the Last Supper occurred Wednesday evening, with Jesus arrested that night and crucified Thursday. This would place His death precisely as the Passover lambs were slaughtered and allow a full three days in the tomb before Sunday's resurrection. (See our <a href="/culture/holy-week/06-friday/">Good Friday</a> page for more on this dating question.)
 
 The next time He spoke publicly, it would be before Pilate.
 
@@ -453,7 +453,7 @@ The Hebrew word for "glory" literally means **heaviness** or **weight**. When Je
 <span style="font-size: 1.2em;">📜</span> The Olivet Discourse
 </h3>
 
-On Tuesday evening, Jesus sat on the Mount of Olives overlooking the Temple and delivered His most extensive teaching on the signs of His Second Coming. This discourse is preserved in <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/24?lang=eng" target="_blank" data-ref="Matthew 24">Matthew 24–25</a>, <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/13?lang=eng" target="_blank" data-ref="Mark 13">Mark 13</a>, and <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/21?lang=eng" target="_blank" data-ref="Luke 21">Luke 21</a>.
+On Tuesday evening, Jesus sat on the Mount of Olives overlooking the Temple and delivered His most extensive teaching on the signs of His Second Coming. This discourse is preserved in <a href="https://www.blueletterbible.org/kjv/mat/24/1/" target="_blank" data-ref="Matthew 24">Matthew 24–25</a>, <a href="https://www.blueletterbible.org/kjv/mrk/13/1/" target="_blank" data-ref="Mark 13">Mark 13</a>, and <a href="https://www.blueletterbible.org/kjv/luk/21/1/" target="_blank" data-ref="Luke 21">Luke 21</a>.
 
 **Key Themes:** Destruction of the Temple (fulfilled 70 AD) • Signs of the times • The abomination of desolation • False Christs and prophets • The gathering of Israel • "As in the days of Noah" • Constant watchfulness
 
@@ -469,12 +469,12 @@ On Tuesday evening, Jesus sat on the Mount of Olives overlooking the Temple and 
 
 <h2 style="margin: 0 0 16px; color: white; text-align: center;">The Great Commandment</h2>
 
-<p style="text-align: center; margin: 0 0 20px; color: #e8f0e6;">When asked which commandment was greatest, Jesus quoted the <em>Shema</em> (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/deut/6?lang=eng&id=4-5" target="_blank" data-ref="Deuteronomy 6:4-5" style="color: #c8e0c4;">Deuteronomy 6:4–5</a>):</p>
+<p style="text-align: center; margin: 0 0 20px; color: #e8f0e6;">When asked which commandment was greatest, Jesus quoted the <em>Shema</em> (<a href="https://www.blueletterbible.org/kjv/deu/6/4/" target="_blank" data-ref="Deuteronomy 6:4-5" style="color: #c8e0c4;">Deuteronomy 6:4–5</a>):</p>
 
 <blockquote style="margin: 0; padding: 20px 24px; background: rgba(255,255,255,0.15); border-radius: 8px; border-left: 4px solid rgba(255,255,255,0.7); font-size: 1.1em; line-height: 1.6; color: white;">
 "Thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy mind, and with all thy strength."
-<div style="margin-top: 12px; color: #e8f0e6;">Then He added (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/lev/19?lang=eng&id=18" target="_blank" data-ref="Leviticus 19:18" style="color: #c8e0c4;">Leviticus 19:18</a>): "Thou shalt love thy neighbour as thyself."</div>
-<div style="text-align: right; margin-top: 12px; font-size: 0.9em; color: #c8e0c4;">— <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/22?lang=eng&id=37-39" target="_blank" data-ref="Matthew 22:37-39" style="color: #c8e0c4;">Matthew 22:37–39</a></div>
+<div style="margin-top: 12px; color: #e8f0e6;">Then He added (<a href="https://www.blueletterbible.org/kjv/lev/19/18/" target="_blank" data-ref="Leviticus 19:18" style="color: #c8e0c4;">Leviticus 19:18</a>): "Thou shalt love thy neighbour as thyself."</div>
+<div style="text-align: right; margin-top: 12px; font-size: 0.9em; color: #c8e0c4;">— <a href="https://www.blueletterbible.org/kjv/mat/22/37/" target="_blank" data-ref="Matthew 22:37-39" style="color: #c8e0c4;">Matthew 22:37–39</a></div>
 </blockquote>
 
 </div>
