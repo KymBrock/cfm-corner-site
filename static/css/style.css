@@ -1603,20 +1603,19 @@ a.RTBData:hover, a.BLBST_a:hover {
     .library-article-content table td,
     .library-article-content table th { padding: 8px 10px; font-size: 0.9em; }
     .culture-article-content .scripture-harmony {
-        overflow-x: hidden;
-        padding-bottom: 0;
-    }
-    .culture-article-content .scripture-harmony > div:first-child,
-    .culture-article-content .scripture-harmony > details,
-    .culture-article-content .scripture-harmony > details > summary,
-    .culture-article-content .scripture-harmony > details > div {
-        min-width: 100% !important;
-        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 4px;
     }
     .culture-article-content .scripture-harmony > div:first-child,
     .culture-article-content .scripture-harmony > details > summary {
-        grid-template-columns: minmax(140px, 1.7fr) repeat(5, minmax(42px, 0.75fr)) !important;
+        min-width: 640px !important;
+        width: 640px;
+        grid-template-columns: minmax(148px, 1.8fr) repeat(5, minmax(46px, 0.78fr)) !important;
         font-size: 0.82em;
+    }
+    .culture-article-content .scripture-harmony > details {
+        min-width: 640px !important;
     }
     .culture-article-content .scripture-harmony > div:first-child > div,
     .culture-article-content .scripture-harmony > details > summary > div {
@@ -1625,6 +1624,8 @@ a.RTBData:hover, a.BLBST_a:hover {
         overflow-wrap: anywhere;
     }
     .culture-article-content .scripture-harmony > details > div {
+        min-width: 100% !important;
+        width: 100%;
         padding: 16px 18px !important;
         font-size: 0.98em;
     }
