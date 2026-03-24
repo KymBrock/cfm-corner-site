@@ -209,15 +209,30 @@
       // Regex to find parenthetical scripture references in text
       var scriptureRefRegex = /\(([1-4]?\s*[A-Z][a-zA-Z&]+(?:\s+[A-Z][a-zA-Z]+)*\s+\d+:\d+(?:[–\-]\d+)?)\)/g;
 
+      function isBLBLexiconLink(href) {
+        return /blueletterbible\.org\/lexicon\//i.test(href || '');
+      }
+
+      function isBLBSearchLink(href) {
+        return /blueletterbible\.org\/search\/search\.cfm/i.test(href || '');
+      }
+
+      function isBLBScriptureLink(href) {
+        if (!href) return false;
+        if (!/blueletterbible\.org\//i.test(href)) return false;
+        if (isBLBLexiconLink(href) || isBLBSearchLink(href)) return false;
+        return /blueletterbible\.org\/[a-z0-9-]+\/[a-z0-9-]+\/\d+(?:\/\d+)?/i.test(href);
+      }
+
       function getLinkType(el) {
         if (!el) return null;
         // data-ref is first-class: any element with data-ref is a scripture reference
         if (el.dataset && el.dataset.ref) return 'scripture-ref';
         if (!el.href) return null;
-        if (/blueletterbible\.org\/lexicon\//i.test(el.href)) return 'lexicon';
-        if (/blueletterbible\.org\/kjv\//i.test(el.href)) return 'scripture';
+        if (isBLBLexiconLink(el.href)) return 'lexicon';
+        if (isBLBScriptureLink(el.href)) return 'scripture';
         if (/churchofjesuschrist\.org\/study\/scriptures\//i.test(el.href)) return 'scripture-church';
-        if (/blueletterbible\.org\/search\/search\.cfm/i.test(el.href)) return 'blbsearch';
+        if (isBLBSearchLink(el.href)) return 'blbsearch';
         if (/sefaria\.org\//i.test(el.href)) return 'sefaria';
         return null;
       }
@@ -526,7 +541,7 @@
       }
 
       function getTargetAnchor(target) {
-        return target && target.closest ? target.closest('[data-ref], a[href*="blueletterbible.org/kjv/"], a[href*="blueletterbible.org/lexicon/"], a[href*="blueletterbible.org/search/search.cfm"], a[href*="sefaria.org/"], a[href*="churchofjesuschrist.org/study/scriptures/"]') : null;
+        return target && target.closest ? target.closest('[data-ref], a[href*="blueletterbible.org/"], a[href*="sefaria.org/"], a[href*="churchofjesuschrist.org/study/scriptures/"]') : null;
       }
 
       // Desktop hover — guard against events originating inside the popup itself
@@ -727,7 +742,7 @@
           inferredSummary = 'Church manual resource. Tap to open lesson context, references, and study helps.';
         }
 
-        var verseLikeLabel = /\d+[:]\d+/.test(labelText);
+        var verseLikeLabel = /\b\d+:\d+\b/.test(labelText);
         var title = (path.includes('/study/scriptures/') && verseLikeLabel)
           ? labelText
           : ((entry && entry.title) || labelText || titleFromPath(path));
@@ -752,7 +767,12 @@
       function hideNow() { clearTimeout(hideTimer); popup.classList.remove('visible'); active = null; }
 
       function targetAnchor(t) {
-        return t && t.closest ? t.closest('a[href*="churchofjesuschrist.org/"]') : null;
+        // Find Church links, but EXCLUDE scripture links (handled by blb-popup)
+        var el = t && t.closest ? t.closest('a[href*="churchofjesuschrist.org/"]') : null;
+        if (el && /churchofjesuschrist\.org\/study\/scriptures\//i.test(el.href)) {
+          return null;
+        }
+        return el;
       }
 
       document.addEventListener('mouseover', function(e) {
