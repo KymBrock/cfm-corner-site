@@ -46,9 +46,9 @@ hide_nav: true
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #c9a227; font-size: 0.8em;">▶</span> Earthquake, angels open tomb</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/28?lang=eng&id=1-4" target="_blank" data-ref="Matthew 28:1-4">28:1–4</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/28/1/" target="_blank" data-ref="Matthew 28:1-4">28:1–4</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/24?lang=eng&id=1-2" target="_blank" data-ref="Luke 24:1-2">24:1–2</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/24/1/" target="_blank" data-ref="Luke 24:1-2">24:1–2</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=MlKetn7ZiNU" target="_blank">Watch</a></div>
 </summary>
@@ -65,10 +65,10 @@ This detail is significant: the chief priests had remembered Jesus' prediction t
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: white; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #c9a227; font-size: 0.8em;">▶</span> Women find empty tomb</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/28?lang=eng&id=1" target="_blank" data-ref="Matthew 28:1">28:1</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/16?lang=eng&id=1-4" target="_blank" data-ref="Mark 16:1-4">16:1–4</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/24?lang=eng&id=1-3" target="_blank" data-ref="Luke 24:1-3">24:1–3</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng&id=1-2" target="_blank" data-ref="John 20:1-2">20:1–2</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/28/1/" target="_blank" data-ref="Matthew 28:1">28:1</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/16/1/" target="_blank" data-ref="Mark 16:1-4">16:1–4</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/24/1/" target="_blank" data-ref="Luke 24:1-3">24:1–3</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/20/1/" target="_blank" data-ref="John 20:1-2">20:1–2</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #c9a227;">
@@ -88,9 +88,9 @@ When they arrived, they found the stone already moved. Mary Magdalene, seeing th
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #c9a227; font-size: 0.8em;">▶</span> Angels: "He is risen"</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/28?lang=eng&id=5-8" target="_blank" data-ref="Matthew 28:5-8">28:5–8</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/16?lang=eng&id=5-8" target="_blank" data-ref="Mark 16:5-8">16:5–8</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/24?lang=eng&id=4-8" target="_blank" data-ref="Luke 24:4-8">24:4–8</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/28/5/" target="_blank" data-ref="Matthew 28:5-8">28:5–8</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/16/5/" target="_blank" data-ref="Mark 16:5-8">16:5–8</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/24/4/" target="_blank" data-ref="Luke 24:4-8">24:4–8</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=bAuaSpJ7zGs" target="_blank">Watch</a></div>
 </summary>
@@ -111,8 +111,8 @@ They rushed from the tomb with *"fear and great joy"* — an unusual combination
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #c9a227; font-size: 0.8em;">▶</span> Peter and John run to tomb</div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/24?lang=eng&id=12" target="_blank" data-ref="Luke 24:12">24:12</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng&id=3-10" target="_blank" data-ref="John 20:3-10">20:3–10</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/24/12/" target="_blank" data-ref="Luke 24:12">24:12</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/20/3/" target="_blank" data-ref="John 20:3-10">20:3–10</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #c9a227;">
@@ -131,9 +131,9 @@ John *"saw, and believed."* The text says they returned home, *"for as yet they 
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #c9a227; font-size: 0.8em;">▶</span> Mary Magdalene sees the Lord</div>
 <div style="padding: 12px; text-align: center;">—</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/16?lang=eng&id=9" target="_blank" data-ref="Mark 16:9">16:9</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/16/9/" target="_blank" data-ref="Mark 16:9">16:9</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng&id=11-18" target="_blank" data-ref="John 20:11-18">20:11–18</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/20/11/" target="_blank" data-ref="John 20:11-18">20:11–18</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #c9a227;">
@@ -155,7 +155,7 @@ Mary Magdalene became the first witness of the resurrection — the church fathe
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: white; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #c9a227; font-size: 0.8em;">▶</span> Officials bribe soldiers</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/28?lang=eng&id=11-15" target="_blank" data-ref="Matthew 28:11-15">28:11–15</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/28/11/" target="_blank" data-ref="Matthew 28:11-15">28:11–15</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
@@ -177,8 +177,8 @@ Matthew notes that *"this saying is commonly reported among the Jews until this 
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #c9a227; font-size: 0.8em;">▶</span> Road to Emmaus</div>
 <div style="padding: 12px; text-align: center;">—</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/16?lang=eng&id=12" target="_blank" data-ref="Mark 16:12">16:12</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/24?lang=eng&id=13-32" target="_blank" data-ref="Luke 24:13-32">24:13–32</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/16/12/" target="_blank" data-ref="Mark 16:12">16:12</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/24/13/" target="_blank" data-ref="Luke 24:13-32">24:13–32</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=8YlzWPPiH4A" target="_blank">Watch</a></div>
 </summary>
@@ -208,9 +208,9 @@ Despite the late hour and the seven-mile distance in darkness, they rushed back 
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: white; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #c9a227; font-size: 0.8em;">▶</span> Jesus appears to disciples</div>
 <div style="padding: 12px; text-align: center;">—</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/16?lang=eng&id=14" target="_blank" data-ref="Mark 16:14">16:14</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/24?lang=eng&id=36-49" target="_blank" data-ref="Luke 24:36-49">24:36–49</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng&id=19-23" target="_blank" data-ref="John 20:19-23">20:19–23</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/16/14/" target="_blank" data-ref="Mark 16:14">16:14</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/24/36/" target="_blank" data-ref="Luke 24:36-49">24:36–49</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/20/19/" target="_blank" data-ref="John 20:19-23">20:19–23</a></div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=kP3753Pc8-w" target="_blank">Watch</a></div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #c9a227;">
@@ -239,7 +239,7 @@ This was their commission. They were not merely to remember Jesus; they were to 
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng&id=24-29" target="_blank" data-ref="John 20:24-29">20:24–29</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/20/24/" target="_blank" data-ref="John 20:24-29">20:24–29</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #c9a227; border-radius: 0 0 8px 8px;">
@@ -265,7 +265,7 @@ Jesus accepted the confession and added a blessing for all future believers: *"T
 
 **He Is Risen.** The tomb was empty. The grave clothes were folded. The stone was rolled away — not to let Jesus out (a resurrected body does not need doors opened), but to let the world in to see that He was gone.
 
-The women saw it. Peter and John saw it. Mary Magdalene spoke with Him. The Emmaus disciples broke bread with Him. The ten saw Him appear through locked doors. Thomas touched His wounds. Over the following forty days, He would appear to more than five hundred people at once (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/15?lang=eng&id=6" target="_blank" data-ref="1 Corinthians 15:6">1 Corinthians 15:6</a>).
+The women saw it. Peter and John saw it. Mary Magdalene spoke with Him. The Emmaus disciples broke bread with Him. The ten saw Him appear through locked doors. Thomas touched His wounds. Over the following forty days, He would appear to more than five hundred people at once (<a href="https://www.blueletterbible.org/kjv/1co/15/6/" target="_blank" data-ref="1 Corinthians 15:6">1 Corinthians 15:6</a>).
 
 This is the cornerstone of Christianity. Without the resurrection, as Paul wrote, *"our preaching is vain, and your faith is also vain."* But Christ is risen. Death is conquered. The grave has lost its sting.
 
@@ -284,7 +284,7 @@ This is the cornerstone of Christianity. Without the resurrection, as Paul wrote
 
 <a href="https://www.blueletterbible.org/lexicon/g1453/kjv/tr/0-1/" target="_blank" data-lexicon="to awaken, raise up" data-strongs="G1453" data-translit="egeirō" data-original="ἐγείρω" data-lang="greek">ἐγείρω</a> (*egeirō*) — to awaken, raise up, arise
 
-The Greek *egeirō* implies being awakened from sleep — the perfect metaphor for resurrection. The angel declared: *"He is not here: for he is risen, as he said"* (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/28?lang=eng&id=6" target="_blank" data-ref="Matthew 28:6">Matthew 28:6</a>).
+The Greek *egeirō* implies being awakened from sleep — the perfect metaphor for resurrection. The angel declared: *"He is not here: for he is risen, as he said"* (<a href="https://www.blueletterbible.org/kjv/mat/28/6/" target="_blank" data-ref="Matthew 28:6">Matthew 28:6</a>).
 </div>
 
 <div style="margin-bottom: 24px;">
@@ -292,7 +292,7 @@ The Greek *egeirō* implies being awakened from sleep — the perfect metaphor f
 
 <a href="https://www.blueletterbible.org/lexicon/g680/kjv/tr/0-1/" target="_blank" data-lexicon="to fasten, cling to" data-strongs="G680" data-translit="haptomai" data-original="ἅπτομαι" data-lang="greek">ἅπτομαι</a> (*haptomai*) — to fasten oneself to, cling to, touch
 
-When Jesus said to Mary Magdalene "Touch me not" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng&id=17" target="_blank" data-ref="John 20:17">John 20:17</a>), the Greek suggests "Stop clinging to me" — not a prohibition against touch, but an invitation to release Him for His continuing mission. The resurrected Lord still had sacred work to do.
+When Jesus said to Mary Magdalene "Touch me not" (<a href="https://www.blueletterbible.org/kjv/jhn/20/17/" target="_blank" data-ref="John 20:17">John 20:17</a>), the Greek suggests "Stop clinging to me" — not a prohibition against touch, but an invitation to release Him for His continuing mission. The resurrected Lord still had sacred work to do.
 </div>
 
 <div>
@@ -314,9 +314,9 @@ Literally "a standing up" — the Greek conveys physical rising. This was not me
 <span style="font-size: 1.2em;">📜</span> Scholar's Note: The Cornerstone of Christianity
 </h3>
 
-<p style="margin-bottom: 16px;">Paul stated it plainly: <em>"If Christ be not risen, then is our preaching vain, and your faith is also vain"</em> (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/15?lang=eng&id=14" target="_blank" data-ref="1 Corinthians 15:14">1 Corinthians 15:14</a>). The resurrection is not merely an inspiring story — it is the foundation of all Christian hope. Without it, there is no salvation, no eternal life, no victory over death.</p>
+<p style="margin-bottom: 16px;">Paul stated it plainly: <em>"If Christ be not risen, then is our preaching vain, and your faith is also vain"</em> (<a href="https://www.blueletterbible.org/kjv/1co/15/14/" target="_blank" data-ref="1 Corinthians 15:14">1 Corinthians 15:14</a>). The resurrection is not merely an inspiring story — it is the foundation of all Christian hope. Without it, there is no salvation, no eternal life, no victory over death.</p>
 
-<p style="margin-bottom: 16px;">Jesus rose on "the first day of the week" — Sunday. This became the Christian day of worship, replacing the Jewish Sabbath. Early Christians called it "the Lord's Day" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/rev/1?lang=eng&id=10" target="_blank" data-ref="Revelation 1:10">Revelation 1:10</a>). Creation began on the first day; new creation began on the first day.</p>
+<p style="margin-bottom: 16px;">Jesus rose on "the first day of the week" — Sunday. This became the Christian day of worship, replacing the Jewish Sabbath. Early Christians called it "the Lord's Day" (<a href="https://www.blueletterbible.org/kjv/rev/1/10/" target="_blank" data-ref="Revelation 1:10">Revelation 1:10</a>). Creation began on the first day; new creation began on the first day.</p>
 
 <p style="margin-bottom: 0;">Remarkably, Jesus chose a woman — Mary Magdalene — to be the first witness. In first-century Jewish culture, women's testimony was not legally accepted in court. Yet God chose women to carry the most important news in human history. The church fathers later called Mary <em>"apostle to the apostles."</em></p>
 </div>
@@ -350,13 +350,13 @@ Literally "a standing up" — the Greek conveys physical rising. This was not me
 
 The resurrection occurred on **17 Nisan** — the very day of the **Feast of Firstfruits (Bikkurim)** in the Jewish calendar. This was no coincidence. Paul explicitly connects Christ's resurrection to this feast:
 
-> "But now is Christ risen from the dead, and become **the firstfruits of them that slept**." (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/15?lang=eng&id=20" target="_blank" data-ref="1 Corinthians 15:20" data-popup-text="But now is Christ risen from the dead, and become the firstfruits of them that slept.">1 Corinthians 15:20</a>)
+> "But now is Christ risen from the dead, and become **the firstfruits of them that slept**." (<a href="https://www.blueletterbible.org/kjv/1co/15/20/" target="_blank" data-ref="1 Corinthians 15:20" data-popup-text="But now is Christ risen from the dead, and become the firstfruits of them that slept.">1 Corinthians 15:20</a>)
 
-> "But every man in his own order: **Christ the firstfruits**; afterward they that are Christ's at his coming." (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/15?lang=eng&id=23" target="_blank" data-ref="1 Corinthians 15:23" data-popup-text="But every man in his own order: Christ the firstfruits; afterward they that are Christ's at his coming.">1 Corinthians 15:23</a>)
+> "But every man in his own order: **Christ the firstfruits**; afterward they that are Christ's at his coming." (<a href="https://www.blueletterbible.org/kjv/1co/15/23/" target="_blank" data-ref="1 Corinthians 15:23" data-popup-text="But every man in his own order: Christ the firstfruits; afterward they that are Christ's at his coming.">1 Corinthians 15:23</a>)
 
 ### The Wave Sheaf Offering
 
-According to <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/lev/23?lang=eng&id=10-11" target="_blank" data-ref="Leviticus 23:10-11" data-popup-text="Speak unto the children of Israel, and say unto them, When ye be come into the land which I give unto you, and shall reap the harvest thereof, then ye shall bring a sheaf of the firstfruits of your harvest unto the priest: And he shall wave the sheaf before the Lord, to be accepted for you: on the morrow after the sabbath the priest shall wave it.">Leviticus 23:10-11</a>, on "the morrow after the sabbath" during Passover week, the priest would:
+According to <a href="https://www.blueletterbible.org/kjv/lev/23/10/" target="_blank" data-ref="Leviticus 23:10-11" data-popup-text="Speak unto the children of Israel, and say unto them, When ye be come into the land which I give unto you, and shall reap the harvest thereof, then ye shall bring a sheaf of the firstfruits of your harvest unto the priest: And he shall wave the sheaf before the Lord, to be accepted for you: on the morrow after the sabbath the priest shall wave it.">Leviticus 23:10-11</a>, on "the morrow after the sabbath" during Passover week, the priest would:
 
 1. Take the **first sheaf (omer) of barley** from the harvest
 2. **Wave it before the Lord** in the Temple
@@ -377,12 +377,12 @@ This dual meaning resonates throughout scripture, particularly in the gathering 
 Just as the high priest was waving the firstfruits sheaf in the Temple that Sunday morning, Christ — our eternal High Priest — was presenting Himself to the Father as the firstfruits of the resurrection. Consider the parallels:
 
 - **The Sheaf:** A single bundle representing the entire harvest → **Christ:** The first to rise, guaranteeing our future resurrection
-- **The Wave Offering:** Lifted up before God → **The Ascension:** Christ presented Himself to the Father (see <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng&id=17" target="_blank" data-ref="John 20:17" data-popup-text="Jesus saith unto her, Touch me not; for I am not yet ascended to my Father: but go to my brethren, and say unto them, I ascend unto my Father, and your Father; and to my God, and your God.">John 20:17</a>)
+- **The Wave Offering:** Lifted up before God → **The Ascension:** Christ presented Himself to the Father (see <a href="https://www.blueletterbible.org/kjv/jhn/20/17/" target="_blank" data-ref="John 20:17" data-popup-text="Jesus saith unto her, Touch me not; for I am not yet ascended to my Father: but go to my brethren, and say unto them, I ascend unto my Father, and your Father; and to my God, and your God.">John 20:17</a>)
 - **The Promise:** After firstfruits, the full harvest would come → **Our Hope:** "They that are Christ's at his coming"
 
 ### The Forty Days and Other Sheep
 
-Christ tarried with His apostles for **forty days** after His resurrection (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/acts/1?lang=eng&id=3" target="_blank" data-ref="Acts 1:3" data-popup-text="To whom also he shewed himself alive after his passion by many infallible proofs, being seen of them forty days, and speaking of the things pertaining to the kingdom of God:">Acts 1:3</a>), teaching them and preparing them for their ministry. During this time, He spoke of visiting His "other sheep" that were not of the Jerusalem fold (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=16" target="_blank" data-ref="John 10:16" data-popup-text="And other sheep I have, which are not of this fold: them also I must bring, and they shall hear my voice; and there shall be one fold, and one shepherd.">John 10:16</a>).
+Christ tarried with His apostles for **forty days** after His resurrection (<a href="https://www.blueletterbible.org/kjv/act/1/3/" target="_blank" data-ref="Acts 1:3" data-popup-text="To whom also he shewed himself alive after his passion by many infallible proofs, being seen of them forty days, and speaking of the things pertaining to the kingdom of God:">Acts 1:3</a>), teaching them and preparing them for their ministry. During this time, He spoke of visiting His "other sheep" that were not of the Jerusalem fold (<a href="https://www.blueletterbible.org/kjv/jhn/10/16/" target="_blank" data-ref="John 10:16" data-popup-text="And other sheep I have, which are not of this fold: them also I must bring, and they shall hear my voice; and there shall be one fold, and one shepherd.">John 10:16</a>).
 
 ### The Nephite Gathering at Shavuot
 

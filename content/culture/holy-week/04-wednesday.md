@@ -69,8 +69,8 @@ Alternative: Last Supper Wednesday
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(4, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #923a23; font-size: 0.8em;">▶</span> Conspiracy at Caiaphas's palace</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=3-5" target="_blank" data-ref="Matthew 26:3-5" style="color: #923a23;">26:3–5</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/14?lang=eng&id=1-2" target="_blank" data-ref="Mark 14:1-2" style="color: #923a23;">14:1–2</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/26/3/" target="_blank" data-ref="Matthew 26:3-5" style="color: #923a23;">26:3–5</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/14/1/" target="_blank" data-ref="Mark 14:1-2" style="color: #923a23;">14:1–2</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
@@ -95,9 +95,9 @@ But then Judas came — and everything changed.
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(4, 1fr); padding: 0; cursor: pointer; background: white; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #923a23; font-size: 0.8em;">▶</span> Feast with Simon the Leper</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=6" target="_blank" data-ref="Matthew 26:6" style="color: #923a23;">26:6</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/14?lang=eng&id=3" target="_blank" data-ref="Mark 14:3" style="color: #923a23;">14:3</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/7?lang=eng&id=36" target="_blank" data-ref="Luke 7:36" style="color: #923a23;">7:36</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/26/6/" target="_blank" data-ref="Matthew 26:6" style="color: #923a23;">26:6</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/14/3/" target="_blank" data-ref="Mark 14:3" style="color: #923a23;">14:3</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/7/36/" target="_blank" data-ref="Luke 7:36" style="color: #923a23;">7:36</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #923a23;">
@@ -113,9 +113,9 @@ According to Matthew and Mark, Jesus was dining at the house of Simon the leper 
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(4, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #923a23; font-size: 0.8em;">▶</span> Woman anoints Jesus</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=7-13" target="_blank" data-ref="Matthew 26:7-13" style="color: #923a23;">26:7–13</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/14?lang=eng&id=3-9" target="_blank" data-ref="Mark 14:3-9" style="color: #923a23;">14:3–9</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/7?lang=eng&id=37-50" target="_blank" data-ref="Luke 7:37-50" style="color: #923a23;">7:37–50</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/26/7/" target="_blank" data-ref="Matthew 26:7-13" style="color: #923a23;">26:7–13</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/14/3/" target="_blank" data-ref="Mark 14:3-9" style="color: #923a23;">14:3–9</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/7/37/" target="_blank" data-ref="Luke 7:37-50" style="color: #923a23;">7:37–50</a></div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=zQ5dyWe8TMg" target="_blank" style="color: #923a23;">Watch</a></div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #923a23;">
@@ -126,7 +126,7 @@ She broke the jar — these vessels were often designed to be broken open, seali
 
 Some of those present were indignant: *"Why this waste? This ointment might have been sold for much, and given to the poor."*
 
-John identifies the chief objector as Judas (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/12?lang=eng&id=4-5" target="_blank" data-ref="John 12:4-5" style="color: #923a23;">John 12:4–5</a>) — ironic, given that he had just agreed to sell Jesus for a fraction of the ointment's value.
+John identifies the chief objector as Judas (<a href="https://www.blueletterbible.org/kjv/jhn/12/4/" target="_blank" data-ref="John 12:4-5" style="color: #923a23;">John 12:4–5</a>) — ironic, given that he had just agreed to sell Jesus for a fraction of the ointment's value.
 
 Jesus defended her: *"Why trouble ye her? She hath wrought a good work on me... She is come aforehand to anoint my body to the burying. Verily I say unto you, Wheresoever this gospel shall be preached throughout the whole world, this also that she hath done shall be spoken of for a memorial of her."*
 
@@ -141,9 +141,9 @@ What the disciples saw as waste, Jesus received as worship. This woman understoo
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(4, 1fr); padding: 0; cursor: pointer; background: white; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #923a23; font-size: 0.8em;">▶</span> Judas conspires to betray Jesus</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=14-16" target="_blank" data-ref="Matthew 26:14-16" style="color: #923a23;">26:14–16</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/14?lang=eng&id=10-11" target="_blank" data-ref="Mark 14:10-11" style="color: #923a23;">14:10–11</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=1-6" target="_blank" data-ref="Luke 22:1-6" style="color: #923a23;">22:1–6</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/26/14/" target="_blank" data-ref="Matthew 26:14-16" style="color: #923a23;">26:14–16</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/14/10/" target="_blank" data-ref="Mark 14:10-11" style="color: #923a23;">14:10–11</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/22/1/" target="_blank" data-ref="Luke 22:1-6" style="color: #923a23;">22:1–6</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #923a23;">
@@ -156,11 +156,11 @@ The priests had a problem: they couldn't arrest Jesus publicly without risking a
 
 **Why did Judas do it?** The Gospels offer several clues:
 
-- **Greed:** John tells us Judas was a thief who *"had the bag, and bare what was put therein"* — he pilfered from the disciples' common fund (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/12?lang=eng&id=6" target="_blank" data-ref="John 12:6" style="color: #923a23;">John 12:6</a>).
+- **Greed:** John tells us Judas was a thief who *"had the bag, and bare what was put therein"* — he pilfered from the disciples' common fund (<a href="https://www.blueletterbible.org/kjv/jhn/12/6/" target="_blank" data-ref="John 12:6" style="color: #923a23;">John 12:6</a>).
 
 - **Disillusionment:** Perhaps Judas had joined the movement expecting a political Messiah who would overthrow Rome. When Jesus rode a donkey instead of a war horse, spoke of suffering and death, and failed to claim an earthly throne, Judas may have decided to cut his losses.
 
-- **Satanic influence:** Luke states simply that *"Satan entered into Judas"* (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=3" target="_blank" data-ref="Luke 22:3" style="color: #923a23;">Luke 22:3</a>). Whatever human motivations drove him, a darker power was at work.
+- **Satanic influence:** Luke states simply that *"Satan entered into Judas"* (<a href="https://www.blueletterbible.org/kjv/luk/22/3/" target="_blank" data-ref="Luke 22:3" style="color: #923a23;">Luke 22:3</a>). Whatever human motivations drove him, a darker power was at work.
 
 **Thirty Pieces of Silver: The Price of a Slave**
 
@@ -168,11 +168,11 @@ The priests had a problem: they couldn't arrest Jesus publicly without risking a
 
 This specific amount was loaded with prophetic significance:
 
-According to <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ex/21?lang=eng&id=32" target="_blank" data-ref="Exodus 21:32" style="color: #923a23;">Exodus 21:32</a>, if an ox gored a slave to death, the owner of the ox must pay thirty shekels of silver to the slave's master. Thirty pieces of silver was the compensation for a dead slave — the lowest valuation of human life in the Mosaic code. The chief priests valued the Son of God at the price of a slave.
+According to <a href="https://www.blueletterbible.org/kjv/exo/21/32/" target="_blank" data-ref="Exodus 21:32" style="color: #923a23;">Exodus 21:32</a>, if an ox gored a slave to death, the owner of the ox must pay thirty shekels of silver to the slave's master. Thirty pieces of silver was the compensation for a dead slave — the lowest valuation of human life in the Mosaic code. The chief priests valued the Son of God at the price of a slave.
 
-Centuries earlier, the prophet Zechariah had enacted a prophetic drama. Acting as a shepherd of Israel, he asked for his wages. They paid him thirty pieces of silver — an insulting amount. The Lord told him: *"Cast it unto the potter: a goodly price that I was prised at of them."* Zechariah threw the money into the Temple treasury, to be given to the potter (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/zech/11?lang=eng&id=12-13" target="_blank" data-ref="Zechariah 11:12-13" style="color: #923a23;">Zechariah 11:12–13</a>).
+Centuries earlier, the prophet Zechariah had enacted a prophetic drama. Acting as a shepherd of Israel, he asked for his wages. They paid him thirty pieces of silver — an insulting amount. The Lord told him: *"Cast it unto the potter: a goodly price that I was prised at of them."* Zechariah threw the money into the Temple treasury, to be given to the potter (<a href="https://www.blueletterbible.org/kjv/zec/11/12/" target="_blank" data-ref="Zechariah 11:12-13" style="color: #923a23;">Zechariah 11:12–13</a>).
 
-Matthew would later note that when Judas returned the money in remorse, the priests used it to buy the potter's field — fulfilling Zechariah's prophecy in precise detail (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/27?lang=eng&id=3-10" target="_blank" data-ref="Matthew 27:3-10" style="color: #923a23;">Matthew 27:3–10</a>).
+Matthew would later note that when Judas returned the money in remorse, the priests used it to buy the potter's field — fulfilling Zechariah's prophecy in precise detail (<a href="https://www.blueletterbible.org/kjv/mat/27/3/" target="_blank" data-ref="Matthew 27:3-10" style="color: #923a23;">Matthew 27:3–10</a>).
 
 **Two Offerings — The Contrast**
 
@@ -205,9 +205,9 @@ The storm was coming.
 
 <a href="https://www.blueletterbible.org/lexicon/g694/kjv/tr/0-1/" target="_blank" data-lexicon="silver" data-strongs="G694" data-translit="argurion" data-original="ἀργύριον" data-lang="greek">ἀργύριον</a> (*argurion*) — silver coin
 
-**The Price of a Slave:** According to <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ex/21?lang=eng&id=32" target="_blank" data-ref="Exodus 21:32" style="color: #923a23;">Exodus 21:32</a>, thirty shekels of silver was the compensation paid for a slave gored by an ox. Judas valued the Son of God at the price of a slave.
+**The Price of a Slave:** According to <a href="https://www.blueletterbible.org/kjv/exo/21/32/" target="_blank" data-ref="Exodus 21:32" style="color: #923a23;">Exodus 21:32</a>, thirty shekels of silver was the compensation paid for a slave gored by an ox. Judas valued the Son of God at the price of a slave.
 
-**Prophetic Fulfillment:** This exact amount was foretold in <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/zech/11?lang=eng&id=12-13" target="_blank" data-ref="Zechariah 11:12-13" style="color: #923a23;">Zechariah 11:12–13</a>: "They weighed for my price thirty pieces of silver... And I took the thirty pieces of silver, and cast them to the potter in the house of the LORD."
+**Prophetic Fulfillment:** This exact amount was foretold in <a href="https://www.blueletterbible.org/kjv/zec/11/12/" target="_blank" data-ref="Zechariah 11:12-13" style="color: #923a23;">Zechariah 11:12–13</a>: "They weighed for my price thirty pieces of silver... And I took the thirty pieces of silver, and cast them to the potter in the house of the LORD."
 </div>
 
 <div style="margin-bottom: 24px;">
@@ -215,7 +215,7 @@ The storm was coming.
 
 <a href="https://www.blueletterbible.org/lexicon/g3860/kjv/tr/0-1/" target="_blank" data-lexicon="to hand over, deliver up" data-strongs="G3860" data-translit="paradidōmi" data-original="παραδίδωμι" data-lang="greek">παραδίδωμι</a> (*paradidōmi*) — to hand over, deliver up, betray
 
-This word means more than "betray" — it means to **deliver** or **hand over**. The same word is used of the Father "delivering" His Son for us all (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/rom/8?lang=eng&id=32" target="_blank" data-ref="Romans 8:32" style="color: #923a23;">Romans 8:32</a>). What Judas meant for evil, God used for redemption.
+This word means more than "betray" — it means to **deliver** or **hand over**. The same word is used of the Father "delivering" His Son for us all (<a href="https://www.blueletterbible.org/kjv/rom/8/32/" target="_blank" data-ref="Romans 8:32" style="color: #923a23;">Romans 8:32</a>). What Judas meant for evil, God used for redemption.
 </div>
 
 <div>
@@ -275,7 +275,7 @@ From this Greek word we get "myrrh." In the ancient world, fragrant oils were us
 <div style="height: 24px;"></div>
 
 <div style="margin: 16px 0; padding: 16px; background: #fff8e7; border-left: 4px solid #c9a227; border-radius: 0 8px 8px 0;">
-<strong>Why Wednesday?</strong> Some scholars, including LDS archaeologist Jeffrey Chadwick, argue that the Last Supper occurred Wednesday evening based on: (1) Jesus' prophecy of "three days and three nights" in the tomb (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/12?lang=eng&id=40" target="_blank" data-ref="Matthew 12:40" style="color: #923a23;">Matthew 12:40</a>); (2) The Book of Mormon's prediction of three days of darkness (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/hel/14?lang=eng&id=20" target="_blank" data-ref="Helaman 14:20" style="color: #923a23;">Helaman 14:20</a>); (3) John's description of the Sabbath as "an high day" — a Passover Sabbath (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/19?lang=eng&id=31" target="_blank" data-ref="John 19:31" style="color: #923a23;">John 19:31</a>). This places the crucifixion on Thursday, April 6, AD 30.
+<strong>Why Wednesday?</strong> Some scholars, including LDS archaeologist Jeffrey Chadwick, argue that the Last Supper occurred Wednesday evening based on: (1) Jesus' prophecy of "three days and three nights" in the tomb (<a href="https://www.blueletterbible.org/kjv/mat/12/40/" target="_blank" data-ref="Matthew 12:40" style="color: #923a23;">Matthew 12:40</a>); (2) The Book of Mormon's prediction of three days of darkness (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/hel/14?lang=eng&id=20" target="_blank" data-ref="Helaman 14:20" style="color: #923a23;">Helaman 14:20</a>); (3) John's description of the Sabbath as "an high day" — a Passover Sabbath (<a href="https://www.blueletterbible.org/kjv/jhn/19/31/" target="_blank" data-ref="John 19:31" style="color: #923a23;">John 19:31</a>). This places the crucifixion on Thursday, April 6, AD 30.
 </div>
 
 <div style="height: 24px;"></div>
@@ -299,8 +299,8 @@ From this Greek word we get "myrrh." In the ancient world, fragrant oils were us
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(4, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #923a23; font-size: 0.8em;">▶</span> Conspiracy at Caiaphas's palace</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=3-5" target="_blank" data-ref="Matthew 26:3-5" style="color: #923a23;">26:3–5</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/14?lang=eng&id=1-2" target="_blank" data-ref="Mark 14:1-2" style="color: #923a23;">14:1–2</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/26/3/" target="_blank" data-ref="Matthew 26:3-5" style="color: #923a23;">26:3–5</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/14/1/" target="_blank" data-ref="Mark 14:1-2" style="color: #923a23;">14:1–2</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
@@ -321,9 +321,9 @@ Passover would bring hundreds of thousands of pilgrims to Jerusalem. Many had wi
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(4, 1fr); padding: 0; cursor: pointer; background: white; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #923a23; font-size: 0.8em;">▶</span> Feast with Simon the Leper</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=6" target="_blank" data-ref="Matthew 26:6" style="color: #923a23;">26:6</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/14?lang=eng&id=3" target="_blank" data-ref="Mark 14:3" style="color: #923a23;">14:3</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/7?lang=eng&id=36" target="_blank" data-ref="Luke 7:36" style="color: #923a23;">7:36</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/26/6/" target="_blank" data-ref="Matthew 26:6" style="color: #923a23;">26:6</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/14/3/" target="_blank" data-ref="Mark 14:3" style="color: #923a23;">14:3</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/7/36/" target="_blank" data-ref="Luke 7:36" style="color: #923a23;">7:36</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #923a23;">
@@ -339,9 +339,9 @@ According to Matthew and Mark, Jesus was dining at the house of Simon the leper 
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(4, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #923a23; font-size: 0.8em;">▶</span> Woman anoints Jesus</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=7-13" target="_blank" data-ref="Matthew 26:7-13" style="color: #923a23;">26:7–13</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/14?lang=eng&id=3-9" target="_blank" data-ref="Mark 14:3-9" style="color: #923a23;">14:3–9</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/7?lang=eng&id=37-50" target="_blank" data-ref="Luke 7:37-50" style="color: #923a23;">7:37–50</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/26/7/" target="_blank" data-ref="Matthew 26:7-13" style="color: #923a23;">26:7–13</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/14/3/" target="_blank" data-ref="Mark 14:3-9" style="color: #923a23;">14:3–9</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/7/37/" target="_blank" data-ref="Luke 7:37-50" style="color: #923a23;">7:37–50</a></div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=zQ5dyWe8TMg" target="_blank" style="color: #923a23;">Watch</a></div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #923a23;">
@@ -350,7 +350,7 @@ A woman came to Jesus with an alabaster jar of very expensive ointment — pure 
 
 She broke the jar and poured the ointment over Jesus' head.
 
-Some were indignant: *"Why this waste?"* John identifies the chief objector as Judas (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/12?lang=eng&id=4-5" target="_blank" data-ref="John 12:4-5" style="color: #923a23;">John 12:4–5</a>) — ironic, given that he had just agreed to sell Jesus for a fraction of the ointment's value.
+Some were indignant: *"Why this waste?"* John identifies the chief objector as Judas (<a href="https://www.blueletterbible.org/kjv/jhn/12/4/" target="_blank" data-ref="John 12:4-5" style="color: #923a23;">John 12:4–5</a>) — ironic, given that he had just agreed to sell Jesus for a fraction of the ointment's value.
 
 Jesus defended her: *"She is come aforehand to anoint my body to the burying. Verily I say unto you, Wheresoever this gospel shall be preached throughout the whole world, this also that she hath done shall be spoken of for a memorial of her."*
 
@@ -363,9 +363,9 @@ What the disciples saw as waste, Jesus received as worship.
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(4, 1fr); padding: 0; cursor: pointer; background: white; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #923a23; font-size: 0.8em;">▶</span> Judas conspires to betray Jesus</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=14-16" target="_blank" data-ref="Matthew 26:14-16" style="color: #923a23;">26:14–16</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/14?lang=eng&id=10-11" target="_blank" data-ref="Mark 14:10-11" style="color: #923a23;">14:10–11</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=1-6" target="_blank" data-ref="Luke 22:1-6" style="color: #923a23;">22:1–6</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/26/14/" target="_blank" data-ref="Matthew 26:14-16" style="color: #923a23;">26:14–16</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/14/10/" target="_blank" data-ref="Mark 14:10-11" style="color: #923a23;">14:10–11</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/22/1/" target="_blank" data-ref="Luke 22:1-6" style="color: #923a23;">22:1–6</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #923a23;">
@@ -374,7 +374,7 @@ One of the Twelve walked into Caiaphas's palace and offered what the priests des
 
 *"What will ye give me, and I will deliver him unto you?"*
 
-They covenanted with him for **thirty pieces of silver** — the price of a slave according to <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ex/21?lang=eng&id=32" target="_blank" data-ref="Exodus 21:32" style="color: #923a23;">Exodus 21:32</a>. The chief priests valued the Son of God at the lowest valuation of human life in the Mosaic code.
+They covenanted with him for **thirty pieces of silver** — the price of a slave according to <a href="https://www.blueletterbible.org/kjv/exo/21/32/" target="_blank" data-ref="Exodus 21:32" style="color: #923a23;">Exodus 21:32</a>. The chief priests valued the Son of God at the lowest valuation of human life in the Mosaic code.
 
 From that moment, Judas sought opportunity to betray Him.
 
@@ -396,9 +396,9 @@ From that moment, Judas sought opportunity to betray Him.
 
 <a href="https://www.blueletterbible.org/lexicon/g694/kjv/tr/0-1/" target="_blank" data-lexicon="silver" data-strongs="G694" data-translit="argurion" data-original="ἀργύριον" data-lang="greek">ἀργύριον</a> (*argurion*) — silver coin
 
-**The Price of a Slave:** According to <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ex/21?lang=eng&id=32" target="_blank" data-ref="Exodus 21:32" style="color: #923a23;">Exodus 21:32</a>, thirty shekels of silver was the compensation paid for a slave gored by an ox. Judas valued the Son of God at the price of a slave.
+**The Price of a Slave:** According to <a href="https://www.blueletterbible.org/kjv/exo/21/32/" target="_blank" data-ref="Exodus 21:32" style="color: #923a23;">Exodus 21:32</a>, thirty shekels of silver was the compensation paid for a slave gored by an ox. Judas valued the Son of God at the price of a slave.
 
-**Prophetic Fulfillment:** This exact amount was foretold in <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/zech/11?lang=eng&id=12-13" target="_blank" data-ref="Zechariah 11:12-13" style="color: #923a23;">Zechariah 11:12–13</a>: "They weighed for my price thirty pieces of silver... And I took the thirty pieces of silver, and cast them to the potter in the house of the LORD."
+**Prophetic Fulfillment:** This exact amount was foretold in <a href="https://www.blueletterbible.org/kjv/zec/11/12/" target="_blank" data-ref="Zechariah 11:12-13" style="color: #923a23;">Zechariah 11:12–13</a>: "They weighed for my price thirty pieces of silver... And I took the thirty pieces of silver, and cast them to the potter in the house of the LORD."
 </div>
 
 <div style="margin-bottom: 24px;">
@@ -406,7 +406,7 @@ From that moment, Judas sought opportunity to betray Him.
 
 <a href="https://www.blueletterbible.org/lexicon/g3860/kjv/tr/0-1/" target="_blank" data-lexicon="to hand over, deliver up" data-strongs="G3860" data-translit="paradidōmi" data-original="παραδίδωμι" data-lang="greek">παραδίδωμι</a> (*paradidōmi*) — to hand over, deliver up, betray
 
-This word means more than "betray" — it means to **deliver** or **hand over**. The same word is used of the Father "delivering" His Son for us all (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/rom/8?lang=eng&id=32" target="_blank" data-ref="Romans 8:32" style="color: #923a23;">Romans 8:32</a>). What Judas meant for evil, God used for redemption.
+This word means more than "betray" — it means to **deliver** or **hand over**. The same word is used of the Father "delivering" His Son for us all (<a href="https://www.blueletterbible.org/kjv/rom/8/32/" target="_blank" data-ref="Romans 8:32" style="color: #923a23;">Romans 8:32</a>). What Judas meant for evil, God used for redemption.
 </div>
 
 <div>
@@ -457,9 +457,9 @@ From this Greek word we get "myrrh." In the ancient world, fragrant oils were us
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #536b83; font-size: 0.8em;">▶</span> Upper Room prepared</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=17-19" target="_blank" data-ref="Matthew 26:17-19" style="color: #536b83;">26:17–19</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/14?lang=eng&id=12-16" target="_blank" data-ref="Mark 14:12-16" style="color: #536b83;">14:12–16</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=7-13" target="_blank" data-ref="Luke 22:7-13" style="color: #536b83;">22:7–13</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/26/17/" target="_blank" data-ref="Matthew 26:17-19" style="color: #536b83;">26:17–19</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/14/12/" target="_blank" data-ref="Mark 14:12-16" style="color: #536b83;">14:12–16</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/22/7/" target="_blank" data-ref="Luke 22:7-13" style="color: #536b83;">22:7–13</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
@@ -469,7 +469,7 @@ Jesus sent Peter and John ahead to Jerusalem: *"Go and prepare us the passover, 
 
 They asked where. Jesus gave them a curious sign — they would meet a man carrying a water pitcher (unusual, since women typically carried water). They were to follow him and ask for the guest chamber. There they would find a large upper room, already furnished and ready.
 
-Why the secrecy? Jesus knew Judas was looking for an opportunity to betray Him *"in the absence of the multitude"* (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=6" target="_blank" data-ref="Luke 22:6" style="color: #536b83;">Luke 22:6</a>). By keeping the location secret until the last moment, Jesus ensured He could share this final meal with His disciples without interruption.
+Why the secrecy? Jesus knew Judas was looking for an opportunity to betray Him *"in the absence of the multitude"* (<a href="https://www.blueletterbible.org/kjv/luk/22/6/" target="_blank" data-ref="Luke 22:6" style="color: #536b83;">Luke 22:6</a>). By keeping the location secret until the last moment, Jesus ensured He could share this final meal with His disciples without interruption.
 
 *"With desire I have desired to eat this passover with you before I suffer."* The Greek construction (*epithymia epithymēsa*) conveys deep emotional yearning. Jesus knew what was coming. He wanted to be with them.
 
@@ -483,7 +483,7 @@ Why the secrecy? Jesus knew Judas was looking for an opportunity to betray Him *
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/13?lang=eng&id=2-17" target="_blank" data-ref="John 13:2-17" style="color: #536b83;">13:2–17</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/13/2/" target="_blank" data-ref="John 13:2-17" style="color: #536b83;">13:2–17</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #536b83;">
@@ -509,10 +509,10 @@ The King of Kings had become the servant of all. His followers must do likewise.
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #536b83; font-size: 0.8em;">▶</span> "One of you shall betray me"</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=21-25" target="_blank" data-ref="Matthew 26:21-25" style="color: #536b83;">26:21–25</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/14?lang=eng&id=18-21" target="_blank" data-ref="Mark 14:18-21" style="color: #536b83;">14:18–21</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=21-23" target="_blank" data-ref="Luke 22:21-23" style="color: #536b83;">22:21–23</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/13?lang=eng&id=18-30" target="_blank" data-ref="John 13:18-30" style="color: #536b83;">13:18–30</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/26/21/" target="_blank" data-ref="Matthew 26:21-25" style="color: #536b83;">26:21–25</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/14/18/" target="_blank" data-ref="Mark 14:18-21" style="color: #536b83;">14:18–21</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/22/21/" target="_blank" data-ref="Luke 22:21-23" style="color: #536b83;">22:21–23</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/13/18/" target="_blank" data-ref="John 13:18-30" style="color: #536b83;">13:18–30</a></div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=997ni1xcmKw" target="_blank" style="color: #536b83;">Watch</a></div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #536b83;">
@@ -538,9 +538,9 @@ John records four haunting words: *"And it was night."*
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: white; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #536b83; font-size: 0.8em;">▶</span> Sacrament instituted</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=26-29" target="_blank" data-ref="Matthew 26:26-29" style="color: #536b83;">26:26–29</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/14?lang=eng&id=22-25" target="_blank" data-ref="Mark 14:22-25" style="color: #536b83;">14:22–25</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=15-20" target="_blank" data-ref="Luke 22:15-20" style="color: #536b83;">22:15–20</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/26/26/" target="_blank" data-ref="Matthew 26:26-29" style="color: #536b83;">26:26–29</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/14/22/" target="_blank" data-ref="Mark 14:22-25" style="color: #536b83;">14:22–25</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/22/15/" target="_blank" data-ref="Luke 22:15-20" style="color: #536b83;">22:15–20</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
@@ -564,7 +564,7 @@ For 1,500 years, the Passover meal had commemorated Israel's deliverance from Eg
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/13?lang=eng&id=31-35" target="_blank" data-ref="John 13:31-35" style="color: #536b83;">13:31–35</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/13/31/" target="_blank" data-ref="John 13:31-35" style="color: #536b83;">13:31–35</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #536b83;">
@@ -583,7 +583,7 @@ Not merely "love your neighbor as yourself" — the standard Jesus Himself had c
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/14?lang=eng" target="_blank" data-ref="John 14" style="color: #536b83;">14–16</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/14/1/" target="_blank" data-ref="John 14" style="color: #536b83;">14–16</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #536b83;">
@@ -608,7 +608,7 @@ Then came the Farewell Discourse — Jesus' longest and most intimate teaching, 
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/17?lang=eng" target="_blank" data-ref="John 17" style="color: #536b83;">17</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/17/1/" target="_blank" data-ref="John 17" style="color: #536b83;">17</a></div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=yL5jobrN3ck" target="_blank" style="color: #536b83;">Watch</a></div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #536b83;">
@@ -630,10 +630,10 @@ On the night of His betrayal, facing torture and death, Jesus' concern was for H
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: white; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #536b83; font-size: 0.8em;">▶</span> Prophecy: Flock scattered</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=31-32" target="_blank" data-ref="Matthew 26:31-32" style="color: #536b83;">26:31–32</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/14?lang=eng&id=27" target="_blank" data-ref="Mark 14:27" style="color: #536b83;">14:27</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/26/31/" target="_blank" data-ref="Matthew 26:31-32" style="color: #536b83;">26:31–32</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/14/27/" target="_blank" data-ref="Mark 14:27" style="color: #536b83;">14:27</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/16?lang=eng&id=31-33" target="_blank" data-ref="John 16:31-33" style="color: #536b83;">16:31–33</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/16/31/" target="_blank" data-ref="John 16:31-33" style="color: #536b83;">16:31–33</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #536b83;">
@@ -653,8 +653,8 @@ Peter doubled down: *"Though I should die with thee, yet will I not deny thee."*
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #536b83; font-size: 0.8em;">▶</span> Sang hymn before Gethsemane</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=30" target="_blank" data-ref="Matthew 26:30" style="color: #536b83;">26:30</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/14?lang=eng&id=26" target="_blank" data-ref="Mark 14:26" style="color: #536b83;">14:26</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/26/30/" target="_blank" data-ref="Matthew 26:30" style="color: #536b83;">26:30</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/14/26/" target="_blank" data-ref="Mark 14:26" style="color: #536b83;">14:26</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=EAGvxRTCLLg" target="_blank" style="color: #536b83;">Hallel</a></div>
@@ -663,7 +663,7 @@ Peter doubled down: *"Though I should die with thee, yet will I not deny thee."*
 
 When the hymn was sung — likely the second half of the Hallel (Psalms 115–118), traditionally sung at the close of the Passover meal — they went out into the night, crossed the Kidron Valley, and came to the Mount of Olives.
 
-The Hallel's words would have been especially poignant: *"The LORD is on my side; I will not fear: what can man do unto me?"* (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/118?lang=eng&id=6" target="_blank" data-ref="Psalm 118:6" style="color: #536b83;">Psalm 118:6</a>).
+The Hallel's words would have been especially poignant: *"The LORD is on my side; I will not fear: what can man do unto me?"* (<a href="https://www.blueletterbible.org/kjv/psa/118/6/" target="_blank" data-ref="Psalm 118:6" style="color: #536b83;">Psalm 118:6</a>).
 
 </div>
 </details>
@@ -718,10 +718,10 @@ The Setting of the Last Supper
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #536b83; font-size: 0.8em;">▶</span> Arrival at Gethsemane</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=36" target="_blank" data-ref="Matthew 26:36" style="color: #536b83;">26:36</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/14?lang=eng&id=32" target="_blank" data-ref="Mark 14:32" style="color: #536b83;">14:32</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=39" target="_blank" data-ref="Luke 22:39" style="color: #536b83;">22:39</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/18?lang=eng&id=1" target="_blank" data-ref="John 18:1" style="color: #536b83;">18:1</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/26/36/" target="_blank" data-ref="Matthew 26:36" style="color: #536b83;">26:36</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/14/32/" target="_blank" data-ref="Mark 14:32" style="color: #536b83;">14:32</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/22/39/" target="_blank" data-ref="Luke 22:39" style="color: #536b83;">22:39</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/18/1/" target="_blank" data-ref="John 18:1" style="color: #536b83;">18:1</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #536b83;">
@@ -739,9 +739,9 @@ He went a stone's throw further, fell to the ground, and prayed: *"O my Father, 
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: white; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #536b83; font-size: 0.8em;">▶</span> Jesus prays; sweats blood</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=37-44" target="_blank" data-ref="Matthew 26:37-44" style="color: #536b83;">26:37–44</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/14?lang=eng&id=33-41" target="_blank" data-ref="Mark 14:33-41" style="color: #536b83;">14:33–41</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=41-44" target="_blank" data-ref="Luke 22:41-44" style="color: #536b83;">22:41–44</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/26/37/" target="_blank" data-ref="Matthew 26:37-44" style="color: #536b83;">26:37–44</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/14/33/" target="_blank" data-ref="Mark 14:33-41" style="color: #536b83;">14:33–41</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/22/41/" target="_blank" data-ref="Luke 22:41-44" style="color: #536b83;">22:41–44</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=goR5FO1vge8" target="_blank" style="color: #536b83;">Watch</a></div>
 </summary>
@@ -767,10 +767,10 @@ In Gethsemane, Jesus took upon Himself the sins, pains, and sicknesses of all hu
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #536b83; font-size: 0.8em;">▶</span> Betrayal and arrest</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=47-56" target="_blank" data-ref="Matthew 26:47-56" style="color: #536b83;">26:47–56</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/14?lang=eng&id=43-52" target="_blank" data-ref="Mark 14:43-52" style="color: #536b83;">14:43–52</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=47-53" target="_blank" data-ref="Luke 22:47-53" style="color: #536b83;">22:47–53</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/18?lang=eng&id=2-12" target="_blank" data-ref="John 18:2-12" style="color: #536b83;">18:2–12</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/26/47/" target="_blank" data-ref="Matthew 26:47-56" style="color: #536b83;">26:47–56</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/14/43/" target="_blank" data-ref="Mark 14:43-52" style="color: #536b83;">14:43–52</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/22/47/" target="_blank" data-ref="Luke 22:47-53" style="color: #536b83;">22:47–53</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/18/2/" target="_blank" data-ref="John 18:2-12" style="color: #536b83;">18:2–12</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #536b83;">
@@ -794,7 +794,7 @@ The disciples fled. Jesus was bound and led away. The longest night had begun.
 
 <div style="margin: 24px 0; padding: 20px; background: linear-gradient(135deg, #faf8f5 0%, #f5f0e8 100%); border-radius: 12px; border: 1px solid #e0d8cc;">
 
-**In this chronology:** The trials before Caiaphas and Pilate occur Thursday morning, with the crucifixion Thursday afternoon. Jesus rests in the tomb Thursday night, all day Friday (a "high day" Sabbath — the Passover), and Saturday (the weekly Sabbath). He rises early Sunday — **three days and three nights** later, fulfilling His own prophecy (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/12?lang=eng&id=40" target="_blank" data-ref="Matthew 12:40" style="color: #536b83;">Matthew 12:40</a>) and the Book of Mormon's prediction of three days of darkness (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/hel/14?lang=eng&id=20" target="_blank" data-ref="Helaman 14:20" style="color: #536b83;">Helaman 14:20</a>).
+**In this chronology:** The trials before Caiaphas and Pilate occur Thursday morning, with the crucifixion Thursday afternoon. Jesus rests in the tomb Thursday night, all day Friday (a "high day" Sabbath — the Passover), and Saturday (the weekly Sabbath). He rises early Sunday — **three days and three nights** later, fulfilling His own prophecy (<a href="https://www.blueletterbible.org/kjv/mat/12/40/" target="_blank" data-ref="Matthew 12:40" style="color: #536b83;">Matthew 12:40</a>) and the Book of Mormon's prediction of three days of darkness (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/hel/14?lang=eng&id=20" target="_blank" data-ref="Helaman 14:20" style="color: #536b83;">Helaman 14:20</a>).
 
 </div>
 
@@ -808,7 +808,7 @@ The disciples fled. Jesus was bound and led away. The longest night had begun.
 Scholar's Note: The Atonement in Gethsemane
 </h3>
 
-<p style="margin-bottom: 16px;">Luke, the physician, alone records that Jesus' sweat was "as it were great drops of blood" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=44" target="_blank" data-ref="Luke 22:44" style="color: #536b83;">Luke 22:44</a>). This phenomenon, called <em>hematidrosis</em>, is medically documented — under extreme psychological distress, capillaries in the sweat glands can rupture, mixing blood with sweat.</p>
+<p style="margin-bottom: 16px;">Luke, the physician, alone records that Jesus' sweat was "as it were great drops of blood" (<a href="https://www.blueletterbible.org/kjv/luk/22/44/" target="_blank" data-ref="Luke 22:44" style="color: #536b83;">Luke 22:44</a>). This phenomenon, called <em>hematidrosis</em>, is medically documented — under extreme psychological distress, capillaries in the sweat glands can rupture, mixing blood with sweat.</p>
 
 <p style="margin-bottom: 16px;">Latter-day scripture provides unique insight into what happened in Gethsemane. The Doctrine and Covenants records Christ's own words: <em>"Which suffering caused myself, even God, the greatest of all, to tremble because of pain, and to bleed at every pore, and to suffer both body and spirit"</em> (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/19?lang=eng&id=18" target="_blank" data-ref="D&C 19:18" style="color: #536b83;">D&C 19:18</a>).</p>
 
@@ -926,7 +926,7 @@ Scholar's Note: The Atonement in Gethsemane
 <summary>The Great Hallel</summary>
 <div class="seder-dropdown-body">
 
-After the Last Supper, Jesus and the disciples "sang a hymn" before going to Gethsemane. This was likely the <a href="https://www.jewishvirtuallibrary.org/hallel" target="_blank">Hallel</a> — <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/113?lang=eng" target="_blank" data-ref="Psalm 113" style="color: #536b83;">Psalms 113</a>–<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/118?lang=eng" target="_blank" data-ref="Psalm 118" style="color: #536b83;">118</a>, traditionally sung at Passover.
+After the Last Supper, Jesus and the disciples "sang a hymn" before going to Gethsemane. This was likely the <a href="https://www.jewishvirtuallibrary.org/hallel" target="_blank">Hallel</a> — <a href="https://www.blueletterbible.org/kjv/psa/113/1/" target="_blank" data-ref="Psalm 113" style="color: #536b83;">Psalms 113</a>–<a href="https://www.blueletterbible.org/kjv/psa/118/1/" target="_blank" data-ref="Psalm 118" style="color: #536b83;">118</a>, traditionally sung at Passover.
 
 Listen to a traditional rendition: <a href="https://www.youtube.com/watch?v=EAGvxRTCLLg" target="_blank">The Hallel at the Western Wall</a>
 

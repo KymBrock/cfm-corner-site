@@ -64,9 +64,9 @@ Alternative: The Crucifixion
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #536b83; font-size: 0.8em;">▶</span> Upper Room prepared</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=17-19" target="_blank" data-ref="Matthew 26:17-19">26:17–19</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/14?lang=eng&id=12-16" target="_blank" data-ref="Mark 14:12-16">14:12–16</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=7-13" target="_blank" data-ref="Luke 22:7-13">22:7–13</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/26/17/" target="_blank" data-ref="Matthew 26:17-19">26:17–19</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/14/12/" target="_blank" data-ref="Mark 14:12-16">14:12–16</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/22/7/" target="_blank" data-ref="Luke 22:7-13">22:7–13</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
@@ -76,7 +76,7 @@ Thursday began with practical preparations. Jesus sent Peter and John ahead to J
 
 They asked where. Jesus gave them a curious sign — they would meet a man carrying a water pitcher (unusual, since women typically carried water; a man with a pitcher would stand out). They were to follow him to a house and ask the master for the guest chamber. There they would find a large upper room, already furnished and ready.
 
-Why the secrecy? Jesus knew Judas was looking for an opportunity to betray Him *"in the absence of the multitude"* (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=6" target="_blank" data-ref="Luke 22:6">Luke 22:6</a>). By keeping the location secret until the last moment, Jesus ensured He could share this final meal with His disciples without interruption.
+Why the secrecy? Jesus knew Judas was looking for an opportunity to betray Him *"in the absence of the multitude"* (<a href="https://www.blueletterbible.org/kjv/luk/22/6/" target="_blank" data-ref="Luke 22:6">Luke 22:6</a>). By keeping the location secret until the last moment, Jesus ensured He could share this final meal with His disciples without interruption.
 
 The disciples prepared everything: the Passover lamb (slaughtered at the Temple that afternoon), the bitter herbs, the unleavened bread, the four cups of wine. By evening, all was ready.
 
@@ -92,7 +92,7 @@ The disciples prepared everything: the Passover lamb (slaughtered at the Temple 
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/13?lang=eng&id=2-17" target="_blank" data-ref="John 13:2-17">13:2–17</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/13/2/" target="_blank" data-ref="John 13:2-17">13:2–17</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #536b83;">
@@ -124,10 +124,10 @@ The King of Kings had become the servant of all. His followers must do likewise.
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #536b83; font-size: 0.8em;">▶</span> "One of you shall betray me"</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=21-25" target="_blank" data-ref="Matthew 26:21-25">26:21–25</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/14?lang=eng&id=18-21" target="_blank" data-ref="Mark 14:18-21">14:18–21</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=21-23" target="_blank" data-ref="Luke 22:21-23">22:21–23</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/13?lang=eng&id=18-30" target="_blank" data-ref="John 13:18-30">13:18–30</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/26/21/" target="_blank" data-ref="Matthew 26:21-25">26:21–25</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/14/18/" target="_blank" data-ref="Mark 14:18-21">14:18–21</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/22/21/" target="_blank" data-ref="Luke 22:21-23">22:21–23</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/13/18/" target="_blank" data-ref="John 13:18-30">13:18–30</a></div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=997ni1xcmKw" target="_blank">Watch</a></div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #536b83;">
@@ -153,9 +153,9 @@ John records four haunting words: *"And it was night."*
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: white; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #536b83; font-size: 0.8em;">▶</span> Sacrament instituted</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=26-29" target="_blank" data-ref="Matthew 26:26-29">26:26–29</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/14?lang=eng&id=22-25" target="_blank" data-ref="Mark 14:22-25">14:22–25</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=15-20" target="_blank" data-ref="Luke 22:15-20">22:15–20</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/26/26/" target="_blank" data-ref="Matthew 26:26-29">26:26–29</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/14/22/" target="_blank" data-ref="Mark 14:22-25">14:22–25</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/22/15/" target="_blank" data-ref="Luke 22:15-20">22:15–20</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
@@ -181,7 +181,7 @@ Every time His followers ate the bread and drank the wine, they would remember H
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/13?lang=eng&id=31-35" target="_blank" data-ref="John 13:31-35">13:31–35</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/13/31/" target="_blank" data-ref="John 13:31-35">13:31–35</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #536b83;">
@@ -204,7 +204,7 @@ This is why Maundy Thursday is called "Maundy" — from the Latin *mandatum* (co
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/14?lang=eng" target="_blank" data-ref="John 14">14–16</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/14/1/" target="_blank" data-ref="John 14">14–16</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #536b83;">
@@ -229,7 +229,7 @@ Then came the Farewell Discourse — Jesus' longest and most intimate teaching, 
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/17?lang=eng" target="_blank" data-ref="John 17">17</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/17/1/" target="_blank" data-ref="John 17">17</a></div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=yL5jobrN3ck" target="_blank">Watch</a></div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #536b83;">
@@ -251,10 +251,10 @@ On the night of His betrayal, facing torture and death, Jesus' concern was for H
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: white; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #536b83; font-size: 0.8em;">▶</span> Prophecy: Flock scattered</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=31-32" target="_blank" data-ref="Matthew 26:31-32">26:31–32</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/14?lang=eng&id=27" target="_blank" data-ref="Mark 14:27">14:27</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/26/31/" target="_blank" data-ref="Matthew 26:31-32">26:31–32</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/14/27/" target="_blank" data-ref="Mark 14:27">14:27</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/16?lang=eng&id=31-33" target="_blank" data-ref="John 16:31-33">16:31–33</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/16/31/" target="_blank" data-ref="John 16:31-33">16:31–33</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #536b83;">
@@ -274,8 +274,8 @@ Peter doubled down: *"Though I should die with thee, yet will I not deny thee."*
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #536b83; font-size: 0.8em;">▶</span> Sang hymn before Gethsemane</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=30" target="_blank" data-ref="Matthew 26:30">26:30</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/14?lang=eng&id=26" target="_blank" data-ref="Mark 14:26">14:26</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/26/30/" target="_blank" data-ref="Matthew 26:30">26:30</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/14/26/" target="_blank" data-ref="Mark 14:26">14:26</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=EAGvxRTCLLg" target="_blank">Hallel</a></div>
@@ -284,7 +284,7 @@ Peter doubled down: *"Though I should die with thee, yet will I not deny thee."*
 
 When the hymn was sung — likely the second half of the Hallel (Psalms 115–118), traditionally sung at the close of the Passover meal — they went out into the night, crossed the Kidron Valley, and came to the Mount of Olives.
 
-The Hallel's words would have been especially poignant: *"The LORD is on my side; I will not fear: what can man do unto me?"* (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/118?lang=eng&id=6" target="_blank" data-ref="Psalm 118:6">Psalm 118:6</a>). And: *"The stone which the builders refused is become the head stone of the corner"* (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/118?lang=eng&id=22" target="_blank" data-ref="Psalm 118:22">Psalm 118:22</a>).
+The Hallel's words would have been especially poignant: *"The LORD is on my side; I will not fear: what can man do unto me?"* (<a href="https://www.blueletterbible.org/kjv/psa/118/6/" target="_blank" data-ref="Psalm 118:6">Psalm 118:6</a>). And: *"The stone which the builders refused is become the head stone of the corner"* (<a href="https://www.blueletterbible.org/kjv/psa/118/22/" target="_blank" data-ref="Psalm 118:22">Psalm 118:22</a>).
 
 </div>
 </details>
@@ -315,10 +315,10 @@ The Hallel's words would have been especially poignant: *"The LORD is on my side
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #536b83; font-size: 0.8em;">▶</span> Arrival at Gethsemane</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=36" target="_blank" data-ref="Matthew 26:36">26:36</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/14?lang=eng&id=32" target="_blank" data-ref="Mark 14:32">14:32</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=39" target="_blank" data-ref="Luke 22:39">22:39</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/18?lang=eng&id=1" target="_blank" data-ref="John 18:1">18:1</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/26/36/" target="_blank" data-ref="Matthew 26:36">26:36</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/14/32/" target="_blank" data-ref="Mark 14:32">14:32</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/22/39/" target="_blank" data-ref="Luke 22:39">22:39</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/18/1/" target="_blank" data-ref="John 18:1">18:1</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #536b83;">
@@ -336,9 +336,9 @@ He went a stone's throw further, fell to the ground, and prayed: *"O my Father, 
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: white; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #536b83; font-size: 0.8em;">▶</span> Jesus prays; sweats blood</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=37-44" target="_blank" data-ref="Matthew 26:37-44">26:37–44</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/14?lang=eng&id=33-41" target="_blank" data-ref="Mark 14:33-41">14:33–41</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=41-44" target="_blank" data-ref="Luke 22:41-44">22:41–44</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/26/37/" target="_blank" data-ref="Matthew 26:37-44">26:37–44</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/14/33/" target="_blank" data-ref="Mark 14:33-41">14:33–41</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/22/41/" target="_blank" data-ref="Luke 22:41-44">22:41–44</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=goR5FO1vge8" target="_blank">Watch</a></div>
 </summary>
@@ -366,10 +366,10 @@ In Gethsemane, Jesus took upon Himself the sins, pains, and sicknesses of all hu
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #536b83; font-size: 0.8em;">▶</span> Betrayal and arrest</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=47-56" target="_blank" data-ref="Matthew 26:47-56">26:47–56</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/14?lang=eng&id=43-52" target="_blank" data-ref="Mark 14:43-52">14:43–52</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=47-53" target="_blank" data-ref="Luke 22:47-53">22:47–53</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/18?lang=eng&id=2-12" target="_blank" data-ref="John 18:2-12">18:2–12</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/26/47/" target="_blank" data-ref="Matthew 26:47-56">26:47–56</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/14/43/" target="_blank" data-ref="Mark 14:43-52">14:43–52</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/22/47/" target="_blank" data-ref="Luke 22:47-53">22:47–53</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/18/2/" target="_blank" data-ref="John 18:2-12">18:2–12</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #536b83;">
@@ -419,7 +419,7 @@ The symbolism is profound: Just as olives are crushed to produce oil — used fo
 The name "Maundy Thursday" comes from the Latin *mandatum* (commandment), referring to Jesus' "new commandment":
 
 > "A new commandment I give unto you, That ye love one another; as I have loved you."
-> — <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/13?lang=eng&id=34" target="_blank" data-ref="John 13:34">John 13:34</a>
+> — <a href="https://www.blueletterbible.org/kjv/jhn/13/34/" target="_blank" data-ref="John 13:34">John 13:34</a>
 </div>
 
 <div>
@@ -469,7 +469,7 @@ This Greek word describes the intense mental anguish of an athlete straining for
 <span style="font-size: 1.2em;">📜</span> Scholar's Note: The Atonement in Gethsemane
 </h3>
 
-<p style="margin-bottom: 16px;">Luke, the physician, alone records that Jesus' sweat was "as it were great drops of blood" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=44" target="_blank" data-ref="Luke 22:44">Luke 22:44</a>). This phenomenon, called <em>hematidrosis</em>, is medically documented — under extreme psychological distress, capillaries in the sweat glands can rupture, mixing blood with sweat.</p>
+<p style="margin-bottom: 16px;">Luke, the physician, alone records that Jesus' sweat was "as it were great drops of blood" (<a href="https://www.blueletterbible.org/kjv/luk/22/44/" target="_blank" data-ref="Luke 22:44">Luke 22:44</a>). This phenomenon, called <em>hematidrosis</em>, is medically documented — under extreme psychological distress, capillaries in the sweat glands can rupture, mixing blood with sweat.</p>
 
 <p style="margin-bottom: 16px;">Latter-day scripture provides unique insight into what happened in Gethsemane. The Doctrine and Covenants records Christ's own words: <em>"Which suffering caused myself, even God, the greatest of all, to tremble because of pain, and to bleed at every pore, and to suffer both body and spirit"</em> (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/19?lang=eng&id=18" target="_blank" data-ref="D&C 19:18">D&C 19:18</a>).</p>
 
@@ -593,7 +593,7 @@ This Greek word describes the intense mental anguish of an athlete straining for
 <summary>The Great Hallel</summary>
 <div class="seder-dropdown-body">
 
-After the Last Supper, Jesus and the disciples "sang a hymn" before going to Gethsemane. This was likely the <a href="https://www.jewishvirtuallibrary.org/hallel" target="_blank">Hallel</a> — <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/113?lang=eng" target="_blank" data-ref="Psalm 113">Psalms 113</a>–<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/118?lang=eng" target="_blank" data-ref="Psalm 118">118</a>, traditionally sung at Passover.
+After the Last Supper, Jesus and the disciples "sang a hymn" before going to Gethsemane. This was likely the <a href="https://www.jewishvirtuallibrary.org/hallel" target="_blank">Hallel</a> — <a href="https://www.blueletterbible.org/kjv/psa/113/1/" target="_blank" data-ref="Psalm 113">Psalms 113</a>–<a href="https://www.blueletterbible.org/kjv/psa/118/1/" target="_blank" data-ref="Psalm 118">118</a>, traditionally sung at Passover.
 
 Listen to a traditional rendition: <a href="https://www.youtube.com/watch?v=EAGvxRTCLLg" target="_blank">The Hallel at the Western Wall</a>
 
@@ -702,10 +702,10 @@ Listen to a traditional rendition: <a href="https://www.youtube.com/watch?v=EAGv
 <p style="margin-bottom: 16px;">Several lines of evidence suggest a Thursday crucifixion:</p>
 
 <h4 style="color: #8a3d22; margin-bottom: 8px;">"Three Days and Three Nights"</h4>
-<p style="margin-bottom: 16px;">Jesus prophesied He would be "three days and three nights in the heart of the earth" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/12?lang=eng&id=40" target="_blank" data-ref="Matthew 12:40">Matthew 12:40</a>). A Friday crucifixion yields only one full night before Sunday morning; Thursday provides the prophesied timeframe.</p>
+<p style="margin-bottom: 16px;">Jesus prophesied He would be "three days and three nights in the heart of the earth" (<a href="https://www.blueletterbible.org/kjv/mat/12/40/" target="_blank" data-ref="Matthew 12:40">Matthew 12:40</a>). A Friday crucifixion yields only one full night before Sunday morning; Thursday provides the prophesied timeframe.</p>
 
 <h4 style="color: #8a3d22; margin-bottom: 8px;">The "High Day" Sabbath</h4>
-<p style="margin-bottom: 16px;">John describes the upcoming Sabbath as "an high day" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/19?lang=eng&id=31" target="_blank" data-ref="John 19:31">John 19:31</a>) — possibly indicating a double Sabbath (Passover coinciding with the weekly Sabbath).</p>
+<p style="margin-bottom: 16px;">John describes the upcoming Sabbath as "an high day" (<a href="https://www.blueletterbible.org/kjv/jhn/19/31/" target="_blank" data-ref="John 19:31">John 19:31</a>) — possibly indicating a double Sabbath (Passover coinciding with the weekly Sabbath).</p>
 
 <h4 style="color: #8a3d22; margin-bottom: 8px;">Book of Mormon Evidence</h4>
 <p style="margin-bottom: 16px;">Nephite prophets predicted <strong>three days of darkness</strong> from Christ's death until His resurrection (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/hel/14?lang=eng&id=20" target="_blank" data-ref="Helaman 14:20">Helaman 14:20</a>). Due to the time difference between Jerusalem and the Americas, a Friday crucifixion produces only two days of darkness before Sunday morning — but a Thursday crucifixion produces exactly three.</p>
@@ -737,10 +737,10 @@ Listen to a traditional rendition: <a href="https://www.youtube.com/watch?v=EAGv
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #b1542f; font-size: 0.8em;">▶</span> Before Caiaphas</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=57-68" target="_blank" data-ref="Matthew 26:57-68">26:57–68</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/14?lang=eng&id=53-65" target="_blank" data-ref="Mark 14:53-65">14:53–65</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=66-71" target="_blank" data-ref="Luke 22:66-71">22:66–71</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/18?lang=eng&id=19-24" target="_blank" data-ref="John 18:19-24">18:19–24</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/26/57/" target="_blank" data-ref="Matthew 26:57-68">26:57–68</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/14/53/" target="_blank" data-ref="Mark 14:53-65">14:53–65</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/22/66/" target="_blank" data-ref="Luke 22:66-71">22:66–71</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/18/19/" target="_blank" data-ref="John 18:19-24">18:19–24</a></div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=zMaHYMs6NB4" target="_blank">Watch</a></div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #b1542f;">
@@ -764,10 +764,10 @@ Caiaphas tore his robes: *"What need we any further witnesses? Ye have heard the
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: white; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #b1542f; font-size: 0.8em;">▶</span> Peter's denials</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=69-75" target="_blank" data-ref="Matthew 26:69-75">26:69–75</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/14?lang=eng&id=66-72" target="_blank" data-ref="Mark 14:66-72">14:66–72</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=54-62" target="_blank" data-ref="Luke 22:54-62">22:54–62</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/18?lang=eng&id=15-18,25-27" target="_blank" data-ref="John 18:15-18">18:15–18, 25–27</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/26/69/" target="_blank" data-ref="Matthew 26:69-75">26:69–75</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/14/66/" target="_blank" data-ref="Mark 14:66-72">14:66–72</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/22/54/" target="_blank" data-ref="Luke 22:54-62">22:54–62</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/18/15/" target="_blank" data-ref="John 18:15-18">18:15–18, 25–27</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #b1542f;">
@@ -793,10 +793,10 @@ Peter went out and *"wept bitterly."*
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #b1542f; font-size: 0.8em;">▶</span> Before Pilate</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/27?lang=eng&id=2,11-26" target="_blank" data-ref="Matthew 27:2">27:2, 11–26</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/15?lang=eng&id=1-15" target="_blank" data-ref="Mark 15:1-15">15:1–15</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=1-25" target="_blank" data-ref="Luke 23:1-25">23:1–25</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/18?lang=eng&id=28-40" target="_blank" data-ref="John 18:28-40">18:28–40</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/27/2/" target="_blank" data-ref="Matthew 27:2">27:2, 11–26</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/15/1/" target="_blank" data-ref="Mark 15:1-15">15:1–15</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/23/1/" target="_blank" data-ref="Luke 23:1-25">23:1–25</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/18/28/" target="_blank" data-ref="John 18:28-40">18:28–40</a></div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=rs-nHYYmors" target="_blank">Watch</a></div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #b1542f;">
@@ -824,7 +824,7 @@ Pilate washed his hands: *"I am innocent of the blood of this just person."*
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #b1542f; font-size: 0.8em;">▶</span> Before Herod</div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=6-12" target="_blank" data-ref="Luke 23:6-12">23:6–12</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/23/6/" target="_blank" data-ref="Luke 23:6-12">23:6–12</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
@@ -857,10 +857,10 @@ Herod and his soldiers mocked Jesus, dressed Him in a gorgeous robe, and sent Hi
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #b1542f; font-size: 0.8em;">▶</span> Scourging & mocking</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/27?lang=eng&id=27-31" target="_blank" data-ref="Matthew 27:27-31">27:27–31</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/15?lang=eng&id=16-20" target="_blank" data-ref="Mark 15:16-20">15:16–20</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/27/27/" target="_blank" data-ref="Matthew 27:27-31">27:27–31</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/15/16/" target="_blank" data-ref="Mark 15:16-20">15:16–20</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/19?lang=eng&id=1-3" target="_blank" data-ref="John 19:1-3">19:1–3</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/19/1/" target="_blank" data-ref="John 19:1-3">19:1–3</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #b1542f;">
@@ -880,10 +880,10 @@ It did not satisfy them. *"Crucify him, crucify him!"*
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: white; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #b1542f; font-size: 0.8em;">▶</span> Via Dolorosa</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/27?lang=eng&id=32" target="_blank" data-ref="Matthew 27:32">27:32</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/15?lang=eng&id=21" target="_blank" data-ref="Mark 15:21">15:21</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=26-31" target="_blank" data-ref="Luke 23:26-31">23:26–31</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/19?lang=eng&id=17" target="_blank" data-ref="John 19:17">19:17</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/27/32/" target="_blank" data-ref="Matthew 27:32">27:32</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/15/21/" target="_blank" data-ref="Mark 15:21">15:21</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/23/26/" target="_blank" data-ref="Luke 23:26-31">23:26–31</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/19/17/" target="_blank" data-ref="John 19:17">19:17</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #b1542f;">
@@ -899,10 +899,10 @@ At **Golgotha** ("place of the skull"), they offered Him wine mixed with gall �
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #b1542f; font-size: 0.8em;">▶</span> Crucifixion</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/27?lang=eng&id=33-44" target="_blank" data-ref="Matthew 27:33-44">27:33–44</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/15?lang=eng&id=22-32" target="_blank" data-ref="Mark 15:22-32">15:22–32</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=33-43" target="_blank" data-ref="Luke 23:33-43">23:33–43</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/19?lang=eng&id=18-27" target="_blank" data-ref="John 19:18-27">19:18–27</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/27/33/" target="_blank" data-ref="Matthew 27:33-44">27:33–44</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/15/22/" target="_blank" data-ref="Mark 15:22-32">15:22–32</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/23/33/" target="_blank" data-ref="Luke 23:33-43">23:33–43</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/19/18/" target="_blank" data-ref="John 19:18-27">19:18–27</a></div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=nlALmOx8Sk0" target="_blank">Watch</a></div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #b1542f;">
@@ -920,10 +920,10 @@ From the cross, Jesus spoke seven final statements that fulfilled Messianic prop
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: white; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #b1542f; font-size: 0.8em;">▶</span> Death of Jesus</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/27?lang=eng&id=46-50" target="_blank" data-ref="Matthew 27:46-50">27:46–50</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/15?lang=eng&id=34-37" target="_blank" data-ref="Mark 15:34-37">15:34–37</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=46" target="_blank" data-ref="Luke 23:46">23:46</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/19?lang=eng&id=28-30" target="_blank" data-ref="John 19:28-30">19:28–30</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/27/46/" target="_blank" data-ref="Matthew 27:46-50">27:46–50</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/15/34/" target="_blank" data-ref="Mark 15:34-37">15:34–37</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/23/46/" target="_blank" data-ref="Luke 23:46">23:46</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/19/28/" target="_blank" data-ref="John 19:28-30">19:28–30</a></div>
 <div style="padding: 12px; text-align: center;">—</div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #b1542f;">
@@ -941,10 +941,10 @@ At about three in the afternoon — the ninth hour, the very moment when Passove
 <details style="border-bottom: 1px solid #ddd;">
 <summary style="display: grid; grid-template-columns: 2fr repeat(5, 1fr); padding: 0; cursor: pointer; background: #f0ebe5; list-style: none;">
 <div style="padding: 12px; display: flex; align-items: center; gap: 8px;"><span style="color: #b1542f; font-size: 0.8em;">▶</span> Veil torn; Burial</div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/27?lang=eng&id=51-61" target="_blank" data-ref="Matthew 27:51-61">27:51–61</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/15?lang=eng&id=38-47" target="_blank" data-ref="Mark 15:38-47">15:38–47</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=45-56" target="_blank" data-ref="Luke 23:45-56">23:45–56</a></div>
-<div style="padding: 12px; text-align: center;"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/19?lang=eng&id=38-42" target="_blank" data-ref="John 19:38-42">19:38–42</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mat/27/51/" target="_blank" data-ref="Matthew 27:51-61">27:51–61</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/mrk/15/38/" target="_blank" data-ref="Mark 15:38-47">15:38–47</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/luk/23/45/" target="_blank" data-ref="Luke 23:45-56">23:45–56</a></div>
+<div style="padding: 12px; text-align: center;"><a href="https://www.blueletterbible.org/kjv/jhn/19/38/" target="_blank" data-ref="John 19:38-42">19:38–42</a></div>
 <div style="padding: 12px; text-align: center;"><a href="https://www.youtube.com/watch?v=kPfC9kSPP_Q" target="_blank">Watch</a></div>
 </summary>
 <div style="padding: 20px 24px; background: #faf8f5; border-left: 4px solid #b1542f;">
@@ -984,13 +984,13 @@ Read Full Article: The Seven Last Sermons of Christ
 
 | # | Words | Scripture | Psalm Connection | Theme |
 |---|-------|-----------|------------------|---------|
-| 1 | "Father, forgive them; for they know not what they do." | <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=34" target="_blank" data-ref="Luke 23:34">Luke 23:34</a> | <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/22?lang=eng&id=1-2" target="_blank" data-ref="Psalm 22:1-2" data-popup-text="My God, my God, why hast thou forsaken me? why art thou so far from helping me, and from the words of my roaring? O my God, I cry in the daytime, but thou hearest not; and in the night season, and am not silent.">Psalm 22:1-2</a> | Forgiveness |
-| 2 | "Today shalt thou be with me in paradise." | <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=43" target="_blank" data-ref="Luke 23:43">Luke 23:43</a> | <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/32?lang=eng&id=1-2" target="_blank" data-ref="Psalm 32:1-2" data-popup-text="Blessed is he whose transgression is forgiven, whose sin is covered. Blessed is the man unto whom the Lord imputeth not iniquity, and in whose spirit there is no guile.">Psalm 32:1-2</a> | Salvation |
-| 3 | "Woman, behold thy son... Behold thy mother!" | <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/19?lang=eng&id=26-27" target="_blank" data-ref="John 19:26-27">John 19:26–27</a> | <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/35?lang=eng&id=14" target="_blank" data-ref="Psalm 35:14" data-popup-text="I behaved myself as though he had been my friend or brother: I bowed down heavily, as one that mourneth for his mother.">Psalm 35:14</a> | Relationship |
-| 4 | "Eli, Eli, lama sabachthani?" (My God, why hast thou forsaken me?) | <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/27?lang=eng&id=46" target="_blank" data-ref="Matthew 27:46">Matthew 27:46</a> | **<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/22?lang=eng&id=1" target="_blank" data-ref="Psalm 22:1" data-popup-text="My God, my God, why hast thou forsaken me? why art thou so far from helping me, and from the words of my roaring?">Psalm 22:1</a>** (direct quote) | Purpose |
-| 5 | "I thirst." | <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/19?lang=eng&id=28" target="_blank" data-ref="John 19:28">John 19:28</a> | **<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/69?lang=eng&id=21" target="_blank" data-ref="Psalm 69:21" data-popup-text="They gave me also gall for my meat; and in my thirst they gave me vinegar to drink.">Psalm 69:21</a>** (fulfillment) | Humanity |
-| 6 | "It is finished." | <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/19?lang=eng&id=30" target="_blank" data-ref="John 19:30">John 19:30</a> | <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/22?lang=eng&id=31" target="_blank" data-ref="Psalm 22:31" data-popup-text="They shall come, and shall declare his righteousness unto a people that shall be born, that he hath done this.">Psalm 22:31</a> | Victory |
-| 7 | "Father, into thy hands I commend my spirit." | <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=46" target="_blank" data-ref="Luke 23:46">Luke 23:46</a> | **<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/31?lang=eng&id=5" target="_blank" data-ref="Psalm 31:5" data-popup-text="Into thine hand I commit my spirit: thou hast redeemed me, O Lord God of truth.">Psalm 31:5</a>** (direct quote) | Trust |
+| 1 | "Father, forgive them; for they know not what they do." | <a href="https://www.blueletterbible.org/kjv/luk/23/34/" target="_blank" data-ref="Luke 23:34">Luke 23:34</a> | <a href="https://www.blueletterbible.org/kjv/psa/22/1/" target="_blank" data-ref="Psalm 22:1-2" data-popup-text="My God, my God, why hast thou forsaken me? why art thou so far from helping me, and from the words of my roaring? O my God, I cry in the daytime, but thou hearest not; and in the night season, and am not silent.">Psalm 22:1-2</a> | Forgiveness |
+| 2 | "Today shalt thou be with me in paradise." | <a href="https://www.blueletterbible.org/kjv/luk/23/43/" target="_blank" data-ref="Luke 23:43">Luke 23:43</a> | <a href="https://www.blueletterbible.org/kjv/psa/32/1/" target="_blank" data-ref="Psalm 32:1-2" data-popup-text="Blessed is he whose transgression is forgiven, whose sin is covered. Blessed is the man unto whom the Lord imputeth not iniquity, and in whose spirit there is no guile.">Psalm 32:1-2</a> | Salvation |
+| 3 | "Woman, behold thy son... Behold thy mother!" | <a href="https://www.blueletterbible.org/kjv/jhn/19/26/" target="_blank" data-ref="John 19:26-27">John 19:26–27</a> | <a href="https://www.blueletterbible.org/kjv/psa/35/14/" target="_blank" data-ref="Psalm 35:14" data-popup-text="I behaved myself as though he had been my friend or brother: I bowed down heavily, as one that mourneth for his mother.">Psalm 35:14</a> | Relationship |
+| 4 | "Eli, Eli, lama sabachthani?" (My God, why hast thou forsaken me?) | <a href="https://www.blueletterbible.org/kjv/mat/27/46/" target="_blank" data-ref="Matthew 27:46">Matthew 27:46</a> | **<a href="https://www.blueletterbible.org/kjv/psa/22/1/" target="_blank" data-ref="Psalm 22:1" data-popup-text="My God, my God, why hast thou forsaken me? why art thou so far from helping me, and from the words of my roaring?">Psalm 22:1</a>** (direct quote) | Purpose |
+| 5 | "I thirst." | <a href="https://www.blueletterbible.org/kjv/jhn/19/28/" target="_blank" data-ref="John 19:28">John 19:28</a> | **<a href="https://www.blueletterbible.org/kjv/psa/69/21/" target="_blank" data-ref="Psalm 69:21" data-popup-text="They gave me also gall for my meat; and in my thirst they gave me vinegar to drink.">Psalm 69:21</a>** (fulfillment) | Humanity |
+| 6 | "It is finished." | <a href="https://www.blueletterbible.org/kjv/jhn/19/30/" target="_blank" data-ref="John 19:30">John 19:30</a> | <a href="https://www.blueletterbible.org/kjv/psa/22/31/" target="_blank" data-ref="Psalm 22:31" data-popup-text="They shall come, and shall declare his righteousness unto a people that shall be born, that he hath done this.">Psalm 22:31</a> | Victory |
+| 7 | "Father, into thy hands I commend my spirit." | <a href="https://www.blueletterbible.org/kjv/luk/23/46/" target="_blank" data-ref="Luke 23:46">Luke 23:46</a> | **<a href="https://www.blueletterbible.org/kjv/psa/31/5/" target="_blank" data-ref="Psalm 31:5" data-popup-text="Into thine hand I commit my spirit: thou hast redeemed me, O Lord God of truth.">Psalm 31:5</a>** (direct quote) | Trust |
 
 ---
 

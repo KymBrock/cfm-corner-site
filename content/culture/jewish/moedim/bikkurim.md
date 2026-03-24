@@ -301,7 +301,7 @@ details > div {
 
 From Bikkurim begins the "Counting of the Omer" — 50 days until Shavuot (Pentecost):
 
-> "And ye shall count unto you from the morrow after the sabbath, from the day that ye brought the sheaf of the wave offering; seven sabbaths shall be complete: Even unto the morrow after the seventh sabbath shall ye number fifty days" (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/lev/23?lang=eng&id=15-16" target="_blank" data-ref="Leviticus 23:15-16">Leviticus 23:15-16</a>)
+> "And ye shall count unto you from the morrow after the sabbath, from the day that ye brought the sheaf of the wave offering; seven sabbaths shall be complete: Even unto the morrow after the seventh sabbath shall ye number fifty days" (<a href="https://www.blueletterbible.org/kjv/lev/23/15/" target="_blank" data-ref="Leviticus 23:15-16">Leviticus 23:15-16</a>)
 
 #### The Seasonal "Moedim" Festival Sequence
 
@@ -328,7 +328,7 @@ As Nephi declared: "All things which have been given of God from the beginning o
 
 ### The Biblical Command
 
-The feast is commanded in <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/lev/23?lang=eng&id=9-14" target="_blank" data-ref="Leviticus 23:9-14">Leviticus 23:9-14</a>:
+The feast is commanded in <a href="https://www.blueletterbible.org/kjv/lev/23/9/" target="_blank" data-ref="Leviticus 23:9-14">Leviticus 23:9-14</a>:
 
 > "When ye be come into the land which I give unto you, and shall reap the harvest thereof, then ye shall bring a sheaf of the firstfruits of your harvest unto the priest: And he shall wave the sheaf before the Lord, to be accepted for you: on the morrow after the sabbath the priest shall wave it."
 
@@ -336,7 +336,7 @@ The feast is commanded in <a href="https://www.churchofjesuschrist.org/study/scr
 
 The appointed times (*moedim*) of Israel were far more than agricultural celebrations — they were divine rehearsals, sacred assemblies that shaped the rhythm of Israelite life and prepared the covenant people to recognize their Messiah when He came.
 
-These festivals were **communal experiences** that united all Israel. Three times each year, every able-bodied male was required to appear before the Lord at the Temple (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/deut/16?lang=eng&id=16" target="_blank" data-ref="Deuteronomy 16:16">Deuteronomy 16:16</a>). Families traveled together, shared meals with neighbors, recited sacred history, and participated in prescribed rituals that connected them to their ancestors and to God's covenant promises.
+These festivals were **communal experiences** that united all Israel. Three times each year, every able-bodied male was required to appear before the Lord at the Temple (<a href="https://www.blueletterbible.org/kjv/deu/16/16/" target="_blank" data-ref="Deuteronomy 16:16">Deuteronomy 16:16</a>). Families traveled together, shared meals with neighbors, recited sacred history, and participated in prescribed rituals that connected them to their ancestors and to God's covenant promises.
 
 Each feast carried **specific traditions and rituals** designed to teach eternal truths: the Passover lamb pointed to the coming sacrifice; the unleavened bread symbolized separation from sin; and the waving of firstfruits declared that God is the source of all life and increase. These were not mere symbols — they were prophetic patterns. When Christ fulfilled them at the precise appointed times, those who understood the feasts could recognize their Messiah.
 
@@ -407,7 +407,7 @@ Each feast carried **specific traditions and rituals** designed to teach eternal
 
 ### The Seven Species
 
-As part of this tradition, seven species were brought to the Temple as the Israelites' firstfruits offering. Baskets were adorned with the *Shivat HaMinim* — the Seven Species representing the abundance of the Promised Land (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/deut/8?lang=eng&id=8" target="_blank" data-ref="Deuteronomy 8:8">Deuteronomy 8:8</a>):
+As part of this tradition, seven species were brought to the Temple as the Israelites' firstfruits offering. Baskets were adorned with the *Shivat HaMinim* — the Seven Species representing the abundance of the Promised Land (<a href="https://www.blueletterbible.org/kjv/deu/8/8/" target="_blank" data-ref="Deuteronomy 8:8">Deuteronomy 8:8</a>):
 
 <div class="seven-species-grid">
     <div class="species-card">
@@ -507,7 +507,7 @@ A field across the Kidron Valley from Jerusalem was designated. As three stars b
 
 **The Bikkurim Procession:**
 
-Pilgrims traveled in festive processions with music, baskets decorated with the Seven Species. Each farmer recited the historical journey from Egypt to the Promised Land (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/deut/26?lang=eng&id=5-10" target="_blank" data-ref="Deuteronomy 26:5-10">Deuteronomy 26:5-10</a>), then the priest took the basket and waved it before the altar.
+Pilgrims traveled in festive processions with music, baskets decorated with the Seven Species. Each farmer recited the historical journey from Egypt to the Promised Land (<a href="https://www.blueletterbible.org/kjv/deu/26/5/" target="_blank" data-ref="Deuteronomy 26:5-10">Deuteronomy 26:5-10</a>), then the priest took the basket and waved it before the altar.
 
 </div>
 </details>
@@ -582,7 +582,7 @@ Christ is both the **Firstborn** of the Father (holding all divine inheritance) 
     </div>
     <div class="compare-card">
         <h4>Presentation to the Father</h4>
-        <p>The priest waved the sheaf before God; Christ presented Himself to the Father (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng&id=17" target="_blank" data-ref="John 20:17">John 20:17</a>)</p>
+        <p>The priest waved the sheaf before God; Christ presented Himself to the Father (<a href="https://www.blueletterbible.org/kjv/jhn/20/17/" target="_blank" data-ref="John 20:17">John 20:17</a>)</p>
     </div>
     <div class="compare-card">
         <h4>Perfect Timing</h4>
@@ -973,7 +973,7 @@ Since the Temple's destruction, Bikkurim has continued to be observed among the 
 <img src="/images/culture/jewish-festivals/firstfruits-icons/gratitude-intention.png" alt="Gratitude & Intention" style="width: 50px; height: 50px; object-fit: contain;">
 <h4 style="margin: 0; color: #1a6b74;">Gratitude & Intention</h4>
 </div>
-<p style="font-size: 0.95rem; margin: 0;">The firstfruits declaration (<a href="https://www.churchofjesuschrist.org/study/scriptures/ot/deut/26?lang=eng&id=5-10" target="_blank" data-ref="Deuteronomy 26:5-10">Deuteronomy 26:5-10</a>) was an act of remembrance — recounting God's hand from wandering Aramean to promised abundance. We too recognize His intentional design in our lives, offering gratitude before seeing the full harvest. Every soul is precious; every blessing acknowledged invites more.</p>
+<p style="font-size: 0.95rem; margin: 0;">The firstfruits declaration (<a href="https://www.blueletterbible.org/kjv/deu/26/5/" target="_blank" data-ref="Deuteronomy 26:5-10">Deuteronomy 26:5-10</a>) was an act of remembrance — recounting God's hand from wandering Aramean to promised abundance. We too recognize His intentional design in our lives, offering gratitude before seeing the full harvest. Every soul is precious; every blessing acknowledged invites more.</p>
 </div>
 
 </div>
@@ -1009,7 +1009,7 @@ Since the Temple's destruction, Bikkurim has continued to be observed among the 
 
 <blockquote style="background: rgba(255,255,255,0.15); border-radius: 8px; padding: 1.25rem; margin: 1.5rem auto; max-width: 600px; font-style: italic;">
 "Christ the firstfruits; afterward they that are Christ's at his coming."
-<div style="margin-top: 0.5rem; font-style: normal; font-size: 0.9rem;">— <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/15?lang=eng&id=23" target="_blank" data-ref="1 Corinthians 15:23" style="color: #fef5e7;">1 Corinthians 15:23</a></div>
+<div style="margin-top: 0.5rem; font-style: normal; font-size: 0.9rem;">— <a href="https://www.blueletterbible.org/kjv/1co/15/23/" target="_blank" data-ref="1 Corinthians 15:23" style="color: #fef5e7;">1 Corinthians 15:23</a></div>
 </blockquote>
 
 <p style="font-size: 1.1rem; margin-bottom: 0;"><strong>The harvest has begun. Our resurrection is assured.</strong></p>

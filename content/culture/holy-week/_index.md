@@ -8,7 +8,7 @@ card_icon: "/images/culture/holy-week/card-icon.png"
 <div style="margin: -20px -20px 32px -20px; position: relative; overflow: hidden; border-radius: 0 0 12px 12px;">
 <img src="/images/culture/holy-week/hero-resurrection.jpg" alt="The Risen Christ appears to Mary Magdalene at the Garden Tomb" style="width: 100%; height: auto; display: block;">
 <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.6)); padding: 40px 24px 20px;">
-<p style="color: white; margin: 0; font-size: 1.1em; font-style: italic; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">"He is not here: for he is risen, as he said." — <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/28?lang=eng&id=6" target="_blank" data-ref="Matthew 28:6" style="color: white;">Matthew 28:6</a></p>
+<p style="color: white; margin: 0; font-size: 1.1em; font-style: italic; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">"He is not here: for he is risen, as he said." — <a href="https://www.blueletterbible.org/kjv/mat/28/6/" target="_blank" data-ref="Matthew 28:6" style="color: white;">Matthew 28:6</a></p>
 </div>
 </div>
 
@@ -57,11 +57,11 @@ There is scholarly debate regarding the exact chronology of Holy Week. The tradi
 </div>
 <div style="display: flex; align-items: flex-start; margin-bottom: 16px;">
 <span style="color: #923a23; font-size: 1.2em; margin-right: 12px; margin-top: 2px;">✦</span>
-<span><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/28?lang=eng&id=1" target="_blank" data-ref="Matthew 28:1">Matthew 28:1</a> uses the plural "Sabbaths" (<a href="https://www.blueletterbible.org/lexicon/g4521/kjv/tr/0-1/" target="_blank" data-strongs="G4521" data-translit="sabbaton" data-original="σαββάτων" data-lang="greek">σαββάτων</a>), suggesting two consecutive rest days — the Passover Sabbath (Friday) and the weekly Sabbath (Saturday)</span>
+<span><a href="https://www.blueletterbible.org/kjv/mat/28/1/" target="_blank" data-ref="Matthew 28:1">Matthew 28:1</a> uses the plural "Sabbaths" (<a href="https://www.blueletterbible.org/lexicon/g4521/kjv/tr/0-1/" target="_blank" data-strongs="G4521" data-translit="sabbaton" data-original="σαββάτων" data-lang="greek">σαββάτων</a>), suggesting two consecutive rest days — the Passover Sabbath (Friday) and the weekly Sabbath (Saturday)</span>
 </div>
 <div style="display: flex; align-items: flex-start; margin-bottom: 16px;">
 <span style="color: #923a23; font-size: 1.2em; margin-right: 12px; margin-top: 2px;">✦</span>
-<span>This timeline aligns with Christ's prophecy of being in the tomb "three days and three nights" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/12?lang=eng&id=40" target="_blank" data-ref="Matthew 12:40">Matthew 12:40</a>)</span>
+<span>This timeline aligns with Christ's prophecy of being in the tomb "three days and three nights" (<a href="https://www.blueletterbible.org/kjv/mat/12/40/" target="_blank" data-ref="Matthew 12:40">Matthew 12:40</a>)</span>
 </div>
 </div>
 
@@ -94,7 +94,7 @@ There is scholarly debate regarding the exact chronology of Holy Week. The tradi
 <tbody>
 <tr style="background: #f0ebe5;">
 <td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>Saturday</strong></td>
-<td style="padding: 12px; border-bottom: 1px solid #ddd;">Arrival in Bethany; Mary of Bethany anoints Jesus' feet (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/12?lang=eng&id=1-8" target="_blank" data-ref="John 12:1-8">John 12:1-8</a>)</td>
+<td style="padding: 12px; border-bottom: 1px solid #ddd;">Arrival in Bethany; Mary of Bethany anoints Jesus' feet (<a href="https://www.blueletterbible.org/kjv/jhn/12/1/" target="_blank" data-ref="John 12:1-8">John 12:1-8</a>)</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">9 Nisan</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center; color: #666; font-size: 0.9em;">—</td>
 </tr>
@@ -102,7 +102,7 @@ There is scholarly debate regarding the exact chronology of Holy Week. The tradi
 <td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>Sunday</strong></td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd;">Triumphal Entry into Jerusalem; Jesus weeps over city</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">10 Nisan</td>
-<td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="color: #466758; font-weight: 600;">Lamb Selection</span><br><span style="font-size: 0.8em; color: #666;"><a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ex/12?lang=eng&id=3" target="_blank" data-ref="Exodus 12:3">Exodus 12:3</a></span></td>
+<td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="color: #466758; font-weight: 600;">Lamb Selection</span><br><span style="font-size: 0.8em; color: #666;"><a href="https://www.blueletterbible.org/kjv/exo/12/3/" target="_blank" data-ref="Exodus 12:3">Exodus 12:3</a></span></td>
 </tr>
 <tr style="background: #f0ebe5;">
 <td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>Monday</strong></td>
@@ -164,7 +164,7 @@ There is scholarly debate regarding the exact chronology of Holy Week. The tradi
 <tbody>
 <tr style="background: #f0ebe5;">
 <td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>Saturday</strong></td>
-<td style="padding: 12px; border-bottom: 1px solid #ddd;">Arrival in Bethany; Mary of Bethany anoints Jesus' feet (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/12?lang=eng&id=1-8" target="_blank" data-ref="John 12:1-8">John 12:1-8</a>)</td>
+<td style="padding: 12px; border-bottom: 1px solid #ddd;">Arrival in Bethany; Mary of Bethany anoints Jesus' feet (<a href="https://www.blueletterbible.org/kjv/jhn/12/1/" target="_blank" data-ref="John 12:1-8">John 12:1-8</a>)</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">9 Nisan</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center; color: #666; font-size: 0.9em;">—</td>
 </tr>
@@ -172,7 +172,7 @@ There is scholarly debate regarding the exact chronology of Holy Week. The tradi
 <td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>Sunday</strong></td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd;">Triumphal Entry into Jerusalem; Jesus weeps over city</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">10 Nisan</td>
-<td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="color: #466758; font-weight: 600;">Lamb Selection</span><br><span style="font-size: 0.8em; color: #666;"><a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ex/12?lang=eng&id=3" target="_blank" data-ref="Exodus 12:3">Exodus 12:3</a></span></td>
+<td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="color: #466758; font-weight: 600;">Lamb Selection</span><br><span style="font-size: 0.8em; color: #666;"><a href="https://www.blueletterbible.org/kjv/exo/12/3/" target="_blank" data-ref="Exodus 12:3">Exodus 12:3</a></span></td>
 </tr>
 <tr style="background: #f0ebe5;">
 <td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>Monday</strong></td>
@@ -188,7 +188,7 @@ There is scholarly debate regarding the exact chronology of Holy Week. The tradi
 </tr>
 <tr style="background: #f0ebe5;">
 <td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>Wednesday</strong><br><span style="font-size: 0.85em; color: #666;">(Evening)</span></td>
-<td style="padding: 12px; border-bottom: 1px solid #ddd;">Last Supper <em>"before the festival"</em> (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/13?lang=eng&id=1" target="_blank" data-ref="John 13:1">John 13:1</a>); Gethsemane; Arrest</td>
+<td style="padding: 12px; border-bottom: 1px solid #ddd;">Last Supper <em>"before the festival"</em> (<a href="https://www.blueletterbible.org/kjv/jhn/13/1/" target="_blank" data-ref="John 13:1">John 13:1</a>); Gethsemane; Arrest</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">13 Nisan</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center; font-size: 0.85em; color: #666;">Preparation begins</td>
 </tr>
@@ -212,13 +212,13 @@ There is scholarly debate regarding the exact chronology of Holy Week. The tradi
 </tr>
 <tr style="background: #f0ebe5;">
 <td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>Sunday</strong><br><span style="font-size: 0.85em; color: #d4a53e; font-weight: 600;">Easter</span></td>
-<td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>RESURRECTION</strong> "after the Sabbaths" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/28?lang=eng&id=1" target="_blank" data-ref="Matthew 28:1">Matthew 28:1</a> — <a href="https://www.blueletterbible.org/lexicon/g4521/kjv/tr/0-1/" target="_blank" data-strongs="G4521" data-translit="sabbaton" data-original="σαββάτων" data-lang="greek">σαββάτων</a>, plural)</td>
+<td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>RESURRECTION</strong> "after the Sabbaths" (<a href="https://www.blueletterbible.org/kjv/mat/28/1/" target="_blank" data-ref="Matthew 28:1">Matthew 28:1</a> — <a href="https://www.blueletterbible.org/lexicon/g4521/kjv/tr/0-1/" target="_blank" data-strongs="G4521" data-translit="sabbaton" data-original="σαββάτων" data-lang="greek">σαββάτων</a>, plural)</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">17 Nisan</td>
 <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="color: #d4a84b; font-weight: 600;"><a href="https://www.blueletterbible.org/lexicon/h1061/kjv/wlc/0-1/" target="_blank" data-strongs="H1061" data-translit="bikkurim" data-original="בִּכּוּרִים" data-lang="hebrew">בִּכּוּרִים</a></span><br><span style="font-size: 0.8em;">Bikkurim (Firstfruits)</span></td>
 </tr>
 </tbody>
 </table>
-<p style="font-size: 0.9em; color: #666; margin-top: 12px;"><em>Note: In this view, Jesus dies as the Passover lambs are slaughtered (14 Nisan), rests through both Sabbaths, and rises on Firstfruits — "the firstfruits of them that slept" (<a href="https://www.blueletterbible.org/kjv/1co/15/20/" target="_blank" data-ref="1 Corinthians 15:20">1 Corinthians 15:20</a>). Full 72 hours in the tomb fulfills "three days and three nights" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/12?lang=eng&id=40" target="_blank" data-ref="Matthew 12:40">Matthew 12:40</a>).</em></p>
+<p style="font-size: 0.9em; color: #666; margin-top: 12px;"><em>Note: In this view, Jesus dies as the Passover lambs are slaughtered (14 Nisan), rests through both Sabbaths, and rises on Firstfruits — "the firstfruits of them that slept" (<a href="https://www.blueletterbible.org/kjv/1co/15/20/" target="_blank" data-ref="1 Corinthians 15:20">1 Corinthians 15:20</a>). Full 72 hours in the tomb fulfills "three days and three nights" (<a href="https://www.blueletterbible.org/kjv/mat/12/40/" target="_blank" data-ref="Matthew 12:40">Matthew 12:40</a>).</em></p>
 </div>
 </div>
 
@@ -545,7 +545,7 @@ Each day of Holy Week reveals Christ fulfilling His divine mission. Click any da
 <div style="padding: 20px;">
 <h3 style="margin: 0 0 8px 0; color: #4a3d6b;">Wednesday Evening</h3>
 <p style="margin: 0 0 12px 0; font-size: 0.9em; color: #666;">Last Supper • Gethsemane • Arrest</p>
-<p style="margin: 0; font-size: 0.95em;">"Before the festival of Passover" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/13?lang=eng&id=1" target="_blank" data-ref="John 13:1">John 13:1</a>). The final meal. Feet washed, bread broken, wine blessed. Then Gethsemane and the arrest.</p>
+<p style="margin: 0; font-size: 0.95em;">"Before the festival of Passover" (<a href="https://www.blueletterbible.org/kjv/jhn/13/1/" target="_blank" data-ref="John 13:1">John 13:1</a>). The final meal. Feet washed, bread broken, wine blessed. Then Gethsemane and the arrest.</p>
 <a href="/culture/holy-week/05-thursday/" style="display: inline-block; margin-top: 16px; color: #4a3d6b; font-weight: 600;">Explore →</a>
 </div>
 </div>
@@ -581,7 +581,7 @@ Each day of Holy Week reveals Christ fulfilling His divine mission. Click any da
 <div style="padding: 20px;">
 <h3 style="margin: 0 0 8px 0; color: #4a4a4a;">Saturday</h3>
 <p style="margin: 0 0 12px 0; font-size: 0.9em; color: #666;">Weekly Sabbath (Second Sabbath)</p>
-<p style="margin: 0; font-size: 0.95em;">Regular weekly Sabbath. Second day in tomb. Two consecutive Sabbaths explain <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/28?lang=eng&id=1" target="_blank" data-ref="Matthew 28:1">Matthew 28:1</a>'s plural "Sabbaths" (<a href="https://www.blueletterbible.org/lexicon/g4521/kjv/tr/0-1/" target="_blank" data-strongs="G4521" data-translit="sabbaton" data-original="σαββάτων" data-lang="greek">σαββάτων</a>).</p>
+<p style="margin: 0; font-size: 0.95em;">Regular weekly Sabbath. Second day in tomb. Two consecutive Sabbaths explain <a href="https://www.blueletterbible.org/kjv/mat/28/1/" target="_blank" data-ref="Matthew 28:1">Matthew 28:1</a>'s plural "Sabbaths" (<a href="https://www.blueletterbible.org/lexicon/g4521/kjv/tr/0-1/" target="_blank" data-strongs="G4521" data-translit="sabbaton" data-original="σαββάτων" data-lang="greek">σαββάτων</a>).</p>
 <a href="/culture/holy-week/07-saturday/" style="display: inline-block; margin-top: 16px; color: #4a4a4a; font-weight: 600;">Explore →</a>
 </div>
 </div>
@@ -593,7 +593,7 @@ Each day of Holy Week reveals Christ fulfilling His divine mission. Click any da
 <div style="padding: 20px;">
 <h3 style="margin: 0 0 8px 0; color: #c99a35;">Easter Sunday</h3>
 <p style="margin: 0 0 12px 0; font-size: 0.9em; color: #666;">The Resurrection — After 3 Days</p>
-<p style="margin: 0; font-size: 0.95em;">"After the Sabbaths" (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/28?lang=eng&id=1" target="_blank" data-ref="Matthew 28:1">Matthew 28:1</a>). Three days and three nights fulfilled (<a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/12?lang=eng&id=40" target="_blank" data-ref="Matthew 12:40">Matthew 12:40</a>). The empty tomb. Christ lives!</p>
+<p style="margin: 0; font-size: 0.95em;">"After the Sabbaths" (<a href="https://www.blueletterbible.org/kjv/mat/28/1/" target="_blank" data-ref="Matthew 28:1">Matthew 28:1</a>). Three days and three nights fulfilled (<a href="https://www.blueletterbible.org/kjv/mat/12/40/" target="_blank" data-ref="Matthew 12:40">Matthew 12:40</a>). The empty tomb. Christ lives!</p>
 <a href="/culture/holy-week/08-resurrection/" style="display: inline-block; margin-top: 16px; color: #c99a35; font-weight: 600;">Explore →</a>
 </div>
 </div>
