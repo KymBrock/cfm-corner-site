@@ -1602,10 +1602,32 @@ a.RTBData:hover, a.BLBST_a:hover {
     .culture-article-content table th,
     .library-article-content table td,
     .library-article-content table th { padding: 8px 10px; font-size: 0.9em; }
+    .culture-article-content .scripture-harmony {
+        overflow-x: hidden;
+        padding-bottom: 0;
+    }
     .culture-article-content .scripture-harmony > div:first-child,
     .culture-article-content .scripture-harmony > details,
     .culture-article-content .scripture-harmony > details > summary,
-    .culture-article-content .scripture-harmony > details > div { min-width: 760px; }
+    .culture-article-content .scripture-harmony > details > div {
+        min-width: 100% !important;
+        width: 100%;
+    }
+    .culture-article-content .scripture-harmony > div:first-child,
+    .culture-article-content .scripture-harmony > details > summary {
+        grid-template-columns: minmax(140px, 1.7fr) repeat(5, minmax(42px, 0.75fr)) !important;
+        font-size: 0.82em;
+    }
+    .culture-article-content .scripture-harmony > div:first-child > div,
+    .culture-article-content .scripture-harmony > details > summary > div {
+        padding: 8px 6px !important;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+    }
+    .culture-article-content .scripture-harmony > details > div {
+        padding: 16px 18px !important;
+        font-size: 0.98em;
+    }
 }
 
 /* === Small phone (≤340px) — tightest layout === */
