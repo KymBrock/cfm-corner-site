@@ -210,15 +210,30 @@
       // Kept intentionally narrow so the client-side wrapper doesn't create false positives.
       var scriptureRefRegex = /\(((?:[1-4]\s+)?(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|1 Samuel|2 Samuel|1 Kings|2 Kings|1 Chronicles|2 Chronicles|Ezra|Nehemiah|Esther|Job|Psalm|Psalms|Proverbs|Ecclesiastes|Song of Solomon|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|Romans|1 Corinthians|2 Corinthians|Galatians|Ephesians|Philippians|Colossians|1 Thessalonians|2 Thessalonians|1 Timothy|2 Timothy|Titus|Philemon|Hebrews|James|1 Peter|2 Peter|1 John|2 John|3 John|Jude|Revelation|1 Nephi|2 Nephi|Jacob|Enos|Jarom|Omni|Words of Mormon|Mosiah|Alma|Helaman|3 Nephi|4 Nephi|Mormon|Ether|Moroni|D&C|Doctrine and Covenants|Moses|Abraham|Joseph Smith—Matthew|Joseph Smith—History|Articles of Faith|JST(?:\s+Genesis|\s+Exodus|\s+Matthew)?)\s+\d+(?::\d+(?:[–\-]\d+)?)?)\)/g;
 
+      function isBLBLexiconLink(href) {
+        return /blueletterbible\.org\/lexicon\//i.test(href || '');
+      }
+
+      function isBLBSearchLink(href) {
+        return /blueletterbible\.org\/search\/search\.cfm/i.test(href || '');
+      }
+
+      function isBLBScriptureLink(href) {
+        if (!href) return false;
+        if (!/blueletterbible\.org\//i.test(href)) return false;
+        if (isBLBLexiconLink(href) || isBLBSearchLink(href)) return false;
+        return /blueletterbible\.org\/[a-z0-9-]+\/[a-z0-9-]+\/\d+(?:\/\d+)?/i.test(href);
+      }
+
       function getLinkType(el) {
         if (!el) return null;
         // data-ref is first-class: any element with data-ref is a scripture reference
         if (el.dataset && el.dataset.ref) return 'scripture-ref';
         if (!el.href) return null;
-        if (/blueletterbible\.org\/lexicon\//i.test(el.href)) return 'lexicon';
-        if (/blueletterbible\.org\/kjv\//i.test(el.href)) return 'scripture';
+        if (isBLBLexiconLink(el.href)) return 'lexicon';
+        if (isBLBScriptureLink(el.href)) return 'scripture';
         if (/churchofjesuschrist\.org\/study\/scriptures\//i.test(el.href)) return 'scripture-church';
-        if (/blueletterbible\.org\/search\/search\.cfm/i.test(el.href)) return 'blbsearch';
+        if (isBLBSearchLink(el.href)) return 'blbsearch';
         if (/sefaria\.org\//i.test(el.href)) return 'sefaria';
         return null;
       }
@@ -601,7 +616,7 @@
       }
 
       function getTargetAnchor(target) {
-        return target && target.closest ? target.closest('[data-ref], a[href*="blueletterbible.org/kjv/"], a[href*="blueletterbible.org/lexicon/"], a[href*="blueletterbible.org/search/search.cfm"], a[href*="sefaria.org/"], a[href*="churchofjesuschrist.org/study/scriptures/"]') : null;
+        return target && target.closest ? target.closest('[data-ref], a[href*="blueletterbible.org/"], a[href*="sefaria.org/"], a[href*="churchofjesuschrist.org/study/scriptures/"]') : null;
       }
 
       // Desktop hover — guard against events originating inside the popup itself
@@ -802,7 +817,7 @@
           inferredSummary = 'Church manual resource. Tap to open lesson context, references, and study helps.';
         }
 
-        var verseLikeLabel = /\d+[:]\d+/.test(labelText);
+        var verseLikeLabel = /\b\d+:\d+\b/.test(labelText);
         var title = (path.includes('/study/scriptures/') && verseLikeLabel)
           ? labelText
           : ((entry && entry.title) || labelText || titleFromPath(path));
@@ -830,7 +845,7 @@
         // Find Church links, but EXCLUDE scripture links (handled by blb-popup)
         var el = t && t.closest ? t.closest('a[href*="churchofjesuschrist.org/"]') : null;
         if (el && /churchofjesuschrist\.org\/study\/scriptures\//i.test(el.href)) {
-          return null; // Let blb-popup handle scripture links
+          return null;
         }
         return el;
       }
