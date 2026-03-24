@@ -50,7 +50,28 @@ When deploying a new week, follow these steps in order:
 - [ ] Run `link-audit.py` on all three files (study-guide, insights, resources) — zero issues
 - [ ] Verify no emojis in any HTML files (monochromatic icons only)
 - [ ] Verify all video cards use thumbnail format (never plain text links)
+- [ ] Verify every discovered weekly `watch?v=` URL renders as a thumbnail card; channel-homepage fallbacks are only acceptable when no week-specific video was found
+- [ ] Use `/Users/kymberbrockbank/Obsidian/K Master Vault/Master Project Folder/Ongoing/CFM Corner/OT_2026/Planning/Content_Maps/Church_Media_Video_Map.md` as the authoritative Week-to-Church-Media mapping when OT Stories / Come Learn With Me cards are missing or shifted
+- [ ] If the week's `Video_Resources/VIDEO_URL_TRACKER.md` includes a Bible Project section, make the generated Bible Project accordion match that documented weekly list rather than a reduced generator default
 
+### Scripture & Term Link Contract
+- Every scripture citation in a touched file must include the full book name and chapter. Never leave bare references like `(3:11)` or partial references like `Nephi 11:4`.
+- Every scripture link must include a normalized `data-ref` with the full reference, e.g. `data-ref="Exodus 3:14"` or `data-ref="3 Nephi 11:1-17"`.
+- If linking to Church or BLB scripture pages, always add `data-ref` so the popup system can resolve the reference.
+- For chapter-only references such as `Exodus 3`, use the full book + chapter in `data-ref`; do not rely on shorthand.
+- Do not invent glossary/term links. If a term is not in the approved glossary data, leave it plain or flag it for glossary expansion rather than fabricating a popup.
+- Plain transliterations that function as term notes or glosses should not be left floating when a source link exists nearby. Link them either to the verified lexicon/source entry or to the specific source passage being discussed.
+- Every direct quote from a prophet or apostle in a touched file must link to a verified source. If the exact source cannot be verified, remove the quotation marks and flag it as `[QUOTE SOURCE PENDING VERIFICATION]` rather than leaving an unlinked quote.
+- Word studies in touched files must include linked Greek, Latin, and English cognates or close parallels where the format calls for them. Do not leave the Hebrew alone if the word-study pattern expects cross-language parallels.
+
+### Approved Source Locations Before Drafting Quotes or Word Studies
+- Sacred Texts vault root: `/Users/kymberbrockbank/Obsidian/Sacred Texts/`
+- LDS canon source files for scripture text and verse verification: `/Users/kymberbrockbank/Obsidian/Sacred Texts/01_LDS_Canon/`
+- Jewish perspective source lanes: `/Users/kymberbrockbank/Obsidian/Sacred Texts/03_Talmud/Bavli/`, `/Users/kymberbrockbank/Obsidian/Sacred Texts/04_Midrash/Midrash_Rabbah/`, `/Users/kymberbrockbank/Obsidian/Sacred Texts/05_Targumim/`
+- Conference talks / prophetic quote source lane: `/Users/kymberbrockbank/Obsidian/Sacred Texts/RESTRICTED/Conference_Talks/`
+- OT 2026 lesson markdown source lane: `/Users/kymberbrockbank/Obsidian/K Master Vault/Master Project Folder/Ongoing/CFM Corner/OT_2026/WeeklyLessons/`
+- IF research lane: `/Users/kymberbrockbank/Obsidian/K Master Vault/Research Library/Interpreter_Foundation_OT_2026/`
+- Video distillation lane: check the week's `Video_Resources/Overviews/` or `Video_Distilled/` material before summarizing videos
 ### Hugo Preview
 - [ ] **Restart the Hugo server** after editing any file in `static/content/` — Hugo's
   `readFile` function caches at build time, so changes to static HTML files are NOT
