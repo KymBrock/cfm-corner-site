@@ -1624,8 +1624,11 @@ a.RTBData:hover, a.BLBST_a:hover {
         overflow-wrap: anywhere;
     }
     .culture-article-content .scripture-harmony > details > div {
-        min-width: 100% !important;
-        width: 100%;
+        min-width: 0 !important;
+        width: auto !important;
+        max-width: calc(100vw - 40px);
+        position: sticky;
+        left: 0;
         padding: 16px 18px !important;
         font-size: 0.98em;
     }
