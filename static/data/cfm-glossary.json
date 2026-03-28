@@ -2,7 +2,7 @@
   "metadata": {
     "description": "CFM Corner Glossary - Hebrew and Greek terms from weekly lessons",
     "version": "1.2",
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-28",
     "organization": "Terms organized by CFM lesson week"
   },
   "weeks": {
@@ -234,6 +234,32 @@
         {"strongs": "H5656", "translit": "'avodah", "original": "עֲבֹדָה", "lang": "hebrew", "meaning": "labor, service, work"},
         {"strongs": "H8236", "translit": "Shiphrah", "original": "שִׁפְרָה", "lang": "hebrew", "meaning": "Shiphrah — fair, beautiful"},
         {"strongs": "H6326", "translit": "Pu'ah", "original": "פּוּעָה", "lang": "hebrew", "meaning": "Puah — splendid"}
+      ]
+    },
+    "week14": {
+      "title": "Week 14: Easter",
+      "scripture": "He Will Swallow Up Death in Victory",
+      "terms": [
+        {"strongs": "H835", "translit": "ashrei", "original": "אַשְׁרֵי", "lang": "hebrew", "meaning": "blessed, O the blessedness of!"},
+        {"strongs": "G3107", "translit": "makarios", "original": "μακάριος", "lang": "greek", "meaning": "blessed, happy (Beatitudes)"},
+        {"strongs": "G4137", "translit": "pleroo", "original": "πληρόω", "lang": "greek", "meaning": "to fill, complete, bring to fullness"},
+        {"strongs": "G5614", "translit": "hosanna", "original": "ὡσαννά", "lang": "greek", "meaning": "save now! (from Hebrew הוֹשִׁיעָה נָּא)"},
+        {"strongs": "G5584", "translit": "pselaphao", "original": "ψηλαφάω", "lang": "greek", "meaning": "to feel, handle, examine by touch"},
+        {"strongs": "G536", "translit": "aparche", "original": "ἀπαρχή", "lang": "greek", "meaning": "firstfruits, first portion offered to God"},
+        {"strongs": "H1061", "translit": "bikkurim", "original": "בִּכּוּרִים", "lang": "hebrew", "meaning": "firstfruits (of the harvest)"},
+        {"strongs": "H1069", "translit": "bakar", "original": "בָּכַר", "lang": "hebrew", "meaning": "to be born first, firstborn"},
+        {"strongs": "G5046", "translit": "teleios", "original": "τέλειος", "lang": "greek", "meaning": "perfect, complete, mature"},
+        {"strongs": "G5056", "translit": "telos", "original": "τέλος", "lang": "greek", "meaning": "end, goal, purpose"},
+        {"strongs": "H8549", "translit": "tamim", "original": "תָּמִים", "lang": "hebrew", "meaning": "whole, complete, without blemish"},
+        {"strongs": "H6452", "translit": "Pesach", "original": "פֶּסַח", "lang": "hebrew", "meaning": "Passover"},
+        {"strongs": "H4682", "translit": "matzah", "original": "מַצָּה", "lang": "hebrew", "meaning": "unleavened bread"},
+        {"strongs": "H2557", "translit": "chametz", "original": "חָמֵץ", "lang": "hebrew", "meaning": "leaven, leavened bread"},
+        {"strongs": "H1104", "translit": "bala", "original": "בָּלַע", "lang": "hebrew", "meaning": "to swallow up, consume"},
+        {"strongs": "H5060", "translit": "naga", "original": "נָגַע", "lang": "hebrew", "meaning": "to touch, reach"},
+        {"strongs": "G4982", "translit": "sozo", "original": "σώζω", "lang": "greek", "meaning": "to save, heal, make whole"},
+        {"strongs": "H8004", "translit": "shalem", "original": "שָׁלֵם", "lang": "hebrew", "meaning": "whole, complete, at peace"},
+        {"strongs": "H3532", "translit": "keves", "original": "כֶּבֶשׂ", "lang": "hebrew", "meaning": "lamb"},
+        {"strongs": "H3196", "translit": "yayin", "original": "יַיִן", "lang": "hebrew", "meaning": "wine"}
       ]
     },
     "week15": {

@@ -174,3 +174,11 @@ Even at this early stage, you are beginning to build the foundation for a richer
 Use the interactive chart below to explore how each letter evolved from ancient pictographs to modern Hebrew. You can see the Proto-Sinaitic pictograph, the Early Hebrew forms, the transitional Middle Hebrew shapes, and the modern square script we use today — along with audio pronunciation for each letter.
 
 {{< chart "hebrew_alphabet_development_chart" >}}
+
+---
+
+## Practice with Flashcards
+
+Test your knowledge of the 22 letters of the Hebrew alphabet. Click a card to reveal the letter's sound and pictograph meaning. Use the shuffle button to randomize the order.
+
+{{< flashcards section="alephBet" >}}

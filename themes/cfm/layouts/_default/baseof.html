@@ -108,15 +108,15 @@
       .blb-popup {
         position: absolute;
         z-index: 10000;
-        background: #fff;
-        border: 1px solid var(--sage-dark, #4a6b52);
-        border-radius: 8px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.18);
-        padding: 12px 14px;
-        max-width: 420px;
-        min-width: 220px;
-        font-size: 0.92em;
-        line-height: 1.45;
+        background: rgba(255, 255, 255, 0.98);
+        border: 1px solid rgba(122, 155, 126, 0.3);
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        padding: 10px 12px;
+        max-width: 380px;
+        min-width: 200px;
+        font-size: 0.88em;
+        line-height: 1.4;
         pointer-events: none;
         opacity: 0;
         transition: opacity 0.12s;
@@ -206,8 +206,24 @@
         'a-of-f':'Articles of Faith'
       };
 
-      // Regex to find parenthetical scripture references in text
-      var scriptureRefRegex = /\(([1-4]?\s*[A-Z][a-zA-Z&]+(?:\s+[A-Z][a-zA-Z]+)*\s+\d+:\d+(?:[–\-]\d+)?)\)/g;
+      // Regex to find parenthetical scripture references in text.
+      // Kept intentionally narrow so the client-side wrapper doesn't create false positives.
+      var scriptureRefRegex = /\(((?:[1-4]\s+)?(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|1 Samuel|2 Samuel|1 Kings|2 Kings|1 Chronicles|2 Chronicles|Ezra|Nehemiah|Esther|Job|Psalm|Psalms|Proverbs|Ecclesiastes|Song of Solomon|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|Romans|1 Corinthians|2 Corinthians|Galatians|Ephesians|Philippians|Colossians|1 Thessalonians|2 Thessalonians|1 Timothy|2 Timothy|Titus|Philemon|Hebrews|James|1 Peter|2 Peter|1 John|2 John|3 John|Jude|Revelation|1 Nephi|2 Nephi|Jacob|Enos|Jarom|Omni|Words of Mormon|Mosiah|Alma|Helaman|3 Nephi|4 Nephi|Mormon|Ether|Moroni|D&C|Doctrine and Covenants|Moses|Abraham|Joseph Smith—Matthew|Joseph Smith—History|Articles of Faith|JST(?:\s+Genesis|\s+Exodus|\s+Matthew)?)\s+\d+(?::\d+(?:[–\-]\d+)?)?)\)/g;
+
+      function isBLBLexiconLink(href) {
+        return /blueletterbible\.org\/lexicon\//i.test(href || '');
+      }
+
+      function isBLBSearchLink(href) {
+        return /blueletterbible\.org\/search\/search\.cfm/i.test(href || '');
+      }
+
+      function isBLBScriptureLink(href) {
+        if (!href) return false;
+        if (!/blueletterbible\.org\//i.test(href)) return false;
+        if (isBLBLexiconLink(href) || isBLBSearchLink(href)) return false;
+        return /blueletterbible\.org\/[a-z0-9-]+\/[a-z0-9-]+\/\d+(?:\/\d+)?/i.test(href);
+      }
 
       function isBLBLexiconLink(href) {
         return /blueletterbible\.org\/lexicon\//i.test(href || '');
@@ -281,9 +297,9 @@
           var chapter = parts[scripIdx + 3];
           var book = churchBookMap[bookAbbr];
           if (!book) return null;
-          // Extract verse from query param id=p12 or id=p12-p15
+          // Extract verse from query param id=p12, id=p12-p15, or id=12-15
           var idParam = u.searchParams.get('id') || '';
-          var verseMatch = idParam.match(/p(\d+)/);
+          var verseMatch = idParam.match(/p?(\d+)/);
           var verse = verseMatch ? verseMatch[1] : null;
           if (verse) {
             return book + ' ' + chapter + ':' + verse;

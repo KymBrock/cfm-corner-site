@@ -1,0 +1,1408 @@
+<style>
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+        .site-header {
+            background: linear-gradient(135deg, #d4c4a8 0%, #8B7355 100%);
+            color: white; padding: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px;
+        }
+        .site-header-content { max-width: 1000px; margin: 0 auto; padding: 0 20px; text-align: center; }
+        .site-title { font-size: 2em; margin-bottom: 5px; }
+        .site-subtitle { font-size: 1.1em; opacity: 0.9; }
+
+        .header-section {
+            background-color: #8B7355; color: white; padding: 40px; border-radius: 12px;
+            margin-bottom: 30px; text-align: center;
+        }
+        .header-section .week-label { font-size: 1em; text-transform: uppercase; letter-spacing: 2px; opacity: 0.9; margin-bottom: 10px; }
+        .header-section h1 { font-size: 2.5em; font-weight: 300; margin-bottom: 10px; }
+        .header-section .subtitle { font-size: 1.3em; font-style: italic; margin-bottom: 20px; }
+        .header-section .date-location { font-size: 1.1em; opacity: 0.95; }
+
+        .quick-links { text-align: center; margin: 20px 0; }
+        .quick-link {
+            display: inline-block; background: #8B7355; color: white; padding: 10px 20px;
+            border-radius: 8px; text-decoration: none; margin: 5px; transition: all 0.3s;
+        }
+        .quick-link:hover { background: #6B5344; transform: translateY(-2px); }
+
+        .button-container { text-align: center; margin: 30px 0; }
+        .expand-button {
+            background-color: #8B7355; color: white; border: none; padding: 12px 24px;
+            margin: 5px 10px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em;
+        }
+        .expand-button:hover { background-color: #6B5344; }
+
+        .sg-accordion-section {
+            background-color: #8B7355; color: white; cursor: pointer; padding: 18px; width: 100%;
+            border: none; text-align: left; font-size: 1.2em; font-weight: 600; font-family: Georgia, serif;
+            border-radius: 8px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center;
+        }
+        .sg-accordion-section:hover { background-color: #6B5344; }
+        .sg-accordion-section::after { content: '\25BC'; font-size: 0.9em; transition: transform 0.3s; }
+        .sg-accordion-section.active::after { transform: rotate(180deg); }
+
+        .sg-panel {
+            background-color: white; border-radius: 0 0 8px 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .sg-panel.active { display: block; }
+        .panel-content { padding: 30px; }
+        .panel-content h2 { color: #8B7355; margin-bottom: 20px; font-size: 1.8em; }
+        .panel-content h3 { color: #6B5344; margin-top: 25px; margin-bottom: 15px; font-size: 1.4em; }
+        .panel-content h4 { color: #5a4a3a; margin-top: 20px; margin-bottom: 12px; font-size: 1.2em; }
+        .panel-content ul, .panel-content ol { margin-left: 25px; margin-bottom: 15px; }
+        .panel-content li { margin-bottom: 8px; }
+        .panel-content p { margin-bottom: 15px; text-align: justify; }
+        .panel-content a { color: #8B7355; }
+        .panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .panel-content blockquote {
+            margin: 20px 0 20px 20px;
+            padding: 15px 20px;
+            border-left: 4px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 8px 8px 0;
+        }
+        .panel-content blockquote p { margin-bottom: 8px; }
+        .panel-content blockquote p:last-child { margin-bottom: 0; }
+        .panel-content blockquote cite {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #8B7355;
+            font-style: normal;
+        }
+
+        .panel-content strong { color: #6B5344; }
+        .panel-content em { color: #5a4a3a; }
+
+        .panel-content hr {
+            border: none;
+            border-top: 2px solid #e8e0d5;
+            margin: 25px 0;
+        }
+
+        .panel-content code {
+            background-color: #f5f0e8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #6B5344;
+        }
+
+        .info-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .info-table th, .info-table td { border: 1px solid #d4c4a8; padding: 12px; text-align: left; }
+        .info-table th { background-color: #f5f0e8; color: #6B5344; font-weight: bold; }
+        .info-table tr:nth-child(even) { background-color: #faf8f5; }
+
+        .sg-sub-accordion {
+            background-color: #f5f0e8;
+            color: #5a4a3a;
+            cursor: pointer;
+            padding: 14px 40px 14px 18px;
+            width: 100%;
+            text-align: left;
+            border: 1px solid #d4c4a8;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            margin-top: 10px;
+            position: relative;
+            transition: background-color 0.2s;
+        }
+
+        .sg-sub-accordion:hover {
+            background-color: #e8e0d4;
+        }
+
+        .sg-sub-accordion::after {
+            content: '\25BC';
+            font-size: 0.8em;
+            color: #8B7355;
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s;
+        }
+
+        .sg-sub-accordion.active::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .sg-sub-panel {
+            background-color: #fafafa;
+            border-radius: 0 0 6px 6px;
+            border: 1px solid #d4c4a8;
+            border-top: none;
+            display: none;
+            transition: max-height 0.3s ease-out;
+            margin-bottom: 10px;
+        }
+
+        .sg-sub-panel.active {
+            display: block;
+            overflow: visible;
+            transition: max-height 0.3s ease-in;
+        }
+
+        .sg-sub-panel-content {
+            padding: 20px 25px;
+        }
+
+        .sg-sub-panel-content h3 { color: #6B5344; margin-top: 20px; margin-bottom: 12px; font-size: 1.3em; }
+        .sg-sub-panel-content h4 { color: #5a4a3a; margin-top: 15px; margin-bottom: 10px; font-size: 1.15em; }
+        .sg-sub-panel-content p { margin-bottom: 12px; text-align: justify; }
+        .sg-sub-panel-content ul, .sg-sub-panel-content ol { margin-left: 25px; margin-bottom: 12px; }
+        .sg-sub-panel-content li { margin-bottom: 6px; }
+        .sg-sub-panel-content a { color: #8B7355; }
+        .sg-sub-panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .sg-sub-panel-content blockquote {
+            margin: 15px 0 15px 15px;
+            padding: 12px 18px;
+            border-left: 3px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 6px 6px 0;
+        }
+        .sg-sub-panel-content blockquote p { margin-bottom: 6px; }
+        .sg-sub-panel-content blockquote p:last-child { margin-bottom: 0; }
+        .sg-sub-panel-content strong { color: #6B5344; }
+        .sg-sub-panel-content hr { border: none; border-top: 1px solid #e8e0d5; margin: 20px 0; }
+
+        @media (max-width: 768px) {
+            .header-section h1 { font-size: 1.8em; }
+            .panel-content { padding: 20px; }
+            .sg-sub-panel-content { padding: 15px 18px; }
+        }
+
+        .sg-section-heading {
+            margin: 1.2em 0 0.6em 0;
+            padding: 0.4em 0 0.4em 0.8em;
+            border-left: 3px solid #8B9D77;
+            color: #5a6b4f;
+            font-size: 1.05em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+        }
+        .sg-section-actions {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 28px;
+        }
+        .sg-section-actions .sg-action-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.35);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            padding: 0;
+            line-height: 1;
+        }
+        .sg-section-actions .sg-action-btn:hover {
+            background: rgba(255,255,255,0.35);
+        }
+    </style>
+
+
+<div class="container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <p class="week-label">Week 14</p>
+            <h1>Week Overview</h1>
+            <div class="subtitle">Easter | "He Will Swallow Up Death in Victory"</div>
+            <div class="date-location">March 30 – April 5, 2026</div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/14?lang=eng" target="_blank" class="quick-link">CFM Manual</a>
+        </div>
+
+        <!-- Expand/Collapse Buttons -->
+        <div class="button-container">
+            <button class="expand-button" onclick="expandAll()"><span class="btn-icon">&#x229E;</span> Expand All</button>
+            <button class="expand-button" onclick="collapseAll()"><span class="btn-icon">&#x229F;</span> Collapse All</button>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 1: WEEK 14: WEEK OVERVIEW -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">1. Week 14: Week Overview</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Week Information</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Field</th><th>Details</th></tr>
+<tr><td><strong>Week Number</strong></td><td>14</td></tr>
+<tr><td><strong>Scripture Block</strong></td><td>Easter</td></tr>
+<tr><td><strong>Theme</strong></td><td>"He Will Swallow Up Death in Victory"</td></tr>
+<tr><td><strong>Dates</strong></td><td>March 30 – April 5, 2026</td></tr>
+<tr><td><strong>Key Restoration Text</strong></td><td><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng" target="_blank" data-ref="3 Nephi 11">3 Nephi 11–12</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Reading Summary</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>This Easter week we step outside the normal Old Testament sequence to focus on the central event of all scripture: the Resurrection of Jesus Christ. Rather than covering a single Old Testament chapter, we bring together the threads that converge at the empty tomb and at the temple in Bountiful.</p>
+<p><strong>Primary Easter Texts:</strong></p>
+<ul>
+<li><strong><a href="https://www.blueletterbible.org/kjv/isa/25/6-9/s_704006" target="_blank" data-ref="Isaiah 25:6-9">Isaiah 25:6-9</a></strong> — The prophetic promise: "He will swallow up death in victory"</li>
+<li><strong><a href="https://www.blueletterbible.org/kjv/luk/24/1/s_997001" target="_blank" data-ref="Luke 24">Luke 24</a> / <a href="https://www.blueletterbible.org/kjv/jhn/20/1/s_1017001" target="_blank" data-ref="John 20">John 20</a></strong> — The Gospel witness of the Resurrection</li>
+<li><strong><a href="https://www.blueletterbible.org/kjv/1co/15/20-23/s_1077020" target="_blank" data-ref="1 Corinthians 15:20-23">1 Corinthians 15:20-23</a></strong> — Paul's declaration: "Christ the firstfruits of them that slept"</li>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng" target="_blank" data-ref="3 Nephi 11">3 Nephi 11–12</a></strong> — The Nephite witness: the risen Lord descends, invites touch, and declares the law fulfilled</li>
+</ul>
+<p><strong>Supporting Context:</strong></p>
+<ul>
+<li><strong><a href="https://www.blueletterbible.org/kjv/exo/19/1/s_69001" target="_blank" data-ref="Exodus 19">Exodus 19–20</a></strong> — Sinai, where holiness meant distance</li>
+<li><strong><a href="https://www.blueletterbible.org/kjv/mat/5/1/s_934001" target="_blank" data-ref="Matthew 5">Matthew 5–7</a></strong> — The Sermon on the Mount, where the Lawgiver taught directly</li>
+<li>The movement from Sinai to Bountiful shows us what the Resurrection makes possible</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Central Themes</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Resurrection Makes Proximity Possible</h3>
+<p>At Sinai, holiness enforced distance. The people were commanded to stay back, and touch meant death. At Bountiful, the risen Christ reverses this pattern entirely: "Arise and come forth unto me, that ye may thrust your hands into my side, and also that ye may feel the prints of the nails in my hands and in my feet" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p14#p14" target="_blank" data-ref="3 Nephi 11:14">3 Nephi 11:14</a>).</p>
+<p>Easter is not merely the announcement that Christ survived death. It is the opening of covenant access. Because He is risen, we can draw near.</p>
+<h3>3 Nephi as Restoration Easter Text</h3>
+<p>Elder Gary E. Stevenson extended a beautiful invitation in April 2023: "My hope is that <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng" target="_blank" data-ref="3 Nephi 11">3 Nephi 11</a> might become for each of us an additional resource, like Luke chapter 2 at Christmastime—a treasured account for Easter Sunday morning."</p>
+<p><a href="https://www.blueletterbible.org/kjv/luk/2/1/s_975001" target="_blank" data-ref="Luke 2">Luke 2</a> tells us how Christ came into the world. <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng" target="_blank" data-ref="3 Nephi 11">3 Nephi 11</a> shows us what His Resurrection makes possible for the world. The Nephite account gives us something no Gospel account provides: 2,500 people, one by one, touching the wounds of the risen Lord and becoming personal witnesses of the Resurrection.</p>
+<h3>From "Stand Afar Off" to "Arise and Come Forth"</h3>
+<p>This study guide traces a pattern across three settings:</p>
+<ol>
+<li><strong>Sinai</strong> — God descends in fire and thunder; the people tremble and stand afar off; Moses alone ascends</li>
+<li><strong>Sermon on the Mount</strong> — Jesus ascends the mountain; the disciples come to Him; He teaches the law fulfilled</li>
+<li><strong>Bountiful</strong> — Christ descends from heaven in a white robe; He stands among the people; they come forward one by one to feel His wounds</li>
+</ol>
+<p>The pattern shows escalating proximity over 1,500 years, culminating in the invitation that only a resurrected body could extend.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Why Easter Matters</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Easter answers the oldest human fear. Death had seemed final since Eden. The curse announced in <a href="https://www.blueletterbible.org/kjv/gen/3/1/s_3001" target="_blank" data-ref="Genesis 3">Genesis 3</a> appeared irreversible. Every patriarch, every prophet, every loved one had gone into the ground and stayed there.</p>
+<p>And then, on a spring morning in Jerusalem, the tomb was empty.</p>
+<p>Isaiah's impossible promise—"He will swallow up death in victory"—became historical fact. The bands of death were broken. The resurrection of the body became not merely a doctrine but an accomplished reality.</p>
+<p>For Latter-day Saints, Easter also declares that covenants made in mortality endure beyond the grave. The ordinances of the temple, the sealing of families, the promises of eternal life—all rest on the reality of the Resurrection. If Christ is not risen, said Paul, our preaching is vain and our faith is vain (<a href="https://www.blueletterbible.org/kjv/1co/15/14/s_1077014" target="_blank" data-ref="1 Corinthians 15:14">1 Corinthians 15:14</a>). But Christ is risen, and therefore everything He taught and sealed holds.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Why 3 Nephi Belongs in Easter Observance</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The Gospels tell us that the risen Christ appeared to His disciples, showed them His wounds, and commissioned them as witnesses. But 3 Nephi gives us something more: a public, extended, liturgical encounter that culminates in covenant-making.</p>
+<p><strong>What makes <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng" target="_blank" data-ref="3 Nephi 11">3 Nephi 11–12</a> distinctive:</strong></p>
+<ul>
+<li><strong>Corporate witness</strong> — Not twelve disciples but 2,500 people, each one individually touching the wounds</li>
+<li><strong>Temple setting</strong> — The multitude gathers "round about the temple" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p1#p1" target="_blank" data-ref="3 Nephi 11:1">3 Nephi 11:1</a>); this is explicitly sacred space</li>
+<li><strong>Covenant establishment</strong> — Baptism is instituted immediately (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p21-p27#p21" target="_blank" data-ref="3 Nephi 11:21-27">3 Nephi 11:21-27</a>); the sacrament follows the next day</li>
+<li><strong>Fulfillment declared</strong> — Matthew anticipated fulfillment ("till all be fulfilled"); 3 Nephi announces it accomplished ("in me it hath all been fulfilled")</li>
+<li><strong>Corporate Hosanna</strong> — The multitude cries "Hosanna! Blessed be the name of the Most High God!" and falls down to worship</li>
+</ul>
+<p>If Christmas invites us to gather around the manger, Easter invites us to gather at the temple in Bountiful. There the Father introduces the Son, the risen Lord descends, and covenant Israel learns that holiness no longer drives the faithful away. Because Christ is risen, He can now say to all: "Arise, and come forth unto me."</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Thesis for the Week</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>The Resurrection is the hinge that makes covenant nearness possible.</strong></p>
+<p>At Sinai, the holiness of God enforced maximum distance. In the Sermon on the Mount, the distance began to close as the Lawgiver taught face to face. At Bountiful, the resurrected Christ completes the movement: He descends, stands among His covenant people, and invites every single person to come forward, touch His wounds, and know for themselves that He lives.</p>
+<p>Easter is not merely proof that Christ survived the grave. It is the inauguration of a new covenant reality: the holy God is now touchable, approachable, near. What Sinai could not allow, the Resurrection makes possible.</p>
+<p>This week, as we study the Easter story through both Old World and Restoration lenses, we are invited to enter that same movement—from fear to faith, from distance to approach, from hearing a report to becoming witnesses ourselves.</p>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 2: WEEK 14: HISTORICAL & CULTURAL CONTEXT -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">2. Week 14: Historical & Cultural Context</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>The Passover Setting of Jesus' Death and Resurrection</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Jesus died at Passover. This was not coincidence but covenant design.</p>
+<p>Passover (Hebrew: <a href="https://www.blueletterbible.org/lexicon/h6452/kjv/wlc/0-1/" target="_blank" data-lexicon="to pass over, spring over(Qal) to pass over(Piel) to skip, pass overto limp(Qal) to limp(Niphal) to be lame(Piel) to ..." data-strongs="H6452" data-translit="pāsaḥ" data-original="פָּסַח" data-lang="hebrew" data-verse="">פֶּסַח</a> / <em>Pesach</em>) commemorates the night when the destroying angel passed over the houses of Israel because of the blood of the lamb on their doorposts. The lambs were slaughtered on the 14th of Nisan; the blood protected; the people were delivered from bondage.</p>
+<p>Jesus was crucified on the day the Passover lambs were being slaughtered in the temple. Paul later makes the connection explicit: "For even Christ our passover is sacrificed for us" (<a href="https://www.blueletterbible.org/kjv/1co/5/7/s_1067007" target="_blank" data-ref="1 Corinthians 5:7">1 Corinthians 5:7</a>). The Lamb of God became the Lamb of Passover, and His blood delivered not from Egyptian bondage but from the bondage of sin and death.</p>
+<blockquote>
+<p><strong>For a fuller treatment of Passover, including the 15 steps of the Seder and their Christological significance, see the <a href="/culture/jewish/moedim/passover/" target="_blank">Passover page</a> on the CFM Corner site.</strong></p>
+</blockquote>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Holy Week in Brief</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The final week of Jesus' mortal life—from Triumphal Entry to Resurrection—is often called Holy Week. Its major events include:</p>
+<ul>
+<li><strong>Palm Sunday</strong> — Triumphal Entry into Jerusalem; crowds cry "Hosanna!"</li>
+<li><strong>Monday/Tuesday</strong> — Temple cleansing; teaching in the temple courts</li>
+<li><strong>Wednesday</strong> — Anointing at Bethany; Judas negotiates betrayal</li>
+<li><strong>Thursday</strong> — Last Supper; Gethsemane; arrest</li>
+<li><strong>Friday</strong> — Trials; crucifixion; burial before sunset</li>
+<li><strong>Saturday</strong> — The Sabbath rest; the body lies in the tomb</li>
+<li><strong>Sunday</strong> — Resurrection morning; the empty tomb discovered</li>
+</ul>
+<p>The Resurrection occurred during Passover week—specifically, on the day of בִּכּוּרִים / <em>Bikkurim</em> (Firstfruits), when Israel was commanded to bring the first sheaf of the barley harvest as an offering to the Lord (<a href="https://www.blueletterbible.org/kjv/lev/23/10-11/s_113010" target="_blank" data-ref="Leviticus 23:10-11">Leviticus 23:10-11</a>).</p>
+<h3>A Note on Chronology</h3>
+<p>The timeline above reflects the traditional Western church calendar. However, scholars have long noted tensions between the Synoptic Gospels (which describe the Last Supper as a Passover meal) and John's Gospel (which places the crucifixion on the day the lambs were slaughtered, before Passover evening).</p>
+<p>Some researchers propose an alternative chronology: a Wednesday crucifixion that allows for a literal "three days and three nights" in the tomb (<a href="https://www.blueletterbible.org/kjv/mat/12/40/s_941040" target="_blank" data-ref="Matthew 12:40">Matthew 12:40</a>) and harmonizes the accounts by suggesting Jesus followed an earlier calendar (possibly Essene) for His Passover meal. In this view, the trials and crucifixion stretched across Wednesday and Thursday, with the Resurrection still occurring on Sunday morning.</p>
+<p>The CFM Corner Holy Week pages explore both timelines. For this Easter study guide, what matters most is not resolving every calendrical question but recognizing the covenant design: Jesus died as the Passover Lamb and rose as the Firstfruits of resurrection.</p>
+<blockquote>
+<p><strong>For a day-by-day journey through Holy Week, see the <a href="/culture/holy-week/" target="_blank">Holy Week pages</a> on the CFM Corner site.</strong></p>
+</blockquote>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Matzot: The Feast of Unleavened Bread</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The Feast of Unleavened Bread (חַג הַמַּצּוֹת / <em>Chag HaMatzot</em>) began on 15 Nisan—the evening after the Passover lambs were slaughtered—and continued for seven days (<a href="https://www.blueletterbible.org/kjv/lev/23/6-8/s_113006" target="_blank" data-ref="Leviticus 23:6-8">Leviticus 23:6-8</a>). During this period, Israel was commanded to remove all leaven (<a href="https://www.blueletterbible.org/lexicon/h2558/kjv/wlc/0-1/" target="_blank" data-lexicon="vinegar" data-strongs="H2558" data-translit="ḥōmeṣ" data-original="חָמֵץ" data-lang="hebrew" data-verse="">חָמֵץ</a> / <em>chametz</em>) from their homes and eat only unleavened bread (<a href="https://www.blueletterbible.org/lexicon/h4680/kjv/wlc/0-1/" target="_blank" data-lexicon="to drain, drain out(Qal) to drain, drain out(Niphal) to be drained out" data-strongs="H4680" data-translit="māṣâ" data-original="מָצָה" data-lang="hebrew" data-verse="">מַצָּה</a> / <em>matzah</em>).</p>
+<p><strong>What the removal of leaven signified:</strong></p>
+<ul>
+<li><strong>Haste</strong> — The Israelites left Egypt so quickly their bread had no time to rise (<a href="https://www.blueletterbible.org/kjv/exo/12/39/s_62039" target="_blank" data-ref="Exodus 12:39">Exodus 12:39</a>)</li>
+<li><strong>Purity</strong> — Leaven, which causes fermentation and decay, symbolized corruption</li>
+<li><strong>Humility</strong> — Flat, simple bread represented a humble, unadorned heart before God</li>
+</ul>
+<p>The seven-day duration emphasized completeness: for an entire week, Israel lived without the "puffed up" quality of leavened bread.</p>
+<p><strong>The Christian connection:</strong></p>
+<p>Paul makes the symbolism explicit: "Purge out therefore the old leaven, that ye may be a new lump, as ye are unleavened. For even Christ our passover is sacrificed for us: Therefore let us keep the feast, not with old leaven, neither with the leaven of malice and wickedness; but with the unleavened bread of sincerity and truth" (<a href="https://www.blueletterbible.org/kjv/1co/5/7-8/s_1067007" target="_blank" data-ref="1 Corinthians 5:7-8">1 Corinthians 5:7-8</a>).</p>
+<p>The bread Jesus broke at the Last Supper was <a href="https://www.blueletterbible.org/lexicon/h4680/kjv/wlc/0-1/" target="_blank" data-lexicon="to drain, drain out(Qal) to drain, drain out(Niphal) to be drained out" data-strongs="H4680" data-translit="māṣâ" data-original="מָצָה" data-lang="hebrew" data-verse="">מַצָּה</a> (<em>matzah</em>)—unleavened bread. When He said, "This is my body," He held in His hands the bread of haste, humility, and sinlessness. The One who knew no sin became the bread of life for all who would partake.</p>
+<blockquote>
+<p><strong>For more on Matzot and its fulfillment in Christ, see the <a href="/culture/jewish/moedim/matzot/" target="_blank">Unleavened Bread page</a> on the CFM Corner site.</strong></p>
+</blockquote>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Bikkurim: Christ the Firstfruits</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The Feast of Firstfruits (בִּכּוּרִים / <em>Bikkurim</em>) was celebrated during Passover week, on the day after the Sabbath. The first sheaf of the spring barley harvest was waved before the Lord as a promise that the full harvest would follow.</p>
+<p>Paul seizes this imagery: "But now is Christ risen from the dead, and become the firstfruits of them that slept... Christ the firstfruits; afterward they that are Christ's at his coming" (<a href="https://www.blueletterbible.org/kjv/1co/15/20/s_1077020" target="_blank" data-ref="1 Corinthians 15:20">1 Corinthians 15:20, 23</a>).</p>
+<p>Christ rising on Firstfruits means His resurrection is not an isolated event but the inauguration of a harvest. He is the first sheaf; all who are in covenant with Him will follow. The resurrection of the body is not merely possible—it is promised, because the firstfruits have already been presented to the Father.</p>
+<blockquote>
+<p><strong>For more on Bikkurim and its fulfillment in Christ, see the <a href="/culture/jewish/moedim/bikkurim/" target="_blank">Firstfruits page</a> on the CFM Corner site.</strong></p>
+</blockquote>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Sinai Pattern: Holiness and Distance</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>To understand why the Bountiful scene is so striking, we must remember what happened at Sinai.</p>
+<p><strong><a href="https://www.blueletterbible.org/kjv/exo/19/1/s_69001" target="_blank" data-ref="Exodus 19">Exodus 19–20</a></strong> describes the giving of the law at Mount Sinai. The scene is overwhelming: thunder, lightning, thick cloud, the sound of a trumpet growing louder and louder, the whole mountain shaking and smoking because the Lord descended on it in fire.</p>
+<p><strong>The boundary law:</strong></p>
+<blockquote>
+<p>"Thou shalt set bounds unto the people round about, saying, Take heed to yourselves, that ye go not up into the mount, or touch the border of it: whosoever toucheth the mount shall be surely put to death." (<a href="https://www.blueletterbible.org/kjv/exo/19/12/s_69012" target="_blank" data-ref="Exodus 19:12">Exodus 19:12</a>)</p>
+</blockquote>
+<p><strong>The people's response:</strong></p>
+<blockquote>
+<p>"All the people saw the thunderings, and the lightnings, and the noise of the trumpet, and the mountain smoking: and when the people saw it, they removed, and stood afar off. And they said unto Moses, Speak thou with us, and we will hear: but let not God speak with us, lest we die." (<a href="https://www.blueletterbible.org/kjv/exo/20/18-19/s_70018" target="_blank" data-ref="Exodus 20:18-19">Exodus 20:18-19</a>)</p>
+</blockquote>
+<p>At Sinai, the holiness of God enforced maximum distance. Moses alone ascended into the thick darkness where God was; the whole nation stayed at the base of the mountain, trembling.</p>
+<p>This is the backdrop against which the Bountiful scene must be read. Everything that terrified Israel at Sinai is reversed at Bountiful.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Temple and Covenant Background</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The Nephite account places the Resurrection appearance explicitly at the temple: "There were a great multitude gathered together, of the people of Nephi, round about the temple which was in the land Bountiful" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p1#p1" target="_blank" data-ref="3 Nephi 11:1">3 Nephi 11:1</a>).</p>
+<p>This is not accidental. The temple is the place of covenant-making, the place where heaven and earth meet, the place where God's presence dwells among His people.</p>
+<p>John W. Welch has identified dozens of temple-related elements in the Sermon at the Temple—elements that double the already-significant temple patterns in the Sermon on the Mount. In his foundational study <em>The Sermon at the Temple and the Sermon on the Mount</em> (FARMS, 1990), Welch proposes between 25 and 47 temple-related elements, including covenant formulas, sacral gestures, and themes of divine presence. The temple setting at Bountiful signals that what follows is not merely moral teaching but covenant renewal and covenant-making.</p>
+<blockquote>
+<p><strong>For a detailed exploration of Welch's temple thesis, see Scripture Central's <a href="https://scripturecentral.org/knowhy/why-did-jesus-deliver-a-version-of-the-sermon-on-the-mount-at-the-temple-in-bountiful" target="_blank">KnoWhy 203: "Why Did Jesus Deliver a Version of the Sermon on the Mount at the Temple in Bountiful?"</a></strong></p>
+</blockquote>
+<p><strong>Temple themes at Bountiful:</strong></p>
+<ul>
+<li><strong>Preparation and purity</strong> — The <a href="https://www.blueletterbible.org/kjv/exo/19/10/s_69010" target="_blank" data-ref="Exodus 19:10">Exodus 19:10</a> command to wash and sanctify is fulfilled in the baptism Jesus immediately institutes (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p21-p27#p21" target="_blank" data-ref="3 Nephi 11:21-27">3 Nephi 11:21-27</a>)</li>
+<li><strong>Covenant entry</strong> — The multitude enters covenant through baptism and later partakes of the sacrament</li>
+<li><strong>Divine presence</strong> — The risen Lord stands among the people in the temple precincts</li>
+<li><strong>Fulfillment</strong> — "Old things are done away, and all things have become new" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/12?lang=eng&id=p47#p47" target="_blank" data-ref="3 Nephi 12:47">3 Nephi 12:47</a>)</li>
+</ul>
+<p>The archaeological record shows that <em>mikvaoth</em> (ritual immersion pools) lined the roads leading to the Jerusalem temple. Pilgrims purified themselves before entering sacred space. The Nephites already practiced baptism—Alma had baptized at the waters of Mormon generations earlier (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng" target="_blank" data-ref="Mosiah 18">Mosiah 18</a>). But at Bountiful, the risen Christ personally clarifies the ordinance, settles disputations about its proper form (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p28#p28" target="_blank" data-ref="3 Nephi 11:28">3 Nephi 11:28</a>), and directly authorizes Nephi and others to baptize in His name. The pattern of immersion before entering God's presence continues, now with the full authority of the resurrected Lord.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>What Changed Between Sinai and Bountiful</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Feature</th><th>Sinai (<a href="https://www.blueletterbible.org/kjv/exo/19/1/s_69001" target="_blank" data-ref="Exodus 19">Exodus 19–20</a>)</th><th>Bountiful (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng" target="_blank" data-ref="3 Nephi 11">3 Nephi 11–12</a>)</th></tr>
+<tr><td><strong>God's approach</strong></td><td>Descends in fire, smoke, thunder</td><td>Descends in white robe, stands among them</td></tr>
+<tr><td><strong>Setting</strong></td><td>Base of mountain; boundary enforced</td><td>Round about the temple</td></tr>
+<tr><td><strong>Touch</strong></td><td>Death for touching the mount</td><td>"Arise and come forth... feel the prints"</td></tr>
+<tr><td><strong>People's response</strong></td><td>Trembled; stood afar off</td><td>Fell down; rose; worshipped</td></tr>
+<tr><td><strong>Intermediary</strong></td><td>Moses alone ascends</td><td>Christ speaks directly; all approach</td></tr>
+<tr><td><strong>Corporate response</strong></td><td>"Let not God speak with us, lest we die"</td><td>"Hosanna! Blessed be the name of the Most High God!"</td></tr>
+</table>
+<p>The Resurrection made the reversal possible. The same God who could not be approached at Sinai now invites His covenant people to come forward, one by one, and become witnesses of His risen body.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Omer Count: Easter to Pentecost</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>From Bikkurim (Firstfruits) to Shavuot (Pentecost) is exactly fifty days—the <em>sefirat ha'omer</em>, or counting of the omer. During this seven-week period, Israel counted each day in anticipation of the festival of Shavuot, when the wheat harvest was presented and (by later tradition) the giving of the Torah at Sinai was commemorated.</p>
+<p>For the early church, this same period stretched from Easter Sunday (the Resurrection on Firstfruits) to Pentecost (when the Holy Spirit descended in <a href="https://www.blueletterbible.org/kjv/act/2/1/s_1020001" target="_blank" data-ref="Acts 2">Acts 2</a>). The giving of the law at Sinai and the giving of the Spirit at Pentecost both occurred on the same calendar date—Shavuot.</p>
+<p>This liturgical rhythm shapes the Christian calendar to this day: Easter is not an isolated event but the beginning of a fifty-day season culminating in the gift of the Spirit.</p>
+<p>At Bountiful, this same pattern unfolds. The risen Christ appears, teaches, establishes baptism, and—in <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/19?lang=eng" target="_blank" data-ref="3 Nephi 19">3 Nephi 19</a>—the Spirit is poured out in a scene that scholars have called a "Nephite Pentecost."</p>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 3: WEEK 14: KEY PASSAGES STUDY -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">3. Week 14: Key Passages Study</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Passage 1: Isaiah 25:6-9 — The Prophetic Promise</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<blockquote>
+<p>"And in this mountain shall the LORD of hosts make unto all people a feast of fat things, a feast of wines on the lees, of fat things full of marrow, of wines on the lees well refined. And he will destroy in this mountain the face of the covering cast over all people, and the vail that is spread over all nations. <strong>He will swallow up death in victory</strong>; and the Lord GOD will wipe away tears from off all faces... And it shall be said in that day, Lo, this is our God; we have waited for him, and he will save us: this is the LORD; we have waited for him, we will be glad and rejoice in his salvation."</p>
+</blockquote>
+<h3>Why This Passage Matters for Easter</h3>
+<p>Isaiah's prophecy does something extraordinary: it dares to imagine the defeat of death itself. The Hebrew for "swallow up" (<a href="https://www.blueletterbible.org/lexicon/h1104/kjv/wlc/0-1/" target="_blank" data-lexicon="to swallow down, swallow up, engulf, eat up" data-strongs="H1104" data-translit="bālaʿ" data-original="בָּלַע" data-lang="hebrew" data-verse="">בָּלַע</a> / <em>bala</em>) implies not merely a defeat but a complete consumption—death itself is devoured, absorbed, annihilated.</p>
+<p>Notice the cosmic scope: "all people," "all nations," "all faces." This is not a private resurrection for a select few. It is the unveiling of a victory that covers every human being who has ever wept at a grave.</p>
+<p>And at the center is a mountain. Isaiah envisions the final feast on "this mountain"—Zion, the temple mount, the place where heaven and earth meet. The Resurrection fulfills that vision: the God who dwells on the holy mountain has now swallowed death in victory, and the veil between mortality and immortality is torn.</p>
+<h3>LDS Connection</h3>
+<p>Paul quotes this passage directly in his great resurrection chapter: "Death is swallowed up in victory. O death, where is thy sting? O grave, where is thy victory?" (<a href="https://www.blueletterbible.org/kjv/1co/15/54-55/s_1077054" target="_blank" data-ref="1 Corinthians 15:54-55">1 Corinthians 15:54-55</a>). The prophecy written centuries before Christ becomes the anthem of Easter morning.</p>
+<p>For Latter-day Saints, the temple and resurrection themes converge: the veil between the living and the dead is thin, covenants bind across the grave, and the work of redemption extends to every generation.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 2: Exodus 19:10-13; 20:18-21 — The Pattern at Sinai</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Approach Before Resurrection</h3>
+<blockquote>
+<p>"And the LORD said unto Moses, Go unto the people, and sanctify them to day and to morrow, and let them wash their clothes... And thou shalt set bounds unto the people round about, saying, Take heed to yourselves, that ye go not up into the mount, or touch the border of it: whosoever toucheth the mount shall be surely put to death... There shall not an hand touch it." (19:10, 12-13)</p>
+</blockquote>
+<blockquote>
+<p>"And all the people saw the thunderings, and the lightnings, and the noise of the trumpet, and the mountain smoking: and when the people saw it, they removed, and stood afar off. And they said unto Moses, Speak thou with us, and we will hear: but let not God speak with us, lest we die." (20:18-19)</p>
+</blockquote>
+<h3>What Sinai Establishes</h3>
+<p>Sinai teaches the holiness of God. The divine presence is real, powerful, and dangerous. Unauthorized approach means death. Even the priests must sanctify themselves before drawing near. Moses alone enters the thick darkness where God dwells.</p>
+<p>The people's response is instructive: they tremble, they retreat, they beg Moses to speak for them because they cannot bear direct encounter with the Most High.</p>
+<p>This is the "before" picture. This is the baseline from which the Resurrection's reversal will be measured.</p>
+<h3>Why This Passage Matters for Easter</h3>
+<p>Without Sinai, we might miss what is happening at Bountiful. The risen Christ does not merely appear—He invites touch. The same God who said "touch the mountain and die" now says "arise and come forth unto me, that ye may feel the prints of the nails."</p>
+<p>The Resurrection reverses the terms of approach. What mortal holiness forbade, resurrected holiness invites. This is why Easter is not merely survival after death; it is the opening of covenant access.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 3: 3 Nephi 11:8-17 — The Descent and the Invitation</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Scene</h3>
+<blockquote>
+<p>"And it came to pass... they cast their eyes up again towards heaven; and behold, they saw a Man descending out of heaven; and he was clothed in a white robe; and he came down and stood in the midst of them." (11:8)</p>
+</blockquote>
+<h3>The Identification</h3>
+<blockquote>
+<p>"Behold, I am Jesus Christ, whom the prophets testified shall come into the world. And behold, I am the light and the life of the world; and I have drunk out of that bitter cup which the Father hath given me, and have glorified the Father in taking upon me the sins of the world." (11:10-11)</p>
+</blockquote>
+<h3>The Invitation</h3>
+<blockquote>
+<p>"Arise and come forth unto me, that ye may thrust your hands into my side, and also that ye may feel the prints of the nails in my hands and in my feet, that ye may know that I am the God of Israel, and the God of the whole earth, and have been slain for the sins of the world." (11:14)</p>
+</blockquote>
+<h3>The Response</h3>
+<blockquote>
+<p>"And it came to pass that the multitude went forth, and thrust their hands into his side, and did feel the prints of the nails in his hands and in his feet; and this they did do, going forth one by one until they had all gone forth, and did see with their eyes and did feel with their hands, and did know of a surety and did bear record." (11:15)</p>
+</blockquote>
+<blockquote>
+<p>"And when they had all gone forth and had witnessed for themselves, they did cry out with one accord, saying: Hosanna! Blessed be the name of the Most High God! And they did fall down at the feet of Jesus, and did worship him." (11:16-17)</p>
+</blockquote>
+<h3>Why This Passage Is the Heart of the Study Guide</h3>
+<p>This is Easter at Bountiful. Everything converges here.</p>
+<p><strong>The descent:</strong> Christ comes down from heaven in glory, but not in fire and thunder. He wears a white robe and stands <em>in the midst</em> of the people—not on a mountain above them.</p>
+<p><strong>The invitation:</strong> The language could not be more physical: "thrust your hands," "feel the prints." This is not a vision. This is not a spirit. This is a resurrected body, tangible and glorious.</p>
+<p><strong>The one-by-one witness:</strong> Not twelve disciples, but 2,500 people. Every single person becomes a firsthand witness of the Resurrection.</p>
+<p><strong>The corporate Hosanna:</strong> The fear and distance of Sinai gives way to corporate worship. The people do not flee; they cry "Hosanna!" and fall at His feet.</p>
+<p>Elder Gary E. Stevenson's invitation—to make <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng" target="_blank" data-ref="3 Nephi 11">3 Nephi 11</a> part of our Easter tradition—rests on these verses. This is the Nephite Easter story. This is what the Restoration adds to the world's witness of the risen Lord.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 4: John 20:24-29 — Thomas and the Touch</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>One Man's Witness</h3>
+<blockquote>
+<p>"The other disciples therefore said unto him, We have seen the Lord. But he said unto them, Except I shall see in his hands the print of the nails, and put my finger into the print of the nails, and thrust my hand into his side, I will not believe." (20:25)</p>
+</blockquote>
+<blockquote>
+<p>"Then saith he to Thomas, Reach hither thy finger, and behold my hands; and reach hither thy hand, and thrust it into my side: and be not faithless, but believing. And Thomas answered and said unto him, My Lord and my God." (20:27-28)</p>
+</blockquote>
+<h3>What Thomas Teaches Us</h3>
+<p>Thomas asked for what the Bountiful multitude received: physical verification of the Resurrection. Jesus did not rebuke the request. He extended His hands. He invited touch.</p>
+<p>The famous rebuke—"blessed are they that have not seen, and yet have believed"—is not a rejection of Thomas but a blessing on all who come after and must believe on testimony rather than firsthand witness.</p>
+<h3>The Bountiful Expansion</h3>
+<p>At Bountiful, the Thomas experience is multiplied 2,500-fold. Every person in that multitude became a Thomas—saw the hands, felt the prints, knew with certainty.</p>
+<p>This is why the Book of Mormon account is not redundant. The Gospels give us small groups of witnesses. 3 Nephi gives us a nation of witnesses. Both are true; both testify; together they constitute an overwhelming body of evidence that Jesus Christ rose from the dead.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 5: 3 Nephi 12:17-18 — "In Me It Hath All Been Fulfilled"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Fulfillment Declared</h3>
+<blockquote>
+<p>"Think not that I am come to destroy the law or the prophets. I am not come to destroy but to fulfil; for verily I say unto you, one jot nor one tittle hath not passed away from the law, but in me it hath all been fulfilled." (12:17-18)</p>
+</blockquote>
+<h3>Compare with Matthew 5:17-18</h3>
+<blockquote>
+<p>"Think not that I am come to destroy the law, or the prophets: I am not come to destroy, but to fulfil. For verily I say unto you, Till heaven and earth pass, one jot or one tittle shall in no wise pass from the law, till all be fulfilled."</p>
+</blockquote>
+<h3>Why the Tense Matters</h3>
+<p>In Matthew, Jesus speaks before His death and resurrection. Fulfillment is still future: "till all be fulfilled."</p>
+<p>In 3 Nephi, the risen Christ speaks after His atoning sacrifice and resurrection. Fulfillment is now accomplished: "in me it hath all been fulfilled."</p>
+<p>This single shift—from anticipation to completion—is the theological watershed of Easter. What was prophesied has happened. What was required has been accomplished. What was anticipated is now present.</p>
+<p>The old covenant is not destroyed but completed. The law of Moses pointed toward this moment; now that the moment has arrived, the law is fulfilled and a higher law can be declared. "Old things are done away, and all things have become new" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/12?lang=eng&id=p47#p47" target="_blank" data-ref="3 Nephi 12:47">3 Nephi 12:47</a>).</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 6: 1 Corinthians 15:20-23 — Christ the Firstfruits</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Paul's Declaration</h3>
+<blockquote>
+<p>"But now is Christ risen from the dead, and become the firstfruits of them that slept. For since by man came death, by man came also the resurrection of the dead. For as in Adam all die, even so in Christ shall all be made alive. But every man in his own order: Christ the firstfruits; afterward they that are Christ's at his coming."</p>
+</blockquote>
+<h3>The Firstfruits Imagery</h3>
+<p>בִּכּוּרִים (<em>Bikkurim</em>)—the Feast of Firstfruits—was celebrated during Passover week. The first sheaf of the barley harvest was waved before the Lord as a promise and a pledge: the full harvest will follow.</p>
+<p>Paul sees Jesus' resurrection in precisely these terms. Christ is the first sheaf. His rising is not an isolated miracle but the inauguration of a harvest. Because He rose, all who are in covenant with Him will rise.</p>
+<h3>Why This Passage Matters for Easter</h3>
+<p>Firstfruits answers the question: "What does the Resurrection mean for <em>me</em>?"</p>
+<p>It means that death is not final. It means that the grave is not the end. It means that the bonds that bind us to those we love are not severed forever.</p>
+<p>"Every man in his own order: Christ the firstfruits; afterward they that are Christ's at his coming." The resurrection is coming for all of us. The firstfruits have already been presented. The harvest is certain.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 7: Matthew 5:48 vs. 3 Nephi 12:48 — The Perfection Standard</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Matthew's Version</h3>
+<blockquote>
+<p>"Be ye therefore perfect, even as your Father which is in heaven is perfect."</p>
+</blockquote>
+<h3>3 Nephi's Version</h3>
+<blockquote>
+<p>"Therefore I would that ye should be perfect even as I, or your Father who is in heaven is perfect."</p>
+</blockquote>
+<h3>What the Addition Reveals</h3>
+<p>In the Sermon on the Mount, perfection is measured against the Father. This is appropriate: Jesus has not yet completed His mortal mission.</p>
+<p>In the Sermon at the Temple, perfection is measured against the risen Christ <em>and</em> the Father. "Even as I"—the Son now stands as a standard of perfection alongside the Father.</p>
+<p>Why? Because He has now passed through mortality, suffered all things, conquered death, and entered into His glory. His perfection is now demonstrated and completed. The mortal Jesus taught about perfection; the risen Christ embodies it.</p>
+<p>This small addition is a resurrection fingerprint on the text. It could only be spoken by one who had already risen.</p>
+<h3>Word Study: What "Perfect" Actually Means</h3>
+<p>The English word "perfect" often carries connotations of flawlessness, impossibility, and toxic perfectionism. But the biblical terms mean something quite different.</p>
+<p><strong>Greek:</strong> τέλειος (<em><a href="https://www.blueletterbible.org/lexicon/g5046/kjv/tr/0-1/" target="_blank" data-lexicon="brought to its end, finishedwanting nothing necessary to completenessperfectthat which is perfectconsummate human int..." data-strongs="G5046" data-translit="teleios" data-original="τέλειος" data-lang="greek" data-verse="">teleios</a></em>)</p>
+<p>The Greek word <em>teleios</em> comes from the root <a href="https://www.blueletterbible.org/lexicon/g5056/kjv/wlc/0-1/" target="_blank" data-lexicon="endtermination, the limit at which a thing ceases to be (always of the end of some act or state, but not of the end o..." data-strongs="G5056" data-translit="telos" data-original="τέλος" data-lang="greek" data-verse="">τέλος</a> (<em>telos</em>), meaning "end" or "goal." To be <em>teleios</em> is to have reached one's intended end—to be <strong>complete, mature, fully developed, having fulfilled one's purpose</strong>. It describes a fruit that has ripened, an animal that has reached full growth, a person who has matured into what they were meant to become.</p>
+<p><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h8549/kjv/wlc/0-1/" target="_blank" data-lexicon="complete, whole, entire, soundcomplete, whole, entirewhole, sound, healthfulcomplete, entire (of time)sound, wholesom..." data-strongs="H8549" data-translit="tāmîm" data-original="תָּמִים" data-lang="hebrew" data-verse="">תָּמִים</a> (<em><a href="https://www.blueletterbible.org/lexicon/h8549/kjv/wlc/0-1/" target="_blank" data-lexicon="complete, whole, entire, soundcomplete, whole, entirewhole, sound, healthfulcomplete, entire (of time)sound, wholesom..." data-strongs="H8549" data-translit="tāmîm" data-original="תָּמִים" data-lang="hebrew" data-verse="">tamim</a></em>)</p>
+<p>The Hebrew equivalent <em>tamim</em> means <strong>whole, complete, sound, without blemish</strong>. It describes sacrificial animals that are healthy and intact (<a href="https://www.blueletterbible.org/kjv/lev/1/3/s_91003" target="_blank" data-ref="Leviticus 1:3">Leviticus 1:3</a>), and it describes Noah, who "was a just man and perfect [<a href="https://www.blueletterbible.org/lexicon/h8549/kjv/wlc/0-1/" target="_blank" data-lexicon="complete, whole, entire, soundcomplete, whole, entirewhole, sound, healthfulcomplete, entire (of time)sound, wholesom..." data-strongs="H8549" data-translit="tāmîm" data-original="תָּמִים" data-lang="hebrew" data-verse="">תָּמִים</a>] in his generations" (<a href="https://www.blueletterbible.org/kjv/gen/6/9/s_6009" target="_blank" data-ref="Genesis 6:9">Genesis 6:9</a>)—not flawless, but wholehearted in his covenant faithfulness.</p>
+<p><strong>Christ's healing language confirms this:</strong></p>
+<p>When Jesus healed, He often used the language of wholeness:</p>
+<ul>
+<li>"Thy faith hath made thee <strong>whole</strong>" (<a href="https://www.blueletterbible.org/kjv/mat/9/22/s_938022" target="_blank" data-ref="Matthew 9:22">Matthew 9:22</a>; <a href="https://www.blueletterbible.org/kjv/mrk/5/34/s_962034" target="_blank" data-ref="Mark 5:34">Mark 5:34</a>; <a href="https://www.blueletterbible.org/kjv/luk/17/19/s_990019" target="_blank" data-ref="Luke 17:19">Luke 17:19</a>)</li>
+<li>"Wilt thou be made <strong>whole</strong>?" (<a href="https://www.blueletterbible.org/kjv/jhn/5/6/s_1002006" target="_blank" data-ref="John 5:6">John 5:6</a>)</li>
+<li>"Go in peace, and be <strong>whole</strong> of thy plague" (<a href="https://www.blueletterbible.org/kjv/mrk/5/34/s_962034" target="_blank" data-ref="Mark 5:34">Mark 5:34</a>)</li>
+</ul>
+<p>The Greek word in many of these accounts is <a href="https://www.blueletterbible.org/lexicon/g4982/kjv/tr/0-1/" target="_blank">σώζω</a> (<em><a href="https://www.blueletterbible.org/lexicon/g4982/kjv/tr/0-1/" target="_blank">sozo</a></em>) — the same word translated "save" elsewhere. To be healed is to be made whole; to be saved is to be made whole. Christ's ministry was one of restoration to completeness.</p>
+<p><strong>Latin:</strong> <em>perfectus</em> — from <em>perficere</em> (to complete, accomplish), combining <em>per-</em> (through, thoroughly) + <em>facere</em> (to make, to do). The Latin root preserves the original sense: something is <em>perfectus</em> when it has been thoroughly made—carried through to completion. <a href="https://logeion.uchicago.edu/perfectus" target="_blank">Logeion: perfectus</a></p>
+<p><strong>English Etymology:</strong> "Perfect" entered English via Old French <em>parfit</em> from Latin <em>perfectus</em>. The original meaning—"completed, finished, brought to full development"—dominated until the 16th century. The modern connotation of "flawless" or "without defect" represents a semantic narrowing that obscures the biblical sense. Webster's 1828 preserves the older meaning: "Finished; complete; consummate; not defective."</p>
+<h3>Cross-Language Connections: Perfect/Complete</h3>
+<table class="info-table">
+<tr><th>English</th><th>Hebrew</th><th>Greek</th><th>Latin</th><th>Etymology</th></tr>
+<tr><td>perfect, complete</td><td><a href="https://www.blueletterbible.org/lexicon/h8549/kjv/wlc/0-1/" target="_blank" data-lexicon="complete, whole, entire, soundcomplete, whole, entirewhole, sound, healthfulcomplete, entire (of time)sound, wholesom..." data-strongs="H8549" data-translit="tāmîm" data-original="תָּמִים" data-lang="hebrew" data-verse="">תָּמִים</a> (<em>tamim</em>)</td><td><a href="https://www.blueletterbible.org/lexicon/g5046/kjv/tr/0-1/" target="_blank">τέλειος</a> (<em><a href="https://www.blueletterbible.org/lexicon/g5046/kjv/tr/0-1/" target="_blank">teleios</a></em>)</td><td><a href="https://logeion.uchicago.edu/perfectus" target="_blank">perfectus</a></td><td>L. <em>per-</em> (through) + <em>facere</em> (to make)</td></tr>
+<tr><td>whole, saved</td><td><a href="https://www.blueletterbible.org/lexicon/h8004/kjv/wlc/0-1/" target="_blank" data-lexicon="Salem; peace, completeness" data-strongs="H8004" data-translit="Salem" data-original="שָׁלֵם" data-lang="hebrew" data-verse="Genesis 14:18">שָׁלֵם</a> (<em>shalem</em>)</td><td><a href="https://www.blueletterbible.org/lexicon/g4982/kjv/tr/0-1/" target="_blank">σώζω</a> (<em><a href="https://www.blueletterbible.org/lexicon/g4982/kjv/tr/0-1/" target="_blank">sozo</a></em>)</td><td><a href="https://logeion.uchicago.edu/salvus" target="_blank">salvus</a></td><td>L. <em>salvus</em> (safe, whole)</td></tr>
+<tr><td>end, goal, purpose</td><td><a href="https://www.blueletterbible.org/lexicon/h8503/kjv/wlc/0-1/" target="_blank" data-lexicon="end, perfection, consummation, completion, completenessendcompleteness" data-strongs="H8503" data-translit="taḵlîṯ" data-original="תַּכְלִית" data-lang="hebrew" data-verse="">תַּכְלִית</a> (<em>takhlit</em>)</td><td><a href="https://www.blueletterbible.org/lexicon/g5056/kjv/wlc/0-1/" target="_blank" data-lexicon="endtermination, the limit at which a thing ceases to be (always of the end of some act or state, but not of the end o..." data-strongs="G5056" data-translit="telos" data-original="τέλος" data-lang="greek" data-verse="">τέλος</a> (<em>telos</em>)</td><td><a href="https://logeion.uchicago.edu/finis" target="_blank">finis</a></td><td>reaching intended end</td></tr>
+</table>
+<p><strong>What this means for us:</strong></p>
+<p>"Be ye therefore perfect" is not a command to achieve impossible flawlessness. It is an invitation to become <strong>complete</strong>—to fulfill the measure of our creation, to mature into the fullness of what God intends us to be. The risen Christ can now stand as that standard because He has completed His mortal mission. He is τέλειος—He has reached His <em>telos</em>, His divine purpose.</p>
+<p>The command is not "never make a mistake." The command is "become whole in and through Him."</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Comparative Summary: The Three-Mountain Pattern</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Feature</th><th>Sinai (<a href="https://www.blueletterbible.org/kjv/exo/19/1/s_69001" target="_blank" data-ref="Exodus 19">Exodus 19–20</a>)</th><th>Sermon on the Mount (<a href="https://www.blueletterbible.org/kjv/mat/5/1/s_934001" target="_blank" data-ref="Matthew 5">Matt 5–7</a>)</th><th>Bountiful (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng" target="_blank" data-ref="3 Nephi 11">3 Nephi 11–12</a>)</th></tr>
+<tr><td><strong>Setting</strong></td><td>Base of burning mountain</td><td>Mountain in Galilee</td><td>Round about the temple</td></tr>
+<tr><td><strong>God's position</strong></td><td>Descended in fire; remained above</td><td>Ascended mountain; sat among disciples</td><td>Descended from heaven; stood in the midst</td></tr>
+<tr><td><strong>Touch</strong></td><td>Death for touching the mount</td><td>No command</td><td>"Come forth... feel the prints"</td></tr>
+<tr><td><strong>People's response</strong></td><td>Trembled; stood afar off</td><td>Astonished</td><td>Fell; arose; worshipped; cried Hosanna</td></tr>
+<tr><td><strong>Fulfillment</strong></td><td>Law given (awaiting fulfillment)</td><td>"Till all be fulfilled" (future)</td><td>"In me it hath all been fulfilled" (past)</td></tr>
+<tr><td><strong>Perfection standard</strong></td><td>—</td><td>"Your Father in heaven"</td><td>"Even as I, or your Father"</td></tr>
+<tr><td><strong>Covenant ordinance</strong></td><td>Follows later (<a href="https://www.blueletterbible.org/kjv/exo/24/1/s_74001" target="_blank" data-ref="Exodus 24">Ex 24</a>)</td><td>None recorded</td><td>Baptism established immediately</td></tr>
+</table>
+<p>The pattern is one of escalating proximity. At Sinai, holiness enforced distance. On the mount in Galilee, the Lawgiver taught directly. At Bountiful, the risen Lord descended, stood among His people, and invited them to touch His wounds.</p>
+<p>Easter is the hinge that makes this reversal possible.</p>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 4: WEEK 14: WORD STUDIES -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">4. Week 14: Word Studies</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Word Study 1: Ashrei (אַשְׁרֵי) — "Blessed"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Hebrew</h3>
+<p><a href="https://www.blueletterbible.org/lexicon/h843/kjv/wlc/0-1/" target="_blank" data-lexicon="Asherites = &quot;happy&quot;" data-strongs="H843" data-translit="āšērî" data-original="אָשֵׁרִי" data-lang="hebrew" data-verse="">אַשְׁרֵי</a> (<em><a href="https://www.blueletterbible.org/lexicon/h835/kjv/wlc/0-1/" target="_blank" data-lexicon="happiness, blessedness" data-strongs="H835" data-translit="'ešer" data-original="אֶשֶׁר" data-lang="hebrew" data-verse="">ashrei</a></em>)</p>
+<h3>Basic Meaning</h3>
+<p>An exclamation of covenant recognition: "How blessed!" or "O the blessedness of!" Unlike a passive state of contentment, <em>ashrei</em> recognizes someone who is actively walking (<a href="https://www.blueletterbible.org/lexicon/h3212/kjv/wlc/0-1/" target="_blank" data-lexicon="to go, walk, come (Qal) to go, walk, come, depart, proceed, move, go away to die, live, manner of life (fig.) (Hiphil..." data-strongs="H3212" data-translit="yālaḵ" data-original="הָלַךְ" data-lang="hebrew" data-verse="">הָלַךְ</a> / <em><a href="https://www.blueletterbible.org/lexicon/h3212/kjv/wlc/0-1/" target="_blank" data-lexicon="to go, walk, come (Qal) to go, walk, come, depart, proceed, move, go away to die, live, manner of life (fig.) (Hiphil..." data-strongs="H3212" data-translit="yālaḵ" data-original="הָלַךְ" data-lang="hebrew" data-verse="">halak</a></em>) in covenant fidelity with God.</p>
+<h3>Usage in Scripture</h3>
+<p><a href="https://www.blueletterbible.org/kjv/psa/1/1/s_479001" target="_blank" data-ref="Psalm 1">Psalm 1</a> opens with <em>ashrei</em>: "Blessed is the man that walketh not in the counsel of the ungodly." The word appears 44 times in the Hebrew Bible, most frequently in Psalms.</p>
+<p><a href="https://www.blueletterbible.org/kjv/psa/119/1/s_597001" target="_blank" data-ref="Psalm 119">Psalm 119</a> is unique: it opens with <em>ashrei</em> twice (verses 1 and 2) before any commandment is given. This doubled blessing is a literary marker—a double declaration of covenant blessedness at the start of the longest psalm.</p>
+<h3>Connection to the Beatitudes</h3>
+<p>The Greek μακάριοι (<em><a href="https://www.blueletterbible.org/lexicon/g3107/kjv/tr/0-1/" target="_blank" data-lexicon="blessed, happy" data-strongs="G3107" data-translit="makarios" data-original="μακάριος" data-lang="greek" data-verse="">makarioi</a></em>) , used in the Beatitudes, translates Hebrew <a href="https://www.blueletterbible.org/lexicon/h843/kjv/wlc/0-1/" target="_blank" data-lexicon="Asherites = &quot;happy&quot;" data-strongs="H843" data-translit="āšērî" data-original="אָשֵׁרִי" data-lang="hebrew" data-verse="">אַשְׁרֵי</a> (<em><a href="https://www.blueletterbible.org/lexicon/h835/kjv/wlc/0-1/" target="_blank" data-lexicon="happiness, blessedness" data-strongs="H835" data-translit="'ešer" data-original="אֶשֶׁר" data-lang="hebrew" data-verse="">ashrei</a></em>). "Blessed are the poor in spirit" is not passive; it is exclamatory recognition: "O the blessedness of those who are poor in spirit!"</p>
+<h3>The Bountiful Distinctive</h3>
+<p><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/12?lang=eng&id=p1-p2#p1" target="_blank" data-ref="3 Nephi 12:1-2">3 Nephi 12:1-2</a> opens with <em>two</em> "blessed are ye" statements before the formal Beatitudes begin in verse 3:</p>
+<ul>
+<li><strong>12:1</strong> — "Blessed are ye if ye shall give heed unto the words of these twelve..."</li>
+<li><strong>12:2</strong> — "And again, more blessed are they who shall believe in your words..."</li>
+<li><strong>12:3ff</strong> — "Yea, blessed are the poor in spirit who come unto me..."</li>
+</ul>
+<p>This doubled opening mirrors <a href="https://www.blueletterbible.org/kjv/psa/119/1/s_597001" target="_blank" data-ref="Psalm 119">Psalm 119</a>'s doubled <em>ashrei</em>—a pattern not present in <a href="https://www.blueletterbible.org/kjv/mat/5/1/s_934001" target="_blank" data-ref="Matthew 5">Matthew 5</a>.</p>
+<h3>Why This Matters for Easter</h3>
+<p>The Beatitudes at Bountiful are spoken by the risen Christ to a covenant people gathered at the temple. The double <em>ashrei</em> opening signals covenant recognition: the God of Israel is declaring blessing over those who have just touched His risen body and cried "Hosanna."</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Greek (LXX/NT)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g3107/kjv/tr/0-1/" target="_blank" data-lexicon="blessed, happy" data-strongs="G3107" data-translit="makarios" data-original="μακάριος" data-lang="greek" data-verse=""><em>makarios</em> (μακάριος)</a> — blessed, happy, fortunate in covenant standing</td><td><a href="https://www.blueletterbible.org/kjv/mat/5/3/s_934003" target="_blank" data-ref="Matthew 5:3">Matthew 5:3</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/beatus" target="_blank"><em>beatus</em></a> — blessed, happy, favored</td><td><a href="https://www.blueletterbible.org/kjv/mat/5/3/s_934003" target="_blank" data-ref="Matthew 5:3">Matthew 5:3</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/blessed" target="_blank">blessed</a> (<a href="https://webstersdictionary1828.com/Dictionary/blessed" target="_blank">1828</a>) · <a href="https://www.merriam-webster.com/dictionary/beatitude" target="_blank">beatitude</a> (<a href="https://webstersdictionary1828.com/Dictionary/beatitude" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/blessed" target="_blank">Etymonline: blessed</a></td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 2: Fulfill (πληρόω / <em>pleroo</em>) — "To Fill, Complete, Bring to Fullness"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Greek</h3>
+<p><a href="https://www.blueletterbible.org/lexicon/g4137/kjv/wlc/0-1/" target="_blank" data-lexicon="to make full, to fill up, i.e. to fill to the full to cause to abound, to furnish or supply liberally I abound, I am ..." data-strongs="G4137" data-translit="plēroō" data-original="πληρόω" data-lang="greek" data-verse="">πληρόω</a> (<em><a href="https://www.blueletterbible.org/lexicon/g4137/kjv/tr/0-1/" target="_blank" data-lexicon="to make full, to fill up, i.e. to fill to the full to cause to abound, to furnish or supply liberally I abound, I am ..." data-strongs="G4137" data-translit="plēroō" data-original="πληρόω" data-lang="greek" data-verse="">pleroo</a></em>)</p>
+<h3>Basic Meaning</h3>
+<p>To fill up, make full, complete, bring to completion. The word carries the sense of filling a container to the brim or bringing something to its intended end.</p>
+<h3>Usage in the Sermon on the Mount</h3>
+<p><a href="https://www.blueletterbible.org/kjv/mat/5/17-18/s_934017" target="_blank" data-ref="Matthew 5:17-18">Matthew 5:17-18</a>:</p>
+<blockquote>
+<p>"Think not that I am come to destroy the law, or the prophets: I am not come to destroy, but to <strong>fulfil</strong>. For verily I say unto you, Till heaven and earth pass, one jot or one tittle shall in no wise pass from the law, <strong>till all be fulfilled</strong>."</p>
+</blockquote>
+<p>The verb here is future-oriented. Fulfillment is coming but not yet accomplished.</p>
+<h3>The Bountiful Shift</h3>
+<p><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/12?lang=eng&id=p17-p18#p17" target="_blank" data-ref="3 Nephi 12:17-18">3 Nephi 12:17-18</a>:</p>
+<blockquote>
+<p>"Think not that I am come to destroy the law or the prophets. I am not come to destroy but to fulfil; for verily I say unto you, one jot nor one tittle hath not passed away from the law, but <strong>in me it hath all been fulfilled</strong>."</p>
+</blockquote>
+<p>The shift from "till all be fulfilled" (future) to "in me it hath all been fulfilled" (past) is the grammatical fingerprint of Easter. The risen Christ speaks from the far side of the cross and the empty tomb.</p>
+<h3>Why This Matters for Easter</h3>
+<p>The Resurrection is the fulfillment moment. What the law anticipated—a perfect sacrifice, the defeat of death, the sealing of the covenant—has now been accomplished. The law pointed toward this; the risen Lord declares it complete.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Greek (LXX/NT)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g4137/kjv/tr/0-1/" target="_blank" data-lexicon="to make full, to fill up, i.e. to fill to the full to cause to abound, to furnish or supply liberally I abound, I am ..." data-strongs="G4137" data-translit="plēroō" data-original="πληρόω" data-lang="greek" data-verse=""><em>pleroo</em> (πληρόω)</a> — to fill up, complete, bring to fullness</td><td><a href="https://www.blueletterbible.org/kjv/mat/5/17/s_934017" target="_blank" data-ref="Matthew 5:17">Matthew 5:17; 3</a> Nephi 12:17</td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/impleo" target="_blank"><em>impleo</em></a> / <a href="https://logeion.uchicago.edu/perficio" target="_blank"><em>perficio</em></a> — to fill, accomplish, bring to completion</td><td><a href="https://www.blueletterbible.org/kjv/mat/5/17/s_934017" target="_blank" data-ref="Matthew 5:17">Matthew 5:17</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/fulfill" target="_blank">fulfill</a> (<a href="https://webstersdictionary1828.com/Dictionary/fulfill" target="_blank">1828</a>) · <a href="https://www.merriam-webster.com/dictionary/complete" target="_blank">complete</a> (<a href="https://webstersdictionary1828.com/Dictionary/complete" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/fulfill" target="_blank">Etymonline: fulfill</a></td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 3: Hosanna (הוֹשִׁיעָה נָּא / ὡσαννά) — "Save Now!"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Hebrew and Greek</h3>
+<p>הוֹשִׁיעָה נָּא (<em><a href="https://www.blueletterbible.org/kjv/psa/118/25/s_596025/" target="_blank">hoshia na</a></em>) — "Save now!" or "Save, we pray!"</p>
+<p><a href="https://www.blueletterbible.org/lexicon/g5614/kjv/wlc/0-1/" target="_blank" data-lexicon="hosannabe propitious" data-strongs="G5614" data-translit="hōsanna" data-original="ὡσαννά" data-lang="greek" data-verse="">ὡσαννά</a> (<em><a href="https://www.blueletterbible.org/lexicon/g5614/kjv/tr/0-1/" target="_blank" data-lexicon="hosannabe propitious" data-strongs="G5614" data-translit="hōsanna" data-original="ὡσαννά" data-lang="greek" data-verse="">hosanna</a></em>) — Greek transliteration retained from Hebrew</p>
+<h3>Origin</h3>
+<p>The word comes from <a href="https://www.blueletterbible.org/kjv/psa/118/25/s_596025" target="_blank" data-ref="Psalm 118:25">Psalm 118:25</a>: "Save now, I beseech thee, O LORD: O LORD, I beseech thee, send now prosperity." The Hebrew literally means "save, please!" It is an urgent cry for deliverance.</p>
+<h3>Usage in Holy Week</h3>
+<p>The crowds cried "Hosanna!" at Jesus' Triumphal Entry into Jerusalem (<a href="https://www.blueletterbible.org/kjv/mat/21/9/s_950009" target="_blank" data-ref="Matthew 21:9">Matthew 21:9</a>). The word carried royal and messianic overtones—it was the cry of Israel welcoming their king.</p>
+<h3>Usage at Bountiful</h3>
+<p><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p17#p17" target="_blank" data-ref="3 Nephi 11:17">3 Nephi 11:17</a>:</p>
+<blockquote>
+<p>"And when they had all gone forth and had witnessed for themselves, they did cry out with one accord, saying: <strong>Hosanna! Blessed be the name of the Most High God!</strong> And they did fall down at the feet of Jesus, and did worship him."</p>
+</blockquote>
+<h3>Why This Matters for Easter</h3>
+<p>At Jerusalem, the crowds cried "Hosanna" to a mortal king entering the city. At Bountiful, the multitude cries "Hosanna" to the risen King who has already conquered death.</p>
+<p>The word is the same; the moment is transformed. What Jerusalem anticipated—salvation—Bountiful has now witnessed: the risen Lord stands among His people, and death itself has been swallowed up in victory.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Greek (LXX/NT)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g5614/kjv/tr/0-1/" target="_blank" data-lexicon="hosannabe propitious" data-strongs="G5614" data-translit="hōsanna" data-original="ὡσαννά" data-lang="greek" data-verse=""><em>hosanna</em> (ὡσαννά)</a> — hosanna, save now</td><td><a href="https://www.blueletterbible.org/kjv/mat/21/9/s_950009" target="_blank" data-ref="Matthew 21:9">Matthew 21:9; 3</a> Nephi 11:17</td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/hosanna" target="_blank"><em>hosanna</em></a> — liturgical transliteration preserved in Christian usage</td><td><a href="https://www.blueletterbible.org/kjv/mat/21/9/s_950009" target="_blank" data-ref="Matthew 21:9">Matthew 21:9</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/hosanna" target="_blank">hosanna</a> (<a href="https://webstersdictionary1828.com/Dictionary/hosanna" target="_blank">1828</a>) · <a href="https://www.merriam-webster.com/dictionary/salvation" target="_blank">salvation</a> (<a href="https://webstersdictionary1828.com/Dictionary/salvation" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/hosanna" target="_blank">Etymonline: hosanna</a></td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 4: Touch (ψηλαφάω / <em>pselaphao</em>) — "To Feel, Handle, Touch"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Greek</h3>
+<p>ψηλαφάω (<em><a href="https://www.blueletterbible.org/lexicon/g5584/kjv/tr/0-1/" target="_blank" data-lexicon="to handle, touch and feelmetaph. mentally to seek after tokens of a person or a thing" data-strongs="G5584" data-translit="psēlaphaō" data-original="ψηλαφάω" data-lang="greek" data-verse="">pselaphao</a></em>)</p>
+<h3>Basic Meaning</h3>
+<p>To handle, feel, touch—especially in the sense of verification through physical contact. The word implies careful examination, not just casual touch.</p>
+<h3>Usage in the Resurrection Accounts</h3>
+<p><a href="https://www.blueletterbible.org/kjv/luk/24/39/s_997039" target="_blank" data-ref="Luke 24:39">Luke 24:39</a>:</p>
+<blockquote>
+<p>"Behold my hands and my feet, that it is I myself: <strong>handle</strong> me, and see; for a spirit hath not flesh and bones, as ye see me have."</p>
+</blockquote>
+<p><a href="https://www.blueletterbible.org/kjv/jhn/20/27/s_1017027" target="_blank" data-ref="John 20:27">John 20:27</a>:</p>
+<blockquote>
+<p>"Then saith he to Thomas, Reach hither thy finger, and behold my hands; and reach hither thy hand, and <strong>thrust it</strong> into my side: and be not faithless, but believing."</p>
+</blockquote>
+<p><a href="https://www.blueletterbible.org/kjv/1jo/1/1/s_1160001" target="_blank" data-ref="1 John 1:1">1 John 1:1</a>:</p>
+<blockquote>
+<p>"That which was from the beginning, which we have heard, which we have seen with our eyes, which we have looked upon, and <strong>our hands have handled</strong>, of the Word of life."</p>
+</blockquote>
+<h3>The Sinai Contrast</h3>
+<p><a href="https://www.blueletterbible.org/kjv/exo/19/12-13/s_69012" target="_blank" data-ref="Exodus 19:12-13">Exodus 19:12-13</a>:</p>
+<blockquote>
+<p>"Thou shalt set bounds unto the people round about... whosoever <strong>toucheth</strong> the mount shall be surely <strong>put to death</strong>... There shall not an hand touch it."</p>
+</blockquote>
+<p>At Sinai, touch meant death. The holiness of God's presence was so intense that even accidental contact with the boundary would be fatal.</p>
+<h3>The Bountiful Invitation</h3>
+<p><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p14-p15#p14" target="_blank" data-ref="3 Nephi 11:14-15">3 Nephi 11:14-15</a>:</p>
+<blockquote>
+<p>"Arise and come forth unto me, that ye may <strong>thrust your hands</strong> into my side, and also that ye may <strong>feel the prints of the nails</strong> in my hands and in my feet... And it came to pass that the multitude went forth... and did <strong>feel</strong> with their hands, and did know of a surety."</p>
+</blockquote>
+<h3>Why This Matters for Easter</h3>
+<p>The Resurrection reverses the terms of touch. What Sinai forbade, Bountiful invites. The same God who could not be approached now extends His hands and invites every person to come forward and feel the evidence of His risen body.</p>
+<p>Touch becomes the proof of resurrection—and the proof that holiness no longer drives covenant Israel away. Because Christ is risen, we can draw near.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Greek (LXX/NT)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g5584/kjv/tr/0-1/" target="_blank" data-lexicon="to handle, touch and feelmetaph. mentally to seek after tokens of a person or a thing" data-strongs="G5584" data-translit="psēlaphaō" data-original="ψηλαφάω" data-lang="greek" data-verse=""><em>pselaphao</em> (ψηλαφάω)</a> — to feel, handle, examine by touch</td><td><a href="https://www.blueletterbible.org/kjv/luk/24/39/s_997039" target="_blank" data-ref="Luke 24:39">Luke 24:39; 1</a> <a href="https://www.blueletterbible.org/kjv/jhn/1/1/s_998001" target="_blank" data-ref="John 1:1">John 1:1</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/palpo" target="_blank"><em>palpo</em></a> / <a href="https://logeion.uchicago.edu/tango" target="_blank"><em>tango</em></a> — to stroke, feel, touch</td><td><a href="https://www.blueletterbible.org/kjv/luk/24/39/s_997039" target="_blank" data-ref="Luke 24:39">Luke 24:39</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/palpable" target="_blank">palpable</a> (<a href="https://webstersdictionary1828.com/Dictionary/palpable" target="_blank">1828</a>) · <a href="https://www.merriam-webster.com/dictionary/tangible" target="_blank">tangible</a> (<a href="https://webstersdictionary1828.com/Dictionary/tangible" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/tangible" target="_blank">Etymonline: tangible</a></td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 5: Firstfruits (ἀπαρχή / <em>aparche</em>; בִּכּוּרִים / <em>bikkurim</em>)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Greek</h3>
+<p>ἀπαρχή (<em><a href="https://www.blueletterbible.org/lexicon/g536/kjv/tr/0-1/" target="_blank" data-lexicon="to offer firstlings or firstfruits to take away the firstfruits of the productions of the earth which was offered to ..." data-strongs="G536" data-translit="aparchē" data-original="ἀπαρχή" data-lang="greek" data-verse="">aparche</a></em>)</p>
+<h3>Hebrew</h3>
+<p>בִּכּוּרִים (<em><a href="https://www.blueletterbible.org/kjv/lev/23/10/s_113010/" target="_blank">bikkurim</a></em>) — from the root <a href="https://www.blueletterbible.org/lexicon/h1069/kjv/wlc/0-1/" target="_blank" data-lexicon="to be born first" data-strongs="H1069" data-translit="bāḵar" data-original="בָּכַר" data-lang="hebrew" data-verse="">בָּכַר</a> (<em><a href="https://www.blueletterbible.org/lexicon/h1069/kjv/wlc/0-1/" target="_blank" data-lexicon="to be born first" data-strongs="H1069" data-translit="bāḵar" data-original="בָּכַר" data-lang="hebrew" data-verse="">bakar</a></em>), meaning "firstborn" or "first of a harvest"</p>
+<h3>Basic Meaning</h3>
+<p>The first portion of the harvest, set apart and offered to God as a pledge that the full harvest will follow.</p>
+<h3>Usage in Leviticus 23</h3>
+<p><a href="https://www.blueletterbible.org/kjv/lev/23/10-11/s_113010" target="_blank" data-ref="Leviticus 23:10-11">Leviticus 23:10-11</a> commands Israel to bring the first sheaf of the grain harvest to the priest, who waves it before the Lord "on the morrow after the sabbath"—during Passover week.</p>
+<h3>Paul's Application</h3>
+<p><a href="https://www.blueletterbible.org/kjv/1co/15/20/s_1077020" target="_blank" data-ref="1 Corinthians 15:20">1 Corinthians 15:20, 23</a>:</p>
+<blockquote>
+<p>"But now is Christ risen from the dead, and become the <strong>firstfruits</strong> of them that slept... Christ the firstfruits; afterward they that are Christ's at his coming."</p>
+</blockquote>
+<h3>Why This Matters for Easter</h3>
+<p>Christ rose on the day of Firstfruits. His resurrection is not an isolated miracle but the first sheaf of a coming harvest. Because He rose, all who are His will rise.</p>
+<p>The term assures us: the resurrection of the body is not merely possible—it is pledged. The firstfruits have already been presented to the Father. The full harvest is certain.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Greek (LXX/NT)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g536/kjv/tr/0-1/" target="_blank" data-lexicon="to offer firstlings or firstfruits to take away the firstfruits of the productions of the earth which was offered to ..." data-strongs="G536" data-translit="aparchē" data-original="ἀπαρχή" data-lang="greek" data-verse=""><em>aparche</em> (ἀπαρχή)</a> — firstfruits, first portion offered to God</td><td><a href="https://www.blueletterbible.org/kjv/1co/15/20/s_1077020" target="_blank" data-ref="1 Corinthians 15:20">1 Corinthians 15:20</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/primitiae" target="_blank"><em>primitiae</em></a> — firstfruits, first produce</td><td><a href="https://www.blueletterbible.org/kjv/1co/15/20/s_1077020" target="_blank" data-ref="1 Corinthians 15:20">1 Corinthians 15:20</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/firstfruits" target="_blank">firstfruits</a> (<a href="https://webstersdictionary1828.com/Dictionary/firstfruits" target="_blank">1828</a>) · <a href="https://www.merriam-webster.com/dictionary/prime" target="_blank">prime</a> (<a href="https://webstersdictionary1828.com/Dictionary/prime" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/prime" target="_blank">Etymonline: prime</a></td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Cross-Language Summary: Easter Terms</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>English</th><th>Hebrew</th><th>Greek</th><th>Latin</th><th>Significance</th></tr>
+<tr><td>Blessed</td><td><a href="https://www.blueletterbible.org/lexicon/h843/kjv/wlc/0-1/" target="_blank" data-lexicon="Asherites = &quot;happy&quot;" data-strongs="H843" data-translit="āšērî" data-original="אָשֵׁרִי" data-lang="hebrew" data-verse="">אַשְׁרֵי</a> (<em><a href="https://www.blueletterbible.org/lexicon/h835/kjv/wlc/0-1/" target="_blank" data-lexicon="happiness, blessedness" data-strongs="H835" data-translit="'ešer" data-original="אֶשֶׁר" data-lang="hebrew" data-verse="">ashrei</a></em>)</td><td>μακάριοι (<em><a href="https://www.blueletterbible.org/lexicon/g3107/kjv/tr/0-1/" target="_blank" data-lexicon="blessed, happy" data-strongs="G3107" data-translit="makarios" data-original="μακάριος" data-lang="greek" data-verse="">makarioi</a></em>)</td><td><a href="https://logeion.uchicago.edu/beatus" target="_blank">beatus</a></td><td>Covenant recognition; doubled at Bountiful</td></tr>
+<tr><td>Fulfill</td><td><a href="https://www.blueletterbible.org/lexicon/h3229/kjv/wlc/0-1/" target="_blank" data-lexicon="Imlah or Imla = &quot;whom God will fill up&quot;father of Michaiah the prophet" data-strongs="H3229" data-translit="yimlā&#x27;" data-original="מָלָא" data-lang="hebrew" data-verse="">מָלֵא</a> (<em><a href="https://www.blueletterbible.org/lexicon/h4390/kjv/wlc/0-1/" target="_blank" data-lexicon="to fill, be full (Qal) to be full fulness, abundance (participle) to be full, be accomplished, be ended to consecrate..." data-strongs="H4390" data-translit="mālā'" data-original="מַכְתֵּשׁ" data-lang="hebrew" data-verse="">male</a></em>)</td><td><a href="https://www.blueletterbible.org/lexicon/g4137/kjv/wlc/0-1/" target="_blank" data-lexicon="to make full, to fill up, i.e. to fill to the full to cause to abound, to furnish or supply liberally I abound, I am ..." data-strongs="G4137" data-translit="plēroō" data-original="πληρόω" data-lang="greek" data-verse="">πληρόω</a> (<em><a href="https://www.blueletterbible.org/lexicon/g4137/kjv/tr/0-1/" target="_blank" data-lexicon="to make full, to fill up, i.e. to fill to the full to cause to abound, to furnish or supply liberally I abound, I am ..." data-strongs="G4137" data-translit="plēroō" data-original="πληρόω" data-lang="greek" data-verse="">pleroo</a></em>)</td><td><a href="https://logeion.uchicago.edu/impleo" target="_blank">implere</a>, <a href="https://logeion.uchicago.edu/perficio" target="_blank">perficere</a></td><td>Shifts from future to past at Bountiful</td></tr>
+<tr><td>Hosanna</td><td>הוֹשִׁיעָה נָּא (<em><a href="https://www.blueletterbible.org/kjv/psa/118/25/s_596025/" target="_blank">hoshia na</a></em>)</td><td><a href="https://www.blueletterbible.org/lexicon/g5614/kjv/wlc/0-1/" target="_blank" data-lexicon="hosannabe propitious" data-strongs="G5614" data-translit="hōsanna" data-original="ὡσαννά" data-lang="greek" data-verse="">ὡσαννά</a> (<em><a href="https://www.blueletterbible.org/lexicon/g5614/kjv/tr/0-1/" target="_blank" data-lexicon="hosannabe propitious" data-strongs="G5614" data-translit="hōsanna" data-original="ὡσαννά" data-lang="greek" data-verse="">hosanna</a></em>)</td><td>— (transliterated)</td><td>Salvation cry; corporate worship at Bountiful</td></tr>
+<tr><td>Touch/Handle</td><td><a href="https://www.blueletterbible.org/lexicon/h5060/kjv/wlc/0-1/" target="_blank" data-lexicon="to touch, reach, strike(Qal)to touchto striketo reach, extend toto be strickenstricken (participle)(Niphal) to be str..." data-strongs="H5060" data-translit="nāḡaʿ" data-original="נָגַע" data-lang="hebrew" data-verse="">נָגַע</a> (<em><a href="https://www.blueletterbible.org/lexicon/h5060/kjv/wlc/0-1/" target="_blank" data-lexicon="to touch, reach, strike(Qal)to touchto striketo reach, extend toto be strickenstricken (participle)(Niphal) to be str..." data-strongs="H5060" data-translit="nāḡaʿ" data-original="נָגַע" data-lang="hebrew" data-verse="">naga</a></em>)</td><td>ψηλαφάω (<em><a href="https://www.blueletterbible.org/lexicon/g5584/kjv/tr/0-1/" target="_blank" data-lexicon="to handle, touch and feelmetaph. mentally to seek after tokens of a person or a thing" data-strongs="G5584" data-translit="psēlaphaō" data-original="ψηλαφάω" data-lang="greek" data-verse="">pselaphao</a></em>)</td><td><a href="https://logeion.uchicago.edu/tango" target="_blank">tangere</a>, <a href="https://logeion.uchicago.edu/palpo" target="_blank">palpare</a></td><td>Death at Sinai; life at Bountiful</td></tr>
+<tr><td>Firstfruits</td><td>בִּכּוּרִים (<em><a href="https://www.blueletterbible.org/kjv/lev/23/10/s_113010/" target="_blank">bikkurim</a></em>)</td><td>ἀπαρχή (<em><a href="https://www.blueletterbible.org/lexicon/g536/kjv/tr/0-1/" target="_blank" data-lexicon="to offer firstlings or firstfruits to take away the firstfruits of the productions of the earth which was offered to ..." data-strongs="G536" data-translit="aparchē" data-original="ἀπαρχή" data-lang="greek" data-verse="">aparche</a></em>)</td><td><a href="https://logeion.uchicago.edu/primitiae" target="_blank">primitiae</a></td><td>Christ as harvest inauguration</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 5: WEEK 14: JEWISH PERSPECTIVE -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">5. Week 14: Jewish Perspective</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Introduction</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The Resurrection of Jesus Christ occurred within the liturgical calendar of ancient Israel. The timing was not accidental. To understand Easter fully, we benefit from knowing the Jewish festivals that frame the Passion Week—and the patterns God has woven through Israel's worship across millennia.</p>
+<p>This section offers that background carefully and proportionately, recognizing that Easter is about the Resurrection itself. The Jewish festivals provide context, not competition, for the central Christian claim: Christ is risen.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passover (Pesach): The Setting of Christ's Death</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Jesus was crucified during Passover week. The Gospel of John explicitly notes that Jesus died at the hour when the Passover lambs were being slaughtered in the temple (<a href="https://www.blueletterbible.org/kjv/jhn/19/14/s_1016014" target="_blank" data-ref="John 19:14">John 19:14, 31</a>).</p>
+<p><strong>What Passover commemorates:</strong></p>
+<ul>
+<li>The final plague in Egypt, when the destroying angel passed over the houses marked with lamb's blood (<a href="https://www.blueletterbible.org/kjv/exo/12/1/s_62001" target="_blank" data-ref="Exodus 12">Exodus 12</a>)</li>
+<li>Israel's deliverance from bondage</li>
+<li>The birth of Israel as a covenant nation</li>
+</ul>
+<p><strong>The Christian connection:</strong></p>
+<ul>
+<li>Paul: "Christ our passover is sacrificed for us" (<a href="https://www.blueletterbible.org/kjv/1co/5/7/s_1067007" target="_blank" data-ref="1 Corinthians 5:7">1 Corinthians 5:7</a>)</li>
+<li>John the Baptist: "Behold the Lamb of God, which taketh away the sin of the world" (<a href="https://www.blueletterbible.org/kjv/jhn/1/29/s_998029" target="_blank" data-ref="John 1:29">John 1:29</a>)</li>
+<li>The lamb's blood on the doorposts prefigures the blood of Christ that delivers from spiritual death</li>
+</ul>
+<p>Passover was not merely backdrop; it was prophetic enactment. For centuries, Israel had rehearsed the deliverance that would find its fulfillment when the true Lamb was slain.</p>
+<h3>LDS Connection</h3>
+<p>Latter-day scripture makes the typology explicit. The sacrament prayers ask that we "always remember him" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/4?lang=eng&id=p3#p3" target="_blank" data-ref="Moroni 4:3">Moroni 4:3; 5:2</a>)—language echoing the Passover command to remember the deliverance from Egypt (<a href="https://www.blueletterbible.org/kjv/exo/13/3/s_63003" target="_blank" data-ref="Exodus 13:3">Exodus 13:3</a>). The covenant meal at the Lord's Supper fulfills and transcends the covenant meal of Pesach.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Firstfruits (Bikkurim): The Setting of Christ's Resurrection</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Within Passover week, Israel observed the Feast of Firstfruits (בִּכּוּרִים / <em>Bikkurim</em>). On "the morrow after the sabbath" (<a href="https://www.blueletterbible.org/kjv/lev/23/11/s_113011" target="_blank" data-ref="Leviticus 23:11">Leviticus 23:11</a>), the priest waved the first sheaf of the barley harvest before the Lord.</p>
+<p><strong>What Firstfruits signified:</strong></p>
+<ul>
+<li>Gratitude for the harvest God was providing</li>
+<li>A pledge that the full harvest would follow</li>
+<li>Dedication of the first and best to the Lord</li>
+</ul>
+<p><strong>The Christian connection:</strong></p>
+<ul>
+<li>Paul: "But now is Christ risen from the dead, and become the firstfruits of them that slept" (<a href="https://www.blueletterbible.org/kjv/1co/15/20/s_1077020" target="_blank" data-ref="1 Corinthians 15:20">1 Corinthians 15:20</a>)</li>
+<li>Christ rose on the day of Firstfruits—not merely at Passover, but precisely on the festival that symbolized the first sheaf of a coming harvest</li>
+</ul>
+<p>The timing declares resurrection's meaning: Christ is not the only one who will rise. He is the first of many. The full harvest is coming.</p>
+<h3>LDS Connection</h3>
+<p>The resurrection of Jesus Christ guarantees universal resurrection: "As in Adam all die, even so in Christ shall all be made alive" (<a href="https://www.blueletterbible.org/kjv/1co/15/22/s_1077022" target="_blank" data-ref="1 Corinthians 15:22">1 Corinthians 15:22</a>). For Latter-day Saints, this includes the redemption of the dead through vicarious ordinances. The work of the temple is built on the foundation of Christ's firstfruits resurrection.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Omer Count: From Firstfruits to Shavuot</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Beginning on the day of Firstfruits, Israel counted forty-nine days—seven weeks—until the festival of Shavuot (Pentecost). This is called סְפִירַת הָעֹמֶר (<em>sefirat ha'omer</em>), the counting of the omer.</p>
+<p><strong>What the omer count signified:</strong></p>
+<ul>
+<li>A period of anticipation between the barley harvest (Passover) and the wheat harvest (Shavuot)</li>
+<li>According to rabbinic tradition, a time of preparation for receiving the Torah, which was given at Sinai on Shavuot (Talmud Bavli, Shabbat 86b)</li>
+<li>A protected season under God's watchfulness (Leviticus Rabbah 28)</li>
+</ul>
+<p><strong>The Christian parallel:</strong></p>
+<ul>
+<li>From Easter Sunday to Pentecost is exactly fifty days</li>
+<li>The early church experienced this period as Jesus had instructed: "Tarry ye in the city of Jerusalem, until ye be endued with power from on high" (<a href="https://www.blueletterbible.org/kjv/luk/24/49/s_997049" target="_blank" data-ref="Luke 24:49">Luke 24:49</a>)</li>
+<li>On Pentecost (Shavuot), the Holy Spirit descended on the assembled disciples (<a href="https://www.blueletterbible.org/kjv/act/2/1/s_1020001" target="_blank" data-ref="Acts 2">Acts 2</a>)</li>
+</ul>
+<h3>LDS Connection</h3>
+<p>The pattern of Passover → Firstfruits → Shavuot mirrors the pattern of Atonement → Resurrection → Gift of the Holy Ghost. The Restoration teaches that the Holy Ghost is a gift received after faith, repentance, baptism, and confirmation—a spiritual Pentecost following a spiritual Passover.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Shavuot (Pentecost): Torah and Spirit</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Shavuot means "weeks"—it marks the completion of seven weeks from Firstfruits. In Greek, the festival is called Πεντηκοστή (<em>Pentecost</em>), meaning "fiftieth day."</p>
+<p><strong>What Shavuot commemorates:</strong></p>
+<ul>
+<li>The wheat harvest; pilgrims brought loaves of new grain to the temple</li>
+<li>By later Jewish tradition, the giving of the Torah at Mount Sinai (<a href="https://www.blueletterbible.org/kjv/exo/19/1/s_69001" target="_blank" data-ref="Exodus 19:1">Exodus 19:1</a> places Israel at Sinai "in the third month")</li>
+</ul>
+<p><strong>The Christian connection:</strong></p>
+<ul>
+<li>On the day of Pentecost, the Holy Spirit descended on the disciples with the sound of a rushing wind and tongues of fire (<a href="https://www.blueletterbible.org/kjv/act/2/1/s_1020001" target="_blank" data-ref="Acts 2">Acts 2</a>)</li>
+<li>The giving of the Spirit at Pentecost parallels the giving of the Torah at Sinai—same calendar date, same revelatory pattern</li>
+<li>What was written on stone at Sinai is now written on hearts by the Spirit (<a href="https://www.blueletterbible.org/kjv/jer/31/33/s_776033" target="_blank" data-ref="Jeremiah 31:33">Jeremiah 31:33; 2</a> Corinthians 3:3)</li>
+</ul>
+<h3>A Pattern, Not a Claim</h3>
+<p>It is important to note: we are not claiming that the Nephites at Bountiful were consciously observing Shavuot. The Book of Mormon does not say this, and we should not overstate the case.</p>
+<p>What we <em>can</em> observe is a recurring divine pattern: God repeatedly joins revelation, covenant, and Spirit on this liturgical framework. Sinai. Pentecost. Bountiful. The pattern is His, whether or not every participant understood the full calendar significance.</p>
+<h3>LDS Connection</h3>
+<p>In <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/19?lang=eng" target="_blank" data-ref="3 Nephi 19">3 Nephi 19</a>, the twelve Nephite disciples pray, fire encircles them, and the Holy Ghost falls upon the multitude. Krister Stendahl, a New Testament scholar, called this a "Nephite Pentecost"—a scene that echoes both the upper room in <a href="https://www.blueletterbible.org/kjv/act/2/1/s_1020001" target="_blank" data-ref="Acts 2">Acts 2</a> and the high-priestly prayer of Jesus in <a href="https://www.blueletterbible.org/kjv/jhn/17/1/s_1014001" target="_blank" data-ref="John 17">John 17</a>.</p>
+<p>The Restoration continues this pattern: the gift of the Holy Ghost is given by the laying on of hands following baptism, and the Spirit's outpouring at key moments (the Kirtland Temple dedication, for example) echoes Pentecost.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Voice at Sinai and the Voice at Bountiful</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Jewish tradition preserves a rich discussion about how God's voice was perceived at Sinai.</p>
+<p><strong>Rabbinic observations on Sinai:</strong></p>
+<ul>
+<li>The voice was so powerful that the people could not bear it (<a href="https://www.blueletterbible.org/kjv/exo/20/19/s_70019" target="_blank" data-ref="Exodus 20:19">Exodus 20:19</a>)</li>
+<li>Midrash suggests the voice divided into seventy languages to reach all nations (Shemot Rabbah 28:6)</li>
+<li>The people retreated in fear; only Moses ascended</li>
+</ul>
+<p><strong>The Bountiful contrast:</strong></p>
+<ul>
+<li>The voice at Bountiful was "not a harsh voice, neither was it a loud voice; nevertheless... it did pierce them to the center" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p3#p3" target="_blank" data-ref="3 Nephi 11:3">3 Nephi 11:3</a>)</li>
+<li>The multitude did not understand the first time, nor the second, but "the third time they did understand the voice" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p5-p6#p5" target="_blank" data-ref="3 Nephi 11:5-6">3 Nephi 11:5-6</a>)</li>
+<li>Rather than retreating, they opened their ears and "cast their eyes up again towards heaven"</li>
+</ul>
+<h3>LDS Connection</h3>
+<p>The still small voice is a recurring motif in Restoration scripture. Elijah found God not in the wind, earthquake, or fire, but in "a still small voice" (<a href="https://www.blueletterbible.org/kjv/1ki/19/12/s_310012" target="_blank" data-ref="1 Kings 19:12">1 Kings 19:12</a>). The risen Christ speaks through the Spirit in ways that pierce rather than overwhelm—a gentle but transformative power that invites approach rather than driving away.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Summary: The Jewish Festivals as Covenant Framework</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Festival</th><th>Timing</th><th>Agricultural Meaning</th><th>Theological Meaning</th><th>Christian Fulfillment</th></tr>
+<tr><td><strong>Passover</strong> (Pesach)</td><td>14-21 Nisan</td><td>Spring lambing; deliverance</td><td>Israel's redemption from Egypt</td><td>Christ the Passover Lamb</td></tr>
+<tr><td><strong>Firstfruits</strong> (Bikkurim)</td><td>Day after Sabbath of Passover week</td><td>First barley sheaf</td><td>Dedication of harvest</td><td>Christ the firstfruits of resurrection</td></tr>
+<tr><td><strong>Shavuot</strong> (Pentecost)</td><td>50 days after Firstfruits</td><td>Wheat harvest</td><td>Giving of Torah at Sinai</td><td>Gift of the Holy Spirit</td></tr>
+</table>
+<p>Easter sits at the center of this liturgical architecture. Christ died as the Passover Lamb, rose as the Firstfruits of resurrection, and sent the Spirit at Pentecost. The festivals Israel kept for centuries were the rehearsal; the Resurrection is the fulfillment.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Sources</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Source</th><th>Citation</th><th>Notes</th></tr>
+<tr><td>Leviticus Rabbah 28</td><td>Midrash Rabbah, Vayikra</td><td>Omer period as protected season</td></tr>
+<tr><td>Shemot Rabbah 28:6</td><td>Midrash Rabbah, Shemot</td><td>Voice at Sinai divided into 70 languages</td></tr>
+<tr><td>Talmud Bavli, Shabbat 86b</td><td>Babylonian Talmud</td><td>Torah given at Sinai on Shavuot</td></tr>
+<tr><td>Stendahl, "The Sermon on the Mount and Third Nephi"</td><td>BYU RSC, <em>Reflections on Mormonism</em>, 1978</td><td><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/19?lang=eng" target="_blank" data-ref="3 Nephi 19">3 Nephi 19</a> as Pentecost scene</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 6: WEEK 14: TEACHING APPLICATIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">6. Week 14: Teaching Applications</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>A Richer Easter</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Easter can be celebrated with the same depth and intentionality we bring to Christmas. Elder Gary E. Stevenson's invitation provides the starting point: let <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng" target="_blank" data-ref="3 Nephi 11">3 Nephi 11</a> become part of our Easter tradition the way <a href="https://www.blueletterbible.org/kjv/luk/2/1/s_975001" target="_blank" data-ref="Luke 2">Luke 2</a> has become part of our Christmas tradition.</p>
+<p>This section offers practical ways to bring that invitation to life—in families, classrooms, and personal worship.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>For Families: A Holy Week Journey</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Elder Gary E. Stevenson invited us to make <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng" target="_blank" data-ref="3 Nephi 11">3 Nephi 11</a> as central to our Easter as <a href="https://www.blueletterbible.org/kjv/luk/2/1/s_975001" target="_blank" data-ref="Luke 2">Luke 2</a> is to Christmas. But Easter is not just a single day—it is the culmination of a sacred week. Consider walking through Holy Week as a family, day by day, following the Savior's final week from triumph to tomb to resurrection.</p>
+<h3>Holy Week Family Study</h3>
+<table class="info-table">
+<tr><th>Day</th><th>Event</th><th>Scripture</th><th>Video</th><th>Discussion</th></tr>
+<tr><td><strong>Palm Sunday</strong></td><td>Triumphal Entry</td><td><a href="https://www.blueletterbible.org/kjv/mat/21/1-11/s_950001" target="_blank" data-ref="Matthew 21:1-11">Matthew 21:1-11</a></td><td><a href="https://www.churchofjesuschrist.org/media/video/2011-10-014-triumphal-entry-into-jerusalem" target="_blank">Triumphal Entry</a></td><td>Why did the crowds cry "Hosanna"? What were they expecting?</td></tr>
+<tr><td><strong>Monday</strong></td><td>Cleansing the Temple</td><td><a href="https://www.blueletterbible.org/kjv/mat/21/12-17/s_950012" target="_blank" data-ref="Matthew 21:12-17">Matthew 21:12-17</a></td><td><a href="https://www.churchofjesuschrist.org/media/video/2011-10-015-jesus-cleanses-the-temple" target="_blank">Jesus Cleanses the Temple</a></td><td>Why was Jesus so concerned about His Father's house?</td></tr>
+<tr><td><strong>Tuesday</strong></td><td>Teaching at the Temple</td><td><a href="https://www.blueletterbible.org/kjv/mat/22/15-22/s_951015" target="_blank" data-ref="Matthew 22:15-22">Matthew 22:15-22, 34-40</a></td><td>—</td><td>What is the "great commandment"? How does it connect to Easter?</td></tr>
+<tr><td><strong>Wednesday</strong></td><td>Anointing at Bethany</td><td><a href="https://www.blueletterbible.org/kjv/jhn/12/1-8/s_1009001" target="_blank" data-ref="John 12:1-8">John 12:1-8</a></td><td><a href="https://www.churchofjesuschrist.org/media/video/2019-01-0200-mary-anoints-jesus" target="_blank">Mary Anoints Jesus</a></td><td>Why did Mary anoint Jesus? What did she understand?</td></tr>
+<tr><td><strong>Thursday</strong></td><td>The Last Supper</td><td><a href="https://www.blueletterbible.org/kjv/luk/22/7-20/s_995007" target="_blank" data-ref="Luke 22:7-20">Luke 22:7-20</a></td><td><a href="https://www.churchofjesuschrist.org/media/video/2011-10-017-the-last-supper" target="_blank">The Last Supper</a></td><td>How does the Passover meal point to Jesus?</td></tr>
+<tr><td><strong>Good Friday</strong></td><td>Crucifixion</td><td><a href="https://www.blueletterbible.org/kjv/luk/23/33-46/s_996033" target="_blank" data-ref="Luke 23:33-46">Luke 23:33-46</a></td><td><a href="https://www.churchofjesuschrist.org/media/video/2011-10-021-the-crucifixion" target="_blank">The Crucifixion</a></td><td>What did Jesus accomplish on the cross?</td></tr>
+<tr><td><strong>Saturday</strong></td><td>In the Tomb</td><td><a href="https://www.blueletterbible.org/kjv/mat/27/57-66/s_956057" target="_blank" data-ref="Matthew 27:57-66">Matthew 27:57-66</a></td><td>—</td><td>What do you think the disciples felt during this day of waiting?</td></tr>
+<tr><td><strong>Easter Sunday</strong></td><td>Resurrection</td><td><a href="https://www.blueletterbible.org/kjv/jhn/20/1-18/s_1017001" target="_blank" data-ref="John 20:1-18">John 20:1-18; 3</a> Nephi 11:14-17</td><td><a href="https://www.churchofjesuschrist.org/media/video/2011-10-024-he-is-risen" target="_blank">He Is Risen</a></td><td>What does it mean that Christ is risen?</td></tr>
+</table>
+<hr>
+<h3>Family Passover Dinner: Understanding the Last Supper</h3>
+<p>The Last Supper was a Passover Seder—the ritual meal Israel had observed for over a thousand years to remember their deliverance from Egypt. Consider hosting a simple Passover dinner as a family to understand what Jesus was teaching that night.</p>
+<p><strong>Setting the Table:</strong></p>
+<p>The Passover Seder includes symbolic foods that Jesus and His disciples would have shared:</p>
+<table class="info-table">
+<tr><th>Element</th><th>Hebrew</th><th>What It Represents</th><th>Gospel Connection</th></tr>
+<tr><td><strong>Unleavened Bread</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h4680/kjv/wlc/0-1/" target="_blank" data-lexicon="to drain, drain out(Qal) to drain, drain out(Niphal) to be drained out" data-strongs="H4680" data-translit="māṣâ" data-original="מָצָה" data-lang="hebrew" data-verse="">מַצָּה</a> (<em>matzah</em>)</td><td>Bread of affliction; haste of the Exodus</td><td>"This is my body" (<a href="https://www.blueletterbible.org/kjv/luk/22/19/s_995019" target="_blank" data-ref="Luke 22:19">Luke 22:19</a>)</td></tr>
+<tr><td><strong>Wine/Grape Juice</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h3196/kjv/wlc/0-1/" target="_blank" data-lexicon="wine" data-strongs="H3196" data-translit="yayin" data-original="יַיִן" data-lang="hebrew" data-verse="">יַיִן</a> (<em>yayin</em>)</td><td>Four cups representing God's promises</td><td>"This cup is the new testament in my blood" (<a href="https://www.blueletterbible.org/kjv/luk/22/20/s_995020" target="_blank" data-ref="Luke 22:20">Luke 22:20</a>)</td></tr>
+<tr><td><strong>Bitter Herbs</strong></td><td>מָרוֹר (<em>maror</em>)</td><td>Bitterness of slavery</td><td>The bitter cup Christ drank for us</td></tr>
+<tr><td><strong>Lamb</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h3532/kjv/wlc/0-1/" target="_blank" data-lexicon="lamb, sheep, young ram" data-strongs="H3532" data-translit="keḇeś" data-original="כֶּבֶשׂ" data-lang="hebrew" data-verse="">כֶּבֶשׂ</a> (<em>keves</em>)</td><td>The Passover lamb whose blood saved Israel</td><td>"Behold the Lamb of God" (<a href="https://www.blueletterbible.org/kjv/jhn/1/29/s_998029" target="_blank" data-ref="John 1:29">John 1:29</a>)</td></tr>
+<tr><td><strong>Charoset</strong></td><td>חֲרֹסֶת</td><td>Mortar of slavery; sweetness of redemption</td><td>From bondage to freedom through Christ</td></tr>
+<tr><td><strong>Salt Water</strong></td><td>—</td><td>Tears of slavery; the Red Sea</td><td>Tears turned to joy through resurrection</td></tr>
+</table>
+<p><strong>The Four Questions:</strong></p>
+<p>At every Passover Seder, the youngest child asks: "Why is this night different from all other nights?" Consider adapting this for your family's Easter Seder:</p>
+<ol>
+<li><em>Why do we eat unleavened bread?</em> — Because Christ, like the Passover lamb, was sacrificed without blemish.</li>
+<li><em>Why do we eat bitter herbs?</em> — To remember the bitterness of bondage—and the bitter cup Christ drank for us.</li>
+<li><em>Why do we dip twice?</em> — Once in salt water (tears), once in sweetness (redemption).</li>
+<li><em>Why do we recline?</em> — Because we are no longer slaves, but free through Christ's sacrifice.</li>
+</ol>
+<p><strong>Learn More:</strong></p>
+<p>Explore the Passover Seder in depth on CFM Corner:</p>
+<ul>
+<li><a href="/culture/jewish/moedim/passover/" target="_blank">The Passover Seder</a> — All 15 steps with Gospel connections</li>
+<li><a href="/culture/jewish/moedim/matzot/" target="_blank">Feast of Unleavened Bread (חַג הַמַּצּוֹת)</a> — The week following Passover</li>
+<li><a href="/culture/jewish/moedim/bikkurim/" target="_blank">Feast of Firstfruits (בִּכּוּרִים)</a> — The day Christ rose</li>
+</ul>
+<hr>
+<h3>Easter Morning Reading</h3>
+<p>On Easter morning, read <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p1-p17#p1" target="_blank" data-ref="3 Nephi 11:1-17">3 Nephi 11:1-17</a> together—the Nephite witness of the risen Lord.</p>
+<p><strong>What to focus on:</strong></p>
+<ul>
+<li>The descent of the risen Christ (11:8)</li>
+<li>His identification: "I am Jesus Christ" (11:10-11)</li>
+<li>The invitation to arise and come forth (11:14)</li>
+<li>The one-by-one witness: every person touched His wounds (11:15)</li>
+<li>The corporate Hosanna (11:17)</li>
+</ul>
+<p><strong>A question to ask children:</strong></p>
+<p>"What would it have been like to be in that crowd—to actually touch Jesus' hands and feel the prints of the nails?"</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>For Teachers: The "Stand Afar Off" to "Arise and Come Forth" Pattern</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>One of the most powerful teaching angles for Easter is the movement from Sinai to Bountiful. Use this contrast to help learners feel the significance of the Resurrection.</p>
+<h3>Teaching Approach</h3>
+<p><strong>Step 1: Establish the Sinai baseline</strong></p>
+<p>Read <a href="https://www.blueletterbible.org/kjv/exo/20/18-19/s_70018" target="_blank" data-ref="Exodus 20:18-19">Exodus 20:18-19</a> together. Ask: "What did the people do when they saw God's presence? What did they ask Moses to do?"</p>
+<p>Draw out the response: they trembled, stood far away, and begged Moses to speak for them because they feared direct encounter with God.</p>
+<p><strong>Step 2: Introduce the Bountiful reversal</strong></p>
+<p>Read <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p14-p15#p14" target="_blank" data-ref="3 Nephi 11:14-15">3 Nephi 11:14-15</a>. Ask: "What does Jesus invite them to do? How is this different from Sinai?"</p>
+<p>Draw out the contrast: instead of standing far away, they are invited to come forward. Instead of death for touching, they are invited to feel His wounds.</p>
+<p><strong>Step 3: Ask the interpretive question</strong></p>
+<p>"What changed between Sinai and Bountiful that made this reversal possible?"</p>
+<p>The answer: the Resurrection. The risen Christ can now invite His covenant people to draw near because death has been conquered, holiness has been satisfied, and the Atonement is complete.</p>
+<p><strong>Step 4: Personal application</strong></p>
+<p>"How does knowing this change what Easter means to you? What does it mean that the God who once said 'stand back' now says 'come forward'?"</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>For Personal Study: Becoming a Witness</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The Bountiful account emphasizes that every person became a witness. Not just the twelve. All 2,500.</p>
+<h3>Reflection Prompt</h3>
+<p>Imagine yourself in that multitude. You have just survived the destruction. You have witnessed three days of darkness. You have gathered at the temple, talking about Jesus.</p>
+<p>Then you hear a voice—small but piercing. You don't understand the first time. Or the second. But the third time, you do. You look up, and you see a figure descending from heaven in a white robe.</p>
+<p>He speaks. He identifies Himself. Then He invites you—personally—to come forward and feel the wounds in His hands, feet, and side.</p>
+<p>What would you feel? What would you know afterward that you did not know before?</p>
+<h3>Journal Questions</h3>
+<ul>
+<li>What does it mean to me that Christ's body was real, tangible, touchable after the Resurrection?</li>
+<li>How have I come to know—personally—that Jesus Christ is risen?</li>
+<li>What would it mean for my Easter observance to become as rich and intentional as my Christmas observance?</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>For Teaching the Doctrine: Resurrection and Covenant Nearness</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The Resurrection is not merely proof of survival after death. It is the event that makes covenant nearness possible.</p>
+<h3>Doctrine to Emphasize</h3>
+<ol>
+<li><strong>Resurrection is universal.</strong> Because Christ rose, all will rise. "As in Adam all die, even so in Christ shall all be made alive" (<a href="https://www.blueletterbible.org/kjv/1co/15/22/s_1077022" target="_blank" data-ref="1 Corinthians 15:22">1 Corinthians 15:22</a>).</li>
+</ol>
+<ol>
+<li><strong>Resurrection is physical.</strong> The risen Christ had "flesh and bones" (<a href="https://www.blueletterbible.org/kjv/luk/24/39/s_997039" target="_blank" data-ref="Luke 24:39">Luke 24:39</a>). He ate fish. He was touched. The body is not a prison to be escaped but a blessing to be eternally glorified.</li>
+</ol>
+<ol>
+<li><strong>Resurrection opens access.</strong> The temple veil was torn. The holiness that once enforced distance now invites approach. We can come boldly to the throne of grace (<a href="https://www.blueletterbible.org/kjv/heb/4/16/s_1137016" target="_blank" data-ref="Hebrews 4:16">Hebrews 4:16</a>).</li>
+</ol>
+<ol>
+<li><strong>Resurrection validates covenants.</strong> Sealings, ordinances, and promises made in mortality extend beyond the grave because the grave is not final. Death has been swallowed up in victory.</li>
+</ol>
+<h3>Key Scriptures to Pair</h3>
+<ul>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p14-p15#p14" target="_blank" data-ref="3 Nephi 11:14-15">3 Nephi 11:14-15</a> (come forth and touch)</li>
+<li><a href="https://www.blueletterbible.org/kjv/1co/15/20-23/s_1077020" target="_blank" data-ref="1 Corinthians 15:20-23">1 Corinthians 15:20-23</a> (Christ the firstfruits)</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/88?lang=eng&id=p14-p17#p14" target="_blank" data-ref="D&C 88:14-17">D&C 88:14-17</a> (the body and spirit are the soul of man; resurrection brings fulness of joy)</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/40?lang=eng&id=p23#p23" target="_blank" data-ref="Alma 40:23">Alma 40:23</a> (the spirit and body reunited, never to be divided)</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>For Youth: "More Than a Story"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Young people sometimes wonder why Easter matters beyond a nice story about Jesus. Help them see that the Resurrection is the foundation of everything else.</p>
+<h3>Discussion Starters</h3>
+<ul>
+<li>"If Jesus didn't actually rise from the dead, why would Paul say our faith is 'vain'?" (<a href="https://www.blueletterbible.org/kjv/1co/15/14/s_1077014" target="_blank" data-ref="1 Corinthians 15:14">1 Corinthians 15:14</a>)</li>
+<li>"Why do you think Jesus invited Thomas—and later the whole multitude at Bountiful—to actually touch His body? Why not just let them see Him?"</li>
+<li>"What's the difference between believing Jesus survived death and believing He conquered death?"</li>
+</ul>
+<h3>Activity Idea: The Witness Circle</h3>
+<p>Have youth stand in a circle. One person stands in the center as "Christ." Each person in the circle comes forward one at a time to "witness"—they state what they know or believe about Jesus Christ. Then they return to their place.</p>
+<p>Afterward, discuss:</p>
+<ul>
+<li>"In <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng" target="_blank" data-ref="3 Nephi 11">3 Nephi 11</a>, what did each person do after they touched the Savior's wounds?"</li>
+<li>"How does becoming a witness change you?"</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>For Sunday School and Relief Society/Elders Quorum</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Lesson Focus: "Arise and Come Forth"</h3>
+<p><strong>Opening question:</strong></p>
+<p>What has been your experience of Easter growing up? How do we typically celebrate it compared to Christmas?</p>
+<p><strong>Scripture study:</strong></p>
+<p>Read <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p8-p17#p8" target="_blank" data-ref="3 Nephi 11:8-17">3 Nephi 11:8-17</a> together. Discuss:</p>
+<ul>
+<li>What stands out to you about how Christ appears?</li>
+<li>What does He invite the people to do?</li>
+<li>What is their response?</li>
+</ul>
+<p><strong>Connection to Sinai:</strong></p>
+<p>Briefly summarize <a href="https://www.blueletterbible.org/kjv/exo/19/1/s_69001" target="_blank" data-ref="Exodus 19">Exodus 19-20</a> (or read <a href="https://www.blueletterbible.org/kjv/exo/20/18-19/s_70018" target="_blank" data-ref="Exodus 20:18-19">Exodus 20:18-19</a>). Ask: "How is this scene different from Bountiful?"</p>
+<p><strong>Discussion:</strong></p>
+<ul>
+<li>What does it mean that the Resurrection changed the terms of approach?</li>
+<li>How might we make <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng" target="_blank" data-ref="3 Nephi 11">3 Nephi 11</a> part of our Easter observance?</li>
+</ul>
+<p><strong>Closing testimony:</strong></p>
+<p>Invite class members to share brief thoughts on what the Resurrection means to them—personally, in their families, or in their understanding of the plan of salvation.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Summary: Key Teaching Angles for Easter</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Audience</th><th>Primary Angle</th><th>Key Scripture</th></tr>
+<tr><td><strong>Families</strong></td><td><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng" target="_blank" data-ref="3 Nephi 11">3 Nephi 11</a> as Easter tradition</td><td><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p14-p17#p14" target="_blank" data-ref="3 Nephi 11:14-17">3 Nephi 11:14-17</a></td></tr>
+<tr><td><strong>Teachers</strong></td><td>Sinai → Bountiful pattern</td><td><a href="https://www.blueletterbible.org/kjv/exo/20/18-19/s_70018" target="_blank" data-ref="Exodus 20:18-19">Exodus 20:18-19; 3</a> Nephi 11:14-15</td></tr>
+<tr><td><strong>Personal Study</strong></td><td>Becoming a witness</td><td><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p15#p15" target="_blank" data-ref="3 Nephi 11:15">3 Nephi 11:15</a></td></tr>
+<tr><td><strong>Youth</strong></td><td>Resurrection as foundation</td><td><a href="https://www.blueletterbible.org/kjv/1co/15/14-22/s_1077014" target="_blank" data-ref="1 Corinthians 15:14-22">1 Corinthians 15:14-22</a></td></tr>
+<tr><td><strong>Adults</strong></td><td>Resurrection and covenant nearness</td><td><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/88?lang=eng&id=p14-p17#p14" target="_blank" data-ref="D&C 88:14-17">D&C 88:14-17; 3</a> Nephi 11:14</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 7: WEEK 14: STUDY QUESTIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">7. Week 14: Study Questions</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Personal Reflection</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>The Touch Invitation</strong></li>
+</ol>
+<p>   When the risen Christ invited the multitude to "arise and come forth... that ye may feel the prints of the nails" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p14#p14" target="_blank" data-ref="3 Nephi 11:14">3 Nephi 11:14</a>), He was offering something extraordinary: personal, physical witness of the Resurrection. What would it have meant to you to be in that multitude? How do you seek personal witness of the risen Lord today?</p>
+<ol>
+<li><strong>Easter Traditions</strong></li>
+</ol>
+<p>   Elder Stevenson invited us to make <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng" target="_blank" data-ref="3 Nephi 11">3 Nephi 11</a> as much a part of our Easter observance as <a href="https://www.blueletterbible.org/kjv/luk/2/1/s_975001" target="_blank" data-ref="Luke 2">Luke 2</a> is part of our Christmas tradition. What has your Easter observance looked like? What might it look like if you adopted this invitation?</p>
+<ol>
+<li><strong>The Resurrection and You</strong></li>
+</ol>
+<p>   Paul taught that Christ is "the firstfruits of them that slept" (<a href="https://www.blueletterbible.org/kjv/1co/15/20/s_1077020" target="_blank" data-ref="1 Corinthians 15:20">1 Corinthians 15:20</a>). What does the promise of your own resurrection mean to you? How does it shape how you live, how you grieve, or how you hope?</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Class Discussion</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>From Fear to Worship</strong></li>
+</ol>
+<p>   At Sinai, the people "removed, and stood afar off" and said, "Let not God speak with us, lest we die" (<a href="https://www.blueletterbible.org/kjv/exo/20/18-19/s_70018" target="_blank" data-ref="Exodus 20:18-19">Exodus 20:18-19</a>). At Bountiful, the people came forward one by one to touch the Savior's wounds and then cried, "Hosanna!" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p15-p17#p15" target="_blank" data-ref="3 Nephi 11:15-17">3 Nephi 11:15-17</a>). What changed between Sinai and Bountiful that made this reversal possible?</p>
+<ol>
+<li><strong>The Voice</strong></li>
+</ol>
+<p>   The voice at Bountiful was "not a harsh voice, neither was it a loud voice; nevertheless... it did pierce them to the center" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p3#p3" target="_blank" data-ref="3 Nephi 11:3">3 Nephi 11:3</a>). The people did not understand the voice the first time, or the second, but "the third time they did understand" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p5-p6#p5" target="_blank" data-ref="3 Nephi 11:5-6">3 Nephi 11:5-6</a>). What does this teach about how God communicates? Why might patient, repeated listening be part of spiritual understanding?</p>
+<ol>
+<li><strong>2,500 Witnesses</strong></li>
+</ol>
+<p>   The Gospels record a handful of witnesses to the risen Lord—the women at the tomb, the disciples in the upper room, Thomas, the travelers on the road to Emmaus. At Bountiful, 2,500 people became witnesses. Why might this matter? What does a multitude of witnesses add that a small group does not?</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Doctrinal Comparison</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>Fulfillment: Future vs. Past</strong></li>
+</ol>
+<p>   In <a href="https://www.blueletterbible.org/kjv/mat/5/18/s_934018" target="_blank" data-ref="Matthew 5:18">Matthew 5:18</a>, Jesus said, "Till heaven and earth pass, one jot or one tittle shall in no wise pass from the law, till all be fulfilled" (future tense). In <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/12?lang=eng&id=p18#p18" target="_blank" data-ref="3 Nephi 12:18">3 Nephi 12:18</a>, the risen Christ said, "In me it hath all been fulfilled" (past tense). Why does this change in verb tense matter? What does it reveal about the Resurrection?</p>
+<ol>
+<li><strong>Perfection: Father vs. Father and Son</strong></li>
+</ol>
+<p>   <a href="https://www.blueletterbible.org/kjv/mat/5/48/s_934048" target="_blank" data-ref="Matthew 5:48">Matthew 5:48</a> says, "Be ye therefore perfect, even as your Father which is in heaven is perfect." <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/12?lang=eng&id=p48#p48" target="_blank" data-ref="3 Nephi 12:48">3 Nephi 12:48</a> says, "Be ye therefore perfect even as I, or your Father who is in heaven is perfect." Why is the risen Christ now included as a standard of perfection? What does this addition tell us about what the Resurrection accomplished?</p>
+<ol>
+<li><strong>"Thy Kingdom Come"</strong></li>
+</ol>
+<p>   The Lord's Prayer in <a href="https://www.blueletterbible.org/kjv/mat/6/10/s_935010" target="_blank" data-ref="Matthew 6:10">Matthew 6:10</a> includes "Thy kingdom come." This phrase is absent from the same prayer in <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/13?lang=eng&id=p10#p10" target="_blank" data-ref="3 Nephi 13:10">3 Nephi 13:10</a>. What might explain this omission? What does it suggest about what is different when the risen Lord teaches at Bountiful?</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Textual Comparison</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>The Doubled Ashrei</strong></li>
+</ol>
+<p>    <a href="https://www.blueletterbible.org/kjv/psa/119/1/s_597001" target="_blank" data-ref="Psalm 119">Psalm 119</a> opens with two "blessed are" (<a href="https://www.blueletterbible.org/lexicon/h843/kjv/wlc/0-1/" target="_blank" data-lexicon="Asherites = &quot;happy&quot;" data-strongs="H843" data-translit="āšērî" data-original="אָשֵׁרִי" data-lang="hebrew" data-verse="">אַשְׁרֵי</a> / <em>ashrei</em>) declarations (vv. 1-2) before any commandment is given—the only psalm to begin this way. <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/12?lang=eng&id=p1-p2#p1" target="_blank" data-ref="3 Nephi 12:1-2">3 Nephi 12:1-2</a> opens with two preliminary "blessed are ye" statements before the formal Beatitudes begin in verse 3. <a href="https://www.blueletterbible.org/kjv/mat/5/1/s_934001" target="_blank" data-ref="Matthew 5">Matthew 5</a> does not have this doubled opening. What might this literary pattern mean? Why might the risen Christ echo the <a href="https://www.blueletterbible.org/kjv/psa/119/1/s_597001" target="_blank" data-ref="Psalm 119">Psalm 119</a> pattern at Bountiful?</p>
+<ol>
+<li><strong>Touch and Die vs. Touch and Live</strong></li>
+</ol>
+<p>    At Sinai: "Whosoever toucheth the mount shall be surely put to death" (<a href="https://www.blueletterbible.org/kjv/exo/19/12/s_69012" target="_blank" data-ref="Exodus 19:12">Exodus 19:12</a>). At Bountiful: "Arise and come forth unto me, that ye may thrust your hands into my side, and also that ye may feel the prints of the nails" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p14#p14" target="_blank" data-ref="3 Nephi 11:14">3 Nephi 11:14</a>). Compare these two commands. What do they reveal about how the Resurrection changes the relationship between God and His covenant people?</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Application</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>Becoming a Witness</strong></li>
+</ol>
+<p>    The multitude at Bountiful "did see with their eyes and did feel with their hands, and did know of a surety and did bear record" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p15#p15" target="_blank" data-ref="3 Nephi 11:15">3 Nephi 11:15</a>). What does it mean to "bear record" of the Resurrection? How can you bear record of what you know about the risen Lord?</p>
+<ol>
+<li><strong>Covenant Access</strong></li>
+</ol>
+<p>    One theme of this Easter study guide is that the Resurrection makes covenant nearness possible—the holiness that once enforced distance now invites approach. How does this truth shape your understanding of temple worship, prayer, the sacrament, or personal revelation?</p>
+<ol>
+<li><strong>Family Easter Observance</strong></li>
+</ol>
+<p>    If you were to design an Easter morning tradition for your family based on this study guide, what would it include? What scriptures would you read? What discussions would you have? What would you want your children to remember?</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>For Further Thought</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>The Sermon at the Temple</strong></li>
+</ol>
+<p>    John W. Welch has argued that the Sermon on the Mount contains dozens of temple-related elements, and that these are even more prominent in the Sermon at the Temple in 3 Nephi. What is the significance of Jesus delivering this teaching at the temple in Bountiful rather than on a hillside? How does the temple setting shape what the sermon means?</p>
+<ol>
+<li><strong>Firstfruits and the Full Harvest</strong></li>
+</ol>
+<p>    Paul called Christ "the firstfruits of them that slept" (<a href="https://www.blueletterbible.org/kjv/1co/15/20/s_1077020" target="_blank" data-ref="1 Corinthians 15:20">1 Corinthians 15:20</a>), using the language of the barley harvest offered at Bikkurim. What does it mean that Christ's resurrection is not an isolated event but the beginning of a harvest? How does this imagery shape your hope for your own resurrection and for those you love?</p>
+<ol>
+<li><strong>The Three-Mountain Pattern</strong></li>
+</ol>
+<p>    This study guide traces a pattern: Sinai (distance enforced), Sermon on the Mount (distance reduced), Bountiful (distance eliminated). What does this progressive movement teach about God's plan? What is the ultimate destination of this pattern?</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Easter Tradition Questions</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>Why Do We Celebrate Easter?</strong></li>
+</ol>
+<p>    Ask yourself—or your family, your class, your friends—this question and listen to the answers. Then ask: "What would change about our answer if we read <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng" target="_blank" data-ref="3 Nephi 11">3 Nephi 11</a> as part of our Easter tradition?"</p>
+<ol>
+<li><strong>What Makes Easter "Good News"?</strong></li>
+</ol>
+<p>    The word "gospel" means "good news." Why is the Resurrection good news? What would be lost if Jesus had simply died and stayed dead? What has been gained because He rose?</p>
+<ol>
+<li><strong>How Will You Observe Easter This Year?</strong></li>
+</ol>
+<p>    After studying this material, what will you do differently this Easter? What will you read? What will you teach? What will you remember?</p>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+</div>
