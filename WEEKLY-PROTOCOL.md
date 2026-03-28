@@ -104,6 +104,7 @@ charts:
 ```
 
 **Important:** The email generator reads these fields, so fill them all in.
+- [ ] After setting `current: true` / `current: false`, verify the homepage `This Week's Study` bar updates to the new lesson
 
 ### 2.2 Static Content Files (`static/content/weekNN/`)
 Convert Obsidian content to HTML and deploy using **cfm-corner-tools**:
@@ -130,11 +131,17 @@ Verify outputs:
 - [ ] `insights.html` — from Weekly Insights markdown
 - [ ] `resources.html` — from Video Resources / VIDEO_URL_TRACKER (**must match `RESOURCES-HTML-SPEC.md`**)
 - [ ] Any chart HTML files referenced in front matter
+- [ ] If the lesson adds new Hebrew/Greek terms, update the glossary/flashcard data and verify the Hebrew landing page reflects the new glossary state
 - [ ] Run `link-audit.py` on **all three** files (study-guide, insights, resources) — zero issues
 - [ ] If issues found, run `link-audit.py --fix --week weekNN` to auto-link bare terms
+- [ ] Run `python3 scripts/check_popup_links.py` on all touched lesson, culture, and article files — zero issues for Bible references
+- [ ] Confirm `rg -n 'churchofjesuschrist\\.org/study/scriptures/(ot|nt)' content/culture static/content/weekNN` returns zero results in the active published set
 - [ ] All BLB lexicon links have `data-lexicon` popup attributes (no bare BLB links)
 - [ ] Every word study has a Cross-Language Connections table (Greek/Latin/English)
 - [ ] Key Locations section has multi-source map links (HLS, Atlas, BYU)
+- [ ] For non-Bible references outside the Bible popup cache, use an approved external source such as Sefaria and add `data-popup-text` if hover preview text is needed
+- [ ] Verify any newly referenced images, calendars, map assets, icons, and shortcode files actually exist in the site repo before deploy
+- [ ] Verify `static/data/scripture-verses.json` is current enough for newly linked Bible references before deploy
 
 > **Important:** The resources HTML must follow the format in [`RESOURCES-HTML-SPEC.md`](RESOURCES-HTML-SPEC.md). Canonical example: `static/content/week08/resources.html`. Every week must include: Church Media for Families section, video thumbnail cards (never plain text links), Bible Project theme + word study videos, and all accordion sections.
 
@@ -170,6 +177,7 @@ hugo server --noHTTPCache --disableFastRender --renderToMemory -p 1314
 - [ ] Check lesson image displays
 - [ ] Check mobile layout
 - [ ] Verify charts are interactive
+- [ ] Check at least one Bible hover, one lexicon hover, and one non-Bible fallback hover locally
 
 ### 3.2 Push to GitHub
 ```bash
@@ -185,6 +193,24 @@ The post-commit hook will also auto-update `CODE_INDEX_AUTO.md` in Obsidian.
 ### 3.3 Verify Live Site
 - [ ] Check `www.cfmcorner.com/weeks/NN/` (or `kymbrock.github.io/cfm-corner-site/weeks/NN/`)
 - [ ] Confirm all content loads correctly
+- [ ] Confirm one OT/NT Bible hover resolves from the popup database
+- [ ] Confirm one Hebrew/Greek lexicon hover resolves correctly
+- [ ] Confirm one non-Bible fallback hover (for example Sefaria + `data-popup-text`) resolves correctly
+- [ ] Confirm one key new page on mobile
+
+---
+
+## Week 13 Postmortem Rules
+
+- Do not treat correct links as sufficient. Popup success depends on link markup, `baseof.html` resolver logic, and the published data files in `static/data/`.
+- Do not assume the working branch and `main` match on site-critical files. Verify publish-branch presence for:
+  - `themes/cfm/layouts/_default/baseof.html`
+  - `static/data/scripture-verses.json`
+  - `layouts/shortcodes/rawhtml.html`
+  - any newly referenced assets
+- OT/NT Bible links in active lesson and culture surfaces must go to BLB, not the Church scripture site.
+- Non-Bible scripture references that are outside the Bible popup cache must use an approved source such as Sefaria and explicit popup fallback text when hover previews are expected.
+- Missing assets can break an otherwise correct publish. Treat image existence and shortcode existence as part of prepublish validation, not optional cleanup.
 
 ---
 

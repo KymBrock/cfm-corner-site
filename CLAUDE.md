@@ -42,6 +42,7 @@ When deploying a new week, follow these steps in order:
 ### Week Front Matter (`content/weeks/NN.md`)
 - [ ] Set `current: true` on the **new** week's `.md`
 - [ ] Set `current: false` on the **previous** week's `.md`
+- [ ] Verify the homepage "This Week's Study" bar points to the new current week after the front-matter handoff
 - [ ] Verify all `charts:` entries match their actual article titles and descriptions
   — title and description must come from the article's own front matter, not be invented
 - [ ] Verify chart `url:` paths resolve correctly (e.g., `study-library/articles/slug/`)
@@ -50,17 +51,26 @@ When deploying a new week, follow these steps in order:
 - [ ] Run `link-audit.py` on all three files (study-guide, insights, resources) — zero issues
 - [ ] Run `python3 scripts/check_popup_links.py <touched files>` on every touched lesson/article file
 - [ ] Fix every flagged bare verse reference such as `(3:11)` or missing numeric prefix such as `Nephi 11:4` before handoff
+- [ ] If the week introduces new Hebrew/Greek terms, update the glossary data and verify the Hebrew landing page / glossary section reflects the new entries
+- [ ] Verify `rg -n 'churchofjesuschrist\\.org/study/scriptures/(ot|nt)' content/culture static/content/weekNN` returns **zero** results for the active published set
+- [ ] Verify non-Bible scripture or deuterocanonical references that are outside the Bible popup cache use an approved external source such as Sefaria and include `data-popup-text` when a hover preview is expected
 - [ ] Verify no emojis in any HTML files (monochromatic icons only)
 - [ ] Verify all video cards use thumbnail format (never plain text links)
 - [ ] Verify every discovered weekly `watch?v=` URL renders as a thumbnail card; channel-homepage fallbacks are only acceptable when no week-specific video was found
 - [ ] Use `/Users/kymberbrockbank/Obsidian/K Master Vault/Master Project Folder/Ongoing/CFM Corner/OT_2026/Planning/Content_Maps/Church_Media_Video_Map.md` as the authoritative Week-to-Church-Media mapping when OT Stories / Come Learn With Me cards are missing or shifted
 - [ ] If the week's `Video_Resources/VIDEO_URL_TRACKER.md` includes a Bible Project section, make the generated Bible Project accordion match that documented weekly list rather than a reduced generator default
+- [ ] If new scripture popup behavior is expected, verify the touched pages against the published popup data files in `static/data/`, especially `scripture-verses.json`
+- [ ] If a touched page references new images, verify those assets exist in the site repo and are included in the publish set
+- [ ] After deploy, test at least one live Bible hover, one live lexicon hover, and one non-Bible fallback hover before calling the week stable
 
 ### Scripture & Term Link Contract
+- All OT/NT Bible scripture links in touched or published lesson/culture surfaces must go to **Blue Letter Bible**, not the Church scripture site.
+- Church scripture URLs are only acceptable for non-Bible works that BLB does not cover, and even then only when that source is intentionally approved.
 - Every scripture citation in a touched file must include the full book name and chapter. Never leave bare references like `(3:11)` or partial references like `Nephi 11:4`.
 - Every scripture link must include a normalized `data-ref` with the full reference, e.g. `data-ref="Exodus 3:14"` or `data-ref="3 Nephi 11:1-17"`.
 - If linking to Church or BLB scripture pages, always add `data-ref` so the popup system can resolve the reference.
 - For chapter-only references such as `Exodus 3`, use the full book + chapter in `data-ref`; do not rely on shorthand.
+- Do not expect `scripture-verses.json` to resolve deuterocanonical or non-Bible references automatically. For Maccabees, Sirach, Judith, or similar sources, use an approved source such as Sefaria and provide `data-popup-text` if hover preview text is required.
 - Do not invent glossary/term links. If a term is not in the approved glossary data, leave it plain or flag it for glossary expansion rather than fabricating a popup.
 - Plain transliterations that function as term notes or glosses should not be left floating when a source link exists nearby. Link them either to the verified lexicon/source entry or to the specific source passage being discussed.
 - Every direct quote from a prophet or apostle in a touched file must link to a verified source. If the exact source cannot be verified, remove the quotation marks and flag it as `[QUOTE SOURCE PENDING VERIFICATION]` rather than leaving an unlinked quote.
@@ -82,6 +92,7 @@ When deploying a new week, follow these steps in order:
 - [ ] Check all tabs load (Study Guide, Insights, Resources, Charts)
 - [ ] Check lesson image displays
 - [ ] Verify charts are interactive
+- [ ] Check key new pages on mobile before publish (especially harmony charts, maps, and custom calendar/card layouts)
 
 ### Git & Deploy
 - [ ] Run `git diff` and review before committing
@@ -194,6 +205,13 @@ study. That trust must never be violated.**
 ---
 
 ## ⚠️ Known Issues & Hard-Won Lessons (Updated 2026-03-14)
+
+### 0. Week 13 Publish Failures (Added 2026-03-23)
+- BLB is the required destination for OT/NT Bible scripture links in published lesson and culture surfaces. Do not ship Church OT/NT scripture URLs in those active pages.
+- Hover previews depend on both the link markup **and** the published popup data files. A correct BLB link can still show `Preview unavailable` if `static/data/scripture-verses.json` on `main` is stale.
+- Non-Bible references outside the Bible verse cache, such as `1–2 Maccabees`, must use an approved source such as Sefaria plus explicit `data-popup-text` when hover text is expected.
+- `main` can drift from the working branch on site-critical files. Before publish, verify that `themes/cfm/layouts/_default/baseof.html`, `static/data/scripture-verses.json`, `layouts/shortcodes/rawhtml.html`, and any newly referenced assets are actually present on the publish branch.
+- Live verification is mandatory after deploy. Before calling a release stable, test one Bible hover, one lexicon hover, one fallback hover, and one mobile page on the live site.
 
 ### 1. Worktree Orphan Problem
 Claude Code creates `.claude/worktrees/<name>/` directories when using
