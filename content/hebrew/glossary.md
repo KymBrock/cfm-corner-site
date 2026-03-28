@@ -320,6 +320,38 @@ Click on any Hebrew or Greek term to study it at Blue Letter Bible. Use the **fl
 </div>
 </details>
 
+<details class="seder-dropdown">
+<summary>Week 14: Easter — "He Will Swallow Up Death in Victory"</summary>
+<div class="seder-dropdown-body">
+
+{{< flashcards section="week14" >}}
+
+| Hebrew/Greek | Transliteration | Meaning |
+|:------------:|-----------------|---------|
+| <a href="https://www.blueletterbible.org/lexicon/h835/kjv/wlc/0-1/" target="_blank">אַשְׁרֵי</a> | *ashrei* | blessed, O the blessedness of! |
+| <a href="https://www.blueletterbible.org/lexicon/g3107/kjv/tr/0-1/" target="_blank">μακάριος</a> | *makarios* | blessed, happy (Greek equivalent of ashrei) |
+| <a href="https://www.blueletterbible.org/lexicon/g4137/kjv/tr/0-1/" target="_blank">πληρόω</a> | *pleroo* | to fill, complete, bring to fullness |
+| <a href="https://www.blueletterbible.org/lexicon/g5614/kjv/tr/0-1/" target="_blank">ὡσαννά</a> | *hosanna* | save now! (from Hebrew הוֹשִׁיעָה נָּא) |
+| <a href="https://www.blueletterbible.org/lexicon/g5584/kjv/tr/0-1/" target="_blank">ψηλαφάω</a> | *pselaphao* | to feel, handle, examine by touch |
+| <a href="https://www.blueletterbible.org/lexicon/g536/kjv/tr/0-1/" target="_blank">ἀπαρχή</a> | *aparche* | firstfruits, first portion offered to God |
+| <a href="https://www.blueletterbible.org/lexicon/h1061/kjv/wlc/0-1/" target="_blank">בִּכּוּרִים</a> | *bikkurim* | firstfruits (of the harvest) |
+| <a href="https://www.blueletterbible.org/lexicon/h1069/kjv/wlc/0-1/" target="_blank">בָּכַר</a> | *bakar* | to be born first, firstborn |
+| <a href="https://www.blueletterbible.org/lexicon/g5046/kjv/tr/0-1/" target="_blank">τέλειος</a> | *teleios* | perfect, complete, mature |
+| <a href="https://www.blueletterbible.org/lexicon/g5056/kjv/tr/0-1/" target="_blank">τέλος</a> | *telos* | end, goal, purpose |
+| <a href="https://www.blueletterbible.org/lexicon/h8549/kjv/wlc/0-1/" target="_blank">תָּמִים</a> | *tamim* | whole, complete, without blemish |
+| <a href="https://www.blueletterbible.org/lexicon/h6452/kjv/wlc/0-1/" target="_blank">פֶּסַח</a> | *Pesach* | Passover |
+| <a href="https://www.blueletterbible.org/lexicon/h4682/kjv/wlc/0-1/" target="_blank">מַצָּה</a> | *matzah* | unleavened bread |
+| <a href="https://www.blueletterbible.org/lexicon/h2557/kjv/wlc/0-1/" target="_blank">חָמֵץ</a> | *chametz* | leaven, leavened bread |
+| <a href="https://www.blueletterbible.org/lexicon/h1104/kjv/wlc/0-1/" target="_blank">בָּלַע</a> | *bala* | to swallow up, consume |
+| <a href="https://www.blueletterbible.org/lexicon/h5060/kjv/wlc/0-1/" target="_blank">נָגַע</a> | *naga* | to touch, reach |
+| <a href="https://www.blueletterbible.org/lexicon/g4982/kjv/tr/0-1/" target="_blank">σώζω</a> | *sozo* | to save, heal, make whole |
+| <a href="https://www.blueletterbible.org/lexicon/h8004/kjv/wlc/0-1/" target="_blank">שָׁלֵם</a> | *shalem* | whole, complete, at peace |
+| <a href="https://www.blueletterbible.org/lexicon/h3532/kjv/wlc/0-1/" target="_blank">כֶּבֶשׂ</a> | *keves* | lamb |
+| <a href="https://www.blueletterbible.org/lexicon/h3196/kjv/wlc/0-1/" target="_blank">יַיִן</a> | *yayin* | wine |
+
+</div>
+</details>
+
 ---
 
 ## Special Topics
