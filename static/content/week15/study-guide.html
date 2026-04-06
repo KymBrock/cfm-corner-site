@@ -1,0 +1,1587 @@
+<style>
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+        .site-header {
+            background: linear-gradient(135deg, #d4c4a8 0%, #8B7355 100%);
+            color: white; padding: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px;
+        }
+        .site-header-content { max-width: 1000px; margin: 0 auto; padding: 0 20px; text-align: center; }
+        .site-title { font-size: 2em; margin-bottom: 5px; }
+        .site-subtitle { font-size: 1.1em; opacity: 0.9; }
+
+        .header-section {
+            background-color: #8B7355; color: white; padding: 40px; border-radius: 12px;
+            margin-bottom: 30px; text-align: center;
+        }
+        .header-section .week-label { font-size: 1em; text-transform: uppercase; letter-spacing: 2px; opacity: 0.9; margin-bottom: 10px; }
+        .header-section h1 { font-size: 2.5em; font-weight: 300; margin-bottom: 10px; }
+        .header-section .subtitle { font-size: 1.3em; font-style: italic; margin-bottom: 20px; }
+        .header-section .date-location { font-size: 1.1em; opacity: 0.95; }
+
+        .quick-links { text-align: center; margin: 20px 0; }
+        .quick-link {
+            display: inline-block; background: #8B7355; color: white; padding: 10px 20px;
+            border-radius: 8px; text-decoration: none; margin: 5px; transition: all 0.3s;
+        }
+        .quick-link:hover { background: #6B5344; transform: translateY(-2px); }
+
+        .button-container { text-align: center; margin: 30px 0; }
+        .expand-button {
+            background-color: #8B7355; color: white; border: none; padding: 12px 24px;
+            margin: 5px 10px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em;
+        }
+        .expand-button:hover { background-color: #6B5344; }
+
+        .sg-accordion-section {
+            background-color: #8B7355; color: white; cursor: pointer; padding: 18px; width: 100%;
+            border: none; text-align: left; font-size: 1.2em; font-weight: 600; font-family: Georgia, serif;
+            border-radius: 8px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center;
+        }
+        .sg-accordion-section:hover { background-color: #6B5344; }
+        .sg-accordion-section::after { content: '\25BC'; font-size: 0.9em; transition: transform 0.3s; }
+        .sg-accordion-section.active::after { transform: rotate(180deg); }
+
+        .sg-panel {
+            background-color: white; border-radius: 0 0 8px 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .sg-panel.active { display: block; }
+        .panel-content { padding: 30px; }
+        .panel-content h2 { color: #8B7355; margin-bottom: 20px; font-size: 1.8em; }
+        .panel-content h3 { color: #6B5344; margin-top: 25px; margin-bottom: 15px; font-size: 1.4em; }
+        .panel-content h4 { color: #5a4a3a; margin-top: 20px; margin-bottom: 12px; font-size: 1.2em; }
+        .panel-content ul, .panel-content ol { margin-left: 25px; margin-bottom: 15px; }
+        .panel-content li { margin-bottom: 8px; }
+        .panel-content p { margin-bottom: 15px; text-align: justify; }
+        .panel-content a { color: #8B7355; }
+        .panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .panel-content blockquote {
+            margin: 20px 0 20px 20px;
+            padding: 15px 20px;
+            border-left: 4px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 8px 8px 0;
+        }
+        .panel-content blockquote p { margin-bottom: 8px; }
+        .panel-content blockquote p:last-child { margin-bottom: 0; }
+        .panel-content blockquote cite {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #8B7355;
+            font-style: normal;
+        }
+
+        .panel-content strong { color: #6B5344; }
+        .panel-content em { color: #5a4a3a; }
+
+        .panel-content hr {
+            border: none;
+            border-top: 2px solid #e8e0d5;
+            margin: 25px 0;
+        }
+
+        .panel-content code {
+            background-color: #f5f0e8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #6B5344;
+        }
+
+        .info-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .info-table th, .info-table td { border: 1px solid #d4c4a8; padding: 12px; text-align: left; }
+        .info-table th { background-color: #f5f0e8; color: #6B5344; font-weight: bold; }
+        .info-table tr:nth-child(even) { background-color: #faf8f5; }
+
+        .sg-sub-accordion {
+            background-color: #f5f0e8;
+            color: #5a4a3a;
+            cursor: pointer;
+            padding: 14px 40px 14px 18px;
+            width: 100%;
+            text-align: left;
+            border: 1px solid #d4c4a8;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            margin-top: 10px;
+            position: relative;
+            transition: background-color 0.2s;
+        }
+
+        .sg-sub-accordion:hover {
+            background-color: #e8e0d4;
+        }
+
+        .sg-sub-accordion::after {
+            content: '\25BC';
+            font-size: 0.8em;
+            color: #8B7355;
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s;
+        }
+
+        .sg-sub-accordion.active::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .sg-sub-panel {
+            background-color: #fafafa;
+            border-radius: 0 0 6px 6px;
+            border: 1px solid #d4c4a8;
+            border-top: none;
+            display: none;
+            transition: max-height 0.3s ease-out;
+            margin-bottom: 10px;
+        }
+
+        .sg-sub-panel.active {
+            display: block;
+            overflow: visible;
+            transition: max-height 0.3s ease-in;
+        }
+
+        .sg-sub-panel-content {
+            padding: 20px 25px;
+        }
+
+        .sg-sub-panel-content h3 { color: #6B5344; margin-top: 20px; margin-bottom: 12px; font-size: 1.3em; }
+        .sg-sub-panel-content h4 { color: #5a4a3a; margin-top: 15px; margin-bottom: 10px; font-size: 1.15em; }
+        .sg-sub-panel-content p { margin-bottom: 12px; text-align: justify; }
+        .sg-sub-panel-content ul, .sg-sub-panel-content ol { margin-left: 25px; margin-bottom: 12px; }
+        .sg-sub-panel-content li { margin-bottom: 6px; }
+        .sg-sub-panel-content a { color: #8B7355; }
+        .sg-sub-panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .sg-sub-panel-content blockquote {
+            margin: 15px 0 15px 15px;
+            padding: 12px 18px;
+            border-left: 3px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 6px 6px 0;
+        }
+        .sg-sub-panel-content blockquote p { margin-bottom: 6px; }
+        .sg-sub-panel-content blockquote p:last-child { margin-bottom: 0; }
+        .sg-sub-panel-content strong { color: #6B5344; }
+        .sg-sub-panel-content hr { border: none; border-top: 1px solid #e8e0d5; margin: 20px 0; }
+
+        @media (max-width: 768px) {
+            .header-section h1 { font-size: 1.8em; }
+            .panel-content { padding: 20px; }
+            .sg-sub-panel-content { padding: 15px 18px; }
+        }
+
+        .sg-section-heading {
+            margin: 1.2em 0 0.6em 0;
+            padding: 0.4em 0 0.4em 0.8em;
+            border-left: 3px solid #8B9D77;
+            color: #5a6b4f;
+            font-size: 1.05em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+        }
+        .sg-section-actions {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 28px;
+        }
+        .sg-section-actions .sg-action-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.35);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            padding: 0;
+            line-height: 1;
+        }
+        .sg-section-actions .sg-action-btn:hover {
+            background: rgba(255,255,255,0.35);
+        }
+    </style>
+
+
+<div class="container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <p class="week-label">Week 15</p>
+            <h1>Week Overview</h1>
+            <div class="subtitle"><a href="https://www.blueletterbible.org/kjv/exo/7/1/s_57001" target="_blank" data-ref="Exodus 7" style="color: #ffffff; text-decoration: underline;">Exodus 7–13</a> | "Remember This Day, in Which Ye Came Out from Egypt"</div>
+            <div class="date-location">April 6–12, 2026</div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/15?lang=eng" target="_blank" class="quick-link">CFM Manual</a>
+        </div>
+
+        <!-- Expand/Collapse Buttons -->
+        <div class="button-container">
+            <button class="expand-button" onclick="expandAll()"><span class="btn-icon">&#x229E;</span> Expand All</button>
+            <button class="expand-button" onclick="collapseAll()"><span class="btn-icon">&#x229F;</span> Collapse All</button>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 1: WEEK 15: WEEK OVERVIEW -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">1. Week 15: Week Overview</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Week Information</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Field</th><th>Details</th></tr>
+<tr><td><strong>Week Number</strong></td><td>15</td></tr>
+<tr><td><strong>Scripture Block</strong></td><td><a href="https://www.blueletterbible.org/kjv/exo/7/1/s_57001" target="_blank" data-ref="Exodus 7">Exodus 7–13</a></td></tr>
+<tr><td><strong>Theme</strong></td><td>"Remember This Day, in Which Ye Came Out from Egypt"</td></tr>
+<tr><td><strong>Dates</strong></td><td>April 6–12, 2026</td></tr>
+<tr><td><strong>CFM Manual Pages</strong></td><td><a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/15?lang=eng" target="_blank">Come, Follow Me Manual — Week 15</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Reading Summary</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><a href="https://www.blueletterbible.org/kjv/exo/7/1/s_57001" target="_blank" data-ref="Exodus 7">Exodus 7–13</a> recounts the dramatic confrontation between Moses and Pharaoh, the ten plagues, the institution of the Passover, and Israel's departure from Egypt. These chapters form the theological heart of the Exodus narrative, demonstrating God's power over Egypt's gods and Pharaoh's claims to divinity while establishing Passover as Israel's foundational memorial.</p>
+<h3>Chapter Breakdown</h3>
+<table class="info-table">
+<tr><th>Chapter</th><th>Content</th></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/exo/7/1/s_57001" target="_blank" data-ref="Exodus 7">Exodus 7</a></strong></td><td>Moses and Aaron before Pharaoh; rod becomes serpent; first plague—water to blood</td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/exo/8/1/s_58001" target="_blank" data-ref="Exodus 8">Exodus 8</a></strong></td><td>Plagues of frogs, lice, and flies; Pharaoh begins negotiating</td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/exo/9/1/s_59001" target="_blank" data-ref="Exodus 9">Exodus 9</a></strong></td><td>Plagues of pestilence, boils, and hail; Pharaoh's heart hardens</td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/exo/10/1/s_60001" target="_blank" data-ref="Exodus 10">Exodus 10</a></strong></td><td>Plagues of locusts and darkness; final negotiations fail</td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/exo/11/1/s_61001" target="_blank" data-ref="Exodus 11">Exodus 11</a></strong></td><td>Announcement of the final plague—death of the firstborn</td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/exo/12/1/s_62001" target="_blank" data-ref="Exodus 12">Exodus 12</a></strong></td><td>Institution of Passover; death of firstborn; Israel departs Egypt</td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/exo/13/1/s_63001" target="_blank" data-ref="Exodus 13">Exodus 13</a></strong></td><td>Consecration of firstborn; unleavened bread commandment; pillar of cloud and fire</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Central Themes</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>1. Judgment on Egypt's Gods</h3>
+<p>The plagues systematically challenged Egyptian deities and Pharaoh's divine claims. As God declared: "Against all the gods of Egypt I will execute judgment: I am the LORD" (<a href="https://www.blueletterbible.org/kjv/exo/12/12/s_62012" target="_blank" data-ref="Exodus 12:12">Exodus 12:12</a>).</p>
+<p>According to scholarly analysis, each plague targeted specific Egyptian beliefs:</p>
+<ul>
+<li><strong>Blood</strong> (Nile)—challenged <a href="https://en.wikipedia.org/wiki/Hapi_(Nile_god)" target="_blank" style="color: #7c9885;">Hapi</a> (Nile god) and Pharaoh as Nile's controller</li>
+<li><strong>Frogs</strong>—challenged <a href="https://en.wikipedia.org/wiki/Heqet" target="_blank" style="color: #7c9885;">Heqet</a> (frog-headed goddess of fertility)</li>
+<li><strong>Lice/Gnats</strong>—challenged <a href="https://en.wikipedia.org/wiki/Geb" target="_blank" style="color: #7c9885;">Geb</a> (earth god)</li>
+<li><strong>Flies/Swarms</strong>—challenged <a href="https://en.wikipedia.org/wiki/Khepri" target="_blank" style="color: #7c9885;">Khepri</a> (scarab god)</li>
+<li><strong>Pestilence</strong>—challenged <a href="https://www.worldhistory.org/Hathor/" target="_blank" style="color: #7c9885;">Hathor</a> (cow goddess) and <a href="https://www.worldhistory.org/Apis/" target="_blank" style="color: #7c9885;">Apis</a> bull</li>
+<li><strong>Boils</strong>—challenged <a href="https://en.wikipedia.org/wiki/Sekhmet" target="_blank" style="color: #7c9885;">Sekhmet</a> (goddess of healing)</li>
+<li><strong>Hail</strong>—challenged <a href="https://en.wikipedia.org/wiki/Nut_(goddess)" target="_blank" style="color: #7c9885;">Nut</a> (sky goddess) and <a href="https://www.worldhistory.org/Set_(Egyptian_God)/" target="_blank" style="color: #7c9885;">Seth</a> (storm god)</li>
+<li><strong>Locusts</strong>—challenged <a href="https://www.worldhistory.org/Set_(Egyptian_God)/" target="_blank" style="color: #7c9885;">Seth</a> (crop protector) and <a href="https://en.wikipedia.org/wiki/Min_(god)" target="_blank" style="color: #7c9885;">Min</a> (harvest god)</li>
+<li><strong>Darkness</strong>—challenged <a href="https://www.worldhistory.org/Ra_(Egyptian_God)/" target="_blank" style="color: #7c9885;">Ra</a> (sun god) and Pharaoh as Ra's son</li>
+<li><strong>Death of Firstborn</strong>—final judgment on Pharaoh's divine claims and <a href="https://www.worldhistory.org/osiris/" target="_blank" style="color: #7c9885;">Osiris</a></li>
+</ul>
+<p style="font-size: 0.85em; color: #666; margin-top: 10px;"><em>For a complete overview, see <a href="https://www.worldhistory.org/article/885/egyptian-gods---the-complete-list/" target="_blank" style="color: #7c9885;">Egyptian Gods — The Complete List</a> (World History Encyclopedia)</em></p>
+<p><em>(Source: <a href="https://knowhy.bookofmormoncentral.org/knowhy/why-were-particular-plagues-sent-against-egypt" target="_blank" style="color: #7c9885;">KnoWhy #614, "Why Were Particular Plagues Sent Against Egypt?"</a>)</em></p>
+<h3>2. The Hardened Heart</h3>
+<p>The text describes Pharaoh's heart being "hardened" (<a href="https://www.blueletterbible.org/kjv/exo/7/13/s_57013" target="_blank" data-ref="Exodus 7:13">Exodus 7:13, 22; 8:15, 19, 32; 9:7, 12, 34, 35; 10:1, 20, 27; 11:10</a>). The JST clarifies that Pharaoh hardened his own heart:</p>
+<blockquote>
+<p>"Pharaoh's heart is hardened" (JST <a href="https://www.blueletterbible.org/kjv/exo/7/13/s_57013" target="_blank" data-ref="Exodus 7:13">Exodus 7:13</a>)</p>
+<p>"Pharaoh shall harden his heart" (JST <a href="https://www.blueletterbible.org/kjv/exo/4/21/s_54021" target="_blank" data-ref="Exodus 4:21">Exodus 4:21</a>)</p>
+</blockquote>
+<p>This preserves human agency—Pharaoh chose to resist God repeatedly, and God allowed him to follow his chosen course.</p>
+<p><em>(Source: <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/15?lang=eng" target="_blank">CFM Manual, Week 15</a>; Study Aid by Jonn Claybaugh)</em></p>
+<h3>3. Passover—Type of the Atonement</h3>
+<p>The Passover lamb foreshadows Jesus Christ:</p>
+<table class="info-table">
+<tr><th>Passover Element</th><th>Symbolism</th></tr>
+<tr><td><strong>Lamb without blemish</strong></td><td>Christ's sinless perfection</td></tr>
+<tr><td><strong>Blood on doorposts</strong></td><td>Saving power of Christ's blood</td></tr>
+<tr><td><strong>No bones broken</strong></td><td>Fulfilled at crucifixion (<a href="https://www.blueletterbible.org/kjv/jhn/19/36/s_1016036" target="_blank" data-ref="John 19:36">John 19:36</a>)</td></tr>
+<tr><td><strong>Eaten with bitter herbs</strong></td><td>Bitter sacrifice required</td></tr>
+<tr><td><strong>Eaten in haste</strong></td><td>Urgency of following Christ</td></tr>
+<tr><td><strong>Destroyer passed over</strong></td><td>Spiritual death passed over through Atonement</td></tr>
+</table>
+<p><em>(Source: <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/15?lang=eng" target="_blank">CFM Manual, Week 15</a>)</em></p>
+<h3>4. Remembrance and Memorial</h3>
+<p>God commanded Israel to "remember this day" (<a href="https://www.blueletterbible.org/kjv/exo/13/3/s_63003" target="_blank" data-ref="Exodus 13:3">Exodus 13:3</a>) and established the Passover as "a memorial" (<a href="https://www.blueletterbible.org/kjv/exo/12/14/s_62014" target="_blank" data-ref="Exodus 12:14">Exodus 12:14</a>). This pattern of sacred remembrance connects to the sacrament, where we "always remember him" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/20?lang=eng&id=p77#p77" target="_blank" data-ref="D&C 20:77">D&C 20:77</a>).</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Key Figures</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Person</th><th>Role</th><th>Significance</th></tr>
+<tr><td><strong>Moses</strong></td><td>Prophet, deliverer</td><td>Speaks God's word to Pharaoh; leads Israel out</td></tr>
+<tr><td><strong>Aaron</strong></td><td>Spokesman, priest</td><td>Moses' "prophet" to Pharaoh (7:1); performs signs</td></tr>
+<tr><td><strong>Pharaoh</strong></td><td>King of Egypt</td><td>Opposes God; represents pride and hard-heartedness</td></tr>
+<tr><td><strong>Egyptian Magicians</strong></td><td>Court sorcerers</td><td>Replicate first signs; concede "finger of God" at lice plague</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Timeline</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Event</th><th>Reference</th></tr>
+<tr><td>Moses and Aaron before Pharaoh</td><td><a href="https://www.blueletterbible.org/kjv/exo/7/1-13/s_57001" target="_blank" data-ref="Exodus 7:1-13">Exodus 7:1–13</a></td></tr>
+<tr><td>First Plague: Water to Blood</td><td><a href="https://www.blueletterbible.org/kjv/exo/7/14-25/s_57014" target="_blank" data-ref="Exodus 7:14-25">Exodus 7:14–25</a></td></tr>
+<tr><td>Second Plague: Frogs</td><td><a href="https://www.blueletterbible.org/kjv/exo/8/1-15/s_58001" target="_blank" data-ref="Exodus 8:1-15">Exodus 8:1–15</a></td></tr>
+<tr><td>Third Plague: Lice</td><td><a href="https://www.blueletterbible.org/kjv/exo/8/16-19/s_58016" target="_blank" data-ref="Exodus 8:16-19">Exodus 8:16–19</a></td></tr>
+<tr><td>Fourth Plague: Flies/Swarms</td><td><a href="https://www.blueletterbible.org/kjv/exo/8/20-32/s_58020" target="_blank" data-ref="Exodus 8:20-32">Exodus 8:20–32</a></td></tr>
+<tr><td>Fifth Plague: Pestilence</td><td><a href="https://www.blueletterbible.org/kjv/exo/9/1-7/s_59001" target="_blank" data-ref="Exodus 9:1-7">Exodus 9:1–7</a></td></tr>
+<tr><td>Sixth Plague: Boils</td><td><a href="https://www.blueletterbible.org/kjv/exo/9/8-12/s_59008" target="_blank" data-ref="Exodus 9:8-12">Exodus 9:8–12</a></td></tr>
+<tr><td>Seventh Plague: Hail</td><td><a href="https://www.blueletterbible.org/kjv/exo/9/13-35/s_59013" target="_blank" data-ref="Exodus 9:13-35">Exodus 9:13–35</a></td></tr>
+<tr><td>Eighth Plague: Locusts</td><td><a href="https://www.blueletterbible.org/kjv/exo/10/1-20/s_60001" target="_blank" data-ref="Exodus 10:1-20">Exodus 10:1–20</a></td></tr>
+<tr><td>Ninth Plague: Darkness</td><td><a href="https://www.blueletterbible.org/kjv/exo/10/21-29/s_60021" target="_blank" data-ref="Exodus 10:21-29">Exodus 10:21–29</a></td></tr>
+<tr><td>Passover Instituted</td><td><a href="https://www.blueletterbible.org/kjv/exo/12/1-28/s_62001" target="_blank" data-ref="Exodus 12:1-28">Exodus 12:1–28</a></td></tr>
+<tr><td>Tenth Plague: Death of Firstborn</td><td><a href="https://www.blueletterbible.org/kjv/exo/12/29-36/s_62029" target="_blank" data-ref="Exodus 12:29-36">Exodus 12:29–36</a></td></tr>
+<tr><td>Israel Departs Egypt</td><td><a href="https://www.blueletterbible.org/kjv/exo/12/37-51/s_62037" target="_blank" data-ref="Exodus 12:37-51">Exodus 12:37–51</a></td></tr>
+<tr><td>Consecration of Firstborn</td><td><a href="https://www.blueletterbible.org/kjv/exo/13/1-16/s_63001" target="_blank" data-ref="Exodus 13:1-16">Exodus 13:1–16</a></td></tr>
+<tr><td>Pillar of Cloud and Fire</td><td><a href="https://www.blueletterbible.org/kjv/exo/13/17-22/s_63017" target="_blank" data-ref="Exodus 13:17-22">Exodus 13:17–22</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Connections</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Old Testament Connections</h3>
+<ul>
+<li><strong><a href="https://www.blueletterbible.org/kjv/gen/15/13-14/s_15013" target="_blank" data-ref="Genesis 15:13-14">Genesis 15:13–14</a></strong>: God's prophecy to Abraham fulfilled—400 years of affliction ending with great substance</li>
+<li><strong><a href="https://www.blueletterbible.org/kjv/gen/50/25/s_50025" target="_blank" data-ref="Genesis 50:25">Genesis 50:25</a></strong>: Joseph's bones carried out as he commanded</li>
+</ul>
+<h3>Book of Mormon Connections</h3>
+<ul>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/17?lang=eng&id=p23-p31#p23" target="_blank" data-ref="1 Nephi 17:23-31">1 Nephi 17:23–31</a></strong>: Nephi recounts the plagues and deliverance</li>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/12?lang=eng&id=p34-p35#p34" target="_blank" data-ref="Mosiah 12:34-35">Mosiah 12:34–35</a></strong>: Abinadi quotes the law given through Moses</li>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/36?lang=eng&id=p28#p28" target="_blank" data-ref="Alma 36:28">Alma 36:28</a></strong>: Alma compares spiritual deliverance to Exodus</li>
+</ul>
+<h3>Doctrine and Covenants Connections</h3>
+<ul>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/8?lang=eng&id=p2-p3#p2" target="_blank" data-ref="D&C 8:2-3">D&C 8:2–3</a></strong>: The spirit speaks to the mind and heart, as God spoke to Moses</li>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84?lang=eng&id=p23-p25#p23" target="_blank" data-ref="D&C 84:23-25">D&C 84:23–25</a></strong>: The Melchizedek Priesthood and ordinances in Moses' day</li>
+</ul>
+<h3>New Testament Connections</h3>
+<ul>
+<li><strong><a href="https://www.blueletterbible.org/kjv/jhn/1/29/s_998029" target="_blank" data-ref="John 1:29">John 1:29</a></strong>: "Behold the Lamb of God"—Passover lamb imagery</li>
+<li><strong><a href="https://www.blueletterbible.org/kjv/1co/5/7/s_1067007" target="_blank" data-ref="1 Corinthians 5:7">1 Corinthians 5:7</a></strong>: "Christ our passover is sacrificed for us"</li>
+<li><strong><a href="https://www.blueletterbible.org/kjv/heb/11/28/s_1144028" target="_blank" data-ref="Hebrews 11:28">Hebrews 11:28</a></strong>: "Through faith he kept the passover"</li>
+</ul>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 2: WEEK 15: HISTORICAL AND CULTURAL CONTEXT -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">2. Week 15: Historical and Cultural Context</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Historical Setting</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Egypt in the Late Bronze Age</h3>
+<p>The Exodus likely occurred during Egypt's New Kingdom period (c. 1550–1070 BCE). Egypt was the dominant power in the ancient Near East, with Pharaoh ruling as both political and religious head—considered a living god on earth.</p>
+<h3>Pharaoh's Divine Claims</h3>
+<p>Egyptian kings held multiple divine titles:</p>
+<ul>
+<li><strong>Son of Ra</strong>: Divine offspring of the sun god</li>
+<li><strong>Living Horus</strong>: Earthly manifestation of the sky god</li>
+<li><strong>Lord of the Two Lands</strong>: Ruler over Upper and Lower Egypt</li>
+<li><strong>Controller of the Nile</strong>: Responsible for the annual flood</li>
+</ul>
+<p>The plagues directly challenged each of these roles, demonstrating that Israel's God—not Pharaoh—controlled nature and life itself.</p>
+<p><em>(Source: <a href="https://knowhy.bookofmormoncentral.org/knowhy/why-were-particular-plagues-sent-against-egypt" target="_blank" style="color: #7c9885;">KnoWhy #614, "Why Were Particular Plagues Sent Against Egypt?"</a>)</em></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Ten Plagues and Egyptian Religion</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Scholarly Analysis</h3>
+<p>According to Muhlestein and other scholars, the plagues were not random disasters but targeted judgments against Egyptian theology:</p>
+<table class="info-table">
+<tr><th>Plague</th><th>Target</th><th>Egyptian Belief Challenged</th></tr>
+<tr><td><strong>1. Blood</strong></td><td>Nile River</td><td><a href="https://en.wikipedia.org/wiki/Hapi_(Nile_god)" target="_blank" style="color: #7c9885;">Hapi</a> (Nile god); Pharaoh as Nile controller</td></tr>
+<tr><td><strong>2. Frogs</strong></td><td>Land</td><td><a href="https://en.wikipedia.org/wiki/Heqet" target="_blank" style="color: #7c9885;">Heqet</a> (frog-headed fertility goddess)</td></tr>
+<tr><td><strong>3. Lice/Gnats</strong></td><td>Dust/Earth</td><td><a href="https://en.wikipedia.org/wiki/Geb" target="_blank" style="color: #7c9885;">Geb</a> (earth god); priests' ritual purity</td></tr>
+<tr><td><strong>4. Flies/Swarms</strong></td><td>Air</td><td><a href="https://en.wikipedia.org/wiki/Khepri" target="_blank" style="color: #7c9885;">Khepri</a> (scarab/fly god)</td></tr>
+<tr><td><strong>5. Pestilence</strong></td><td>Livestock</td><td><a href="https://www.worldhistory.org/Hathor/" target="_blank" style="color: #7c9885;">Hathor</a> (cow goddess); <a href="https://www.worldhistory.org/Apis/" target="_blank" style="color: #7c9885;">Apis</a> bull</td></tr>
+<tr><td><strong>6. Boils</strong></td><td>Bodies</td><td><a href="https://en.wikipedia.org/wiki/Sekhmet" target="_blank" style="color: #7c9885;">Sekhmet</a> (goddess of healing); <a href="https://www.worldhistory.org/Imhotep/" target="_blank" style="color: #7c9885;">Imhotep</a></td></tr>
+<tr><td><strong>7. Hail</strong></td><td>Sky</td><td><a href="https://en.wikipedia.org/wiki/Nut_(goddess)" target="_blank" style="color: #7c9885;">Nut</a> (sky goddess); <a href="https://www.worldhistory.org/Set_(Egyptian_God)/" target="_blank" style="color: #7c9885;">Seth</a> (storm god)</td></tr>
+<tr><td><strong>8. Locusts</strong></td><td>Crops</td><td><a href="https://www.worldhistory.org/Set_(Egyptian_God)/" target="_blank" style="color: #7c9885;">Seth</a> (crop protector); <a href="https://en.wikipedia.org/wiki/Min_(god)" target="_blank" style="color: #7c9885;">Min</a> (harvest god)</td></tr>
+<tr><td><strong>9. Darkness</strong></td><td>Sun</td><td><a href="https://www.worldhistory.org/Ra_(Egyptian_God)/" target="_blank" style="color: #7c9885;">Ra</a> (sun god); Pharaoh as Ra's son</td></tr>
+<tr><td><strong>10. Firstborn</strong></td><td>Dynasty</td><td>Pharaoh's divine lineage; <a href="https://www.worldhistory.org/osiris/" target="_blank" style="color: #7c9885;">Osiris</a></td></tr>
+</table>
+<p style="font-size: 0.85em; color: #666; margin-top: 10px;"><em>For a complete overview, see <a href="https://www.worldhistory.org/article/885/egyptian-gods---the-complete-list/" target="_blank" style="color: #7c9885;">Egyptian Gods — The Complete List</a> (World History Encyclopedia)</em></p>
+<p>The progression moves from environmental inconveniences to personal suffering to dynastic destruction—culminating in Pharaoh's own household.</p>
+<p><em>(Source: <a href="https://knowhy.bookofmormoncentral.org/knowhy/why-were-particular-plagues-sent-against-egypt" target="_blank" style="color: #7c9885;">KnoWhy #614</a>, citing Muhlestein scholarship)</em></p>
+<h3>Natural Phenomena Explanation</h3>
+<p>Some scholars note the plagues follow a logical sequence tied to Egypt's ecology:</p>
+<ol>
+<li>Red silt causes bloody Nile appearance</li>
+<li>Frogs flee toxic water</li>
+<li>Insects breed in stagnant conditions</li>
+<li>Disease spreads from dead animals</li>
+<li>Culminates in darkness (sandstorm/volcanic ash)</li>
+</ol>
+<p>Whether God used natural means or purely miraculous intervention, the timing and targeting demonstrated divine control.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Passover Institution</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Cultural Background</h3>
+<p>The Passover (<em>Pesach</em>) combined elements that would have been familiar to ancient Israelites:</p>
+<ul>
+<li><strong>Lamb sacrifice</strong>: Common in ANE cultures for protection</li>
+<li><strong>Blood on doorposts</strong>: Apotropaic (evil-averting) practice known in the region</li>
+<li><strong>Unleavened bread</strong>: Associated with haste and purity</li>
+<li><strong>Bitter herbs</strong>: Reminder of suffering</li>
+</ul>
+<p>What distinguished Israel's Passover was its connection to a specific historical deliverance and covenant relationship.</p>
+<h3>The Lamb Requirements (Exodus 12:3–6)</h3>
+<table class="info-table">
+<tr><th>Requirement</th><th>Specification</th></tr>
+<tr><td>Selection</td><td>10th of Nisan (Aviv)</td></tr>
+<tr><td>Inspection</td><td>Kept until 14th day</td></tr>
+<tr><td>Condition</td><td>Without blemish</td></tr>
+<tr><td>Age</td><td>First year</td></tr>
+<tr><td>Type</td><td>Sheep or goat</td></tr>
+<tr><td>Slaughter</td><td>Between evenings (twilight)</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Location Notes</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Goshen</h3>
+<p>The Israelites dwelled in Goshen, in the eastern Nile Delta. Beginning with the fourth plague (flies), God made a distinction—the plagues struck Egypt but not Goshen where Israel lived (<a href="https://www.blueletterbible.org/kjv/exo/8/22-23/s_58022" target="_blank" data-ref="Exodus 8:22-23">Exodus 8:22–23</a>).</p>
+<p>Map links: <a href="https://www.holylandsite.com/goshen" target="_blank">Holy Land Site — Goshen</a> · <a href="https://scriptures.byu.edu/mapscrip/" target="_blank">BYU Scriptures Mapped</a></p>
+<h3>Rameses</h3>
+<p>Israel departed from Rameses (<a href="https://www.blueletterbible.org/kjv/exo/12/37/s_62037" target="_blank" data-ref="Exodus 12:37">Exodus 12:37</a>), likely the city built by Hebrew slaves under earlier oppression. The irony: they left from the very place of their bondage.</p>
+<p>Map links: <a href="https://www.holylandsite.com/rameses" target="_blank">Holy Land Site — Rameses</a> · <a href="https://scriptures.byu.edu/mapscrip/" target="_blank">BYU Scriptures Mapped</a></p>
+<h3>Route of Departure</h3>
+<p>God led Israel "not through the way of the land of the Philistines, although that was near" but through the wilderness (<a href="https://www.blueletterbible.org/kjv/exo/13/17-18/s_63017" target="_blank" data-ref="Exodus 13:17-18">Exodus 13:17–18</a>). This longer route prepared them for covenant at Sinai.</p>
+<p>Map links: <a href="https://www.holylandsite.com/egypt" target="_blank">Holy Land Site — Egypt Overview</a> · <a href="https://scriptures.byu.edu/mapscrip/" target="_blank">BYU Scriptures Mapped</a></p>
+<p><strong>Map Resources:</strong> <a href="https://www.holylandsite.com/all-biblical-sites" target="_blank">Holy Land Site</a> · <a href="https://bibleatlas.org/" target="_blank">Bible Atlas</a> · <a href="https://scriptures.byu.edu/mapscrip/" target="_blank">BYU Scriptures Mapped</a></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Translation Notes</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Hebrew Terms</h3>
+<p><strong><a href="https://www.blueletterbible.org/lexicon/h3169/kjv/wlc/0-1/" target="_blank" data-lexicon="Hezekiah or Jehizkiah = &quot;Jehovah has made strong&quot; son of king Ahaz by Abi or Abijah and the 12th king of Judah; his r..." data-strongs="H3169" data-translit="yᵊḥizqîyâ" data-original="חָזַק" data-lang="hebrew" data-verse="">חָזַק</a> (chazaq)</strong> — "to harden, strengthen"</p>
+<p>The verb used for Pharaoh's heart means "to strengthen" or "make firm." The text uses three different Hebrew verbs:</p>
+<ul>
+<li><em>chazaq</em> — to strengthen (God strengthens what Pharaoh chose)</li>
+<li><em>kabed</em> — to make heavy (Pharaoh's heart grows unresponsive)</li>
+<li><em>qashah</em> — to harden (final obduracy)</li>
+</ul>
+<p><strong><a href="https://www.blueletterbible.org/lexicon/h6452/kjv/wlc/0-1/" target="_blank" data-lexicon="to pass over, spring over(Qal) to pass over(Piel) to skip, pass overto limp(Qal) to limp(Niphal) to be lame(Piel) to ..." data-strongs="H6452" data-translit="pāsaḥ" data-original="פָּסַח" data-lang="hebrew" data-verse="">פֶּסַח</a> (pesach)</strong> — "Passover"</p>
+<p>From the root meaning "to pass over" or "to skip." God "passed over" the houses marked with blood.</p>
+<p><strong><a href="https://www.blueletterbible.org/lexicon/h4680/kjv/wlc/0-1/" target="_blank" data-lexicon="to drain, drain out(Qal) to drain, drain out(Niphal) to be drained out" data-strongs="H4680" data-translit="māṣâ" data-original="מָצָה" data-lang="hebrew" data-verse="">מַצָּה</a> (matzah)</strong> — "unleavened bread"</p>
+<p>Bread made without leaven (yeast), symbolizing haste and purity. Leaven often represents corruption in Scripture.</p>
+<h3>JST Clarifications</h3>
+<p>The Joseph Smith Translation clarifies the "hardening" passages:</p>
+<table class="info-table">
+<tr><th>KJV</th><th>JST</th></tr>
+<tr><td>"I will harden Pharaoh's heart" (7:3)</td><td>"Pharaoh will harden his heart"</td></tr>
+<tr><td>"The LORD hardened the heart of Pharaoh" (9:12)</td><td>"Pharaoh hardened his heart"</td></tr>
+</table>
+<p>This preserves the doctrine of agency—God did not override Pharaoh's will but allowed him to pursue his chosen course.</p>
+<p><em>(Source: Study Aid by Jonn Claybaugh; <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/15?lang=eng" target="_blank">CFM Manual, Week 15</a>)</em></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Cultural Practices</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Blood Marking</h3>
+<p>The instruction to place blood on doorposts and lintel (<a href="https://www.blueletterbible.org/kjv/exo/12/7/s_62007" target="_blank" data-ref="Exodus 12:7">Exodus 12:7</a>) created a visual sign of covenant belonging. The blood marked the household as under God's protection.</p>
+<p>In ancient Near Eastern practice, doorways were considered vulnerable transition points requiring protection. Israel's blood-marking transformed a common practice into covenantal testimony.</p>
+<h3>Eating in Haste</h3>
+<p>The Passover was eaten with "loins girded, shoes on feet, staff in hand" (<a href="https://www.blueletterbible.org/kjv/exo/12/11/s_62011" target="_blank" data-ref="Exodus 12:11">Exodus 12:11</a>)—ready for immediate departure. This posture of readiness became ritualized in later Passover observance.</p>
+<h3>Consecration of Firstborn</h3>
+<p>After Egypt's firstborn died, God claimed Israel's firstborn as His own (<a href="https://www.blueletterbible.org/kjv/exo/13/2/s_63002" target="_blank" data-ref="Exodus 13:2">Exodus 13:2</a>). This established the principle that deliverance creates obligation—those rescued belong to their Rescuer.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Archaeological Notes</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>While the Exodus itself has limited direct archaeological evidence, several elements align with known Egyptian practices:</p>
+<ul>
+<li>Large-scale construction projects using foreign labor</li>
+<li>Administrative records of Semitic workers</li>
+<li>Evidence of Semitic presence in the eastern Delta</li>
+<li>Egyptian knowledge of Israelite religion (Papyrus Anastasi VI)</li>
+</ul>
+<p>The absence of explicit Egyptian records of the Exodus is consistent with ancient practice—kingdoms did not memorialize their defeats.</p>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 3: WEEK 15: KEY PASSAGES STUDY -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">3. Week 15: Key Passages Study</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Passage 1: The Divine Commission (Exodus 7:1–5)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text (KJV)</h3>
+<blockquote>
+<p>"And the LORD said unto Moses, See, I have made thee a god to Pharaoh: and Aaron thy brother shall be thy prophet. Thou shalt speak all that I command thee: and Aaron thy brother shall speak unto Pharaoh, that he send the children of Israel out of his land... And the Egyptians shall know that I am the LORD, when I stretch forth mine hand upon Egypt, and bring out the children of Israel from among them."</p>
+</blockquote>
+<h3>Literary Analysis</h3>
+<p>The passage establishes a hierarchy:</p>
+<ul>
+<li><strong>God</strong> → speaks to Moses</li>
+<li><strong>Moses</strong> → as "god" to Pharaoh</li>
+<li><strong>Aaron</strong> → as "prophet" (spokesman) to Pharaoh</li>
+</ul>
+<p>This mirrors the divine-prophetic relationship, with Moses playing God's role and Aaron playing the prophet's role in relation to Pharaoh.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Authority Structure</strong>: God's authority flows through appointed representatives</li>
+<li><strong>Purpose Statement</strong>: The plagues serve to reveal God's identity ("know that I am the LORD")</li>
+<li><strong>Covenant Fulfillment</strong>: God acts to fulfill His promise to Abraham's descendants</li>
+</ol>
+<h3>LDS Connection</h3>
+<p>The pattern of speaking through authorized representatives continues in the Restoration. The Lord declared: "Whether by mine own voice or by the voice of my servants, it is the same" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/1?lang=eng&id=p38#p38" target="_blank" data-ref="D&C 1:38">D&C 1:38</a>). Moses and Aaron model prophetic authority.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 2: The Magicians' Concession (Exodus 8:18–19)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text (KJV)</h3>
+<blockquote>
+<p>"And the magicians did so with their enchantments to bring forth lice, but they could not: so there were lice upon man, and upon beast. Then the magicians said unto Pharaoh, This is the finger of God: and Pharaoh's heart was hardened, and he hearkened not unto them; as the LORD had said."</p>
+</blockquote>
+<h3>Literary Analysis</h3>
+<p>The progression through the first three plagues shows escalating divine superiority:</p>
+<ul>
+<li><strong>Blood</strong>: Magicians replicate</li>
+<li><strong>Frogs</strong>: Magicians replicate (but cannot remove)</li>
+<li><strong>Lice</strong>: Magicians fail completely</li>
+</ul>
+<p>The magicians' confession—"This is the finger of God"—marks a turning point. Egypt's own religious specialists acknowledge Israel's God.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Limits of Counterfeit Power</strong>: Evil can imitate but not sustain</li>
+<li><strong>Testimony from Enemies</strong>: Even opponents recognize divine power</li>
+<li><strong>Heart Condition</strong>: Despite clear evidence, Pharaoh chooses resistance</li>
+</ol>
+<h3>LDS Connection</h3>
+<p>The "finger of God" language appears in the Book of Mormon when the brother of Jared sees the Lord's finger (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/3?lang=eng&id=p6#p6" target="_blank" data-ref="Ether 3:6">Ether 3:6</a>). Divine power manifests in visible, undeniable ways to those prepared to receive.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 3: The Distinction (Exodus 8:22–23)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text (KJV)</h3>
+<blockquote>
+<p>"And I will sever in that day the land of Goshen, in which my people dwell, that no swarms of flies shall be there; to the end thou mayest know that I am the LORD in the midst of the earth. And I will put a division between my people and thy people: to morrow shall this sign be."</p>
+</blockquote>
+<h3>Literary Analysis</h3>
+<p>Beginning with the fourth plague, God introduces "division" (Hebrew: <em>pedut</em>, redemption/distinction). The plagues no longer affect Israel—only Egypt suffers.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Covenant Protection</strong>: God's people experience different outcomes</li>
+<li><strong>Divine Control</strong>: The plagues are precisely targeted, not random</li>
+<li><strong>Witness to Pharaoh</strong>: The distinction proves God's selective power</li>
+</ol>
+<h3>LDS Connection</h3>
+<p>The principle of divine distinction continues in latter-day prophecy. The Lord promises protection to covenant Israel while judgments fall on the wicked (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/45?lang=eng&id=p66-p71#p66" target="_blank" data-ref="D&C 45:66-71">D&C 45:66–71</a>). Goshen becomes a type of Zion—a place of refuge.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 4: Pharaoh's Hardened Heart (Exodus 9:34–35)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text (KJV)</h3>
+<blockquote>
+<p>"And when Pharaoh saw that the rain and the hail and the thunders were ceased, he sinned yet more, and hardened his heart, he and his servants. And the heart of Pharaoh was hardened, neither would he let the children of Israel go; as the LORD had spoken by Moses."</p>
+</blockquote>
+<h3>Literary Analysis</h3>
+<p>Note the active voice: Pharaoh "sinned yet more" and "hardened his heart." The responsibility lies with Pharaoh, not with God imposing hardness.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Agency Preserved</strong>: Pharaoh chooses his response to each plague</li>
+<li><strong>Pattern of Relapse</strong>: When pressure eases, Pharaoh returns to resistance</li>
+<li><strong>Cumulative Consequence</strong>: Each refusal makes the next easier</li>
+</ol>
+<p>The JST confirms this reading: "Pharaoh hardened his heart" (JST <a href="https://www.blueletterbible.org/kjv/exo/9/12/s_59012" target="_blank" data-ref="Exodus 9:12">Exodus 9:12</a>).</p>
+<h3>LDS Connection</h3>
+<p>Alma teaches this principle: "He that will harden his heart, the same receiveth the lesser portion of the word; and he that will not harden his heart, to him is given the greater portion" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/12?lang=eng&id=p10#p10" target="_blank" data-ref="Alma 12:10">Alma 12:10</a>). Hearts harden through choice, not compulsion.</p>
+<p><em>(Source: <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/15?lang=eng" target="_blank">CFM Manual, Week 15</a>)</em></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 5: The Passover Institution (Exodus 12:12–14)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text (KJV)</h3>
+<blockquote>
+<p>"For I will pass through the land of Egypt this night, and will smite all the firstborn in the land of Egypt, both man and beast; and against all the gods of Egypt I will execute judgment: I am the LORD. And the blood shall be to you for a token upon the houses where ye are: and when I see the blood, I will pass over you, and the plague shall not be upon you to destroy you, when I smite the land of Egypt. And this day shall be unto you for a memorial; and ye shall keep it a feast to the LORD throughout your generations; ye shall keep it a feast by an ordinance for ever."</p>
+</blockquote>
+<h3>Literary Analysis</h3>
+<p>Three key elements:</p>
+<ol>
+<li><strong>Judgment</strong>: On Egypt's gods and firstborn</li>
+<li><strong>Protection</strong>: Blood as "token" (sign) of covenant</li>
+<li><strong>Memorial</strong>: Perpetual observance commanded</li>
+</ol>
+<p>The blood does not change God—He knows who is covenant Israel. Rather, the blood publicly marks covenant belonging.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Type of Christ</strong>: The lamb's blood foreshadows Christ's atoning blood</li>
+<li><strong>Covenant Marker</strong>: Blood identifies those under divine protection</li>
+<li><strong>Remembrance</strong>: Memorial observance shapes identity across generations</li>
+</ol>
+<h3>LDS Connection</h3>
+<p>The sacrament continues Passover's memorial function. As Israel remembered deliverance from Egypt, we remember deliverance through Christ. "This do in remembrance of me" (<a href="https://www.blueletterbible.org/kjv/luk/22/19/s_995019" target="_blank" data-ref="Luke 22:19">Luke 22:19</a>) echoes "this day shall be unto you for a memorial."</p>
+<p><strong>President Howard W. Hunter</strong> taught this connection directly:</p>
+<blockquote>
+<p>"No more would men be required to offer the firstborn lamb from their flock, because the Firstborn of God had come to offer himself as an 'infinite and eternal sacrifice.'... Both of these great religious commemorations declare that death would 'pass over' us and could have no permanent power upon us, and that the grave would have no victory."</p>
+<p>(<a href="https://www.churchofjesuschrist.org/study/general-conference/1985/04/christ-our-passover" target="_blank">Christ, Our Passover</a>, April 1985)</p>
+</blockquote>
+<p><em>(Source: <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/15?lang=eng" target="_blank">CFM Manual, Week 15</a>)</em></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 6: The Command to Remember (Exodus 13:3, 8–10)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text (KJV)</h3>
+<blockquote>
+<p>"And Moses said unto the people, Remember this day, in which ye came out from Egypt, out of the house of bondage; for by strength of hand the LORD brought you out from this place... And thou shalt shew thy son in that day, saying, This is done because of that which the LORD did unto me when I came forth out of Egypt. And it shall be for a sign unto thee upon thine hand, and for a memorial between thine eyes, that the LORD'S law may be in thy mouth: for with a strong hand hath the LORD brought thee out of Egypt. Thou shalt therefore keep this ordinance in his season from year to year."</p>
+</blockquote>
+<h3>Literary Analysis</h3>
+<p>The command addresses multiple generations:</p>
+<ul>
+<li>"Remember this day" — present generation</li>
+<li>"Thou shalt shew thy son" — transmission to children</li>
+<li>"From year to year" — perpetual annual observance</li>
+</ul>
+<p>The imagery of "sign upon thine hand" and "memorial between thine eyes" later led to the practice of tefillin (phylacteries)—but the primary meaning is metaphorical: let deliverance shape all you do (hand) and think (eyes).</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Active Remembrance</strong>: Memory requires deliberate cultivation</li>
+<li><strong>Generational Transmission</strong>: Parents teach children the covenant story</li>
+<li><strong>Identity Formation</strong>: "What the LORD did unto me"—each generation owns the story</li>
+</ol>
+<h3>LDS Connection</h3>
+<p>President Russell M. Nelson has emphasized: "The Lord has made promises to those who remember His name" (October 2020). Remembering shapes identity and action. The weekly sacrament functions as ongoing Passover—remembering deliverance.</p>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 4: WEEK 15: WORD STUDIES -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">4. Week 15: Word Studies</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Word Study 1: מַכָּה (Makkah) — "Plague/Blow"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h5221/kjv/wlc/0-1/" target="_blank" data-lexicon="to strike, smite, hit, beat, slay, kill(Niphal) to be stricken or smitten(Pual) to be stricken or smitten(Hiphil)to s..." data-strongs="H5221" data-translit="nāḵâ" data-original="נָכָה" data-lang="hebrew" data-verse="">נ-כ-ה</a> (<em>N-K-H</em>, "to strike")</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/9/14/s_59014" target="_blank" data-ref="Exodus 9:14">Exodus 9:14</a> — "I will... send all my plagues upon thine heart"</p>
+<h3>Meaning</h3>
+<p><em>Makkah</em> literally means "a blow" or "striking." The plagues are divine strikes against Egypt—judicial blows from God's hand.</p>
+<h3>Usage in Exodus</h3>
+<table class="info-table">
+<tr><th>Verse</th><th>Context</th></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/9/14/s_59014" target="_blank" data-ref="Exodus 9:14">Exodus 9:14</a></td><td>"all my plagues" sent to reveal God's uniqueness</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/11/1/s_61001" target="_blank" data-ref="Exodus 11:1">Exodus 11:1</a></td><td>"one plague more" — the final strike</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/12/13/s_62013" target="_blank" data-ref="Exodus 12:13">Exodus 12:13</a></td><td>"the plague shall not be upon you" — Israel protected</td></tr>
+</table>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Divine Judgment</strong>: The plagues are not random disasters but targeted judicial acts</li>
+<li><strong>Measured Response</strong>: Each "strike" escalates, giving opportunity for repentance</li>
+<li><strong>Redemptive Purpose</strong>: The strikes serve to deliver Israel, not merely punish Egypt</li>
+</ol>
+<h3>LDS Application</h3>
+<p>The Book of Mormon warns of plagues upon the unrepentant (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/10?lang=eng&id=p22-p23#p22" target="_blank" data-ref="Alma 10:22-23">Alma 10:22–23</a>). These judgments, like Egypt's plagues, serve both justice and mercy—warning the wicked while protecting the covenant people.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g4127/kjv/tr/0-1/" target="_blank" data-lexicon="a blow, stripe, a wound a public calamity, heavy affliction, plague," data-strongs="G4127" data-translit="plēgē" data-original="πληγή" data-lang="greek" data-verse=""><em>plēgē</em> (πληγή)</a> — a blow, stroke, wound; by extension, a plague or calamity</td><td>Ex. 9:14 (LXX)</td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/plaga" target="_blank"><em>plaga</em></a> — a blow, stroke, wound; a plague or affliction</td><td>Ex. 9:14 (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/plague" target="_blank">plague</a> (<a href="https://webstersdictionary1828.com/Dictionary/plague" target="_blank">1828</a>) (<a href="https://www.etymonline.com/word/plague" target="_blank">etymonline</a>) — from Latin <em>plaga</em> via Old French</td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 2: פֶּסַח (Pesach) — "Passover"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h6452/kjv/wlc/0-1/" target="_blank" data-lexicon="to pass over, spring over(Qal) to pass over(Piel) to skip, pass overto limp(Qal) to limp(Niphal) to be lame(Piel) to ..." data-strongs="H6452" data-translit="pāsaḥ" data-original="פָּסַח" data-lang="hebrew" data-verse="">פ-ס-ח</a> (<em>P-S-CH</em>, "to pass over, skip")</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/12/11/s_62011" target="_blank" data-ref="Exodus 12:11">Exodus 12:11, 21, 27, 43, 48</a> — "It is the LORD's passover"</p>
+<h3>Meaning</h3>
+<p><em>Pesach</em> derives from the verb meaning "to pass over" or "to skip over." When the destroying angel saw the blood, he "passed over" that house.</p>
+<h3>Key Appearances</h3>
+<table class="info-table">
+<tr><th>Verse</th><th>Usage</th></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/12/11/s_62011" target="_blank" data-ref="Exodus 12:11">Exodus 12:11</a></td><td>"It is the LORD's passover" — the feast's name</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/12/27/s_62027" target="_blank" data-ref="Exodus 12:27">Exodus 12:27</a></td><td>"The LORD... passed over the houses" — the action</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/12/43/s_62043" target="_blank" data-ref="Exodus 12:43">Exodus 12:43</a></td><td>"The ordinance of the passover" — ritual law</td></tr>
+</table>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Divine Protection</strong>: The Lord personally "passes over" each marked house</li>
+<li><strong>Blood Required</strong>: Protection depends on applied blood</li>
+<li><strong>Annual Memorial</strong>: The event becomes perpetual commemoration</li>
+</ol>
+<h3>New Testament Connection</h3>
+<p>Paul declares: "Christ our passover is sacrificed for us" (<a href="https://www.blueletterbible.org/kjv/1co/5/7/s_1067007" target="_blank" data-ref="1 Corinthians 5:7">1 Corinthians 5:7</a>). Jesus becomes the Passover lamb whose blood causes spiritual death to "pass over" believers.</p>
+<h3>LDS Application</h3>
+<p>The sacrament continues Passover's function. As Israel partook of the lamb annually, remembering deliverance, we partake of bread and water weekly, remembering our Deliverer.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g3957/kjv/tr/0-1/" target="_blank" data-lexicon="the paschal sacrifice (which was accustomed to be offered for the people's deliverance of old from Egypt)the paschal ..." data-strongs="G3957" data-translit="pascha" data-original="πάσχα" data-lang="greek" data-verse=""><em>pascha</em> (πάσχα)</a> — the Passover; transliterated from Hebrew/Aramaic</td><td>Ex. 12:11 (LXX); <a href="https://www.blueletterbible.org/kjv/1co/5/7/s_1067007" target="_blank" data-ref="1 Corinthians 5:7">1 Cor. 5:7</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/phase" target="_blank"><em>Phase</em></a> / <em>Pascha</em> — Passover; transliterated from Greek</td><td>Ex. 12:11 (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/paschal" target="_blank">paschal</a> (<a href="https://webstersdictionary1828.com/Dictionary/paschal" target="_blank">1828</a>) (<a href="https://www.etymonline.com/word/paschal" target="_blank">etymonline</a>) — relating to Passover or Easter; from Latin <em>paschalis</em></td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 3: דָּם (Dam) — "Blood"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h1826/kjv/wlc/0-1/" target="_blank" data-lexicon="to be silent, be still, wait, be dumb, grow dumb (Qal) to be silent to be still, die to be struck dumb (Niphal) to be..." data-strongs="H1826" data-translit="dāmam" data-original="דָּמַם" data-lang="hebrew" data-verse="">ד-מ-מ</a> (<em>D-M-M</em>)</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/12/7/s_62007" target="_blank" data-ref="Exodus 12:7">Exodus 12:7, 13, 22, 23</a> — "The blood shall be to you for a token"</p>
+<h3>Meaning</h3>
+<p><em>Dam</em> is blood—the life-force of living creatures. "The life of the flesh is in the blood" (<a href="https://www.blueletterbible.org/kjv/lev/17/11/s_107011" target="_blank" data-ref="Leviticus 17:11">Leviticus 17:11</a>).</p>
+<h3>Usage in Passover</h3>
+<table class="info-table">
+<tr><th>Verse</th><th>Context</th></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/12/7/s_62007" target="_blank" data-ref="Exodus 12:7">Exodus 12:7</a></td><td>Blood applied to doorposts and lintel</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/12/13/s_62013" target="_blank" data-ref="Exodus 12:13">Exodus 12:13</a></td><td>Blood serves as "token" (sign)</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/12/22/s_62022" target="_blank" data-ref="Exodus 12:22">Exodus 12:22</a></td><td>Blood applied with hyssop</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/12/23/s_62023" target="_blank" data-ref="Exodus 12:23">Exodus 12:23</a></td><td>Blood prevents destroyer's entry</td></tr>
+</table>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Life for Life</strong>: The lamb dies; the household lives</li>
+<li><strong>Visible Covenant</strong>: Blood publicly marks covenant belonging</li>
+<li><strong>Protection</strong>: Blood becomes the boundary the destroyer cannot cross</li>
+</ol>
+<h3>Christological Connection</h3>
+<p>The lamb's blood foreshadows Christ's blood. As Passover blood protected Israel from physical death, Christ's blood protects us from spiritual death: "The blood of Jesus Christ his Son cleanseth us from all sin" (<a href="https://www.blueletterbible.org/kjv/1jo/1/7/s_1160007" target="_blank" data-ref="1 John 1:7">1 John 1:7</a>).</p>
+<h3>LDS Application</h3>
+<p>The sacrament prayers reference Christ giving His life: "the body of thy Son" broken, "the blood of thy Son" shed (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/20?lang=eng&id=p77#p77" target="_blank" data-ref="D&C 20:77">D&C 20:77, 79</a>). We remember the blood that makes eternal life possible.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g129/kjv/tr/0-1/" target="_blank" data-lexicon="blood of man or animals refers to the seat of life of those things that resemble blood, grape juice blood shed, to be..." data-strongs="G129" data-translit="haima" data-original="αἷμα" data-lang="greek" data-verse=""><em>haima</em> (αἷμα)</a> — blood; the seat of life; used for blood of Christ and sacrificial blood</td><td>Ex. 12:13 (LXX); <a href="https://www.blueletterbible.org/kjv/heb/9/12/s_1142012" target="_blank" data-ref="Hebrews 9:12">Heb. 9:12</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/sanguis" target="_blank"><em>sanguis</em></a> — blood; life-blood; bloodshed</td><td>Ex. 12:13 (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/hemorrhage" target="_blank">hemorrhage</a> (<a href="https://webstersdictionary1828.com/Dictionary/hemorrhage" target="_blank">1828</a>) (<a href="https://www.etymonline.com/word/hemorrhage" target="_blank">etymonline</a>), <a href="https://www.merriam-webster.com/dictionary/sanguine" target="_blank">sanguine</a> (<a href="https://www.etymonline.com/word/sanguine" target="_blank">etymonline</a>) — from Greek <em>haima</em> and Latin <em>sanguis</em> respectively</td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 4: חֹשֶׁךְ (Choshek) — "Darkness"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> ח-שׁ-ך (<em>CH-SH-K</em>)</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/10/21-22/s_60021" target="_blank" data-ref="Exodus 10:21-22">Exodus 10:21–22</a> — "Darkness over the land of Egypt... darkness which may be felt"</p>
+<h3>Meaning</h3>
+<p><em>Choshek</em> denotes darkness—the absence of light. The ninth plague brought "thick darkness" (<em>choshek afeilah</em>), so intense it could be "felt."</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Judgment on Ra</strong>: Egypt's supreme deity was the sun god; this plague showed Israel's God controlled the sun</li>
+<li><strong>Pharaoh's Impotence</strong>: Pharaoh, "son of Ra," could do nothing against this darkness</li>
+<li><strong>Darkness vs. Light</strong>: While Egypt sat in darkness, "all the children of Israel had light in their dwellings" (<a href="https://www.blueletterbible.org/kjv/exo/10/23/s_60023" target="_blank" data-ref="Exodus 10:23">Exodus 10:23</a>)</li>
+</ol>
+<h3>Symbolic Meaning</h3>
+<p>Throughout Scripture, darkness represents:</p>
+<ul>
+<li>Spiritual blindness (<a href="https://www.blueletterbible.org/kjv/jhn/3/19/s_1000019" target="_blank" data-ref="John 3:19">John 3:19</a>)</li>
+<li>Separation from God (Outer darkness, <a href="https://www.blueletterbible.org/kjv/mat/8/12/s_937012" target="_blank" data-ref="Matthew 8:12">Matthew 8:12</a>)</li>
+<li>Chaos and death (<a href="https://www.blueletterbible.org/kjv/gen/1/2/s_1002" target="_blank" data-ref="Genesis 1:2">Genesis 1:2</a>)</li>
+</ul>
+<p>Egypt, rejecting God's light, experienced literal darkness as consequence.</p>
+<h3>LDS Application</h3>
+<p>The Book of Mormon describes "mists of darkness" that cause people to lose the path (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/8?lang=eng&id=p23#p23" target="_blank" data-ref="1 Nephi 8:23">1 Nephi 8:23</a>). Pharaoh's Egypt illustrates what happens when nations persistently reject light—they are given over to darkness.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g4655/kjv/tr/0-1/" target="_blank" data-lexicon="darknessof night darknessof darkened eyesight or blindnessmetaph.of ignorance respecting divine things and human duti..." data-strongs="G4655" data-translit="skotos" data-original="σκότος" data-lang="greek" data-verse=""><em>skotos</em> (σκότος)</a> — darkness; used literally and metaphorically for spiritual blindness</td><td>Ex. 10:21 (LXX); <a href="https://www.blueletterbible.org/kjv/jhn/3/19/s_1000019" target="_blank" data-ref="John 3:19">John 3:19</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/tenebrae" target="_blank"><em>tenebrae</em></a> — darkness, gloom; often plural for deep darkness</td><td>Ex. 10:21 (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/scotoma" target="_blank">scotoma</a> (<a href="https://www.etymonline.com/word/scotoma" target="_blank">etymonline</a>) — blind spot in vision; from Greek <em>skotos</em></td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 5: בְּכוֹר (Bekhor) — "Firstborn"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h1069/kjv/wlc/0-1/" target="_blank" data-lexicon="to be born first" data-strongs="H1069" data-translit="bāḵar" data-original="בָּכַר" data-lang="hebrew" data-verse="">ב-כ-ר</a> (<em>B-K-R</em>, "to be early, firstborn")</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/11/5/s_61005" target="_blank" data-ref="Exodus 11:5">Exodus 11:5; 12:29; 13:2, 13, 15</a> — "All the firstborn in the land of Egypt shall die"</p>
+<h3>Meaning</h3>
+<p><em>Bekhor</em> designates the firstborn son—holding special status in family inheritance and religious practice. The firstborn received double inheritance and family leadership.</p>
+<h3>Passover Context</h3>
+<table class="info-table">
+<tr><th>Verse</th><th>Context</th></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/11/5/s_61005" target="_blank" data-ref="Exodus 11:5">Exodus 11:5</a></td><td>Announcement: all Egypt's firstborn will die</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/12/29/s_62029" target="_blank" data-ref="Exodus 12:29">Exodus 12:29</a></td><td>Fulfillment: from Pharaoh's heir to captive's son</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/13/2/s_63002" target="_blank" data-ref="Exodus 13:2">Exodus 13:2</a></td><td>Consecration: Israel's firstborn now belong to God</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/13/13/s_63013" target="_blank" data-ref="Exodus 13:13">Exodus 13:13</a></td><td>Redemption: firstborn must be redeemed</td></tr>
+</table>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Pharaoh's Heir</strong>: The plague struck Egypt's future—Pharaoh's dynasty</li>
+<li><strong>Israel as Firstborn</strong>: God calls Israel "my son, even my firstborn" (<a href="https://www.blueletterbible.org/kjv/exo/4/22/s_54022" target="_blank" data-ref="Exodus 4:22">Exodus 4:22</a>)</li>
+<li><strong>Exchange Principle</strong>: Egypt's firstborn die; Israel's firstborn are consecrated to God</li>
+</ol>
+<h3>Christological Connection</h3>
+<p>Christ is "the firstborn among many brethren" (<a href="https://www.blueletterbible.org/kjv/rom/8/29/s_1054029" target="_blank" data-ref="Romans 8:29">Romans 8:29</a>) and "firstborn from the dead" (<a href="https://www.blueletterbible.org/kjv/col/1/18/s_1108018" target="_blank" data-ref="Colossians 1:18">Colossians 1:18</a>). The Passover's firstborn theology points to Christ's unique status.</p>
+<h3>LDS Application</h3>
+<p><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/93?lang=eng&id=p21#p21" target="_blank" data-ref="D&C 93:21">D&C 93:21</a> teaches that through Christ we can become "the church of the Firstborn"—those who inherit all the Father has. The firstborn principle connects Passover to exaltation.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g4416/kjv/tr/0-1/" target="_blank" data-lexicon="the firstborn of man or beast of Christ, the first born of all creation" data-strongs="G4416" data-translit="prōtotokos" data-original="πρωτότοκος" data-lang="greek" data-verse=""><em>prōtotokos</em> (πρωτότοκος)</a> — firstborn; used of Christ as "firstborn among many brethren" and "firstborn from the dead"</td><td>Ex. 11:5 (LXX); <a href="https://www.blueletterbible.org/kjv/col/1/18/s_1108018" target="_blank" data-ref="Colossians 1:18">Col. 1:18</a>; <a href="https://www.blueletterbible.org/kjv/rom/8/29/s_1054029" target="_blank" data-ref="Romans 8:29">Rom. 8:29</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/primogenitus" target="_blank"><em>primogenitus</em></a> — firstborn; from <em>primus</em> (first) + <em>genitus</em> (born)</td><td>Ex. 11:5 (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/primogeniture" target="_blank">primogeniture</a> (<a href="https://webstersdictionary1828.com/Dictionary/primogeniture" target="_blank">1828</a>) (<a href="https://www.etymonline.com/word/primogeniture" target="_blank">etymonline</a>) — right of the firstborn to inherit; from Latin <em>primogenitus</em></td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 6: מַצָּה (Matzah) — "Unleavened Bread"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> Possibly related to "to drain out"</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/12/8/s_62008" target="_blank" data-ref="Exodus 12:8">Exodus 12:8, 15, 17–20, 39; 13:6–7</a> — "Seven days thou shalt eat unleavened bread"</p>
+<h3>Meaning</h3>
+<p><em>Matzah</em> is bread made without leaven (yeast). It is flat, quickly prepared, and does not rise.</p>
+<h3>Exodus Context</h3>
+<table class="info-table">
+<tr><th>Verse</th><th>Instruction</th></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/12/8/s_62008" target="_blank" data-ref="Exodus 12:8">Exodus 12:8</a></td><td>Eat the Passover lamb with <em>matzah</em></td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/12/15/s_62015" target="_blank" data-ref="Exodus 12:15">Exodus 12:15</a></td><td>Remove all leaven from houses</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/12/39/s_62039" target="_blank" data-ref="Exodus 12:39">Exodus 12:39</a></td><td>Israel baked <em>matzah</em> because they left in haste</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/13/7/s_63007" target="_blank" data-ref="Exodus 13:7">Exodus 13:7</a></td><td>No leaven to be seen for seven days</td></tr>
+</table>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Haste</strong>: No time for bread to rise—urgency of deliverance</li>
+<li><strong>Purity</strong>: Leaven represents corruption; removing it symbolizes purification</li>
+<li><strong>Humility</strong>: Unleavened bread is "bread of affliction" (<a href="https://www.blueletterbible.org/kjv/deu/16/3/s_169003" target="_blank" data-ref="Deuteronomy 16:3">Deuteronomy 16:3</a>)</li>
+</ol>
+<h3>New Testament Connection</h3>
+<p>Paul uses leaven symbolically: "Purge out therefore the old leaven... Christ our passover is sacrificed for us: Therefore let us keep the feast, not with old leaven, neither with the leaven of malice and wickedness; but with the unleavened bread of sincerity and truth" (<a href="https://www.blueletterbible.org/kjv/1co/5/7-8/s_1067007" target="_blank" data-ref="1 Corinthians 5:7-8">1 Corinthians 5:7–8</a>).</p>
+<h3>LDS Application</h3>
+<p>The sacrament uses bread to represent Christ's body. Like matzah, we are called to remove the "leaven" of sin and come to Christ in sincerity and truth.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g106/kjv/tr/0-1/" target="_blank" data-lexicon="unfermented, free from leaven or yeast of the unleavened loaves used in the paschal feast of the Jews metaph. free fr..." data-strongs="G106" data-translit="azymos" data-original="ἄλφα" data-lang="greek" data-verse=""><em>azymos</em> (ἄζυμος)</a> — unleavened; without yeast; used of the Feast of Unleavened Bread</td><td>Ex. 12:8 (LXX); <a href="https://www.blueletterbible.org/kjv/1co/5/7-8/s_1067007" target="_blank" data-ref="1 Corinthians 5:7-8">1 Cor. 5:7–8</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/azymus" target="_blank"><em>azymus</em></a> — unleavened; from Greek <em>azymos</em></td><td>Ex. 12:8 (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/azyme" target="_blank">azyme</a> (<a href="https://www.etymonline.com/word/azyme" target="_blank">etymonline</a>) — unleavened bread (archaic); from Greek <em>azymos</em> via Latin</td><td>—</td></tr>
+</table>
+<hr>
+<h3>Summary Table</h3>
+<table class="info-table">
+<tr><th>Word</th><th>Transliteration</th><th>Root</th><th>Basic Meaning</th><th>Key Verse</th></tr>
+<tr><td>מַכָּה</td><td>Makkah</td><td><a href="https://www.blueletterbible.org/lexicon/h5221/kjv/wlc/0-1/" target="_blank" data-lexicon="to strike, smite, hit, beat, slay, kill(Niphal) to be stricken or smitten(Pual) to be stricken or smitten(Hiphil)to s..." data-strongs="H5221" data-translit="nāḵâ" data-original="נָכָה" data-lang="hebrew" data-verse="">נ-כ-ה</a></td><td>Blow, plague</td><td>Ex. 9:14</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h6452/kjv/wlc/0-1/" target="_blank" data-lexicon="to pass over, spring over(Qal) to pass over(Piel) to skip, pass overto limp(Qal) to limp(Niphal) to be lame(Piel) to ..." data-strongs="H6452" data-translit="pāsaḥ" data-original="פָּסַח" data-lang="hebrew" data-verse="">פֶּסַח</a></td><td>Pesach</td><td><a href="https://www.blueletterbible.org/lexicon/h6452/kjv/wlc/0-1/" target="_blank" data-lexicon="to pass over, spring over(Qal) to pass over(Piel) to skip, pass overto limp(Qal) to limp(Niphal) to be lame(Piel) to ..." data-strongs="H6452" data-translit="pāsaḥ" data-original="פָּסַח" data-lang="hebrew" data-verse="">פ-ס-ח</a></td><td>Passover, skip over</td><td>Ex. 12:11</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h1818/kjv/wlc/0-1/" target="_blank" data-lexicon="blood of wine (fig.)" data-strongs="H1818" data-translit="dām" data-original="דָּם" data-lang="hebrew" data-verse="">דָּם</a></td><td>Dam</td><td><a href="https://www.blueletterbible.org/lexicon/h1826/kjv/wlc/0-1/" target="_blank" data-lexicon="to be silent, be still, wait, be dumb, grow dumb (Qal) to be silent to be still, die to be struck dumb (Niphal) to be..." data-strongs="H1826" data-translit="dāmam" data-original="דָּמַם" data-lang="hebrew" data-verse="">ד-מ-מ</a></td><td>Blood</td><td>Ex. 12:13</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h2822/kjv/wlc/0-1/" target="_blank" data-lexicon="darkness, obscurity darkness secret place" data-strongs="H2822" data-translit="ḥōšeḵ" data-original="חֹשֶׁךְ" data-lang="hebrew" data-verse="">חֹשֶׁךְ</a></td><td>Choshek</td><td>ח-שׁ-ך</td><td>Darkness</td><td>Ex. 10:21</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h1060/kjv/wlc/0-1/" target="_blank" data-lexicon="firstborn, firstling" data-strongs="H1060" data-translit="bᵊḵôr" data-original="בְּכוֹר" data-lang="hebrew" data-verse="">בְּכוֹר</a></td><td>Bekhor</td><td><a href="https://www.blueletterbible.org/lexicon/h1069/kjv/wlc/0-1/" target="_blank" data-lexicon="to be born first" data-strongs="H1069" data-translit="bāḵar" data-original="בָּכַר" data-lang="hebrew" data-verse="">ב-כ-ר</a></td><td>Firstborn</td><td>Ex. 11:5</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h4680/kjv/wlc/0-1/" target="_blank" data-lexicon="to drain, drain out(Qal) to drain, drain out(Niphal) to be drained out" data-strongs="H4680" data-translit="māṣâ" data-original="מָצָה" data-lang="hebrew" data-verse="">מַצָּה</a></td><td>Matzah</td><td>—</td><td>Unleavened bread</td><td>Ex. 12:8</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 5: WEEK 15: JEWISH PERSPECTIVE -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">5. Week 15: Jewish Perspective</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Introduction</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The plagues and Passover narratives have generated extensive rabbinic commentary. The rabbis explored why each plague was chosen, what they reveal about divine justice, and how the Passover instituted Israel's identity. This section draws from Exodus Rabbah chapters 9–13, verified in the Sacred Texts vault.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>1. The Serpent and Egypt (Exodus 7:8–12)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>When Aaron's rod became a serpent before Pharaoh, the rabbis saw symbolic meaning.</p>
+<p><strong>Exodus Rabbah 9:4</strong> teaches:</p>
+<blockquote>
+<p>"Why a serpent? Because Egypt is likened to a serpent... Just as the serpent bites and kills, so Egypt enslaved and killed Israel."</p>
+</blockquote>
+<p>The midrash connects <a href="https://www.blueletterbible.org/kjv/gen/3/1/s_3001" target="_blank" data-ref="Genesis 3">Genesis 3</a> (the serpent) to Egypt's role as oppressor. Aaron's serpent swallowing the Egyptians' serpents demonstrated God's power over the serpent-kingdom.</p>
+<blockquote>
+<p><em>Source: <a href="https://www.sefaria.org/Shemot_Rabbah.9.4" target="_blank">Exodus Rabbah 9:4</a></em></p>
+</blockquote>
+<h3>LDS Connection</h3>
+<p>The serpent imagery connects to Christ as the "brazen serpent" lifted up by Moses (<a href="https://www.blueletterbible.org/kjv/num/21/8-9/s_138008" target="_blank" data-ref="Numbers 21:8-9">Numbers 21:8–9</a>). As Moses' serpent triumphed over Egypt's serpents, Christ's lifting up brings triumph over Satan—"that old serpent" (<a href="https://www.blueletterbible.org/kjv/rev/12/9/s_1179009" target="_blank" data-ref="Revelation 12:9">Revelation 12:9</a>).</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>2. Measure for Measure — Water to Blood (Exodus 7:19–21)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The rabbis taught that the plagues followed <em>middah k'neged middah</em> — measure for measure justice.</p>
+<p><strong>Exodus Rabbah 9:10</strong> explains:</p>
+<blockquote>
+<p>"With water they sinned, and with water they were punished. They cast the children into the Nile, so the Nile was turned to blood."</p>
+</blockquote>
+<p>Egypt used the Nile as an instrument of death (<a href="https://www.blueletterbible.org/kjv/exo/1/22/s_51022" target="_blank" data-ref="Exodus 1:22">Exodus 1:22</a>—casting Hebrew boys into it). Now the Nile itself became a symbol of death.</p>
+<blockquote>
+<p><em>Source: <a href="https://www.sefaria.org/Shemot_Rabbah.9.10" target="_blank">Exodus Rabbah 9:10</a></em></p>
+</blockquote>
+<h3>LDS Connection</h3>
+<p>Alma teaches this principle: "Ye shall be judged of your works... that which ye do send out shall return unto you again" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/41?lang=eng&id=p15#p15" target="_blank" data-ref="Alma 41:15">Alma 41:15</a>). Egypt's judgment fit their crime—the waters of death became literal death for Egypt.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>3. The Frogs and the Fiery Furnace (Exodus 8:1–6)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Exodus Rabbah 10:3</strong> records a remarkable inference:</p>
+<blockquote>
+<p>"Hananiah, Mishael, and Azariah [Shadrach, Meshach, Abednego] made an inference from the frogs. They said: 'If frogs, which are not commanded to sanctify God's name, entered the ovens [to obey God's command], how much more should we, who are commanded!'"</p>
+</blockquote>
+<p>The midrash imagines the frogs entering hot ovens to fulfill God's word—"into thine ovens" (8:3)—and derives the courage that Hananiah, Mishael, and Azariah showed in Nebuchadnezzar's furnace.</p>
+<blockquote>
+<p><em>Source: <a href="https://www.sefaria.org/Shemot_Rabbah.10.3" target="_blank">Exodus Rabbah 10:3</a></em></p>
+</blockquote>
+<h3>LDS Connection</h3>
+<p>The willingness to face fire for obedience connects to modern martyrdom accounts. President Henry B. Eyring has taught that faithfulness requires trusting God even when the consequences appear deadly. The frogs' example—creatures obeying at any cost—challenges us to similar devotion.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>4. The Lice and the Magicians (Exodus 8:16–19)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>At the third plague, Egypt's magicians could not replicate the miracle.</p>
+<p><strong>Exodus Rabbah 10:6</strong> asks why:</p>
+<blockquote>
+<p>"Why could they not bring forth lice? Because demons have no power over creatures smaller than a barleycorn."</p>
+</blockquote>
+<p>The midrash reflects on the limits of counterfeit power. Whatever source the magicians accessed, it could not match God's power over the smallest elements of creation.</p>
+<blockquote>
+<p><em>Source: <a href="https://www.sefaria.org/Shemot_Rabbah.10.6" target="_blank">Exodus Rabbah 10:6</a></em></p>
+</blockquote>
+<h3>LDS Connection</h3>
+<p>Mormon warns of false miracles: "He that believeth and is baptized shall be saved... and signs shall follow them that believe" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/morm/9?lang=eng&id=p22-p25#p22" target="_blank" data-ref="Mormon 9:22-25">Mormon 9:22–25</a>). True signs follow true faith; counterfeit power has limits. The magicians' failure demonstrates the boundary of false miracles.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>5. The Swarms — Wild Beasts (Exodus 8:20–24)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The fourth plague (<em>arov</em>) is traditionally understood as "swarms of wild beasts" or mixed creatures.</p>
+<p><strong>Exodus Rabbah 11:3</strong> describes:</p>
+<blockquote>
+<p>"What was the <em>arov</em>? Rabbi Nehemiah says: All kinds of wild animals—lions, wolves, bears—that came against them."</p>
+</blockquote>
+<p>The midrash emphasizes that these creatures entered Egypt's homes but did not cross into Goshen—demonstrating precise divine control.</p>
+<blockquote>
+<p><em>Source: <a href="https://www.sefaria.org/Shemot_Rabbah.11.3" target="_blank">Exodus Rabbah 11:3</a></em></p>
+</blockquote>
+<h3>LDS Connection</h3>
+<p>The distinction between Egypt and Goshen prefigures latter-day promises. The Lord has promised that Zion will be "a place of safety" while judgments fall elsewhere (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/45?lang=eng&id=p66-p71#p66" target="_blank" data-ref="D&C 45:66-71">D&C 45:66–71</a>). Divine protection distinguishes covenant communities.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>6. The Pestilence on Livestock (Exodus 9:1–7)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Exodus Rabbah 11:4</strong> notes:</p>
+<blockquote>
+<p>"The pestilence came upon their livestock because they made Israel tend their cattle and flocks. With that which they oppressed Israel, they were smitten."</p>
+</blockquote>
+<p>Again, the measure-for-measure principle: Egypt forced Israel to labor with livestock; Egypt's livestock perished.</p>
+<blockquote>
+<p><em>Source: <a href="https://www.sefaria.org/Shemot_Rabbah.11.4" target="_blank">Exodus Rabbah 11:4</a></em></p>
+</blockquote>
+<h3>LDS Connection</h3>
+<p>The principle of just consequences pervades scripture. Doctrine and Covenants 1:10 warns: "The day cometh that they who will not hear the voice of the Lord... shall be cut off from among the people." Consequences match choices.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>7. The Boils and Egypt's Soot (Exodus 9:8–12)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Exodus Rabbah 11:6</strong> teaches:</p>
+<blockquote>
+<p>"Moses took ashes from the furnace and threw them toward heaven. Why furnace ashes? To remind of the furnaces in which Israel labored making bricks."</p>
+</blockquote>
+<p>The very material of Israel's oppression—kiln soot—became the instrument of Egypt's affliction.</p>
+<blockquote>
+<p><em>Source: <a href="https://www.sefaria.org/Shemot_Rabbah.11.6" target="_blank">Exodus Rabbah 11:6</a></em></p>
+</blockquote>
+<h3>LDS Connection</h3>
+<p>The transformation of Egypt's tools of oppression into instruments of judgment foreshadows how Christ transforms suffering. As President Russell M. Nelson taught, "The Lord compensates for injustices we experience." What was meant for harm becomes testimony.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>8. Miracle Within Miracle — Fire and Ice (Exodus 9:24)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The hail plague contained fire within ice—a paradox.</p>
+<p><strong>Exodus Rabbah 12:4</strong> explains:</p>
+<blockquote>
+<p>"Fire and hail mingled together—this was a miracle within a miracle. Fire and water made peace with each other to do the will of their Creator."</p>
+</blockquote>
+<p>Elements that naturally oppose each other cooperated at God's command. The rabbis saw this as evidence that creation obeys its Maker absolutely.</p>
+<blockquote>
+<p><em>Source: <a href="https://www.sefaria.org/Shemot_Rabbah.12.4" target="_blank">Exodus Rabbah 12:4</a></em></p>
+</blockquote>
+<h3>LDS Connection</h3>
+<p>The principle that opposing elements can unite in God's service applies to the Church. Members of diverse backgrounds and personalities "made peace with each other" to build Zion. When God commands, even opposites harmonize.</p>
+<p><em>(Source: Study Aid by Jonn Claybaugh notes this "miracle within a miracle")</em></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>9. Why God Hardened Pharaoh's Heart (Exodus 10:1–2)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The rabbis grappled with the apparent removal of Pharaoh's free will.</p>
+<p><strong>Exodus Rabbah 13:3</strong> records Rabbi Shimon ben Lakish:</p>
+<blockquote>
+<p>"God warns a person once, twice, three times. If he does not repent, God locks his heart against repentance, to exact punishment for his sins."</p>
+</blockquote>
+<p>The midrash interprets Pharaoh's hardening as consequence, not cause. After repeatedly choosing resistance, Pharaoh lost the capacity to choose otherwise—not because God forced him, but because his own choices had calcified.</p>
+<blockquote>
+<p><em>Source: <a href="https://www.sefaria.org/Shemot_Rabbah.13.3" target="_blank">Exodus Rabbah 13:3</a></em></p>
+</blockquote>
+<h3>LDS Connection</h3>
+<p><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/12?lang=eng&id=p10-p11#p10" target="_blank" data-ref="Alma 12:10-11">Alma 12:10–11</a> teaches: "He that will harden his heart, the same receiveth the lesser portion of the word... their hearts are hardened; then is the time that they must be hewn down and cast into the fire." Hardening results from persistent rejection.</p>
+<p><em>(Source: <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/15?lang=eng" target="_blank">CFM Manual, Week 15</a>; Study Aid by Jonn Claybaugh)</em></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>10. Passover — Blood and Redemption</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Exodus Rabbah 15:12</strong> (commenting on <a href="https://www.blueletterbible.org/kjv/exo/12/1/s_62001" target="_blank" data-ref="Exodus 12">Exodus 12</a>) teaches:</p>
+<blockquote>
+<p>"Israel was redeemed from Egypt by the merit of blood—the blood of the Passover lamb and the blood of circumcision."</p>
+</blockquote>
+<p>Both covenant signs—Passover blood and circumcision blood—marked Israel's belonging. The midrash sees blood as the essential marker of covenant identity.</p>
+<blockquote>
+<p><a href="https://www.sefaria.org/Shemot_Rabbah.15.12" target="_blank">Exodus Rabbah 15:12</a></p>
+</blockquote>
+<h3>LDS Connection</h3>
+<p>Latter-day Saints are marked by covenant—baptism and temple ordinances. Like Israel's blood markers, these ordinances identify covenant belonging. The sacrament weekly renews our covenant identity.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Source Table</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Source</th><th>Citation</th><th>Sefaria Link</th><th>Vault Status</th></tr>
+<tr><td>Exodus Rabbah 9:4</td><td>Serpent = Egypt</td><td><a href="https://www.sefaria.org/Shemot_Rabbah.9.4" target="_blank">Sefaria</a></td><td>Verified</td></tr>
+<tr><td>Exodus Rabbah 9:10</td><td>Measure for measure (blood)</td><td><a href="https://www.sefaria.org/Shemot_Rabbah.9.10" target="_blank">Sefaria</a></td><td>Verified</td></tr>
+<tr><td>Exodus Rabbah 10:3</td><td>Frogs and fiery furnace</td><td><a href="https://www.sefaria.org/Shemot_Rabbah.10.3" target="_blank">Sefaria</a></td><td>Verified</td></tr>
+<tr><td>Exodus Rabbah 10:6</td><td>Magicians' limits</td><td><a href="https://www.sefaria.org/Shemot_Rabbah.10.6" target="_blank">Sefaria</a></td><td>Verified</td></tr>
+<tr><td>Exodus Rabbah 11:3</td><td>Swarms</td><td><a href="https://www.sefaria.org/Shemot_Rabbah.11.3" target="_blank">Sefaria</a></td><td>Verified</td></tr>
+<tr><td>Exodus Rabbah 11:4</td><td>Pestilence measure for measure</td><td><a href="https://www.sefaria.org/Shemot_Rabbah.11.4" target="_blank">Sefaria</a></td><td>Verified</td></tr>
+<tr><td>Exodus Rabbah 11:6</td><td>Boils from furnace ash</td><td><a href="https://www.sefaria.org/Shemot_Rabbah.11.6" target="_blank">Sefaria</a></td><td>Verified</td></tr>
+<tr><td>Exodus Rabbah 12:4</td><td>Fire within hail</td><td><a href="https://www.sefaria.org/Shemot_Rabbah.12.4" target="_blank">Sefaria</a></td><td>Verified</td></tr>
+<tr><td>Exodus Rabbah 13:3</td><td>Hardening after refusal</td><td><a href="https://www.sefaria.org/Shemot_Rabbah.13.3" target="_blank">Sefaria</a></td><td>Verified</td></tr>
+<tr><td>Exodus Rabbah 15:12</td><td>Blood of redemption</td><td><a href="https://www.sefaria.org/Shemot_Rabbah.15.12" target="_blank">Sefaria</a></td><td>Verify</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 6: WEEK 15: TEACHING APPLICATIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">6. Week 15: Teaching Applications</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Overview</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>This week's material offers powerful teaching opportunities across all settings. The plagues demonstrate God's power; Pharaoh's hard heart teaches about agency; the Passover points directly to Christ's Atonement. The visual and dramatic nature of the plagues engages all ages.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Family Home Evening</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>For Young Children (Ages 3–7)</h3>
+<p><strong>Focus:</strong> God protected His people with the lamb's blood</p>
+<p><strong>Object Lesson:</strong> Use red paint or tape to mark your door frame. Explain: "In Egypt, families put lamb blood on their doors. The lamb kept them safe. Jesus is our Lamb—He keeps us safe too."</p>
+<p><strong>Activity:</strong> Draw a picture of a house with blood on the doorposts. Color a lamb. Talk about how Jesus is called "the Lamb of God."</p>
+<p><strong>Song:</strong> "I'm Trying to Be like Jesus" — focus on "I'll follow Jesus Christ"</p>
+<p><strong>Discussion Question:</strong> "How does Jesus keep us safe?"</p>
+<hr>
+<h3>For Older Children (Ages 8–11)</h3>
+<p><strong>Focus:</strong> The plagues showed God's power over Egypt's gods</p>
+<p><strong>Activity:</strong> Make a simple chart:</p>
+<table class="info-table">
+<tr><th>Plague</th><th>What Egypt Believed</th><th>What God Showed</th></tr>
+<tr><td>Darkness</td><td>Sun god Ra was powerful</td><td>God controls the sun</td></tr>
+<tr><td>Frogs</td><td>Frog goddess helped childbirth</td><td>God controls the frogs</td></tr>
+<tr><td>Blood</td><td>Nile River gave life</td><td>God controls the Nile</td></tr>
+</table>
+<p><strong>Discussion:</strong> "The Egyptians worshipped many false gods. How did the plagues prove these gods were not real?"</p>
+<p><strong>Scripture Chain:</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/12/12/s_62012" target="_blank" data-ref="Exodus 12:12">Exodus 12:12</a> — "Against all the gods of Egypt I will execute judgment."</p>
+<p><strong>Challenge:</strong> This week, identify one "false god" in our culture (popularity, money, screens) and discuss why the true God is better.</p>
+<hr>
+<h3>For Youth/Teens</h3>
+<p><strong>Focus:</strong> Hard hearts vs. soft hearts</p>
+<p><strong>Discussion Questions:</strong></p>
+<ol>
+<li>What does it mean to "harden your heart"?</li>
+<li>Pharaoh kept saying "yes" to God during the plagues, then changing his mind. Why is inconsistency dangerous spiritually?</li>
+<li>The JST says Pharaoh hardened his own heart. How do we harden our own hearts today?</li>
+</ol>
+<p><strong>Activity:</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/9/34-35/s_59034" target="_blank" data-ref="Exodus 9:34-35">Exodus 9:34–35</a>. Notice: "he sinned yet more, and hardened his heart." Pharaoh made choices. Discuss: What choices harden or soften hearts?</p>
+<p><strong>Application:</strong> Write one thing that is hardening your heart toward spiritual things. Commit to address it this week.</p>
+<p><em>(Source: <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/15?lang=eng" target="_blank">CFM Manual, Week 15</a>)</em></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Sunday School (Adults)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Lesson Approach 1: The Passover and the Sacrament</h3>
+<p><strong>Opening:</strong> Ask: "What meal do you eat most often that reminds you of something important?"</p>
+<p><strong>Key Point:</strong> Israel ate the Passover annually to remember their deliverance. We take the sacrament weekly to remember our deliverance.</p>
+<p><strong>Discussion Table:</strong></p>
+<table class="info-table">
+<tr><th>Passover</th><th>Sacrament</th></tr>
+<tr><td>Lamb without blemish</td><td>Christ, sinless</td></tr>
+<tr><td>Blood saved from death</td><td>Blood saves from spiritual death</td></tr>
+<tr><td>Eaten to remember</td><td>Bread and water in remembrance</td></tr>
+<tr><td>"This night" specified</td><td>"Always remember him"</td></tr>
+</table>
+<p><strong>Scripture Connections:</strong></p>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/exo/12/14/s_62014" target="_blank" data-ref="Exodus 12:14">Exodus 12:14</a> — "This day shall be unto you for a memorial"</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/20?lang=eng&id=p77#p77" target="_blank" data-ref="D&C 20:77">D&C 20:77</a> — "Always remember him"</li>
+<li><a href="https://www.blueletterbible.org/kjv/1co/5/7/s_1067007" target="_blank" data-ref="1 Corinthians 5:7">1 Corinthians 5:7</a> — "Christ our passover is sacrificed"</li>
+</ul>
+<p><strong>See also:</strong> President Howard W. Hunter, <a href="https://www.churchofjesuschrist.org/study/general-conference/1985/04/christ-our-passover" target="_blank">Christ, Our Passover</a> (April 1985) — THE definitive Conference talk on Passover-to-Christ typology. Full quote in Key Passages Study (Passage 5).</p>
+<p><strong>Testimony:</strong> Every Sunday we participate in Passover's fulfillment. The lamb's blood pointed forward; we look back to the same redemption.</p>
+<p><em>(Source: <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/15?lang=eng" target="_blank">CFM Manual, Week 15</a>)</em></p>
+<hr>
+<h3>Lesson Approach 2: Judgment on False Gods</h3>
+<p><strong>Opening Question:</strong> "What do people in our culture worship instead of God?"</p>
+<p><strong>Key Point:</strong> The plagues systematically dismantled Egyptian religion. Each plague targeted a specific god or Pharaoh's divine claims.</p>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>Why did God target Egypt's gods rather than just punishing Pharaoh directly?</li>
+<li>What "gods" compete for our worship today? (Money, fame, entertainment, pleasure)</li>
+<li>How does God sometimes allow our false gods to fail us?</li>
+</ol>
+<p><strong>Scripture:</strong> "Against all the gods of Egypt I will execute judgment: I am the LORD" (<a href="https://www.blueletterbible.org/kjv/exo/12/12/s_62012" target="_blank" data-ref="Exodus 12:12">Exodus 12:12</a>).</p>
+<p><strong>Application:</strong> Identify modern "plagues" that reveal the inadequacy of worldly things—economic crashes expose money's limits; celebrity scandals expose fame's emptiness.</p>
+<p><em>(Source: <a href="https://knowhy.bookofmormoncentral.org/knowhy/why-were-particular-plagues-sent-against-egypt" target="_blank" style="color: #7c9885;">KnoWhy #614, "Why Were Particular Plagues Sent Against Egypt?"</a>)</em></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Primary</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Junior Primary (Ages 3–7)</h3>
+<p><strong>Visual:</strong> Large picture of the Red Sea crossing (or Passover lamb)</p>
+<p><strong>Story:</strong> Tell it simply: "God's people lived in Egypt. The king was mean to them. God sent Moses to say, 'Let my people go!' But the king said no. So God sent problems—frogs everywhere, sick animals, no light! Finally, the king let them go. God made the water open so they could walk through!"</p>
+<p><strong>Activity:</strong> Act out: children crouch low (slaves), stand tall when Moses comes, walk through imaginary Red Sea.</p>
+<p><strong>Song:</strong> "Follow the Prophet" — Moses was a prophet</p>
+<p><strong>Testimony:</strong> Just like God saved His people from Egypt, Jesus saves us from bad things.</p>
+<hr>
+<h3>Senior Primary (Ages 8–11)</h3>
+<p><strong>Focus:</strong> The Passover lamb points to Jesus</p>
+<p><strong>Hero Spotlight:</strong> The Passover lamb — selected, inspected, sacrificed so families could live.</p>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>What kind of lamb did families choose? (Without blemish — perfect)</li>
+<li>What did they do with the blood? (Put it on the door)</li>
+<li>What happened to families with blood on their doors? (The angel "passed over" — they were safe)</li>
+</ol>
+<p><strong>Connection:</strong> Read <a href="https://www.blueletterbible.org/kjv/jhn/1/29/s_998029" target="_blank" data-ref="John 1:29">John 1:29</a> — "Behold the Lamb of God!" Jesus is our Passover Lamb. He was perfect. His blood saves us.</p>
+<p><strong>Activity:</strong> Create a "Passover / Jesus" comparison chart as a class.</p>
+<p><em>(Source: <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/15?lang=eng" target="_blank">CFM Manual, Week 15</a>)</em></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Youth (Sunday School / Mutual)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>For Ages 12–14</h3>
+<p><strong>Focus:</strong> Recognizing God's power vs. worldly power</p>
+<p><strong>Opening Activity:</strong> Show images of Egyptian pyramids, temples, sphinx. Ask: "Egypt was the most powerful nation on earth. How did a group of slaves escape?"</p>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>The magicians could copy some miracles but not all. What does this teach about counterfeit power?</li>
+<li>Pharaoh's power seemed absolute. How did the plagues challenge his authority?</li>
+<li>What worldly powers seem overwhelming today? How does God's power compare?</li>
+</ol>
+<p><strong>Scripture Study:</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/8/18-19/s_58018" target="_blank" data-ref="Exodus 8:18-19">Exodus 8:18–19</a> — the magicians admit "This is the finger of God."</p>
+<p><strong>Challenge:</strong> When you face situations that seem overwhelming, remember: even Egypt's magicians admitted God's power.</p>
+<hr>
+<h3>For Ages 15–18</h3>
+<p><strong>Focus:</strong> Agency and the hardened heart</p>
+<p><strong>Discussion Questions:</strong></p>
+<ol>
+<li>Why would God "harden" Pharaoh's heart? Doesn't that remove agency?</li>
+<li>Read the JST changes (<a href="https://www.blueletterbible.org/kjv/exo/4/21/s_54021" target="_blank" data-ref="Exodus 4:21">Exodus 4:21; 9:12</a>). What difference does it make that <em>Pharaoh</em> hardened his own heart?</li>
+<li>How do repeated bad choices make future good choices harder?</li>
+</ol>
+<p><strong>Deep Dive:</strong> Three Hebrew verbs describe the hardening:</p>
+<ul>
+<li><em>chazaq</em> — strengthen (Pharaoh's resolve was strengthened in the direction he chose)</li>
+<li><em>kabed</em> — make heavy (his heart became unresponsive)</li>
+<li><em>qashah</em> — harden (final obduracy)</li>
+</ul>
+<p><strong>Application:</strong> We control our heart's softness or hardness by daily choices. What choices soften or harden hearts?</p>
+<p><em>(Source: <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/15?lang=eng" target="_blank">CFM Manual, Week 15</a>; Study Aid by Jonn Claybaugh)</em></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Institute / Mission Preparation</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Focus: Christ in the Passover</h3>
+<p><strong>Doctrinal Foundation:</strong></p>
+<p>The Passover lamb is a type of Jesus Christ. Every element points forward to His Atonement:</p>
+<table class="info-table">
+<tr><th>Passover Element</th><th>Fulfillment in Christ</th></tr>
+<tr><td>Lamb without blemish (Ex. 12:5)</td><td>Christ's sinless life (<a href="https://www.blueletterbible.org/kjv/1pe/1/19/s_1152019" target="_blank" data-ref="1 Peter 1:19">1 Peter 1:19</a>)</td></tr>
+<tr><td>Lamb's blood applied (Ex. 12:7)</td><td>Christ's blood applied to us (<a href="https://www.blueletterbible.org/kjv/rev/1/5/s_1168005" target="_blank" data-ref="Revelation 1:5">Rev. 1:5</a>)</td></tr>
+<tr><td>No bones broken (Ex. 12:46)</td><td>Fulfilled at crucifixion (<a href="https://www.blueletterbible.org/kjv/jhn/19/36/s_1016036" target="_blank" data-ref="John 19:36">John 19:36</a>)</td></tr>
+<tr><td>Eaten that night (Ex. 12:8)</td><td>We partake of Christ in sacrament</td></tr>
+<tr><td>Eaten in haste (Ex. 12:11)</td><td>Urgency of following Christ</td></tr>
+<tr><td>Destroyer passed over (Ex. 12:23)</td><td>Spiritual death passes over believers</td></tr>
+</table>
+<p><strong>Scripture Chain:</strong></p>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/exo/12/3-13/s_62003" target="_blank" data-ref="Exodus 12:3-13">Exodus 12:3–13</a> — Passover institution</li>
+<li><a href="https://www.blueletterbible.org/kjv/isa/53/7/s_732007" target="_blank" data-ref="Isaiah 53:7">Isaiah 53:7</a> — "As a lamb to the slaughter"</li>
+<li><a href="https://www.blueletterbible.org/kjv/jhn/1/29/s_998029" target="_blank" data-ref="John 1:29">John 1:29</a> — "Behold the Lamb of God"</li>
+<li><a href="https://www.blueletterbible.org/kjv/1co/5/7/s_1067007" target="_blank" data-ref="1 Corinthians 5:7">1 Corinthians 5:7</a> — "Christ our passover is sacrificed for us"</li>
+<li><a href="https://www.blueletterbible.org/kjv/rev/5/6/s_1172006" target="_blank" data-ref="Revelation 5:6">Revelation 5:6, 12</a> — "Worthy is the Lamb"</li>
+</ul>
+<p><strong>Mission Application:</strong> When teaching investigators about Christ, use the Passover as evidence that God planned the Atonement from the beginning. The Old Testament is a witness of Christ.</p>
+<p><strong>President Hunter's Teaching:</strong> In <a href="https://www.churchofjesuschrist.org/study/general-conference/1985/04/christ-our-passover" target="_blank">Christ, Our Passover</a> (April 1985), President Hunter shows how every Passover element—the unblemished lamb, the applied blood, the preserved bones—finds fulfillment in Christ's sacrifice. This is powerful teaching material for investigators.</p>
+<p><em>(Source: <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/15?lang=eng" target="_blank">CFM Manual, Week 15</a>)</em></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Personal Study</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Daily Focus Guide</h3>
+<p><strong>Day 1 (Monday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/7/1-13/s_57001" target="_blank" data-ref="Exodus 7:1-13">Exodus 7:1–13</a>. Focus on Moses' divine commission. Journal: "What has God commissioned me to do? How am I responding?"</p>
+<p><strong>Day 2 (Tuesday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/7/14-8/s_57014" target="_blank" data-ref="Exodus 7:14-8">Exodus 7:14–8</a>:19 (Plagues 1–3). Notice the magicians' progression. Journal: "Where do I see counterfeit power failing in my world?"</p>
+<p><strong>Day 3 (Wednesday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/8/20-9/s_58020" target="_blank" data-ref="Exodus 8:20-9">Exodus 8:20–9</a>:12 (Plagues 4–6). Notice the "distinction" between Egypt and Goshen. Journal: "How does covenant belonging distinguish me?"</p>
+<p><strong>Day 4 (Thursday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/9/13-10/s_59013" target="_blank" data-ref="Exodus 9:13-10">Exodus 9:13–10</a>:29 (Plagues 7–9). Notice Pharaoh's repeated relapses. Journal: "What causes me to 'relapse' after spiritual progress?"</p>
+<p><strong>Day 5 (Friday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/11/1-12/s_61001" target="_blank" data-ref="Exodus 11:1-12">Exodus 11:1–12</a>:28. Focus on Passover institution. Journal: "How does the Passover lamb point me to Christ?"</p>
+<p><strong>Day 6 (Saturday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/12/29-51/s_62029" target="_blank" data-ref="Exodus 12:29-51">Exodus 12:29–51</a>. Notice what Israel did immediately after deliverance. Journal: "What should I do immediately after experiencing God's deliverance?"</p>
+<p><strong>Day 7 (Sunday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/13/1-22/s_63001" target="_blank" data-ref="Exodus 13:1-22">Exodus 13:1–22</a>. Focus on "remember this day." Journal: "What do I need to remember about what God has done for me?"</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Key Takeaways for All Settings</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>God judges false gods</strong> — Whatever we worship instead of Him will eventually fail.</li>
+</ol>
+<ol>
+<li><strong>Hearts harden through choice</strong> — Pharaoh's agency was preserved; he chose resistance repeatedly.</li>
+</ol>
+<ol>
+<li><strong>The Passover points to Christ</strong> — Every element foreshadows the Atonement.</li>
+</ol>
+<ol>
+<li><strong>Remembrance shapes identity</strong> — Israel's annual Passover formed their identity; our weekly sacrament forms ours.</li>
+</ol>
+<ol>
+<li><strong>Deliverance creates obligation</strong> — The firstborn were consecrated because they were rescued.</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Supplemental Resources</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Conference Talks:</strong></p>
+<ul>
+<li><a href="https://www.churchofjesuschrist.org/study/general-conference/1985/04/christ-our-passover" target="_blank">Christ, Our Passover</a> — President Howard W. Hunter (April 1985): THE definitive Conference talk connecting Passover to Christ's Atonement</li>
+<li><a href="https://www.churchofjesuschrist.org/study/general-conference/2014/10/the-sacrament-and-the-atonement" target="_blank">The Sacrament and the Atonement</a> — Elder James J. Hamula (October 2014): Connects Passover symbolism to the sacrament ordinance</li>
+</ul>
+<p><strong>Scholarly Articles:</strong></p>
+<ul>
+<li><a href="https://interpreterfoundation.org/journal/our-faithful-lord-passover-to-easter" target="_blank">Our Faithful Lord: Passover to Easter</a> — Interpreter Foundation: Historical context and Christ's fulfillment</li>
+<li><a href="https://rsc.byu.edu/vol-18-no-3-2017/i-am-bread-life" target="_blank">I Am the Bread of Life</a> — RSC: Traces manna symbolism to Christ (connects to Week 16)</li>
+</ul>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 7: WEEK 15: STUDY QUESTIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">7. Week 15: Study Questions</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Questions for Personal Reflection</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Plagues and God's Power (Exodus 7–10)</h3>
+<ol>
+<li>Each plague targeted an Egyptian god or Pharaoh's divine claims. What "gods" in modern culture compete for your worship? How does recognizing God's supreme power affect your priorities?</li>
+</ol>
+<ol>
+<li>The magicians could replicate the first two plagues but failed at the third, confessing "This is the finger of God" (<a href="https://www.blueletterbible.org/kjv/exo/8/19/s_58019" target="_blank" data-ref="Exodus 8:19">Exodus 8:19</a>). Have you witnessed moments when worldly power clearly reached its limits?</li>
+</ol>
+<ol>
+<li>Beginning with the fourth plague, God distinguished between Egypt and Goshen (<a href="https://www.blueletterbible.org/kjv/exo/8/22-23/s_58022" target="_blank" data-ref="Exodus 8:22-23">Exodus 8:22–23</a>). What does covenant "distinction" look like in your life? How are you blessed differently because of your covenants?</li>
+</ol>
+<hr>
+<h3>Pharaoh's Hard Heart (Exodus 7:13; 8:15, 32; 9:34)</h3>
+<ol>
+<li>The JST clarifies that Pharaoh hardened his own heart. How do repeated choices shape our capacity for future choices? Have you experienced this in your own spiritual life?</li>
+</ol>
+<ol>
+<li>Pharaoh repeatedly relented during the plagues, then reversed his decision when pressure eased (<a href="https://www.blueletterbible.org/kjv/exo/8/15/s_58015" target="_blank" data-ref="Exodus 8:15">Exodus 8:15; 9:34</a>). What causes spiritual "relapses" after moments of conviction? How can we maintain spiritual progress?</li>
+</ol>
+<ol>
+<li>The CFM Manual asks: "What causes a heart to become soft or hard?" Reflect on your own heart this past week. What softened it? What risked hardening it?</li>
+</ol>
+<hr>
+<h3>The Passover (Exodus 12)</h3>
+<ol>
+<li>Israel selected the lamb on the 10th day but didn't sacrifice it until the 14th (<a href="https://www.blueletterbible.org/kjv/exo/12/3-6/s_62003" target="_blank" data-ref="Exodus 12:3-6">Exodus 12:3–6</a>). What is the purpose of this waiting period? How does spiritual "waiting" serve a purpose in your life?</li>
+</ol>
+<ol>
+<li>The blood was applied to the doorposts—a public, visible sign. What does it mean that our covenant belonging is meant to be visible?</li>
+</ol>
+<ol>
+<li>The Passover was eaten "with your loins girded, your shoes on your feet, and your staff in your hand" (<a href="https://www.blueletterbible.org/kjv/exo/12/11/s_62011" target="_blank" data-ref="Exodus 12:11">Exodus 12:11</a>)—ready to move. What would it mean for you to live in spiritual readiness?</li>
+</ol>
+<ol>
+<li>No bones of the lamb were to be broken (<a href="https://www.blueletterbible.org/kjv/exo/12/46/s_62046" target="_blank" data-ref="Exodus 12:46">Exodus 12:46</a>). This was fulfilled in Christ (<a href="https://www.blueletterbible.org/kjv/jhn/19/36/s_1016036" target="_blank" data-ref="John 19:36">John 19:36</a>). What does it mean to you that God planned details of Christ's death centuries in advance?</li>
+</ol>
+<hr>
+<h3>Memory and Identity (Exodus 13)</h3>
+<ol>
+<li>"Remember this day" (<a href="https://www.blueletterbible.org/kjv/exo/13/3/s_63003" target="_blank" data-ref="Exodus 13:3">Exodus 13:3</a>). What specific acts of deliverance should you remember in your own life? How can you cultivate that memory?</li>
+</ol>
+<ol>
+<li>Parents were commanded to teach their children: "This is done because of that which the LORD did unto me when I came forth out of Egypt" (<a href="https://www.blueletterbible.org/kjv/exo/13/8/s_63008" target="_blank" data-ref="Exodus 13:8">Exodus 13:8</a>). Notice the first-person language—each generation owns the story. How do you help the next generation own the gospel story?</li>
+</ol>
+<ol>
+<li>The firstborn were consecrated to God because they were delivered (<a href="https://www.blueletterbible.org/kjv/exo/13/2/s_63002" target="_blank" data-ref="Exodus 13:2">Exodus 13:2</a>). What does it mean that deliverance creates obligation? How should your rescue by Christ affect your life choices?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Questions for Group Discussion</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Plagues as Judgment</h3>
+<ol>
+<li>Why did God send ten plagues rather than one decisive act? What does the escalating sequence reveal about God's character?</li>
+</ol>
+<ol>
+<li>Some scholars suggest the plagues followed a natural sequence (Nile flooding → ecological disaster). Does this natural explanation diminish the miracle? Why or why not?</li>
+</ol>
+<ol>
+<li><a href="https://www.blueletterbible.org/kjv/exo/12/12/s_62012" target="_blank" data-ref="Exodus 12:12">Exodus 12:12</a> states: "Against all the gods of Egypt I will execute judgment." Why is it significant that God fought Egypt's gods, not just Egypt's army?</li>
+</ol>
+<hr>
+<h3>The Hardened Heart</h3>
+<ol>
+<li>Elder Neal A. Maxwell taught that agency is the "use it or lose it" doctrine. How does Pharaoh's story illustrate this principle?</li>
+</ol>
+<ol>
+<li>The CFM Manual connects hard hearts to modern choices. Discuss: What specific choices or influences tend to harden hearts in our day?</li>
+</ol>
+<ol>
+<li>Pharaoh's servants eventually urged him to yield (<a href="https://www.blueletterbible.org/kjv/exo/10/7/s_60007" target="_blank" data-ref="Exodus 10:7">Exodus 10:7</a>). When should we listen to counsel from others about our own spiritual blind spots?</li>
+</ol>
+<hr>
+<h3>Passover and Sacrament</h3>
+<ol>
+<li>Paul wrote: "Christ our passover is sacrificed for us" (<a href="https://www.blueletterbible.org/kjv/1co/5/7/s_1067007" target="_blank" data-ref="1 Corinthians 5:7">1 Corinthians 5:7</a>). How does understanding the original Passover deepen your experience of the sacrament?</li>
+</ol>
+<ol>
+<li>The Passover was a family ordinance, eaten in homes. How does this inform our understanding of family-centered gospel living?</li>
+</ol>
+<ol>
+<li>Israel was commanded to observe Passover "throughout your generations... for ever" (<a href="https://www.blueletterbible.org/kjv/exo/12/14/s_62014" target="_blank" data-ref="Exodus 12:14">Exodus 12:14</a>). In what way does the sacrament continue this command?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Questions for Deeper Study</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Historical and Cultural</h3>
+<ol>
+<li>Egyptian religion permeated every aspect of life. What does the comprehensive targeting of Egyptian gods reveal about what it takes to fully deliver people from false worship?</li>
+</ol>
+<ol>
+<li>The Hebrew word <em>matzah</em> (unleavened bread) is connected to haste and purity. Explore the symbolism: Why is <em>removing</em> leaven important, not just avoiding it?</li>
+</ol>
+<ol>
+<li>The tenth plague struck every Egyptian household—from Pharaoh to prisoners (<a href="https://www.blueletterbible.org/kjv/exo/12/29/s_62029" target="_blank" data-ref="Exodus 12:29">Exodus 12:29</a>). What does this universal scope teach about the equality of all people before God's judgment?</li>
+</ol>
+<hr>
+<h3>Theological</h3>
+<ol>
+<li>God said the plagues were sent "that my name may be declared throughout all the earth" (<a href="https://www.blueletterbible.org/kjv/exo/9/16/s_59016" target="_blank" data-ref="Exodus 9:16">Exodus 9:16</a>). How do difficult events serve God's self-revelation?</li>
+</ol>
+<ol>
+<li>The blood was a "token" (sign) to God (<a href="https://www.blueletterbible.org/kjv/exo/12/13/s_62013" target="_blank" data-ref="Exodus 12:13">Exodus 12:13</a>). God didn't need the sign to know who was Israelite—so what purpose did the token serve?</li>
+</ol>
+<ol>
+<li>Compare <a href="https://www.blueletterbible.org/kjv/exo/13/21-22/s_63021" target="_blank" data-ref="Exodus 13:21-22">Exodus 13:21–22</a> (pillar of cloud/fire) with <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/17?lang=eng&id=p13#p13" target="_blank" data-ref="1 Nephi 17:13">1 Nephi 17:13</a> (Nephi's recounting). How does the Book of Mormon deepen our understanding of God's guidance?</li>
+</ol>
+<hr>
+<h3>Application</h3>
+<ol>
+<li>The CFM Manual teaches that a soft heart receives God's word while a hard heart resists it. What practices help you maintain a soft heart?</li>
+</ol>
+<ol>
+<li>Pharaoh's hard heart affected all of Egypt—his servants, his people, his son. How do our spiritual choices affect those around us?</li>
+</ol>
+<ol>
+<li>"Remember this day" (<a href="https://www.blueletterbible.org/kjv/exo/13/3/s_63003" target="_blank" data-ref="Exodus 13:3">Exodus 13:3</a>). What spiritual disciplines help you remember God's acts in your life? (Journaling? Sacrament preparation? Family traditions?)</li>
+</ol>
+<ol>
+<li>The lamb's blood didn't change God's knowledge—He knew who was Israelite. So why require the blood marking? What does this teach about the role of outward ordinances?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Summary Reflection</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li>What is the single most important truth you learned from <a href="https://www.blueletterbible.org/kjv/exo/7/1/s_57001" target="_blank" data-ref="Exodus 7">Exodus 7–13</a> this week?</li>
+</ol>
+<ol>
+<li>How does the Passover help you understand Christ's Atonement more deeply?</li>
+</ol>
+<ol>
+<li>What specific action will you take this week because of what you've studied?</li>
+</ol>
+<ol>
+<li>What question do you still have that you want to explore further?</li>
+</ol>
+<hr>
+<p><em>Note: 36 questions provided for comprehensive personal and group study.</em></p>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+</div>

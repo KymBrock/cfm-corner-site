@@ -1,19 +1,18 @@
 ---
 title: "The Words That Carry a Whole Phrase"
-description: "Learn how Hebrew prepositions absorb their pronouns as suffixes — and hear a single word say 'with him' or 'upon me.'"
+description: "Learn how Hebrew prepositions absorb their pronouns as suffixes — and hear a single word say 'over you' or 'before me.'"
 lesson_num: 11
 weight: 11
-week_ref: "13"
-draft: true
+week_ref: "15"
 ---
 
 ## When Prepositions Carry Pronouns
 
-In English, "against me" is two words. In [Genesis 50:20](https://www.blueletterbible.org/kjv/gen/50/20/), Hebrew says <a href="https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/" target="_blank" data-lexicon="upon, above, over, against" data-strongs="H5921" data-translit="al" data-original="עַל" data-lang="hebrew" data-verse="Genesis 50:20">עָלַי</a> (*alai*) — one word. The preposition and the pronoun have fused together.
+In English, "before me" is two words. In [Exodus 10:3](https://www.blueletterbible.org/kjv/exo/10/3/), Hebrew says <span dir="rtl" lang="he">מִפָּנַי</span> ([*mippanai*](https://www.blueletterbible.org/lexicon/h6440/kjv/wlc/0-1/)) — one word. The preposition and the pronoun have fused together.
 
-This is not a quirk of one verse. It happens *thousands* of times in the Hebrew Bible. Every time the text says "with him," "to me," "from them," "upon us," or "in her," Hebrew collapses the preposition and pronoun into a single word. Two English words become one.
+This is not a quirk of one verse. It happens *thousands* of times in the Hebrew Bible. Every time the text says "with him," "to me," "from them," "upon us," or "over you," Hebrew collapses the preposition and pronoun into a single word. Two English words become one.
 
-In [Lesson 10](../10-inseparable-prepositions/) we learned that prepositions like בְּ, כְּ, לְ, and מִ attach to nouns as prefixes. Now we take the next step: what happens when the preposition needs to carry a *pronoun* instead of a noun? The pronoun attaches to the back of the preposition as a **suffix** — the same kind of suffix that marks person, gender, and number on verbs.
+In [Lesson 10](../10-inseparable-prepositions/) we learned that prepositions like <span dir="rtl" lang="he">בְּ</span>, <span dir="rtl" lang="he">כְּ</span>, <span dir="rtl" lang="he">לְ</span>, and <span dir="rtl" lang="he">מִ</span> attach to nouns as prefixes. Now we take the next step: what happens when the preposition needs to carry a *pronoun* instead of a noun? The pronoun attaches to the back of the preposition as a **suffix** — the same kind of suffix that marks person, gender, and number on verbs.
 
 These are called **pronominal suffixes on prepositions**, and once you recognize them, the text opens up dramatically.
 
@@ -21,218 +20,513 @@ These are called **pronominal suffixes on prepositions**, and once you recognize
 
 ## The Suffix System at a Glance
 
-Before we attach suffixes to specific prepositions, let's see the pattern. Hebrew uses a consistent set of pronoun suffixes. The exact vowels shift slightly depending on the preposition, but the consonant skeleton is recognizable across all of them:
+Hebrew uses a consistent set of pronoun suffixes. The exact vowels shift slightly depending on the preposition, but the consonant skeleton is recognizable across all of them. Here they are arranged with singulars on the left, plurals on the right:
 
 <div style="overflow-x: auto; margin: 20px 0;">
-<table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
-<thead><tr style="background: linear-gradient(135deg, #5a6d5f 0%, #4a6b52 100%); color: white;"><th style="padding: 8px 14px;">PGN</th><th style="padding: 8px 14px;">Person</th><th style="padding: 8px 14px;">Suffix Pattern</th><th style="padding: 8px 14px;">English</th></tr></thead>
+<table style="width: 100%; border-collapse: collapse; font-size: 0.95em;">
+<thead>
+<tr style="background: linear-gradient(135deg, #5a6d5f 0%, #4a6b52 100%); color: white;">
+<th colspan="3" style="padding: 10px 14px; text-align: center; border-right: 2px solid rgba(255,255,255,0.3);">Singular</th>
+<th colspan="3" style="padding: 10px 14px; text-align: center;">Plural</th>
+</tr>
+<tr style="background: rgba(74,107,82,0.15);">
+<th style="padding: 8px 12px;">PGN</th>
+<th style="padding: 8px 12px;">Suffix</th>
+<th style="padding: 8px 12px; border-right: 2px solid rgba(74,107,82,0.3);">English</th>
+<th style="padding: 8px 12px;">PGN</th>
+<th style="padding: 8px 12px;">Suffix</th>
+<th style="padding: 8px 12px;">English</th>
+</tr>
+</thead>
 <tbody>
-<tr><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #4a6b52; font-weight:600;">1cs</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">I / me</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-size: 1.1em;">-ִי / -ַי</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">...me</td></tr>
-<tr style="background: rgba(87,137,156,0.06);"><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #1e3a4f; font-weight:600;">2ms</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">you (m)</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-size: 1.1em;">-ְךָ</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">...you</td></tr>
-<tr><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #6a5983; font-weight:600;">2fs</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">you (f)</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-size: 1.1em;">-ָךְ</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">...you</td></tr>
-<tr style="background: rgba(87,137,156,0.06);"><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #1e3a4f; font-weight:600;">3ms</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">he / him</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-size: 1.1em;">-וֹ / -ָיו</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">...him</td></tr>
-<tr><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #6a5983; font-weight:600;">3fs</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">she / her</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-size: 1.1em;">-ָהּ / -ֶיהָ</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">...her</td></tr>
-<tr style="background: rgba(74,107,82,0.08);"><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #4a6b52; font-weight:600;">1cp</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">we / us</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-size: 1.1em;">-ָנוּ / -ֵינוּ</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">...us</td></tr>
-<tr style="background: rgba(87,137,156,0.06);"><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #1e3a4f; font-weight:600;">2mp</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">you all (m)</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-size: 1.1em;">-ָכֶם</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">...you all</td></tr>
-<tr><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #1e3a4f; font-weight:600;">3mp</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">they / them (m)</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-size: 1.1em;">-ָם / -ֵיהֶם</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">...them</td></tr>
+<tr>
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3; color: #4a6b52; font-weight: 600;">1cs</td>
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3; font-size: 1.15em;" dir="rtl" lang="he">־ִי / ־ַי</td>
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3; border-right: 2px solid rgba(74,107,82,0.15);">...me</td>
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3; color: #4a6b52; font-weight: 600;">1cp</td>
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3; font-size: 1.15em;" dir="rtl" lang="he">־ָנוּ / ־ֵינוּ</td>
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3;">...us</td>
+</tr>
+<tr style="background: rgba(87,137,156,0.06);">
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3; color: #1e3a4f; font-weight: 600;">2ms</td>
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3; font-size: 1.15em;" dir="rtl" lang="he">־ְךָ</td>
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3; border-right: 2px solid rgba(74,107,82,0.15);">...you (m)</td>
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3; color: #1e3a4f; font-weight: 600;">2mp</td>
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3; font-size: 1.15em;" dir="rtl" lang="he">־ָכֶם</td>
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3;">...you all</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3; color: #6a5983; font-weight: 600;">2fs</td>
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3; font-size: 1.15em;" dir="rtl" lang="he">־ָךְ</td>
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3; border-right: 2px solid rgba(74,107,82,0.15);">...you (f)</td>
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3; color: #6a5983; font-weight: 600;">2fp</td>
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3; font-size: 1.15em; color: #999;" dir="rtl" lang="he">־ְכֶן</td>
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3; color: #999;">...you all (f) <em>rare</em></td>
+</tr>
+<tr style="background: rgba(87,137,156,0.06);">
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3; color: #1e3a4f; font-weight: 600;">3ms</td>
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3; font-size: 1.15em;" dir="rtl" lang="he">־וֹ / ־ָיו</td>
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3; border-right: 2px solid rgba(74,107,82,0.15);">...him</td>
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3; color: #1e3a4f; font-weight: 600;">3mp</td>
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3; font-size: 1.15em;" dir="rtl" lang="he">־ָם / ־ֵיהֶם</td>
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3;">...them</td>
+</tr>
+<tr>
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3; color: #6a5983; font-weight: 600;">3fs</td>
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3; font-size: 1.15em;" dir="rtl" lang="he">־ָהּ / ־ֶיהָ</td>
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3; border-right: 2px solid rgba(74,107,82,0.15);">...her</td>
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3; color: #6a5983; font-weight: 600;">3fp</td>
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3; font-size: 1.15em; color: #999;" dir="rtl" lang="he">־ָן / ־ֵיהֶן</td>
+<td style="padding: 8px 12px; border-bottom: 1px solid #eef1f3; color: #999;">...them (f) <em>rare</em></td>
+</tr>
 </tbody>
 </table>
 </div>
 
-Don't memorize this chart in isolation. Instead, watch these patterns come alive as we walk through each preposition below — with examples from this week's reading in Genesis 42–50.
+Don't memorize this chart in isolation. Instead, watch these patterns come alive as we walk through each preposition below — with examples from this week's reading in Exodus 7–13.
 
----
-
-## לְ (le-) — to / for
-
-The preposition <a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" target="_blank" data-lexicon="to, for, in regard to" data-strongs="H413" data-translit="le" data-original="לְ" data-lang="hebrew">לְ</a> (*le-*, "to" or "for") is one of the most common words in the entire Hebrew Bible. In Lesson 10 you met it as an inseparable prefix: לַמֶּלֶךְ ("to the king"), לְיִשְׂרָאֵל ("for Israel"). When a pronoun replaces the noun, the suffix attaches directly:
-
-<div style="overflow-x: auto; margin: 20px 0;">
-<table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
-<thead><tr style="background: linear-gradient(135deg, #5a6d5f 0%, #4a6b52 100%); color: white;"><th style="padding: 8px 14px;">Person</th><th style="padding: 8px 14px; text-align: right;">Hebrew</th><th style="padding: 8px 14px;">Transliteration</th><th style="padding: 8px 14px;">Meaning</th></tr></thead>
-<tbody>
-<tr><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #4a6b52; font-weight:600;">1cs</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">לִי</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">li</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">to me / for me</td></tr>
-<tr style="background: rgba(87,137,156,0.06);"><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #1e3a4f; font-weight:600;">2ms</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">לְךָ</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">lekha</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">to you (m)</td></tr>
-<tr><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #6a5983; font-weight:600;">2fs</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">לָךְ</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">lakh</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">to you (f)</td></tr>
-<tr style="background: rgba(87,137,156,0.06);"><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #1e3a4f; font-weight:600;">3ms</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">לוֹ</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">lo</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">to him / for him</td></tr>
-<tr><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #6a5983; font-weight:600;">3fs</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">לָהּ</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">lah</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">to her / for her</td></tr>
-<tr style="background: rgba(74,107,82,0.08);"><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #4a6b52; font-weight:600;">1cp</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">לָנוּ</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">lanu</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">to us / for us</td></tr>
-<tr style="background: rgba(87,137,156,0.06);"><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #1e3a4f; font-weight:600;">2mp</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">לָכֶם</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">lakhem</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">to you all (m)</td></tr>
-<tr><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #1e3a4f; font-weight:600;">3mp</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">לָהֶם</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">lahem</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">to them (m)</td></tr>
-</tbody>
-</table>
-</div>
-
-<div style="background: rgba(74,107,82,0.08); border-left: 4px solid var(--sage-dark); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
-
-**In this week's reading:** [Genesis 45:5](https://www.blueletterbible.org/kjv/gen/45/5/) — Joseph reassures his brothers: **כִּי לְמִחְיָה שְׁלָחַנִי אֱלֹהִים לִפְנֵיכֶם** — "for God sent me before you to preserve life." The final word **<a href="https://www.blueletterbible.org/lexicon/h6440/kjv/wlc/0-1/" target="_blank" data-lexicon="face, presence, before" data-strongs="H6440" data-translit="panim" data-original="פָּנִים" data-lang="hebrew" data-verse="Genesis 45:5">לִפְנֵיכֶם</a>** (*lifneikhem*) packs three elements into one: the preposition לְ ("to/before") + <a href="https://www.blueletterbible.org/lexicon/h6440/kjv/wlc/0-1/" target="_blank" data-lexicon="face, presence, before" data-strongs="H6440" data-translit="panim" data-original="פָּנִים" data-lang="hebrew">פָּנִים</a> (*panim*, "face") + the 2mp suffix כֶם ("your"). One word carrying "to-the-face-of-you-all" — "before you."
-
-</div>
-
----
-
-## אֵת / עִם — with
-
-Hebrew has two prepositions meaning "with": <a href="https://www.blueletterbible.org/lexicon/h854/kjv/wlc/0-1/" target="_blank" data-lexicon="with, near, together with" data-strongs="H854" data-translit="et" data-original="אֵת" data-lang="hebrew">אֵת</a> (*et*) and <a href="https://www.blueletterbible.org/lexicon/h5973/kjv/wlc/0-1/" target="_blank" data-lexicon="with, together with" data-strongs="H5973" data-translit="im" data-original="עִם" data-lang="hebrew">עִם</a> (*im*). They are largely interchangeable. Both take pronominal suffixes, and the forms of אֵת are the ones you will encounter most in Genesis.
-
-<div style="background: rgba(195,124,60,0.1); border-left: 4px solid var(--copper); border-radius: 8px; padding: 16px 20px; margin-bottom: 16px;">
-
-**A critical distinction:** Hebrew has two completely different words that look identical in unpointed text — both written אֵת or אֶת:
-
-1. **The direct object marker** (אֵת, *et*) — the particle you learned in [Lesson 8](../08-parts-of-speech/) that marks the direct object of a verb. It has no translation and takes no pronominal suffixes.
-2. **The preposition "with"** (אֵת, *et*) — a relational word meaning "with, alongside, in company with." This one *does* take pronominal suffixes, and when it does, it takes the form **אִתּ-** (*itt-*).
-
-The vowels and context tell them apart. When you see a suffix attached (אִתִּי, אִתּוֹ), it is always the preposition "with" — never the direct object marker.
-
-</div>
-
-<div style="overflow-x: auto; margin: 20px 0;">
-<table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
-<thead><tr style="background: linear-gradient(135deg, #5a6d5f 0%, #4a6b52 100%); color: white;"><th style="padding: 8px 14px;">Person</th><th style="padding: 8px 14px; text-align: right;">Hebrew (אֵת)</th><th style="padding: 8px 14px;">Transliteration</th><th style="padding: 8px 14px;">Meaning</th></tr></thead>
-<tbody>
-<tr><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #4a6b52; font-weight:600;">1cs</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h854/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">אִתִּי</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">itti</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">with me</td></tr>
-<tr style="background: rgba(87,137,156,0.06);"><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #1e3a4f; font-weight:600;">2ms</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h854/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">אִתְּךָ</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">ittekha</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">with you (m)</td></tr>
-<tr><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #6a5983; font-weight:600;">2fs</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h854/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">אִתָּךְ</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">ittakh</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">with you (f)</td></tr>
-<tr style="background: rgba(87,137,156,0.06);"><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #1e3a4f; font-weight:600;">3ms</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h854/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">אִתּוֹ</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">itto</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">with him</td></tr>
-<tr><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #6a5983; font-weight:600;">3fs</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h854/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">אִתָּהּ</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">ittah</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">with her</td></tr>
-<tr style="background: rgba(74,107,82,0.08);"><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #4a6b52; font-weight:600;">1cp</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h854/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">אִתָּנוּ</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">ittanu</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">with us</td></tr>
-<tr style="background: rgba(87,137,156,0.06);"><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #1e3a4f; font-weight:600;">2mp</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h854/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">אִתְּכֶם</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">ittekem</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">with you all (m)</td></tr>
-<tr><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #1e3a4f; font-weight:600;">3mp</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h854/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">אִתָּם</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">ittam</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">with them (m)</td></tr>
-</tbody>
-</table>
-</div>
-
-<div style="background: rgba(74,107,82,0.08); border-left: 4px solid var(--sage-dark); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
-
-**In this week's reading:** [Genesis 48:21](https://www.blueletterbible.org/kjv/gen/48/21/) — Jacob's deathbed promise to Joseph: **וְהָיָה אֱלֹהִים עִמָּכֶם** — "God will be **with you**." The word **<a href="https://www.blueletterbible.org/lexicon/h5973/kjv/wlc/0-1/" target="_blank" data-lexicon="with, together with" data-strongs="H5973" data-translit="im" data-original="עִם" data-lang="hebrew" data-verse="Genesis 48:21">עִמָּכֶם</a>** (*immakhem*) is the preposition עִם ("with") fused with the 2mp suffix כֶם ("you all"). One word carries a dying patriarch's entire theology of promise: God's presence will continue with the next generation.
-
-This is the same grammar we see in [Genesis 39:2–3](https://www.blueletterbible.org/kjv/gen/39/2/), where the narrator repeats **<a href="https://www.blueletterbible.org/lexicon/h854/kjv/wlc/0-1/" target="_blank" data-lexicon="with, near, together with" data-strongs="H854" data-translit="et" data-original="אֵת" data-lang="hebrew" data-verse="Genesis 39:2">אִתּוֹ</a>** (*itto*) — "with him" — four times: "the LORD was **with him**." The refrain that carried Joseph through slavery and prison is now handed forward as a covenant inheritance.
-
+<div style="background: rgba(74,107,82,0.08); border-radius: 8px; padding: 12px 16px; margin: 16px 0; display: inline-block;">
+<strong>Color Key:</strong> In the tables below, <span style="color: #4a6b52; font-weight: 600;">green</span> = preposition root | <span style="color: #b35900; font-weight: 600;">amber</span> = pronominal suffix
 </div>
 
 ---
 
-## The Rest of the Family: אֶל, עַל, בְּ, מִן
+## <span dir="rtl" lang="he">לְ</span> (le-) — to / for
 
-Four more prepositions take pronominal suffixes in exactly the same way. We will group them in pairs and show the most common forms for each.
-
-### אֶל (el-) — to / toward
-
-<a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" target="_blank" data-lexicon="to, toward, unto" data-strongs="H413" data-translit="el" data-original="אֶל" data-lang="hebrew">אֶל</a> (*el-*, "to, toward") is distinct from לְ (*le-*, "to, for"). The difference is subtle: לְ tends toward **purpose** ("for him"), while אֶל tends toward **direction** ("toward him"). With suffixes it expands to **אֵלַ-** / **אֵלֶ-** / **אֵלָ-**:
+The preposition [<span dir="rtl" lang="he">לְ</span>](https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/) (*le-*, "to" or "for") is one of the most common words in the entire Hebrew Bible. In Lesson 10 you met it as an inseparable prefix: <span dir="rtl" lang="he">לַמֶּלֶךְ</span> ("to the king"), <span dir="rtl" lang="he">לְיִשְׂרָאֵל</span> ("for Israel"). When a pronoun replaces the noun, the suffix attaches directly:
 
 <div style="overflow-x: auto; margin: 20px 0;">
-<table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
-<thead><tr style="background: linear-gradient(135deg, #5a6d5f 0%, #4a6b52 100%); color: white;"><th style="padding: 8px 14px;">Person</th><th style="padding: 8px 14px; text-align: right;">Hebrew</th><th style="padding: 8px 14px;">Transliteration</th><th style="padding: 8px 14px;">Meaning</th></tr></thead>
+<table style="width: 100%; border-collapse: collapse; font-size: 0.95em;">
+<thead>
+<tr style="background: linear-gradient(135deg, #5a6d5f 0%, #4a6b52 100%); color: white;">
+<th colspan="4" style="padding: 10px 14px; text-align: center; border-right: 2px solid rgba(255,255,255,0.3);">Singular</th>
+<th colspan="4" style="padding: 10px 14px; text-align: center;">Plural</th>
+</tr>
+</thead>
 <tbody>
-<tr><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #4a6b52; font-weight:600;">1cs</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">אֵלַי</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">elai</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">to me</td></tr>
-<tr style="background: rgba(87,137,156,0.06);"><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #1e3a4f; font-weight:600;">3ms</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">אֵלָיו</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">elav</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">to him</td></tr>
-<tr><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #6a5983; font-weight:600;">3fs</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">אֵלֶיהָ</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">eleiha</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">to her</td></tr>
-<tr style="background: rgba(74,107,82,0.08);"><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #4a6b52; font-weight:600;">1cp</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">אֵלֵינוּ</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">eleinu</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">to us</td></tr>
-<tr style="background: rgba(87,137,156,0.06);"><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #1e3a4f; font-weight:600;">3mp</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">אֲלֵיהֶם</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">aleihem</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">to them (m)</td></tr>
+<tr style="background: rgba(74,107,82,0.1);">
+<td style="padding: 8px 10px; font-weight: 600; color: #4a6b52;">1cs</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">לִ</span><span style="color:#b35900">י</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">l</span><span style="color:#b35900">i</span></td>
+<td style="padding: 8px 10px; border-right: 2px solid rgba(74,107,82,0.2);">to me</td>
+<td style="padding: 8px 10px; font-weight: 600; color: #4a6b52;">1cp</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">לָ</span><span style="color:#b35900">נוּ</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">la</span><span style="color:#b35900">nu</span></td>
+<td style="padding: 8px 10px;">to us</td>
+</tr>
+<tr>
+<td style="padding: 8px 10px; font-weight: 600; color: #1e3a4f;">2ms</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">לְ</span><span style="color:#b35900">ךָ</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">le</span><span style="color:#b35900">kha</span></td>
+<td style="padding: 8px 10px; border-right: 2px solid rgba(74,107,82,0.2);">to you (m)</td>
+<td style="padding: 8px 10px; font-weight: 600; color: #1e3a4f;">2mp</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">לָ</span><span style="color:#b35900">כֶם</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">la</span><span style="color:#b35900">khem</span></td>
+<td style="padding: 8px 10px;">to you all</td>
+</tr>
+<tr style="background: rgba(74,107,82,0.1);">
+<td style="padding: 8px 10px; font-weight: 600; color: #1e3a4f;">3ms</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">לֹ</span><span style="color:#b35900">ו</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">l</span><span style="color:#b35900">o</span></td>
+<td style="padding: 8px 10px; border-right: 2px solid rgba(74,107,82,0.2);">to him</td>
+<td style="padding: 8px 10px; font-weight: 600; color: #1e3a4f;">3mp</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">לָ</span><span style="color:#b35900">הֶם</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">la</span><span style="color:#b35900">hem</span></td>
+<td style="padding: 8px 10px;">to them</td>
+</tr>
+<tr>
+<td style="padding: 8px 10px; font-weight: 600; color: #6a5983;">3fs</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">לָ</span><span style="color:#b35900">הּ</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">la</span><span style="color:#b35900">h</span></td>
+<td style="padding: 8px 10px; border-right: 2px solid rgba(74,107,82,0.2);">to her</td>
+<td colspan="4" style="padding: 8px 10px;"></td>
+</tr>
 </tbody>
 </table>
 </div>
 
-In [Genesis 45:3](https://www.blueletterbible.org/kjv/gen/45/3/), when Joseph reveals his identity, the text says: **וְלֹא-יָכְלוּ אֶחָיו לַעֲנוֹת אֹתוֹ כִּי נִבְהֲלוּ מִפָּנָיו** — "his brothers could not answer him, for they were terrified **before him**." The word **<a href="https://www.blueletterbible.org/lexicon/h6440/kjv/wlc/0-1/" target="_blank" data-lexicon="face, presence, before" data-strongs="H6440" data-translit="panim" data-original="פָּנִים" data-lang="hebrew" data-verse="Genesis 45:3">מִפָּנָיו</a>** (*mippanav*) is a compound: the preposition מִן ("from") + פָּנִים (*panim*, "face") + the 3ms suffix יו ("his"). Three layers packed into one word: "from-face-of-him" — that is, "from before him."
+<div style="background: rgba(74,107,82,0.08); border-left: 4px solid #4a6b52; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
 
-### עַל (al-) — on / upon / over / concerning
-
-<a href="https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/" target="_blank" data-lexicon="upon, above, over, against" data-strongs="H5921" data-translit="al" data-original="עַל" data-lang="hebrew">עַל</a> (*al-*, "on, upon, over, concerning") has remarkable range. It can be physical ("upon the altar"), relational ("over his brothers"), or emotional ("concerning this matter"). With suffixes it expands to **עָלַ-** / **עָלֶ-** / **עָלָ-**:
-
-<div style="overflow-x: auto; margin: 20px 0;">
-<table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
-<thead><tr style="background: linear-gradient(135deg, #5a6d5f 0%, #4a6b52 100%); color: white;"><th style="padding: 8px 14px;">Person</th><th style="padding: 8px 14px; text-align: right;">Hebrew</th><th style="padding: 8px 14px;">Transliteration</th><th style="padding: 8px 14px;">Meaning</th></tr></thead>
-<tbody>
-<tr><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #4a6b52; font-weight:600;">1cs</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">עָלַי</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">alai</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">on me / upon me</td></tr>
-<tr style="background: rgba(87,137,156,0.06);"><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #1e3a4f; font-weight:600;">3ms</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">עָלָיו</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">alav</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">on him / upon him</td></tr>
-<tr><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #6a5983; font-weight:600;">3fs</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">עָלֶיהָ</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">aleiha</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">on her</td></tr>
-<tr style="background: rgba(74,107,82,0.08);"><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #4a6b52; font-weight:600;">1cp</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">עָלֵינוּ</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">aleinu</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">on us</td></tr>
-<tr style="background: rgba(87,137,156,0.06);"><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #1e3a4f; font-weight:600;">3mp</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">עֲלֵיהֶם</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">aleihem</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">on them (m)</td></tr>
-</tbody>
-</table>
-</div>
-
-In [Genesis 42:36](https://www.blueletterbible.org/kjv/gen/42/36/), Jacob cries out: **עָלַי הָיוּ כֻלָּנָה** — "**Upon me** are all these things come." The word **<a href="https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/" target="_blank" data-lexicon="upon, above, over, against" data-strongs="H5921" data-translit="al" data-original="עַל" data-lang="hebrew" data-verse="Genesis 42:36">עָלַי</a>** (*alai*) is עַל + the 1cs suffix: "upon-me." In a single word, Jacob expresses the weight of every loss pressing down on him. We will return to this exact form in the scripture anchor below — where Joseph transforms its meaning entirely.
-
-### בְּ (be-) — in / with / by / through
-
-<a href="https://www.blueletterbible.org/lexicon/h9002/kjv/wlc/0-1/" target="_blank" data-lexicon="in, at, with, by, through" data-strongs="H9002" data-translit="be" data-original="בְּ" data-lang="hebrew">בְּ</a> (*be-*, "in, with, by, through") is one of the three inseparable prepositions from Lesson 10. When a pronominal suffix attaches, the vowel pattern shifts:
-
-<div style="overflow-x: auto; margin: 20px 0;">
-<table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
-<thead><tr style="background: linear-gradient(135deg, #5a6d5f 0%, #4a6b52 100%); color: white;"><th style="padding: 8px 14px;">Person</th><th style="padding: 8px 14px; text-align: right;">Hebrew</th><th style="padding: 8px 14px;">Transliteration</th><th style="padding: 8px 14px;">Meaning</th></tr></thead>
-<tbody>
-<tr><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #4a6b52; font-weight:600;">1cs</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;">בִּי</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">bi</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">in me / by me</td></tr>
-<tr style="background: rgba(87,137,156,0.06);"><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #1e3a4f; font-weight:600;">3ms</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;">בּוֹ</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">bo</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">in him / by him</td></tr>
-<tr><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #6a5983; font-weight:600;">3fs</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;">בָּהּ</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">bah</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">in her / by her</td></tr>
-<tr style="background: rgba(74,107,82,0.08);"><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #4a6b52; font-weight:600;">1cp</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;">בָּנוּ</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">banu</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">in us</td></tr>
-<tr style="background: rgba(87,137,156,0.06);"><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #1e3a4f; font-weight:600;">3mp</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;">בָּהֶם</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">bahem</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">in them (m)</td></tr>
-</tbody>
-</table>
-</div>
-
-In [Genesis 44:5](https://www.blueletterbible.org/kjv/gen/44/5/), Joseph's steward says of the silver cup: **הֲלוֹא זֶה אֲשֶׁר יִשְׁתֶּה אֲדֹנִי בּוֹ** — "Is not this it from which my lord drinks, **and by which he tests**?" The word **<a href="https://www.blueletterbible.org/lexicon/h9002/kjv/wlc/0-1/" target="_blank" data-lexicon="in, at, with, by, through" data-strongs="H9002" data-translit="be" data-original="בְּ" data-lang="hebrew" data-verse="Genesis 44:5">בּוֹ</a>** (*bo*) is the preposition בְּ fused with the 3ms suffix: "in-it / by-it." The Targum Onkelos renders this as *badaqa mevadeq beh* — "testing, he tests **by it**" — protecting Joseph's character by replacing "divination" with "testing" ([Targum Onkelos, Genesis 44:5](https://www.sefaria.org/Onkelos_Genesis.44.5)).
-
-### מִן (min-) — from / out of
-
-<a href="https://www.blueletterbible.org/lexicon/h4480/kjv/wlc/0-1/" target="_blank" data-lexicon="from, out of, because of, more than" data-strongs="H4480" data-translit="min" data-original="מִן" data-lang="hebrew">מִן</a> (*min-*, "from, out of, because of") behaves distinctively. Rather than keeping its simple form, the נ (*nun*) assimilates and the suffix attaches to **מִמּ-**:
-
-<div style="overflow-x: auto; margin: 20px 0;">
-<table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
-<thead><tr style="background: linear-gradient(135deg, #5a6d5f 0%, #4a6b52 100%); color: white;"><th style="padding: 8px 14px;">Person</th><th style="padding: 8px 14px; text-align: right;">Hebrew</th><th style="padding: 8px 14px;">Transliteration</th><th style="padding: 8px 14px;">Meaning</th></tr></thead>
-<tbody>
-<tr><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #4a6b52; font-weight:600;">1cs</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h4480/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">מִמֶּנִּי</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">mimmenni</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">from me</td></tr>
-<tr style="background: rgba(87,137,156,0.06);"><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #1e3a4f; font-weight:600;">3ms</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h4480/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">מִמֶּנּוּ</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">mimmennu</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">from him</td></tr>
-<tr><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #6a5983; font-weight:600;">3fs</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h4480/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">מִמֶּנָּה</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">mimmennah</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">from her</td></tr>
-<tr style="background: rgba(74,107,82,0.08);"><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #4a6b52; font-weight:600;">1cp</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h4480/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">מִמֶּנּוּ</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">mimmennu</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">from us</td></tr>
-<tr style="background: rgba(87,137,156,0.06);"><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; color: #1e3a4f; font-weight:600;">3mp</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; text-align: right; font-size: 1.15em;"><a href="https://www.blueletterbible.org/lexicon/h4480/kjv/wlc/0-1/" target="_blank" style="color: #4a6b52; text-decoration: none;">מֵהֶם</a></td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3; font-style: italic;">mehem</td><td style="padding: 7px 14px; border-bottom: 1px solid #eef1f3;">from them (m)</td></tr>
-</tbody>
-</table>
-</div>
-
-<div style="background: rgba(213,169,60,0.1); border-left: 4px solid var(--gold); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
-
-**A fascinating ambiguity:** The 3ms form מִמֶּנּוּ (*mimmennu*, "from him") and the 1cp form מִמֶּנּוּ (*mimmennu*, "from us") are **identical** in most manuscripts. Context is the only guide. This kind of grammatical ambiguity is not unique to Hebrew — English has its own (like "you" being singular or plural) — but it is a reminder that biblical interpretation has always required careful attention to context, not just vocabulary.
+**In this week's reading:** [Exodus 12:13](https://www.blueletterbible.org/kjv/exo/12/13/) — God establishes the Passover sign: <span dir="rtl" lang="he" style="font-size: 1.1em;">**וְהָיָה הַדָּם לָכֶם לְאֹת**</span> — "And the blood shall be **to you** for a token." The word <span dir="rtl" lang="he">**לָכֶם**</span> ([*lakhem*](https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/)) is the preposition <span dir="rtl" lang="he">לְ</span> ("to/for") fused with the 2mp suffix <span dir="rtl" lang="he">כֶם</span> ("you all"). One word carrying "to-you-all" — the blood belongs *to* Israel as their covenant marker.
 
 </div>
-
-In [Genesis 44:4](https://www.blueletterbible.org/kjv/gen/44/4/), as Joseph's brothers leave the city: **הֵם יָצְאוּ אֶת-הָעִיר לֹא הִרְחִיקוּ** — "They were gone out of the city, and were not yet far off." The movement *from* a place is the essence of מִן: separation, departure, origin. When [Genesis 45:3](https://www.blueletterbible.org/kjv/gen/45/3/) says the brothers were terrified **מִפָּנָיו** ([*mippanav*](https://www.blueletterbible.org/lexicon/h6440/kjv/wlc/0-1/)) — "from before him" — the מִן carries the sense of recoiling *away from* Joseph's presence.
 
 ---
 
-## "You Intended It Against Me" — Genesis 50:20
+## <span dir="rtl" lang="he">אֵת</span> / <span dir="rtl" lang="he">עִם</span> — with
 
-Everything we have studied in this lesson converges in the most theologically important verse in the Joseph narrative. [Genesis 50:20](https://www.blueletterbible.org/kjv/gen/50/20/) is the moment Joseph speaks the interpretive key to his entire story — and he does it with prepositions:
+Hebrew has two prepositions meaning "with": [<span dir="rtl" lang="he">אֵת</span>](https://www.blueletterbible.org/lexicon/h854/kjv/wlc/0-1/) (*et*) and [<span dir="rtl" lang="he">עִם</span>](https://www.blueletterbible.org/lexicon/h5973/kjv/wlc/0-1/) (*im*). Both take pronominal suffixes, and <span dir="rtl" lang="he">עִם</span> appears at a crucial moment in the plagues narrative.
 
-<div style="background: rgba(30,58,79,0.08); border-left: 4px solid var(--navy); border-radius: 8px; padding: 16px 20px; margin-bottom: 16px;">
+<div style="background: rgba(195,124,60,0.1); border-left: 4px solid #c37c3c; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px;">
 
-**וְאַתֶּם חֲשַׁבְתֶּם עָלַי רָעָה אֱלֹהִים חֲשָׁבָהּ לְטֹבָה**
+**A critical distinction:** Hebrew has two completely different words that look identical in unpointed text — both written <span dir="rtl" lang="he">אֵת</span> or <span dir="rtl" lang="he">אֶת</span>:
 
-*"You intended [it] **against me** [for] evil, but God intended it **for** good."*
+1. **The direct object marker** (<span dir="rtl" lang="he">אֵת</span>, *et*) — the particle you learned in [Lesson 8](../08-parts-of-speech/) that marks the direct object of a verb. It takes no pronominal suffixes.
+2. **The preposition "with"** (<span dir="rtl" lang="he">אֵת</span>, *et*) — meaning "with, alongside." This one *does* take suffixes, becoming <span dir="rtl" lang="he">**אִתּ-**</span> (*itt-*).
 
-</div>
-
-Two prepositions carry the entire weight of this verse:
-
-- **<a href="https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/" target="_blank" data-lexicon="upon, above, over, against" data-strongs="H5921" data-translit="al" data-original="עַל" data-lang="hebrew" data-verse="Genesis 50:20">עָלַי</a>** (*alai*) — the preposition עַל ("upon/against") fused with the 1cs suffix ("me"). One word: "against-me." This is the same form Jacob used in [Genesis 42:36](https://www.blueletterbible.org/kjv/gen/42/36/) when he cried **עָלַי הָיוּ כֻלָּנָה** — "upon me are all these things come." Father and son both felt the weight of עָלַי. But Joseph speaks it with a different grammar surrounding it.
-
-- **<a href="https://www.blueletterbible.org/lexicon/h2896/kjv/wlc/0-1/" target="_blank" data-lexicon="good, pleasant, agreeable" data-strongs="H2896" data-translit="tov" data-original="טוֹב" data-lang="hebrew" data-verse="Genesis 50:20">לְטֹבָה</a>** (*letovah*) — the preposition לְ ("to/for") fused with <a href="https://www.blueletterbible.org/lexicon/h2896/kjv/wlc/0-1/" target="_blank" data-lexicon="good, pleasant, agreeable" data-strongs="H2896" data-translit="tov" data-original="טוֹב" data-lang="hebrew">טוֹבָה</a> (*tovah*, "good/goodness"). One word: "for-good."
-
-<div style="background: rgba(74,107,82,0.08); border-left: 4px solid var(--sage-dark); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
-
-**The grammar of providence:** Notice what Joseph does *not* say. He does not say the evil was imaginary. He does not minimize what happened. The עָלַי stands — you acted *against me*. But God took the same events and redirected them through a different preposition: לְטֹבָה — *for good*. Two prepositions in one verse: one carrying the pain, one carrying the purpose.
-
-The Targum Onkelos transforms Joseph's rhetorical question in [Genesis 50:19](https://www.blueletterbible.org/kjv/gen/50/19/) from "Am I in the place of God?" into a positive declaration: **דָחֲלָא דַיְיָ אֲנָא** (*dachala da-YY ana*) — "I am one who fears God" ([Targum Onkelos, Genesis 50:19](https://www.sefaria.org/Onkelos_Genesis.50.19)). Joseph's forgiveness is not mere generosity — it flows from a theology expressed through grammar. The prepositions tell you *who* bears the weight and *where* God redirects it.
+When you see a suffix attached (<span dir="rtl" lang="he">אִתִּי</span>, <span dir="rtl" lang="he">אִתּוֹ</span>), it is always the preposition "with."
 
 </div>
 
-Now set this beside Jacob's deathbed promise from [Genesis 48:21](https://www.blueletterbible.org/kjv/gen/48/21/): **וְהָיָה אֱלֹהִים עִמָּכֶם** — "God will be **with you**." The patriarch who once cried עָלַי — "upon me!" — now speaks עִמָּכֶם — "with you all." The weight has become presence. The burden has become companionship. And Hebrew carries both realities in single words.
+<div style="overflow-x: auto; margin: 20px 0;">
+<table style="width: 100%; border-collapse: collapse; font-size: 0.95em;">
+<thead>
+<tr style="background: linear-gradient(135deg, #5a6d5f 0%, #4a6b52 100%); color: white;">
+<th colspan="4" style="padding: 10px 14px; text-align: center; border-right: 2px solid rgba(255,255,255,0.3);">Singular</th>
+<th colspan="4" style="padding: 10px 14px; text-align: center;">Plural</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(74,107,82,0.1);">
+<td style="padding: 8px 10px; font-weight: 600; color: #4a6b52;">1cs</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h854/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">אִתִּ</span><span style="color:#b35900">י</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">itt</span><span style="color:#b35900">i</span></td>
+<td style="padding: 8px 10px; border-right: 2px solid rgba(74,107,82,0.2);">with me</td>
+<td style="padding: 8px 10px; font-weight: 600; color: #4a6b52;">1cp</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h854/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">אִתָּ</span><span style="color:#b35900">נוּ</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">itta</span><span style="color:#b35900">nu</span></td>
+<td style="padding: 8px 10px;">with us</td>
+</tr>
+<tr>
+<td style="padding: 8px 10px; font-weight: 600; color: #1e3a4f;">2ms</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h854/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">אִתְּ</span><span style="color:#b35900">ךָ</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">itte</span><span style="color:#b35900">kha</span></td>
+<td style="padding: 8px 10px; border-right: 2px solid rgba(74,107,82,0.2);">with you (m)</td>
+<td style="padding: 8px 10px; font-weight: 600; color: #1e3a4f;">2mp</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h854/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">אִתְּ</span><span style="color:#b35900">כֶם</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">itte</span><span style="color:#b35900">khem</span></td>
+<td style="padding: 8px 10px;">with you all</td>
+</tr>
+<tr style="background: rgba(74,107,82,0.1);">
+<td style="padding: 8px 10px; font-weight: 600; color: #1e3a4f;">3ms</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h854/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">אִתּ</span><span style="color:#b35900">וֹ</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">itt</span><span style="color:#b35900">o</span></td>
+<td style="padding: 8px 10px; border-right: 2px solid rgba(74,107,82,0.2);">with him</td>
+<td style="padding: 8px 10px; font-weight: 600; color: #1e3a4f;">3mp</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h854/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">אִתָּ</span><span style="color:#b35900">ם</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">itta</span><span style="color:#b35900">m</span></td>
+<td style="padding: 8px 10px;">with them</td>
+</tr>
+<tr>
+<td style="padding: 8px 10px; font-weight: 600; color: #6a5983;">3fs</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h854/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">אִתָּ</span><span style="color:#b35900">הּ</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">itta</span><span style="color:#b35900">h</span></td>
+<td style="padding: 8px 10px; border-right: 2px solid rgba(74,107,82,0.2);">with her</td>
+<td colspan="4" style="padding: 8px 10px;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div style="background: rgba(74,107,82,0.08); border-left: 4px solid #4a6b52; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+
+**In this week's reading:** [Exodus 10:10](https://www.blueletterbible.org/kjv/exo/10/10/) — Pharaoh mocks Moses with bitter sarcasm: <span dir="rtl" lang="he" style="font-size: 1.1em;">**יְהִי כֵן יְהוָה עִמָּכֶם**</span> — "Let the LORD be so **with you**." The word <span dir="rtl" lang="he">**עִמָּכֶם**</span> ([*immakhem*](https://www.blueletterbible.org/lexicon/h5973/kjv/wlc/0-1/)) is the preposition <span dir="rtl" lang="he">עִם</span> ("with") fused with the 2mp suffix <span dir="rtl" lang="he">כֶם</span> ("you all"). Pharaoh uses covenant language as a curse — but the LORD *will* be with Israel, and Pharaoh's resistance will cost him everything.
+
+</div>
+
+---
+
+## The Rest of the Family: <span dir="rtl" lang="he">אֶל</span>, <span dir="rtl" lang="he">עַל</span>, <span dir="rtl" lang="he">בְּ</span>, <span dir="rtl" lang="he">מִן</span>
+
+Four more prepositions take pronominal suffixes in exactly the same way.
+
+### <span dir="rtl" lang="he">אֶל</span> (el-) — to / toward
+
+[<span dir="rtl" lang="he">אֶל</span>](https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/) (*el-*, "to, toward") is distinct from <span dir="rtl" lang="he">לְ</span> (*le-*). The difference is subtle: <span dir="rtl" lang="he">לְ</span> tends toward **purpose** ("for him"), while <span dir="rtl" lang="he">אֶל</span> tends toward **direction** ("toward him").
+
+<div style="overflow-x: auto; margin: 20px 0;">
+<table style="width: 100%; border-collapse: collapse; font-size: 0.95em;">
+<thead>
+<tr style="background: linear-gradient(135deg, #5a6d5f 0%, #4a6b52 100%); color: white;">
+<th colspan="4" style="padding: 10px 14px; text-align: center; border-right: 2px solid rgba(255,255,255,0.3);">Singular</th>
+<th colspan="4" style="padding: 10px 14px; text-align: center;">Plural</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(74,107,82,0.1);">
+<td style="padding: 8px 10px; font-weight: 600; color: #4a6b52;">1cs</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">אֵלַ</span><span style="color:#b35900">י</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">ela</span><span style="color:#b35900">i</span></td>
+<td style="padding: 8px 10px; border-right: 2px solid rgba(74,107,82,0.2);">to me</td>
+<td style="padding: 8px 10px; font-weight: 600; color: #4a6b52;">1cp</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">אֵלֵי</span><span style="color:#b35900">נוּ</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">elei</span><span style="color:#b35900">nu</span></td>
+<td style="padding: 8px 10px;">to us</td>
+</tr>
+<tr>
+<td style="padding: 8px 10px; font-weight: 600; color: #1e3a4f;">2ms</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">אֵלֶי</span><span style="color:#b35900">ךָ</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">elei</span><span style="color:#b35900">kha</span></td>
+<td style="padding: 8px 10px; border-right: 2px solid rgba(74,107,82,0.2);">to you (m)</td>
+<td style="padding: 8px 10px; font-weight: 600; color: #1e3a4f;">2mp</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">אֲלֵי</span><span style="color:#b35900">כֶם</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">alei</span><span style="color:#b35900">khem</span></td>
+<td style="padding: 8px 10px;">to you all</td>
+</tr>
+<tr style="background: rgba(74,107,82,0.1);">
+<td style="padding: 8px 10px; font-weight: 600; color: #6a5983;">2fs</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">אֵלַיִ</span><span style="color:#b35900">ךְ</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">elai</span><span style="color:#b35900">kh</span></td>
+<td style="padding: 8px 10px; border-right: 2px solid rgba(74,107,82,0.2);">to you (f)</td>
+<td style="padding: 8px 10px; font-weight: 600; color: #1e3a4f;">3mp</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">אֲלֵי</span><span style="color:#b35900">הֶם</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">alei</span><span style="color:#b35900">hem</span></td>
+<td style="padding: 8px 10px;">to them</td>
+</tr>
+<tr>
+<td style="padding: 8px 10px; font-weight: 600; color: #1e3a4f;">3ms</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">אֵלָי</span><span style="color:#b35900">ו</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">ela</span><span style="color:#b35900">v</span></td>
+<td style="padding: 8px 10px; border-right: 2px solid rgba(74,107,82,0.2);">to him</td>
+<td colspan="4" style="padding: 8px 10px;"></td>
+</tr>
+<tr style="background: rgba(74,107,82,0.1);">
+<td style="padding: 8px 10px; font-weight: 600; color: #6a5983;">3fs</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">אֵלֶי</span><span style="color:#b35900">הָ</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">elei</span><span style="color:#b35900">ha</span></td>
+<td style="padding: 8px 10px; border-right: 2px solid rgba(74,107,82,0.2);">to her</td>
+<td colspan="4" style="padding: 8px 10px;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+Throughout the plagues narrative, God repeatedly sends Moses <span dir="rtl" lang="he">אֶל־פַּרְעֹה</span> — "to Pharaoh" ([Exodus 7:15](https://www.blueletterbible.org/kjv/exo/7/15/), [8:1](https://www.blueletterbible.org/kjv/exo/8/1/), [9:1](https://www.blueletterbible.org/kjv/exo/9/1/), [10:1](https://www.blueletterbible.org/kjv/exo/10/1/)). The preposition <span dir="rtl" lang="he">אֶל</span> carries direction — Moses moves *toward* Pharaoh again and again.
+
+### <span dir="rtl" lang="he">עַל</span> (al-) — on / upon / over
+
+[<span dir="rtl" lang="he">עַל</span>](https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/) (*al-*, "on, upon, over") has remarkable range — physical ("upon the altar"), relational ("over his brothers"), or protective ("over you").
+
+<div style="overflow-x: auto; margin: 20px 0;">
+<table style="width: 100%; border-collapse: collapse; font-size: 0.95em;">
+<thead>
+<tr style="background: linear-gradient(135deg, #5a6d5f 0%, #4a6b52 100%); color: white;">
+<th colspan="4" style="padding: 10px 14px; text-align: center; border-right: 2px solid rgba(255,255,255,0.3);">Singular</th>
+<th colspan="4" style="padding: 10px 14px; text-align: center;">Plural</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(74,107,82,0.1);">
+<td style="padding: 8px 10px; font-weight: 600; color: #4a6b52;">1cs</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">עָלַ</span><span style="color:#b35900">י</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">ala</span><span style="color:#b35900">i</span></td>
+<td style="padding: 8px 10px; border-right: 2px solid rgba(74,107,82,0.2);">upon me</td>
+<td style="padding: 8px 10px; font-weight: 600; color: #4a6b52;">1cp</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">עָלֵי</span><span style="color:#b35900">נוּ</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">alei</span><span style="color:#b35900">nu</span></td>
+<td style="padding: 8px 10px;">upon us</td>
+</tr>
+<tr>
+<td style="padding: 8px 10px; font-weight: 600; color: #1e3a4f;">2ms</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">עָלֶי</span><span style="color:#b35900">ךָ</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">alei</span><span style="color:#b35900">kha</span></td>
+<td style="padding: 8px 10px; border-right: 2px solid rgba(74,107,82,0.2);">upon you (m)</td>
+<td style="padding: 8px 10px; font-weight: 600; color: #1e3a4f;">2mp</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">עֲלֵי</span><span style="color:#b35900">כֶם</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">alei</span><span style="color:#b35900">khem</span></td>
+<td style="padding: 8px 10px;">over you all</td>
+</tr>
+<tr style="background: rgba(74,107,82,0.1);">
+<td style="padding: 8px 10px; font-weight: 600; color: #6a5983;">2fs</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">עָלַיִ</span><span style="color:#b35900">ךְ</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">alai</span><span style="color:#b35900">kh</span></td>
+<td style="padding: 8px 10px; border-right: 2px solid rgba(74,107,82,0.2);">upon you (f)</td>
+<td style="padding: 8px 10px; font-weight: 600; color: #1e3a4f;">3mp</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">עֲלֵי</span><span style="color:#b35900">הֶם</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">alei</span><span style="color:#b35900">hem</span></td>
+<td style="padding: 8px 10px;">upon them</td>
+</tr>
+<tr>
+<td style="padding: 8px 10px; font-weight: 600; color: #1e3a4f;">3ms</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">עָלָי</span><span style="color:#b35900">ו</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">ala</span><span style="color:#b35900">v</span></td>
+<td style="padding: 8px 10px; border-right: 2px solid rgba(74,107,82,0.2);">upon him</td>
+<td colspan="4" style="padding: 8px 10px;"></td>
+</tr>
+<tr style="background: rgba(74,107,82,0.1);">
+<td style="padding: 8px 10px; font-weight: 600; color: #6a5983;">3fs</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">עָלֶי</span><span style="color:#b35900">הָ</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">alei</span><span style="color:#b35900">ha</span></td>
+<td style="padding: 8px 10px; border-right: 2px solid rgba(74,107,82,0.2);">upon her</td>
+<td colspan="4" style="padding: 8px 10px;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+In [Exodus 12:13](https://www.blueletterbible.org/kjv/exo/12/13/), God declares: <span dir="rtl" lang="he" style="font-size: 1.1em;">**וּפָסַחְתִּי עֲלֵכֶם**</span> — "I will pass **over you**." The word <span dir="rtl" lang="he">**עֲלֵכֶם**</span> ([*aleikhem*](https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/)) is <span dir="rtl" lang="he">עַל</span> + the 2mp suffix: "over-you-all." The same preposition that could mean judgment pressing down here means protection hovering over.
+
+### <span dir="rtl" lang="he">בְּ</span> (be-) — in / with / by
+
+[<span dir="rtl" lang="he">בְּ</span>](https://www.blueletterbible.org/lexicon/h9002/kjv/wlc/0-1/) (*be-*, "in, with, by") is one of the three inseparable prepositions from Lesson 10.
+
+<div style="overflow-x: auto; margin: 20px 0;">
+<table style="width: 100%; border-collapse: collapse; font-size: 0.95em;">
+<thead>
+<tr style="background: linear-gradient(135deg, #5a6d5f 0%, #4a6b52 100%); color: white;">
+<th colspan="4" style="padding: 10px 14px; text-align: center; border-right: 2px solid rgba(255,255,255,0.3);">Singular</th>
+<th colspan="4" style="padding: 10px 14px; text-align: center;">Plural</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(74,107,82,0.1);">
+<td style="padding: 8px 10px; font-weight: 600; color: #4a6b52;">1cs</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h9002/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">בִּ</span><span style="color:#b35900">י</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">b</span><span style="color:#b35900">i</span></td>
+<td style="padding: 8px 10px; border-right: 2px solid rgba(74,107,82,0.2);">in me</td>
+<td style="padding: 8px 10px; font-weight: 600; color: #4a6b52;">1cp</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h9002/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">בָּ</span><span style="color:#b35900">נוּ</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">ba</span><span style="color:#b35900">nu</span></td>
+<td style="padding: 8px 10px;">in us</td>
+</tr>
+<tr>
+<td style="padding: 8px 10px; font-weight: 600; color: #1e3a4f;">2ms</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h9002/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">בְּ</span><span style="color:#b35900">ךָ</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">be</span><span style="color:#b35900">kha</span></td>
+<td style="padding: 8px 10px; border-right: 2px solid rgba(74,107,82,0.2);">in you (m)</td>
+<td style="padding: 8px 10px; font-weight: 600; color: #1e3a4f;">2mp</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h9002/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">בָּ</span><span style="color:#b35900">כֶם</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">ba</span><span style="color:#b35900">khem</span></td>
+<td style="padding: 8px 10px;">in you all</td>
+</tr>
+<tr style="background: rgba(74,107,82,0.1);">
+<td style="padding: 8px 10px; font-weight: 600; color: #6a5983;">2fs</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h9002/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">בָּ</span><span style="color:#b35900">ךְ</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">ba</span><span style="color:#b35900">kh</span></td>
+<td style="padding: 8px 10px; border-right: 2px solid rgba(74,107,82,0.2);">in you (f)</td>
+<td style="padding: 8px 10px; font-weight: 600; color: #1e3a4f;">3mp</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h9002/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">בָּ</span><span style="color:#b35900">הֶם</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">ba</span><span style="color:#b35900">hem</span></td>
+<td style="padding: 8px 10px;">in them</td>
+</tr>
+<tr>
+<td style="padding: 8px 10px; font-weight: 600; color: #1e3a4f;">3ms</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h9002/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">בֹּ</span><span style="color:#b35900">ו</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">b</span><span style="color:#b35900">o</span></td>
+<td style="padding: 8px 10px; border-right: 2px solid rgba(74,107,82,0.2);">in him</td>
+<td colspan="4" style="padding: 8px 10px;"></td>
+</tr>
+<tr style="background: rgba(74,107,82,0.1);">
+<td style="padding: 8px 10px; font-weight: 600; color: #6a5983;">3fs</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h9002/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">בָּ</span><span style="color:#b35900">הּ</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">ba</span><span style="color:#b35900">h</span></td>
+<td style="padding: 8px 10px; border-right: 2px solid rgba(74,107,82,0.2);">in her</td>
+<td colspan="4" style="padding: 8px 10px;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+In [Exodus 7:17](https://www.blueletterbible.org/kjv/exo/7/17/), Moses announces the first plague: <span dir="rtl" lang="he" style="font-size: 1.1em;">**בַּמַּטֶּה אֲשֶׁר־בְּיָדִי**</span> — "with the rod that is **in my hand**." The word <span dir="rtl" lang="he">**בְּיָדִי**</span> ([*beyadi*](https://www.blueletterbible.org/lexicon/h3027/kjv/wlc/0-1/)) is <span dir="rtl" lang="he">בְּ</span> ("in") + <span dir="rtl" lang="he">יָד</span> (*yad*, "hand") + the 1cs suffix: "in-my-hand."
+
+### <span dir="rtl" lang="he">מִן</span> (min-) — from / out of
+
+[<span dir="rtl" lang="he">מִן</span>](https://www.blueletterbible.org/lexicon/h4480/kjv/wlc/0-1/) (*min-*, "from, out of") behaves distinctively. The <span dir="rtl" lang="he">נ</span> (*nun*) assimilates and the suffix attaches to <span dir="rtl" lang="he">**מִמּ-**</span>:
+
+<div style="overflow-x: auto; margin: 20px 0;">
+<table style="width: 100%; border-collapse: collapse; font-size: 0.95em;">
+<thead>
+<tr style="background: linear-gradient(135deg, #5a6d5f 0%, #4a6b52 100%); color: white;">
+<th colspan="4" style="padding: 10px 14px; text-align: center; border-right: 2px solid rgba(255,255,255,0.3);">Singular</th>
+<th colspan="4" style="padding: 10px 14px; text-align: center;">Plural</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(74,107,82,0.1);">
+<td style="padding: 8px 10px; font-weight: 600; color: #4a6b52;">1cs</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h4480/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">מִמֶּ</span><span style="color:#b35900">נִּי</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">mimme</span><span style="color:#b35900">nni</span></td>
+<td style="padding: 8px 10px; border-right: 2px solid rgba(74,107,82,0.2);">from me</td>
+<td style="padding: 8px 10px; font-weight: 600; color: #4a6b52;">1cp</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h4480/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">מִמֶּ</span><span style="color:#b35900">נּוּ</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">mimme</span><span style="color:#b35900">nnu</span></td>
+<td style="padding: 8px 10px;">from us</td>
+</tr>
+<tr>
+<td style="padding: 8px 10px; font-weight: 600; color: #1e3a4f;">2ms</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h4480/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">מִמְּ</span><span style="color:#b35900">ךָ</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">mim</span><span style="color:#b35900">kha</span></td>
+<td style="padding: 8px 10px; border-right: 2px solid rgba(74,107,82,0.2);">from you (m)</td>
+<td style="padding: 8px 10px; font-weight: 600; color: #1e3a4f;">2mp</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h4480/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">מִ</span><span style="color:#b35900">כֶּם</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">mi</span><span style="color:#b35900">kkem</span></td>
+<td style="padding: 8px 10px;">from you all</td>
+</tr>
+<tr style="background: rgba(74,107,82,0.1);">
+<td style="padding: 8px 10px; font-weight: 600; color: #6a5983;">2fs</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h4480/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">מִמֵּ</span><span style="color:#b35900">ךְ</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">mimme</span><span style="color:#b35900">kh</span></td>
+<td style="padding: 8px 10px; border-right: 2px solid rgba(74,107,82,0.2);">from you (f)</td>
+<td style="padding: 8px 10px; font-weight: 600; color: #1e3a4f;">3mp</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h4480/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">מֵ</span><span style="color:#b35900">הֶם</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">me</span><span style="color:#b35900">hem</span></td>
+<td style="padding: 8px 10px;">from them</td>
+</tr>
+<tr>
+<td style="padding: 8px 10px; font-weight: 600; color: #1e3a4f;">3ms</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h4480/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">מִמֶּ</span><span style="color:#b35900">נּוּ</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">mimme</span><span style="color:#b35900">nnu</span></td>
+<td style="padding: 8px 10px; border-right: 2px solid rgba(74,107,82,0.2);">from him</td>
+<td colspan="4" style="padding: 8px 10px;"></td>
+</tr>
+<tr style="background: rgba(74,107,82,0.1);">
+<td style="padding: 8px 10px; font-weight: 600; color: #6a5983;">3fs</td>
+<td style="padding: 8px 10px; font-size: 1.2em;" dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h4480/kjv/wlc/0-1/" style="text-decoration: none;"><span style="color:#4a6b52">מִמֶּ</span><span style="color:#b35900">נָּה</span></a></td>
+<td style="padding: 8px 10px; font-style: italic;"><span style="color:#4a6b52">mimme</span><span style="color:#b35900">nnah</span></td>
+<td style="padding: 8px 10px; border-right: 2px solid rgba(74,107,82,0.2);">from her</td>
+<td colspan="4" style="padding: 8px 10px;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div style="background: rgba(213,169,60,0.12); border-left: 4px solid #d5a93c; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+
+**A fascinating ambiguity:** The 3ms form <span dir="rtl" lang="he">מִמֶּנּוּ</span> (*mimmennu*, "from him") and the 1cp form <span dir="rtl" lang="he">מִמֶּנּוּ</span> (*mimmennu*, "from us") are **identical**. Context is the only guide — a reminder that biblical interpretation requires careful attention to context, not just vocabulary.
+
+</div>
+
+In [Exodus 10:28](https://www.blueletterbible.org/kjv/exo/10/28/), after the plague of darkness, Pharaoh reaches his breaking point: <span dir="rtl" lang="he" style="font-size: 1.1em;">**לֵךְ מֵעָלָי הִשָּׁמֶר לְךָ**</span> — "Get thee **from me**; take heed **to thyself**." Two prepositions with suffixes in one command: <span dir="rtl" lang="he">**מֵעָלָי**</span> ([*me'alai*](https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/)) — "from-upon-me" — and <span dir="rtl" lang="he">**לְךָ**</span> ([*lekha*](https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/)) — "to you." Pharaoh uses prepositions to push Moses away. But the same grammar will carry a very different message in the Passover verse.
+
+---
+
+## "I Will Pass Over You" — Exodus 12:13
+
+Everything we have studied in this lesson converges in the defining verse of the Passover. [Exodus 12:13](https://www.blueletterbible.org/kjv/exo/12/13/) carries the grammar of deliverance — and it does it with prepositions:
+
+<div style="background: rgba(30,58,79,0.1); border-left: 4px solid #1e3a4f; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+
+<p dir="rtl" lang="he" style="font-size: 1.3em; line-height: 1.8; margin-bottom: 12px; text-align: right;">וְהָיָה הַדָּם <strong>לָכֶם</strong> לְאֹת עַל הַבָּתִּים אֲשֶׁר אַתֶּם שָׁם וְרָאִיתִי אֶת־הַדָּם וּפָסַחְתִּי <strong>עֲלֵכֶם</strong></p>
+
+*"And the blood shall be **to you** for a token upon the houses where ye are: and when I see the blood, I will pass **over you**."*
+
+</div>
+
+Three prepositions carry the theology of this verse:
+
+- <span dir="rtl" lang="he">**לָכֶם**</span> ([*lakhem*](https://www.blueletterbible.org/lexicon/h413/kjv/wlc/0-1/)) — the preposition <span dir="rtl" lang="he">לְ</span> ("to/for") fused with the 2mp suffix. One word: "to-you-all." The blood belongs *to* Israel as covenant sign.
+
+- <span dir="rtl" lang="he">**עַל הַבָּתִּים**</span> — "upon the houses." Here the preposition takes a noun. But it sets up the parallel...
+
+- <span dir="rtl" lang="he">**עֲלֵכֶם**</span> ([*aleikhem*](https://www.blueletterbible.org/lexicon/h5921/kjv/wlc/0-1/)) — the preposition <span dir="rtl" lang="he">עַל</span> ("upon/over") fused with the 2mp suffix. One word: "over-you-all." The same preposition that could press down in judgment here hovers over in protection.
+
+<div style="background: rgba(74,107,82,0.08); border-left: 4px solid #4a6b52; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+
+**The grammar of salvation:** Compare Pharaoh's command in [Exodus 10:28](https://www.blueletterbible.org/kjv/exo/10/28/) — <span dir="rtl" lang="he">**מֵעָלָי**</span> (*me'alai*), "from-upon-me!" — with God's promise in [Exodus 12:13](https://www.blueletterbible.org/kjv/exo/12/13/) — <span dir="rtl" lang="he">**עֲלֵכֶם**</span> (*aleikhem*), "over you."
+
+Pharaoh uses prepositions to drive away; God uses the same preposition to shelter. The suffix tells you whose story this is: <span dir="rtl" lang="he">עָלָי</span> (upon *me*) is Pharaoh trying to save himself; <span dir="rtl" lang="he">עֲלֵכֶם</span> (over *you*) is God saving His people.
+
+The Targum Onkelos renders <span dir="rtl" lang="he">וּפָסַחְתִּי</span> as <span dir="rtl" lang="he">**וְאֵיחוֹס**</span> (*ve'eichos*) — "I will have compassion" ([Targum Onkelos, Exodus 12:13](https://www.sefaria.org/Onkelos_Exodus.12.13)). The preposition <span dir="rtl" lang="he">עֲלֵכֶם</span> becomes the instrument of mercy: God passes *over* in order to *protect*.
+
+</div>
+
+Now set this beside the sacrament prayers. In [D&C 20:77](https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/20.77), we hear: "that they may... always have his Spirit to be **with them**." The Hebrew would be <span dir="rtl" lang="he">עִמָּם</span> (*immam*) — "with-them." Week after week, the Passover grammar continues. We partake; the blood is <span dir="rtl" lang="he">לָנוּ</span> (*lanu*) — "for us." The Spirit hovers <span dir="rtl" lang="he">עָלֵינוּ</span> (*aleinu*) — "over us." Prepositions carry covenant.
 
 ---
 
 ## What Comes Next
 
-You now have the tools to recognize one of the most common patterns in the Hebrew Bible: a preposition fused with a pronoun into a single word. Every time you see עָלַי, אִתּוֹ, לוֹ, בּוֹ, or מִמֶּנּוּ, you can decode who is involved and what the relationship is — without a dictionary.
+You now have the tools to recognize one of the most common patterns in the Hebrew Bible: a preposition fused with a pronoun into a single word. Every time you see <span dir="rtl" lang="he">עֲלֵכֶם</span>, <span dir="rtl" lang="he">אִתּוֹ</span>, <span dir="rtl" lang="he">לוֹ</span>, <span dir="rtl" lang="he">בּוֹ</span>, or <span dir="rtl" lang="he">מִפָּנַי</span>, you can decode who is involved and what the relationship is — without a dictionary.
 
 Here is where we stand on the journey:
 

@@ -1,0 +1,616 @@
+<div class="cfm-insights" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+
+    <!-- Expand/Collapse Controls -->
+    <div style="text-align: center; margin: 20px 0 30px 0;">
+        <button onclick="expandAllInsights()" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 0 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">&#x229E; Expand All</button>
+        <button onclick="collapseAllInsights()" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 0 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">&#x229F; Collapse All</button>
+    </div>
+
+    <!-- Content Sections -->
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>A Letter to Fellow Students</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease; transform: rotate(90deg);">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" data-expanded="true" style="max-height: none; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">There is blood on the doorpost.</p>
+<p style="margin-bottom: 15px;">That image sits at the center of everything this week. A lamb has been slain, its blood applied to the wooden frame of a household entrance, and inside that marked home, a family waits — dressed for travel, staff in hand, eating in haste — while outside, the destroyer passes through Egypt.</p>
+<p style="margin-bottom: 15px;">This is the Passover. And it is not merely ancient history. Last week we explored Christ as the Passover Lamb on Easter morning. Now we return to the original narrative to see where these symbols came from — and to discover layers we might have missed.</p>
+<p style="margin-bottom: 15px;">The Hebrew word for blood — <em>dam</em> — shares its root with <em>adam</em> (human) and <em>adamah</em> (earth). Life from the red earth, life in the red blood. The rabbis noticed that painting blood on the two doorposts and lintel forms the Hebrew letter <em>chet</em> (ח), which stands for <em>chayyim</em> — life. The blood literally spelled "life" over each house.</p>
+<p style="margin-bottom: 15px;">The doorpost itself functioned as an altar. Before there was a tabernacle, before there was a priesthood, each father slaughtered a lamb and each home became a temple. The threshold became the boundary between death and life.</p>
+<p style="margin-bottom: 15px;">This week we sit with these images. We trace the women who made the Exodus possible, the Hebrew wordplays that deepen our understanding, and the roots that connect <em>bekhor</em> (firstborn) to <em>bikkurim</em> (firstfruits) — death on Passover night to resurrection on Firstfruits morning.</p>
+<p style="margin-bottom: 15px;">The blood still speaks. The door still stands. And the question remains: which side of the threshold are we on?</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>What's in This Week's Materials</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>📖 The Reading: <a href="https://www.blueletterbible.org/kjv/exo/7/1/s_57001" target="_blank" data-ref="Exodus 7">Exodus 7–13</a></span>
+<span class="sub-arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<p style="margin-bottom: 15px;">Seven chapters covering the ten plagues and the Passover institution. If you read nothing else, read these three sections:</p>
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;"><strong><a href="https://www.blueletterbible.org/kjv/exo/12/1-14/s_62001" target="_blank" data-ref="Exodus 12:1-14">Exodus 12:1–14</a></strong> — The Passover instructions. The lamb, the blood, the haste, the memorial.</li>
+<li style="margin-bottom: 8px;"><strong><a href="https://www.blueletterbible.org/kjv/exo/12/21-28/s_62021" target="_blank" data-ref="Exodus 12:21-28">Exodus 12:21–28</a></strong> — Moses delivers the ordinance. The doorposts. The destroyer passing over.</li>
+<li style="margin-bottom: 8px;"><strong><a href="https://www.blueletterbible.org/kjv/exo/13/1-16/s_63001" target="_blank" data-ref="Exodus 13:1-16">Exodus 13:1–16</a></strong> — Consecration of the firstborn. "Remember this day."</li>
+</ul>
+<p style="margin-bottom: 15px;">The plagues build in intensity, but the real theological center is chapter 12. Everything leads there.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+</div>
+</div>
+</div>
+
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Women in the Exodus: The Heroes Scripture Names</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">As a woman studying these chapters, I've found Lynne Hilton Wilson's Scripture Central series particularly meaningful. Her <a href="https://www.youtube.com/watch?v=4B4ug4gkyPI" target="_blank">Handmaidens, Harems, and Heroines</a> episode highlights something that doesn't get enough attention: <strong>without these women, there would have been no Exodus</strong>.</p>
+<p style="margin-bottom: 15px;">Consider who scripture names — and who it doesn't. Pharaoh, the most powerful ruler in the ancient world, remains anonymous throughout the narrative. But the Hebrew midwives? We know their names: <strong>Shiphrah</strong> and <strong>Puah</strong> (<a href="https://www.blueletterbible.org/kjv/exo/1/15/s_51015" target="_blank" data-ref="Exodus 1:15">Exodus 1:15</a>).</p>
+<p style="margin-bottom: 15px;">These two women defied a direct order from the king of Egypt. When commanded to kill every Hebrew boy at birth, they "feared God, and did not as the king of Egypt commanded them" (<a href="https://www.blueletterbible.org/kjv/exo/1/17/s_51017" target="_blank" data-ref="Exodus 1:17">Exodus 1:17</a>). They lied to Pharaoh's face, risking their own lives, and "God dealt well with the midwives" (<a href="https://www.blueletterbible.org/kjv/exo/1/20/s_51020" target="_blank" data-ref="Exodus 1:20">Exodus 1:20</a>). The deliverance of Israel began not with Moses, but with two women who chose conscience over compliance.</p>
+<p style="margin-bottom: 15px;">Then there is <strong>Jochebed</strong>, Moses' mother, who hid her infant son for three months and then placed him in a basket on the Nile — an act of desperate faith. <strong>Miriam</strong>, his sister, watched over that basket and had the presence of mind to offer a Hebrew nurse (their own mother) when Pharaoh's daughter found the child. A young girl's quick thinking kept Moses connected to his people and his covenant identity.</p>
+<p style="margin-bottom: 15px;">And <strong>Zipporah</strong>, Moses' wife, who appears briefly but decisively in <a href="https://www.blueletterbible.org/kjv/exo/4/24-26/s_54024" target="_blank" data-ref="Exodus 4:24-26">Exodus 4:24–26</a>, saving Moses' life through her understanding of covenant requirements when he had neglected them.</p>
+<p style="margin-bottom: 15px;">These women were not supporting characters. They were the agents of salvation history. The deliverer needed delivering first — by women who risked everything, who defied empires, who preserved a child and shaped a prophet. Before Moses could lead Israel out of Egypt, women had to lead <em>him</em> into his purpose.</p><div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>A Pattern That Continues</span>
+<span class="sub-arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<p style="margin-bottom: 15px;">This isn't an isolated moment. Consider who witnesses the pivotal events of Christ's life:</p>
+<table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em;">
+<thead><tr style="background: #7c9885; color: white;">
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Event</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">First Witnesses</th>
+</tr></thead><tbody>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Nativity</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Shepherds, then wise men — socially marginal, Gentile seekers</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Exodus</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Shiphrah, Puah, Jochebed, Miriam — enslaved women defying empire</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Resurrection</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Mary Magdalene and the women at the tomb</td>
+</tr>
+</tbody></table>
+<p style="margin-bottom: 15px;">In each case, God chooses witnesses the world would discount. Shepherds held no social standing. Women's testimony was legally dismissed in ancient courts. Enslaved midwives had no power against Pharaoh's decree. Yet these are the ones God trusts with the first sight — and the first proclamation.</p>
+<p style="margin-bottom: 15px;">The shepherds "made known abroad" what they had seen (<a href="https://www.blueletterbible.org/kjv/luk/2/17/s_975017" target="_blank" data-ref="Luke 2:17">Luke 2:17</a>). The women at the tomb were told "go tell his disciples" (<a href="https://www.blueletterbible.org/kjv/mrk/16/7/s_973007" target="_blank" data-ref="Mark 16:7">Mark 16:7</a>). And the midwives? Their defiance was the first act of the Exodus, recorded for all generations.</p>
+<p style="margin-bottom: 15px;">God doesn't just <em>permit</em> the overlooked to witness — He <em>chooses</em> them. The manger, the empty tomb, the basket on the Nile: at every turning point, those the world would silence become the first to speak.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+</div>
+</div>
+</div>
+
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>The Blood That Speaks: Hebrew Wordplay and Atonement</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">One of the richest word studies in Hebrew lies hidden in the Passover narrative. The word for <strong>blood</strong> — <span dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h1818/kjv/wlc/0-1/" target="_blank" data-lexicon="blood of wine (fig.)" data-strongs="H1818" data-translit="dām" data-original="דָּם" data-lang="hebrew" data-verse="">דָּם</a></span> (<em>dam</em>) — sits at the center of a stunning etymological constellation:</p>
+<table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em;">
+<thead><tr style="background: #7c9885; color: white;">
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Hebrew</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Transliteration</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Meaning</th>
+</tr></thead><tbody>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><span dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h122/kjv/wlc/0-1/" target="_blank" data-lexicon="Red, ruddy (man/horse/heifer/garment/water/lentils)" data-strongs="H122" data-translit="’Āḏōm" data-original="אָדֹם" data-lang="hebrew" data-verse="">אָדֹם</a></span></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><em>adom</em></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">red</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><span dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h1818/kjv/wlc/0-1/" target="_blank" data-lexicon="blood of wine (fig.)" data-strongs="H1818" data-translit="dām" data-original="דָּם" data-lang="hebrew" data-verse="">דָּם</a></span></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><em>dam</em></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">blood</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><span dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h128/kjv/wlc/0-1/" target="_blank" data-lexicon="Adamah= &quot;the earth&quot;// city of Naphtali" data-strongs="H128" data-translit="’Ăḏāmâ" data-original="אֲדָמָה" data-lang="hebrew" data-verse="">אֲדָמָה</a></span></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><em>adamah</em></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">earth, ground, soil</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><span dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h121/kjv/wlc/0-1/" target="_blank" data-lexicon="Adam = &quot;red&quot;//" data-strongs="H121" data-translit="’Āḏām" data-original="אָדָם" data-lang="hebrew" data-verse="">אָדָם</a></span></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><em>adam</em></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">human, Adam</td>
+</tr>
+</tbody></table>
+<p style="margin-bottom: 15px;">These aren't coincidental similarities — they form a theological narrative. The first human (<em>adam</em>) was formed from red earth (<em>adamah</em>), animated by blood (<em>dam</em>), and both share the root meaning "red" (<em>adom</em>). Human life is inextricably tied to blood, both physically and spiritually.</p><div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>Why Blood?</span>
+<span class="sub-arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<p style="margin-bottom: 15px;"><a href="https://www.blueletterbible.org/kjv/lev/17/11/s_107011" target="_blank" data-ref="Leviticus 17:11">Leviticus 17:11</a> provides the key:</p>
+<blockquote style="border-left: 4px solid #7c9885; padding-left: 20px; margin: 20px 0; font-style: italic; color: #4a4a4a;">
+<p>"For the <strong>life</strong> (<span dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h5314/kjv/wlc/0-1/" target="_blank" data-lexicon="(Niphal) to take breath, refresh oneself" data-strongs="H5314" data-translit="nāp̄aš" data-original="נָפַשׁ" data-lang="hebrew" data-verse="">נֶפֶשׁ</a></span> / <em>nephesh</em>) of the flesh is in the <strong>blood</strong>, and I have given it to you on the altar to make <strong>atonement</strong> (<span dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h3722/kjv/wlc/0-1/" target="_blank" data-lexicon="to cover, purge, make an atonement, make reconciliation, cover over with pitch (Qal) to coat or cover with pitch (Pie..." data-strongs="H3722" data-translit="kāp̄ar" data-original="כָּפַר" data-lang="hebrew" data-verse="">כִּפֻּר</a></span> / <em>kippur</em>) for your <strong>souls</strong> (<em>nephesh</em>); for it is the blood by reason of the <strong>life</strong> (<em>nephesh</em>) that makes atonement."</p>
+</blockquote>
+<p style="margin-bottom: 15px;">The word <em>nephesh</em> appears three times in this verse — blood carries the <em>nephesh</em> (life-force, soul). Blood isn't death-symbolism; it's <strong>life-symbolism</strong>. The lamb's life (<em>nephesh</em>) covers the household's life (<em>nephesh</em>). Life for life.</p>
+</div>
+</div>
+</div>
+<div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>Atonement as Covering</span>
+<span class="sub-arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<p style="margin-bottom: 15px;">The Hebrew <span dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h3722/kjv/wlc/0-1/" target="_blank" data-lexicon="to cover, purge, make an atonement, make reconciliation, cover over with pitch (Qal) to coat or cover with pitch (Pie..." data-strongs="H3722" data-translit="kāp̄ar" data-original="כָּפַר" data-lang="hebrew" data-verse="">כָּפַר</a></span> (<em>kaphar</em>) means "to cover." Related words include <span dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h3722/kjv/wlc/0-1/" target="_blank" data-lexicon="to cover, purge, make an atonement, make reconciliation, cover over with pitch (Qal) to coat or cover with pitch (Pie..." data-strongs="H3722" data-translit="kāp̄ar" data-original="כָּפַר" data-lang="hebrew" data-verse="">כֹּפֶר</a></span> (<em>kopher</em>, "covering, ransom") and <span dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h3727/kjv/wlc/0-1/" target="_blank" data-lexicon="mercy-seat, place of atonementthe golden plate of propitiation on which the High Priest sprinkled the seat 7 times on..." data-strongs="H3727" data-translit="kapōreṯ" data-original="כַּפֹּרֶת" data-lang="hebrew" data-verse="">כַּפֹּרֶת</a></span> (<em>kapporet</em>, the "mercy seat" — literally, the "covering" on the Ark). Blood doesn't destroy sin — it <strong>covers</strong> it. The doorposts weren't painted to appease anger but to mark the household as covered by life.</p>
+</div>
+</div>
+</div>
+<div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>The Letter of Life</span>
+<span class="sub-arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<p style="margin-bottom: 15px;">Medieval commentator Hizkuni observed something remarkable: painting blood on the two doorposts and the lintel above creates the Hebrew letter <strong><span dir="rtl" lang="he">ח</span></strong> (<em>chet</em>) — which stands for <span dir="rtl" lang="he">חַיִּים</span> (<em>chayyim</em>): <strong>life</strong>.</p>
+<p style="margin-bottom: 15px;">The blood literally spelled "life" over each household. The destroyer saw not death but a house marked with the sign of life.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+</div>
+</div>
+</div>
+
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>The Destroyer: Who Passed Through Egypt?</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;"><a href="https://www.blueletterbible.org/kjv/exo/12/23/s_62023" target="_blank" data-ref="Exodus 12:23">Exodus 12:23</a> introduces a mysterious figure:</p>
+<blockquote style="border-left: 4px solid #7c9885; padding-left: 20px; margin: 20px 0; font-style: italic; color: #4a4a4a;">
+<p>"For the LORD will pass through to smite the Egyptians; and when he seeth the blood upon the lintel, and on the two side posts, the LORD will pass over the door, and <strong>will not suffer the destroyer</strong> (<span dir="rtl" lang="he">הַמַּשְׁחִית</span> / <em>ha-mashchit</em>) <strong>to come in unto your houses to smite you</strong>."</p>
+</blockquote>
+<p style="margin-bottom: 15px;">Who is this "destroyer"? The Hebrew text doesn't call it an angel — simply "the destroyer" or "the one who ruins." Jewish tradition, preserved in the Passover Haggadah, is emphatic:</p>
+<blockquote style="border-left: 4px solid #7c9885; padding-left: 20px; margin: 20px 0; font-style: italic; color: #4a4a4a;">
+<p>"<strong>I</strong> will pass through the land of Egypt... <strong>I and not an angel... I and not a messenger.</strong>"</p>
+</blockquote>
+<p style="margin-bottom: 15px;">The <em>mashchit</em> is not an independent force but God's own judgment made manifest — a personification of divine justice. This creates a profound theological paradox at the heart of atonement:</p>
+<p style="margin-bottom: 15px;"><strong>The blood of the lamb protects Israel from God's own justice.</strong></p>
+<p style="margin-bottom: 15px;">If the <em>mashchit</em> is God acting in judgment, then the lamb's blood doesn't deflect some external threat — it satisfies the Judge himself. God provides the covering that protects from God's own decree. The same God who passes through in judgment passes over in mercy when He sees the blood.</p>
+<p style="margin-bottom: 15px;">This is the mystery of atonement: God provides the sacrifice that satisfies God's justice. The Lamb and the Judge meet in the same divine will.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>The Doorpost as Altar: Home Becomes Temple</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">Here is a question worth pondering: The first Passover occurred <strong>before Sinai, before the tabernacle, before the priesthood</strong>. There was no altar, no temple, no designated priest. Yet God commanded a sacrifice. Where was the blood applied?</p>
+<p style="margin-bottom: 15px;">The answer transforms how we understand the Passover: <strong>the doorpost functioned as the altar</strong>.</p><div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>The Threshold Covenant</span>
+<span class="sub-arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<p style="margin-bottom: 15px;">In the ancient Near East, the threshold was far more than a doorway. It was a <strong>sacred boundary</strong> — a liminal space marking the transition from the dangers of the outside world to the safety of the household. H. Clay Trumbull's classic study <em>The Threshold Covenant</em> (1896) documents widespread ancient practices of shedding blood on or over thresholds to signify covenant protection. When an animal was sacrificed at the entrance, its blood consecrated the boundary, declaring covenant protection over all who crossed it.</p>
+<p style="margin-bottom: 15px;">When God commanded blood on the doorposts (<span dir="rtl" lang="he">מְזוּזוֹת</span> / <em>mezuzot</em>), He was taking a known cultural practice and <strong>redirecting it to Himself</strong>. The blood declared: this home is dedicated to YHWH and no other god. As proof of that dedication, YHWH would protect those inside.</p>
+<p style="margin-bottom: 15px;">The Talmud makes this connection explicit: "In Egypt, <strong>the lintel and doorposts served as a symbolic stand-in for the altar</strong> of the Tabernacle and, later, the Temple."</p>
+</div>
+</div>
+</div>
+<div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>Home as Sanctuary, Father as Priest</span>
+<span class="sub-arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<p style="margin-bottom: 15px;">Each Israelite home became a micro-temple that Passover night:</p>
+<table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em;">
+<thead><tr style="background: #7c9885; color: white;">
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Temple Worship</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Passover Home</th>
+</tr></thead><tbody>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Blood applied to <strong>altar</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Blood applied to <strong>doorpost</strong></td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Priest</strong> officiates</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Father</strong> officiates</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Sacrifice within <strong>sanctuary</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Sacrifice within <strong>household</strong></td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Marks <strong>sacred space</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Marks <strong>covenant belonging</strong></td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Entrance to <strong>God's presence</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Entrance to <strong>family protection</strong></td>
+</tr>
+</tbody></table>
+<p style="margin-bottom: 15px;">The head of each household slaughtered the lamb — functioning as priest before there was a priesthood. The doorpost received the blood — functioning as altar before there was a tabernacle. This elevates domestic worship: <strong>the family altar is not a modern invention but a Passover original</strong>.</p>
+</div>
+</div>
+</div>
+<div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>Crossing the Blood</span>
+<span class="sub-arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<p style="margin-bottom: 15px;">To cross a blood-marked threshold was to <strong>ratify the covenant</strong>. To remain outside was to reject it. The threshold forced a decision: inside meant covenant protection; outside meant exposure to the <em>mashchit</em>.</p>
+<p style="margin-bottom: 15px;">This illuminates a severe warning in <a href="https://www.blueletterbible.org/kjv/heb/10/29/s_1143029" target="_blank" data-ref="Hebrews 10:29">Hebrews 10:29</a> about those who have "<strong>trodden under foot the Son of God</strong>, and <strong>hath counted the blood of the covenant</strong> ... an unholy thing." The language is threshold language. To trample the blood is to show contempt for the covenant — the ancient world's ultimate insult to a host.</p>
+</div>
+</div>
+</div>
+<div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>Christ as the Door</span>
+<span class="sub-arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<p style="margin-bottom: 15px;">When Jesus declares "<strong>I am the door</strong>: by me if any man enter in, he shall be saved" (<a href="https://www.blueletterbible.org/kjv/jhn/10/9/s_1007009" target="_blank" data-ref="John 10:9">John 10:9</a>), He invokes this entire threshold theology. The Passover doorway was marked with lamb's blood. Christ, the Lamb, becomes the doorway Himself — <strong>the door marked with His own blood</strong>.</p>
+<p style="margin-bottom: 15px;">Hebrews makes the connection complete:</p>
+<blockquote style="border-left: 4px solid #7c9885; padding-left: 20px; margin: 20px 0; font-style: italic; color: #4a4a4a;">
+<p>"Having therefore, brethren, <strong>boldness to enter into the holiest by the blood of Jesus</strong>, by a new and living way, which he hath consecrated for us, <strong>through the veil, that is to say, his flesh</strong>." (<a href="https://www.blueletterbible.org/kjv/heb/10/19-20/s_1143019" target="_blank" data-ref="Hebrews 10:19-20">Hebrews 10:19–20</a>)</p>
+</blockquote>
+<p style="margin-bottom: 15px;">The veil was the doorway to God's presence. Christ's flesh is that veil. His death tears it open. The doorpost-altar that once marked the entrance to an Israelite home now marks the entrance to heaven itself.</p>
+<p style="margin-bottom: 15px;">In Christ, all the symbols converge: He is the <strong>Lamb</strong> whose blood marks the doorway, the <strong>Door</strong> through which we enter, the <strong>Altar</strong> where sacrifice is made, the <strong>Priest</strong> who officiates, and the <strong>Veil</strong> torn for access. Every threshold we cross in faith echoes that first Passover night — when blood on a doorpost meant the difference between death and life.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+</div>
+</div>
+</div>
+
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>From Moriah to Goshen: The Ram and the Lamb</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">The Passover lamb doesn't appear in isolation. It completes a pattern that began generations earlier on Mount Moriah, when Abraham bound Isaac for sacrifice.</p><div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>The Akedah Pattern</span>
+<span class="sub-arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em;">
+<thead><tr style="background: #7c9885; color: white;">
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;"><a href="https://www.blueletterbible.org/kjv/gen/22/1/s_22001" target="_blank" data-ref="Genesis 22">Genesis 22</a> (Akedah)</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;"><a href="https://www.blueletterbible.org/kjv/exo/12/1/s_62001" target="_blank" data-ref="Exodus 12">Exodus 12</a> (Passover)</th>
+</tr></thead><tbody>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">A <strong>son</strong> is bound for sacrifice</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">The <strong>firstborn</strong> faces death</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">God provides a <strong>substitute</strong> (ram)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">God provides a <strong>substitute</strong> (lamb)</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">The substitute dies <strong>in place of</strong> the son</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">The lamb dies <strong>in place of</strong> the firstborn</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Father must participate</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Families must participate (apply blood)</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Mount Moriah</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Doorpost of each home</td>
+</tr>
+</tbody></table>
+<p style="margin-bottom: 15px;">But notice: Abraham said "God will provide Himself <strong>a lamb</strong>" (<a href="https://www.blueletterbible.org/kjv/gen/22/8/s_22008" target="_blank" data-ref="Genesis 22:8">Genesis 22:8</a>) — yet God provided <strong>a ram</strong> (<span dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h352/kjv/wlc/0-1/" target="_blank" data-lexicon="• ram" data-strongs="H352" data-translit="ayil" data-original="אַיִל" data-lang="hebrew" data-verse="">אַיִל</a></span> / <em>ayil</em>), caught by its horns in a thicket.</p>
+<p style="margin-bottom: 15px;">Why a ram instead of a lamb?</p>
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;"><strong>The Ram</strong>: Mature, strong, caught by its <strong>horns in thorns</strong> — foreshadowing Christ's crown of thorns</li>
+<li style="margin-bottom: 8px;"><strong>The Lamb</strong>: Young, innocent, submissive — "led as a lamb to the slaughter" (<a href="https://www.blueletterbible.org/kjv/isa/53/7/s_732007" target="_blank" data-ref="Isaiah 53:7">Isaiah 53:7</a>)</li>
+</ul>
+<p style="margin-bottom: 15px;">The ram was the immediate substitute; the <strong>Lamb</strong> was the ultimate fulfillment. Abraham named the place <span dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h3070/kjv/wlc/0-1/" target="_blank" data-lexicon="the LORD will see/provide" data-strongs="H3070" data-translit="YHWH Yireh" data-original="יְהוָה יִרְאֶה" data-lang="hebrew" data-verse="Genesis 22:14">יְהוָה יִרְאֶה</a></span> (<em>YHWH Yireh</em>) — "The LORD <strong>will</strong> provide" — future tense. He understood the lamb was still coming.</p>
+<p style="margin-bottom: 15px;">At Passover, the lamb finally arrives. And Christ fulfills both: the Lamb's innocence and the Ram's strength, caught in thorns.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+</div>
+</div>
+</div>
+
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Firstborn and Firstfruits: The Hebrew Root That Binds Death to Resurrection</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">One Hebrew root — <strong><span dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h1069/kjv/wlc/0-1/" target="_blank" data-lexicon="to be born first" data-strongs="H1069" data-translit="bāḵar" data-original="בָּכַר" data-lang="hebrew" data-verse="">ב-כ-ר</a></span></strong> (<em>B-K-R</em>) — ties the plague of the firstborn directly to the resurrection of Christ.</p>
+<table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em;">
+<thead><tr style="background: #7c9885; color: white;">
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;"><span dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h1060/kjv/wlc/0-1/" target="_blank" data-lexicon="firstborn, firstling" data-strongs="H1060" data-translit="bᵊḵôr" data-original="בְּכוֹר" data-lang="hebrew" data-verse="">בְּכוֹר</a></span> (<em>bekhor</em>)</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;"><span dir="rtl" lang="he">בִּכּוּרִים</span> (<em>bikkurim</em>)</th>
+</tr></thead><tbody>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Firstborn son</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Firstfruits of harvest</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Belongs to God (<a href="https://www.blueletterbible.org/kjv/exo/13/2/s_63002" target="_blank" data-ref="Exodus 13:2">Exodus 13:2</a>)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Belongs to God (<a href="https://www.blueletterbible.org/kjv/lev/23/10/s_113010" target="_blank" data-ref="Leviticus 23:10">Leviticus 23:10</a>)</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Must be <strong>redeemed</strong> or <strong>consecrated</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Must be <strong>offered</strong></td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Death claimed Egypt's firstborn</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Life emerges from the ground</td>
+</tr>
+</tbody></table><div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>The Exchange Principle</span>
+<span class="sub-arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<p style="margin-bottom: 15px;">Before the plagues begin, God establishes the stakes:</p>
+<blockquote style="border-left: 4px solid #7c9885; padding-left: 20px; margin: 20px 0; font-style: italic; color: #4a4a4a;">
+<p>"Thus saith the LORD, <strong>Israel is my son, even my firstborn</strong>... Let my son go... if thou refuse... I will slay <strong>thy son, even thy firstborn</strong>." (<a href="https://www.blueletterbible.org/kjv/exo/4/22-23/s_54022" target="_blank" data-ref="Exodus 4:22-23">Exodus 4:22–23</a>)</p>
+</blockquote>
+<p style="margin-bottom: 15px;">This is the logic of the tenth plague. Pharaoh tried to destroy God's firstborn (the Hebrew boys in the Nile). Now Egypt's firstborn die; Israel's firstborn live — but belong to God:</p>
+<blockquote style="border-left: 4px solid #7c9885; padding-left: 20px; margin: 20px 0; font-style: italic; color: #4a4a4a;">
+<p>"<strong>Sanctify unto me all the firstborn</strong>, whatsoever openeth the womb among the children of Israel, both of man and of beast: <strong>it is mine</strong>." (<a href="https://www.blueletterbible.org/kjv/exo/13/2/s_63002" target="_blank" data-ref="Exodus 13:2">Exodus 13:2</a>)</p>
+</blockquote>
+</div>
+</div>
+</div>
+<div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>From Death to Life</span>
+<span class="sub-arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<p style="margin-bottom: 15px;">The plague of the firstborn (<em>bekhor</em>) is about <strong>death</strong>. The Feast of Firstfruits (<em>bikkurim</em>) is about <strong>life emerging from death</strong> — seed buried in ground, then rising as harvest. Same root, opposite movements.</p>
+<table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em;">
+<thead><tr style="background: #7c9885; color: white;">
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Plague of Firstborn</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Bikkurim / Firstfruits</th>
+</tr></thead><tbody>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Death of Egypt's <em>bekhor</em></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Resurrection of the <em>bikkurim</em></td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Passover night (14 Nisan)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Resurrection morning (16 Nisan)</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Blood on doorposts</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Sheaf waved before the Lord</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Israel's firstborn spared</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Christ rises as "firstfruits of them that slept"</td>
+</tr>
+</tbody></table>
+<p style="margin-bottom: 15px;">Paul captures this in <a href="https://www.blueletterbible.org/kjv/1co/15/20/s_1077020" target="_blank" data-ref="1 Corinthians 15:20">1 Corinthians 15:20, 23</a>:</p>
+<blockquote style="border-left: 4px solid #7c9885; padding-left: 20px; margin: 20px 0; font-style: italic; color: #4a4a4a;">
+<p>"But now is Christ risen from the dead, and become <strong>the firstfruits</strong> of them that slept... Christ the firstfruits; afterward they that are Christ's at his coming."</p>
+</blockquote>
+<p style="margin-bottom: 15px;">Christ is both the <strong>Firstborn</strong> who dies and the <strong>Firstfruits</strong> who rises. The same Hebrew root that marks the plague of death marks the feast of resurrection. What kills Egypt's sons brings life to all who trust in God's covenant promise.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+</div>
+</div>
+</div>
+
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>New Language Tools: Prepositions with Pronouns</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">This week's <a href="/hebrew/11-prepositions-with-pronouns/" target="_blank">Hebrew Lesson 11</a> introduces one of the most practical patterns in biblical Hebrew: <strong>pronominal suffixes on prepositions</strong>.</p>
+<p style="margin-bottom: 15px;">In English, we say "over you." In Hebrew, this becomes a single word: <span dir="rtl" lang="he">עֲלֵכֶם</span> (<em>alekhem</em>). The preposition and pronoun fuse together. This happens thousands of times in the Hebrew Bible — every "with him," "to me," "from them," and "upon us" is actually one word.</p>
+<p style="margin-bottom: 15px;"><strong>The Passover connection</strong>: In <a href="https://www.blueletterbible.org/kjv/exo/12/13/s_62013" target="_blank" data-ref="Exodus 12:13">Exodus 12:13</a>, the Lord promises:</p>
+<blockquote style="border-left: 4px solid #7c9885; padding-left: 20px; margin: 20px 0; font-style: italic; color: #4a4a4a;">
+<p>"When I see the blood, I will pass <strong>over you</strong> (<span dir="rtl" lang="he">עֲלֵכֶם</span>)."</p>
+</blockquote>
+<p style="margin-bottom: 15px;">That single Hebrew word <em>alekhem</em> carries the entire covenant promise: the preposition <span dir="rtl" lang="he"><a href="https://www.blueletterbible.org/lexicon/h5922/kjv/wlc/0-1/" target="_blank" data-lexicon="upon, over, on account of, above, to, againstupon, over, on account of, regarding, concerning, on behalf ofover (with..." data-strongs="H5922" data-translit="ʿal" data-original="עַל" data-lang="hebrew" data-verse="">עַל</a></span> ("over, upon") plus the second person plural suffix ("you all"). The blood doesn't just exist — it exists <em>over you</em>, <em>upon you</em>, protecting a community. One word bears the weight of salvation.</p>
+<p style="margin-bottom: 15px;">The blood exists <em>over you</em> (<span dir="rtl" lang="he">עֲלֵכֶם</span>) precisely because the <em>mashchit</em> would otherwise come <em>upon you</em>. Same preposition, opposite outcomes, depending on the blood.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Passover as Easter, Easter as Passover</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">If you spent Easter week with our study guide, you've already encountered much of this week's material from a different angle. Now the connections deepen:</p>
+<table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em;">
+<thead><tr style="background: #7c9885; color: white;">
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Passover Element</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Fulfillment in Christ</th>
+</tr></thead><tbody>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Lamb without blemish</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Christ, the spotless sacrifice</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Blood on doorposts (forming <span dir="rtl" lang="he">ח</span> for "life")</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">His blood marking us with life</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Doorpost as altar</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Christ as the altar, the sacrifice, and the priest</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Threshold as entrance to protection</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Christ as "the Door" (<a href="https://www.blueletterbible.org/kjv/jhn/10/9/s_1007009" target="_blank" data-ref="John 10:9">John 10:9</a>)</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">The <em>mashchit</em> passes over</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Divine justice satisfied</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Death of Egypt's <em>bekhor</em> (firstborn)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">The Firstborn of the Father dies</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Israel's <em>bekhor</em> consecrated to God</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">We become "the church of the Firstborn" (<a href="https://www.blueletterbible.org/kjv/heb/12/23/s_1145023" target="_blank" data-ref="Hebrews 12:23">Hebrews 12:23</a>)</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><em>Bikkurim</em> sheaf waved on Sunday</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Christ rises on Firstfruits morning</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Unleavened bread</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">The bread of the sacrament</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Haste of departure</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">The urgency of discipleship</td>
+</tr>
+</tbody></table>
+<p style="margin-bottom: 15px;">The Passover isn't backstory for Easter — it's the same story, told in symbols first and then in flesh and blood. The same Hebrew root (<em>B-K-R</em>) that names the plague (<em>bekhor</em>) names the resurrection feast (<em>bikkurim</em>). Death and life, bound together in God's design.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>An Invitation to Go Deeper</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">The upcoming changes to our Sunday schedule invite us to take greater ownership of our gospel learning. This is exactly what prophets have been teaching for years: the home is the center of gospel study, with Church as a support. The new structure makes space for that vision to flourish.</p>
+<p style="margin-bottom: 15px;">At CFM Corner, we're excited to be part of this shift. Our study guides, Hebrew lessons, and video distillations are designed for exactly this kind of personal and family study — resources you can use at your own pace, in your own home, as deep as you want to go.</p>
+<p style="margin-bottom: 15px;">Use what fits your season:</p>
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;"><strong>Short on time?</strong> Read the Week Overview and one Word Study</li>
+<li style="margin-bottom: 8px;"><strong>Ready for more?</strong> Work through the full study guide with scripture references</li>
+<li style="margin-bottom: 8px;"><strong>Learning Hebrew?</strong> The language lessons build week by week</li>
+<li style="margin-bottom: 8px;"><strong>Want fresh perspective?</strong> Our video distillations synthesize hours of commentary into focused summaries</li>
+</ul>
+<p style="margin-bottom: 15px;">The goal has always been to meet you where you are and help you discover how rich these scriptures really are. The new schedule gives you more opportunity to do exactly that.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>This Week's Invitation</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">As you read the plagues and the Passover this week, look for the threads that weave through the entire story of redemption:</p>
+<p style="margin-bottom: 15px;"><strong>Start with the women.</strong> Notice Shiphrah and Puah standing before an unnamed Pharaoh. Notice a mother's desperate faith, a sister's watchful courage, a wife's covenant understanding. The deliverer needed delivering first.</p>
+<p style="margin-bottom: 15px;"><strong>Notice the blood.</strong> See how <em>dam</em> connects to <em>adam</em> and <em>adamah</em> — life from the red earth, life in the red blood. Watch it paint the letter of life (<span dir="rtl" lang="he">ח</span>) over each doorway. Understand that this blood doesn't deflect an external threat; it satisfies the judgements of God, through the mercy of the Savior.</p>
+<p style="margin-bottom: 15px;"><strong>Stand at the threshold.</strong> See the doorpost as altar, the home as temple, the father as priest. Recognize that every threshold you cross in faith echoes that Passover night — and that Christ Himself has become the Door, marked with His own blood, through which we enter God's presence.</p>
+<p style="margin-bottom: 15px;"><strong>Follow the firstborn.</strong> Trace the <em>bekhor</em> from Pharaoh's doomed heir to Israel's consecrated sons to Christ, "the firstborn from the dead." Then watch <em>bekhor</em> transform into <em>bikkurim</em> — from death on Passover night to resurrection on Firstfruits morning.</p>
+<p style="margin-bottom: 15px;"><strong>Remember Moriah.</strong> Abraham said God would provide a lamb; God provided a ram caught in thorns. The lamb was still coming. At Passover, it arrived. At Calvary, it was fulfilled.</p>
+<p style="margin-bottom: 15px;">And when you reach <a href="https://www.blueletterbible.org/kjv/exo/12/13/s_62013" target="_blank" data-ref="Exodus 12:13">Exodus 12:13</a>, pause at that single Hebrew word: <span dir="rtl" lang="he">עֲלֵכֶם</span>. <em>Over you.</em> A preposition and a pronoun, fused into one word, carrying the promise of covenant protection.</p>
+<p style="margin-bottom: 15px;">The destroyer passed through Egypt. But where the blood covered the threshold, death became life.</p>
+<p style="margin-bottom: 15px;">That's the word that matters this week.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<p style="margin-bottom: 15px;"><em>Week 15 Study Guide | CFM Corner | OT 2026</em></p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+
+</div>

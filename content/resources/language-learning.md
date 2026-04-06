@@ -38,6 +38,12 @@ Learning the original languages of scripture — Biblical Hebrew and Koine Greek
   <div style="font-size: 0.8em; color: #57899c; line-height: 1.5;">How three-letter roots form the foundation of Hebrew vocabulary</div>
 </a>
 
+<a href="../../hebrew/11-prepositions-with-pronouns/" style="text-decoration: none; background: white; border: 1px solid #c6d4c8; border-radius: 10px; padding: 24px 16px; text-align: center; transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; align-items: center;">
+  <div style="font-size: 2.5em; margin-bottom: 10px;">לִי מִמֶּנּוּ</div>
+  <div style="font-family: Georgia, serif; color: #1e3a4f; font-size: 1.05em; font-weight: 600; margin-bottom: 6px;">Prepositions with Pronouns</div>
+  <div style="font-size: 0.8em; color: #57899c; line-height: 1.5;">How Hebrew prepositions absorb pronouns as suffixes — "to me," "from him" in one word</div>
+</a>
+
 </div>
 
 ---
