@@ -373,6 +373,24 @@ Click on any Hebrew or Greek term to study it at Blue Letter Bible. Use the **fl
 </div>
 </details>
 
+<details class="seder-dropdown">
+<summary>Week 16: Exodus 14–17 — "Stand Still, and See the Salvation of the Lord"</summary>
+<div class="seder-dropdown-body">
+
+{{< flashcards section="week16" >}}
+
+| Hebrew | Transliteration | Meaning |
+|:------:|-----------------|---------|
+| <a href="https://www.blueletterbible.org/lexicon/h3444/kjv/wlc/0-1/" target="_blank">יְשׁוּעָה</a> | *yeshu'ah* | salvation, deliverance (root of the name Jesus/Yeshua) |
+| <a href="https://www.blueletterbible.org/lexicon/h4478/kjv/wlc/0-1/" target="_blank">מָן</a> | *man* | manna — "What is it?" Daily bread from heaven |
+| <a href="https://www.blueletterbible.org/lexicon/h6697/kjv/wlc/0-1/" target="_blank">צוּר</a> | *tzur* | rock, cliff — divine title; "that Rock was Christ" (1 Cor 10:4) |
+| <a href="https://www.blueletterbible.org/lexicon/h5251/kjv/wlc/0-1/" target="_blank">נֵס</a> | *nes* | banner, standard, ensign; YHWH-Nissi = "The LORD is my Banner" |
+| <a href="https://www.blueletterbible.org/lexicon/h5254/kjv/wlc/0-1/" target="_blank">נָסָה</a> | *nasa* | to test, prove, try (Massah and Meribah) |
+| <a href="https://www.blueletterbible.org/lexicon/h7495/kjv/wlc/0-1/" target="_blank">רָפָא</a> | *rapha* | to heal, restore; YHWH-Rophe = "I am the LORD who heals you" |
+
+</div>
+</details>
+
 ---
 
 ## Special Topics

@@ -1,0 +1,1951 @@
+<style>
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+        .site-header {
+            background: linear-gradient(135deg, #d4c4a8 0%, #8B7355 100%);
+            color: white; padding: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px;
+        }
+        .site-header-content { max-width: 1000px; margin: 0 auto; padding: 0 20px; text-align: center; }
+        .site-title { font-size: 2em; margin-bottom: 5px; }
+        .site-subtitle { font-size: 1.1em; opacity: 0.9; }
+
+        .header-section {
+            background-color: #8B7355; color: white; padding: 40px; border-radius: 12px;
+            margin-bottom: 30px; text-align: center;
+        }
+        .header-section .week-label { font-size: 1em; text-transform: uppercase; letter-spacing: 2px; opacity: 0.9; margin-bottom: 10px; }
+        .header-section h1 { font-size: 2.5em; font-weight: 300; margin-bottom: 10px; }
+        .header-section .subtitle { font-size: 1.3em; font-style: italic; margin-bottom: 20px; }
+        .header-section .date-location { font-size: 1.1em; opacity: 0.95; }
+
+        .quick-links { text-align: center; margin: 20px 0; }
+        .quick-link {
+            display: inline-block; background: #8B7355; color: white; padding: 10px 20px;
+            border-radius: 8px; text-decoration: none; margin: 5px; transition: all 0.3s;
+        }
+        .quick-link:hover { background: #6B5344; transform: translateY(-2px); }
+
+        .button-container { text-align: center; margin: 30px 0; }
+        .expand-button {
+            background-color: #8B7355; color: white; border: none; padding: 12px 24px;
+            margin: 5px 10px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em;
+        }
+        .expand-button:hover { background-color: #6B5344; }
+
+        .sg-accordion-section {
+            background-color: #8B7355; color: white; cursor: pointer; padding: 18px; width: 100%;
+            border: none; text-align: left; font-size: 1.2em; font-weight: 600; font-family: Georgia, serif;
+            border-radius: 8px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center;
+        }
+        .sg-accordion-section:hover { background-color: #6B5344; }
+        .sg-accordion-section::after { content: '\25BC'; font-size: 0.9em; transition: transform 0.3s; }
+        .sg-accordion-section.active::after { transform: rotate(180deg); }
+
+        .sg-panel {
+            background-color: white; border-radius: 0 0 8px 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .sg-panel.active { display: block; }
+        .panel-content { padding: 30px; }
+        .panel-content h2 { color: #8B7355; margin-bottom: 20px; font-size: 1.8em; }
+        .panel-content h3 { color: #6B5344; margin-top: 25px; margin-bottom: 15px; font-size: 1.4em; }
+        .panel-content h4 { color: #5a4a3a; margin-top: 20px; margin-bottom: 12px; font-size: 1.2em; }
+        .panel-content ul, .panel-content ol { margin-left: 25px; margin-bottom: 15px; }
+        .panel-content li { margin-bottom: 8px; }
+        .panel-content p { margin-bottom: 15px; text-align: justify; }
+        .panel-content a { color: #8B7355; }
+        .panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .panel-content blockquote {
+            margin: 20px 0 20px 20px;
+            padding: 15px 20px;
+            border-left: 4px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 8px 8px 0;
+        }
+        .panel-content blockquote p { margin-bottom: 8px; }
+        .panel-content blockquote p:last-child { margin-bottom: 0; }
+        .panel-content blockquote cite {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #8B7355;
+            font-style: normal;
+        }
+
+        .panel-content strong { color: #6B5344; }
+        .panel-content em { color: #5a4a3a; }
+
+        .panel-content hr {
+            border: none;
+            border-top: 2px solid #e8e0d5;
+            margin: 25px 0;
+        }
+
+        .panel-content code {
+            background-color: #f5f0e8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #6B5344;
+        }
+
+        .info-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .info-table th, .info-table td { border: 1px solid #d4c4a8; padding: 12px; text-align: left; }
+        .info-table th { background-color: #f5f0e8; color: #6B5344; font-weight: bold; }
+        .info-table tr:nth-child(even) { background-color: #faf8f5; }
+
+        .sg-sub-accordion {
+            background-color: #f5f0e8;
+            color: #5a4a3a;
+            cursor: pointer;
+            padding: 14px 40px 14px 18px;
+            width: 100%;
+            text-align: left;
+            border: 1px solid #d4c4a8;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            margin-top: 10px;
+            position: relative;
+            transition: background-color 0.2s;
+        }
+
+        .sg-sub-accordion:hover {
+            background-color: #e8e0d4;
+        }
+
+        .sg-sub-accordion::after {
+            content: '\25BC';
+            font-size: 0.8em;
+            color: #8B7355;
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s;
+        }
+
+        .sg-sub-accordion.active::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .sg-sub-panel {
+            background-color: #fafafa;
+            border-radius: 0 0 6px 6px;
+            border: 1px solid #d4c4a8;
+            border-top: none;
+            display: none;
+            transition: max-height 0.3s ease-out;
+            margin-bottom: 10px;
+        }
+
+        .sg-sub-panel.active {
+            display: block;
+            overflow: visible;
+            transition: max-height 0.3s ease-in;
+        }
+
+        .sg-sub-panel-content {
+            padding: 20px 25px;
+        }
+
+        .sg-sub-panel-content h3 { color: #6B5344; margin-top: 20px; margin-bottom: 12px; font-size: 1.3em; }
+        .sg-sub-panel-content h4 { color: #5a4a3a; margin-top: 15px; margin-bottom: 10px; font-size: 1.15em; }
+        .sg-sub-panel-content p { margin-bottom: 12px; text-align: justify; }
+        .sg-sub-panel-content ul, .sg-sub-panel-content ol { margin-left: 25px; margin-bottom: 12px; }
+        .sg-sub-panel-content li { margin-bottom: 6px; }
+        .sg-sub-panel-content a { color: #8B7355; }
+        .sg-sub-panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .sg-sub-panel-content blockquote {
+            margin: 15px 0 15px 15px;
+            padding: 12px 18px;
+            border-left: 3px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 6px 6px 0;
+        }
+        .sg-sub-panel-content blockquote p { margin-bottom: 6px; }
+        .sg-sub-panel-content blockquote p:last-child { margin-bottom: 0; }
+        .sg-sub-panel-content strong { color: #6B5344; }
+        .sg-sub-panel-content hr { border: none; border-top: 1px solid #e8e0d5; margin: 20px 0; }
+
+        @media (max-width: 768px) {
+            .header-section h1 { font-size: 1.8em; }
+            .panel-content { padding: 20px; }
+            .sg-sub-panel-content { padding: 15px 18px; }
+        }
+
+        .sg-section-heading {
+            margin: 1.2em 0 0.6em 0;
+            padding: 0.4em 0 0.4em 0.8em;
+            border-left: 3px solid #8B9D77;
+            color: #5a6b4f;
+            font-size: 1.05em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+        }
+        .sg-section-actions {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 28px;
+        }
+        .sg-section-actions .sg-action-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.35);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            padding: 0;
+            line-height: 1;
+        }
+        .sg-section-actions .sg-action-btn:hover {
+            background: rgba(255,255,255,0.35);
+        }
+    </style>
+
+
+<div class="container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <p class="week-label">Week 16</p>
+            <h1>Exodus 14-17 — Overview</h1>
+            <div class="subtitle">"Stand Still, and See the Salvation of the Lord"</div>
+            <div class="date-location"></div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/16?lang=eng" target="_blank" class="quick-link">CFM Manual</a>
+        </div>
+
+        <!-- Expand/Collapse Buttons -->
+        <div class="button-container">
+            <button class="expand-button" onclick="expandAll()"><span class="btn-icon">&#x229E;</span> Expand All</button>
+            <button class="expand-button" onclick="collapseAll()"><span class="btn-icon">&#x229F;</span> Collapse All</button>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 1: WEEK 16: EXODUS 14-17 — OVERVIEW -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">1. Week 16: Exodus 14-17 — Overview</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>"Stand Still, and See the Salvation of the Lord"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>"Fear ye not, stand still, and see the salvation of the Lord"</strong> (<a href="https://www.blueletterbible.org/kjv/exo/14/13/s_64013" target="_blank" data-ref="Exodus 14:13">Exodus 14:13</a>). This week's readings chronicle Israel's dramatic deliverance at the Red Sea and their first wilderness tests — at Marah, in the Wilderness of Sin with manna and quail, and at Rephidim with water from the rock. Through each crisis, the Lord teaches His covenant people to trust Him daily, revealing Himself as their Warrior, Healer, Provider, and Rock. These narratives establish foundational types of Christ's redemptive work.</p>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Scripture Scope</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ul>
+<li><strong><a href="https://www.blueletterbible.org/kjv/exo/14/1/s_64001" target="_blank" data-ref="Exodus 14">Exodus 14</a></strong>: The parting of the Red Sea; destruction of Pharaoh's army</li>
+<li><strong><a href="https://www.blueletterbible.org/kjv/exo/15/1-21/s_65001" target="_blank" data-ref="Exodus 15:1-21">Exodus 15:1-21</a></strong>: The Song of Moses (Shirat HaYam); Miriam's song</li>
+<li><strong><a href="https://www.blueletterbible.org/kjv/exo/15/22-27/s_65022" target="_blank" data-ref="Exodus 15:22-27">Exodus 15:22-27</a></strong>: The bitter waters of Marah made sweet</li>
+<li><strong><a href="https://www.blueletterbible.org/kjv/exo/16/1/s_66001" target="_blank" data-ref="Exodus 16">Exodus 16</a></strong>: Manna and quail in the Wilderness of Sin</li>
+<li><strong><a href="https://www.blueletterbible.org/kjv/exo/17/1-7/s_67001" target="_blank" data-ref="Exodus 17:1-7">Exodus 17:1-7</a></strong>: Water from the rock at Horeb/Massah and Meribah</li>
+<li><strong><a href="https://www.blueletterbible.org/kjv/exo/17/8-16/s_67008" target="_blank" data-ref="Exodus 17:8-16">Exodus 17:8-16</a></strong>: Victory over Amalek through Moses' uplifted hands</li>
+</ul>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Key Theological Concepts</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>1. Divine Deliverance</h3>
+<p>The Red Sea crossing is the paradigmatic act of salvation in the Hebrew Bible. God fights for His people while they "stand still" (14:13-14). This becomes the model for all future divine interventions and is explicitly linked to baptism in the New Testament (<a href="https://www.blueletterbible.org/kjv/1co/10/1-2/s_1072001" target="_blank" data-ref="1 Corinthians 10:1-2">1 Corinthians 10:1-2</a>).</p>
+<h3>2. The Lord as Warrior (יְהוָה אִישׁ מִלְחָמָה, YHWH Ish Milchamah)</h3>
+<p><a href="https://www.blueletterbible.org/kjv/exo/15/3/s_65003" target="_blank" data-ref="Exodus 15:3">Exodus 15:3</a> declares, "The Lord is a man of war" (יְהוָה אִישׁ מִלְחָמָה, <em>YHWH ish milchamah</em>). This divine warrior motif runs throughout scripture, culminating in Christ's triumph over death and hell. The Song of Moses celebrates military victory transformed into theological testimony.</p>
+<h3>3. Testing and Trust</h3>
+<p>The wilderness becomes God's classroom. Each crisis — no water, bitter water, no food, no water again — reveals Israel's heart and invites trust. The Hebrew term <a href="https://www.blueletterbible.org/lexicon/h5254/kjv/wlc/0-1/" target="_blank" data-lexicon="to test, prove, try" data-strongs="H5254" data-translit="nasah" data-original="נָסָה" data-lang="hebrew" data-verse="Genesis 22:1">נָסָה</a> (<em>nasa</em>, to test/prove) appears repeatedly. God tests Israel; Israel tests God. The outcome determines covenant faithfulness.</p>
+<h3>4. Daily Dependence: Manna as Sacramental Type</h3>
+<p>The manna narrative (<a href="https://www.blueletterbible.org/kjv/exo/16/1/s_66001" target="_blank" data-ref="Exodus 16">Exodus 16</a>) teaches radical daily dependence on God's provision. It cannot be hoarded (except for Sabbath); it must be gathered fresh each day. Jesus identifies Himself as the "true bread from heaven" (<a href="https://www.blueletterbible.org/kjv/jhn/6/32-35/s_1003032" target="_blank" data-ref="John 6:32-35">John 6:32-35</a>), and the sacrament continues this pattern of daily/weekly spiritual nourishment.</p>
+<h3>5. Christ the Rock</h3>
+<p>When Moses strikes the rock at Horeb and water flows out (17:6), he enacts a profound type of Christ. Paul explicitly identifies: "that Rock was Christ" (<a href="https://www.blueletterbible.org/kjv/1co/10/4/s_1072004" target="_blank" data-ref="1 Corinthians 10:4">1 Corinthians 10:4</a>). The smitten rock yielding living water foreshadows the Savior's atoning sacrifice.</p>
+<h3>6. Covenant Community: Bearing One Another's Burdens</h3>
+<p>The Amalek battle (17:8-16) demonstrates the principle of covenant community. When Moses' arms grow heavy, Aaron and Hur lift them. Victory comes through collaborative faithfulness, not solitary strength. This prefigures <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng&id=p8-p9#p8" target="_blank" data-ref="Mosiah 18:8-9">Mosiah 18:8-9</a>: "bear one another's burdens, that they may be light."</p>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Christological Threads</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Old Testament Event</th><th>New Testament Fulfillment</th></tr>
+<tr><td>Crossing the Red Sea</td><td>Baptism (<a href="https://www.blueletterbible.org/kjv/1co/10/1-2/s_1072001" target="_blank" data-ref="1 Corinthians 10:1-2">1 Cor. 10:1-2</a>)</td></tr>
+<tr><td>Pillar of cloud/fire</td><td>Christ as the Light of the World (<a href="https://www.blueletterbible.org/kjv/jhn/8/12/s_1005012" target="_blank" data-ref="John 8:12">John 8:12</a>)</td></tr>
+<tr><td>Manna from heaven</td><td>Christ, the Bread of Life (<a href="https://www.blueletterbible.org/kjv/jhn/6/35/s_1003035" target="_blank" data-ref="John 6:35">John 6:35</a>)</td></tr>
+<tr><td>Water from the rock</td><td>Christ, the Living Water (<a href="https://www.blueletterbible.org/kjv/jhn/4/14/s_1001014" target="_blank" data-ref="John 4:14">John 4:14; 7:37-38</a>)</td></tr>
+<tr><td>Moses' lifted hands</td><td>Christ lifted up on the cross (<a href="https://www.blueletterbible.org/kjv/jhn/3/14-15/s_1000014" target="_blank" data-ref="John 3:14-15">John 3:14-15</a>)</td></tr>
+<tr><td>Healing at Marah</td><td>Christ the Healer (<a href="https://www.blueletterbible.org/kjv/isa/53/5/s_732005" target="_blank" data-ref="Isaiah 53:5">Isaiah 53:5</a>)</td></tr>
+</table>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>CFM Manual Emphasis</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The Come, Follow Me manual emphasizes personal application: How has the Lord fought for you? What "bitter" experiences has He made sweet? How do you gather spiritual manna daily? The manual draws on Nephi's use of this story to inspire courage (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/4?lang=eng&id=p2#p2" target="_blank" data-ref="1 Nephi 4:2">1 Nephi 4:2</a>), Limhi's use to inspire hope in captivity (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/7?lang=eng&id=p19#p19" target="_blank" data-ref="Mosiah 7:19">Mosiah 7:19</a>), and Alma's testimony to his son (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/36?lang=eng&id=p28#p28" target="_blank" data-ref="Alma 36:28">Alma 36:28</a>).</p>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Key Questions for This Week</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li>When have you felt "trapped" between impossibilities, like Israel at the Red Sea? How did God open a way?</li>
+<li>What does "daily bread" look like in your spiritual life? Are you trying to "hoard" grace or receiving it fresh each day?</li>
+<li>How might complaining (murmuring) prevent us from seeing God's provision?</li>
+<li>Who are the "Aarons and Hurs" in your life who lift your arms when you grow weary?</li>
+<li>How does understanding Christ as the smitten Rock deepen your appreciation for the Atonement?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 2: WEEK 16: EXODUS 14-17 — HISTORICAL AND CULTURAL CONTEXT -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">2. Week 16: Exodus 14-17 — Historical and Cultural Context</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>The Red Sea Crossing: Geography and Setting</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Route of the Exodus</h3>
+<p>The exact location of the crossing remains debated among scholars. Key place names mentioned:</p>
+<ul>
+<li><strong><a href="https://bibleatlas.org/pi-hahiroth.htm" target="_blank">Pi-hahiroth</a></strong> (<a href="https://www.blueletterbible.org/kjv/exo/14/2/s_64002" target="_blank" data-ref="Exodus 14:2">Exodus 14:2</a>): Possibly "mouth of the gorges" — location uncertain</li>
+<li><strong><a href="https://bibleatlas.org/migdol.htm" target="_blank">Migdol</a></strong>: Egyptian term for "tower" or "fortress"</li>
+<li><strong><a href="https://bibleatlas.org/baal-zephon.htm" target="_blank">Baal-zephon</a></strong>: A site associated with a Canaanite/Phoenician deity; possibly a navigational landmark</li>
+<li><strong><a href="https://www.holylandsite.com/red-sea-crossing" target="_blank">Yam Suph</a></strong>: Hebrew for "Sea of Reeds" — traditionally translated "Red Sea" but literally refers to a reed-filled body of water</li>
+</ul>
+<p>The Hebrew <em>Yam Suph</em> (ים סוף) more accurately means "Sea of Reeds." This could refer to:</p>
+<ol>
+<li>The <a href="https://bibleatlas.org/gulf_of_aqaba.htm" target="_blank">Gulf of Aqaba</a></li>
+<li>The <a href="https://bibleatlas.org/gulf_of_suez.htm" target="_blank">Gulf of Suez</a></li>
+<li>One of the Bitter Lakes region bodies of water</li>
+<li>Lake Timsah</li>
+</ol>
+<blockquote>
+<p><strong>Map Resources:</strong> Explore the Exodus route interactively at <a href="https://scriptures.byu.edu/mapscrip/" target="_blank">BYU Scriptures Mapped</a> (search "<a href="https://www.blueletterbible.org/kjv/exo/14/1/s_64001" target="_blank" data-ref="Exodus 14">Exodus 14</a>") or browse all biblical sites at <a href="https://www.holylandsite.com/all-biblical-sites" target="_blank">Holy Land Site</a>. See also the <a href="#key-locations" target="_blank">Key Locations table</a> at the end of this document.</p>
+</blockquote>
+<h3>Egyptian Military Context</h3>
+<p>Pharaoh's pursuit force included:</p>
+<ul>
+<li><strong>600 chosen chariots</strong> (<a href="https://www.blueletterbible.org/kjv/exo/14/7/s_64007" target="_blank" data-ref="Exodus 14:7">Exodus 14:7</a>) — elite chariot corps</li>
+<li><strong>All the chariots of Egypt</strong> — the full military complement</li>
+<li><strong>Captains over every one of them</strong> — שָׁלִישִׁים (<em>shalishim</em>), literally "third men" (chariot commanders)</li>
+</ul>
+<p>Egyptian chariots of this period were two-wheeled, drawn by two horses, typically carrying a driver and an archer. The "third man" was likely an additional warrior or shield-bearer in elite units.</p>
+<h3>The Pillar of Cloud and Fire</h3>
+<p>The <em>amud anan</em> (עמוד ענן, pillar of cloud) and <em>amud esh</em> (עמוד אש, pillar of fire) served multiple functions:</p>
+<ol>
+<li><strong>Guidance</strong>: Leading Israel's march</li>
+<li><strong>Protection</strong>: Moving between Israel and Egypt (14:19-20)</li>
+<li><strong>Divine Presence</strong>: The visible manifestation of YHWH's כָּבוֹד (<em>kavod</em>, glory)</li>
+<li><strong>Covenant Sign</strong>: Connecting to Sinai's cloud-covered summit</li>
+</ol>
+<p>Ancient Near Eastern parallels include the practice of armies carrying fire-braziers for guidance during night marches, but the biblical account emphasizes divine agency, not human technology.</p>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Song of the Sea (שִׁירַת הַיָּם, Shirat HaYam)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Literary Structure</h3>
+<p><a href="https://www.blueletterbible.org/kjv/exo/15/1-18/s_65001" target="_blank" data-ref="Exodus 15:1-18">Exodus 15:1-18</a> is one of the oldest pieces of Hebrew poetry, possibly dating to the 12th-11th centuries BCE. Its features include:</p>
+<ul>
+<li><strong>Archaic Hebrew forms</strong>: Early verbal constructions and vocabulary</li>
+<li><strong>Parallelism</strong>: Classic Hebrew poetic structure</li>
+<li><strong>Divine warrior hymn</strong>: Following ancient Near Eastern victory song patterns</li>
+<li><strong>Chiastic structure</strong>: The poem builds to a central climax</li>
+</ul>
+<h3>Key Vocabulary</h3>
+<table class="info-table">
+<tr><th>Hebrew</th><th>Transliteration</th><th>Meaning</th><th>Verse</th></tr>
+<tr><td>אָשִׁירָה</td><td>ashirah</td><td>"I will sing"</td><td>15:1</td></tr>
+<tr><td>גָּאֹה גָּאָה</td><td>ga'oh ga'ah</td><td>"triumphed gloriously" (lit. "risen, risen")</td><td>15:1</td></tr>
+<tr><td>עָזִּי וְזִמְרָת</td><td>ozzi v'zimrat</td><td>"my strength and song"</td><td>15:2</td></tr>
+<tr><td>אִישׁ מִלְחָמָה</td><td>ish milchamah</td><td>"man of war"</td><td>15:3</td></tr>
+<tr><td>נֶאְדָּר</td><td>ne'dar</td><td>"majestic/glorious"</td><td>15:6, 11</td></tr>
+</table>
+<h3>Miriam's Response (15:20-21)</h3>
+<p>Miriam is called <em>n'vi'ah</em> (<a href="https://www.blueletterbible.org/lexicon/h5031/kjv/wlc/0-1/" target="_blank" data-lexicon="prophetessancient type endowed with gift of song (Miriam)later type consulted for a word (Huldah)false prophetess (No..." data-strongs="H5031" data-translit="nᵊḇî&#x27;â" data-original="נְבִיאָה" data-lang="hebrew" data-verse="">נְבִיאָה</a>) — "prophetess" — one of the earliest uses of this title. Her song and dance represent women's participation in victory celebrations, attested throughout ancient Near Eastern cultures.</p>
+<blockquote>
+<p><strong>Media Resource:</strong> The 1998 DreamWorks film <em>The Prince of Egypt</em> powerfully depicts this moment — Miriam and the women of Israel singing in triumph after crossing the sea.</p>
+<p><a href="https://img.youtube.com/vi/NieC8KA0EvI/mqdefault.jpg" target="_blank">![When You Believe - Prince of Egypt</a>](https://www.youtube.com/watch?v=NieC8KA0EvI)</p>
+<p><em>"When You Believe" — Prince of Egypt (1998)</em></p>
+</blockquote>
+<h3>Women and Music in Ancient Israel</h3>
+<p>The scene of Miriam leading the women with timbrels and dancing (<a href="https://www.blueletterbible.org/kjv/exo/15/20-21/s_65020" target="_blank" data-ref="Exodus 15:20-21">Exodus 15:20-21</a>) reflects a well-documented tradition of women's musical leadership in ancient Israel and the broader Ancient Near East.</p>
+<p><strong>Key elements of this tradition:</strong></p>
+<ul>
+<li>**The Timbrel/Frame Drum (<a href="https://www.blueletterbible.org/lexicon/h8596/kjv/wlc/0-1/" target="_blank" data-lexicon="timbrel, tambourine" data-strongs="H8596" data-translit="tōp̄" data-original="תֹּף" data-lang="hebrew" data-verse="">תֹּף</a>, <em>tof</em>)**: A small hand-drum considered primarily a women's instrument in ancient Israel, used for festive and celebratory occasions</li>
+<li><strong>Victory-Song Tradition</strong>: A performance genre specifically associated with women, combining song, drums, and dance to celebrate military victories</li>
+<li><strong>ANE Parallels</strong>: Archaeological figurines throughout the Ancient Near East depict women dancing, singing, and playing frame drums — matching the <a href="https://www.blueletterbible.org/kjv/exo/15/20-21/s_65020" target="_blank" data-ref="Exodus 15:20-21">Exodus 15:20-21</a> description</li>
+<li><strong>Prophetic Function</strong>: Miriam's title <em>n'vi'ah</em> (prophetess) connects musical leadership with prophetic authority; she is remembered alongside Moses and Aaron as representing God before the people (<a href="https://www.blueletterbible.org/kjv/mic/6/4/s_899004" target="_blank" data-ref="Micah 6:4">Micah 6:4</a>)</li>
+</ul>
+<p><strong>Scholarly Resources:</strong></p>
+<table class="info-table">
+<tr><th>Article</th><th>Source</th><th>Focus</th></tr>
+<tr><td><a href="https://www.thetorah.com/article/miriams-song-of-the-sea-a-womens-victory-performance" target="_blank">Miriam's Song of the Sea: A Women's Victory Performance</a></td><td>TheTorah.com</td><td>Women's victory-song tradition, performance genre</td></tr>
+<tr><td><a href="https://jwa.org/encyclopedia/article/miriam-bible" target="_blank">Miriam: Bible</a></td><td>Jewish Women's Archive</td><td>Comprehensive scholarly article on Miriam's roles</td></tr>
+<tr><td><a href="https://www.jtsa.edu/torah/miriams-song-and-the-role-of-music-in-prayer/" target="_blank">Miriam's Song and the Role of Music in Prayer</a></td><td>Jewish Theological Seminary</td><td>Liturgical and theological significance</td></tr>
+<tr><td><a href="https://www.bibleodyssey.org/articles/music-in-the-ancient-near-east/" target="_blank">Music in the Ancient Near East</a></td><td>Bible Odyssey</td><td>ANE musical traditions and archaeological evidence</td></tr>
+<tr><td><a href="https://bibleinterp.arizona.edu/articles/Music" target="_blank">Music and Musical Instruments in the Hebrew Bible</a></td><td>Bible Interp (Arizona)</td><td>Instruments, musicians, worship contexts</td></tr>
+<tr><td><a href="https://www.chabad.org/library/article_cdo/aid/4254744/jewish/The-Mystery-of-Miriams-Song.htm" target="_blank">The Mystery of Miriam's Song</a></td><td>Chabad.org</td><td>Rabbinic perspectives on the women's song</td></tr>
+<tr><td><a href="https://thelehrhaus.com/commentary/miriams-song-and-the-persistence-of-music-in-dark-times/" target="_blank">Miriam's Song and the Persistence of Music in Dark Times</a></td><td>The Lehrhaus</td><td>Music as resilience and hope</td></tr>
+</table>
+<p><strong>Video Resources:</strong></p>
+<table class="info-table">
+<tr><th>Title</th><th>Source</th><th>Link</th></tr>
+<tr><td>What is the "Song of the Sea"?</td><td>Book of Mormon Central (Lynne Hilton Wilson)</td><td><a href="https://www.youtube.com/watch?v=zS3BqKcivwk" target="_blank">YouTube</a></td></tr>
+</table>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Marah: The Bitter Waters (15:22-27)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Geography</h3>
+<p><strong>Marah</strong> (<a href="https://www.blueletterbible.org/lexicon/h4785/kjv/wlc/0-1/" target="_blank" data-lexicon="Marah = &quot;bitter&quot;the spring with bitter water which was 3 days travel from the crossing place of the Red Sea in the pe..." data-strongs="H4785" data-translit="mārâ" data-original="מָרָה" data-lang="hebrew" data-verse="">מָרָה</a>) means "bitter" in Hebrew. The location is traditionally identified with:</p>
+<ul>
+<li>Ain Hawarah (modern identification)</li>
+<li>Approximately 75 km southeast of Suez</li>
+</ul>
+<h3>The Tree That Heals</h3>
+<p>Moses cast a tree (<em>etz</em>, עֵץ) into the water to make it sweet. This action may connect to:</p>
+<ul>
+<li>The "tree of life" imagery</li>
+<li>Later Israelite understanding of Torah as a "tree of life" (<a href="https://www.blueletterbible.org/kjv/pro/3/18/s_631018" target="_blank" data-ref="Proverbs 3:18">Proverbs 3:18</a>)</li>
+<li>Medicinal properties of certain woods (some scholars note tannic acid from certain trees can neutralize bitter alkaloids)</li>
+</ul>
+<h3>Divine Healing Title</h3>
+<p>Here God reveals Himself as <strong>YHWH <a href="https://www.blueletterbible.org/lexicon/h7495/kjv/wlc/0-1/" target="_blank" data-lexicon="to heal, make healthful(Qal) to healof Godhealer, physician (of men)of hurts of nations involving restored favour (fi..." data-strongs="H7495" data-translit="rāp̄ā'" data-original="רַעַשׁ" data-lang="hebrew" data-verse="">Rophe'echa</a></strong> (יְהוָה רֹפְאֶךָ) — "the LORD who heals you" (15:26). This is one of the compound names of God, emphasizing His role as healer of both physical and spiritual afflictions.</p>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Manna Narrative (Exodus 16)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>What Was Manna?</h3>
+<p>The Hebrew <em>man</em> (<a href="https://www.blueletterbible.org/lexicon/h4479/kjv/wlc/0-1/" target="_blank" data-lexicon="who?, what?, whoever, whosoever" data-strongs="H4479" data-translit="mān" data-original="מָן" data-lang="hebrew" data-verse="">מָן</a>) or <em>man hu</em> (מָן הוּא, "What is it?") describes the mysterious substance. Biblical description:</p>
+<ul>
+<li><strong>Appearance</strong>: Like coriander seed, white (16:31)</li>
+<li><strong>Taste</strong>: Like wafers made with honey (16:31); elsewhere described as like "fresh oil" (<a href="https://www.blueletterbible.org/kjv/num/11/8/s_128008" target="_blank" data-ref="Numbers 11:8">Numbers 11:8</a>)</li>
+<li><strong>Texture</strong>: Could be ground and baked into cakes</li>
+<li><strong>Timing</strong>: Appeared each morning with the dew</li>
+</ul>
+<p>Naturalistic explanations suggest excretions from scale insects on tamarisk trees, but the miraculous elements (ceasing on Sabbath, double portion on Friday, not falling for 40 years except in specific ways) transcend natural phenomena.</p>
+<h3>Sabbath Institution</h3>
+<p><a href="https://www.blueletterbible.org/kjv/exo/16/1/s_66001" target="_blank" data-ref="Exodus 16">Exodus 16</a> provides the first explicit Sabbath observance command in the wilderness:</p>
+<ul>
+<li>Gather double portion on sixth day</li>
+<li>No manna falls on seventh day</li>
+<li>Cannot be preserved overnight (except over Sabbath)</li>
+</ul>
+<p>This establishes the pattern of Sabbath rest before Sinai.</p>
+<h3>The Omer</h3>
+<p>An <strong>omer</strong> (<a href="https://www.blueletterbible.org/lexicon/h6016/kjv/wlc/0-1/" target="_blank" data-lexicon="omera dry measure of 1/10 ephah (about 2 litres)sheaf" data-strongs="H6016" data-translit="ʿōmer" data-original="עֹמֶר" data-lang="hebrew" data-verse="">עֹמֶר</a>) is approximately 2.2 liters or 2 quarts — a day's ration per person. This measurement later becomes significant in the Feast of Weeks (counting the omer from Passover to Shavuot).</p>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Rephidim: Water from the Rock (17:1-7)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Place Names with Theological Significance</h3>
+<p>The location receives two names reflecting Israel's failure:</p>
+<ul>
+<li><strong>Massah</strong> (<a href="https://www.blueletterbible.org/lexicon/h4529/kjv/wlc/0-1/" target="_blank" data-lexicon="to melt, dissolve, be liquefied(Hiphil)to melt, cause to dissolve, consume, cause to vanishto intimidate (fig)" data-strongs="H4529" data-translit="māsâ" data-original="מָסָה" data-lang="hebrew" data-verse="">מַסָּה</a>): "Testing" — because Israel tested God</li>
+<li><strong>Meribah</strong> (<a href="https://www.blueletterbible.org/lexicon/h4809/kjv/wlc/0-1/" target="_blank" data-lexicon="Meribah = &quot;strife&quot; or &quot;contention&quot; a fountain at Rephidim, in the desert of Sin; so called because the Israelites mur..." data-strongs="H4809" data-translit="mᵊrîḇâ" data-original="מְרִיבָה" data-lang="hebrew" data-verse="">מְרִיבָה</a>): "Quarreling" — because Israel quarreled with Moses</li>
+</ul>
+<h3>The Rock at Horeb</h3>
+<p>The Hebrew <a href="https://www.blueletterbible.org/lexicon/h6697/kjv/wlc/0-1/" target="_blank" data-lexicon="rock, cliff rocky wall, cliff rock (with flat surface) block of stone, boulder rock (specific) rock (of God) rock (of..." data-strongs="H6697" data-translit="ṣûr" data-original="צוּר" data-lang="hebrew" data-verse="">צוּר</a> (<em>tzur</em>) for rock emphasizes a cliff or crag, not a small stone. God stands "upon the rock in Horeb" (עַל־הַצּוּר בְּחֹרֵב, <em>al-hatzur b'Chorev</em>), connecting this event to the same mountain where Moses received his commission at the burning bush.</p>
+<p>The striking of the rock (<em>nakah</em>, <a href="https://www.blueletterbible.org/lexicon/h5221/kjv/wlc/0-1/" target="_blank" data-lexicon="to strike, smite, hit, beat, slay, kill(Niphal) to be stricken or smitten(Pual) to be stricken or smitten(Hiphil)to s..." data-strongs="H5221" data-translit="nāḵâ" data-original="נָכָה" data-lang="hebrew" data-verse="">נָכָה</a> — to strike/smite) is later contrasted with the incident in <a href="https://www.blueletterbible.org/kjv/num/20/1/s_137001" target="_blank" data-ref="Numbers 20">Numbers 20</a>, where Moses strikes instead of speaks, with significant consequences.</p>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Battle with Amalek (17:8-16)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Who Were the Amalekites?</h3>
+<p>The Amalekites were a nomadic people of the Negev and Sinai:</p>
+<ul>
+<li>Descendants of Esau through Eliphaz and Timna (<a href="https://www.blueletterbible.org/kjv/gen/36/12/s_36012" target="_blank" data-ref="Genesis 36:12">Genesis 36:12</a>)</li>
+<li>Considered archetypal enemies of Israel</li>
+<li>Their attack on stragglers (<a href="https://www.blueletterbible.org/kjv/deu/25/17-18/s_178017" target="_blank" data-ref="Deuteronomy 25:17-18">Deuteronomy 25:17-18</a>) marked them for perpetual enmity</li>
+</ul>
+<h3>The Uplifted Hands of Moses</h3>
+<p>Moses' raised hands holding the "rod of God" (מַטֵּה הָאֱלֹהִים, <em>matteh ha'elohim</em>) function as:</p>
+<ol>
+<li><strong>Prayer posture</strong>: Intercession for Israel</li>
+<li><strong>Battle signal</strong>: Ancient Near Eastern armies used standards and signals</li>
+<li><strong>Covenant symbol</strong>: The staff represented God's covenant presence</li>
+<li><strong>Typological image</strong>: Foreshadowing Christ's outstretched arms</li>
+</ol>
+<h3>The Altar: YHWH-Nissi</h3>
+<p>Moses builds an altar named <strong>YHWH-Nissi</strong> (יְהוָה נִסִּי) — "The LORD is my Banner." A <em>nes</em> (<a href="https://www.blueletterbible.org/lexicon/h5251/kjv/wlc/0-1/" target="_blank" data-lexicon="something lifted up, standard, signal, signal pole, ensign, banner, sign, sailstandard (as rallying point), signalsta..." data-strongs="H5251" data-translit="nēs" data-original="נֵס" data-lang="hebrew" data-verse="">נֵס</a>) was a rallying standard or signal pole. This name declares that the Lord Himself is Israel's rallying point and victory standard.</p>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Key Locations</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Location</th><th>Significance</th><th>Map Links</th></tr>
+<tr><td>Pi-hahiroth</td><td>Israelite encampment before crossing</td><td><a href="https://bibleatlas.org/pi-hahiroth.htm" target="_blank">BibleAtlas</a></td></tr>
+<tr><td>Yam Suph (Red/Reed Sea)</td><td>Site of miraculous crossing</td><td><a href="https://bibleatlas.org/red_sea.htm" target="_blank">BibleAtlas</a></td></tr>
+<tr><td>Marah</td><td>Bitter waters made sweet</td><td><a href="https://bibleatlas.org/marah.htm" target="_blank">BibleAtlas</a></td></tr>
+<tr><td>Elim</td><td>Oasis with 12 springs, 70 palm trees</td><td><a href="https://bibleatlas.org/elim.htm" target="_blank">BibleAtlas</a></td></tr>
+<tr><td>Wilderness of Sin</td><td>Manna first given</td><td><a href="https://bibleatlas.org/wilderness_of_sin.htm" target="_blank">BibleAtlas</a></td></tr>
+<tr><td>Rephidim</td><td>Water from rock; Amalek battle</td><td><a href="https://bibleatlas.org/rephidim.htm" target="_blank">BibleAtlas</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 3: WEEK 16: EXODUS 14-17 — KEY PASSAGES STUDY -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">3. Week 16: Exodus 14-17 — Key Passages Study</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Passage 1: The Command to Stand Still (Exodus 14:13-14)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<blockquote>
+<p>"And Moses said unto the people, Fear ye not, stand still, and see the salvation of the LORD, which he will shew to you to day: for the Egyptians whom ye have seen to day, ye shall see them again no more for ever. The LORD shall fight for you, and ye shall hold your peace."</p>
+</blockquote>
+<h3>Textual Analysis</h3>
+<p>This passage contains four imperatives that define faithful response to crisis:</p>
+<ol>
+<li><strong>"Fear ye not"</strong> (אַל־תִּירָאוּ, <em>al-tira'u</em>) — Negative command; do not yield to fear</li>
+<li><strong>"Stand still"</strong> (הִתְיַצְּבוּ, <em>hityatzvu</em>) — Hitpael form: "station yourselves," "take your stand"</li>
+<li><strong>"See"</strong> (וּרְאוּ, <em>u-re'u</em>) — Observe, witness, perceive</li>
+<li><strong>"Hold your peace"</strong> (תַּחֲרִישׁוּן, <em>tacharishun</em>) — Be silent, still, inactive</li>
+</ol>
+<p>The Hebrew <em>yeshu'ah</em> (<a href="https://www.blueletterbible.org/lexicon/h3444/kjv/wlc/0-1/" target="_blank" data-lexicon="salvation, deliverance welfare, prosperity deliverance salvation (by God) victory" data-strongs="H3444" data-translit="yᵊšûʿâ" data-original="יְשׁוּעָה" data-lang="hebrew" data-verse="">יְשׁוּעָה</a>) translated "salvation" shares its root with the name <em>Yeshua</em> (Jesus). This is not merely rescue but comprehensive deliverance — physical, spiritual, covenantal.</p>
+<h3>The Hitpael: Active Stillness</h3>
+<p>The command <em>hityatzvu</em> (הִתְיַצְּבוּ) deserves special attention. It is in the <strong>Hitpael</strong> verb form — Hebrew's reflexive stem. Understanding this grammatical form transforms our reading of the passage.</p>
+<p><strong>What the Hitpael Means</strong></p>
+<p>Hebrew verbs have seven major forms (binyanim), each expressing a different relationship between the subject and the action:</p>
+<table class="info-table">
+<tr><th>Form</th><th>Nature</th><th>Example</th></tr>
+<tr><td>Qal</td><td>Active</td><td>"He broke"</td></tr>
+<tr><td>Niphal</td><td>Passive</td><td>"It was broken"</td></tr>
+<tr><td><strong>Hitpael</strong></td><td><strong>Reflexive</strong></td><td><strong>"He stationed himself"</strong></td></tr>
+</table>
+<p>The Hitpael is neither purely active nor purely passive — it describes action that the subject performs <em>upon or within themselves</em>. The action is simultaneously done and received. You are both actor and recipient.</p>
+<p><strong>Prayer as Hitpael</strong></p>
+<p>The Hebrew word for prayer, <em>l'hitpalel</em> (לְהִתְפַּלֵּל), is also Hitpael. This reveals something profound about the nature of prayer: it is not merely active (speaking to God) or passive (waiting for God), but reflexive — we actively engage <em>and</em> we actively receive. Prayer is something we do that simultaneously does something to us.</p>
+<p><strong>The Root: <a href="https://www.blueletterbible.org/lexicon/h3320/kjv/wlc/0-1/" target="_blank" data-lexicon="to place, set, stand, set or station oneself, present oneself (Hithpael) to station oneself, take one&#x27;s stand, stand,..." data-strongs="H3320" data-translit="yāṣaḇ" data-original="יָצַב" data-lang="hebrew" data-verse="">י-צ-ב</a> (Y-Tz-B)</strong></p>
+<p>The root of <em>hityatzvu</em> is <strong><a href="https://www.blueletterbible.org/lexicon/h3320/kjv/wlc/0-1/" target="_blank" data-lexicon="to place, set, stand, set or station oneself, present oneself (Hithpael) to station oneself, take one&#x27;s stand, stand,..." data-strongs="H3320" data-translit="yāṣaḇ" data-original="יָצַב" data-lang="hebrew" data-verse="">י-צ-ב</a></strong> (<em>yod-tsade-bet</em>), meaning "to stand, station, set up, establish."</p>
+<table class="info-table">
+<tr><th>Word</th><th>Transliteration</th><th>Meaning</th></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h3320/kjv/wlc/0-1/" target="_blank" data-lexicon="to place, set, stand, set or station oneself, present oneself (Hithpael) to station oneself, take one&#x27;s stand, stand,..." data-strongs="H3320" data-translit="yāṣaḇ" data-original="יָצַב" data-lang="hebrew" data-verse="">יָצַב</a></td><td><em>yatzav</em></td><td>to stand, take a stand</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h4675/kjv/wlc/0-1/" target="_blank" data-lexicon="guard, watch, army" data-strongs="H4675" data-translit="maṣṣāḇâ" data-original="מַצָּבָה" data-lang="hebrew" data-verse="">מַצֵּבָה</a></td><td><em>matzevah</em></td><td>pillar, standing stone</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h5334/kjv/wlc/0-1/" target="_blank" data-lexicon="Nezib = &quot;garrison&quot; or &quot;pillar&quot;a city in the lowlands of Judah on the border of Philistia" data-strongs="H5334" data-translit="nᵊṣîḇ" data-original="נְצִיב" data-lang="hebrew" data-verse="">נְצִיב</a></td><td><em>netziv</em></td><td>pillar, garrison, prefect</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h4673/kjv/wlc/0-1/" target="_blank" data-lexicon="station, garrison, standing-place standing-place (of feet) station, office, position garrison, post, outpost" data-strongs="H4673" data-translit="maṣṣāḇ" data-original="מַצָּב" data-lang="hebrew" data-verse="">מֻצָּב</a></td><td><em>mutzav</em></td><td>station, post, position</td></tr>
+</table>
+<p>From this root comes <em>matzevah</em> (<a href="https://www.blueletterbible.org/lexicon/h4675/kjv/wlc/0-1/" target="_blank" data-lexicon="guard, watch, army" data-strongs="H4675" data-translit="maṣṣāḇâ" data-original="מַצָּבָה" data-lang="hebrew" data-verse="">מַצֵּבָה</a>) — the standing stone or pillar, like those Jacob erected as covenant markers at Bethel (<a href="https://www.blueletterbible.org/kjv/gen/28/18/" target="_blank">Genesis 28:18</a>) and Galeed (<a href="https://www.blueletterbible.org/kjv/gen/31/45/" target="_blank">Genesis 31:45</a>). When Moses commands Israel to <em>hityatzvu</em>, he is telling them to become like a <em>matzevah</em> — planted, immovable, a monument of trust.</p>
+<p><strong>What Taking a Stand Does to Us</strong></p>
+<p>If the Hitpael is reflexive — if the action simultaneously happens <em>to</em> the one performing it — then what does taking a stand do to us?</p>
+<p>Just as <em>l'hitpalel</em> (to pray) means we are changed by the act of praying, <em>hityatzvu</em> (to station oneself) means we are transformed by the act of standing. Consider:</p>
+<ul>
+<li><strong>Standing shapes identity.</strong> We become what we commit to. The decision to plant our feet in trust makes us into people of trust.</li>
+<li><strong>Standing builds faith.</strong> The very act of holding position when fear screams "run" develops the courage we need. We don't wait until we have enough faith to stand — standing <em>creates</em> faith within us.</li>
+<li><strong>Standing makes us witnesses.</strong> By positioning ourselves to see God's deliverance, we become those who have seen. We are transformed from fearful refugees into living testimonies.</li>
+<li><strong>Standing creates steadfastness.</strong> The commitment to not move, to hold the line, writes steadfastness into our character. We become what we practice.</li>
+</ul>
+<p>In other words: by standing, we are made into standing stones. The act of trust transforms us into trustworthy people. The commitment to hold position shapes us into people who can be counted on to hold position.</p>
+<p>This is why the command is reflexive. God could have stationed them Himself — but He commanded them to station <em>themselves</em>. The act of obedient trust was itself formative. Israel didn't just witness deliverance at the sea; they were made into a people capable of witnessing it by the very act of standing still.</p>
+<p><strong>"Be Still" Means "Take Your Stand"</strong></p>
+<p>When we encounter "be still" language in the Hitpael (as in <a href="https://www.blueletterbible.org/kjv/psa/46/10/s_524010" target="_blank" data-ref="Psalm 46:10">Psalm 46:10</a>, <em>harpū</em>, and here with <em>hityatzvu</em>), the meaning is far from passive resignation. <em>Hityatzvu</em> means to station yourself, to plant your feet, to commit to a position — to become a living pillar.</p>
+<p>This is the posture of a soldier taking a stand — not fleeing, not charging blindly, but positioning oneself with full commitment and accepting whatever comes. It means:</p>
+<ul>
+<li><strong>Commitment</strong> — deciding where you stand</li>
+<li><strong>Resolve</strong> — refusing to be moved</li>
+<li><strong>Trust</strong> — accepting the outcome as God determines it</li>
+</ul>
+<p>The reflexive nature means Israel must do this <em>to themselves</em>. God doesn't station them, he does not force them; they station and govern themselves. It is an active demonstration of faith.</p>
+<p><strong>"Be Still and Know That I Am God"</strong></p>
+<p><a href="https://www.blueletterbible.org/kjv/psa/46/10/s_524010" target="_blank" data-ref="Psalm 46:10">Psalm 46:10</a> uses <em>harpū</em> (הַרְפּוּ) — "cease striving" or "let go" — which carries a similar sense. Combined with the command to "know" (<em>da'ū</em>) that He is God, the verse calls for:</p>
+<ol>
+<li>Active release of self-reliance</li>
+<li>Deliberate trust in God's sovereignty</li>
+<li>Positioning oneself to witness His deliverance</li>
+</ol>
+<p>This is not the stillness of inaction but the stillness of faith under pressure — like a soldier holding formation when every instinct screams to run. Israel stood at the sea, trapped, and Moses commanded them to <em>station themselves</em> and watch God work.</p>
+<h3>Theological Significance</h3>
+<p>The pattern established here becomes paradigmatic for Israel's relationship with God:</p>
+<ul>
+<li>Human extremity creates space for divine intervention</li>
+<li>Faith means active trust expressed through committed stillness before God</li>
+<li>Salvation is God's work; human agency waits upon divine initiative — but that waiting is itself an act of trust</li>
+<li>The reflexive nature of faith: we position ourselves to receive what God gives</li>
+</ul>
+<h3>Christological Reading</h3>
+<p>The command to "stand still and see the salvation of the LORD" finds fulfillment in:</p>
+<ul>
+<li>The cross, where humanity could only watch as Christ accomplished redemption</li>
+<li>Baptism, where we passively receive what Christ actively achieved</li>
+<li>Every moment of surrender when we cease striving and trust His finished work</li>
+</ul>
+<h3>Conference Connection</h3>
+<blockquote>
+<p>"Your proving and strengthening may not look like Moroni's or Jacob's or the Prophet Joseph's. But it will come. ... I bear witness that these moments are not evidence that the Lord has abandoned you. Rather, they are evidence that He loves you enough to refine and strengthen you."</p>
+<p>— <a href="https://www.churchofjesuschrist.org/study/general-conference/2025/10/47eyring" target="_blank"><strong>Elder Henry B. Eyring</strong>, <em>Proved and Strengthened in Christ</em>, October 2025 General Conference</a></p>
+</blockquote>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 2: The LORD as Warrior (Exodus 15:1-3)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<blockquote>
+<p>"Then sang Moses and the children of Israel this song unto the LORD, and spake, saying, I will sing unto the LORD, for he hath triumphed gloriously: the horse and his rider hath he thrown into the sea. The LORD is my strength and song, and he is become my salvation: he is my God, and I will prepare him an habitation; my father's God, and I will exalt him. The LORD is a man of war: the LORD is his name."</p>
+</blockquote>
+<h3>Literary Structure</h3>
+<p>The Song of the Sea (שִׁירַת הַיָּם, <a href="https://www.blueletterbible.org/kjv/exo/15/1/" target="_blank"><em>Shirat HaYam</em></a>) opens with:</p>
+<ul>
+<li><strong>Declaration of praise</strong> (v. 1)</li>
+<li><strong>Personal testimony</strong> (v. 2)</li>
+<li><strong>Theological affirmation</strong> (v. 3)</li>
+</ul>
+<p>The phrase "The LORD is a man of war" (יְהוָה אִישׁ מִלְחָמָה, <em>YHWH ish milchamah</em>) is one of the most striking anthropomorphisms in scripture. It declares God as the active combatant while Israel remains passive.</p>
+<h3>Key Hebrew Terms</h3>
+<ul>
+<li><a href="https://www.blueletterbible.org/lexicon/h1342/kjv/wlc/0-1/" target="_blank" data-lexicon="to rise up, grow up, be exalted in triumph" data-strongs="H1342" data-translit="gā'â" data-original="גָּאָה" data-lang="hebrew" data-verse=""><strong>ga'oh ga'ah</strong></a> (גָּאֹה גָּאָה): "has triumphed gloriously" — intensive doubling emphasizing complete victory</li>
+<li><a href="https://www.blueletterbible.org/kjv/exo/15/2/" target="_blank"><strong>ozzi v'zimrat</strong></a> (עָזִּי וְזִמְרָת): "my strength and song" — the LORD is both power and the reason for praise</li>
+<li><a href="https://www.blueletterbible.org/lexicon/h3444/kjv/wlc/0-1/" target="_blank" data-lexicon="salvation, deliverance welfare, prosperity deliverance salvation (by God) victory" data-strongs="H3444" data-translit="yᵊšûʿâ" data-original="יְשׁוּעָה" data-lang="hebrew" data-verse=""><strong>yeshu'ah</strong></a> (<a href="https://www.blueletterbible.org/lexicon/h3444/kjv/wlc/0-1/" target="_blank" data-lexicon="salvation, deliverance welfare, prosperity deliverance salvation (by God) victory" data-strongs="H3444" data-translit="yᵊšûʿâ" data-original="יְשׁוּעָה" data-lang="hebrew" data-verse="">יְשׁוּעָה</a>): "salvation" — same word as 14:13</li>
+</ul>
+<h3>Typological Significance</h3>
+<p>This song of deliverance is echoed in:</p>
+<ul>
+<li>The song of Deborah (<a href="https://www.blueletterbible.org/kjv/jdg/5/1/s_216001" target="_blank" data-ref="Judges 5">Judges 5</a>)</li>
+<li>Hannah's song (<a href="https://www.blueletterbible.org/kjv/1sa/2/1/s_238001" target="_blank" data-ref="1 Samuel 2">1 Samuel 2</a>)</li>
+<li>Mary's Magnificat (<a href="https://www.blueletterbible.org/kjv/luk/1/46-55/s_974046" target="_blank" data-ref="Luke 1:46-55">Luke 1:46-55</a>)</li>
+<li>The song of Moses and the Lamb (<a href="https://www.blueletterbible.org/kjv/rev/15/3-4/s_1182003" target="_blank" data-ref="Revelation 15:3-4">Revelation 15:3-4</a>)</li>
+</ul>
+<p>The Lamb's victory over evil at the end of time mirrors Israel's victory at the sea — both celebrate divine triumph over oppressive powers.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 3: Bitter Made Sweet (Exodus 15:22-26)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<blockquote>
+<p>"So Moses brought Israel from the Red sea, and they went out into the wilderness of Shur; and they went three days in the wilderness, and found no water. And when they came to Marah, they could not drink of the waters of Marah, for they were bitter... And he cried unto the LORD; and the LORD shewed him a tree, which when he had cast into the waters, the waters were made sweet."</p>
+</blockquote>
+<h3>Three Days Without Water</h3>
+<p>The "three days" motif appears frequently in scripture as a period of testing and transformation:</p>
+<ul>
+<li>Three days to Moriah (<a href="https://www.blueletterbible.org/kjv/gen/22/4/s_22004" target="_blank" data-ref="Genesis 22:4">Genesis 22:4</a>)</li>
+<li>Three days of darkness in Egypt (<a href="https://www.blueletterbible.org/kjv/exo/10/22/s_60022" target="_blank" data-ref="Exodus 10:22">Exodus 10:22</a>)</li>
+<li>Three days in the fish (<a href="https://www.blueletterbible.org/kjv/jon/1/17/s_890017" target="_blank" data-ref="Jonah 1:17">Jonah 1:17</a>)</li>
+<li>Three days in the tomb (<a href="https://www.blueletterbible.org/kjv/mat/12/40/s_941040" target="_blank" data-ref="Matthew 12:40">Matthew 12:40</a>)</li>
+</ul>
+<h3>The Tree as Type</h3>
+<p>The Hebrew עֵץ (<em>etz</em>) can mean tree, wood, or timber. This tree cast into bitter water to make it sweet participates in a rich pattern of tree symbolism throughout scripture.</p>
+<p><strong>Trees of Divine Presence</strong></p>
+<table class="info-table">
+<tr><th>Tree</th><th>Reference</th><th>Significance</th></tr>
+<tr><td>Tree of Life</td><td><a href="https://www.blueletterbible.org/kjv/gen/2/9/" target="_blank">Genesis 2:9</a>; <a href="https://www.blueletterbible.org/kjv/rev/22/2/" target="_blank">Revelation 22:2</a></td><td>Eternal life, access to God's presence</td></tr>
+<tr><td>Tree of Knowledge</td><td><a href="https://www.blueletterbible.org/kjv/gen/2/17/" target="_blank">Genesis 2:17</a></td><td>Moral agency, covenant boundary</td></tr>
+<tr><td>The Burning Bush</td><td><a href="https://www.blueletterbible.org/kjv/exo/3/2/" target="_blank">Exodus 3:2-4</a></td><td>God's presence unconsumed; holy ground — <a href="https://www.blueletterbible.org/lexicon/h5572/kjv/wlc/0-1/" target="_blank" data-lexicon="a bush, thorny bushthe burning bush of Mosesperhaps a blackberry bush" data-strongs="H5572" data-translit="sᵊnê" data-original="סְנֶה" data-lang="hebrew" data-verse="">סְנֶה</a> (<em>seneh</em>)</td></tr>
+<tr><td>Oaks of Mamre</td><td><a href="https://www.blueletterbible.org/kjv/gen/18/1/" target="_blank">Genesis 18:1</a></td><td>Abraham receives divine visitors</td></tr>
+</table>
+<p><strong>Trees of Covenant and Priesthood</strong></p>
+<table class="info-table">
+<tr><th>Tree</th><th>Hebrew</th><th>Reference</th><th>Significance</th></tr>
+<tr><td>Aaron's Rod</td><td>—</td><td><a href="https://www.blueletterbible.org/kjv/num/17/8/" target="_blank">Numbers 17:8</a></td><td>Almond branch that budded — resurrection, priesthood authority</td></tr>
+<tr><td>The Almond Tree</td><td><a href="https://www.blueletterbible.org/lexicon/h8248/kjv/wlc/0-1/" target="_blank" data-lexicon="to give to drink, irrigate, drink, water, cause to drink water(Hiphil)to water, irrigateto water, give drink to(Pual)..." data-strongs="H8248" data-translit="šāqâ" data-original="שָׁקֵד" data-lang="hebrew" data-verse="">שָׁקֵד</a> / <a href="https://www.blueletterbible.org/lexicon/h8244/kjv/wlc/0-1/" target="_blank" data-lexicon="to bind, bind on, be kept on (meaning doubtful)(Niphal) to be kept on" data-strongs="H8244" data-translit="śāqaḏ" data-original="שָׂקַד" data-lang="hebrew" data-verse="">שֹׁקֵד</a></td><td><a href="https://www.blueletterbible.org/kjv/jer/1/11/" target="_blank">Jeremiah 1:11-12</a></td><td><em>shaked</em> (almond) / <em>shoked</em> (watching) — God watching over His word</td></tr>
+<tr><td>Cedars of Lebanon</td><td>—</td><td><a href="https://www.blueletterbible.org/kjv/1ki/5/6/" target="_blank">1 Kings 5:6</a></td><td>Temple construction, divine majesty</td></tr>
+</table>
+<p><strong>Trees as Israel and the Righteous</strong></p>
+<table class="info-table">
+<tr><th>Tree</th><th>Reference</th><th>Significance</th></tr>
+<tr><td>Olive Tree</td><td><a href="https://www.blueletterbible.org/kjv/rom/11/17/" target="_blank">Romans 11:17-24</a>; <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/jacob/5" target="_blank">Jacob 5</a></td><td>Israel as tame olive; Gentiles grafted in</td></tr>
+<tr><td>The Fig Tree</td><td><a href="https://www.blueletterbible.org/kjv/mar/11/12/" target="_blank">Mark 11:12-21</a></td><td>Israel's fruitfulness or barrenness</td></tr>
+<tr><td>Tree by Waters</td><td><a href="https://www.blueletterbible.org/kjv/psa/1/3/" target="_blank">Psalm 1:3</a>; <a href="https://www.blueletterbible.org/kjv/jer/17/8/" target="_blank">Jeremiah 17:8</a></td><td>The righteous, planted and fruitful</td></tr>
+<tr><td>The Vine</td><td><a href="https://www.blueletterbible.org/kjv/jhn/15/1/" target="_blank">John 15:1-5</a></td><td>Christ the vine, we the branches</td></tr>
+</table>
+<p><strong>Trees of Vision and Prophecy</strong></p>
+<table class="info-table">
+<tr><th>Tree</th><th>Reference</th><th>Significance</th></tr>
+<tr><td>Lehi's Tree of Life</td><td><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/8?id=p10-p12" target="_blank">1 Nephi 8:10-12</a></td><td>Love of God, desirable above all</td></tr>
+<tr><td>Nephi's Interpretation</td><td><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/11?id=p21-p25" target="_blank">1 Nephi 11:21-25</a></td><td>Tree = Love of God = Son of God = Lamb of God</td></tr>
+<tr><td>Nebuchadnezzar's Tree</td><td><a href="https://www.blueletterbible.org/kjv/dan/4/10/" target="_blank">Daniel 4:10-17</a></td><td>Kingdom cut down, stump preserved</td></tr>
+<tr><td>Ezekiel's Healing Trees</td><td><a href="https://www.blueletterbible.org/kjv/eze/47/12/" target="_blank">Ezekiel 47:12</a></td><td>Trees by temple river, leaves for healing</td></tr>
+</table>
+<p><strong>The Tree at Marah in Context</strong></p>
+<p>The tree (עֵץ, <em>etz</em>) cast into bitter water to make it sweet connects to all of these:</p>
+<ul>
+<li><strong>The Cross</strong> — The wooden tree transforming the bitter cup of sin into salvation</li>
+<li><strong>The Tree of Life</strong> — Restoring what was lost in Eden, healing the nations (<a href="https://www.blueletterbible.org/kjv/rev/22/2/" target="_blank">Revelation 22:2</a>)</li>
+<li><strong>Torah as Tree of Life</strong> — "She is a tree of life to them that lay hold upon her" (<a href="https://www.blueletterbible.org/kjv/pro/3/18/" target="_blank">Proverbs 3:18</a>)</li>
+<li><strong>The Burning Bush</strong> — Just chapters earlier, Moses encountered God in a tree unconsumed; now a tree brings healing</li>
+<li><strong>Nephi's Tree</strong> — The love of God, manifest through Christ, making bitter mortality sweet</li>
+</ul>
+<p>The pattern is consistent: trees in scripture mediate between heaven and earth, bringing divine life into human experience. At Marah, the tree functions exactly as trees do throughout the biblical narrative — it becomes the instrument through which God transforms the bitter into the sweet, death into life, curse into blessing.</p>
+<p><strong>The Tree as Universal Symbol</strong></p>
+<p>The tree's power as a symbol extends into many faith and cultural traditions. Anciently and today, tree imagery organizes how we understand relationships, knowledge, and reality itself.</p>
+<table class="info-table">
+<tr><th>Domain</th><th>Tree Symbol</th><th>Significance</th></tr>
+<tr><td><strong>Sacred</strong></td><td>The Menorah</td><td>Shaped like an almond tree (connecting to Aaron's rod); seven branches representing divine light; a physical Tree of Life in the Tabernacle</td></tr>
+<tr><td><strong>Genealogy</strong></td><td>Family Trees</td><td>"Root of Jesse" (<a href="https://www.blueletterbible.org/kjv/isa/11/1/" target="_blank">Isaiah 11:1</a>); we speak of "roots," "branches," "family lines"</td></tr>
+<tr><td><strong>Linguistics</strong></td><td>Language Trees</td><td>Language families mapped as trees — Semitic, Indo-European; "mother tongues" and "daughter languages"</td></tr>
+<tr><td><strong>Science</strong></td><td>Phylogenetic Trees</td><td>Classification of species; Darwin's "Tree of Life"; branching evolutionary relationships</td></tr>
+<tr><td><strong>Logic</strong></td><td>Decision Trees</td><td>Branching pathways of choice and consequence</td></tr>
+<tr><td><strong>Measurement</strong></td><td>The Rod/Rule</td><td>The wooden ruler; the "rod" as a unit of measure (16.5 feet); tools of judgment and standard</td></tr>
+<tr><td><strong>Organization</strong></td><td>Hierarchical Charts</td><td>Corporate structures, taxonomies, knowledge organization</td></tr>
+</table>
+<p><strong>Why Trees?</strong></p>
+<p>The tree provides a natural model for understanding complex relationships:</p>
+<ul>
+<li><strong>Roots</strong> — Origin, foundation, source of nourishment, hidden depth</li>
+<li><strong>Trunk</strong> — Unity, core identity, the channel between heaven and earth</li>
+<li><strong>Branches</strong> — Diversity emerging from unity, growth, extension</li>
+<li><strong>Fruit</strong> — Purpose, reproduction, the end for which the tree exists</li>
+<li><strong>Leaves</strong> — Healing, shade, the interface with the surrounding world</li>
+</ul>
+<p>The Menorah deserves special attention. <a href="https://www.blueletterbible.org/kjv/exo/25/31-40/s_75031" target="_blank" data-ref="Exodus 25:31-40">Exodus 25:31-40</a> describes it as having branches (<em>qaneh</em>, <a href="https://www.blueletterbible.org/lexicon/h7070/kjv/wlc/0-1/" target="_blank" data-lexicon="reed, stalk, bone, balancesstalkwater-plant, reedcalamus (aromatic reed)derived meaningsmeasuring-rodreed (as unit of..." data-strongs="H7070" data-translit="qānê" data-original="קָנֶה" data-lang="hebrew" data-verse="">קָנֶה</a>), cups shaped like almond blossoms (<em>meshukadim</em>, מְשֻׁקָּדִים), and calyxes (<em>kaftor</em>, כַּפְתֹּר). It is, quite literally, an almond tree made of gold — connecting directly to Aaron's rod that budded with almond blossoms (<a href="https://www.blueletterbible.org/kjv/num/17/8/" target="_blank">Numbers 17:8</a>). The Menorah stood in the Holy Place as a perpetual Tree of Life, its light representing God's presence branching out to illumine creation.</p>
+<p>When we draw a family tree, map a language family, or sketch a decision tree, we participate in an ancient intuition: that reality has a structure, that diversity flows from unity, that branches connect to roots, and that understanding means tracing lines back to their source. The tree at Marah belongs to this universal symbol — the instrument through which what is bitter becomes sweet, what is dead becomes alive, what is scattered finds connection.</p>
+<p><strong>Roots to Fruits: The Tree vs. The Building</strong></p>
+<p>Nephi's vision provides a striking contrast that illuminates why the tree is such a powerful symbol. In <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/8" target="_blank">1 Nephi 8</a>, Lehi sees two structures: the Tree of Life and the Great and Spacious Building. The contrast is instructive:</p>
+<table class="info-table">
+<tr><th>The Tree of Life</th><th>The Great and Spacious Building</th></tr>
+<tr><td>Rooted in the earth</td><td>"Standing as it were in the air" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/8?id=p26#p26" target="_blank">1 Nephi 8:26</a>)</td></tr>
+<tr><td>Bears fruit</td><td>Produces only mockery</td></tr>
+<tr><td>Nourished from below</td><td>No visible foundation</td></tr>
+<tr><td>Withstands the elements</td><td>Eventually falls (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/11?id=p36#p36" target="_blank">1 Nephi 11:36</a>)</td></tr>
+<tr><td>Connected to source</td><td>Disconnected, suspended</td></tr>
+</table>
+<p>The building is impressive — spacious, filled with people, elevated above the path. But it has no roots, no foundation. It floats "in the air," detached from any source of nourishment or stability. When the winds come, when the pressures mount, it has nothing to anchor it. Nephi saw its fall, and "great was the fall thereof."</p>
+<p>A tree, by contrast, can withstand the elements precisely because of what cannot be seen. The root system of a mature tree often mirrors the canopy above — spreading as wide and deep underground as the branches extend overhead. When winds press against the trunk, when storms bend the branches, the roots hold. The deeper the roots, the taller the tree can grow.</p>
+<p>This is what the gospel of Jesus Christ possesses. Its roots are deep — reaching down through millennia of covenant history, through prophets and patriarchs, through the Atonement itself which anchors everything. Paul understood this:</p>
+<blockquote>
+<p>"Rooted and built up in him, and stablished in the faith" (<a href="https://www.blueletterbible.org/kjv/col/2/7/" target="_blank">Colossians 2:7</a>)</p>
+</blockquote>
+<blockquote>
+<p>"That Christ may dwell in your hearts by faith; that ye, being rooted and grounded in love" (<a href="https://www.blueletterbible.org/kjv/eph/3/17/" target="_blank">Ephesians 3:17</a>)</p>
+</blockquote>
+<p>The tree connects roots to fruits. What we see above — the visible fruit, the outward expression of faith — depends entirely on what lies below. A testimony without roots is like a building in the air: impressive for a season, but unable to withstand the inevitable storms. A testimony rooted in Christ can weather anything, because the source of its life lies deeper than any surface attack can reach.</p>
+<p>At Marah, God showed Moses a tree. Not a building. Not an engineering solution. A tree — something with roots, something that draws life from hidden sources and transforms it into healing. This is the pattern of the gospel: rooted, grounded, drawing from depths we cannot see, producing fruit that sweetens all that is bitter.</p>
+<h3>YHWH <a href="https://www.blueletterbible.org/lexicon/h7495/kjv/wlc/0-1/" target="_blank" data-lexicon="to heal, make healthful(Qal) to healof Godhealer, physician (of men)of hurts of nations involving restored favour (fi..." data-strongs="H7495" data-translit="rāp̄ā'" data-original="רַעַשׁ" data-lang="hebrew" data-verse="">Rophe'echa</a></h3>
+<p>God reveals Himself as "the LORD who heals you" (יְהוָה רֹפְאֶךָ, <em>YHWH <a href="https://www.blueletterbible.org/lexicon/h7495/kjv/wlc/0-1/" target="_blank" data-lexicon="to heal, make healthful(Qal) to healof Godhealer, physician (of men)of hurts of nations involving restored favour (fi..." data-strongs="H7495" data-translit="rāp̄ā'" data-original="רַעַשׁ" data-lang="hebrew" data-verse="">rophe'echa</a></em>). This healing title encompasses:</p>
+<ul>
+<li>Physical restoration</li>
+<li>Covenantal wholeness</li>
+<li>Spiritual renewal</li>
+</ul>
+<p>The condition for healing: "If thou wilt diligently hearken to the voice of the LORD thy God" (15:26) — healing flows from covenant faithfulness.</p>
+<p><strong>The Balm of Gilead</strong></p>
+<p>The connection between trees and healing extends beyond Marah to one of scripture's most evocative images: the Balm of Gilead.</p>
+<p>The balm (<a href="https://www.blueletterbible.org/lexicon/h6875/kjv/wlc/0-1/" target="_blank" data-lexicon="a kind of balsam, balm, salveas merchandiseas medicine" data-strongs="H6875" data-translit="ṣŏrî" data-original="צֳרִי" data-lang="hebrew" data-verse="">צֳרִי</a>, <em>tzori</em>) was a medicinal resin extracted from trees — likely the <em>Commiphora gileadensis</em> or a related species native to the hills of Gilead east of the Jordan. This tree-derived medicine was so prized that it appears among the goods the Ishmaelite traders carried to Egypt — the very caravan that transported Joseph into slavery (<a href="https://www.blueletterbible.org/kjv/gen/37/25/" target="_blank">Genesis 37:25</a>).</p>
+<p>Centuries later, Jeremiah asks his famous question:</p>
+<blockquote>
+<p>"Is there no balm in Gilead? Is there no physician there? Why then is not the health of the daughter of my people recovered?" (<a href="https://www.blueletterbible.org/kjv/jer/8/22/" target="_blank">Jeremiah 8:22</a>)</p>
+</blockquote>
+<p>The question is rhetorical — and devastating. Of course there is balm. Of course there is a physician. The healing exists; Israel simply refuses to apply it. The problem is not the absence of remedy but the rejection of it.</p>
+<p><strong>The Pattern: Healing from Trees</strong></p>
+<table class="info-table">
+<tr><th>Event</th><th>Tree Element</th><th>Healing</th></tr>
+<tr><td>Marah</td><td>Tree (עֵץ) cast into water</td><td>Bitter made sweet</td></tr>
+<tr><td>Gilead</td><td>Resin (<a href="https://www.blueletterbible.org/lexicon/h6875/kjv/wlc/0-1/" target="_blank" data-lexicon="a kind of balsam, balm, salveas merchandiseas medicine" data-strongs="H6875" data-translit="ṣŏrî" data-original="צֳרִי" data-lang="hebrew" data-verse="">צֳרִי</a>) from balsam trees</td><td>Wounds healed</td></tr>
+<tr><td>The Cross</td><td>The wooden tree</td><td>Sin's curse transformed</td></tr>
+<tr><td>Revelation</td><td>Tree of Life</td><td>"Leaves for the healing of the nations" (<a href="https://www.blueletterbible.org/kjv/rev/22/2/" target="_blank">Rev. 22:2</a>)</td></tr>
+</table>
+<p>The pattern is consistent: healing flows from trees. At Marah, God reveals Himself as YHWH <a href="https://www.blueletterbible.org/lexicon/h7495/kjv/wlc/0-1/" target="_blank" data-lexicon="to heal, make healthful(Qal) to healof Godhealer, physician (of men)of hurts of nations involving restored favour (fi..." data-strongs="H7495" data-translit="rāp̄ā'" data-original="רַעַשׁ" data-lang="hebrew" data-verse="">Rophe'echa</a> through a tree. The Balm of Gilead is tree-sap. The cross is wooden. The Tree of Life bears leaves for healing.</p>
+<p>The beloved hymn captures this:</p>
+<blockquote>
+<p><em>There is a balm in Gilead</em></p>
+<p><em>To make the wounded whole;</em></p>
+<p><em>There is a balm in Gilead</em></p>
+<p><em>To heal the sin-sick soul.</em></p>
+</blockquote>
+<p>Christ is the Balm of Gilead — the tree-derived remedy for every wound, every bitterness, every sickness of soul. Jeremiah's question finds its answer in Him: Yes, there is a physician. Yes, there is healing. The remedy exists. Will we apply it?</p>
+<h3>Application</h3>
+<p>Every bitter experience in mortality contains the potential for sweetening through Christ. Like Marah's waters, our trials become transformative when we "cast the tree" — bring the cross — into them. Like the balm from Gilead's trees, healing is available; the question is whether we will receive and apply it.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 4: Daily Bread from Heaven (Exodus 16:4-5, 14-18)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<blockquote>
+<p>"Then said the LORD unto Moses, Behold, I will rain bread from heaven for you; and the people shall go out and gather a certain rate every day, that I may prove them, whether they will walk in my law, or no. And it shall come to pass, that on the sixth day they shall prepare that which they bring in; and it shall be twice as much as they gather daily."</p>
+</blockquote>
+<blockquote>
+<p>"And when the dew that lay was gone up, behold, upon the face of the wilderness there lay a small round thing, as small as the hoar frost on the ground... And the children of Israel did so, and gathered, some more, some less. And when they did mete it with an omer, he that gathered much had nothing over, and he that gathered little had no lack."</p>
+</blockquote>
+<h3>The Testing Purpose</h3>
+<p>God explicitly states manna is a <em>test</em> (<a href="https://www.blueletterbible.org/lexicon/h5254/kjv/wlc/0-1/" target="_blank" data-lexicon="to test, prove, try" data-strongs="H5254" data-translit="nasah" data-original="נָסָה" data-lang="hebrew" data-verse="Genesis 22:1">נָסָה</a>, <em>nasah</em>): "that I may prove them, whether they will walk in my law." The test reveals:</p>
+<ul>
+<li>Will Israel trust daily provision?</li>
+<li>Will they obey the gathering instructions?</li>
+<li>Will they honor the Sabbath?</li>
+</ul>
+<h3>Daily Gathering, Daily Grace</h3>
+<p>The manna system established radical dependence:</p>
+<ul>
+<li><strong>Daily gathering required</strong>: Could not store (except for Sabbath)</li>
+<li><strong>Equal distribution</strong>: Those who gathered more had nothing over; those who gathered less had no lack</li>
+<li><strong>Sabbath provision</strong>: Double portion on sixth day</li>
+</ul>
+<p>This pattern teaches that spiritual sustenance must be sought daily. Grace cannot be hoarded; it must be received fresh each day.</p>
+<h3>Christological Fulfillment</h3>
+<p>Jesus explicitly identifies Himself with the manna tradition:</p>
+<blockquote>
+<p>"Your fathers did eat manna in the wilderness, and are dead... I am the living bread which came down from heaven: if any man eat of this bread, he shall live for ever: and the bread that I will give is my flesh, which I will give for the life of the world." (<a href="https://www.blueletterbible.org/kjv/jhn/6/49/s_1003049" target="_blank" data-ref="John 6:49">John 6:49, 51</a>)</p>
+</blockquote>
+<p>The sacrament continues this pattern — weekly (daily, ideally) nourishment from Christ's body and blood.</p>
+<h3>Conference Connection</h3>
+<blockquote>
+<p>"Think of other things, besides eating, that you do every day. Why do certain things have to be done daily to be effective? What do you feel inspired to do to seek daily spiritual experiences?"</p>
+<p>— <em>Come, Follow Me Manual</em>, Week 16</p>
+</blockquote>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 5: The Smitten Rock (Exodus 17:5-6)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<blockquote>
+<p>"And the LORD said unto Moses, Go on before the people, and take with thee of the elders of Israel; and thy rod, wherewith thou smotest the river, take in thine hand, and go. Behold, I will stand before thee there upon the rock in Horeb; and thou shalt smite the rock, and there shall come water out of it, that the people may drink."</p>
+</blockquote>
+<h3>The Lord Upon the Rock</h3>
+<p>The remarkable phrase "I will stand before thee upon the rock" (עַל־הַצּוּר, <em>al-hatzur</em>) places God Himself at the point of impact. When Moses strikes the rock, he strikes where God stands. The smiting reaches the divine presence.</p>
+<h3>Paul's Interpretation</h3>
+<p>The Apostle Paul provides authoritative typological reading:</p>
+<blockquote>
+<p>"And did all drink the same spiritual drink: for they drank of that spiritual Rock that followed them: and that Rock was Christ." (<a href="https://www.blueletterbible.org/kjv/1co/10/4/s_1072004" target="_blank" data-ref="1 Corinthians 10:4">1 Corinthians 10:4</a>)</p>
+</blockquote>
+<p>Christ is the rock. The striking of the rock prefigures:</p>
+<ul>
+<li>The smiting Christ received at Calvary</li>
+<li>The spear piercing His side, releasing water and blood (<a href="https://www.blueletterbible.org/kjv/jhn/19/34/s_1016034" target="_blank" data-ref="John 19:34">John 19:34</a>)</li>
+<li>The breaking of His body to bring forth living water</li>
+</ul>
+<h3>Living Water Symbolism</h3>
+<p>Water from the rock connects to:</p>
+<ul>
+<li>Ezekiel's temple vision (<a href="https://www.blueletterbible.org/kjv/ezk/47/1/s_849001" target="_blank" data-ref="Ezekiel 47">Ezekiel 47</a>) — water flowing from the sanctuary</li>
+<li>Zechariah's prophecy (<a href="https://www.blueletterbible.org/kjv/zec/14/8/s_925008" target="_blank" data-ref="Zechariah 14:8">Zechariah 14:8</a>) — living waters from Jerusalem</li>
+<li>Jesus' proclamation at the Feast of Tabernacles: "If any man thirst, let him come unto me, and drink" (<a href="https://www.blueletterbible.org/kjv/jhn/7/37/s_1004037" target="_blank" data-ref="John 7:37">John 7:37</a>)</li>
+</ul>
+<h3>Numbers 20 Contrast: Why Was Moses Punished?</h3>
+<p>Forty years later at Kadesh (<a href="https://www.blueletterbible.org/kjv/num/20/1/" target="_blank">Numbers 20:1-13</a>), Moses strikes the rock when commanded only to speak to it. This deviation costs Moses entrance to the Promised Land — a punishment that has perplexed readers for millennia.</p>
+<p><strong>The Two Incidents Compared</strong></p>
+<table class="info-table">
+<tr><th>Element</th><th><a href="https://www.blueletterbible.org/kjv/exo/17/1/s_67001" target="_blank" data-ref="Exodus 17">Exodus 17</a> (Rephidim)</th><th><a href="https://www.blueletterbible.org/kjv/num/20/1/s_137001" target="_blank" data-ref="Numbers 20">Numbers 20</a> (Kadesh)</th></tr>
+<tr><td>Command</td><td>"Strike the rock" (<a href="https://www.blueletterbible.org/lexicon/h5221/kjv/wlc/0-1/" target="_blank" data-lexicon="to strike, smite, hit, beat, slay, kill(Niphal) to be stricken or smitten(Pual) to be stricken or smitten(Hiphil)to s..." data-strongs="H5221" data-translit="nāḵâ" data-original="נָכָה" data-lang="hebrew" data-verse="">נָכָה</a>, <em>nakah</em>)</td><td>"Speak to the rock" (<a href="https://www.blueletterbible.org/lexicon/h1696/kjv/wlc/0-1/" target="_blank" data-lexicon="to speak, declare (Piel/intensive form)" data-strongs="H1696" data-translit="dibber" data-original="דִּבֵּר" data-lang="hebrew" data-verse="Genesis 37:4">דִּבֶּר</a>, <em>dibber</em>)</td></tr>
+<tr><td>Action</td><td>Moses strikes once</td><td>Moses strikes twice</td></tr>
+<tr><td>Result</td><td>Water flows; no punishment</td><td>Water flows; Moses barred from Promised Land</td></tr>
+<tr><td>God's Response</td><td>Names place Massah/Meribah</td><td>"You did not believe in me, to sanctify me"</td></tr>
+</table>
+<p><strong>Scholarly Interpretations</strong></p>
+<p>The text states Moses' offense directly: "You did not trust in me, to sanctify me in the eyes of the children of Israel" (<a href="https://www.blueletterbible.org/kjv/num/20/12/" target="_blank">Numbers 20:12</a>). But what exactly was the failure? Scholars have proposed multiple answers:</p>
+<table class="info-table">
+<tr><th>Interpretation</th><th>Source</th><th>Explanation</th></tr>
+<tr><td><strong>Disobedience</strong></td><td>Rashi</td><td>God commanded speech; Moses struck instead, missing the opportunity to glorify God through the greater miracle</td></tr>
+<tr><td><strong>Claiming credit</strong></td><td>Midrash</td><td>"Shall <em>we</em> fetch you water?" (v. 10) — Moses spoke as if he and Aaron produced the miracle, not God</td></tr>
+<tr><td><strong>Anger</strong></td><td>Maimonides</td><td>Moses' fury ("Listen now, you rebels!") was unbecoming; a prophet must not display rage</td></tr>
+<tr><td><strong>Public doubt</strong></td><td>Bekhor Shor</td><td>By asking "Shall we get water?" Moses expressed doubt, undermining the sanctification of God's name</td></tr>
+<tr><td><strong>Double striking</strong></td><td>Various</td><td>Striking twice suggested uncertainty; one confident strike would have shown faith</td></tr>
+</table>
+<p><strong>The Typological Reading</strong></p>
+<p>Beyond the immediate moral failure, many scholars see a deeper significance. Paul identifies the rock as Christ (<a href="https://www.blueletterbible.org/kjv/1co/10/4/" target="_blank">1 Corinthians 10:4</a>). If the rock is Christ, then:</p>
+<ul>
+<li><strong><a href="https://www.blueletterbible.org/kjv/exo/17/1/s_67001" target="_blank" data-ref="Exodus 17">Exodus 17</a></strong>: Christ is struck <em>once</em> — at Calvary. The one-time sacrifice brings forth living water.</li>
+<li><strong><a href="https://www.blueletterbible.org/kjv/num/20/1/s_137001" target="_blank" data-ref="Numbers 20">Numbers 20</a></strong>: Christ need not be struck again. His suffering was sufficient, final, complete (<a href="https://www.blueletterbible.org/kjv/heb/9/12/" target="_blank">Hebrews 9:12</a>; <a href="https://www.blueletterbible.org/kjv/heb/10/12/" target="_blank">10:12</a>).</li>
+</ul>
+<p>The command to <em>speak</em> to the rock represents the new dispensation: after the cross, we need only call upon His name to receive living water. We don't re-crucify Christ; we speak — we pray, we confess, we ask.</p>
+<p>When Moses struck the rock a second time, he disrupted this picture. The severity of the punishment reflects the importance of the type: the one-time sufficiency of Christ's atonement is not a peripheral doctrine but the center of the gospel. Moses, by striking again, visually preached a false gospel — one that suggested Christ's work was incomplete or needed repetition.</p>
+<p><strong>Latter-day Saint Perspectives</strong></p>
+<p>Church resources provide additional insight:</p>
+<ul>
+<li>The <a href="https://www.churchofjesuschrist.org/study/manual/old-testament-seminary-teacher-manual/introduction-to-the-book-of-numbers/lesson-65-numbers-20-21?lang=eng" target="_blank">Old Testament Seminary Teacher Manual</a> notes that Moses and Aaron "took credit for the miracle" by saying "Must <em>we</em> fetch you water?" — failing to direct attention to God's power. The lesson emphasizes that <strong>leaders must direct others' attention to God, not accept personal credit for divine blessings</strong>.</li>
+</ul>
+<ul>
+<li>The manual also provides important nuance: Moses could not enter the promised land partly because "the Lord was angry with him 'for your sakes'" (<a href="https://www.blueletterbible.org/kjv/deu/3/26/" target="_blank">Deuteronomy 3:26</a>) — suggesting the prohibition served broader purposes. Moses was eventually translated, and a new leader was needed to take Israel forward.</li>
+</ul>
+<ul>
+<li>A 1973 <em>Ensign</em> article, <a href="https://www.churchofjesuschrist.org/study/ensign/1973/10/journeys-and-events-in-the-life-of-moses?lang=eng" target="_blank">"Journeys and Events in the Life of Moses"</a>, states: "Moses and Aaron did not glorify the Lord for this blessing and consequently were denied the privilege of entering the Promised Land."</li>
+</ul>
+<ul>
+<li>BYU's Religious Studies Center article <a href="https://rsc.byu.edu/they-shall-grow-together/influence-figure-moses-book-mormon" target="_blank">"The Influence of the Figure of Moses in the Book of Mormon"</a> notes that Nephi specifically references the <em>first</em> rock incident positively, describing God's power working "by his word according to the power of God which was in him" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/17?id=p29#p29" target="_blank">1 Nephi 17:29</a>). The doctrinal lesson: "God allowed miracles to proceed in both cases, but was obviously more pleased with how Moses handled it the first time."</li>
+</ul>
+<p><strong>Additional Scholarly Resources</strong></p>
+<ul>
+<li><a href="https://www.thetorah.com/article/moses-strikes-the-rock-in-exodus-and-numbers-one-story-or-two" target="_blank">Moses Strikes the Rock in Exodus and Numbers: One Story or Two?</a> — TheTorah.com (source-critical and medieval commentary analysis)</li>
+<li><a href="https://www.lookstein.org/professional-dev/bible/moses-struck-rock-numbers-20-leadership-moses/" target="_blank">And Moses Struck the Rock: Numbers 20 and the Leadership of Moses</a> — The Lookstein Center</li>
+<li><a href="https://www.icr.org/article/that-rock-was-christ/" target="_blank">That Rock Was Christ</a> — Institute for Creation Research (typological analysis)</li>
+<li><a href="https://spu.edu/lectio/water-from-the-rock/" target="_blank">Water From the Rock: Numbers 20</a> — Seattle Pacific University Lectio</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 6: Uplifted Hands and Victory (Exodus 17:11-13)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<blockquote>
+<p>"And it came to pass, when Moses held up his hand, that Israel prevailed: and when he let down his hand, Amalek prevailed. But Moses' hands were heavy; and they took a stone, and put it under him, and he sat thereon; and Aaron and Hur stayed up his hands, the one on the one side, and the other on the other side; and his hands were steady until the going down of the sun. And Joshua discomfited Amalek and his people with the edge of the sword."</p>
+</blockquote>
+<h3>The Dynamic of the Battle</h3>
+<p>The battle's outcome directly correlates to Moses' posture:</p>
+<ul>
+<li><strong>Hands up</strong> = Israel prevails</li>
+<li><strong>Hands down</strong> = Amalek prevails</li>
+</ul>
+<p>This establishes the principle that spiritual warfare (Moses on the hill) determines the outcome of physical warfare (Joshua in the valley).</p>
+<h3>The Support of Aaron and Hur</h3>
+<p>When Moses' hands grow heavy (כְּבֵדִים, <em>kavedim</em> — the same root as כָּבוֹד, <em>kavod</em>, glory), Aaron and Hur provide support:</p>
+<ul>
+<li><strong>Aaron</strong>: The priest (future high priest)</li>
+<li><strong>Hur</strong>: Traditionally identified as Miriam's husband; possibly from the tribe of Judah</li>
+</ul>
+<p>The image prefigures the community of faith supporting its leaders. No one can sustain the battle alone.</p>
+<h3>Typological Reading</h3>
+<p>Moses' uplifted hands foreshadow Christ on the cross:</p>
+<ul>
+<li>Arms outstretched between heaven and earth</li>
+<li>The battle for humanity's salvation depending on His steadfastness</li>
+<li>His perseverance unto death ("It is finished")</li>
+</ul>
+<p>The connection is strengthened by the staff in Moses' hands — the rod of God, symbol of covenant authority, held aloft as Israel's standard.</p>
+<h3>YHWH-Nissi</h3>
+<p>Moses builds an altar and names it "The LORD is my Banner" (יְהוָה נִסִּי, <em>YHWH-Nissi</em>). A <a href="https://www.blueletterbible.org/lexicon/h5251/kjv/wlc/0-1/" target="_blank" data-lexicon="something lifted up, standard, signal, signal pole, ensign, banner, sign, sailstandard (as rallying point), signalsta..." data-strongs="H5251" data-translit="nēs" data-original="נֵס" data-lang="hebrew" data-verse="">נֵס</a> (<em>nes</em>, banner/standard) was the rallying point for ancient armies. The declaration means:</p>
+<ul>
+<li>God Himself is our rallying point</li>
+<li>Victory comes not by our standard but by His</li>
+<li>We fight under His banner, not our own</li>
+</ul>
+<h3>Book of Mormon Connection</h3>
+<blockquote>
+<p>"Will ye not now return unto me, and repent of your sins, and be converted, that I may heal you? Yea, verily I say unto you, if ye will come unto me ye shall have eternal life. Behold, mine arm of mercy is extended towards you, and whosoever will come, him will I receive." (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/9?lang=eng&id=p13-p14#p13" target="_blank" data-ref="3 Nephi 9:13-14">3 Nephi 9:13-14</a>)</p>
+</blockquote>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Literary Structure: The Testing Pattern</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Chapters 14-17 follow a repeated pattern:</p>
+<table class="info-table">
+<tr><th>Crisis</th><th>Israel's Response</th><th>Divine Provision</th><th>Theological Lesson</th></tr>
+<tr><td>Red Sea (14)</td><td>Fear, complaint</td><td>Parting of waters</td><td>God fights for you</td></tr>
+<tr><td>No water — Shur (15:22)</td><td>Three days silence</td><td>Finding Marah</td><td>Testing begins</td></tr>
+<tr><td>Bitter water — Marah (15:23-25)</td><td>Murmuring</td><td>Tree makes sweet</td><td>God heals</td></tr>
+<tr><td>No food — Sin (16)</td><td>Murmuring</td><td>Manna and quail</td><td>Daily dependence</td></tr>
+<tr><td>No water — Rephidim (17:1-7)</td><td>Quarreling, testing God</td><td>Water from rock</td><td>Christ the Rock</td></tr>
+<tr><td>Attack — Amalek (17:8-16)</td><td>Battle</td><td>Uplifted hands</td><td>Community support</td></tr>
+</table>
+<p>The pattern reveals Israel learning (or failing to learn) trust through repeated crises. Each test intensifies, and each provision reveals more of God's character.</p>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 4: WEEK 16: EXODUS 14-17 — WORD STUDIES -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">4. Week 16: Exodus 14-17 — Word Studies</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Word Study 1: Yeshu'ah (יְשׁוּעָה) — Salvation</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Hebrew Analysis</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h3444/kjv/wlc/0-1/" target="_blank" data-lexicon="salvation, deliverance welfare, prosperity deliverance salvation (by God) victory" data-strongs="H3444" data-translit="yᵊšûʿâ" data-original="יְשׁוּעָה" data-lang="hebrew" data-verse="">יְשׁוּעָה</a> (<a href="https://www.blueletterbible.org/lexicon/h3444/kjv/wlc/0-1/" target="_blank" data-lexicon="salvation, deliverance welfare, prosperity deliverance salvation (by God) victory" data-strongs="H3444" data-translit="yᵊšûʿâ" data-original="יְשׁוּעָה" data-lang="hebrew" data-verse=""><em>yeshu'ah</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/exo/14/13/s_64013" target="_blank" data-ref="Exodus 14:13">Exodus 14:13</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g4991/kjv/wlc/0-1/" target="_blank" data-lexicon="deliverance, preservation, safety, salvation deliverance from the molestation of enemies in an ethical sense" data-strongs="G4991" data-translit="sōtēria" data-original="σωτηρία" data-lang="greek" data-verse="">σωτηρία</a> (<a href="https://www.blueletterbible.org/lexicon/g4991/kjv/tr/0-1/" target="_blank" data-lexicon="deliverance, preservation, safety, salvation deliverance from the molestation of enemies in an ethical sense" data-strongs="G4991" data-translit="sōtēria" data-original="σωτηρία" data-lang="greek" data-verse=""><em>soteria</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/luk/1/69/s_974069" target="_blank" data-ref="Luke 1:69">Luke 1:69</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/salus" target="_blank"><em>salus</em></a></td><td><a href="https://www.blueletterbible.org/kjv/exo/14/13/s_64013" target="_blank" data-ref="Exodus 14:13">Exodus 14:13</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/salvation" target="_blank">salvation</a> (<a href="https://webstersdictionary1828.com/Dictionary/salvation" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/salvation" target="_blank">Etymonline: salvation</a></td><td>—</td></tr>
+</table>
+<h3>Root and Derivatives</h3>
+<p>The root <a href="https://www.blueletterbible.org/lexicon/h3426/kjv/wlc/0-1/" target="_blank" data-lexicon="being, existence, substance, there is or are substance existence there is or are" data-strongs="H3426" data-translit="yēš" data-original="יֵשׁ" data-lang="hebrew" data-verse="">י-ש</a>ׁ-ע (<em>y-sh-a</em>) means "to save, deliver, rescue." Key derivatives:</p>
+<ul>
+<li><strong>Yasha</strong> (<a href="https://www.blueletterbible.org/lexicon/h3470/kjv/wlc/0-1/" target="_blank" data-lexicon="Isaiah or Jesaiah or Jeshaiah = &quot;Jehovah has saved&quot; the major prophet, son of Amoz, who prophesied concerning Judah a..." data-strongs="H3470" data-translit="yᵊšaʿyâ" data-original="יָשַׁע" data-lang="hebrew" data-verse="">יָשַׁע</a>): Verb, "to save"</li>
+<li><strong>Yeshu'ah</strong> (<a href="https://www.blueletterbible.org/lexicon/h3444/kjv/wlc/0-1/" target="_blank" data-lexicon="salvation, deliverance welfare, prosperity deliverance salvation (by God) victory" data-strongs="H3444" data-translit="yᵊšûʿâ" data-original="יְשׁוּעָה" data-lang="hebrew" data-verse="">יְשׁוּעָה</a>): Noun, "salvation, deliverance"</li>
+<li><strong>Yoshia</strong> (יוֹשִׁיעַ): "He will save"</li>
+<li><strong>Yeshua/Yehoshua</strong> (יֵשׁוּעַ/יְהוֹשֻׁעַ): Personal name = "YHWH saves" = Joshua/Jesus</li>
+</ul>
+<h3>Semantic Range</h3>
+<p><em>Yeshu'ah</em> encompasses:</p>
+<ol>
+<li><strong>Physical deliverance</strong> — rescue from enemies, danger, death</li>
+<li><strong>National liberation</strong> — freedom from oppression</li>
+<li><strong>Spiritual salvation</strong> — deliverance from sin and its consequences</li>
+<li><strong>Eschatological hope</strong> — ultimate redemption at the end of days</li>
+</ol>
+<h3>Key Passage</h3>
+<blockquote>
+<p>"Fear ye not, stand still, and see the <strong>salvation</strong> [<em>yeshu'ah</em>] of the LORD" (<a href="https://www.blueletterbible.org/kjv/exo/14/13/s_64013" target="_blank" data-ref="Exodus 14:13">Exodus 14:13</a>)</p>
+</blockquote>
+<p>This is not passive rescue but active, demonstrable divine intervention. Israel is to <em>see</em> (<em>re'u</em>) this salvation — witness it with their eyes.</p>
+<h3>LDS Connection</h3>
+<p>The name Jesus (<em>Yeshua</em> in Hebrew) literally means "YHWH is salvation." Every time we speak the Savior's name, we declare His mission: "He shall save his people from their sins" (<a href="https://www.blueletterbible.org/kjv/mat/1/21/s_930021" target="_blank" data-ref="Matthew 1:21">Matthew 1:21</a>).</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h3444/kjv/wlc/0-1/" target="_blank" data-lexicon="salvation, deliverance welfare, prosperity deliverance salvation (by God) victory" data-strongs="H3444" data-translit="yᵊšûʿâ" data-original="יְשׁוּעָה" data-lang="hebrew" data-verse="">יְשׁוּעָה</a> (<a href="https://www.blueletterbible.org/lexicon/h3444/kjv/wlc/0-1/" target="_blank" data-lexicon="salvation, deliverance welfare, prosperity deliverance salvation (by God) victory" data-strongs="H3444" data-translit="yᵊšûʿâ" data-original="יְשׁוּעָה" data-lang="hebrew" data-verse=""><em>yeshu'ah</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/exo/14/13/s_64013" target="_blank" data-ref="Exodus 14:13">Exodus 14:13</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g4991/kjv/wlc/0-1/" target="_blank" data-lexicon="deliverance, preservation, safety, salvation deliverance from the molestation of enemies in an ethical sense" data-strongs="G4991" data-translit="sōtēria" data-original="σωτηρία" data-lang="greek" data-verse="">σωτηρία</a> (<a href="https://www.blueletterbible.org/lexicon/g4991/kjv/tr/0-1/" target="_blank" data-lexicon="deliverance, preservation, safety, salvation deliverance from the molestation of enemies in an ethical sense" data-strongs="G4991" data-translit="sōtēria" data-original="σωτηρία" data-lang="greek" data-verse=""><em>soteria</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/luk/1/69/s_974069" target="_blank" data-ref="Luke 1:69">Luke 1:69</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/salus" target="_blank"><em>salus</em></a></td><td><a href="https://www.blueletterbible.org/kjv/exo/14/13/s_64013" target="_blank" data-ref="Exodus 14:13">Exodus 14:13</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/salvation" target="_blank">salvation</a> (<a href="https://webstersdictionary1828.com/Dictionary/salvation" target="_blank">1828</a>) · <a href="https://www.merriam-webster.com/dictionary/deliverance" target="_blank">deliverance</a> (<a href="https://webstersdictionary1828.com/Dictionary/deliverance" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/salvation" target="_blank">Etymonline: salvation</a></td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 2: Man (מָן) — Manna</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Hebrew Analysis</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h4479/kjv/wlc/0-1/" target="_blank" data-lexicon="who?, what?, whoever, whosoever" data-strongs="H4479" data-translit="mān" data-original="מָן" data-lang="hebrew" data-verse="">מָן</a> (<a href="https://www.blueletterbible.org/lexicon/h4478/kjv/wlc/0-1/" target="_blank" data-lexicon="manna the bread from Heaven that fed the Israelites for 40 years of wilderness wanderings means 'What is it?'" data-strongs="H4478" data-translit="mān" data-original="מָן" data-lang="hebrew" data-verse=""><em>man</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/exo/16/15/s_66015" target="_blank" data-ref="Exodus 16:15">Exodus 16:15</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td>μάννα (<a href="https://www.blueletterbible.org/lexicon/g3131/kjv/tr/0-1/" target="_blank" data-lexicon="manna = "what is it" the food that nourished the Israelites for forty years in the wilderness of the manna was kept i..." data-strongs="G3131" data-translit="manna" data-original="μάννα" data-lang="greek" data-verse=""><em>manna</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/jhn/6/31/s_1003031" target="_blank" data-ref="John 6:31">John 6:31</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/manna" target="_blank"><em>manna</em></a></td><td><a href="https://www.blueletterbible.org/kjv/exo/16/15/s_66015" target="_blank" data-ref="Exodus 16:15">Exodus 16:15</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/manna" target="_blank">manna</a> (<a href="https://webstersdictionary1828.com/Dictionary/manna" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/manna" target="_blank">Etymonline: manna</a></td><td>—</td></tr>
+</table>
+<h3>Etymology and Meaning</h3>
+<p>The word <em>man</em> (<a href="https://www.blueletterbible.org/lexicon/h4479/kjv/wlc/0-1/" target="_blank" data-lexicon="who?, what?, whoever, whosoever" data-strongs="H4479" data-translit="mān" data-original="מָן" data-lang="hebrew" data-verse="">מָן</a>) appears connected to the question <em>man hu</em> (מָן הוּא) — "What is it?" (<a href="https://www.blueletterbible.org/kjv/exo/16/15/s_66015" target="_blank" data-ref="Exodus 16:15">Exodus 16:15</a>). This folk etymology captures Israel's wonderment at the unfamiliar substance.</p>
+<p>Some scholars connect it to:</p>
+<ul>
+<li>Egyptian <em>mennu</em> — a type of food</li>
+<li>Arabic <em>mann</em> — a sweet exudation from trees</li>
+</ul>
+<h3>Biblical Description</h3>
+<ul>
+<li>Appearance: "like coriander seed, white" (16:31)</li>
+<li>Taste: "like wafers made with honey" (16:31)</li>
+<li>Alternative description: "as the taste of fresh oil" (<a href="https://www.blueletterbible.org/kjv/num/11/8/s_128008" target="_blank" data-ref="Numbers 11:8">Numbers 11:8</a>)</li>
+<li>Called "angels' food" (<em>lechem abirim</em>) in <a href="https://www.blueletterbible.org/kjv/psa/78/25/s_556025" target="_blank" data-ref="Psalm 78:25">Psalm 78:25</a></li>
+</ul>
+<h3>Theological Significance</h3>
+<p>Manna represents:</p>
+<ol>
+<li><strong>Divine provision</strong> — God sustains His people in the wilderness</li>
+<li><strong>Daily dependence</strong> — Cannot be hoarded; must be gathered fresh</li>
+<li><strong>Sabbath witness</strong> — Double portion Friday; none Saturday</li>
+<li><strong>Christological type</strong> — Jesus is the "bread of life" (<a href="https://www.blueletterbible.org/kjv/jhn/6/35/s_1003035" target="_blank" data-ref="John 6:35">John 6:35</a>)</li>
+</ol>
+<h3>Key Passage</h3>
+<blockquote>
+<p>"Behold, I will rain bread from heaven for you" (<a href="https://www.blueletterbible.org/kjv/exo/16/4/s_66004" target="_blank" data-ref="Exodus 16:4">Exodus 16:4</a>)</p>
+</blockquote>
+<p>The verb "rain" (מַמְטִיר, <em>mamtir</em>) emphasizes divine origin — this is heaven-sent sustenance.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h4479/kjv/wlc/0-1/" target="_blank" data-lexicon="who?, what?, whoever, whosoever" data-strongs="H4479" data-translit="mān" data-original="מָן" data-lang="hebrew" data-verse="">מָן</a> (<a href="https://www.blueletterbible.org/lexicon/h4478/kjv/wlc/0-1/" target="_blank" data-lexicon="manna the bread from Heaven that fed the Israelites for 40 years of wilderness wanderings means 'What is it?'" data-strongs="H4478" data-translit="mān" data-original="מָן" data-lang="hebrew" data-verse=""><em>man</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/exo/16/15/s_66015" target="_blank" data-ref="Exodus 16:15">Exodus 16:15</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td>μάννα (<a href="https://www.blueletterbible.org/lexicon/g3131/kjv/tr/0-1/" target="_blank" data-lexicon="manna = "what is it" the food that nourished the Israelites for forty years in the wilderness of the manna was kept i..." data-strongs="G3131" data-translit="manna" data-original="μάννα" data-lang="greek" data-verse=""><em>manna</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/jhn/6/31/s_1003031" target="_blank" data-ref="John 6:31">John 6:31</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/manna" target="_blank"><em>manna</em></a></td><td><a href="https://www.blueletterbible.org/kjv/exo/16/15/s_66015" target="_blank" data-ref="Exodus 16:15">Exodus 16:15</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/manna" target="_blank">manna</a> (<a href="https://webstersdictionary1828.com/Dictionary/manna" target="_blank">1828</a>) · <a href="https://www.merriam-webster.com/dictionary/bread" target="_blank">bread</a> (<a href="https://webstersdictionary1828.com/Dictionary/bread" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/manna" target="_blank">Etymonline: manna</a></td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 3: Tzur (צוּר) — Rock</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Hebrew Analysis</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h6697/kjv/wlc/0-1/" target="_blank" data-lexicon="rock, cliff rocky wall, cliff rock (with flat surface) block of stone, boulder rock (specific) rock (of God) rock (of..." data-strongs="H6697" data-translit="ṣûr" data-original="צוּר" data-lang="hebrew" data-verse="">צוּר</a> (<a href="https://www.blueletterbible.org/lexicon/h6697/kjv/wlc/0-1/" target="_blank" data-lexicon="rock, cliff rocky wall, cliff rock (with flat surface) block of stone, boulder rock (specific) rock (of God) rock (of..." data-strongs="H6697" data-translit="ṣûr" data-original="צוּר" data-lang="hebrew" data-verse=""><em>tzur</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/exo/17/6/s_67006" target="_blank" data-ref="Exodus 17:6">Exodus 17:6</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g4073/kjv/wlc/0-1/" target="_blank" data-lexicon="a rock, cliff or ledgea projecting rock, crag, rocky grounda rock, a large stonemetaph. a man like a rock, by reason ..." data-strongs="G4073" data-translit="petra" data-original="πέτρα" data-lang="greek" data-verse="">πέτρα</a> (<a href="https://www.blueletterbible.org/lexicon/g4073/kjv/tr/0-1/" target="_blank" data-lexicon="a rock, cliff or ledgea projecting rock, crag, rocky grounda rock, a large stonemetaph. a man like a rock, by reason ..." data-strongs="G4073" data-translit="petra" data-original="πέτρα" data-lang="greek" data-verse=""><em>petra</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/1co/10/4/s_1072004" target="_blank" data-ref="1 Corinthians 10:4">1 Corinthians 10:4</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/petra" target="_blank"><em>petra</em></a></td><td><a href="https://www.blueletterbible.org/kjv/exo/17/6/s_67006" target="_blank" data-ref="Exodus 17:6">Exodus 17:6</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/rock" target="_blank">rock</a> (<a href="https://webstersdictionary1828.com/Dictionary/rock" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/rock" target="_blank">Etymonline: rock</a></td><td>—</td></tr>
+</table>
+<h3>Semantic Distinctions</h3>
+<p>Hebrew has several words for rock:</p>
+<ul>
+<li><strong>Tzur</strong> (<a href="https://www.blueletterbible.org/lexicon/h6697/kjv/wlc/0-1/" target="_blank" data-lexicon="rock, cliff rocky wall, cliff rock (with flat surface) block of stone, boulder rock (specific) rock (of God) rock (of..." data-strongs="H6697" data-translit="ṣûr" data-original="צוּר" data-lang="hebrew" data-verse="">צוּר</a>): Cliff-rock, large boulder, crag — emphasizes stability and permanence</li>
+<li><strong>Sela</strong> (<a href="https://www.blueletterbible.org/lexicon/h5554/kjv/wlc/0-1/" target="_blank" data-lexicon="Sela = &quot;the rock&quot;a place in Edomperhaps an early name for &#x27;Petra&#x27;" data-strongs="H5554" data-translit="selaʿ" data-original="סֶלַע" data-lang="hebrew" data-verse="">סֶלַע</a>): Cleft-rock, rocky height — the rock in <a href="https://www.blueletterbible.org/kjv/num/20/1/s_137001" target="_blank" data-ref="Numbers 20">Numbers 20</a></li>
+<li><strong>Even</strong> (<a href="https://www.blueletterbible.org/lexicon/h72/kjv/wlc/0-1/" target="_blank" data-lexicon="Ebenezer = &quot;stone of help&quot;" data-strongs="H72" data-translit="Eḇen Hāʿezer" data-original="אֶבֶן" data-lang="hebrew" data-verse="">אֶבֶן</a>): Stone — smaller, movable</li>
+</ul>
+<p><em>Tzur</em> is the term used in <a href="https://www.blueletterbible.org/kjv/exo/17/6/s_67006" target="_blank" data-ref="Exodus 17:6">Exodus 17:6</a> and becomes a frequent divine title.</p>
+<h3>God as the Rock</h3>
+<p>Throughout the Hebrew Bible, <em>tzur</em> becomes a metaphor for God:</p>
+<ul>
+<li>"The LORD is my rock" (יְהוָה צוּרִי, <em>YHWH tzuri</em>) — <a href="https://www.blueletterbible.org/kjv/psa/18/2/s_496002" target="_blank" data-ref="Psalm 18:2">Psalm 18:2</a></li>
+<li>"The Rock (הַצּוּר, <em>HaTzur</em>), his work is perfect" — <a href="https://www.blueletterbible.org/kjv/deu/32/4/s_185004" target="_blank" data-ref="Deuteronomy 32:4">Deuteronomy 32:4</a></li>
+<li>"There is no rock like our God" — <a href="https://www.blueletterbible.org/kjv/1sa/2/2/s_238002" target="_blank" data-ref="1 Samuel 2:2">1 Samuel 2:2</a></li>
+</ul>
+<h3>Key Passage</h3>
+<blockquote>
+<p>"Behold, I will stand before thee there upon the rock [<em>al-hatzur</em>] in Horeb; and thou shalt smite the rock [<em>batzur</em>], and there shall come water out of it" (<a href="https://www.blueletterbible.org/kjv/exo/17/6/s_67006" target="_blank" data-ref="Exodus 17:6">Exodus 17:6</a>)</p>
+</blockquote>
+<h3>Christological Fulfillment</h3>
+<p>Paul's definitive interpretation:</p>
+<blockquote>
+<p>"And did all drink the same spiritual drink: for they drank of that spiritual Rock that followed them: and that Rock was Christ." (<a href="https://www.blueletterbible.org/kjv/1co/10/4/s_1072004" target="_blank" data-ref="1 Corinthians 10:4">1 Corinthians 10:4</a>)</p>
+</blockquote>
+<p>The smitten rock yielding water prefigures Christ smitten at Calvary, from whose wounded side flowed water and blood.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h6697/kjv/wlc/0-1/" target="_blank" data-lexicon="rock, cliff rocky wall, cliff rock (with flat surface) block of stone, boulder rock (specific) rock (of God) rock (of..." data-strongs="H6697" data-translit="ṣûr" data-original="צוּר" data-lang="hebrew" data-verse="">צוּר</a> (<a href="https://www.blueletterbible.org/lexicon/h6697/kjv/wlc/0-1/" target="_blank" data-lexicon="rock, cliff rocky wall, cliff rock (with flat surface) block of stone, boulder rock (specific) rock (of God) rock (of..." data-strongs="H6697" data-translit="ṣûr" data-original="צוּר" data-lang="hebrew" data-verse=""><em>tzur</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/exo/17/6/s_67006" target="_blank" data-ref="Exodus 17:6">Exodus 17:6</a></td></tr>
+<tr><td><strong>Greek (LXX/NT)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g4073/kjv/wlc/0-1/" target="_blank" data-lexicon="a rock, cliff or ledgea projecting rock, crag, rocky grounda rock, a large stonemetaph. a man like a rock, by reason ..." data-strongs="G4073" data-translit="petra" data-original="πέτρα" data-lang="greek" data-verse="">πέτρα</a> (<a href="https://www.blueletterbible.org/lexicon/g4073/kjv/tr/0-1/" target="_blank" data-lexicon="a rock, cliff or ledgea projecting rock, crag, rocky grounda rock, a large stonemetaph. a man like a rock, by reason ..." data-strongs="G4073" data-translit="petra" data-original="πέτρα" data-lang="greek" data-verse=""><em>petra</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/1co/10/4/s_1072004" target="_blank" data-ref="1 Corinthians 10:4">1 Corinthians 10:4</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/petra" target="_blank"><em>petra</em></a></td><td><a href="https://www.blueletterbible.org/kjv/exo/17/6/s_67006" target="_blank" data-ref="Exodus 17:6">Exodus 17:6</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/rock" target="_blank">rock</a> (<a href="https://webstersdictionary1828.com/Dictionary/rock" target="_blank">1828</a>) · <a href="https://www.merriam-webster.com/dictionary/foundation" target="_blank">foundation</a> (<a href="https://webstersdictionary1828.com/Dictionary/foundation" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/rock" target="_blank">Etymonline: rock</a></td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 4: Nes (נֵס) — Banner/Standard</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Hebrew Analysis</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h5251/kjv/wlc/0-1/" target="_blank" data-lexicon="something lifted up, standard, signal, signal pole, ensign, banner, sign, sailstandard (as rallying point), signalsta..." data-strongs="H5251" data-translit="nēs" data-original="נֵס" data-lang="hebrew" data-verse="">נֵס</a> (<a href="https://www.blueletterbible.org/lexicon/h5251/kjv/wlc/0-1/" target="_blank" data-lexicon="something lifted up, standard, signal, signal pole, ensign, banner, sign, sailstandard (as rallying point), signalsta..." data-strongs="H5251" data-translit="nēs" data-original="נֵס" data-lang="hebrew" data-verse=""><em>nes</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/exo/17/15/s_67015" target="_blank" data-ref="Exodus 17:15">Exodus 17:15</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g4592/kjv/wlc/0-1/" target="_blank" data-lexicon="a sign, mark, tokenthat by which a person or a thing is distinguished from others and is knowna sign, prodigy, porten..." data-strongs="G4592" data-translit="sēmeion" data-original="σημεῖον" data-lang="greek" data-verse="">σημεῖον</a> (<a href="https://www.blueletterbible.org/lexicon/g4592/kjv/tr/0-1/" target="_blank" data-lexicon="a sign, mark, tokenthat by which a person or a thing is distinguished from others and is knowna sign, prodigy, porten..." data-strongs="G4592" data-translit="sēmeion" data-original="σημεῖον" data-lang="greek" data-verse=""><em>semeion</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/isa/11/10/s_690010" target="_blank" data-ref="Isaiah 11:10">Isaiah 11:10</a> (LXX)</td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/signum" target="_blank"><em>signum</em></a>, <a href="https://logeion.uchicago.edu/vexillum" target="_blank"><em>vexillum</em></a></td><td><a href="https://www.blueletterbible.org/kjv/exo/17/15/s_67015" target="_blank" data-ref="Exodus 17:15">Exodus 17:15</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/banner" target="_blank">banner</a> (<a href="https://webstersdictionary1828.com/Dictionary/banner" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/banner" target="_blank">Etymonline: banner</a></td><td>—</td></tr>
+</table>
+<h3>Semantic Range</h3>
+<p><em>Nes</em> can mean:</p>
+<ol>
+<li><strong>Banner/Standard</strong> — military rallying point</li>
+<li><strong>Signal pole</strong> — for communication across distances</li>
+<li><strong>Miracle/Sign</strong> — something lifted up to be seen (modern Hebrew: <em>nes</em> = miracle)</li>
+<li><strong>Ensign</strong> — symbol of leadership and identity</li>
+</ol>
+<h3>Key Passage</h3>
+<blockquote>
+<p>"And Moses built an altar, and called the name of it YHWH-Nissi [The LORD is my Banner]" (<a href="https://www.blueletterbible.org/kjv/exo/17/15/s_67015" target="_blank" data-ref="Exodus 17:15">Exodus 17:15</a>)</p>
+</blockquote>
+<h3>Military and Covenantal Significance</h3>
+<p>Ancient armies rallied around standards bearing tribal or national emblems. When Moses names the altar "YHWH-Nissi," he declares:</p>
+<ul>
+<li>God Himself is Israel's rallying point</li>
+<li>Victory comes from gathering to the LORD, not to human leaders</li>
+<li>Israel fights under divine authority</li>
+</ul>
+<h3>Messianic Application</h3>
+<p><a href="https://www.blueletterbible.org/kjv/isa/11/10/s_690010" target="_blank" data-ref="Isaiah 11:10">Isaiah 11:10</a> prophesies:</p>
+<blockquote>
+<p>"And in that day there shall be a root of Jesse, which shall stand for an ensign [<em>nes</em>] of the people; to it shall the Gentiles seek."</p>
+</blockquote>
+<p>Christ is the ultimate <em>nes</em> — the banner around which all nations gather.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h5251/kjv/wlc/0-1/" target="_blank" data-lexicon="something lifted up, standard, signal, signal pole, ensign, banner, sign, sailstandard (as rallying point), signalsta..." data-strongs="H5251" data-translit="nēs" data-original="נֵס" data-lang="hebrew" data-verse="">נֵס</a> (<a href="https://www.blueletterbible.org/lexicon/h5251/kjv/wlc/0-1/" target="_blank" data-lexicon="something lifted up, standard, signal, signal pole, ensign, banner, sign, sailstandard (as rallying point), signalsta..." data-strongs="H5251" data-translit="nēs" data-original="נֵס" data-lang="hebrew" data-verse=""><em>nes</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/exo/17/15/s_67015" target="_blank" data-ref="Exodus 17:15">Exodus 17:15</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g4592/kjv/wlc/0-1/" target="_blank" data-lexicon="a sign, mark, tokenthat by which a person or a thing is distinguished from others and is knowna sign, prodigy, porten..." data-strongs="G4592" data-translit="sēmeion" data-original="σημεῖον" data-lang="greek" data-verse="">σημεῖον</a> (<a href="https://www.blueletterbible.org/lexicon/g4592/kjv/tr/0-1/" target="_blank" data-lexicon="a sign, mark, tokenthat by which a person or a thing is distinguished from others and is knowna sign, prodigy, porten..." data-strongs="G4592" data-translit="sēmeion" data-original="σημεῖον" data-lang="greek" data-verse=""><em>semeion</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/isa/11/10/s_690010" target="_blank" data-ref="Isaiah 11:10">Isaiah 11:10</a> (LXX)</td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/vexillum" target="_blank"><em>vexillum</em></a>, <a href="https://logeion.uchicago.edu/signum" target="_blank"><em>signum</em></a></td><td><a href="https://www.blueletterbible.org/kjv/exo/17/15/s_67015" target="_blank" data-ref="Exodus 17:15">Exodus 17:15</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/banner" target="_blank">banner</a> (<a href="https://webstersdictionary1828.com/Dictionary/banner" target="_blank">1828</a>) · <a href="https://www.merriam-webster.com/dictionary/ensign" target="_blank">ensign</a> (<a href="https://webstersdictionary1828.com/Dictionary/ensign" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/banner" target="_blank">Etymonline: banner</a></td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 5: Nasa (נָסָה) — To Test/Prove</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Hebrew Analysis</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h5254/kjv/wlc/0-1/" target="_blank" data-lexicon="to test, prove, try" data-strongs="H5254" data-translit="nasah" data-original="נָסָה" data-lang="hebrew" data-verse="Genesis 22:1">נָסָה</a> (<a href="https://www.blueletterbible.org/lexicon/h5254/kjv/wlc/0-1/" target="_blank" data-lexicon="to test, prove, try" data-strongs="H5254" data-translit="nasah" data-original="נָסָה" data-lang="hebrew" data-verse="Genesis 22:1"><em>nasa</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/exo/16/4/s_66004" target="_blank" data-ref="Exodus 16:4">Exodus 16:4</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td>πειράζω (<a href="https://www.blueletterbible.org/lexicon/g3985/kjv/tr/0-1/" target="_blank" data-lexicon="to try whether a thing can be done to attempt, endeavour to try, make trial of, test: for the purpose of ascertaining..." data-strongs="G3985" data-translit="peirazō" data-original="πειράζω" data-lang="greek" data-verse=""><em>peirazo</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/mat/4/1/s_933001" target="_blank" data-ref="Matthew 4:1">Matthew 4:1</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/tento" target="_blank"><em>tento</em></a>, <a href="https://logeion.uchicago.edu/probo" target="_blank"><em>probo</em></a></td><td><a href="https://www.blueletterbible.org/kjv/exo/16/4/s_66004" target="_blank" data-ref="Exodus 16:4">Exodus 16:4</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/test" target="_blank">test</a> (<a href="https://webstersdictionary1828.com/Dictionary/test" target="_blank">1828</a>) · <a href="https://www.merriam-webster.com/dictionary/prove" target="_blank">prove</a> (<a href="https://webstersdictionary1828.com/Dictionary/prove" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/prove" target="_blank">Etymonline: prove</a></td><td>—</td></tr>
+</table>
+<h3>Bi-Directional Testing</h3>
+<p>This week's readings show testing flowing in both directions:</p>
+<p><strong>God tests Israel:</strong></p>
+<blockquote>
+<p>"Behold, I will rain bread from heaven for you... that I may prove them [<em>anassenu</em>]" (<a href="https://www.blueletterbible.org/kjv/exo/16/4/s_66004" target="_blank" data-ref="Exodus 16:4">Exodus 16:4</a>)</p>
+</blockquote>
+<p><strong>Israel tests God:</strong></p>
+<blockquote>
+<p>"And he called the name of the place Massah [<em>testing</em>], and Meribah... because they tempted [<em>nasotam</em>] the LORD" (<a href="https://www.blueletterbible.org/kjv/exo/17/7/s_67007" target="_blank" data-ref="Exodus 17:7">Exodus 17:7</a>)</p>
+</blockquote>
+<h3>Purpose of Divine Testing</h3>
+<p>God's testing is not to discover what He does not know but to:</p>
+<ol>
+<li><strong>Reveal</strong> Israel's heart to themselves</li>
+<li><strong>Strengthen</strong> faith through exercise</li>
+<li><strong>Establish</strong> covenant faithfulness patterns</li>
+<li><strong>Prove</strong> (in the metallurgical sense) and refine character</li>
+</ol>
+<h3>Key Passage</h3>
+<p>The place names encode the lesson:</p>
+<ul>
+<li><strong>Massah</strong> (<a href="https://www.blueletterbible.org/lexicon/h4529/kjv/wlc/0-1/" target="_blank" data-lexicon="to melt, dissolve, be liquefied(Hiphil)to melt, cause to dissolve, consume, cause to vanishto intimidate (fig)" data-strongs="H4529" data-translit="māsâ" data-original="מָסָה" data-lang="hebrew" data-verse="">מַסָּה</a>): From <em>nasa</em> — "Testing"</li>
+<li><strong>Meribah</strong> (<a href="https://www.blueletterbible.org/lexicon/h4809/kjv/wlc/0-1/" target="_blank" data-lexicon="Meribah = &quot;strife&quot; or &quot;contention&quot; a fountain at Rephidim, in the desert of Sin; so called because the Israelites mur..." data-strongs="H4809" data-translit="mᵊrîḇâ" data-original="מְרִיבָה" data-lang="hebrew" data-verse="">מְרִיבָה</a>): From <em>riv</em> — "Quarreling"</li>
+</ul>
+<p>These names stand as perpetual warnings: "Do not harden your hearts, as at Meribah, as in the day of Massah in the wilderness" (<a href="https://www.blueletterbible.org/kjv/psa/95/8/s_573008" target="_blank" data-ref="Psalm 95:8">Psalm 95:8</a>).</p>
+<h3>Conference Connection</h3>
+<blockquote>
+<p>"The word prove has several meanings. To prove something is not simply to test it. It is to increase its strength. To prove a piece of steel is to place it under strain. Heat, weight, and pressure are added until its true nature is enhanced and revealed."</p>
+<p>— <a href="https://www.churchofjesuschrist.org/study/general-conference/2025/10/47eyring" target="_blank"><strong>Elder Henry B. Eyring</strong>, <em>Proved and Strengthened in Christ</em>, October 2025 General Conference</a></p>
+</blockquote>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h5254/kjv/wlc/0-1/" target="_blank" data-lexicon="to test, prove, try" data-strongs="H5254" data-translit="nasah" data-original="נָסָה" data-lang="hebrew" data-verse="Genesis 22:1">נָסָה</a> (<a href="https://www.blueletterbible.org/lexicon/h5254/kjv/wlc/0-1/" target="_blank" data-lexicon="to test, prove, try" data-strongs="H5254" data-translit="nasah" data-original="נָסָה" data-lang="hebrew" data-verse="Genesis 22:1"><em>nasa</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/exo/16/4/s_66004" target="_blank" data-ref="Exodus 16:4">Exodus 16:4</a></td></tr>
+<tr><td><strong>Greek (LXX/NT)</strong></td><td>πειράζω (<a href="https://www.blueletterbible.org/lexicon/g3985/kjv/tr/0-1/" target="_blank" data-lexicon="to try whether a thing can be done to attempt, endeavour to try, make trial of, test: for the purpose of ascertaining..." data-strongs="G3985" data-translit="peirazō" data-original="πειράζω" data-lang="greek" data-verse=""><em>peirazo</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/mat/4/1/s_933001" target="_blank" data-ref="Matthew 4:1">Matthew 4:1</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/tento" target="_blank"><em>tento</em></a>, <a href="https://logeion.uchicago.edu/probo" target="_blank"><em>probo</em></a></td><td><a href="https://www.blueletterbible.org/kjv/exo/16/4/s_66004" target="_blank" data-ref="Exodus 16:4">Exodus 16:4</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/prove" target="_blank">prove</a> (<a href="https://webstersdictionary1828.com/Dictionary/prove" target="_blank">1828</a>) · <a href="https://www.merriam-webster.com/dictionary/test" target="_blank">test</a> (<a href="https://webstersdictionary1828.com/Dictionary/test" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/prove" target="_blank">Etymonline: prove</a></td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 6: Rapha (רָפָא) — To Heal</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Hebrew Analysis</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h7498/kjv/wlc/0-1/" target="_blank" data-lexicon="Rapha = &quot;tall&quot;son of Binea and a descendant of Saulson of Benjamin" data-strongs="H7498" data-translit="rāp̄ā&#x27;" data-original="רָפָא" data-lang="hebrew" data-verse="">רָפָא</a> (<a href="https://www.blueletterbible.org/lexicon/h7495/kjv/wlc/0-1/" target="_blank" data-lexicon="to heal, make healthful(Qal) to healof Godhealer, physician (of men)of hurts of nations involving restored favour (fi..." data-strongs="H7495" data-translit="rāp̄ā'" data-original="רַעַשׁ" data-lang="hebrew" data-verse=""><em>rapha</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/exo/15/26/s_65026" target="_blank" data-ref="Exodus 15:26">Exodus 15:26</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g2390/kjv/wlc/0-1/" target="_blank" data-lexicon="to cure, heal to make whole to free from errors and sins, to bring about (one&#x27;s) salvation" data-strongs="G2390" data-translit="iaomai" data-original="ἰάομαι" data-lang="greek" data-verse="">ἰάομαι</a> (<a href="https://www.blueletterbible.org/lexicon/g2390/kjv/tr/0-1/" target="_blank" data-lexicon="to cure, heal to make whole to free from errors and sins, to bring about (one's) salvation" data-strongs="G2390" data-translit="iaomai" data-original="ἰάομαι" data-lang="greek" data-verse=""><em>iaomai</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/mat/8/8/s_937008" target="_blank" data-ref="Matthew 8:8">Matthew 8:8</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/sano" target="_blank"><em>sano</em></a></td><td><a href="https://www.blueletterbible.org/kjv/exo/15/26/s_65026" target="_blank" data-ref="Exodus 15:26">Exodus 15:26</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/heal" target="_blank">heal</a> (<a href="https://webstersdictionary1828.com/Dictionary/heal" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/heal" target="_blank">Etymonline: heal</a></td><td>—</td></tr>
+</table>
+<h3>Divine Healer Title</h3>
+<p>At Marah, God reveals Himself as:</p>
+<blockquote>
+<p>"I am the LORD who heals you" — <em>Ani YHWH rophe'echa</em> (אֲנִי יְהוָה רֹפְאֶךָ)</p>
+</blockquote>
+<p>This is one of the compound names of God:</p>
+<ul>
+<li>YHWH-Jireh (Provider)</li>
+<li>YHWH-Nissi (Banner)</li>
+<li>YHWH-Shalom (Peace)</li>
+<li><strong>YHWH-Rophe</strong> (Healer)</li>
+</ul>
+<h3>Comprehensive Healing</h3>
+<p>The Hebrew concept of <em>rapha</em> includes:</p>
+<ol>
+<li><strong>Physical healing</strong> — bodily restoration</li>
+<li><strong>Emotional healing</strong> — comfort and consolation</li>
+<li><strong>Spiritual healing</strong> — restoration of relationship with God</li>
+<li><strong>National healing</strong> — restoration of covenant community</li>
+</ol>
+<h3>Key Connection to the Tree</h3>
+<p>The healing at Marah comes through the tree (<em>etz</em>) cast into the water. This connects to:</p>
+<ul>
+<li>Eden's trees (including the tree of life)</li>
+<li>The tree/wood of the cross</li>
+<li><a href="https://www.blueletterbible.org/kjv/isa/53/5/s_732005" target="_blank" data-ref="Isaiah 53:5">Isaiah 53:5</a>: "With his stripes we are healed"</li>
+</ul>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h7498/kjv/wlc/0-1/" target="_blank" data-lexicon="Rapha = &quot;tall&quot;son of Binea and a descendant of Saulson of Benjamin" data-strongs="H7498" data-translit="rāp̄ā&#x27;" data-original="רָפָא" data-lang="hebrew" data-verse="">רָפָא</a> (<a href="https://www.blueletterbible.org/lexicon/h7495/kjv/wlc/0-1/" target="_blank" data-lexicon="to heal, make healthful(Qal) to healof Godhealer, physician (of men)of hurts of nations involving restored favour (fi..." data-strongs="H7495" data-translit="rāp̄ā'" data-original="רַעַשׁ" data-lang="hebrew" data-verse=""><em>rapha</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/exo/15/26/s_65026" target="_blank" data-ref="Exodus 15:26">Exodus 15:26</a></td></tr>
+<tr><td><strong>Greek (LXX/NT)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g2390/kjv/wlc/0-1/" target="_blank" data-lexicon="to cure, heal to make whole to free from errors and sins, to bring about (one&#x27;s) salvation" data-strongs="G2390" data-translit="iaomai" data-original="ἰάομαι" data-lang="greek" data-verse="">ἰάομαι</a> (<a href="https://www.blueletterbible.org/lexicon/g2390/kjv/tr/0-1/" target="_blank" data-lexicon="to cure, heal to make whole to free from errors and sins, to bring about (one's) salvation" data-strongs="G2390" data-translit="iaomai" data-original="ἰάομαι" data-lang="greek" data-verse=""><em>iaomai</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/mat/8/8/s_937008" target="_blank" data-ref="Matthew 8:8">Matthew 8:8</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/sano" target="_blank"><em>sano</em></a>, <a href="https://logeion.uchicago.edu/medico" target="_blank"><em>medico</em></a></td><td><a href="https://www.blueletterbible.org/kjv/exo/15/26/s_65026" target="_blank" data-ref="Exodus 15:26">Exodus 15:26</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/heal" target="_blank">heal</a> (<a href="https://webstersdictionary1828.com/Dictionary/heal" target="_blank">1828</a>) · <a href="https://www.merriam-webster.com/dictionary/restore" target="_blank">restore</a> (<a href="https://webstersdictionary1828.com/Dictionary/restore" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/heal" target="_blank">Etymonline: heal</a></td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 5: WEEK 16: EXODUS 14-17 — JEWISH PERSPECTIVE -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">5. Week 16: Exodus 14-17 — Jewish Perspective</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>1. Nahshon's Leap of Faith</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Rabbinic Tradition</h3>
+<p>The Talmud records a famous debate about who entered the Red Sea first. Rabbi Meir taught that the tribe of Benjamin descended first, but Rabbi Yehuda countered with a different tradition:</p>
+<blockquote>
+<p>"Each tribe said: 'I am not going into the sea first.' Then, in jumped Nahshon ben Amminadab, and descended into the sea first."</p>
+<p>— <a href="https://www.sefaria.org/Sotah.37a" target="_blank">Talmud Bavli, Sotah 37a</a></p>
+</blockquote>
+<p>According to this tradition, the sea did not part until Nahshon entered the water up to his nostrils. Only when he demonstrated complete faith did the waters divide. The Talmud connects this to <a href="https://www.blueletterbible.org/kjv/psa/69/2/s_547002" target="_blank" data-ref="Psalm 69:2">Psalm 69:2</a>: "Save me, O God; for the waters are come in even unto the soul."</p>
+<h3>LDS Connection</h3>
+<p>Nahshon's example illustrates the principle that faith precedes the miracle. President Spencer W. Kimball's classic work, <em><a href="https://www.churchofjesuschrist.org/study/ensign/2013/08/move-forward-in-faith/faith-precedes-miracles" target="_blank">Faith Precedes the Miracle</a></em>, develops this theme extensively. Like the brother of Jared (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/3?lang=eng" target="_blank" data-ref="Ether 3">Ether 3</a>), who prepared the stones before asking God to touch them, we must often step into the water before God parts the sea. The sea did not divide for Israel's observation — it divided for Israel's <em>passage</em>. Faith acts.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>2. The Ten Trials in the Wilderness</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Rabbinic Teaching</h3>
+<p>The Talmud identifies ten occasions when Israel tested God in the wilderness:</p>
+<blockquote>
+<p>"Our ancestors tried the Holy One, Blessed be He, with ten trials: Two at the sea, two with water, two with the manna, two with the quail, one with the golden calf, and one in the wilderness of Paran [the spies]."</p>
+<p>— <a href="https://www.sefaria.org/Arakhin.15a" target="_blank">Talmud Bavli, Arakhin 15a</a></p>
+</blockquote>
+<p>The "two at the sea" were:</p>
+<ol>
+<li>When descending into the sea (fear before crossing)</li>
+<li>When ascending from the sea (fear that Egyptians were also escaping on the other side)</li>
+</ol>
+<h3>LDS Connection</h3>
+<p>These ten trials mirror the tests of mortality. Elder Henry B. Eyring taught:</p>
+<blockquote>
+<p>"The word prove has several meanings. To prove something is not simply to test it. It is to increase its strength. To prove a piece of steel is to place it under strain. Heat, weight, and pressure are added until its true nature is enhanced and revealed. ... I bear witness that these moments are not evidence that the Lord has abandoned you. Rather, they are evidence that He loves you enough to refine and strengthen you."</p>
+<p>— <a href="https://www.churchofjesuschrist.org/study/general-conference/2025/10/47eyring" target="_blank">Elder Henry B. Eyring, "Proved and Strengthened in Christ," October 2025 General Conference</a></p>
+</blockquote>
+<p>The wilderness was God's classroom, and each test was an invitation to trust more deeply.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>3. Why the Sea Parted into Twelve Paths</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Midrashic Tradition</h3>
+<p>The Midrash teaches that the sea parted not into one path but into twelve — one for each tribe:</p>
+<blockquote>
+<p>"The Holy One, blessed be He, showed every tribe its own path, and the sea was divided into twelve paths."</p>
+<p>— Midrash, Pirkei de-Rabbi Eliezer 42</p>
+</blockquote>
+<p>This allowed each tribe to maintain its distinct identity even in the moment of unified deliverance. The walls of water between the paths were transparent like glass, so the tribes could see one another.</p>
+<h3>LDS Connection</h3>
+<p>This tradition resonates with the Restoration principle that God deals with His children both collectively and individually. The covenant path is one, yet each person's journey is unique. The twelve tribes prefigure the twelve stakes of Zion, each distinct yet unified.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>4. The Song at the Sea: Prophetic Declaration</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Rabbinic Interpretation</h3>
+<p>Jewish tradition holds that at the Red Sea, even the least of Israel saw what the greatest prophets never saw:</p>
+<blockquote>
+<p>"A maidservant at the sea saw what Ezekiel and all the other prophets never saw."</p>
+<p>— Mekhilta de-Rabbi Ishmael, Beshalach</p>
+</blockquote>
+<p>The Song of Moses (Shirat HaYam) is considered one of the ten great songs in scripture. It is recited daily in Jewish morning prayers (Pesukei d'Zimra) and chanted with special cantillation on the seventh day of Passover.</p>
+<h3>LDS Connection</h3>
+<p>The principle that ordinary people can receive extraordinary revelation aligns with Joseph Smith's teaching that "God hath not revealed anything to Joseph, but what He will make known unto the Twelve, and even the least Saint may know all things as fast as he is able to bear them" (TPJS, 149).</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>5. The Sabbath Before Sinai: Manna's Teaching</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Rabbinic Observation</h3>
+<p>The Talmud notes that the Sabbath laws concerning manna appear in <a href="https://www.blueletterbible.org/kjv/exo/16/1/s_66001" target="_blank" data-ref="Exodus 16">Exodus 16</a> — <em>before</em> the formal giving of the Torah at Sinai. This indicates:</p>
+<blockquote>
+<p>"Because they went three days without Torah, the prophets and elders ordained that the Torah be read publicly on three days each week."</p>
+<p>— <a href="https://www.sefaria.org/Tanchuma%2C_Beshalach" target="_blank">Tanchuma, Beshalach</a></p>
+</blockquote>
+<p>The three-day Torah reading cycle (Monday, Thursday, Saturday) was instituted to ensure Israel never goes three days without spiritual nourishment, just as manna came daily.</p>
+<h3>LDS Connection</h3>
+<p>This principle of regular spiritual nourishment resonates deeply with Latter-day Saint teaching. President Russell M. Nelson promised:</p>
+<blockquote>
+<p>"I promise that as you prayerfully study the Book of Mormon every day, you will make better decisions—every day. I promise that as you ponder what you study, the windows of heaven will open, and you will receive answers to your own questions and direction for your own life."</p>
+<p>— <a href="https://www.churchofjesuschrist.org/study/general-conference/2017/10/the-book-of-mormon-what-would-your-life-be-like-without-it" target="_blank">President Russell M. Nelson, "The Book of Mormon: What Would Your Life Be Like without It?" October 2017 General Conference</a></p>
+</blockquote>
+<p>Like manna that could not be hoarded, spiritual nourishment must be gathered fresh. Elder Stephen W. Owen illustrated this with a striking analogy:</p>
+<blockquote>
+<p>"Years ago, President Boyd K. Packer told of a herd of deer that, because of heavy snowfall, was trapped outside its natural habitat and faced possible starvation. Some well-meaning people, in an effort to save the deer, dumped truckloads of hay around the area. ... Sadly, most of the deer were later found dead. They had eaten the hay, but it did not nourish them, and they starved to death with their stomachs full. Many of the messages that bombard us in the information age are the spiritual equivalent of feeding hay to deer—we can eat it all day long, but it will not nourish us."</p>
+<p>— <a href="https://www.churchofjesuschrist.org/study/general-conference/2019/10/13owen" target="_blank">Stephen W. Owen, "Be Faithful, Not Faithless," October 2019 General Conference</a></p>
+</blockquote>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>6. The Double Portion and Sabbath Rest</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Talmudic Teaching</h3>
+<p>The rabbis derive numerous Sabbath laws from the manna narrative:</p>
+<blockquote>
+<p>"On the sixth day they gathered twice as much bread" (<a href="https://www.blueletterbible.org/kjv/exo/16/22/s_66022" target="_blank" data-ref="Exodus 16:22">Exodus 16:22</a>)</p>
+</blockquote>
+<p>From this, tradition derives:</p>
+<ul>
+<li><strong>Lechem Mishneh</strong>: Two loaves of bread (challah) on the Sabbath table</li>
+<li><strong>Preparation before rest</strong>: Friday is preparation day</li>
+<li><strong>Sabbath delight</strong>: The double portion signifies Sabbath abundance</li>
+</ul>
+<h3>LDS Connection</h3>
+<p>The principle of preparation enabling rest applies to temple preparation (completing ordinances before entering rest), to the weekly Sabbath (preparing Saturday so Sunday is restful), and to the preparation of the gospel before the Millennium.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>7. What Is Manna? The Question as Name</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Linguistic Tradition</h3>
+<p>The Hebrew <em>man hu</em> (מָן הוּא) — "What is it?" — became the substance's permanent name. Rabbi Shmuel bar Nachmani taught:</p>
+<blockquote>
+<p>"Why was it called 'man'? Because they said 'What [man] is it?'"</p>
+<p>— Yoma 75a</p>
+</blockquote>
+<p>The perpetual question embedded in the name serves as ongoing reminder of wonder and divine mystery.</p>
+<h3>LDS Connection</h3>
+<p>The sacrament bread, like manna, should evoke wonder: "What is this?" The emblems are ordinary bread and water, yet through covenant they become vehicles of divine grace. The question keeps us from taking sacred things for granted.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>8. The Rock That Followed Israel</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Rabbinic Legend</h3>
+<p>Jewish tradition teaches that a miraculous well accompanied Israel throughout the wilderness:</p>
+<blockquote>
+<p>"This is the well concerning which the LORD said to Moses, 'Gather the people together and I will give them water' (<a href="https://www.blueletterbible.org/kjv/num/21/16/s_138016" target="_blank" data-ref="Numbers 21:16">Numbers 21:16</a>). It was given in the merit of Miriam."</p>
+<p>— <a href="https://www.sefaria.org/Taanit.9a" target="_blank">Talmud Bavli, Taanit 9a</a></p>
+</blockquote>
+<p>When Miriam died (<a href="https://www.blueletterbible.org/kjv/num/20/1/s_137001" target="_blank" data-ref="Numbers 20:1">Numbers 20:1</a>), the well ceased. Some traditions identify this with the rock Moses struck, suggesting the rock (or well it produced) traveled with Israel.</p>
+<h3>LDS Connection</h3>
+<p>Paul explicitly connects this tradition to Christ: "They drank of that spiritual Rock that followed them: and that Rock was Christ" (<a href="https://www.blueletterbible.org/kjv/1co/10/4/s_1072004" target="_blank" data-ref="1 Corinthians 10:4">1 Corinthians 10:4</a>). Christ's presence accompanies covenant Israel through every wilderness experience.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>9. The Staff of Moses: Instrument of Miracles</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Midrashic Teaching</h3>
+<p>The Midrash Tanchuma describes Moses' staff as a creation of the twilight on the sixth day — one of the things created between the end of the sixth day and the beginning of the Sabbath:</p>
+<blockquote>
+<p>"With this staff you brought Israel out of Egypt; with this staff you split asunder the sea for them; with this staff you performed miracles and mighty deeds."</p>
+<p>— <a href="https://www.sefaria.org/Tanchuma%2C_Beshalach" target="_blank">Tanchuma, Beshalach</a></p>
+</blockquote>
+<p>The staff passed through the hands of Adam, Seth, Enoch, Noah, Shem, Abraham, Isaac, Jacob, Joseph, and finally to Moses.</p>
+<h3>LDS Connection</h3>
+<p>This lineage of the staff parallels the priesthood lineage. The authority to perform miracles passes from generation to generation through proper succession. The rod of Aaron that budded, the Liahona, and other sacred objects similarly embody divine authority across dispensations.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>10. Amalek: The Eternal Enemy</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Rabbinic Perspective</h3>
+<p>Amalek attacked Israel from behind, targeting the weak and weary:</p>
+<blockquote>
+<p>"Remember what Amalek did to you on the way as you came out of Egypt, how he attacked you on the way when you were faint and weary, and cut off your tail, all who were lagging behind you" (<a href="https://www.blueletterbible.org/kjv/deu/25/17-18/s_178017" target="_blank" data-ref="Deuteronomy 25:17-18">Deuteronomy 25:17-18</a>).</p>
+</blockquote>
+<p>The Midrash explains that Amalek represents the spirit of doubt — the Hebrew letters of <a href="https://www.blueletterbible.org/lexicon/h6002/kjv/wlc/0-1/" target="_blank" data-lexicon="Amalek = &quot;dweller in a valley&quot;son of Eliphaz by his concubine Timnah, grandson of Esau, and progenitor of a tribe of ..." data-strongs="H6002" data-translit="ʿămālēq" data-original="עֲמָלֵק" data-lang="hebrew" data-verse="">עֲמָלֵק</a> (Amalek) have the same numerical value (240) as <a href="https://www.blueletterbible.org/lexicon/h5606/kjv/wlc/0-1/" target="_blank" data-lexicon="to clap, slap(Qal)to slap, clapto slap, chastiseto splash, throw up(Hiphil) to cause to clap" data-strongs="H5606" data-translit="sāp̄aq" data-original="סָפַק" data-lang="hebrew" data-verse="">סָפֵק</a> (safek — doubt).</p>
+<h3>LDS Connection</h3>
+<p>The battle with Amalek occurs immediately after Israel questions "Is the LORD among us, or not?" (<a href="https://www.blueletterbible.org/kjv/exo/17/7/s_67007" target="_blank" data-ref="Exodus 17:7">Exodus 17:7</a>). Doubt precedes attack. The spiritual warfare of doubt requires the same remedy Moses demonstrated: uplifted hands (prayer) supported by faithful community (Aaron and Hur).</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>11. The Uplifted Hands: Prayer's Power</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Mishnaic Teaching</h3>
+<p>The Mishnah asks the obvious question:</p>
+<blockquote>
+<p>"Could the hands of Moses make or break the battle? Rather, this teaches: When Israel looked upward and directed their hearts to their Father in Heaven, they prevailed; when they did not, they fell."</p>
+<p>— <a href="https://www.sefaria.org/Mishnah_Rosh_Hashanah.3.8" target="_blank">Mishnah Rosh Hashanah 3:8</a></p>
+</blockquote>
+<p>The hands themselves have no magic power. They serve as a focal point directing Israel's attention and hearts toward God.</p>
+<h3>LDS Connection</h3>
+<p>This teaching applies to all religious symbols and ordinances. The sacrament emblems themselves do not forgive sin; they direct our hearts to Christ who does. Temple ordinances point beyond themselves to covenant relationships with God. Symbols work when they turn our hearts heavenward.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>12. Elim: Rest Before the Next Trial</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Rabbinic Observation</h3>
+<p>Between Marah (bitterness) and the Wilderness of Sin (hunger) came Elim:</p>
+<blockquote>
+<p>"And they came to Elim, where were twelve springs of water and seventy palm trees" (<a href="https://www.blueletterbible.org/kjv/exo/15/27/s_65027" target="_blank" data-ref="Exodus 15:27">Exodus 15:27</a>).</p>
+</blockquote>
+<p>The twelve springs correspond to the twelve tribes; the seventy palm trees correspond to the seventy elders. God provides rest stations within the journey.</p>
+<h3>LDS Connection</h3>
+<p>The Lord does not lead His people from trial to trial without respite. The pattern of test-rest-test mirrors the temple experience, where peaceful ordinance rooms alternate with more demanding narrative presentations. Sabbaths punctuate weeks; stakes provide gathering places in the wilderness of the world.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>13. The Parashat Beshalach: Week of Song</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Liturgical Context</h3>
+<p>This week's reading corresponds to parashat Beshalach in the Jewish reading cycle. The Sabbath when Shirat HaYam (Song of the Sea) is read is called <strong>Shabbat Shirah</strong> — the Sabbath of Song.</p>
+<p>Special customs include:</p>
+<ul>
+<li>Feeding birds before Shabbat (commemorating manna)</li>
+<li>Standing during the Torah reading of the Song</li>
+<li>Extended musical settings of the Song in liturgy</li>
+</ul>
+<h3>LDS Connection</h3>
+<p>Music accompanies revelation in LDS worship as well. The sacrament hymn invites the Spirit; temple sessions include musical interludes. The heavenly chorus of <a href="https://www.blueletterbible.org/kjv/rev/15/3/s_1182003" target="_blank" data-ref="Revelation 15:3">Revelation 15:3</a> sings "the song of Moses... and the song of the Lamb," uniting both testaments in worship.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>14. The Tree at Marah: Torah as Healing</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Rabbinic Interpretation</h3>
+<p>The Midrash identifies the tree (<em>etz</em>) Moses cast into the bitter waters as Torah:</p>
+<blockquote>
+<p>"'The LORD showed him a tree' — this is Torah, as it says, 'She is a tree of life to those who grasp her' (<a href="https://www.blueletterbible.org/kjv/pro/3/18/s_631018" target="_blank" data-ref="Proverbs 3:18">Proverbs 3:18</a>)."</p>
+<p>— Mekhilta, Beshalach</p>
+</blockquote>
+<p>Torah sweetens the bitterness of life. Study transforms suffering into meaning.</p>
+<h3>LDS Connection</h3>
+<p>The scriptures — particularly the Book of Mormon — serve the same healing function. President Russell M. Nelson promised:</p>
+<blockquote>
+<p>"I promise that as you daily immerse yourself in the Book of Mormon, you can be immunized against the evils of the day."</p>
+<p>— <a href="https://www.churchofjesuschrist.org/study/general-conference/2017/10/the-book-of-mormon-what-would-your-life-be-like-without-it" target="_blank">President Russell M. Nelson, "The Book of Mormon: What Would Your Life Be Like without It?" October 2017 General Conference</a></p>
+</blockquote>
+<p>The "tree of life" in Lehi's dream, whose fruit is "most sweet above all," connects to this healing tree tradition. Torah sweetens bitterness; so do the scriptures.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>15. The Altar YHWH-Nissi: God as Standard</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Rabbinic Teaching</h3>
+<p>When Moses built the altar called "The LORD is my Banner," he was not claiming personal victory but directing all glory to God. The Targum interprets:</p>
+<blockquote>
+<p>"The LORD has performed miracles for us" — <em>Adonai asa lan nissin</em></p>
+</blockquote>
+<p>The <a href="https://www.blueletterbible.org/lexicon/h5251/kjv/wlc/0-1/" target="_blank" data-lexicon="something lifted up, standard, signal, signal pole, ensign, banner, sign, sailstandard (as rallying point), signalsta..." data-strongs="H5251" data-translit="nēs" data-original="נֵס" data-lang="hebrew" data-verse="">נֵס</a> (<em>nes</em>, banner/miracle) belongs entirely to God.</p>
+<h3>LDS Connection</h3>
+<p>This principle of attributing all victory to God undergirds covenant humility. The Book of Mormon repeatedly warns against pride that claims credit for divine gifts (see <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/hel/12?lang=eng&id=p1-p6#p1" target="_blank" data-ref="Helaman 12:1-6">Helaman 12:1-6</a>). The altar's name teaches that even when we participate in spiritual warfare (as Joshua fought below), the victory belongs to the LORD (as Moses prayed above).</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Source Table</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Source</th><th>Citation</th><th>Sefaria Link</th><th>Notes</th></tr>
+<tr><td>Talmud Bavli</td><td>Sotah 37a</td><td><a href="https://www.sefaria.org/Sotah.37a" target="_blank">Link</a></td><td>Nahshon entering the sea</td></tr>
+<tr><td>Talmud Bavli</td><td>Arakhin 15a</td><td><a href="https://www.sefaria.org/Arakhin.15a" target="_blank">Link</a></td><td>Ten trials in the wilderness</td></tr>
+<tr><td>Midrash Tanchuma</td><td>Beshalach</td><td><a href="https://www.sefaria.org/Tanchuma%2C_Beshalach" target="_blank">Link</a></td><td>Staff of Moses traditions</td></tr>
+<tr><td>Talmud Bavli</td><td>Taanit 9a</td><td><a href="https://www.sefaria.org/Taanit.9a" target="_blank">Link</a></td><td>Well of Miriam</td></tr>
+<tr><td>Mishnah</td><td>Rosh Hashanah 3:8</td><td><a href="https://www.sefaria.org/Mishnah_Rosh_Hashanah.3.8" target="_blank">Link</a></td><td>Uplifted hands meaning</td></tr>
+<tr><td>Pirkei de-Rabbi Eliezer</td><td>Chapter 42</td><td><a href="https://www.sefaria.org/Pirkei_DeRabbi_Eliezer.42" target="_blank">Link</a></td><td>Twelve paths through sea</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 6: WEEK 16: EXODUS 14-17 — TEACHING APPLICATIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">6. Week 16: Exodus 14-17 — Teaching Applications</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Family Home Evening / Family Scripture Study</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Activity: "Parting the Red Sea"</h3>
+<p><strong>Materials</strong>: Blankets, chairs, or pillows; blue fabric or paper</p>
+<p><strong>Setup</strong>: Create "walls of water" on either side of a path using blue fabric draped over chairs, or have family members hold up blue blankets.</p>
+<p><strong>Activity</strong>:</p>
+<ol>
+<li>Read <a href="https://www.blueletterbible.org/kjv/exo/14/13-14/s_64013" target="_blank" data-ref="Exodus 14:13-14">Exodus 14:13-14</a> together</li>
+<li>Have the youngest children walk through the "sea" as others hold the "walls"</li>
+<li>Discuss: "How did it feel to walk through? Were you nervous? Did you trust the path?"</li>
+<li>Share personal experiences when God opened a way through impossibility</li>
+</ol>
+<p><strong>Discussion Questions</strong>:</p>
+<ul>
+<li>When has our family faced a "Red Sea moment" — trapped between dangers?</li>
+<li>How did Heavenly Father open a way for us?</li>
+<li>What does it mean to "stand still and see the salvation of the Lord"?</li>
+</ul>
+<h3>Activity: "Daily Manna Gathering"</h3>
+<p><strong>Materials</strong>: Small candies, popcorn, or treats hidden around a room; small bags for each child</p>
+<p><strong>Activity</strong>:</p>
+<ol>
+<li>Tell the manna story (<a href="https://www.blueletterbible.org/kjv/exo/16/14-18/s_66014" target="_blank" data-ref="Exodus 16:14-18">Exodus 16:14-18</a>)</li>
+<li>Hide "manna" around the room (enough for everyone)</li>
+<li>Give each child a bag with instructions: "Gather what you need for one day"</li>
+<li>Explain the Sabbath rule: On Friday, they can gather double</li>
+<li>After gathering, check: Did some gather too much? Too little? The miracle of equal distribution</li>
+</ol>
+<p><strong>Discussion Questions</strong>:</p>
+<ul>
+<li>What is our "spiritual manna" that we need to gather daily?</li>
+<li>What happens when we try to "save up" spiritual experiences and skip daily scripture study or prayer?</li>
+<li>How is the sacrament like manna?</li>
+</ul>
+<h3>Song Suggestion</h3>
+<p>"Redeemer of Israel" (Hymns, no. 6) — The CFM Manual recommends this hymn, which draws on Red Sea imagery.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Sunday School (Adult / Youth)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Discussion Framework: The Testing Pattern</h3>
+<p><strong>Opening Question</strong>: What is the difference between a test meant to help you learn and a test designed to fail you?</p>
+<p><strong>Scripture Block</strong>: <a href="https://www.blueletterbible.org/kjv/exo/16/4/s_66004" target="_blank" data-ref="Exodus 16:4">Exodus 16:4</a></p>
+<blockquote>
+<p>"Behold, I will rain bread from heaven for you... that I may prove them, whether they will walk in my law, or no."</p>
+</blockquote>
+<p><strong>Key Teaching Point</strong>: God tests to strengthen, not to condemn. The Hebrew word <a href="https://www.blueletterbible.org/lexicon/h5254/kjv/wlc/0-1/" target="_blank" data-lexicon="to test, prove, try" data-strongs="H5254" data-translit="nasah" data-original="נָסָה" data-lang="hebrew" data-verse="Genesis 22:1">נָסָה</a> (<em>nasa</em>, to test/prove) has the same metallurgical sense as proving steel — putting it under pressure to increase its strength.</p>
+<p><strong>Discussion Questions</strong>:</p>
+<ol>
+<li>How did Israel respond to each test in chapters 14-17?</li>
+<li>What pattern do you see in their complaints?</li>
+<li>How is murmuring different from asking God for help?</li>
+<li>What does manna teach about daily dependence versus self-sufficiency?</li>
+</ol>
+<p><strong>Class Activity</strong>: Write each crisis (Red Sea, Marah, no food, no water, Amalek) on separate cards. Discuss: What was Israel supposed to learn from each test? Did they learn it?</p>
+<p><strong>Closing Challenge</strong>: Identify one current trial. Reframe it using Elder Eyring's teaching: "These moments are not evidence that the Lord has abandoned you. Rather, they are evidence that He loves you enough to refine and strengthen you."</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Primary (Children)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Lesson: Jesus is Our Rock</h3>
+<p><strong>Scripture</strong>: <a href="https://www.blueletterbible.org/kjv/exo/17/5-6/s_67005" target="_blank" data-ref="Exodus 17:5-6">Exodus 17:5-6</a></p>
+<p><strong>Visual</strong>: Bring a large rock (or picture) and a water bottle</p>
+<p><strong>Story</strong>:</p>
+<ol>
+<li>Tell how the children of Israel were SO thirsty in the desert</li>
+<li>They complained to Moses: "We need water!"</li>
+<li>God told Moses to hit the rock with his staff</li>
+<li>SPLASH! Water came flowing out!</li>
+<li>Everyone drank and was happy</li>
+</ol>
+<p><strong>Object Lesson</strong>:</p>
+<ul>
+<li>Show the rock: "This rock reminds us of Jesus."</li>
+<li>Pour water over the rock into a bowl: "Jesus gives us 'living water' — His love, His help, His Spirit."</li>
+<li>Let children touch the rock and water</li>
+</ul>
+<p><strong>Discussion Questions</strong>:</p>
+<ul>
+<li>How is Jesus like a rock? (Strong, solid, doesn't move, we can count on Him)</li>
+<li>What is the "living water" Jesus gives us? (Love, help, Holy Ghost, scriptures)</li>
+</ul>
+<p><strong>Activity</strong>: Draw and color a picture of Moses hitting the rock with water flowing out. Write "Jesus is my Rock" on the picture.</p>
+<p><strong>Song</strong>: "Jesus Wants Me for a Sunbeam" (emphasize being like sunshine/water for others)</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Youth (Mutual / Seminary)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Lesson: Aaron and Hur — Who Lifts Your Arms?</h3>
+<p><strong>Opening Video</strong>: Show a clip of a sports team supporting an exhausted teammate (or tell such a story)</p>
+<p><strong>Scripture</strong>: <a href="https://www.blueletterbible.org/kjv/exo/17/11-12/s_67011" target="_blank" data-ref="Exodus 17:11-12">Exodus 17:11-12</a></p>
+<blockquote>
+<p>"When Moses held up his hand, Israel prevailed... But Moses' hands were heavy; and they took a stone, and put it under him, and he sat thereon; and Aaron and Hur stayed up his hands."</p>
+</blockquote>
+<p><strong>Discussion Questions</strong>:</p>
+<ol>
+<li>Why couldn't Moses do this alone?</li>
+<li>Who are the "Aarons and Hurs" in your life? (Parents, leaders, friends, bishops)</li>
+<li>When have you been an Aaron or Hur for someone else?</li>
+<li>What does it mean to "bear one another's burdens"? (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng&id=p8#p8" target="_blank" data-ref="Mosiah 18:8">Mosiah 18:8</a>)</li>
+</ol>
+<p><strong>Activity — Small Groups</strong>:</p>
+<p>Divide into groups of three. One person holds their arms up while the other two time how long they can last. Then try again with the two "supporters" holding up the person's arms. Discuss the difference.</p>
+<p><strong>Challenge</strong>:</p>
+<p>Identify one person this week who might be "tired" spiritually. Find a way to be their Aaron or Hur — text them encouragement, invite them to a church activity, offer to study scriptures together.</p>
+<p><strong>Scripture Mastery Link</strong>: Connect to <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng&id=p8-p9#p8" target="_blank" data-ref="Mosiah 18:8-9">Mosiah 18:8-9</a> (baptismal covenant to bear burdens).</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Institute / Young Adult</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Lesson: Types and Shadows in Exodus 14-17</h3>
+<p><strong>Theme</strong>: Christ is present in every crisis and provision</p>
+<p><strong>Opening Question</strong>: Why does Paul say "that Rock was Christ" (<a href="https://www.blueletterbible.org/kjv/1co/10/4/s_1072004" target="_blank" data-ref="1 Corinthians 10:4">1 Corinthians 10:4</a>)? Was he reading into the text, or seeing what was always there?</p>
+<p><strong>Typology Table Discussion</strong>:</p>
+<table class="info-table">
+<tr><th>Exodus Event</th><th>New Testament Fulfillment</th><th>Your Life</th></tr>
+<tr><td>Crossing the Red Sea</td><td>Baptism (<a href="https://www.blueletterbible.org/kjv/1co/10/1-2/s_1072001" target="_blank" data-ref="1 Corinthians 10:1-2">1 Cor. 10:1-2</a>)</td><td></td></tr>
+<tr><td>Bitter made sweet (Marah)</td><td>Christ's Atonement transforms suffering</td><td></td></tr>
+<tr><td>Manna from heaven</td><td>Sacrament; Christ as Bread of Life (<a href="https://www.blueletterbible.org/kjv/jhn/6/1/s_1003001" target="_blank" data-ref="John 6">John 6</a>)</td><td></td></tr>
+<tr><td>Water from the rock</td><td>Christ smitten; Living Water flows (<a href="https://www.blueletterbible.org/kjv/jhn/7/37-38/s_1004037" target="_blank" data-ref="John 7:37-38">John 7:37-38</a>)</td><td></td></tr>
+<tr><td>Moses' uplifted hands</td><td>Christ on the cross, arms extended</td><td></td></tr>
+</table>
+<p><strong>Activity</strong>: Fill in the "Your Life" column — where have you experienced each type personally?</p>
+<p><strong>Deep Dive</strong>: <a href="https://www.blueletterbible.org/kjv/num/20/1/s_137001" target="_blank" data-ref="Numbers 20">Numbers 20</a> contrast</p>
+<ul>
+<li>In <a href="https://www.blueletterbible.org/kjv/exo/17/1/s_67001" target="_blank" data-ref="Exodus 17">Exodus 17</a>, Moses strikes the rock (commanded)</li>
+<li>In <a href="https://www.blueletterbible.org/kjv/num/20/1/s_137001" target="_blank" data-ref="Numbers 20">Numbers 20</a>, Moses strikes the rock when told only to speak</li>
+<li>Result: Moses excluded from the Promised Land</li>
+<li>Why such severity? The type must be preserved: Christ is struck once; thereafter we need only ask</li>
+</ul>
+<p><strong>Discussion</strong>: What does this teach about the importance of exact obedience versus "close enough"?</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Mission Preparation</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Lesson: Trusting God When the Way is Blocked</h3>
+<p><strong>Scenario</strong>: You arrive in your mission field. Nothing goes as planned. Doors close. People reject you. You feel trapped.</p>
+<p><strong>Scripture Pattern</strong> (<a href="https://www.blueletterbible.org/kjv/exo/14/1/s_64001" target="_blank" data-ref="Exodus 14">Exodus 14</a>):</p>
+<ol>
+<li>Israel is blocked — sea in front, army behind</li>
+<li>They cry to Moses; Moses cries to God</li>
+<li>God's answer: "Go forward"</li>
+<li>The impossible opens as they move</li>
+</ol>
+<p><strong>Discussion Questions</strong>:</p>
+<ol>
+<li>As a missionary, when will you feel "trapped" between impossibilities?</li>
+<li>What does "stand still and see the salvation of the Lord" mean when you also have to keep working?</li>
+<li>How does daily "manna gathering" (study, prayer, planning) prepare you for miracles?</li>
+</ol>
+<p><strong>Key Principle</strong>: Faith is not passive waiting. Moses lifted his staff. Israel walked into the water. Faith moves while trusting God to open the way.</p>
+<p><strong>Memorize</strong>: <a href="https://www.blueletterbible.org/kjv/exo/14/13-14/s_64013" target="_blank" data-ref="Exodus 14:13-14">Exodus 14:13-14</a> — This is your missionary motto for hard days.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Personal / Individual Study</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Daily Study Guide</h3>
+<p><strong>Day 1 — <a href="https://www.blueletterbible.org/kjv/exo/14/1-14/s_64001" target="_blank" data-ref="Exodus 14:1-14">Exodus 14:1-14</a></strong>: The Setup</p>
+<ul>
+<li>What does it feel like to be "trapped"?</li>
+<li>Journal: When have I felt pharaoh behind and the sea ahead?</li>
+<li>Memorize verse 13</li>
+</ul>
+<p><strong>Day 2 — <a href="https://www.blueletterbible.org/kjv/exo/14/15-31/s_64015" target="_blank" data-ref="Exodus 14:15-31">Exodus 14:15-31</a></strong>: The Crossing</p>
+<ul>
+<li>Notice God's position — between Israel and Egypt</li>
+<li>The angel of the LORD moves from leading to protecting</li>
+<li>Journal: How does God protect me from what pursues me?</li>
+</ul>
+<p><strong>Day 3 — <a href="https://www.blueletterbible.org/kjv/exo/15/1-21/s_65001" target="_blank" data-ref="Exodus 15:1-21">Exodus 15:1-21</a></strong>: The Song</p>
+<ul>
+<li>Read/sing the Song of the Sea aloud</li>
+<li>What phrases stand out?</li>
+<li>Journal: Write your own song of deliverance for something God has done</li>
+</ul>
+<p><strong>Day 4 — <a href="https://www.blueletterbible.org/kjv/exo/15/22-27/s_65022" target="_blank" data-ref="Exodus 15:22-27">Exodus 15:22-27</a></strong>: Bitter to Sweet</p>
+<ul>
+<li>Three days without water — what "three day" experiences have tested you?</li>
+<li>The tree makes bitter sweet — how has the cross transformed your bitterness?</li>
+<li>Journal: What bitter thing needs Christ's healing touch?</li>
+</ul>
+<p><strong>Day 5 — <a href="https://www.blueletterbible.org/kjv/exo/16/1/s_66001" target="_blank" data-ref="Exodus 16">Exodus 16</a></strong>: Manna</p>
+<ul>
+<li>Notice the daily rhythm: morning gathering, Sabbath rest</li>
+<li>What is your spiritual "manna" routine?</li>
+<li>Journal: Am I gathering daily or trying to stockpile?</li>
+</ul>
+<p><strong>Day 6 — <a href="https://www.blueletterbible.org/kjv/exo/17/1-7/s_67001" target="_blank" data-ref="Exodus 17:1-7">Exodus 17:1-7</a></strong>: Water from the Rock</p>
+<ul>
+<li>"Is the LORD among us, or not?" — the question that precedes testing</li>
+<li>The rock is Christ</li>
+<li>Journal: How do I receive living water from the smitten Rock?</li>
+</ul>
+<p><strong>Day 7 — <a href="https://www.blueletterbible.org/kjv/exo/17/8-16/s_67008" target="_blank" data-ref="Exodus 17:8-16">Exodus 17:8-16</a></strong>: Amalek and the Battle</p>
+<ul>
+<li>Where is your battle fought? (Valley work vs. mountain prayer)</li>
+<li>Who are your Aaron and Hur?</li>
+<li>Journal: Who am I called to support this week?</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Additional Resources</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Hymns for This Week</h3>
+<ul>
+<li>"Redeemer of Israel" (Hymns, no. 6)</li>
+<li>"Come, Come, Ye Saints" (Hymns, no. 30) — wilderness journey theme</li>
+<li>"Be Still, My Soul" (Hymns, no. 124) — "stand still" connection</li>
+<li>"Jesus, Savior, Pilot Me" (Hymns, no. 104) — sea/water imagery</li>
+<li>"Let the Holy Spirit Guide" (Hymns, no. 143) — pillar of fire/cloud</li>
+</ul>
+<h3>Videos from Church Media</h3>
+<ul>
+<li><a href="https://www.churchofjesuschrist.org/media/collection/old-testament-stories-videos?lang=eng" target="_blank">"The Passover"</a> (Old Testament Stories) — includes Red Sea crossing</li>
+<li><a href="https://www.churchofjesuschrist.org/media/video/2013-08-0012-daily-bread-pattern?lang=eng" target="_blank">"Daily Bread: Pattern"</a> — establishing daily spiritual sustenance</li>
+<li><a href="https://www.churchofjesuschrist.org/media/video/2013-08-0013-daily-bread-experience?lang=eng" target="_blank">"Daily Bread: Experience"</a> — Elder Christofferson on prayer and taking life one day at a time</li>
+<li><a href="https://www.churchofjesuschrist.org/media/video/2013-08-0014-daily-bread-change?lang=eng" target="_blank">"Daily Bread: Change"</a> — how following Christ brings transformation</li>
+<li><a href="https://www.churchofjesuschrist.org/media/video/2022-12-0090-inspirational-message-daily-restoration-elder-uchtdorf?lang=eng" target="_blank">"Daily Restoration"</a> — Elder Uchtdorf on preventing spiritual drifting</li>
+</ul>
+<h3>Related Scripture Chains</h3>
+<ul>
+<li><strong>Red Sea as baptism</strong>: <a href="https://www.blueletterbible.org/kjv/1co/10/1-2/s_1072001" target="_blank" data-ref="1 Corinthians 10:1-2">1 Corinthians 10:1-2</a> → <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/128?lang=eng&id=p12-p13#p12" target="_blank" data-ref="D&C 128:12-13">D&C 128:12-13</a> → <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng&id=p8-p10#p8" target="_blank" data-ref="Mosiah 18:8-10">Mosiah 18:8-10</a></li>
+<li><strong>Manna as Christ</strong>: <a href="https://www.blueletterbible.org/kjv/exo/16/1/s_66001" target="_blank" data-ref="Exodus 16">Exodus 16</a> → <a href="https://www.blueletterbible.org/kjv/jhn/6/31-35/s_1003031" target="_blank" data-ref="John 6:31-35">John 6:31-35, 48-51</a> → <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/20?lang=eng&id=p8#p8" target="_blank" data-ref="3 Nephi 20:8">3 Nephi 20:8</a></li>
+<li><strong>Rock as Christ</strong>: <a href="https://www.blueletterbible.org/kjv/exo/17/6/s_67006" target="_blank" data-ref="Exodus 17:6">Exodus 17:6</a> → <a href="https://www.blueletterbible.org/kjv/1co/10/4/s_1072004" target="_blank" data-ref="1 Corinthians 10:4">1 Corinthians 10:4</a> → <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/hel/5?lang=eng&id=p12#p12" target="_blank" data-ref="Helaman 5:12">Helaman 5:12</a></li>
+<li><strong>Murmuring warnings</strong>: <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/2?lang=eng&id=p11-p12#p11" target="_blank" data-ref="1 Nephi 2:11-12">1 Nephi 2:11-12</a> → <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/16?lang=eng&id=p20#p20" target="_blank" data-ref="1 Nephi 16:20">1 Nephi 16:20</a> → <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/59?lang=eng&id=p21#p21" target="_blank" data-ref="D&C 59:21">D&C 59:21</a></li>
+</ul>
+<h3>Scholarly Articles</h3>
+<ul>
+<li><a href="https://rsc.byu.edu/vol-20-no-3-2019/savior-sword" target="_blank">A Savior with a Sword</a> — RSC: Explores the "warrior God" theme in <a href="https://www.blueletterbible.org/kjv/exo/14/1/s_64001" target="_blank" data-ref="Exodus 14">Exodus 14-15</a> and how it connects to Christ as deliverer</li>
+<li><a href="https://rsc.byu.edu/vol-18-no-3-2017/i-am-bread-life" target="_blank">I Am the Bread of Life</a> — RSC: Excellent treatment of manna symbolism and how it prefigures Christ</li>
+<li><a href="https://pearlofgreatpricecentral.org/the-names-of-moses-as-keywords/" target="_blank">The Names of Moses as 'Keywords'</a> — POGP Central: Moses' role at the Red Sea as prefiguring Christ's saving work</li>
+</ul>
+<hr>
+<p><strong>Updated:</strong> March 28, 2026 (added supplemental resources)</p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 7: WEEK 16: EXODUS 14-17 — STUDY QUESTIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">7. Week 16: Exodus 14-17 — Study Questions</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Reflective Questions</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>1. Standing Still in Crisis</h3>
+<p><em>"Fear ye not, stand still, and see the salvation of the LORD" (<a href="https://www.blueletterbible.org/kjv/exo/14/13/s_64013" target="_blank" data-ref="Exodus 14:13">Exodus 14:13</a>)</em></p>
+<p>When have you faced a situation where you felt completely trapped — enemies behind, impossibility ahead? How does the Lord's command to "stand still" apply when you also feel pressure to act? What is the difference between faithful stillness and passive inaction?</p>
+<hr>
+<h3>2. The Daily Manna Principle</h3>
+<p><em>"The people shall go out and gather a certain rate every day" (<a href="https://www.blueletterbible.org/kjv/exo/16/4/s_66004" target="_blank" data-ref="Exodus 16:4">Exodus 16:4</a>)</em></p>
+<p>Manna could not be hoarded — except on the Sabbath, it spoiled overnight. What does this teach about the nature of spiritual nourishment? Are there ways you try to "store up" grace or live on yesterday's revelation rather than seeking fresh connection with God each day? What would truly "daily" spiritual practice look like for you?</p>
+<hr>
+<h3>3. Complaining vs. Crying Out</h3>
+<p><em>Israel both "cried unto the LORD" (14:10) and "murmured" (15:24, 16:2, 17:3)</em></p>
+<p>What is the difference between bringing our needs to God in humble petition and complaining against His provision? The Israelites' murmuring became a pattern that prevented them from entering the Promised Land. How can we express our struggles to God without falling into the trap of faithless complaint?</p>
+<hr>
+<h3>4. Bitter Waters Made Sweet</h3>
+<p><em>"The LORD shewed him a tree, which when he had cast into the waters, the waters were made sweet" (<a href="https://www.blueletterbible.org/kjv/exo/15/25/s_65025" target="_blank" data-ref="Exodus 15:25">Exodus 15:25</a>)</em></p>
+<p>The bitter waters of Marah were transformed by a tree. Many see this as a type of the cross transforming our bitter experiences. What "bitter waters" in your life need the healing influence of Christ's Atonement? How have you seen Him make bitter things sweet in the past?</p>
+<hr>
+<h3>5. Christ the Rock</h3>
+<p><em>"That Rock was Christ" (<a href="https://www.blueletterbible.org/kjv/1co/10/4/s_1072004" target="_blank" data-ref="1 Corinthians 10:4">1 Corinthians 10:4</a>)</em></p>
+<p>Moses struck the rock, and water flowed out to save Israel from death. Paul says this rock represented Christ. In what ways is Jesus like a rock to you — solid, immovable, foundational? How does the imagery of living water flowing from a smitten rock deepen your understanding of the Atonement?</p>
+<hr>
+<h3>6. Who Holds Up Your Arms?</h3>
+<p><em>"Aaron and Hur stayed up his hands, the one on the one side, and the other on the other side" (<a href="https://www.blueletterbible.org/kjv/exo/17/12/s_67012" target="_blank" data-ref="Exodus 17:12">Exodus 17:12</a>)</em></p>
+<p>Moses could not sustain the battle alone. When his arms grew heavy, Aaron and Hur supported them. Who are the "Aarons and Hurs" in your life — the people who support you when you grow weary in well-doing? Conversely, whose arms are you called to hold up? What specific person might need your support this week?</p>
+<hr>
+<h3>7. Testing and Being Tested</h3>
+<p><em>"Is the LORD among us, or not?" (<a href="https://www.blueletterbible.org/kjv/exo/17/7/s_67007" target="_blank" data-ref="Exodus 17:7">Exodus 17:7</a>)</em></p>
+<p>At Massah and Meribah, Israel tested God by questioning His presence. Yet God also tested Israel through the manna to see if they would "walk in my law" (16:4). What is the proper response when we feel tested by life's difficulties? How can we avoid the error of testing God while still honestly bringing our questions before Him?</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Bonus: Personal Application Challenge</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Choose one of the following challenges for this week:</p>
+<p><strong>Option A: Daily Manna Journal</strong></p>
+<p>Each morning, write one specific spiritual insight you "gathered" that day — from scripture, prayer, or prompting. At the end of the week, review: Did you gather daily? What happened on days you missed?</p>
+<p><strong>Option B: Be an Aaron/Hur</strong></p>
+<p>Identify someone in your ward, family, or community who seems weary — perhaps in a calling, a trial, or just life's demands. Find one concrete way to "hold up their arms" this week.</p>
+<p><strong>Option C: Transform the Bitter</strong></p>
+<p>Identify one current trial or difficulty that feels "bitter." Each day, pray specifically for Christ to "cast the tree" into that situation. Journal any changes in perspective, circumstance, or peace.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Discussion Starters for Group Study</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>For Couples/Families</strong>: Share a time when you faced a "Red Sea moment" together. How did God open the way? What did you learn about trusting Him?</li>
+</ol>
+<ol>
+<li><strong>For Youth Groups</strong>: If you were one of the Israelites, which crisis would have tested your faith most — the sea, the bitter water, no food, no water, or the battle? Why?</li>
+</ol>
+<ol>
+<li><strong>For Institute Classes</strong>: Compare Moses striking the rock in <a href="https://www.blueletterbible.org/kjv/exo/17/1/s_67001" target="_blank" data-ref="Exodus 17">Exodus 17</a> with <a href="https://www.blueletterbible.org/kjv/num/20/1/s_137001" target="_blank" data-ref="Numbers 20">Numbers 20</a>. Why was the consequence so severe in the second instance? What does this teach about typology and obedience?</li>
+</ol>
+<ol>
+<li><strong>For Sunday School</strong>: The CFM Manual asks: "What does the Lord give me that is like the daily manna?" Discuss specific spiritual practices that provide daily nourishment.</li>
+</ol>
+<ol>
+<li><strong>For Personal Reflection</strong>: The Song of the Sea (<a href="https://www.blueletterbible.org/kjv/exo/15/1/s_65001" target="_blank" data-ref="Exodus 15">Exodus 15</a>) is pure praise in response to deliverance. When did you last express joyful praise — not petition, not request, but celebration — to God?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Scripture Memorization Suggestions</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Primary Level</strong>:</p>
+<blockquote>
+<p>"The LORD is my strength and song, and he is become my salvation." (<a href="https://www.blueletterbible.org/kjv/exo/15/2/s_65002" target="_blank" data-ref="Exodus 15:2">Exodus 15:2</a>)</p>
+</blockquote>
+<p><strong>Youth Level</strong>:</p>
+<blockquote>
+<p>"Fear ye not, stand still, and see the salvation of the LORD, which he will shew to you to day." (<a href="https://www.blueletterbible.org/kjv/exo/14/13/s_64013" target="_blank" data-ref="Exodus 14:13">Exodus 14:13</a>)</p>
+</blockquote>
+<p><strong>Adult Level</strong>:</p>
+<blockquote>
+<p>"The LORD shall fight for you, and ye shall hold your peace." (<a href="https://www.blueletterbible.org/kjv/exo/14/14/s_64014" target="_blank" data-ref="Exodus 14:14">Exodus 14:14</a>)</p>
+</blockquote>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+</div>
