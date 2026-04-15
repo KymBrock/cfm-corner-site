@@ -429,7 +429,7 @@ You now have the complete pronoun system of Biblical Hebrew:
 
 With this foundation, you can identify *who* is acting in almost any Hebrew sentence — whether the pronoun is embedded in a verb, attached to a preposition, or standing alone for emphasis.
 
-The next step takes us into the heart of the Hebrew verb: the **Qatal** (perfect) conjugation — the form that describes completed action. We've already seen its suffixes; now we'll learn how the whole system works.
+The next step stays in noun territory a little longer. We introduced verbless sentences briefly in this lesson — the idea that Hebrew can say "I [am] the LORD" without any verb. Lesson 13 explores that fully: how verbless sentences work, when Hebrew *does* use the verb <span dir="rtl" lang="he">הָיָה</span> (*hayah*, "to be"), and why the missing verb carries theological weight. After that, we'll learn how nouns link together (the construct state) before moving into verb conjugation.
 
 <div style="background: rgba(87,137,156,0.08); border-left: 4px solid #57899c; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
 
@@ -441,9 +441,10 @@ The next step takes us into the heart of the Hebrew verb: the **Qatal** (perfect
 4. ✅ Inseparable prepositions and particles
 5. ✅ Prepositions with pronominal suffixes
 6. ✅ Independent personal pronouns ← **You are here!**
-7. ⬜ The Qatal (Perfect) conjugation
-8. ⬜ The Yiqtol (Imperfect) conjugation
-9. ⬜ The Binyanim (verb stems)
+7. ⬜ Verbless sentences and הָיָה
+8. ⬜ The construct state (סמיכות)
+9. ⬜ The Qatal (Perfect) conjugation
+10. ⬜ The Yiqtol (Imperfect) conjugation
 
 </div>
 

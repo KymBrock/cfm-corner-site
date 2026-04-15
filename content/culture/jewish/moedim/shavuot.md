@@ -373,7 +373,9 @@ details.section-dropdown > .section-body {
 <li><a href="#mountains-section">Four Mountains: A Temple Progression</a></li>
 <li><a href="#bountiful-section">The Bountiful Visit as Shavuot</a></li>
 <li><a href="#wheat-section">Wheat Harvest in Restoration Scripture</a></li>
+<li><a href="#ruth-section">The Book of Ruth</a></li>
 <li><a href="#recipes-section">Traditional Shavuot Foods</a></li>
+<li><a href="#family-section">Family Shavuot Activities</a></li>
 <li><a href="#from-stone-to-flesh-the-arc-of-shavuot">From Stone to Flesh</a></li>
 <li><a href="#modern-observance">Modern Observance & LDS Resonance</a></li>
 </ul>
@@ -518,9 +520,7 @@ The practice of staying awake all night studying Torah. According to midrash, Is
 <details>
 <summary>Reading the Book of Ruth</summary>
 <div>
-<img src="/images/culture/jewish-festivals/ruth-gleaning.jpg" alt="Ruth gleaning in the fields" style="max-width: 300px; float: right; margin: 0 0 1rem 1.5rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-Ruth is read on Shavuot because she exemplifies voluntary acceptance of Torah. As a Moabite widow, she had every reason to return home. Instead she declared: "Thy people shall be my people, and thy God my God" (Ruth 1:16) — a convert's acceptance of covenant, echoing Israel's acceptance at Sinai.
-<div style="clear: both;"></div>
+Ruth is read on Shavuot because she exemplifies voluntary acceptance of Torah. As a Moabite widow, she had every reason to return home. Instead she declared: "Thy people shall be my people, and thy God my God" (<a href="https://www.blueletterbible.org/kjv/rut/1/16/" target="_blank" data-ref="Ruth 1:16">Ruth 1:16</a>) — a convert's acceptance of covenant, echoing Israel's acceptance at Sinai. See our <a href="#ruth-section">expanded Ruth section</a> below for the full Shavuot connections.
 </div>
 </details>
 
@@ -689,7 +689,7 @@ At the telestial level, the commandments restrain the hand. At the terrestrial l
 
 > "And it shall come to pass in the last days, that the mountain of the LORD's house shall be established in the top of the mountains, and shall be exalted above the hills; and all nations shall flow unto it." (<a href="https://www.blueletterbible.org/kjv/isa/2/2/" target="_blank" data-ref="Isaiah 2:2">Isaiah 2:2</a>)
 
-Mountain and temple are synonymous. John W. Welch, in *The Sermon at the Temple and the Sermon on the Mount* (FARMS, 1990), argued that the Sermon on the Mount is a **temple text** — a structured progression through the stages of approaching, covenanting with, and entering God's presence. He identified **25 temple-related stages** in Matthew, **doubled to approximately 50** at the temple in Bountiful.
+Mountain and temple are synonymous. John W. Welch, in <a href="https://scholarsarchive.byu.edu/mi/89/" target="_blank"><em>The Sermon at the Temple and the Sermon on the Mount</em></a> (FARMS, 1990), argued that the Sermon on the Mount is a **temple text** — a structured progression through the stages of approaching, covenanting with, and entering God's presence. He identified **25 temple-related stages** in Matthew, **doubled to approximately 50** at the temple in Bountiful.
 
 ### Four Mountains, One Progression
 
@@ -775,10 +775,14 @@ The word we translate as "blessed" carries a rich linguistic history across four
 |----------|------|------------|
 | **Hebrew** | <a href="https://www.blueletterbible.org/lexicon/h835/kjv/wlc/0-1/" target="_blank">אַשְׁרֵי</a> (*ashrei*) | The original — an exclamation recognizing a person in covenant motion |
 | **Greek** | <a href="https://www.blueletterbible.org/lexicon/g3107/kjv/tr/0-1/" target="_blank">μακάριοι</a> (*makarioi*) | The New Testament rendering — used in Matthew 5 and 3 Nephi 12 |
-| **Latin** | *beati* | The Vulgate translation — root of "**Beatitudes**" |
-| **English** | blessed | From Old English *bloedsian* — to consecrate with blood |
+| **Latin** | <a href="https://logeion.uchicago.edu/beatus" target="_blank">*beati*</a> | The Vulgate translation — root of "**Beatitudes**" |
+| **English** | <a href="https://webstersdictionary1828.com/Dictionary/Blessed" target="_blank">blessed</a> | From Old English *blēdsian*, from Proto-Germanic *\*blōdisōną* — "<a href="https://www.etymonline.com/word/bless" target="_blank">to hallow with blood</a>" |
 
 The Hebrew *ashrei* is not passive contentment. It is active recognition: "How blessed is the one who walks!" It describes a person already in covenant motion — walking, keeping, doing. This is the word that opens both the Beatitudes and Psalm 119.
+
+<div class="info-box">
+<strong>A note on the English word:</strong> In Hebrew, Greek, and Latin, the word for "blessed" carries the sense of <em>happiness</em> — walking rightly, being fortunate, dwelling in felicity. The English word stands alone. Old English <em>blēdsian</em> descends from Proto-Germanic <em>*blōdisōną</em>, "to hallow with blood" — a word rooted in the ritual sprinkling of altars with sacrificial blood. When the Anglo-Saxon translators needed a word for <em>ashrei</em>, they reached not for "happy" but for "consecrated by sacrifice." English speakers hear "blessed" with an echo of blood that the original Hebrew, Greek, and Latin do not carry. Whether by accident or providence, the English Beatitudes whisper what the Hebrew text does not say aloud: that the blessedness Christ pronounces on the mountain is inseparable from the blood He will shed on another.
+</div>
 
 #### The Psalm 119 Connection
 
@@ -803,6 +807,246 @@ At Bountiful, Christ mirrors the Psalm 119 pattern with even greater precision. 
 > "And again, **more blessed** are they who shall believe in your words" (3 Nephi 12:2)
 
 Then the Beatitudes proper begin at 3 Nephi 12:3. The doubled *ashrei* opening of Psalm 119 — the great Torah psalm — reappears at the temple in Bountiful, where the resurrected Christ delivers the fulfilled Torah to His covenant people. The Lawgiver is quoting His own psalm.
+
+#### The Side-by-Side: Psalm 119, the Sermon on the Mount, and the Sermon at the Temple
+
+Click any row to expand the full verse text. <span class="ashrei-highlight">Gold highlighting</span> marks every occurrence of *ashrei* / "blessed."
+
+<style>
+/* Beatitudes Comparison */
+.beat-compare { margin: 2rem 0; }
+.beat-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    border-bottom: 1px solid #e8dcc8;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.beat-row:hover { background: #fdf9f2; }
+.beat-row.header-row {
+    background: linear-gradient(135deg, #1a6b74, #2a8a94);
+    color: white;
+    cursor: default;
+    border-radius: 12px 12px 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+.beat-row.header-row .beat-cell { font-weight: 700; font-size: 0.95rem; border-right-color: rgba(255,255,255,0.2); }
+.beat-row.section-label {
+    background: linear-gradient(135deg, #fdf5e7, #fff8dc);
+    cursor: default;
+    border-bottom: 2px solid #d4a53e;
+}
+.beat-row.section-label .beat-cell {
+    font-weight: 700;
+    color: #8b6914;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.6rem 1rem;
+}
+.beat-cell {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    border-right: 1px solid #e8dcc8;
+}
+.beat-cell:last-child { border-right: none; }
+.beat-cell .ref { display: block; font-size: 0.75rem; color: #888; margin-top: 0.25rem; }
+.beat-cell .ref a { color: #1a6b74; text-decoration: none; }
+.beat-cell .ref a:hover { text-decoration: underline; color: #8b6914; }
+.beat-cell .hebrew-text { font-family: "SBL Hebrew", "Ezra SIL", serif; font-size: 1rem; direction: rtl; text-align: right; line-height: 1.8; }
+.beat-detail {
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    background: #f8f9fa;
+    border-bottom: 2px solid #e8dcc8;
+}
+.beat-detail.open { display: grid; }
+.beat-detail .beat-cell {
+    font-size: 0.85rem;
+    color: #444;
+    padding: 0.75rem 1rem;
+    border-right: 1px solid #e0e0e0;
+}
+.beat-detail .beat-cell:last-child { border-right: none; }
+.ashrei-highlight {
+    background: linear-gradient(135deg, #fde68a, #fbbf24);
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-weight: 600;
+    color: #78350f;
+}
+.beat-diff {
+    background: #dbeafe;
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-weight: 600;
+    color: #1e40af;
+}
+.beat-empty { color: #ccc; font-style: italic; font-size: 0.8rem; }
+.beat-compare-wrapper {
+    border: 2px solid #e8dcc8;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+@media (max-width: 768px) {
+    .beat-row, .beat-detail { grid-template-columns: 1fr; }
+    .beat-cell { border-right: none; border-bottom: 1px solid #e8dcc8; }
+    .beat-cell:last-child { border-bottom: none; }
+    .beat-row.header-row { border-radius: 12px 12px 0 0; }
+    .beat-cell .hebrew-text { font-size: 0.95rem; }
+}
+</style>
+
+<div class="beat-compare">
+<div class="beat-compare-wrapper">
+
+<div class="beat-row header-row">
+    <div class="beat-cell">Psalm 119 <span style="opacity:0.7; font-weight:400;">(Torah Psalm)</span></div>
+    <div class="beat-cell">Matthew 5 <span style="opacity:0.7; font-weight:400;">(Sermon on the Mount)</span></div>
+    <div class="beat-cell">3 Nephi 12 <span style="opacity:0.7; font-weight:400;">(Sermon at the Temple)</span></div>
+</div>
+
+<!-- SECTION: Doubled Ashrei Opening -->
+<div class="beat-row section-label">
+    <div class="beat-cell" style="grid-column: 1 / -1;">The Doubled <em>Ashrei</em> Opening — Psalm 119 and 3 Nephi only</div>
+</div>
+
+<div class="beat-row" onclick="toggleBeat(this)">
+    <div class="beat-cell"><span class="ashrei-highlight">אַשְׁרֵי</span> תְמִימֵי־דָרֶךְ<span class="ref"><a href="https://www.blueletterbible.org/kjv/psa/119/1/" target="_blank" data-ref="Psalm 119:1">Psalm 119:1</a></span></div>
+    <div class="beat-cell"><span class="beat-empty">— no preliminary blessing —</span></div>
+    <div class="beat-cell"><span class="ashrei-highlight">Blessed</span> are ye if ye shall give heed unto the words of these twelve<span class="ref"><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/12?lang=eng&id=1" target="_blank" data-ref="3 Nephi 12:1">3 Nephi 12:1</a></span></div>
+</div>
+<div class="beat-detail">
+    <div class="beat-cell"><span class="hebrew-text">אַשְׁרֵ֥י תְמִֽימֵי־דָ֑רֶךְ הַ֝הֹלְכִ֗ים בְּתוֹרַ֥ת יְהֹוָֽה׃</span><br><span class="ashrei-highlight">Blessed</span> are the undefiled in the way, who walk in the law of the LORD.</div>
+    <div class="beat-cell"><span class="beat-empty">Matthew begins directly with the Beatitudes proper. No preliminary declaration.</span></div>
+    <div class="beat-cell"><span class="ashrei-highlight">Blessed</span> are ye if ye shall give heed unto the words of these twelve whom I have chosen from among you to minister unto you, and to be your servants; and unto them I have given power that they may baptize you with water; and after that ye are baptized with water, behold, I will baptize you with fire and with the Holy Ghost; therefore <span class="ashrei-highlight">blessed</span> are ye if ye shall believe in me and be baptized, after that ye have seen me and know that I am.</div>
+</div>
+
+<div class="beat-row" onclick="toggleBeat(this)">
+    <div class="beat-cell"><span class="ashrei-highlight">אַשְׁרֵי</span> נֹצְרֵי עֵדֹתָיו<span class="ref"><a href="https://www.blueletterbible.org/kjv/psa/119/2/" target="_blank" data-ref="Psalm 119:2">Psalm 119:2</a></span></div>
+    <div class="beat-cell"><span class="beat-empty">— no preliminary blessing —</span></div>
+    <div class="beat-cell">And again, <span class="ashrei-highlight">more blessed</span> are they who shall believe in your words<span class="ref"><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/12?lang=eng&id=2" target="_blank" data-ref="3 Nephi 12:2">3 Nephi 12:2</a></span></div>
+</div>
+<div class="beat-detail">
+    <div class="beat-cell"><span class="hebrew-text">אַ֭שְׁרֵי נֹצְרֵ֥י עֵדֹתָ֗יו בְּכׇל־לֵ֥ב יִדְרְשֽׁוּהוּ׃</span><br><span class="ashrei-highlight">Blessed</span> are they that keep his testimonies, and that seek him with the whole heart.</div>
+    <div class="beat-cell"><span class="beat-empty">The absence in Matthew is itself significant: the doubled ashrei appears only where the Lawgiver delivers the fulfilled Torah — at the Psalm's beginning and at Bountiful.</span></div>
+    <div class="beat-cell">And again, <span class="ashrei-highlight">more blessed</span> are they who shall believe in your words because that ye shall testify that ye have seen me, and that ye know that I am. Yea, <span class="ashrei-highlight">blessed</span> are they who shall believe in your words, and come down into the depths of humility and be baptized, for they shall be visited with fire and with the Holy Ghost, and shall receive a remission of their sins.</div>
+</div>
+
+<!-- SECTION: The Eight Beatitudes -->
+<div class="beat-row section-label">
+    <div class="beat-cell" style="grid-column: 1 / -1;">The Eight Beatitudes — The Octave of Covenant Blessedness</div>
+</div>
+
+<div class="beat-row" onclick="toggleBeat(this)">
+    <div class="beat-cell"><span class="beat-empty">Octave stanza pattern begins</span><span class="ref">8 verses per letter</span></div>
+    <div class="beat-cell"><span class="ashrei-highlight">Blessed</span> are the poor in spirit: for theirs is the kingdom of heaven.<span class="ref"><a href="https://www.blueletterbible.org/kjv/mat/5/3/" target="_blank" data-ref="Matthew 5:3">Matthew 5:3</a></span></div>
+    <div class="beat-cell"><span class="ashrei-highlight">Blessed</span> are the poor in spirit <span class="beat-diff">who come unto me</span>, for theirs is the kingdom of heaven.<span class="ref"><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/12?lang=eng&id=3" target="_blank" data-ref="3 Nephi 12:3">3 Nephi 12:3</a></span></div>
+</div>
+<div class="beat-detail">
+    <div class="beat-cell">Psalm 119's octave structure — eight verses per stanza — provides the architectural template for the eight Beatitudes. Each stanza is a complete meditation on Torah; each Beatitude is a complete stage of covenant transformation.</div>
+    <div class="beat-cell">The first and last Beatitudes both promise "the kingdom of heaven" — forming an <em>inclusio</em> that brackets the entire sequence.</div>
+    <div class="beat-cell">3 Nephi adds <span class="beat-diff">"who come unto me"</span> — at Bountiful, poverty of spirit is not enough; it must be directed toward the risen Christ who stands before them.</div>
+</div>
+
+<div class="beat-row" onclick="toggleBeat(this)">
+    <div class="beat-cell"><span class="beat-empty">·</span></div>
+    <div class="beat-cell"><span class="ashrei-highlight">Blessed</span> are they that mourn: for they shall be comforted.<span class="ref"><a href="https://www.blueletterbible.org/kjv/mat/5/4/" target="_blank" data-ref="Matthew 5:4">Matthew 5:4</a></span></div>
+    <div class="beat-cell"><span class="ashrei-highlight">Blessed</span> are all they that mourn, for they shall be comforted.<span class="ref"><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/12?lang=eng&id=4" target="_blank" data-ref="3 Nephi 12:4">3 Nephi 12:4</a></span></div>
+</div>
+<div class="beat-detail">
+    <div class="beat-cell"></div>
+    <div class="beat-cell">The Bountiful audience has just survived three days of catastrophic destruction and darkness (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/8?lang=eng" target="_blank" data-ref="3 Nephi 8">3 Nephi 8-10</a>). Their mourning is not abstract — it is recent and visceral.</div>
+    <div class="beat-cell">For the Nephites at the temple, "they shall be comforted" carries immediate weight: the Comforter Himself is standing before them.</div>
+</div>
+
+<div class="beat-row" onclick="toggleBeat(this)">
+    <div class="beat-cell"><span class="beat-empty">·</span></div>
+    <div class="beat-cell"><span class="ashrei-highlight">Blessed</span> are the meek: for they shall inherit the earth.<span class="ref"><a href="https://www.blueletterbible.org/kjv/mat/5/5/" target="_blank" data-ref="Matthew 5:5">Matthew 5:5</a></span></div>
+    <div class="beat-cell"><span class="ashrei-highlight">Blessed</span> are the meek, for they shall inherit the earth.<span class="ref"><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/12?lang=eng&id=5" target="_blank" data-ref="3 Nephi 12:5">3 Nephi 12:5</a></span></div>
+</div>
+<div class="beat-detail">
+    <div class="beat-cell"><em>Ashrei</em> describes the person who walks in God's way — the meek are those who walk humbly in covenant, not the passive or weak.</div>
+    <div class="beat-cell" colspan="2">Identical in both accounts. Echoes <a href="https://www.blueletterbible.org/kjv/psa/37/11/" target="_blank" data-ref="Psalm 37:11">Psalm 37:11</a>: "The meek shall inherit the earth; and shall delight themselves in the abundance of peace."</div>
+    <div class="beat-cell"></div>
+</div>
+
+<div class="beat-row" onclick="toggleBeat(this)">
+    <div class="beat-cell"><span class="beat-empty">·</span></div>
+    <div class="beat-cell"><span class="ashrei-highlight">Blessed</span> are they which do hunger and thirst after righteousness: for they shall be filled.<span class="ref"><a href="https://www.blueletterbible.org/kjv/mat/5/6/" target="_blank" data-ref="Matthew 5:6">Matthew 5:6</a></span></div>
+    <div class="beat-cell"><span class="ashrei-highlight">Blessed</span> are all they who do hunger and thirst after righteousness, for they shall be filled <span class="beat-diff">with the Holy Ghost</span>.<span class="ref"><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/12?lang=eng&id=6" target="_blank" data-ref="3 Nephi 12:6">3 Nephi 12:6</a></span></div>
+</div>
+<div class="beat-detail">
+    <div class="beat-cell"><em>Ashrei</em> nōtzrei edotav — "blessed are those who keep his testimonies" (<a href="https://www.blueletterbible.org/kjv/psa/119/2/" target="_blank" data-ref="Psalm 119:2">Psalm 119:2</a>). Keeping testimony and hungering for righteousness are the same covenant posture: active pursuit.</div>
+    <div class="beat-cell">Matthew leaves "filled" open — filled with what?</div>
+    <div class="beat-cell">3 Nephi names the gift: <span class="beat-diff">filled with the Holy Ghost</span>. This is the Pentecostal promise made explicit. At Bountiful, the Shavuot pattern is complete — covenant instruction followed by the outpouring of the Spirit.</div>
+</div>
+
+<div class="beat-row" onclick="toggleBeat(this)">
+    <div class="beat-cell"><span class="beat-empty">·</span></div>
+    <div class="beat-cell"><span class="ashrei-highlight">Blessed</span> are the merciful: for they shall obtain mercy.<span class="ref"><a href="https://www.blueletterbible.org/kjv/mat/5/7/" target="_blank" data-ref="Matthew 5:7">Matthew 5:7</a></span></div>
+    <div class="beat-cell"><span class="ashrei-highlight">Blessed</span> are the merciful, for they shall obtain mercy.<span class="ref"><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/12?lang=eng&id=7" target="_blank" data-ref="3 Nephi 12:7">3 Nephi 12:7</a></span></div>
+</div>
+<div class="beat-detail">
+    <div class="beat-cell"></div>
+    <div class="beat-cell" colspan="2">Identical in both. The reciprocal structure — mercy given, mercy received — mirrors the covenant relationship itself: "I, the Lord, am bound when ye do what I say" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/82?lang=eng&id=10" target="_blank" data-ref="D&C 82:10">D&C 82:10</a>).</div>
+    <div class="beat-cell"></div>
+</div>
+
+<div class="beat-row" onclick="toggleBeat(this)">
+    <div class="beat-cell"><span class="beat-empty">·</span></div>
+    <div class="beat-cell"><span class="ashrei-highlight">Blessed</span> are the pure in heart: for they shall see God.<span class="ref"><a href="https://www.blueletterbible.org/kjv/mat/5/8/" target="_blank" data-ref="Matthew 5:8">Matthew 5:8</a></span></div>
+    <div class="beat-cell"><span class="ashrei-highlight">Blessed</span> are all the pure in heart, for they shall see God.<span class="ref"><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/12?lang=eng&id=8" target="_blank" data-ref="3 Nephi 12:8">3 Nephi 12:8</a></span></div>
+</div>
+<div class="beat-detail">
+    <div class="beat-cell">בְּכׇל־לֵב יִדְרְשׁוּהוּ — "with the whole heart they seek him" (<a href="https://www.blueletterbible.org/kjv/psa/119/2/" target="_blank" data-ref="Psalm 119:2">Psalm 119:2</a>). The pure, whole heart that seeks God in the Psalm is the same heart that will see God in the Beatitudes.</div>
+    <div class="beat-cell">"They shall see God" — a future promise.</div>
+    <div class="beat-cell">At Bountiful, the Nephites have <em>already</em> seen God. This Beatitude, spoken by the resurrected Christ standing before them, transforms from promise to present reality. They are living it.</div>
+</div>
+
+<div class="beat-row" onclick="toggleBeat(this)">
+    <div class="beat-cell"><span class="beat-empty">·</span></div>
+    <div class="beat-cell"><span class="ashrei-highlight">Blessed</span> are the peacemakers: for they shall be called the children of God.<span class="ref"><a href="https://www.blueletterbible.org/kjv/mat/5/9/" target="_blank" data-ref="Matthew 5:9">Matthew 5:9</a></span></div>
+    <div class="beat-cell"><span class="ashrei-highlight">Blessed</span> are all the peacemakers, for they shall be called the children of God.<span class="ref"><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/12?lang=eng&id=9" target="_blank" data-ref="3 Nephi 12:9">3 Nephi 12:9</a></span></div>
+</div>
+<div class="beat-detail">
+    <div class="beat-cell"></div>
+    <div class="beat-cell">Identical in both. "Children of God" — the covenant identity promised to those who make peace.</div>
+    <div class="beat-cell">At Bountiful, Christ will soon pray to the Father and call the Nephites His children (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng&id=21-24" target="_blank" data-ref="3 Nephi 17:21-24">3 Nephi 17:21-24</a>). The promise of divine sonship is being enacted in real time.</div>
+</div>
+
+<div class="beat-row" onclick="toggleBeat(this)">
+    <div class="beat-cell"><span class="beat-empty">Octave complete</span><span class="ref">cycle restarts at next letter</span></div>
+    <div class="beat-cell"><span class="ashrei-highlight">Blessed</span> are they which are persecuted for righteousness' sake: for theirs is the kingdom of heaven.<span class="ref"><a href="https://www.blueletterbible.org/kjv/mat/5/10/" target="_blank" data-ref="Matthew 5:10">Matthew 5:10</a></span></div>
+    <div class="beat-cell"><span class="ashrei-highlight">Blessed</span> are all they who are persecuted for <span class="beat-diff">my name's</span> sake, for theirs is the kingdom of heaven.<span class="ref"><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/12?lang=eng&id=10" target="_blank" data-ref="3 Nephi 12:10">3 Nephi 12:10</a></span></div>
+</div>
+<div class="beat-detail">
+    <div class="beat-cell">The octave completes and the cycle begins again — just as each Hebrew letter stanza ends and the next begins, an endless meditation on Torah.</div>
+    <div class="beat-cell">Matthew: persecuted "for righteousness' sake" — an abstract principle.</div>
+    <div class="beat-cell">3 Nephi: persecuted "for <span class="beat-diff">my name's</span> sake" — Christ personalizes it. At Bountiful, covenant fidelity is not to an idea but to a Person they have seen and touched. The kingdom of heaven brackets the sequence: first Beatitude and last both point to the same destination.</div>
+</div>
+
+</div><!-- end beat-compare-wrapper -->
+</div><!-- end beat-compare -->
+
+<script>
+function toggleBeat(row) {
+    const detail = row.nextElementSibling;
+    if (detail && detail.classList.contains('beat-detail')) {
+        detail.classList.toggle('open');
+    }
+}
+</script>
+
+<div class="info-box insight">
+<strong>The Pattern:</strong> Psalm 119 gives the architecture — doubled <em>ashrei</em> opening, octave structure, Torah meditation. Matthew delivers the content on a mountain in Galilee. 3 Nephi fulfills both form and content at the temple in Bountiful: the doubled opening reappears, the eight Beatitudes are delivered by the Lawgiver Himself, and the promises shift from future to present tense. The Psalm is the blueprint. The Sermon on the Mount is the teaching. The Sermon at the Temple is the arrival.
+</div>
 
 
 </div>
@@ -922,6 +1166,79 @@ At Shavuot, Israelite farmers literally carried sheaves of wheat to the Temple a
 </div>
 </details>
 
+<details class="section-dropdown" id="ruth-section">
+<summary>The Book of Ruth: A Shavuot Story</summary>
+<div class="section-body">
+
+## The Book of Ruth: A Shavuot Story
+
+<div style="border-radius: 12px; overflow: hidden; margin-bottom: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    <img src="/images/culture/jewish-festivals/ruth-gleaning.jpg" alt="Ruth gleaning in the fields during the barley harvest" style="width: 100%; display: block;">
+    <p style="text-align: center; color: #666; font-size: 0.85rem; padding: 0.5rem; margin: 0;"><em>Ruth gleaning in the fields of Boaz</em></p>
+</div>
+
+The Book of Ruth is read aloud in synagogues on Shavuot. Of all the books that could accompany the giving of the Torah, the rabbis chose this short story of a Moabite widow gleaning in a barley field. The reasons run deeper than tradition.
+
+### Why Ruth on Shavuot?
+
+<div class="comparison-grid">
+    <div class="compare-card">
+        <h4>The Harvest Setting</h4>
+        <p>Ruth arrives in Bethlehem "at the beginning of the barley harvest" (<a href="https://www.blueletterbible.org/kjv/rut/1/22/" target="_blank" data-ref="Ruth 1:22">Ruth 1:22</a>) and gleans "until the barley harvest and the wheat harvest were finished" (<a href="https://www.blueletterbible.org/kjv/rut/2/23/" target="_blank" data-ref="Ruth 2:23">Ruth 2:23</a>). Her story spans exactly the Omer count — from Bikkurim (barley firstfruits) to Shavuot (wheat harvest). The agricultural calendar of the feasts is the calendar of Ruth's redemption.</p>
+    </div>
+    <div class="compare-card">
+        <h4>Voluntary Covenant</h4>
+        <p>At Sinai, all Israel declared: "All that the LORD hath spoken we will do" (<a href="https://www.blueletterbible.org/kjv/exo/19/8/" target="_blank" data-ref="Exodus 19:8">Exodus 19:8</a>). Ruth — a Moabite with no obligation to Israel's God — made her own Sinai declaration: "Thy people shall be my people, and thy God my God" (<a href="https://www.blueletterbible.org/kjv/rut/1/16/" target="_blank" data-ref="Ruth 1:16">Ruth 1:16</a>). Reading Ruth on Shavuot reminds Israel that covenant is not inherited by blood alone — it is chosen.</p>
+    </div>
+    <div class="compare-card">
+        <h4>The Convert's Pattern</h4>
+        <p>Jewish tradition considers Ruth the model convert. The rabbis see in her words to Naomi a systematic acceptance of every dimension of covenant life — people, God, land, law, and even burial among God's people (<a href="https://www.blueletterbible.org/kjv/rut/1/16/" target="_blank" data-ref="Ruth 1:16-17">Ruth 1:16-17</a>). Shavuot is the feast of receiving Torah; Ruth is the story of choosing Torah.</p>
+    </div>
+    <div class="compare-card">
+        <h4>The Davidic Line</h4>
+        <p>Ruth's son Obed was "the father of Jesse, father of David" (<a href="https://www.blueletterbible.org/kjv/rut/4/17/" target="_blank" data-ref="Ruth 4:17">Ruth 4:17</a>). A Moabite widow who chose covenant became the great-grandmother of Israel's greatest king — and an ancestress of Christ (<a href="https://www.blueletterbible.org/kjv/mat/1/5/" target="_blank" data-ref="Matthew 1:5">Matthew 1:5</a>). Reading Ruth on Shavuot proclaims that the harvest of Torah includes the nations.</p>
+    </div>
+</div>
+
+### Ruth's Declaration and Israel's at Sinai
+
+Ruth's words to Naomi follow a structure that echoes the covenant pattern at Sinai:
+
+<table class="proximity-table">
+<thead>
+<tr><th>Ruth's Declaration (<a href="https://www.blueletterbible.org/kjv/rut/1/16/" target="_blank" data-ref="Ruth 1:16-17">Ruth 1:16-17</a>)</th><th>Covenant Element</th><th>Israel at Sinai</th></tr>
+</thead>
+<tbody>
+<tr><td>"Whither thou goest, I will go"</td><td><strong>Journey</strong> — following God's direction</td><td>Israel followed the pillar of cloud and fire</td></tr>
+<tr><td>"Where thou lodgest, I will lodge"</td><td><strong>Dwelling</strong> — sharing the covenant community</td><td>Israel camped together at Sinai's base</td></tr>
+<tr><td>"Thy people shall be my people"</td><td><strong>Identity</strong> — joining the covenant nation</td><td>"Ye shall be unto me a kingdom of priests" (<a href="https://www.blueletterbible.org/kjv/exo/19/6/" target="_blank" data-ref="Exodus 19:6">Exodus 19:6</a>)</td></tr>
+<tr><td>"Thy God my God"</td><td><strong>Worship</strong> — accepting the God of Israel</td><td>"I am the LORD thy God" (<a href="https://www.blueletterbible.org/kjv/exo/20/2/" target="_blank" data-ref="Exodus 20:2">Exodus 20:2</a>)</td></tr>
+<tr><td>"Where thou diest, will I die, and there will I be buried"</td><td><strong>Permanence</strong> — covenant unto death</td><td>"All that the LORD hath spoken we will do" (<a href="https://www.blueletterbible.org/kjv/exo/19/8/" target="_blank" data-ref="Exodus 19:8">Exodus 19:8</a>)</td></tr>
+</tbody>
+</table>
+
+### Gleaning, Gathering, and *Hesed*
+
+Ruth's story is built on the Torah's gleaning laws. Leviticus commands: "When ye reap the harvest of your land, thou shalt not wholly reap the corners of thy field, neither shalt thou gather the gleanings of thy harvest... thou shalt leave them for the poor and stranger" (<a href="https://www.blueletterbible.org/kjv/lev/19/9/" target="_blank" data-ref="Leviticus 19:9-10">Leviticus 19:9-10</a>). Ruth — both poor and stranger — becomes the living embodiment of the Torah's provision. When Boaz tells his reapers to leave extra grain for her (<a href="https://www.blueletterbible.org/kjv/rut/2/15/" target="_blank" data-ref="Ruth 2:15-16">Ruth 2:15-16</a>), the law moves from text to act.
+
+The word that threads through Ruth is <a href="https://www.blueletterbible.org/lexicon/h2617/kjv/wlc/0-1/" target="_blank">חֶסֶד</a> (*hesed*) — covenant faithfulness, loyal love, lovingkindness. Naomi speaks it over Ruth and Orpah: "The LORD deal kindly [*hesed*] with you, as ye have dealt with the dead, and with me" (<a href="https://www.blueletterbible.org/kjv/rut/1/8/" target="_blank" data-ref="Ruth 1:8">Ruth 1:8</a>). Boaz recognizes it in Ruth: "Blessed be thou of the LORD, my daughter: for thou hast shewed more kindness [*hesed*] in the latter end than at the beginning" (<a href="https://www.blueletterbible.org/kjv/rut/3/10/" target="_blank" data-ref="Ruth 3:10">Ruth 3:10</a>). *Hesed* is the covenant virtue — the quality that makes Torah livable. Ruth doesn't just accept Torah; she embodies its deepest principle.
+
+### Under His Wings
+
+When Boaz first blesses Ruth, he uses a striking image:
+
+> "The LORD recompense thy work, and a full reward be given thee of the LORD God of Israel, **under whose wings thou art come to trust**." (<a href="https://www.blueletterbible.org/kjv/rut/2/12/" target="_blank" data-ref="Ruth 2:12">Ruth 2:12</a>)
+
+The Hebrew word for "wings" here is <a href="https://www.blueletterbible.org/lexicon/h3671/kjv/wlc/0-1/" target="_blank">כָּנָף</a> (*kanaph*). When Ruth later goes to the threshing floor and asks Boaz to redeem her, she uses the same word: "Spread therefore thy skirt [*kanaph*] over thine handmaid; for thou art a near kinsman" (<a href="https://www.blueletterbible.org/kjv/rut/3/9/" target="_blank" data-ref="Ruth 3:9">Ruth 3:9</a>). The wing of divine protection and the garment of the redeemer are the same word. Boaz's act of redemption becomes an enactment of God's covenant shelter. The imagery carries into the Psalms — "How excellent is thy lovingkindness, O God! therefore the children of men put their trust under the shadow of thy wings [*kanaph*]" (<a href="https://www.blueletterbible.org/kjv/psa/36/7/" target="_blank" data-ref="Psalm 36:7">Psalm 36:7</a>) — and into Christ's own lament over Jerusalem: "How often would I have gathered thy children together, even as a hen gathereth her chickens under her wings" (<a href="https://www.blueletterbible.org/kjv/mat/23/37/" target="_blank" data-ref="Matthew 23:37">Matthew 23:37</a>).
+
+<div class="info-box insight">
+<strong>The Shavuot arc of Ruth:</strong> A foreign woman arrives at the barley harvest (Bikkurim), chooses covenant, gleans through the wheat harvest (Shavuot), receives redemption under the <em>kanaph</em> of her kinsman-redeemer, and becomes the ancestress of David and Christ. Her story is the Shavuot pattern in miniature: harvest, covenant, gathering, redemption. The Torah is not only given — it is lived. And the one who lives it most fully in this story is not a priest or a prophet but a Moabite widow gleaning at the edges of a field.
+</div>
+
+
+</div>
+</details>
+
 <details class="section-dropdown" id="recipes-section">
 <summary>Traditional Shavuot Foods</summary>
 <div class="section-body">
@@ -936,23 +1253,28 @@ Traditionally, meat is served at the evening meal and dairy is served for the da
 
 <div class="recipe-grid">
     <div class="recipe-card">
+        <img src="/images/culture/jewish-festivals/shavuot/recipes/cheesecake.jpg" alt="Classic New York Cheesecake" style="width: 100%; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem; width: calc(100% + 3rem); object-fit: cover; max-height: 200px;">
         <h4>Classic Cheesecake</h4>
         <p class="recipe-desc">The quintessential Shavuot dessert. Rich and creamy, made with farmer's cheese or cream cheese on a graham cracker crust. Some families top with fresh strawberries or blueberries; others serve it plain. A symbol of the "land flowing with milk and honey." Every Jewish family has their grandmother's recipe — and insists it is the only correct one.</p>
-        <p style="font-size: 0.8rem; margin-top: 0.75rem;"><a href="https://toriavey.com/new-york-cheesecake/" target="_blank" style="color: #8b6914;">Recipe: Tori Avey's New York Cheesecake</a></p>
+        <p style="font-size: 0.8rem; margin-top: 0.75rem;"><a href="https://toriavey.com/new-york-cheesecake/" target="_blank" style="color: #8b6914;">Recipe: Tori Avey's New York Cheesecake</a> · <span style="color: #999;">Photo: Tori Avey</span></p>
     </div>
     <div class="recipe-card">
+        <img src="/images/culture/jewish-festivals/shavuot/recipes/cheese-blintzes.jpg" alt="Cheese Blintzes with Strawberry Topping" style="width: 100%; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem; width: calc(100% + 3rem); object-fit: cover; max-height: 200px;">
         <h4>Cheese Blintzes</h4>
         <p class="recipe-desc">Thin crepes filled with sweetened ricotta or farmer's cheese, folded envelope-style and pan-fried until golden. Often served with sour cream, fresh berries, or a dusting of powdered sugar. A Shavuot morning tradition. The crepe batter is simple — the art is in the folding and the frying.</p>
-        <p style="font-size: 0.8rem; margin-top: 0.75rem;"><a href="https://toriavey.com/cheese-blintzes/" target="_blank" style="color: #8b6914;">Recipe: Tori Avey's Cheese Blintzes</a></p>
+        <p style="font-size: 0.8rem; margin-top: 0.75rem;"><a href="https://toriavey.com/shiksa-blintzes/" target="_blank" style="color: #8b6914;">Recipe: Tori Avey's Cheese Blintzes</a> · <span style="color: #999;">Photo: Tori Avey</span></p>
     </div>
     <div class="recipe-card">
+        <img src="/images/culture/jewish-festivals/shavuot/recipes/noodle-kugel.jpg" alt="Sweet Lokshen Kugel" style="width: 100%; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem; width: calc(100% + 3rem); object-fit: cover; max-height: 200px;">
         <h4>Noodle Kugel</h4>
         <p class="recipe-desc">A sweet baked noodle pudding with cottage cheese or cream cheese, eggs, cinnamon, and raisins. Golden and custardy, served warm or at room temperature. Some add a cornflake topping for crunch. The ultimate Shavuot comfort food — and equally at home on a Sabbath table.</p>
-        <p style="font-size: 0.8rem; margin-top: 0.75rem;"><a href="https://toriavey.com/sweet-noodle-kugel/" target="_blank" style="color: #8b6914;">Recipe: Tori Avey's Sweet Noodle Kugel</a></p>
+        <p style="font-size: 0.8rem; margin-top: 0.75rem;"><a href="https://toriavey.com/sweet-lokshen-kugel/" target="_blank" style="color: #8b6914;">Recipe: Tori Avey's Sweet Noodle Kugel</a> · <span style="color: #999;">Photo: Tori Avey</span></p>
     </div>
     <div class="recipe-card">
+        <img src="/images/culture/jewish-festivals/shavuot/recipes/cheese-kreplach.jpg" alt="Cheese Kreplach" style="width: 100%; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem; width: calc(100% + 3rem); object-fit: cover; max-height: 200px;">
         <h4>Cheese Kreplach</h4>
         <p class="recipe-desc">Small dumplings (similar to ravioli) filled with sweetened cheese, boiled and then sometimes fried. The Ashkenazi answer to filled pasta — typically served in butter or with sour cream. A labor of love that brings multiple generations into the kitchen together.</p>
+        <p style="font-size: 0.8rem; margin-top: 0.75rem;"><a href="https://www.kosher.com/recipe/cheese-kreplach-7088/" target="_blank" style="color: #8b6914;">Recipe: Kosher.com's Cheese Kreplach</a> · <span style="color: #999;">Photo: Kosher.com</span></p>
     </div>
 </div>
 
@@ -960,21 +1282,28 @@ Traditionally, meat is served at the evening meal and dairy is served for the da
 
 <div class="recipe-grid">
     <div class="recipe-card">
+        <img src="/images/culture/jewish-festivals/shavuot/recipes/cheese-bourekas.jpg" alt="Cheese Bourekas" style="width: 100%; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem; width: calc(100% + 3rem); object-fit: cover; max-height: 200px;">
         <h4>Cheese Bourekas</h4>
         <p class="recipe-desc">Flaky pastry pockets filled with feta, kashkaval, or a blend of cheeses. A Sephardic tradition from Turkey, Greece, and the Balkans. Shaped as triangles to represent the three patriarchs — or, some say, the three-peaked Mount Sinai. Serve warm with hard-boiled eggs and fresh tomatoes.</p>
-        <p style="font-size: 0.8rem; margin-top: 0.75rem;"><a href="https://toriavey.com/cheese-bourekas/" target="_blank" style="color: #8b6914;">Recipe: Tori Avey's Cheese Bourekas</a></p>
+        <p style="font-size: 0.8rem; margin-top: 0.75rem;"><a href="https://toriavey.com/cheese-bourekas/" target="_blank" style="color: #8b6914;">Recipe: Tori Avey's Cheese Bourekas</a> · <span style="color: #999;">Photo: Tori Avey</span></p>
     </div>
     <div class="recipe-card">
+        <img src="/images/culture/jewish-festivals/shavuot/recipes/atayef.jpg" alt="Atayef — stuffed Middle Eastern pancakes" style="width: 100%; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem; width: calc(100% + 3rem); object-fit: cover; max-height: 200px;">
         <h4>Atayef (Cheese Pancakes)</h4>
         <p class="recipe-desc">Small, spongy pancakes folded around a sweet cheese filling, then deep-fried and soaked in rosewater or orange blossom syrup. Popular among Syrian and Lebanese Jewish communities. The contrast between the crispy shell and warm cheese interior is extraordinary.</p>
+        <p style="font-size: 0.8rem; margin-top: 0.75rem;"><a href="https://www.myjewishlearning.com/article/atayef-stuffed-syrian-pancakes/" target="_blank" style="color: #8b6914;">Recipe: My Jewish Learning's Atayef</a> · <span style="color: #999;">Photo: Feel Good Foodie</span></p>
     </div>
     <div class="recipe-card">
+        <img src="/images/culture/jewish-festivals/shavuot/recipes/cheese-sambusak.jpg" alt="Cheese Sambusak" style="width: 100%; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem; width: calc(100% + 3rem); object-fit: cover; max-height: 200px;">
         <h4>Cheese Sambusak</h4>
         <p class="recipe-desc">Half-moon pastries filled with cheese (often *jibneh* or feta), pinched closed with a decorative rope edge. An Iraqi and Syrian Jewish specialty. The dough is tender and slightly flaky, the filling tangy and warm. Often served as a Shavuot appetizer.</p>
+        <p style="font-size: 0.8rem; margin-top: 0.75rem;"><a href="https://toriavey.com/cheese-sambusak/" target="_blank" style="color: #8b6914;">Recipe: Tori Avey's Cheese Sambusak</a> · <span style="color: #999;">Photo: Tori Avey</span></p>
     </div>
     <div class="recipe-card">
-        <h4>Siete Cielos (Seven Heavens Cake)</h4>
-        <p class="recipe-desc">A stunning seven-layer cake from the Tunisian and Moroccan Jewish tradition. The seven layers represent the seven heavens God traversed to deliver the Torah to Moses. Each layer is thin pastry with a cream or cheese filling. A labor-intensive showpiece that embodies the joy of receiving Torah.</p>
+        <img src="/images/culture/jewish-festivals/shavuot/recipes/siete-cielos.jpg" alt="Siete Cielos — Seven Heavens Challah" style="width: 100%; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem; width: calc(100% + 3rem); object-fit: cover; max-height: 200px;">
+        <h4>Siete Cielos (Seven Heavens Bread)</h4>
+        <p class="recipe-desc">A stunning bread from the Tunisian and Moroccan Jewish tradition. The seven layers of dough represent the seven heavens God traversed to deliver the Torah to Moses. A central ball of dough depicts Mount Sinai, with seven ascending ropes around it. A labor-intensive showpiece that embodies the joy of receiving Torah.</p>
+        <p style="font-size: 0.8rem; margin-top: 0.75rem;"><a href="https://onthechocolatetrail.org/2019/05/los-siete-cielos-or-seven-heaven-challah/" target="_blank" style="color: #8b6914;">Recipe: On the Chocolate Trail's Seven Heavens Challah</a></p>
     </div>
 </div>
 
@@ -982,21 +1311,100 @@ Traditionally, meat is served at the evening meal and dairy is served for the da
 
 <div class="recipe-grid">
     <div class="recipe-card">
+        <img src="/images/culture/jewish-festivals/shavuot/recipes/kadeh.jpg" alt="Kadeh — Kurdish cheese bread with zizik" style="width: 100%; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem; width: calc(100% + 3rem); object-fit: cover; max-height: 200px;">
         <h4>Kadeh (Kurdish Cheese Bread)</h4>
-        <p class="recipe-desc">A flatbread stuffed with soft cheese, baked until golden and slightly crispy. Kurdish Jewish families serve this as a centerpiece of the Shavuot dairy meal. Simple ingredients, deeply satisfying.</p>
+        <p class="recipe-desc">A flatbread stuffed with soft cheese, baked until golden and slightly crispy. Kurdish Jewish families serve this as a centerpiece of the Shavuot dairy meal, often alongside a tangy yogurt sauce called *zizik*. Simple ingredients, deeply satisfying.</p>
+        <p style="font-size: 0.8rem; margin-top: 0.75rem;"><a href="https://www.jewishfoodsociety.org/recipes/kadeh-cheese-and-spinach-stuffed-bread" target="_blank" style="color: #8b6914;">Recipe: Jewish Food Society's Kadeh</a> · <span style="color: #999;">Photo: Jewish Food Society</span></p>
     </div>
     <div class="recipe-card">
-        <h4>Sutlac (Rice Pudding)</h4>
+        <img src="/images/culture/jewish-festivals/shavuot/recipes/sutlac.jpg" alt="Sütlaç — Turkish rice pudding" style="width: 100%; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem; width: calc(100% + 3rem); object-fit: cover; max-height: 200px;">
+        <h4>Sütlaç (Rice Pudding)</h4>
         <p class="recipe-desc">Creamy rice pudding baked until the top forms a golden skin, then decorated with cinnamon in intricate patterns. A Turkish and Sephardic tradition. Some families draw the Ten Commandments tablets or Mount Sinai in the cinnamon — edible art that teaches Torah.</p>
+        <p style="font-size: 0.8rem; margin-top: 0.75rem;"><a href="https://www.jewishfoodsociety.org/recipes/sutlac-turkish-rice-pudding" target="_blank" style="color: #8b6914;">Recipe: Jewish Food Society's Sütlaç</a> · <span style="color: #999;">Photo: Jake Cohen / Jewish Food Society</span></p>
     </div>
     <div class="recipe-card">
-        <h4>Kahee (Buttered Pastry)</h4>
-        <p class="recipe-desc">An Iraqi Jewish specialty: thin sheets of dough layered with generous amounts of butter, baked until golden, then drenched in sugar syrup. Served for breakfast on Shavuot morning. Rich, flaky, and unapologetically indulgent.</p>
+        <img src="/images/culture/jewish-festivals/shavuot/recipes/kahee.jpg" alt="Kahi — Iraqi flaky pastry" style="width: 100%; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1rem; width: calc(100% + 3rem); object-fit: cover; max-height: 200px;">
+        <h4>Kahi (Buttered Pastry)</h4>
+        <p class="recipe-desc">An Iraqi Jewish specialty: thin sheets of dough layered with generous amounts of butter, fried until golden, then drenched in sugar syrup. Traditionally served for breakfast on Shavuot morning with *qei'mar* (clotted cream). Rich, flaky, and unapologetically indulgent.</p>
+        <p style="font-size: 0.8rem; margin-top: 0.75rem;"><a href="https://www.jewishfoodsociety.org/recipes/kahi-sweet-and-flaky-flatbread" target="_blank" style="color: #8b6914;">Recipe: Jewish Food Society's Kahi</a> · <span style="color: #999;">Photo: Jewish Food Society</span></p>
     </div>
     <div class="recipe-card" style="border-top-color: #1a6b74;">
         <h4 style="color: #1a6b74;">A Note on Dairy</h4>
         <p class="recipe-desc">Not all communities observe the dairy custom. Yemenite Jews, for example, do not eat dairy on Shavuot. The tradition, while widespread, is a custom (*minhag*) rather than a commandment — a beautiful example of how communities develop unique expressions of the same celebration. What unites every Shavuot table is not the menu but the joy of receiving Torah.</p>
     </div>
+</div>
+
+
+</div>
+</details>
+
+<details class="section-dropdown" id="family-section">
+<summary>Family Shavuot: Bringing the Feast Home</summary>
+<div class="section-body">
+
+## Family Shavuot: Bringing the Feast Home
+
+You don't have to be Jewish to let Shavuot shape your family's worship. The themes of this feast — covenant, Torah, harvest, and the movement from distance to presence — are already woven through Latter-day Saint life. Here are ways to bring them to the surface.
+
+### 1. A Family Tikkun: All-Night (or Late-Night) Scripture Study
+
+The Jewish practice of *Tikkun Leil Shavuot* — staying awake all night to study Torah — grew from a midrash that Israel overslept the morning God came to give the law, and Moses had to wake them (<a href="https://www.sefaria.org/Shabbat.86b" target="_blank">Talmud, Shabbat 86b</a>). To show they would not oversleep again, Jews stay up studying.
+
+<div class="info-box">
+<strong>For families:</strong> Choose a night near Shavuot (late May or early June) and set up a family study marathon. It doesn't have to be all night — even staying up an hour or two past bedtime feels special to children. Read through the Ten Commandments together (<a href="https://www.blueletterbible.org/kjv/exo/20/1/" target="_blank" data-ref="Exodus 20:1-17">Exodus 20:1-17</a>), then discuss the three layers for one or two commandments: What does the <strong>prohibition</strong> say? What does the <strong>heart</strong> behind it look like? What is the <strong>covenant action</strong> — the opposite virtue? (See the <a href="#higher-law-section">interactive commandment cards</a> above for all ten.) Close by reading Christ's Beatitudes at Bountiful (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/12?lang=eng&id=1-12" target="_blank" data-ref="3 Nephi 12:1-12">3 Nephi 12:1-12</a>) and talking about how the law was fulfilled — not replaced — in Him.
+</div>
+
+### 2. Read the Book of Ruth Together
+
+Ruth is the Shavuot book — read aloud in synagogues every year on this feast. It is short enough (four chapters) to read in a single sitting, and the story is vivid enough for all ages.
+
+<div class="info-box">
+<strong>For families:</strong> Read <a href="https://www.blueletterbible.org/kjv/rut/1/1/" target="_blank" data-ref="Ruth 1">Ruth 1-4</a> aloud together, assigning roles (Naomi, Ruth, Boaz, the narrator). Pause at Ruth's declaration in <a href="https://www.blueletterbible.org/kjv/rut/1/16/" target="_blank" data-ref="Ruth 1:16-17">Ruth 1:16-17</a> and ask: <em>What does it mean to choose covenant the way Ruth did? What did she give up? What did she gain?</em> Then connect it to Sinai: Israel also chose — "All that the LORD hath spoken we will do" (<a href="https://www.blueletterbible.org/kjv/exo/19/8/" target="_blank" data-ref="Exodus 19:8">Exodus 19:8</a>). Ask your family: <em>When have you chosen to stay, even when it would have been easier to go back?</em> (See the <a href="#ruth-section">expanded Ruth section</a> for the full Shavuot connections.)
+</div>
+
+### 3. Cook a Shavuot Dairy Meal
+
+Dairy dishes are the tradition of the Shavuot table — and making them together is the tradition within the tradition. Kurdish women gathered around a fire to cook *kadeh*; Ashkenazi grandmothers passed down cheesecake recipes; Moroccan families built seven-layer *siete cielos* bread together.
+
+<div class="info-box">
+<strong>For families:</strong> Pick one recipe from the <a href="#recipes-section">Traditional Shavuot Foods</a> section and make it together. Cheesecake is the crowd favorite, but cheese blintzes are more hands-on for kids (everyone gets to fold). While you cook, talk about <em>why</em> dairy: Israel received the Torah at Sinai but didn't yet know the kosher laws, so they couldn't prepare meat — all they could eat was dairy. The simplest food became the feast. Ask: <em>What simple things in our life carry the deepest meaning?</em>
+</div>
+
+### 4. The Four Mountains — A Family Home Evening Lesson
+
+The <a href="#mountains-section">Four Mountains progression</a> (Sinai → Galilee → Jerusalem → Bountiful) tells the story of how God draws closer to His people across scripture. This makes a natural family lesson.
+
+<div class="info-box">
+<strong>For families:</strong> Draw or print four simple mountains. Label them Sinai, Galilee, Temple Mount, and Bountiful. For each mountain, ask three questions: <em>How close did the people get to God? How did they feel? What did God give them?</em>
+<ul style="margin-top: 0.75rem; line-height: 1.8;">
+<li><strong>Sinai:</strong> "Touch the mountain and die" — God is near but terrifying (<a href="https://www.blueletterbible.org/kjv/exo/19/12/" target="_blank" data-ref="Exodus 19:12">Exodus 19:12</a>)</li>
+<li><strong>Galilee:</strong> Jesus sits and teaches — the crowd is astonished, not afraid (<a href="https://www.blueletterbible.org/kjv/mat/5/1/" target="_blank" data-ref="Matthew 5:1-2">Matthew 5:1-2</a>)</li>
+<li><strong>Jerusalem (Pentecost):</strong> The Spirit comes <em>inside</em> each person — no mountain needed (<a href="https://www.blueletterbible.org/kjv/act/2/1/" target="_blank" data-ref="Acts 2:1-4">Acts 2:1-4</a>)</li>
+<li><strong>Bountiful:</strong> "Come forth unto me, that ye may <em>feel</em>" — every person touches the risen Christ (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=14-15" target="_blank" data-ref="3 Nephi 11:14-15">3 Nephi 11:14-15</a>)</li>
+</ul>
+End by asking: <em>Where are we on that journey? How is God drawing us closer?</em>
+</div>
+
+### 5. Decorate with Greenery and Wheat
+
+Jewish families adorn their homes and synagogues with flowers and plants on Shavuot, representing Mount Sinai blooming when God descended. Wheat and barley sheaves recall the harvest.
+
+<div class="info-box">
+<strong>For families:</strong> Gather wildflowers, branches, or potted plants and arrange them around your dinner table or scripture study area. If you can find dried wheat stalks (craft stores often carry them), place them in a vase as a centerpiece. Let the greenery and grain be a visual reminder: God descended on a mountain and it <em>bloomed</em>. His covenant brings life to barren places. This is a simple act — five minutes of preparation — but it transforms the space and signals to the family that tonight is set apart.
+</div>
+
+### Putting It All Together
+
+These activities work individually, but they also build into a full Shavuot evening:
+
+1. **Decorate** the table with greenery and wheat
+2. **Cook** a dairy dish together
+3. **Read Ruth** aloud during or after dinner
+4. **Discuss** the Four Mountains or the three layers of a commandment
+5. **Stay up late** studying scripture together — showing God you won't oversleep when He comes to speak
+
+<div class="info-box insight">
+<strong>The point is not to "become Jewish."</strong> It is to let the biblical feasts do what they were designed to do — teach the Plan of Salvation through lived experience. When your family cooks dairy because Israel couldn't prepare meat at Sinai, you are <em>inside</em> the story. When you read Ruth aloud, you hear a woman choosing covenant in real time. When you stay up late studying Torah, you are answering the same question Israel faced at the mountain: <em>Will you be awake when God speaks?</em>
 </div>
 
 
@@ -1130,9 +1538,9 @@ The Melchizedek Priesthood restoration (May-June 1829) falls in the same general
 <div style="background: #f8f9fa; border-radius: 10px; padding: 1.25rem;">
 <h4 style="margin-top: 0; color: #1a6b74;">Scholarly Sources</h4>
 <ul style="margin: 0; padding-left: 1.25rem; line-height: 1.8;">
-<li>John W. Welch, <em>The Sermon at the Temple and the Sermon on the Mount</em> (FARMS, 1990)</li>
+<li><a href="https://scholarsarchive.byu.edu/mi/89/" target="_blank">John W. Welch, <em>The Sermon at the Temple and the Sermon on the Mount</em></a> (FARMS, 1990)</li>
 <li><a href="https://scripturecentral.org/knowhy/why-did-jesus-deliver-a-version-of-the-sermon-on-the-mount-at-the-temple-in-bountiful" target="_blank">KnoWhy 203</a> — Temple elements at Bountiful</li>
-<li>Krister Stendahl, BYU Religious Studies Center (1978) — 3 Nephi as Pentecost</li>
+<li><a href="https://rsc.byu.edu/reflections-mormonism/sermon-mount-third-nephi" target="_blank">Krister Stendahl, "The Sermon on the Mount and Third Nephi,"</a> in <em>Reflections on Mormonism</em>, ed. Truman G. Madsen (BYU Religious Studies Center, 1978) — 3 Nephi as Pentecost</li>
 </ul>
 </div>
 <div style="background: #f8f9fa; border-radius: 10px; padding: 1.25rem;">
