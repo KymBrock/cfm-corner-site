@@ -1,0 +1,1587 @@
+<style>
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+        .site-header {
+            background: linear-gradient(135deg, #d4c4a8 0%, #8B7355 100%);
+            color: white; padding: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px;
+        }
+        .site-header-content { max-width: 1000px; margin: 0 auto; padding: 0 20px; text-align: center; }
+        .site-title { font-size: 2em; margin-bottom: 5px; }
+        .site-subtitle { font-size: 1.1em; opacity: 0.9; }
+
+        .header-section {
+            background-color: #8B7355; color: white; padding: 40px; border-radius: 12px;
+            margin-bottom: 30px; text-align: center;
+        }
+        .header-section .week-label { font-size: 1em; text-transform: uppercase; letter-spacing: 2px; opacity: 0.9; margin-bottom: 10px; }
+        .header-section h1 { font-size: 2.5em; font-weight: 300; margin-bottom: 10px; }
+        .header-section .subtitle { font-size: 1.3em; font-style: italic; margin-bottom: 20px; }
+        .header-section .date-location { font-size: 1.1em; opacity: 0.95; }
+
+        .quick-links { text-align: center; margin: 20px 0; }
+        .quick-link {
+            display: inline-block; background: #8B7355; color: white; padding: 10px 20px;
+            border-radius: 8px; text-decoration: none; margin: 5px; transition: all 0.3s;
+        }
+        .quick-link:hover { background: #6B5344; transform: translateY(-2px); }
+
+        .button-container { text-align: center; margin: 30px 0; }
+        .expand-button {
+            background-color: #8B7355; color: white; border: none; padding: 12px 24px;
+            margin: 5px 10px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em;
+        }
+        .expand-button:hover { background-color: #6B5344; }
+
+        .sg-accordion-section {
+            background-color: #8B7355; color: white; cursor: pointer; padding: 18px; width: 100%;
+            border: none; text-align: left; font-size: 1.2em; font-weight: 600; font-family: Georgia, serif;
+            border-radius: 8px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center;
+        }
+        .sg-accordion-section:hover { background-color: #6B5344; }
+        .sg-accordion-section::after { content: '\25BC'; font-size: 0.9em; transition: transform 0.3s; }
+        .sg-accordion-section.active::after { transform: rotate(180deg); }
+
+        .sg-panel {
+            background-color: white; border-radius: 0 0 8px 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .sg-panel.active { display: block; }
+        .panel-content { padding: 30px; }
+        .panel-content h2 { color: #8B7355; margin-bottom: 20px; font-size: 1.8em; }
+        .panel-content h3 { color: #6B5344; margin-top: 25px; margin-bottom: 15px; font-size: 1.4em; }
+        .panel-content h4 { color: #5a4a3a; margin-top: 20px; margin-bottom: 12px; font-size: 1.2em; }
+        .panel-content ul, .panel-content ol { margin-left: 25px; margin-bottom: 15px; }
+        .panel-content li { margin-bottom: 8px; }
+        .panel-content p { margin-bottom: 15px; text-align: justify; }
+        .panel-content a { color: #8B7355; }
+        .panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .panel-content blockquote {
+            margin: 20px 0 20px 20px;
+            padding: 15px 20px;
+            border-left: 4px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 8px 8px 0;
+        }
+        .panel-content blockquote p { margin-bottom: 8px; }
+        .panel-content blockquote p:last-child { margin-bottom: 0; }
+        .panel-content blockquote cite {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #8B7355;
+            font-style: normal;
+        }
+
+        .panel-content strong { color: #6B5344; }
+        .panel-content em { color: #5a4a3a; }
+
+        .panel-content hr {
+            border: none;
+            border-top: 2px solid #e8e0d5;
+            margin: 25px 0;
+        }
+
+        .panel-content code {
+            background-color: #f5f0e8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #6B5344;
+        }
+
+        .info-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .info-table th, .info-table td { border: 1px solid #d4c4a8; padding: 12px; text-align: left; }
+        .info-table th { background-color: #f5f0e8; color: #6B5344; font-weight: bold; }
+        .info-table tr:nth-child(even) { background-color: #faf8f5; }
+
+        .sg-sub-accordion {
+            background-color: #f5f0e8;
+            color: #5a4a3a;
+            cursor: pointer;
+            padding: 14px 40px 14px 18px;
+            width: 100%;
+            text-align: left;
+            border: 1px solid #d4c4a8;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            margin-top: 10px;
+            position: relative;
+            transition: background-color 0.2s;
+        }
+
+        .sg-sub-accordion:hover {
+            background-color: #e8e0d4;
+        }
+
+        .sg-sub-accordion::after {
+            content: '\25BC';
+            font-size: 0.8em;
+            color: #8B7355;
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s;
+        }
+
+        .sg-sub-accordion.active::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .sg-sub-panel {
+            background-color: #fafafa;
+            border-radius: 0 0 6px 6px;
+            border: 1px solid #d4c4a8;
+            border-top: none;
+            display: none;
+            transition: max-height 0.3s ease-out;
+            margin-bottom: 10px;
+        }
+
+        .sg-sub-panel.active {
+            display: block;
+            overflow: visible;
+            transition: max-height 0.3s ease-in;
+        }
+
+        .sg-sub-panel-content {
+            padding: 20px 25px;
+        }
+
+        .sg-sub-panel-content h3 { color: #6B5344; margin-top: 20px; margin-bottom: 12px; font-size: 1.3em; }
+        .sg-sub-panel-content h4 { color: #5a4a3a; margin-top: 15px; margin-bottom: 10px; font-size: 1.15em; }
+        .sg-sub-panel-content p { margin-bottom: 12px; text-align: justify; }
+        .sg-sub-panel-content ul, .sg-sub-panel-content ol { margin-left: 25px; margin-bottom: 12px; }
+        .sg-sub-panel-content li { margin-bottom: 6px; }
+        .sg-sub-panel-content a { color: #8B7355; }
+        .sg-sub-panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .sg-sub-panel-content blockquote {
+            margin: 15px 0 15px 15px;
+            padding: 12px 18px;
+            border-left: 3px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 6px 6px 0;
+        }
+        .sg-sub-panel-content blockquote p { margin-bottom: 6px; }
+        .sg-sub-panel-content blockquote p:last-child { margin-bottom: 0; }
+        .sg-sub-panel-content strong { color: #6B5344; }
+        .sg-sub-panel-content hr { border: none; border-top: 1px solid #e8e0d5; margin: 20px 0; }
+
+        @media (max-width: 768px) {
+            .header-section h1 { font-size: 1.8em; }
+            .panel-content { padding: 20px; }
+            .sg-sub-panel-content { padding: 15px 18px; }
+        }
+
+        .sg-section-heading {
+            margin: 1.2em 0 0.6em 0;
+            padding: 0.4em 0 0.4em 0.8em;
+            border-left: 3px solid #8B9D77;
+            color: #5a6b4f;
+            font-size: 1.05em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+        }
+        .sg-section-actions {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 28px;
+        }
+        .sg-section-actions .sg-action-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.35);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            padding: 0;
+            line-height: 1;
+        }
+        .sg-section-actions .sg-action-btn:hover {
+            background: rgba(255,255,255,0.35);
+        }
+    </style>
+
+
+<div class="container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <p class="week-label">Week 17</p>
+            <h1>Exodus 18–20 — Overview</h1>
+            <div class="subtitle">"All That the Lord Hath Spoken We Will Do"</div>
+            <div class="date-location"></div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/17?lang=eng" target="_blank" class="quick-link">CFM Manual</a>
+        </div>
+
+        <!-- Expand/Collapse Buttons -->
+        <div class="button-container">
+            <button class="expand-button" onclick="expandAll()"><span class="btn-icon">&#x229E;</span> Expand All</button>
+            <button class="expand-button" onclick="collapseAll()"><span class="btn-icon">&#x229F;</span> Collapse All</button>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 1: WEEK 17: EXODUS 18–20 — OVERVIEW -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">1. Week 17: Exodus 18–20 — Overview</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Scripture Scope</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ul>
+<li><strong><a href="https://www.blueletterbible.org/kjv/exo/18/1/s_68001" target="_blank" data-ref="Exodus 18">Exodus 18</a></strong>: Jethro's visit and counsel on delegation</li>
+<li><strong><a href="https://www.blueletterbible.org/kjv/exo/19/1/s_69001" target="_blank" data-ref="Exodus 19">Exodus 19</a></strong>: Arrival at Sinai; covenant proposal; preparation to meet God</li>
+<li><strong><a href="https://www.blueletterbible.org/kjv/exo/20/1/s_70001" target="_blank" data-ref="Exodus 20">Exodus 20</a></strong>: The Ten Commandments and the people's response</li>
+</ul>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Key Theological Concepts</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>1. Identity Before Instruction</h3>
+<p>The covenant at Sinai isn't "do these things to become God's people." It's "you ARE my people—now live like it." The preamble to the Ten Commandments (<a href="https://www.blueletterbible.org/kjv/exo/20/2/s_70002" target="_blank" data-ref="Exodus 20:2">Ex 20:2</a>) establishes this clearly: "I am the LORD thy God, which have brought thee out of the land of Egypt." God saved them FIRST. The commandments follow as grateful response, not ladder rungs to earn salvation.</p>
+<h3>2. Kingdom of Priests (Ex 19:5-6)</h3>
+<blockquote>
+<p>"If ye will obey my voice indeed, and keep my covenant, then ye shall be a peculiar treasure unto me above all people... And ye shall be unto me a kingdom of priests, and an holy nation."</p>
+</blockquote>
+<p>Three transformative identity markers:</p>
+<ul>
+<li><strong>Peculiar treasure</strong> (<a href="https://www.blueletterbible.org/lexicon/h5459/kjv/wlc/0-1/" target="_blank"><em>segullah</em></a>) — Not "weird" but personally treasured, like crown jewels</li>
+<li><strong>Kingdom of priests</strong> — Every Israelite has priestly access to God</li>
+<li><strong>Holy nation</strong> — Set apart for sacred purposes</li>
+</ul>
+<p>This promise finds fulfillment in the New Testament: "But ye are a chosen generation, a royal priesthood, an holy nation, a peculiar people" (<a href="https://www.blueletterbible.org/kjv/1pe/2/9/s_1153009" target="_blank" data-ref="1 Peter 2:9">1 Peter 2:9</a>).</p>
+<h3>3. Wise Leadership: Delegation</h3>
+<p>Moses was wearing himself out judging every case alone. Jethro's counsel (<a href="https://www.blueletterbible.org/kjv/exo/18/17-23/s_68017" target="_blank" data-ref="Exodus 18:17-23">Ex 18:17-23</a>) established a principle that echoes through every organization: leaders can't do everything themselves. Delegation isn't weakness; it's wisdom. It allows more people to serve and prevents leadership burnout.</p>
+<h3>4. The Two Tables</h3>
+<p>The Ten Commandments divide naturally into two relationships:</p>
+<ul>
+<li><strong>Commands 1-4</strong>: Loving God (no other gods, no idols, honor His name, keep His Sabbath)</li>
+<li><strong>Commands 5-10</strong>: Loving neighbor (honor parents, don't kill, don't commit adultery, don't steal, don't lie, don't covet)</li>
+</ul>
+<p>Jesus summarized: Love God with all your heart; love your neighbor as yourself (<a href="https://www.blueletterbible.org/kjv/mat/22/37-40/s_951037" target="_blank" data-ref="Matthew 22:37-40">Matt 22:37-40</a>). The two tables aren't separate—they're interconnected. We can't claim to love God while hating our neighbor (<a href="https://www.blueletterbible.org/kjv/1jo/4/20/s_1163020" target="_blank" data-ref="1 <a href="https://www.blueletterbible.org/kjv/jhn/4/20/" target="_blank" data-ref="John 4:20">John 4:20</a>">1 John 4:20</a>).</p>
+<h3>5. Proving, Not Punishing</h3>
+<blockquote>
+<p>"Fear not: for God is come to prove you, and that his fear may be before your faces, that ye sin not" (<a href="https://www.blueletterbible.org/kjv/exo/20/20/s_70020" target="_blank" data-ref="Exodus 20:20">Ex 20:20</a>).</p>
+</blockquote>
+<p>God tests to reveal what's in our hearts and to develop character—not to trick us into failure. Commandments aren't traps; they're guardrails that protect us from spiritual destruction.</p>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Christological Threads</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Sinai Pattern</th><th>Fulfillment</th></tr>
+<tr><td>Israel delivered from Egypt</td><td>We delivered from sin</td></tr>
+<tr><td>Israel becomes kingdom of priests</td><td>Church is "royal priesthood" (<a href="https://www.blueletterbible.org/kjv/1pe/2/9/s_1153009" target="_blank" data-ref="1 Peter 2:9">1 Peter 2:9</a>)</td></tr>
+<tr><td>Law written on stone</td><td>Law written on hearts (<a href="https://www.blueletterbible.org/kjv/jer/31/33/s_776033" target="_blank" data-ref="Jeremiah 31:33">Jer 31:33; 2</a> Cor 3:3)</td></tr>
+<tr><td>Moses mediates covenant</td><td>Christ is "mediator of a better covenant" (<a href="https://www.blueletterbible.org/kjv/heb/8/6/s_1141006" target="_blank" data-ref="Hebrews 8:6">Heb 8:6</a>)</td></tr>
+<tr><td>Sinai theophany (thunder, fire)</td><td>Pentecost (Spirit descends like fire, <a href="https://www.blueletterbible.org/kjv/act/2/1/s_1020001" target="_blank" data-ref="Acts 2">Acts 2</a>)</td></tr>
+</table>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>CFM Manual Emphasis</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The Come, Follow Me manual focuses on personal application: What "other gods" compete for our devotion? How do we prepare for sacred experiences? How do the commandments protect rather than restrict? The manual also highlights the Sabbath as "delight" (<a href="https://www.blueletterbible.org/kjv/isa/58/13/s_737013" target="_blank" data-ref="Isaiah 58:13">Isaiah 58:13</a>), inviting us to see the fourth commandment not as burden but as gift.</p>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Key Questions for This Week</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li>What does it mean for you personally to be God's "peculiar treasure"?</li>
+<li>How do you prepare to meet God in worship? What difference does preparation make?</li>
+<li>Jethro saw Moses burning out. Who in your life might need you to share their burden?</li>
+<li>Which of the Ten Commandments feels most challenging in modern life? Why?</li>
+<li>How does understanding "grace before law" (<a href="https://www.blueletterbible.org/kjv/exo/20/2/s_70002" target="_blank" data-ref="Exodus 20:2">Ex 20:2</a>) change how you view obedience?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 2: WEEK 17: HISTORICAL AND CULTURAL CONTEXT -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">2. Week 17: Historical and Cultural Context</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Historical Setting</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Mount Sinai: Sacred Geography</h3>
+<p><strong>Location Debated:</strong></p>
+<ul>
+<li><strong>Traditional site:</strong> Jebel Musa ("Mount of Moses") in southern Sinai Peninsula</li>
+<li><strong>Alternative:</strong> Jebel al-Lawz in Saudi Arabia (ancient Midian)</li>
+</ul>
+<p>What matters isn't the precise location but the theological significance: mountains in the ancient Near East were considered meeting places between heaven and earth. God condescended to meet Israel in a visible, audible way at a specific place.</p>
+<h3>Timeline</h3>
+<table class="info-table">
+<tr><th>Event</th><th>Reference</th></tr>
+<tr><td>Arrival at Sinai</td><td><a href="https://www.blueletterbible.org/kjv/exo/19/1/s_69001" target="_blank" data-ref="Exodus 19:1">Exodus 19:1</a> (third month after leaving Egypt)</td></tr>
+<tr><td>Jethro's visit</td><td><a href="https://www.blueletterbible.org/kjv/exo/18/1-27/s_68001" target="_blank" data-ref="Exodus 18:1-27">Exodus 18:1-27</a></td></tr>
+<tr><td>Covenant proposal</td><td><a href="https://www.blueletterbible.org/kjv/exo/19/3-8/s_69003" target="_blank" data-ref="Exodus 19:3-8">Exodus 19:3-8</a></td></tr>
+<tr><td>Three days of preparation</td><td><a href="https://www.blueletterbible.org/kjv/exo/19/10-15/s_69010" target="_blank" data-ref="Exodus 19:10-15">Exodus 19:10-15</a></td></tr>
+<tr><td>God descends on Sinai</td><td><a href="https://www.blueletterbible.org/kjv/exo/19/16-20/s_69016" target="_blank" data-ref="Exodus 19:16-20">Exodus 19:16-20</a></td></tr>
+<tr><td>Ten Commandments given</td><td><a href="https://www.blueletterbible.org/kjv/exo/20/1-17/s_70001" target="_blank" data-ref="Exodus 20:1-17">Exodus 20:1-17</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Ancient Near Eastern Treaty Patterns</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Suzerain-Vassal Treaties</h3>
+<p>The Sinai covenant follows recognized treaty formulas from ancient Near Eastern diplomacy:</p>
+<table class="info-table">
+<tr><th>Treaty Element</th><th>Exodus Parallel</th></tr>
+<tr><td><strong>Preamble</strong> (identifies parties)</td><td>"I am the LORD thy God" (20:2a)</td></tr>
+<tr><td><strong>Historical prologue</strong> (recounts relationship)</td><td>"which have brought thee out of Egypt" (20:2b)</td></tr>
+<tr><td><strong>Stipulations</strong> (requirements)</td><td>The Ten Commandments (20:3-17)</td></tr>
+<tr><td><strong>Blessings/Curses</strong> (consequences)</td><td>Developed in <a href="https://www.blueletterbible.org/kjv/deu/28/1/s_181001" target="_blank" data-ref="Deuteronomy 28">Deuteronomy 28</a></td></tr>
+<tr><td><strong>Witnesses</strong> (called to testify)</td><td>Heaven and earth (<a href="https://www.blueletterbible.org/kjv/deu/30/19/s_183019" target="_blank" data-ref="Deuteronomy 30:19">Deut 30:19</a>)</td></tr>
+</table>
+<p><strong>Significance:</strong> God wasn't arbitrarily commanding. He entered covenant relationship using legal language Israel's neighbors would recognize. The difference: pagan treaties were between powerful kings and conquered peoples. This treaty was between the King of the universe and former slaves—an act of grace, not conquest.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Theophany (God's Visible Appearance)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3><a href="https://www.blueletterbible.org/kjv/exo/19/16/" target="_blank" data-ref="Exodus 19:16-19">Exodus 19:16-19</a>: Divine Manifestation</h3>
+<blockquote>
+<p>"There were thunders and lightnings, and a thick cloud upon the mount, and the voice of the trumpet exceeding loud... mount Sinai was altogether on a smoke, because the LORD descended upon it in fire."</p>
+</blockquote>
+<p><strong>Elements of the theophany:</strong></p>
+<ul>
+<li>Thunder and lightning</li>
+<li>Thick cloud</li>
+<li>Supernatural trumpet sound</li>
+<li>Smoke and fire</li>
+<li>Earthquake</li>
+</ul>
+<p><strong>Ancient context:</strong> Pagan gods like Baal and Zeus were associated with storm phenomena. But YHWH isn't just another storm deity—He's the Creator using His creation to reveal Himself. The elements aren't God; they announce His presence.</p>
+<p><strong>Temple connection:</strong> The Tabernacle (<a href="https://www.blueletterbible.org/kjv/exo/40/34-35/s_90034" target="_blank" data-ref="Exodus 40:34-35">Ex 40:34-35</a>) and later the Temple (<a href="https://www.blueletterbible.org/kjv/1ki/8/10-11/s_299010" target="_blank" data-ref="1 Kings 8:10-11">1 Kings 8:10-11</a>) would be filled with God's cloud-presence. Sinai established the pattern: where God dwells with His people, His glory is manifest.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Cultural Context of the Ten Commandments</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Two Tables</h3>
+<p><strong>Traditional understanding:</strong></p>
+<ul>
+<li><strong>First table (Commands 1-4):</strong> Vertical relationship—how to love God</li>
+<li><strong>Second table (Commands 5-10):</strong> Horizontal relationship—how to love neighbor</li>
+</ul>
+<p><strong>Rabbinic variation:</strong> Some traditions place "Honor your father and mother" on the first table because parents give life, making them God's partners in creation.</p>
+<p><strong>Physical tablets:</strong> Likely small enough to be portable (stored in the Ark), not the massive slabs depicted in films. Clay tablets from this era were typically hand-sized.</p>
+<h3>Why These Commands?</h3>
+<p>The Ten Commandments weren't arbitrary choices. One way to read them is through the threats they address — the fundamental dangers to covenant community. But each commandment carries multiple layers: the sin it prevents, the virtue it cultivates, the divine attribute it reflects, and the covenant blessing it unlocks. (For a deeper treatment exploring the Telestial, Terrestrial, and Celestial dimensions of each commandment, see our <a href="/culture/jewish/moedim/shavuot/#higher-law-section" target="_blank">Shavuot article's interactive commandment cards</a>.)</p>
+<p>Here is one lens — the threat each commandment guards against:</p>
+<table class="info-table">
+<tr><th>Command</th><th>Hebrew</th><th>Threat Addressed</th></tr>
+<tr><td>No other gods</td><td>אֱלֹהִים אֲחֵרִים (<a href="https://www.blueletterbible.org/lexicon/h430/kjv/wlc/0-1/" target="_blank"><em>elohim acherim</em></a>)</td><td>Divided loyalty destroys covenant</td></tr>
+<tr><td>No idols</td><td>פֶּסֶל (<a href="https://www.blueletterbible.org/lexicon/h6459/kjv/wlc/0-1/" target="_blank"><em>pesel</em></a>)</td><td>Reshaping God's person and nature reduces Him to a tool and breeds misunderstanding</td></tr>
+<tr><td>Don't misuse name</td><td>לַשָּׁוְא (<a href="https://www.blueletterbible.org/lexicon/h7723/kjv/wlc/0-1/" target="_blank"><em>lashav</em></a>)</td><td>False oaths corrupt justice system and misrepresent God's will</td></tr>
+<tr><td>Sabbath</td><td><a href="https://www.blueletterbible.org/lexicon/h7676/kjv/wlc/0-1/" target="_blank" data-lexicon="sabbath, rest, cessation" data-strongs="H7676" data-translit="shabbat" data-original="שַׁבָּת" data-lang="hebrew" data-verse="<a href="https://www.blueletterbible.org/kjv/gen/2/2/" target="_blank" data-ref="Genesis 2:2">Genesis 2:2</a>">שַׁבָּת</a> (<a href="https://www.blueletterbible.org/lexicon/h7676/kjv/wlc/0-1/" target="_blank"><em>shabbat</em></a>)</td><td>Endless work denies human dignity and diverts focus from what matters most</td></tr>
+<tr><td>Honor parents</td><td>כַּבֵּד (<a href="https://www.blueletterbible.org/lexicon/h3513/kjv/wlc/0-1/" target="_blank"><em>kabbed</em></a>)</td><td>Broken families collapse societies</td></tr>
+<tr><td>No murder</td><td>רָצַח (<a href="https://www.blueletterbible.org/lexicon/h7523/kjv/wlc/0-1/" target="_blank"><em>ratsach</em></a>)</td><td>Violence destroys community</td></tr>
+<tr><td>No adultery</td><td>נָאַף (<a href="https://www.blueletterbible.org/lexicon/h5003/kjv/wlc/0-1/" target="_blank"><em>na'aph</em></a>)</td><td>Unfaithfulness breaks trust</td></tr>
+<tr><td>No stealing</td><td>גָּנַב (<a href="https://www.blueletterbible.org/lexicon/h1589/kjv/wlc/0-1/" target="_blank"><em>ganav</em></a>)</td><td>Property theft breeds chaos</td></tr>
+<tr><td>No false witness</td><td>עֵד שָׁקֶר (<a href="https://www.blueletterbible.org/lexicon/h8267/kjv/wlc/0-1/" target="_blank"><em>ed shaqer</em></a>)</td><td>Lying corrupts courts and destroys trust</td></tr>
+<tr><td>No coveting</td><td>חָמַד (<a href="https://www.blueletterbible.org/lexicon/h2530/kjv/wlc/0-1/" target="_blank"><em>chamad</em></a>)</td><td>Internal desire births external sin</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Preamble: Grace Before Law</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3><a href="https://www.blueletterbible.org/kjv/exo/20/2/" target="_blank" data-ref="Exodus 20:2">Exodus 20:2</a> — The Forgotten Verse</h3>
+<blockquote>
+<p>"I am the LORD thy God, which have brought thee out of the land of Egypt, out of the house of bondage."</p>
+</blockquote>
+<p>This verse is <strong>not</strong> just introduction—it's <strong>foundation</strong>. Notice the order:</p>
+<ol>
+<li><strong>God identifies Himself</strong> — "I am the LORD thy God"</li>
+<li><strong>God recounts His grace</strong> — "which have brought thee out"</li>
+<li><strong>Then come the commands</strong> — "Thou shalt..."</li>
+</ol>
+<p>The Ten Commandments don't say "Do this to be saved." They say "I ALREADY saved you—now live accordingly." Law follows grace. Obedience flows from relationship, not toward it.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Jethro's Leadership Model</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3><a href="https://www.blueletterbible.org/kjv/exo/18/21/" target="_blank" data-ref="Exodus 18:21">Exodus 18:21</a> — Four Qualifications for Leaders</h3>
+<table class="info-table">
+<tr><th>Qualification</th><th>Hebrew/Meaning</th><th>Modern Application</th></tr>
+<tr><td><strong>Able men</strong></td><td>חַיִל (<a href="https://www.blueletterbible.org/lexicon/h2428/kjv/wlc/0-1/" target="_blank"><em>chayil</em></a>) — capable, competent</td><td>Skilled for the role</td></tr>
+<tr><td><strong>Fear God</strong></td><td>יִרְאֵי אֱלֹהִים (<a href="https://www.blueletterbible.org/lexicon/h3372/kjv/wlc/0-1/" target="_blank"><em>yir'ei Elohim</em></a>) — reverent toward God</td><td>Spiritually grounded</td></tr>
+<tr><td><strong>Men of truth</strong></td><td>אַנְשֵׁי אֱמֶת (<a href="https://www.blueletterbible.org/lexicon/h571/kjv/wlc/0-1/" target="_blank"><em>anshei emet</em></a>) — honest</td><td>Trustworthy</td></tr>
+<tr><td><strong>Hating covetousness</strong></td><td>שֹׂנְאֵי בָצַע (<a href="https://www.blueletterbible.org/lexicon/h1215/kjv/wlc/0-1/" target="_blank"><em>son'ei batsa</em></a>) — reject bribes</td><td>Not self-serving</td></tr>
+</table>
+<h3>Hierarchical Structure</h3>
+<ul>
+<li><strong>Moses:</strong> Represents people to God; teaches statutes and laws</li>
+<li><strong>Rulers of thousands:</strong> Major judicial matters</li>
+<li><strong>Rulers of hundreds, fifties, tens:</strong> Progressively smaller matters</li>
+</ul>
+<p>This structure appears throughout Israel's history and finds echo in modern Church organization: stake presidents, bishops, elders quorum presidents, ministering assignments.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Shavuot (Pentecost) Connection</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Jewish Tradition</h3>
+<p>While not explicit in Torah, rabbinic tradition connects Shavuot (the Feast of Weeks, 50 days after Passover) with the giving of the Torah at Sinai.</p>
+<p><strong>Calculation:</strong></p>
+<ul>
+<li>Exodus from Egypt: Nisan 15 (Passover)</li>
+<li>Arrival at Sinai: Sivan 1 (<a href="https://www.blueletterbible.org/kjv/exo/19/1/s_69001" target="_blank" data-ref="Exodus 19:1">Ex 19:1</a>, "third month")</li>
+<li>Ten Commandments: Sivan 6 (50 days after Passover)</li>
+</ul>
+<p><strong>Modern practice:</strong> Jews celebrate Shavuot with all-night Torah study, reading the Ten Commandments in synagogue, and decorating with flowers (representing Mount Sinai blooming).</p>
+<h3>Christian Pentecost</h3>
+<p><a href="https://www.blueletterbible.org/kjv/act/2/1/s_1020001" target="_blank" data-ref="Acts 2">Acts 2</a> records the Holy Spirit descending 50 days after Jesus' resurrection—on Shavuot. The connection is profound:</p>
+<ul>
+<li><strong>Sinai:</strong> Law written on stone tablets</li>
+<li><strong>Pentecost:</strong> Law written on hearts by the Spirit (<a href="https://www.blueletterbible.org/kjv/jer/31/33/s_776033" target="_blank" data-ref="Jeremiah 31:33">Jer 31:33; 2</a> Cor 3:3)</li>
+</ul>
+<p>Both events mark covenant community formation: Israel at Sinai, the Church at Pentecost.</p>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 3: WEEK 17: KEY PASSAGES STUDY -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">3. Week 17: Key Passages Study</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Passage 1: Jethro's Counsel on Delegation (<a href="https://www.blueletterbible.org/kjv/exo/18/17/" target="_blank" data-ref="Exodus 18:17-23">Exodus 18:17-23</a>)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text (KJV)</h3>
+<blockquote>
+<p>"And Moses' father in law said unto him, The thing that thou doest is not good. Thou wilt surely wear away, both thou, and this people that is with thee: for this thing is too heavy for thee; thou art not able to perform it thyself alone. Hearken now unto my voice, I will give thee counsel... thou shalt provide out of all the people able men, such as fear God, men of truth, hating covetousness; and place such over them, to be rulers of thousands, and rulers of hundreds, rulers of fifties, and rulers of tens."</p>
+</blockquote>
+<h3>Literary Analysis</h3>
+<p>Jethro, a Midianite priest, offers wisdom to Moses the prophet. This is remarkable: non-Israelite counsel is welcomed and implemented. Truth can come from outside covenant community.</p>
+<p><strong>Structure of the counsel:</strong></p>
+<ol>
+<li><strong>Diagnosis:</strong> You're doing too much; you'll burn out (v. 17-18)</li>
+<li><strong>Solution:</strong> Teach the law broadly, then delegate judgment (v. 19-22)</li>
+<li><strong>Criteria:</strong> Four qualifications for appointed leaders (v. 21)</li>
+<li><strong>Result:</strong> Moses handles hard cases; others handle routine matters (v. 22)</li>
+</ol>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Even prophets need help.</strong> Moses' gifts didn't exempt him from human limits.</li>
+<li><strong>Delegation multiplies ministry.</strong> More people serving means more people blessed.</li>
+<li><strong>Character qualifies for leadership.</strong> Ability, faithfulness, honesty, integrity.</li>
+</ol>
+<h3>LDS Connection</h3>
+<p>The Church operates on Jethro's principle: stake presidents delegate to bishops, bishops to auxiliary leaders, parents to youth leaders. President Gordon B. Hinckley counseled leaders: "Delegate to others every aspect of the work that you legitimately can. And then leave matters in the hands of the Lord" (<a href="https://www.churchofjesuschrist.org/study/general-conference/2003/10/the-shepherds-of-israel" target="_blank">"The Shepherds of Israel," October 2003</a>).</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 2: The Covenant Proposal (<a href="https://www.blueletterbible.org/kjv/exo/19/5/" target="_blank" data-ref="Exodus 19:5-6">Exodus 19:5-6</a>)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text (KJV)</h3>
+<blockquote>
+<p>"Now therefore, if ye will obey my voice indeed, and keep my covenant, then ye shall be a peculiar treasure unto me above all people: for all the earth is mine: And ye shall be unto me a kingdom of priests, and an holy nation."</p>
+</blockquote>
+<h3>Literary Analysis</h3>
+<p>This is THE defining statement of Israel's identity. Notice the conditional structure: "IF ye will obey... THEN ye shall be." But this isn't salvation by works — Israel is already delivered. The condition is about maintaining covenant relationship, not earning initial acceptance.</p>
+<h3>Hebrew Analysis of the Three Identity Markers</h3>
+<p>The Hebrew packs three extraordinary titles into a single verse:</p>
+<table class="info-table">
+<tr><th>Hebrew</th><th>Transliteration</th><th>KJV</th><th>Meaning</th></tr>
+<tr><td>סְגֻלָּה</td><td><a href="https://www.blueletterbible.org/lexicon/h5459/kjv/wlc/0-1/" target="_blank"><em>segullah</em></a></td><td>"peculiar treasure"</td><td>King's personal treasure — crown jewels, not tax revenue</td></tr>
+<tr><td>מַמְלֶכֶת כֹּהֲנִים</td><td><a href="https://www.blueletterbible.org/lexicon/h3548/kjv/wlc/0-1/" target="_blank"><em>mamlekhet kohanim</em></a></td><td>"kingdom of priests"</td><td>Entire nation functions as priests to the world</td></tr>
+<tr><td>גּוֹי קָדוֹשׁ</td><td><a href="https://www.blueletterbible.org/lexicon/h6918/kjv/wlc/0-1/" target="_blank"><em>goy qadosh</em></a></td><td>"holy nation"</td><td>Set apart for sacred purpose</td></tr>
+</table>
+<p>The phrase <em>goy qadosh</em> is striking: <a href="https://www.blueletterbible.org/lexicon/h1471/kjv/wlc/0-1/" target="_blank"><em>goy</em></a> (גּוֹי) typically means "nation" and is later used for Gentile nations. Here God applies it to Israel — reminding them that they are one nation among many, elevated not by inherent merit but by divine choice.</p>
+<p>The construct <em>mamlekhet kohanim</em> ("kingdom of priests") is grammatically a construct chain — the kingdom <em>consists of</em> priests. It is not a kingdom that <em>has</em> priests; it is a kingdom <em>made of</em> priests. Every citizen is a mediator.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Identity precedes instruction.</strong> God tells them who they ARE before telling them what to DO.</li>
+<li><strong>Priestly access for all.</strong> In pagan nations, only elite priests approached deity. Here, all Israel has access. Moses himself would later embody this vision. When Eldad and Medad prophesied in the camp and Joshua urged Moses to stop them, Moses replied: "Enviest thou for my sake? would God that <strong>all</strong> the LORD's people were prophets, and that the LORD would put his spirit upon them!" (<a href="https://www.blueletterbible.org/kjv/num/11/29/" target="_blank" data-ref="Numbers 11:29">Numbers 11:29</a>). Moses didn't want to guard prophetic authority for an elite — he wanted it spread to every person. That is the heart of "kingdom of priests."</li>
+<li><strong>Global purpose.</strong> "All the earth is mine" — Israel's calling was for the world's benefit, not Israel's privilege alone.</li>
+</ol>
+<h3>LDS Connection</h3>
+<p>Temple worship fulfills this passage. Through priesthood ordinances, Latter-day Saints become what God promised Israel: "a royal priesthood" (<a href="https://www.blueletterbible.org/kjv/1pe/2/9/s_1153009" target="_blank" data-ref="1 Peter 2:9">1 Peter 2:9</a>). Women and men alike participate in priestly ministry through temple ordinances and covenants.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 3: Preparation to Meet God (<a href="https://www.blueletterbible.org/kjv/exo/19/10/" target="_blank" data-ref="Exodus 19:10-11">Exodus 19:10-11</a>)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text (KJV)</h3>
+<blockquote>
+<p>"And the LORD said unto Moses, Go unto the people, and sanctify them to day and to morrow, and let them wash their clothes, And be ready against the third day: for the third day the LORD will come down in the sight of all the people upon mount Sinai."</p>
+</blockquote>
+<h3>Literary Analysis</h3>
+<p>Meeting God requires preparation. The physical acts—washing clothes, setting boundaries—symbolize spiritual readiness. Three days of preparation echo patterns throughout scripture.</p>
+<p><strong>Preparation requirements:</strong></p>
+<ul>
+<li>Sanctification (being set apart)</li>
+<li>Washing (external purity symbolizing internal)</li>
+<li>Time (three days—not rushed)</li>
+<li>Boundaries (can't casually approach holy God)</li>
+</ul>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Holiness demands preparation.</strong> We don't stumble into God's presence.</li>
+<li><strong>External symbolizes internal.</strong> Washing clothes points to heart purification.</li>
+<li><strong>Third day pattern.</strong> This "third day" resurrection timing appears throughout scripture (<a href="https://www.blueletterbible.org/kjv/hos/6/2/s_868002" target="_blank" data-ref="Hosea 6:2">Hosea 6:2</a>; <a href="https://www.blueletterbible.org/kjv/luk/24/46/s_997046" target="_blank" data-ref="Luke 24:46">Luke 24:46</a>).</li>
+</ol>
+<h3>LDS Connection</h3>
+<p>Temple preparation follows this pattern: worthiness interviews, temple recommends, temple clothing, reverent mindset. President Gordon B. Hinckley taught, "In missionary work, as in all else, preparation precedes power" (<a href="https://www.churchofjesuschrist.org/study/general-conference/1987/10/called-to-serve" target="_blank">cited in Elder Robert L. Backman, "Called to Serve," October 1987</a>). We prepare for sacred experiences through obedience and spiritual readiness.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 4: The Preamble (<a href="https://www.blueletterbible.org/kjv/exo/20/2/" target="_blank" data-ref="Exodus 20:2">Exodus 20:2</a>)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text (KJV)</h3>
+<blockquote>
+<p>"I am the LORD thy God, which have brought thee out of the land of Egypt, out of the house of bondage."</p>
+</blockquote>
+<h3>Literary and Hebrew Analysis</h3>
+<p>This verse is often overlooked — read as mere introduction to the "real" commandments. But it is foundational. Without it, the Ten Commandments become arbitrary rules. With it, they are the grateful response of rescued people.</p>
+<p>The Hebrew text reads:</p>
+<blockquote>
+<p><span dir="rtl" lang="he">אָנֹכִי יְהוָה אֱלֹהֶיךָ אֲשֶׁר הוֹצֵאתִיךָ מֵאֶרֶץ מִצְרַיִם מִבֵּית עֲבָדִים</span></p>
+</blockquote>
+<p>The opening word is אָנֹכִי (<a href="https://www.blueletterbible.org/lexicon/h595/kjv/wlc/0-1/" target="_blank"><em>anokhi</em></a>) — the emphatic first-person pronoun "<strong>I</strong>." Hebrew normally embeds the subject in the verb; the standalone pronoun exists for emphasis (as we learned in Hebrew Lesson 12). God begins His covenant not with a command but with a self-declaration: <strong>I, Myself</strong> — not a god, not any god, but I, the specific God who acted in your history.</p>
+<p>Note that this entire opening clause is a <strong>verbless sentence</strong> — there is no "am" in the Hebrew. God simply places His pronoun next to His name: "I — the LORD your God." The absence of a verb makes the statement timeless and absolute. (See Hebrew Lesson 13 for how verbless sentences work and why this matters theologically.)</p>
+<p>The verb הוֹצֵאתִיךָ (<a href="https://www.blueletterbible.org/lexicon/h3318/kjv/wlc/0-1/" target="_blank"><em>hotzeiticha</em></a>) is the Hiphil (causative) form of <em>yatza</em> (to go out) — literally "I caused you to go out." God did not merely open the door. He actively extracted them from bondage. The suffix <em>-cha</em> ("you") makes it personal and direct: I brought <em>you</em> out.</p>
+<p><strong>Two parts, one theological architecture:</strong></p>
+<ol>
+<li><strong>Identity statement:</strong> "I am the LORD thy God" — who God IS</li>
+<li><strong>Salvation history:</strong> "which have brought thee out" — what God HAS DONE</li>
+</ol>
+<p>This maps exactly to the suzerain-vassal treaty pattern: the preamble identifies the king, the historical prologue recounts his past benefits. God is using the most formal, legally binding structure available to anchor the commandments in relationship, not abstraction.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Grace before law.</strong> God saved Israel BEFORE giving commandments.</li>
+<li><strong>Relationship grounds obedience.</strong> We obey because He has already saved us.</li>
+<li><strong>The gospel order.</strong> NOT: Law → Obedience → Salvation. BUT: Salvation → Covenant → Obedience.</li>
+</ol>
+<h3>LDS Connection</h3>
+<p>This order mirrors our experience: Christ saves us by grace; we respond through covenant faithfulness. As President David O. McKay taught, "The purpose of the gospel is to make bad men good and good men better — to change men's lives" (<a href="https://www.churchofjesuschrist.org/study/general-conference/1972/04/be-a-missionary-always-everywhere-you-go" target="_blank">cited in Elder William H. Bennett, "Be a Missionary Always," April 1972</a>).</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 5: The Ten Commandments (<a href="https://www.blueletterbible.org/kjv/exo/20/3/" target="_blank" data-ref="Exodus 20:3-17">Exodus 20:3-17</a>)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Summary Overview</h3>
+<p><strong>First Table — Loving God:</strong></p>
+<table class="info-table">
+<tr><th>#</th><th>Command</th><th>Text</th><th>Core Issue</th></tr>
+<tr><td>1</td><td>No other gods</td><td>"Thou shalt have no other gods before me"</td><td>Loyalty</td></tr>
+<tr><td>2</td><td>No idols</td><td>"Thou shalt not make unto thee any graven image"</td><td>Worship</td></tr>
+<tr><td>3</td><td>Don't misuse name</td><td>"Thou shalt not take the name of the LORD... in vain"</td><td>Reverence</td></tr>
+<tr><td>4</td><td>Keep Sabbath</td><td>"Remember the sabbath day, to keep it holy"</td><td>Rest/Trust</td></tr>
+</table>
+<p><strong>Elder Dallin H. Oaks</strong> identified modern applications of the First Commandment:</p>
+<blockquote>
+<p>"Cultural and family traditions, political correctness, career aspirations, material possessions, recreational pursuits, power, prominence, and prestige" can all become false gods competing for our allegiance. He asked pointedly: "Are we serving priorities or gods ahead of the God we profess to worship?"</p>
+<p>(<a href="https://www.churchofjesuschrist.org/study/general-conference/2013/10/no-other-gods" target="_blank">No Other Gods</a>, October 2013)</p>
+</blockquote>
+<p><strong>Second Table — Loving Neighbor:</strong></p>
+<table class="info-table">
+<tr><th>#</th><th>Command</th><th>Text</th><th>Core Issue</th></tr>
+<tr><td>5</td><td>Honor parents</td><td>"Honour thy father and thy mother"</td><td>Authority</td></tr>
+<tr><td>6</td><td>No murder</td><td>"Thou shalt not kill"</td><td>Life</td></tr>
+<tr><td>7</td><td>No adultery</td><td>"Thou shalt not commit adultery"</td><td>Faithfulness</td></tr>
+<tr><td>8</td><td>No stealing</td><td>"Thou shalt not steal"</td><td>Property</td></tr>
+<tr><td>9</td><td>No false witness</td><td>"Thou shalt not bear false witness"</td><td>Truth</td></tr>
+<tr><td>10</td><td>No coveting</td><td>"Thou shalt not covet"</td><td>Desire</td></tr>
+</table>
+<h3>Theological Significance</h3>
+<p>Jesus summarized both tables: "Thou shalt love the Lord thy God with all thy heart... This is the first and great commandment. And the second is like unto it, Thou shalt love thy neighbour as thyself" (<a href="https://www.blueletterbible.org/kjv/mat/22/37-39/s_951037" target="_blank" data-ref="Matthew 22:37-39">Matt 22:37-39</a>). The commandments aren't restrictions but descriptions of how love operates in relationship with God and others.</p>
+<p><strong>Elder L. Tom Perry</strong> taught this principle beautifully:</p>
+<blockquote>
+<p>"Men and women receive their agency as a gift from God, but their liberty and, in turn, their eternal happiness come from obedience to His laws... His commandments are the road map He has given us to return to Him, which is the only way we will be eternally happy."</p>
+<p>(<a href="https://www.churchofjesuschrist.org/study/general-conference/2013/04/obedience-to-law-is-liberty" target="_blank">Obedience to Law Is Liberty</a>, April 2013)</p>
+</blockquote>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 6: God's Purpose in Testing (<a href="https://www.blueletterbible.org/kjv/exo/20/20/" target="_blank" data-ref="Exodus 20:20">Exodus 20:20</a>)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text (KJV)</h3>
+<blockquote>
+<p>"And Moses said unto the people, Fear not: for God is come to prove you, and that his fear may be before your faces, that ye sin not."</p>
+</blockquote>
+<h3>Literary Analysis</h3>
+<p>The people were terrified by the theophany (v. 18-19). Moses distinguishes two kinds of fear:</p>
+<ul>
+<li><strong>Terror</strong> (what they felt) — unhealthy, paralyzing</li>
+<li><strong>Reverence</strong> (what God wants) — healthy, sin-preventing</li>
+</ul>
+<p>The Hebrew word יָרֵא (<a href="https://www.blueletterbible.org/lexicon/h3372/kjv/wlc/0-1/" target="_blank"><em>yare</em></a>) carries both meanings. Context determines which applies.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Testing reveals hearts.</strong> God "proves" not to condemn but to develop.</li>
+<li><strong>Holy fear prevents sin.</strong> Awe of God creates healthy boundaries.</li>
+<li><strong>Commandments protect.</strong> Elder Russell M. Nelson taught that while "doctors cannot immunize against iniquity," spiritual protection comes from the Lord through covenant obedience (<a href="https://www.churchofjesuschrist.org/study/general-conference/1995/04/children-of-the-covenant" target="_blank">"Children of the Covenant," April 1995</a>).</li>
+</ol>
+<h3>LDS Connection</h3>
+<p><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/3?lang=eng&id=p25#p25" target="_blank" data-ref="Abraham 3:25">Abraham 3:25</a> uses similar language: "We will prove them herewith, to see if they will do all things whatsoever the Lord their God shall command them." Mortality is testing ground. Commandments are the curriculum.</p>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 4: WEEK 17: EXODUS 18-20 — WORD STUDIES -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">4. Week 17: Exodus 18-20 — Word Studies</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Word Study 1: Qadash (קָדַשׁ) — To Sanctify, Make Holy</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Hebrew Analysis</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h6942/kjv/wlc/0-1/" target="_blank" data-lexicon="to sanctify, consecrate, make holy" data-strongs="H6942" data-translit="qadash" data-original="קָדַשׁ" data-lang="hebrew" data-verse="<a href="https://www.blueletterbible.org/kjv/exo/19/10/" target="_blank" data-ref="Exodus 19:10">Exodus 19:10</a>">קָדַשׁ</a> (<a href="https://www.blueletterbible.org/lexicon/h6942/kjv/wlc/0-1/" target="_blank" data-lexicon="to sanctify, consecrate, make holy" data-strongs="H6942" data-translit="qadash" data-original="קָדַשׁ" data-lang="hebrew" data-verse="<a href="https://www.blueletterbible.org/kjv/exo/19/10/" target="_blank" data-ref="Exodus 19:10">Exodus 19:10</a>"><em>qadash</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/exo/19/10/s_69010" target="_blank" data-ref="Exodus 19:10">Exodus 19:10</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g37/kjv/wlc/0-1/" target="_blank" data-lexicon="to make holy, i.e. (ceremonially) purify or consecrate; (mentally) to venerate" data-strongs="G37" data-translit="hagiázō" data-original="ἁγιάζω" data-lang="greek" data-verse="">ἁγιάζω</a> (<a href="https://www.blueletterbible.org/lexicon/g37/kjv/tr/0-1/" target="_blank" data-lexicon="to make holy, i.e. (ceremonially) purify or consecrate; (mentally) to venerate" data-strongs="G37" data-translit="hagiázō" data-original="ἁγιάζω" data-lang="greek" data-verse=""><em>hagiazo</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/jhn/17/17/s_1014017" target="_blank" data-ref="John 17:17">John 17:17</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/sanctifico" target="_blank"><em>sanctifico</em></a></td><td><a href="https://www.blueletterbible.org/kjv/exo/19/10/s_69010" target="_blank" data-ref="Exodus 19:10">Exodus 19:10</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/sanctify" target="_blank">sanctify</a> (<a href="https://webstersdictionary1828.com/Dictionary/sanctify" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/sanctify" target="_blank">Etymonline: sanctify</a></td><td>—</td></tr>
+</table>
+<h3>Root and Derivatives</h3>
+<p>The root <a href="https://www.blueletterbible.org/lexicon/h6942/kjv/wlc/0-1/" target="_blank" data-lexicon="to sanctify, consecrate, make holy" data-strongs="H6942" data-translit="qadash" data-original="קָדַשׁ" data-lang="hebrew" data-verse="<a href="https://www.blueletterbible.org/kjv/exo/19/10/" target="_blank" data-ref="Exodus 19:10">Exodus 19:10</a>">ק-ד-ש</a>ׁ (<em>Q-D-Sh</em>) means "to set apart, consecrate, make holy." Key derivatives:</p>
+<ul>
+<li><strong>Qadash</strong> (<a href="https://www.blueletterbible.org/lexicon/h6942/kjv/wlc/0-1/" target="_blank" data-lexicon="to sanctify, consecrate, make holy" data-strongs="H6942" data-translit="qadash" data-original="קָדַשׁ" data-lang="hebrew" data-verse="<a href="https://www.blueletterbible.org/kjv/exo/19/10/" target="_blank" data-ref="Exodus 19:10">Exodus 19:10</a>">קָדַשׁ</a>): Verb, "to sanctify, consecrate, set apart"</li>
+<li><strong>Qodesh</strong> (<a href="https://www.blueletterbible.org/lexicon/h6944/kjv/wlc/0-1/" target="_blank" data-lexicon="holiness, sacred thing" data-strongs="H6944" data-translit="qodesh" data-original="קֹדֶשׁ" data-lang="hebrew" data-verse="<a href="https://www.blueletterbible.org/kjv/exo/15/11/" target="_blank" data-ref="Exodus 15:11">Exodus 15:11</a>">קֹדֶשׁ</a>): Noun, "holiness, sacredness, a holy thing"</li>
+<li><strong>Qadosh</strong> (<a href="https://www.blueletterbible.org/lexicon/h6918/kjv/wlc/0-1/" target="_blank" data-lexicon="holy, set apart" data-strongs="H6918" data-translit="qadosh" data-original="קָדוֹשׁ" data-lang="hebrew" data-verse="<a href="https://www.blueletterbible.org/kjv/isa/6/3/" target="_blank" data-ref="Isaiah 6:3">Isaiah 6:3</a>">קָדוֹשׁ</a>): Adjective, "holy, sacred, set apart"</li>
+<li><strong>Miqdash</strong> (<a href="https://www.blueletterbible.org/lexicon/h4720/kjv/wlc/0-1/" target="_blank" data-lexicon="sanctuary, holy place" data-strongs="H4720" data-translit="miqdash" data-original="מִקְדָּשׁ" data-lang="hebrew" data-verse="<a href="https://www.blueletterbible.org/kjv/exo/25/8/" target="_blank" data-ref="Exodus 25:8">Exodus 25:8</a>">מִקְדָּשׁ</a>): Noun, "sanctuary, holy place" (from the same root — the place <em>made holy</em>)</li>
+</ul>
+<h3>Semantic Range</h3>
+<p><a href="https://www.blueletterbible.org/lexicon/h6942/kjv/wlc/0-1/" target="_blank"><em>Qadash</em></a> encompasses:</p>
+<ol>
+<li><strong>Ritual consecration</strong> — setting apart objects, places, or people for sacred use</li>
+<li><strong>Moral purification</strong> — internal preparation to approach God</li>
+<li><strong>Divine election</strong> — God choosing and setting apart a people for Himself</li>
+<li><strong>Temporal dedication</strong> — sanctifying a day (the Sabbath, <a href="https://www.blueletterbible.org/kjv/exo/20/8/s_70008" target="_blank" data-ref="Exodus 20:8">Exodus 20:8</a>)</li>
+</ol>
+<h3>Key Passage</h3>
+<blockquote>
+<p>"Go unto the people, and <strong>sanctify</strong> [<a href="https://www.blueletterbible.org/lexicon/h6942/kjv/wlc/0-1/" target="_blank"><em>qadash</em></a>] them to day and to morrow, and let them wash their clothes, And be ready against the third day" (<a href="https://www.blueletterbible.org/kjv/exo/19/10-11/s_69010" target="_blank" data-ref="Exodus 19:10-11">Exodus 19:10-11</a>)</p>
+</blockquote>
+<p>The command to sanctify precedes the encounter with God. Israel must be set apart <em>before</em> meeting the Holy One. The external washing of garments symbolizes internal preparation — but the sanctification itself is not self-generated. Moses sanctifies the people (19:14); God sanctifies the mountain (19:23). Holiness flows downward from God's presence, not upward from human effort.</p>
+<h3>LDS Connection</h3>
+<p>The sacrament prayer asks that we might "always have his Spirit" — an ongoing sanctification renewed weekly. Temple ordinances consecrate us as God's own, echoing the Sinai pattern: preparation, covenant, and the promise of God's presence.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h6942/kjv/wlc/0-1/" target="_blank" data-lexicon="to sanctify, consecrate, make holy" data-strongs="H6942" data-translit="qadash" data-original="קָדַשׁ" data-lang="hebrew" data-verse="<a href="https://www.blueletterbible.org/kjv/exo/19/10/" target="_blank" data-ref="Exodus 19:10">Exodus 19:10</a>">קָדַשׁ</a> (<a href="https://www.blueletterbible.org/lexicon/h6942/kjv/wlc/0-1/" target="_blank" data-lexicon="to sanctify, consecrate, make holy" data-strongs="H6942" data-translit="qadash" data-original="קָדַשׁ" data-lang="hebrew" data-verse="<a href="https://www.blueletterbible.org/kjv/exo/19/10/" target="_blank" data-ref="Exodus 19:10">Exodus 19:10</a>"><em>qadash</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/exo/19/10/s_69010" target="_blank" data-ref="Exodus 19:10">Exodus 19:10</a></td></tr>
+<tr><td><strong>Greek (LXX/NT)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g37/kjv/wlc/0-1/" target="_blank" data-lexicon="to make holy, i.e. (ceremonially) purify or consecrate; (mentally) to venerate" data-strongs="G37" data-translit="hagiázō" data-original="ἁγιάζω" data-lang="greek" data-verse="">ἁγιάζω</a> (<a href="https://www.blueletterbible.org/lexicon/g37/kjv/tr/0-1/" target="_blank" data-lexicon="to make holy, i.e. (ceremonially) purify or consecrate; (mentally) to venerate" data-strongs="G37" data-translit="hagiázō" data-original="ἁγιάζω" data-lang="greek" data-verse=""><em>hagiazo</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/jhn/17/17/s_1014017" target="_blank" data-ref="John 17:17">John 17:17</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/sanctifico" target="_blank"><em>sanctifico</em></a></td><td><a href="https://www.blueletterbible.org/kjv/exo/19/10/s_69010" target="_blank" data-ref="Exodus 19:10">Exodus 19:10</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/sanctify" target="_blank">sanctify</a> (<a href="https://webstersdictionary1828.com/Dictionary/sanctify" target="_blank">1828</a>) · <a href="https://www.merriam-webster.com/dictionary/holy" target="_blank">holy</a> (<a href="https://webstersdictionary1828.com/Dictionary/holy" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/holy" target="_blank">Etymonline: holy</a></td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 2: Segullah (סְגֻלָּה) — Peculiar Treasure</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Hebrew Analysis</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Hebrew</strong></td><td>סְגֻלָּה (<a href="https://www.blueletterbible.org/lexicon/h5459/kjv/wlc/0-1/" target="_blank" data-lexicon="possession, propertyvalued property, peculiar treasuretreasure" data-strongs="H5459" data-translit="sᵊḡullâ" data-original="סְגֻלָּה" data-lang="hebrew" data-verse=""><em>segullah</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/exo/19/5/s_69005" target="_blank" data-ref="Exodus 19:5">Exodus 19:5</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td>περιούσιος (<a href="https://www.blueletterbible.org/lexicon/g4041/kjv/tr/0-1/" target="_blank" data-lexicon="that which is one's own, belonging to one's possessionsa people selected by God from the other nations for his own po..." data-strongs="G4041" data-translit="periousios" data-original="περιούσιος" data-lang="greek" data-verse=""><em>periousios</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/tit/2/14/s_1131014" target="_blank" data-ref="Titus 2:14">Titus 2:14</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/peculium" target="_blank"><em>peculium</em></a></td><td><a href="https://www.blueletterbible.org/kjv/exo/19/5/s_69005" target="_blank" data-ref="Exodus 19:5">Exodus 19:5</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/peculiar" target="_blank">peculiar</a> (<a href="https://webstersdictionary1828.com/Dictionary/peculiar" target="_blank">1828</a>) · <a href="https://www.merriam-webster.com/dictionary/treasure" target="_blank">treasure</a> (<a href="https://webstersdictionary1828.com/Dictionary/treasure" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/peculiar" target="_blank">Etymonline: peculiar</a></td><td>—</td></tr>
+</table>
+<h3>Etymology and Meaning</h3>
+<p>The root ס-ג-ל (<a href="https://www.blueletterbible.org/lexicon/h5459/kjv/wlc/0-1/" target="_blank"><em>S-G-L</em></a>) appears in Akkadian as <em>sikiltum</em>, referring to a king's private treasury — his personal property as distinct from the state treasury. A <a href="https://www.blueletterbible.org/lexicon/h5459/kjv/wlc/0-1/" target="_blank"><em>segullah</em></a> is not merely "property" but the king's most valued, personally guarded possession: crown jewels, not tax revenue.</p>
+<p>The English "peculiar" in the KJV preserves this sense perfectly — from Latin <em>peculium</em>, meaning "private property" (related to <em>pecus</em>, cattle — one's personal herd). It has nothing to do with "strange" or "odd."</p>
+<h3>Modern Translations</h3>
+<table class="info-table">
+<tr><th>Translation</th><th>Rendering</th></tr>
+<tr><td>KJV</td><td>"peculiar treasure"</td></tr>
+<tr><td>ESV</td><td>"treasured possession"</td></tr>
+<tr><td>NIV</td><td>"treasured possession"</td></tr>
+<tr><td>NKJV</td><td>"special treasure"</td></tr>
+<tr><td>NASB</td><td>"My own possession"</td></tr>
+</table>
+<h3>Key Passage</h3>
+<blockquote>
+<p>"If ye will obey my voice indeed, and keep my covenant, then ye shall be a <strong>peculiar treasure</strong> [<a href="https://www.blueletterbible.org/lexicon/h5459/kjv/wlc/0-1/" target="_blank"><em>segullah</em></a>] unto me above all people: for all the earth is mine" (<a href="https://www.blueletterbible.org/kjv/exo/19/5/s_69005" target="_blank" data-ref="Exodus 19:5">Exodus 19:5</a>)</p>
+</blockquote>
+<p>The phrase "for all the earth is mine" is critical. God is not claiming Israel because He lacks options. All nations belong to Him. But Israel is His <a href="https://www.blueletterbible.org/lexicon/h5459/kjv/wlc/0-1/" target="_blank"><em>segullah</em></a> — chosen not by default but by desire. Among all His possessions, this one He holds closest.</p>
+<h3>LDS Connection</h3>
+<p>Being God's <a href="https://www.blueletterbible.org/lexicon/h5459/kjv/wlc/0-1/" target="_blank"><em>segullah</em></a> transforms identity: we don't serve to earn His love; we serve because we already have it. God knows each of us personally and treasures us individually — not as a mass, but as His own.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Hebrew</strong></td><td>סְגֻלָּה (<a href="https://www.blueletterbible.org/lexicon/h5459/kjv/wlc/0-1/" target="_blank" data-lexicon="possession, propertyvalued property, peculiar treasuretreasure" data-strongs="H5459" data-translit="sᵊḡullâ" data-original="סְגֻלָּה" data-lang="hebrew" data-verse=""><em>segullah</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/exo/19/5/s_69005" target="_blank" data-ref="Exodus 19:5">Exodus 19:5</a></td></tr>
+<tr><td><strong>Greek (LXX/NT)</strong></td><td>περιούσιος (<a href="https://www.blueletterbible.org/lexicon/g4041/kjv/tr/0-1/" target="_blank" data-lexicon="that which is one's own, belonging to one's possessionsa people selected by God from the other nations for his own po..." data-strongs="G4041" data-translit="periousios" data-original="περιούσιος" data-lang="greek" data-verse=""><em>periousios</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/tit/2/14/s_1131014" target="_blank" data-ref="Titus 2:14">Titus 2:14</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/peculium" target="_blank"><em>peculium</em></a></td><td><a href="https://www.blueletterbible.org/kjv/exo/19/5/s_69005" target="_blank" data-ref="Exodus 19:5">Exodus 19:5</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/peculiar" target="_blank">peculiar</a> (<a href="https://webstersdictionary1828.com/Dictionary/peculiar" target="_blank">1828</a>) · <a href="https://www.merriam-webster.com/dictionary/treasure" target="_blank">treasure</a> (<a href="https://webstersdictionary1828.com/Dictionary/treasure" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/peculiar" target="_blank">Etymonline: peculiar</a></td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 3: Kohen (כֹּהֵן) — Priest</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Hebrew Analysis</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Hebrew</strong></td><td>כֹּהֵן (<a href="https://www.blueletterbible.org/lexicon/h3548/kjv/wlc/0-1/" target="_blank" data-lexicon="priest, principal officer or chief ruler priest-king (Melchizedek, Messiah) pagan priests priests of Jehovah Levitica..." data-strongs="H3548" data-translit="kōhēn" data-original="כָּהַן" data-lang="hebrew" data-verse=""><em>kohen</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/exo/19/6/s_69006" target="_blank" data-ref="Exodus 19:6">Exodus 19:6</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td>ἱεράτευμα (<a href="https://www.blueletterbible.org/lexicon/g2406/kjv/tr/0-1/" target="_blank" data-lexicon="the office of a priest the order or body of priests" data-strongs="G2406" data-translit="hierateuma" data-original="ἱεράτευμα" data-lang="greek" data-verse=""><em>hierateuma</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/1pe/2/9/s_1153009" target="_blank" data-ref="1 Peter 2:9">1 Peter 2:9</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/sacerdos" target="_blank"><em>sacerdos</em></a></td><td><a href="https://www.blueletterbible.org/kjv/exo/19/6/s_69006" target="_blank" data-ref="Exodus 19:6">Exodus 19:6</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/priest" target="_blank">priest</a> (<a href="https://webstersdictionary1828.com/Dictionary/priest" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/priest" target="_blank">Etymonline: priest</a></td><td>—</td></tr>
+</table>
+<h3>Root and Derivatives</h3>
+<p>The root כ-ה-ן (<a href="https://www.blueletterbible.org/lexicon/h3547/kjv/wlc/0-1/" target="_blank"><em>K-H-N</em></a>) carries the sense of ministering before God and mediating between the divine and human realms. Key forms:</p>
+<ul>
+<li><a href="https://www.blueletterbible.org/lexicon/h3547/kjv/wlc/0-1/" target="_blank"><strong>Kohen</strong></a> (כֹּהֵן): Noun, "priest"</li>
+<li><strong>Kehunnah</strong> (כְּהֻנָּה): Noun, "priesthood, priestly office"</li>
+<li><strong>Kohen Gadol</strong> (כֹּהֵן גָּדוֹל): "High Priest" (literally "great priest")</li>
+</ul>
+<h3>The Revolutionary Phrase</h3>
+<p>The construct phrase in <a href="https://www.blueletterbible.org/kjv/exo/19/6/s_69006" target="_blank" data-ref="Exodus 19:6">Exodus 19:6</a> is מַמְלֶכֶת כֹּהֲנִים (<em>mamlekhet kohanim</em>) — "a kingdom of priests." In the ancient Near East, priests were an elite class with exclusive access to deity. Only they could enter sacred precincts, offer sacrifice, and mediate divine will. The idea that an <em>entire nation</em> could function as priests was without parallel.</p>
+<p>This is not abolishing priestly office (the Levitical priesthood will be established soon). It is declaring that Israel as a whole has a priestly <em>calling</em> — to mediate between God and the nations, to be the world's intercessors.</p>
+<h3>Key Passage</h3>
+<blockquote>
+<p>"And ye shall be unto me a <strong>kingdom of priests</strong> [<em>mamlekhet kohanim</em>], and an holy nation" (<a href="https://www.blueletterbible.org/kjv/exo/19/6/s_69006" target="_blank" data-ref="Exodus 19:6">Exodus 19:6</a>)</p>
+</blockquote>
+<h3>New Testament Fulfillment</h3>
+<p>Peter applies this language directly to the Church:</p>
+<blockquote>
+<p>"But ye are a chosen generation, a <strong>royal priesthood</strong>, an holy nation, a peculiar people" (<a href="https://www.blueletterbible.org/kjv/1pe/2/9/s_1153009" target="_blank" data-ref="1 Peter 2:9">1 Peter 2:9</a>)</p>
+</blockquote>
+<blockquote>
+<p>"And hath made us kings and <strong>priests</strong> unto God and his Father" (<a href="https://www.blueletterbible.org/kjv/rev/1/6/s_1168006" target="_blank" data-ref="Revelation 1:6">Revelation 1:6</a>)</p>
+</blockquote>
+<h3>LDS Connection</h3>
+<p>Temple worship fulfills this passage. All endowed members — men and women — participate in priestly functions through temple ordinances. The "kingdom of priests" is not metaphor; it is covenant identity, realized through sacred ordinances.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Hebrew</strong></td><td>כֹּהֵן (<a href="https://www.blueletterbible.org/lexicon/h3548/kjv/wlc/0-1/" target="_blank" data-lexicon="priest, principal officer or chief ruler priest-king (Melchizedek, Messiah) pagan priests priests of Jehovah Levitica..." data-strongs="H3548" data-translit="kōhēn" data-original="כָּהַן" data-lang="hebrew" data-verse=""><em>kohen</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/exo/19/6/s_69006" target="_blank" data-ref="Exodus 19:6">Exodus 19:6</a></td></tr>
+<tr><td><strong>Greek (LXX/NT)</strong></td><td>ἱεράτευμα (<a href="https://www.blueletterbible.org/lexicon/g2406/kjv/tr/0-1/" target="_blank" data-lexicon="the office of a priest the order or body of priests" data-strongs="G2406" data-translit="hierateuma" data-original="ἱεράτευμα" data-lang="greek" data-verse=""><em>hierateuma</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/1pe/2/9/s_1153009" target="_blank" data-ref="1 Peter 2:9">1 Peter 2:9</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/sacerdos" target="_blank"><em>sacerdos</em></a></td><td><a href="https://www.blueletterbible.org/kjv/exo/19/6/s_69006" target="_blank" data-ref="Exodus 19:6">Exodus 19:6</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/priest" target="_blank">priest</a> (<a href="https://webstersdictionary1828.com/Dictionary/priest" target="_blank">1828</a>) · <a href="https://www.merriam-webster.com/dictionary/minister" target="_blank">minister</a> (<a href="https://webstersdictionary1828.com/Dictionary/minister" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/priest" target="_blank">Etymonline: priest</a></td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 4: Yare (יָרֵא) — Fear, Reverence</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Hebrew Analysis</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Hebrew</strong></td><td>יָרֵא (<a href="https://www.blueletterbible.org/lexicon/h3372/kjv/wlc/0-1/" target="_blank" data-lexicon="to fear, revere, stand in awe" data-strongs="H3372" data-translit="yare" data-original="יָרֵא" data-lang="hebrew" data-verse="<a href="https://www.blueletterbible.org/kjv/gen/22/12/" target="_blank" data-ref="Genesis 22:12">Genesis 22:12</a>"><em>yare</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/exo/20/20/s_70020" target="_blank" data-ref="Exodus 20:20">Exodus 20:20</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g5399/kjv/wlc/0-1/" target="_blank" data-lexicon="to put to flight by terrifying (to scare away)to put to flight, to fleeto fear, be afraidto be struck with fear" data-strongs="G5399" data-translit="phobeō" data-original="φοβέω" data-lang="greek" data-verse="">φοβέω</a> (<a href="https://www.blueletterbible.org/lexicon/g5399/kjv/tr/0-1/" target="_blank" data-lexicon="to put to flight by terrifying (to scare away)to put to flight, to fleeto fear, be afraidto be struck with fear" data-strongs="G5399" data-translit="phobeō" data-original="φοβέω" data-lang="greek" data-verse=""><em>phobeo</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/mat/10/28/s_939028" target="_blank" data-ref="Matthew 10:28">Matthew 10:28</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/timeo" target="_blank"><em>timeo</em></a></td><td><a href="https://www.blueletterbible.org/kjv/exo/20/20/s_70020" target="_blank" data-ref="Exodus 20:20">Exodus 20:20</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/fear" target="_blank">fear</a> (<a href="https://webstersdictionary1828.com/Dictionary/fear" target="_blank">1828</a>) · <a href="https://www.merriam-webster.com/dictionary/reverence" target="_blank">reverence</a> (<a href="https://webstersdictionary1828.com/Dictionary/reverence" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/fear" target="_blank">Etymonline: fear</a></td><td>—</td></tr>
+</table>
+<h3>Root and Derivatives</h3>
+<p>The root <a href="https://www.blueletterbible.org/lexicon/h3372/kjv/wlc/0-1/" target="_blank" data-lexicon="to fear, revere, stand in awe" data-strongs="H3372" data-translit="yare" data-original="יָרֵא" data-lang="hebrew" data-verse="<a href="https://www.blueletterbible.org/kjv/gen/22/12/" target="_blank" data-ref="Genesis 22:12">Genesis 22:12</a>">י-ר-א</a> (<em>Y-R-A</em>) spans a semantic range from terror to worship. Key forms:</p>
+<ul>
+<li><a href="https://www.blueletterbible.org/lexicon/h3376/kjv/wlc/0-1/" target="_blank"><strong>Yare</strong></a> (יָרֵא): Verb/adjective, "to fear, to be afraid; one who fears"</li>
+<li><strong>Yir'ah</strong> (יִרְאָה): Noun, "fear, reverence, awe"</li>
+<li><a href="https://www.blueletterbible.org/lexicon/h4172/kjv/wlc/0-1/" target="_blank"><strong>Mora</strong></a> (מוֹרָא): Noun, "fear, dread, awesome thing"</li>
+<li><strong>Nora</strong> (נוֹרָא): Adjective, "fearsome, awesome, dreadful" (used of God in <a href="https://www.blueletterbible.org/kjv/deu/10/17/s_163017" target="_blank" data-ref="Deuteronomy 10:17">Deuteronomy 10:17</a>)</li>
+</ul>
+<h3>The Two Fears of Exodus 20</h3>
+<p>Moses uses the same Hebrew root in two opposite senses within a single verse:</p>
+<blockquote>
+<p>"<strong>Fear not</strong> [<em>al-tira'u</em>]: for God is come to prove you, and that his <strong>fear</strong> [<em>yir'ato</em>] may be before your faces, that ye sin not" (<a href="https://www.blueletterbible.org/kjv/exo/20/20/s_70020" target="_blank" data-ref="Exodus 20:20">Exodus 20:20</a>)</p>
+</blockquote>
+<table class="info-table">
+<tr><th>Hebrew</th><th>Meaning in Context</th></tr>
+<tr><td>אַל־תִּירָאוּ (<em>al-tira'u</em>)</td><td>Do not be <strong>terrified</strong> — stop panicking</td></tr>
+<tr><td>יִרְאָתוֹ (<em>yir'ato</em>)</td><td>His <strong>reverence</strong> — healthy awe that prevents sin</td></tr>
+</table>
+<p>Moses is not contradicting himself. He is distinguishing between paralyzing dread (which distances us from God) and reverent awe (which draws us close while keeping us humble). Terror drives people away — the people "removed, and stood afar off" (<a href="https://www.blueletterbible.org/kjv/exo/20/18/s_70018" target="_blank" data-ref="Exodus 20:18">Exodus 20:18</a>). Reverence draws us near with appropriate gravity.</p>
+<h3>Key Passage</h3>
+<blockquote>
+<p>"The <strong>fear</strong> of the LORD is the beginning of wisdom" (<a href="https://www.blueletterbible.org/kjv/pro/9/10/s_637010" target="_blank" data-ref="Proverbs 9:10">Proverbs 9:10</a>)</p>
+</blockquote>
+<p>This is not cowering dread but the foundational posture of a creature before the Creator — the recognition that God is God and we are not.</p>
+<h3>LDS Connection</h3>
+<p>We approach God "with confidence" (<a href="https://www.blueletterbible.org/kjv/heb/4/16/s_1137016" target="_blank" data-ref="Hebrews 4:16">Hebrews 4:16</a>) but not casualness. Healthy reverence shapes how we pray, worship, and speak about sacred things. The temple embodies this balance: we are welcomed into God's house but enter with preparation, appropriate clothing, and hushed tones.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Hebrew</strong></td><td>יָרֵא (<a href="https://www.blueletterbible.org/lexicon/h3372/kjv/wlc/0-1/" target="_blank" data-lexicon="to fear, revere, stand in awe" data-strongs="H3372" data-translit="yare" data-original="יָרֵא" data-lang="hebrew" data-verse="<a href="https://www.blueletterbible.org/kjv/gen/22/12/" target="_blank" data-ref="Genesis 22:12">Genesis 22:12</a>"><em>yare</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/exo/20/20/s_70020" target="_blank" data-ref="Exodus 20:20">Exodus 20:20</a></td></tr>
+<tr><td><strong>Greek (LXX/NT)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g5399/kjv/wlc/0-1/" target="_blank" data-lexicon="to put to flight by terrifying (to scare away)to put to flight, to fleeto fear, be afraidto be struck with fear" data-strongs="G5399" data-translit="phobeō" data-original="φοβέω" data-lang="greek" data-verse="">φοβέω</a> (<a href="https://www.blueletterbible.org/lexicon/g5399/kjv/tr/0-1/" target="_blank" data-lexicon="to put to flight by terrifying (to scare away)to put to flight, to fleeto fear, be afraidto be struck with fear" data-strongs="G5399" data-translit="phobeō" data-original="φοβέω" data-lang="greek" data-verse=""><em>phobeo</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/mat/10/28/s_939028" target="_blank" data-ref="Matthew 10:28">Matthew 10:28</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/timeo" target="_blank"><em>timeo</em></a>, <a href="https://logeion.uchicago.edu/reverentia" target="_blank"><em>reverentia</em></a></td><td><a href="https://www.blueletterbible.org/kjv/exo/20/20/s_70020" target="_blank" data-ref="Exodus 20:20">Exodus 20:20</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/fear" target="_blank">fear</a> (<a href="https://webstersdictionary1828.com/Dictionary/fear" target="_blank">1828</a>) · <a href="https://www.merriam-webster.com/dictionary/awe" target="_blank">awe</a> (<a href="https://webstersdictionary1828.com/Dictionary/awe" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/fear" target="_blank">Etymonline: fear</a></td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 5: Torah (תּוֹרָה) — Instruction, Law</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Hebrew Analysis</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Hebrew</strong></td><td>תּוֹרָה (<a href="https://www.blueletterbible.org/lexicon/h8451/kjv/wlc/0-1/" target="_blank" data-lexicon="instruction, law" data-strongs="H8451" data-translit="torah" data-original="תּוֹרָה" data-lang="hebrew" data-verse="<a href="https://www.blueletterbible.org/kjv/deu/4/44/" target="_blank" data-ref="Deuteronomy 4:44">Deuteronomy 4:44</a>"><em>Torah</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/exo/18/16/s_68016" target="_blank" data-ref="Exodus 18:16">Exodus 18:16, 20</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g3551/kjv/wlc/0-1/" target="_blank" data-lexicon="anything established, anything received by usage, a custom, a law, a commandof any law whatsoevera law or rule produc..." data-strongs="G3551" data-translit="nomos" data-original="νόμος" data-lang="greek" data-verse="">νόμος</a> (<a href="https://www.blueletterbible.org/lexicon/g3551/kjv/tr/0-1/" target="_blank" data-lexicon="anything established, anything received by usage, a custom, a law, a commandof any law whatsoevera law or rule produc..." data-strongs="G3551" data-translit="nomos" data-original="νόμος" data-lang="greek" data-verse=""><em>nomos</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/rom/3/21/s_1049021" target="_blank" data-ref="Romans 3:21">Romans 3:21</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/lex" target="_blank"><em>lex</em></a></td><td><a href="https://www.blueletterbible.org/kjv/exo/18/16/s_68016" target="_blank" data-ref="Exodus 18:16">Exodus 18:16</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/law" target="_blank">law</a> (<a href="https://webstersdictionary1828.com/Dictionary/law" target="_blank">1828</a>) · <a href="https://www.merriam-webster.com/dictionary/instruction" target="_blank">instruction</a> (<a href="https://webstersdictionary1828.com/Dictionary/instruction" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/law" target="_blank">Etymonline: law</a></td><td>—</td></tr>
+</table>
+<h3>Root and Derivatives</h3>
+<p>The root י-ר-ה (<a href="https://www.blueletterbible.org/lexicon/h3138/kjv/wlc/0-1/" target="_blank"><em>Y-R-H</em></a>) means "to throw, to cast, to direct, to teach." Key derivatives:</p>
+<ul>
+<li><a href="https://www.blueletterbible.org/lexicon/h8452/kjv/wlc/0-1/" target="_blank"><strong>Torah</strong></a> (תּוֹרָה): Noun, "instruction, teaching, law, direction"</li>
+<li><a href="https://www.blueletterbible.org/lexicon/h3404/kjv/wlc/0-1/" target="_blank"><strong>Yarah</strong></a> (יָרָה): Verb, "to throw, to shoot (an arrow), to teach, to point the way"</li>
+<li><strong>Moreh</strong> (<a href="https://www.blueletterbible.org/lexicon/h4176/kjv/wlc/0-1/" target="_blank" data-lexicon="teacher, instructor (from root Y-R-H)" data-strongs="H4176" data-translit="moreh" data-original="מוֹרֶה" data-lang="hebrew" data-verse="<a href="https://www.blueletterbible.org/kjv/gen/12/6/" target="_blank" data-ref="Genesis 12:6">Genesis 12:6</a>">מוֹרֶה</a>): Noun, "teacher, one who directs" (from the same root)</li>
+</ul>
+<p>The root image is of an archer shooting an arrow toward a target. Torah is God <em>aiming</em> His people toward the right path. The related word for sin — <a href="https://www.blueletterbible.org/lexicon/h2398/kjv/wlc/0-1/" target="_blank"><em>chata</em></a> (חָטָא) — means "to miss the mark." Torah directs; sin misses.</p>
+<h3>Why "Instruction" Not Just "Law"</h3>
+<p>The Greek <a href="https://www.blueletterbible.org/lexicon/g3551/kjv/tr/0-1/" target="_blank"><em>nomos</em></a> and English "law" emphasize legislation and rules. But the Hebrew <a href="https://www.blueletterbible.org/lexicon/h8451/kjv/wlc/0-1/" target="_blank"><em>Torah</em></a> is broader: it is instruction, guidance, direction from a parent to a child. Translating <a href="https://www.blueletterbible.org/lexicon/h8451/kjv/wlc/0-1/" target="_blank"><em>Torah</em></a> as merely "law" flattens the relational dimension. God is not a distant legislator issuing statutes; He is a Father teaching His children how to walk.</p>
+<h3>Key Passage</h3>
+<blockquote>
+<p>"Be thou for the people to God-ward, that thou mayest bring the causes unto God: And thou shalt teach them ordinances and <strong>laws</strong> [<a href="https://www.blueletterbible.org/lexicon/h8451/kjv/wlc/0-1/" target="_blank"><em>torot</em></a>, plural of <a href="https://www.blueletterbible.org/lexicon/h8451/kjv/wlc/0-1/" target="_blank"><em>Torah</em></a>], and shalt shew them the way wherein they must walk" (<a href="https://www.blueletterbible.org/kjv/exo/18/19-20/s_68019" target="_blank" data-ref="Exodus 18:19-20">Exodus 18:19-20</a>)</p>
+</blockquote>
+<p>This verse appears <em>before</em> Sinai — Moses is already teaching Torah. The Ten Commandments are not the beginning of Torah but its crystallization. Torah is the entire package: instruction, direction, covenant guidance for how to live as God's people.</p>
+<h3>LDS Connection</h3>
+<p>The Jewish name for the five books of Moses — Torah — reframes how we read them. These are not primarily a law code but a teaching document. God is the ultimate <a href="https://www.blueletterbible.org/lexicon/h4175/kjv/wlc/0-1/" target="_blank"><em>moreh</em></a> (teacher), and the scriptures are His curriculum. "The glory of God is intelligence" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/93?lang=eng&id=p36#p36" target="_blank" data-ref="D&C 93:36">D&C 93:36</a>) resonates with a God who instructs before He commands.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Hebrew</strong></td><td>תּוֹרָה (<a href="https://www.blueletterbible.org/lexicon/h8451/kjv/wlc/0-1/" target="_blank" data-lexicon="instruction, law" data-strongs="H8451" data-translit="torah" data-original="תּוֹרָה" data-lang="hebrew" data-verse="<a href="https://www.blueletterbible.org/kjv/deu/4/44/" target="_blank" data-ref="Deuteronomy 4:44">Deuteronomy 4:44</a>"><em>Torah</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/exo/18/16/s_68016" target="_blank" data-ref="Exodus 18:16">Exodus 18:16</a></td></tr>
+<tr><td><strong>Greek (LXX/NT)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g3551/kjv/wlc/0-1/" target="_blank" data-lexicon="anything established, anything received by usage, a custom, a law, a commandof any law whatsoevera law or rule produc..." data-strongs="G3551" data-translit="nomos" data-original="νόμος" data-lang="greek" data-verse="">νόμος</a> (<a href="https://www.blueletterbible.org/lexicon/g3551/kjv/tr/0-1/" target="_blank" data-lexicon="anything established, anything received by usage, a custom, a law, a commandof any law whatsoevera law or rule produc..." data-strongs="G3551" data-translit="nomos" data-original="νόμος" data-lang="greek" data-verse=""><em>nomos</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/rom/3/21/s_1049021" target="_blank" data-ref="Romans 3:21">Romans 3:21</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/lex" target="_blank"><em>lex</em></a></td><td><a href="https://www.blueletterbible.org/kjv/exo/18/16/s_68016" target="_blank" data-ref="Exodus 18:16">Exodus 18:16</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/law" target="_blank">law</a> (<a href="https://webstersdictionary1828.com/Dictionary/law" target="_blank">1828</a>) · <a href="https://www.merriam-webster.com/dictionary/instruction" target="_blank">instruction</a> (<a href="https://webstersdictionary1828.com/Dictionary/instruction" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/law" target="_blank">Etymonline: law</a></td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 6: Edut (עֵדוּת) — Testimony, Witness</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Hebrew Analysis</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Hebrew</strong></td><td>עֵדוּת (<a href="https://www.blueletterbible.org/lexicon/h5715/kjv/wlc/0-1/" target="_blank" data-lexicon="testimony" data-strongs="H5715" data-translit="ʿēḏûṯ" data-original="עִדּוֹ" data-lang="hebrew" data-verse=""><em>edut</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/exo/25/16/s_75016" target="_blank" data-ref="Exodus 25:16">Exodus 25:16</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td>μαρτύριον (<a href="https://www.blueletterbible.org/lexicon/g3142/kjv/tr/0-1/" target="_blank" data-lexicon="testimony" data-strongs="G3142" data-translit="martyrion" data-original="μαρτύριον" data-lang="greek" data-verse=""><em>martyrion</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/act/7/44/s_1025044" target="_blank" data-ref="Acts 7:44">Acts 7:44</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/testimonium" target="_blank"><em>testimonium</em></a></td><td><a href="https://www.blueletterbible.org/kjv/exo/25/16/s_75016" target="_blank" data-ref="Exodus 25:16">Exodus 25:16</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/testimony" target="_blank">testimony</a> (<a href="https://webstersdictionary1828.com/Dictionary/testimony" target="_blank">1828</a>) · <a href="https://www.merriam-webster.com/dictionary/witness" target="_blank">witness</a> (<a href="https://webstersdictionary1828.com/Dictionary/witness" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/testimony" target="_blank">Etymonline: testimony</a></td><td>—</td></tr>
+</table>
+<h3>Root and Derivatives</h3>
+<p>The root ע-ו-ד (<a href="https://www.blueletterbible.org/lexicon/h5749/kjv/wlc/0-1/" target="_blank"><em>Ayin-Vav-Dalet</em></a>) carries the sense of witness, testimony, attestation. Key forms:</p>
+<ul>
+<li><strong>Edut</strong> (עֵדוּת): Noun, "testimony, witness, attestation"</li>
+<li><a href="https://www.blueletterbible.org/lexicon/h5707/kjv/wlc/0-1/" target="_blank"><strong>Ed</strong></a> (עֵד): Noun, "witness"</li>
+<li><a href="https://www.blueletterbible.org/lexicon/h5713/kjv/wlc/0-1/" target="_blank"><strong>Edah</strong></a> (עֵדָה): Noun, "congregation" (those gathered as witnesses)</li>
+</ul>
+<h3>Why "Tablets of Testimony"?</h3>
+<p>The stone tablets are not called "tablets of the law" in Hebrew. They are called לֻחֹת הָעֵדֻת (<em>luchot ha-edut</em>) — "<strong>tablets of the testimony</strong>" (<a href="https://www.blueletterbible.org/kjv/exo/31/18/s_81018" target="_blank" data-ref="Exodus 31:18">Exodus 31:18, 32</a>:15, 34:29). The ark that holds them is the אֲרוֹן הָעֵדֻת (<em>aron ha-edut</em>) — "<strong>ark of the testimony</strong>."</p>
+<p>This naming is theologically significant. The tablets are not primarily a legal document; they are a <em>witness</em> — God's testimony of who He is and what He expects. The covenant is not bureaucratic regulation but personal attestation: God declaring Himself and His relationship with Israel.</p>
+<h3>The Greek Connection</h3>
+<p>The Greek <a href="https://www.blueletterbible.org/lexicon/g3142/kjv/tr/0-1/" target="_blank"><em>martyrion</em></a> (witness, testimony) gives us the English word <strong>martyr</strong> — one who witnesses unto death. The tablets are God's "martyrion" — His witness placed in the most sacred space in Israel. Stephen refers to the "tabernacle of witness" (<em>skene tou martyriou</em>) in <a href="https://www.blueletterbible.org/kjv/act/7/44/s_1025044" target="_blank" data-ref="Acts 7:44">Acts 7:44</a>, connecting the testimony at Sinai to the entire tabernacle system.</p>
+<h3>Key Passage</h3>
+<blockquote>
+<p>"And thou shalt put into the ark the <strong>testimony</strong> [<a href="https://www.blueletterbible.org/lexicon/h5715/kjv/wlc/0-1/" target="_blank"><em>edut</em></a>] which I shall give thee" (<a href="https://www.blueletterbible.org/kjv/exo/25/16/s_75016" target="_blank" data-ref="Exodus 25:16">Exodus 25:16</a>)</p>
+</blockquote>
+<p>The tablets of testimony were placed inside the Ark, beneath the mercy seat (<a href="https://www.blueletterbible.org/lexicon/h3727/kjv/wlc/0-1/" target="_blank"><em>kapporet</em></a>), where God's presence dwelt. God's testimony and God's mercy occupy the same sacred space.</p>
+<h3>LDS Connection</h3>
+<p>We speak of "bearing testimony" — being a witness. The tablets of <a href="https://www.blueletterbible.org/lexicon/h5715/kjv/wlc/0-1/" target="_blank"><em>edut</em></a> remind us that testimony is not opinion but witness: a declaration of what God has done and who He is. The sacrament table, like the Ark, holds the testimony of God's covenant with His people.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Reference</th></tr>
+<tr><td><strong>Hebrew</strong></td><td>עֵדוּת (<a href="https://www.blueletterbible.org/lexicon/h5715/kjv/wlc/0-1/" target="_blank" data-lexicon="testimony" data-strongs="H5715" data-translit="ʿēḏûṯ" data-original="עִדּוֹ" data-lang="hebrew" data-verse=""><em>edut</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/exo/25/16/s_75016" target="_blank" data-ref="Exodus 25:16">Exodus 25:16</a></td></tr>
+<tr><td><strong>Greek (LXX/NT)</strong></td><td>μαρτύριον (<a href="https://www.blueletterbible.org/lexicon/g3142/kjv/tr/0-1/" target="_blank" data-lexicon="testimony" data-strongs="G3142" data-translit="martyrion" data-original="μαρτύριον" data-lang="greek" data-verse=""><em>martyrion</em></a>)</td><td><a href="https://www.blueletterbible.org/kjv/act/7/44/s_1025044" target="_blank" data-ref="Acts 7:44">Acts 7:44</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://logeion.uchicago.edu/testimonium" target="_blank"><em>testimonium</em></a></td><td><a href="https://www.blueletterbible.org/kjv/exo/25/16/s_75016" target="_blank" data-ref="Exodus 25:16">Exodus 25:16</a> (Vg)</td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.merriam-webster.com/dictionary/testimony" target="_blank">testimony</a> (<a href="https://webstersdictionary1828.com/Dictionary/testimony" target="_blank">1828</a>) · <a href="https://www.merriam-webster.com/dictionary/witness" target="_blank">witness</a> (<a href="https://webstersdictionary1828.com/Dictionary/witness" target="_blank">1828</a>) · <a href="https://www.etymonline.com/word/testimony" target="_blank">Etymonline: testimony</a></td><td>—</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study Summary Table</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Hebrew</th><th>Transliteration</th><th>Strong's</th><th>Meaning</th><th>Key Verse</th></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h6942/kjv/wlc/0-1/" target="_blank" data-lexicon="to sanctify, consecrate, make holy" data-strongs="H6942" data-translit="qadash" data-original="קָדַשׁ" data-lang="hebrew" data-verse="<a href="https://www.blueletterbible.org/kjv/exo/19/10/" target="_blank" data-ref="Exodus 19:10">Exodus 19:10</a>">קָדַשׁ</a></td><td><a href="https://www.blueletterbible.org/lexicon/h6942/kjv/wlc/0-1/" target="_blank"><em>Qadash</em></a></td><td>H6942</td><td>To sanctify, set apart</td><td><a href="https://www.blueletterbible.org/kjv/exo/19/10/s_69010" target="_blank" data-ref="Exodus 19:10">Exodus 19:10</a></td></tr>
+<tr><td>סְגֻלָּה</td><td><a href="https://www.blueletterbible.org/lexicon/h5459/kjv/wlc/0-1/" target="_blank"><em>Segullah</em></a></td><td>H5459</td><td>Treasured possession</td><td><a href="https://www.blueletterbible.org/kjv/exo/19/5/s_69005" target="_blank" data-ref="Exodus 19:5">Exodus 19:5</a></td></tr>
+<tr><td>כֹּהֵן</td><td><a href="https://www.blueletterbible.org/lexicon/h3547/kjv/wlc/0-1/" target="_blank"><em>Kohen</em></a></td><td>H3548</td><td>Priest</td><td><a href="https://www.blueletterbible.org/kjv/exo/19/6/s_69006" target="_blank" data-ref="Exodus 19:6">Exodus 19:6</a></td></tr>
+<tr><td>יָרֵא</td><td><a href="https://www.blueletterbible.org/lexicon/h3376/kjv/wlc/0-1/" target="_blank"><em>Yare</em></a></td><td>H3372</td><td>Fear, reverence</td><td><a href="https://www.blueletterbible.org/kjv/exo/20/20/s_70020" target="_blank" data-ref="Exodus 20:20">Exodus 20:20</a></td></tr>
+<tr><td>תּוֹרָה</td><td><a href="https://www.blueletterbible.org/lexicon/h8452/kjv/wlc/0-1/" target="_blank"><em>Torah</em></a></td><td>H8451</td><td>Instruction, law, teaching</td><td><a href="https://www.blueletterbible.org/kjv/exo/18/16/s_68016" target="_blank" data-ref="Exodus 18:16">Exodus 18:16</a></td></tr>
+<tr><td>עֵדוּת</td><td><a href="https://www.blueletterbible.org/lexicon/h5715/kjv/wlc/0-1/" target="_blank"><em>Edut</em></a></td><td>H5715</td><td>Testimony, witness</td><td><a href="https://www.blueletterbible.org/kjv/exo/25/16/s_75016" target="_blank" data-ref="Exodus 25:16">Exodus 25:16</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 5: WEEK 17: JEWISH PERSPECTIVE -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">5. Week 17: Jewish Perspective</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Introduction</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The giving of the Torah at Sinai is the central event in Jewish religious consciousness—even more foundational than the Exodus itself. While the Exodus was liberation, Sinai was transformation: slaves became a covenant people. Jewish tradition has developed rich practices and interpretations around this moment. This section draws from rabbinic sources to deepen our understanding.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>1. Shavuot: The Feast of Weeks</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Biblical Foundation</h3>
+<p>Shavuot (שָׁבֻעוֹת, "Weeks") is one of the three pilgrimage festivals (with Passover and Sukkot). In the Torah, it's primarily an agricultural festival—celebrating the wheat harvest seven weeks after Passover (<a href="https://www.blueletterbible.org/kjv/lev/23/15-21/s_113015" target="_blank" data-ref="Leviticus 23:15-21">Lev 23:15-21</a>).</p>
+<h3>Rabbinic Development</h3>
+<p>Jewish tradition connected Shavuot with the giving of the Torah at Sinai. While not explicit in the Torah itself, rabbis calculated the timing:</p>
+<table class="info-table">
+<tr><th>Event</th><th>Date</th></tr>
+<tr><td>Exodus from Egypt</td><td>Nisan 15 (Passover)</td></tr>
+<tr><td>Arrival at Sinai</td><td>Sivan 1 (<a href="https://www.blueletterbible.org/kjv/exo/19/1/s_69001" target="_blank" data-ref="Exodus 19:1">Ex 19:1</a>, "third month")</td></tr>
+<tr><td>Ten Commandments given</td><td>Sivan 6 (50 days after Passover)</td></tr>
+</table>
+<p>This makes Shavuot the anniversary of receiving Torah—the Jewish "constitution."</p>
+<h3>Modern Observance</h3>
+<p><strong>Tikkun Leil Shavuot:</strong> The practice of staying awake all night studying Torah. According to midrash, Israel overslept on the morning God was to give the Torah, so Moses had to wake them. To atone for this, Jews stay awake all night demonstrating eagerness for God's word.</p>
+<p><strong>Reading the Ten Commandments:</strong> Synagogues read the Decalogue during Shavuot morning services.</p>
+<p><strong>Book of Ruth:</strong> Read during Shavuot because Ruth (a convert) exemplifies choosing Torah.</p>
+<h3>LDS Resonance</h3>
+<p>We "stay awake" spiritually through daily scripture study. Just as Jews annually renew their commitment to Torah, we weekly renew covenant through the sacrament. The spiritual alertness Shavuot cultivates—eagerness for God's word—applies to our preparation for Sabbath worship.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>2. Sanctification Before Meeting God</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text (<a href="https://www.blueletterbible.org/kjv/exo/19/10/" target="_blank" data-ref="Exodus 19:10-11">Exodus 19:10-11</a>, 14-15)</h3>
+<blockquote>
+<p>"Go unto the people, and sanctify them to day and to morrow, and let them wash their clothes, And be ready against the third day: for the third day the LORD will come down in the sight of all the people upon mount Sinai."</p>
+</blockquote>
+<h3>Rabbinic Interpretation</h3>
+<p>The Talmud (Shabbat 87a) carefully analyzes the three days of preparation. Moses added a day of sanctification beyond God's original command—demonstrating how Israel treated encounter with God with utmost seriousness.</p>
+<p><strong>Washing garments:</strong> The rabbis saw physical cleansing as symbol for spiritual preparation. Just as priests later washed before service, all Israel prepared bodily to meet the Holy One.</p>
+<p><strong>Boundaries:</strong> <a href="https://www.blueletterbible.org/kjv/exo/19/12-13/s_69012" target="_blank" data-ref="Exodus 19:12-13">Exodus 19:12-13</a> establishes limits—no touching the mountain on penalty of death. The Mekhilta notes that boundaries teach reverence: not everything holy is immediately accessible. Approach requires preparation.</p>
+<h3>Meaning</h3>
+<p>Three days of sanctification established a pattern: meeting God demands preparation. The temporal gap between invitation and encounter allowed Israel to ready themselves—physically, spiritually, communally. Holiness cannot be rushed.</p>
+<h3>LDS Resonance</h3>
+<p>Temple preparation follows this model: worthiness interviews, temple recommends, appropriate clothing, reverent mindset. We don't stumble into sacred space; we prepare to enter. The three-day pattern echoes in our Sabbath preparation—Saturday readying us for Sunday worship.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>3. The Two Tablets: What They Represent</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Rabbinic Teaching</h3>
+<p>The midrash and later tradition understood the two tablets as representing different dimensions:</p>
+<p><strong>One view:</strong></p>
+<ul>
+<li><strong>First tablet:</strong> Commands relating to God (1-5)</li>
+<li><strong>Second tablet:</strong> Commands relating to people (6-10)</li>
+</ul>
+<p><strong>Another view:</strong></p>
+<ul>
+<li>The tablets were duplicates (like treaty copies), one for God, one for Israel</li>
+</ul>
+<p><strong>Symbolic interpretations:</strong></p>
+<ul>
+<li>Two tablets = Two hands of God reaching to humanity</li>
+<li>Two tablets = Two witnesses (<a href="https://www.blueletterbible.org/kjv/deu/19/15/s_172015" target="_blank" data-ref="Deuteronomy 19:15">Deut 19:15</a>)</li>
+<li>Five on each = Corresponding to ten fingers, embedding Torah in our actions</li>
+</ul>
+<h3>The Broken Tablets</h3>
+<p>Moses broke the first tablets when he saw the golden calf (<a href="https://www.blueletterbible.org/kjv/exo/32/19/s_82019" target="_blank" data-ref="Exodus 32:19">Ex 32:19</a>). The Talmud (Menachot 99a) teaches that both the broken tablets and the whole tablets were kept in the Ark. This suggests that even our broken efforts at covenant faithfulness have value—God keeps our fragments alongside our wholeness.</p>
+<h3>LDS Resonance</h3>
+<p>The Book of Mormon carries this theme: the brass plates (whole), the gold plates (restored after loss), the 116 pages (broken, irreplaceable). Sacred things can be broken through sin but aren't forgotten. The Atonement makes whole what we have shattered.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>4. "All Israel Stood at Sinai"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Collective Experience</h3>
+<p>Jewish tradition emphasizes that ALL Israel—past, present, and future—stood at Sinai. The Midrash (Exodus Rabbah 28:6) teaches:</p>
+<blockquote>
+<p>"Not only with you alone do I make this covenant... but with those who are standing here with us today before the LORD our God, and also with those who are not here with us today" (<a href="https://www.blueletterbible.org/kjv/deu/29/14-15/s_182014" target="_blank" data-ref="Deuteronomy 29:14-15">Deut 29:14-15</a>).</p>
+</blockquote>
+<p>This was interpreted to mean that the souls of all future generations were present at Sinai. Every Jew—including converts—was "there."</p>
+<h3>Meaning</h3>
+<p>Sinai isn't just history; it's ongoing identity. Each generation inherits the covenant not as second-hand tradition but as living participation. The Shavuot liturgy makes this explicit: we celebrate receiving the Torah, not commemorating ancestors receiving it.</p>
+<h3>LDS Resonance</h3>
+<p>We understand this through temple work. Those who receive ordinances by proxy were, in a sense, "present" in the covenant when made. Additionally, all baptized members enter Sinai's covenant—grafted into Israel (<a href="https://www.blueletterbible.org/kjv/rom/11/17/s_1057017" target="_blank" data-ref="Romans 11:17">Rom 11:17</a>), standing where Israel stood.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>5. The Voice of God</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Rabbinic Description</h3>
+<p>The midrash imaginatively describes God's voice at Sinai:</p>
+<p><strong>Exodus Rabbah 5:9:</strong> "The voice went forth and was divided into seventy languages, so that all nations heard it."</p>
+<p><strong>Exodus Rabbah 29:9:</strong> "The voice went forth according to each person's capacity—elders heard according to their strength, young men according to theirs, children, women, and Moses each heard according to their capacity."</p>
+<h3>Meaning</h3>
+<p>Torah is universal (seventy languages = all nations) yet personal (each according to capacity). God's word adapts to the hearer without losing its integrity.</p>
+<h3>LDS Resonance</h3>
+<p>The Spirit speaks "according to their language, unto their understanding" (2 Ne 31:3). Scripture is both fixed (the text) and dynamic (Spirit-illuminated for each reader). The same verse can strike differently at different life stages—God's voice meeting our capacity.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>6. Why Sinai? A Desert Mountain</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Midrashic Reasoning</h3>
+<p><strong>Midrash Tehillim 68:9:</strong> The mountains argued over which would host the revelation. Mount Tabor claimed its height; Mount Carmel its beauty. God chose lowly Sinai—teaching that Torah is given to the humble, not the proud.</p>
+<p><strong>Mekhilta d'Rabbi Ishmael:</strong> Torah was given in the wilderness (<a href="https://www.blueletterbible.org/lexicon/h4057/kjv/wlc/0-1/" target="_blank"><em>midbar</em></a>) because:</p>
+<ol>
+<li>Like wilderness, Torah is free to all—ownerless, accessible</li>
+<li>Those who don't make themselves like wilderness (humble, open) cannot acquire Torah</li>
+<li>In the wilderness, there are no distractions—focus on God alone</li>
+</ol>
+<h3>The Linguistic Connection: Wilderness and Word</h3>
+<p>The Hebrew word for wilderness — מִדְבָּר (<a href="https://www.blueletterbible.org/lexicon/h4057/kjv/wlc/0-1/" target="_blank"><em>midbar</em></a>) — shares the root ד-ב-ר (<a href="https://www.blueletterbible.org/lexicon/h1696/kjv/wlc/0-1/" target="_blank"><em>D-B-R</em></a>) with דָּבָר (<a href="https://www.blueletterbible.org/lexicon/h1697/kjv/wlc/0-1/" target="_blank"><em>davar</em></a>), meaning "word, thing, matter." The wilderness is, at the level of the language itself, the <em>place of the word</em> — the space where God speaks and His people learn to hear.</p>
+<p>This is not coincidence. Israel spent forty years in the <a href="https://www.blueletterbible.org/lexicon/h4057/kjv/wlc/0-1/" target="_blank"><em>midbar</em></a> learning to receive and interpret God's <a href="https://www.blueletterbible.org/lexicon/h1697/kjv/wlc/0-1/" target="_blank"><em>davar</em></a>. The wilderness stripped away Egypt's distractions — its food, its security, its gods — and left Israel dependent on one thing: the word of the Lord. Manna came daily, but only in response to trust. Water came from the rock, but only after the prophet spoke. The wilderness was God's classroom, and silence was its pedagogy.</p>
+<h3>LDS Resonance</h3>
+<p>Sacred groves, lonely hills, humble rooms—God often reveals Himself in unlikely places. Joseph Smith's grove was obscure; the Sacred Grove didn't become famous until revelation made it so. Humility of setting matches required humility of heart.</p>
+<p>Our own wilderness seasons — times of loss, uncertainty, stripping away — often become the seasons when we hear God most clearly. When the noise of comfort and routine falls silent, the <a href="https://www.blueletterbible.org/lexicon/h1697/kjv/wlc/0-1/" target="_blank"><em>davar</em></a> becomes audible. The question the <a href="https://www.blueletterbible.org/lexicon/h4057/kjv/wlc/0-1/" target="_blank"><em>midbar</em></a> poses to each of us is the same one it posed to Israel: <em>Will you trust the word when there is nothing else to rely on?</em></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>7. Aseret HaDibrot: "Ten Words," Not "Ten Commandments"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Hebrew Name</h3>
+<p>The Hebrew Bible never calls the Decalogue "Ten Commandments." The phrase in <a href="https://www.blueletterbible.org/kjv/exo/34/28/s_84028" target="_blank" data-ref="Exodus 34:28">Exodus 34:28</a> is עֲשֶׂרֶת הַדְּבָרִים (<em>aseret ha-devarim</em>) — the "<strong>Ten Words</strong>" or "<strong>Ten Sayings</strong>." The Greek <em>Dekalogos</em> (δεκάλογος, "Decalogue") preserves this: <em>deka</em> (ten) + <em>logos</em> (words).</p>
+<h3>Why This Matters</h3>
+<p>Calling them "words" (<a href="https://www.blueletterbible.org/lexicon/h1697/kjv/wlc/0-1/" target="_blank"><em>devarim</em></a>) rather than "commands" (<em>mitzvot</em>) shifts the emphasis. These are not primarily rules to follow but declarations from God — utterances that reveal His character and His vision for covenant life. The Hebrew <a href="https://www.blueletterbible.org/lexicon/h1697/kjv/wlc/0-1/" target="_blank"><em>davar</em></a> means both "word" and "thing/matter" — a word in Hebrew is not abstract speech but a reality that accomplishes something.</p>
+<p>When God speaks His "ten words," He is not merely legislating. He is creating a covenant reality, just as He spoke creation into existence.</p>
+<h3>LDS Resonance</h3>
+<p>We speak of "the Word" (Christ) and the "word of God" (scripture). In Hebrew thought, a word from God carries creative power — it does what it says. The Ten Words are not restrictions imposed from outside but realities spoken into being by the God who first said "Let there be light."</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>8. God Offered Torah to All Nations</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Midrash (<a href="https://www.sefaria.org/Sifrei_Devarim.343" target="_blank">Sifre Deuteronomy 343</a>)</h3>
+<p>One of the most celebrated midrashim teaches that before giving the Torah to Israel, God offered it to every nation on earth:</p>
+<ul>
+<li>He went to the children of Esau: "Will you accept the Torah?" They asked, "What is written in it?" He said, "Thou shalt not murder." They replied, "We cannot accept it — our father Esau was promised he would live by the sword."</li>
+<li>He went to the children of Ammon and Moab: "Will you accept the Torah?" They asked what was in it. He said, "Thou shalt not commit adultery." They declined.</li>
+<li>He went to the children of Ishmael. They asked what was in it. He said, "Thou shalt not steal." They refused.</li>
+</ul>
+<p>Finally, He came to Israel. They did not ask what was in it. They said: <strong>"All that the LORD hath spoken we will do"</strong> (<a href="https://www.blueletterbible.org/kjv/exo/19/8/s_69008" target="_blank" data-ref="Exodus 19:8">Exodus 19:8</a>) — accepting before hearing the terms.</p>
+<h3>Meaning</h3>
+<p>Israel's distinction is not ethnic superiority but willingness. They accepted the covenant without conditions. The midrash teaches that Torah was not forced on Israel — it was offered freely and freely accepted.</p>
+<h3>LDS Resonance</h3>
+<p>This mirrors the premortal council. When the plan was presented, we did not demand to see all the details first. We chose — and our willingness to accept the terms, even before fully understanding them, is what brought us here.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>9. Na'aseh v'Nishma: "We Will Do and We Will Hear"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Talmudic Teaching (<a href="https://www.sefaria.org/Shabbat.88a" target="_blank">Shabbat 88a</a>)</h3>
+<p>In <a href="https://www.blueletterbible.org/kjv/exo/24/7/s_74007" target="_blank" data-ref="Exodus 24:7">Exodus 24:7</a>, Israel responds to the covenant with a phrase that has puzzled and inspired commentators for millennia:</p>
+<blockquote>
+<p>נַעֲשֶׂה וְנִשְׁמָע (<em>na'aseh v'nishma</em>) — "<strong>We will do and we will hear</strong>"</p>
+</blockquote>
+<p>The order is reversed from what we'd expect. Normally you hear (understand) first, then act. Israel commits to <em>doing</em> before they fully <em>understand</em>. The Talmud says that when Israel said this, a heavenly voice declared: "Who revealed to My children this secret that the ministering angels use?" — because angels obey before they understand.</p>
+<h3>Meaning</h3>
+<p>Faith precedes full comprehension. Covenant is not a contract you sign after reading every clause — it is a relationship entered with trust. Obedience that waits for complete understanding is not faith; it is negotiation.</p>
+<h3>LDS Resonance</h3>
+<p>Nephi's declaration — "I will go and do the things which the Lord hath commanded" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank" data-ref="1 Nephi 3:7">1 Nephi 3:7</a>) — is a <em>na'aseh v'nishma</em> moment. He commits to act before knowing how the task will be accomplished. Every baptismal covenant and temple covenant carries this same structure: we promise before we fully grasp what will be required.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Source Notes</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Topic</th><th>Traditional Source</th></tr>
+<tr><td>Shavuot timing calculation</td><td><a href="https://www.sefaria.org/Shabbat.86b" target="_blank">Talmud, Shabbat 86b</a></td></tr>
+<tr><td>Three days of sanctification</td><td><a href="https://www.sefaria.org/Shabbat.87a" target="_blank">Talmud, Shabbat 87a</a>; Mekhilta</td></tr>
+<tr><td>Broken tablets in the Ark</td><td><a href="https://www.sefaria.org/Menachot.99a" target="_blank">Talmud, Menachot 99a</a></td></tr>
+<tr><td>All souls at Sinai</td><td><a href="https://www.sefaria.org/Shemot_Rabbah.28.6" target="_blank">Exodus Rabbah 28:6</a>; <a href="https://www.blueletterbible.org/kjv/deu/29/14-15/s_182014" target="_blank" data-ref="Deuteronomy 29:14-15">Deuteronomy 29:14-15</a></td></tr>
+<tr><td>Voice in seventy languages</td><td><a href="https://www.sefaria.org/Shemot_Rabbah.5.9" target="_blank">Exodus Rabbah 5:9</a></td></tr>
+<tr><td>Voice according to capacity</td><td><a href="https://www.sefaria.org/Shemot_Rabbah.29.9" target="_blank">Exodus Rabbah 29:9</a></td></tr>
+<tr><td>Why Sinai was chosen</td><td>Midrash Tehillim 68:9; <a href="https://www.sefaria.org/Mekhilta_d'Rabbi_Yishmael" target="_blank">Mekhilta d'Rabbi Ishmael</a></td></tr>
+<tr><td>Torah offered to all nations</td><td><a href="https://www.sefaria.org/Sifrei_Devarim.343" target="_blank">Sifre Deuteronomy 343</a></td></tr>
+<tr><td>"We will do and we will hear"</td><td><a href="https://www.sefaria.org/Shabbat.88a" target="_blank">Talmud, Shabbat 88a</a></td></tr>
+<tr><td>"Ten Words" terminology</td><td><a href="https://www.blueletterbible.org/kjv/exo/34/28/s_84028" target="_blank" data-ref="Exodus 34:28">Exodus 34:28</a>; <a href="https://www.blueletterbible.org/kjv/deu/4/13/s_157013" target="_blank" data-ref="Deuteronomy 4:13">Deuteronomy 4:13, 10</a>:4</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 6: WEEK 17: TEACHING APPLICATIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">6. Week 17: Teaching Applications</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Overview</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>This week's material offers rich teaching opportunities across all settings. The covenant at Sinai establishes identity; the Ten Commandments guide relationship with God and neighbor; Jethro's counsel models wise leadership. The themes connect directly to temple worship, Sabbath observance, and daily discipleship.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Family Home Evening</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>For Young Children (Ages 3–7)</h3>
+<p><strong>Focus:</strong> The Ten Commandments are God's rules that help us</p>
+<p><strong>Object Lesson:</strong> Set up toy cars on a play road with guardrails (blocks or rulers). Show what happens without guardrails (cars go off the road) versus with them (cars stay safe). Explain: "God's commandments are like guardrails. They keep us safe and happy."</p>
+<p><strong>Activity:</strong> Draw a stone tablet and list simple commandments: "Love God. Love others. Tell the truth. Be kind to Mom and Dad."</p>
+<p><strong>Song:</strong> "Keep the Commandments" (CS 146)</p>
+<p><strong>Discussion Question:</strong> "Why does God give us rules? Does He give them to make us sad or happy?"</p>
+<hr>
+<h3>For Older Children (Ages 8–11)</h3>
+<p><strong>Focus:</strong> The Two Tables of the Law</p>
+<p><strong>Activity:</strong> Create two poster boards:</p>
+<ul>
+<li><strong>Table 1:</strong> "Love God" (draw pictures representing first four commandments)</li>
+<li><strong>Table 2:</strong> "Love Others" (draw pictures representing last six commandments)</li>
+</ul>
+<p>Discuss how Jesus summarized both tables (<a href="https://www.blueletterbible.org/kjv/mat/22/37-40/s_951037" target="_blank" data-ref="Matthew 22:37-40">Matt 22:37-40</a>).</p>
+<p><strong>Discussion Questions:</strong></p>
+<ol>
+<li>Which commandment do you think is hardest to keep today? Why?</li>
+<li>How does loving God help us love other people?</li>
+<li>What would our family be like if we all kept these commandments perfectly?</li>
+</ol>
+<p><strong>Challenge:</strong> This week, focus on one commandment and find ways to keep it better as a family.</p>
+<hr>
+<h3>For Youth/Teens</h3>
+<p><strong>Focus:</strong> Modern Idols and the First Commandment</p>
+<p><strong>Discussion:</strong> The First Commandment ("no other gods before me") isn't just about statues.</p>
+<p><strong>See also:</strong> Elder Dallin H. Oaks, <a href="https://www.churchofjesuschrist.org/study/general-conference/2013/10/no-other-gods" target="_blank">No Other Gods</a> (October 2013) — identifies modern idols competing for our allegiance. Full quote in Key Passages Study (Passage 5).</p>
+<p><strong>Questions:</strong></p>
+<ol>
+<li>What "modern idols" do you see competing for attention around you? (careers, material possessions, politics, social media, etc.)</li>
+<li>How can good things (career, hobbies, even family traditions) become idols?</li>
+<li>What does it look like practically to have "no other gods" in your life?</li>
+<li>Elder Oaks asked: "Are we serving priorities or gods ahead of the God we profess to worship?" How would you answer?</li>
+</ol>
+<p><strong>The Tenth Commandment Connection:</strong> Coveting is related—social media especially encourages comparison. What's the antidote? (Gratitude and prioritizing God)</p>
+<p><strong>Activity:</strong> Consider a "gratitude detox"—for one week, post only things you're grateful for, not things you want others to admire.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Sunday School (Adults)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Lesson Approach 1: Grace Before Law</h3>
+<p><strong>Opening:</strong> Ask: "What's the first word of the Ten Commandments?" (Most will jump to 'Thou shalt not...')</p>
+<p><strong>Key Point:</strong> The Ten Commandments actually begin with <a href="https://www.blueletterbible.org/kjv/exo/20/2/s_70002" target="_blank" data-ref="Exodus 20:2">Exodus 20:2</a>: "I am the LORD thy God, which have brought thee out of the land of Egypt."</p>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>Why does God remind Israel of the Exodus BEFORE giving commands?</li>
+<li>What difference does it make that God saved them FIRST?</li>
+<li>How does this challenge the idea that we "earn" God's favor through obedience?</li>
+</ol>
+<p><strong>Gospel Order:</strong></p>
+<ul>
+<li>NOT: Law → Obedience → Salvation</li>
+<li>BUT: Salvation → Covenant → Obedience as grateful response</li>
+</ul>
+<p><strong>See also:</strong> Elder L. Tom Perry, <a href="https://www.churchofjesuschrist.org/study/general-conference/2013/04/obedience-to-law-is-liberty" target="_blank">Obedience to Law Is Liberty</a> (April 2013) — how commandments bring freedom, not restriction. Full quote in Key Passages Study (Passage 5).</p>
+<p>Commandments aren't restrictions on freedom—they ARE the path to freedom.</p>
+<hr>
+<h3>Lesson Approach 2: Kingdom of Priests</h3>
+<p><strong>Opening:</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/19/5-6/s_69005" target="_blank" data-ref="Exodus 19:5-6">Exodus 19:5-6</a> and <a href="https://www.blueletterbible.org/kjv/1pe/2/9/s_1153009" target="_blank" data-ref="1 Peter 2:9">1 Peter 2:9</a>. Ask: "What does it mean to be a 'kingdom of priests'?"</p>
+<p><strong>Key Points:</strong></p>
+<ol>
+<li>In pagan nations, only elite priests approached gods. In Israel, ALL had access.</li>
+<li>Peter applies this language to the Church—we're ALL called to priestly ministry.</li>
+<li>Temple worship fulfills this: we participate in sacred ordinances, not as spectators but as priests.</li>
+</ol>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>What does "priestly" ministry look like in daily life? (ministering, service, blessing others)</li>
+<li>How does the temple make us a "royal priesthood"?</li>
+<li>Both men and women participate in temple ordinances. How does this reflect "kingdom of priests"?</li>
+</ol>
+<p><strong>Testimony:</strong> We don't just attend worship; we're called to BE ministers of Christ in our homes, wards, and communities.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Primary</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Junior Primary (Ages 3–7)</h3>
+<p><strong>Visual:</strong> Simple drawings of the ten commandments</p>
+<p><strong>Story:</strong> "God loved His people so much! He saved them from Egypt and brought them to a special mountain. There He gave them rules to help them be happy. He said, 'Love Me most of all! Love your family! Be kind and honest!' These rules help us be happy too."</p>
+<p><strong>Activity:</strong> Fingerplay—count ten commandments on fingers. "God gave us TEN rules to help us be happy!"</p>
+<p><strong>Song:</strong> "Choose the Right" (CS 160)</p>
+<p><strong>Testimony:</strong> When we follow God's commandments, we show Him we love Him.</p>
+<hr>
+<h3>Senior Primary (Ages 8–11)</h3>
+<p><strong>Focus:</strong> Preparing to Meet God</p>
+<p><strong>Discussion:</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/19/10-11/s_69010" target="_blank" data-ref="Exodus 19:10-11">Exodus 19:10-11</a>. Israel had to prepare for three days before meeting God.</p>
+<p><strong>Questions:</strong></p>
+<ol>
+<li>Why did they have to wash their clothes and get ready?</li>
+<li>How do we prepare to worship God? (Before church, before the temple)</li>
+<li>What does "being ready" look like in your heart, not just your clothes?</li>
+</ol>
+<p><strong>Activity:</strong> Create a "Preparing for the Sabbath" checklist together—things we can do Saturday night and Sunday morning to be ready to worship.</p>
+<p><strong>Application:</strong> Just like Israel prepared to meet God, we prepare for sacred experiences through clean hearts, willing minds, and reverent attitudes.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Youth (Sunday School / Mutual)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>For Ages 12–14</h3>
+<p><strong>Focus:</strong> Jethro's Counsel on Delegation</p>
+<p><strong>Opening Activity:</strong> Give one volunteer a ridiculous task: "Carry all these items across the room by yourself." (Stack books, balls, boxes until it's impossible.) Then ask: "What's wrong with this picture?"</p>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>Moses was doing EVERYTHING alone. What was Jethro's diagnosis? ("Thou wilt surely wear away")</li>
+<li>Why do leaders sometimes try to do everything themselves?</li>
+<li>How did sharing the load help both Moses AND the people?</li>
+</ol>
+<p><strong>Application:</strong> In your family, ward, or school, who could use help? How can you be an "Aaron and Hur" (holding up Moses' arms) or a "ruler of tens" (serving in small ways)?</p>
+<p><strong>Challenge:</strong> This week, look for one person carrying too much and offer to help.</p>
+<hr>
+<h3>For Ages 15–18</h3>
+<p><strong>Focus:</strong> Sabbath as Delight, Not Burden</p>
+<p><strong>Discussion:</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/20/8-11/s_70008" target="_blank" data-ref="Exodus 20:8-11">Exodus 20:8-11</a> and <a href="https://www.blueletterbible.org/kjv/isa/58/13/s_737013" target="_blank" data-ref="Isaiah 58:13">Isaiah 58:13</a> ("call the sabbath a delight").</p>
+<p><strong>Elder Russell M. Nelson</strong> taught that rather than relying on lists of dos and don'ts, he learned to ask one question: "What sign do I want to give to God?" That question, he said, "made my choices about the Sabbath day crystal clear" (<a href="https://www.churchofjesuschrist.org/study/general-conference/2015/04/the-sabbath-is-a-delight" target="_blank">"The Sabbath Is a Delight," April 2015</a>).</p>
+<p><strong>Questions:</strong></p>
+<ol>
+<li>What's the difference between asking "What can I NOT do on Sunday?" versus "How can I draw closer to God?"</li>
+<li>What activities actually feel restful and worshipful to you?</li>
+<li>How can Sabbath strengthen family relationships?</li>
+</ol>
+<p><strong>Three Principles:</strong></p>
+<ol>
+<li><strong>Rest</strong> — Cease from worldly labor</li>
+<li><strong>Worship</strong> — Attend church, partake sacrament, study</li>
+<li><strong>Serve</strong> — Minister to others</li>
+</ol>
+<p><strong>Activity:</strong> Write your personal "Sabbath Manifesto"—what will Sabbath look like for you?</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Institute / Mission Preparation</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Focus: The Ten Commandments as Missionary Teaching</h3>
+<p><strong>Foundation:</strong> The Ten Commandments reveal universal moral truth. When teaching investigators:</p>
+<ol>
+<li><strong>Show the preamble (<a href="https://www.blueletterbible.org/kjv/exo/20/2/s_70002" target="_blank" data-ref="Exodus 20:2">Ex 20:2</a>):</strong> God's grace precedes commandments</li>
+<li><strong>Teach the two tables:</strong> Loving God + Loving neighbor</li>
+<li><strong>Connect to Christ's summary:</strong> <a href="https://www.blueletterbible.org/kjv/mat/22/37-40/s_951037" target="_blank" data-ref="Matthew 22:37-40">Matthew 22:37-40</a></li>
+<li><strong>Apply to modern life:</strong> Honesty, fidelity, Sabbath, worship</li>
+</ol>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>How do you respond when investigators say, "The Ten Commandments are just old rules"?</li>
+<li>How does the preamble change the nature of obedience?</li>
+<li>Which commandments generate most questions from investigators?</li>
+</ol>
+<p><strong>Role Play:</strong> Practice teaching the Ten Commandments as expression of love, not arbitrary restriction.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Personal Study</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Daily Focus Guide</h3>
+<p><strong>Day 1 (Monday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/18/13-27/s_68013" target="_blank" data-ref="Exodus 18:13-27">Exodus 18:13-27</a>. Focus on delegation. Journal: "Where am I trying to do too much alone? Who could help?"</p>
+<p><strong>Day 2 (Tuesday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/19/1-8/s_69001" target="_blank" data-ref="Exodus 19:1-8">Exodus 19:1-8</a>. Focus on covenant proposal. Journal: "What does it mean that I am God's 'peculiar treasure'?"</p>
+<p><strong>Day 3 (Wednesday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/19/9-15/s_69009" target="_blank" data-ref="Exodus 19:9-15">Exodus 19:9-15</a>. Focus on preparation. Journal: "How do I prepare for sacred experiences? What could I do better?"</p>
+<p><strong>Day 4 (Thursday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/20/1-11/s_70001" target="_blank" data-ref="Exodus 20:1-11">Exodus 20:1-11</a> (First Table). Journal: "Which command toward God do I need to strengthen?"</p>
+<p><strong>Day 5 (Friday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/20/12-17/s_70012" target="_blank" data-ref="Exodus 20:12-17">Exodus 20:12-17</a> (Second Table). Journal: "Which command toward others do I need to strengthen?"</p>
+<p><strong>Day 6 (Saturday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/20/18-26/s_70018" target="_blank" data-ref="Exodus 20:18-26">Exodus 20:18-26</a>. Focus on "God is come to prove you." Journal: "How are commandments protecting me right now?"</p>
+<p><strong>Day 7 (Sunday):</strong> Re-read <a href="https://www.blueletterbible.org/kjv/exo/19/5-6/s_69005" target="_blank" data-ref="Exodus 19:5-6">Exodus 19:5-6</a> and <a href="https://www.blueletterbible.org/kjv/1pe/2/9/s_1153009" target="_blank" data-ref="1 Peter 2:9">1 Peter 2:9</a>. Journal: "How can I live as a member of the 'royal priesthood' this week?"</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Key Takeaways for All Settings</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>Identity precedes instruction.</strong> God tells us who we ARE (treasured, priestly, holy) before telling us what to DO.</li>
+</ol>
+<ol>
+<li><strong>Grace precedes law.</strong> The preamble (<a href="https://www.blueletterbible.org/kjv/exo/20/2/s_70002" target="_blank" data-ref="Exodus 20:2">Ex 20:2</a>) establishes that obedience responds to salvation, not earns it.</li>
+</ol>
+<ol>
+<li><strong>Commandments protect, not restrict.</strong> They're guardrails, not prison bars.</li>
+</ol>
+<ol>
+<li><strong>Wise leaders delegate.</strong> Even Moses couldn't do it alone.</li>
+</ol>
+<ol>
+<li><strong>Preparation precedes sacred encounter.</strong> We don't stumble into God's presence.</li>
+</ol>
+<ol>
+<li><strong>We are kingdom of priests.</strong> Through temple ordinances and daily ministry, we fulfill Israel's calling.</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Supplemental Resources</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Conference Talks:</strong></p>
+<ul>
+<li><a href="https://www.churchofjesuschrist.org/study/general-conference/2013/04/obedience-to-law-is-liberty" target="_blank">Obedience to Law Is Liberty</a> — Elder L. Tom Perry (April 2013): How commandments bring freedom, not restriction</li>
+<li><a href="https://www.churchofjesuschrist.org/study/general-conference/2013/10/no-other-gods" target="_blank">No Other Gods</a> — Elder Dallin H. Oaks (October 2013): Identifying modern idols and prioritizing God</li>
+</ul>
+<p><strong>Scholarly Articles:</strong></p>
+<ul>
+<li><a href="https://rsc.byu.edu/vol-23-no-2-2022/kingdom-priests-holy-nation" target="_blank">A Kingdom of Priests, and an Holy Nation</a> — RSC: Scholarly treatment of Israel's covenant identity at Sinai</li>
+<li><a href="https://rsc.byu.edu/vol-19-no-1-2018/torah-mouth-introduction-rabbinic-oral-law" target="_blank">Torah in the Mouth: An Introduction to the Rabbinic Oral Law</a> — RSC: Jewish perspective on Torah interpretation</li>
+</ul>
+<p><strong>Scripture Central:</strong></p>
+<ul>
+<li><a href="https://scripturecentral.org/come-follow-me/old-testament-sunday-school-2026/exodus-18-20?pId=42&sId=368" target="_blank">CFM OT 2026 Week 17</a> — KnoWhys and additional resources for <a href="https://www.blueletterbible.org/kjv/exo/18/1/s_68001" target="_blank" data-ref="Exodus 18">Exodus 18-20</a></li>
+</ul>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 7: WEEK 17: STUDY QUESTIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">7. Week 17: Study Questions</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Questions for Personal Reflection</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Identity and Covenant (Exodus 19)</h3>
+<ol>
+<li>God calls Israel His "peculiar treasure" (<a href="https://www.blueletterbible.org/kjv/exo/19/5/s_69005" target="_blank" data-ref="Exodus 19:5">Ex 19:5</a>). What does it mean for your self-understanding that God personally treasures you—not just tolerates you?</li>
+</ol>
+<ol>
+<li>Israel had to prepare for three days before meeting God. How do you prepare for sacred experiences (Sabbath worship, temple attendance, personal prayer)? What could you do differently?</li>
+</ol>
+<ol>
+<li>The people said, "All that the LORD hath spoken we will do" (<a href="https://www.blueletterbible.org/kjv/exo/19/8/s_69008" target="_blank" data-ref="Exodus 19:8">Ex 19:8</a>). Have you made similar commitments? How have you kept them?</li>
+</ol>
+<hr>
+<h3>The Ten Commandments (Exodus 20)</h3>
+<ol>
+<li>Which of the Ten Commandments feels most challenging in your current life stage? Why? What would obedience require?</li>
+</ol>
+<ol>
+<li>The tenth commandment addresses coveting—internal desire, not just external action. In an age of social media comparison, how does coveting manifest in your life?</li>
+</ol>
+<ol>
+<li>The preamble (<a href="https://www.blueletterbible.org/kjv/exo/20/2/s_70002" target="_blank" data-ref="Exodus 20:2">Ex 20:2</a>) reminds Israel that God ALREADY saved them before giving commandments. How does this change your understanding of obedience—is it earning favor or expressing gratitude?</li>
+</ol>
+<hr>
+<h3>Leadership and Service (Exodus 18)</h3>
+<ol>
+<li>Jethro warned Moses, "Thou wilt surely wear away" (<a href="https://www.blueletterbible.org/kjv/exo/18/18/s_68018" target="_blank" data-ref="Exodus 18:18">Ex 18:18</a>). Where in your life are you trying to carry too much alone? Who could help?</li>
+</ol>
+<ol>
+<li>Jethro's four qualifications for leaders (<a href="https://www.blueletterbible.org/kjv/exo/18/21/s_68021" target="_blank" data-ref="Exodus 18:21">Ex 18:21</a>) were: able, God-fearing, honest, not self-serving. How do these apply to callings in the Church? To parenting?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Questions for Family Discussion</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>For All Ages:</strong> If you could only keep ONE commandment, which would you choose and why? (Discuss how all ten work together.)</li>
+</ol>
+<ol>
+<li><strong>For Parents:</strong> How can we help our children understand commandments as protection rather than punishment?</li>
+</ol>
+<ol>
+<li><strong>For Teens:</strong> Which commandment seems most outdated to your generation? How would you explain its relevance?</li>
+</ol>
+<ol>
+<li><strong>For Young Children:</strong> God gave Moses rules on two stone tablets. What are some rules in our family? Why do we have them?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Questions for Deeper Study</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Theological Exploration</h3>
+<ol>
+<li>Compare <a href="https://www.blueletterbible.org/kjv/exo/19/5-6/s_69005" target="_blank" data-ref="Exodus 19:5-6">Exodus 19:5-6</a> with <a href="https://www.blueletterbible.org/kjv/1pe/2/9/s_1153009" target="_blank" data-ref="1 Peter 2:9">1 Peter 2:9</a> and <a href="https://www.blueletterbible.org/kjv/rev/1/6/s_1168006" target="_blank" data-ref="Revelation 1:6">Revelation 1:6</a>. How does the New Testament apply Sinai covenant language to the Church? What does this mean for us today?</li>
+</ol>
+<ol>
+<li>The Ten Commandments are sometimes seen as "negative" (mostly "thou shalt NOT"). How would you reframe each commandment positively? (Example: "Thou shalt not kill" → "Honor and protect life.")</li>
+</ol>
+<ol>
+<li>Examine the structure of ancient Near Eastern treaties (suzerain-vassal covenants). How does the Sinai covenant follow this pattern? What makes it different?</li>
+</ol>
+<hr>
+<h3>Comparative Study</h3>
+<ol>
+<li>Compare <a href="https://www.blueletterbible.org/kjv/exo/20/1/s_70001" target="_blank" data-ref="Exodus 20">Exodus 20</a> with <a href="https://www.blueletterbible.org/kjv/deu/5/1/s_158001" target="_blank" data-ref="Deuteronomy 5">Deuteronomy 5</a> (the second giving of the Ten Commandments). What differences do you notice? What might explain them?</li>
+</ol>
+<ol>
+<li>Trace the "third day" pattern: <a href="https://www.blueletterbible.org/kjv/exo/19/11/s_69011" target="_blank" data-ref="Exodus 19:11">Exodus 19:11</a> (God descends), <a href="https://www.blueletterbible.org/kjv/hos/6/2/s_868002" target="_blank" data-ref="Hosea 6:2">Hosea 6:2</a> (resurrection imagery), <a href="https://www.blueletterbible.org/kjv/luk/24/46/s_997046" target="_blank" data-ref="Luke 24:46">Luke 24:46</a> (Christ rises). What theological connection does the "third day" suggest?</li>
+</ol>
+<ol>
+<li>How does Jesus' summary of the Law (<a href="https://www.blueletterbible.org/kjv/mat/22/37-40/s_951037" target="_blank" data-ref="Matthew 22:37-40">Matt 22:37-40</a>) relate to the two tables of the Decalogue? Are any commandments left out?</li>
+</ol>
+<hr>
+<h3>Application Questions</h3>
+<ol>
+<li>Elder Russell M. Nelson taught that while "doctors cannot immunize against iniquity," spiritual protection comes from the Lord through covenant obedience (<a href="https://www.churchofjesuschrist.org/study/general-conference/1995/04/children-of-the-covenant" target="_blank">"Children of the Covenant," April 1995</a>). How have you experienced commandments protecting you from spiritual harm?</li>
+</ol>
+<ol>
+<li>The Sabbath command (<a href="https://www.blueletterbible.org/kjv/exo/20/8-11/s_70008" target="_blank" data-ref="Exodus 20:8-11">Ex 20:8-11</a>) is the longest of the ten. Why do you think God gave such detailed instruction about rest? What does this say about human tendencies?</li>
+</ol>
+<ol>
+<li>"Kingdom of priests" (<a href="https://www.blueletterbible.org/kjv/exo/19/6/s_69006" target="_blank" data-ref="Exodus 19:6">Ex 19:6</a>) suggests mediating between God and the world. In what specific ways can you serve as a "priest" in your sphere of influence this week?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Summary Reflection</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li>What is the single most important insight you gained from <a href="https://www.blueletterbible.org/kjv/exo/18/1/s_68001" target="_blank" data-ref="Exodus 18">Exodus 18-20</a> this week?</li>
+</ol>
+<ol>
+<li>How does understanding "grace before law" (<a href="https://www.blueletterbible.org/kjv/exo/20/2/s_70002" target="_blank" data-ref="Exodus 20:2">Ex 20:2</a>) affect your relationship with God?</li>
+</ol>
+<ol>
+<li>What specific action will you take this week because of what you've studied?</li>
+</ol>
+<ol>
+<li>What question do you still have that you want to explore further?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Scripture Memorization Suggestions</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Primary Level:</strong></p>
+<blockquote>
+<p>"All that the LORD hath spoken we will do." (<a href="https://www.blueletterbible.org/kjv/exo/19/8/s_69008" target="_blank" data-ref="Exodus 19:8">Exodus 19:8</a>)</p>
+</blockquote>
+<p><strong>Youth Level:</strong></p>
+<blockquote>
+<p>"Ye shall be unto me a kingdom of priests, and an holy nation." (<a href="https://www.blueletterbible.org/kjv/exo/19/6/s_69006" target="_blank" data-ref="Exodus 19:6">Exodus 19:6</a>)</p>
+</blockquote>
+<p><strong>Adult Level:</strong></p>
+<blockquote>
+<p>"I am the LORD thy God, which have brought thee out of the land of Egypt, out of the house of bondage. Thou shalt have no other gods before me." (<a href="https://www.blueletterbible.org/kjv/exo/20/2-3/s_70002" target="_blank" data-ref="Exodus 20:2-3">Exodus 20:2-3</a>)</p>
+</blockquote>
+<hr>
+<p><em>Note: 13 questions for personal reflection, 4 for family discussion, 9 for deeper study, and 4 summary reflections provided.</em></p>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+</div>

@@ -391,6 +391,24 @@ Click on any Hebrew or Greek term to study it at Blue Letter Bible. Use the **fl
 </div>
 </details>
 
+<details class="seder-dropdown">
+<summary>Week 17: Exodus 18–20 — "All That the Lord Hath Spoken We Will Do"</summary>
+<div class="seder-dropdown-body">
+
+{{< flashcards section="week17" >}}
+
+| Hebrew | Transliteration | Meaning |
+|:------:|-----------------|---------|
+| <a href="https://www.blueletterbible.org/lexicon/h6942/kjv/wlc/0-1/" target="_blank">קָדַשׁ</a> | *qadash* | to sanctify, set apart, make holy — the root of *qodesh* (holiness), *qadosh* (holy), and *miqdash* (sanctuary) |
+| <a href="https://www.blueletterbible.org/lexicon/h5459/kjv/wlc/0-1/" target="_blank">סְגֻלָּה</a> | *segullah* | treasured possession, peculiar treasure — a king's personal jewels, not tax revenue |
+| <a href="https://www.blueletterbible.org/lexicon/h3548/kjv/wlc/0-1/" target="_blank">כֹּהֵן</a> | *kohen* | priest — one who ministers before God; *mamlekhet kohanim* = "kingdom of priests" (Exodus 19:6) |
+| <a href="https://www.blueletterbible.org/lexicon/h3372/kjv/wlc/0-1/" target="_blank">יָרֵא</a> | *yare* | to fear, revere — Moses uses it in two opposite senses in Exodus 20:20: "Fear not" (stop panicking) / "that his fear may be before your faces" (healthy awe) |
+| <a href="https://www.blueletterbible.org/lexicon/h8451/kjv/wlc/0-1/" target="_blank">תּוֹרָה</a> | *Torah* | instruction, teaching, law — from the root "to aim, direct" like an archer; sin (*chata*) means "to miss the mark" |
+| <a href="https://www.blueletterbible.org/lexicon/h5715/kjv/wlc/0-1/" target="_blank">עֵדוּת</a> | *edut* | testimony, witness — the tablets are *luchot ha-edut* ("tablets of the testimony"), not "tablets of the law"; Greek *martyrion* gives us "martyr" |
+
+</div>
+</details>
+
 ---
 
 ## Special Topics

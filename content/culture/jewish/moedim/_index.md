@@ -61,6 +61,14 @@ The *moedim* are the appointed times of the Lord: sacred rehearsals that teach d
       <div style="font-size: 0.92rem; color: #6d806f; margin-bottom: 0.8rem;">16 Abib / Nisan</div>
       <div style="color: #4b5e64; line-height: 1.75;">The Feast of Firstfruits, fulfilled on Resurrection morning and tied to harvest, consecration, and the promise that Christ is the firstfruits of them that slept.</div>
     </div>
+
+    <div style="display: block; background: white; border: 1px solid rgba(92,122,98,0.24); border-radius: 18px; padding: 1.4rem; box-shadow: 0 10px 24px rgba(0,0,0,0.05); text-align: center;">
+      <img src="/images/culture/jewish-festivals/feast-icons/pentecost.png" alt="Shavuot icon" style="width: 64px; height: 64px; object-fit: contain; display: block; margin: 0 auto 1rem auto;" />
+      <div style="font-size: 1.5rem; color: #4d6b56; font-weight: 600; margin-bottom: 0.45rem;"><a href="/culture/jewish/moedim/shavuot/" style="color: inherit; text-decoration: none;">Shavuot</a></div>
+      <div style="font-size: 1rem; color: #8a6b1f; font-weight: 600; margin-bottom: 0.4rem;"><a href="https://www.blueletterbible.org/lexicon/h7620/kjv/wlc/0-1/" target="_blank" style="color: inherit; text-decoration: none;">שָׁבֻעוֹת</a> · Feast of Weeks / Pentecost</div>
+      <div style="font-size: 0.92rem; color: #6d806f; margin-bottom: 0.8rem;">6 Sivan (50 days after Passover)</div>
+      <div style="color: #4b5e64; line-height: 1.75;">From Sinai to Bountiful — the wheat harvest feast that commemorates the giving of Torah, the descent of the Spirit at Pentecost, and Christ's delivery of the higher law at the temple. Includes the Beatitudes side-by-side, the Book of Ruth, and traditional recipes.</div>
+    </div>
   </div>
 </div>
 {{< /rawhtml >}}
