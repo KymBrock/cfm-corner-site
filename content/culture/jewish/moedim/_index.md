@@ -46,12 +46,12 @@ The *moedim* are the appointed times of the Lord: sacred rehearsals that teach d
       <div style="color: #4b5e64; line-height: 1.75;">The redemption feast of Israel: deliverance through the blood of the lamb, covenant remembrance, and the sacred pattern that culminates in the Pesach Seder.</div>
     </div>
 
-    <div style="display: block; color: inherit; background: linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(249,246,237,0.98) 100%); border: 1px dashed rgba(177,138,45,0.45); border-radius: 18px; padding: 1.4rem; box-shadow: 0 10px 24px rgba(0,0,0,0.04); text-align: center;">
-      <img src="/images/culture/jewish-festivals/feast-icons/matzot-old.png" alt="Matzot icon" style="width: 64px; height: 64px; object-fit: contain; display: block; margin: 0 auto 1rem auto;" />
-      <div style="font-size: 1.5rem; color: #4d6b56; font-weight: 600; margin-bottom: 0.45rem;">Matzot</div>
+    <div style="display: block; background: white; border: 1px solid rgba(92,122,98,0.24); border-radius: 18px; padding: 1.4rem; box-shadow: 0 10px 24px rgba(0,0,0,0.05); text-align: center;">
+      <img src="/images/culture/jewish-festivals/feast-icons/unleavened-bread.png" alt="Matzot icon" style="width: 64px; height: 64px; object-fit: contain; display: block; margin: 0 auto 1rem auto;" />
+      <div style="font-size: 1.5rem; color: #4d6b56; font-weight: 600; margin-bottom: 0.45rem;"><a href="/culture/jewish/moedim/matzot/" style="color: inherit; text-decoration: none;">Matzot</a></div>
       <div style="font-size: 1rem; color: #8a6b1f; font-weight: 600; margin-bottom: 0.4rem;"><a href="https://www.blueletterbible.org/lexicon/h4682/kjv/wlc/0-1/" target="_blank" style="color: inherit; text-decoration: none;">מַצּוֹת</a> · Feast of Unleavened Bread</div>
       <div style="font-size: 0.92rem; color: #6d806f; margin-bottom: 0.8rem;">15-21 Abib / Nisan</div>
-      <div style="color: #4b5e64; line-height: 1.75;">Placeholder for the dedicated Matzot page and will be added soon.</div>
+      <div style="color: #4b5e64; line-height: 1.75;">Seven days of separation, humility, and holy haste — the bread of affliction becomes the bread of freedom. Includes the search for leaven, the paradox of matzah, Paul on purging the old leaven, and Alma's Nephite Seder connection.</div>
     </div>
 
     <div style="display: block; background: white; border: 1px solid rgba(92,122,98,0.24); border-radius: 18px; padding: 1.4rem; box-shadow: 0 10px 24px rgba(0,0,0,0.05); text-align: center;">
