@@ -1,7 +1,5 @@
-<style>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Moses 1; Abraham 3 - Study Guide</title></head><body><div data-pagefind-body><style>
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Georgia, serif; line-height: 1.7; color: #374151; background-color: #f9fafb; }
         .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
 
         .site-header {
@@ -46,9 +44,9 @@
 
         .sg-panel {
             background-color: white; border-radius: 0 0 8px 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;
+            display: none;
         }
-        .sg-panel.active { max-height: none; overflow: visible; }
+        .sg-panel.active { display: block; }
         .panel-content { padding: 30px; }
         .panel-content h2 { color: #8B7355; margin-bottom: 20px; font-size: 1.8em; }
         .panel-content h3 { color: #6B5344; margin-top: 25px; margin-bottom: 15px; font-size: 1.4em; }
@@ -132,14 +130,14 @@
             border-radius: 0 0 6px 6px;
             border: 1px solid #d4c4a8;
             border-top: none;
-            max-height: 0;
-            overflow: hidden;
+            display: none;
+           
             transition: max-height 0.3s ease-out;
             margin-bottom: 10px;
         }
 
         .sg-sub-panel.active {
-            max-height: none;
+            display: block;
             overflow: visible;
             transition: max-height 0.3s ease-in;
         }
@@ -155,81 +153,62 @@
         .sg-sub-panel-content li { margin-bottom: 6px; }
         .sg-sub-panel-content a { color: #8B7355; }
         .sg-sub-panel-content a:hover { color: #6B5344; text-decoration: underline; }
-
-        /* Inner accordions (third level - for lengthy subsections) */
-        .sg-inner-accordion {
-            background-color: #faf8f5;
-            color: #6B5344;
-            cursor: pointer;
-            padding: 12px 36px 12px 16px;
-            width: 100%;
-            text-align: left;
-            border: 1px solid #e8e0d4;
-            border-radius: 5px;
-            font-size: 1em;
+        /* Section headings (converted from inner accordions) */
+        .sg-section-heading {
+            margin: 1.2em 0 0.6em 0;
+            padding: 0.4em 0 0.4em 0.8em;
+            border-left: 3px solid #8B9D77;
+            color: #5a6b4f;
+            font-size: 1.05em;
             font-weight: 600;
-            font-family: Georgia, serif;
-            margin-top: 8px;
-            position: relative;
-            transition: background-color 0.2s;
         }
 
-        .sg-inner-accordion:hover {
-            background-color: #f0e8dc;
-        }
-
-        .sg-inner-accordion::after {
-            content: '▼';
-            font-size: 0.7em;
-            color: #8B7355;
-            position: absolute;
-            right: 16px;
-            top: 50%;
-            transform: translateY(-50%);
-            transition: transform 0.3s;
-        }
-
-        .sg-inner-accordion.active::after {
-            transform: translateY(-50%) rotate(180deg);
-        }
-
-        /* Inner panels (third level) */
-        .sg-inner-panel {
-            background-color: #ffffff;
-            border-radius: 0 0 5px 5px;
-            border: 1px solid #e8e0d4;
-            border-top: none;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            margin-bottom: 8px;
-        }
-
-        .sg-inner-panel.active {
-            max-height: none;
-            overflow: visible;
-            transition: max-height 0.3s ease-in;
-        }
-
-        .sg-inner-panel-content {
-            padding: 15px 20px;
-        }
-
-        .sg-inner-panel-content h4 { color: #5a4a3a; margin-top: 12px; margin-bottom: 8px; font-size: 1.1em; }
-        .sg-inner-panel-content p { margin-bottom: 10px; }
-        .sg-inner-panel-content ul, .sg-inner-panel-content ol { margin-left: 20px; margin-bottom: 10px; }
-        .sg-inner-panel-content li { margin-bottom: 5px; }
 
         @media (max-width: 768px) {
             .header-section h1 { font-size: 1.8em; }
             .panel-content { padding: 20px; }
             .sg-sub-panel-content { padding: 15px 18px; }
-            .sg-inner-panel-content { padding: 12px 15px; }
-            .nav-container { flex-direction: column; }
+.nav-container { flex-direction: column; }
             .nav-link, .nav-disabled { width: 100%; text-align: center; }
         }
         
-</style>
+
+        .sg-section-heading {
+            margin: 1.2em 0 0.6em 0;
+            padding: 0.4em 0 0.4em 0.8em;
+            border-left: 3px solid #8B9D77;
+            color: #5a6b4f;
+            font-size: 1.05em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+        }
+        .sg-section-actions {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 28px;
+        }
+        .sg-section-actions .sg-action-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.35);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            padding: 0;
+            line-height: 1;
+        }
+        .sg-section-actions .sg-action-btn:hover {
+            background: rgba(255,255,255,0.35);
+        }
+    </style>
 
 <div class="container">
         <!-- Header Section -->
@@ -243,22 +222,21 @@
         <!-- Quick Links -->
         <div class="quick-links">
             <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/02?lang=eng" target="_blank" class="quick-link">CFM Manual</a>
-            <a href="index.html" class="quick-link">Study Guide Index</a>
         </div>
 
         <!-- Expand/Collapse Buttons -->
         <div class="button-container">
-            <button class="expand-button" onclick="expandAll()">Expand All</button>
-            <button class="expand-button" onclick="collapseAll()">Collapse All</button>
+            <button class="expand-button" onclick="expandAll()"><span class="btn-icon">&#x229E;</span> Expand All</button>
+            <button class="expand-button" onclick="collapseAll()"><span class="btn-icon">&#x229F;</span> Collapse All</button>
         </div>
 
         <!-- SECTION 1: WEEK OVERVIEW -->
-        <button class="sg-accordion-section">1. Week Overview</button>
-        <div class="sg-panel">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">1. Week Overview</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
             <div class="panel-content">
-                <button class="sg-sub-accordion"><span>Week Information</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active"><span>Week Information</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <table class="info-table">
 <tr>
 <th>Element</th>
@@ -291,36 +269,30 @@
 </table>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Reading Summary</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Reading Summary</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p>This week introduces two of the most doctrinally rich chapters in all of scripture—both unique to the Restoration. Neither Moses 1 nor Abraham 3 appears in the Bible; they come to us through Joseph Smith as restored texts that unlock Genesis and reveal truths about God, humanity, and Satan that were lost from the biblical record.</p>
 <p><strong>Moses 1</strong> records a pre-Genesis vision given to Moses on an "exceedingly high mountain." Here Moses learns God's identity ("I am the Lord God Almighty"), his own identity ("thou art my son"), God's purposes ("This is my work and my glory—to bring to pass the immortality and eternal life of man"), and faces a direct confrontation with Satan. This chapter serves as a lens through which all of Genesis—and indeed, all scripture—should be read.</p>
 <p><strong>Abraham 3</strong> takes us into the premortal council, where Abraham learns about the organization of intelligences, God's governing light (Kolob), and the plan for earth's creation. Here we encounter the "noble and great ones" chosen before the world was, Christ's willing acceptance of His mission, and Satan's rebellion. Together, these chapters establish the cosmic context for human existence.</p>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Central Themes</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Theme 1: Divine Identity—We Are God's Children</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Central Themes</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Theme 1: Divine Identity—We Are God's Children</h4>
 <p>The most attacked truth in both chapters is identity. God tells Moses, "Thou art my son" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=4" target="_blank">Moses 1:4</a>); Abraham sees that the "noble and great ones" were chosen before birth (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/3?lang=eng&id=22-23" target="_blank">Abraham 3:22-23</a>). Satan's immediate counter-attack is to call Moses "son of man" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=12" target="_blank">Moses 1:12</a>)—attempting to reduce divine identity to mere mortality.</p>
 <p>The irony is profound: in Aramaic, <em><a href="https://www.blueletterbible.org/lexicon/h606/kjv/wlc/0-1/" target="_blank">bar enosh</a></em> (בַּר אֱנָשׁ) means "son of man," and this became one of the most significant Messianic titles through <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/dan/7?lang=eng&id=13-14" target="_blank">Daniel 7:13-14</a>, where "one like the Son of man came with the clouds of heaven" and received everlasting dominion. Jesus used this title for Himself approximately 80 times in the Gospels, deliberately invoking Daniel's prophecy. So while Satan uses "son of man" diminutively to strip Moses of his divine identity, the TRUE Son of Man from Daniel's vision is divine—Jesus Christ Himself. Satan unknowingly uses a Messianic title while attempting to demean.</p>
 <p>President Russell M. Nelson has taught that our three primary identities are: child of God, child of the covenant, and disciple of Jesus Christ—in that order.</p>
-</div>
-<button class="sg-inner-accordion"><span>Theme 2: God's Work and Glory</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Theme 2: God's Work and Glory</h4>
 <p>Moses 1:39 is the most quoted scripture in General Conference over the past 80 years. "This is my work and my glory—to bring to pass the immortality and eternal life of man" reveals that we are personally the object of God's eternal efforts. As Dr. Phil Allred reframes it: "YOU are my work and glory."</p>
-</div>
-<button class="sg-inner-accordion"><span>Theme 3: Satan's Tactics and Our Defense</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Theme 3: Satan's Tactics and Our Defense</h4>
 <p>Moses 1 provides the clearest scriptural tutorial on Satan's methods and how to overcome him. Satan attacks identity, demands worship, persists through fear, but ultimately must flee when we invoke Christ's name with covenant authority. This pattern—identity attack → spiritual defense → invoking Christ's name—becomes a template for all spiritual warfare.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Key Figures</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Key Figures</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <table class="info-table">
 <tr>
 <th>Person</th>
@@ -355,15 +327,14 @@
 </table>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Timeline Placement</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Timeline Placement</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p><strong>Historical Period:</strong> Premortal (Abraham 3) and Patriarchal Era (Moses 1)</p>
 <p><strong>Approximate Dates:</strong> Moses 1 occurs after the burning bush but before delivering Israel (~1446 BC traditional dating); Abraham 3 describes events before earth's creation</p>
 <p><strong>World Context:</strong> Moses had been raised in Pharaoh's court surrounded by Egyptian polytheism. Abraham's vision clarifies the true cosmology versus the corrupted traditions of his day.</p>
 <p><strong>Biblical Timeline Position:</strong> These chapters precede Genesis chronologically. Moses 1 introduces what follows in Genesis 1-6; Abraham 3 provides the premortal context for all of earth's history.</p>
-<button class="sg-inner-accordion"><span>Dating the Original Events</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Dating the Original Events</h4>
 <table class="info-table">
 <tr>
 <th>Text</th>
@@ -390,9 +361,7 @@
 <td>"Exceedingly high mountain" after the burning bush</td>
 </tr>
 </table>
-</div>
-<button class="sg-inner-accordion"><span>Transmission: How These Texts Reached Us</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Transmission: How These Texts Reached Us</h4>
 <h4>The Journey of Abraham's Record</h4>
 <p>The Book of Abraham didn't come to us like other scripture. Understanding its transmission illuminates the miracle of its preservation.</p>
 <p><strong>Abraham's Time (~2000 BC):</strong> Abraham records his visions and experiences, likely in a Semitic language (Hebrew or a predecessor). These accounts were preserved through a combination of written records and oral traditions, eventually finding their way into the Jewish communities that flourished in Egypt.</p>
@@ -416,12 +385,10 @@
 <p>> "Every time Joseph works on the Book of Abraham, he starts doing new temple ordinances. That's not a coincidence, I think." > — Dr. Kerry Muhlestein</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Books Featured This Week</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Book of Moses</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Books Featured This Week</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Book of Moses</h4>
 <ul>
 <li><strong>Author:</strong> Moses, restored through Joseph Smith</li>
 <li><strong>Source Date:</strong> Original content attributed to Moses (~1446 BC); restored June 1830</li>
@@ -431,9 +398,7 @@
 <li><strong>Key Themes:</strong> Divine identity, Satan's deceptions, God's work and glory, theophany</li>
 <li><strong>Literary Genre:</strong> Prophetic vision/revelation account</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Book of Abraham</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Book of Abraham</h4>
 <ul>
 <li><strong>Author:</strong> Abraham, restored through Joseph Smith via interpretation of Egyptian Papyri</li>
 <li><strong>Source Date :</strong> Original content attributed to Abraham (~2000 BC); restored 1835</li>
@@ -445,39 +410,32 @@
 </ul>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Connection to Restoration Scripture</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Book of Mormon Connections</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Connection to Restoration Scripture</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Book of Mormon Connections</h4>
 <ul>
 <li><strong>Alma 13:3-5</strong> – Premortal ordination of high priests ("called and prepared from the foundation of the world")</li>
 <li><strong>2 Nephi 2:17-18</strong> – Satan seeking to destroy agency and make all miserable</li>
 <li><strong>Helaman 14:17</strong> – Christ brings to pass the resurrection of all</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Doctrine and Covenants Connections</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrine and Covenants Connections</h4>
 <ul>
 <li><strong>D&C 29:36-39</strong> – Satan's rebellion and casting out</li>
 <li><strong>D&C 76:25-28</strong> – Lucifer's fall ("an angel of God who was in authority in the presence of God")</li>
 <li><strong>D&C 93:29</strong> – Intelligence as uncreated ("Intelligence, or the light of truth, was not created")</li>
 <li><strong>D&C 138:55-56</strong> – "Noble and great ones" confirmed in vision</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Pearl of Great Price Connections</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Pearl of Great Price Connections</h4>
 <ul>
 <li><strong>Abraham 4-5</strong> – The creation account that follows Abraham 3</li>
 <li><strong>Moses 2-8</strong> – The Genesis account that Moses 1 introduces</li>
 </ul>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>This Week's Key Doctrines</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>This Week's Key Doctrines</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <ol>
 <li><strong>Premortal Existence:</strong> We lived as spirits before this mortal life, where some were foreordained to specific missions (Abraham 3:22-23).</li>
 <li><strong>Divine Identity:</strong> We are literal children of God, created in His image, with divine potential (Moses 1:4, 6).</li>
@@ -487,9 +445,9 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Temple Connections</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Temple Connections</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p>Moses 1 is essentially <strong>temple text</strong>. Dr. Lynne Wilson notes that Moses is "caught up to an exceedingly high mountain"—mountains in the Old Testament are temples. There Moses:</p>
 <ul>
 <li>Enters God's presence</li>
@@ -502,9 +460,9 @@
 <p>Abraham 3's cosmological revelation—Kolob, governing lights, intelligences—connects to temple symbolism where we learn about the organization of heaven and our place in God's eternal order.</p>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>CFM Manual Emphasis</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>CFM Manual Emphasis</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p><strong>Manual Focus:</strong> Understanding our identity as children of God and how that knowledge helps us resist Satan's attacks</p>
 <p><strong>Key Questions from Manual:</strong></p>
 <ul>
@@ -521,9 +479,9 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Suggested Reading Approach</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Suggested Reading Approach</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p><strong>If You Have Limited Time (Essential Reading):</strong></p>
 <ul>
 <li>Moses 1:1-22 — God reveals Himself and Moses's identity; Satan attacks</li>
@@ -544,23 +502,16 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Insights from a selection of Video Resources</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>"You ARE My Work and Glory" (<a href="https://followhim.co/show-note/2-532/" target="_blank">Follow Him</a>)</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Insights from a selection of Video Resources</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">"You ARE My Work and Glory" (<a href="https://followhim.co/show-note/2-532/" target="_blank">Follow Him</a>)</h4>
 <p>Dr. Phil Allred reframes Moses 1:39: not just "this IS my work and glory" but "<strong>YOU are</strong> my work and glory." Every person is personally the object of God's eternal efforts. This transforms how we read the verse.</p>
-</div>
-<button class="sg-inner-accordion"><span>Mid-Deliverance Theology (<a href="https://followhim.co/show-note/2-533/" target="_blank">Follow Him</a>)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Mid-Deliverance Theology (<a href="https://followhim.co/show-note/2-533/" target="_blank">Follow Him</a>)</h4>
 <p>We are always in the middle of God's deliverance—post some rescues, pre-completion of promises. Moses had been delivered from the lion couch but hadn't yet fulfilled his mission. The clock isn't over. We're still in process.</p>
-</div>
-<button class="sg-inner-accordion"><span>Identity Is Received, Not Created (<a href="https://scripturecentral.org/shows/finding-christ-in-the-old-testament/episodes/secure-in-your-true-identity-come-follow-me-2026-moses-1-abraham-3-jan-5-11-john-hilton-iii" target="_blank">Finding Christ</a>)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Identity Is Received, Not Created (<a href="https://scripturecentral.org/shows/finding-christ-in-the-old-testament/episodes/secure-in-your-true-identity-come-follow-me-2026-moses-1-abraham-3-jan-5-11-john-hilton-iii" target="_blank">Finding Christ</a>)</h4>
 <p>John Hilton III emphasizes that in scripture, identity is something we RECEIVE from God, not something we CREATE or curate. "My identity isn't based on what I have or what I've done. It's based on <strong>who's I am</strong> and <strong>what he's done</strong>." He notes that in the last 80 years, Moses 1:39 has been quoted in General Conference more than twice as often as the #2 most quoted scripture. Elder Bednar's companion scripture is <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/11?lang=eng&id=20" target="_blank">D&C 11:20</a>—"This is YOUR work: to keep my commandments." God's work is bringing to pass our eternal life; our work is keeping commandments.</p>
-</div>
-<button class="sg-inner-accordion"><span>President Nelson's Identity Order (<a href="https://rss.com/podcasts/tsar/349811/" target="_blank">Scriptures Are Real</a>)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">President Nelson's Identity Order (<a href="https://rss.com/podcasts/tsar/349811/" target="_blank">Scriptures Are Real</a>)</h4>
 <p>Kerry Muhlestein and Mike Goodman explain WHY President Nelson ordered our three identities as he did:</p>
 <ol>
 <li><strong>Child of God</strong> = foundational identity</li>
@@ -568,30 +519,24 @@
 <li><strong>Disciple of Christ</strong> = how we serve (anchored in the first two)</li>
 </ol>
 <p>They also share: "There are two verses by which I filter every other verse of scripture. One is <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/3?lang=eng&id=16" target="_blank">John 3:16</a> and the other is <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=39" target="_blank">Moses 1:39</a>. God loves us so much that he spends all his time, all his love, all his energy making it so that we can receive eternal life."</p>
-</div>
-<button class="sg-inner-accordion"><span>Mothers as Primary Gospel Teachers (Grounded)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Mothers as Primary Gospel Teachers (Grounded)</h4>
 <p>Barbara Morgan Gardner and Shannon Foster emphasize that Moses's experience is a template for how God prepares ALL of us. Mothers are primary gospel teachers, called to help children understand their identity just as God helped Moses understand his.</p>
-</div>
-<button class="sg-inner-accordion"><span>Creation as Temple Text (Scripture Insights)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Creation as Temple Text (Scripture Insights)</h4>
 <p>Taylor Halverson reveals that Genesis 1/Moses 2 is primarily temple text, not science text. The number seven appears as a covenant signature throughout. God is establishing sacred space.</p>
 <p><strong>File Status:</strong> Complete <strong>Created:</strong> January 4, 2026 <strong>Last Updated:</strong> January 4, 2026 <strong>Next File:</strong> 02_Historical_Cultural_Context.md</p>
-</div>
 </div>
 </div>
             </div>
         </div>
 
         <!-- SECTION 2: HISTORICAL & CULTURAL CONTEXT -->
-        <button class="sg-accordion-section">2. Historical & Cultural Context</button>
-        <div class="sg-panel">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">2. Historical & Cultural Context</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
             <div class="panel-content">
-                <button class="sg-sub-accordion"><span>Historical Setting</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Time Period</span></button>
-<div class="sg-inner-panel">
+                <button class="sg-sub-accordion active"><span>Historical Setting</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Time Period</h4>
 <p><strong>Approximate Dates:</strong></p>
 <ul>
 <li><strong>Moses 1:</strong> ~1446 BC (traditional date for the Exodus), occurring after Moses's call at the burning bush</li>
@@ -599,9 +544,7 @@
 </ul>
 <p><strong>Biblical Era:</strong> Pre-Genesis (both chapters precede the Genesis narrative)</p>
 <p><strong>World Historical Context:</strong> Moses had been raised in the Egyptian court amid sophisticated polytheism, where Pharaoh himself was considered divine. Abraham lived in Ur of the Chaldees, where original astronomical and cosmological truths had been corrupted into astrology and celestial worship—the heavenly bodies themselves becoming objects of veneration rather than witnesses of God's order. Abraham 3 represents a <em>restoration</em> of these primordial truths, not a replacement of pagan ideas with new revelation. Both chapters reveal that what had been lost or distorted was being returned to prophets who could teach it again.</p>
-</div>
-<button class="sg-inner-accordion"><span>Geographic Setting</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Geographic Setting</h4>
 <p><strong>Primary Locations:</strong></p>
 <table class="info-table">
 <tr>
@@ -634,9 +577,7 @@
 </tr>
 </table>
 <p><strong>Map Reference:</strong> The earthly settings are secondary to the heavenly/visionary context of these chapters.</p>
-</div>
-<button class="sg-inner-accordion"><span>Political Context</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Political Context</h4>
 <p><strong>Moses's World:</strong></p>
 <ul>
 <li>Egypt dominated by the New Kingdom pharaohs</li>
@@ -651,16 +592,12 @@
 </ul>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Ancient Near Eastern (ANE) Background</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Why ANE Context Matters for These Chapters</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Ancient Near Eastern (ANE) Background</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Why ANE Context Matters for These Chapters</h4>
 <p>Moses 1 and Abraham 3 directly counter the religious assumptions of surrounding cultures. Understanding what those cultures believed reveals what these chapters correct.</p>
-</div>
-<button class="sg-inner-accordion"><span>Cosmological Beliefs Being Corrected</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Cosmological Beliefs Being Corrected</h4>
 <h4>Egyptian Cosmology (Moses 1 Context)</h4>
 <p><strong>Egyptian Beliefs:</strong></p>
 <ul>
@@ -690,9 +627,7 @@
 <li>Celestial order reflects <em>hierarchy under God</em>, not competing deities</li>
 <li>Astronomy replaces astrology</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>The Divine Council</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">The Divine Council</h4>
 <p><strong>ANE Background:</strong> Ancient Near Eastern cultures commonly conceived of a <em>divine assembly</em> where gods deliberated. The Canaanite pantheon had El presiding over lesser gods; Mesopotamian myths describe councils of deities making decisions.</p>
 <p><strong>Biblical/Restoration Understanding:</strong> Abraham 3 reveals the actual divine council—not competing gods, but:</p>
 <ul>
@@ -702,9 +637,7 @@
 <li>Satan (another) seeking to usurp agency (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/4?lang=eng&id=1-3" target="_blank">Moses 4:1-3</a>)</li>
 </ul>
 <p>This is not polytheism but the Godhead working with spirit children who would become humans.</p>
-</div>
-<button class="sg-inner-accordion"><span>Theophany Traditions</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Theophany Traditions</h4>
 <p><strong>ANE Background:</strong> Ancient peoples expected divine encounters at high mountains, sacred groves, or temples. Mountains were seen as the meeting point between heaven and earth.</p>
 <p><strong>Moses 1 Pattern:</strong></p>
 <ul>
@@ -715,12 +648,10 @@
 </ul>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Interpretive Frameworks for Scripture Study</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>The Jewish PaRDeS Model</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Interpretive Frameworks for Scripture Study</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">The Jewish PaRDeS Model</h4>
 <p>Jewish tradition identifies four levels of scriptural meaning. The acronym <em>PaRDeS</em> (פַּרְדֵּס) means "garden" or "paradise":</p>
 <table class="info-table">
 <tr>
@@ -754,9 +685,7 @@
 <td>Temple connections; covenant implications; mysteries revealed to the faithful</td>
 </tr>
 </table>
-</div>
-<button class="sg-inner-accordion"><span>Elder Gerald N. Lund's Seven Principles</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Elder Gerald N. Lund's Seven Principles</h4>
 <p>In his October 1986 <em>Ensign</em> article, "<a href="https://www.churchofjesuschrist.org/study/ensign/1986/10/understanding-scriptural-symbols" target="_blank">Understanding Scriptural Symbols</a>," Gerald N. Lund offered six principles for interpreting scriptural symbolism, to which a seventh has been added:</p>
 <ol>
 <li><strong>Do the Scriptures give an interpretation?</strong> — Check if the Bible interprets the symbol elsewhere</li>
@@ -784,12 +713,10 @@
 <p>At the same time, we must be responsible stewards of sacred things. Our interpretations should remain grounded in scripture, prophetic guidance, and the Spirit—lest we wander into speculation that leads us or others astray. The principles provide both permission to explore and boundaries to protect.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Literary Context</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Genre(s) in This Week's Reading</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Literary Context</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Genre(s) in This Week's Reading</h4>
 <table class="info-table">
 <tr>
 <th>Genre</th>
@@ -817,9 +744,7 @@
 <td>Ascending order, governing principles, eternal truths</td>
 </tr>
 </table>
-</div>
-<button class="sg-inner-accordion"><span>Literary Techniques to Watch For</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Literary Techniques to Watch For</h4>
 <p><strong>Dialogue Pattern (Moses 1):</strong></p>
 <ul>
 <li>God speaks first → establishes identity and truth</li>
@@ -842,12 +767,10 @@
 </ul>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Authorship and Composition</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Traditional Attribution</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Authorship and Composition</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Traditional Attribution</h4>
 <p><strong>Moses 1:</strong></p>
 <ul>
 <li><strong>Original Author:</strong> Moses, recording his own vision</li>
@@ -860,13 +783,9 @@
 <li><strong>Restoration:</strong> 1835, as Joseph Smith worked with Egyptian papyri</li>
 <li><strong>LDS Perspective:</strong> Restored ancient record, revealed through prophetic gift</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Why These Chapters Are Unique</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Why These Chapters Are Unique</h4>
 <p>Neither Moses 1 nor Abraham 3 appears in any extant biblical manuscript. They exist only through the Restoration. The Book of Moses was received as revelation while Joseph was revising Genesis; the Book of Abraham came through prophetic translation. Both restore "plain and precious things" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/13?lang=eng&id=28" target="_blank">1 Nephi 13:28</a>) lost from the biblical record.</p>
-</div>
-<button class="sg-inner-accordion"><span>What Was Lost</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">What Was Lost</h4>
 <p>Dr. Lynne Wilson observes that the Old Testament <em>never mentions</em> Satan, devil, or temptation in Genesis. Moses 1 restores:</p>
 <ul>
 <li>Satan's pre-Genesis attempt to deceive Moses</li>
@@ -877,10 +796,9 @@
 <p>This is precisely the kind of "plain and precious" truth <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/13?lang=eng&id=26-29" target="_blank">1 Nephi 13:26-29</a> prophesied would be lost and restored.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Key Questions This Context Answers</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Key Questions This Context Answers</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <ol>
 <li><strong>Why does God reveal Moses's identity first?</strong></li>
 </ol>
@@ -899,11 +817,10 @@
 <p>Using the interpretive frameworks above: establish plain meaning, look for patterns and hints, apply to life, seek the Spirit, and expect temple connections.</p>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>For Further Study</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Recommended Resources</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>For Further Study</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Recommended Resources</h4>
 <ul>
 <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bd/devil?lang=eng" target="_blank">Bible Dictionary: "Devil"</a> and <a href="https://www.churchofjesuschrist.org/study/scriptures/bd/lucifer?lang=eng" target="_blank">Bible Dictionary: "Lucifer"</a></li>
 <li>Blue Letter Bible Lexicon: <a href="https://www.blueletterbible.org/lexicon/h7854/kjv/wlc/0-1/" target="_blank"><em>satan</em> (שָׂטָן, H7854)</a> — "adversary"; <a href="https://www.blueletterbible.org/lexicon/h1966/kjv/wlc/0-1/" target="_blank"><em>heylel</em> (הֵילֵל, H1966)</a> — "shining one" (Lucifer); <a href="https://www.blueletterbible.org/lexicon/g1228/kjv/tr/0-1/" target="_blank"><em>diabolos</em> (διάβολος, G1228)</a> — "slanderer, false accuser" (Devil)</li>
@@ -912,16 +829,12 @@
 <li><a href="https://www.churchofjesuschrist.org/study/scriptures/gs/premortal-life?lang=eng" target="_blank">Guide to the Scriptures: "Premortal Life"</a></li>
 <li><a href="https://www.churchofjesuschrist.org/study/manual/gospel-topics/premortality?lang=eng" target="_blank">Gospel Topics: "Premortality"</a></li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Bible Project Videos</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Bible Project Videos</h4>
 <ul>
 <li><a href="https://bibleproject.com/explore/category/spiritual-beings/" target="_blank">Spiritual Beings Series</a> — Excellent context on divine council (8 episodes including Divine Council, Satan and Demons)</li>
 <li><a href="https://bibleproject.com/explore/video/heaven-earth/" target="_blank">Heaven and Earth</a> — Cosmic geography of temples and theophanies</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Scripture Central Resources</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Scripture Central Resources</h4>
 <ul>
 <li><a href="https://scripturecentral.org/archive/books/book-chapter/commentary-moses-1" target="_blank">Commentary on Moses 1</a> — Scholarly analysis of the chapter</li>
 <li><a href="https://scripturecentral.org/archive/books/book-chapter/book-moses-introduction" target="_blank">The Book of Moses Introduction</a> — Context for the Joseph Smith Translation</li>
@@ -930,25 +843,21 @@
 <p><strong>File Status:</strong> Complete <strong>Created:</strong> January 4, 2026 <strong>Last Updated:</strong> January 4, 2026 <strong>Next File:</strong> 03_Key_Passages_Study.md</p>
 </div>
 </div>
-</div>
             </div>
         </div>
 
         <!-- SECTION 3: KEY PASSAGES STUDY -->
-        <button class="sg-accordion-section">3. Key Passages Study</button>
-        <div class="sg-panel">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">3. Key Passages Study</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
             <div class="panel-content">
-                <button class="sg-sub-accordion"><span>Reading Overview</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>What This Week Covers</span></button>
-<div class="sg-inner-panel">
+                <button class="sg-sub-accordion active"><span>Reading Overview</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">What This Week Covers</h4>
 <p>This week features two of the most doctrinally significant chapters in the Pearl of Great Price—both unique restorations through Joseph Smith that do not appear in the Bible.</p>
 <p><strong>Moses 1</strong> is a pre-Genesis vision given to Moses on an "exceedingly high mountain" (likely Sinai). The chapter divides into three major sections: (1) God's self-revelation and Moses's identity (vv. 1-11), (2) Satan's attack and Moses's victory (vv. 12-23), and (3) God's further revelation about creation and His purposes (vv. 24-42). This chapter establishes the interpretive lens for all of Genesis.</p>
 <p><strong>Abraham 3</strong> shifts to cosmic scale, revealing the premortal council and the organization of intelligences. Abraham learns about governing lights and stars (vv. 1-17), the hierarchy of intelligences and God's supremacy (vv. 18-21), the "noble and great ones" and their foreordination (vv. 22-23), and the council where Christ volunteered and Satan rebelled (vv. 24-28).</p>
-</div>
-<button class="sg-inner-accordion"><span>Chapter-by-Chapter Summary</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Chapter-by-Chapter Summary</h4>
 <table class="info-table">
 <tr>
 <th>Chapter</th>
@@ -979,9 +888,7 @@
 <td>Noble and great ones; "we will go down"; Christ volunteers; Satan rebels</td>
 </tr>
 </table>
-</div>
-<button class="sg-inner-accordion"><span>Major Themes This Week</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Major Themes This Week</h4>
 <ol>
 <li><strong>Divine Identity</strong> — Both Moses and Abraham learn who they are in relation to God</li>
 <li><strong>God's Work and Glory</strong> — The purpose of all creation is the immortality and eternal life of God's children</li>
@@ -991,12 +898,10 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Week-Level Literary Features</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Genre & Form</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Week-Level Literary Features</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Genre & Form</h4>
 <p>Both chapters are <strong>theophany/vision narratives</strong>—accounts of prophets receiving direct revelation from God. They combine:</p>
 <ul>
 <li>Divine self-disclosure</li>
@@ -1004,9 +909,7 @@
 <li>Prophetic call elements</li>
 <li>Conflict narrative (Moses 1)</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Structural Overview</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Structural Overview</h4>
 <p><strong>Moses 1 follows a revelation-attack-victory pattern:</strong></p>
 <ul>
 <li>A: God reveals Himself (vv. 1-8)</li>
@@ -1021,18 +924,14 @@
 <li>Intelligences (spiritual hierarchy)</li>
 <li>The Council including the Noble and great ones (foreordination, God's Governing Order, resulting climax: Christ vs. Satan)</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Key Literary Patterns to Watch For</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Key Literary Patterns to Watch For</h4>
 <ul>
 <li><strong>Repetition of "glory":</strong> Appears 13 times in Moses 1—a key thematic word</li>
 <li><strong>Divine naming:</strong> "I am the Lord God Almighty"; "thou art my son"</li>
 <li><strong>Contrast structure:</strong> Moses calls Satan's bluff by contrasting God's glory with Satan's darkness</li>
 <li><strong>"Nevertheless" moment:</strong> Moses 1:20—the assertion of agency amid fear</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Recurring Motifs & Keywords</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Recurring Motifs & Keywords</h4>
 <table class="info-table">
 <tr>
 <th>Term</th>
@@ -1067,31 +966,21 @@
 </table>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>KEY PASSAGE 1: God Reveals Moses's Identity</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Scripture Reference</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>KEY PASSAGE 1: God Reveals Moses's Identity</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Scripture Reference</h4>
 <p><strong>Moses 1:1-6</strong></p>
-</div>
-<button class="sg-inner-accordion"><span>Scripture Text</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Scripture Text</h4>
 <p>> 1 The words of God, which he spake unto Moses at a time when Moses was caught up into an exceedingly high mountain, > > 2 And he saw God face to face, and he talked with him, and the glory of God was upon Moses; therefore Moses could endure his presence. > > 3 And God spake unto Moses, saying: Behold, I am the Lord God Almighty, and Endless is my name; for I am without beginning of days or end of years; and is not this endless? > > 4 And, behold, thou art my son; wherefore look, and I will show thee the workmanship of mine hands; but not all, for my works are without end, and also my words, for they never cease. > > 5 Wherefore, no man can behold all my works, except he behold all my glory; and no man can behold all my glory, and afterwards remain in the flesh on the earth. > > 6 And I have a work for thee, Moses, my son; and thou art in the similitude of mine Only Begotten; and mine Only Begotten is and shall be the Savior, for he is full of grace and truth; but there is no God beside me, and all things are present with me, for I know them all.</p>
-</div>
-<button class="sg-inner-accordion"><span>Literary Structure</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Literary Structure</h4>
 <p><strong>Structure Type:</strong> Divine Self-Disclosure Pattern</p>
 <p><strong>Pattern:</strong> ``` A  - Setting: Caught up to high mountain (v. 1) B  - Moses sees God face to face; glory enables endurance (v. 2) C  - GOD'S IDENTITY: "I am the Lord God Almighty" (v. 3) C' - MOSES'S IDENTITY: "Thou art my son" (v. 4) B' - Limitation: Cannot see all without being consumed (v. 5) A' - Commission: "I have a work for thee" (v. 6) ```</p>
 <p><strong>Significance of Structure:</strong> God's identity and Moses's identity are placed in parallel at the center. You cannot understand yourself without first understanding God. This structural parallel reinforces the doctrinal truth.</p>
-</div>
-<button class="sg-inner-accordion"><span>Historical & Cultural Context</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Historical & Cultural Context</h4>
 <p>Moses receives this vision after the burning bush (Exodus 3) but before delivering Israel. He had been raised in Pharaoh's court surrounded by Egyptian polytheism—a pantheon of gods with limited domains. God's declaration "there is no God beside me" directly counters this worldview.</p>
 <p>The mountain setting echoes temple theology—mountains are places of divine encounter (Sinai, Moriah, Tabor, Transfiguration).</p>
-</div>
-<button class="sg-inner-accordion"><span>Doctrinal Analysis</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrinal Analysis</h4>
 <p><strong>God's Identity (v. 3):</strong></p>
 <ul>
 <li>"Lord God Almighty" = Yahweh Elohim El Shaddai—combining covenant name with power</li>
@@ -1110,15 +999,11 @@
 <li>"In the similitude of mine Only Begotten" = Moses will be a type of Christ as deliverer</li>
 <li>This prepares Moses for the Exodus role ahead</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Video Resource Insights</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Video Resource Insights</h4>
 <p><strong>From Follow Him (Dr. Phil Allred):</strong> "God constantly weaves intimate, personal connection alongside galactic, cosmic revelation. Notice the pattern: 'The Lord <em>my</em> God' (v. 1), 'Moses' by name (v. 3), 'My son, my son' (v. 4). God doesn't just show cosmic power to impress—he does it to establish credibility so we'll trust him with our lives."</p>
 <p><strong>From Scriptures Are Real (Muhlestein/Goodman):</strong> "Joseph Smith taught: 'If men do not comprehend the character of God, they cannot comprehend themselves.' Moses, before I'm able to help you know who you are, let's start with who I am."</p>
 <p><strong>From Finding Christ (John Hilton III):</strong> "Identity is not curated on Instagram or enhanced on Photoshop. It's bestowed by God. If we don't understand that, we'll exhaust ourselves trying to prove something God has already declared."</p>
-</div>
-<button class="sg-inner-accordion"><span>Cross-References</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Cross-References</h4>
 <p><strong>Old Testament:</strong></p>
 <ul>
 <li><strong><a href="https://www.blueletterbible.org/kjv/exo/3/13/s_53013" target="_blank">Exodus 3:13-14</a></strong> — "I AM THAT I AM" — divine name revelation</li>
@@ -1137,9 +1022,7 @@
 <ul>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/93.21-23" target="_blank">D&C 93:21-23</a></strong> — We were in the beginning with the Father</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Latter-day Saint Connections</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Latter-day Saint Connections</h4>
 <p>President Russell M. Nelson taught that our three primary identities must be understood in order:</p>
 <ol>
 <li>Child of God</li>
@@ -1147,9 +1030,7 @@
 <li>Disciple of Jesus Christ</li>
 </ol>
 <p>Moses 1:4-6 establishes the first identity before any mission is given. This order matters.</p>
-</div>
-<button class="sg-inner-accordion"><span>Reflection Questions</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Reflection Questions</h4>
 <ol>
 <li>How does knowing God's identity help you understand your own identity?</li>
 <li>What difference does it make that God reveals Moses's identity BEFORE his mission?</li>
@@ -1158,33 +1039,23 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>KEY PASSAGE 2: Moses Overcomes Satan</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Scripture Reference</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>KEY PASSAGE 2: Moses Overcomes Satan</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Scripture Reference</h4>
 <p><strong>Moses 1:12-22</strong></p>
-</div>
-<button class="sg-inner-accordion"><span>Scripture Text</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Scripture Text</h4>
 <p>> 12 And it came to pass that when Moses had said these words, behold, Satan came tempting him, saying: Moses, son of man, worship me. > > 13 And it came to pass that Moses looked upon Satan and said: Who art thou? For behold, I am a son of God, in the similitude of his Only Begotten; and where is thy glory, that I should worship thee? > > 14 For behold, I could not look upon God, except his glory should come upon me, and I were transfigured before him. But I can look upon thee in the natural man. Is it not so, surely? > > 15 Blessed be the name of my God, for his Spirit hath not altogether withdrawn from me, or else where is thy glory, for it is darkness unto me? And I can judge between thee and God; for God said unto me: Worship God, for him only shalt thou serve. > > 16 Get thee hence, Satan; deceive me not; for God said unto me: Thou art after the similitude of mine Only Begotten. > > 17 And he also gave me commandments when he called unto me out of the burning bush, saying: Call upon God in the name of mine Only Begotten, and worship me. > > 18 And again Moses said: I will not cease to call upon God, I have other things to inquire of him: for his glory has been upon me, wherefore I can judge between him and thee. Depart hence, Satan. > > 19 And now, when Moses had said these words, Satan cried with a loud voice, and ranted upon the earth, and commanded, saying: I am the Only Begotten, worship me. > > 20 And it came to pass that Moses began to fear exceedingly; and as he began to fear, he saw the bitterness of hell. Nevertheless, calling upon God, he received strength, and he commanded, saying: Depart from me, Satan, for this one God only will I worship, which is the God of glory. > > 21 And now Satan began to tremble, and the earth shook; and Moses received strength, and called upon God, saying: In the name of the Only Begotten, depart hence, Satan. > > 22 And it came to pass that Satan cried with a loud voice, with weeping, and wailing, and gnashing of teeth; and he departed hence, even from the presence of Moses, that he beheld him not.</p>
-</div>
-<button class="sg-inner-accordion"><span>Literary Structure</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Literary Structure</h4>
 <p><strong>Structure Type:</strong> Conflict Narrative with Escalating Confrontation</p>
 <p><strong>Pattern:</strong> ``` A  - Satan's first attack: "son of man, worship me" (v. 12) B  - Moses's first defense: identity declaration (vv. 13-15) C  - Moses's command: "Get thee hence, Satan" (v. 16) D  - Satan's escalation: claims to be Only Begotten (v. 19) E  - TURNING POINT: Moses fears; sees bitterness of hell; "NEVERTHELESS" (v. 20) D' - Moses invokes Christ's name explicitly (v. 21) C' - Satan must depart (v. 22) ```</p>
 <p><strong>Significance of Structure:</strong> The "nevertheless" of verse 20 marks the pivot point. Moses acknowledges fear but chooses faith anyway. The word "nevertheless" is "the marker for the assertion of agency" (Dr. Phil Allred).</p>
-</div>
-<button class="sg-inner-accordion"><span>Historical & Cultural Context</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Historical & Cultural Context</h4>
 <p>Satan's "son of man" designation may have carried special weight for Moses, who was adopted—not truly Pharaoh's son. Satan attacks at points of insecurity.</p>
 <p>The phrase "son of man" in Hebrew (<em>ben adam</em>) simply means "mortal human." Satan is reducing Moses's divine identity to mere humanity.</p>
 <p><strong>The Messianic Irony:</strong> The irony deepens when we recognize that "Son of Man" became one of the most significant Messianic titles in scripture. In Aramaic, <em><a href="https://www.blueletterbible.org/lexicon/h606/kjv/wlc/0-1/" target="_blank">bar enosh</a></em> (בַּר אֱנָשׁ) appears in <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/dan/7?lang=eng&id=13-14" target="_blank">Daniel 7:13-14</a>: "I saw in the night visions, and, behold, one like the <strong>Son of man</strong> came with the clouds of heaven, and came to the Ancient of days... And there was given him dominion, and glory, and a kingdom... his dominion is an everlasting dominion, which shall not pass away."</p>
 <p>This apocalyptic figure—appearing human yet coming on clouds with divine glory and receiving eternal, universal dominion—became central to Jewish Messianic expectation. Jesus deliberately claimed this title, using it approximately 80 times in the Gospels. So while Satan uses "son of man" diminutively to strip Moses of his divine identity, the TRUE "Son of Man" from Daniel's vision is divine—Jesus Christ Himself. Satan unknowingly invokes a Messianic title while attempting to demean.</p>
-</div>
-<button class="sg-inner-accordion"><span>Doctrinal Analysis</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrinal Analysis</h4>
 <p><strong>Satan's Attack Pattern:</strong></p>
 <ol>
 <li>Diminishes identity ("son of man" vs. "son of God")</li>
@@ -1202,15 +1073,11 @@
 <li>Invokes Christ's name with covenant authority (final victory)</li>
 </ol>
 <p><strong>Key Insight:</strong> Moses commands Satan to leave three times before invoking Christ's name. Only the invocation of covenant authority—"in the name of the Only Begotten"—results in Satan's departure.</p>
-</div>
-<button class="sg-inner-accordion"><span>Video Resource Insights</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Video Resource Insights</h4>
 <p><strong>From Follow Him:</strong> "Only one person scares Satan... When Moses commands Satan to depart, Satan keeps coming back. Only when Moses invokes 'the name of the only begotten' does Satan have to obey."</p>
 <p><strong>From Finding Christ:</strong> "The 'nevertheless' of verse 20 is massive. Moses fears. He sees the bitterness of hell. 'Nevertheless, calling upon God, he received strength.' That word marks the assertion of agency—acknowledging difficulty but choosing faith anyway."</p>
 <p><strong>From Grounded:</strong> "Moses couldn't send Satan away on his own, but with the power and authority of God, Satan had to obey. We can teach our daughters especially—they speak and act in the power and authority of God as they make and keep sacred covenants."</p>
-</div>
-<button class="sg-inner-accordion"><span>Cross-References</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Cross-References</h4>
 <p><strong>Old Testament:</strong></p>
 <ul>
 <li><strong><a href="https://www.blueletterbible.org/kjv/job/1/6/s_437006" target="_blank">Job 1:6-12</a></strong> — Satan's limited access to God's presence</li>
@@ -1229,13 +1096,9 @@
 <ul>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/10.5" target="_blank">D&C 10:5</a></strong> — "Pray always, that you may come off conqueror"</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Latter-day Saint Connections</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Latter-day Saint Connections</h4>
 <p>Temple-attending members receive power to rebuke Satan. Dr. Lynne Wilson notes: "We are taught how and we receive the power to do so as women and as men. That's one of the endowments of power that we have."</p>
-</div>
-<button class="sg-inner-accordion"><span>Reflection Questions</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Reflection Questions</h4>
 <ol>
 <li>How does Satan attack your identity today? What "son of man" messages does the world send?</li>
 <li>What does it mean that Moses had to invoke Christ's name specifically to cast out Satan?</li>
@@ -1244,25 +1107,17 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>KEY PASSAGE 3: God's Work and Glory</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Scripture Reference</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>KEY PASSAGE 3: God's Work and Glory</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Scripture Reference</h4>
 <p><strong>Moses 1:39</strong></p>
-</div>
-<button class="sg-inner-accordion"><span>Scripture Text</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Scripture Text</h4>
 <p>> For behold, this is my work and my glory—to bring to pass the immortality and eternal life of man.</p>
-</div>
-<button class="sg-inner-accordion"><span>Literary Structure</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Literary Structure</h4>
 <p><strong>Structure Type:</strong> Purpose Statement / Divine Mission Declaration</p>
 <p>This single verse functions as the thesis statement for all of scripture. Its placement at the climax of Moses 1—after God has revealed creation and His character—makes it the explanatory key to everything.</p>
-</div>
-<button class="sg-inner-accordion"><span>Doctrinal Analysis</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrinal Analysis</h4>
 <p><strong>"This is my work":</strong></p>
 <ul>
 <li>God describes His activity as "work"—not passive existence</li>
@@ -1281,15 +1136,11 @@
 <li>Eternal life = exaltation (conditional on faithfulness)</li>
 <li>Both are God's purpose for us</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Video Resource Insights</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Video Resource Insights</h4>
 <p><strong>From Follow Him (Dr. Phil Allred):</strong> "Not just 'this IS my work and glory' but 'YOU are my work and glory.' Every person is personally the object of God's eternal efforts."</p>
 <p><strong>From Finding Christ (John Hilton III):</strong> "In the last 80 years, Moses 1:39 has been quoted in General Conference more than twice as often as the #2 most quoted scripture. Elder Bednar's companion scripture is D&C 11:20—'This is YOUR work: to keep my commandments.' God's work is bringing to pass our eternal life; our work is keeping commandments."</p>
 <p><strong>From Scriptures Are Real:</strong> "There are two verses by which I filter every other verse of scripture. One is John 3:16 and the other is Moses 1:39. God loves us so much that he spends all his time, all his love, all his energy making it so that we can receive eternal life."</p>
-</div>
-<button class="sg-inner-accordion"><span>Cross-References</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Cross-References</h4>
 <p><strong>Old Testament:</strong></p>
 <ul>
 <li><strong><a href="https://www.blueletterbible.org/kjv/isa/43/7/s_722007" target="_blank">Isaiah 43:7</a></strong> — "I have created him for my glory"</li>
@@ -1304,9 +1155,7 @@
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/14.7" target="_blank">D&C 14:7</a></strong> — "Eternal life... the greatest of all the gifts of God"</li>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/11.20" target="_blank">D&C 11:20</a></strong> — "This is your work, to keep my commandments"</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Reflection Questions</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Reflection Questions</h4>
 <ol>
 <li>How does it change your self-perception to know you are God's "work"?</li>
 <li>What's the difference between immortality and eternal life?</li>
@@ -1315,25 +1164,17 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>KEY PASSAGE 4: The Noble and Great Ones</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Scripture Reference</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>KEY PASSAGE 4: The Noble and Great Ones</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Scripture Reference</h4>
 <p><strong>Abraham 3:22-26</strong></p>
-</div>
-<button class="sg-inner-accordion"><span>Scripture Text</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Scripture Text</h4>
 <p>> 22 Now the Lord had shown unto me, Abraham, the intelligences that were organized before the world was; and among all these there were many of the noble and great ones; > > 23 And God saw these souls that they were good, and he stood in the midst of them, and he said: These I will make my rulers; for he stood among those that were spirits, and he saw that they were good, and he said unto me: Abraham, thou art one of them; thou wast chosen before thou wast born. > > 24 And there stood one among them that was like unto God, and he said unto those who were with him: We will go down, for there is space there, and we will take of these materials, and we will make an earth whereon these may dwell; > > 25 And we will prove them herewith, to see if they will do all things whatsoever the Lord their God shall command them; > > 26 And they who keep their first estate shall be added upon; and they who keep not their first estate shall not have glory in the same kingdom with those who keep their first estate; and they who keep their second estate shall have glory added upon their heads for ever and ever.</p>
-</div>
-<button class="sg-inner-accordion"><span>Literary Structure</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Literary Structure</h4>
 <p><strong>Structure Type:</strong> Vision Narrative with Council Scene</p>
 <p><strong>Pattern:</strong> ``` A  - Intelligences organized before the world (v. 22) B  - Noble and great ones identified (v. 22) C  - Abraham told "thou art one of them" (v. 23) D  - "One like unto God" proposes creation (v. 24) D' - Purpose: to prove them (v. 25) C' - Those keeping estates receive glory (v. 26) ```</p>
-</div>
-<button class="sg-inner-accordion"><span>Doctrinal Analysis</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrinal Analysis</h4>
 <p><strong>Intelligences vs. Spirits:</strong> Verse 22 distinguishes "intelligences that were organized" from "spirits" (v. 23). D&C 93:29 teaches that "Intelligence... was not created or made." This suggests a progression: uncreated intelligence → organized spirit → mortal body → resurrected body.</p>
 <p>The Hebrew word for intelligence/understanding is <a href="https://www.blueletterbible.org/lexicon/h998/kjv/wlc/0-1/" target="_blank"><em>binah</em></a> (בִּינָה, H998), derived from the root <a href="https://www.blueletterbible.org/lexicon/h995/kjv/wlc/0-1/" target="_blank"><em>bin</em></a> (בִּין, H995), meaning "to discern, perceive, understand." This root shares a linguistic connection with <a href="https://www.blueletterbible.org/lexicon/h1121/kjv/wlc/0-1/" target="_blank"><em>ben</em></a> (בֵּן, H1121), the Hebrew word for "child"—used inclusively for both sons and daughters (the plural <em>banim</em> often means "children" regardless of gender). Both derive from the concept of <em>building</em> (<em>banah</em>, בָּנָה, H1129)—a child "builds" the family, while understanding "builds" discernment. The theological implication is profound: to become children of God (<em>b'nei Elohim</em>) is connected to gaining divine understanding (<em>binah</em>). Intelligence and divine sonship/daughtership are linguistically and spiritually intertwined—we become God's children as we grow in divine intelligence.</p>
 <p><strong>Noble and Great Ones:</strong></p>
@@ -1350,14 +1191,10 @@
 <li>First estate = premortal life (those who kept it came to earth)</li>
 <li>Second estate = mortality (those who keep it receive eternal glory)</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Video Resource Insights</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Video Resource Insights</h4>
 <p><strong>From Follow Him:</strong> "Boyd K. Packer taught: 'Don't let a student leave your class without knowing there is a premortal existence. If they don't know it, how can they make sense of mortality?'"</p>
 <p><strong>From Scriptures Are Real:</strong> "I do these interviews with my students at the end of the semester. One student who was struggling asked to see himself through God's eyes. In the temple, he saw light around every person. Then he felt prompted to look in the mirror—and he was brilliant. 'I saw for the first time who I really was.'"</p>
-</div>
-<button class="sg-inner-accordion"><span>Cross-References</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Cross-References</h4>
 <p><strong>Book of Mormon:</strong></p>
 <ul>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/13.3" target="_blank">Alma 13:3</a></strong> — "Called and prepared from the foundation of the world"</li>
@@ -1366,9 +1203,7 @@
 <ul>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/138.53-56" target="_blank">D&C 138:53-56</a></strong> — "Among the great and mighty ones... noble and great"</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Reflection Questions</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Reflection Questions</h4>
 <ol>
 <li>How does knowing about your premortal existence affect how you view challenges now?</li>
 <li>What might it mean that you were among those who "kept your first estate"?</li>
@@ -1377,25 +1212,17 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>KEY PASSAGE 5: Christ Volunteers; Satan Rebels</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Scripture Reference</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>KEY PASSAGE 5: Christ Volunteers; Satan Rebels</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Scripture Reference</h4>
 <p><strong>Abraham 3:27-28</strong></p>
-</div>
-<button class="sg-inner-accordion"><span>Scripture Text</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Scripture Text</h4>
 <p>> 27 And the Lord said: Whom shall I send? And one answered like unto the Son of Man: Here am I, send me. And another answered and said: Here am I, send me. And the Lord said: I will send the first. > > 28 And the second was angry, and kept not his first estate; and, at that day, many followed after him.</p>
-</div>
-<button class="sg-inner-accordion"><span>Literary Structure</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Literary Structure</h4>
 <p><strong>Structure Type:</strong> Contrast Narrative</p>
 <p>The parallel structure ("Here am I, send me" / "Here am I, send me") sets up a dramatic contrast. Same words, opposite spirits.</p>
-</div>
-<button class="sg-inner-accordion"><span>Doctrinal Analysis</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrinal Analysis</h4>
 <p><strong>Christ's Response:</strong></p>
 <ul>
 <li>"Here am I, send me" = willing submission</li>
@@ -1410,14 +1237,10 @@
 <li>"Kept not his first estate" = failed the premortal test</li>
 </ul>
 <p><strong>The Core Issue:</strong> The war in heaven was about agency. D&C 29:36 clarifies that Satan "sought to destroy the agency of man." Christ's plan preserved choice; Satan's plan forced compliance.</p>
-</div>
-<button class="sg-inner-accordion"><span>Video Resource Insights</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Video Resource Insights</h4>
 <p><strong>From Finding Christ:</strong> "The first recorded sin is Satan wanting glory for himself: 'Give me thine honor.' Christ's response: 'Father, thy will be done and the glory be thine forever.' These are the two fundamental approaches to life."</p>
 <p><strong>From Grounded:</strong> "If I on my best day can say that my work and my glory is to bring to pass immortality and eternal life of man, meaning I'm just going to help bring life—then I'm unified with Christ. We can try to be saviors on Mount Zion and help bring people to him."</p>
-</div>
-<button class="sg-inner-accordion"><span>Cross-References</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Cross-References</h4>
 <p><strong>Book of Mormon:</strong></p>
 <ul>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/2.27" target="_blank">2 Nephi 2:27</a></strong> — "Free to choose liberty and eternal life... or captivity and death"</li>
@@ -1427,9 +1250,7 @@
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/29.36-37" target="_blank">D&C 29:36-37</a></strong> — "He sought to destroy the agency of man"</li>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/76.25-28" target="_blank">D&C 76:25-28</a></strong> — Lucifer's fall from heaven</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Reflection Questions</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Reflection Questions</h4>
 <ol>
 <li>Both said "Here am I, send me." What made the difference?</li>
 <li>How do you see the glory-seeking vs. glory-giving contrast in your own life?</li>
@@ -1438,33 +1259,23 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Additional Notable Verses</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Moses 1:10 — "Now, for this cause I know that man is nothing"</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Additional Notable Verses</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Moses 1:10 — "Now, for this cause I know that man is nothing"</h4>
 <p><strong>Key insight:</strong> After seeing God's glory, Moses doesn't feel worthless—he feels properly oriented. "I am nothing" is liberating, not depressing. As John Hilton III notes: "If I have to have some of these things to be something in life, that will crumble. But if I realize I'm nothing, then I actually have a security that I'll never lose." <strong>Connection:</strong> <a href="https://www.blueletterbible.org/kjv/psa/8/4/s_486004" target="_blank">Psalm 8:4</a> — "What is man, that thou art mindful of him?"</p>
-</div>
-<button class="sg-inner-accordion"><span>Moses 1:20 — "Nevertheless, calling upon God, he received strength"</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Moses 1:20 — "Nevertheless, calling upon God, he received strength"</h4>
 <p><strong>Key insight:</strong> The word "nevertheless" is the marker for the assertion of agency. Moses fears, sees the bitterness of hell—"nevertheless" he calls upon God. This is the pivot point. <strong>Connection:</strong> <a href="https://www.blueletterbible.org/kjv/heb/10/35/s_1143035" target="_blank">Hebrews 10:35</a> — "Cast not away therefore your confidence"</p>
-</div>
-<button class="sg-inner-accordion"><span>Abraham 3:19 — "I am the Lord thy God, I am more intelligent than they all"</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Abraham 3:19 — "I am the Lord thy God, I am more intelligent than they all"</h4>
 <p><strong>Key insight:</strong> God's supremacy is not arbitrary power but supreme intelligence—the ultimate capacity to understand, create, and love. This intelligence is what we aspire toward. <strong>Connection:</strong> <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/93.36" target="_blank">D&C 93:36</a> — "The glory of God is intelligence"</p>
-</div>
-<button class="sg-inner-accordion"><span>Moses 1:25 — "Blessed art thou, Moses, for I, the Almighty, have chosen thee"</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Moses 1:25 — "Blessed art thou, Moses, for I, the Almighty, have chosen thee"</h4>
 <p><strong>Key insight:</strong> After the Satan encounter, God reaffirms Moses's identity and calling. The pattern: revelation → attack → victory → reaffirmation. <strong>Connection:</strong> <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.7-8" target="_blank">D&C 121:7-8</a> — "My son, peace be unto thy soul"</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Week Summary</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Key Doctrinal Takeaways</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Week Summary</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Key Doctrinal Takeaways</h4>
 <ol>
 <li><strong>Divine Identity:</strong> We are literally God's children, created in His image, with divine potential—and this identity is received, not created.</li>
 <li><strong>God's Purpose:</strong> "This is my work and my glory—to bring to pass the immortality and eternal life of man" (Moses 1:39).</li>
@@ -1472,9 +1283,7 @@
 <li><strong>Premortal Existence:</strong> We lived, were known, and some were foreordained before this life.</li>
 <li><strong>Agency Is Central:</strong> The war in heaven was about preserving vs. destroying agency; this battle continues.</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Literary Patterns to Remember</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Literary Patterns to Remember</h4>
 <table class="info-table">
 <tr>
 <th>Pattern</th>
@@ -1502,9 +1311,7 @@
 <td>Same words, opposite spirits</td>
 </tr>
 </table>
-</div>
-<button class="sg-inner-accordion"><span>Hebrew/Restored Terms to Remember</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Hebrew/Restored Terms to Remember</h4>
 <table class="info-table">
 <tr>
 <th>Term</th>
@@ -1542,15 +1349,11 @@
 <td>Purpose of mortality (like proving bread dough)</td>
 </tr>
 </table>
-</div>
-<button class="sg-inner-accordion"><span>Insights from Video Resources</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Insights from Video Resources</h4>
 <p><strong>From Follow Him:</strong> The "dough analogy"—to "prove" dough is not to test if it's real but the crucial final step where bread takes shape. "The Lord's saying, 'I'm not testing this dough. I'm proving this dough. I'm giving it the needed time to mature.'"</p>
 <p><strong>From Scripture Insights:</strong> Genesis 1/Moses 2 is primarily temple text, not science text. The number seven appears as covenant signature: "I God" appears 28 times (7×4).</p>
 <p><strong>From Grounded:</strong> Moses's experience is a template for how God prepares ALL of us—including mothers teaching children about identity.</p>
-</div>
-<button class="sg-inner-accordion"><span>For Further Study</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">For Further Study</h4>
 <ul>
 <li>President Russell M. Nelson: Teachings on identity and covenant</li>
 <li>"The Origin of Man" (1909 First Presidency Statement)</li>
@@ -1560,17 +1363,16 @@
 <p><strong>File Status:</strong> Complete <strong>Created:</strong> January 4, 2026 <strong>Last Updated:</strong> January 4, 2026 <strong>Next File:</strong> 04_Word_Studies.md</p>
 </div>
 </div>
-</div>
             </div>
         </div>
 
         <!-- SECTION 4: WORD STUDIES -->
-        <button class="sg-accordion-section">4. Word Studies</button>
-        <div class="sg-panel">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">4. Word Studies</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
             <div class="panel-content">
-                <button class="sg-sub-accordion"><span>Introduction: Understanding the Language of Scripture</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active"><span>Introduction: Understanding the Language of Scripture</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p>The Old Testament was written primarily in Hebrew (with some Aramaic sections). Unlike the Doctrine and Covenants which was revealed in English, studying the Old Testament requires engaging with the original Hebrew to fully understand the text. This word study uses a <strong>Hebrew-first approach</strong>:</p>
 <ol>
 <li><strong>Hebrew Analysis</strong> (PRIMARY) - The original language of composition</li>
@@ -1582,11 +1384,10 @@
 <p><strong>Special Note for This Week:</strong> Moses 1 and Abraham 3 are Restoration scripture—revealed through Joseph Smith in English. However, they restore ancient content originally composed in Hebrew (Moses) and possibly Egyptian/Hebrew (Abraham). Understanding the Hebrew concepts behind the English terms enriches our study.</p>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>Key Hebrew Terms This Week</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Quick Reference Table</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Key Hebrew Terms This Week</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Quick Reference Table</h4>
 <table class="info-table">
 <tr>
 <th>Hebrew</th>
@@ -1661,12 +1462,10 @@
 </table>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>TERM 1: כָּבוֹד (<em>Kavod</em>) — Glory</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Hebrew Foundation (PRIMARY)</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>TERM 1: כָּבוֹד (<em>Kavod</em>) — Glory</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Hebrew Foundation (PRIMARY)</h4>
 <p><strong>Strong's Number:</strong> <a href="https://www.blueletterbible.org/lexicon/h3519/kjv/wlc/0-1/" target="_blank">H3519</a></p>
 <p><strong>Hebrew Script:</strong> כָּבוֹד</p>
 <p><strong>Transliteration:</strong> <em>kavod</em></p>
@@ -1701,9 +1500,7 @@
 <li>Moses 1:39 — "This is my work and my <strong>glory</strong>"</li>
 </ul>
 <p>The structural use of <em>kavod</em> creates a framework: Moses experiences glory, loses it, recognizes Satan's lack of glory, and then learns that our eternal life IS God's glory.</p>
-</div>
-<button class="sg-inner-accordion"><span>Greek Analysis (Septuagint)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Greek Analysis (Septuagint)</h4>
 <p><strong>LXX Translation:</strong> <a href="https://www.blueletterbible.org/lexicon/g1391/kjv/tr/0-1/" target="_blank">δόξα</a> (<em>doxa</em>)</p>
 <p><strong>Why This Translation Matters:</strong> The Greek <em>doxa</em> originally meant "opinion" or "reputation," but Septuagint translators expanded it to carry the weight of Hebrew <em>kavod</em>—visible divine radiance. This transformed Greek created the theological vocabulary the New Testament writers used.</p>
 <p><strong>New Testament Usage:</strong></p>
@@ -1711,32 +1508,22 @@
 <li><a href="https://www.blueletterbible.org/kjv/jhn/1/14/s_998014" target="_blank">John 1:14</a> — "We beheld his glory (<em>doxa</em>), the glory as of the only begotten of the Father"</li>
 <li><a href="https://www.blueletterbible.org/kjv/2co/3/18/s_1081018" target="_blank">2 Corinthians 3:18</a> — "Changed into the same image from glory (<em>doxa</em>) to glory (<em>doxa</em>)"</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Latin Analysis (Vulgate)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Latin Analysis (Vulgate)</h4>
 <p><strong>Vulgate Translation:</strong> <a href="https://logeion.uchicago.edu/gloria" target="_blank">gloria</a></p>
 <p><strong>Latin Meaning:</strong> Fame, renown, praise; radiant splendor</p>
 <p><strong>Influence on English:</strong> The English word "glory" comes directly from Latin <em>gloria</em> through Old French <em>glorie</em>. This Latin term shaped how Western Christianity understood and spoke of divine presence.</p>
-</div>
-<button class="sg-inner-accordion"><span>English Etymology</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">English Etymology</h4>
 <p><strong>English Equivalent:</strong> <a href="https://www.etymonline.com/word/glory" target="_blank">Glory</a></p>
 <p><strong>Etymology:</strong> From Old French <em>glorie</em> (11th century), from Latin <em>gloria</em> "fame, renown, great praise or honor." The shift to meaning "divine radiance" came through biblical usage.</p>
 <p><strong>Semantic Development:</strong> In modern English, "glory" often means fame or honor. The biblical sense of visible divine radiance—weight you can feel, light you can see—is largely lost. Understanding <em>kavod</em> recovers this.</p>
-</div>
-<button class="sg-inner-accordion"><span>Webster 1828 Definition</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Webster 1828 Definition</h4>
 <p><strong>GLORY</strong> — "1. Brightness; luster; splendor. The glory of the sun. 2. Splendor; magnificence. 3. Praise; honor; fame; celebrity. 4. The divine presence; or the visible manifestation of the divine perfections."</p>
 <p><strong>Joseph Smith Era Understanding:</strong> Early Latter-day Saints would have understood glory as both honor/fame AND visible divine manifestation. The 1828 definition preserves both senses—important for reading D&C 76:50-70 (degrees of glory) and Moses 1.</p>
-</div>
-<button class="sg-inner-accordion"><span>Doctrinal Significance</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrinal Significance</h4>
 <p>The Hebrew concept of <em>kavod</em> transforms our reading of Moses 1. Glory is not merely reputation or honor—it is the tangible, visible, weighty presence of God. When Moses says he "could not look upon God, except his glory should come upon me, and I were transfigured" (Moses 1:14), he describes a physical reality: divine <em>kavod</em> is so substantial that mortal bodies require transformation to endure it.</p>
 <p>This illuminates Moses 1:39: "This is my work and my <strong>glory</strong>—to bring to pass the immortality and eternal life of man." God's <em>kavod</em>—His weighty, radiant presence—IS our eternal life. We don't just receive glory; we become part of the divine weight and radiance. The temple teaches this progression: we move from grace to grace, glory to glory, until we can dwell in the presence of the Father.</p>
 <p>Satan's offer to Moses reveals his fundamental lack. Moses asks, "Where is thy glory?" (Moses 1:13). Satan has no <em>kavod</em>—no weight, no substance, no divine radiance. He is "darkness" (Moses 1:15). This contrast teaches discernment: true messengers carry divine glory; false ones have only darkness dressed as light.</p>
-</div>
-<button class="sg-inner-accordion"><span>Cross-References</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Cross-References</h4>
 <p><strong>Old Testament:</strong></p>
 <ul>
 <li><strong><a href="https://www.blueletterbible.org/kjv/exo/33/18/s_83018" target="_blank">Exodus 33:18-23</a></strong> — Moses's request to see God's glory</li>
@@ -1759,12 +1546,10 @@
 </ul>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>TERM 2: בֵּן (<em>Ben</em>) / בַּר (<em>Bar</em>) — Son</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Hebrew Foundation (PRIMARY)</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>TERM 2: בֵּן (<em>Ben</em>) / בַּר (<em>Bar</em>) — Son</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Hebrew Foundation (PRIMARY)</h4>
 <p><strong>Strong's Number:</strong> <a href="https://www.blueletterbible.org/lexicon/h1121/kjv/wlc/0-1/" target="_blank">H1121</a> (<em>ben</em>); <a href="https://www.blueletterbible.org/lexicon/h1247/kjv/wlc/0-1/" target="_blank">H1247</a> (<em>bar</em> - Aramaic)</p>
 <p><strong>Hebrew Script:</strong> בֵּן (Hebrew); בַּר (Aramaic)</p>
 <p><strong>Transliteration:</strong> <em>ben</em> (Hebrew); <em>bar</em> (Aramaic)</p>
@@ -1797,9 +1582,7 @@
 <li>Moses 1:13 — "I am a <strong>son of God</strong>, in the similitude of his Only Begotten" (Moses's defense)</li>
 </ul>
 <p>The battle in Moses 1 is fundamentally about identity: Are we <em>ben adam</em> (mere mortals) or <em>ben Elohim</em> (children of God)?</p>
-</div>
-<button class="sg-inner-accordion"><span>The Aramaic בַּר אֱנָשׁ (<em>Bar Enosh</em>) — Son of Man</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">The Aramaic בַּר אֱנָשׁ (<em>Bar Enosh</em>) — Son of Man</h4>
 <p><strong>Strong's Numbers:</strong> <a href="https://www.blueletterbible.org/lexicon/h606/kjv/wlc/0-1/" target="_blank">H606</a> (<em>bar</em>) + <a href="https://www.blueletterbible.org/lexicon/h607/kjv/wlc/0-1/" target="_blank">H607</a> (<em>enosh</em>)</p>
 <p><strong>Aramaic Script:</strong> בַּר אֱנָשׁ</p>
 <p><strong>Transliteration:</strong> <em>bar enosh</em></p>
@@ -1809,9 +1592,7 @@
 <p>> "I saw in the night visions, and, behold, one like the <strong>Son of man</strong> (<em>bar enosh</em>) came with the clouds of heaven, and came to the Ancient of days... And there was given him dominion, and glory, and a kingdom, that all people, nations, and languages, should serve him: his dominion is an everlasting dominion, which shall not pass away."</p>
 <p>This apocalyptic figure—appearing human yet coming on clouds with divine glory and receiving eternal, universal dominion—became central to Jewish Messianic expectation. Jesus deliberately claimed this title, using it approximately <strong>80 times</strong> in the Gospels.</p>
 <p><strong>The Irony in Moses 1:</strong> Satan uses <em>bar enosh</em> ("son of man") to strip Moses of divine identity—to reduce him to mere mortality. But the TRUE "Son of Man" from Daniel's vision is divine: Jesus Christ Himself. Satan unknowingly invokes a Messianic title while attempting to demean. Moses's response is perfect: "I am a son of God" (Moses 1:13)—both affirming his divine identity AND pointing to the true Son of Man who would come.</p>
-</div>
-<button class="sg-inner-accordion"><span>Greek Analysis (Septuagint)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Greek Analysis (Septuagint)</h4>
 <p><strong>LXX Translation:</strong> <a href="https://www.blueletterbible.org/lexicon/g5207/kjv/tr/0-1/" target="_blank">υἱός</a> (<em>huios</em>)</p>
 <p><strong>Why This Translation Matters:</strong> Greek <em>huios</em> carries the full range of Hebrew <em>ben</em>. The phrase "Son of Man" (<em>huios tou anthrōpou</em>) appears 86 times in the New Testament, almost exclusively as Jesus's self-designation.</p>
 <p><strong>New Testament Usage:</strong></p>
@@ -1819,26 +1600,18 @@
 <li><a href="https://www.blueletterbible.org/kjv/mat/16/13/s_945013" target="_blank">Matthew 16:13-16</a> — "Whom do men say that I the Son of man am?"</li>
 <li><a href="https://www.blueletterbible.org/kjv/jhn/1/12/s_998012" target="_blank">John 1:12</a> — "Power to become the sons (<em>huios</em>) of God"</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Latin Analysis (Vulgate)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Latin Analysis (Vulgate)</h4>
 <p><strong>Vulgate Translation:</strong> <a href="https://logeion.uchicago.edu/filius" target="_blank">filius</a></p>
 <p><strong>Latin Meaning:</strong> Son, child; one belonging to</p>
 <p><strong>Influence on English:</strong> English "filial" (relating to a son/daughter) comes from <em>filius</em>. "Filiation" describes the relationship of child to parent—key for understanding our divine sonship.</p>
-</div>
-<button class="sg-inner-accordion"><span>Webster 1828 Definition</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Webster 1828 Definition</h4>
 <p><strong>SON</strong> — "1. A male child; the male issue of a parent, father or mother. 2. A male descendant, however distant. 3. A native or inhabitant of a country. 4. The compellation of a confessor to a penitent. 5. A term of affection. 6. In Scripture, the Son of God, the Messiah."</p>
 <p><strong>Joseph Smith Era Understanding:</strong> The 1828 definition includes both biological and spiritual meanings. Early Saints understood "son of God" as literal spiritual offspring, not merely metaphorical relationship.</p>
-</div>
-<button class="sg-inner-accordion"><span>Doctrinal Significance</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrinal Significance</h4>
 <p>The Hebrew <em>ben</em> encompasses both literal and covenantal sonship. When God tells Moses "thou art my son" (Moses 1:4), this is not metaphor—it is ontological reality. We are literally spirit offspring of Heavenly Parents, created in Their image with divine potential.</p>
 <p>Satan's attack on Moses's identity follows the same pattern he uses today: reducing divine identity to mere mortality. "Son of man" becomes "you're just human." The world's message echoes Satan's: you are only biology, chemistry, social construct—not eternal beings of divine origin.</p>
 <p>Moses's defense provides the template: assert your divine identity by connecting to the true Son. "I am a son of God, <strong>in the similitude of his Only Begotten</strong>" (Moses 1:13). Our sonship is real precisely because THE Son is real. Christ's divine Sonship makes our divine sonship possible.</p>
-</div>
-<button class="sg-inner-accordion"><span>Cross-References</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Cross-References</h4>
 <p><strong>Old Testament:</strong></p>
 <ul>
 <li><strong><a href="https://www.blueletterbible.org/kjv/hos/11/1/s_873001" target="_blank">Hosea 11:1</a></strong> — "When Israel was a child, then I loved him, and called my son out of Egypt"</li>
@@ -1860,12 +1633,10 @@
 </ul>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>TERM 3: סָפַר (<em>Saphar</em>) — To Count, Recount, Declare</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Hebrew Foundation (PRIMARY)</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>TERM 3: סָפַר (<em>Saphar</em>) — To Count, Recount, Declare</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Hebrew Foundation (PRIMARY)</h4>
 <p><strong>Strong's Number:</strong> <a href="https://www.blueletterbible.org/lexicon/h5608/kjv/wlc/0-1/" target="_blank">H5608</a></p>
 <p><strong>Hebrew Script:</strong> סָפַר</p>
 <p><strong>Transliteration:</strong> <em>saphar</em></p>
@@ -1897,19 +1668,13 @@
 <p><strong>Usage in This Week's Reading:</strong> The connection to Abraham 3 is profound. In Genesis 15:5, God tells Abraham: "Look now toward heaven, and <em>saphar</em> the stars, if thou be able to number them."</p>
 <p>The Hebrew <em>saphar</em> means not only "to count" but also "to recount, declare, or tell a story." The same root gives us <em>sepher</em> (book) and <em>sopher</em> (scribe). God may have been inviting Abraham to <strong>interpret</strong> the stars, not merely count them.</p>
 <p>Abraham 3's cosmological revelation—where Abraham learns about Kolob, governing lights, and the hierarchy of intelligences—could be the fulfillment of that divine assignment. Abraham doesn't just count the stars; he <em>saphars</em> them—he declares their meaning, recounts their order, inscribes their significance.</p>
-</div>
-<button class="sg-inner-accordion"><span>Greek Analysis (Septuagint)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Greek Analysis (Septuagint)</h4>
 <p><strong>LXX Translation:</strong> <a href="https://www.blueletterbible.org/lexicon/g705/kjv/tr/0-1/" target="_blank">ἀριθμέω</a> (<em>arithmeō</em>) for counting; <a href="https://www.blueletterbible.org/lexicon/g1334/kjv/tr/0-1/" target="_blank">διηγέομαι</a> (<em>diēgeomai</em>) for recounting</p>
 <p><strong>Why This Translation Matters:</strong> The Septuagint sometimes uses different Greek words depending on context—<em>arithmeō</em> (to number) versus <em>diēgeomai</em> (to narrate). This shows ancient translators recognized the dual meaning in Hebrew <em>saphar</em>.</p>
-</div>
-<button class="sg-inner-accordion"><span>Webster 1828 Definition</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Webster 1828 Definition</h4>
 <p><strong>TELL</strong> — "1. To utter; to express in words. 2. To relate; to narrate. 3. To disclose; to communicate. 4. To count; to number."</p>
 <p><strong>Joseph Smith Era Understanding:</strong> The 1828 definition of "tell" preserves both meanings: to narrate AND to count. "Tell the stars" could mean both "count them" and "recount their story."</p>
-</div>
-<button class="sg-inner-accordion"><span>Doctrinal Significance</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrinal Significance</h4>
 <p>The verb <em>saphar</em> connects counting and narrating—numbers and stories. This is not accidental. In Hebrew thought, to number something is to know it, to have authority over it, to be able to tell its story.</p>
 <p>When God commands Abraham to <em>saphar</em> the stars, He invites Abraham into divine cosmology. Abraham 3 shows the result: Abraham learns the stars' order, their governing relationships, their connection to intelligences and spirits. He doesn't just see points of light—he learns their story.</p>
 <p>This has implications for our study:</p>
@@ -1919,9 +1684,7 @@
 <li>*<em>The heavens </em>saphar**<em> — Psalm 19:1 says the heavens "declare" (</em>saphar*) God's glory</li>
 </ol>
 <p>Abraham 3 is Abraham's <em>saphar</em>—his declaration, recounting, and numbering of the celestial order God revealed to him.</p>
-</div>
-<button class="sg-inner-accordion"><span>Cross-References</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Cross-References</h4>
 <p><strong>Old Testament:</strong></p>
 <ul>
 <li><strong><a href="https://www.blueletterbible.org/kjv/gen/15/5/s_15005" target="_blank">Genesis 15:5</a></strong> — "Tell (<em>saphar</em>) the stars"</li>
@@ -1938,12 +1701,10 @@
 </ul>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>TERM 4: בְּרֵאשִׁית (<em>Bereshit</em>) — In A Beginning</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Hebrew Foundation (PRIMARY)</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>TERM 4: בְּרֵאשִׁית (<em>Bereshit</em>) — In A Beginning</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Hebrew Foundation (PRIMARY)</h4>
 <p><strong>Strong's Number:</strong> <a href="https://www.blueletterbible.org/lexicon/h7225/kjv/wlc/0-1/" target="_blank">H7225</a></p>
 <p><strong>Hebrew Script:</strong> בְּרֵאשִׁית</p>
 <p><strong>Transliteration:</strong> <em>bereshit</em></p>
@@ -1960,15 +1721,11 @@
 <li>Head/chief — the primary or most important</li>
 </ul>
 <p><strong>OT Occurrences:</strong> 51 times</p>
-</div>
-<button class="sg-inner-accordion"><span>Critical Translation Issue: "THE" vs. "A" Beginning</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Critical Translation Issue: "THE" vs. "A" Beginning</h4>
 <p><strong>The KJV Mistranslation:</strong> The KJV renders Genesis 1:1 as "In <strong>THE</strong> beginning"—but this is grammatically inaccurate. The Hebrew בְּרֵאשִׁית (<em>bereshit</em>) is in the <strong>construct state</strong> without a definite article. Hebrew has a definite article (<em>ha-</em>), and if the text intended "THE beginning," it would read <em>baroshit</em> (בָּרֹאשִׁית) or <em>bareshit harishonah</em>. Instead, the construct state indicates "in <strong>a</strong> beginning" or "at [the] beginning of [God's creating]."</p>
 <p><strong>The Diminutive Suffix:</strong> The word contains the יִת (<em>yod-tav</em>) ending—a diminutive suffix in Hebrew that indicates something smaller emerging from something larger. Just as כַּף (<em>kaph</em>, "palm/hand") becomes כַּפִּית (<em>kaphit</em>, "small spoon/ladle")—a smaller item derived from the larger category—so רֹאשׁ (<em>rosh</em>, "head/beginning") becomes רֵאשִׁית (<em>reshit</em>), indicating a particular beginning within a larger context of existence. This grammatical feature signals that Genesis 1:1 describes <strong>a</strong> beginning—specifically, the beginning of Earth's organization—not <strong>THE</strong> absolute beginning of all existence.</p>
 <p><strong>Modern Academic Translations:</strong> Newer scholarly translations recognize this issue. The NRSV renders it: "In the beginning <strong>when</strong> God created..." or alternatively "When God began to create..." These translations acknowledge the Hebrew grammar but still miss the deeper significance: that matter and existence preceded this particular creative act.</p>
-</div>
-<button class="sg-inner-accordion"><span>The Ex Nihilo Problem</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">The Ex Nihilo Problem</h4>
 <p><strong>How the Mistranslation Shaped Theology:</strong> The KJV's "In THE beginning" contributed to the doctrine of <em>creatio ex nihilo</em>—creation from nothing. If this was THE absolute beginning, then nothing existed before it; therefore God must have created from nothing. This became standard Christian doctrine by the 4th century, despite having no clear biblical support.</p>
 <p><strong>The Science-Religion Conflict:</strong> The ex nihilo doctrine created unnecessary conflict between religion and science:</p>
 <ul>
@@ -1983,9 +1740,7 @@
 <li>Abraham 3's teaching that intelligences are eternal and uncreated</li>
 </ul>
 <p>The apparent science-religion conflict resolves when we recognize the KJV added a definite article the Hebrew does not contain.</p>
-</div>
-<button class="sg-inner-accordion"><span>What Gets Lost in Translation</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">What Gets Lost in Translation</h4>
 <p>Even corrected modern translations (like NRSV) miss what the Hebrew text preserves:</p>
 <ol>
 <li><strong>The diminutive suffix</strong> — signaling this is a subset of larger existence</li>
@@ -2008,9 +1763,7 @@
 <li><strong>It connects to "reshit" (first fruits)</strong> — Creation is God's "first fruits," offered as sacred gift</li>
 <li><strong>Its grammar refutes ex nihilo</strong> — The construct state and diminutive suffix indicate a beginning within eternal existence</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Greek Analysis (Septuagint)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Greek Analysis (Septuagint)</h4>
 <p><strong>LXX Translation:</strong> <a href="https://www.blueletterbible.org/lexicon/g746/kjv/tr/0-1/" target="_blank">ἀρχή</a> (<em>archē</em>)</p>
 <p><strong>Why This Translation Matters:</strong> Greek <em>archē</em> means both "beginning" and "ruling principle/authority." The Septuagint uses <em>en archē</em> ("in beginning")—notably also <strong>without</strong> a definite article in Greek, preserving the Hebrew ambiguity. John 1:1 follows this pattern: "In beginning (<em>en archē</em>) was the Word." Christ is both the temporal beginning AND the governing principle of creation.</p>
 <p><strong>New Testament Usage:</strong></p>
@@ -2018,21 +1771,15 @@
 <li><a href="https://www.blueletterbible.org/kjv/jhn/1/1/s_998001" target="_blank">John 1:1</a> — "In beginning (<em>en archē</em>) was the Word" (no definite article in Greek)</li>
 <li><a href="https://www.blueletterbible.org/kjv/col/1/18/s_1108018" target="_blank">Colossians 1:18</a> — "He is... the beginning (<em>archē</em>), the firstborn from the dead"</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Latin Analysis (Vulgate)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Latin Analysis (Vulgate)</h4>
 <p><strong>Vulgate Translation:</strong> <a href="https://logeion.uchicago.edu/principium" target="_blank">in principio</a></p>
 <p><strong>Latin Meaning:</strong> In beginning, origin; first principle; foundation</p>
 <p><strong>Note on the Vulgate:</strong> Jerome's Latin also lacks the definite article—<em>in principio</em>, not <em>in illo principio</em> ("in that beginning"). The definite "THE" entered through English translation traditions, not from the original languages.</p>
 <p><strong>Influence on English:</strong> English "principle" comes from <em>principium</em>. A principle is a "beginning"—a foundational truth from which others flow. Creation establishes principles.</p>
-</div>
-<button class="sg-inner-accordion"><span>Webster 1828 Definition</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Webster 1828 Definition</h4>
 <p><strong>BEGINNING</strong> — "1. The first cause; origin. 2. The first state; commencement; entrance into being. 3. The rudiments or first principles."</p>
 <p><strong>Joseph Smith Era Understanding:</strong> The 1828 definition emphasizes both temporal start AND foundational principle. Joseph Smith's revelations about creation (Moses, Abraham) clarify what the Hebrew indicates: this was a beginning within eternal existence, not the absolute beginning of all things.</p>
-</div>
-<button class="sg-inner-accordion"><span>Doctrinal Significance</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrinal Significance</h4>
 <p><em>Bereshit</em> is more than a time marker. Hebrew uses <em>reshit</em> for "first fruits"—the best, most sacred portion offered to God. Creation is God's "first fruits" to us: He gives us the best, the foundation, the sacred beginning.</p>
 <p>The preposition <em>be-</em> ("in") combined with the construct state is grammatically ambiguous. It could mean:</p>
 <ul>
@@ -2051,9 +1798,7 @@
 <li><strong>Abraham 4:1</strong> — "They went down... and they, that is the Gods, organized and formed the heavens and the earth"</li>
 </ul>
 <p>The Hebrew grammar of <em>bereshit</em>—with its construct state and diminutive suffix—supports Restoration theology: God organized existing eternal matter in <strong>a</strong> beginning, not <strong>THE</strong> beginning. The ex nihilo doctrine arose from translation choices, not from the Hebrew text itself. When we return to the original language, supposed conflicts between scripture and science dissolve.</p>
-</div>
-<button class="sg-inner-accordion"><span>Cross-References</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Cross-References</h4>
 <p><strong>Old Testament:</strong></p>
 <ul>
 <li><strong><a href="https://www.blueletterbible.org/kjv/gen/1/1/s_1001" target="_blank">Genesis 1:1</a></strong> — "In the beginning (<em>bereshit</em>)"</li>
@@ -2074,12 +1819,10 @@
 </ul>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>TERM 5: מוֹעֵד (<em>Moed</em>) — Appointed Time, Divine Order, Festival</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Hebrew Foundation (PRIMARY)</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>TERM 5: מוֹעֵד (<em>Moed</em>) — Appointed Time, Divine Order, Festival</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Hebrew Foundation (PRIMARY)</h4>
 <p><strong>Strong's Number:</strong> <a href="https://www.blueletterbible.org/lexicon/h4150/kjv/wlc/0-1/" target="_blank">H4150</a></p>
 <p><strong>Hebrew Script:</strong> מוֹעֵד (singular); מוֹעֲדִים (<em>moedim</em>, plural)</p>
 <p><strong>Transliteration:</strong> <em>moed</em> (singular); <em>moedim</em> (plural)</p>
@@ -2104,9 +1847,7 @@
 <li><strong><a href="https://www.blueletterbible.org/kjv/lev/23/2/s_113002" target="_blank">Leviticus 23:2</a></strong> — "The feasts (<em>moedim</em>) of the LORD, which ye shall proclaim to be holy convocations"</li>
 <li><strong><a href="https://www.blueletterbible.org/kjv/exo/27/21/s_77021" target="_blank">Exodus 27:21</a></strong> — "The tabernacle of the congregation (<em>moed</em>)"</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Abraham 3 and Divine Cosmology</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Abraham 3 and Divine Cosmology</h4>
 <p><strong>Usage in This Week's Reading:</strong> Abraham 3 is fundamentally about divine cosmology—God's ordered arrangement of the heavens. Kolob's time, Earth's time, and the moon's time are all discussed (Abraham 3:4-10). This directly expands on Genesis 1:14, where God declares that celestial bodies exist "for signs, and for <em>moedim</em>."</p>
 <p><strong>The Dual Purpose of Celestial Bodies:</strong> Genesis 1:14 assigns heavenly bodies two interconnected functions:</p>
 <ol>
@@ -2126,9 +1867,7 @@
 <li><strong>The moon</strong> has its own reckoning, longer than earth's (Abraham 3:5)</li>
 </ul>
 <p>This is divine cosmology—not merely astronomy, but the theological order of creation. Abraham sees how God structured the universe to <em>teach</em> through its very arrangement.</p>
-</div>
-<button class="sg-inner-accordion"><span>The <em>Moedim</em> as Israelite Curriculum</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">The <em>Moedim</em> as Israelite Curriculum</h4>
 <p><strong>The Ancient Feast Days:</strong> The <em>moedim</em> of Leviticus 23 were far more than holidays—they formed the educational backbone of Israelite culture and religious learning:</p>
 <table class="info-table">
 <tr>
@@ -2182,14 +1921,10 @@
 </table>
 <p>Each <em>moed</em> was marked by celestial signs—new moons, full moons, equinoxes—demonstrating that the heavens themselves participated in Israel's instruction. The cosmos was a classroom, and the <em>moedim</em> were the curriculum.</p>
 <p><strong>Learning Through Repetition:</strong> The annual cycle of <em>moedim</em> meant that each generation learned the same truths through repeated observance. Children grew up experiencing Passover every spring, internalizing redemption theology not through abstract doctrine but through embodied ritual timed to celestial cycles.</p>
-</div>
-<button class="sg-inner-accordion"><span>Greek Analysis (Septuagint)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Greek Analysis (Septuagint)</h4>
 <p><strong>LXX Translation:</strong> <a href="https://www.blueletterbible.org/lexicon/g2540/kjv/tr/0-1/" target="_blank">καιρός</a> (<em>kairos</em>) — appointed time; <a href="https://www.blueletterbible.org/lexicon/g1859/kjv/tr/0-1/" target="_blank">ἑορτή</a> (<em>heortē</em>) — festival</p>
 <p><strong>Why This Translation Matters:</strong> Greek distinguishes <em>chronos</em> (chronological time) from <em>kairos</em> (appointed/significant time). <em>Moedim</em> are <em>kairos</em> moments—times of divine appointment, not just calendar dates. When celestial bodies mark <em>moedim</em>, they signal that <em>this moment matters</em>—heaven is intersecting with earth.</p>
-</div>
-<button class="sg-inner-accordion"><span>Doctrinal Significance</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrinal Significance</h4>
 <p>The concept of <em>moed</em> transforms how we understand Abraham 3. The cosmological information isn't merely astronomical—it's <em>liturgical</em> and <em>pedagogical</em>. God organizes the heavens to:</p>
 <ol>
 <li><strong>Mark appointed times of meeting</strong> — Heaven and earth synchronize at <em>moedim</em></li>
@@ -2204,9 +1939,7 @@
 <li><strong>Abraham 3</strong> reveals the cosmic infrastructure behind sacred time—why <em>moedim</em> work</li>
 </ul>
 <p>Abraham 3 teaches that the universe itself is ordered for instruction. Kolob governs, lesser lights receive from greater, celestial bodies mark seasons, and God meets His children at appointed times and places throughout eternity. The heavens don't merely exist—they <em>teach</em>.</p>
-</div>
-<button class="sg-inner-accordion"><span>Cross-References</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Cross-References</h4>
 <p><strong>Old Testament:</strong></p>
 <ul>
 <li><strong><a href="https://www.blueletterbible.org/kjv/gen/1/14/s_1014" target="_blank">Genesis 1:14-18</a></strong> — Lights "for signs and for seasons (<em>moedim</em>)"</li>
@@ -2225,12 +1958,10 @@
 </ul>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>TERM 6: סֵדֶר (<em>Seder</em>) — Order, Arrangement</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Hebrew Foundation (PRIMARY)</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>TERM 6: סֵדֶר (<em>Seder</em>) — Order, Arrangement</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Hebrew Foundation (PRIMARY)</h4>
 <p><strong>Strong's Number:</strong> <a href="https://www.blueletterbible.org/lexicon/h5468/kjv/wlc/0-1/" target="_blank">H5468</a></p>
 <p><strong>Hebrew Script:</strong> סֵדֶר</p>
 <p><strong>Transliteration:</strong> <em>seder</em></p>
@@ -2252,18 +1983,14 @@
 <li>The priesthood operates by "the order of Melchizedek" (Psalm 110:4)</li>
 <li>Abraham 3 reveals the divine <em>seder</em>—the ordered arrangement of intelligences from greatest to least</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Greek Analysis (Septuagint)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Greek Analysis (Septuagint)</h4>
 <p><strong>LXX Translation:</strong> <a href="https://www.blueletterbible.org/lexicon/g5010/kjv/tr/0-1/" target="_blank">τάξις</a> (<em>taxis</em>) — order, arrangement</p>
 <p><strong>New Testament Usage:</strong></p>
 <ul>
 <li><a href="https://www.blueletterbible.org/kjv/heb/5/6/s_1138006" target="_blank">Hebrews 5:6</a> — "A priest for ever after the order (<em>taxis</em>) of Melchisedec"</li>
 <li><a href="https://www.blueletterbible.org/kjv/1co/14/40/s_1076040" target="_blank">1 Corinthians 14:40</a> — "Let all things be done decently and in order (<em>taxis</em>)"</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Doctrinal Significance</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrinal Significance</h4>
 <p>Abraham 3 is fundamentally about divine <em>seder</em>—the holy order of the cosmos. We learn:</p>
 <ol>
 <li><strong>Celestial Order:</strong> Kolob governs → lesser stars follow → Earth obeys cosmic time</li>
@@ -2277,9 +2004,7 @@
 <li><strong>Eternal progression</strong> — moving "from grace to grace" in ordered advancement</li>
 </ul>
 <p>Abraham 3 reveals that the universe itself is liturgical—arranged according to divine order, with everything in its proper place and relationship.</p>
-</div>
-<button class="sg-inner-accordion"><span>Cross-References</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Cross-References</h4>
 <p><strong>Old Testament:</strong></p>
 <ul>
 <li><strong><a href="https://www.blueletterbible.org/kjv/psa/110/4/s_588004" target="_blank">Psalm 110:4</a></strong> — "A priest for ever after the order of Melchizedek"</li>
@@ -2294,12 +2019,10 @@
 </ul>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>TERM 7: שֶׂכֶל (<em>Sekel</em>) — Intelligence, Understanding</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Hebrew Foundation (PRIMARY)</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>TERM 7: שֶׂכֶל (<em>Sekel</em>) — Intelligence, Understanding</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Hebrew Foundation (PRIMARY)</h4>
 <p><strong>Strong's Number:</strong> <a href="https://www.blueletterbible.org/lexicon/h7922/kjv/wlc/0-1/" target="_blank">H7922</a></p>
 <p><strong>Hebrew Script:</strong> שֶׂכֶל</p>
 <p><strong>Transliteration:</strong> <em>sekel</em></p>
@@ -2326,19 +2049,13 @@
 </ul>
 <p><strong>Usage in This Week's Reading:</strong> Abraham 3:19 declares: "I am the Lord thy God, I am more intelligent than they all." While the English "intelligent" appears, the Hebrew concept behind it is <em>sekel</em>—understanding, wisdom, insight.</p>
 <p>Abraham 3:18-21 establishes a hierarchy of intelligences. The Hebrew <em>sekel</em> enriches this: intelligence is not merely cognitive capacity but <strong>understanding that leads to wise action</strong>. God is "more intelligent" because He has perfect understanding that produces perfect outcomes.</p>
-</div>
-<button class="sg-inner-accordion"><span>Greek Analysis (Septuagint)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Greek Analysis (Septuagint)</h4>
 <p><strong>LXX Translation:</strong> <a href="https://www.blueletterbible.org/lexicon/g4907/kjv/tr/0-1/" target="_blank">σύνεσις</a> (<em>sunesis</em>) — understanding, insight</p>
 <p><strong>Why This Translation Matters:</strong> Greek <em>sunesis</em> (from <em>sun-</em> "together" + <em>hiēmi</em> "send") suggests "putting things together"—comprehension that sees connections. Intelligence (<em>sekel</em>/<em>sunesis</em>) is relational understanding, not isolated data.</p>
-</div>
-<button class="sg-inner-accordion"><span>Connection to D&C 93:36</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Connection to D&C 93:36</h4>
 <p><strong>"The glory of God is intelligence"</strong> uses English "intelligence" but connects to Hebrew <em>sekel</em> and related concepts. D&C 93:29 adds that "intelligence... was not created or made."</p>
 <p>Abraham 3's "intelligences" are not merely smart beings—they are entities characterized by <em>sekel</em>: understanding, wisdom, capacity for right action. God is "more intelligent" because His <em>sekel</em> is perfect—He understands all things and acts with perfect wisdom.</p>
-</div>
-<button class="sg-inner-accordion"><span>Doctrinal Significance</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrinal Significance</h4>
 <p>The Hebrew concept of <em>sekel</em> transforms our reading of Abraham 3:</p>
 <ol>
 <li><strong>Intelligence is not just IQ</strong> — It's understanding that produces wise action</li>
@@ -2347,9 +2064,7 @@
 <li><strong>Intelligence is eternal</strong> — <em>Sekel</em> entities exist eternally; they cannot be created or destroyed</li>
 </ol>
 <p>The temple implications are significant: we receive "light and knowledge" (intelligence) through covenant ordinances. Growth in <em>sekel</em> is growth toward godhood.</p>
-</div>
-<button class="sg-inner-accordion"><span>Cross-References</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Cross-References</h4>
 <p><strong>Old Testament:</strong></p>
 <ul>
 <li><strong><a href="https://www.blueletterbible.org/kjv/pro/16/22/s_644022" target="_blank">Proverbs 16:22</a></strong> — "Understanding (<em>sekel</em>) is a wellspring of life"</li>
@@ -2363,12 +2078,10 @@
 </ul>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>TERM 8: סוֹד (<em>Sod</em>) — Council, Secret Assembly, Hidden Revelation</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Hebrew Foundation (PRIMARY)</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>TERM 8: סוֹד (<em>Sod</em>) — Council, Secret Assembly, Hidden Revelation</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Hebrew Foundation (PRIMARY)</h4>
 <p><strong>Strong's Number:</strong> <a href="https://www.blueletterbible.org/lexicon/h5475/kjv/wlc/0-1/" target="_blank">H5475</a></p>
 <p><strong>Hebrew Script:</strong> סוֹד</p>
 <p><strong>Transliteration:</strong> <em>sod</em></p>
@@ -2400,9 +2113,7 @@
 <li><strong>Council</strong> — the assembly itself (Abraham saw the council of noble and great ones)</li>
 <li><strong>Secret</strong> — the confidential deliberations of that council (Abraham receives the secret)</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>The PaRDeS Model: <em>Sod</em> as the Deepest Level of Scripture</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">The PaRDeS Model: <em>Sod</em> as the Deepest Level of Scripture</h4>
 <p><strong>What is PaRDeS?</strong> <em>PaRDeS</em> (פַּרְדֵּס) is an acronym representing four levels of scriptural interpretation in Jewish tradition. The word itself means "orchard" or "paradise" (from the same root as English "paradise"), suggesting that deep scripture study leads to Eden-like communion with God.</p>
 <table class="info-table">
 <tr>
@@ -2451,9 +2162,7 @@
 <li><strong>Derash (Inquiry):</strong> Comparing Genesis 1 with John 1, Abraham 4, Moses 2 — understanding creation through multiple witnesses</li>
 <li><strong>Sod (Secret):</strong> The diminutive suffix and construct state reveal this is <strong>a</strong> beginning within eternal existence; matter is eternal; ex nihilo is a mistranslation — truths that emerge only when linguistic elements are properly brought together</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Genesis as Birth, Rebirth, and Return to the Beginning</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Genesis as Birth, Rebirth, and Return to the Beginning</h4>
 <p><strong>The Name "Genesis" Itself:</strong> The English title "Genesis" comes from the Greek γένεσις (<em>genesis</em>), meaning "origin, birth, becoming." The Septuagint translators chose this word because the book describes not just cosmic origins but <strong>birth</strong>—the birth of creation, of humanity, of covenant relationship, of Israel. But the Hebrew title בְּרֵאשִׁית (<em>Bereshit</em>) adds another dimension: this is not merely birth, but <strong>a</strong> beginning—one that can be returned to, renewed, and experienced again.</p>
 <p><strong>The Gospel Pattern: Everything Returns to the Beginning</strong> When we bring together (<em>sod</em>) the various threads of scripture, a profound pattern emerges: <strong>the entire gospel is structured to bring us back to the beginning</strong>:</p>
 <table class="info-table">
@@ -2513,14 +2222,10 @@
 <li>He receives cosmological knowledge linking heavens to intelligences (Abraham 3:1-21)</li>
 </ul>
 <p>This is <em>sod</em> in both senses: Abraham enters the <strong>council</strong> and receives the <strong>secret</strong>. The revelation comes because Abraham was brought into intimate fellowship with God—things came together, and truth emerged.</p>
-</div>
-<button class="sg-inner-accordion"><span>Greek Analysis (Septuagint)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Greek Analysis (Septuagint)</h4>
 <p><strong>LXX Translation:</strong> <a href="https://www.blueletterbible.org/lexicon/g1012/kjv/tr/0-1/" target="_blank">βουλή</a> (<em>boulē</em>) — counsel, deliberation</p>
 <p><strong>Why This Translation Matters:</strong> Greek <em>boulē</em> emphasizes the deliberative aspect—the council's purpose is to counsel together, to make decisions. The premortal council was not merely an assembly but a deliberative body where the plan was presented and accepted. The Greek captures the "coming together" dimension of <em>sod</em>.</p>
-</div>
-<button class="sg-inner-accordion"><span>Doctrinal Significance</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Doctrinal Significance</h4>
 <p>The Hebrew <em>sod</em> illuminates Abraham 3 in crucial ways:</p>
 <ol>
 <li>*<em>The Council in Heaven was a </em>sod*** — an intimate assembly where God's confidants gathered</li>
@@ -2545,9 +2250,7 @@
 </ul>
 <p>This is why word studies matter: bringing Hebrew terms together with Greek, Latin, English, and doctrinal contexts creates the conditions for <em>sod</em>-level understanding. The "secret" isn't hidden arbitrarily—it emerges when the right elements are assembled.</p>
 <p>The premortal council Abraham witnessed shows that this pattern extends before mortality: God has always worked through <em>sod</em>—council, covenant, intimate fellowship with His children. Revelation comes through holy assembly.</p>
-</div>
-<button class="sg-inner-accordion"><span>Cross-References</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Cross-References</h4>
 <p><strong>Old Testament:</strong></p>
 <ul>
 <li><strong><a href="https://www.blueletterbible.org/kjv/1ki/22/19/s_313019" target="_blank">1 Kings 22:19-23</a></strong> — Micaiah sees the LORD's council</li>
@@ -2568,50 +2271,38 @@
 </ul>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Additional Hebrew Terms (Brief Treatment)</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>עֲבוֹדָה (<em>Avodah</em>) — Work, Service, Worship</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Additional Hebrew Terms (Brief Treatment)</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">עֲבוֹדָה (<em>Avodah</em>) — Work, Service, Worship</h4>
 <p><strong>Strong's:</strong> <a href="https://www.blueletterbible.org/lexicon/h5656/kjv/wlc/0-1/" target="_blank">H5656</a></p>
 <p><strong>Key Insight:</strong> The Hebrew <em>avodah</em> encompasses work, service, AND worship as a single concept. When Moses 1:39 declares "this is my work (<em>avodah</em>) and my glory," it implies service and worship as well. God's work is also His service to us and an act of worship (in the sense of sacred action). The same word describes both menial labor AND temple service—suggesting all work can be sacred.</p>
 <p><strong>Where It Appears This Week:</strong> Moses 1:39 — "This is my <strong>work</strong> and my glory"</p>
-</div>
-<button class="sg-inner-accordion"><span>נֶפֶשׁ (<em>Nephesh</em>) — Soul, Being, Life</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">נֶפֶשׁ (<em>Nephesh</em>) — Soul, Being, Life</h4>
 <p><strong>Strong's:</strong> <a href="https://www.blueletterbible.org/lexicon/h5315/kjv/wlc/0-1/" target="_blank">H5315</a></p>
 <p><strong>Key Insight:</strong> <em>Nephesh</em> is the whole living being, not a separate "soul" trapped in a body. Abraham 3:23 speaks of "souls that they were good"—<em>nephesh</em> here means complete beings, not disembodied spirits. Latter-day revelation clarifies: "The spirit and the body are the soul (<em>nephesh</em>) of man" (D&C 88:15). The premortal "souls" Abraham saw were spirits awaiting bodies to become complete <em>nephesh</em>.</p>
 <p><strong>Where It Appears This Week:</strong> Abraham 3:23 — "God saw these <strong>souls</strong> that they were good"</p>
-</div>
-<button class="sg-inner-accordion"><span>רוּחַ (<em>Ruach</em>) — Spirit, Wind, Breath</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">רוּחַ (<em>Ruach</em>) — Spirit, Wind, Breath</h4>
 <p><strong>Strong's:</strong> <a href="https://www.blueletterbible.org/lexicon/h7307/kjv/wlc/0-1/" target="_blank">H7307</a></p>
 <p><strong>Key Insight:</strong> <em>Ruach</em> appears in Abraham 3:23 alongside "spirits" (<em>ruchot</em>, plural). The word encompasses breath, wind, and spirit—all invisible forces that animate. The Spirit of God is <em>ruach Elohim</em>. In Abraham 3, the progression may be: intelligences → spirits (<em>ruchot</em>) → souls (<em>nepheshim</em> with bodies). <em>Ruach</em> is the animating principle that bridges intelligence and embodiment.</p>
 <p><strong>Where It Appears This Week:</strong> Abraham 3:23 — "He stood among those that were <strong>spirits</strong>"</p>
-</div>
-<button class="sg-inner-accordion"><span>צֶלֶם (<em>Tselem</em>) — Image, Likeness</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">צֶלֶם (<em>Tselem</em>) — Image, Likeness</h4>
 <p><strong>Strong's:</strong> <a href="https://www.blueletterbible.org/lexicon/h6754/kjv/wlc/0-1/" target="_blank">H6754</a></p>
 <p><strong>Key Insight:</strong> Moses 1:6 declares Moses is "in the similitude" of the Only Begotten. The Hebrew concept behind this is <em>tselem</em>—image, representative figure. Adam was created <em>betselem Elohim</em> (in the image of God). Moses, like Adam, bears the divine image—and specifically images the Son. This connects to Moses's role as deliverer: he "images" Christ's redemptive work.</p>
 <p><strong>Where It Appears This Week:</strong> Moses 1:6 — "Thou art in the <strong>similitude</strong> of mine Only Begotten"</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Hebrew Wordplay and Sound Patterns</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+<button class="sg-sub-accordion active"><span>Hebrew Wordplay and Sound Patterns</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p><em>The Hebrew Bible often uses wordplay that is lost in translation. Here are examples relevant to this week's reading.</em></p>
-<button class="sg-inner-accordion"><span><em>Ben Adam</em> vs. <em>Ben Elohim</em></span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading"><em>Ben Adam</em> vs. <em>Ben Elohim</em></h4>
 <p><strong>Passage:</strong> Moses 1:12-13</p>
 <p><strong>Hebrew Words:</strong> בֶּן אָדָם (<em>ben adam</em>) vs. בֶּן אֱלֹהִים (<em>ben Elohim</em>)</p>
 <p><strong>Sound Pattern:</strong> Both phrases share the structure <em>ben</em> + noun, creating parallel contrast</p>
 <p><strong>English Miss:</strong> "Son of man" vs. "son of God" doesn't capture the Hebrew resonance—both use identical structure with opposite meaning</p>
 <p><strong>Significance:</strong> The battle is linguistic as much as spiritual. Satan uses God's own language structure (<em>ben</em> + X) but fills it with mortality (<em>adam</em>) instead of divinity (<em>Elohim</em>). Moses reclaims the structure with correct content.</p>
-</div>
-<button class="sg-inner-accordion"><span><em>Kavod</em> (Glory) vs. <em>Kaved</em> (Heavy/Honored)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading"><em>Kavod</em> (Glory) vs. <em>Kaved</em> (Heavy/Honored)</h4>
 <p><strong>Passage:</strong> Moses 1:2-39</p>
 <p><strong>Hebrew Words:</strong> כָּבוֹד (<em>kavod</em>) and כָבֵד (<em>kaved</em>) share the same root</p>
 <p><strong>Sound Pattern:</strong> The repetition of the k-v-d root 13 times in Moses 1 creates a sonic theme</p>
@@ -2619,12 +2310,10 @@
 <p><strong>Significance:</strong> God's glory has <em>weight</em>—substance, significance, heaviness. Satan has no <em>kavod</em> because he has no <em>kaved</em>—no substance, no weight. He is "darkness" (Moses 1:15)—absence of weighty glory.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Theological Word Clusters</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Cluster Theme: "Identity Vocabulary" in Moses 1</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Theological Word Clusters</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Cluster Theme: "Identity Vocabulary" in Moses 1</h4>
 <table class="info-table">
 <tr>
 <th>Hebrew</th>
@@ -2658,9 +2347,7 @@
 </tr>
 </table>
 <p><strong>Why These Words Cluster:</strong> Moses 1's central conflict is identity. The clustering of identity vocabulary creates a theological network: Who is God? (<em>Elohim</em>, <em>yachid</em>) Who is Moses? (<em>ben</em>, <em>tselem</em>) What is Satan's lie? (<em>adam</em> instead of <em>Elohim</em>). Understanding these terms as a cluster reveals Moses 1's structure.</p>
-</div>
-<button class="sg-inner-accordion"><span>Cluster Theme: "Cosmic Order Vocabulary" in Abraham 3</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Cluster Theme: "Cosmic Order Vocabulary" in Abraham 3</h4>
 <table class="info-table">
 <tr>
 <th>Hebrew</th>
@@ -2696,12 +2383,10 @@
 <p><strong>Why These Words Cluster:</strong> Abraham 3 reveals cosmic governance. The vocabulary cluster moves from physical (<em>kokav</em>, stars) to temporal (<em>et</em>, time) to hierarchical (<em>memshalah</em>, governing) to essential (<em>sekel</em>, intelligence). The <em>seder</em> (order) connects them all—everything in its proper place, proper relationship, proper time.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Week Summary: Hebrew Insights</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Key Terms to Remember</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Week Summary: Hebrew Insights</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Key Terms to Remember</h4>
 <table class="info-table">
 <tr>
 <th>Term</th>
@@ -2754,16 +2439,12 @@
 <td>PaRDeS deepest level; revelation through bringing things together</td>
 </tr>
 </table>
-</div>
-<button class="sg-inner-accordion"><span>What Hebrew Reveals This Week</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">What Hebrew Reveals This Week</h4>
 <p>The Hebrew terms in Moses 1 and Abraham 3 create interconnected theological networks that English translation obscures.</p>
 <p><strong>Moses 1</strong> is fundamentally about <em>kavod</em> (glory) and <em>ben</em> (sonship). The 13 occurrences of "glory" establish a framework: Moses receives glory → loses glory → recognizes Satan's lack of glory → learns our eternal life IS God's glory. The <em>ben adam</em> / <em>ben Elohim</em> contrast structures the identity battle at the chapter's center.</p>
 <p><strong>Abraham 3</strong> is about divine <em>seder</em> (order) and <em>sod</em> (council). Abraham learns the cosmic arrangement: stars governed by Kolob, intelligences (<em>sekel</em>) ranked by capacity, spirits (<em>ruach</em>) identified as "noble and great ones," the council (<em>sod</em>) where Christ volunteered. The vocabulary of order—<em>memshalah</em> (governing), <em>moed</em> (appointed time), <em>seder</em> (arrangement)—reveals that the universe is liturgical, organized for divine-human meeting.</p>
 <p>Together, these chapters establish the cosmic context for human identity. We are <em>ben Elohim</em> (children of God), created to receive <em>kavod</em> (glory), organized in <em>seder</em> (holy order), admitted to the <em>sod</em> (council) where we learn the <em>saphar</em> (story) of the stars and our eternal destiny.</p>
-</div>
-<button class="sg-inner-accordion"><span>Temple Connections Through Language</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Temple Connections Through Language</h4>
 <p>The Hebrew terms connect directly to temple worship:</p>
 <ul>
 <li>*<em>כָּבוֹד (</em>kavod<em>)</em>* — The temple is where God's glory dwells (1 Kings 8:10-11)</li>
@@ -2775,52 +2456,43 @@
 <p>Moses 1 and Abraham 3 are essentially temple texts: they reveal what we learn in sacred space—our identity, God's glory, the cosmic order, the divine council, our eternal destiny.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Resources for Further Hebrew Study</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Online Tools</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Resources for Further Hebrew Study</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Online Tools</h4>
 <ul>
 <li><a href="https://www.blueletterbible.org/" target="_blank">Blue Letter Bible</a> — Lexicon and concordance</li>
 <li><a href="https://www.sefaria.org/" target="_blank">Sefaria</a> — Hebrew text with translations</li>
 <li><a href="https://www.ancient-hebrew.org/" target="_blank">Ancient Hebrew Research Center</a> — Word studies</li>
 <li><a href="https://www.etymonline.com/" target="_blank">Etymonline</a> — English word origins</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Bible Project Word Studies</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Bible Project Word Studies</h4>
 <ul>
 <li><a href="https://bibleproject.com/explore/video/kavod-glory/" target="_blank">Kavod - Glory</a> — Visual word study</li>
 <li><a href="https://bibleproject.com/explore/video/image-of-god/" target="_blank">Image of God</a> — Relevant to <em>tselem</em></li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Scripture Central Resources</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Scripture Central Resources</h4>
 <ul>
 <li><a href="https://www.scripturecentral.org/" target="_blank">KnoWhy on Moses 1</a> — Search "Moses 1"</li>
 <li><a href="https://www.scripturecentral.org/" target="_blank">KnoWhy on Premortal Life</a> — Search "premortal"</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Webster 1828 Dictionary</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Webster 1828 Dictionary</h4>
 <ul>
 <li><a href="http://webstersdictionary1828.com/" target="_blank">Webster's 1828 Dictionary Online</a> — Joseph Smith era definitions</li>
 </ul>
 <p><strong>File Status:</strong> Complete <strong>Terms Analyzed:</strong> 8 major terms, 4 brief terms <strong>Created:</strong> January 5, 2026 <strong>Last Updated:</strong> January 5, 2026 <strong>Next File:</strong> 05_Teaching_Applications.md</p>
 </div>
 </div>
-</div>
             </div>
         </div>
 
         <!-- SECTION 5: TEACHING APPLICATIONS -->
-        <button class="sg-accordion-section">5. Teaching Applications</button>
-        <div class="sg-panel">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">5. Teaching Applications</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
             <div class="panel-content">
-                <button class="sg-sub-accordion"><span>Introduction: Teaching Moses 1 and Abraham 3 Effectively</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active"><span>Introduction: Teaching Moses 1 and Abraham 3 Effectively</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p>This week introduces two of the most doctrinally rich chapters in all of scripture—both unique to the Restoration. Moses 1 provides a template for understanding divine identity and overcoming Satan, while Abraham 3 reveals the premortal council and the cosmic context for human existence. These chapters are foundational for everything that follows in the Old Testament.</p>
 <p>The central theme is <strong>identity</strong>. God establishes Moses's identity ("thou art my son") before giving him a mission. Satan attacks that identity ("son of man"). The battle throughout scripture—and throughout life—is between receiving our identity from God versus having it diminished by the adversary or the world.</p>
 <p><strong>Key Teaching Principles:</strong></p>
@@ -2833,19 +2505,16 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>1. PERSONAL STUDY APPLICATIONS</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Five Specific Study Techniques</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>1. PERSONAL STUDY APPLICATIONS</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Five Specific Study Techniques</h4>
 <p><strong>Technique 1: Identity Inventory</strong> Read Moses 1:1-11 and make a list of every truth God reveals about Moses. Then read Moses 1:12-22 and list every lie or diminishment Satan attempts. Journal: Which lies am I tempted to believe? Which truths do I need to internalize?</p>
 <p><strong>Technique 2: The "Glory" Word Study</strong> The word "glory" appears 13 times in Moses 1. Read through the chapter and mark each occurrence. What does glory mean in each context? How does Moses use God's glory to discern Satan? What does it mean that God's glory is OUR eternal life?</p>
 <p><strong>Technique 3: The "Nevertheless" Moment</strong> Focus on Moses 1:20—the pivot point where Moses fears, sees the bitterness of hell, "nevertheless" calls upon God. Journal about a time you had a "nevertheless" moment—choosing faith despite fear. What strength did you receive?</p>
 <p><strong>Technique 4: Premortal Reflection</strong> Read Abraham 3:22-28. Write a letter to your premortal self from your current perspective. What would you tell yourself about what you've learned? What encouragement would you give?</p>
 <p><strong>Technique 5: Compare the Two Plans</strong> Create a side-by-side comparison of Christ's response (Abraham 3:27; Moses 4:2) and Satan's response (Abraham 3:28; Moses 4:1-3). Note the differences in motivation, outcome, and glory. How do these two approaches manifest in your daily choices?</p>
-</div>
-<button class="sg-inner-accordion"><span>Five Personal Reflection Questions</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Five Personal Reflection Questions</h4>
 <ol>
 <li><strong>Identity:</strong> What "son of man" messages does the world send me? How can I counter them with the "son of God" truth?</li>
 <li><strong>Covenant:</strong> God gave Moses power to cast out Satan through covenant authority. How am I accessing that same power through my temple covenants?</li>
@@ -2853,21 +2522,17 @@
 <li><strong>Application:</strong> If God's work and glory is my eternal life, how should that affect my self-worth when I fail?</li>
 <li><strong>Premortal:</strong> Knowing I kept my first estate (came to earth), what confidence does that give me about my capacity to keep my second estate?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Four Practical Exercises</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Four Practical Exercises</h4>
 <p><strong>Exercise 1: Daily Identity Affirmation</strong> Each morning this week, read Moses 1:4, 6 aloud, substituting your name: "[Name], thou art my son/daughter... I have a work for thee." Notice how this affects your day.</p>
 <p><strong>Exercise 2: Satan's Tactics Journal</strong> Track any moment this week when you feel your identity diminished, your worth questioned, or fear creeping in. Note: How does this mirror Moses 1:12-19? How will you respond?</p>
 <p><strong>Exercise 3: Temple Visit with Moses 1 in Mind</strong> Attend the temple this week. Before going, read Moses 1 as preparation. After, journal connections you noticed between Moses's mountain experience and the temple.</p>
 <p><strong>Exercise 4: Teach Moses 1:39</strong> Share Moses 1:39 with someone this week and explain what it means to you. Teaching reinforces learning and invites the Spirit.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>2. FAMILY HOME EVENING APPLICATIONS</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Opening Activity: "Who Am I?"</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>2. FAMILY HOME EVENING APPLICATIONS</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Opening Activity: "Who Am I?"</h4>
 <p><strong>Materials:</strong> Paper, markers, mirror</p>
 <p><strong>Activity:</strong></p>
 <ol>
@@ -2882,9 +2547,7 @@
 <li>What did God tell Moses about his identity? (Read Moses 1:4)</li>
 <li>How does knowing you're God's child change how you face hard days?</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Scripture Story Presentation</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Scripture Story Presentation</h4>
 <p><strong>Title:</strong> "Moses Meets God—And Then Satan"</p>
 <p><strong>Story Framework:</strong> "Moses was on a mountain when something amazing happened—he met God face to face! God showed Moses everything He had created. Then God said something Moses had never heard before: 'Moses, thou art my son.'</p>
 <p>"But as soon as God left, someone else showed up—Satan. And Satan tried to trick Moses. He said, 'Moses, you're just a regular person. Worship me!'</p>
@@ -2897,9 +2560,7 @@
 <li>Discuss: Why did Satan leave only when Moses used Jesus's name?</li>
 </ul>
 <p><strong>Application Discussion:</strong> "How can we remember we're God's children when we feel scared or tempted?"</p>
-</div>
-<button class="sg-inner-accordion"><span>Discussion Points for Families</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Discussion Points for Families</h4>
 <p><strong>For Younger Children (Ages 3-8):</strong></p>
 <ul>
 <li>Heavenly Father knows you and loves you</li>
@@ -2932,35 +2593,27 @@
 <li>Satan's "son of man" attack can come through cultural messages</li>
 <li>We are mid-deliverance—in process, not yet complete</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Object Lessons</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Object Lessons</h4>
 <p><strong>Object Lesson 1: The Mirror Test</strong> <strong>Materials:</strong> Small mirror <strong>Lesson:</strong> Look in the mirror. "What do you see?" (Eyes, hair, nose...) "Now imagine God is looking at you through this mirror. What does He see?" Read Moses 1:4. "He sees His child." <strong>Application:</strong> When you look in the mirror this week, remember what God sees.</p>
 <p><strong>Object Lesson 2: Flashlight vs. Darkness</strong> <strong>Materials:</strong> Flashlight, darkened room <strong>Lesson:</strong> Turn on flashlight: "This is God's glory." Turn it off: "When Satan came to Moses, Moses could tell the difference. Satan had no light—just darkness." Read Moses 1:15. "We need to know the light so we can recognize the darkness." <strong>Application:</strong> Scripture study fills us with light so we can discern darkness.</p>
 <p><strong>Object Lesson 3: The Name Tag</strong> <strong>Materials:</strong> Blank name tags, markers <strong>Lesson:</strong> Write "son/daughter of God" on a name tag. "This is your real identity. Moses wrote this on his spiritual 'name tag.' When Satan tried to give him a different label ('son of man'), Moses refused." <strong>Application:</strong> Wear your identity truth this week.</p>
 <p><strong>Object Lesson 4: Bread Dough Proving</strong> <strong>Materials:</strong> Rising bread dough (or video of dough rising) <strong>Lesson:</strong> "To 'prove' dough isn't to test if it's real—it's the step where bread takes its final shape. God said He would 'prove' us (Abraham 3:25). He's not testing if we're real—He's helping us become our best selves." <strong>Application:</strong> Hard times are proving times—shaping, not just testing.</p>
-</div>
-<button class="sg-inner-accordion"><span>Family Activities</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Family Activities</h4>
 <p><strong>Activity 1: Mountain Experience (Ages 5+)</strong> Go outside (to a hill, stairs, or elevated location if no mountain is nearby). Read Moses 1:1-6 aloud at the "high place." Discuss how Moses felt seeing God. Walk back down and discuss how Moses faced Satan on the way down—we all face challenges after spiritual experiences.</p>
 <p><strong>Activity 2: Star Gazing with Abraham 3 (Ages 7+)</strong> On a clear night, look at stars. Read Abraham 3:1-4 about Kolob and governing stars. Discuss: God organized the stars; He also organized us. Just as stars have order and purpose, so do we.</p>
 <p><strong>Activity 3: Identity Shield (Ages 6+)</strong> Create a "shield" from cardboard. On it, write truths about identity from Moses 1 and Abraham 3: "Child of God," "Work and Glory," "Noble and Great," "Chosen." Discuss how this shield protects against Satan's lies.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>3. SUNDAY SCHOOL TEACHING APPLICATIONS</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Three Class Opening Questions</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>3. SUNDAY SCHOOL TEACHING APPLICATIONS</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Three Class Opening Questions</h4>
 <ol>
 <li><strong>Experience-Based:</strong> "Have you ever had someone tell you something about yourself that changed how you saw yourself—for better or worse?" (Discuss, then transition: "Today we'll see how God tells Moses something about his identity that changes everything...")</li>
 <li><strong>Connection-Based:</strong> "If you could ask God one question about who you really are, what would it be?" (Discuss, then: "Moses got to ask—and God answered in Moses 1...")</li>
 <li><strong>Doctrinal:</strong> "Why do you think Satan's first attack on Moses was about his identity ('son of man') rather than tempting him to some specific sin?" (Discuss the strategy of attacking identity first...)</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Key Teaching Points with Methods</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Key Teaching Points with Methods</h4>
 <p><strong>Teaching Point 1: God Reveals Our Identity</strong></p>
 <p><strong>Method - Scripture Mapping:</strong></p>
 <ul>
@@ -2995,20 +2648,16 @@
 <li>Discuss: What gives us that same power today? (Temple covenants)</li>
 </ul>
 <p><strong>Application:</strong> When facing spiritual opposition, explicitly invoke Christ's name with covenant authority.</p>
-</div>
-<button class="sg-inner-accordion"><span>Small Group Activities</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Small Group Activities</h4>
 <p><strong>Activity 1: Identity Workshop (15 minutes)</strong> In groups of 3-4, create a "God's View of You" poster using only truths from Moses 1 and Abraham 3. Each group presents their poster. Display in classroom.</p>
 <p><strong>Activity 2: Modern Satan Attacks (10 minutes)</strong> In pairs, identify three ways Satan attacks identity in modern culture. Share with class. Discuss scriptural responses for each attack.</p>
 <p><strong>Activity 3: "You ARE My Work and Glory" (12 minutes)</strong> Dr. Allred's reframe: not "this is my work and glory" but "YOU are my work and glory." In groups, discuss: How does this personalization change how you read Moses 1:39? What difference does it make in daily life?</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>4. SEMINARY TEACHING APPLICATIONS</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Daily Devotional Themes (5 days)</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>4. SEMINARY TEACHING APPLICATIONS</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Daily Devotional Themes (5 days)</h4>
 <p><strong>Day 1: You Are God's Child</strong></p>
 <ul>
 <li><strong>Scripture:</strong> Moses 1:4</li>
@@ -3044,9 +2693,7 @@
 <li><strong>Question:</strong> What does your premortal faithfulness suggest about your capacity now?</li>
 <li><strong>Challenge:</strong> Live today like someone who was chosen before birth.</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Scripture Mastery Focus</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Scripture Mastery Focus</h4>
 <p><strong>Mastery Verse:</strong> Moses 1:39 "For behold, this is my work and my glory—to bring to pass the immortality and eternal life of man."</p>
 <p><strong>Memorization Techniques:</strong></p>
 <ul>
@@ -3061,9 +2708,7 @@
 <li>Share when explaining God's character to investigators</li>
 <li>Connect to temple covenants (eternal life is the goal)</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Youth-Relevant Discussions</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Youth-Relevant Discussions</h4>
 <p><strong>Discussion 1: Instagram vs. Moses 1</strong> <strong>Situation:</strong> Social media tells us we need to curate and create our identity—perfect photos, clever captions, building a personal brand. <strong>Questions:</strong></p>
 <ul>
 <li>How does social media suggest identity is created?</li>
@@ -3085,20 +2730,16 @@
 <li>How do covenants give us that authority?</li>
 </ul>
 <p><strong>Activity:</strong> Discuss when/how we use Christ's name today. <strong>Application:</strong> Temple covenants give us access to power we otherwise wouldn't have.</p>
-</div>
-<button class="sg-inner-accordion"><span>Interactive Activities</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Interactive Activities</h4>
 <p><strong>Activity 1: Identity Attack/Defense</strong> Divide class into two groups. One group writes "Satan's attacks" (modern identity lies). Other group writes "God's truths" (from Moses 1 and Abraham 3). Match attacks with defenses.</p>
 <p><strong>Activity 2: The "Nevertheless" Game</strong> Read scenarios aloud (failed a test, friend betrayed you, feeling spiritually dry). Students respond starting with "Nevertheless, I will..." Practice choosing faith despite circumstances.</p>
 <p><strong>Activity 3: Letter to Your Premortal Self</strong> Using Abraham 3 as context, write a brief letter to your premortal self from your current perspective. What encouragement would you give? What have you learned? Share in small groups.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>5. RELIEF SOCIETY & PRIESTHOOD APPLICATIONS</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Discussion Topics</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>5. RELIEF SOCIETY & PRIESTHOOD APPLICATIONS</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Discussion Topics</h4>
 <p><strong>Discussion Topic 1: Identity Before Mission</strong> <strong>Opening:</strong> Read Moses 1:4-6. Note that God reveals Moses's identity BEFORE giving him his work. <strong>Deep Dive:</strong></p>
 <ul>
 <li>Why does identity precede mission?</li>
@@ -3135,15 +2776,11 @@
 <li>Trust the process—the clock isn't over</li>
 <li>Support others who are in their own mid-deliverance</li>
 </ul>
-</div>
-<button class="sg-inner-accordion"><span>Service Applications</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Service Applications</h4>
 <p><strong>Service Application 1: Identity Ministry</strong> Who in your ward needs to be reminded of their divine identity? Consider visiting those who may feel forgotten, purposeless, or defined by failure. Share Moses 1:4-6 and President Nelson's three identities. <strong>Connection to Scripture:</strong> Moses needed to hear his identity; so do those we minister to.</p>
 <p><strong>Service Application 2: Premortal Perspective for the Struggling</strong> For those struggling with trials, share Abraham 3's perspective: they kept their first estate; they can keep their second. They were among the noble and great ones who chose to come. <strong>Connection to Scripture:</strong> Premortal faithfulness suggests present capacity.</p>
 <p><strong>Service Application 3: Temple Preparation</strong> Help those preparing for temple to study Moses 1 as a preview. Discuss how Moses's mountain experience parallels what they will experience. <strong>Connection to Scripture:</strong> Moses 1 prepares for temple understanding.</p>
-</div>
-<button class="sg-inner-accordion"><span>Personal Development Goals</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Personal Development Goals</h4>
 <p><strong>Development Goal 1: Daily Identity Practice</strong> <strong>Goal:</strong> Begin each day by reading Moses 1:4, 6 with your name inserted. <strong>Plan:</strong></p>
 <ul>
 <li>Set morning alarm with reminder</li>
@@ -3167,26 +2804,20 @@
 <p><strong>Progress Tracking:</strong> Note "nevertheless" moments in journal.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>6. CHILDREN'S TEACHING IDEAS</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Songs and Activities</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>6. CHILDREN'S TEACHING IDEAS</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Songs and Activities</h4>
 <p><strong>Song 1: "I Am a Child of God" (Children's Songbook 2)</strong> <strong>Activity:</strong> Before singing, read Moses 1:4. "God said these same words to Moses! He says them to us too!" Emphasize the first line particularly.</p>
 <p><strong>Song 2: "The Wise Man and the Foolish Man" (Children's Songbook 281)</strong> <strong>Activity:</strong> Connect to Moses 1—the wise man built on the rock; Moses built on knowing God. When Satan's storm came, Moses didn't fall.</p>
 <p><strong>Song 3: "I Will Follow God's Plan" (Children's Songbook 164)</strong> <strong>Activity:</strong> Use with Abraham 3's premortal context. "Before we came to earth, we chose to follow God's plan!"</p>
 <p><strong>Movement Activity: "Mountains and Valleys"</strong> Have children act out going up a mountain (reaching high) where they meet God, then coming down (crouching) where Satan appears. Practice saying "I am a child of God!" and "In the name of Jesus Christ, depart!" with confidence.</p>
-</div>
-<button class="sg-inner-accordion"><span>Simple Object Lessons</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Simple Object Lessons</h4>
 <p><strong>Object Lesson 1: The Light Test (Ages 4-7)</strong> <strong>Materials:</strong> Flashlight <strong>Lesson:</strong> "Moses could tell the difference between God and Satan because God has LIGHT." Turn flashlight on/off. "When we know God's light, we can tell when something is dark." <strong>Application:</strong> Scripture study fills us with light!</p>
 <p><strong>Object Lesson 2: The Name Badge (Ages 5-9)</strong> <strong>Materials:</strong> Blank name badges, marker <strong>Lesson:</strong> Write "Child of God" on a badge. Put it on a child. "This is your real name—the one God gives you. Other people might call you different things, but THIS is who you really are." <strong>Application:</strong> You're always God's child, no matter what.</p>
 <p><strong>Object Lesson 3: The Power of a Name (Ages 7-11)</strong> <strong>Materials:</strong> None <strong>Lesson:</strong> "If I said 'Get out of this room' to you, would you leave?" (Maybe.) "But what if the prophet said it?" (Yes!) "Jesus's name has even more power. When Moses used Jesus's name, Satan HAD to leave." <strong>Application:</strong> Jesus's name is powerful when we use it with faith.</p>
 <p><strong>Object Lesson 4: Mirror Reflection (Ages 6-10)</strong> <strong>Materials:</strong> Small mirror <strong>Lesson:</strong> Have child look in mirror. "What do you see?" Read Moses 1:4. "When God looks at you, He sees His child. That's what you should see too." <strong>Application:</strong> Remember God sees His child when you look at yourself.</p>
-</div>
-<button class="sg-inner-accordion"><span>Art and Crafts</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Art and Crafts</h4>
 <p><strong>Craft 1: Identity Shield (Ages 5-10)</strong> <strong>Materials:</strong> Paper plate, markers, yarn for handle <strong>Instructions:</strong></p>
 <ul>
 <li>Draw/write "Child of God" in center</li>
@@ -3216,12 +2847,10 @@
 <p><strong>Teaching:</strong> When we're scared, we can say "nevertheless" and choose faith like Moses!</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>7. MISSION APPLICATIONS</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Teaching Principles</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>7. MISSION APPLICATIONS</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Teaching Principles</h4>
 <p><strong>Principle 1: Divine Identity</strong> <strong>Teaching Approach:</strong></p>
 <ul>
 <li>Use Moses 1:4-6 to teach investigators their divine nature</li>
@@ -3243,73 +2872,56 @@
 <li>The pattern: know identity → resist in Christ's name → prevail</li>
 </ul>
 <p><strong>Scripture to Share:</strong> Moses 1:20-22 <strong>Response to Objection:</strong> "I don't feel spiritually strong" — Moses was afraid too. "Nevertheless" he called upon God.</p>
-</div>
-<button class="sg-inner-accordion"><span>Finding Applications</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Finding Applications</h4>
 <p><strong>Application 1: Identity Conversations</strong> Start conversations by asking: "What would you say is the most important thing about who you are?" Many will mention roles or achievements. Transition: "I believe we're all children of God—and that changes everything." Share Moses 1:4.</p>
 <p><strong>Application 2: Premortal Life Questions</strong> When people wonder about life's purpose or why they're here, use Abraham 3: "What if you existed before birth, chose to come to earth, and have a purpose that was set before you arrived?"</p>
 <p><strong>Application 3: Why Trials Exist</strong> When people struggle with suffering, use Abraham 3:25: "We're being 'proved'—not tested if we're real, but developed into our best selves. Like bread dough being proved before baking."</p>
-</div>
-<button class="sg-inner-accordion"><span>Member Work</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Member Work</h4>
 <p><strong>Member Work 1: Covenant Identity</strong> For less-active members struggling with worth, share President Nelson's three identities and Moses 1:4-6. Help them remember covenants they've made give them access to power and identity.</p>
 <p><strong>Member Work 2: Temple Preparation with Moses 1</strong> For those preparing for the temple, study Moses 1 together. Explain how Moses's mountain experience parallels temple experience. Build anticipation and understanding.</p>
 <p><strong>Member Work 3: Mid-Deliverance Encouragement</strong> For those in trials, share the "mid-deliverance" concept: They're post some rescues, pre-completion of promises. The clock isn't over. God is working on them.</p>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>8. INSIGHTS FROM VIDEO RESOURCES FOR TEACHING</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>From Follow Him (Dr. Phil Allred)</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>8. INSIGHTS FROM VIDEO RESOURCES FOR TEACHING</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">From Follow Him (Dr. Phil Allred)</h4>
 <p><strong>Teaching Insight - "You ARE My Work and Glory":</strong> Reframe Moses 1:39 personally. Not just "this IS my work" but "YOU are my work and glory." Each person is individually the object of God's eternal effort.</p>
 <p><strong>Teaching Insight - Mid-Deliverance:</strong> We're always in the middle of God's rescue—post some deliverances, pre-completion of promises. Don't judge your life by a snapshot.</p>
 <p><strong>Teaching Insight - The Dough Analogy:</strong> To "prove" dough isn't to test if it's real—it's the step where bread takes its shape. God isn't testing us; He's developing us.</p>
 <p><strong>Teaching Insight - "Nevertheless" as Agency Marker:</strong> The word "nevertheless" in Moses 1:20 marks the assertion of agency—acknowledging difficulty but choosing faith anyway.</p>
-</div>
-<button class="sg-inner-accordion"><span>From Finding Christ (John Hilton III)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">From Finding Christ (John Hilton III)</h4>
 <p><strong>Teaching Insight - Identity Received, Not Created:</strong> In scripture, identity is something we RECEIVE from God, not something we CREATE or curate. This counters Instagram culture.</p>
 <p><strong>Teaching Insight - "I Am Nothing, But I Am Divine":</strong> Moses 1:10 is liberating, not depressing. If identity is based on achievements, it will crumble. If it's based on whose we are, it's secure.</p>
 <p><strong>Teaching Insight - Satan Attacks Revelation Just Received:</strong> Satan tempts us to doubt the very revelation we just received. This is his pattern with Moses and with us.</p>
 <p><strong>Teaching Insight - Most Quoted Scripture:</strong> Moses 1:39 has been quoted in General Conference more than twice as often as the #2 most quoted scripture over 80 years.</p>
-</div>
-<button class="sg-inner-accordion"><span>From Scripture Insights (Taylor & Mike)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">From Scripture Insights (Taylor & Mike)</h4>
 <p><strong>Teaching Insight - Creation as Temple Text:</strong> Genesis 1/Moses 2 is primarily temple text, not science text. The number seven as covenant signature ("I God" appears 28 times = 7×4).</p>
 <p><strong>Teaching Insight - Inversion of Mythology:</strong> Genesis inverts Babylonian/Egyptian mythology. Babylonians said humans were created from rebellious god's blood; Genesis says we're God's children, created in His image.</p>
-</div>
-<button class="sg-inner-accordion"><span>From Lynne Wilson</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">From Lynne Wilson</h4>
 <p><strong>Teaching Insight - Moses 1 as Temple Text:</strong> Mountains in the Old Testament are temples. Moses on the mountain is a temple experience—transfiguration, revelation, overcoming adversary.</p>
 <p><strong>Teaching Insight - Satan Removed from OT:</strong> Genesis never mentions Satan. Moses 1 restores understanding of the adversary that was lost.</p>
-</div>
-<button class="sg-inner-accordion"><span>From Scriptures Are Real (Muhlestein & Goodman)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">From Scriptures Are Real (Muhlestein & Goodman)</h4>
 <p><strong>Teaching Insight - President Nelson's Identity Order:</strong> The three identities are ordered intentionally: child of God (foundational), child of the covenant (what relationship looks like), disciple of Christ (how we serve).</p>
 <p><strong>Teaching Insight - "Teach Them Their Identity":</strong> President Nelson's answer for how to help those struggling (with pornography, etc.): "Teach them their identity and potential." Identity is the answer.</p>
 <p><strong>Teaching Insight - Humble/Ennoble Cycle:</strong> Throughout scripture, God humbles us (corrects pride) and ennobles us (lifts us up). Moses 1 shows this pattern repeatedly.</p>
-</div>
-<button class="sg-inner-accordion"><span>From Grounded (Gardner & Foster)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">From Grounded (Gardner & Foster)</h4>
 <p><strong>Teaching Insight - Mothers as Primary Gospel Teachers:</strong> Moses's experience is a template for how God prepares ALL of us. Mothers have the unique gift of nurturing teachers—the ability to read children and respond.</p>
 <p><strong>Teaching Insight - Mountains = Temple Experiences:</strong> "What are my high mountains? What are my children's high mountains? Where do we have sacred experiences that prepare us for our work?"</p>
 <p><strong>Teaching Insight - Casting Out Satan Requires Progression:</strong> Moses tried several times before invoking Christ's name with full covenant authority. Women and men receive this power through temple covenants.</p>
 <p><strong>File Status:</strong> Complete <strong>Subsections:</strong> Personal Study, Family Home Evening, Sunday School, Seminary, Relief Society/Priesthood, Children, Mission <strong>Created:</strong> January 4, 2026 <strong>Last Updated:</strong> January 4, 2026 <strong>Next File:</strong> 06_Study_Questions.md</p>
 </div>
 </div>
-</div>
             </div>
         </div>
 
         <!-- SECTION 6: STUDY QUESTIONS -->
-        <button class="sg-accordion-section">6. Study Questions</button>
-        <div class="sg-panel">
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">6. Study Questions</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
             <div class="panel-content">
-                <button class="sg-sub-accordion"><span>Introduction: Using These Study Questions</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
+                <button class="sg-sub-accordion active"><span>Introduction: Using These Study Questions</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
 <p>These questions are designed for multiple contexts:</p>
 <ul>
 <li><strong>Personal Study:</strong> Journal responses, meditation, prayer</li>
@@ -3320,11 +2932,10 @@
 <p>Questions range from basic comprehension to deep application. Don't feel pressured to answer all questions—select those most relevant to your needs and spiritual development. Some questions invite research, others prompt introspection, still others challenge practical application.</p>
 </div>
 </div>
-<button class="sg-sub-accordion"><span>CATEGORY 1: UNDERSTANDING THE TEXT (60 Questions)</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Basic Comprehension Questions (Questions 1-20)</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>CATEGORY 1: UNDERSTANDING THE TEXT (60 Questions)</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Basic Comprehension Questions (Questions 1-20)</h4>
 <p><strong>Moses 1 Comprehension</strong></p>
 <ol>
 <li>Where was Moses when he received this vision? (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=1" target="_blank">Moses 1:1</a>)</li>
@@ -3351,9 +2962,7 @@
 <li>What did God show Abraham about intelligences before the world was? (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/3?lang=eng&id=22" target="_blank">Abraham 3:22</a>)</li>
 <li>What did God tell Abraham about his own standing among the noble and great ones? (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/3?lang=eng&id=23" target="_blank">Abraham 3:23</a>)</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Deeper Analysis Questions (Questions 21-40)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Deeper Analysis Questions (Questions 21-40)</h4>
 <p><strong>Literary and Structural Analysis</strong></p>
 <ol>
 <li>What is the literary structure of Moses 1? (Hint: revelation → attack → victory → more revelation)</li>
@@ -3383,9 +2992,7 @@
 <li>Why is Moses 1 considered "temple text"? What elements mirror temple worship patterns?</li>
 <li>What "plain and precious truths" mentioned in 1 Nephi 13:26-29 does Moses 1 restore that are missing from Genesis?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Cross-Reference Questions (Questions 41-60)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Cross-Reference Questions (Questions 41-60)</h4>
 <p><strong>Old Testament Connections</strong></p>
 <ol>
 <li>How does Moses 1:1-11 connect to Moses's later experience in Exodus 33:18-23?</li>
@@ -3423,12 +3030,10 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>CATEGORY 2: PERSONAL APPLICATION (30 Questions)</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Identity Questions (Questions 61-70)</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>CATEGORY 2: PERSONAL APPLICATION (30 Questions)</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Identity Questions (Questions 61-70)</h4>
 <ol>
 <li>God told Moses his identity ("thou art my son") before giving him a mission. What does this order teach you about how God works with you?</li>
 <li>What "son of man" messages does the world send you? (Messages that reduce your worth to achievements, appearance, status, etc.)</li>
@@ -3441,9 +3046,7 @@
 <li>Moses 1:10 says Moses recognized "man is nothing" after seeing God's glory. Is this liberating or depressing? Why?</li>
 <li>Knowing you "kept your first estate" (came to earth), what confidence does that give you about your capacity to "keep your second estate"?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Spiritual Warfare Questions (Questions 71-80)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Spiritual Warfare Questions (Questions 71-80)</h4>
 <ol>
 <li>What was Satan's strategy in attacking Moses? How does he use similar strategies against you?</li>
 <li>Moses had to command Satan to leave multiple times before invoking Christ's name worked. What does this teach about persistence in spiritual battles?</li>
@@ -3456,9 +3059,7 @@
 <li>How can you prepare NOW for spiritual attacks that will come LATER?</li>
 <li>President Faust called Satan "the great imitator." How do you distinguish his counterfeits from God's truth?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Purpose and Mission Questions (Questions 81-90)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Purpose and Mission Questions (Questions 81-90)</h4>
 <ol>
 <li>Moses 1:39 says YOU are God's work and glory. How does this personal application change how you read the verse?</li>
 <li>God said "I have a work for thee, Moses" (Moses 1:6). What work do you believe God has for you?</li>
@@ -3473,12 +3074,10 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>CATEGORY 3: DOCTRINAL UNDERSTANDING (30 Questions)</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Nature of God Questions (Questions 91-100)</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>CATEGORY 3: DOCTRINAL UNDERSTANDING (30 Questions)</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Nature of God Questions (Questions 91-100)</h4>
 <ol>
 <li>What does Moses 1:3 ("I am the Lord God Almighty, and Endless is my name") teach about God's nature?</li>
 <li>What does it mean that God has "works without end" and "words for they never cease" (Moses 1:4)?</li>
@@ -3491,9 +3090,7 @@
 <li>What does Moses 1:39 reveal about God's priorities and motivations?</li>
 <li>How does the concept of "divine investiture of authority" help explain Moses 1's theophany?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Premortal Existence Questions (Questions 101-110)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Premortal Existence Questions (Questions 101-110)</h4>
 <ol>
 <li>What is the difference between "intelligences" and "spirits" in Abraham 3:22-23?</li>
 <li>D&C 93:29 says intelligence was "not created or made." What does this mean for our eternal nature?</li>
@@ -3506,9 +3103,7 @@
 <li>What was Satan's fundamental error according to Moses 4:1-3 and Abraham 3:28?</li>
 <li>What does the premortal council teach about agency as a core gospel principle?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Satan and Opposition Questions (Questions 111-120)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Satan and Opposition Questions (Questions 111-120)</h4>
 <ol>
 <li>Why doesn't Genesis mention Satan, but Moses 1 does? What was "lost"?</li>
 <li>What are Satan's tactics according to Moses 1? List at least five.</li>
@@ -3523,12 +3118,10 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>CATEGORY 4: MODERN RELEVANCE (30 Questions)</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Identity in Modern Culture Questions (Questions 121-130)</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>CATEGORY 4: MODERN RELEVANCE (30 Questions)</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Identity in Modern Culture Questions (Questions 121-130)</h4>
 <ol>
 <li>How does social media create pressure to "curate" identity rather than "receive" it from God?</li>
 <li>What "son of man" lies does our achievement-oriented culture tell us? (Your worth = your productivity, success, appearance, etc.)</li>
@@ -3541,9 +3134,7 @@
 <li>How does the teaching that identity is "received" apply to gender, sexuality, and identity conversations today?</li>
 <li>What would change in your ward if everyone truly believed they were "noble and great ones"?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Spiritual Challenges Questions (Questions 131-140)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Spiritual Challenges Questions (Questions 131-140)</h4>
 <ol>
 <li>Moses faced Satan immediately after a sacred experience. Why does spiritual attack often follow spiritual highs?</li>
 <li>Elder Holland's "Cast not away therefore your confidence" addresses post-revelation doubt. How does Moses 1 illustrate this?</li>
@@ -3556,9 +3147,7 @@
 <li>What does Moses 1 teach about the relationship between past spiritual experiences and present challenges?</li>
 <li>How does knowing the "proving" (Abraham 3:25) is developmental (not punitive) change how we view suffering?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Mission and Purpose Questions (Questions 141-150)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Mission and Purpose Questions (Questions 141-150)</h4>
 <ol>
 <li>How does Moses 1:39 inform our understanding of God's involvement in current world events?</li>
 <li>What does it mean for Latter-day Saint youth that they were "foreordained" for this specific time?</li>
@@ -3573,12 +3162,10 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>CATEGORY 5: SYNTHESIS AND COMMITMENT (20 Questions)</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>Integration Questions (Questions 151-160)</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>CATEGORY 5: SYNTHESIS AND COMMITMENT (20 Questions)</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">Integration Questions (Questions 151-160)</h4>
 <ol>
 <li>What is the single most important truth you learned from Moses 1 this week?</li>
 <li>What is the single most important truth you learned from Abraham 3 this week?</li>
@@ -3591,9 +3178,7 @@
 <li>How does this week's study strengthen your testimony of the Restoration?</li>
 <li>If you could summarize this week's reading in one sentence, what would it be?</li>
 </ol>
-</div>
-<button class="sg-inner-accordion"><span>Commitment Questions (Questions 161-170)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">Commitment Questions (Questions 161-170)</h4>
 <ol>
 <li>What specific action will you take this week based on Moses 1's teaching about identity?</li>
 <li>How will you invoke Christ's name differently after studying Moses 1?</li>
@@ -3608,12 +3193,10 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>CATEGORY 6: DISCUSSION STARTERS (10 Questions)</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>For Group Discussion (Questions 171-180)</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>CATEGORY 6: DISCUSSION STARTERS (10 Questions)</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">For Group Discussion (Questions 171-180)</h4>
 <ol>
 <li>What part of Moses 1 or Abraham 3 impacted you most this week? Why?</li>
 <li>How would you explain the premortal existence to someone who has never heard of it?</li>
@@ -3628,39 +3211,24 @@
 </ol>
 </div>
 </div>
-</div>
-<button class="sg-sub-accordion"><span>Appendix: Questions by Teaching Context</span></button>
-<div class="sg-sub-panel">
-<div class="sg-sub-panel-content">
-<button class="sg-inner-accordion"><span>For Personal Journaling (Select 5-10)</span></button>
-<div class="sg-inner-panel">
+<button class="sg-sub-accordion active"><span>Appendix: Questions by Teaching Context</span></button>
+<div class="sg-sub-panel active">
+<div class="sg-sub-panel-content" style="display: block;">
+<h4 class="sg-section-heading">For Personal Journaling (Select 5-10)</h4>
 <p>Best questions: 61, 67, 71, 81, 84, 90, 157, 159, 167</p>
-</div>
-<button class="sg-inner-accordion"><span>For Family Home Evening (Select 2-3)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">For Family Home Evening (Select 2-3)</h4>
 <p>Best questions: 4, 7, 61, 68, 80, 174, 176</p>
-</div>
-<button class="sg-inner-accordion"><span>For Sunday School (Select 3-5)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">For Sunday School (Select 3-5)</h4>
 <p>Best questions: 21, 31, 61, 71, 99, 171, 174, 177</p>
-</div>
-<button class="sg-inner-accordion"><span>For Seminary (Select 5-7)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">For Seminary (Select 5-7)</h4>
 <p>Best questions: 8, 31, 61, 75, 121, 131, 170</p>
-</div>
-<button class="sg-inner-accordion"><span>For Relief Society/Elders Quorum (Select 4-6)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">For Relief Society/Elders Quorum (Select 4-6)</h4>
 <p>Best questions: 64, 84, 99, 131, 140, 177</p>
-</div>
-<button class="sg-inner-accordion"><span>For Youth (Select 4-5)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">For Youth (Select 4-5)</h4>
 <p>Best questions: 67, 75, 121, 125, 165</p>
-</div>
-<button class="sg-inner-accordion"><span>For Missionaries (Select 3-4)</span></button>
-<div class="sg-inner-panel">
+<h4 class="sg-section-heading">For Missionaries (Select 3-4)</h4>
 <p>Best questions: 99, 109, 147, 172</p>
 <p><strong>File Status:</strong> Complete <strong>Total Questions:</strong> 180 <strong>Categories:</strong> Understanding the Text (60), Personal Application (30), Doctrinal Understanding (30), Modern Relevance (30), Synthesis (20), Discussion (10) <strong>Created:</strong> January 4, 2026 <strong>Last Updated:</strong> January 9, 2026 <strong>This completes the 6-file set for Week 02</strong></p>
-</div>
 </div>
 </div>
             </div>
@@ -3672,81 +3240,4 @@
     
 
 
-    <!-- Bottom Navigation -->
-    <div class="section-navigation">
-        <div class="nav-container">
-            <a href="week01.html" class="nav-link">← Week 1</a>
-            <a href="index.html" class="nav-link index">Study Guide Index</a>
-            <a href="week03.html" class="nav-link">Week 3 →</a>
-        </div>
-    </div>
-
-<script>
-
-        // Main accordion sections
-        const accordionSections = document.querySelectorAll('.sg-accordion-section');
-        accordionSections.forEach(section => {
-            section.addEventListener('click', function() {
-                this.classList.toggle('active');
-                const panel = this.nextElementSibling;
-                panel.classList.toggle('active');
-            });
-        });
-
-        // Sub-accordions (nested within main panels)
-        const subAccordions = document.querySelectorAll('.sg-sub-accordion');
-        subAccordions.forEach(subAccordion => {
-            subAccordion.addEventListener('click', function() {
-                this.classList.toggle('active');
-                const subPanel = this.nextElementSibling;
-                subPanel.classList.toggle('active');
-            });
-        });
-
-        // Inner accordions (third level - nested within sg-sub-panels)
-        const innerAccordions = document.querySelectorAll('.sg-inner-accordion');
-        innerAccordions.forEach(innerAccordion => {
-            innerAccordion.addEventListener('click', function() {
-                this.classList.toggle('active');
-                const innerPanel = this.nextElementSibling;
-                innerPanel.classList.toggle('active');
-            });
-        });
-
-        function expandAll() {
-            // Expand main sections
-            accordionSections.forEach(section => {
-                section.classList.add('active');
-                section.nextElementSibling.classList.add('active');
-            });
-            // Expand sg-sub-accordions
-            subAccordions.forEach(sub => {
-                sub.classList.add('active');
-                sub.nextElementSibling.classList.add('active');
-            });
-            // Expand inner accordions
-            innerAccordions.forEach(inner => {
-                inner.classList.add('active');
-                inner.nextElementSibling.classList.add('active');
-            });
-        }
-
-        function collapseAll() {
-            // Collapse main sections
-            accordionSections.forEach(section => {
-                section.classList.remove('active');
-                section.nextElementSibling.classList.remove('active');
-            });
-            // Collapse sg-sub-accordions
-            subAccordions.forEach(sub => {
-                sub.classList.remove('active');
-                sub.nextElementSibling.classList.remove('active');
-            });
-            // Collapse inner accordions
-            innerAccordions.forEach(inner => {
-                inner.classList.remove('active');
-                inner.nextElementSibling.classList.remove('active');
-            });
-        }
-        
-</script>
+    <!-- Bottom Navigation --></div></body></html>
