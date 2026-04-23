@@ -1,5 +1,7 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Genesis 6-11; Moses 8 - Study Guide</title></head><body><div data-pagefind-body><style>
+<style>
 
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Georgia, serif; line-height: 1.7; color: #374151; background-color: #f9fafb; }
         .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
 
         .site-header {
@@ -44,9 +46,9 @@
 
         .sg-panel {
             background-color: white; border-radius: 0 0 8px 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            display: none;
+            max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;
         }
-        .sg-panel.active { display: block; }
+        .sg-panel.active { max-height: none; overflow: visible; }
         .panel-content { padding: 30px; }
         .panel-content h2 { color: #8B7355; margin-bottom: 20px; font-size: 1.8em; }
         .panel-content h3 { color: #6B5344; margin-top: 25px; margin-bottom: 15px; font-size: 1.4em; }
@@ -171,14 +173,14 @@
             border-radius: 0 0 6px 6px;
             border: 1px solid #d4c4a8;
             border-top: none;
-            display: none;
-           
+            max-height: 0;
+            overflow: hidden;
             transition: max-height 0.3s ease-out;
             margin-bottom: 10px;
         }
 
         .sg-sub-panel.active {
-            display: block;
+            max-height: none;
             overflow: visible;
             transition: max-height 0.3s ease-in;
         }
@@ -209,62 +211,81 @@
         .sg-sub-panel-content blockquote p:last-child { margin-bottom: 0; }
         .sg-sub-panel-content strong { color: #6B5344; }
         .sg-sub-panel-content hr { border: none; border-top: 1px solid #e8e0d5; margin: 20px 0; }
-        /* Section headings (converted from inner accordions) */
-        .sg-section-heading {
-            margin: 1.2em 0 0.6em 0;
-            padding: 0.4em 0 0.4em 0.8em;
-            border-left: 3px solid #8B9D77;
-            color: #5a6b4f;
-            font-size: 1.05em;
+
+        /* Inner accordions (third level - for lengthy subsections) */
+        .sg-inner-accordion {
+            background-color: #faf8f5;
+            color: #6B5344;
+            cursor: pointer;
+            padding: 12px 36px 12px 16px;
+            width: 100%;
+            text-align: left;
+            border: 1px solid #e8e0d4;
+            border-radius: 5px;
+            font-size: 1em;
             font-weight: 600;
+            font-family: Georgia, serif;
+            margin-top: 8px;
+            position: relative;
+            transition: background-color 0.2s;
         }
 
+        .sg-inner-accordion:hover {
+            background-color: #f0e8dc;
+        }
+
+        .sg-inner-accordion::after {
+            content: '▼';
+            font-size: 0.7em;
+            color: #8B7355;
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s;
+        }
+
+        .sg-inner-accordion.active::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        /* Inner panels (third level) */
+        .sg-inner-panel {
+            background-color: #ffffff;
+            border-radius: 0 0 5px 5px;
+            border: 1px solid #e8e0d4;
+            border-top: none;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            margin-bottom: 8px;
+        }
+
+        .sg-inner-panel.active {
+            max-height: none;
+            overflow: visible;
+            transition: max-height 0.3s ease-in;
+        }
+
+        .sg-inner-panel-content {
+            padding: 15px 20px;
+        }
+
+        .sg-inner-panel-content h4 { color: #5a4a3a; margin-top: 12px; margin-bottom: 8px; font-size: 1.1em; }
+        .sg-inner-panel-content p { margin-bottom: 10px; }
+        .sg-inner-panel-content ul, .sg-inner-panel-content ol { margin-left: 20px; margin-bottom: 10px; }
+        .sg-inner-panel-content li { margin-bottom: 5px; }
 
         @media (max-width: 768px) {
             .header-section h1 { font-size: 1.8em; }
             .panel-content { padding: 20px; }
             .sg-sub-panel-content { padding: 15px 18px; }
-.nav-container { flex-direction: column; }
+            .sg-inner-panel-content { padding: 12px 15px; }
+            .nav-container { flex-direction: column; }
             .nav-link, .nav-disabled { width: 100%; text-align: center; }
         }
         
-
-        .sg-section-heading {
-            margin: 1.2em 0 0.6em 0;
-            padding: 0.4em 0 0.4em 0.8em;
-            border-left: 3px solid #8B9D77;
-            color: #5a6b4f;
-            font-size: 1.05em;
-            font-weight: 600;
-            font-family: Georgia, serif;
-        }
-        .sg-section-actions {
-            display: flex;
-            gap: 4px;
-            align-items: center;
-            margin-left: auto;
-            margin-right: 28px;
-        }
-        .sg-section-actions .sg-action-btn {
-            background: rgba(255,255,255,0.2);
-            border: 1px solid rgba(255,255,255,0.35);
-            color: white;
-            width: 28px;
-            height: 28px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 0.85em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.2s;
-            padding: 0;
-            line-height: 1;
-        }
-        .sg-section-actions .sg-action-btn:hover {
-            background: rgba(255,255,255,0.35);
-        }
-    </style>
+</style>
 
 <div class="container">
         <!-- Header Section -->
@@ -278,21 +299,22 @@
         <!-- Quick Links -->
         <div class="quick-links">
             <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/07?lang=eng" target="_blank" class="quick-link">CFM Manual</a>
+            <a href="index.html" class="quick-link">Study Guide Index</a>
         </div>
 
         <!-- Expand/Collapse Buttons -->
         <div class="button-container">
-            <button class="expand-button" onclick="expandAll()"><span class="btn-icon">&#x229E;</span> Expand All</button>
-            <button class="expand-button" onclick="collapseAll()"><span class="btn-icon">&#x229F;</span> Collapse All</button>
+            <button class="expand-button" onclick="expandAll()">Expand All</button>
+            <button class="expand-button" onclick="collapseAll()">Collapse All</button>
         </div>
 
         <!-- SECTION 1: WEEK OVERVIEW -->
-        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">1. Week Overview</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
-        <div class="sg-panel" style="display: none;">
+        <button class="sg-accordion-section">1. Week Overview</button>
+        <div class="sg-panel">
             <div class="panel-content">
-                <button class="sg-sub-accordion active"><span>Week Information</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
+                <button class="sg-sub-accordion"><span>Week Information</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <table class="info-table">
 <tr>
 <th>Element</th>
@@ -325,9 +347,9 @@
 </table>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Reading Summary</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
+<button class="sg-sub-accordion"><span>Reading Summary</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p>This week we encounter one of the most iconic narratives in all scripture—the story of Noah and the Flood. Far from being a simple children's story about animals on a boat, the biblical account is a carefully crafted theological narrative filled with temple symbolism, covenant themes, and profound insights about God's relationship with humanity. Genesis 6–11 also contains the genealogies connecting Noah to Abraham and the enigmatic Tower of Babel account.</p>
 <p><strong>Moses 8:1–21</strong> provides Restoration context unavailable in Genesis. We learn that Noah's birth fulfilled a covenant God made with Enoch (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=52" target="_blank">Moses 7:52</a>). Noah preached "the first principles and ordinances of the Gospel" and announced "the coming of Jesus Christ in the meridian of time" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/8?lang=eng&id=16,19,23-24" target="_blank">Moses 8:16, 19, 23–24</a>). The chapter also clarifies the mysterious "sons of God" passage from Genesis 6—identifying them not as fallen angels (as some traditions claim) but as Noah's righteous descendants who abandoned their covenants by intermarrying with the "daughters of men" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/8?lang=eng&id=13-15" target="_blank">Moses 8:13–15</a>).</p>
 <p><strong>Genesis 6:5–22</strong> introduces the Flood narrative. God sees that "every imagination of the thoughts of [man's] heart was only evil continually" (<a href="https://www.blueletterbible.org/kjv/gen/6/5/s_6005" target="_blank">v. 5</a>) and "it repented the Lord that he had made man" (<a href="https://www.blueletterbible.org/kjv/gen/6/6/s_6006" target="_blank">v. 6</a>)—language that echoes the weeping God of Moses 7. But "Noah found grace in the eyes of the Lord" (<a href="https://www.blueletterbible.org/kjv/gen/6/8/s_6008" target="_blank">v. 8</a>)—the first use of the word "grace" (<em>chen</em>) in the Bible. God reveals the ark's design: a rectangular structure with three decks whose dimensions mirror the later Tabernacle.</p>
@@ -339,10 +361,11 @@
 <p><strong>Genesis 11:10–32</strong> provides the genealogy from Shem to Abram (Abraham), bridging the primeval history to the patriarchal narratives that begin next week.</p>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Central Themes</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">Theme 1: Noah's Ark as Floating Temple</h4>
+<button class="sg-sub-accordion"><span>Central Themes</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Theme 1: Noah's Ark as Floating Temple</span></button>
+<div class="sg-inner-panel">
 <p>Perhaps the most significant insight from modern scholarship is the recognition that Noah's Ark was designed as a temple. Apart from the Tabernacle of Moses and the Temple of Solomon, Noah's Ark is the only man-made structure in the Bible whose design was directly revealed by God.</p>
 <p>The parallels are remarkable:</p>
 <ul>
@@ -353,7 +376,9 @@
 <li><strong>Matching ratios:</strong> The width-to-height ratio of both arks is 3:5</li>
 </ul>
 <p>The Ark's rectangular, un-boat-like shape reinforces its temple nature. It had no oars or rudder—its movement depended entirely on God's will, not human navigation. Within this floating sanctuary was preserved a "mini replica of Creation," the nucleus of a new world.</p>
-<h4 class="sg-section-heading">Theme 2: The Flood as De-Creation and Re-Creation</h4>
+</div>
+<button class="sg-inner-accordion"><span>Theme 2: The Flood as De-Creation and Re-Creation</span></button>
+<div class="sg-inner-panel">
 <p>The Flood narrative deliberately mirrors the Creation account in Genesis 1. Consider the parallels:</p>
 <table class="info-table">
 <tr>
@@ -382,7 +407,9 @@
 </tr>
 </table>
 <p>The Flood is not mere destruction but <em>reversal</em>—a return to the watery chaos of Genesis 1:2—followed by a new creation. The theological message: God can restart, cleanse, and renew His creation while preserving a righteous remnant.</p>
-<h4 class="sg-section-heading">Theme 3: Noah as Prophet, Priest, and Type of Adam</h4>
+</div>
+<button class="sg-inner-accordion"><span>Theme 3: Noah as Prophet, Priest, and Type of Adam</span></button>
+<div class="sg-inner-panel">
 <p>Modern revelation amplifies what we know about Noah from the Bible:</p>
 <ul>
 <li>His birth fulfilled God's covenant with Enoch (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=52" target="_blank">Moses 7:52</a>)</li>
@@ -394,7 +421,9 @@
 </ul>
 <p>Joseph Smith taught that Noah stands second only to Adam in priesthood authority: "The Priesthood was first given to Adam... Then to Noah, who is Gabriel: called of God to this office, and was the father of all living in this day, and to him was given the dominion."</p>
 <p>Like Adam, Noah is portrayed as a type of God Himself. He forms and fills a microcosmic world (the Ark) in imitation of the Creator God. He plants a garden after the Flood, echoing Eden. His emergence onto Mount Ararat parallels the emergence of dry land at Creation.</p>
-<h4 class="sg-section-heading">Theme 4: The Tower of Babel as Anti-Temple</h4>
+</div>
+<button class="sg-inner-accordion"><span>Theme 4: The Tower of Babel as Anti-Temple</span></button>
+<div class="sg-inner-panel">
 <p>The Tower of Babel story (Genesis 11:1–9) presents a deliberate contrast with both Noah's Ark and the later Tabernacle. While Noah built according to divine revelation, the Babel builders constructed according to human ambition.</p>
 <p>Key contrasts:</p>
 <ul>
@@ -405,15 +434,18 @@
 </ul>
 <p>The tower was almost certainly a Mesopotamian <em>ziggurat</em>—a stepped pyramid with a temple at its peak where gods were believed to descend. The biblical narrative presents this as a counterfeit of true temple worship: an attempt to reach heaven through collective human effort rather than through covenant relationship with God.</p>
 <p>Hugh Nibley connected the "confounding" of languages with the mingling of covenant people with unbelievers—exactly what Moses 8 describes happening in Noah's day with the "sons of God" and "daughters of men."</p>
-<h4 class="sg-section-heading">Theme 5: Grace Before the Law</h4>
+</div>
+<button class="sg-inner-accordion"><span>Theme 5: Grace Before the Law</span></button>
+<div class="sg-inner-panel">
 <p><a href="https://www.blueletterbible.org/kjv/gen/6/8/s_6008" target="_blank">Genesis 6:8</a> contains the first occurrence of the word "grace" (<a href="https://www.blueletterbible.org/lexicon/h2580/kjv/wlc/0-1/" target="_blank"><em>chen</em></a>, חֵן) in the Bible: "Noah found grace in the eyes of the Lord." This is significant theologically—grace appears in the biblical narrative long before the Mosaic law.</p>
 <p>The Hebrew <em>chen</em> conveys "favor" or "gracious kindness"—an unearned gift from a superior to an inferior. Noah did not <em>earn</em> God's favor through perfect righteousness alone; rather, God graciously extended favor to Noah, enabling his righteousness.</p>
 <p>This theme continues throughout the Flood narrative. God <em>remembers</em> Noah (<a href="https://www.blueletterbible.org/kjv/gen/8/1/s_8001" target="_blank">Genesis 8:1</a>)—not because He had forgotten, but because <em>zakar</em> (remember) implies faithful action on behalf of covenant partners. God's grace initiates, sustains, and completes Noah's deliverance.</p>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Key Figures</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
+</div>
+<button class="sg-sub-accordion"><span>Key Figures</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <table class="info-table">
 <tr>
 <th>Person</th>
@@ -453,22 +485,25 @@
 </table>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Timeline Placement</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
+<button class="sg-sub-accordion"><span>Timeline Placement</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p><strong>Historical Period:</strong> Pre-Flood and Early Post-Flood World</p>
 <p><strong>Approximate Dates:</strong> Traditional chronology places the Flood approximately 1,656 years after Creation (using Masoretic text). The Babel account occurs sometime after this, before the call of Abraham.</p>
 <p><strong>Biblical Timeline Position:</strong> Moses 8 and Genesis 6–9 conclude the antediluvian era begun in Genesis 4–5 / Moses 5–7. Genesis 10–11 bridges to the patriarchal narratives beginning with Abraham in Genesis 12.</p>
-<h4 class="sg-section-heading">Relationship to Previous Weeks</h4>
+<button class="sg-inner-accordion"><span>Relationship to Previous Weeks</span></button>
+<div class="sg-inner-panel">
 <p><strong>Week 05 (Genesis 5; Moses 6):</strong> Introduced Enoch's ministry and the fundamental doctrines of the Fall, repentance, and baptism. Also established the genealogy from Adam to Noah.</p>
 <p><strong>Week 06 (Moses 7):</strong> Revealed God's covenant with Enoch promising Noah's mission (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=52" target="_blank">Moses 7:52</a>). Also showed the weeping God—the same divine grief appears in Genesis 6:6.</p>
 <p><strong>Week 07 (Genesis 6–11; Moses 8):</strong> Fulfills the prophecies about Noah, recounts the Flood, and bridges to Abraham.</p>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Books Featured This Week</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">Book of Moses (Chapter 8)</h4>
+</div>
+<button class="sg-sub-accordion"><span>Books Featured This Week</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Book of Moses (Chapter 8)</span></button>
+<div class="sg-inner-panel">
 <ul>
 <li><strong>Author:</strong> Moses, restored through Joseph Smith</li>
 <li><strong>Source Date:</strong> Original to Moses (~1446 BC); restored December 1830</li>
@@ -478,7 +513,9 @@
 <li><strong>Key Themes:</strong> "Sons of God" and "daughters of men," gospel preaching, covenant succession</li>
 <li><strong>Literary Genre:</strong> Prophetic narrative</li>
 </ul>
-<h4 class="sg-section-heading">Book of Genesis (Chapters 6–11)</h4>
+</div>
+<button class="sg-inner-accordion"><span>Book of Genesis (Chapters 6–11)</span></button>
+<div class="sg-inner-panel">
 <ul>
 <li><strong>Author:</strong> Traditionally Moses; compiled from earlier sources</li>
 <li><strong>Source Date:</strong> Written form ~15th–5th century BC</li>
@@ -490,32 +527,39 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Connection to Restoration Scripture</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">Book of Mormon Connections</h4>
+</div>
+<button class="sg-sub-accordion"><span>Connection to Restoration Scripture</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Book of Mormon Connections</span></button>
+<div class="sg-inner-panel">
 <ul>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/1?lang=eng&id=33-43" target="_blank">Ether 1:33–43</a>:</strong> The Jaredites depart from Babel when languages are confounded</li>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/6?lang=eng&id=1-12" target="_blank">Ether 6:1–12</a>:</strong> Jaredite barges echo Noah's Ark—sealed vessels crossing deep waters with shining stones for light</li>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/8?lang=eng&id=26-27" target="_blank">1 Nephi 8:26–27</a>:</strong> The "great and spacious building" parallels Babel—pride, worldly wisdom, no foundation</li>
 </ul>
-<h4 class="sg-section-heading">Doctrine and Covenants Connections</h4>
+</div>
+<button class="sg-inner-accordion"><span>Doctrine and Covenants Connections</span></button>
+<div class="sg-inner-panel">
 <ul>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/27?lang=eng&id=5-7" target="_blank">D&C 27:5–7</a>:</strong> Noah (Gabriel) will return at the Second Coming</li>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84?lang=eng&id=14-15" target="_blank">D&C 84:14–15</a>:</strong> Priesthood descended through Noah</li>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107?lang=eng&id=52" target="_blank">D&C 107:52</a>:</strong> Noah ordained at age ten</li>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/128?lang=eng&id=21" target="_blank">D&C 128:21</a>:</strong> Noah visited Joseph Smith as Gabriel</li>
 </ul>
-<h4 class="sg-section-heading">Pearl of Great Price Connections</h4>
+</div>
+<button class="sg-inner-accordion"><span>Pearl of Great Price Connections</span></button>
+<div class="sg-inner-panel">
 <ul>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=42-52" target="_blank">Moses 7:42–52</a>:</strong> Prophecy of the Flood and covenant with Enoch regarding Noah</li>
 <li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/8?lang=eng&id=1-30" target="_blank">Moses 8:1–30</a>:</strong> Full context of Noah's ministry and the wickedness that preceded the Flood</li>
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>This Week's Key Doctrines</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
+</div>
+<button class="sg-sub-accordion"><span>This Week's Key Doctrines</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <ol>
 <li><strong>The Ark as Temple:</strong> Noah's Ark was designed as a floating temple, preserving covenant Israel through the waters of judgment (<a href="https://www.blueletterbible.org/kjv/gen/6/14-16/s_6014" target="_blank">Genesis 6:14–16</a>).</li>
 <li><strong>Grace Before Law:</strong> "Noah found grace in the eyes of the Lord" (<a href="https://www.blueletterbible.org/kjv/gen/6/8/s_6008" target="_blank">Genesis 6:8</a>)—the first biblical use of "grace."</li>
@@ -527,9 +571,9 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Temple Connections</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
+<button class="sg-sub-accordion"><span>Temple Connections</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p>The temple themes in this week's reading are pervasive:</p>
 <ul>
 <li><strong>The Ark as Temple:</strong> Three-level structure matching the Tabernacle, built by divine revelation, serving as the locus of God's preserving presence</li>
@@ -541,9 +585,9 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>CFM Manual Emphasis</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
+<button class="sg-sub-accordion"><span>CFM Manual Emphasis</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p><strong>Manual Focus:</strong> Understanding the Flood as a story of judgment, mercy, and new beginnings; seeing the rainbow as a sign of God's covenants.</p>
 <p><strong>Key Questions from Manual:</strong></p>
 <ul>
@@ -560,9 +604,9 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Suggested Reading Approach</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
+<button class="sg-sub-accordion"><span>Suggested Reading Approach</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p><strong>If You Have Limited Time (Essential Reading):</strong></p>
 <ul>
 <li><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/8?lang=eng&id=13-30" target="_blank">Moses 8:13–30</a> — Restoration context for Noah's ministry</li>
@@ -586,9 +630,9 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>For Further Study: Interpreter Foundation Resources</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
+<button class="sg-sub-accordion"><span>For Further Study: Interpreter Foundation Resources</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p>The following scholarly essays provide deep background on this week's readings:</p>
 <table class="info-table">
 <tr>
@@ -615,9 +659,9 @@
 <p><em>Sources: Jeffrey M. Bradshaw, <a href="https://interpreterfoundation.org/book-of-moses-essays/" target="_blank">Book of Moses Essay Series</a> (Interpreter Foundation)</em></p>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Study Guide Files This Week</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
+<button class="sg-sub-accordion"><span>Study Guide Files This Week</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <table class="info-table">
 <tr>
 <th>File</th>
@@ -655,12 +699,12 @@
         </div>
 
         <!-- SECTION 2: HISTORICAL & CULTURAL CONTEXT -->
-        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">2. Historical & Cultural Context</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
-        <div class="sg-panel" style="display: none;">
+        <button class="sg-accordion-section">2. Historical & Cultural Context</button>
+        <div class="sg-panel">
             <div class="panel-content">
-                <button class="sg-sub-accordion active"><span>Genesis 6–11; Moses 8 | February 9–15, 2026</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
+                <button class="sg-sub-accordion"><span>Genesis 6–11; Moses 8 | February 9–15, 2026</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p><strong>Sections in This File:</strong></p>
 <ul>
 <li><a href="#historical-setting" target="_blank">Historical Setting</a> — Timeline and context</li>
@@ -673,10 +717,11 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Historical Setting</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">Timeline and Context</h4>
+<button class="sg-sub-accordion"><span>Historical Setting</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Timeline and Context</span></button>
+<div class="sg-inner-panel">
 <table class="info-table">
 <tr>
 <th>Element</th>
@@ -703,7 +748,9 @@
 <td>Mesopotamia ("between the rivers" Tigris and Euphrates)</td>
 </tr>
 </table>
-<h4 class="sg-section-heading">The Antediluvian World</h4>
+</div>
+<button class="sg-inner-accordion"><span>The Antediluvian World</span></button>
+<div class="sg-inner-panel">
 <p>The world before the Flood is described in both Genesis and Moses as characterized by escalating wickedness:</p>
 <p><strong>Moses 8:20–22</strong> reveals that Noah "called upon the children of men that they should repent; but they hearkened not unto his words." The wicked claimed to be "sons of God" themselves, boasting of their marriages and "mighty men... of great renown." This corruption extended to a point where "every imagination of the thoughts of [man's] heart was only evil continually" (<a href="https://www.blueletterbible.org/kjv/gen/6/5/s_6005" target="_blank">Genesis 6:5</a>).</p>
 <p><strong>Restoration Context:</strong> Moses 8 clarifies the enigmatic "sons of God" passage from Genesis 6:1–4. Rather than fallen angels (as many ancient traditions claimed), the Book of Moses identifies these as righteous descendants of Seth who abandoned their covenants:</p>
@@ -711,10 +758,12 @@
 <p>The term "sons of God" (<em>bene elohim</em>) refers to covenant-keeping people, while "daughters of men" refers to those outside the covenant. The sin was intermarriage that led to apostasy—a pattern that recurs throughout scripture.</p>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Ancient Flood Narratives</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">Mesopotamian Parallels</h4>
+</div>
+<button class="sg-sub-accordion"><span>Ancient Flood Narratives</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Mesopotamian Parallels</span></button>
+<div class="sg-inner-panel">
 <p>The biblical Flood account exists within a broader ancient Near Eastern literary context. Several Mesopotamian texts describe a catastrophic flood:</p>
 <table class="info-table">
 <tr>
@@ -742,7 +791,9 @@
 <td>Most detailed account; cube-shaped boat; seven-day flood; bird test</td>
 </tr>
 </table>
-<h4 class="sg-section-heading">Primary Source Links</h4>
+</div>
+<button class="sg-inner-accordion"><span>Primary Source Links</span></button>
+<div class="sg-inner-panel">
 <p><strong>Gilgamesh Epic (Tablet XI - The Flood):</strong></p>
 <ul>
 <li><a href="https://www.britishmuseum.org/collection/object/W_K-3375" target="_blank">British Museum: The Flood Tablet (K.3375)</a> — The actual cuneiform tablet discovered at Nineveh</li>
@@ -773,7 +824,9 @@
 <li><a href="https://archive.org/details/ancientneareaste0000jbpr" target="_blank">Internet Archive: Ancient Near Eastern Texts (ANET)</a> — Pritchard's classic scholarly collection</li>
 <li><a href="https://www.jstor.org/stable/j.ctt19wccw4" target="_blank">JSTOR: ANET with Supplement</a> — Academic access</li>
 </ul>
-<h4 class="sg-section-heading">Comparative Elements</h4>
+</div>
+<button class="sg-inner-accordion"><span>Comparative Elements</span></button>
+<div class="sg-inner-panel">
 <p>Scholars have long noted both similarities and significant differences between these accounts and Genesis:</p>
 <p><strong>Similarities:</strong></p>
 <ul>
@@ -824,18 +877,24 @@
 <td>Judgment tied to human wickedness</td>
 </tr>
 </table>
-<h4 class="sg-section-heading">The Boat Shape Question</h4>
+</div>
+<button class="sg-inner-accordion"><span>The Boat Shape Question</span></button>
+<div class="sg-inner-panel">
 <p>One of the most striking differences involves the vessel's shape. In the Gilgamesh Epic, Utnapishtim's boat is a cube—equal in all dimensions. A recently translated Old Babylonian tablet describes a round, coracle-shaped vessel. But Genesis describes a rectangular structure with specific dimensions (300 × 50 × 30 cubits) that would be highly unstable as a boat but matches the proportions and layout of the later Tabernacle.</p>
 <p>This difference is theologically significant: the biblical author was not simply borrowing from Mesopotamian sources but crafting a narrative that highlighted temple themes unavailable in the pagan versions.</p>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>The Ark as Temple</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">Biblical Scholars' Consensus</h4>
+</div>
+<button class="sg-sub-accordion"><span>The Ark as Temple</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Biblical Scholars' Consensus</span></button>
+<div class="sg-inner-panel">
 <p>Modern scholarship increasingly recognizes that Noah's Ark was designed as a floating temple. Jeffrey M. Bradshaw notes: "There is a growing consensus among Bible scholars that, like the Tabernacle, Noah's Ark 'was designed as a temple.'"</p>
 <p>This insight transforms our reading of the Flood narrative from a survival story into a temple narrative—a preservation of sacred space through judgment waters.</p>
-<h4 class="sg-section-heading">Structural Parallels</h4>
+</div>
+<button class="sg-inner-accordion"><span>Structural Parallels</span></button>
+<div class="sg-inner-panel">
 <p><strong>Three-Level Structure:</strong> The Ark's three decks correspond to:</p>
 <ul>
 <li>The threefold divisions of the Tabernacle (courtyard, holy place, most holy place)</li>
@@ -854,7 +913,9 @@
 <li>The Septuagint uses the same Greek term, <em>kibotos</em> (κιβωτός), for both Noah's Ark and the Ark of the Covenant</li>
 <li>The word <em>tevah</em> appears in only one other place in the Bible—for the basket holding baby Moses (<a href="https://www.blueletterbible.org/kjv/exo/2/3/s_52003" target="_blank">Exodus 2:3</a>)</li>
 </ul>
-<h4 class="sg-section-heading">Materials and Temple Allusions</h4>
+</div>
+<button class="sg-inner-accordion"><span>Materials and Temple Allusions</span></button>
+<div class="sg-inner-panel">
 <p><strong>Genesis 6:14</strong> reads: "Make thee an ark of gopher wood; rooms shalt thou make in the ark, and shalt pitch it within and without with pitch."</p>
 <p>Each material carries temple connotations:</p>
 <p><strong>Gopher Wood (גֹּפֶר):</strong></p>
@@ -877,7 +938,9 @@
 <li>In Mesopotamian flood stories, the flood hero receives divine warning in a "reed-hut temple"</li>
 <li>The god Enki instructs Ziusudra to tear down the reed-hut temple and use its materials for the boat—connecting temple and vessel</li>
 </ul>
-<h4 class="sg-section-heading">The <em>Tsohar</em>: Light in the Ark</h4>
+</div>
+<button class="sg-inner-accordion"><span>The <em>Tsohar</em>: Light in the Ark</span></button>
+<div class="sg-inner-panel">
 <p><strong>Genesis 6:16</strong> mentions a <em>tsohar</em> (צֹהַר)—often translated "window" but of uncertain meaning. Jewish tradition interprets this as a <strong>shining stone</strong>:</p>
 <p>> "One small part of the precious light of Creation—a light that appeared before God created the sun, moon, and stars and that made it possible 'to see from one end of the world to the other'—was preserved in a stone... given to Adam 'as a token of the world [Adam and Eve] had left behind.'" (Jewish tradition as summarized by Howard Schwartz)</p>
 <p>This tradition claims the stone passed from Adam through the patriarchs to Noah, who hung it in the Ark to provide light. Readers of the Book of Mormon will immediately recognize the parallel to the brother of Jared's sixteen shining stones (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/3?lang=eng&id=1-6" target="_blank">Ether 3:1–6</a>).</p>
@@ -885,11 +948,13 @@
 <p><em>Source: Jeffrey M. Bradshaw, "<a href="https://interpreterfoundation.org/book-of-moses-essays-076" target="_blank">Was Noah's Ark Designed as a Floating Temple?</a>" (Interpreter Foundation, Essay #76)</em></p>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Evidence of Antiquity</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
+</div>
+<button class="sg-sub-accordion"><span>Evidence of Antiquity</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p>The following parallels demonstrate how the Book of Moses and Joseph Smith's revelations about Noah preserve authentic ancient details unavailable to the Prophet through any 19th-century source.</p>
-<h4 class="sg-section-heading">Evidence of Antiquity: The Ark as Floating Temple</h4>
+<button class="sg-inner-accordion"><span>Evidence of Antiquity: The Ark as Floating Temple</span></button>
+<div class="sg-inner-panel">
 <p><strong>Details Unknown to Joseph Smith:</strong></p>
 <table class="info-table">
 <tr>
@@ -920,7 +985,9 @@
 </table>
 <p><strong>Why This Matters:</strong> The temple symbolism in Noah's Ark was not recognized by scholars until the 20th century. Joseph Smith's inspired translation preserved a narrative framework that emphasizes these temple themes—themes that would later be confirmed by scholarship.</p>
 <p><em>Source: Jeffrey M. Bradshaw, "<a href="https://interpreterfoundation.org/book-of-moses-essays-076" target="_blank">Was Noah's Ark Designed as a Floating Temple?</a>" (Interpreter Foundation, Essay #76)</em></p>
-<h4 class="sg-section-heading">Evidence of Antiquity: The Shining Stone (<em>Tsohar</em>)</h4>
+</div>
+<button class="sg-inner-accordion"><span>Evidence of Antiquity: The Shining Stone (<em>Tsohar</em>)</span></button>
+<div class="sg-inner-panel">
 <p>One of the most remarkable parallels involves the source of light within the Ark.</p>
 <p><strong>The Biblical Question:</strong> How did Noah see inside the sealed Ark during the 40 days of darkness?</p>
 <p><strong>Jewish Tradition:</strong> The <em>tsohar</em> was a luminous stone—part of the primordial light of Creation preserved and passed through the patriarchs.</p>
@@ -955,7 +1022,9 @@
 </tr>
 </table>
 <p><em>Source: Jeffrey M. Bradshaw, "<a href="https://interpreterfoundation.org/book-of-moses-essays-077" target="_blank">Was Noah Drunk or in a Vision?</a>" (Interpreter Foundation, Essay #77)</em></p>
-<h4 class="sg-section-heading">Evidence of Antiquity: Noah in Vision, Not Drunk</h4>
+</div>
+<button class="sg-inner-accordion"><span>Evidence of Antiquity: Noah in Vision, Not Drunk</span></button>
+<div class="sg-inner-panel">
 <p>The enigmatic incident in Genesis 9:20–27 has puzzled readers for millennia. Was Noah, the righteous preacher who just saved humanity, really drunk and exposed in his tent?</p>
 <p><strong>The Traditional Reading:</strong> Noah planted a vineyard, became drunk, was found naked by Ham, and upon awakening cursed Canaan.</p>
 <p><strong>Alternative Ancient Reading:</strong> A secondhand statement attributed to Joseph Smith asserts that Noah "was not drunk, but in a vision."</p>
@@ -994,7 +1063,9 @@
 </table>
 <p><strong>Why This Matters:</strong> The alternative reading—supported by ancient Jewish sources unavailable to Joseph Smith—transforms a troubling passage into a temple narrative consistent with the broader Flood account. The Prophet's insight aligns with ancient traditions he could not have known.</p>
 <p><em>Source: Jeffrey M. Bradshaw, "<a href="https://interpreterfoundation.org/book-of-moses-essays-077" target="_blank">Was Noah Drunk or in a Vision?</a>" (Interpreter Foundation, Essay #77)</em></p>
-<h4 class="sg-section-heading">Evidence of Antiquity: The "Sons of God" Clarification</h4>
+</div>
+<button class="sg-inner-accordion"><span>Evidence of Antiquity: The "Sons of God" Clarification</span></button>
+<div class="sg-inner-panel">
 <p>Genesis 6:1–4 is one of the most debated passages in the Bible. Who are the "sons of God" who married the "daughters of men"?</p>
 <p><strong>Ancient Interpretations:</strong></p>
 <ul>
@@ -1011,10 +1082,12 @@
 <p><em>Source: Jeffrey M. Bradshaw, "<a href="https://interpreterfoundation.org/book-of-moses-essays-075" target="_blank">The Sons of God and the Sons of Men</a>" (Interpreter Foundation, Essay #75)</em></p>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>The Tower of Babel in Ancient Context</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">Mesopotamian Ziggurats</h4>
+</div>
+<button class="sg-sub-accordion"><span>The Tower of Babel in Ancient Context</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Mesopotamian Ziggurats</span></button>
+<div class="sg-inner-panel">
 <p>The Tower of Babel was almost certainly a Mesopotamian ziggurat—a stepped pyramid with a temple at its peak. Archaeological evidence reveals:</p>
 <ul>
 <li><strong>Etemenanki</strong> ("Foundation of Heaven and Earth"): A massive ziggurat in Babylon, rebuilt multiple times, possibly the biblical Tower</li>
@@ -1022,7 +1095,9 @@
 <li><strong>Purpose:</strong> A cosmic mountain where gods descended to receive worship</li>
 <li><strong>Height:</strong> Nebuchadnezzar's inscription describes towers reaching "to heaven"</li>
 </ul>
-<h4 class="sg-section-heading">Primary Source Links for Tower of Babel / Ziggurats</h4>
+</div>
+<button class="sg-inner-accordion"><span>Primary Source Links for Tower of Babel / Ziggurats</span></button>
+<div class="sg-inner-panel">
 <p><strong>Archaeological & Historical:</strong></p>
 <ul>
 <li><a href="https://www.livius.org/articles/place/babylon/etemenanki/" target="_blank">Livius: Etemenanki (the "Tower of Babel")</a> — Scholarly article with archaeological details and inscriptions</li>
@@ -1033,16 +1108,22 @@
 <ul>
 <li><a href="https://www.accordancebible.com/Ziggurat-Of-Babylon/" target="_blank">Accordance Bible: The Ziggurat of Babylon (Lighting the Lamp #118)</a> — Dr. J discusses the Tower of Babel in its Ancient Near Eastern context</li>
 </ul>
-<h4 class="sg-section-heading">Ancient Records of Construction</h4>
+</div>
+<button class="sg-inner-accordion"><span>Ancient Records of Construction</span></button>
+<div class="sg-inner-panel">
 <p>An inscription from Nebuchadnezzar II describes mobilizing workers from across his empire:</p>
 <p>> "I mobilized [all] countries everywhere, [each and] every ruler [who] had been raised to prominence over all the people of the world... from the upper sea [to the] lower [sea,] the [distant nations, the teeming people of] the world..."</p>
 <p>This matches the Genesis imagery of "the whole earth" gathering to build—and hints at the "confounding" of languages among workers from diverse regions.</p>
-<h4 class="sg-section-heading">The Confounding of Languages</h4>
+</div>
+<button class="sg-inner-accordion"><span>The Confounding of Languages</span></button>
+<div class="sg-inner-panel">
 <p>The Hebrew word for "confound" (<em>balal</em>, בָּלַל) means "to mix, mingle, confuse." This creates wordplay with "Babel" (<em>bavel</em>, בָּבֶל).</p>
 <p>Hugh Nibley argued that the "confusion" of tongues was connected to the mingling of covenant people with unbelievers—exactly what Moses 8 describes happening before the Flood. The Book of Ether confirms this reading:</p>
 <p>> "Cry unto the Lord, that he will not confound us that we may not understand our words." (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/1?lang=eng&id=34" target="_blank">Ether 1:34</a>)</p>
 <p>The Jaredites' language was preserved because they remained separate from the confusion/mingling at Babel.</p>
-<h4 class="sg-section-heading">Babel as Anti-Temple</h4>
+</div>
+<button class="sg-inner-accordion"><span>Babel as Anti-Temple</span></button>
+<div class="sg-inner-panel">
 <p>The Tower represents a counterfeit temple:</p>
 <table class="info-table">
 <tr>
@@ -1073,10 +1154,12 @@
 <p><em>Source: Jeffrey M. Bradshaw, "<a href="https://interpreterfoundation.org/knowhy-otl06c-what-was-all-the-confusion-about-at-the-tower-of-babel" target="_blank">What Was All the Confusion About at the Tower of Babel?</a>" (Interpreter Foundation, KnoWhy OTL06C)</em></p>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Jewish Interpretive Traditions</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">Noah in Rabbinic Literature</h4>
+</div>
+<button class="sg-sub-accordion"><span>Jewish Interpretive Traditions</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Noah in Rabbinic Literature</span></button>
+<div class="sg-inner-panel">
 <p><strong>Noah's Righteousness:</strong> The Talmud debates whether "righteous in his generations" (<a href="https://www.blueletterbible.org/kjv/gen/6/9/s_6009" target="_blank">Genesis 6:9</a>) is praise or faint praise:</p>
 <ul>
 <li><strong>Rabbi Yochanan:</strong> "In his generations, but not in other generations" (he was only righteous by comparison to a wicked age)</li>
@@ -1090,7 +1173,9 @@
 <li>The dove, a clean bird, represents peace/rest (hence the olive branch)</li>
 <li>The dove's three journeys parallel the three divisions of the Tabernacle</li>
 </ul>
-<h4 class="sg-section-heading">Ham's Sin</h4>
+</div>
+<button class="sg-inner-accordion"><span>Ham's Sin</span></button>
+<div class="sg-inner-panel">
 <p>Rabbinic sources debate what Ham actually did:</p>
 <ul>
 <li><strong>Literal reading:</strong> He saw his father's nakedness</li>
@@ -1100,16 +1185,22 @@
 <p>The latter interpretation aligns with the vision reading supported by Joseph Smith's statement.</p>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Latter-day Prophetic Commentary</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">Joseph Smith on Noah</h4>
+</div>
+<button class="sg-sub-accordion"><span>Latter-day Prophetic Commentary</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Joseph Smith on Noah</span></button>
+<div class="sg-inner-panel">
 <p><strong>Noah's Authority:</strong> > "The Priesthood was first given to Adam... Then to Noah, who is Gabriel: called of God to this office, and was the father of all living in this day, and to him was given the dominion. These men held keys first on earth, and then in heaven." (TPJS, 157)</p>
 <p><strong>Noah as Gabriel:</strong> Modern revelation identifies Noah as the angel Gabriel, who announced the births of John the Baptist and Jesus Christ (<a href="https://www.blueletterbible.org/kjv/luk/1/19/s_974019" target="_blank">Luke 1:19, 26</a>). This elevates Noah to second place among all prophets, subordinate only to Adam/Michael.</p>
 <p><strong>Noah's Vision:</strong> According to a secondhand account, Joseph Smith taught that Noah in Genesis 9 "was not drunk, but in a vision"—a reading confirmed by ancient Jewish sources unavailable in 1830.</p>
-<h4 class="sg-section-heading">Brigham Young on the Flood</h4>
+</div>
+<button class="sg-inner-accordion"><span>Brigham Young on the Flood</span></button>
+<div class="sg-inner-panel">
 <p>President Young taught that the Flood was literal but its effects may have been geographically limited: > "Whether the water covered the whole earth is a question we do not know about... We do know that in the days of Noah, the Lord destroyed that wicked people."</p>
-<h4 class="sg-section-heading">Modern Prophetic Emphasis</h4>
+</div>
+<button class="sg-inner-accordion"><span>Modern Prophetic Emphasis</span></button>
+<div class="sg-inner-panel">
 <p>Recent Church curriculum emphasizes:</p>
 <ul>
 <li>Noah as "preacher of righteousness" (Moses 8; 2 Peter 2:5)</li>
@@ -1119,9 +1210,10 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>For Further Study: Interpreter Foundation Resources</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
+</div>
+<button class="sg-sub-accordion"><span>For Further Study: Interpreter Foundation Resources</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <table class="info-table">
 <tr>
 <th>Essay #</th>
@@ -1157,12 +1249,12 @@
         </div>
 
         <!-- SECTION 3: KEY PASSAGES STUDY -->
-        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">3. Key Passages Study</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
-        <div class="sg-panel" style="display: none;">
+        <button class="sg-accordion-section">3. Key Passages Study</button>
+        <div class="sg-panel">
             <div class="panel-content">
-                <button class="sg-sub-accordion active"><span>Genesis 6–11; Moses 8 | February 9–15, 2026</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
+                <button class="sg-sub-accordion"><span>Genesis 6–11; Moses 8 | February 9–15, 2026</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p><strong>Key Passages in This File:</strong></p>
 <ul>
 <li><a href="#passage-1-noah-found-grace" target="_blank">Passage 1: Noah Found Grace</a> — Genesis 6:8; Moses 8:27</li>
@@ -1173,15 +1265,18 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Passage 1: Noah Found Grace</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">Complete Scripture Text</h4>
+<button class="sg-sub-accordion"><span>Passage 1: Noah Found Grace</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Complete Scripture Text</span></button>
+<div class="sg-inner-panel">
 <p><strong><a href="https://www.blueletterbible.org/kjv/gen/6/8/s_6008" target="_blank">Genesis 6:8</a></strong></p>
 <p>> "But Noah found grace in the eyes of the Lord."</p>
 <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/8?lang=eng&id=27" target="_blank">Moses 8:27</a></strong></p>
 <p>> "And thus Noah found grace in the eyes of the Lord; for Noah was a just man, and perfect in his generation; and he walked with God, as did also his three sons, Shem, Ham, and Japheth."</p>
-<h4 class="sg-section-heading">Literary Structure</h4>
+</div>
+<button class="sg-inner-accordion"><span>Literary Structure</span></button>
+<div class="sg-inner-panel">
 <p>This verse serves as a <strong>pivot point</strong> in the primeval narrative:</p>
 <ul>
 <li><strong>Before (Genesis 6:1–7):</strong> The escalating wickedness of humanity leading to God's grief</li>
@@ -1192,7 +1287,9 @@
 <p><strong>Chiastic Pattern in Genesis 6:5–8:</strong></p>
 <p>``` A  The Lord saw wickedness was great (v. 5) B  It grieved Him in His heart (v. 6) C  I will destroy man (v. 7a) B' It repented the Lord (v. 7b) A' But Noah found grace (v. 8) ```</p>
 <p>The center (C) is judgment; the frame moves from grief to grace.</p>
-<h4 class="sg-section-heading">Hebrew Insights</h4>
+</div>
+<button class="sg-inner-accordion"><span>Hebrew Insights</span></button>
+<div class="sg-inner-panel">
 <p><strong>חֵן (chen) — "Grace"</strong></p>
 <ul>
 <li><a href="https://www.blueletterbible.org/lexicon/h2580/kjv/wlc/0-1/" target="_blank">Strong's H2580</a></li>
@@ -1219,7 +1316,9 @@
 <li>To find grace "in the eyes of" someone means to gain their approval and attention</li>
 <li>This phrase appears 36 times in the Hebrew Bible</li>
 </ul>
-<h4 class="sg-section-heading">Doctrinal Analysis</h4>
+</div>
+<button class="sg-inner-accordion"><span>Doctrinal Analysis</span></button>
+<div class="sg-inner-panel">
 <p><strong>Grace Before Law:</strong> Genesis 6:8 establishes that grace precedes and enables human righteousness. This is significant:</p>
 <ul>
 <li>Grace appears in scripture before the Mosaic law</li>
@@ -1240,7 +1339,9 @@
 <li><strong>Grace enables obedience</strong> — Divine favor preceded and enabled Noah's response</li>
 <li><strong>Grace is covenantal</strong> — It extends to Noah's family</li>
 </ol>
-<h4 class="sg-section-heading">Cross-References</h4>
+</div>
+<button class="sg-inner-accordion"><span>Cross-References</span></button>
+<div class="sg-inner-panel">
 <table class="info-table">
 <tr>
 <th>Reference</th>
@@ -1267,7 +1368,9 @@
 <td>Christ "received grace for grace"</td>
 </tr>
 </table>
-<h4 class="sg-section-heading">Reflection Questions</h4>
+</div>
+<button class="sg-inner-accordion"><span>Reflection Questions</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>What does it mean that "grace" appears in the Bible before "law"? How does this shape our understanding of God's character?</li>
 <li>The Hebrew wordplay connects Noah's name to grace. In what ways has your own name or identity been shaped by God's grace?</li>
@@ -1275,13 +1378,17 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Passage 2: The Ark's Design</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">Complete Scripture Text</h4>
+</div>
+<button class="sg-sub-accordion"><span>Passage 2: The Ark's Design</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Complete Scripture Text</span></button>
+<div class="sg-inner-panel">
 <p><strong><a href="https://www.blueletterbible.org/kjv/gen/6/14-16/s_6014" target="_blank">Genesis 6:14–16</a></strong></p>
 <p>> "14 Make thee an ark of gopher wood; rooms shalt thou make in the ark, and shalt pitch it within and without with pitch. > > 15 And this is the fashion which thou shalt make it of: The length of the ark shall be three hundred cubits, the breadth of it fifty cubits, and the height of it thirty cubits. > > 16 A window shalt thou make to the ark, and in a cubit shalt thou finish it above; and the door of the ark shalt thou set in the side thereof; with lower, second, and third stories shalt thou make it."</p>
-<h4 class="sg-section-heading">Literary Structure</h4>
+</div>
+<button class="sg-inner-accordion"><span>Literary Structure</span></button>
+<div class="sg-inner-panel">
 <p>The Ark's design is presented in <strong>divinely revealed specifications</strong>, placing it alongside only two other structures in scripture:</p>
 <ol>
 <li>The Tabernacle of Moses (<a href="https://www.blueletterbible.org/kjv/exo/25/1/s_75001" target="_blank">Exodus 25–27</a>)</li>
@@ -1297,7 +1404,9 @@
 <li><strong>Access</strong> (v. 16b): door in the side</li>
 <li><strong>Levels</strong> (v. 16c): three stories</li>
 </ul>
-<h4 class="sg-section-heading">Hebrew Insights</h4>
+</div>
+<button class="sg-inner-accordion"><span>Hebrew Insights</span></button>
+<div class="sg-inner-panel">
 <p><strong>תֵּבָה (tevah) — "Ark"</strong></p>
 <ul>
 <li><a href="https://www.blueletterbible.org/lexicon/h8392/kjv/wlc/0-1/" target="_blank">Strong's H8392</a></li>
@@ -1328,7 +1437,9 @@
 <li>Related to צָהַר (<em>tsahar</em>) — "to shine, press oil"</li>
 <li>Jewish tradition interprets as a shining stone (see Evidence of Antiquity below)</li>
 </ul>
-<h4 class="sg-section-heading">Temple Symbolism Analysis</h4>
+</div>
+<button class="sg-inner-accordion"><span>Temple Symbolism Analysis</span></button>
+<div class="sg-inner-panel">
 <p><strong>Three-Level Structure:</strong> The Ark's three decks correspond to sacred tripartite divisions:</p>
 <table class="info-table">
 <tr>
@@ -1368,7 +1479,9 @@
 <li>Christ as "the door" (<a href="https://www.blueletterbible.org/kjv/jhn/10/9/s_1007009" target="_blank">John 10:9</a>)</li>
 <li>The wound in Christ's side (<a href="https://www.blueletterbible.org/kjv/jhn/19/34/s_1016034" target="_blank">John 19:34</a>)</li>
 </ul>
-<h4 class="sg-section-heading">Evidence of Antiquity: The Ark as Floating Temple</h4>
+</div>
+<button class="sg-inner-accordion"><span>Evidence of Antiquity: The Ark as Floating Temple</span></button>
+<div class="sg-inner-panel">
 <p><strong>The Scholarly Consensus:</strong></p>
 <p>Modern Bible scholarship—developed primarily in the 20th century—recognizes that Noah's Ark was designed as a floating temple. This insight was unavailable to Joseph Smith, yet the temple themes in the Book of Moses align perfectly with it.</p>
 <p><strong>Key Parallels Unknown in 1830:</strong></p>
@@ -1407,13 +1520,17 @@
 <p><strong>Jeffrey M. Bradshaw notes:</strong> "There is a growing consensus among Bible scholars that, like the Tabernacle, Noah's Ark 'was designed as a temple.'"</p>
 <p>The Ark was a mobile sanctuary—preserving sacred space through judgment waters—just as the Tabernacle was a mobile temple for wilderness Israel.</p>
 <p><em>Source: Jeffrey M. Bradshaw, "<a href="https://interpreterfoundation.org/book-of-moses-essays-076" target="_blank">Was Noah's Ark Designed as a Floating Temple?</a>" (Interpreter Foundation, Essay #76)</em></p>
-<h4 class="sg-section-heading">Evidence of Antiquity: The <em>Tsohar</em> as Shining Stone</h4>
+</div>
+<button class="sg-inner-accordion"><span>Evidence of Antiquity: The <em>Tsohar</em> as Shining Stone</span></button>
+<div class="sg-inner-panel">
 <p><strong>The Problem:</strong> How did Noah see inside the sealed Ark during 40 days of darkness?</p>
 <p><strong>Jewish Tradition:</strong> The <em>tsohar</em> was a luminous stone—part of the primordial light of Creation—passed from Adam through the patriarchs to Noah.</p>
 <p><strong>Book of Mormon Parallel:</strong> The brother of Jared faces the identical problem with sealed barges and prepares sixteen stones that the Lord touches to make shine (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/3?lang=eng&id=1-6" target="_blank">Ether 3:1–6</a>).</p>
 <p>This tradition was preserved in Hebrew midrashic literature unavailable in English in 1829. Yet the Book of Mormon independently attests to the shining stone tradition.</p>
 <p><em>Source: Jeffrey M. Bradshaw, "<a href="https://interpreterfoundation.org/book-of-moses-essays-077" target="_blank">Was Noah Drunk or in a Vision?</a>" (Interpreter Foundation, Essay #77)</em></p>
-<h4 class="sg-section-heading">Cross-References</h4>
+</div>
+<button class="sg-inner-accordion"><span>Cross-References</span></button>
+<div class="sg-inner-panel">
 <table class="info-table">
 <tr>
 <th>Reference</th>
@@ -1440,7 +1557,9 @@
 <td>Earth abides celestial law</td>
 </tr>
 </table>
-<h4 class="sg-section-heading">Reflection Questions</h4>
+</div>
+<button class="sg-inner-accordion"><span>Reflection Questions</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>Why might God have designed the Ark to resemble the later Tabernacle? What does this suggest about God's purposes in the Flood?</li>
 <li>The pitch (<em>kopher</em>) that sealed the Ark comes from the same Hebrew root as atonement (<em>kippur</em>). How does this wordplay deepen your understanding of salvation?</li>
@@ -1448,13 +1567,17 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Passage 3: The Noahic Covenant</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">Complete Scripture Text</h4>
+</div>
+<button class="sg-sub-accordion"><span>Passage 3: The Noahic Covenant</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Complete Scripture Text</span></button>
+<div class="sg-inner-panel">
 <p><strong><a href="https://www.blueletterbible.org/kjv/gen/9/8-17/s_9008" target="_blank">Genesis 9:8–17</a></strong></p>
 <p>> "8 And God spake unto Noah, and to his sons with him, saying, > > 9 And I, behold, I establish my covenant with you, and with your seed after you; > > 10 And with every living creature that is with you, of the fowl, of the cattle, and of every beast of the earth with you; from all that go out of the ark, to every beast of the earth. > > 11 And I will establish my covenant with you; neither shall all flesh be cut off any more by the waters of a flood; neither shall there any more be a flood to destroy the earth. > > 12 And God said, This is the token of the covenant which I make between me and you and every living creature that is with you, for perpetual generations: > > 13 I do set my bow in the cloud, and it shall be for a token of a covenant between me and the earth. > > 14 And it shall come to pass, when I bring a cloud over the earth, that the bow shall be seen in the cloud: > > 15 And I will remember my covenant, which is between me and you and every living creature of all flesh; and the waters shall no more become a flood to destroy all flesh. > > 16 And the bow shall be in the cloud; and I will look upon it, that I may remember the everlasting covenant between God and every living creature of all flesh that is upon the earth. > > 17 And God said unto Noah, This is the token of the covenant, which I have established between me and all flesh that is upon the earth."</p>
-<h4 class="sg-section-heading">Literary Structure</h4>
+</div>
+<button class="sg-inner-accordion"><span>Literary Structure</span></button>
+<div class="sg-inner-panel">
 <p>The covenant declaration follows a formal <strong>suzerainty treaty</strong> pattern common in the ancient Near East:</p>
 <ol>
 <li><strong>Preamble</strong> (v. 8): "God spake unto Noah"</li>
@@ -1464,7 +1587,9 @@
 <li><strong>Sign/Witness</strong> (vv. 12–17): The rainbow</li>
 </ol>
 <p><strong>Keyword Repetition:</strong> The word "covenant" (<em>berith</em>) appears <strong>7 times</strong> in these 10 verses—the number of completion and divine perfection.</p>
-<h4 class="sg-section-heading">Hebrew Insights</h4>
+</div>
+<button class="sg-inner-accordion"><span>Hebrew Insights</span></button>
+<div class="sg-inner-panel">
 <p><strong>בְּרִית (berith) — "Covenant"</strong></p>
 <ul>
 <li><a href="https://www.blueletterbible.org/lexicon/h1285/kjv/wlc/0-1/" target="_blank">Strong's H1285</a></li>
@@ -1493,7 +1618,9 @@
 <li>A visible reminder of covenant commitment</li>
 <li>Other covenant signs: circumcision (<a href="https://www.blueletterbible.org/kjv/gen/17/11/s_17011" target="_blank">Genesis 17:11</a>), Sabbath (<a href="https://www.blueletterbible.org/kjv/exo/31/13/s_81013" target="_blank">Exodus 31:13</a>)</li>
 </ul>
-<h4 class="sg-section-heading">Doctrinal Analysis</h4>
+</div>
+<button class="sg-inner-accordion"><span>Doctrinal Analysis</span></button>
+<div class="sg-inner-panel">
 <p><strong>Scope of the Covenant:</strong> This is the broadest covenant in scripture:</p>
 <ul>
 <li>Includes Noah, his sons, and all descendants (all humanity)</li>
@@ -1515,7 +1642,9 @@
 <li>Earth will never again be destroyed by flood—period</li>
 </ul>
 <p>This reflects pure grace: God commits to preserve creation despite human wickedness (which would return after the Flood).</p>
-<h4 class="sg-section-heading">The Rainbow Across Scripture: From Noah to the New Jerusalem</h4>
+</div>
+<button class="sg-inner-accordion"><span>The Rainbow Across Scripture: From Noah to the New Jerusalem</span></button>
+<div class="sg-inner-panel">
 <p>The rainbow of the Noahic covenant reappears at crucial moments throughout scripture, always in connection with God's throne, His covenant faithfulness, and the culmination of His redemptive plan.</p>
 <h4>The JST Connection: The Rainbow and Enoch's Covenant (JST Genesis 9:21–22)</h4>
 <p>Joseph Smith's inspired translation dramatically expands the rainbow's significance. Where the KJV records simply a promise against future floods, the JST reveals that the rainbow symbolizes the reunification of heavenly and earthly Zion:</p>
@@ -1664,7 +1793,9 @@
 </tr>
 </table>
 <p>The rainbow is not merely a meteorological phenomenon explained by covenant theology. It is a thread woven through the entire biblical tapestry—from Eden's cherub to the New Jerusalem's foundations, from Noah's terror to John's wonder. It testifies that God remembers His covenants and that His mercy encircles even His most awesome judgments.</p>
-<h4 class="sg-section-heading">Cross-References</h4>
+</div>
+<button class="sg-inner-accordion"><span>Cross-References</span></button>
+<div class="sg-inner-panel">
 <table class="info-table">
 <tr>
 <th>Reference</th>
@@ -1727,7 +1858,9 @@
 <td>Joseph Smith: rainbow as sign of Second Coming</td>
 </tr>
 </table>
-<h4 class="sg-section-heading">Reflection Questions</h4>
+</div>
+<button class="sg-inner-accordion"><span>Reflection Questions</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>The rainbow is a war bow hung up in peace. How does this image change your understanding of God's character after the Flood?</li>
 <li>When God says He will "remember" His covenant, He means He will act faithfully. What covenants has God made with you, and how has He "remembered" them?</li>
@@ -1737,15 +1870,19 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Passage 4: The Sons of God and Daughters of Men</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">Complete Scripture Text</h4>
+</div>
+<button class="sg-sub-accordion"><span>Passage 4: The Sons of God and Daughters of Men</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Complete Scripture Text</span></button>
+<div class="sg-inner-panel">
 <p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/8?lang=eng&id=13-15" target="_blank">Moses 8:13–15</a></strong></p>
 <p>> "13 And Noah and his sons hearkened unto the Lord, and gave heed, and they were called the sons of God. > > 14 And when these men began to multiply on the face of the earth, and daughters were born unto them, the sons of men saw that those daughters were fair, and they took them wives, even as they chose. > > 15 And the Lord said unto Noah: The daughters of thy sons have sold themselves; for behold mine anger is kindled against the sons of men, for they will not hearken to my voice."</p>
 <p><strong><a href="https://www.blueletterbible.org/kjv/gen/6/1-4/s_6001" target="_blank">Genesis 6:1–4</a></strong></p>
 <p>> "1 And it came to pass, when men began to multiply on the face of the earth, and daughters were born unto them, > > 2 That the sons of God saw the daughters of men that they were fair; and they took them wives of all which they chose. > > 3 And the Lord said, My spirit shall not always strive with man, for that he also is flesh: yet his days shall be an hundred and twenty years. > > 4 There were giants in the earth in those days; and also after that, when the sons of God came in unto the daughters of men, and they bare children to them, the same became mighty men which were of old, men of renown."</p>
-<h4 class="sg-section-heading">Literary Structure</h4>
+</div>
+<button class="sg-inner-accordion"><span>Literary Structure</span></button>
+<div class="sg-inner-panel">
 <p>The Genesis passage is one of the most enigmatic in scripture. Moses 8 provides clarifying restoration:</p>
 <p><strong>Genesis 6:1–4 Ambiguity:</strong></p>
 <ul>
@@ -1761,7 +1898,9 @@
 <li>The sin = intermarriage that led to apostasy</li>
 <li>The daughters "sold themselves" — spiritual prostitution</li>
 </ul>
-<h4 class="sg-section-heading">Hebrew Insights</h4>
+</div>
+<button class="sg-inner-accordion"><span>Hebrew Insights</span></button>
+<div class="sg-inner-panel">
 <p><strong>בְּנֵי הָאֱלֹהִים (bene ha'elohim) — "Sons of God"</strong></p>
 <ul>
 <li><a href="https://www.blueletterbible.org/lexicon/h1121/kjv/wlc/0-1/" target="_blank">Strong's H1121</a> + <a href="https://www.blueletterbible.org/lexicon/h430/kjv/wlc/0-1/" target="_blank">H430</a></li>
@@ -1782,7 +1921,9 @@
 <li>Or from root meaning "wonder" or "mighty"</li>
 <li>Often translated "giants" but could mean "tyrants" or "fallen warriors"</li>
 </ul>
-<h4 class="sg-section-heading">Ancient Interpretations</h4>
+</div>
+<button class="sg-inner-accordion"><span>Ancient Interpretations</span></button>
+<div class="sg-inner-panel">
 <p><strong>Fallen Angel Theory:</strong></p>
 <ul>
 <li>1 Enoch (Book of Watchers) describes angels who descended to mate with women</li>
@@ -1800,7 +1941,9 @@
 <p><strong>Book of Moses Resolution:</strong> Moses 8 clearly adopts the Sethite interpretation—a minority view in Joseph Smith's day:</p>
 <p>> "Noah and his sons hearkened unto the Lord, and gave heed, and they were called the sons of God" (Moses 8:13)</p>
 <p>The title "sons of God" is earned through covenant faithfulness, not angelic nature.</p>
-<h4 class="sg-section-heading">Evidence of Antiquity: The Sethite Interpretation</h4>
+</div>
+<button class="sg-inner-accordion"><span>Evidence of Antiquity: The Sethite Interpretation</span></button>
+<div class="sg-inner-panel">
 <p><strong>Why This Matters:</strong></p>
 <p>In the 1830s, the fallen angel interpretation was the dominant reading of Genesis 6:1–4. The Sethite view, though ancient, was less common in Protestant circles.</p>
 <p><strong>Ancient Support for the Book of Moses:</strong></p>
@@ -1808,7 +1951,9 @@
 <p><strong>Islamic Source (Arabic):</strong> > "But one errs and misunderstands [if] he says that 'angels' descended to 'mortal women.' Instead, it is the sons of Seth who descend from the holy mountain to the daughters of Cain the accursed."</p>
 <p>Joseph Smith's clarification aligns with ancient sources that were obscure or unavailable in 1830s America.</p>
 <p><em>Source: Jeffrey M. Bradshaw, "<a href="https://interpreterfoundation.org/book-of-moses-essays-075" target="_blank">The Sons of God and the Sons of Men</a>" (Interpreter Foundation, Essay #75)</em></p>
-<h4 class="sg-section-heading">Cross-References</h4>
+</div>
+<button class="sg-inner-accordion"><span>Cross-References</span></button>
+<div class="sg-inner-panel">
 <table class="info-table">
 <tr>
 <th>Reference</th>
@@ -1835,7 +1980,9 @@
 <td>"Be ye not unequally yoked together with unbelievers"</td>
 </tr>
 </table>
-<h4 class="sg-section-heading">Reflection Questions</h4>
+</div>
+<button class="sg-inner-accordion"><span>Reflection Questions</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>The Book of Moses clarifies that "sons of God" refers to covenant-keepers, not angels. How does this interpretation affect your understanding of the pre-Flood wickedness?</li>
 <li>The sin described is intermarriage that led to apostasy. How do modern prophets apply this principle to temple marriage and marrying within the faith?</li>
@@ -1843,17 +1990,23 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Passage 5: The Tower of Babel</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">Complete Scripture Text</h4>
+</div>
+<button class="sg-sub-accordion"><span>Passage 5: The Tower of Babel</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Complete Scripture Text</span></button>
+<div class="sg-inner-panel">
 <p><strong><a href="https://www.blueletterbible.org/kjv/gen/11/1-9/s_11001" target="_blank">Genesis 11:1–9</a></strong></p>
 <p>> "1 And the whole earth was of one language, and of one speech. > > 2 And it came to pass, as they journeyed from the east, that they found a plain in the land of Shinar; and they dwelt there. > > 3 And they said one to another, Go to, let us make brick, and burn them throughly. And they had brick for stone, and slime had they for morter. > > 4 And they said, Go to, let us build us a city and a tower, whose top may reach unto heaven; and let us make us a name, lest we be scattered abroad upon the face of the whole earth. > > 5 And the Lord came down to see the city and the tower, which the children of men builded. > > 6 And the Lord said, Behold, the people is one, and they have all one language; and this they begin to do: and now nothing will be restrained from them, which they have imagined to do. > > 7 Go to, let us go down, and there confound their language, that they may not understand one another's speech. > > 8 So the Lord scattered them abroad from thence upon the face of all the earth: and they left off to build the city. > > 9 Therefore is the name of it called Babel; because the Lord did there confound the language of all the earth: and from thence did the Lord scatter them abroad upon the face of all the earth."</p>
-<h4 class="sg-section-heading">Literary Structure</h4>
+</div>
+<button class="sg-inner-accordion"><span>Literary Structure</span></button>
+<div class="sg-inner-panel">
 <p>The narrative exhibits careful <strong>chiastic structure</strong>:</p>
 <p>``` A  All the earth: one language (v. 1) B  There (in Shinar) (v. 2) C  They said to one another (v. 3) D  Let us make bricks / build (v. 3–4a) E  "Let us make a name" (v. 4b) F  The Lord came DOWN (v. 5) E' The Lord addresses the name issue (v. 6) D' "Let us go down" / confound (v. 7) C' They could not understand one another (v. 7b) B' From there (scattered) (v. 8) A' All the earth: language confounded (v. 9) ```</p>
 <p>The center (F) is the Lord's descent—the ironic reversal. Humanity tried to reach heaven; instead, God must "come down" even to see their puny tower.</p>
-<h4 class="sg-section-heading">Hebrew Insights</h4>
+</div>
+<button class="sg-inner-accordion"><span>Hebrew Insights</span></button>
+<div class="sg-inner-panel">
 <p><strong>בָּבֶל (babel) — "Babel/Babylon"</strong></p>
 <ul>
 <li><a href="https://www.blueletterbible.org/lexicon/h894/kjv/wlc/0-1/" target="_blank">Strong's H894</a></li>
@@ -1882,7 +2035,9 @@
 <li>Latin <em>confundere</em> = "pour together"</li>
 <li>Not just linguistic confusion but the mixing/mingling of peoples</li>
 </ul>
-<h4 class="sg-section-heading">Ancient Near Eastern Context</h4>
+</div>
+<button class="sg-inner-accordion"><span>Ancient Near Eastern Context</span></button>
+<div class="sg-inner-panel">
 <p><strong>Mesopotamian Ziggurats:</strong> The Tower of Babel was almost certainly a ziggurat—a stepped temple-tower:</p>
 <ul>
 <li>Base: large square platform</li>
@@ -1899,7 +2054,9 @@
 </ul>
 <p><strong>Archaeological Confirmation:</strong> Nebuchadnezzar II's inscription describes gathering workers from diverse regions: > "I mobilized [all] countries everywhere... from the upper sea [to the] lower [sea,] the [distant nations, the teeming people of] the world..."</p>
 <p>This matches the Genesis imagery of "the whole earth" gathering to build—and hints at the multilingual nature of the workforce.</p>
-<h4 class="sg-section-heading">The Tower as Anti-Temple</h4>
+</div>
+<button class="sg-inner-accordion"><span>The Tower as Anti-Temple</span></button>
+<div class="sg-inner-panel">
 <p>The Tower of Babel represents a <strong>counterfeit temple</strong>:</p>
 <table class="info-table">
 <tr>
@@ -1928,7 +2085,9 @@
 </tr>
 </table>
 <p><strong>The Book of Mormon Parallel:</strong> Nephi's vision includes a "great and spacious building" that "stood as it were in the air, high above the earth" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/8?lang=eng&id=26" target="_blank">1 Nephi 8:26</a>; <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/11?lang=eng&id=35-36" target="_blank">11:35–36</a>). Like Babel, it represents "the pride of the world" and "vain imaginations"—and like Babel, "it fell, and the fall thereof was exceedingly great."</p>
-<h4 class="sg-section-heading">Cross-References</h4>
+</div>
+<button class="sg-inner-accordion"><span>Cross-References</span></button>
+<div class="sg-inner-panel">
 <table class="info-table">
 <tr>
 <th>Reference</th>
@@ -1955,7 +2114,9 @@
 <td>"To every man in his own language"</td>
 </tr>
 </table>
-<h4 class="sg-section-heading">Reflection Questions</h4>
+</div>
+<button class="sg-inner-accordion"><span>Reflection Questions</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>The builders sought to "make us a name." How does this contrast with God's promise to Abraham that "I will make thy name great"? What's the difference between seizing and receiving?</li>
 <li>The Lord "came down" to see the tower. What does this ironic detail reveal about the gap between human ambition and divine reality?</li>
@@ -1963,9 +2124,10 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Summary Table</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
+</div>
+<button class="sg-sub-accordion"><span>Summary Table</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <table class="info-table">
 <tr>
 <th>Passage</th>
@@ -2012,12 +2174,12 @@
         </div>
 
         <!-- SECTION 4: WORD STUDIES -->
-        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">4. Word Studies</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
-        <div class="sg-panel" style="display: none;">
+        <button class="sg-accordion-section">4. Word Studies</button>
+        <div class="sg-panel">
             <div class="panel-content">
-                <button class="sg-sub-accordion active"><span>Genesis 6–11; Moses 8 | February 9–15, 2026</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
+                <button class="sg-sub-accordion"><span>Genesis 6–11; Moses 8 | February 9–15, 2026</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p><strong>Words Studied in This File:</strong></p>
 <ul>
 <li><a href="#noach-נֹחַ--noah" target="_blank"><em>Noach</em> (נֹחַ) — "Noah"</a> — Rest and comfort</li>
@@ -2029,10 +2191,11 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span><em>Noach</em> (נֹחַ) — "Noah"</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">Layer 1: Hebrew Foundation</h4>
+<button class="sg-sub-accordion"><span><em>Noach</em> (נֹחַ) — "Noah"</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Layer 1: Hebrew Foundation</span></button>
+<div class="sg-inner-panel">
 <p><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h5146/kjv/wlc/0-1/" target="_blank"><em>Noach</em></a> (נֹחַ) <strong>Pronunciation:</strong> NO-akh (with a guttural "ch" as in Bach)</p>
 <p><strong>Etymology and Root:</strong> The name Noah derives from the root <a href="https://www.blueletterbible.org/lexicon/h5117/kjv/wlc/0-1/" target="_blank"><em>nuach</em></a> (נוּחַ) — meaning "to rest, settle down, be at rest."</p>
 <p>*<em>Semantic Range of </em>nuach<em>:</em>*</p>
@@ -2083,7 +2246,9 @@
 <li><em>Chen</em> (חֵן) = Chet-Nun (CH-N)</li>
 </ul>
 <p>This reversal is theologically profound: Noah found grace (חֵן) because of who he was (נֹחַ)—the one who brings rest.</p>
-<h4 class="sg-section-heading">Layer 2: Greek (Septuagint)</h4>
+</div>
+<button class="sg-inner-accordion"><span>Layer 2: Greek (Septuagint)</span></button>
+<div class="sg-inner-panel">
 <p><strong>Greek (LXX):</strong> <a href="https://www.blueletterbible.org/lexicon/g3575/kjv/tr/0-1/" target="_blank"><em>Nōe</em></a> (Νῶε) <strong>Pronunciation:</strong> NO-eh</p>
 <p>The Septuagint transliterates the Hebrew name rather than translating its meaning.</p>
 <p><strong>New Testament Usage:</strong></p>
@@ -2094,19 +2259,27 @@
 <li><a href="https://www.blueletterbible.org/kjv/1pe/3/20/s_1154020" target="_blank">1 Peter 3:20</a>: "In the days of Noah... eight souls were saved"</li>
 <li><a href="https://www.blueletterbible.org/kjv/2pe/2/5/s_1158005" target="_blank">2 Peter 2:5</a>: "Saved Noah the eighth person, a preacher of righteousness"</li>
 </ul>
-<h4 class="sg-section-heading">Layer 3: Latin (Vulgate)</h4>
+</div>
+<button class="sg-inner-accordion"><span>Layer 3: Latin (Vulgate)</span></button>
+<div class="sg-inner-panel">
 <p><strong>Latin:</strong> <em>Noe</em> <strong>Pronunciation:</strong> NO-eh</p>
 <p>Jerome retained the Greek transliteration in the Vulgate.</p>
-<h4 class="sg-section-heading">Layer 4: English Etymology</h4>
+</div>
+<button class="sg-inner-accordion"><span>Layer 4: English Etymology</span></button>
+<div class="sg-inner-panel">
 <p><strong>Etymology Online:</strong> <a href="https://www.etymonline.com/word/Noah" target="_blank">Noah</a></p>
 <p><strong>Development:</strong></p>
 <ul>
 <li>From Hebrew <em>Noach</em> via Greek <em>Nōe</em> and Latin <em>Noe</em></li>
 <li>The English spelling "Noah" adds the final 'h' to represent the Hebrew letter <em>chet</em> (ח)</li>
 </ul>
-<h4 class="sg-section-heading">Layer 5: Webster 1828 Definition</h4>
+</div>
+<button class="sg-inner-accordion"><span>Layer 5: Webster 1828 Definition</span></button>
+<div class="sg-inner-panel">
 <p>> <strong>NOAH</strong>, n. > > The patriarch who, with his family, was preserved in the ark during the deluge. His name signifies rest or comfort.</p>
-<h4 class="sg-section-heading">Theological Significance</h4>
+</div>
+<button class="sg-inner-accordion"><span>Theological Significance</span></button>
+<div class="sg-inner-panel">
 <p><strong>Rest from the Curse:</strong> Lamech's prophecy (<a href="https://www.blueletterbible.org/kjv/gen/5/29/s_5029" target="_blank">Genesis 5:29</a>) connects Noah to the curse of <a href="https://www.blueletterbible.org/kjv/gen/3/17-19/s_3017" target="_blank">Genesis 3:17–19</a>. Noah would bring "comfort" and "rest" from the toilsome labor caused by the cursed ground.</p>
 <p><strong>Jewish Tradition: Noah as Inventor of the Plow:</strong> The rabbinical sages (<em>Chazal</em>) noted that Noah doesn't seem to deliver on the hope of providing "rest" in the biblical narrative itself. To explain how Noah fulfilled Lamech's prophecy, they credited him with the invention of the plow and other agricultural tools.</p>
 <p>According to <em>Midrash Tanchuma</em> (Genesis 11): > "Once Noah was born, he invented plows, scythes, spades, and all kinds of tools."</p>
@@ -2121,10 +2294,12 @@
 <p><strong>Latter-day Saint Connection:</strong> The Doctrine and Covenants identifies Noah as the angel Gabriel (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/27?lang=eng&id=7" target="_blank">D&C 27:7</a>; <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/128?lang=eng&id=21" target="_blank">D&C 128:21</a>). As Gabriel, Noah continues his role of announcing divine comfort—he announced the births of John the Baptist and Jesus Christ (<a href="https://www.blueletterbible.org/kjv/luk/1/11-20/s_974011" target="_blank">Luke 1:11–20, 26–38</a>).</p>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span><em>Chen</em> (חֵן) — "Grace"</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">Layer 1: Hebrew Foundation</h4>
+</div>
+<button class="sg-sub-accordion"><span><em>Chen</em> (חֵן) — "Grace"</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Layer 1: Hebrew Foundation</span></button>
+<div class="sg-inner-panel">
 <p><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h2580/kjv/wlc/0-1/" target="_blank"><em>chen</em></a> (חֵן) <strong>Pronunciation:</strong> khayn (rhymes with "rain") <strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h2603/kjv/wlc/0-1/" target="_blank"><em>chanan</em></a> (חָנַן) — "to be gracious, show favor"</p>
 <p><strong>Semantic Range:</strong></p>
 <ul>
@@ -2172,7 +2347,9 @@
 <li><em>Chen</em> (חֵן) = Chet-Nun (CH-N)</li>
 </ul>
 <p>This reversal is intentional—Noah's very name encapsulates his relationship to divine grace.</p>
-<h4 class="sg-section-heading">Layer 2: Greek (Septuagint)</h4>
+</div>
+<button class="sg-inner-accordion"><span>Layer 2: Greek (Septuagint)</span></button>
+<div class="sg-inner-panel">
 <p><strong>Greek (LXX):</strong> <a href="https://www.blueletterbible.org/lexicon/g5485/kjv/tr/0-1/" target="_blank"><em>charis</em></a> (χάρις) <strong>Pronunciation:</strong> KHAH-rees</p>
 <p>The Septuagint translates Hebrew <em>chen</em> with Greek <em>charis</em>, the word that becomes foundational for New Testament theology of grace.</p>
 <p><strong>New Testament Usage:</strong></p>
@@ -2181,7 +2358,9 @@
 <li><a href="https://www.blueletterbible.org/kjv/eph/2/8/s_1099008" target="_blank">Ephesians 2:8</a>: "By grace are ye saved through faith"</li>
 <li><a href="https://www.blueletterbible.org/kjv/rom/5/20/s_1051020" target="_blank">Romans 5:20</a>: "Where sin abounded, grace did much more abound"</li>
 </ul>
-<h4 class="sg-section-heading">Layer 3: Latin (Vulgate)</h4>
+</div>
+<button class="sg-inner-accordion"><span>Layer 3: Latin (Vulgate)</span></button>
+<div class="sg-inner-panel">
 <p><strong>Latin:</strong> <a href="http://webstersdictionary1828.com/Dictionary/grace" target="_blank"><em>gratia</em></a> <strong>Pronunciation:</strong> GRAH-tee-ah</p>
 <p>Jerome's Vulgate translates both Hebrew <em>chen</em> and Greek <em>charis</em> as Latin <em>gratia</em>—the root of English "grace."</p>
 <p><strong>Related English Derivatives:</strong></p>
@@ -2190,7 +2369,9 @@
 <li>Gratitude, grateful, gratify</li>
 <li>Gratis (free, without cost)</li>
 </ul>
-<h4 class="sg-section-heading">Layer 4: English Etymology</h4>
+</div>
+<button class="sg-inner-accordion"><span>Layer 4: English Etymology</span></button>
+<div class="sg-inner-panel">
 <p><strong>Etymology Online:</strong> <a href="https://www.etymonline.com/word/grace" target="_blank">grace</a></p>
 <p><strong>Development:</strong></p>
 <ul>
@@ -2206,9 +2387,13 @@
 <li>A short prayer before meals</li>
 <li>Title of honor ("Your Grace")</li>
 </ol>
-<h4 class="sg-section-heading">Layer 5: Webster 1828 Definition</h4>
+</div>
+<button class="sg-inner-accordion"><span>Layer 5: Webster 1828 Definition</span></button>
+<div class="sg-inner-panel">
 <p>> <strong>GRACE</strong>, n. [L. gratia] > > 1. Favor; good will; kindness; disposition to oblige another. > > 2. Appropriately, the free unmerited love and favor of God, the spring and source of all the benefits men receive from him. > > 3. Favorable influence of God; divine influence or the influence of the spirit, in renewing the heart and restraining from sin. > > 4. The application of Christ's righteousness to the sinner. > > 5. A state of reconciliation to God.</p>
-<h4 class="sg-section-heading">Theological Significance</h4>
+</div>
+<button class="sg-inner-accordion"><span>Theological Significance</span></button>
+<div class="sg-inner-panel">
 <p><strong>First Occurrence Principle:</strong> <a href="https://www.blueletterbible.org/kjv/gen/6/8/s_6008" target="_blank">Genesis 6:8</a> is the first use of "grace" in Scripture. This is theologically significant:</p>
 <ul>
 <li>Grace appears <em>before</em> the law</li>
@@ -2219,10 +2404,12 @@
 <p>The relationship between grace and works mirrors Noah's story: God's grace enabled Noah's obedience, which in turn qualified him for deliverance.</p>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span><em>Tevah</em> (תֵּבָה) — "Ark"</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">Layer 1: Hebrew Foundation</h4>
+</div>
+<button class="sg-sub-accordion"><span><em>Tevah</em> (תֵּבָה) — "Ark"</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Layer 1: Hebrew Foundation</span></button>
+<div class="sg-inner-panel">
 <p><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h8392/kjv/wlc/0-1/" target="_blank"><em>tevah</em></a> (תֵּבָה) <strong>Pronunciation:</strong> tay-VAH</p>
 <p><strong>Etymology:</strong> Possibly from Egyptian <em>db't</em> ("chest, coffin") or related Semitic roots meaning "box, container."</p>
 <p><strong>Key Occurrences</strong></p>
@@ -2249,7 +2436,9 @@
 <li>Ark of the Covenant = <a href="https://www.blueletterbible.org/lexicon/h727/kjv/wlc/0-1/" target="_blank"><em>aron</em></a> (אָרוֹן)</li>
 </ul>
 <p>However, in Mishnaic Hebrew (post-biblical), <em>tevah</em> became the standard term for the Ark of the Covenant, strengthening the temple connection.</p>
-<h4 class="sg-section-heading">Layer 2: Greek (Septuagint)</h4>
+</div>
+<button class="sg-inner-accordion"><span>Layer 2: Greek (Septuagint)</span></button>
+<div class="sg-inner-panel">
 <p><strong>Greek (LXX):</strong> <a href="https://www.blueletterbible.org/lexicon/g2787/kjv/tr/0-1/" target="_blank"><em>kibotos</em></a> (κιβωτός) <strong>Pronunciation:</strong> kee-bo-TOSS</p>
 <p>The Septuagint uses <em>kibotos</em> for BOTH:</p>
 <ul>
@@ -2263,7 +2452,9 @@
 <li><a href="https://www.blueletterbible.org/kjv/1pe/3/20/s_1154020" target="_blank">1 Peter 3:20</a>: "Eight souls were saved by water" in the ark [<em>kibotos</em>]</li>
 <li><a href="https://www.blueletterbible.org/kjv/heb/9/4/s_1142004" target="_blank">Hebrews 9:4</a>: "The ark [<em>kibotos</em>] of the covenant"</li>
 </ul>
-<h4 class="sg-section-heading">Layer 3: Latin (Vulgate)</h4>
+</div>
+<button class="sg-inner-accordion"><span>Layer 3: Latin (Vulgate)</span></button>
+<div class="sg-inner-panel">
 <p><strong>Latin:</strong> <a href="http://webstersdictionary1828.com/Dictionary/ark" target="_blank"><em>arca</em></a> <strong>Pronunciation:</strong> AR-kah</p>
 <p>Jerome uses <em>arca</em> for both Noah's Ark and the Ark of the Covenant. This is the source of English "ark."</p>
 <p><strong>Related English Derivatives:</strong></p>
@@ -2271,7 +2462,9 @@
 <li>Ark (container, especially for sacred objects)</li>
 <li>Archive (place for records—originally a chest)</li>
 </ul>
-<h4 class="sg-section-heading">Layer 4: English Etymology</h4>
+</div>
+<button class="sg-inner-accordion"><span>Layer 4: English Etymology</span></button>
+<div class="sg-inner-panel">
 <p><strong>Etymology Online:</strong> <a href="https://www.etymonline.com/word/ark" target="_blank">ark</a></p>
 <p><strong>Development:</strong></p>
 <ul>
@@ -2279,9 +2472,13 @@
 <li>From Latin <em>arca</em> — "chest, box, place for safe-keeping"</li>
 <li>Applied specifically to Noah's vessel and the Tabernacle's sacred chest</li>
 </ul>
-<h4 class="sg-section-heading">Layer 5: Webster 1828 Definition</h4>
+</div>
+<button class="sg-inner-accordion"><span>Layer 5: Webster 1828 Definition</span></button>
+<div class="sg-inner-panel">
 <p>> <strong>ARK</strong>, n. > > 1. A small close vessel, chest or coffer, such as that which was the repository of the tables of the covenant among the Jews. > > 2. The large floating vessel in which Noah and his family were preserved during the deluge. > > 3. A depository; a place of safety.</p>
-<h4 class="sg-section-heading">Temple Symbolism</h4>
+</div>
+<button class="sg-inner-accordion"><span>Temple Symbolism</span></button>
+<div class="sg-inner-panel">
 <p>The use of <em>tevah</em> connects Noah's Ark and Moses's basket as vessels of salvation:</p>
 <ul>
 <li>Both are floating containers</li>
@@ -2292,10 +2489,12 @@
 <p><em>Source: Jeffrey M. Bradshaw, "<a href="https://interpreterfoundation.org/book-of-moses-essays-076" target="_blank">Was Noah's Ark Designed as a Floating Temple?</a>" (Interpreter Foundation, Essay #76)</em></p>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span><em>Berith</em> (בְּרִית) — "Covenant"</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">Layer 1: Hebrew Foundation</h4>
+</div>
+<button class="sg-sub-accordion"><span><em>Berith</em> (בְּרִית) — "Covenant"</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Layer 1: Hebrew Foundation</span></button>
+<div class="sg-inner-panel">
 <p><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h1285/kjv/wlc/0-1/" target="_blank"><em>berith</em></a> (בְּרִית) <strong>Pronunciation:</strong> beh-REET</p>
 <p><strong>Etymology:</strong> Uncertain; possibly from:</p>
 <ul>
@@ -2333,7 +2532,9 @@
 </tr>
 </table>
 <p>The Noahic covenant is a <strong>Royal Grant</strong>—God binds Himself unconditionally.</p>
-<h4 class="sg-section-heading">Layer 2: Greek (Septuagint)</h4>
+</div>
+<button class="sg-inner-accordion"><span>Layer 2: Greek (Septuagint)</span></button>
+<div class="sg-inner-panel">
 <p><strong>Greek (LXX):</strong> <a href="https://www.blueletterbible.org/lexicon/g1242/kjv/tr/0-1/" target="_blank"><em>diathēkē</em></a> (διαθήκη) <strong>Pronunciation:</strong> dee-ah-THAY-kay</p>
 <p>Interestingly, <em>diathēkē</em> in secular Greek meant "will, testament" (a one-sided disposition of property). The LXX translators chose this word to emphasize that biblical covenants originate from God's sovereign decision.</p>
 <p><strong>New Testament Usage:</strong></p>
@@ -2342,14 +2543,18 @@
 <li><a href="https://www.blueletterbible.org/kjv/heb/8/6/s_1141006" target="_blank">Hebrews 8:6</a>: "A better covenant [<em>diathēkē</em>]"</li>
 <li><a href="https://www.blueletterbible.org/kjv/heb/9/15/s_1142015" target="_blank">Hebrews 9:15</a>: "The new testament [<em>diathēkē</em>]"</li>
 </ul>
-<h4 class="sg-section-heading">Layer 3: Latin (Vulgate)</h4>
+</div>
+<button class="sg-inner-accordion"><span>Layer 3: Latin (Vulgate)</span></button>
+<div class="sg-inner-panel">
 <p><strong>Latin:</strong> <a href="http://webstersdictionary1828.com/Dictionary/testament" target="_blank"><em>testamentum</em></a> or <a href="http://webstersdictionary1828.com/Dictionary/covenant" target="_blank"><em>foedus</em></a> <strong>Pronunciation:</strong> tes-tah-MEN-tum, FOY-dus</p>
 <p>Jerome used both terms:</p>
 <ul>
 <li><em>Testamentum</em> — will, testament (hence "Old/New Testament")</li>
 <li><em>Foedus</em> — treaty, league, agreement</li>
 </ul>
-<h4 class="sg-section-heading">Layer 4: English Etymology</h4>
+</div>
+<button class="sg-inner-accordion"><span>Layer 4: English Etymology</span></button>
+<div class="sg-inner-panel">
 <p><strong>Etymology Online:</strong> <a href="https://www.etymonline.com/word/covenant" target="_blank">covenant</a></p>
 <p><strong>Development:</strong></p>
 <ul>
@@ -2358,9 +2563,13 @@
 <li><em>Com-</em> ("together") + <em>venire</em> ("to come")</li>
 </ul>
 <p>A covenant is literally a "coming together"—a meeting of parties in agreement.</p>
-<h4 class="sg-section-heading">Layer 5: Webster 1828 Definition</h4>
+</div>
+<button class="sg-inner-accordion"><span>Layer 5: Webster 1828 Definition</span></button>
+<div class="sg-inner-panel">
 <p>> <strong>COVENANT</strong>, n. > > 1. A mutual consent or agreement of two or more persons, to do or to forbear some act or thing; a contract; stipulation. > > 2. In theology, the covenant of works, is that implied in the commands, prohibitions, and promises of God; the promise of God to man, that man's perfect obedience should entitle him to happiness. This covenant being broken by the fall of Adam, God in his infinite mercy established the covenant of grace, in which God freely offers to sinners redemption by Jesus Christ.</p>
-<h4 class="sg-section-heading">The Noahic Covenant</h4>
+</div>
+<button class="sg-inner-accordion"><span>The Noahic Covenant</span></button>
+<div class="sg-inner-panel">
 <p>Genesis 9 presents the first explicitly named covenant in Scripture:</p>
 <p><strong>Unique Features:</strong></p>
 <ol>
@@ -2372,10 +2581,12 @@
 <p>The word <em>berith</em> appears <strong>7 times</strong> in <a href="https://www.blueletterbible.org/kjv/gen/9/8-17/s_9008" target="_blank">Genesis 9:8–17</a>—the number of completion.</p>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span><em>Zakar</em> (זָכַר) — "Remember"</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">Layer 1: Hebrew Foundation</h4>
+</div>
+<button class="sg-sub-accordion"><span><em>Zakar</em> (זָכַר) — "Remember"</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Layer 1: Hebrew Foundation</span></button>
+<div class="sg-inner-panel">
 <p><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h2142/kjv/wlc/0-1/" target="_blank"><em>zakar</em></a> (זָכַר) <strong>Pronunciation:</strong> zah-KHAR</p>
 <p><strong>Semantic Range:</strong></p>
 <ul>
@@ -2412,7 +2623,9 @@
 <li><a href="https://www.blueletterbible.org/kjv/exo/2/24/s_52024" target="_blank">Exodus 2:24</a>: "God remembered his covenant" — and initiated the Exodus</li>
 </ul>
 <p>The opposite of <em>zakar</em> is not "forget" (<em>shakach</em>, שָׁכַח) but "ignore" or "fail to act."</p>
-<h4 class="sg-section-heading">Layer 2: Greek (Septuagint)</h4>
+</div>
+<button class="sg-inner-accordion"><span>Layer 2: Greek (Septuagint)</span></button>
+<div class="sg-inner-panel">
 <p><strong>Greek (LXX):</strong> <a href="https://www.blueletterbible.org/lexicon/g3403/kjv/tr/0-1/" target="_blank"><em>mimnēskomai</em></a> (μιμνῄσκομαι) <strong>Pronunciation:</strong> mim-NACE-ko-my</p>
 <p>Also translated with μνημονεύω (<em>mnēmoneuō</em>) — "to call to mind, mention."</p>
 <p><strong>New Testament Usage:</strong></p>
@@ -2420,10 +2633,14 @@
 <li><a href="https://www.blueletterbible.org/kjv/luk/1/72/s_974072" target="_blank">Luke 1:72</a>: "To remember his holy covenant" (Zechariah's prophecy)</li>
 <li><a href="https://www.blueletterbible.org/kjv/heb/8/12/s_1141012" target="_blank">Hebrews 8:12</a>: "Their sins... will I remember no more"</li>
 </ul>
-<h4 class="sg-section-heading">Layer 3: Latin (Vulgate)</h4>
+</div>
+<button class="sg-inner-accordion"><span>Layer 3: Latin (Vulgate)</span></button>
+<div class="sg-inner-panel">
 <p><strong>Latin:</strong> <a href="http://webstersdictionary1828.com/Dictionary/remember" target="_blank"><em>recordor</em></a> <strong>Pronunciation:</strong> reh-KOR-dor</p>
 <p>From <em>re-</em> ("again") + <em>cor</em> ("heart") — literally "to bring back to the heart."</p>
-<h4 class="sg-section-heading">Layer 4: English Etymology</h4>
+</div>
+<button class="sg-inner-accordion"><span>Layer 4: English Etymology</span></button>
+<div class="sg-inner-panel">
 <p><strong>Etymology Online:</strong> <a href="https://www.etymonline.com/word/remember" target="_blank">remember</a></p>
 <p><strong>Development:</strong></p>
 <ul>
@@ -2431,9 +2648,13 @@
 <li>From Latin <em>rememorari</em> — "recall to mind"</li>
 <li><em>Re-</em> ("again") + <em>memorari</em> ("be mindful of")</li>
 </ul>
-<h4 class="sg-section-heading">Layer 5: Webster 1828 Definition</h4>
+</div>
+<button class="sg-inner-accordion"><span>Layer 5: Webster 1828 Definition</span></button>
+<div class="sg-inner-panel">
 <p>> <strong>REMEMBER</strong>, v.t. > > 1. To have in the mind an idea which had been in the mind before, and which recurs to the mind without effort. > > 2. To retain in the mind with effort; to keep from forgetting. > > 3. To think of and consider; to mention; to recollect and keep in view. > > 4. To mention; to recite. > > 5. To meditate. > > 6. To bear in mind with favor, or to reward. > > 7. To preserve from forgetting; to put in mind. "Remember me to your friends."</p>
-<h4 class="sg-section-heading">Theological Significance</h4>
+</div>
+<button class="sg-inner-accordion"><span>Theological Significance</span></button>
+<div class="sg-inner-panel">
 <p>God's "remembering" is a central covenantal concept:</p>
 <ul>
 <li>It assures the covenant community that God will act on their behalf</li>
@@ -2443,10 +2664,12 @@
 <p>The sacrament prayers echo this: "that they may always remember him" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/4?lang=eng&id=3" target="_blank">Moroni 4:3</a>)—inviting us to "remember" as God remembers: with faithful action.</p>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span><em>Balal</em> (בָּלַל) — "Confound"</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">Layer 1: Hebrew Foundation</h4>
+</div>
+<button class="sg-sub-accordion"><span><em>Balal</em> (בָּלַל) — "Confound"</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Layer 1: Hebrew Foundation</span></button>
+<div class="sg-inner-panel">
 <p><strong>Hebrew:</strong> <a href="https://www.blueletterbible.org/lexicon/h1101/kjv/wlc/0-1/" target="_blank"><em>balal</em></a> (בָּלַל) <strong>Pronunciation:</strong> bah-LAHL</p>
 <p><strong>Semantic Range:</strong></p>
 <ul>
@@ -2483,7 +2706,9 @@
 <li>Hebrew wordplay: sounds like <em>balal</em> = "confusion" (divine judgment)</li>
 </ul>
 <p>The inspired author subverts the Babylonians' proud name into a reminder of divine judgment.</p>
-<h4 class="sg-section-heading">Layer 2: Greek (Septuagint)</h4>
+</div>
+<button class="sg-inner-accordion"><span>Layer 2: Greek (Septuagint)</span></button>
+<div class="sg-inner-panel">
 <p><strong>Greek (LXX):</strong> <a href="https://www.blueletterbible.org/lexicon/g4797/kjv/tr/0-1/" target="_blank"><em>syncheo</em></a> (συγχέω) <strong>Pronunciation:</strong> soon-KHEH-o</p>
 <p>Meaning: "to pour together, commingle; to confuse, throw into disorder"</p>
 <p><strong>New Testament Usage:</strong></p>
@@ -2492,11 +2717,15 @@
 <li><a href="https://www.blueletterbible.org/kjv/act/19/32/s_1037032" target="_blank">Acts 19:32</a>: The assembly was "confused" (<em>synkechymene</em>)</li>
 </ul>
 <p>Pentecost is a reversal of Babel—confusion becomes understanding.</p>
-<h4 class="sg-section-heading">Layer 3: Latin (Vulgate)</h4>
+</div>
+<button class="sg-inner-accordion"><span>Layer 3: Latin (Vulgate)</span></button>
+<div class="sg-inner-panel">
 <p><strong>Latin:</strong> <a href="http://webstersdictionary1828.com/Dictionary/confound" target="_blank"><em>confundo</em></a> <strong>Pronunciation:</strong> kon-FOON-do</p>
 <p>From <em>com-</em> ("together") + <em>fundo</em> ("to pour") — literally "to pour together."</p>
 <p>This is the source of English "confound" and "confuse."</p>
-<h4 class="sg-section-heading">Layer 4: English Etymology</h4>
+</div>
+<button class="sg-inner-accordion"><span>Layer 4: English Etymology</span></button>
+<div class="sg-inner-panel">
 <p><strong>Etymology Online:</strong> <a href="https://www.etymonline.com/word/confound" target="_blank">confound</a></p>
 <p><strong>Development:</strong></p>
 <ul>
@@ -2505,9 +2734,13 @@
 <li>Original sense: to bring to ruin by mixing or mingling</li>
 </ul>
 <p>The English word has shifted from "mix" to "perplex" over time.</p>
-<h4 class="sg-section-heading">Layer 5: Webster 1828 Definition</h4>
+</div>
+<button class="sg-inner-accordion"><span>Layer 5: Webster 1828 Definition</span></button>
+<div class="sg-inner-panel">
 <p>> <strong>CONFOUND</strong>, v.t. > > 1. To mingle and blend different things, so that their forms or natures cannot be distinguished; to mix. > > 2. To throw into disorder. > > 3. To perplex; to disturb the apprehension by indistinctness of ideas or words. > > 4. To abash; to throw the mind into disorder; to cast down; to make ashamed. > > 5. To destroy; to overthrow.</p>
-<h4 class="sg-section-heading">Theological Significance</h4>
+</div>
+<button class="sg-inner-accordion"><span>Theological Significance</span></button>
+<div class="sg-inner-panel">
 <p><strong>The Nature of Babel's Confusion:</strong> Hugh Nibley argued that the "confounding" of languages was connected to the <em>mingling</em> of peoples—covenant people mixing with unbelievers:</p>
 <p>> "In the book of Ether the confounding of people is not to be separated from the confounding of their languages; they are, and have always been, one and the same process." (<em>Lehi in the Desert</em>, p. 178)</p>
 <p>This connects to Moses 8's description of the "sons of God" intermarrying with the "daughters of men"—the same pattern of confusion/mingling that preceded both the Flood and Babel.</p>
@@ -2515,9 +2748,10 @@
 <p>The Jaredites were preserved from the confounding because they remained separate from the mingling.</p>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Summary Table</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
+</div>
+<button class="sg-sub-accordion"><span>Summary Table</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <table class="info-table">
 <tr>
 <th>Transliteration</th>
@@ -2583,12 +2817,12 @@
         </div>
 
         <!-- SECTION 5: TEACHING APPLICATIONS -->
-        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">5. Teaching Applications</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
-        <div class="sg-panel" style="display: none;">
+        <button class="sg-accordion-section">5. Teaching Applications</button>
+        <div class="sg-panel">
             <div class="panel-content">
-                <button class="sg-sub-accordion active"><span>Genesis 6–11; Moses 8 | Noah, the Flood, and the Tower of Babel</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
+                <button class="sg-sub-accordion"><span>Genesis 6–11; Moses 8 | Noah, the Flood, and the Tower of Babel</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p><strong>Sections in This File:</strong></p>
 <ul>
 <li><a href="#1-personal-study-applications" target="_blank">Personal Study Applications</a> — Individual reflection</li>
@@ -2601,16 +2835,17 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Overview</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
+<button class="sg-sub-accordion"><span>Overview</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p>The story of Noah and the Flood is one of the most familiar in all scripture—so familiar that it risks becoming a mere children's story. These teaching applications are designed to help learners of all ages discover the profound theological depth of this narrative: the first biblical mention of grace, the Ark as a floating temple, the Noahic covenant's universal scope, and the Tower of Babel as a counterfeit temple. The goal is to move from "I know this story" to "I never saw it that way before."</p>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>1. Personal Study Applications</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">Theme: Grace Before Law</h4>
+<button class="sg-sub-accordion"><span>1. Personal Study Applications</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Theme: Grace Before Law</span></button>
+<div class="sg-inner-panel">
 <p><strong>Application:</strong> Genesis 6:8 is the first occurrence of "grace" (<em>chen</em>) in the Bible. Before the Flood narrative even begins, we learn that Noah "found grace in the eyes of the Lord."</p>
 <p><strong>Personal Reflection:</strong></p>
 <ul>
@@ -2619,7 +2854,9 @@
 <li>Read <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/25?lang=eng&id=23" target="_blank">2 Nephi 25:23</a> and <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/10?lang=eng&id=32" target="_blank">Moroni 10:32</a> alongside Genesis 6:8. How do these verses illuminate each other?</li>
 </ul>
 <p><strong>Scripture Chain:</strong> Genesis 6:8 → Ephesians 2:8 → 2 Nephi 10:24 → Moroni 10:32</p>
-<h4 class="sg-section-heading">Theme: God Remembers</h4>
+</div>
+<button class="sg-inner-accordion"><span>Theme: God Remembers</span></button>
+<div class="sg-inner-panel">
 <p><strong>Application:</strong> <a href="https://www.blueletterbible.org/kjv/gen/8/1/s_8001" target="_blank">Genesis 8:1</a> says "God remembered Noah." In Hebrew, <em>zakar</em> doesn't mean God had forgotten—it means He acted faithfully on Noah's behalf.</p>
 <p><strong>Personal Reflection:</strong></p>
 <ul>
@@ -2628,10 +2865,12 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>2. Family Home Evening Applications</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">Activity 1: Building an Ark</h4>
+</div>
+<button class="sg-sub-accordion"><span>2. Family Home Evening Applications</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Activity 1: Building an Ark</span></button>
+<div class="sg-inner-panel">
 <p><strong>Theme:</strong> Obedience to Revelation</p>
 <p><strong>Materials:</strong> Building blocks, cardboard boxes, or craft supplies</p>
 <p><strong>Activity:</strong></p>
@@ -2645,7 +2884,9 @@
 <li>God gave Noah exact instructions for the Ark. What "instructions" has God given our family?</li>
 <li>Noah built for 120 years without seeing rain. What are we building in faith?</li>
 </ul>
-<h4 class="sg-section-heading">Activity 2: Rainbow Covenant</h4>
+</div>
+<button class="sg-inner-accordion"><span>Activity 2: Rainbow Covenant</span></button>
+<div class="sg-inner-panel">
 <p><strong>Theme:</strong> God Keeps His Promises</p>
 <p><strong>Materials:</strong> Prism, flashlight, or rainbow craft supplies</p>
 <p><strong>Activity:</strong></p>
@@ -2659,7 +2900,9 @@
 <li>How can we "remember" our covenants like God "remembers" His?</li>
 </ul>
 <p><strong>Song:</strong> "When I Am Baptized" (Children's Songbook, 103)—the rainbow imagery connects!</p>
-<h4 class="sg-section-heading">Activity 3: Tower of Babel vs. Temple</h4>
+</div>
+<button class="sg-inner-accordion"><span>Activity 3: Tower of Babel vs. Temple</span></button>
+<div class="sg-inner-panel">
 <p><strong>Theme:</strong> True vs. Counterfeit Worship</p>
 <p><strong>Materials:</strong> Building blocks in two sets</p>
 <p><strong>Activity:</strong></p>
@@ -2674,10 +2917,12 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>3. Sunday School Teaching Applications</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">Lesson Focus 1: The Ark as Temple</h4>
+</div>
+<button class="sg-sub-accordion"><span>3. Sunday School Teaching Applications</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Lesson Focus 1: The Ark as Temple</span></button>
+<div class="sg-inner-panel">
 <p><strong>Opening Question:</strong> "What shape do you picture Noah's Ark?"</p>
 <p>Most people envision a boat shape (pointed bow, rounded hull). But Genesis describes a rectangular box—more like a building than a boat.</p>
 <p><strong>Teaching Approach:</strong></p>
@@ -2692,7 +2937,9 @@
 <li>How does entering the Ark parallel entering the temple today?</li>
 <li>The pitch (<em>kopher</em>) that sealed the Ark comes from the same root as "atonement" (<em>kaphar</em>). What does this teach about salvation?</li>
 </ul>
-<h4 class="sg-section-heading">Lesson Focus 2: Grace Before Law</h4>
+</div>
+<button class="sg-inner-accordion"><span>Lesson Focus 2: Grace Before Law</span></button>
+<div class="sg-inner-panel">
 <p><strong>Opening Question:</strong> "Where is the first mention of grace in the Bible?"</p>
 <p><strong>Teaching Approach:</strong></p>
 <ol>
@@ -2706,7 +2953,9 @@
 <li>How does this compare with <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/25?lang=eng&id=23" target="_blank">2 Nephi 25:23</a>?</li>
 <li>What is the relationship between grace and obedience in your own life?</li>
 </ul>
-<h4 class="sg-section-heading">Lesson Focus 3: The Rainbow as Divine Disarmament</h4>
+</div>
+<button class="sg-inner-accordion"><span>Lesson Focus 3: The Rainbow as Divine Disarmament</span></button>
+<div class="sg-inner-panel">
 <p><strong>Teaching Approach:</strong></p>
 <ol>
 <li>Explain that the Hebrew word for "rainbow" (<em>qesheth</em>) also means "war bow."</li>
@@ -2721,10 +2970,12 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>4. Seminary/Institute Teaching Applications</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">Deep Dive 1: Moses 8 and the "Sons of God"</h4>
+</div>
+<button class="sg-sub-accordion"><span>4. Seminary/Institute Teaching Applications</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Deep Dive 1: Moses 8 and the "Sons of God"</span></button>
+<div class="sg-inner-panel">
 <p><strong>Context:</strong> Genesis 6:1–4 is one of the most debated passages in the Bible. Who are the "sons of God" who married "daughters of men"?</p>
 <p><strong>Teaching Approach:</strong></p>
 <ol>
@@ -2747,7 +2998,9 @@
 <li>How does this interpretation speak to the importance of temple marriage?</li>
 <li>What does it mean to be "called the sons [and daughters] of God" today?</li>
 </ul>
-<h4 class="sg-section-heading">Deep Dive 2: The Tower as Anti-Temple</h4>
+</div>
+<button class="sg-inner-accordion"><span>Deep Dive 2: The Tower as Anti-Temple</span></button>
+<div class="sg-inner-panel">
 <p><strong>Teaching Approach:</strong></p>
 <ol>
 <li>Present the Tower of Babel as a Mesopotamian ziggurat—a temple structure.</li>
@@ -2783,7 +3036,9 @@
 <li>What modern "towers" do people build to reach heaven without God?</li>
 <li>How is the temple different from human attempts at self-salvation?</li>
 </ul>
-<h4 class="sg-section-heading">5. Evidence of Antiquity: Building Testimony</h4>
+</div>
+<button class="sg-inner-accordion"><span>5. Evidence of Antiquity: Building Testimony</span></button>
+<div class="sg-inner-panel">
 <p>Moses 8 and the Flood narrative contain details that Joseph Smith couldn't have known but that have since been confirmed by scholarship.</p>
 <p><strong>Key Examples to Share with Students:</strong></p>
 <table class="info-table">
@@ -2827,10 +3082,12 @@
 <p><em>Sources: Jeffrey M. Bradshaw, Book of Moses Essays <a href="https://interpreterfoundation.org/book-of-moses-essays-075" target="_blank">#75</a>–<a href="https://interpreterfoundation.org/book-of-moses-essays-077" target="_blank">#77</a> (Interpreter Foundation)</em></p>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>5. Relief Society & Priesthood Applications</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">Discussion 1: "As in the Days of Noah"</h4>
+</div>
+<button class="sg-sub-accordion"><span>5. Relief Society & Priesthood Applications</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Discussion 1: "As in the Days of Noah"</span></button>
+<div class="sg-inner-panel">
 <p><strong>Theme:</strong> The Savior compared the last days to Noah's time (<a href="https://www.blueletterbible.org/kjv/mat/24/37-39/s_953037" target="_blank">Matthew 24:37–39</a>).</p>
 <p><strong>Discussion Approach:</strong></p>
 <ol>
@@ -2843,7 +3100,9 @@
 <li>How can we avoid being so caught up in daily life that we miss prophetic warnings?</li>
 <li>Noah built the Ark for 120 years without seeing rain. What are we building in faith without yet seeing the fulfillment?</li>
 </ul>
-<h4 class="sg-section-heading">Discussion 2: The Covenant Community</h4>
+</div>
+<button class="sg-inner-accordion"><span>Discussion 2: The Covenant Community</span></button>
+<div class="sg-inner-panel">
 <p><strong>Theme:</strong> Noah saved his entire family—salvation was communal.</p>
 <p><strong>Discussion Approach:</strong></p>
 <ol>
@@ -2858,10 +3117,12 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>6. Children's Teaching Ideas</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">Activity 1: Animal Parade</h4>
+</div>
+<button class="sg-sub-accordion"><span>6. Children's Teaching Ideas</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Activity 1: Animal Parade</span></button>
+<div class="sg-inner-panel">
 <p><strong>Theme:</strong> God Cares for All Creatures</p>
 <p><strong>Activity:</strong></p>
 <ol>
@@ -2870,7 +3131,9 @@
 <li>Read <a href="https://www.blueletterbible.org/kjv/gen/9/10/s_9010" target="_blank">Genesis 9:10</a>: The covenant includes "every living creature."</li>
 </ol>
 <p><strong>Song:</strong> "The Wise Man and the Foolish Man" (Children's Songbook, 281)—connect to building on rock vs. sand, like Noah building on God's instructions.</p>
-<h4 class="sg-section-heading">Activity 2: Rainbow Promise</h4>
+</div>
+<button class="sg-inner-accordion"><span>Activity 2: Rainbow Promise</span></button>
+<div class="sg-inner-panel">
 <p><strong>Theme:</strong> God Keeps His Promises</p>
 <p><strong>Craft:</strong> Make a rainbow with colored paper strips or paint.</p>
 <p><strong>Discussion (simplified):</strong></p>
@@ -2879,7 +3142,9 @@
 <li>The rainbow reminds us that God keeps His promises.</li>
 <li>What promises has Heavenly Father made to you? (Baptism, blessing, etc.)</li>
 </ul>
-<h4 class="sg-section-heading">Activity 3: Building Towers</h4>
+</div>
+<button class="sg-inner-accordion"><span>Activity 3: Building Towers</span></button>
+<div class="sg-inner-panel">
 <p><strong>Theme:</strong> Following God's Plan</p>
 <p><strong>Activity:</strong></p>
 <ol>
@@ -2895,10 +3160,12 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>7. Missionary Teaching Applications</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">Investigator Theme: God Offers a New Beginning</h4>
+</div>
+<button class="sg-sub-accordion"><span>7. Missionary Teaching Applications</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Investigator Theme: God Offers a New Beginning</span></button>
+<div class="sg-inner-panel">
 <p><strong>Teaching Approach:</strong></p>
 <ol>
 <li>Share the Flood as a story of new beginnings—the old world washed away, a new covenant established.</li>
@@ -2910,7 +3177,9 @@
 <li>Baptism is our personal "flood"—the old life washed away, a new covenant made.</li>
 <li>Just as Noah entered the Ark to be saved, we enter the waters of baptism.</li>
 </ul>
-<h4 class="sg-section-heading">Investigator Theme: The First Mention of Grace</h4>
+</div>
+<button class="sg-inner-accordion"><span>Investigator Theme: The First Mention of Grace</span></button>
+<div class="sg-inner-panel">
 <p><strong>Teaching Approach:</strong></p>
 <ol>
 <li>Share <a href="https://www.blueletterbible.org/kjv/gen/6/8/s_6008" target="_blank">Genesis 6:8</a>: "Noah found grace in the eyes of the Lord."</li>
@@ -2920,9 +3189,10 @@
 <p><strong>Scripture Chain:</strong> Genesis 6:8 → Ephesians 2:8 → 2 Nephi 25:23 → Moroni 10:32</p>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>8. Cross-Reference Summary</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
+</div>
+<button class="sg-sub-accordion"><span>8. Cross-Reference Summary</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <table class="info-table">
 <tr>
 <th>Theme</th>
@@ -2974,12 +3244,12 @@
         </div>
 
         <!-- SECTION 6: STUDY QUESTIONS -->
-        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">6. Study Questions</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
-        <div class="sg-panel" style="display: none;">
+        <button class="sg-accordion-section">6. Study Questions</button>
+        <div class="sg-panel">
             <div class="panel-content">
-                <button class="sg-sub-accordion active"><span>Genesis 6–11; Moses 8 | February 9–15, 2026</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
+                <button class="sg-sub-accordion"><span>Genesis 6–11; Moses 8 | February 9–15, 2026</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p><strong>Sections in This File:</strong></p>
 <ul>
 <li><a href="#section-1-understanding-the-text-60-questions" target="_blank">Section 1: Understanding the Text</a> — 60 questions</li>
@@ -2992,11 +3262,12 @@
 </ul>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Overview</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
+<button class="sg-sub-accordion"><span>Overview</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p>This document provides <strong>187 questions</strong> for studying Genesis 6–11 and Moses 8, organized by category and difficulty. Use these questions for personal study, family discussions, Sunday School lessons, or seminary/institute classes.</p>
-<h4 class="sg-section-heading">Question Categories</h4>
+<button class="sg-inner-accordion"><span>Question Categories</span></button>
+<div class="sg-inner-panel">
 <table class="info-table">
 <tr>
 <th>Category</th>
@@ -3041,10 +3312,12 @@
 </table>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Section 1: Understanding the Text (60 Questions)</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">The Pre-Flood World (Moses 8:1–22; Genesis 6:1–7)</h4>
+</div>
+<button class="sg-sub-accordion"><span>Section 1: Understanding the Text (60 Questions)</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>The Pre-Flood World (Moses 8:1–22; Genesis 6:1–7)</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>According to <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/8?lang=eng&id=13" target="_blank">Moses 8:13</a>, who were called "the sons of God"?</li>
 <li>What does <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/8?lang=eng&id=14" target="_blank">Moses 8:14</a> say the "sons of men" saw in the daughters?</li>
@@ -3057,7 +3330,9 @@
 <li>What was the Lord's emotional response in <a href="https://www.blueletterbible.org/kjv/gen/6/6/s_6006" target="_blank">Genesis 6:6</a>?</li>
 <li>Who are the <em>nephilim</em> mentioned in <a href="https://www.blueletterbible.org/kjv/gen/6/4/s_6004" target="_blank">Genesis 6:4</a>?</li>
 </ol>
-<h4 class="sg-section-heading">Noah and Grace (Genesis 6:8–13)</h4>
+</div>
+<button class="sg-inner-accordion"><span>Noah and Grace (Genesis 6:8–13)</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>What did Noah find in the eyes of the Lord (<a href="https://www.blueletterbible.org/kjv/gen/6/8/s_6008" target="_blank">Genesis 6:8</a>)?</li>
 <li>How is Noah described in <a href="https://www.blueletterbible.org/kjv/gen/6/9/s_6009" target="_blank">Genesis 6:9</a>?</li>
@@ -3065,7 +3340,9 @@
 <li>Name Noah's three sons mentioned in <a href="https://www.blueletterbible.org/kjv/gen/6/10/s_6010" target="_blank">Genesis 6:10</a>.</li>
 <li>What two conditions characterized the earth before the Flood (<a href="https://www.blueletterbible.org/kjv/gen/6/11-12/s_6011" target="_blank">Genesis 6:11–12</a>)?</li>
 </ol>
-<h4 class="sg-section-heading">The Ark's Design (Genesis 6:14–22)</h4>
+</div>
+<button class="sg-inner-accordion"><span>The Ark's Design (Genesis 6:14–22)</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>What type of wood was the Ark to be made from (<a href="https://www.blueletterbible.org/kjv/gen/6/14/s_6014" target="_blank">Genesis 6:14</a>)?</li>
 <li>What was to be applied inside and outside the Ark (<a href="https://www.blueletterbible.org/kjv/gen/6/14/s_6014" target="_blank">Genesis 6:14</a>)?</li>
@@ -3077,7 +3354,9 @@
 <li>How many of each unclean animal was Noah to take (<a href="https://www.blueletterbible.org/kjv/gen/7/2/s_7002" target="_blank">Genesis 7:2</a>)?</li>
 <li>How did Noah respond to God's instructions (<a href="https://www.blueletterbible.org/kjv/gen/6/22/s_6022" target="_blank">Genesis 6:22</a>)?</li>
 </ol>
-<h4 class="sg-section-heading">The Flood (Genesis 7–8)</h4>
+</div>
+<button class="sg-inner-accordion"><span>The Flood (Genesis 7–8)</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>How old was Noah when the Flood began (<a href="https://www.blueletterbible.org/kjv/gen/7/6/s_7006" target="_blank">Genesis 7:6</a>)?</li>
 <li>How many people were saved on the Ark (<a href="https://www.blueletterbible.org/kjv/gen/7/13/s_7013" target="_blank">Genesis 7:13</a>)?</li>
@@ -3091,7 +3370,9 @@
 <li>What does <a href="https://www.blueletterbible.org/kjv/gen/8/1/s_8001" target="_blank">Genesis 8:1</a> say God did for Noah?</li>
 <li>What was the first thing Noah did after leaving the Ark (<a href="https://www.blueletterbible.org/kjv/gen/8/20/s_8020" target="_blank">Genesis 8:20</a>)?</li>
 </ol>
-<h4 class="sg-section-heading">The Noahic Covenant (Genesis 9:1–17)</h4>
+</div>
+<button class="sg-inner-accordion"><span>The Noahic Covenant (Genesis 9:1–17)</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>What command from <a href="https://www.blueletterbible.org/kjv/gen/1/28/s_1028" target="_blank">Genesis 1:28</a> is repeated in <a href="https://www.blueletterbible.org/kjv/gen/9/1/s_9001" target="_blank">Genesis 9:1</a>?</li>
 <li>What is now permitted for food that was not before (<a href="https://www.blueletterbible.org/kjv/gen/9/3/s_9003" target="_blank">Genesis 9:3</a>)?</li>
@@ -3104,7 +3385,9 @@
 <li>What is the Hebrew word for "bow" in <a href="https://www.blueletterbible.org/kjv/gen/9/13/s_9013" target="_blank">Genesis 9:13</a>?</li>
 <li>What does God say He will do when He sees the bow (<a href="https://www.blueletterbible.org/kjv/gen/9/16/s_9016" target="_blank">Genesis 9:16</a>)?</li>
 </ol>
-<h4 class="sg-section-heading">Noah's Vineyard (Genesis 9:18–29)</h4>
+</div>
+<button class="sg-inner-accordion"><span>Noah's Vineyard (Genesis 9:18–29)</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>What did Noah plant after the Flood (<a href="https://www.blueletterbible.org/kjv/gen/9/20/s_9020" target="_blank">Genesis 9:20</a>)?</li>
 <li>What happened to Noah in his tent (<a href="https://www.blueletterbible.org/kjv/gen/9/21/s_9021" target="_blank">Genesis 9:21</a>)?</li>
@@ -3112,14 +3395,18 @@
 <li>How did Shem and Japheth respond (<a href="https://www.blueletterbible.org/kjv/gen/9/23/s_9023" target="_blank">Genesis 9:23</a>)?</li>
 <li>Upon whom did Noah pronounce a curse (<a href="https://www.blueletterbible.org/kjv/gen/9/25/s_9025" target="_blank">Genesis 9:25</a>)?</li>
 </ol>
-<h4 class="sg-section-heading">The Table of Nations (Genesis 10)</h4>
+</div>
+<button class="sg-inner-accordion"><span>The Table of Nations (Genesis 10)</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>Who are the three sons whose descendants are listed in Genesis 10?</li>
 <li>Who was Nimrod, and how is he described (<a href="https://www.blueletterbible.org/kjv/gen/10/8-9/s_10008" target="_blank">Genesis 10:8–9</a>)?</li>
 <li>What cities did Nimrod build (<a href="https://www.blueletterbible.org/kjv/gen/10/10-12/s_10010" target="_blank">Genesis 10:10–12</a>)?</li>
 <li>From which son of Noah did Abraham descend?</li>
 </ol>
-<h4 class="sg-section-heading">The Tower of Babel (Genesis 11:1–9)</h4>
+</div>
+<button class="sg-inner-accordion"><span>The Tower of Babel (Genesis 11:1–9)</span></button>
+<div class="sg-inner-panel">
 <ol>
 <li>What was the linguistic condition of the earth at first (<a href="https://www.blueletterbible.org/kjv/gen/11/1/s_11001" target="_blank">Genesis 11:1</a>)?</li>
 <li>Where did the people settle (<a href="https://www.blueletterbible.org/kjv/gen/11/2/s_11002" target="_blank">Genesis 11:2</a>)?</li>
@@ -3130,9 +3417,10 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Section 2: Personal Application (30 Questions)</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
+</div>
+<button class="sg-sub-accordion"><span>Section 2: Personal Application (30 Questions)</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <ol>
 <li>Noah "found grace" before he was saved. How have you experienced God's grace before you were ready for it?</li>
 <li>Noah built the Ark for 120 years without seeing rain. What are you building in faith without yet seeing the fulfillment?</li>
@@ -3167,9 +3455,9 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Section 3: Doctrinal Understanding (30 Questions)</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
+<button class="sg-sub-accordion"><span>Section 3: Doctrinal Understanding (30 Questions)</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <ol>
 <li>Why is it significant that "grace" first appears in <a href="https://www.blueletterbible.org/kjv/gen/6/8/s_6008" target="_blank">Genesis 6:8</a> rather than after the law?</li>
 <li>How does the Ark-as-temple reading change your understanding of the Flood narrative?</li>
@@ -3204,9 +3492,9 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Section 4: Modern Relevance (30 Questions)</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
+<button class="sg-sub-accordion"><span>Section 4: Modern Relevance (30 Questions)</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <ol>
 <li>Jesus compared the last days to Noah's time (<a href="https://www.blueletterbible.org/kjv/mat/24/37-39/s_953037" target="_blank">Matthew 24:37–39</a>). What parallels do you see?</li>
 <li>How do modern prophets function as "preachers of righteousness" like Noah?</li>
@@ -3241,9 +3529,9 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Section 5: Synthesis Questions (20 Questions)</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
+<button class="sg-sub-accordion"><span>Section 5: Synthesis Questions (20 Questions)</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <ol>
 <li>Compare the weeping God of Moses 7 with the grieving God of Genesis 6:6. What do these passages together teach about divine emotion?</li>
 <li>How does Noah's role as "preacher of righteousness" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/8?lang=eng&id=19" target="_blank">Moses 8:19</a>) continue Enoch's ministry from the previous week?</li>
@@ -3268,9 +3556,9 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Section 6: Discussion Questions (10 Questions)</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
+<button class="sg-sub-accordion"><span>Section 6: Discussion Questions (10 Questions)</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <ol>
 <li><strong>Grace vs. Works:</strong> Noah "found grace" AND was "just and perfect." How do grace and obedience work together? Is it grace → obedience or obedience → grace?</li>
 <li><strong>Divine Emotion:</strong> Genesis 6:6 says God was "grieved" and "it repented the Lord." Does God change His mind? Can an eternal God experience grief? How does this relate to Moses 7's weeping God?</li>
@@ -3285,9 +3573,9 @@
 </ol>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>Bonus: Evidence of Antiquity Questions</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
+<button class="sg-sub-accordion"><span>Bonus: Evidence of Antiquity Questions</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
 <p>The following questions explore ancient parallels to Genesis/Moses that Joseph Smith couldn't have known. These parallels strengthen the case for the ancient origins and inspired restoration of these texts.</p>
 <ol>
 <li><strong>The Ark as Temple:</strong> Modern scholarship recognizes the Ark was designed as a floating temple—its three levels matching the Tabernacle, its dimensions proportional to sacred structures. This insight was developed in the 20th century. What does it mean that Joseph Smith's inspired translation emphasizes themes that scholars wouldn't recognize until 100 years later?</li>
@@ -3301,30 +3589,37 @@
 <p><em>Sources: Jeffrey M. Bradshaw, Book of Moses Essays <a href="https://interpreterfoundation.org/book-of-moses-essays-075" target="_blank">#75</a>–<a href="https://interpreterfoundation.org/book-of-moses-essays-077" target="_blank">#77</a> (Interpreter Foundation); Hugh W. Nibley, Enoch the Prophet</em></p>
 </div>
 </div>
-<button class="sg-sub-accordion active"><span>How to Use These Questions</span></button>
-<div class="sg-sub-panel active">
-<div class="sg-sub-panel-content" style="display: block;">
-<h4 class="sg-section-heading">Personal Study</h4>
+<button class="sg-sub-accordion"><span>How to Use These Questions</span></button>
+<div class="sg-sub-panel">
+<div class="sg-sub-panel-content">
+<button class="sg-inner-accordion"><span>Personal Study</span></button>
+<div class="sg-inner-panel">
 <ul>
 <li>Select 5–10 questions that address your current needs</li>
 <li>Journal your responses</li>
 <li>Cross-reference suggested scriptures</li>
 <li>Return to questions as understanding deepens</li>
 </ul>
-<h4 class="sg-section-heading">Family Discussion</h4>
+</div>
+<button class="sg-inner-accordion"><span>Family Discussion</span></button>
+<div class="sg-inner-panel">
 <ul>
 <li>Choose 2–3 questions appropriate for family members' ages</li>
 <li>Use the simpler Understanding questions for children</li>
 <li>Use Discussion questions for teenagers and adults</li>
 </ul>
-<h4 class="sg-section-heading">Sunday School / Seminary</h4>
+</div>
+<button class="sg-inner-accordion"><span>Sunday School / Seminary</span></button>
+<div class="sg-inner-panel">
 <ul>
 <li>Select questions matching lesson objectives</li>
 <li>Use Understanding questions to establish baseline knowledge</li>
 <li>Progress to Application and Synthesis for deeper discussion</li>
 <li>End with Discussion questions for open conversation</li>
 </ul>
-<h4 class="sg-section-heading">Scripture Journal Template</h4>
+</div>
+<button class="sg-inner-accordion"><span>Scripture Journal Template</span></button>
+<div class="sg-inner-panel">
 <p>For each question, consider recording:</p>
 <ol>
 <li>Your initial response</li>
@@ -3342,6 +3637,7 @@
 <p><strong>File Status:</strong> Complete <strong>Last Updated:</strong> January 20, 2026 <strong>Total Questions:</strong> 187 (including 7 Evidence of Antiquity bonus questions)</p>
 </div>
 </div>
+</div>
             </div>
         </div>
 
@@ -3351,4 +3647,81 @@
     
 
 
-    <!-- Bottom Navigation --></div></body></html>
+    <!-- Bottom Navigation -->
+    <div class="section-navigation">
+        <div class="nav-container">
+            <span class="nav-disabled">← Previous</span>
+            <a href="index.html" class="nav-link index">Study Guide Index</a>
+            <span class="nav-disabled">Next →</span>
+        </div>
+    </div>
+
+<script>
+
+        // Main accordion sections
+        const accordionSections = document.querySelectorAll('.sg-accordion-section');
+        accordionSections.forEach(section => {
+            section.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const panel = this.nextElementSibling;
+                panel.classList.toggle('active');
+            });
+        });
+
+        // Sub-accordions (nested within main panels)
+        const subAccordions = document.querySelectorAll('.sg-sub-accordion');
+        subAccordions.forEach(subAccordion => {
+            subAccordion.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const subPanel = this.nextElementSibling;
+                subPanel.classList.toggle('active');
+            });
+        });
+
+        // Inner accordions (third level - nested within sg-sub-panels)
+        const innerAccordions = document.querySelectorAll('.sg-inner-accordion');
+        innerAccordions.forEach(innerAccordion => {
+            innerAccordion.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const innerPanel = this.nextElementSibling;
+                innerPanel.classList.toggle('active');
+            });
+        });
+
+        function expandAll() {
+            // Expand main sections
+            accordionSections.forEach(section => {
+                section.classList.add('active');
+                section.nextElementSibling.classList.add('active');
+            });
+            // Expand sg-sub-accordions
+            subAccordions.forEach(sub => {
+                sub.classList.add('active');
+                sub.nextElementSibling.classList.add('active');
+            });
+            // Expand inner accordions
+            innerAccordions.forEach(inner => {
+                inner.classList.add('active');
+                inner.nextElementSibling.classList.add('active');
+            });
+        }
+
+        function collapseAll() {
+            // Collapse main sections
+            accordionSections.forEach(section => {
+                section.classList.remove('active');
+                section.nextElementSibling.classList.remove('active');
+            });
+            // Collapse sg-sub-accordions
+            subAccordions.forEach(sub => {
+                sub.classList.remove('active');
+                sub.nextElementSibling.classList.remove('active');
+            });
+            // Collapse inner accordions
+            innerAccordions.forEach(inner => {
+                inner.classList.remove('active');
+                inner.nextElementSibling.classList.remove('active');
+            });
+        }
+        
+</script>
