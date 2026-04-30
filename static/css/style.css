@@ -573,6 +573,16 @@ body {
     transition: all 0.2s;
 }
 .tab-btn:hover { color: var(--sage-dark); background: rgba(255,255,255,0.5); }
+
+.tab-nav-week18 {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+.tab-nav-week18 .tab-btn {
+    flex: 0 0 auto;
+}
+
 .tab-btn.active {
     color: var(--sage-dark);
     background: var(--white);

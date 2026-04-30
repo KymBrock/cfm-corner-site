@@ -20,7 +20,9 @@
 </div>
 {{ end }}
 
+
 <!-- Tabs -->
+{{ $weekNum := .Params.week_num }}
 <div class="tab-nav">
     <button class="tab-btn active" onclick="showTab('resources', this)">Resources</button>
     <button class="tab-btn" onclick="showTab('insights', this)">Weekly Insights</button>
@@ -28,21 +30,31 @@
     <button class="tab-btn" onclick="showTab('charts', this)">Charts &amp; Tools</button>
 </div>
 
+{{ $resourcesFile := printf "static/content/week%s/resources.html" $weekNum }}
 <div id="tab-resources" class="tab-content active">
     <div class="content-panel embedded-content">
-        {{ readFile (printf "static/content/week%s/resources.html" .Params.week_num) | safeHTML }}
+        {{ if (fileExists $resourcesFile) }}
+            {{ readFile $resourcesFile | safeHTML }}
+        {{ else }}
+            <p style="text-align: center; color: var(--text-muted); padding: 40px;">Resources coming soon.</p>
+        {{ end }}
     </div>
 </div>
 
+{{ $insightsFile := printf "static/content/week%s/insights.html" $weekNum }}
 <div id="tab-insights" class="tab-content">
     <div class="content-panel embedded-content">
-        {{ readFile (printf "static/content/week%s/insights.html" .Params.week_num) | safeHTML }}
+        {{ if (fileExists $insightsFile) }}
+            {{ readFile $insightsFile | safeHTML }}
+        {{ else }}
+            <p style="text-align: center; color: var(--text-muted); padding: 40px;">Weekly insights coming soon.</p>
+        {{ end }}
     </div>
 </div>
 
 <div id="tab-study-guide" class="tab-content">
     <div class="content-panel embedded-content">
-        {{ $sgFile := printf "static/content/week%s/study-guide.html" .Params.week_num }}
+        {{ $sgFile := printf "static/content/week%s/study-guide.html" $weekNum }}
         {{ if (fileExists $sgFile) }}
             {{ readFile $sgFile | safeHTML }}
         {{ else }}
@@ -56,6 +68,7 @@
     <div class="chart-grid">
         {{ range . }}
         <a href="{{ .url | relURL }}" class="chart-card">
+            {{ with .image }}<img src="{{ . | relURL }}" alt="" style="width: 100%; height: auto; border-radius: 8px 8px 0 0; display: block;">{{ end }}
             <h3>{{ .title }}</h3>
             <p>{{ .description }}</p>
         </a>

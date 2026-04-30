@@ -1,0 +1,1553 @@
+<style>
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+        .site-header {
+            background: linear-gradient(135deg, #d4c4a8 0%, #8B7355 100%);
+            color: white; padding: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px;
+        }
+        .site-header-content { max-width: 1000px; margin: 0 auto; padding: 0 20px; text-align: center; }
+        .site-title { font-size: 2em; margin-bottom: 5px; }
+        .site-subtitle { font-size: 1.1em; opacity: 0.9; }
+
+        .header-section {
+            background-color: #8B7355; color: white; padding: 40px; border-radius: 12px;
+            margin-bottom: 30px; text-align: center;
+        }
+        .header-section .week-label { font-size: 1em; text-transform: uppercase; letter-spacing: 2px; opacity: 0.9; margin-bottom: 10px; }
+        .header-section h1 { font-size: 2.5em; font-weight: 300; margin-bottom: 10px; }
+        .header-section .subtitle { font-size: 1.3em; font-style: italic; margin-bottom: 20px; }
+        .header-section .date-location { font-size: 1.1em; opacity: 0.95; }
+
+        .quick-links { text-align: center; margin: 20px 0; }
+        .quick-link {
+            display: inline-block; background: #8B7355; color: white; padding: 10px 20px;
+            border-radius: 8px; text-decoration: none; margin: 5px; transition: all 0.3s;
+        }
+        .quick-link:hover { background: #6B5344; transform: translateY(-2px); }
+
+        .button-container { text-align: center; margin: 30px 0; }
+        .expand-button {
+            background-color: #8B7355; color: white; border: none; padding: 12px 24px;
+            margin: 5px 10px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em;
+        }
+        .expand-button:hover { background-color: #6B5344; }
+
+        .sg-accordion-section {
+            background-color: #8B7355; color: white; cursor: pointer; padding: 18px; width: 100%;
+            border: none; text-align: left; font-size: 1.2em; font-weight: 600; font-family: Georgia, serif;
+            border-radius: 8px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center;
+        }
+        .sg-accordion-section:hover { background-color: #6B5344; }
+        .sg-accordion-section::after { content: '\25BC'; font-size: 0.9em; transition: transform 0.3s; }
+        .sg-accordion-section.active::after { transform: rotate(180deg); }
+
+        .sg-panel {
+            background-color: white; border-radius: 0 0 8px 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .sg-panel.active { display: block; }
+        .panel-content { padding: 30px; }
+        .panel-content h2 { color: #8B7355; margin-bottom: 20px; font-size: 1.8em; }
+        .panel-content h3 { color: #6B5344; margin-top: 25px; margin-bottom: 15px; font-size: 1.4em; }
+        .panel-content h4 { color: #5a4a3a; margin-top: 20px; margin-bottom: 12px; font-size: 1.2em; }
+        .panel-content ul, .panel-content ol { margin-left: 25px; margin-bottom: 15px; }
+        .panel-content li { margin-bottom: 8px; }
+        .panel-content p { margin-bottom: 15px; text-align: justify; }
+        .panel-content a { color: #8B7355; }
+        .panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .panel-content blockquote {
+            margin: 20px 0 20px 20px;
+            padding: 15px 20px;
+            border-left: 4px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 8px 8px 0;
+        }
+        .panel-content blockquote p { margin-bottom: 8px; }
+        .panel-content blockquote p:last-child { margin-bottom: 0; }
+        .panel-content blockquote cite {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #8B7355;
+            font-style: normal;
+        }
+
+        .panel-content strong { color: #6B5344; }
+        .panel-content em { color: #5a4a3a; }
+
+        .panel-content hr {
+            border: none;
+            border-top: 2px solid #e8e0d5;
+            margin: 25px 0;
+        }
+
+        .panel-content code {
+            background-color: #f5f0e8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #6B5344;
+        }
+
+        .info-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .info-table th, .info-table td { border: 1px solid #d4c4a8; padding: 12px; text-align: left; }
+        .info-table th { background-color: #f5f0e8; color: #6B5344; font-weight: bold; }
+        .info-table tr:nth-child(even) { background-color: #faf8f5; }
+
+        .sg-sub-accordion {
+            background-color: #f5f0e8;
+            color: #5a4a3a;
+            cursor: pointer;
+            padding: 14px 40px 14px 18px;
+            width: 100%;
+            text-align: left;
+            border: 1px solid #d4c4a8;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            margin-top: 10px;
+            position: relative;
+            transition: background-color 0.2s;
+        }
+
+        .sg-sub-accordion:hover {
+            background-color: #e8e0d4;
+        }
+
+        .sg-sub-accordion::after {
+            content: '\25BC';
+            font-size: 0.8em;
+            color: #8B7355;
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s;
+        }
+
+        .sg-sub-accordion.active::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .sg-sub-panel {
+            background-color: #fafafa;
+            border-radius: 0 0 6px 6px;
+            border: 1px solid #d4c4a8;
+            border-top: none;
+            display: none;
+            transition: max-height 0.3s ease-out;
+            margin-bottom: 10px;
+        }
+
+        .sg-sub-panel.active {
+            display: block;
+            overflow: visible;
+            transition: max-height 0.3s ease-in;
+        }
+
+        .sg-sub-panel-content {
+            padding: 20px 25px;
+        }
+
+        .sg-sub-panel-content h3 { color: #6B5344; margin-top: 20px; margin-bottom: 12px; font-size: 1.3em; }
+        .sg-sub-panel-content h4 { color: #5a4a3a; margin-top: 15px; margin-bottom: 10px; font-size: 1.15em; }
+        .sg-sub-panel-content p { margin-bottom: 12px; text-align: justify; }
+        .sg-sub-panel-content ul, .sg-sub-panel-content ol { margin-left: 25px; margin-bottom: 12px; }
+        .sg-sub-panel-content li { margin-bottom: 6px; }
+        .sg-sub-panel-content a { color: #8B7355; }
+        .sg-sub-panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .sg-sub-panel-content blockquote {
+            margin: 15px 0 15px 15px;
+            padding: 12px 18px;
+            border-left: 3px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 6px 6px 0;
+        }
+        .sg-sub-panel-content blockquote p { margin-bottom: 6px; }
+        .sg-sub-panel-content blockquote p:last-child { margin-bottom: 0; }
+        .sg-sub-panel-content strong { color: #6B5344; }
+        .sg-sub-panel-content hr { border: none; border-top: 1px solid #e8e0d5; margin: 20px 0; }
+
+        @media (max-width: 768px) {
+            .header-section h1 { font-size: 1.8em; }
+            .panel-content { padding: 20px; }
+            .sg-sub-panel-content { padding: 15px 18px; }
+        }
+
+        .sg-section-heading {
+            margin: 1.2em 0 0.6em 0;
+            padding: 0.4em 0 0.4em 0.8em;
+            border-left: 3px solid #8B9D77;
+            color: #5a6b4f;
+            font-size: 1.05em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+        }
+        .sg-section-actions {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 28px;
+        }
+        .sg-section-actions .sg-action-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.35);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            padding: 0;
+            line-height: 1;
+        }
+        .sg-section-actions .sg-action-btn:hover {
+            background: rgba(255,255,255,0.35);
+        }
+    </style>
+
+
+<div class="container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <p class="week-label">Week 18</p>
+            <h1>Exodus 35–40 — Overview</h1>
+            <div class="subtitle">"The Glory of the LORD Filled the Tabernacle"</div>
+            <div class="date-location"></div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/18?lang=eng" target="_blank" class="quick-link">CFM Manual</a>
+        </div>
+
+        <!-- Expand/Collapse Buttons -->
+        <div class="button-container">
+            <button class="expand-button" onclick="expandAll()"><span class="btn-icon">&#x229E;</span> Expand All</button>
+            <button class="expand-button" onclick="collapseAll()"><span class="btn-icon">&#x229F;</span> Collapse All</button>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 1: EXODUS 35–40: OVERVIEW -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">1. Exodus 35–40: Overview</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Overview</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>After the catastrophe of the golden calf — the shattered tablets, the terrible intercession, the devastating nearness of total destruction — something astonishing happens. God does not pull away. He moves in.</p>
+<p>Moses gathers the people and issues two commands: keep the Sabbath (<a href="https://www.blueletterbible.org/kjv/exo/35/1-3/s_85001" target="_blank" data-ref="Exodus 35:1-3">Ex 35:1-3</a>), and bring offerings for the Tabernacle (<a href="https://www.blueletterbible.org/kjv/exo/35/4-19/s_85004" target="_blank" data-ref="Exodus 35:4-19">Ex 35:4-19</a>). What follows is one of the most remarkable scenes in the Torah. The people respond with such overwhelming generosity that Moses has to command them to stop giving (<a href="https://www.blueletterbible.org/kjv/exo/36/5-7/s_86005" target="_blank" data-ref="Exodus 36:5-7">Ex 36:5-7</a>). Bezalel and Oholiab, filled with the Spirit of God, lead the sacred work — metalwork, woodwork, weaving, stone-setting — and every element is made "as the LORD commanded Moses," a phrase that thunders through <a href="https://www.blueletterbible.org/kjv/exo/39/1/s_89001" target="_blank" data-ref="Exodus 39">Exodus 39-40</a> like a liturgical refrain.</p>
+<p>The priestly garments are completed: the ephod, the breastplate bearing the names of the twelve tribes, the robe of the ephod with its golden bells and pomegranates, and the golden plate inscribed "HOLINESS TO THE LORD" (<a href="https://www.blueletterbible.org/kjv/exo/39/30/s_89030" target="_blank" data-ref="Exodus 39:30">Ex 39:30</a>). Moses inspects everything. The people have done exactly as commanded. Moses blesses them (<a href="https://www.blueletterbible.org/kjv/exo/39/43/s_89043" target="_blank" data-ref="Exodus 39:43">Ex 39:43</a>).</p>
+<p>Then, on the first day of the first month of the second year, the Tabernacle is erected. Moses sets every piece in its place. And then — the moment the entire book of Exodus has been building toward — the cloud covers the tent of meeting, and the glory of the LORD fills the Mishkan so completely that even Moses cannot enter (<a href="https://www.blueletterbible.org/kjv/exo/40/34-35/s_90034" target="_blank" data-ref="Exodus 40:34-35">Ex 40:34-35</a>).</p>
+<p>The God who thundered at Sinai, who nearly consumed Israel, who proclaimed His mercy from a cleft in the rock — now <em>dwells</em> among them. The Tabernacle is not a building project. It is a homecoming.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Central Insight</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<blockquote>
+<p>"Then a cloud covered the tent of the congregation, and the glory of the LORD filled the tabernacle." (<a href="https://www.blueletterbible.org/kjv/exo/40/34/s_90034" target="_blank" data-ref="Exodus 40:34">Exodus 40:34</a>)</p>
+</blockquote>
+<p>Exodus begins with Israel enslaved in Egypt. It ends with God living among them. The true goal of the Exodus was never simply freedom — it was <em>presence</em>. Every plague, every miracle, every act of deliverance was pointed at this: the God of Abraham, Isaac, and Jacob taking up residence in the middle of the camp.</p>
+<p>And this happens <em>after</em> the golden calf. That is the astonishing part. The Tabernacle is not built by a perfect people as a reward for obedience. It is built by a forgiven people as the visible proof that God's covenant holds. As Rashi teaches, the Mishkan is testimony that God forgave Israel for the calf. The Shechinah dwelling among them is the sign that the relationship survived.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Key Themes</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>1. Freewill Offerings: The Heart That Moves</h3>
+<p>The Tabernacle materials come not from compulsion or taxation but from <a href="https://www.blueletterbible.org/lexicon/h5071/kjv/wlc/0-1/" target="_blank" data-lexicon="voluntariness, free-will offeringvoluntarinessfreewill, voluntary, offering" data-strongs="H5071" data-translit="nᵊḏāḇâ" data-original="נְדָבָה" data-lang="hebrew" data-verse="">נְדָבָה</a> (<em>nedavah</em>) — freewill offerings. <a href="https://www.blueletterbible.org/kjv/exo/35/21/s_85021" target="_blank" data-ref="Exodus 35:21">Exodus 35:21</a> says "every one whose heart stirred him up, and every one whom his spirit made willing" brought their offering. The verb used is <a href="https://www.blueletterbible.org/lexicon/h5375/kjv/wlc/0-1/" target="_blank" data-lexicon="to lift, bear up, carry, take(Qal)to lift, lift upto bear, carry, support, sustain, endureto take, take away, carry o..." data-strongs="H5375" data-translit="nāśā&#x27;" data-original="נָשָׂא" data-lang="hebrew" data-verse="">נָשָׂא</a> (<em>nasa</em>) — their hearts were <em>lifted</em>. Something broke open in Israel after the golden calf crisis. The same people who gave gold to make an idol now give gold to build God's dwelling.</p>
+<h3>2. Spirit-Filled Craftsmanship</h3>
+<p>Bezalel is the first person in Scripture described as being filled with the Spirit of God (<a href="https://www.blueletterbible.org/kjv/exo/35/31/s_85031" target="_blank" data-ref="Exodus 35:31">Ex 35:31</a>) — and the gift is for artistry: metalwork, stone-cutting, woodworking, weaving. Oholiab partners with him, and together they teach others (<a href="https://www.blueletterbible.org/kjv/exo/35/34/s_85034" target="_blank" data-ref="Exodus 35:34">Ex 35:34</a>). God's Spirit does not bypass human skill; it fills and elevates it. Sacred work is consecrated labor, not mere construction.</p>
+<h3>3. "As the LORD Commanded Moses"</h3>
+<p>This phrase appears at least eighteen times in <a href="https://www.blueletterbible.org/kjv/exo/39/1/s_89001" target="_blank" data-ref="Exodus 39">Exodus 39-40</a> — a deliberate literary drumbeat. After the golden calf, when Israel acted on their own initiative and made what <em>they</em> wanted, the repetition of exact obedience is the counterpoint. The Tabernacle is not built according to human imagination. It is built according to divine pattern.</p>
+<h3>4. The Priestly Garments: Holiness Made Visible</h3>
+<p>The garments of the High Priest (<a href="https://www.blueletterbible.org/kjv/exo/39/1/s_89001" target="_blank" data-ref="Exodus 39">Ex 39</a>) are not decorative costume. The breastplate bears the names of all twelve tribes — the High Priest carries Israel on his heart before God. The golden plate on his forehead reads קֹדֶשׁ לַיהוָה (<em>kodesh la-YHWH</em>), "Holiness to the LORD" — the same inscription that appears on Latter-day Saint temples today. Clothing, in Israel's theology, declares identity and purpose.</p>
+<h3>5. Covenant Rupture to Covenant Restoration</h3>
+<p><a href="https://www.blueletterbible.org/kjv/exo/32/1/s_82001" target="_blank" data-ref="Exodus 32">Exodus 32-34</a> narrates the worst failure in Israel's wilderness experience. <a href="https://www.blueletterbible.org/kjv/exo/35/1/s_85001" target="_blank" data-ref="Exodus 35">Exodus 35-40</a> narrates the restoration. The movement from one to the other — sin, intercession, mercy, renewed instructions, willing obedience, divine presence — forms the most complete picture of repentance and covenant renewal in the Torah. The glory that fills the Tabernacle is forgiveness made visible.</p>
+<h3>6. The Tabernacle as Temple Pattern</h3>
+<p>Every element of the Tabernacle anticipates the temple: washing at the laver, anointing, clothing in sacred garments, the veil separating degrees of holiness, the progression from outer to inner, and ultimately the presence of God. For Latter-day Saints, the Tabernacle is not just ancient history — it is the archetype of the house of the Lord.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Scripture Range</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Chapter</th><th>Content</th></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/35/1-3/s_85001" target="_blank" data-ref="Exodus 35:1-3">Exodus 35:1-3</a></td><td>The Sabbath command — rest before sacred work</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/35/4-29/s_85004" target="_blank" data-ref="Exodus 35:4-29">Exodus 35:4-29</a></td><td>The call for freewill offerings; the people respond overwhelmingly</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/35/30-36/s_85030" target="_blank" data-ref="Exodus 35:30-36">Exodus 35:30-36</a>:7</td><td>Bezalel and Oholiab appointed; the people give more than enough</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/36/8-38/s_86008" target="_blank" data-ref="Exodus 36:8-38">Exodus 36:8-38</a></td><td>Construction of the Tabernacle structure: curtains, frames, veil</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/37/1/s_87001" target="_blank" data-ref="Exodus 37">Exodus 37</a></td><td>The Ark, Mercy Seat, Table, Menorah, and Incense Altar crafted</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/38/1/s_88001" target="_blank" data-ref="Exodus 38">Exodus 38</a></td><td>The Altar of Burnt Offering, Laver, and courtyard; accounting of materials</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/39/1/s_89001" target="_blank" data-ref="Exodus 39">Exodus 39</a></td><td>The priestly garments completed; "as the LORD commanded Moses" refrain</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/40/1-33/s_90001" target="_blank" data-ref="Exodus 40:1-33">Exodus 40:1-33</a></td><td>Moses assembles the Tabernacle on the first day of the first month</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/40/34-38/s_90034" target="_blank" data-ref="Exodus 40:34-38">Exodus 40:34-38</a></td><td>The glory of the LORD fills the Tabernacle — the climax of Exodus</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Dramatic Arc</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>Covenant Given</strong> (<a href="https://www.blueletterbible.org/kjv/exo/19/1/s_69001" target="_blank" data-ref="Exodus 19">Ex 19-24</a>): "All that the LORD hath said will we do"</li>
+<li><strong>Tabernacle Instructions</strong> (<a href="https://www.blueletterbible.org/kjv/exo/25/1/s_75001" target="_blank" data-ref="Exodus 25">Ex 25-31</a>): The blueprint for God's dwelling</li>
+<li><strong>Covenant Shattered</strong> (<a href="https://www.blueletterbible.org/kjv/exo/32/1/s_82001" target="_blank" data-ref="Exodus 32">Ex 32-34</a>): Golden calf, tablets broken, mercy pleaded</li>
+<li><strong>Offerings Given</strong> (<a href="https://www.blueletterbible.org/kjv/exo/35/1-36/s_85001" target="_blank" data-ref="Exodus 35:1-36">Ex 35:1-36</a>:7): Hearts stirred, hands willing, abundance poured out</li>
+<li><strong>Sacred Work</strong> (<a href="https://www.blueletterbible.org/kjv/exo/36/8-39/s_86008" target="_blank" data-ref="Exodus 36:8-39">Ex 36:8-39</a>:31): Everything made exactly as commanded</li>
+<li><strong>Inspection and Blessing</strong> (<a href="https://www.blueletterbible.org/kjv/exo/39/32-43/s_89032" target="_blank" data-ref="Exodus 39:32-43">Ex 39:32-43</a>): "They had done it as the LORD had commanded"</li>
+<li><strong>Assembly</strong> (<a href="https://www.blueletterbible.org/kjv/exo/40/1-33/s_90001" target="_blank" data-ref="Exodus 40:1-33">Ex 40:1-33</a>): Moses sets every piece in its place</li>
+<li><strong>God Moves In</strong> (<a href="https://www.blueletterbible.org/kjv/exo/40/34-38/s_90034" target="_blank" data-ref="Exodus 40:34-38">Ex 40:34-38</a>): The glory fills the Tabernacle — forgiveness made visible</li>
+</ol>
+<p>The arc moves from rupture to restoration, from human failure to divine indwelling. The Tabernacle answers the question that the golden calf raised: <em>Will God still be with us?</em> The answer is yes — and He comes closer than ever.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Why This Section Matters</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>Forgiveness made visible</strong>: The Tabernacle is not built by a perfect people but by a <em>forgiven</em> people. God dwelling among them is the proof of restored relationship.</li>
+<li><strong>Sacred beauty as worship</strong>: Bezalel's artistry, the people's offerings, the exquisite garments — beauty is not incidental to holiness. It is an expression of it.</li>
+<li><strong>Temple pattern</strong>: Every element anticipates the temple — washing, anointing, clothing, the veil, graduated holiness, and the presence of God.</li>
+<li><strong>Exact obedience</strong>: The eighteen-fold "as the LORD commanded Moses" teaches that in holy things, obedience is not grudging compliance but joyful precision.</li>
+<li><strong>The goal of redemption is presence</strong>: The Exodus was not ultimately about freedom from Egypt but about God dwelling with His people. The same is true of our own redemption.</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>This Week's Question</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The Tabernacle was built after Israel's worst failure. The glory of the LORD filled it not because the people were perfect but because God chose to dwell among them anyway. What would it mean for you to believe — really believe — that God responds to your repentance not with distance but with presence? That after the shattered tablets, He moves in?</p>
+<hr>
+<p><em><a href="https://www.blueletterbible.org/kjv/exo/35/1/s_85001" target="_blank" data-ref="Exodus 35">Exodus 35-40</a> Standalone Study Guide | CFM Corner | OT 2026</em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 2: EXODUS 35–40: HISTORICAL AND CULTURAL CONTEXT -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">2. Exodus 35–40: Historical and Cultural Context</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>The Tabernacle Built — God Dwells Among His People</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Setting</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The golden calf crisis is past. The covenant has been renewed. Moses has descended from Sinai with the second set of tablets, his face shining with the reflected glory of God. Now comes the response: not more law, not further punishment, but sacred construction. God has given the blueprint (<a href="https://www.blueletterbible.org/kjv/exo/25/1/s_75001" target="_blank" data-ref="Exodus 25">Exodus 25-31</a>). Israel must now build.</p>
+<p>What follows in <a href="https://www.blueletterbible.org/kjv/exo/35/1/s_85001" target="_blank" data-ref="Exodus 35">Exodus 35-40</a> is the most detailed construction account in the Hebrew Bible — six full chapters describing the building of a portable tent. Modern readers sometimes skim these chapters, puzzled by the repetition. But for ancient Israel, this text was anything but tedious. It was the reversal of the golden calf. Every stitch, every socket, every piece of hammered gold said one thing: <em>we are building according to His pattern this time, not ours.</em></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>1. The Mishkan: "Dwelling Place," Not "Worship Center"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Root <a href="https://www.blueletterbible.org/lexicon/h7932/kjv/wlc/0-1/" target="_blank" data-lexicon="to dwell, reside(P&#x27;al) to dwell(Pael) to cause to dwell" data-strongs="H7932" data-translit="šᵊḵan" data-original="שְׁכַן" data-lang="hebrew" data-verse="">שׁכן</a> (Shachan)</h3>
+<p>The Tabernacle is called <a href="https://www.blueletterbible.org/lexicon/h4907/kjv/wlc/0-1/" target="_blank" data-lexicon="abode (of God)" data-strongs="H4907" data-translit="miškan" data-original="מִשְׁכַּן" data-lang="hebrew" data-verse="">מִשְׁכָּן</a> (<em>Mishkan</em>), from the root <a href="https://www.blueletterbible.org/lexicon/h7932/kjv/wlc/0-1/" target="_blank" data-lexicon="to dwell, reside(P&#x27;al) to dwell(Pael) to cause to dwell" data-strongs="H7932" data-translit="šᵊḵan" data-original="שְׁכַן" data-lang="hebrew" data-verse="">שׁכן</a> (<em>shachan</em>), meaning "to dwell, settle, abide." The name is a theological statement: this is not primarily a worship hall or a sacrificial venue. It is a dwelling — the place where God takes up residence among His people.</p>
+<p>The same root gives us שְׁכִינָה (<em>Shechinah</em>), the rabbinic term for the immanent, visible presence of God. When the cloud fills the Mishkan in <a href="https://www.blueletterbible.org/kjv/exo/40/34/s_90034" target="_blank" data-ref="Exodus 40:34">Exodus 40:34</a>, the Shechinah has arrived. The building isn't sacred because of what happens there; it's sacred because of <em>who lives there</em>.</p>
+<h3>Portable, Not Permanent</h3>
+<p>Unlike the massive stone temples of Egypt and Mesopotamia — structures designed to anchor divine power to a geographic location — the Mishkan was a tent. It was designed to be disassembled, carried, and re-erected. God's presence moved with His people. The theology of mobility is deliberate: God is not bound to a place. He goes where Israel goes.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>2. Sabbath Before Sacred Work (Exodus 35:1-3)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Why Sabbath Comes First</h3>
+<p>Moses opens his instructions not with building plans but with the Sabbath command. This is the second time the Sabbath appears in connection with the Tabernacle (cf. <a href="https://www.blueletterbible.org/kjv/exo/31/12-17/s_81012" target="_blank" data-ref="Exodus 31:12-17">Ex 31:12-17</a>). The placement is intentional: even the most sacred construction project does not override the Sabbath. Rest comes before and sanctifies work.</p>
+<h3>Rabbinic Derivation</h3>
+<p>The rabbis derived the 39 categories of prohibited Sabbath labor (the <em>melakhot</em>) from the specific activities required to build the Tabernacle — weaving, dyeing, cutting, building, kindling fire, and so on. The logic: if these activities were suspended even for the Tabernacle, they define the outer boundary of all labor. The Tabernacle thus became the source text for Sabbath law itself.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>3. Freewill Offerings: The Theology of Generosity (Exodus 35:4-36:7)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Nedavah — The Willing Heart</h3>
+<p>The materials for the Tabernacle came from <a href="https://www.blueletterbible.org/lexicon/h5071/kjv/wlc/0-1/" target="_blank" data-lexicon="voluntariness, free-will offeringvoluntarinessfreewill, voluntary, offering" data-strongs="H5071" data-translit="nᵊḏāḇâ" data-original="נְדָבָה" data-lang="hebrew" data-verse="">נְדָבָה</a> (<em>nedavah</em>) — freewill offerings. The text emphasizes motivation repeatedly: "every one whose heart stirred him up" (<a href="https://www.blueletterbible.org/kjv/exo/35/21/s_85021" target="_blank" data-ref="Exodus 35:21">Ex 35:21</a>); "every one whom his spirit made willing" (<a href="https://www.blueletterbible.org/kjv/exo/35/21/s_85021" target="_blank" data-ref="Exodus 35:21">Ex 35:21</a>); "as many as were willing hearted" (<a href="https://www.blueletterbible.org/kjv/exo/35/22/s_85022" target="_blank" data-ref="Exodus 35:22">Ex 35:22</a>); "the children of Israel brought a willing offering" (<a href="https://www.blueletterbible.org/kjv/exo/35/29/s_85029" target="_blank" data-ref="Exodus 35:29">Ex 35:29</a>).</p>
+<p>There is no coercion, no tax, no assessment. God does not requisition materials for His house — He invites offerings from stirred hearts.</p>
+<h3>More Than Enough</h3>
+<p>The most remarkable detail: the craftsmen reported to Moses that the people were bringing <em>more than enough</em> (<a href="https://www.blueletterbible.org/kjv/exo/36/5/s_86005" target="_blank" data-ref="Exodus 36:5">Ex 36:5</a>). Moses had to issue a proclamation: stop giving (<a href="https://www.blueletterbible.org/kjv/exo/36/6/s_86006" target="_blank" data-ref="Exodus 36:6">Ex 36:6</a>). This is the only place in the Torah where generosity has to be restrained. After the golden calf — where the people freely gave their gold earrings for an idol — the overflow of willing offerings for the Tabernacle signals transformed hearts. The same impulse to give is now directed rightly.</p>
+<h3>What They Gave</h3>
+<p>The inventory is detailed: gold, silver, bronze, blue/purple/scarlet yarn, fine linen, goat hair, ram skins, acacia wood, olive oil, spices, onyx stones (<a href="https://www.blueletterbible.org/kjv/exo/35/5-9/s_85005" target="_blank" data-ref="Exodus 35:5-9">Ex 35:5-9, 21-29</a>). Women spun yarn and wove fabric. Leaders brought precious stones and oils. The construction was a community project in the fullest sense — every household, every skill, every resource offered.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>4. Bezalel and Oholiab: Sacred Artisans (Exodus 35:30-36:2)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Bezalel — "In the Shadow of God"</h3>
+<p>The name <a href="https://www.blueletterbible.org/lexicon/h1212/kjv/wlc/0-1/" target="_blank" data-lexicon="Bezaleel = &quot;in the shadow (i.e. protection) of God&quot;" data-strongs="H1212" data-translit="bᵊṣal&#x27;ēl" data-original="בְּצַלְאֵל" data-lang="hebrew" data-verse="">בְּצַלְאֵל</a> (<em>Betzal'el</em>) means "in the shadow/protection of God" (from <a href="https://www.blueletterbible.org/lexicon/h9002/kjv/wlc/0-1/" target="_blank" data-lexicon="preposition in, at, with, by, through, among, into" data-strongs="H9002" data-translit="bᵉ" data-original="בְּ" data-lang="hebrew" data-verse="">בְּ</a> + <a href="https://www.blueletterbible.org/lexicon/h6738/kjv/wlc/0-1/" target="_blank" data-lexicon="shadow, shadeshadow (on dial)shadow, shade (as protection)shadow (symbolic of transitoriness of life)" data-strongs="H6738" data-translit="ṣēl" data-original="צֵל" data-lang="hebrew" data-verse="">צֵל</a> + <a href="https://www.blueletterbible.org/lexicon/h3496/kjv/wlc/0-1/" target="_blank" data-lexicon="Jathniel = &quot;God hires me&quot;a Korhite Levite and the 4th of the family of Meshelemiah" data-strongs="H3496" data-translit="yaṯnî&#x27;ēl" data-original="אֵל" data-lang="hebrew" data-verse="">אֵל</a>). He was from the tribe of Judah, the grandson of Hur — possibly the same Hur who, with Aaron, held up Moses' hands during the battle with Amalek (<a href="https://www.blueletterbible.org/kjv/exo/17/12/s_67012" target="_blank" data-ref="Exodus 17:12">Ex 17:12</a>).</p>
+<p>Bezalel is the first person in Scripture described as being "filled with the spirit of God" (<a href="https://www.blueletterbible.org/kjv/exo/35/31/s_85031" target="_blank" data-ref="Exodus 35:31">Ex 35:31</a>). The gift is not for prophecy, governance, or warfare — the usual contexts for the Spirit in the ancient Near East — but for artistic craftsmanship.</p>
+<h3>The Trio of Gifts</h3>
+<p>God filled Bezalel with three qualities:</p>
+<ul>
+<li><em>chokmah</em> (<a href="https://www.blueletterbible.org/lexicon/h2454/kjv/wlc/0-1/" target="_blank" data-lexicon="wisdom" data-strongs="H2454" data-translit="ḥāḵmôṯ" data-original="חָכְמָה" data-lang="hebrew" data-verse="">חָכְמָה</a>) — wisdom, skill</li>
+<li><em>tevunah</em> (תְּבוּנָה) — understanding, discernment</li>
+<li><em>da'at</em> (<a href="https://www.blueletterbible.org/lexicon/h1847/kjv/wlc/0-1/" target="_blank" data-lexicon="knowledge knowledge, perception, skill discernment, understanding, wisdom" data-strongs="H1847" data-translit="daʿaṯ" data-original="דַּעַת" data-lang="hebrew" data-verse="">דַּעַת</a>) — knowledge</li>
+</ul>
+<p>These are the same terms used in <a href="https://www.blueletterbible.org/kjv/pro/3/19-20/s_631019" target="_blank" data-ref="Proverbs 3:19-20">Proverbs 3:19-20</a> for the qualities by which God created the world. The parallel is deliberate: Bezalel the craftsman is, in miniature, a sub-creator — building God's earthly dwelling with the same wisdom by which God built the cosmos.</p>
+<p>The Talmud (<a href="https://www.sefaria.org/Berakhot.55a" target="_blank">Berakhot 55a</a>) takes this connection further. Rav Yehuda said in the name of Rav: "Bezalel knew how to join the letters by which heaven and earth were created." Because <em>chokmah</em>, <em>tevunah</em>, and <em>da'at</em> are the same qualities God used at creation, Bezalel did not merely possess technical skill — he participated in the very creative knowledge of God. The same passage records that when Moses relayed God's instructions to Bezalel in a different order, Bezalel corrected him: "A house must be built before vessels can be placed inside it." Moses marveled and said, "Perhaps you were in the shadow of God (<em>betzal El</em>) and you knew" — a wordplay on Bezalel's name suggesting that his understanding came not from Moses' instruction but from direct, intuitive knowledge of God's intent.</p>
+<h3>Oholiab — "The Father's Tent"</h3>
+<p><em>Oholiav</em> (<a href="https://www.blueletterbible.org/lexicon/h171/kjv/wlc/0-1/" target="_blank" data-lexicon="Aholiab = &quot;Father&#x27;s tent&quot;//" data-strongs="H171" data-translit="āhŏlî&#x27;āḇ" data-original="אָהֳלִיאָב" data-lang="hebrew" data-verse="">אָהֳלִיאָב</a>) means "the father's tent" (from <em>ohel</em> + <em>av</em>, <a href="https://www.blueletterbible.org/lexicon/h169/kjv/wlc/0-1/" target="_blank" data-lexicon="Ohel = &quot;tent&quot;//" data-strongs="H169" data-translit="ōhel" data-original="אֹהֶל" data-lang="hebrew" data-verse="">אֹהֶל</a> + <a href="https://www.blueletterbible.org/lexicon/h1/kjv/wlc/0-1/" target="_blank" data-lexicon="father" data-strongs="H1" data-translit="av" data-original="אָב" data-lang="hebrew" data-verse="Genesis 2:24">אָב</a>). He was from the tribe of Dan — one of the smallest and least prestigious tribes. Together, Bezalel (from royal Judah) and Oholiab (from humble Dan) represent the full spectrum of Israel. Sacred work is not reserved for the privileged.</p>
+<h3>Teaching Others</h3>
+<p><a href="https://www.blueletterbible.org/kjv/exo/35/34/s_85034" target="_blank" data-ref="Exodus 35:34">Exodus 35:34</a> adds that God gave them the ability "to teach" — not just to create, but to train others. The Tabernacle was built not by two master craftsmen alone but by a trained community of artisans. Sacred skill is meant to be shared.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>5. The Construction: Repetition as Theology (Exodus 36-38)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Why the Text Repeats</h3>
+<p><a href="https://www.blueletterbible.org/kjv/exo/36/1/s_86001" target="_blank" data-ref="Exodus 36">Exodus 36-38</a> describes the actual construction of every Tabernacle component — and the description closely mirrors the instructions in <a href="https://www.blueletterbible.org/kjv/exo/25/1/s_75001" target="_blank" data-ref="Exodus 25">Exodus 25-31</a>. Modern readers may wonder why the Torah devotes six chapters to what appears to be the same material twice.</p>
+<p>The repetition is the point. In <a href="https://www.blueletterbible.org/kjv/exo/25/1/s_75001" target="_blank" data-ref="Exodus 25">Exodus 25-31</a>, God speaks. In <a href="https://www.blueletterbible.org/kjv/exo/36/1/s_86001" target="_blank" data-ref="Exodus 36">Exodus 36-38</a>, Israel obeys. The near-identical language demonstrates that the people built <em>exactly</em> what God commanded — no additions, no subtractions, no "improvements." After the golden calf, where Israel acted on its own initiative and created an unauthorized object of worship, the faithful repetition is the corrective.</p>
+<h3>The Components</h3>
+<table class="info-table">
+<tr><th>Item</th><th>Material</th><th>Significance</th></tr>
+<tr><td>Tabernacle curtains (<a href="https://www.blueletterbible.org/kjv/exo/36/8-19/s_86008" target="_blank" data-ref="Exodus 36:8-19">Ex 36:8-19</a>)</td><td>Fine linen, blue/purple/scarlet, goat hair</td><td>The fabric of God's dwelling — beauty woven into structure</td></tr>
+<tr><td>Frames and bases (<a href="https://www.blueletterbible.org/kjv/exo/36/20-34/s_86020" target="_blank" data-ref="Exodus 36:20-34">Ex 36:20-34</a>)</td><td>Acacia wood overlaid with gold; silver sockets</td><td>Stability and preciousness; silver from the census (atonement money)</td></tr>
+<tr><td>Veil (<a href="https://www.blueletterbible.org/kjv/exo/36/35-36/s_86035" target="_blank" data-ref="Exodus 36:35-36">Ex 36:35-36</a>)</td><td>Blue, purple, scarlet, fine linen with cherubim</td><td>Boundary between the Holy Place and the Holy of Holies</td></tr>
+<tr><td>Ark and Mercy Seat (<a href="https://www.blueletterbible.org/kjv/exo/37/1-9/s_87001" target="_blank" data-ref="Exodus 37:1-9">Ex 37:1-9</a>)</td><td>Acacia wood overlaid with gold; pure gold lid with cherubim</td><td>The throne of God; where atonement is made</td></tr>
+<tr><td>Table of Shewbread (<a href="https://www.blueletterbible.org/kjv/exo/37/10-16/s_87010" target="_blank" data-ref="Exodus 37:10-16">Ex 37:10-16</a>)</td><td>Acacia wood overlaid with gold</td><td>God's provision; perpetual bread of the Presence</td></tr>
+<tr><td>Menorah (<a href="https://www.blueletterbible.org/kjv/exo/37/17-24/s_87017" target="_blank" data-ref="Exodus 37:17-24">Ex 37:17-24</a>)</td><td>Pure hammered gold; almond-blossom design</td><td>Light; creation symbolism; Tree of Life echoes (see [[03_Key_Passages_Study</td><td><a href="https://www.blueletterbible.org/kjv/exo/25/1/s_75001" target="_blank" data-ref="Exodus 25">Exodus 25-30</a> Key Passages, Passage 3]] for the full Menorah-as-Tree-of-Life treatment)</td></tr>
+<tr><td>Incense Altar (<a href="https://www.blueletterbible.org/kjv/exo/37/25-29/s_87025" target="_blank" data-ref="Exodus 37:25-29">Ex 37:25-29</a>)</td><td>Acacia wood overlaid with gold</td><td>Prayer ascending to God</td></tr>
+<tr><td>Altar of Burnt Offering (<a href="https://www.blueletterbible.org/kjv/exo/38/1-7/s_88001" target="_blank" data-ref="Exodus 38:1-7">Ex 38:1-7</a>)</td><td>Acacia wood overlaid with bronze</td><td>Sacrifice; the point of approach</td></tr>
+<tr><td>Bronze Laver (<a href="https://www.blueletterbible.org/kjv/exo/38/8/s_88008" target="_blank" data-ref="Exodus 38:8">Ex 38:8</a>)</td><td>Bronze from the women's mirrors</td><td>Cleansing; the mirrors of the serving women repurposed for purification</td></tr>
+</table>
+<h3>The Women's Mirrors (Exodus 38:8)</h3>
+<p>A striking detail: the bronze laver was made from "the looking glasses of the women assembling" at the entrance of the Tabernacle. These women gave up their personal mirrors — instruments of self-regard — so that a vessel of purification could be formed. The transformation of vanity into holiness is embedded in the material itself.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>6. The Priestly Garments (Exodus 39)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Clothing as Theology</h3>
+<p>The garments of the High Priest were not decorative but communicative. Each element carried symbolic weight. (For the detailed cosmic symbolism of the priestly garments — Josephus's and Philo's readings of the twelve stones as zodiacal signs, the colors as elements, and the High Priest as a walking cosmos — see the [[02_Historical_Cultural_Context|<a href="https://www.blueletterbible.org/kjv/exo/25/1/s_75001" target="_blank" data-ref="Exodus 25">Exodus 25-30</a> Historical Context]] segment.)</p>
+<ul>
+<li><strong>The Ephod</strong> (<a href="https://www.blueletterbible.org/kjv/exo/39/2-7/s_89002" target="_blank" data-ref="Exodus 39:2-7">Ex 39:2-7</a>): A vest-like garment of gold, blue, purple, scarlet, and fine linen, with two onyx shoulder stones engraved with the names of the twelve tribes. The High Priest literally bore Israel on his shoulders.</li>
+</ul>
+<ul>
+<li><strong>The Breastplate</strong> (<em>choshen</em>, <a href="https://www.blueletterbible.org/lexicon/h2833/kjv/wlc/0-1/" target="_blank" data-lexicon="breastplate, breastpiecesacred pouch of the high priest designed to hold the Urim and Thummim" data-strongs="H2833" data-translit="ḥōšen" data-original="חֹשֶׁן" data-lang="hebrew" data-verse="">חֹשֶׁן</a>) (<a href="https://www.blueletterbible.org/kjv/exo/39/8-21/s_89008" target="_blank" data-ref="Exodus 39:8-21">Ex 39:8-21</a>): Twelve precious stones set in gold, each engraved with a tribal name — over the High Priest's heart. He carried Israel on his heart before God.</li>
+</ul>
+<ul>
+<li><strong>The Robe of the Ephod</strong> (<a href="https://www.blueletterbible.org/kjv/exo/39/22-26/s_89022" target="_blank" data-ref="Exodus 39:22-26">Ex 39:22-26</a>): Blue, with golden bells and pomegranates alternating along the hem. The bells sounded as the High Priest moved in the sanctuary — an audible sign of his living presence.</li>
+</ul>
+<ul>
+<li><strong>The Golden Plate</strong> (<a href="https://www.blueletterbible.org/kjv/exo/39/30-31/s_89030" target="_blank" data-ref="Exodus 39:30-31">Ex 39:30-31</a>): A plate of pure gold engraved with קֹדֶשׁ לַיהוָה (<em>kodesh la-YHWH</em>), "HOLINESS TO THE LORD," tied with a blue cord to the front of the turban. This inscription was the first thing seen when looking at the High Priest — his identity declared before anything else.</li>
+</ul>
+<h3>Bearing the Names</h3>
+<p>The High Priest bore the names of Israel in two places: on his shoulders (strength, support) and over his heart (love, remembrance). This dual bearing anticipates Christ, who carries His people both with power and with intimate compassion.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>7. "As the LORD Commanded Moses" — The Refrain of Fidelity</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Count</h3>
+<p>The phrase "as the LORD commanded Moses" (כַּאֲשֶׁר צִוָּה יְהוָה אֶת־מֹשֶׁה) appears approximately eighteen times in <a href="https://www.blueletterbible.org/kjv/exo/39/1/s_89001" target="_blank" data-ref="Exodus 39">Exodus 39-40</a>. Scholars have noted that this is not accidental repetition — it is liturgical emphasis.</p>
+<h3>The Contrast</h3>
+<p>The golden calf was made without divine command. Aaron fashioned it, the people worshiped it, and God's response was devastating. The Tabernacle is the antithesis: every single element is made <em>as the LORD commanded</em>. The repetition hammers home that obedience — exact, joyful, meticulous obedience — is the foundation of covenant faithfulness.</p>
+<h3>Genesis Echoes</h3>
+<p>Several commentators have noted that Moses' inspection and blessing of the completed work (<a href="https://www.blueletterbible.org/kjv/exo/39/43/s_89043" target="_blank" data-ref="Exodus 39:43">Ex 39:43</a>) echoes God's inspection of creation: "And God saw every thing that he had made, and, behold, it was very good" (<a href="https://www.blueletterbible.org/kjv/gen/1/31/s_1031" target="_blank" data-ref="Genesis 1:31">Gen 1:31</a>). The Tabernacle is a new creation — a sacred space where heaven and earth overlap.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>8. The Assembly and the Glory (Exodus 40)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The First Day</h3>
+<p>God commands Moses to erect the Tabernacle on "the first day of the first month" (<a href="https://www.blueletterbible.org/kjv/exo/40/2/s_90002" target="_blank" data-ref="Exodus 40:2">Ex 40:2</a>) — the beginning of a new year, a new era. The timing is deliberate: this is a fresh start for Israel, a new chapter in the covenant story.</p>
+<h3>Moses as Priest-Builder</h3>
+<p>In <a href="https://www.blueletterbible.org/kjv/exo/40/1-33/s_90001" target="_blank" data-ref="Exodus 40:1-33">Exodus 40:1-33</a>, Moses personally assembles the Tabernacle — placing the Ark, hanging the veil, setting the table, lighting the menorah, positioning the altars, filling the laver, erecting the courtyard. He washes and anoints. Moses is functioning here as priest before Aaron takes over — the transition is about to begin, and Leviticus will formalize it.</p>
+<h3>The Cloud and the Glory</h3>
+<p>When the assembly is complete, two things happen simultaneously:</p>
+<ol>
+<li>"A cloud covered the tent of the congregation" (<a href="https://www.blueletterbible.org/kjv/exo/40/1/s_90001" target="_blank" data-ref="Exodus 40">Ex 40</a>:34a)</li>
+<li>"The glory of the LORD filled the tabernacle" (<a href="https://www.blueletterbible.org/kjv/exo/40/1/s_90001" target="_blank" data-ref="Exodus 40">Ex 40</a>:34b)</li>
+</ol>
+<p>The cloud (<em>anan</em>, <a href="https://www.blueletterbible.org/lexicon/h6052/kjv/wlc/0-1/" target="_blank" data-lexicon="Anan = &quot;cloud&quot;one of the heads of the people who signed the covenant with Nehemiah" data-strongs="H6052" data-translit="ʿānān" data-original="עָנָן" data-lang="hebrew" data-verse="">עָנָן</a>) is the external sign; the <em>kavod</em> (glory) is the internal reality. The same cloud that guided Israel out of Egypt now <em>rests</em> on the Tabernacle. God's traveling presence becomes God's dwelling presence.</p>
+<p>The word <em>anan</em> carries covenant weight that reaches back to the beginning. In <a href="https://www.blueletterbible.org/kjv/gen/9/13-14/s_9013" target="_blank" data-ref="Genesis 9:13-14">Genesis 9:13-14</a>, God sets His rainbow "in the cloud" (<em>ba-anan</em>, בֶּעָנָן) as the sign of His covenant with Noah — the visible token that He will never again destroy the earth by water. The same word now describes the cloud that covers the Tabernacle as a sign of God's covenant presence with Israel. In both cases, the <em>anan</em> is a visible, physical sign of an invisible, eternal promise. The cloud over the Tabernacle is not merely weather. It is covenant language — God marking His dwelling the way He once marked His promise to all living things.</p>
+<h3>Moses Cannot Enter</h3>
+<p>Even Moses — who spoke with God face to face (<a href="https://www.blueletterbible.org/kjv/exo/33/11/s_83011" target="_blank" data-ref="Exodus 33:11">Ex 33:11</a>) — cannot enter the Tabernacle when the glory fills it (<a href="https://www.blueletterbible.org/kjv/exo/40/35/s_90035" target="_blank" data-ref="Exodus 40:35">Ex 40:35</a>). The building belongs to God now. Human effort prepared it; divine presence claims it. This is a profound theological boundary: we build, prepare, and offer — but the filling is entirely God's work.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>9. The Tabernacle and ANE Temples</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>How the Mishkan Differed</h3>
+<p>Ancient Near Eastern temples were permanent stone structures, anchored to sacred geography, staffed by priestly hierarchies who fed, clothed, and maintained the deity's image. Israel's Tabernacle was radically different. (For the full ANE comparison — including Egyptian temple maintenance theology, Mesopotamian ziggurats, and the detailed contrast with Israel's approach — see the [[02_Historical_Cultural_Context|<a href="https://www.blueletterbible.org/kjv/exo/25/1/s_75001" target="_blank" data-ref="Exodus 25">Exodus 25-30</a> Historical Context]] segment.) Key distinctions:</p>
+<ul>
+<li><strong>Portable</strong>: It moved with the people; God was not bound to one place</li>
+<li><strong>Imageless</strong>: No statue or image stood in the Holy of Holies — only the Ark and the Mercy Seat</li>
+<li><strong>Community-built</strong>: Not constructed by a royal workforce but by the freewill offerings of the entire people</li>
+<li><strong>Pattern-based</strong>: Built according to a heavenly blueprint shown to Moses on the mountain (<a href="https://www.blueletterbible.org/kjv/exo/25/9/s_75009" target="_blank" data-ref="Exodus 25:9">Ex 25:9, 40</a>)</li>
+</ul>
+<h3>Temple Dedication Patterns</h3>
+<p>The dedication of the Tabernacle follows a pattern also found in other ANE temple texts: the structure is built, the deity's presence descends (often as a cloud or light), and the temple becomes operational. But in Israel's account, the emphasis falls on relationship, not ritual mechanics. The cloud is not a manifestation to be managed — it is God's personal decision to dwell.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>10. Preparation for Leviticus</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Bridge</h3>
+<p>Exodus ends with God dwelling in the Tabernacle. Leviticus will open with God speaking <em>from</em> the Tabernacle (<a href="https://www.blueletterbible.org/kjv/lev/1/1/s_91001" target="_blank" data-ref="Leviticus 1:1">Lev 1:1</a>). The transition is seamless: once God has moved in, He begins to teach His people how to approach Him. The sacrificial system, the priestly ordination, the purity laws, and the holiness code are all responses to the new reality established in <a href="https://www.blueletterbible.org/kjv/exo/40/1/s_90001" target="_blank" data-ref="Exodus 40">Exodus 40</a> — God is here; now learn how to live in His presence.</p>
+<h3>The Question</h3>
+<p><a href="https://www.blueletterbible.org/kjv/exo/40/1/s_90001" target="_blank" data-ref="Exodus 40">Exodus 40</a> answers the question: <em>Will God dwell with us after our failure?</em> Yes. Leviticus will take up the next question: <em>Now that He is here, how do we draw near?</em></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Summary</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>The Mishkan as forgiveness</strong>: God's dwelling among Israel after the golden calf is the visible proof of restored relationship</li>
+<li><strong>Sabbath before building</strong>: Even the holiest construction yields to sacred rest</li>
+<li><strong>Freewill offering as theology</strong>: God doesn't tax — He invites willing hearts</li>
+<li><strong>Spirit-filled artistry</strong>: Bezalel's gifts place creativity alongside prophecy as Spirit-empowered work</li>
+<li><strong>Faithful repetition</strong>: "As the LORD commanded Moses" is the antithesis of the golden calf's self-will</li>
+<li><strong>Garments as identity</strong>: The High Priest carries Israel's names on his shoulders and his heart</li>
+<li><strong>The women's mirrors</strong>: Instruments of vanity transformed into vessels of purification</li>
+<li><strong>The glory fills</strong>: God's response to faithful preparation is personal, overwhelming presence</li>
+<li><strong>Moses cannot enter</strong>: We build; God fills. The boundary between human effort and divine presence is honored.</li>
+<li><strong>Creation echoes</strong>: The Tabernacle is a new creation — sacred space where heaven and earth overlap</li>
+</ol>
+<hr>
+<p><em><a href="https://www.blueletterbible.org/kjv/exo/35/1/s_85001" target="_blank" data-ref="Exodus 35">Exodus 35-40</a> Standalone Study Guide | CFM Corner | OT 2026</em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 3: EXODUS 35–40: KEY PASSAGES STUDY -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">3. Exodus 35–40: Key Passages Study</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Passage 1: Exodus 35:1-3 — Sabbath Before Building</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p>"And Moses gathered all the congregation of the children of Israel together, and said unto them, These are the words which the LORD hath commanded, that ye should do them. Six days shall work be done, but on the seventh day there shall be to you an holy day, a sabbath of rest to the LORD: whosoever doeth work therein shall be put to death. Ye shall kindle no fire throughout your habitations upon the sabbath day."</p>
+</blockquote>
+<h3>Key Hebrew</h3>
+<ul>
+<li><em>Shabbat Shabbaton</em> (שַׁבַּת שַׁבָּתוֹן) — a sabbath of solemn rest — the most emphatic form of Sabbath language in Torah</li>
+<li><em>melakhah</em> (<a href="https://www.blueletterbible.org/lexicon/h4399/kjv/wlc/0-1/" target="_blank" data-lexicon="occupation, work, business occupation, business property work (something done or made) workmanship service, use publi..." data-strongs="H4399" data-translit="mᵊlā&#x27;ḵâ" data-original="מְלָאכָה" data-lang="hebrew" data-verse="">מְלָאכָה</a>) — skilled work, purposeful labor — the same word used for the Tabernacle construction</li>
+<li><em>kodesh</em> (<a href="https://www.blueletterbible.org/lexicon/h6944/kjv/wlc/0-1/" target="_blank" data-lexicon="holiness, sacred thing" data-strongs="H6944" data-translit="qodesh" data-original="קֹדֶשׁ" data-lang="hebrew" data-verse="Exodus 15:11">קֹדֶשׁ</a>) — holy, set apart</li>
+</ul>
+<h3>What It Meant in Context</h3>
+<p>Moses opens the Tabernacle construction project not with building plans but with the Sabbath command. The message is unmistakable: even the most sacred work does not override sacred rest. The rabbis derived the 39 categories of prohibited Sabbath labor from the Tabernacle-building activities — the very tasks that were about to begin. Rest comes <em>before</em> and defines the boundary of all labor, including labor for God.</p>
+<h3>Christ-Centered Reading</h3>
+<p>Jesus declared Himself "Lord even of the sabbath" (<a href="https://www.blueletterbible.org/kjv/mrk/2/28/s_959028" target="_blank" data-ref="Mark 2:28">Mark 2:28</a>) and spent many Sabbaths healing — doing the restorative work of creation. The Sabbath command before the Tabernacle suggests that sacred rest isn't the absence of holy work but its foundation. Christ's rest — "Come unto me... and I will give you rest" (<a href="https://www.blueletterbible.org/kjv/mat/11/28/s_940028" target="_blank" data-ref="Matthew 11:28">Matt 11:28</a>) — is the ultimate Shabbat Shabbaton.</p>
+<h3>Application</h3>
+<p>Before you build anything sacred — a family, a calling, a testimony — learn to rest. The impulse to earn God's favor through relentless effort is an old temptation. God commands rest <em>first</em>, not as a reward but as a rhythm.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 2: Exodus 35:20-29 — The People's Freewill Offerings</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p>"And all the congregation of the children of Israel departed from the presence of Moses. And they came, every one whose heart stirred him up, and every one whom his spirit made willing, and they brought the LORD's offering to the work of the tabernacle of the congregation."</p>
+</blockquote>
+<h3>Key Hebrew</h3>
+<ul>
+<li><em>nedavah</em> (<a href="https://www.blueletterbible.org/lexicon/h5071/kjv/wlc/0-1/" target="_blank" data-lexicon="voluntariness, free-will offeringvoluntarinessfreewill, voluntary, offering" data-strongs="H5071" data-translit="nᵊḏāḇâ" data-original="נְדָבָה" data-lang="hebrew" data-verse="">נְדָבָה</a>) — freewill offering — from the root <a href="https://www.blueletterbible.org/lexicon/h5068/kjv/wlc/0-1/" target="_blank" data-lexicon="to incite, impel, make willing(Qal) to incite, impel(Hithpael)to volunteerto offer free-will offerings" data-strongs="H5068" data-translit="nāḏaḇ" data-original="נָדַב" data-lang="hebrew" data-verse="">נדב</a> (<em>nadav</em>), to be willing, to volunteer</li>
+<li><em>nasa libbo</em> (נָשָׂא לִבּוֹ) — "his heart lifted him" — describing an inner impulse, not external compulsion</li>
+<li><em>nadvah rucho</em> (נָדְבָה רוּחוֹ) — "his spirit made him willing" — the motivation is spiritual, not social</li>
+</ul>
+<h3>What It Meant in Context</h3>
+<p>The contrast with the golden calf cannot be overstated. In <a href="https://www.blueletterbible.org/kjv/exo/32/2-3/s_82002" target="_blank" data-ref="Exodus 32:2-3">Exodus 32:2-3</a>, Aaron says "Break off the golden earrings" and the people comply immediately — giving gold for an idol without recorded hesitation. Now in <a href="https://www.blueletterbible.org/kjv/exo/35/1/s_85001" target="_blank" data-ref="Exodus 35">Exodus 35</a>, the same people give gold, silver, bronze, fabrics, stones, oil, and spices — but this time from <em>stirred hearts</em> and <em>willing spirits</em>, for the dwelling of the true God. The transformation is interior.</p>
+<h3>Christ-Centered Reading</h3>
+<p>God "so loved the world that he gave his only begotten Son" (<a href="https://www.blueletterbible.org/kjv/jhn/3/16/s_1000016" target="_blank" data-ref="John 3:16">John 3:16</a>). The giving of the Father is the supreme nedavah — the ultimate freewill offering, motivated not by obligation but by love. Christ Himself gave "of his own voluntary will" (<em>lirtzono</em>; cf. <a href="https://www.blueletterbible.org/kjv/lev/1/3/s_91003" target="_blank" data-ref="Leviticus 1:3">Lev 1:3</a>).</p>
+<h3>Application</h3>
+<p>What you give reveals what your heart has become. The people didn't bring offerings because they were told to — they brought them because something had changed inside. What would it look like for your service, your tithing, your worship to come from a heart that has been "stirred up"?</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 3: Exodus 35:30-35 — Bezalel Filled with the Spirit</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p>"And Moses said unto the children of Israel, See, the LORD hath called by name Bezaleel... And he hath filled him with the spirit of God, in wisdom, in understanding, and in knowledge, and in all manner of workmanship; And to devise curious works, to work in gold, and in silver, and in brass, And in the cutting of stones, to set them, and in carving of wood, to make any manner of cunning work."</p>
+</blockquote>
+<h3>Key Hebrew</h3>
+<ul>
+<li><em>Betzal'el</em> (<a href="https://www.blueletterbible.org/lexicon/h1212/kjv/wlc/0-1/" target="_blank" data-lexicon="Bezaleel = &quot;in the shadow (i.e. protection) of God&quot;" data-strongs="H1212" data-translit="bᵊṣal&#x27;ēl" data-original="בְּצַלְאֵל" data-lang="hebrew" data-verse="">בְּצַלְאֵל</a>) — "In the shadow/protection of God" — <em>be-tzal-El</em></li>
+<li><em>ruach Elohim</em> (רוּחַ אֱלֹהִים) — "Spirit of God"</li>
+<li><em>chokmah</em> (<a href="https://www.blueletterbible.org/lexicon/h2454/kjv/wlc/0-1/" target="_blank" data-lexicon="wisdom" data-strongs="H2454" data-translit="ḥāḵmôṯ" data-original="חָכְמָה" data-lang="hebrew" data-verse="">חָכְמָה</a>) — wisdom; <strong>תְּבוּנָה</strong> (<em>tevunah</em>): understanding; <strong><a href="https://www.blueletterbible.org/lexicon/h1847/kjv/wlc/0-1/" target="_blank" data-lexicon="knowledge knowledge, perception, skill discernment, understanding, wisdom" data-strongs="H1847" data-translit="daʿaṯ" data-original="דַּעַת" data-lang="hebrew" data-verse="">דַּעַת</a></strong> (<em>da'at</em>): knowledge</li>
+<li><em>machashavot</em> (מַחֲשָׁבֹת) — designs, inventions — from <a href="https://www.blueletterbible.org/lexicon/h2803/kjv/wlc/0-1/" target="_blank" data-lexicon="to think, plan, esteem, calculate, invent, make a judgment, imagine, count (Qal) to think, account to plan, devise, m..." data-strongs="H2803" data-translit="ḥāšaḇ" data-original="חָשַׁב" data-lang="hebrew" data-verse="">חשׁב</a> (<em>chashav</em>), to think, to plan</li>
+</ul>
+<h3>What It Meant in Context</h3>
+<p>This is the first explicit statement in the Bible of a person being filled with God's Spirit — and the gift is for artistic craftsmanship, not prophecy or warfare. Bezalel receives the same trio of spiritual gifts (wisdom, understanding, knowledge) that Proverbs attributes to God in creating the world (Prov 3:19-20). Sacred artistry is placed on the same level as prophetic inspiration. The God who created the cosmos now empowers a human to build a sacred microcosm.</p>
+<h3>Christ-Centered Reading</h3>
+<p>Christ is the ultimate artisan — "without him was not any thing made that was made" (<a href="https://www.blueletterbible.org/kjv/jhn/1/3/s_998003" target="_blank" data-ref="John 1:3">John 1:3</a>). The Spirit that filled Bezalel to build God's earthly dwelling is the same Spirit that empowered Christ's creative and redemptive work. He is both the builder and the dwelling itself.</p>
+<h3>Application</h3>
+<p>God's Spirit doesn't only operate in "spiritual" settings. Any skill consecrated to God's purposes — music, design, building, cooking, writing, coding — can be Spirit-empowered work. The question isn't whether your talent is sacred enough, but whether you've invited the Spirit into it.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 4: Exodus 36:3-7 — More Than Enough</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p>"And they received of Moses all the offering, which the children of Israel had brought for the work of the service of the sanctuary, to make it withal. And they brought yet unto him free offerings every morning. And all the wise men, that wrought all the work of the sanctuary, came every man from his work which they made; And they spake unto Moses, saying, The people bring much more than enough for the service of the work, which the LORD commanded to make. And Moses gave commandment... Let neither man nor woman make any more work for the offering of the sanctuary. So the people were restrained from bringing."</p>
+</blockquote>
+<h3>Key Hebrew</h3>
+<ul>
+<li><em>dai</em> (<a href="https://www.blueletterbible.org/lexicon/h1767/kjv/wlc/0-1/" target="_blank" data-lexicon="sufficiency, enough enough for, according to the abundance of, out of the abundance of, as often as" data-strongs="H1767" data-translit="day" data-original="דַּי" data-lang="hebrew" data-verse="">דַּי</a>) — enough — "the people bring much more than <em>dai</em>"</li>
+<li><em>middei</em> (<a href="https://www.blueletterbible.org/lexicon/h4074/kjv/wlc/0-1/" target="_blank" data-lexicon="Media or Medes or Madai = &quot;middle land&quot; proper masculine noun a people descended from the son of Japheth and who inha..." data-strongs="H4074" data-translit="māḏay" data-original="מָדַי" data-lang="hebrew" data-verse="">מִדֵּי</a>) — more than enough, exceeding — the offerings surpass what is needed</li>
+<li><em>vayyikkale'</em> (וַיִּכָּלֵא) — "they were restrained" — the people had to be <em>stopped</em> from giving</li>
+</ul>
+<h3>What It Meant in Context</h3>
+<p>This is the only scene in the Torah where the people give so generously that their giving must be halted. The verb <em>kala'</em> (to restrain) is used elsewhere for holding back floods and armies. Israel's post-golden-calf generosity was <em>overwhelming</em>. After catastrophic failure, the people's response isn't guilt-driven obligation but overflowing love.</p>
+<h3>Christ-Centered Reading</h3>
+<p>God's grace is also "more than enough" — "where sin abounded, grace did much more abound" (<a href="https://www.blueletterbible.org/kjv/rom/5/20/s_1051020" target="_blank" data-ref="Romans 5:20">Rom 5:20</a>). The pattern holds: after failure, the response is not measured but overwhelming. The people's generosity mirrors God's own nature.</p>
+<h3>Application</h3>
+<p>Have you ever given so much that someone had to tell you to stop? The Tabernacle was not built by minimum-effort obedience. It was built by hearts that couldn't stop giving. That is the kind of devotion that builds sacred spaces.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 5: Exodus 39:30-31, 42-43 — Holiness to the LORD / The Blessing</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p>"And they made the plate of the holy crown of pure gold, and wrote upon it a writing, like to the engravings of a signet, HOLINESS TO THE LORD. And they tied unto it a lace of blue, to fasten it on high upon the mitre; as the LORD commanded Moses."</p>
+<p>"According to all that the LORD commanded Moses, so the children of Israel made all the work. And Moses did look upon all the work, and, behold, they had done it as the LORD had commanded, even so had they done it: and Moses blessed them."</p>
+</blockquote>
+<h3>Key Hebrew</h3>
+<ul>
+<li><em>kodesh la-YHWH</em> (קֹדֶשׁ לַיהוָה) — "Holiness to the LORD" — the inscription on the golden plate</li>
+<li><em>nezer ha-kodesh</em> (נֵזֶר הַקֹּדֶשׁ) — "the crown of holiness" or "the holy crown"</li>
+<li><em>vayevarekh</em> (וַיְבָרֶךְ) — "and he blessed" — Moses' response to seeing the completed work</li>
+</ul>
+<h3>What It Meant in Context</h3>
+<p>The golden plate inscribed "Holiness to the LORD" sat on the High Priest's forehead — the most visible part of his person. His identity was declared before anything else: holiness, belonging to God. When Moses inspects the completed work and blesses the people (<a href="https://www.blueletterbible.org/kjv/exo/39/43/s_89043" target="_blank" data-ref="Exodus 39:43">Ex 39:43</a>), the language echoes <a href="https://www.blueletterbible.org/kjv/gen/1/31-2/s_1031" target="_blank" data-ref="Genesis 1:31-2">Genesis 1:31-2</a>:3 — God saw all He had made, and it was very good, and He blessed. The Tabernacle construction is a new creation, and Moses' blessing affirms it.</p>
+<h3>Christ-Centered Reading</h3>
+<p>The same inscription — "Holiness to the Lord" — appears on Latter-day Saint temples today, establishing a direct line of continuity across millennia. Christ is the ultimate High Priest who wears holiness not as an inscription but as His nature: "holy, harmless, undefiled, separate from sinners" (<a href="https://www.blueletterbible.org/kjv/heb/7/26/s_1140026" target="_blank" data-ref="Hebrews 7:26">Heb 7:26</a>).</p>
+<h3>Application</h3>
+<p>What would it mean to wear "Holiness to the LORD" on your forehead — to lead with consecration as your primary identity? In a world that labels us by occupation, status, or tribe, the golden plate declares something simpler and more radical.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 6: Exodus 38:8 — The Women's Mirrors</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p>"And he made the laver of brass, and the foot of it of brass, of the looking glasses of the women assembling, which assembled at the door of the tabernacle of the congregation."</p>
+</blockquote>
+<h3>Key Hebrew</h3>
+<ul>
+<li><em>mar'ot</em> (מַרְאֹת) — mirrors — from <a href="https://www.blueletterbible.org/lexicon/h7200/kjv/wlc/0-1/" target="_blank" data-lexicon="to see, perceive, provide" data-strongs="H7200" data-translit="ra&#x27;ah" data-original="רָאָה" data-lang="hebrew" data-verse="Genesis 22:14">ראה</a> (<em>ra'ah</em>), to see. Polished bronze mirrors.</li>
+<li><em>ha-tzove'ot</em> (הַצֹּבְאֹת) — "the assembling women" or "the serving women" — from <a href="https://www.blueletterbible.org/lexicon/h6633/kjv/wlc/0-1/" target="_blank" data-lexicon="to go forth, wage war, fight, serve(Qal)to wage war, fight, go forth to warto serve (at sacred tent)(Hiphil) to cause..." data-strongs="H6633" data-translit="ṣᵊḇā&#x27;" data-original="צְבָא" data-lang="hebrew" data-verse="">צבא</a> (<em>tzava'</em>), to serve, to assemble for service</li>
+</ul>
+<h3>What It Meant in Context</h3>
+<p>The bronze laver — the vessel of purification where priests washed before serving — was made from the mirrors of the women who served at the Tabernacle entrance. These women gave up instruments of personal appearance so that a vessel of cleansing could be formed. The transformation of material purpose is striking: what once reflected the self now facilitates purification before God.</p>
+<h3>Christ-Centered Reading</h3>
+<p><a href="https://www.blueletterbible.org/kjv/jas/1/23-25/s_1147023" target="_blank" data-ref="James 1:23-25">James 1:23-25</a> compares the word of God to a mirror — the one who looks and does nothing forgets what he saw, but the one who acts is blessed. The women's mirrors, turned into a laver of washing, enact the same principle: true self-knowledge leads to cleansing, not vanity.</p>
+<h3>Application</h3>
+<p>What "mirrors" — sources of self-focus, self-comparison, self-promotion — might you offer to God for transformation? The women didn't destroy their mirrors; they repurposed them. The laver of purification was made from what once served the self.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 7: Exodus 40:33-38 — The Glory Fills the Tabernacle</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p>"And he reared up the court round about the tabernacle and the altar, and set up the hanging of the court gate. So Moses finished the work. Then a cloud covered the tent of the congregation, and the glory of the LORD filled the tabernacle. And Moses was not able to enter into the tent of the congregation, because the cloud abode thereon, and the glory of the LORD filled the tabernacle. And when the cloud was taken up from over the tabernacle, the children of Israel went onward in all their journeys: But if the cloud were not taken up, then they did not journey till the day that it was taken up. For the cloud of the LORD was upon the tabernacle by day, and fire was on it by night, in the sight of all the house of Israel, throughout all their journeys."</p>
+</blockquote>
+<h3>Key Hebrew</h3>
+<ul>
+<li><em>kevod YHWH</em> (כְּבוֹד יְהוָה) — "glory of the LORD" — <em>kavod</em> means weight, heaviness, honor, substance</li>
+<li><em>male'</em> (<a href="https://www.blueletterbible.org/lexicon/h3229/kjv/wlc/0-1/" target="_blank" data-lexicon="Imlah or Imla = &quot;whom God will fill up&quot;father of Michaiah the prophet" data-strongs="H3229" data-translit="yimlā&#x27;" data-original="מָלָא" data-lang="hebrew" data-verse="">מָלֵא</a>) — filled — completely, leaving no room</li>
+<li><em>anan</em> (<a href="https://www.blueletterbible.org/lexicon/h6052/kjv/wlc/0-1/" target="_blank" data-lexicon="Anan = &quot;cloud&quot;one of the heads of the people who signed the covenant with Nehemiah" data-strongs="H6052" data-translit="ʿānān" data-original="עָנָן" data-lang="hebrew" data-verse="">עָנָן</a>) — cloud — the visible manifestation of God's presence</li>
+<li><em>vayekhal Mosheh et ha-melakhah</em> (וַיְכַל מֹשֶׁה אֶת הַמְּלָאכָה) — "So Moses finished the work" — echoing <a href="https://www.blueletterbible.org/kjv/gen/2/1-2/s_2001" target="_blank" data-ref="Genesis 2:1-2">Genesis 2:1-2</a>, "the heavens and the earth were finished"</li>
+</ul>
+<h3>What It Meant in Context</h3>
+<p>This is the climax of the entire book of Exodus. The journey that began with slavery in Egypt arrives not at the promised land but at something greater: God's presence among His people. The cloud that led them out of Egypt now rests on them. The phrase "Moses finished the work" echoes God finishing creation (<a href="https://www.blueletterbible.org/kjv/gen/2/1-2/s_2001" target="_blank" data-ref="Genesis 2:1-2">Gen 2:1-2</a>) — the Tabernacle is a new creation, and its completion marks a new beginning.</p>
+<p>Even Moses, who spoke with God "face to face" (<a href="https://www.blueletterbible.org/kjv/exo/33/11/s_83011" target="_blank" data-ref="Exodus 33:11">Ex 33:11</a>), cannot enter when the glory fills the Tabernacle. The divine presence is so complete, so total, that human approach is temporarily impossible. The building is done; now God claims it as His own.</p>
+<p>The final verses (40:36-38) establish the ongoing pattern: the cloud lifts, Israel travels; the cloud rests, Israel camps. God leads. The book ends not with arrival but with pilgrimage — God guiding His people through the wilderness, day by day, cloud by day and fire by night.</p>
+<h3>Christ-Centered Reading</h3>
+<p><a href="https://www.blueletterbible.org/kjv/jhn/1/14/s_998014" target="_blank" data-ref="John 1:14">John 1:14</a>: "The Word was made flesh, and <em>dwelt</em> [literally <em>tabernacled</em>, ἐσκήνωσεν] among us, and we beheld his glory." Christ is the ultimate Mishkan — God's glory filling human form. The incarnation is <a href="https://www.blueletterbible.org/kjv/exo/40/34/s_90034" target="_blank" data-ref="Exodus 40:34">Exodus 40:34</a> embodied. What the portable tent held temporarily, Christ holds permanently.</p>
+<h3>Application</h3>
+<p>We build, prepare, offer, and consecrate — but the filling is God's work. We cannot manufacture His glory or schedule His presence. Our part is to build faithfully according to the pattern and leave room for God to move in. The cloud comes on God's terms, in God's timing. Our job is to finish the work and wait.</p>
+<hr>
+<p><em><a href="https://www.blueletterbible.org/kjv/exo/35/1/s_85001" target="_blank" data-ref="Exodus 35">Exodus 35-40</a> Standalone Study Guide | CFM Corner | OT 2026</em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 4: EXODUS 35–40: WORD STUDIES -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">4. Exodus 35–40: Word Studies</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Word Study 1: Mishkan (מִשְׁכָּן) — "Dwelling Place / Tabernacle"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h7932/kjv/wlc/0-1/" target="_blank" data-lexicon="to dwell, reside(P&#x27;al) to dwell(Pael) to cause to dwell" data-strongs="H7932" data-translit="šᵊḵan" data-original="שְׁכַן" data-lang="hebrew" data-verse="">שׁכן</a> (<em>shachan</em>, to dwell, settle, abide)</p>
+<p><strong>Related:</strong> שְׁכִינָה (<em>Shechinah</em>, the Divine Presence)</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/25/9/s_75009" target="_blank" data-ref="Exodus 25:9">Exodus 25:9; 26:1; 35:11; 36:8-38; 38:21; 40:34-38</a></p>
+<h3>Meaning</h3>
+<p><em>Mishkan</em> is the primary name for the Tabernacle — literally, "the place where [God] dwells." The name is a theological statement. It doesn't describe what the people do there (worship, sacrifice); it declares what God does: He takes up residence. The building's name is its doctrine.</p>
+<h3>Deeper Context</h3>
+<p>The root <a href="https://www.blueletterbible.org/lexicon/h7932/kjv/wlc/0-1/" target="_blank" data-lexicon="to dwell, reside(P&#x27;al) to dwell(Pael) to cause to dwell" data-strongs="H7932" data-translit="šᵊḵan" data-original="שְׁכַן" data-lang="hebrew" data-verse="">שׁכן</a> gives us the word שְׁכִינָה (<em>Shechinah</em>) — a term not found in the Bible itself but developed in rabbinic literature to describe God's immanent, abiding presence. When the cloud fills the Mishkan at the end of Exodus (40:34), the Shechinah has arrived. This is not a metaphor. It is God choosing to live among a sinful, forgiven people.</p>
+<p>Unlike ANE temples that anchored divine presence to a geographic location, the Mishkan was portable. It moved when Israel moved. God's dwelling was not fixed; it traveled. The theology of mobility is inherent in the design.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>God initiates</strong>: "Let them make me a sanctuary, that I may dwell among them" (<a href="https://www.blueletterbible.org/kjv/exo/25/8/s_75008" target="_blank" data-ref="Exodus 25:8">Ex 25:8</a>) — He commands the dwelling; He wants proximity</li>
+<li><strong>Among THEM, not in IT</strong>: The dwelling is not about the building but about the relationship — "that I may dwell among <em>them</em>"</li>
+<li><strong>Portable presence</strong>: God goes where His people go; His presence is not limited by geography</li>
+</ol>
+<h3>LDS Application</h3>
+<p>Modern temples carry the same theology: God's house among His people. The inscription "Holiness to the Lord — the House of the Lord" echoes the golden plate on the High Priest's turban. Temples aren't about the building but about the God who meets us there. The temple as God's dwelling, not merely a worship venue, is the Mishkan theology made modern.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><em>Mishkan</em> (<a href="https://www.blueletterbible.org/lexicon/h4907/kjv/wlc/0-1/" target="_blank" data-lexicon="abode (of God)" data-strongs="H4907" data-translit="miškan" data-original="מִשְׁכַּן" data-lang="hebrew" data-verse="">מִשְׁכָּן</a>) — "dwelling place," from <em>shachan</em> (<a href="https://www.blueletterbible.org/lexicon/h7932/kjv/wlc/0-1/" target="_blank" data-lexicon="to dwell, reside(P&#x27;al) to dwell(Pael) to cause to dwell" data-strongs="H7932" data-translit="šᵊḵan" data-original="שְׁכַן" data-lang="hebrew" data-verse="">שׁכן</a>), to dwell</td><td><a href="https://www.blueletterbible.org/lexicon/h4908/kjv/wlc/0-1/" target="_blank" data-lexicon="dwelling place, tabernacle dwelling-place dwellings" data-strongs="H4908" data-translit="miškān" data-original="מִשְׁכָּן" data-lang="hebrew" data-verse="">BLB H4908</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td>σκηνή (<em>skēnē</em>) — tent, tabernacle; cf. ἐσκήνωσεν (<em>eskēnōsen</em>) in <a href="https://www.blueletterbible.org/kjv/jhn/1/14/s_998014" target="_blank" data-ref="John 1:14">John 1:14</a>, "tabernacled among us"</td><td><a href="https://www.blueletterbible.org/lexicon/g4633/kjv/tr/0-1/" target="_blank" data-lexicon="tent, tabernacle, (made of green boughs, or skins or other materials)of that well known movable temple of God after t..." data-strongs="G4633" data-translit="skēnē" data-original="σκηνή" data-lang="greek" data-verse="">BLB G4633</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><em>tabernaculum</em> — tent, booth; from <em>taberna</em> (hut, shop)</td><td><a href="https://logeion.uchicago.edu/tabernaculum" target="_blank">Logeion: tabernaculum</a></td></tr>
+<tr><td><strong>English</strong></td><td><em>tabernacle</em> — from Latin <em>tabernaculum</em>; <em>dwell</em> — from OE <em>dwellan</em>, to linger, remain</td><td><a href="https://www.merriam-webster.com/dictionary/tabernacle" target="_blank">Merriam-Webster: tabernacle</a> · <a href="https://webstersdictionary1828.com/Dictionary/tabernacle" target="_blank">Webster's 1828: tabernacle</a> · <a href="https://www.etymonline.com/word/tabernacle" target="_blank">Etymonline: tabernacle</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 2: Nedavah (נְדָבָה) — "Freewill Offering"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h5068/kjv/wlc/0-1/" target="_blank" data-lexicon="to incite, impel, make willing(Qal) to incite, impel(Hithpael)to volunteerto offer free-will offerings" data-strongs="H5068" data-translit="nāḏaḇ" data-original="נָדַב" data-lang="hebrew" data-verse="">נדב</a> (<em>nadav</em>, to be willing, to volunteer, to give freely)</p>
+<p><strong>Related:</strong> <a href="https://www.blueletterbible.org/lexicon/h5081/kjv/wlc/0-1/" target="_blank" data-lexicon="adjective inclined, willing, noble, generous incited, inclined, willing noble, princely (in rank) noble (in mind and ..." data-strongs="H5081" data-translit="nāḏîḇ" data-original="נָדִיב" data-lang="hebrew" data-verse="">נָדִיב</a> (<em>nadiv</em>, generous, noble, willing)</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/35/29/s_85029" target="_blank" data-ref="Exodus 35:29">Exodus 35:29; 36:3</a>; cf. <a href="https://www.blueletterbible.org/kjv/lev/7/16/s_97016" target="_blank" data-ref="Leviticus 7:16">Leviticus 7:16</a>; <a href="https://www.blueletterbible.org/kjv/deu/16/10/s_169010" target="_blank" data-ref="Deuteronomy 16:10">Deuteronomy 16:10</a>; <a href="https://www.blueletterbible.org/kjv/psa/54/6/s_532006" target="_blank" data-ref="Psalm 54:6">Psalm 54:6</a></p>
+<h3>Meaning</h3>
+<p><em>Nedavah</em> is the offering given from inner motivation rather than external obligation. It is rooted in willingness itself — the verb <em>nadav</em> means "to be moved from within." The Tabernacle's materials came entirely from <em>nedavah</em>: no tax, no tithe, no coercion. God does not requisition; He invites.</p>
+<h3>Deeper Context</h3>
+<p>The related adjective <em>nadiv</em> (<a href="https://www.blueletterbible.org/lexicon/h5081/kjv/wlc/0-1/" target="_blank" data-lexicon="adjective inclined, willing, noble, generous incited, inclined, willing noble, princely (in rank) noble (in mind and ..." data-strongs="H5081" data-translit="nāḏîḇ" data-original="נָדִיב" data-lang="hebrew" data-verse="">נָדִיב</a>) means "noble" or "generous" — in Hebrew, true nobility is defined by willingness to give. The "noble" person is the one whose heart moves outward. The same root appears in the name Nadab (<a href="https://www.blueletterbible.org/lexicon/h5070/kjv/wlc/0-1/" target="_blank" data-lexicon="Nadab = &quot;generous&quot;eldest son of Aaron by Elisheba; struck dead before the sanctuary in the wilderness for kindling th..." data-strongs="H5070" data-translit="nāḏāḇ" data-original="נָדָב" data-lang="hebrew" data-verse="">נָדָב</a>), Aaron's son — though his story becomes a cautionary tale of unauthorized offering in <a href="https://www.blueletterbible.org/kjv/lev/10/1/s_100001" target="_blank" data-ref="Leviticus 10">Leviticus 10</a>.</p>
+<p><a href="https://www.blueletterbible.org/kjv/exo/35/1/s_85001" target="_blank" data-ref="Exodus 35">Exodus 35</a> uses multiple expressions to describe the donors' motivation: "whose heart stirred him up" (<a href="https://www.blueletterbible.org/kjv/exo/35/21/s_85021" target="_blank" data-ref="Exodus 35:21">Ex 35:21</a>), "whose spirit made willing" (<a href="https://www.blueletterbible.org/kjv/exo/35/21/s_85021" target="_blank" data-ref="Exodus 35:21">Ex 35:21</a>), "willing hearted" (<a href="https://www.blueletterbible.org/kjv/exo/35/22/s_85022" target="_blank" data-ref="Exodus 35:22">Ex 35:22</a>), "brought a willing offering" (<a href="https://www.blueletterbible.org/kjv/exo/35/29/s_85029" target="_blank" data-ref="Exodus 35:29">Ex 35:29</a>). The cumulative effect is overwhelming: the motive, not the material, is what matters.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Interior motivation</strong>: God values the <em>why</em> behind the gift, not just the gift itself</li>
+<li><strong>Contrast with the golden calf</strong>: In <a href="https://www.blueletterbible.org/kjv/exo/32/1/s_82001" target="_blank" data-ref="Exodus 32">Ex 32</a>, the people gave gold without resistance for an idol. In <a href="https://www.blueletterbible.org/kjv/exo/35/1/s_85001" target="_blank" data-ref="Exodus 35">Ex 35</a>, they give from transformed hearts for God's dwelling</li>
+<li><strong>Generosity as worship</strong>: The act of giving freely is itself a form of devotion</li>
+</ol>
+<h3>LDS Application</h3>
+<p>The sacrament prayer speaks of a "willingness" — "willing to take upon them the name of thy Son" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/20?lang=eng&id=p77#p77" target="_blank" data-ref="D&C 20:77">D&C 20:77</a>). God asks not for forced compliance but for hearts that are <em>moved</em>. Tithing, fast offerings, and consecration all carry the nedavah principle: the gift matters because of the giver's heart.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><em>nedavah</em> (<a href="https://www.blueletterbible.org/lexicon/h5071/kjv/wlc/0-1/" target="_blank" data-lexicon="voluntariness, free-will offeringvoluntarinessfreewill, voluntary, offering" data-strongs="H5071" data-translit="nᵊḏāḇâ" data-original="נְדָבָה" data-lang="hebrew" data-verse="">נְדָבָה</a>) — "freewill offering," from <em>nadav</em> (<a href="https://www.blueletterbible.org/lexicon/h5068/kjv/wlc/0-1/" target="_blank" data-lexicon="to incite, impel, make willing(Qal) to incite, impel(Hithpael)to volunteerto offer free-will offerings" data-strongs="H5068" data-translit="nāḏaḇ" data-original="נָדַב" data-lang="hebrew" data-verse="">נדב</a>), to be willing</td><td><a href="https://www.blueletterbible.org/lexicon/h5071/kjv/wlc/0-1/" target="_blank" data-lexicon="voluntariness, free-will offeringvoluntarinessfreewill, voluntary, offering" data-strongs="H5071" data-translit="nᵊḏāḇâ" data-original="נְדָבָה" data-lang="hebrew" data-verse="">BLB H5071</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td>ἑκούσιος (<em>hekousios</em>) — voluntary, willing; cf. ἑκουσίως in <a href="https://www.blueletterbible.org/kjv/heb/10/26/s_1143026" target="_blank" data-ref="Hebrews 10:26">Hebrews 10:26</a></td><td><a href="https://www.blueletterbible.org/lexicon/g1595/kjv/tr/0-1/" target="_blank" data-lexicon="voluntary" data-strongs="G1595" data-translit="hekousios" data-original="ἑκούσιος" data-lang="greek" data-verse="">BLB G1595</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><em>spontaneus</em> / <em>voluntarius</em> — voluntary, of one's own will</td><td><a href="https://logeion.uchicago.edu/voluntarius" target="_blank">Logeion: voluntarius</a></td></tr>
+<tr><td><strong>English</strong></td><td><em>voluntary</em> — from Latin <em>voluntarius</em>, from <em>voluntas</em> (will); <em>willing</em> — from OE <em>willan</em>, to wish</td><td><a href="https://www.merriam-webster.com/dictionary/voluntary" target="_blank">Merriam-Webster: voluntary</a> · <a href="https://webstersdictionary1828.com/Dictionary/voluntary" target="_blank">Webster's 1828: voluntary</a> · <a href="https://www.etymonline.com/word/voluntary" target="_blank">Etymonline: voluntary</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 3: Chokhmat-Lev (חָכְמַת־לֵב) — "Wisdom of Heart"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h2449/kjv/wlc/0-1/" target="_blank" data-lexicon="to be wise(Qal) to be or become wise, act wisely(Piel) to make wise, teach wisdom, instruct(Pual) to be made wise(Hip..." data-strongs="H2449" data-translit="ḥāḵam" data-original="חָכַם" data-lang="hebrew" data-verse="">חכם</a> (<em>chakham</em>, to be wise) + <a href="https://www.blueletterbible.org/lexicon/h3821/kjv/wlc/0-1/" target="_blank" data-lexicon="heart, mind" data-strongs="H3821" data-translit="lēḇ" data-original="לֵב" data-lang="hebrew" data-verse="">לֵב</a> (<em>lev</em>, heart)</p>
+<p><strong>Related:</strong> <a href="https://www.blueletterbible.org/lexicon/h2454/kjv/wlc/0-1/" target="_blank" data-lexicon="wisdom" data-strongs="H2454" data-translit="ḥāḵmôṯ" data-original="חָכְמָה" data-lang="hebrew" data-verse="">חָכְמָה</a> (<em>chokmah</em>, wisdom); חֲכַם לֵב (<em>chakham lev</em>, wise-hearted)</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/35/10/s_85010" target="_blank" data-ref="Exodus 35:10">Exodus 35:10, 25, 26; 36:1-2, 8</a></p>
+<h3>Meaning</h3>
+<p><em>Chokhmat-lev</em> — "wisdom of heart" — is the term used repeatedly in <a href="https://www.blueletterbible.org/kjv/exo/35/1/s_85001" target="_blank" data-ref="Exodus 35">Exodus 35-36</a> for the skilled craftspeople who built the Tabernacle. It combines intellectual skill (<em>chokmah</em>) with interior disposition (<em>lev</em>). In Hebrew thought, the heart is the seat of both intellect and will. "Wisdom of heart" is therefore not merely technical competence but engaged, purposeful, devoted skill.</p>
+<h3>Deeper Context</h3>
+<p>The phrase appears in various forms: "wise-hearted" (<a href="https://www.blueletterbible.org/kjv/exo/35/10/s_85010" target="_blank" data-ref="Exodus 35:10">Ex 35:10</a>), "every wise hearted man" (<a href="https://www.blueletterbible.org/kjv/exo/36/1/s_86001" target="_blank" data-ref="Exodus 36:1">Ex 36:1</a>), "the women that were wise hearted" (<a href="https://www.blueletterbible.org/kjv/exo/35/25/s_85025" target="_blank" data-ref="Exodus 35:25">Ex 35:25</a>). Both men and women are described as <em>chakham lev</em>. The women who spun the goat hair (<a href="https://www.blueletterbible.org/kjv/exo/35/26/s_85026" target="_blank" data-ref="Exodus 35:26">Ex 35:26</a>) and the linen (<a href="https://www.blueletterbible.org/kjv/exo/35/25/s_85025" target="_blank" data-ref="Exodus 35:25">Ex 35:25</a>) are given the same designation as the men who worked in gold and stone. Sacred skill is not gendered.</p>
+<p>The same root <em>chakham</em> is used for Solomon's wisdom (1 Kgs 3:12) and for Wisdom personified in <a href="https://www.blueletterbible.org/kjv/pro/8/1/s_636001" target="_blank" data-ref="Proverbs 8">Proverbs 8</a> — the master craftsman beside God at creation. The Tabernacle artisans share vocabulary with cosmic creation.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Skill as spiritual gift</strong>: Craftsmanship is described in the same terms as prophetic wisdom</li>
+<li><strong>Heart and hand unified</strong>: True sacred work engages both devotion and expertise</li>
+<li><strong>Men and women alike</strong>: The designation applies without distinction to all who contribute skilled labor</li>
+</ol>
+<h3>LDS Application</h3>
+<p><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/46?lang=eng&id=p11#p11" target="_blank" data-ref="D&C 46:11">D&C 46:11</a> teaches that "to every man is given a gift by the Spirit of God." The Tabernacle account affirms that artistic, manual, and creative gifts are Spirit-given. The call to consecrate one's talents — not just time and money — finds its archetype here.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><em>chokhmat-lev</em> (חָכְמַת־לֵב) — "wisdom of heart," from <em>chakham</em> (<a href="https://www.blueletterbible.org/lexicon/h2449/kjv/wlc/0-1/" target="_blank" data-lexicon="to be wise(Qal) to be or become wise, act wisely(Piel) to make wise, teach wisdom, instruct(Pual) to be made wise(Hip..." data-strongs="H2449" data-translit="ḥāḵam" data-original="חָכַם" data-lang="hebrew" data-verse="">חכם</a>), wise + <em>lev</em> (<a href="https://www.blueletterbible.org/lexicon/h3821/kjv/wlc/0-1/" target="_blank" data-lexicon="heart, mind" data-strongs="H3821" data-translit="lēḇ" data-original="לֵב" data-lang="hebrew" data-verse="">לֵב</a>), heart</td><td><a href="https://www.blueletterbible.org/lexicon/h2451/kjv/wlc/0-1/" target="_blank" data-lexicon="wisdomskill (in war)wisdom (in administration)shrewdness, wisdomwisdom, prudence (in religious affairs)wisdom (ethica..." data-strongs="H2451" data-translit="ḥāḵmâ" data-original="חָכְמָה" data-lang="hebrew" data-verse="">BLB H2451</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g4678/kjv/wlc/0-1/" target="_blank" data-lexicon="wisdom, broad and full of intelligence; used of the knowledge of very diverse mattersthe wisdom which belongs to mens..." data-strongs="G4678" data-translit="sophia" data-original="σοφία" data-lang="greek" data-verse="">σοφία</a> (<em>sophia</em>) — wisdom; σοφός τῇ καρδίᾳ (<em>sophos tē kardia</em>), wise in heart</td><td><a href="https://www.blueletterbible.org/lexicon/g4678/kjv/tr/0-1/" target="_blank" data-lexicon="wisdom, broad and full of intelligence; used of the knowledge of very diverse mattersthe wisdom which belongs to mens..." data-strongs="G4678" data-translit="sophia" data-original="σοφία" data-lang="greek" data-verse="">BLB G4678</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><em>sapientia cordis</em> — wisdom of heart; <em>sapiens</em> from <em>sapere</em> (to taste, to be wise)</td><td><a href="https://logeion.uchicago.edu/sapientia" target="_blank">Logeion: sapientia</a></td></tr>
+<tr><td><strong>English</strong></td><td><em>wisdom</em> — from OE <em>wīsdōm</em>, from <em>wīs</em> (wise) + <em>-dōm</em>; related to <em>wit</em>, from PIE <em>weid-</em> (to see, to know)</td><td><a href="https://www.merriam-webster.com/dictionary/wisdom" target="_blank">Merriam-Webster: wisdom</a> · <a href="https://webstersdictionary1828.com/Dictionary/wisdom" target="_blank">Webster's 1828: wisdom</a> · <a href="https://www.etymonline.com/word/wisdom" target="_blank">Etymonline: wisdom</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 4: Kavod (כָּבוֹד) — "Glory / Weight / Honor"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h3513/kjv/wlc/0-1/" target="_blank" data-lexicon="to be heavy, be weighty, be grievous, be hard, be rich, be honourable, be glorious, be burdensome, be honoured(Qal)to..." data-strongs="H3513" data-translit="kāḇaḏ" data-original="כָּבַד" data-lang="hebrew" data-verse="">כבד</a> (<em>kavad</em>, to be heavy, weighty, honored)</p>
+<p><strong>Related:</strong> <a href="https://www.blueletterbible.org/lexicon/h3513/kjv/wlc/0-1/" target="_blank" data-lexicon="to be heavy, be weighty, be grievous, be hard, be rich, be honourable, be glorious, be burdensome, be honoured(Qal)to..." data-strongs="H3513" data-translit="kāḇaḏ" data-original="כָּבַד" data-lang="hebrew" data-verse="">כָּבֵד</a> (<em>kaved</em>, heavy); כִּבּוּד (<em>kibbud</em>, honor, respect)</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/16/10/s_66010" target="_blank" data-ref="Exodus 16:10">Exodus 16:10; 24:16-17; 33:18, 22; 40:34-35</a></p>
+<h3>Meaning</h3>
+<p><em>Kavod</em> is one of the richest words in the Hebrew Bible. At its root, it means "weight" or "heaviness" — the opposite of what is light, trivial, or dismissible. Applied to God, <em>kavod</em> is His manifest presence — His visible, overwhelming reality. When the glory of the LORD (<em>kevod YHWH</em>) fills the Tabernacle in <a href="https://www.blueletterbible.org/kjv/exo/40/34/s_90034" target="_blank" data-ref="Exodus 40:34">Exodus 40:34</a>, it is the weighty, substantial, undeniable arrival of God Himself.</p>
+<h3>Deeper Context</h3>
+<p>God's <em>kavod</em> has appeared at key moments throughout Exodus: in the wilderness (<a href="https://www.blueletterbible.org/kjv/exo/16/10/s_66010" target="_blank" data-ref="Exodus 16:10">Ex 16:10</a>), on Mount Sinai (<a href="https://www.blueletterbible.org/kjv/exo/24/16-17/s_74016" target="_blank" data-ref="Exodus 24:16-17">Ex 24:16-17</a>), and to Moses in the cleft of the rock (<a href="https://www.blueletterbible.org/kjv/exo/33/18-22/s_83018" target="_blank" data-ref="Exodus 33:18-22">Ex 33:18-22</a>). Each appearance was partial, temporary, or veiled. But in <a href="https://www.blueletterbible.org/kjv/exo/40/34/s_90034" target="_blank" data-ref="Exodus 40:34">Exodus 40:34</a>, the <em>kavod</em> fills (<em>male'</em>) the Tabernacle — it is comprehensive, pervasive, and settled. The God who passed by Moses in a flash now takes up permanent residence.</p>
+<p>The word <em>male'</em> (filled) means completely, leaving no room. When the <em>kavod</em> fills the Mishkan, there is no empty space. Even Moses cannot enter (40:35). Divine presence is not decorative; it is total.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Glory as weight</strong>: God's presence is not ethereal or abstract — it is substantial, heavy, undeniable</li>
+<li><strong>Filling completely</strong>: The <em>kavod</em> doesn't partially occupy the Tabernacle — it fills it entirely</li>
+<li><strong>The goal of redemption</strong>: The <em>kavod</em> filling the Mishkan is the culmination of Exodus — the whole story has been moving toward this</li>
+</ol>
+<h3>LDS Application</h3>
+<p>At the Kirtland Temple dedication on March 27, 1836, multiple witnesses reported that "a bright cloud and a pillar of fire rest over the temple" and that the glory of God filled the building (<a href="https://www.churchofjesuschrist.org/study/history/saints-v1/21-the-spirit-of-god?lang=eng" target="_blank"><em>Saints</em>, Vol. 1, Ch. 21: "The Spirit of God"</a>). The pattern of <a href="https://www.blueletterbible.org/kjv/exo/40/1/s_90001" target="_blank" data-ref="Exodus 40">Exodus 40</a> — faithful building, divine response — repeated across dispensations. The promise of <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/109?lang=eng&id=p12#p12" target="_blank" data-ref="D&C 109:12">D&C 109:12</a> echoes: "that thy glory may rest down upon thy people."</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><em>kavod</em> (כָּבוֹד) — "glory, weight, honor," from <em>kavad</em> (<a href="https://www.blueletterbible.org/lexicon/h3513/kjv/wlc/0-1/" target="_blank" data-lexicon="to be heavy, be weighty, be grievous, be hard, be rich, be honourable, be glorious, be burdensome, be honoured(Qal)to..." data-strongs="H3513" data-translit="kāḇaḏ" data-original="כָּבַד" data-lang="hebrew" data-verse="">כבד</a>), to be heavy</td><td><a href="https://www.blueletterbible.org/lexicon/h3519/kjv/wlc/0-1/" target="_blank" data-lexicon="glory, honour, glorious, abundance abundance, riches honour, splendour, glory honour, dignity honour, reputation hono..." data-strongs="H3519" data-translit="kāḇôḏ" data-original="כָּבַד" data-lang="hebrew" data-verse="">BLB H3519</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g1391/kjv/wlc/0-1/" target="_blank" data-lexicon="opinion, judgment, view opinion, estimate, whether good or bad concerning someone in the NT always a good opinion con..." data-strongs="G1391" data-translit="doxa" data-original="δόξα" data-lang="greek" data-verse="">δόξα</a> (<em>doxa</em>) — glory, splendor, honor; from δοκέω (<em>dokeō</em>), to seem, to appear</td><td><a href="https://www.blueletterbible.org/lexicon/g1391/kjv/tr/0-1/" target="_blank" data-lexicon="opinion, judgment, view opinion, estimate, whether good or bad concerning someone in the NT always a good opinion con..." data-strongs="G1391" data-translit="doxa" data-original="δόξα" data-lang="greek" data-verse="">BLB G1391</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><em>gloria</em> — glory, fame, renown</td><td><a href="https://logeion.uchicago.edu/gloria" target="_blank">Logeion: gloria</a></td></tr>
+<tr><td><strong>English</strong></td><td><em>glory</em> — from Latin <em>gloria</em>; <em>weight</em> — from OE <em>gewiht</em>, from PIE <em>wegh-</em> (to carry, to move)</td><td><a href="https://www.merriam-webster.com/dictionary/glory" target="_blank">Merriam-Webster: glory</a> · <a href="https://webstersdictionary1828.com/Dictionary/glory" target="_blank">Webster's 1828: glory</a> · <a href="https://www.etymonline.com/word/glory" target="_blank">Etymonline: glory</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 5: Melakhah (מְלָאכָה) — "Work / Skilled Labor / Craftsmanship"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> לאך (<em>la'akh</em>); related to <a href="https://www.blueletterbible.org/lexicon/h4398/kjv/wlc/0-1/" target="_blank" data-lexicon="angel" data-strongs="H4398" data-translit="mal&#x27;aḵ" data-original="מַלְאַךְ" data-lang="hebrew" data-verse="">מַלְאָךְ</a> (<em>mal'akh</em>, messenger, angel)</p>
+<p><strong>Related:</strong> מְלֶאכֶת הַקֹּדֶשׁ (<em>melekhet ha-kodesh</em>, the work of the sanctuary)</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/35/2/s_85002" target="_blank" data-ref="Exodus 35:2">Exodus 35:2, 21, 24, 29, 33; 36:1-8; 39:43; 40:33</a></p>
+<h3>Meaning</h3>
+<p><em>Melakhah</em> is the comprehensive term for purposeful, skilled work — not mere labor (<em>avodah</em>) but deliberate, creative craftsmanship. It is the word used for both the Tabernacle construction (<a href="https://www.blueletterbible.org/kjv/exo/36/1/s_86001" target="_blank" data-ref="Exodus 36:1">Ex 36:1</a>) and for God's own work of creation (<a href="https://www.blueletterbible.org/kjv/gen/2/2-3/s_2002" target="_blank" data-ref="Genesis 2:2-3">Gen 2:2-3</a>). The connection is not accidental: Tabernacle building and world building share vocabulary because they share theology.</p>
+<h3>Deeper Context</h3>
+<p>The same word <em>melakhah</em> defines what is forbidden on Shabbat (<a href="https://www.blueletterbible.org/kjv/exo/35/2/s_85002" target="_blank" data-ref="Exodus 35:2">Ex 35:2</a>). The rabbis derived the 39 prohibited Sabbath activities from the specific types of <em>melakhah</em> needed to build the Tabernacle — weaving, dyeing, building, kindling fire, etc. Sabbath rest is defined by Tabernacle work: whatever was needed to build God's house is the very activity that ceases on God's day.</p>
+<p><a href="https://www.blueletterbible.org/kjv/exo/39/43/s_89043" target="_blank" data-ref="Exodus 39:43">Exodus 39:43</a> says "Moses finished [saw] the <em>melakhah</em>" — echoing <a href="https://www.blueletterbible.org/kjv/gen/2/2/s_2002" target="_blank" data-ref="Genesis 2:2">Genesis 2:2</a>, where God finished His <em>melakhah</em> of creation. Moses' inspection of the completed Tabernacle mirrors God's inspection of the completed world.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Sacred work</strong>: <em>Melakhah</em> for the Tabernacle is the same word used for divine creation — human work can participate in God's creative purpose</li>
+<li><strong>Work defines rest</strong>: Sabbath is measured against the Tabernacle's labors, not the other way around</li>
+<li><strong>Completion as blessing</strong>: The pattern of work → completion → inspection → blessing (<a href="https://www.blueletterbible.org/kjv/exo/39/43/s_89043" target="_blank" data-ref="Exodus 39:43">Ex 39:43</a>) mirrors creation → completion → "very good" → Sabbath (<a href="https://www.blueletterbible.org/kjv/gen/1/31-2/s_1031" target="_blank" data-ref="Genesis 1:31-2">Gen 1:31-2</a>:3)</li>
+</ol>
+<h3>LDS Application</h3>
+<p>The dedicatory prayer of the Kirtland Temple (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/109?lang=eng" target="_blank" data-ref="D&C 109">D&C 109</a>) asks that the temple be accepted as "the work of our hands." Sacred construction — whether ancient or modern — is <em>melakhah</em>: purposeful, skilled, consecrated labor offered to God. The work of temple building is dignified by sharing vocabulary with God's own creative acts.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><em>melakhah</em> (<a href="https://www.blueletterbible.org/lexicon/h4399/kjv/wlc/0-1/" target="_blank" data-lexicon="occupation, work, business occupation, business property work (something done or made) workmanship service, use publi..." data-strongs="H4399" data-translit="mᵊlā&#x27;ḵâ" data-original="מְלָאכָה" data-lang="hebrew" data-verse="">מְלָאכָה</a>) — "work, craftsmanship," from root ל-א-ך</td><td><a href="https://www.blueletterbible.org/lexicon/h4399/kjv/wlc/0-1/" target="_blank" data-lexicon="occupation, work, business occupation, business property work (something done or made) workmanship service, use publi..." data-strongs="H4399" data-translit="mᵊlā'ḵâ" data-original="מְלָאכָה" data-lang="hebrew" data-verse="">BLB H4399</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g2041/kjv/wlc/0-1/" target="_blank" data-lexicon="business, employment, that which any one is occupied that which one undertakes to do, enterprise, undertaking any pro..." data-strongs="G2041" data-translit="ergon" data-original="ἔργον" data-lang="greek" data-verse="">ἔργον</a> (<em>ergon</em>) — work, deed, task; cf. ἐνέργεια (<em>energeia</em>), active working</td><td><a href="https://www.blueletterbible.org/lexicon/g2041/kjv/tr/0-1/" target="_blank" data-lexicon="business, employment, that which any one is occupied that which one undertakes to do, enterprise, undertaking any pro..." data-strongs="G2041" data-translit="ergon" data-original="ἔργον" data-lang="greek" data-verse="">BLB G2041</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><em>opus</em> — work, product of labor; plural <em>opera</em> (works, deeds)</td><td><a href="https://logeion.uchicago.edu/opus" target="_blank">Logeion: opus</a></td></tr>
+<tr><td><strong>English</strong></td><td><em>craft</em> — from OE <em>cræft</em>, skill, strength, power; <em>work</em> — from OE <em>weorc</em>, from PIE <em>werg-</em> (to do, to make)</td><td><a href="https://www.merriam-webster.com/dictionary/craft" target="_blank">Merriam-Webster: craft</a> · <a href="https://webstersdictionary1828.com/Dictionary/work" target="_blank">Webster's 1828: work</a> · <a href="https://www.etymonline.com/word/craft" target="_blank">Etymonline: craft</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 6: Kodesh (קֹדֶשׁ) — "Holy / Sacred / Set Apart"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h6942/kjv/wlc/0-1/" target="_blank" data-lexicon="to sanctify, consecrate, make holy" data-strongs="H6942" data-translit="qadash" data-original="קָדַשׁ" data-lang="hebrew" data-verse="Exodus 19:10">ק-ד-ש</a>ׁ (<em>q-d-sh</em>, to be holy, set apart, consecrated)</p>
+<p><strong>Related:</strong> <a href="https://www.blueletterbible.org/lexicon/h6918/kjv/wlc/0-1/" target="_blank" data-lexicon="holy, set apart" data-strongs="H6918" data-translit="qadosh" data-original="קָדוֹשׁ" data-lang="hebrew" data-verse="Isaiah 6:3">קָדוֹשׁ</a> (<em>kadosh</em>, holy); <a href="https://www.blueletterbible.org/lexicon/h6918/kjv/wlc/0-1/" target="_blank" data-lexicon="holy, set apart" data-strongs="H6918" data-translit="qadosh" data-original="קָדוֹשׁ" data-lang="hebrew" data-verse="Isaiah 6:3">קִדּוּשׁ</a> (<em>kiddush</em>, sanctification); <a href="https://www.blueletterbible.org/lexicon/h4720/kjv/wlc/0-1/" target="_blank" data-lexicon="sanctuary, holy place" data-strongs="H4720" data-translit="miqdash" data-original="מִקְדָּשׁ" data-lang="hebrew" data-verse="Exodus 25:8">מִקְדָּשׁ</a> (<em>mikdash</em>, sanctuary)</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/35/2/s_85002" target="_blank" data-ref="Exodus 35:2">Exodus 35:2; 36:1, 3, 4, 6; 38:24, 27; 39:1, 30, 41; 40:9-10, 13</a></p>
+<h3>Meaning</h3>
+<p><em>Kodesh</em> means "holy" in the sense of set apart, distinct from the ordinary, consecrated for divine purpose. The Tabernacle is called the <a href="https://www.blueletterbible.org/lexicon/h4720/kjv/wlc/0-1/" target="_blank" data-lexicon="sanctuary, holy place" data-strongs="H4720" data-translit="miqdash" data-original="מִקְדָּשׁ" data-lang="hebrew" data-verse="Exodus 25:8">מִקְדָּשׁ</a> (<em>mikdash</em>) — the "set-apart-place." Everything within it is <em>kodesh</em>: the garments are "holy garments" (<a href="https://www.blueletterbible.org/kjv/exo/39/1/s_89001" target="_blank" data-ref="Exodus 39:1">Ex 39:1</a>), the crown is the "holy crown" (<a href="https://www.blueletterbible.org/kjv/exo/39/30/s_89030" target="_blank" data-ref="Exodus 39:30">Ex 39:30</a>), the oil is "holy anointing oil" (<a href="https://www.blueletterbible.org/kjv/exo/40/9/s_90009" target="_blank" data-ref="Exodus 40:9">Ex 40:9</a>), the work is "the service of the holy place" (<a href="https://www.blueletterbible.org/kjv/exo/36/1/s_86001" target="_blank" data-ref="Exodus 36:1">Ex 36:1, 3</a>).</p>
+<h3>Deeper Context</h3>
+<p>The golden plate on the High Priest's forehead reads קֹדֶשׁ לַיהוָה (<em>kodesh la-YHWH</em>) — "Holiness to the LORD" (<a href="https://www.blueletterbible.org/kjv/exo/39/30/s_89030" target="_blank" data-ref="Exodus 39:30">Ex 39:30</a>). This is both a declaration and a dedication. The High Priest's first visible identity is his consecration. Everything about the Tabernacle system — its graduated zones, its precise instructions, its careful materials — serves the principle of <em>kodesh</em>: separating the sacred from the common, not to exclude but to protect and honor the extraordinary.</p>
+<p>The root K-D-Sh pervades worship vocabulary: <em>kiddush</em> (sanctification of Sabbath wine), <em>kaddish</em> (the sanctification prayer), <em>kedushah</em> (the liturgical declaration "Holy, holy, holy"), <em>mikdash</em> (sanctuary). To be holy is not to be morally perfect but to be designated, set apart, consecrated for God's purpose.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Holiness as designation</strong>: <em>Kodesh</em> is about identity and purpose before it is about moral perfection</li>
+<li><strong>Holiness pervades everything</strong>: In the Tabernacle, the garments, the oil, the work, the space, the time (Sabbath) are all <em>kodesh</em></li>
+<li><strong>"Holiness to the LORD"</strong>: The ultimate declaration — consecration is directional; it is <em>to</em> God</li>
+</ol>
+<h3>LDS Application</h3>
+<p>The same inscription — "Holiness to the Lord" — adorns every Latter-day Saint temple. The continuity is not incidental: the principle that sacred space must be set apart, that holiness requires boundaries and order, and that consecration is the foundation of divine encounter is as central to modern temple theology as it was to the ancient Mishkan.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><em>kodesh</em> (<a href="https://www.blueletterbible.org/lexicon/h6944/kjv/wlc/0-1/" target="_blank" data-lexicon="holiness, sacred thing" data-strongs="H6944" data-translit="qodesh" data-original="קֹדֶשׁ" data-lang="hebrew" data-verse="Exodus 15:11">קֹדֶשׁ</a>) — "holy, sacred, set apart," from root <em>q-d-sh</em> (<a href="https://www.blueletterbible.org/lexicon/h6942/kjv/wlc/0-1/" target="_blank" data-lexicon="to sanctify, consecrate, make holy" data-strongs="H6942" data-translit="qadash" data-original="קָדַשׁ" data-lang="hebrew" data-verse="Exodus 19:10">ק-ד-ש</a>ׁ)</td><td><a href="https://www.blueletterbible.org/lexicon/h6944/kjv/wlc/0-1/" target="_blank" data-lexicon="holiness, sacred thing" data-strongs="H6944" data-translit="qodesh" data-original="קֹדֶשׁ" data-lang="hebrew" data-verse="Exodus 15:11">BLB H6944</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g40/kjv/wlc/0-1/" target="_blank" data-lexicon="sacred (physically, pure, morally blameless or religious, ceremonially, consecrated)" data-strongs="G40" data-translit="hágios" data-original="ἅγιος" data-lang="greek" data-verse="">ἅγιος</a> (<em>hagios</em>) — holy, sacred, set apart; <a href="https://www.blueletterbible.org/lexicon/g37/kjv/wlc/0-1/" target="_blank" data-lexicon="to make holy, i.e. (ceremonially) purify or consecrate; (mentally) to venerate" data-strongs="G37" data-translit="hagiázō" data-original="ἁγιάζω" data-lang="greek" data-verse="">ἁγιάζω</a> (<em>hagiazō</em>), to sanctify</td><td><a href="https://www.blueletterbible.org/lexicon/g40/kjv/tr/0-1/" target="_blank" data-lexicon="sacred (physically, pure, morally blameless or religious, ceremonially, consecrated)" data-strongs="G40" data-translit="hágios" data-original="ἅγιος" data-lang="greek" data-verse="">BLB G40</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><em>sanctus</em> — holy, sacred; from <em>sancire</em> (to make sacred, to confirm)</td><td><a href="https://logeion.uchicago.edu/sanctus" target="_blank">Logeion: sanctus</a></td></tr>
+<tr><td><strong>English</strong></td><td><em>holy</em> — from OE <em>hālig</em>, whole, uninjured, sacred; related to <em>whole</em> and <em>hale</em></td><td><a href="https://www.merriam-webster.com/dictionary/holy" target="_blank">Merriam-Webster: holy</a> · <a href="https://webstersdictionary1828.com/Dictionary/holy" target="_blank">Webster's 1828: holy</a> · <a href="https://www.etymonline.com/word/holy" target="_blank">Etymonline: holy</a></td></tr>
+</table>
+<hr>
+<p><em><a href="https://www.blueletterbible.org/kjv/exo/35/1/s_85001" target="_blank" data-ref="Exodus 35">Exodus 35-40</a> Standalone Study Guide | CFM Corner | OT 2026</em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 5: EXODUS 35–40: JEWISH PERSPECTIVE -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">5. Exodus 35–40: Jewish Perspective</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Introduction</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The final six chapters of Exodus describe the construction of the Mishkan (<a href="https://www.blueletterbible.org/lexicon/h4907/kjv/wlc/0-1/" target="_blank" data-lexicon="abode (of God)" data-strongs="H4907" data-translit="miškan" data-original="מִשְׁכַּן" data-lang="hebrew" data-verse="">מִשְׁכָּן</a> — Tabernacle/dwelling place) with a detail and repetition that puzzles modern readers but signals something enormous to Jewish commentators: God is coming home. After the catastrophe of the golden calf — the shattered tablets, Moses' agonized intercession, God's terrifying statement that He would send an angel but not go Himself (<a href="https://www.blueletterbible.org/kjv/exo/33/3/s_83003" target="_blank" data-ref="Exodus 33:3">Ex 33:3</a>) — the question that hangs over the narrative is: <em>Will God still dwell among us?</em></p>
+<p><a href="https://www.blueletterbible.org/kjv/exo/35/1/s_85001" target="_blank" data-ref="Exodus 35">Exodus 35-40</a> answers with an emphatic yes. The people give willingly, the artisans build faithfully, and the glory of the LORD fills the completed Tabernacle. Jewish tradition approaches these chapters as the great reversal — not merely a construction narrative but the definitive sign of divine forgiveness, of restored relationship, and of God's astonishing willingness to make His home among imperfect people.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>1. Rashi: The Tabernacle as Proof of Forgiveness</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Teaching</h3>
+<p>Rashi (Rabbi Shlomo Yitzchaki, 1040-1105, France) applies a foundational rabbinic principle to the Tabernacle narrative: the Torah is not always chronological. Events are arranged by theme or theological significance, not calendar sequence.</p>
+<p>According to Rashi's reading, the command to build the Mishkan (<a href="https://www.blueletterbible.org/kjv/exo/25/1/s_75001" target="_blank" data-ref="Exodus 25">Exodus 25-31</a>) was given <em>after</em> the golden calf sin (<a href="https://www.blueletterbible.org/kjv/exo/32/1/s_82001" target="_blank" data-ref="Exodus 32">Exodus 32</a>), even though it appears earlier in the text. The chronological sequence, on this reading, is: Israel sins with the golden calf → Moses intercedes → God forgives → God gives the Tabernacle instructions → Israel builds → God's presence fills the completed dwelling.</p>
+<p>This matters enormously. The Shechinah (שְׁכִינָה — Divine Presence) consenting to dwell among Israel after the golden calf is not incidental. It is the <em>proof</em> of forgiveness. The cloud of glory filling the Tabernacle at the end of <a href="https://www.blueletterbible.org/kjv/exo/40/1/s_90001" target="_blank" data-ref="Exodus 40">Exodus 40</a> is the visual announcement: <em>you are forgiven</em>. God could have withdrawn to heaven and governed from a distance. Instead, He moved in.</p>
+<p>Rashi on <a href="https://www.blueletterbible.org/kjv/exo/35/1/s_85001" target="_blank" data-ref="Exodus 35:1">Exodus 35:1</a> — "Moses assembled": the assembly itself was a gathering of reconciliation, bringing together the people who had fragmented around the golden calf.</p>
+<h3>LDS Resonance</h3>
+<p>This framing transforms the Tabernacle from an architectural project into a visible covenant renewal. In Latter-day Saint terms, the pattern echoes the restoration of temples after periods of apostasy — and the personal experience of returning to temple worship after repentance. The temple's presence in a community signals not that the people are perfect, but that God has chosen to dwell among them in spite of their failures. The Mishkan is grace made architectural.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>2. The Zohar: The Tabernacle Reflects Creation</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Teaching</h3>
+<p>The Zohar (the central text of Jewish mysticism, compiled in 13th-century Spain, attributed to Rabbi Shimon bar Yochai) reads the construction of the Tabernacle as a deliberate echo of the creation of the universe. The verbal and structural parallels between <a href="https://www.blueletterbible.org/kjv/gen/1/1/s_1001" target="_blank" data-ref="Genesis 1">Genesis 1-2</a> and <a href="https://www.blueletterbible.org/kjv/exo/39/1/s_89001" target="_blank" data-ref="Exodus 39">Exodus 39-40</a> are, on this reading, not coincidental — they are deliberate correspondences.</p>
+<p>Both accounts follow the same arc: work undertaken in stages → work completed → inspection → blessing/rest. Specific parallels include:</p>
+<table class="info-table">
+<tr><th>Genesis</th><th>Exodus</th></tr>
+<tr><td>"God saw every thing... very good" (1:31)</td><td>"Moses did look upon all the work... they had done it" (39:43)</td></tr>
+<tr><td>"And God blessed" (2:3)</td><td>"And Moses blessed them" (39:43)</td></tr>
+<tr><td>"The heavens and the earth were finished" (2:1)</td><td>"Thus was all the work... finished" (39:32)</td></tr>
+<tr><td>"God finished his work" (2:2)</td><td>"So Moses finished the work" (40:33)</td></tr>
+<tr><td>The Spirit of God hovering over the waters (1:2)</td><td>The cloud covering the tent, glory filling the Mishkan (40:34)</td></tr>
+</table>
+<p>The Mishkan is, in miniature, a new creation — a sacred space where heaven and earth overlap, where created order meets its Creator. The act of building it is a participation in ongoing creation. Bezalel and the artisans are not merely craftsmen; they are sub-creators, partnering with God to bring sacred order out of material chaos.</p>
+<h3>LDS Resonance</h3>
+<p>Latter-day Saint theology of eternal progression holds that human creativity and craftsmanship, when sanctified, partake of divine work. The concept of humans as co-creators with God — particularly in temple building — aligns closely with the Zohar's vision. The temple as a microcosm of creation is a resonant idea for a people who believe that the purpose of mortal life is to learn to create.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>3. Maimonides: The Royal Palace</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Teaching</h3>
+<p>Maimonides (Rabbi Moshe ben Maimon, 1138-1204, Spain and Egypt) interpreted the Mishkan through the lens of a king's palace. In the <em>Guide for the Perplexed</em> (III:32, 45), he argued that God accommodated human beings where they were. Sacrificial worship was the universal religious language of the ancient Near East. Rather than demand an entirely alien form of devotion, God redirected an existing impulse — the desire to build a house for the deity — toward Himself and toward ethical purpose.</p>
+<p>The Mishkan's graduated design — outer courtyard → Holy Place → Holy of Holies — maps onto the architecture of royal approach. Those in the outer courts are not excluded; they are stationed at the court appropriate to their level of preparation. The design is not architecture of <em>exclusion</em> but of <em>ordered approach</em>.</p>
+<p>For Maimonides, this had practical and pedagogical significance. God takes the people as they are and gradually elevates them. The Tabernacle meets a felt need — the desire for God's visible presence — while redirecting it from idolatry to ordered worship.</p>
+<h3>LDS Resonance</h3>
+<p>Latter-day temples similarly follow graduated access — successive ordinances corresponding to increasing levels of covenant. Joseph Smith's principle that God "suits his mercies to the weaknesses of man" echoes Maimonides' understanding of divine condescension. God meets people in recognizable forms and refines them.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>4. Malbim: Building a Tabernacle in the Heart</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Teaching</h3>
+<p>Rabbi Meir Leibush ben Yechiel Michel (the Malbim, 1809-1879, Russia/Romania) drew out what the Mishkan asks of every individual, not just the community. The command "Let them make Me a sanctuary, that I may dwell among them" (<a href="https://www.blueletterbible.org/kjv/exo/25/8/s_75008" target="_blank" data-ref="Exodus 25:8">Ex 25:8</a>) contains a subtle but profound grammatical point: not "in it" (בְּתוֹכוֹ) but "among them" (בְּתוֹכָם) — within each person.</p>
+<p>The Mishkan is simultaneously a national project and a personal one. Each Israelite was called to construct an interior dwelling place for God — to order the inner life as the Tabernacle was ordered: a holy of holies at the center (the deepest commitments, the most sacred desires), surrounded by increasing layers of consecration, with the coarser things kept at the periphery.</p>
+<p>After the destruction of the Second Temple (70 CE), this interiorization became essential for Jewish survival. The physical structure was gone, but the inner sanctuary could never be destroyed. The Malbim reads this interior dimension back into the original Exodus text: it was always the intent.</p>
+<h3>LDS Resonance</h3>
+<p>The Doctrine and Covenants similarly moves between communal temple theology and the individual body as temple. Paul's teaching that the body is "the temple of the Holy Ghost" (1 Cor 6:19) and <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/130?lang=eng&id=p3#p3" target="_blank" data-ref="D&C 130:3">D&C 130:3</a>'s promise that the Father and Son will "personally visit" those who love Them both point toward this interior indwelling. The Tabernacle was never only a building; it was always also a pattern for the soul.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>5. Midrash Rabbah: Bezalel and the Wisdom of Creation</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Teaching</h3>
+<p>Midrash Rabbah on Exodus (Shemot Rabbah) contains a remarkable discussion of Bezalel's wisdom. The Talmud (Berakhot 55a) records that Bezalel "knew how to combine the letters by which heaven and earth were created." This is not simply praise of craftsmanship — it is a claim that the wisdom God gave Bezalel for building the Tabernacle was of the same order as the wisdom by which God built the cosmos.</p>
+<p>The proof text is the language itself: <a href="https://www.blueletterbible.org/kjv/exo/35/31/s_85031" target="_blank" data-ref="Exodus 35:31">Exodus 35:31</a> says God filled Bezalel with <em>chokmah</em> (wisdom), <em>tevunah</em> (understanding), and <em>da'at</em> (knowledge). These are the exact three qualities by which God created the world in <a href="https://www.blueletterbible.org/kjv/pro/3/19-20/s_631019" target="_blank" data-ref="Proverbs 3:19-20">Proverbs 3:19-20</a>: "The LORD by <em>wisdom</em> founded the earth; by <em>understanding</em> he established the heavens; by his <em>knowledge</em> the depths are broken up."</p>
+<p>Bezalel is not merely a skilled craftsman. He is, in rabbinic imagination, a human participant in the divine creative act — building on earth what mirrors heaven. The name <em>Betzal'el</em> (<a href="https://www.blueletterbible.org/lexicon/h1212/kjv/wlc/0-1/" target="_blank" data-lexicon="Bezaleel = &quot;in the shadow (i.e. protection) of God&quot;" data-strongs="H1212" data-translit="bᵊṣal&#x27;ēl" data-original="בְּצַלְאֵל" data-lang="hebrew" data-verse="">בְּצַלְאֵל</a>) — "in the shadow of God" — becomes more than a name. It is a vocation: to work in God's shadow, replicating God's work.</p>
+<h3>LDS Resonance</h3>
+<p>The Latter-day Saint understanding of co-creation — that humans, as children of God, are meant to participate in creative work — finds a compelling precursor here. Bezalel's Spirit-filled artistry anticipates the doctrine that God's work and glory (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=p39#p39" target="_blank" data-ref="Moses 1:39">Moses 1:39</a>) is shared with His children. The temple builder is doing divine work.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>6. Ramban on the Freewill Offerings: Where Did the Skills Come From?</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Teaching</h3>
+<p>Ramban (Nachmanides, 1194-1270, Spain and Israel) raises a practical question that most readers overlook. The Israelites had been slaves in Egypt, making bricks and mortar. Where did they suddenly acquire the skills to do fine goldwork, weaving of multi-colored fabrics, gemstone setting, and precision woodworking?</p>
+<p>Ramban's answer: the skills were miraculous. God awakened latent capacities in the people. Men and women who had never worked gold before found themselves able to do so. The willingness of heart (<em>nedavat lev</em>) was matched by a divine granting of ability. The freewill offerings weren't just material — they were vocational. People discovered talents they didn't know they had, awakened by God's Spirit for God's purpose.</p>
+<p>This reading emphasizes that the Tabernacle was not built by a professional class but by an entire community of newly-skilled, divinely-enabled volunteers.</p>
+<h3>LDS Resonance</h3>
+<p>Latter-day Saint mission calls, temple service callings, and humanitarian assignments frequently place people in roles beyond their natural experience. The principle that God qualifies the called — not merely calls the qualified — echoes Ramban's reading. The Tabernacle builders discovered their gifts in the act of offering them.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>7. The Sabbath Before Building: A Rabbinic Key</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Teaching</h3>
+<p>The placement of the Sabbath command immediately before the Tabernacle construction (<a href="https://www.blueletterbible.org/kjv/exo/35/1-3/s_85001" target="_blank" data-ref="Exodus 35:1-3">Ex 35:1-3</a>) generated extensive rabbinic discussion. The consensus: even the most sacred construction must yield to Sabbath rest.</p>
+<p>The Talmud (Shabbat 49b, 73a) derives the 39 categories of prohibited Sabbath labor (the <em>melakhot</em>) from the specific activities required to build the Tabernacle. The logic is precise: if God commanded these activities to stop even for <em>His own house</em>, then they define the outer boundary of all permissible labor. The Tabernacle became the source text for the entire Sabbath law.</p>
+<p>The practical implication is striking: God values <em>rest</em> more than His own <em>dwelling</em>. The order of commands (Sabbath first, then building) establishes a hierarchy: relationship before project, being before doing.</p>
+<h3>LDS Resonance</h3>
+<p>President Russell M. Nelson's emphasis on keeping the Sabbath as a "delight" (<a href="https://www.blueletterbible.org/kjv/isa/58/13/s_737013" target="_blank" data-ref="Isaiah 58:13">Isa 58:13</a>) resonates with this rabbinic principle. In Latter-day Saint practice, temple construction — however urgent — does not override the Sabbath. The pattern of rest-before-work is operational, not merely theoretical.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>8. The Repetition: Why the Torah Tells It Twice</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Teaching</h3>
+<p>Scholars and rabbis alike have grappled with why the Torah devotes six detailed chapters (<a href="https://www.blueletterbible.org/kjv/exo/25/1/s_75001" target="_blank" data-ref="Exodus 25">Ex 25-30</a>) to the Tabernacle <em>instructions</em> and then six nearly identical chapters (<a href="https://www.blueletterbible.org/kjv/exo/35/1/s_85001" target="_blank" data-ref="Exodus 35">Ex 35-40</a>) to the <em>construction</em>. Why not simply say, "And they built it as God commanded"?</p>
+<p>Rashi's answer is rooted in love: the Torah elaborates on what is precious to God. The detailed repetition signals that God <em>delights</em> in the building — not merely in the finished product but in the process itself. Every stitch, every socket, every hammered ornament matters.</p>
+<p>The Midrash (Tanchuma, Pekudei 2) offers another dimension: the repetition demonstrates Israel's faithfulness. After the golden calf, there was reason to doubt whether Israel would obey. The verse-by-verse parallel proves they did — precisely, completely, joyfully. The repetition is Israel's rehabilitation.</p>
+<h3>LDS Resonance</h3>
+<p>In temple ordinances, precise repetition matters. Words are given exactly as prescribed. The same ordinance is performed the same way, every time. The Tabernacle's repeated construction narrative anticipates this principle: in holy things, precision is a form of devotion, not rigid legalism.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>9. "Moses Blessed Them" — The Priestly Echo</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Teaching</h3>
+<p><a href="https://www.blueletterbible.org/kjv/exo/39/43/s_89043" target="_blank" data-ref="Exodus 39:43">Exodus 39:43</a> records: "And Moses did look upon all the work, and, behold, they had done it as the LORD had commanded, even so had they done it: and Moses blessed them."</p>
+<p>The Midrash identifies Moses' blessing as a version of the priestly benediction: "May it be God's will that the Shechinah rest upon the work of your hands" (Sifra; cf. <a href="https://www.blueletterbible.org/kjv/psa/90/17/s_568017" target="_blank" data-ref="Psalm 90:17">Psalm 90:17</a>, traditionally attributed to Moses: "Let the beauty of the LORD our God be upon us: and establish thou the work of our hands upon us").</p>
+<p>This is more than a congratulatory word. It is a petition that the people's labor not be merely human achievement but a vessel for divine presence. Moses blesses the <em>work of their hands</em> — not their intentions, not their theology, but their actual labor. Sacred craftsmanship is blessed not in the abstract but in the concrete.</p>
+<h3>LDS Resonance</h3>
+<p>Temple dedications in the Latter-day Saint tradition follow this same pattern: the building is completed, inspected, and then dedicated — a prayer that God's presence will rest upon the work. The dedicatory prayer is the modern equivalent of Moses' blessing: "May the Shechinah rest upon the work of your hands."</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>10. The Women at the Tabernacle Entrance (Exodus 38:8)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Teaching</h3>
+<p>The brief mention of "the women assembling, which assembled at the door of the tabernacle" (<a href="https://www.blueletterbible.org/kjv/exo/38/8/s_88008" target="_blank" data-ref="Exodus 38:8">Ex 38:8</a>) has generated significant rabbinic discussion. Who were these women? What were they doing?</p>
+<p>Rashi, drawing on Midrash Tanchuma, interprets הַצֹּבְאֹת (<em>ha-tzove'ot</em>) as women who came to pray and serve at the entrance. Their mirrors — instruments of personal beauty — were donated to make the bronze laver.</p>
+<p>Rashi adds a remarkable detail from midrashic tradition: Moses initially hesitated to accept the mirrors, seeing them as objects of vanity. But God overruled him: "Accept them! These mirrors are more precious to Me than anything else." Why? Because in Egypt, the women had used these mirrors to beautify themselves and encourage their husbands to continue having children despite the crushing conditions of slavery. The mirrors were instruments of hope, of life, of resistance against Pharaoh's death decree. Their donation to the Tabernacle consecrated an act of feminine courage.</p>
+<h3>LDS Resonance</h3>
+<p>The transformation of everyday objects into sacred vessels — and the honoring of women's contributions specifically — resonates with Latter-day Saint temple theology, where the covenants of daily life (marriage, family, work) are consecrated into eternal ordinances. What the world might dismiss as ordinary, God receives as precious.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>11. The Cloud and the Fire: God's Ongoing Guidance</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Teaching</h3>
+<p>Exodus ends not with arrival but with pilgrimage. The final verses (40:36-38) describe an ongoing pattern: "When the cloud was taken up... the children of Israel went onward... But if the cloud were not taken up, then they did not journey." The cloud by day and fire by night became Israel's permanent guide.</p>
+<p>The Midrash (Mekhilta) notes that the cloud didn't just show direction — it prepared the way. It leveled the terrain, killed dangerous creatures, and cleaned the path. God's guidance was not merely indicative (pointing the direction) but active (clearing the road).</p>
+<p>Rashi on <a href="https://www.blueletterbible.org/kjv/exo/40/38/s_90038" target="_blank" data-ref="Exodus 40:38">Exodus 40:38</a> emphasizes that the cloud and fire were visible "in the sight of all the house of Israel" — not hidden, not ambiguous, not available only to the leaders. The entire community could see God's presence. Divine guidance after forgiveness was public, generous, and unmistakable.</p>
+<h3>LDS Resonance</h3>
+<p>The promise of the Holy Ghost as a constant companion (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?lang=eng&id=p46#p46" target="_blank" data-ref="D&C 121:46">D&C 121:46</a>) echoes the pillar of cloud and fire. God's guidance is not a one-time event but an ongoing relationship — cloud by day, fire by night, throughout all the journeys of life. The key condition is the same as it was for Israel: follow when the cloud moves, stay when it rests.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Summary</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>Forgiveness made visible</strong> — Rashi: The Mishkan's completion is the embodied sign that God forgave the golden calf</li>
+<li><strong>Creation re-enacted</strong> — The Zohar: Tabernacle building parallels Genesis; the artisans are sub-creators</li>
+<li><strong>Ordered approach</strong> — Maimonides: The graduated design teaches how to draw near to a holy God</li>
+<li><strong>Interior sanctuary</strong> — Malbim: "Among them," not "in it" — every person builds an inner dwelling</li>
+<li><strong>Cosmic wisdom</strong> — Midrash: Bezalel received the same creative wisdom by which God made the world</li>
+<li><strong>Miraculous skill</strong> — Ramban: God awakened latent gifts in former slaves for sacred work</li>
+<li><strong>Rest before work</strong> — The Sabbath command first; even God's house yields to God's rest</li>
+<li><strong>Faithful repetition</strong> — The near-identical building account demonstrates Israel's rehabilitation</li>
+<li><strong>Blessing the work</strong> — Moses' benediction invokes the Shechinah upon the people's labor</li>
+<li><strong>The women's mirrors</strong> — Instruments of hope in Egypt, consecrated into a vessel of purification</li>
+<li><strong>Ongoing guidance</strong> — The cloud and fire end Exodus with a promise: God leads, always</li>
+</ol>
+<hr>
+<p><em><a href="https://www.blueletterbible.org/kjv/exo/35/1/s_85001" target="_blank" data-ref="Exodus 35">Exodus 35-40</a> Standalone Study Guide | CFM Corner | OT 2026</em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 6: EXODUS 35–40: TEACHING APPLICATIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">6. Exodus 35–40: Teaching Applications</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Overview</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>In these six chapters, Israel builds the Tabernacle exactly as God commanded, and His glory fills it — the climax of the entire book of Exodus. The material is dense with construction detail, but the teaching goal is simple and powerful: after catastrophic failure, God's response is not distance but dwelling. Every offering given, every garment sewn, every socket set in place is an act of faith by a forgiven people building a home for the God who chose to stay. The teaching challenge is to help students feel the weight of that — not as ancient architecture but as living theology.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Family Home Evening</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>For Young Children (Ages 3–7)</h3>
+<p><strong>Focus:</strong> God wants to be with us</p>
+<p><strong>Story:</strong> "After the people made a mistake — they built a golden statue instead of following God — they were very sorry. But God didn't leave them! He asked them to build a special tent so He could live right in the middle of their camp. Everyone helped. Some people brought gold. Some brought cloth. Some brought wood. The women spun beautiful yarn. When the tent was all finished, a bright cloud came down and filled the whole tent. That was God moving in!"</p>
+<p><strong>Object Lesson:</strong> Build a blanket fort together. "When we built this, we made a place to be together. God wanted a place to be together with His family too. And the amazing part? He wanted to be with them even after they made mistakes."</p>
+<p><strong>Song:</strong> "A Child's Prayer" (CS 12)</p>
+<p><strong>Treat:</strong> Golden cookies or gold-wrapped chocolate coins — "Remember the gold the people gave to build God's house?"</p>
+<hr>
+<h3>For Older Children (Ages 8–11)</h3>
+<p><strong>Focus:</strong> What can you give?</p>
+<p><strong>Read Together:</strong> <a href="https://www.blueletterbible.org/kjv/exo/35/21-22/s_85021" target="_blank" data-ref="Exodus 35:21-22">Exodus 35:21-22, 29</a> — "And they came, every one whose heart stirred him up... and they brought the LORD's offering."</p>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>The people brought gold, silver, cloth, wood, oil, and gemstones. What do you have that you could give?</li>
+<li><a href="https://www.blueletterbible.org/kjv/exo/36/5-7/s_86005" target="_blank" data-ref="Exodus 36:5-7">Exodus 36:5-7</a> says Moses had to tell the people to STOP giving because there was too much! Have you ever been that excited to give?</li>
+<li>Bezalel and Oholiab were gifted at building and making things. What skill do you have that could be used for something sacred?</li>
+</ol>
+<p><strong>Activity:</strong> "My Offering" — Each family member writes or draws one thing they can give this week (time, a talent, kindness, help). Place them in a bowl as a "family offering."</p>
+<hr>
+<h3>For Youth/Teens</h3>
+<p><strong>Focus:</strong> God stays after you fail</p>
+<p><strong>Read:</strong> <a href="https://www.blueletterbible.org/kjv/exo/32/19/s_82019" target="_blank" data-ref="Exodus 32:19">Exodus 32:19</a> (tablets broken) → <a href="https://www.blueletterbible.org/kjv/exo/40/34/s_90034" target="_blank" data-ref="Exodus 40:34">Exodus 40:34</a> (glory fills the Tabernacle)</p>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>The golden calf was Israel's worst moment. The Tabernacle came <em>after</em> that. What does it mean that God's dwelling was built by a people who had just failed catastrophically?</li>
+<li>Rashi taught that the Tabernacle was the proof of forgiveness — not a punishment, not a test, but a sign that God chose to stay. Do you believe God responds to your failures that way?</li>
+<li>The people gave so generously they had to be told to stop (<a href="https://www.blueletterbible.org/kjv/exo/36/6-7/s_86006" target="_blank" data-ref="Exodus 36:6-7">Ex 36:6-7</a>). What drives that kind of generosity? Guilt? Gratitude? Something else?</li>
+</ol>
+<p><strong>Challenge:</strong> This week, identify one area where you feel you've failed God. Instead of pulling away, do something concrete that moves <em>toward</em> Him. Build something. Give something. Create something for His purposes.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Sunday School (Adults)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Lesson Approach 1: Forgiveness Made Visible</h3>
+<p><strong>Opening Question:</strong> "When have you experienced forgiveness not just as a word but as something you could <em>see</em>?"</p>
+<p><strong>Key Scripture:</strong> <a href="https://www.blueletterbible.org/kjv/exo/40/34/s_90034" target="_blank" data-ref="Exodus 40:34">Exodus 40:34</a> — "The glory of the LORD filled the tabernacle."</p>
+<p><strong>Background:</strong> Rashi teaches that the Tabernacle was given after the golden calf sin — its construction is the visible proof that God forgave Israel. The Shechinah dwelling among them is the sign of restored relationship. This isn't forgiveness as a legal acquittal. It's forgiveness as God <em>moving into the neighborhood</em>.</p>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>The Tabernacle was built by the same people who had worshipped the golden calf weeks earlier. How does that change the way you read these chapters?</li>
+<li>In what ways do temples serve as visible evidence of God's willingness to dwell with imperfect people?</li>
+<li>The cloud was so overwhelming that Moses couldn't enter (<a href="https://www.blueletterbible.org/kjv/exo/40/35/s_90035" target="_blank" data-ref="Exodus 40:35">Ex 40:35</a>). What does it mean that God's presence exceeds even Moses' capacity? What does that suggest about trying to <em>earn</em> God's presence versus <em>receiving</em> it?</li>
+</ol>
+<hr>
+<h3>Lesson Approach 2: Sacred Craftsmanship — Your Skills as Worship</h3>
+<p><strong>Read Together:</strong> <a href="https://www.blueletterbible.org/kjv/exo/35/30-35/s_85030" target="_blank" data-ref="Exodus 35:30-35">Exodus 35:30-35</a></p>
+<p><strong>Key Point:</strong> Bezalel is the first person in Scripture filled with God's Spirit — and the gift is for metalwork, woodwork, weaving, and design. God's Spirit empowers creativity and craftsmanship as sacred acts.</p>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>We tend to rank spiritual gifts: prophecy above service, teaching above craftsmanship. How does Bezalel's story challenge that hierarchy?</li>
+<li>The women who spun yarn are called "wise-hearted" (<em>chakham lev</em>) — the same Hebrew phrase used for Bezalel (<a href="https://www.blueletterbible.org/kjv/exo/35/25-26/s_85025" target="_blank" data-ref="Exodus 35:25-26">Ex 35:25-26</a>). What does it mean that spinning yarn is given the same spiritual designation as designing the Ark?</li>
+<li>What skill or talent do you have that you've never thought of as a "spiritual gift"? What would it look like to consecrate that skill — to invite the Spirit into it deliberately?</li>
+</ol>
+<hr>
+<h3>Lesson Approach 3: The Pattern of Exact Obedience</h3>
+<p><strong>Walk Through <a href="https://www.blueletterbible.org/kjv/exo/39/1/s_89001" target="_blank" data-ref="Exodus 39">Exodus 39-40</a> Quickly:</strong> Count the phrase "as the LORD commanded Moses" — it appears approximately eighteen times.</p>
+<p><strong>Key Insight:</strong> After the golden calf, where Israel acted on its own initiative and built something God never asked for, the eighteen-fold repetition of exact obedience is the answer. This isn't rigid legalism — it's the joy of getting it right, of building what was actually asked for.</p>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>Is there a difference between exact obedience out of fear and exact obedience out of love? How can you tell the difference?</li>
+<li>In temple worship, ordinances are performed using precise language. How does the Tabernacle's "as the LORD commanded" inform how we understand ritual precision?</li>
+<li>Where in your life have you been "building" something according to your own design rather than God's pattern?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Primary</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Junior Primary (Ages 3–7)</h3>
+<p><strong>Story:</strong> "Moses and Israel built a beautiful tent for Heavenly Father. Everyone helped! Some brought gold and silver. Some made beautiful cloth. When they were all finished, Heavenly Father's light came and filled the whole tent. He wanted to be with His people!"</p>
+<p><strong>Song:</strong> "I Love to See the Temple" (CS 95)</p>
+<p><strong>Activity:</strong> Color a picture of the Tabernacle. Write "God Wants to Be with Me" on it.</p>
+<h3>Senior Primary (Ages 8–11)</h3>
+<p><strong>Focus:</strong> Bezalel — God fills people with His Spirit for all kinds of work</p>
+<p><strong>Read:</strong> <a href="https://www.blueletterbible.org/kjv/exo/35/30-35/s_85030" target="_blank" data-ref="Exodus 35:30-35">Exodus 35:30-35</a></p>
+<p><strong>Discussion:</strong> God filled Bezalel with the Holy Ghost not for preaching but for art, building, and design. Your talents — even ones that don't seem "churchy" — are gifts from God that He wants to use.</p>
+<p><strong>Activity:</strong> Write your name in the center of a paper. Around it, draw or write skills you have. Under each one, write one way that skill could serve God or others.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Youth (Sunday School / Mutual)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>For Ages 12–14</h3>
+<p><strong>Focus:</strong> More Than Enough — What does radical generosity look like?</p>
+<p><strong>Read:</strong> <a href="https://www.blueletterbible.org/kjv/exo/36/3-7/s_86003" target="_blank" data-ref="Exodus 36:3-7">Exodus 36:3-7</a></p>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>Moses had to tell the people to STOP giving. What would your ward look like if people gave so generously someone had to say "enough"?</li>
+<li>These people had just come out of slavery — they didn't have much. And yet they gave more than was needed. What does that tell you about generosity and circumstances?</li>
+<li>The people gave gold, cloth, wood, oil, skill, and time. What forms of "offering" do you have right now?</li>
+</ol>
+<p><strong>Activity:</strong> Plan a "More Than Enough" service project this week — go beyond the minimum in something concrete.</p>
+<hr>
+<h3>For Ages 15–18</h3>
+<p><strong>Focus:</strong> Building After Failure</p>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>The golden calf was Israel's worst failure. God's response wasn't to give up on them but to give them a building project. What does that suggest about how God responds to our failures?</li>
+<li>The Tabernacle was built by <em>the same hands</em> that had shaped the golden calf. Is there a way your past failures have prepared you for future sacred work?</li>
+<li><a href="https://www.blueletterbible.org/kjv/exo/40/34/s_90034" target="_blank" data-ref="Exodus 40:34">Exodus 40:34</a> — the glory fills the Tabernacle. But verse 35 says even Moses couldn't enter. What does it mean that God's presence overwhelms even the most faithful person?</li>
+</ol>
+<p><strong>Challenge:</strong> Journal about a time you felt God was distant after a mistake. Now reread <a href="https://www.blueletterbible.org/kjv/exo/40/34/s_90034" target="_blank" data-ref="Exodus 40:34">Ex 40:34</a>. What would change if you believed God's response to your repentance was presence, not distance?</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Personal Study — Daily Focus Guide</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Day</th><th>Reading</th><th>Journal Prompt</th></tr>
+<tr><td>Monday</td><td><a href="https://www.blueletterbible.org/kjv/exo/35/1-19/s_85001" target="_blank" data-ref="Exodus 35:1-19">Exodus 35:1-19</a></td><td>"What does it mean that God commands rest BEFORE sacred work?"</td></tr>
+<tr><td>Tuesday</td><td><a href="https://www.blueletterbible.org/kjv/exo/35/20-36/s_85020" target="_blank" data-ref="Exodus 35:20-36">Exodus 35:20-36</a>:7</td><td>"What skill, resource, or time could I offer God with a willing heart this week?"</td></tr>
+<tr><td>Wednesday</td><td><a href="https://www.blueletterbible.org/kjv/exo/36/8-37/s_86008" target="_blank" data-ref="Exodus 36:8-37">Exodus 36:8-37</a>:29</td><td>"As I read the construction details, what does the precision and beauty tell me about how God values His dwelling?"</td></tr>
+<tr><td>Thursday</td><td><a href="https://www.blueletterbible.org/kjv/exo/38/1-31/s_88001" target="_blank" data-ref="Exodus 38:1-31">Exodus 38:1-31</a></td><td>"The women gave their mirrors to make the laver (38:8). What instrument of self-focus could I repurpose for God?"</td></tr>
+<tr><td>Friday</td><td><a href="https://www.blueletterbible.org/kjv/exo/39/1-31/s_89001" target="_blank" data-ref="Exodus 39:1-31">Exodus 39:1-31</a></td><td>"The golden plate said 'Holiness to the LORD.' What would it look like for me to wear that identity?"</td></tr>
+<tr><td>Saturday</td><td><a href="https://www.blueletterbible.org/kjv/exo/39/32-43/s_89032" target="_blank" data-ref="Exodus 39:32-43">Exodus 39:32-43</a></td><td>"'They had done it as the LORD had commanded.' Where am I building according to God's pattern vs. my own?"</td></tr>
+<tr><td>Sunday</td><td><a href="https://www.blueletterbible.org/kjv/exo/40/1-38/s_90001" target="_blank" data-ref="Exodus 40:1-38">Exodus 40:1-38</a></td><td>"The glory filled the Tabernacle. Am I building faithfully and leaving room for God to fill what I've prepared?"</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Key Takeaways for All Settings</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>Forgiveness is not distance — it's dwelling</strong>: God's response to Israel's failure was to move closer, not farther away</li>
+<li><strong>Sacred work is Spirit-filled</strong>: Bezalel's artistry stands alongside prophecy as a gift of the Spirit</li>
+<li><strong>Willing hearts matter more than full hands</strong>: Nedavah (freewill offering) means the motivation matters as much as the gift</li>
+<li><strong>Exact obedience is joyful, not rigid</strong>: The eighteen-fold "as the LORD commanded" is a celebration, not a checklist</li>
+<li><strong>We build; God fills</strong>: Human effort prepares the space, but divine presence claims it — the cloud comes on God's terms</li>
+<li><strong>Temple pattern</strong>: Every element of the Tabernacle anticipates the temple — washing, anointing, clothing, veil, presence</li>
+<li><strong>Beauty honors God</strong>: The craftsmanship wasn't decorative — it was devotional. Sacred beauty is not optional.</li>
+</ol>
+<hr>
+<p><em><a href="https://www.blueletterbible.org/kjv/exo/35/1/s_85001" target="_blank" data-ref="Exodus 35">Exodus 35-40</a> Standalone Study Guide | CFM Corner | OT 2026</em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 7: EXODUS 35–40: STUDY QUESTIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">7. Exodus 35–40: Study Questions</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Exodus 35: Sabbath, Offerings, and Sacred Artisans</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Factual / Observational</h3>
+<ol>
+<li>Moses opens with the Sabbath command (<a href="https://www.blueletterbible.org/kjv/exo/35/1-3/s_85001" target="_blank" data-ref="Exodus 35:1-3">Ex 35:1-3</a>) before calling for Tabernacle offerings. Why do you think the Sabbath comes first? What does this placement teach about the relationship between rest and sacred work?</li>
+</ol>
+<ol>
+<li>What materials did the Israelites bring as offerings for the Tabernacle? List at least six categories from <a href="https://www.blueletterbible.org/kjv/exo/35/5-9/s_85005" target="_blank" data-ref="Exodus 35:5-9">Exodus 35:5-9</a> and 21-29.</li>
+</ol>
+<ol>
+<li>Who was invited to contribute? Was anyone excluded from giving? (<a href="https://www.blueletterbible.org/kjv/exo/35/21-22/s_85021" target="_blank" data-ref="Exodus 35:21-22">Ex 35:21-22, 29</a>)</li>
+</ol>
+<ol>
+<li>What specific gifts and abilities did God give to Bezalel? (<a href="https://www.blueletterbible.org/kjv/exo/35/31-33/s_85031" target="_blank" data-ref="Exodus 35:31-33">Ex 35:31-33</a>) What was the significance of Oholiab's appointment alongside him? (<a href="https://www.blueletterbible.org/kjv/exo/35/34-35/s_85034" target="_blank" data-ref="Exodus 35:34-35">Ex 35:34-35</a>)</li>
+</ol>
+<ol>
+<li><a href="https://www.blueletterbible.org/kjv/exo/35/25-26/s_85025" target="_blank" data-ref="Exodus 35:25-26">Exodus 35:25-26</a> describes the women who spun yarn and goat hair as "wise hearted" (<em>chakham lev</em>). What is surprising about using this term for textile work?</li>
+</ol>
+<h3>Analytical</h3>
+<ol>
+<li>The golden calf was made from the people's gold earrings (<a href="https://www.blueletterbible.org/kjv/exo/32/2-3/s_82002" target="_blank" data-ref="Exodus 32:2-3">Ex 32:2-3</a>). The Tabernacle was also built with gold the people gave freely (<a href="https://www.blueletterbible.org/kjv/exo/35/22/s_85022" target="_blank" data-ref="Exodus 35:22">Ex 35:22</a>). Compare these two acts of giving. What changed between them?</li>
+</ol>
+<ol>
+<li>Bezalel is the first person in Scripture explicitly "filled with the spirit of God" (<a href="https://www.blueletterbible.org/kjv/exo/35/31/s_85031" target="_blank" data-ref="Exodus 35:31">Ex 35:31</a>) — and the gift is for artistic craftsmanship, not prophecy. What does this say about how God values creative work?</li>
+</ol>
+<ol>
+<li>God gave Bezalel and Oholiab the ability "to teach" (<a href="https://www.blueletterbible.org/kjv/exo/35/34/s_85034" target="_blank" data-ref="Exodus 35:34">Ex 35:34</a>). Why is the ability to teach listed alongside the ability to create?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Exodus 36: More Than Enough</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Factual / Observational</h3>
+<ol>
+<li>What was the problem in <a href="https://www.blueletterbible.org/kjv/exo/36/5-7/s_86005" target="_blank" data-ref="Exodus 36:5-7">Exodus 36:5-7</a>? What did Moses have to do about it?</li>
+</ol>
+<ol>
+<li>What does the Hebrew word <a href="https://www.blueletterbible.org/lexicon/h5071/kjv/wlc/0-1/" target="_blank" data-lexicon="voluntariness, free-will offeringvoluntarinessfreewill, voluntary, offering" data-strongs="H5071" data-translit="nᵊḏāḇâ" data-original="נְדָבָה" data-lang="hebrew" data-verse="">נְדָבָה</a> (<em>nedavah</em>) — freewill offering — tell us about the nature of the people's giving?</li>
+</ol>
+<h3>Analytical</h3>
+<ol>
+<li>This is the only scene in the Torah where the people's generosity has to be restrained. What do you think produced this overflow of willingness? Was it guilt over the golden calf, gratitude for forgiveness, love for God, or something else?</li>
+</ol>
+<ol>
+<li>The text says "the people were restrained from bringing" (<a href="https://www.blueletterbible.org/kjv/exo/36/6/s_86006" target="_blank" data-ref="Exodus 36:6">Ex 36:6</a>). The Hebrew verb used (<em>kala'</em>) is the same word used for holding back floods. What image does this create?</li>
+</ol>
+<h3>Application</h3>
+<ol>
+<li>When was the last time you gave so generously that someone told you it was enough? What would "more than enough" look like in your current service or stewardship?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Exodus 37-38: Construction of the Furnishings</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Factual / Observational</h3>
+<ol>
+<li>List the seven major items constructed in <a href="https://www.blueletterbible.org/kjv/exo/37/1/s_87001" target="_blank" data-ref="Exodus 37">Exodus 37-38</a>. What material was each primarily made from? What does the material choice suggest about the item's significance?</li>
+</ol>
+<ol>
+<li><a href="https://www.blueletterbible.org/kjv/exo/38/8/s_88008" target="_blank" data-ref="Exodus 38:8">Exodus 38:8</a> says the bronze laver was made from "the looking glasses of the women assembling" at the Tabernacle entrance. What was being transformed in this act?</li>
+</ol>
+<ol>
+<li><a href="https://www.blueletterbible.org/kjv/exo/38/21-31/s_88021" target="_blank" data-ref="Exodus 38:21-31">Exodus 38:21-31</a> provides a detailed material accounting. Why would an inventory matter in a sacred construction project?</li>
+</ol>
+<h3>Analytical</h3>
+<ol>
+<li>The Menorah was described with botanical imagery — almond blossoms, knobs, flowers (<a href="https://www.blueletterbible.org/kjv/exo/37/17-24/s_87017" target="_blank" data-ref="Exodus 37:17-24">Ex 37:17-24</a>). What might this organic, tree-like design symbolize in the context of a sanctuary?</li>
+</ol>
+<ol>
+<li>The bronze laver was made from women's mirrors. What does it mean to repurpose an instrument of self-regard into a vessel of purification? What might be a modern equivalent?</li>
+</ol>
+<ol>
+<li>The Tabernacle was built using gold, silver, and bronze in descending order of proximity to the Holy of Holies. What does this material gradient teach about approaching the sacred?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Exodus 39: The Priestly Garments and Completion</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Factual / Observational</h3>
+<ol>
+<li>Describe the High Priest's breastplate (<em>choshen</em>). What was engraved on its twelve stones? Where was it worn? (<a href="https://www.blueletterbible.org/kjv/exo/39/8-21/s_89008" target="_blank" data-ref="Exodus 39:8-21">Ex 39:8-21</a>)</li>
+</ol>
+<ol>
+<li>What was inscribed on the golden plate attached to the turban? What Hebrew words were used? (<a href="https://www.blueletterbible.org/kjv/exo/39/30/s_89030" target="_blank" data-ref="Exodus 39:30">Ex 39:30</a>)</li>
+</ol>
+<ol>
+<li>How many times does the phrase "as the LORD commanded Moses" appear in <a href="https://www.blueletterbible.org/kjv/exo/39/1/s_89001" target="_blank" data-ref="Exodus 39">Exodus 39</a>? (Count or estimate)</li>
+</ol>
+<ol>
+<li>What did Moses do when he saw the completed work? (<a href="https://www.blueletterbible.org/kjv/exo/39/43/s_89043" target="_blank" data-ref="Exodus 39:43">Ex 39:43</a>)</li>
+</ol>
+<h3>Analytical</h3>
+<ol>
+<li>The High Priest bore the names of the twelve tribes in two places: on his shoulders (<a href="https://www.blueletterbible.org/kjv/exo/39/6-7/s_89006" target="_blank" data-ref="Exodus 39:6-7">Ex 39:6-7</a>) and over his heart (<a href="https://www.blueletterbible.org/kjv/exo/39/8-21/s_89008" target="_blank" data-ref="Exodus 39:8-21">Ex 39:8-21</a>). What is the significance of bearing names on the shoulders versus the heart?</li>
+</ol>
+<ol>
+<li>The phrase "as the LORD commanded Moses" thunders through <a href="https://www.blueletterbible.org/kjv/exo/39/1/s_89001" target="_blank" data-ref="Exodus 39">Exodus 39</a> like a refrain. After the golden calf — when Israel built what <em>they</em> wanted — what is this repetition communicating?</li>
+</ol>
+<ol>
+<li>Moses' inspection and blessing (<a href="https://www.blueletterbible.org/kjv/exo/39/43/s_89043" target="_blank" data-ref="Exodus 39:43">Ex 39:43</a>) echoes God's inspection of creation: "God saw every thing that he had made, and, behold, it was very good" (<a href="https://www.blueletterbible.org/kjv/gen/1/31/s_1031" target="_blank" data-ref="Genesis 1:31">Gen 1:31</a>). What does this parallel suggest about the Tabernacle's significance?</li>
+</ol>
+<ol>
+<li>The inscription "HOLINESS TO THE LORD" (<a href="https://www.blueletterbible.org/kjv/exo/39/30/s_89030" target="_blank" data-ref="Exodus 39:30">Ex 39:30</a>) appears on Latter-day Saint temples today. What continuity does this establish across millennia? What does it mean for holiness to be the <em>first</em> thing declared?</li>
+</ol>
+<h3>Application</h3>
+<ol>
+<li>If you could wear an inscription on your forehead that declared your primary identity, what would it say? What would you want it to say?</li>
+</ol>
+<ol>
+<li>The priestly garments weren't decorative — they were communicative. What does the clothing you wear to worship communicate? Not the specifics, but the principle: does how you prepare your body reflect how you prepare your heart?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Exodus 40: Assembly and the Glory</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Factual / Observational</h3>
+<ol>
+<li>On what date was the Tabernacle erected? (<a href="https://www.blueletterbible.org/kjv/exo/40/2/s_90002" target="_blank" data-ref="Exodus 40:2">Ex 40:2, 17</a>) Why might the first day of the first month be significant?</li>
+</ol>
+<ol>
+<li>What did Moses do personally in assembling the Tabernacle? (<a href="https://www.blueletterbible.org/kjv/exo/40/18-33/s_90018" target="_blank" data-ref="Exodus 40:18-33">Ex 40:18-33</a>) Why Moses rather than Bezalel or Aaron?</li>
+</ol>
+<ol>
+<li>What two things happened when the Tabernacle was complete? (<a href="https://www.blueletterbible.org/kjv/exo/40/34/s_90034" target="_blank" data-ref="Exodus 40:34">Ex 40:34</a>)</li>
+</ol>
+<ol>
+<li>What happened to Moses when the glory of the LORD filled the Tabernacle? (<a href="https://www.blueletterbible.org/kjv/exo/40/35/s_90035" target="_blank" data-ref="Exodus 40:35">Ex 40:35</a>)</li>
+</ol>
+<ol>
+<li>How did the cloud and fire function after the Tabernacle was erected? (<a href="https://www.blueletterbible.org/kjv/exo/40/36-38/s_90036" target="_blank" data-ref="Exodus 40:36-38">Ex 40:36-38</a>)</li>
+</ol>
+<h3>Analytical</h3>
+<ol>
+<li>"So Moses finished the work" (<a href="https://www.blueletterbible.org/kjv/exo/40/33/s_90033" target="_blank" data-ref="Exodus 40:33">Ex 40:33</a>) echoes "the heavens and the earth were finished" (<a href="https://www.blueletterbible.org/kjv/gen/2/1/s_2001" target="_blank" data-ref="Genesis 2:1">Gen 2:1</a>). What does this creation language tell us about what the Tabernacle represents?</li>
+</ol>
+<ol>
+<li>Even Moses — who spoke with God "face to face" (<a href="https://www.blueletterbible.org/kjv/exo/33/11/s_83011" target="_blank" data-ref="Exodus 33:11">Ex 33:11</a>) — cannot enter when the glory fills the Tabernacle. What does this tell us about the relationship between human effort and divine presence?</li>
+</ol>
+<ol>
+<li>The cloud lifts, Israel moves. The cloud rests, Israel stays (<a href="https://www.blueletterbible.org/kjv/exo/40/36-38/s_90036" target="_blank" data-ref="Exodus 40:36-38">Ex 40:36-38</a>). Exodus ends not with arrival but with ongoing pilgrimage. What does this suggest about the nature of the covenant relationship?</li>
+</ol>
+<ol>
+<li>The book of Exodus begins with Israel enslaved in Egypt and ends with God dwelling among them in the wilderness. The destination is not a <em>place</em> but a <em>presence</em>. How does this reshape the way you understand redemption?</li>
+</ol>
+<h3>Application</h3>
+<ol>
+<li>We build, prepare, offer, and consecrate — but the filling is God's work (<a href="https://www.blueletterbible.org/kjv/exo/40/34/s_90034" target="_blank" data-ref="Exodus 40:34">Ex 40:34</a>). Where in your life have you been trying to <em>manufacture</em> God's presence rather than <em>prepare for</em> it?</li>
+</ol>
+<ol>
+<li>The cloud came on God's timing, not on Israel's schedule. How do you respond when you've done the work but the "glory" hasn't arrived yet?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Cross-Cutting and Synthesis Questions</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li>Trace the dramatic arc from <a href="https://www.blueletterbible.org/kjv/exo/32/1/s_82001" target="_blank" data-ref="Exodus 32">Exodus 32</a> (golden calf) through <a href="https://www.blueletterbible.org/kjv/exo/40/1/s_90001" target="_blank" data-ref="Exodus 40">Exodus 40</a> (glory filling the Tabernacle). What is the theological movement? What does this arc teach about God's character?</li>
+</ol>
+<ol>
+<li>The Tabernacle was built by the same people who had built the golden calf. The gold was given by the same hands that had given gold for the idol. What does it mean that God uses redeemed failure — the same impulses, the same materials, the same people — for sacred purposes?</li>
+</ol>
+<ol>
+<li>The Tabernacle required both freewill offerings (<a href="https://www.blueletterbible.org/kjv/exo/35/1/s_85001" target="_blank" data-ref="Exodus 35">Ex 35</a>) and exact obedience (<a href="https://www.blueletterbible.org/kjv/exo/39/1/s_89001" target="_blank" data-ref="Exodus 39">Ex 39-40</a>). How do willingness and precision relate to each other in sacred work? Can you have one without the other?</li>
+</ol>
+<ol>
+<li>Connect Bezalel's Spirit-filled craftsmanship (<a href="https://www.blueletterbible.org/kjv/exo/35/31/s_85031" target="_blank" data-ref="Exodus 35:31">Ex 35:31</a>) with the Malbim's teaching that each person must build an inner Mishkan. What does it look like to use your specific gifts to construct a dwelling place for God within yourself?</li>
+</ol>
+<ol>
+<li>The book of Exodus ends with ongoing movement — cloud by day, fire by night (<a href="https://www.blueletterbible.org/kjv/exo/40/36-38/s_90036" target="_blank" data-ref="Exodus 40:36-38">Ex 40:36-38</a>). Leviticus will begin with God speaking <em>from</em> the Tabernacle (<a href="https://www.blueletterbible.org/kjv/lev/1/1/s_91001" target="_blank" data-ref="Leviticus 1:1">Lev 1:1</a>). How does the Tabernacle serve as the bridge between the story of redemption (Exodus) and the instruction for holy living (Leviticus)?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Personal Reflection Questions</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li>The Tabernacle was proof that God forgave Israel and chose to dwell among them despite their failures. What would it mean for you to believe that God wants to dwell with you — not despite your imperfections, but in the middle of them?</li>
+</ol>
+<ol>
+<li>Which moment in <a href="https://www.blueletterbible.org/kjv/exo/35/1/s_85001" target="_blank" data-ref="Exodus 35">Exodus 35-40</a> struck you most: the overwhelming generosity, the Spirit-filled artistry, the exact obedience, the priestly garments, or the glory filling the Tabernacle? Why?</li>
+</ol>
+<ol>
+<li>Moses had to tell the people to stop giving. Where in your life could you give "more than enough"?</li>
+</ol>
+<ol>
+<li>The inscription "Holiness to the LORD" was the High Priest's first visible identity. If you adopted that as your first identity — before career, nationality, personality — how would it change your week?</li>
+</ol>
+<ol>
+<li>What is the single most important insight you gained from <a href="https://www.blueletterbible.org/kjv/exo/35/1/s_85001" target="_blank" data-ref="Exodus 35">Exodus 35-40</a>?</li>
+</ol>
+<ol>
+<li>What specific action will you take this week because of what you studied?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Scripture Memorization Suggestions</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Primary Level:</strong></p>
+<blockquote>
+<p>"And the glory of the LORD filled the tabernacle." (<a href="https://www.blueletterbible.org/kjv/exo/40/34/s_90034" target="_blank" data-ref="Exodus 40:34">Exodus 40:34</a>)</p>
+</blockquote>
+<p><strong>Youth Level:</strong></p>
+<blockquote>
+<p>"And he hath filled him with the spirit of God, in wisdom, in understanding, and in knowledge, and in all manner of workmanship." (<a href="https://www.blueletterbible.org/kjv/exo/35/31/s_85031" target="_blank" data-ref="Exodus 35:31">Exodus 35:31</a>)</p>
+</blockquote>
+<p><strong>Adult Level:</strong></p>
+<blockquote>
+<p>"And they came, every one whose heart stirred him up, and every one whom his spirit made willing, and they brought the LORD's offering to the work of the tabernacle." (<a href="https://www.blueletterbible.org/kjv/exo/35/21/s_85021" target="_blank" data-ref="Exodus 35:21">Exodus 35:21</a>)</p>
+</blockquote>
+<hr>
+<p><em>Note: 51 questions total — 8 on <a href="https://www.blueletterbible.org/kjv/exo/35/1/s_85001" target="_blank" data-ref="Exodus 35">Exodus 35, 5</a> on <a href="https://www.blueletterbible.org/kjv/exo/36/1/s_86001" target="_blank" data-ref="Exodus 36">Exodus 36, 6</a> on <a href="https://www.blueletterbible.org/kjv/exo/37/1/s_87001" target="_blank" data-ref="Exodus 37">Exodus 37-38, 10</a> on <a href="https://www.blueletterbible.org/kjv/exo/39/1/s_89001" target="_blank" data-ref="Exodus 39">Exodus 39, 11</a> on <a href="https://www.blueletterbible.org/kjv/exo/40/1/s_90001" target="_blank" data-ref="Exodus 40">Exodus 40, 5</a> cross-cutting, 6 personal reflection — plus 3 scripture memorization options.</em></p>
+<hr>
+<p><em><a href="https://www.blueletterbible.org/kjv/exo/35/1/s_85001" target="_blank" data-ref="Exodus 35">Exodus 35-40</a> Standalone Study Guide | CFM Corner | OT 2026</em></p>
+<p><strong>Previous File:</strong> 06_Teaching_Applications.md</p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+</div>

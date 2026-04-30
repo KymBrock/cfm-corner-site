@@ -1,0 +1,1672 @@
+<style>
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+        .site-header {
+            background: linear-gradient(135deg, #d4c4a8 0%, #8B7355 100%);
+            color: white; padding: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px;
+        }
+        .site-header-content { max-width: 1000px; margin: 0 auto; padding: 0 20px; text-align: center; }
+        .site-title { font-size: 2em; margin-bottom: 5px; }
+        .site-subtitle { font-size: 1.1em; opacity: 0.9; }
+
+        .header-section {
+            background-color: #8B7355; color: white; padding: 40px; border-radius: 12px;
+            margin-bottom: 30px; text-align: center;
+        }
+        .header-section .week-label { font-size: 1em; text-transform: uppercase; letter-spacing: 2px; opacity: 0.9; margin-bottom: 10px; }
+        .header-section h1 { font-size: 2.5em; font-weight: 300; margin-bottom: 10px; }
+        .header-section .subtitle { font-size: 1.3em; font-style: italic; margin-bottom: 20px; }
+        .header-section .date-location { font-size: 1.1em; opacity: 0.95; }
+
+        .quick-links { text-align: center; margin: 20px 0; }
+        .quick-link {
+            display: inline-block; background: #8B7355; color: white; padding: 10px 20px;
+            border-radius: 8px; text-decoration: none; margin: 5px; transition: all 0.3s;
+        }
+        .quick-link:hover { background: #6B5344; transform: translateY(-2px); }
+
+        .button-container { text-align: center; margin: 30px 0; }
+        .expand-button {
+            background-color: #8B7355; color: white; border: none; padding: 12px 24px;
+            margin: 5px 10px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em;
+        }
+        .expand-button:hover { background-color: #6B5344; }
+
+        .sg-accordion-section {
+            background-color: #8B7355; color: white; cursor: pointer; padding: 18px; width: 100%;
+            border: none; text-align: left; font-size: 1.2em; font-weight: 600; font-family: Georgia, serif;
+            border-radius: 8px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center;
+        }
+        .sg-accordion-section:hover { background-color: #6B5344; }
+        .sg-accordion-section::after { content: '\25BC'; font-size: 0.9em; transition: transform 0.3s; }
+        .sg-accordion-section.active::after { transform: rotate(180deg); }
+
+        .sg-panel {
+            background-color: white; border-radius: 0 0 8px 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .sg-panel.active { display: block; }
+        .panel-content { padding: 30px; }
+        .panel-content h2 { color: #8B7355; margin-bottom: 20px; font-size: 1.8em; }
+        .panel-content h3 { color: #6B5344; margin-top: 25px; margin-bottom: 15px; font-size: 1.4em; }
+        .panel-content h4 { color: #5a4a3a; margin-top: 20px; margin-bottom: 12px; font-size: 1.2em; }
+        .panel-content ul, .panel-content ol { margin-left: 25px; margin-bottom: 15px; }
+        .panel-content li { margin-bottom: 8px; }
+        .panel-content p { margin-bottom: 15px; text-align: justify; }
+        .panel-content a { color: #8B7355; }
+        .panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .panel-content blockquote {
+            margin: 20px 0 20px 20px;
+            padding: 15px 20px;
+            border-left: 4px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 8px 8px 0;
+        }
+        .panel-content blockquote p { margin-bottom: 8px; }
+        .panel-content blockquote p:last-child { margin-bottom: 0; }
+        .panel-content blockquote cite {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #8B7355;
+            font-style: normal;
+        }
+
+        .panel-content strong { color: #6B5344; }
+        .panel-content em { color: #5a4a3a; }
+
+        .panel-content hr {
+            border: none;
+            border-top: 2px solid #e8e0d5;
+            margin: 25px 0;
+        }
+
+        .panel-content code {
+            background-color: #f5f0e8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #6B5344;
+        }
+
+        .info-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .info-table th, .info-table td { border: 1px solid #d4c4a8; padding: 12px; text-align: left; }
+        .info-table th { background-color: #f5f0e8; color: #6B5344; font-weight: bold; }
+        .info-table tr:nth-child(even) { background-color: #faf8f5; }
+
+        .sg-sub-accordion {
+            background-color: #f5f0e8;
+            color: #5a4a3a;
+            cursor: pointer;
+            padding: 14px 40px 14px 18px;
+            width: 100%;
+            text-align: left;
+            border: 1px solid #d4c4a8;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            margin-top: 10px;
+            position: relative;
+            transition: background-color 0.2s;
+        }
+
+        .sg-sub-accordion:hover {
+            background-color: #e8e0d4;
+        }
+
+        .sg-sub-accordion::after {
+            content: '\25BC';
+            font-size: 0.8em;
+            color: #8B7355;
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s;
+        }
+
+        .sg-sub-accordion.active::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .sg-sub-panel {
+            background-color: #fafafa;
+            border-radius: 0 0 6px 6px;
+            border: 1px solid #d4c4a8;
+            border-top: none;
+            display: none;
+            transition: max-height 0.3s ease-out;
+            margin-bottom: 10px;
+        }
+
+        .sg-sub-panel.active {
+            display: block;
+            overflow: visible;
+            transition: max-height 0.3s ease-in;
+        }
+
+        .sg-sub-panel-content {
+            padding: 20px 25px;
+        }
+
+        .sg-sub-panel-content h3 { color: #6B5344; margin-top: 20px; margin-bottom: 12px; font-size: 1.3em; }
+        .sg-sub-panel-content h4 { color: #5a4a3a; margin-top: 15px; margin-bottom: 10px; font-size: 1.15em; }
+        .sg-sub-panel-content p { margin-bottom: 12px; text-align: justify; }
+        .sg-sub-panel-content ul, .sg-sub-panel-content ol { margin-left: 25px; margin-bottom: 12px; }
+        .sg-sub-panel-content li { margin-bottom: 6px; }
+        .sg-sub-panel-content a { color: #8B7355; }
+        .sg-sub-panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .sg-sub-panel-content blockquote {
+            margin: 15px 0 15px 15px;
+            padding: 12px 18px;
+            border-left: 3px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 6px 6px 0;
+        }
+        .sg-sub-panel-content blockquote p { margin-bottom: 6px; }
+        .sg-sub-panel-content blockquote p:last-child { margin-bottom: 0; }
+        .sg-sub-panel-content strong { color: #6B5344; }
+        .sg-sub-panel-content hr { border: none; border-top: 1px solid #e8e0d5; margin: 20px 0; }
+
+        @media (max-width: 768px) {
+            .header-section h1 { font-size: 1.8em; }
+            .panel-content { padding: 20px; }
+            .sg-sub-panel-content { padding: 15px 18px; }
+        }
+
+        .sg-section-heading {
+            margin: 1.2em 0 0.6em 0;
+            padding: 0.4em 0 0.4em 0.8em;
+            border-left: 3px solid #8B9D77;
+            color: #5a6b4f;
+            font-size: 1.05em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+        }
+        .sg-section-actions {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 28px;
+        }
+        .sg-section-actions .sg-action-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.35);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            padding: 0;
+            line-height: 1;
+        }
+        .sg-section-actions .sg-action-btn:hover {
+            background: rgba(255,255,255,0.35);
+        }
+    </style>
+
+
+<div class="container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <p class="week-label">Week 18</p>
+            <h1>Exodus 21–24 — Overview</h1>
+            <div class="subtitle">The Covenant Code: From Principle to Practice</div>
+            <div class="date-location"></div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/18?lang=eng" target="_blank" class="quick-link">CFM Manual</a>
+        </div>
+
+        <!-- Expand/Collapse Buttons -->
+        <div class="button-container">
+            <button class="expand-button" onclick="expandAll()"><span class="btn-icon">&#x229E;</span> Expand All</button>
+            <button class="expand-button" onclick="collapseAll()"><span class="btn-icon">&#x229F;</span> Collapse All</button>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 1: WEEK 18: EXODUS 21–24 — OVERVIEW -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">1. Week 18: Exodus 21–24 — Overview</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Big Idea</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>God cares about everything.</strong> Week 18 moves from the Ten Commandments (Week 17) to their application in daily life. The Covenant Code (<a href="https://www.blueletterbible.org/kjv/exo/21/1/s_71001" target="_blank" data-ref="Exodus 21">Ex 21-23</a>) shows how foundational principles work out in specific cases: how to treat servants, resolve disputes, protect the vulnerable, observe Sabbath rest, and celebrate annual festivals. Then <a href="https://www.blueletterbible.org/kjv/exo/24/1/s_74001" target="_blank" data-ref="Exodus 24">Exodus 24</a> ratifies this covenant in blood—anticipating Christ's blood that establishes the new covenant. This week reveals that God governs not just hearts but also households, marketplaces, and courtrooms.</p>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Scripture Scope</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ul>
+<li><strong><a href="https://www.blueletterbible.org/kjv/exo/21/1/s_71001" target="_blank" data-ref="Exodus 21">Exodus 21</a></strong>: Laws about servants, violence, injuries, and liability</li>
+<li><strong><a href="https://www.blueletterbible.org/kjv/exo/22/1/s_72001" target="_blank" data-ref="Exodus 22">Exodus 22</a></strong>: Laws about property, theft, social responsibility, and justice</li>
+<li><strong><a href="https://www.blueletterbible.org/kjv/exo/23/1/s_73001" target="_blank" data-ref="Exodus 23">Exodus 23</a></strong>: Impartial justice, Sabbath rest, annual festivals, and conquest promises</li>
+<li><strong><a href="https://www.blueletterbible.org/kjv/exo/24/1/s_74001" target="_blank" data-ref="Exodus 24">Exodus 24</a></strong>: Covenant ratification in blood; elders see God and eat in His presence</li>
+</ul>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Key Theological Concepts</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>1. From Principle to Practice</h3>
+<p>The Ten Commandments are principles; the Covenant Code shows how to apply them:</p>
+<table class="info-table">
+<tr><th>Principle (Week 17)</th><th>Practice (Week 18)</th></tr>
+<tr><td>"Thou shalt not kill"</td><td>Capital punishment for murder; cities of refuge for accidental death (21:12-14)</td></tr>
+<tr><td>"Thou shalt not steal"</td><td>Restitution rules for theft (22:1-4)</td></tr>
+<tr><td>"Thou shalt not covet"</td><td>Interest-free loans for the poor (22:25)</td></tr>
+<tr><td>"Keep the Sabbath holy"</td><td>Rest for servants, foreigners, and animals (23:12)</td></tr>
+</table>
+<h3>2. Protection for the Vulnerable</h3>
+<p>God repeatedly commands protection for those society often overlooks:</p>
+<blockquote>
+<p>"Ye shall not afflict any widow, or fatherless child. If thou afflict them in any wise, and they cry at all unto me, I will surely hear their cry" (<a href="https://www.blueletterbible.org/kjv/exo/22/22-23/s_72022" target="_blank" data-ref="Exodus 22:22-23">Ex 22:22-23</a>).</p>
+</blockquote>
+<p>Three groups receive special mention:</p>
+<ul>
+<li><strong>Strangers/Foreigners</strong> (<em>ger</em>) — "for ye were strangers in Egypt"</li>
+<li><strong>Widows</strong> — without husband's protection</li>
+<li><strong>Orphans</strong> — without parental provision</li>
+</ul>
+<h3>3. Proportionate Justice (Lex Talionis)</h3>
+<blockquote>
+<p>"Eye for eye, tooth for tooth, hand for hand, foot for foot" (<a href="https://www.blueletterbible.org/kjv/exo/21/24/s_71024" target="_blank" data-ref="Exodus 21:24">Ex 21:24</a>).</p>
+</blockquote>
+<p>This isn't vengeance—it's <em>limitation</em> on vengeance. In a world where insults led to murders and murders led to clan warfare, "eye for eye" means the penalty must fit the crime—no more, no less.</p>
+<h3>4. Sabbath as Social Justice</h3>
+<blockquote>
+<p>"The seventh day thou shalt rest: that thine ox and thine ass may rest, and the son of thy handmaid, and the stranger, may be refreshed" (<a href="https://www.blueletterbible.org/kjv/exo/23/12/s_73012" target="_blank" data-ref="Exodus 23:12">Ex 23:12</a>).</p>
+</blockquote>
+<p>Sabbath isn't just personal piety—it's justice. Everyone rests: landowners, servants, foreigners, even animals. Sabbath equalizes.</p>
+<h3>5. Covenant Sealed in Blood</h3>
+<blockquote>
+<p>"Moses took the blood, and sprinkled it on the people, and said, Behold the blood of the covenant" (<a href="https://www.blueletterbible.org/kjv/exo/24/8/s_74008" target="_blank" data-ref="Exodus 24:8">Ex 24:8</a>).</p>
+</blockquote>
+<p>Blood on the altar (God's side) and blood on the people (Israel's side) binds both parties in life-and-death commitment. Jesus echoes this directly: "This is my blood of the new covenant" (<a href="https://www.blueletterbible.org/kjv/mat/26/28/s_955028" target="_blank" data-ref="Matthew 26:28">Matt 26:28</a>).</p>
+<h3>6. The Preparatory Gospel — Why Case Law?</h3>
+<p>Latter-day Saint scripture provides a deeper explanation for why Israel received detailed case law rather than the higher principles God originally intended. <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84?lang=eng" target="_blank" data-ref="D&C 84">D&C 84</a> teaches:</p>
+<blockquote>
+<p>"Now this Moses plainly taught to the children of Israel in the wilderness, and sought diligently to sanctify his people that they might behold the face of God; But they hardened their hearts and could not endure his presence; therefore, the Lord in his wrath, for his anger was kindled against them, swore that they should not enter into his rest while in the wilderness, which rest is the fulness of his glory. Therefore, he took Moses out of their midst, and the Holy Priesthood also; And the lesser priesthood continued, which priesthood holdeth the key of the ministering of angels and the preparatory gospel; Which gospel is the gospel of repentance and of baptism, and the remission of sins, and the law of carnal commandments." (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84?lang=eng&id=p23-p27#p23" target="_blank" data-ref="D&C 84:23-27">D&C 84:23-27</a>)</p>
+</blockquote>
+<p>The Covenant Code is not simply "practical application of principles" — it is a gracious divine accommodation to a people who were not yet ready for what God wanted to give them. The JST of <a href="https://www.blueletterbible.org/kjv/exo/34/1-2/s_84001" target="_blank" data-ref="Exodus 34:1-2">Exodus 34:1-2</a> further clarifies this: when Moses returned with the second set of tablets, the Lord said the words of the law would be written "according as they were written at the first on the tables which thou brakest" — the same law, the same words. But then: "it shall not be according to the first, for I will take away the priesthood out of their midst; therefore my holy order, and the ordinances thereof, shall not go before them."</p>
+<p>The law itself didn't change — what changed was Israel's access to the priesthood and holy order that gave the law its deeper meaning. Without the Melchizedek Priesthood and its ordinances going before them, the same words became "the law of carnal commandments" — not because the text was different, but because the people now lacked the spiritual framework to understand it as covenant principles. The words were identical; the lens through which Israel could read them was diminished.</p>
+<p>This makes the <em>mishpatim</em> an act of mercy, not merely legislation. God gives what we are ready to receive — not by changing the message, but by meeting us where we are. The detailed case laws of <a href="https://www.blueletterbible.org/kjv/exo/21/1/s_71001" target="_blank" data-ref="Exodus 21">Exodus 21-23</a> become a schoolmaster — teaching justice, compassion, and covenant faithfulness at a level Israel could bear — until the Lawgiver Himself would come to restore the priesthood, fulfill the law, and elevate their understanding.</p>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Christological Threads</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Exodus Pattern</th><th>Christ's Fulfillment</th></tr>
+<tr><td>Blood of the covenant (24:8)</td><td>"My blood of the new covenant" (<a href="https://www.blueletterbible.org/kjv/mat/26/28/s_955028" target="_blank" data-ref="Matthew 26:28">Matt 26:28</a>)</td></tr>
+<tr><td>Cities of refuge (21:13)</td><td>Christ, our refuge from justice (<a href="https://www.blueletterbible.org/kjv/heb/6/18/s_1139018" target="_blank" data-ref="Hebrews 6:18">Heb 6:18</a>)</td></tr>
+<tr><td>Eye for eye (21:24)</td><td>Turn the other cheek—grace exceeds justice (<a href="https://www.blueletterbible.org/kjv/mat/5/38-39/s_934038" target="_blank" data-ref="Matthew 5:38-39">Matt 5:38-39</a>)</td></tr>
+<tr><td>Protecting the vulnerable</td><td>"Inasmuch as ye have done it unto the least of these" (<a href="https://www.blueletterbible.org/kjv/mat/25/40/s_954040" target="_blank" data-ref="Matthew 25:40">Matt 25:40</a>)</td></tr>
+<tr><td>Elders eat with God (24:11)</td><td>Messianic banquet; sacrament communion</td></tr>
+</table>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>CFM Manual Emphasis</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The Come, Follow Me manual highlights practical application: How do we treat the vulnerable among us? How do we balance justice with mercy? How do we renew our covenant commitments? The manual invites families to consider modern parallels to ancient case law.</p>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Key Questions for This Week</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li>What does it mean that God cares about property laws and servant rights, not just "spiritual" matters?</li>
+<li>How do we protect the modern "strangers, widows, and orphans" in our communities?</li>
+<li>Where in your life might you be "following a multitude to do evil" (<a href="https://www.blueletterbible.org/kjv/exo/23/2/s_73002" target="_blank" data-ref="Exodus 23:2">Ex 23:2</a>)?</li>
+<li>How does the blood covenant in <a href="https://www.blueletterbible.org/kjv/exo/24/1/s_74001" target="_blank" data-ref="Exodus 24">Exodus 24</a> deepen your understanding of the sacrament?</li>
+<li>The elders "saw God, and did eat and drink" (<a href="https://www.blueletterbible.org/kjv/exo/24/11/s_74011" target="_blank" data-ref="Exodus 24:11">Ex 24:11</a>). What does communion with God look like for you?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 2: WEEK 18: HISTORICAL AND CULTURAL CONTEXT -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">2. Week 18: Historical and Cultural Context</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Historical Setting</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Covenant Code in Context</h3>
+<p>The laws in <a href="https://www.blueletterbible.org/kjv/exo/21/1/s_71001" target="_blank" data-ref="Exodus 21">Exodus 21-23</a> are often called the "Covenant Code" or "Book of the Covenant" (<a href="https://www.blueletterbible.org/kjv/exo/24/7/s_74007" target="_blank" data-ref="Exodus 24:7">Ex 24:7</a>). They represent one of the oldest collections of biblical law and show how the Ten Commandments apply to specific situations.</p>
+<p><strong>Structure:</strong></p>
+<ul>
+<li><strong><a href="https://www.blueletterbible.org/kjv/exo/21/1-11/s_71001" target="_blank" data-ref="Exodus 21:1-11">Exodus 21:1-11</a></strong> — Laws about Hebrew servants</li>
+<li><strong><a href="https://www.blueletterbible.org/kjv/exo/21/12-36/s_71012" target="_blank" data-ref="Exodus 21:12-36">Exodus 21:12-36</a></strong> — Laws about violence, injury, and liability</li>
+<li><strong><a href="https://www.blueletterbible.org/kjv/exo/22/1-15/s_72001" target="_blank" data-ref="Exodus 22:1-15">Exodus 22:1-15</a></strong> — Laws about property and theft</li>
+<li><strong><a href="https://www.blueletterbible.org/kjv/exo/22/16-31/s_72016" target="_blank" data-ref="Exodus 22:16-31">Exodus 22:16-31</a></strong> — Social and religious responsibilities</li>
+<li><strong><a href="https://www.blueletterbible.org/kjv/exo/23/1-9/s_73001" target="_blank" data-ref="Exodus 23:1-9">Exodus 23:1-9</a></strong> — Justice in courts</li>
+<li><strong><a href="https://www.blueletterbible.org/kjv/exo/23/10-19/s_73010" target="_blank" data-ref="Exodus 23:10-19">Exodus 23:10-19</a></strong> — Sabbath, sabbatical year, and festivals</li>
+<li><strong><a href="https://www.blueletterbible.org/kjv/exo/23/20-33/s_73020" target="_blank" data-ref="Exodus 23:20-33">Exodus 23:20-33</a></strong> — Conquest promises</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Ancient Near Eastern Law Codes</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Comparison with Code of Hammurabi</h3>
+<p>The Code of Hammurabi (Babylon, ~1750 BC) predates the Covenant Code and shares similar format:</p>
+<p>Readers who want to examine the Code of Hammurabi directly can do so through the <strong>Avalon Project at Yale Law School</strong>, which hosts the standard L. W. King translation: <a href="https://avalon.law.yale.edu/ancient/hamcode.asp" target="_blank">https://avalon.law.yale.edu/ancient/hamcode.asp</a>. The original stele is held in the Louvre Museum (Paris), and high-resolution images are available through the museum's collections database.</p>
+<p><strong>Similarities:</strong></p>
+<ul>
+<li>Casuistic style: "If a man does X, then Y"</li>
+<li>Covers property, violence, family, commerce</li>
+<li>Prescribes specific penalties</li>
+</ul>
+<p><strong>Key Differences:</strong></p>
+<table class="info-table">
+<tr><th>Feature</th><th>Hammurabi</th><th>Covenant Code</th></tr>
+<tr><td>Class distinctions</td><td>Punishment varies by social class</td><td>More egalitarian</td></tr>
+<tr><td>Slaves</td><td>Property with minimal rights</td><td>Hebrew slaves freed after 6 years</td></tr>
+<tr><td>Divine basis</td><td>King as wise lawgiver</td><td>God as covenant Lord</td></tr>
+<tr><td>Purpose</td><td>Order and king's glory</td><td>Holiness and justice</td></tr>
+</table>
+<p><strong>Example — Goring Ox:</strong></p>
+<ul>
+<li>Hammurabi: Owner pays fine to victim's family</li>
+<li><a href="https://www.blueletterbible.org/kjv/exo/21/28-32/s_71028" target="_blank" data-ref="Exodus 21:28-32">Exodus 21:28-32</a>: Similar, but adds that the ox is killed (contaminated by violence)</li>
+</ul>
+<h3>What Makes Israel's Law Unique</h3>
+<ol>
+<li><strong>Religious foundation:</strong> Law flows from covenant, not just royal decree</li>
+<li><strong>Concern for vulnerable:</strong> Repeated protections for strangers, widows, orphans</li>
+<li><strong>Sabbath rest for all:</strong> Including servants and animals</li>
+<li><strong>Narrative context:</strong> Laws embedded in relationship story, not just code</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Lex Talionis: "Eye for Eye"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Understanding the Principle</h3>
+<blockquote>
+<p>"Eye for eye, tooth for tooth, hand for hand, foot for foot" (<a href="https://www.blueletterbible.org/kjv/exo/21/24/s_71024" target="_blank" data-ref="Exodus 21:24">Ex 21:24</a>).</p>
+</blockquote>
+<p><strong>Common Misunderstanding:</strong> This promotes vengeance and brutality.</p>
+<p><strong>Actual Purpose:</strong> This <strong>limits</strong> vengeance to proportionate justice.</p>
+<p><strong>Historical Context:</strong></p>
+<ul>
+<li>In ANE cultures, revenge often escalated wildly</li>
+<li>Lamech boasted: "I have slain a man to my wounding... If Cain shall be avenged sevenfold, truly Lamech seventy and sevenfold" (<a href="https://www.blueletterbible.org/kjv/gen/4/23-24/s_4023" target="_blank" data-ref="Genesis 4:23-24">Gen 4:23-24</a>)</li>
+<li>"Eye for eye" stops escalation: penalty must match offense—no more, no less</li>
+</ul>
+<h3>Implementation</h3>
+<p>Most scholars believe lex talionis was usually applied as <strong>monetary compensation</strong>, not literal mutilation:</p>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/exo/21/30/s_71030" target="_blank" data-ref="Exodus 21:30">Exodus 21:30</a> shows ransom payment for capital offense</li>
+<li>Rabbinic interpretation (Mishnah Bava Kamma 83b-84a) requires monetary damages</li>
+</ul>
+<p>The principle is <strong>equivalent restitution</strong>, not physical retaliation.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Slavery in the Ancient Near East</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>A Difficult Topic</h3>
+<p><a href="https://www.blueletterbible.org/kjv/exo/21/1/s_71001" target="_blank" data-ref="Exodus 21">Exodus 21</a> regulates slavery rather than abolishing it. This is difficult for modern readers. Rather than trying to justify or debate its moral significance, we should simply present what the record actually says, recognizing that this was a very different time and culture.</p>
+<p><strong>How widespread was slavery?</strong></p>
+<p>Slavery was not a fringe practice — it was woven into the fabric of nearly every ancient society:</p>
+<table class="info-table">
+<tr><th>Society</th><th>Estimated % Enslaved</th></tr>
+<tr><td>Athens (450–320 BC)</td><td>25–30% (one in four inhabitants)</td></tr>
+<tr><td>Sparta</td><td>Up to 80% (conquered Helots)</td></tr>
+<tr><td>Roman Italy (1st c. BC)</td><td>15–25% (1–1.5 million people)</td></tr>
+<tr><td>Roman Empire overall</td><td>10–20% (5–10 million out of ~50 million)</td></tr>
+<tr><td>Mesopotamia & Egypt</td><td>Smaller but significant percentages</td></tr>
+</table>
+<p><strong>How did people become slaves?</strong></p>
+<p>Unlike American slavery, ancient slavery was not based on skin color. Anyone of any ethnicity could become a slave. The most common pathways were:</p>
+<ul>
+<li><strong>War and military defeat</strong> — the most common source; entire conquered populations could be enslaved</li>
+<li><strong>Debt</strong> — families or individuals who couldn't pay debts sold themselves or their children into bondage</li>
+<li><strong>Birth</strong> — children of enslaved mothers were born into slavery</li>
+<li><strong>Crime or legal punishment</strong> — enslavement as a judicial sentence</li>
+<li><strong>Child abandonment</strong> — exposed or abandoned children could be claimed as slaves</li>
+<li><strong>Kidnapping and piracy</strong> — common throughout the Mediterranean world</li>
+<li><strong>Self-sale</strong> — people in desperate poverty sold themselves to secure food and shelter</li>
+</ul>
+<p>Slavery was not limited to the lower classes. Royalty, scholars, and people of high birth were regularly enslaved — especially through war and political misfortune:</p>
+<ul>
+<li><strong>Joseph</strong> — son of a patriarch, sold by his own brothers into slavery in Egypt</li>
+<li><strong>Daniel, Hananiah, Mishael, and Azariah</strong> — likely from noble or priestly families ("of the king's seed, and of the princes," <a href="https://www.blueletterbible.org/kjv/dan/1/3/s_851003" target="_blank" data-ref="Daniel 1:3">Daniel 1:3</a>), carried into Babylonian captivity</li>
+<li><strong>The Israelites as a nation</strong> — an entire people enslaved in Egypt</li>
+<li><strong>Plato</strong> — sold into slavery by the tyrant Dionysius I of Syracuse after criticizing his rule; had to be ransomed by friends</li>
+<li><strong>Pythagoras</strong> — tradition holds he was enslaved during Cambyses' conquest of Egypt</li>
+<li><strong>Diogenes the Cynic</strong> — captured by pirates and sold; when asked his trade, he replied, "I know how to rule free men"</li>
+<li><strong>Epictetus</strong> — born into slavery in Rome, became one of the most influential Stoic philosophers</li>
+<li><strong>Aesop</strong> — the famous fabulist, was a slave on the island of Samos</li>
+</ul>
+<p><strong>What the biblical text says:</strong></p>
+<p>Slavery was a common and deeply entrenched institution throughout the ancient world, and the Israelites fully participated in it. The Torah draws explicit distinctions based on ethnicity and gender:</p>
+<p>  - <strong>Hebrew male servants</strong> were released after six years (21:2)</p>
+<p>  - <strong>Hebrew women</strong> were not given the same release: "she shall not go out as the menservants do" (21:7)</p>
+<p>  - <strong>Foreign slaves</strong> could be held permanently as property and inherited by children (<a href="https://www.blueletterbible.org/kjv/lev/25/44-46/s_115044" target="_blank" data-ref="Leviticus 25:44-46">Leviticus 25:44-46</a>)</p>
+<p>This reflects the social reality of a different time and demonstrates how God works with people within the context of their environments, whether those environments are ideal or not.</p>
+<p><strong>Key Provisions in Covenant Code:</strong></p>
+<ul>
+<li><strong>Six-year limit for male Hebrew servants:</strong> Hebrew male servants freed in seventh year (21:2)</li>
+<li><strong>Voluntary permanence:</strong> A male servant could choose to stay permanently (21:5-6)</li>
+<li><strong>Women did not receive the same release:</strong> "If a man sell his daughter to be a maidservant, she shall not go out as the menservants do" (21:7). The provisions in 21:7-11 address marriage obligations, not freedom — female slaves were often taken as concubines. A woman could go free only if the master failed to fulfill his marital commitment to her or his son. This is a different and unequal standard.</li>
+<li><strong>Injury compensation:</strong> If a master destroyed a servant's eye or knocked out a tooth, the servant went free (21:26-27). The text uses the generic "manservant" (<em>ebed</em>) and "maidservant" (<em>amah</em>) — applying to both men and women. Whether this extended to foreign slaves is debated; some rabbinic sources (Kiddushin 24a-25a) read this provision as specifically protecting foreign slaves, since Hebrew servants already had a release date.</li>
+</ul>
+<p><strong>Theological Movement:</strong></p>
+<p>The Law plants seeds of freedom that would eventually flower, but these seeds would not grow overnight. God works within human cultures and conditions to move them toward justice progressively.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Cities of Refuge</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Brief Mention (Exodus 21:13)</h3>
+<blockquote>
+<p>"If a man lie not in wait, but God deliver him into his hand; then I will appoint thee a place whither he shall flee."</p>
+</blockquote>
+<p>In the ancient Near East, when someone was killed — even accidentally — the victim's family had a culturally recognized right to avenge the death. A close male relative known as the <strong>"avenger of blood"</strong> (<em>goel ha-dam</em>) was expected to hunt down and kill the person responsible, regardless of whether the death was intentional or accidental. This created a cycle of blood vengeance that could escalate into clan warfare.</p>
+<p>The <strong>cities of refuge</strong> were God's intervention into this cycle. They were designated cities — eventually six, spread across the land of Israel — where a person who had killed someone <strong>accidentally</strong> (without premeditation or malice) could flee for protection. Once inside the city, the manslayer was safe from the avenger of blood and was entitled to a trial before the congregation to determine whether the killing was truly accidental or deliberate.</p>
+<ul>
+<li>If the killing was judged <strong>accidental</strong>, the manslayer remained in the city of refuge, protected, until the death of the current high priest — at which point they could return home freely.</li>
+<li>If the killing was judged <strong>intentional murder</strong>, the manslayer was handed over to the avenger of blood for execution.</li>
+</ul>
+<p>This system established a critical legal principle: <strong>accidental killing is not murder</strong>, and the accused deserves protection and a fair hearing before punishment. It inserted due process into a culture of blood vengeance.</p>
+<p><strong>Developed Later:</strong></p>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/num/35/9-34/s_152009" target="_blank" data-ref="Numbers 35:9-34">Numbers 35:9-34</a> — Six cities designated with detailed regulations</li>
+<li><a href="https://www.blueletterbible.org/kjv/deu/19/1-13/s_172001" target="_blank" data-ref="Deuteronomy 19:1-13">Deuteronomy 19:1-13</a> — Further provisions, including the requirement that roads to the cities be maintained so the manslayer could reach them quickly</li>
+<li><a href="https://www.blueletterbible.org/kjv/jos/20/1/s_207001" target="_blank" data-ref="Joshua 20">Joshua 20</a> — The six cities formally established after the conquest</li>
+</ul>
+<p><strong>Christ Connection:</strong></p>
+<p>Christ is our refuge from the justice we deserve. We flee to Him for mercy, and He provides sanctuary. Just as the manslayer was freed at the death of the high priest, we are freed through the death of our great High Priest.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The <em>Moedim</em>: God's Appointed Times</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>What Are the <em>Moedim</em>?</h3>
+<p>The Hebrew word <em><strong>moed</strong></em> (<a href="https://www.blueletterbible.org/lexicon/h4150/kjv/wlc/0-1/" target="_blank" data-lexicon="appointed time, feast, meeting" data-strongs="H4150" data-translit="mo&#x27;ed" data-original="מוֹעֵד" data-lang="hebrew" data-verse="Genesis 21:2">מועד</a>, plural <em>moedim</em>) is typically translated "feast" or "season," but its meaning runs deeper. The root <em><strong>ya'ad</strong></em> (<a href="https://www.blueletterbible.org/lexicon/h3133/kjv/wlc/0-1/" target="_blank" data-lexicon="Joed = &quot;Jehovah is witness&quot;a Benjamite, son of Pedaiah" data-strongs="H3133" data-translit="yôʿēḏ" data-original="יָעַד" data-lang="hebrew" data-verse="">יעד</a>) means "to appoint" or "to designate" — the <em>mem</em> prefix turns it into a noun: an <strong>appointed time</strong>, a scheduled meeting with God. These were not merely celebrations; they were <strong>ritual appointments with the Creator</strong>.</p>
+<p>The first time <em>moedim</em> appears in scripture is striking: "And God said, Let there be lights in the firmament of the heaven to divide the day from the night; and let them be for signs, and for <strong>seasons</strong> [<em>moedim</em>], and for days, and years" (<a href="https://www.blueletterbible.org/kjv/gen/1/14/" target="_blank">Genesis 1:14</a>). The very purpose of the sun and moon — from the moment of creation — was to mark God's appointed times. The Psalmist echoes this: "He appointed the moon for <em>moedim</em>" (<a href="https://www.blueletterbible.org/kjv/psa/104/19/" target="_blank">Psalm 104:19</a>). The feast days are not an afterthought added at Sinai — they are woven into the fabric of creation itself.</p>
+<p>(See our <a href="/culture/jewish/moedim/" target="_blank">Moedim guides</a> for detailed explorations of each feast day and its covenant significance.)</p>
+<h3>Exodus 23:14-17: Three Annual Pilgrimages</h3>
+<p>Three times yearly, all Israelite males were to "appear before the Lord GOD":</p>
+<table class="info-table">
+<tr><th>Festival</th><th>Hebrew Name</th><th>Season</th><th>Commemoration</th></tr>
+<tr><td>Unleavened Bread</td><td><a href="/culture/jewish/moedim/passover/" target="_blank">Pesach</a>/<a href="/culture/jewish/moedim/matzot/" target="_blank">Matzot</a></td><td>Spring (Nisan)</td><td>Exodus from Egypt</td></tr>
+<tr><td>Harvest</td><td><a href="/culture/jewish/moedim/shavuot/" target="_blank">Shavuot</a> (Weeks)</td><td>Late Spring (Sivan)</td><td>Wheat harvest; giving of Torah</td></tr>
+<tr><td>Ingathering</td><td>Sukkot (Tabernacles)</td><td>Fall (Tishri)</td><td>Wilderness wandering; harvest thanksgiving</td></tr>
+</table>
+<p>Each festival combined <strong>agricultural thanksgiving</strong> with <strong>historical remembrance</strong>:</p>
+<ul>
+<li><strong>Passover/Unleavened Bread:</strong> First barley harvest + Exodus from Egypt</li>
+<li><strong>Shavuot/Pentecost:</strong> Wheat harvest + giving of the Torah at Sinai</li>
+<li><strong>Sukkot/Tabernacles:</strong> Final harvest + wilderness wandering in booths</li>
+</ul>
+<h3>"A Statute Forever"</h3>
+<p><a href="https://www.blueletterbible.org/kjv/lev/23/1/s_113001" target="_blank" data-ref="Leviticus 23">Leviticus 23</a> describes each of these festivals as <em><strong>chuqqat olam</strong></em> — "a statute forever throughout your generations" (<a href="https://www.blueletterbible.org/kjv/lev/23/14/" target="_blank">Leviticus 23:14, 21, 31, 41</a>). The Torah is explicit that these appointed times were not temporary measures but permanent features of the covenant relationship between God and His people.</p>
+<h3>Older Than Sinai</h3>
+<p>Ancient Jewish tradition understood the <em>moedim</em> as predating the Mosaic law. The <strong>Book of Jubilees</strong> (2nd century BC, preserved among the Dead Sea Scrolls) claims that the Festival of Weeks was celebrated by Noah after the flood, and that Abraham observed the Feast of Tabernacles — both long before Moses received the Torah at Sinai. Jubilees sees these appointed times as built into the structure of time itself, not as innovations introduced at Sinai but as patterns that had existed since creation and were observed by the patriarchs.</p>
+<h3>What Happened at the Festivals</h3>
+<p>In ancient Israel, the feast days were not merely celebrations. They gathered covenant people at God's house to hear His word, renew their commitments, and share in sacred meals shaped by sacrifice. In a world where most people did not own written scripture, this was one of the main ways Torah was heard, remembered, and passed on. Song, chant, teaching, sacrifice, and communal meal all worked together.</p>
+<h4 class="sg-section-heading">One Pattern, Three Traditions</h4>
+<p>What we are looking at when we look at the <em>moedim</em> is not a Jewish-only phenomenon. Israel's appointed times establish a covenant pattern — gathering God's people at His house, at His invitation, to feast on His word and renew their covenants — and that same pattern surfaces in three distinct traditions, each in its own form.</p>
+<p><strong>Israel under Sinai.</strong> The three pilgrimage feasts gathered the covenant nation to the place where the Lord placed His name. Passover rehearsed the founding redemption. Shavuot remembered the giving of Torah. Sukkot re-enacted the wilderness sojourn. Sacrifice, communal meal, and the public reading of the law belonged to all three (<a href="https://www.blueletterbible.org/kjv/deu/31/10/" target="_blank">Deuteronomy 31:10-13</a>; <a href="https://www.blueletterbible.org/kjv/neh/8/1/" target="_blank">Nehemiah 8:1-18</a>). One of the major purposes of the gathering was that the people would <em>hear and learn</em> — <em>"that they may hear, and that they may learn, and fear the Lord your God, and observe to do all the words of this law"</em> (<a href="https://www.blueletterbible.org/kjv/deu/31/12/" target="_blank">Deuteronomy 31:12</a>).</p>
+<p><strong>The Nephites at the temple.</strong> When King Benjamin gathered his people in <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/2?lang=eng" target="_blank">Mosiah 2</a>, the Nephites were observing the law of Moses (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/2?lang=eng&id=p3#p3" target="_blank">Mosiah 2:3</a>) and the entire scene reads as a covenant assembly in the same family of patterns:</p>
+<blockquote>
+<p>"And they pitched their tents round about the temple, every man having his tent with the door thereof towards the temple, that thereby they might remain in their tents and hear the words which king Benjamin should speak unto them" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/2?lang=eng&id=p6#p6" target="_blank">Mosiah 2:6</a>).</p>
+</blockquote>
+<p>The detail of <em>tents pitched around the temple, doors facing the temple</em> is striking. Latter-day Saint scholars have long noted the affinity with Israelite festival observance — particularly the tent/booth imagery of Sukkot and the covenant-renewal pattern of seasonal pilgrimage. The Nephites came with sacrifices "according to the law of Moses" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/2?lang=eng&id=p3#p3" target="_blank">Mosiah 2:3</a>) and stayed to hear the word. King Benjamin's invitation — "open your ears that ye may hear, and your hearts that ye may understand, and your minds that ye may comprehend the mysteries of God may be unfolded to your view" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/2?lang=eng&id=p9#p9" target="_blank">Mosiah 2:9</a>) — echoes the same covenant-learning purpose named in Deuteronomy.</p>
+<p>The Nephites were not in Jerusalem, and some local traditions may have varied with time and circumstance. But the Book of Mormon is clear that they kept the law of Moses faithfully (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/jarom/1?lang=eng&id=p5#p5" target="_blank">Jarom 1:5</a>; <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/25?lang=eng&id=p24#p24" target="_blank">2 Nephi 25:24</a>; <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/25?lang=eng&id=p15#p15" target="_blank">Alma 25:15</a>). The <em>pattern</em> is unmistakable: a covenant people, gathered at the house of the Lord, with sacrifices offered according to the law of Moses, with the word taught, and with covenants renewed at the close (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/5?lang=eng" target="_blank">Mosiah 5</a>).</p>
+<p><strong>Latter-day Saints today.</strong> It is not a coincidence that generations of Latter-day Saint teachers have used the <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/2?lang=eng" target="_blank" data-ref="Mosiah 2">Mosiah 2</a> image — <em>tents turned toward the temple</em> — to teach the purpose of General Conference, of stake conference, and of every Sabbath. Our gathering is not a Mosaic feast. We do not bring firstlings of the flock to the altar. The shedding of blood ended at the cross. But the underlying shape is unmistakably the same: a covenant people, gathered at the Lord's invitation, to hear and learn about His word through His prophets, to renew covenants at His table, to be taught and changed and sent home different.</p>
+<p>Nephi names the heart of it in language the whole canon shares: <em>"feast upon the words of Christ; for behold, the words of Christ will tell you all things what ye should do"</em> (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/32?lang=eng&id=p3#p3" target="_blank">2 Nephi 32:3</a>). Sinai gathered Israel to feast on Torah. The temple at Zarahemla gathered the Nephites to feast on the word. Conference and sacrament gather us to feast on the word of Christ. Three traditions, three contexts, three forms — one Lord, calling His covenant people together at His appointed times to feed them.</p>
+<p>What this means for reading the <em>moedim</em>: when we encounter Passover, Shavuot, and Sukkot in the Old Testament, we are not looking at a foreign religion's calendar. We are looking at the original form of a pattern our own discipleship still lives inside — the same Lord, calling, gathering, feeding, and sending. The traditions and experiences differ. The purpose does not.</p>
+<h4 class="sg-section-heading">Why Blood Offerings?</h4>
+<p>To understand the feasts, we have to understand what was happening at their center: sacrifice. Leviticus answers the "why" directly: <em>"For the life of the flesh is in the blood: and I have given it to you upon the altar to make an atonement for your souls: for it is the blood that maketh an atonement for the soul"</em> (<a href="https://www.blueletterbible.org/kjv/lev/17/11/" target="_blank">Leviticus 17:11</a>). Blood, in the Torah's symbolic economy, <em>is life</em>. To offer blood is to acknowledge that life — including the life of the worshipper — belongs to God, and that the cost of sin is paid for in life, not in lesser currencies. Every offering pointed past itself to the one infinite offering still to come.</p>
+<p><strong>The major sacrifice types</strong> (<a href="https://www.blueletterbible.org/kjv/lev/1/1/" target="_blank">Leviticus 1-7</a>) are worth knowing, because each one teaches a different facet of atonement and covenant:</p>
+<ul>
+<li><a href="https://www.blueletterbible.org/lexicon/h5930/kjv/wlc/0-1/" target="_blank" data-lexicon="whole burnt offering ascent, stairway, steps" data-strongs="H5930" data-translit="ʿōlâ" data-original="עֹלָה" data-lang="hebrew" data-verse="">עֹלָה</a> (<a href="https://www.blueletterbible.org/lexicon/h5930/kjv/wlc/0-1/" target="_blank" data-lexicon="whole burnt offering ascent, stairway, steps" data-strongs="H5930" data-translit="ʿōlâ" data-original="עֹלָה" data-lang="hebrew" data-verse=""><em>ʿolah</em></a>) — the <strong>burnt offering</strong> ("that which goes up"). The whole animal is consumed on the altar; nothing is kept back. It teaches <strong>total consecration</strong>.</li>
+<li><a href="https://www.blueletterbible.org/lexicon/h4504/kjv/wlc/0-1/" target="_blank" data-lexicon="gift, offeringoblation, offering (to God through representative)meal offering" data-strongs="H4504" data-translit="minḥâ" data-original="מִנְחָה" data-lang="hebrew" data-verse="">מִנְחָה</a> (<a href="https://www.blueletterbible.org/lexicon/h4503/kjv/wlc/0-1/" target="_blank" data-lexicon="gift, tribute, offering, present, oblation, sacrifice, meat offering gift, present tribute offering (to God) grain of..." data-strongs="H4503" data-translit="minḥâ" data-original="מִנְּזָר" data-lang="hebrew" data-verse=""><em>minchah</em></a>) — the <strong>grain offering</strong>. A bloodless gift of fine flour, oil, and frankincense. It teaches <strong>devotion of one's labor</strong>.</li>
+<li>שְׁלָמִים (<a href="https://www.blueletterbible.org/lexicon/h8002/kjv/wlc/0-1/" target="_blank" data-lexicon="peace offering, requital, sacrifice for alliance or friendshipvoluntary sacrifice of thanks" data-strongs="H8002" data-translit="šelem" data-original="שֶׁלֶם" data-lang="hebrew" data-verse=""><em>shelamim</em></a> / <em>zevach shelamim</em>) — the <strong>peace</strong> or <strong>fellowship offering</strong>. Part is burned to God, part is given to the priests, and part is eaten by the worshipper and family in a covenant meal in the Lord's presence. This is the <strong>covenant meal</strong> sacrifice.</li>
+<li>חַטָּאת (<a href="https://www.blueletterbible.org/lexicon/h2403/kjv/wlc/0-1/" target="_blank" data-lexicon="sin, sinful sin, sin offering sin condition of sin, guilt of sin punishment for sin sin-offering purification from si..." data-strongs="H2403" data-translit="ḥaṭṭā'āṯ" data-original="חַטָּאָה" data-lang="hebrew" data-verse=""><em>chattat</em></a>) — the <strong>sin offering</strong>. For unintentional sin, ritual impurity, or covenant breach.</li>
+<li><a href="https://www.blueletterbible.org/lexicon/h816/kjv/wlc/0-1/" target="_blank" data-lexicon="to offend, be guilty, trespass" data-strongs="H816" data-translit="āšam" data-original="אָשַׁם" data-lang="hebrew" data-verse="">אָשָׁם</a> (<a href="https://www.blueletterbible.org/lexicon/h817/kjv/wlc/0-1/" target="_blank" data-lexicon="guilt, offense, sin, guiltiness" data-strongs="H817" data-translit="āšām" data-original="אָשָׁם" data-lang="hebrew" data-verse=""><em>asham</em></a>) — the <strong>guilt</strong> or <strong>trespass offering</strong>. For specific offenses, often with restitution.</li>
+</ul>
+<p>The feasts gathered these offerings together at appointed times, weaving consecration, gratitude, fellowship, repentance, and restitution into the rhythm of the covenant year.</p>
+<h4 class="sg-section-heading">The Lord's Feast</h4>
+<p>Of these, the <em>shelamim</em> — the fellowship offering — is the most directly relevant to this lesson, because it is the sacrifice in which the worshipper <em>eats with the Lord</em>. The peace offering is not mainly about removing sin (the <em>chattat</em> does that); it is about communion. The covenant ratification meal in <a href="https://www.blueletterbible.org/kjv/exo/24/1/s_74001" target="_blank" data-ref="Exodus 24">Exodus 24</a>, the priestly portions eaten in the holy place, the family meals at the appointed times — all belong to this category. They anticipate the Last Supper, where Christ ratified the new covenant in His own blood and shared the covenant meal with His disciples. And He pointed beyond even that night: <em>"I will not drink henceforth of this fruit of the vine, until that day when I drink it new with you in my Father's kingdom"</em> (<a href="https://www.blueletterbible.org/kjv/mat/26/29/" target="_blank">Matthew 26:29</a>). The full arc runs from the <em>shelamim</em> at Sinai, through the upper room, through the sacrament we partake of each Sabbath, to the great covenant meal yet to come — <em>"the marriage supper of the Lamb"</em> (<a href="https://www.blueletterbible.org/kjv/rev/19/9/" target="_blank">Revelation 19:9</a>).</p>
+<h4 class="sg-section-heading">About the Prophetic Critique of Feast Days</h4>
+<p>Modern readers sometimes assume the prophets condemned the feasts themselves. They did not. They condemned the way Israel was <em>abusing</em> the feasts — using ritual observance to paper over injustice and hypocrisy.</p>
+<blockquote>
+<p>"Bring no more vain oblations; incense is an abomination unto me; the new moons and sabbaths, the calling of assemblies, I cannot away with; it is iniquity, even the solemn meeting. Your new moons and your appointed feasts my soul hateth … Wash you, make you clean; put away the evil of your doings from before mine eyes; cease to do evil; learn to do well; seek judgment, relieve the oppressed, judge the fatherless, plead for the widow" (<a href="https://www.blueletterbible.org/kjv/isa/1/13/" target="_blank">Isaiah 1:13-17</a>).</p>
+</blockquote>
+<p>Isaiah's quarrel is with appointed times observed by hands stained with oppression. The remedy he prescribes is not to cancel the feasts but to repent and reform. The same logic runs through <a href="https://www.blueletterbible.org/kjv/amo/5/21/" target="_blank">Amos 5:21-24</a>, <a href="https://www.blueletterbible.org/kjv/hos/6/6/" target="_blank">Hosea 6:6</a>, and <a href="https://www.blueletterbible.org/kjv/mic/6/6/" target="_blank">Micah 6:6-8</a>. The prophets' point is that ritual divorced from righteousness is intolerable — <em>not</em> that ritual itself was a mistake.</p>
+<h4 class="sg-section-heading">About Paul</h4>
+<p>Several Pauline passages are sometimes read as a flat rejection of feast observance: <a href="https://www.blueletterbible.org/kjv/col/2/16/" target="_blank">Colossians 2:16-17</a>, <a href="https://www.blueletterbible.org/kjv/gal/4/9/" target="_blank">Galatians 4:9-11</a>, and sometimes <a href="https://www.blueletterbible.org/kjv/rom/14/5/" target="_blank">Romans 14:5-6</a>. Read in context, Paul is not denouncing the appointed times. He is dealing with Gentile converts being pressured to take on the full ritual law as a condition of salvation, and with disputes among Jewish and Gentile believers over how to live together. His repeated emphasis is that the feasts were <em>"a shadow of things to come"</em> whose substance is Christ — not that they were never meaningful.</p>
+<p>And Paul's own practice confirms this. Luke records that Paul sailed past Ephesus because <em>"he hasted, if it were possible for him, to be at Jerusalem the day of Pentecost"</em> (<a href="https://www.blueletterbible.org/kjv/act/20/16/" target="_blank">Acts 20:16</a>). He timed his travel around the feast of Unleavened Bread (<a href="https://www.blueletterbible.org/kjv/act/20/6/" target="_blank">Acts 20:6</a>). He told the Corinthians directly, <em>"Christ our passover is sacrificed for us: Therefore let us keep the feast"</em> (<a href="https://www.blueletterbible.org/kjv/1co/5/7/" target="_blank">1 Corinthians 5:7-8</a>). Paul did not reject the <em>moedim</em>; he understood them as filled with Christ.</p>
+<h4 class="sg-section-heading">What Actually Changed</h4>
+<p>Modern Latter-day Saints often summarize the New Covenant by saying, "the law of Moses was done away with." That is true in a broad sense, but it can flatten what specifically changed and what carried forward. The more accurate answer is this: <strong>the demand of justice was satisfied once and for all in Christ, and so the shedding of blood in animal sacrifice ended.</strong></p>
+<p>Alma is unmistakable on the central change:</p>
+<blockquote>
+<p>"Therefore, it is expedient that there should be a great and last sacrifice, and then shall there be, or it is expedient there should be, a stop to the shedding of blood; then shall the law of Moses be fulfilled" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/34?lang=eng&id=p13#p13" target="_blank">Alma 34:13</a>).</p>
+</blockquote>
+<p>And the resurrected Lord, in 3 Nephi, draws the line in His own words:</p>
+<blockquote>
+<p>"And ye shall offer up unto me no more the shedding of blood; yea, your sacrifices and your burnt offerings shall be done away" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/9?lang=eng&id=p19-p20#p19" target="_blank">3 Nephi 9:19-20</a>).</p>
+</blockquote>
+<p>The shedding of blood ends because Christ's blood has answered for sin. What replaces it is the offering of the whole inner person — a broken heart and a contrite spirit. Other older covenant practices, like circumcision as the Abrahamic sign or the feast days as covenant patterns, have a different history of fulfillment and continuation and should not be collapsed into the same category as daily and seasonal blood offerings.</p>
+<h4 class="sg-section-heading">The Restoration Pattern</h4>
+<p>When the Church was restored, the Lord instructed Joseph Smith to gather the Saints regularly (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/20?lang=eng&id=p61-p62#p61" target="_blank">D&C 20:61-62</a>; <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/44?lang=eng&id=p1#p1" target="_blank">D&C 44:1</a>). This became what we know as <strong>General Conference</strong>. It is not a coincidence that our modern General Conference aligns broadly with the spring and fall seasons of <strong>Pesach</strong> and <strong>Sukkot</strong> — the great pilgrimage periods when Israel gathered to the temple. God still gathers His covenant people at His appointed times, to teach them and bless them, because He loves them.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Covenant Ceremony (Exodus 24)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Blood Ritual</h3>
+<blockquote>
+<p>"Moses took the blood, and sprinkled it on the people, and said, Behold the blood of the covenant" (<a href="https://www.blueletterbible.org/kjv/exo/24/8/s_74008" target="_blank" data-ref="Exodus 24:8">Ex 24:8</a>).</p>
+</blockquote>
+<p><strong>Structure:</strong></p>
+<ol>
+<li>Moses builds altar with twelve pillars (24:4)</li>
+<li>Young men offer sacrifices (24:5)</li>
+<li>Half the blood sprinkled on altar (24:6) — God's side</li>
+<li>Covenant read aloud; people commit (24:7)</li>
+<li>Half the blood sprinkled on people (24:8) — Israel's side</li>
+</ol>
+<p><strong>Significance:</strong></p>
+<p>Blood represented life (<a href="https://www.blueletterbible.org/kjv/lev/17/11/s_107011" target="_blank" data-ref="Leviticus 17:11">Lev 17:11</a>). The covenant "costs" life—both parties bound in life-and-death commitment. Breaking covenant is capital offense.</p>
+<h3>Theophany and Meal (Exodus 24:9-11)</h3>
+<blockquote>
+<p>"They saw the God of Israel... also they saw God, and did eat and drink."</p>
+</blockquote>
+<p><strong>What They Saw:</strong></p>
+<ul>
+<li>"Under his feet as it were a paved work of a sapphire stone"</li>
+<li>"As it were the body of heaven in his clearness"</li>
+</ul>
+<p>This wasn't God's full essence (cf. <a href="https://www.blueletterbible.org/kjv/exo/33/20/s_83020" target="_blank" data-ref="Exodus 33:20">Ex 33:20</a>) but a manifestation of His glory. The sapphire pavement suggests heavenly realm.</p>
+<p><strong>The Meal:</strong></p>
+<p>Eating together seals covenants in ANE culture. Fellowship with God = acceptance, communion, peace.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Sabbath and Sabbatical Year</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Weekly Sabbath (Exodus 23:12)</h3>
+<p><strong>Who Rests:</strong></p>
+<ul>
+<li>Landowner</li>
+<li>Servants ("son of thy handmaid")</li>
+<li>Foreigners ("stranger")</li>
+<li>Animals ("ox and ass")</li>
+</ul>
+<p>Sabbath democratizes rest. On the seventh day, master and slave are equals.</p>
+<h3>Sabbatical Year (Exodus 23:10-11)</h3>
+<p>Israel's covenant economy was ordered around a rhythm of release. Every seventh year the land was to lie fallow (<a href="https://www.blueletterbible.org/kjv/exo/23/10/" target="_blank">Exodus 23:10-11</a>; <a href="https://www.blueletterbible.org/kjv/lev/25/1/" target="_blank">Leviticus 25:1-7</a>); debts among Israelites were to be released (<a href="https://www.blueletterbible.org/kjv/deu/15/1/" target="_blank">Deuteronomy 15:1-11</a>); and Hebrew bondservants were to be set free with provisions for their new beginning (<a href="https://www.blueletterbible.org/kjv/deu/15/12/" target="_blank">Deuteronomy 15:12-15</a>). Every fiftieth year — the Year of Jubilee — extended the pattern: ancestral lands returned to their original families, and liberty was proclaimed <em>"throughout all the land unto all the inhabitants thereof"</em> (<a href="https://www.blueletterbible.org/kjv/lev/25/10/" target="_blank">Leviticus 25:10</a>). Land could not be permanently sold because, in covenant logic, the land was not ultimately Israel's: <em>"The land shall not be sold for ever: for the land is mine"</em> (<a href="https://www.blueletterbible.org/kjv/lev/25/23/" target="_blank">Leviticus 25:23</a>).</p>
+<p>The practical effect was that no Israelite could be permanently locked out of inheritance, freedom, or sustenance. Wealth could concentrate for a season, but the system was designed to reset.</p>
+<p><strong>The poor and the gleaner.</strong> The same covenant logic shaped the harvest. Israelites were commanded not to reap the corners of their fields, not to gather what fell, and not to glean their vineyards a second time: <em>"Thou shalt leave them for the poor and stranger: I am the Lord your God"</em> (<a href="https://www.blueletterbible.org/kjv/lev/19/9/" target="_blank">Leviticus 19:9-10</a>; cf. <a href="https://www.blueletterbible.org/kjv/lev/23/22/" target="_blank">Leviticus 23:22</a>; <a href="https://www.blueletterbible.org/kjv/deu/24/19/" target="_blank">Deuteronomy 24:19-21</a>). The edge of the field belonged, by law, to those who had no field of their own.</p>
+<p>The book of Ruth shows this provision in action. Ruth, a Moabite widow returning to Bethlehem with her mother-in-law Naomi, supports them by going <em>"to glean ears of corn after him in whose sight I shall find grace"</em> (<a href="https://www.blueletterbible.org/kjv/rut/2/2/" target="_blank">Ruth 2:2</a>). She arrives in the field of Boaz, a kinsman, who not only allows her to glean but instructs his workers to leave handfuls on purpose for her (<a href="https://www.blueletterbible.org/kjv/rut/2/15/" target="_blank">Ruth 2:15-16</a>). What Leviticus commanded as a baseline, Boaz extended as covenant kindness — and the result is the line that produces David and ultimately Christ (<a href="https://www.blueletterbible.org/kjv/rut/4/17/" target="_blank">Ruth 4:17-22</a>; <a href="https://www.blueletterbible.org/kjv/mat/1/5/" target="_blank">Matthew 1:5-6</a>).</p>
+<p>The lesson is not just economic. The sabbatical, jubilee, and gleaning laws together teach that in God's covenant order, provision for the vulnerable is not charity tacked onto the system — it <em>is</em> the system.</p>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 3: WEEK 18: KEY PASSAGES STUDY -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">3. Week 18: Key Passages Study</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Passage 1: Lex Talionis — Proportionate Justice (Exodus 21:23-25)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text (KJV)</h3>
+<blockquote>
+<p>"And if any mischief follow, then thou shalt give life for life, Eye for eye, tooth for tooth, hand for hand, foot for foot, Burning for burning, wound for wound, stripe for stripe."</p>
+</blockquote>
+<p>Few phrases in Torah are more often misread. Modern readers tend to hear this as a license for personal revenge — <em>if you hurt me, I get to hurt you back the same way</em>. Read in its own world, it is almost the opposite: a deliberate <strong>limit</strong> on retaliation, not a permission for it.</p>
+<h3>Literary Analysis</h3>
+<p><strong>The principle: proportionate justice.</strong> In the ancient Near East, blood feuds easily escalated. An insult could trigger a wound; a wound could trigger a death; a death could trigger the destruction of a household. The lex talionis ("law of retaliation") draws a hard line: the response to harm may not exceed the harm. One eye, not two. One tooth, not a life.</p>
+<p><strong>The literary context — the pregnant woman case.</strong> <a href="https://www.blueletterbible.org/kjv/exo/21/22-25/s_71022" target="_blank" data-ref="Exodus 21:22-25">Exodus 21:22-25</a> is case law. It begins with a specific scenario in which men fighting accidentally injure a pregnant woman. If the harm is limited, a fine is set. If lasting injury follows, the response must be proportionate: life for life, eye for eye, tooth for tooth, and so on. The list is not a manual for revenge; it is a measuring rod for a judge weighing damages in a difficult case.</p>
+<p><strong>Why the formula appears three times.</strong> The talionic formula recurs in <a href="https://www.blueletterbible.org/kjv/lev/24/17/" target="_blank">Leviticus 24:17-22</a> and <a href="https://www.blueletterbible.org/kjv/deu/19/16/" target="_blank">Deuteronomy 19:16-21</a>, each time in a different context and each time tied to the same principle: the penalty must fit the crime.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Limiting vengeance:</strong> the law sets a ceiling on retaliation</li>
+<li><strong>Equal justice:</strong> the same standard applies regardless of social class</li>
+<li><strong>Human value:</strong> every injury matters and must be answered fairly</li>
+</ol>
+<p><strong>Rabbinic interpretation:</strong> By the time of the Mishnah and Talmud, the dominant Jewish reading of "eye for eye" was monetary compensation rather than literal mutilation (cf. <em>Bava Kamma</em> 83b-84a). The idea is equivalent restitution, not physical retaliation.</p>
+<h3>LDS Connection</h3>
+<p>When Jesus says, <em>"Ye have heard that it hath been said, An eye for an eye, and a tooth for a tooth: But I say unto you, That ye resist not evil: but whosoever shall smite thee on thy right cheek, turn to him the other also"</em> (<a href="https://www.blueletterbible.org/kjv/mat/5/38/" target="_blank">Matthew 5:38-39</a>), He is not accusing Moses of cruelty. The law of proportionate justice still stands as the floor of public order. What He raises is the <em>personal</em> standard above that floor.</p>
+<p>A detail worth noticing: He specifies the <em>right</em> cheek. A right-handed strike to a person's right cheek is most naturally a backhand — a cultural insult from a superior to an inferior. Read this way, "turn the other cheek" is not passive doormat ethics; it refuses both retaliation and humiliation. <em>(This cultural reading is plausible and widely cited, though debated among scholars.)</em></p>
+<p>The lex talionis tells the magistrate, <em>don't take more than was taken.</em> Jesus tells the disciple, <em>and you, when wronged personally, can choose not to take what you are owed.</em> The first protects the community from runaway vengeance. The second invites individual disciples to live by the higher law of mercy that fulfills it.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 2: Protecting the Vulnerable (Exodus 22:21-24)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text (KJV)</h3>
+<blockquote>
+<p>"Thou shalt neither vex a stranger, nor oppress him: for ye were strangers in the land of Egypt. Ye shall not afflict any widow, or fatherless child. If thou afflict them in any wise, and they cry at all unto me, I will surely hear their cry; And my wrath shall wax hot, and I will kill you with the sword; and your wives shall be widows, and your children fatherless."</p>
+</blockquote>
+<h3>Literary Analysis</h3>
+<p>The passage names three vulnerable groups: stranger, widow, orphan. God's response to their mistreatment is fierce—the penalty mirrors the crime (oppressors' families become widows and orphans).</p>
+<p><strong>Note the basis:</strong> "For ye were strangers in the land of Egypt." Israel's ethics flow from memory. Because they suffered oppression, they must not oppress.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>God hears the vulnerable:</strong> "They cry at all unto me, I will surely hear"</li>
+<li><strong>Covenant memory shapes ethics:</strong> Remembering Egypt creates compassion</li>
+<li><strong>Measure-for-measure justice:</strong> Those who create widows become widowed</li>
+</ol>
+<h3>Rabbinic Interpretation</h3>
+<p>The Talmud counted precisely how many times the Torah issues this command. Rabbi Eliezer the Great taught: "For what reason did the Torah issue warnings in thirty-six places — and some say forty-six places — with regard to causing any distress to a convert?" (Bava Metzia 59b). No other commandment receives this level of repetition. The sheer count reveals how seriously the rabbis took God's concern for the vulnerable outsider.</p>
+<p>Rabbi Natan derives a principle from the same verse: "A defect that is in you, do not mention it in another" (Bava Metzia 59b). Israel's own history as strangers is not leverage for superiority but a foundation for humility — those who were once outsiders must never weaponize that history against those who occupy the outsider position now.</p>
+<p>The Talmud also preserves a teaching from Imma Shalom: "All the gates of Heaven are locked, except for the gates of prayer for victims of verbal mistreatment" (Bava Metzia 59b). When the vulnerable cry out, God always hears — no gate can block their prayer.</p>
+<h3>LDS Connection</h3>
+<p>Fast offerings exist specifically to care for the vulnerable. President Gordon B. Hinckley frequently emphasized visiting widows, caring for the fatherless. <a href="https://www.blueletterbible.org/kjv/jas/1/27/s_1147027" target="_blank" data-ref="James 1:27">James 1:27</a> summarizes: "Pure religion... is this, To visit the fatherless and widows in their affliction."</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 3: Compassionate Lending (Exodus 22:25-27)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text (KJV)</h3>
+<blockquote>
+<p>"If thou lend money to any of my people that is poor by thee, thou shalt not be to him as an usurer, neither shalt thou lay upon him usury. If thou at all take thy neighbour's raiment to pledge, thou shalt deliver it unto him by that the sun goeth down: For that is his covering only, it is his raiment for his skin: wherein shall he sleep? and it shall come to pass, when he crieth unto me, that I will hear; for I am gracious."</p>
+</blockquote>
+<h3>Literary Analysis</h3>
+<p>Two principles:</p>
+<ol>
+<li><strong>No interest on loans to the poor</strong> — Usury was common; God forbids exploiting need</li>
+<li><strong>Return pledged garments by sundown</strong> — A cloak served as both clothing and bedding; keeping it overnight leaves the poor exposed</li>
+</ol>
+<p>The passage ends with God's self-description: "I am gracious." His compassion grounds the command.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Economics serve people, not reverse:</strong> Profit doesn't override dignity</li>
+<li><strong>God identifies with the poor:</strong> Their cry reaches His ears</li>
+<li><strong>Practical compassion:</strong> Abstract love becomes concrete policy</li>
+</ol>
+<h3>LDS Connection</h3>
+<p>The Church's Perpetual Education Fund provides interest-free assistance. Welfare principles emphasize helping without creating dependency. The underlying value: people matter more than profit.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 4: Don't Follow the Crowd (Exodus 23:2)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text (KJV)</h3>
+<blockquote>
+<p>"Thou shalt not follow a multitude to do evil; neither shalt thou speak in a cause to decline after many to wrest judgment."</p>
+</blockquote>
+<h3>Literary Analysis</h3>
+<p>The context is courtroom justice—don't let mob pressure corrupt verdicts. But the principle extends broadly: peer pressure doesn't excuse wrongdoing.</p>
+<p>Two dangers:</p>
+<ol>
+<li><strong>Following the crowd into evil</strong> — Group sin feels less sinful</li>
+<li><strong>Perverting justice under pressure</strong> — Bending to popular opinion</li>
+</ol>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Individual responsibility:</strong> "Everyone else is doing it" isn't a defense</li>
+<li><strong>Prophetic courage:</strong> Standing for truth may mean standing alone</li>
+<li><strong>Justice over popularity:</strong> What's right may not be popular</li>
+</ol>
+<h3>LDS Connection</h3>
+<p>This verse resonates in a social media age. Cancel culture, mob mentality, viral outrage—all tempt us to "follow a multitude." President Thomas S. Monson taught, "Dare to stand alone." For the Strength of Youth counsels choosing right even when peers choose wrong.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 5: Sabbath Rest for All (Exodus 23:12)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text (KJV)</h3>
+<blockquote>
+<p>"Six days thou shalt do thy work, and on the seventh day thou shalt rest: that thine ox and thine ass may rest, and the son of thy handmaid, and the stranger, may be refreshed."</p>
+</blockquote>
+<h3>Literary Analysis</h3>
+<p>Note who benefits from Sabbath:</p>
+<ul>
+<li><strong>You</strong> (the landowner)</li>
+<li><strong>Your animals</strong> (ox and donkey)</li>
+<li><strong>Your servants</strong> ("son of thy handmaid")</li>
+<li><strong>Foreigners</strong> ("stranger")</li>
+</ul>
+<p>Sabbath democratizes rest. On the seventh day, master and slave are equals. Even animals are dignified.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Sabbath as social justice:</strong> Rest isn't just for the privileged</li>
+<li><strong>Creation care:</strong> Even animals deserve refreshment</li>
+<li><strong>Human equality:</strong> On Sabbath, all receive rest</li>
+</ol>
+<h3>LDS Connection</h3>
+<p>President Russell M. Nelson renewed focus on Sabbath as "delight" (<a href="https://www.blueletterbible.org/kjv/isa/58/13/s_737013" target="_blank" data-ref="Isaiah 58:13">Isaiah 58:13</a>). But this passage adds dimension: Sabbath isn't just personal renewal—it's ensuring everyone in our sphere can rest. Do we demand Sunday labor from others unnecessarily?</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 6: Blood of the Covenant (Exodus 24:7-8)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text (KJV)</h3>
+<blockquote>
+<p>"And he took the book of the covenant, and read in the audience of the people: and they said, All that the LORD hath said will we do, and be obedient. And Moses took the blood, and sprinkled it on the people, and said, Behold the blood of the covenant, which the LORD hath made with you concerning all these words."</p>
+</blockquote>
+<h3>Literary Analysis</h3>
+<p><strong>Double commitment:</strong></p>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/exo/24/3/s_74003" target="_blank" data-ref="Exodus 24:3">Ex 24:3</a>: First response after hearing (verbal report)</li>
+<li><a href="https://www.blueletterbible.org/kjv/exo/24/7/s_74007" target="_blank" data-ref="Exodus 24:7">Ex 24:7</a>: Second response after reading (written covenant)</li>
+</ul>
+<p><strong>Blood ceremony:</strong></p>
+<ul>
+<li>Half on altar (God's side) — <a href="https://www.blueletterbible.org/kjv/exo/24/6/s_74006" target="_blank" data-ref="Exodus 24:6">Ex 24:6</a></li>
+<li>Half on people (Israel's side) — <a href="https://www.blueletterbible.org/kjv/exo/24/8/s_74008" target="_blank" data-ref="Exodus 24:8">Ex 24:8</a></li>
+</ul>
+<p>Both parties bound by blood. Covenant costs life.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Informed consent:</strong> Israel heard the full covenant before committing</li>
+<li><strong>Life-and-death commitment:</strong> Blood = life; breaking covenant is fatal</li>
+<li><strong>God binds Himself too:</strong> Altar blood represents God's commitment</li>
+</ol>
+<h3>LDS Connection</h3>
+<p>Jesus explicitly invokes this passage: "This is my blood of the new covenant, which is shed for many" (<a href="https://www.blueletterbible.org/kjv/mrk/14/24/s_971024" target="_blank" data-ref="Mark 14:24">Mark 14:24</a>). The sacrament renews covenant sealed by Christ's blood. We don't sprinkle blood; we partake of symbols that represent it.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 7: They Saw God and Ate (Exodus 24:9-11)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text (KJV)</h3>
+<blockquote>
+<p>"Then went up Moses, and Aaron, Nadab, and Abihu, and seventy of the elders of Israel: And they saw the God of Israel: and there was under his feet as it were a paved work of a sapphire stone, and as it were the body of heaven in his clearness. And upon the nobles of the children of Israel he laid not his hand: also they saw God, and did eat and drink."</p>
+</blockquote>
+<h3>Literary Analysis</h3>
+<p>After the covenant is read and ratified by sacrifice (<a href="https://www.blueletterbible.org/kjv/exo/24/3/" target="_blank">Exodus 24:3-8</a>), Moses, Aaron, Nadab, Abihu, and seventy of the elders of Israel ascend the mountain. What follows is one of the most striking scenes in scripture: <em>"they saw the God of Israel ... and did eat and drink"</em> (<a href="https://www.blueletterbible.org/kjv/exo/24/10/" target="_blank">Exodus 24:10-11</a>).</p>
+<p>Two things are happening at once: a <strong>theophany</strong> and a <strong>covenant meal</strong>.</p>
+<p>In the ancient Near East, a shared meal between covenant partners ratified and embodied the covenant. We see the same pattern when Jacob and Laban cut their covenant and <em>"did eat bread"</em> together (<a href="https://www.blueletterbible.org/kjv/gen/31/46/" target="_blank">Genesis 31:46, 54</a>), and when Abimelech makes covenant with Isaac and <em>"they did eat and drink"</em> before parting in peace (<a href="https://www.blueletterbible.org/kjv/gen/26/30/" target="_blank">Genesis 26:30-31</a>). To eat together is to declare, <em>we are now bound.</em> <a href="https://www.blueletterbible.org/kjv/exo/24/1/s_74001" target="_blank" data-ref="Exodus 24">Exodus 24</a> raises that pattern to its highest possible expression: the people's representatives eat in the very presence of the covenant Lord.</p>
+<p>Seventy elders, plus Moses, Aaron, Nadab, and Abihu, make seventy-four — a representative body standing in for the whole house of Israel.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Communion with God:</strong> covenant creates fellowship; they eat in His presence</li>
+<li><strong>Representative covenant:</strong> the elders stand for the whole house of Israel</li>
+<li><strong>The Lord's feast:</strong> the covenant Lord hosts the meal that seals the bond</li>
+</ol>
+<h3>LDS Connection</h3>
+<p>Latter-day Saints can carefully recognize in this scene a pattern that comes to its fullness in the New Covenant: a covenant ratified by blood (<a href="https://www.blueletterbible.org/kjv/exo/24/8/" target="_blank">Exodus 24:8</a>; cf. <a href="https://www.blueletterbible.org/kjv/mat/26/28/" target="_blank">Matthew 26:28</a>), followed by a covenant meal eaten in the presence of the Lord. When Christ institutes the Lord's Supper, He gathers His covenant representatives, ratifies the new covenant in His own blood, and shares a meal. The sacrament we partake of each Sabbath belongs to that pattern.</p>
+<p><a href="https://www.blueletterbible.org/kjv/exo/24/1/s_74001" target="_blank" data-ref="Exodus 24">Exodus 24</a> does not "establish the sacrament" in any direct sense — that establishment belongs to the upper room. But it does establish the <strong>shape</strong> of covenant communion that the sacrament fulfills: the eaten meal is the seal of the covenant, and the covenant Lord is the host.</p>
+<h4 class="sg-section-heading">Seeing God and Living</h4>
+<p>Readers often stop short here. <a href="https://www.blueletterbible.org/kjv/exo/24/11/s_74011" target="_blank" data-ref="Exodus 24:11">Exodus 24:11</a> says plainly that the elders <em>"saw God, and did eat and drink."</em> A few chapters later, the Lord tells Moses, <em>"Thou canst not see my face: for there shall no man see me, and live"</em> (<a href="https://www.blueletterbible.org/kjv/exo/33/20/" target="_blank">Exodus 33:20</a>). How do we hold these together?</p>
+<p>The Restoration gives a specific lane for this question.</p>
+<p><strong>Joseph Smith Translation.</strong> The JST recasts <a href="https://www.blueletterbible.org/kjv/exo/33/20/s_83020" target="_blank" data-ref="Exodus 33:20">Exodus 33:20</a> in a way that resolves the apparent contradiction:</p>
+<blockquote>
+<p>"And he said unto Moses, Thou canst not see my face at this time, lest mine anger be kindled against thee also and I destroy thee and thy people; for there shall no man among them see me at this time and live, for they are exceeding sinful. And no sinful man hath at any time, neither shall there be any sinful man at any time, that shall see my face and live" (JST <a href="https://www.blueletterbible.org/kjv/exo/33/20/s_83020" target="_blank" data-ref="Exodus 33:20">Exodus 33:20</a>).</p>
+</blockquote>
+<p>Two things change. First, <em>"at this time"</em> — the restriction is linked to Israel's present spiritual condition after the golden calf, not to an unchangeable law of nature. Second, the universal principle is sharpened: it is <em>no sinful man</em> who cannot see God and live, not no man at all.</p>
+<p><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng" target="_blank" data-ref="Moses 1">Moses 1</a>.</strong> <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng" target="_blank" data-ref="Moses 1">Moses 1</a> is the clearest Restoration framing of how mortals can see God at all. Moses <em>"saw God face to face, and he talked with him, and the glory of God was upon Moses; therefore Moses could endure his presence"</em> (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=p2#p2" target="_blank">Moses 1:2</a>). Moses himself explains the mechanism: <em>"my natural eyes could not have beheld; for I should have withered and died in his presence ... I was transfigured before him"</em> (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=p11#p11" target="_blank">Moses 1:11</a>). And the principle is stated outright: <em>"no man can behold all my glory, and afterwards remain in the flesh on the earth"</em> (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=p5#p5" target="_blank">Moses 1:5</a>).</p>
+<p>The Restoration framework, then, is not <em>"the elders did not really see God"</em> or <em>"<a href="https://www.blueletterbible.org/kjv/exo/24/1/s_74001" target="_blank" data-ref="Exodus 24">Exodus 24</a> contradicts <a href="https://www.blueletterbible.org/kjv/exo/33/1/s_83001" target="_blank" data-ref="Exodus 33">Exodus 33</a>."</em> It is that <strong>mortals can see God when they are transfigured or otherwise quickened by His Spirit so as to endure His presence.</strong> So when covenant representatives eat and drink in the presence of the God of Israel, the right Latter-day Saint reading is not that the text is exaggerating, but that they were sustained in His presence long enough to share the covenant meal.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 8: The Angel Who Bears God's Name (Exodus 23:20-23)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text (KJV)</h3>
+<blockquote>
+<p>"Behold, I send an Angel before thee, to keep thee in the way, and to bring thee into the place which I have prepared. Beware of him, and obey his voice, provoke him not; for he will not pardon your transgressions: for my name is in him. But if thou shalt indeed obey his voice, and do all that I speak; then I will be an enemy unto thine enemies, and an adversary unto thine adversaries. For mine Angel shall go before thee." (<a href="https://www.blueletterbible.org/kjv/exo/23/20-23/s_73020" target="_blank" data-ref="Exodus 23:20-23">Exodus 23:20-23</a>)</p>
+</blockquote>
+<h3>Literary Analysis</h3>
+<p>This passage stands at the climax of the Covenant Code, immediately before the covenant ratification in <a href="https://www.blueletterbible.org/kjv/exo/24/1/s_74001" target="_blank" data-ref="Exodus 24">Exodus 24</a>. After dozens of case laws (<em>mishpatim</em>), God's final instruction shifts from legislation to revelation: He will send a divine figure to guide Israel.</p>
+<p>The language is extraordinary. This is not an ordinary <em>malʾakh</em> (messenger). Three details set this Angel apart:</p>
+<ul>
+<li><strong>"My name is in him"</strong> — He bears the divine Name</li>
+<li><strong>"He will not pardon your transgressions"</strong> — He exercises divine judicial authority</li>
+<li><strong>"Obey his voice"</strong> — the same language used for obeying God Himself</li>
+</ul>
+<h3>Theological Significance</h3>
+<p>The Angel who bears God's name occupies a unique position in Israelite theology. He is sent by the Lord, yet carries the Lord's name and authority. The passage does not prove every Christological conclusion by itself, but it clearly presents a messenger whose delegated presence is far more than ordinary.</p>
+<p>This passage also foregrounds a side of Christ that modern readers sometimes resist: the One who answers the demands of justice, not only the One who comforts. Mercy and justice are not two different beings. They are two faces of the one Mediator who can extend mercy precisely <em>because</em> He has answered justice.</p>
+<h3>LDS Connection</h3>
+<p>Latter-day Saint readers often, and reasonably, recognize in this Angel the premortal Christ — Jehovah Himself — leading covenant Israel through the wilderness. The Restoration anchor is direct: <em>"Behold, I am he that gave the law, and I am he who covenanted with my people Israel"</em> (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/15?lang=eng&id=p5#p5" target="_blank">3 Nephi 15:5</a>).</p>
+<p>At the same time, the passage should be handled carefully. The Hebrew word <em>malʾakh</em> can describe created angelic messengers elsewhere, so the Christ-identification rests on the canon as a whole, not on this line alone.</p>
+<p>What <a href="https://www.blueletterbible.org/kjv/exo/23/1/s_73001" target="_blank" data-ref="Exodus 23">Exodus 23</a> shows us, then, is something like a <strong>veiled theophany</strong>. The Lord's name is in the Angel; His authority moves with Israel; His justice is real. But the encounter is mediated — close enough to lead the people, measured enough that they are not consumed.</p>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 4: WEEK 18: WORD STUDIES -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">4. Week 18: Word Studies</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Word Study 1: מִשְׁפָּט (Mishpat) — "Judgment, Ordinance, Case Law"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> שׁ-פ-ט (<em>Sh-P-T</em>, to judge)</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/21/1/s_71001" target="_blank" data-ref="Exodus 21:1">Exodus 21:1</a> — "Now these are the judgments (mishpatim) which thou shalt set before them"</p>
+<h3>Meaning</h3>
+<p><em>Mishpat</em> encompasses judgment, justice, legal decision, and ordinance. The plural <em>mishpatim</em> refers to the entire Covenant Code (<a href="https://www.blueletterbible.org/kjv/exo/21/1/s_71001" target="_blank" data-ref="Exodus 21">Exodus 21-23</a>)—specific legal rulings that apply broad principles.</p>
+<h3>Usage in Exodus</h3>
+<table class="info-table">
+<tr><th>Verse</th><th>Context</th></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/21/1/s_71001" target="_blank" data-ref="Exodus 21:1">Ex 21:1</a></td><td>"These are the mishpatim" — introduces the Covenant Code</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/21/31/s_71031" target="_blank" data-ref="Exodus 21:31">Ex 21:31</a></td><td>"According to this mishpat" — case law ruling</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/23/6/s_73006" target="_blank" data-ref="Exodus 23:6">Ex 23:6</a></td><td>"Thou shalt not wrest the mishpat of thy poor" — don't pervert justice</td></tr>
+</table>
+<h3>Theological Significance</h3>
+<p><em>Mishpatim</em> aren't arbitrary rules—they're divine justice applied to specific cases. Each ruling reveals God's character: His concern for order, fairness, protection of the weak, and proportionate consequences.</p>
+<p><strong>Related:</strong> The word <em>shofet</em> (judge) comes from the same root. Judges execute mishpatim.</p>
+<h3>LDS Application</h3>
+<p>Church discipline follows similar pattern: general principles (standards) applied to specific cases (disciplinary councils). The goal is always redemption, just as mishpatim aimed at restoring covenant order.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 2: גֵּר (Ger) — "Stranger, Sojourner, Foreigner"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h1481/kjv/wlc/0-1/" target="_blank" data-lexicon="to sojourn, abide, dwell in, dwell with, remain, inhabit, be a stranger, be continuing, surely" data-strongs="H1481" data-translit="gûr" data-original="גּוּר" data-lang="hebrew" data-verse="">ג-ו-ר</a> (<em>G-W-R</em>, to sojourn)</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/22/21/s_72021" target="_blank" data-ref="Exodus 22:21">Exodus 22:21; 23:9</a> — "Thou shalt neither vex a stranger, nor oppress him"</p>
+<h3>Meaning</h3>
+<p>A <em>ger</em> is a resident alien—someone living among Israelites but not ethnically Israelite. They were vulnerable: no land inheritance, no clan protection, often economically dependent.</p>
+<h3>Frequency</h3>
+<p>The <em>ger</em> is mentioned over 90 times in Torah, often with commands to treat them justly. No other group receives such repeated attention.</p>
+<h3>Usage in Exodus</h3>
+<table class="info-table">
+<tr><th>Verse</th><th>Command</th></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/22/21/s_72021" target="_blank" data-ref="Exodus 22:21">Ex 22:21</a></td><td>Don't vex or oppress the stranger</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/23/9/s_73009" target="_blank" data-ref="Exodus 23:9">Ex 23:9</a></td><td>Don't oppress the stranger; you know their heart</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/23/12/s_73012" target="_blank" data-ref="Exodus 23:12">Ex 23:12</a></td><td>Even the stranger gets Sabbath rest</td></tr>
+</table>
+<h3>Theological Basis</h3>
+<p>"For ye were strangers in the land of Egypt" (<a href="https://www.blueletterbible.org/kjv/exo/22/21/s_72021" target="_blank" data-ref="Exodus 22:21">Ex 22:21; 23:9</a>). Israel's identity as former outsiders shapes their ethics. They must remember vulnerability and extend protection.</p>
+<h3>LDS Application</h3>
+<p>The covenant ethic of <em>ger</em> reaches well beyond formal procedures or institutional questions like Church discipline — though it speaks there too. Its first claim is on the way we treat one another in ordinary life. Israel was commanded, <em>"The stranger that dwelleth with you shall be unto you as one born among you, and thou shalt love him as thyself"</em> (<a href="https://www.blueletterbible.org/kjv/lev/19/34/" target="_blank">Leviticus 19:34</a>; cf. <a href="https://www.blueletterbible.org/kjv/exo/22/21/" target="_blank">Exodus 22:21</a>; <a href="https://www.blueletterbible.org/kjv/exo/23/9/" target="_blank">Exodus 23:9</a>; <a href="https://www.blueletterbible.org/kjv/deu/10/18/" target="_blank">Deuteronomy 10:18-19</a>). The reasoning is moral memory: <em>you know what it felt like to be the outsider; do not become the kind of people who do that to others.</em></p>
+<p>In practice, this means asking honest questions about how we treat the new convert, the returning member, the visitor in the foyer, the family that does not quite fit the cultural pattern of the ward, the neighbor whose accent or background marks them out, and the friend who is hurting in a way our circle does not know how to receive. <em>Ger</em> love is unspectacular: it makes room, it learns names, it does not require people to translate themselves before they are welcome.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 3: נֶפֶשׁ תַּחַת נֶפֶשׁ (Nephesh Tachat Nephesh) — "Life for Life"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Words:</strong> <a href="https://www.blueletterbible.org/lexicon/h5314/kjv/wlc/0-1/" target="_blank" data-lexicon="(Niphal) to take breath, refresh oneself" data-strongs="H5314" data-translit="nāp̄aš" data-original="נָפַשׁ" data-lang="hebrew" data-verse="">נֶפֶשׁ</a> (<em>nephesh</em>, life/soul) + <a href="https://www.blueletterbible.org/lexicon/h8478/kjv/wlc/0-1/" target="_blank" data-lexicon="the under part, beneath, instead of, as, for, for the sake of, flat, unto, where, whereas masculine noun the under pa..." data-strongs="H8478" data-translit="taḥaṯ" data-original="תַּחַת" data-lang="hebrew" data-verse="">תַּחַת</a> (<em>tachat</em>, in place of)</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/21/23/s_71023" target="_blank" data-ref="Exodus 21:23">Exodus 21:23</a> — "Life for life, eye for eye, tooth for tooth"</p>
+<h3>Meaning</h3>
+<p><em>Nephesh tachat nephesh</em> ("life in place of life") expresses the lex talionis principle: proportionate justice. The penalty corresponds exactly to the offense.</p>
+<h3>Hebrew Details</h3>
+<ul>
+<li><strong>Nephesh:</strong> Often translated "soul," but here means life-force, the living being</li>
+<li><strong>Tachat:</strong> "Under, in place of, instead of" — substitutionary language</li>
+</ul>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Proportionality:</strong> Prevents escalating vengeance</li>
+<li><strong>Human equality:</strong> Every life/eye/tooth has equal value regardless of social status</li>
+<li><strong>Substitutionary principle:</strong> Something given "in place of" another</li>
+</ol>
+<h3>Christological Connection</h3>
+<p>The substitutionary language (<em>tachat</em> — "in place of") anticipates Christ:</p>
+<blockquote>
+<p>"Surely he hath borne our griefs... he was wounded for our transgressions" (<a href="https://www.blueletterbible.org/kjv/isa/53/4-5/s_732004" target="_blank" data-ref="Isaiah 53:4-5">Isa 53:4-5</a>).</p>
+</blockquote>
+<p>Christ gives His life <em>tachat</em> (in place of) ours. Lex talionis finds its ultimate expression in the Atonement.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 4: דָּם בְּרִית (Dam Berit) — "Blood of the Covenant"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Words:</strong> <a href="https://www.blueletterbible.org/lexicon/h1818/kjv/wlc/0-1/" target="_blank" data-lexicon="blood of wine (fig.)" data-strongs="H1818" data-translit="dām" data-original="דָּם" data-lang="hebrew" data-verse="">דָּם</a> (<em>dam</em>, blood) + <a href="https://www.blueletterbible.org/lexicon/h1285/kjv/wlc/0-1/" target="_blank" data-lexicon="covenant, alliance, pledge" data-strongs="H1285" data-translit="bᵊrîṯ" data-original="בְּרִית" data-lang="hebrew" data-verse="">בְּרִית</a> (<em>berit</em>, covenant)</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/24/8/s_74008" target="_blank" data-ref="Exodus 24:8">Exodus 24:8</a> — "Behold the blood of the covenant"</p>
+<h3>Meaning</h3>
+<p><em>Dam berit</em> refers to blood that seals and ratifies covenant. Blood represents life (<a href="https://www.blueletterbible.org/kjv/lev/17/11/s_107011" target="_blank" data-ref="Leviticus 17:11">Lev 17:11</a>); covenant sealed with blood is life-and-death commitment.</p>
+<h3>Ceremony Structure</h3>
+<ol>
+<li><strong>Blood on altar</strong> (God's side) — <a href="https://www.blueletterbible.org/kjv/exo/24/6/s_74006" target="_blank" data-ref="Exodus 24:6">Ex 24:6</a></li>
+<li><strong>Blood on people</strong> (Israel's side) — <a href="https://www.blueletterbible.org/kjv/exo/24/8/s_74008" target="_blank" data-ref="Exodus 24:8">Ex 24:8</a></li>
+<li><strong>Binding statement:</strong> "Behold the blood of the covenant"</li>
+</ol>
+<h3>New Testament Fulfillment</h3>
+<p>Jesus uses nearly identical language:</p>
+<blockquote>
+<p>"This is my blood of the new covenant, which is shed for many" (<a href="https://www.blueletterbible.org/kjv/mrk/14/24/s_971024" target="_blank" data-ref="Mark 14:24">Mark 14:24</a>).</p>
+<p>"This cup is the new covenant in my blood" (<a href="https://www.blueletterbible.org/kjv/luk/22/20/s_995020" target="_blank" data-ref="Luke 22:20">Luke 22:20</a>).</p>
+</blockquote>
+<p><a href="https://www.blueletterbible.org/kjv/heb/9/18-22/s_1142018" target="_blank" data-ref="Hebrews 9:18-22">Hebrews 9:18-22</a> explicitly connects Sinai's blood ceremony to Christ's sacrifice.</p>
+<h3>LDS Application</h3>
+<p>The sacrament renews our covenant relationship sealed by Christ's blood. Though we don't sprinkle blood, we partake of symbols representing His life given for us. The sacrament prayer references His "blood, which was shed for them" (Moro 5:2).</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 5: סֵפֶר הַבְּרִית (Sepher HaBberit) — "Book of the Covenant"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Words:</strong> <a href="https://www.blueletterbible.org/lexicon/h5612/kjv/wlc/0-1/" target="_blank" data-lexicon="feminine noun book masculine noun missive, document, writing, book missive letter (of instruction), written order, co..." data-strongs="H5612" data-translit="sēp̄er" data-original="סֵפֶר" data-lang="hebrew" data-verse="">סֵפֶר</a> (<em>sepher</em>, book/scroll) + <a href="https://www.blueletterbible.org/lexicon/h1285/kjv/wlc/0-1/" target="_blank" data-lexicon="covenant, alliance, pledge" data-strongs="H1285" data-translit="bᵊrîṯ" data-original="בְּרִית" data-lang="hebrew" data-verse="">בְּרִית</a> (<em>berit</em>, covenant)</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/24/7/s_74007" target="_blank" data-ref="Exodus 24:7">Exodus 24:7</a> — "He took the book of the covenant, and read in the audience of the people"</p>
+<h3>Meaning</h3>
+<p><em>Sepher habberit</em> refers to the written covenant document. Moses wrote down God's words (<a href="https://www.blueletterbible.org/kjv/exo/24/4/s_74004" target="_blank" data-ref="Exodus 24:4">Ex 24:4</a>), then read them aloud before the blood ceremony.</p>
+<h3>Contents</h3>
+<p>Likely includes <a href="https://www.blueletterbible.org/kjv/exo/20/1/s_70001" target="_blank" data-ref="Exodus 20">Exodus 20-23</a>: the Ten Commandments plus the Covenant Code (mishpatim).</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Written permanence:</strong> Oral agreements can be disputed; written covenants endure</li>
+<li><strong>Public reading:</strong> All Israel heard the terms before committing</li>
+<li><strong>Informed consent:</strong> Covenant required understanding, not blind submission</li>
+</ol>
+<h3>LDS Application</h3>
+<p>We have canonized scripture—written records of God's covenants. Temple covenants are specific, clearly stated, and require informed commitment. We don't covenant in ignorance; we hear and accept.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 6: עֶבֶד (<em>Eved</em>) — "Servant, Slave"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h5647/kjv/wlc/0-1/" target="_blank" data-lexicon="to work, serve(Qal)to labour, work, do workto work for another, serve another by labourto serve as subjectsto serve (..." data-strongs="H5647" data-translit="ʿāḇaḏ" data-original="עָבַד" data-lang="hebrew" data-verse="">ע-ב-ד</a> (<em>Ayin-Bet-Dalet</em>, to serve, to work)</p>
+<p><strong>BLB:</strong> H5650</p>
+<p><strong>Key Verse:</strong> <a href="https://www.blueletterbible.org/kjv/exo/21/2/s_71002" target="_blank" data-ref="Exodus 21:2">Exodus 21:2</a> — "If thou buy an Hebrew servant [<em>eved</em>], six years he shall serve: and in the seventh he shall go out free for nothing."</p>
+<h3>Meaning</h3>
+<p><em>Eved</em> means servant, slave, or worker. It is the first term in the Covenant Code — the entire body of case law opens with <em>eved</em> law. This is not accidental: Israel, just freed from <em>eved</em> status in Egypt, must now decide what kind of masters they will be.</p>
+<h3>Usage in Exodus 21</h3>
+<table class="info-table">
+<tr><th>Verse</th><th>Context</th></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/21/2/s_71002" target="_blank" data-ref="Exodus 21:2">Ex 21:2</a></td><td>Hebrew <em>eved</em> freed in the seventh year</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/21/5-6/s_71005" target="_blank" data-ref="Exodus 21:5-6">Ex 21:5-6</a></td><td><em>Eved</em> who loves his master and chooses to stay permanently — ear pierced at the doorpost</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/21/20-21/s_71020" target="_blank" data-ref="Exodus 21:20-21">Ex 21:20-21</a></td><td>Master held accountable for mistreatment of <em>eved</em></td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/21/26-27/s_71026" target="_blank" data-ref="Exodus 21:26-27">Ex 21:26-27</a></td><td><em>Eved</em> injured by master goes free — loss of an eye or tooth earns liberation</td></tr>
+</table>
+<h3>Theological and Christological Significance</h3>
+<p>The laws plant seeds of liberation within a system that is not yet ready for abolition. A six-year limit, the right to leave, protection from injury — these are revolutionary within the ancient Near East context, where slaves had no such protections.</p>
+<p>But modern ears hear "servitude" almost exclusively as exploitation, and that hearing is not wrong about much of human history. The Hebrew term <em>ʿeved</em> — and the Greek <em>doulos</em> / <em>diakonos</em> in the New Testament — carries a fuller range. The same word that names a bondservant also names Moses, the <em>ʿeved YHWH</em> — "servant of the Lord" (<a href="https://www.blueletterbible.org/kjv/deu/34/5/" target="_blank">Deuteronomy 34:5</a>). To be God's servant is the highest of titles, not the lowest.</p>
+<p>Scripture distinguishes between two very different things: degrading social exploitation, which the Torah constrains and ultimately moves to dismantle, and <strong>covenant service</strong> — the willing, dignified offering of one's life to God and to others in His name. Christ Himself draws the line in unmistakable language: <em>"Whosoever will be great among you, let him be your minister; And whosoever will be chief among you, let him be your servant"</em> (<a href="https://www.blueletterbible.org/kjv/mat/20/26/" target="_blank">Matthew 20:26-28</a>; cf. <a href="https://www.blueletterbible.org/kjv/mat/23/11/" target="_blank">Matthew 23:11</a>). King Benjamin gives the same teaching from the other end of the Book of Mormon: <em>"When ye are in the service of your fellow beings ye are only in the service of your God"</em> (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/2?lang=eng&id=p17#p17" target="_blank">Mosiah 2:17</a>).</p>
+<p>So when the Sinai law speaks of servitude, the redemptive arc of scripture is already pulling against exploitation and toward something different — humility, care, and the kind of greatness that bends low to lift others.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 7: The Triad of Vulnerability — אַלְמָנָה (<em>Almanah</em>) and יָתוֹם (<em>Yathom</em>)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Widow:</strong> <a href="https://www.blueletterbible.org/lexicon/h490/kjv/wlc/0-1/" target="_blank" data-lexicon="widow" data-strongs="H490" data-translit="almānâ" data-original="אַלְמָנָה" data-lang="hebrew" data-verse="">אַלְמָנָה</a> (<em>almanah</em>) | BLB H490</p>
+<p><strong>Orphan:</strong> <a href="https://www.blueletterbible.org/lexicon/h3495/kjv/wlc/0-1/" target="_blank" data-lexicon="Ithmah = &quot;orphan&quot;a Moabite, one of David&#x27;s mighty warriors" data-strongs="H3495" data-translit="yiṯmâ" data-original="יָתוֹם" data-lang="hebrew" data-verse="">יָתוֹם</a> (<em>yathom</em>, "fatherless") | BLB H3490</p>
+<p><strong>Key Verse:</strong> <a href="https://www.blueletterbible.org/kjv/exo/22/22/s_72022" target="_blank" data-ref="Exodus 22:22">Exodus 22:22</a> — "Ye shall not afflict any widow [<em>almanah</em>], or fatherless child [<em>yathom</em>]."</p>
+<h3>The Triad</h3>
+<p><em>Almanah</em>, <em>yathom</em>, and <em>ger</em> (stranger) appear together throughout the Torah, the prophets, and the Psalms (see <a href="https://www.blueletterbible.org/kjv/isa/1/17/s_680017" target="_blank" data-ref="Isaiah 1:17">Isaiah 1:17</a>; <a href="https://www.blueletterbible.org/kjv/jer/22/3/s_767003" target="_blank" data-ref="Jeremiah 22:3">Jeremiah 22:3</a>; <a href="https://www.blueletterbible.org/kjv/psa/68/5/s_546005" target="_blank" data-ref="Psalm 68:5">Psalm 68:5</a>; <a href="https://www.blueletterbible.org/kjv/deu/10/18/s_163018" target="_blank" data-ref="Deuteronomy 10:18">Deuteronomy 10:18</a>). Together they form the classic triad of vulnerability that defines the moral character of a covenant community. How Israel treats these three groups reveals whether the covenant is alive or dead.</p>
+<h3>Why These Three?</h3>
+<p>Their vulnerability was structural, not incidental:</p>
+<ul>
+<li><strong>Widows</strong> had no husband's legal protection in a patriarchal society</li>
+<li><strong>Orphans</strong> had no father's economic provision or social standing</li>
+<li><strong>Strangers</strong> had no clan membership or land inheritance</li>
+</ul>
+<p>Ancient Israelite society had no safety net, no welfare state, no insurance. God's explicit command to protect these three was not sentiment — it was a legal obligation built into the fabric of covenant life.</p>
+<h3>The Threat</h3>
+<blockquote>
+<p>"If thou afflict them in any wise, and they cry at all unto me, I will surely hear their cry; And my wrath shall wax hot, and I will kill you with the sword; and your wives shall be widows, and your children fatherless." (<a href="https://www.blueletterbible.org/kjv/exo/22/23-24/s_72023" target="_blank" data-ref="Exodus 22:23-24">Exodus 22:23-24</a>)</p>
+</blockquote>
+<p>The punishment mirrors the crime: those who create widows and orphans through oppression will themselves become widows and orphans. God personally guarantees the appeal court for those who have no one else to advocate for them.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study Summary Table</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Hebrew</th><th>Transliteration</th><th>Root/Meaning</th><th>Key Verse</th></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h4941/kjv/wlc/0-1/" target="_blank" data-lexicon="judgment, justice, legal decision" data-strongs="H4941" data-translit="mishpat" data-original="מִשְׁפָּט" data-lang="hebrew" data-verse="Isaiah 5:7">מִשְׁפָּט</a></td><td>Mishpat</td><td>Judgment, ordinance</td><td><a href="https://www.blueletterbible.org/kjv/exo/21/1/s_71001" target="_blank" data-ref="Exodus 21:1">Ex 21:1</a></td></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h1615/kjv/wlc/0-1/" target="_blank" data-lexicon="chalk, lime" data-strongs="H1615" data-translit="gir" data-original="גִּר" data-lang="hebrew" data-verse="">גֵּר</a></td><td>Ger</td><td>Stranger, sojourner</td><td><a href="https://www.blueletterbible.org/kjv/exo/22/21/s_72021" target="_blank" data-ref="Exodus 22:21">Ex 22:21</a></td></tr>
+<tr><td>נֶפֶשׁ תַּחַת נֶפֶשׁ</td><td>Nephesh tachat nephesh</td><td>Life for life</td><td><a href="https://www.blueletterbible.org/kjv/exo/21/23/s_71023" target="_blank" data-ref="Exodus 21:23">Ex 21:23</a></td></tr>
+<tr><td>דָּם בְּרִית</td><td>Dam berit</td><td>Blood of the covenant</td><td><a href="https://www.blueletterbible.org/kjv/exo/24/8/s_74008" target="_blank" data-ref="Exodus 24:8">Ex 24:8</a></td></tr>
+<tr><td>סֵפֶר הַבְּרִית</td><td>Sepher habberit</td><td>Book of the covenant</td><td><a href="https://www.blueletterbible.org/kjv/exo/24/7/s_74007" target="_blank" data-ref="Exodus 24:7">Ex 24:7</a></td></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h5651/kjv/wlc/0-1/" target="_blank" data-lexicon="Ebed = &quot;servant&quot;father of Gaal in the time of the judgesson of Jonathan and one of the sons of Adin who returned from..." data-strongs="H5651" data-translit="ʿeḇeḏ" data-original="עֶבֶד" data-lang="hebrew" data-verse="">עֶבֶד</a></td><td>Eved</td><td>Servant, slave</td><td><a href="https://www.blueletterbible.org/kjv/exo/21/2/s_71002" target="_blank" data-ref="Exodus 21:2">Ex 21:2</a></td></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h490/kjv/wlc/0-1/" target="_blank" data-lexicon="widow" data-strongs="H490" data-translit="almānâ" data-original="אַלְמָנָה" data-lang="hebrew" data-verse="">אַלְמָנָה</a></td><td>Almanah</td><td>Widow</td><td><a href="https://www.blueletterbible.org/kjv/exo/22/22/s_72022" target="_blank" data-ref="Exodus 22:22">Ex 22:22</a></td></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h3495/kjv/wlc/0-1/" target="_blank" data-lexicon="Ithmah = &quot;orphan&quot;a Moabite, one of David&#x27;s mighty warriors" data-strongs="H3495" data-translit="yiṯmâ" data-original="יָתוֹם" data-lang="hebrew" data-verse="">יָתוֹם</a></td><td>Yathom</td><td>Orphan, fatherless</td><td><a href="https://www.blueletterbible.org/kjv/exo/22/22/s_72022" target="_blank" data-ref="Exodus 22:22">Ex 22:22</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 5: WEEK 18: JEWISH PERSPECTIVE -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">5. Week 18: Jewish Perspective</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Introduction</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The <em>mishpatim</em> (ordinances) of <a href="https://www.blueletterbible.org/kjv/exo/21/1/s_71001" target="_blank" data-ref="Exodus 21">Exodus 21-23</a> have been central to Jewish legal development for millennia. Rabbinic tradition developed these case laws into comprehensive systems of justice, ethics, and social responsibility. This section explores how Jewish tradition has understood and applied these ancient statutes.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>1. Written Torah and Oral Torah</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Two Torahs</h3>
+<p><strong>Jewish Tradition Teaches:</strong></p>
+<ul>
+<li><strong>Written Torah:</strong> The five books of Moses (Torah she-bichtav)</li>
+<li><strong>Oral Torah:</strong> Rabbinic interpretation passed orally, eventually written as Mishnah and Talmud (Torah she-be'al peh)</li>
+</ul>
+<h3>Exodus 21-23 as Paradigm</h3>
+<p>The Covenant Code doesn't cover every possible situation. Rabbinic tradition understands these laws as <strong>paradigms</strong>—principles to be applied to new cases through interpretation.</p>
+<p><strong>Example:</strong> "If a man steal an ox or a sheep..." (<a href="https://www.blueletterbible.org/kjv/exo/22/1/s_72001" target="_blank" data-ref="Exodus 22:1">Ex 22:1</a>) becomes the basis for all property law. What about stealing a camel? A coat? Money? Rabbis extrapolate principles.</p>
+<h3>Authoritative Interpretation</h3>
+<p>The Mishnah (codified ~200 CE) and Talmud (completed ~500 CE) systematically apply Torah law to countless scenarios, creating Jewish halakha (law).</p>
+<h3>LDS Parallel</h3>
+<p>We have canonized scripture AND living prophets who apply timeless principles to contemporary issues. The Handbook of Instructions applies gospel principles to Church administration, just as Talmud applies Torah to daily life.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>2. "Eye for Eye" — Monetary Compensation</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Rabbinic Interpretation</h3>
+<p>The Talmud (Bava Kamma 83b-84a) extensively discusses lex talionis and concludes that "eye for eye" means <strong>monetary compensation</strong>, not literal mutilation.</p>
+<p><strong>Arguments Given:</strong></p>
+<ol>
+<li><strong>Practical impossibility:</strong> How do you exact an eye without killing? What if the injurer is already blind?</li>
+<li><strong>Textual evidence:</strong> <a href="https://www.blueletterbible.org/kjv/exo/21/30/s_71030" target="_blank" data-ref="Exodus 21:30">Exodus 21:30</a> allows ransom payment for capital offense; if ransom works for life, why not for eye?</li>
+<li><strong>Principle of equality:</strong> A small eye isn't equal to a large eye; only monetary value equalizes</li>
+</ol>
+<h3>The Famous Saying</h3>
+<p><strong>Rabbi Shimon ben Yochai</strong> (Mekhilta): The verse establishes that the injurer must pay the monetary value equivalent to the injury.</p>
+<h3>Why Use This Language?</h3>
+<p>Rabbis suggest the Torah uses vivid language to emphasize the seriousness of injury. "You deserve to lose your eye—but you'll pay its value instead."</p>
+<h3>LDS Resonance</h3>
+<p>This interpretive flexibility reminds us that scripture requires wisdom to apply. We don't literalize every command (we don't build arks or sacrifice lambs) but seek underlying principles. The Spirit guides application.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>3. Remembering Egypt</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Foundational Ethics</h3>
+<p>Two verses invoke Egypt as ethical foundation:</p>
+<blockquote>
+<p>"Thou shalt neither vex a stranger, nor oppress him: <strong>for ye were strangers in the land of Egypt</strong>" (<a href="https://www.blueletterbible.org/kjv/exo/22/21/s_72021" target="_blank" data-ref="Exodus 22:21">Ex 22:21</a>).</p>
+</blockquote>
+<blockquote>
+<p>"Thou shalt not oppress a stranger: <strong>for ye know the heart of a stranger</strong>, seeing ye were strangers in the land of Egypt" (<a href="https://www.blueletterbible.org/kjv/exo/23/9/s_73009" target="_blank" data-ref="Exodus 23:9">Ex 23:9</a>).</p>
+</blockquote>
+<h3>Memory as Moral Teacher</h3>
+<p>Jewish tradition emphasizes that remembering suffering should increase compassion, not harden hearts.</p>
+<p><strong>Passover Haggadah:</strong></p>
+<blockquote>
+<p>"In every generation, each person should see themselves as if they personally went out of Egypt."</p>
+</blockquote>
+<p>The Exodus isn't just ancestral history—it's personal identity. We were slaves; therefore, we must not enslave.</p>
+<h3>"You Know the Heart"</h3>
+<p><a href="https://www.blueletterbible.org/kjv/exo/23/9/s_73009" target="_blank" data-ref="Exodus 23:9">Exodus 23:9</a> adds a psychological dimension: "ye know the heart (<em>nephesh</em>) of a stranger." Having been outsiders, Israelites understand what vulnerability feels like. Empathy should flow from experience.</p>
+<h3>The Thirty-Six Commandments</h3>
+<p>The rabbinic tradition counted precisely how many times the Torah commands protection of the stranger. Rabbi Eliezer the Great taught: "For what reason did the Torah issue warnings in thirty-six places — and some say forty-six places — with regard to causing any distress to a convert?" (Bava Metzia 59b). No other category of commandment receives this level of repetition in the Torah. The sheer count reveals how seriously the rabbis understood God's concern for the vulnerable outsider.</p>
+<p>Rabbi Natan, interpreting <a href="https://www.blueletterbible.org/kjv/exo/22/20/s_72020" target="_blank" data-ref="Exodus 22:20">Exodus 22:20</a> ("for ye were strangers in the land of Egypt"), derives a principle of moral humility: "A defect that is in you, do not mention it in another" (Bava Metzia 59b). Israel's past as slaves is not a source of shame to hide but a responsibility to remember — and the specific responsibility it creates is humility toward those who now occupy the outsider position Israel once held.</p>
+<h3>LDS Application</h3>
+<p>Our trials should enlarge our compassion, not embitter us. Converts remember what it felt like to be searching. Those who have suffered should "bear one another's burdens" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng&id=p8#p8" target="_blank" data-ref="Mosiah 18:8">Mosiah 18:8</a>). Memory of struggle becomes foundation for ministry.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>4. The Covenant Ceremony</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>"Na'aseh v'Nishma" — "We Will Do and We Will Hear"</h3>
+<p>When Israel responded to the covenant, they said (<a href="https://www.blueletterbible.org/kjv/exo/24/7/s_74007" target="_blank" data-ref="Exodus 24:7">Ex 24:7</a>):</p>
+<blockquote>
+<p>"All that the LORD hath said will we do, and be obedient."</p>
+</blockquote>
+<p>In Hebrew: "na'aseh v'nishma" — literally "we will do and we will hear."</p>
+<h3>Rabbinic Praise</h3>
+<p>The Talmud (Shabbat 88a) celebrates this response. Israel committed to DO before fully HEARING (understanding). This was considered supreme faith.</p>
+<p><strong>The story:</strong> When Israel said "na'aseh v'nishma," angels descended and crowned each Israelite twice—one crown for "we will do," one for "we will hear."</p>
+<h3>Meaning</h3>
+<p>Action precedes understanding. We don't wait until we comprehend everything before obeying. Obedience itself becomes teacher.</p>
+<h3>LDS Parallel</h3>
+<p>Baptism at eight; temple covenants before full comprehension; missionary service before expertise. We commit, then learn. Nephi's "I will go and do" (1 Ne 3:7) echoes this pattern.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>5. The Seventy Elders</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Who Were They?</h3>
+<p><a href="https://www.blueletterbible.org/kjv/exo/24/9-11/s_74009" target="_blank" data-ref="Exodus 24:9-11">Exodus 24:9-11</a> records that Moses, Aaron, Nadab, Abihu, and seventy elders ascended Sinai, saw God, and ate in His presence.</p>
+<h3>Significance of Seventy</h3>
+<p>The number seventy appears repeatedly:</p>
+<ul>
+<li>70 descendants of Jacob entered Egypt (<a href="https://www.blueletterbible.org/kjv/gen/46/27/s_46027" target="_blank" data-ref="Genesis 46:27">Gen 46:27</a>)</li>
+<li>70 elders appointed to help Moses (<a href="https://www.blueletterbible.org/kjv/num/11/16-17/s_128016" target="_blank" data-ref="Numbers 11:16-17">Num 11:16-17</a>)</li>
+<li>70 members of Sanhedrin (later tradition)</li>
+</ul>
+<p><strong>Symbolic meaning:</strong> Seventy represents completeness or totality—all Israel, through representatives, encountered God.</p>
+<h3>"They Saw God"</h3>
+<p>Jewish commentators grappled with this text. How could they see God and live?</p>
+<p><strong>Rashi (11th century):</strong> They gazed at God presumptuously and deserved punishment (Nadab and Abihu later die, <a href="https://www.blueletterbible.org/kjv/lev/10/1/s_100001" target="_blank" data-ref="Leviticus 10">Lev 10</a>). But God delayed judgment so as not to disturb the covenant ceremony's joy.</p>
+<p><strong>Other views:</strong> They saw a manifestation—God's glory, the sapphire pavement—but not His essence.</p>
+<h3>LDS Perspective</h3>
+<p>We understand that God can reveal Himself in degrees. Moses later saw God "face to face" (<a href="https://www.blueletterbible.org/kjv/exo/33/11/s_83011" target="_blank" data-ref="Exodus 33:11">Ex 33:11</a>) yet was also told "thou canst not see my face" and live (<a href="https://www.blueletterbible.org/kjv/exo/33/20/s_83020" target="_blank" data-ref="Exodus 33:20">Ex 33:20</a>). Different encounters reveal different dimensions.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>6. Blood Ritual</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>ANE Context</h3>
+<p>Blood rituals were common in ancient Near Eastern treaties. Blood represented life (the seat of life-force). Sealing covenant with blood meant: "May my blood be shed if I break this covenant."</p>
+<h3>Divided Blood</h3>
+<p>Moses divided the blood:</p>
+<ul>
+<li>Half on altar (representing God)</li>
+<li>Half on people (representing Israel)</li>
+</ul>
+<p>Both parties are bound. Covenant is bilateral.</p>
+<h3>Rabbinic Commentary</h3>
+<p><strong>Ibn Ezra (12th century):</strong> The blood on the altar ascended to God; the blood on people marked them as consecrated. Both were now bound together.</p>
+<h3>Covenant Language</h3>
+<p>The phrase "behold the blood of the covenant" (<a href="https://www.blueletterbible.org/kjv/exo/24/8/s_74008" target="_blank" data-ref="Exodus 24:8">Ex 24:8</a>) became paradigmatic. Jesus' words at the Last Supper directly echo this passage.</p>
+<h3>LDS Application</h3>
+<p>The sacrament is our regular covenant renewal. We don't use blood, but we partake of symbols representing Christ's blood—the blood that seals the new and everlasting covenant.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>7. "The Torah Is Not in Heaven" (<em>Lo Bashamayim Hi</em>)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>A famous Talmudic story (<em>Bava Metzia</em> 59b) draws on <a href="https://www.blueletterbible.org/kjv/deu/30/12/" target="_blank">Deuteronomy 30:12</a> — <em>"It is not in heaven, that thou shouldest say, Who shall go up for us to heaven, and bring it unto us, that we may hear it, and do it?"</em> — to make a point about how Torah is interpreted within the covenant community. In the story, even a heavenly voice does not overrule the consensus of the rabbis on a question of law, and a later sage hears the Lord respond with something close to delight: <em>"My children have prevailed over Me, My children have prevailed over Me."</em></p>
+<p>This story may cause a Latter-day Saint audience to pause. A community that overrules God, and God is happy about it? But if we look carefully, there is something genuinely beautiful here: God rejoices when His covenant people grow into wisdom, exercise agency well, and learn to apply His word with care. That is the bittersweet goal of every righteous parent — to see their children grow wise enough to carry the work forward. It is a teaching worth preserving.</p>
+<h3>Where the Restoration Draws a Different Line</h3>
+<p>The tension is not with the story itself, but with how far some readings push it. This passage is sometimes taken — even within Jewish tradition, and certainly in popular retellings — as if revelation effectively <em>ended</em> at Sinai, leaving human interpretation as the only legitimate channel afterward. That is where Latter-day Saints must be clear: the heavens are not closed. <em>"We believe all that God has revealed, all that He does now reveal, and we believe that He will yet reveal many great and important things pertaining to the Kingdom of God"</em> (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/a-of-f/1?lang=eng&id=p9#p9" target="_blank">Articles of Faith 1:9</a>). God still speaks — through living prophets (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/1?lang=eng&id=p38#p38" target="_blank">D&C 1:38</a>), through the Holy Ghost to every covenant member, and through scripture both ancient and modern. Agency is the <em>means</em> by which we align with His will, not a license to substitute our preferences for His commands.</p>
+<h3>Where the Insight Holds</h3>
+<p>Read within those boundaries, the underlying instinct of the Talmudic passage maps cleanly onto Restoration teaching. God does delight in His children's growth. Not every righteous decision arrives by burning bush or angelic visit; very often the Lord's guidance comes as we study an issue out, decide as best we can, and act in faith (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/9?lang=eng&id=p7-p9#p7" target="_blank">D&C 9:7-9</a>). When members of the Church wrestle prayerfully with hard questions and reach wise, righteous conclusions in alignment with the prophets and the Spirit, that is not a substitute for revelation — it is one of the forms revelation takes.</p>
+<p>What the Restoration <strong>rejects</strong> is any framing in which the community of interpreters has authority <em>apart from</em> God's continuing voice. What it <strong>affirms</strong> is that God still speaks, that He has authorized prophets and apostles to speak in His name, and that He does indeed delight when His covenant children — guided by His Spirit — become wise.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Source Notes</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Topic</th><th>Traditional Source</th></tr>
+<tr><td>Eye for eye as compensation</td><td>Talmud, Bava Kamma 83b-84a</td></tr>
+<tr><td>Na'aseh v'nishma crowns</td><td>Talmud, Shabbat 88a</td></tr>
+<tr><td>Passover memory</td><td>Passover Haggadah</td></tr>
+<tr><td>Seventy elders and presumption</td><td>Rashi on <a href="https://www.blueletterbible.org/kjv/exo/24/11/s_74011" target="_blank" data-ref="Exodus 24:11">Ex 24:11</a></td></tr>
+<tr><td>Blood as life</td><td><a href="https://www.blueletterbible.org/kjv/lev/17/11/s_107011" target="_blank" data-ref="Leviticus 17:11">Leviticus 17:11</a></td></tr>
+<tr><td>Ibn Ezra on blood</td><td>Ibn Ezra Commentary on Exodus</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 6: WEEK 18: TEACHING APPLICATIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">6. Week 18: Teaching Applications</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Overview</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>This week's material bridges theological principle and daily practice. The Covenant Code shows that God cares about property disputes, worker treatment, justice systems, and compassion for the vulnerable—not just "spiritual" matters. Teaching applications focus on practical righteousness: how we treat the powerless, balance justice with mercy, and live as covenant people.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Family Home Evening</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>For Young Children (Ages 3–7)</h3>
+<p><strong>Focus:</strong> God wants us to be kind to everyone</p>
+<p><strong>Object Lesson:</strong> Use toy figures: one alone, one in a group. Ask: "Who might feel lonely or left out? How can we help?"</p>
+<p><strong>Story:</strong> "God told His people to be kind to strangers—people who are different or new. Why? Because God's people were once strangers in Egypt. They knew how hard it was!"</p>
+<p><strong>Activity:</strong> Draw pictures of ways to be kind: sharing toys, inviting someone to play, helping someone who's new at church or school.</p>
+<p><strong>Song:</strong> "I'll Walk With You" (CS 140)</p>
+<hr>
+<h3>For Older Children (Ages 8–11)</h3>
+<p><strong>Focus:</strong> God cares about how we treat others—especially those who are vulnerable</p>
+<p><strong>Discussion:</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/22/21-22/s_72021" target="_blank" data-ref="Exodus 22:21-22">Exodus 22:21-22</a>. God specifically named three groups: strangers, widows, and orphans. Why these three?</p>
+<p><strong>Activity:</strong> Make a "Kindness Map" of your community. Who might be vulnerable? (new kid at school, elderly neighbor, family going through hard times) Brainstorm one way to help each.</p>
+<p><strong>Scripture Chain:</strong> <a href="https://www.blueletterbible.org/kjv/exo/22/22/s_72022" target="_blank" data-ref="Exodus 22:22">Ex 22:22</a> → <a href="https://www.blueletterbible.org/kjv/jas/1/27/s_1147027" target="_blank" data-ref="James 1:27">James 1:27</a> ("Pure religion... visit the fatherless and widows")</p>
+<p><strong>Challenge:</strong> This week, do one kind act for someone who might feel like a "stranger."</p>
+<hr>
+<h3>For Youth/Teens</h3>
+<p><strong>Focus:</strong> "Thou shalt not follow a multitude to do evil" (<a href="https://www.blueletterbible.org/kjv/exo/23/2/s_73002" target="_blank" data-ref="Exodus 23:2">Ex 23:2</a>)</p>
+<p><strong>Discussion Questions:</strong></p>
+<ol>
+<li>What does it mean to "follow a multitude to do evil"?</li>
+<li>Where do you see mob mentality today? (social media, school, politics)</li>
+<li>When have you been tempted to go along with the crowd?</li>
+<li>What makes it hard to stand alone?</li>
+</ol>
+<p><strong>Activity:</strong> Role-play scenarios: peer pressure to gossip, to exclude someone, to cheat. Practice responses.</p>
+<p><strong>President Thomas S. Monson:</strong> "Dare to stand alone. Dare to have a purpose firm."</p>
+<p><strong>Challenge:</strong> This week, notice one moment when you're tempted to go along. Choose differently.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Sunday School (Adults)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Lesson Approach 1: God Cares About Everything</h3>
+<p><strong>Opening Question:</strong> "Is there any area of life God doesn't care about?"</p>
+<p><strong>Key Point:</strong> The Covenant Code covers servants, property, courts, interest rates, animal welfare, festival observance. God governs households, marketplaces, courtrooms—not just altars.</p>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>What surprises you most about the laws in <a href="https://www.blueletterbible.org/kjv/exo/21/1/s_71001" target="_blank" data-ref="Exodus 21">Exodus 21-23</a>?</li>
+<li>Why would God regulate ox-goring and borrowed donkeys?</li>
+<li>How does this challenge the idea that faith is just "spiritual" and shouldn't touch politics, economics, or social issues?</li>
+</ol>
+<p><strong>Application:</strong> Our discipleship encompasses employment practices, financial decisions, how we treat service workers, how we vote on justice issues. The Covenant Code gives the framework; we are expected to live it:</p>
+<blockquote>
+<p>"But be ye doers of the word, and not hearers only, deceiving your own selves" (<a href="https://www.blueletterbible.org/kjv/jas/1/22/" target="_blank">James 1:22</a>).</p>
+</blockquote>
+<blockquote>
+<p>"For behold, it is not meet that I should command in all things; for he that is compelled in all things, the same is a slothful and not a wise servant … Verily I say, men should be anxiously engaged in a good cause, and do many things of their own free will, and bring to pass much righteousness" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/58?lang=eng&id=p26-p27#p26" target="_blank">D&C 58:26-27</a>).</p>
+</blockquote>
+<hr>
+<h3>Lesson Approach 2: The Blood of the Covenant</h3>
+<p><strong>Opening:</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/24/8/s_74008" target="_blank" data-ref="Exodus 24:8">Exodus 24:8</a> and <a href="https://www.blueletterbible.org/kjv/mrk/14/24/s_971024" target="_blank" data-ref="Mark 14:24">Mark 14:24</a> side by side.</p>
+<table class="info-table">
+<tr><th><a href="https://www.blueletterbible.org/kjv/exo/24/8/s_74008" target="_blank" data-ref="Exodus 24:8">Exodus 24:8</a></th><th><a href="https://www.blueletterbible.org/kjv/mrk/14/24/s_971024" target="_blank" data-ref="Mark 14:24">Mark 14:24</a></th></tr>
+<tr><td>"Behold the blood of the covenant"</td><td>"This is my blood of the new covenant"</td></tr>
+</table>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>Why did ancient covenants require blood?</li>
+<li>What does it mean that Jesus explicitly echoed Moses' words?</li>
+<li>How does understanding <a href="https://www.blueletterbible.org/kjv/exo/24/1/s_74001" target="_blank" data-ref="Exodus 24">Exodus 24</a> deepen the sacrament for you?</li>
+</ol>
+<p><strong><a href="https://www.blueletterbible.org/kjv/heb/9/22/s_1142022" target="_blank" data-ref="Hebrews 9:22">Hebrews 9:22</a>:</strong> "Without shedding of blood is no remission."</p>
+<p><strong>Testimony:</strong> When we partake of the sacrament, we renew the covenant sealed by Christ's blood. This isn't casual ritual—it's life-and-death commitment, just like at Sinai.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Primary</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Junior Primary (Ages 3–7)</h3>
+<p><strong>Visual:</strong> Pictures of people helping others (serving food, visiting elderly, welcoming new neighbors)</p>
+<p><strong>Story:</strong> "God told Moses to remind the people: 'Be kind to strangers, widows, and children without parents. Because YOU were once strangers. You know how hard it is!'"</p>
+<p><strong>Activity:</strong> Practice welcoming words. "Hi! My name is ___. Would you like to play with us?"</p>
+<p><strong>Song:</strong> "Love One Another" (CS 136)</p>
+<p><strong>Testimony:</strong> Jesus wants us to be kind to EVERYONE—especially people who might feel alone.</p>
+<hr>
+<h3>Senior Primary (Ages 8–11)</h3>
+<p><strong>Focus:</strong> Covenant Commitment</p>
+<p><strong>Discussion:</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/24/7/s_74007" target="_blank" data-ref="Exodus 24:7">Exodus 24:7</a>. The people said, "All that the LORD hath said will we do."</p>
+<p><strong>Questions:</strong></p>
+<ol>
+<li>They made a promise before fully understanding everything. Why?</li>
+<li>When we are baptized, do we understand everything about following Jesus?</li>
+<li>What does it mean to commit and then learn?</li>
+</ol>
+<p><strong>Activity:</strong> Write your own covenant commitment: "I will follow Jesus by..." (list specific actions)</p>
+<p><strong>Connection:</strong> Our baptismal covenant is like Israel's covenant. We promise, then we learn and grow.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Youth (Sunday School / Mutual)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>For Ages 12–14</h3>
+<p><strong>Focus:</strong> Justice and Mercy</p>
+<p><strong>Activity:</strong> Present everyday examples:</p>
+<ul>
+<li><em>Returning what isn't yours.</em> You find a phone on the bleachers after a game. Nobody is watching. The Covenant Code teaches that if you found your enemy's lost ox, you were required to bring it back (<a href="https://www.blueletterbible.org/kjv/exo/23/4/" target="_blank">Exodus 23:4</a>). Covenant living starts with what is in your hand right now.</li>
+<li><em>How you treat people who serve you.</em> The way you talk to the lunch lady, the substitute teacher, or the kid picking up trash at a school event — that is Covenant Code territory. <a href="https://www.blueletterbible.org/kjv/exo/22/1/s_72001" target="_blank" data-ref="Exodus 22">Exodus 22-23</a> is full of laws about how Israel was to treat workers, strangers, and people with less power.</li>
+</ul>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>What is the difference between justice and revenge?</li>
+<li>Why do small everyday choices reveal our covenant character?</li>
+<li>How do we treat people kindly even when we do not have to?</li>
+</ol>
+<p><strong>Key Insight:</strong> OT law limited vengeance; Jesus calls disciples to rise above retaliation. Both reveal God's character, but the higher law changes how we respond personally.</p>
+<hr>
+<h3>For Ages 15–18</h3>
+<p><strong>Focus:</strong> Care for the Vulnerable Today</p>
+<p><strong>Discussion:</strong> <a href="https://www.blueletterbible.org/kjv/exo/22/21-24/s_72021" target="_blank" data-ref="Exodus 22:21-24">Exodus 22:21-24</a> names strangers, widows, and orphans.</p>
+<p><strong>Modern Parallels:</strong></p>
+<ul>
+<li><strong>Strangers:</strong> Refugees, immigrants, outsiders, new kids</li>
+<li><strong>Widows:</strong> Single parents, elderly alone</li>
+<li><strong>Orphans:</strong> Foster children, those without parental support</li>
+</ul>
+<p><strong>Questions:</strong></p>
+<ol>
+<li>Who are the "vulnerable" in your school? Community?</li>
+<li>What systems exist to help them? What gaps remain?</li>
+<li>What can YOU do personally? What can we do collectively?</li>
+</ol>
+<p><strong>Gospel Application:</strong></p>
+<ul>
+<li>Fast offerings help those in need</li>
+<li>Ministering assignments connect us to vulnerable</li>
+<li>"Inasmuch as ye have done it unto the least of these" (<a href="https://www.blueletterbible.org/kjv/mat/25/40/s_954040" target="_blank" data-ref="Matthew 25:40">Matt 25:40</a>)</li>
+</ul>
+<p><strong>Challenge:</strong> Research one organization helping vulnerable populations. Consider how to get involved.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Institute / Mission Preparation</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Focus: Covenant Commitment and Teaching</h3>
+<p><strong>Missionary Application:</strong></p>
+<p>When teaching investigators about baptism, remember <a href="https://www.blueletterbible.org/kjv/exo/24/1/s_74001" target="_blank" data-ref="Exodus 24">Exodus 24</a>:</p>
+<ol>
+<li>Covenant terms are explained (we teach before baptism)</li>
+<li>Investigators commit ("I will follow Jesus")</li>
+<li>Baptism seals the covenant, not by replacing blood, but by binding the disciple to the blood Christ has already shed</li>
+</ol>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>How do you help investigators understand covenant seriousness?</li>
+<li>What if someone doesn't fully understand everything before baptism?</li>
+<li>How does "na'aseh v'nishma" (we will do and hear) apply?</li>
+</ol>
+<p><strong>Key Point:</strong> Under the Mosaic order, covenants were sealed in blood — the blood of bulls and goats sprinkled on the people (<a href="https://www.blueletterbible.org/kjv/exo/24/8/" target="_blank">Exodus 24:8</a>) and offered repeatedly at the altar. Under the new and everlasting covenant, the demands of justice have been answered once for all in the blood of Christ (<a href="https://www.blueletterbible.org/kjv/heb/9/11/" target="_blank">Hebrews 9:11-14</a>; <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/34?lang=eng&id=p13-p14#p13" target="_blank">Alma 34:13-14</a>). What now seals the disciple to the covenant is <strong>baptism by water and the gift of the Holy Ghost</strong> — water as the symbol of cleansing and renewal. Baptism through immersion symbolizes death, burial, and rising with Christ (<a href="https://www.blueletterbible.org/kjv/rom/6/3/" target="_blank">Romans 6:3-5</a>). The Spirit is the witness and sanctifier of the covenant (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/moroni/8?lang=eng&id=p25-p26#p25" target="_blank">Moroni 8:25-26</a>). Baptism does not "replace blood"; it points to the blood that has already been shed and seals the believer to the One who shed it.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Personal Study</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Daily Focus Guide</h3>
+<p><strong>Day 1 (Monday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/21/1-11/s_71001" target="_blank" data-ref="Exodus 21:1-11">Exodus 21:1-11</a> (servant laws). Journal: "How does God protect the vulnerable even within difficult systems?"</p>
+<p><strong>Day 2 (Tuesday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/21/22-25/s_71022" target="_blank" data-ref="Exodus 21:22-25">Exodus 21:22-25</a> (lex talionis). Journal: "How does 'eye for eye' actually limit vengeance? How does Jesus go further?"</p>
+<p><strong>Day 3 (Wednesday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/22/21-27/s_72021" target="_blank" data-ref="Exodus 22:21-27">Exodus 22:21-27</a> (vulnerable groups). Journal: "Who are the 'strangers, widows, and orphans' in my life? What can I do?"</p>
+<p><strong>Day 4 (Thursday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/23/1-9/s_73001" target="_blank" data-ref="Exodus 23:1-9">Exodus 23:1-9</a> (justice). Journal: "When have I been tempted to 'follow a multitude to do evil'?"</p>
+<p><strong>Day 5 (Friday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/23/10-19/s_73010" target="_blank" data-ref="Exodus 23:10-19">Exodus 23:10-19</a> (Sabbath and festivals). Journal: "Does everyone in my household get real rest on Sabbath?"</p>
+<p><strong>Day 6 (Saturday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/24/1-8/s_74001" target="_blank" data-ref="Exodus 24:1-8">Exodus 24:1-8</a> (blood covenant). Journal: "What does it mean that covenant costs life—Christ's life?"</p>
+<p><strong>Day 7 (Sunday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/24/9-18/s_74009" target="_blank" data-ref="Exodus 24:9-18">Exodus 24:9-18</a> (seeing God, eating with Him). Journal: "What does communion with God look like in my life?"</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Key Takeaways for All Settings</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>God governs all of life</strong> — not just "religious" matters but economics, justice, labor relations, animal care</li>
+<li><strong>Protect the vulnerable</strong> — strangers, widows, orphans deserve special care</li>
+<li><strong>Justice is proportionate</strong> — "eye for eye" limits vengeance; Christ calls us to forgive entirely</li>
+<li><strong>Don't follow crowds into evil</strong> — individual conscience over mob mentality</li>
+<li><strong>Sabbath is for everyone</strong> — including servants, foreigners, animals</li>
+<li><strong>Covenant requires commitment</strong> — "all that the LORD hath said will we do"</li>
+<li><strong>Blood seals covenant</strong> — the sacrament renews our blood-sealed relationship with Christ</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Supplemental Resources</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Scholarly Articles on Covenant:</strong></p>
+<ul>
+<li><a href="https://rsc.byu.edu/vol-23-no-2-2022/covenant-among-covenants" target="_blank">The Covenant among Covenants</a> — RSC: Theological framework for understanding biblical covenants, including how Abrahamic covenant relates to Mosaic covenant</li>
+<li><a href="https://rsc.byu.edu/vol-21-no-2-2020/recognizing-everlasting-covenant-scriptures" target="_blank">Recognizing the Everlasting Covenant in the Scriptures</a> — RSC: Traces the "everlasting covenant" theme through scripture, helping readers see <a href="https://www.blueletterbible.org/kjv/exo/24/1/s_74001" target="_blank" data-ref="Exodus 24">Exodus 24</a> in the larger pattern</li>
+<li><a href="https://rsc.byu.edu/vol-19-no-2-2018/shall-be-our-covenant" target="_blank">This Shall Be Our Covenant</a> — RSC: Explores covenant language and symbolism across scripture</li>
+</ul>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 7: WEEK 18: STUDY QUESTIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">7. Week 18: Study Questions</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Questions for Personal Reflection</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Covenant Code (Exodus 21-23)</h3>
+<ol>
+<li>Which laws in <a href="https://www.blueletterbible.org/kjv/exo/21/1/s_71001" target="_blank" data-ref="Exodus 21">Exodus 21-23</a> seem strange or difficult to you? What might God be teaching through them?</li>
+</ol>
+<ol>
+<li>"Thou shalt neither vex a stranger, nor oppress him: for ye were strangers in the land of Egypt" (<a href="https://www.blueletterbible.org/kjv/exo/22/21/s_72021" target="_blank" data-ref="Exodus 22:21">Ex 22:21</a>). How do your past experiences of being an "outsider" shape your treatment of others who are different?</li>
+</ol>
+<ol>
+<li>"Thou shalt not follow a multitude to do evil" (<a href="https://www.blueletterbible.org/kjv/exo/23/2/s_73002" target="_blank" data-ref="Exodus 23:2">Ex 23:2</a>). When have you been tempted to go along with the crowd? What helped you resist—or what do you wish you'd done differently?</li>
+</ol>
+<hr>
+<h3>Justice and Mercy</h3>
+<ol>
+<li>How do you understand "eye for eye, tooth for tooth" (<a href="https://www.blueletterbible.org/kjv/exo/21/24/s_71024" target="_blank" data-ref="Exodus 21:24">Ex 21:24</a>)? How does this relate to Jesus' teaching to "turn the other cheek" (<a href="https://www.blueletterbible.org/kjv/mat/5/39/s_934039" target="_blank" data-ref="Matthew 5:39">Matt 5:39</a>)?</li>
+</ol>
+<ol>
+<li>The Covenant Code balances justice (consequences for wrongdoing) with mercy (protection for vulnerable). Where in your life do you need to better balance these?</li>
+</ol>
+<ol>
+<li>Who are the "strangers, widows, and orphans" (<a href="https://www.blueletterbible.org/kjv/exo/22/21-22/s_72021" target="_blank" data-ref="Exodus 22:21-22">Ex 22:21-22</a>) in your community? What practical action could you take to protect or serve them?</li>
+</ol>
+<hr>
+<h3>Sabbath and Rest</h3>
+<ol>
+<li>Sabbath rest was commanded for servants, foreigners, and animals—not just the landowner (<a href="https://www.blueletterbible.org/kjv/exo/23/12/s_73012" target="_blank" data-ref="Exodus 23:12">Ex 23:12</a>). Do you ensure that everyone in your sphere can rest? Do you demand Sunday labor from others unnecessarily?</li>
+</ol>
+<hr>
+<h3>Covenant Commitment (Exodus 24)</h3>
+<ol>
+<li>Israel said "All that the LORD hath said will we do" (<a href="https://www.blueletterbible.org/kjv/exo/24/3/s_74003" target="_blank" data-ref="Exodus 24:3">Ex 24:3, 7</a>). Have you made similar comprehensive commitments to God? How are you keeping them?</li>
+</ol>
+<ol>
+<li>The blood covenant ceremony (<a href="https://www.blueletterbible.org/kjv/exo/24/6-8/s_74006" target="_blank" data-ref="Exodus 24:6-8">Ex 24:6-8</a>) bound both God and Israel in life-and-death commitment. How does this understanding affect how you approach the sacrament?</li>
+</ol>
+<ol>
+<li>The elders "saw God, and did eat and drink" (<a href="https://www.blueletterbible.org/kjv/exo/24/11/s_74011" target="_blank" data-ref="Exodus 24:11">Ex 24:11</a>). What does fellowship with God look like for you? When have you felt closest to His presence?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Questions for Family Discussion</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>The Vulnerable:</strong> Who in our community might need special care—like the "strangers, widows, and orphans" in Israel? What could our family do to help?</li>
+</ol>
+<ol>
+<li><strong>Fair Consequences:</strong> "Eye for eye" meant the punishment fits the crime—no more, no less. How do we apply fair consequences in our family without being harsh or too lenient?</li>
+</ol>
+<ol>
+<li><strong>Standing Alone:</strong> "Thou shalt not follow a multitude to do evil" (<a href="https://www.blueletterbible.org/kjv/exo/23/2/s_73002" target="_blank" data-ref="Exodus 23:2">Ex 23:2</a>). Share a time when you had to stand up for what's right even when others disagreed. What was hard about it?</li>
+</ol>
+<ol>
+<li><strong>Sabbath Rest:</strong> Does everyone in our family get real rest on Sunday—not just parents? How can we make Sabbath restful for everyone?</li>
+</ol>
+<ol>
+<li><strong>Keeping Promises:</strong> Israel promised "All that the LORD hath said will we do." What promises (covenants) have we made? Are we keeping them?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Questions for Deeper Study</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Historical and Comparative</h3>
+<ol>
+<li>Compare the Covenant Code (<a href="https://www.blueletterbible.org/kjv/exo/21/1/s_71001" target="_blank" data-ref="Exodus 21">Ex 21-23</a>) with the Code of Hammurabi. What similarities do you notice? What makes Israel's laws distinctive?</li>
+</ol>
+<ol>
+<li>The "cities of refuge" (mentioned briefly in <a href="https://www.blueletterbible.org/kjv/exo/21/13/s_71013" target="_blank" data-ref="Exodus 21:13">Ex 21:13</a>, detailed in <a href="https://www.blueletterbible.org/kjv/num/35/1/s_152001" target="_blank" data-ref="Numbers 35">Numbers 35</a>) protected those who killed accidentally. How does this principle apply to modern justice systems?</li>
+</ol>
+<ol>
+<li>Three annual festivals are commanded (<a href="https://www.blueletterbible.org/kjv/exo/23/14-17/s_73014" target="_blank" data-ref="Exodus 23:14-17">Ex 23:14-17</a>). How do Passover, Shavuot (Pentecost), and Sukkot (Tabernacles) connect to Christ's mission and the plan of salvation? Consider not only what each feast remembered from Israel's past, but what it foreshadowed — and how its pattern continues in covenant life today.</li>
+</ol>
+<hr>
+<h3>Theological Exploration</h3>
+<ol>
+<li>Why does the Covenant Code regulate slavery rather than abolish it outright? How do you understand God working within imperfect human systems while planting seeds of liberation and growth? What does that pattern teach us about how He works with us — individually and as a covenant community — today?</li>
+</ol>
+<ol>
+<li>Trace "the blood of the covenant" from <a href="https://www.blueletterbible.org/kjv/exo/24/8/s_74008" target="_blank" data-ref="Exodus 24:8">Exodus 24:8</a> through <a href="https://www.blueletterbible.org/kjv/heb/9/18-22/s_1142018" target="_blank" data-ref="Hebrews 9:18-22">Hebrews 9:18-22</a> to <a href="https://www.blueletterbible.org/kjv/mrk/14/24/s_971024" target="_blank" data-ref="Mark 14:24">Mark 14:24</a>. How does Christ fulfill the Sinai pattern?</li>
+</ol>
+<ol>
+<li>The elders saw God (<a href="https://www.blueletterbible.org/kjv/exo/24/10-11/s_74010" target="_blank" data-ref="Exodus 24:10-11">Ex 24:10-11</a>), yet Moses was later told "thou canst not see my face: for there shall no man see me, and live" (<a href="https://www.blueletterbible.org/kjv/exo/33/20/s_83020" target="_blank" data-ref="Exodus 33:20">Ex 33:20</a>). How do you reconcile these passages?</li>
+</ol>
+<ol>
+<li>How does "eye for eye" (<a href="https://www.blueletterbible.org/kjv/exo/21/24/s_71024" target="_blank" data-ref="Exodus 21:24">Ex 21:24</a>) relate to Jesus' teaching in <a href="https://www.blueletterbible.org/kjv/mat/5/38-39/s_934038" target="_blank" data-ref="Matthew 5:38-39">Matthew 5:38-39</a>? Is Jesus contradicting the Law, or elevating it?</li>
+</ol>
+<hr>
+<h3>Application Questions</h3>
+<ol>
+<li>The Covenant Code shows God cares about property rights, labor practices, lending policies, and animal welfare. How should this shape Christian engagement with economics and politics?</li>
+</ol>
+<ol>
+<li>If God "will surely hear" when the oppressed cry (<a href="https://www.blueletterbible.org/kjv/exo/22/23/s_72023" target="_blank" data-ref="Exodus 22:23">Ex 22:23</a>), what responsibility does this place on those with power and resources?</li>
+</ol>
+<ol>
+<li>Covenant at Sinai was ratified with blood, reading of terms, and communal meal. How do these elements appear in the sacrament? In the temple?</li>
+</ol>
+<hr>
+<h3>Deeper Study</h3>
+<ol>
+<li>Who is the Angel in <a href="https://www.blueletterbible.org/kjv/exo/23/20-21/s_73020" target="_blank" data-ref="Exodus 23:20-21">Exodus 23:20-21</a> whose voice Israel must obey because "My name is in him"? What does it mean for an Angel to bear God's name? How do Latter-day Saints understand this figure, and how does this Angel relate to the covenant meal in <a href="https://www.blueletterbible.org/kjv/exo/24/9-11/s_74009" target="_blank" data-ref="Exodus 24:9-11">Exodus 24:9-11</a>?</li>
+</ol>
+<ol>
+<li>In Bava Metzia 59b, Rabbi Yehoshua cites <a href="https://www.blueletterbible.org/kjv/exo/23/2/s_73002" target="_blank" data-ref="Exodus 23:2">Exodus 23:2</a> ("after a majority to incline") to overrule a divine voice. God responds by laughing: "My children have triumphed over Me!" What does this story reveal about how the rabbis understood Torah interpretation? How does it change your reading of <a href="https://www.blueletterbible.org/kjv/exo/23/2/s_73002" target="_blank" data-ref="Exodus 23:2">Exodus 23:2</a>? What does it suggest about human responsibility in applying God's word?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Summary Reflection</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li>What is the single most important insight you gained from <a href="https://www.blueletterbible.org/kjv/exo/21/1/s_71001" target="_blank" data-ref="Exodus 21">Exodus 21-24</a> this week?</li>
+</ol>
+<ol>
+<li>How does the covenant ceremony in <a href="https://www.blueletterbible.org/kjv/exo/24/1/s_74001" target="_blank" data-ref="Exodus 24">Exodus 24</a> deepen your understanding of the sacrament or temple covenants?</li>
+</ol>
+<ol>
+<li>What specific action will you take this week because of what you've studied?</li>
+</ol>
+<ol>
+<li>What question do you still have that you want to explore further?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Scripture Memorization Suggestions</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Primary Level:</strong></p>
+<blockquote>
+<p>"Thou shalt not follow a multitude to do evil." (<a href="https://www.blueletterbible.org/kjv/exo/23/2/s_73002" target="_blank" data-ref="Exodus 23:2">Exodus 23:2</a>)</p>
+</blockquote>
+<p><strong>Youth Level:</strong></p>
+<blockquote>
+<p>"Ye shall not afflict any widow, or fatherless child." (<a href="https://www.blueletterbible.org/kjv/exo/22/22/s_72022" target="_blank" data-ref="Exodus 22:22">Exodus 22:22</a>)</p>
+</blockquote>
+<p><strong>Adult Level:</strong></p>
+<blockquote>
+<p>"All that the LORD hath said will we do, and be obedient." (<a href="https://www.blueletterbible.org/kjv/exo/24/7/s_74007" target="_blank" data-ref="Exodus 24:7">Exodus 24:7</a>)</p>
+</blockquote>
+<hr>
+<p><em>Note: 10 questions for personal reflection, 5 for family discussion, 12 for deeper study, plus 4 summary questions provided.</em></p>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+</div>

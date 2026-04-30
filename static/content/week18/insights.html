@@ -1,0 +1,122 @@
+<div class="cfm-insights" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+
+    <!-- Expand/Collapse Controls -->
+    <div style="text-align: center; margin: 20px 0 30px 0;">
+        <button onclick="expandAllInsights()" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 0 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">&#x229E; Expand All</button>
+        <button onclick="collapseAllInsights()" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 0 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">&#x229F; Collapse All</button>
+    </div>
+
+    <!-- Content Sections -->
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>A Note from the Editor</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">I owe you an apology — and an explanation. This lesson is late. Here's why.</p>
+<p style="margin-bottom: 15px;">When I originally built the CFM Corner weekly schedule, I made an error in the week assignments. My system had the Exodus and Leviticus material mapped to the wrong week numbers, which meant the study guides, resources, and navigation were all misaligned. Once I realized the mistake, I couldn't just patch it — the entire lesson had to be rebuilt from scratch to match the official Come, Follow Me manual sequence.</p>
+<p style="margin-bottom: 15px;">I realized my mistake when I went in to publish it on Friday, the process of repairing that took longer than expected, and I'm sorry for the delay. The good news is that the corrected schedule is now in place going forward, and this week's lesson has been rebuilt as a single consolidated study guide.  It is a lot, but everything is in the proper place now.</p>
+<p style="margin-bottom: 15px;">Thank you for your patience. I know many of you rely on these guides for your weekly study, and I take that trust seriously.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>What's in This Week's Study Guide</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">Fair warning: this is a big one. The assigned reading covers the construction of the Tabernacle (<a href="https://www.blueletterbible.org/kjv/exo/35/1/s_85001" target="_blank" data-ref="Exodus 35">Exodus 35–40</a>) and four key chapters of Leviticus (1, 4, 16, 19) — but to make sense of what's being built and why, the study guide also walks through the chapters we've skipped or covered briefly in previous weeks. I've condensed the material several times, and I apologize for the information overload — but there was genuinely a lot of ground to cover.</p>
+<p style="margin-bottom: 15px;">Here's what you'll find:</p>
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;"><strong>The Covenant Code (<a href="https://www.blueletterbible.org/kjv/exo/21/1/s_71001" target="_blank" data-ref="Exodus 21">Exodus 21–24</a>)</strong> — A brief overview of the case laws that apply the Ten Commandments to daily life, the protection of the vulnerable, and the blood covenant ratification on Sinai. These chapters were missed in last week's assignment and provide essential context.</li>
+</ul>
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;"><strong>The Blueprint (<a href="https://www.blueletterbible.org/kjv/exo/25/1/s_75001" target="_blank" data-ref="Exodus 25">Exodus 25–30</a>)</strong> — God reveals the heavenly pattern for the Tabernacle, from the Ark and Mercy Seat in the Holy of Holies outward through the Holy Place furnishings, the structure itself, the priestly garments, and the courtyard. Every detail teaches theology.</li>
+</ul>
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;"><strong>The Crisis (<a href="https://www.blueletterbible.org/kjv/exo/31/1/s_81001" target="_blank" data-ref="Exodus 31">Exodus 31–34</a>)</strong> — A brief recap of last week's material: the golden calf, Moses' intercession, and God's self-revelation of His own character in the Thirteen Attributes of Mercy.</li>
+</ul>
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;"><strong>The Restoration (<a href="https://www.blueletterbible.org/kjv/exo/35/1/s_85001" target="_blank" data-ref="Exodus 35">Exodus 35–40</a>)</strong> — The people build what God designed, with willing hearts and Spirit-filled craftsmanship. The climax of Exodus: "The glory of the LORD filled the tabernacle" (40:34). Includes the powerful connection between the Tabernacle and Sinai — Ramban's teaching that the Tabernacle is "portable Sinai," carrying the revelatory encounter of the mountain forward as Israel journeys.</li>
+</ul>
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;"><strong>The Full Book of Leviticus</strong> — Not just the four assigned chapters, but an overview of the entire book organized around the chiastic (menorah) pattern with the Day of Atonement at its center. The sacrificial system, priestly ordination, Nadab and Abihu, the purity laws, the Holiness Code, the festival calendar, the Sabbatical year and Jubilee, and the covenant blessings and curses — all briefly covered so you can see how the assigned chapters fit into the larger structure.</li>
+</ul>
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;">**The Hebrew Name *Vayikra*** — Why the Hebrew title ("And He Called") tells us more than the English title "Leviticus" — God's voice has moved from the mountain into the tent.</li>
+</ul>
+<p style="margin-bottom: 15px;">The study guide uses <strong>assigned</strong> and <strong>not assigned</strong> markers throughout so you can always tell what's in the official reading and what's provided as context.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>New: Ancient Egypt Cultural Guide</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">New this week, I have added the <strong>Ancient Egypt and Biblical History</strong> guide to the Culture section. There were a lot of questions about Egypt in my Sunday School class last week and I have a dear friend who is currently in Egypt and she wanted more information. This prompted a ten-section deep dive into the civilization that shaped so much of the biblical narrative — from the pyramids to the Ptolemies, from Joseph in Goshen to the Holy Family's flight, from hieroglyphs to the Septuagint. Whether you're studying the Exodus, the plagues, the world the patriarchs lived in, or want to know more about the sites, this interactive guide will give you the background to read those stories with new depth. You'll find it in the Charts & Tools tab or directly in the Culture section of the site.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Coming Soon: The Tabernacle and Priestly Clothing Guide</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">We are currently building a dedicated cultural guide on the <strong>Tabernacle of Moses</strong> and the <strong>priestly garments</strong>. This will be a visual, section-by-section walkthrough of every element — the courtyard, the Holy Place, the Holy of Holies, the four covering layers, the bronze altar, the laver, the menorah, the table of showbread, the altar of incense, the Ark and Mercy Seat, and the High Priest's garments from the golden plate on his turban to the bells and pomegranates at his hem.</p>
+<p style="margin-bottom: 15px;">This guide is designed to do two things. First, it will help you understand these chapters of Exodus and Leviticus — the blueprint, the construction, and the sacrificial system — in a way that bare text descriptions can't. Second, and perhaps more importantly, it will help you understand the <strong>temple</strong>. The Tabernacle is the prototype for every temple that followed, and the parallels between the ancient sanctuary and modern Latter-day Saint temple worship are profound: graduated zones of holiness, washing and anointing, sacred clothing, veils, altars, the progression from the outer court toward the presence of God. Understanding the Tabernacle deepens your understanding of the temple — and understanding the temple deepens your understanding of the Tabernacle.</p>
+<p style="margin-bottom: 15px;">We hope to have this guide up soon. Stay tuned.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>This Week's Themes</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">Even with all the material, the core message of this week is simple:</p>
+<p style="margin-bottom: 15px;"><strong>God wants to dwell with His people.</strong> The Tabernacle is God's idea — He designs it, He funds it through freewill offerings, He fills it with His glory. After rebellion, shattered tablets, and desperate intercession, God's response is not distance but dwelling. He moves into the neighborhood.</p>
+<p style="margin-bottom: 15px;"><strong>The crown of Leviticus is the Atonement.</strong> The entire book is arranged chiastically with the Day of Atonement (chapter 16) at its structural and theological center — everything before it prepares for atonement, everything after flows from it. On that one day, the High Priest enters the Holy of Holies, sprinkles blood on the Mercy Seat, and sends the scapegoat into the wilderness carrying Israel's sins away. Cleansing and removal. This is the hinge on which the whole book turns.</p>
+<p style="margin-bottom: 15px;"><strong>And the point of the Atonement is relational.</strong> What follows Yom Kippur in the text is not more ritual — it's <a href="https://www.blueletterbible.org/kjv/lev/19/1/s_109001" target="_blank" data-ref="Leviticus 19">Leviticus 19</a>, the Holiness Code: "Ye shall be holy: for I the LORD your God am holy... thou shalt love thy neighbour as thyself." The Atonement makes us one with God; the command to love our neighbor makes us one as a people. Holiness is not withdrawal from the world — it is how you treat the people around you. The Atonement exists so that we can draw near to God <em>and</em> to each other.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<p style="margin-bottom: 15px;"><em>Week 18 Weekly Insights | CFM Corner | OT 2026</em></p>
+<p style="margin-bottom: 15px;"><strong>Updated:</strong> April 30, 2026</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+
+</div>

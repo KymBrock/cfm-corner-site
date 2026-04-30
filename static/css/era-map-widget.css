@@ -1,0 +1,125 @@
+/* Era Map Widget — styles for the interactive ANE timeline map */
+
+.era-map-widget {
+  max-width: 750px;
+  margin: 24px auto;
+  outline: none;
+}
+
+.era-map-inner {
+  background: #f8f6f3;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+/* Header: prev / title / next */
+.era-map-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.era-map-title {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: var(--sage-dark, #4a6b52);
+  min-width: 120px;
+  text-align: center;
+}
+
+.era-map-btn {
+  background: var(--sage-dark, #4a6b52);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.1em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.15s, transform 0.1s;
+}
+.era-map-btn:hover:not(:disabled) {
+  transform: scale(1.1);
+}
+.era-map-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+/* Slider */
+.era-map-slider-wrap {
+  padding: 0 4px;
+  margin-bottom: 16px;
+}
+
+.era-map-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: #d4cdc4;
+  outline: none;
+  cursor: pointer;
+}
+.era-map-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--sage-dark, #4a6b52);
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+.era-map-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--sage-dark, #4a6b52);
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+/* Map image */
+.era-map-image-wrap {
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.era-map-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Description */
+.era-map-desc {
+  text-align: center;
+  color: #555;
+  font-size: 0.9em;
+  line-height: 1.5;
+  margin: 12px 0 4px 0;
+  min-height: 2.8em;
+}
+
+/* Attribution */
+.era-map-attribution {
+  text-align: center;
+  color: #999;
+  font-size: 0.75em;
+  margin: 8px 0 0 0;
+}
+.era-map-attribution a {
+  color: #888;
+  text-decoration: underline;
+}

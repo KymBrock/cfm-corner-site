@@ -1,0 +1,1172 @@
+<style>
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+        .site-header {
+            background: linear-gradient(135deg, #d4c4a8 0%, #8B7355 100%);
+            color: white; padding: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px;
+        }
+        .site-header-content { max-width: 1000px; margin: 0 auto; padding: 0 20px; text-align: center; }
+        .site-title { font-size: 2em; margin-bottom: 5px; }
+        .site-subtitle { font-size: 1.1em; opacity: 0.9; }
+
+        .header-section {
+            background-color: #8B7355; color: white; padding: 40px; border-radius: 12px;
+            margin-bottom: 30px; text-align: center;
+        }
+        .header-section .week-label { font-size: 1em; text-transform: uppercase; letter-spacing: 2px; opacity: 0.9; margin-bottom: 10px; }
+        .header-section h1 { font-size: 2.5em; font-weight: 300; margin-bottom: 10px; }
+        .header-section .subtitle { font-size: 1.3em; font-style: italic; margin-bottom: 20px; }
+        .header-section .date-location { font-size: 1.1em; opacity: 0.95; }
+
+        .quick-links { text-align: center; margin: 20px 0; }
+        .quick-link {
+            display: inline-block; background: #8B7355; color: white; padding: 10px 20px;
+            border-radius: 8px; text-decoration: none; margin: 5px; transition: all 0.3s;
+        }
+        .quick-link:hover { background: #6B5344; transform: translateY(-2px); }
+
+        .button-container { text-align: center; margin: 30px 0; }
+        .expand-button {
+            background-color: #8B7355; color: white; border: none; padding: 12px 24px;
+            margin: 5px 10px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em;
+        }
+        .expand-button:hover { background-color: #6B5344; }
+
+        .sg-accordion-section {
+            background-color: #8B7355; color: white; cursor: pointer; padding: 18px; width: 100%;
+            border: none; text-align: left; font-size: 1.2em; font-weight: 600; font-family: Georgia, serif;
+            border-radius: 8px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center;
+        }
+        .sg-accordion-section:hover { background-color: #6B5344; }
+        .sg-accordion-section::after { content: '\25BC'; font-size: 0.9em; transition: transform 0.3s; }
+        .sg-accordion-section.active::after { transform: rotate(180deg); }
+
+        .sg-panel {
+            background-color: white; border-radius: 0 0 8px 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .sg-panel.active { display: block; }
+        .panel-content { padding: 30px; }
+        .panel-content h2 { color: #8B7355; margin-bottom: 20px; font-size: 1.8em; }
+        .panel-content h3 { color: #6B5344; margin-top: 25px; margin-bottom: 15px; font-size: 1.4em; }
+        .panel-content h4 { color: #5a4a3a; margin-top: 20px; margin-bottom: 12px; font-size: 1.2em; }
+        .panel-content ul, .panel-content ol { margin-left: 25px; margin-bottom: 15px; }
+        .panel-content li { margin-bottom: 8px; }
+        .panel-content p { margin-bottom: 15px; text-align: justify; }
+        .panel-content a { color: #8B7355; }
+        .panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .panel-content blockquote {
+            margin: 20px 0 20px 20px;
+            padding: 15px 20px;
+            border-left: 4px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 8px 8px 0;
+        }
+        .panel-content blockquote p { margin-bottom: 8px; }
+        .panel-content blockquote p:last-child { margin-bottom: 0; }
+        .panel-content blockquote cite {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #8B7355;
+            font-style: normal;
+        }
+
+        .panel-content strong { color: #6B5344; }
+        .panel-content em { color: #5a4a3a; }
+
+        .panel-content hr {
+            border: none;
+            border-top: 2px solid #e8e0d5;
+            margin: 25px 0;
+        }
+
+        .panel-content code {
+            background-color: #f5f0e8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #6B5344;
+        }
+
+        .info-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .info-table th, .info-table td { border: 1px solid #d4c4a8; padding: 12px; text-align: left; }
+        .info-table th { background-color: #f5f0e8; color: #6B5344; font-weight: bold; }
+        .info-table tr:nth-child(even) { background-color: #faf8f5; }
+
+        .sg-sub-accordion {
+            background-color: #f5f0e8;
+            color: #5a4a3a;
+            cursor: pointer;
+            padding: 14px 40px 14px 18px;
+            width: 100%;
+            text-align: left;
+            border: 1px solid #d4c4a8;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            margin-top: 10px;
+            position: relative;
+            transition: background-color 0.2s;
+        }
+
+        .sg-sub-accordion:hover {
+            background-color: #e8e0d4;
+        }
+
+        .sg-sub-accordion::after {
+            content: '\25BC';
+            font-size: 0.8em;
+            color: #8B7355;
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s;
+        }
+
+        .sg-sub-accordion.active::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .sg-sub-panel {
+            background-color: #fafafa;
+            border-radius: 0 0 6px 6px;
+            border: 1px solid #d4c4a8;
+            border-top: none;
+            display: none;
+            transition: max-height 0.3s ease-out;
+            margin-bottom: 10px;
+        }
+
+        .sg-sub-panel.active {
+            display: block;
+            overflow: visible;
+            transition: max-height 0.3s ease-in;
+        }
+
+        .sg-sub-panel-content {
+            padding: 20px 25px;
+        }
+
+        .sg-sub-panel-content h3 { color: #6B5344; margin-top: 20px; margin-bottom: 12px; font-size: 1.3em; }
+        .sg-sub-panel-content h4 { color: #5a4a3a; margin-top: 15px; margin-bottom: 10px; font-size: 1.15em; }
+        .sg-sub-panel-content p { margin-bottom: 12px; text-align: justify; }
+        .sg-sub-panel-content ul, .sg-sub-panel-content ol { margin-left: 25px; margin-bottom: 12px; }
+        .sg-sub-panel-content li { margin-bottom: 6px; }
+        .sg-sub-panel-content a { color: #8B7355; }
+        .sg-sub-panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .sg-sub-panel-content blockquote {
+            margin: 15px 0 15px 15px;
+            padding: 12px 18px;
+            border-left: 3px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 6px 6px 0;
+        }
+        .sg-sub-panel-content blockquote p { margin-bottom: 6px; }
+        .sg-sub-panel-content blockquote p:last-child { margin-bottom: 0; }
+        .sg-sub-panel-content strong { color: #6B5344; }
+        .sg-sub-panel-content hr { border: none; border-top: 1px solid #e8e0d5; margin: 20px 0; }
+
+        @media (max-width: 768px) {
+            .header-section h1 { font-size: 1.8em; }
+            .panel-content { padding: 20px; }
+            .sg-sub-panel-content { padding: 15px 18px; }
+        }
+
+        .sg-section-heading {
+            margin: 1.2em 0 0.6em 0;
+            padding: 0.4em 0 0.4em 0.8em;
+            border-left: 3px solid #8B9D77;
+            color: #5a6b4f;
+            font-size: 1.05em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+        }
+        .sg-section-actions {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 28px;
+        }
+        .sg-section-actions .sg-action-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.35);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            padding: 0;
+            line-height: 1;
+        }
+        .sg-section-actions .sg-action-btn:hover {
+            background: rgba(255,255,255,0.35);
+        }
+    </style>
+
+
+<div class="container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <p class="week-label">Week 18</p>
+            <h1>Exodus 31–34 — Overview</h1>
+            <div class="subtitle"><a href="https://www.blueletterbible.org/kjv/exo/31/1/s_81001" target="_blank" data-ref="Exodus 31">Exodus 31-34</a> | Rectification Add-On</div>
+            <div class="date-location"></div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/18?lang=eng" target="_blank" class="quick-link">CFM Manual</a>
+        </div>
+
+        <!-- Expand/Collapse Buttons -->
+        <div class="button-container">
+            <button class="expand-button" onclick="expandAll()"><span class="btn-icon">&#x229E;</span> Expand All</button>
+            <button class="expand-button" onclick="collapseAll()"><span class="btn-icon">&#x229F;</span> Collapse All</button>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 1: SUPPLEMENTAL STUDY GUIDE: OVERVIEW -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">1. Supplemental Study Guide: Overview</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Scope</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>This file is reserved for a supplemental overview covering <code><a href="https://www.blueletterbible.org/kjv/exo/31/1/s_81001" target="_blank" data-ref="Exodus 31">Exodus 31-34</a></code>.</p>
+<p>This is a rectification add-on, not a replacement for the existing Week 19-21 study guides.</p>
+<p>Related notes:</p>
+<ul>
+<li><a href="/Users/kymberbrockbank/Obsidian/K Master Vault/Master Project Folder/Ongoing/CFM Corner/OT_2026/WeeklyLessons/READING_SEQUENCE_RECTIFICATION_AUDIT_Weeks19-21.md" target="_blank">READING_SEQUENCE_RECTIFICATION_AUDIT_Weeks19-21.md</a></li>
+<li><a href="/Users/kymberbrockbank/Obsidian/K Master Vault/Master Project Folder/Ongoing/CFM Corner/OT_2026/WeeklyLessons/Week_18_Exodus_35-40_Leviticus_1_4_16_19/05_Study_Guide_Segments/Supplement_Exodus_31-34_Rectification/Supplement_Exodus_31-34_Rectification_Tracker.md" target="_blank">Supplement_Exodus_31-34_Rectification_Tracker.md</a></li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Writing Note</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Claude should draft this as a self-contained supplemental guide that helps readers integrate:</p>
+<ul>
+<li>tabernacle commissioning and Spirit-empowered craft (<code><a href="https://www.blueletterbible.org/kjv/exo/31/1/s_81001" target="_blank" data-ref="Exodus 31">Exodus 31</a></code>)</li>
+<li>golden calf crisis (<code><a href="https://www.blueletterbible.org/kjv/exo/32/1/s_82001" target="_blank" data-ref="Exodus 32">Exodus 32</a></code>)</li>
+<li>Moses' intercession and the presence of God (<code><a href="https://www.blueletterbible.org/kjv/exo/33/1/s_83001" target="_blank" data-ref="Exodus 33">Exodus 33</a></code>)</li>
+<li>covenant renewal and the revealed divine name/character (<code><a href="https://www.blueletterbible.org/kjv/exo/34/1/s_84001" target="_blank" data-ref="Exodus 34">Exodus 34</a></code>)</li>
+</ul>
+<p>Do not overwrite or collapse the existing Week 19-21 narrative arc while drafting this file.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Reading Block</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Chapter</th><th>Focus</th></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/31/1/s_81001" target="_blank" data-ref="Exodus 31">Exodus 31</a></td><td>Bezalel and Oholiab called; Spirit-empowered craftsmanship; Sabbath as covenant sign</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/32/1/s_82001" target="_blank" data-ref="Exodus 32">Exodus 32</a></td><td>The golden calf; covenant rupture; Moses' intercession; consequences</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/33/1/s_83001" target="_blank" data-ref="Exodus 33">Exodus 33</a></td><td>Divine presence withdrawn and restored; "My presence shall go with thee"; "Show me thy glory"</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/exo/34/1/s_84001" target="_blank" data-ref="Exodus 34">Exodus 34</a></td><td>Covenant renewed; the Lord proclaims His own name and character; Moses' shining face</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Narrative Arc</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><a href="https://www.blueletterbible.org/kjv/exo/31/1/s_81001" target="_blank" data-ref="Exodus 31">Exodus 31–34</a> is one of the most dramatic sequences in all of scripture. It moves through four stages that together form a complete covenant cycle — instruction, rupture, intercession, and renewal:</p>
+<ol>
+<li><strong>Covenant instruction completed</strong> (<a href="https://www.blueletterbible.org/kjv/exo/31/1/s_81001" target="_blank" data-ref="Exodus 31">Exodus 31</a>). God finishes His instructions for the tabernacle by naming the craftsmen who will build it and sealing the whole project with the Sabbath as a perpetual covenant sign. Everything is ready. The tablets are inscribed by God's own finger.</li>
+</ol>
+<ol>
+<li><strong>Covenant shattered</strong> (<a href="https://www.blueletterbible.org/kjv/exo/32/1/s_82001" target="_blank" data-ref="Exodus 32">Exodus 32</a>). While Moses is on the mountain, the people demand a god they can see. Aaron fashions a golden calf. The covenant is broken before the tablets even reach the camp. Moses intercedes for Israel's survival, then descends and breaks the tablets — the physical covenant destroyed to match the spiritual reality.</li>
+</ol>
+<ol>
+<li><strong>Presence withdrawn and restored</strong> (<a href="https://www.blueletterbible.org/kjv/exo/33/1/s_83001" target="_blank" data-ref="Exodus 33">Exodus 33</a>). God tells Moses He will send an angel but will not go up among the people Himself, "lest I consume thee in the way" (33:3). Moses pleads: "If thy presence go not with me, carry us not up hence" (33:15). God relents. Moses then asks to see God's glory — and is granted a mediated encounter, hidden in the cleft of a rock while God's goodness passes by.</li>
+</ol>
+<ol>
+<li><strong>Covenant renewed</strong> (<a href="https://www.blueletterbible.org/kjv/exo/34/1/s_84001" target="_blank" data-ref="Exodus 34">Exodus 34</a>). Moses ascends again with new tablets. God descends in a cloud and proclaims His own name and character — merciful, gracious, long-suffering, abundant in goodness and truth. The covenant is remade. Moses comes down with a face that shines so brightly the people are afraid, and he veils himself.</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Why This Matters</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>This sequence is not just ancient history. It is the pattern of every covenant relationship:</p>
+<ul>
+<li>God gives instruction and invites closeness.</li>
+<li>His people turn away.</li>
+<li>A mediator stands in the gap.</li>
+<li>God reveals Himself as merciful and renews the covenant.</li>
+</ul>
+<p>Latter-day Saints live inside this pattern every week. The sacrament is a renewal of covenant after the inevitable ruptures of mortal life. The temple is the place where God's presence is restored. And Christ is the Mediator who stands between a holy God and a people who cannot yet endure His full glory.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Key Themes</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Theme</th><th>Where It Appears</th></tr>
+<tr><td>Spirit-empowered service</td><td><a href="https://www.blueletterbible.org/kjv/exo/31/1-6/s_81001" target="_blank" data-ref="Exodus 31:1-6">Exodus 31:1–6</a></td></tr>
+<tr><td>Sabbath as covenant sign</td><td><a href="https://www.blueletterbible.org/kjv/exo/31/12-17/s_81012" target="_blank" data-ref="Exodus 31:12-17">Exodus 31:12–17</a></td></tr>
+<tr><td>Idolatry as false substitution</td><td><a href="https://www.blueletterbible.org/kjv/exo/32/1-6/s_82001" target="_blank" data-ref="Exodus 32:1-6">Exodus 32:1–6</a></td></tr>
+<tr><td>Intercession and mediation</td><td><a href="https://www.blueletterbible.org/kjv/exo/32/30-35/s_82030" target="_blank" data-ref="Exodus 32:30-35">Exodus 32:30–35; 33:12–16</a></td></tr>
+<tr><td>Divine presence: withdrawal and restoration</td><td><a href="https://www.blueletterbible.org/kjv/exo/33/1-17/s_83001" target="_blank" data-ref="Exodus 33:1-17">Exodus 33:1–17</a></td></tr>
+<tr><td>Seeing God / mediated glory</td><td><a href="https://www.blueletterbible.org/kjv/exo/33/18-23/s_83018" target="_blank" data-ref="Exodus 33:18-23">Exodus 33:18–23</a></td></tr>
+<tr><td>The divine name and character</td><td><a href="https://www.blueletterbible.org/kjv/exo/34/5-7/s_84005" target="_blank" data-ref="Exodus 34:5-7">Exodus 34:5–7</a></td></tr>
+<tr><td>Covenant renewal</td><td><a href="https://www.blueletterbible.org/kjv/exo/34/1-10/s_84001" target="_blank" data-ref="Exodus 34:1-10">Exodus 34:1–10</a></td></tr>
+<tr><td>Transfigured encounter</td><td><a href="https://www.blueletterbible.org/kjv/exo/34/29-35/s_84029" target="_blank" data-ref="Exodus 34:29-35">Exodus 34:29–35</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>How to Use This Guide</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>This supplement covers <a href="https://www.blueletterbible.org/kjv/exo/31/1/s_81001" target="_blank" data-ref="Exodus 31">Exodus 31–34</a> as a continuous reading block. It is designed to stand alongside the existing Week 19–21 study guides, not to replace them. Use it when you want to read these four chapters as a single narrative arc — from the last instructions before the crisis, through the crisis itself, through intercession and restoration, to the renewed covenant and the shining face of Moses.</p>
+<hr>
+<p><em>Supplemental Study Guide | CFM Corner | OT 2026</em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 2: SUPPLEMENTAL STUDY GUIDE: HISTORICAL & CULTURAL CONTEXT -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">2. Supplemental Study Guide: Historical & Cultural Context</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Sacred Craftsmanship in the Ancient World</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Bezalel and Oholiab (Exodus 31:1–6)</h3>
+<p>God names the builders of the tabernacle by name — Bezalel son of Uri, of the tribe of Judah, and Oholiab son of Ahisamach, of the tribe of Dan. This is the first time in scripture that a person is described as being filled with the Spirit of God (<em>ruach elohim</em>) for the purpose of skilled labor: "I have filled him with the spirit of God, in wisdom, and in understanding, and in knowledge, and in all manner of workmanship" (<a href="https://www.blueletterbible.org/kjv/exo/31/3/s_81003" target="_blank" data-ref="Exodus 31:3">Exodus 31:3</a>).</p>
+<p>In the ancient Near East, temples were built by royal decree, and the skill of the artisans was attributed to the patron deity. Mesopotamian kings regularly claimed divine guidance in temple construction. What is distinctive here is that the craftsmen are not kings — they are called from among the people, empowered by God's own Spirit, and their skill in metalwork, engraving, woodcarving, and textile is treated as a spiritual endowment, not merely a trade. The tabernacle is not built by political power. It is built by consecrated skill.</p>
+<p>The names themselves carry meaning. <em>Bezalel</em> (<a href="https://www.blueletterbible.org/lexicon/h1212/kjv/wlc/0-1/" target="_blank" data-lexicon="Bezaleel = &quot;in the shadow (i.e. protection) of God&quot;" data-strongs="H1212" data-translit="bᵊṣal&#x27;ēl" data-original="בְּצַלְאֵל" data-lang="hebrew" data-verse="">בְּצַלְאֵל</a>) combines <a href="https://www.blueletterbible.org/lexicon/h6738/kjv/wlc/0-1/" target="_blank" data-lexicon="shadow, shadeshadow (on dial)shadow, shade (as protection)shadow (symbolic of transitoriness of life)" data-strongs="H6738" data-translit="ṣēl" data-original="צֵל" data-lang="hebrew" data-verse="">צֵל</a> (<a href="https://www.blueletterbible.org/lexicon/h6738/kjv/wlc/0-1/" target="_blank" data-lexicon="shadow, shadeshadow (on dial)shadow, shade (as protection)shadow (symbolic of transitoriness of life)" data-strongs="H6738" data-translit="ṣēl" data-original="צֵל" data-lang="hebrew" data-verse=""><em>tsel</em></a>, shadow/shade) and <a href="https://www.blueletterbible.org/lexicon/h3496/kjv/wlc/0-1/" target="_blank" data-lexicon="Jathniel = &quot;God hires me&quot;a Korhite Levite and the 4th of the family of Meshelemiah" data-strongs="H3496" data-translit="yaṯnî&#x27;ēl" data-original="אֵל" data-lang="hebrew" data-verse="">אֵל</a> (<a href="https://www.blueletterbible.org/lexicon/h410/kjv/wlc/0-1/" target="_blank" data-lexicon="god, god-like one, mighty one" data-strongs="H410" data-translit="'ēl" data-original="אֵל" data-lang="hebrew" data-verse=""><em>el</em></a>, God) — "in the shadow of God," the one who works under God's covering. <em>Oholiab</em> (<a href="https://www.blueletterbible.org/lexicon/h171/kjv/wlc/0-1/" target="_blank" data-lexicon="Aholiab = &quot;Father&#x27;s tent&quot;//" data-strongs="H171" data-translit="āhŏlî&#x27;āḇ" data-original="אָהֳלִיאָב" data-lang="hebrew" data-verse="">אָהֳלִיאָב</a>) combines <a href="https://www.blueletterbible.org/lexicon/h169/kjv/wlc/0-1/" target="_blank" data-lexicon="Ohel = &quot;tent&quot;//" data-strongs="H169" data-translit="ōhel" data-original="אֹהֶל" data-lang="hebrew" data-verse="">אֹהֶל</a> (<a href="https://www.blueletterbible.org/lexicon/h168/kjv/wlc/0-1/" target="_blank" data-lexicon="tent//" data-strongs="H168" data-translit="’Ōhel" data-original="אֹהֶל" data-lang="hebrew" data-verse=""><em>ohel</em></a>, tent) and <a href="https://www.blueletterbible.org/lexicon/h1/kjv/wlc/0-1/" target="_blank" data-lexicon="father" data-strongs="H1" data-translit="av" data-original="אָב" data-lang="hebrew" data-verse="Genesis 2:24">אָב</a> (<a href="https://www.blueletterbible.org/lexicon/h1/kjv/wlc/0-1/" target="_blank" data-lexicon="father" data-strongs="H1" data-translit="av" data-original="אָב" data-lang="hebrew" data-verse="Genesis 2:24"><em>av</em></a>, father) — "the Father's tent," evoking the very structure he is called to build. The pairing of Judah (the royal tribe) and Dan (a tribal outsider, often marginalized in later tradition) suggests that sacred work draws from the whole community, not just its elite.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Golden Calf: Idolatry in Context</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>What the Calf Was</h3>
+<p>The golden calf of <a href="https://www.blueletterbible.org/kjv/exo/32/1/s_82001" target="_blank" data-ref="Exodus 32">Exodus 32</a> was not a random act of imagination. Bull and calf imagery pervaded the religious world Israel had just left.</p>
+<p><strong>Egyptian context.</strong> The Apis bull was one of the most important sacred animals in Egypt, worshiped at Memphis as a manifestation of the god Ptah and later associated with Osiris. The Hathor cult, centered on a cow-goddess, was widespread. Israel had lived inside this symbolic world for generations. When the people said to Aaron, "Make us gods, which shall go before us" (32:1), they were reaching for the religious vocabulary they already knew.</p>
+<p><strong>Canaanite context.</strong> In Canaanite religion, the storm god Baal was often depicted standing on a bull. The bull represented strength, fertility, and divine power. Later in Israel's history, Jeroboam I would set up golden calves at Bethel and Dan (<a href="https://www.blueletterbible.org/kjv/1ki/12/28-29/s_303028" target="_blank" data-ref="1 Kings 12:28-29">1 Kings 12:28–29</a>), using almost identical language: "Behold thy gods, O Israel, which brought thee up out of the land of Egypt." The pattern repeats because the temptation is perennial: replace the invisible, demanding God with a visible, manageable one.</p>
+<p><strong>Minoan context.</strong> Bull veneration was not limited to Egypt and Canaan. The Minoan civilization on Crete — flourishing roughly 2700–1450 BC — placed the bull at the center of its religious and artistic life. The famous bull-leaping fresco at Knossos (c. 1450–1400 BC) depicts athletes vaulting over a charging bull in what appears to be a ritual context. Bull-headed <em>rhyta</em> — stone ritual vessels used for libations, with gilded horns, rock-crystal eyes, and liquid poured through the nostrils — have been recovered from the palace complex at Knossos (c. 1550–1500 BC). Bronze and terracotta bull figurines served as votive offerings at Minoan sanctuaries. Nanno Marinatos, in her landmark study <em>Minoan Religion: Ritual, Image, and Symbol</em> (1993), demonstrates that the bull was central to Minoan cult practice — not merely decorative but ritually charged.</p>
+<p>Crete sat at the hub of a maritime trading network linking Egypt, Canaan, and the Aegean. The connection was not abstract. At Tell el-Dab'a (ancient Avaris) in Egypt, archaeologist Manfred Bietak uncovered thousands of fragments of Minoan-style wall paintings — including bull-leaping scenes painted by Minoan artists — in an 18th-Dynasty palace complex (c. 1479–1425 BC). Minoan craftsmen were physically present in Egypt, working in Egyptian royal courts and bringing their bull iconography with them. The Late Bronze Age Uluburun shipwreck (c. 1330–1300 BC, off southwestern Turkey) carried cargo from nine or ten cultures — Canaanite jars, Egyptian gold, Cypriot copper, Aegean ceramics — demonstrating the density of this international exchange. Marinatos argued in <em>Minoan Kingship and the Solar Goddess: A Near Eastern Koine</em> (2010) that Crete, Egypt, the Levant, and Anatolia shared a common symbolic vocabulary — a "cultural koine" — in which bull imagery, theocratic kingship, and solar deity iconography circulated freely.</p>
+<p>This Minoan connection also touches the tabernacle itself. The specific dyes commanded for the tabernacle textiles — the blue (<a href="https://www.blueletterbible.org/lexicon/h8504/kjv/wlc/0-1/" target="_blank" data-lexicon="violet, violet stuffviolet threadviolet stuff or fabric(TWOT) blue (covering spectrum from brilliant red through deep..." data-strongs="H8504" data-translit="tᵊḵēleṯ" data-original="תַּכְלִית" data-lang="hebrew" data-verse=""><em>tekhelet</em></a>), purple (<a href="https://www.blueletterbible.org/lexicon/h713/kjv/wlc/0-1/" target="_blank" data-lexicon="purple, red-purple" data-strongs="H713" data-translit="'argāmān" data-original="אַרְגָּמָן" data-lang="hebrew" data-verse=""><em>argaman</em></a>), and scarlet (<em>tola'at shani</em>) of <a href="https://www.blueletterbible.org/kjv/exo/25/4/s_75004" target="_blank" data-ref="Exodus 25:4">Exodus 25:4; 26:1, 31, 36</a> — were luxury colors produced from <em>Murex</em> sea snails. This dyeing technology is typically associated with the Phoenicians, but the conventional dating of Phoenician industry (roughly 1200 BC onward) is too late for the tabernacle construction period. Archaeological evidence from Bronze Age Crete points to an earlier center of production: <em>Murex</em> shell middens at the Minoan site of Palaikastro demonstrate that purple-dye manufacturing was already underway in the Aegean centuries before the Phoenicians industrialized it. If these dyes reached the Israelites through trade networks already established by the Minoans, then the material culture of the tabernacle itself reflects the same eastern Mediterranean world in which bull worship was pervasive.</p>
+<p>The point is not that the Israelites borrowed their religion from Crete. It is that the golden calf was not an isolated local temptation. Bull veneration was embedded in the entire trading and cultural network Israel inhabited — Egyptian, Canaanite, and Aegean alike. The pull was everywhere.</p>
+<blockquote>
+<p>---</p>
+<p><strong>Explore Further: The Minoan World and Bronze Age Trade</strong></p>
+<p>- Nanno Marinatos, <a href="https://www.academia.edu/3433058/Minoan_religion_Ritual_image_and_symbol" target="_blank"><em>Minoan Religion: Ritual, Image, and Symbol</em></a> (University of South Carolina Press, 1993) — the standard synthesis on Minoan cult practice, including bull symbolism, rhyta, and sacrifice.</p>
+<p>- Nanno Marinatos, <em>Minoan Kingship and the Solar Goddess: A Near Eastern Koine</em> (University of Illinois Press, 2010) — argues that Crete shared a common symbolic vocabulary with Egypt, the Levant, and Anatolia.</p>
+<p>- Manfred Bietak, Nanno Marinatos, and Clairy Palyvou, <em>Taureador Scenes in Tell el-Dab'a (Avaris) and Knossos</em> (Vienna, 2007) — directly compares Minoan bull-leaping imagery found in an Egyptian palace with Knossos originals.</p>
+<p>- Jeremy McInerney, <a href="https://www.penn.museum/sites/expedition/bulls-and-bull-leaping-in-the-minoan-world/" target="_blank">"Bulls and Bull-leaping in the Minoan World"</a> (<em>Expedition Magazine</em> 53/3, Penn Museum, 2011).</p>
+<p>- Eric H. Cline, <em>1177 B.C.: The Year Civilization Collapsed</em> (Princeton University Press, 2014) — traces the interconnected Bronze Age system linking Egypt, Crete, Canaan, Cyprus, and the Hittites.</p>
+<p>- D.S. Reese, "Palaikastro Shells and Bronze Age Purple-Dye Production in the Mediterranean Basin," <em>Annual of the British School of Archaeology at Athens</em> 82 (1987), pp. 201–6.</p>
+<p>- I. Irving Ziderman, "The Biblical Dye Tekhelet and its Use in Jewish Textiles," <em>Dyes in History and Archaeology</em> 21 (2008).</p>
+</blockquote>
+<p><strong>What the calf represented.</strong> The people likely did not think they were abandoning the Lord entirely. Aaron built an altar before the calf and proclaimed, "To morrow is a feast to the LORD" (32:5) — using the divine name YHWH. The sin was not that they chose a different god but that they tried to represent the true God in an image He had explicitly forbidden (<a href="https://www.blueletterbible.org/kjv/exo/20/4-5/s_70004" target="_blank" data-ref="Exodus 20:4-5">Exodus 20:4–5</a>). The calf was a false mediator — a substitute for the divine presence they could not see and the prophet who had not returned.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Covenant Violation and Communal Representation</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>How Covenants Broke in the Ancient Near East</h3>
+<p>In ANE treaty practice, covenant violation was catastrophic. A vassal who broke treaty with a suzerain could expect:</p>
+<ul>
+<li>the treaty curses to fall (drought, defeat, exile)</li>
+<li>the vassal's representative to be held personally liable</li>
+<li>the covenant relationship to end unless the suzerain chose to restore it</li>
+</ul>
+<p>The golden calf episode fits this pattern exactly. Israel violates the covenant almost immediately after ratifying it. The curses begin to fall (the plague of 32:35, the Levite purge of 32:26–28). And restoration depends entirely on whether the suzerain — God — chooses to renew.</p>
+<h3>Moses Breaks the Tablets</h3>
+<p>When Moses descends and sees the calf and the dancing, he shatters the two tablets inscribed by God's own finger (32:19). This was not a loss of temper. In ANE legal practice, breaking the treaty document was a formal declaration that the covenant was void. Moses was performing a legal act: the covenant is over. The physical destruction matched the spiritual reality.</p>
+<p>The fact that God later instructs Moses to hew <em>new</em> tablets (34:1) — and that God Himself writes on them again — is the sign that what was destroyed can be remade. Covenant renewal is not a legal fiction. It is a new act of divine commitment.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Mediation and Intercession</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Intercessor Pattern</h3>
+<p>Moses' role in <a href="https://www.blueletterbible.org/kjv/exo/32/1/s_82001" target="_blank" data-ref="Exodus 32">Exodus 32–33</a> is one of the clearest mediator patterns in the Old Testament. He stands between God and Israel at the moment of greatest danger:</p>
+<ul>
+<li><strong><a href="https://www.blueletterbible.org/kjv/exo/32/10-14/s_82010" target="_blank" data-ref="Exodus 32:10-14">Exodus 32:10–14</a>:</strong> God tells Moses He will destroy the people and start over with Moses. Moses argues back — invoking God's promises to Abraham, Isaac, and Israel. "And the Lord repented of the evil which he thought to do unto his people" (32:14).</li>
+<li><strong><a href="https://www.blueletterbible.org/kjv/exo/32/30-32/s_82030" target="_blank" data-ref="Exodus 32:30-32">Exodus 32:30–32</a>:</strong> Moses returns to the Lord and offers himself: "Yet now, if thou wilt forgive their sin—; and if not, blot me, I pray thee, out of thy book which thou hast written." He offers his own life in exchange for the people's survival.</li>
+</ul>
+<p>This is the clearest Old Testament foreshadowing of Christ's intercessory role. The mediator stands in the gap, absorbs the consequences, and pleads for mercy on behalf of the covenant people. <a href="https://www.blueletterbible.org/kjv/heb/7/25/s_1140025" target="_blank" data-ref="Hebrews 7:25">Hebrews 7:25</a> describes Christ in exactly these terms: "He ever liveth to make intercession for them."</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Divine Presence: Withdrawal and Restoration</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Tent of Meeting (Exodus 33:7–11)</h3>
+<p>After the golden calf, God tells Moses He will not go up among the people: "I will send an angel before thee ... for I will not go up in the midst of thee; for thou art a stiffnecked people: lest I consume thee in the way" (33:2–3). The people mourn. Moses pitches a tent <em>outside</em> the camp — the "tabernacle of the congregation" (33:7) — and meets God there. This is not the tabernacle (not yet built). It is a provisional meeting place, set apart from the contaminated camp, where God and Moses speak "face to face, as a man speaketh unto his friend" (33:11).</p>
+<p>The geography matters. God's presence has been pushed to the margins. It has not departed entirely — Moses can still meet Him — but it no longer dwells in the midst of the people. The rest of <a href="https://www.blueletterbible.org/kjv/exo/33/1/s_83001" target="_blank" data-ref="Exodus 33">Exodus 33</a> is Moses' sustained plea to bring that presence back to the center.</p>
+<h3>"Show Me Thy Glory" (Exodus 33:18–23)</h3>
+<p>Moses' request — "I beseech thee, shew me thy glory" (33:18) — comes at the climax of his intercession. God responds with a qualified yes: He will make all His <em>goodness</em> pass before Moses and will proclaim His <em>name</em>. But Moses cannot see God's face: "for there shall no man see me, and live" (33:20). God places Moses in the cleft of a rock, covers him with His hand as He passes, and allows Moses to see His "back parts" — a mediated, partial encounter with the fullness of divine glory.</p>
+<p>The Restoration provides additional light on this passage through the JST and <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng" target="_blank" data-ref="Moses 1">Moses 1</a> (see [[03_Key_Passages_Study|Key Passages]]).</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Proclamation of the Divine Name (Exodus 34:5–7)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Thirteen Attributes</h3>
+<p>When God renews the covenant, He does not begin with new laws. He begins by revealing His own character:</p>
+<blockquote>
+<p>"The Lord, The Lord God, merciful and gracious, longsuffering, and abundant in goodness and truth, keeping mercy for thousands, forgiving iniquity and transgression and sin, and that will by no means clear the guilty; visiting the iniquity of the fathers upon the children, and upon the children's children, unto the third and to the fourth generation" (<a href="https://www.blueletterbible.org/kjv/exo/34/6-7/s_84006" target="_blank" data-ref="Exodus 34:6-7">Exodus 34:6–7</a>).</p>
+</blockquote>
+<p>Jewish tradition identifies thirteen attributes of mercy (<em>middot harachamim</em>) in this passage. It became the foundational prayer of repentance in Jewish liturgy, recited on Yom Kippur and other solemn occasions. The passage is remarkable because it is God describing <em>Himself</em> — not Moses or a prophet describing God, but God proclaiming His own identity at the moment of covenant renewal.</p>
+<p>The structure places mercy first and judgment second. Mercy extends to thousands of generations; judgment reaches only to three or four. The weight is overwhelmingly on the side of compassion.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Moses' Shining Face (Exodus 34:29–35)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3><em>Qaran</em> — To Shine or Send Out Rays</h3>
+<p>When Moses descends from the second encounter on Sinai, "the skin of his face shone" (34:29). The Hebrew verb is <em>qaran</em> (<a href="https://www.blueletterbible.org/lexicon/h7160/kjv/wlc/0-1/" target="_blank" data-lexicon="to shine(Qal) to send out rays(Hiphil) to display or grow horns, be horned" data-strongs="H7160" data-translit="qāran" data-original="קָרַן" data-lang="hebrew" data-verse="">קָרַן</a>), from the same root as <em>qeren</em> (horn/ray). The Vulgate famously translated this as "horned" (<em>cornuta</em>), which is why Michelangelo's Moses has horns. The actual meaning is that Moses' face radiated light — the physical residue of prolonged exposure to divine glory.</p>
+<blockquote>
+<p>!<a href="https://upload.wikimedia.org/wikipedia/commons/7/70/%27Moses%27_by_Michelangelo_JBU160.jpg" target="_blank">Michelangelo's Moses (c. 1515), San Pietro in Vincoli, Rome. The horns on Moses' head reflect Jerome's Latin Vulgate translation of <em>qaran</em> as <em>cornuta</em> ("horned") rather than "shining." This mistranslation shaped centuries of European art and contributed to the persistent myth — applied to Jews and later to Latter-day Saints — that these groups literally have horns. The Hebrew is unambiguous: Moses' face <em>radiated light</em>.</a></p>
+<p><em>Michelangelo, Moses (c. 1515). Marble, San Pietro in Vincoli, Rome. Photo: <a href="https://commons.wikimedia.org/wiki/File:%27Moses%27_by_Michelangelo_JBU160.jpg" target="_blank">Wikimedia Commons</a>, CC BY-SA 3.0.</em></p>
+</blockquote>
+<p>The myth that Jews have horns — and the parallel accusation directed at Latter-day Saints — traces directly to this translation error. Jerome's 4th-century Vulgate rendered <em>qaran</em> as <em>cornuta facies</em> ("horned face"), and European artists from the 12th century onward depicted Moses with literal horns. Over centuries, the image detached from its biblical source and became an antisemitic trope: Jews were "horned" and therefore demonic. The same slander was applied to early Latter-day Saints, who were frequently accused of having horns — a charge rooted in the same medieval misreading of this passage. The irony is that the text describes the opposite of what the myth claims: Moses' face shone because he had been in the presence of God. The "horns" were rays of divine glory.</p>
+<p>The people are afraid. Moses veils his face when speaking with them and removes the veil when he returns to speak with the Lord (34:33–35). Paul later uses this image in <a href="https://www.blueletterbible.org/kjv/2co/3/7-18/s_1081007" target="_blank" data-ref="2 Corinthians 3:7-18">2 Corinthians 3:7–18</a>, contrasting the fading glory of the old covenant with the unveiled, permanent glory available through Christ.</p>
+<p>The theological point: proximity to God transforms. Moses did not generate the light. He reflected it. And the closer the encounter, the brighter the reflection.</p>
+<hr>
+<p><em>Supplemental Study Guide | CFM Corner | OT 2026</em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 3: SUPPLEMENTAL STUDY GUIDE: KEY PASSAGES -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">3. Supplemental Study Guide: Key Passages</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Passage 1: Bezalel Filled with the Spirit (Exodus 31:1–6)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text (KJV)</h3>
+<blockquote>
+<p>"And the Lord spake unto Moses, saying, See, I have called by name Bezaleel the son of Uri, the son of Hur, of the tribe of Judah: And I have filled him with the spirit of God, in wisdom, and in understanding, and in knowledge, and in all manner of workmanship" (<a href="https://www.blueletterbible.org/kjv/exo/31/1-3/s_81001" target="_blank" data-ref="Exodus 31:1-3">Exodus 31:1–3</a>).</p>
+</blockquote>
+<h3>Analysis</h3>
+<p>This is the first time in scripture that anyone is described as being filled with the Spirit of God for skilled work. The Hebrew phrase <em>ruach elohim</em> — the same Spirit that moved upon the face of the waters in <a href="https://www.blueletterbible.org/kjv/gen/1/2/s_1002" target="_blank" data-ref="Genesis 1:2">Genesis 1:2</a> — is here poured into a craftsman. Bezalel does not merely possess talent. He is divinely endowed with wisdom (<em>chokmah</em>), understanding (<em>tevunah</em>), and knowledge (<em>da'at</em>) — the same triad used of God's own creative work in <a href="https://www.blueletterbible.org/kjv/pro/3/19-20/s_631019" target="_blank" data-ref="Proverbs 3:19-20">Proverbs 3:19–20</a>.</p>
+<p>God also provides a partner: Oholiab of Dan, and "in the hearts of all that are wise hearted I have put wisdom" (31:6). The work of the tabernacle is communal, Spirit-directed, and spans the tribes.</p>
+<h3>LDS Connection</h3>
+<p>Latter-day Saint theology affirms that spiritual gifts include practical, creative, and intellectual capacities — not only prophecy and tongues but "the differences of administration" and every gift "given by the Spirit of God" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/46?lang=eng&id=p15-p26#p15" target="_blank" data-ref="D&C 46:15-26">D&C 46:15–26</a>; <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/10?lang=eng&id=p8-p18#p8" target="_blank" data-ref="Moroni 10:8-18">Moroni 10:8–18</a>). The calling of Bezalel teaches that building sacred space is itself a spiritual act, and the skill to do it is a gift of the Spirit.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 2: The Sabbath as Covenant Sign (Exodus 31:12–17)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text (KJV)</h3>
+<blockquote>
+<p>"Verily my sabbaths ye shall keep: for it is a sign between me and you throughout your generations; that ye may know that I am the Lord that doth sanctify you" (<a href="https://www.blueletterbible.org/kjv/exo/31/13/s_81013" target="_blank" data-ref="Exodus 31:13">Exodus 31:13</a>).</p>
+</blockquote>
+<h3>Analysis</h3>
+<p>The Sabbath command closes the entire tabernacle instruction block (<a href="https://www.blueletterbible.org/kjv/exo/25/1/s_75001" target="_blank" data-ref="Exodus 25">Exodus 25–31</a>). Its placement is significant: before the tabernacle is built, Israel is reminded that the Sabbath defines their identity. The Sabbath is called an <em>ot</em> (<a href="https://www.blueletterbible.org/lexicon/h226/kjv/wlc/0-1/" target="_blank" data-lexicon="sign, signal" data-strongs="H226" data-translit="&#x27;ôṯ" data-original="אוֹת" data-lang="hebrew" data-verse="">אוֹת</a>) — a sign — and a <em>berit olam</em> (בְּרִית עוֹלָם) — an everlasting covenant. It is not a suggestion. It is the mark of the covenant relationship itself.</p>
+<p>The phrase "that ye may know that I am the Lord that doth sanctify you" reveals the Sabbath's deepest function: it is God who makes Israel holy, not Israel's own effort. Sabbath rest is an act of trust — ceasing work to acknowledge that sanctification belongs to the Lord.</p>
+<h3>LDS Connection</h3>
+<p>Elder Russell M. Nelson's emphasis on the Sabbath as a "delight" (<a href="https://www.blueletterbible.org/kjv/isa/58/13/s_737013" target="_blank" data-ref="Isaiah 58:13">Isaiah 58:13</a>) and a personal sign of devotion to God echoes this covenantal framing: "My conduct and my attitude on the Sabbath constituted a sign between me and my Heavenly Father" (<a href="https://www.churchofjesuschrist.org/study/general-conference/2015/04/the-sabbath-is-a-delight?lang=eng" target="_blank">"The Sabbath Is a Delight,"</a> April 2015 General Conference). The Sabbath is not merely a rule about Sunday activity. It is the recurring sign that we belong to the God who sanctifies us.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 3: The Golden Calf (Exodus 32:1–6)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text (KJV)</h3>
+<blockquote>
+<p>"And when the people saw that Moses delayed to come down out of the mount, the people gathered themselves together unto Aaron, and said unto him, Up, make us gods, which shall go before us; for as for this Moses, the man that brought us up out of the land of Egypt, we wot not what is become of him" (<a href="https://www.blueletterbible.org/kjv/exo/32/1/s_82001" target="_blank" data-ref="Exodus 32:1">Exodus 32:1</a>).</p>
+</blockquote>
+<h3>Analysis</h3>
+<p>The trigger is Moses' absence. The people cannot see their mediator, and they cannot see their God. They respond by making something they <em>can</em> see. The calf is a crisis of patience and a crisis of faith in the unseen.</p>
+<p>Aaron's role is troubling. He does not resist. He collects the gold, fashions the calf, builds an altar, and proclaims a feast "to the Lord" (32:5). He attempts to fold idolatry into legitimate worship — a more dangerous sin than open rebellion, because it looks religious.</p>
+<p>The phrase "these be thy gods, O Israel, which brought thee up out of the land of Egypt" (32:4) attributes the Exodus — God's defining act — to an object made by human hands. This is the core sin: substituting the creation for the Creator, the visible for the invisible, the controllable for the sovereign.</p>
+<h3>LDS Connection</h3>
+<p>The golden calf pattern recurs whenever we substitute something we can manage for the God we cannot control. It may take the form of cultural Mormonism detached from personal revelation, political ideology that replaces prophetic counsel, or any practice where the outward form survives but the living presence has been replaced.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 4: Moses' Intercession (Exodus 32:30–32)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text (KJV)</h3>
+<blockquote>
+<p>"And Moses returned unto the Lord, and said, Oh, this people have sinned a great sin, and have made them gods of gold. Yet now, if thou wilt forgive their sin—; and if not, blot me, I pray thee, out of thy book which thou hast written" (<a href="https://www.blueletterbible.org/kjv/exo/32/31-32/s_82031" target="_blank" data-ref="Exodus 32:31-32">Exodus 32:31–32</a>).</p>
+</blockquote>
+<h3>Analysis</h3>
+<p>The broken sentence — "if thou wilt forgive their sin—" — is one of the most powerful moments in the Old Testament. Moses cannot finish the sentence. The alternative is too terrible. So he pivots: <em>if not, take me instead.</em> He offers his own life and his own eternal standing in exchange for the survival of the people.</p>
+<p>This is substitutionary intercession in its purest Old Testament form. Moses does not minimize the sin. He names it plainly. Then he stands in the gap.</p>
+<h3>LDS Connection</h3>
+<p>This passage is the clearest Old Testament type of Christ's intercessory role. Christ does not minimize our sin. He names it, bears it, and offers Himself in our place. "He ever liveth to make intercession" (<a href="https://www.blueletterbible.org/kjv/heb/7/25/s_1140025" target="_blank" data-ref="Hebrews 7:25">Hebrews 7:25</a>). Moses' offer foreshadows what Christ actually accomplished: the Mediator who was willing to be blotted out so that His people could live.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 5: "My Presence Shall Go with Thee" (Exodus 33:12–16)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text (KJV)</h3>
+<blockquote>
+<p>"And he said, My presence shall go with thee, and I will give thee rest. And he said unto him, If thy presence go not with me, carry us not up hence" (<a href="https://www.blueletterbible.org/kjv/exo/33/14-15/s_83014" target="_blank" data-ref="Exodus 33:14-15">Exodus 33:14–15</a>).</p>
+</blockquote>
+<h3>Analysis</h3>
+<p>After the golden calf, God proposes to send an angel but to withdraw His personal presence (33:2–3). Moses refuses the compromise. An angel is not enough. Guidance without presence is not the covenant Israel was promised. Moses' argument is striking: without God's presence, Israel is no different from any other nation. "For wherein shall it be known here that I and thy people have found grace in thy sight? Is it not in that thou goest with us?" (33:16).</p>
+<p>God relents. His presence will go with them. This is one of the great turning points in the Old Testament — the moment when the covenant, shattered by the calf, begins to be restored through the persistence of the mediator.</p>
+<h3>LDS Connection</h3>
+<p>Moses' insistence — <em>we would rather not go at all than go without You</em> — is the covenant heart of Latter-day Saint theology. The point of the journey is not the promised land. The point is the presence of God. A church without His Spirit, a temple without His glory, an ordinance without His power — these are the angel-without-presence compromises Moses refused.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 6: The Lord Proclaims His Name (Exodus 34:5–7)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text (KJV)</h3>
+<blockquote>
+<p>"And the Lord descended in the cloud, and stood with him there, and proclaimed the name of the Lord. And the Lord passed by before him, and proclaimed, The Lord, The Lord God, merciful and gracious, longsuffering, and abundant in goodness and truth, keeping mercy for thousands, forgiving iniquity and transgression and sin, and that will by no means clear the guilty" (<a href="https://www.blueletterbible.org/kjv/exo/34/5-7/s_84005" target="_blank" data-ref="Exodus 34:5-7">Exodus 34:5–7</a>).</p>
+</blockquote>
+<h3>Analysis</h3>
+<p>This is the single most important self-revelation of God's character in the Old Testament. It is God describing <em>Himself</em> — not Moses interpreting, not a prophet paraphrasing, but the Lord proclaiming His own name and nature. Jewish tradition identifies thirteen attributes of mercy in this passage, and it became the central text of repentance liturgy.</p>
+<p>The structure is deliberate. Mercy comes first: merciful, gracious, longsuffering, abundant in goodness and truth, forgiving. Justice follows: will by no means clear the guilty. Mercy extends to thousands of generations. Judgment reaches three or four. The weight is overwhelmingly on the side of compassion — but justice is not erased.</p>
+<p>The context makes this even more powerful. God proclaims this character <em>after</em> the golden calf, <em>at</em> the moment of covenant renewal. He does not say, "I am the God who punishes betrayal." He says, "I am the God who is merciful and gracious." His identity is revealed not in the moment of obedience but in the moment of failure and restoration.</p>
+<h3>LDS Connection</h3>
+<p>This passage is foundational for understanding the Atonement. Christ embodies every attribute named here — mercy, grace, patience, truth, justice, and forgiving love. The fact that God reveals this about Himself <em>after</em> Israel's worst failure teaches that the covenant is not sustained by human performance. It is sustained by divine character.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 7: Moses' Shining Face (Exodus 34:29–35)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Text (KJV)</h3>
+<blockquote>
+<p>"And it came to pass, when Moses came down from mount Sinai ... that Moses wist not that the skin of his face shone while he talked with him. And when Aaron and all the children of Israel saw Moses, behold, the skin of his face shone; and they were afraid to come nigh him" (<a href="https://www.blueletterbible.org/kjv/exo/34/29-30/s_84029" target="_blank" data-ref="Exodus 34:29-30">Exodus 34:29–30</a>).</p>
+</blockquote>
+<h3>Analysis</h3>
+<p>Moses' face radiates light — not his own light, but reflected glory from prolonged presence with God. The Hebrew verb <em>qaran</em> means to send out rays. Moses did not know his face was shining. He was not performing or displaying power. The transformation was involuntary — the natural result of sustained exposure to the divine presence.</p>
+<p>The people's fear is telling. They have just been through the golden calf crisis. They are freshly aware of their unworthiness. And now the mediator returns bearing visible evidence of God's glory. Moses veils his face when among the people and removes the veil when he returns to the Lord (34:33–35).</p>
+<h3>LDS Connection</h3>
+<p>Paul draws on this passage in <a href="https://www.blueletterbible.org/kjv/2co/3/7-18/s_1081007" target="_blank" data-ref="2 Corinthians 3:7-18">2 Corinthians 3:7–18</a>, arguing that the glory of the old covenant was real but fading, while the glory of the new covenant in Christ is unveiled and permanent. The veil is removed in Christ. For Latter-day Saints, the temple is the place where the veil thins and the glory becomes present again — the place where, like Moses, we come into God's presence and are changed.</p>
+<p>The principle is simple and profound: proximity to God transforms. We do not generate the light. We reflect it. And the closer the encounter, the brighter the reflection.</p>
+<hr>
+<p><em>Supplemental Study Guide | CFM Corner | OT 2026</em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 4: SUPPLEMENTAL STUDY GUIDE: WORD STUDIES -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">4. Supplemental Study Guide: Word Studies</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Word Study 1: רוּחַ אֱלֹהִים (<em>Ruach Elohim</em>) — "Spirit of God"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h7304/kjv/wlc/0-1/" target="_blank" data-lexicon="to be wide, be spacious, breathe(Qal) to breathe easily, be relieved(Pual) spacious (participle)" data-strongs="H7304" data-translit="rāvaḥ" data-original="רָוַח" data-lang="hebrew" data-verse="">ר-ו-ח</a> (<em>R-W-Ch</em>, wind, breath, spirit)</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/31/3/s_81003" target="_blank" data-ref="Exodus 31:3">Exodus 31:3</a> — "I have filled him with the spirit of God"</p>
+<h3>Meaning</h3>
+<p><em>Ruach</em> is one of the richest words in Hebrew. It can mean wind, breath, or spirit depending on context. When paired with <em>elohim</em>, it denotes the active, empowering presence of God Himself. In <a href="https://www.blueletterbible.org/kjv/gen/1/2/s_1002" target="_blank" data-ref="Genesis 1:2">Genesis 1:2</a>, the <em>ruach elohim</em> moved upon the face of the waters. In <a href="https://www.blueletterbible.org/kjv/exo/31/3/s_81003" target="_blank" data-ref="Exodus 31:3">Exodus 31:3</a>, the same Spirit fills a craftsman with skill.</p>
+<h3>Theological Significance</h3>
+<p>The Spirit that creates worlds also empowers artisans. There is no hierarchy in which "spiritual" gifts rank above practical ones. Bezalel's ability to work gold, engrave stone, and weave textiles is as much a gift of the Spirit as Moses' ability to prophesy. Both serve the same purpose: bringing God's dwelling into being.</p>
+<h3>LDS Application</h3>
+<p><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/46?lang=eng&id=p11-p12#p11" target="_blank" data-ref="D&C 46:11-12">D&C 46:11–12</a> teaches that "to every man is given a gift by the Spirit of God" and that these gifts are given "for the benefit of the children of God." Bezalel's calling is a reminder that building Zion requires the full range of Spirit-given capacities — not only preaching and prophecy, but design, construction, music, administration, care, and a full host of talents and gifts.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><em>ruach</em> (<a href="https://www.blueletterbible.org/lexicon/h7308/kjv/wlc/0-1/" target="_blank" data-lexicon="spirit, windwindspiritof manseat of the mind" data-strongs="H7308" data-translit="rûaḥ" data-original="רוּחַ" data-lang="hebrew" data-verse="">רוּחַ</a>) — "wind, breath, spirit"</td><td><a href="https://www.blueletterbible.org/lexicon/h7307/kjv/wlc/0-1/" target="_blank" data-lexicon="wind, breath, mind, spirit breath wind of heaven quarter (of wind), side breath of air air, gas vain, empty thing spi..." data-strongs="H7307" data-translit="rûaḥ" data-original="רוּחַ" data-lang="hebrew" data-verse="">BLB H7307</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g4151/kjv/wlc/0-1/" target="_blank" data-lexicon="the third person of the triune God, the Holy Spirit, coequal, coeternal with the Father and the Son sometimes referre..." data-strongs="G4151" data-translit="pneuma" data-original="πνεῦμα" data-lang="greek" data-verse="">πνεῦμα</a> (<em>pneuma</em>) — spirit, breath, wind; cf. πνέω (<em>pneō</em>), to blow</td><td><a href="https://www.blueletterbible.org/lexicon/g4151/kjv/tr/0-1/" target="_blank" data-lexicon="the third person of the triune God, the Holy Spirit, coequal, coeternal with the Father and the Son sometimes referre..." data-strongs="G4151" data-translit="pneuma" data-original="πνεῦμα" data-lang="greek" data-verse="">BLB G4151</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><em>spiritus</em> — breath, spirit; from <em>spirare</em> (to breathe)</td><td><a href="https://logeion.uchicago.edu/spiritus" target="_blank">Logeion: spiritus</a></td></tr>
+<tr><td><strong>English</strong></td><td><em>spirit</em> — from Latin <em>spiritus</em>; <em>ghost</em> — from OE <em>gāst</em>, breath, spirit</td><td><a href="https://www.merriam-webster.com/dictionary/spirit" target="_blank">Merriam-Webster: spirit</a> · <a href="https://www.etymonline.com/word/spirit" target="_blank">Etymonline: spirit</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 2: <em>Egel</em> (עֵגֶל) — "Calf"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h5695/kjv/wlc/0-1/" target="_blank" data-lexicon="calf, bull-calf" data-strongs="H5695" data-translit="ʿēḡel" data-original="עֵגֶל" data-lang="hebrew" data-verse="">ע-ג-ל</a> (<em>Ayin-Gimel-Lamed</em>, to be round, to roll)</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/32/4/s_82004" target="_blank" data-ref="Exodus 32:4">Exodus 32:4</a> — "he ... made it a molten calf"</p>
+<h3>Meaning</h3>
+<p><em>Egel</em> refers to a young bull or calf. The root suggests roundness or rolling — possibly evoking the rounded, well-fed form of a young bovine. In the ancient Near East, the bull symbolized strength, fertility, and divine power. The diminutive form (<em>egel</em> rather than <em>par</em>, a mature bull) may carry a note of contempt in the narrator's voice: Israel traded the Creator for a baby cow.</p>
+<h3>Theological Significance</h3>
+<p>The calf is not merely an aesthetic error. It is a theological substitution — replacing the invisible, sovereign God with a visible, controllable image. The sin of <a href="https://www.blueletterbible.org/kjv/exo/32/1/s_82001" target="_blank" data-ref="Exodus 32">Exodus 32</a> is not atheism but idolatry: believing in God while misrepresenting Him.</p>
+<h3>LDS Application</h3>
+<p>President Spencer W. Kimball's address <a href="https://www.churchofjesuschrist.org/study/ensign/1976/06/the-false-gods-we-worship?lang=eng" target="_blank">"The False Gods We Worship"</a> (<em>Ensign</em>, June 1976) drew directly on the golden calf pattern, identifying modern idols as anything — career, wealth, power, ideology — that we place where God alone should stand: "Whatever thing a man sets his heart and his trust in most is his god; and if his god doesn't also happen to be the true and living God of Israel, that man is laboring in idolatry."</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><em>egel</em> (<a href="https://www.blueletterbible.org/lexicon/h5695/kjv/wlc/0-1/" target="_blank" data-lexicon="calf, bull-calf" data-strongs="H5695" data-translit="ʿēḡel" data-original="עֵגֶל" data-lang="hebrew" data-verse="">עֵגֶל</a>) — "calf, young bull"</td><td><a href="https://www.blueletterbible.org/lexicon/h5695/kjv/wlc/0-1/" target="_blank" data-lexicon="calf, bull-calf" data-strongs="H5695" data-translit="ʿēḡel" data-original="עֵגֶל" data-lang="hebrew" data-verse="">BLB H5695</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td>μόσχος (<em>moschos</em>) — calf, young bull; cf. μοσχοποιέω (<em>moschopoieō</em>), to make a calf (<a href="https://www.blueletterbible.org/kjv/act/7/41/s_1025041" target="_blank" data-ref="Acts 7:41">Acts 7:41</a>)</td><td><a href="https://www.blueletterbible.org/lexicon/g3448/kjv/tr/0-1/" target="_blank" data-lexicon="a tender juicy shoota sprout, of a plant or treeoffspringof men: a boy or a girl, esp. if fresh and delicateof animal..." data-strongs="G3448" data-translit="moschos" data-original="μόσχος" data-lang="greek" data-verse="">BLB G3448</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><em>vitulus</em> — calf; <em>vitulus aureus</em> (golden calf)</td><td><a href="https://logeion.uchicago.edu/vitulus" target="_blank">Logeion: vitulus</a></td></tr>
+<tr><td><strong>English</strong></td><td><em>calf</em> — from OE <em>cealf</em>; <em>idol</em> — from Greek <a href="https://www.blueletterbible.org/lexicon/g1497/kjv/wlc/0-1/" target="_blank" data-lexicon="an image, likeness i.e. whatever represents the form of an object, either real or imaginary used of the shades of the..." data-strongs="G1497" data-translit="eidōlon" data-original="εἴδωλον" data-lang="greek" data-verse="">εἴδωλον</a> (<em>eidōlon</em>), image, phantom</td><td><a href="https://www.merriam-webster.com/dictionary/idol" target="_blank">Merriam-Webster: idol</a> · <a href="https://www.etymonline.com/word/idol" target="_blank">Etymonline: idol</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 3: <em>Panim</em> (פָּנִים) — "Face, Presence"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h3312/kjv/wlc/0-1/" target="_blank" data-lexicon="Jephunneh = &quot;He will be facing&quot; a Kenezite and father of Caleb the spy from the tribe of Judah son of Jether and desc..." data-strongs="H3312" data-translit="yᵊp̄unnê" data-original="פָּנָה" data-lang="hebrew" data-verse="">פ-נ-ה</a> (<em>P-N-H</em>, to turn, to face)</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/33/11/s_83011" target="_blank" data-ref="Exodus 33:11">Exodus 33:11, 14, 15, 20, 23; 34:29, 33–35</a></p>
+<h3>Meaning</h3>
+<p><em>Panim</em> is always grammatically plural in Hebrew — literally "faces." It means face, presence, or the front of something. When used of God, it denotes His personal, immediate presence — not a delegated representative, not an angel, but God Himself turned toward His people.</p>
+<h3>Usage in Exodus 33–34</h3>
+<table class="info-table">
+<tr><th>Verse</th><th>Usage</th></tr>
+<tr><td>33:11</td><td>"The Lord spake unto Moses face to face (<em>panim el panim</em>)"</td></tr>
+<tr><td>33:14</td><td>"My presence (<em>panai</em>) shall go with thee"</td></tr>
+<tr><td>33:15</td><td>"If thy presence (<em>panekha</em>) go not with me, carry us not up hence"</td></tr>
+<tr><td>33:20</td><td>"Thou canst not see my face (<em>panai</em>): for there shall no man see me, and live"</td></tr>
+<tr><td>33:23</td><td>"Thou shalt see my back parts: but my face (<em>panai</em>) shall not be seen"</td></tr>
+<tr><td>34:29</td><td>"The skin of his face (<em>panav</em>) shone"</td></tr>
+</table>
+<p>The word appears more densely in these two chapters than almost anywhere else in scripture. The entire drama of <a href="https://www.blueletterbible.org/kjv/exo/33/1/s_83001" target="_blank" data-ref="Exodus 33">Exodus 33–34</a> is a drama of <em>panim</em> — the face of God turned toward, turned away, longed for, partially revealed, and reflected on Moses' own face.</p>
+<h3>LDS Application</h3>
+<p>When Moses insists on God's <em>panim</em> rather than an angel, he is insisting on the real thing. Latter-day Saints affirm the same: we seek not merely God's gifts, blessings, or guidance at a distance, but His actual presence — in the temple, through the Holy Ghost, and ultimately face to face.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><em>panim</em> (<a href="https://www.blueletterbible.org/lexicon/h6440/kjv/wlc/0-1/" target="_blank" data-lexicon="face, presence" data-strongs="H6440" data-translit="panim" data-original="פָּנִים" data-lang="hebrew" data-verse="Genesis 32:30">פָּנִים</a>) — "face, presence, front" (always plural)</td><td><a href="https://www.blueletterbible.org/lexicon/h6440/kjv/wlc/0-1/" target="_blank" data-lexicon="face, presence" data-strongs="H6440" data-translit="panim" data-original="פָּנִים" data-lang="hebrew" data-verse="Genesis 32:30">BLB H6440</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td>πρόσωπον (<em>prosōpon</em>) — face, countenance, presence; from πρός (<em>pros</em>), toward + ὤψ (<em>ōps</em>), eye</td><td><a href="https://www.blueletterbible.org/lexicon/g4383/kjv/tr/0-1/" target="_blank" data-lexicon="the facethe front of the human headcountenance, lookthe face so far forth as it is the organ of sight, and (by it var..." data-strongs="G4383" data-translit="prosōpon" data-original="πρόσωπον" data-lang="greek" data-verse="">BLB G4383</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><em>facies</em> — face, appearance, form; from <em>facere</em> (to make, to do)</td><td><a href="https://logeion.uchicago.edu/facies" target="_blank">Logeion: facies</a></td></tr>
+<tr><td><strong>English</strong></td><td><em>face</em> — from Latin <em>facies</em>; <em>presence</em> — from Latin <em>praesentia</em>, from <em>praesens</em> (being at hand)</td><td><a href="https://www.merriam-webster.com/dictionary/presence" target="_blank">Merriam-Webster: presence</a> · <a href="https://www.etymonline.com/word/face" target="_blank">Etymonline: face</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 4: חַנּוּן וְרַחוּם (<em>Channun v'Rachum</em>) — "Gracious and Merciful"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Roots:</strong> <a href="https://www.blueletterbible.org/lexicon/h2583/kjv/wlc/0-1/" target="_blank" data-lexicon="to decline, incline, encamp, bend down, lay siege against (Qal) to decline to encamp" data-strongs="H2583" data-translit="ḥānâ" data-original="חָנַן" data-lang="hebrew" data-verse="">ח-נ-ן</a> (<em>Ch-N-N</em>, to be gracious, to show favor) + <a href="https://www.blueletterbible.org/lexicon/h3395/kjv/wlc/0-1/" target="_blank" data-lexicon="Jeroham = &quot;showing pity&quot; father of Elkanah and grandfather of Samuel of the house of Kohath a Benjamite and the found..." data-strongs="H3395" data-translit="yᵊrōḥām" data-original="רָחַם" data-lang="hebrew" data-verse="">ר-ח-ם</a> (<em>R-Ch-M</em>, to have compassion; related to <em>rechem</em>, womb)</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/34/6/s_84006" target="_blank" data-ref="Exodus 34:6">Exodus 34:6</a> — "The Lord God, merciful and gracious"</p>
+<h3>Meaning</h3>
+<p><em>Rachum</em> (merciful) derives from <em>rechem</em> — the womb. The mercy of God is womb-deep, maternal, visceral. It is not a policy decision; it is the kind of compassion a mother feels for the child she has carried.</p>
+<p><em>Channun</em> (gracious) means to show favor freely — not earned, not owed, but given. Grace in Hebrew is not a theological abstraction. It is the active choice of a powerful being to show kindness to one who has no claim on it.</p>
+<h3>Theological Significance</h3>
+<p>These two words open God's self-description at the most critical moment in the covenant story. After Israel's worst betrayal, God's first word about Himself is not <em>just</em> or <em>holy</em> or <em>powerful</em>. It is <em>merciful and gracious</em>. This is not a concession. It is His identity.</p>
+<h3>LDS Application</h3>
+<p>The Book of Mormon echoes this pairing throughout: "the Lord is merciful unto all who will, in the sincerity of their hearts, call upon his holy name" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/38?lang=eng&id=p4#p4" target="_blank" data-ref="Alma 38:4">Alma 38:4</a>; cf. <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/28?lang=eng&id=p4#p4" target="_blank" data-ref="Mosiah 28:4">Mosiah 28:4</a>; <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/32?lang=eng&id=p22#p22" target="_blank" data-ref="Alma 32:22">Alma 32:22</a>). Christ's character is the character proclaimed on Sinai.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><em>channun</em> (חַנּוּן) — "gracious," from <em>chanan</em> (<a href="https://www.blueletterbible.org/lexicon/h2583/kjv/wlc/0-1/" target="_blank" data-lexicon="to decline, incline, encamp, bend down, lay siege against (Qal) to decline to encamp" data-strongs="H2583" data-translit="ḥānâ" data-original="חָנַן" data-lang="hebrew" data-verse="">חנן</a>), to show favor; <em>rachum</em> (<a href="https://www.blueletterbible.org/lexicon/h7350/kjv/wlc/0-1/" target="_blank" data-lexicon="adjective remote, far, distant, distant lands, distant ones of distance, time masculine noun distance from a distance..." data-strongs="H7350" data-translit="rāḥôq" data-original="רַחוּם" data-lang="hebrew" data-verse="">רַחוּם</a>) — "merciful," from <em>rechem</em> (<a href="https://www.blueletterbible.org/lexicon/h7358/kjv/wlc/0-1/" target="_blank" data-lexicon="wombwombwomb-man, woman-slave, woman, two women" data-strongs="H7358" data-translit="reḥem" data-original="רֶחֶם" data-lang="hebrew" data-verse="">רֶחֶם</a>), womb</td><td><a href="https://www.blueletterbible.org/lexicon/h2587/kjv/wlc/0-1/" target="_blank" data-lexicon="gracious" data-strongs="H2587" data-translit="ḥannûn" data-original="חָנַן" data-lang="hebrew" data-verse="">BLB H2587</a> · <a href="https://www.blueletterbible.org/lexicon/h7349/kjv/wlc/0-1/" target="_blank" data-lexicon="compassionatealways of God with one possible exception" data-strongs="H7349" data-translit="raḥûm" data-original="רַחוּם" data-lang="hebrew" data-verse="">BLB H7349</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td>οἰκτίρμων (<em>oiktirmōn</em>) — compassionate; ἐλεήμων (<em>eleēmōn</em>) — merciful; <a href="https://www.blueletterbible.org/lexicon/g5485/kjv/wlc/0-1/" target="_blank" data-lexicon="gracethat which affords joy, pleasure, delight, sweetness, charm, loveliness: grace of speechgood will, loving-kindne..." data-strongs="G5485" data-translit="charis" data-original="χάρις" data-lang="greek" data-verse="">χάρις</a> (<em>charis</em>) — grace, favor</td><td><a href="https://www.blueletterbible.org/lexicon/g3629/kjv/tr/0-1/" target="_blank" data-lexicon="merciful" data-strongs="G3629" data-translit="oiktirmōn" data-original="οἰκτίρμων" data-lang="greek" data-verse="">BLB G3629</a> · <a href="https://www.blueletterbible.org/lexicon/g5485/kjv/tr/0-1/" target="_blank" data-lexicon="gracethat which affords joy, pleasure, delight, sweetness, charm, loveliness: grace of speechgood will, loving-kindne..." data-strongs="G5485" data-translit="charis" data-original="χάρις" data-lang="greek" data-verse="">BLB G5485</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><em>misericors</em> — merciful, compassionate (from <em>miser</em> + <em>cor</em>, "heart for the wretched"); <em>clemens</em> — gentle, merciful</td><td><a href="https://logeion.uchicago.edu/misericors" target="_blank">Logeion: misericors</a></td></tr>
+<tr><td><strong>English</strong></td><td><em>mercy</em> — from Latin <em>merces</em>, reward, later "compassion"; <em>grace</em> — from Latin <em>gratia</em>, favor, thanks</td><td><a href="https://www.merriam-webster.com/dictionary/mercy" target="_blank">Merriam-Webster: mercy</a> · <a href="https://www.etymonline.com/word/grace" target="_blank">Etymonline: grace</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 5: <em>Kavod</em> (כָּבוֹד) — "Glory, Weight, Honor"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h3513/kjv/wlc/0-1/" target="_blank" data-lexicon="to be heavy, be weighty, be grievous, be hard, be rich, be honourable, be glorious, be burdensome, be honoured(Qal)to..." data-strongs="H3513" data-translit="kāḇaḏ" data-original="כָּבַד" data-lang="hebrew" data-verse="">כ-ב-ד</a> (<em>K-B-D</em>, to be heavy, weighty)</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/33/18/s_83018" target="_blank" data-ref="Exodus 33:18">Exodus 33:18, 22; 34:29</a></p>
+<h3>Meaning</h3>
+<p><em>Kavod</em> literally means heaviness or weight. When applied to God, it denotes the visible, tangible manifestation of His presence — the weight of who He is made perceptible. The <em>kavod</em> fills the tabernacle as cloud and fire (<a href="https://www.blueletterbible.org/kjv/exo/40/34/s_90034" target="_blank" data-ref="Exodus 40:34">Exodus 40:34</a>). Moses asks to see it (33:18). It is what shines on his face afterward (34:29).</p>
+<h3>Theological Significance</h3>
+<p>God's glory is not decorative. It is substantial — heavy, real, consequential. To encounter it is to be changed. The <em>kavod</em> cannot be domesticated or reduced to an idea. It is the presence of the living God, and those who encounter it do not remain the same.</p>
+<h3>LDS Application</h3>
+<p><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/93?lang=eng&id=p36#p36" target="_blank" data-ref="D&C 93:36">D&C 93:36</a> teaches that "the glory of God is intelligence, or, in other words, light and truth." The temple is described as the place where God's glory dwells. Moses' shining face is a type of what the temple promises: encounter with the <em>kavod</em>, and transformation as a result.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><em>kavod</em> (כָּבוֹד) — "glory, weight, honor," from <em>kavad</em> (<a href="https://www.blueletterbible.org/lexicon/h3513/kjv/wlc/0-1/" target="_blank" data-lexicon="to be heavy, be weighty, be grievous, be hard, be rich, be honourable, be glorious, be burdensome, be honoured(Qal)to..." data-strongs="H3513" data-translit="kāḇaḏ" data-original="כָּבַד" data-lang="hebrew" data-verse="">כבד</a>), to be heavy</td><td><a href="https://www.blueletterbible.org/lexicon/h3519/kjv/wlc/0-1/" target="_blank" data-lexicon="glory, honour, glorious, abundance abundance, riches honour, splendour, glory honour, dignity honour, reputation hono..." data-strongs="H3519" data-translit="kāḇôḏ" data-original="כָּבַד" data-lang="hebrew" data-verse="">BLB H3519</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g1391/kjv/wlc/0-1/" target="_blank" data-lexicon="opinion, judgment, view opinion, estimate, whether good or bad concerning someone in the NT always a good opinion con..." data-strongs="G1391" data-translit="doxa" data-original="δόξα" data-lang="greek" data-verse="">δόξα</a> (<em>doxa</em>) — glory, splendor, honor; from δοκέω (<em>dokeō</em>), to seem, to appear</td><td><a href="https://www.blueletterbible.org/lexicon/g1391/kjv/tr/0-1/" target="_blank" data-lexicon="opinion, judgment, view opinion, estimate, whether good or bad concerning someone in the NT always a good opinion con..." data-strongs="G1391" data-translit="doxa" data-original="δόξα" data-lang="greek" data-verse="">BLB G1391</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><em>gloria</em> — glory, fame, renown</td><td><a href="https://logeion.uchicago.edu/gloria" target="_blank">Logeion: gloria</a></td></tr>
+<tr><td><strong>English</strong></td><td><em>glory</em> — from Latin <em>gloria</em>; <em>weight</em> — from OE <em>gewiht</em>, from PIE <em>wegh-</em> (to carry, to move)</td><td><a href="https://www.merriam-webster.com/dictionary/glory" target="_blank">Merriam-Webster: glory</a> · <a href="https://www.etymonline.com/word/glory" target="_blank">Etymonline: glory</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 6: <em>Qaran</em> (קָרַן) — "To Shine, To Send Out Rays"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h7160/kjv/wlc/0-1/" target="_blank" data-lexicon="to shine(Qal) to send out rays(Hiphil) to display or grow horns, be horned" data-strongs="H7160" data-translit="qāran" data-original="קָרַן" data-lang="hebrew" data-verse="">ק-ר-ן</a> (<em>Q-R-N</em>, horn, ray)</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/exo/34/29-30/s_84029" target="_blank" data-ref="Exodus 34:29-30">Exodus 34:29–30, 35</a></p>
+<h3>Meaning</h3>
+<p><em>Qaran</em> shares its root with <em>qeren</em> (horn). The verb means to send out rays or beams of light — like horns of light radiating from a source. The Vulgate's translation as "horned" (<em>cornuta</em>) led to centuries of artistic depictions of a horned Moses, but the Hebrew clearly describes radiance, not anatomy.</p>
+<h3>Theological Significance</h3>
+<p>Moses' face does not glow from within. It radiates light absorbed from without — from the presence of God. He is a reflector, not a source. And he does not know it is happening (34:29). The transformation is involuntary, unself-conscious, and entirely a result of proximity. The closer the encounter, the brighter the reflection.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><em>qaran</em> (<a href="https://www.blueletterbible.org/lexicon/h7160/kjv/wlc/0-1/" target="_blank" data-lexicon="to shine(Qal) to send out rays(Hiphil) to display or grow horns, be horned" data-strongs="H7160" data-translit="qāran" data-original="קָרַן" data-lang="hebrew" data-verse="">קָרַן</a>) — "to shine, send out rays," from <em>qeren</em> (<a href="https://www.blueletterbible.org/lexicon/h7162/kjv/wlc/0-1/" target="_blank" data-lexicon="hornas musical instrumentsymbolic (in visions)of an animal" data-strongs="H7162" data-translit="qeren" data-original="קֶרֶן" data-lang="hebrew" data-verse="">קֶרֶן</a>), horn/ray</td><td><a href="https://www.blueletterbible.org/lexicon/h7160/kjv/wlc/0-1/" target="_blank" data-lexicon="to shine(Qal) to send out rays(Hiphil) to display or grow horns, be horned" data-strongs="H7160" data-translit="qāran" data-original="קָרַן" data-lang="hebrew" data-verse="">BLB H7160</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td>δεδόξασται (<em>dedoxastai</em>) — "was glorified"; the LXX renders the shining face as <em>glory</em>, not horns</td><td><a href="https://www.blueletterbible.org/lexicon/g1392/kjv/tr/0-1/" target="_blank" data-lexicon="to think, suppose, be of opinion to praise, extol, magnify, celebrate to honour, do honour to, hold in honour to make..." data-strongs="G1392" data-translit="doxazō" data-original="δοξάζω" data-lang="greek" data-verse="">BLB G1392</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><em>cornuta</em> — "horned," from <em>cornu</em> (horn); Jerome's mistranslation that shaped centuries of art</td><td><a href="https://logeion.uchicago.edu/cornu" target="_blank">Logeion: cornu</a></td></tr>
+<tr><td><strong>English</strong></td><td><em>radiant</em> — from Latin <em>radiare</em>, to beam, to shine; <em>horn</em> — from OE <em>horn</em>, from PIE <em>ker-</em> (horn, head)</td><td><a href="https://www.merriam-webster.com/dictionary/radiant" target="_blank">Merriam-Webster: radiant</a> · <a href="https://www.etymonline.com/word/horn" target="_blank">Etymonline: horn</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study Summary Table</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Hebrew</th><th>Transliteration</th><th>Meaning</th><th>Key Verse</th></tr>
+<tr><td>רוּחַ אֱלֹהִים</td><td>Ruach Elohim</td><td>Spirit of God</td><td><a href="https://www.blueletterbible.org/kjv/exo/31/3/s_81003" target="_blank" data-ref="Exodus 31:3">Ex 31:3</a></td></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h5695/kjv/wlc/0-1/" target="_blank" data-lexicon="calf, bull-calf" data-strongs="H5695" data-translit="ʿēḡel" data-original="עֵגֶל" data-lang="hebrew" data-verse="">עֵגֶל</a></td><td>Egel</td><td>Calf</td><td><a href="https://www.blueletterbible.org/kjv/exo/32/4/s_82004" target="_blank" data-ref="Exodus 32:4">Ex 32:4</a></td></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h6440/kjv/wlc/0-1/" target="_blank" data-lexicon="face, presence" data-strongs="H6440" data-translit="panim" data-original="פָּנִים" data-lang="hebrew" data-verse="Genesis 32:30">פָּנִים</a></td><td>Panim</td><td>Face, presence</td><td><a href="https://www.blueletterbible.org/kjv/exo/33/11/s_83011" target="_blank" data-ref="Exodus 33:11">Ex 33:11, 14, 20</a></td></tr>
+<tr><td>חַנּוּן וְרַחוּם</td><td>Channun v'Rachum</td><td>Gracious and merciful</td><td><a href="https://www.blueletterbible.org/kjv/exo/34/6/s_84006" target="_blank" data-ref="Exodus 34:6">Ex 34:6</a></td></tr>
+<tr><td>כָּבוֹד</td><td>Kavod</td><td>Glory, weight</td><td><a href="https://www.blueletterbible.org/kjv/exo/33/18/s_83018" target="_blank" data-ref="Exodus 33:18">Ex 33:18; 34:29</a></td></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h7160/kjv/wlc/0-1/" target="_blank" data-lexicon="to shine(Qal) to send out rays(Hiphil) to display or grow horns, be horned" data-strongs="H7160" data-translit="qāran" data-original="קָרַן" data-lang="hebrew" data-verse="">קָרַן</a></td><td>Qaran</td><td>To shine, send out rays</td><td><a href="https://www.blueletterbible.org/kjv/exo/34/29/s_84029" target="_blank" data-ref="Exodus 34:29">Ex 34:29</a></td></tr>
+</table>
+<hr>
+<p><em>Supplemental Study Guide | CFM Corner | OT 2026</em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 5: SUPPLEMENTAL STUDY GUIDE: JEWISH PERSPECTIVE -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">5. Supplemental Study Guide: Jewish Perspective</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>1. The Golden Calf in Jewish Tradition</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Great Sin</h3>
+<p>The golden calf (<em>chet ha-egel</em>) is one of the most discussed events in all of rabbinic literature. The Talmud, Midrash, and later commentators returned to it again and again — not to excuse it but to understand how a people who had witnessed the Red Sea, the manna, and the voice of God at Sinai could fall so quickly.</p>
+<p><strong>Rashi (11th century)</strong> notes that the timing was critical. The people expected Moses to return after forty days. When they miscounted and believed the fortieth day had passed, they panicked. Rashi's point is not that the miscounting justified idolatry, but that the sin began with impatience — and impatience with God's timing remains one of the most common origins of spiritual failure.</p>
+<p><strong>The Talmud (Sanhedrin 102a)</strong> records a striking teaching: Rabbi Yehuda said in Rav's name that the Israelites knew full well that an idol has no power. Their sin was not genuine belief in the calf but a desire to "permit themselves forbidden sexual relations" under cover of a religious festival. This reading treats the calf as a pretext rather than a theology — the outward form of worship used to justify the inner desire to abandon restraint.</p>
+<h3>Aaron's Role</h3>
+<p>Aaron's participation in the golden calf is one of the most uncomfortable passages for Jewish commentators. The Midrash (<em>Leviticus Rabbah</em> 10:3) offers a defense: Aaron saw that Hur (his nephew, according to tradition) had tried to resist the mob and was killed. Fearing the people would commit the even greater sin of killing a priest, Aaron temporized — buying time until Moses could return. The rabbis do not call this heroism. But they resist calling it simple cowardice.</p>
+<p>The LDS reader may recognize a familiar tension: leaders who accommodate rather than confront sometimes prevent immediate catastrophe while enabling longer-term damage. Aaron's story is cautionary, not exemplary.</p>
+<h3>LDS Connection</h3>
+<p>The golden calf is not ancient history — it is a recurring pattern. The Book of Mormon describes the same cycle: a people who witness miracles, receive covenant promises, and then turn to substitutes when God's timing does not match their expectations. Nephi warned that "the guilty taketh the truth to be hard" (1 Ne 16:2), and <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/hel/12?lang=eng&id=p2#p2" target="_blank" data-ref="Helaman 12:2">Helaman 12:2</a> observes that "in the days of their peace" the people "do harden their hearts, and do forget the Lord their God." The rabbinic insight that the sin began with impatience — not with atheism — maps directly onto Latter-day Saint experience. The greatest spiritual risks often follow the greatest spiritual gifts.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>2. Breaking the Tablets</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>A Deliberate Act</h3>
+<p>The Talmud (<em>Shabbat 87a</em>) records that Moses broke the tablets deliberately and that God approved. Rabbi Meir taught that God said to Moses, "Well done that you broke them" (<em>yishar kochakha she-shibarta</em>). The reasoning: if an unfaithful bride has already violated the marriage covenant, what good is the marriage document? Moses destroyed the evidence so that Israel would be judged for a lesser offense — breaking the law in ignorance rather than in the face of a written, witnessed contract.</p>
+<p>This is a legal and pastoral insight, not merely a dramatic gesture. The mediator protects the people even in the act of acknowledging their failure.</p>
+<h3>The Broken Tablets Preserved</h3>
+<p>A remarkable tradition (<em>Bava Batra</em> 14b) holds that both the broken first tablets and the intact second tablets were placed together inside the Ark of the Covenant. Israel carried both: the record of their failure and the record of their restoration, side by side, in the holiest place. The message: the broken past is not erased or hidden. It is placed at the center, because the renewal only has meaning in light of what was broken.</p>
+<h3>LDS Connection</h3>
+<p>The image of both tablets — broken and whole — carried together in the Ark is one of the most powerful types of the Atonement in all of rabbinic literature. Christ does not erase our history of failure. He redeems it. The sacrament prayers ask that we "always remember him" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/20?lang=eng&id=p77#p77" target="_blank" data-ref="D&C 20:77">D&C 20:77</a>) — not that we forget what we were, but that we carry both the memory of our brokenness and the reality of our renewal into the holiest place. Elder Jeffrey R. Holland taught that "it is not possible for you to sink lower than the infinite light of Christ's Atonement shines" (<a href="https://www.churchofjesuschrist.org/study/general-conference/2012/04/the-laborers-in-the-vineyard?lang=eng" target="_blank">"The Laborers in the Vineyard,"</a> April 2012 General Conference). The broken tablets inside the Ark say the same thing: your worst moment is not excluded from the presence of God. It is carried there.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>3. The Thirteen Attributes of Mercy (<em>Middot HaRachamim</em>)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Exodus 34:6–7 as Liturgical Foundation</h3>
+<p>Jewish tradition identifies thirteen divine attributes in <a href="https://www.blueletterbible.org/kjv/exo/34/6-7/s_84006" target="_blank" data-ref="Exodus 34:6-7">Exodus 34:6–7</a>. The exact count varies slightly among authorities, but the passage is universally treated as the foundational text of divine mercy. It is recited on Yom Kippur, on fast days, and whenever the Torah ark is opened for penitential prayer.</p>
+<p>The <strong>Talmud (Rosh Hashanah 17b)</strong> teaches that God wrapped Himself in a <em>tallit</em> (prayer shawl) like a prayer leader and showed Moses the order of prayer, saying: "Whenever Israel sins, let them perform before Me this order of prayer, and I will forgive them." The image is extraordinary: God Himself models repentance liturgy, teaching Moses how the people should approach Him after failure.</p>
+<h3>The Weight of Mercy over Judgment</h3>
+<p>The passage extends mercy to "thousands" (of generations) and limits judgment to "the third and fourth generation." Commentators note that the ratio is not merely quantitative but qualitative: mercy is God's default posture. Judgment is real but bounded. This is not because God is indifferent to sin but because His nature — as He Himself declares — leads with compassion.</p>
+<h3>LDS Connection</h3>
+<p>The Thirteen Attributes are not cited by name in Restoration scripture, but their substance pervades it. <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/42?lang=eng" target="_blank" data-ref="Alma 42">Alma 42</a> wrestles with exactly this tension between mercy and justice. <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/7?lang=eng&id=p48#p48" target="_blank" data-ref="Moroni 7:48">Moroni 7:48</a> prays for the "pure love of Christ" — the same womb-deep compassion (<em>rachamim</em>) that opens God's self-description in <a href="https://www.blueletterbible.org/kjv/exo/34/1/s_84001" target="_blank" data-ref="Exodus 34">Exodus 34</a>.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>4. The Mishkan and Forgiveness</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Why Build the Tabernacle After the Calf?</h3>
+<p>A significant strand of rabbinic interpretation (associated with Rashi and Ramban) reads the <em>entire</em> tabernacle project as God's response to the golden calf — not merely the instructions that precede it (<a href="https://www.blueletterbible.org/kjv/exo/25/1/s_75001" target="_blank" data-ref="Exodus 25">Exodus 25–31</a>) but the construction that follows it (<a href="https://www.blueletterbible.org/kjv/exo/35/1/s_85001" target="_blank" data-ref="Exodus 35">Exodus 35–40</a>). In this reading, the tabernacle is not Plan A. It is Plan B — a concession to a people who need a tangible, visible center for God's presence because they have proven unable to trust the invisible.</p>
+<p>Whether or not this timeline is historically precise, the theological insight is valuable: the tabernacle exists because God meets His people where they are, not where they ought to be. He provides structure, symbol, and sacred space precisely because human beings need tangible, physical help to maintain a spiritual relationship. This is not a weakness — it is a pattern that runs through all of God's dealings with His children. He uses the material to teach the spiritual: water for baptism, bread and wine for the sacrament, oil for healing, hands for blessing, a body for His Son. The tabernacle is the first great expression of this principle — God choosing to dwell among His people through physical means they can see, touch, and build with their own hands.</p>
+<h3>LDS Resonance</h3>
+<p>Latter-day Saints build temples, in part, for some of the same reasons. We are fallible, not yet a people who can endure the full presence of God in everyday life. The temple is the designated place where the veil thins, where ordinances mediate the encounter, and where God's presence is taught and promised. Like the tabernacle, it is both an accommodation to where we are now and an invitation toward where God intends us to be. The physical elements of temple worship — clothing, gestures, rooms, altars — are not distractions from the spiritual. They are the symbolic means God has chosen to teach and convey heavenly structure and reality, just as He chose curtains, gold, and incense to convey His presence in the wilderness.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>5. The Veil of Moses</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Jewish Readings</h3>
+<p>Moses veils his face after descending from Sinai because the people are afraid of the radiance (<a href="https://www.blueletterbible.org/kjv/exo/34/30/s_84030" target="_blank" data-ref="Exodus 34:30">Exodus 34:30, 33–35</a>). Jewish commentators offer several explanations:</p>
+<ul>
+<li><strong>Rashi:</strong> Moses veiled himself out of modesty and to protect the people from the glory they could not bear.</li>
+<li><strong>Ibn Ezra:</strong> The veil was practical — the people could not function normally in the presence of such intense light.</li>
+<li><strong>Ramban:</strong> The veil was removed only when Moses spoke God's words to the people and when he entered the Lord's presence, suggesting that the glory was specifically linked to the act of receiving and transmitting revelation.</li>
+</ul>
+<h3>Paul's Reinterpretation</h3>
+<p>Paul uses the veil image extensively in <a href="https://www.blueletterbible.org/kjv/2co/3/7-18/s_1081007" target="_blank" data-ref="2 Corinthians 3:7-18">2 Corinthians 3:7–18</a>. For Paul, the veil represents the fading glory of the old covenant and the barrier that remains over Israel's heart until they turn to Christ. "But when it shall turn to the Lord, the veil shall be taken away" (<a href="https://www.blueletterbible.org/kjv/2co/3/16/s_1081016" target="_blank" data-ref="2 Corinthians 3:16">2 Corinthians 3:16</a>). In Christ, the glory is no longer mediated, partial, or fading — it is direct, permanent, and transformative.</p>
+<h3>LDS Application</h3>
+<p>The temple veil in Latter-day Saint practice carries this full weight of meaning. It separates the holy place from the most holy. It is the boundary between the mortal and the divine. And the ordinances of the temple are the authorized means of passing through it — entering God's presence, unveiled, in the pattern Moses pioneered on Sinai.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Source Notes</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Topic</th><th>Traditional Source</th></tr>
+<tr><td>Miscounting of forty days</td><td>Rashi on <a href="https://www.blueletterbible.org/kjv/exo/32/1/s_82001" target="_blank" data-ref="Exodus 32:1">Exodus 32:1</a></td></tr>
+<tr><td>Sin as pretext for license</td><td>Talmud, Sanhedrin 102a</td></tr>
+<tr><td>Aaron and Hur</td><td>Leviticus Rabbah 10:3</td></tr>
+<tr><td>God approved breaking tablets</td><td>Talmud, Shabbat 87a</td></tr>
+<tr><td>Broken and whole tablets in Ark</td><td>Talmud, Bava Batra 14b</td></tr>
+<tr><td>Thirteen Attributes liturgy</td><td>Talmud, Rosh Hashanah 17b</td></tr>
+<tr><td>Tabernacle as response to calf</td><td>Rashi, Ramban on <a href="https://www.blueletterbible.org/kjv/exo/35/1/s_85001" target="_blank" data-ref="Exodus 35">Exodus 35</a></td></tr>
+</table>
+<hr>
+<p><em>Supplemental Study Guide | CFM Corner | OT 2026</em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 6: SUPPLEMENTAL STUDY GUIDE: TEACHING APPLICATIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">6. Supplemental Study Guide: Teaching Applications</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Family Home Evening</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>For Young Children (Ages 3–7)</h3>
+<p><strong>Focus:</strong> God loves us even when we make mistakes</p>
+<p><strong>Story:</strong> "Moses went up the mountain to talk to God. While he was gone, the people got scared. They couldn't see Moses and they couldn't see God. So they made a golden statue and pretended it was God. That was wrong — but God didn't give up on them. He forgave them and stayed with them."</p>
+<p><strong>Object Lesson:</strong> Hide a flashlight in a box. Open the box and let the light shine on a child's face. "When Moses came back from talking to God, his face was shining! Not because Moses was special all by himself, but because he had been close to God. When we spend time with Heavenly Father — through prayer, scripture, kindness — His light shines through us too."</p>
+<p><strong>Activity:</strong> Draw a picture of something that helps you feel close to God (prayer, family, temple, nature).</p>
+<p><strong>Song:</strong> "I Am a Child of God" (CS 2)</p>
+<hr>
+<h3>For Older Children (Ages 8–11)</h3>
+<p><strong>Focus:</strong> What do we do when God feels far away?</p>
+<p><strong>Discussion:</strong> The people made the golden calf because they were afraid and couldn't see God or Moses. Have you ever felt like God was far away? What did you do?</p>
+<p><strong>Activity:</strong> Make two lists:</p>
+<ul>
+<li><em>Things people do when they feel far from God that help</em> (pray, read scriptures, serve someone, go to the temple)</li>
+<li><em>Things people do when they feel far from God that don't help</em> (stop trying, substitute something else, blame others)</li>
+</ul>
+<p><strong>Key Point:</strong> Moses didn't give up. He kept talking to God. He kept asking. And God answered: "My presence shall go with thee."</p>
+<p><strong>Challenge:</strong> This week, when you feel far from God, try one thing from the "helps" list before giving up.</p>
+<hr>
+<h3>For Youth/Teens</h3>
+<p><strong>Focus:</strong> False substitutes for divine presence</p>
+<p><strong>Discussion:</strong> The golden calf wasn't about worshiping a cow. It was about replacing something hard (trusting an invisible God) with something easy (a god you can see and control).</p>
+<p><strong>Questions:</strong></p>
+<ol>
+<li>What are modern "golden calves" — things we substitute for a real relationship with God?</li>
+<li>Why is it tempting to replace the hard spiritual work with something visible and manageable?</li>
+<li>How do we tell the difference between genuine worship and going through the motions?</li>
+</ol>
+<p><strong>Key Insight:</strong> Aaron called the calf-worship a "feast to the Lord" (<a href="https://www.blueletterbible.org/kjv/exo/32/5/s_82005" target="_blank" data-ref="Exodus 32:5">Exodus 32:5</a>). It <em>looked</em> religious. The most dangerous idols are the ones dressed up in spiritual language.</p>
+<p><strong>Challenge:</strong> Identify one area of your life where the outward form of faith might be running on autopilot without real spiritual engagement. Change one thing this week.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Sunday School (Adults)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Lesson Approach 1: The Mediator</h3>
+<p><strong>Opening:</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/32/31-32/s_82031" target="_blank" data-ref="Exodus 32:31-32">Exodus 32:31–32</a>. Moses offers his own life for the people. Then read <a href="https://www.blueletterbible.org/kjv/heb/7/25/s_1140025" target="_blank" data-ref="Hebrews 7:25">Hebrews 7:25</a>: Christ "ever liveth to make intercession."</p>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>What does Moses risk in his intercession? What does it cost him?</li>
+<li>How does Moses' offer foreshadow what Christ actually does?</li>
+<li>When have you been grateful for someone who "stood in the gap" for you — a parent, a leader, a friend?</li>
+</ol>
+<p><strong>Key Point:</strong> We all need a mediator. The entire gospel rests on the reality that someone stood between us and the consequences we earned. Moses modeled it. Christ accomplished it.</p>
+<p><strong>Application:</strong> We are also called to be intercessors — not in the salvific sense, but in the pastoral one. Who in your life needs someone to stand in the gap for them right now?</p>
+<hr>
+<h3>Lesson Approach 2: God's Self-Description</h3>
+<p><strong>Opening:</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/34/5-7/s_84005" target="_blank" data-ref="Exodus 34:5-7">Exodus 34:5–7</a> slowly. This is God telling us who He is — in His own words, at the moment when Israel deserved judgment.</p>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>Why does God lead with mercy rather than justice in His self-description?</li>
+<li>What does it mean that God reveals His character <em>after</em> Israel's worst failure, not before?</li>
+<li>How does this passage shape how you approach repentance?</li>
+</ol>
+<p><strong>Key Point:</strong> The God who forgives is not a different God from the God who is just. Both mercy and justice live in the same Person. The Atonement is how they meet.</p>
+<blockquote>
+<p>"So it is that real, personal sacrifice never was placing an animal on the altar. Instead, it is a willingness to put the animal in us upon the altar and letting it be consumed!" (Neal A. Maxwell, <a href="https://www.churchofjesuschrist.org/study/general-conference/1995/04/deny-yourselves-of-all-ungodliness" target="_blank">"Deny Yourselves of All Ungodliness,"</a> General Conference, April 1995).</p>
+</blockquote>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Youth (Sunday School / Mutual)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>For Ages 12–14</h3>
+<p><strong>Focus:</strong> God's gifts are for building, not just for show</p>
+<p><strong>Discussion:</strong> Bezalel was filled with the Spirit of God — not to prophesy or work miracles, but to carve wood and work metal for the tabernacle.</p>
+<p><strong>Questions:</strong></p>
+<ol>
+<li>What are you good at? (art, sports, coding, cooking, organizing, listening)</li>
+<li>How could that skill be used to build something sacred — in your family, ward, or community?</li>
+<li>Does a talent have to be "churchy" to be a gift from God?</li>
+</ol>
+<p><strong>Activity:</strong> Each person identifies one skill and one way to use it in service this month.</p>
+<hr>
+<h3>For Ages 15–18</h3>
+<p><strong>Focus:</strong> When leaders fail</p>
+<p><strong>Discussion:</strong> Aaron was the high priest — Moses' own brother — and he made the golden calf.</p>
+<p><strong>Questions:</strong></p>
+<ol>
+<li>How do you handle it when a leader you trust makes a serious mistake?</li>
+<li>Does Aaron's failure mean the priesthood failed? Why or why not?</li>
+<li>What is the difference between following a leader and following God through a leader?</li>
+</ol>
+<p><strong>Key Insight:</strong> The covenant survived Aaron's failure because Moses stood in the gap and because God chose renewal. Our faith is ultimately in Christ, not in any human leader — but human leaders matter, and their failures have real consequences.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Personal Study</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Daily Focus Guide</h3>
+<p><strong>Day 1 (Monday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/31/1-11/s_81001" target="_blank" data-ref="Exodus 31:1-11">Exodus 31:1–11</a>. Journal: "What skill or capacity has God given me? Am I using it to build something sacred?"</p>
+<p><strong>Day 2 (Tuesday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/31/12-17/s_81012" target="_blank" data-ref="Exodus 31:12-17">Exodus 31:12–17</a>. Journal: "Is the Sabbath a sign in my life — or just a day? What would change if I treated it as a covenant marker?"</p>
+<p><strong>Day 3 (Wednesday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/32/1-14/s_82001" target="_blank" data-ref="Exodus 32:1-14">Exodus 32:1–14</a>. Journal: "What do I reach for when God feels absent? Where am I tempted to substitute something visible for something real?"</p>
+<p><strong>Day 4 (Thursday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/32/30-35/s_82030" target="_blank" data-ref="Exodus 32:30-35">Exodus 32:30–35</a> and 33:1–6. Journal: "Who has interceded for me? Who needs me to stand in the gap for them?"</p>
+<p><strong>Day 5 (Friday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/33/12-23/s_83012" target="_blank" data-ref="Exodus 33:12-23">Exodus 33:12–23</a>. Journal: "Moses refused to go without God's presence. What would it mean for me to insist on the real thing in my spiritual life?"</p>
+<p><strong>Day 6 (Saturday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/34/1-10/s_84001" target="_blank" data-ref="Exodus 34:1-10">Exodus 34:1–10</a>. Journal: "God leads with mercy. How does that shape how I approach Him after my own failures?"</p>
+<p><strong>Day 7 (Sunday):</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/34/29-35/s_84029" target="_blank" data-ref="Exodus 34:29-35">Exodus 34:29–35</a>. Journal: "Proximity to God transforms. Where in my life am I close enough to be changed?"</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Key Takeaways for All Settings</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>The Spirit empowers all sacred work</strong> — not just preaching, but building, creating, and serving</li>
+<li><strong>The Sabbath is a covenant sign</strong> — identity marker, not mere obligation</li>
+<li><strong>Idolatry is substitution</strong> — replacing the real with the manageable</li>
+<li><strong>We need a mediator</strong> — Moses modeled it; Christ accomplished it</li>
+<li><strong>God's presence is the point</strong> — not just His blessings, guidance, or promises, but <em>Him</em></li>
+<li><strong>God leads with mercy</strong> — His self-description after Israel's worst failure begins with compassion</li>
+<li><strong>Proximity transforms</strong> — we do not generate the light; we reflect it</li>
+</ol>
+<hr>
+<p><em>Supplemental Study Guide | CFM Corner | OT 2026</em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 7: SUPPLEMENTAL STUDY GUIDE: STUDY QUESTIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">7. Supplemental Study Guide: Study Questions</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Questions for Personal Reflection</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Covenant Instruction (Exodus 31)</h3>
+<ol>
+<li>Bezalel was filled with the Spirit of God to do skilled craftsmanship. What practical abilities has God given you, and how are you using them in His service?</li>
+</ol>
+<ol>
+<li>The Sabbath is called "a sign between me and you" (<a href="https://www.blueletterbible.org/kjv/exo/31/13/s_81013" target="_blank" data-ref="Exodus 31:13">Exodus 31:13</a>). In what ways is the Sabbath currently a visible sign of your covenant relationship with God? What would change if you treated it as one?</li>
+</ol>
+<hr>
+<h3>Covenant Failure (Exodus 32)</h3>
+<ol>
+<li>The people made the golden calf when Moses delayed. When God seems silent or absent in your life, what do you reach for? Is it something that draws you closer to Him or a substitute for His presence?</li>
+</ol>
+<ol>
+<li>Aaron called the calf-worship "a feast to the Lord" (<a href="https://www.blueletterbible.org/kjv/exo/32/5/s_82005" target="_blank" data-ref="Exodus 32:5">Exodus 32:5</a>). When have you seen religious activity that looked right on the outside but lacked genuine devotion on the inside — in yourself or in the culture around you?</li>
+</ol>
+<ol>
+<li>Moses offered his own life for the people (<a href="https://www.blueletterbible.org/kjv/exo/32/32/s_82032" target="_blank" data-ref="Exodus 32:32">Exodus 32:32</a>). Who has stood in the gap for you? Who needs you to intercede for them right now?</li>
+</ol>
+<hr>
+<h3>Divine Presence (Exodus 33)</h3>
+<ol>
+<li>Moses refused to go forward without God's presence: "If thy presence go not with me, carry us not up hence" (<a href="https://www.blueletterbible.org/kjv/exo/33/15/s_83015" target="_blank" data-ref="Exodus 33:15">Exodus 33:15</a>). Are there areas of your life where you are settling for God's blessings without His presence — going through the motions without the relationship?</li>
+</ol>
+<ol>
+<li>Moses asked, "Shew me thy glory" (<a href="https://www.blueletterbible.org/kjv/exo/33/18/s_83018" target="_blank" data-ref="Exodus 33:18">Exodus 33:18</a>). What does it look like for you to seek God's glory — not as an abstract idea but as a lived encounter?</li>
+</ol>
+<hr>
+<h3>Covenant Renewal (Exodus 34)</h3>
+<ol>
+<li>God's first words about Himself after Israel's worst failure are "merciful and gracious" (<a href="https://www.blueletterbible.org/kjv/exo/34/6/s_84006" target="_blank" data-ref="Exodus 34:6">Exodus 34:6</a>). How does this shape how you approach Him after your own failures?</li>
+</ol>
+<ol>
+<li>Moses' face shone and he did not know it (<a href="https://www.blueletterbible.org/kjv/exo/34/29/s_84029" target="_blank" data-ref="Exodus 34:29">Exodus 34:29</a>). Have others seen the effects of your relationship with God before you recognized them yourself? What does that teach about how spiritual transformation works?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Questions for Family Discussion</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>When God feels far away:</strong> The Israelites panicked when they couldn't see Moses or God. What does our family do when we feel spiritually distant? What helps us come back?</li>
+</ol>
+<ol>
+<li><strong>Golden calves:</strong> The calf was something visible and easy to control. What are some things families put in God's place — even good things like sports, screens, or busyness?</li>
+</ol>
+<ol>
+<li><strong>Standing in the gap:</strong> Moses prayed for the people when they deserved punishment. How do family members stand in the gap for each other? How does that feel?</li>
+</ol>
+<ol>
+<li><strong>God's description of Himself:</strong> Read <a href="https://www.blueletterbible.org/kjv/exo/34/6-7/s_84006" target="_blank" data-ref="Exodus 34:6-7">Exodus 34:6–7</a> together. If God leads with mercy, what does that teach us about how we treat each other when someone in the family messes up?</li>
+</ol>
+<ol>
+<li><strong>Shining faces:</strong> Moses' face shone after being with God. How can our family's "face" — the way we treat people, the atmosphere in our home — reflect time spent with God?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Questions for Deeper Study</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Historical and Theological</h3>
+<ol>
+<li>Compare Moses' intercession in <a href="https://www.blueletterbible.org/kjv/exo/32/30-32/s_82030" target="_blank" data-ref="Exodus 32:30-32">Exodus 32:30–32</a> with Christ's intercessory prayer in <a href="https://www.blueletterbible.org/kjv/jhn/17/1/s_1014001" target="_blank" data-ref="John 17">John 17</a> and His role as described in <a href="https://www.blueletterbible.org/kjv/heb/7/25/s_1140025" target="_blank" data-ref="Hebrews 7:25">Hebrews 7:25</a>. What patterns are shared? What is unique to Christ?</li>
+</ol>
+<ol>
+<li>God's self-revelation in <a href="https://www.blueletterbible.org/kjv/exo/34/5-7/s_84005" target="_blank" data-ref="Exodus 34:5-7">Exodus 34:5–7</a> became the foundation of Jewish repentance liturgy. How does this passage inform your understanding of the Atonement — particularly the relationship between mercy and justice?</li>
+</ol>
+<ol>
+<li>The Talmud (<em>Bava Batra</em> 14b) teaches that the broken and whole tablets were both placed in the Ark. What does it mean to carry the record of failure alongside the record of renewal in the holiest place?</li>
+</ol>
+<ol>
+<li>How does the JST clarification of <a href="https://www.blueletterbible.org/kjv/exo/33/20/s_83020" target="_blank" data-ref="Exodus 33:20">Exodus 33:20</a> (distinguishing "no sinful man" from "no man") affect your reading of the theophany passages in <a href="https://www.blueletterbible.org/kjv/exo/24/1/s_74001" target="_blank" data-ref="Exodus 24">Exodus 24</a> and 33–34?</li>
+</ol>
+<ol>
+<li>Paul uses the veil of Moses (<a href="https://www.blueletterbible.org/kjv/2co/3/7-18/s_1081007" target="_blank" data-ref="2 Corinthians 3:7-18">2 Corinthians 3:7–18</a>) to contrast old and new covenants. How does this passage read when you hold it alongside the Latter-day Saint understanding of temple veils?</li>
+</ol>
+<hr>
+<h3>Application</h3>
+<ol>
+<li>Bezalel was called by name and filled with the Spirit for practical work. How should this shape how we think about callings, vocations, and the relationship between sacred and secular?</li>
+</ol>
+<ol>
+<li>The golden calf crisis began with impatience — Moses was late. How does impatience with God's timing manifest in your life? What practices help you wait faithfully?</li>
+</ol>
+<ol>
+<li>Moses insisted on God's presence over God's blessings (<a href="https://www.blueletterbible.org/kjv/exo/33/15/s_83015" target="_blank" data-ref="Exodus 33:15">Exodus 33:15</a>). In practical terms, what does it look like to prioritize presence over provision in your spiritual life?</li>
+</ol>
+<ol>
+<li>God reveals His character at the moment of failure and renewal, not the moment of obedience and reward. What does this teach about when and how God most fully reveals Himself to us?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Summary Reflection</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li>What is the single most important insight you gained from <a href="https://www.blueletterbible.org/kjv/exo/31/1/s_81001" target="_blank" data-ref="Exodus 31">Exodus 31–34</a>?</li>
+</ol>
+<ol>
+<li>How does the arc — instruction, rupture, intercession, renewal — appear in your own covenant life?</li>
+</ol>
+<ol>
+<li>What specific action will you take this week because of what you have studied?</li>
+</ol>
+<ol>
+<li>What question remains open for you, and where will you look for the answer?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Scripture Memorization Suggestions</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Primary Level:</strong></p>
+<blockquote>
+<p>"Verily my sabbaths ye shall keep: for it is a sign between me and you" (<a href="https://www.blueletterbible.org/kjv/exo/31/13/s_81013" target="_blank" data-ref="Exodus 31:13">Exodus 31:13</a>).</p>
+</blockquote>
+<p><strong>Youth Level:</strong></p>
+<blockquote>
+<p>"If thy presence go not with me, carry us not up hence" (<a href="https://www.blueletterbible.org/kjv/exo/33/15/s_83015" target="_blank" data-ref="Exodus 33:15">Exodus 33:15</a>).</p>
+</blockquote>
+<p><strong>Adult Level:</strong></p>
+<blockquote>
+<p>"The Lord, The Lord God, merciful and gracious, longsuffering, and abundant in goodness and truth" (<a href="https://www.blueletterbible.org/kjv/exo/34/6/s_84006" target="_blank" data-ref="Exodus 34:6">Exodus 34:6</a>).</p>
+</blockquote>
+<hr>
+<p><em>Note: 9 questions for personal reflection, 5 for family discussion, 9 for deeper study, plus 4 summary questions = 27 total.</em></p>
+<hr>
+<p><em>Supplemental Study Guide | CFM Corner | OT 2026</em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+</div>

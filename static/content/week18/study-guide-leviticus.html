@@ -1,0 +1,1492 @@
+<style>
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+        .site-header {
+            background: linear-gradient(135deg, #d4c4a8 0%, #8B7355 100%);
+            color: white; padding: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px;
+        }
+        .site-header-content { max-width: 1000px; margin: 0 auto; padding: 0 20px; text-align: center; }
+        .site-title { font-size: 2em; margin-bottom: 5px; }
+        .site-subtitle { font-size: 1.1em; opacity: 0.9; }
+
+        .header-section {
+            background-color: #8B7355; color: white; padding: 40px; border-radius: 12px;
+            margin-bottom: 30px; text-align: center;
+        }
+        .header-section .week-label { font-size: 1em; text-transform: uppercase; letter-spacing: 2px; opacity: 0.9; margin-bottom: 10px; }
+        .header-section h1 { font-size: 2.5em; font-weight: 300; margin-bottom: 10px; }
+        .header-section .subtitle { font-size: 1.3em; font-style: italic; margin-bottom: 20px; }
+        .header-section .date-location { font-size: 1.1em; opacity: 0.95; }
+
+        .quick-links { text-align: center; margin: 20px 0; }
+        .quick-link {
+            display: inline-block; background: #8B7355; color: white; padding: 10px 20px;
+            border-radius: 8px; text-decoration: none; margin: 5px; transition: all 0.3s;
+        }
+        .quick-link:hover { background: #6B5344; transform: translateY(-2px); }
+
+        .button-container { text-align: center; margin: 30px 0; }
+        .expand-button {
+            background-color: #8B7355; color: white; border: none; padding: 12px 24px;
+            margin: 5px 10px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em;
+        }
+        .expand-button:hover { background-color: #6B5344; }
+
+        .sg-accordion-section {
+            background-color: #8B7355; color: white; cursor: pointer; padding: 18px; width: 100%;
+            border: none; text-align: left; font-size: 1.2em; font-weight: 600; font-family: Georgia, serif;
+            border-radius: 8px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center;
+        }
+        .sg-accordion-section:hover { background-color: #6B5344; }
+        .sg-accordion-section::after { content: '\25BC'; font-size: 0.9em; transition: transform 0.3s; }
+        .sg-accordion-section.active::after { transform: rotate(180deg); }
+
+        .sg-panel {
+            background-color: white; border-radius: 0 0 8px 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .sg-panel.active { display: block; }
+        .panel-content { padding: 30px; }
+        .panel-content h2 { color: #8B7355; margin-bottom: 20px; font-size: 1.8em; }
+        .panel-content h3 { color: #6B5344; margin-top: 25px; margin-bottom: 15px; font-size: 1.4em; }
+        .panel-content h4 { color: #5a4a3a; margin-top: 20px; margin-bottom: 12px; font-size: 1.2em; }
+        .panel-content ul, .panel-content ol { margin-left: 25px; margin-bottom: 15px; }
+        .panel-content li { margin-bottom: 8px; }
+        .panel-content p { margin-bottom: 15px; text-align: justify; }
+        .panel-content a { color: #8B7355; }
+        .panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .panel-content blockquote {
+            margin: 20px 0 20px 20px;
+            padding: 15px 20px;
+            border-left: 4px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 8px 8px 0;
+        }
+        .panel-content blockquote p { margin-bottom: 8px; }
+        .panel-content blockquote p:last-child { margin-bottom: 0; }
+        .panel-content blockquote cite {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #8B7355;
+            font-style: normal;
+        }
+
+        .panel-content strong { color: #6B5344; }
+        .panel-content em { color: #5a4a3a; }
+
+        .panel-content hr {
+            border: none;
+            border-top: 2px solid #e8e0d5;
+            margin: 25px 0;
+        }
+
+        .panel-content code {
+            background-color: #f5f0e8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #6B5344;
+        }
+
+        .info-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .info-table th, .info-table td { border: 1px solid #d4c4a8; padding: 12px; text-align: left; }
+        .info-table th { background-color: #f5f0e8; color: #6B5344; font-weight: bold; }
+        .info-table tr:nth-child(even) { background-color: #faf8f5; }
+
+        .sg-sub-accordion {
+            background-color: #f5f0e8;
+            color: #5a4a3a;
+            cursor: pointer;
+            padding: 14px 40px 14px 18px;
+            width: 100%;
+            text-align: left;
+            border: 1px solid #d4c4a8;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            margin-top: 10px;
+            position: relative;
+            transition: background-color 0.2s;
+        }
+
+        .sg-sub-accordion:hover {
+            background-color: #e8e0d4;
+        }
+
+        .sg-sub-accordion::after {
+            content: '\25BC';
+            font-size: 0.8em;
+            color: #8B7355;
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s;
+        }
+
+        .sg-sub-accordion.active::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .sg-sub-panel {
+            background-color: #fafafa;
+            border-radius: 0 0 6px 6px;
+            border: 1px solid #d4c4a8;
+            border-top: none;
+            display: none;
+            transition: max-height 0.3s ease-out;
+            margin-bottom: 10px;
+        }
+
+        .sg-sub-panel.active {
+            display: block;
+            overflow: visible;
+            transition: max-height 0.3s ease-in;
+        }
+
+        .sg-sub-panel-content {
+            padding: 20px 25px;
+        }
+
+        .sg-sub-panel-content h3 { color: #6B5344; margin-top: 20px; margin-bottom: 12px; font-size: 1.3em; }
+        .sg-sub-panel-content h4 { color: #5a4a3a; margin-top: 15px; margin-bottom: 10px; font-size: 1.15em; }
+        .sg-sub-panel-content p { margin-bottom: 12px; text-align: justify; }
+        .sg-sub-panel-content ul, .sg-sub-panel-content ol { margin-left: 25px; margin-bottom: 12px; }
+        .sg-sub-panel-content li { margin-bottom: 6px; }
+        .sg-sub-panel-content a { color: #8B7355; }
+        .sg-sub-panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .sg-sub-panel-content blockquote {
+            margin: 15px 0 15px 15px;
+            padding: 12px 18px;
+            border-left: 3px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 6px 6px 0;
+        }
+        .sg-sub-panel-content blockquote p { margin-bottom: 6px; }
+        .sg-sub-panel-content blockquote p:last-child { margin-bottom: 0; }
+        .sg-sub-panel-content strong { color: #6B5344; }
+        .sg-sub-panel-content hr { border: none; border-top: 1px solid #e8e0d5; margin: 20px 0; }
+
+        @media (max-width: 768px) {
+            .header-section h1 { font-size: 1.8em; }
+            .panel-content { padding: 20px; }
+            .sg-sub-panel-content { padding: 15px 18px; }
+        }
+
+        .sg-section-heading {
+            margin: 1.2em 0 0.6em 0;
+            padding: 0.4em 0 0.4em 0.8em;
+            border-left: 3px solid #8B9D77;
+            color: #5a6b4f;
+            font-size: 1.05em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+        }
+        .sg-section-actions {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 28px;
+        }
+        .sg-section-actions .sg-action-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.35);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            padding: 0;
+            line-height: 1;
+        }
+        .sg-section-actions .sg-action-btn:hover {
+            background: rgba(255,255,255,0.35);
+        }
+    </style>
+
+
+<div class="container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <p class="week-label">Week 18</p>
+            <h1>Leviticus — Overview</h1>
+            <div class="subtitle"><a href="https://www.blueletterbible.org/kjv/lev/1/1/s_91001" target="_blank" data-ref="Leviticus 1">Leviticus 1–27</a> | "Ye Shall Be Holy, for I the LORD Your God Am Holy"</div>
+            <div class="date-location"></div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/18?lang=eng" target="_blank" class="quick-link">CFM Manual</a>
+        </div>
+
+        <!-- Expand/Collapse Buttons -->
+        <div class="button-container">
+            <button class="expand-button" onclick="expandAll()"><span class="btn-icon">&#x229E;</span> Expand All</button>
+            <button class="expand-button" onclick="collapseAll()"><span class="btn-icon">&#x229F;</span> Collapse All</button>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 1: LEVITICUS OVERVIEW -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">1. Leviticus Overview</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Overview</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Leviticus is the book most readers skip — and the one that may matter most for understanding how Israel lived in God's presence. If Exodus ends with God's glory filling the Tabernacle, Leviticus answers the question that glory immediately raises: <em>Now what? How do sinful people live alongside a holy God without being consumed?</em></p>
+<p>The answer is an entire system of approach: sacrifices, priesthood, purity, festivals, and ethical holiness — all designed not to keep people away from God but to make nearness possible. The Hebrew name for the book is <em>Vayikra</em> — "And He called" — because it opens with God calling to Moses from the Tabernacle. The English title "Leviticus" comes from the Latin <em>Leviticus</em> (via the Greek Λευιτικόν, <em>Leuitikon</em>), meaning "pertaining to the Levites" — because the tribe of Levi was set apart to officiate in the priesthood ordinances and sacrificial worship that the book describes. The Hebrew name tells us <em>who speaks</em> (God calls); the later title tells us <em>who serves</em> (the Levites carry it out). This is not a book of arbitrary rules. It is a book about a God who has moved in and now teaches His people how to draw close without being destroyed.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Central Insight</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<blockquote>
+<p>"And the LORD called unto Moses, and spake unto him out of the tabernacle of the congregation." (<a href="https://www.blueletterbible.org/kjv/lev/1/1/s_91001" target="_blank" data-ref="Leviticus 1:1">Leviticus 1:1</a>)</p>
+</blockquote>
+<p>God doesn't wait for Moses to approach. He calls. The entire book flows from this initiative — God reaching out from the place He has chosen to dwell, instructing His people in the art of sacred nearness. Leviticus is God's manual for living with Him.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Key Themes</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>1. Drawing Near Through Offering</h3>
+<p>The Hebrew word for sacrifice — <em>korban</em> — doesn't mean "slaughter." It comes from the root <em>qarav</em>, "to draw near." Every offering in Leviticus is an act of approach: the burnt offering (<em>olah</em>) ascends entirely to God; the peace offering (<em>shelamim</em>) creates communion; the sin and guilt offerings restore what sin has broken. Sacrifice is how Israel drew close.</p>
+<h3>2. Holiness as Divine Identity and Human Calling</h3>
+<p>"Ye shall be holy: for I the LORD your God am holy" (<a href="https://www.blueletterbible.org/kjv/lev/19/2/s_109002" target="_blank" data-ref="Leviticus 19:2">Lev 19:2</a>). Holiness (<em>kedushah</em>) isn't merely moral purity — it is the distinguishing character of God, and it becomes the covenant identity of His people. Israel is to be set apart as God is set apart. This is both gift and demand.</p>
+<h3>3. The Priesthood as Bridge</h3>
+<p>Aaron and his sons stand between God and Israel — offering sacrifice, pronouncing blessing, discerning clean from unclean. The High Priest alone enters the Holy of Holies once a year, bearing the sins of the nation. The priesthood makes access possible for the whole community.</p>
+<h3>4. Sin, Impurity, and Restoration</h3>
+<p>Leviticus takes sin and impurity seriously — not to condemn but to provide pathways back. The sin offering (<em>chatat</em>) addresses unintentional sin. The guilt offering (<em>asham</em>) covers cases requiring restitution. The Day of Atonement provides annual, comprehensive cleansing. Nothing is beyond repair.</p>
+<h3>5. Holiness in Daily Life</h3>
+<p><a href="https://www.blueletterbible.org/kjv/lev/19/1/s_109001" target="_blank" data-ref="Leviticus 19">Leviticus 19</a> — the heart of the book — takes holiness out of the sanctuary and into the field, the marketplace, and the neighborhood. Leave gleanings for the poor. Pay workers on time. Don't gossip. Don't bear grudges. Love your neighbor as yourself. Holiness is relational, not merely ritual.</p>
+<h3>6. Christ in the Offerings</h3>
+<p>Every sacrifice, every priestly act, every element of Yom Kippur points forward to Christ. He is the unblemished offering, the High Priest who enters God's presence, the scapegoat who bears sins away, and the one whose blood speaks "a better word than the blood of Abel" (<a href="https://www.blueletterbible.org/kjv/heb/12/24/s_1145024" target="_blank" data-ref="Hebrews 12:24">Hebrews 12:24</a>).</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Scripture Range</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Section</th><th>Chapters</th><th>Content</th></tr>
+<tr><td>The Offerings</td><td><a href="https://www.blueletterbible.org/kjv/lev/1/1/s_91001" target="_blank" data-ref="Leviticus 1">Lev 1–7</a></td><td>Five major sacrifice types: burnt, grain, peace, sin, guilt</td></tr>
+<tr><td>The Priesthood</td><td><a href="https://www.blueletterbible.org/kjv/lev/8/1/s_98001" target="_blank" data-ref="Leviticus 8">Lev 8–10</a></td><td>Consecration of Aaron and sons; Nadab and Abihu</td></tr>
+<tr><td>Purity Laws</td><td><a href="https://www.blueletterbible.org/kjv/lev/11/1/s_101001" target="_blank" data-ref="Leviticus 11">Lev 11–15</a></td><td>Clean/unclean animals, bodily impurity, skin diseases</td></tr>
+<tr><td>Day of Atonement</td><td><a href="https://www.blueletterbible.org/kjv/lev/16/1/s_106001" target="_blank" data-ref="Leviticus 16">Lev 16</a></td><td>Yom Kippur: High Priest, two goats, Holy of Holies</td></tr>
+<tr><td>The Holiness Code</td><td><a href="https://www.blueletterbible.org/kjv/lev/17/1/s_107001" target="_blank" data-ref="Leviticus 17">Lev 17–26</a></td><td>Ethical and ritual holiness; festivals; blessings and curses</td></tr>
+<tr><td>Vows and Dedications</td><td><a href="https://www.blueletterbible.org/kjv/lev/27/1/s_117001" target="_blank" data-ref="Leviticus 27">Lev 27</a></td><td>Valuations and dedicatory offerings</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Theological Arc</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>God dwells among Israel</strong> (<a href="https://www.blueletterbible.org/kjv/exo/40/34-35/s_90034" target="_blank" data-ref="Exodus 40:34-35">Ex 40:34–35</a>): The glory fills the Tabernacle</li>
+<li><strong>God calls from the Tabernacle</strong> (<a href="https://www.blueletterbible.org/kjv/lev/1/1/s_91001" target="_blank" data-ref="Leviticus 1:1">Lev 1:1</a>): He initiates contact</li>
+<li><strong>Sacrifice provides approach</strong> (<a href="https://www.blueletterbible.org/kjv/lev/1/1/s_91001" target="_blank" data-ref="Leviticus 1">Lev 1–7</a>): Five offerings for five needs</li>
+<li><strong>Priesthood provides mediation</strong> (<a href="https://www.blueletterbible.org/kjv/lev/8/1/s_98001" target="_blank" data-ref="Leviticus 8">Lev 8–10</a>): Consecrated servants bridge the gap</li>
+<li><strong>Purity protects the camp</strong> (<a href="https://www.blueletterbible.org/kjv/lev/11/1/s_101001" target="_blank" data-ref="Leviticus 11">Lev 11–15</a>): Boundaries preserve holy space</li>
+<li><strong>Atonement restores everything</strong> (<a href="https://www.blueletterbible.org/kjv/lev/16/1/s_106001" target="_blank" data-ref="Leviticus 16">Lev 16</a>): Annual, complete, national cleansing</li>
+<li><strong>Holiness permeates all of life</strong> (<a href="https://www.blueletterbible.org/kjv/lev/17/1/s_107001" target="_blank" data-ref="Leviticus 17">Lev 17–26</a>): From sanctuary to street</li>
+</ol>
+<p>The arc moves from God's presence → to access → to mediation → to protection → to restoration → to transformation. Leviticus is the operating manual for covenant life with God.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Why This Overview Matters</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>Leviticus isn't punishment — it's invitation</strong>: Every law serves the purpose of enabling nearness to God</li>
+<li><strong>We see Christ on every page</strong>: The offerings, the priesthood, and Yom Kippur are the grammar of the Atonement</li>
+<li><strong>We see temple patterns</strong>: Washing, anointing, clothing, sacred space, veils, and divine presence echo through Latter-day Saint worship</li>
+<li><strong>We see ethical holiness</strong>: "Love thy neighbour as thyself" originates here, not in the New Testament</li>
+<li><strong>We understand the whole Bible better</strong>: Without Leviticus, Hebrews, Romans, and the Gospels lose their sacrificial vocabulary</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>This Week's Question</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Leviticus opens with God <em>calling</em> — reaching out from the Tabernacle to teach His people how to draw near. If sacrifice means "drawing close," what does your own approach to God look like? And what would it mean to take holiness out of the sanctuary and into your daily relationships — your workplace, your neighborhood, your home?</p>
+<hr>
+<p><em>Leviticus Overview Study Guide | CFM Corner | OT 2026</em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 2: LEVITICUS OVERVIEW: HISTORICAL AND CULTURAL CONTEXT -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">2. Leviticus Overview: Historical and Cultural Context</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>The Setting</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The entire book of Leviticus takes place at Sinai — Israel has not moved. The Tabernacle is built, God's glory has filled it, and now He speaks from within it. Leviticus covers roughly one month of narrative time, but its instructions shape centuries of Israelite worship, ethics, and identity. The book presupposes the Exodus: everything here flows from the reality that God has rescued His people and now dwells among them.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>1. The Name: Vayikra — "And He Called"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Hebrew Title</h3>
+<p>The Hebrew name <em>Vayikra</em> (וַיִּקְרָא) comes from the first word of the book: "And He called." Jewish tradition emphasizes this: God doesn't command coldly from a distance — He calls, personally and intimately. The Midrash notes that the calling always preceded the speaking; God gave Moses time to prepare before delivering instruction.</p>
+<h3>Greek/English Title</h3>
+<p>"Leviticus" comes from the Greek <em>Leuitikon</em> (pertaining to the Levites), though the book is addressed primarily to all Israel, not just the priestly tribe. The name is somewhat misleading — this is a book for the entire community.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>2. Sacrifice in the Ancient Near East</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Israel Was Not Unique in Offering Sacrifice</h3>
+<p>Every culture surrounding Israel practiced animal sacrifice — Mesopotamian, Egyptian, Canaanite. What made Israelite sacrifice distinctive was not the act but the theology behind it.</p>
+<h3>Key Differences from Pagan Sacrifice</h3>
+<table class="info-table">
+<tr><th>Feature</th><th>ANE Pagan Practice</th><th>Israelite Practice</th></tr>
+<tr><td><strong>Purpose</strong></td><td>Feed the gods; appease unpredictable deities</td><td>Draw near to God; restore covenant relationship</td></tr>
+<tr><td><strong>Divine need</strong></td><td>Gods needed food and sustenance from humans</td><td>YHWH needs nothing — "the cattle on a thousand hills are mine" (Ps 50:10)</td></tr>
+<tr><td><strong>Manipulation</strong></td><td>Rituals could coerce or manipulate divine favor</td><td>Sacrifice was response to God's invitation, not leverage</td></tr>
+<tr><td><strong>Human sacrifice</strong></td><td>Common (Molech, Baal)</td><td>Absolutely forbidden (<a href="https://www.blueletterbible.org/kjv/lev/18/21/s_108021" target="_blank" data-ref="Leviticus 18:21">Lev 18:21, 20</a>:2-5)</td></tr>
+<tr><td><strong>Ethics</strong></td><td>Sacrifice could substitute for moral behavior</td><td>Sacrifice without justice and mercy was rejected (<a href="https://www.blueletterbible.org/kjv/isa/1/11-17/s_680011" target="_blank" data-ref="Isaiah 1:11-17">Isa 1:11-17</a>; <a href="https://www.blueletterbible.org/kjv/amo/5/21-24/s_884021" target="_blank" data-ref="Amos 5:21-24">Amos 5:21-24</a>)</td></tr>
+</table>
+<h3>The Korban Revolution</h3>
+<p>The Hebrew word for offering — <em>korban</em> (קָרְבָּן) — comes from <em>qarav</em>, "to draw near." This reframes sacrifice entirely. The offering is not payment or appeasement. It is an act of approach — the worshiper drawing near to God. This distinction is fundamental to understanding Leviticus.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>3. The Five Major Offerings</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>A System, Not Random Acts</h3>
+<p><a href="https://www.blueletterbible.org/kjv/lev/1/1/s_91001" target="_blank" data-ref="Leviticus 1">Leviticus 1–7</a> presents five offerings in deliberate order. Together they address the full range of human need before God:</p>
+<table class="info-table">
+<tr><th>Offering</th><th>Hebrew</th><th>Chapters</th><th>Purpose</th><th>What Happens</th></tr>
+<tr><td>Burnt Offering</td><td><a href="https://www.blueletterbible.org/lexicon/h5930/kjv/wlc/0-1/" target="_blank" data-lexicon="whole burnt offering ascent, stairway, steps" data-strongs="H5930" data-translit="ʿōlâ" data-original="עֹלָה" data-lang="hebrew" data-verse="">עֹלָה</a> (<em>olah</em>)</td><td>1, 6:8-13</td><td>Total consecration</td><td>Entirely consumed by fire; nothing retained</td></tr>
+<tr><td>Grain Offering</td><td><a href="https://www.blueletterbible.org/lexicon/h4504/kjv/wlc/0-1/" target="_blank" data-lexicon="gift, offeringoblation, offering (to God through representative)meal offering" data-strongs="H4504" data-translit="minḥâ" data-original="מִנְחָה" data-lang="hebrew" data-verse="">מִנְחָה</a> (<em>minchah</em>)</td><td>2, 6:14-23</td><td>Tribute, gratitude</td><td>Flour, oil, frankincense; portion burned, rest for priests</td></tr>
+<tr><td>Peace Offering</td><td>שְׁלָמִים (<em>shelamim</em>)</td><td>3, 7:11-36</td><td>Fellowship, communion</td><td>Shared meal — God, priest, and worshiper all partake</td></tr>
+<tr><td>Sin Offering</td><td>חַטָּאת (<em>chatat</em>)</td><td>4:1–5:13, 6:24-30</td><td>Purification from sin</td><td>Blood applied to purify the sanctuary</td></tr>
+<tr><td>Guilt Offering</td><td><a href="https://www.blueletterbible.org/lexicon/h816/kjv/wlc/0-1/" target="_blank" data-lexicon="to offend, be guilty, trespass" data-strongs="H816" data-translit="āšam" data-original="אָשַׁם" data-lang="hebrew" data-verse="">אָשָׁם</a> (<em>asham</em>)</td><td>5:14–6:7, 7:1-10</td><td>Restitution, reparation</td><td>Addresses specific trespass; requires repayment plus 20%</td></tr>
+</table>
+<h3>The Logic of the Sequence</h3>
+<p>The order is not accidental. It moves from:</p>
+<ul>
+<li><strong>Consecration</strong> (olah — total self-giving)</li>
+<li>to <strong>Gratitude</strong> (minchah — tribute from daily life)</li>
+<li>to <strong>Communion</strong> (shelamim — shared meal with God)</li>
+<li>to <strong>Purification</strong> (chatat — dealing with sin's contamination)</li>
+<li>to <strong>Restitution</strong> (asham — making things right)</li>
+</ul>
+<p>The first three are voluntary acts of devotion. The last two address brokenness and restoration. Together they form a complete theology of approach.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>4. Clean and Unclean: What the Purity System Meant</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Not About Hygiene</h3>
+<p>Modern readers often assume the clean/unclean categories (<a href="https://www.blueletterbible.org/kjv/lev/11/1/s_101001" target="_blank" data-ref="Leviticus 11">Leviticus 11–15</a>) are primitive hygiene rules. While some overlap with health, the system is fundamentally about holiness — maintaining the symbolic boundaries that protect sacred space.</p>
+<h3>The Basic Categories</h3>
+<ul>
+<li><strong>Clean</strong> (<em>tahor</em>): Normal state; eligible to approach the sanctuary</li>
+<li><strong>Unclean</strong> (<em>tameh</em>): Temporary state requiring purification before approaching sacred space</li>
+<li><strong>Holy</strong> (<em>kadosh</em>): Set apart for God's purposes</li>
+</ul>
+<h3>What Caused Impurity</h3>
+<p>Most sources of impurity relate to <strong>the boundary between life and death</strong>: birth, skin diseases (associated with decay), bodily discharges, and contact with death. The principle: God is the God of life, and anything associated with death's domain must be addressed before entering His presence.</p>
+<h3>Impurity Was Not Sin</h3>
+<p>Being unclean was often unavoidable — childbirth, menstruation, burying the dead. These were normal human experiences, not moral failures. The system provided a process for returning to a state where one could approach God. The problem was not impurity itself but refusing to address it.</p>
+<h3>Latter-day Saint Resonance</h3>
+<p>The principle of spiritual preparation before entering sacred space echoes in temple worship. The temple recommend interview, personal worthiness, and the act of changing into white clothing all reflect Levitical patterns of purification before approaching God's presence.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>5. The Priesthood: Consecration and Mediation</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Aaron's Consecration (Leviticus 8–9)</h3>
+<p>The consecration of Aaron and his sons follows the pattern given in <a href="https://www.blueletterbible.org/kjv/exo/29/1/s_79001" target="_blank" data-ref="Exodus 29">Exodus 29</a>:</p>
+<ul>
+<li><strong>Washed</strong> with water (<a href="https://www.blueletterbible.org/kjv/lev/8/6/s_98006" target="_blank" data-ref="Leviticus 8:6">Lev 8:6</a>)</li>
+<li><strong>Clothed</strong> in sacred garments (<a href="https://www.blueletterbible.org/kjv/lev/8/7-9/s_98007" target="_blank" data-ref="Leviticus 8:7-9">Lev 8:7-9</a>)</li>
+<li><strong>Anointed</strong> with oil (<a href="https://www.blueletterbible.org/kjv/lev/8/12/s_98012" target="_blank" data-ref="Leviticus 8:12">Lev 8:12</a>)</li>
+<li><strong>Sanctified</strong> with blood on ear, thumb, and toe (<a href="https://www.blueletterbible.org/kjv/lev/8/23-24/s_98023" target="_blank" data-ref="Leviticus 8:23-24">Lev 8:23-24</a>)</li>
+</ul>
+<p>Each element carries meaning: washing = purification; clothing = new identity; anointing = empowerment by the Spirit; blood on ear, thumb, toe = consecration of hearing, doing, and walking.</p>
+<h3>Nadab and Abihu (Leviticus 10)</h3>
+<p>Aaron's sons offer "strange fire" and are consumed. The episode is jarring — but it establishes a principle that runs through the entire book: God's holiness is not casual. Approach must be on His terms. This isn't arbitrary cruelty; it's the seriousness with which God treats His own presence among His people.</p>
+<h3>The Priestly Role</h3>
+<p>Priests served as the bridge between God and Israel:</p>
+<ul>
+<li>Offering sacrifices on Israel's behalf</li>
+<li>Pronouncing blessings (<a href="https://www.blueletterbible.org/kjv/num/6/22-27/s_123022" target="_blank" data-ref="Numbers 6:22-27">Num 6:22-27</a>)</li>
+<li>Teaching Torah — distinguishing holy from common, clean from unclean (<a href="https://www.blueletterbible.org/kjv/lev/10/10-11/s_100010" target="_blank" data-ref="Leviticus 10:10-11">Lev 10:10-11</a>)</li>
+<li>Entering God's presence so the people didn't have to risk it</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>6. The Day of Atonement — Yom Kippur (Leviticus 16)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Most Sacred Day</h3>
+<p>Yom Kippur was the theological center of Israel's year — the one day when accumulated sin and impurity were comprehensively addressed. It occurred on the 10th of Tishrei (seventh month), five days before the Feast of Tabernacles.</p>
+<h3>The Ritual Sequence</h3>
+<ol>
+<li><strong>The High Priest bathes and dresses in plain white linen</strong> (not the ornate garments of office) — humility before God</li>
+<li><strong>Offers a bull for his own sin</strong> — even the High Priest needs atonement</li>
+<li><strong>Enters the Holy of Holies with incense</strong> — the smoke screens God's glory so the priest can survive</li>
+<li><strong>Sprinkles blood on the Mercy Seat</strong> — the bull's blood for himself, then the goat's blood for Israel</li>
+<li><strong>The scapegoat receives confession</strong> — Aaron lays both hands on it and confesses all Israel's sins</li>
+<li><strong>The scapegoat is led into the wilderness</strong> — carried to "a land cut off" (<em>eretz gezerah</em>), never to return</li>
+</ol>
+<h3>Two Goats, One Atonement</h3>
+<p>The two goats represent the full scope of atonement:</p>
+<ul>
+<li><strong>The slaughtered goat</strong>: Blood pays the debt of sin — atonement through death</li>
+<li><strong>The scapegoat (Azazel)</strong>: Bears sins away — removal and elimination</li>
+</ul>
+<p>Sin is both <em>covered</em> and <em>carried away</em>. Christ fulfills both roles: His blood atones, and He bears our sins "as far as the east is from the west" (<a href="https://www.blueletterbible.org/kjv/psa/103/12/s_581012" target="_blank" data-ref="Psalm 103:12">Psalm 103:12</a>).</p>
+<h3>Temple Connection</h3>
+<p>The Yom Kippur pattern — passing through veils, into God's immediate presence, bearing the names of the covenant people — resonates profoundly with Latter-day Saint temple experience. The High Priest entered a space no one else could enter, on behalf of the entire community.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>7. The Holiness Code (Leviticus 17–26)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>A Distinctive Section</h3>
+<p>Scholars call <a href="https://www.blueletterbible.org/kjv/lev/17/1/s_107001" target="_blank" data-ref="Leviticus 17">Leviticus 17–26</a> the "Holiness Code" (<em>Heiligkeitsgesetz</em>) because of its repeated refrain: "I am the LORD" and "Be holy, for I am holy." This section moves holiness from the sanctuary into every arena of life.</p>
+<h3>What the Holiness Code Covers</h3>
+<ul>
+<li><strong>Food and blood</strong> (<a href="https://www.blueletterbible.org/kjv/lev/17/1/s_107001" target="_blank" data-ref="Leviticus 17">Lev 17</a>): The sacredness of life/blood</li>
+<li><strong>Sexual ethics</strong> (<a href="https://www.blueletterbible.org/kjv/lev/18/1/s_108001" target="_blank" data-ref="Leviticus 18">Lev 18</a>): Boundaries protecting family and community</li>
+<li><strong>Daily holiness</strong> (<a href="https://www.blueletterbible.org/kjv/lev/19/1/s_109001" target="_blank" data-ref="Leviticus 19">Lev 19</a>): The ethical core — gleaning laws, honest dealing, neighbor-love</li>
+<li><strong>Penalties</strong> (<a href="https://www.blueletterbible.org/kjv/lev/20/1/s_110001" target="_blank" data-ref="Leviticus 20">Lev 20</a>): Consequences for violations</li>
+<li><strong>Priestly standards</strong> (<a href="https://www.blueletterbible.org/kjv/lev/21/1/s_111001" target="_blank" data-ref="Leviticus 21">Lev 21–22</a>): Higher expectations for those who serve at the altar</li>
+<li><strong>Sacred calendar</strong> (<a href="https://www.blueletterbible.org/kjv/lev/23/1/s_113001" target="_blank" data-ref="Leviticus 23">Lev 23</a>): The appointed times (<em>moedim</em>) — Sabbath, Passover, Shavuot, Yom Kippur, Sukkot</li>
+<li><strong>Sabbatical and Jubilee</strong> (<a href="https://www.blueletterbible.org/kjv/lev/25/1/s_115001" target="_blank" data-ref="Leviticus 25">Lev 25</a>): Economic rest and restoration every 7th and 50th year</li>
+<li><strong>Blessings and curses</strong> (<a href="https://www.blueletterbible.org/kjv/lev/26/1/s_116001" target="_blank" data-ref="Leviticus 26">Lev 26</a>): Covenant consequences</li>
+</ul>
+<h3>The Heart of the Code: Leviticus 19</h3>
+<p><a href="https://www.blueletterbible.org/kjv/lev/19/1/s_109001" target="_blank" data-ref="Leviticus 19">Leviticus 19</a> is addressed to "all the congregation" — not priests, not elders, everyone. Its commands are overwhelmingly ethical and relational:</p>
+<ul>
+<li>Leave gleanings for the poor (19:9-10)</li>
+<li>Don't steal, lie, or defraud (19:11-13)</li>
+<li>Don't curse the deaf or trip the blind (19:14)</li>
+<li>Judge justly (19:15)</li>
+<li>Don't gossip (19:16)</li>
+<li>Don't hate in your heart (19:17)</li>
+<li>Love your neighbor as yourself (19:18)</li>
+</ul>
+<p>The chapter ends with: "I am the LORD." Every ethical command is anchored in God's character, not social utility.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>8. Leviticus and the Appointed Times (Moedim)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Leviticus 23: The Sacred Calendar</h3>
+<p><a href="https://www.blueletterbible.org/kjv/lev/23/1/s_113001" target="_blank" data-ref="Leviticus 23">Leviticus 23</a> outlines Israel's annual rhythm of worship — the <em>moedim</em> (appointed times):</p>
+<table class="info-table">
+<tr><th>Festival</th><th>Hebrew</th><th>When</th><th>Significance</th></tr>
+<tr><td>Sabbath</td><td><a href="https://www.blueletterbible.org/lexicon/h7676/kjv/wlc/0-1/" target="_blank" data-lexicon="sabbath, rest, cessation" data-strongs="H7676" data-translit="shabbat" data-original="שַׁבָּת" data-lang="hebrew" data-verse="Genesis 2:2">שַׁבָּת</a> (<em>Shabbat</em>)</td><td>Weekly</td><td>Rest, trust in God's provision</td></tr>
+<tr><td>Passover/Unleavened Bread</td><td><a href="https://www.blueletterbible.org/lexicon/h6452/kjv/wlc/0-1/" target="_blank" data-lexicon="to pass over, spring over(Qal) to pass over(Piel) to skip, pass overto limp(Qal) to limp(Niphal) to be lame(Piel) to ..." data-strongs="H6452" data-translit="pāsaḥ" data-original="פָּסַח" data-lang="hebrew" data-verse="">פֶּסַח</a>/<a href="https://www.blueletterbible.org/lexicon/h4695/kjv/wlc/0-1/" target="_blank" data-lexicon="strife, contention" data-strongs="H4695" data-translit="maṣṣûṯ" data-original="מַצּוּת" data-lang="hebrew" data-verse="">מַצּוֹת</a> (<em>Pesach/Matzot</em>)</td><td>1st month, 14th-21st</td><td>Deliverance, redemption</td></tr>
+<tr><td>Firstfruits</td><td>בִּכּוּרִים (<em>Bikkurim</em>)</td><td>Day after Sabbath of Passover week</td><td>Resurrection, first harvest</td></tr>
+<tr><td>Weeks/Pentecost</td><td>שָׁבֻעוֹת (<em>Shavuot</em>)</td><td>50 days after Firstfruits</td><td>Torah giving, Spirit outpouring</td></tr>
+<tr><td>Trumpets</td><td>יוֹם תְּרוּעָה (<em>Yom Teruah</em>)</td><td>7th month, 1st</td><td>Awakening, gathering</td></tr>
+<tr><td>Day of Atonement</td><td>יוֹם כִּפּוּר (<em>Yom Kippur</em>)</td><td>7th month, 10th</td><td>National cleansing, High Priest enters</td></tr>
+<tr><td>Tabernacles</td><td><a href="https://www.blueletterbible.org/lexicon/h5523/kjv/wlc/0-1/" target="_blank" data-lexicon="Succoth = &quot;booths&quot;the site where Jacob put up booths for his cattle and built a house for himself; apparently east of..." data-strongs="H5523" data-translit="sukôṯ" data-original="סֻכּוֹת" data-lang="hebrew" data-verse="">סֻכּוֹת</a> (<em>Sukkot</em>)</td><td>7th month, 15th-22nd</td><td>God's dwelling, harvest joy</td></tr>
+</table>
+<p>These festivals are not merely commemorative. They are called <em>miqra'ei kodesh</em> — "holy convocations" or "sacred rehearsals." Each one rehearses a dimension of God's redemptive work and points toward its ultimate fulfillment in Christ.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Summary</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Leviticus sits at the center of the Torah — literally and theologically. It addresses the most practical question the Exodus raises: How do sinful, mortal people live in the presence of a holy God?</p>
+<p>The answer involves:</p>
+<ul>
+<li><strong>Sacrifice</strong> as the means of drawing near</li>
+<li><strong>Priesthood</strong> as the bridge between divine holiness and human frailty</li>
+<li><strong>Purity</strong> as the boundary that protects sacred space</li>
+<li><strong>Atonement</strong> as the comprehensive solution to accumulated sin</li>
+<li><strong>Holiness</strong> as both ritual separation and ethical transformation</li>
+<li><strong>Festivals</strong> as the sacred rhythm that keeps covenant memory alive</li>
+</ul>
+<p>Far from being an outdated manual of ancient ritual, Leviticus provides the theological vocabulary for the Atonement, the patterns for temple worship, and the ethical vision that Jesus inherited and intensified. Without it, the New Testament's language of blood, sacrifice, priesthood, and holiness has no foundation.</p>
+<hr>
+<p><em>Leviticus Overview Study Guide | CFM Corner | OT 2026</em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 3: LEVITICUS OVERVIEW: KEY PASSAGES STUDY -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">3. Leviticus Overview: Key Passages Study</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Passage 1: Leviticus 1:1-4 — God Calls; The Worshiper Draws Near</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p>"And the LORD called unto Moses, and spake unto him out of the tabernacle of the congregation, saying, Speak unto the children of Israel, and say unto them, If any man of you bring an offering unto the LORD, ye shall bring your offering of the cattle, even of the herd, and of the flock. If his offering be a burnt sacrifice of the herd, let him offer a male without blemish: he shall offer it of his own voluntary will at the door of the tabernacle of the congregation before the LORD. And he shall put his hand upon the head of the burnt offering; and it shall be accepted for him to make atonement for him."</p>
+</blockquote>
+<h3>Key Hebrew</h3>
+<ul>
+<li><em>vayikra</em> (וַיִּקְרָא) — "And He called" — intimate address, not distant command</li>
+<li><em>korban</em> (קָרְבָּן) — offering — from <em>qarav</em>, "to draw near"</li>
+<li><em>olah</em> (<a href="https://www.blueletterbible.org/lexicon/h5930/kjv/wlc/0-1/" target="_blank" data-lexicon="whole burnt offering ascent, stairway, steps" data-strongs="H5930" data-translit="ʿōlâ" data-original="עֹלָה" data-lang="hebrew" data-verse="">עֹלָה</a>) — burnt offering — from <em>alah</em>, "to ascend, go up"</li>
+<li><em>tamim</em> (<a href="https://www.blueletterbible.org/lexicon/h8549/kjv/wlc/0-1/" target="_blank" data-lexicon="complete, whole, entire, soundcomplete, whole, entirewhole, sound, healthfulcomplete, entire (of time)sound, wholesom..." data-strongs="H8549" data-translit="tāmîm" data-original="תָּמִים" data-lang="hebrew" data-verse="">תָּמִים</a>) — without blemish — whole, complete, perfect</li>
+<li><em>lirtzono</em> (לִרְצֹנוֹ) — "of his own voluntary will" — or "for his acceptance/favor"</li>
+<li><em>samakh</em> (<a href="https://www.blueletterbible.org/lexicon/h5564/kjv/wlc/0-1/" target="_blank" data-lexicon="to lean, lay, rest, support, put, uphold, lean upon(Qal)to lean or lay upon, rest upon, lean againstto support, uphol..." data-strongs="H5564" data-translit="sāmaḵ" data-original="סָמַךְ" data-lang="hebrew" data-verse="">סָמַךְ</a>) — to lean, press heavily — hand laid on the animal's head</li>
+</ul>
+<h3>What It Meant in Context</h3>
+<p>The book opens with God calling — not Moses approaching, but God initiating. The first instruction is about <em>korban</em>, drawing near through offering. The burnt offering (<em>olah</em>) was the most comprehensive sacrifice: entirely consumed, nothing kept back. The worshiper chose the animal, brought it voluntarily, pressed his hand on its head (an act of identification — "this represents me"), and watched it ascend in smoke and fire.</p>
+<p>The word <em>lirtzono</em> can mean both "of his own free will" and "for his acceptance." Both readings work: the offering is voluntary, and its purpose is to make the worshiper acceptable before God. Sacrifice is not coercion — it is willing approach.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>God initiates</strong>: The first word is God calling. Sacrifice isn't humanity reaching up; it's God teaching us how to come close.</li>
+<li><strong>Without blemish</strong>: The offering must be <em>tamim</em> — whole, complete. You don't give God your leftovers.</li>
+<li><strong>Identification</strong>: The hand-pressing (<em>semikhah</em>) creates connection between worshiper and animal. The animal's fate represents the worshiper's self-offering.</li>
+<li><strong>Complete surrender</strong>: The <em>olah</em> ascends entirely. Nothing is retained. This is total consecration.</li>
+</ol>
+<h3>Christ-Centered Reading</h3>
+<p>Christ is the ultimate <em>olah</em> — without blemish (<em>tamim</em>), offered voluntarily (<em>lirtzono</em>), ascending entirely to God. The hand-pressing foreshadows our identification with Christ: He takes our place; we participate in His offering. "He hath made him to be sin for us, who knew no sin" (2 Cor 5:21). The <em>olah</em> principle — holding nothing back — is what Christ did perfectly and what He invites us to do: "Offer your whole souls as an offering unto him" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/omni/1?lang=eng&id=p26#p26" target="_blank" data-ref="Omni 1:26">Omni 1:26</a>).</p>
+<h3>Modern Application</h3>
+<p>What does it mean to hold nothing back from God? The <em>olah</em> asks: Is there an area of your life you've kept off the altar — a relationship, an ambition, a habit? Complete consecration doesn't mean self-destruction; it means nothing withheld.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 2: Leviticus 4:1-7, 27-31 — The Sin Offering</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p>"And the LORD spake unto Moses, saying, Speak unto the children of Israel, saying, If a soul shall sin through ignorance against any of the commandments of the LORD concerning things which ought not to be done, and shall do against any of them..." (4:1-2)</p>
+</blockquote>
+<blockquote>
+<p>"And if any one of the common people sin through ignorance, while he doeth somewhat against any of the commandments of the LORD... then he shall bring his offering, a kid of the goats, a female without blemish, for his sin which he hath sinned. And he shall lay his hand upon the head of the sin offering... And the priest shall make an atonement for him, and it shall be forgiven him." (4:27-31)</p>
+</blockquote>
+<h3>Key Hebrew</h3>
+<ul>
+<li><em>chatat</em> (חַטָּאת) — sin offering — from root <em>chata'</em>, "to miss the mark, go wrong"</li>
+<li><em>bishgagah</em> (בִשְׁגָגָה) — through ignorance, unintentionally — not willful defiance</li>
+<li><em>kipper</em> (<a href="https://www.blueletterbible.org/lexicon/h3722/kjv/wlc/0-1/" target="_blank" data-lexicon="to cover, purge, make an atonement, make reconciliation, cover over with pitch (Qal) to coat or cover with pitch (Pie..." data-strongs="H3722" data-translit="kāp̄ar" data-original="כָּפַר" data-lang="hebrew" data-verse="">כִּפֶּר</a>) — to atone, make atonement — to cover, purge, ransom</li>
+<li><em>venislach</em> (וְנִסְלַח) — "and it shall be forgiven" — passive: forgiveness comes from God</li>
+</ul>
+<h3>What It Meant in Context</h3>
+<p>The sin offering addressed <em>unintentional</em> sin — what happens when someone violates a commandment without realizing it. The Hebrew <em>bishgagah</em> covers errors, negligence, and ignorance. The offering varied by the offender's status: a bull for the High Priest (whose sin affects the whole sanctuary), a male goat for the community, a male goat for a ruler, a female goat or lamb for an ordinary person.</p>
+<p>The key action: the priest applied the blood to purify sacred objects — the horns of the altar, the veil, the Mercy Seat. This reveals something remarkable: sin doesn't just damage the sinner; it contaminates sacred space. The <em>chatat</em> purifies the sanctuary so God can continue to dwell among His people.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Unintentional sin still matters</strong>: Ignorance doesn't neutralize the effect of sin. Even unknown violations create real consequences that require real atonement.</li>
+<li><strong>Blood purifies sacred space</strong>: Sin's pollution reaches God's dwelling. The <em>chatat</em> cleanses what sin has contaminated.</li>
+<li><strong>Graduated responsibility</strong>: The higher the offender's status, the greater the required offering. Leaders bear more responsibility for sin's communal impact.</li>
+<li><strong>"It shall be forgiven him"</strong>: The passive voice matters — forgiveness comes from God, not from the ritual itself. The sacrifice is the vehicle; God is the source.</li>
+</ol>
+<h3>Christ-Centered Reading</h3>
+<p>Paul writes that God made Christ "to be sin for us" (2 Cor 5:21) — the Greek echoes the Septuagint language for the <em>chatat</em>. Christ became the sin offering. His blood doesn't merely cover individual guilt; it purifies the heavenly sanctuary itself (<a href="https://www.blueletterbible.org/kjv/heb/9/23-24/s_1142023" target="_blank" data-ref="Hebrews 9:23-24">Hebrews 9:23-24</a>). And the promise still holds: "It shall be forgiven."</p>
+<p>The <em>chatat</em> also addresses a pastoral reality: we sin without knowing it. We carry blind spots, cultural assumptions, inherited attitudes that offend God's holiness. The sin offering provides for what we can't see in ourselves — and Christ's atonement covers what we don't yet recognize.</p>
+<h3>Modern Application</h3>
+<p>Are there sins you don't know about? Attitudes, prejudices, neglects you haven't yet seen? <a href="https://www.blueletterbible.org/kjv/lev/4/1/s_94001" target="_blank" data-ref="Leviticus 4">Leviticus 4</a> teaches that God provides atonement even for what we're unaware of. This isn't license for carelessness — it's assurance that God's mercy is wider than our self-awareness.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 3: Leviticus 16:2-10, 15-22, 29-34 — The Day of Atonement</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p>"And the LORD said unto Moses, Speak unto Aaron thy brother, that he come not at all times into the holy place within the veil before the mercy seat, which is upon the ark; that he die not: for I will appear in the cloud upon the mercy seat." (16:2)</p>
+</blockquote>
+<blockquote>
+<p>"And he shall take the two goats, and present them before the LORD at the door of the tabernacle of the congregation. And Aaron shall cast lots upon the two goats; one lot for the LORD, and the other lot for the scapegoat." (16:7-8)</p>
+</blockquote>
+<blockquote>
+<p>"And Aaron shall lay both his hands upon the head of the live goat, and confess over him all the iniquities of the children of Israel, and all their transgressions in all their sins, putting them upon the head of the goat, and shall send him away by the hand of a fit man into the wilderness: And the goat shall bear upon him all their iniquities unto a land not inhabited." (16:21-22)</p>
+</blockquote>
+<blockquote>
+<p>"For on that day shall the priest make an atonement for you, to cleanse you, that ye may be clean from all your sins before the LORD." (16:30)</p>
+</blockquote>
+<h3>Key Hebrew</h3>
+<ul>
+<li><em>kapporet</em> (<a href="https://www.blueletterbible.org/lexicon/h3727/kjv/wlc/0-1/" target="_blank" data-lexicon="mercy-seat, place of atonementthe golden plate of propitiation on which the High Priest sprinkled the seat 7 times on..." data-strongs="H3727" data-translit="kapōreṯ" data-original="כַּפֹּרֶת" data-lang="hebrew" data-verse="">כַּפֹּרֶת</a>) — Mercy Seat — from <em>kipper</em>, "to atone"</li>
+<li><em>la'Azazel</em> (לַעֲזָאזֵל) — for Azazel / the scapegoat — meaning debated</li>
+<li><em>eretz gezerah</em> (אֶרֶץ גְּזֵרָה) — "a land cut off" — the wilderness of no return</li>
+<li><em>Shabbat Shabbaton</em> (שַׁבַּת שַׁבָּתוֹן) — Sabbath of complete rest — the most emphatic Sabbath language in Torah</li>
+<li><em>innu et nafshoteikhem</em> (עִנּוּ אֶת נַפְשֹׁתֵיכֶם) — "afflict your souls" — deep self-examination, traditionally fasting</li>
+</ul>
+<h3>What It Meant in Context</h3>
+<p>Yom Kippur was the theological center of Israel's year. Once annually, accumulated sin and impurity received comprehensive treatment. The High Priest — and only the High Priest — entered the Holy of Holies. He changed from his ornate garments into plain white linen: before God, rank is stripped away.</p>
+<p>The two goats represent the full scope of atonement:</p>
+<ul>
+<li><strong>The LORD's goat</strong>: Slaughtered; its blood sprinkled on the Mercy Seat and the altar. Blood <em>pays</em> the debt.</li>
+<li><strong>The Azazel goat (scapegoat)</strong>: Receives the confession of all Israel's sins through the laying on of hands, then is sent into the wilderness to "a land cut off." Sin is <em>removed</em> — carried where it can never return.</li>
+</ul>
+<p>Together: sin is both atoned for and eliminated. The debt is paid AND the burden is carried away.</p>
+<p>The people fasted and did no work — <em>Shabbat Shabbaton</em>, the most intense rest of the year. They could contribute nothing. Atonement was God's work through the priest.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Only the High Priest enters</strong>: No one else can approach the Mercy Seat. Access to God's immediate presence requires a consecrated mediator.</li>
+<li><strong>White linen, not glory garments</strong>: Before God, the High Priest strips away status. Humility is the prerequisite for atonement.</li>
+<li><strong>Two goats, one atonement</strong>: The dual ritual means sin is both paid for (blood) and removed (scapegoat). Incomplete atonement — paying without removing, or removing without paying — is insufficient.</li>
+<li><strong>"A land not inhabited"</strong>: Sin is sent where no one lives. It doesn't come back. It doesn't get recycled. It's gone.</li>
+<li><strong>The people do nothing</strong>: They fast and rest. Atonement is received, not achieved.</li>
+</ol>
+<h3>Christ-Centered Reading</h3>
+<p>The book of Hebrews reads Yom Kippur as the blueprint for Christ's work:</p>
+<ul>
+<li>Christ is both the High Priest who enters and the sacrifice whose blood is offered (<a href="https://www.blueletterbible.org/kjv/heb/9/11-12/s_1142011" target="_blank" data-ref="Hebrews 9:11-12">Heb 9:11-12</a>)</li>
+<li>He enters the heavenly Holy of Holies "once for all" — not annually, but permanently (<a href="https://www.blueletterbible.org/kjv/heb/9/24-26/s_1142024" target="_blank" data-ref="Hebrews 9:24-26">Heb 9:24-26</a>)</li>
+<li>He fulfills both goats: the blood that atones and the one who bears sins away (<a href="https://www.blueletterbible.org/kjv/heb/9/28/s_1142028" target="_blank" data-ref="Hebrews 9:28">Heb 9:28</a>; <a href="https://www.blueletterbible.org/kjv/isa/53/4-6/s_732004" target="_blank" data-ref="Isaiah 53:4-6">Isa 53:4-6</a>)</li>
+</ul>
+<p>The scapegoat carried sins to <em>eretz gezerah</em> — the land cut off. Christ carried our sins to a place no one else could go: Gethsemane and Golgotha, the cut-off land.</p>
+<blockquote>
+<p><a href="https://img.youtube.com/vi/fssPmwOhRf0/mqdefault.jpg" target="_blank">![The Day of Atonement / Yom Kippur — Messages of Christ</a>](https://www.youtube.com/watch?v=fssPmwOhRf0)</p>
+<p><em>Messages of Christ — The Day of Atonement / Yom Kippur</em></p>
+</blockquote>
+<h3>Modern Application</h3>
+<p>Do you believe your sins are actually gone — carried to a land not inhabited — or do you keep retrieving them from the wilderness? The scapegoat didn't come back. Christ's atonement is complete. Yom Kippur teaches: you can stop carrying what has already been carried away.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 4: Leviticus 19:1-4, 9-18 — Holiness in Daily Life</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p>"And the LORD spake unto Moses, saying, Speak unto all the congregation of the children of Israel, and say unto them, Ye shall be holy: for I the LORD your God am holy." (19:1-2)</p>
+</blockquote>
+<blockquote>
+<p>"And when ye reap the harvest of your land, thou shalt not wholly reap the corners of thy field, neither shalt thou gather the gleanings of thy harvest... thou shalt leave them for the poor and stranger: I am the LORD your God." (19:9-10)</p>
+</blockquote>
+<blockquote>
+<p>"Thou shalt not defraud thy neighbour, neither rob him: the wages of him that is hired shall not abide with thee all night until the morning." (19:13)</p>
+</blockquote>
+<blockquote>
+<p>"Thou shalt not curse the deaf, nor put a stumblingblock before the blind, but shalt fear thy God: I am the LORD." (19:14)</p>
+</blockquote>
+<blockquote>
+<p>"Thou shalt not avenge, nor bear any grudge against the children of thy people, but thou shalt love thy neighbour as thyself: I am the LORD." (19:18)</p>
+</blockquote>
+<h3>Key Hebrew</h3>
+<ul>
+<li><em>kedoshim tihyu</em> (קְדֹשִׁים תִּהְיוּ) — "You shall be holy" — plural, addressed to the entire community</li>
+<li><em>pe'ah</em> (<a href="https://www.blueletterbible.org/lexicon/h6284/kjv/wlc/0-1/" target="_blank" data-lexicon="to cleave in pieces, break into pieces, shatter(Hiphil) to cleave in pieces, dash to pieces" data-strongs="H6284" data-translit="pā&#x27;â" data-original="פָּאָה" data-lang="hebrew" data-verse="">פֵּאָה</a>) — corner — the field-edges left for the poor</li>
+<li><em>leqet</em> (<a href="https://www.blueletterbible.org/lexicon/h3951/kjv/wlc/0-1/" target="_blank" data-lexicon="gleaning" data-strongs="H3951" data-translit="leqeṭ" data-original="לֶקֶט" data-lang="hebrew" data-verse="">לֶקֶט</a>) — gleanings — fallen grain left on the ground</li>
+<li><em>ve'ahavta lere'akha kamokha</em> (וְאָהַבְתָּ לְרֵעֲךָ כָּמוֹךָ) — "love your neighbor as yourself"</li>
+<li><em>ani YHWH</em> (אֲנִי יְהוָה) — "I am the LORD" — appears 16 times in this chapter</li>
+</ul>
+<h3>What It Meant in Context</h3>
+<p><a href="https://www.blueletterbible.org/kjv/lev/19/1/s_109001" target="_blank" data-ref="Leviticus 19">Leviticus 19</a> is addressed to "all the congregation" — not to priests, not to leaders, but to every Israelite. The command "Be holy" is immediately followed not by more ritual law but by ethics: honor parents, keep the Sabbath, don't make idols (19:3-4). Then it moves into economic justice, social care, honest dealing, and neighbor-love.</p>
+<p>The gleaning law (19:9-10) is practical holiness: don't harvest to the edges of your field; leave the corners and dropped grain for the poor and the immigrant. This is the law that brings Ruth to Boaz's field (<a href="https://www.blueletterbible.org/kjv/rth/2/1/s_234001" target="_blank" data-ref="Ruth 2">Ruth 2</a>) and changes the course of redemptive history.</p>
+<p>The repeated refrain "I am the LORD" (16 times in the chapter) anchors every command in God's identity. You don't leave gleanings because it's good economics. You don't pay workers on time because of labor law. You do these things because <em>I am the LORD</em> — and holiness means reflecting His character in every relationship.</p>
+<p>The climax — "love thy neighbour as thyself" (19:18) — comes after a sequence that prohibits hatred in the heart (19:17), vengeance, and grudges. Love isn't sentiment. It is the culmination of a whole pattern of not hating, not exploiting, not ignoring — active, practical, daily regard for the other person.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Holiness is democratized</strong>: Not a priestly specialty but a communal calling</li>
+<li><strong>Holiness is ethical</strong>: The content is overwhelmingly about relationships, economics, and justice — not ritual performance</li>
+<li><strong>Holiness is grounded in God's character</strong>: "Be holy because I am holy" — not "because it's useful" or "because society functions better"</li>
+<li><strong>Interior and exterior together</strong>: Don't hate in your heart (19:17) AND don't defraud your neighbor (19:13). Holiness addresses both hidden thoughts and visible actions.</li>
+</ol>
+<h3>Christ-Centered Reading</h3>
+<p>Jesus quotes <a href="https://www.blueletterbible.org/kjv/lev/19/18/s_109018" target="_blank" data-ref="Leviticus 19:18">Leviticus 19:18</a> as the second great commandment (<a href="https://www.blueletterbible.org/kjv/mat/22/39/s_951039" target="_blank" data-ref="Matthew 22:39">Matt 22:39</a>). He didn't invent neighbor-love — He inherited and universalized it. The command "Be ye therefore perfect" (<a href="https://www.blueletterbible.org/kjv/mat/5/48/s_934048" target="_blank" data-ref="Matthew 5:48">Matt 5:48</a>) echoes <em>kedoshim tihyu</em>. The Sermon on the Mount is <a href="https://www.blueletterbible.org/kjv/lev/19/1/s_109001" target="_blank" data-ref="Leviticus 19">Leviticus 19</a> intensified and expanded.</p>
+<p>The parable of the Good Samaritan (<a href="https://www.blueletterbible.org/kjv/luk/10/25-37/s_983025" target="_blank" data-ref="Luke 10:25-37">Luke 10:25-37</a>) is Jesus' commentary on "Who is my neighbor?" — answering the question already latent in <a href="https://www.blueletterbible.org/kjv/lev/19/34/s_109034" target="_blank" data-ref="Leviticus 19:34">Leviticus 19:34</a>, which extends neighbor-love to the stranger: "thou shalt love him as thyself; for ye were strangers in the land of Egypt."</p>
+<h3>Modern Application</h3>
+<p><a href="https://www.blueletterbible.org/kjv/lev/19/1/s_109001" target="_blank" data-ref="Leviticus 19">Leviticus 19</a> asks: What does holiness look like not in the sanctuary but in your daily life? In your field (do you leave margins for others?), your business (do you pay fairly and promptly?), your speech (do you gossip?), your heart (do you harbor grudges?). Holiness isn't a Sunday concept. It's a Monday-through-Saturday reality.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 5: Leviticus 16:30 and 19:2 — The Two Pillars</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Texts</h3>
+<blockquote>
+<p>"For on that day shall the priest make an atonement for you, to cleanse you, that ye may be clean from all your sins before the LORD." (16:30)</p>
+</blockquote>
+<blockquote>
+<p>"Ye shall be holy: for I the LORD your God am holy." (19:2)</p>
+</blockquote>
+<h3>What These Verses Represent Together</h3>
+<p>These two verses anchor the two great movements of Leviticus: <em>cleansing</em> and <em>calling</em>.</p>
+<p><a href="https://www.blueletterbible.org/kjv/lev/16/30/s_106030" target="_blank" data-ref="Leviticus 16:30">Leviticus 16:30</a> promises comprehensive purification — you <em>may be clean from all your sins</em>. Not some. Not the small ones. All.</p>
+<p><a href="https://www.blueletterbible.org/kjv/lev/19/2/s_109002" target="_blank" data-ref="Leviticus 19:2">Leviticus 19:2</a> issues the most demanding call in Scripture — <em>be holy as God is holy</em>. Not merely acceptable. Holy.</p>
+<p>Together they define the covenant life: God cleanses what we cannot clean, and then calls us into a holiness we could never generate alone. Atonement makes holiness possible. Holiness is the purpose of atonement.</p>
+<h3>Modern Application</h3>
+<p>We often emphasize one at the expense of the other. Cleansing without calling produces cheap grace — forgiveness with no transformation. Calling without cleansing produces despair — a standard we can never reach. Leviticus holds both: you are forgiven AND you are called to be holy. The two are inseparable.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage Comparison Table</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Passage</th><th>Theme</th><th>Key Phrase</th><th>Application</th></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/lev/1/1-4/s_91001" target="_blank" data-ref="Leviticus 1:1-4">Lev 1:1-4</a></td><td>Drawing near</td><td>"And He called... korban"</td><td>Sacrifice is approach, not appeasement</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/lev/4/1-7/s_94001" target="_blank" data-ref="Leviticus 4:1-7">Lev 4:1-7, 27-31</a></td><td>Purification from sin</td><td>"It shall be forgiven him"</td><td>God provides for sins we don't yet see</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/lev/16/7-22/s_106007" target="_blank" data-ref="Leviticus 16:7-22">Lev 16:7-22</a></td><td>Comprehensive atonement</td><td>"A land not inhabited"</td><td>Sin is both paid for and removed</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/lev/19/1-18/s_109001" target="_blank" data-ref="Leviticus 19:1-18">Lev 19:1-18</a></td><td>Holiness in daily life</td><td>"Love thy neighbour as thyself"</td><td>Holiness is relational and ethical</td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/lev/16/30/s_106030" target="_blank" data-ref="Leviticus 16:30">Lev 16:30</a> + 19:2</td><td>Cleansing and calling</td><td>"Clean from all... Be holy"</td><td>Atonement enables holiness</td></tr>
+</table>
+<hr>
+<p><em>Leviticus Overview Study Guide | CFM Corner | OT 2026</em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 4: LEVITICUS OVERVIEW: WORD STUDIES -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">4. Leviticus Overview: Word Studies</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Word Study 1: Korban (קָרְבָּן) — "Offering, That Which Is Brought Near"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h7126/kjv/wlc/0-1/" target="_blank" data-lexicon="to come near, approach, enter into, draw near(Qal) to approach, draw near(Niphal) to be brought near(Piel) to cause t..." data-strongs="H7126" data-translit="qāraḇ" data-original="קָרַב" data-lang="hebrew" data-verse="">קרב</a> (<em>qarav</em>), "to draw near, approach"</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/lev/1/2/s_91002" target="_blank" data-ref="Leviticus 1:2">Leviticus 1:2, 3, 10, 14; 2:1; 3:1</a>; and throughout</p>
+<h3>Meaning</h3>
+<p><em>Korban</em> is the general word for an offering brought to God. It does not mean "sacrifice" in the sense of destruction or loss. It means "that which is brought near" — or more precisely, the vehicle by which the worshiper draws near to God. The root <em>qarav</em> appears over 280 times in the Hebrew Bible, always carrying the sense of approach, proximity, or closeness.</p>
+<h3>Why This Word Matters</h3>
+<p>The entire sacrificial system of Leviticus is reframed by this single word. When we read "sacrifice" in English, we hear loss, pain, giving up. When an ancient Israelite heard <em>korban</em>, they heard <em>coming close</em>. Every offering — whether burnt, grain, peace, sin, or guilt — was fundamentally an act of approach. The animal wasn't the point. Drawing near to God was the point.</p>
+<h3>Old Testament Echoes</h3>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/psa/73/28/s_551028" target="_blank" data-ref="Psalm 73:28">Psalm 73:28</a>: "It is good for me to draw near (<em>qarov</em>) to God"</li>
+<li><a href="https://www.blueletterbible.org/kjv/isa/58/2/s_737002" target="_blank" data-ref="Isaiah 58:2">Isaiah 58:2</a>: "They seek me daily, and delight to know my ways... they take delight in approaching (<em>qarav</em>) God"</li>
+<li><a href="https://www.blueletterbible.org/kjv/ezk/44/15/s_846015" target="_blank" data-ref="Ezekiel 44:15">Ezekiel 44:15</a>: The faithful priests "shall come near (<em>qarav</em>) to me to minister unto me"</li>
+</ul>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Sacrifice is invitation, not punishment</strong>: God designed the system to bring people <em>closer</em>, not to keep them at bay</li>
+<li><strong>The worshiper moves toward God</strong>: <em>Korban</em> implies action, will, and desire — not passive compliance</li>
+<li><strong>Every offering is relational</strong>: The goal isn't transaction but connection</li>
+</ol>
+<h3>LDS Application</h3>
+<p>Temple worship follows the same logic: we don't go to the temple to perform rituals but to draw near to God. Sacrament, prayer, and covenant-making are all forms of <em>korban</em> — vehicles of approach. The question isn't "What am I giving up?" but "How close am I drawing?"</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 2: Olah (עֹלָה) — "Burnt Offering, That Which Ascends"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h5928/kjv/wlc/0-1/" target="_blank" data-lexicon="burnt offering, holocaust" data-strongs="H5928" data-translit="ʿălâ" data-original="עֲלָה" data-lang="hebrew" data-verse="">עלה</a> (<em>alah</em>), "to go up, ascend"</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/lev/1/3/s_91003" target="_blank" data-ref="Leviticus 1:3">Leviticus 1:3, 4, 6, 9, 10, 13, 14, 17; 6:9-13</a></p>
+<h3>Meaning</h3>
+<p>The <em>olah</em> is the burnt offering — entirely consumed by fire on the altar. Unlike other offerings where portions went to the priest or worshiper, the <em>olah</em> ascended completely. Nothing was retained. The smoke rising from the altar represented the offering going up to God.</p>
+<h3>The Perpetual Fire</h3>
+<p>"The fire shall ever be burning upon the altar; it shall never go out" (<a href="https://www.blueletterbible.org/kjv/lev/6/13/s_96013" target="_blank" data-ref="Leviticus 6:13">Lev 6:13</a>). The <em>olah</em> was offered every morning and evening (<em>tamid</em> — the "continual" offering), creating a perpetual connection between Israel and God. The fire that consumed the <em>olah</em> was never allowed to die.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Total consecration</strong>: The <em>olah</em> holds nothing back. It is the sacrifice of complete surrender.</li>
+<li><strong>Ascending to God</strong>: The directional language matters — the offering goes <em>up</em>. It moves toward God.</li>
+<li><strong>Voluntary</strong>: "Of his own voluntary will" (<em>lirtzono</em>, <a href="https://www.blueletterbible.org/kjv/lev/1/3/s_91003" target="_blank" data-ref="Leviticus 1:3">Lev 1:3</a>). Complete surrender cannot be coerced.</li>
+<li><strong>Continual connection</strong>: The perpetual fire represents unbroken covenant relationship — "always having the Spirit."</li>
+</ol>
+<h3>LDS Application</h3>
+<p>The <em>olah</em> principle undergirds the covenant of consecration. We offer not 10% or 90% but everything — time, talent, means, will. "Offer your whole souls as an offering unto him" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/omni/1?lang=eng&id=p26#p26" target="_blank" data-ref="Omni 1:26">Omni 1:26</a>). The perpetual fire echoes the sacrament prayer's promise: "always remember him... always have his Spirit."</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 3: Chatat (חַטָּאת) — "Sin Offering, Purification Offering"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h2398/kjv/wlc/0-1/" target="_blank" data-lexicon="to sin, miss, miss the way, go wrong, incur guilt, forfeit, purify from uncleanness (Qal) to miss to sin, miss the go..." data-strongs="H2398" data-translit="ḥāṭā&#x27;" data-original="חָטָא" data-lang="hebrew" data-verse="">חטא</a> (<em>chata'</em>), "to miss, go wrong, sin"</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/lev/4/3/s_94003" target="_blank" data-ref="Leviticus 4:3">Leviticus 4:3, 8, 14, 20, 21, 24, 25, 26, 28, 29, 32, 33, 34, 35</a></p>
+<h3>Meaning</h3>
+<p><em>Chatat</em> means both "sin" and "sin offering" — the same word for the disease and the cure. The root <em>chata'</em> literally means "to miss the mark" — like an archer whose arrow goes wide. Sin in Hebrew isn't primarily rebellion (though that exists); it's going off course, failing to hit the target of God's will.</p>
+<h3>The Purification Function</h3>
+<p>Modern scholarship increasingly translates <em>chatat</em> as "purification offering" rather than "sin offering," because the blood was applied not to the sinner but to sacred objects — the altar, the veil, the Mercy Seat. The <em>chatat</em> purified the sanctuary from the contamination that sin causes. Sin doesn't just wound the sinner; it pollutes God's dwelling place.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Sin has spatial consequences</strong>: It contaminates sacred space, threatening God's willingness to dwell among Israel</li>
+<li><strong>Blood purifies</strong>: The blood of the <em>chatat</em> cleanses what sin has defiled — restoring the conditions for God's presence</li>
+<li><strong>Unintentional sin still matters</strong>: The <em>chatat</em> addresses <em>bishgagah</em> — sins committed in ignorance. Unknown sin has real effects.</li>
+<li><strong>The word is both problem and solution</strong>: <em>Chatat</em> means sin AND the offering that addresses it. God names the cure with the same word as the disease.</li>
+</ol>
+<h3>LDS Application</h3>
+<p>The principle that sin contaminates sacred space resonates with temple worthiness. We prepare spiritually before entering the temple not because God is arbitrary but because sin and holiness cannot coexist unchecked. The sacrament functions as a weekly <em>chatat</em> — purification that restores our covenant standing and keeps our personal sacred space clean.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 4: Kipper (כִּפֶּר) — "To Atone, Cover, Purge"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h3722/kjv/wlc/0-1/" target="_blank" data-lexicon="to cover, purge, make an atonement, make reconciliation, cover over with pitch (Qal) to coat or cover with pitch (Pie..." data-strongs="H3722" data-translit="kāp̄ar" data-original="כָּפַר" data-lang="hebrew" data-verse="">כפר</a> (<em>kaphar</em>) — possibly related to "cover" or "ransom"</p>
+<p><strong>Related:</strong> <a href="https://www.blueletterbible.org/lexicon/h3727/kjv/wlc/0-1/" target="_blank" data-lexicon="mercy-seat, place of atonementthe golden plate of propitiation on which the High Priest sprinkled the seat 7 times on..." data-strongs="H3727" data-translit="kapōreṯ" data-original="כַּפֹּרֶת" data-lang="hebrew" data-verse="">כַּפֹּרֶת</a> (<em>kapporet</em>) — Mercy Seat; <a href="https://www.blueletterbible.org/lexicon/h3713/kjv/wlc/0-1/" target="_blank" data-lexicon="bowl, basin hoar frost, frost" data-strongs="H3713" data-translit="kᵊp̄ôr" data-original="כְּפוֹר" data-lang="hebrew" data-verse="">כִּפּוּר</a> (<em>kippur</em>) — atonement (as in Yom Kippur)</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/lev/1/4/s_91004" target="_blank" data-ref="Leviticus 1:4">Leviticus 1:4; 4:20, 26, 31, 35; 5:6, 10, 13, 16, 18; 16:6, 10, 11, 16, 17, 18, 24, 27, 30, 32, 33, 34</a></p>
+<h3>Meaning</h3>
+<p><em>Kipper</em> is the central verb of atonement in the Hebrew Bible. Its meaning is debated — "to cover," "to ransom," "to purge/wipe clean" — but all three dimensions are present in Leviticus. Atonement covers sin from God's sight, ransoms the sinner from death's claim, and purges the sanctuary from contamination.</p>
+<h3>The Frequency</h3>
+<p><em>Kipper</em> appears nearly 50 times in Leviticus alone — more than any other book. Leviticus is saturated with atonement because the problem it addresses (sinful people living with a holy God) demands constant, comprehensive covering.</p>
+<h3>The Mercy Seat Connection</h3>
+<p>The <em>kapporet</em> — the golden lid of the Ark — gets its name from this root. The place where God meets Israel (<a href="https://www.blueletterbible.org/kjv/exo/25/22/s_75022" target="_blank" data-ref="Exodus 25:22">Ex 25:22</a>) is literally the "place of atonement." God's meeting-point with humanity is defined by mercy, not judgment.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Atonement is multi-dimensional</strong>: Not merely forgiveness, but covering, ransoming, and purifying — all at once</li>
+<li><strong>God provides the means</strong>: The sacrificial system isn't human invention but divine gift</li>
+<li><strong>The Mercy Seat defines the meeting place</strong>: Where God and humanity connect, atonement is the foundation</li>
+<li><strong>It's God's most-used verb in Leviticus</strong>: Atonement isn't one theme among many — it's the infrastructure</li>
+</ol>
+<h3>LDS Application</h3>
+<p>"The Atonement of Jesus Christ" preserves this Hebrew richness: Christ covers, ransoms, and purges. He doesn't merely forgive — He addresses sin from every angle. The word <em>at-one-ment</em> captures the relational goal: making one what sin has divided.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 5: Kadosh (קָדוֹשׁ) — "Holy, Set Apart"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> <a href="https://www.blueletterbible.org/lexicon/h6942/kjv/wlc/0-1/" target="_blank" data-lexicon="to sanctify, consecrate, make holy" data-strongs="H6942" data-translit="qadash" data-original="קָדַשׁ" data-lang="hebrew" data-verse="Exodus 19:10">קדש</a> (<em>qadash</em>), "to be holy, set apart, consecrate"</p>
+<p><strong>Related:</strong> <a href="https://www.blueletterbible.org/lexicon/h6943/kjv/wlc/0-1/" target="_blank" data-lexicon="Kedesh = &quot;holy place&quot;a city in the extreme south of Judahsame as &#x27;Kadesh&#x27; and &#x27;Kadesh-barnea&#x27;a city of Issachar allot..." data-strongs="H6943" data-translit="qeḏeš" data-original="קֶדֶשׁ" data-lang="hebrew" data-verse="">קֶדֶשׁ</a> (<em>qodesh</em>) — holiness, holy thing; <a href="https://www.blueletterbible.org/lexicon/h4720/kjv/wlc/0-1/" target="_blank" data-lexicon="sanctuary, holy place" data-strongs="H4720" data-translit="miqdash" data-original="מִקְדָּשׁ" data-lang="hebrew" data-verse="Exodus 25:8">מִקְדָּשׁ</a> (<em>miqdash</em>) — sanctuary</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/lev/11/44/s_101044" target="_blank" data-ref="Leviticus 11:44">Leviticus 11:44, 45; 19:2; 20:7, 26; 21:8</a>; and throughout</p>
+<h3>Meaning</h3>
+<p><em>Kadosh</em> means "set apart, distinct, other." God is <em>kadosh</em> — fundamentally different from everything created. When Israel is called to be <em>kadosh</em>, they are called to share in God's distinctiveness, to be set apart as He is set apart.</p>
+<h3>The Leviticus Refrain</h3>
+<p>"Ye shall be holy, for I the LORD your God am holy" appears in <a href="https://www.blueletterbible.org/kjv/lev/11/44-45/s_101044" target="_blank" data-ref="Leviticus 11:44-45">Leviticus 11:44-45, 19</a>:2, 20:7, and 20:26. It frames the purity laws (ch. 11), the ethical code (ch. 19), and the community standards (ch. 20). Holiness is the thread that connects ritual, ethics, and identity.</p>
+<h3>What Holiness Is NOT</h3>
+<p>Holiness in Leviticus is not:</p>
+<ul>
+<li>Merely moral perfection (though it includes ethics)</li>
+<li>Withdrawal from the world (Israel lives among nations)</li>
+<li>Grim asceticism (the peace offering is a joyful shared meal)</li>
+</ul>
+<p>Holiness IS: reflecting God's character in every dimension of life — worship, work, relationships, food, sexuality, economics, speech.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>God's holiness is the standard</strong>: "Be holy because I am holy" — not "because it's virtuous" or "because it's useful"</li>
+<li><strong>Holiness is communal</strong>: <em>Kedoshim tihyu</em> is plural — addressed to the entire congregation, not individuals</li>
+<li><strong>Holiness is both gift and demand</strong>: God sets Israel apart (gift) and then calls them to live accordingly (demand)</li>
+<li><strong>Holiness connects ritual and ethics</strong>: The same word covers Tabernacle sanctity and neighbor-love</li>
+</ol>
+<h3>LDS Application</h3>
+<p>"Holiness to the Lord" — inscribed on every Latter-day Saint temple — is <em>Kodesh l'YHWH</em>, the same phrase engraved on the High Priest's golden plate (<a href="https://www.blueletterbible.org/kjv/exo/28/36/s_78036" target="_blank" data-ref="Exodus 28:36">Ex 28:36</a>). The temple declares in Hebrew what Leviticus demands in practice: everything set apart for God. Holiness in Latter-day Saint theology is not an abstract ideal but an active covenant — sanctification through the Spirit, lived out in daily discipleship.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 6: Azazel (עֲזָאזֵל) — "The Scapegoat / The Place of Removal"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Root:</strong> Debated — possibly <a href="https://www.blueletterbible.org/lexicon/h5794/kjv/wlc/0-1/" target="_blank" data-lexicon="strong, mighty, fierce" data-strongs="H5794" data-translit="ʿaz" data-original="עַז" data-lang="hebrew" data-verse="">עז</a> (<em>ez</em>, goat) + <a href="https://www.blueletterbible.org/lexicon/h235/kjv/wlc/0-1/" target="_blank" data-lexicon="to go, to go away, to go about" data-strongs="H235" data-translit="āzal" data-original="אָזַל" data-lang="hebrew" data-verse="">אזל</a> (<em>azal</em>, to go away); or a proper name</p>
+<p><strong>Appears:</strong> <a href="https://www.blueletterbible.org/kjv/lev/16/8/s_106008" target="_blank" data-ref="Leviticus 16:8">Leviticus 16:8, 10</a> (twice), 26</p>
+<h3>Meaning</h3>
+<p><em>Azazel</em> is one of the most debated words in the Hebrew Bible. Three major interpretations exist:</p>
+<ol>
+<li><strong>Rashi</strong>: A rocky cliff in the wilderness where the goat was sent</li>
+<li><strong>Ibn Ezra / Nahmanides</strong>: A wilderness entity or force representing the realm of chaos and sin — the goat is sent back to the domain of disorder</li>
+<li><strong>Etymological</strong>: "The goat that goes away" — from <em>ez</em> (goat) + <em>azal</em> (to depart)</li>
+</ol>
+<h3>The Scapegoat Ritual</h3>
+<p>The Azazel goat receives the confession of all Israel's sins through the High Priest's hand-pressing. It is then led into the wilderness — to <em>eretz gezerah</em> ("a land cut off"). The goat bears the sins away and does not return.</p>
+<h3>Theological Significance</h3>
+<ol>
+<li><strong>Sin is removed, not just forgiven</strong>: The scapegoat carries sin where it cannot come back</li>
+<li><strong>Comprehensive transfer</strong>: "All the iniquities... all their transgressions in all their sins" — the language is exhaustive</li>
+<li><strong>Directional theology</strong>: Sin goes away from God's presence, away from the camp, away from the people — into nothingness</li>
+</ol>
+<h3>LDS Application</h3>
+<p>The scapegoat answers the question every penitent asks: "Are my sins really gone?" Leviticus says yes — carried to a place of no return. "As far as the east is from the west, so far hath he removed our transgressions from us" (<a href="https://www.blueletterbible.org/kjv/psa/103/12/s_581012" target="_blank" data-ref="Psalm 103:12">Psalm 103:12</a>). Christ carries what the Azazel goat symbolized — sin borne away permanently. Remembering past sins after repentance is, in a sense, chasing the scapegoat into the wilderness to bring it back.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study Summary Table</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Hebrew</th><th>Transliteration</th><th>Meaning</th><th>Key Verse</th></tr>
+<tr><td>קָרְבָּן</td><td>Korban</td><td>Offering (drawing near)</td><td><a href="https://www.blueletterbible.org/kjv/lev/1/2/s_91002" target="_blank" data-ref="Leviticus 1:2">Lev 1:2</a></td></tr>
+<tr><td>ע��לָה</td><td>Olah</td><td>Burnt offering (ascending)</td><td><a href="https://www.blueletterbible.org/kjv/lev/1/3/s_91003" target="_blank" data-ref="Leviticus 1:3">Lev 1:3</a></td></tr>
+<tr><td>חַטָּאת</td><td>Chatat</td><td>Sin/purification offering</td><td><a href="https://www.blueletterbible.org/kjv/lev/4/3/s_94003" target="_blank" data-ref="Leviticus 4:3">Lev 4:3</a></td></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h3722/kjv/wlc/0-1/" target="_blank" data-lexicon="to cover, purge, make an atonement, make reconciliation, cover over with pitch (Qal) to coat or cover with pitch (Pie..." data-strongs="H3722" data-translit="kāp̄ar" data-original="כָּפַר" data-lang="hebrew" data-verse="">כִּפֶּר</a></td><td>Kipper</td><td>To atone, cover, purge</td><td><a href="https://www.blueletterbible.org/kjv/lev/16/30/s_106030" target="_blank" data-ref="Leviticus 16:30">Lev 16:30</a></td></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h6918/kjv/wlc/0-1/" target="_blank" data-lexicon="holy, set apart" data-strongs="H6918" data-translit="qadosh" data-original="קָדוֹשׁ" data-lang="hebrew" data-verse="Isaiah 6:3">קָדוֹש</a>��</td><td>Kadosh</td><td>Holy, set apart</td><td><a href="https://www.blueletterbible.org/kjv/lev/19/2/s_109002" target="_blank" data-ref="Leviticus 19:2">Lev 19:2</a></td></tr>
+<tr><td><a href="https://www.blueletterbible.org/lexicon/h5799/kjv/wlc/0-1/" target="_blank" data-lexicon="entire removal, scapegoatrefers to the goat used for sacrifice for the sins of the peoplemeaning dubious" data-strongs="H5799" data-translit="ʿăzā&#x27;zēl" data-original="עֲזָאזֵל" data-lang="hebrew" data-verse="">עֲזָאזֵל</a></td><td>Azazel</td><td>Scapegoat / place of removal</td><td><a href="https://www.blueletterbible.org/kjv/lev/16/8/s_106008" target="_blank" data-ref="Leviticus 16:8">Lev 16:8</a></td></tr>
+</table>
+<hr>
+<p><em>Leviticus Overview Study Guide | CFM Corner | OT 2026</em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 5: LEVITICUS OVERVIEW: JEWISH PERSPECTIVE -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">5. Leviticus Overview: Jewish Perspective</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Introduction</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Jewish tradition has a surprising relationship with Leviticus. The book that many modern readers find most difficult was, according to the Midrash, the first book taught to children. The Talmud records: "Why do young children begin their Torah study with Torat Kohanim (Leviticus)? Because children are pure, and the sacrifices are pure — let the pure come and occupy themselves with the pure" (Leviticus Rabbah 7:3). Far from being obscure or unapproachable, Leviticus was considered the foundation of Jewish education precisely because its themes — purity, holiness, and drawing near to God — are the most essential.</p>
+<p>This section explores how Jewish tradition reads Leviticus, especially its theology of sacrifice, atonement, and holiness.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>1. Vayikra — The Small Aleph</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>A Scribal Tradition</h3>
+<p>In Torah scrolls, the first word of Leviticus — וַיִּקְרָא (<em>Vayikra</em>) — is traditionally written with a small aleph (א). Several explanations are offered:</p>
+<p><strong>Humility of Moses:</strong> Moses, in his humility, wanted to write <em>Vayikar</em> ("and He happened upon," as with Balaam in <a href="https://www.blueletterbible.org/kjv/num/23/4/s_140004" target="_blank" data-ref="Numbers 23:4">Numbers 23:4</a>) instead of <em>Vayikra</em> ("and He called"), to avoid suggesting a special relationship with God. God insisted on the full word; Moses made the aleph small as a compromise.</p>
+<p><strong>Theological Reading:</strong> The small aleph teaches that God's calling is gentle, not overwhelming. He calls in a way that can be heard without being crushed. The voice that filled the Tabernacle stopped at its walls — Israel outside didn't hear it. God modulates His revelation to what we can bear.</p>
+<h3>LDS Resonance</h3>
+<p>The "still small voice" (<a href="https://www.blueletterbible.org/kjv/1ki/19/12/s_310012" target="_blank" data-ref="1 Kings 19:12">1 Kings 19:12; 1</a> Nephi 17:45) resonates with this tradition. God's most important communications often come quietly, calibrated to the hearer's capacity.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>2. Why Sacrifice? The Rabbinic Debate</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Maimonides: Accommodation</h3>
+<p>Maimonides (Rambam, 12th century) argued that sacrifice was a divine concession. Israel, having lived in Egypt for generations, knew no worship without animal offering. God met them where they were, redirecting what they already understood toward proper worship of YHWH. Sacrifice was, in Maimonides' view, a transitional institution — necessary at Sinai, ultimately superseded by prayer.</p>
+<h3>Nachmanides: Intrinsic Meaning</h3>
+<p>Nachmanides (Ramban, 13th century) disagreed sharply. Sacrifice wasn't concession but revelation. The act of laying hands on the animal, watching it die, seeing the blood — this was meant to impress on the sinner: "This should have been me." The substitutionary logic was the point, not an accommodation. Each element carried inherent symbolic weight.</p>
+<h3>The Tension</h3>
+<p>The debate between Maimonides and Nachmanides shapes Jewish thought to this day. Was sacrifice a temporary pedagogical tool, or did it carry eternal theological meaning? Most traditional authorities lean toward Nachmanides — sacrifice was always meaningful, and its loss (with the Temple's destruction) is genuinely mourned.</p>
+<h3>LDS Resonance</h3>
+<p>Latter-day Saint theology affirms the Nachmanides position: sacrifice pointed to Christ and carried real, typological meaning (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/34?lang=eng&id=p14#p14" target="_blank" data-ref="Alma 34:14">Alma 34:14</a>: "the whole meaning of the law, every whit pointing to that great and last sacrifice"). The sacrificial system wasn't a placeholder but a prophecy enacted.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>3. After the Temple: Prayer Replaces Sacrifice</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Crisis of 70 CE</h3>
+<p>When the Romans destroyed the Second Temple, the entire sacrificial system ended. No altar, no priests officiating, no korbanot. The rabbis faced an existential question: How do we draw near to God without sacrifice?</p>
+<h3>The Rabbinic Solution</h3>
+<p>The Talmud records Rabbi Yochanan ben Zakkai's response: "We have another atonement equal to sacrifice — acts of lovingkindness (<em>gemilut chasadim</em>)" (Avot de-Rabbi Natan 4:5).</p>
+<p>The synagogue became a <em>mikdash me'at</em> — "a small sanctuary" (from <a href="https://www.blueletterbible.org/kjv/ezk/11/16/s_813016" target="_blank" data-ref="Ezekiel 11:16">Ezekiel 11:16</a>). The three daily prayer services were structured to correspond to the three daily sacrificial times:</p>
+<ul>
+<li><strong>Shacharit</strong> (morning prayer) = morning <em>tamid</em> offering</li>
+<li><strong>Mincha</strong> (afternoon prayer) = afternoon <em>tamid</em> offering</li>
+<li><strong>Ma'ariv</strong> (evening prayer) = the burning of fats and limbs through the night</li>
+</ul>
+<h3>The Siddur and Leviticus</h3>
+<p>To this day, traditional Jewish prayer books include recitation of the sacrificial portions of Leviticus as part of the morning service. Jews literally read Leviticus as prayer — keeping the memory of sacrifice alive and expressing longing for its restoration.</p>
+<h3>LDS Resonance</h3>
+<p>The Latter-day Saint understanding echoes both positions: sacrifice pointed to Christ (past), and prayer and sacrament continue the pattern of <em>korban</em> (present). The sacrament table functions as a kind of altar, the sacrament prayers as a form of sacrificial liturgy, and the covenant renewal they effect mirrors what the <em>tamid</em> and festival offerings accomplished.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>4. Yom Kippur in Jewish Life</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Holiest Day</h3>
+<p>Yom Kippur remains the most sacred day in the Jewish calendar — even for secular Jews, it carries enormous cultural and spiritual weight. It is the one day when even non-observant Jews often fast and attend synagogue.</p>
+<h3>The Avodah Service</h3>
+<p>The central liturgical moment of Yom Kippur is the <em>Avodah</em> — a detailed recitation of the High Priest's service from <a href="https://www.blueletterbible.org/kjv/lev/16/1/s_106001" target="_blank" data-ref="Leviticus 16">Leviticus 16</a>. The congregation relives the entire ritual: the white linen, the bull for the priest's sin, the two goats, the entry into the Holy of Holies, the sprinkling of blood, the confession over the scapegoat.</p>
+<p>At the moment in the recitation when the High Priest pronounced the divine name (YHWH) — which happened only on Yom Kippur, only in the Holy of Holies — the congregation prostrates. This is one of the only times Jews bow fully in worship (apart from Rosh Hashanah).</p>
+<h3>Teshuvah — Return</h3>
+<p>The Hebrew word for repentance — <em>teshuvah</em> (<a href="https://www.blueletterbible.org/lexicon/h8666/kjv/wlc/0-1/" target="_blank" data-lexicon="a recurrence, an answer, returnreturncompletion of a year, return of a yearat the return (construct)answer, reply" data-strongs="H8666" data-translit="tᵊšûḇâ" data-original="תְּשׁוּבָה" data-lang="hebrew" data-verse="">תְּשׁוּבָה</a>) — means "return." It's not self-flagellation but homecoming. The ten days between Rosh Hashanah and Yom Kippur (the <em>Yamim Nora'im</em>, "Days of Awe") are dedicated to self-examination, apology, reconciliation, and return to God.</p>
+<p>A critical principle: <strong>Yom Kippur atones for sins between humans and God, but NOT for sins between one person and another — until the offended party has been appeased.</strong> You cannot fast your way out of an unresolved wrong against your neighbor. This links <a href="https://www.blueletterbible.org/kjv/lev/16/1/s_106001" target="_blank" data-ref="Leviticus 16">Leviticus 16</a> directly to <a href="https://www.blueletterbible.org/kjv/lev/19/1/s_109001" target="_blank" data-ref="Leviticus 19">Leviticus 19</a>.</p>
+<h3>LDS Resonance</h3>
+<p>The Latter-day Saint repentance process reflects this: confession to God addresses vertical sins, but reconciliation with others is required for horizontal ones. The Savior's teaching — "first be reconciled to thy brother, and then come and offer thy gift" (<a href="https://www.blueletterbible.org/kjv/mat/5/24/s_934024" target="_blank" data-ref="Matthew 5:24">Matt 5:24</a>) — is Yom Kippur ethics in Gospel language.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>5. Kedoshim — Holiness as Israel's Calling</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Great Principle of Torah</h3>
+<p>Rabbi Akiva (2nd century CE) identified <a href="https://www.blueletterbible.org/kjv/lev/19/18/s_109018" target="_blank" data-ref="Leviticus 19:18">Leviticus 19:18</a> — "Love thy neighbour as thyself" — as <em>klal gadol ba-Torah</em>, "the great principle of the Torah." Ben Azzai countered that <a href="https://www.blueletterbible.org/kjv/gen/5/1/s_5001" target="_blank" data-ref="Genesis 5:1">Genesis 5:1</a> — "This is the book of the generations of Adam... in the likeness of God made He him" — was even greater, because neighbor-love based on God's image includes everyone, not just those we naturally call "neighbor."</p>
+<h3>Ramban's Warning</h3>
+<p>Nachmanides offered a famous reading of <a href="https://www.blueletterbible.org/kjv/lev/19/2/s_109002" target="_blank" data-ref="Leviticus 19:2">Leviticus 19:2</a>: without the general command "Be holy," a person could technically observe every specific law while remaining "a scoundrel with the Torah's permission" (<em>naval birshut ha-Torah</em>). One could eat only kosher food — gluttonously. One could avoid forbidden relationships — while being crude and exploitative in permitted ones. "Be holy" is the umbrella demand that no technical compliance can satisfy without genuine moral transformation.</p>
+<h3>The Structure of Leviticus 19</h3>
+<p>Jewish commentators note that <a href="https://www.blueletterbible.org/kjv/lev/19/1/s_109001" target="_blank" data-ref="Leviticus 19">Leviticus 19</a> mirrors the Ten Commandments:</p>
+<table class="info-table">
+<tr><th><a href="https://www.blueletterbible.org/kjv/lev/19/1/s_109001" target="_blank" data-ref="Leviticus 19">Leviticus 19</a></th><th>Ten Commandments</th></tr>
+<tr><td>19:3 — Honor parents</td><td>5th Commandment</td></tr>
+<tr><td>19:4 — No idols</td><td>1st-2nd Commandments</td></tr>
+<tr><td>19:3 — Keep Sabbath</td><td>4th Commandment</td></tr>
+<tr><td>19:11 — Don't steal</td><td>8th Commandment</td></tr>
+<tr><td>19:11 — Don't lie</td><td>9th Commandment</td></tr>
+<tr><td>19:16 — Don't stand by blood</td><td>6th Commandment</td></tr>
+<tr><td>19:18 — Love neighbor</td><td>Summary of 5th-10th</td></tr>
+</table>
+<p>This parallel suggests <a href="https://www.blueletterbible.org/kjv/lev/19/1/s_109001" target="_blank" data-ref="Leviticus 19">Leviticus 19</a> is an intentional re-presentation of Sinai's covenant — now expanded into daily ethical life.</p>
+<h3>LDS Resonance</h3>
+<p>The temple covenant of consecration — giving all that we have and are to the building of the kingdom — is the institutional expression of <em>kedoshim tihyu</em>. Holiness isn't a feeling; it's a covenant commitment to live differently in every dimension.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>6. The Red Heifer and the Mystery of Purification (Numbers 19 / Leviticus context)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Ultimate Paradox</h3>
+<p>While the red heifer ritual appears in <a href="https://www.blueletterbible.org/kjv/num/19/1/s_136001" target="_blank" data-ref="Numbers 19">Numbers 19</a>, it belongs theologically to Leviticus's purity system. The paradox: the person who prepares the purification water becomes impure, while the impure person who receives it becomes clean. Even Solomon reportedly said, "I have labored to understand the Torah and have succeeded — except for the red heifer."</p>
+<h3>Rabbinic Acceptance</h3>
+<p>The rabbis classified the red heifer as a <em>chok</em> — a statute whose reason is beyond human understanding. Rashi: God says, "I have enacted a statute, I have decreed a decree, and you are not permitted to transgress it." Some commandments serve purposes we can fully understand; others ask for trust.</p>
+<h3>LDS Resonance</h3>
+<p>Some elements of covenant worship — including temple ordinances — carry meaning that deepens over time and may not be fully understood at first encounter. The willingness to participate faithfully before understanding completely is itself an act of holiness.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Summary</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Jewish tradition finds in Leviticus:</p>
+<ol>
+<li><strong>The foundation of education</strong>: Pure children study the pure book — Leviticus is where Torah learning begins</li>
+<li><strong>Sacrifice as deep theology</strong>: Whether accommodation (Maimonides) or revelation (Nachmanides), sacrifice carries real meaning</li>
+<li><strong>Prayer as continuity</strong>: When the Temple fell, prayer inherited the sacrificial structure</li>
+<li><strong>Yom Kippur as the hinge of the year</strong>: Comprehensive atonement, requiring both divine mercy and human reconciliation</li>
+<li><strong>Holiness as total life transformation</strong>: Not technical compliance but genuine moral change</li>
+<li><strong>Mystery as trust</strong>: Some commands ask for obedience before understanding</li>
+</ol>
+<p>The Jewish reading of Leviticus corrects two common Christian misreadings: that the law was merely burdensome, and that sacrifice was merely primitive. For Jewish tradition, Leviticus is the book of sacred nearness — God teaching His people how to live in His presence without being consumed.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Source Notes</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Topic</th><th>Traditional Source</th></tr>
+<tr><td>Children study Leviticus first</td><td>Leviticus Rabbah 7:3</td></tr>
+<tr><td>Small aleph</td><td>Baal HaTurim on <a href="https://www.blueletterbible.org/kjv/lev/1/1/s_91001" target="_blank" data-ref="Leviticus 1:1">Lev 1:1</a></td></tr>
+<tr><td>Maimonides on sacrifice</td><td>Guide for the Perplexed III:32</td></tr>
+<tr><td>Nachmanides' critique</td><td>Commentary on <a href="https://www.blueletterbible.org/kjv/lev/1/9/s_91009" target="_blank" data-ref="Leviticus 1:9">Lev 1:9</a></td></tr>
+<tr><td>Prayer replaces sacrifice</td><td>Talmud Berakhot 26b</td></tr>
+<tr><td>Lovingkindness as atonement</td><td>Avot de-Rabbi Natan 4:5</td></tr>
+<tr><td>Rabbi Akiva, klal gadol</td><td>Sifra, Kedoshim 4:12</td></tr>
+<tr><td>Naval birshut ha-Torah</td><td>Ramban on <a href="https://www.blueletterbible.org/kjv/lev/19/2/s_109002" target="_blank" data-ref="Leviticus 19:2">Lev 19:2</a></td></tr>
+<tr><td>Solomon on red heifer</td><td>Midrash Tanchuma, Chukat 6</td></tr>
+<tr><td>Yom Kippur interpersonal requirement</td><td>Mishnah Yoma 8:9</td></tr>
+</table>
+<hr>
+<p><em>Leviticus Overview Study Guide | CFM Corner | OT 2026</em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 6: LEVITICUS OVERVIEW: TEACHING APPLICATIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">6. Leviticus Overview: Teaching Applications</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Overview</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Leviticus can feel inaccessible — ancient ritual, unfamiliar vocabulary, detailed procedure. The teaching goal is to help readers and students see what lies beneath the surface: a God who wants to be near, a system designed to make that nearness possible, and a vision of holiness that extends into every corner of life. Approach Leviticus not as a book of rules but as a book of relationship.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Family Home Evening</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>For Young Children (Ages 3–7)</h3>
+<p><strong>Focus:</strong> God wants to be close to us</p>
+<p><strong>Story (simplified):</strong> "After God came to live in the special tent with His people, He taught them how to visit Him. He said, 'Bring Me a gift — not because I need it, but because it's how you come close to Me.' The people brought animals and bread and oil. Every gift was a way of saying, 'I want to be near You, God.' And God said, 'I want you to be near Me, too.'"</p>
+<p><strong>Object Lesson:</strong> Use a night-light. Turn off the lights. "God is like this light. He wants us close. But we have to walk toward the light — we have to choose to come near. The offerings in Leviticus were like taking steps toward God's light."</p>
+<p><strong>Song:</strong> "I Love to See the Temple" (CS 95)</p>
+<p><strong>Testimony:</strong> Heavenly Father doesn't want to be far away. Everything He teaches us — prayer, church, the temple — is His way of helping us come closer.</p>
+<hr>
+<h3>For Older Children (Ages 8��11)</h3>
+<p><strong>Focus:</strong> Saying sorry and making things right</p>
+<p><strong>Read:</strong> <a href="https://www.blueletterbible.org/kjv/lev/4/27-31/s_94027" target="_blank" data-ref="Leviticus 4:27-31">Leviticus 4:27-31</a> (summarized): "If someone did something wrong without meaning to, they could bring an offering and the priest would help make things right with God."</p>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>Have you ever done something wrong without realizing it? How did you find out?</li>
+<li>What does it mean that God provided a way to fix mistakes — even ones we didn't know about?</li>
+<li>How do we "make things right" today? (Prayer, repentance, the sacrament, apologizing)</li>
+</ol>
+<p><strong>Activity:</strong> Write a "making things right" list: someone to apologize to, something to fix, a way to be kinder this week.</p>
+<p><strong>Connection:</strong> God always provides a way back. The sin offering in Leviticus and the sacrament today serve the same purpose — restoring our relationship with God.</p>
+<hr>
+<h3>For Youth/Teens</h3>
+<p><strong>Focus:</strong> What does holiness look like on a Tuesday?</p>
+<p><strong>Read:</strong> <a href="https://www.blueletterbible.org/kjv/lev/19/9-18/s_109009" target="_blank" data-ref="Leviticus 19:9-18">Leviticus 19:9-18</a></p>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>This is God's definition of "holiness." What surprises you about it?</li>
+<li>Which of these commands is hardest for you personally? (Not gossiping? Not holding grudges? Leaving "margins" for others?)</li>
+<li><a href="https://www.blueletterbible.org/kjv/lev/19/1/s_109001" target="_blank" data-ref="Leviticus 19">Leviticus 19</a> says "I am the LORD" after almost every command. Why?</li>
+<li>How does "love thy neighbour as thyself" connect to holiness?</li>
+</ol>
+<p><strong>Challenge:</strong> Pick one command from <a href="https://www.blueletterbible.org/kjv/lev/19/1/s_109001" target="_blank" data-ref="Leviticus 19">Leviticus 19</a> and live it deliberately this week. Not gossip (19:16)? Pay someone fairly (19:13)? Don't hold a grudge (19:18)? Report back next week.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Sunday School (Adults)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Lesson Approach 1: Sacrifice as Drawing Near</h3>
+<p><strong>Opening Question:</strong> "What comes to mind when you hear the word 'sacrifice'? Now — what if the word actually means 'drawing near'?"</p>
+<p><strong>Key Scripture:</strong> <a href="https://www.blueletterbible.org/kjv/lev/1/1-4/s_91001" target="_blank" data-ref="Leviticus 1:1-4">Leviticus 1:1-4</a></p>
+<p><strong>Background:</strong> Explain <em>korban</em> (from <em>qarav</em>, to draw near). Sacrifice in Leviticus wasn't appeasement — it was approach. Every offering was a vehicle for the worshiper to come closer to God.</p>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>How does reframing "sacrifice" as "drawing near" change how you read Leviticus?</li>
+<li>What are our modern <em>korbanot</em> — the things we bring to God to draw near? (Prayer, temple worship, sacrament, service, tithing)</li>
+<li>The burnt offering (<em>olah</em>) was entirely consumed — nothing held back. What would total consecration look like in your life?</li>
+<li><a href="https://www.blueletterbible.org/kjv/lev/1/3/s_91003" target="_blank" data-ref="Leviticus 1:3">Leviticus 1:3</a> says "of his own voluntary will." Why does God insist that drawing near must be voluntary?</li>
+</ol>
+<p><strong>Application:</strong> Every act of worship is <em>korban</em> — not loss, but approach. This week, reframe one act of "sacrifice" (tithing, service, temple attendance) as an act of drawing near.</p>
+<p><strong>Testimony:</strong> God designed an entire system to make closeness possible. He wants us near — and He provides the way.</p>
+<hr>
+<h3>Lesson Approach 2: The Day of Atonement and Christ</h3>
+<p><strong>Read together:</strong> <a href="https://www.blueletterbible.org/kjv/lev/16/7-10/s_106007" target="_blank" data-ref="Leviticus 16:7-10">Leviticus 16:7-10, 21-22, 30</a></p>
+<p><strong>Key Point:</strong> Two goats, one atonement. The first goat's blood pays the debt; the second goat carries sins away to a land of no return.</p>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>Why two goats? What would be missing if there were only one?</li>
+<li>The scapegoat was sent to "a land not inhabited" — sins carried where they can never return. Do you live as if your sins are truly gone?</li>
+<li>The High Priest wore plain white linen — not his glory garments. What does this teach about approaching God?</li>
+<li>The people fasted and did no work. Atonement was received, not earned. How does this connect to grace?</li>
+</ol>
+<p><strong>Read:</strong> <a href="https://www.blueletterbible.org/kjv/heb/9/11-12/s_1142011" target="_blank" data-ref="Hebrews 9:11-12">Hebrews 9:11-12, 24-26</a>. Christ fulfills both goats: the blood that atones and the one who bears sins away — once for all.</p>
+<p><strong>Application:</strong> If the scapegoat didn't come back, why do we keep retrieving our forgiven sins from the wilderness? Christ's atonement is complete. Believe it.</p>
+<hr>
+<h3>Lesson Approach 3: Holiness in Daily Life</h3>
+<p><strong>Opening Question:</strong> "If someone asked you to define holiness, what would you say? Now let's see what God says."</p>
+<p><strong>Read together:</strong> <a href="https://www.blueletterbible.org/kjv/lev/19/2-4/s_109002" target="_blank" data-ref="Leviticus 19:2-4">Leviticus 19:2-4, 9-11, 13-14, 17-18</a></p>
+<p><strong>Key Point:</strong> God's definition of holiness is overwhelmingly ethical and relational — not ritual performance.</p>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>How much of <a href="https://www.blueletterbible.org/kjv/lev/19/1/s_109001" target="_blank" data-ref="Leviticus 19">Leviticus 19</a> is about ritual, and how much is about relationships?</li>
+<li>Verse 14: "Don't curse the deaf or put a stumbling block before the blind." What does this mean beyond the literal? (Don't exploit people's vulnerabilities)</li>
+<li>Verse 17: "Don't hate thy brother in thine heart." Why does God address the <em>interior</em> life alongside the exterior?</li>
+<li>"I am the LORD" appears 16 times. What's God saying by repeating that after every command?</li>
+<li>How does "love thy neighbour as thyself" serve as the summary of everything before it?</li>
+</ol>
+<p><strong>Application:</strong> Holiness isn't a temple-only concept. It's how you treat your coworker, your neighbor, the person who wronged you. Pick one relationship this week and apply <a href="https://www.blueletterbible.org/kjv/lev/19/1/s_109001" target="_blank" data-ref="Leviticus 19">Leviticus 19</a> to it.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Primary</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Junior Primary (Ages 3–7)</h3>
+<p><strong>Visual:</strong> Picture of the Tabernacle / simple drawing of an altar</p>
+<p><strong>Story:</strong> "God lived in a special tent with His people. He loved them so much! But He was SO holy — so good and bright and powerful — that the people needed help to come close. So God taught them how to bring gifts and how to be clean and ready. It was all because God wanted them near Him."</p>
+<p><strong>Song:</strong> "I Feel My Savior's Love" (CS 74)</p>
+<p><strong>Testimony:</strong> Everything God teaches us — the commandments, the temple, the sacrament — is because He loves us and wants us close.</p>
+<hr>
+<h3>Senior Primary (Ages 8–11)</h3>
+<p><strong>Focus:</strong> God provides a way to make things right</p>
+<p><strong>Read:</strong> <a href="https://www.blueletterbible.org/kjv/lev/16/21-22/s_106021" target="_blank" data-ref="Leviticus 16:21-22">Leviticus 16:21-22</a> (summarized): "Once a year, the High Priest put his hands on a goat's head and told God all the people's sins. Then the goat was sent far away into the wilderness, carrying those sins away forever."</p>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>Why do you think the sins were put on the goat? (So they'd be taken away — far from the people)</li>
+<li>Who takes away OUR sins? (Jesus Christ)</li>
+<li>The goat went to a place of "no return." Does that mean our sins are really gone when we repent?</li>
+</ol>
+<p><strong>Activity:</strong> Write something you're sorry for on a small piece of paper. Fold it up. Place it in a "wilderness box" (a sealed container). Talk about how Jesus carries our sins away — and they don't come back.</p>
+<p><strong>Connection:</strong> The scapegoat is a picture of what Jesus does for us. He carries our sins where they can never return.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Youth (Sunday School / Mutual)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>For Ages 12–14</h3>
+<p><strong>Focus:</strong> What sacrifice really means</p>
+<p><strong>Read:</strong> <a href="https://www.blueletterbible.org/kjv/lev/1/2-4/s_91002" target="_blank" data-ref="Leviticus 1:2-4">Leviticus 1:2-4</a></p>
+<p><strong>Explain:</strong> The Hebrew word for offering — <em>korban</em> — means "drawing near." Sacrifice wasn't about losing something; it was about gaining closeness with God.</p>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>What do you "sacrifice" for church? (Time, activities, sleep) Does it feel like loss or like drawing near?</li>
+<li>The burnt offering was entirely consumed — nothing kept back. What would it look like to hold nothing back from God?</li>
+<li>The worshiper pressed his hand on the animal's head — identifying with it. How do we identify with Christ's sacrifice?</li>
+</ol>
+<p><strong>Scripture Chain:</strong></p>
+<ul>
+<li><a href="https://www.blueletterbible.org/kjv/lev/1/4/s_91004" target="_blank" data-ref="Leviticus 1:4">Lev 1:4</a> (hand on the offering)</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/omni/1?lang=eng&id=p26#p26" target="_blank" data-ref="Omni 1:26">Omni 1:26</a> ("offer your whole souls")</li>
+<li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/59?lang=eng&id=p8#p8" target="_blank" data-ref="D&C 59:8">D&C 59:8</a> ("offer up thy sacraments... with a broken heart")</li>
+</ul>
+<p><strong>Application:</strong> This week, reframe one "sacrifice" you make as an act of drawing near to God.</p>
+<hr>
+<h3>For Ages 15–18</h3>
+<p><strong>Focus:</strong> Holiness is how you treat people</p>
+<p><strong>Read:</strong> <a href="https://www.blueletterbible.org/kjv/lev/19/11-18/s_109011" target="_blank" data-ref="Leviticus 19:11-18">Leviticus 19:11-18</a></p>
+<p><strong>Discussion:</strong></p>
+<ol>
+<li>This passage defines holiness. Is it what you expected?</li>
+<li>Verse 16: "Thou shalt not go up and down as a talebearer." How does gossip violate holiness?</li>
+<li>Verse 17: Don't hate "in thine heart." Why does God care about what's hidden?</li>
+<li>Verse 18: "Love thy neighbour as thyself." Jesus called this the second great commandment. It comes from Leviticus — not the New Testament. Does that change how you see the Old Testament?</li>
+<li>What's one relationship in your life where you could practice <a href="https://www.blueletterbible.org/kjv/lev/19/1/s_109001" target="_blank" data-ref="Leviticus 19">Leviticus 19</a> this week?</li>
+</ol>
+<p><strong>Challenge:</strong> Choose the hardest command in <a href="https://www.blueletterbible.org/kjv/lev/19/1/s_109001" target="_blank" data-ref="Leviticus 19">Leviticus 19</a> for you personally. Live it for seven days. Journal what happens.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Personal Study</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Daily Focus Guide</h3>
+<p><strong>Day 1 (Monday):</strong> Read <a href="https://www.blueletterbible.org/kjv/lev/1/1-9/s_91001" target="_blank" data-ref="Leviticus 1:1-9">Leviticus 1:1-9</a> (The burnt offering). Journal: "What does it mean to hold nothing back from God?"</p>
+<p><strong>Day 2 (Tuesday):</strong> Read <a href="https://www.blueletterbible.org/kjv/lev/4/27-35/s_94027" target="_blank" data-ref="Leviticus 4:27-35">Leviticus 4:27-35</a> (The sin offering). Journal: "What sins might I be unaware of? What does God's provision for unintentional sin teach me about His mercy?"</p>
+<p><strong>Day 3 (Wednesday):</strong> Read <a href="https://www.blueletterbible.org/kjv/lev/16/1-10/s_106001" target="_blank" data-ref="Leviticus 16:1-10">Leviticus 16:1-10</a> (Yom Kippur begins). Journal: "The High Priest entered God's presence on behalf of the people. How does Christ do this for me?"</p>
+<p><strong>Day 4 (Thursday):</strong> Read <a href="https://www.blueletterbible.org/kjv/lev/16/20-34/s_106020" target="_blank" data-ref="Leviticus 16:20-34">Leviticus 16:20-34</a> (The scapegoat and cleansing). Journal: "Do I live as if my sins are truly carried away? What would change if I believed it?"</p>
+<p><strong>Day 5 (Friday):</strong> Read <a href="https://www.blueletterbible.org/kjv/lev/19/1-10/s_109001" target="_blank" data-ref="Leviticus 19:1-10">Leviticus 19:1-10</a> (Holiness and generosity). Journal: "What are the 'corners of my field' — the margins I leave for others?"</p>
+<p><strong>Day 6 (Saturday):</strong> Read <a href="https://www.blueletterbible.org/kjv/lev/19/11-18/s_109011" target="_blank" data-ref="Leviticus 19:11-18">Leviticus 19:11-18</a> (Holiness and relationships). Journal: "Which of these commands is hardest for me? Why?"</p>
+<p><strong>Day 7 (Sunday):</strong> Read <a href="https://www.blueletterbible.org/kjv/lev/19/2/s_109002" target="_blank" data-ref="Leviticus 19:2">Leviticus 19:2</a> and 16:30 together. Journal: "'Be clean from all your sins' and 'Be holy.' How do atonement and holiness work together in my life?"</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Key Takeaways for All Settings</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>Sacrifice means drawing near</strong> — <em>korban</em> reframes everything</li>
+<li><strong>God provides for what we can't see</strong> — the sin offering covers unintentional sin</li>
+<li><strong>Atonement is comprehensive</strong> — Yom Kippur addresses ALL sins, not just the ones we notice</li>
+<li><strong>Sins are truly removed</strong> — the scapegoat doesn't come back</li>
+<li><strong>Holiness is relational</strong> — <a href="https://www.blueletterbible.org/kjv/lev/19/1/s_109001" target="_blank" data-ref="Leviticus 19">Leviticus 19</a> is overwhelmingly about how we treat people</li>
+<li><strong>Holiness is for everyone</strong> — "Speak unto ALL the congregation"</li>
+<li><strong>Everything points to Christ</strong> — He is the offering, the priest, and the scapegoat</li>
+</ol>
+<hr>
+<p><em>Leviticus Overview Study Guide | CFM Corner | OT 2026</em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 7: LEVITICUS OVERVIEW: STUDY QUESTIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">7. Leviticus Overview: Study Questions</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Questions for Personal Reflection</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Drawing Near: The Offerings (Leviticus 1–7)</h3>
+<ol>
+<li>The Hebrew word for offering — <em>korban</em> — means "drawing near." How does this change the way you think about sacrifice in your own life?</li>
+</ol>
+<ol>
+<li>The burnt offering (<em>olah</em>) was entirely consumed — nothing held back. What area of your life have you kept off the altar?</li>
+</ol>
+<ol>
+<li>The sin offering (<a href="https://www.blueletterbible.org/kjv/lev/4/1/s_94001" target="_blank" data-ref="Leviticus 4">Leviticus 4</a>) addressed unintentional sin — wrongs the person didn't even know about. What does God's provision for unseen sin teach you about His mercy?</li>
+</ol>
+<ol>
+<li>The peace offering (<em>shelamim</em>) was a shared meal — God, priest, and worshiper eating together. How is communion with God part of your worship life?</li>
+</ol>
+<hr>
+<h3>The Day of Atonement (Leviticus 16)</h3>
+<ol>
+<li>On Yom Kippur, the High Priest changed from ornate garments into plain white linen. What does this teach about approaching God?</li>
+</ol>
+<ol>
+<li>The scapegoat carried Israel's sins to "a land not inhabited" — a place of no return. Do you live as if your repented sins are truly gone? What would change if you did?</li>
+</ol>
+<ol>
+<li>The people fasted and did no work on Yom Kippur. Atonement was entirely God's work through the priest. How comfortable are you receiving grace you didn't earn?</li>
+</ol>
+<ol>
+<li><a href="https://www.blueletterbible.org/kjv/lev/16/30/s_106030" target="_blank" data-ref="Leviticus 16:30">Leviticus 16:30</a> promises cleansing "from all your sins." Not some. Not the respectable ones. All. What sin do you struggle to believe Christ can actually carry away?</li>
+</ol>
+<hr>
+<h3>Holiness in Daily Life (Leviticus 19)</h3>
+<ol>
+<li><a href="https://www.blueletterbible.org/kjv/lev/19/2/s_109002" target="_blank" data-ref="Leviticus 19:2">Leviticus 19:2</a> says "Be holy, for I the LORD your God am holy." This is addressed to the whole congregation — not just priests. What does it mean that holiness is everyone's calling?</li>
+</ol>
+<ol>
+<li>Read <a href="https://www.blueletterbible.org/kjv/lev/19/9-10/s_109009" target="_blank" data-ref="Leviticus 19:9-10">Leviticus 19:9-10</a> (gleaning laws). What are the "corners of your field" — the margins you leave for others in your time, money, and attention?</li>
+</ol>
+<ol>
+<li><a href="https://www.blueletterbible.org/kjv/lev/19/14/s_109014" target="_blank" data-ref="Leviticus 19:14">Leviticus 19:14</a> says not to curse the deaf or trip the blind. Beyond the literal meaning, how do we exploit people's vulnerabilities today?</li>
+</ol>
+<ol>
+<li><a href="https://www.blueletterbible.org/kjv/lev/19/17/s_109017" target="_blank" data-ref="Leviticus 19:17">Leviticus 19:17</a> prohibits hating "in thine heart." Is there someone you treat politely while harboring resentment? What would <a href="https://www.blueletterbible.org/kjv/lev/19/1/s_109001" target="_blank" data-ref="Leviticus 19">Leviticus 19</a> say about that?</li>
+</ol>
+<ol>
+<li>"Love thy neighbour as thyself" (<a href="https://www.blueletterbible.org/kjv/lev/19/18/s_109018" target="_blank" data-ref="Leviticus 19:18">Lev 19:18</a>) comes from Leviticus, not the New Testament. How does knowing this change how you read the Old Testament?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Questions for Family Discussion</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>Read <a href="https://www.blueletterbible.org/kjv/lev/1/1-2/s_91001" target="_blank" data-ref="Leviticus 1:1-2">Leviticus 1:1-2</a> together.</strong> God <em>called</em> to Moses from the Tabernacle. He didn't wait for Moses to come to Him — He spoke first. What does this teach about who God is?</li>
+</ol>
+<ol>
+<li>**Explain the word <em>korban</em> (offering = "drawing near").** What are our family's ways of drawing near to God? (Prayer, scriptures, temple, church, service) Which one means the most to our family right now?</li>
+</ol>
+<ol>
+<li><strong>Read <a href="https://www.blueletterbible.org/kjv/lev/16/21-22/s_106021" target="_blank" data-ref="Leviticus 16:21-22">Leviticus 16:21-22</a> (the scapegoat).</strong> The goat carried the people's sins far away — to a place they could never come back from. Who carries our sins away? (Jesus) How does it feel to know our sins are really gone after repentance?</li>
+</ol>
+<ol>
+<li><strong>Read <a href="https://www.blueletterbible.org/kjv/lev/19/9-10/s_109009" target="_blank" data-ref="Leviticus 19:9-10">Leviticus 19:9-10</a> together.</strong> God told farmers to leave the edges of their fields for the poor. What are ways our family can "leave corners" for others — sharing what we have?</li>
+</ol>
+<ol>
+<li><strong>Read <a href="https://www.blueletterbible.org/kjv/lev/19/18/s_109018" target="_blank" data-ref="Leviticus 19:18">Leviticus 19:18</a>.</strong> "Love thy neighbour as thyself." Who is one "neighbor" our family can show extra love to this week? Make a plan together.</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Questions for Deeper Study</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Theological Exploration</h3>
+<ol>
+<li>Leviticus presents five distinct offerings (burnt, grain, peace, sin, guilt). How does each one address a different dimension of the God-human relationship? What would be missing if any one were absent?</li>
+</ol>
+<ol>
+<li>The sin offering (<em>chatat</em>) purified the sanctuary, not just the sinner. What does it mean that human sin contaminates sacred space? How does this principle inform our understanding of temple worthiness?</li>
+</ol>
+<ol>
+<li>Compare the two goats of Yom Kippur (<a href="https://www.blueletterbible.org/kjv/lev/16/7-22/s_106007" target="_blank" data-ref="Leviticus 16:7-22">Leviticus 16:7-22</a>) with <a href="https://www.blueletterbible.org/kjv/isa/53/4-6/s_732004" target="_blank" data-ref="Isaiah 53:4-6">Isaiah 53:4-6</a> and <a href="https://www.blueletterbible.org/kjv/heb/9/11-28/s_1142011" target="_blank" data-ref="Hebrews 9:11-28">Hebrews 9:11-28</a>. How does Christ fulfill both goats — the one whose blood atones and the one who bears sins away?</li>
+</ol>
+<ol>
+<li><a href="https://www.blueletterbible.org/kjv/lev/19/2/s_109002" target="_blank" data-ref="Leviticus 19:2">Leviticus 19:2</a> says "Be holy because I am holy." How is this command both gift and demand? How does the Atonement make an impossible standard into a real possibility?</li>
+</ol>
+<ol>
+<li>Trace the phrase "I am the LORD" through <a href="https://www.blueletterbible.org/kjv/lev/19/1/s_109001" target="_blank" data-ref="Leviticus 19">Leviticus 19</a>. It appears 16 times. What is its rhetorical function? Why does God anchor every ethical command in His identity rather than in social utility?</li>
+</ol>
+<hr>
+<h3>Historical and Comparative</h3>
+<ol>
+<li>Maimonides argued sacrifice was a divine accommodation to Israel's Egyptian background. Nachmanides argued it carried intrinsic theological meaning. Which position do you find more compelling, and why? How does <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/34?lang=eng&id=p14#p14" target="_blank" data-ref="Alma 34:14">Alma 34:14</a> inform a Latter-day Saint reading?</li>
+</ol>
+<ol>
+<li>Jewish tradition teaches that children began Torah study with Leviticus because "the pure should study the pure." What does this tradition reveal about how ancient Jews valued the book modern readers most often skip?</li>
+</ol>
+<ol>
+<li>After the Temple's destruction in 70 CE, prayer replaced sacrifice. How does the structure of Latter-day Saint worship (sacrament, temple, prayer) continue the sacrificial patterns of Leviticus?</li>
+</ol>
+<ol>
+<li><a href="https://www.blueletterbible.org/kjv/lev/19/1/s_109001" target="_blank" data-ref="Leviticus 19">Leviticus 19</a> has been called a re-presentation of the Ten Commandments in ethical, daily-life form. Compare the two lists. Where do you see parallels? What does <a href="https://www.blueletterbible.org/kjv/lev/19/1/s_109001" target="_blank" data-ref="Leviticus 19">Leviticus 19</a> add that the Ten Commandments do not?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Summary Reflection</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li>What is the single most important insight you gained from studying Leviticus?</li>
+</ol>
+<ol>
+<li>How has your understanding of Christ's Atonement deepened through Leviticus's sacrificial vocabulary — <em>korban</em>, <em>olah</em>, <em>chatat</em>, <em>kipper</em>, <em>Azazel</em>?</li>
+</ol>
+<ol>
+<li>What specific action will you take this week because of what you've studied?</li>
+</ol>
+<ol>
+<li>What question about Leviticus do you still want to explore further?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Scripture Memorization Suggestions</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Primary Level:</strong></p>
+<blockquote>
+<p>"Ye shall be holy: for I the LORD your God am holy." (<a href="https://www.blueletterbible.org/kjv/lev/19/2/s_109002" target="_blank" data-ref="Leviticus 19:2">Leviticus 19:2</a>)</p>
+</blockquote>
+<p><strong>Youth Level:</strong></p>
+<blockquote>
+<p>"Thou shalt love thy neighbour as thyself: I am the LORD." (<a href="https://www.blueletterbible.org/kjv/lev/19/18/s_109018" target="_blank" data-ref="Leviticus 19:18">Leviticus 19:18</a>)</p>
+</blockquote>
+<p><strong>Adult Level:</strong></p>
+<blockquote>
+<p>"For on that day shall the priest make an atonement for you, to cleanse you, that ye may be clean from all your sins before the LORD. It shall be a sabbath of rest unto you, and ye shall afflict your souls, by a statute for ever." (<a href="https://www.blueletterbible.org/kjv/lev/16/30-31/s_106030" target="_blank" data-ref="Leviticus 16:30-31">Leviticus 16:30-31</a>)</p>
+</blockquote>
+<hr>
+<p><em>Note: 13 questions for personal reflection, 5 for family discussion, 9 for deeper study, plus 4 summary questions provided. Total: 31 questions.</em></p>
+<hr>
+<p><em>Leviticus Overview Study Guide | CFM Corner | OT 2026</em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+</div>

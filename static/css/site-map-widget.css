@@ -1,0 +1,557 @@
+/* Site Map Widget — interactive clickable map of Ancient Egypt */
+
+.site-map-widget {
+  max-width: 750px;
+  margin: 24px auto;
+}
+
+/* Hide the raw data divs */
+.site-map-widget .smw-site {
+  display: none;
+}
+
+.site-map-widget .smw-label-data {
+  display: none;
+}
+
+/* Instruction text */
+.smw-instruction {
+  text-align: center;
+  color: #666;
+  font-size: 0.9em;
+  margin: 0 0 16px 0;
+  font-style: italic;
+}
+
+/* ---- Map Container ---- */
+.smw-map-wrap {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #f8f4ea 0%, #f3efe3 100%);
+  box-shadow: 0 12px 28px rgba(44, 34, 20, 0.14);
+  border: 1px solid rgba(122, 94, 58, 0.14);
+  margin-bottom: 16px;
+}
+
+
+.smw-map-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 14% 34%, rgba(216, 184, 111, 0.26) 0, rgba(216, 184, 111, 0.14) 18%, rgba(216, 184, 111, 0) 42%),
+    linear-gradient(180deg, rgba(255, 248, 227, 0.18), rgba(217, 188, 136, 0.08));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.smw-map-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(90deg, rgba(124, 95, 56, 0.035) 0 1px, transparent 1px 92px),
+    repeating-linear-gradient(0deg, rgba(124, 95, 56, 0.02) 0 1px, transparent 1px 76px);
+  mix-blend-mode: multiply;
+  opacity: 0.22;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.smw-map-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  filter: saturate(1.06) contrast(1.02) brightness(1.01);
+}
+
+.smw-bottom-mask {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 18.5%;
+  background:
+    linear-gradient(180deg, rgba(254, 254, 233, 0) 0%, rgba(254, 254, 233, 0.82) 18%, rgba(254, 254, 233, 0.98) 40%, #fefee9 62%),
+    linear-gradient(180deg, #f8f4ea 0%, #f3efe3 100%);
+  border-top: 1px solid rgba(0, 0, 0, 0.72);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.smw-map-label {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #1f1a17;
+  font-family: "DejaVu Sans Condensed", "Arial Narrow", Arial, sans-serif;
+  font-size: 8px;
+  line-height: 1.08;
+  letter-spacing: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  text-shadow: 0 1px 0 rgba(255, 251, 238, 0.55);
+}
+
+.smw-map-label::before,
+.smw-map-label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  border-radius: 50%;
+  background: #d73a31;
+  box-shadow: 0 0 0 1px rgba(145, 31, 24, 0.15);
+}
+
+.smw-map-label--dot-left::before {
+  left: -10px;
+}
+
+.smw-map-label--dot-left::after {
+  display: none;
+}
+
+.smw-map-label--dot-right::after {
+  right: -10px;
+}
+
+.smw-map-label--dot-right::before {
+  display: none;
+}
+
+.smw-map-label--wadi {
+  font-size: 9px;
+}
+
+.smw-map-label--sinai,
+.smw-map-label--horeb {
+  font-size: 9px;
+}
+
+/* ---- Hotspot Dots ---- */
+.smw-dot {
+  position: absolute;
+  width: var(--smw-dot-size, 42px);
+  height: var(--smw-dot-size, 42px);
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: transform 0.18s ease, opacity 0.18s ease;
+  z-index: 3;
+  padding: 0;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.smw-dot-glyph {
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.smw-dot-hit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: var(--smw-hit-w, 100%);
+  height: var(--smw-hit-h, 100%);
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  background: transparent;
+  pointer-events: auto;
+}
+
+.smw-dot-line {
+  display: none !important;
+}
+
+.smw-dot::after {
+  content: attr(data-name);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 10px);
+  transform: translateX(-50%);
+  background: rgba(67, 50, 30, 0.9);
+  color: #fff9ef;
+  padding: 5px 8px;
+  border-radius: 8px;
+  font-size: 0.72rem;
+  line-height: 1;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+  z-index: 4;
+}
+
+.smw-dot.hovered {
+  transform: translate(-50%, -50%) scale(1.06);
+  opacity: 0.96;
+}
+
+.smw-dot.active {
+  transform: translate(-50%, -50%) scale(1.08);
+  z-index: 4;
+}
+
+.smw-dot.hovered::after,
+.smw-dot.active::after {
+  opacity: 1;
+}
+
+.smw-dot--alexandria .smw-dot-glyph { background-image: url("/images/culture/egypt/map-icons/lighthouse-alexandria-map.png"); }
+.smw-dot--goshen .smw-dot-glyph { background-image: url("/images/culture/egypt/map-icons/avaris-delta.png"); clip-path: inset(0 0 38% 0) !important; inset: -8px 0 0 0 !important; }
+.smw-dot--giza .smw-dot-glyph { background-image: url("/images/culture/egypt/map-icons/sphynx-map.png?v=2"); }
+.smw-dot--saqqara .smw-dot-glyph { background-image: url("/images/culture/egypt/map-icons/stepped-pyramid.png"); }
+.smw-dot--dendera .smw-dot-glyph { background-image: url("/images/culture/egypt/map-icons/dendera-map.png"); }
+.smw-dot--memphis .smw-dot-glyph { background-image: url("/images/culture/egypt/map-icons/ramesses-memphis.png"); }
+.smw-dot--heliopolis .smw-dot-glyph { background-image: url("/images/culture/egypt/map-icons/obelisk-heliopolis-map.png"); }
+.smw-dot--cairo .smw-dot-glyph { background-image: url("/images/culture/egypt/map-icons/hanging-church-map.png?v=2"); }
+.smw-dot--karnak .smw-dot-glyph { background-image: url("/images/culture/egypt/map-icons/karnak-map.png"); }
+.smw-dot--valley .smw-dot-glyph { background-image: url("/images/culture/egypt/map-icons/valley-of-kings-map.png"); }
+.smw-dot--edfu .smw-dot-glyph { background-image: url("/images/culture/egypt/map-icons/edfu-map.png"); }
+.smw-dot--komombo .smw-dot-glyph { background-image: url("/images/culture/egypt/map-icons/kom-ombo-map.png"); }
+.smw-dot--elephantine .smw-dot-glyph { background-image: url("/images/culture/egypt/map-icons/satet-elephantine-map.png"); }
+.smw-dot--philae .smw-dot-glyph { background-image: url("/images/culture/egypt/map-icons/philae-temple-map.png"); }
+.smw-dot--abusimbel .smw-dot-glyph { background-image: url("/images/culture/egypt/map-icons/abu-simbel-map.png"); }
+.smw-dot--luxor .smw-dot-glyph { background-image: url("/images/culture/egypt/map-icons/luxor-temple-map.png"); }
+.smw-dot--hatshepsut .smw-dot-glyph { background-image: url("/images/culture/egypt/map-icons/hatshepsut-map.png"); }
+.smw-dot--amarna .smw-dot-glyph { background-image: url("/images/culture/egypt/map-icons/amarna-map.png"); }
+.smw-dot--benihasan .smw-dot-glyph { background-image: url("/images/culture/egypt/map-icons/beni-hasan-map.png"); }
+.smw-dot--serabit .smw-dot-glyph { background-image: url("/images/culture/egypt/map-icons/serabit-el-khadim-map.png"); }
+
+.smw-dot--alexandria { --smw-dot-size: 52px; }
+.smw-dot--goshen { --smw-dot-size: 142px; }
+.smw-dot--giza { --smw-dot-size: 132px; }
+.smw-dot--saqqara { --smw-dot-size: 82px; }
+.smw-dot--memphis { --smw-dot-size: 40px; }
+.smw-dot--heliopolis { --smw-dot-size: 46px; }
+.smw-dot--cairo { --smw-dot-size: 54px; }
+.smw-dot--dendera { --smw-dot-size: 132px; }
+.smw-dot--valley { --smw-dot-size: 105px; }
+.smw-dot--edfu { --smw-dot-size: 132px; }
+.smw-dot--komombo { --smw-dot-size: 136px; }
+.smw-dot--philae { --smw-dot-size: 144px; }
+.smw-dot--abusimbel { --smw-dot-size: 106px; }
+.smw-dot--karnak { --smw-dot-size: 136px; }
+.smw-dot--elephantine { --smw-dot-size: 128px; }
+.smw-dot--luxor { --smw-dot-size: 156px; }
+.smw-dot--hatshepsut { --smw-dot-size: 150px; }
+.smw-dot--amarna { --smw-dot-size: 122px; }
+.smw-dot--benihasan { --smw-dot-size: 84px; }
+.smw-dot--serabit { --smw-dot-size: 156px; }
+.smw-dot--hidden { display: none; }
+
+.smw-dot--benihasan,
+.smw-dot--amarna,
+.smw-dot--serabit,
+.smw-dot--karnak,
+.smw-dot--luxor,
+.smw-dot--hatshepsut,
+.smw-dot--edfu,
+.smw-dot--komombo,
+.smw-dot--elephantine,
+.smw-dot--philae,
+.smw-dot--abusimbel {
+  --smw-hit-w: 56%;
+  --smw-hit-h: 56%;
+}
+
+.smw-dot--valley {
+  --smw-hit-w: 44%;
+  --smw-hit-h: 44%;
+}
+
+.smw-dot--giza .smw-dot-glyph {
+  background-image: url("/images/culture/egypt/map-icons/sphynx-map.png");
+  background-position: 40% 63%;
+  background-size: 78% auto;
+}
+
+.smw-dot--giza .smw-dot-glyph::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/culture/egypt/map-icons/pyramids-of-giza-map.png");
+  background-repeat: no-repeat;
+  background-position: 34% 30%;
+  background-size: 56% auto;
+}
+
+/* ---- Site Selector Bar ---- */
+.smw-selector {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 10px 12px;
+  margin-top: -300px;
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 12;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  justify-content: flex-start;
+  width: calc(100% - 36px);
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(248, 246, 243, 0.94);
+  border: 1px solid rgba(122, 94, 58, 0.14);
+  border-radius: 999px;
+  box-shadow: 0 10px 22px rgba(34, 25, 14, 0.12);
+  backdrop-filter: blur(2px);
+}
+
+.smw-selector::-webkit-scrollbar {
+  height: 4px;
+}
+.smw-selector::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 2px;
+}
+
+.smw-sel-btn {
+  flex-shrink: 0;
+  padding: 6px 14px;
+  border: 1.5px solid #d4cdc4;
+  border-radius: 20px;
+  background: white;
+  color: #444;
+  font-size: 0.82em;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.smw-sel-btn:hover {
+  border-color: var(--sage-dark, #4a6b52);
+  color: var(--sage-dark, #4a6b52);
+}
+
+.smw-sel-btn.active {
+  background: var(--sage-dark, #4a6b52);
+  color: white;
+  border-color: var(--sage-dark, #4a6b52);
+}
+
+/* ---- Detail Panel ---- */
+.smw-detail {
+  background: #f8f6f3;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 18px 40px rgba(34, 25, 14, 0.14), 0 4px 16px rgba(0,0,0,0.06);
+  min-height: 120px;
+  margin-top: -27px;
+  position: relative;
+  z-index: 8;
+  border: 1px solid rgba(122, 94, 58, 0.12);
+}
+
+@media (max-width: 640px) {
+  .smw-selector {
+    margin-top: -120px;
+    margin-bottom: 10px;
+    padding: 8px 10px;
+    justify-content: flex-start;
+    width: calc(100% - 20px);
+  }
+
+  .smw-detail {
+    margin-top: -10px;
+  }
+}
+
+.smw-detail-title {
+  color: var(--sage-dark, #4a6b52);
+  font-size: 1.25em;
+  margin: 0 0 16px 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(74,107,82,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.smw-title-icon {
+  max-height: 36px;
+  width: auto;
+  flex-shrink: 0;
+  filter: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  border: none !important;
+  margin: 0 !important;
+}
+
+.smw-title-icon--lg {
+  max-height: 72px;
+}
+
+.smw-title-icon--xl {
+  max-height: 144px;
+}
+
+.smw-detail-body {
+  line-height: 1.7;
+  color: #333;
+}
+
+.smw-detail-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin: 12px 0;
+}
+
+.smw-detail-body p {
+  margin: 12px 0;
+}
+
+.smw-detail-body .smw-meta {
+  color: #666;
+  font-size: 0.9em;
+  margin-bottom: 12px;
+}
+
+.smw-detail-body .smw-img-wrap {
+  max-width: 500px;
+  margin: 16px auto;
+}
+
+.smw-detail-body .smw-img-caption {
+  text-align: center;
+  font-size: 0.85em;
+  color: #666;
+  margin-top: 6px;
+}
+
+.smw-detail-body .smw-callout {
+  background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%);
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+.smw-detail-body .smw-links {
+  margin-top: 12px;
+  padding-top: 8px;
+  border-top: 1px solid #e0dbd4;
+  font-size: 0.9em;
+}
+
+.smw-detail-body .smw-links a {
+  color: var(--sage-dark, #4a6b52);
+}
+
+/* ---- Image Gallery ---- */
+.smw-gallery {
+  max-width: 500px;
+  margin: 16px auto;
+  position: relative;
+}
+
+.smw-gallery-track {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.smw-gallery-item {
+  display: none;
+}
+
+.smw-gallery-item.active {
+  display: block;
+}
+
+.smw-gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.smw-gallery-item .smw-img-caption {
+  text-align: center;
+  font-size: 0.85em;
+  color: #666;
+  margin-top: 6px;
+}
+
+.smw-gallery-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.smw-gallery-prev,
+.smw-gallery-next {
+  background: none;
+  border: 1px solid rgba(74,107,82,0.3);
+  color: var(--sage-dark, #4a6b52);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 1.1em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.smw-gallery-prev:hover,
+.smw-gallery-next:hover {
+  background: rgba(74,107,82,0.1);
+}
+
+.smw-gallery-counter {
+  font-size: 0.85em;
+  color: #888;
+  min-width: 36px;
+  text-align: center;
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 640px) {
+  .smw-dot {
+    width: 34px;
+    height: 34px;
+  }
+
+  .smw-dot-glyph {
+    inset: 0;
+  }
+
+  .smw-dot.active .smw-dot-pulse {
+    width: 24px;
+    height: 24px;
+  }
+
+  .smw-dot::after {
+    display: none;
+  }
+
+  .smw-detail {
+    padding: 16px;
+    border-radius: 8px;
+  }
+
+  .smw-sel-btn {
+    padding: 5px 10px;
+    font-size: 0.78em;
+  }
+}
