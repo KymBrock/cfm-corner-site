@@ -242,6 +242,7 @@
 
       function getLinkType(el) {
         if (!el) return null;
+        if (el.dataset && el.dataset.popupKind === 'source') return 'popup-source';
         // data-ref is first-class: any element with data-ref is a scripture reference
         if (el.dataset && el.dataset.ref) return 'scripture-ref';
         if (!el.href) return null;
@@ -591,6 +592,32 @@
           return;
         }
 
+        if (type === 'popup-source') {
+          var sourceLabel = ((el.dataset && el.dataset.ref) || (el.textContent || '').trim() || 'Term');
+          var sourceText = (el.dataset && el.dataset.popupText) || 'Definition unavailable.';
+          var sourceLinksHtml = '';
+          if (el.dataset && el.dataset.popupLinks) {
+            try {
+              var sourceLinks = JSON.parse(el.dataset.popupLinks);
+              if (Array.isArray(sourceLinks) && sourceLinks.length) {
+                sourceLinksHtml = '<div class="bp-link bp-link--related"><div class="bp-link__label">Look up parts:</div>' +
+                  sourceLinks.map(function(item) {
+                    if (!item || !item.href || !item.label) return '';
+                    return '<a href="' + item.href + '" target="_blank" rel="noopener">' + item.label + '</a>';
+                  }).join('') +
+                '</div>';
+              }
+            } catch (err) {}
+          }
+          popup.innerHTML =
+            '<div class="bp-title">' + sourceLabel + '</div>' +
+            '<div class="bp-body">' + sourceText + '</div>' +
+            sourceLinksHtml;
+          place(el);
+          popup.classList.add('visible');
+          return;
+        }
+
         // scripture — unified handling for BLB, Church, and data-ref
         var ref = resolveScriptureRef(el);
         var txt = await getVerse(ref);
@@ -609,10 +636,25 @@
         } else if (/churchofjesuschrist\.org/i.test(linkHref)) {
           linkText = 'Open on Church website →';
         }
+        var extraLinksHtml = '';
+        if (el.dataset && el.dataset.popupLinks) {
+          try {
+            var popupLinks = JSON.parse(el.dataset.popupLinks);
+            if (Array.isArray(popupLinks) && popupLinks.length) {
+              extraLinksHtml = '<div class="bp-link bp-link--related"><div class="bp-link__label">Look up parts:</div>' +
+                popupLinks.map(function(item) {
+                  if (!item || !item.href || !item.label) return '';
+                  return '<a href="' + item.href + '" target="_blank" rel="noopener">' + item.label + '</a>';
+                }).join('') +
+              '</div>';
+            }
+          } catch (err) {}
+        }
         var linkHtml = linkHref ? '<div class="bp-link"><a href="' + linkHref + '" target="_blank" rel="noopener">' + linkText + '</a></div>' : '';
         popup.innerHTML =
           '<div class="bp-title">' + (ref || (el.textContent || '').trim()) + '</div>' +
           '<div class="bp-body">' + txt + '</div>' +
+          extraLinksHtml +
           linkHtml;
         place(el);
         popup.classList.add('visible');

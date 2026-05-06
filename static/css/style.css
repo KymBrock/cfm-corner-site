@@ -661,6 +661,40 @@ body {
     overflow-x: hidden;
     box-sizing: border-box;
 }
+.embedded-content h2,
+.embedded-content h3,
+.embedded-content h4 {
+    margin-top: 1.65rem;
+    margin-bottom: 0.65rem;
+    line-height: 1.3;
+}
+.embedded-content h2:first-child,
+.embedded-content h3:first-child,
+.embedded-content h4:first-child {
+    margin-top: 0;
+}
+.embedded-content p + h2,
+.embedded-content p + h3,
+.embedded-content p + h4,
+.embedded-content ul + h2,
+.embedded-content ul + h3,
+.embedded-content ul + h4,
+.embedded-content ol + h2,
+.embedded-content ol + h3,
+.embedded-content ol + h4,
+.embedded-content blockquote + h2,
+.embedded-content blockquote + h3,
+.embedded-content blockquote + h4,
+.embedded-content table + h2,
+.embedded-content table + h3,
+.embedded-content table + h4 {
+    margin-top: 1.85rem;
+}
+.embedded-content h2 + p,
+.embedded-content h3 + p,
+.embedded-content h4 + p {
+    margin-top: 0.75rem;
+}
 /* Neutralize the injected resources HTML body style */
 .embedded-content body,
 .embedded-content > div {
@@ -742,6 +776,21 @@ body {
     color: var(--sage-dark);
     border-bottom-color: var(--sage-dark);
     background: rgba(213, 169, 60, 0.08);
+}
+.embedded-content .term-ref {
+    color: var(--sage-dark);
+    border-bottom: 1.5px solid var(--gold);
+    text-decoration: none;
+    padding-bottom: 1px;
+}
+.embedded-content .term-ref:hover,
+.embedded-content .term-ref:focus-visible {
+    color: var(--sage-dark);
+    border-bottom-color: var(--sage-dark);
+    background: rgba(213, 169, 60, 0.08);
+}
+.embedded-content .term-ref-group {
+    display: inline;
 }
 /* Scripture references styled by ScriptTagger */
 .embedded-content a.BLBScriptRef {

@@ -353,5 +353,339 @@ function toggleAll(expand) {
         arrow.innerHTML = expand ? '\u25BC' : '\u25B6';
     });
 }
+
+async function enhanceWeeklyTerms() {
+    if (window.__cfmWeeklyTermsEnhanced) return;
+    window.__cfmWeeklyTermsEnhanced = true;
+
+    const lexiconResponse = await fetch('/data/lexicon-popups.json?v=20260220b', { cache: 'no-store' }).catch(() => null);
+    const lexiconData = lexiconResponse && lexiconResponse.ok ? await lexiconResponse.json() : {};
+
+    const normalizeLatin = (text) => String(text || '')
+        .normalize('NFKD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+        .replace(/[ʻʼʿ'’"`.-]/g, '')
+        .replace(/\s+/g, '')
+        .replace(/kh/g, 'k')
+        .replace(/ch/g, 'h')
+        .replace(/q/g, 'k')
+        .replace(/ḵ/g, 'k')
+        .replace(/ḥ/g, 'h')
+        .replace(/ṣ/g, 's')
+        .replace(/š/g, 'sh')
+        .replace(/ś/g, 's')
+        .replace(/ṭ/g, 't')
+        .replace(/ṯ/g, 'th')
+        .replace(/ḇ/g, 'v')
+        .replace(/ḏ/g, 'd')
+        .replace(/ă/g, 'a');
+
+    const normalizeHebrew = (text) => String(text || '')
+        .normalize('NFKD')
+        .replace(/[\u0591-\u05C7]/g, '')
+        .replace(/[^\u05D0-\u05EA]/g, '');
+
+    const translitIndex = {};
+    const originalIndex = {};
+    Object.entries(lexiconData || {}).forEach(([strongs, entry]) => {
+        if (!entry) return;
+        const translitKey = normalizeLatin(entry.translit || '');
+        const originalKey = normalizeHebrew(entry.original || '');
+        const target = {
+            strongs: String(strongs || '').toUpperCase(),
+            translit: entry.translit || '',
+            original: entry.original || '',
+            definition: entry.definition || '',
+            verse: entry.verse || '',
+            lang: entry.lang || (String(strongs || '').toUpperCase().startsWith('G') ? 'greek' : 'hebrew')
+        };
+        if (translitKey && !translitIndex[translitKey]) translitIndex[translitKey] = target;
+        if (originalKey && !originalIndex[originalKey]) originalIndex[originalKey] = target;
+    });
+
+    const explicitOverrides = {
+        bemidbar: 'H4057',
+        nachalah: 'H5159',
+        nachal: 'H5157',
+        tzitzit: 'H6734',
+        tzitz: 'H6731',
+        tzutz: 'H6692',
+        shaqed: 'H8247',
+        shoqed: 'H8245',
+        nachash: 'H5175',
+        nechoshet: 'H5178',
+        kokhav: 'H3556',
+        semikah: 'H5564',
+        samakh: 'H5564',
+        meraglim: 'H7270',
+        ragal: 'H7270',
+        regel: 'H7272',
+        ragil: 'H7270',
+        kohanim: 'H3548',
+        shalom: 'H7965',
+        berakhah: 'H1293',
+        chokhmah: 'H2451',
+        hod: 'H1935',
+        ruach: 'H7307',
+        tzedek: 'H6664',
+        shevet: 'H7626',
+        tzur: 'H6697',
+        sela: 'H5553',
+        sala: 'H5554',
+        yehoshua: 'H3091',
+        marah: 'H4784'
+    };
+
+    Object.entries(explicitOverrides).forEach(([key, strongs]) => {
+        const entry = lexiconData[strongs] || lexiconData[String(strongs).toLowerCase()];
+        if (!entry) return;
+        translitIndex[key] = {
+            strongs: String(strongs).toUpperCase(),
+            translit: entry.translit || '',
+            original: entry.original || '',
+            definition: entry.definition || '',
+            verse: entry.verse || '',
+            lang: entry.lang || 'hebrew'
+        };
+    });
+
+    const prefixes = ['ha', 'he', 'be', 'bi', 've', 'va', 'u', 'le', 'la', 'mi', 'me', 'ke', 'ka'];
+    const buildCandidates = (termText) => {
+        const seed = normalizeLatin(termText);
+        const candidates = [];
+        const seen = new Set();
+        const push = (value) => {
+            if (!value || seen.has(value)) return;
+            seen.add(value);
+            candidates.push(value);
+        };
+        push(seed);
+        for (let i = 0; i < candidates.length; i += 1) {
+            const current = candidates[i];
+            prefixes.forEach((prefix) => {
+                if (current.startsWith(prefix) && current.length > prefix.length + 2) {
+                    push(current.slice(prefix.length));
+                }
+            });
+        }
+        return candidates;
+    };
+
+    const resolveTargetFromText = (termText, hebrewHint) => {
+        const hintKey = normalizeHebrew(hebrewHint || '');
+        if (hintKey) {
+            if (originalIndex[hintKey]) return originalIndex[hintKey];
+            if (hintKey.length > 1 && originalIndex[hintKey.slice(1)]) return originalIndex[hintKey.slice(1)];
+        }
+        const candidates = buildCandidates(termText);
+        for (const candidate of candidates) {
+            if (translitIndex[candidate]) return translitIndex[candidate];
+        }
+        return null;
+    };
+
+    const buildLexiconHref = (strongs) => {
+        const code = String(strongs || '').toUpperCase();
+        if (!/^[HG]\d+$/.test(code)) return '';
+        const path = code[0] === 'G' ? 'tr' : 'wlc';
+        return 'https://www.blueletterbible.org/lexicon/' + code.toLowerCase() + '/kjv/' + path + '/0-1/';
+    };
+
+    const extractHebrewHint = (emNode) => {
+        let sibling = emNode.nextSibling;
+        while (sibling && sibling.nodeType === Node.TEXT_NODE) {
+            const match = sibling.textContent.match(/^\s*\(([\u0590-\u05FF\u200f\u200e\s\u05BE\u05C0\u05C3\u05F3\u05F4]+)\)/);
+            if (match) return match[1];
+            if (sibling.textContent.trim()) break;
+            sibling = sibling.nextSibling;
+        }
+        return '';
+    };
+
+    const createLexiconAnchor = (termText, target) => {
+        const href = buildLexiconHref(target.strongs);
+        if (!href) return null;
+        const anchor = document.createElement('a');
+        anchor.className = 'term-ref';
+        anchor.href = href;
+        anchor.target = '_blank';
+        anchor.rel = 'noopener noreferrer';
+        anchor.dataset.strongs = target.strongs;
+        anchor.dataset.translit = target.translit || '';
+        anchor.dataset.original = target.original || '';
+        anchor.dataset.lexicon = target.definition || '';
+        anchor.dataset.lang = target.lang || 'hebrew';
+        const em = document.createElement('em');
+        em.textContent = termText;
+        anchor.appendChild(em);
+        return anchor;
+    };
+
+    const buildCompoundNodes = (termText, hebrewHint) => {
+        if (!/[\/\s]/.test(termText)) return null;
+        const parts = termText.split(/(\s+|\/)/);
+        const fragment = document.createDocumentFragment();
+        let resolvedCount = 0;
+        for (const part of parts) {
+            if (!part) continue;
+            if (/^\s+$/.test(part) || part === '/') {
+                fragment.appendChild(document.createTextNode(part));
+                continue;
+            }
+            const target = resolveTargetFromText(part, hebrewHint);
+            if (!target) {
+                const em = document.createElement('em');
+                em.textContent = part;
+                fragment.appendChild(em);
+                continue;
+            }
+            const anchor = createLexiconAnchor(part, target);
+            if (anchor) {
+                fragment.appendChild(anchor);
+                resolvedCount += 1;
+            }
+        }
+        if (resolvedCount < 2) return null;
+        const wrapper = document.createElement('span');
+        wrapper.className = 'term-ref-group';
+        wrapper.appendChild(fragment);
+        return wrapper;
+    };
+
+    const contentRoot = document.querySelectorAll('.embedded-content');
+    contentRoot.forEach((section) => {
+        section.querySelectorAll('em').forEach((em) => {
+            if (em.closest('a, button, .term-ref')) return;
+            const termText = (em.textContent || '').trim();
+            if (!termText || termText.length < 2) return;
+            const hebrewHint = extractHebrewHint(em);
+            const compound = buildCompoundNodes(termText, hebrewHint);
+            if (compound) {
+                em.replaceWith(compound);
+                return;
+            }
+            const target = resolveTargetFromText(termText, hebrewHint);
+            if (!target) return;
+            const anchor = createLexiconAnchor(termText, target);
+            if (!anchor) return;
+            em.replaceWith(anchor);
+        });
+    });
+}
+
+function enhanceWeeklyShorthandScriptures() {
+    if (window.__cfmWeeklyShorthandEnhanced) return;
+    window.__cfmWeeklyShorthandEnhanced = true;
+
+    const readingText = (document.querySelector('.week-scripture-ref')?.textContent || '').trim();
+    const primaryBook = readingText.replace(/\s+\d.*$/, '').trim();
+    if (!primaryBook) return;
+
+    const blbBookMap = {
+        genesis: 'gen',
+        exodus: 'exo',
+        leviticus: 'lev',
+        numbers: 'num',
+        deuteronomy: 'deu',
+        joshua: 'jos',
+        judges: 'jdg',
+        ruth: 'rut',
+        '1 samuel': '1sa',
+        '2 samuel': '2sa',
+        '1 kings': '1ki',
+        '2 kings': '2ki',
+        '1 chronicles': '1ch',
+        '2 chronicles': '2ch',
+        ezra: 'ezr',
+        nehemiah: 'neh',
+        esther: 'est',
+        job: 'job',
+        psalms: 'psa',
+        proverbs: 'pro',
+        ecclesiastes: 'ecc',
+        'song of solomon': 'sng',
+        isaiah: 'isa',
+        jeremiah: 'jer',
+        lamentations: 'lam',
+        ezekiel: 'ezk',
+        daniel: 'dan',
+        hosea: 'hos',
+        joel: 'jol',
+        amos: 'amo',
+        obadiah: 'oba',
+        jonah: 'jon',
+        micah: 'mic',
+        nahum: 'nah',
+        habakkuk: 'hab',
+        zephaniah: 'zep',
+        haggai: 'hag',
+        zechariah: 'zec',
+        malachi: 'mal'
+    };
+
+    const bookAbbr = blbBookMap[primaryBook.toLowerCase()];
+    if (!bookAbbr) return;
+
+    const shorthandRegex = /\((\d{1,3}:\d{1,3}(?:[–-]\d{1,3})?)\)/g;
+    const skipTags = new Set(['A', 'BUTTON', 'CODE', 'PRE', 'SCRIPT', 'STYLE', 'TEXTAREA']);
+
+    const buildBlbSearchHref = (ref) => {
+        return 'https://www.blueletterbible.org/search/search.cfm?Criteria=' +
+            encodeURIComponent(primaryBook + ' ' + ref) + '&t=KJV';
+    };
+
+    const walkerRoots = document.querySelectorAll('.embedded-content');
+    walkerRoots.forEach((root) => {
+        const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+        const textNodes = [];
+        let current;
+        while ((current = walker.nextNode())) {
+            textNodes.push(current);
+        }
+
+        textNodes.forEach((node) => {
+            const parent = node.parentElement;
+            if (!parent) return;
+            if (skipTags.has(parent.tagName)) return;
+            if (parent.closest('a, button, [data-ref]')) return;
+            const text = node.textContent;
+            if (!text || !shorthandRegex.test(text)) return;
+            shorthandRegex.lastIndex = 0;
+
+            const fragment = document.createDocumentFragment();
+            let lastIndex = 0;
+            let match;
+            while ((match = shorthandRegex.exec(text))) {
+                const [fullMatch, ref] = match;
+                if (match.index > lastIndex) {
+                    fragment.appendChild(document.createTextNode(text.slice(lastIndex, match.index)));
+                }
+
+                const anchor = document.createElement('a');
+                anchor.className = 'scripture-ref';
+                anchor.href = buildBlbSearchHref(ref);
+                anchor.target = '_blank';
+                anchor.rel = 'noopener noreferrer';
+                anchor.dataset.ref = primaryBook + ' ' + ref;
+                anchor.textContent = fullMatch;
+                fragment.appendChild(anchor);
+
+                lastIndex = match.index + fullMatch.length;
+            }
+
+            if (lastIndex < text.length) {
+                fragment.appendChild(document.createTextNode(text.slice(lastIndex)));
+            }
+
+            node.parentNode.replaceChild(fragment, node);
+        });
+    });
+}
+
+window.addEventListener('load', function() {
+    enhanceWeeklyShorthandScriptures();
+    enhanceWeeklyTerms();
+});
 </script>
 {{ end }}

@@ -1,0 +1,1344 @@
+{{ define "head" }}
+  <link rel="stylesheet" href="{{ (printf "css/tabernacle.css?v=%d" now.Unix) | relURL }}">
+{{ end }}
+
+{{ define "main" }}
+  {{ $sectionHome := site.GetPage "/culture/ancient/tabernacle" }}
+  {{ $mapPage := site.GetPage "/culture/ancient/tabernacle/explore-the-map" }}
+  {{ $priestlyPage := site.GetPage "/culture/ancient/tabernacle/priestly-clothing" }}
+  {{ $hotspotData := dict }}
+  {{ $hotspotKey := "" }}
+  {{ $termPopups := site.Data.tabernacle.term_popups }}
+  {{ with .Params.hotspotKey }}
+    {{ $hotspotKey = . }}
+    {{ $hotspotData = index site.Data.tabernacle.hotspots . }}
+  {{ end }}
+  {{ $pageMode := "default" }}
+  {{ if eq $hotspotKey "priestly-clothing" }}
+    {{ $pageMode = "figure" }}
+  {{ else if and $hotspotKey $hotspotData }}
+    {{ $pageMode = "map" }}
+  {{ end }}
+  {{ $displayImage := .Params.image }}
+  {{ $goldenFigure := .Params.image }}
+  {{ $whiteFigure := "" }}
+  {{ if eq $pageMode "figure" }}
+    {{ with $hotspotData.figure_image }}
+      {{ $displayImage = . }}
+      {{ $goldenFigure = . }}
+    {{ end }}
+    {{ with $hotspotData.figure_image_white_linen }}
+      {{ $whiteFigure = . }}
+    {{ end }}
+  {{ end }}
+  <article class="page page--{{ $pageMode }}">
+    <section class="hero compact">
+      <p class="eyebrow">Field Guide</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
+    </section>
+
+    <nav class="field-guide-nav field-guide-nav--page" aria-label="Tabernacle field guide navigation">
+      {{ with $sectionHome }}
+        <a class="field-guide-nav__link{{ if eq $.RelPermalink .RelPermalink }} is-active{{ end }}" href="{{ .RelPermalink }}">Home</a>
+      {{ end }}
+      {{ with $mapPage }}
+        <a class="field-guide-nav__link{{ if eq $.RelPermalink .RelPermalink }} is-active{{ end }}" href="{{ .RelPermalink }}">Explore the Map</a>
+      {{ end }}
+      {{ with $priestlyPage }}
+        <a class="field-guide-nav__link{{ if eq $.RelPermalink .RelPermalink }} is-active{{ end }}" href="{{ .RelPermalink }}">Priestly Clothing</a>
+      {{ end }}
+    </nav>
+
+    {{ if and $hotspotData .Params.image }}
+      <section class="page-intro">
+        <div class="prose prose--intro">
+          {{ .Content }}
+        </div>
+      </section>
+
+      <section class="interactive-shell interactive-shell--{{ $pageMode }}" data-hotspot-root>
+        <div class="interactive-visual-area">
+          {{ if eq $pageMode "figure" }}
+            <div class="figure-toolbar">
+              <div class="figure-state-toggle" role="tablist" aria-label="Priestly garment view">
+                <button
+                  class="figure-state-toggle__button is-active"
+                  type="button"
+                  role="tab"
+                  aria-selected="true"
+                  data-figure-state-toggle="golden"
+                >
+                  Golden Garments
+                </button>
+                <button
+                  class="figure-state-toggle__button"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  data-figure-state-toggle="white"
+                  {{ if not $whiteFigure }}disabled{{ end }}
+                >
+                  White Linen
+                </button>
+              </div>
+              {{ with $hotspotData.intro_snippet }}
+                <div class="figure-intro-snippet">
+                  <p class="figure-intro-snippet__title">{{ .title }}</p>
+                  <p>{{ .copy }}</p>
+                </div>
+              {{ end }}
+            </div>
+          {{ end }}
+          <div class="map-frame map-frame--{{ $pageMode }}">
+            <img
+              src="{{ $displayImage | relURL }}"
+              alt="{{ .Title }}"
+              {{ if eq $pageMode "figure" }}
+                data-figure-display
+                data-figure-golden="{{ $goldenFigure | relURL }}"
+                {{ with $whiteFigure }}data-figure-white="{{ . | relURL }}"{{ end }}
+              {{ end }}
+            >
+            {{ range $index, $spot := $hotspotData.hotspots }}
+              {{ if not $spot.ribbon_only }}
+              <button
+                class="hotspot{{ if eq $index 0 }} is-active{{ end }}"
+                type="button"
+                data-hotspot-button="{{ $spot.id }}"
+                aria-controls="card-{{ $spot.id }}"
+                aria-expanded="{{ if eq $index 0 }}true{{ else }}false{{ end }}"
+                data-hotspot-kind="{{ if $spot.marker_image }}icon{{ else }}dot{{ end }}"
+                style="left: {{ $spot.x }}%; top: {{ $spot.y }}%;"
+                title="{{ $spot.tooltip }}"
+              >
+                {{ with $spot.marker_image }}
+                  <img src="{{ . | relURL }}" alt="" aria-hidden="true">
+                {{ end }}
+                <span>{{ $spot.title }}</span>
+              </button>
+              {{ end }}
+            {{ end }}
+          </div>
+
+          {{ if eq $pageMode "figure" }}
+            <div class="hotspot-videos hotspot-videos--figure-panel" data-figure-video-panel>
+              {{ range $index, $spot := $hotspotData.hotspots }}
+                {{ with $spot.videos }}
+                  <section
+                    class="hotspot-videos__set{{ if eq $index 0 }} is-active{{ end }}"
+                    data-hotspot-videos="{{ $spot.id }}"
+                    aria-hidden="{{ if eq $index 0 }}false{{ else }}true{{ end }}"
+                  >
+                    <h4>Watch This Garment</h4>
+                    <div class="hotspot-videos__grid">
+                      {{ range . }}
+                        <div class="hotspot-video">
+                          <p class="hotspot-video__title">{{ .title }}</p>
+                          <div class="hotspot-video__frame">
+                            <iframe
+                              src="{{ .embed_url }}"
+                              title="{{ .title }}"
+                              loading="lazy"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                              referrerpolicy="strict-origin-when-cross-origin"
+                              allowfullscreen
+                            ></iframe>
+                          </div>
+                        </div>
+                      {{ end }}
+                    </div>
+                  </section>
+                {{ end }}
+              {{ end }}
+            </div>
+          {{ end }}
+        </div>
+
+        <aside class="selection-panel selection-panel--{{ $pageMode }}">
+          <div class="selection-ribbon" aria-label="Selected map item">
+            {{ if eq $hotspotKey "priestly-clothing" }}
+              {{ $state := newScratch }}
+              {{ $state.Set "group" "" }}
+              {{ range $index, $spot := $hotspotData.hotspots }}
+                {{ if ne ($state.Get "group") $spot.group }}
+                  <div class="selection-ribbon__group">
+                    <p class="selection-ribbon__group-title">{{ $spot.group }}</p>
+                    {{ $state.Set "group" $spot.group }}
+                {{ end }}
+                <button
+                  class="selection-ribbon__tab{{ if eq $index 0 }} is-active{{ end }}"
+                  type="button"
+                  data-hotspot-tab="{{ $spot.id }}"
+                  aria-controls="card-{{ $spot.id }}"
+                  aria-pressed="{{ if eq $index 0 }}true{{ else }}false{{ end }}"
+                >
+                  <span class="selection-ribbon__title">{{ $spot.title }}</span>
+                </button>
+                {{ $nextIndex := add $index 1 }}
+                {{ if or (eq $nextIndex (len $hotspotData.hotspots)) (ne (index $hotspotData.hotspots $nextIndex).group $spot.group) }}
+                  </div>
+                {{ end }}
+              {{ end }}
+            {{ else }}
+              {{ range $index, $spot := $hotspotData.hotspots }}
+                <button
+                  class="selection-ribbon__tab{{ if eq $index 0 }} is-active{{ end }}"
+                  type="button"
+                  data-hotspot-tab="{{ $spot.id }}"
+                  aria-controls="card-{{ $spot.id }}"
+                  aria-pressed="{{ if eq $index 0 }}true{{ else }}false{{ end }}"
+                >
+                  <span class="selection-ribbon__title">{{ $spot.title }}</span>
+                </button>
+              {{ end }}
+            {{ end }}
+          </div>
+
+          <div class="selected-cards">
+            {{ range $index, $spot := $hotspotData.hotspots }}
+              <section
+                id="card-{{ $spot.id }}"
+                class="hotspot-card hotspot-card--interactive{{ if eq $index 0 }} is-active{{ end }}"
+                data-hotspot-card="{{ $spot.id }}"
+                {{ with $spot.figure_image_golden_override }}data-figure-golden-override="{{ . | relURL }}"{{ end }}
+                {{ with $spot.figure_image_white_override }}data-figure-white-override="{{ . | relURL }}"{{ end }}
+                aria-hidden="{{ if eq $index 0 }}false{{ else }}true{{ end }}"
+              >
+                <div class="hotspot-card__header">
+                  <div>
+                    {{ with $spot.group }}<p class="hotspot-card__eyebrow">{{ . }}</p>{{ end }}
+                    <h3>{{ $spot.title }}</h3>
+                    <p class="tooltip-copy">{{ $spot.tooltip }}</p>
+                    {{ with $spot.scripture }}
+                      {{ $scriptureRefs := split . ";" }}
+                      <div class="meta-row">
+                        <span class="meta-label">Scripture</span>
+                        <span class="meta-value">
+                          {{ range $index, $ref := $scriptureRefs }}
+                            {{ $trimmedRef := trim $ref " " }}
+                            {{ $scriptureHref := printf "https://www.blueletterbible.org/search/search.cfm?Criteria=%s&t=KJV" (urlquery $trimmedRef) }}
+                            <a
+                              class="scripture-ref"
+                              href="{{ $scriptureHref }}"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              data-ref="{{ $trimmedRef }}"
+                            >{{ $trimmedRef }}</a>{{ if lt $index (sub (len $scriptureRefs) 1) }}; {{ end }}
+                          {{ end }}
+                        </span>
+                      </div>
+                    {{ end }}
+                    {{ if or $spot.translit $spot.hebrew }}
+                      {{ $termInfo := index $termPopups $spot.id }}
+                      {{ $termRef := or $spot.translit $spot.title }}
+                      {{ $termPopupText := "" }}
+                      {{ with $termInfo }}
+                        {{ with .definition }}{{ $termPopupText = . }}{{ end }}
+                      {{ end }}
+                      {{ $termHasDirectLookup := false }}
+                      {{ with $spot.term_url }}{{ $termHasDirectLookup = true }}{{ end }}
+                      <div class="meta-row">
+                        <span class="meta-label">Term</span>
+                        <span class="meta-value">
+                          {{ if $termHasDirectLookup }}
+                            <a
+                              class="term-ref"
+                              href="{{ $spot.term_url }}"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              data-ref="{{ $termRef }}"
+                              data-popup-kind="source"
+                              {{ with $termPopupText }}data-popup-text="{{ . }}"{{ end }}
+                            >
+                              {{ with $spot.translit }}<em>{{ . }}</em>{{ end }}{{ if and $spot.translit $spot.hebrew }} {{ end }}{{ with $spot.hebrew }}({{ . }}){{ end }}
+                            </a>
+                          {{ else }}
+                            <button
+                              class="term-ref term-ref--button"
+                              type="button"
+                              data-ref="{{ $termRef }}"
+                              data-popup-kind="source"
+                              {{ with $termPopupText }}data-popup-text="{{ . }}"{{ end }}
+                            >
+                              {{ with $spot.translit }}<em>{{ . }}</em>{{ end }}{{ if and $spot.translit $spot.hebrew }} {{ end }}{{ with $spot.hebrew }}({{ . }}){{ end }}
+                            </button>
+                          {{ end }}
+                        </span>
+                      </div>
+                    {{ end }}
+                    {{ with $spot.sources }}
+                      <div class="meta-row meta-row--sources">
+                        <span class="meta-label">Sources</span>
+                        <div class="meta-value source-pills" aria-label="Related sources">
+                          {{ range . }}
+                            {{ $label := .label }}
+                            {{ $citation := .citation }}
+                            {{ $quote := .quote }}
+                            {{ $kind := .kind }}
+                            {{ $note := .note }}
+                            {{ $refText := $label }}
+                            {{ with $citation }}{{ $refText = printf "%s %s" $label . }}{{ end }}
+                            {{ $popupText := "" }}
+                            {{ with $quote }}{{ $popupText = printf "“%s”" . }}{{ end }}
+                            {{ with $note }}
+                              {{ if $popupText }}
+                                {{ $popupText = printf "%s %s" $popupText . }}
+                              {{ else }}
+                                {{ $popupText = . }}
+                              {{ end }}
+                            {{ end }}
+                            <span class="source-pill"{{ with $kind }} data-source-kind="{{ . }}"{{ end }}>
+                              {{ with .url }}
+                                <a
+                                  class="source-pill__trigger"
+                                  href="{{ . }}"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  data-ref="{{ $refText }}"
+                                  data-popup-kind="source"
+                                  {{ with $popupText }}data-popup-text="{{ . }}"{{ end }}
+                                >
+                                  {{ $label }}
+                                </a>
+                              {{ else }}
+                                <button
+                                  class="source-pill__trigger"
+                                  type="button"
+                                  data-ref="{{ $refText }}"
+                                  data-popup-kind="source"
+                                  {{ with $popupText }}data-popup-text="{{ . }}"{{ end }}
+                                >
+                                  {{ $label }}
+                                </button>
+                              {{ end }}
+                            </span>
+                          {{ end }}
+                        </div>
+                      </div>
+                    {{ end }}
+                  </div>
+                  {{ with $spot.image }}
+                    <div class="hotspot-card__image">
+                      {{ with $spot.image_variants }}
+                        <div class="hotspot-card__image-variants" data-image-variant-root>
+                          <div class="hotspot-card__image-variant-tabs" role="tablist" aria-label="{{ $spot.title }} image views">
+                            {{ range $variantIndex, $variant := . }}
+                              <button
+                                class="hotspot-card__image-variant-tab{{ if eq $variantIndex 0 }} is-active{{ end }}"
+                                type="button"
+                                role="tab"
+                                aria-selected="{{ if eq $variantIndex 0 }}true{{ else }}false{{ end }}"
+                                data-image-variant-tab
+                                data-variant-src="{{ $variant.image | relURL }}"
+                                data-variant-alt="{{ or $variant.alt $spot.title }}"
+                              >
+                                {{ $variant.label }}
+                              </button>
+                            {{ end }}
+                          </div>
+                        </div>
+                      {{ end }}
+                      <button
+                        class="hotspot-card__image-button"
+                        type="button"
+                        data-lightbox-trigger
+                        data-lightbox-src="{{ . | relURL }}"
+                        data-lightbox-alt="{{ $spot.title }}"
+                        aria-label="Enlarge image for {{ $spot.title }}"
+                      >
+                        <img
+                          src="{{ . | relURL }}"
+                          alt="{{ $spot.title }}"
+                          {{ with $spot.image_variants }}
+                            data-image-variant-target
+                          {{ end }}
+                        >
+                      </button>
+                    </div>
+                  {{ end }}
+                </div>
+
+                <div class="hotspot-card__body">
+                  {{ $spot.copy | markdownify }}
+                </div>
+
+                {{ if ne $pageMode "figure" }}
+                {{ with $spot.videos }}
+                  <section class="hotspot-videos" aria-label="Related videos">
+                    <h4>Watch This Section</h4>
+                    <div class="hotspot-videos__grid">
+                      {{ range . }}
+                        <div class="hotspot-video">
+                          <p class="hotspot-video__title">{{ .title }}</p>
+                          <div class="hotspot-video__frame">
+                            <iframe
+                              src="{{ .embed_url }}"
+                              title="{{ .title }}"
+                              loading="lazy"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                              referrerpolicy="strict-origin-when-cross-origin"
+                              allowfullscreen
+                            ></iframe>
+                          </div>
+                        </div>
+                      {{ end }}
+                    </div>
+                  </section>
+                {{ end }}
+                {{ end }}
+
+                {{ with $spot.deep_dive }}
+                  <details class="deep-dive-toggle">
+                    <summary>Deeper Dive</summary>
+                    <div class="deep-dive-toggle__content">
+                      {{ . | markdownify }}
+                    </div>
+                  </details>
+                {{ end }}
+
+                {{ with $spot.gallery }}
+                  <section class="hotspot-gallery" aria-label="{{ or $spot.gallery_title (printf "%s image gallery" $spot.title) }}">
+                    {{ with $spot.gallery_title }}<h4>{{ . }}</h4>{{ end }}
+                    <div class="hotspot-gallery__track">
+                      {{ range $item := . }}
+                        <figure class="hotspot-gallery__item">
+                          <button
+                            class="hotspot-gallery__image-button"
+                            type="button"
+                            data-lightbox-trigger
+                            data-lightbox-src="{{ $item.image | relURL }}"
+                            data-lightbox-alt="{{ $item.alt }}"
+                            aria-label="View {{ $item.alt }}"
+                          >
+                            <img src="{{ $item.image | relURL }}" alt="{{ $item.alt }}" loading="lazy">
+                          </button>
+                          <figcaption class="hotspot-gallery__caption">
+                            {{ with $item.caption }}<p>{{ . }}</p>{{ end }}
+                            {{ if or $item.credit $item.source_url }}
+                              <p class="hotspot-gallery__credit">
+                                {{ with $item.credit }}{{ . }}{{ end }}
+                                {{ with $item.source_url }}
+                                  {{ if $item.credit }} · {{ end }}
+                                  <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Source</a>
+                                {{ end }}
+                              </p>
+                            {{ end }}
+                          </figcaption>
+                        </figure>
+                      {{ end }}
+                    </div>
+                  </section>
+                {{ end }}
+              </section>
+            {{ end }}
+          </div>
+
+          <div class="image-lightbox" data-lightbox hidden>
+            <button class="image-lightbox__backdrop" type="button" data-lightbox-close aria-label="Close enlarged image"></button>
+            <figure class="image-lightbox__dialog" role="dialog" aria-modal="true" aria-label="Expanded image view">
+              <button class="image-lightbox__close" type="button" data-lightbox-close aria-label="Close enlarged image">Close</button>
+              <img class="image-lightbox__img" data-lightbox-image src="" alt="">
+            </figure>
+          </div>
+        </aside>
+        {{ if eq $pageMode "figure" }}
+          {{ with $hotspotData.figure_supplement }}
+            {{ $supplement := . }}
+            <section
+              class="figure-supplement"
+              data-figure-supplement
+              {{ with .target_hotspot }}data-figure-supplement-target="{{ . }}"{{ end }}
+              {{ if ne .target_hotspot "high-priest-overview" }}hidden{{ end }}
+            >
+              <div class="figure-supplement__header">
+                <p class="figure-supplement__title">{{ .title }}</p>
+                {{ with .summary }}<p class="figure-supplement__summary">{{ . }}</p>{{ end }}
+              </div>
+              <div class="figure-supplement__content-tabs" role="tablist" aria-label="{{ $supplement.title }} sections">
+                <button
+                  class="figure-supplement__content-tab is-active"
+                  type="button"
+                  role="tab"
+                  aria-selected="true"
+                  data-supplement-tab="study"
+                >
+                  Study
+                </button>
+                <button
+                  class="figure-supplement__content-tab"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  data-supplement-tab="research"
+                >
+                  {{ or .secondary_tab_label "Research Table" }}
+                </button>
+              </div>
+              <div class="figure-supplement__content-pane is-active" data-supplement-pane="study" aria-hidden="false">
+                <div class="figure-supplement__image">
+                  {{ with .image_variants }}
+                    <div class="hotspot-card__image-variants" data-image-variant-root>
+                      <div class="hotspot-card__image-variant-tabs" role="tablist" aria-label="{{ $supplement.title }} image views">
+                        {{ range $variantIndex, $variant := . }}
+                          <button
+                            class="hotspot-card__image-variant-tab{{ if eq $variantIndex 0 }} is-active{{ end }}"
+                            type="button"
+                            role="tab"
+                            aria-selected="{{ if eq $variantIndex 0 }}true{{ else }}false{{ end }}"
+                            data-image-variant-tab
+                            data-variant-src="{{ $variant.image | relURL }}"
+                            data-variant-alt="{{ or $variant.alt $supplement.title }}"
+                          >
+                            {{ $variant.label }}
+                          </button>
+                        {{ end }}
+                      </div>
+                    </div>
+                  {{ end }}
+                  <button
+                    class="hotspot-card__image-button"
+                    type="button"
+                    data-lightbox-trigger
+                    data-lightbox-src="{{ .image | relURL }}"
+                    data-lightbox-alt="{{ or .alt .title }}"
+                    aria-label="Enlarge image for {{ .title }}"
+                  >
+                    <img
+                      src="{{ .image | relURL }}"
+                      alt="{{ or .alt .title }}"
+                      loading="lazy"
+                      {{ with .image_variants }}data-image-variant-target{{ end }}
+                    >
+                  </button>
+                </div>
+                {{ with .deep_dive }}
+                  <details class="deep-dive-toggle figure-supplement__deep-dive">
+                    <summary>{{ or $supplement.deep_dive_title "Deeper Dive" }}</summary>
+                    <div class="deep-dive-toggle__content figure-supplement__deep-dive-scroll">
+                      {{ . | markdownify }}
+                    </div>
+                  </details>
+                {{ end }}
+              </div>
+              <div class="figure-supplement__content-pane" data-supplement-pane="research" aria-hidden="true">
+                <div class="figure-supplement__research-layout">
+                  <div class="figure-supplement__research-figure-card">
+                    {{ with .image_variants }}
+                      <div class="hotspot-card__image-variants" data-image-variant-root>
+                        <div class="hotspot-card__image-variant-tabs" role="tablist" aria-label="{{ $supplement.title }} research image views">
+                          {{ range $variantIndex, $variant := . }}
+                            <button
+                              class="hotspot-card__image-variant-tab{{ if eq $variantIndex 0 }} is-active{{ end }}"
+                              type="button"
+                              role="tab"
+                              aria-selected="{{ if eq $variantIndex 0 }}true{{ else }}false{{ end }}"
+                              data-image-variant-tab
+                              data-variant-src="{{ $variant.image | relURL }}"
+                              data-variant-alt="{{ or $variant.alt $supplement.title }}"
+                            >
+                              {{ $variant.label }}
+                            </button>
+                          {{ end }}
+                        </div>
+                      </div>
+                    {{ end }}
+                    <button
+                      class="hotspot-card__image-button"
+                      type="button"
+                      data-lightbox-trigger
+                      data-lightbox-src="{{ .image | relURL }}"
+                      data-lightbox-alt="{{ or .alt .title }}"
+                      aria-label="Enlarge image for {{ .title }}"
+                    >
+                      <img
+                        src="{{ .image | relURL }}"
+                        alt="{{ or .alt .title }}"
+                        loading="lazy"
+                        {{ with .image_variants }}data-image-variant-target{{ end }}
+                      >
+                    </button>
+                  </div>
+                  <div class="figure-supplement__research-content">
+                    {{ with .research_table_intro }}
+                      <p class="figure-supplement__summary">{{ . }}</p>
+                    {{ end }}
+                    {{ with .research_table }}
+                      <details class="deep-dive-toggle figure-supplement__research-table" open>
+                        <summary>Research Table</summary>
+                        <div class="figure-supplement__table-wrap">
+                          {{ . | markdownify }}
+                        </div>
+                      </details>
+                    {{ end }}
+                    {{ if or .gallery_title .gallery_note .gallery_items .gallery_placeholders }}
+                      <div class="figure-supplement__gallery-slot">
+                        {{ with .gallery_title }}<p class="figure-supplement__gallery-title">{{ . }}</p>{{ end }}
+                        {{ with .gallery_note }}<p class="figure-supplement__gallery-note">{{ . }}</p>{{ end }}
+                        {{ with .gallery_items }}
+                          <section class="hotspot-gallery" aria-label="{{ or $supplement.gallery_title (printf "%s specimen gallery" $supplement.title) }}">
+                            <div class="hotspot-gallery__track">
+                              {{ range $galleryIndex, $galleryItem := . }}
+                                <figure class="hotspot-gallery__item">
+                                  <button
+                                    class="hotspot-gallery__image-button"
+                                    type="button"
+                                    data-lightbox-trigger
+                                    data-lightbox-src="{{ $galleryItem.image | relURL }}"
+                                    data-lightbox-alt="{{ or $galleryItem.alt $galleryItem.caption }}"
+                                    aria-label="Enlarge specimen image"
+                                  >
+                                    <img src="{{ $galleryItem.image | relURL }}" alt="{{ or $galleryItem.alt $galleryItem.caption }}" loading="lazy">
+                                  </button>
+                                  <figcaption class="hotspot-gallery__caption">
+                                    {{ with $galleryItem.caption }}
+                                      <div class="hotspot-gallery__caption-body">{{ . | markdownify }}</div>
+                                    {{ end }}
+                                    {{ if or $galleryItem.credit $galleryItem.credit_url }}
+                                      <p class="hotspot-gallery__credit">
+                                        Source:
+                                        {{ with $galleryItem.credit_url }}
+                                          <a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ or $galleryItem.credit "View source" }}</a>
+                                        {{ else }}
+                                          {{ $galleryItem.credit }}
+                                        {{ end }}
+                                      </p>
+                                    {{ end }}
+                                  </figcaption>
+                                </figure>
+                              {{ end }}
+                            </div>
+                          </section>
+                        {{ else }}
+                          {{ with .gallery_placeholders }}
+                            <div class="figure-supplement__gallery-placeholders">
+                              {{ range . }}
+                                <div class="figure-supplement__gallery-pill">{{ . }}</div>
+                              {{ end }}
+                            </div>
+                          {{ end }}
+                        {{ end }}
+                      </div>
+                    {{ end }}
+                  </div>
+                </div>
+              </div>
+            </section>
+          {{ end }}
+        {{ end }}
+      </section>
+    {{ else }}
+      <div class="page-layout">
+        <section class="content-column">
+          <div class="prose">
+            {{ .Content }}
+          </div>
+        </section>
+
+        <aside class="map-column">
+          {{ if .Params.image }}
+            <div class="map-frame">
+              <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+            </div>
+            <div class="hotspot-list">
+              <section class="hotspot-card">
+                <h3>Page Focus</h3>
+                <p>This page uses a focused standalone asset instead of an interactive map. Additional object pages can build out from here.</p>
+              </section>
+            </div>
+          {{ end }}
+        </aside>
+      </div>
+    {{ end }}
+  </article>
+
+  {{ if and $hotspotData .Params.image }}
+    <script>
+      (() => {
+        const root = document.querySelector('[data-hotspot-root]');
+        if (!root) return;
+        const contentRoot = root.closest('.page') || root;
+
+        const buttons = Array.from(root.querySelectorAll('[data-hotspot-button]'));
+        const tabs = Array.from(root.querySelectorAll('[data-hotspot-tab]'));
+        const cards = Array.from(root.querySelectorAll('[data-hotspot-card]'));
+        const figureDisplay = root.querySelector('[data-figure-display]');
+        const figureToggles = Array.from(root.querySelectorAll('[data-figure-state-toggle]'));
+        const figureSupplement = root.querySelector('[data-figure-supplement]');
+        const videoPanel = root.querySelector('[data-figure-video-panel]');
+        const videoSets = Array.from(root.querySelectorAll('[data-hotspot-videos]'));
+        const lightbox = root.querySelector('[data-lightbox]');
+        const lightboxImage = root.querySelector('[data-lightbox-image]');
+        const lightboxTriggers = Array.from(root.querySelectorAll('[data-lightbox-trigger]'));
+        const lightboxClosers = Array.from(root.querySelectorAll('[data-lightbox-close]'));
+        const imageVariantRoots = Array.from(root.querySelectorAll('[data-image-variant-root]'));
+        const supplementTabs = Array.from(root.querySelectorAll('[data-supplement-tab]'));
+        const supplementPanes = Array.from(root.querySelectorAll('[data-supplement-pane]'));
+        let figureState = 'golden';
+        let activeHotspotId = cards.find((card) => card.classList.contains('is-active'))?.dataset.hotspotCard || null;
+        const termPopupDefinitions = {{ site.Data.tabernacle.term_popups | jsonify | safeJS }};
+        const inlineScriptureRegex = /\b(?:[1-4]\s+)?(?:Gen(?:esis)?|Ex(?:odus)?|Lev(?:iticus)?|Num(?:bers)?|Deut(?:eronomy)?|Josh(?:ua)?|Judg(?:es)?|Ruth|1\s*Sam(?:uel)?|2\s*Sam(?:uel)?|1\s*K(?:ings|gs?)|2\s*K(?:ings|gs?)|1\s*Chr(?:onicles)?|2\s*Chr(?:onicles)?|Ezra|Neh(?:emiah)?|Esth(?:er)?|Job|Ps(?:alm|alms)?|Prov(?:erbs)?|Eccl(?:esiastes)?|Song of Solomon|Isa(?:iah)?|Jer(?:emiah)?|Lam(?:entations)?|Ezek(?:iel)?|Dan(?:iel)?|Hos(?:ea)?|Joel|Amos|Obad(?:iah)?|Jonah?|Mic(?:ah)?|Nah(?:um)?|Hab(?:akkuk)?|Zeph(?:aniah)?|Hag(?:gai)?|Zech(?:ariah)?|Mal(?:achi)?|Matt?(?:hew)?|Mark|Luke|John|Acts|Rom(?:ans)?|1\s*Cor(?:inthians)?|2\s*Cor(?:inthians)?|Gal(?:atians)?|Eph(?:esians)?|Phil(?:ippians)?|Col(?:ossians)?|1\s*Thess(?:alonians)?|2\s*Thess(?:alonians)?|1\s*Tim(?:othy)?|2\s*Tim(?:othy)?|Titus|Philem(?:on)?|Heb(?:rews)?|James|1\s*Pet(?:er)?|2\s*Pet(?:er)?|1\s*John|2\s*John|3\s*John|Jude|Rev(?:elation)?|Mosiah|Alma|Hel(?:aman)?|Ether|Moroni|D&C|Doctrine and Covenants|Moses|Abraham)\s+\d+(?::\d+(?:[–-]\d+)?)?/g;
+        const termAliases = {
+          avnet: 'avnet',
+          'kohengadol': 'kohen-gadol',
+          mitznefet: 'mitznefet',
+          efod: 'ephod',
+          ephod: 'ephod',
+          choshen: 'choshen',
+          'choshenmishpat': 'choshen-mishpat',
+          'khavod': 'kavod',
+          'lekhavoduletifaret': 'lekhavod-uletifaret',
+          'kodeshlayhwh': 'kodesh-la-yhwh',
+          'etavonhakodashim': 'et-avon-hakodashim',
+          'nasaetavon': 'nasa-et-avon',
+          mishkan: 'mishkan',
+          mikdash: 'mikdash',
+          'ohelmoed': 'ohel-moed',
+          'ohelmoed': 'ohel-moed',
+          'urimvetummim': 'urim-thummim',
+          'urimvtummim': 'urim-thummim',
+          'urimthummim': 'urim-thummim',
+          'tummim': 'thummim',
+          tekhelet: 'tekhelet',
+          argaman: 'argaman',
+          'tolaatshani': 'tolaat-shani',
+          shesh: 'shesh',
+          choshev: 'choshev',
+          chatzer: 'chatzer',
+          'mizbachhaolah': 'mizbach-ha-olah',
+          korban: 'korban',
+          qarav: 'qarav',
+          samakh: 'samakh',
+          lirtzono: 'lirtzono',
+          olah: 'olah',
+          shelamim: 'shelamim',
+          minchah: 'minchah',
+          chatat: 'chatat',
+          asham: 'asham',
+          kiyyor: 'kiyyor',
+          marot: 'marot',
+          tachash: 'tachash',
+          adonim: 'adonim',
+          kesef: 'kesef',
+          kasaf: 'kasaf',
+          kodesh: 'kodesh',
+          ner: 'ner',
+          miqshah: 'miqshah',
+          katit: 'katit'
+        };
+
+        const getHashHotspotId = () => {
+          const rawHash = window.location.hash ? window.location.hash.slice(1) : '';
+          if (!rawHash) return null;
+          const decodedHash = decodeURIComponent(rawHash);
+          return cards.some((card) => card.dataset.hotspotCard === decodedHash) ? decodedHash : null;
+        };
+
+        const stripCombiningMarks = (text) => text.normalize('NFKD').replace(/[\u0300-\u036f]/g, '');
+        const normalizeTermText = (text) => stripCombiningMarks(String(text || ''))
+          .toLowerCase()
+          .replace(/[ʻʼʿ]/g, '')
+          .replace(/['’\-\/ ]/g, '')
+          .replace(/kh/g, 'k')
+          .replace(/q/g, 'k')
+          .replace(/ḵ/g, 'k')
+          .replace(/ḥ/g, 'h')
+          .replace(/ṣ/g, 's')
+          .replace(/š/g, 'sh')
+          .replace(/ś/g, 's')
+          .replace(/ṭ/g, 't')
+          .replace(/ṯ/g, 'th')
+          .replace(/ḇ/g, 'v')
+          .replace(/ḏ/g, 'd');
+        const normalizedGlossaryKeyMap = Object.keys(termPopupDefinitions).reduce((acc, key) => {
+          acc[normalizeTermText(key)] = key;
+          return acc;
+        }, {});
+        let sharedLexiconByNormalizedTranslit = {};
+        let sharedLexiconLoadPromise = null;
+        const termPrefixes = ['ha', 'he', 'le', 'la', 've', 'u', 'et'];
+        const termLexiconOverrides = {
+          avnet: { strongs: 'H73', translit: 'avnet', original: 'אַבְנֵט', lang: 'hebrew', definition: 'sash, girdle, waistband' },
+          avon: { strongs: 'H5771', translit: 'avon', original: 'עָוֹן', lang: 'hebrew', definition: 'iniquity, guilt' },
+          choshen: { strongs: 'H2833', translit: 'choshen', original: 'חֹשֶׁן', lang: 'hebrew', definition: 'breastplate, sacred pouch of the high priest' },
+          efod: { strongs: 'H646', translit: 'ephod', original: 'אֵפוֹד', lang: 'hebrew', definition: 'ephod, priestly vestment' },
+          ephod: { strongs: 'H646', translit: 'ephod', original: 'אֵפוֹד', lang: 'hebrew', definition: 'ephod, priestly vestment' },
+          gadol: { strongs: 'H1419', translit: 'gadol', original: 'גָּדוֹל', lang: 'hebrew', definition: 'great, large' },
+          hokhmah: { strongs: 'H2451', translit: 'chokmah', original: 'חָכְמָה', lang: 'hebrew', definition: 'wisdom' },
+          kapporet: { strongs: 'H3727', translit: 'kapporet', original: 'כַּפֹּרֶת', lang: 'hebrew', definition: 'mercy seat, atonement cover' },
+          kavod: { strongs: 'H3519', translit: 'kavod', original: 'כָּבוֹד', lang: 'hebrew', definition: 'glory, honor, splendor, weight' },
+          ketonet: { strongs: 'H3801', translit: 'ketonet', original: 'כֻּתֹּנֶת', lang: 'hebrew', definition: 'tunic, under-garment' },
+          kiyyor: { strongs: 'H3595', translit: 'kiyyor', original: 'כִּיּוֹר', lang: 'hebrew', definition: 'laver, basin' },
+          kohen: { strongs: 'H3548', translit: 'kohen', original: 'כֹּהֵן', lang: 'hebrew', definition: 'priest' },
+          kodashim: { strongs: 'H6944', translit: 'qodesh', original: 'קֹדֶשׁ', lang: 'hebrew', definition: 'holy things, holiness' },
+          leshem: { strongs: 'H3958', translit: 'leshem', original: 'לֶשֶׁם', lang: 'hebrew', definition: 'a precious stone' },
+          meil: { strongs: 'H4598', translit: 'meil', original: 'מְעִיל', lang: 'hebrew', definition: 'robe, mantle' },
+          mikdash: { strongs: 'H4720', translit: 'miqdash', original: 'מִקְדָּשׁ', lang: 'hebrew', definition: 'sanctuary, holy place' },
+          minchah: { strongs: 'H4503', translit: 'minchah', original: 'מִנְחָה', lang: 'hebrew', definition: 'offering, gift, tribute' },
+          mitznefet: { strongs: 'H4701', translit: 'mitznefet', original: 'מִצְנֶפֶת', lang: 'hebrew', definition: 'turban, priestly headdress' },
+          nechoshet: { strongs: 'H5178', translit: 'nechoshet', original: 'נְחֹשֶׁת', lang: 'hebrew', definition: 'bronze, copper alloy' },
+          parokhet: { strongs: 'H6532', translit: 'parokhet', original: 'פָּרֹכֶת', lang: 'hebrew', definition: 'veil, curtain' },
+          petil: { strongs: 'H6616', translit: 'petil', original: 'פָּתִיל', lang: 'hebrew', definition: 'cord, thread' },
+          qodesh: { strongs: 'H6944', translit: 'qodesh', original: 'קֹדֶשׁ', lang: 'hebrew', definition: 'holiness, sacred thing' },
+          sappir: { strongs: 'H5601', translit: 'sappir', original: 'סַפִּיר', lang: 'hebrew', definition: 'sapphire, precious stone' },
+          shoham: { strongs: 'H7718', translit: 'shoham', original: 'שֹׁהַם', lang: 'hebrew', definition: 'onyx, precious stone' },
+          shulchan: { strongs: 'H7979', translit: 'shulchan', original: 'שֻׁלְחָן', lang: 'hebrew', definition: 'table' },
+          tachash: { strongs: 'H8476', translit: 'tachash', original: 'תַּחַשׁ', lang: 'hebrew', definition: 'a kind of leather, skin, or animal hide' },
+          tekhelet: { strongs: 'H8504', translit: 'tekhelet', original: 'תְּכֵלֶת', lang: 'hebrew', definition: 'blue-violet, violet stuff' },
+          thummim: { strongs: 'H8550', translit: 'thummim', original: 'תֻּמִּים', lang: 'hebrew', definition: 'Thummim, perfections' },
+          tifaret: { strongs: 'H8597', translit: "tif'aret", original: 'תִּפְאֶרֶת', lang: 'hebrew', definition: 'beauty, splendour, glory' },
+          tummim: { strongs: 'H8550', translit: 'thummim', original: 'תֻּמִּים', lang: 'hebrew', definition: 'Thummim, perfections' },
+          tzitz: { strongs: 'H6731', translit: 'tzitz', original: 'צִּיץ', lang: 'hebrew', definition: 'plate, flower, blossom' },
+          urim: { strongs: 'H224', translit: 'urim', original: 'אוּרִים', lang: 'hebrew', definition: 'Urim, lights' },
+          yhwh: { strongs: 'H3068', translit: 'YHWH', original: 'יְהוָה', lang: 'hebrew', definition: 'the LORD, the divine name' }
+        };
+        const buildLexiconHref = (strongs) => {
+          const code = String(strongs || '').toUpperCase();
+          if (!/^[HG]\d+/.test(code)) return '';
+          const path = code[0] === 'G' ? 'tr' : 'wlc';
+          return `https://www.blueletterbible.org/lexicon/${code.toLowerCase()}/kjv/${path}/0-1/`;
+        };
+        const buildLexiconTargetFromEntry = (strongs, entry) => ({
+          strongs: String(strongs || '').toUpperCase(),
+          translit: entry?.translit || '',
+          original: entry?.original || '',
+          lang: entry?.lang || (String(strongs || '').toUpperCase().startsWith('G') ? 'greek' : 'hebrew'),
+          definition: entry?.definition || '',
+          verse: entry?.verse || ''
+        });
+        const ensureSharedLexiconIndex = async () => {
+          if (Object.keys(sharedLexiconByNormalizedTranslit).length) return sharedLexiconByNormalizedTranslit;
+          if (!sharedLexiconLoadPromise) {
+            sharedLexiconLoadPromise = fetch('/data/lexicon-popups.json?v=20260220b', { cache: 'no-store' })
+              .then((response) => (response.ok ? response.json() : {}))
+              .catch(() => ({}))
+              .then((data) => {
+                sharedLexiconByNormalizedTranslit = Object.entries(data || {}).reduce((acc, [strongs, entry]) => {
+                  const translit = normalizeTermText(entry?.translit || '');
+                  if (!translit || acc[translit]) return acc;
+                  acc[translit] = buildLexiconTargetFromEntry(strongs, entry);
+                  return acc;
+                }, {});
+                return sharedLexiconByNormalizedTranslit;
+              });
+          }
+          return sharedLexiconLoadPromise;
+        };
+        const hasDirectLookup = (text, key) => !!resolveLexiconTarget(text, key);
+
+        const contentSelectors = [
+          '.page-intro',
+          '.hotspot-card',
+          '.figure-supplement',
+          '.deep-dive-toggle__content'
+        ];
+        const emphasizedContentSelector = contentSelectors.map((selector) => `${selector} em`).join(', ');
+        const resolveNormalizedTermKey = (normalized, depth = 0) => {
+          if (!normalized || depth > 3) return null;
+          const direct = termAliases[normalized] || normalizedGlossaryKeyMap[normalized];
+          if (direct) return direct;
+
+          for (const prefix of termPrefixes) {
+            if (!normalized.startsWith(prefix) || normalized.length <= prefix.length + 1) continue;
+            const stripped = normalized.slice(prefix.length);
+            const resolved = resolveNormalizedTermKey(stripped, depth + 1);
+            if (resolved) return resolved;
+          }
+
+          return null;
+        };
+        const resolveTermKey = (text) => resolveNormalizedTermKey(normalizeTermText(text));
+        const getTermDefinition = (key) => {
+          const raw = termPopupDefinitions[key];
+          if (!raw) return '';
+          return typeof raw === 'string' ? raw : (raw.definition || '');
+        };
+        const getTermLexiconData = (key) => {
+          const raw = termPopupDefinitions[key];
+          if (!raw || typeof raw === 'string') return null;
+          return raw.strongs ? raw : null;
+        };
+        const resolveLexiconTarget = (text, key = null) => {
+          const candidates = [];
+          const pushCandidate = (value) => {
+            if (!value) return;
+            const normalized = normalizeTermText(value);
+            if (!normalized || candidates.includes(normalized)) return;
+            candidates.push(normalized);
+          };
+
+          pushCandidate(text);
+          if (key) pushCandidate(key);
+
+          for (let index = 0; index < candidates.length; index += 1) {
+            const current = candidates[index];
+            for (const prefix of termPrefixes) {
+              if (current.startsWith(prefix) && current.length > prefix.length + 1) {
+                pushCandidate(current.slice(prefix.length));
+              }
+            }
+          }
+
+          for (const candidate of candidates) {
+            const override = termLexiconOverrides[candidate];
+            if (override) return override;
+
+            const glossaryKey = normalizedGlossaryKeyMap[candidate] || termAliases[candidate];
+            const glossaryLexiconData = glossaryKey ? getTermLexiconData(glossaryKey) : null;
+            if (glossaryLexiconData) {
+              return glossaryLexiconData;
+            }
+
+            const sharedLexiconData = sharedLexiconByNormalizedTranslit[candidate];
+            if (sharedLexiconData) {
+              return sharedLexiconData;
+            }
+          }
+
+          return null;
+        };
+        const createLexiconRefElement = (text, target) => {
+          const strongs = String(target?.strongs || '').toUpperCase();
+          const href = buildLexiconHref(strongs);
+          if (!href) return null;
+
+          const element = document.createElement('a');
+          element.className = 'term-ref';
+          element.href = href;
+          element.target = '_blank';
+          element.rel = 'noopener noreferrer';
+          element.setAttribute('data-ref', text);
+          element.setAttribute('data-strongs', strongs);
+          element.setAttribute('data-lang', target?.lang || (strongs.startsWith('G') ? 'greek' : 'hebrew'));
+          if (target?.translit) element.setAttribute('data-translit', target.translit);
+          if (target?.original) element.setAttribute('data-original', target.original);
+          if (target?.definition) element.setAttribute('data-lexicon', target.definition);
+
+          const em = document.createElement('em');
+          em.textContent = text;
+          element.appendChild(em);
+          return element;
+        };
+        const splitTermPieces = (termText) => termText.split(/(\s+|\/)/);
+        const isCompoundTerm = (termText) => /[\/\s]/.test(termText);
+        const formatLookupLabel = (surfaceText, target) => {
+          const baseLabel = (target?.translit || surfaceText || '').trim();
+          const code = String(target?.strongs || '').toUpperCase();
+          return code ? `${baseLabel} (${code})` : baseLabel;
+        };
+        const createTermRefElement = (text, key) => {
+          if (isCompoundTerm(text)) {
+            const definition = getTermDefinition(key);
+            const element = document.createElement('button');
+            element.className = 'term-ref term-ref--button';
+            element.type = 'button';
+            element.setAttribute('data-ref', text);
+            element.setAttribute('data-popup-kind', 'source');
+            if (definition) {
+              element.setAttribute('data-popup-text', definition);
+            }
+            const componentLinks = buildComponentLookupLinks(text);
+            if (componentLinks.length) {
+              element.setAttribute('data-popup-links', JSON.stringify(componentLinks));
+            }
+
+            const em = document.createElement('em');
+            em.textContent = text;
+            element.appendChild(em);
+            return element;
+          }
+
+          const lexiconTarget = resolveLexiconTarget(text, key);
+          if (lexiconTarget) {
+            return createLexiconRefElement(text, lexiconTarget);
+          }
+          const definition = getTermDefinition(key);
+          if (!definition) return null;
+
+          const element = document.createElement('button');
+          element.className = 'term-ref term-ref--button';
+          element.type = 'button';
+          element.setAttribute('data-ref', text);
+          element.setAttribute('data-popup-kind', 'source');
+          element.setAttribute('data-popup-text', definition);
+          const componentLinks = buildComponentLookupLinks(text);
+          if (componentLinks.length) {
+            element.setAttribute('data-popup-links', JSON.stringify(componentLinks));
+          }
+
+          const em = document.createElement('em');
+          em.textContent = text;
+          element.appendChild(em);
+          return element;
+        };
+        const buildComponentLookupLinks = (termText) => {
+          const pieces = splitTermPieces(termText);
+          const links = [];
+          const seen = new Set();
+
+          for (const piece of pieces) {
+            if (!piece || /^\s+$/.test(piece) || piece === '/') continue;
+            const key = resolveTermKey(piece);
+            const target = resolveLexiconTarget(piece, key);
+            const label = piece.trim();
+            const rootLabel = formatLookupLabel(label, target);
+            const signature = `${rootLabel}::${target?.strongs || key || ''}`;
+            if (seen.has(signature)) continue;
+            seen.add(signature);
+            links.push({
+              label: rootLabel,
+              href: target ? buildLexiconHref(target.strongs) : ''
+            });
+          }
+
+          return links.filter((link) => !!link.href);
+        };
+        const buildComponentTermNodes = (emNode, termText) => {
+          if (!/[\/\s]/.test(termText)) return null;
+
+          const pieces = splitTermPieces(termText);
+          let resolvedCount = 0;
+          const fragment = document.createDocumentFragment();
+
+          for (const piece of pieces) {
+            if (!piece) continue;
+            if (/^\s+$/.test(piece) || piece === '/') {
+              fragment.appendChild(document.createTextNode(piece));
+              continue;
+            }
+
+            const key = resolveTermKey(piece);
+            const element = createTermRefElement(piece, key);
+            if (!element) return null;
+            fragment.appendChild(element);
+            resolvedCount += 1;
+          }
+
+          return resolvedCount >= 2 ? fragment : null;
+        };
+
+        const enhanceItalicizedTerms = () => {
+          contentRoot.querySelectorAll(emphasizedContentSelector).forEach((em) => {
+            if (em.closest('a')) return;
+            const termText = (em.textContent || '').trim();
+            if (!termText) return;
+            const componentNodes = buildComponentTermNodes(em, termText);
+            if (componentNodes) {
+              const wrapper = document.createElement('span');
+              wrapper.className = 'term-ref-group';
+              wrapper.appendChild(componentNodes);
+              em.parentNode.replaceChild(wrapper, em);
+              return;
+            }
+
+            const key = resolveTermKey(termText);
+            if (!key) return;
+            const anchor = createTermRefElement(termText, key);
+            if (!anchor) return;
+
+            em.parentNode.replaceChild(anchor, em);
+          });
+        };
+        const enhanceMetaTermButtons = () => {
+          root.querySelectorAll('.meta-row .term-ref--button[data-ref]').forEach((button) => {
+            const termText = (button.dataset.ref || '').trim();
+            if (!termText) return;
+            const lexiconTarget = resolveLexiconTarget(termText);
+            if (lexiconTarget) {
+              const anchor = createLexiconRefElement(termText, lexiconTarget);
+              if (anchor) {
+                anchor.dataset.popupKind = button.dataset.popupKind || '';
+                if (button.dataset.popupText) {
+                  anchor.setAttribute('data-popup-text', button.dataset.popupText);
+                }
+                if (button.innerHTML) {
+                  anchor.innerHTML = button.innerHTML;
+                }
+                button.replaceWith(anchor);
+                return;
+              }
+            }
+            const componentLinks = buildComponentLookupLinks(termText);
+            if (!componentLinks.length) return;
+            button.setAttribute('data-popup-links', JSON.stringify(componentLinks));
+          });
+        };
+        const enhanceExistingTermButtons = () => {
+          root.querySelectorAll('.term-ref--button[data-ref]').forEach((button) => {
+            const termText = (button.dataset.ref || '').trim();
+            if (!termText) return;
+            const key = resolveTermKey(termText);
+            const lexiconTarget = resolveLexiconTarget(termText, key);
+            if (lexiconTarget && !isCompoundTerm(termText)) {
+              const anchor = createLexiconRefElement(termText, lexiconTarget);
+              if (anchor) {
+                Array.from(button.attributes).forEach((attribute) => {
+                  if (['class', 'type', 'data-ref'].includes(attribute.name)) return;
+                  anchor.setAttribute(attribute.name, attribute.value);
+                });
+                if (button.innerHTML) {
+                  anchor.innerHTML = button.innerHTML;
+                }
+                button.replaceWith(anchor);
+                return;
+              }
+            }
+            const componentLinks = buildComponentLookupLinks(termText);
+            if (!componentLinks.length) return;
+            button.setAttribute('data-popup-links', JSON.stringify(componentLinks));
+          });
+        };
+
+        const wrapInlineScriptures = () => {
+          const containers = contentRoot.querySelectorAll(contentSelectors.join(', '));
+          const skipTags = ['SCRIPT', 'STYLE', 'TEXTAREA', 'INPUT', 'BUTTON', 'A', 'CODE', 'PRE', 'SPAN'];
+
+          const visit = (element) => {
+            if (!element) return;
+            if (skipTags.includes(element.tagName)) return;
+            if (element.hasAttribute && element.hasAttribute('data-ref')) return;
+            if (element.closest && element.closest('a, button, [data-ref]')) return;
+
+            Array.from(element.childNodes).forEach((node) => {
+              if (node.nodeType === Node.TEXT_NODE) {
+                const text = node.textContent;
+                if (!text || !inlineScriptureRegex.test(text)) return;
+                inlineScriptureRegex.lastIndex = 0;
+
+                const frag = document.createDocumentFragment();
+                let lastIndex = 0;
+                let match;
+
+                while ((match = inlineScriptureRegex.exec(text)) !== null) {
+                  const ref = match[0];
+                  if (match.index > lastIndex) {
+                    frag.appendChild(document.createTextNode(text.slice(lastIndex, match.index)));
+                  }
+
+                  const span = document.createElement('span');
+                  span.className = 'scripture-ref';
+                  span.setAttribute('data-ref', ref);
+                  span.textContent = ref;
+                  frag.appendChild(span);
+
+                  lastIndex = match.index + ref.length;
+                }
+
+                if (lastIndex < text.length) {
+                  frag.appendChild(document.createTextNode(text.slice(lastIndex)));
+                }
+
+                if (frag.childNodes.length) {
+                  node.parentNode.replaceChild(frag, node);
+                }
+              } else if (node.nodeType === Node.ELEMENT_NODE) {
+                visit(node);
+              }
+            });
+          };
+
+          containers.forEach((container) => visit(container));
+        };
+
+        const syncFigureState = () => {
+          if (!figureDisplay) return;
+          const activeCard = activeHotspotId
+            ? cards.find((card) => card.dataset.hotspotCard === activeHotspotId)
+            : null;
+          const whiteOverride = activeCard?.dataset.figureWhiteOverride;
+          const goldenOverride = activeCard?.dataset.figureGoldenOverride;
+
+          if (figureState === 'white' && (whiteOverride || figureDisplay.dataset.figureWhite)) {
+            figureDisplay.src = whiteOverride || figureDisplay.dataset.figureWhite;
+          } else {
+            figureDisplay.src = goldenOverride || figureDisplay.dataset.figureGolden;
+          }
+
+          figureToggles.forEach((toggle) => {
+            const active = toggle.dataset.figureStateToggle === figureState;
+            toggle.classList.toggle('is-active', active);
+            toggle.setAttribute('aria-selected', active ? 'true' : 'false');
+          });
+        };
+
+        const activate = (id) => {
+          activeHotspotId = id;
+
+          buttons.forEach((button) => {
+            const active = button.dataset.hotspotButton === id;
+            button.classList.toggle('is-active', active);
+            button.setAttribute('aria-expanded', active ? 'true' : 'false');
+          });
+
+          tabs.forEach((tab) => {
+            const active = tab.dataset.hotspotTab === id;
+            tab.classList.toggle('is-active', active);
+            tab.setAttribute('aria-pressed', active ? 'true' : 'false');
+          });
+
+          cards.forEach((card) => {
+            const active = card.dataset.hotspotCard === id;
+            card.classList.toggle('is-active', active);
+            card.setAttribute('aria-hidden', active ? 'false' : 'true');
+          });
+
+          if (videoPanel) {
+            let hasMatch = false;
+
+            videoSets.forEach((section) => {
+              const active = section.dataset.hotspotVideos === id;
+              if (active) hasMatch = true;
+              section.classList.toggle('is-active', active);
+              section.setAttribute('aria-hidden', active ? 'false' : 'true');
+            });
+
+            videoPanel.hidden = !hasMatch;
+          }
+
+          if (figureSupplement) {
+            const targetId = figureSupplement.dataset.figureSupplementTarget;
+            figureSupplement.hidden = !!targetId && targetId !== id;
+            root.classList.toggle('has-active-figure-supplement', !figureSupplement.hidden);
+          }
+
+          syncFigureState();
+        };
+
+        buttons.forEach((button) => {
+          button.addEventListener('click', () => activate(button.dataset.hotspotButton));
+        });
+
+        tabs.forEach((tab) => {
+          tab.addEventListener('click', () => activate(tab.dataset.hotspotTab));
+        });
+
+        figureToggles.forEach((toggle) => {
+          toggle.addEventListener('click', () => {
+            const nextState = toggle.dataset.figureStateToggle;
+            if (!nextState) return;
+            figureState = nextState;
+            syncFigureState();
+          });
+        });
+
+        if (figureDisplay) {
+          syncFigureState();
+        }
+
+        if (videoPanel) {
+          const initialActive = root.querySelector('[data-hotspot-card].is-active');
+          videoPanel.hidden = !initialActive || !videoSets.some((section) => section.dataset.hotspotVideos === initialActive.dataset.hotspotCard);
+        }
+
+        if (figureSupplement) {
+          const initialActive = root.querySelector('[data-hotspot-card].is-active');
+          const targetId = figureSupplement.dataset.figureSupplementTarget;
+          figureSupplement.hidden = !initialActive || (!!targetId && targetId !== initialActive.dataset.hotspotCard);
+          root.classList.toggle('has-active-figure-supplement', !figureSupplement.hidden);
+        }
+
+        enhanceItalicizedTerms();
+        enhanceMetaTermButtons();
+        wrapInlineScriptures();
+        ensureSharedLexiconIndex().then(() => {
+          enhanceItalicizedTerms();
+          enhanceMetaTermButtons();
+          enhanceExistingTermButtons();
+        });
+
+        imageVariantRoots.forEach((variantRoot) => {
+          const cardImage = variantRoot.parentElement?.querySelector('[data-image-variant-target]');
+          const lightboxTrigger = variantRoot.parentElement?.querySelector('[data-lightbox-trigger]');
+          const tabsForVariant = Array.from(variantRoot.querySelectorAll('[data-image-variant-tab]'));
+          if (!cardImage || !lightboxTrigger || !tabsForVariant.length) return;
+
+          tabsForVariant.forEach((tab) => {
+            tab.addEventListener('click', () => {
+              const nextSrc = tab.dataset.variantSrc;
+              const nextAlt = tab.dataset.variantAlt || '';
+              if (!nextSrc) return;
+
+              cardImage.src = nextSrc;
+              cardImage.alt = nextAlt;
+              lightboxTrigger.dataset.lightboxSrc = nextSrc;
+              lightboxTrigger.dataset.lightboxAlt = nextAlt;
+
+              tabsForVariant.forEach((candidate) => {
+                const active = candidate === tab;
+                candidate.classList.toggle('is-active', active);
+                candidate.setAttribute('aria-selected', active ? 'true' : 'false');
+              });
+            });
+          });
+        });
+
+        supplementTabs.forEach((tab) => {
+          tab.addEventListener('click', () => {
+            const target = tab.dataset.supplementTab;
+
+            supplementTabs.forEach((candidate) => {
+              const active = candidate === tab;
+              candidate.classList.toggle('is-active', active);
+              candidate.setAttribute('aria-selected', active ? 'true' : 'false');
+            });
+
+            supplementPanes.forEach((pane) => {
+              const active = pane.dataset.supplementPane === target;
+              pane.classList.toggle('is-active', active);
+              pane.setAttribute('aria-hidden', active ? 'false' : 'true');
+            });
+          });
+        });
+
+        const hashHotspotId = getHashHotspotId();
+        if (hashHotspotId) {
+          activate(hashHotspotId);
+          const targetCard = cards.find((card) => card.dataset.hotspotCard === hashHotspotId);
+          if (targetCard) {
+            requestAnimationFrame(() => {
+              targetCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+          }
+        }
+
+        window.addEventListener('hashchange', () => {
+          const nextHashHotspotId = getHashHotspotId();
+          if (!nextHashHotspotId) return;
+          activate(nextHashHotspotId);
+        });
+
+        if (lightbox && lightboxImage) {
+          const openLightbox = (src, alt) => {
+            lightboxImage.src = src;
+            lightboxImage.alt = alt || '';
+            lightbox.hidden = false;
+            document.body.classList.add('lightbox-open');
+          };
+
+          const closeLightbox = () => {
+            lightbox.hidden = true;
+            lightboxImage.src = '';
+            lightboxImage.alt = '';
+            document.body.classList.remove('lightbox-open');
+          };
+
+          lightboxTriggers.forEach((trigger) => {
+            trigger.addEventListener('click', () => {
+              openLightbox(trigger.dataset.lightboxSrc, trigger.dataset.lightboxAlt);
+            });
+          });
+
+          lightboxClosers.forEach((closer) => {
+            closer.addEventListener('click', closeLightbox);
+          });
+
+          document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && !lightbox.hidden) {
+              closeLightbox();
+            }
+          });
+        }
+      })();
+    </script>
+  {{ end }}
+{{ end }}

@@ -1,0 +1,86 @@
+{{ define "head" }}
+  <link rel="stylesheet" href="{{ (printf "css/tabernacle.css?v=%d" now.Unix) | relURL }}">
+{{ end }}
+
+{{ define "main" }}
+  {{ $mapPage := site.GetPage "/culture/ancient/tabernacle/explore-the-map" }}
+  {{ $priestlyPage := site.GetPage "/culture/ancient/tabernacle/priestly-clothing" }}
+
+  <div class="tabernacle-home-page" data-pagefind-body>
+    <section class="hero compact">
+      <p class="eyebrow">Field Guide</p>
+      <h1>Tabernacle Field Guide</h1>
+      {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
+    </section>
+
+    <nav class="field-guide-nav" aria-label="Tabernacle field guide navigation">
+      <a class="field-guide-nav__link is-active" href="{{ .RelPermalink }}">Home</a>
+      {{ with $mapPage }}<a class="field-guide-nav__link" href="{{ .RelPermalink }}">Explore the Map</a>{{ end }}
+      {{ with $priestlyPage }}<a class="field-guide-nav__link" href="{{ .RelPermalink }}">Priestly Clothing</a>{{ end }}
+    </nav>
+
+    <section class="tabernacle-home-intro">
+      <div class="prose prose--intro">
+        {{ .Content }}
+      </div>
+    </section>
+
+    {{ with .Params.image }}
+      <section class="tabernacle-home-hero-image" aria-label="Tabernacle cutaway illustration">
+        <div class="tabernacle-home-hero-image__frame">
+          <img src="{{ . | relURL }}" alt="Tabernacle cutaway three-quarter view">
+        </div>
+      </section>
+    {{ end }}
+
+    <section class="tabernacle-home-grid" aria-label="Field guide sections">
+      <div class="tabernacle-home-column">
+        {{ with $mapPage }}
+          <a href="{{ .RelPermalink }}" class="tabernacle-home-card">
+            {{ with .Params.image }}
+              <div class="tabernacle-home-card__image">
+                <img src="/images/tabernacle/tabernacle-home-map-furnished.png" alt="Explore the Map furnished floorplan preview">
+              </div>
+            {{ end }}
+            <div class="tabernacle-home-card__body">
+              <p class="tabernacle-home-card__eyebrow">Interactive</p>
+              <h2>{{ .Title }}</h2>
+              {{ with .Description }}<p>{{ . }}</p>{{ end }}
+            </div>
+          </a>
+        {{ end }}
+
+        {{ with $priestlyPage }}
+          <a href="{{ .RelPermalink }}#breastplate" class="tabernacle-home-card tabernacle-home-card--breastplate-promo">
+            <div class="tabernacle-home-card__image tabernacle-home-card__image--breastplate">
+              <img src="/images/tabernacle/breastplate-interpretive-identifications-v2.png" alt="Breastplate study preview">
+            </div>
+            <div class="tabernacle-home-card__body">
+              <p class="tabernacle-home-card__eyebrow">Deeper Study</p>
+              <h2>Breastplate Study</h2>
+              <p>Jump directly into the breastplate exploration, including the Hebrew names, interpretive reconstruction, research table, and specimen slideshow.</p>
+              <span class="tabernacle-home-card__cta">Open Priestly Clothing →</span>
+            </div>
+          </a>
+        {{ end }}
+      </div>
+
+      <div class="tabernacle-home-column">
+        {{ with $priestlyPage }}
+          <a href="{{ .RelPermalink }}" class="tabernacle-home-card">
+            {{ with .Params.image }}
+              <div class="tabernacle-home-card__image">
+                <img src="{{ . | relURL }}" alt="Priestly Clothing preview">
+              </div>
+            {{ end }}
+            <div class="tabernacle-home-card__body">
+              <p class="tabernacle-home-card__eyebrow">Interactive</p>
+              <h2>{{ .Title }}</h2>
+              {{ with .Description }}<p>{{ . }}</p>{{ end }}
+            </div>
+          </a>
+        {{ end }}
+      </div>
+    </section>
+  </div>
+{{ end }}

@@ -1,0 +1,372 @@
+sources:
+  - source_id: exodus-28-2-glory-beauty
+    author: Moses / Torah
+    work: Exodus
+    citation: "28:2"
+    tradition_type: biblical-text
+    source_tier: primary
+    topic_tags:
+      - tabernacle
+      - priestly-clothing
+      - high-priest
+    claim_summary: The priestly garments are made "for glory and for beauty."
+    direct_quote: "And thou shalt make holy garments for Aaron thy brother for glory and for beauty."
+    packet_paraphrase: The holy garments were designed to communicate sacred beauty, office, and consecration.
+    warning_note: Use scripture as the primary anchor for all garment symbolism.
+    audience_level: core
+    use_cases:
+      - priestly-clothing
+      - tabernacle-packet
+    related_scriptures:
+      - Exodus 28:1-43
+      - Exodus 39:1-31
+    knowlchemy_link: ""
+    status: approved
+
+  - source_id: exodus-28-30-urim-thummim
+    author: Moses / Torah
+    work: Exodus
+    citation: "28:30"
+    tradition_type: biblical-text
+    source_tier: primary
+    topic_tags:
+      - tabernacle
+      - priestly-clothing
+      - breastplate
+      - urim-thummim
+    claim_summary: The Urim and Thummim are placed in the breastplate of judgment.
+    direct_quote: "And thou shalt put in the breastplate of judgment the Urim and the Thummim."
+    packet_paraphrase: The Urim and Thummim belong to the breastplate and are associated with sacred judgment before the Lord.
+    warning_note: Scripture names them but does not explain their exact physical form or mechanism.
+    audience_level: core
+    use_cases:
+      - priestly-clothing
+      - tabernacle-packet
+    related_scriptures:
+      - Leviticus 8:8
+      - Numbers 27:21
+      - 1 Samuel 28:6
+    knowlchemy_link: ""
+    status: approved
+
+  - source_id: genesis-1-14-signs-seasons
+    author: Moses / Torah
+    work: Genesis
+    citation: "1:14"
+    tradition_type: biblical-text
+    source_tier: primary
+    topic_tags:
+      - creation
+      - heavenly-bodies
+      - moedim
+      - sacred-time
+    claim_summary: The heavenly lights are given for signs, appointed times, days, and years.
+    direct_quote: "Let them be for signs, and for seasons, and for days, and years."
+    packet_paraphrase: Genesis frames the heavenly bodies as part of God's created ordering of sacred and calendrical time.
+    warning_note: This is not astrology; it is a creation-order text.
+    audience_level: core
+    use_cases:
+      - priestly-clothing
+      - moedim-packet
+      - tabernacle-packet
+    related_scriptures:
+      - Genesis 37:9-10
+    knowlchemy_link: ""
+    status: approved
+
+  - source_id: genesis-37-9-10-joseph-dream
+    author: Moses / Torah
+    work: Genesis
+    citation: "37:9-10"
+    tradition_type: biblical-text
+    source_tier: primary
+    topic_tags:
+      - joseph
+      - tribes-of-israel
+      - heavenly-symbolism
+    claim_summary: Joseph's dream uses sun, moon, and stars to symbolize covenant family order.
+    direct_quote: "Behold, the sun and the moon and the eleven stars made obeisance to me."
+    packet_paraphrase: Joseph's dream establishes a scriptural pattern in which the covenant family is described in heavenly terms.
+    warning_note: Use this as pattern language, not as a claim that Exodus explicitly interprets the garments this way.
+    audience_level: advanced
+    use_cases:
+      - priestly-clothing
+      - tabernacle-packet
+    related_scriptures:
+      - Genesis 1:14
+    knowlchemy_link: ""
+    status: approved
+
+  - source_id: josephus-antiquities-3-7-7-garments-cosmos
+    author: Josephus
+    work: Antiquities of the Jews
+    citation: "3.7.7"
+    tradition_type: jewish-interpretive
+    source_tier: comparative-ancient
+    topic_tags:
+      - tabernacle
+      - priestly-clothing
+      - cosmos
+      - breastplate
+      - shoulder-stones
+      - blue-robe
+      - bells-pomegranates
+    claim_summary: Josephus reads the priestly garments and materials as a symbolic rendering of the created order.
+    direct_quote: "The blue denoted the sky, the purple the sea, the scarlet fire, and the fine linen the earth."
+    packet_paraphrase: Josephus presents the garments as a wearable model of the cosmos, linking their materials and ornaments to earth, sky, fire, sea, sun, moon, and the constellations or months.
+    warning_note: Ancient Jewish interpretation; not the plain sense of Exodus.
+    audience_level: advanced
+    use_cases:
+      - priestly-clothing
+      - tabernacle-packet
+      - deeper-dive
+    related_scriptures:
+      - Exodus 28:6-35
+      - Exodus 39:2-31
+    knowlchemy_link: knowlchemy://source/josephus-antiquities-3-7-7-garments-cosmos
+    status: approved
+
+  - source_id: josephus-antiquities-3-7-7-shoulder-stones
+    author: Josephus
+    work: Antiquities of the Jews
+    citation: "3.7.7"
+    tradition_type: jewish-interpretive
+    source_tier: comparative-ancient
+    topic_tags:
+      - priestly-clothing
+      - shoulder-stones
+      - sun-moon
+    claim_summary: Josephus associates the two shoulder stones with the sun and moon.
+    direct_quote: "The two sardonyxes declare the sun and moon."
+    packet_paraphrase: Josephus expands the memorial role of the shoulder stones by reading them as cosmic lights.
+    warning_note: Useful for advanced symbolic reading, not for core explanatory copy.
+    audience_level: advanced
+    use_cases:
+      - priestly-clothing
+      - deeper-dive
+    related_scriptures:
+      - Exodus 28:9-12
+    knowlchemy_link: knowlchemy://source/josephus-antiquities-3-7-7-shoulder-stones
+    status: approved
+
+  - source_id: josephus-antiquities-3-7-7-breastplate
+    author: Josephus
+    work: Antiquities of the Jews
+    citation: "3.7.7"
+    tradition_type: jewish-interpretive
+    source_tier: comparative-ancient
+    topic_tags:
+      - priestly-clothing
+      - breastplate
+      - months
+      - constellations
+    claim_summary: Josephus connects the twelve breastplate stones with the months or zodiacal signs.
+    direct_quote: "Whether we understand by them the months, or whether we understand the like number of the signs of that circle which the Greeks call the Zodiac."
+    packet_paraphrase: Josephus explicitly presents the twelve stones as representing the full ordered cycle of heaven or time.
+    warning_note: If used in packet copy, clarify that this is Josephus' interpretive reading.
+    audience_level: advanced
+    use_cases:
+      - priestly-clothing
+      - deeper-dive
+    related_scriptures:
+      - Exodus 28:15-21
+    knowlchemy_link: knowlchemy://source/josephus-antiquities-3-7-7-breastplate
+    status: approved
+
+  - source_id: philo-life-of-moses-2-117-126-garments-cosmos
+    author: Philo of Alexandria
+    work: Life of Moses
+    citation: "2.117-126"
+    tradition_type: jewish-interpretive
+    source_tier: comparative-ancient
+    topic_tags:
+      - tabernacle
+      - priestly-clothing
+      - cosmos
+      - breastplate
+      - bells-pomegranates
+      - shoulder-stones
+      - blue-robe
+    claim_summary: Philo reads the priestly garments as a symbolic map of the ordered heavens and elements.
+    direct_quote: "The high priest is arrayed in a copy and representation of the universe."
+    packet_paraphrase: Philo develops the same cosmic logic as Josephus, but in a more philosophical and systematized way.
+    warning_note: Some wording varies by translation; quote carefully and standardize the edition used.
+    audience_level: advanced
+    use_cases:
+      - priestly-clothing
+      - tabernacle-packet
+      - deeper-dive
+    related_scriptures:
+      - Exodus 28:6-35
+    knowlchemy_link: knowlchemy://source/philo-life-of-moses-2-117-126-garments-cosmos
+    status: approved
+
+  - source_id: philo-life-of-moses-2-124-126-breastplate-seasons
+    author: Philo of Alexandria
+    work: Life of Moses
+    citation: "2.124-126"
+    tradition_type: jewish-interpretive
+    source_tier: comparative-ancient
+    topic_tags:
+      - priestly-clothing
+      - breastplate
+      - constellations
+      - seasons
+    claim_summary: Philo connects the breastplate stones to the ordered heavens, seasonal divisions, and cosmic patterning.
+    direct_quote: ""
+    packet_paraphrase: Philo treats the breastplate as more than tribal memorial. It also becomes a patterned representation of the heavens and divisions of time.
+    warning_note: Prefer paraphrase unless you have a verified edition-specific wording ready for quotation.
+    audience_level: advanced
+    use_cases:
+      - priestly-clothing
+      - deeper-dive
+    related_scriptures:
+      - Exodus 28:15-21
+    knowlchemy_link: knowlchemy://source/philo-life-of-moses-2-124-126-breastplate-seasons
+    status: draft
+
+  - source_id: philo-life-of-moses-2-102-103-menorah-planets
+    author: Philo of Alexandria
+    work: Life of Moses
+    citation: "2.102-103"
+    tradition_type: jewish-interpretive
+    source_tier: comparative-ancient
+    topic_tags:
+      - tabernacle
+      - menorah
+      - planets
+      - cosmos
+    claim_summary: Philo interprets the seven lamps of the Menorah in relation to the seven visible heavenly lights.
+    direct_quote: ""
+    packet_paraphrase: Philo presents the Menorah as a cosmological object, with the seven lamps aligned to the visible heavenly order.
+    warning_note: Keep strong hedging language; this is interpretive cosmology, not biblical text.
+    audience_level: advanced
+    use_cases:
+      - layout-and-zones
+      - sacred-furnishings
+      - deeper-dive
+    related_scriptures:
+      - Exodus 25:31-40
+    knowlchemy_link: knowlchemy://source/philo-life-of-moses-2-102-103-menorah-planets
+    status: approved
+
+  - source_id: josephus-wars-5-5-5-menorah-planets
+    author: Josephus
+    work: The Wars of the Jews
+    citation: "5.5.5"
+    tradition_type: jewish-interpretive
+    source_tier: comparative-ancient
+    topic_tags:
+      - tabernacle
+      - menorah
+      - planets
+    claim_summary: Josephus identifies the seven lamps with the seven planets.
+    direct_quote: "The seven lamps signified the seven planets."
+    packet_paraphrase: Josephus reads the Menorah as a cosmological symbol tied to the visible heavens.
+    warning_note: Ancient interpretive reading; not explicit in Exodus.
+    audience_level: advanced
+    use_cases:
+      - layout-and-zones
+      - sacred-furnishings
+      - deeper-dive
+    related_scriptures:
+      - Exodus 25:31-40
+    knowlchemy_link: knowlchemy://source/josephus-wars-5-5-5-menorah-planets
+    status: approved
+
+  - source_id: zevachim-88b-garments-atonement
+    author: Babylonian Talmud
+    work: Zevachim
+    citation: "88b"
+    tradition_type: jewish-rabbinic
+    source_tier: comparative-rabbinic
+    topic_tags:
+      - priestly-clothing
+      - atonement
+      - sash
+      - robe
+      - tunic
+      - forehead-plate
+    claim_summary: Rabbinic tradition associates specific priestly garments with specific atoning functions.
+    direct_quote: ""
+    packet_paraphrase: Zevachim 88b assigns symbolic atoning roles to the priestly garments, extending their meaning beyond simple dress.
+    warning_note: Rabbinic interpretive tradition, much later than Exodus.
+    audience_level: advanced
+    use_cases:
+      - priestly-clothing
+      - deeper-dive
+    related_scriptures:
+      - Exodus 28
+    knowlchemy_link: knowlchemy://source/zevachim-88b-garments-atonement
+    status: approved
+
+  - source_id: leviticus-8-8-urim-thummim
+    author: Moses / Torah
+    work: Leviticus
+    citation: "8:8"
+    tradition_type: biblical-text
+    source_tier: primary
+    topic_tags:
+      - urim-thummim
+      - vesting
+      - breastplate
+    claim_summary: The vesting of Aaron includes the Urim and Thummim in the breastplate.
+    direct_quote: "Also he put in the breastplate the Urim and the Thummim."
+    packet_paraphrase: Leviticus confirms that the Urim and Thummim belonged to the vested priestly system, not to an isolated object.
+    warning_note: Useful as a confirmation text alongside Exodus 28:30.
+    audience_level: core
+    use_cases:
+      - priestly-clothing
+      - tabernacle-packet
+    related_scriptures:
+      - Exodus 28:30
+      - Numbers 27:21
+    knowlchemy_link: ""
+    status: approved
+
+  - source_id: numbers-27-21-urim-inquiry
+    author: Moses / Torah
+    work: Numbers
+    citation: "27:21"
+    tradition_type: biblical-text
+    source_tier: primary
+    topic_tags:
+      - urim-thummim
+      - inquiry
+      - judgment
+    claim_summary: Inquiry by Urim is tied to seeking judgment before the Lord.
+    direct_quote: "He shall stand before Eleazar the priest, who shall ask counsel for him after the judgment of Urim before the Lord."
+    packet_paraphrase: Numbers presents the Urim as part of priestly inquiry before God.
+    warning_note: Use this to anchor the concept of inquiry rather than to speculate on mechanics.
+    audience_level: core
+    use_cases:
+      - priestly-clothing
+      - tabernacle-packet
+    related_scriptures:
+      - Exodus 28:30
+      - 1 Samuel 28:6
+    knowlchemy_link: ""
+    status: approved
+
+  - source_id: first-samuel-28-6-urim-no-answer
+    author: Former Prophets
+    work: 1 Samuel
+    citation: "28:6"
+    tradition_type: biblical-text
+    source_tier: primary
+    topic_tags:
+      - urim-thummim
+      - inquiry
+      - silence
+    claim_summary: The Urim do not guarantee an answer.
+    direct_quote: "The Lord answered him not, neither by dreams, nor by Urim, nor by prophets."
+    packet_paraphrase: Scripture shows that the Urim and Thummim belong to sacred inquiry, but not to automatic revelation on demand.
+    warning_note: Useful against mechanical or superstitious readings.
+    audience_level: core
+    use_cases:
+      - priestly-clothing
+      - tabernacle-packet
+    related_scriptures:
+      - Numbers 27:21
+    knowlchemy_link: ""
+    status: approved
