@@ -6,7 +6,7 @@ weight = 1
 layout = "tabernacle"
 hotspotKey = "layout-and-zones"
 hide_nav = true
-[_build]
+[build]
 render = "never"
 list = "never"
 publishResources = false
