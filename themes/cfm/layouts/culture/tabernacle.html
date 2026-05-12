@@ -5,6 +5,7 @@
 {{ define "main" }}
   {{ $sectionHome := site.GetPage "/culture/ancient/tabernacle" }}
   {{ $mapPage := site.GetPage "/culture/ancient/tabernacle/explore-the-map" }}
+  {{ $campPage := site.GetPage "/culture/ancient/tabernacle/camp-of-israel" }}
   {{ $priestlyPage := site.GetPage "/culture/ancient/tabernacle/priestly-clothing" }}
   {{ $hotspotData := dict }}
   {{ $hotspotKey := "" }}
@@ -44,6 +45,9 @@
       {{ end }}
       {{ with $mapPage }}
         <a class="field-guide-nav__link{{ if eq $.RelPermalink .RelPermalink }} is-active{{ end }}" href="{{ .RelPermalink }}">Explore the Map</a>
+      {{ end }}
+      {{ with $campPage }}
+        <a class="field-guide-nav__link{{ if eq $.RelPermalink .RelPermalink }} is-active{{ end }}" href="{{ .RelPermalink }}">Camp & Standards</a>
       {{ end }}
       {{ with $priestlyPage }}
         <a class="field-guide-nav__link{{ if eq $.RelPermalink .RelPermalink }} is-active{{ end }}" href="{{ .RelPermalink }}">Priestly Clothing</a>
@@ -156,6 +160,28 @@
         </div>
 
         <aside class="selection-panel selection-panel--{{ $pageMode }}">
+          {{ if eq $hotspotKey "camp-of-israel" }}
+            <div class="ribbon-order-toggle" role="tablist" aria-label="Tribe ordering">
+              <button
+                class="ribbon-order-toggle__button is-active"
+                type="button"
+                role="tab"
+                aria-selected="true"
+                data-ribbon-order="camp"
+              >
+                Camp Position
+              </button>
+              <button
+                class="ribbon-order-toggle__button"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-ribbon-order="birth"
+              >
+                Birth Order
+              </button>
+            </div>
+          {{ end }}
           <div class="selection-ribbon" aria-label="Selected map item">
             {{ if eq $hotspotKey "priestly-clothing" }}
               {{ $state := newScratch }}
@@ -188,6 +214,9 @@
                   data-hotspot-tab="{{ $spot.id }}"
                   aria-controls="card-{{ $spot.id }}"
                   aria-pressed="{{ if eq $index 0 }}true{{ else }}false{{ end }}"
+                  {{ with $spot.birth_order }}data-birth-order="{{ . }}"{{ end }}
+                  {{ with $spot.birth_group }}data-birth-group="{{ . }}"{{ end }}
+                  {{ with $spot.group }}data-camp-group="{{ . }}"{{ end }}
                 >
                   <span class="selection-ribbon__title">{{ $spot.title }}</span>
                 </button>
@@ -357,6 +386,11 @@
                       </button>
                     </div>
                   {{ end }}
+                </div>
+
+                <div class="hotspot-card__section-controls">
+                  <button class="hotspot-card__toggle-btn" onclick="this.closest('.hotspot-card').querySelectorAll('details.tribe-section').forEach(d => d.open = true)" title="Expand all sections">&#x229E; Expand All</button>
+                  <button class="hotspot-card__toggle-btn" onclick="this.closest('.hotspot-card').querySelectorAll('details.tribe-section').forEach(d => d.open = false)" title="Collapse all sections">&#x229F; Collapse All</button>
                 </div>
 
                 <div class="hotspot-card__body">
@@ -1336,6 +1370,51 @@
             if (event.key === 'Escape' && !lightbox.hidden) {
               closeLightbox();
             }
+          });
+        }
+
+        /* ── Ribbon Order Toggle (Camp Position / Birth Order) ── */
+        const ribbonOrderToggles = Array.from(document.querySelectorAll('[data-ribbon-order]'));
+        if (ribbonOrderToggles.length) {
+          const ribbon = root.querySelector('.selection-ribbon');
+          const ribbonTabs = Array.from(ribbon.querySelectorAll('[data-hotspot-tab]'));
+
+          /* Store original camp order */
+          const campOrder = ribbonTabs.map(tab => tab.dataset.hotspotTab);
+
+          const reorderRibbon = (mode) => {
+            /* Remove existing birth-order annotations */
+            ribbon.querySelectorAll('.selection-ribbon__group-divider').forEach(el => el.remove());
+            ribbon.querySelectorAll('.selection-ribbon__birth-num').forEach(el => el.remove());
+
+            if (mode === 'camp') {
+              /* Restore original camp order, remove birth number badges */
+              campOrder.forEach(id => {
+                const tab = ribbonTabs.find(t => t.dataset.hotspotTab === id);
+                if (tab) ribbon.appendChild(tab);
+              });
+            } else {
+              /* Sort by chronological birth order (Genesis 29-30, 35) */
+              const sorted = [...ribbonTabs].sort((a, b) => {
+                return (parseInt(a.dataset.birthOrder) || 99) - (parseInt(b.dataset.birthOrder) || 99);
+              });
+
+              sorted.forEach(tab => {
+                ribbon.appendChild(tab);
+              });
+            }
+          };
+
+          ribbonOrderToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+              const mode = toggle.dataset.ribbonOrder;
+              ribbonOrderToggles.forEach(t => {
+                const active = t.dataset.ribbonOrder === mode;
+                t.classList.toggle('is-active', active);
+                t.setAttribute('aria-selected', active ? 'true' : 'false');
+              });
+              reorderRibbon(mode);
+            });
           });
         }
       })();

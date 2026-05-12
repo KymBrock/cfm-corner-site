@@ -1201,19 +1201,55 @@ h3 {
   grid-template-columns: minmax(0, 1fr) minmax(120px, 190px);
   gap: 14px;
   align-items: start;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--gold-pale, #f0e6d2);
+  margin-bottom: 4px;
 }
 
 .hotspot-card__eyebrow {
-  margin: 0 0 8px;
+  margin: 0 0 6px;
   font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--sage-mid);
+  background: linear-gradient(90deg, var(--gold-pale, #f0e6d2), transparent);
+  display: inline-block;
+  padding: 2px 10px 2px 0;
+  border-radius: 2px;
 }
 
 .hotspot-card__header h3 {
-  margin: 0 0 6px;
+  margin: 0 0 4px;
+  font-size: 1.35rem;
+  color: var(--sage-dark);
+}
+
+/* ── Expand / Collapse Controls ── */
+.hotspot-card__section-controls {
+  display: flex;
+  gap: 8px;
+  padding: 8px 0 4px;
+  justify-content: flex-end;
+}
+
+.hotspot-card__toggle-btn {
+  background: var(--gold-pale, #f0e6d2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius, 6px);
+  padding: 5px 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--sage-dark, #3d5a3e);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+  font-family: inherit;
+}
+
+.hotspot-card__toggle-btn:hover {
+  background: var(--sage-dark, #3d5a3e);
+  color: var(--white, #fff);
+  border-color: var(--sage-dark, #3d5a3e);
 }
 
 .hotspot-card__image {
@@ -1635,6 +1671,58 @@ h3 {
 }
 
 .deep-dive-toggle__content > :last-child {
+  margin-bottom: 0;
+}
+
+/* ── Tribe Section Accordions (inside hotspot cards) ── */
+.tribe-section {
+  margin-top: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+  overflow: hidden;
+}
+.tribe-section + .tribe-section {
+  margin-top: 8px;
+}
+.tribe-section summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 10px 16px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--sage-dark);
+  background: linear-gradient(135deg, var(--gold-pale) 0%, var(--white) 100%);
+  border-bottom: 1px solid transparent;
+  transition: background 0.15s ease;
+}
+.tribe-section summary:hover {
+  background: var(--gold-pale);
+}
+.tribe-section summary::-webkit-details-marker {
+  display: none;
+}
+.tribe-section summary::before {
+  content: "▸ ";
+  font-size: 0.8em;
+  color: var(--sage);
+  transition: transform 0.15s ease;
+  display: inline-block;
+  margin-right: 4px;
+}
+.tribe-section[open] summary::before {
+  content: "▾ ";
+}
+.tribe-section[open] summary {
+  border-bottom-color: var(--border);
+}
+.tribe-section > div {
+  padding: 14px 16px;
+}
+.tribe-section > div > :first-child {
+  margin-top: 0;
+}
+.tribe-section > div > :last-child {
   margin-bottom: 0;
 }
 
@@ -2098,4 +2186,58 @@ li + li {
   .hotspot span {
     display: none;
   }
+}
+
+/* ── Ribbon Order Toggle (Camp Position / Birth Order) ── */
+
+.ribbon-order-toggle {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--shadow-sm);
+}
+
+.ribbon-order-toggle__button {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid rgba(74, 107, 82, 0.16);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--sage-dark);
+  padding: 10px 16px;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 140ms ease, color 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+}
+
+.ribbon-order-toggle__button:hover,
+.ribbon-order-toggle__button:focus-visible {
+  border-color: rgba(213, 169, 60, 0.52);
+  background: rgba(213, 169, 60, 0.12);
+  outline: none;
+}
+
+.ribbon-order-toggle__button.is-active {
+  background: linear-gradient(135deg, var(--sage-dark) 0%, var(--sage-mid) 100%);
+  color: var(--white);
+  border-color: transparent;
+  box-shadow: 0 6px 14px rgba(74, 107, 82, 0.22);
+}
+
+.selection-ribbon__group-divider {
+  width: 100%;
+  margin: 6px 0 2px;
+  padding: 0 4px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--sage-mid);
 }

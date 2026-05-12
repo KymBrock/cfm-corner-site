@@ -4,6 +4,7 @@
 
 {{ define "main" }}
   {{ $mapPage := site.GetPage "/culture/ancient/tabernacle/explore-the-map" }}
+  {{ $campPage := site.GetPage "/culture/ancient/tabernacle/camp-of-israel" }}
   {{ $priestlyPage := site.GetPage "/culture/ancient/tabernacle/priestly-clothing" }}
 
   <div class="tabernacle-home-page" data-pagefind-body>
@@ -16,6 +17,7 @@
     <nav class="field-guide-nav" aria-label="Tabernacle field guide navigation">
       <a class="field-guide-nav__link is-active" href="{{ .RelPermalink }}">Home</a>
       {{ with $mapPage }}<a class="field-guide-nav__link" href="{{ .RelPermalink }}">Explore the Map</a>{{ end }}
+      {{ with $campPage }}<a class="field-guide-nav__link" href="{{ .RelPermalink }}">Camp & Standards</a>{{ end }}
       {{ with $priestlyPage }}<a class="field-guide-nav__link" href="{{ .RelPermalink }}">Priestly Clothing</a>{{ end }}
     </nav>
 
@@ -60,6 +62,19 @@
               <h2>Breastplate Study</h2>
               <p>Jump directly into the breastplate exploration, including the Hebrew names, interpretive reconstruction, research table, and specimen slideshow.</p>
               <span class="tabernacle-home-card__cta">Open Priestly Clothing →</span>
+            </div>
+          </a>
+        {{ end }}
+
+        {{ with $campPage }}
+          <a href="{{ .RelPermalink }}" class="tabernacle-home-card">
+            <div class="tabernacle-home-card__image">
+              <img src="/images/tabernacle/camp-of-israel-encampment.png" alt="Camp of Israel encampment preview">
+            </div>
+            <div class="tabernacle-home-card__body">
+              <p class="tabernacle-home-card__eyebrow">Field Layout</p>
+              <h2>{{ .Title }}</h2>
+              {{ with .Description }}<p>{{ . }}</p>{{ end }}
             </div>
           </a>
         {{ end }}
