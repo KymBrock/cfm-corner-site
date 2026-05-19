@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg version="1.0"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   width="371" height="1112"
+   style="display:inline">
+	<title>Phönizisch - Aphabetvergleich</title>
+	<style type="text/css">
+		marker{ overflow:visible; }
+		marker path{ fill-rule: evenodd; }
+		rect {
+			stroke:#000;
+			display:inline;
+			stroke-miterlimit:4;
+		}
+		path {
+			stroke: #000;
+			display: inline;
+			fill: none;
+			stroke-linecap:butt;
+			stroke-linejoin:miter;
+		}
+		.A2Mend {
+			stroke-width:1px;
+			marker-end:url(#Arrow2Mend)
+		}
+		.phoen {
+			stroke-width:3;
+			stroke-miterlimit:4;
+		}
+		text {
+			font-family:'Times New Roman';
+			font-size: 32px;
+			text-anchor:middle;
+			stroke:none;
+			fill: #000;
+			display: inline;
+		}
+		.greek {
+			font-family: Tahoma;
+		}
+		.arab {
+			font-family: Tahoma;
+			font-size: 22px;
+		}
+	</style>
+	<defs>
+		<linearGradient id="linearGradient4707">
+			<stop offset="0" style="stop-color:#00ffff;stop-opacity:1" />
+			<stop offset="1" style="stop-color:#8080ff;stop-opacity:1" />
+		</linearGradient>
+		<marker orient="auto" refY="0" refX="0" id="Arrow2Mend">
+			<path style="stroke-width:0.6;stroke-linejoin:round;fill: #000;"
+				d="M 8.7,4.0 L -2.2,0.0 L 8.7,-4.0 C 7,-1.6 7,1.6 8.7,4.0 z"
+				transform="scale(-0.6,-0.6)" />
+		</marker>
+		<marker orient="auto" refY="0" refX="0" id="Arrow1Send">
+			<path style="stroke-width:1pt;marker-start:none;fill: #000;"
+				d="M 0,0 L 5,-5 L -12.5,0 L 5,5 L 0,0 z"
+				transform="matrix(-0.2,0,0,-0.2,-1.2,0)" />
+		</marker>
+		<linearGradient id="linearGradient5950">
+			<stop style="stop-color:#ffffff;stop-opacity:1" offset="0" />
+			<stop style="stop-color:#85ff00;stop-opacity:1" offset="1" />
+		</linearGradient>
+		<linearGradient id="linearGradient5942">
+			<stop style="stop-color:#ffffff;stop-opacity:1" offset="0" />
+			<stop style="stop-color:#ff8500;stop-opacity:1" offset="1" />
+		</linearGradient>
+		<linearGradient id="linearGradient5934">
+			<stop style="stop-color:#ffffff;stop-opacity:1" offset="0" />
+			<stop style="stop-color:#21c0ff;stop-opacity:1" offset="1" />
+		</linearGradient>
+		<linearGradient id="linearGradient5926">
+			<stop style="stop-color:#ffffff;stop-opacity:1" offset="0" />
+			<stop style="stop-color:#4fff00;stop-opacity:1" offset="1" />
+		</linearGradient>
+		<linearGradient id="linearGradient5918">
+			<stop style="stop-color:#ffffff;stop-opacity:1" offset="0" />
+			<stop style="stop-color:#00ffff;stop-opacity:1" offset="1" />
+		</linearGradient>
+		<linearGradient id="linearGradient5910">
+			<stop style="stop-color:#ffffff;stop-opacity:1" offset="0" />
+			<stop style="stop-color:#ff00c0;stop-opacity:1" offset="1" />
+		</linearGradient>
+		<linearGradient id="linearGradient5115">
+			<stop style="stop-color:#8080ff;stop-opacity:1" offset="0" />
+			<stop style="stop-color:#00ffff;stop-opacity:1" offset="1" />
+		</linearGradient>
+		<linearGradient id="linearGradient5107">
+			<stop style="stop-color:#8080ff;stop-opacity:1" offset="0" />
+			<stop style="stop-color:#00ffff;stop-opacity:1" offset="1" />
+		</linearGradient>
+		<linearGradient id="linearGradient5099">
+			<stop style="stop-color:#8080ff;stop-opacity:1" offset="0" />
+			<stop style="stop-color:#00ffff;stop-opacity:1" offset="1" />
+		</linearGradient>
+		<linearGradient id="linearGradient4909">
+			<stop offset="0" style="stop-color:#ffffff;stop-opacity:1" />
+			<stop offset="1" style="stop-color:#ffff00;stop-opacity:1" />
+		</linearGradient>
+		<linearGradient id="linearGradient4833">
+			<stop style="stop-color:#ffffff;stop-opacity:1" offset="0" />
+			<stop style="stop-color:#21ff00;stop-opacity:1" offset="1" />
+		</linearGradient>
+		<linearGradient id="linearGradient4809">
+			<stop style="stop-color:#ffffff;stop-opacity:1" offset="0" />
+			<stop style="stop-color:#ff4f00;stop-opacity:1" offset="1" />
+		</linearGradient>
+	</defs>
+	<rect style="fill:#ff0000" width="28"  height="29" x="38.5" y="11.5" />
+	<rect style="fill:#ff2100" x="38.5" y="49" width="28"  height="29" />
+	<rect style="fill:#ff4f00" width="28"  height="29" x="38.5" y="87" />
+	<rect style="fill:#ff8500" x="38.5" y="125" width="28"  height="29" />
+	<rect style="fill:#ffc000" width="28"  height="29" x="38.5" y="162.5" />
+	<rect style="fill:#ffff00" x="38.5" y="200.5" width="28"  height="29" />
+	<rect style="fill:url(#linearGradient4809)" width="28"  height="29" x="38.5" y="238" />
+	<rect style="fill:#85ff00" x="38.5" y="276" width="28"  height="29" />
+	<rect style="fill:#21ff00" width="28"  height="29" x="38.5" y="351.5" />
+	<rect style="fill:url(#linearGradient4833)" x="38.5" y="389.5" width="28"  height="29" />
+	<rect style="fill:#00ff00" x="38.5" y="427" width="28"  height="29" />
+	<rect style="fill:#00ff21" width="28"  height="29" x="38.5" y="465" />
+	<rect style="fill:#00ff4f" x="38.5" y="503" width="28"  height="29" />
+	<rect style="fill:#00ff85" width="28"  height="29" x="38.5" y="540.5" />
+	<rect style="fill:#00ffff" x="38.5" y="616" width="28"  height="29" />
+	<rect style="fill:#21c0ff" width="28"  height="29" x="38.5" y="654" />
+	<rect style="fill:#854fff" x="38.5" y="729.5" width="28"  height="29" />
+	<rect style="fill:#c021ff" width="28"  height="29" x="38.5" y="767.5" />
+	<rect style="fill:#ff00ff" x="38.5" y="805" width="28"  height="29" />
+	<rect style="fill:#ff00c0" width="28"  height="29" x="38.5" y="843" />
+	<rect style="fill:url(#linearGradient4909)" width="28"  height="29" x="38.5" y="881" />
+	<rect style="fill:#ffff00" x="38.5" y="918.5" width="28"  height="29" />
+	<rect style="fill:url(#linearGradient4909)" x="38.5" y="956" width="28"  height="29" />
+	<rect style="fill:url(#linearGradient4707)" width="28"  height="29" x="38.5" y="994" />
+	<rect style="fill:#ffff00" width="28"  height="29" x="38.5" y="1032" />
+	<rect style="fill:#c0ff00" x="38.5" y="1070" width="28"  height="29" />
+	<rect style="fill:#ff0000" x="104.5" y="11.5" width="28"  height="29" />
+	<rect style="fill:#ff2100" width="28"  height="29" x="104.5" y="49" />
+	<rect style="fill:#ff4f00" x="104.5" y="87" width="28"  height="29" />
+	<rect style="fill:#ff8500" width="28"  height="29" x="104.5" y="125" />
+	<rect style="fill:#ffc000" x="104.5" y="162.5" width="28"  height="29" />
+	<rect style="fill:#ffff00" width="28"  height="29" x="104.5" y="200.5" />
+	<rect style="fill:#c0ff00" x="104.5" y="238" width="28"  height="29" />
+	<rect style="fill:#85ff00" width="28"  height="29" x="104.5" y="276" />
+	<rect style="fill:#4fff00" x="104.5" y="314" width="28"  height="29" />
+	<rect style="fill:#21ff00" x="104.5" y="351.5" width="28"  height="29" />
+	<rect style="fill:#00ff00" width="28"  height="29" x="104.5" y="427" />
+	<rect style="fill:#00ff21" x="104.5" y="465" width="28"  height="29" />
+	<rect style="fill:#00ff4f" width="28"  height="29" x="104.5" y="503" />
+	<rect style="fill:#00ff85" x="104.5" y="540.5" width="28"  height="29" />
+	<rect style="fill:#00ff85" width="28"  height="29" x="104.5" y="578.5" />
+	<rect style="fill:#00ffff" width="28"  height="29" x="104.5" y="616" />
+	<rect style="fill:#21c0ff" x="104.5" y="654" width="28"  height="29" />
+	<rect style="fill:#21c0ff" width="28"  height="29" x="104.5" y="691.5" />
+	<rect style="fill:#854fff" width="28"  height="29" x="104.5" y="729.5" />
+	<rect style="fill:#c021ff" x="104.5" y="767.5" width="28"  height="29" />
+	<rect style="fill:#ff00ff" width="28"  height="29" x="104.5" y="805" />
+	<rect style="fill:#ff00c0" x="104.5" y="843" width="28"  height="29" />
+	<rect style="fill:#ffff00" width="28"  height="29" x="104.5" y="918.5" />
+	<rect style="fill:url(#linearGradient4707)" width="28"  height="29" x="104.5" y="956" />
+	<rect style="fill:url(#linearGradient4707)" x="104.5" y="994" width="28"  height="29" />
+	<rect style="fill:url(#linearGradient4707)" x="104.5" y="1032" width="28" height="29" />
+	<rect style="fill:url(#linearGradient4707)" width="28"  height="29" x="104.5" y="1070" />
+	<rect style="fill:#ff0000" width="28"  height="29" x="170.5" y="11.5" />
+	<rect style="fill:#ff2100" x="170.5" y="49" width="28"  height="29" />
+	<rect style="fill:#ff4f00" width="28"  height="29" x="170.5" y="87" />
+	<rect style="fill:#ff8500" x="170.5" y="125" width="28"  height="29" />
+	<rect style="fill:#ffc000" width="28"  height="29" x="170.5" y="162.5" />
+	<rect style="fill:#ffff00" x="170.5" y="200.5" width="28"  height="29" />
+	<rect style="fill:#c0ff00" width="28"  height="29" x="170.5" y="238" />
+	<rect style="fill:#85ff00" x="170.5" y="276" width="28"  height="29" />
+	<rect style="fill:#4fff00" width="28"  height="29" x="170.5" y="314" />
+	<rect style="fill:#21ff00" width="28"  height="29" x="170.5" y="351.5" />
+	<rect style="fill:#00ff00" x="170.5" y="427" width="28"  height="29" />
+	<rect style="fill:#00ff21" width="28"  height="29" x="170.5" y="465" />
+	<rect style="fill:#00ff4f" x="170.5" y="503" width="28"  height="29" />
+	<rect style="fill:#00ff85" width="28"  height="29" x="170.5" y="540.5" />
+	<rect style="fill:#00ff85" x="170.5" y="578.5" width="28"  height="29" />
+	<rect style="fill:#00ffff" x="170.5" y="616" width="28"  height="29" />
+	<rect style="fill:#21c0ff" width="28"  height="29" x="170.5" y="654" />
+	<rect style="fill:#21c0ff" x="170.5" y="691.5" width="28"  height="29" />
+	<rect style="fill:#854fff" x="170.5" y="729.5" width="28"  height="29" />
+	<rect style="fill:#c021ff" width="28"  height="29" x="170.5" y="767.5" />
+	<rect style="fill:#ff00ff" x="170.5" y="805" width="28"  height="29" />
+	<rect style="fill:#ff00c0" width="28"  height="29" x="170.5" y="843" />
+	<rect style="fill:#ff0000" x="237" y="11.5" width="28"  height="29" />
+	<rect style="fill:#ff2100" width="28"  height="29" x="237" y="49" />
+	<rect style="fill:#ff4f00" x="237" y="87" width="28"  height="29" />
+	<rect style="fill:#ff8500" width="28"  height="29" x="237" y="125" />
+	<rect style="fill:#ffc000" x="237" y="162.5" width="28"  height="29" />
+	<rect style="fill:#ffff00" width="28"  height="29" x="237" y="200.5" />
+	<rect style="fill:#c0ff00" x="237" y="238" width="28"  height="29" />
+	<rect style="fill:#85ff00" width="28"  height="29" x="237" y="276" />
+	<rect style="fill:#4fff00" x="237" y="314" width="28"  height="29" />
+	<rect style="fill:#21ff00" x="237" y="351.5" width="28"  height="29" />
+	<rect style="fill:#00ff00" width="28"  height="29" x="237" y="427" />
+	<rect style="fill:#00ff21" x="237" y="465" width="28"  height="29" />
+	<rect style="fill:#00ff4f" width="28"  height="29" x="237" y="503" />
+	<rect style="fill:#00ff85" x="237" y="540.5" width="28"  height="29" />
+	<rect style="fill:#00ff85" width="28"  height="29" x="237" y="578.5" />
+	<rect style="fill:#00ffff" width="28"  height="29" x="237" y="616" />
+	<rect style="fill:#21c0ff" x="237" y="654" width="28"  height="29" />
+	<rect style="fill:#21c0ff" width="28"  height="29" x="237" y="691.5" />
+	<rect style="fill:#854fff" width="28"  height="29" x="237" y="729.5" />
+	<rect style="fill:#c021ff" x="237" y="767.5" width="28"  height="29" />
+	<rect style="fill:#ff00ff" width="28"  height="29" x="237" y="805" />
+	<rect style="fill:#ff00c0" x="237" y="843" width="28"  height="29" />
+	<rect style="fill:#ff0000" width="28"  height="29" x="303" y="11.5" />
+	<rect style="fill:#ff2100" x="303" y="49" width="28"  height="29" />
+	<rect style="fill:#ff4f00" width="28"  height="29" x="303" y="87" />
+	<rect style="fill:#ff8500" x="303" y="125" width="28"  height="29" />
+	<rect style="fill:#ffc000" width="28"  height="29" x="303" y="162.5" />
+	<rect style="fill:#ffff00" x="303" y="200.5" width="28"  height="29" />
+	<rect style="fill:#c0ff00" width="28"  height="29" x="303" y="238" />
+	<rect style="fill:#85ff00" x="303" y="276" width="28"  height="29" />
+	<rect style="fill:#4fff00" width="28"  height="29" x="303" y="314" />
+	<rect style="fill:#21ff00" width="28"  height="29" x="303" y="351.5" />
+	<rect style="fill:#00ff00" x="303" y="427" width="28"  height="29" />
+	<rect style="fill:#00ff21" width="28"  height="29" x="303" y="465" />
+	<rect style="fill:#00ff4f" x="303" y="503" width="28"  height="29" />
+	<rect style="fill:#00ff85" width="28"  height="29" x="303" y="540.5" />
+	<rect style="fill:#ff00ff" x="303" y="578.5" width="28"  height="29" />
+	<rect style="fill:#00ffff" x="303" y="616" width="28"  height="29" />
+	<rect style="fill:#21c0ff" width="28"  height="29" x="303" y="654" />
+	<rect style="fill:#21c0ff" x="303" y="691.5" width="28"  height="29" />
+	<rect style="fill:#854fff" x="303" y="729.5" width="28"  height="29" />
+	<rect style="fill:#c021ff" width="28"  height="29" x="303" y="767.5" />
+	<rect style="fill:#ff00ff" x="303" y="805" width="28"  height="29" />
+	<rect style="fill:#ff00c0" width="28"  height="29" x="303" y="843" />
+	<rect style="fill:url(#linearGradient5910)" x="303" y="881" width="28"  height="29" />
+	<rect style="fill:url(#linearGradient5950)" width="28"  height="29" x="303" y="918.5" />
+	<rect style="fill:url(#linearGradient5942)" width="28"  height="29" x="303" y="956" />
+	<rect style="fill:url(#linearGradient5934)" width="28"  height="29" x="303" y="994" />
+	<rect style="fill:url(#linearGradient5926)" x="303" y="1032" width="28"  height="29" />
+	<rect style="fill:url(#linearGradient5918)" width="28"  height="29" x="303" y="1070" />
+	<path class="A2Mend" d="m 38.4,101.5 -9.9,0.1 v 155.9 h 7.8" />
+	<path class="A2Mend" d="m 38.1,366.5 h -9.6 v 37 h 8.2" />
+	<path class="A2Mend" d="m 38.1,937.6 -9.6,-0.1 v 38 h 8.2" />
+	<path class="A2Mend" d="m 38,928.6 h -9.5 v -38.1 h 7.8" />
+	<path class="A2Mend" d="m 104.3,252.6 -18.8,-0.1 v 676 c 5.5,-0.3 5.2,9.3 0,9 v 65.9 c 5.5,-0.2 5.6,9.7 0.1,9.1 l -0.2,29 c 4.1,0 6.9,9.1 0,9.1 l 0.1,34 -16.7,-0.1" />
+	<path class="A2Mend" d="m 104,933.5 h -35.1" />
+	<path class="A2Mend" d="m 104.1,1008.5 h -35.2" />
+	<path class="A2Mend" d="m 104.4,933.5 h -9.9 v 70 c 7.1,0.2 6.2,9.5 0,9 v 34 l -25.8,0.1" />
+	<path class="A2Mend" d="m 170,214.5 h -18.5 v 719 l -16.6,-0.1" />
+	<path class="A2Mend" d="m 170.1,214.4 -35.3,0.1" />
+	<path class="A2Mend" d="m 331.9,139.5 13.7,-0.1 -0.1,831.1 -11.6,-0.1" />
+	<path class="A2Mend" d="m 331.8,290.5 h 8.7 l -0.1,643 -6.5,0.1" />
+	<path class="A2Mend" d="m 331.8,328.5 h 22.7 v 718 h -21.6" />
+	<path class="A2Mend" d="m 331.5,630.5 h 28 v 454 h -25.6" />
+	<path class="A2Mend" d="m 331.9,706.5 h 18.6 v 302 h -16.6" />
+	<path style="stroke-width:1px;marker-end:url(#Arrow1Send)"
+		d="m 332,857.5 h 3.5 v 38.2 l -2.1,-0.2" />
+	<text x="52.59" y="36.8">A</text>
+	<text x="53.09" y="74.1">B</text>
+	<text x="52.49" y="112.09">C</text>
+	<text x="52.79" y="150.09">D</text>
+	<text x="52.49" y="187.59">E</text>
+	<text x="52.89" y="225.59">F</text>
+	<text x="52.19" y="263.09">G</text>
+	<text x="52.59" y="301.09">H</text>
+	<text x="52.49" y="376.59">I</text>
+	<text x="52.29" y="414.59">J</text>
+	<text x="52.09" y="452.09">K</text>
+	<text x="52.49" y="490.09">L</text>
+	<text x="52.59" y="528.09">M</text>
+	<text x="52.89" y="565.42">N</text>
+	<text x="52.59" y="641.09">O</text>
+	<text x="52.79" y="679.09">P</text>
+	<text x="52.59" y="754.59">Q</text>
+	<text x="52.09" y="792.59">R</text>
+	<text x="52.39" y="830.09">S</text>
+	<text x="52.39" y="868.09">T</text>
+	<text x="52.59" y="905.84">U</text>
+	<text x="52.59" y="943.35">V</text>
+	<text x="52.39" y="980.85">W</text>
+	<text x="52.59" y="1019.1">X</text>
+	<text x="52.59" y="1057.1">Y</text>
+	<text x="52.74" y="1095.1">Z</text>
+	<text class="greek" x="118.49" y="37.6">Α</text>
+	<text class="greek" x="117.68" y="75.1">Β</text>
+	<text class="greek" x="117.36" y="113.13">Γ</text>
+	<text class="greek" x="118.49" y="151.13">Δ</text>
+	<text class="greek" x="117.83" y="188.63">Ε</text>
+	<text class="greek" style="fill:#ff0000;" x="117.51" y="226.63">Ϝ</text>
+	<text class="greek" x="118.37" y="264.13">Ζ</text>
+	<text class="greek" x="118.5" y="302.13">Η</text>
+	<text class="greek" x="118.48" y="340.13">Θ</text>
+	<text class="greek" x="118.49" y="377.63">Ι</text>
+	<text class="greek" x="117.06" y="453.13">Κ</text>
+	<text class="greek" x="118.51" y="491.13">Λ</text>
+	<text class="greek" x="118.51" y="529.13">Μ</text>
+	<text class="greek" x="118.5" y="566.63">Ν</text>
+	<text class="greek" x="118.49" y="604.63">Ξ</text>
+	<text class="greek" x="118.48" y="642.13">Ο</text>
+	<text class="greek" x="118.5" y="680.13">Π</text>
+	<text class="greek" style="fill:#ff0000;" x="118.51" y="717.63">Ϻ</text>
+	<text class="greek" style="fill:#ff0000;" x="118.44" y="755.63">Ϙ</text>
+	<text class="greek" x="117.6" y="793.63">Ρ</text>
+	<text class="greek" x="118.16" y="831.13">Σ</text>
+	<text class="greek" x="118.49" y="869.13">Τ</text>
+	<text class="greek" x="118.47" y="944.63">Υ</text>
+	<text class="greek" x="118.48" y="982.13">Φ</text>
+	<text class="greek" x="118.48" y="1020.1">Χ</text>
+	<text class="greek" x="118.48" y="1058.1">Ψ</text>
+	<text class="greek" x="118.44" y="1096.4">Ω</text>
+	<path class="phoen" d="m 183.75,14.3 0.35,22" />
+	<path class="phoen" d="m 193.2,16.8 -17.5,9.5 17.5,8.9" />
+	<path class="phoen" d="m 190.9,68.8 -13,-4.8 11.4,-11.6 2.1,14.2 c -0.5,8.1 -7.7,8.1 -13.9,7.7" />
+	<path class="phoen" d="m 176.4,94.1 14,-4.6 -3.6,23" />
+	<path class="phoen" d="m 178.4,138.25 12.5,-9.85 v 20.4 z" />
+	<path class="phoen" d="m 177.9,172 9.6,-6.4 4.6,21.9" />
+	<path class="phoen" d="m 179.5,178.1 9.25,-5.7" />
+	<path class="phoen" d="m 181.1,184.1 8.5,-6.9" />
+	<path class="phoen" d="m 177.3,203.4 c 0,0 -0.4,11.2 7,11.3 7.6,0 7.3,-11.45 7.3,-11.45" />
+	<path class="phoen" d="m 184.1,214.7 v 11.05" />
+	<path class="phoen" d="m 177.9,243.6 13,-2.85" />
+	<path class="phoen" d="m 183.9,242.2 0.2,21.2" />
+	<path class="phoen" d="m 177.9,264.5 c 0,-0.2 0,-0.2 0,0 z" />
+	<path class="phoen" d="m 191.4,262.7 -13.5,1.6" />
+	<path class="phoen" d="m 177,278.25 v 23.05" />
+	<path class="phoen" d="m 191.25,278.1 v 23.4" />
+	<path class="phoen" d="m 176.6,288.1 14.5,-4.85" />
+	<path class="phoen" d="m 177.1,292.5 14,-4.25" />
+	<path class="phoen" d="m 184.3,318.6 c 4.8,0 9.4,4.5 9.8,9.5 0.4,5 -4,9.3 -9.5,9.3 -5.2,-0.1 -9.1,-3.9 -9.1,-8.6 0,-4.8 3.8,-10.2 8.8,-10.2 z" />
+	<path class="phoen" d="m 176.6,356.3 10.9,-1.6 -2.1,20.3 8.7,-1.2" />
+	<path class="phoen" d="m 178.75,363.1 8.05,-1.3" />
+	<path class="phoen" d="m 191.4,430.2 -8.5,22.2" />
+	<path class="phoen" d="m 179.5,432.5 8.2,7.5 -11.6,6.5" />
+	<path class="phoen" d="m 184.6,468.4 c 0,0 -0.1,0 0,0 z" />
+	<path class="phoen" d="m 183.75,469.3 c 0,0 0,-0.1 0,0 z" />
+	<path class="phoen" d="m 184.6,468.6 -6.4,22.3 12,-2.8" />
+	<path class="phoen" d="m 173.4,508.8 4.3,6.2 4.4,-5.1 4.9,5 6.6,-6.8 c 1.3,6.8 3.1,10.6 -0.7,20" />
+	<path class="phoen" d="m 179.1,545.75 3.2,7.5 7.9,-6.95 -0.9,19.8" />
+	<path class="phoen" d="m 178.6,581.5 h 12.3" />
+	<path class="phoen" d="m 177.1,587.7 h 15.3" />
+	<path class="phoen" d="m 174.7,595.4 h 20" />
+	<path class="phoen" d="m 184.7,581.5 v 22.6" />
+	<path class="phoen" d="m 178.4,321.5 12.3,13.7" />
+	<path class="phoen" d="m 190.7,321.3 -12.3,13.9" />
+	<path class="phoen" d="m 184.1,620.9 c 4.2,-0.1 10.3,5.3 10.4,10 0,4.7 -6.4,9.3 -10.2,9.3 -3.8,0 -9.32,-4.6 -9.5,-8.7 -0.1,-4.4 5.1,-10.4 9.3,-10.6 z" />
+	<path class="phoen" d="m 179.6,664.1 c -0.8,-3.3 4.4,-7.1 8.4,-4.6 3.9,2.5 0.9,16.1 -3.7,20.4" />
+	<path class="phoen" d="m 177,694.7 -0.2,22.8" />
+	<path class="phoen" d="m 177,704 7.3,-4.9 v 6.5 l 8.9,-5.9" />
+	<path class="phoen" d="m 184.1,731.1 c 6.3,-0.3 10.6,5.9 10.5,10.9 0,5.2 -5.7,9.7 -10.3,9.8 -4.5,0.1 -8.7,-5.5 -8.9,-9.3 -0.2,-3.7 2.2,-11.1 8.7,-11.4 z" />
+	<path class="phoen" d="m 184.8,751.5 v 5.3" />
+	<path class="phoen" d="m 188.75,781.1 h -11.25 l 11.4,-10.7 v 22" />
+	<path class="phoen" d="m 172.5,810.2 4.6,16.4 5.6,-15.85 6.4,15.55 7.3,-15.4" />
+	<path class="phoen" d="m 183.75,845.75 0.15,22.85" />
+	<path class="phoen" d="m 172.5,856.6 22,-0.1" />
+	<text x="250.97" y="35.9">א</text>
+	<text x="250.94" y="72.3">ב</text>
+	<text x="251.05" y="110.27">ג</text>
+	<text x="251.01" y="148.1">ד</text>
+	<text x="251.06" y="185.59">ה</text>
+	<text x="251.39" y="223.72">ו</text>
+	<text x="250.92" y="261.17">ז</text>
+	<text x="250.99" y="299.1">ח</text>
+	<text x="251.26" y="337.37">ט</text>
+	<text x="251.18" y="374.87">י</text>
+	<text x="251.34" y="450.3">כ</text>
+	<text x="251.56" y="488.3">ל</text>
+	<text x="251.14" y="526.37">מ</text>
+	<text x="251.42" y="563.87">נ</text>
+	<text x="250.97" y="601.62">ס</text>
+	<text x="251.01" y="639.14">ע</text>
+	<text x="251.05" y="677.3">פ</text>
+	<text x="251.14" y="714.87">צ</text>
+	<text x="250.93" y="752.87">ק</text>
+	<text x="251.34" y="790.65">ר</text>
+	<text x="251.01" y="828.37">ש</text>
+	<text x="251.6" y="866.16">ת</text>
+	<text class="arab" x="316.51" y="35.9">ﺍ</text>
+	<text class="arab" x="316.53" y="72.3">ﺏ</text>
+	<text class="arab" x="317.32" y="110.27">ﺝ</text>
+	<text class="arab" x="316.26" y="148.1">د</text>
+	<text class="arab" x="316.91" y="185.59">ه</text>
+	<text class="arab" x="316.59" y="223.72">ﻭ</text>
+	<text class="arab" x="316.4" y="261.17">ﺯ</text>
+	<text class="arab" x="317.32" y="299.1">ح</text>
+	<text class="arab" x="317.54" y="337.37">ط</text>
+	<text class="arab" x="317.12" y="374.87">ي</text>
+	<text class="arab" x="316.65" y="450.3">ﻙ</text>
+	<text class="arab" x="316.43" y="488.3">ﻝ</text>
+	<text class="arab" x="316.72" y="526.37">ﻡ</text>
+	<text class="arab" x="316.44" y="563.87">ﻥ</text>
+	<text class="arab" x="316.52" y="601.62">س</text>
+	<text class="arab" x="317.13" y="639.14">ع</text>
+	<text class="arab" x="316.69" y="677.3">ﻑ</text>
+	<text class="arab" x="316.5" y="714.87">ص</text>
+	<text class="arab" x="316.45" y="752.87">ﻕ</text>
+	<text class="arab" x="316.4" y="790.65">ﺭ</text>
+	<text class="arab" x="316.52" y="828.37">ش</text>
+	<text class="arab" x="316.53" y="866.16">ت</text>
+	<text class="arab" x="316.53" y="904.16">ث</text>
+	<text class="arab" x="317.32" y="941.66">خ</text>
+	<text class="arab" x="316.26" y="979.16">ذ</text>
+	<text class="arab" x="316.5" y="1017.2">ض</text>
+	<text class="arab" x="317.54" y="1055.2">ظ</text>
+	<text class="arab" x="317.13" y="1093.2">غ</text>
+</svg>

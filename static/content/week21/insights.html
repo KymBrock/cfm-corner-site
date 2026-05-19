@@ -1,0 +1,422 @@
+<div class="cfm-insights" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+
+    <!-- Expand/Collapse Controls -->
+    <div style="text-align: center; margin: 20px 0 30px 0;">
+        <button onclick="expandAllInsights()" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 0 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">&#x229E; Expand All</button>
+        <button onclick="collapseAllInsights()" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 0 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">&#x229F; Collapse All</button>
+    </div>
+
+    <!-- Content Sections -->
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Moses Told You This Would Happen</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">Before Israel ever crossed the Jordan, Moses told them exactly what would follow. Not as speculation — as prophecy. In his final addresses recorded in Deuteronomy, Moses laid out the covenant in terms so stark that no one who heard them could claim surprise when the consequences arrived.</p>
+<p style="margin-bottom: 15px;">In <a href="https://www.blueletterbible.org/kjv/deu/28/1/s_181001" target="_blank" data-ref="Deuteronomy 28">Deuteronomy 28</a>, he described the blessings of obedience in vivid, specific detail: "Blessed shalt thou be in the city, and blessed shalt thou be in the field. Blessed shall be the fruit of thy body, and the fruit of thy ground" (<a href="https://www.blueletterbible.org/kjv/deu/28/3-4/s_181003" target="_blank" data-ref="Deuteronomy 28:3-4">Deuteronomy 28:3–4</a>). Then he described the curses of disobedience in equally specific — and far longer — detail: siege, famine, plague, exile, and a scattering "among all people, from the one end of the earth even unto the other" (<a href="https://www.blueletterbible.org/kjv/deu/28/64/s_181064" target="_blank" data-ref="Deuteronomy 28:64">Deuteronomy 28:64</a>).</p>
+<p style="margin-bottom: 15px;">In <a href="https://www.blueletterbible.org/kjv/deu/30/1/s_183001" target="_blank" data-ref="Deuteronomy 30">Deuteronomy 30</a>, he compressed the entire covenant into the language of Eden: "I have set before thee this day life and good, and death and evil … therefore choose life, that both thou and thy seed may live" (<a href="https://www.blueletterbible.org/kjv/deu/30/15/s_183015" target="_blank" data-ref="Deuteronomy 30:15">Deuteronomy 30:15, 19</a>). The vocabulary is identical to <a href="https://www.blueletterbible.org/kjv/gen/2/1/s_2001" target="_blank" data-ref="Genesis 2">Genesis 2–3</a> — <em>good and evil</em> (<a href="https://www.blueletterbible.org/lexicon/h2900/kjv/wlc/0-1/" target="_blank" data-lexicon="Tobiah = &quot;Jehovah is good&quot; head of a family who returned from exile with Zerubbabel but who were unable to prove thei..." data-strongs="H2900" data-translit="ṭôḇîyâ" data-original="טוֹב" data-lang="hebrew" data-verse="">טוֹב</a> וָרָע), <em>life and death</em>. Moses was telling Israel: you are standing where Adam and Eve stood. The tree is before you. Choose.</p>
+<p style="margin-bottom: 15px;">And then, in <a href="https://www.blueletterbible.org/kjv/deu/31/1/s_184001" target="_blank" data-ref="Deuteronomy 31">Deuteronomy 31</a>, Moses dropped any pretense of optimism: "I know that after my death ye will utterly corrupt yourselves, and turn aside from the way which I have commanded you; and evil will befall you in the latter days; because ye will do evil in the sight of the LORD, to provoke him to anger through the work of your hands" (<a href="https://www.blueletterbible.org/kjv/deu/31/29/s_184029" target="_blank" data-ref="Deuteronomy 31:29">Deuteronomy 31:29</a>).</p>
+<p style="margin-bottom: 15px;">Moses knew. He told them. And it happened exactly as he said.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Joshua's Last Stand</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;"><a href="https://www.blueletterbible.org/kjv/jos/24/1/s_211001" target="_blank" data-ref="Joshua 24">Joshua 24</a> is Moses' prophecy becoming personal. At Shechem — where Abraham first received the promise (<a href="https://www.blueletterbible.org/kjv/gen/12/6-7/s_12006" target="_blank" data-ref="Genesis 12:6-7">Genesis 12:6–7</a>), where Jacob buried foreign gods (<a href="https://www.blueletterbible.org/kjv/gen/35/4/s_35004" target="_blank" data-ref="Genesis 35:4">Genesis 35:4</a>) — Joshua gathered all the tribes and forced the question into the open: "Choose you this day whom ye will serve … but as for me and my house, we will serve the LORD" (<a href="https://www.blueletterbible.org/kjv/jos/24/15/s_211015" target="_blank" data-ref="Joshua 24:15">Joshua 24:15</a>).</p>
+<p style="margin-bottom: 15px;">Joshua was not introducing a new idea. He was pulling directly from Moses' instruction — the blessings and cursings, the life-and-death choice, the covenant pattern that stretches all the way back to Eden. And Joshua knew what was coming. His most striking statement was not the famous declaration of loyalty. It was the warning: "Ye cannot serve the LORD: for he is an holy God; he is a jealous God; he will not forgive your transgressions nor your sins" (<a href="https://www.blueletterbible.org/kjv/jos/24/19/s_211019" target="_blank" data-ref="Joshua 24:19">Joshua 24:19</a>).</p>
+<p style="margin-bottom: 15px;">This was not pessimism. It was realism. Joshua had watched Israel for decades. He knew the human heart. He knew that the generation standing before him would keep the covenant — and that their children, who had not crossed the Jordan or seen Jericho fall, might not.</p>
+<p style="margin-bottom: 15px;">He was right.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>The Doctrinal Key: Agency Is Always Active</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">The Agency Continuum — the master diagram at the top of the visual below — teaches a principle that governs everything that follows in the biblical narrative: agency is never dormant. There is no neutral ground. Every choice, however small, however private, moves a person or a people along one of two trajectories.</p>
+<p style="margin-bottom: 15px;">On one side: faith opens into knowledge, knowledge into good works, good works into testimony, testimony into humility, humility into divine nature, divine nature into charity and love. Each stage strengthens the next. The person or society exercising agency in this direction does not simply feel better — they <em>become</em> more. Capacity increases. Light accumulates. The consequences are not arbitrary rewards but the natural fruit of alignment with divine law: freedom, joy, progress, and ultimately eternal life.</p>
+<p style="margin-bottom: 15px;">On the other side: pride hardens into selfishness, selfishness into deceit, deceit into anger, anger into rebellion, rebellion into bondage. Each stage weakens the capacity to choose differently. The person or society moving in this direction does not simply make bad decisions — they lose the clarity to recognize what a good decision would look like. Darkness, captivity, suffering, and destruction are not punishments imposed from outside but the organic consequences of sustained moral contraction.</p>
+<p style="margin-bottom: 15px;">The critical insight is at the center of the diagram: the power to choose remains. Even at the furthest point of descent, the opportunity to turn — to repent, to choose differently — is still present. Agency is God's gift, and He does not revoke it. The question is always the same one Moses asked: will it be exercised toward life, or toward death?</p>
+<p style="margin-bottom: 15px;">!<a href="07-patterns-agency-pride-collapse-poster.png" target="_blank">Patterns of Agency, Pride, and Collapse — A Visual Theology of Covenant Choice</a></p>
+<p style="margin-bottom: 15px;"><em>Patterns of Agency, Pride, and Collapse — A Visual Theology of Covenant Choice. Click to enlarge.</em></p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>The Repeating Covenant Pattern</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">The two pride cycle diagrams — one drawn from the Book of Mormon, the other from Joshua and Judges — demonstrate that the Agency Continuum is not abstract theology. It is observable history, documented independently on two continents.</p>
+<p style="margin-bottom: 15px;">In the Book of Mormon, the pattern is explicit and named. Prosperity leads to abundance, abundance to comfort, comfort to pride, pride to wickedness. Prophets warn. The people ignore or persecute them. Destruction follows — war, famine, captivity. In the wreckage, humility returns. The people cry unto God. Repentance opens the door to renewal, and the blessings resume. Mormon, who compiled the record, saw this cycle repeat so consistently that he made it a structural principle of his entire editorial project. He wanted his readers — especially latter-day readers — to recognize the pattern before it consumed them.</p>
+<p style="margin-bottom: 15px;">In Joshua and Judges, an identical rhythm plays out as a pre-cursor to the Nephite story. God grants rest and prosperity. The generation that knew Joshua serves the Lord faithfully. Then a new generation arises "which knew not the LORD, nor yet the works which he had done for Israel" (<a href="https://www.blueletterbible.org/kjv/jdg/2/10/s_213010" target="_blank" data-ref="Judges 2:10">Judges 2:10</a>). They turn to the gods of Canaan. Oppression follows. In their suffering, the people cry out. God raises a deliverer — a <em>shofet</em> (שׁוֹפֵט), a judge — who rescues them. The land has rest. And then the cycle begins again.</p>
+<p style="margin-bottom: 15px;">The parallels between the two records are not coincidental. They reflect a covenant pattern as predictable as gravity: prosperity that produces gratitude sustains itself; prosperity that produces forgetfulness destroys itself. Prophetic warning is not punishment but mercy — God's attempt to interrupt the descent before the consequences become catastrophic. And repentance is the hinge on which everything turns. Without it, the cycle has no upward arc. With it, renewal is always possible, no matter how far the fall.</p>
+<p style="margin-bottom: 15px;">This is exactly what Moses prophesied. This is what Joshua tried to prevent. And over the next few weeks, in Judges, we will watch it unfold — exactly as both men predicted.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>A Glimpse Ahead: When the Cycle Becomes a Spiral</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">Next week in Judges, we will see something that a simple circular diagram cannot capture. The cycle in Judges is not merely repetitive. It is degenerative. Each iteration descends further than the last.</p>
+<p style="margin-bottom: 15px;">Othniel delivers Israel fully — the pattern works. By Gideon's time, the deliverer himself builds a golden ephod and becomes the source of apostasy. By Samson's era, the judge is indistinguishable from the culture he was raised to oppose. And by the final chapters of Judges, there is no judge at all — "every man did that which was right in his own eyes" (<a href="https://www.blueletterbible.org/kjv/jdg/21/25/s_232025" target="_blank" data-ref="Judges 21:25">Judges 21:25</a>). The nation does not simply suffer. It loses the capacity to recognize what covenant faithfulness would even look like.</p>
+<p style="margin-bottom: 15px;">Moses saw this coming, we examined this in last week's lesson, and how this was part of the scientific experiment that the Lord outlined. Joshua warned Israel to remember this pattern and to make conscious choices to choose God. The book of Judges documents what happens, with unflinching honesty, when God's covenant people ignore these warnings. And Mormon, writing a thousand years later on a different continent, recognized the same pattern destroying his own civilization — explaining these patterns in the Book of Mormon so that we would recognize them in our day.</p>
+<p style="margin-bottom: 15px;">The choice at Shechem is not ancient history. It is the choice every covenant person faces today — and every day.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Why This Matters</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">The same moral structure governs both individuals and societies. Spiritual decline is almost never sudden. It is gradual — a slow drift from gratitude to entitlement, from devotion to routine, from covenant to culture. The pride cycle does not announce itself. It proceeds by barely perceptible degrees: a little less prayer, a little more self-reliance, a little less sensitivity to prophetic counsel, a little more confidence that prosperity is earned rather than given. By the time the consequences arrive, the capacity for self-diagnosis has often atrophied.</p>
+<p style="margin-bottom: 15px;">Repentance, then, is not a minor correction. It is the intervention that interrupts collapse. It is the moment when the spiral stops descending and begins to turn upward — when agency, which has been contracting toward darkness, is redirected toward light.</p>
+<p style="margin-bottom: 15px;">The hopeful teaching is not that the cycle can be avoided entirely — it cannot, because mortality itself is a condition of testing. The hopeful teaching is that agency still matters. The power to choose is never revoked. The opportunity to turn is always present. Return is always possible through turning to God.</p>
+<p style="margin-bottom: 15px;">Moses said it at the boundary of the promised land. Joshua repeated it at Shechem. Every prophet since has echoed it. The choice is always the same: life and good, or death and evil.</p>
+<p style="margin-bottom: 15px;">"Therefore choose life, that both thou and thy seed may live."</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Companion Resource: The Canaan Cultural Field Guide</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">As we move into Joshua and Judges — and the weeks that follow — the biblical narrative assumes a world that most modern readers have never encountered. Who were the Canaanites? What did they believe? Why was Baal worship so tempting? What were the Philistines doing there? Who were the Phoenicians, and why did Solomon ally with Tyre? What do the Amarna Letters tell us about the land before Israel arrived?</p>
+<p style="margin-bottom: 15px;">To help students engage with these questions, we have prepared a comprehensive <strong>Canaan Cultural Field Guide</strong> — a ten-section deep-dive into the peoples, geography, religion, and archaeology of the land Israel entered. It is modeled on the Egypt Cultural Supplement from earlier in the year and is designed to be a reference resource you can return to throughout the Joshua, Judges, and monarchy periods.</p><div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>What the Guide Covers</span>
+<span class="sub-arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em;">
+<thead><tr style="background: #7c9885; color: white;">
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Section</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Title</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">What You'll Learn</th>
+</tr></thead><tbody>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">01</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>The Land of Canaan</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Five geographic zones, four major trade routes, "milk and honey," water theology — why this land was both blessing and battleground</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">02</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Timeline & Empires</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">From Abraham's Middle Bronze Age to the Iron Age — Sumerian astronomy, Amorite migrations, the Bronze Age Collapse, and the power vacuum that opened the promised land</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">03</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>The Canaanite Peoples</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">The "seven nations" of <a href="https://www.blueletterbible.org/kjv/deu/7/1/s_160001" target="_blank" data-ref="Deuteronomy 7">Deuteronomy 7</a>, the city-state system, archaeological evidence from Hazor, Megiddo, Lachish, and Jericho</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">04</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Ugarit & Canaanite Religion</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">El, Baal, Asherah, Dagon — the Canaanite pantheon revealed by the Ugaritic texts, and why Israel was so vulnerable to their worship</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">05</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>The Phoenicians</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Tyre, Sidon, Byblos — the alphabet, purple dye, Hiram and Solomon's alliance, Jezebel's imported cult, and a possible connection to Mulek</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">06</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>The Philistines</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Sea Peoples origins, the Pentapolis, iron technology, Samson through David, and the Aegean world that shaped Israel's greatest rival</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">07</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Israel Among the Nations</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">The conquest, incomplete possession, the Judges cycle, the Shechem covenant, and the pride cycle that defines the entire period</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">08</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Major Sites</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Interactive map of Canaan including archaeological sites with summaries, images, and video tours <em>(coming soon)</em></td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">09</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>The Amarna Age</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">The Amarna Letters, Egyptian vassalage, the Habiru question, and what diplomatic correspondence reveals about Canaan before Israel</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">10</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>LDS Connections</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Promised land theology, <em>cherem</em>, Rahab, the pride cycle, Book of Mormon parallels, and the laser analogy for covenant focus</td>
+</tr>
+</tbody></table>
+<p style="margin-bottom: 15px;">The guide is available at <a href="/culture/ancient/canaan/" target="_blank">cfmcorner.com/culture/ancient/canaan/</a> and will be referenced throughout the coming weeks' study materials.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+</div>
+</div>
+</div>
+
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Understanding How Your Old Testament Is Organized</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">This week marks a turning point in our Come, Follow Me study. We move from the five books of Moses (the Torah/Pentateuch) into the historical books — Joshua, Judges, Ruth, Samuel, Kings, Chronicles. But it's worth pausing to understand that the book you hold in your hands is organized differently depending on which tradition assembled it. The same scriptures, arranged in different orders, tell subtly different stories about what matters most.</p>
+<p style="margin-bottom: 15px;"><strong>For the full article with charts and detailed analysis, see: <a href="/study-library/articles/understanding-the-old-testament/" target="_blank">Understanding Your Old Testament: How Four Traditions Organize the Same Scriptures</a></strong></p>
+<p style="margin-bottom: 15px;">Here are the key takeaways:</p><div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>The Jewish Tanakh</span>
+<span class="sub-arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<p style="margin-bottom: 15px;">The Hebrew Bible is called the <strong>Tanakh</strong> (תַּנַ"ךְ) — an acronym formed from the first letters of its three divisions:</p>
+<table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em;">
+<thead><tr style="background: #7c9885; color: white;">
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Division</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Hebrew</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Books</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Focus</th>
+</tr></thead><tbody>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Torah</strong> (<a href="https://www.blueletterbible.org/lexicon/h8452/kjv/wlc/0-1/" target="_blank" data-lexicon="custom, manner, mode, law (of man)" data-strongs="H8452" data-translit="tôrâ" data-original="תּוֹרָה" data-lang="hebrew" data-verse="">תּוֹרָה</a>)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">"Instruction"</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Genesis, Exodus, Leviticus, Numbers, Deuteronomy</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">The Law — covenant foundation, the story from creation through Moses</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Nevi'im</strong> (נְבִיאִים)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">"Prophets"</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Joshua, Judges, Samuel, Kings (Former Prophets); Isaiah, Jeremiah, Ezekiel, the Twelve (Latter Prophets)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">History as prophecy — these books are classified as <em>prophetic</em> because their authors interpreted events through a covenant lens</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Ketuvim</strong> (כְּתוּבִים)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">"Writings"</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Psalms, Proverbs, Job, Song of Solomon, Ruth, Lamentations, Ecclesiastes, Esther, Daniel, Ezra-Nehemiah, Chronicles</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Wisdom, poetry, worship, and reflection — the community's response to God</td>
+</tr>
+</tbody></table>
+<p style="margin-bottom: 15px;"><strong>Total: 24 books</strong> (by Jewish counting, which combines Samuel, Kings, Chronicles, and Ezra-Nehemiah into single books, and counts the Twelve Minor Prophets as one book).</p>
+<p style="margin-bottom: 15px;">A critical insight: in the Jewish arrangement, <strong>Joshua and Judges are classified as prophetic literature</strong>, not merely as history. The Jewish tradition reads these books as theological interpretation of events, not neutral reportage. The authors were prophets writing with prophetic purpose. This matters for how we read the conquest and the Judges cycle — they are not just "what happened" but "what it means."</p>
+<p style="margin-bottom: 15px;">The Tanakh ends with <strong>2 Chronicles</strong> — specifically with Cyrus's decree allowing Israel to return from exile and rebuild the temple (<a href="https://www.blueletterbible.org/kjv/2ch/36/23/s_403023" target="_blank" data-ref="2 Chronicles 36:23">2 Chronicles 36:23</a>). The last word of the Hebrew Bible is <em>vaya'al</em> (וְיָעַל) — "and let him go up." The Jewish canon closes with an invitation to return, to rebuild, to go up to Jerusalem.</p>
+</div>
+</div>
+</div>
+<div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>The Protestant Old Testament</span>
+<span class="sub-arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<p style="margin-bottom: 15px;">The Protestant tradition (including the King James Version used by Latter-day Saints) contains the <strong>same textual content</strong> as the Tanakh but reorganizes it into a different structure:</p>
+<table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em;">
+<thead><tr style="background: #7c9885; color: white;">
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Category</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Books</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Difference from Tanakh</th>
+</tr></thead><tbody>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Pentateuch</strong> (5)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Genesis–Deuteronomy</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Same as Torah</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Historical Books</strong> (12)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Joshua–Esther</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Pulls the Former Prophets out of "Prophets" and reclassifies them as "history"; adds Ruth, Chronicles, Ezra, Nehemiah, Esther</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Poetic/Wisdom</strong> (5)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Job, Psalms, Proverbs, Ecclesiastes, Song of Solomon</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Selected from Ketuvim</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Major Prophets</strong> (5)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Isaiah, Jeremiah, Lamentations, Ezekiel, Daniel</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Daniel moved from Writings to Prophets</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Minor Prophets</strong> (12)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Hosea–Malachi</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">The Twelve separated into individual books</td>
+</tr>
+</tbody></table>
+<p style="margin-bottom: 15px;"><strong>Total: 39 books</strong> (same content as the 24, just counted and arranged differently).</p>
+<p style="margin-bottom: 15px;">The most significant change: the Protestant OT ends with <strong>Malachi</strong> — specifically with the prophecy of Elijah's return: "Behold, I will send you Elijah the prophet before the coming of the great and dreadful day of the LORD" (<a href="https://www.blueletterbible.org/kjv/mal/4/5-6/s_929005" target="_blank" data-ref="Malachi 4:5-6">Malachi 4:5–6</a>). This creates a deliberate bridge to the New Testament, where John the Baptist comes "in the spirit and power of Elias" (<a href="https://www.blueletterbible.org/kjv/luk/1/17/s_974017" target="_blank" data-ref="Luke 1:17">Luke 1:17</a>). The Christian arrangement turns the Old Testament into a narrative that points forward to Christ.</p>
+</div>
+</div>
+</div>
+<div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>The Catholic and Orthodox Old Testament</span>
+<span class="sub-arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<p style="margin-bottom: 15px;">The Catholic and Eastern Orthodox traditions include additional books not found in the Protestant or Jewish canons — books written during the intertestamental period (roughly 300 BC – 100 AD):</p>
+<table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em;">
+<thead><tr style="background: #7c9885; color: white;">
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Additional Books</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Content</th>
+</tr></thead><tbody>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Tobit</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">A story of faithfulness in exile</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Judith</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">A Jewish heroine who saves her people</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Wisdom of Solomon</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Philosophical wisdom literature</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Sirach (Ecclesiasticus)</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Practical wisdom and ethics</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Baruch</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Attributed to Jeremiah's scribe</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>1–2 Maccabees</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">The Maccabean revolt and Hanukkah origins</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Additions to Esther and Daniel</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Extended versions of these books</td>
+</tr>
+</tbody></table>
+<p style="margin-bottom: 15px;">Catholics call these <strong>deuterocanonical</strong> ("second canon"); Protestants call them <strong>Apocrypha</strong> ("hidden things"). The Eastern Orthodox canon includes additional texts beyond even the Catholic list. These books were part of the Greek Septuagint (the Greek translation of the Hebrew scriptures used by the early Church) but were not included in the Hebrew Tanakh.</p>
+</div>
+</div>
+</div>
+<div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>The Latter-day Saint Old Testament</span>
+<span class="sub-arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<p style="margin-bottom: 15px;">Latter-day Saints use the <strong>King James Version</strong> — the Protestant 39-book arrangement — but supplement it with additional scripture that restores and expands the Old Testament record:</p>
+<table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em;">
+<thead><tr style="background: #7c9885; color: white;">
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Supplement</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">What It Adds</th>
+</tr></thead><tbody>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Book of Moses</strong> (Pearl of Great Price)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Restored creation account, Enoch's vision, expanded <a href="https://www.blueletterbible.org/kjv/gen/1/1/s_1001" target="_blank" data-ref="Genesis 1">Genesis 1–8</a> with material not in any other tradition</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Book of Abraham</strong> (Pearl of Great Price)</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Abraham's astronomical education, the pre-mortal council, the plan of salvation — context for Abraham's covenant</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Joseph Smith Translation (JST)</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Hundreds of inspired corrections and expansions throughout the OT text, published in footnotes and the appendix</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><strong>Book of Mormon</strong></td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Contains extensive commentary on OT events — Nephi's interpretation of Isaiah, the brass plates (a pre-exilic record not available in any other canon), and theological frameworks for reading the conquest, the covenant, and the pride cycle</td>
+</tr>
+</tbody></table>
+<p style="margin-bottom: 15px;">The LDS approach is unique: rather than debating which ancient books belong in the canon, the Restoration <em>adds new revelation</em> that illuminates the existing text. The Book of Moses doesn't replace Genesis — it restores what was lost from it. The Book of Abraham doesn't replace the patriarchal narratives — it expands them with content unavailable anywhere else. The JST doesn't create a new Bible — it clarifies the one we have.</p>
+</div>
+</div>
+</div>
+<div class="sub-accordion" style="background: #f4f7f5; border: 1px solid #d1ddd4; border-radius: 6px; margin: 15px 0; overflow: hidden;">
+<div class="sub-accordion-header" onclick="toggleSubAccordion(this)" style="background: linear-gradient(135deg, #e8ede9 0%, #d1ddd4 100%); color: #4a5d4f; padding: 12px 18px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+<span>Why This Matters for Your Study</span>
+<span class="sub-arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+</div>
+<div class="sub-accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+<div style="padding: 18px; font-family: Georgia, serif; font-size: 1em; line-height: 1.7;">
+<p style="margin-bottom: 15px;">As we move into Joshua and the historical books, understanding these structural differences helps in several ways:</p>
+<ol style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;"><strong>When Jewish commentators read Joshua as "prophecy"</strong> rather than "history," they are not being eccentric — they are reading it in its original canonical context. The conquest narrative is theological interpretation, not battlefield reporting.</li>
+</ol>
+<ol style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;"><strong>The books we're about to study (Joshua–Judges) occupy the same position in both traditions</strong> — right after Deuteronomy — because both Jewish and Christian editors agreed: this is where the story of the covenant in the land begins.</li>
+</ol>
+<ol style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;"><strong>The Book of Mormon provides a reading lens</strong> that no other tradition has. Nephi's commentary on the Canaanite conquest (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/17?lang=eng&id=p32-p38#p32" target="_blank" data-ref="1 Nephi 17:32-38">1 Nephi 17:32–38</a>) is the most direct theological interpretation of Joshua in any scripture — and it was written by someone who had access to the brass plates, a pre-exilic Israelite record that may have contained material not preserved in any surviving manuscript tradition.</li>
+</ol>
+<ol style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;"><strong>The Doctrine and Covenants 91</strong> offers guidance on the Apocrypha: "there are many things contained therein that are true… but they are not all true" and they should be read with the Spirit. This balanced approach — neither wholesale acceptance nor dismissal — models how Latter-day Saints can engage with the broader biblical tradition.</li>
+</ol>
+<p style="margin-bottom: 15px;">Understanding the book you hold — who assembled it, why they arranged it the way they did, and what other traditions preserve — makes you a more careful, more grateful, and more spiritually discerning reader of scripture.</p>
+</div>
+</div>
+</div>
+
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+
+</div>
