@@ -2,6 +2,7 @@
 title: "More Than Modern: The Ancient Roots of Hebrew Letter Traditions"
 description: "Did the tradition of finding meaning in the Hebrew letters begin with medieval Kabbalah? The primary sources tell a different story — one that stretches back to the biblical period itself."
 weight: 3
+category: "Literary Tools"
 ---
 
 *A note to readers: This article explores topics that go deeper than our typical Come Follow Me discussions — including ancient Jewish texts, scholarly debates, and the history of Hebrew letter traditions. I address them here because these questions inevitably arise for anyone who begins studying Hebrew seriously, and I believe it is better to engage with them honestly and carefully than to leave readers to blindly navigate this territory on their own.*

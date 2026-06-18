@@ -3,6 +3,7 @@ title: "Sealed with Seven: The Covenant Number Across Scripture"
 description: "From the Sabbath to Pharaoh's dreams, from Be'er Sheva to the seven Moedim, the number seven runs through Hebrew scripture as a recurring covenant token — always pointing toward the One who would fulfill every divine oath completely."
 weight: 4
 related_weeks: ["11"]
+category: "Feasts & Covenants"
 ---
 
 The Book of Mormon prophet Nephi wrote a declaration that might serve as the interpretive key to the entire Hebrew Bible: "All things which have been given of God from the beginning of the world, unto man, are the typifying of him" (2 Nephi 11:4). Not some things. Not the obviously prophetic passages. *All things* — every law, every feast, every sacrifice, every covenant pattern — were given to point Israel's eyes toward Jesus Christ.

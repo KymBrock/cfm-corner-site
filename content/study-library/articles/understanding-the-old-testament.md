@@ -2,6 +2,7 @@
 title: "Understanding Your Old Testament: How Four Traditions Organize the Same Scriptures"
 description: "The Jewish Tanakh, the Protestant Old Testament, the Catholic Bible, and the Latter-day Saint canon — same ancient texts, different arrangements, different stories. A guide to what you're holding when you open the scriptures."
 weight: 10
+category: "Literary Tools"
 ---
 
 {{< rawhtml >}}

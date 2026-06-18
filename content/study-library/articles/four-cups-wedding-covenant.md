@@ -2,6 +2,7 @@
 title: "The Four Cups and the Wedding Covenant: Passover as Prophetic Marriage"
 description: "How the four cups of Passover, the seven feast days, and the kinsman redeemer reveal God's covenant with Israel as a marriage — from the Seder table to the Second Coming."
 weight: 7
+category: "Feasts & Covenants"
 ---
 
 *This study was originally prepared as part of my research for the D&C 133-136 Come Follow Me lesson. I wasn't able to publish it at the time, but the insights about the four cups, the wedding covenant, and the feast days were too rich to leave behind. They became a foundation for much of what you'll find in the [Passover Seder guide](/culture/jewish/moedim/passover/) — and I wanted to make the full study available as a companion resource.*

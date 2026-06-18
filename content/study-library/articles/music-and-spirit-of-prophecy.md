@@ -3,6 +3,7 @@ title: "Music and the Spirit of Prophecy"
 description: "When Miriam took up her timbrel after crossing the Red Sea, she wasn't simply leading a celebration — she was acting in her role as a prophetess, participating"
 related_weeks: ["16"]
 draft: false
+category: "Music & Worship"
 ---
 
 <figure style="margin: 2em 0; text-align: center;">

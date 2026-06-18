@@ -3,6 +3,7 @@ title: "Alma 5: The Nephite Seder — A 15-Step Pattern of Repentance and Redemp
 description: "A structured reading of Alma 5 through the lens of the Passover Seder — mapping each of the 15 traditional steps to Alma's prophetic call to repentance, sanctification, and acceptance before God."
 weight: 6
 related_weeks: ["27"]
+category: "Feasts & Covenants"
 ---
 
 > "Have ye felt to sing the song of redeeming love? ... I would ask, can ye feel so now?" — Alma 5:26

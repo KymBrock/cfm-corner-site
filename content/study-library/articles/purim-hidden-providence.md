@@ -3,6 +3,7 @@ title: "Purim: Hidden Providence, Unlikely Deliverance"
 description: "How the Jewish festival of Purim illuminates themes of divine providence, covenant faithfulness, and deliverance through unlikely channels — with connections to Psalm 22 and the Passover."
 weight: 2
 related_weeks: ["10"]
+category: "Feasts & Covenants"
 ---
 
 ## A Time of Celebration and Remembrance

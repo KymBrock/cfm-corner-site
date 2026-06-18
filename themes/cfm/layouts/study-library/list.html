@@ -27,18 +27,63 @@
     </div>
     {{ end }}
 
-    <!-- Articles at this level -->
+    <!-- Articles grouped by category -->
     {{ $pages := .RegularPages }}
     {{ if $pages }}
-    <div class="library-articles">
-        {{ range $pages }}
-        <a href="{{ .RelPermalink }}" class="library-article-card">
-            <div class="la-title">{{ .Title }}</div>
-            <div class="la-desc">{{ .Description }}</div>
-            {{ with .Params.related_weeks }}<div class="la-weeks">Related: Week {{ delimit . ", Week " }}</div>{{ end }}
-        </a>
-        {{ end }}
+    {{ $categoryOrder := slice "Literary Tools" "Leadership & Governing" "Music & Worship" "Feasts & Covenants" "Finding Christ in the Old Testament" }}
+    {{ range $cat := $categoryOrder }}
+    {{ $catPages := where $pages ".Params.category" $cat }}
+    {{ if $catPages }}
+    <div class="library-category-section">
+        <h2 class="library-category-header">{{ $cat }}</h2>
+        <div class="library-articles">
+            {{ range $catPages }}
+            {{ $slug := .File.BaseFileName }}
+            {{ $iconPath := printf "images/articles/%s/icon-%s.png" $slug $slug }}
+            {{ $hasIcon := fileExists (printf "static/%s" $iconPath) }}
+            <a href="{{ .RelPermalink }}" class="library-article-card{{ if $hasIcon }} has-icon{{ end }}">
+                {{ if $hasIcon }}
+                <div class="la-icon-wrap">
+                    <img src="{{ $iconPath | relURL }}" alt="" class="la-icon" loading="lazy" aria-hidden="true">
+                </div>
+                {{ end }}
+                <div class="la-card-body">
+                    <div class="la-title">{{ .Title }}</div>
+                    <div class="la-desc">{{ .Description }}</div>
+                    {{ with .Params.related_weeks }}<div class="la-weeks">Related: Week {{ delimit . ", Week " }}</div>{{ end }}
+                </div>
+            </a>
+            {{ end }}
+        </div>
     </div>
+    {{ end }}
+    {{ end }}
+    <!-- Uncategorized articles (fallback) -->
+    {{ $uncategorized := where $pages ".Params.category" nil }}
+    {{ if $uncategorized }}
+    <div class="library-category-section">
+        <h2 class="library-category-header">More Articles</h2>
+        <div class="library-articles">
+            {{ range $uncategorized }}
+            {{ $slug := .File.BaseFileName }}
+            {{ $iconPath := printf "images/articles/%s/icon-%s.png" $slug $slug }}
+            {{ $hasIcon := fileExists (printf "static/%s" $iconPath) }}
+            <a href="{{ .RelPermalink }}" class="library-article-card{{ if $hasIcon }} has-icon{{ end }}">
+                {{ if $hasIcon }}
+                <div class="la-icon-wrap">
+                    <img src="{{ $iconPath | relURL }}" alt="" class="la-icon" loading="lazy" aria-hidden="true">
+                </div>
+                {{ end }}
+                <div class="la-card-body">
+                    <div class="la-title">{{ .Title }}</div>
+                    <div class="la-desc">{{ .Description }}</div>
+                    {{ with .Params.related_weeks }}<div class="la-weeks">Related: Week {{ delimit . ", Week " }}</div>{{ end }}
+                </div>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
     {{ end }}
 
     <!-- Back link for subsections -->

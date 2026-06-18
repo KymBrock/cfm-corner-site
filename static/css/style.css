@@ -1349,6 +1349,18 @@ a.RTBData:hover, a.BLBST_a:hover {
     font-size: 0.82em;
     color: var(--text-muted);
 }
+.library-category-section {
+    margin-bottom: 40px;
+}
+.library-category-header {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--forest);
+    border-bottom: 2px solid var(--sage);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    margin-top: 8px;
+}
 .library-articles {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -1363,8 +1375,31 @@ a.RTBData:hover, a.BLBST_a:hover {
     text-decoration: none;
     transition: box-shadow 0.2s;
 }
+.library-article-card.has-icon {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 16px;
+    align-items: start;
+}
 .library-article-card:hover {
     box-shadow: var(--shadow-md);
+}
+.la-icon-wrap {
+    width: 72px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--cream);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+.la-icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.la-card-body {
+    min-width: 0;
 }
 .la-title {
     font-family: Georgia, serif;
@@ -1400,6 +1435,16 @@ a.RTBData:hover, a.BLBST_a:hover {
     padding: 32px 0 24px;
     border-bottom: 1px solid var(--border);
     margin-bottom: 32px;
+}
+.library-article-hero-image {
+    margin: 10px 0 24px;
+}
+.library-article-hero-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
 }
 .library-back-link {
     display: inline-block;
@@ -1653,6 +1698,8 @@ a.RTBData:hover, a.BLBST_a:hover {
     .culture-hero h1, .library-hero h1 { font-size: 1.8em; }
     .culture-sections, .library-sections { grid-template-columns: 1fr; }
     .culture-articles, .library-articles { grid-template-columns: 1fr; }
+    .library-article-card.has-icon { grid-template-columns: 58px 1fr; gap: 14px; padding: 18px; }
+    .la-icon-wrap { width: 58px; }
     .culture-article-header h1, .library-article-header h1 { font-size: 1.6em; }
     .culture-article-nav, .library-article-nav { flex-direction: column; }
     .culture-article-content table,

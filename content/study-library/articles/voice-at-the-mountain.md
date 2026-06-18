@@ -3,6 +3,7 @@ title: "The Voice at the Mountain: Biblical Instruments and the God Who Speaks i
 description: "An exploration of the Hebrew terms for biblical musical instruments — from the divine shofar at Sinai to the bells on the High Priest's robe — and how Israel's encounter with God's voice shaped a musical tradition that runs from Genesis to Revelation."
 related_weeks: ["17"]
 draft: false
+category: "Music & Worship"
 ---
 
 <style>

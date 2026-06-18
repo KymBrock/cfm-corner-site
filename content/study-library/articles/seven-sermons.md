@@ -3,6 +3,7 @@ title: "The Savior's Sermon From the Cross"
 description: "Seven Words of Ultimate Love — exploring Jesus' final phrases from the cross, their roots in the Psalms, and what they teach us about forgiveness, salvation, and trust."
 weight: 1
 related_weeks: ["10"]
+category: "Finding Christ in the Old Testament"
 ---
 
 When we think of sermons, we imagine extended discourses—carefully crafted messages delivered from pulpits, filled with exposition, application, and invitation. But the most powerful sermon ever preached consisted of just seven brief phrases, spoken not from a place of comfort but from the instrument of execution itself.

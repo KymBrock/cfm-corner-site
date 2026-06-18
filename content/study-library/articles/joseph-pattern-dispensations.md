@@ -3,6 +3,7 @@ title: "The Joseph Pattern: How God Renews His Covenants Across Dispensations"
 description: "The story of Joseph of Egypt is not merely ancient biography — it is a prophetic map whose lines run forward with remarkable precision to Lehi's family, to Joseph Smith, and to us. Exploring how God embeds dispensational patterns into scripture as a recurring covenant language."
 weight: 3
 related_weeks: ["11"]
+category: "Leadership & Governing"
 ---
 
 There is a principle embedded quietly in the way God tells His story that most modern readers miss entirely — not because it is hidden, but because we have been trained to read differently than the ancients did. The Interpreter Foundation's KnoWhy series articulates it this way: to those who recorded biblical history, "important events in history were part of 'one eternal round.'" They understood that God does not simply move forward in a straight line. He *recycles* His patterns — planting them in one dispensation, then fulfilling them in another, then fulfilling them again at a higher scale in a third. Scripture, for the ancient mind, was not journalism. It was a layered map of divine intent, where every major event was simultaneously a backward echo and a forward prophecy.
