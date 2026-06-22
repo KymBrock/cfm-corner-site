@@ -219,14 +219,19 @@ function toggleInsightsSection(header) {
     var arrow = header.querySelector('.arrow');
     var isCollapsed = content.style.maxHeight === '0px' || content.style.maxHeight === '';
     if (isCollapsed) {
+        content.style.overflow = 'hidden';
         content.style.maxHeight = content.scrollHeight + 'px';
         if (arrow) arrow.style.transform = 'rotate(90deg)';
         content.dataset.expanded = 'true';
         setTimeout(function() {
-            if (content.dataset.expanded === 'true') content.style.maxHeight = 'none';
+            if (content.dataset.expanded === 'true') {
+                content.style.maxHeight = 'none';
+                content.style.overflow = 'visible';
+            }
         }, 500);
     } else {
         content.dataset.expanded = 'false';
+        content.style.overflow = 'hidden';
         content.style.maxHeight = content.scrollHeight + 'px';
         setTimeout(function() { content.style.maxHeight = '0px'; }, 10);
         if (arrow) arrow.style.transform = 'rotate(0deg)';
@@ -254,7 +259,7 @@ function toggleSubAccordion(header) {
 
 function expandAllInsights() {
     document.querySelectorAll('.cfm-insights-section .section-content').forEach(function(c) {
-        c.style.maxHeight = 'none'; c.dataset.expanded = 'true';
+        c.style.maxHeight = 'none'; c.style.overflow = 'visible'; c.dataset.expanded = 'true';
     });
     document.querySelectorAll('.cfm-insights-section .arrow').forEach(function(a) { a.style.transform = 'rotate(90deg)'; });
     document.querySelectorAll('.sub-accordion-content').forEach(function(c) {
@@ -268,7 +273,7 @@ function collapseAllInsights() {
     });
     document.querySelectorAll('.sub-arrow').forEach(function(a) { a.style.transform = 'rotate(0deg)'; });
     document.querySelectorAll('.cfm-insights-section .section-content').forEach(function(c) {
-        c.dataset.expanded = 'false'; c.style.maxHeight = '0px';
+        c.dataset.expanded = 'false'; c.style.overflow = 'hidden'; c.style.maxHeight = '0px';
     });
     document.querySelectorAll('.cfm-insights-section .arrow').forEach(function(a) { a.style.transform = 'rotate(0deg)'; });
 }
