@@ -29,6 +29,10 @@ Hotspot copy/deep_dive in `hotspots.yaml` is **verbatim** from the verified vaul
 
 6. **Provenance framing in prose (guardrail).** The SVGs already footnote the Kings-vs-Chronicles tensions (pillars 18 vs 35; sea 2,000 vs 3,000; altar from 2 Chr 4:1; partition = doors + veil) and the "no remains excavated / reconstruction" note. Ensure the page prose also leads with "deepens, not debunks" and labels contested claims per the build-plan guardrails.
 
+## Divided-kingdom map base (licensed)
+
+The publish-quality divided-kingdom map is being built in Illustrator over **LDS Bible Map 1 — "Physical Map of the Holy Land"** (© Intellectual Reserve), used **by permission (calling-related)**. The raw source lives in the git-ignored `_source-maps/` (never committed/published — see `_source-maps/CREDIT.txt`). The **published derivative must carry the credit line the permission grant specifies.** The in-repo `divided-kingdom-map.svg` remains the accurate label/layout layer and the interactive/vector fallback.
+
 ## Regenerating the timeline
 
 `python3 scripts/build_regnal_timeline.py` re-reads `data/divided-kingdom/kings.json` and rewrites the SVG. `dates_bce` are intentionally `null`; when a chronology (e.g. Thiele) is chosen and the dates are filled in, each cell auto-renders its BCE label — re-run the script, no code change.
