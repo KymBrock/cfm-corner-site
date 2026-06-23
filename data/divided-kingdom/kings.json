@@ -1,0 +1,421 @@
+{
+  "title": "Divided Monarchy — Regnal Evaluations (Deuteronomistic verdicts)",
+  "purpose": "Drives the regnal-evaluation timeline (Guide B). Let the repeating 'did right / did evil' formula be the visual.",
+  "source": "KJV via vault ScriptureDatabase; every verdict + reign-length verified verbatim from 1–2 Kings",
+  "verified": "2026-06-22",
+  "chronology_note": "reign_years_text are the figures the text states (co-regencies/synchronisms make these overlap). Absolute BCE dates are intentionally null — set them from a chosen chronology (recommended: Edwin Thiele, 'The Mysterious Numbers of the Hebrew Kings'). Do NOT invent dates.",
+  "verdict_legend": {
+    "right": "'did right in the eyes/sight of the LORD'",
+    "evil": "'did evil in the sight of the LORD'",
+    "none": "no evaluation formula (usurper)"
+  },
+  "summary": {
+    "judah": {
+      "right": 8,
+      "evil": 11,
+      "none": 1,
+      "total": 20
+    },
+    "israel": {
+      "evil": 19,
+      "total": 19,
+      "note": "every northern king is judged evil — the visual point"
+    }
+  },
+  "kingdoms": {
+    "judah": [
+      {
+        "order": 1,
+        "name": "Rehoboam",
+        "reign_years_text": 17,
+        "verdict": "evil",
+        "qualifier": "verdict pronounced on 'Judah'",
+        "evaluation_ref": "1 Kings 14:22",
+        "evaluation_quote": "And Judah did evil in the sight of the LORD…",
+        "dates_bce": null
+      },
+      {
+        "order": 2,
+        "name": "Abijam",
+        "reign_years_text": 3,
+        "verdict": "evil",
+        "qualifier": null,
+        "evaluation_ref": "1 Kings 15:3",
+        "evaluation_quote": "he walked in all the sins of his father… his heart was not perfect with the LORD",
+        "dates_bce": null
+      },
+      {
+        "order": 3,
+        "name": "Asa",
+        "reign_years_text": 41,
+        "verdict": "right",
+        "qualifier": null,
+        "evaluation_ref": "1 Kings 15:11",
+        "evaluation_quote": "Asa did that which was right in the eyes of the LORD, as did David his father",
+        "dates_bce": null
+      },
+      {
+        "order": 4,
+        "name": "Jehoshaphat",
+        "reign_years_text": 25,
+        "verdict": "right",
+        "qualifier": "high places remained",
+        "evaluation_ref": "1 Kings 22:43",
+        "evaluation_quote": "doing that which was right… nevertheless the high places were not taken away",
+        "dates_bce": null
+      },
+      {
+        "order": 5,
+        "name": "Jehoram",
+        "reign_years_text": 8,
+        "verdict": "evil",
+        "qualifier": "married daughter of Ahab",
+        "evaluation_ref": "2 Kings 8:18",
+        "evaluation_quote": "he walked in the way of the kings of Israel… and he did evil",
+        "dates_bce": null
+      },
+      {
+        "order": 6,
+        "name": "Ahaziah",
+        "reign_years_text": 1,
+        "verdict": "evil",
+        "qualifier": null,
+        "evaluation_ref": "2 Kings 8:27",
+        "evaluation_quote": "walked in the way of the house of Ahab, and did evil",
+        "dates_bce": null
+      },
+      {
+        "order": 7,
+        "name": "Athaliah",
+        "reign_years_text": 6,
+        "verdict": "none",
+        "qualifier": "usurper queen; no evaluation formula",
+        "evaluation_ref": "2 Kings 11:3",
+        "evaluation_quote": "And Athaliah did reign over the land",
+        "dates_bce": null
+      },
+      {
+        "order": 8,
+        "name": "Joash",
+        "reign_years_text": 40,
+        "verdict": "right",
+        "qualifier": "conditional — while Jehoiada instructed",
+        "evaluation_ref": "2 Kings 12:2",
+        "evaluation_quote": "Jehoash did that which was right… all his days wherein Jehoiada the priest instructed him",
+        "dates_bce": null
+      },
+      {
+        "order": 9,
+        "name": "Amaziah",
+        "reign_years_text": 29,
+        "verdict": "right",
+        "qualifier": "not like David",
+        "evaluation_ref": "2 Kings 14:3",
+        "evaluation_quote": "right in the sight of the LORD, yet not like David his father",
+        "dates_bce": null
+      },
+      {
+        "order": 10,
+        "name": "Azariah (Uzziah)",
+        "reign_years_text": 52,
+        "verdict": "right",
+        "qualifier": null,
+        "evaluation_ref": "2 Kings 15:3",
+        "evaluation_quote": "he did that which was right in the sight of the LORD",
+        "dates_bce": null
+      },
+      {
+        "order": 11,
+        "name": "Jotham",
+        "reign_years_text": 16,
+        "verdict": "right",
+        "qualifier": null,
+        "evaluation_ref": "2 Kings 15:34",
+        "evaluation_quote": "he did that which was right in the sight of the LORD",
+        "dates_bce": null
+      },
+      {
+        "order": 12,
+        "name": "Ahaz",
+        "reign_years_text": 16,
+        "verdict": "evil",
+        "qualifier": null,
+        "evaluation_ref": "2 Kings 16:2",
+        "evaluation_quote": "did not that which was right in the sight of the LORD his God, like David",
+        "dates_bce": null
+      },
+      {
+        "order": 13,
+        "name": "Hezekiah",
+        "reign_years_text": 29,
+        "verdict": "right",
+        "qualifier": "reform king",
+        "evaluation_ref": "2 Kings 18:3",
+        "evaluation_quote": "right in the sight of the LORD, according to all that David his father did",
+        "dates_bce": null
+      },
+      {
+        "order": 14,
+        "name": "Manasseh",
+        "reign_years_text": 55,
+        "verdict": "evil",
+        "qualifier": "longest reign",
+        "evaluation_ref": "2 Kings 21:2",
+        "evaluation_quote": "he did that which was evil in the sight of the LORD, after the abominations of the heathen",
+        "dates_bce": null
+      },
+      {
+        "order": 15,
+        "name": "Amon",
+        "reign_years_text": 2,
+        "verdict": "evil",
+        "qualifier": null,
+        "evaluation_ref": "2 Kings 21:20",
+        "evaluation_quote": "that which was evil in the sight of the LORD, as his father Manasseh did",
+        "dates_bce": null
+      },
+      {
+        "order": 16,
+        "name": "Josiah",
+        "reign_years_text": 31,
+        "verdict": "right",
+        "qualifier": "reform king (Dtr1 hinge)",
+        "evaluation_ref": "2 Kings 22:2",
+        "evaluation_quote": "right… walked in all the way of David his father, and turned not aside",
+        "dates_bce": null
+      },
+      {
+        "order": 17,
+        "name": "Jehoahaz",
+        "reign_years_text": 0.25,
+        "verdict": "evil",
+        "qualifier": "3 months",
+        "evaluation_ref": "2 Kings 23:32",
+        "evaluation_quote": "evil in the sight of the LORD, according to all that his fathers had done",
+        "dates_bce": null
+      },
+      {
+        "order": 18,
+        "name": "Jehoiakim",
+        "reign_years_text": 11,
+        "verdict": "evil",
+        "qualifier": null,
+        "evaluation_ref": "2 Kings 23:37",
+        "evaluation_quote": "evil in the sight of the LORD, according to all that his fathers had done",
+        "dates_bce": null
+      },
+      {
+        "order": 19,
+        "name": "Jehoiachin",
+        "reign_years_text": 0.25,
+        "verdict": "evil",
+        "qualifier": "3 months; released ~561 (2 Kgs 25:27-30)",
+        "evaluation_ref": "2 Kings 24:9",
+        "evaluation_quote": "evil in the sight of the LORD, according to all that his father had done",
+        "dates_bce": null
+      },
+      {
+        "order": 20,
+        "name": "Zedekiah",
+        "reign_years_text": 11,
+        "verdict": "evil",
+        "qualifier": "last king; 586 fall",
+        "evaluation_ref": "2 Kings 24:19",
+        "evaluation_quote": "evil in the sight of the LORD, according to all that Jehoiakim had done",
+        "dates_bce": null
+      }
+    ],
+    "israel": [
+      {
+        "order": 1,
+        "name": "Jeroboam I",
+        "reign_years_text": 22,
+        "verdict": "evil",
+        "qualifier": "instituted the calves at Dan & Bethel",
+        "evaluation_ref": "1 Kings 12:30",
+        "evaluation_quote": "this thing became a sin",
+        "dates_bce": null
+      },
+      {
+        "order": 2,
+        "name": "Nadab",
+        "reign_years_text": 2,
+        "verdict": "evil",
+        "qualifier": null,
+        "evaluation_ref": "1 Kings 15:26",
+        "evaluation_quote": "evil… walked in the way of his father, and in his sin",
+        "dates_bce": null
+      },
+      {
+        "order": 3,
+        "name": "Baasha",
+        "reign_years_text": 24,
+        "verdict": "evil",
+        "qualifier": null,
+        "evaluation_ref": "1 Kings 15:34",
+        "evaluation_quote": "evil… walked in the way of Jeroboam",
+        "dates_bce": null
+      },
+      {
+        "order": 4,
+        "name": "Elah",
+        "reign_years_text": 2,
+        "verdict": "evil",
+        "qualifier": "no explicit formula; slain by Zimri",
+        "evaluation_ref": null,
+        "evaluation_quote": null,
+        "dates_bce": null
+      },
+      {
+        "order": 5,
+        "name": "Zimri",
+        "reign_years_text": 0.02,
+        "verdict": "evil",
+        "qualifier": "7-day reign",
+        "evaluation_ref": "1 Kings 16:19",
+        "evaluation_quote": "his sins… doing evil… in walking in the way of Jeroboam",
+        "dates_bce": null
+      },
+      {
+        "order": 6,
+        "name": "Omri",
+        "reign_years_text": 12,
+        "verdict": "evil",
+        "qualifier": "founded Samaria",
+        "evaluation_ref": "1 Kings 16:25",
+        "evaluation_quote": "Omri wrought evil in the eyes of the LORD, and did worse than all before him",
+        "dates_bce": null
+      },
+      {
+        "order": 7,
+        "name": "Ahab",
+        "reign_years_text": 22,
+        "verdict": "evil",
+        "qualifier": "Jezebel; Baal cult",
+        "evaluation_ref": "1 Kings 16:30",
+        "evaluation_quote": "Ahab… did evil in the sight of the LORD above all that were before him",
+        "dates_bce": null
+      },
+      {
+        "order": 8,
+        "name": "Ahaziah",
+        "reign_years_text": 2,
+        "verdict": "evil",
+        "qualifier": null,
+        "evaluation_ref": "1 Kings 22:52",
+        "evaluation_quote": "evil… walked in the way of his father, his mother, and Jeroboam",
+        "dates_bce": null
+      },
+      {
+        "order": 9,
+        "name": "Joram",
+        "reign_years_text": 12,
+        "verdict": "evil",
+        "qualifier": "removed Baal pillar",
+        "evaluation_ref": "2 Kings 3:2",
+        "evaluation_quote": "wrought evil… but not like his father… put away the image of Baal",
+        "dates_bce": null
+      },
+      {
+        "order": 10,
+        "name": "Jehu",
+        "reign_years_text": 28,
+        "verdict": "evil",
+        "qualifier": "destroyed Baal, kept the calves",
+        "evaluation_ref": "2 Kings 10:31",
+        "evaluation_quote": "took no heed to walk in the law… departed not from the sins of Jeroboam",
+        "dates_bce": null
+      },
+      {
+        "order": 11,
+        "name": "Jehoahaz",
+        "reign_years_text": 17,
+        "verdict": "evil",
+        "qualifier": null,
+        "evaluation_ref": "2 Kings 13:2",
+        "evaluation_quote": "evil… followed the sins of Jeroboam… he departed not therefrom",
+        "dates_bce": null
+      },
+      {
+        "order": 12,
+        "name": "Jehoash",
+        "reign_years_text": 16,
+        "verdict": "evil",
+        "qualifier": null,
+        "evaluation_ref": "2 Kings 13:11",
+        "evaluation_quote": "evil… departed not from all the sins of Jeroboam",
+        "dates_bce": null
+      },
+      {
+        "order": 13,
+        "name": "Jeroboam II",
+        "reign_years_text": 41,
+        "verdict": "evil",
+        "qualifier": "longest N reign; prosperity",
+        "evaluation_ref": "2 Kings 14:24",
+        "evaluation_quote": "evil… departed not from all the sins of Jeroboam",
+        "dates_bce": null
+      },
+      {
+        "order": 14,
+        "name": "Zechariah",
+        "reign_years_text": 0.5,
+        "verdict": "evil",
+        "qualifier": "6 months",
+        "evaluation_ref": "2 Kings 15:9",
+        "evaluation_quote": "evil… he departed not from the sins of Jeroboam",
+        "dates_bce": null
+      },
+      {
+        "order": 15,
+        "name": "Shallum",
+        "reign_years_text": 0.08,
+        "verdict": "evil",
+        "qualifier": "no explicit formula; 1-month reign",
+        "evaluation_ref": null,
+        "evaluation_quote": null,
+        "dates_bce": null
+      },
+      {
+        "order": 16,
+        "name": "Menahem",
+        "reign_years_text": 10,
+        "verdict": "evil",
+        "qualifier": null,
+        "evaluation_ref": "2 Kings 15:18",
+        "evaluation_quote": "evil… departed not… from the sins of Jeroboam",
+        "dates_bce": null
+      },
+      {
+        "order": 17,
+        "name": "Pekahiah",
+        "reign_years_text": 2,
+        "verdict": "evil",
+        "qualifier": null,
+        "evaluation_ref": "2 Kings 15:24",
+        "evaluation_quote": "evil… departed not from the sins of Jeroboam",
+        "dates_bce": null
+      },
+      {
+        "order": 18,
+        "name": "Pekah",
+        "reign_years_text": 20,
+        "verdict": "evil",
+        "qualifier": null,
+        "evaluation_ref": "2 Kings 15:28",
+        "evaluation_quote": "evil… departed not from the sins of Jeroboam",
+        "dates_bce": null
+      },
+      {
+        "order": 19,
+        "name": "Hoshea",
+        "reign_years_text": 9,
+        "verdict": "evil",
+        "qualifier": "last N king; 722 fall to Assyria",
+        "evaluation_ref": "2 Kings 17:2",
+        "evaluation_quote": "evil… but not as the kings of Israel that were before him",
+        "dates_bce": null
+      }
+    ]
+  }
+}
