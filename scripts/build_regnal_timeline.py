@@ -23,14 +23,16 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data", "divided-kingdom", "kings.json")
 OUT = os.path.join(ROOT, "static", "images", "culture", "divided-kingdom", "regnal-timeline.svg")
 
-# Brand tokens (from themes/cfm static/css/tabernacle.css :root)
+# CFM Corner Moedim palette: warm parchment, paper-cut forms, soft shadows.
 COLORS = {
-    "right": "#4a6b52",   # sage-dark  — "did right in the sight of the LORD"
-    "evil": "#c65528",    # terracotta — "did evil in the sight of the LORD"
-    "none": "#57899c",    # slate      — no evaluation formula (usurper)
+    "right": "#6f8a55",   # desert/olive green — "did right in the sight of the LORD"
+    "evil": "#c4622d",    # muted terracotta   — "did evil in the sight of the LORD"
+    "none": "#5a7d92",    # slate blue         — no evaluation formula (usurper)
 }
-INK = "#2d3748"
-MUTED = "#718096"
+INK = "#243049"      # deep navy text
+MUTED = "#6b5a3e"    # warm brown
+CREAM = "#f9f1de"    # label text on colored cells
+PARCH = "#f1e3c6"    # parchment background
 
 # layout
 LEFT = 84          # row-label gutter
@@ -61,26 +63,31 @@ def cell(king, x, top):
     name = escape(king["name"])
     out = []
     out.append(
-        f'<rect x="{x}" y="{top}" width="{CW}" height="{CH}" rx="4" '
-        f'fill="{color}" stroke="#ffffff" stroke-width="1.5"/>'
+        f'<rect x="{x}" y="{top}" width="{CW}" height="{CH}" rx="7" '
+        f'fill="{color}" stroke="{PARCH}" stroke-width="2" filter="url(#cellshadow)"/>'
+    )
+    # subtle top highlight (paper-cut sheen)
+    out.append(
+        f'<rect x="{x+3}" y="{top+3}" width="{CW-6}" height="7" rx="3.5" '
+        f'fill="#ffffff" opacity="0.14"/>'
     )
     # order number (top)
     out.append(
-        f'<text x="{cx:.1f}" y="{top+16}" text-anchor="middle" font-size="10.5" '
-        f'fill="#ffffff" opacity="0.75" font-family="-apple-system,Segoe UI,Roboto,sans-serif">'
+        f'<text x="{cx:.1f}" y="{top+18}" text-anchor="middle" font-size="10.5" '
+        f'fill="{CREAM}" opacity="0.85" font-family="-apple-system,Segoe UI,Roboto,sans-serif">'
         f'{king["order"]}</text>'
     )
     # king name (rotated, reads bottom-to-top, centered)
     ny = top + CH / 2 + 6
     out.append(
         f'<text x="{cx:.1f}" y="{ny:.1f}" text-anchor="middle" font-size="12.5" '
-        f'font-weight="600" fill="#ffffff" font-family="Georgia,serif" '
+        f'font-weight="600" fill="{CREAM}" font-family="Georgia,serif" '
         f'transform="rotate(-90 {cx:.1f} {ny:.1f})">{name}</text>'
     )
     # reign length (bottom)
     out.append(
         f'<text x="{cx:.1f}" y="{top+CH-10}" text-anchor="middle" font-size="10" '
-        f'fill="#ffffff" opacity="0.9" font-family="-apple-system,Segoe UI,Roboto,sans-serif">'
+        f'fill="{CREAM}" opacity="0.92" font-family="-apple-system,Segoe UI,Roboto,sans-serif">'
         f'{reign_label(king.get("reign_years_text"))}</text>'
     )
     # BCE date hook — renders only once dates_bce is filled from a chosen chronology
@@ -112,13 +119,28 @@ def build():
     )
     p.append('<title>Regnal Evaluations — the Deuteronomistic verdict</title>')
 
+    # defs: soft paper-cut shadow + edge vignette
+    p.append(
+        '<defs>'
+        '<filter id="cellshadow" x="-30%" y="-30%" width="160%" height="160%">'
+        '<feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#5a4422" flood-opacity="0.28"/>'
+        '</filter>'
+        f'<radialGradient id="vign" cx="50%" cy="48%" r="72%">'
+        '<stop offset="66%" stop-color="#000" stop-opacity="0"/>'
+        '<stop offset="100%" stop-color="#5a4422" stop-opacity="0.13"/>'
+        '</radialGradient>'
+        '</defs>'
+    )
+    # parchment background
+    p.append(f'<rect x="0" y="0" width="{width}" height="{height}" fill="{PARCH}"/>')
+
     # title + subtitle
     p.append(
         f'<text x="{width/2:.0f}" y="38" text-anchor="middle" font-size="26" font-weight="700" '
         f'fill="{INK}" font-family="Georgia,serif">Regnal Evaluations — the Deuteronomistic Verdict</text>'
     )
     p.append(
-        f'<text x="{width/2:.0f}" y="60" text-anchor="middle" font-size="13" fill="#4a5568" '
+        f'<text x="{width/2:.0f}" y="60" text-anchor="middle" font-size="13" fill="{MUTED}" '
         f'font-family="Georgia,serif">Each king graded by one repeating formula: did he do right, or evil, '
         f'in the sight of the LORD? (1–2 Kings)</text>'
     )
@@ -137,7 +159,7 @@ def build():
     p.append(
         f'<text x="{LEFT}" y="{JUDAH_TOP-6}" font-size="14" font-weight="700" fill="{INK}" '
         f'font-family="Georgia,serif">KINGDOM OF JUDAH '
-        f'<tspan font-weight="400" fill="#4a5568" font-size="12">— {sj["right"]} right · '
+        f'<tspan font-weight="400" fill="#5a4a32" font-size="12">— {sj["right"]} right · '
         f'{sj["evil"]} evil · {sj["none"]} none (of {sj["total"]})</tspan></text>'
     )
     for i, k in enumerate(judah):
@@ -153,7 +175,7 @@ def build():
     p.append(
         f'<text x="{LEFT}" y="{ISRAEL_TOP-6}" font-size="14" font-weight="700" fill="{INK}" '
         f'font-family="Georgia,serif">KINGDOM OF ISRAEL '
-        f'<tspan font-weight="400" fill="#4a5568" font-size="12">— {si["evil"]} evil of {si["total"]}: '
+        f'<tspan font-weight="400" fill="#5a4a32" font-size="12">— {si["evil"]} evil of {si["total"]}: '
         f'every northern king did evil</tspan></text>'
     )
     for i, k in enumerate(israel):
@@ -179,6 +201,7 @@ def build():
         f'explicit evaluation formula but are placed with the dynasty they continue. Verdicts verified verbatim, 1–2 Kings.</text>'
     )
 
+    p.append(f'<rect x="0" y="0" width="{width}" height="{height}" fill="url(#vign)" pointer-events="none"/>')
     p.append('</svg>')
     with open(OUT, "w") as f:
         f.write("\n".join(p) + "\n")
