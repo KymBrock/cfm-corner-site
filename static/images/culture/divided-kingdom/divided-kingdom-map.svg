@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 920" role="img"
-     aria-label="Illustrated map of the divided monarchy in CFM Corner Moedim style: the northern Kingdom of Israel with Jeroboam's golden-calf shrines at Dan and Bethel, and the southern Kingdom of Judah with the Temple at Jerusalem, separated by the north-south border.">
-  <title>The Divided Kingdom — calf-shrines vs. the Temple</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 975" role="img"
+     aria-label="Geographic map of the divided monarchy in CFM Corner Moedim style, drawn to real relative positions: the Mediterranean coast on the west, the Jordan River, Sea of Galilee and Dead Sea on the east. The northern Kingdom of Israel holds Galilee, Samaria and Gilead with Jeroboam's golden-calf shrines at Dan and Bethel; the southern Kingdom of Judah holds the Judean hills with the Temple at Jerusalem; neighbors Phoenicia, Aram, Philistia, Ammon, Moab and Edom are labeled.">
+  <title>The Divided Kingdom — a map of the two kingdoms</title>
   <defs>
     <style>
       .ttl  { font-family: Georgia,"Times New Roman",serif; fill:#243049; }
@@ -9,6 +9,7 @@
       .city { font-family: Georgia,"Times New Roman",serif; fill:#243049; }
       .note { font-family:-apple-system,"Segoe UI",Roboto,sans-serif; fill:#6b5a3e; }
       .sea  { font-family: Georgia,serif; fill:#3f5e70; font-style:italic; }
+      .nbr  { font-family: Georgia,serif; fill:#8a7a5a; font-style:italic; letter-spacing:1px; }
     </style>
     <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
       <feDropShadow dx="0" dy="3" stdDeviation="3.5" flood-color="#5a4422" flood-opacity="0.28"/>
@@ -16,125 +17,133 @@
     <filter id="soft-sm" x="-40%" y="-40%" width="180%" height="180%">
       <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#5a4422" flood-opacity="0.30"/>
     </filter>
-    <radialGradient id="vign" cx="50%" cy="46%" r="74%">
+    <radialGradient id="vign" cx="50%" cy="46%" r="78%">
       <stop offset="64%" stop-color="#000" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#5a4422" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#5a4422" stop-opacity="0.13"/>
     </radialGradient>
     <g id="palm">
-      <ellipse cx="0" cy="22" rx="14" ry="4" fill="#5a4422" opacity="0.18"/>
-      <rect x="-3" y="-2" width="6" height="24" rx="3" fill="#9c7b4e"/>
-      <g fill="#6f8a55">
-        <path d="M0 -4 Q-22 -9 -29 2 Q-17 -5 0 0 Z"/><path d="M0 -4 Q22 -9 29 2 Q17 -5 0 0 Z"/>
-        <path d="M0 -6 Q-17 -22 -25 -18 Q-12 -13 0 -2 Z"/><path d="M0 -6 Q17 -22 25 -18 Q12 -13 0 -2 Z"/>
-      </g>
-      <g fill="#86a06b"><path d="M0 -7 Q-8 -25 -2 -29 Q2 -19 2 -4 Z"/><path d="M0 -7 Q8 -25 2 -29 Q-2 -19 -2 -4 Z"/></g>
-      <circle cx="0" cy="-4" r="2.6" fill="#7d5b2f"/>
+      <ellipse cx="0" cy="20" rx="13" ry="4" fill="#5a4422" opacity="0.16"/>
+      <rect x="-2.6" y="-2" width="5.2" height="22" rx="2.6" fill="#9c7b4e"/>
+      <g fill="#6f8a55"><path d="M0 -4 Q-20 -8 -27 2 Q-15 -5 0 0 Z"/><path d="M0 -4 Q20 -8 27 2 Q15 -5 0 0 Z"/>
+        <path d="M0 -6 Q-15 -20 -23 -16 Q-11 -12 0 -2 Z"/><path d="M0 -6 Q15 -20 23 -16 Q11 -12 0 -2 Z"/></g>
+      <g fill="#86a06b"><path d="M0 -7 Q-7 -22 -2 -26 Q2 -17 2 -4 Z"/><path d="M0 -7 Q7 -22 2 -26 Q-2 -17 -2 -4 Z"/></g>
     </g>
-    <!-- golden calf shrine (paper-cut) -->
     <g id="calf">
-      <circle r="17" fill="#d8a93a" stroke="#8a5a2b" stroke-width="2.5"/>
-      <circle r="17" fill="none" stroke="#ecca74" stroke-width="1.4"/>
-      <path d="M-10 -7 q-7 -11 -2 -18 M10 -7 q7 -11 2 -18" fill="none" stroke="#8a5a2b" stroke-width="3"/>
-      <circle cx="-5" cy="1" r="2.2" fill="#8a5a2b"/><circle cx="5" cy="1" r="2.2" fill="#8a5a2b"/>
-      <path d="M-6 8 q6 5 12 0" fill="none" stroke="#8a5a2b" stroke-width="1.6"/>
+      <circle r="16" fill="#d8a93a" stroke="#8a5a2b" stroke-width="2.5"/>
+      <circle r="16" fill="none" stroke="#ecca74" stroke-width="1.3"/>
+      <path d="M-9 -6 q-6 -10 -2 -16 M9 -6 q6 -10 2 -16" fill="none" stroke="#8a5a2b" stroke-width="2.6"/>
+      <circle cx="-4.5" cy="1" r="2" fill="#8a5a2b"/><circle cx="4.5" cy="1" r="2" fill="#8a5a2b"/>
+      <path d="M-5 7 q5 4 10 0" fill="none" stroke="#8a5a2b" stroke-width="1.5"/>
     </g>
-    <!-- hill bump -->
-    <g id="hill"><path d="M-26 0 Q0 -16 26 0 Z" fill="#cdbf90" opacity="0.7"/></g>
+    <g id="hill"><path d="M-22 0 Q0 -13 22 0 Z" fill="#cbb886" opacity="0.55"/></g>
   </defs>
 
-  <!-- ===== Warm parchment ===== -->
-  <rect x="0" y="0" width="760" height="920" fill="#f1e3c6"/>
+  <!-- ===== Parchment (land base) ===== -->
+  <rect x="0" y="0" width="760" height="975" fill="#efe1c2"/>
 
-  <!-- ===== Mediterranean (paper-cut, west) ===== -->
+  <!-- ===== Mediterranean Sea (west of the real coastline) ===== -->
   <g filter="url(#soft-sm)">
-    <path d="M70 86 Q44 96 56 134 Q42 178 58 222 Q42 266 58 312 Q42 362 58 412
-             Q42 466 58 520 Q44 576 58 632 Q44 692 58 752 Q44 812 70 858 L70 86 Z"
-          fill="#7fa6b6"/>
+    <path d="M307 80 L349 139 L318 250 L286 290 L272 355 L238 470 L224 542 L190 620
+             L173 667 L150 724 L120 820 L98 975 L0 975 L0 80 Z" fill="#7fa6b6"/>
   </g>
-  <path d="M70 120 Q60 130 70 150 M70 300 Q60 312 70 332 M70 520 Q60 532 70 552 M70 720 Q60 732 70 752"
-        fill="none" stroke="#a8c6d2" stroke-width="2" opacity="0.7"/>
-  <text class="sea" x="66" y="470" font-size="13" transform="rotate(-90 66 470)" text-anchor="middle" fill="#e8f0f3">Mediterranean Sea</text>
+  <g fill="none" stroke="#a8c6d2" stroke-width="2" opacity="0.65">
+    <path d="M70 200 q-12 12 0 26"/><path d="M120 470 q-12 12 0 26"/><path d="M70 700 q-12 12 0 26"/>
+  </g>
+  <text class="sea" x="120" y="430" font-size="15" transform="rotate(-64 120 430)" text-anchor="middle" fill="#eef4f6">Mediterranean Sea</text>
 
-  <!-- ===== Land regions (paper-cut, soft shadow) ===== -->
-  <g filter="url(#soft)">
-    <path d="M70 86 L642 86 Q672 100 662 146 L652 304 Q657 424 650 562 L642 600 L70 600 Z" fill="#a7c0ad"/>
-  </g>
-  <g filter="url(#soft)">
-    <path d="M70 604 L642 604 L632 702 Q627 792 600 852 L70 852 Z" fill="#c9c189"/>
-  </g>
-  <!-- terrain hill bumps -->
-  <g opacity="0.5">
-    <use href="#hill" x="200" y="190"/><use href="#hill" x="430" y="330"/>
-    <use href="#hill" x="250" y="470"/><use href="#hill" x="430" y="760"/>
-    <use href="#hill" x="200" y="690"/>
-  </g>
+  <!-- ===== Territory tints ===== -->
+  <!-- Kingdom of Israel (Galilee + Samaria + Gilead, larger, north) -->
+  <path d="M300 150 L360 148 L520 180 L545 360 L505 545 L450 578 L360 588 L300 588
+           L258 470 L285 300 Z" fill="#9fbaa6" opacity="0.5"/>
+  <!-- Kingdom of Judah (Judean hills, smaller, south) -->
+  <path d="M300 608 L360 604 L420 636 L420 802 L360 842 L300 850 L238 802 L250 690 L264 630 Z"
+        fill="#cabf83" opacity="0.55"/>
 
-  <!-- ===== North-south border ===== -->
-  <path d="M70 602 L642 602" stroke="#9d4a1f" stroke-width="3.5" stroke-dasharray="10 6"/>
-  <g><rect x="262" y="582" width="236" height="20" rx="6" fill="#f7eed8" opacity="0.85"/>
-     <text class="sub" x="380" y="596" text-anchor="middle" font-size="12" fill="#9d4a1f" font-style="italic">the border between the kingdoms</text></g>
+  <!-- terrain hills -->
+  <g><use href="#hill" x="330" y="360"/><use href="#hill" x="470" y="430"/><use href="#hill" x="320" y="690"/>
+     <use href="#hill" x="250" y="520"/><use href="#hill" x="430" y="240"/></g>
 
-  <!-- ===== Jordan system (paper-cut, east) ===== -->
+  <!-- ===== Jordan system (real positions) ===== -->
   <g filter="url(#soft-sm)">
-    <ellipse cx="600" cy="172" rx="34" ry="24" fill="#7fa6b6"/>
-    <path d="M600 196 Q584 320 600 440 Q612 540 600 642 L588 642 Q600 540 588 440 Q572 320 588 196 Z" fill="#7fa6b6"/>
-    <ellipse cx="585" cy="742" rx="26" ry="58" fill="#7fa6b6"/>
+    <!-- Sea of Galilee -->
+    <ellipse cx="459" cy="290" rx="13" ry="19" fill="#7fa6b6"/>
+    <!-- Jordan River -->
+    <path d="M459 309 Q450 380 466 440 Q452 515 442 580 L433 628" fill="none" stroke="#7fa6b6" stroke-width="7" stroke-linecap="round"/>
+    <!-- Dead Sea -->
+    <path d="M433 628 L446 662 L442 762 L430 858 L410 862 L400 800 L408 702 L420 640 Z" fill="#7fa6b6"/>
   </g>
-  <text class="sea" x="600" y="136" text-anchor="middle" font-size="11">Sea of Galilee</text>
-  <text class="sea" x="616" y="430" font-size="12" transform="rotate(90 616 430)" text-anchor="middle">Jordan River</text>
-  <text class="sea" x="585" y="745" text-anchor="middle" font-size="10" transform="rotate(90 585 745)" fill="#e8f0f3">Dead Sea</text>
+  <text class="sea" x="459" y="262" text-anchor="middle" font-size="10.5">Sea of Galilee</text>
+  <text class="sea" x="480" y="470" font-size="11" transform="rotate(78 480 470)" text-anchor="middle">Jordan R.</text>
+  <text class="sea" x="424" y="755" text-anchor="middle" font-size="10" transform="rotate(82 424 755)" fill="#eef4f6">Dead Sea</text>
+
+  <!-- ===== Neighbor regions (context labels) ===== -->
+  <text class="nbr" x="360" y="112" font-size="12" transform="rotate(-22 360 112)">PHOENICIA</text>
+  <text class="nbr" x="560" y="238" font-size="12" text-anchor="end">ARAM–DAMASCUS</text>
+  <text class="nbr" x="232" y="648" font-size="12" transform="rotate(-62 232 648)">PHILISTIA</text>
+  <text class="nbr" x="556" y="520" font-size="12" text-anchor="end">AMMON</text>
+  <text class="nbr" x="520" y="800" font-size="12" text-anchor="end">MOAB</text>
+  <text class="nbr" x="458" y="882" font-size="12" text-anchor="middle">EDOM</text>
+
+  <!-- ===== North–south border (Israel | Judah) ===== -->
+  <path d="M433 632 Q392 612 360 600 Q318 600 264 614" fill="none" stroke="#9d4a1f" stroke-width="3.5" stroke-dasharray="9 6"/>
 
   <!-- palms -->
-  <use href="#palm" x="120" y="560"/><use href="#palm" x="540" y="660"/><use href="#palm" x="150" y="820"/>
+  <use href="#palm" x="512" y="450"/><use href="#palm" x="230" y="560"/>
 
-  <!-- ===== Kingdom labels (navy serif on chips) ===== -->
-  <g><rect x="120" y="222" width="300" height="58" rx="8" fill="#f7eed8" opacity="0.8"/>
-     <text class="king" x="270" y="250" text-anchor="middle" font-size="22" font-weight="700">KINGDOM OF ISRAEL</text>
-     <text class="sub"  x="270" y="272" text-anchor="middle" font-size="13.5">the north · ten tribes · capital Samaria</text></g>
-  <g><rect x="158" y="748" width="284" height="56" rx="8" fill="#f7eed8" opacity="0.8"/>
-     <text class="king" x="300" y="775" text-anchor="middle" font-size="20" font-weight="700">KINGDOM OF JUDAH</text>
-     <text class="sub"  x="300" y="796" text-anchor="middle" font-size="13">the south · Judah &amp; Benjamin</text></g>
+  <!-- ===== Kingdom labels (chips) ===== -->
+  <g><rect x="300" y="392" width="150" height="40" rx="7" fill="#f7eed8" opacity="0.78"/>
+     <text class="king" x="375" y="412" text-anchor="middle" font-size="16" font-weight="700">ISRAEL</text>
+     <text class="sub"  x="375" y="426" text-anchor="middle" font-size="10.5">north · ten tribes</text></g>
+  <g><rect x="262" y="744" width="128" height="40" rx="7" fill="#f7eed8" opacity="0.78"/>
+     <text class="king" x="326" y="764" text-anchor="middle" font-size="15" font-weight="700">JUDAH</text>
+     <text class="sub"  x="326" y="778" text-anchor="middle" font-size="10.5">south · Judah &amp; Benjamin</text></g>
 
   <!-- ===== Cities ===== -->
-  <g filter="url(#soft-sm)"><circle cx="350" cy="330" r="5.5" fill="#5a4a32"/></g>
-  <text class="city" x="360" y="334" font-size="13">Shechem</text>
-  <g filter="url(#soft-sm)"><circle cx="300" cy="402" r="7" fill="#3a2f20"/><circle cx="300" cy="402" r="3" fill="#c89b3c"/></g>
-  <text class="city" x="311" y="406" font-size="13" font-weight="600">Samaria</text>
-  <g filter="url(#soft-sm)"><circle cx="300" cy="827" r="5.5" fill="#5a4a32"/></g>
-  <text class="city" x="310" y="831" font-size="13">Hebron</text>
+  <!-- Samaria (capital) -->
+  <g filter="url(#soft-sm)"><circle cx="346" cy="466" r="6.5" fill="#3a2f20"/><circle cx="346" cy="466" r="2.6" fill="#c89b3c"/></g>
+  <text class="city" x="356" y="470" font-size="12.5" font-weight="600">Samaria</text>
+  <!-- Shechem -->
+  <g filter="url(#soft-sm)"><circle cx="372" cy="500" r="4.5" fill="#5a4a32"/></g>
+  <text class="city" x="380" y="504" font-size="11.5">Shechem</text>
+  <!-- Hebron -->
+  <g filter="url(#soft-sm)"><circle cx="321" cy="714" r="4.5" fill="#5a4a32"/></g>
+  <text class="city" x="296" y="728" font-size="11.5">Hebron</text>
+  <!-- Beersheba -->
+  <g filter="url(#soft-sm)"><circle cx="235" cy="806" r="4.5" fill="#5a4a32"/></g>
+  <text class="city" x="243" y="810" font-size="11.5">Beersheba</text>
 
   <!-- ===== Calf shrine: DAN ===== -->
-  <g filter="url(#soft)"><use href="#calf" x="470" y="140"/></g>
-  <g><rect x="490" y="124" width="78" height="34" rx="6" fill="#f7eed8" opacity="0.88"/>
-     <text class="city" x="498" y="140" font-size="15" font-weight="700">Dan</text>
-     <text class="note" x="498" y="153" font-size="10.5">golden calf</text></g>
+  <g filter="url(#soft)"><use href="#calf" x="475" y="136"/></g>
+  <g><rect x="494" y="120" width="74" height="32" rx="6" fill="#f7eed8" opacity="0.9"/>
+     <text class="city" x="501" y="135" font-size="14" font-weight="700">Dan</text>
+     <text class="note" x="501" y="148" font-size="10">golden calf</text></g>
 
   <!-- ===== Calf shrine: BETHEL ===== -->
-  <g filter="url(#soft)"><use href="#calf" x="380" y="545"/></g>
-  <g><rect x="400" y="529" width="92" height="34" rx="6" fill="#f7eed8" opacity="0.88"/>
-     <text class="city" x="408" y="545" font-size="15" font-weight="700">Bethel</text>
-     <text class="note" x="408" y="558" font-size="10.5">golden calf</text></g>
+  <g filter="url(#soft)"><use href="#calf" x="355" y="582"/></g>
+  <g><rect x="252" y="566" width="88" height="32" rx="6" fill="#f7eed8" opacity="0.9"/>
+     <text class="city" x="260" y="581" font-size="14" font-weight="700">Bethel</text>
+     <text class="note" x="260" y="594" font-size="10">golden calf</text></g>
 
   <!-- ===== Temple: JERUSALEM ===== -->
   <g filter="url(#soft)">
-    <g transform="translate(360,665)">
-      <polygon points="-21,-7 21,-7 14,-20 -14,-20" fill="#d8a93a" stroke="#8a5a2b" stroke-width="2"/>
-      <rect x="-19" y="-7" width="38" height="25" rx="2" fill="#efdca6" stroke="#8a5a2b" stroke-width="2"/>
-      <line x1="-10" y1="-7" x2="-10" y2="18" stroke="#8a5a2b" stroke-width="2.5"/>
-      <line x1="0"   y1="-7" x2="0"   y2="18" stroke="#8a5a2b" stroke-width="2.5"/>
-      <line x1="10"  y1="-7" x2="10"  y2="18" stroke="#8a5a2b" stroke-width="2.5"/>
+    <g transform="translate(358,631)">
+      <polygon points="-18,-6 18,-6 12,-18 -12,-18" fill="#d8a93a" stroke="#8a5a2b" stroke-width="2"/>
+      <rect x="-16" y="-6" width="32" height="22" rx="2" fill="#efdca6" stroke="#8a5a2b" stroke-width="2"/>
+      <line x1="-8" y1="-6" x2="-8" y2="16" stroke="#8a5a2b" stroke-width="2.2"/>
+      <line x1="0"  y1="-6" x2="0"  y2="16" stroke="#8a5a2b" stroke-width="2.2"/>
+      <line x1="8"  y1="-6" x2="8"  y2="16" stroke="#8a5a2b" stroke-width="2.2"/>
     </g>
   </g>
-  <g><rect x="386" y="649" width="104" height="34" rx="6" fill="#f7eed8" opacity="0.9"/>
-     <text class="city" x="394" y="665" font-size="15" font-weight="700">Jerusalem</text>
-     <text class="note" x="394" y="678" font-size="10.5">the Temple</text></g>
+  <g><rect x="384" y="618" width="100" height="32" rx="6" fill="#f7eed8" opacity="0.92"/>
+     <text class="city" x="392" y="633" font-size="14" font-weight="700">Jerusalem</text>
+     <text class="note" x="392" y="646" font-size="10">the Temple</text></g>
 
   <!-- ===== Title ===== -->
-  <text class="ttl" x="380" y="40" text-anchor="middle" font-size="28" font-weight="700">The Divided Kingdom</text>
-  <text class="sub" x="380" y="63" text-anchor="middle" font-size="14">After Solomon (1 Kings 12) — two calf-shrines in the north, one Temple in the south</text>
+  <text class="ttl" x="380" y="40" text-anchor="middle" font-size="27" font-weight="700">The Divided Kingdom</text>
+  <text class="sub" x="380" y="62" text-anchor="middle" font-size="13.5">After Solomon (1 Kings 12) — two calf-shrines in the north, one Temple in the south</text>
 
   <!-- ===== Compass ===== -->
-  <g transform="translate(692 122)" class="city" font-size="12" text-anchor="middle">
+  <g transform="translate(694 128)" class="city" font-size="12" text-anchor="middle">
     <circle r="24" fill="#f7eed8" opacity="0.82"/>
     <line x1="0" y1="-18" x2="0" y2="18" stroke="#7a6442" stroke-width="1.2"/>
     <line x1="-18" y1="0" x2="18" y2="0" stroke="#7a6442" stroke-width="1.2"/>
@@ -142,24 +151,32 @@
     <text x="0" y="-21">N</text><text x="0" y="30">S</text><text x="27" y="4">E</text><text x="-27" y="4">W</text>
   </g>
 
+  <!-- ===== Scale bar (149 px ≈ 50 km at this projection) ===== -->
+  <g transform="translate(600 905)">
+    <line x1="0" y1="0" x2="149" y2="0" stroke="#5a4a32" stroke-width="2.5"/>
+    <line x1="0" y1="-4" x2="0" y2="4" stroke="#5a4a32" stroke-width="2.5"/>
+    <line x1="149" y1="-4" x2="149" y2="4" stroke="#5a4a32" stroke-width="2.5"/>
+    <text class="note" x="74" y="16" text-anchor="middle" font-size="10.5">≈ 50 km</text>
+  </g>
+
   <!-- ===== Legend ===== -->
-  <g transform="translate(90 872)">
+  <g transform="translate(70 902)">
     <g transform="translate(10 -2)">
       <circle r="9" fill="#d8a93a" stroke="#8a5a2b" stroke-width="1.5"/>
       <path d="M-5 -4 q-4 -6 -1 -10 M5 -4 q4 -6 1 -10" fill="none" stroke="#8a5a2b" stroke-width="2"/>
       <circle cx="-2.6" cy="0.6" r="1.2" fill="#8a5a2b"/><circle cx="2.6" cy="0.6" r="1.2" fill="#8a5a2b"/>
     </g>
-    <text class="note" x="28" y="2" font-size="12">Golden-calf shrine (Jeroboam, 1 Kgs 12:28–29)</text>
-    <g transform="translate(360 -9)">
+    <text class="note" x="28" y="2" font-size="12">Golden-calf shrine (1 Kgs 12:28–29)</text>
+    <g transform="translate(300 -9)">
       <polygon points="0,7 23,7 19,-2 4,-2" fill="#d8a93a" stroke="#8a5a2b" stroke-width="1.2"/>
       <rect x="2" y="7" width="19" height="9" fill="#efdca6" stroke="#8a5a2b" stroke-width="1.2"/>
     </g>
-    <text class="note" x="392" y="2" font-size="12">Jerusalem Temple</text>
+    <text class="note" x="332" y="2" font-size="12">Jerusalem Temple</text>
   </g>
 
-  <!-- ===== Footnote ===== -->
-  <text class="note" x="380" y="898" text-anchor="middle" font-size="10.5">Jeroboam set the calves "in Dan, and in Bethel" (1 Kgs 12:29) to keep the north from worshipping at Jerusalem (12:26–27).</text>
-  <text class="note" x="380" y="912" text-anchor="middle" font-size="10.5">Schematic — relative positions only, not to scale. Original CFM Corner map.</text>
+  <!-- ===== Footnotes ===== -->
+  <text class="note" x="380" y="950" text-anchor="middle" font-size="10.5">Cities and coastline drawn to real relative positions. Kingdom borders are approximate (they shifted across the era).</text>
+  <text class="note" x="380" y="964" text-anchor="middle" font-size="10.5">Jeroboam set the calves "in Dan, and in Bethel" (1 Kgs 12:29). Original CFM Corner map — no copyrighted basemap.</text>
 
-  <rect x="0" y="0" width="760" height="920" fill="url(#vign)" pointer-events="none"/>
+  <rect x="0" y="0" width="760" height="975" fill="url(#vign)" pointer-events="none"/>
 </svg>
