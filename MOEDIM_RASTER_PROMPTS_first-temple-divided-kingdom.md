@@ -73,6 +73,41 @@ composition; do not reproduce any specific copyrighted reconstruction. High-reso
 ```
 *Use as a section header/atmospheric image on Guide B; the SVG map stays the informational piece.*
 
+## 4. Divided-kingdom MAP — painterly (to match the seven-nations Canaan map)
+
+The way to get a map that is **both on-brand and geographically correct**: attach **two** reference images in ChatGPT —
+- **STYLE reference:** `static/images/culture/canaan/03-seven-nations-map.png` (the reader-facing house map)
+- **GEOGRAPHY / LAYOUT blueprint:** `static/images/culture/divided-kingdom/divided-kingdom-map.blueprint.png` (PNG export of our accurate SVG)
+
+```text
+Create a single illustrated historical map in the EXACT painterly style of the FIRST
+attached image — a warm aged-parchment map with soft relief shading, hill and mountain
+texturing, blue seas and rivers, a decorative compass rose and elegant serif labels.
+CFM Corner Moedim style: hand-painted, not photorealistic, not a flat modern infographic,
+not a video-game render, not fantasy.
+
+Use the SECOND attached image as the GEOGRAPHY and LAYOUT blueprint: keep the same
+coastline, the Jordan River flowing from the Sea of Galilee down to the Dead Sea, and
+the same relative positions of every place.
+
+Subject — the divided kingdom after Solomon (1 Kings 12):
+- Two gently tinted, labeled territories: KINGDOM OF ISRAEL in the north (Galilee,
+  Samaria, and Gilead east of the Jordan) and KINGDOM OF JUDAH in the south (the Judean
+  hill country), with a soft dividing border running east–west just north of Jerusalem.
+- A golden-calf shrine at DAN (far north) and at BETHEL (just north of the border).
+- A small temple icon at JERUSALEM (just south of the border).
+- Labeled city dots: Dan, Samaria, Shechem, Bethel, Jerusalem, Hebron, Beersheba.
+- Faint neighbor labels at the edges: Phoenicia (NW), Aram-Damascus (NE), Philistia
+  (SW coast), Ammon and Moab (east of the Jordan/Dead Sea), Edom (south).
+- Labeled water: Mediterranean Sea, Sea of Galilee, Jordan River, Dead Sea.
+- A compass rose and a simple scale bar. Title lettered at top: THE DIVIDED KINGDOM.
+
+All labels spelled exactly as listed and clearly readable. Do NOT invent extra cities or
+change the geography. Aged-parchment background (not transparent). Original composition;
+do not reproduce any specific copyrighted reconstruction or basemap.
+```
+*After generating:* save as `static/images/culture/divided-kingdom/divided-kingdom-map.png`; use it as the page image and keep the SVG as the precise/interactive fallback. The kingdom-border line and "borders are approximate" caveat from the SVG should carry over.
+
 ---
 
 **Note:** the regnal-evaluation **timeline** is a data-driven chart, not a raster candidate — it stays the script-generated SVG (`scripts/build_regnal_timeline.py`).
