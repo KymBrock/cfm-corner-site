@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 920" role="img"
+     aria-label="Schematic map of the divided monarchy after Solomon: the northern Kingdom of Israel with Jeroboam's golden-calf shrines at Dan and Bethel, and the southern Kingdom of Judah with the Temple at Jerusalem, separated by the north-south border.">
+  <title>The Divided Kingdom — calf-shrines vs. the Temple</title>
+  <style>
+    .ttl  { font-family: Georgia,"Times New Roman",serif; fill:#2d3748; }
+    .sub  { font-family: Georgia,"Times New Roman",serif; fill:#4a5568; }
+    .king { font-family: Georgia,"Times New Roman",serif; fill:#2d3748; letter-spacing:1px; }
+    .city { font-family:-apple-system,"Segoe UI",Roboto,sans-serif; fill:#2d3748; }
+    .note { font-family:-apple-system,"Segoe UI",Roboto,sans-serif; fill:#718096; }
+    .seatxt{ font-family: Georgia,serif; fill:#4a6b80; font-style:italic; }
+  </style>
+
+  <!-- ===== Title ===== -->
+  <text class="ttl" x="380" y="40" text-anchor="middle" font-size="28" font-weight="700">The Divided Kingdom</text>
+  <text class="sub" x="380" y="63" text-anchor="middle" font-size="14">After Solomon (1 Kings 12) — two calf-shrines in the north, one Temple in the south</text>
+
+  <!-- ===== Mediterranean (west) ===== -->
+  <path d="M70 80 Q40 90 55 130 Q40 175 58 220 Q42 265 58 310 Q42 360 58 410
+           Q42 465 58 520 Q44 575 58 630 Q44 690 58 750 Q44 810 70 860 L70 80 Z"
+        fill="#cfe0e6" stroke="#8ab0be" stroke-width="1.5"/>
+  <text class="seatxt" x="62" y="470" font-size="14" transform="rotate(-90 62 470)" text-anchor="middle">Mediterranean Sea</text>
+
+  <!-- ===== Land: northern Israel ===== -->
+  <path d="M70 80 L640 80 Q670 95 660 140 L650 300 Q655 420 648 560 L640 600
+           L70 600 Z" fill="#dbe7ea" stroke="#8ab0be" stroke-width="1.5"/>
+  <!-- ===== Land: southern Judah ===== -->
+  <path d="M70 600 L640 600 L630 700 Q625 790 600 850 L70 850 Z"
+        fill="#dfe9da" stroke="#aac1a7" stroke-width="1.5"/>
+
+  <!-- ===== North-south border ===== -->
+  <path d="M70 600 L640 600" stroke="#6a5983" stroke-width="3" stroke-dasharray="9 6"/>
+  <text class="sub" x="380" y="592" text-anchor="middle" font-size="12" fill="#6a5983" font-style="italic">— the border between the kingdoms —</text>
+
+  <!-- ===== Jordan system (east) ===== -->
+  <ellipse cx="600" cy="170" rx="34" ry="24" fill="#9fc0cc" stroke="#57899c" stroke-width="1.5"/>
+  <text class="seatxt" x="600" y="135" text-anchor="middle" font-size="11">Sea of Galilee</text>
+  <path d="M600 196 Q585 320 600 440 Q612 540 600 640" fill="none" stroke="#57899c" stroke-width="3"/>
+  <text class="seatxt" x="618" y="430" font-size="12" transform="rotate(90 618 430)" text-anchor="middle">Jordan River</text>
+  <ellipse cx="585" cy="740" rx="26" ry="58" fill="#9fc0cc" stroke="#57899c" stroke-width="1.5"/>
+  <text class="seatxt" x="585" y="745" text-anchor="middle" font-size="10" transform="rotate(90 585 745)">Dead Sea</text>
+
+  <!-- ===== Kingdom labels ===== -->
+  <text class="king" x="270" y="250" text-anchor="middle" font-size="22" font-weight="700">KINGDOM OF ISRAEL</text>
+  <text class="sub"  x="270" y="274" text-anchor="middle" font-size="14">the north · ten tribes · capital Samaria</text>
+  <text class="king" x="300" y="775" text-anchor="middle" font-size="20" font-weight="700">KINGDOM OF JUDAH</text>
+  <text class="sub"  x="300" y="797" text-anchor="middle" font-size="13">the south · Judah &amp; Benjamin</text>
+
+  <!-- ===== Cities ===== -->
+  <!-- Shechem (Jeroboam's first capital, 1 Kgs 12:25) -->
+  <circle cx="350" cy="330" r="5" fill="#4a5568"/>
+  <text class="city" x="360" y="334" font-size="13">Shechem</text>
+  <!-- Samaria (Omri's capital, 1 Kgs 16:24) -->
+  <circle cx="300" cy="400" r="6" fill="#2d3748"/>
+  <text class="city" x="310" y="404" font-size="13" font-weight="600">Samaria</text>
+
+  <!-- ===== Calf shrine: DAN (far north) ===== -->
+  <g transform="translate(470,140)">
+    <circle r="17" fill="#d5a93c" stroke="#8a5a2b" stroke-width="2.5"/>
+    <path d="M-10 -7 q-7 -11 -2 -18 M10 -7 q7 -11 2 -18" fill="none" stroke="#8a5a2b" stroke-width="3"/>
+    <circle cx="-5" cy="1" r="2.2" fill="#8a5a2b"/><circle cx="5" cy="1" r="2.2" fill="#8a5a2b"/>
+  </g>
+  <text class="city" x="494" y="138" font-size="15" font-weight="700">Dan</text>
+  <text class="note" x="494" y="154" font-size="11">golden calf</text>
+
+  <!-- ===== Calf shrine: BETHEL (just north of the border) ===== -->
+  <g transform="translate(380,545)">
+    <circle r="17" fill="#d5a93c" stroke="#8a5a2b" stroke-width="2.5"/>
+    <path d="M-10 -7 q-7 -11 -2 -18 M10 -7 q7 -11 2 -18" fill="none" stroke="#8a5a2b" stroke-width="3"/>
+    <circle cx="-5" cy="1" r="2.2" fill="#8a5a2b"/><circle cx="5" cy="1" r="2.2" fill="#8a5a2b"/>
+  </g>
+  <text class="city" x="404" y="543" font-size="15" font-weight="700">Bethel</text>
+  <text class="note" x="404" y="559" font-size="11">golden calf</text>
+
+  <!-- ===== Temple: JERUSALEM (just south of the border) ===== -->
+  <g transform="translate(360,665)">
+    <polygon points="-20,-7 20,-7 13,-19 -13,-19" fill="#d5a93c" stroke="#8a5a2b" stroke-width="2"/>
+    <rect x="-18" y="-7" width="36" height="24" fill="#f5ecd0" stroke="#8a5a2b" stroke-width="2"/>
+    <line x1="-9" y1="-7" x2="-9" y2="17" stroke="#8a5a2b" stroke-width="2.5"/>
+    <line x1="0"  y1="-7" x2="0"  y2="17" stroke="#8a5a2b" stroke-width="2.5"/>
+    <line x1="9"  y1="-7" x2="9"  y2="17" stroke="#8a5a2b" stroke-width="2.5"/>
+  </g>
+  <text class="city" x="388" y="662" font-size="15" font-weight="700">Jerusalem</text>
+  <text class="note" x="388" y="678" font-size="11">the Temple</text>
+
+  <!-- Hebron (Judah) -->
+  <circle cx="300" cy="827" r="5" fill="#4a5568"/>
+  <text class="city" x="310" y="831" font-size="13">Hebron</text>
+
+  <!-- ===== Compass ===== -->
+  <g transform="translate(690 120)" class="city" font-size="12" text-anchor="middle">
+    <line x1="0" y1="-22" x2="0" y2="22" stroke="#718096" stroke-width="1.2"/>
+    <line x1="-22" y1="0" x2="22" y2="0" stroke="#718096" stroke-width="1.2"/>
+    <path d="M0 -22 L-4 -14 L4 -14 Z" fill="#718096"/>
+    <text x="0" y="-26">N</text><text x="0" y="36">S</text><text x="30" y="4">E</text><text x="-30" y="4">W</text>
+  </g>
+
+  <!-- ===== Legend ===== -->
+  <g transform="translate(90 868)">
+    <g transform="translate(0 -4)">
+      <circle cx="10" cy="0" r="9" fill="#d5a93c" stroke="#8a5a2b" stroke-width="1.5"/>
+      <path d="M4 -3 q-4 -6 -1 -10 M16 -3 q4 -6 1 -10" fill="none" stroke="#8a5a2b" stroke-width="2"/>
+    </g>
+    <text class="note" x="26" y="0" font-size="12">Golden-calf shrine (Jeroboam, 1 Kgs 12:28–29)</text>
+    <g transform="translate(360 -10)">
+      <polygon points="0,6 22,6 18,-2 4,-2" fill="#d5a93c" stroke="#8a5a2b" stroke-width="1.2"/>
+      <rect x="2" y="6" width="18" height="9" fill="#f5ecd0" stroke="#8a5a2b" stroke-width="1.2"/>
+    </g>
+    <text class="note" x="390" y="0" font-size="12">Jerusalem Temple</text>
+  </g>
+
+  <!-- ===== Footnote ===== -->
+  <text class="note" x="380" y="898" text-anchor="middle" font-size="10.5">Jeroboam set the calves "in Dan, and in Bethel" (1 Kgs 12:29) to keep the north from worshipping at Jerusalem (12:26–27).</text>
+  <text class="note" x="380" y="912" text-anchor="middle" font-size="10.5">Schematic — relative positions only, not to scale or projection. Original CFM Corner map.</text>
+</svg>
