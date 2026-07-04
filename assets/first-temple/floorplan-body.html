@@ -1,0 +1,198 @@
+<style>
+.ft-mock{max-width:1100px;margin:10px auto 0;padding:8px 14px;border:1px dashed #b5873a;border-radius:8px;background:#fbf3e2;color:#7a5c2e;font:13px/1.4 system-ui,sans-serif}
+.ft-stage{max-width:1180px;margin:8px auto 0;padding:6px 16px 54vh}
+#ft-floorplan-svg{width:100%;height:auto;display:block}
+.ft-hit{fill:transparent;stroke:transparent;stroke-width:3;cursor:pointer;transition:fill .14s,stroke .14s}
+.ft-hit:hover{fill:rgba(181,135,58,.26);stroke:#b5873a}
+.ft-hit--frame{stroke-linejoin:round;stroke-linecap:round}
+#ft-tip{position:fixed;pointer-events:none;background:#2e2a22;color:#f3ecdd;font:13px/1 system-ui,sans-serif;padding:6px 10px;border-radius:6px;opacity:0;transform:translate(-50%,-130%);transition:opacity .12s;z-index:3000;white-space:nowrap}
+#ft-panel{position:fixed;left:0;right:0;bottom:0;width:100%;max-height:52vh;background:#f4ecd9;box-shadow:0 -10px 30px rgba(0,0,0,.20);border-top:3px solid #b5873a;transform:translateY(103%);transition:transform .26s cubic-bezier(.4,0,.2,1);z-index:3001;overflow:auto;padding:8px 0 36px;font:16px/1.6 Georgia,serif;color:#2e2a22}
+#ft-panel.on{transform:none}
+#ft-panel .handle{width:46px;height:5px;border-radius:3px;background:#d3c19a;margin:4px auto 8px}
+#ft-panel .inner{max-width:900px;margin:0 auto;padding:0 28px;position:relative}
+#ft-panel .x{position:absolute;top:-2px;right:24px;cursor:pointer;font:24px/1 system-ui;color:#7a5c2e;background:none;border:none}
+.ft-panel-img{float:right;max-width:36%;max-height:40vh;margin:2px 0 14px 22px;border-radius:8px;background:#fffdf6;border:1px solid #cdb98a;object-fit:contain}
+#ft-panel .eyebrow{font:11px/1 system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b5873a;margin:0}
+#ft-panel h2{font-size:25px;color:#7a5c2e;margin:6px 0 2px;line-height:1.15}#ft-panel .heb{font-size:18px;color:#5a4a2e;margin:0 0 2px}
+#ft-panel .scrip{display:inline-block;background:#efe6d2;border:1px solid #cdb98a;border-radius:999px;padding:3px 12px;font:12px/1 system-ui,sans-serif;color:#7a5c2e;margin:8px 0 12px}
+#ft-panel p{margin:10px 0}#ft-panel em{color:#6a4f28}
+.ft-deeper{margin-top:12px;border-top:1px dashed #cdb98a;padding-top:10px;clear:both}.ft-deeper>button{all:unset;cursor:pointer;color:#7a5c2e;font:13px/1 system-ui,sans-serif;letter-spacing:.04em;text-transform:uppercase}
+.ft-deeper .body{display:none;margin-top:10px;font-size:15px;color:#4a4234}.ft-deeper.open .body{display:block}
+</style>
+<div class="ft-stage"><svg id="ft-floorplan-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" font-family="Georgia, 'Times New Roman', serif">
+  <!-- Solomon's Temple floor plan — CFM/Moedim. WEST (Holy of Holies) left · EAST (entrance) right · N up · S down.
+       Side chambers N & S, 3 stories, 5/6/7 cubits (1 Kgs 6:6). Table of shewbread on the north, set back.
+       Steps up to the raised Holy of Holies (reconstruction). Altar centred + east ramp. Ten lavers (5+5). -->
+  <defs>
+    <radialGradient id="fire" cx="50%" cy="52%" r="60%"><stop offset="0%" stop-color="#f0b84e"/><stop offset="60%" stop-color="#d9802a"/><stop offset="100%" stop-color="#b5532f"/></radialGradient>
+    <g id="laver"><rect x="-13" y="-9" width="26" height="18" rx="3"/><circle cx="-9" cy="12" r="4"/><circle cx="9" cy="12" r="4"/><circle cx="0" cy="-13" r="7" fill="#8aa6a0" stroke="#6a8079"/></g>
+    <g id="lamp" fill="none"><path d="M0 0 v-22 M0 -10 q-9 0 -9 -13 M0 -10 q9 0 9 -13"/></g>
+  </defs>
+
+  <rect width="1280" height="640" fill="#f4ecd9"/>
+  <rect x="14" y="14" width="1252" height="612" rx="14" fill="none" stroke="#cdb98a" stroke-width="2"/>
+  <text x="640" y="54" text-anchor="middle" font-size="29" fill="#7a5c2e">Solomon's Temple — Floor Plan</text>
+  <text x="640" y="78" text-anchor="middle" font-size="14" fill="#9a8459">1 Kings 6–7 · entrance faces east · north is up</text>
+
+  <g transform="translate(64,148)" fill="#9a8459" font-size="13" text-anchor="middle">
+    <circle r="26" fill="none" stroke="#cdb98a" stroke-width="1.5"/><text y="-13">N</text><text y="22">S</text><text x="17" y="5">E</text><text x="-17" y="5">W</text>
+    <path d="M0 -8 L4 4 L0 1 L-4 4 Z" fill="#b5732f"/>
+  </g>
+
+  <!-- court floor -->
+  <rect x="300" y="150" width="900" height="360" rx="10" fill="#e7dcc0" stroke="#cdb98a" stroke-width="1.5"/>
+  <g stroke="#d8cba6" stroke-width="1"><path d="M300 230 H1200 M300 310 H1200 M300 390 H1200 M300 470 H1200 M420 150 V510 M540 150 V510 M960 150 V510 M1080 150 V510"/></g>
+  <!-- INNER COURT wall — three rows of hewn stone + a row of cedar beams (1 Kgs 6:36); brass-overlaid east gate (2 Chr 4:9) -->
+  <path d="M1196 290 V150 H88 V498 H1196 V350" fill="none" stroke="#c6ac7c" stroke-width="6"/>
+  <path d="M1196 290 V150 H88 V498 H1196 V350" fill="none" stroke="#9a7d3e" stroke-width="1.4" stroke-dasharray="3 7"/>
+  <g fill="#b8763a" stroke="#7a4a20" stroke-width="2"><rect x="1188" y="280" width="14" height="14" rx="2"/><rect x="1188" y="346" width="14" height="14" rx="2"/></g>
+
+  <!-- SIDE STORAGE CHAMBERS — NORTH & SOUTH only, 3 stories (5/6/7 cubits, 1 Kgs 6:6) -->
+  <rect x="132" y="180" width="564" height="52" rx="4" fill="#dcc88e" stroke="#a87f2c" stroke-width="2.5"/>
+  <rect x="132" y="408" width="564" height="52" rx="4" fill="#dcc88e" stroke="#a87f2c" stroke-width="2.5"/>
+  <g stroke="#b89a52" stroke-width="1.4">
+    <path d="M196 180 V232 M260 180 V232 M324 180 V232 M388 180 V232 M452 180 V232 M516 180 V232 M580 180 V232 M644 180 V232"/>
+    <path d="M196 408 V460 M260 408 V460 M324 408 V460 M388 408 V460 M452 408 V460 M516 408 V460 M580 408 V460 M644 408 V460"/>
+  </g>
+  <!-- door + winding stairs up to the side chambers, on the south (1 Kgs 6:8) -->
+  <g transform="translate(164,434)"><circle r="9" fill="#efd9a2" stroke="#7a4a20" stroke-width="1.3"/><path d="M0 -5 A5 5 0 1 1 -4.5 2.6 A3 3 0 1 1 1 0" fill="none" stroke="#7a4a20" stroke-width="1.2"/></g>
+
+  <!-- house body -->
+  <rect x="132" y="232" width="564" height="176" rx="3" fill="#e9cd84" stroke="#a87f2c" stroke-width="3"/>
+
+  <!-- DEVIR + cherubim + ark -->
+  <rect x="138" y="238" width="170" height="164" rx="3" fill="#cda53f" stroke="#8a6a28" stroke-width="2.5"/>
+  <!-- Two giant cherubim — wings spread to span the room and meet over the ark (1 Kgs 6:23–28) -->
+  <!-- Two giant cherubim — wings spread (1 Kgs 6:23–28), oriented toward the entrance (flipped) -->
+  <g fill="#e7cd84" stroke="#8a6a28" stroke-width="1.1" transform="rotate(180 214 320)">
+    <path d="M210 264 C192 250 172 250 164 264 C178 268 196 268 208 270 Z"/>
+    <path d="M216 274 C230 286 235 302 227 316 C219 304 212 288 210 276 Z"/>
+    <ellipse cx="211" cy="270" rx="8" ry="10"/>
+    <path d="M210 376 C192 390 172 390 164 376 C178 372 196 372 208 370 Z"/>
+    <path d="M216 366 C230 354 235 338 227 324 C219 336 212 352 210 364 Z"/>
+    <ellipse cx="211" cy="370" rx="8" ry="10"/>
+  </g>
+  <!-- Ark of the Covenant — VERTICAL, facing the entrance; vertical carrying staves + two mercy-seat cherubim -->
+  <line x1="206" y1="294" x2="206" y2="346" stroke="#b8763a" stroke-width="2.4"/><line x1="222" y1="294" x2="222" y2="346" stroke="#b8763a" stroke-width="2.4"/>
+  <circle cx="206" cy="294" r="2.6" fill="#b8763a"/><circle cx="206" cy="346" r="2.6" fill="#b8763a"/><circle cx="222" cy="294" r="2.6" fill="#b8763a"/><circle cx="222" cy="346" r="2.6" fill="#b8763a"/>
+  <rect x="203" y="305" width="22" height="30" rx="2" fill="#d9b44a" stroke="#7a5a22" stroke-width="1.4"/>
+  <g fill="#efd9a2" stroke="#7a5a22" stroke-width="0.8"><path d="M214 314 q-5 -3 -8 1 q1 -6 8 -4 Z"/><path d="M214 326 q-5 3 -8 -1 q1 6 8 4 Z"/></g>
+
+  <!-- partition: olive-wood doors + veil -->
+  <line x1="308" y1="240" x2="308" y2="400" stroke="#7a4a20" stroke-width="5"/>
+  <line x1="314" y1="244" x2="314" y2="396" stroke="#7a4a20" stroke-width="2" stroke-dasharray="6 5"/>
+
+  <!-- STEPS up to the raised Holy of Holies (reconstruction; matches the interior render) -->
+  <g fill="#efd9a2" stroke="#a87f2c" stroke-width="1.3"><rect x="318" y="286" width="48" height="72" rx="2"/></g>
+  <g stroke="#a87f2c" stroke-width="1.2" fill="none"><path d="M334 286 V358 M350 286 V358"/></g>
+
+  <!-- HEKHAL furnishings: incense altar before the veil; TEN lampstands + TEN tables, five on EACH side (1 Kgs 7:49; 2 Chr 4:7–8) -->
+  <rect x="376" y="310" width="20" height="22" rx="2" fill="#d9b44a" stroke="#8a6a28"/>
+  <!-- NORTH side: tables (near the wall) + lampstands -->
+  <g fill="#d9b44a" stroke="#8a6a28"><rect x="430" y="254" width="26" height="14" rx="2"/><rect x="486" y="254" width="26" height="14" rx="2"/><rect x="542" y="254" width="26" height="14" rx="2"/><rect x="598" y="254" width="26" height="14" rx="2"/><rect x="654" y="254" width="26" height="14" rx="2"/></g>
+  <g stroke="#c8962c" stroke-width="2" fill="none"><use href="#lamp" x="443" y="300"/><use href="#lamp" x="499" y="300"/><use href="#lamp" x="555" y="300"/><use href="#lamp" x="611" y="300"/><use href="#lamp" x="667" y="300"/></g>
+  <!-- SOUTH side: lampstands + tables (near the wall) -->
+  <g stroke="#c8962c" stroke-width="2" fill="none"><use href="#lamp" x="443" y="368"/><use href="#lamp" x="499" y="368"/><use href="#lamp" x="555" y="368"/><use href="#lamp" x="611" y="368"/><use href="#lamp" x="667" y="368"/></g>
+  <g fill="#d9b44a" stroke="#8a6a28"><rect x="430" y="388" width="26" height="14" rx="2"/><rect x="486" y="388" width="26" height="14" rx="2"/><rect x="542" y="388" width="26" height="14" rx="2"/><rect x="598" y="388" width="26" height="14" rx="2"/><rect x="654" y="388" width="26" height="14" rx="2"/></g>
+
+  <!-- ULAM porch -->
+  <rect x="696" y="260" width="96" height="120" rx="3" fill="#e3cf9a" stroke="#a87f2c" stroke-width="2.5"/>
+  <!-- Hekhal entrance doors (fir, folding, gold; 1 Kgs 6:33–35) -->
+  <rect x="689" y="304" width="9" height="32" rx="1" fill="#d9b44a" stroke="#8a6a28" stroke-width="1.4"/>
+  <!-- pillars Boaz (N) / Jachin (S) — set IN the porch (1 Kgs 7:21) -->
+  <g fill="#b8763a" stroke="#7a4a20" stroke-width="2.5"><circle cx="762" cy="284" r="13"/><circle cx="762" cy="356" r="13"/></g>
+  <!-- entrance stairs up to the porch — nested against the porch (Shir HaMaalot tradition) -->
+  <g fill="#efd9a2" stroke="#a87f2c" stroke-width="1.3"><rect x="790" y="290" width="58" height="60" rx="2"/></g>
+  <g stroke="#a87f2c" stroke-width="1.2" fill="none"><path d="M804 290 V350 M818 290 V350 M832 290 V350"/></g>
+
+  <!-- BRAZEN ALTAR (centred on axis, scooted east; east ramp) -->
+  <g>
+    <path d="M1066 296 H1116 V344 H1066 Z" fill="#c2925a" stroke="#7a4a20" stroke-width="2"/>
+    <g stroke="#7a4a20" stroke-width="1.2"><path d="M1078 296 V344 M1090 296 V344 M1102 296 V344"/></g>
+    <rect x="910" y="242" width="156" height="156" rx="6" fill="#b06a34" stroke="#7a4a20" stroke-width="3"/>
+    <rect x="934" y="266" width="108" height="108" rx="4" fill="#9c5f2e" stroke="#7a4a20" stroke-width="2"/>
+    <circle cx="988" cy="320" r="36" fill="url(#fire)"/>
+    <g fill="#c98a4e" stroke="#7a4a20" stroke-width="1.5"><circle cx="910" cy="242" r="6"/><circle cx="1066" cy="242" r="6"/><circle cx="910" cy="398" r="6"/><circle cx="1066" cy="398" r="6"/></g>
+  </g>
+
+  <!-- MOLTEN SEA (SE, on twelve oxen) -->
+  <g transform="translate(1150,452)">
+    <g fill="#b8763a" stroke="#7a4a20" stroke-width="1.5"><circle cx="-30" cy="0" r="8"/><circle cx="-15" cy="20" r="8"/><circle cx="15" cy="20" r="8"/><circle cx="30" cy="0" r="8"/><circle cx="15" cy="-20" r="8"/><circle cx="-15" cy="-20" r="8"/></g>
+    <circle r="38" fill="#b06a34" stroke="#7a4a20" stroke-width="3"/><circle r="28" fill="#8aa6a0" stroke="#6a8079" stroke-width="2"/>
+  </g>
+
+  <!-- TEN LAVERS (5 + 5) -->
+  <g fill="#c98a4e" stroke="#7a4a20" stroke-width="1.5">
+    <use href="#laver" x="840" y="200"/><use href="#laver" x="910" y="200"/><use href="#laver" x="980" y="200"/><use href="#laver" x="1050" y="200"/><use href="#laver" x="1120" y="200"/>
+    <use href="#laver" x="822" y="456"/><use href="#laver" x="884" y="456"/><use href="#laver" x="946" y="456"/><use href="#laver" x="1008" y="456"/><use href="#laver" x="1070" y="456"/>
+  </g>
+
+  <!-- labels -->
+  <g text-anchor="middle" fill="#6a4f28">
+    <text x="222" y="168" font-size="16">Devir</text><text x="222" y="486" font-size="10" fill="#9a8459">Holy of Holies · 20³</text>
+    <text x="500" y="168" font-size="16">Hekhal</text><text x="500" y="486" font-size="10" fill="#9a8459">Holy Place · 40 × 20 × 30</text>
+    <text x="744" y="402" font-size="12">Ulam</text>
+    <text x="988" y="232" font-size="13" fill="#7a4a20">Brazen Altar</text>
+    <text x="1150" y="506" font-size="12" fill="#7a4a20">Molten Sea</text>
+    <text x="980" y="178" font-size="10" fill="#9a8459">Ten Lavers (5 + 5)</text>
+    <text x="762" y="250" font-size="11" fill="#7a4a20">Boaz</text><text x="762" y="394" font-size="11" fill="#7a4a20">Jachin</text>
+    <text x="828" y="372" font-size="9" fill="#9a8459">entrance stairs</text>
+    <text x="414" y="206" font-size="9.5" fill="#9a8459">north &amp; south side chambers · 3 stories · 5–7 cubits</text>
+    <text x="200" y="146" font-size="11" fill="#9a8459">Inner Court</text>
+    <text x="1132" y="316" font-size="9" fill="#9a8459">brass gate ⇥</text>
+    <text x="164" y="460" font-size="8" fill="#9a8459">stair</text>
+    <text x="376" y="378" font-size="9" fill="#9a8459">steps (reconstruction)</text>
+  </g>
+
+  <g>
+    <line x1="138" y1="566" x2="228" y2="566" stroke="#6a4f28" stroke-width="3"/><line x1="138" y1="560" x2="138" y2="572" stroke="#6a4f28" stroke-width="3"/><line x1="228" y1="560" x2="228" y2="572" stroke="#6a4f28" stroke-width="3"/>
+    <text x="183" y="588" text-anchor="middle" font-size="12" fill="#6a4f28">10 cubits (≈ 4.6 m)</text>
+  </g>
+  <text x="1166" y="604" text-anchor="end" font-size="10" fill="#b0a079">No remains of Solomon's Temple excavated — reconstruction from the biblical text. Original CFM Corner art.</text>
+<g id="ft-hit-layer">
+<path class="ft-hit ft-hit--frame" data-region="courtyard" data-title="The Courts" d="M1196 290 V150 H88 V498 H1196 V350" style="fill:none;stroke-width:14"/>
+<rect class="ft-hit" data-region="side-chambers" data-title="The Side Chambers" x="132" y="180" width="564" height="52" rx="5"/>
+<rect class="ft-hit" data-region="side-chambers" data-title="The Side Chambers" x="132" y="408" width="564" height="52" rx="5"/>
+<rect class="ft-hit" data-region="hekhal" data-title="The Holy Place (Hekhal)" x="316" y="238" width="372" height="164" rx="5"/>
+<rect class="ft-hit" data-region="devir" data-title="The Holy of Holies (Devir) &amp; the Ark" x="138" y="238" width="170" height="164" rx="5"/>
+<rect class="ft-hit" data-region="ulam" data-title="The Porch (Ulam)" x="696" y="260" width="96" height="120" rx="5"/>
+<rect class="ft-hit" data-region="brazen-altar" data-title="The Altar of Burnt Offering" x="910" y="242" width="156" height="156" rx="5"/>
+<circle class="ft-hit" data-region="molten-sea" data-title="The Molten Sea" cx="1150" cy="452" r="46"/>
+<rect class="ft-hit" data-region="lavers" data-title="The Ten Lavers" x="822" y="184" width="322" height="34" rx="5"/>
+<rect class="ft-hit" data-region="lavers" data-title="The Ten Lavers" x="804" y="440" width="290" height="34" rx="5"/>
+<rect class="ft-hit" data-region="approach-steps" data-title="The Approach (Steps)" x="790" y="288" width="58" height="62" rx="5"/>
+<rect class="ft-hit" data-region="olive-doors" data-title="The Olive-Wood Doors / Veil" x="306" y="282" width="64" height="82" rx="5"/>
+<rect class="ft-hit" data-region="incense-altar" data-title="The Altar of Incense" x="372" y="306" width="28" height="30" rx="5"/>
+<rect class="ft-hit" data-region="tables" data-title="The Tables of Shewbread" x="426" y="250" width="262" height="22" rx="5"/>
+<rect class="ft-hit" data-region="tables" data-title="The Tables of Shewbread" x="426" y="384" width="262" height="22" rx="5"/>
+<rect class="ft-hit" data-region="lampstands" data-title="The Golden Lampstands" x="430" y="278" width="250" height="28" rx="5"/>
+<rect class="ft-hit" data-region="lampstands" data-title="The Golden Lampstands" x="430" y="346" width="250" height="28" rx="5"/>
+<rect class="ft-hit" data-region="cherubim" data-title="The Two Cherubim" x="180" y="252" width="56" height="136" rx="5"/>
+<rect class="ft-hit" data-region="ark" data-title="The Ark of the Covenant" x="194" y="302" width="42" height="34" rx="5"/>
+<circle class="ft-hit" data-region="boaz" data-title="The Pillar Boaz" cx="762" cy="284" r="18"/>
+<circle class="ft-hit" data-region="jachin" data-title="The Pillar Jachin" cx="762" cy="356" r="18"/>
+</g>
+</svg>
+</div>
+<div id="ft-tip"></div><aside id="ft-panel"></aside>
+<script>
+const C={"ulam": {"title": "The Porch (Ulam)", "scripture": "1 Kings 6:3", "hebrew": "אוּלָם", "translit": "ulam", "copy": "Before the house proper stood the *ulam*, the porch: \"twenty cubits was the length thereof, according to the breadth of the house; and ten cubits was the breadth thereof before the house\" (1 Kings 6:3) — a 20-cubit-wide, 10-cubit-deep portico spanning the full front of the building. It is the hinge between the open courtyard, where all Israel could come, and the roofed sanctuary only priests would enter.", "deep": "The porch frames the two great bronze pillars (next two hotspots) and announces the building's east-facing orientation: one entered from the east and moved *west*, deeper and higher, toward the Holy of Holies — the architecture itself a journey inward toward the presence of God.", "image": "pillars.png"}, "jachin": {"title": "The Pillar Jachin", "scripture": "1 Kings 7:21", "hebrew": "יָכִין", "translit": "Yakhin", "copy": "At the porch stood two free-standing bronze pillars. \"He set up the right pillar, and called the name thereof Jachin\" (1 Kings 7:21). Each rose eighteen cubits with a five-cubit ornamented capital (1 Kings 7:15–16). They held up no roof — they were monuments, named like proclamations over the threshold of the house.", "deep": "The names read almost as a sentence: *Jachin* — \"He establishes\" — and *Boaz* — \"in him is strength.\" Together they may have declared the LORD's establishing strength over the throne and the temple. *(The \"He establishes / in him is strength\" glosses are the traditional Hebrew etymology — an interpretive reading, not stated by the text.)* Note the 2 Chronicles 3:15 parallel gives the height as thirty-five cubits; the guide renders the eighteen of 1 Kings 7:15 and footnotes the tension.", "image": "pillars.png"}, "boaz": {"title": "The Pillar Boaz", "scripture": "1 Kings 7:21", "hebrew": "בֹּעַז", "translit": "Boaz", "copy": "\"And he set up the left pillar, and called the name thereof Boaz\" (1 Kings 7:21) — the northern twin of Jachin, identical in scale, flanking the entrance so that everyone who approached the house passed between the two great named pillars.", "deep": "See `jachin` for the paired-name reading. The pillars' bronze, like the sea and the lavers, came from the work of Hiram of Tyre (1 Kings 7:13–14) — the Phoenician alliance that supplied the craftsmanship for Solomon's bronze.", "image": "pillars.png"}, "hekhal": {"title": "The Holy Place (Hekhal)", "scripture": "1 Kings 6:17, 29", "hebrew": "הֵיכָל", "translit": "hekhal", "copy": "Past the porch lay the *hekhal*, the Holy Place — \"forty cubits long\" (1 Kings 6:17), the largest room, walled in cedar and overlaid with gold. Here stood the golden lampstands, the tables, and the altar of incense; only priests entered, to tend the light and the bread and to burn incense before the inner veil.", "deep": "Its walls were a garden in gold: \"he carved all the walls of the house round about with carved figures of cherubims and palm trees and open flowers, within and without\" (1 Kings 6:29). The Eden imagery is deliberate — to step inside was to re-enter the garden, the cherubim no longer barring the way but woven into the walls. *(On the furnishings — ten lampstands, the tables, the incense altar — the verified count is **ten** candlesticks and **ten** tables, 2 Chr 4:7–8; see the Furnishings section A4.)*", "image": "holyplace.png"}, "olive-doors": {"title": "The Olive-Wood Doors / Veil", "scripture": "1 Kings 6:31–32; 2 Chronicles 3:14", "hebrew": "דֶּלֶת · פָּרֹכֶת", "translit": "delet · paroketh", "copy": "The innermost room was closed off by \"doors of olive tree… and he carved upon them carvings of cherubims and palm trees and open flowers, and overlaid them with gold\" (1 Kings 6:31–32). The same boundary that the Tabernacle marked with a woven veil, the Temple marked with carved, gold-overlaid olive-wood doors.", "deep": "The sources describe the partition two ways: **1 Kings 6:31–32 gives olive-wood doors; 2 Chronicles 3:14 gives a veil** \"of blue, and purple, and crimson, and fine linen.\" The guide presents both rather than flattening them — likely a door *and* a veil, as in later temple tradition. Either way, it is the threshold only the high priest crossed, and only once a year.", "image": "veil.png"}, "devir": {"title": "The Holy of Holies (Devir) & the Ark", "scripture": "1 Kings 6:19–20; 8:6", "hebrew": "דְּבִיר · אֲרוֹן הַבְּרִית", "translit": "devir · aron ha-berit", "copy": "At the far west stood the *devir*, the Holy of Holies — \"twenty cubits in length, and twenty cubits in breadth, and twenty cubits in the height thereof: and he overlaid it with pure gold\" (1 Kings 6:20). A perfect cube of gold, prepared \"to set there the ark of the covenant of the LORD\" (6:19). No light, no window — the room where the LORD had said He would dwell in \"thick darkness\" (1 Kings 8:12).", "deep": "The cube is significant: the later New Jerusalem is likewise measured as a perfect cube (Revelation 21:16), a shape signaling completed, perfect holiness — the place where heaven and earth meet. The Holy of Holies is the architectural heart toward which the whole east-to-west journey of the building ascends.\n\n**The Ark of the Covenant.** Into the *devir* \"the priests brought in the ark of the covenant of the LORD unto his place… even under the wings of the cherubims\" (1 Kings 8:6). By Solomon's day it held only the two stone tablets (1 Kings 8:9) — the covenant itself, resting at the center of the house, beneath the wings, in the dark. The ark's placement completes the building's logic: every dimension, every gold-clad wall, every cherub points inward to *this* — the covenant at the heart of the dwelling. On what the ark no longer contained (the manna and Aaron's rod) and the theology of that absence, see the **Dedication section (A6)**.", "image": "holyofholies.png"}, "cherubim": {"title": "The Two Cherubim", "scripture": "1 Kings 6:23, 27–28", "hebrew": "כְּרוּבִים", "translit": "keruvim", "copy": "Within the *devir* stood \"two cherubims of olive tree, each ten cubits high\" (1 Kings 6:23), overlaid with gold (6:28). They were enormous: \"the wing of the one touched the one wall, and the wing of the other cherub touched the other wall; and their wings touched one another in the midst of the house\" (6:27) — four wings spanning the full twenty-cubit width.", "deep": "The cherubim formed the throne-seat of the invisible LORD, who is enthroned \"between the cherubims\" (cf. 1 Samuel 4:4; Psalm 80:1). The same beings who guarded Eden's gate (Genesis 3:24) here overshadow the mercy seat — guardianship transformed into nearness.\n\n**Why this form? [Reconstruction]** Scripture never describes the cherubim's shape, so any depiction is reconstruction. This guide draws on **Ezekiel's** vision, where the living creatures — whom Ezekiel explicitly names \"cherubims\" (Ezekiel 10:20) — carry four faces: \"the face of a man… the face of a lion… the face of an ox… the face of an eagle\" (Ezekiel 1:10). The Assyrian winged guardian (*lamassu*) fuses that same set — human head, lion/ox body, eagle wings — into a single figure, reaching into the very Ancient Near Eastern vocabulary Ezekiel's own vision speaks rather than borrowing from outside it. *(The Devir held two sets of cherubim — Solomon's giant olive-wood pair, 1 Kings 6:23–28, and the smaller mercy-seat cherubim already on the ark, Exodus 25:18–20.)*", "image": "cherub.png"}, "molten-sea": {"title": "The Molten Sea", "scripture": "1 Kings 7:23–26", "hebrew": "יָם", "translit": "yam", "copy": "In the courtyard stood the \"molten sea, ten cubits from the one brim to the other… his height was five cubits: and a line of thirty cubits did compass it round about\" (1 Kings 7:23). It \"stood upon twelve oxen\" facing outward in four groups of three (7:25), and \"contained two thousand baths\" (7:26) — roughly eleven to twelve thousand gallons, for the priests' washing.", "deep": "The twelve oxen face the four compass directions — three to each — a figure of all Israel gathered around the place of cleansing. Note the capacity discrepancy: 1 Kings 7:26 gives **2,000 baths**, 2 Chronicles 4:5 gives **3,000**; the guide renders one and footnotes the other. For the Latter-day Saint connection to washings and anointings (D&C 124:38–39), see the Dedication section (A6).", "image": "sea.png"}, "brazen-altar": {"title": "The Altar of Burnt Offering", "scripture": "2 Chronicles 4:1; 1 Kings 8:64", "hebrew": "מִזְבֵּחַ", "translit": "mizbeach", "copy": "Dominating the courtyard before the porch stood the bronze altar of burnt offering — \"twenty cubits the length thereof, and twenty cubits the breadth thereof, and ten cubits the height thereof\" (2 Chronicles 4:1). It was so large that at the dedication Solomon also had to hallow \"the middle of the court\" to handle the offerings (1 Kings 8:64).", "deep": "The altar is the first thing encountered on entering the court and the last station before the holy building — sacrifice as the gateway to approach. Its placement in the visitor's path makes the theological point spatial: there is no coming near without atonement. *(1 Kings 7 omits the altar's dimensions; the 20×20×10 figures come from the 2 Chronicles 4:1 parallel — a [BIBLICAL] cross-source, flagged.)*", "image": "altar.png"}, "lavers": {"title": "The Ten Lavers", "scripture": "1 Kings 7:38–39", "hebrew": "כִּיּוֹר", "translit": "kiyyor", "copy": "Flanking the court were \"ten lavers of brass: one laver contained forty baths: and every laver was four cubits\" (1 Kings 7:38), set on wheeled bases — \"five bases on the right side of the house, and five on the left\" (7:39). Where the great sea served the priests, the ten lavers were for rinsing the offerings.", "deep": "Sea and lavers together make the courtyard a place of water and washing before the house of fire and gold — a graded approach from cleansing to consecration to presence.", "image": "laver.png"}, "side-chambers": {"title": "The Side Chambers", "scripture": "1 Kings 6:5–6", "hebrew": "צֵלָע", "translit": "tsela", "copy": "Around three sides of the house ran a structure of chambers: \"against the wall of the house he built chambers round about… both of the temple and of the oracle\" (1 Kings 6:5) — three stories of rooms hugging the north and south walls, widening floor by floor on rebated ledges so no beams pierced the sanctuary wall (6:6).", "deep": "These chambers stored temple treasure and supplies and housed the work of the priests — the practical machinery that let the sacred center function. They also visually thickened the building, setting the gold-clad core apart within an outer shell.", "image": "chambers.png"}, "approach-steps": {"title": "The Approach (Steps)", "scripture": "2 Chronicles 9:11; cf. Ezekiel 40:22, 26", "hebrew": "מְסִלּוֹת", "translit": "mesillot", "copy": "The house sat on a raised platform, higher than the courtyard, so worshippers *went up* to it — 2 Chronicles 9:11 records that Solomon made “terraces” (*mesillot*) of algum wood “to the house of the LORD.” The number isn’t recorded for Solomon’s Temple; this guide shows **seven** as a reverent reconstruction.", "deep": "By later tradition the steps became holy ground for worship itself: the **Shir HaMaalot** — the fifteen “Songs of Ascents” (Psalms 120–134) — are linked in rabbinic memory to the fifteen steps the Levites ascended as they sang on the feast days (Mishnah Middot 2:5; b. Sukkah 51b): worship literally *rising* toward the house of God.", "image": ""}, "ark": {"title": "The Ark of the Covenant", "scripture": "1 Kings 8:6–9", "hebrew": "אֲרוֹן הַבְּרִית", "translit": "aron ha-berit", "copy": "At the center of the Devir, beneath the wings of the cherubim, rested the ark: “the priests brought in the ark of the covenant of the LORD unto his place… even under the wings of the cherubims” (1 Kings 8:6), which “covered the ark and the staves thereof above” (8:7). By Solomon’s day it held only “the two tables of stone” (8:9).", "deep": "The ark was the one furnishing carried over from the Tabernacle into the Temple — the covenant itself, at rest in the dark at the heart of the house. On what it no longer contained — the manna and Aaron’s rod — see the **Dedication (A6)**.", "image": "ark.png"}, "incense-altar": {"title": "The Altar of Incense", "scripture": "1 Kings 6:22; 7:48", "hebrew": "מִזְבַּח הַקְּטֹרֶת", "translit": "mizbeach ha-qetoret", "copy": "Directly before the veil stood the golden altar of incense — “the whole altar that was by the oracle he overlaid with gold” (1 Kings 6:22); “the altar of gold” (7:48). Cedar overlaid with gold, it stood at the threshold of the Holy of Holies, where incense rose morning and evening.", "deep": "Its place *before the oracle* set the rising smoke at the very door of God’s presence — a figure of prayer ascending: “Let my prayer be set forth before thee as incense” (Psalm 141:2); in heaven the incense rises “with the prayers of all saints” (Revelation 8:3–4).", "image": "incense.png"}, "tables": {"title": "The Tables of Shewbread", "scripture": "1 Kings 7:48; 2 Chronicles 4:8", "hebrew": "שֻׁלְחָן", "translit": "shulchan", "copy": "Solomon made “the table of gold, whereupon the shewbread was” (1 Kings 7:48) — and ten tables in all, “five on the right side, and five on the left” (2 Chronicles 4:8). Where the Tabernacle had a single table on the north, the Temple multiplied them; on them the bread of the Presence was set in order before the LORD continually.", "deep": "The bread of the Presence — “twelve cakes… in two rows, six on a row, upon the pure table before the LORD” (Leviticus 24:5–6) — was renewed every sabbath “by an everlasting covenant” (24:8): Israel, tribe by tribe, kept before God’s face in the holy place.", "image": "table.png"}, "lampstands": {"title": "The Golden Lampstands", "scripture": "1 Kings 7:49; 2 Chronicles 4:7", "hebrew": "מְנוֹרוֹת", "translit": "menorot", "copy": "Solomon made “the candlesticks of pure gold, five on the right side, and five on the left, before the oracle” (1 Kings 7:49) — ten golden lampstands (2 Chronicles 4:7), with “the flowers, and the lamps, and the tongs of gold.” Where the Tabernacle held a single seven-branched menorah, the Temple filled the Holy Place with light.", "deep": "The lampstands burned continually before the inner veil — the only light in the windowless Holy Place. Light, bread, and incense together made the room a place of perpetual ministry before the LORD; the seven-branched form recalls the tree of life and creation’s completeness (cf. Exodus 25:31–40).", "image": "menorah.png"}, "courtyard": {"title": "The Courts", "scripture": "1 Kings 6:36; 7:12; 2 Chronicles 4:9", "hebrew": "חָצֵר", "translit": "chatzer", "copy": "The whole house stood within walled courts. Solomon “built the inner court with three rows of hewed stone, and a row of cedar beams” (1 Kings 6:36) — and beyond it “the great court round about” (1 Kings 7:12). 2 Chronicles 4:9 names them the **court of the priests** and the **great court**, with “doors for the court… overlaid… with brass.” A brass-overlaid gate on the east opened the way in.", "deep": "The courts graded the approach to God by holiness: all Israel could gather in the **great court**, but only the priests entered the **inner court** nearest the house — nearness to the LORD ordered and guarded, not casual. At the dedication the bronze altar proved too small, so Solomon *“hallow[ed] the middle of the court that was before the house of the LORD”* to receive the multitude of offerings (1 Kings 8:64).\n\n**Where were the gates? [Reconstruction]** Scripture records only that the great-court doors were **overlaid with brass** (2 Chronicles 4:9) and that the house faced **east**, so the principal approach came from the east — it never fixes the gates’ number or position for Solomon’s courts. The six-chambered gatehouse shown here follows the monumental city-gates of Solomon’s own building program at **Hazor, Megiddo, and Gezer** (1 Kings 9:15); a fuller east/north/south scheme would follow **Ezekiel’s** visionary temple (Ezekiel 40:6, 20, 24 — notably with no west gate). Both are shown as reconstruction, not as detail the text gives.", "image": "courtyard.png"}};
+function ftmd(s){return s.split(/\n\n+/).map(p=>'<p>'+p.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/\*(.+?)\*/g,'<em>$1</em>')+'</p>').join('');}
+const ftTip=document.getElementById('ft-tip'),ftPanel=document.getElementById('ft-panel');
+document.querySelectorAll('.ft-hit').forEach(h=>{
+ h.addEventListener('mouseenter',()=>{ftTip.textContent=h.dataset.title;ftTip.style.opacity=1;});
+ h.addEventListener('mousemove',e=>{ftTip.style.left=e.clientX+'px';ftTip.style.top=e.clientY+'px';});
+ h.addEventListener('mouseleave',()=>ftTip.style.opacity=0);
+ h.addEventListener('click',()=>ftOpen(h.dataset.region));});
+function ftOpen(id){const d=C[id];if(!d)return;ftTip.style.opacity=0;
+ const body=(d.image?'<img class="ft-panel-img" src="/images/culture/first-temple/props/'+d.image+'" alt="">':'')
+  +'<p class="eyebrow">Solomon\'s Temple</p><h2>'+d.title+'</h2>'
+  +(d.hebrew?'<p class="heb"><em>'+d.translit+'</em> ('+d.hebrew+')</p>':'')
+  +(d.scripture?'<span class="scrip">'+d.scripture+'</span>':'')+ftmd(d.copy)
+  +(d.deep?'<div class="ft-deeper"><button onclick="this.parentNode.classList.toggle(\'open\')">▸ Go deeper</button><div class="body">'+ftmd(d.deep)+'</div></div>':'');
+ ftPanel.innerHTML='<div class="handle"></div><div class="inner"><button class="x" onclick="ftClose()">×</button>'+body+'</div>';
+ ftPanel.classList.add('on');ftPanel.scrollTop=0;}
+function ftClose(){ftPanel.classList.remove('on');}
+document.addEventListener('click',e=>{if(ftPanel.classList.contains('on')&&!e.target.closest('#ft-panel')&&!e.target.closest('.ft-hit'))ftClose();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')ftClose();});
+</script>

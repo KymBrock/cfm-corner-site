@@ -1,0 +1,157 @@
+# Solomon's Temple — floor-plan hotspots (flagship interactive)
+# Mirrors the Tabernacle contract: {id, title, tooltip, scripture, translit, hebrew, x, y, copy, deep_dive}
+# Base image: static/images/culture/first-temple/temple-floorplan.svg (verified cubit geometry).
+# CONTENT is verbatim from the verified vault draft (03-floor-plan-hotspots.DRAFT.md, Opus, scripture-checked 2026-06-22).
+# x/y are percentages set by the build lane against the actual SVG (entrance/east at right, Devir/west at left; right = south).
+# The Ark is folded into the `devir` hotspot (same inner cube) per the feature-list decision.
+first-temple:
+  intro_snippet:
+    title: "From Court to Cube"
+    copy: "One entered from the east and moved west — through the porch, between the two bronze pillars, into the golden Holy Place, and toward the windowless cube where the LORD dwelt in thick darkness. The plan is a journey inward and upward toward the presence of God."
+  hotspots:
+    - id: ulam
+      title: "The Porch (Ulam)"
+      tooltip: "The entrance portico — the threshold where the holy began."
+      scripture: "1 Kings 6:3"
+      translit: "ulam"
+      hebrew: "אוּלָם"
+      x: 58
+      y: 47
+      copy: |
+        Before the house proper stood the *ulam*, the porch: "twenty cubits was the length thereof, according to the breadth of the house; and ten cubits was the breadth thereof before the house" (1 Kings 6:3) — a 20-cubit-wide, 10-cubit-deep portico spanning the full front of the building. It is the hinge between the open courtyard, where all Israel could come, and the roofed sanctuary only priests would enter.
+      deep_dive: |
+        The porch frames the two great bronze pillars (next two hotspots) and announces the building's east-facing orientation: one entered from the east and moved *west*, deeper and higher, toward the Holy of Holies — the architecture itself a journey inward toward the presence of God.
+
+    - id: jachin
+      title: "The Pillar Jachin"
+      tooltip: 'The right-hand bronze pillar — "He establishes."'
+      scripture: "1 Kings 7:21"
+      translit: "Yakhin"
+      hebrew: "יָכִין"
+      x: 62
+      y: 63
+      copy: |
+        At the porch stood two free-standing bronze pillars. "He set up the right pillar, and called the name thereof Jachin" (1 Kings 7:21). Each rose eighteen cubits with a five-cubit ornamented capital (1 Kings 7:15–16). They held up no roof — they were monuments, named like proclamations over the threshold of the house.
+      deep_dive: |
+        The names read almost as a sentence: *Jachin* — "He establishes" — and *Boaz* — "in him is strength." Together they may have declared the LORD's establishing strength over the throne and the temple. *(The "He establishes / in him is strength" glosses are the traditional Hebrew etymology — an interpretive reading, not stated by the text.)* Note the 2 Chronicles 3:15 parallel gives the height as thirty-five cubits; the guide renders the eighteen of 1 Kings 7:15 and footnotes the tension.
+
+    - id: boaz
+      title: "The Pillar Boaz"
+      tooltip: 'The left-hand bronze pillar — "In him is strength."'
+      scripture: "1 Kings 7:21"
+      translit: "Boaz"
+      hebrew: "בֹּעַז"
+      x: 62
+      y: 31
+      copy: |
+        "And he set up the left pillar, and called the name thereof Boaz" (1 Kings 7:21) — the northern twin of Jachin, identical in scale, flanking the entrance so that everyone who approached the house passed between the two great named pillars.
+      deep_dive: |
+        See `jachin` for the paired-name reading. The pillars' bronze, like the sea and the lavers, came from the work of Hiram of Tyre (1 Kings 7:13–14) — the Phoenician alliance that supplied the craftsmanship for Solomon's bronze.
+
+    - id: hekhal
+      title: "The Holy Place (Hekhal)"
+      tooltip: "The main hall — golden walls, light, bread, and incense."
+      scripture: "1 Kings 6:17, 29"
+      translit: "hekhal"
+      hebrew: "הֵיכָל"
+      x: 38
+      y: 47
+      copy: |
+        Past the porch lay the *hekhal*, the Holy Place — "forty cubits long" (1 Kings 6:17), the largest room, walled in cedar and overlaid with gold. Here stood the golden lampstands, the tables, and the altar of incense; only priests entered, to tend the light and the bread and to burn incense before the inner veil.
+      deep_dive: |
+        Its walls were a garden in gold: "he carved all the walls of the house round about with carved figures of cherubims and palm trees and open flowers, within and without" (1 Kings 6:29). The Eden imagery is deliberate — to step inside was to re-enter the garden, the cherubim no longer barring the way but woven into the walls. *(On the furnishings — ten lampstands, the tables, the incense altar — the verified count is **ten** candlesticks and **ten** tables, 2 Chr 4:7–8; see the Furnishings section A4.)*
+
+    - id: olive-doors
+      title: "The Olive-Wood Doors / Veil"
+      tooltip: "The partition between the Holy Place and the Holy of Holies."
+      scripture: "1 Kings 6:31–32; 2 Chronicles 3:14"
+      translit: "delet · paroketh"
+      hebrew: "דֶּלֶת · פָּרֹכֶת"
+      x: 23
+      y: 47
+      copy: |
+        The innermost room was closed off by "doors of olive tree… and he carved upon them carvings of cherubims and palm trees and open flowers, and overlaid them with gold" (1 Kings 6:31–32). The same boundary that the Tabernacle marked with a woven veil, the Temple marked with carved, gold-overlaid olive-wood doors.
+      deep_dive: |
+        The sources describe the partition two ways: **1 Kings 6:31–32 gives olive-wood doors; 2 Chronicles 3:14 gives a veil** "of blue, and purple, and crimson, and fine linen." The guide presents both rather than flattening them — likely a door *and* a veil, as in later temple tradition. Either way, it is the threshold only the high priest crossed, and only once a year.
+
+    - id: devir
+      title: "The Holy of Holies (Devir) & the Ark"
+      tooltip: "The innermost cube — God's earthly throne room, holding the ark."
+      scripture: "1 Kings 6:19–20; 8:6"
+      translit: "devir · aron ha-berit"
+      hebrew: "דְּבִיר · אֲרוֹן הַבְּרִית"
+      x: 15
+      y: 51
+      copy: |
+        At the far west stood the *devir*, the Holy of Holies — "twenty cubits in length, and twenty cubits in breadth, and twenty cubits in the height thereof: and he overlaid it with pure gold" (1 Kings 6:20). A perfect cube of gold, prepared "to set there the ark of the covenant of the LORD" (6:19). No light, no window — the room where the LORD had said He would dwell in "thick darkness" (1 Kings 8:12).
+      deep_dive: |
+        The cube is significant: the later New Jerusalem is likewise measured as a perfect cube (Revelation 21:16), a shape signaling completed, perfect holiness — the place where heaven and earth meet. The Holy of Holies is the architectural heart toward which the whole east-to-west journey of the building ascends.
+
+        **The Ark of the Covenant.** Into the *devir* "the priests brought in the ark of the covenant of the LORD unto his place… even under the wings of the cherubims" (1 Kings 8:6). By Solomon's day it held only the two stone tablets (1 Kings 8:9) — the covenant itself, resting at the center of the house, beneath the wings, in the dark. The ark's placement completes the building's logic: every dimension, every gold-clad wall, every cherub points inward to *this* — the covenant at the heart of the dwelling. On what the ark no longer contained (the manna and Aaron's rod) and the theology of that absence, see the **Dedication section (A6)**.
+
+    - id: cherubim
+      title: "The Two Cherubim"
+      tooltip: "Two ten-cubit guardians whose wings spanned the room."
+      scripture: "1 Kings 6:23, 27–28"
+      translit: "keruvim"
+      hebrew: "כְּרוּבִים"
+      x: 15
+      y: 37
+      copy: |
+        Within the *devir* stood "two cherubims of olive tree, each ten cubits high" (1 Kings 6:23), overlaid with gold (6:28). They were enormous: "the wing of the one touched the one wall, and the wing of the other cherub touched the other wall; and their wings touched one another in the midst of the house" (6:27) — four wings spanning the full twenty-cubit width.
+      deep_dive: |
+        The cherubim formed the throne-seat of the invisible LORD, who is enthroned "between the cherubims" (cf. 1 Samuel 4:4; Psalm 80:1). The same beings who guarded Eden's gate (Genesis 3:24) here overshadow the mercy seat — guardianship transformed into nearness.
+
+        **Why this form? [Reconstruction]** Scripture never describes the cherubim's shape, so any depiction is reconstruction. This guide draws on **Ezekiel's** vision, where the living creatures — whom Ezekiel explicitly names "cherubims" (Ezekiel 10:20) — carry four faces: "the face of a man… the face of a lion… the face of an ox… the face of an eagle" (Ezekiel 1:10). The Assyrian winged guardian (*lamassu*) fuses that same set — human head, lion/ox body, eagle wings — into a single figure, reaching into the very Ancient Near Eastern vocabulary Ezekiel's own vision speaks rather than borrowing from outside it. *(The Devir held two sets of cherubim — Solomon's giant olive-wood pair, 1 Kings 6:23–28, and the smaller mercy-seat cherubim already on the ark, Exodus 25:18–20.)*
+
+    - id: molten-sea
+      title: "The Molten Sea"
+      tooltip: "A vast bronze basin on twelve oxen, for priestly washing."
+      scripture: "1 Kings 7:23–26"
+      translit: "yam"
+      hebrew: "יָם"
+      x: 91
+      y: 71
+      copy: |
+        In the courtyard stood the "molten sea, ten cubits from the one brim to the other… his height was five cubits: and a line of thirty cubits did compass it round about" (1 Kings 7:23). It "stood upon twelve oxen" facing outward in four groups of three (7:25), and "contained two thousand baths" (7:26) — roughly eleven to twelve thousand gallons, for the priests' washing.
+      deep_dive: |
+        The twelve oxen face the four compass directions — three to each — a figure of all Israel gathered around the place of cleansing. Note the capacity discrepancy: 1 Kings 7:26 gives **2,000 baths**, 2 Chronicles 4:5 gives **3,000**; the guide renders one and footnotes the other. For the Latter-day Saint connection to washings and anointings (D&C 124:38–39), see the Dedication section (A6).
+
+    - id: brazen-altar
+      title: "The Altar of Burnt Offering"
+      tooltip: "The great bronze altar where sacrifices were offered."
+      scripture: "2 Chronicles 4:1; 1 Kings 8:64"
+      translit: "mizbeach"
+      hebrew: "מִזְבֵּחַ"
+      x: 76
+      y: 47
+      copy: |
+        Dominating the courtyard before the porch stood the bronze altar of burnt offering — "twenty cubits the length thereof, and twenty cubits the breadth thereof, and ten cubits the height thereof" (2 Chronicles 4:1). It was so large that at the dedication Solomon also had to hallow "the middle of the court" to handle the offerings (1 Kings 8:64).
+      deep_dive: |
+        The altar is the first thing encountered on entering the court and the last station before the holy building — sacrifice as the gateway to approach. Its placement in the visitor's path makes the theological point spatial: there is no coming near without atonement. *(1 Kings 7 omits the altar's dimensions; the 20×20×10 figures come from the 2 Chronicles 4:1 parallel — a [BIBLICAL] cross-source, flagged.)*
+
+    - id: lavers
+      title: "The Ten Lavers"
+      tooltip: "Ten wheeled bronze basins — five north, five south."
+      scripture: "1 Kings 7:38–39"
+      translit: "kiyyor"
+      hebrew: "כִּיּוֹר"
+      x: 74
+      y: 22
+      copy: |
+        Flanking the court were "ten lavers of brass: one laver contained forty baths: and every laver was four cubits" (1 Kings 7:38), set on wheeled bases — "five bases on the right side of the house, and five on the left" (7:39). Where the great sea served the priests, the ten lavers were for rinsing the offerings.
+      deep_dive: |
+        Sea and lavers together make the courtyard a place of water and washing before the house of fire and gold — a graded approach from cleansing to consecration to presence.
+
+    - id: side-chambers
+      title: "The Side Chambers"
+      tooltip: "Three stories of rooms wrapping the temple's outer walls."
+      scripture: "1 Kings 6:5–6"
+      translit: "tsela"
+      hebrew: "צֵלָע"
+      x: 30
+      y: 23
+      copy: |
+        Around three sides of the house ran a structure of chambers: "against the wall of the house he built chambers round about… both of the temple and of the oracle" (1 Kings 6:5) — three stories of rooms hugging the north, west, and south walls, widening floor by floor on rebated ledges so no beams pierced the sanctuary wall (6:6).
+      deep_dive: |
+        These chambers stored temple treasure and supplies and housed the work of the priests — the practical machinery that let the sacred center function. They also visually thickened the building, setting the gold-clad core apart within an outer shell.

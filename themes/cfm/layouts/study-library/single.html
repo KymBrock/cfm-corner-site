@@ -5,6 +5,13 @@
         {{ with .Parent }}
         <a href="{{ .RelPermalink }}" class="library-back-link">← {{ .Title }}</a>
         {{ end }}
+        {{ $slug := .File.BaseFileName }}
+        {{ $heroPath := printf "images/articles/%s/hero-%s.png" $slug $slug }}
+        {{ if fileExists (printf "static/%s" $heroPath) }}
+        <figure class="library-article-hero-image">
+            <img src="{{ $heroPath | relURL }}" alt="" aria-hidden="true">
+        </figure>
+        {{ end }}
         <h1>{{ .Title }}</h1>
         {{ with .Description }}<p class="library-article-desc">{{ . }}</p>{{ end }}
         {{ with .Params.related_weeks }}

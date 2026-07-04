@@ -1,0 +1,80 @@
+# Temple Mount "dig-down" strata timeline. Eras run top (most recent) → bottom (oldest),
+# so descending the timeline mirrors digging down through the ground.
+# evidence: dug | reconstructed | believed  (drives the marker colour + tag)
+eras:
+  - id: dome
+    date: "AD 692 – today"
+    title: "The Dome of the Rock & the Haram al-Sharif"
+    evidence: standing
+    image: /images/culture/first-temple/dome-of-the-rock.jpg
+    image_alt: "The Dome of the Rock on the Temple Mount / Haram al-Sharif, Jerusalem"
+    image_caption: "The Dome of the Rock — completed 691/692 AD over the *es-Sakhra* bedrock — has stood for thirteen centuries."
+    body: >-
+      In **691/692 AD** the Umayyad caliph Abd al-Malik raised the **Dome of the Rock** over the bedrock outcrop called *es-Sakhra* — one of the oldest standing monuments in Islam. The platform today is the **Haram al-Sharif**, the Noble Sanctuary, holding the Dome of the Rock and al-Aqsa Mosque: an active holy site that cannot be systematically excavated. So almost everything a visitor sees is Herodian or later — and Solomon's footprint lies buried far beneath.
+    note: >-
+      The *es-Sakhra* bedrock carries layered meaning held by different faiths at once: in rabbinic tradition the Foundation Stone of creation and the site of the Holy of Holies; in Islamic tradition, linked to Muhammad's Night Journey. The leading reconstruction (after Leen Ritmeyer) places Solomon's Holy of Holies on or near this stone — but that is *inference*, offered with respect beside the other traditions, not adjudicated here. "The most High dwelleth not in temples made with hands" (Acts 7:48).
+  - id: aelia
+    date: "AD 130"
+    title: "Aelia Capitolina"
+    evidence: excavated
+    body: >-
+      After a second Jewish revolt, the emperor **Hadrian** refounded the city as **Aelia Capitolina** (130 AD), with a pagan temple in the area. Constantine had it removed in the fourth century, after which the Mount lay largely derelict through the Byzantine centuries — while Christian devotion moved across the city to the Church of the Holy Sepulchre.
+    note: >-
+      Roman Aelia is well attested across Jerusalem — its street grid, inscriptions, and arches — but little can be tied firmly to the Mount *itself*. Hadrian's works up here are inferred more than excavated.
+  - id: rome
+    date: "AD 70"
+    title: "“Not One Stone” — Rome"
+    evidence: excavated
+    image: /images/culture/first-temple/western-wall.jpg
+    image_alt: "The Western Wall plaza — the exposed Herodian retaining wall of the Temple Mount platform"
+    image_caption: "The Western Wall — the surviving Herodian *retaining* wall, **not** a wall of the temple building. *Photo © David King, CC BY 2.0, via Wikimedia Commons.*"
+    body: >-
+      Jesus, leaving the temple, foretold its end: “There shall not be left here one stone upon another, that shall not be thrown down” (Matthew 24:2; Luke 21:6). In the Jewish–Roman War the prophecy came due: in **70 AD** Rome destroyed the temple and the structures on the platform. The toppled Herodian stones still lie where they fell at the southwest corner, beside the paving they cracked.
+    note: >-
+      Jesus' “not one stone” fell on the **temple buildings**, which were leveled — while the **retaining wall** (a different structure) partly survived, and stands today as the Western Wall. The standing Wall and the fulfilled prophecy are not in tension once the two structures are told apart. (He also spoke of another temple: “Destroy this temple, and in three days I will raise it up… he spake of the temple of his body,” John 2:19, 21.)
+  - id: herod
+    date: "≈ 19 BC"
+    title: "Herod Rebuilds the Second Temple"
+    evidence: standing
+    image: /images/culture/first-temple/city-of-david-model-10thc.jpg
+    image_alt: "Scale model of the Jerusalem ridge, the Temple Mount rising at the north end above the City of David"
+    image_caption: "The ridge in model form — the flat summit platform is *Herod's* engineering, far larger than Solomon's buried footprint. *Model photograph (see credit).*"
+    body: >-
+      Here is the fact that reorders everything a modern visitor thinks they are seeing. Around **19 BC**, Herod the Great launched a colossal rebuild — **not a new, third temple, but a top-to-bottom remaking of Zerubbabel's Second Temple**, which had stood five hundred years. He pulled it down and raised it again far grander, employing thousands of workers, on a platform he **vastly enlarged** to some 36 acres (well over twice Solomon's), keeping the sacrifices going the whole time. So what people loosely call “Herod's Temple” is that *same Second Temple* made magnificent — the house the Gospels simply call “the temple.” The great trapezoidal esplanade that dominates Jerusalem today (roughly 488 m on the west, 470 on the east) is *his*, and the disciples' awe at the “goodly stones” (Luke 21:5) and “forty and six years was this temple in building” (John 2:20) belongs to this Herodian marvel, not to Solomon's.
+    note: >-
+      The **Western Wall** and **Robinson's Arch** are Herodian *retaining* walls that hold up the artificial esplanade — **not** remains of the Temple building. So “standing where Solomon stood” is mostly standing on Herodian fill, many feet above Solomon's buried floor. What the cameras photograph is Herod's stonework; Solomon's house is below it, out of reach.
+  - id: zerubbabel
+    date: "≈ 516 BC"
+    title: "Return — Zerubbabel's Second Temple"
+    evidence: reconstructed
+    body: >-
+      Exile did not have the last word. Cyrus of Persia decreed the house rebuilt (2 Chronicles 36:23; Ezra 1:2), and under **Zerubbabel** and Jeshua the work began (Ezra 3:8). But it was a humbler house than Solomon's — so much so that the old men “who had seen the first house” **wept** aloud at the new foundation (Ezra 3:12). It was finished “in the sixth year of… Darius” (Ezra 6:15), about **516 BC**. To that humbler house Haggai spoke the promise that “the glory of this latter house shall be greater than of the former” (Haggai 2:9) — a word read as fulfilled five centuries later, when **Herod the Great** rebuilt this very house into the marvel of the Gospels. Zerubbabel's temple and “Herod's temple” are not two buildings but one: the **Second Temple**, first modest, then made magnificent.
+    note: >-
+      Like Solomon's, **nothing of Zerubbabel's temple has been excavated** — it too lies beneath the Herodian platform that later encased and enlarged it. We know it from the text, not the spade.
+  - id: babylon
+    date: "587/586 BC"
+    title: "The Fire — Babylon"
+    evidence: excavated
+    body: >-
+      Four centuries after Solomon, it ended in flame. In “the nineteenth year of king Nebuchadnezzar,” his captain Nebuzar-adan “burnt the house of the LORD, and the king's house, and all the houses of Jerusalem” (2 Kings 25:8–9); the vessels and treasures were carried to Babylon (2 Chronicles 36:18–19). The standard date is **587/586 BC**.
+    note: >-
+      The destruction is vividly attested — not on the Mount, but down the ridge in the **City of David**: burnt structures, arrowheads, and clay seal-impressions (*bullae*) bearing the names of Zedekiah's officials who opposed Jeremiah (Jeremiah 37:3; 38:1). The event is one of the best-dug of the period; the Temple's own ashes are simply inaccessible beneath later building.
+  - id: solomon
+    date: "≈ 957 BC"
+    title: "Solomon's First Temple"
+    evidence: reconstructed
+    image: /images/culture/first-temple/temple-facade.png
+    image_alt: "The facade of Solomon's Temple rising on the summit of Mount Moriah — a reconstruction"
+    image_caption: "A reconstruction — nothing of this building survives. *Original digital reconstruction.*"
+    body: >-
+      Solomon “began to build the house of the LORD… in the fourth year of his reign” (1 Kings 6:1) and finished seven years later, “in the month Bul” (1 Kings 6:38) — roughly **957 BC**, a range rather than a fixed point. Cast and carved by the Phoenician craftsman Hiram of Tyre, it stood for nearly four centuries before the fire.
+    note: >-
+      *Nothing of Solomon's Temple has ever been excavated.* It lies beneath the present platform, which cannot be dug. Every picture of it is **inference** — from the biblical text (1 Kings 6–7; 2 Chronicles 3–4) and from comparative Iron-Age “long-room” temples ('Ain Dara and Tell Tayinat in Syria are the closest known parallels). The absence of remains is a fact about *access*, not about history.
+  - id: moriah
+    date: "before ≈ 1000 BC"
+    title: "Mount Moriah — the Ground Before the House"
+    evidence: believed
+    body: >-
+      Long before there was a temple, there was a mountain with a memory. The site stacks story upon story on one rock: the land of **Moriah** where Abraham was sent to offer Isaac and named the place *Jehovah-jireh* (Genesis 22:2, 14); the threshing floor David bought, where he “built there an altar… and the plague was stayed” (2 Samuel 24:25); and the summit where Solomon raised the house (2 Chronicles 3:1). “Who shall ascend into the hill of the LORD?” (Psalm 24:3) was asked of *this* hill.
+    note: >-
+      The choice of site reads like a theological argument: God meets His people where He has met them before — Abraham's test, David's mercy, Solomon's house, all on one summit. These are matters of **scripture and tradition** rather than excavation: the bedrock is here, but Abraham's altar leaves no dig-able trace.

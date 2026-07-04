@@ -158,6 +158,7 @@
       var isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
       var lexiconData = null;
       var grammarData = null;
+      var hubData = null;
       var scriptureData = null;
 
       // BLB URL abbreviations → display names (covers both WLC and KJV styles)
@@ -242,6 +243,8 @@
 
       function getLinkType(el) {
         if (!el) return null;
+        // data-hub is first-class: any element with data-hub is a Translation Hub (non-Strong's) term
+        if (el.dataset && el.dataset.hub) return 'hub';
         if (el.dataset && el.dataset.popupKind === 'source') return 'popup-source';
         // data-ref is first-class: any element with data-ref is a scripture reference
         if (el.dataset && el.dataset.ref) return 'scripture-ref';
@@ -319,6 +322,22 @@
         // Parse from URL
         var href = el.href || '';
         return parseScriptureRef(href) || parseChurchRef(href) || null;
+      }
+
+      // Build an external URL from a reference string so auto-wrapped <span data-ref>
+      // citations get a click-through: Blue Letter Bible for the Bible, the Church
+      // study library for Restoration scripture.
+      function buildScriptureHref(ref) {
+        if (!ref) return '';
+        var m = String(ref).match(/^\s*((?:[1-4]\s+)?[A-Za-z][A-Za-z .&—-]*?)\s+(\d+)(?::(\d+))?/);
+        if (!m) return '';
+        var key = m[1].toLowerCase().replace(/\s+/g, ' ').trim();
+        var ch = m[2], vs = m[3] || '';
+        var blb = {'genesis':'gen','exodus':'exo','leviticus':'lev','numbers':'num','deuteronomy':'deu','joshua':'jos','judges':'jdg','ruth':'rut','1 samuel':'1sa','2 samuel':'2sa','1 kings':'1ki','2 kings':'2ki','1 chronicles':'1ch','2 chronicles':'2ch','ezra':'ezr','nehemiah':'neh','esther':'est','job':'job','psalm':'psa','psalms':'psa','proverbs':'pro','ecclesiastes':'ecc','song of solomon':'sng','isaiah':'isa','jeremiah':'jer','lamentations':'lam','ezekiel':'ezk','daniel':'dan','hosea':'hos','joel':'jol','amos':'amo','obadiah':'oba','jonah':'jon','micah':'mic','nahum':'nam','habakkuk':'hab','zephaniah':'zep','haggai':'hag','zechariah':'zec','malachi':'mal','matthew':'mat','mark':'mrk','luke':'luk','john':'jhn','acts':'act','romans':'rom','1 corinthians':'1co','2 corinthians':'2co','galatians':'gal','ephesians':'eph','philippians':'php','colossians':'col','1 thessalonians':'1th','2 thessalonians':'2th','1 timothy':'1ti','2 timothy':'2ti','titus':'tit','philemon':'phm','hebrews':'heb','james':'jas','1 peter':'1pe','2 peter':'2pe','1 john':'1jn','2 john':'2jn','3 john':'3jn','jude':'jud','revelation':'rev'};
+        if (blb[key]) { return 'https://www.blueletterbible.org/kjv/' + blb[key] + '/' + ch + '/' + (vs || '1') + '/'; }
+        var church = {'1 nephi':['bofm','1-ne'],'2 nephi':['bofm','2-ne'],'jacob':['bofm','jacob'],'enos':['bofm','enos'],'jarom':['bofm','jarom'],'omni':['bofm','omni'],'words of mormon':['bofm','w-of-m'],'mosiah':['bofm','mosiah'],'alma':['bofm','alma'],'helaman':['bofm','hel'],'3 nephi':['bofm','3-ne'],'4 nephi':['bofm','4-ne'],'mormon':['bofm','morm'],'ether':['bofm','ether'],'moroni':['bofm','moro'],'d&c':['dc-testament','dc'],'doctrine and covenants':['dc-testament','dc'],'moses':['pgp','moses'],'abraham':['pgp','abr'],'articles of faith':['pgp','a-of-f'],'joseph smith—matthew':['pgp','js-m'],'joseph smith—history':['pgp','js-h']};
+        if (church[key]) { var c = church[key]; return 'https://www.churchofjesuschrist.org/study/scriptures/' + c[0] + '/' + c[1] + '/' + ch + (vs ? '.' + vs : '') + '?lang=eng'; }
+        return '';
       }
 
       var refAliases = [
@@ -452,6 +471,17 @@
         return grammarData;
       }
 
+      async function ensureHubData() {
+        if (hubData) return hubData;
+        try {
+          var res = await fetch('/data/lexicon-hub-supplement.json?v=20260622a', { cache: 'no-store' });
+          hubData = res.ok ? await res.json() : {};
+        } catch (_) {
+          hubData = {};
+        }
+        return hubData;
+      }
+
       function normTerm(t) {
         return String(t || '').toLowerCase().replace(/[’']/g, "'").replace(/\s+/g, ' ').trim();
       }
@@ -560,6 +590,36 @@
           return;
         }
 
+        if (type === 'hub') {
+          var hdb = await ensureHubData();
+          var hentry = (hdb && el.dataset && hdb[el.dataset.hub]) || {};
+          var hTranslit = hentry.translit || (el.textContent || '').trim() || 'Hub Term';
+          var hOriginal = hentry.original || (el.textContent || '').trim();
+          var hLang = hentry.lang || 'hebrew';
+          var hWordClass = hLang === 'greek' ? 'bp-greek' : 'bp-hebrew';
+          var hDef = hentry.definition || 'Translation Hub entry preview unavailable.';
+          var hRootLink = '';
+          if (hentry.related_strongs) {
+            var rs = String(hentry.related_strongs).toLowerCase();
+            hRootLink = '<div class="bp-link"><a href="https://www.blueletterbible.org/lexicon/' + rs +
+              '/kjv/wlc/0-1/" target="_blank" rel="noopener">Biblical root ' +
+              String(hentry.related_strongs).toUpperCase() + ' at Blue Letter Bible →</a></div>';
+          }
+
+          popup.innerHTML =
+            '<div class="bp-title">' + hTranslit +
+            (hentry.stratum ? ' <span class="bp-strongs">' + hentry.stratum + '</span>' : '') +
+            '</div>' +
+            (hOriginal ? '<div class="bp-original ' + hWordClass + '">' + hOriginal + '</div>' : '') +
+            '<div class="bp-body">' + hDef + '</div>' +
+            (hentry.source ? '<div class="bp-ref">Source: ' + hentry.source + '</div>' : '') +
+            hRootLink;
+
+          place(el);
+          popup.classList.add('visible');
+          return;
+        }
+
         if (type === 'blbsearch') {
           var qblb = parseBLBSearchCriteria(el.href);
           var labelBlb = ((el.textContent || '').trim() || qblb || 'BLB Search');
@@ -630,11 +690,12 @@
         }
 
         var linkHref = el.href || '';
+        if (!linkHref) { linkHref = buildScriptureHref(ref); }
         var linkText = 'Open scripture →';
         if (/blueletterbible\.org/i.test(linkHref)) {
-          linkText = 'Open in Blue Letter Bible →';
+          linkText = 'Read on Blue Letter Bible →';
         } else if (/churchofjesuschrist\.org/i.test(linkHref)) {
-          linkText = 'Open on Church website →';
+          linkText = 'Read on the Church website →';
         }
         var extraLinksHtml = '';
         if (el.dataset && el.dataset.popupLinks) {
