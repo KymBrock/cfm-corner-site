@@ -35,20 +35,31 @@
 
     <section class="tabernacle-home-grid" aria-label="Field guide sections">
 
-      {{/* Live sub-pages, in reading order — auto-tracks whatever is built */}}
-      {{ range .RegularPages.ByWeight }}
-        <a href="{{ .RelPermalink }}" class="tabernacle-home-card">
-          {{ with .Params.image }}
-            <div class="tabernacle-home-card__image">
-              <img src="{{ . | relURL }}" alt="{{ $.Title }} — section image">
-            </div>
+      {{/* Live sub-pages, in reading order — auto-tracks whatever is built.
+           Split across two independently-stacking columns so card heights
+           don't row-couple (which leaves ragged vertical gaps). Alternating
+           by index keeps the left-to-right reading order. */}}
+      {{ $pages := .RegularPages.ByWeight }}
+
+      {{ range $col := (seq 0 1) }}
+        <div class="tabernacle-home-column">
+          {{ range $i, $p := $pages }}
+            {{ if eq (mod $i 2) $col }}
+              <a href="{{ $p.RelPermalink }}" class="tabernacle-home-card">
+                {{ with $p.Params.image }}
+                  <div class="tabernacle-home-card__image">
+                    <img src="{{ . | relURL }}" alt="{{ $p.Title }} — section image">
+                  </div>
+                {{ end }}
+                <div class="tabernacle-home-card__body">
+                  {{ if in $p.RelPermalink "explore-the-floor-plan" }}<p class="tabernacle-home-card__eyebrow">Interactive</p>{{ end }}
+                  <h2>{{ $p.Title }}</h2>
+                  {{ with $p.Description }}<p>{{ . }}</p>{{ end }}
+                </div>
+              </a>
+            {{ end }}
           {{ end }}
-          <div class="tabernacle-home-card__body">
-            {{ if in .RelPermalink "explore-the-floor-plan" }}<p class="tabernacle-home-card__eyebrow">Interactive</p>{{ end }}
-            <h2>{{ .Title }}</h2>
-            {{ with .Description }}<p>{{ . }}</p>{{ end }}
-          </div>
-        </a>
+        </div>
       {{ end }}
 
     </section>
