@@ -1,0 +1,50 @@
+{{- $raw := readFile "static/images/culture/jerusalem-model.svg" -}}
+{{- $svg := replaceRE `<\?xml[^>]*\?>` "" $raw -}}
+<figure class="jmap-figure">
+  <div class="jmap" data-period="today">
+    <div class="jmap__stage">{{ $svg | safeHTML }}</div>
+    <div class="jmap__controls" role="group" aria-label="Show Jerusalem's walls by period">
+      <button class="jmap__btn" type="button" data-period="david">David&rsquo;s City<small>c. 1000 BC</small></button>
+      <button class="jmap__btn" type="button" data-period="hezekiah">Hezekiah&rsquo;s Jerusalem<small>c. 700 BC</small></button>
+      <button class="jmap__btn is-active" type="button" data-period="today">Today&rsquo;s Walls<small>1537 AD</small></button>
+    </div>
+    <div class="jmap__info" aria-live="polite"></div>
+  </div>
+  <figcaption class="jmap__cap">Tap a period to watch Jerusalem grow — or hover a wall for its builder and date. <em>Original CFM map; schematic, north is up.</em></figcaption>
+</figure>
+<script>
+(function(){
+  var DATA = {
+    david:    {label:"The City of David", date:"c. 1000 BC", text:"David took the Jebusite stronghold of Zion (2 Samuel 5) and fortified the narrow south-eastern spur — barely twelve acres, watered by the Gihon Spring."},
+    hezekiah: {label:"Hezekiah’s Jerusalem", date:"c. 700 BC", text:"With Assyria advancing, the city had spread west onto the broader hill, and a massive “Broad Wall” enclosed it. (Long credited to Hezekiah; 2024 radiocarbon dating now reassigns the wall to Uzziah, a few decades earlier.)"},
+    today:    {label:"Today’s Old City wall", date:"1537–1541 AD", text:"Built by the Ottoman sultan Suleiman the Magnificent — shown only for orientation. It is far later than the biblical walls and does not trace them."}
+  };
+  var WALL = {"Old_City_Wall_David_":"david","Hezekiah_s_Expansion":"hezekiah","Modern_Wall":"today"};
+  document.querySelectorAll('.jmap').forEach(function(map){
+    var svg = map.querySelector('svg'), info = map.querySelector('.jmap__info');
+    if(!svg || !info) return;
+    function setInfo(key){ var d = DATA[key]; info.innerHTML = d ? ('<strong>'+d.label+'</strong> &middot; <span class="jmap__date">'+d.date+'</span><br>'+d.text) : ''; }
+    function setPeriod(key){
+      map.setAttribute('data-period', key);
+      map.querySelectorAll('.jmap__btn').forEach(function(b){ b.classList.toggle('is-active', b.getAttribute('data-period')===key); });
+      setInfo(key);
+    }
+    map.querySelectorAll('.jmap__btn').forEach(function(b){ b.addEventListener('click', function(){ setPeriod(b.getAttribute('data-period')); }); });
+    // transparent fat hit-strokes so the thin walls are easy to hover
+    var NS = 'http://www.w3.org/2000/svg';
+    var hitG = document.createElementNS(NS,'g'); hitG.setAttribute('class','jmap-hits'); svg.appendChild(hitG);
+    Object.keys(WALL).forEach(function(id){
+      var g = svg.querySelector('#'+id); if(!g) return;
+      var els = g.matches('polyline,polygon,path') ? [g] : g.querySelectorAll('polyline,polygon,path');
+      els.forEach(function(el){
+        var h = el.cloneNode(false);
+        h.setAttribute('class','jmap-hit'); h.setAttribute('data-period', WALL[id]); h.removeAttribute('id');
+        hitG.appendChild(h);
+        h.addEventListener('mouseenter', function(){ setInfo(WALL[id]); map.classList.add('jmap--hover-'+WALL[id]); });
+        h.addEventListener('mouseleave', function(){ setInfo(map.getAttribute('data-period')); map.classList.remove('jmap--hover-'+WALL[id]); });
+      });
+    });
+    setPeriod('today');
+  });
+})();
+</script>

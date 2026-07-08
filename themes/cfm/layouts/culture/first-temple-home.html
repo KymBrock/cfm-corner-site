@@ -1,0 +1,67 @@
+{{ define "head" }}
+  <link rel="stylesheet" href="{{ (printf "css/tabernacle.css?v=%d" now.Unix) | relURL }}">
+{{ end }}
+
+{{ define "main" }}
+  {{ $floorPlan := site.GetPage "/culture/ancient/first-temple/explore-the-floor-plan" }}
+
+  <div class="tabernacle-home-page" data-pagefind-body>
+    <section class="hero compact">
+      <p class="eyebrow">Field Guide</p>
+      <h1>{{ .Title }} Field Guide</h1>
+      {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
+    </section>
+
+    <nav class="field-guide-nav" aria-label="{{ .Title }} field guide navigation">
+      <a class="field-guide-nav__link is-active" href="{{ .RelPermalink }}">Home</a>
+      {{ range .RegularPages.ByWeight }}
+        <a class="field-guide-nav__link" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+      {{ end }}
+    </nav>
+
+    <section class="tabernacle-home-intro">
+      <div class="prose prose--intro">
+        {{ .Content }}
+      </div>
+    </section>
+
+    {{ with .Params.image }}
+      <section class="tabernacle-home-hero-image" aria-label="Solomon's Temple illustration">
+        <div class="tabernacle-home-hero-image__frame">
+          <img src="{{ . | relURL }}" alt="Solomon's Temple facade">
+        </div>
+      </section>
+    {{ end }}
+
+    <section class="tabernacle-home-grid" aria-label="Field guide sections">
+
+      {{/* Live sub-pages, in reading order — auto-tracks whatever is built.
+           Split across two independently-stacking columns so card heights
+           don't row-couple (which leaves ragged vertical gaps). Alternating
+           by index keeps the left-to-right reading order. */}}
+      {{ $pages := .RegularPages.ByWeight }}
+
+      {{ range $col := (seq 0 1) }}
+        <div class="tabernacle-home-column">
+          {{ range $i, $p := $pages }}
+            {{ if eq (mod $i 2) $col }}
+              <a href="{{ $p.RelPermalink }}" class="tabernacle-home-card">
+                {{ with $p.Params.image }}
+                  <div class="tabernacle-home-card__image">
+                    <img src="{{ . | relURL }}" alt="{{ $p.Title }} — section image">
+                  </div>
+                {{ end }}
+                <div class="tabernacle-home-card__body">
+                  {{ if in $p.RelPermalink "explore-the-floor-plan" }}<p class="tabernacle-home-card__eyebrow">Interactive</p>{{ end }}
+                  <h2>{{ $p.Title }}</h2>
+                  {{ with $p.Description }}<p>{{ . }}</p>{{ end }}
+                </div>
+              </a>
+            {{ end }}
+          {{ end }}
+        </div>
+      {{ end }}
+
+    </section>
+  </div>
+{{ end }}

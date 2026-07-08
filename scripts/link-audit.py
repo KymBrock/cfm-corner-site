@@ -316,7 +316,8 @@ def main():
             html = original
             html = converter._auto_link_scriptures(html)
             html = converter._auto_link_hebrew_greek(html)
-            html = converter._auto_link_transliterations(html)
+            if hasattr(converter, '_auto_link_transliterations'):
+                html = converter._auto_link_transliterations(html)
 
             if html != original:
                 with open(fpath, 'w', encoding='utf-8') as f:

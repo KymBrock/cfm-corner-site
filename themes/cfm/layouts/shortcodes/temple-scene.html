@@ -1,0 +1,51 @@
+{{- $scene := .Get "scene" -}}
+{{- $s := index site.Data.first_temple.scenes $scene -}}
+{{- if $s -}}
+<figure class="tscene">
+  <div class="tscene__stage">
+    <img class="tscene__img" src="{{ $s.image }}" alt="{{ $s.alt }}" loading="lazy">
+    <svg class="tscene__svg" viewBox="0 0 1536 1024" preserveAspectRatio="none">
+      {{- range $i, $h := $s.hotspots -}}
+      <g class="tscene__hot" data-idx="{{ $i }}" tabindex="0" role="button" aria-label="{{ printf "Stop %d: %s" (add $i 1) $h.title }}">
+        <rect class="tscene__rect" x="{{ $h.x }}" y="{{ $h.y }}" width="{{ $h.w }}" height="{{ $h.h }}" rx="10"/>
+        <circle class="tscene__dot" cx="{{ add $h.x (div $h.w 2) }}" cy="{{ add $h.y (div $h.h 2) }}" r="17"/>
+        <text class="tscene__num" x="{{ add $h.x (div $h.w 2) }}" y="{{ add $h.y (div $h.h 2) }}" text-anchor="middle" dominant-baseline="central">{{ add $i 1 }}</text>
+      </g>
+      {{- end -}}
+    </svg>
+  </div>
+  <div class="tscene__panel" aria-live="polite">
+    <p class="tscene__hint">Tap a numbered marker to walk the tour — each stop opens its own description.</p>
+    {{- range $i, $h := $s.hotspots -}}
+    <div class="tscene__desc" data-idx="{{ $i }}" hidden>
+      {{ with $h.pic }}<img class="tscene__pic" src="{{ . }}" alt="{{ $h.title }}" loading="lazy">{{ end }}
+      <h4 class="tscene__title"><span class="tscene__step">{{ add $i 1 }}</span>{{ $h.title }}</h4>
+      {{ $h.desc | markdownify }}
+    </div>
+    {{- end -}}
+  </div>
+  {{- with $s.caption }}<figcaption class="tscene__cap">{{ . | safeHTML }}</figcaption>{{ end -}}
+</figure>
+<script>
+(function(){
+  document.querySelectorAll('.tscene').forEach(function(scene){
+    if(scene.dataset.wired) return; scene.dataset.wired = '1';
+    var hots = scene.querySelectorAll('.tscene__hot');
+    var descs = scene.querySelectorAll('.tscene__desc');
+    var hint = scene.querySelector('.tscene__hint');
+    function show(idx){
+      hots.forEach(function(h){ h.classList.toggle('is-active', h.getAttribute('data-idx') === idx); });
+      descs.forEach(function(d){ d.hidden = d.getAttribute('data-idx') !== idx; });
+      if(hint) hint.hidden = true;
+    }
+    hots.forEach(function(h){
+      var idx = h.getAttribute('data-idx');
+      h.addEventListener('click', function(){ show(idx); });
+      h.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); show(idx); } });
+    });
+  });
+})();
+</script>
+{{- else -}}
+<p><em>(scene “{{ $scene }}” not found)</em></p>
+{{- end -}}

@@ -1,0 +1,34 @@
+{{ define "head" }}
+  <link rel="stylesheet" href="{{ (printf "css/tabernacle.css?v=%d" now.Unix) | relURL }}">
+{{ end }}
+
+{{ define "main" }}
+  <article class="page page--first-temple-floorplan">
+    <section class="hero compact">
+      <p class="eyebrow">Field Guide · Solomon's Temple</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
+    </section>
+
+    {{ $section := .CurrentSection }}
+    <nav class="field-guide-nav field-guide-nav--page" aria-label="{{ $section.Title }} field guide navigation">
+      <a class="field-guide-nav__link{{ if eq $.RelPermalink $section.RelPermalink }} is-active{{ end }}" href="{{ $section.RelPermalink }}">Home</a>
+      {{ range $section.RegularPages.ByWeight }}
+        <a class="field-guide-nav__link{{ if eq $.RelPermalink .RelPermalink }} is-active{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{ end }}
+    </nav>
+
+    {{ with .Content }}
+      <section class="page-intro">
+        <div class="prose prose--intro">{{ . }}</div>
+      </section>
+    {{ end }}
+
+    {{/* Region-click interactive floor plan. The body is pre-generated (inline SVG +
+         hit-layer + bottom-sheet panel + content JSON) and injected raw via the asset's
+         .Content (NOT template-parsed) because its content JSON ends in "}}", which would
+         break Go-template parsing if it were a normal partial. resources.Get is watched,
+         so regenerating the body live-reloads. Regenerate with /tmp/gen_interactive.py. */}}
+    {{ with resources.Get "first-temple/floorplan-body.html" }}{{ .Content | safeHTML }}{{ end }}
+  </article>
+{{ end }}

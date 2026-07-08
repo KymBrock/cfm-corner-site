@@ -1,32 +1,18 @@
 +++
 title = "Explore the Floor Plan"
 description = "Walk Solomon's Temple from the courtyard altar to the golden cube of the Holy of Holies."
-image = "/images/culture/first-temple/temple-floorplan.svg"
-hotspotKey = "first-temple"
-dataNamespace = "first-temple"
+image = "/images/culture/first-temple/temple-floorplan-v2.svg"
 weight = 3
-layout = "tabernacle"
-draft = true
+layout = "first-temple-floorplan"
+draft = false
 +++
 
-<!--
-  PREVIEW STUB — build lane (Claude Code). draft=true so it does NOT enter the
-  production build / nav until Codex finalizes it.
+One entered from the **east** and moved **west** — through the porch, between the two
+bronze pillars, into the gold-walled Holy Place, and toward the windowless cube where
+the LORD dwelt in thick darkness. **Hover any room or object on the plan, then click to
+open its panel.** Every measurement is drawn from **1 Kings 6–7** and **2 Chronicles 3–4**.
 
-  Visual deliverables are done and verified:
-    - base image: static/images/culture/first-temple/temple-floorplan.svg
-    - hotspot data: data/first-temple/hotspots.yaml  (11 points, content verbatim
-      from the verified vault draft; x/y set against the SVG)
-
-  This page intentionally carries NO prose body — the §3 prose belongs to the
-  content (vault) lane, not the visual lane.
-
-  TO ACTIVATE (Codex lane): the shared layout themes/cfm/layouts/culture/tabernacle.html
-  currently hardcodes its data lookup to `site.Data.tabernacle.*`, so hotspotKey =
-  "first-temple" will NOT resolve against data/first-temple/ as written. Generalize
-  the lookup to honor the `dataNamespace` param above (or add a parallel layout/partial),
-  then register the section + nav and flip draft=false. See INTEGRATION_NOTES.md.
-
-  Local rendering of the SVG + the 11 hotspot positions is verifiable now, without
-  any theme change, via static/previews/first-temple-floorplan-preview.html.
--->
+<div class="ft-video" style="max-width:760px;margin:1.7rem auto 0;">
+  <iframe style="display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:12px;box-shadow:0 8px 26px rgba(56,55,49,.14);" src="https://www.youtube-nocookie.com/embed/Xt6lQAe8ues" title="Solomon's Temple Explained — Messages of Christ" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <p style="text-align:center;font-size:0.82rem;line-height:1.5;color:#718096;margin:0.6rem 0 0;font-family:system-ui,-apple-system,sans-serif;">▶ <strong>Solomon's Temple Explained</strong> — video by <a href="https://www.youtube.com/watch?v=Xt6lQAe8ues" target="_blank" rel="noopener" style="color:#4a6b52;">Messages of Christ (Daniel Smith)</a>, used with permission. Watch the overview, then explore the plan below.</p>
+</div>

@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" font-family="Georgia, 'Times New Roman', serif">
+  <!-- Solomon's Temple floor plan — CFM/Moedim. WEST (Holy of Holies) left · EAST (entrance) right · N up · S down.
+       Side chambers N & S, 3 stories, 5/6/7 cubits (1 Kgs 6:6). Table of shewbread on the north, set back.
+       Steps up to the raised Holy of Holies (reconstruction). Altar centred + east ramp. Ten lavers (5+5). -->
+  <defs>
+    <radialGradient id="fire" cx="50%" cy="52%" r="60%"><stop offset="0%" stop-color="#f0b84e"/><stop offset="60%" stop-color="#d9802a"/><stop offset="100%" stop-color="#b5532f"/></radialGradient>
+    <g id="laver"><rect x="-13" y="-9" width="26" height="18" rx="3"/><circle cx="-9" cy="12" r="4"/><circle cx="9" cy="12" r="4"/><circle cx="0" cy="-13" r="7" fill="#8aa6a0" stroke="#6a8079"/></g>
+    <g id="lamp" fill="none"><path d="M0 0 v-22 M0 -10 q-9 0 -9 -13 M0 -10 q9 0 9 -13"/></g>
+  </defs>
+
+  <rect width="1280" height="640" fill="#f4ecd9"/>
+  <rect x="14" y="14" width="1252" height="612" rx="14" fill="none" stroke="#cdb98a" stroke-width="2"/>
+  <text x="640" y="54" text-anchor="middle" font-size="29" fill="#7a5c2e">Solomon's Temple — Floor Plan</text>
+  <text x="640" y="78" text-anchor="middle" font-size="14" fill="#9a8459">1 Kings 6–7 · entrance faces east · north is up</text>
+
+  <g transform="translate(64,148)" fill="#9a8459" font-size="13" text-anchor="middle">
+    <circle r="26" fill="none" stroke="#cdb98a" stroke-width="1.5"/><text y="-13">N</text><text y="22">S</text><text x="17" y="5">E</text><text x="-17" y="5">W</text>
+    <path d="M0 -8 L4 4 L0 1 L-4 4 Z" fill="#b5732f"/>
+  </g>
+
+  <!-- court floor -->
+  <rect x="300" y="150" width="900" height="360" rx="10" fill="#e7dcc0" stroke="#cdb98a" stroke-width="1.5"/>
+  <g stroke="#d8cba6" stroke-width="1"><path d="M300 230 H1200 M300 310 H1200 M300 390 H1200 M300 470 H1200 M420 150 V510 M540 150 V510 M960 150 V510 M1080 150 V510"/></g>
+  <!-- INNER COURT wall — three rows of hewn stone + a row of cedar beams (1 Kgs 6:36); brass-overlaid east gate (2 Chr 4:9) -->
+  <path d="M1196 290 V150 H88 V498 H1196 V350" fill="none" stroke="#c6ac7c" stroke-width="6"/>
+  <path d="M1196 290 V150 H88 V498 H1196 V350" fill="none" stroke="#9a7d3e" stroke-width="1.4" stroke-dasharray="3 7"/>
+  <g fill="#b8763a" stroke="#7a4a20" stroke-width="2"><rect x="1188" y="280" width="14" height="14" rx="2"/><rect x="1188" y="346" width="14" height="14" rx="2"/></g>
+
+  <!-- SIDE STORAGE CHAMBERS — NORTH & SOUTH only, 3 stories (5/6/7 cubits, 1 Kgs 6:6) -->
+  <rect x="132" y="180" width="564" height="52" rx="4" fill="#dcc88e" stroke="#a87f2c" stroke-width="2.5"/>
+  <rect x="132" y="408" width="564" height="52" rx="4" fill="#dcc88e" stroke="#a87f2c" stroke-width="2.5"/>
+  <g stroke="#b89a52" stroke-width="1.4">
+    <path d="M196 180 V232 M260 180 V232 M324 180 V232 M388 180 V232 M452 180 V232 M516 180 V232 M580 180 V232 M644 180 V232"/>
+    <path d="M196 408 V460 M260 408 V460 M324 408 V460 M388 408 V460 M452 408 V460 M516 408 V460 M580 408 V460 M644 408 V460"/>
+  </g>
+  <!-- door + winding stairs up to the side chambers, on the south (1 Kgs 6:8) -->
+  <g transform="translate(164,434)"><circle r="9" fill="#efd9a2" stroke="#7a4a20" stroke-width="1.3"/><path d="M0 -5 A5 5 0 1 1 -4.5 2.6 A3 3 0 1 1 1 0" fill="none" stroke="#7a4a20" stroke-width="1.2"/></g>
+
+  <!-- house body -->
+  <rect x="132" y="232" width="564" height="176" rx="3" fill="#e9cd84" stroke="#a87f2c" stroke-width="3"/>
+
+  <!-- DEVIR + cherubim + ark -->
+  <rect x="138" y="238" width="170" height="164" rx="3" fill="#cda53f" stroke="#8a6a28" stroke-width="2.5"/>
+  <!-- Two giant cherubim — wings spread to span the room and meet over the ark (1 Kgs 6:23–28) -->
+  <!-- Two giant cherubim — wings spread (1 Kgs 6:23–28), oriented toward the entrance (flipped) -->
+  <g fill="#e7cd84" stroke="#8a6a28" stroke-width="1.1" transform="rotate(180 214 320)">
+    <path d="M210 264 C192 250 172 250 164 264 C178 268 196 268 208 270 Z"/>
+    <path d="M216 274 C230 286 235 302 227 316 C219 304 212 288 210 276 Z"/>
+    <ellipse cx="211" cy="270" rx="8" ry="10"/>
+    <path d="M210 376 C192 390 172 390 164 376 C178 372 196 372 208 370 Z"/>
+    <path d="M216 366 C230 354 235 338 227 324 C219 336 212 352 210 364 Z"/>
+    <ellipse cx="211" cy="370" rx="8" ry="10"/>
+  </g>
+  <!-- Ark of the Covenant — VERTICAL, facing the entrance; vertical carrying staves + two mercy-seat cherubim -->
+  <line x1="206" y1="294" x2="206" y2="346" stroke="#b8763a" stroke-width="2.4"/><line x1="222" y1="294" x2="222" y2="346" stroke="#b8763a" stroke-width="2.4"/>
+  <circle cx="206" cy="294" r="2.6" fill="#b8763a"/><circle cx="206" cy="346" r="2.6" fill="#b8763a"/><circle cx="222" cy="294" r="2.6" fill="#b8763a"/><circle cx="222" cy="346" r="2.6" fill="#b8763a"/>
+  <rect x="203" y="305" width="22" height="30" rx="2" fill="#d9b44a" stroke="#7a5a22" stroke-width="1.4"/>
+  <g fill="#efd9a2" stroke="#7a5a22" stroke-width="0.8"><path d="M214 314 q-5 -3 -8 1 q1 -6 8 -4 Z"/><path d="M214 326 q-5 3 -8 -1 q1 6 8 4 Z"/></g>
+
+  <!-- partition: olive-wood doors + veil -->
+  <line x1="308" y1="240" x2="308" y2="400" stroke="#7a4a20" stroke-width="5"/>
+  <line x1="314" y1="244" x2="314" y2="396" stroke="#7a4a20" stroke-width="2" stroke-dasharray="6 5"/>
+
+  <!-- STEPS up to the raised Holy of Holies (reconstruction; matches the interior render) -->
+  <g fill="#efd9a2" stroke="#a87f2c" stroke-width="1.3"><rect x="318" y="286" width="48" height="72" rx="2"/></g>
+  <g stroke="#a87f2c" stroke-width="1.2" fill="none"><path d="M334 286 V358 M350 286 V358"/></g>
+
+  <!-- HEKHAL furnishings: incense altar before the veil; TEN lampstands + TEN tables, five on EACH side (1 Kgs 7:49; 2 Chr 4:7–8) -->
+  <rect x="376" y="310" width="20" height="22" rx="2" fill="#d9b44a" stroke="#8a6a28"/>
+  <!-- NORTH side: tables (near the wall) + lampstands -->
+  <g fill="#d9b44a" stroke="#8a6a28"><rect x="430" y="254" width="26" height="14" rx="2"/><rect x="486" y="254" width="26" height="14" rx="2"/><rect x="542" y="254" width="26" height="14" rx="2"/><rect x="598" y="254" width="26" height="14" rx="2"/><rect x="654" y="254" width="26" height="14" rx="2"/></g>
+  <g stroke="#c8962c" stroke-width="2" fill="none"><use href="#lamp" x="443" y="300"/><use href="#lamp" x="499" y="300"/><use href="#lamp" x="555" y="300"/><use href="#lamp" x="611" y="300"/><use href="#lamp" x="667" y="300"/></g>
+  <!-- SOUTH side: lampstands + tables (near the wall) -->
+  <g stroke="#c8962c" stroke-width="2" fill="none"><use href="#lamp" x="443" y="368"/><use href="#lamp" x="499" y="368"/><use href="#lamp" x="555" y="368"/><use href="#lamp" x="611" y="368"/><use href="#lamp" x="667" y="368"/></g>
+  <g fill="#d9b44a" stroke="#8a6a28"><rect x="430" y="388" width="26" height="14" rx="2"/><rect x="486" y="388" width="26" height="14" rx="2"/><rect x="542" y="388" width="26" height="14" rx="2"/><rect x="598" y="388" width="26" height="14" rx="2"/><rect x="654" y="388" width="26" height="14" rx="2"/></g>
+
+  <!-- ULAM porch -->
+  <rect x="696" y="260" width="96" height="120" rx="3" fill="#e3cf9a" stroke="#a87f2c" stroke-width="2.5"/>
+  <!-- Hekhal entrance doors (fir, folding, gold; 1 Kgs 6:33–35) -->
+  <rect x="689" y="304" width="9" height="32" rx="1" fill="#d9b44a" stroke="#8a6a28" stroke-width="1.4"/>
+  <!-- pillars Boaz (N) / Jachin (S) — set IN the porch (1 Kgs 7:21) -->
+  <g fill="#b8763a" stroke="#7a4a20" stroke-width="2.5"><circle cx="762" cy="284" r="13"/><circle cx="762" cy="356" r="13"/></g>
+  <!-- entrance stairs up to the porch — nested against the porch (Shir HaMaalot tradition) -->
+  <g fill="#efd9a2" stroke="#a87f2c" stroke-width="1.3"><rect x="790" y="290" width="58" height="60" rx="2"/></g>
+  <g stroke="#a87f2c" stroke-width="1.2" fill="none"><path d="M804 290 V350 M818 290 V350 M832 290 V350"/></g>
+
+  <!-- BRAZEN ALTAR (centred on axis, scooted east; east ramp) -->
+  <g>
+    <path d="M1066 296 H1116 V344 H1066 Z" fill="#c2925a" stroke="#7a4a20" stroke-width="2"/>
+    <g stroke="#7a4a20" stroke-width="1.2"><path d="M1078 296 V344 M1090 296 V344 M1102 296 V344"/></g>
+    <rect x="910" y="242" width="156" height="156" rx="6" fill="#b06a34" stroke="#7a4a20" stroke-width="3"/>
+    <rect x="934" y="266" width="108" height="108" rx="4" fill="#9c5f2e" stroke="#7a4a20" stroke-width="2"/>
+    <circle cx="988" cy="320" r="36" fill="url(#fire)"/>
+    <g fill="#c98a4e" stroke="#7a4a20" stroke-width="1.5"><circle cx="910" cy="242" r="6"/><circle cx="1066" cy="242" r="6"/><circle cx="910" cy="398" r="6"/><circle cx="1066" cy="398" r="6"/></g>
+  </g>
+
+  <!-- MOLTEN SEA (SE, on twelve oxen) -->
+  <g transform="translate(1150,452)">
+    <g fill="#b8763a" stroke="#7a4a20" stroke-width="1.5"><circle cx="-30" cy="0" r="8"/><circle cx="-15" cy="20" r="8"/><circle cx="15" cy="20" r="8"/><circle cx="30" cy="0" r="8"/><circle cx="15" cy="-20" r="8"/><circle cx="-15" cy="-20" r="8"/></g>
+    <circle r="38" fill="#b06a34" stroke="#7a4a20" stroke-width="3"/><circle r="28" fill="#8aa6a0" stroke="#6a8079" stroke-width="2"/>
+  </g>
+
+  <!-- TEN LAVERS (5 + 5) -->
+  <g fill="#c98a4e" stroke="#7a4a20" stroke-width="1.5">
+    <use href="#laver" x="840" y="200"/><use href="#laver" x="910" y="200"/><use href="#laver" x="980" y="200"/><use href="#laver" x="1050" y="200"/><use href="#laver" x="1120" y="200"/>
+    <use href="#laver" x="822" y="456"/><use href="#laver" x="884" y="456"/><use href="#laver" x="946" y="456"/><use href="#laver" x="1008" y="456"/><use href="#laver" x="1070" y="456"/>
+  </g>
+
+  <!-- labels -->
+  <g text-anchor="middle" fill="#6a4f28">
+    <text x="222" y="168" font-size="16">Devir</text><text x="222" y="486" font-size="10" fill="#9a8459">Holy of Holies · 20³</text>
+    <text x="500" y="168" font-size="16">Hekhal</text><text x="500" y="486" font-size="10" fill="#9a8459">Holy Place · 40 × 20 × 30</text>
+    <text x="744" y="402" font-size="12">Ulam</text>
+    <text x="988" y="232" font-size="13" fill="#7a4a20">Brazen Altar</text>
+    <text x="1150" y="506" font-size="12" fill="#7a4a20">Molten Sea</text>
+    <text x="980" y="178" font-size="10" fill="#9a8459">Ten Lavers (5 + 5)</text>
+    <text x="762" y="250" font-size="11" fill="#7a4a20">Boaz</text><text x="762" y="394" font-size="11" fill="#7a4a20">Jachin</text>
+    <text x="828" y="372" font-size="9" fill="#9a8459">entrance stairs</text>
+    <text x="414" y="206" font-size="9.5" fill="#9a8459">north &amp; south side chambers · 3 stories · 5–7 cubits</text>
+    <text x="200" y="146" font-size="11" fill="#9a8459">Inner Court</text>
+    <text x="1132" y="316" font-size="9" fill="#9a8459">brass gate ⇥</text>
+    <text x="164" y="460" font-size="8" fill="#9a8459">stair</text>
+    <text x="376" y="378" font-size="9" fill="#9a8459">steps (reconstruction)</text>
+  </g>
+
+  <g>
+    <line x1="138" y1="566" x2="228" y2="566" stroke="#6a4f28" stroke-width="3"/><line x1="138" y1="560" x2="138" y2="572" stroke="#6a4f28" stroke-width="3"/><line x1="228" y1="560" x2="228" y2="572" stroke="#6a4f28" stroke-width="3"/>
+    <text x="183" y="588" text-anchor="middle" font-size="12" fill="#6a4f28">10 cubits (≈ 4.6 m)</text>
+  </g>
+  <text x="1166" y="604" text-anchor="end" font-size="10" fill="#b0a079">No remains of Solomon's Temple excavated — reconstruction from the biblical text. Original CFM Corner art.</text>
+</svg>

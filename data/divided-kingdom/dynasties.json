@@ -1,0 +1,18 @@
+{
+  "note": "Dynasty groupings for the divided monarchy. 'orders' are king ORDER numbers within that kingdom's list in kings.json. The point of the visual: the North ran through nine regimes, most ending by assassination/coup; the South kept the single house of David (broken only by the usurper Athaliah, then restored).",
+  "israel": [
+    { "name": "House of Jeroboam I", "orders": [1, 2], "end": "Nadab assassinated — Baasha's coup" },
+    { "name": "House of Baasha", "orders": [3, 4], "end": "Elah assassinated — Zimri's coup" },
+    { "name": "Zimri", "orders": [5], "usurper": true, "end": "suicide after a 7-day reign" },
+    { "name": "House of Omri", "orders": [6, 7, 8, 9], "end": "Joram assassinated — Jehu's coup" },
+    { "name": "House of Jehu", "orders": [10, 11, 12, 13, 14], "end": "Zechariah assassinated — Shallum's coup" },
+    { "name": "Shallum", "orders": [15], "usurper": true, "end": "assassinated after a 1-month reign" },
+    { "name": "House of Menahem", "orders": [16, 17], "end": "Pekahiah assassinated — Pekah's coup" },
+    { "name": "Pekah", "orders": [18], "usurper": true, "end": "assassinated — Hoshea's coup" },
+    { "name": "Hoshea", "orders": [19], "usurper": true, "end": "Samaria falls to Assyria, 722 BC" }
+  ],
+  "judah": [
+    { "name": "House of David", "orders": [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], "end": "Jerusalem falls to Babylon, 586 BC" },
+    { "name": "Athaliah", "orders": [7], "usurper": true, "interruption": true, "end": "executed — the Davidic line restored in Joash" }
+  ]
+}

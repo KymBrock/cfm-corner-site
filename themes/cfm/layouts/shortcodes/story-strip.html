@@ -1,0 +1,33 @@
+{{- $s := index site.Data "divided-kingdom" "storyboard" -}}
+<div class="story">
+  <ol class="story__strip">
+    {{- range $s.panels -}}
+    <li class="story__panel">
+      <div class="story__imgwrap">
+        <img src="/images/culture/divided-kingdom/{{ .img }}" alt="{{ .title }} — {{ .caption }}" loading="lazy">
+        <span class="story__num">{{ .n }}</span>
+      </div>
+      <div class="story__cap">
+        <p class="story__title">{{ .title }} <span class="story__ref">{{ .ref }}</span></p>
+        <p class="story__text">{{ .caption }}</p>
+      </div>
+    </li>
+    {{- end -}}
+  </ol>
+  <p class="story__hint">← scroll or swipe the five scenes →</p>
+</div>
+
+<style>
+.page--divided-kingdom-page .story{ margin:2.2rem 0; }
+.page--divided-kingdom-page .story__strip{ display:flex; gap:1rem; overflow-x:auto; padding:.4rem .2rem 1rem; margin:0; list-style:none; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; }
+.page--divided-kingdom-page .story__panel{ flex:0 0 300px; scroll-snap-align:start; background:#fffdf6; border:1px solid #e6dcc6; border-radius:12px; overflow:hidden; box-shadow:0 1px 4px rgba(56,55,49,.15); display:flex; flex-direction:column; }
+.page--divided-kingdom-page .story__imgwrap{ position:relative; line-height:0; }
+.page--divided-kingdom-page .story__imgwrap img{ width:100%; height:auto; display:block; }
+.page--divided-kingdom-page .story__num{ position:absolute; top:8px; left:8px; width:27px; height:27px; border-radius:50%; background:#a6543a; color:#fff; font-weight:800; font-size:.92rem; display:flex; align-items:center; justify-content:center; box-shadow:0 1px 3px rgba(0,0,0,.4); font-family:-apple-system,system-ui,sans-serif; }
+.page--divided-kingdom-page .story__cap{ padding:.7rem .85rem 1rem; }
+.page--divided-kingdom-page .story__title{ font-family:Georgia,'Times New Roman',serif; font-weight:700; color:#3a3529; margin:0 0 .35rem; font-size:1.04rem; }
+.page--divided-kingdom-page .story__ref{ font-family:-apple-system,system-ui,sans-serif; font-size:.68rem; font-weight:700; letter-spacing:.02em; color:#8a6a2f; text-transform:uppercase; }
+.page--divided-kingdom-page .story__text{ margin:0; font-size:.85rem; line-height:1.46; color:#4a4433; }
+.page--divided-kingdom-page .story__hint{ text-align:center; font-size:.74rem; color:#8a8577; font-style:italic; margin:.1rem 0 0; }
+@media (max-width:560px){ .page--divided-kingdom-page .story__panel{ flex-basis:78vw; } }
+</style>

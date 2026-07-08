@@ -7,12 +7,14 @@
   {{ $mapPage := site.GetPage "/culture/ancient/tabernacle/explore-the-map" }}
   {{ $campPage := site.GetPage "/culture/ancient/tabernacle/camp-of-israel" }}
   {{ $priestlyPage := site.GetPage "/culture/ancient/tabernacle/priestly-clothing" }}
+  {{ $dataNamespace := .Params.dataNamespace | default "tabernacle" }}
+  {{ $nsData := index site.Data $dataNamespace }}
   {{ $hotspotData := dict }}
   {{ $hotspotKey := "" }}
-  {{ $termPopups := site.Data.tabernacle.term_popups }}
+  {{ $termPopups := $nsData.term_popups | default dict }}
   {{ with .Params.hotspotKey }}
     {{ $hotspotKey = . }}
-    {{ $hotspotData = index site.Data.tabernacle.hotspots . }}
+    {{ $hotspotData = index $nsData.hotspots . }}
   {{ end }}
   {{ $pageMode := "default" }}
   {{ if eq $hotspotKey "priestly-clothing" }}
@@ -39,7 +41,10 @@
       {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
     </section>
 
-    <nav class="field-guide-nav field-guide-nav--page" aria-label="Tabernacle field guide navigation">
+    {{ $section := .CurrentSection }}
+    <nav class="field-guide-nav field-guide-nav--page" aria-label="{{ $section.Title }} field guide navigation">
+      {{ if eq $section.RelPermalink "/culture/ancient/tabernacle/" }}
+      {{/* Tabernacle: hand-curated nav, preserved exactly */}}
       {{ with $sectionHome }}
         <a class="field-guide-nav__link{{ if eq $.RelPermalink .RelPermalink }} is-active{{ end }}" href="{{ .RelPermalink }}">Home</a>
       {{ end }}
@@ -51,6 +56,13 @@
       {{ end }}
       {{ with $priestlyPage }}
         <a class="field-guide-nav__link{{ if eq $.RelPermalink .RelPermalink }} is-active{{ end }}" href="{{ .RelPermalink }}">Priestly Clothing</a>
+      {{ end }}
+      {{ else }}
+      {{/* Any other field guide (e.g. Solomon's Temple): driven by its own sub-pages */}}
+        <a class="field-guide-nav__link{{ if eq $.RelPermalink $section.RelPermalink }} is-active{{ end }}" href="{{ $section.RelPermalink }}">Home</a>
+        {{ range $section.RegularPages.ByWeight }}
+          <a class="field-guide-nav__link{{ if eq $.RelPermalink .RelPermalink }} is-active{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ end }}
       {{ end }}
     </nav>
 
@@ -710,7 +722,7 @@
         const supplementPanes = Array.from(root.querySelectorAll('[data-supplement-pane]'));
         let figureState = 'golden';
         let activeHotspotId = cards.find((card) => card.classList.contains('is-active'))?.dataset.hotspotCard || null;
-        const termPopupDefinitions = {{ site.Data.tabernacle.term_popups | jsonify | safeJS }};
+        const termPopupDefinitions = {{ $termPopups | jsonify | safeJS }};
         const inlineScriptureRegex = /\b(?:[1-4]\s+)?(?:Gen(?:esis)?|Ex(?:odus)?|Lev(?:iticus)?|Num(?:bers)?|Deut(?:eronomy)?|Josh(?:ua)?|Judg(?:es)?|Ruth|1\s*Sam(?:uel)?|2\s*Sam(?:uel)?|1\s*K(?:ings|gs?)|2\s*K(?:ings|gs?)|1\s*Chr(?:onicles)?|2\s*Chr(?:onicles)?|Ezra|Neh(?:emiah)?|Esth(?:er)?|Job|Ps(?:alm|alms)?|Prov(?:erbs)?|Eccl(?:esiastes)?|Song of Solomon|Isa(?:iah)?|Jer(?:emiah)?|Lam(?:entations)?|Ezek(?:iel)?|Dan(?:iel)?|Hos(?:ea)?|Joel|Amos|Obad(?:iah)?|Jonah?|Mic(?:ah)?|Nah(?:um)?|Hab(?:akkuk)?|Zeph(?:aniah)?|Hag(?:gai)?|Zech(?:ariah)?|Mal(?:achi)?|Matt?(?:hew)?|Mark|Luke|John|Acts|Rom(?:ans)?|1\s*Cor(?:inthians)?|2\s*Cor(?:inthians)?|Gal(?:atians)?|Eph(?:esians)?|Phil(?:ippians)?|Col(?:ossians)?|1\s*Thess(?:alonians)?|2\s*Thess(?:alonians)?|1\s*Tim(?:othy)?|2\s*Tim(?:othy)?|Titus|Philem(?:on)?|Heb(?:rews)?|James|1\s*Pet(?:er)?|2\s*Pet(?:er)?|1\s*John|2\s*John|3\s*John|Jude|Rev(?:elation)?|Mosiah|Alma|Hel(?:aman)?|Ether|Moroni|D&C|Doctrine and Covenants|Moses|Abraham)\s+\d+(?::\d+(?:[–-]\d+)?)?/g;
         const termAliases = {
           avnet: 'avnet',

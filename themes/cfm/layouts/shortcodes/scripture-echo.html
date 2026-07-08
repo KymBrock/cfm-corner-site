@@ -1,0 +1,47 @@
+{{- $e := index (where site.Data.first_temple.echoes.pairs "id" (.Get "id")) 0 -}}
+{{- with $e -}}
+<figure class="secho" data-secho>
+  {{- with .eyebrow }}<p class="secho__eyebrow">{{ . }}</p>{{ end -}}
+  {{- with .lead }}<p class="secho__lead">{{ . | markdownify }}</p>{{ end -}}
+  {{- $sides := slice .left -}}
+  {{- with .center }}{{ $sides = $sides | append . }}{{ end -}}
+  {{- $sides = $sides | append .right -}}
+  <div class="secho__cols{{ if or .left.image .right.image }} secho__cols--img{{ end }}{{ if .center }} secho__cols--three{{ end }}">
+    {{- range $sides -}}
+    <div class="secho__col">
+      <p class="secho__label">{{ .label | markdownify }}</p>
+      {{- if .image -}}
+      <figure class="secho__fig"><img src="{{ .image }}" alt="{{ .image_alt }}" loading="lazy">{{ with .caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}</figure>
+      {{- else -}}
+      <div class="secho__text">{{ .lines | markdownify }}</div>
+      {{- end -}}
+    </div>
+    {{- end -}}
+  </div>
+  {{- with .note }}<figcaption class="secho__note">{{ . | markdownify }}</figcaption>{{ end -}}
+</figure>
+<script>
+(function(){
+  document.querySelectorAll('.secho').forEach(function(w){
+    if(w.dataset.wired) return; w.dataset.wired='1';
+    var marks = Array.prototype.slice.call(w.querySelectorAll('mark.echo'));
+    function lit(key, on){ marks.forEach(function(m){ if(m.getAttribute('data-echo')===key) m.classList.toggle('is-lit', on); }); }
+    marks.forEach(function(m){
+      var key = m.getAttribute('data-echo');
+      m.setAttribute('tabindex','0');
+      m.addEventListener('mouseenter', function(){ lit(key,true); });
+      m.addEventListener('mouseleave', function(){ lit(key,false); });
+      m.addEventListener('focus', function(){ lit(key,true); });
+      m.addEventListener('blur', function(){ lit(key,false); });
+      m.addEventListener('click', function(){
+        var on = !m.classList.contains('is-lit');
+        marks.forEach(function(x){ x.classList.remove('is-lit'); });
+        if(on) lit(key,true);
+      });
+    });
+  });
+})();
+</script>
+{{- else -}}
+<p><em>(scripture-echo “{{ .Get "id" }}” not found)</em></p>
+{{- end -}}

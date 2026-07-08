@@ -1,0 +1,87 @@
+{{- $t := index site.Data.first_temple "timeline" -}}
+{{- if $t -}}
+{{- $labels := dict "standing" "Standing today" "excavated" "Excavated" "reconstructed" "Reconstructed — not excavated" "believed" "Scripture &amp; tradition" -}}
+<div class="tmln" data-tmln>
+  <div class="tmln__legend" aria-hidden="true">
+    <span class="tmln__key" data-evidence="standing">Standing today</span>
+    <span class="tmln__key" data-evidence="excavated">Excavated</span>
+    <span class="tmln__key" data-evidence="reconstructed">Reconstructed — not excavated</span>
+    <span class="tmln__key" data-evidence="believed">Scripture &amp; tradition</span>
+  </div>
+  <p class="tmln__hint">Dig down through time — each era is buried beneath the one above it. <strong>Tap an era to open it.</strong></p>
+  <div class="tmln__controls"><button class="tmln__toggle-all" type="button" aria-expanded="false">Expand all</button></div>
+  <ol class="tmln__list">
+    {{- range $i, $e := $t.eras -}}
+    <li class="tmln__era" data-evidence="{{ $e.evidence }}">
+      <button class="tmln__head" type="button" aria-expanded="false" data-idx="{{ $i }}">
+        <span class="tmln__marker" aria-hidden="true"></span>
+        <span class="tmln__when">{{ $e.date }}</span>
+        <span class="tmln__title">{{ $e.title }}</span>
+        <span class="tmln__tag">{{ index $labels $e.evidence | safeHTML }}</span>
+        <span class="tmln__chev" aria-hidden="true"></span>
+      </button>
+      <div class="tmln__panel" data-idx="{{ $i }}" hidden>
+        {{- with $e.image }}
+        <figure class="tmln__fig">
+          <img src="{{ . }}" alt="{{ $e.image_alt }}" loading="lazy">
+          {{- with $e.image_caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end -}}
+        </figure>
+        {{- end }}
+        <div class="tmln__body">{{ $e.body | markdownify }}</div>
+        {{- with $e.note }}<div class="tmln__note">{{ . | markdownify }}</div>{{ end -}}
+      </div>
+    </li>
+    {{- end -}}
+  </ol>
+  <p class="tmln__floor"><span>bedrock — <em>es-Sakhra</em></span></p>
+</div>
+<script>
+(function(){
+  document.querySelectorAll('.tmln').forEach(function(tl){
+    if(tl.dataset.wired) return; tl.dataset.wired='1';
+    var eras = Array.prototype.slice.call(tl.querySelectorAll('.tmln__era'));
+    function setOpen(era, open){
+      era.classList.toggle('is-open', open);
+      era.querySelector('.tmln__head').setAttribute('aria-expanded', open ? 'true' : 'false');
+      era.querySelector('.tmln__panel').hidden = !open;
+    }
+    tl.querySelectorAll('.tmln__head').forEach(function(head){
+      head.addEventListener('click', function(){
+        var era = head.closest('.tmln__era');
+        setOpen(era, !era.classList.contains('is-open'));
+      });
+    });
+    var toggleAll = tl.querySelector('.tmln__toggle-all');
+    if(toggleAll){
+      toggleAll.addEventListener('click', function(){
+        var anyClosed = eras.some(function(e){ return !e.classList.contains('is-open'); });
+        eras.forEach(function(e){ setOpen(e, anyClosed); });
+        toggleAll.textContent = anyClosed ? 'Collapse all' : 'Expand all';
+        toggleAll.setAttribute('aria-expanded', anyClosed ? 'true' : 'false');
+      });
+    }
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!reduce){
+      tl.classList.add('tmln--reveal');
+      function revealInView(){
+        var vh = window.innerHeight || document.documentElement.clientHeight;
+        var pending = false;
+        eras.forEach(function(e){
+          if(e.classList.contains('is-revealed')) return;
+          if(e.getBoundingClientRect().top < vh * 0.92){ e.classList.add('is-revealed'); }
+          else { pending = true; }
+        });
+        if(!pending){ window.removeEventListener('scroll', revealInView); }
+      }
+      revealInView();
+      window.addEventListener('scroll', revealInView, { passive:true });
+      window.addEventListener('resize', revealInView);
+      // safety net: never leave any era stuck invisible
+      setTimeout(function(){ eras.forEach(function(e){ e.classList.add('is-revealed'); }); }, 2500);
+    }
+  });
+})();
+</script>
+{{- else -}}
+<p><em>(timeline data not found)</em></p>
+{{- end -}}

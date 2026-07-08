@@ -1,0 +1,15 @@
+{
+  "note": "Prophets dated to reigns of the divided monarchy. 'first'/'last' are the king ORDER numbers within that kingdom's list in kings.json. Datings taken from each book's superscription (or the narrative), verified verbatim against the KJV via the vault ScriptureDatabase. Spans are 'the reigns the text associates with the prophet,' not absolute calendar dates.",
+  "prophets": [
+    { "name": "Ahijah", "kingdom": "israel", "first": 1, "last": 1, "ref": "1 Kings 11:29", "note": "Foretold the kingdom's split to Jeroboam." },
+    { "name": "Elijah", "kingdom": "israel", "first": 7, "last": 8, "ref": "1 Kings 17 – 2 Kings 1", "note": "Confronted Ahab, Jezebel, and the Baal cult." },
+    { "name": "Elisha", "kingdom": "israel", "first": 9, "last": 12, "ref": "2 Kings 2–13", "note": "Elijah's successor; asked the double portion." },
+    { "name": "Jonah", "kingdom": "israel", "first": 13, "last": 13, "ref": "2 Kings 14:25", "note": "Foretold Israel's expansion under Jeroboam II." },
+    { "name": "Amos", "kingdom": "israel", "first": 13, "last": 13, "ref": "Amos 1:1", "note": "A Judahite herdsman sent to the North's prosperity." },
+    { "name": "Hosea", "kingdom": "israel", "first": 13, "last": 18, "ref": "Hosea 1:1", "note": "The North's last great prophet, into the eve of its fall." },
+    { "name": "Isaiah", "kingdom": "judah", "first": 10, "last": 13, "ref": "Isaiah 1:1", "note": "Uzziah to Hezekiah; through the Assyrian crisis." },
+    { "name": "Micah", "kingdom": "judah", "first": 11, "last": 13, "ref": "Micah 1:1", "note": "Jotham to Hezekiah; contemporary of Isaiah." },
+    { "name": "Zephaniah", "kingdom": "judah", "first": 16, "last": 16, "ref": "Zephaniah 1:1", "note": "Under Josiah, before the fall." },
+    { "name": "Jeremiah", "kingdom": "judah", "first": 16, "last": 20, "ref": "Jeremiah 1:2–3", "note": "Josiah to Zedekiah; the prophet of the fall." }
+  ]
+}

@@ -1,0 +1,66 @@
+# Scripture-echo comparisons: paired passages whose shared language cross-highlights.
+# Each <mark class="echo" data-echo="N"> in the left column lights up the matching
+# data-echo="N" in the right column (and vice versa). Marks are PHRASES verified to
+# appear in BOTH passages — never invented parallels.
+pairs:
+  - id: gathering
+    eyebrow: "The Gathering · three peoples, one pattern"
+    lead: "When a house of the Lord was finished, the people *gathered* to it. Israel assembled at the autumn feast for Solomon's temple; King Benjamin's people pitched their tents around the Nephite temple in the New World; and long after, the Saints gathered to the Kirtland Temple. Three peoples, three houses — one act."
+    left:
+      label: "Israel gathers to the First Temple · 1 Kings 8"
+      image: /images/culture/first-temple/solomon-temple-dedication.jpg
+      image_alt: "Israel gathered before Solomon's First Temple at the Feast of Tabernacles — people with palm branches, the molten sea and the altar in the court, the two bronze pillars at the gold doors, golden glory pouring from above"
+      caption: "“Then Solomon assembled the elders of Israel… at the feast in the seventh month” (1 Kings 8:1–2) — the people with palm branches before the pillars, the sea and the altar in the court."
+    center:
+      label: "King Benjamin's people gather · Mosiah 2"
+      image: /images/culture/first-temple/benjamin-temple-gathering.jpg
+      image_alt: "King Benjamin's people gathered to the Nephite temple — families in tents, the king on a tower, a columned stone temple rising in a New World landscape under a golden sky"
+      caption: "“They pitched their tents round about… the door thereof towards the temple” (Mosiah 2:6) — King Benjamin's people gathered to the Nephite temple, built “after the manner of… Solomon” (2 Nephi 5:16), for a fall-festival covenant renewal."
+    right:
+      label: "The Saints gather to Kirtland · 1836"
+      image: /images/culture/first-temple/kirtland-temple-dedication.jpg
+      image_alt: "The Saints gathered outside the Kirtland Temple on its 1836 dedication day, the Gothic windows glowing, golden light breaking behind it"
+      caption: "Commanded to gather and “establish a house… a house of God” (D&C 37:3; 88:119), the Saints built the Kirtland Temple at great cost and gathered to its dedication."
+    note: "The same act across three peoples and three thousand years: a covenant people gathers to a house built at great cost, to give it back to God. The *festival* differs — Solomon and King Benjamin gathered at the autumn **Feast of Tabernacles**, while Kirtland's was a **spring** gathering, dedicated the week before Easter; a week later, on Easter Sunday — which fell during **Passover** that year — **Elijah** himself appeared (D&C 110:13–16), the very season Jews leave a place at the seder for his return. But the gathering itself, on the Lord's **appointed feast days**, is a recurring theme throughout scripture and Israelite history."
+  - id: glory
+    eyebrow: "The Glory Fills the House · the same sign seals both sanctuaries"
+    lead: "The cloud that filled Solomon's temple is the very sign that had filled the **Tabernacle** generations before — and the wording is almost word for word. *Hover or tap a highlighted phrase to light up its echo.*"
+    left:
+      label: "The Tabernacle · Exodus 40"
+      lines: |-
+        “Then <mark class="echo" data-echo="1">a cloud</mark> covered the tent of the congregation, and <mark class="echo" data-echo="2">the glory of the LORD filled the tabernacle</mark>. And <mark class="echo" data-echo="3">Moses was not able to enter</mark> into the tent of the congregation, because the cloud abode thereon” (40:34–35).
+    right:
+      label: "Solomon's Temple · 1 Kings 8"
+      lines: |-
+        “…<mark class="echo" data-echo="1">the cloud</mark> filled the house of the LORD, so that <mark class="echo" data-echo="3">the priests could not stand to minister</mark> because of the cloud: for <mark class="echo" data-echo="2">the glory of the LORD had filled the house</mark>” (8:10–11).
+    note: "The same sign seals both — the wilderness tent and the Jerusalem house are claimed by the one glory. And the pattern reaches into the Restoration: at the Kirtland Temple the Lord answered Solomon's old request, “the place of which thou hast said, My name shall be there” (1 Kings 8:29), with “I have accepted this house, and **my name shall be here**… in mercy” (D&C 110:7)."
+  - id: prayer
+    eyebrow: "The Dedicatory Prayer · across two dispensations"
+    lead: "Solomon's dedicatory prayer and the prayer Joseph Smith received “by revelation” for the **Kirtland Temple** were offered three thousand years apart — yet they share a posture and a vocabulary. *Hover or tap a highlighted phrase to light up its echo on the other side.*"
+    left:
+      label: "Solomon's prayer · 1 Kings 8"
+      lines: |-
+        “And he said, <mark class="echo" data-echo="1">Lord God of Israel</mark>, there is no God like thee, in heaven above, or on earth beneath, <mark class="echo" data-echo="2">who keepest covenant</mark> and <mark class="echo" data-echo="3">mercy</mark> with <mark class="echo" data-echo="4">thy servants that walk before thee with all their heart</mark>” (8:23).
+
+        “…the place of which thou hast said, <mark class="echo" data-echo="5">My name shall be there</mark>” (8:29).
+    right:
+      label: "The Kirtland Temple · D&C 109"
+      lines: |-
+        “Thanks be to thy name, O <mark class="echo" data-echo="1">Lord God of Israel</mark>, <mark class="echo" data-echo="2">who keepest covenant</mark> and <mark class="echo" data-echo="3">showest mercy</mark> unto <mark class="echo" data-echo="4">thy servants who walk uprightly before thee, with all their hearts</mark>” (109:1).
+
+        “…that <mark class="echo" data-echo="5">thy name may be upon them</mark>, and thy glory be round about them” (109:22).
+    note: "The wording is not identical — D&C 109 is its own prayer, not a copy — but the frame is unmistakable: the same God, organizing temple worship in two dispensations, drawing on the same covenant pattern of **name, mercy, and a people who walk before Him.** Given “by revelation,” the Kirtland prayer became the **pattern still followed when temples are dedicated today.** And as at Solomon's house, the Lord answered it: “I have accepted this house, and **my name shall be here**; and I will manifest myself to my people **in mercy**” (D&C 110:7). *Deepens, not debunks.*"
+  - id: waters
+    eyebrow: "The Waters · the same basin, three thousand years apart"
+    lead: "Solomon's bronze sea rested on twelve oxen, three facing each quarter of the compass. When the Restoration built fonts for baptism, it set them on twelve oxen too — *expressly after the pattern of Solomon's sea.*"
+    left:
+      label: "The molten sea · 1 Kings 7"
+      image: /images/culture/first-temple/props/sea.png
+      image_alt: "The molten sea — a great round cast-bronze basin resting on twelve oxen arranged in four groups of three"
+      caption: "“It stood upon twelve oxen… and the sea was set above upon them” (1 Kings 7:25) — the great basin “for the priests to wash in” (2 Chronicles 4:6)."
+    right:
+      label: "The temple font · Salt Lake, c. 1909"
+      image: /images/culture/first-temple/salt-lake-baptismal-font.jpg
+      image_alt: "Historical photograph of the Salt Lake Temple baptismal font resting on twelve sculpted oxen"
+      caption: "The Latter-day Saint font on twelve oxen — for “your… washings, and your baptisms for the dead” (D&C 124:38–39). Photograph by Charles Roscoe Savage, c. 1909 (public domain)."
+    note: "The likeness is no accident: the font on twelve oxen was built *after* Solomon's sea, the twelve recalling the tribes who bore the waters of cleansing before the Lord. The court of priestly washing becomes the font of baptism — cleansing carried from one dispensation into the next."

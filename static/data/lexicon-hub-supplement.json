@@ -1,0 +1,77 @@
+{
+  "hub-get": {
+    "translit": "get",
+    "original": "גֵּט",
+    "lang": "aramaic",
+    "stratum": "Mishnaic/Tannaitic",
+    "category": "rabbinic-term-of-art",
+    "definition": "A bill of divorce; the document a husband delivers to his wife to effect a halakhic divorce.",
+    "source": "Jastrow (page TBD — verify)",
+    "verse": null,
+    "leave_bare": true,
+    "needs_review": true
+  },
+  "hub-agunah": {
+    "translit": "agunah",
+    "original": "עֲגוּנָה",
+    "original_forms": ["עֲגוּנָה", "עֲגוּנוֹת"],
+    "lang": "hebrew",
+    "stratum": "Talmudic/Amoraic Aramaic",
+    "category": "rabbinic-term-of-art",
+    "definition": "A 'chained' woman — one who cannot remarry because her husband's death cannot be established or he refuses/ is unable to grant a get. Plural: agunot.",
+    "source": "Jastrow (page TBD — verify)",
+    "verse": null,
+    "leave_bare": true,
+    "needs_review": true
+  },
+  "hub-keriah": {
+    "translit": "keriah",
+    "original": "קְרִיעָה",
+    "lang": "hebrew",
+    "stratum": "Mishnaic/Tannaitic",
+    "category": "rabbinic-term-of-art",
+    "definition": "The ritual rending of one's garment as a sign of mourning.",
+    "source": "Jastrow (page TBD — verify)",
+    "verse": null,
+    "leave_bare": true,
+    "needs_review": true
+  },
+  "hub-chillul": {
+    "translit": "chillul",
+    "original": "חִלּוּל",
+    "lang": "hebrew",
+    "stratum": "Mishnaic/Tannaitic",
+    "category": "rabbinic-term-of-art",
+    "definition": "Profanation, desecration — most often in the phrase chillul Hashem, 'profanation of the Name.'",
+    "source": "Jastrow (page TBD — verify)",
+    "verse": null,
+    "related_strongs": "H2490",
+    "note": "STRATUM-SHIFT CANDIDATE: nominal sense is post-biblical; the verbal root חָלַל (H2490, 'to profane / pierce') is Biblical Hebrew. Modeled here as a single stratum field pending Kymber's decision on shift modeling.",
+    "leave_bare": true,
+    "needs_review": true
+  },
+  "hub-divine-name-he": {
+    "translit": "Hashem (abbrev.)",
+    "original": "ה׳",
+    "lang": "hebrew",
+    "stratum": "Rabbinic–Modern (orthographic convention)",
+    "category": "divine-name-abbreviation",
+    "definition": "Scribal abbreviation for the divine Name (the Tetragrammaton / Adonai), written with a geresh to avoid spelling the Name in full.",
+    "source": "Standard scribal convention (no lexical entry)",
+    "verse": null,
+    "leave_bare": true,
+    "needs_review": true
+  },
+  "hub-divine-name-lahe": {
+    "translit": "la-Hashem (abbrev.)",
+    "original": "לַה׳",
+    "lang": "hebrew",
+    "stratum": "Rabbinic–Modern (orthographic convention)",
+    "category": "divine-name-abbreviation",
+    "definition": "Prefixed form ('to/for the LORD') of the scribal abbreviation for the divine Name, written with a geresh to avoid spelling the Name in full.",
+    "source": "Standard scribal convention (no lexical entry)",
+    "verse": null,
+    "leave_bare": true,
+    "needs_review": true
+  }
+}

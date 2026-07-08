@@ -1,0 +1,139 @@
+# Interactive temple scenes. Coordinates are in each image's own pixel space (~1535x1024).
+courtyard:
+  image: /images/culture/first-temple/exterior.jpg
+  alt: "The temple courtyard from above — the front gate, the great bronze altar with its fire, the round molten sea on twelve oxen, the ranked wheeled lavers, and the gold-doored house between the pillars Jachin and Boaz."
+  caption: "The court, from the gates to the threshold — walk the five numbered stops in order. <em>Reconstruction; no furniture of Solomon's Temple has ever been excavated.</em>"
+  hotspots:
+    - title: "Through the Gates"
+      x: 660
+      y: 695
+      w: 185
+      h: 225
+      desc: >-
+        The walk begins outside the house. A worshipper first entered its <a class="term-ref" href="https://www.blueletterbible.org/lexicon/h2691/kjv/wlc/0-1/" data-strongs="H2691" data-lang="hebrew" data-translit="chatser" data-original="חָצֵר" data-lexicon="chatser — a court or walled enclosure; the open courts surrounding the Temple"><em>courts</em></a> (חָצֵר) — and even those were bounded by gates: Solomon “made the court of the priests, and the great court, and doors for the court, and overlaid the doors of them with brass” (2 Chronicles 4:9), bronze-plated gates marking the first threshold of holiness. From there the whole approach runs inward as a graded ascent — court, porch, Holy Place, and the oracle (the old word for the innermost room, the Holy of Holies) — each station nearer the presence, and each marked by a deepening of the metal, from **bronze** in the open court to **gold** at the heart.
+    - title: "The Great Bronze Altar"
+      x: 660
+      y: 450
+      w: 205
+      h: 160
+      pic: /images/culture/first-temple/props/altar.png
+      desc: |-
+        The first thing met on entering the court — and the last station before the house — was the great <a class="term-ref" href="https://www.blueletterbible.org/lexicon/h4196/kjv/wlc/0-1/" data-strongs="H4196" data-lang="hebrew" data-translit="mizbeach" data-original="מִזְבֵּחַ" data-lexicon="mizbeach — 'altar'; literally 'place of slaughter/sacrifice,' from the root z-b-ḥ, to slaughter"><em>altar</em></a> (מִזְבֵּחַ) of burnt offering: “an altar of brass, twenty cubits the length thereof, and twenty cubits the breadth thereof, and ten cubits the height thereof” (2 Chronicles 4:1) — about thirty feet square and fifteen high, far larger than the Tabernacle's altar.
+
+        Even this was not enough on the day of dedication. The offerings were so many that the great altar could not hold them all, so Solomon set apart the open court itself to take the overflow: he “hallow[ed] the middle of the court… because the brasen altar… was too little to receive the burnt offerings” (1 Kings 8:64).
+
+        **A ramp, not steps.** The Law forbade going up to an altar “by steps,” lest the priest's nakedness be exposed (Exodus 20:26) — so reconstructions give this altar a sloped *ramp* rather than stairs.
+
+        **A cross-source note.** The altar's dimensions survive *only* in Chronicles — 1 Kings details much of Hiram's bronze work but skips the altar's measurements. Not a contradiction; a reminder that Kings and Chronicles each preserve what the other omits, and the fullest picture needs both.
+
+        **It points to Christ — and scripture says so.** That the sacrifices were given to point forward to Christ is the canon's own claim. The New Testament makes the altar's logic explicit — “without shedding of blood is no remission” (Hebrews 9:22), the law holding “a shadow of good things to come” (Hebrews 10:1) — and the Book of Mormon states it outright: “this is the whole meaning of the law, every whit pointing to that great and last sacrifice; and that great and last sacrifice will be the Son of God” (Alma 34:14). The altar's spatial sermon — there is no drawing near without atonement — is the text's own typology. Sacrifice is the gateway.
+    - title: "The Molten Sea"
+      x: 395
+      y: 560
+      w: 235
+      h: 195
+      pic: /images/culture/first-temple/props/sea.png
+      desc: |-
+        Dominating the court stood the molten sea, the <a class="term-ref" href="https://www.blueletterbible.org/lexicon/h3220/kjv/wlc/0-1/" data-strongs="H3220" data-lang="hebrew" data-translit="yam mutsaq" data-original="יָם מוּצָק" data-lexicon="yam mutsaq — the 'cast' or 'molten sea' (yam, sea + mutsaq, cast metal); the great bronze basin of the Temple court"><em>yam mutsaq</em></a> (יָם מוּצָק), the “cast sea”: a single bronze basin “ten cubits from the one brim to the other… round all about… five cubits the height thereof,” with “a line of thirty cubits” compassing it (1 Kings 7:23) — roughly fifteen feet across, holding more than ten thousand gallons. Its brim was “wrought… with flowers of lilies,” and it rested “upon twelve oxen, three looking toward the north, and three… the west, and three… the south, and three… the east” (1 Kings 7:25–26). Those twelve oxen — four groups of three, facing the compass — recall the twelve tribes of Israel, who camped three to a side, by the four directions, around the Tabernacle (Numbers 2). Chronicles gives the purpose plainly: “the sea was for the priests to wash in” (2 Chronicles 4:6).
+
+        **A measurement footnote.** The thirty-cubit circumference around a ten-cubit diameter is the famous “π ≈ 3” rounding — ancient measurement to the nearest cubit. And the capacity is “two thousand baths” in 1 Kings 7:26 but “three thousand” in 2 Chronicles 4:5 — a known number-tradition difference. We flag both rather than smoothing them over.
+
+        **Interpretive layer.** Much scholarship hears cosmic overtones: the word *sea* (*yam*) evokes the primeval deep, so the basin becomes a sign of the LORD's mastery over the chaos-waters — the Temple as the ordered center of the world. Rich and widely held, but not stated by the text; what the text *does* say is the sharper thing: this is where the priests washed. Cleansing came before service.
+
+        **Latter-day Saint layer.** The bronze sea on twelve oxen is the recognized type behind Latter-day Saint baptismal fonts, which stand on twelve oxen to this day. Doctrine and Covenants 124 ties the font to the temple and names “your… washings, and your baptisms for the dead… ordained by the ordinance of my holy house” (D&C 124:39). The deepening metals — **bronze** here in the court, **gold** within the house — echo the Tabernacle's fuller *bronze → silver → gold* progression, which Latter-day Saints read as the **telestial, terrestrial, and celestial** degrees of glory (D&C 76); the [Tabernacle field guide](/culture/ancient/tabernacle/explore-the-map/) walks that symbolism in detail.
+    - title: "The Ten Lavers"
+      x: 945
+      y: 300
+      w: 215
+      h: 345
+      pic: /images/culture/first-temple/props/laver.png
+      desc: |-
+        Flanking the sea were ten bronze <a class="term-ref" href="https://www.blueletterbible.org/lexicon/h3595/kjv/wlc/0-1/" data-strongs="H3595" data-lang="hebrew" data-translit="kiyyor" data-original="כִּיּוֹר" data-lexicon="kiyyor — a basin or laver; the ten wheeled wash-basins of the Temple court"><em>lavers</em></a> (כִּיּוֹר) on wheeled bases — carts four cubits square with wheels “like a chariot wheel,” their panels engraved with “lions, oxen, and cherubims” (1 Kings 7:27–37). Five stood on the south side, five on the north (1 Kings 7:39); “such things as they offered for the burnt offering they washed in them” (2 Chronicles 4:6). These stands are the **closest archaeological parallel we have** to any Temple furnishing: bronze four-wheeled cult-stands from Cyprus (twelfth–tenth centuries BCE) share the same form — a square openwork base on chariot-like wheels, its panels worked with sphinx-like cherubim, animals, and stylized trees. The biblical lavers match them in nearly every respect *but size* — Solomon's were far larger. (Most of the Cypriot pieces are unprovenanced finds, so the link is one of *type*, not a direct one; the stands were catalogued by H.W. Catling, *Cypriot Bronzework in the Mycenaean World*, 1964, and tied to Solomon's lavers by V. Hurowitz, *Bible Review*, 1994.) Where the sea served the priests themselves, the lavers rinsed the offerings.
+
+        <figure class="tscene__evidence"><img src="/images/culture/first-temple/cypriot-laver-stand.jpg" alt="A small bronze four-wheeled cult-stand from Cyprus, c. 1050–950 BC: an openwork square base on chariot-like wheels — the closest known parallel to Solomon's laver-stands."><figcaption>A Cypriot bronze wheeled stand (Kition, c. 1050–950 BC; Antikensammlung Berlin, Misc. 8947) — the very form the biblical laver-stands describe. Photo © <a href="https://commons.wikimedia.org/wiki/File:Cypriot_bronze_wheeled_stand_Antikensammlung_Berlin_Misc._8947_(1).jpg" target="_blank" rel="noopener">Marcus Cyron</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>, via Wikimedia Commons. Further reading: <a href="https://cojs.org/wheel_stands-_12th-10th_century_bce/" target="_blank" rel="noopener">COJS</a> · <a href="https://en.wikipedia.org/wiki/Bronze_laver_(Temple)" target="_blank" rel="noopener">Wikipedia</a> · <a href="https://www.academia.edu/7666602/" target="_blank" rel="noopener">Revista d'Arqueologia de Ponent 14 (2004)</a>.</figcaption></figure>
+    - title: "At the Threshold: Jachin and Boaz"
+      x: 652
+      y: 172
+      w: 192
+      h: 208
+      pic: /images/culture/first-temple/props/pillars.png
+      desc: |-
+        At the very porch of the house stood two great bronze pillars — each eighteen cubits high with a five-cubit capital of “lily work,” netting, wreaths, and rows of pomegranates (1 Kings 7:15–20). They held up no roof; they were monuments, and they were *named*: “he set up the right pillar, and called the name thereof <a class="term-ref" href="https://www.blueletterbible.org/lexicon/h3199/kjv/wlc/0-1/" data-strongs="H3199" data-lang="hebrew" data-translit="Yachin" data-original="יָכִין" data-lexicon="Jachin — 'He establishes / He will establish'; the right-hand pillar of the Temple porch"><em>Jachin</em></a> (יָכִין)… and… the left pillar, and called the name thereof <a class="term-ref" href="https://www.blueletterbible.org/lexicon/h1162/kjv/wlc/0-1/" data-strongs="H1162" data-lang="hebrew" data-translit="Boaz" data-original="בֹּעַז" data-lexicon="Boaz — traditionally 'in him is strength'; the left-hand pillar of the Temple porch"><em>Boaz</em></a> (בֹּעַז)” (1 Kings 7:21). Free-standing flanking pillars are a known feature of Syro-Phoenician temple fronts, and lily-and-pomegranate capitals fit Phoenician decorative art.
+
+        **Interpretive layer.** The name-meanings are traditional Hebrew etymology, not spelled out by the text: *Jachin* ≈ “He establishes,” *Boaz* ≈ “in him is strength.” Read together they may form a single proclamation — *He establishes [it] in strength.* Some scholars go further, reading each name as the **opening word of a longer dynastic inscription** once carved on or near the pillar — *Jachin* beginning something like “[the LORD] will establish the throne of David for ever,” and *Boaz*, “in the strength [of the LORD the king rejoices]” — the way a single word can call up a whole saying. (Later Masonic symbolism around the pillars is post-biblical and shouldn't be read back into Solomon's porch.) The plain point stands: everyone who entered walked *between* a declaration that the Lord establishes His house and that in Him is the worshipper's strength.
+
+        And the pillars framed the entrance itself. The front <a class="term-ref" href="https://www.blueletterbible.org/lexicon/h1817/kjv/wlc/0-1/" data-strongs="H1817" data-lang="hebrew" data-translit="deleth" data-original="דֶּלֶת" data-lexicon="deleth — a door; the carved, gold-overlaid double doors at the entrance of the Temple house"><em>doors</em></a> (דֶּלֶת) were a double pair sheathed in gold on olive-wood posts, “carved… with cherubims and palm trees and open flowers… covered with gold” (1 Kings 6:33–35) — the same garden of cherubim, palms, and blossoms that ran along the inner walls, worked into the last and most golden threshold before the Holy Place.
+holy-place:
+  image: /images/culture/first-temple/interior-holy-place.jpg
+  alt: "The Holy Place of Solomon's Temple — golden lampstands and tables of the bread of the Presence lining a gold-walled room, the altar of incense on the steps before the cherubim-woven veil."
+  caption: "The Holy Place — tap a glowing marker to explore each furnishing. <em>Reconstruction; no furniture of Solomon's Temple has ever been excavated.</em>"
+  hotspots:
+    - title: "The Veil"
+      x: 624
+      y: 232
+      w: 280
+      h: 470
+      pic: /images/culture/first-temple/props/veil.png
+      desc: >-
+        The boundary into the Holy of Holies was both a door and a <a class="term-ref" href="https://www.blueletterbible.org/lexicon/h6532/kjv/wlc/0-1/" data-strongs="H6532" data-lang="hebrew" data-translit="paroketh" data-original="פָּרֹכֶת" data-lexicon="paroketh — the veil/curtain partitioning the Holy of Holies from the Holy Place"><em>veil</em></a> (פָּרֹכֶת). The veil was woven “of blue, and purple, and crimson, and fine linen,” with cherubim worked into it (2 Chronicles 3:14); the olive-wood doors behind it were carved with “cherubims and palm trees and open flowers” and overlaid with gold (1 Kings 6:31–32). The carved cherubim, palms, and flowers continued the garden imagery of the inner walls — Eden worked into the very boundary that barred the way back in. At the crucifixion the veil was “rent in twain from the top to the bottom” (Matthew 27:51): the way opened through Christ.
+    - title: "The Altar of Incense"
+      x: 706
+      y: 596
+      w: 120
+      h: 156
+      pic: /images/culture/first-temple/props/incense.png
+      desc: >-
+        A small horned altar of cedar overlaid with gold, standing right before the veil — “the whole altar that was by the oracle he overlaid with gold” (1 Kings 6:22). On it the priests burned “a perpetual <a class="term-ref" href="https://www.blueletterbible.org/lexicon/h7004/kjv/wlc/0-1/" data-strongs="H7004" data-lang="hebrew" data-translit="qetoret" data-original="קְטֹרֶת" data-lexicon="qetoret — incense, the fragrant smoke of burning spices offered to God"><em>incense</em></a> (קְטֹרֶת) before the LORD” morning and evening (Exodus 30:7–8). Small horned incense altars are well attested archaeologically across Iron-Age Judah (Arad, Megiddo). The rising smoke is prayer ascending: “Let my prayer be set forth before thee as incense” (Psalm 141:2), the saints' prayers rising with incense before the throne (Revelation 8:3–4).
+    - title: "The Golden Menorah"
+      x: 12
+      y: 556
+      w: 156
+      h: 330
+      pic: /images/culture/first-temple/props/menorah.png
+      desc: >-
+        The golden <a class="term-ref" href="https://www.blueletterbible.org/lexicon/h4501/kjv/wlc/0-1/" data-strongs="H4501" data-lang="hebrew" data-translit="menorah" data-original="מְנוֹרָה" data-lexicon="menorah — lampstand; the seven-branched golden lampstand of the sanctuary"><em>lampstands</em></a> (מְנוֹרָה) — “the candlesticks of pure gold, five on the right side, and five on the left, before the oracle” (1 Kings 7:49). Solomon multiplied the Tabernacle's single seven-branched menorah into ten, each a hammered-gold shaft with six branches bearing almond-shaped cups, knops, and flowers (Exodus 25:31–40). Burning olive oil, they were the only light in the windowless room — and the almond (<a class="term-ref" href="https://www.blueletterbible.org/lexicon/h8247/kjv/wlc/0-1/" data-strongs="H8247" data-lang="hebrew" data-translit="shaqed" data-original="שָׁקֵד" data-lexicon="shaqed — almond (tree); punning on shoqed, 'watching, wakeful' — the wordplay of Jeremiah 1:11–12"><em>shaqed</em></a> (שָׁקֵד)) puns on God “watching” to perform His word (Jeremiah 1:11–12). That perpetual light — the one glow in the darkness of the holy room — became a name for Christ himself, read in the Gospel and the Book of Mormon alike as a figure of the One it pointed toward: “I am the light of the world” (John 8:12); “He is the light and the life of the world” (Mosiah 16:9).
+    - title: "The Bread of the Presence"
+      x: 150
+      y: 700
+      w: 214
+      h: 150
+      pic: /images/culture/first-temple/props/table.png
+      desc: >-
+        The <a class="term-ref" href="https://www.blueletterbible.org/lexicon/h7979/kjv/wlc/0-1/" data-strongs="H7979" data-lang="hebrew" data-translit="shulchan" data-original="שֻׁלְחָן" data-lexicon="shulchan — table; the table that held the bread of the Presence (showbread)"><em>table</em></a> (שֻׁלְחָן) “whereupon the shewbread was” (1 Kings 7:48) — ten gold tables in all, five and five. The bread itself, *lechem ha-panim*, the bread “of the face,” was twelve loaves set “two rows, six on a row, upon the pure table before the LORD,” renewed every sabbath and eaten by the priests as “an everlasting covenant” (Leviticus 24:5–8). Twelve loaves: all Israel, tribe by tribe, kept continually before the face of God — and Jesus takes it up directly: “I am the bread of life… the bread that I will give is my flesh” (John 6:35, 51), kept “in remembrance of my body” in the sacrament (3 Nephi 18:7).
+holy-of-holies:
+  image: /images/culture/first-temple/interior-holy-of-holies.jpg
+  alt: "The Holy of Holies — the gold Ark of the Covenant on staves beneath two enormous winged guardian cherubim, the carved garden walls behind."
+  caption: "The Holy of Holies — tap a glowing marker to explore each furnishing. <em>Reconstruction after Ezekiel's living creatures; no remains survive.</em>"
+  hotspots:
+    - title: "The Great Cherubim"
+      x: 286
+      y: 176
+      w: 300
+      h: 484
+      pic: /images/culture/first-temple/props/cherub.png
+      desc: >-
+        Two guardian <a class="term-ref" href="https://www.blueletterbible.org/lexicon/h3742/kjv/wlc/0-1/" data-strongs="H3742" data-lang="hebrew" data-translit="keruv" data-original="כְּרוּב" data-lexicon="keruv (cherub) — a winged guardian/throne-creature associated with God's presence"><em>cherubim</em></a> (כְּרוּב) of olive wood overlaid with gold, “each ten cubits high,” their wings stretched so that “the wing of the one touched the one wall, and the wing of the other… touched the other wall; and their wings touched one another in the midst of the house” (1 Kings 6:23–27). Scripture never describes their faces; this reconstruction follows Ezekiel's four-faced living creatures (Ezekiel 1:10; 10:20) and the winged temple-guardians of the wider ancient Near East — the *lamassu*, the human-headed winged bulls that flanked Assyrian palace gates. The same cherubim who guarded Eden's gate “to keep the way of the tree of life” (Genesis 3:24) here overshadow the mercy seat — guardianship turned into nearness.
+    - title: "The Mercy Seat"
+      x: 632
+      y: 540
+      w: 276
+      h: 120
+      pic: /images/culture/first-temple/props/ark.png
+      desc: >-
+        The ark's gold lid — the <a class="term-ref" href="https://www.blueletterbible.org/lexicon/h3727/kjv/wlc/0-1/" data-strongs="H3727" data-lang="hebrew" data-translit="kapporeth" data-original="כַּפֹּרֶת" data-lexicon="kapporeth — the 'mercy seat,' the gold atonement-cover of the ark, sprinkled with blood on the Day of Atonement"><em>mercy seat</em></a> (כַּפֹּרֶת) — bore two cherubim of beaten gold facing one another, their wings covering it (Exodus 25:18–20). The name carries the meaning: *kapporeth* comes from the root *k-p-r*, “to cover” — and so “to atone” — the very root behind *Yom Kippur*, the Day of Atonement. And it was on that day that the high priest sprinkled sacrificial blood there, “before the mercy seat” (Leviticus 16:14). The New Testament reads it straight onto Christ: Paul calls Him “a propitiation… in his blood” (Romans 3:25) — and the Greek word there, <a class="term-ref" href="https://www.blueletterbible.org/lexicon/g2435/kjv/tr/0-1/" data-strongs="G2435" data-lang="greek" data-translit="hilastērion" data-original="ἱλαστήριον" data-lexicon="hilastērion — 'place/means of propitiation'; the Septuagint's word for the mercy seat, applied to Christ in Romans 3:25"><em>hilastērion</em> (ἱλαστήριον)</a>, is the very term the Greek Old Testament uses for the mercy seat — so that believers may now “come boldly unto the throne of grace” (Hebrews 4:16).
+    - title: "The Ark of the Covenant"
+      x: 598
+      y: 658
+      w: 344
+      h: 212
+      pic: /images/culture/first-temple/props/ark.png
+      desc: >-
+        The gold-overlaid chest, carried on staves — the <a class="term-ref" href="https://www.blueletterbible.org/lexicon/h727/kjv/wlc/0-1/" data-strongs="H727" data-lang="hebrew" data-translit="aron" data-original="אֲרוֹן" data-lexicon="aron — chest/ark; the gold-overlaid 'ark of the covenant' that held the tables of the Law"><em>ark</em></a> (אֲרוֹן) “of the covenant of the LORD.” By Solomon's day it held only “the two tables of stone, which Moses put there at Horeb” (1 Kings 8:9); earlier it had also held the pot of manna and Aaron's rod (Hebrews 9:4). Set beneath the overshadowing wings, ark and cherubim together formed the throne-seat of the invisible LORD “that dwelleth between the cherubims” (1 Samuel 4:4; Psalm 80:1) — the dark center toward which the whole east-to-west journey ascends.
+    - title: "The Great Cherubim"
+      x: 930
+      y: 176
+      w: 300
+      h: 484
+      pic: /images/culture/first-temple/props/cherub.png
+      desc: >-
+        Two guardian <a class="term-ref" href="https://www.blueletterbible.org/lexicon/h3742/kjv/wlc/0-1/" data-strongs="H3742" data-lang="hebrew" data-translit="keruv" data-original="כְּרוּב" data-lexicon="keruv (cherub) — a winged guardian/throne-creature associated with God's presence"><em>cherubim</em></a> (כְּרוּב) of olive wood overlaid with gold, “each ten cubits high,” their wings stretched so that “the wing of the one touched the one wall, and the wing of the other… touched the other wall; and their wings touched one another in the midst of the house” (1 Kings 6:23–27). Scripture never describes their faces; this reconstruction follows Ezekiel's four-faced living creatures (Ezekiel 1:10; 10:20) and the winged temple-guardians of the wider ancient Near East — the *lamassu*, the human-headed winged bulls that flanked Assyrian palace gates. The same cherubim who guarded Eden's gate “to keep the way of the tree of life” (Genesis 3:24) here overshadow the mercy seat — guardianship turned into nearness.

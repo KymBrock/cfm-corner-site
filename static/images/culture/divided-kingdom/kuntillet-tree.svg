@@ -1,0 +1,65 @@
+<svg viewBox="0 0 700 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Original line drawing after the Kuntillet Ajrud Pithos A painting: a stylized sacred tree flanked by two ibexes browsing its branches, with a striding lion below.">
+  <defs>
+    <style>
+      .bg   { fill:#f4e8d0; }
+      .ink  { fill:none; stroke:#7a5636; stroke-width:3.4; stroke-linecap:round; stroke-linejoin:round; }
+      .thin { fill:none; stroke:#7a5636; stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round; }
+      .beast{ fill:#a37c48; stroke:#5f4224; stroke-width:2.2; stroke-linejoin:round; }
+      .bud  { fill:#c9a24a; stroke:#7a5636; stroke-width:2; }
+    </style>
+  </defs>
+  <rect class="bg" x="0" y="0" width="700" height="500" rx="16"/>
+
+  <!-- ground lines -->
+  <line class="thin" x1="70" y1="362" x2="630" y2="362"/>
+  <line class="thin" x1="150" y1="474" x2="550" y2="474"/>
+
+  <!-- ================= SACRED TREE (center) ================= -->
+  <g>
+    <line x1="350" y1="362" x2="350" y2="150" stroke="#7a5636" stroke-width="6" stroke-linecap="round"/>
+    <path class="ink" d="M326 362 Q350 346 374 362"/>
+    <!-- branch pairs + buds -->
+    <path class="thin" d="M350 336 C 326 330, 308 326, 300 306"/>
+    <path class="thin" d="M350 336 C 374 330, 392 326, 400 306"/>
+    <path class="thin" d="M350 300 C 330 294, 316 290, 310 272"/>
+    <path class="thin" d="M350 300 C 370 294, 384 290, 390 272"/>
+    <path class="thin" d="M350 262 C 334 256, 322 252, 318 236"/>
+    <path class="thin" d="M350 262 C 366 256, 378 252, 382 236"/>
+    <path class="thin" d="M350 224 C 338 218, 330 214, 326 200"/>
+    <path class="thin" d="M350 224 C 362 218, 370 214, 374 200"/>
+    <circle class="bud" cx="300" cy="306" r="8"/><circle class="bud" cx="400" cy="306" r="8"/>
+    <circle class="bud" cx="310" cy="272" r="8"/><circle class="bud" cx="390" cy="272" r="8"/>
+    <circle class="bud" cx="318" cy="236" r="7"/><circle class="bud" cx="382" cy="236" r="7"/>
+    <circle class="bud" cx="326" cy="200" r="7"/><circle class="bud" cx="374" cy="200" r="7"/>
+    <!-- palmette crown -->
+    <path class="thin" d="M350 176 L312 116 M350 176 L326 104 M350 176 L340 98 M350 176 L350 94 M350 176 L360 98 M350 176 L374 104 M350 176 L388 116"/>
+    <circle class="bud" cx="350" cy="90" r="8"/>
+  </g>
+
+  <!-- ================= IBEX (left, facing the tree) ================= -->
+  <g id="ibex">
+    <path class="beast" d="M120 322 q44 -20 84 -8 q14 4 14 16 q0 12 -18 16 q-40 8 -74 0 q-14 -4 -14 -16 q0 -12 8 -8 z"/>
+    <path class="beast" d="M198 322 q16 -6 22 -24 q4 -12 16 -9 q9 3 4 14 q-7 16 -20 24 q-11 7 -22 -5 z"/>
+    <line class="ink" x1="132" y1="340" x2="129" y2="360"/>
+    <line class="ink" x1="152" y1="342" x2="150" y2="360"/>
+    <line class="ink" x1="176" y1="342" x2="178" y2="360"/>
+    <line class="ink" x1="196" y1="340" x2="199" y2="360"/>
+    <line class="thin" x1="226" y1="304" x2="226" y2="318"/>
+    <path class="ink" d="M220 288 C 236 250, 214 214, 174 214"/>
+    <path class="ink" d="M214 292 C 228 258, 208 226, 176 226"/>
+  </g>
+  <!-- IBEX (right, mirrored) -->
+  <use href="#ibex" transform="translate(700,0) scale(-1,1)"/>
+
+  <!-- ================= LION (lower register, striding) ================= -->
+  <g>
+    <path class="beast" d="M276 448 q60 -22 132 -12 q10 -18 30 -18 q22 0 30 16 q10 2 12 14 q-6 14 -34 15 q-88 9 -166 -1 q-16 -3 -18 -15 q-2 -12 14 -9 z"/>
+    <line class="ink" x1="292" y1="458" x2="289" y2="474"/>
+    <line class="ink" x1="330" y1="460" x2="328" y2="474"/>
+    <line class="ink" x1="392" y1="460" x2="394" y2="474"/>
+    <line class="ink" x1="428" y1="456" x2="431" y2="474"/>
+    <circle cx="450" cy="418" r="7" fill="#5f4224"/>
+    <path class="ink" d="M276 446 C 250 440, 246 418, 262 408"/>
+    <circle cx="262" cy="405" r="5" fill="#7a5636" stroke="none"/>
+  </g>
+</svg>
