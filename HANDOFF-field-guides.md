@@ -26,10 +26,10 @@ in `.claude-sync/HANDOFF-field-guides.md`.
   (Knossos throne room, Snake Goddess), Beth Alpha mosaic (PD), 5 Moedim storyboard panels, DK map.
 
 ## Open items (in priority order)
-1. **Kuntillet Pithos A illustration** — `static/images/culture/divided-kingdom/kuntillet-tree.svg`
-   is a crude hand-drawn placeholder, NOT embedded. Regenerate as a **Moedim raster** (ask Claude
-   for the prompt) for the "YHWH and His Asherah" section of `the-lady-of-the-temple.md`.
-   Cite Beck 2002; do NOT reproduce Beck's copyrighted drawing.
+1. **Kuntillet Pithos A illustration** — ✅ DONE (2026-07-08): Moedim raster
+   `kuntillet-pithos-a.jpg` (from Kymber's ChatGPT reimagining; not a copy of Beck's drawing)
+   embedded in the "YHWH and His Asherah" section of `the-lady-of-the-temple.md`, caption points
+   to Beck 2002 in Sources; crude `kuntillet-tree.svg` placeholder deleted.
 2. **Term-refs** — `elijah-and-elisha.md` and `why-it-matters.md` have none; optionally add a few
    (Baal, bamah/high place, still small voice) for consistency with the other pages.
 3. **Publish** when ready — flip Divided Kingdom pages to `draft = false`, merge to `main`.
