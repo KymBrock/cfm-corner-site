@@ -12,6 +12,12 @@ hugo server -D          # -D shows drafts locally (port 1313)
 Tip: also `cd ~/Obsidian/Translation\ Hub && git pull` for the synced `memory/` + this note's twin
 in `.claude-sync/HANDOFF-field-guides.md`.
 
+## Draft previews from anywhere (Cloudflare Pages)
+Branch pushes build draft previews on Cloudflare Pages (`scripts/cf-pages-build.sh`; drafts ON
+for non-main branches, noindexed, analytics off). Preview URL:
+`https://feature-first-temple-divided-kingdom.<project>.pages.dev`. Production hosting is
+UNCHANGED — GitHub Pages from `main` (deploy.yml); Cloudflare is previews only.
+
 ## Publish state — IMPORTANT (do not publish the Divided Kingdom yet)
 - The site **deploys from `main` only**. Pushing this feature branch publishes nothing.
 - **Solomon's Temple guide = already published** (live on `main`, `draft = false`). Leave as-is.
