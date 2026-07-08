@@ -35,6 +35,9 @@ in `.claude-sync/HANDOFF-field-guides.md`.
 3. **Publish** when ready — flip Divided Kingdom pages to `draft = false`, merge to `main`.
 4. **Future guides to prep** — Assyrian, Babylonian, Greek: the scattering of the 12 tribes, the
    destruction of the First Temple, and Achaemenid–Greece history.
+5. **Hugo deprecation cleanup (low priority)** — Hugo v0.164.0 (laptop; newer than desktop's)
+   prints two deprecation warnings: `languageCode` → `locale` in site config, and
+   `.Site.Data` → `hugo.Data` in templates. Harmless for now; fix when convenient.
 
 ## Conventions / guardrails
 - Scripture verified against the local ScriptureDatabase JSON (LDS/KJV), never from memory.
