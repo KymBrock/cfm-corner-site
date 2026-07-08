@@ -69,4 +69,29 @@ Held rightly, this is not a claim to have *proved* the doctrine from an inscript
 
 > **Faithful framing.** Four layers, kept honest. The **biblical text**: a goddess-symbol stood in the temple and the reform removed it (2 Kings 21:7; 23:6). The **archaeology and reconstruction**: Asherah beside YHWH in popular religion — real, and genuinely debated in its meaning. The **interpretation**: Barker's Lady, Peterson's and Von Feldt's readings of the tree and Wisdom — illuminating, contested, not doctrine. The **Latter-day Saint frame**: Heavenly Mother, affirmed and reverenced, held here as resonance rather than proof. Each is worth having; none should be mistaken for another.
 
+## Sources & Further Reading
+
+**Archaeology & inscriptions**
+- Pirhiya Beck, ["The Drawings from Horvat Teiman (Kuntillet 'Ajrud)," *Tel Aviv* 9 (1982): 3–68](https://doi.org/10.1179/033443582788440827) — the foundational publication of the Pithos A drawings (reprinted in her *Imagery and Representation*, 2002).
+- William G. Dever, [*Did God Have a Wife? Archaeology and Folk Religion in Ancient Israel*](https://www.eerdmans.com/9780802828521/did-god-have-a-wife/) (Eerdmans, 2005).
+
+**Temple theology & the divine feminine**
+- Margaret Barker, *The Mother of the Lord, Volume 1: The Lady in the Temple* (T&T Clark, 2012), and *The Great Angel: A Study of Israel's Second God* (SPCK, 1992).
+- John S. Thompson, ["The Lady at the Horizon: Egyptian Tree Goddess Iconography and Sacred Trees in Israelite Scripture and Temple Theology"](https://journal.interpreterfoundation.org/the-lady-at-the-horizon-egyptian-tree-goddess-iconography-and-sacred-trees-in-israelite-scripture-and-temple-theology/) (*Interpreter* 38, 2020).
+
+**Latter-day Saint scholarship**
+- Daniel C. Peterson, ["Nephi and His Asherah"](https://scholarsarchive.byu.edu/jbms/vol9/iss2/4/) (*Journal of Book of Mormon Studies* 9/2, 2000).
+- Alyson Skabelund Von Feldt, ["Does God Have a Wife?"](https://scholarsarchive.byu.edu/msr/vol19/iss1/10/) (*FARMS Review* 19/1, 2007) — a review essay engaging Dever.
+
+**The goddess "type" & the Greek strand**
+- Kenneth Lapatin, *Mysteries of the Snake Goddess* (2002), on the contested Minoan reconstruction; Arthur Evans, *The Palace of Minos* (1921–35).
+- Izak Cornelius, *The Many Faces of the Goddess* (2004); Othmar Keel & Christoph Uehlinger, *Gods, Goddesses, and Images of God in Ancient Israel* (Fortress, 1998) — on Qudshu and the pillar figurines.
+- Martin P. Nilsson, *The Minoan-Mycenaean Religion and Its Survival in Greek Religion* (2nd ed., 1950), on Athena and the Minoan snake-goddess; Herodotus, [*Histories* 5.58](https://www.perseus.tufts.edu/hopper/text?doc=Hdt.%205.58), on Cadmus and the "Phoenician letters."
+- Walter Burkert, *The Orientalizing Revolution* (Harvard, 1992); M.L. West, *The East Face of Helicon* (Oxford, 1997).
+
+**Latter-day Saint doctrine**
+- The Church of Jesus Christ of Latter-day Saints, Gospel Topics essay ["Mother in Heaven"](https://www.churchofjesuschrist.org/study/manual/gospel-topics-essays/mother-in-heaven?lang=eng); and the hymn ["O My Father"](https://www.churchofjesuschrist.org/study/manual/hymns/o-my-father?lang=eng) (Eliza R. Snow).
+
+*For the full guide bibliography, see the [Sources page](/culture/ancient/divided-kingdom/sources/).*
+
 *Next: [Reading Faithfully →](/culture/ancient/divided-kingdom/reading-faithfully/) — what to do with all of it. (Back to [The Book of Mormon & Kings](/culture/ancient/divided-kingdom/book-of-mormon-and-kings/).)*
