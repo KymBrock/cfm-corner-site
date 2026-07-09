@@ -71,6 +71,14 @@ It is a coherent defense — and yet it does not fully dissolve the tension. Fun
 
 Scholars keep working the passage. **Koog P. Hong** (2023) reads the vilification of Bethel's calf as a literary strategy of *mimetic doubling* — portraying one thing as a distorted mirror-image of another: the text paints the calf as a dark twin of Jerusalem's cherubim, and in doing so betrays Judah's own anxiety over how *similar* the two cults really were. **Wesley I. Toews** puts the historical question directly: did Jeroboam *introduce* novel features, or has prejudiced Judahite reporting obscured a more traditional northern Yahwism? **Mordechai Cogan**'s *I Kings* commentary anchors the close reading of chapter 12. These are scholarly reconstructions, offered as a conversation — not the plain sense of the text, and not doctrine.
 
+## A Northern Hymn, in Its Own Words
+
+The sympathy has, until now, had to be *inferred*: the North's own liturgy did not survive in the North. But a startling document from Egypt may let a northern hymn speak for itself. **Papyrus Amherst 63** — an Aramaic text written in Egyptian Demotic script, deciphered only in stages through the 1980s — preserves a version of **Psalm 20**, and it is not the Bible's version. Where the biblical psalm looks to **Zion** and to "the LORD," the papyrus looks to **Zaphon**, the northern holy mountain, and prays: "**May our Bull be with us. May Bethel answer us tomorrow. Baal-Shamayin shall bless the Lord.**"
+
+The epigrapher **William Schniedewind** (2024) offers a working hypothesis: Psalm 20 may have *begun* as a northern liturgical text, carried south to Jerusalem by refugees after Samaria's fall, and there rewritten — Zaphon becoming Zion, the Bull becoming simply "the LORD." The deity- and place-names the papyrus keeps — the **Bull**, **Bethel**, and **Baal-Shamayin** — "would fit nicely into Israelian religious culture before the destruction of Samaria in 722 BC."
+
+If the reconstruction holds, it is remarkable for this page: here, plausibly, is **Bull-and-Bethel worship in its own devotional voice** — not the Deuteronomist's caricature, but a genuine hymn of trust, prayed by northerners who invoked "our Bull" much as Judah invoked "the LORD." It is precisely the sincere northern Yahwism the pedestal reading imagines, and it makes the North's "sin," seen from the inside, look like ordinary faith. *(A reconstruction of a damaged, difficult text — scholarly conversation, not settled fact.)*
+
 ## Reading the North with Sympathy
 
 The faithful payoff is not contempt for the North but recognition. Jeroboam's sin is the perennial temptation to *engineer* worship around our own convenience and security — to relocate the holy where it suits us, to staff it with whoever is willing, to keep the forms of devotion while quietly cutting them loose from their source. Read this way, "the sin of Jeroboam" stops being a far-off northern failure and becomes a mirror.

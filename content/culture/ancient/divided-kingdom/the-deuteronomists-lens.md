@@ -45,6 +45,17 @@ That editorial answer — catastrophe as covenant justice — is clearest in how
 
 {{< two-readings id="manasseh" >}}
 
+## Who Held the Pen? The Newest Layer
+
+The models above ask *when* the History was edited. A newer, archaeological line of work asks *who did the writing* — and grounds the answer in dirt and ink. *(Recent scholarly reconstruction — a model under active discussion, not the text's plain claim and not Church teaching.)*
+
+The epigrapher **William Schniedewind** (2024) argues that ancient Israel had no schools in our sense; scribes were trained by **apprenticeship**, in tight-knit **communities of practice**, so that biblical books are "collected, copied, and preserved by scribal communities, not authors." On this view the "Deuteronomist" is less a lone genius than a *guild* — and one we can partly locate. Two threads sharpen the picture the standard model draws:
+
+- **The reform may credit Josiah for Hezekiah's work.** The archaeology of centralized worship — the decommissioning of outlying sanctuaries at Arad, Beer-sheba, and elsewhere — points to the **late eighth century**, the era of **Hezekiah** (2 Kings 18:4), a full century before Josiah's reform (~622 BC). Schniedewind reads the Josianic account as taking credit "for something that happened almost a century earlier," and as focused more on *purifying* the Jerusalem Temple than on tearing down rival shrines that were, by then, already gone. This does not undo Josiah's reform; it relocates the great *centralizing* turn to Hezekiah — and it counsels caution about flatly equating the "scroll of the law" that Hilkiah *finds* (2 Kings 22:8) with the book of Deuteronomy. Its exact identity — Deuteronomy, the Holiness Code, or the Covenant Code — "may have changed as the story was told and retold."
+- **The editors have excavated faces.** The reform's key families surface in the ground. A clay seal-impression of "**Azariah son of Hilkiah**" — plausibly the son of the very priest who found the scroll — was dug from the City of David, in the same buried hoard as "**Gemariah son of Shaphan**," a scribe named in the book of Jeremiah, whose father Shaphan is Josiah's scribe in 2 Kings 22. And a Babylonian ration-list names "**the Men of Judah**" among the exiled royal household — the royal scribes who, on this reconstruction, carried the archives into exile and there produced the edition of Kings that ends, pointedly, with a Judahite king eating at the Babylonian table (2 Kings 25:27–30).
+
+It is the same editorial hand the older models describe — now with an apprenticed community behind it, a likely home in the exiled royal administration, and a few names pressed into clay. **Deepens, not debunks.**
+
 ## What the Lens Is — and Isn't
 
 Seeing the Deuteronomist's viewpoint changes *how* you read, not *whether* you trust. The history is told from an unmistakable theological standpoint — that is simply true of it, and the book never hides it. Knowing the standpoint lets you hear what the text is *for*: the covenant, the one sanctuary, the Davidic and messianic hope, the call to wholehearted loyalty. It also lets you read the Northern Kingdom with **critical sympathy** rather than contempt — as a people who made a fateful compromise, narrated by editors who had a strong, coherent reason to condemn it.
