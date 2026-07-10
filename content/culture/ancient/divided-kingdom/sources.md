@@ -12,7 +12,7 @@ This guide keeps four kinds of claim distinct — the **biblical text**, the **s
 ## Scripture
 
 - The **Holy Bible**, King James Version, and the **Latter-day Saint editions** of the standard works (Book of Mormon; Doctrine and Covenants; Pearl of Great Price, including the **Articles of Faith**). All quotations are checked against the text, never from memory.
-- The **Babylonian Talmud**, *Bava Batra* 15a — the tradition that **Jeremiah** compiled the book of Kings.
+- The **Babylonian Talmud**, *Bava Batra* 15a — the tradition that **Jeremiah** compiled the book of Kings, and (a few clauses later, in the same passage) that **Ezra** compiled Chronicles "up to his own time," with **Nehemiah** completing it — placing Kings in the exile and Chronicles in the Persian-period return.
 
 ## The Kings and Their Chronology
 
