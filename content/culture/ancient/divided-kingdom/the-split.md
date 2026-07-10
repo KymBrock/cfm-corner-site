@@ -40,6 +40,8 @@ The chapter that follows is one of the strangest in Kings, and it points far dow
 
 The episode then takes a tragic turn. An old prophet deceives the man of God into disobeying the word he was given, and "a **lion** met him by the way, and slew him" (1 Kings 13:24). The sober lesson the text presses is hard but clear: even a true messenger must hold to the word he actually received — a theme that returns when this guide reaches the strange "lying spirit" passage near its end.
 
+Scholarship notices the same design. The epigrapher **William Schniedewind** (2024) reads the fierce focus on **Bethel** in these chapters as the near end of a deliberate literary arch: the polemic against Jeroboam's altar that opens here is closed, three centuries later, when **Josiah** tears that very altar down (2 Kings 23:15–20) — so that, in Schniedewind's phrase, "even the supposed destruction of Bethel is actually about Jerusalem." The Man of God's cry and the reforming king's hammer are the two ends of one span, and the whole Divided-Kingdom story is told between them. *(A reading of the narrative's shape — scholarly reconstruction, not a claim the text spells out.)*
+
 ## Why the Split Is the Hinge
 
 Politically, Jeroboam now rules the north but his people's worship still centers on the south's capital — an intolerable arrangement that will drive him to build the calf-shrines of the next section. Theologically, the fracture is the stage on which the whole drama of covenant fidelity will be played out: king by king, verdict by verdict, all the way to the exile. The split is where the Divided Kingdom *becomes* the Divided Kingdom.
