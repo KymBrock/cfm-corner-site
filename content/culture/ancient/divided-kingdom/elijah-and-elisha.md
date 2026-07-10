@@ -73,4 +73,4 @@ And the prophet of the North does not vanish from the story. Malachi seals the O
 
 > **Latter-day Saint layer.** The prophet who once carried the covenant across the border to a Sidonian widow returns to gather *all* of scattered Israel home. The story that began with a fracture is, in the end, about a door reopened — and held open — to everyone.
 
-*Next: [The Deuteronomist's Lens →](/culture/ancient/divided-kingdom/the-deuteronomists-lens/) — the viewpoint that shaped how all these stories were told. (Back to [The Sin of Jeroboam](/culture/ancient/divided-kingdom/the-sin-of-jeroboam/).)*
+*Next: [The Deuteronomists' Lens →](/culture/ancient/divided-kingdom/the-deuteronomists-lens/) — the viewpoint that shaped how all these stories were told. (Back to [The Sin of Jeroboam](/culture/ancient/divided-kingdom/the-sin-of-jeroboam/).)*

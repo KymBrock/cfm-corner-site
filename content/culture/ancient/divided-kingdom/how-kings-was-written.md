@@ -26,7 +26,7 @@ These refrains run through the whole book. They tell us Kings is built on **roya
 
 ## Read Backward from Catastrophe
 
-Where does the compiling stop? The book's **latest fixed point** is the release of the exiled king **Jehoiachin** from a Babylonian prison, "in the seven and thirtieth year of the captivity" (~561 BC), when Evil-merodach "did lift up the head of Jehoiachin king of Judah out of prison" (2 Kings 25:27–30). The story ends not in the land but in exile — which tells you where its author stood: *after* the fall of Jerusalem in 586, looking back. The entire history is written **backward from the catastrophe**, to answer the exile's question — *why?* — and to answer it in covenant terms (see [The Deuteronomist's Lens](/culture/ancient/divided-kingdom/the-deuteronomists-lens/)).
+Where does the compiling stop? The book's **latest fixed point** is the release of the exiled king **Jehoiachin** from a Babylonian prison, "in the seven and thirtieth year of the captivity" (~561 BC), when Evil-merodach "did lift up the head of Jehoiachin king of Judah out of prison" (2 Kings 25:27–30). The story ends not in the land but in exile — which tells you where its authors stood: *after* the fall of Jerusalem in 586, looking back. The entire history is written **backward from the catastrophe**, to answer the exile's question — *why?* — and to answer it in covenant terms (see [The Deuteronomists' Lens](/culture/ancient/divided-kingdom/the-deuteronomists-lens/)).
 
 ## The Jeremiah Tradition
 
@@ -38,4 +38,4 @@ This is the striking part. Modern criticism, working from literary seams — the
 
 > **The bridge ahead.** Hold onto that exilic date. The next section asks what it means for the Book of Mormon — whose people left Jerusalem *with* the brass plates *before* that compilation was finished. The "deepens, not debunks" payoff of this whole guide turns on the timeline you have just seen.
 
-*Next: [Did the Book of Mormon Writers Have the Book of Kings? →](/culture/ancient/divided-kingdom/book-of-mormon-and-kings/) (Back to [The Deuteronomist's Lens](/culture/ancient/divided-kingdom/the-deuteronomists-lens/).)*
+*Next: [Did the Book of Mormon Writers Have the Book of Kings? →](/culture/ancient/divided-kingdom/book-of-mormon-and-kings/) (Back to [The Deuteronomists' Lens](/culture/ancient/divided-kingdom/the-deuteronomists-lens/).)*

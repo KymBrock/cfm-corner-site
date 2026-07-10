@@ -1,13 +1,13 @@
 +++
-title = "The Deuteronomist's Lens"
-description = "King after king, one recurring sentence grades them — 'right' or 'evil in the sight of the LORD.' That repeating yardstick is the fingerprint of an editor, and learning to see his viewpoint is the key to reading Kings well."
+title = "The Deuteronomists' Lens"
+description = "King after king, one recurring sentence grades them — 'right' or 'evil in the sight of the LORD.' That repeating yardstick is the fingerprint of a scribal school, and learning to see their viewpoint is the key to reading Kings well."
 weight = 5
 layout = "divided-kingdom-page"
 draft = true
 image = "/images/culture/divided-kingdom/regnal-timeline.svg"
 +++
 
-Read a few chapters of Kings and you start to feel a rhythm. King after king is introduced, dated, and then *graded* by a single recurring sentence — "he did that which was <a class="term-ref" href="https://www.blueletterbible.org/lexicon/h3477/kjv/wlc/0-1/" data-strongs="H3477" data-lang="hebrew" data-translit="yashar" data-original="יָשָׁר" data-lexicon="yashar — straight, right, upright; 'he did right in the eyes of the LORD'"><em>right</em> (יָשָׁר)</a> in the eyes of the LORD," or "he did <a class="term-ref" href="https://www.blueletterbible.org/lexicon/h7451/kjv/wlc/0-1/" data-strongs="H7451" data-lang="hebrew" data-translit="ra" data-original="רַע" data-lexicon="ra — bad, evil; 'he did evil in the sight of the LORD'"><em>evil</em> (רַע)</a> in the sight of the LORD." The grades are not about competence, prosperity, or military success — a brilliant, prosperous king can be failed and a weak one passed. They measure one thing: covenant loyalty, focused on **centralized worship in Jerusalem** and **faithfulness to the LORD alone**. That repeating yardstick is the fingerprint of an editor — the figure scholars call the **Deuteronomist** — and learning to see his viewpoint is the key to reading these books well. It does not undo the history; it tells you what the history is *arguing for*.
+Read a few chapters of Kings and you start to feel a rhythm. King after king is introduced, dated, and then *graded* by a single recurring sentence — "he did that which was <a class="term-ref" href="https://www.blueletterbible.org/lexicon/h3477/kjv/wlc/0-1/" data-strongs="H3477" data-lang="hebrew" data-translit="yashar" data-original="יָשָׁר" data-lexicon="yashar — straight, right, upright; 'he did right in the eyes of the LORD'"><em>right</em> (יָשָׁר)</a> in the eyes of the LORD," or "he did <a class="term-ref" href="https://www.blueletterbible.org/lexicon/h7451/kjv/wlc/0-1/" data-strongs="H7451" data-lang="hebrew" data-translit="ra" data-original="רַע" data-lexicon="ra — bad, evil; 'he did evil in the sight of the LORD'"><em>evil</em> (רַע)</a> in the sight of the LORD." The grades are not about competence, prosperity, or military success — a brilliant, prosperous king can be failed and a weak one passed. They measure one thing: covenant loyalty, focused on **centralized worship in Jerusalem** and **faithfulness to the LORD alone**. That repeating yardstick is the fingerprint not of a lone author but of a *school* — the community of scribes scholars call the **Deuteronomists**, who copied, preserved, and shaped these traditions across generations — and learning to see their viewpoint is the key to reading these books well. It does not undo the history; it tells you what the history is *arguing for*.
 
 ## The Repeating Verdict
 
@@ -15,11 +15,11 @@ The formula is unmistakable once you notice it. Asa "did that which was right in
 
 {{< kings-scorecard >}}
 
-*The verdict made explorable — every ruler of both kingdoms, colored by the one repeating formula and **clickable for the exact verse** that judges him. The **Kingdom of Israel** is an unbroken wall — all nineteen northern kings "did evil in the sight of the LORD" — while Judah alternates, eight of twenty doing right. That contrast is the Deuteronomist's whole point. Verdicts and reign‑lengths are quoted verbatim from 1–2&nbsp;Kings; ordered by reign sequence, not to absolute scale.*
+*The verdict made explorable — every ruler of both kingdoms, colored by the one repeating formula and **clickable for the exact verse** that judges him. The **Kingdom of Israel** is an unbroken wall — all nineteen northern kings "did evil in the sight of the LORD" — while Judah alternates, eight of twenty doing right. That contrast is the Deuteronomists' whole point. Verdicts and reign‑lengths are quoted verbatim from 1–2&nbsp;Kings; ordered by reign sequence, not to absolute scale.*
 
 ## Nine Regimes, One Throne
 
-Zoom out from the verdicts to the *dynasties*, and a second contrast appears — the one the Deuteronomist keeps circling. The North ran through **nine regimes** in two centuries, most ending by assassination or coup; the South kept the **single house of David** the whole way down, broken only once — by the usurper **Athaliah** — and promptly restored. Laid on one strip, with the prophets God sent to each kingdom, it reads as *revolving door vs. one throne.* The North even falls first, to Assyria in 722, while David's line staggers on to Babylon in 586.
+Zoom out from the verdicts to the *dynasties*, and a second contrast appears — the one the Deuteronomists keep circling. The North ran through **nine regimes** in two centuries, most ending by assassination or coup; the South kept the **single house of David** the whole way down, broken only once — by the usurper **Athaliah** — and promptly restored. Laid on one strip, with the prophets God sent to each kingdom, it reads as *revolving door vs. one throne.* The North even falls first, to Assyria in 722, while David's line staggers on to Babylon in 586.
 
 {{< dynasty-strip >}}
 
@@ -58,7 +58,7 @@ It is the same editorial hand the older models describe — now with an apprenti
 
 ## What the Lens Is — and Isn't
 
-Seeing the Deuteronomist's viewpoint changes *how* you read, not *whether* you trust. The history is told from an unmistakable theological standpoint — that is simply true of it, and the book never hides it. Knowing the standpoint lets you hear what the text is *for*: the covenant, the one sanctuary, the Davidic and messianic hope, the call to wholehearted loyalty. It also lets you read the Northern Kingdom with **critical sympathy** rather than contempt — as a people who made a fateful compromise, narrated by editors who had a strong, coherent reason to condemn it.
+Seeing the Deuteronomists' viewpoint changes *how* you read, not *whether* you trust. The history is told from an unmistakable theological standpoint — that is simply true of it, and the book never hides it. Knowing the standpoint lets you hear what the text is *for*: the covenant, the one sanctuary, the Davidic and messianic hope, the call to wholehearted loyalty. It also lets you read the Northern Kingdom with **critical sympathy** rather than contempt — as a people who made a fateful compromise, narrated by editors who had a strong, coherent reason to condemn it.
 
 > **Faithful framing.** The Deuteronomistic History is **not** presented here as settled fact, and certainly not as "debunking." The Church takes no official position requiring it, and the scholarly model is itself under discussion (Noth → Cross → Göttingen). Its value is interpretive leverage: it makes the repeating verdicts, the "for David's sake" refrain, and the exile's shadow over the whole story suddenly legible. **Deepens, not debunks.**
 
