@@ -26,6 +26,7 @@ This guide keeps four kinds of claim distinct — the **biblical text**, the **s
 - **Martin Noth**, *Überlieferungsgeschichtliche Studien* (1943; in English as *The Deuteronomistic History*) — the proposal that Deuteronomy through 2 Kings is a single, purposeful history composed in the exile.
 - **Frank Moore Cross**, *Canaanite Myth and Hebrew Epic* (Harvard, 1973) — the **double-redaction** refinement (a Josianic Dtr1 and an exilic Dtr2 ending with Jehoiachin's release).
 - The **Göttingen / Smend school** (Rudolf Smend, Walter Dietrich, Timo Veijola) — the multi-layered alternative that distributes the work among several later editors.
+- **William M. Schniedewind**, *Who Really Wrote the Bible: The Story of the Scribes* (Princeton University Press, 2024) — a recent study arguing that the Hebrew Bible was produced not by lone authors but by **communities of scribes**, trained by apprenticeship and traceable through ancient inscriptions and archaeology. It underlies this guide's "Who Held the Pen?" and "The Royal Scribes in Exile" (the exiled royal scribes behind Kings, Isaiah, and Jeremiah), the northern-hymn reading of Psalm 20, the "sons of the prophets" as an apprentice guild, and the dating of the Arad temple's closure to Hezekiah's reign.
 
 ## Jeroboam's Calves and the Northern Cult
 
