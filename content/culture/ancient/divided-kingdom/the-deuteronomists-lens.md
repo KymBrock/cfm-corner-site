@@ -62,4 +62,4 @@ Seeing the Deuteronomists' viewpoint changes *how* you read, not *whether* you t
 
 > **Faithful framing.** The Deuteronomistic History is **not** presented here as settled fact, and certainly not as "debunking." The Church takes no official position requiring it, and the scholarly model is itself under discussion (Noth → Cross → Göttingen). Its value is interpretive leverage: it makes the repeating verdicts, the "for David's sake" refrain, and the exile's shadow over the whole story suddenly legible. **Deepens, not debunks.**
 
-*Next: [How 1 Kings Was Written →](/culture/ancient/divided-kingdom/how-kings-was-written/) — the book's own testimony that it was compiled, and when. (Back to [The Sin of Jeroboam](/culture/ancient/divided-kingdom/the-sin-of-jeroboam/).)*
+*Next: [How 1 Kings Was Written →](/culture/ancient/divided-kingdom/how-kings-was-written/) — the book's own testimony that it was compiled, and when. (Back to [Elijah & Elisha](/culture/ancient/divided-kingdom/elijah-and-elisha/).)*

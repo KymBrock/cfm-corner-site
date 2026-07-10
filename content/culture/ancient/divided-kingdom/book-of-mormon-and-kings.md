@@ -62,4 +62,4 @@ Drawing on **Margaret Barker** — a British biblical scholar whose work is wide
 
 This is the guide's thesis in miniature: **knowing the editors' work deepens the text rather than debunking it.** The Book of Mormon never claims the plates held our book of Kings; it tells us its record ends at Zedekiah's accession — exactly what a pre-exilic departure would predict. The eighth Article of Faith — "we believe the Bible to be the word of God as far as it is translated correctly" — already invites us to think about transmission and compilation. The Deuteronomists are part of that story, not a threat to it.
 
-*Next: [Reading Faithfully →](/culture/ancient/divided-kingdom/reading-faithfully/) — what to do with all of it. (Back to [How 1 Kings Was Written](/culture/ancient/divided-kingdom/how-kings-was-written/).)*
+*Next: [The Lady of the Temple →](/culture/ancient/divided-kingdom/the-lady-of-the-temple/) — the reform reached even into Solomon’s temple, and swept out the symbol of a goddess. (Back to [How 1 Kings Was Written](/culture/ancient/divided-kingdom/how-kings-was-written/).)*
