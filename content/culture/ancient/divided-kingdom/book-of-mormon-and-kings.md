@@ -19,7 +19,7 @@ If 1 Kings reached its final form in the Babylonian exile — *after* Lehi's fam
 
 Nephi describes the brass plates by *categories*, not as a table of contents we could check against our Bible: the five books of Moses; "a record of the Jews from the beginning, even down to the commencement of the reign of Zedekiah, king of Judah"; and the prophecies of the holy prophets to that same point, "and also many prophecies which have been spoken by the mouth of Jeremiah" (1 Nephi 5:11–13).
 
-Two things follow. First, the plates also carried material our canon never kept — the writings of **Zenos, Zenock, and Neum** (1 Nephi 19:10), and the Joseph-in-Egypt prophecies (2 Nephi 3). So we cannot simply map the plates onto our own Old Testament. Second, and crucially: the historical record on the plates *ends* at "the commencement of the reign of Zedekiah" — which is exactly when Lehi departs.
+Two things follow. First, the plates also carried material our **canon** (the set of books that became our Bible) never kept — the writings of **Zenos, Zenock, and Neum** (1 Nephi 19:10), and the Joseph-in-Egypt prophecies (2 Nephi 3). So we cannot simply map the plates onto our own Old Testament. Second, and crucially: the historical record on the plates *ends* at "the commencement of the reign of Zedekiah" — which is exactly when Lehi departs.
 
 ## The Timing Dissolves the Tension
 

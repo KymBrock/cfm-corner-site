@@ -42,7 +42,7 @@ Read Elisha's miracles beside the Gospels and a pattern leaps out. Again and aga
 - Elisha heals poisoned water and a poisoned pot (2 Kings 2:19–22; 4:38–41) — Jesus turns water to wine and stills a deadly sea.
 - Even in death Elisha gives life: a corpse let down onto his bones revives (2 Kings 13:21) — a quiet foreshadow of a tomb that could not hold life in.
 
-> **Interpretive layer.** This is typology, not a claim the text makes outright — but the resonance is deliberate enough that the Gospel writers seem to have heard it. Elisha is drawn as a man of God whose works announce, centuries early, the kind of thing the Messiah will do.
+> **Interpretive layer.** This is **typology** (reading an earlier figure as a foreshadow of a later one), not a claim the text makes outright — but the resonance is deliberate enough that the Gospel writers seem to have heard it. Elisha is drawn as a man of God whose works announce, centuries early, the kind of thing the Messiah will do.
 
 ## The Prophets Who Blessed Outsiders
 
