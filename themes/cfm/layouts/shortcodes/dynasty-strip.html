@@ -44,6 +44,7 @@
 .page--divided-kingdom-page .dyn__dname{ font-family:Georgia,serif; font-size:1.15rem; font-weight:700; color:#3a3529; margin:0 0 .2rem; }
 .page--divided-kingdom-page .dyn__dmeta{ font-size:.82rem; color:#6b6553; margin:0 0 .35rem; }
 .page--divided-kingdom-page .dyn__dnote{ font-size:.85rem; color:#4a4433; margin:.2rem 0; }
+.page--divided-kingdom-page .dyn__dsummary{ font-size:.86rem; color:#3a3529; line-height:1.5; margin:.5rem 0 .35rem; padding-top:.5rem; border-top:1px solid #ece2cc; }
 .page--divided-kingdom-page .dyn__dref{ font-size:.8rem; color:#8a6a2f; font-weight:600; cursor:help; }
 .page--divided-kingdom-page .dyn__jump{ font-size:.78rem; color:#4a6b8a; text-decoration:underline; cursor:pointer; background:none; border:0; padding:0; margin-top:.3rem; font-family:inherit; }
 @media (max-width:560px){
@@ -133,6 +134,8 @@
       var html = '<p class="dyn__dname">'+esc(king.name)+'</p>'
         + '<p class="dyn__dmeta">'+(kingdom==='israel'?'Israel (North)':'Judah (South)')+' &middot; reigned '+esc(reignTxt)+' &middot; '+verdict+'</p>'
         + '<p class="dyn__dnote"><strong>'+esc(d.name||'')+'</strong>'+(d.end?' — '+esc(d.end):'')+'</p>'
+        + (king.summary ? '<p class="dyn__dsummary">'+esc(king.summary)+'</p>' : '')
+        + (king.evaluation_ref ? '<p class="dyn__dref" data-ref="'+esc(king.evaluation_ref)+'" style="cursor:help">the verdict: '+esc(king.evaluation_ref)+'</p>' : '')
         + '<button type="button" class="dyn__jump" data-jump="'+esc(king.name)+'">See this king in the scorecard ↓</button>';
       detail.innerHTML = html;
     }
