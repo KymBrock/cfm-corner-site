@@ -43,7 +43,15 @@ That editorial answer — catastrophe as covenant justice — is clearest in how
 
 {{< two-readings id="fall-of-the-north" >}}
 
-{{< two-readings id="manasseh" >}}
+## The Standard Was Set in Advance
+
+Hold onto one thing here, because it matters for a faithful reader. The "covenant justice" the Deuteronomists apply is not a yardstick they invented and then read backward onto the past — it is the standard **Deuteronomy** lays out *first*. The covenant spells out its own blessings and curses — obey and remain in the land, rebel and be scattered from it (Deuteronomy 28) — so that the long history that follows reads like those terms coming due. The measuring marks were published before the reigns they measure.
+
+The text even dramatizes the point. On the plains of Moab the LORD tells Moses to write a **song** and teach it to Israel, "that this song may be a witness for me against the children of Israel" (Deuteronomy 31:19) — a standing testimony, memorized and handed down, that names the nation's coming drift and its consequences before either has happened, and that "shall not be forgotten out of the mouths of their seed" (Deuteronomy 31:21; the song itself is Deuteronomy 32). The **Song of Moses** is, in effect, the covenant's measuring rod set to music — the Lord instructing His prophet to teach, in advance, the very standard by which the story would later be judged. Read this way, what scholarship calls the Deuteronomistic verdict is the working-out of a test the text says was set, and taught, from the beginning.
+
+*(Scholarship dates Deuteronomy's composition late, while the text presents the song and the covenant terms as Mosaic; the guide keeps those layers distinct. But on either reading, the History measures Israel by a standard the tradition itself supplies — not one imposed from outside.)*
+
+> **Latter-day Saint layer.** The pattern is a familiar one: the Lord sets a covenant with named terms and real consequences, then teaches it plainly, so a covenant people always knows the measure it will be tried by. Latter-day Saints meet it again in the **oath and covenant of the priesthood** — its holders bound to magnify their calling, sanctification promised to the faithful and a sober warning for any who "altogether turneth therefrom" (Doctrine and Covenants 84:33–44). The law itself is meant to be testable: "when we obtain any blessing from God, it is by obedience to that law upon which it is predicated" (Doctrine and Covenants 130:21). The Deuteronomists were reading history by exactly that principle. *Deepens, not debunks.*
 
 ## Who Held the Pen? The Newest Layer
 
