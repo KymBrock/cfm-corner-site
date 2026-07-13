@@ -7,3 +7,6 @@ _archive/
 # Licensed source maps (e.g. LDS Bible Maps used by permission) — do NOT commit/publish raw
 _source-maps/
 *.backup-*
+
+# Cloudflare wrangler local cache (contains account creds)
+.wrangler/
