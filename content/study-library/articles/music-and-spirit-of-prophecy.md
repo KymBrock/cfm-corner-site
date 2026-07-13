@@ -7,7 +7,7 @@ category: "Music & Worship"
 ---
 
 <figure style="margin: 2em 0; text-align: center;">
-<img src="/images/articles/Miriam_the_golden_Haggadah.jpg" alt="Miriam the golden Haggadah" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.12);">
+<img src="/images/articles/instruments/Miriam_the_golden_Haggadah.jpg" alt="Miriam the golden Haggadah" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.12);">
 <figcaption style="margin-top: 10px; font-size: 0.9em; color: #666; font-style: italic; max-width: 600px; margin-left: auto; margin-right: auto;">Miriam leads the women in celebration with תֹּף (timbrels). [Golden Haggadah](https://www.khanacademy.org/humanities/ap-art-history/early-europe-and-colonial-americas/medieval-europe-islamic-world/a/golden-haggadah), folio 15r, c. 1320, Catalonia. British Library Add MS 27210. Public domain.</figcaption>
 </figure>
 
