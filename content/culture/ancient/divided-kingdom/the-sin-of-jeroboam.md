@@ -4,7 +4,7 @@ description = "Two golden calves, a homemade priesthood, and a festival 'devised
 image = "/images/culture/divided-kingdom/golden-calf-high-place.jpg"
 weight = 3
 layout = "divided-kingdom-page"
-draft = true
+draft = false
 +++
 
 <figure class="ft-figure ft-figure--lead">

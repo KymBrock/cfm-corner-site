@@ -3,7 +3,7 @@ title = "The Split"
 description = "At Shechem, Solomon's son threw away ten tribes over a tax dispute — and the text calls it both his folly and God's judgment, at once. The fracture that made the Divided Kingdom."
 weight = 2
 layout = "divided-kingdom-page"
-draft = true
+draft = false
 image = "/images/culture/divided-kingdom/israel-judah-split-map.jpg"
 +++
 

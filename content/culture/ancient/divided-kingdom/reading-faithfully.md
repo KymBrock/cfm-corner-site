@@ -3,7 +3,7 @@ title = "Reading Faithfully"
 description = "An editor with a viewpoint, a book that compiles its sources, scholars who name layers and dates, and passages that are genuinely hard. The answer this guide has argued from the start: read more deeply, not more anxiously."
 weight = 9
 layout = "divided-kingdom-page"
-draft = true
+draft = false
 image = "/images/culture/divided-kingdom/scroll-and-menorah.jpg"
 +++
 

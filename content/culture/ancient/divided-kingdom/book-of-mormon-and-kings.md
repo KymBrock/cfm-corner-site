@@ -4,7 +4,7 @@ linkTitle = "The Book of Mormon & Kings"
 description = "If Kings reached its final form in the exile — after Lehi's family left Jerusalem with the brass plates — could the Book of Mormon writers have carried it? The timeline doesn't fight the record; it explains it."
 weight = 7
 layout = "divided-kingdom-page"
-draft = true
+draft = false
 image = "/images/culture/divided-kingdom/lehi-departs-jerusalem.jpg"
 +++
 
@@ -25,7 +25,7 @@ Two things follow. First, the plates also carried material our **biblical canon*
 
 Set the dates side by side:
 
-- **Lehi leaves Jerusalem** "in the commencement of the first year of the reign of Zedekiah" (1 Nephi 1:4) — about 600 BC.
+- **Lehi leaves Jerusalem** "in the commencement of the first year of the reign of Zedekiah" (1 Nephi 1:4) — about 600 BC by the Book of Mormon's own reckoning (historians date Zedekiah's accession to 597 BC; the two are close, and "600 BC" is a round approximation).
 - **The brass-plates record ends** at "the commencement of the reign of Zedekiah" (1 Nephi 5:12) — right as Lehi departs.
 - **Canonical Kings ends later**, with the destruction of Jerusalem in 586 and the release of Jehoiachin from a Babylonian prison ~561 BC (2 Kings 25:27–30) — decades *after* Lehi is gone.
 

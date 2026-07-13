@@ -3,7 +3,7 @@ title = "How 1 Kings Was Written"
 description = "The book of Kings tells you, in its own words, that it was compiled — it names its sources and ends in exile. Ancient tradition and modern scholarship, from opposite directions, point at the same exilic window."
 weight = 6
 layout = "divided-kingdom-page"
-draft = true
+draft = false
 image = "/images/culture/divided-kingdom/deuteronomist-scribe.jpg"
 +++
 

@@ -3,7 +3,7 @@ title = "The Deuteronomists' Lens"
 description = "King after king, one recurring sentence grades them — 'right' or 'evil in the sight of the LORD.' That repeating yardstick is the fingerprint of a scribal school, and learning to see their viewpoint is the key to reading Kings well."
 weight = 5
 layout = "divided-kingdom-page"
-draft = true
+draft = false
 image = "/images/culture/divided-kingdom/regnal-timeline.svg"
 +++
 

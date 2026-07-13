@@ -4,7 +4,7 @@ linkTitle = "Sources"
 description = "The references behind the guide — the scripture, the regnal data, the scholarship on how Kings was written, and the Latter-day Saint thinkers, with full credits for the original maps and graphics."
 weight = 10
 layout = "divided-kingdom-page"
-draft = true
+draft = false
 +++
 
 This guide keeps four kinds of claim distinct — the **biblical text**, the **scholarly reconstruction** (how and when Kings was edited), what readers **interpret**, and the **Latter-day Saint frame** — and labels each for what it is. Every verse is quoted from the text itself (LDS/KJV), and every regnal verdict in the timeline is checked verbatim against 1–2 Kings. *Deepens, not debunks.*

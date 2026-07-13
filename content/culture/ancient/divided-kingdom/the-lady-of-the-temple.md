@@ -4,7 +4,7 @@ linkTitle = "Asherah & the Tree"
 description = "Josiah's reform did not only tear down the northern shrines — it reached into Solomon's own temple and removed the symbol of a goddess. Following the thread of Asherah, the sacred tree, and the divine feminine that the reform swept out — and why it moves Latter-day Saints in particular."
 weight = 8
 layout = "divided-kingdom-page"
-draft = true
+draft = false
 image = "/images/culture/divided-kingdom/minoan-snake-goddess.jpg"
 +++
 

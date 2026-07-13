@@ -3,7 +3,7 @@ title = "Elijah & Elisha"
 description = "In the north's darkest years God sent his greatest prophets — and twice they carried the covenant across the border, to a Sidonian widow and a Syrian leper. Centuries later Jesus preached exactly that in Nazareth, and the crowd tried to throw him off a cliff."
 weight = 4
 layout = "divided-kingdom-page"
-draft = true
+draft = false
 image = "/images/culture/divided-kingdom/elijah-chariot-of-fire.jpg"
 +++
 
@@ -75,7 +75,7 @@ Read this way — *offered as interpretation, a reading the guide finds moving r
 
 ## Elijah Returns
 
-And the prophet of the North does not vanish from the story. Malachi seals the Old Testament with a promise: "I will send you **Elijah** the prophet before the coming of the great and dreadful day of the LORD" (Malachi 4:5). On the **Mount of Transfiguration**, Elijah stands with Moses beside the transfigured Christ (Matthew 17:3). And to Latter-day Saints the promise is kept in kind: at the Kirtland Temple, "**Elijah** the prophet, who was taken to heaven without tasting death, stood before us," and restored the sealing keys — "to turn the hearts of the fathers to the children, and the children to the fathers" (Doctrine and Covenants 110:13–15).
+And the prophet of the North does not vanish from the story. Malachi seals the Old Testament with a promise: "I will send you **Elijah** the prophet before the coming of the great and dreadful day of the LORD" (Malachi 4:5). On the **Mount of Transfiguration**, Elijah stands with Moses beside the transfigured Christ (Matthew 17:3). And to Latter-day Saints the promise is kept in kind: at the Kirtland Temple, "**Elijah** the prophet, who was taken to heaven without tasting death, stood before us," and restored the sealing keys — "to turn the hearts of the fathers to the children, and the children to the fathers" (Doctrine and Covenants 110:13–16).
 
 > **Latter-day Saint layer.** The prophet who once carried the covenant across the border to a Sidonian widow returns to gather *all* of scattered Israel home. The story that began with a fracture is, in the end, about a door reopened — and held open — to everyone.
 
