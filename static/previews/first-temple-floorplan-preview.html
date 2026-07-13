@@ -1,0 +1,53 @@
+<!doctype html>
+<!-- PREVIEW HARNESS (build-lane only). Mirrors the Tabernacle interactive shell to verify the
+     floor-plan SVG + hotspot x/y positions WITHOUT editing the Hugo theme layout.
+     Production wiring (layout/section/data lookup) is Codex's lane — see INTEGRATION_NOTES.md. -->
+<meta charset="utf-8">
+<title>First Temple floor plan — preview harness</title>
+<style>
+  :root{ --gold:#d5a93c; --sage-dark:#4a6b52; --terracotta:#c65528; --text:#2d3748; --sage-bg:#f2f5f2; }
+  body{ margin:0; background:var(--sage-bg); font-family:-apple-system,"Segoe UI",Roboto,sans-serif; color:var(--text); }
+  .wrap{ max-width:1100px; margin:24px auto; padding:0 16px; }
+  h1{ font-family:Georgia,serif; font-size:20px; }
+  .map-frame{ position:relative; display:inline-block; width:100%; background:#fff;
+              border:1px solid #c6d4c8; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.1); }
+  .map-frame img{ display:block; width:100%; height:auto; border-radius:12px; }
+  .hotspot{ position:absolute; transform:translate(-50%,-50%); width:26px; height:26px; border-radius:50%;
+            background:var(--terracotta); border:3px solid #fff; box-shadow:0 2px 6px rgba(0,0,0,.35);
+            cursor:pointer; padding:0; }
+  .hotspot::after{ content:attr(data-label); position:absolute; left:50%; top:130%; transform:translateX(-50%);
+            white-space:nowrap; font-size:11px; background:rgba(45,55,72,.9); color:#fff; padding:2px 6px;
+            border-radius:4px; opacity:0; transition:opacity .12s; pointer-events:none; }
+  .hotspot:hover::after{ opacity:1; }
+  .legend{ font-size:13px; color:#4a5568; margin-top:12px; }
+</style>
+<div class="wrap">
+  <h1>Solomon's Temple — floor-plan hotspot preview (11 points)</h1>
+  <div class="map-frame" id="frame">
+    <img src="../images/culture/first-temple/temple-floorplan.svg" alt="Temple floor plan">
+  </div>
+  <p class="legend">Dots are placed from <code>data/first-temple/hotspots.yaml</code> x/y%. Hover for label. This harness is for position QA only.</p>
+</div>
+<script>
+  // positions mirror data/first-temple/hotspots.yaml
+  const spots = [
+    ["ulam","The Porch (Ulam)",58,47],
+    ["jachin","Jachin",62,63],
+    ["boaz","Boaz",62,31],
+    ["hekhal","Hekhal",38,47],
+    ["olive-doors","Olive-Wood Doors / Veil",23,47],
+    ["devir","Devir & the Ark",15,51],
+    ["cherubim","The Two Cherubim",15,37],
+    ["molten-sea","Molten Sea",91,71],
+    ["brazen-altar","Altar of Burnt Offering",76,47],
+    ["lavers","Ten Lavers",74,22],
+    ["side-chambers","Side Chambers",30,23],
+  ];
+  const frame = document.getElementById("frame");
+  for (const [id,label,x,y] of spots){
+    const b = document.createElement("button");
+    b.className = "hotspot"; b.dataset.label = label;
+    b.style.left = x+"%"; b.style.top = y+"%";
+    frame.appendChild(b);
+  }
+</script>

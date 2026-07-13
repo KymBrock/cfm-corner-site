@@ -1,0 +1,81 @@
+{{- $m := index site.Data "divided-kingdom" "map-sites" -}}
+<div class="kmap" data-kmap>
+  <div class="kmap__frame">
+    <img src="/images/culture/divided-kingdom/israel-judah-split-map.jpg" alt="Relief map of the divided kingdom — Israel in the north, Judah in the south, with Phoenicia and Aram (Syria) alongside — marking the key sites of Kings and the journeys of Elijah and Elisha">
+    {{- range $m.sites -}}
+    <button type="button" class="kmap__pin kmap__pin--{{ .cat }}" style="left:{{ .x }}%; top:{{ .y }}%;"
+      data-name="{{ .name }}" data-region="{{ .region }}" data-cat="{{ .cat }}"
+      data-blurb="{{ .blurb }}" data-scref="{{ .ref }}" data-holy="{{ with .holy }}{{ . }}{{ end }}" title="{{ .name }}" aria-label="{{ .name }}"></button>
+    {{- end -}}
+  </div>
+  <div class="kmap__detail" data-kmap-detail aria-live="polite">
+    <p class="kmap__hint">Tap a marker to see what happened there — the calf shrines, the capitals, and where Elijah &amp; Elisha carried the covenant across the border.</p>
+  </div>
+  <div class="kmap__legend">
+    <span class="kmap__lg"><span class="kmap__sw kmap__sw--calf"></span> golden-calf shrine</span>
+    <span class="kmap__lg"><span class="kmap__sw kmap__sw--capital"></span> royal capital</span>
+    <span class="kmap__lg"><span class="kmap__sw kmap__sw--prophet"></span> Elijah &amp; Elisha</span>
+    <span class="kmap__lg"><span class="kmap__sw kmap__sw--event"></span> turning point</span>
+  </div>
+</div>
+
+<style>
+.page--divided-kingdom-page .kmap{ margin:2.2rem 0; font-family:-apple-system,system-ui,sans-serif; }
+.page--divided-kingdom-page .kmap__frame{ position:relative; max-width:600px; margin:0 auto; border-radius:10px; overflow:hidden; box-shadow:0 2px 10px rgba(56,55,49,.2); }
+.page--divided-kingdom-page .kmap__frame img{ width:100%; height:auto; display:block; }
+.page--divided-kingdom-page .kmap__pin{ position:absolute; width:15px; height:15px; transform:translate(-50%,-50%); border-radius:50%; border:2px solid #fff; cursor:pointer; padding:0; box-shadow:0 1px 4px rgba(0,0,0,.5); transition:transform .1s ease; }
+.page--divided-kingdom-page .kmap__pin:hover,.page--divided-kingdom-page .kmap__pin:focus-visible{ transform:translate(-50%,-50%) scale(1.28); z-index:5; outline:none; }
+.page--divided-kingdom-page .kmap__pin.is-active{ box-shadow:0 0 0 4px rgba(212,165,62,.85), 0 1px 4px rgba(0,0,0,.45); z-index:6; }
+.page--divided-kingdom-page .kmap__pin--calf{ background:#c8862d; }
+.page--divided-kingdom-page .kmap__pin--capital{ background:#4a6b8a; }
+.page--divided-kingdom-page .kmap__pin--prophet{ background:#4e7a52; }
+.page--divided-kingdom-page .kmap__pin--event{ background:#a6543a; }
+.page--divided-kingdom-page .kmap__detail{ max-width:600px; margin:1rem auto 0; padding:.95rem 1.15rem; border-radius:12px; background:#fffdf6; border:1px solid #e6dcc6; min-height:78px; }
+.page--divided-kingdom-page .kmap__hint{ margin:0; color:#8a8577; font-style:italic; }
+.page--divided-kingdom-page .kmap__dhead{ display:flex; align-items:baseline; gap:.6rem; flex-wrap:wrap; margin:0 0 .3rem; }
+.page--divided-kingdom-page .kmap__dname{ font-family:Georgia,serif; font-size:1.2rem; font-weight:700; color:#3a3529; margin:0; }
+.page--divided-kingdom-page .kmap__dtag{ font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.03em; color:#fff; padding:.14rem .5rem; border-radius:999px; }
+.page--divided-kingdom-page .kmap__dtag--calf{ background:#c8862d; }
+.page--divided-kingdom-page .kmap__dtag--capital{ background:#4a6b8a; }
+.page--divided-kingdom-page .kmap__dtag--prophet{ background:#4e7a52; }
+.page--divided-kingdom-page .kmap__dtag--event{ background:#a6543a; }
+.page--divided-kingdom-page .kmap__dregion{ font-size:.78rem; color:#8a8577; }
+.page--divided-kingdom-page .kmap__dblurb{ margin:.3rem 0 .35rem; color:#4a4433; font-size:.92rem; line-height:1.5; }
+.page--divided-kingdom-page .kmap__dref{ font-size:.82rem; color:#8a6a2f; font-weight:600; }
+.page--divided-kingdom-page .kmap__legend{ max-width:600px; margin:.5rem auto 0; display:flex; flex-wrap:wrap; gap:.35rem 1.1rem; font-size:.75rem; color:#5b5647; justify-content:center; }
+.page--divided-kingdom-page .kmap__lg{ display:inline-flex; align-items:center; gap:.35rem; }
+.page--divided-kingdom-page .kmap__sw{ width:13px; height:13px; border-radius:50%; border:2px solid #fff; box-shadow:0 0 0 1px rgba(0,0,0,.15); }
+.page--divided-kingdom-page .kmap__sw--calf{ background:#c8862d; }
+.page--divided-kingdom-page .kmap__sw--capital{ background:#4a6b8a; }
+.page--divided-kingdom-page .kmap__sw--prophet{ background:#4e7a52; }
+.page--divided-kingdom-page .kmap__sw--event{ background:#a6543a; }
+.page--divided-kingdom-page .kmap__dlink{ margin:.45rem 0 0; }
+.page--divided-kingdom-page .kmap__dlink a{ font-size:.82rem; font-weight:600; color:#4a6b8a; }
+@media (max-width:560px){ .page--divided-kingdom-page .kmap__pin{ width:13px; height:13px; border-width:1.5px; } }
+</style>
+
+<script>
+(function(){
+  document.querySelectorAll('[data-kmap]').forEach(function(root){
+    var detail = root.querySelector('[data-kmap-detail]');
+    var pins = Array.prototype.slice.call(root.querySelectorAll('.kmap__pin'));
+    var esc = function(s){ var d=document.createElement('div'); d.textContent=s==null?'':s; return d.innerHTML; };
+    var tag = { calf:'Calf shrine', capital:'Royal capital', prophet:'Elijah & Elisha', event:'Turning point' };
+    pins.forEach(function(pin){
+      pin.addEventListener('click', function(){
+        pins.forEach(function(p){ p.classList.remove('is-active'); });
+        pin.classList.add('is-active');
+        var d = pin.dataset;
+        detail.innerHTML = '<div class="kmap__dhead">'
+          + '<p class="kmap__dname">'+esc(d.name)+'</p>'
+          + '<span class="kmap__dtag kmap__dtag--'+d.cat+'">'+esc(tag[d.cat]||'')+'</span>'
+          + '<span class="kmap__dregion">'+esc(d.region)+'</span>'
+          + '</div>'
+          + '<p class="kmap__dblurb">'+esc(d.blurb)+'</p>'
+          + '<p class="kmap__dref">'+esc(d.scref)+'</p>'
+          + (d.holy ? '<p class="kmap__dlink"><a href="'+esc(d.holy)+'" target="_blank" rel="noopener">Explore this site at Holy Land Site &rarr;</a></p>' : '');
+      });
+    });
+  });
+})();
+</script>

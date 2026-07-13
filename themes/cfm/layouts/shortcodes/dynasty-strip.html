@@ -1,0 +1,164 @@
+{{- $k := index site.Data "divided-kingdom" "kings" -}}
+{{- $dyn := index site.Data "divided-kingdom" "dynasties" -}}
+{{- $pro := index site.Data "divided-kingdom" "prophets" -}}
+{{- $data := dict "kings" $k.kingdoms "dynasties" (dict "israel" $dyn.israel "judah" $dyn.judah) "prophets" $pro.prophets -}}
+
+<div class="dyn" data-dyn data-payload="{{ $data | jsonify }}">
+  <div class="dyn__chart" data-dyn-chart>
+    <p class="dyn__hint">Loading the reigns…</p>
+  </div>
+  <div class="dyn__detail" data-dyn-detail aria-live="polite">
+    <p class="dyn__dhint">Click any reign to see the king, his dynasty, and the verdict — or click a prophet's bar.</p>
+  </div>
+  <div class="dyn__legend">
+    <span class="dyn__lg"><span class="dyn__sw" style="background:#4a6b8a"></span> House of David (one line)</span>
+    <span class="dyn__lg"><span class="dyn__sw dyn__sw--multi"></span> Nine northern regimes</span>
+    <span class="dyn__lg"><span class="dyn__coup">⚔</span> ended by coup / assassination</span>
+    <span class="dyn__lg"><span class="dyn__sw" style="background:#6b6553;opacity:.5"></span> prophet's ministry</span>
+  </div>
+</div>
+
+<style>
+.page--divided-kingdom-page .dyn{ margin:2.4rem 0; font-family:-apple-system,system-ui,sans-serif; }
+.page--divided-kingdom-page .dyn__hint,.page--divided-kingdom-page .dyn__dhint{ color:#8a8577; font-style:italic; margin:.3rem 0; }
+.page--divided-kingdom-page .dyn__row{ margin:0 0 1.5rem; }
+.page--divided-kingdom-page .dyn__rowhead{ display:flex; justify-content:space-between; align-items:baseline; font-size:.82rem; color:#4a4433; margin-bottom:.3rem; }
+.page--divided-kingdom-page .dyn__rowhead strong{ font-size:.95rem; }
+.page--divided-kingdom-page .dyn__end{ color:#a6543a; font-weight:700; }
+.page--divided-kingdom-page .dyn__prophets{ position:relative; height:0; }
+.page--divided-kingdom-page .dyn__pbar{ position:absolute; height:16px; background:rgba(107,101,83,.42); border:1px solid rgba(107,101,83,.6); border-radius:4px; font-size:.62rem; line-height:16px; color:#3a3529; padding:0 5px; white-space:nowrap; overflow:hidden; cursor:pointer; box-sizing:border-box; }
+.page--divided-kingdom-page .dyn__pbar:hover{ background:rgba(107,101,83,.62); }
+.page--divided-kingdom-page .dyn__track{ position:relative; height:46px; background:#f4ecdc; border-radius:6px; }
+.page--divided-kingdom-page .dyn__seg{ position:absolute; top:0; height:46px; min-width:6px; border-right:1px solid rgba(255,255,255,.55); cursor:pointer; overflow:hidden; box-sizing:border-box; transition:filter .1s ease; }
+.page--divided-kingdom-page .dyn__seg:hover{ filter:brightness(1.12); }
+.page--divided-kingdom-page .dyn__seg.is-active{ outline:3px solid #d4a53e; outline-offset:-3px; z-index:3; }
+.page--divided-kingdom-page .dyn__seg.is-dim{ opacity:.28; }
+.page--divided-kingdom-page .dyn__segname{ position:absolute; left:4px; top:50%; transform:translateY(-50%); font-size:.66rem; color:#fff; text-shadow:0 1px 1px rgba(0,0,0,.35); white-space:nowrap; }
+.page--divided-kingdom-page .dyn__coup{ color:#a6543a; font-weight:700; }
+.page--divided-kingdom-page .dyn__coupmark{ position:absolute; top:-4px; transform:translateX(-50%); font-size:.8rem; color:#8f3a1f; z-index:4; pointer-events:none; }
+.page--divided-kingdom-page .dyn__legend{ display:flex; flex-wrap:wrap; gap:.4rem 1.1rem; margin-top:.4rem; font-size:.74rem; color:#5b5647; }
+.page--divided-kingdom-page .dyn__lg{ display:inline-flex; align-items:center; gap:.35rem; }
+.page--divided-kingdom-page .dyn__sw{ width:15px; height:12px; border-radius:3px; display:inline-block; }
+.page--divided-kingdom-page .dyn__sw--multi{ background:linear-gradient(90deg,#a6543a 0 20%,#b98b3e 20% 40%,#5f7f9d 40% 60%,#7a8b5a 60% 80%,#8a6a7a 80% 100%); }
+.page--divided-kingdom-page .dyn__detail{ margin:1rem 0; padding:.9rem 1.1rem; border-radius:12px; background:#fffdf6; border:1px solid #e6dcc6; min-height:70px; }
+.page--divided-kingdom-page .dyn__dname{ font-family:Georgia,serif; font-size:1.15rem; font-weight:700; color:#3a3529; margin:0 0 .2rem; }
+.page--divided-kingdom-page .dyn__dmeta{ font-size:.82rem; color:#6b6553; margin:0 0 .35rem; }
+.page--divided-kingdom-page .dyn__dnote{ font-size:.85rem; color:#4a4433; margin:.2rem 0; }
+.page--divided-kingdom-page .dyn__dsummary{ font-size:.86rem; color:#3a3529; line-height:1.5; margin:.5rem 0 .35rem; padding-top:.5rem; border-top:1px solid #ece2cc; }
+.page--divided-kingdom-page .dyn__dref{ font-size:.8rem; color:#8a6a2f; font-weight:600; cursor:help; }
+.page--divided-kingdom-page .dyn__jump{ font-size:.78rem; color:#4a6b8a; text-decoration:underline; cursor:pointer; background:none; border:0; padding:0; margin-top:.3rem; font-family:inherit; }
+@media (max-width:560px){
+  .page--divided-kingdom-page .dyn__segname{ display:none; }
+  .page--divided-kingdom-page .dyn__pbar{ font-size:.55rem; }
+}
+</style>
+
+<script>
+(function(){
+  document.querySelectorAll('[data-dyn]').forEach(function(root){
+    var data;
+    try { data = JSON.parse(root.dataset.payload); }
+    catch(e){ return; }
+    var chart = root.querySelector('[data-dyn-chart]');
+    var detail = root.querySelector('[data-dyn-detail]');
+    var esc = function(s){ var d=document.createElement('div'); d.textContent=s==null?'':s; return d.innerHTML; };
+    var PAL = ['#a6543a','#b98b3e','#6e6a55','#7a8b5a','#5f7f9d','#8a6a7a','#9c7b4a','#6b8b7a','#a86b5a'];
+    var DAVID = '#4a6b8a', USURP = '#8a8577';
+
+    function layout(list){ var cum=0,pos={}; list.forEach(function(x){ pos[x.order]={start:cum,len:x.reign_years_text}; cum+=x.reign_years_text; }); return {pos:pos,total:cum}; }
+    var lay = { israel: layout(data.kings.israel), judah: layout(data.kings.judah) };
+    var maxT = Math.max(lay.israel.total, lay.judah.total);
+
+    // order -> {dynasty, color} per kingdom
+    function dynMap(kingdom){
+      var m={}, dyns=data.dynasties[kingdom];
+      dyns.forEach(function(dn, i){
+        var color = kingdom==='judah' ? (dn.usurper?USURP:DAVID) : (dn.usurper?USURP:PAL[i]);
+        dn.orders.forEach(function(o){ m[o]={name:dn.name, end:dn.end, color:color, usurper:!!dn.usurper}; });
+      });
+      return m;
+    }
+    var dm = { israel: dynMap('israel'), judah: dynMap('judah') };
+
+    function kingByOrder(kingdom,o){ return data.kings[kingdom].filter(function(x){return x.order===o;})[0]; }
+
+    function rowHTML(kingdom){
+      var label = kingdom==='israel' ? 'Israel — the North' : 'Judah — the South';
+      var endTxt = kingdom==='israel' ? '722 BC · Assyria' : '586 BC · Babylon';
+      var L = lay[kingdom], M = dm[kingdom];
+      var pros = data.prophets.filter(function(p){return p.kingdom===kingdom;});
+      // prophet bars (stacked to avoid overlap)
+      var lanes=[]; // each lane: array of {l,r}
+      var pbars = pros.map(function(p){
+        var a = L.pos[p.first].start, b = L.pos[p.last].start + L.pos[p.last].len;
+        var l = a/maxT*100, w=(b-a)/maxT*100;
+        var lane=0; while(lanes[lane] && lanes[lane].some(function(x){return !(l>=x.r-0.1 || l+w<=x.l+0.1);})) lane++;
+        (lanes[lane]=lanes[lane]||[]).push({l:l,r:l+w});
+        return '<div class="dyn__pbar" data-p="'+esc(p.name)+'" style="left:'+l.toFixed(2)+'%;width:'+Math.max(w,4).toFixed(2)+'%;bottom:'+(lane*19+3)+'px;" title="'+esc(p.name)+'">'+esc(p.name)+'</div>';
+      }).join('');
+      var proHeight = lanes.length*19 + 6;
+      // reign segments
+      var segs = data.kings[kingdom].map(function(king){
+        var p=L.pos[king.order], d=M[king.order]||{color:USURP,name:'—'};
+        var l=p.start/maxT*100, w=p.len/maxT*100;
+        var nm = w>4 ? '<span class="dyn__segname">'+esc(king.name)+'</span>' : '';
+        return '<div class="dyn__seg" data-kingdom="'+kingdom+'" data-order="'+king.order+'" style="left:'+l.toFixed(2)+'%;width:'+w.toFixed(3)+'%;background:'+d.color+';" title="'+esc(king.name)+'">'+nm+'</div>';
+      }).join('');
+      // coup markers at end of each non-final dynasty when violent
+      var coups = data.dynasties[kingdom].map(function(dn){
+        if(dn.interruption) return '';
+        var lastO = dn.orders[dn.orders.length-1];
+        var isLast = lastO === data.kings[kingdom].length;
+        if(isLast) return '';
+        if(!/assassin|coup|suicide/i.test(dn.end||'')) return '';
+        var x=(L.pos[lastO].start+L.pos[lastO].len)/maxT*100;
+        return '<span class="dyn__coupmark" style="left:'+x.toFixed(2)+'%;" title="'+esc(dn.end)+'">⚔</span>';
+      }).join('');
+      return '<div class="dyn__row">'
+        + '<div class="dyn__rowhead"><strong>'+label+'</strong><span class="dyn__end">'+endTxt+'</span></div>'
+        + '<div class="dyn__prophets" style="height:'+proHeight+'px;">'+pbars+'</div>'
+        + '<div class="dyn__track">'+segs+coups+'</div>'
+        + '</div>';
+    }
+
+    chart.innerHTML = rowHTML('israel') + rowHTML('judah');
+
+    var segEls = Array.prototype.slice.call(chart.querySelectorAll('.dyn__seg'));
+    function showKing(kingdom, order){
+      segEls.forEach(function(s){ s.classList.remove('is-active'); });
+      var el = chart.querySelector('.dyn__seg[data-kingdom="'+kingdom+'"][data-order="'+order+'"]');
+      if(el) el.classList.add('is-active');
+      var king = kingByOrder(kingdom,order), d=dm[kingdom][order]||{};
+      var reign = king.reign_years_text, reignTxt = reign>=1 ? reign+(reign===1?' year':' years') : 'under a year';
+      var verdict = king.verdict==='right'?'did right':(king.verdict==='evil'?'did evil':'no verdict');
+      var html = '<p class="dyn__dname">'+esc(king.name)+'</p>'
+        + '<p class="dyn__dmeta">'+(kingdom==='israel'?'Israel (North)':'Judah (South)')+' &middot; reigned '+esc(reignTxt)+' &middot; '+verdict+'</p>'
+        + '<p class="dyn__dnote"><strong>'+esc(d.name||'')+'</strong>'+(d.end?' — '+esc(d.end):'')+'</p>'
+        + (king.summary ? '<p class="dyn__dsummary">'+esc(king.summary)+'</p>' : '')
+        + (king.evaluation_ref ? '<p class="dyn__dref" data-ref="'+esc(king.evaluation_ref)+'" style="cursor:help">the verdict: '+esc(king.evaluation_ref)+'</p>' : '')
+        + '<button type="button" class="dyn__jump" data-jump="'+esc(king.name)+'">See this king in the scorecard ↓</button>';
+      detail.innerHTML = html;
+    }
+    function showProphet(name){
+      var p = data.prophets.filter(function(x){return x.name===name;})[0]; if(!p) return;
+      var fk=kingByOrder(p.kingdom,p.first), lk=kingByOrder(p.kingdom,p.last);
+      var span = fk.name===lk.name ? fk.name : (fk.name+' → '+lk.name);
+      detail.innerHTML = '<p class="dyn__dname">'+esc(p.name)+'</p>'
+        + '<p class="dyn__dmeta">Prophet to '+(p.kingdom==='israel'?'the North':'the South')+' &middot; reigns of '+esc(span)+'</p>'
+        + '<p class="dyn__dnote">'+esc(p.note)+'</p>'
+        + '<p class="dyn__dref" data-ref="'+esc(p.ref)+'" style="cursor:help">'+esc(p.ref)+'</p>';
+    }
+    chart.addEventListener('click', function(e){
+      var seg = e.target.closest('.dyn__seg');
+      if(seg){ showKing(seg.dataset.kingdom, parseInt(seg.dataset.order,10)); return; }
+      var pb = e.target.closest('.dyn__pbar');
+      if(pb){ showProphet(pb.dataset.p); }
+    });
+    detail.addEventListener('click', function(e){
+      var j = e.target.closest('[data-jump]'); if(!j) return;
+      var tile = document.querySelector('.ksc__king[data-name="'+j.dataset.jump.replace(/"/g,'')+'"]');
+      if(tile){ tile.click(); tile.scrollIntoView({block:'center'}); }
+    });
+  });
+})();
+</script>

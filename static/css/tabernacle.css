@@ -245,7 +245,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .tabernacle-home-column {
@@ -273,19 +273,26 @@ h3 {
 .tabernacle-home-card__image {
   background: linear-gradient(135deg, var(--sage-pale) 0%, var(--white) 100%);
   border-bottom: 1px solid var(--border);
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
 }
 
 .tabernacle-home-card__image img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 
 .tabernacle-home-card__image--breastplate {
+  aspect-ratio: auto;
   padding: 16px;
 }
 
 .tabernacle-home-card__image--breastplate img {
+  height: auto;
+  object-fit: fill;
   max-width: min(100%, 460px);
   margin: 0 auto;
 }

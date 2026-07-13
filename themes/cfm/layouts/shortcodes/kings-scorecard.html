@@ -1,0 +1,133 @@
+{{- $k := index site.Data "divided-kingdom" "kings" -}}
+{{- $s := $k.summary -}}
+<div class="ksc" data-ksc>
+  <div class="ksc__summary">
+    <div class="ksc__stat ksc__stat--south">
+      <span class="ksc__statnum">{{ $s.judah.right }}<span class="ksc__statden"> / {{ $s.judah.total }}</span></span>
+      <span class="ksc__statlab"><strong>Judah</strong> (South) did right</span>
+    </div>
+    <div class="ksc__vs">vs</div>
+    <div class="ksc__stat ksc__stat--north">
+      <span class="ksc__statnum">0<span class="ksc__statden"> / {{ $s.israel.total }}</span></span>
+      <span class="ksc__statlab"><strong>Israel</strong> (North) did right</span>
+    </div>
+  </div>
+
+  <div class="ksc__filters" role="group" aria-label="Filter kings by verdict">
+    <button type="button" class="ksc__filter is-on" data-filter="all">All</button>
+    <button type="button" class="ksc__filter" data-filter="right">Did right</button>
+    <button type="button" class="ksc__filter" data-filter="evil">Did evil</button>
+  </div>
+
+  <div class="ksc__cols">
+    {{- range $kingdom := slice "judah" "israel" -}}
+    {{- $list := index $k.kingdoms $kingdom -}}
+    <div class="ksc__col ksc__col--{{ $kingdom }}">
+      <h4 class="ksc__colhead">{{ if eq $kingdom "judah" }}Judah — the South{{ else }}Israel — the North{{ end }}</h4>
+      <ol class="ksc__list">
+        {{- range $list -}}
+        <li>
+          <button type="button" class="ksc__king ksc__king--{{ .verdict }}"
+            data-name="{{ .name }}"
+            data-kingdom="{{ if eq $kingdom "judah" }}Judah (South){{ else }}Israel (North){{ end }}"
+            data-order="{{ .order }}"
+            data-reign="{{ .reign_years_text }}"
+            data-verdict="{{ .verdict }}"
+            data-scref="{{ with .evaluation_ref }}{{ . }}{{ end }}"
+            data-quote="{{ with .evaluation_quote }}{{ . }}{{ end }}"
+            data-qualifier="{{ with .qualifier }}{{ . }}{{ end }}">
+            <span class="ksc__kname">{{ .name }}</span>
+            <span class="ksc__kreign">{{ if lt .reign_years_text 1.0 }}&lt;1 yr{{ else }}{{ .reign_years_text }} yrs{{ end }}</span>
+          </button>
+        </li>
+        {{- end -}}
+      </ol>
+    </div>
+    {{- end -}}
+  </div>
+
+  <div class="ksc__detail" data-ksc-detail aria-live="polite">
+    <p class="ksc__hint">Select a king to read the verdict the book of Kings gives him — and the verse it comes from.</p>
+  </div>
+</div>
+
+<style>
+.page--divided-kingdom-page .ksc{ margin:2.4rem 0; font-family:-apple-system,system-ui,sans-serif; }
+.page--divided-kingdom-page .ksc__summary{ display:flex; align-items:center; justify-content:center; gap:1.2rem; flex-wrap:wrap; margin-bottom:1.1rem; }
+.page--divided-kingdom-page .ksc__stat{ text-align:center; padding:0.7rem 1.1rem; border-radius:12px; background:#fffdf6; border:1px solid #e6dcc6; min-width:150px; }
+.page--divided-kingdom-page .ksc__statnum{ display:block; font-size:2rem; font-weight:800; line-height:1; color:#4e7a52; }
+.page--divided-kingdom-page .ksc__stat--north .ksc__statnum{ color:#a6543a; }
+.page--divided-kingdom-page .ksc__statden{ font-size:1rem; font-weight:600; color:#8a8577; }
+.page--divided-kingdom-page .ksc__statlab{ display:block; font-size:0.82rem; color:#5b5647; margin-top:0.25rem; }
+.page--divided-kingdom-page .ksc__vs{ font-style:italic; color:#8a8577; }
+.page--divided-kingdom-page .ksc__filters{ display:flex; gap:0.4rem; justify-content:center; margin-bottom:1.2rem; }
+.page--divided-kingdom-page .ksc__filter{ font:inherit; font-size:0.8rem; padding:0.32rem 0.8rem; border-radius:999px; border:1px solid #d9cdb2; background:#fbf6ea; color:#5b5647; cursor:pointer; }
+.page--divided-kingdom-page .ksc__filter.is-on{ background:#5b7553; color:#fff; border-color:#5b7553; }
+.page--divided-kingdom-page .ksc__cols{ display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+.page--divided-kingdom-page .ksc__colhead{ text-align:center; font-size:0.92rem; letter-spacing:.02em; margin:0 0 0.6rem; color:#4a4433; }
+.page--divided-kingdom-page .ksc__list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:5px; counter-reset:none; }
+.page--divided-kingdom-page .ksc__king{ width:100%; display:flex; justify-content:space-between; align-items:center; gap:0.5rem; text-align:left; font:inherit; padding:0.5rem 0.7rem; border-radius:8px; border:1px solid transparent; color:#fff; cursor:pointer; transition:transform .08s ease, box-shadow .12s ease; }
+.page--divided-kingdom-page .ksc__king--right{ background:#4e7a52; }
+.page--divided-kingdom-page .ksc__king--evil{ background:#a6543a; }
+.page--divided-kingdom-page .ksc__king--none{ background:#8a8577; }
+.page--divided-kingdom-page .ksc__king:hover{ transform:translateX(2px); box-shadow:0 2px 6px rgba(56,55,49,.28); }
+.page--divided-kingdom-page .ksc__king.is-active{ outline:3px solid #d4a53e; outline-offset:1px; }
+.page--divided-kingdom-page .ksc__king.is-dim{ opacity:.22; }
+.page--divided-kingdom-page .ksc__kname{ font-weight:600; font-size:0.9rem; }
+.page--divided-kingdom-page .ksc__kreign{ font-size:0.72rem; opacity:.85; white-space:nowrap; }
+.page--divided-kingdom-page .ksc__detail{ margin-top:1.1rem; padding:1.1rem 1.2rem; border-radius:12px; background:#fffdf6; border:1px solid #e6dcc6; min-height:96px; }
+.page--divided-kingdom-page .ksc__hint{ margin:0; color:#8a8577; font-style:italic; }
+.page--divided-kingdom-page .ksc__dhead{ display:flex; align-items:baseline; gap:0.6rem; flex-wrap:wrap; margin:0 0 0.5rem; }
+.page--divided-kingdom-page .ksc__dname{ font-family:Georgia,'Times New Roman',serif; font-size:1.25rem; font-weight:700; color:#3a3529; margin:0; }
+.page--divided-kingdom-page .ksc__badge{ font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.04em; padding:0.16rem 0.5rem; border-radius:999px; color:#fff; }
+.page--divided-kingdom-page .ksc__badge--right{ background:#4e7a52; }
+.page--divided-kingdom-page .ksc__badge--evil{ background:#a6543a; }
+.page--divided-kingdom-page .ksc__badge--none{ background:#8a8577; }
+.page--divided-kingdom-page .ksc__dmeta{ font-size:0.8rem; color:#6b6553; margin:0 0 0.55rem; }
+.page--divided-kingdom-page .ksc__dquote{ font-family:Georgia,serif; font-style:italic; color:#4a4433; border-left:3px solid #d4a53e; padding-left:0.8rem; margin:0.4rem 0; }
+.page--divided-kingdom-page .ksc__dref{ font-size:0.82rem; color:#8a6a2f; font-weight:600; }
+.page--divided-kingdom-page .ksc__dqual{ font-size:0.82rem; color:#6b6553; margin-top:0.45rem; }
+@media (max-width:560px){
+  .page--divided-kingdom-page .ksc__cols{ grid-template-columns:1fr; gap:1.4rem; }
+  .page--divided-kingdom-page .ksc__kname{ font-size:0.84rem; }
+}
+</style>
+
+<script>
+(function(){
+  document.querySelectorAll('[data-ksc]').forEach(function(root){
+    var detail = root.querySelector('[data-ksc-detail]');
+    var kings = Array.prototype.slice.call(root.querySelectorAll('.ksc__king'));
+    var esc = function(s){ var d=document.createElement('div'); d.textContent=s==null?'':s; return d.innerHTML; };
+    var verdictWord = {right:'Did right', evil:'Did evil', none:'No verdict'};
+    function show(btn){
+      kings.forEach(function(k){ k.classList.remove('is-active'); });
+      btn.classList.add('is-active');
+      var d = btn.dataset;
+      var reign = parseFloat(d.reign);
+      var reignTxt = reign>=1 ? (reign+ (reign===1?' year':' years')) : 'under a year';
+      var html = '<div class="ksc__dhead">'
+        + '<p class="ksc__dname">'+esc(d.name)+'</p>'
+        + '<span class="ksc__badge ksc__badge--'+d.verdict+'">'+verdictWord[d.verdict]+'</span>'
+        + '</div>'
+        + '<p class="ksc__dmeta">'+esc(d.kingdom)+' &middot; #'+esc(d.order)+' in sequence &middot; reigned '+esc(reignTxt)+'</p>';
+      if(d.quote){ html += '<p class="ksc__dquote">&ldquo;'+esc(d.quote)+'&rdquo;</p>'; }
+      if(d.scref){ html += '<p class="ksc__dref" data-ref="'+esc(d.scref)+'" style="cursor:help">'+esc(d.scref)+'</p>'; }
+      else { html += '<p class="ksc__dqual">The text records no evaluation formula for this ruler.</p>'; }
+      if(d.qualifier){ html += '<p class="ksc__dqual">'+esc(d.qualifier)+'</p>'; }
+      detail.innerHTML = html;
+    }
+    kings.forEach(function(btn){ btn.addEventListener('click', function(){ show(btn); }); });
+    root.querySelectorAll('.ksc__filter').forEach(function(f){
+      f.addEventListener('click', function(){
+        root.querySelectorAll('.ksc__filter').forEach(function(x){ x.classList.remove('is-on'); });
+        f.classList.add('is-on');
+        var mode = f.dataset.filter;
+        kings.forEach(function(k){
+          k.classList.toggle('is-dim', mode!=='all' && k.dataset.verdict!==mode);
+        });
+      });
+    });
+  });
+})();
+</script>

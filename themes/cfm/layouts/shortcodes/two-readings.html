@@ -1,0 +1,49 @@
+{{- $id := .Get "id" -}}
+{{- $data := index site.Data "divided-kingdom" "two-readings" -}}
+{{- $item := index (where $data.items "id" $id) 0 -}}
+{{- with $item -}}
+<div class="tworead" data-tworead>
+  <p class="tworead__title">{{ .title }}</p>
+  <blockquote class="tworead__verse">{{ .verse }}</blockquote>
+  <div class="tworead__tabs" role="tablist">
+    <button type="button" class="tworead__tab tworead__tab--a is-on" data-side="a" role="tab" aria-selected="true">{{ .a.label }}</button>
+    <button type="button" class="tworead__tab tworead__tab--b" data-side="b" role="tab" aria-selected="false">{{ .b.label }}</button>
+  </div>
+  <div class="tworead__panel">
+    <p class="tworead__reading" data-side="a">{{ .a.text | safeHTML }}</p>
+    <p class="tworead__reading is-hidden" data-side="b">{{ .b.text | safeHTML }}</p>
+  </div>
+  <p class="tworead__note"><strong>Hold both.</strong> {{ .note | safeHTML }}</p>
+</div>
+{{- end -}}
+
+<style>
+.page--divided-kingdom-page .tworead{ margin:2.2rem 0; padding:1.2rem 1.3rem 1.3rem; border-radius:14px; background:#fffdf6; border:1px solid #e6dcc6; box-shadow:0 1px 5px rgba(56,55,49,.12); font-family:-apple-system,system-ui,sans-serif; }
+.page--divided-kingdom-page .tworead__title{ font-family:Georgia,serif; font-weight:700; font-size:1.15rem; color:#3a3529; margin:0 0 .5rem; }
+.page--divided-kingdom-page .tworead__verse{ font-family:Georgia,serif; font-style:italic; color:#4a4433; border-left:3px solid #d4a53e; padding-left:.9rem; margin:0 0 1rem; font-size:.98rem; }
+.page--divided-kingdom-page .tworead__tabs{ display:flex; gap:.5rem; flex-wrap:wrap; margin-bottom:.9rem; }
+.page--divided-kingdom-page .tworead__tab{ font:inherit; font-size:.86rem; font-weight:600; padding:.5rem .95rem; border-radius:999px; border:1.5px solid #cbb98f; background:#fbf6ea; color:#5b5647; cursor:pointer; transition:all .12s ease; }
+.page--divided-kingdom-page .tworead__tab--a.is-on{ background:#a6543a; border-color:#a6543a; color:#fff; }
+.page--divided-kingdom-page .tworead__tab--b.is-on{ background:#4a6b8a; border-color:#4a6b8a; color:#fff; }
+.page--divided-kingdom-page .tworead__panel{ background:#fbf6ea; border-radius:10px; padding:1rem 1.1rem; min-height:96px; }
+.page--divided-kingdom-page .tworead__reading{ margin:0; color:#3a3529; font-size:.98rem; line-height:1.6; }
+.page--divided-kingdom-page .tworead__reading.is-hidden{ display:none; }
+.page--divided-kingdom-page .tworead__note{ margin:1rem 0 0; font-size:.86rem; line-height:1.55; color:#6b6553; }
+.page--divided-kingdom-page .tworead__note strong{ color:#4a4433; }
+</style>
+
+<script>
+(function(){
+  document.querySelectorAll('[data-tworead]').forEach(function(root){
+    var tabs = Array.prototype.slice.call(root.querySelectorAll('.tworead__tab'));
+    var readings = Array.prototype.slice.call(root.querySelectorAll('.tworead__reading'));
+    tabs.forEach(function(tab){
+      tab.addEventListener('click', function(){
+        var side = tab.dataset.side;
+        tabs.forEach(function(t){ var on = t.dataset.side===side; t.classList.toggle('is-on', on); t.setAttribute('aria-selected', on?'true':'false'); });
+        readings.forEach(function(r){ r.classList.toggle('is-hidden', r.dataset.side!==side); });
+      });
+    });
+  });
+})();
+</script>

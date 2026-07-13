@@ -1,0 +1,7 @@
+# Overrides applied on Cloudflare Pages PREVIEW builds only
+# (loaded after hugo.toml via --config hugo.toml,config-preview.toml).
+# Production (GitHub Pages from main) never uses this file.
+
+[params]
+  # No analytics on draft previews
+  googleAnalytics = ''

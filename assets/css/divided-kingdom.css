@@ -1,0 +1,174 @@
+/* ============================================================
+   The Divided Kingdom — article (prose) pages
+   Scoped to .page--divided-kingdom-page so it never touches other guides.
+   Mirrors the First-Temple article styling (CFM sage / gold / terracotta);
+   kept as its own file so this guide can diverge in accent later.
+   ============================================================ */
+
+.page--divided-kingdom-page .page-intro--article {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 4px 24px 96px;
+}
+
+/* ---- Body typography ---- */
+.page--divided-kingdom-page .prose {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.13rem;
+  line-height: 1.85;
+  color: var(--text-dark);
+}
+.page--divided-kingdom-page .prose p { margin: 0; }
+.page--divided-kingdom-page .prose > * + * { margin-top: 1.7rem; }
+.page--divided-kingdom-page .prose > p:not(:first-child) { margin-top: 1.7rem; }
+
+/* Lead paragraph + drop cap */
+.page--divided-kingdom-page .prose > p:first-of-type {
+  font-size: 1.27rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+}
+.page--divided-kingdom-page .prose > p:first-of-type::first-letter {
+  float: left;
+  font-family: Georgia, serif;
+  font-size: 3.6rem;
+  line-height: 0.8;
+  font-weight: 700;
+  color: var(--gold);
+  margin: 0.06em 0.1em 0 0;
+}
+
+/* ---- Section headings ---- */
+.page--divided-kingdom-page .prose h2 {
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  color: var(--sage-dark);
+  margin-top: 2.9rem;
+  padding-top: 1.7rem;
+  border-top: 1px solid var(--sage-pale);
+  position: relative;
+  text-wrap: balance;
+}
+.page--divided-kingdom-page .prose h2::before {
+  content: "";
+  position: absolute;
+  top: -2px; left: 0;
+  width: 54px; height: 3px;
+  background: var(--gold);
+  border-radius: 2px;
+}
+
+/* ---- Inline emphasis ---- */
+.page--divided-kingdom-page .prose strong { color: var(--text-dark); font-weight: 700; }
+.page--divided-kingdom-page .prose em { color: var(--copper); }
+
+/* ---- Links (leave scripture/term styling to the global popup layer) ---- */
+.page--divided-kingdom-page .prose a:not(.scripture-ref):not(.term-ref) {
+  color: var(--sage-dark);
+  text-decoration: none;
+  border-bottom: 2px solid var(--gold-light);
+  transition: border-color .15s ease, background .15s ease;
+}
+.page--divided-kingdom-page .prose a:not(.scripture-ref):not(.term-ref):hover {
+  border-bottom-color: var(--gold);
+  background: var(--gold-pale);
+}
+.page--divided-kingdom-page .prose a.term-ref {
+  color: var(--sage-dark);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--sage-mid);
+  cursor: help;
+}
+.page--divided-kingdom-page .prose a.term-ref:hover { border-bottom-style: solid; }
+.page--divided-kingdom-page .prose a.term-ref em { font-style: italic; color: inherit; }
+
+/* ---- Lists ---- */
+.page--divided-kingdom-page .prose ul { padding-left: 1.25em; margin: 0; }
+.page--divided-kingdom-page .prose li { margin: 0.55rem 0; padding-left: 0.2em; }
+.page--divided-kingdom-page .prose li::marker { color: var(--gold); }
+
+/* ---- Callouts (blockquote → aside card) ---- */
+.page--divided-kingdom-page .prose blockquote {
+  margin: 2.1rem 0;
+  padding: 1.05rem 1.4rem;
+  background: var(--gold-pale);
+  border-left: 4px solid var(--gold);
+  border-radius: 10px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+.page--divided-kingdom-page .prose blockquote p { margin: 0; }
+.page--divided-kingdom-page .prose blockquote p + p { margin-top: 0.7rem; }
+.page--divided-kingdom-page .prose blockquote strong { color: var(--sage-dark); }
+
+/* ---- Figures ---- */
+.page--divided-kingdom-page .ft-figure { margin: 2.3rem 0; }
+.page--divided-kingdom-page .ft-figure img {
+  width: 100%; height: auto; display: block;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 26px rgba(56, 55, 49, 0.12);
+  background: #fffdf6;
+}
+.page--divided-kingdom-page .ft-figure figcaption {
+  margin-top: 0.7rem;
+  font-family: -apple-system, system-ui, sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  font-style: normal;
+  color: var(--text-muted);
+  text-align: center;
+}
+.page--divided-kingdom-page .ft-figure--lead { margin: 0.4rem 0 2.6rem; }
+.page--divided-kingdom-page .ft-figure--right {
+  float: right; width: 44%;
+  margin: 0.5rem 0 1.4rem 1.9rem;
+}
+.page--divided-kingdom-page .ft-figure--left {
+  float: left; width: 44%;
+  margin: 0.5rem 1.9rem 1.4rem 0;
+}
+
+@media (max-width: 640px) {
+  .page--divided-kingdom-page .ft-figure--right,
+  .page--divided-kingdom-page .ft-figure--left { float: none; width: 100%; margin: 2rem 0; }
+  .page--divided-kingdom-page .prose { font-size: 1.06rem; line-height: 1.8; }
+  .page--divided-kingdom-page .prose > p:first-of-type { font-size: 1.16rem; }
+  .page--divided-kingdom-page .prose h2 { font-size: 1.42rem; }
+  .page--divided-kingdom-page .page-intro--article { padding: 4px 18px 72px; }
+}
+
+/* ---- Golden-calf shrine overlay on the Israel/Judah split map ---- */
+.page--divided-kingdom-page .dk-calfmap { max-width: 600px; margin: 0.4rem auto 2.6rem; }
+.page--divided-kingdom-page .dk-calfmap__frame { position: relative; display: block; line-height: 0; }
+.page--divided-kingdom-page .dk-calfmap__pin { position: absolute; width: 0; height: 0; }
+.page--divided-kingdom-page .dk-calfmap__badge {
+  position: absolute; left: 0; top: 0; transform: translate(-50%, -50%);
+  width: 30px; height: 30px; border-radius: 50%;
+  background: #d4a53e; border: 2px solid #fffdf6;
+  box-shadow: 0 2px 6px rgba(56, 55, 49, 0.5);
+  display: grid; place-items: center; color: #4a3410;
+}
+.page--divided-kingdom-page .dk-calfmap__badge svg { width: 21px; height: 18px; display: block; }
+.page--divided-kingdom-page .dk-calfmap__tag {
+  position: absolute; top: 0; transform: translateY(-50%);
+  font-family: -apple-system, system-ui, sans-serif;
+  font-size: 0.72rem; font-weight: 700; line-height: 1.15;
+  color: #3a2c14; background: rgba(255, 251, 238, 0.94);
+  border: 1px solid #d4a53e; border-radius: 999px;
+  padding: 3px 9px; white-space: nowrap;
+  box-shadow: 0 1px 3px rgba(56, 55, 49, 0.3);
+}
+.page--divided-kingdom-page .dk-calfmap__pin--tagleft  .dk-calfmap__tag { right: 20px; }
+.page--divided-kingdom-page .dk-calfmap__pin--tagright .dk-calfmap__tag { left: 20px; }
+@media (max-width: 560px) {
+  .page--divided-kingdom-page .dk-calfmap__badge { width: 24px; height: 24px; }
+  .page--divided-kingdom-page .dk-calfmap__badge svg { width: 16px; height: 14px; }
+  .page--divided-kingdom-page .dk-calfmap__tag { font-size: 0.6rem; padding: 2px 6px; }
+  .page--divided-kingdom-page .dk-calfmap__pin--tagleft  .dk-calfmap__tag { right: 16px; }
+  .page--divided-kingdom-page .dk-calfmap__pin--tagright .dk-calfmap__tag { left: 16px; }
+  .page--divided-kingdom-page .dk-calfmap__city { display: none; }
+}

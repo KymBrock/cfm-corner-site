@@ -1,0 +1,28 @@
+{{ define "head" }}
+  <link rel="stylesheet" href="{{ (printf "css/tabernacle.css?v=%d" now.Unix) | relURL }}">
+  {{ with resources.Get "css/divided-kingdom.css" }}<link rel="stylesheet" href="{{ (. | fingerprint).RelPermalink }}">{{ end }}
+{{ end }}
+
+{{ define "main" }}
+  <article class="page page--divided-kingdom-page">
+    <section class="hero compact">
+      <p class="eyebrow">Field Guide · The Divided Kingdom</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
+    </section>
+
+    {{ $section := .CurrentSection }}
+    <nav class="field-guide-nav field-guide-nav--page" aria-label="{{ $section.Title }} field guide navigation">
+      <a class="field-guide-nav__link{{ if eq $.RelPermalink $section.RelPermalink }} is-active{{ end }}" href="{{ $section.RelPermalink }}">Home</a>
+      {{ range $section.RegularPages.ByWeight }}
+        <a class="field-guide-nav__link{{ if eq $.RelPermalink .RelPermalink }} is-active{{ end }}" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+      {{ end }}
+    </nav>
+
+    <section class="page-intro page-intro--article">
+      <div class="prose">
+        {{ .Content }}
+      </div>
+    </section>
+  </article>
+{{ end }}
