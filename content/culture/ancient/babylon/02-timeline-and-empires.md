@@ -14,6 +14,24 @@ draft: true
 
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">Babylon was ancient before it was mighty &mdash; and mighty for barely a lifetime</p>
 
+<!-- LISTEN PLAYER (section narration) -->
+<div class="listen-player" style="max-width: 750px; margin: 0 auto 1.75rem auto; background: linear-gradient(135deg, #f2f5f2 0%, #dce8dd 100%); border: 1px solid #cdddce; border-radius: 14px; padding: 16px 18px; box-shadow: 0 4px 12px rgba(74,107,82,0.08);">
+<div style="display: flex; align-items: center; gap: 14px; margin-bottom: 12px;">
+<span aria-hidden="true" style="flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: #4a6b52;">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f2f5f2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 14v-2a9 9 0 0 1 18 0v2"></path><path d="M21 15a2 2 0 0 1-2 2h-1v-5h1a2 2 0 0 1 2 2z"></path><path d="M3 15a2 2 0 0 0 2 2h1v-5H5a2 2 0 0 0-2 2z"></path></svg>
+</span>
+<div style="flex: 1; min-width: 0;">
+<div style="font-weight: 700; color: #3c5743; font-size: 1.02em; line-height: 1.2;">Listen to this section</div>
+<div style="color: #6a8470; font-size: 0.85em; margin-top: 2px;">Narrated in Kym&rsquo;s voice</div>
+</div>
+</div>
+<audio controls preload="none" style="width: 100%; height: 40px; border-radius: 8px;">
+<source src="/audio/culture/babylon/02-timeline-and-empires.mp3" type="audio/mpeg">
+Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/babylon/02-timeline-and-empires.mp3">download the audio</a> instead.
+</audio>
+</div>
+<!-- /LISTEN PLAYER -->
+
 <p>Here is the surprise at the heart of Babylonian history: the empire that destroyed Jerusalem, carried Judah captive, and became scripture&rsquo;s enduring symbol of worldly power lasted less than <strong>seventy years</strong> as a great power &mdash; almost exactly the span Jeremiah gave it (<a href="https://www.blueletterbible.org/kjv/jer/25/11/" target="_blank" data-ref="Jeremiah 25:11-12">Jeremiah 25:11&ndash;12</a>). But behind that brief empire stood nearly two thousand years of accumulated prestige. When Nebuchadnezzar rebuilt Babylon, he was consciously restoring a city that was already ancient &mdash; older to him than the apostles are to us.</p>
 
 <p>All dates before the first millennium BC are approximate (this guide follows the widely used &ldquo;middle chronology&rdquo;); from the 8th century BC onward, Babylonian records let us date events to the day.</p>
