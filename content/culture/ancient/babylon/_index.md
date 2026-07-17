@@ -32,7 +32,7 @@ We approach Babylon's history, religion, and scholarship with respect for the ev
 
 ## How This Guide Is Organized
 
-This supplement is divided into ten sections. The first two build the framework &mdash; the land and the long arc of its history &mdash; and everything else stands on them. Read in order, or jump to whatever pulls at you.
+This supplement is divided into eleven sections. The first two build the framework &mdash; the land and the long arc of its history &mdash; and everything else stands on them. Read in order, or jump to whatever pulls at you.
 
 <br>
 
@@ -83,6 +83,23 @@ Four thousand years in one arc: Hammurabi's first Babylon, the long centuries of
 <br>
 
 ### The Empire
+
+<br>
+
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; margin: 24px 0;">
+<div style="flex: 0 0 140px;">
+<a href="/culture/ancient/babylon/02b-two-empires/" style="display: block; transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
+<img src="/images/culture/babylon/02b-icon.png" alt="Caught Between Two Empires" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+</a>
+</div>
+<div style="flex: 1; min-width: 280px;">
+
+**<a href="/culture/ancient/babylon/02b-two-empires/">Caught Between Two Empires</a>**
+
+Judah&rsquo;s last forty years turned on one question &mdash; Egypt or Babylon? Its kings kept betting on Egypt, the prophets said Babylon, and every wrong bet ended at a siege wall. The <em>why</em> behind the timeline and the kings.
+
+</div>
+</div>
 
 <br>
 
