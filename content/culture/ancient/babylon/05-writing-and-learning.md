@@ -14,6 +14,24 @@ draft: true
 
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">&ldquo;The learning and the tongue of the Chaldeans&rdquo; &mdash; what Daniel actually studied</p>
 
+<!-- LISTEN PLAYER (section narration) -->
+<div class="listen-player" style="max-width: 750px; margin: 0 auto 1.75rem auto; background: linear-gradient(135deg, #f2f5f2 0%, #dce8dd 100%); border: 1px solid #cdddce; border-radius: 14px; padding: 16px 18px; box-shadow: 0 4px 12px rgba(74,107,82,0.08);">
+<div style="display: flex; align-items: center; gap: 14px; margin-bottom: 12px;">
+<span aria-hidden="true" style="flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: #4a6b52;">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f2f5f2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 14v-2a9 9 0 0 1 18 0v2"></path><path d="M21 15a2 2 0 0 1-2 2h-1v-5h1a2 2 0 0 1 2 2z"></path><path d="M3 15a2 2 0 0 0 2 2h1v-5H5a2 2 0 0 0-2 2z"></path></svg>
+</span>
+<div style="flex: 1; min-width: 0;">
+<div style="font-weight: 700; color: #3c5743; font-size: 1.02em; line-height: 1.2;">Listen to this section</div>
+<div style="color: #6a8470; font-size: 0.85em; margin-top: 2px;">Narrated in Kym&rsquo;s voice</div>
+</div>
+</div>
+<audio controls preload="none" style="width: 100%; height: 40px; border-radius: 8px;">
+<source src="/audio/culture/babylon/05-writing-and-learning.mp3" type="audio/mpeg">
+Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/babylon/05-writing-and-learning.mp3">download the audio</a> instead.
+</audio>
+</div>
+<!-- /LISTEN PLAYER -->
+
 <p>When Nebuchadnezzar ordered that select young exiles be taught &ldquo;the learning and the tongue of the Chaldeans&rdquo; (<a href="https://www.blueletterbible.org/kjv/dan/1/4/" target="_blank" data-ref="Daniel 1:4">Daniel 1:4</a>), he was enrolling Daniel and his friends in the longest-running intellectual tradition on earth. Babylonian scholarship in the 6th century BC stood on two thousand years of accumulated writing &mdash; more preserved text than any other ancient civilization would leave behind. Clay, it turns out, was the great accident of history: papyrus rots and parchment burns, but a clay tablet in a burning archive is <em>fired</em>, not destroyed. Hundreds of thousands of tablets survive, and we can reconstruct Babylonian learning &mdash; its schoolrooms, its libraries, its mathematics, its star charts &mdash; in extraordinary detail.</p>
 
 <br>
