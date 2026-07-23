@@ -1,0 +1,47 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "hugo-weekly-preview",
+      "runtimeExecutable": "hugo",
+      "runtimeArgs": [
+        "server",
+        "--source",
+        "/Users/kymberbrockbank/Developer/cfm-corner-site",
+        "--noHTTPCache",
+        "--disableFastRender",
+        "-p",
+        "1314"
+      ],
+      "port": 1314,
+      "autoPort": false
+    },
+    {
+      "name": "hugo-drafts-preview",
+      "runtimeExecutable": "hugo",
+      "runtimeArgs": [
+        "server",
+        "-D",
+        "--source",
+        "/Users/kymberbrockbank/Developer/cfm-corner-site",
+        "--noHTTPCache",
+        "--disableFastRender",
+        "--port",
+        "1315"
+      ],
+      "port": 1315
+    },
+    {
+      "name": "hugo-gui-converter",
+      "runtimeExecutable": "hugo",
+      "runtimeArgs": [
+        "server",
+        "--source",
+        "/Users/kymberbrockbank/Developer/cfm-corner-site",
+        "--port",
+        "1326"
+      ],
+      "port": 1326
+    }
+  ]
+}
