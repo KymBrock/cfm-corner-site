@@ -32,7 +32,7 @@ We approach Babylon's history, religion, and scholarship with respect for the ev
 
 ## How This Guide Is Organized
 
-This supplement is divided into eleven sections. The first two build the framework &mdash; the land and the long arc of its history &mdash; and everything else stands on them. Read in order, or jump to whatever pulls at you.
+This supplement is divided into twelve sections. The first two build the framework &mdash; the land and the long arc of its history &mdash; and everything else stands on them. Read in order, or jump to whatever pulls at you.
 
 <br>
 
@@ -173,6 +173,27 @@ Marduk's rise, the En&#363;ma Eli&scaron; and Genesis, the flood before the floo
 **<a href="/culture/ancient/babylon/05-writing-and-learning/">Writing &amp; Learning</a>**
 
 Cuneiform and the tablet-house, the world's first libraries, base-60 mathematics, astronomers who could predict eclipses &mdash; the "learning and the tongue of the Chaldeans" that Daniel mastered without being mastered by it.
+
+</div>
+</div>
+
+<br>
+
+---
+
+<br>
+
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; margin: 24px 0;">
+<div style="flex: 0 0 140px;">
+<a href="/culture/ancient/babylon/05b-the-calendar-and-the-names-of-time/" style="display: block; transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
+<img src="/images/culture/babylon/05b-icon.png" alt="The Calendar and the Names of Time" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+</a>
+</div>
+<div style="flex: 1; min-width: 280px;">
+
+**<a href="/culture/ancient/babylon/05b-the-calendar-and-the-names-of-time/">The Calendar &amp; the Names of Time</a>**
+
+How Babylon measured the heavens &mdash; the base-60 circle still riding in every clock and compass &mdash; and how the exiles carried its month-names home, Tammuz among them, in a calendar still far less god-haunted than our own week.
 
 </div>
 </div>

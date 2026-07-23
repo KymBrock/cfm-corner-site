@@ -76,6 +76,18 @@ draft: true
 
 <br>
 
+<h3>A War Before Creation &mdash; and Why It Isn&rsquo;t Babylon&rsquo;s</h3>
+
+<p>The sharpest connection of all reaches back before the world itself. Genesis 1 has <em>no</em> war before creation (see <a href="/culture/ancient/babylon/04-religion-and-mythology/">Section 04</a>) &mdash; but the Restoration does. In the premortal council, John&rsquo;s &ldquo;<strong>war in heaven</strong>&rdquo; broke out, Michael against the dragon (<a href="https://www.blueletterbible.org/kjv/rev/12/7/" target="_blank" data-ref="Revelation 12:7-9">Revelation 12:7&ndash;9</a>), and it was fought over <em>agency itself</em>. Two came forward: the one &ldquo;like unto the Son of Man&rdquo; who said only, &ldquo;Here am I, send me,&rdquo; and another who demanded the Father&rsquo;s own honor and &ldquo;sought to destroy the agency of man&rdquo; to guarantee that not one soul would be lost (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/4?lang=eng" target="_blank">Moses 4:1&ndash;4</a>; <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/3?lang=eng&amp;id=p27-p28#p27" target="_blank">Abraham 3:27&ndash;28</a>). The Father chose the first; the second &ldquo;was angry, and kept not his first estate.&rdquo;</p>
+
+<p>Set that against Babylon, and the difference is total. Babylon <em>also</em> had a war before creation &mdash; but there the war <em>was</em> the creation: the cosmos hacked from the carcass of the slain Tiamat, humanity kneaded from a murdered god&rsquo;s blood. The Restoration keeps the pre-creation war and refuses the pre-creation slaughter. There was a conflict before the world &mdash; but the world is not its trophy. Creation still comes exactly as Genesis says it does: by a word, freely spoken, to make room for children who could choose. Babylon&rsquo;s cosmos is what is left when gods fight for power; the Restoration&rsquo;s is what a Father builds in order to give it away.</p>
+
+<br>
+
+<hr>
+
+<br>
+
 <h3>Teaching This Week: Three Threads Worth Pulling</h3>
 
 <ul>
