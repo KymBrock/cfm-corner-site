@@ -40,6 +40,24 @@ fi
 echo "=== building search index (pagefind) ==="
 npx --yes pagefind@latest --site public || echo "WARNING: pagefind failed; continuing without a search index"
 
+# Cloudflare Pages rejects ANY single file over 25 MiB and fails the whole
+# deploy at the asset-validation step. GitHub Pages (the real production
+# host) has no such limit, so this only ever affects Cloudflare builds.
+#
+# Today this is static/data/scripture-verses.json (~92 MB) — the verse text
+# behind the scripture popups. Dropping it degrades gracefully: baseof.html
+# fetches it lazily and already falls back to {} when the fetch fails, so
+# popups still render, just without verse text. Everything else is intact.
+#
+# Anything dropped is named explicitly below — a preview that silently
+# omitted files would be worse than one that says what it is missing.
+echo "=== checking for files over Cloudflare's 25 MiB per-file limit ==="
+find public -type f -size +25M | while read -r f; do
+  echo "  DROPPED: $f ($(du -h "$f" | cut -f1)) — exceeds Cloudflare's 25 MiB limit."
+  echo "           This preview will render without it. Production is unaffected."
+  rm -f "$f"
+done
+
 # Keep every *.pages.dev build out of search engines; the canonical site
 # is www.cfmcorner.com via GitHub Pages.
 printf 'User-agent: *\nDisallow: /\n' > public/robots.txt
