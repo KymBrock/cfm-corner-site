@@ -1,7 +1,7 @@
 ---
 title: "Esther's World"
 description: "Susa, the winter capital; the Persian court of Xerxes; the harem, the banquets, and the irrevocable decrees — the setting that makes every turn of the book of Esther ring true."
-draft: false
+draft: true
 ---
 
 {{< rawhtml >}}

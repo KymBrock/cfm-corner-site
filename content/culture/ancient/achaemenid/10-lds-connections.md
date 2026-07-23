@@ -1,7 +1,7 @@
 ---
 title: "LDS Connections"
 description: "Cyrus as the Lord's anointed instrument, the return from exile as the pattern of the latter-day gathering of Israel, temple restoration, Ezra's scriptural renewal, and Esther's hidden providence."
-draft: false
+draft: true
 ---
 
 {{< rawhtml >}}

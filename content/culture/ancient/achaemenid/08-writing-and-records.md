@@ -1,7 +1,7 @@
 ---
 title: "Writing & Records"
 description: "Old Persian cuneiform, the trilingual Behistun cliff that cracked the code of an ancient world, the Persepolis tablets, and the Aramaic that carried the empire — and the books of Ezra."
-draft: false
+draft: true
 ---
 
 {{< rawhtml >}}

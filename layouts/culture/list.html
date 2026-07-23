@@ -1,0 +1,87 @@
+{{/*
+  Project override of themes/cfm/layouts/culture/list.html.
+
+  Identical to the theme version except for production-stage awareness:
+    - On the PUBLIC build, guides/pages whose `stage` is set and is not
+      "live" are omitted from the section and article listings.
+    - On staging surfaces every item is listed with a stage badge.
+
+  Items with no `stage` default to "live", so existing guides are unaffected.
+  A guide sets its stage once in its own _index.md; `cascade` there pushes
+  it to every page of that guide.
+*/}}
+{{ define "main" }}
+{{ $staging := or site.Params.isPreview hugo.IsServer }}
+<div class="culture-landing" data-pagefind-body>
+
+    <div class="culture-hero">
+        <h1>{{ .Title }}</h1>
+        <p class="culture-subtitle">{{ .Description }}</p>
+    </div>
+
+    {{ if $staging }}
+    {{ partial "staging-notice.html" . }}
+    {{ end }}
+
+    {{ with .Content }}
+    <div class="culture-intro">
+        {{ . }}
+    </div>
+    {{ end }}
+
+    <!-- Child sections (e.g., Jewish, Greek) -->
+    {{ $sections := where .Sections "Params.hide_from_parent" "!=" true }}
+    {{ if and (not .Params.hide_sections) $sections }}
+    <div class="culture-sections">
+        {{ range $sections }}
+        {{ $section := . }}
+        {{ $stage := .Params.stage | default "live" }}
+        {{ if or $staging (eq $stage "live") }}
+        <a href="{{ .RelPermalink }}" class="culture-section-card">
+            {{ with .Params.card_icon }}
+            <div class="cs-icon-wrap">
+                <img src="{{ . }}" alt="{{ $section.Title }} icon" class="cs-icon">
+            </div>
+            {{ end }}
+            <div class="cs-title">{{ .Title }}{{ partial "stage-badge.html" $section }}</div>
+            <div class="cs-desc">{{ .Description }}</div>
+            {{ $childCount := len .Pages }}
+            {{ $sectionCount := len .Sections }}
+            {{ $total := add $childCount $sectionCount }}
+            {{ if gt $total 0 }}<div class="cs-count">{{ $total }} {{ if eq $total 1 }}topic{{ else }}topics{{ end }}</div>{{ end }}
+        </a>
+        {{ end }}
+        {{ end }}
+    </div>
+    {{ end }}
+
+    <!-- Child pages at this level (can be hidden with hide_children: true in front matter) -->
+    {{ if and (not .Params.hide_children) (not .Params.hide_pages) }}
+    {{ $pages := .RegularPages }}
+    {{ if $pages }}
+    <div class="culture-articles">
+        {{ range $pages }}
+        {{ $stage := .Params.stage | default "live" }}
+        {{ if or $staging (eq $stage "live") }}
+        <a href="{{ .RelPermalink }}" class="culture-article-card">
+            <div class="ca-title">{{ .Title }}{{ partial "stage-badge.html" . }}</div>
+            <div class="ca-desc">{{ .Description }}</div>
+            {{ with .Params.related_weeks }}<div class="ca-weeks">Related: Week {{ delimit . ", Week " }}</div>{{ end }}
+        </a>
+        {{ end }}
+        {{ end }}
+    </div>
+    {{ end }}
+    {{ end }}
+
+    <!-- Breadcrumb back link for subsections -->
+    {{ if .Parent }}
+    {{ if ne .Parent.Kind "home" }}
+    <div class="culture-back">
+        <a href="{{ .Parent.RelPermalink }}">← Back to {{ .Parent.Title }}</a>
+    </div>
+    {{ end }}
+    {{ end }}
+
+</div>
+{{ end }}

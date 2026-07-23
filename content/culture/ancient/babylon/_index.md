@@ -3,6 +3,9 @@ title: "Babylon: The Empire and the Exile"
 description: "A deep-dive cultural guide to Babylon — the land, the kings, the religion, the learning, the city, and the exile that reshaped Israel forever. Essential background for 2 Kings 24–25, Jeremiah, Ezekiel, Daniel, and the opening of the Book of Mormon."
 hide_children: true
 card_icon: "/images/culture/babylon/babylon-guide-hero-icon.png"
+stage: drafting
+cascade:
+  stage: drafting
 draft: true
 ---
 

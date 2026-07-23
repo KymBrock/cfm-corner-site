@@ -1,7 +1,7 @@
 ---
 title: "Rebuilding Jerusalem"
 description: "The Second Temple, Ezra the scribe, Nehemiah's wall in fifty-two days, and the surprise witness of the Elephantine papyri — how a small province rebuilt itself under Persian rule."
-draft: false
+draft: true
 ---
 
 {{< rawhtml >}}

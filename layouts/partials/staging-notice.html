@@ -1,0 +1,14 @@
+{{/*
+  staging-notice.html — the "you are not looking at the public site" banner.
+
+  Renders only on staging surfaces (local `hugo server` and Cloudflare
+  previews). Never appears on the public production build.
+*/}}
+{{- $staging := or site.Params.isPreview hugo.IsServer -}}
+{{- if $staging -}}
+<div class="staging-notice" style="max-width:900px; margin:0 auto 1.5rem auto; padding:12px 16px; border:1px solid #d9c9a3; border-left:5px solid #b8912f; border-radius:8px; background:#fdf8ec; color:#5c4a1f; font-size:0.9em; line-height:1.5;">
+  <strong style="letter-spacing:0.04em;">STAGING PREVIEW</strong> &mdash; this build shows unpublished work. Items badged
+  <em>drafting</em>, <em>needs review</em>, or <em>ready</em> are <strong>not on the public site</strong>.
+  <a href="/pipeline/" style="color:#8a6116; font-weight:600;">See the full production pipeline &rarr;</a>
+</div>
+{{- end -}}

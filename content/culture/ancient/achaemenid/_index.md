@@ -3,7 +3,12 @@ title: "The Achaemenid Empire: Persia and the Return"
 description: "A deep-dive cultural guide to the Persian (Achaemenid) Empire — Cyrus and the decree of return, the rebuilding of the temple and Jerusalem, the world of Esther, and the faith of the Persian kings. Essential background for Ezra, Nehemiah, Esther, Haggai, Zechariah, and Daniel."
 hide_children: true
 card_icon: "/images/culture/achaemenid/achaemenid-guide-hero-icon.png"
-draft: false
+stage: ready
+stage_blockers:
+  - "Babylon guide (6 cross-links)"
+cascade:
+  stage: ready
+draft: true
 ---
 
 {{< rawhtml >}}

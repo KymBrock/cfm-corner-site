@@ -1,0 +1,114 @@
+{{/*
+  pipeline.html — the production dashboard ("staging station").
+
+  Selected by `layout: pipeline` in content/pipeline.md. That page is
+  draft:true, so this dashboard is built ONLY on staging surfaces
+  (local `hugo server` and Cloudflare previews, both of which build with
+  drafts). It never exists on the public site.
+
+  Shows every week and every culture guide with its stage and blockers,
+  grouped by stage, newest work first. Designed to be read on a phone.
+*/}}
+{{ define "main" }}
+{{ $order := slice "drafting" "review" "ready" "live" }}
+{{ $meta := dict
+    "drafting" (dict "label" "Drafting"     "note" "being written"                        "bg" "#f2dede" "fg" "#a5342a" "bd" "#dda9a2")
+    "review"   (dict "label" "Needs Review" "note" "reads end-to-end — needs your pass" "bg" "#fbf0d9" "fg" "#8a6116" "bd" "#e6cf9a")
+    "ready"    (dict "label" "Ready"        "note" "verified — waiting on the items below" "bg" "#dce9f4" "fg" "#1f5c86" "bd" "#a6c8e0")
+    "live"     (dict "label" "Live"         "note" "published on the public site"          "bg" "#e2ece4" "fg" "#33603c" "bd" "#aecdb4")
+}}
+
+{{/* ---- gather items: weeks + culture guides ---- */}}
+{{ $items := slice }}
+
+{{ with site.GetPage "/weeks" }}
+  {{ range .Pages }}
+    {{ $items = $items | append (dict
+        "title" (printf "Week %s — %s" (.Params.week_num | default "?") .Title)
+        "sub"   (.Params.scripture | default "")
+        "url"   .RelPermalink
+        "stage" (.Params.stage | default "live")
+        "blockers" (.Params.stage_blockers | default slice)
+        "group" "Weekly Lessons"
+        "sortkey" (.Params.week_num | default "0")
+    ) }}
+  {{ end }}
+{{ end }}
+
+{{/* Field guides are the section pages under /culture/ancient/. Gathered by
+     path rather than via GetPage, because content/culture/ancient/ has no
+     _index.md of its own. */}}
+{{ range where site.Pages "Kind" "section" }}
+  {{ if and (hasPrefix .RelPermalink "/culture/ancient/") (ne .RelPermalink "/culture/ancient/") }}
+    {{ $items = $items | append (dict
+        "title" .Title
+        "sub"   (printf "%d pages" (len .Pages))
+        "url"   .RelPermalink
+        "stage" (.Params.stage | default "live")
+        "blockers" (.Params.stage_blockers | default slice)
+        "group" "Field Guides"
+        "sortkey" .Title
+    ) }}
+  {{ end }}
+{{ end }}
+
+<div style="max-width: 900px; margin: 0 auto;">
+
+<h1 style="font-family: Georgia, serif; color: var(--sage-dark, #4a6b52); font-weight: normal; margin-bottom: 6px;">Production Pipeline</h1>
+<p style="color:#6a6a6a; font-size:0.95em; margin-top:0;">Everything in flight, by stage. This page exists only on staging builds &mdash; it is never published.</p>
+
+{{/* ---- counts strip ---- */}}
+<div style="display:flex; flex-wrap:wrap; gap:10px; margin:22px 0 30px 0;">
+  {{ range $order }}
+    {{ $s := . }}
+    {{ $m := index $meta $s }}
+    {{ $n := len (where $items "stage" $s) }}
+    <div style="flex:1 1 140px; min-width:130px; padding:12px 14px; border:1px solid {{ $m.bd }}; border-radius:10px; background:{{ $m.bg }};">
+      <div style="font-size:1.7em; font-weight:700; color:{{ $m.fg }}; line-height:1;">{{ $n }}</div>
+      <div style="font-size:0.78em; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:{{ $m.fg }}; margin-top:4px;">{{ $m.label }}</div>
+    </div>
+  {{ end }}
+</div>
+
+{{/* ---- one block per stage, in pipeline order ---- */}}
+{{ range $order }}
+  {{ $s := . }}
+  {{ $m := index $meta $s }}
+  {{ $inStage := where $items "stage" $s }}
+  {{ if $inStage }}
+  <section style="margin-bottom:34px;">
+    <div style="display:flex; align-items:baseline; gap:10px; border-bottom:2px solid {{ $m.bd }}; padding-bottom:6px; margin-bottom:14px;">
+      <h2 style="margin:0; font-family:Georgia,serif; font-weight:normal; color:{{ $m.fg }}; font-size:1.35em;">{{ $m.label }}</h2>
+      <span style="color:#8a8a8a; font-size:0.85em; font-style:italic;">{{ $m.note }}</span>
+    </div>
+
+    {{ range sort $inStage "sortkey" "desc" }}
+    <a href="{{ .url }}" style="display:block; text-decoration:none; color:inherit; border:1px solid #e2ded6; border-left:4px solid {{ $m.bd }}; border-radius:8px; padding:12px 15px; margin-bottom:10px; background:#fff;">
+      <div style="display:flex; flex-wrap:wrap; align-items:baseline; gap:8px;">
+        <span style="font-weight:600; color:#3a3a3a;">{{ .title }}</span>
+        <span style="font-size:0.72em; color:#9a8f80; text-transform:uppercase; letter-spacing:0.05em;">{{ .group }}</span>
+      </div>
+      {{ with .sub }}<div style="color:#7a7a7a; font-size:0.88em; margin-top:3px;">{{ . }}</div>{{ end }}
+      {{ with .blockers }}
+      <div style="margin-top:8px; font-size:0.85em; color:{{ $m.fg }};">
+        <strong style="font-size:0.9em; letter-spacing:0.04em;">WAITING ON:</strong>
+        {{ range . }}<span style="display:inline-block; margin:2px 4px 2px 0; padding:1px 8px; border-radius:999px; background:{{ $m.bg }}; border:1px solid {{ $m.bd }};">{{ . }}</span>{{ end }}
+      </div>
+      {{ end }}
+    </a>
+    {{ end }}
+  </section>
+  {{ end }}
+{{ end }}
+
+<div style="margin-top:36px; padding:14px 16px; background:#f6f4f0; border-radius:8px; font-size:0.88em; color:#5f5b53; line-height:1.6;">
+  <strong>How stages work.</strong> Set <code>stage:</code> in a page's front matter &mdash;
+  <code>drafting</code>, <code>review</code>, <code>ready</code>, or <code>live</code>.
+  Anything without a <code>stage</code> counts as <code>live</code>, so existing content is unaffected.
+  List what a item is waiting on with <code>stage_blockers:</code>.
+  A whole field guide can be staged from one line in its <code>_index.md</code> using <code>cascade</code>.
+  Only <code>live</code> items appear on the public site.
+</div>
+
+</div>
+{{ end }}

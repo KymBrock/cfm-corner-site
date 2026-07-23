@@ -1,7 +1,7 @@
 ---
 title: "Timeline & the Rise of Empire"
 description: "From the merchant city of Ashur to the first world empire and its overnight collapse — the long arc of Assyrian power, and the kings who march, named and dated, through the Books of Kings."
-draft: false
+draft: true
 ---
 
 {{< rawhtml >}}
