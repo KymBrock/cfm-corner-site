@@ -16,6 +16,17 @@ Staging uses **two independent controls**. Understanding the split is the whole 
 > page — the URL still works and still lands in `sitemap.xml`. Anything not yet public
 > must stay `draft: true`, whatever its stage.
 
+### The guard (so you can't forget)
+
+Because the rule above is easy to forget, `scripts/check-staging.sh` enforces it: **any page
+with a non-`live` stage that lacks `draft: true` fails the check.** It runs in the GitHub Pages
+deploy workflow *before* the Hugo build, so a forgotten `draft:` **fails CI instead of
+publishing an unfinished lesson.** Run it yourself any time:
+
+```sh
+sh scripts/check-staging.sh
+```
+
 ## The four stages
 
 ```yaml

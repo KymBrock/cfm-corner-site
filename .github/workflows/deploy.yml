@@ -28,6 +28,8 @@ jobs:
           # docs/working-remotely.md.
           hugo-version: '0.156.0'
           extended: true
+      - name: Staging guard (block non-live pages missing draft:true)
+        run: sh scripts/check-staging.sh
       - name: Build
         run: hugo --minify --baseURL "https://www.cfmcorner.com/"
       - name: Build search index
