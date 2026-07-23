@@ -103,6 +103,38 @@ in-repo spots (`deploy.yml`, `cf-pages-build.sh`) plus the Cloudflare dashboard 
 
 ---
 
+## Troubleshooting Cloudflare builds
+
+Standing this up hit three separate bugs, each hidden behind the previous one. If a
+Cloudflare build fails, **read the build log first** (Deployments → the row → Details) —
+the log names the failing phase, and every one of these was diagnosed from a single log
+line after a lot of wasted guessing.
+
+**1. `fatal: No url found for submodule path '.claude/worktrees/...' in .gitmodules`**
+Fails at *clone repo*. Claude Code worktree directories got committed as gitlinks
+(submodule refs) with no `.gitmodules`. Fixed, and `.claude/worktrees/` +
+`.session-checkpoints/` are now gitignored. If it recurs:
+```sh
+git ls-files -s | awk '$1=="160000" {print $4}' | while read -r p; do git rm --cached "$p"; done
+```
+Note this broke **any** `git clone --recurse-submodules` of the repo, not just Cloudflare.
+GitHub Actions never noticed because it does not fetch submodules by default.
+
+**2. `Error: Pages only supports files up to 25 MiB in size`**
+Fails at *asset validation*, after Hugo and Pagefind succeed. `static/data/scripture-verses.json`
+is ~92 MB. `scripts/cf-pages-build.sh` runs `scripts/filter-scripture-preview.py`, which keeps
+only the verses the built site references (92 MB → ~2.3 MB) so scripture popups still work.
+GitHub Pages has no such limit, so production is unaffected.
+
+**3. `Could not download .../download/vValue/hugo_extended_Value_...`**
+Fails at *Installing hugo*, before the build command runs at all. The `HUGO_VERSION`
+dashboard variable contained `Value: 0.156.0` instead of `0.156.0`. **Set it per
+environment** — Production and Preview are separate, and a wrong Preview value only ever
+breaks previews. It must be the bare version string, nothing else.
+
+Because failures cascade like this, a fix can look like it "didn't work" when it actually
+uncovered the next problem. Compare the *failing phase* between runs, not just red vs green.
+
 ## One caveat about a public repo
 
 Because `cfm-corner-site` is **public**, unpublished drafts (the Babylon guide, Week 31, etc.)
