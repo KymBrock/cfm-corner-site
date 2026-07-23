@@ -1,7 +1,7 @@
 ---
 title: "Religion: Zoroastrianism"
 description: "Ahura Mazda, Zarathustra, and the fire altars of Persia — and a careful, honest look at the debated question of whether Persian religion shaped Judaism during and after the exile."
-draft: true
+draft: false
 ---
 
 {{< rawhtml >}}

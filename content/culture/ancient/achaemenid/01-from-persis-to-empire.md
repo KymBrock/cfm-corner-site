@@ -1,7 +1,7 @@
 ---
 title: "From Persis to Empire"
 description: "Who the Persians were, how a minor highland people under Cyrus the Great swallowed Babylon in a generation, and why Isaiah named their king a century before he was born."
-draft: true
+draft: false
 ---
 
 {{< rawhtml >}}
@@ -42,7 +42,7 @@ draft: true
 
 <h3>The Rise of Cyrus (559&ndash;530 BC)</h3>
 
-<p>Cyrus II became king of Persis around 559 BC, still a vassal of the Median king Astyages &mdash; who, by later Greek tradition, was his own grandfather. Around 550 BC Cyrus rebelled, and in a stroke that stunned the age, the Median army defected to him mid-battle; he took Ecbatana and the Median empire with it, uniting Medes and Persians under one crown. He was only beginning.</p>
+<p>Cyrus II became king of Persis around 559 BC, still a vassal of the Median king Astyages &mdash; who, by later Greek tradition, was his own grandfather. Around 553 BC Cyrus rebelled, and in a stroke that stunned the age, the Median army defected to him mid-battle; by 550 BC he had taken Ecbatana and the Median empire with it, uniting Medes and Persians under one crown. He was only beginning.</p>
 
 <p>Over the next decade Cyrus conquered in every direction:</p>
 

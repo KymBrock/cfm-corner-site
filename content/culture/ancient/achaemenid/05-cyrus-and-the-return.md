@@ -1,7 +1,7 @@
 ---
 title: "Cyrus & the Return"
 description: "The Cyrus Cylinder beside Ezra 1 and Isaiah 45 — a Persian king's own account of releasing captive peoples, and the decree that sent Judah home to rebuild the temple."
-draft: true
+draft: false
 ---
 
 {{< rawhtml >}}

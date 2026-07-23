@@ -1,7 +1,7 @@
 ---
 title: "Writing & Records"
 description: "Old Persian cuneiform, the trilingual Behistun cliff that cracked the code of an ancient world, the Persepolis tablets, and the Aramaic that carried the empire — and the books of Ezra."
-draft: true
+draft: false
 ---
 
 {{< rawhtml >}}
@@ -91,7 +91,7 @@ draft: true
 <p><strong>Online Resources:</strong></p>
 <ul style="margin: 12px 0 0 0; padding-left: 24px;">
 <li><a href="https://www.worldhistory.org/Behistun_Inscription/" target="_blank"><strong>WHE</strong> &mdash; Behistun Inscription</a> (CC BY-NC-SA 4.0)</li>
-<li><a href="https://www.livius.org/sources/content/behistun-inscription/" target="_blank"><strong>Livius.org</strong> &mdash; Behistun (full translation)</a></li>
+<li><a href="https://www.livius.org/articles/place/behistun/" target="_blank"><strong>Livius.org</strong> &mdash; Behistun Inscription</a></li>
 <li><a href="https://isac.uchicago.edu/research/projects/persepolis-fortification-archive" target="_blank"><strong>ISAC</strong> &mdash; the Persepolis Fortification Archive Project</a></li>
 </ul>
 

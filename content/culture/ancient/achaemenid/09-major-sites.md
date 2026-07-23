@@ -1,7 +1,7 @@
 ---
 title: "Major Sites"
 description: "Pasargadae and the tomb of Cyrus, the ceremonial splendor of Persepolis, Susa the winter capital of Esther and Nehemiah, Ecbatana where Cyrus's decree was filed, and the Behistun cliff."
-draft: true
+draft: false
 ---
 
 {{< rawhtml >}}
@@ -128,7 +128,7 @@ draft: true
 <ul style="margin: 12px 0 0 0; padding-left: 24px;">
 <li><a href="https://whc.unesco.org/en/list/1106/" target="_blank"><strong>UNESCO</strong> &mdash; Pasargadae</a> and <a href="https://whc.unesco.org/en/list/114/" target="_blank">Persepolis</a> (World Heritage listings)</li>
 <li><a href="https://www.worldhistory.org/persepolis/" target="_blank"><strong>WHE</strong> &mdash; Persepolis</a> (CC BY-NC-SA 4.0)</li>
-<li><a href="https://www.livius.org/category/achaemenid-royal-inscriptions/" target="_blank"><strong>Livius.org</strong> &mdash; Achaemenid sites and inscriptions</a></li>
+<li><a href="https://www.livius.org/category/persia/" target="_blank"><strong>Livius.org</strong> &mdash; Achaemenid sites and inscriptions</a></li>
 </ul>
 
 </div>

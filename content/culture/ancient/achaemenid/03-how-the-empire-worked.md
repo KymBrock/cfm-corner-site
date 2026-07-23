@@ -1,7 +1,7 @@
 ---
 title: "How the Empire Worked"
 description: "Satrapies, the Royal Road, imperial Aramaic, and the unheard-of tolerance policy — the machinery that let one king govern 127 provinces and send Judah home to rebuild."
-draft: true
+draft: false
 ---
 
 {{< rawhtml >}}
@@ -36,12 +36,12 @@ draft: true
 
 <h3>The Royal Road and the King&rsquo;s Post</h3>
 
-<p>An empire that large lived or died by <strong>communication</strong>. Persia built and maintained the <strong>Royal Road</strong>, a highway running some 2,700 kilometers from Susa in the heartland to Sardis near the Aegean coast, with about 111 posting-stations a day&rsquo;s ride apart, each stocked with fresh horses and riders. A royal courier could carry a message the length of that road in about a week &mdash; a journey that took an ordinary traveler three months. Herodotus&rsquo;s famous description of the couriers &mdash; that neither snow, nor rain, nor heat, nor darkness stayed them from their rounds &mdash; is describing this Persian postal relay (the line later became the unofficial motto of the U.S. Postal Service).</p>
+<p>An empire that large lived or died by <strong>communication</strong>. Persia built and maintained the <strong>Royal Road</strong>, a highway running some 2,700 kilometers from Susa in the heartland to Sardis near the Aegean coast, with about 111 posting-stations a day&rsquo;s ride apart, each stocked with fresh horses and riders. A royal courier, riding the relay, could carry a message the length of that road in about nine days &mdash; a journey that took an ordinary traveler three months. Herodotus&rsquo;s famous description of the couriers &mdash; that neither snow, nor rain, nor heat, nor darkness stayed them from their rounds &mdash; is describing this Persian postal relay (the line later became the unofficial motto of the U.S. Postal Service).</p>
 
 <p>The book of Esther shows the system in motion, twice. When Haman&rsquo;s decree of destruction goes out, &ldquo;letters were sent by posts into all the king&rsquo;s provinces&rdquo; (<a href="https://www.blueletterbible.org/kjv/est/3/13/" target="_blank" data-ref="Esther 3:13">Esther 3:13</a>); when the counter-decree of deliverance follows, it is rushed out by couriers &ldquo;on horseback, and riders on mules, camels, and young dromedaries&rdquo; (<a href="https://www.blueletterbible.org/kjv/est/8/10/" target="_blank" data-ref="Esther 8:10">Esther 8:10</a>) &mdash; the fast royal post, hastened because lives hung on the speed. The whole plot of Esther turns on the reach and the irrevocability of Persian written orders.</p>
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
-<p style="margin: 0;"><strong>The law that cannot be repealed:</strong> a peculiar feature of Persian government echoes through both Esther and Daniel: a royal decree, once sealed, &ldquo;may not be altered&rdquo; and &ldquo;altereth not&rdquo; (<a href="https://www.blueletterbible.org/kjv/est/1/19/" target="_blank" data-ref="Esther 1:19">Esther 1:19</a>; <a href="https://www.blueletterbible.org/kjv/dan/6/8/" target="_blank" data-ref="Daniel 6:8">Daniel 6:8</a>, &ldquo;the law of the Medes and Persians, which altereth not&rdquo;). This is why Ahasuerus cannot simply cancel Haman&rsquo;s genocide &mdash; he can only issue a <em>second</em> decree allowing the Jews to defend themselves (<a href="https://www.blueletterbible.org/kjv/est/8/8/" target="_blank" data-ref="Esther 8:8">Esther 8:8</a>) &mdash; and why Darius, who loves Daniel, still cannot save him from the lions&rsquo; den once he has signed the order (<a href="https://www.blueletterbible.org/kjv/dan/6/14/" target="_blank" data-ref="Daniel 6:14-16">Daniel 6:14&ndash;16</a>). Both books turn on this genuinely Persian legal principle &mdash; a small, precise cultural detail their authors clearly knew from the inside.</p>
+<p style="margin: 0;"><strong>The law that cannot be repealed:</strong> a peculiar feature of Persian government echoes through both Esther and Daniel: a royal decree, once sealed, is written &ldquo;that it be not altered&rdquo; and &ldquo;altereth not&rdquo; (<a href="https://www.blueletterbible.org/kjv/est/1/19/" target="_blank" data-ref="Esther 1:19">Esther 1:19</a>; <a href="https://www.blueletterbible.org/kjv/dan/6/8/" target="_blank" data-ref="Daniel 6:8">Daniel 6:8</a>, &ldquo;the law of the Medes and Persians, which altereth not&rdquo;). This is why Ahasuerus cannot simply cancel Haman&rsquo;s genocide &mdash; he can only issue a <em>second</em> decree allowing the Jews to defend themselves (<a href="https://www.blueletterbible.org/kjv/est/8/8/" target="_blank" data-ref="Esther 8:8">Esther 8:8</a>) &mdash; and why Darius, who loves Daniel, still cannot save him from the lions&rsquo; den once he has signed the order (<a href="https://www.blueletterbible.org/kjv/dan/6/14/" target="_blank" data-ref="Daniel 6:14-16">Daniel 6:14&ndash;16</a>). Both books turn on this genuinely Persian legal principle &mdash; a small, precise cultural detail their authors clearly knew from the inside.</p>
 </div>
 
 <br>
@@ -103,8 +103,7 @@ draft: true
 <p><strong>Online Resources:</strong></p>
 <ul style="margin: 12px 0 0 0; padding-left: 24px;">
 <li><a href="https://www.worldhistory.org/Satrap/" target="_blank"><strong>WHE</strong> &mdash; Satrap / Satrapy</a> (CC BY-NC-SA 4.0)</li>
-<li><a href="https://www.worldhistory.org/article/1189/the-persian-royal-road/" target="_blank"><strong>WHE</strong> &mdash; The Persian Royal Road</a></li>
-<li><a href="https://www.livius.org/articles/concept/satrap/" target="_blank"><strong>Livius.org</strong> &mdash; Satrap</a></li>
+<li><a href="https://www.livius.org/articles/concept/royal-road/" target="_blank"><strong>Livius.org</strong> &mdash; The Persian Royal Road</a></li>
 </ul>
 
 </div>

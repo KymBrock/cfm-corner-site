@@ -1,7 +1,7 @@
 ---
 title: "Timeline & Kings"
 description: "Two centuries of Persian kings — Cyrus, Cambyses, Darius, Xerxes, Artaxerxes — laid beside the biblical books of Ezra, Haggai, Zechariah, Esther, Nehemiah, and Daniel."
-draft: true
+draft: false
 ---
 
 {{< rawhtml >}}
@@ -17,6 +17,11 @@ draft: true
 <p>The Achaemenid Empire lasted about 220 years (559&ndash;330 BC) and was ruled by about a dozen kings, but the Bible cares about five of them &mdash; the ones whose reigns frame the entire post-exilic story. The great difficulty for readers of Ezra&ndash;Nehemiah is that these books are <em>not</em> arranged in tidy chronological order, and several kings share throne-names. This timeline sorts it out, king by king, so the biblical books fall into place.</p>
 
 <p>Persian chronology is unusually firm: Babylonian astronomical records, dated business tablets, and the kings&rsquo; own inscriptions let historians date most events to the year, and some to the day.</p>
+
+<p style="text-align: center; color: #666; font-style: italic; margin: 1.5rem 0 0.5rem 0;">Drag the slider to watch the Near East change &mdash; set to 500 BC, the Persian Empire at its height, when the Jews returned and the Second Temple was built.</p>
+<link rel="stylesheet" href="/css/era-map-widget.css">
+<div class="era-map-widget" data-start-era="500"></div>
+<script src="/js/era-map-widget.js"></script>
 
 <br>
 
@@ -43,7 +48,7 @@ draft: true
 <tr style="background: white;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Cambyses II</strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">530&ndash;522</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Unnamed; conquers Egypt (523); the &ldquo;Ahasuerus&rdquo;/&ldquo;Artaxerxes&rdquo; of Ezra 4:6&ndash;7 are debated</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Unnamed; conquers Egypt (525); the &ldquo;Ahasuerus&rdquo;/&ldquo;Artaxerxes&rdquo; of Ezra 4:6&ndash;7 are debated</td>
 </tr>
 <tr style="background: #f0ebe5;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Darius I the Great</strong></td>
@@ -221,7 +226,7 @@ draft: true
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #2c3e50; font-size: 0.9em;">331&ndash;330 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Alexander the Great</strong> destroys the empire &mdash; Darius III defeated at Gaugamela, Persepolis burned; the age Daniel foresaw as the &ldquo;he goat&rdquo; from the west (<a href="https://www.blueletterbible.org/kjv/dan/8/21/" target="_blank" data-ref="Daniel 8:21">Daniel 8:21</a>)</span>
+<span style="flex: 1; font-size: 0.95em;"><strong>Alexander the Great</strong> destroys the empire &mdash; Darius III defeated at Gaugamela, Persepolis burned; the age Daniel foresaw as the &ldquo;he goat&hellip; from the west&rdquo; (<a href="https://www.blueletterbible.org/kjv/dan/8/5/" target="_blank" data-ref="Daniel 8:5">Daniel 8:5</a>), interpreted as &ldquo;the king of Grecia&rdquo; (<a href="https://www.blueletterbible.org/kjv/dan/8/21/" target="_blank" data-ref="Daniel 8:21">Daniel 8:21</a>)</span>
 </div>
 
 </div>
@@ -270,7 +275,7 @@ draft: true
 <ul style="margin: 12px 0 0 0; padding-left: 24px;">
 <li><a href="https://www.worldhistory.org/Achaemenid_Empire/" target="_blank"><strong>WHE</strong> &mdash; Achaemenid Empire</a> (CC BY-NC-SA 4.0)</li>
 <li><a href="https://www.livius.org/articles/person/darius-the-great/" target="_blank"><strong>Livius.org</strong> &mdash; Darius the Great</a></li>
-<li><a href="https://www.livius.org/articles/person/xerxes/" target="_blank"><strong>Livius.org</strong> &mdash; Xerxes</a></li>
+<li><a href="https://www.livius.org/articles/person/xerxes-i/" target="_blank"><strong>Livius.org</strong> &mdash; Xerxes</a></li>
 </ul>
 
 </div>
