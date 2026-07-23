@@ -93,6 +93,40 @@ Era values: `500` = Persia, `600` = Babylon, `700` = Assyria.
 
 ---
 
+## LOCAL-ONLY — exists only on this Mac, unreachable remotely
+
+Nothing below is in git or on GitHub. Do not assume it is available from another machine.
+
+| Thing | Location / port | Notes |
+|---|---|---|
+| Obsidian **K Master Vault** | `~/Obsidian/K Master Vault/` | All lesson source markdown, weekly research, planning maps |
+| Obsidian **Sacred Texts** vault | `~/Obsidian/Sacred Texts/` | LDS canon, Talmud, Midrash, Targumim, conference talks |
+| Scripture verification DB | `~/Developer/POM-Beta-Reader-main/data/scriptures_complete.json` | Used by `scripts/verification/verse.py` for verbatim checks |
+| **Narration Studio** | `localhost:8770` (Python) | Kym's local voice-clone app. Running as of this note |
+| **Ollama** | `localhost:11434` | Local model host, used for video distillation |
+| Hugo drafts preview | `localhost:1315` (`hugo server -D`) | Only server that renders `draft: true` pages |
+| Hugo normal preview | `localhost:1314` | Not running as of this note |
+| `cfm-corner-tools` repo | `~/Developer/cfm-corner-tools` | **Separate repo**, own GitHub remote |
+| `static/abtest/` | in this repo, untracked | 37 narration A/B-test MP3s. Binaries — keep out of git |
+| A post-commit hook | writes to `~/Obsidian/K Master Vault/Tools/Developer/CODE_INDEX_AUTO.md` | Fires on every commit in these repos |
+
+### `cfm-corner-tools` state
+On `main`, synced with its remote. The H6965 lexicon fix **is committed and pushed** there.
+**45 other entries remain uncommitted** in that repo — in-progress work from other sessions
+(converters, ingesters, generators) plus generated artifacts (`public/`, `.hugo_build.lock`,
+`*.bak-*`, `.session-checkpoints/`). They were deliberately left alone: they were not authored
+or reviewed by this session, and Kym's standing preference for that repo is to commit only
+her data files. They are safe on disk but are **not backed up to GitHub.**
+
+---
+
+## Published artifacts
+
+This session published **no** artifacts. (Artifacts from other sessions exist on
+claude.ai; to update any artifact later you must pass its URL, or a new one is minted.)
+
+---
+
 ## Known constraints carried into this session
 
 - **Never batch-regenerate week HTML** (see `CLAUDE.md`). Pre-commit hook blocks any commit touching >5 `content/week` files.
