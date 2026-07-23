@@ -41,20 +41,24 @@ echo "=== building search index (pagefind) ==="
 npx --yes pagefind@latest --site public || echo "WARNING: pagefind failed; continuing without a search index"
 
 # Cloudflare Pages rejects ANY single file over 25 MiB and fails the whole
-# deploy at the asset-validation step. GitHub Pages (the real production
-# host) has no such limit, so this only ever affects Cloudflare builds.
+# deploy at asset validation. GitHub Pages (the real production host) has no
+# such limit, so this only ever affects Cloudflare builds.
 #
-# Today this is static/data/scripture-verses.json (~92 MB) — the verse text
-# behind the scripture popups. Dropping it degrades gracefully: baseof.html
-# fetches it lazily and already falls back to {} when the fetch fails, so
-# popups still render, just without verse text. Everything else is intact.
-#
-# Anything dropped is named explicitly below — a preview that silently
-# omitted files would be worse than one that says what it is missing.
-echo "=== checking for files over Cloudflare's 25 MiB per-file limit ==="
+# The offender is static/data/scripture-verses.json (~92 MB), the verse text
+# behind the scripture popups. Rather than drop it — which would leave the
+# popups blank — reuse the same trimmer scripts/deploy-preview.sh already
+# uses: it scans the BUILT site and keeps only the verses actually referenced,
+# so popups keep working. It rewrites the public/ copy only; static/ and
+# production are untouched.
+echo "=== trimming the verse database for the 25 MiB limit ==="
+python3 scripts/filter-scripture-preview.py || echo "WARNING: verse trim failed; oversized files will be dropped below"
+
+# Backstop: if anything still exceeds the limit, drop it rather than fail the
+# whole deploy — and name it, because a preview that silently omitted files
+# would be worse than one that says what it is missing.
 find public -type f -size +25M | while read -r f; do
-  echo "  DROPPED: $f ($(du -h "$f" | cut -f1)) — exceeds Cloudflare's 25 MiB limit."
-  echo "           This preview will render without it. Production is unaffected."
+  echo "  DROPPED: $f ($(du -h "$f" | cut -f1)) — still over Cloudflare's 25 MiB limit."
+  echo "           This preview renders without it. Production is unaffected."
   rm -f "$f"
 done
 
