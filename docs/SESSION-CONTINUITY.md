@@ -2,7 +2,7 @@
 
 *Written 2026-07-23. Assume the next session knows nothing about the conversation that produced this.*
 
-Branch: **`claude/eager-jang-5baf4c`** (pushed to `origin`). This branch is **13 commits behind `origin/main`** and 1 ahead — that is expected, see "Branch state" below.
+Branch: **`claude/eager-jang-5baf4c`** (pushed to `origin`, fully synced). This branch is **1 commit behind and 17 ahead of `origin/main`** — that is expected, see "Branch state" below.
 
 ---
 
@@ -78,8 +78,8 @@ Era values: `500` = Persia, `600` = Babylon, `700` = Assyria.
 
 ## Branch state — read before merging
 
-- `claude/eager-jang-5baf4c` is **13 behind / 1 ahead** of `origin/main`.
-- Week 30 was deployed to `main` from a *different* clean worktree, which is why this branch lacks those commits. The local `content/weeks/30.md`, `content/weeks/29.md`, and `static/content/week30/` files are **byte-identical to `origin/main`** — they are safe and were intentionally left uncommitted here.
+- `claude/eager-jang-5baf4c` is **1 behind / 17 ahead** of `origin/main`.
+- The one commit `main` has that this branch lacks is the **Week 30 deploy**, which was pushed to `main` from a *different* clean worktree. The local `content/weeks/30.md`, `content/weeks/29.md`, and `static/content/week30/` files are **byte-identical to `origin/main`** — they are safe there, and were intentionally left uncommitted on this branch. Expect them to keep showing as untracked/modified in `git status`; that is not lost work.
 - **Deploy trigger:** `.github/workflows/deploy.yml` fires only on push to `main`. Pushing this branch publishes nothing.
 - Merging this branch to `main` **would publish the Achaemenid guide** (all `draft: false`) while Babylon is still draft → broken cross-links. Do not merge until Babylon is ready.
 
