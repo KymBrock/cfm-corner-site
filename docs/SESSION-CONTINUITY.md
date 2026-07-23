@@ -33,7 +33,12 @@ Content-verification pass done (5 parallel agents). All findings applied:
 - **1 overclaim removed** — Livius/Samaria link on page 07 claimed "translated excerpts of Sargon II's annals"; the linked page has none.
 - **era-map added** to `02-timeline-and-empire.md` (`data-start-era="700"`), verified rendering.
 - Agents confirmed clean: ~30 verbatim scripture quotes, all major historical claims, and the Genesis/Gilgamesh section (does not overclaim dependence either direction).
-- **Still all `draft: true`** — deliberately NOT publish-prepped. Kym asked only to "get started on" Assyria.
+- **All 12 pages flipped to `draft: false`** — publish-ready.
+- ⚠️ Assyria carries the **same Babylon dependency as Achaemenid**. It cross-links 3 still-draft Babylon pages:
+  - `01-the-assyrian-heartland.md` → `babylon/01-the-land-between-the-rivers/`
+  - `04-religion-and-the-god-ashur.md` → `babylon/04-religion-and-mythology/`
+  - `09-assyria-and-the-bible.md` → `babylon/08-babylon-and-the-bible/`
+  Publishing Assyria before Babylon produces 3 dead links.
 
 ### Other finished work
 - **H6965 lexicon bug fixed** — `static/data/lexicon-popups.json`: the `original` field for H6965 was קוֹלָיָה (Kolaiah, which is H6964); corrected to קוּם (qum). The same fix was applied in the `cfm-corner-tools` repo (separate repo, see "Local-only" below).
@@ -81,7 +86,7 @@ Era values: `500` = Persia, `600` = Babylon, `700` = Assyria.
 - `claude/eager-jang-5baf4c` is **1 behind / 17 ahead** of `origin/main`.
 - The one commit `main` has that this branch lacks is the **Week 30 deploy**, which was pushed to `main` from a *different* clean worktree. The local `content/weeks/30.md`, `content/weeks/29.md`, and `static/content/week30/` files are **byte-identical to `origin/main`** — they are safe there, and were intentionally left uncommitted on this branch. Expect them to keep showing as untracked/modified in `git status`; that is not lost work.
 - **Deploy trigger:** `.github/workflows/deploy.yml` fires only on push to `main`. Pushing this branch publishes nothing.
-- Merging this branch to `main` **would publish the Achaemenid guide** (all `draft: false`) while Babylon is still draft → broken cross-links. Do not merge until Babylon is ready.
+- Merging this branch to `main` **would publish BOTH the Achaemenid and Assyria guides** (all `draft: false`) while Babylon is still `draft: true`. Both guides cross-link Babylon pages, so merging early produces **9 dead links** (6 from Achaemenid, 3 from Assyria). **Babylon is the gate: nothing merges to `main` until Babylon is finished and un-drafted.**
 
 ---
 

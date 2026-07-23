@@ -1,7 +1,7 @@
 ---
 title: "The War Machine"
 description: "How Assyria became the ancient world's first military superpower — its siege engineering, its calculated use of terror as state policy, its invention of mass deportation, and how scripture names it 'the rod of mine anger.'"
-draft: true
+draft: false
 ---
 
 {{< rawhtml >}}

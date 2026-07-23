@@ -1,7 +1,7 @@
 ---
 title: "The Fall of the North & the Lost Tribes"
 description: "How the ten tribes of Israel vanished into the Assyrian empire — the piecemeal deportations, the three-year siege of Samaria, the chronicler's hard verdict on why, and the tangled question of the Samaritans and the tribes the world calls lost."
-draft: true
+draft: false
 ---
 
 {{< rawhtml >}}
