@@ -42,6 +42,11 @@ staged from one line in its `_index.md` (`cascade: { stage: ready }`).
 
 ---
 
+> **Status (2026-07-23): the Cloudflare Pages project is connected.** `cfm-corner-previews`
+> is wired to `KymBrock/cfm-corner-site` with build command `sh scripts/cf-pages-build.sh`,
+> output `public`, and `HUGO_VERSION = 0.156.0` set for both Production and Preview. Every
+> branch push now auto-builds a preview. The setup steps below are kept for reference.
+
 ## 2. Previewing — one-time Cloudflare setup (do it from the browser)
 
 You already have the build scripts (`scripts/cf-pages-build.sh`, `scripts/deploy-preview.sh`).
