@@ -6,7 +6,11 @@
 # Dashboard settings (Workers & Pages -> project -> Settings -> Builds):
 #   Build command:          sh scripts/cf-pages-build.sh
 #   Build output directory: public
-#   Env var (all envs):     HUGO_VERSION = 0.164.0
+#   Env var (all envs):     HUGO_VERSION = 0.156.0
+#
+# Keep HUGO_VERSION in sync with the local dev machine and the GitHub Pages
+# deploy (hugo-version in .github/workflows/deploy.yml). Bump all three
+# together so previews match production. See docs/working-remotely.md.
 set -e
 
 if [ "$CF_PAGES_BRANCH" = "main" ]; then
