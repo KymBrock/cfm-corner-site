@@ -98,6 +98,36 @@ Era values: `500` = Persia, `600` = Babylon, `700` = Assyria.
 
 ---
 
+## Staging pipeline (branch `claude/staging-pipeline`)
+
+A 4-stage production pipeline was added so weeks and guides can be built weeks ahead.
+Full write-up: **`docs/staging-pipeline.md`**. Short version:
+
+- `draft:` is the hard public gate; `stage:` is the pipeline position
+  (`drafting` → `review` → `ready` → `live`). No `stage` = `live`, so existing content is unaffected.
+- `/pipeline/` is a staging-only dashboard listing everything in flight with its blockers.
+- Verified: a production build emits **0 pages and 0 sitemap entries** for all three staged
+  guides and no `/pipeline/`; the staging build shows everything.
+
+**This also fixed a real leak.** Achaemenid and Assyria had been set `draft: false`, which
+rendered **22 pages at public URLs and added them to `sitemap.xml`** even though their listing
+cards were hidden. *Hiding a card does not hide a page.* Both are now `draft: true` at
+`stage: ready`. They go `draft: false` only when all three guides ship together.
+
+### ⚠️ Cloudflare previews are NOT actually set up
+`scripts/deploy-preview.sh` and `scripts/cf-pages-build.sh` exist and are correct, but the
+Cloudflare side was never stood up: `wrangler` is not installed, there is no auth state, and
+both `cfm-corner-previews.pages.dev` and the branch alias return **404**. Until someone runs
+the one-time interactive `npx wrangler login` and creates the Pages project, the only staging
+surface is **local** (`hugo server -D`). Everything in the pipeline still works locally.
+
+### Two active branches
+- `claude/eager-jang-5baf4c` — field-guide verification work (Achaemenid, Assyria, Week 31)
+- `claude/staging-pipeline` — branched from the above; adds the staging system **and** the
+  draft-leak fix. This is the newer branch and contains everything.
+
+---
+
 ## LOCAL-ONLY — exists only on this Mac, unreachable remotely
 
 Nothing below is in git or on GitHub. Do not assume it is available from another machine.
