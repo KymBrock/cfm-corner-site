@@ -1,0 +1,41 @@
+{{/*
+  Project override of themes/cfm/layouts/weeks/list.html.
+
+  Adds production-stage awareness:
+    - On the PUBLIC build, weeks whose `stage` is set and is not "live"
+      are omitted from this listing.
+    - On staging surfaces (local `hugo server`, Cloudflare previews) every
+      week is listed, each carrying a stage badge and its blockers.
+
+  Pages with no `stage` default to "live", so existing weeks are unaffected.
+*/}}
+{{ define "main" }}
+{{ $staging := or site.Params.isPreview hugo.IsServer }}
+<h1 style="font-family: Georgia, serif; color: var(--sage-dark); margin-bottom: 25px; font-weight: normal;">Weekly Lessons — Old Testament 2026</h1>
+
+{{ if $staging }}
+{{ partial "staging-notice.html" . }}
+{{ end }}
+
+<div class="week-list">
+    {{ range .Pages.ByWeight.Reverse }}
+    {{ $stage := .Params.stage | default "live" }}
+    {{ if or $staging (eq $stage "live") }}
+    <a href="{{ .RelPermalink }}" class="week-list-card{{ if .Params.current }} current{{ end }}{{ if .Params.upcoming }} upcoming{{ end }}">
+        {{ with .Params.image }}<img src="{{ . | relURL }}" alt="" class="week-list-img">{{ end }}
+        <div class="week-list-body">
+            <div class="week-list-meta">
+                <span class="week-num">Week {{ .Params.week_num }}</span>
+                <span class="week-list-dates">{{ .Params.dates }}</span>
+                {{ partial "stage-badge.html" . }}
+            </div>
+            <div class="week-list-title">{{ .Title }}</div>
+            <div class="week-list-scripture">{{ .Params.scripture }}</div>
+            {{ with .Params.quick_summary }}<p class="week-list-summary">{{ . | truncate 200 }}</p>{{ end }}
+            <span class="week-list-cta">View Study Guide &rarr;</span>
+        </div>
+    </a>
+    {{ end }}
+    {{ end }}
+</div>
+{{ end }}

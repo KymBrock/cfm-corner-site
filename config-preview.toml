@@ -5,3 +5,8 @@
 [params]
   # No analytics on draft previews
   googleAnalytics = ''
+
+  # Marks this as a staging surface. Turns on stage badges, the staging
+  # banner, and the /pipeline/ dashboard. Production never sets this, so
+  # unpublished work can never leak into the public build.
+  isPreview = true

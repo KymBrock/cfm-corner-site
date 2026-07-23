@@ -1,0 +1,32 @@
+{{/*
+  stage-badge.html — renders a production-stage badge for a page.
+
+  Usage:  {{ partial "stage-badge.html" . }}   (context = the page)
+
+  Stages (front matter `stage:`):
+    drafting  being written
+    review    reads end-to-end, needs Kym's pass
+    ready     verified; waiting only on last-minute items
+    live      shipped  (DEFAULT when `stage` is absent)
+
+  A page with no `stage` is treated as `live`, so all existing content
+  keeps behaving exactly as before. The badge renders ONLY on staging
+  surfaces (local `hugo server` and Cloudflare previews), never on the
+  public production build.
+*/}}
+{{- $stage := .Params.stage | default "live" -}}
+{{- $staging := or site.Params.isPreview hugo.IsServer -}}
+{{- if and $staging (ne $stage "live") -}}
+{{- $meta := dict
+      "drafting" (dict "label" "DRAFTING" "bg" "#f2dede" "fg" "#a5342a" "bd" "#dda9a2")
+      "review"   (dict "label" "NEEDS REVIEW" "bg" "#fbf0d9" "fg" "#8a6116" "bd" "#e6cf9a")
+      "ready"    (dict "label" "READY" "bg" "#dce9f4" "fg" "#1f5c86" "bd" "#a6c8e0")
+-}}
+{{- $m := index $meta $stage -}}
+{{- if $m -}}
+<span class="stage-badge stage-badge--{{ $stage }}" style="display:inline-block; vertical-align:middle; margin-left:8px; padding:2px 9px; border-radius:999px; font-size:0.68em; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; background:{{ $m.bg }}; color:{{ $m.fg }}; border:1px solid {{ $m.bd }}; white-space:nowrap;">{{ $m.label }}</span>
+{{- with .Params.stage_blockers }}
+<span class="stage-blockers" style="display:inline-block; vertical-align:middle; margin-left:6px; font-size:0.72em; color:#7a6a55; font-style:italic;">waiting on: {{ delimit . ", " }}</span>
+{{- end }}
+{{- end -}}
+{{- end -}}

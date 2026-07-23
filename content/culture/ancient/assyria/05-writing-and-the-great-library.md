@@ -1,0 +1,144 @@
+---
+title: "Writing & the Great Library"
+description: "Cuneiform and the two-script chancery, the scribal schools, and the library of Ashurbanipal at Nineveh — where a Victorian engraver read out a Babylonian flood story, recovered the Epic of Gilgamesh, and reopened the oldest conversation about the deluge."
+draft: true
+---
+
+{{< rawhtml >}}
+
+<div style="max-width: 750px; margin: 0 auto;">
+
+<img src="/images/culture/assyria/05-hero.png" alt="Writing & the Great Library" style="width: 100%; height: auto; border-radius: 18px; box-shadow: 0 10px 24px rgba(0,0,0,0.08);">
+
+<h2 style="text-align: center;">Writing &amp; the Great Library</h2>
+
+<p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">How the empire of the winged bull became the keeper of the world&rsquo;s oldest books</p>
+
+<p>Assyria is remembered for its cruelty &mdash; the flayings boasted of in its annals, the reliefs of impaled captives, the deportations that emptied whole nations. And yet the same empire assembled, in a palace at Nineveh, the first systematically collected library in human history, and buried it so well when the city burned that a Victorian engraver could dig its tablets back out and read to a stunned London a flood story older than Genesis. That library is Assyria&rsquo;s strangest legacy: a war machine that happened to become the great archive of the ancient Near East, preserving in fired clay the literature of a civilization that had been writing for two and a half thousand years.</p>
+
+<br>
+
+<hr>
+
+<br>
+
+<h3>Cuneiform and the Two-Script Chancery</h3>
+
+<p>The Assyrians did not invent their writing; they inherited it. <strong><a href="https://www.worldhistory.org/cuneiform/" target="_blank">Cuneiform</a></strong> (&ldquo;wedge-shaped,&rdquo; from the marks a cut reed presses into damp clay) had been developed in the Sumerian south around 3300 BC and adapted over centuries to write <strong>Akkadian</strong>, the Semitic language whose two great dialects &mdash; Babylonian in the south, Assyrian in the north &mdash; ruled Mesopotamian record-keeping for two millennia. Assyrian scribes wrote their royal annals, their letters, and their scholarship in the Assyrian dialect of Akkadian, in a script of several hundred signs, each capable of multiple sound-values and word-meanings. It was a hard art that took years to master, which is exactly why literacy carried such prestige, why scribes formed a guarded professional class, and why the culture had such staying power: the difficulty of the script made the school, and the school carried the tradition.</p>
+
+<p>But by the height of the empire a second script was rising beside it. As Assyria swallowed the Aramaean states of Syria and deported their populations across its provinces, <strong>Aramaic</strong> &mdash; a related Semitic tongue written with a mere twenty-two alphabetic letters, in ink, on parchment and papyrus &mdash; became the practical lingua franca of an empire too large for any single people&rsquo;s language. Palace reliefs show the result directly: pairs of scribes working side by side over the spoils of a captured city, one pressing cuneiform into a clay tablet, the other writing Aramaic with a pen on a scroll. Assyria ran a <em>two-script chancery</em> &mdash; the ancient, prestigious, sacred wedges for the scholarly and royal corpus; the quick alphabet for the everyday business of governing the world. The alphabet would win in the end, and cuneiform would die; but for a few centuries the empire held both, and the men who could read the old signs stood near the top of it.</p>
+
+<br>
+
+<hr>
+
+<br>
+
+<h3>The Library of Ashurbanipal</h3>
+
+<p>The greatest library of the ancient world was assembled by the last great Assyrian king, <strong>Ashurbanipal</strong> (r. 668&ndash;c. 631 BC), in his palaces at Nineveh (see <a href="/culture/ancient/assyria/06-the-great-cities/">Section 06</a>). Palace and temple archives had existed for centuries, but they were working files &mdash; contracts, letters, receipts &mdash; that accumulated where business happened. Ashurbanipal did something new: he set out deliberately to <em>gather</em> a comprehensive collection. He sent agents south into Babylonia with what amount to acquisition orders, demanding tablets by title, requisitioning private scholarly libraries, and setting his own scribes to copy and collate whatever could not be seized. The tablets were catalogued and shelved by genre. It is, so far as we know, the first library in history that was systematically <em>collected</em> rather than merely accumulated &mdash; a conscious attempt to hold the whole of learning in one place.</p>
+
+<p>What made the project stranger still is that the king could read. Assyrian monarchs were normally warriors who left literacy to their scribes, but Ashurbanipal boasts in his own inscriptions of a scribal education &mdash; that he had mastered the difficult art of the tablets, could read the intricate Sumerian and obscure Akkadian, and could even puzzle out inscriptions &ldquo;from before the flood.&rdquo; Whether or not we take every royal boast at face value, the library bears out the interest behind it.</p>
+
+<div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
+<p style="margin: 0;"><strong>What was on the shelves.</strong> The surviving remains &mdash; some <strong>30,000 tablets and fragments</strong> now in the British Museum, the reconstructed relics of perhaps a thousand or more distinct works (all figures are estimates, since a single work spread across many tablets and many tablets survive only in scraps) &mdash; map the whole intellectual world of Mesopotamia. There were the great <strong>omen series</strong> for reading the gods&rsquo; intentions in livers, births, oil, and the night sky (see <a href="/culture/ancient/assyria/04-religion-and-the-god-ashur/">Section 04</a>); <strong>lexical texts</strong> &mdash; the long bilingual sign-lists and dictionaries that were the backbone of scribal training; <strong>medical and magical</strong> handbooks; <strong>ritual and incantation</strong> texts; the <strong>royal correspondence</strong> and scholars&rsquo; reports to the king; and the literary <strong>classics</strong> &mdash; hymns, laments, wisdom debates, and the epics, Gilgamesh chief among them. It is from Ashurbanipal&rsquo;s buried shelves, more than any other single source, that we can read Babylonian and Assyrian literature at all.</p>
+</div>
+
+<br>
+
+<hr>
+
+<br>
+
+<h3>1872: A Flood Story Out of the Ruins</h3>
+
+<p>When Nineveh fell to the Medes and Babylonians in 612 BC, its palaces burned &mdash; and the fire that destroyed the city <em>fired</em> the library, baking its clay tablets into near-permanence and sealing them under the collapsing walls. There they lay until the 1840s and 1850s, when Austen Henry Layard and his assistant Hormuzd Rassam dug into the mounds across the river from Mosul and shipped tens of thousands of tablets, most of them broken, back to the British Museum (see <a href="/culture/ancient/assyria/10-major-sites-and-discoveries/">Section 10</a>). For two decades they sat largely unread, a mountain of fragments waiting for someone patient enough to join the pieces.</p>
+
+<p>That someone was <strong>George Smith</strong> &mdash; a young man of working-class London who had trained as a bank-note engraver, taught himself cuneiform in his lunch hours from museum publications, and was eventually hired to sort and mend the tablets. In 1872, working through a broken tablet from Ashurbanipal&rsquo;s library, Smith realized he was reading an account of a great flood: a man instructed to build a vessel, the loading of living things, a deluge, the ship grounding on a mountain, and birds &mdash; a dove, then others &mdash; sent out to test whether the waters had fallen. It was, unmistakably, a version of the story of Noah, written centuries before the Hebrew text and buried in the rubble of an Assyrian palace. By a widely repeated (and no doubt polished) account, the ordinarily reserved Smith leapt up and rushed about the room in his excitement.</p>
+
+<p>On 3 December 1872 he read a paper on the tablet to the Society of Biblical Archaeology in London, with the Prime Minister, Gladstone, reportedly in the audience. The effect was a sensation. A newspaper, <em>The Daily Telegraph</em>, funded Smith to return to Nineveh to search for the missing lines &mdash; and, against very long odds, he found a fragment that filled part of the gap. The tablet he had read was the eleventh of twelve, and the epic it belonged to was <strong>Gilgamesh</strong>: the story of a king who, grieving his friend&rsquo;s death and terrified of his own, journeys to the ends of the earth to find the one man granted immortal life &mdash; the flood-survivor Utnapishtim &mdash; only to learn that he cannot keep even a plant of youth, and comes home to accept that the wall of his city is the immortality a man actually gets. The <em>Epic of Gilgamesh</em>, the oldest great poem in any human language, was recovered piece by piece from these tablets; the standard version we read today is still being reassembled from Nineveh fragments and their copies.</p>
+
+<br>
+
+<hr>
+
+<br>
+
+<h3>The Flood Before the Flood Story</h3>
+
+<p>Smith&rsquo;s tablet reopened a question that has never quite closed: what is the relationship between Mesopotamia&rsquo;s flood and the flood of Genesis? Assyria&rsquo;s library preserved more than one telling. The oldest full version, the <strong>Atrahasis epic</strong> (Old Babylonian, c. 17th century BC), frames the deluge as the gods&rsquo; solution to human <em>noise</em>: mankind has multiplied and grown loud, the gods cannot sleep, and after lesser plagues fail they resolve on a flood &mdash; but the wise god Ea warns one man, Atrahasis, to build a boat. <strong>Tablet XI of Gilgamesh</strong> retells the same event through the survivor&rsquo;s own mouth: the detailed boat-building, the animals and craftsmen taken aboard, a storm so violent the gods themselves cower and weep, the grounding on Mount Nimush, and the birds &mdash; a dove and a swallow that return, a raven that does not &mdash; sent out to find dry land, before the survivor disembarks and offers sacrifice.</p>
+
+<p>The parallels with <a href="https://www.blueletterbible.org/kjv/gen/6/14/" target="_blank" data-ref="Genesis 6-9">Genesis 6&ndash;9</a> are real and unsurprising: the vessel of refuge, the birds sent to scout the waters, the mountain landfall (Genesis names the &ldquo;mountains of Ararat&rdquo; &mdash; the highland of Urartu on Assyria&rsquo;s own northern frontier, <a href="https://www.blueletterbible.org/kjv/gen/8/4/" target="_blank" data-ref="Genesis 8:4">Genesis 8:4</a>), the raven and the dove (<a href="https://www.blueletterbible.org/kjv/gen/8/7/" target="_blank" data-ref="Genesis 8:7-8">Genesis 8:7&ndash;8</a>), and the sacrifice of the survivor when he steps back onto dry ground (<a href="https://www.blueletterbible.org/kjv/gen/8/20/" target="_blank" data-ref="Genesis 8:20">Genesis 8:20</a>). Two traditions, rooted in the same flood-prone river plain, remember a flood in the same shapes. That much the honest reader should simply grant.</p>
+
+<div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
+<p style="margin: 0;"><strong>The differences are the sermon.</strong> The shared motifs throw the theology into relief. In the Mesopotamian versions the flood is not justice but annoyance &mdash; the gods are simply tired of the noise; they quarrel and deceive one another about the plan; they panic when the waters they loosed rage beyond control; and when the survivor sacrifices, they &ldquo;gathered like flies&rdquo; over the offering because in a week without human worshippers no one had fed them &mdash; they are hungry. Genesis inverts every beat. The flood comes as <em>moral</em> judgment on a world whose thoughts were &ldquo;only evil continually&rdquo; (<a href="https://www.blueletterbible.org/kjv/gen/6/5/" target="_blank" data-ref="Genesis 6:5">Genesis 6:5</a>); one sovereign God both judges and remembers; and when the LORD &ldquo;smelled a sweet savour&rdquo; (<a href="https://www.blueletterbible.org/kjv/gen/8/21/" target="_blank" data-ref="Genesis 8:21">Genesis 8:21</a>) the story turns not to divine appetite but to a promise never to do this again &mdash; a covenant, sealed with a bow set in the cloud (<a href="https://www.blueletterbible.org/kjv/gen/9/11/" target="_blank" data-ref="Genesis 9:11">Genesis 9:11</a>; <a href="https://www.blueletterbible.org/kjv/gen/9/13/" target="_blank" data-ref="Genesis 9:13">Genesis 9:13</a>). This is not the Bible copying Babylon. It is a shared ancient memory told by peoples who understood heaven very differently &mdash; and the retelling is itself the argument.</p>
+</div>
+
+<p>Latter-day Saints, who accept revealed knowledge of these primeval events reaching back through the patriarchs, need not be unsettled that Mesopotamia remembered a flood too. A real event leaves many memories; the surprise would be if the peoples of the flood plain had forgotten. What the comparison actually shows is which tradition kept the meaning &mdash; and it is not incidental that the version buried at Nineveh preserves the raven and the dove and the ark while losing the righteousness of God, and that the version carried by the covenant people kept the righteousness above all.</p>
+
+<br>
+
+<hr>
+
+<br>
+
+<h3>Science Built on the Archive</h3>
+
+<p>The library was not a museum; it was a working reference collection for the scholars who advised the crown, and it made Assyria heir to the whole Mesopotamian science of observation. Because the gods were believed to write their intentions into the world &mdash; and above all into the sky &mdash; the sky was <em>watched</em>, systematically, for centuries, and the records kept (see <a href="/culture/ancient/assyria/04-religion-and-the-god-ashur/">Section 04</a>). The great celestial omen series ran to some seventy tablets; and the scholars&rsquo; letters and reports to Esarhaddon and Ashurbanipal &mdash; hundreds of them recovered from the archive &mdash; let us watch working astronomers warn the king of an approaching eclipse and advise the substitute-king ritual to absorb its evil omen. Out of that long, religiously motivated watch grew the real foundations of astronomy: the mathematics of predicting eclipses and planetary positions that would pass, generations later, into the hands of the Greeks.</p>
+
+<p>The same list-making genius organized <strong>medicine</strong> &mdash; the diagnostic handbooks that catalogued symptoms and prognoses, the twin trades of the empirical physician of salves and the ritual healer of incantations, both consulted without any sense of contradiction &mdash; and lexicography, and law, and the endless commentaries by which scholars mined the old texts for hidden meaning. It was a scholarship inseparable from divination, and modern readers rightly note the difference between reading livers and doing science. But the habit that produced the omen lists &mdash; observe exhaustively, record precisely, preserve everything &mdash; is the habit that filled Ashurbanipal&rsquo;s shelves, and it is why so much of the ancient world survives to be read at all.</p>
+
+<br>
+
+<hr>
+
+<br>
+
+<h3>The Empire That Kept the Books</h3>
+
+<p>There is a hard irony in all of this. Assyria was the empire the prophets called &ldquo;the rod of mine anger&rdquo; &mdash; the power that erased the northern kingdom of Israel, besieged Jerusalem, and boasted in stone of its own ferocity; the city Jonah was sent to warn (<a href="https://www.blueletterbible.org/kjv/jon/1/2/" target="_blank" data-ref="Jonah 1:2">Jonah 1:2</a>) and Nahum was given to condemn (<a href="https://www.blueletterbible.org/kjv/nah/1/1/" target="_blank" data-ref="Nahum 1:1">Nahum 1:1</a>). Its greatest library-builder was also a conqueror; the same king who could read tablets from before the flood filled his palace walls with reliefs of the peoples he broke. And when Nineveh fell exactly as the prophets said it would, the fire that judged the city is the very fire that preserved its library &mdash; the burning of Assyria&rsquo;s capital baked into permanence the flood story, the epic, and the whole stream of ancient learning, and handed it, buried, to a future that would dig it up and read it out loud.</p>
+
+<p>So the empire remembered for cruelty is also, against all expectation, the reason we can still read the oldest literature of the human race. It gathered the books, and then it burned around them, and the clay held. Out of the ruins of the empire that always came &ldquo;out of the north&rdquo; came the flood &mdash; not as judgment this time, but as a story, read again to the world by a self-taught engraver bent over a broken tablet in a London museum.</p>
+
+<br>
+
+<hr>
+
+<br>
+
+<details class="seder-dropdown seder-dropdown--seder">
+<summary>Sources and Further Reading</summary>
+<div class="seder-dropdown-body" style="text-align: left;">
+
+<p><strong>Assyria, Its Scholars &amp; Its Script:</strong></p>
+<ul style="margin: 12px 0 24px 0; padding-left: 24px;">
+<li><strong>Eckart Frahm</strong>, <em>Assyria: The Rise and Fall of the World&rsquo;s First Empire</em> (Basic Books, 2023) &mdash; The current standard narrative history, strong on the scholars, the library, and Ashurbanipal&rsquo;s literacy.</li>
+<li><strong>Karen Radner</strong>, <em>Ancient Assyria: A Very Short Introduction</em> (Oxford University Press, 2015) &mdash; Compact and authoritative, excellent on writing, administration, and the two-script chancery.</li>
+<li><strong>Irving Finkel &amp; Jonathan Taylor</strong>, <em>Cuneiform</em> (British Museum Press, 2015) &mdash; A delightful short introduction to the script and its world by two curators of the collection.</li>
+</ul>
+
+<p><strong>The Library, the Flood &amp; Gilgamesh:</strong></p>
+<ul style="margin: 12px 0 24px 0; padding-left: 24px;">
+<li><strong>David Damrosch</strong>, <em>The Buried Book: The Loss and Rediscovery of the Great Epic of Gilgamesh</em> (Henry Holt, 2007) &mdash; The story of George Smith, the 1872 flood-tablet sensation, and the recovery of the epic, told in reverse from the modern present back to Nineveh.</li>
+<li><strong>Andrew George</strong>, <em>The Epic of Gilgamesh</em> (Penguin Classics, 1999) &mdash; The standard English translation by the leading Gilgamesh scholar, with the flood of Tablet XI.</li>
+<li><strong>Stephanie Dalley</strong>, <em>Myths from Mesopotamia: Creation, the Flood, Gilgamesh, and Others</em> (Oxford World&rsquo;s Classics, rev. ed. 2000) &mdash; Reliable, readable translations of Atrahasis and the flood accounts.</li>
+<li><strong>Irving Finkel</strong>, <em>The Ark Before Noah: Decoding the Story of the Flood</em> (Hodder &amp; Stoughton, 2014) &mdash; A cuneiform curator&rsquo;s engaging account of the flood-story tablets and how they relate to Genesis.</li>
+</ul>
+
+<p><strong>Online Resources:</strong></p>
+<ul style="margin: 12px 0 0 0; padding-left: 24px;">
+<li><a href="https://www.worldhistory.org/cuneiform/" target="_blank"><strong>WHE</strong> &mdash; Cuneiform</a> (CC BY-NC-SA 4.0)</li>
+<li><a href="https://www.worldhistory.org/Ashurbanipal/" target="_blank"><strong>WHE</strong> &mdash; Ashurbanipal</a></li>
+<li><a href="https://www.britishmuseum.org/collection/galleries/assyria-nineveh" target="_blank"><strong>British Museum</strong></a> &mdash; the library of Ashurbanipal and the Nineveh galleries, including the flood tablet (Gilgamesh Tablet XI).</li>
+<li><a href="https://oracc.museum.upenn.edu/" target="_blank"><strong>ORACC</strong></a> &mdash; the Open Richly Annotated Cuneiform Corpus: real Assyrian and Babylonian texts, transliterated and translated, free to explore.</li>
+</ul>
+
+</div>
+</details>
+
+</div>
+
+
+<script src="/js/image-lightbox.js"></script>
+
+{{< /rawhtml >}}
