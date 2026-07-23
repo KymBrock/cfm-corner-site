@@ -54,7 +54,7 @@ draft: true
 
 <h4>Nineveh &mdash; the city the Bible knew best</h4>
 
-<p>Farther north still, opposite modern Mosul, rose <strong>Nineveh</strong> &mdash; the largest and most famous of the capitals, the &ldquo;exceeding great city&rdquo; of Jonah (<a href="https://www.blueletterbible.org/kjv/jon/3/3/" target="_blank" data-ref="Jonah 3:3">Jonah 3:3</a>) and the doomed &ldquo;bloody city&rdquo; of Nahum (<a href="https://www.blueletterbible.org/kjv/nam/3/1/" target="_blank" data-ref="Nahum 3:1">Nahum 3:1</a>). To the biblical writers, Nineveh simply <em>was</em> Assyria &mdash; the face the empire turned toward Israel and Judah, and the name they reached for when they meant the whole northern power.</p>
+<p>Farther north still, opposite modern Mosul, rose <strong>Nineveh</strong> &mdash; the largest and most famous of the capitals, the &ldquo;exceeding great city&rdquo; of Jonah (<a href="https://www.blueletterbible.org/kjv/jon/3/3/" target="_blank" data-ref="Jonah 3:3">Jonah 3:3</a>) and the doomed &ldquo;bloody city&rdquo; of Nahum (<a href="https://www.blueletterbible.org/kjv/nah/3/1/" target="_blank" data-ref="Nahum 3:1">Nahum 3:1</a>). To the biblical writers, Nineveh simply <em>was</em> Assyria &mdash; the face the empire turned toward Israel and Judah, and the name they reached for when they meant the whole northern power.</p>
 
 <h4>Arbela &mdash; the eastern anchor</h4>
 

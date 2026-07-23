@@ -47,7 +47,7 @@ draft: true
 
 <h3>Nahum: The Mirror Image</h3>
 
-<p>If Jonah is grace to Nineveh, Nahum is its judgment &mdash; and the two books were placed in the same scroll of the Twelve, a deliberate diptych. Where Jonah is all narrative and no oracle, Nahum is all oracle and no narrative: three chapters that are nothing but the fall of the Assyrian capital, announced from the first line. <em>&ldquo;The burden of Nineveh. The book of the vision of Nahum the Elkoshite&rdquo;</em> (<a href="https://www.blueletterbible.org/kjv/nam/1/1/" target="_blank" data-ref="Nahum 1:1">Nahum 1:1</a>). This is a whole book aimed at a single city.</p>
+<p>If Jonah is grace to Nineveh, Nahum is its judgment &mdash; and the two books were placed in the same scroll of the Twelve, a deliberate diptych. Where Jonah is all narrative and no oracle, Nahum is all oracle and no narrative: three chapters that are nothing but the fall of the Assyrian capital, announced from the first line. <em>&ldquo;The burden of Nineveh. The book of the vision of Nahum the Elkoshite&rdquo;</em> (<a href="https://www.blueletterbible.org/kjv/nah/1/1/" target="_blank" data-ref="Nahum 1:1">Nahum 1:1</a>). This is a whole book aimed at a single city.</p>
 
 <p>Nahum writes with the repentance of Jonah&rsquo;s generation long spent and forgotten. The Assyria of his oracle is unrepentant, gorged on plunder, and doomed. His verdict opens with a cry that has echoed ever since:</p>
 
@@ -56,7 +56,7 @@ draft: true
 <p style="margin: 12px 0 0 0; font-size: 0.85em; color: #666;">&mdash; Nahum 3:1</p>
 </div>
 
-<p>&ldquo;The bloody city&rdquo; &mdash; the phrase is exact justice, turned back on an empire that had made bloodshed a tool of statecraft. And then the sentence itself: <em>&ldquo;Nineveh is laid waste: who will bemoan her? whence shall I seek comforters for thee?&rdquo;</em> (<a href="https://www.blueletterbible.org/kjv/nam/3/7/" target="_blank" data-ref="Nahum 3:7">Nahum 3:7</a>). No one will mourn her, Nahum says &mdash; the very pity Jonah&rsquo;s God had extended is now withdrawn. History proved the oracle right. In <strong>612 BC</strong>, a coalition of Babylonians and Medes stormed and burned Nineveh, and the Assyrian empire was gone within a few years, never to rise again. The prophecy and the archaeology of that fall meet in <a href="/culture/ancient/assyria/10-major-sites-and-discoveries/">Section 10</a>, where the burn layers Nahum foretold still lie in the ground.</p>
+<p>&ldquo;The bloody city&rdquo; &mdash; the phrase is exact justice, turned back on an empire that had made bloodshed a tool of statecraft. And then the sentence itself: <em>&ldquo;Nineveh is laid waste: who will bemoan her? whence shall I seek comforters for thee?&rdquo;</em> (<a href="https://www.blueletterbible.org/kjv/nah/3/7/" target="_blank" data-ref="Nahum 3:7">Nahum 3:7</a>). No one will mourn her, Nahum says &mdash; the very pity Jonah&rsquo;s God had extended is now withdrawn. History proved the oracle right. In <strong>612 BC</strong>, a coalition of Babylonians and Medes stormed and burned Nineveh, and the Assyrian empire was gone within a few years, never to rise again. The prophecy and the archaeology of that fall meet in <a href="/culture/ancient/assyria/10-major-sites-and-discoveries/">Section 10</a>, where the burn layers Nahum foretold still lie in the ground.</p>
 
 <br>
 
@@ -159,7 +159,7 @@ draft: true
 
 <p>The Bible itself quietly notes that &ldquo;Pul&rdquo; and &ldquo;Tiglath-pileser&rdquo; are one man &mdash; <em>&ldquo;the God of Israel stirred up the spirit of Pul king of Assyria, and the spirit of Tilgath-pilneser king of Assyria&rdquo;</em> (<a href="https://www.blueletterbible.org/kjv/1ch/5/26/" target="_blank" data-ref="1 Chronicles 5:26">1 Chronicles 5:26</a>) &mdash; and the Assyrian and Babylonian records confirm exactly this: Pul was the Babylonian throne-name of Tiglath-pileser III. That the biblical writers knew a detail of Assyrian royal nomenclature this fine is a small, telling mark of how close to the ground they stood.</p>
 
-<p>The convergence extends to the great turning point of the north. Kings dates and narrates the three-year siege that ended the northern kingdom &mdash; Samaria taken &ldquo;in the ninth year of Hoshea&rdquo; and Israel &ldquo;carried away&hellip; unto Assyria&rdquo; (<a href="https://www.blueletterbible.org/kjv/2ki/17/6/" target="_blank" data-ref="2 Kings 17:6">2 Kings 17:6</a>) &mdash; and the fall of Samaria in 722/721 BC is claimed, from the Assyrian side, in the annals of both Shalmaneser V and Sargon II. The full account of that catastrophe and its deportations is the subject of <a href="/culture/ancient/assyria/07-the-fall-of-the-north/">Section 07</a>; the drama of Sennacherib&rsquo;s later failure at Jerusalem&rsquo;s walls &mdash; where the Assyrian record and the biblical record part ways over the outcome &mdash; is told in <a href="/culture/ancient/assyria/08-sennacherib-and-hezekiah/">Section 08</a>. For the cities where all of this was carved and buried, see <a href="/culture/ancient/assyria/06-the-great-cities/">The Great Cities</a>.</p>
+<p>The convergence extends to the great turning point of the north. Kings dates and narrates the three-year siege that ended the northern kingdom &mdash; Samaria taken &ldquo;in the ninth year of Hoshea&rdquo; and Israel &ldquo;carried away&hellip; into Assyria&rdquo; (<a href="https://www.blueletterbible.org/kjv/2ki/17/6/" target="_blank" data-ref="2 Kings 17:6">2 Kings 17:6</a>) &mdash; and the fall of Samaria in 722/721 BC is claimed, from the Assyrian side, in the annals of both Shalmaneser V and Sargon II. The full account of that catastrophe and its deportations is the subject of <a href="/culture/ancient/assyria/07-the-fall-of-the-north/">Section 07</a>; the drama of Sennacherib&rsquo;s later failure at Jerusalem&rsquo;s walls &mdash; where the Assyrian record and the biblical record part ways over the outcome &mdash; is told in <a href="/culture/ancient/assyria/08-sennacherib-and-hezekiah/">Section 08</a>. For the cities where all of this was carved and buried, see <a href="/culture/ancient/assyria/06-the-great-cities/">The Great Cities</a>.</p>
 
 <br>
 
@@ -194,7 +194,7 @@ draft: true
 <ul style="margin: 12px 0 0 0; padding-left: 24px;">
 <li><a href="https://www.worldhistory.org/assyria/" target="_blank"><strong>World History Encyclopedia</strong> &mdash; Assyria overview</a></li>
 <li><a href="https://www.britishmuseum.org/collection/object/W_1848-1104-1" target="_blank"><strong>British Museum</strong> &mdash; the Black Obelisk of Shalmaneser III (Jehu&rsquo;s tribute)</a></li>
-<li><a href="https://www.livius.org/articles/place/nineveh/" target="_blank"><strong>Livius.org</strong> &mdash; Nineveh and the Assyrian kings</a></li>
+<li><a href="https://www.livius.org/articles/place/nineveh-mosul/" target="_blank"><strong>Livius.org</strong> &mdash; Nineveh and the Assyrian kings</a></li>
 </ul>
 
 </div>

@@ -36,6 +36,11 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>This page traces that long arc in four movements &mdash; the merchant city, the first surge, the world empire, and the sudden fall &mdash; and marks, along the way, the moments where Assyrian kings step by name into the Bible&rsquo;s own pages. Dates before the first millennium BC are approximate and debated; from the ninth century onward the Assyrians kept meticulous records &mdash; annals, eponym lists, even a recorded solar eclipse (763 BC) &mdash; that let us fix many events to the year.</p>
 
+<p style="text-align: center; color: #666; font-style: italic; margin: 1.5rem 0 0.5rem 0;">Drag the slider to watch the Near East change &mdash; set to 700 BC, the Neo-Assyrian Empire at its height, when Samaria had fallen and Sennacherib stood at the walls of Jerusalem.</p>
+<link rel="stylesheet" href="/css/era-map-widget.css">
+<div class="era-map-widget" data-start-era="700"></div>
+<script src="/js/era-map-widget.js"></script>
+
 <br>
 
 <hr>
@@ -70,7 +75,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </tr>
 <tr style="background: white;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>The Height &amp; the Collapse</strong></td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">680&ndash;609 BC</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">681&ndash;609 BC</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Egypt conquered, then ruin</strong> &mdash; Esarhaddon and Ashurbanipal at the summit; Nineveh falls, the fall Nahum foresaw</td>
 </tr>
 </tbody>
@@ -188,7 +193,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <div style="margin-left: 8px; padding: 0 0 4px 0;">
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
-<span style="min-width: 100px; font-weight: bold; color: #c0392b; font-size: 0.9em;">680&ndash;669 BC</span>
+<span style="min-width: 100px; font-weight: bold; color: #c0392b; font-size: 0.9em;">681&ndash;669 BC</span>
 <span style="flex: 1; font-size: 0.95em;"><strong>Esarhaddon</strong> invades Egypt and takes Memphis (671 BC) &mdash; the empire reaches its greatest extent, from the Nile to the Zagros</span>
 </div>
 
@@ -209,7 +214,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #c0392b; font-size: 0.9em;">612 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Nineveh falls</strong> to the Medes and Babylonians together &mdash; the catastrophe the prophet Nahum foresaw (<a href="https://www.blueletterbible.org/kjv/nam/3/7/" target="_blank" data-ref="Nahum 3:7">Nahum 3:7</a>); the great city is burned and abandoned (see <a href="/culture/ancient/assyria/09-assyria-and-the-bible/">Assyria &amp; the Bible</a>)</span>
+<span style="flex: 1; font-size: 0.95em;"><strong>Nineveh falls</strong> to the Medes and Babylonians together &mdash; the catastrophe the prophet Nahum foresaw (<a href="https://www.blueletterbible.org/kjv/nah/3/7/" target="_blank" data-ref="Nahum 3:7">Nahum 3:7</a>); the great city is burned and abandoned (see <a href="/culture/ancient/assyria/09-assyria-and-the-bible/">Assyria &amp; the Bible</a>)</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
@@ -281,7 +286,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>The empire kept growing after Jerusalem was spared. Sennacherib&rsquo;s son <strong>Esarhaddon</strong> (681&ndash;669 BC) did what no Mesopotamian king had ever managed and conquered <strong>Egypt</strong>, taking Memphis in 671 BC. His son <strong>Ashurbanipal</strong> (669&ndash;c. 631 BC) pushed on to sack Thebes itself in 663 BC &mdash; and then, at the height of his power, turned to assembling the great <strong>library of Nineveh</strong>, sending scribes across the empire to copy every text worth keeping. When the mounds of Nineveh were opened in the 1850s, it was Ashurbanipal&rsquo;s library that gave the modern world the Epic of Gilgamesh and its startlingly familiar flood story (see <a href="/culture/ancient/assyria/05-writing-and-the-great-library/">Writing &amp; the Great Library</a>).</p>
 
-<p>And then it ended, with a speed that still astonishes historians. Ashurbanipal died around 631 BC, and within a generation the empire that ruled from the Nile to Persia simply came apart &mdash; civil war among his heirs, revolt in Babylonia under Nabopolassar, and the rise of the Medes on the eastern frontier. The two powers made common cause. In 614 BC the Medes stormed <strong>Ashur</strong>, the old holy city. In 612 BC the allied armies took <strong>Nineveh</strong> itself, the &ldquo;bloody city&rdquo; of Nahum&rsquo;s vision, and burned it &mdash; the fall the prophet had sung of in advance: &ldquo;Nineveh is laid waste: who will bemoan her?&rdquo; (<a href="https://www.blueletterbible.org/kjv/nam/3/7/" target="_blank" data-ref="Nahum 3:7">Nahum 3:7</a>). A last Assyrian claimant held out at Harran until 609 BC, and then the name that had terrified the ancient world for three centuries was simply gone. When Xenophon marched his Greek mercenaries past the ruins two hundred years later, no one could even tell him what city had once stood there.</p>
+<p>And then it ended, with a speed that still astonishes historians. Ashurbanipal died around 631 BC, and within a generation the empire that ruled from the Nile to Persia simply came apart &mdash; civil war among his heirs, revolt in Babylonia under Nabopolassar, and the rise of the Medes on the eastern frontier. The two powers made common cause. In 614 BC the Medes stormed <strong>Ashur</strong>, the old holy city. In 612 BC the allied armies took <strong>Nineveh</strong> itself, the &ldquo;bloody city&rdquo; of Nahum&rsquo;s vision, and burned it &mdash; the fall the prophet had sung of in advance: &ldquo;Nineveh is laid waste: who will bemoan her?&rdquo; (<a href="https://www.blueletterbible.org/kjv/nah/3/7/" target="_blank" data-ref="Nahum 3:7">Nahum 3:7</a>). A last Assyrian claimant held out at Harran until 609 BC, and then the name that had terrified the ancient world for three centuries was simply gone. When Xenophon marched his Greek mercenaries past the ruins two hundred years later, no one could even tell him what city had once stood there.</p>
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
 <p style="margin: 0;"><strong>The rod and the woodcutter:</strong> the prophets never saw Assyria as merely a military problem. Isaiah calls the empire &ldquo;the rod of mine anger&rdquo; (<a href="https://www.blueletterbible.org/kjv/isa/10/5/" target="_blank" data-ref="Isaiah 10:5">Isaiah 10:5</a>) &mdash; a tool in God&rsquo;s hand to discipline his people &mdash; and then warns, in the same breath, that the rod would itself be broken for its arrogance, as if an axe should boast against the one who swings it. Assyria&rsquo;s whole arc, from the trading city to the world empire to the ash of Nineveh, became for Israel a case study in exactly that: a nation used, and then a nation judged, on a timescale a prophet could announce before it happened. The empire that seemed eternal from beneath its walls lasted, as a world power, barely three hundred years &mdash; and as the master of Israel&rsquo;s fate, barely one.</p>

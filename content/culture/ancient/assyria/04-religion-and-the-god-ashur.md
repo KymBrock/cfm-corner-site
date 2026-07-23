@@ -94,7 +94,7 @@ draft: true
 
 <h3>The God Who Is the Empire, and the God Who Judges It</h3>
 
-<p>Here two theologies stand face to face, and the difference is the whole point. Assyria&rsquo;s god <em>was</em> the empire; his will and the state&rsquo;s ambitions could never diverge, because they were the same thing. A god who is the nation can never rebuke the nation. He rises and falls with its armies, and when the armies fall, so does he &mdash; which is exactly what the prophet Nahum promised over doomed Nineveh: &ldquo;out of the house of thy gods will I cut off the graven image&hellip; I will make thy grave; for thou art vile&rdquo; (<a href="https://www.blueletterbible.org/kjv/nam/1/14/" target="_blank" data-ref="Nahum 1:14">Nahum 1:14</a>).</p>
+<p>Here two theologies stand face to face, and the difference is the whole point. Assyria&rsquo;s god <em>was</em> the empire; his will and the state&rsquo;s ambitions could never diverge, because they were the same thing. A god who is the nation can never rebuke the nation. He rises and falls with its armies, and when the armies fall, so does he &mdash; which is exactly what the prophet Nahum promised over doomed Nineveh: &ldquo;out of the house of thy gods will I cut off the graven image&hellip; I will make thy grave; for thou art vile&rdquo; (<a href="https://www.blueletterbible.org/kjv/nah/1/14/" target="_blank" data-ref="Nahum 1:14">Nahum 1:14</a>).</p>
 
 <p>Israel&rsquo;s God is of another order entirely, and the book of Isaiah says so precisely by turning Assyria&rsquo;s own logic inside out. Yes, Assyria conquers &mdash; but not because Ashur outranks the LORD. Assyria conquers because the LORD is <em>using</em> it: &ldquo;O Assyrian, the rod of mine anger, and the staff in their hand is mine indignation&rdquo; (<a href="https://www.blueletterbible.org/kjv/isa/10/5/" target="_blank" data-ref="Isaiah 10:5">Isaiah 10:5</a>). The empire that thought itself the arm of its god is, unknowingly, a tool in the hand of Another &mdash; and a tool that boasts against the hand that wields it will be broken for its pride: &ldquo;Shall the axe boast itself against him that heweth therewith?&rdquo; (<a href="https://www.blueletterbible.org/kjv/isa/10/15/" target="_blank" data-ref="Isaiah 10:15">Isaiah 10:15</a>). The same God who raises the empire to discipline his people will judge the empire for the cruelty it enjoyed along the way. That is a claim Assyria&rsquo;s theology had no category for: a god who commands the nations, and then holds even his own instrument to account.</p>
 
@@ -126,7 +126,7 @@ draft: true
 <p><strong>Online Resources:</strong></p>
 <ul style="margin: 12px 0 0 0; padding-left: 24px;">
 <li><a href="https://www.worldhistory.org/assyria/" target="_blank"><strong>WHE</strong> &mdash; Assyria</a> (CC BY-NC-SA 4.0)</li>
-<li><a href="https://www.livius.org/articles/place/assur-city/" target="_blank"><strong>Livius.org</strong> &mdash; Ashur (city and god)</a></li>
+<li><a href="https://www.livius.org/articles/place/assur/" target="_blank"><strong>Livius.org</strong> &mdash; Ashur (city and god)</a></li>
 <li><a href="http://oracc.museum.upenn.edu/saao/" target="_blank"><strong>Oracc / SAAO</strong> &mdash; State Archives of Assyria Online</a> &mdash; the scholars&rsquo; letters, oracle-queries, and omen reports in edition and translation.</li>
 </ul>
 

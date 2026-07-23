@@ -150,7 +150,7 @@ draft: true
 <p><strong>Online Resources:</strong></p>
 <ul style="margin: 12px 0 0 0; padding-left: 24px;">
 <li><a href="https://www.worldhistory.org/assyria/" target="_blank"><strong>WHE</strong> &mdash; Assyria</a> (CC BY-NC-SA 4.0)</li>
-<li><a href="https://www.livius.org/articles/place/samaria/" target="_blank"><strong>Livius.org</strong> &mdash; Samaria</a> &mdash; with translated excerpts of Sargon II&rsquo;s annals on the city&rsquo;s capture.</li>
+<li><a href="https://www.livius.org/articles/place/samaria/" target="_blank"><strong>Livius.org</strong> &mdash; Samaria</a> &mdash; a concise, sourced history of the city and its capture by Assyria.</li>
 <li><a href="https://www.britishmuseum.org/collection/galleries/assyria-nimrud" target="_blank"><strong>British Museum</strong> &mdash; the Assyrian galleries</a> &mdash; reliefs and inscriptions of the kings who dismantled the northern kingdom.</li>
 </ul>
 
