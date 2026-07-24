@@ -128,6 +128,58 @@ surface is **local** (`hugo server -D`). Everything in the pipeline still works 
 
 ---
 
+## Narration (added 2026-07-23)
+
+**Babylon audio: 11 of 12 sections live.** Sections 06-10 were pulled from the
+Narration Studio and wired in this session. Only `05b-the-calendar-and-the-names-of-time`
+has no episode yet.
+
+> **Encoding matters.** Studio exports are 160 kbps; the published files are
+> **mono / 48 kHz / 64 kbps**. Always re-encode before installing:
+> `ffmpeg -nostdin -v error -y -i <master>.mp3 -ac 1 -ar 48000 -b:a 64k -map_metadata -1 <dest>.mp3`
+> The destination filename **must equal the page's markdown filename** — studio
+> episode names are looser (e.g. `babylon-08-babylon-the-bible` -> `08-babylon-and-the-bible.mp3`).
+
+**21 narration scripts drafted** for Achaemenid (10) and Assyria (11), matching the
+Babylon format. They live in the **Obsidian vault**, not this repo:
+`~/Obsidian/K Master Vault/Master Project Folder/Ongoing/CFM Corner/OT_2026/Culture/<Guide>/_narration/`
+Committed and pushed to the private `KymBrock/K_Master_Vault` repo.
+
+**Not yet human-reviewed and not yet recorded.** To produce the audio, see
+**`docs/narration-studio-run.md`** — it holds a ready-to-paste prompt for a new
+Claude Code session **on the Mac** (the Studio is local-only), plus the outstanding
+human-review items.
+
+**Lexicon:** `~/Developer/narration-studio/lexicon.json` went 27 -> 154 entries with all
+the Persian/Assyrian terms and KJV traps (`cieled` = "seeld"). Committed and pushed to
+that repo's `origin/main`.
+
+## Assyria guide artwork (added 2026-07-23)
+
+**All 23 images complete** — 11 section heroes, 11 icons, and the guide banner, in
+`static/images/culture/assyria/` (63 MB). Generated to prompts in
+**`docs/assyria-image-prompts.md`**, which also documents the paper-cut style and the
+Assyrian-vs-Babylonian accuracy notes.
+
+Known cosmetic issues, all accepted rather than fixed:
+- `02-hero` and `09-hero` show **blue glazed brick gates** — Ishtar Gate vocabulary,
+  which is Babylonian, not Assyrian.
+- `05-icon` renders photorealistically where the other ten icons are flat paper-cut.
+- Style varies between flatter (01, 06, 08, 11) and denser (02-05) heroes.
+
+**Assyria pages 02 and 03 have listen players pointing at audio that does not exist**
+(404 on the preview). Deliberately left in place pending recording.
+
+## Working files organized (2026-07-23)
+
+The Perforce-workspace folder `.../Animation Studio References/To be named and Organized/`
+went from 38 items to empty. Everything was filed into `CFM Corner Field Guides/`,
+`Chroma-Keys repo communication/`, and `7 Moedim/Visual Assets/`, with every move logged
+line-by-line in `ORGANIZED-LOG.txt` in that folder (format: `NEW PATH <<< ORIGINAL NAME`).
+Two verified byte-identical duplicates are quarantined in
+`_VERIFIED-DUPLICATES-safe-to-delete/` with a README naming each original — deletion left
+to Kym.
+
 ## LOCAL-ONLY — exists only on this Mac, unreachable remotely
 
 Nothing below is in git or on GitHub. Do not assume it is available from another machine.
