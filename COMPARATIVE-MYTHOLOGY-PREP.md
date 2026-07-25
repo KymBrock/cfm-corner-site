@@ -120,55 +120,63 @@ Cross-links to existing pages noted in *italics*.
 
 ---
 
-## Sourcing (the open task Kymber flagged)
+## Sourcing — primary texts first (Kymber's directive, 2026-07-24)
 
-The site's **Content Integrity rule** means new prose must trace to scripture, the vault, a
-verified source, or Kymber's direct instruction. Two practical constraints in this remote
-environment:
+**The backbone of this guide is the actual ancient texts in credible scholarly translation
+(and original language where it matters) — not any single secondary summary.** *The Ancient
+Tradition* podcast is **one interpretive lens among several**, useful as a pointer to which
+myths to gather and as a labeled **[INTERP]** voice — never the source of a factual claim. Every
+motif the guide discusses must land on a **primary text** (quoted from a real edition) before it
+ships.
+
+The site's **Content Integrity rule** governs all of it: new prose traces to scripture, a
+primary text, the vault, a verified source, or Kymber's direct instruction. Two environment
+constraints:
 
 1. **The Obsidian vaults are not present here** (`Sacred Texts/`, `WeeklyLessons/`, the Hebrew
-   grammars, the conference-talk lane). Anything that should be sourced from the vault must be
-   **pasted in** by Kymber, or the passage flagged `[SOURCE PENDING — vault]`.
-2. **`theancienttradition.com` blocks automated fetch (HTTP 403).** The podcast can't be scraped
-   from here. To cite it responsibly we need one of: episode **transcripts**, the episode
-   **show-notes text**, or Kymber's own notes — audio can't be quoted from memory.
+   grammars, the conference-talk lane). Vault-sourced passages must be **pasted in**, or flagged
+   `[SOURCE PENDING — vault]`.
+2. **`theancienttradition.com` blocks automated fetch (HTTP 403).** Podcast audio can't be
+   quoted from memory — cite it only from a transcript or show-notes, and only as [INTERP].
 
-### Anchor source — *The Ancient Tradition* (Jack Logan)
-- **What it is:** a comparative-mythology / comparative-religion podcast (launched Mar 2023;
-  ~66 episodes by early 2026), arguing for a primordial divine tradition whose fragments recur
-  across world myth. Host teaches at a US university. Site: `theancienttradition.com`.
-- **Confirmed relevant episode topics (from public listings, to be verified against the actual
-  episodes before citing):** the sacred-tree origin motif (Ngaju Dayak, Zoroastrian, Norse,
-  Greek, Mixtec); the Mesopotamian flood / Atrahasis & Finkel's Ark Tablet; *Enuma Elish* and
-  Marduk vs. Tiamat; a Maidu creation account (primordial waters, sacred tree); entropy / the
-  "2nd law" episode. These map onto **sections 02, 03, 04**.
-- **How it will be used:** as an **[INTERP]** comparative lens and a pointer to primary myths —
-  *not* as a stand-alone authority. Every myth it surfaces gets anchored to a **primary text or
-  peer-reviewed source** (see below) before it ships. Logan's larger "one original tradition"
-  thesis is presented as a *resonance* with the LDS frame, clearly labeled, never as consensus.
-- **To get from Kymber:** which episodes to lean on first, plus transcripts/show-notes for those.
+### The sourcing hierarchy (apply in this order for every claim)
+1. **The scriptural text** — Hebrew/Greek via BLB + the MT via Sefaria; the reference itself.
+2. **The primary ancient text** — a real edition, quoted. Two tiers:
+   - **Authoritative modern editions** (in copyright) — *cite and quote briefly*: Lambert,
+     *Babylonian Creation Myths* (2013); A.R. George, *The Babylonian Gilgamesh Epic* (2003);
+     Lambert & Millard, *Atra-ḥasīs* (1969); Dalley, *Myths from Mesopotamia* (OUP); Finkel,
+     *The Ark Before Noah* (2014).
+   - **Open / public-domain editions** (free to link *and* quote) — for reader access. See the
+     registry below.
+3. **Peer-reviewed scholarship** — Cross, Smith, Day (already vetted on the site), plus per-topic.
+4. **Reputable open encyclopedias** — World History Encyclopedia (CC BY-NC-SA), Bible Odyssey (SBL).
+5. **[INTERP] lenses** — *The Ancient Tradition*; older universalist syntheses (Frazer,
+   *Hamlet's Mill*). Clearly labeled, never load-bearing for a factual claim.
 
-### Verified sources already trusted on the site (usable from here)
-- **Blue Letter Bible** — Hebrew/Greek lexicon + scripture (star names, divine names, cognates).
-- **Sefaria** — rabbinic/midrashic comparanda (letter symbolism, Wisdom, creation).
-- **World History Encyclopedia** (CC BY-NC-SA) — myth summaries, images.
-- **Bible Odyssey** (SBL) — peer-reviewed short essays on ANE religion.
-- **Museum catalogs** — British Museum (Ark Tablet BM 78608; the *Enuma Elish* tablets;
-  Shabaka Stone), Louvre, etc., for PD/CC images with provenance.
+### Primary Source Registry (open editions — verified live 2026-07-24 unless noted)
 
-### Primary / academic sources to pursue (verify during build)
-- **Creation/flood:** *Enuma Elish* (W.G. Lambert, *Babylonian Creation Myths*, 2013);
-  Irving Finkel, *The Ark Before Noah* (2014); Stephanie Dalley, *Myths from Mesopotamia* (OUP).
-- **Chaoskampf / divine council:** already-vetted site sources — Frank Moore Cross, *Canaanite
-  Myth and Hebrew Epic*; Mark S. Smith; John Day.
-- **Biblical astronomy:** standard reference works on Job's star names and the Mazzaroth (verify
-  a reputable OT-astronomy source; avoid popular "gospel-in-the-stars" material unless clearly
-  labeled [INTERP]).
-- **Comparative method, general:** treat older universalist syntheses (e.g. Frazer, and
-  *Hamlet's Mill*-style precession theories) as **[INTERP]/historiography**, not fact.
-- **[LDS] threads:** the sacred-tree/temple and divine-council scholarship the site already
-  cites (John S. Thompson on the tree-goddess iconography; the divine-council material in
-  Abraham 3–4 / Moses; Gospel Topics where relevant), verified per source before use.
+| Motif / section | Primary text | Standard edition (cite) | Open text (link + quote) |
+|---|---|---|---|
+| **02 Creation / primordial waters** | *Enūma Eliš* (Marduk vs. Tiamat) | Lambert 2013 | **sacred-texts.com** `/ane/stc/` (L.W. King, 1902, PD) — *verified* |
+| 02 Sumerian creation | *Eridu Genesis* / Sumerian creation | Jacobsen | **ETCSL** `t.1.7.4` (transliteration + translation, OA) — *verified* |
+| **03 The Flood** | *Atra-ḥasīs*; *Gilgamesh* XI; *Sumerian Flood Story* | Lambert & Millard; George 2003; Finkel 2014 | **ETCSL** `t.1.7.4` (Sumerian, *verified*); **sacred-texts.com** `/ane/eog/eog13.htm` (Gilgamesh XI, PD, *verified*); ancienttexts.org / Sacred Atlas (PD) |
+| **04 The sacred tree** | Norse *Eddas* (Yggdrasil); Zoroastrian *Bundahišn* / *Avesta*; Assyrian sacred-tree reliefs | Faulkes (Prose Edda); West (Avesta) | **sacred-texts.com** — Bellows *Poetic Edda* (PD), *Bundahishn* (PD) — *confirm exact pages during build* |
+| **05 Cosmic mountain / divine council** | Ugaritic *Baal Cycle*; *Enūma Eliš*; Ps 82; Abr 3–4 | Wyatt; Parker (SBL *Ugaritic Narrative Poetry*) | already cited on the site's Ugarit page; BLB + Sefaria for the biblical texts |
+| **06–07 Astronomy** | Job 9:9; 38:31–32; Amos 5:8 (Hebrew star names); Babylonian *MUL.APIN*; Hesiod *Theogony*; Aratus *Phaenomena* | Hunger & Pingree (*MUL.APIN*) | **Sefaria** (MT of Job/Amos) + **BLB** (lexicon); **Perseus** (Hesiod, Aratus, PD) — *confirm during build* |
+| **08–09 Linguistic / cognates** | Hebrew + Akkadian/Sumerian lexica | *Chicago Assyrian Dictionary* (CAD) | **BLB** (Hebrew/Greek); **CAD** free PDFs (ISAC/Univ. of Chicago); **ORACC** / **ETCSL** — *confirm during build* |
+
+Notes: PD translations (King 1902, George Smith 1876, Bellows) are **superseded but freely
+usable** — quote them for reader access, but check any load-bearing rendering against a modern
+edition (tier 2a) and flag divergences. Museum catalogs (British Museum — Ark Tablet BM 78608,
+the *Enuma Elish* tablets; Louvre) supply PD/CC images with provenance.
+
+### *The Ancient Tradition* podcast — one lens, not the backbone
+- **What it is:** a comparative-mythology podcast (Jack Logan; launched Mar 2023; ~66 episodes),
+  arguing for a primordial divine tradition whose fragments recur across world myth.
+- **Use:** an [INTERP] voice and a pointer to which myths to gather for sections 02–04; every
+  myth it surfaces gets independently anchored to a primary text above. Its "one original
+  tradition" thesis is presented as *resonance* with the LDS frame, never as consensus.
+- **To get from Kymber:** episode transcripts/show-notes for whichever episodes she wants echoed.
 
 ---
 
@@ -190,6 +198,8 @@ environment:
    supplies those.
 5. **Section 10 + Sources** to close.
 
-**Recommended immediate next step:** Kymber picks the 3–5 *Ancient Tradition* episodes to
-anchor sections 02–04 and provides their transcripts/show-notes, and confirms the guide's home
-directory + working title. Then build the hub + section 01 as the first reviewable increment.
+**Recommended immediate next step:** Section 01 + hub are built and live on preview. Because the
+primary texts are openly accessible (registry above), **section 02 (Creation / primordial
+waters) can be drafted now** straight from the *Enūma Eliš* text (King PD) + Genesis + BLB/Sefaria
+— no podcast transcript required. The podcast, when Kymber supplies transcripts, only adds a
+labeled [INTERP] echo on top of a page already anchored in primary sources.
