@@ -128,6 +128,16 @@ surface is **local** (`hugo server -D`). Everything in the pipeline still works 
 
 ---
 
+## Narration script location — CONVENTION (decided 2026-07-26)
+
+Narration scripts live in **both** places, kept in sync:
+- **Vault** (canonical): `~/Obsidian/K Master Vault/.../Culture/<Guide>/_narration/<slug>.script.md`
+- **Repo**: `docs/narration/<guide>/<slug>.script.md`
+
+The vault is where the Narration Studio run reads from; the repo copy is for easy find/edit
+(e.g. github.dev from a phone). Edit one, update the other. 05b lives on the calendar branch
+(PR #2) in the repo until that PR merges.
+
 ## Narration (added 2026-07-23)
 
 **Babylon audio: 11 of 12 sections live.** Sections 06-10 were pulled from the
