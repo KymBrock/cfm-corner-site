@@ -1,120 +1,94 @@
 ---
-title: "The Calendar & the Names of Time"
-guide: Babylon
-section: "05b"
-slug: 05b-the-calendar-and-the-names-of-time
-page: content/culture/ancient/babylon/05b-the-calendar-and-the-names-of-time.md
-audio_out: static/audio/culture/babylon/05b-the-calendar-and-the-names-of-time.mp3
-voice: Kym (cloned)
-preset: engaged
-runtime_estimate: "~11–13 min"
-status: draft-for-narration
+title: "Narration script — Babylon 05b: The Calendar & the Names of Time"
+guide: "Babylon"
+section: "05b — The Calendar & the Names of Time"
+audio_out: "cfm-corner-site/static/audio/culture/babylon/05b-the-calendar-and-the-names-of-time.mp3"
+voice: "Kym — local Chatterbox clone (narration-studio)"
+pipeline: "narration-studio (local, localhost:8770); engaged preset + auto energy curve"
+est_runtime: "~10–11 min"
+created: 2026-07-26
 ---
 
 # How to use this script
 
-Podcast-style narration for the Babylon field guide, section 05b, in Kym's
-cloned voice — same treatment as the other Babylon episodes.
+Load into the local **Narration Studio** (`~/Developer/narration-studio`, `localhost:8770`) — this replaces ElevenLabs. `POST /episode/load` with the **SCRIPT** below, `preset: "engaged"`, `auto_curve: true`; then generate → audition/curate → export MP3. **Pronunciation is automatic** via the studio's IPA lexicon (`lexicon.json`) — no upload needed. The `[bracketed]` cues are legacy ElevenLabs audio tags; the studio strips them (the automatic energy curve does that job). The cheat-sheet at the bottom is a human reading aid.
 
-- Feed **only the body of the `# SCRIPT` section** into Narration Studio
-  (`localhost:8770`) — not this note, not the front matter, not the
-  pronunciation cheat-sheet. (The `produce-guide-narration.sh` loader already
-  splits on `# SCRIPT` … `# Pronunciation`.)
-- Use the **engaged** preset + auto-curve, matching the Babylon episodes.
-- Export, then re-encode to the published spec and install as
-  `static/audio/culture/babylon/05b-the-calendar-and-the-names-of-time.mp3`
-  (filename must equal the page slug exactly).
-- The listen-player block is already on the page — once the mp3 lands at that
-  path, it plays; no page edit needed.
-- This file lives in the vault normally
-  (`…/Culture/Babylon/_narration/05b-the-calendar-and-the-names-of-time.script.md`).
-  It's committed to the repo here only so it round-trips from the cloud session;
-  copy it into the vault's `_narration/` folder before producing.
-
-Content is drawn entirely from the published page (itself sourced against the
-POM book and the KJV database) — no new claims. Scripture is spoken in plain
-form; the exact wording of every quotation matches the KJV.
+---
 
 # SCRIPT
 
-Look at a clock. Sixty minutes in an hour, sixty seconds in a minute. Now look at a compass — three hundred and sixty degrees in a full circle. You have used both a thousand times without a second thought. And every single time, you were using Babylon.
+[warmly] Look at a clock — any clock. Sixty seconds in a minute. Sixty minutes in an hour. Three hundred sixty degrees in a circle. Ever stop to ask… why *sixty*?
 
-Welcome to the calendar, and the names of time. This is the story of how one ancient civilization taught the whole world to count time — and how, tangled up in that same gift, it also taught the world to name time after its gods. It is a story with two halves, and the second one runs right through your own week.
+The answer is Babylon. Every hour you've ever counted runs on arithmetic worked out on clay tablets four thousand years ago. [thoughtfully] This is the story of how Babylon taught the world to count time — and to *name* time after gods. And of a people who took the first gift while refusing, almost completely, the second.
 
-Let's start with something that may surprise you. When the exiles of Judah were marched off to Babylon, six centuries before Christ, they did not arrive as a people without a calendar. Israel already kept time — and it kept it, pointedly, without the names of gods. The nations all around them named their days and their months after the sun, the moon, and the planets they worshiped. Israel, for the most part, simply counted. The second month. The seventh month, on the first day. Numbers, not gods.
+Because Israel didn't arrive without a calendar. Long before the exile, Israel kept time — pointedly — *without* the names of gods. The nations named their days and months for the gods they worshipped. Israel just… counted. "The second month." "The seventh month, on the first day." What they met in Babylon was a science to be adapted — and they adapted it without its star-worship. [curious] Almost.
 
-So where did that instinct come from? Here the story reaches all the way back to Abraham.
+[brightly] Start with the science. Babylon kept a *lunisolar* calendar — the hardest kind to run well. A month began when somebody actually saw the new crescent moon — twenty-nine or thirty days each. But twelve lunar months run about eleven days short of a solar year — left alone, your spring barley festival soon lands in winter. The fix: slip in a thirteenth month to snap back into step with the sun. By the Persian period the astronomers had it down to a rule — seven leap-months every nineteen years — so precise that moon and sun realign almost perfectly. [curious] And that same cycle still governs the Jewish calendar *today*. It fixes the date of Passover every spring — and because the first Easter fell at Passover, a parallel reckoning still sets the Christian date of Easter.
 
-Abraham came out of Ur of the Chaldees — and the land of the Chaldees was the beating heart of Babylonian star-science. This was a man raised among the greatest sky-watchers of the ancient world. So when God takes him outside and says, "Look now toward heaven, and tell the stars, if thou be able to number them," He is speaking to someone already fluent in the heavens. And that old word for "tell" — in Hebrew, saphar — it does not only mean to count. It means to recount, to record. It is the very root of the Hebrew word for a book. To number the stars was, in the same breath, to keep their record.
+The engine underneath was base-sixty arithmetic — magnificent, because sixty divides evenly by two, three, four, five, six, and more. 360 degrees, sixty minutes, sixty seconds — kept because base sixty was too good at dividing the sky to abandon.
 
-And later tradition remembered Abraham in exactly that way. The first-century historian Josephus credits him with carrying astronomy — and I am quoting — "from the Chaldeans into Egypt, and from thence to the Greeks also." The Book of Jubilees remembers the turning point: Abraham up through the night, watching the sky for omens the way his people did, until, as it says, a word came into his heart — "All the signs of the stars are in the hand of the Lord." And he turned away from the star-worship of his own kin.
+[thoughtfully] And the sky is what they watched. The heavens were a running message from the gods, watched with unmatched discipline. Scholars kept the Astronomical Diaries — nightly records of moon, planets, eclipses, even grain prices — for some seven *centuries*. Out of that data came the roughly eighteen-year eclipse cycle later called the Saros. When Isaiah taunts "the astrologers, the stargazers, the monthly prognosticators" — the taunt bites because these were, in cold fact, the best astronomers alive.
 
-That is the seed of the whole calendar story. Israel's habit of numbering its months, instead of naming them after gods, was not the accident of a simple people. It was of a piece with Abraham's own refusal — and Moses' after him — to read the heavens as a council of gods.
+Now, the zodiac — timeline matters. The star-*pictures* came first: the Bull, the Lion, the Scorpion were fixed in the Mesopotamian sky before Abraham's day; the Greeks passed them on as Taurus, Leo, Scorpius. The *mathematics* came much later — around the fifth century BC, when astronomers divided the sun's path into twelve equal thirty-degree signs: a coordinate system laid over ancient pictures. Calendars form a family line too: lunar; then Babylon's lunisolar compromise, which the Jewish year still keeps; then the purely solar year we live by — a Roman step, not Babylonian, later fine-tuned into the Gregorian calendar, named for Pope Gregory the Thirteenth. [warmly] Though our word *month* is really just *moon* with a suffix.
 
-Now, let's be fair to Babylon, because the science was genuinely, astonishingly good.
+[brightly] One honest caution. Babylonian math was genuinely advanced — place-value notation two thousand years before Europe's decimals. But did Babylon invent *trigonometry*? That claim rides on a tablet called Plimpton 322 — number triples written a thousand years before Pythagoras. In 2017 two mathematicians — Daniel Mansfield and Norman Wildberger — argued it's the world's oldest trigonometric table. It may be right — but it's *contested*; many scholars see a teacher's exercise. A live debate, not a settled fact. But the lineage is certain: Hipparchus the Greek inherited Babylonian eclipse records, planetary data, and the sexagesimal degree. Babylon, to Greece, to us — right through your wristwatch.
 
-They ran what's called a lunisolar calendar — the hardest kind there is to keep. Each month began with the first thin sliver of the new crescent moon. But twelve lunar months fall about eleven days short of a solar year. So a purely lunar calendar drifts backward through the seasons — leave it alone, and within a decade your spring festival has slid into winter. The Babylonians solved it with a rule: they added a thirteenth leap month on a nineteen-year cycle, so precise that the moon and the sun snap back into step almost perfectly. And here is the remarkable part. That same nineteen-year cycle still governs the Jewish calendar today, fixing the date of Passover every spring. And because the first Easter fell at Passover, a parallel reckoning still sets the Christian date of Easter, too. A four-thousand-year-old piece of arithmetic, still humming quietly underneath the modern world.
+[thoughtfully] That instinct — take the sky's mathematics, leave its gods — didn't begin in exile. The tradition traces it to Abraham — out of Ur of the Chaldees, star-science's heartland. When God says "tell the stars, if thou be able to number them," God is speaking to a man fluent in the heavens. The Hebrew for "tell" — *saphar* — means to count, but also to *record*. Same root as *sepher*: "book." To number the stars was to keep the record of them. And later tradition — extra-biblical, not scripture — remembered it. Josephus says Abraham carried astronomy "from the Chaldeans into Egypt, and from thence to the Greeks also." And Jubilees shows him watching for omens until "a word came into his heart": "All the signs of the stars… are all in the hand of the Lord." He keeps the stars. He drops the star-gods.
 
-And underneath all of it was a way of counting: base sixty. Sixty divides evenly by two, three, four, five, six, ten, twelve, fifteen, twenty, and thirty — which makes fractions and angles behave. We never let it go. The three-hundred-sixty-degree circle, the sixty minutes in an hour, the sixty seconds in a minute — all of it is Babylon, kept for four thousand years because base sixty was simply too good at dividing up the sky to give up.
+[curious] Now watch it happen inside your Bible. Before the exile, months are mostly *numbered* — "in the second month," or "in the seventh month, in the first day of the month." Only a handful of older month-*names* survive — Abib, Zif, Ethanim, Bul — and they're Canaanite names, not Babylonian. Though, to be fair, Canaan's calendar had grown from the same Mesopotamian tradition — a difference of names, not whole systems. And the narrator glosses even these: "the month Zif, *which is the second month*" — as if the number is the thing the reader is sure to know.
 
-And the sky is what they watched — with a discipline no other ancient culture ever matched. For something like seven centuries, Babylonian scholars kept nightly records they called the Astronomical Diaries — the moon, the planets, eclipses, the weather, even the price of grain. Out of that mountain of data came real predictive power. They mastered the roughly eighteen-year cycle that lets you forecast eclipses. So when Isaiah taunts the astrologers and the stargazers and the monthly prognosticators of Babylon, the taunt only stings because these people were, in cold fact, the best astronomers alive.
+Then Babylon — and everything changed. The Jews came home with the Babylonian month-names still in use today: Nisan, Iyar, Sivan, Tammuz, Av, Elul, Tishrei, Cheshvan, Kislev, Tevet, Shevat, Adar. Nehemiah dates his cupbearing to "the month Nisan"; Esther explains that "the first month" is "the month Nisan" — the old gloss running in reverse. And the Jerusalem Talmud is candid about it. Rosh Hashanah, chapter one, says plainly: [thoughtfully] "The names of the months came up with them from Babylon."
 
-That long watch left us two inheritances, and they reach us roughly in the order they were made.
+[thoughtfully] But one name in that list should stop you cold. *Tammuz* was a Babylonian god — the dying-and-rising deity of the seasons — whose mourning rites Ezekiel was shown at the very gate of the temple: "there sat women weeping for Tammuz." Within a generation, the returning exiles were dating their summers by a month named for him — and the Jewish calendar has carried the name of Ezekiel's pagan grief, unremarked, ever since.
 
-First, the constellations. The star-figures came earliest of all — the Bull of Heaven, the Lion, the Scorpion were already fixed in the Mesopotamian sky before Abraham's day. They passed to the Greeks, who kept the pictures and handed them down under the Latin names we still use — Taurus, Leo, Scorpius. And then, onto that ancient band of stars, Babylonian astronomers laid a mathematics: by around the fifth century before Christ, they divided the sun's path into twelve equal thirty-degree signs. The pictures are ancient. The coordinate system laid over them is the newer Babylonian invention — and we still carry it.
+One small Book of Mormon note, made carefully. Lehi's family left Jerusalem around 600 BC — *before* those names were adopted — and the Nephite record never picks them up; it counts the older way — regnal years, years since Lehi left Jerusalem. A modest point, not proof of anything grand — but a quiet witness that the record's roots lie on the far side of the Babylonian shift.
 
-And second, the calendar. The same moon they tracked gave the month both its name and its length. The oldest calendars are purely lunar — just a run of new-moon months. Babylon bound those months to the solar year, and that gives you the lunisolar calendar, the one the Jewish year still keeps. And the calendar most of the modern West lives by finally cut the months loose from the moon altogether, into a purely solar year — though that last step is Roman, not Babylonian. Lunar, then lunisolar, then solar: three calendars in a line, and we still live inside the family that Babylon did the most to shape.
+Why did old Israel prefer bare numbers? One reading — an interpretation, not an established fact — points to a commandment: "make no mention of the name of other gods, neither let it be heard out of thy mouth." If pagan names must not cross your lips, "the seventh month" is safer than a month called Tammuz. Maybe true — but we can't prove the motive.
 
-Now the quieter story — the one that touches scripture directly.
+[warmly] Before anyone shakes a head at those exiles — the mirror. Our seven-day week isn't strictly Babylonian; it's Greco-Roman, and the Germanic peoples who borrowed it swapped in their own gods. Tuesday is Tiw's day. Wednesday, Woden's. Thursday, Thor's. Friday, Frigg's. Saturday still openly wears Saturn's name. The months are no better: January for Janus, March for Mars, July and August for the deified emperors. The Jewish calendar carries essentially *one* god's name. Ours is saturated with them. This is no summons to stop saying "Thursday" — the names are worn smooth, long emptied of worship. If anything, the exiles who kept "Tammuz" deserve *less* of our scrutiny than we who say "Thursday" and never once hear Thor.
 
-Before the exile, Israel mostly numbered its months. And the few month-names it did use — Abib, Zif, Ethanim, Bul — those are Canaanite words, farming words, not Babylonian ones. But then comes the exile. And the people come home carrying a whole new set of names — Babylonian names — the very ones still printed on the Jewish calendar today: Nisan, Iyar, Sivan, Tammuz, Av, Elul, Tishrei, Kislev, and the rest. And the tradition is completely honest about where they came from. The Jerusalem Talmud says it flatly: the names of the months came up with them from Babylon.
+[thoughtfully] But there's something worth hearing in the pattern. At the end of his life, Moses was told Israel would not keep faith — that they would "go a whoring after the gods of the strangers of the land." So God gave him a *song*, "that this song may be a witness for me against the children of Israel" — a testimony standing still "in the latter days." And the Song names the drift precisely: they would sacrifice "to gods whom they knew not, to new gods that came newly up, whom your fathers feared not."
 
-And one of those names should stop you cold. Tammuz. Because Tammuz was not a neutral label. He was a Babylonian god — the dying-and-rising deity of the seasons. And his mourning rites were one of the very abominations the prophet Ezekiel was shown, right there at the temple gate: "there sat women weeping for Tammuz." Within a single generation of that vision, the returning exiles were dating their own summers by a month named for him. And the Jewish calendar has carried that name, unremarked, ever since.
+[warmly] Read in that light, our god-saturated calendar becomes an unlikely witness — not a crime to be prosecuted, but a testimony no one meant to leave. New gods *did* come newly up. And they spread, until the whole world — the scattered covenant people included — kept their names in the ordinary counting of its days, having forgotten there was ever a covenant to break. Babylon taught the world to count time — and to *name* time after gods. And on that second lesson, the calendar we all speak stands quietly where Moses said his song would stand — one more witness, in the latter days, that the word spoken over Israel was kept… to the letter.
 
-Now — here is where you have to be careful, and honest. Because it would be very easy to shake your head at that. Until you look at your own week.
-
-Count it up. The Jewish calendar carries essentially one god's name: Tammuz. One. And our everyday calendar? It is saturated with them. Tuesday is Tiw's day. Wednesday belongs to Woden. Thursday — that is Thor. Friday is Frigg. Saturday still openly wears the name of Saturn. January is named for the god Janus, March for Mars the war-god, and July and August for two Roman emperors who had themselves declared gods. A pagan deity in most of the days of the week, and several of the months — and we say them without a flicker of thought.
-
-And I want to be clear about something: this is not a call to stop saying "Thursday." The names are worn smooth. They are empty of worship now, harmless on the tongue. If anything, the exiles who kept "Tammuz" deserve far less of our scrutiny than we do, saying "Thursday" and never once hearing Thor. But there is something worth hearing in the pattern itself.
-
-Here is a small, careful note worth making precisely. Lehi's family left Jerusalem around six hundred before Christ — before the Babylonian month-names were ever taken into Jewish use. And the Nephite record, cut off from that later change, never picks the Babylonian names up. It keeps counting time the older way — by the years since Lehi left Jerusalem, by the reign of the judges and the kings. It is a modest point, not a proof of anything grand. But it is a quiet, consistent little witness that the record's roots really do lie in the pre-exilic Israelite way of keeping time — on the far side of the Babylonian shift.
-
-And that brings us to the deepest layer of all.
-
-Near the end of his life, Moses was told that Israel would not keep faith — that they would, in the old phrase, "go a whoring after the gods of the strangers of the land," and break the covenant. So God gave Moses a song, and told him to teach it to the people — so that, in His own words, "this song may be a witness for me against the children of Israel." A testimony meant to still be standing in the latter days, after the people had, and I am quoting, "utterly corrupted" themselves. And the Song of Moses names the drift with startling precision. They would sacrifice, it says, "to gods whom they knew not, to new gods that came newly up, whom your fathers feared not."
-
-Now read the calendar in that light. New gods that came newly up — that is exactly what happened. They came up, and they spread, until the whole world — scattered Israel among the nations included — kept their names in the ordinary counting of its days. And here is the striking thing. The fact that those names are empty for us now, that we mean nothing by them — that does not soften the point. It sharpens it. Because the Song did not foresee a people who would choose other gods in open defiance. It foresaw a people who would carry them without a thought — who would forget there had ever been a covenant to break.
-
-Babylon taught the world to count time, with a brilliance we still lean on every hour of every day. And it also taught the world to name time after gods. And on that second lesson, the calendar we all speak stands quietly right where Moses said his song would stand — one more witness, in the latter days, that the word spoken over Israel was kept, to the letter.
-
-So the next time you write a date, or glance at a clock, or say the name of a day — you are holding a small piece of Babylon in your hand. The mathematics is a marvel. And the names — the names are a testimony that no one ever meant to leave.
+---
 
 # Pronunciation cheat-sheet
 
-- **Tammuz** — TAH-mooz
-- **Nisan** — nee-SAHN
-- **Iyar** — ee-YAR
-- **Sivan** — see-VAHN
-- **Av** — ahv
-- **Elul** — eh-LOOL
-- **Tishrei** — TISH-ray
-- **Kislev** — KIS-lev
-- **Abib** — ah-VEEV
-- **Zif** — zeef (also written Ziv)
-- **Ethanim** — ETH-uh-nim
-- **Bul** — bool
-- **saphar** — sah-FAR (Hebrew, "to count / recount")
-- **Ur of the Chaldees** — er (or oor) of the kal-DEEZ
-- **Chaldean** — kal-DEE-un
-- **Josephus** — joh-SEE-fus
-- **Jubilees** — JOO-buh-leez
-- **Ezekiel** — eh-ZEE-kee-ul
-- **Isaiah** — eye-ZAY-uh
-- **Lehi** — LEE-hy
-- **Nephite** — NEE-fyte
-- **Taurus / Leo / Scorpius** — TOR-us / LEE-oh / SKOR-pee-us
-- **Tiw** — teew (rhymes with "few")
-- **Woden** — WOH-din
-- **Frigg** — frig
-- **Janus** — JAY-nus
-- **lunisolar** — LOO-nih-soh-lar
+| Word          | Say it                          |
+| ------------- | ------------------------------- |
+| lunisolar     | loo-nih-SOH-ler                 |
+| sexagesimal   | sek-suh-JESS-ih-mul             |
+| Saros         | SAIR-oss                        |
+| Plimpton      | PLIMP-tun                       |
+| Hipparchus    | hih-PAR-kuss                    |
+| Ur / Chaldees | "er" (as in *fur*) / kal-DEEZ   |
+| saphar        | sah-FAR                         |
+| sepher        | SAY-fer                         |
+| Josephus      | joh-SEE-fuss                    |
+| Jubilees      | JOO-bih-leez                    |
+| Rosh Hashanah | rosh hah-shah-NAH               |
+| Abib          | AY-bib                          |
+| Zif           | ZIFF                            |
+| Ethanim       | ETH-uh-nim                      |
+| Bul           | BULL                            |
+| Nisan         | nee-SAHN                        |
+| Iyar          | ee-YAR                          |
+| Sivan         | see-VAHN                        |
+| Tammuz        | TAH-mooz                        |
+| Av            | AHV                             |
+| Elul          | eh-LOOL                         |
+| Tishrei       | TISH-ray                        |
+| Cheshvan      | KHESH-vahn ("kh" as in *Bach*)  |
+| Kislev        | KISS-lev                        |
+| Tevet         | TAY-vet                         |
+| Shevat        | sheh-VAHT                       |
+| Adar          | ah-DAR                          |
+| Ezekiel       | ih-ZEE-kee-ul                   |
+| Deuteronomy   | doo-ter-ON-uh-mee               |
+| Tiw           | TEE-oo (rhymes with "few")      |
+| Woden         | WOH-den                         |
+| Frigg         | FRIG                            |
+| Janus         | JAY-nus                         |
+| Mansfield     | MANZ-feeld                      |
+| Wildberger    | WILD-ber-ger                    |
