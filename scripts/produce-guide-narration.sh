@@ -50,18 +50,21 @@ PY
   curl -s --max-time 60 -X POST "http://localhost:8770/episode/$eid/auto-curve" \
     -H "Content-Type: application/json" -d '{"on":true}' -o /dev/null
 
-  # 3. produce; retry, since produce.py resumes from wavs already on disk
+  # 3. produce; retry, since produce.py resumes from wavs already on disk.
+  #    Success is judged by the master MP3 existing, NOT by exit code — the
+  #    master is written before the final log line, so a crash there still
+  #    yields a usable episode.
+  local master="$NS/episodes/$eid/export/$eid.mp3"
   local ok=0
   for attempt in 1 2 3 4 5 6; do
-    if "$NS/.venv/bin/python" "$NS/scripts/produce.py" "$eid" >>"$LOG" 2>&1; then ok=1; break; fi
-    say "      produce attempt $attempt aborted; retrying (resumes from disk)"
+    "$NS/.venv/bin/python" "$NS/scripts/produce.py" "$eid" >>"$LOG" 2>&1
+    if [ -f "$master" ]; then ok=1; break; fi
+    say "      produce attempt $attempt made no master; retrying (resumes from disk)"
     sleep 20
   done
-  [ "$ok" -ne 1 ] && { say "FAIL  $guide/$slug (produce gave up after 6)"; return 1; }
+  [ "$ok" -ne 1 ] && { say "FAIL  $guide/$slug (no master after 6 attempts)"; return 1; }
 
   # 4. re-encode to the published spec and install
-  local master="$NS/episodes/$eid/export/$eid.mp3"
-  [ -f "$master" ] || { say "FAIL  $guide/$slug (no master mp3)"; return 1; }
   mkdir -p "$(dirname "$dest")"
   ffmpeg -nostdin -v error -y -i "$master" -ac 1 -ar 48000 -b:a 64k -map_metadata -1 "$dest" \
     || { say "FAIL  $guide/$slug (ffmpeg)"; return 1; }
