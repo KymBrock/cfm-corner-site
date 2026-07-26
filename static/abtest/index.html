@@ -1,0 +1,16 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Integration test</title>
+<style>:root{--bg:#f4efe6;--card:#fbf8f2;--ink:#2c2a26;--muted:#6b655c;--accent:#6b8f5e;--gold:#b58b46;--line:#e2dccf}
+@media(prefers-color-scheme:dark){:root{--bg:#1c1a17;--card:#26231f;--ink:#ece7dc;--muted:#a49c8e;--accent:#8fb27e;--gold:#d0a860;--line:#38342d}}
+body{margin:0;font:16px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink);padding:2rem 1rem}.w{max-width:620px;margin:0 auto}
+h1{font-family:Georgia,serif;font-size:1.5rem;margin:0 0 .3rem}.sub{color:var(--muted);font-size:.92rem;margin:0 0 1rem}
+.q{background:rgba(181,139,70,.12);border:1px solid var(--gold);border-radius:12px;padding:.75rem .95rem;margin:0 0 1.1rem;font-size:.92rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.05rem 1.15rem;margin:0 0 .8rem}.name{font-family:Georgia,serif;font-size:1.1rem;margin:0 0 .5rem}
+.line{color:var(--muted);font-size:.9rem;margin:.3rem 0 .5rem}.line b{color:var(--ink)}.heb{font-size:1.1rem}.chip{display:inline-block;font-size:.72rem;padding:.08rem .45rem;border-radius:99px;background:var(--accent);color:#fff}audio{width:100%;height:34px}</style>
+<div class=w><h1>The integration, working</h1>
+<p class=sub>Generated through the actual studio pipeline — the routing is automatic now.</p>
+<div class=q><b>The one question:</b> does it sound like <i>one voice</i> across the seam? The first sentence came from the English model, the Hebrew sentence from the multilingual model — both cloned from your reference. Listen where English hands off to Hebrew.</div>
+<div class=card><div class=name>English chunk → Hebrew chunk, stitched</div>
+<div class=line><span class=chip>English model</span> "Now let us focus on the first ring. It gives us a stable outer layer of reference around the whole circle."</div>
+<div class=line><span class=chip>multilingual</span> "That word for joy is <span class=heb>שִׂמְחָה</span>, and in Chronicles it is never private happiness. It is the gladness of a people restored."</div>
+<audio controls preload=none src="langroute.mp3"></audio></div>
+</div>
