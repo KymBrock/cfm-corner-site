@@ -67,11 +67,19 @@
     {{ with .Params.charts }}
     <div class="chart-grid">
         {{ range . }}
+        {{ if .coming_soon }}
+        <div class="chart-card chart-card-soon" aria-disabled="true" style="opacity: 0.72; cursor: default;">
+            {{ with .image }}<img src="{{ . | relURL }}" alt="" style="width: 100%; height: auto; border-radius: 8px 8px 0 0; display: block;">{{ end }}
+            <h3>{{ .title }} <span style="display: inline-block; background: var(--sage-dark, #4a6b52); color: #fff; font-size: 0.58em; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; padding: 3px 9px; border-radius: 10px; vertical-align: middle; margin-left: 6px; white-space: nowrap;">Coming Soon</span></h3>
+            <p>{{ .description }}</p>
+        </div>
+        {{ else }}
         <a href="{{ .url | relURL }}" class="chart-card">
             {{ with .image }}<img src="{{ . | relURL }}" alt="" style="width: 100%; height: auto; border-radius: 8px 8px 0 0; display: block;">{{ end }}
             <h3>{{ .title }}</h3>
             <p>{{ .description }}</p>
         </a>
+        {{ end }}
         {{ end }}
     </div>
     {{ end }}
