@@ -16,7 +16,7 @@ Understanding the Bible on its own terms means stepping into the world that prod
       <span style="color: white; font-size: 0.8em; opacity: 0.9;">Tap to enlarge</span>
     </div>
   </div>
-  <p style="font-size: 0.8em; color: var(--text-muted); margin-top: 8px; font-style: italic;">The Hebrew calendar with agricultural seasons and appointed times. From <em>The Parable of Music</em> by Kymber Brockbank.</p>
+  <p style="font-size: 0.8em; color: var(--text-muted); margin-top: 8px; font-style: italic;">The Hebrew calendar with agricultural seasons and appointed times.</p>
 </div>
 
 <!-- Calendar Lightbox -->
