@@ -65,6 +65,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
     <span class="ers-yrbadge" id="ers-badge"></span>
     <img class="ers-map" src="/images/culture/babylon/maps/era-700bc.jpg" alt="The Assyrian empire at its height, c. 700 BC" loading="lazy">
     <img class="ers-map" src="/images/culture/babylon/maps/era-600bc.jpg" alt="The Near East after Assyria's fall, c. 600 BC: Babylon, Media, Lydia and Egypt" loading="lazy">
+    <img class="ers-map" src="/images/culture/babylon/maps/era-500bc.jpg" alt="The Achaemenid Persian empire, c. 500 BC, stretching from the Aegean and Egypt to the Indus" loading="lazy">
   </div>
   <p class="ers-cap" id="ers-cap"></p>
   <div class="ers-time" id="ers-time"></div>
@@ -75,7 +76,8 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 (function(){
   var ERAS=[
     {yr:"700 BC",lbl:"Assyria dominant",cap:"<b>700 BC &mdash; the Assyrian century.</b> One empire rules from Anatolia to the Gulf. The northern kingdom of <b>Israel</b> is already gone &mdash; its ten tribes deported &mdash; and <b>Judah</b> survives only as a trembling Assyrian vassal. Egypt watches from the southwest; Media stirs in the east."},
-    {yr:"600 BC",lbl:"Babylon rising",cap:"<b>600 BC &mdash; Assyria shattered.</b> In a single generation the giant fell. <b>Babylon</b> and its Median ally have seized the old Assyrian heartland, while Lydia and Egypt carve off the west. Judah is left exactly where this section begins: caught between <b>Egypt</b> and <b>Babylon</b>, every wrong bet ending at a siege wall."}
+    {yr:"600 BC",lbl:"Babylon rising",cap:"<b>600 BC &mdash; Assyria shattered.</b> In a single generation the giant fell. <b>Babylon</b> and its Median ally have seized the old Assyrian heartland, while Lydia and Egypt carve off the west. Judah is left exactly where this section begins: caught between <b>Egypt</b> and <b>Babylon</b>, every wrong bet ending at a siege wall."},
+    {yr:"500 BC",lbl:"Persia &amp; the return",cap:"<b>500 BC &mdash; the empire of deliverance.</b> Babylon itself has now fallen &mdash; to <b>Cyrus of Persia</b>, who let the exiles go home. The Achaemenid empire, the largest the world had yet seen, now rules from the Aegean to the Indus, Egypt included, and restored <b>Judah</b> is a small province within it. (Its story fills the <a href=\"/culture/ancient/achaemenid/\">Achaemenid guide</a>.)"}
   ];
   var stage=document.getElementById('ers-stage'),imgs=stage.querySelectorAll('.ers-map'),time=document.getElementById('ers-time'),cap=document.getElementById('ers-cap'),badge=document.getElementById('ers-badge');
   function show(n){
