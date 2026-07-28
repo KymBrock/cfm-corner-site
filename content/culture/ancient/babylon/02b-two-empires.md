@@ -79,39 +79,39 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
     <image href="/images/culture/babylon/maps/mideast-relief-base.jpg" x="0" y="0" width="3840" height="2403"/>
 
     <g id="jbe-s0">
-      <path class="jbe-arrow jbe-egy" marker-end="url(#jbe-ah-egy)" d="M 820,975 Q 985,865 1035,846 Q 1360,650 1675,515"/>
-      <g class="jbe-burst" transform="translate(1035,846)"><circle r="22"/><circle r="33"/></g>
+      <path class="jbe-arrow jbe-egy" marker-end="url(#jbe-ah-egy)" d="M 720,1140 Q 900,1000 983,962 Q 1200,730 1435,600"/>
+      <g class="jbe-burst" transform="translate(983,960)"><circle r="22"/><circle r="33"/></g>
     </g>
     <g id="jbe-s1">
-      <path class="jbe-arrow jbe-bab" marker-end="url(#jbe-ah-bab)" d="M 1850,1050 Q 1715,720 1585,498"/>
-      <path class="jbe-arrow jbe-egy jbe-dash" marker-end="url(#jbe-ah-egy)" d="M 1545,505 Q 1200,660 1035,852 Q 915,935 852,974"/>
-      <g class="jbe-burst" transform="translate(1565,478)"><circle r="22"/><circle r="33"/></g>
+      <path class="jbe-arrow jbe-bab" marker-end="url(#jbe-ah-bab)" d="M 1815,1020 Q 1520,760 1345,595"/>
+      <path class="jbe-arrow jbe-egy jbe-dash" marker-end="url(#jbe-ah-egy)" d="M 1310,585 Q 1050,850 983,962 Q 850,1055 728,1140"/>
+      <g class="jbe-burst" transform="translate(1327,576)"><circle r="22"/><circle r="33"/></g>
     </g>
     <g id="jbe-s2">
-      <path class="jbe-arrow jbe-bab" marker-end="url(#jbe-ah-bab)" d="M 1855,1080 Q 1470,1180 1150,1006"/>
-      <g class="jbe-burst" transform="translate(1210,1040)"><circle r="20"/><circle r="30"/></g>
-      <circle class="jbe-burst" cx="1055" cy="905" r="26" fill="none" stroke="#d5a93c" stroke-width="6"/>
+      <path class="jbe-arrow jbe-bab" marker-end="url(#jbe-ah-bab)" d="M 1820,1048 Q 1400,1180 1090,1085"/>
+      <g class="jbe-burst" transform="translate(1170,1118)"><circle r="20"/><circle r="30"/></g>
+      <circle class="jbe-burst" cx="984" cy="1042" r="26" fill="none" stroke="#d5a93c" stroke-width="6"/>
     </g>
     <g id="jbe-s3">
-      <path class="jbe-arrow jbe-bab" marker-end="url(#jbe-ah-bab)" d="M 1855,1072 Q 1460,1120 1200,1000 Q 1120,955 1082,918"/>
-      <path class="jbe-arrow jbe-dash" style="stroke:#6a5983;" d="M 1074,922 Q 1450,1012 1845,1080"/>
-      <g class="jbe-burst" transform="translate(1055,905)"><circle r="22"/><circle r="33"/></g>
+      <path class="jbe-arrow jbe-bab" marker-end="url(#jbe-ah-bab)" d="M 1812,1035 Q 1400,1120 1010,1046"/>
+      <path class="jbe-arrow jbe-dash" style="stroke:#6a5983;" d="M 1000,1050 Q 1400,1110 1812,1040"/>
+      <g class="jbe-burst" transform="translate(984,1042)"><circle r="22"/><circle r="33"/></g>
     </g>
     <g id="jbe-s4">
-      <path class="jbe-arrow jbe-egy jbe-dash" marker-end="url(#jbe-ah-egy)" d="M 858,972 Q 965,935 1050,914"/>
-      <path class="jbe-arrow jbe-bab" marker-end="url(#jbe-ah-bab)" d="M 1855,1072 Q 1460,1120 1200,1000 Q 1120,955 1082,918"/>
-      <g class="jbe-burst" transform="translate(1055,905)"><circle r="24"/><circle r="36"/><circle r="50"/></g>
+      <path class="jbe-arrow jbe-egy jbe-dash" marker-end="url(#jbe-ah-egy)" d="M 728,1140 Q 860,1090 972,1050"/>
+      <path class="jbe-arrow jbe-bab" marker-end="url(#jbe-ah-bab)" d="M 1812,1038 Q 1400,1120 1010,1046"/>
+      <g class="jbe-burst" transform="translate(984,1042)"><circle r="24"/><circle r="36"/><circle r="50"/></g>
     </g>
 
-    <text x="1300" y="1235" font-family="-apple-system,sans-serif" font-weight="700" font-size="27" letter-spacing="2" fill="#b9973f" opacity="0.85">SYRIAN DESERT</text>
+    <text x="1250" y="1185" font-family="-apple-system,sans-serif" font-weight="700" font-size="27" letter-spacing="2" fill="#b9973f" opacity="0.85">SYRIAN DESERT</text>
     <g class="jbe-city" font-family="-apple-system,sans-serif" font-weight="700" font-size="28" fill="#2a2620">
-      <circle cx="820" cy="978" r="8" fill="#2a2620"/><text x="690" y="1010">Egypt</text>
-      <circle cx="1035" cy="846" r="7" fill="#2a2620"/><text x="1050" y="838">Megiddo</text>
-      <circle cx="1055" cy="905" r="9" fill="#7a1010"/><text x="895" y="932" fill="#7a1010">Jerusalem</text>
-      <circle cx="1190" cy="720" r="7" fill="#2a2620"/><text x="1205" y="714">Riblah</text>
-      <circle cx="1565" cy="475" r="7" fill="#2a2620"/><text x="1395" y="454">Carchemish</text>
-      <circle cx="1690" cy="495" r="7" fill="#2a2620"/><text x="1706" y="490">Harran</text>
-      <circle cx="1855" cy="1072" r="9" fill="#7a1010"/><text x="1735" y="1108" fill="#7a1010">Babylon</text>
+      <circle cx="711" cy="1148" r="8" fill="#2a2620"/><text x="600" y="1180">Egypt</text>
+      <circle cx="983" cy="960" r="7" fill="#2a2620"/><text x="997" y="954">Megiddo</text>
+      <circle cx="984" cy="1042" r="9" fill="#7a1010"/><text x="828" y="1072" fill="#7a1010">Jerusalem</text>
+      <circle cx="1130" cy="786" r="7" fill="#2a2620"/><text x="1144" y="782">Riblah</text>
+      <circle cx="1327" cy="576" r="7" fill="#2a2620"/><text x="1160" y="558">Carchemish</text>
+      <circle cx="1444" cy="589" r="7" fill="#2a2620"/><text x="1458" y="585">Harran</text>
+      <circle cx="1823" cy="1038" r="9" fill="#7a1010"/><text x="1703" y="1072" fill="#7a1010">Babylon</text>
     </g>
   </svg>
   <p class="jbe-cap" id="jbe-cap"></p>

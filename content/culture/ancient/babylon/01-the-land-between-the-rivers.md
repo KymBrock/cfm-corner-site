@@ -121,25 +121,25 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <figure class="mreg">
 <svg viewBox="1400 430 1080 1130" role="img" aria-label="Relief map of Mesopotamia showing the regions of Assyria, Akkad, Sumer, the Sealand, and Elam, with the Tigris and Euphrates and the cities Assur, Babylon, Nippur, Uruk, Ur, and Eridu">
   <image href="/images/culture/babylon/maps/mideast-relief-base.jpg" x="0" y="0" width="3840" height="2403"/>
-  <ellipse cx="1930" cy="710" rx="210" ry="150" fill="#3f647a" opacity="0.24"/>
-  <ellipse cx="1850" cy="1045" rx="185" ry="125" fill="#c98f1f" opacity="0.26"/>
-  <ellipse cx="2005" cy="1235" rx="150" ry="105" fill="#c65528" opacity="0.24"/>
-  <ellipse cx="2075" cy="1350" rx="105" ry="62" fill="#4a6b52" opacity="0.30"/>
-  <ellipse cx="2330" cy="1090" rx="165" ry="200" fill="#9f6578" opacity="0.20"/>
+  <ellipse cx="1900" cy="760" rx="205" ry="150" fill="#3f647a" opacity="0.22"/>
+  <ellipse cx="1795" cy="1035" rx="180" ry="108" fill="#c98f1f" opacity="0.26"/>
+  <ellipse cx="1852" cy="1165" rx="158" ry="100" fill="#c65528" opacity="0.24"/>
+  <ellipse cx="1978" cy="1242" rx="108" ry="58" fill="#4a6b52" opacity="0.30"/>
+  <ellipse cx="2225" cy="1085" rx="160" ry="185" fill="#9f6578" opacity="0.20"/>
   <g font-family="-apple-system,Segoe UI,sans-serif" font-weight="800" letter-spacing="2">
-    <text x="1820" y="700" font-size="40" fill="#274a5e">ASSYRIA</text>
-    <text x="1760" y="1035" font-size="40" fill="#8a5f10">AKKAD</text>
-    <text x="1868" y="1205" font-size="38" fill="#8a2f10">SUMER</text>
-    <text x="2018" y="1378" font-size="24" fill="#2c4433">SEALAND</text>
-    <text x="2250" y="1090" font-size="36" fill="#6a3f4e">ELAM</text>
+    <text x="1735" y="748" font-size="40" fill="#274a5e">ASSYRIA</text>
+    <text x="1648" y="1012" font-size="40" fill="#8a5f10">AKKAD</text>
+    <text x="1690" y="1168" font-size="36" fill="#8a2f10">SUMER</text>
+    <text x="1905" y="1262" font-size="23" fill="#2c4433">SEALAND</text>
+    <text x="2150" y="1058" font-size="36" fill="#6a3f4e">ELAM</text>
   </g>
   <g font-family="-apple-system,Segoe UI,sans-serif" font-weight="700" font-size="26" fill="#2a2620">
-    <circle cx="1852" cy="775" r="8" fill="#2a2620"/><text x="1868" y="771">Assur</text>
-    <circle cx="1855" cy="1072" r="9" fill="#7a1010"/><text x="1760" y="1068" fill="#7a1010">Babylon</text>
-    <circle cx="1958" cy="1158" r="7" fill="#2a2620"/><text x="1972" y="1154">Nippur</text>
-    <circle cx="1992" cy="1228" r="7" fill="#2a2620"/><text x="2006" y="1224">Uruk</text>
-    <circle cx="2022" cy="1288" r="7" fill="#2a2620"/><text x="2036" y="1300">Ur</text>
-    <circle cx="2010" cy="1318" r="7" fill="#2a2620"/><text x="1930" y="1345">Eridu</text>
+    <circle cx="1860" cy="778" r="8" fill="#2a2620"/><text x="1875" y="774">Assur</text>
+    <circle cx="1823" cy="1038" r="9" fill="#7a1010"/><text x="1838" y="1034" fill="#7a1010">Babylon</text>
+    <circle cx="1872" cy="1078" r="7" fill="#2a2620"/><text x="1886" y="1074">Nippur</text>
+    <circle cx="1858" cy="1146" r="7" fill="#2a2620"/><text x="1872" y="1142">Uruk</text>
+    <circle cx="1874" cy="1177" r="7" fill="#2a2620"/><text x="1888" y="1181">Ur</text>
+    <circle cx="1856" cy="1189" r="7" fill="#2a2620"/><text x="1770" y="1206">Eridu</text>
   </g>
 </svg>
 <figcaption class="mreg-cap">Mesopotamia was never one place. Northern <b>Assyria</b> straddled the upper Tigris; the southern plain split into <b>Akkad</b> (around Babylon) and <b>Sumer</b> (toward the Gulf), with the marshy <b>Sealand</b> at its southern edge and <b>Elam</b> across the Tigris to the east. <span class="mreg-credit">Relief base map &copy; S&eacute;mhur, Wikimedia Commons (CC BY-SA 4.0); regions &amp; labels by CFM Corner</span></figcaption>
