@@ -41,23 +41,22 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 .jbe-head h4 { margin:0; font-size:1.05rem; color:#3c3a33; }
 .jbe-head p { margin:4px 0 0; font-size:.82rem; color:#8a8172; }
 .jbe-map { display:block; width:100%; height:auto; }
-.jbe-arrow { fill:none; stroke-width:9; stroke-linecap:round; opacity:0; transition:opacity .35s; }
-.jbe-arrow.show { opacity:.98; }
-.jbe-egy { stroke:#e0a92e; } .jbe-egy-h { fill:#e0a92e; }
-.jbe-bab { stroke:#c65528; } .jbe-bab-h { fill:#c65528; }
-.jbe-dash { stroke-dasharray:16 12; }
+.jbe-arrow { fill:none; stroke-width:10; stroke-linecap:round; opacity:0; transition:opacity .35s; }
+.jbe-arrow.show { opacity:1; }
+.jbe-egy { stroke:#f0b400; } .jbe-egy-h { fill:#f0b400; }
+.jbe-bab { stroke:#d84315; } .jbe-bab-h { fill:#d84315; }
+.jbe-dash { stroke-dasharray:18 13; }
 .jbe-burst { opacity:0; transition:opacity .35s; }
 .jbe-burst.show { opacity:1; }
-.jbe-burst circle { fill:none; stroke:#c0392b; stroke-width:5; }
-.jbe-city text { paint-order:stroke; stroke:#f6efe0; stroke-width:5; }
+.jbe-burst circle { fill:none; stroke:#c0392b; stroke-width:6; }
 .jbe-cap { padding:12px 18px 6px; font-size:.9rem; line-height:1.5; color:#443f37; min-height:3.2em; border-top:1px solid #eee6d8; }
 .jbe-cap b { color:#7a3030; }
 .jbe-time { display:flex; gap:0; padding:6px 10px 16px; position:relative; }
 .jbe-time::before { content:""; position:absolute; left:44px; right:44px; top:26px; height:3px; background:#e0d8c7; border-radius:3px; }
 .jbe-step { flex:1; background:none; border:none; cursor:pointer; padding:0; display:flex; flex-direction:column; align-items:center; gap:6px; font-family:inherit; position:relative; z-index:1; }
 .jbe-dot { width:20px; height:20px; border-radius:50%; background:#fff; border:3px solid #c9b98f; transition:transform .2s,border-color .2s,background .2s; }
-.jbe-step.egy .jbe-dot { border-color:#d5a93c; } .jbe-step.bab .jbe-dot { border-color:#c65528; }
-.jbe-step.is-active .jbe-dot { transform:scale(1.35); background:#c65528; border-color:#c65528; }
+.jbe-step.egy .jbe-dot { border-color:#d5a93c; } .jbe-step.bab .jbe-dot { border-color:#d84315; }
+.jbe-step.is-active .jbe-dot { transform:scale(1.35); background:#d84315; border-color:#d84315; }
 .jbe-step.is-active.egy .jbe-dot { background:#d5a93c; border-color:#d5a93c; }
 .jbe-yr { font-size:.78rem; font-weight:800; color:#5a544a; }
 .jbe-lbl { font-size:.66rem; color:#8a8172; line-height:1.1; max-width:88px; }
@@ -70,53 +69,21 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div class="jbe">
   <div class="jbe-head"><h4>Judah Between the Empires</h4>
-  <p>The same mistake, three times over. Step through 609&ndash;586 BC and watch each bet on Egypt end at a siege wall.</p></div>
-  <svg class="jbe-map" viewBox="600 380 1620 1120" role="img" aria-label="Relief map of the campaigns between Egypt and Babylon, 609 to 586 BC, showing Egypt, Jerusalem, Megiddo, Carchemish, Harran, and Babylon">
+  <p>The same mistake, three times over. Step through 609&ndash;586 BC &mdash; each bet on Egypt ended at a siege wall.</p></div>
+  <svg class="jbe-map" viewBox="230 440 1800 1090" role="img" aria-label="Map of the campaigns between Egypt and Babylon, 609 to 586 BC">
     <defs>
       <marker id="jbe-ah-egy" markerWidth="5" markerHeight="5" refX="3.5" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 Z" class="jbe-egy-h"/></marker>
       <marker id="jbe-ah-bab" markerWidth="5" markerHeight="5" refX="3.5" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 Z" class="jbe-bab-h"/></marker>
+      <filter id="jbe-sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#000" flood-opacity="0.55"/></filter>
     </defs>
-    <image href="/images/culture/babylon/maps/mideast-relief-base.jpg" x="0" y="0" width="3840" height="2403"/>
+    <image href="/images/culture/babylon/maps/babylon-campaign-base.jpg" x="0" y="0" width="3840" height="2403"/>
 
-    <g id="jbe-s0">
-      <path class="jbe-arrow jbe-egy" marker-end="url(#jbe-ah-egy)" d="M 720,1140 Q 900,1000 983,962 Q 1200,730 1435,600"/>
-      <g class="jbe-burst" transform="translate(983,960)"><circle r="22"/><circle r="33"/></g>
-    </g>
-    <g id="jbe-s1">
-      <path class="jbe-arrow jbe-bab" marker-end="url(#jbe-ah-bab)" d="M 1815,1020 Q 1520,760 1345,595"/>
-      <path class="jbe-arrow jbe-egy jbe-dash" marker-end="url(#jbe-ah-egy)" d="M 1310,585 Q 1050,850 983,962 Q 850,1055 728,1140"/>
-      <g class="jbe-burst" transform="translate(1327,576)"><circle r="22"/><circle r="33"/></g>
-    </g>
-    <g id="jbe-s2">
-      <path class="jbe-arrow jbe-bab" marker-end="url(#jbe-ah-bab)" d="M 1820,1048 Q 1400,1180 1090,1085"/>
-      <g class="jbe-burst" transform="translate(1170,1118)"><circle r="20"/><circle r="30"/></g>
-      <circle class="jbe-burst" cx="984" cy="1042" r="26" fill="none" stroke="#d5a93c" stroke-width="6"/>
-    </g>
-    <g id="jbe-s3">
-      <path class="jbe-arrow jbe-bab" marker-end="url(#jbe-ah-bab)" d="M 1812,1035 Q 1400,1120 1010,1046"/>
-      <path class="jbe-arrow jbe-dash" style="stroke:#6a5983;" d="M 1000,1050 Q 1400,1110 1812,1040"/>
-      <g class="jbe-burst" transform="translate(984,1042)"><circle r="22"/><circle r="33"/></g>
-    </g>
-    <g id="jbe-s4">
-      <path class="jbe-arrow jbe-egy jbe-dash" marker-end="url(#jbe-ah-egy)" d="M 728,1140 Q 860,1090 972,1050"/>
-      <path class="jbe-arrow jbe-bab" marker-end="url(#jbe-ah-bab)" d="M 1812,1038 Q 1400,1120 1010,1046"/>
-      <g class="jbe-burst" transform="translate(984,1042)"><circle r="24"/><circle r="36"/><circle r="50"/></g>
-    </g>
-
-    <text x="1250" y="1185" font-family="-apple-system,sans-serif" font-weight="700" font-size="27" letter-spacing="2" fill="#b9973f" opacity="0.85">SYRIAN DESERT</text>
-    <g class="jbe-city" font-family="-apple-system,sans-serif" font-weight="700" font-size="28" fill="#2a2620">
-      <circle cx="711" cy="1148" r="8" fill="#2a2620"/><text x="600" y="1180">Egypt</text>
-      <circle cx="983" cy="960" r="7" fill="#2a2620"/><text x="997" y="954">Megiddo</text>
-      <circle cx="984" cy="1042" r="9" fill="#7a1010"/><text x="828" y="1072" fill="#7a1010">Jerusalem</text>
-      <circle cx="1130" cy="786" r="7" fill="#2a2620"/><text x="1144" y="782">Riblah</text>
-      <circle cx="1327" cy="576" r="7" fill="#2a2620"/><text x="1160" y="558">Carchemish</text>
-      <circle cx="1444" cy="589" r="7" fill="#2a2620"/><text x="1458" y="585">Harran</text>
-      <circle cx="1823" cy="1038" r="9" fill="#7a1010"/><text x="1703" y="1072" fill="#7a1010">Babylon</text>
-    </g>
+    <!-- campaign arrows removed pending exact city coords from Illustrator; map + timeline stepper stand alone -->
+    <g id="jbe-s0"></g><g id="jbe-s1"></g><g id="jbe-s2"></g><g id="jbe-s3"></g><g id="jbe-s4"></g>
   </svg>
   <p class="jbe-cap" id="jbe-cap"></p>
   <div class="jbe-time" id="jbe-time"></div>
-  <div class="jbe-legend"><span><i class="jbe-sw" style="background:#d5a93c;"></i> a bet on Egypt</span><span><i class="jbe-sw" style="background:#c65528;"></i> Babylon&rsquo;s answer</span></div>
+  <div class="jbe-legend"><span><i class="jbe-sw" style="background:#f0b400;"></i> a bet on Egypt</span><span><i class="jbe-sw" style="background:#d84315;"></i> Babylon&rsquo;s answer</span></div>
 </div>
 
 <script>
