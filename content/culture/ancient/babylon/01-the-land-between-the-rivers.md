@@ -121,17 +121,17 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <figure class="mreg">
 <svg viewBox="1400 430 1080 1130" role="img" aria-label="Relief map of Mesopotamia showing the regions of Assyria, Akkad, Sumer, the Sealand, and Elam, with the Tigris and Euphrates and the cities Assur, Babylon, Nippur, Uruk, Ur, and Eridu">
   <image href="/images/culture/babylon/maps/mideast-relief-base.jpg" x="0" y="0" width="3840" height="2403"/>
-  <ellipse cx="1900" cy="760" rx="205" ry="150" fill="#3f647a" opacity="0.22"/>
-  <ellipse cx="1795" cy="1035" rx="180" ry="108" fill="#c98f1f" opacity="0.26"/>
-  <ellipse cx="1852" cy="1165" rx="158" ry="100" fill="#c65528" opacity="0.24"/>
-  <ellipse cx="1978" cy="1242" rx="108" ry="58" fill="#4a6b52" opacity="0.30"/>
-  <ellipse cx="2225" cy="1085" rx="160" ry="185" fill="#9f6578" opacity="0.20"/>
+  <ellipse cx="1895" cy="728" rx="185" ry="150" transform="rotate(-32 1895 728)" fill="#3f647a" opacity="0.22"/>
+  <ellipse cx="1828" cy="1002" rx="120" ry="110" transform="rotate(-18 1828 1002)" fill="#c98f1f" opacity="0.26"/>
+  <ellipse cx="1868" cy="1168" rx="120" ry="105" transform="rotate(-14 1868 1168)" fill="#c65528" opacity="0.24"/>
+  <ellipse cx="1972" cy="1246" rx="98" ry="52" fill="#4a6b52" opacity="0.30"/>
+  <ellipse cx="2210" cy="1075" rx="140" ry="170" transform="rotate(-28 2210 1075)" fill="#9f6578" opacity="0.20"/>
   <g font-family="-apple-system,Segoe UI,sans-serif" font-weight="800" letter-spacing="2">
-    <text x="1735" y="748" font-size="40" fill="#274a5e">ASSYRIA</text>
-    <text x="1648" y="1012" font-size="40" fill="#8a5f10">AKKAD</text>
-    <text x="1690" y="1168" font-size="36" fill="#8a2f10">SUMER</text>
-    <text x="1905" y="1262" font-size="23" fill="#2c4433">SEALAND</text>
-    <text x="2150" y="1058" font-size="36" fill="#6a3f4e">ELAM</text>
+    <text x="1748" y="690" font-size="38" fill="#274a5e">ASSYRIA</text>
+    <text x="1690" y="988" font-size="36" fill="#8a5f10">AKKAD</text>
+    <text x="1706" y="1170" font-size="34" fill="#8a2f10">SUMER</text>
+    <text x="1902" y="1266" font-size="23" fill="#2c4433">SEALAND</text>
+    <text x="2168" y="1050" font-size="34" fill="#6a3f4e">ELAM</text>
   </g>
   <g font-family="-apple-system,Segoe UI,sans-serif" font-weight="700" font-size="26" fill="#2a2620">
     <circle cx="1860" cy="778" r="8" fill="#2a2620"/><text x="1875" y="774">Assur</text>
