@@ -274,10 +274,69 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <p style="margin: 0;"><strong>Sargon, the king who wasn&rsquo;t there:</strong> for most of the nineteenth century, skeptics noted that the mighty Sargon II &mdash; named in scripture exactly once, &ldquo;when Sargon the king of Assyria sent&rdquo; his commander against Ashdod (<a href="https://www.blueletterbible.org/kjv/isa/20/1/" target="_blank" data-ref="Isaiah 20:1">Isaiah 20:1</a>) &mdash; appeared in no other ancient record at all, and treated him as a biblical error. Then in 1843 Paul-&Eacute;mile Botta&rsquo;s excavations at Khorsabad uncovered Sargon&rsquo;s own vast palace, its walls covered with his annals. A king known from a single Bible verse turned out to have built one of the largest palaces in the ancient world. It is a parable, often repeated, of how Assyriology has treated the Old Testament&rsquo;s incidental details.</p>
 </div>
 
-<figure class="fg-figure" style="max-width:820px;">
-  <img src="/images/culture/assyria/maps/assyria-empire-700bc.jpg" alt="Map of the Assyrian empire at its height around 700 BC, reaching from Anatolia to the Persian Gulf, anchored on the Tigris at Assur and Nineveh" loading="lazy">
-  <figcaption>The Assyrian empire near its peak, <b>c. 700 BC</b>: a single power reaching from Anatolia to the Persian Gulf, anchored on the Tigris at <b>Assur</b> and <b>Nineveh</b>. The northern kingdom of <b>Israel</b> has already been deported; <b>Judah</b> survives only as a vassal; Egypt watches from the southwest and Media stirs in the east. <span class="fg-credit">Map by CFM Corner on a S&eacute;mhur relief base (CC BY-SA 4.0)</span></figcaption>
-</figure>
+<!-- ===== EMPIRES IN SEQUENCE (ers) ===== -->
+<style>
+.ers { border:1px solid #e2ddd3; border-radius:16px; overflow:hidden; margin:26px 0; background:#fbf9f5; box-shadow:0 6px 18px rgba(0,0,0,.07); font-family:-apple-system,Segoe UI,Roboto,sans-serif; }
+.ers-head { padding:16px 18px 4px; }
+.ers-head h4 { margin:0; font-size:1.05rem; color:#3c3a33; }
+.ers-head p { margin:4px 0 0; font-size:.82rem; color:#8a8172; }
+.ers-stage { position:relative; background:#dfe6e2; line-height:0; }
+.ers-stage .ers-map { display:block; width:100%; height:auto; margin:0; opacity:0; transition:opacity .55s ease; }
+.ers-map:first-of-type { position:relative; }
+.ers-map:not(:first-of-type) { position:absolute; top:0; left:0; }
+.ers-map.active { opacity:1; }
+.ers-yrbadge { position:absolute; top:12px; left:14px; z-index:2; background:rgba(56,55,49,.72); color:#fff; font-size:.8rem; font-weight:800; letter-spacing:.03em; padding:4px 11px; border-radius:999px; }
+.ers-cap { padding:12px 18px 6px; font-size:.9rem; line-height:1.5; color:#443f37; min-height:4.2em; border-top:1px solid #eee6d8; }
+.ers-cap b { color:#7a3030; }
+.ers-time { display:flex; gap:0; padding:8px 12px 18px; position:relative; }
+.ers-time::before { content:""; position:absolute; left:60px; right:60px; top:16px; height:3px; background:#e0d8c7; border-radius:3px; }
+.ers-step { flex:1; background:none; border:none; cursor:pointer; padding:0; display:flex; flex-direction:column; align-items:center; gap:7px; font-family:inherit; position:relative; z-index:1; }
+.ers-dot { width:22px; height:22px; border-radius:50%; background:#fff; border:3px solid #c9b98f; transition:transform .2s,background .2s,border-color .2s; }
+.ers-step.is-active .ers-dot { transform:scale(1.3); background:#c65528; border-color:#c65528; }
+.ers-yr { font-size:.82rem; font-weight:800; color:#5a544a; }
+.ers-lbl { font-size:.68rem; color:#8a8172; line-height:1.15; max-width:120px; }
+.ers-step.is-active .ers-yr { color:#3c3a33; }
+.ers-cred { text-align:center; font-size:.68rem; font-style:italic; color:#a89f90; padding:0 12px 12px; }
+@media (max-width:560px){ .ers-lbl{ display:none; } .ers-time::before{ left:40px; right:40px; } }
+</style>
+
+<div class="ers">
+  <div class="ers-head"><h4>The Empires in Sequence</h4>
+  <p>Slide from Assyria&rsquo;s height through its fall to the powers that replaced it &mdash; Babylon, then Persia.</p></div>
+  <div class="ers-stage" id="ers-stage">
+    <span class="ers-yrbadge" id="ers-badge"></span>
+    <img class="ers-map" src="/images/culture/babylon/maps/era-700bc.jpg" alt="The Assyrian empire at its height, c. 700 BC" loading="lazy">
+    <img class="ers-map" src="/images/culture/babylon/maps/era-600bc.jpg" alt="The Near East after Assyria's fall, c. 600 BC: Babylon, Media, Lydia and Egypt" loading="lazy">
+    <img class="ers-map" src="/images/culture/babylon/maps/era-500bc.jpg" alt="The Achaemenid Persian empire, c. 500 BC" loading="lazy">
+  </div>
+  <p class="ers-cap" id="ers-cap"></p>
+  <div class="ers-time" id="ers-time"></div>
+  <div class="ers-cred">Maps by CFM Corner on a S&eacute;mhur relief base (CC BY-SA 4.0)</div>
+</div>
+
+<script>
+(function(){
+  var ERAS=[
+    {yr:"700 BC",lbl:"Assyria dominant",cap:"<b>700 BC &mdash; Assyria&rsquo;s century.</b> One empire rules from Anatolia to the Gulf. The northern kingdom of <b>Israel</b> is already gone &mdash; its ten tribes deported &mdash; and <b>Judah</b> survives only as a trembling Assyrian vassal. Egypt watches from the southwest; Media stirs in the east."},
+    {yr:"600 BC",lbl:"Babylon rising",cap:"<b>600 BC &mdash; Assyria shattered.</b> In a single generation the giant fell: Nineveh itself was stormed and burned in 612 BC. <b>Babylon</b> and its Median ally seized the old Assyrian heartland, while Lydia and Egypt carved off the west. The power that had ruled the Near East for three centuries was simply gone."},
+    {yr:"500 BC",lbl:"Persia &amp; the return",cap:"<b>500 BC &mdash; Persia&rsquo;s turn.</b> Babylon too has now fallen &mdash; to <b>Cyrus of Persia</b>. The Achaemenid empire, the largest the world had yet seen, rules from the Aegean to the Indus, Egypt included. (Its story fills the <a href=\"/culture/ancient/achaemenid/\">Achaemenid guide</a>.)"}
+  ];
+  var stage=document.getElementById('ers-stage'),imgs=stage.querySelectorAll('.ers-map'),time=document.getElementById('ers-time'),cap=document.getElementById('ers-cap'),badge=document.getElementById('ers-badge');
+  function show(n){
+    for(var i=0;i<imgs.length;i++) imgs[i].classList.toggle('active',i===n);
+    var btns=time.querySelectorAll('.ers-step'); for(var j=0;j<btns.length;j++) btns[j].classList.toggle('is-active',j===n);
+    cap.innerHTML=ERAS[n].cap; badge.textContent=ERAS[n].yr;
+  }
+  ERAS.forEach(function(e,idx){
+    var b=document.createElement('button'); b.className='ers-step'; b.type='button';
+    b.innerHTML='<span class="ers-dot"></span><span class="ers-yr">'+e.yr+'</span><span class="ers-lbl">'+e.lbl+'</span>';
+    b.addEventListener('click',function(){ show(idx); });
+    time.appendChild(b);
+  });
+  show(0);
+})();
+</script>
+<!-- ===== /ers ===== -->
 
 <br>
 
@@ -331,7 +390,6 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </div>
 
 
-<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}
