@@ -36,6 +36,12 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>Understanding this landscape is the first step to understanding Babylon &mdash; why it grew, why it needed to trade and conquer, why its temples were towers of brick rather than stone, and why its armies kept appearing on Judah&rsquo;s horizon. Geography is not destiny, but in Mesopotamia it came close.</p>
 
+<p style="text-align: center; color: #666; font-style: italic; margin: 0 0 8px 0;">Babylon in its world &mdash; drag the slider through the ages, from Sumer to Rome. It opens on the Neo-Babylonian empire of Nebuchadnezzar, c. 600 BC.</p>
+
+<link rel="stylesheet" href="/css/era-map-widget.css">
+<div class="era-map-widget" data-start-era="600"></div>
+<script src="/js/era-map-widget.js"></script>
+
 <br>
 
 <hr>
