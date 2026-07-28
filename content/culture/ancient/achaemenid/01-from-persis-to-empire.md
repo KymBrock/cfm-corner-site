@@ -117,6 +117,11 @@ draft: true
 
 <p>Five kings, five biblical books touched, and one long thread running through them all: the God of a captive people quietly steering the greatest empire on earth toward their restoration.</p>
 
+<figure class="fg-figure" style="max-width:860px;">
+  <img src="/images/culture/achaemenid/maps/achaemenid-empire-500bc.jpg" alt="Map of the Achaemenid Persian empire around 500 BC, stretching from Greece and Egypt across the whole Near East to Persia and the Zagros" loading="lazy">
+  <figcaption>The empire that small kingdom became: the <b>Achaemenid</b> realm near its height, <b>c. 500 BC</b> &mdash; the largest the world had yet seen, reaching from the Aegean and Egypt across the whole Near East to <b>Persia</b> and beyond. Restored <b>Judah</b> is a single small province within it. <span class="fg-credit">Map by CFM Corner on a S&eacute;mhur relief base (CC BY-SA 4.0)</span></figcaption>
+</figure>
+
 <br>
 
 <hr>
@@ -148,6 +153,7 @@ draft: true
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}

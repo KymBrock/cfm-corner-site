@@ -274,6 +274,11 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <p style="margin: 0;"><strong>Sargon, the king who wasn&rsquo;t there:</strong> for most of the nineteenth century, skeptics noted that the mighty Sargon II &mdash; named in scripture exactly once, &ldquo;when Sargon the king of Assyria sent&rdquo; his commander against Ashdod (<a href="https://www.blueletterbible.org/kjv/isa/20/1/" target="_blank" data-ref="Isaiah 20:1">Isaiah 20:1</a>) &mdash; appeared in no other ancient record at all, and treated him as a biblical error. Then in 1843 Paul-&Eacute;mile Botta&rsquo;s excavations at Khorsabad uncovered Sargon&rsquo;s own vast palace, its walls covered with his annals. A king known from a single Bible verse turned out to have built one of the largest palaces in the ancient world. It is a parable, often repeated, of how Assyriology has treated the Old Testament&rsquo;s incidental details.</p>
 </div>
 
+<figure class="fg-figure" style="max-width:820px;">
+  <img src="/images/culture/assyria/maps/assyria-empire-700bc.jpg" alt="Map of the Assyrian empire at its height around 700 BC, reaching from Anatolia to the Persian Gulf, anchored on the Tigris at Assur and Nineveh" loading="lazy">
+  <figcaption>The Assyrian empire near its peak, <b>c. 700 BC</b>: a single power reaching from Anatolia to the Persian Gulf, anchored on the Tigris at <b>Assur</b> and <b>Nineveh</b>. The northern kingdom of <b>Israel</b> has already been deported; <b>Judah</b> survives only as a vassal; Egypt watches from the southwest and Media stirs in the east. <span class="fg-credit">Map by CFM Corner on a S&eacute;mhur relief base (CC BY-SA 4.0)</span></figcaption>
+</figure>
+
 <br>
 
 <hr>
@@ -326,6 +331,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}
