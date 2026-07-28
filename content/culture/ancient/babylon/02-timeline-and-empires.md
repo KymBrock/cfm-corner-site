@@ -93,11 +93,6 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <br>
 
-<figure class="fg-figure">
-  <img src="/images/culture/babylon/photos/code-of-hammurabi-louvre.jpg" alt="The law stele of Hammurabi, Louvre" loading="lazy">
-  <figcaption>The stele of Hammurabi&rsquo;s laws (c. 1750 BC) &mdash; the king receives his commission from the sun-god Shamash, above 282 laws in cuneiform. <span class="fg-credit">Louvre; photo Mbzt &middot; Wikimedia Commons (CC BY 3.0)</span></figcaption>
-</figure>
-
 <h3>Visual Timeline: From Hammurabi to the Fall</h3>
 
 <div style="position: relative; margin: 32px 0 40px 0; padding-left: 40px;">
@@ -303,6 +298,11 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </figure>
 
 <p>Hammurabi is best remembered for his <strong>law code</strong> &mdash; 282 judgments carved on a two-meter black diorite stele beneath an image of the king receiving the symbols of justice from the sun god Shamash. Its formula &mdash; <em>if a man does X, then Y</em> &mdash; is the same casuistic style found in the covenant law of Exodus (compare <a href="https://www.blueletterbible.org/kjv/exo/21/28/" target="_blank" data-ref="Exodus 21:28-29">Exodus 21:28&ndash;29</a> with the code&rsquo;s famous goring-ox laws), and its stated ideal &mdash; &ldquo;that the strong might not oppress the weak&rdquo; &mdash; echoes through all subsequent Near Eastern law. The resemblances are real, and so are the differences: biblical law grounds justice in covenant with God rather than royal boast, values persons over property more consistently, and applies one standard across social classes far more often. Scholars generally see both codes as drawing on a shared, older legal culture &mdash; the common law of the ancient Near East &mdash; rather than direct copying. (More on scribal law in <a href="/culture/ancient/babylon/05-writing-and-learning/">Section 05</a>.)</p>
+
+<figure class="fg-figure" style="max-width:520px;">
+  <img src="/images/culture/babylon/photos/code-of-hammurabi-louvre.jpg" alt="The law stele of Hammurabi, Louvre" loading="lazy">
+  <figcaption>The stele of Hammurabi&rsquo;s laws (c. 1750 BC) &mdash; the king receives his commission from the sun-god Shamash, above 282 laws in cuneiform. <span class="fg-credit">Louvre; photo Mbzt &middot; Wikimedia Commons (CC BY 3.0)</span></figcaption>
+</figure>
 
 <p>Politically, Hammurabi&rsquo;s empire barely outlived him. But something more durable had happened: his dynasty made Babylon the seat of Marduk, and Marduk&rsquo;s city became the religious and intellectual capital of Mesopotamia &mdash; a position it held, through conquest and catastrophe, for the next 1,700 years.</p>
 
