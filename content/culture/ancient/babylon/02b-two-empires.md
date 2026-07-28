@@ -40,33 +40,23 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 .jbe-head { padding:16px 18px 4px; }
 .jbe-head h4 { margin:0; font-size:1.05rem; color:#3c3a33; }
 .jbe-head p { margin:4px 0 0; font-size:.82rem; color:#8a8172; }
-.jbe-mapwrap { position:relative; }
-.jbe-map { display:block; width:100%; height:auto; background:linear-gradient(180deg,#f3efe6,#ece6da); }
-.jbe-sea { fill:#cfe0e6; }
-.jbe-crescent { fill:none; stroke:#9db99f; stroke-width:30; stroke-linecap:round; opacity:.35; }
-.jbe-region { font-size:15px; font-weight:800; letter-spacing:1.5px; fill:#a99; opacity:.55; }
-.jbe-region.egy { fill:#c8a24a; opacity:.75; }
-.jbe-region.bab { fill:#b4653a; opacity:.75; }
-.jbe-desert { font-size:11px; letter-spacing:2px; fill:#b9ab8f; }
-.jbe-site circle { fill:#4a463d; }
-.jbe-site text { font-size:12px; fill:#3c3a33; font-weight:600; }
-.jbe-jeru circle { fill:#7a3030; }
-.jbe-arrow { fill:none; stroke-width:4.5; stroke-linecap:round; opacity:0; transition:opacity .35s; }
-.jbe-arrow.show { opacity:.95; }
-.jbe-egy { stroke:#d5a93c; } .jbe-egy-h { fill:#d5a93c; }
+.jbe-map { display:block; width:100%; height:auto; }
+.jbe-arrow { fill:none; stroke-width:9; stroke-linecap:round; opacity:0; transition:opacity .35s; }
+.jbe-arrow.show { opacity:.98; }
+.jbe-egy { stroke:#e0a92e; } .jbe-egy-h { fill:#e0a92e; }
 .jbe-bab { stroke:#c65528; } .jbe-bab-h { fill:#c65528; }
-.jbe-dash { stroke-dasharray:8 7; }
+.jbe-dash { stroke-dasharray:16 12; }
 .jbe-burst { opacity:0; transition:opacity .35s; }
 .jbe-burst.show { opacity:1; }
-.jbe-burst circle { fill:none; stroke:#c0392b; stroke-width:2.5; }
+.jbe-burst circle { fill:none; stroke:#c0392b; stroke-width:5; }
+.jbe-city text { paint-order:stroke; stroke:#f6efe0; stroke-width:5; }
 .jbe-cap { padding:12px 18px 6px; font-size:.9rem; line-height:1.5; color:#443f37; min-height:3.2em; border-top:1px solid #eee6d8; }
 .jbe-cap b { color:#7a3030; }
 .jbe-time { display:flex; gap:0; padding:6px 10px 16px; position:relative; }
 .jbe-time::before { content:""; position:absolute; left:44px; right:44px; top:26px; height:3px; background:#e0d8c7; border-radius:3px; }
 .jbe-step { flex:1; background:none; border:none; cursor:pointer; padding:0; display:flex; flex-direction:column; align-items:center; gap:6px; font-family:inherit; position:relative; z-index:1; }
 .jbe-dot { width:20px; height:20px; border-radius:50%; background:#fff; border:3px solid #c9b98f; transition:transform .2s,border-color .2s,background .2s; }
-.jbe-step.egy .jbe-dot { border-color:#d5a93c; }
-.jbe-step.bab .jbe-dot { border-color:#c65528; }
+.jbe-step.egy .jbe-dot { border-color:#d5a93c; } .jbe-step.bab .jbe-dot { border-color:#c65528; }
 .jbe-step.is-active .jbe-dot { transform:scale(1.35); background:#c65528; border-color:#c65528; }
 .jbe-step.is-active.egy .jbe-dot { background:#d5a93c; border-color:#d5a93c; }
 .jbe-yr { font-size:.78rem; font-weight:800; color:#5a544a; }
@@ -79,95 +69,73 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </style>
 
 <div class="jbe">
-  <div class="jbe-head">
-    <h4>Judah Between the Empires</h4>
-    <p>The same mistake, three times over. Step through 609&ndash;586 BC and watch each bet on Egypt end at a siege wall.</p>
-  </div>
-  <div class="jbe-mapwrap">
-  <svg class="jbe-map" viewBox="0 0 820 470" role="img" aria-label="Schematic map of Judah between Egypt and Babylon, showing the campaigns of 609 to 586 BC">
+  <div class="jbe-head"><h4>Judah Between the Empires</h4>
+  <p>The same mistake, three times over. Step through 609&ndash;586 BC and watch each bet on Egypt end at a siege wall.</p></div>
+  <svg class="jbe-map" viewBox="600 380 1620 1120" role="img" aria-label="Relief map of the campaigns between Egypt and Babylon, 609 to 586 BC, showing Egypt, Jerusalem, Megiddo, Carchemish, Harran, and Babylon">
     <defs>
-      <marker id="jbe-ah-egy" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" class="jbe-egy-h"/></marker>
-      <marker id="jbe-ah-bab" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" class="jbe-bab-h"/></marker>
+      <marker id="jbe-ah-egy" markerWidth="5" markerHeight="5" refX="3.5" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 Z" class="jbe-egy-h"/></marker>
+      <marker id="jbe-ah-bab" markerWidth="5" markerHeight="5" refX="3.5" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 Z" class="jbe-bab-h"/></marker>
     </defs>
-    <rect class="jbe-sea" x="0" y="150" width="48" height="300"/>
-    <path class="jbe-crescent" d="M 95,405 C 115,340 135,330 158,318 C 210,290 250,225 285,190 C 330,150 400,112 442,124 C 545,152 632,275 668,352"/>
-    <text class="jbe-region egy" x="40" y="440">EGYPT</text>
-    <text class="jbe-region bab" x="612" y="392">BABYLON</text>
-    <text class="jbe-desert" x="360" y="360">SYRIAN&#160;DESERT</text>
-    <text class="jbe-region" x="54" y="300" style="font-size:12px;">JUDAH</text>
+    <image href="/images/culture/babylon/maps/mideast-relief-base.jpg" x="0" y="0" width="3840" height="2403"/>
 
     <g id="jbe-s0">
-      <path class="jbe-arrow jbe-egy" marker-end="url(#jbe-ah-egy)" d="M 100,398 C 120,330 145,290 165,270 C 240,200 360,150 432,132"/>
-      <g class="jbe-burst" transform="translate(165,270)"><circle r="11"/><circle r="17"/></g>
+      <path class="jbe-arrow jbe-egy" marker-end="url(#jbe-ah-egy)" d="M 820,975 Q 985,865 1035,846 Q 1360,650 1675,515"/>
+      <g class="jbe-burst" transform="translate(1035,846)"><circle r="22"/><circle r="33"/></g>
     </g>
     <g id="jbe-s1">
-      <path class="jbe-arrow jbe-bab" marker-end="url(#jbe-ah-bab)" d="M 650,345 C 520,240 430,150 372,122"/>
-      <path class="jbe-arrow jbe-egy jbe-dash" marker-end="url(#jbe-ah-egy)" d="M 345,120 C 230,180 140,320 108,398"/>
-      <g class="jbe-burst" transform="translate(355,112)"><circle r="11"/><circle r="17"/></g>
+      <path class="jbe-arrow jbe-bab" marker-end="url(#jbe-ah-bab)" d="M 1850,1050 Q 1715,720 1585,498"/>
+      <path class="jbe-arrow jbe-egy jbe-dash" marker-end="url(#jbe-ah-egy)" d="M 1545,505 Q 1200,660 1035,852 Q 915,935 852,974"/>
+      <g class="jbe-burst" transform="translate(1565,478)"><circle r="22"/><circle r="33"/></g>
     </g>
     <g id="jbe-s2">
-      <path class="jbe-arrow jbe-bab" marker-end="url(#jbe-ah-bab)" d="M 650,352 C 470,440 260,440 150,412"/>
-      <path class="jbe-arrow jbe-egy jbe-dash" marker-end="url(#jbe-ah-egy)" d="M 150,352 C 155,345 158,338 158,332"/>
-      <g class="jbe-burst" transform="translate(330,432)"><circle r="10"/><circle r="16"/></g>
+      <path class="jbe-arrow jbe-bab" marker-end="url(#jbe-ah-bab)" d="M 1855,1080 Q 1470,1180 1150,1006"/>
+      <g class="jbe-burst" transform="translate(1210,1040)"><circle r="20"/><circle r="30"/></g>
+      <circle class="jbe-burst" cx="1055" cy="905" r="26" fill="none" stroke="#d5a93c" stroke-width="6"/>
     </g>
     <g id="jbe-s3">
-      <path class="jbe-arrow jbe-bab" marker-end="url(#jbe-ah-bab)" d="M 648,348 C 430,300 260,310 178,322"/>
-      <path class="jbe-arrow jbe-dash" style="stroke:#6a5983;" d="M 160,330 C 360,330 540,345 640,352"/>
-      <g class="jbe-burst" transform="translate(152,320)"><circle r="11"/><circle r="17"/></g>
+      <path class="jbe-arrow jbe-bab" marker-end="url(#jbe-ah-bab)" d="M 1855,1072 Q 1460,1120 1200,1000 Q 1120,955 1082,918"/>
+      <path class="jbe-arrow jbe-dash" style="stroke:#6a5983;" d="M 1074,922 Q 1450,1012 1845,1080"/>
+      <g class="jbe-burst" transform="translate(1055,905)"><circle r="22"/><circle r="33"/></g>
     </g>
     <g id="jbe-s4">
-      <path class="jbe-arrow jbe-egy jbe-dash" marker-end="url(#jbe-ah-egy)" d="M 105,398 C 120,360 138,342 150,332"/>
-      <path class="jbe-arrow jbe-bab" marker-end="url(#jbe-ah-bab)" d="M 648,350 C 430,300 260,308 178,324"/>
-      <g class="jbe-burst" transform="translate(152,320)"><circle r="12"/><circle r="19"/><circle r="26"/></g>
+      <path class="jbe-arrow jbe-egy jbe-dash" marker-end="url(#jbe-ah-egy)" d="M 858,972 Q 965,935 1050,914"/>
+      <path class="jbe-arrow jbe-bab" marker-end="url(#jbe-ah-bab)" d="M 1855,1072 Q 1460,1120 1200,1000 Q 1120,955 1082,918"/>
+      <g class="jbe-burst" transform="translate(1055,905)"><circle r="24"/><circle r="36"/><circle r="50"/></g>
     </g>
 
-    <g class="jbe-site jbe-jeru"><circle cx="150" cy="320" r="5"/><text x="128" y="312">Jerusalem</text></g>
-    <g class="jbe-site"><circle cx="165" cy="270" r="4"/><text x="176" y="266">Megiddo</text></g>
-    <g class="jbe-site"><circle cx="285" cy="190" r="4"/><text x="296" y="186">Riblah</text></g>
-    <g class="jbe-site"><circle cx="355" cy="112" r="4"/><text x="300" y="104">Carchemish</text></g>
-    <g class="jbe-site"><circle cx="442" cy="124" r="4"/><text x="452" y="120">Harran</text></g>
-    <g class="jbe-site"><circle cx="668" cy="352" r="5"/><text x="612" y="345">Babylon</text></g>
-    <g class="jbe-site"><circle cx="98" cy="400" r="4"/></g>
+    <text x="1300" y="1235" font-family="-apple-system,sans-serif" font-weight="700" font-size="27" letter-spacing="2" fill="#b9973f" opacity="0.85">SYRIAN DESERT</text>
+    <g class="jbe-city" font-family="-apple-system,sans-serif" font-weight="700" font-size="28" fill="#2a2620">
+      <circle cx="820" cy="978" r="8" fill="#2a2620"/><text x="690" y="1010">Egypt</text>
+      <circle cx="1035" cy="846" r="7" fill="#2a2620"/><text x="1050" y="838">Megiddo</text>
+      <circle cx="1055" cy="905" r="9" fill="#7a1010"/><text x="895" y="932" fill="#7a1010">Jerusalem</text>
+      <circle cx="1190" cy="720" r="7" fill="#2a2620"/><text x="1205" y="714">Riblah</text>
+      <circle cx="1565" cy="475" r="7" fill="#2a2620"/><text x="1395" y="454">Carchemish</text>
+      <circle cx="1690" cy="495" r="7" fill="#2a2620"/><text x="1706" y="490">Harran</text>
+      <circle cx="1855" cy="1072" r="9" fill="#7a1010"/><text x="1735" y="1108" fill="#7a1010">Babylon</text>
+    </g>
   </svg>
-  </div>
   <p class="jbe-cap" id="jbe-cap"></p>
   <div class="jbe-time" id="jbe-time"></div>
-  <div class="jbe-legend">
-    <span><i class="jbe-sw" style="background:#d5a93c;"></i> a bet on Egypt</span>
-    <span><i class="jbe-sw" style="background:#c65528;"></i> Babylon&rsquo;s answer</span>
-  </div>
+  <div class="jbe-legend"><span><i class="jbe-sw" style="background:#d5a93c;"></i> a bet on Egypt</span><span><i class="jbe-sw" style="background:#c65528;"></i> Babylon&rsquo;s answer</span></div>
 </div>
 
 <script>
 (function(){
-  var STEPS = [
-    {yr:"609 BC", lbl:"Megiddo", side:"egy", cap:"<b>609 BC &mdash; Megiddo.</b> Pharaoh Necho marches north to prop up dying Assyria. Josiah rides out to stop him and is killed &mdash; and his death-ride objectively clears the road for Babylon."},
-    {yr:"605 BC", lbl:"Carchemish", side:"bab", cap:"<b>605 BC &mdash; Carchemish.</b> Crown prince Nebuchadnezzar shatters Egypt&rsquo;s army and takes the throne. Judah passes, by default, into Babylon&rsquo;s hand as a vassal."},
-    {yr:"601 BC", lbl:"Jehoiakim rebels", side:"egy", cap:"<b>601 BC &mdash; the bloody draw.</b> Babylon and Egypt fight to a standstill near the border. Sensing weakness, Jehoiakim withholds tribute and rebels &mdash; betting on Egypt."},
-    {yr:"597 BC", lbl:"First siege", side:"bab", cap:"<b>597 BC &mdash; the first siege.</b> Nebuchadnezzar takes Jerusalem, carries King Jehoiachin and the elite into exile, and installs Zedekiah as his puppet."},
-    {yr:"586 BC", lbl:"Jerusalem falls", side:"bab", cap:"<b>586 BC &mdash; the fall.</b> Zedekiah rebels and calls for Egypt; the relief march comes, then withdraws; Babylon returns, breaches the walls, and burns the temple."}
+  var STEPS=[
+    {yr:"609 BC",lbl:"Megiddo",side:"egy",cap:"<b>609 BC &mdash; Megiddo.</b> Pharaoh Necho marches north to prop up dying Assyria. Josiah rides out to stop him and is killed &mdash; and his death-ride objectively clears the road for Babylon."},
+    {yr:"605 BC",lbl:"Carchemish",side:"bab",cap:"<b>605 BC &mdash; Carchemish.</b> Crown prince Nebuchadnezzar shatters Egypt&rsquo;s army and takes the throne. Judah passes, by default, into Babylon&rsquo;s hand as a vassal."},
+    {yr:"601 BC",lbl:"Jehoiakim rebels",side:"egy",cap:"<b>601 BC &mdash; the bloody draw.</b> Babylon and Egypt fight to a standstill near the border. Sensing weakness, Jehoiakim withholds tribute and rebels &mdash; betting on Egypt."},
+    {yr:"597 BC",lbl:"First siege",side:"bab",cap:"<b>597 BC &mdash; the first siege.</b> Nebuchadnezzar takes Jerusalem, carries King Jehoiachin and the elite into exile, and installs Zedekiah as his puppet."},
+    {yr:"586 BC",lbl:"Jerusalem falls",side:"bab",cap:"<b>586 BC &mdash; the fall.</b> Zedekiah rebels and calls for Egypt; the relief march comes, then withdraws; Babylon returns, breaches the walls, and burns the temple."}
   ];
-  var groups = [], time = document.getElementById('jbe-time'), cap = document.getElementById('jbe-cap');
-  for (var i=0;i<STEPS.length;i++) groups.push(document.getElementById('jbe-s'+i));
+  var groups=[],time=document.getElementById('jbe-time'),cap=document.getElementById('jbe-cap');
+  for(var i=0;i<STEPS.length;i++)groups.push(document.getElementById('jbe-s'+i));
   function show(n){
-    for (var i=0;i<groups.length;i++){
-      var on = (i===n);
-      var arrows = groups[i].querySelectorAll('.jbe-arrow');
-      for (var a=0;a<arrows.length;a++) arrows[a].classList.toggle('show', on);
-      var b = groups[i].querySelector('.jbe-burst'); if(b) b.classList.toggle('show', on);
-    }
-    var btns = time.querySelectorAll('.jbe-step');
-    for (var j=0;j<btns.length;j++) btns[j].classList.toggle('is-active', j===n);
-    cap.innerHTML = STEPS[n].cap;
+    for(var i=0;i<groups.length;i++){var on=(i===n);var ar=groups[i].querySelectorAll('.jbe-arrow');for(var a=0;a<ar.length;a++)ar[a].classList.toggle('show',on);var bs=groups[i].querySelectorAll('.jbe-burst');for(var b=0;b<bs.length;b++)bs[b].classList.toggle('show',on);}
+    var btns=time.querySelectorAll('.jbe-step');for(var j=0;j<btns.length;j++)btns[j].classList.toggle('is-active',j===n);
+    cap.innerHTML=STEPS[n].cap;
   }
-  STEPS.forEach(function(s, idx){
-    var b = document.createElement('button');
-    b.className = 'jbe-step ' + s.side;
-    b.setAttribute('type','button');
-    b.innerHTML = '<span class="jbe-dot"></span><span class="jbe-yr">'+s.yr+'</span><span class="jbe-lbl">'+s.lbl+'</span>';
-    b.addEventListener('click', function(){ show(idx); });
-    time.appendChild(b);
-  });
+  STEPS.forEach(function(s,idx){var b=document.createElement('button');b.className='jbe-step '+s.side;b.type='button';b.innerHTML='<span class="jbe-dot"></span><span class="jbe-yr">'+s.yr+'</span><span class="jbe-lbl">'+s.lbl+'</span>';b.addEventListener('click',function(){show(idx);});time.appendChild(b);});
   show(0);
 })();
 </script>
