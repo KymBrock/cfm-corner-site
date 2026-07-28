@@ -36,73 +36,59 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <!-- ===== JUDAH BETWEEN THE EMPIRES (jbe) ===== -->
 <style>
-.jbe { border:1px solid #e2ddd3; border-radius:16px; overflow:hidden; margin:26px 0; background:#fbf9f5; box-shadow:0 6px 18px rgba(0,0,0,.07); font-family:-apple-system,Segoe UI,Roboto,sans-serif; }
-.jbe-head { padding:16px 18px 4px; }
-.jbe-head h4 { margin:0; font-size:1.05rem; color:#3c3a33; }
-.jbe-head p { margin:4px 0 0; font-size:.82rem; color:#8a8172; }
-.jbe-map { display:block; width:100%; height:auto; }
-.jbe-arrow { fill:none; stroke-width:10; stroke-linecap:round; opacity:0; transition:opacity .35s; }
-.jbe-arrow.show { opacity:1; }
-.jbe-egy { stroke:#f0b400; } .jbe-egy-h { fill:#f0b400; }
-.jbe-bab { stroke:#d84315; } .jbe-bab-h { fill:#d84315; }
-.jbe-dash { stroke-dasharray:18 13; }
-.jbe-burst { opacity:0; transition:opacity .35s; }
-.jbe-burst.show { opacity:1; }
-.jbe-burst circle { fill:none; stroke:#c0392b; stroke-width:6; }
-.jbe-cap { padding:12px 18px 6px; font-size:.9rem; line-height:1.5; color:#443f37; min-height:3.2em; border-top:1px solid #eee6d8; }
-.jbe-cap b { color:#7a3030; }
-.jbe-time { display:flex; gap:0; padding:6px 10px 16px; position:relative; }
-.jbe-time::before { content:""; position:absolute; left:44px; right:44px; top:26px; height:3px; background:#e0d8c7; border-radius:3px; }
-.jbe-step { flex:1; background:none; border:none; cursor:pointer; padding:0; display:flex; flex-direction:column; align-items:center; gap:6px; font-family:inherit; position:relative; z-index:1; }
-.jbe-dot { width:20px; height:20px; border-radius:50%; background:#fff; border:3px solid #c9b98f; transition:transform .2s,border-color .2s,background .2s; }
-.jbe-step.egy .jbe-dot { border-color:#d5a93c; } .jbe-step.bab .jbe-dot { border-color:#d84315; }
-.jbe-step.is-active .jbe-dot { transform:scale(1.35); background:#d84315; border-color:#d84315; }
-.jbe-step.is-active.egy .jbe-dot { background:#d5a93c; border-color:#d5a93c; }
-.jbe-yr { font-size:.78rem; font-weight:800; color:#5a544a; }
-.jbe-lbl { font-size:.66rem; color:#8a8172; line-height:1.1; max-width:88px; }
-.jbe-step.is-active .jbe-yr { color:#3c3a33; }
-.jbe-legend { display:flex; gap:16px; justify-content:center; padding:0 10px 14px; font-size:.7rem; color:#8a8172; }
-.jbe-legend span { display:inline-flex; align-items:center; gap:5px; }
-.jbe-sw { width:16px; height:4px; border-radius:2px; display:inline-block; }
-@media (max-width:560px){ .jbe-lbl{display:none;} .jbe-time::before{top:16px;} }
+.ers { border:1px solid #e2ddd3; border-radius:16px; overflow:hidden; margin:26px 0; background:#fbf9f5; box-shadow:0 6px 18px rgba(0,0,0,.07); font-family:-apple-system,Segoe UI,Roboto,sans-serif; }
+.ers-head { padding:16px 18px 4px; }
+.ers-head h4 { margin:0; font-size:1.05rem; color:#3c3a33; }
+.ers-head p { margin:4px 0 0; font-size:.82rem; color:#8a8172; }
+.ers-stage { position:relative; width:100%; aspect-ratio:2/1; background:#dfe6e2; }
+.ers-map { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .55s ease; }
+.ers-map.active { opacity:1; }
+.ers-yrbadge { position:absolute; top:12px; left:14px; z-index:2; background:rgba(56,55,49,.72); color:#fff; font-size:.8rem; font-weight:800; letter-spacing:.03em; padding:4px 11px; border-radius:999px; }
+.ers-cap { padding:12px 18px 6px; font-size:.9rem; line-height:1.5; color:#443f37; min-height:4.2em; border-top:1px solid #eee6d8; }
+.ers-cap b { color:#7a3030; }
+.ers-time { display:flex; gap:0; padding:8px 12px 18px; position:relative; }
+.ers-time::before { content:""; position:absolute; left:60px; right:60px; top:16px; height:3px; background:#e0d8c7; border-radius:3px; }
+.ers-step { flex:1; background:none; border:none; cursor:pointer; padding:0; display:flex; flex-direction:column; align-items:center; gap:7px; font-family:inherit; position:relative; z-index:1; }
+.ers-dot { width:22px; height:22px; border-radius:50%; background:#fff; border:3px solid #c9b98f; transition:transform .2s,background .2s,border-color .2s; }
+.ers-step.is-active .ers-dot { transform:scale(1.3); background:#c65528; border-color:#c65528; }
+.ers-yr { font-size:.82rem; font-weight:800; color:#5a544a; }
+.ers-lbl { font-size:.68rem; color:#8a8172; line-height:1.15; max-width:120px; }
+.ers-step.is-active .ers-yr { color:#3c3a33; }
+.ers-cred { text-align:center; font-size:.68rem; font-style:italic; color:#a89f90; padding:0 12px 12px; }
+@media (max-width:560px){ .ers-lbl{ display:none; } .ers-time::before{ left:40px; right:40px; } }
 </style>
 
-<div class="jbe">
-  <div class="jbe-head"><h4>Judah Between the Empires</h4>
-  <p>The same mistake, three times over. Step through 609&ndash;586 BC &mdash; each bet on Egypt ended at a siege wall.</p></div>
-  <svg class="jbe-map" viewBox="230 440 1800 1090" role="img" aria-label="Map of the campaigns between Egypt and Babylon, 609 to 586 BC">
-    <defs>
-      <marker id="jbe-ah-egy" markerWidth="5" markerHeight="5" refX="3.5" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 Z" class="jbe-egy-h"/></marker>
-      <marker id="jbe-ah-bab" markerWidth="5" markerHeight="5" refX="3.5" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 Z" class="jbe-bab-h"/></marker>
-      <filter id="jbe-sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#000" flood-opacity="0.55"/></filter>
-    </defs>
-    <image href="/images/culture/babylon/maps/babylon-campaign-base.jpg" x="0" y="0" width="3840" height="2403"/>
-
-    <!-- campaign arrows removed pending exact city coords from Illustrator; map + timeline stepper stand alone -->
-    <g id="jbe-s0"></g><g id="jbe-s1"></g><g id="jbe-s2"></g><g id="jbe-s3"></g><g id="jbe-s4"></g>
-  </svg>
-  <p class="jbe-cap" id="jbe-cap"></p>
-  <div class="jbe-time" id="jbe-time"></div>
-  <div class="jbe-legend"><span><i class="jbe-sw" style="background:#f0b400;"></i> a bet on Egypt</span><span><i class="jbe-sw" style="background:#d84315;"></i> Babylon&rsquo;s answer</span></div>
+<div class="ers">
+  <div class="ers-head"><h4>Judah Between the Empires</h4>
+  <p>Slide through the century that trapped Judah &mdash; from Assyria&rsquo;s iron grip to the rise of Babylon.</p></div>
+  <div class="ers-stage" id="ers-stage">
+    <span class="ers-yrbadge" id="ers-badge"></span>
+    <img class="ers-map" src="/images/culture/babylon/maps/era-700bc.jpg" alt="The Assyrian empire at its height, c. 700 BC" loading="lazy">
+    <img class="ers-map" src="/images/culture/babylon/maps/era-600bc.jpg" alt="The Near East after Assyria's fall, c. 600 BC: Babylon, Media, Lydia and Egypt" loading="lazy">
+  </div>
+  <p class="ers-cap" id="ers-cap"></p>
+  <div class="ers-time" id="ers-time"></div>
+  <div class="ers-cred">Maps by CFM Corner on a S&eacute;mhur relief base (CC BY-SA 4.0)</div>
 </div>
 
 <script>
 (function(){
-  var STEPS=[
-    {yr:"609 BC",lbl:"Megiddo",side:"egy",cap:"<b>609 BC &mdash; Megiddo.</b> Pharaoh Necho marches north to prop up dying Assyria. Josiah rides out to stop him and is killed &mdash; and his death-ride objectively clears the road for Babylon."},
-    {yr:"605 BC",lbl:"Carchemish",side:"bab",cap:"<b>605 BC &mdash; Carchemish.</b> Crown prince Nebuchadnezzar shatters Egypt&rsquo;s army and takes the throne. Judah passes, by default, into Babylon&rsquo;s hand as a vassal."},
-    {yr:"601 BC",lbl:"Jehoiakim rebels",side:"egy",cap:"<b>601 BC &mdash; the bloody draw.</b> Babylon and Egypt fight to a standstill near the border. Sensing weakness, Jehoiakim withholds tribute and rebels &mdash; betting on Egypt."},
-    {yr:"597 BC",lbl:"First siege",side:"bab",cap:"<b>597 BC &mdash; the first siege.</b> Nebuchadnezzar takes Jerusalem, carries King Jehoiachin and the elite into exile, and installs Zedekiah as his puppet."},
-    {yr:"586 BC",lbl:"Jerusalem falls",side:"bab",cap:"<b>586 BC &mdash; the fall.</b> Zedekiah rebels and calls for Egypt; the relief march comes, then withdraws; Babylon returns, breaches the walls, and burns the temple."}
+  var ERAS=[
+    {yr:"700 BC",lbl:"Assyria dominant",cap:"<b>700 BC &mdash; the Assyrian century.</b> One empire rules from Anatolia to the Gulf. The northern kingdom of <b>Israel</b> is already gone &mdash; its ten tribes deported &mdash; and <b>Judah</b> survives only as a trembling Assyrian vassal. Egypt watches from the southwest; Media stirs in the east."},
+    {yr:"600 BC",lbl:"Babylon rising",cap:"<b>600 BC &mdash; Assyria shattered.</b> In a single generation the giant fell. <b>Babylon</b> and its Median ally have seized the old Assyrian heartland, while Lydia and Egypt carve off the west. Judah is left exactly where this section begins: caught between <b>Egypt</b> and <b>Babylon</b>, every wrong bet ending at a siege wall."}
   ];
-  var groups=[],time=document.getElementById('jbe-time'),cap=document.getElementById('jbe-cap');
-  for(var i=0;i<STEPS.length;i++)groups.push(document.getElementById('jbe-s'+i));
+  var stage=document.getElementById('ers-stage'),imgs=stage.querySelectorAll('.ers-map'),time=document.getElementById('ers-time'),cap=document.getElementById('ers-cap'),badge=document.getElementById('ers-badge');
   function show(n){
-    for(var i=0;i<groups.length;i++){var on=(i===n);var ar=groups[i].querySelectorAll('.jbe-arrow');for(var a=0;a<ar.length;a++)ar[a].classList.toggle('show',on);var bs=groups[i].querySelectorAll('.jbe-burst');for(var b=0;b<bs.length;b++)bs[b].classList.toggle('show',on);}
-    var btns=time.querySelectorAll('.jbe-step');for(var j=0;j<btns.length;j++)btns[j].classList.toggle('is-active',j===n);
-    cap.innerHTML=STEPS[n].cap;
+    for(var i=0;i<imgs.length;i++) imgs[i].classList.toggle('active',i===n);
+    var btns=time.querySelectorAll('.ers-step'); for(var j=0;j<btns.length;j++) btns[j].classList.toggle('is-active',j===n);
+    cap.innerHTML=ERAS[n].cap; badge.textContent=ERAS[n].yr;
   }
-  STEPS.forEach(function(s,idx){var b=document.createElement('button');b.className='jbe-step '+s.side;b.type='button';b.innerHTML='<span class="jbe-dot"></span><span class="jbe-yr">'+s.yr+'</span><span class="jbe-lbl">'+s.lbl+'</span>';b.addEventListener('click',function(){show(idx);});time.appendChild(b);});
+  ERAS.forEach(function(e,idx){
+    var b=document.createElement('button'); b.className='ers-step'; b.type='button';
+    b.innerHTML='<span class="ers-dot"></span><span class="ers-yr">'+e.yr+'</span><span class="ers-lbl">'+e.lbl+'</span>';
+    b.addEventListener('click',function(){ show(idx); });
+    time.appendChild(b);
+  });
   show(0);
 })();
 </script>
