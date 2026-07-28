@@ -36,6 +36,12 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>All dates before the first millennium BC are approximate (this guide follows the widely used &ldquo;middle chronology&rdquo;); from the 8th century BC onward, Babylonian records let us date events to the day.</p>
 
+<p style="text-align: center; color: #666; font-style: italic; margin: 0 0 8px 0;">The whole arc at a glance &mdash; drag the slider from Hammurabi&rsquo;s Babylon (1800 BC) through the Assyrian centuries to Nebuchadnezzar&rsquo;s empire and its fall.</p>
+
+<link rel="stylesheet" href="/css/era-map-widget.css">
+<div class="era-map-widget" data-start-era="1800"></div>
+<script src="/js/era-map-widget.js"></script>
+
 <br>
 
 <hr>
