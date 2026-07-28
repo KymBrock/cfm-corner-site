@@ -109,6 +109,51 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>Mesopotamia was never one thing. The ancient scribes themselves divided the southern plain into <strong>Sumer</strong> (the far south, toward the Gulf) and <strong>Akkad</strong> (the region around and above Babylon) &mdash; and long after both names had faded from politics, Babylonian kings still styled themselves <em>&ldquo;king of Sumer and Akkad&rdquo;</em> as a claim to the whole ancient inheritance. Northern Mesopotamia, up the Tigris, was <strong>Assyria</strong> &mdash; Babylon&rsquo;s cultural sibling and political rival for a thousand years. The two shared a language (Akkadian, in different dialects), a script, and most of a pantheon; they fought like siblings, too. (The full story of that rivalry runs through <a href="/culture/ancient/babylon/02-timeline-and-empires/">Section 02: Timeline &amp; Empires</a>.)</p>
 
+<!-- ===== MESOPOTAMIA REGIONS (mreg) ===== -->
+<style>
+.mreg { max-width:560px; margin:26px auto; }
+.mreg svg { display:block; width:100%; height:auto; border-radius:16px; box-shadow:0 6px 18px rgba(0,0,0,.10); background:linear-gradient(160deg,#f7f1e4,#efe6d3); }
+.mreg-cap { text-align:center; font-size:.9em; line-height:1.45; color:#4a453d; margin:12px 8px 0; font-family:-apple-system,Segoe UI,sans-serif; }
+.mreg-cap .mreg-credit { display:block; font-size:.8em; font-style:italic; color:#8f867a; margin-top:3px; }
+.mr-reg { font-family:-apple-system,Segoe UI,sans-serif; font-weight:800; letter-spacing:2px; }
+.mr-city text { font-family:-apple-system,Segoe UI,sans-serif; font-size:12px; fill:#3c3a33; font-weight:600; }
+.mr-city circle { fill:#4a463d; }
+.mr-river { fill:none; stroke:#5a86a0; stroke-width:3.4; stroke-linecap:round; opacity:.85; }
+.mr-rlabel { font-family:Georgia,serif; font-style:italic; fill:#3d6076; font-size:12px; }
+@media (prefers-color-scheme:dark){ .mreg svg{background:linear-gradient(160deg,#2a2620,#221e18);} .mreg-cap{color:#cabfae;} .mreg-cap .mreg-credit{color:#a49b8c;} .mr-city text{fill:#e6dcc9;} .mr-city circle{fill:#d8ccb4;} }
+</style>
+
+<figure class="mreg">
+<svg viewBox="0 0 700 560" role="img" aria-label="Map of the regions of Mesopotamia: Assyria in the north, Akkad and Sumer in the south, the Sealand marshes, and Elam to the east">
+  <path d="M 470,560 C 500,516 560,500 620,506 C 664,510 700,528 700,560 Z" fill="#cfe0e6"/>
+  <text x="628" y="546" class="mr-reg" style="font-size:12px; fill:#5a86a0; opacity:.85;">GULF</text>
+  <ellipse cx="300" cy="115" rx="165" ry="82" fill="#57899c" opacity="0.26"/>
+  <ellipse cx="250" cy="288" rx="150" ry="82" fill="#d5a93c" opacity="0.30"/>
+  <ellipse cx="298" cy="416" rx="135" ry="76" fill="#c65528" opacity="0.26"/>
+  <ellipse cx="336" cy="486" rx="104" ry="40" fill="#4a6b52" opacity="0.30"/>
+  <ellipse cx="606" cy="318" rx="118" ry="140" fill="#9f6578" opacity="0.20"/>
+  <path class="mr-river" d="M 150,40 C 190,150 200,240 235,320 C 268,398 285,450 300,520"/>
+  <path class="mr-river" d="M 335,26 C 360,150 372,250 372,340 C 372,420 350,470 320,520"/>
+  <text class="mr-rlabel" x="150" y="205" transform="rotate(64 150,205)">Euphrates</text>
+  <text class="mr-rlabel" x="386" y="230" transform="rotate(80 386,230)">Tigris</text>
+  <text class="mr-reg" x="228" y="120" style="font-size:19px; fill:#3f647a;">ASSYRIA</text>
+  <text class="mr-reg" x="196" y="262" style="font-size:19px; fill:#a9791f;">AKKAD</text>
+  <text class="mr-reg" x="256" y="405" style="font-size:19px; fill:#a53c18;">SUMER</text>
+  <text class="mr-reg" x="290" y="490" style="font-size:12px; fill:#3c5743;">SEALAND</text>
+  <text class="mr-reg" x="566" y="312" style="font-size:17px; fill:#7a4f5e;">ELAM</text>
+  <g class="mr-city"><circle cx="300" cy="92" r="4.5"/><text x="310" y="88">Assur</text></g>
+  <g class="mr-city"><circle cx="236" cy="292" r="5"/><text x="176" y="288">Babylon</text></g>
+  <g class="mr-city"><circle cx="286" cy="360" r="4"/><text x="296" y="356">Nippur</text></g>
+  <g class="mr-city"><circle cx="300" cy="428" r="4"/><text x="310" y="424">Uruk</text></g>
+  <g class="mr-city"><circle cx="314" cy="452" r="4"/><text x="324" y="449">Ur</text></g>
+  <g class="mr-city"><circle cx="322" cy="474" r="4"/><text x="332" y="478">Eridu</text></g>
+  <line x1="150" y1="360" x2="286" y2="360" stroke="#7a6a4a" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
+  <text x="150" y="352" style="font-family:Georgia,serif; font-style:italic; font-size:10.5px; fill:#8a7a58;">Nippur: the old line</text>
+</svg>
+<figcaption class="mreg-cap">Mesopotamia was never one place. Northern <b>Assyria</b> straddled the upper Tigris; the southern plain split into <b>Akkad</b> (around Babylon) and <b>Sumer</b> (toward the Gulf), with the marshy <b>Sealand</b> at its southern edge and <b>Elam</b> across the Tigris to the east. Nippur marked the traditional line between Sumer and Akkad. <span class="mreg-credit">Schematic map &middot; CFM Corner</span></figcaption>
+</figure>
+<!-- ===== /mreg ===== -->
+
 <p>South of Babylon, where the rivers dissolve into reed marshes toward the Gulf, lay the <strong>Sealand</strong> &mdash; a wetland world of fishermen, reed houses, and water buffalo that was nearly impossible for armies to control. It was in and around these marshes, in the early first millennium BC, that the tribes called the <strong>Chaldeans</strong> (<em>Kaldu</em> in Akkadian; Hebrew <em>Kasdim</em>, <a href="https://www.blueletterbible.org/lexicon/h3778/kjv/wlc/0-1/" target="_blank">כַּשְׂדִּים</a>) settled and grew powerful. Chaldean chieftains spent a century leading resistance to Assyria &mdash; one of them, Merodach-baladan, will matter enormously to the story of Hezekiah &mdash; and it was a dynasty of Chaldean stock that finally made Babylon the master of the Near East. By the Bible&rsquo;s era, &ldquo;Chaldean&rdquo; and &ldquo;Babylonian&rdquo; had become interchangeable (<a href="https://www.blueletterbible.org/kjv/2ki/25/4/" target="_blank" data-ref="2 Kings 25:4">2 Kings 25:4</a>), and centuries later still, the word had drifted to mean &ldquo;astrologer&rdquo; &mdash; a tribute to Babylon&rsquo;s scholarly reputation (<a href="https://www.blueletterbible.org/kjv/dan/2/2/" target="_blank" data-ref="Daniel 2:2">Daniel 2:2</a>).</p>
 
 <br>
