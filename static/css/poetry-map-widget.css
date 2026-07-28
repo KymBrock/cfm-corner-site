@@ -1,0 +1,161 @@
+/* Poetry Map Widget — interactive Hebrew poetic-form mapper.
+   Reuses the Translation Hub "Hebrew Poetic Forms" visual grammar,
+   recolored to the CFM Corner palette. Scoped under .poetry-map-widget. */
+
+.poetry-map-widget {
+  --pmw-frame: var(--slate, #57899c);      /* matching pair / frame        */
+  --pmw-pair2: var(--sage-dark, #4a6b52);  /* second matching pair         */
+  --pmw-quest: var(--plum, #6a5983);       /* question member              */
+  --pmw-center: var(--gold, #d5a93c);      /* center / pivot               */
+  --pmw-center-bg: var(--gold-pale, #f5ecd0);
+  --pmw-key: var(--mauve, #9f6578);        /* repeated keyword             */
+  --pmw-key-bg: #f0e3e7;
+  --pmw-contrast: var(--terracotta, #c65528); /* contrast / reversal       */
+  --pmw-prog: var(--copper, #c37c3c);      /* progression                  */
+  --pmw-ink: var(--text-dark, #383731);
+  --pmw-soft: var(--text-muted, #718096);
+  --pmw-rule: var(--border, #c6d4c8);
+  --pmw-card: #ffffff;
+  --pmw-card-2: var(--sage-bg, #f2f5f2);
+  --pmw-serif: Georgia, 'Times New Roman', serif;
+  --pmw-mono: 'SF Mono', ui-monospace, Menlo, Consolas, monospace;
+
+  max-width: 760px;
+  margin: 28px auto;
+  color: var(--pmw-ink);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* legend */
+.poetry-map-widget .pmw-legend {
+  background: var(--pmw-card-2);
+  border: 1px solid var(--pmw-rule);
+  border-radius: var(--radius, 8px);
+  padding: 12px 15px;
+  margin-bottom: 18px;
+}
+.poetry-map-widget .pmw-legend h4 {
+  font-family: var(--pmw-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--pmw-soft);
+  margin: 0 0 9px;
+}
+.poetry-map-widget .pmw-legend-grid { display: flex; flex-wrap: wrap; gap: 7px 15px; }
+.poetry-map-widget .pmw-lg { display: flex; align-items: center; gap: 7px; font-size: 0.8rem; color: var(--pmw-soft); }
+.poetry-map-widget .pmw-sw { width: 15px; height: 15px; border-radius: 4px; flex: none; }
+.poetry-map-widget .pmw-sw.frame { background: var(--pmw-frame); }
+.poetry-map-widget .pmw-sw.pair2 { background: var(--pmw-pair2); }
+.poetry-map-widget .pmw-sw.quest { background: var(--pmw-quest); }
+.poetry-map-widget .pmw-sw.center { background: var(--pmw-center); }
+.poetry-map-widget .pmw-sw.key { background: var(--pmw-key); }
+.poetry-map-widget .pmw-sw.contrast { background: var(--pmw-contrast); }
+.poetry-map-widget .pmw-sw.prog { background: var(--pmw-prog); }
+
+/* chips */
+.poetry-map-widget .pmw-chips {
+  display: flex; gap: 8px; overflow-x: auto; padding: 3px 2px 12px; scrollbar-width: thin;
+}
+.poetry-map-widget .pmw-chip {
+  flex: none; border: 1px solid var(--pmw-rule); background: var(--pmw-card);
+  color: var(--pmw-ink); border-radius: 999px; padding: 8px 14px; cursor: pointer;
+  font: inherit; font-size: 0.83rem; line-height: 1.2; text-align: left;
+  transition: transform .12s ease, border-color .12s ease, background .12s ease;
+  white-space: nowrap;
+}
+.poetry-map-widget .pmw-chip b { display: block; font-size: 0.68rem; color: var(--pmw-soft); font-weight: 500; margin-top: 1px; }
+.poetry-map-widget .pmw-chip:hover { transform: translateY(-1px); border-color: var(--pmw-frame); }
+.poetry-map-widget .pmw-chip[aria-selected="true"] { background: var(--sage-dark, #4a6b52); border-color: var(--sage-dark, #4a6b52); color: #fff; }
+.poetry-map-widget .pmw-chip[aria-selected="true"] b { color: rgba(255,255,255,0.82); }
+
+/* panel */
+.poetry-map-widget .pmw-panel {
+  background: var(--pmw-card); border: 1px solid var(--pmw-rule);
+  border-radius: var(--radius-lg, 12px); box-shadow: var(--shadow-md, 0 4px 12px rgba(0,0,0,0.1));
+  overflow: hidden;
+}
+.poetry-map-widget .pmw-head { padding: 18px 22px 6px; border-bottom: 1px solid var(--pmw-rule); }
+.poetry-map-widget .pmw-form-name { font-family: var(--pmw-serif); font-size: 1.4rem; font-weight: 700; margin: 0; color: var(--pmw-ink); }
+.poetry-map-widget .pmw-form-meta {
+  font-family: var(--pmw-mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--pmw-frame); margin: 4px 0 12px;
+}
+.poetry-map-widget .pmw-blurb { font-size: 0.9rem; color: var(--pmw-soft); margin: 0 0 15px; line-height: 1.5; }
+
+/* the verse map */
+.poetry-map-widget .pmw-map { padding: 16px 22px 4px; }
+.poetry-map-widget .pmw-line {
+  display: grid; grid-template-columns: 44px 1fr; gap: 13px; align-items: baseline;
+  padding: 7px 0; cursor: pointer; border-radius: 7px; transition: background .15s ease;
+}
+.poetry-map-widget .pmw-line:hover { background: var(--pmw-card-2); }
+.poetry-map-widget .pmw-gutter { font-family: var(--pmw-mono); font-size: 0.76rem; font-weight: 700; text-align: right; padding-top: 3px; }
+.poetry-map-widget .pmw-ref { font-family: var(--pmw-mono); font-size: 0.64rem; color: var(--pmw-soft); display: block; margin-bottom: 2px; letter-spacing: 0.04em; }
+.poetry-map-widget .pmw-text { font-family: var(--pmw-serif); font-size: 1.08rem; line-height: 1.5; padding-left: 11px; display: block; }
+
+.poetry-map-widget .pmw-line[data-role="frame"] { border-left: 3px solid var(--pmw-frame); }
+.poetry-map-widget .pmw-line[data-role="frame"] .pmw-gutter { color: var(--pmw-frame); }
+.poetry-map-widget .pmw-line[data-role="pair2"] { border-left: 3px solid var(--pmw-pair2); }
+.poetry-map-widget .pmw-line[data-role="pair2"] .pmw-gutter { color: var(--pmw-pair2); }
+.poetry-map-widget .pmw-line[data-role="quest"] { border-left: 3px solid var(--pmw-quest); }
+.poetry-map-widget .pmw-line[data-role="quest"] .pmw-gutter { color: var(--pmw-quest); }
+.poetry-map-widget .pmw-line[data-role="center"] {
+  border-left: 3px solid var(--pmw-center);
+  background: linear-gradient(90deg, var(--pmw-center-bg), transparent 82%);
+}
+.poetry-map-widget .pmw-line[data-role="center"] .pmw-gutter { color: #b8901f; }
+.poetry-map-widget .pmw-line[data-role="interior"] { border-left: 3px dotted var(--pmw-rule); }
+.poetry-map-widget .pmw-line[data-role="interior"] .pmw-gutter { color: var(--pmw-soft); font-weight: 400; }
+.poetry-map-widget .pmw-line[data-role="interior"] .pmw-text { color: var(--pmw-soft); font-size: 0.95rem; font-style: italic; }
+
+.poetry-map-widget .pmw-line.pmw-flash { animation: pmw-flash 1s ease; }
+@keyframes pmw-flash { 0%,100% { background: transparent; } 30% { background: var(--sage-pale, #dce8dd); } }
+
+/* inline marks */
+.poetry-map-widget .pmw-kw { background: var(--pmw-key-bg); color: var(--pmw-key); border-radius: 4px; padding: 0 4px; font-weight: 600; }
+.poetry-map-widget .pmw-ct { color: var(--pmw-contrast); text-decoration: underline; text-decoration-color: var(--pmw-contrast); text-underline-offset: 3px; }
+.poetry-map-widget .pmw-pr { color: var(--pmw-prog); font-weight: 600; }
+
+/* notation */
+.poetry-map-widget .pmw-notation {
+  margin: 12px 22px 4px; padding: 11px 15px; background: var(--pmw-card-2);
+  border: 1px dashed var(--pmw-rule); border-radius: var(--radius, 8px);
+  font-family: var(--pmw-mono); font-size: 0.98rem; letter-spacing: 0.05em; text-align: center; color: var(--pmw-ink);
+}
+
+/* analysis */
+.poetry-map-widget .pmw-analysis { margin: 15px 22px 22px; }
+.poetry-map-widget .pmw-reveal {
+  width: 100%; border: 1px solid var(--pmw-rule); background: var(--pmw-card-2); color: var(--sage-dark, #4a6b52);
+  border-radius: var(--radius, 8px); padding: 10px; cursor: pointer;
+  font-family: var(--pmw-mono); font-size: 0.68rem; letter-spacing: 0.13em; text-transform: uppercase; font-weight: 700;
+  transition: background .12s ease, color .12s ease;
+}
+.poetry-map-widget .pmw-reveal:hover { background: var(--sage-dark, #4a6b52); color: #fff; }
+.poetry-map-widget .pmw-acard { margin-top: 13px; border: 1px solid var(--pmw-rule); border-radius: var(--radius-lg, 12px); overflow: hidden; display: none; }
+.poetry-map-widget .pmw-acard.pmw-open { display: block; animation: pmw-slide .3s ease; }
+@keyframes pmw-slide { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+.poetry-map-widget .pmw-arow { display: grid; grid-template-columns: 116px 1fr; border-bottom: 1px solid var(--pmw-rule); }
+.poetry-map-widget .pmw-arow:last-child { border-bottom: none; }
+.poetry-map-widget .pmw-arow dt {
+  font-family: var(--pmw-mono); font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--pmw-soft); padding: 10px 13px; background: var(--pmw-card-2); margin: 0;
+}
+.poetry-map-widget .pmw-arow dd { margin: 0; padding: 10px 14px; font-size: 0.9rem; line-height: 1.45; }
+.poetry-map-widget .pmw-claim-strong { color: var(--pmw-pair2); font-weight: 700; }
+.poetry-map-widget .pmw-claim-mod { color: #b8901f; font-weight: 700; }
+
+.poetry-map-widget .pmw-provenance {
+  margin-top: 14px; font-family: var(--pmw-mono); font-size: 0.64rem; letter-spacing: 0.03em;
+  color: var(--pmw-soft); text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .poetry-map-widget * { animation: none !important; transition: none !important; }
+}
+@media (max-width: 520px) {
+  .poetry-map-widget .pmw-arow { grid-template-columns: 1fr; }
+  .poetry-map-widget .pmw-arow dt { padding-bottom: 2px; }
+  .poetry-map-widget .pmw-line { grid-template-columns: 34px 1fr; gap: 9px; }
+}
