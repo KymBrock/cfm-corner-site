@@ -109,42 +109,10 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>Mesopotamia was never one thing. The ancient scribes themselves divided the southern plain into <strong>Sumer</strong> (the far south, toward the Gulf) and <strong>Akkad</strong> (the region around and above Babylon) &mdash; and long after both names had faded from politics, Babylonian kings still styled themselves <em>&ldquo;king of Sumer and Akkad&rdquo;</em> as a claim to the whole ancient inheritance. Northern Mesopotamia, up the Tigris, was <strong>Assyria</strong> &mdash; Babylon&rsquo;s cultural sibling and political rival for a thousand years. The two shared a language (Akkadian, in different dialects), a script, and most of a pantheon; they fought like siblings, too. (The full story of that rivalry runs through <a href="/culture/ancient/babylon/02-timeline-and-empires/">Section 02: Timeline &amp; Empires</a>.)</p>
 
-<!-- ===== MESOPOTAMIA REGIONS (mreg) ===== -->
-<style>
-.mreg { max-width:600px; margin:26px auto; }
-.mreg svg { display:block; width:100%; height:auto; border-radius:16px; box-shadow:0 6px 18px rgba(0,0,0,.12); }
-.mreg-cap { text-align:center; font-size:.9em; line-height:1.45; color:#4a453d; margin:12px 8px 0; font-family:-apple-system,Segoe UI,sans-serif; }
-.mreg-cap .mreg-credit { display:block; font-size:.8em; font-style:italic; color:#8f867a; margin-top:3px; }
-@media (prefers-color-scheme:dark){ .mreg-cap{color:#cabfae;} .mreg-cap .mreg-credit{color:#a49b8c;} }
-</style>
-
-<figure class="mreg">
-<svg viewBox="1400 430 1080 1130" role="img" aria-label="Relief map of Mesopotamia showing the regions of Assyria, Akkad, Sumer, the Sealand, and Elam, with the Tigris and Euphrates and the cities Assur, Babylon, Nippur, Uruk, Ur, and Eridu">
-  <image href="/images/culture/babylon/maps/mideast-relief-base.jpg" x="0" y="0" width="3840" height="2403"/>
-  <ellipse cx="1895" cy="728" rx="185" ry="150" transform="rotate(-32 1895 728)" fill="#3f647a" opacity="0.22"/>
-  <ellipse cx="1828" cy="1002" rx="120" ry="110" transform="rotate(-18 1828 1002)" fill="#c98f1f" opacity="0.26"/>
-  <ellipse cx="1868" cy="1168" rx="120" ry="105" transform="rotate(-14 1868 1168)" fill="#c65528" opacity="0.24"/>
-  <ellipse cx="1972" cy="1246" rx="98" ry="52" fill="#4a6b52" opacity="0.30"/>
-  <ellipse cx="2210" cy="1075" rx="140" ry="170" transform="rotate(-28 2210 1075)" fill="#9f6578" opacity="0.20"/>
-  <g font-family="-apple-system,Segoe UI,sans-serif" font-weight="800" letter-spacing="2">
-    <text x="1748" y="690" font-size="38" fill="#274a5e">ASSYRIA</text>
-    <text x="1690" y="988" font-size="36" fill="#8a5f10">AKKAD</text>
-    <text x="1706" y="1170" font-size="34" fill="#8a2f10">SUMER</text>
-    <text x="1902" y="1266" font-size="23" fill="#2c4433">SEALAND</text>
-    <text x="2168" y="1050" font-size="34" fill="#6a3f4e">ELAM</text>
-  </g>
-  <g font-family="-apple-system,Segoe UI,sans-serif" font-weight="700" font-size="26" fill="#2a2620">
-    <circle cx="1860" cy="778" r="8" fill="#2a2620"/><text x="1875" y="774">Assur</text>
-    <circle cx="1823" cy="1038" r="9" fill="#7a1010"/><text x="1838" y="1034" fill="#7a1010">Babylon</text>
-    <circle cx="1872" cy="1078" r="7" fill="#2a2620"/><text x="1886" y="1074">Nippur</text>
-    <circle cx="1858" cy="1146" r="7" fill="#2a2620"/><text x="1872" y="1142">Uruk</text>
-    <circle cx="1874" cy="1177" r="7" fill="#2a2620"/><text x="1888" y="1181">Ur</text>
-    <circle cx="1856" cy="1189" r="7" fill="#2a2620"/><text x="1770" y="1206">Eridu</text>
-  </g>
-</svg>
-<figcaption class="mreg-cap">Mesopotamia was never one place. Northern <b>Assyria</b> straddled the upper Tigris; the southern plain split into <b>Akkad</b> (around Babylon) and <b>Sumer</b> (toward the Gulf), with the marshy <b>Sealand</b> at its southern edge and <b>Elam</b> across the Tigris to the east. <span class="mreg-credit">Relief base map &copy; S&eacute;mhur, Wikimedia Commons (CC BY-SA 4.0); regions &amp; labels by CFM Corner</span></figcaption>
+<figure class="fg-figure" style="max-width:760px;">
+  <img src="/images/culture/babylon/maps/babylon-mesopotamia-map.jpg" alt="Map of Mesopotamia showing Assyria on the upper Tigris; Akkad, Babylonia and Sumer along the lower Euphrates; Kaldu at the Gulf; and Elam across the Tigris" loading="lazy">
+  <figcaption>The land between the rivers: northern <b>Assyria</b> straddled the upper Tigris; the southern plain split into <b>Akkad</b> (around Babylon) and <b>Sumer</b> (toward the Gulf), with the Chaldean <b>Kaldu</b> at the Gulf&rsquo;s head and <b>Elam</b> across the Tigris to the east. <span class="fg-credit">Map by CFM Corner on a S&eacute;mhur relief base (CC BY-SA 4.0)</span></figcaption>
 </figure>
-<!-- ===== /mreg ===== -->
 
 <p>South of Babylon, where the rivers dissolve into reed marshes toward the Gulf, lay the <strong>Sealand</strong> &mdash; a wetland world of fishermen, reed houses, and water buffalo that was nearly impossible for armies to control. It was in and around these marshes, in the early first millennium BC, that the tribes called the <strong>Chaldeans</strong> (<em>Kaldu</em> in Akkadian; Hebrew <em>Kasdim</em>, <a href="https://www.blueletterbible.org/lexicon/h3778/kjv/wlc/0-1/" target="_blank">כַּשְׂדִּים</a>) settled and grew powerful. Chaldean chieftains spent a century leading resistance to Assyria &mdash; one of them, Merodach-baladan, will matter enormously to the story of Hezekiah &mdash; and it was a dynasty of Chaldean stock that finally made Babylon the master of the Near East. By the Bible&rsquo;s era, &ldquo;Chaldean&rdquo; and &ldquo;Babylonian&rdquo; had become interchangeable (<a href="https://www.blueletterbible.org/kjv/2ki/25/4/" target="_blank" data-ref="2 Kings 25:4">2 Kings 25:4</a>), and centuries later still, the word had drifted to mean &ldquo;astrologer&rdquo; &mdash; a tribute to Babylon&rsquo;s scholarly reputation (<a href="https://www.blueletterbible.org/kjv/dan/2/2/" target="_blank" data-ref="Daniel 2:2">Daniel 2:2</a>).</p>
 
