@@ -111,46 +111,38 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <!-- ===== MESOPOTAMIA REGIONS (mreg) ===== -->
 <style>
-.mreg { max-width:560px; margin:26px auto; }
-.mreg svg { display:block; width:100%; height:auto; border-radius:16px; box-shadow:0 6px 18px rgba(0,0,0,.10); background:linear-gradient(160deg,#f7f1e4,#efe6d3); }
+.mreg { max-width:600px; margin:26px auto; }
+.mreg svg { display:block; width:100%; height:auto; border-radius:16px; box-shadow:0 6px 18px rgba(0,0,0,.12); }
 .mreg-cap { text-align:center; font-size:.9em; line-height:1.45; color:#4a453d; margin:12px 8px 0; font-family:-apple-system,Segoe UI,sans-serif; }
 .mreg-cap .mreg-credit { display:block; font-size:.8em; font-style:italic; color:#8f867a; margin-top:3px; }
-.mr-reg { font-family:-apple-system,Segoe UI,sans-serif; font-weight:800; letter-spacing:2px; }
-.mr-city text { font-family:-apple-system,Segoe UI,sans-serif; font-size:12px; fill:#3c3a33; font-weight:600; }
-.mr-city circle { fill:#4a463d; }
-.mr-river { fill:none; stroke:#5a86a0; stroke-width:3.4; stroke-linecap:round; opacity:.85; }
-.mr-rlabel { font-family:Georgia,serif; font-style:italic; fill:#3d6076; font-size:12px; }
-@media (prefers-color-scheme:dark){ .mreg svg{background:linear-gradient(160deg,#2a2620,#221e18);} .mreg-cap{color:#cabfae;} .mreg-cap .mreg-credit{color:#a49b8c;} .mr-city text{fill:#e6dcc9;} .mr-city circle{fill:#d8ccb4;} }
+@media (prefers-color-scheme:dark){ .mreg-cap{color:#cabfae;} .mreg-cap .mreg-credit{color:#a49b8c;} }
 </style>
 
 <figure class="mreg">
-<svg viewBox="0 0 700 560" role="img" aria-label="Map of the regions of Mesopotamia: Assyria in the north, Akkad and Sumer in the south, the Sealand marshes, and Elam to the east">
-  <path d="M 470,560 C 500,516 560,500 620,506 C 664,510 700,528 700,560 Z" fill="#cfe0e6"/>
-  <text x="628" y="546" class="mr-reg" style="font-size:12px; fill:#5a86a0; opacity:.85;">GULF</text>
-  <ellipse cx="300" cy="115" rx="165" ry="82" fill="#57899c" opacity="0.26"/>
-  <ellipse cx="250" cy="288" rx="150" ry="82" fill="#d5a93c" opacity="0.30"/>
-  <ellipse cx="298" cy="416" rx="135" ry="76" fill="#c65528" opacity="0.26"/>
-  <ellipse cx="336" cy="486" rx="104" ry="40" fill="#4a6b52" opacity="0.30"/>
-  <ellipse cx="606" cy="318" rx="118" ry="140" fill="#9f6578" opacity="0.20"/>
-  <path class="mr-river" d="M 150,40 C 190,150 200,240 235,320 C 268,398 285,450 300,520"/>
-  <path class="mr-river" d="M 335,26 C 360,150 372,250 372,340 C 372,420 350,470 320,520"/>
-  <text class="mr-rlabel" x="150" y="205" transform="rotate(64 150,205)">Euphrates</text>
-  <text class="mr-rlabel" x="386" y="230" transform="rotate(80 386,230)">Tigris</text>
-  <text class="mr-reg" x="228" y="120" style="font-size:19px; fill:#3f647a;">ASSYRIA</text>
-  <text class="mr-reg" x="196" y="262" style="font-size:19px; fill:#a9791f;">AKKAD</text>
-  <text class="mr-reg" x="256" y="405" style="font-size:19px; fill:#a53c18;">SUMER</text>
-  <text class="mr-reg" x="290" y="490" style="font-size:12px; fill:#3c5743;">SEALAND</text>
-  <text class="mr-reg" x="566" y="312" style="font-size:17px; fill:#7a4f5e;">ELAM</text>
-  <g class="mr-city"><circle cx="300" cy="92" r="4.5"/><text x="310" y="88">Assur</text></g>
-  <g class="mr-city"><circle cx="236" cy="292" r="5"/><text x="176" y="288">Babylon</text></g>
-  <g class="mr-city"><circle cx="286" cy="360" r="4"/><text x="296" y="356">Nippur</text></g>
-  <g class="mr-city"><circle cx="300" cy="428" r="4"/><text x="310" y="424">Uruk</text></g>
-  <g class="mr-city"><circle cx="314" cy="452" r="4"/><text x="324" y="449">Ur</text></g>
-  <g class="mr-city"><circle cx="322" cy="474" r="4"/><text x="332" y="478">Eridu</text></g>
-  <line x1="150" y1="360" x2="286" y2="360" stroke="#7a6a4a" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
-  <text x="150" y="352" style="font-family:Georgia,serif; font-style:italic; font-size:10.5px; fill:#8a7a58;">Nippur: the old line</text>
+<svg viewBox="1400 430 1080 1130" role="img" aria-label="Relief map of Mesopotamia showing the regions of Assyria, Akkad, Sumer, the Sealand, and Elam, with the Tigris and Euphrates and the cities Assur, Babylon, Nippur, Uruk, Ur, and Eridu">
+  <image href="/images/culture/babylon/maps/mideast-relief-base.jpg" x="0" y="0" width="3840" height="2403"/>
+  <ellipse cx="1930" cy="710" rx="210" ry="150" fill="#3f647a" opacity="0.24"/>
+  <ellipse cx="1850" cy="1045" rx="185" ry="125" fill="#c98f1f" opacity="0.26"/>
+  <ellipse cx="2005" cy="1235" rx="150" ry="105" fill="#c65528" opacity="0.24"/>
+  <ellipse cx="2075" cy="1350" rx="105" ry="62" fill="#4a6b52" opacity="0.30"/>
+  <ellipse cx="2330" cy="1090" rx="165" ry="200" fill="#9f6578" opacity="0.20"/>
+  <g font-family="-apple-system,Segoe UI,sans-serif" font-weight="800" letter-spacing="2">
+    <text x="1820" y="700" font-size="40" fill="#274a5e">ASSYRIA</text>
+    <text x="1760" y="1035" font-size="40" fill="#8a5f10">AKKAD</text>
+    <text x="1868" y="1205" font-size="38" fill="#8a2f10">SUMER</text>
+    <text x="2018" y="1378" font-size="24" fill="#2c4433">SEALAND</text>
+    <text x="2250" y="1090" font-size="36" fill="#6a3f4e">ELAM</text>
+  </g>
+  <g font-family="-apple-system,Segoe UI,sans-serif" font-weight="700" font-size="26" fill="#2a2620">
+    <circle cx="1852" cy="775" r="8" fill="#2a2620"/><text x="1868" y="771">Assur</text>
+    <circle cx="1855" cy="1072" r="9" fill="#7a1010"/><text x="1760" y="1068" fill="#7a1010">Babylon</text>
+    <circle cx="1958" cy="1158" r="7" fill="#2a2620"/><text x="1972" y="1154">Nippur</text>
+    <circle cx="1992" cy="1228" r="7" fill="#2a2620"/><text x="2006" y="1224">Uruk</text>
+    <circle cx="2022" cy="1288" r="7" fill="#2a2620"/><text x="2036" y="1300">Ur</text>
+    <circle cx="2010" cy="1318" r="7" fill="#2a2620"/><text x="1930" y="1345">Eridu</text>
+  </g>
 </svg>
-<figcaption class="mreg-cap">Mesopotamia was never one place. Northern <b>Assyria</b> straddled the upper Tigris; the southern plain split into <b>Akkad</b> (around Babylon) and <b>Sumer</b> (toward the Gulf), with the marshy <b>Sealand</b> at its southern edge and <b>Elam</b> across the Tigris to the east. Nippur marked the traditional line between Sumer and Akkad. <span class="mreg-credit">Schematic map &middot; CFM Corner</span></figcaption>
+<figcaption class="mreg-cap">Mesopotamia was never one place. Northern <b>Assyria</b> straddled the upper Tigris; the southern plain split into <b>Akkad</b> (around Babylon) and <b>Sumer</b> (toward the Gulf), with the marshy <b>Sealand</b> at its southern edge and <b>Elam</b> across the Tigris to the east. <span class="mreg-credit">Relief base map &copy; S&eacute;mhur, Wikimedia Commons (CC BY-SA 4.0); regions &amp; labels by CFM Corner</span></figcaption>
 </figure>
 <!-- ===== /mreg ===== -->
 
