@@ -87,6 +87,11 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <br>
 
+<figure class="fg-figure">
+  <img src="/images/culture/babylon/photos/code-of-hammurabi-louvre.jpg" alt="The law stele of Hammurabi, Louvre" loading="lazy">
+  <figcaption>The stele of Hammurabi&rsquo;s laws (c. 1750 BC) &mdash; the king receives his commission from the sun-god Shamash, above 282 laws in cuneiform. <span class="fg-credit">Louvre; photo Mbzt &middot; Wikimedia Commons (CC BY 3.0)</span></figcaption>
+</figure>
+
 <h3>Visual Timeline: From Hammurabi to the Fall</h3>
 
 <div style="position: relative; margin: 32px 0 40px 0; padding-left: 40px;">
@@ -418,6 +423,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}

@@ -143,6 +143,11 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>Mesopotamia frames Israel&rsquo;s story at both ends. Abraham came <em>out</em> of it &mdash; from Ur, by way of Haran (<a href="https://www.blueletterbible.org/kjv/gen/11/31/" target="_blank" data-ref="Genesis 11:31">Genesis 11:31</a>) &mdash; carrying with him the memory of its cities, its ziggurats, and its moon-god worship (<a href="https://www.blueletterbible.org/kjv/jos/24/2/" target="_blank" data-ref="Joshua 24:2">Joshua 24:2</a>: &ldquo;your fathers dwelt on the other side of the flood in old time&hellip; and they served other gods&rdquo;). The primeval history of Genesis is set on this plain: Eden&rsquo;s rivers include the Hiddekel (Tigris) and Euphrates (<a href="https://www.blueletterbible.org/kjv/gen/2/14/" target="_blank" data-ref="Genesis 2:14">Genesis 2:14</a>); the ark grounds in the mountains to its north; Nimrod&rsquo;s kingdom begins at &ldquo;Babel, and Erech, and Accad, and Calneh, in the land of Shinar&rdquo; (<a href="https://www.blueletterbible.org/kjv/gen/10/10/" target="_blank" data-ref="Genesis 10:10">Genesis 10:10</a>) &mdash; Babylon, Uruk, and Akkad, named in order; and the tower &ldquo;whose top may reach unto heaven&rdquo; (<a href="https://www.blueletterbible.org/kjv/gen/11/4/" target="_blank" data-ref="Genesis 11:4">Genesis 11:4</a>) rises from the same plain where real brick towers rose. And at the story&rsquo;s other end, Judah is carried back &mdash; to canal-side settlements in that same landscape, &ldquo;by the rivers of Babylon&rdquo; (<a href="https://www.blueletterbible.org/kjv/psa/137/1/" target="_blank" data-ref="Psalm 137:1">Psalm 137:1</a>), where the exiles&rsquo; new addresses were literally named for the waterworks: Ezekiel&rsquo;s community lived &ldquo;by the river of Chebar&rdquo; (<a href="https://www.blueletterbible.org/kjv/eze/1/1/" target="_blank" data-ref="Ezekiel 1:1">Ezekiel 1:1</a>) &mdash; the <em>Kabaru</em> canal near Nippur, known from Babylonian records. (The exiles&rsquo; world is the subject of <a href="/culture/ancient/babylon/07-the-exile-experience/">Section 07: The Exile Experience</a>.)</p>
 
+<figure class="fg-figure">
+  <img src="/images/culture/babylon/photos/ziggurat-of-ur.jpg" alt="The ziggurat of Ur" loading="lazy">
+  <figcaption>The ziggurat of Ur &mdash; the best-preserved of Mesopotamia&rsquo;s stepped temple-towers, and the kind of structure that rose at Babylon as Etemenanki. <span class="fg-credit">Hardnfast &middot; Wikimedia Commons (CC BY 3.0)</span></figcaption>
+</figure>
+
 <p>Scripture&rsquo;s story, in other words, is bracketed by this land between the rivers: a covenant family called out of Mesopotamia at the beginning, and a covenant nation carried back into it at the end &mdash; so that the return from Babylon could become the Bible&rsquo;s great image of every redemption after it.</p>
 
 <br>
@@ -178,6 +183,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}

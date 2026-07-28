@@ -74,6 +74,11 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>Mesopotamia invented the library along with the book. Temple and palace collections existed from early times, but the greatest was assembled at Nineveh by the Assyrian king <strong>Ashurbanipal</strong> (r. 668&ndash;c. 631 BC), who sent agents through Babylonia with shopping lists, demanding tablets by title &mdash; over 30,000 tablets and fragments from his collection now sit in the British Museum, and they are the single richest source for Babylonian literature. The irony is complete: when Nineveh burned in 612 BC, the fire baked the library into permanence, and when Layard and Rassam dug it out in the 1840s&ndash;50s, Babylon&rsquo;s classics &mdash; the En&#363;ma Eli&scaron;, the flood tablet of Gilgamesh &mdash; came back to the world out of the ruins of Babylon&rsquo;s destroyer.</p>
 
+<figure class="fg-figure">
+  <img src="/images/culture/babylon/photos/astronomical-diary-bm.jpg" alt="A Babylonian astronomical diary tablet" loading="lazy">
+  <figcaption>A Babylonian astronomical diary &mdash; nightly records of the moon, planets, weather, and market prices. This one notes the death of Alexander the Great in 323 BC. <span class="fg-credit">British Museum &middot; public domain</span></figcaption>
+</figure>
+
 <p>What did the tradition preserve? Epic (<strong>Gilgamesh</strong>, the king who sought immortality and came home with wisdom instead); creation and flood narratives (see <a href="/culture/ancient/babylon/04-religion-and-mythology/">Section 04</a>); royal chronicles kept with dry, dateline precision (see <a href="/culture/ancient/babylon/08-babylon-and-the-bible/">Section 08</a>); hymns and laments; proverbs; and a striking shelf of <strong>wisdom literature</strong> wrestling with the same questions as Job and Ecclesiastes &mdash; <em>Ludlul b&#275;l n&#275;meqi</em>, the &ldquo;Babylonian Job,&rdquo; whose righteous sufferer loses health and honor despite perfect piety; the <em>Babylonian Theodicy</em>, an acrostic debate between a sufferer and his orthodox friend; and the sardonic <em>Dialogue of Pessimism</em>, in which a master proposes each course of life and its opposite, and his servant supplies equally good reasons for both. Israel&rsquo;s sages knew this international wisdom conversation and joined it &mdash; with the decisive difference that their answer began with &ldquo;the fear of the LORD&rdquo; (<a href="https://www.blueletterbible.org/kjv/pro/1/7/" target="_blank" data-ref="Proverbs 1:7">Proverbs 1:7</a>).</p>
 
 <br>
@@ -158,6 +163,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}

@@ -44,6 +44,19 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>The ruin field lies on the Euphrates about 85 km south of Baghdad, near modern Hillah. Early explorers &mdash; Claudius Rich&rsquo;s surveys (1811, 1817), Austen Henry Layard&rsquo;s soundings &mdash; found the mudbrick mounds baffling and turned to the more photogenic Assyrian capitals. Babylon&rsquo;s real excavation was <strong>Robert Koldewey&rsquo;s German expedition of 1899&ndash;1917</strong>: eighteen continuous years, digging through Ottoman rule into a world war, that recovered the city of Nebuchadnezzar in plan &mdash; the double walls, the Processional Way, the Southern Palace (and, in its storerooms, the Jehoiachin ration tablets &mdash; see <a href="/culture/ancient/babylon/07-the-exile-experience/">Section 07</a>), the foundations of Etemenanki, and the glazed-brick masses of the <strong>Ishtar Gate</strong>, shipped to Berlin and reassembled there by 1930 (see <a href="/culture/ancient/babylon/06-the-city-itself/">Section 06</a>). Koldewey&rsquo;s methods &mdash; patient tracing of mudbrick architecture that earlier diggers had shoveled through unseen &mdash; helped found modern Near Eastern archaeology.</p>
 
+<div class="fg-gallery">
+  <div class="fg-stage">
+    <span class="fg-counter" aria-hidden="true"></span>
+    <button class="fg-arrow fg-prev" type="button" aria-label="Previous image">&lsaquo;</button>
+    <button class="fg-arrow fg-next" type="button" aria-label="Next image">&rsaquo;</button>
+    <div class="fg-item" data-caption="Babylon today &mdash; the reconstructed walls of Nebuchadnezzar&rsquo;s Southern Palace rise above the excavated mounds." data-credit="MohammadHuzam &middot; Wikimedia Commons (CC BY-SA 4.0)"><img src="/images/culture/babylon/photos/babylon-site-today-2016.jpg" alt="The reconstructed walls of Babylon today" loading="lazy"></div>
+    <div class="fg-item" data-caption="The Lion of Babylon &mdash; a worn basalt statue that has stood on the site for more than two millennia." data-credit="Hamody al-iraqi &middot; Wikimedia Commons (CC BY-SA 4.0)"><img src="/images/culture/babylon/photos/lion-of-babylon-statue.jpg" alt="The basalt Lion of Babylon statue" loading="lazy"></div>
+    <div class="fg-item" data-caption="A plate from Koldewey&rsquo;s 1914 excavation report comparing the Ishtar Gate&rsquo;s dragon reliefs." data-credit="Robert Koldewey, 1914 &middot; public domain"><img src="/images/culture/babylon/photos/koldewey-sirrush-1914.png" alt="Koldewey's 1914 sirrush comparison plate" loading="lazy"></div>
+  </div>
+  <p class="fg-cap"></p>
+  <div class="fg-dots"></div>
+</div>
+
 <p>The site&rsquo;s modern history is its own cautionary tale. In the 1980s Saddam Hussein rebuilt walls and palace rooms directly on the ancient foundations &mdash; his bricks stamped, in conscious imitation of Nebuchadnezzar, with his own name as the city&rsquo;s restorer &mdash; and crowned a neighboring mound with a presidential palace. In 2003&ndash;2004, coalition forces made the ruins a military base (&ldquo;Camp Alpha&rdquo;), causing documented damage to the Processional Way and Ishtar Gate area that drew international protest. Conservation has since resumed under Iraqi and international programs, and in <strong>2019 Babylon was inscribed as a UNESCO World Heritage Site</strong>. Visitors today walk Processional-Way paving at the level of Nebuchadnezzar&rsquo;s street, pass a replica Ishtar Gate, and meet the basalt <strong>Lion of Babylon</strong> &mdash; the site&rsquo;s ancient mascot, still trampling its enemy after 2,600 years.</p>
 
 <br>
@@ -175,6 +188,8 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
+<script src="/js/fg-gallery.js"></script>
 
 {{< /rawhtml >}}

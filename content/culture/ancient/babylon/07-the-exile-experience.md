@@ -34,6 +34,11 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>The exile is the hinge of the Old Testament &mdash; the catastrophe every prophet warned of and the furnace in which Israel&rsquo;s faith was refined into the form that survived. For centuries, readers could see it only from the inside, through Psalm 137&rsquo;s grief, Ezekiel&rsquo;s visions, and Jeremiah&rsquo;s letters. In the last hundred years &mdash; and dramatically in the last few decades &mdash; Babylonian clay has begun to show us the exile from the outside: ration lists naming Judah&rsquo;s captive king, and whole archives of ordinary contracts from a canal-side settlement the scribes called, simply, <strong>Judah-town</strong>.</p>
 
+<figure class="fg-figure">
+  <img src="/images/culture/babylon/photos/jehoiachin-ration-tablet.jpg" alt="The Jehoiachin ration tablet" loading="lazy">
+  <figcaption>A ration tablet from Nebuchadnezzar&rsquo;s palace listing oil for the captive &lsquo;king of the land of Judah&rsquo; &mdash; Jehoiachin himself (<a href="https://www.blueletterbible.org/kjv/2ki/25/27/" target="_blank" data-ref="2 Kings 25:27-30">2 Kings 25:27&ndash;30</a>). <span class="fg-credit">Scallaham &middot; Wikimedia Commons (CC BY-SA 4.0)</span></figcaption>
+</figure>
+
 <br>
 
 <hr>
@@ -161,6 +166,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}

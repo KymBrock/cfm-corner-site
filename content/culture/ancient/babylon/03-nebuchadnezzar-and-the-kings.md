@@ -114,6 +114,11 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <h3>Nabonidus &amp; Belshazzar: The Absentee and the Regent (556&ndash;539 BC)</h3>
 
+<figure class="fg-figure">
+  <img src="/images/culture/babylon/photos/nabonidus-stele-bm.jpg" alt="The stele of Nabonidus, British Museum" loading="lazy">
+  <figcaption>Nabonidus, the last king of Babylon, worshipping the symbols of the moon, sun, and Venus. He left the capital in the hands of his son Belshazzar. <span class="fg-credit">British Museum &middot; Wikimedia Commons (CC0)</span></figcaption>
+</figure>
+
 <p>The last king of Babylon was the strangest. <strong><a href="https://www.worldhistory.org/Nabonidus/" target="_blank">Nabonidus</a></strong> was no Chaldean prince but the son of a priestess of the moon god Sin from Harran, in the old Assyrian north &mdash; already elderly at his accession, an antiquarian who excavated the foundations of ancient temples to recover their original dedications (he has been called, half-seriously, the first archaeologist). His devotion to Sin over Marduk put him on a collision course with Babylon&rsquo;s powerful priesthood; and then, inexplicably to his contemporaries, he left. For roughly ten years the king of Babylon lived at the desert oasis of <strong>Teima</strong> in northwest Arabia, while the New Year festival &mdash; which required the king&rsquo;s presence &mdash; simply could not be celebrated. In his place at the capital he left his eldest son: <strong>Belshazzar</strong>.</p>
 
 <p>For centuries, skeptical readers treated Daniel&rsquo;s Belshazzar as a fiction &mdash; every classical historian named Nabonidus as Babylon&rsquo;s last king, and no Belshazzar appeared anywhere. Then the cuneiform archives began to speak: the <em>Nabonidus Cylinder</em> from Ur names &ldquo;Belshazzar, the eldest son, my offspring&rdquo; in the king&rsquo;s own prayer, and administrative texts show the crown prince exercising royal authority in Babylon during his father&rsquo;s long absence &mdash; a co-regency in fact if not in formal title. Daniel&rsquo;s scene even preserves the arrangement&rsquo;s odd arithmetic: Belshazzar offers the interpreter of the writing on the wall promotion to <em>third</em> ruler in the kingdom (<a href="https://www.blueletterbible.org/kjv/dan/5/29/" target="_blank" data-ref="Daniel 5:29">Daniel 5:29</a>) &mdash; the highest rank actually available in a realm whose first two places were already occupied by an absent king and his regent son.</p>
@@ -157,6 +162,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}
