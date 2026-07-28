@@ -66,6 +66,11 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>It is tempting to go one step further and credit Babylon with <em>trigonometry</em>, and here we should slow down. The famous tablet <strong>Plimpton 322</strong> &mdash; a Old Babylonian table of Pythagorean-style number triples, written a thousand years before Pythagoras &mdash; is real and remarkable. In 2017 two mathematicians, <strong>Daniel Mansfield and Norman Wildberger</strong>, argued that it is more than a list of triples: that it is, in effect, the world&rsquo;s oldest trigonometric table, a ratio-based tool for solving triangles that predates Greek trigonometry by over a millennium. It is a striking claim, and it may well be right &mdash; <strong>but it is contested</strong>. Many Assyriologists read the same tablet as a teacher&rsquo;s exercise in generating number pairs, part of the scribal-school curriculum, with no trigonometric intent at all. So it belongs in this guide honestly labeled: <em>a live scholarly debate, not a settled fact.</em></p>
 
+<figure class="fg-figure">
+  <img src="/images/culture/babylon/photos/plimpton-322.jpg" alt="The Plimpton 322 mathematical tablet" loading="lazy">
+  <figcaption>Plimpton 322 &mdash; an Old Babylonian tablet of Pythagorean-style number triples, written over a thousand years before Pythagoras. Whether it is the world&rsquo;s oldest trigonometric table is still debated. <span class="fg-credit">Columbia University, via Wikimedia Commons (public domain)</span></figcaption>
+</figure>
+
 <p>What is <em>not</em> in doubt is the lineage that runs forward from Babylon into the exact sciences of the West. Greek astronomers did not build in a vacuum: <strong>Hipparchus</strong> in the second century BC inherited Babylonian eclipse records, Babylonian planetary parameters, and the Babylonian sexagesimal degree, and it was on that foundation &mdash; measured Babylonian data organized by Greek geometry &mdash; that Greek trigonometry and Ptolemy&rsquo;s astronomy were raised. The solid, uncontested story is not &ldquo;Babylon invented trigonometry&rdquo; but something almost as impressive: <strong>Babylon supplied the centuries of observation and the base-60 arithmetic on which Greek exact science was built.</strong> The line runs Babylon &rarr; Greece &rarr; us, and it runs right through your wristwatch.</p>
 
 <br>
@@ -250,6 +255,7 @@ function notShow(which) {
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}

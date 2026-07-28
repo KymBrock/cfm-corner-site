@@ -46,6 +46,11 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>Into that march stepped King <strong>Josiah</strong> of Judah, who intercepted Necho at Megiddo and was killed (<a href="https://www.blueletterbible.org/kjv/2ch/35/20/" target="_blank" data-ref="2 Chronicles 35:20-24">2 Chronicles 35:20&ndash;24</a>). Whatever he intended, the effect is plain: by trying to keep Egypt from reinforcing Assyria, Josiah&rsquo;s death-ride objectively served <strong>Babylon</strong> &mdash; ruled then not yet by Nebuchadnezzar but by his father <strong>Nabopolassar</strong>. Nebuchadnezzar was still the crown prince; he would not win Carchemish or take the throne until 605, four years after Josiah was already dead.</p>
 
+<figure class="fg-figure">
+  <img src="/images/culture/babylon/photos/tel-megiddo.jpg" alt="The ruins of Tel Megiddo, Israel" loading="lazy">
+  <figcaption>Tel Megiddo &mdash; the strategic mound guarding the pass where Josiah rode out to stop Necho in 609 BC, and was killed. Its Greek name, Armageddon, became scripture&rsquo;s word for the last battle. <span class="fg-credit">Photo &copy; Anagoria, Wikimedia Commons (CC BY 3.0)</span></figcaption>
+</figure>
+
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
 <p style="margin: 0;"><strong>One preposition, two directions:</strong> 2 Kings 23:29 has Necho going &ldquo;against the king of Assyria,&rdquo; and for most of history that was read as war between them. The Hebrew <em>&lsquo;al</em> is simply ambiguous &mdash; &ldquo;against,&rdquo; but also &ldquo;to&rdquo; or &ldquo;alongside.&rdquo; The cuneiform record of 609 BC, in which Egyptian and Assyrian troops besiege Harran <em>together</em>, shows the second sense is the right one. A single small word &mdash; and the whole shape of the war turns on which way it points.</p>
 </div>
@@ -116,5 +121,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </details>
 
 </div>
+
+<link rel="stylesheet" href="/css/fg-gallery.css">
 
 {{< /rawhtml >}}
