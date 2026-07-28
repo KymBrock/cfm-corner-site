@@ -40,8 +40,10 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 .ers-head { padding:16px 18px 4px; }
 .ers-head h4 { margin:0; font-size:1.05rem; color:#3c3a33; }
 .ers-head p { margin:4px 0 0; font-size:.82rem; color:#8a8172; }
-.ers-stage { position:relative; width:100%; aspect-ratio:2/1; background:#dfe6e2; }
-.ers-map { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .55s ease; }
+.ers-stage { position:relative; background:#dfe6e2; line-height:0; }
+.ers-stage .ers-map { display:block; width:100%; height:auto; margin:0; opacity:0; transition:opacity .55s ease; }
+.ers-map:first-of-type { position:relative; }
+.ers-map:not(:first-of-type) { position:absolute; top:0; left:0; }
 .ers-map.active { opacity:1; }
 .ers-yrbadge { position:absolute; top:12px; left:14px; z-index:2; background:rgba(56,55,49,.72); color:#fff; font-size:.8rem; font-weight:800; letter-spacing:.03em; padding:4px 11px; border-radius:999px; }
 .ers-cap { padding:12px 18px 6px; font-size:.9rem; line-height:1.5; color:#443f37; min-height:4.2em; border-top:1px solid #eee6d8; }
