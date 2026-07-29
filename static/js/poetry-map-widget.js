@@ -126,6 +126,27 @@
         a: { Relation: "Each image line is paired with the provision it pictures.", Key: "shepherd ⇒ “I shall not want” · green pastures / still waters ⇒ rest & guidance", Function: "Teaches through a picture the hearer can feel, not just a claim to accept.", Claim: "strong", Caution: "Identify which line is the image and which is the point; the doctrine rides on the metaphor." }
       },
       {
+        tab: "Psalms 1–2", tabsub: "Wordplay (Hebrew)", form: "Wordplay — One Verb, Two Ways", meta: "הָגָה hagah · Psalm 1:2 & 2:1", type: "wordplay",
+        blurb: "The two gateway psalms hide a pun the English cannot show. The very same Hebrew verb — hagah — is used of the righteous and of the rebels, and it points opposite directions depending on the heart doing it.",
+        lines: [
+          { g: "", role: "frame", ref: "Psalm 1:2 · the righteous", html: 'in his law doth he <span class="pmw-kw">meditate</span> <b class="pmw-heb">יֶהְגֶּה</b> day and night' },
+          { g: "", role: "frame", ref: "Psalm 2:1 · the nations", html: 'the people <span class="pmw-kw">imagine</span> <b class="pmw-heb">יֶהְגּוּ</b> a vain thing' }
+        ],
+        notation: "הָגָה &nbsp;hagah — “to murmur”: meditate · mutter · plot",
+        a: { Relation: "One root, ה־ג־ה, binds Psalm 1 to Psalm 2.", Key: "the righteous *hagah* God’s law; the nations *hagah* a vain scheme", Function: "Links the Psalter’s twin gateway psalms and asks what a heart’s constant murmuring is filled with.", Claim: "strong (shared root); the deliberate link is the standard reading", Caution: "The KJV splits the one verb into “meditate” and “imagine,” so the pun is invisible in English. Root range from BLB (H1897): to mutter → meditate → plot." }
+      },
+      {
+        tab: "Psalm 46", tabsub: "Wordplay (Hebrew)", form: "Wordplay — Keyword Reversal", meta: "מוֹט mot · Psalm 46:2, 5, 6", type: "wordplay",
+        blurb: "Psalm 46 strikes one Hebrew word three times — mot, “to totter.” Everything in the world totters; the city of God, pointedly, does not. English hides that it is all the same word.",
+        lines: [
+          { g: "", role: "frame", ref: "Psalm 46:2 · the mountains", html: 'the mountains be <span class="pmw-kw">carried</span> <b class="pmw-heb">מוֹט</b> into the sea' },
+          { g: "", role: "pair2", ref: "Psalm 46:5 · the city of God", html: 'she shall <span class="pmw-ct">not be moved</span> <b class="pmw-heb">בַּל־תִּמּוֹט</b>' },
+          { g: "", role: "frame", ref: "Psalm 46:6 · the kingdoms", html: 'the kingdoms were <span class="pmw-kw">moved</span> <b class="pmw-heb">מָטוּ</b>' }
+        ],
+        notation: "מוֹט &nbsp;mot — “totter, slip” &nbsp;(×3; the city: NOT)",
+        a: { Relation: "The root מ־ו־ט sounds three times — mountains, city, kingdoms.", Key: "the cosmos totters · the kingdoms totter · but the city of God “shall not totter” (bal-timmot)", Function: "The repeated keyword makes God’s city the one unshakable thing in a tottering world.", Claim: "strong", Caution: "The KJV renders the one root “carried,” “moved,” “moved,” so the contrast is invisible in English. Psalm 46 does the same trick with הָמָה hamah, “roar” — its waters roar and its nations roar. Roots from BLB (H4131; H1993)." }
+      },
+      {
         tab: "Psalm 25", tabsub: "Acrostic (Hebrew)", form: "Alphabetic Acrostic", meta: "Aleph → Tav · Psalm 25", type: "acrostic",
         blurb: "Here is a poem you cannot see in English at all. In the Hebrew, every verse of Psalm 25 begins with the next letter of the alphabet — a whole A-to-Z of trust running down the margin. Watch the aleph-bet descend.",
         rows: [

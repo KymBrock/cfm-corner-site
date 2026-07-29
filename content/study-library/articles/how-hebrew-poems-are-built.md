@@ -55,7 +55,12 @@ The clearest example in this week's reading is the **acrostic**. In the Hebrew, 
 
 And Psalm 25 does something even more moving: it **breaks its own pattern on purpose.** The alphabet should end at *tav* (verse 21) — but the psalmist adds one more line, out of order, beginning again with *pe*: "Redeem Israel, O God, out of all his troubles" (25:22). The ordered prayer overflows its own form for one last, urgent cry. You can only see that if you can see the Hebrew — so the acrostic map below shows the aleph-bet running down the margin for you.
 
-*(The Hebrew also hides puns, sound-play, and double meanings — wordplays that no translation can carry. Those deserve careful, sourced handling, and will be added here as each one is verified.)*
+The Hebrew also hides **wordplays** — a single word used twice, pointing two different directions, that no English translation can carry. Two clear ones sit in this week's reading:
+
+- **Psalms 1–2 share a secret verb.** The blessed man "doth *meditate*" on the law (1:2); the raging nations "*imagine* a vain thing" (2:1). In Hebrew both are the *same word* — *hagah*, "to murmur" — so the gateway psalms quietly contrast what a heart's constant murmuring is filled with: God's word, or an empty scheme.
+- **Psalm 46 repeats one word for "totter."** The mountains are "carried" into the sea (46:2), the kingdoms are "moved" (46:6) — but the city of God "shall *not* be moved" (46:5). All three are the same Hebrew root, *mot*: everything in the world totters, and God's city, pointedly, does not.
+
+Both are in the tool below (the "Wordplay" chips), with the Hebrew shown. As with the forms, the tool marks how confident each claim is — and it holds only wordplays that can be checked against the Hebrew text and the lexicon, never a speculative "recovery."
 
 ## Try It: Map a Psalm
 

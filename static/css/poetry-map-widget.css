@@ -116,6 +116,11 @@
 .poetry-map-widget .pmw-kw { background: var(--pmw-key-bg); color: var(--pmw-key); border-radius: 4px; padding: 0 4px; font-weight: 600; }
 .poetry-map-widget .pmw-ct { color: var(--pmw-contrast); text-decoration: underline; text-decoration-color: var(--pmw-contrast); text-underline-offset: 3px; }
 .poetry-map-widget .pmw-pr { color: var(--pmw-prog); font-weight: 600; }
+.poetry-map-widget .pmw-heb {
+  font-family: "Frank Ruhl Libre", "Times New Roman", Georgia, serif;
+  font-size: 1.28em; font-weight: 700; color: var(--pmw-key); margin: 0 2px;
+  unicode-bidi: isolate;
+}
 
 /* acrostic mode — the Hebrew alef-bet rail */
 .poetry-map-widget .pmw-acrostic { display: flex; flex-direction: column; gap: 2px; }
