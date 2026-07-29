@@ -84,6 +84,94 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>The journey itself &mdash; the long road north through Riblah and around the desert (see <a href="/culture/ancient/babylon/01-the-land-between-the-rivers/">Section 01</a>) &mdash; took months on foot. Assyrian reliefs of earlier deportations show the standard imperial procedure: families with carts and bundles, herded in columns &mdash; a policy designed not to annihilate peoples but to transplant and use them.</p>
 
+<!-- ===== THE ROAD TO BABYLON (exr) ===== -->
+<style>
+.exr { border:1px solid #e2ddd3; border-radius:16px; overflow:hidden; margin:26px 0; background:#fbf9f5; box-shadow:0 6px 18px rgba(0,0,0,.07); font-family:-apple-system,Segoe UI,Roboto,sans-serif; }
+.exr-head { padding:16px 18px 6px; }
+.exr-head h4 { margin:0; font-size:1.05rem; color:#3c3a33; }
+.exr-head p { margin:4px 0 0; font-size:.82rem; color:#8a8172; }
+.exr-map { display:block; width:100%; height:auto; }
+.exr-sea { fill:#c7dce3; }
+.exr-desert { fill:#ece0c4; }
+.exr-desert-lbl { font:italic 13px -apple-system,sans-serif; fill:#b3a074; letter-spacing:.08em; }
+.exr-sea-lbl { font:italic 12px -apple-system,sans-serif; fill:#7fa7b3; }
+.exr-river { fill:none; stroke:#9fc0cc; stroke-width:2.5; opacity:.8; }
+.exr-route-base { fill:none; stroke:#cbb892; stroke-width:3; stroke-dasharray:1 8; stroke-linecap:round; }
+.exr-route-live { fill:none; stroke:#c65528; stroke-width:5; stroke-linecap:round; }
+.exr-dot { fill:#3c3a33; }
+.exr-dot-jeru { fill:#7a3030; }
+.exr-dot-dest { fill:#c65528; }
+.exr-lbl { font:700 15px -apple-system,sans-serif; fill:#3c3a33; }
+.exr-sub { font:italic 12px -apple-system,sans-serif; fill:#8a8172; }
+.exr-cap { padding:12px 18px 6px; font-size:.9rem; line-height:1.5; color:#443f37; min-height:4.6em; border-top:1px solid #eee6d8; }
+.exr-cap b { color:#7a3030; }
+.exr-time { display:flex; gap:0; padding:8px 12px 18px; position:relative; }
+.exr-time::before { content:""; position:absolute; left:56px; right:56px; top:16px; height:3px; background:#e0d8c7; border-radius:3px; }
+.exr-step { flex:1; background:none; border:none; cursor:pointer; padding:0; display:flex; flex-direction:column; align-items:center; gap:7px; font-family:inherit; position:relative; z-index:1; }
+.exr-d { width:22px; height:22px; border-radius:50%; background:#fff; border:3px solid #c9b98f; transition:transform .2s,background .2s,border-color .2s; }
+.exr-step.on .exr-d { transform:scale(1.3); background:#c65528; border-color:#c65528; }
+.exr-yr { font-size:.82rem; font-weight:800; color:#5a544a; }
+.exr-nm { font-size:.68rem; color:#8a8172; line-height:1.15; max-width:120px; }
+.exr-step.on .exr-yr { color:#3c3a33; }
+.exr-cred { text-align:center; font-size:.68rem; font-style:italic; color:#a89f90; padding:0 12px 12px; }
+@media (max-width:560px){ .exr-nm{ display:none; } .exr-time::before{ left:38px; right:38px; } }
+</style>
+
+<div class="exr">
+  <div class="exr-head"><h4>The Road to Babylon</h4>
+  <p>Three times Babylon emptied Jerusalem &mdash; the same long road north through Riblah and down the Euphrates. Step through the waves.</p></div>
+  <svg class="exr-map" viewBox="0 0 840 470" role="img" aria-label="Schematic map of the deportation route from Jerusalem through Riblah to Babylonia">
+    <rect x="0" y="0" width="840" height="470" fill="#f3ecda"/>
+    <path class="exr-sea" d="M0,0 L96,0 Q70,150 104,300 Q60,400 40,470 L0,470 Z"/>
+    <text class="exr-sea-lbl" x="14" y="240" transform="rotate(-90 14,240)">The Great Sea</text>
+    <path class="exr-desert" d="M250,300 Q430,250 610,320 Q470,430 300,410 Q250,360 250,300 Z"/>
+    <text class="exr-desert-lbl" x="360" y="375">Syrian Desert</text>
+    <path class="exr-river" d="M470,90 Q560,200 660,300 Q690,360 700,430"/>
+    <path class="exr-river" d="M540,80 Q640,190 720,300 Q745,360 756,430"/>
+    <path class="exr-route-base" d="M131,332 Q150,200 208,122 Q450,96 675,278"/>
+    <path class="exr-route-live" id="exr-live" d="M131,332 Q150,200 208,122 Q450,96 675,278" marker-end="url(#exr-ah)"/>
+    <defs><marker id="exr-ah" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#c65528"/></marker></defs>
+    <circle class="exr-dot-jeru" cx="131" cy="332" r="7"/>
+    <text class="exr-lbl" x="120" y="356" text-anchor="middle">Jerusalem</text>
+    <circle class="exr-dot" cx="208" cy="122" r="6"/>
+    <text class="exr-lbl" x="224" y="118">Riblah</text>
+    <text class="exr-sub" x="224" y="134">Nebuchadnezzar&rsquo;s HQ</text>
+    <circle class="exr-dot-dest" cx="675" cy="278" r="7"/>
+    <text class="exr-lbl" x="668" y="262" text-anchor="end">Babylon</text>
+    <circle class="exr-dot" cx="715" cy="315" r="5"/>
+    <text class="exr-lbl" x="727" y="312">Nippur</text>
+    <text class="exr-sub" x="727" y="328">&#256;l-Y&#257;h&#363;du</text>
+  </svg>
+  <p class="exr-cap" id="exr-cap"></p>
+  <div class="exr-time" id="exr-time"></div>
+  <div class="exr-cred">Schematic map by CFM Corner &mdash; not to scale</div>
+</div>
+
+<script>
+(function(){
+  var STEPS=[
+    {yr:"605 BC",nm:"The hostages",cap:"<b>605 BC &mdash; the hostages.</b> Fresh from crushing Egypt at Carchemish, Nebuchadnezzar takes a first, select group &mdash; royal and noble youth, <b>Daniel</b> and his companions among them &mdash; along with vessels from the temple. Judah is now a vassal; the leadership begins to bleed east."},
+    {yr:"597 BC",nm:"The great deportation",cap:"<b>597 BC &mdash; the great deportation.</b> After Jehoiakim&rsquo;s revolt, Babylon takes <b>King Jehoiachin</b>, the queen mother, the officials, the fighting men, and every craftsman and smith &mdash; some ten thousand, &ldquo;none remained, save the poorest sort.&rdquo; <b>Ezekiel</b> travels in this wave and will prophesy by the Chebar canal."},
+    {yr:"586 BC",nm:"The destruction",cap:"<b>586 BC &mdash; the destruction.</b> Zedekiah&rsquo;s rebellion ends at <b>Riblah</b>, where he is judged and blinded; Jerusalem and its temple are burned, and the city&rsquo;s survivors are marched to Babylonia. Only vinedressers and farmers are left behind &mdash; and a final aftershock follows in 582."}
+  ];
+  var live=document.getElementById('exr-live'), cap=document.getElementById('exr-cap'), time=document.getElementById('exr-time');
+  var L=live.getTotalLength(); live.style.strokeDasharray=L;
+  function draw(){ live.style.transition='none'; live.style.strokeDashoffset=L; live.getBoundingClientRect(); live.style.transition='stroke-dashoffset 1.1s ease'; live.style.strokeDashoffset=0; }
+  function show(n){
+    var b=time.querySelectorAll('.exr-step'); for(var j=0;j<b.length;j++) b[j].classList.toggle('on',j===n);
+    cap.innerHTML=STEPS[n].cap; draw();
+  }
+  STEPS.forEach(function(s,i){
+    var b=document.createElement('button'); b.className='exr-step'; b.type='button';
+    b.innerHTML='<span class="exr-d"></span><span class="exr-yr">'+s.yr+'</span><span class="exr-nm">'+s.nm+'</span>';
+    b.addEventListener('click',function(){ show(i); });
+    time.appendChild(b);
+  });
+  show(0);
+})();
+</script>
+<!-- ===== /exr ===== -->
+
 <br>
 
 <hr>
