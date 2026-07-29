@@ -352,7 +352,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <figure class="fg-figure" style="max-width:520px;">
   <img src="/images/culture/babylon/photos/merodach-baladan-kudurru.jpg" alt="Boundary-stone relief of Marduk-apla-iddina II (Merodach-baladan) before an official, beneath divine emblems" loading="lazy">
-  <figcaption><b>Merodach-baladan</b> (Marduk-apla-iddina II) depicted on a <em>kudurru</em> of his own reign &mdash; the king, the taller figure, before an official beneath the registers of divine emblems that guaranteed such land grants. This is the Chaldean chieftain who twice seized Babylon from Assyria, and whose envoys to Hezekiah drew Isaiah&rsquo;s warning. <span class="fg-credit">Public domain, via Wikimedia Commons</span></figcaption>
+  <figcaption><b>Merodach-baladan</b> (Marduk-apla-iddina II) on his own boundary-stone &mdash; by the Berlin museum&rsquo;s account the <em>only known likeness</em> of the king. Carved in his seventh regnal year (c.&nbsp;715 BC), it records a grant of royal land to his loyal servant <b>Bel-ahhe-eriba</b>, who stands at right in respectfully diminished scale, barefoot, hand raised; sixteen divine emblems along the top &mdash; Marduk, Ea, Nabu and others &mdash; guarantee the grant. This is the Chaldean chieftain who twice seized Babylon from Assyria, and whose envoys to Hezekiah drew Isaiah&rsquo;s warning. <span class="fg-credit">Kudurru of Marduk-apla-iddina II, <a href="https://smb.museum-digital.de/object/141781" target="_blank">Vorderasiatisches Museum Berlin, VA 2663</a>; 1902 engraving, public domain via Wikimedia Commons</span></figcaption>
 </figure>
 
 <br>
