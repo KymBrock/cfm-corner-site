@@ -217,11 +217,15 @@
 .poetry-map-widget .pmw-w[data-lang="he"] { --wlang: #D2382C; --wlang-bg: #fbe6e3; }
 .poetry-map-widget .pmw-w[data-lang="gr"] { --wlang: #2D6CDF; --wlang-bg: #e4ecfb; }
 .poetry-map-widget .pmw-w:hover { background: var(--wlang-bg); }
-.poetry-map-widget .pmw-w-key { color: var(--wlang); font-weight: 700; }
-/* A highlighted leitwort/frame occurrence — tinted underline in the accent. */
+/* The acrostic-bearing word stays sage (the acrostic rail keeps its own palette). */
+.poetry-map-widget .pmw-w-key { color: var(--sage-dark, #4a6b52); font-weight: 700; }
+/* A highlighted leitwort/frame occurrence — tinted in the language accent. */
 .poetry-map-widget .pmw-w-hit { color: var(--wlang); font-weight: 700;
   box-shadow: inset 0 -2px 0 var(--wlang); border-radius: 2px; }
 .poetry-map-widget .pmw-w[data-tip]:hover::after { border-left-color: var(--wlang); }
+/* Acrostic rail stays fully sage — no red language tint on hover/tooltip. */
+.poetry-map-widget .pmw-acrostic .pmw-w:hover { background: var(--gold-pale, #f5ecd0); }
+.poetry-map-widget .pmw-acrostic .pmw-w[data-tip]:hover::after { border-left-color: var(--sage-dark, #4a6b52); }
 .poetry-map-widget .pmw-w[data-tip]:hover::after {
   content: attr(data-tip); position: absolute; right: 0; left: auto;
   bottom: 142%; z-index: 40;
@@ -240,3 +244,15 @@
   font-size: 1.18rem; line-height: 1.85; }
 .poetry-map-widget .pmw-src[data-lang="gr"] { font-family: "SBL Greek", "New Athena Unicode", Cardo, Georgia, serif;
   font-size: 1.08rem; line-height: 1.7; }
+
+/* English · Hebrew/Greek · Both source toggle (analyzer extension). */
+.poetry-map-widget .pmw-toggle { display: flex; align-items: center; gap: 6px; margin: 4px 0 2px; }
+.poetry-map-widget .pmw-tog-label { font-family: var(--pmw-mono, monospace); font-size: 0.62rem;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--pmw-soft, #7a7266); margin-right: 2px; }
+.poetry-map-widget .pmw-tog { font: inherit; font-size: 0.76rem; cursor: pointer;
+  border: 1px solid var(--pmw-rule, #c6d4c8); background: var(--pmw-card, #fff);
+  color: var(--pmw-soft, #7a7266); padding: 3px 11px; border-radius: 999px; transition: all .12s; }
+.poetry-map-widget .pmw-tog:hover { border-color: var(--sage-dark, #4a6b52); color: var(--pmw-ink, #383731); }
+.poetry-map-widget .pmw-tog.on { background: var(--sage-dark, #4a6b52); border-color: var(--sage-dark, #4a6b52); color: #fff; }
+/* Source line stacked above the English inside a map row. */
+.poetry-map-widget .pmw-line-src { margin: 0 0 3px; padding-left: 11px; }
