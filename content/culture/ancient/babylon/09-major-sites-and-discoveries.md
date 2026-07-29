@@ -62,6 +62,87 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <h3>The Sister Cities</h3>
 
+<!-- ===== CITIES OF BABYLONIA MAP (smw) ===== -->
+<style>
+.smw { border:1px solid #e2ddd3; border-radius:16px; overflow:hidden; margin:26px 0; background:#fbf9f5; box-shadow:0 6px 18px rgba(0,0,0,.07); font-family:-apple-system,Segoe UI,Roboto,sans-serif; }
+.smw-head { padding:16px 18px 6px; }
+.smw-head h4 { margin:0; font-size:1.05rem; color:#3c3a33; }
+.smw-head p { margin:4px 0 0; font-size:.82rem; color:#8a8172; }
+.smw-body { display:flex; gap:0; align-items:stretch; flex-wrap:wrap; }
+.smw-mapwrap { flex:1 1 320px; min-width:0; }
+.smw-map { display:block; width:100%; height:auto; }
+.smw-hot { fill:#fff; opacity:0; cursor:pointer; }
+.smw-ring { fill:none; stroke:#c65528; stroke-width:3; opacity:0; transition:opacity .15s; pointer-events:none; }
+.smw-glow { fill:#c65528; opacity:0; transition:opacity .15s; pointer-events:none; }
+.smw-city:hover .smw-ring { opacity:.55; }
+.smw-city.on .smw-ring { opacity:1; }
+.smw-city.on .smw-glow { opacity:.16; }
+.smw-panel { flex:1 1 250px; min-width:0; padding:16px 18px; border-left:1px solid #eee6d8; background:#fbf9f5; }
+.smw-panel h5 { margin:0 0 2px; font-size:1.05rem; color:#7a3030; }
+.smw-panel .smw-sub { font-size:.78rem; color:#8a8172; font-style:italic; margin-bottom:10px; }
+.smw-panel .smw-what { font-size:.82rem; font-weight:700; color:#5a544a; margin-bottom:6px; }
+.smw-panel .smw-why { font-size:.9rem; line-height:1.5; color:#443f37; }
+.smw-panel .smw-link { display:inline-block; margin-top:10px; font-size:.82rem; color:#4a6b52; font-weight:600; text-decoration:none; }
+.smw-cred { text-align:center; font-size:.68rem; font-style:italic; color:#a89f90; padding:8px 12px 12px; }
+@media (max-width:560px){ .smw-panel { border-left:none; border-top:1px solid #eee6d8; } }
+</style>
+
+<div class="smw">
+  <div class="smw-head"><h4>The Cities of Babylonia</h4>
+  <p>Tap a city to see what it was &mdash; and why it matters to this story.</p></div>
+  <div class="smw-body">
+    <div class="smw-mapwrap">
+    <svg class="smw-map" viewBox="0 0 700 560" role="img" aria-label="Map of the cities of Babylonia along the Euphrates">
+      <image href="/images/culture/babylon/maps/babylonia-cities-base.jpg" x="0" y="0" width="700" height="560"/>
+      <g class="smw-city" data-id="babylon" tabindex="0" role="button" aria-label="Babylon">
+        <circle class="smw-glow" cx="221" cy="173" r="26"/><circle class="smw-ring" cx="221" cy="173" r="15"/><circle class="smw-hot" cx="221" cy="173" r="24"/></g>
+      <g class="smw-city" data-id="sippar" tabindex="0" role="button" aria-label="Sippar">
+        <circle class="smw-glow" cx="209" cy="101" r="22"/><circle class="smw-ring" cx="209" cy="101" r="13"/><circle class="smw-hot" cx="209" cy="101" r="20"/></g>
+      <g class="smw-city" data-id="kish" tabindex="0" role="button" aria-label="Kish">
+        <circle class="smw-glow" cx="259" cy="159" r="22"/><circle class="smw-ring" cx="259" cy="159" r="13"/><circle class="smw-hot" cx="259" cy="159" r="20"/></g>
+      <g class="smw-city" data-id="nippur" tabindex="0" role="button" aria-label="Nippur">
+        <circle class="smw-glow" cx="361" cy="207" r="22"/><circle class="smw-ring" cx="361" cy="207" r="13"/><circle class="smw-hot" cx="361" cy="207" r="20"/></g>
+      <g class="smw-city" data-id="uruk" tabindex="0" role="button" aria-label="Uruk">
+        <circle class="smw-glow" cx="425" cy="315" r="22"/><circle class="smw-ring" cx="425" cy="315" r="13"/><circle class="smw-hot" cx="425" cy="315" r="20"/></g>
+      <g class="smw-city" data-id="eridu" tabindex="0" role="button" aria-label="Eridu">
+        <circle class="smw-glow" cx="352" cy="350" r="22"/><circle class="smw-ring" cx="352" cy="350" r="13"/><circle class="smw-hot" cx="352" cy="350" r="20"/></g>
+      <g class="smw-city" data-id="ur" tabindex="0" role="button" aria-label="Ur">
+        <circle class="smw-glow" cx="480" cy="396" r="22"/><circle class="smw-ring" cx="480" cy="396" r="13"/><circle class="smw-hot" cx="480" cy="396" r="20"/></g>
+    </svg>
+    </div>
+    <div class="smw-panel" id="smw-panel"></div>
+  </div>
+  <div class="smw-cred">Map by CFM Corner on a S&eacute;mhur relief base (CC BY-SA 4.0)</div>
+</div>
+
+<script>
+(function(){
+  var SITES={
+    babylon:{name:"Babylon",sub:"Tell Babil, near Hillah",what:"The capital itself",why:"Robert Koldewey&rsquo;s 1899&ndash;1917 dig recovered Nebuchadnezzar&rsquo;s city &mdash; the double walls, the Processional Way, the Southern Palace, and the Ishtar Gate (rebuilt in Berlin). A UNESCO World Heritage Site since 2019.",link:"/culture/ancient/babylon/06-the-city-itself/",linkText:"The City Itself &rarr;"},
+    sippar:{name:"Sippar",sub:"Tell Abu Habbah",what:"City of the sun-god Shamash",why:"Its Ebabbar temple yielded tens of thousands of Neo-Babylonian tablets &mdash; the day-to-day economy of the empire &mdash; plus a genuine temple library found in situ, still jar-filed on its shelves. The Babylonian Map of the World was found here too.",link:"/culture/ancient/babylon/05-writing-and-learning/",linkText:"Writing &amp; Learning &rarr;"},
+    kish:{name:"Kish",sub:"on the Euphrates, east of Babylon",what:"One of the great cities of the plain",why:"Like Ur, Uruk, Nippur, and Babylon itself, Kish grew up along the <b>Euphrates</b> rather than the wilder Tigris &mdash; the river whose gentle, gravity-fed flow made the southern cities possible.",link:"/culture/ancient/babylon/01-the-land-between-the-rivers/",linkText:"The Land Between the Rivers &rarr;"},
+    nippur:{name:"Nippur",sub:"holy city of Enlil",what:"A religious capital, never a political one",why:"The countryside around Nippur is where Judah&rsquo;s exiles were settled &mdash; the <b>Chebar canal</b>, the <b>&#256;l-Y&#257;h&#363;du</b> (&ldquo;Judah-town&rdquo;) district, and the Mura&scaron;&ucirc; archive all belong to its region.",link:"/culture/ancient/babylon/07-the-exile-experience/",linkText:"The Exile Experience &rarr;"},
+    uruk:{name:"Uruk",sub:"Warka; biblical Erech",what:"The world&rsquo;s first true city",why:"The birthplace of writing (c. 3400&ndash;3300 BC) and of monumental urban life &mdash; Gilgamesh&rsquo;s city, and one of the cities named in Nimrod&rsquo;s kingdom (Genesis 10:10).",link:"/culture/ancient/babylon/05-writing-and-learning/",linkText:"Writing &amp; Learning &rarr;"},
+    eridu:{name:"Eridu",sub:"southernmost of the old cities",what:"The city of Ea (Enki)",why:"Home of <b>Ea</b> &mdash; god of wisdom, fresh water, and crafts, and humanity&rsquo;s friend in the Babylonian myths, the one who warns Utnapishtim of the coming flood.",link:"/culture/ancient/babylon/04-religion-and-mythology/",linkText:"Religion &amp; Mythology &rarr;"},
+    ur:{name:"Ur",sub:"Tell el-Muqayyar",what:"Great Sumerian city of the moon-god",why:"The traditional &ldquo;Ur of the Chaldees.&rdquo; Leonard Woolley&rsquo;s 1922&ndash;34 dig found the Royal Tombs and Iraq&rsquo;s best-preserved ziggurat (restored by Nabonidus &mdash; whose Belshazzar cylinder was found here). The world Abraham left (Genesis 11:31).",link:"/culture/ancient/babylon/03-nebuchadnezzar-and-the-kings/",linkText:"Nabonidus &amp; Belshazzar &rarr;"}
+  };
+  var panel=document.getElementById('smw-panel');
+  var cities=document.querySelectorAll('.smw-city');
+  function show(id){
+    for(var i=0;i<cities.length;i++) cities[i].classList.toggle('on',cities[i].getAttribute('data-id')===id);
+    var s=SITES[id];
+    panel.innerHTML='<h5>'+s.name+'</h5><div class="smw-sub">'+s.sub+'</div><div class="smw-what">'+s.what+'</div><div class="smw-why">'+s.why+'</div><a class="smw-link" href="'+s.link+'">'+s.linkText+'</a>';
+  }
+  for(var i=0;i<cities.length;i++){(function(c){
+    var id=c.getAttribute('data-id');
+    c.addEventListener('click',function(){ show(id); });
+    c.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); show(id); } });
+  })(cities[i]);}
+  show('babylon');
+})();
+</script>
+<!-- ===== /smw ===== -->
+
 <table style="width:100%; border-collapse: collapse; margin: 24px 0;">
 <thead>
 <tr style="background: var(--sage-dark, #4a6b52); color: white;">
