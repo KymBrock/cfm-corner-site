@@ -87,18 +87,13 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 .exr-head h4 { margin:0; font-size:1.05rem; color:#3c3a33; }
 .exr-head p { margin:4px 0 0; font-size:.82rem; color:#8a8172; }
 .exr-map { display:block; width:100%; height:auto; }
-.exr-sea { fill:#c7dce3; }
-.exr-desert { fill:#ece0c4; }
-.exr-desert-lbl { font:italic 13px -apple-system,sans-serif; fill:#b3a074; letter-spacing:.08em; }
-.exr-sea-lbl { font:italic 12px -apple-system,sans-serif; fill:#7fa7b3; }
-.exr-river { fill:none; stroke:#9fc0cc; stroke-width:2.5; opacity:.8; }
-.exr-route-base { fill:none; stroke:#cbb892; stroke-width:3; stroke-dasharray:1 8; stroke-linecap:round; }
+.exr-route-base { fill:none; stroke:#7a3030; stroke-width:3.5; stroke-dasharray:2 9; stroke-linecap:round; opacity:.5; }
 .exr-route-live { fill:none; stroke:#c65528; stroke-width:5; stroke-linecap:round; }
-.exr-dot { fill:#3c3a33; }
-.exr-dot-jeru { fill:#7a3030; }
-.exr-dot-dest { fill:#c65528; }
-.exr-lbl { font:700 15px -apple-system,sans-serif; fill:#3c3a33; }
-.exr-sub { font:italic 12px -apple-system,sans-serif; fill:#8a8172; }
+.exr-dot-jeru { fill:#7a3030; stroke:#fff; stroke-width:2; }
+.exr-dot { fill:#3c3a33; stroke:#fff; stroke-width:1.5; }
+.exr-ring { fill:none; stroke:#c65528; stroke-width:3; }
+.exr-lbl { font:700 15px -apple-system,sans-serif; fill:#2c2a25; paint-order:stroke; stroke:#f3ecda; stroke-width:3; }
+.exr-sub { font:italic 12px -apple-system,sans-serif; fill:#5a544a; paint-order:stroke; stroke:#f3ecda; stroke-width:3; }
 .exr-cap { padding:12px 18px 6px; font-size:.9rem; line-height:1.5; color:#443f37; min-height:4.6em; border-top:1px solid #eee6d8; }
 .exr-cap b { color:#7a3030; }
 .exr-time { display:flex; gap:0; padding:8px 12px 18px; position:relative; }
@@ -116,31 +111,20 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <div class="exr">
   <div class="exr-head"><h4>The Road to Babylon</h4>
   <p>Three times Babylon emptied Jerusalem &mdash; the same long road north through Riblah and down the Euphrates. Step through the waves.</p></div>
-  <svg class="exr-map" viewBox="0 0 840 470" role="img" aria-label="Schematic map of the deportation route from Jerusalem through Riblah to Babylonia">
-    <rect x="0" y="0" width="840" height="470" fill="#f3ecda"/>
-    <path class="exr-sea" d="M0,0 L96,0 Q70,150 104,300 Q60,400 40,470 L0,470 Z"/>
-    <text class="exr-sea-lbl" x="14" y="240" transform="rotate(-90 14,240)">The Great Sea</text>
-    <path class="exr-desert" d="M250,300 Q430,250 610,320 Q470,430 300,410 Q250,360 250,300 Z"/>
-    <text class="exr-desert-lbl" x="360" y="375">Syrian Desert</text>
-    <path class="exr-river" d="M470,90 Q560,200 660,300 Q690,360 700,430"/>
-    <path class="exr-river" d="M540,80 Q640,190 720,300 Q745,360 756,430"/>
-    <path class="exr-route-base" d="M131,332 Q150,200 208,122 Q450,96 675,278"/>
-    <path class="exr-route-live" id="exr-live" d="M131,332 Q150,200 208,122 Q450,96 675,278" marker-end="url(#exr-ah)"/>
+  <svg class="exr-map" viewBox="0 0 1000 440" role="img" aria-label="Map of the deportation route from Jerusalem through Riblah to Babylon">
+    <image href="/images/culture/babylon/maps/exile-route-base.jpg" x="0" y="0" width="1000" height="440"/>
     <defs><marker id="exr-ah" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#c65528"/></marker></defs>
-    <circle class="exr-dot-jeru" cx="131" cy="332" r="7"/>
-    <text class="exr-lbl" x="120" y="356" text-anchor="middle">Jerusalem</text>
-    <circle class="exr-dot" cx="208" cy="122" r="6"/>
-    <text class="exr-lbl" x="224" y="118">Riblah</text>
-    <text class="exr-sub" x="224" y="134">Nebuchadnezzar&rsquo;s HQ</text>
-    <circle class="exr-dot-dest" cx="675" cy="278" r="7"/>
-    <text class="exr-lbl" x="668" y="262" text-anchor="end">Babylon</text>
-    <circle class="exr-dot" cx="715" cy="315" r="5"/>
-    <text class="exr-lbl" x="727" y="312">Nippur</text>
-    <text class="exr-sub" x="727" y="328">&#256;l-Y&#257;h&#363;du</text>
+    <path class="exr-route-base" d="M112,262 Q150,128 260,108 Q520,66 720,178 Q800,232 846,270"/>
+    <path class="exr-route-live" id="exr-live" d="M112,262 Q150,128 260,108 Q520,66 720,178 Q800,232 846,270" marker-end="url(#exr-ah)"/>
+    <circle class="exr-dot-jeru" cx="112" cy="262" r="6.5"/>
+    <circle class="exr-ring" cx="851" cy="272" r="12"/>
+    <circle class="exr-dot" cx="260" cy="108" r="5.5"/>
+    <text class="exr-lbl" x="272" y="104">Riblah</text>
+    <text class="exr-sub" x="272" y="120">Nebuchadnezzar&rsquo;s HQ</text>
   </svg>
   <p class="exr-cap" id="exr-cap"></p>
   <div class="exr-time" id="exr-time"></div>
-  <div class="exr-cred">Schematic map by CFM Corner &mdash; not to scale</div>
+  <div class="exr-cred">Map by CFM Corner on a S&eacute;mhur relief base (CC BY-SA 4.0)</div>
 </div>
 
 <script>
@@ -152,7 +136,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
   ];
   var live=document.getElementById('exr-live'), cap=document.getElementById('exr-cap'), time=document.getElementById('exr-time');
   var L=live.getTotalLength(); live.style.strokeDasharray=L;
-  function draw(){ live.style.transition='none'; live.style.strokeDashoffset=L; live.getBoundingClientRect(); live.style.transition='stroke-dashoffset 1.1s ease'; live.style.strokeDashoffset=0; }
+  function draw(){ live.style.transition='none'; live.style.strokeDashoffset=L; live.getBoundingClientRect(); live.style.transition='stroke-dashoffset 1.2s ease'; live.style.strokeDashoffset=0; }
   function show(n){
     var b=time.querySelectorAll('.exr-step'); for(var j=0;j<b.length;j++) b[j].classList.toggle('on',j===n);
     cap.innerHTML=STEPS[n].cap; draw();
