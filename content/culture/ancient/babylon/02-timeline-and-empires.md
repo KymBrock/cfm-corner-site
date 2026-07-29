@@ -300,7 +300,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <figure class="fg-figure" style="max-width:520px;">
   <img src="/images/culture/babylon/photos/code-of-hammurabi-louvre.jpg" alt="The law stele of Hammurabi, Louvre" loading="lazy">
-  <figcaption>The stele of Hammurabi&rsquo;s laws (c. 1750 BC) &mdash; the king receives his commission from the sun-god Shamash, above 282 laws in cuneiform. <span class="fg-credit">Louvre; photo Mbzt &middot; Wikimedia Commons (CC BY 3.0)</span></figcaption>
+  <figcaption>The stele of Hammurabi&rsquo;s laws (c. 1750 BC) &mdash; the king receives his commission from the sun-god Shamash, above 282 laws in cuneiform. <a href="https://avalon.law.yale.edu/ancient/hamframe.asp" target="_blank">Read the laws &rarr;</a> <span class="fg-credit">Louvre; photo Mbzt &middot; Wikimedia Commons (CC BY 3.0)</span></figcaption>
 </figure>
 
 <p>Politically, Hammurabi&rsquo;s empire barely outlived him. But something more durable had happened: his dynasty made Babylon the seat of Marduk, and Marduk&rsquo;s city became the religious and intellectual capital of Mesopotamia &mdash; a position it held, through conquest and catastrophe, for the next 1,700 years.</p>
@@ -366,7 +366,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <figure class="fg-figure" style="max-width:560px;">
   <img src="/images/culture/babylon/photos/nabopolassar-cylinder.jpg" alt="Terracotta foundation cylinder of Nabopolassar recording work on Babylon's walls" loading="lazy">
-  <figcaption>A terracotta cylinder recording <b>Nabopolassar</b>&rsquo;s work on the walls of Babylon (Neo-Babylonian, 625&ndash;605 BC). No likeness of the dynasty&rsquo;s founder survives &mdash; like most Babylonian kings, he reaches us through his building inscriptions rather than his face. <span class="fg-credit">British Museum, BM 26263 &middot; photo Osama S. M. Amin, Wikimedia Commons (CC BY-SA 4.0)</span></figcaption>
+  <figcaption>A terracotta cylinder recording <b>Nabopolassar</b>&rsquo;s work on the walls of Babylon (Neo-Babylonian, 625&ndash;605 BC). No likeness of the dynasty&rsquo;s founder survives &mdash; like most Babylonian kings, he reaches us through his building inscriptions rather than his face. <a href="https://www.britishmuseum.org/collection/object/W_1898-0514-81" target="_blank">See it at the British Museum &rarr;</a> <span class="fg-credit">British Museum, BM 26263 &middot; photo Osama S. M. Amin, Wikimedia Commons (CC BY-SA 4.0)</span></figcaption>
 </figure>
 
 <p>Then came <strong>Carchemish</strong> (605 BC), where the crown prince Nebuchadnezzar shattered the Egyptian army and chased its remnant south. Within months his father died; Nebuchadnezzar crossed the desert by forced march to claim the crown, then returned west year after year to collect the tribute of &ldquo;all the kings of Hatti-land,&rdquo; as his chronicle calls Syria and Palestine. Judah&rsquo;s last four kings lived and died inside that annual rhythm &mdash; submission, temptation from Egypt, revolt, and retribution &mdash; through the deportation of 597, the destruction of 586, and beyond. (The kings themselves &mdash; Babylon&rsquo;s and Judah&rsquo;s &mdash; are profiled in <a href="/culture/ancient/babylon/03-nebuchadnezzar-and-the-kings/">Section 03</a>; the fall of Jerusalem as the Babylonian records tell it is in <a href="/culture/ancient/babylon/08-babylon-and-the-bible/">Section 08</a>.)</p>

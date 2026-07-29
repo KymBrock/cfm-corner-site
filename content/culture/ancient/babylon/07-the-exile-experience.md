@@ -35,7 +35,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <figure class="fg-figure">
   <img src="/images/culture/babylon/photos/jehoiachin-ration-tablet.jpg" alt="The Jehoiachin ration tablet" loading="lazy">
-  <figcaption>A ration tablet from Nebuchadnezzar&rsquo;s palace listing oil for the captive &lsquo;king of the land of Judah&rsquo; &mdash; Jehoiachin himself (<a href="https://www.blueletterbible.org/kjv/2ki/25/27/" target="_blank" data-ref="2 Kings 25:27-30">2 Kings 25:27&ndash;30</a>). <span class="fg-credit">Scallaham &middot; Wikimedia Commons (CC BY-SA 4.0)</span></figcaption>
+  <figcaption>A ration tablet from Nebuchadnezzar&rsquo;s palace listing oil for the captive &lsquo;king of the land of Judah&rsquo; &mdash; Jehoiachin himself (<a href="https://www.blueletterbible.org/kjv/2ki/25/27/" target="_blank" data-ref="2 Kings 25:27-30">2 Kings 25:27&ndash;30</a>). <a href="http://jerusalem.nottingham.ac.uk/items/show/127" target="_blank">Read the tablet &rarr;</a> <span class="fg-credit">Scallaham &middot; Wikimedia Commons (CC BY-SA 4.0)</span></figcaption>
 </figure>
 
 <br>
