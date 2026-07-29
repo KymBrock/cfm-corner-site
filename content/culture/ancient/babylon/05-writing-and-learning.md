@@ -43,6 +43,11 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p><strong><a href="https://www.worldhistory.org/cuneiform/" target="_blank">Cuneiform</a></strong> (&ldquo;wedge-shaped,&rdquo; from the marks a cut reed stylus presses into damp clay) began in the city of Uruk around 3400&ndash;3300 BC &mdash; the world&rsquo;s first writing, born not for poetry but for accounting: temple bureaucrats tracking sheep, grain, and beer rations. Over centuries the pictures became abstract wedge-clusters, and the system grew to write not just Sumerian but Akkadian &mdash; the Semitic language whose two great dialects, Babylonian and Assyrian, dominated the Near East for two millennia &mdash; and a dozen other languages from Hittite to Elamite.</p>
 
+<figure class="fg-figure" style="max-width:680px;">
+  <img src="/images/culture/babylon/photos/cuneiform-an-evolution.jpg" alt="The cuneiform sign AN evolving from an early star pictograph to later wedge forms" loading="lazy">
+  <figcaption>One sign across three thousand years: <b>AN</b> &mdash; &ldquo;sky,&rdquo; &ldquo;heaven,&rdquo; and &ldquo;god&rdquo; &mdash; from an early pictograph of a star (left) to the abstract wedge-cluster of later scribes (right). The whole script made this journey: pictures pressed and simplified into wedges by a cut-reed stylus. <span class="fg-credit">Cuneiform sign &ldquo;AN&rdquo; evolution &middot; ShlomoKatzav, Wikimedia Commons (CC0)</span></figcaption>
+</figure>
+
 <p>It was a difficult art. Cuneiform used several hundred signs, each of which could carry multiple sound values and multiple word meanings depending on context. Mastering it took years &mdash; which is exactly why scribes formed a professional class, why kings boasted when they could read (Ashurbanipal claimed he could decipher tablets &ldquo;from before the flood&rdquo;), and why Babylonian learning had such staying power: the difficulty of the script made the school, and the school carried the culture.</p>
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
@@ -117,6 +122,11 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <h3>Medicine, Maps, and the Practical Arts</h3>
 
 <p>The same list-making genius organized medicine (the <em>Diagnostic Handbook</em> catalogued symptoms and prognoses; healers divided into the <em>asû</em>, the empirical physician of salves and potions, and the <em>&#257;&scaron;ipu</em>, the ritual specialist &mdash; ancient Babylon saw no contradiction in employing both), law (see Hammurabi in <a href="/culture/ancient/babylon/02-timeline-and-empires/">Section 02</a>), lexicography, and even geography: the <strong>Babylonian Map of the World</strong> (a 6th-century BC tablet in the British Museum) draws the earth as a disk ringed by a &ldquo;Bitter River&rdquo; of ocean &mdash; with Babylon, naturally, at the center. It is both a real map and a theological statement, and it is precisely the mental map the exiles had to live inside: a world whose official center was Babylon &mdash; while their prophets kept insisting the true center was a ruined city on a ridge in Judah, to which they would return (<a href="https://www.blueletterbible.org/kjv/jer/29/10/" target="_blank" data-ref="Jeremiah 29:10">Jeremiah 29:10</a>).</p>
+
+<figure class="fg-figure" style="max-width:560px;">
+  <img src="/images/culture/babylon/photos/babylonian-world-map-imago-mundi.jpg" alt="The Babylonian Map of the World clay tablet (Imago Mundi), British Museum" loading="lazy">
+  <figcaption>The <b>Babylonian Map of the World</b> (the <em>Imago Mundi</em>), a 6th-century BC tablet &mdash; the oldest known map to picture the whole earth. A ring of &ldquo;Bitter River&rdquo; (Ocean) encircles the land; triangular <em>nag&ucirc;</em> regions lie beyond; and <b>Babylon</b>, astride the Euphrates, sits at the center of it all. <a href="https://www.britishmuseum.org/collection/object/W_1882-0714-509" target="_blank">See it at the British Museum &rarr;</a> <span class="fg-credit">British Museum, BM 92687 &middot; photo Gary Todd, Wikimedia Commons (CC0)</span></figcaption>
+</figure>
 
 <br>
 

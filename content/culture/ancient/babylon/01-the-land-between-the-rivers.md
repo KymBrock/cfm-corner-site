@@ -98,6 +98,11 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>The result was a civilization that was <strong>outward-facing by necessity</strong>. Babylon had to trade, and what it traded best &mdash; besides grain and wool &mdash; was administration: writing, accounting, contracts, weights and measures, mathematics, and law. (For how those exports shaped the whole ancient world, including Israel, see <a href="/culture/ancient/babylon/05-writing-and-learning/">Section 05: Writing &amp; Learning</a>.)</p>
 
+<figure class="fg-figure">
+  <img src="/images/culture/babylon/photos/palm-grove-babylon.jpg" alt="A date-palm grove beside the Euphrates at Babylon" loading="lazy">
+  <figcaption>A date-palm grove at <b>Babylon</b> on the Euphrates. The southern plain had almost no stone, metal, or building timber &mdash; but mud, reed, and the date palm were inexhaustible, and the palm alone gave food, fiber, and the one local timber a builder could count on. <span class="fg-credit">Palm grove at Babylon &middot; photo Hamody al-iraqi, Wikimedia Commons (CC BY-SA 4.0)</span></figcaption>
+</figure>
+
 <br>
 
 <hr>
