@@ -22,7 +22,6 @@ draft: true
 </span>
 <div style="flex: 1; min-width: 0;">
 <div style="font-weight: 700; color: #3c5743; font-size: 1.02em; line-height: 1.2;">Listen to this section</div>
-<div style="color: #6a8470; font-size: 0.85em; margin-top: 2px;">Narrated in Kym&rsquo;s voice</div>
 </div>
 </div>
 <audio controls preload="none" style="width: 100%; height: 40px; border-radius: 8px;">
