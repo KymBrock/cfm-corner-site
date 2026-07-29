@@ -147,6 +147,25 @@
       .scripture-ref:hover {
         background-color: rgba(74, 107, 82, 0.1);
       }
+      /* Scripture references in the header banner stay plain white text,
+         not green scripture-links (they remain in the DOM). */
+      .header-section a[href*="blueletterbible.org/"],
+      .header-section a[href*="churchofjesuschrist.org/study/"],
+      .header-section a[data-ref], .header-section .scripture-ref {
+        color: #fff;
+        text-decoration: none;
+        border-bottom: none;
+        cursor: inherit;
+      }
+      /* Scripture references inside plain headings inherit the heading's color. */
+      h1 a[href*="blueletterbible.org/"], h1 a[href*="churchofjesuschrist.org/study/"], h1 a[data-ref], h1 .scripture-ref,
+      h2 a[href*="blueletterbible.org/"], h2 a[href*="churchofjesuschrist.org/study/"], h2 a[data-ref], h2 .scripture-ref,
+      h3 a[href*="blueletterbible.org/"], h3 a[href*="churchofjesuschrist.org/study/"], h3 a[data-ref], h3 .scripture-ref {
+        color: inherit;
+        text-decoration: none;
+        border-bottom: none;
+        cursor: inherit;
+      }
     </style>
     <script>
     (function() {
