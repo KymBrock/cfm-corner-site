@@ -91,9 +91,10 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 .exr-route-live { fill:none; stroke:#c65528; stroke-width:5; stroke-linecap:round; }
 .exr-dot-jeru { fill:#7a3030; stroke:#fff; stroke-width:2; }
 .exr-dot { fill:#3c3a33; stroke:#fff; stroke-width:1.5; }
+.exr-dot-end { fill:#c65528; stroke:#fff; stroke-width:2; }
 .exr-ring { fill:none; stroke:#c65528; stroke-width:3; }
-.exr-lbl { font:700 15px -apple-system,sans-serif; fill:#2c2a25; paint-order:stroke; stroke:#f3ecda; stroke-width:3; }
-.exr-sub { font:italic 12px -apple-system,sans-serif; fill:#5a544a; paint-order:stroke; stroke:#f3ecda; stroke-width:3; }
+.exr-lbl { font:700 15px -apple-system,sans-serif; fill:#2c2a25; paint-order:stroke; stroke:#f3ecda; stroke-width:3.5; }
+.exr-sub { font:italic 12px -apple-system,sans-serif; fill:#5a544a; paint-order:stroke; stroke:#f3ecda; stroke-width:3.5; }
 .exr-cap { padding:12px 18px 6px; font-size:.9rem; line-height:1.5; color:#443f37; min-height:4.6em; border-top:1px solid #eee6d8; }
 .exr-cap b { color:#7a3030; }
 .exr-time { display:flex; gap:0; padding:8px 12px 18px; position:relative; }
@@ -110,17 +111,20 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div class="exr">
   <div class="exr-head"><h4>The Road to Babylon</h4>
-  <p>Three times Babylon emptied Jerusalem &mdash; the same long road north through Riblah and down the Euphrates. Step through the waves.</p></div>
-  <svg class="exr-map" viewBox="0 0 1000 440" role="img" aria-label="Map of the deportation route from Jerusalem through Riblah to Babylon">
-    <image href="/images/culture/babylon/maps/exile-route-base.jpg" x="0" y="0" width="1000" height="440"/>
+  <p>All three deportations took the same long road &mdash; north through Riblah, then down the Euphrates to the canal-country by the Chebar. Step through the waves.</p></div>
+  <svg class="exr-map" viewBox="0 0 1190 500" role="img" aria-label="Map of the deportation route from Jerusalem through Riblah down the Euphrates to the Chebar settlement near Nippur">
+    <image href="/images/culture/babylon/maps/exile-route-base.jpg" x="0" y="0" width="1190" height="500"/>
     <defs><marker id="exr-ah" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#c65528"/></marker></defs>
-    <path class="exr-route-base" d="M112,262 Q150,128 260,108 Q520,66 720,178 Q800,232 846,270"/>
-    <path class="exr-route-live" id="exr-live" d="M112,262 Q150,128 260,108 Q520,66 720,178 Q800,232 846,270" marker-end="url(#exr-ah)"/>
-    <circle class="exr-dot-jeru" cx="112" cy="262" r="6.5"/>
-    <circle class="exr-ring" cx="851" cy="272" r="12"/>
-    <circle class="exr-dot" cx="260" cy="108" r="5.5"/>
-    <text class="exr-lbl" x="272" y="104">Riblah</text>
-    <text class="exr-sub" x="272" y="120">Nebuchadnezzar&rsquo;s HQ</text>
+    <path class="exr-route-base" d="M137,304 C190,150 245,105 300,98 C430,58 540,62 622,82 C735,150 815,205 862,250 C872,272 872,296 872,314 C925,332 978,343 1012,349 C1030,368 1044,388 1050,404"/>
+    <path class="exr-route-live" id="exr-live" d="M137,304 C190,150 245,105 300,98 C430,58 540,62 622,82 C735,150 815,205 862,250 C872,272 872,296 872,314 C925,332 978,343 1012,349 C1030,368 1044,388 1050,404" marker-end="url(#exr-ah)"/>
+    <circle class="exr-dot-jeru" cx="137" cy="304" r="6.5"/>
+    <circle class="exr-dot" cx="300" cy="98" r="5.5"/>
+    <text class="exr-lbl" x="312" y="94">Riblah</text>
+    <text class="exr-sub" x="312" y="110">Nebuchadnezzar&rsquo;s HQ</text>
+    <circle class="exr-ring" cx="872" cy="314" r="12"/>
+    <circle class="exr-dot-end" cx="1050" cy="404" r="6"/>
+    <text class="exr-lbl" x="1040" y="416" text-anchor="end">Chebar canal</text>
+    <text class="exr-sub" x="1040" y="432" text-anchor="end">Tel-abib &middot; the exiles&rsquo; settlement</text>
   </svg>
   <p class="exr-cap" id="exr-cap"></p>
   <div class="exr-time" id="exr-time"></div>
@@ -131,12 +135,12 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 (function(){
   var STEPS=[
     {yr:"605 BC",nm:"The hostages",cap:"<b>605 BC &mdash; the hostages.</b> Fresh from crushing Egypt at Carchemish, Nebuchadnezzar takes a first, select group &mdash; royal and noble youth, <b>Daniel</b> and his companions among them &mdash; along with vessels from the temple. Judah is now a vassal; the leadership begins to bleed east."},
-    {yr:"597 BC",nm:"The great deportation",cap:"<b>597 BC &mdash; the great deportation.</b> After Jehoiakim&rsquo;s revolt, Babylon takes <b>King Jehoiachin</b>, the queen mother, the officials, the fighting men, and every craftsman and smith &mdash; some ten thousand, &ldquo;none remained, save the poorest sort.&rdquo; <b>Ezekiel</b> travels in this wave and will prophesy by the Chebar canal."},
+    {yr:"597 BC",nm:"The great deportation",cap:"<b>597 BC &mdash; the great deportation.</b> After Jehoiakim&rsquo;s revolt, Babylon takes <b>King Jehoiachin</b>, the queen mother, the officials, the fighting men, and every craftsman and smith &mdash; some ten thousand, &ldquo;none remained, save the poorest sort.&rdquo; <b>Ezekiel</b> travels in this wave and settles &ldquo;by the river of Chebar&rdquo; (Ezekiel 3:15)."},
     {yr:"586 BC",nm:"The destruction",cap:"<b>586 BC &mdash; the destruction.</b> Zedekiah&rsquo;s rebellion ends at <b>Riblah</b>, where he is judged and blinded; Jerusalem and its temple are burned, and the city&rsquo;s survivors are marched to Babylonia. Only vinedressers and farmers are left behind &mdash; and a final aftershock follows in 582."}
   ];
   var live=document.getElementById('exr-live'), cap=document.getElementById('exr-cap'), time=document.getElementById('exr-time');
   var L=live.getTotalLength(); live.style.strokeDasharray=L;
-  function draw(){ live.style.transition='none'; live.style.strokeDashoffset=L; live.getBoundingClientRect(); live.style.transition='stroke-dashoffset 1.2s ease'; live.style.strokeDashoffset=0; }
+  function draw(){ live.style.transition='none'; live.style.strokeDashoffset=L; live.getBoundingClientRect(); live.style.transition='stroke-dashoffset 1.3s ease'; live.style.strokeDashoffset=0; }
   function show(n){
     var b=time.querySelectorAll('.exr-step'); for(var j=0;j<b.length;j++) b[j].classList.toggle('on',j===n);
     cap.innerHTML=STEPS[n].cap; draw();
