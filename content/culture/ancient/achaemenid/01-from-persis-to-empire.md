@@ -134,6 +134,70 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>Five kings, five biblical books touched, and one long thread running through them all: the God of a captive people quietly steering the greatest empire on earth toward their restoration.</p>
 
+<!-- ===== EMPIRES IN SEQUENCE (ers) ===== -->
+<style>
+.ers { border:1px solid #e2ddd3; border-radius:16px; overflow:hidden; margin:26px 0; background:#fbf9f5; box-shadow:0 6px 18px rgba(0,0,0,.07); font-family:-apple-system,Segoe UI,Roboto,sans-serif; }
+.ers-head { padding:16px 18px 4px; }
+.ers-head h4 { margin:0; font-size:1.05rem; color:#3c3a33; }
+.ers-head p { margin:4px 0 0; font-size:.82rem; color:#8a8172; }
+.ers-stage { position:relative; background:#dfe6e2; line-height:0; }
+.ers-stage .ers-map { display:block; width:100%; height:auto; margin:0; opacity:0; transition:opacity .55s ease; }
+.ers-map:first-of-type { position:relative; }
+.ers-map:not(:first-of-type) { position:absolute; top:0; left:0; }
+.ers-map.active { opacity:1; }
+.ers-yrbadge { position:absolute; top:12px; left:14px; z-index:2; background:rgba(56,55,49,.72); color:#fff; font-size:.8rem; font-weight:800; letter-spacing:.03em; padding:4px 11px; border-radius:999px; }
+.ers-cap { padding:12px 18px 6px; font-size:.9rem; line-height:1.5; color:#443f37; min-height:4.2em; border-top:1px solid #eee6d8; }
+.ers-cap b { color:#7a3030; }
+.ers-time { display:flex; gap:0; padding:8px 12px 18px; position:relative; }
+.ers-time::before { content:""; position:absolute; left:60px; right:60px; top:16px; height:3px; background:#e0d8c7; border-radius:3px; }
+.ers-step { flex:1; background:none; border:none; cursor:pointer; padding:0; display:flex; flex-direction:column; align-items:center; gap:7px; font-family:inherit; position:relative; z-index:1; }
+.ers-dot { width:22px; height:22px; border-radius:50%; background:#fff; border:3px solid #c9b98f; transition:transform .2s,background .2s,border-color .2s; }
+.ers-step.is-active .ers-dot { transform:scale(1.3); background:#c65528; border-color:#c65528; }
+.ers-yr { font-size:.82rem; font-weight:800; color:#5a544a; }
+.ers-lbl { font-size:.68rem; color:#8a8172; line-height:1.15; max-width:120px; }
+.ers-step.is-active .ers-yr { color:#3c3a33; }
+.ers-cred { text-align:center; font-size:.68rem; font-style:italic; color:#a89f90; padding:0 12px 12px; }
+@media (max-width:560px){ .ers-lbl{ display:none; } .ers-time::before{ left:40px; right:40px; } }
+</style>
+
+<div class="ers">
+  <div class="ers-head"><h4>The Empires in Sequence</h4>
+  <p>Three empires held the Near East across two centuries &mdash; Assyria, Babylon, and finally Persia, the power that sent the exiles home.</p></div>
+  <div class="ers-stage" id="ers-stage">
+    <span class="ers-yrbadge" id="ers-badge"></span>
+    <img class="ers-map" src="/images/culture/babylon/maps/era-700bc.jpg" alt="The Assyrian empire at its height, c. 700 BC" loading="lazy">
+    <img class="ers-map" src="/images/culture/babylon/maps/era-600bc.jpg" alt="The Near East after Assyria's fall, c. 600 BC: Babylon, Media, Lydia and Egypt" loading="lazy">
+    <img class="ers-map" src="/images/culture/babylon/maps/era-500bc.jpg" alt="The Achaemenid Persian empire, c. 500 BC, stretching from the Aegean and Egypt to the Indus" loading="lazy">
+  </div>
+  <p class="ers-cap" id="ers-cap"></p>
+  <div class="ers-time" id="ers-time"></div>
+  <div class="ers-cred">Maps by CFM Corner on a S&eacute;mhur relief base (CC BY-SA 4.0)</div>
+</div>
+
+<script>
+(function(){
+  var ERAS=[
+    {yr:"700 BC",lbl:"Assyria dominant",cap:"<b>700 BC &mdash; the Assyrian century.</b> The first of the three great Mesopotamian empires rules from Anatolia to the Gulf, and the northern kingdom of <b>Israel</b> has just been carried away. (Its story fills the <a href=\"/culture/ancient/assyria/\">Assyria guide</a>.)"},
+    {yr:"600 BC",lbl:"Babylon rising",cap:"<b>600 BC &mdash; Babylon&rsquo;s turn.</b> Assyria has fallen; <b>Babylon</b> and its Median ally hold the heartland. It is Nebuchadnezzar&rsquo;s Babylon that will burn Jerusalem and carry <b>Judah</b> into exile. (Its story fills the <a href=\"/culture/ancient/babylon/\">Babylon guide</a>.)"},
+    {yr:"500 BC",lbl:"Persia &amp; the return",cap:"<b>500 BC &mdash; the empire of deliverance.</b> Babylon itself has now fallen &mdash; to <b>Cyrus of Persia</b>, who let the exiles go home. The Achaemenid empire, the largest the world had yet seen, now rules from the Aegean to the Indus, Egypt included, and restored <b>Judah</b> is a small province within it."}
+  ];
+  var stage=document.getElementById('ers-stage'),imgs=stage.querySelectorAll('.ers-map'),time=document.getElementById('ers-time'),cap=document.getElementById('ers-cap'),badge=document.getElementById('ers-badge');
+  function show(n){
+    for(var i=0;i<imgs.length;i++) imgs[i].classList.toggle('active',i===n);
+    var btns=time.querySelectorAll('.ers-step'); for(var j=0;j<btns.length;j++) btns[j].classList.toggle('is-active',j===n);
+    cap.innerHTML=ERAS[n].cap; badge.textContent=ERAS[n].yr;
+  }
+  ERAS.forEach(function(e,idx){
+    var b=document.createElement('button'); b.className='ers-step'; b.type='button';
+    b.innerHTML='<span class="ers-dot"></span><span class="ers-yr">'+e.yr+'</span><span class="ers-lbl">'+e.lbl+'</span>';
+    b.addEventListener('click',function(){ show(idx); });
+    time.appendChild(b);
+  });
+  show(2);
+})();
+</script>
+<!-- ===== /ers ===== -->
+
 <br>
 
 <hr>

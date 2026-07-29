@@ -43,6 +43,11 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p><strong><a href="https://www.worldhistory.org/cuneiform/" target="_blank">Cuneiform</a></strong> (&ldquo;wedge-shaped,&rdquo; from the marks a cut reed stylus presses into damp clay) began in the city of Uruk around 3400&ndash;3300 BC &mdash; the world&rsquo;s first writing, born not for poetry but for accounting: temple bureaucrats tracking sheep, grain, and beer rations. Over centuries the pictures became abstract wedge-clusters, and the system grew to write not just Sumerian but Akkadian &mdash; the Semitic language whose two great dialects, Babylonian and Assyrian, dominated the Near East for two millennia &mdash; and a dozen other languages from Hittite to Elamite.</p>
 
+<figure class="fg-figure" style="max-width:680px;">
+  <img src="/images/culture/babylon/photos/cuneiform-an-evolution.jpg" alt="The cuneiform sign AN evolving from an early star pictograph to later wedge forms" loading="lazy">
+  <figcaption>One sign across three thousand years: <b>AN</b> &mdash; &ldquo;sky,&rdquo; &ldquo;heaven,&rdquo; and &ldquo;god&rdquo; &mdash; from an early pictograph of a star (left) to the abstract wedge-cluster of later scribes (right). The whole script made this journey: pictures pressed and simplified into wedges by a cut-reed stylus. <span class="fg-credit">Cuneiform sign &ldquo;AN&rdquo; evolution &middot; ShlomoKatzav, Wikimedia Commons (CC0)</span></figcaption>
+</figure>
+
 <p>It was a difficult art. Cuneiform used several hundred signs, each of which could carry multiple sound values and multiple word meanings depending on context. Mastering it took years &mdash; which is exactly why scribes formed a professional class, why kings boasted when they could read (Ashurbanipal claimed he could decipher tablets &ldquo;from before the flood&rdquo;), and why Babylonian learning had such staying power: the difficulty of the script made the school, and the school carried the culture.</p>
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
@@ -72,6 +77,11 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <h3>Libraries and Literature</h3>
 
 <p>Mesopotamia invented the library along with the book. Temple and palace collections existed from early times, but the greatest was assembled at Nineveh by the Assyrian king <strong>Ashurbanipal</strong> (r. 668&ndash;c. 631 BC), who sent agents through Babylonia with shopping lists, demanding tablets by title &mdash; over 30,000 tablets and fragments from his collection now sit in the British Museum, and they are the single richest source for Babylonian literature. The irony is complete: when Nineveh burned in 612 BC, the fire baked the library into permanence, and when Layard and Rassam dug it out in the 1840s&ndash;50s, Babylon&rsquo;s classics &mdash; the En&#363;ma Eli&scaron;, the flood tablet of Gilgamesh &mdash; came back to the world out of the ruins of Babylon&rsquo;s destroyer.</p>
+
+<figure class="fg-figure">
+  <img src="/images/culture/babylon/photos/astronomical-diary-bm.jpg" alt="A Babylonian astronomical diary tablet" loading="lazy">
+  <figcaption>A Babylonian astronomical diary &mdash; nightly records of the moon, planets, weather, and market prices. This one notes the death of Alexander the Great in 323 BC. <span class="fg-credit">British Museum &middot; public domain</span></figcaption>
+</figure>
 
 <p>What did the tradition preserve? Epic (<strong>Gilgamesh</strong>, the king who sought immortality and came home with wisdom instead); creation and flood narratives (see <a href="/culture/ancient/babylon/04-religion-and-mythology/">Section 04</a>); royal chronicles kept with dry, dateline precision (see <a href="/culture/ancient/babylon/08-babylon-and-the-bible/">Section 08</a>); hymns and laments; proverbs; and a striking shelf of <strong>wisdom literature</strong> wrestling with the same questions as Job and Ecclesiastes &mdash; <em>Ludlul b&#275;l n&#275;meqi</em>, the &ldquo;Babylonian Job,&rdquo; whose righteous sufferer loses health and honor despite perfect piety; the <em>Babylonian Theodicy</em>, an acrostic debate between a sufferer and his orthodox friend; and the sardonic <em>Dialogue of Pessimism</em>, in which a master proposes each course of life and its opposite, and his servant supplies equally good reasons for both. Israel&rsquo;s sages knew this international wisdom conversation and joined it &mdash; with the decisive difference that their answer began with &ldquo;the fear of the LORD&rdquo; (<a href="https://www.blueletterbible.org/kjv/pro/1/7/" target="_blank" data-ref="Proverbs 1:7">Proverbs 1:7</a>).</p>
 
@@ -112,6 +122,11 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <h3>Medicine, Maps, and the Practical Arts</h3>
 
 <p>The same list-making genius organized medicine (the <em>Diagnostic Handbook</em> catalogued symptoms and prognoses; healers divided into the <em>asû</em>, the empirical physician of salves and potions, and the <em>&#257;&scaron;ipu</em>, the ritual specialist &mdash; ancient Babylon saw no contradiction in employing both), law (see Hammurabi in <a href="/culture/ancient/babylon/02-timeline-and-empires/">Section 02</a>), lexicography, and even geography: the <strong>Babylonian Map of the World</strong> (a 6th-century BC tablet in the British Museum) draws the earth as a disk ringed by a &ldquo;Bitter River&rdquo; of ocean &mdash; with Babylon, naturally, at the center. It is both a real map and a theological statement, and it is precisely the mental map the exiles had to live inside: a world whose official center was Babylon &mdash; while their prophets kept insisting the true center was a ruined city on a ridge in Judah, to which they would return (<a href="https://www.blueletterbible.org/kjv/jer/29/10/" target="_blank" data-ref="Jeremiah 29:10">Jeremiah 29:10</a>).</p>
+
+<figure class="fg-figure" style="max-width:560px;">
+  <img src="/images/culture/babylon/photos/babylonian-world-map-imago-mundi.jpg" alt="The Babylonian Map of the World clay tablet (Imago Mundi), British Museum" loading="lazy">
+  <figcaption>The <b>Babylonian Map of the World</b> (the <em>Imago Mundi</em>), a 6th-century BC tablet &mdash; the oldest known map to picture the whole earth. A ring of &ldquo;Bitter River&rdquo; (Ocean) encircles the land; triangular <em>nag&ucirc;</em> regions lie beyond; and <b>Babylon</b>, astride the Euphrates, sits at the center of it all. <a href="https://www.britishmuseum.org/collection/object/W_1882-0714-509" target="_blank">See it at the British Museum &rarr;</a> <span class="fg-credit">British Museum, BM 92687 &middot; photo Gary Todd, Wikimedia Commons (CC0)</span></figcaption>
+</figure>
 
 <br>
 
@@ -157,6 +172,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}

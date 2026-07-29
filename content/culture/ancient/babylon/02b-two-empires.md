@@ -33,6 +33,70 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>For the last forty years of its life, the kingdom of Judah faced one recurring question, and its answer each time decided everything: when the great powers collide, whose side are you on? To the south lay <strong>Egypt</strong>, the old familiar patron. To the east rose <strong>Babylon</strong>, new and terrible. Judah was too small to stand alone and too well-placed on the road between them to be left alone &mdash; and its kings, again and again, bet on Egypt. Every bet failed. What lifts this above ordinary politics is that Judah&rsquo;s prophets were not neutral observers. Jeremiah above all insisted that Babylon was the safer road &mdash; and the God-appointed one &mdash; and was branded a traitor for saying so. This section is the <em>why</em> behind the dates in <a href="/culture/ancient/babylon/02-timeline-and-empires/">Section 02</a> and the portraits in <a href="/culture/ancient/babylon/03-nebuchadnezzar-and-the-kings/">Section 03</a>.</p>
 
+<!-- ===== JUDAH BETWEEN THE EMPIRES (jbe) ===== -->
+<style>
+.ers { border:1px solid #e2ddd3; border-radius:16px; overflow:hidden; margin:26px 0; background:#fbf9f5; box-shadow:0 6px 18px rgba(0,0,0,.07); font-family:-apple-system,Segoe UI,Roboto,sans-serif; }
+.ers-head { padding:16px 18px 4px; }
+.ers-head h4 { margin:0; font-size:1.05rem; color:#3c3a33; }
+.ers-head p { margin:4px 0 0; font-size:.82rem; color:#8a8172; }
+.ers-stage { position:relative; background:#dfe6e2; line-height:0; }
+.ers-stage .ers-map { display:block; width:100%; height:auto; margin:0; opacity:0; transition:opacity .55s ease; }
+.ers-map:first-of-type { position:relative; }
+.ers-map:not(:first-of-type) { position:absolute; top:0; left:0; }
+.ers-map.active { opacity:1; }
+.ers-yrbadge { position:absolute; top:12px; left:14px; z-index:2; background:rgba(56,55,49,.72); color:#fff; font-size:.8rem; font-weight:800; letter-spacing:.03em; padding:4px 11px; border-radius:999px; }
+.ers-cap { padding:12px 18px 6px; font-size:.9rem; line-height:1.5; color:#443f37; min-height:4.2em; border-top:1px solid #eee6d8; }
+.ers-cap b { color:#7a3030; }
+.ers-time { display:flex; gap:0; padding:8px 12px 18px; position:relative; }
+.ers-time::before { content:""; position:absolute; left:60px; right:60px; top:16px; height:3px; background:#e0d8c7; border-radius:3px; }
+.ers-step { flex:1; background:none; border:none; cursor:pointer; padding:0; display:flex; flex-direction:column; align-items:center; gap:7px; font-family:inherit; position:relative; z-index:1; }
+.ers-dot { width:22px; height:22px; border-radius:50%; background:#fff; border:3px solid #c9b98f; transition:transform .2s,background .2s,border-color .2s; }
+.ers-step.is-active .ers-dot { transform:scale(1.3); background:#c65528; border-color:#c65528; }
+.ers-yr { font-size:.82rem; font-weight:800; color:#5a544a; }
+.ers-lbl { font-size:.68rem; color:#8a8172; line-height:1.15; max-width:120px; }
+.ers-step.is-active .ers-yr { color:#3c3a33; }
+.ers-cred { text-align:center; font-size:.68rem; font-style:italic; color:#a89f90; padding:0 12px 12px; }
+@media (max-width:560px){ .ers-lbl{ display:none; } .ers-time::before{ left:40px; right:40px; } }
+</style>
+
+<div class="ers">
+  <div class="ers-head"><h4>Judah Between the Empires</h4>
+  <p>Slide through the century that trapped Judah &mdash; from Assyria&rsquo;s iron grip to the rise of Babylon.</p></div>
+  <div class="ers-stage" id="ers-stage">
+    <span class="ers-yrbadge" id="ers-badge"></span>
+    <img class="ers-map" src="/images/culture/babylon/maps/era-700bc.jpg" alt="The Assyrian empire at its height, c. 700 BC" loading="lazy">
+    <img class="ers-map" src="/images/culture/babylon/maps/era-600bc.jpg" alt="The Near East after Assyria's fall, c. 600 BC: Babylon, Media, Lydia and Egypt" loading="lazy">
+    <img class="ers-map" src="/images/culture/babylon/maps/era-500bc.jpg" alt="The Achaemenid Persian empire, c. 500 BC, stretching from the Aegean and Egypt to the Indus" loading="lazy">
+  </div>
+  <p class="ers-cap" id="ers-cap"></p>
+  <div class="ers-time" id="ers-time"></div>
+  <div class="ers-cred">Maps by CFM Corner on a S&eacute;mhur relief base (CC BY-SA 4.0)</div>
+</div>
+
+<script>
+(function(){
+  var ERAS=[
+    {yr:"700 BC",lbl:"Assyria dominant",cap:"<b>700 BC &mdash; the Assyrian century.</b> One empire rules from Anatolia to the Gulf. The northern kingdom of <b>Israel</b> is already gone &mdash; its ten tribes deported &mdash; and <b>Judah</b> survives only as a trembling Assyrian vassal. Egypt watches from the southwest; Media stirs in the east."},
+    {yr:"600 BC",lbl:"Babylon rising",cap:"<b>600 BC &mdash; Assyria shattered.</b> In a single generation the giant fell. <b>Babylon</b> and its Median ally have seized the old Assyrian heartland, while Lydia and Egypt carve off the west. Judah is left exactly where this section begins: caught between <b>Egypt</b> and <b>Babylon</b>, every wrong bet ending at a siege wall."},
+    {yr:"500 BC",lbl:"Persia &amp; the return",cap:"<b>500 BC &mdash; the empire of deliverance.</b> Babylon itself has now fallen &mdash; to <b>Cyrus of Persia</b>, who let the exiles go home. The Achaemenid empire, the largest the world had yet seen, now rules from the Aegean to the Indus, Egypt included, and restored <b>Judah</b> is a small province within it. (Its story fills the <a href=\"/culture/ancient/achaemenid/\">Achaemenid guide</a>.)"}
+  ];
+  var stage=document.getElementById('ers-stage'),imgs=stage.querySelectorAll('.ers-map'),time=document.getElementById('ers-time'),cap=document.getElementById('ers-cap'),badge=document.getElementById('ers-badge');
+  function show(n){
+    for(var i=0;i<imgs.length;i++) imgs[i].classList.toggle('active',i===n);
+    var btns=time.querySelectorAll('.ers-step'); for(var j=0;j<btns.length;j++) btns[j].classList.toggle('is-active',j===n);
+    cap.innerHTML=ERAS[n].cap; badge.textContent=ERAS[n].yr;
+  }
+  ERAS.forEach(function(e,idx){
+    var b=document.createElement('button'); b.className='ers-step'; b.type='button';
+    b.innerHTML='<span class="ers-dot"></span><span class="ers-yr">'+e.yr+'</span><span class="ers-lbl">'+e.lbl+'</span>';
+    b.addEventListener('click',function(){ show(idx); });
+    time.appendChild(b);
+  });
+  show(0);
+})();
+</script>
+<!-- ===== /jbe ===== -->
+
 <br>
 
 <hr>
@@ -44,6 +108,11 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <p>The turning point came before Babylon ever threatened Jerusalem. In 609 BC, Pharaoh <strong>Necho II</strong> marched his army north &mdash; not to attack Assyria, but to prop it up. Assyria was collapsing under Babylonian and Median blows, and Egypt, preferring a weak old neighbor to a strong new one, moved to save it. The King James Version says Necho &ldquo;went up <em>against</em> the king of Assyria&rdquo; (<a href="https://www.blueletterbible.org/kjv/2ki/23/29/" target="_blank" data-ref="2 Kings 23:29">2 Kings 23:29</a>), which for centuries read as hostility &mdash; but the Hebrew preposition <em>&lsquo;al</em> can equally mean &ldquo;to&rdquo; or &ldquo;in support of,&rdquo; and the Babylonian Chronicle settles it: in 609 Egypt and Assyria were <em>allies</em>, jointly trying to retake Harran from Babylon. Modern translations read &ldquo;went up <em>to</em> the king of Assyria&rdquo; &mdash; to help him.</p>
 
 <p>Into that march stepped King <strong>Josiah</strong> of Judah, who intercepted Necho at Megiddo and was killed (<a href="https://www.blueletterbible.org/kjv/2ch/35/20/" target="_blank" data-ref="2 Chronicles 35:20-24">2 Chronicles 35:20&ndash;24</a>). Whatever he intended, the effect is plain: by trying to keep Egypt from reinforcing Assyria, Josiah&rsquo;s death-ride objectively served <strong>Babylon</strong> &mdash; ruled then not yet by Nebuchadnezzar but by his father <strong>Nabopolassar</strong>. Nebuchadnezzar was still the crown prince; he would not win Carchemish or take the throne until 605, four years after Josiah was already dead.</p>
+
+<figure class="fg-figure">
+  <img src="/images/culture/babylon/photos/tel-megiddo.jpg" alt="The ruins of Tel Megiddo, Israel" loading="lazy">
+  <figcaption>Tel Megiddo &mdash; the strategic mound guarding the pass where Josiah rode out to stop Necho in 609 BC, and was killed. Its Greek name, Armageddon, became scripture&rsquo;s word for the last battle. <span class="fg-credit">Photo &copy; Anagoria, Wikimedia Commons (CC BY 3.0)</span></figcaption>
+</figure>
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
 <p style="margin: 0;"><strong>One preposition, two directions:</strong> 2 Kings 23:29 has Necho going &ldquo;against the king of Assyria,&rdquo; and for most of history that was read as war between them. The Hebrew <em>&lsquo;al</em> is simply ambiguous &mdash; &ldquo;against,&rdquo; but also &ldquo;to&rdquo; or &ldquo;alongside.&rdquo; The cuneiform record of 609 BC, in which Egyptian and Assyrian troops besiege Harran <em>together</em>, shows the second sense is the right one. A single small word &mdash; and the whole shape of the war turns on which way it points.</p>
@@ -115,5 +184,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </details>
 
 </div>
+
+<link rel="stylesheet" href="/css/fg-gallery.css">
 
 {{< /rawhtml >}}

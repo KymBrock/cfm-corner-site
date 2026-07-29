@@ -55,6 +55,20 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>He turned out to be right in a way he could not have imagined: excavated brick by glazed brick by Robert Koldewey&rsquo;s German expedition (1899&ndash;1917) and reassembled in Berlin, the Ishtar Gate today fills a museum hall two stories high, and it remains the single most overwhelming survival of the biblical world in any museum on earth (see <a href="/culture/ancient/babylon/09-major-sites-and-discoveries/">Section 09</a>). The blue that awed the exiles still saturates the room. When Ezekiel &mdash; a deportee of 597 &mdash; describes the divine throne vision &ldquo;as the appearance of a sapphire stone&rdquo; (<a href="https://www.blueletterbible.org/kjv/eze/1/26/" target="_blank" data-ref="Ezekiel 1:26">Ezekiel 1:26</a>) and later sees idolatrous images &ldquo;pourtrayed upon the wall&rdquo; in vermilion, &ldquo;after the manner of the Babylonians of Chaldea&rdquo; (<a href="https://www.blueletterbible.org/kjv/eze/23/14/" target="_blank" data-ref="Ezekiel 23:14-15">Ezekiel 23:14&ndash;15</a>), he is speaking as a man who had walked past exactly this kind of glazed magnificence.</p>
 
+<div class="fg-gallery">
+  <div class="fg-stage">
+    <span class="fg-counter" aria-hidden="true"></span>
+    <button class="fg-arrow fg-prev" type="button" aria-label="Previous image">&lsaquo;</button>
+    <button class="fg-arrow fg-next" type="button" aria-label="Next image">&rsaquo;</button>
+    <div class="fg-item" data-caption="The reconstructed Ishtar Gate in Berlin &mdash; glazed lapis-blue brick, two stories high." data-credit="Rictor Norton &middot; Wikimedia Commons (CC BY 2.0)"><img src="/images/culture/babylon/photos/ishtar-gate-berlin.jpg" alt="The reconstructed Ishtar Gate, Pergamon Museum, Berlin" loading="lazy"></div>
+    <div class="fg-item" data-caption="A dragon of Marduk from the gate &mdash; scaled body, serpent&rsquo;s neck, horned head, in molded glazed brick." data-credit="Osama S. M. Amin &middot; Wikimedia Commons (CC BY-SA 4.0)"><img src="/images/culture/babylon/photos/ishtar-gate-dragon-pergamon.jpg" alt="Mushhushshu dragon in molded glazed brick from the Ishtar Gate" loading="lazy"></div>
+    <div class="fg-item" data-caption="A striding lion of Ishtar from the Processional Way &mdash; original glazed brick." data-credit="The Metropolitan Museum of Art (CC0)"><img src="/images/culture/babylon/photos/processional-way-lion-1-met.jpg" alt="Striding lion panel from the Processional Way of Babylon" loading="lazy"></div>
+    <div class="fg-item" data-caption="Sixty lions lined each side of the avenue; a second surviving panel." data-credit="The Metropolitan Museum of Art (CC0)"><img src="/images/culture/babylon/photos/processional-way-lion-2-met.jpg" alt="A second striding lion panel from the Processional Way" loading="lazy"></div>
+  </div>
+  <p class="fg-cap"></p>
+  <div class="fg-dots"></div>
+</div>
+
 <br>
 
 <hr>
@@ -68,6 +82,20 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <p>The phrase should sound familiar. Genesis 11 describes a tower on the plain of Shinar &ldquo;whose top may reach unto heaven&rdquo; (<a href="https://www.blueletterbible.org/kjv/gen/11/4/" target="_blank" data-ref="Genesis 11:4">Genesis 11:4</a>), built of burned brick with bitumen for mortar (<a href="https://www.blueletterbible.org/kjv/gen/11/3/" target="_blank" data-ref="Genesis 11:3">Genesis 11:3</a>) &mdash; exactly the materials, exactly the plain, and exactly the boast. Scholars from Andrew George (the leading modern authority on the tower&rsquo;s textual record) onward broadly agree that the <strong>Tower of Babel narrative has Etemenanki and its tradition in view</strong>: a real, datable, excavated building whose own theology &mdash; a man-made mountain &ldquo;with its head in heaven,&rdquo; built to make a name &mdash; Genesis answers with devastating irony (the LORD must &ldquo;come down&rdquo; even to see it, <a href="https://www.blueletterbible.org/kjv/gen/11/5/" target="_blank" data-ref="Genesis 11:5">Genesis 11:5</a>). Readers differ on the relationship&rsquo;s direction &mdash; whether Genesis 11 preserves the ancient memory that such tower-building embodied, or was shaped as a polemic against the rebuilt tower the exiles saw &mdash; but the target is not in doubt: the tower of the Babel story is Babylon&rsquo;s tower, and its name-pun (<em>Babel</em>/&ldquo;confusion,&rdquo; <a href="https://www.blueletterbible.org/kjv/gen/11/9/" target="_blank" data-ref="Genesis 11:9">Genesis 11:9</a>) is aimed at the city&rsquo;s own proud name, &ldquo;Gate of the Gods&rdquo; (see <a href="/culture/ancient/babylon/01-the-land-between-the-rivers/">Section 01</a>).</p>
 
 <p>At the ziggurat&rsquo;s foot sprawled <strong>Esagila</strong>, &ldquo;House whose Head is Raised,&rdquo; Marduk&rsquo;s temple proper &mdash; the Vatican of Mesopotamia, its inner shrine reportedly lavished with tons of gold. It was here that captured temple treasures were deposited, following ancient custom (<a href="https://www.blueletterbible.org/kjv/2ch/36/7/" target="_blank" data-ref="2 Chronicles 36:7">2 Chronicles 36:7</a>); the vessels of the LORD&rsquo;s house sat in &ldquo;the house of his god&rdquo; until the night a regent served wine in them (<a href="https://www.blueletterbible.org/kjv/dan/5/2/" target="_blank" data-ref="Daniel 5:2-3">Daniel 5:2&ndash;3</a>) &mdash; and until Cyrus sent them home (<a href="https://www.blueletterbible.org/kjv/ezr/1/7/" target="_blank" data-ref="Ezra 1:7">Ezra 1:7</a>).</p>
+
+<div class="fg-gallery">
+  <div class="fg-stage">
+    <span class="fg-counter" aria-hidden="true"></span>
+    <button class="fg-arrow fg-prev" type="button" aria-label="Previous image">&lsaquo;</button>
+    <button class="fg-arrow fg-next" type="button" aria-label="Next image">&rsaquo;</button>
+    <div class="fg-item" data-caption="A museum model of Etemenanki &mdash; the stepped ziggurat whose head was made to &lsquo;rival the heavens.&rsquo;" data-credit="O. Mustafin &middot; Wikimedia Commons (CC0)"><img src="/images/culture/babylon/photos/etemenanki-model-pergamon.jpg" alt="Museum model of the Etemenanki ziggurat" loading="lazy"></div>
+    <div class="fg-item" data-caption="All that remains on site today: the water-filled square of the foundations." data-credit="Marjon Verburg &middot; Wikimedia Commons (CC0)"><img src="/images/culture/babylon/photos/etemenanki-foundations.jpg" alt="The excavated foundations of Etemenanki today" loading="lazy"></div>
+    <div class="fg-item" data-caption="Robert Koldewey&rsquo;s measured reconstruction from the 1913 excavation." data-credit="Robert Koldewey, 1914 &middot; public domain"><img src="/images/culture/babylon/photos/etemenanki-koldewey.png" alt="Koldewey's reconstruction drawing of Etemenanki" loading="lazy"></div>
+    <div class="fg-item" data-caption="A reconstruction of the Esagila precinct &mdash; Marduk&rsquo;s temple at the ziggurat&rsquo;s foot." data-credit="After Koldewey &middot; Wikimedia Commons (CC BY-SA 4.0)"><img src="/images/culture/babylon/photos/esagila-reconstruction.jpg" alt="Reconstruction of the Esagila temple precinct" loading="lazy"></div>
+  </div>
+  <p class="fg-cap"></p>
+  <div class="fg-dots"></div>
+</div>
 
 <br>
 
@@ -84,6 +112,18 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <h3>The Hanging Gardens: A Wonder in the Wrong City?</h3>
 
 <p>And the famous gardens? Classical authors listed the <strong>Hanging Gardens of Babylon</strong> among the Seven Wonders &mdash; terraces of trees raised on vaulted galleries, watered by hidden machinery, built (the story went) by a king to console a queen homesick for mountains. The puzzle is that the abundant Babylonian records of Nebuchadnezzar&rsquo;s building &mdash; a king who itemized everything &mdash; never mention them, Herodotus never mentions them, and excavation has produced no agreed trace. Assyriologist <strong>Stephanie Dalley</strong> has argued in detail that the wonder belongs to a different king and city altogether: <strong>Sennacherib&rsquo;s palace garden at Nineveh</strong>, which the king himself describes as a &ldquo;wonder for all peoples,&rdquo; raised on vaults and watered by bronze water-raising screws &mdash; with later tradition transferring the marvel to the more famous name of Babylon. Others maintain the traditional attribution with an unexcavated riverside location. It is an honest open question &mdash; and a useful reminder, for readers of scripture and history alike, that &ldquo;everyone knows&rdquo; is not evidence, and that the spade and the tablet keep the right to surprise us.</p>
+
+<div class="fg-gallery">
+  <div class="fg-stage">
+    <span class="fg-counter" aria-hidden="true"></span>
+    <button class="fg-arrow fg-prev" type="button" aria-label="Previous image">&lsaquo;</button>
+    <button class="fg-arrow fg-next" type="button" aria-label="Next image">&rsaquo;</button>
+    <div class="fg-item" data-caption="Ferdinand Knab&rsquo;s romantic vision of the terraced gardens (1886)." data-credit="Ferdinand Knab, 1886 &middot; public domain"><img src="/images/culture/babylon/photos/hanging-gardens-knab-1886.png" alt="Ferdinand Knab's 1886 painting of the Hanging Gardens" loading="lazy"></div>
+    <div class="fg-item" data-caption="The 16th-century engraving that fixed the gardens in the Western imagination." data-credit="Maarten van Heemskerck &middot; public domain"><img src="/images/culture/babylon/photos/hanging-gardens-heemskerck.jpg" alt="Maarten van Heemskerck's engraving of the Hanging Gardens" loading="lazy"></div>
+  </div>
+  <p class="fg-cap"></p>
+  <div class="fg-dots"></div>
+</div>
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
 <p style="margin: 0;"><strong>The view from the wall:</strong> stand a Judean exile on the Processional Way in 570 BC &mdash; blue-glazed lions to the horizon, the ziggurat &ldquo;rivaling heaven,&rdquo; the walls that could not fall, the temple treasuries of a dozen conquered nations. Every visible fact argued that Marduk had won and the LORD of a burned hilltop temple had lost. The prophets&rsquo; astonishing wager was to read the skyline backwards: <em>this</em> &mdash; all of it &mdash; is the thing that passes. &ldquo;And Babylon, the glory of kingdoms, the beauty of the Chaldees&rsquo; excellency, shall be as when God overthrew Sodom and Gomorrah&rdquo; (<a href="https://www.blueletterbible.org/kjv/isa/13/19/" target="_blank" data-ref="Isaiah 13:19">Isaiah 13:19</a>). Within a lifetime the gates stood open to a Persian; within centuries the city was mounds. The exiles who believed the prophets over their own eyes are the reason there was a people left to come home.</p>
@@ -123,6 +163,8 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
+<script src="/js/fg-gallery.js"></script>
 
 {{< /rawhtml >}}

@@ -114,6 +114,18 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <h3>Marduk&rsquo;s Rise and the En&#363;ma Eli&scaron;</h3>
 
+<div class="fg-gallery">
+  <div class="fg-stage">
+    <span class="fg-counter" aria-hidden="true"></span>
+    <button class="fg-arrow fg-prev" type="button" aria-label="Previous image">&lsaquo;</button>
+    <button class="fg-arrow fg-next" type="button" aria-label="Next image">&rsaquo;</button>
+    <div class="fg-item" data-caption="Marduk striding with his dragon, the mushhushshu &mdash; the storm-god who rose to head the Babylonian pantheon." data-credit="After F. H. Wei&szlig;bach &middot; public domain"><img src="/images/culture/babylon/photos/marduk-and-dragon.png" alt="Marduk and his mushhushshu dragon" loading="lazy"></div>
+    <div class="fg-item" data-caption="A tablet of the En&#363;ma Eli&scaron;, Babylon&rsquo;s creation epic, in which Marduk defeats Tiamat and forms the world from her body. <a href='https://www.worldhistory.org/Enuma_Elish---The-Babylonian-Epic-of-Creation---Fu/' target='_blank'>Read the epic &rarr;</a>" data-credit="Zunkir &middot; Wikimedia Commons (CC BY-SA 4.0)"><img src="/images/culture/babylon/photos/enuma-elish-tablet.jpg" alt="A tablet of the Enuma Elish creation epic" loading="lazy"></div>
+  </div>
+  <p class="fg-cap"></p>
+  <div class="fg-dots"></div>
+</div>
+
 <p>Marduk began as the modest patron of a modest town. As Babylon rose, so did he &mdash; absorbing the offices and epithets of older gods until, by the later second millennium BC, Babylonian theology crowned him king of the entire pantheon. The classic statement of that kingship is the epic modern scholars call the <strong><a href="https://www.worldhistory.org/Enuma_Elish---The-Babylonian-Epic-of-Creation---Fu/" target="_blank">En&#363;ma Eli&scaron;</a></strong> (&ldquo;When on high&hellip;&rdquo;, from its opening words), often labeled the &ldquo;Babylonian creation epic&rdquo; &mdash; though it is really an enthronement text: creation is the evidence, Marduk&rsquo;s kingship the verdict.</p>
 
 <p>The story, across seven tablets: the primeval waters &mdash; fresh-water Apsu and salt-water <strong>Tiamat</strong> &mdash; mingle and beget the gods; the younger gods&rsquo; noise provokes a war; when Tiamat, the ocean-mother turned monster, marshals an army of dragons, only young Marduk dares face her &mdash; and names his price: supreme kingship. He kills Tiamat with wind and arrow, <em>splits her carcass in two, and builds the cosmos from it</em> &mdash; half her body arched as the sky, holding back the upper waters; the Tigris and Euphrates set flowing from her eyes. He organizes the stars and calendar, and then, from the blood of the rebel god Kingu, has humanity created &mdash; explicitly as a labor force, &ldquo;that the gods may rest.&rdquo; The epic closes with the gods building Marduk his city &mdash; Babylon &mdash; and reciting his fifty names of honor.</p>
@@ -135,6 +147,11 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <h3>The Flood Before the Flood Story</h3>
 
 <p>Babylon also told of a great deluge &mdash; and told it long before any part of the Bible was written down. In the <strong>Atrahasis epic</strong> (Old Babylonian, c. 17th century BC), the gods send a flood to silence noisy humanity, but Ea warns one man to build a boat; in <strong>Tablet XI of the Epic of Gilgamesh</strong> &mdash; the tablet whose 1872 decipherment by George Smith famously stunned Victorian London &mdash; the flood hero Utnapishtim tells his story: precise boat-building instructions, the animals loaded, the storm so terrible the gods themselves cower, the grounding on a mountain, and the birds &mdash; a dove, a swallow, a raven &mdash; sent out to find land, before the survivor offers sacrifice and the gods crowd round it.</p>
+
+<figure class="fg-figure">
+  <img src="/images/culture/babylon/photos/gilgamesh-flood-tablet.jpg" alt="The Gilgamesh flood tablet (Tablet XI), British Museum" loading="lazy">
+  <figcaption>Tablet XI of the Epic of Gilgamesh &mdash; the Babylonian flood story, whose 1872 decipherment by George Smith stunned Victorian London. <a href="https://www.britishmuseum.org/collection/object/W_K-3375" target="_blank">See it at the British Museum &rarr;</a> <span class="fg-credit">British Museum, via Wikimedia Commons (CC0)</span></figcaption>
+</figure>
 
 <p>The parallels with <a href="https://www.blueletterbible.org/kjv/gen/6/14/" target="_blank" data-ref="Genesis 6-9">Genesis 6&ndash;9</a> are unmistakable and unsurprising: both traditions remember the same event-shaped story in the same landscape &mdash; a flood plain civilization that kept flood layers in its very soil and a &ldquo;mound of the flood&rdquo; in its place names. What differs, again, is the theology. Babylon&rsquo;s gods send the flood out of irritation, lie about it to each other, panic when it comes, and swarm &ldquo;like flies&rdquo; to the post-flood sacrifice because they are hungry &mdash; no one has fed them in a week. Genesis grounds the flood in moral judgment (<a href="https://www.blueletterbible.org/kjv/gen/6/5/" target="_blank" data-ref="Genesis 6:5">Genesis 6:5</a>), narrates one sovereign God who both judges and remembers (<a href="https://www.blueletterbible.org/kjv/gen/8/1/" target="_blank" data-ref="Genesis 8:1">Genesis 8:1</a>), and ends not with divine snacking but with covenant: a bow set in the cloud (<a href="https://www.blueletterbible.org/kjv/gen/9/13/" target="_blank" data-ref="Genesis 9:13">Genesis 9:13</a>). Latter-day Saint readers, who accept revealed knowledge of these events reaching back to the patriarchs, need not be troubled that Mesopotamia remembered a flood too &mdash; a real event leaves many memories, and the differences show which tradition remembered its meaning.</p>
 
@@ -225,6 +242,8 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
+<script src="/js/fg-gallery.js"></script>
 
 {{< /rawhtml >}}

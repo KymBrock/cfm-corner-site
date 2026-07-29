@@ -60,6 +60,20 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>From the Judahite side of the trenches come the <strong>Lachish letters</strong> &mdash; ostraca (ink-on-potsherd messages) excavated in the burned gate-chamber of Lachish, Judah&rsquo;s great southwestern fortress, written during Nebuchadnezzar&rsquo;s final invasion. In Letter 4, an officer at an outpost reports to his commander: <em>&ldquo;we are watching for the fire-signals of Lachish&hellip; for we cannot see Azekah.&rdquo;</em> Jeremiah 34:7 freezes the same moment from inside Jerusalem: the Babylonian army fighting &ldquo;against Lachish, and against Azekah: for these defenced cities remained of the cities of Judah&rdquo; (<a href="https://www.blueletterbible.org/kjv/jer/34/7/" target="_blank" data-ref="Jeremiah 34:7">Jeremiah 34:7</a>). In the letter, Azekah&rsquo;s signal has already gone dark. Another ostracon complains of a prophet whose words &ldquo;weaken the hands&rdquo; of the people &mdash; the very charge Jerusalem&rsquo;s officers laid against Jeremiah, in nearly the same Hebrew idiom (<a href="https://www.blueletterbible.org/kjv/jer/38/4/" target="_blank" data-ref="Jeremiah 38:4">Jeremiah 38:4</a>).</p>
 
+<div class="fg-gallery">
+  <div class="fg-stage">
+    <span class="fg-counter" aria-hidden="true"></span>
+    <button class="fg-arrow fg-prev" type="button" aria-label="Previous image">&lsaquo;</button>
+    <button class="fg-arrow fg-next" type="button" aria-label="Next image">&rsaquo;</button>
+    <div class="fg-item" data-caption="The Babylonian Chronicle (BM 21946) &mdash; its terse note of Nebuchadnezzar capturing Jerusalem in 597 BC matches 2 Kings 24 to the year. <a href='https://www.britishmuseum.org/collection/object/W_1880-0617-1941' target='_blank'>See it at the British Museum &rarr;</a>" data-credit="Osama S. M. Amin &middot; Wikimedia Commons (CC BY-SA 4.0)"><img src="/images/culture/babylon/photos/babylonian-chronicle-jerusalem.jpg" alt="The Babylonian Chronicle tablet, BM 21946" loading="lazy"></div>
+    <div class="fg-item" data-caption="Lachish Letter III &mdash; an officer&rsquo;s ink-on-potsherd dispatch from Judah&rsquo;s last days, as Nebuchadnezzar&rsquo;s army closed in. <a href='https://cojs.org/lakhish_ostraca-_c-_587_bce/' target='_blank'>Read the letters &rarr;</a>" data-credit="NenyaAleks &middot; Wikimedia Commons (public domain)"><img src="/images/culture/babylon/photos/lachish-letters.jpg" alt="Lachish Letter III ostracon" loading="lazy"></div>
+    <div class="fg-item" data-caption="The Cyrus Cylinder &mdash; the Persian king&rsquo;s decree of return, the imperial policy behind Ezra 1. <a href='https://www.livius.org/sources/content/cyrus-cylinder/cyrus-cylinder-translation/' target='_blank'>Read the decree &rarr;</a>" data-credit="Prioryman &middot; Wikimedia Commons (CC BY-SA 3.0)"><img src="/images/culture/babylon/photos/cyrus-cylinder-bm.jpg" alt="The Cyrus Cylinder, British Museum" loading="lazy"></div>
+    <div class="fg-item" data-caption="The Nebo-Sarsekim tablet &mdash; a receipt for gold naming the very court official (rab-saris) listed among Nebuchadnezzar&rsquo;s officers at Jerusalem&rsquo;s fall in Jeremiah 39:3. <a href='http://jerusalem.nottingham.ac.uk/items/show/49' target='_blank'>Read about the tablet &rarr;</a>" data-credit="Osama S. M. Amin &middot; Wikimedia Commons (CC BY-SA 4.0)"><img src="/images/culture/babylon/photos/nebo-sarsekim-tablet.jpg" alt="The Nebo-Sarsekim cuneiform tablet, British Museum" loading="lazy"></div>
+  </div>
+  <p class="fg-cap"></p>
+  <div class="fg-dots"></div>
+</div>
+
 <p>Archaeology in Jerusalem itself has added the officials. Among bullae (clay seal impressions) excavated in the City of David&rsquo;s burned debris is one reading <strong>&ldquo;belonging to Gemaryahu son of Shaphan&rdquo;</strong> &mdash; matching &ldquo;Gemariah the son of Shaphan the scribe,&rdquo; in whose temple chamber Baruch read Jeremiah&rsquo;s scroll aloud (<a href="https://www.blueletterbible.org/kjv/jer/36/10/" target="_blank" data-ref="Jeremiah 36:10">Jeremiah 36:10</a>) &mdash; and excavations in the same quarter have yielded bullae of <strong>Jehucal son of Shelemiah</strong> and <strong>Gedaliah son of Pashur</strong>, the pair named side by side among Jeremiah&rsquo;s adversaries (<a href="https://www.blueletterbible.org/kjv/jer/38/1/" target="_blank" data-ref="Jeremiah 38:1">Jeremiah 38:1</a>). These are the fingerprints &mdash; literally, in some cases, preserved in the clay &mdash; of the minor characters of the book of Jeremiah.</p>
 
 <h4>The official on the tax receipt</h4>
@@ -167,6 +181,8 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
+<script src="/js/fg-gallery.js"></script>
 
 {{< /rawhtml >}}

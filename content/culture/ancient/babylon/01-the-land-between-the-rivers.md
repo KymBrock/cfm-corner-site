@@ -35,6 +35,12 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>Understanding this landscape is the first step to understanding Babylon &mdash; why it grew, why it needed to trade and conquer, why its temples were towers of brick rather than stone, and why its armies kept appearing on Judah&rsquo;s horizon. Geography is not destiny, but in Mesopotamia it came close.</p>
 
+<p style="text-align: center; color: #666; font-style: italic; margin: 0 0 8px 0;">Babylon in its world &mdash; drag the slider through the ages, from Sumer to Rome. It opens on the Neo-Babylonian empire of Nebuchadnezzar, c. 600 BC.</p>
+
+<link rel="stylesheet" href="/css/era-map-widget.css">
+<div class="era-map-widget" data-start-era="600"></div>
+<script src="/js/era-map-widget.js"></script>
+
 <br>
 
 <hr>
@@ -92,6 +98,11 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>The result was a civilization that was <strong>outward-facing by necessity</strong>. Babylon had to trade, and what it traded best &mdash; besides grain and wool &mdash; was administration: writing, accounting, contracts, weights and measures, mathematics, and law. (For how those exports shaped the whole ancient world, including Israel, see <a href="/culture/ancient/babylon/05-writing-and-learning/">Section 05: Writing &amp; Learning</a>.)</p>
 
+<figure class="fg-figure">
+  <img src="/images/culture/babylon/photos/palm-grove-babylon.jpg" alt="A date-palm grove beside the Euphrates at Babylon" loading="lazy">
+  <figcaption>A date-palm grove at <b>Babylon</b> on the Euphrates. The southern plain had almost no stone, metal, or building timber &mdash; but mud, reed, and the date palm were inexhaustible, and the palm alone gave food, fiber, and the one local timber a builder could count on. <span class="fg-credit">Palm grove at Babylon &middot; photo Hamody al-iraqi, Wikimedia Commons (CC BY-SA 4.0)</span></figcaption>
+</figure>
+
 <br>
 
 <hr>
@@ -101,6 +112,11 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <h3>Sumer and Akkad, North and South</h3>
 
 <p>Mesopotamia was never one thing. The ancient scribes themselves divided the southern plain into <strong>Sumer</strong> (the far south, toward the Gulf) and <strong>Akkad</strong> (the region around and above Babylon) &mdash; and long after both names had faded from politics, Babylonian kings still styled themselves <em>&ldquo;king of Sumer and Akkad&rdquo;</em> as a claim to the whole ancient inheritance. Northern Mesopotamia, up the Tigris, was <strong>Assyria</strong> &mdash; Babylon&rsquo;s cultural sibling and political rival for a thousand years. The two shared a language (Akkadian, in different dialects), a script, and most of a pantheon; they fought like siblings, too. (The full story of that rivalry runs through <a href="/culture/ancient/babylon/02-timeline-and-empires/">Section 02: Timeline &amp; Empires</a>.)</p>
+
+<figure class="fg-figure" style="max-width:760px;">
+  <img src="/images/culture/babylon/maps/babylon-mesopotamia-map.jpg" alt="Map of Mesopotamia showing Assyria on the upper Tigris; Akkad, Babylonia and Sumer along the lower Euphrates; Kaldu at the Gulf; and Elam across the Tigris" loading="lazy">
+  <figcaption>The land between the rivers: northern <b>Assyria</b> straddled the upper Tigris; the southern plain split into <b>Akkad</b> (around Babylon) and <b>Sumer</b> (toward the Gulf), with the Chaldean <b>Kaldu</b> at the Gulf&rsquo;s head and <b>Elam</b> across the Tigris to the east. <span class="fg-credit">Map by CFM Corner on a S&eacute;mhur relief base (CC BY-SA 4.0)</span></figcaption>
+</figure>
 
 <p>South of Babylon, where the rivers dissolve into reed marshes toward the Gulf, lay the <strong>Sealand</strong> &mdash; a wetland world of fishermen, reed houses, and water buffalo that was nearly impossible for armies to control. It was in and around these marshes, in the early first millennium BC, that the tribes called the <strong>Chaldeans</strong> (<em>Kaldu</em> in Akkadian; Hebrew <em>Kasdim</em>, <a href="https://www.blueletterbible.org/lexicon/h3778/kjv/wlc/0-1/" target="_blank">כַּשְׂדִּים</a>) settled and grew powerful. Chaldean chieftains spent a century leading resistance to Assyria &mdash; one of them, Merodach-baladan, will matter enormously to the story of Hezekiah &mdash; and it was a dynasty of Chaldean stock that finally made Babylon the master of the Near East. By the Bible&rsquo;s era, &ldquo;Chaldean&rdquo; and &ldquo;Babylonian&rdquo; had become interchangeable (<a href="https://www.blueletterbible.org/kjv/2ki/25/4/" target="_blank" data-ref="2 Kings 25:4">2 Kings 25:4</a>), and centuries later still, the word had drifted to mean &ldquo;astrologer&rdquo; &mdash; a tribute to Babylon&rsquo;s scholarly reputation (<a href="https://www.blueletterbible.org/kjv/dan/2/2/" target="_blank" data-ref="Daniel 2:2">Daniel 2:2</a>).</p>
 
@@ -142,6 +158,11 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>Mesopotamia frames Israel&rsquo;s story at both ends. Abraham came <em>out</em> of it &mdash; from Ur, by way of Haran (<a href="https://www.blueletterbible.org/kjv/gen/11/31/" target="_blank" data-ref="Genesis 11:31">Genesis 11:31</a>) &mdash; carrying with him the memory of its cities, its ziggurats, and its moon-god worship (<a href="https://www.blueletterbible.org/kjv/jos/24/2/" target="_blank" data-ref="Joshua 24:2">Joshua 24:2</a>: &ldquo;your fathers dwelt on the other side of the flood in old time&hellip; and they served other gods&rdquo;). The primeval history of Genesis is set on this plain: Eden&rsquo;s rivers include the Hiddekel (Tigris) and Euphrates (<a href="https://www.blueletterbible.org/kjv/gen/2/14/" target="_blank" data-ref="Genesis 2:14">Genesis 2:14</a>); the ark grounds in the mountains to its north; Nimrod&rsquo;s kingdom begins at &ldquo;Babel, and Erech, and Accad, and Calneh, in the land of Shinar&rdquo; (<a href="https://www.blueletterbible.org/kjv/gen/10/10/" target="_blank" data-ref="Genesis 10:10">Genesis 10:10</a>) &mdash; Babylon, Uruk, and Akkad, named in order; and the tower &ldquo;whose top may reach unto heaven&rdquo; (<a href="https://www.blueletterbible.org/kjv/gen/11/4/" target="_blank" data-ref="Genesis 11:4">Genesis 11:4</a>) rises from the same plain where real brick towers rose. And at the story&rsquo;s other end, Judah is carried back &mdash; to canal-side settlements in that same landscape, &ldquo;by the rivers of Babylon&rdquo; (<a href="https://www.blueletterbible.org/kjv/psa/137/1/" target="_blank" data-ref="Psalm 137:1">Psalm 137:1</a>), where the exiles&rsquo; new addresses were literally named for the waterworks: Ezekiel&rsquo;s community lived &ldquo;by the river of Chebar&rdquo; (<a href="https://www.blueletterbible.org/kjv/eze/1/1/" target="_blank" data-ref="Ezekiel 1:1">Ezekiel 1:1</a>) &mdash; the <em>Kabaru</em> canal near Nippur, known from Babylonian records. (The exiles&rsquo; world is the subject of <a href="/culture/ancient/babylon/07-the-exile-experience/">Section 07: The Exile Experience</a>.)</p>
 
+<figure class="fg-figure">
+  <img src="/images/culture/babylon/photos/ziggurat-of-ur.jpg" alt="The ziggurat of Ur" loading="lazy">
+  <figcaption>The ziggurat of Ur &mdash; the best-preserved of Mesopotamia&rsquo;s stepped temple-towers, and the kind of structure that rose at Babylon as Etemenanki. <span class="fg-credit">Hardnfast &middot; Wikimedia Commons (CC BY 3.0)</span></figcaption>
+</figure>
+
 <p>Scripture&rsquo;s story, in other words, is bracketed by this land between the rivers: a covenant family called out of Mesopotamia at the beginning, and a covenant nation carried back into it at the end &mdash; so that the return from Babylon could become the Bible&rsquo;s great image of every redemption after it.</p>
 
 <br>
@@ -177,6 +198,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}

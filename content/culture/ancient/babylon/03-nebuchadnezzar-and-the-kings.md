@@ -79,6 +79,11 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>Yet in his own inscriptions Nebuchadnezzar barely mentions war. What he wanted remembered was <strong>construction</strong>: the double walls of Babylon, the Ishtar Gate and its Processional Way gleaming with glazed lapis-blue brick, the completed ziggurat Etemenanki, the vast palace complexes, temples renewed in a dozen cities, canals, and quays. Nearly every fired brick in his Babylon &mdash; and archaeologists have moved millions of them &mdash; is stamped with his name. Daniel&rsquo;s portrait of the king pacing his palace roof &mdash; &ldquo;Is not this great Babylon, that I have built for the house of the kingdom by the might of my power, and for the honour of my majesty?&rdquo; (<a href="https://www.blueletterbible.org/kjv/dan/4/30/" target="_blank" data-ref="Daniel 4:30">Daniel 4:30</a>) &mdash; matches the voice of his own bricks with almost uncomfortable precision. (The city he built is toured in <a href="/culture/ancient/babylon/06-the-city-itself/">Section 06</a>.)</p>
 
+<figure class="fg-figure">
+  <img src="/images/culture/babylon/photos/east-india-house-inscription.jpg" alt="The East India House Inscription of Nebuchadnezzar" loading="lazy">
+  <figcaption>The East India House Inscription &mdash; ten columns in which Nebuchadnezzar records his building works in Babylon, barely mentioning war. The voice of the bricks behind &ldquo;Is not this great Babylon, that I have built?&rdquo; <span class="fg-credit">British Museum; via Wikimedia Commons (CC BY-SA 4.0)</span></figcaption>
+</figure>
+
 <h4>The king in Daniel</h4>
 
 <p>The book of Daniel dwells longer inside Nebuchadnezzar&rsquo;s head than any Babylonian source does &mdash; the troubled dreams (<a href="https://www.blueletterbible.org/kjv/dan/2/1/" target="_blank" data-ref="Daniel 2:1">Daniel 2</a>), the golden image and the furnace (<a href="https://www.blueletterbible.org/kjv/dan/3/1/" target="_blank" data-ref="Daniel 3">Daniel 3</a>), and the seven years of madness that ended in the pride-broken doxology of a pagan emperor (<a href="https://www.blueletterbible.org/kjv/dan/4/37/" target="_blank" data-ref="Daniel 4:37">Daniel 4:37</a>). Babylonian records preserve no account of a royal madness &mdash; though court scribes would hardly have advertised one. Intriguingly, a Dead Sea Scrolls fragment (the &ldquo;Prayer of Nabonidus,&rdquo; 4Q242) preserves a Jewish tradition of a Babylonian king &mdash; there named Nabonidus &mdash; afflicted by God for seven years and healed through a Jewish exile&rsquo;s counsel, which many scholars see as a related tradition; others defend the Daniel account as it stands, noting how well its portrait of the king&rsquo;s builder-pride fits the man&rsquo;s own words. However one resolves the historical question, the theological one is the point of the chapter, and it is stated by the king himself: &ldquo;those that walk in pride he is able to abase&rdquo; (<a href="https://www.blueletterbible.org/kjv/dan/4/37/" target="_blank" data-ref="Daniel 4:37">Daniel 4:37</a>).</p>
@@ -113,9 +118,19 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <h3>Nabonidus &amp; Belshazzar: The Absentee and the Regent (556&ndash;539 BC)</h3>
 
+<figure class="fg-figure">
+  <img src="/images/culture/babylon/photos/nabonidus-stele-bm.jpg" alt="The stele of Nabonidus, British Museum" loading="lazy">
+  <figcaption>Nabonidus, the last king of Babylon, worshipping the symbols of the moon, sun, and Venus. He left the capital in the hands of his son Belshazzar. <span class="fg-credit">British Museum &middot; Wikimedia Commons (CC0)</span></figcaption>
+</figure>
+
 <p>The last king of Babylon was the strangest. <strong><a href="https://www.worldhistory.org/Nabonidus/" target="_blank">Nabonidus</a></strong> was no Chaldean prince but the son of a priestess of the moon god Sin from Harran, in the old Assyrian north &mdash; already elderly at his accession, an antiquarian who excavated the foundations of ancient temples to recover their original dedications (he has been called, half-seriously, the first archaeologist). His devotion to Sin over Marduk put him on a collision course with Babylon&rsquo;s powerful priesthood; and then, inexplicably to his contemporaries, he left. For roughly ten years the king of Babylon lived at the desert oasis of <strong>Teima</strong> in northwest Arabia, while the New Year festival &mdash; which required the king&rsquo;s presence &mdash; simply could not be celebrated. In his place at the capital he left his eldest son: <strong>Belshazzar</strong>.</p>
 
 <p>For centuries, skeptical readers treated Daniel&rsquo;s Belshazzar as a fiction &mdash; every classical historian named Nabonidus as Babylon&rsquo;s last king, and no Belshazzar appeared anywhere. Then the cuneiform archives began to speak: the <em>Nabonidus Cylinder</em> from Ur names &ldquo;Belshazzar, the eldest son, my offspring&rdquo; in the king&rsquo;s own prayer, and administrative texts show the crown prince exercising royal authority in Babylon during his father&rsquo;s long absence &mdash; a co-regency in fact if not in formal title. Daniel&rsquo;s scene even preserves the arrangement&rsquo;s odd arithmetic: Belshazzar offers the interpreter of the writing on the wall promotion to <em>third</em> ruler in the kingdom (<a href="https://www.blueletterbible.org/kjv/dan/5/29/" target="_blank" data-ref="Daniel 5:29">Daniel 5:29</a>) &mdash; the highest rank actually available in a realm whose first two places were already occupied by an absent king and his regent son.</p>
+
+<figure class="fg-figure" style="max-width:640px;">
+  <img src="/images/culture/babylon/photos/nabonidus-cylinder-ur-belshazzar.jpg" alt="Clay foundation cylinder of Nabonidus from Ur, British Museum, that names Belshazzar" loading="lazy">
+  <figcaption>The clay cylinder that answered the skeptics: a foundation record of <b>Nabonidus</b> from the moon-god&rsquo;s temple at <b>Ur</b> (c.&nbsp;540 BC), whose closing prayer asks the gods to watch over the king &ldquo;and <b>Belshazzar</b>, the eldest son, my offspring&rdquo; &mdash; the first attestation of Daniel&rsquo;s Belshazzar outside the Bible. <a href="https://www.livius.org/sources/content/nabonidus-cylinder-from-ur/" target="_blank">Read the inscription &rarr;</a> <span class="fg-credit">British Museum, BM 91128 &middot; photo Jastrow, Wikimedia Commons (CC BY 2.5)</span></figcaption>
+</figure>
 
 <p>The end came in October 539 BC. Cyrus defeated the Babylonian army at Opis on the Tigris; days later his forces entered Babylon &mdash; by the account of both the Babylonian chronicle and Cyrus&rsquo;s own cylinder, without a battle, welcomed by a priesthood and populace long alienated from their king. Daniel remembers the last night inside the palace: the profaned temple vessels, the fingers of a man&rsquo;s hand against the plaster, and the verdict &mdash; &ldquo;Thou art weighed in the balances, and art found wanting&rdquo; (<a href="https://www.blueletterbible.org/kjv/dan/5/27/" target="_blank" data-ref="Daniel 5:27">Daniel 5:27</a>). &ldquo;In that night was Belshazzar the king of the Chaldeans slain&rdquo; (<a href="https://www.blueletterbible.org/kjv/dan/5/30/" target="_blank" data-ref="Daniel 5:30">Daniel 5:30</a>). Nabonidus himself was captured and, per one late tradition, pensioned into exile &mdash; the fate he had, in effect, already chosen for himself years before.</p>
 
@@ -156,6 +171,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}
