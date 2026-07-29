@@ -208,16 +208,20 @@
   margin: 2px 0 3px; font-family: "SBL Hebrew", "Ezra SIL", "Times New Roman", serif; }
 .poetry-map-widget .pmw-acro-en-text { display: block; }
 
-/* Hover a word for translit · gloss — matches the Translation Hub Interlinear. */
+/* Hover a word for translit · gloss — matches the Translation Hub Interlinear,
+   styled in the CFM parchment/sage palette (not harsh black-on-white). */
 .poetry-map-widget .pmw-w { position: relative; cursor: help; border-radius: 3px;
   padding: 0 1px; transition: background .12s; }
 .poetry-map-widget .pmw-w:hover { background: var(--gold-pale, #f5ecd0); }
 .poetry-map-widget .pmw-w-key { color: var(--sage-dark, #4a6b52); font-weight: 700; }
 .poetry-map-widget .pmw-w[data-tip]:hover::after {
   content: attr(data-tip); position: absolute; right: 0; left: auto;
-  bottom: 138%; z-index: 40; background: #2f3a30; color: #fff; border-radius: 7px;
-  padding: 6px 10px; font-size: 0.8rem; font-weight: 400; white-space: nowrap;
-  max-width: 92vw; overflow: hidden; text-overflow: ellipsis;
+  bottom: 142%; z-index: 40;
+  background: var(--pmw-center-bg, #f5ecd0); color: var(--pmw-ink, #383731);
+  border: 1px solid var(--pmw-rule, #c6d4c8);
+  border-left: 3px solid var(--pmw-pair2, #4a6b52);
+  border-radius: 8px; padding: 6px 11px; font-size: 0.8rem; font-weight: 400;
+  white-space: nowrap; max-width: 92vw; overflow: hidden; text-overflow: ellipsis;
   direction: ltr; text-align: left; pointer-events: none;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  box-shadow: 0 6px 20px rgba(0,0,0,.28); }
+  box-shadow: 0 5px 16px rgba(60, 50, 30, 0.18); }
