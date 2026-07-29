@@ -1,0 +1,784 @@
+<style>
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+        .site-header {
+            background: linear-gradient(135deg, #d4c4a8 0%, #8B7355 100%);
+            color: white; padding: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px;
+        }
+        .site-header-content { max-width: 1000px; margin: 0 auto; padding: 0 20px; text-align: center; }
+        .site-title { font-size: 2em; margin-bottom: 5px; }
+        .site-subtitle { font-size: 1.1em; opacity: 0.9; }
+
+        .header-section {
+            background-color: #8B7355; color: white; padding: 40px; border-radius: 12px;
+            margin-bottom: 30px; text-align: center;
+        }
+        .header-section .week-label { font-size: 1em; text-transform: uppercase; letter-spacing: 2px; opacity: 0.9; margin-bottom: 10px; }
+        .header-section h1 { font-size: 2.5em; font-weight: 300; margin-bottom: 10px; }
+        .header-section .subtitle { font-size: 1.3em; font-style: italic; margin-bottom: 20px; }
+        .header-section .date-location { font-size: 1.1em; opacity: 0.95; }
+
+        .quick-links { text-align: center; margin: 20px 0; }
+        .quick-link {
+            display: inline-block; background: #8B7355; color: white; padding: 10px 20px;
+            border-radius: 8px; text-decoration: none; margin: 5px; transition: all 0.3s;
+        }
+        .quick-link:hover { background: #6B5344; transform: translateY(-2px); }
+
+        .button-container { text-align: center; margin: 30px 0; }
+        .expand-button {
+            background-color: #8B7355; color: white; border: none; padding: 12px 24px;
+            margin: 5px 10px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em;
+        }
+        .expand-button:hover { background-color: #6B5344; }
+
+        .sg-accordion-section {
+            background-color: #8B7355; color: white; cursor: pointer; padding: 18px; width: 100%;
+            border: none; text-align: left; font-size: 1.2em; font-weight: 600; font-family: Georgia, serif;
+            border-radius: 8px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center;
+        }
+        .sg-accordion-section:hover { background-color: #6B5344; }
+        .sg-accordion-section::after { content: '\25BC'; font-size: 0.9em; transition: transform 0.3s; }
+        .sg-accordion-section.active::after { transform: rotate(180deg); }
+
+        .sg-panel {
+            background-color: white; border-radius: 0 0 8px 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .sg-panel.active { display: block; }
+        .panel-content { padding: 30px; }
+        .panel-content h2 { color: #8B7355; margin-bottom: 20px; font-size: 1.8em; }
+        .panel-content h3 { color: #6B5344; margin-top: 25px; margin-bottom: 15px; font-size: 1.4em; }
+        .panel-content h4 { color: #5a4a3a; margin-top: 20px; margin-bottom: 12px; font-size: 1.2em; }
+        .panel-content ul, .panel-content ol { margin-left: 25px; margin-bottom: 15px; }
+        .panel-content li { margin-bottom: 8px; }
+        .panel-content p { margin-bottom: 15px; text-align: justify; }
+        .panel-content a { color: #8B7355; }
+        .panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .panel-content blockquote {
+            margin: 20px 0 20px 20px;
+            padding: 15px 20px;
+            border-left: 4px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 8px 8px 0;
+        }
+        .panel-content blockquote p { margin-bottom: 8px; }
+        .panel-content blockquote p:last-child { margin-bottom: 0; }
+        .panel-content blockquote cite {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #8B7355;
+            font-style: normal;
+        }
+
+        .panel-content strong { color: #6B5344; }
+        .panel-content em { color: #5a4a3a; }
+
+        .panel-content hr {
+            border: none;
+            border-top: 2px solid #e8e0d5;
+            margin: 25px 0;
+        }
+
+        .panel-content code {
+            background-color: #f5f0e8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #6B5344;
+        }
+
+        .info-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .info-table th, .info-table td { border: 1px solid #d4c4a8; padding: 12px; text-align: left; }
+        .info-table th { background-color: #f5f0e8; color: #6B5344; font-weight: bold; }
+        .info-table tr:nth-child(even) { background-color: #faf8f5; }
+
+        .sg-sub-accordion {
+            background-color: #f5f0e8;
+            color: #5a4a3a;
+            cursor: pointer;
+            padding: 14px 40px 14px 18px;
+            width: 100%;
+            text-align: left;
+            border: 1px solid #d4c4a8;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            margin-top: 10px;
+            position: relative;
+            transition: background-color 0.2s;
+        }
+
+        .sg-sub-accordion:hover {
+            background-color: #e8e0d4;
+        }
+
+        .sg-sub-accordion::after {
+            content: '\25BC';
+            font-size: 0.8em;
+            color: #8B7355;
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s;
+        }
+
+        .sg-sub-accordion.active::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .sg-sub-panel {
+            background-color: #fafafa;
+            border-radius: 0 0 6px 6px;
+            border: 1px solid #d4c4a8;
+            border-top: none;
+            display: none;
+            transition: max-height 0.3s ease-out;
+            margin-bottom: 10px;
+        }
+
+        .sg-sub-panel.active {
+            display: block;
+            overflow: visible;
+            transition: max-height 0.3s ease-in;
+        }
+
+        .sg-sub-panel-content {
+            padding: 20px 25px;
+        }
+
+        .sg-sub-panel-content h3 { color: #6B5344; margin-top: 20px; margin-bottom: 12px; font-size: 1.3em; }
+        .sg-sub-panel-content h4 { color: #5a4a3a; margin-top: 15px; margin-bottom: 10px; font-size: 1.15em; }
+        .sg-sub-panel-content p { margin-bottom: 12px; text-align: justify; }
+        .sg-sub-panel-content ul, .sg-sub-panel-content ol { margin-left: 25px; margin-bottom: 12px; }
+        .sg-sub-panel-content li { margin-bottom: 6px; }
+        .sg-sub-panel-content a { color: #8B7355; }
+        .sg-sub-panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .sg-sub-panel-content blockquote {
+            margin: 15px 0 15px 15px;
+            padding: 12px 18px;
+            border-left: 3px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 6px 6px 0;
+        }
+        .sg-sub-panel-content blockquote p { margin-bottom: 6px; }
+        .sg-sub-panel-content blockquote p:last-child { margin-bottom: 0; }
+        .sg-sub-panel-content strong { color: #6B5344; }
+        .sg-sub-panel-content hr { border: none; border-top: 1px solid #e8e0d5; margin: 20px 0; }
+
+        @media (max-width: 768px) {
+            .header-section h1 { font-size: 1.8em; }
+            .panel-content { padding: 20px; }
+            .sg-sub-panel-content { padding: 15px 18px; }
+        }
+
+        .sg-section-heading {
+            margin: 1.2em 0 0.6em 0;
+            padding: 0.4em 0 0.4em 0.8em;
+            border-left: 3px solid #8B9D77;
+            color: #5a6b4f;
+            font-size: 1.05em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+        }
+        .sg-section-actions {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 28px;
+        }
+        .sg-section-actions .sg-action-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.35);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            padding: 0;
+            line-height: 1;
+        }
+        .sg-section-actions .sg-action-btn:hover {
+            background: rgba(255,255,255,0.35);
+        }
+    </style>
+
+
+<div class="container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <p class="week-label">Week 33</p>
+            <h1>Week Overview</h1>
+            <div class="subtitle"><a href="https://www.blueletterbible.org/kjv/job/1/1/s_437001" target="_blank" data-ref="Job 1">Job 1–3; 12–14; 19; 21–24; 38–40; 42</a> | "For I Know That My Redeemer Liveth"</div>
+            <div class="date-location"></div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/33?lang=eng" target="_blank" class="quick-link">CFM Manual</a>
+        </div>
+
+        <!-- Expand/Collapse Buttons -->
+        <div class="button-container">
+            <button class="expand-button" onclick="expandAll()"><span class="btn-icon">&#x229E;</span> Expand All</button>
+            <button class="expand-button" onclick="collapseAll()"><span class="btn-icon">&#x229F;</span> Collapse All</button>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 1: WEEK 33: WEEK OVERVIEW -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">1. Week 33: Week Overview</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>The Question the Book Refuses to Answer Easily</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Every other week of the Old Testament tells the story of a <em>people</em>. This week tells the story of a <em>person</em> — and a person who may not even be an Israelite. Job lives "in the land of Uz" (<a href="https://www.blueletterbible.org/kjv/job/1/1/s_437001" target="_blank" data-ref="Job 1:1">Job 1:1</a>), somewhere east, outside the covenant nation, and the book never troubles to place him on Israel's map or in Israel's history. That is deliberate. Stripped of nation, temple, and law, Job stands for something more universal than any one people: the human being caught in undeserved suffering, asking the oldest and hardest question there is — <em>why?</em></p>
+<p>The book of Job is honest enough not to give a cheap answer. It raises the question of innocent suffering and then, famously, declines to resolve it. God never tells Job about the scene in heaven that opened the book. Job never learns why. And yet the man who begins the week having lost everything ends it saying, "I know that my redeemer liveth" (<a href="https://www.blueletterbible.org/kjv/job/19/25/s_455025" target="_blank" data-ref="Job 19:25">Job 19:25</a>) and "now mine eye seeth thee" (<a href="https://www.blueletterbible.org/kjv/job/42/5/s_478005" target="_blank" data-ref="Job 42:5">Job 42:5</a>). The book does not answer <em>why we suffer</em>. It answers a deeper question: <em>whether God can still be trusted when we do not know why.</em></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Following the Reading</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong><a href="https://www.blueletterbible.org/kjv/job/1/1/s_437001" target="_blank" data-ref="Job 1">Job 1–2</a> — The Wager Behind the Curtain.</strong> Job is introduced as "perfect and upright, and one that feared God, and eschewed evil" (<a href="https://www.blueletterbible.org/kjv/job/1/1/s_437001" target="_blank" data-ref="Job 1:1">Job 1:1</a>) — not sinless, but wholehearted. Then the curtain lifts on a scene Job will never see: a heavenly council where "the Satan" (Hebrew <em>ha-satan</em>, "the accuser") challenges whether Job serves God for God, or only for the blessings. Given permission, the accuser strips Job of wealth, children, and health. Job's response is one of scripture's summits of faith: "the Lord gave, and the Lord hath taken away; blessed be the name of the Lord" (<a href="https://www.blueletterbible.org/kjv/job/1/21/s_437021" target="_blank" data-ref="Job 1:21">Job 1:21</a>). Even when his wife urges him to "curse God, and die," he answers, "shall we receive good at the hand of God, and shall we not receive evil?" (<a href="https://www.blueletterbible.org/kjv/job/2/9-10/s_438009" target="_blank" data-ref="Job 2:9-10">Job 2:9–10</a>).</p>
+<p><strong><a href="https://www.blueletterbible.org/kjv/job/3/1/s_439001" target="_blank" data-ref="Job 3">Job 3</a> — The Lament.</strong> Then the wholehearted man breaks open. Chapter 3 is a raw curse on the day of his birth. This is important: Job's faith is not a frozen calm. He will spend the middle of the book in anguish, argument, and complaint — and God will still call his speech right (<a href="https://www.blueletterbible.org/kjv/job/42/7/s_478007" target="_blank" data-ref="Job 42:7">Job 42:7</a>). The book makes room for the honest cry.</p>
+<p><strong><a href="https://www.blueletterbible.org/kjv/job/12/1/s_448001" target="_blank" data-ref="Job 12">Job 12–14; 21–24</a> — Arguing with the Comforters.</strong> Three friends come to sit with Job, and for seven days they say nothing — the best thing they do. Then they begin to talk, and their theology is a tidy machine: suffering is punishment, so if Job suffers, Job must have sinned. Job refuses the equation. He knows he has not earned this, and he will not lie about God to protect God's reputation. In these chapters Job insists on his integrity (12–14), observes that the wicked often prosper untouched (21), and longs to bring his case directly before God: "Oh that I knew where I might find him!... I would order my cause before him" (<a href="https://www.blueletterbible.org/kjv/job/23/3-4/s_459003" target="_blank" data-ref="Job 23:3-4">Job 23:3–4</a>). And he trusts the outcome of that trial before it happens: "when he hath tried me, I shall come forth as gold" (<a href="https://www.blueletterbible.org/kjv/job/23/10/s_459010" target="_blank" data-ref="Job 23:10">Job 23:10</a>).</p>
+<p><strong><a href="https://www.blueletterbible.org/kjv/job/19/1/s_455001" target="_blank" data-ref="Job 19">Job 19</a> — The Redeemer.</strong> At the center of his darkness Job utters the words that would one day become a hymn and an oratorio: "For I know that my redeemer liveth, and that he shall stand at the latter day upon the earth: And though after my skin worms destroy this body, yet in my flesh shall I see God" (<a href="https://www.blueletterbible.org/kjv/job/19/25-26/s_455025" target="_blank" data-ref="Job 19:25-26">Job 19:25–26</a>). Out of the ash-heap comes a flash of resurrection hope — a living Redeemer, a body remade, God seen with Job's own eyes.</p>
+<p><strong><a href="https://www.blueletterbible.org/kjv/job/38/1/s_474001" target="_blank" data-ref="Job 38">Job 38–40</a> — The Voice from the Whirlwind.</strong> When God finally answers, He does not explain. He asks questions — a cascade of them, a tour of a universe far larger than Job's suffering: "Where wast thou when I laid the foundations of the earth?... when the morning stars sang together, and all the sons of God shouted for joy?" (<a href="https://www.blueletterbible.org/kjv/job/38/4/s_474004" target="_blank" data-ref="Job 38:4">Job 38:4, 7</a>). God does not defend His justice. He enlarges Job's vision until the question changes shape — from <em>why did this happen to me?</em> to <em>do I trust the One whose wisdom holds all of this?</em></p>
+<p><strong><a href="https://www.blueletterbible.org/kjv/job/42/1/s_478001" target="_blank" data-ref="Job 42">Job 42</a> — Seeing, and Restored.</strong> Job's answer is surrender, not defeat: "I have heard of thee by the hearing of the ear: but now mine eye seeth thee" (<a href="https://www.blueletterbible.org/kjv/job/42/5/s_478005" target="_blank" data-ref="Job 42:5">Job 42:5</a>). His suffering has become an encounter. Then God rebukes the friends — whose neat theology was wrong — and asks Job to pray for them. And "the Lord blessed the latter end of Job more than his beginning" (<a href="https://www.blueletterbible.org/kjv/job/42/12/s_478012" target="_blank" data-ref="Job 42:12">Job 42:12</a>). The restoration is not payment for good behavior; it is a gift, as gratuitous as the loss was undeserved.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Why It Matters</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Latter-day Saints have a unique companion text to Job: the Liberty Jail revelations. To Joseph Smith, suffering in a Missouri dungeon, the Lord said, "Thou art not yet as Job; thy friends do not contend against thee... as they did Job" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?lang=eng&id=p10#p10" target="_blank" data-ref="D&C 121:10">D&C 121:10</a>) — and then, "all these things shall give thee experience, and shall be for thy good. The Son of Man hath descended below them all. Art thou greater than he?" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122?lang=eng&id=p7-p8#p7" target="_blank" data-ref="D&C 122:7-8">D&C 122:7–8</a>). That is Job's whole book in miniature: the God who does not always explain, but who has Himself gone lower than we will ever go.</p>
+<p>For that is the answer Job could only glimpse and we have been given plainly. Job cried, "I know that my redeemer liveth." We know His name. And we know that He "will take upon him the pains and the sicknesses of his people... that he may know according to the flesh how to succor his people" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng&id=p11-p12#p11" target="_blank" data-ref="Alma 7:11-12">Alma 7:11–12</a>). Job's Redeemer did not stay behind the curtain. He came down into the ash-heap Himself.</p>
+<hr>
+<p><em>Next file: <a href="02_Historical_Cultural_Context.md" target="_blank">02_Historical_Cultural_Context.md</a></em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 2: WEEK 33: HISTORICAL & CULTURAL CONTEXT -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">2. Week 33: Historical & Cultural Context</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>1. The Land of Uz — A Story Set Outside Israel</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Job opens with a geographic note that is really a theological one: "There was a man in the land of Uz" (<a href="https://www.blueletterbible.org/kjv/job/1/1/s_437001" target="_blank" data-ref="Job 1:1">Job 1:1</a>). Uz lies somewhere to the east, outside Israel — and Job, along with his three friends (Eliphaz the Temanite, Bildad the Shuhite, Zophar the Naamathite) and the younger Elihu, is never presented as an Israelite. The Bible Project's overview notes that this placement is "intentional," so that readers "focus simply on the story of Job and on the questions raised by his experience of suffering" (<em>Book of Job Summary</em>, BibleProject). The book is not about the covenant nation. It is about a righteous man, anywhere, meeting undeserved pain — which is why it has spoken to sufferers of every nation ever since.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>2. What Kind of Book Is Job? Wisdom Literature</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Job belongs to the Old Testament's "wisdom literature" (with Proverbs and Ecclesiastes) — books that wrestle with how life actually works rather than narrating Israel's history. Its shape is distinctive: a <strong>prose frame</strong> (the narrative prologue of chapters 1–2 and the epilogue of 42:7–17) wraps a vast body of <strong>Hebrew poetry</strong> — the cycles of speeches between Job and his friends, and finally God's own answer (BibleProject overview). Latter-day Saint teaching materials describe it the same way: Job is "classic Hebrew poetic scripture" that "offers many eternal gospel truths" (Jonn Claybaugh, <em>Come, Follow Me… Study and Teaching Helps</em>, Interpreter Foundation).</p>
+<p>That prose-and-poetry structure matters for reading. The calm, faithful Job of the famous lines ("blessed be the name of the Lord," 1:21) is the Job of the <em>prose</em> frame. The anguished, arguing, complaining Job — the one who curses the day of his birth (chapter 3) and demands an audience with God (chapter 23) — is the Job of the <em>poetry</em>. Both are Job. The book refuses to let us keep only the serene half.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>3. The Heavenly Council and "the Satan"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The engine of the whole story is a scene in the divine council — the heavenly court where "the sons of God came to present themselves before the Lord" (<a href="https://www.blueletterbible.org/kjv/job/1/6/s_437006" target="_blank" data-ref="Job 1:6">Job 1:6</a>). Among them comes a figure the Hebrew calls <em>ha-satan</em> — "<strong>the</strong> satan," with the definite article. It is a title, not yet a proper name: it means "the accuser" or "the adversary," a prosecuting role. The Bible Project overview renders it "the Accuser" or "the Prosecutor" (BibleProject); the Latter-day Saint seminary manual notes that "satan is a Hebrew word meaning 'adversary'... the form hassatan, meaning 'the adversary'" (<em>Old Testament Seminary Teacher Manual</em>, Lesson 107).</p>
+<p>The accuser's challenge is not about Job's behavior but about Job's <em>motive</em>: does Job "fear God for nought" (<a href="https://www.blueletterbible.org/kjv/job/1/9/s_437009" target="_blank" data-ref="Job 1:9">Job 1:9</a>)? Take away the blessings, he wagers, and the worship will vanish with them. The seminary manual is careful to add what the poetry never spells out: "the Lord does not really make agreements with Satan... the Lord has power over Satan and has no need to bargain with him" (Lesson 107). The scene is a way of putting a real question into narrative form — <em>is love of God possible for God's own sake?</em> — not a report that God gambles with the devil.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>4. Was Job a Real Person? An Ancient Debate</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Whether Job was history or parable was already argued in antiquity. The Talmud preserves the dispute plainly: one sage held that "Job never existed and was never created... his story was a parable," while Rabbi Shmuel bar Naḥmani rebutted that the naming of the man and his city proves "such a man did indeed exist" (Babylonian Talmud, Bava Batra 15a). The same tradition could not even agree on <em>when</em> he lived — proposing the days of Moses, the Judges, the Babylonian exile, or the patriarch Jacob (Bava Batra 15a–15b) — or on whether he was a Jew or a righteous gentile (Bava Batra 15b).</p>
+<p>Latter-day Saint teaching resolves the historicity question through modern revelation. The seminary manual states that "both ancient scripture and modern revelation clarify that Job was a real person" (Lesson 107), pointing to the Lord's own words to Joseph Smith in Liberty Jail: "Thou art not yet as Job" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?lang=eng&id=p10#p10" target="_blank" data-ref="D&C 121:10">D&C 121:10</a>). Ezekiel names Job beside Noah and Daniel (<a href="https://www.blueletterbible.org/kjv/ezk/14/14/s_816014" target="_blank" data-ref="Ezekiel 14:14">Ezekiel 14:14, 20</a>), and James speaks of "the patience of Job" (<a href="https://www.blueletterbible.org/kjv/jas/5/11/s_1151011" target="_blank" data-ref="James 5:11">James 5:11</a>) — the Lord and His prophets speak of Job as a man, not a fable. (The <em>literary</em> question — how much of the poetry is stylized — is separate from the <em>historical</em> one; a real man's story can still be told in exalted verse.)</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>5. The Friends and the Theology They Defended</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Job's three friends are not villains; they are mourners who come "to mourn with him and to comfort him" (<a href="https://www.blueletterbible.org/kjv/job/2/11/s_438011" target="_blank" data-ref="Job 2:11">Job 2:11</a>), and for seven days they grieve in silence — the wisest thing they do. Their error begins when they open their mouths. They hold, as the Bible Project overview puts it, the confident logic of "the best of ancient Near Eastern thinking": strict retributive justice — the good are rewarded, the wicked are punished, without exception (BibleProject). From that machine one conclusion follows inescapably, as the Interpreter Foundation scholar Mack Stirling summarizes their reasoning: "if a person suffers, he or she must have sinned" (Mack C. Stirling, "Job: An LDS Reading," Interpreter Foundation).</p>
+<p>Job's whole struggle is a refusal to accept that equation about himself, because he knows it is false — and in the end God agrees with him, telling the friends, "ye have not spoken of me the thing that is right, as my servant Job hath" (<a href="https://www.blueletterbible.org/kjv/job/42/7/s_478007" target="_blank" data-ref="Job 42:7">Job 42:7</a>). The book is, among other things, a warning against a religion of tidy formulas that blames the sufferer. That is context worth carrying into every chapter this week.</p>
+<hr>
+<p><em>Next file: <a href="03_Key_Passages_Study.md" target="_blank">03_Key_Passages_Study.md</a></em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 3: WEEK 33: KEY PASSAGES STUDY -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">3. Week 33: Key Passages Study</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Passage 1: Job 1:20–22 — "The Lord Gave, and the Lord Hath Taken Away"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p>"Then Job arose, and rent his mantle, and shaved his head, and fell down upon the ground, and worshipped, And said, Naked came I out of my mother's womb, and naked shall I return thither: the Lord gave, and the Lord hath taken away; blessed be the name of the Lord. In all this Job sinned not, nor charged God foolishly." <a href="https://www.blueletterbible.org/kjv/job/1/20-22/s_437020" target="_blank" data-ref="Job 1:20-22">(1:20–22)</a></p>
+</blockquote>
+<h3>The Insight</h3>
+<p>In a single day Job loses his oxen, sheep, camels, servants, and all ten of his children. Notice what he does first: he does not pretend the loss is small — "he rent his mantle, and shaved his head," the full body-language of grief. Real faith does not require a stiff upper lip. But then, in the same motion, "he fell down upon the ground, and worshipped." Job's confession, "the Lord gave, and the Lord hath taken away," refuses two easy exits at once. He will not deny that God is somehow behind his life ("the Lord hath taken away"), and he will not curse God for it ("blessed be the name of the Lord"). He holds grief and worship together — and that is the posture the whole book will test and vindicate.</p>
+<h3>Latter-day Saint Connections</h3>
+<ul>
+<li><strong>President Dieter F. Uchtdorf, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2014/04/grateful-in-any-circumstances?lang=eng" target="_blank">Grateful in Any Circumstances</a>" (April 2014):</strong> "We can choose to be like Job, who seemed to have everything but then lost it all. Yet Job responded by saying, 'Naked came I out of my mother's womb, and naked shall I return... : the Lord gave, and the Lord hath taken away; blessed be the name of the Lord.'"</li>
+<li><strong>Elder Robert C. Oaks, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2006/10/the-power-of-patience?lang=eng" target="_blank">The Power of Patience</a>" (October 2006):</strong> "In the face of losing his vast empire, including his children, Job was able, because of his unfailing faith, to proclaim, 'The Lord gave, and the Lord hath taken away; blessed be the name of the Lord.' Through all of his tribulation and pain, 'Job sinned not, nor charged God foolishly' (<a href="https://www.blueletterbible.org/kjv/job/1/21-22/s_437021" target="_blank" data-ref="Job 1:21-22">Job 1:21–22</a>)."</li>
+<li><strong>Scripture:</strong> the same surrender is the sacrament of the grieving heart — "my God, my God, why hast thou forsaken me?" (<a href="https://www.blueletterbible.org/kjv/psa/22/1/s_500001" target="_blank" data-ref="Psalm 22:1">Psalm 22:1</a>; <a href="https://www.blueletterbible.org/kjv/mat/27/46/s_956046" target="_blank" data-ref="Matthew 27:46">Matthew 27:46</a>) is a cry God Himself would one day utter, so that no lament need be ashamed of itself.</li>
+</ul>
+<h3>Study Questions</h3>
+<ol>
+<li>Job both <em>grieves fully</em> and <em>worships</em> in the same moment. Which of the two comes harder for you in loss — and what would it look like to do both?</li>
+<li>"The Lord gave, and the Lord hath taken away." How do you hold the truth that God is over your life without concluding that every loss is a punishment from Him?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 2: Job 19:25–27 — "I Know That My Redeemer Liveth"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p>"For I know that my redeemer liveth, and that he shall stand at the latter day upon the earth: And though after my skin worms destroy this body, yet in my flesh shall I see God: Whom I shall see for myself, and mine eyes shall behold, and not another; though my reins be consumed within me." <a href="https://www.blueletterbible.org/kjv/job/19/25-27/s_455025" target="_blank" data-ref="Job 19:25-27">(19:25–27)</a></p>
+</blockquote>
+<h3>The Insight</h3>
+<p>This is the summit of the book, and it comes not from the calm Job of chapter 1 but from the ruined Job of the ash-heap, mid-argument, abandoned by his friends. The Hebrew word behind "redeemer" is <a href="https://www.blueletterbible.org/lexicon/h1352/kjv/wlc/0-1/" target="_blank" data-lexicon="defilement, defiling" data-strongs="H1352" data-translit="gō&#x27;el" data-original="גֹּאֶל" data-lang="hebrew" data-verse=""><em>go'el</em></a> — the <strong>kinsman-redeemer</strong>, the near relative whose duty was to buy back a family member out of debt or slavery, or to defend one who could not defend himself (see Word Studies). Job, with no earthly advocate left, reaches past them all to a living <a href="https://www.blueletterbible.org/lexicon/h1352/kjv/wlc/0-1/" target="_blank" data-lexicon="defilement, defiling" data-strongs="H1352" data-translit="gō&#x27;el" data-original="גֹּאֶל" data-lang="hebrew" data-verse=""><em>go'el</em></a> who "shall stand at the latter day upon the earth." And he reaches past death itself: "though after my skin worms destroy this body, yet in my flesh shall I see God." Whatever exactly Job understood, the words carry a hope of bodily resurrection and of <em>seeing God with his own eyes</em> — a hope no argument of his friends could give and no loss could take away.</p>
+<p>Interpreter Foundation scholar Mack Stirling notes that the Hebrew hints at even more — that "the Redeemer/Advocate will be God Himself" (Mack C. Stirling, "Job: An LDS Reading," Interpreter Foundation). The Redeemer Job longed for is the One whose empty tomb would answer his question forever.</p>
+<h3>Latter-day Saint Connections</h3>
+<ul>
+<li><strong>President Joseph Fielding Smith, "<a href="https://www.churchofjesuschrist.org/study/general-conference/1971/10/i-know-that-my-redeemer-liveth?lang=eng" target="_blank">I Know That My Redeemer Liveth</a>" (October 1971):</strong> "I feel to say with Job of old, whose knowledge came from the same source from which mine has come: 'For I know that my redeemer liveth, and that he shall stand at the latter day upon the earth,' and that 'in my flesh shall I see God.'"</li>
+<li><strong>President Gordon B. Hinckley, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2001/10/the-times-in-which-we-live?lang=eng" target="_blank">The Times in Which We Live</a>" (October 2001):</strong> "Job asked, 'If a man die, shall he live again?' (<a href="https://www.blueletterbible.org/kjv/job/14/14/s_450014" target="_blank" data-ref="Job 14:14">Job 14:14</a>). He replied: 'For I know that my redeemer liveth... yet in my flesh shall I see God.'"</li>
+<li><strong>President Henry B. Eyring, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2015/04/the-comforter?lang=eng" target="_blank">The Comforter</a>" (April 2015):</strong> "The Spirit's witness of the Atonement that came that night also strengthened Job to carry his load: 'For I know that my redeemer liveth... yet in my flesh shall I see God.'"</li>
+<li><strong>Scripture:</strong> "For now is Christ risen from the dead... For as in Adam all die, even so in Christ shall all be made alive" (<a href="https://www.blueletterbible.org/kjv/1co/15/20/s_1077020" target="_blank" data-ref="1 Corinthians 15:20">1 Corinthians 15:20, 22</a>). Job's hope became history at the empty tomb.</li>
+</ul>
+<h3>Study Questions</h3>
+<ol>
+<li>Job speaks his greatest testimony from his lowest point — not after the restoration, but in the middle of the ruin. What does it mean that faith like this is spoken <em>before</em> the rescue comes?</li>
+<li>A <a href="https://www.blueletterbible.org/lexicon/h1352/kjv/wlc/0-1/" target="_blank" data-lexicon="defilement, defiling" data-strongs="H1352" data-translit="gō&#x27;el" data-original="גֹּאֶל" data-lang="hebrew" data-verse=""><em>go'el</em></a> is a redeemer who steps in when you cannot save yourself. Where in your life do you need a kinsman-redeemer rather than a rescue you can engineer?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 3: Job 23:10 — "I Shall Come Forth as Gold"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p>"But he knoweth the way that I take: when he hath tried me, I shall come forth as gold. My foot hath held his steps, his way have I kept, and not declined." <a href="https://www.blueletterbible.org/kjv/job/23/10-11/s_459010" target="_blank" data-ref="Job 23:10-11">(23:10–11)</a></p>
+</blockquote>
+<h3>The Insight</h3>
+<p>This comes from a chapter of longing — Job wishes he could find God's courtroom and lay out his case: "Oh that I knew where I might find him!" <a href="https://www.blueletterbible.org/kjv/job/23/3/s_459003" target="_blank" data-ref="Job 23:3">(23:3)</a>. He feels God absent, unfindable: "I go forward, but he is not there" <a href="https://www.blueletterbible.org/kjv/job/23/8/s_459008" target="_blank" data-ref="Job 23:8">(23:8)</a>. And yet, in the middle of that felt absence, Job says something extraordinary about it: "<strong>he</strong> knoweth the way that I take." Even when Job cannot find God, God has not lost Job. And the trial is not random cruelty but a refining — the image is the goldsmith's crucible, where fire is not destruction but purification, burning away the dross to leave the precious metal. Job cannot yet see the purpose, but he trusts the <em>process</em> and the <em>refiner</em>: "when he hath tried me, I shall come forth as gold."</p>
+<h3>Latter-day Saint Connections</h3>
+<ul>
+<li><strong>President Howard W. Hunter, "<a href="https://www.churchofjesuschrist.org/study/general-conference/1980/04/god-will-have-a-tried-people?lang=eng" target="_blank">God Will Have a Tried People</a>" (April 1980):</strong> "The classic example of faithful endurance was the Old Testament prophet Job." Job "proclaimed his faith: '[God] knoweth the way that I take: when he hath tried me, I shall come forth as gold... His way have I kept, and not declined' (<a href="https://www.blueletterbible.org/kjv/job/23/10-11/s_459010" target="_blank" data-ref="Job 23:10-11">Job 23:10–11</a>)."</li>
+<li><strong>President Thomas S. Monson, "<a href="https://www.churchofjesuschrist.org/study/general-conference/1995/10/patience-a-heavenly-virtue?lang=eng" target="_blank">Patience, a Heavenly Virtue</a>" (October 1995):</strong> "Job personified patience." Monson calls his faith under trial "What faith, what courage, what trust."</li>
+<li><strong>Scripture:</strong> "all these things shall give thee experience, and shall be for thy good" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122?lang=eng&id=p7#p7" target="_blank" data-ref="D&C 122:7">D&C 122:7</a>) — the Liberty Jail promise that trials are refining, not merely punishing; and "the trial of your faith... might be found unto praise and honour and glory" (<a href="https://www.blueletterbible.org/kjv/1pe/1/7/s_1152007" target="_blank" data-ref="1 Peter 1:7">1 Peter 1:7</a>), which uses the very image of gold tried in fire.</li>
+</ul>
+<h3>Study Questions</h3>
+<ol>
+<li>Job trusts the Refiner even while he cannot find Him ("he is not there"... yet "he knoweth the way that I take"). How do you hold onto God's knowledge of you when His presence feels absent?</li>
+<li>The crucible refines <em>by</em> fire, not around it. What "dross" have your hardest trials actually burned away?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 4: Job 38:1–7 — The Voice from the Whirlwind</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p>"Then the Lord answered Job out of the whirlwind, and said... Where wast thou when I laid the foundations of the earth? declare, if thou hast understanding... When the morning stars sang together, and all the sons of God shouted for joy?" <a href="https://www.blueletterbible.org/kjv/job/38/1/s_474001" target="_blank" data-ref="Job 38:1">(38:1, 4, 7)</a></p>
+</blockquote>
+<h3>The Insight</h3>
+<p>After thirty-five chapters of human argument, God finally speaks — and He does not explain. He asks questions: dozens of them, sweeping across the foundations of the earth, the sea, the stars, the storehouses of snow, the wild animals no one can tame. It can sound at first like God changing the subject. But it is really God changing the <em>scale</em>. Job has been staring at the small, sealed room of his own suffering; God flings open the windows onto a universe of unfathomable wisdom and beauty and asks, in effect, <em>do you trust the One who runs all of this?</em> The turning point is not an answer but an enlargement — Job's question was never going to be resolved by information; it is dissolved by encounter.</p>
+<p>And there is a hidden gift in verse 7. "When the morning stars sang together, and all the sons of God shouted for joy" — before the earth was founded, there was a joyful assembly. Jonn Claybaugh's Interpreter study aid reads it as the premortal council: "We all 'shouted for joy' at the prospect of mortality, when presented to us in the council in heaven <a href="https://www.blueletterbible.org/kjv/job/38/7/s_474007" target="_blank" data-ref="Job 38:7">(38:7)</a>." The mortal life that now feels unbearable to Job is the very estate the "sons of God" once shouted to receive.</p>
+<h3>Latter-day Saint Connections</h3>
+<ul>
+<li><strong>President Gordon B. Hinckley, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2004/04/the-dawning-of-a-brighter-day?lang=eng" target="_blank">The Dawning of a Brighter Day</a>" (April 2004):</strong> "the Lord spoke to Job out of the whirlwind and said: 'Where wast thou when I laid the foundations of the earth?... When the morning stars sang together, and all the sons of God shouted for joy?' (<a href="https://www.blueletterbible.org/kjv/job/38/4/s_474004" target="_blank" data-ref="Job 38:4">Job 38:4, 7</a>)."</li>
+<li><strong>Scripture:</strong> the premortal joy of <a href="https://www.blueletterbible.org/kjv/job/38/7/s_474007" target="_blank" data-ref="Job 38:7">Job 38:7</a> is our doctrine — "Now the Lord had shown unto me, Abraham, the intelligences that were organized before the world was" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/3?lang=eng&id=p22#p22" target="_blank" data-ref="Abraham 3:22">Abraham 3:22</a>); and God's answer-by-enlargement echoes His word to another sufferer: "The Son of Man hath descended below them all. Art thou greater than he?" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122?lang=eng&id=p8#p8" target="_blank" data-ref="D&C 122:8">D&C 122:8</a>).</li>
+</ul>
+<h3>Study Questions</h3>
+<ol>
+<li>God answers Job's "why" with a tour of creation instead of an explanation. Why might an <em>encounter</em> with God do for a sufferer what an <em>answer</em> could not?</li>
+<li><a href="https://www.blueletterbible.org/kjv/job/38/7/s_474007" target="_blank" data-ref="Job 38:7">Job 38:7</a> remembers a time when we "shouted for joy" at the prospect of this life. How does remembering the premortal "yes" change the way you carry mortality's hardest parts?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 5: Job 42:1–6, 10 — "Now Mine Eye Seeth Thee"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p>"I have heard of thee by the hearing of the ear: but now mine eye seeth thee. Wherefore I abhor myself, and repent in dust and ashes." <a href="https://www.blueletterbible.org/kjv/job/42/5-6/s_478005" target="_blank" data-ref="Job 42:5-6">(42:5–6)</a></p>
+<p>"And the Lord turned the captivity of Job, when he prayed for his friends: also the Lord gave Job twice as much as he had before." <a href="https://www.blueletterbible.org/kjv/job/42/10/s_478010" target="_blank" data-ref="Job 42:10">(42:10)</a></p>
+</blockquote>
+<h3>The Insight</h3>
+<p>Job's final words are not an argument won but a Person met: "I have heard of thee by the hearing of the ear: but now mine eye seeth thee." His faith was real before; now it is <em>first-hand</em>. The old, secondhand religion of report has become sight. His "I abhor myself, and repent in dust and ashes" is not self-hatred — the seminary manual is careful here: "Job did not hate himself. Rather, he humbly acknowledged his weaknesses, sins, and limitations before the Lord" (<em>Old Testament Seminary Teacher Manual</em>, Lesson 109). It is the natural smallness a soul feels in the presence of God, the same "dust and ashes" with which Abraham once spoke to the Lord (<a href="https://www.blueletterbible.org/kjv/gen/18/27/s_18027" target="_blank" data-ref="Genesis 18:27">Genesis 18:27</a>).</p>
+<p>Then comes a detail easy to rush past: Job's restoration begins "<strong>when he prayed for his friends</strong>" <a href="https://www.blueletterbible.org/kjv/gen/42/10/s_42010" target="_blank" data-ref="Genesis 42:10">(42:10)</a> — the very men who had wounded him with their accusations. The turning of Job's captivity is bound up with his forgiveness of them. And the doubling that follows is not a wage. Mack Stirling reads the epilogue as "a this-worldly analogue of eternal life" (Stirling, Interpreter Foundation) — a picture, in cattle and children and long life, of the far greater restoration God gives those who endure.</p>
+<h3>Latter-day Saint Connections</h3>
+<ul>
+<li><strong>President Henry B. Eyring, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2015/04/the-comforter?lang=eng" target="_blank">The Comforter</a>" (April 2015):</strong> "The story of Job ends with this miracle: 'So the Lord blessed the latter end of Job more than his beginning... So Job died, being old and full of days.'"</li>
+<li><strong>Seminary principle (Lesson 109):</strong> "The Lord wants us to pray for those who misjudge us" (<a href="https://www.blueletterbible.org/kjv/job/42/7-9/s_478007" target="_blank" data-ref="Job 42:7-9">Job 42:7–9</a>); and "If we remain faithful to the Lord in our trials, then He will bless us abundantly according to His will" (<a href="https://www.blueletterbible.org/kjv/job/42/10-17/s_478010" target="_blank" data-ref="Job 42:10-17">Job 42:10–17</a>).</li>
+<li><strong>Scripture:</strong> "pray for them which despitefully use you" (<a href="https://www.blueletterbible.org/kjv/mat/5/44/s_934044" target="_blank" data-ref="Matthew 5:44">Matthew 5:44</a>) — Job lives the Sermon on the Mount before it is preached; and "eye hath not seen, nor ear heard... the things which God hath prepared for them that love him" (<a href="https://www.blueletterbible.org/kjv/1co/2/9/s_1064009" target="_blank" data-ref="1 Corinthians 2:9">1 Corinthians 2:9</a>), the restoration Job's doubled fortune only faintly pictures.</li>
+</ul>
+<h3>Study Questions</h3>
+<ol>
+<li>Job moves from "the hearing of the ear" to "mine eye seeth thee." What is the difference between a faith you have been <em>told</em> and a faith you have <em>met</em> — and how does suffering sometimes turn one into the other?</li>
+<li>Job's healing begins as he <em>prays for the friends who hurt him</em>. Is there someone whose misjudgment of you God may be asking you to pray for — as part of your own restoration?</li>
+</ol>
+<hr>
+<p><em>Next file: <a href="04_Word_Studies.md" target="_blank">04_Word_Studies.md</a></em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 4: WEEK 33: WORD STUDIES -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">4. Week 33: Word Studies</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>1. גֹּאֵל — <em>gā'al</em> / <em>gō'ēl</em> — "Redeemer, Kinsman-Redeemer" (Job 19:25)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Strong's H1350</strong> — "to redeem, act as kinsman-redeemer, avenge, ransom, do the part of a kinsman" (Blue Letter Bible). The <a href="https://www.blueletterbible.org/lexicon/h1352/kjv/wlc/0-1/" target="_blank" data-lexicon="defilement, defiling" data-strongs="H1352" data-translit="gō&#x27;el" data-original="גֹּאֶל" data-lang="hebrew" data-verse=""><em>gō'ēl</em></a> was a concrete figure in Israelite law: the nearest relative who bought back a family member fallen into debt or slavery, redeemed lost family land, or defended one who could not defend himself. When Job cries "I know that my redeemer liveth" <a href="https://www.blueletterbible.org/kjv/job/19/25/s_455025" target="_blank" data-ref="Job 19:25">(19:25)</a>, he reaches for exactly this figure — an Advocate with the <em>right</em> and the <em>will</em> to step in when Job has no one left.</p>
+<table class="info-table">
+<tr><th>Lane</th><th>Word</th><th>Sense at <a href="https://www.blueletterbible.org/kjv/job/19/25/s_455025" target="_blank" data-ref="Job 19:25">Job 19:25</a></th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h1350/kjv/wlc/0-1/" target="_blank" data-lexicon="to redeem, act as kinsman-redeemer, avenge, revenge, ransom, do the part of a kinsman" data-strongs="H1350" data-translit="gā&#x27;al" data-original="גָּאַל" data-lang="hebrew" data-verse="">גֹּאֵל</a> <a href="https://www.blueletterbible.org/lexicon/h1352/kjv/wlc/0-1/" target="_blank" data-lexicon="defilement, defiling" data-strongs="H1352" data-translit="gō&#x27;el" data-original="גֹּאֶל" data-lang="hebrew" data-verse=""><em>gō'ēl</em></a> (H1350)</td><td>kinsman-redeemer; the near relative who buys back / defends</td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td>ὁ ἐκλύειν <a href="https://www.blueletterbible.org/lexicon/g3165/kjv/tr/0-1/" target="_blank" data-lexicon="I, me, my, etc." data-strongs="G3165" data-translit="me" data-original="με" data-lang="greek" data-verse="">με</a> μέλλων / ἀέναός</td><td>"the one who is about to <em>deliver</em> me… he is <em>everlasting</em>"</td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><em>redemptor meus vivit</em></td><td>"my <em>redeemer</em> lives"</td></tr>
+<tr><td><strong>English</strong></td><td>redeemer</td><td>via Latin <a href="https://www.blueletterbible.org/lexicon/h1352/kjv/wlc/0-1/" target="_blank" data-lexicon="defilement, defiling" data-strongs="H1352" data-translit="gō&#x27;el" data-original="גֹּאֶל" data-lang="hebrew" data-verse=""><em>redimere</em></a>, "to buy back"</td></tr>
+</table>
+<p><strong>Divergence note.</strong> The Latin keeps the legal, personal word — <a href="https://www.blueletterbible.org/lexicon/h1352/kjv/wlc/0-1/" target="_blank" data-lexicon="defilement, defiling" data-strongs="H1352" data-translit="gō&#x27;el" data-original="גֹּאֶל" data-lang="hebrew" data-verse=""><em>redemptor</em></a>, "my redeemer" — the reading that carried into the KJV and, through Handel's <em>Messiah</em>, into the ear of the whole English-speaking world. The Greek LXX heard it differently: not a kinsman-redeemer but "the one who is about to <em>deliver</em> me," and it added a striking word — <em>ἀέναός</em>, "ever-flowing, everlasting." Where the Hebrew and Latin emphasize <em>who</em> the Redeemer is (a kinsman), the Greek emphasizes <em>what</em> He is (eternal). Both are true of the One Job foresaw. <strong>Cross-reference:</strong> the <a href="https://www.blueletterbible.org/lexicon/h1352/kjv/wlc/0-1/" target="_blank" data-lexicon="defilement, defiling" data-strongs="H1352" data-translit="gō&#x27;el" data-original="גֹּאֶל" data-lang="hebrew" data-verse=""><em>gō'ēl</em></a> in action is the whole plot of Ruth — "the LORD… hath not left thee this day without a kinsman [<a href="https://www.blueletterbible.org/lexicon/h1352/kjv/wlc/0-1/" target="_blank" data-lexicon="defilement, defiling" data-strongs="H1352" data-translit="gō&#x27;el" data-original="גֹּאֶל" data-lang="hebrew" data-verse=""><em>gō'ēl</em></a>]" (<a href="https://www.blueletterbible.org/kjv/rth/4/14/s_236014" target="_blank" data-ref="Ruth 4:14">Ruth 4:14</a>); and the title becomes the Lord's own in Isaiah, "thy redeemer, the Holy One of Israel" (<a href="https://www.blueletterbible.org/kjv/isa/41/14/s_720014" target="_blank" data-ref="Isaiah 41:14">Isaiah 41:14</a>).</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>2. שָׂטָן — <em>śāṭān</em> — "Adversary, Accuser" (Job 1:6)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Strong's H7854</strong> — "adversary, one who withstands; adversary (personal or national); superhuman adversary; Satan" (Blue Letter Bible). In <a href="https://www.blueletterbible.org/kjv/job/1/1/s_437001" target="_blank" data-ref="Job 1">Job 1–2</a> the Hebrew almost always carries the definite article — <em>ha-śāṭān</em>, "<strong>the</strong> adversary" — marking a <em>role</em> in the heavenly court (the prosecutor) more than a personal name. The accuser's job is to bring the case against Job: does he "fear God for nought" <a href="https://www.blueletterbible.org/kjv/job/1/9/s_437009" target="_blank" data-ref="Job 1:9">(1:9)</a>?</p>
+<table class="info-table">
+<tr><th>Lane</th><th>Word</th><th>Sense at <a href="https://www.blueletterbible.org/kjv/job/1/6/s_437006" target="_blank" data-ref="Job 1:6">Job 1:6</a></th></tr>
+<tr><td><strong>Hebrew</strong></td><td>הַשָּׂטָן <em>ha-śāṭān</em> (H7854)</td><td>"the adversary / the accuser" (with the article — a title)</td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td>ὁ <a href="https://www.blueletterbible.org/lexicon/g1228/kjv/tr/0-1/" target="_blank" data-lexicon="prone to slander, slanderous, accusing falsely a calumniator, false accuser, slanderer, metaph. applied to a man who,..." data-strongs="G1228" data-translit="diabolos" data-original="διάβολος" data-lang="greek" data-verse="">διάβολος</a> <em>ho diabolos</em></td><td>"the slanderer, the accuser" → English "devil"</td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g4566/kjv/tr/0-1/" target="_blank" data-lexicon="adversary (one who opposes another in purpose or act), the name given to the prince of evil spirits, the inveterate a..." data-strongs="G4566" data-translit="satan" data-original="Σατάν" data-lang="greek" data-verse=""><em>Satan</em></a></td><td>transliterated — the title becomes a name</td></tr>
+<tr><td><strong>English</strong></td><td>adversary, accuser, Satan</td><td></td></tr>
+</table>
+<p><strong>Divergence note.</strong> Watch a title harden into a name across the lanes. Hebrew <em>ha-śāṭān</em> is "the accuser," an office. The Greek translates the <em>meaning</em> — <em>ho diabolos</em>, "the slanderer" — which is exactly where our word "devil" comes from. The Latin does the opposite: it stops translating and simply transliterates, "Satan," so that by the time the word reaches English it functions as a proper name. <strong>Note for readers:</strong> the Latter-day Saint seminary manual cautions that this heavenly-court scene shows God has "power over Satan and has no need to bargain with him" (<em>Old Testament Seminary Teacher Manual</em>, Lesson 107) — the accuser acts only by permission. (Rabbinic tradition pressed the identity further; see <a href="05_Jewish_Perspective.md" target="_blank">Jewish Perspective</a> on Reish Lakish's reading that "Satan, the evil inclination, and the Angel of Death are one.")</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>3. תָּם — <em>tām</em> — "Blameless, Whole, Single-Hearted" (Job 1:1)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Strong's H8535</strong> — "perfect, complete; sound, wholesome; one who lacks nothing" (Blue Letter Bible). The KJV calls Job "perfect" <a href="https://www.blueletterbible.org/kjv/job/1/1/s_437001" target="_blank" data-ref="Job 1:1">(1:1)</a>, and that English word misleads modern ears. <a href="https://www.blueletterbible.org/lexicon/h2939/kjv/wlc/0-1/" target="_blank" data-lexicon="(P&#x27;al) to feed, cause to eat" data-strongs="H2939" data-translit="ṭᵊʿam" data-original="טְעַם (Aramaic)" data-lang="hebrew" data-verse=""><em>Tām</em></a> does not mean <em>sinless</em> or <em>flawless</em>; it means <em>whole, complete, of one piece</em> — undivided in heart. The seminary manual makes the same correction: "perfect" here "does not mean Job was without sin. Rather it implies that Job faithfully kept the commandments of God" (Lesson 107).</p>
+<table class="info-table">
+<tr><th>Lane</th><th>Word</th><th>Sense at <a href="https://www.blueletterbible.org/kjv/job/1/1/s_437001" target="_blank" data-ref="Job 1:1">Job 1:1</a></th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h8535/kjv/wlc/0-1/" target="_blank" data-lexicon="perfect, completecomplete, perfectone who lacks nothing in physical strength, beauty, etcsound, wholesomean ordinary,..." data-strongs="H8535" data-translit="tām" data-original="תָּם" data-lang="hebrew" data-verse="">תָּם</a> <a href="https://www.blueletterbible.org/lexicon/h2939/kjv/wlc/0-1/" target="_blank" data-lexicon="(P&#x27;al) to feed, cause to eat" data-strongs="H2939" data-translit="ṭᵊʿam" data-original="טְעַם (Aramaic)" data-lang="hebrew" data-verse=""><em>tām</em></a> (H8535)</td><td>whole, complete, single-hearted (not "sinless")</td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g273/kjv/tr/0-1/" target="_blank" data-lexicon="blameless, deserving no censure, free from fault or defect" data-strongs="G273" data-translit="amemptos" data-original="ἄμεμπτος" data-lang="greek" data-verse="">ἄμεμπτος</a> <a href="https://www.blueletterbible.org/lexicon/g273/kjv/tr/0-1/" target="_blank" data-lexicon="blameless, deserving no censure, free from fault or defect" data-strongs="G273" data-translit="amemptos" data-original="ἄμεμπτος" data-lang="greek" data-verse=""><em>amemptos</em></a></td><td>"blameless, without fault to be charged"</td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><em>simplex</em> (et rectus)</td><td>"simple, single, undivided" (and "upright")</td></tr>
+<tr><td><strong>English</strong></td><td>perfect (KJV); better: blameless, whole</td><td></td></tr>
+</table>
+<p><strong>Divergence note.</strong> Both ancient translations resist the "flawless" misreading in their own way. The Greek <a href="https://www.blueletterbible.org/lexicon/g273/kjv/tr/0-1/" target="_blank" data-lexicon="blameless, deserving no censure, free from fault or defect" data-strongs="G273" data-translit="amemptos" data-original="ἄμεμπτος" data-lang="greek" data-verse=""><em>amemptos</em></a> means "blameless" — no charge can be made to stick — which is precisely the point the <em>accuser</em> fails to prove. The Latin <em>simplex</em> is even more revealing: not "perfect" but <em>simple, single, undivided</em> — a heart not split between God and something else. <strong>Cross-reference:</strong> the same word describes the young Jacob — "Jacob was a plain man [<em>ish tām</em>], dwelling in tents" (<a href="https://www.blueletterbible.org/kjv/gen/25/27/s_25027" target="_blank" data-ref="Genesis 25:27">Genesis 25:27</a>), where KJV "plain" translates the very word rendered "perfect" of Job. Job's integrity is wholeness of heart, and it is exactly that wholeness the book puts to the test.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>4. נָחַם — <em>nāḥam</em> — "Repent / Be Comforted / Console" (Job 42:6)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Strong's H5162</strong> — "to be sorry, console oneself, repent, regret, comfort, be comforted" (Blue Letter Bible). This one word holds a remarkable range — from <em>repent</em> to <em>be consoled</em> — and <a href="https://www.blueletterbible.org/kjv/job/42/6/s_478006" target="_blank" data-ref="Job 42:6">Job 42:6</a> sits right on the seam: "Wherefore I abhor myself, and repent [<a href="https://www.blueletterbible.org/lexicon/h5098/kjv/wlc/0-1/" target="_blank" data-lexicon="to growl, groan(Qal)to growl (of lion)to groan (of sufferer)" data-strongs="H5098" data-translit="nāham" data-original="נָהַם" data-lang="hebrew" data-verse=""><em>nāḥam</em></a>] in dust and ashes." Is Job <em>repenting</em> of sin, or <em>being comforted</em> / <em>consoling himself</em> now that he has seen God? The Hebrew genuinely allows both, and the ancient translators split.</p>
+<table class="info-table">
+<tr><th>Lane</th><th>Word</th><th>Sense at <a href="https://www.blueletterbible.org/kjv/job/42/6/s_478006" target="_blank" data-ref="Job 42:6">Job 42:6</a></th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h5162/kjv/wlc/0-1/" target="_blank" data-lexicon="to be sorry, console oneself, repent, regret, comfort, be comforted(Niphal)to be sorry, be moved to pity, have compas..." data-strongs="H5162" data-translit="nāḥam" data-original="נָחַם" data-lang="hebrew" data-verse="">נָחַם</a> <a href="https://www.blueletterbible.org/lexicon/h5098/kjv/wlc/0-1/" target="_blank" data-lexicon="to growl, groan(Qal)to growl (of lion)to groan (of sufferer)" data-strongs="H5098" data-translit="nāham" data-original="נָהַם" data-lang="hebrew" data-verse=""><em>nāḥam</em></a> (H5162)</td><td>to repent / regret <strong>or</strong> to be comforted, console oneself</td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td>ἐφαύλισα… ἐτάκην / γῆν καὶ σποδόν</td><td>"I counted myself vile… I wasted away; I regard myself as earth and ashes"</td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><em>ago pœnitentiam in favilla et cinere</em></td><td>"I do <em>penance</em> in ember and ashes"</td></tr>
+<tr><td><strong>English</strong></td><td>repent (KJV)</td><td></td></tr>
+</table>
+<p><strong>Divergence note.</strong> Here the translators had to choose, and they leaned toward humility-before-God rather than confession-of-crime. The Latin picks the penitential note — <em>ago poenitentiam</em>, "I do penance" — which is why the KJV reads "repent." But the Greek does not use a repentance word at all; it says Job "counted himself vile" and "wasted away," regarding himself as "earth and ashes." Neither ancient version reads this as Job admitting the friends were right that he had sinned to deserve his suffering — the seminary manual agrees: "Job did not hate himself. Rather, he humbly acknowledged his weaknesses… and limitations before the Lord" (Lesson 109). The word that ends Job's speech is the language not of a criminal caught, but of a creature who has finally <em>seen</em> his Creator — the same "dust and ashes" with which Abraham once dared to speak to God (<a href="https://www.blueletterbible.org/kjv/gen/18/27/s_18027" target="_blank" data-ref="Genesis 18:27">Genesis 18:27</a>).</p>
+<hr>
+<p><em>Next file: <a href="05_Jewish_Perspective.md" target="_blank">05_Jewish_Perspective.md</a></em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 5: WEEK 33: JEWISH PERSPECTIVE -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">5. Week 33: Jewish Perspective</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>1. Did Job Ever Exist?</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The rabbis openly debated whether Job was history or a teaching-parable (<a href="https://www.blueletterbible.org/lexicon/h4910/kjv/wlc/0-1/" target="_blank" data-lexicon="to rule, have dominion, reign (Qal) to rule, have dominion (Hiphil) to cause to rule to exercise dominion" data-strongs="H4910" data-translit="māšal" data-original="מַשְׂכֹּרֶת" data-lang="hebrew" data-verse=""><em>mashal</em></a>):</p>
+<blockquote>
+<p>"The Gemara relates that one of the Sages sat before Rabbi Shmuel bar Naḥmani and he sat and said: Job never existed and was never created; there was never such a person as Job. Rather, his story was a parable. Rabbi Shmuel bar Naḥmani said to him: In rebuttal to you, the verse states: 'There was a man in the Land of Utz whose name was Job' (<a href="https://www.blueletterbible.org/kjv/job/1/1/s_437001" target="_blank" data-ref="Job 1:1">Job 1:1</a>), which indicates that such a man did indeed exist."</p>
+<p>— Babylonian Talmud, <a href="https://www.sefaria.org/Bava_Batra.15a" target="_blank">Bava Batra 15a</a> (Sefaria, CC BY-NC)</p>
+</blockquote>
+<p>They could not even agree on <em>when</em> he lived — one tradition attributes the very authorship of the book to Moses ("Moses wrote his own book, and the portion of Balaam, and the book of Job," Bava Batra 14b), while others placed Job in the days of the Judges, of Sheba, of the Babylonian exile, or of Jacob (Bava Batra 15a–15b). The uncertainty is itself a kind of witness: Job is the everyman-sufferer, hard to pin to a single century because his story belongs to every one.</p>
+<h3>Latter-day Saint Connection</h3>
+<p>The Restoration settles for Latter-day Saints what the Talmud left open. To Joseph Smith in Liberty Jail the Lord spoke of Job as a real man — "Thou art not yet as Job" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?lang=eng&id=p10#p10" target="_blank" data-ref="D&C 121:10">D&C 121:10</a>) — and Ezekiel names him beside Noah and Daniel (<a href="https://www.blueletterbible.org/kjv/ezk/14/14/s_816014" target="_blank" data-ref="Ezekiel 14:14">Ezekiel 14:14</a>). Yet the rabbis' instinct is not wrong that Job is <em>also</em> universal: a real man whose story God preserved precisely because it speaks for all who suffer.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>2. Job and Abraham — Serving God from Love</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The deepest rabbinic praise of Job is that he served God not from fear of punishment but from love — and the proof-text is one of the reading's boldest lines:</p>
+<blockquote>
+<p>"On that same day Rabbi Yehoshua ben Hyrcanus taught that Job served the Holy One, Blessed be He, only out of love, as it is stated: 'Though He will slay me, still I will trust in Him' (<a href="https://www.blueletterbible.org/kjv/job/13/15/s_449015" target="_blank" data-ref="Job 13:15">Job 13:15</a>)."</p>
+<p>— Babylonian Talmud, <a href="https://www.sefaria.org/Sotah.31a" target="_blank">Sotah 31a</a> (Sefaria, CC BY-NC)</p>
+</blockquote>
+<p>The same passage links Job to Abraham by a shared phrase — both are called "God-fearing," and the rabbis read both as fearing God <em>out of love</em>, since (they teach) love outlasts fear: the one who serves from love earns merit that "endure[s] for two thousand generations" against one thousand for fear (Sotah 31a). In the Bava Batra discussion Rabbi Yoḥanan even ranks Job's praise <em>above</em> Abraham's, because Job both "fears God" and "turns away from evil" (Bava Batra 15b) — though a later voice reverses the ranking (16a). The debate honors Job: he is set beside the father of the faithful and not found wanting.</p>
+<h3>Latter-day Saint Connection</h3>
+<p>"Though he slay me, yet will I trust in him" (<a href="https://www.blueletterbible.org/kjv/job/13/15/s_449015" target="_blank" data-ref="Job 13:15">Job 13:15</a>) is the anthem of love-based faith — obedience that does not depend on the outcome. President James E. Faust quoted it exactly: "Said he, speaking of the Lord, 'Though he slay me, yet will I trust in him'" ("<a href="https://www.churchofjesuschrist.org/study/general-conference/2004/10/where-do-i-make-my-stand?lang=eng" target="_blank">Where Do I Make My Stand?</a>," October 2004). It is the same undivided heart the Savior asks for — to love God "with all thy heart" (<a href="https://www.blueletterbible.org/kjv/mat/22/37/s_951037" target="_blank" data-ref="Matthew 22:37">Matthew 22:37</a>), not for what He gives but for who He is.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>3. The Accuser in the Heavenly Court</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The rabbis read <em>ha-satan</em> of <a href="https://www.blueletterbible.org/kjv/job/1/1/s_437001" target="_blank" data-ref="Job 1">Job 1–2</a> with startling boldness. In one famous line, Reish Lakish collapses three figures into one:</p>
+<blockquote>
+<p>"Reish Lakish says: Satan, the evil inclination, and the Angel of Death are one, that is, they are three aspects of the same essence. He is the Satan who seduces people and then accuses them…"</p>
+<p>— Babylonian Talmud, <a href="https://www.sefaria.org/Bava_Batra.16a" target="_blank">Bava Batra 16a</a> (Sefaria, CC BY-NC)</p>
+</blockquote>
+<p>The accuser's constraint — to strike Job but preserve his life — was, another sage taught, its own torment, "like… a master [who] said to him: Break the barrel but save its wine" (Bava Batra 16a). And in a surprising turn, Rabbi Levi proposed that the accuser acted "with intent that was for the sake of Heaven," to defend the honor of Abraham's love (16a). The rabbis refuse a simple cartoon devil; the adversary in Job is a figure of terrible complexity, always operating within the bounds God sets.</p>
+<h3>Latter-day Saint Connection</h3>
+<p>The rabbinic instinct — that the accuser acts only within limits — matches the Latter-day Saint reading exactly: "the Lord… has power over Satan and has no need to bargain with him" (<em>Old Testament Seminary Teacher Manual</em>, Lesson 107). The adversary "which accused them before our God day and night" (<a href="https://www.blueletterbible.org/kjv/rev/12/10/s_1179010" target="_blank" data-ref="Revelation 12:10">Revelation 12:10</a>) is real, but he is on a leash; nothing touches the faithful except by permission and for a purpose.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>4. Job's Boldest Words — and God's Mercy Toward Them</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The rabbis did not soften Job's complaints. They noticed that "Job sought to exempt the whole world from judgment" (Bava Batra 16a) and even that in one verse "Job denied the resurrection of the dead" (16a, reading <a href="https://www.blueletterbible.org/kjv/job/7/9/s_443009" target="_blank" data-ref="Job 7:9">Job 7:9</a>). And yet they reached one of the most pastoral conclusions in all the Talmud:</p>
+<blockquote>
+<p>"Rava said: From here it may be inferred that a person is not held responsible for what he says when he is in distress. Although Job uttered certain words that were wrong and inappropriate, he was not punished for them because he said them at a time of pain and hardship."</p>
+<p>— Babylonian Talmud, <a href="https://www.sefaria.org/Bava_Batra.16b" target="_blank">Bava Batra 16b</a> (Sefaria, CC BY-NC)</p>
+</blockquote>
+<p><em>(A note on honesty between traditions: the rabbis read one of Job's laments as denying resurrection — the very hope Latter-day Saints hear in <a href="https://www.blueletterbible.org/kjv/job/19/25/s_455025" target="_blank" data-ref="Job 19:25">Job 19:25</a>, "I know that my redeemer liveth." These are different readings of a suffering man's words across a long book, and it is worth letting the difference stand rather than flattening it. What both traditions agree on is more striking: God did not condemn Job for his anguished speech.)</em></p>
+<h3>Latter-day Saint Connection</h3>
+<p>"A person is not held responsible for what he says when he is in distress" is grace in a single sentence — and it is God's own verdict, for He tells the friends that Job "hath spoken of me the thing that is right" (<a href="https://www.blueletterbible.org/kjv/job/42/7/s_478007" target="_blank" data-ref="Job 42:7">Job 42:7</a>). The Lord who "descended below them all" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122?lang=eng&id=p8#p8" target="_blank" data-ref="D&C 122:8">D&C 122:8</a>) is not scandalized by the honest cry of the afflicted; the Psalms are full of such cries, and so was Gethsemane. Job gives permission to bring God our grief unpolished.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>5. "Either a Friend Like the Friends of Job, or Death"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>For all their bad theology, Job's three friends earned a rabbinic proverb about loyalty — because they came at all, from far away, the moment they heard:</p>
+<blockquote>
+<p>"There were three hundred parasangs between each and every one of them… Rava said that this closeness between Job and his friends explains the adage that people say: Either a friend like the friends of Job or death."</p>
+<p>— Babylonian Talmud, <a href="https://www.sefaria.org/Bava_Batra.16b" target="_blank">Bava Batra 16b</a> (Sefaria, CC BY-NC)</p>
+</blockquote>
+<p>It is a generous reading of men the book mostly faults. They crossed great distances to "mourn with him and to comfort him" (<a href="https://www.blueletterbible.org/kjv/job/2/11/s_438011" target="_blank" data-ref="Job 2:11">Job 2:11</a>), and they sat with him seven days in silence before they ruined it with argument. The tradition holds both truths: their presence was a treasure; their explanations were a wound.</p>
+<h3>Latter-day Saint Connection</h3>
+<p>The friends are a mirror for every would-be comforter. They kept the covenant to "mourn with those that mourn" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng&id=p9#p9" target="_blank" data-ref="Mosiah 18:9">Mosiah 18:9</a>) — until they broke it by trying to <em>explain</em> the mourning away. The lesson for ministering is the friends' first week, not their speeches: to sit with the suffering, "weep with them that weep" (<a href="https://www.blueletterbible.org/kjv/rom/12/15/s_1058015" target="_blank" data-ref="Romans 12:15">Romans 12:15</a>), and resist the urge to justify God with a tidy reason the sufferer never asked for.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>6. Restoration — Doubled in Beauty</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The epilogue doubles everything Job lost — except his children, who are only <em>replaced</em> in number (seven sons, three daughters again). The rabbis noticed, and gave a tender answer:</p>
+<blockquote>
+<p>"for what reason were the number of Job's daughters not doubled…? Rabbi Yoḥanan said to him: Granted, the numbers of Job's daughters were not doubled in name… but they were doubled in beauty."</p>
+<p>— Babylonian Talmud, <a href="https://www.sefaria.org/Bava_Batra.16b" target="_blank">Bava Batra 16b</a> (Sefaria, CC BY-NC)</p>
+</blockquote>
+<p>The three daughters' very names are read as marks of that beauty — Jemimah "similar to the day," Keziah whose "scent wafted like the cassia tree," Keren-happuch like precious "garden saffron" (Bava Batra 16b). It is a small, humane grace-note: the rabbis will not let the lost children be merely a ledger entry balanced. Something irreplaceable is honored even in a story of restoration.</p>
+<h3>Latter-day Saint Connection</h3>
+<p>The rabbis' care about what <em>cannot</em> simply be doubled touches the deepest Latter-day Saint hope: that the restoration God promises is not a replacement of what we lost but a redemption of it. "The Lord compensates the faithful for every loss" (Joseph B. Wirthlin, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2008/10/come-what-may-and-love-it?lang=eng" target="_blank">Come What May, and Love It</a>," October 2008) — and the sealing power promises that lost family bonds are not merely swapped for new ones but restored, "the same sociality which exists among us" continued and glorified (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/130?lang=eng&id=p2#p2" target="_blank" data-ref="D&C 130:2">D&C 130:2</a>).</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Source Table</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Source</th><th>Citation</th><th>Link</th></tr>
+<tr><td>Babylonian Talmud, Bava Batra 14b</td><td>Moses wrote the book of Job</td><td><a href="https://www.sefaria.org/Bava_Batra.14b" target="_blank">Sefaria</a></td></tr>
+<tr><td>Babylonian Talmud, Bava Batra 15a</td><td>Job: history vs. parable; the dating debate</td><td><a href="https://www.sefaria.org/Bava_Batra.15a" target="_blank">Sefaria</a></td></tr>
+<tr><td>Babylonian Talmud, Bava Batra 15b</td><td>Job vs. Abraham; datings; gentile-vs-Jewish Job</td><td><a href="https://www.sefaria.org/Bava_Batra.15b" target="_blank">Sefaria</a></td></tr>
+<tr><td>Babylonian Talmud, Bava Batra 16a</td><td>Reish Lakish (Satan = evil inclination = Angel of Death); "break the barrel"; Job's complaints</td><td><a href="https://www.sefaria.org/Bava_Batra.16a" target="_blank">Sefaria</a></td></tr>
+<tr><td>Babylonian Talmud, Bava Batra 16b</td><td>"not responsible… in distress"; friends of Job; daughters doubled in beauty</td><td><a href="https://www.sefaria.org/Bava_Batra.16b" target="_blank">Sefaria</a></td></tr>
+<tr><td>Babylonian Talmud, Sotah 31a</td><td>Job served God out of love (<a href="https://www.blueletterbible.org/kjv/job/13/15/s_449015" target="_blank" data-ref="Job 13:15">Job 13:15</a>); Job/Abraham</td><td><a href="https://www.sefaria.org/Sotah.31a" target="_blank">Sefaria</a></td></tr>
+</table>
+<p><em>All translations are Sefaria's (William Davidson Talmud), CC BY-NC — attributed via the links above. Where the rabbinic reading diverges from the Latter-day Saint one (e.g., resurrection in <a href="https://www.blueletterbible.org/kjv/job/7/9/s_443009" target="_blank" data-ref="Job 7:9">Job 7:9</a> vs. 19:25), the difference is noted rather than harmonized.</em></p>
+<hr>
+<p><em>Next file: <a href="06_Teaching_Applications.md" target="_blank">06_Teaching_Applications.md</a></em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 6: WEEK 33: TEACHING APPLICATIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">6. Week 33: Teaching Applications</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>1. For the One Suffering Without an Answer</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Job's greatest gift to the sufferer is permission — permission to grieve out loud, to argue, even to say "though he slay me" <a href="https://www.blueletterbible.org/kjv/job/13/15/s_449015" target="_blank" data-ref="Job 13:15">(13:15)</a>, without being told they have failed at faith. Teach that Job's serene "blessed be the name of the Lord" <a href="https://www.blueletterbible.org/kjv/job/1/21/s_437021" target="_blank" data-ref="Job 1:21">(1:21)</a> and his anguished curse of the day of his birth (chapter 3) are <em>the same faithful man</em>. God never rebukes Job for the honest cry; He rebukes the friends for their tidy theology <a href="https://www.blueletterbible.org/kjv/job/42/7/s_478007" target="_blank" data-ref="Job 42:7">(42:7)</a>. <strong>Application:</strong> invite class members to notice where they have felt that faith requires a frozen smile — and to let Job free them to bring God the real thing. Point to the Talmud's mercy: "a person is not held responsible for what he says when he is in distress" (Bava Batra 16b; see <a href="05_Jewish_Perspective.md" target="_blank">Jewish Perspective</a>).</p>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>2. For Ministering to the Grieving — the Friends as Caution</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The friends do two opposite things, and the difference is the whole ministry lesson. First they come from far away and "sat down with him upon the ground seven days and seven nights, and none spake a word unto him" <a href="https://www.blueletterbible.org/kjv/job/2/13/s_438013" target="_blank" data-ref="Job 2:13">(2:13)</a> — presence, without explanation. Then they open their mouths and become "miserable comforters" <a href="https://www.blueletterbible.org/kjv/job/16/2/s_452002" target="_blank" data-ref="Job 16:2">(16:2)</a>, insisting Job must have sinned. <strong>Application:</strong> ask, <em>when have I been a good comforter by simply being present — and when have I wounded someone by trying to explain their pain?</em> Teach the covenant to "mourn with those that mourn" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng&id=p9#p9" target="_blank" data-ref="Mosiah 18:9">Mosiah 18:9</a>) as a call to sit, not to solve. The rabbis still honored the friends for coming — "either a friend like the friends of Job or death" (Bava Batra 16b) — but the book faults them the moment presence turned into a lecture.</p>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>3. For Faith That Doesn't Depend on the Outcome</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Job's faith is not a wager that God will fix things — he says "though he slay me, yet will I trust in him" <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/13?lang=eng&id=p15#p15" target="_blank" data-ref="Mosiah 13:15">(13:15)</a> <em>without</em> knowing he will be restored. Contrast this with the accuser's theory that Job only serves God "for nought" <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/1?lang=eng&id=p9#p9" target="_blank" data-ref="Mosiah 1:9">(1:9)</a>, for the blessings. <strong>Application:</strong> discuss the difference between faith <em>that</em> God will remove a trial and faith <em>in</em> God whether or not He does. Job trusted the Refiner before he ever saw the gold: "when he hath tried me, I shall come forth as gold" <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/23?lang=eng&id=p10#p10" target="_blank" data-ref="Mosiah 23:10">(23:10)</a> — and he said it while God still felt absent, "I go forward, but he is not there" <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/23?lang=eng&id=p8#p8" target="_blank" data-ref="Mosiah 23:8">(23:8)</a>.</p>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>4. For Correcting the "Prosperity Gospel"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Job dismantles the oldest false doctrine there is: that suffering is always punishment and prosperity always reward. The friends preach it; God rejects it. Teach plainly the seminary principle: "Trials and difficulties come upon the righteous as well as the wicked" (<em>Old Testament Seminary Teacher Manual</em>, Lesson 107). <strong>Application:</strong> invite members to examine where this false equation still lives in them — the quiet assumption that a struggling person must have done something wrong, or that their own hardship means God is displeased. Job frees us from both the judging and the self-blame.</p>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>5. For Praying for Those Who Have Hurt You</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>One of the reading's most easily missed details: "the Lord turned the captivity of Job, <strong>when he prayed for his friends</strong>" <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/42?lang=eng&id=p10#p10" target="_blank" data-ref="Mosiah 42:10">(42:10)</a>. Job's own restoration is bound up with forgiving the very men who wounded him. <strong>Application:</strong> ask class members to consider whether there is someone whose misjudgment of them God may be inviting them to pray for — not as a favor to that person, but as part of their own healing. This is the Sermon on the Mount lived early: "pray for them which despitefully use you" (<a href="https://www.blueletterbible.org/kjv/mat/5/44/s_934044" target="_blank" data-ref="Matthew 5:44">Matthew 5:44</a>).</p>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>6. For Teaching Youth: "Where Wast Thou?"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The whirlwind speech (chapters 38–40) is surprisingly powerful with teenagers, because it reframes the question. God answers Job's "why?" not with information but with wonder — "Where wast thou when I laid the foundations of the earth?... when the morning stars sang together, and all the sons of God shouted for joy?" <a href="https://www.blueletterbible.org/kjv/mat/38/4/s_967004" target="_blank" data-ref="Matthew 38:4">(38:4, 7)</a>. <strong>Application:</strong> pair the majesty of creation with the doctrine hidden in verse 7 — that we ourselves were among those who "shouted for joy" at the plan of mortality (see Jonn Claybaugh, Interpreter Foundation study aid; <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/3?lang=eng&id=p22#p22" target="_blank" data-ref="Abraham 3:22">Abraham 3:22</a>). The trial that feels unbearable now is the very life we once rejoiced to receive.</p>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>7. For Family and Personal Study — "I Know That My Redeemer Liveth"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The center of the week is a single testimony spoken from the ash-heap: "I know that my redeemer liveth" <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/19?lang=eng&id=p25#p25" target="_blank" data-ref="Abraham 19:25">(19:25)</a>. Consider singing "I Know That My Redeemer Lives" (<em>Hymns</em>, no. 136), which the seminary manual pairs with this passage (Lesson 108). <strong>Application:</strong> invite family members to finish the sentence "I know that my Redeemer lives, <em>and because of that</em>…" — turning Job's ancient hope into a present-tense witness. Job foresaw dimly what we have been given plainly: a living Redeemer who "will take upon him the pains and the sicknesses of his people… that he may know… how to succor his people" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng&id=p11-p12#p11" target="_blank" data-ref="Alma 7:11-12">Alma 7:11–12</a>).</p>
+<hr>
+<p><em>Next file: <a href="07_Study_Questions.md" target="_blank">07_Study_Questions.md</a></em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 7: WEEK 33: STUDY QUESTIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">7. Week 33: Study Questions</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Content</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<hr>
+<p>Questions move through the reading and outward to application. Use a few — not all — and let them open honest conversation. Job is a book about hard things; the questions should have room for hard answers.</p>
+<hr>
+<h3>The Wager and the First Response (Job 1–2)</h3>
+<ol>
+<li>The book opens by showing us a heavenly scene Job never sees. How does knowing the "backstory" change the way <em>we</em> read Job's suffering — and what does it suggest about the parts of our own trials we cannot see?</li>
+<li>The accuser's charge is that Job serves God only "for nought" — for the blessings <a href="https://www.blueletterbible.org/kjv/job/1/9/s_437009" target="_blank" data-ref="Job 1:9">(1:9)</a>. Honestly: how much of my own devotion is tied to what God gives me? What would be left if the blessings were removed?</li>
+<li>Job "rent his mantle" <em>and</em> "worshipped" in the same moment <a href="https://www.blueletterbible.org/kjv/job/1/20/s_437020" target="_blank" data-ref="Job 1:20">(1:20)</a>. What does it look like to grieve fully and worship at the same time, rather than choosing one?</li>
+<li>Job's wife says, "curse God, and die"; Job answers, "shall we receive good at the hand of God, and shall we not receive evil?" <a href="https://www.blueletterbible.org/kjv/job/2/9-10/s_438009" target="_blank" data-ref="Job 2:9-10">(2:9–10)</a>. Is his answer cold, or faithful — and how do we hold that posture without minimizing real pain?</li>
+</ol>
+<h3>The Lament and the Argument (Job 3; 12–14; 21–24)</h3>
+<ol>
+<li>Chapter 3 is a raw curse on the day of Job's birth — from the same man who blessed God in chapter 1. What does it mean that scripture preserves <em>both</em>, and that God never condemns the lament?</li>
+<li>Job's friends reason that suffering proves sin. Where do we still see that assumption today — in others, or in how we read our own hardships?</li>
+<li>In <a href="https://www.blueletterbible.org/kjv/job/21/1/s_457001" target="_blank" data-ref="Job 21">Job 21</a>, Job points out that the wicked often prosper untroubled. Why is that observation so unsettling to a tidy view of justice — and why might God want it in scripture?</li>
+<li>"Oh that I knew where I might find him!" <a href="https://www.blueletterbible.org/kjv/job/23/3/s_459003" target="_blank" data-ref="Job 23:3">(23:3)</a>. Have you ever longed to bring your case directly to God? What did you want to say?</li>
+<li>Job says God "knoweth the way that I take: when he hath tried me, I shall come forth as gold" <a href="https://www.blueletterbible.org/kjv/job/23/10/s_459010" target="_blank" data-ref="Job 23:10">(23:10)</a> — even while feeling God absent <a href="https://www.blueletterbible.org/kjv/job/23/8/s_459008" target="_blank" data-ref="Job 23:8">(23:8)</a>. How can both be true at once: God unfindable, and God knowing exactly where you are?</li>
+</ol>
+<h3>The Redeemer (Job 19)</h3>
+<ol>
+<li>Job speaks his highest testimony — "I know that my redeemer liveth" <a href="https://www.blueletterbible.org/kjv/job/19/25/s_455025" target="_blank" data-ref="Job 19:25">(19:25)</a> — from his lowest point, mid-argument, abandoned by friends. Why might great faith so often be spoken <em>before</em> the rescue rather than after?</li>
+<li>The Hebrew <a href="https://www.blueletterbible.org/lexicon/h1352/kjv/wlc/0-1/" target="_blank" data-lexicon="defilement, defiling" data-strongs="H1352" data-translit="gō&#x27;el" data-original="גֹּאֶל" data-lang="hebrew" data-verse=""><em>go'el</em></a> is a <em>kinsman</em>-redeemer — one with the right to step in when you cannot save yourself (see <a href="04_Word_Studies.md" target="_blank">Word Studies</a>). Where in your life do you need a Redeemer rather than a rescue you can manage on your own?</li>
+<li>Job hoped "in my flesh shall I see God" <a href="https://www.blueletterbible.org/kjv/job/19/26/s_455026" target="_blank" data-ref="Job 19:26">(19:26)</a>. We know the empty tomb that answered him. How does the Resurrection change the weight of your own losses?</li>
+</ol>
+<h3>The Whirlwind (Job 38–40)</h3>
+<ol>
+<li>God answers Job's "why?" with a tour of creation instead of an explanation (38–39). Why might an <em>encounter</em> with God do for a sufferer what an <em>answer</em> never could?</li>
+<li>"When the morning stars sang together, and all the sons of God shouted for joy" <a href="https://www.blueletterbible.org/kjv/job/38/7/s_474007" target="_blank" data-ref="Job 38:7">(38:7)</a> — we were there. How does remembering that we once "shouted for joy" at the plan of mortality reframe its hardest chapters?</li>
+<li>God does not tell Job about the scene in heaven. What does it mean to trust a God who does not always explain?</li>
+</ol>
+<h3>Seeing and Restored (Job 42)</h3>
+<ol>
+<li>Job moves from "I have heard of thee by the hearing of the ear" to "now mine eye seeth thee" <a href="https://www.blueletterbible.org/kjv/job/42/5/s_478005" target="_blank" data-ref="Job 42:5">(42:5)</a>. What is the difference between a faith you've been <em>told</em> and a faith you've <em>met</em> — and has suffering ever turned one into the other for you?</li>
+<li>Job's restoration begins "when he prayed for his friends" <a href="https://www.blueletterbible.org/kjv/job/42/10/s_478010" target="_blank" data-ref="Job 42:10">(42:10)</a>. Is there someone whose misjudgment of you God may be asking you to pray for, as part of your own healing?</li>
+<li>The Lord tells the friends that Job "hath spoken of me the thing that is right" <a href="https://www.blueletterbible.org/kjv/job/42/7/s_478007" target="_blank" data-ref="Job 42:7">(42:7)</a> — the man who argued and complained, not the men who defended God with neat answers. What does that reversal teach about the kind of faith God actually honors?</li>
+</ol>
+<hr>
+<p><em>This completes the Week 33 study guide. See also: <a href="01_Week_Overview.md" target="_blank">01 Week Overview</a> · <a href="02_Historical_Cultural_Context.md" target="_blank">02 Historical & Cultural Context</a> · <a href="03_Key_Passages_Study.md" target="_blank">03 Key Passages</a> · <a href="04_Word_Studies.md" target="_blank">04 Word Studies</a> · <a href="05_Jewish_Perspective.md" target="_blank">05 Jewish Perspective</a> · <a href="06_Teaching_Applications.md" target="_blank">06 Teaching Applications</a></em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+</div>
