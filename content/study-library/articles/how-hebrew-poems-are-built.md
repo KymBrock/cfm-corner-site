@@ -47,9 +47,19 @@ A word of caution that the best scholars insist on, and that this guide keeps: *
 
 ---
 
+## When the Poem Only Lives in Hebrew
+
+Everything so far — parallelism, chiasm, inclusio, the staircase — **survives translation.** You can see it in English because it is built out of *ideas*, and ideas cross languages. But some of Hebrew poetry is built out of the *letters and sounds themselves*, and that kind of poetry simply vanishes when you translate it. It is worth knowing it is there, even when we can only glimpse it.
+
+The clearest example in this week's reading is the **acrostic**. In the Hebrew, **Psalm 25** is an alphabet poem: its first verse begins with *aleph*, the second with *bet*, the third with *gimel*, straight down the twenty-two letters of the Hebrew alphabet to *tav*. An English reader never sees it. But to the Hebrew ear it does something beautiful — it says *everything*, from A to Z, is being brought to God: the whole alphabet of trust, ordered and complete. (It also made the psalm easier to memorize.)
+
+And Psalm 25 does something even more moving: it **breaks its own pattern on purpose.** The alphabet should end at *tav* (verse 21) — but the psalmist adds one more line, out of order, beginning again with *pe*: "Redeem Israel, O God, out of all his troubles" (25:22). The ordered prayer overflows its own form for one last, urgent cry. You can only see that if you can see the Hebrew — so the acrostic map below shows the aleph-bet running down the margin for you.
+
+*(The Hebrew also hides puns, sound-play, and double meanings — wordplays that no translation can carry. Those deserve careful, sourced handling, and will be added here as each one is verified.)*
+
 ## Try It: Map a Psalm
 
-Pick a psalm from this week's reading and watch its architecture come into view. Each map color-codes the matching parts — click any line to pulse its structural partner, and open **the analysis** to see what the form is doing and how confident the claim is.
+Pick a psalm from this week's reading and watch its architecture come into view. Each map color-codes the matching parts — click any line to pulse its structural partner, and open **the analysis** to see what the form is doing and how confident the claim is. The last chip, **Psalm 25**, shows the Hebrew acrostic — the one form on this page you cannot see in English.
 
 <link rel="stylesheet" href="/css/poetry-map-widget.css">
 <div class="poetry-map-widget" data-set="psalms"></div>

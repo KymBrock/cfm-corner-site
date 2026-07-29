@@ -124,6 +124,37 @@
         ],
         notation: "IMAGE &nbsp;⇒&nbsp; REFERENT",
         a: { Relation: "Each image line is paired with the provision it pictures.", Key: "shepherd ⇒ “I shall not want” · green pastures / still waters ⇒ rest & guidance", Function: "Teaches through a picture the hearer can feel, not just a claim to accept.", Claim: "strong", Caution: "Identify which line is the image and which is the point; the doctrine rides on the metaphor." }
+      },
+      {
+        tab: "Psalm 25", tabsub: "Acrostic (Hebrew)", form: "Alphabetic Acrostic", meta: "Aleph → Tav · Psalm 25", type: "acrostic",
+        blurb: "Here is a poem you cannot see in English at all. In the Hebrew, every verse of Psalm 25 begins with the next letter of the alphabet — a whole A-to-Z of trust running down the margin. Watch the aleph-bet descend.",
+        rows: [
+          { l: "א", n: "aleph", ref: "25:1", en: "Unto thee, O LORD, do I lift up my soul." },
+          { l: "ב", n: "bet", ref: "25:2", en: "O my God, I trust in thee: let me not be ashamed." },
+          { l: "ג", n: "gimel", ref: "25:3", en: "Let none that wait on thee be ashamed." },
+          { l: "ד", n: "dalet", ref: "25:4", en: "Shew me thy ways, O LORD; teach me thy paths." },
+          { l: "ה", n: "he", ref: "25:5", en: "Lead me in thy truth, and teach me.", note: "vav (ו) folded in here" },
+          { l: "ז", n: "zayin", ref: "25:6", en: "Remember thy tender mercies and thy lovingkindnesses." },
+          { l: "ח", n: "chet", ref: "25:7", en: "Remember not the sins of my youth." },
+          { l: "ט", n: "tet", ref: "25:8", en: "Good and upright is the LORD." },
+          { l: "י", n: "yod", ref: "25:9", en: "The meek will he guide in judgment." },
+          { l: "כ", n: "kaf", ref: "25:10", en: "All the paths of the LORD are mercy and truth." },
+          { l: "ל", n: "lamed", ref: "25:11", en: "For thy name's sake, O LORD, pardon mine iniquity." },
+          { l: "מ", n: "mem", ref: "25:12", en: "What man is he that feareth the LORD?" },
+          { l: "נ", n: "nun", ref: "25:13", en: "His soul shall dwell at ease." },
+          { l: "ס", n: "samekh", ref: "25:14", en: "The secret of the LORD is with them that fear him." },
+          { l: "ע", n: "ayin", ref: "25:15", en: "Mine eyes are ever toward the LORD." },
+          { l: "פ", n: "pe", ref: "25:16", en: "Turn thee unto me, and have mercy upon me." },
+          { l: "צ", n: "tsade", ref: "25:17", en: "The troubles of my heart are enlarged." },
+          { l: "ק", n: "qof", ref: "—", en: "the qof line is skipped", flag: "gap" },
+          { l: "ר", n: "resh", ref: "25:18", en: "Look upon mine affliction and my pain." },
+          { l: "ר", n: "resh", ref: "25:19", en: "Consider mine enemies; for they are many.", note: "resh repeats" },
+          { l: "ש", n: "shin", ref: "25:20", en: "O keep my soul, and deliver me." },
+          { l: "ת", n: "tav", ref: "25:21", en: "Let integrity and uprightness preserve me." },
+          { l: "פ", n: "pe", ref: "25:22", en: "Redeem Israel, O God, out of all his troubles.", flag: "extra" }
+        ],
+        notation: "א → ת &nbsp; (A to Z — then one more)",
+        a: { Relation: "Each verse opens with the next Hebrew letter, aleph through tav.", Key: "22 letters = the whole alphabet · an ordered “A to Z” of prayer", Function: "Signals completeness — everything, start to finish, brought to God — and aids memory.", Claim: "strong", Caution: "Psalm 25’s acrostic is deliberately imperfect: vav folds into the he line, qof is skipped, resh repeats, and an extra pe is added at the end — a final cry, “Redeem Israel,” that breaks the alphabet on purpose." }
       }
     ]
   };
@@ -197,14 +228,28 @@
       });
       fname.textContent = m.form; fmeta.textContent = m.meta; fblurb.textContent = m.blurb;
       mapEl.innerHTML = "";
-      m.lines.forEach(function (ln) {
-        var row = el("div", "pmw-line");
-        row.setAttribute("data-role", ln.role);
-        row.innerHTML = '<div class="pmw-gutter">' + (ln.g || "") + '</div>' +
-          '<div><span class="pmw-ref">' + ln.ref + '</span><span class="pmw-text">' + ln.html + '</span></div>';
-        row.addEventListener("click", function () { flash(ln.role); });
-        mapEl.appendChild(row);
-      });
+      if (m.type === "acrostic") {
+        var acro = el("div", "pmw-acrostic");
+        m.rows.forEach(function (r) {
+          var row = el("div", "pmw-acro-row");
+          if (r.flag) row.setAttribute("data-flag", r.flag);
+          var note = r.note ? ' <span class="pmw-acro-note">' + r.note + '</span>' : "";
+          row.innerHTML = '<div class="pmw-acro-letter" lang="he" dir="rtl">' + r.l +
+            '<span class="pmw-acro-name">' + r.n + '</span></div>' +
+            '<div class="pmw-acro-en"><span class="pmw-ref">' + r.ref + '</span>' + r.en + note + '</div>';
+          acro.appendChild(row);
+        });
+        mapEl.appendChild(acro);
+      } else {
+        m.lines.forEach(function (ln) {
+          var row = el("div", "pmw-line");
+          row.setAttribute("data-role", ln.role);
+          row.innerHTML = '<div class="pmw-gutter">' + (ln.g || "") + '</div>' +
+            '<div><span class="pmw-ref">' + ln.ref + '</span><span class="pmw-text">' + ln.html + '</span></div>';
+          row.addEventListener("click", function () { flash(ln.role); });
+          mapEl.appendChild(row);
+        });
+      }
       notEl.innerHTML = m.notation;
       acard.innerHTML = "";
       Object.keys(m.a).forEach(function (k) {
