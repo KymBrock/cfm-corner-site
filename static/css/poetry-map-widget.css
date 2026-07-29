@@ -202,3 +202,22 @@
   .poetry-map-widget .pmw-arow dt { padding-bottom: 2px; }
   .poetry-map-widget .pmw-line { grid-template-columns: 34px 1fr; gap: 9px; }
 }
+
+/* Acrostic rail: pointed Hebrew line above the English, hoverable per word. */
+.poetry-map-widget .pmw-acro-he { font-size: 1.28rem; line-height: 1.9; color: var(--slate, #2b2b2b);
+  margin: 2px 0 3px; font-family: "SBL Hebrew", "Ezra SIL", "Times New Roman", serif; }
+.poetry-map-widget .pmw-acro-en-text { display: block; }
+
+/* Hover a word for translit · gloss — matches the Translation Hub Interlinear. */
+.poetry-map-widget .pmw-w { position: relative; cursor: help; border-radius: 3px;
+  padding: 0 1px; transition: background .12s; }
+.poetry-map-widget .pmw-w:hover { background: var(--gold-pale, #f5ecd0); }
+.poetry-map-widget .pmw-w-key { color: var(--sage-dark, #4a6b52); font-weight: 700; }
+.poetry-map-widget .pmw-w[data-tip]:hover::after {
+  content: attr(data-tip); position: absolute; right: 0; left: auto;
+  bottom: 138%; z-index: 40; background: #2f3a30; color: #fff; border-radius: 7px;
+  padding: 6px 10px; font-size: 0.8rem; font-weight: 400; white-space: nowrap;
+  max-width: 92vw; overflow: hidden; text-overflow: ellipsis;
+  direction: ltr; text-align: left; pointer-events: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  box-shadow: 0 6px 20px rgba(0,0,0,.28); }
