@@ -29,17 +29,16 @@
   function injectStyles() {
     if (document.getElementById("lp-controls-styles")) return;
     var css =
-      ".lp-controls{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-top:12px;}" +
-      ".lp-controls + .lp-controls{margin-top:8px;}" +
-      ".lp-label{font-size:0.8em;font-weight:600;color:#6a8470;margin-right:2px;}" +
-      ".lp-btn{display:inline-flex;align-items:center;gap:4px;font:inherit;font-size:0.8em;" +
-      "line-height:1;cursor:pointer;padding:6px 11px;min-height:32px;border-radius:999px;" +
+      ".lp-controls{display:flex;align-items:center;flex-wrap:wrap;gap:5px;margin-top:8px;}" +
+      ".lp-divider{width:1px;height:18px;background:#cdddce;margin:0 3px;flex:0 0 auto;}" +
+      ".lp-btn{display:inline-flex;align-items:center;gap:3px;font:inherit;font-size:0.78em;" +
+      "line-height:1;cursor:pointer;padding:5px 10px;min-height:28px;border-radius:999px;" +
       "border:1px solid #cdddce;background:#ffffff;color:#4a6b52;" +
       "transition:background .15s,color .15s,border-color .15s;}" +
       ".lp-btn:hover{background:rgba(74,107,82,0.10);}" +
       ".lp-btn:focus-visible{outline:2px solid #4a6b52;outline-offset:2px;}" +
       ".lp-btn.is-active{background:#4a6b52;color:#f2f5f2;border-color:#4a6b52;}" +
-      ".lp-btn svg{width:15px;height:15px;flex:0 0 auto;}";
+      ".lp-btn svg{width:14px;height:14px;flex:0 0 auto;}";
     var s = document.createElement("style");
     s.id = "lp-controls-styles";
     s.textContent = css;
@@ -70,11 +69,11 @@
     if (!audio) return;
     player.dataset.controlsReady = "1";
 
-    /* ---- jog row: skip back / forward 15s ---- */
-    var jog = document.createElement("div");
-    jog.className = "lp-controls";
-    jog.setAttribute("role", "group");
-    jog.setAttribute("aria-label", "Skip");
+    /* ---- one row: skip back/forward 15s · speed ---- */
+    var row = document.createElement("div");
+    row.className = "lp-controls";
+    row.setAttribute("role", "group");
+    row.setAttribute("aria-label", "Playback controls");
 
     var back = makeBtn(skipIcon(false) + "<span>" + SKIP + "s</span>", "Skip back " + SKIP + " seconds");
     back.addEventListener("click", function () {
@@ -85,23 +84,17 @@
       var end = isFinite(audio.duration) ? audio.duration : Infinity;
       audio.currentTime = Math.min(end, audio.currentTime + SKIP);
     });
-    jog.appendChild(back);
-    jog.appendChild(fwd);
-    player.appendChild(jog);
+    row.appendChild(back);
+    row.appendChild(fwd);
 
-    /* ---- speed row ---- */
+    var divider = document.createElement("span");
+    divider.className = "lp-divider";
+    divider.setAttribute("aria-hidden", "true");
+    row.appendChild(divider);
+
+    /* ---- speed ---- */
     var rate = savedRate();
     audio.playbackRate = rate;
-
-    var speed = document.createElement("div");
-    speed.className = "lp-controls";
-    speed.setAttribute("role", "group");
-    speed.setAttribute("aria-label", "Playback speed");
-
-    var label = document.createElement("span");
-    label.className = "lp-label";
-    label.textContent = "Speed";
-    speed.appendChild(label);
 
     var btns = [];
     function setActive(r) {
@@ -119,7 +112,7 @@
         saveRate(r);
         setActive(r);
       });
-      speed.appendChild(b);
+      row.appendChild(b);
       btns.push({ r: r, el: b });
     });
     setActive(rate);
@@ -128,7 +121,7 @@
       if (audio.playbackRate !== rate) { rate = audio.playbackRate; setActive(rate); }
     });
 
-    player.appendChild(speed);
+    player.appendChild(row);
   }
 
   function init() {
