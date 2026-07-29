@@ -50,6 +50,94 @@ draft: true
 
 <p>Those are real places, scattered on purpose. Halah and the Habor lay in the far north of Mesopotamia, around the headwaters of a tributary of the Euphrates; &ldquo;the cities of the Medes&rdquo; lay hundreds of miles farther east, on the Iranian plateau. The northern tribes were not resettled together in one exile colony where they might keep their cohesion, as Judah later would be in Babylonia. They were <em>dispersed</em> &mdash; split into fragments and planted among unrelated peoples at opposite ends of the empire, exactly the outcome Assyrian policy was designed to produce.</p>
 
+<!-- ===== SCATTERING OF THE NORTH (asd) ===== -->
+<style>
+.asd { border:1px solid #e2ddd3; border-radius:16px; overflow:hidden; margin:26px 0; background:#fbf9f5; box-shadow:0 6px 18px rgba(0,0,0,.07); font-family:-apple-system,Segoe UI,Roboto,sans-serif; }
+.asd-head { padding:16px 18px 6px; }
+.asd-head h4 { margin:0; font-size:1.05rem; color:#3c3a33; }
+.asd-head p { margin:4px 0 0; font-size:.82rem; color:#8a8172; }
+.asd-map { display:block; width:100%; height:auto; }
+.asd-arrow { fill:none; stroke:#c0392b; stroke-width:5; stroke-linecap:round; }
+.asd-dot-org { fill:#7a3030; stroke:#fff; stroke-width:2; }
+.asd-zone { fill:none; stroke:#7a3030; stroke-width:2.5; stroke-dasharray:5 5; opacity:.9; }
+.asd-lbl { font:700 15px -apple-system,sans-serif; fill:#2c2a25; paint-order:stroke; stroke:#eef0e4; stroke-width:3.5; }
+.asd-zlbl { font:italic 700 14px -apple-system,sans-serif; fill:#7a3030; paint-order:stroke; stroke:#eef0e4; stroke-width:3.5; }
+.asd-zsub { font:italic 11.5px -apple-system,sans-serif; fill:#6a6255; paint-order:stroke; stroke:#eef0e4; stroke-width:3.5; }
+.asd-cap { padding:12px 18px 6px; font-size:.9rem; line-height:1.5; color:#443f37; min-height:4.6em; border-top:1px solid #eee6d8; }
+.asd-cap b { color:#7a3030; }
+.asd-time { display:flex; gap:0; padding:8px 12px 18px; position:relative; }
+.asd-time::before { content:""; position:absolute; left:60px; right:60px; top:16px; height:3px; background:#e0d8c7; border-radius:3px; }
+.asd-step { flex:1; background:none; border:none; cursor:pointer; padding:0; display:flex; flex-direction:column; align-items:center; gap:7px; font-family:inherit; position:relative; z-index:1; }
+.asd-d { width:22px; height:22px; border-radius:50%; background:#fff; border:3px solid #c9b98f; transition:transform .2s,background .2s,border-color .2s; }
+.asd-step.on .asd-d { transform:scale(1.3); background:#c0392b; border-color:#c0392b; }
+.asd-yr { font-size:.82rem; font-weight:800; color:#5a544a; }
+.asd-nm { font-size:.68rem; color:#8a8172; line-height:1.15; max-width:130px; }
+.asd-step.on .asd-yr { color:#3c3a33; }
+.asd-cred { text-align:center; font-size:.68rem; font-style:italic; color:#a89f90; padding:0 14px 12px; line-height:1.5; }
+@media (max-width:560px){ .asd-nm{ display:none; } .asd-time::before{ left:40px; right:40px; } }
+</style>
+
+<div class="asd">
+  <div class="asd-head"><h4>The Scattering of the North</h4>
+  <p>Judah went down one road to Babylon. Israel was broken off in pieces and <em>scattered on purpose</em> &mdash; the policy that made the ten tribes &ldquo;lost.&rdquo; Step through it.</p></div>
+  <svg class="asd-map" viewBox="0 0 1480 680" role="img" aria-label="Map of the Assyrian deportation of the northern kingdom of Israel to Halah, the Habor, and the cities of the Medes">
+    <image href="/images/culture/assyria/maps/deportation-base.jpg" x="0" y="0" width="1480" height="680"/>
+    <defs><marker id="asd-ah" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#c0392b"/></marker></defs>
+
+    <!-- destination zones (approximate) -->
+    <circle class="asd-zone" cx="576" cy="160" r="16"/>
+    <text class="asd-zlbl" x="516" y="126">Halah &amp; the Habor</text>
+    <text class="asd-zsub" x="516" y="142">the Khabur, far north</text>
+    <circle class="asd-zone" cx="1232" cy="408" r="16"/>
+    <text class="asd-zlbl" x="1120" y="452">The cities of the Medes</text>
+    <text class="asd-zsub" x="1120" y="468">east, in the Zagros</text>
+
+    <!-- origin -->
+    <circle class="asd-dot-org" cx="110" cy="560" r="6.5"/>
+    <text class="asd-lbl" x="122" y="556">Samaria</text>
+
+    <!-- per-step arrow groups -->
+    <g id="asd-s0"><path class="asd-arrow" marker-end="url(#asd-ah)" d="M150,528 Q430,335 700,248"/></g>
+    <g id="asd-s1"><path class="asd-arrow" marker-end="url(#asd-ah)" d="M116,556 Q430,342 758,232"/></g>
+    <g id="asd-s2">
+      <path class="asd-arrow" marker-end="url(#asd-ah)" d="M758,236 Q652,180 590,164"/>
+      <path class="asd-arrow" marker-end="url(#asd-ah)" d="M792,256 Q1015,322 1218,404"/>
+    </g>
+  </svg>
+  <p class="asd-cap" id="asd-cap"></p>
+  <div class="asd-time" id="asd-time"></div>
+  <div class="asd-cred">Map by CFM Corner on a S&eacute;mhur relief base (CC BY-SA 4.0). Exile destinations are approximate &mdash; the exact sites of Halah and the Habor, and which cities of the Medes, remain uncertain.</div>
+</div>
+
+<script>
+(function(){
+  var STEPS=[
+    {yr:"734 BC",nm:"The first bite",cap:"<b>734&ndash;732 BC &mdash; the first bite.</b> Tiglath-pileser III peels off the edges of the north &mdash; Galilee, the Jezreel corridor, and all of Transjordan (Gilead) &mdash; and carries them to Assyria (2&nbsp;Kings 15:29). Only the highland core around Samaria is left."},
+    {yr:"722 BC",nm:"Samaria falls",cap:"<b>722 BC &mdash; Samaria falls.</b> After a three-year siege the Assyrians take the capital and carry Israel away (2&nbsp;Kings 17:6). The northern kingdom, ten tribes strong, simply ceases to exist."},
+    {yr:"then",nm:"Scattered on purpose",cap:"<b>Scattered on purpose.</b> The deportees are resettled far from home and far from each other &mdash; in <b>Halah</b> and by the <b>Habor</b>, the river of Gozan, in the far north, and in the <b>cities of the Medes</b> to the east. Dispersed among strangers, they assimilate, and pass into memory as the &ldquo;lost ten tribes.&rdquo;"}
+  ];
+  var groups=[document.getElementById('asd-s0'),document.getElementById('asd-s1'),document.getElementById('asd-s2')];
+  var cap=document.getElementById('asd-cap'), time=document.getElementById('asd-time');
+  groups.forEach(function(g){ [].forEach.call(g.querySelectorAll('.asd-arrow'),function(p){ var L=p.getTotalLength(); p.style.strokeDasharray=L; p.style.strokeDashoffset=L; }); g.style.display='none'; });
+  function show(n){
+    for(var i=0;i<groups.length;i++){
+      if(i===n){ groups[i].style.display=''; [].forEach.call(groups[i].querySelectorAll('.asd-arrow'),function(p){ var L=p.getTotalLength(); p.style.transition='none'; p.style.strokeDashoffset=L; p.getBoundingClientRect(); p.style.transition='stroke-dashoffset 1.1s ease'; p.style.strokeDashoffset=0; }); }
+      else groups[i].style.display='none';
+    }
+    var b=time.querySelectorAll('.asd-step'); for(var j=0;j<b.length;j++) b[j].classList.toggle('on',j===n);
+    cap.innerHTML=STEPS[n].cap;
+  }
+  STEPS.forEach(function(s,i){
+    var b=document.createElement('button'); b.className='asd-step'; b.type='button';
+    b.innerHTML='<span class="asd-d"></span><span class="asd-yr">'+s.yr+'</span><span class="asd-nm">'+s.nm+'</span>';
+    b.addEventListener('click',function(){ show(i); });
+    time.appendChild(b);
+  });
+  show(0);
+})();
+</script>
+<!-- ===== /asd ===== -->
+
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
 <p style="margin: 0;"><strong>Which king took Samaria?</strong> The Bible names the campaign but leaves the conqueror unnamed at the moment of capture, and the Assyrian sources let us see why. <strong>Shalmaneser V</strong> laid and pressed the siege &mdash; a second biblical account credits the fall to his reign (<a href="https://www.blueletterbible.org/kjv/2ki/18/9/" target="_blank" data-ref="2 Kings 18:9-11">2 Kings 18:9&ndash;11</a>) &mdash; but he died just as the city fell in 722 BC. His successor, <strong>Sargon II</strong>, seized the throne and, in his own royal annals, claimed the victory for himself, boasting that he &ldquo;besieged and conquered Samaria&rdquo; and carried off its people. Sargon&rsquo;s inscriptions put a number on the deportation: <strong>27,290 inhabitants</strong> (some editions of the annals read 27,280), along with their chariots and gods. The figure is the empire&rsquo;s own accounting of a nation erased &mdash; and, like all such royal totals, it is a claim to be weighed, not a census to be trusted; but it gives the scale, and it names the human beings behind the Bible&rsquo;s bare phrase &ldquo;carried Israel away.&rdquo;</p>
 </div>
