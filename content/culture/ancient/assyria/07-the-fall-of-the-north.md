@@ -97,7 +97,7 @@ draft: true
     <text class="asd-lbl" x="122" y="556">Samaria</text>
 
     <!-- per-step arrow groups -->
-    <g id="asd-s0"><path class="asd-arrow" marker-end="url(#asd-ah)" d="M150,528 Q430,335 700,248"/></g>
+    <g id="asd-s0"><path class="asd-arrow" marker-end="url(#asd-ah)" d="M168,492 Q440,330 700,248"/></g>
     <g id="asd-s1"><path class="asd-arrow" marker-end="url(#asd-ah)" d="M116,556 Q430,342 758,232"/></g>
     <g id="asd-s2">
       <path class="asd-arrow" marker-end="url(#asd-ah)" d="M758,236 Q652,180 590,164"/>
