@@ -73,6 +73,8 @@ When deploying a new week, follow these steps in order:
 - For chapter-only references such as `Exodus 3`, use the full book + chapter in `data-ref`; do not rely on shorthand.
 - Do not invent glossary/term links. If a term is not in the approved glossary data, leave it plain or flag it for glossary expansion rather than fabricating a popup.
 - Plain transliterations that function as term notes or glosses should not be left floating when a source link exists nearby. Link them either to the verified lexicon/source entry or to the specific source passage being discussed.
+- **Link the transliteration, never the pointed Hebrew script.** The lexicon auto-linker attaches the popup to the *transliteration* (e.g. `torah`), leaving the vocalized script (תּוֹרָה) bare so niqqud stays legible. Many "bare Hebrew" audit hits are therefore correct, not defects.
+- **Lexicon collisions & mislinks.** Several Strong's entries can normalize to the same transliteration key (e.g. `torah` → H8451 "law" vs ṭōraḥ H2960 "burden"). The converter now resolves these to the plain-ASCII lemma automatically (`hugo_converter._translit_quality`). If a transliteration still links to the wrong homonym: (1) add/fix an entry in `cfm-corner-tools/data/translit-aliases.json` (`"translit": "H####"`), then (2) for an **already-published** fragment do a **surgical anchor replace** — rewrite only that `<a data-strongs=…>`'s attributes, preserving the inner text. **NEVER regenerate a published fragment to fix a link** (that risks the hand-crafted-content loss in §1). Verify the sense in context first — some collisions are legitimately the other word (e.g. `ba'al` as verb/owner, not the deity).
 - Every direct quote from a prophet or apostle in a touched file must link to a verified source. If the exact source cannot be verified, remove the quotation marks and flag it as `[QUOTE SOURCE PENDING VERIFICATION]` rather than leaving an unlinked quote.
 - Word studies in touched files must include linked Greek, Latin, and English cognates or close parallels where the format calls for them. Do not leave the Hebrew alone if the word-study pattern expects cross-language parallels.
 
@@ -253,26 +255,24 @@ Hugo's `readFile` function caches static files at build time. After
 editing any file in `static/content/`, you MUST restart the Hugo server
 to see changes. Live reload does NOT pick up static file changes.
 
-### 7. macOS Dark Mode vs Tkinter (DIAGNOSED — NOT YET FIXED)
-Six styling attempts failed, but the root cause is NOT "macOS dark mode
-vs Tkinter" in general. The root cause is **global ttk style overrides**:
+### 7. macOS Dark Mode vs Tkinter (RESOLVED 2026-07-29)
+Fixed and launch-tested — the GUI renders legibly in macOS dark mode
+(cfm-corner-tools commit `11cc697`). The root cause was **global ttk style
+overrides**:
 - `style.configure(".", ...)` — overrides ALL widget colors, causes invisibility
 - `style.map(".", ...)` — same problem
 - `tk_setPalette()` — no effect on ttk, confuses widget rendering
 
-The current `hugo_gui.py` (restored from commit `dc55dd0`) has ZERO
-styling code and should render with default ttk appearance.
+The fix in `hugo_gui.py`:
+- Forces the `clam` theme (`s.theme_use('clam')`) — macOS `aqua` ignores ttk
+  background colors and goes unreadable in dark mode; `clam` respects them.
+- Uses ONLY named styles (`CFM.TFrame`, `CFM.TLabel`, `CFM.TButton`, …) plus a
+  hardcoded CFM palette — NEVER the global `style.configure(".", ...)`.
+- Adds a custom `MacButton` canvas widget for colored, legible action buttons.
 
-**Next session approach (test-first, minimal fix):**
-1. Run a single diagnostic test (bare ttk widgets, no styling) to confirm
-   default rendering works
-2. Launch the current GUI as-is (it has no styling)
-3. Only then add CFM branding using ONLY named styles (`CFM.TButton`, etc.)
-4. NEVER use `style.configure(".", ...)` — this is what broke everything
-5. Add `--no-style` flag for future debugging
-
-See `Session_Handoffs/2026-03-14_Week12_Session_Handoff.md` §4 for
-full strategy with code examples.
+⚠️ Do NOT reintroduce a global `style.configure(".", ...)` / `style.map(".", ...)`
+/ `tk_setPalette()` — that is exactly what broke the six prior attempts. The GUI
+is now the recommended way to generate content.
 
 ---
 
@@ -280,7 +280,9 @@ full strategy with code examples.
 
 ### Step-by-step for each new week:
 
-1. **Generate content via CLI** (not the GUI until dark mode is fixed):
+1. **Generate content** — the GUI (`python3 converters/hugo_gui.py`) now renders
+   correctly in dark mode (fixed 2026-07-29, see §7) and is the recommended path.
+   The CLI is equivalent:
    ```bash
    cd /path/to/cfm-corner-tools
    python3 -m converters.hugo_converter --week NN --type resources
@@ -307,3 +309,63 @@ full strategy with code examples.
 
 6. **Only when deploying to production:** flip previous week's `current`
    flag to `false` and commit everything together
+
+---
+
+## Staging & Deployment Surfaces
+
+Two surfaces serve this site. Canonical detail lives in `docs/staging-pipeline.md`
+(the staging flag model) and `docs/working-remotely.md` (Cloudflare previews +
+Hugo version pinning). This section is the quick map that ties them together.
+
+### Production — GitHub Pages (NOT Cloudflare)
+- Built + deployed by `.github/workflows/deploy.yml` on every push to **`main`**
+  (and `workflow_dispatch`). Build: `hugo --minify --baseURL "https://www.cfmcorner.com/"`
+  → `./public`, then a Pagefind search index. Hugo pinned to **0.156.0**.
+- Live URL: **https://www.cfmcorner.com/** (custom domain via `static/CNAME`).
+- Pre-build guard `scripts/check-staging.sh` **fails CI** if any non-live page is
+  missing `draft: true` — a half-finished week cannot leak to production.
+- **Only `main` deploys to production.** Never commit staged/in-progress week
+  content straight to `main`; work on a branch (worktree convention below).
+
+### Previews — Cloudflare Pages (staging only, never production)
+- Project **`cfm-corner-previews`**, Git-connected through the Cloudflare
+  dashboard. There is **no `wrangler.toml` in the repo** — the project config is
+  dashboard-only. Dashboard build command: `sh scripts/cf-pages-build.sh`,
+  output `public`, `HUGO_VERSION = 0.156.0`.
+- Every branch push auto-builds a preview at
+  **`https://<branch-alias>.cfm-corner-previews.pages.dev/`**
+  (branch-alias = branch name lowercased, `/` and `_` → `-`, capped 28 chars).
+- `cf-pages-build.sh` builds **with drafts** (`hugo -D --config hugo.toml,config-preview.toml`)
+  for any non-`main` branch, and a **draft-free production mirror** for `main`
+  (smoke test). Every `*.pages.dev` build is **noindexed** (robots + `X-Robots-Tag`).
+- Manual one-off preview: `sh scripts/deploy-preview.sh` (wraps
+  `npx wrangler pages deploy public --project-name cfm-corner-previews --branch <branch>`;
+  needs a one-time `npx wrangler login`).
+
+### Local preview (`.claude/launch.json`)
+- **1314** — `hugo-weekly-preview` (no drafts, production-like).
+- **1315** — `hugo-drafts-preview` (`hugo server -D`; shows drafts + stage badges
+  + `/pipeline/`). **Use this to review a staged week.**
+- **1326** — `hugo-gui-converter` (matches `HUGO_PORT` in `hugo_gui.py`).
+- Reminder (§6): restart the server after editing any `static/content/` file —
+  Hugo's `readFile` caches those at build time and live-reload won't pick them up.
+
+### Staging flags — two gates (full detail in `docs/staging-pipeline.md`)
+- `draft:` is the **hard gate**: `draft: true` = not built for production at all.
+  This is the only flag that actually keeps a page off the live site.
+- `stage:` is **pipeline position** only (`drafting → review → ready → live`) —
+  drives badges, the `/pipeline/` dashboard, and staging-surface visibility, but
+  does NOT hide a page by itself. A page with **no** `stage:` defaults to `live`.
+- **Live** = `stage: live` AND `draft: false`. Shipping a week flips both and
+  merges its branch to `main`.
+
+### Worktree-per-week convention
+- Each in-progress week gets its own worktree + `claude/week-NN` branch:
+  `cfm-week31 → claude/week-31`, `cfm-week32 → claude/week-32`,
+  `cfm-week34 → claude/week-34`. Each carries weeks 01–29 plus that one staged
+  week's `content/weeks/NN.md` (`draft: true`, `stage: review`).
+- Push the branch → Cloudflare builds its preview automatically. Merge to `main`
+  only when shipping (a deliberate desktop step, per `docs/working-remotely.md`).
+- `.claude/worktrees/` and `.session-checkpoints/` are gitignored — never commit
+  them (a past incident committed them as gitlinks and broke Cloudflare clones).
