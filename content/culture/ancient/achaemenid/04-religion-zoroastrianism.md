@@ -26,6 +26,11 @@ draft: true
 
 <p>At the center of the Persian kings&rsquo; inscriptions stands one god: <strong>Ahura Mazda</strong> (&ldquo;the Wise Lord&rdquo;). Darius the Great opens his great Behistun inscription by crediting him for everything: &ldquo;By the favor of Ahura Mazda I am king; Ahura Mazda bestowed the kingdom upon me.&rdquo; Ahura Mazda is portrayed not as a statue but as the maker of heaven and earth, of humankind, and of happiness for humankind &mdash; a high creator-god of <strong>truth</strong> and <strong>light</strong>, opposed by <em>drauga</em>, &ldquo;the Lie.&rdquo;</p>
 
+<figure class="fg-figure">
+  <img src="/images/culture/achaemenid/photos/faravahar-persepolis.jpg" alt="The winged Faravahar symbol carved at Persepolis" loading="lazy">
+  <figcaption>The winged figure carved above the doorways of Persepolis &mdash; the emblem long associated with <b>Ahura Mazda</b> and the royal glory (its precise meaning is still debated). <span class="fg-credit">Persepolis &middot; photo Napishtim, Wikimedia Commons (CC BY-SA 3.0)</span></figcaption>
+</figure>
+
 <p>The prophet behind this faith was <strong>Zarathustra</strong> (Greek <em>Zoroaster</em>), an Iranian religious teacher who lived at a much-debated date &mdash; estimates range widely from around 1200 BC to around 600 BC. His hymns, the <em>Gathas</em>, preserved in the sacred language Avestan, call people to worship Ahura Mazda and to choose truth (<em>asha</em>) over the Lie in a cosmos understood as a moral struggle. Classic Zoroastrianism came to frame that struggle as a great cosmic contest between Ahura Mazda and a hostile spirit of darkness, <strong>Angra Mainyu</strong> (Ahriman) &mdash; a <em>dualism</em> of good and evil moving toward a final resolution in which good triumphs.</p>
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
@@ -116,6 +121,7 @@ draft: true
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}

@@ -38,6 +38,11 @@ draft: true
 
 <p>High on a limestone cliff on the old road between Babylon and Ecbatana, Darius the Great carved the most important inscription of the ancient Near East &mdash; the <strong><a href="https://www.worldhistory.org/Behistun_Inscription/" target="_blank">Behistun Inscription</a></strong> (c. 520 BC). In a giant relief, Darius stands triumphant over the rebels he defeated to seize the throne, with the winged symbol of Ahura Mazda above him; around and below, a long text tells the story of his victory &mdash; in Old Persian, Elamite, and Babylonian, the same account three times over.</p>
 
+<figure class="fg-figure" style="max-width:560px;">
+  <img src="/images/culture/achaemenid/photos/behistun-darius.jpg" alt="The Behistun relief of Darius the Great" loading="lazy">
+  <figcaption>The <b>Behistun</b> relief: Darius, foot on the fallen pretender, faces a line of roped rebel kings &mdash; carved with a trilingual inscription (Old Persian, Elamite, Babylonian) whose decipherment unlocked cuneiform itself. <a href="https://www.livius.org/articles/place/behistun/" target="_blank">Read the inscription &rarr;</a> <span class="fg-credit">Mount Behistun, Iran &middot; photo Leen van Dorp, Wikimedia Commons (CC0)</span></figcaption>
+</figure>
+
 <p>Because it repeated one text in three scripts &mdash; and because scholars could begin to work out the alphabetic Old Persian &mdash; Behistun became the <strong>Rosetta Stone of cuneiform</strong>. In the 1830s&ndash;40s, Henry Rawlinson famously scaled the cliff to copy the inscription, and the trilingual key it provided allowed scholars to decipher not only Old Persian but, through it, the long-dead Babylonian and Assyrian writing of Mesopotamia. Nearly everything the <a href="/culture/ancient/babylon/">Babylon guide</a> can tell you &mdash; the chronicles, the ration tablets, the flood epic &mdash; is legible today because Darius bragged, in triplicate, on a cliff. It is a striking providence of history that the empire which sent Judah <em>home</em> also, two and a half millennia later, handed the modern world the key to reading the empire that had carried Judah <em>away</em>.</p>
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
@@ -101,6 +106,7 @@ draft: true
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}

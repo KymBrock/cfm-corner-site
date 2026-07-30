@@ -26,6 +26,11 @@ draft: true
 
 <p>Esther is set in <strong>&ldquo;Shushan the palace&rdquo;</strong> (<a href="https://www.blueletterbible.org/kjv/est/1/2/" target="_blank" data-ref="Esther 1:2">Esther 1:2</a>) &mdash; <strong>Susa</strong>, one of the empire&rsquo;s several capitals and the favored <em>winter</em> residence of the kings, on the warm lowland plains of southwestern Iran. (The court moved with the seasons among Susa, Babylon, Ecbatana, and the ceremonial capital Persepolis; see <a href="/culture/ancient/achaemenid/09-major-sites/">Section 09</a>.) The Hebrew phrase &ldquo;Shushan the palace&rdquo; distinguishes the fortified royal citadel &mdash; the acropolis with its palace and administrative buildings &mdash; from the residential city below it, a distinction the book uses precisely (compare &ldquo;Shushan the palace&rdquo; with &ldquo;the city Shushan,&rdquo; <a href="https://www.blueletterbible.org/kjv/est/3/15/" target="_blank" data-ref="Esther 3:15">Esther 3:15</a>).</p>
 
+<figure class="fg-figure" style="max-width:520px;">
+  <img src="/images/culture/achaemenid/photos/susa-archers-frieze-louvre.jpg" alt="Glazed-brick frieze of archers from the palace of Darius at Susa, Louvre" loading="lazy">
+  <figcaption>Glazed-brick <b>archers</b> from the palace of Darius at <b>Susa</b> (Shushan) &mdash; the king&rsquo;s guard, moulded in brilliant colour in the very citadel where the book of Esther unfolds. <span class="fg-credit">Palace of Darius, Susa; Louvre &middot; Wikimedia Commons (public domain)</span></figcaption>
+</figure>
+
 <p>This is the same Susa where Nehemiah served the king (<a href="https://www.blueletterbible.org/kjv/neh/1/1/" target="_blank" data-ref="Nehemiah 1:1">Nehemiah 1:1</a>) and where Daniel saw a vision &ldquo;in the province of Elam&hellip; by the river of Ulai&rdquo; (<a href="https://www.blueletterbible.org/kjv/dan/8/2/" target="_blank" data-ref="Daniel 8:2">Daniel 8:2</a>). French excavations there beginning in the nineteenth century uncovered the great <strong>apadana</strong> (columned audience hall) of Darius and Xerxes, glazed-brick relief panels of royal guards and lions, and a building inscription in which Darius lists the peoples and materials that built the palace &mdash; the physical stage on which Esther&rsquo;s drama plays out.</p>
 
 <br>
@@ -99,6 +104,7 @@ draft: true
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}

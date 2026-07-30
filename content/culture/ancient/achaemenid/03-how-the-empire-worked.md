@@ -26,6 +26,11 @@ draft: true
 
 <p>Persia divided its empire into large provinces called <strong>satrapies</strong>, each run by a <strong>satrap</strong> (Old Persian <em>khshathrapavan</em>, &ldquo;protector of the realm&rdquo;) &mdash; usually a Persian nobleman or a member of the royal family, wielding near-royal authority over a vast region. Daniel served in exactly this structure: Darius &ldquo;set over the kingdom an hundred and twenty princes, which should be over the whole kingdom&rdquo; (<a href="https://www.blueletterbible.org/kjv/dan/6/1/" target="_blank" data-ref="Daniel 6:1">Daniel 6:1</a>), with three presidents above them &mdash; Daniel first among them (<a href="https://www.blueletterbible.org/kjv/dan/6/2/" target="_blank" data-ref="Daniel 6:2">Daniel 6:2</a>).</p>
 
+<figure class="fg-figure">
+  <img src="/images/culture/achaemenid/photos/apadana-tribute-bearers.jpg" alt="Relief of tribute-bearing delegations on the Apadana staircase at Persepolis" loading="lazy">
+  <figcaption>Delegations from across the empire, carved on the Apadana staircase at Persepolis &mdash; the satrapy system made visible: each subject people in its own dress, filing in with its tribute. <span class="fg-credit">Apadana staircase, Persepolis &middot; photo A. Davey, Wikimedia Commons (CC BY 2.0)</span></figcaption>
+</figure>
+
 <p>The genius of the system was <strong>balance of power</strong>. A satrap governed, but he did not control everything in his province: the regional army commander and the royal treasurer often answered directly to the king, not to the satrap, and traveling royal inspectors &mdash; called, evocatively, &ldquo;the King&rsquo;s Eyes&rdquo; &mdash; audited the satraps and reported back. Power was deliberately split so no provincial governor could easily become a rival. Judah (&ldquo;Yehud&rdquo;) was a small sub-province within the larger satrapy of &ldquo;Beyond the River&rdquo; (Aramaic <em>Abar-Nahara</em>, the lands west of the Euphrates) &mdash; which is exactly the phrase that peppers Ezra&rsquo;s Persian correspondence (<a href="https://www.blueletterbible.org/kjv/ezr/5/6/" target="_blank" data-ref="Ezra 5:6">Ezra 5:6</a>, &ldquo;governor on this side the river&rdquo;). Nehemiah was appointed the <em>peḥah</em> (governor) of Yehud (<a href="https://www.blueletterbible.org/kjv/neh/5/14/" target="_blank" data-ref="Nehemiah 5:14">Nehemiah 5:14</a>) &mdash; a real Persian administrative post, confirmed by seal impressions and coins reading &ldquo;Yehud&rdquo; from this period.</p>
 
 <br>
@@ -82,6 +87,11 @@ draft: true
 
 <p>A few more pieces completed the system. Persia standardized <strong>coinage</strong> &mdash; the gold <em>daric</em> and silver <em>siglos</em>, among the first widely trusted imperial coins; the returning community used such money (the &ldquo;drams&rdquo; / darics of <a href="https://www.blueletterbible.org/kjv/ezr/8/27/" target="_blank" data-ref="Ezra 8:27">Ezra 8:27</a> and <a href="https://www.blueletterbible.org/kjv/neh/7/70/" target="_blank" data-ref="Nehemiah 7:70">Nehemiah 7:70</a>). A vast, meticulous <strong>tax and tribute system</strong> gathered the wealth of the provinces to the center (Herodotus preserves the province-by-province assessment). And a network of <strong>royal storehouses and paradises</strong> &mdash; the walled royal parks whose Persian name, <em>pairidaēza</em>, gives us the word &ldquo;paradise&rdquo; &mdash; provisioned the court and the army. Nehemiah taps directly into this infrastructure when he asks Artaxerxes for a letter to &ldquo;Asaph the keeper of the king&rsquo;s forest [<em>pardes</em>, the same word], that he may give me timber&rdquo; for the gates and walls of Jerusalem (<a href="https://www.blueletterbible.org/kjv/neh/2/8/" target="_blank" data-ref="Nehemiah 2:8">Nehemiah 2:8</a>).</p>
 
+<figure class="fg-figure" style="max-width:420px;">
+  <img src="/images/culture/achaemenid/photos/daric-coin-met.jpg" alt="A gold Achaemenid daric coin showing the king as an archer" loading="lazy">
+  <figcaption>A gold <b>daric</b>, the Great King&rsquo;s coin, stamped with the royal archer &mdash; the standardized money that oiled the empire&rsquo;s machinery, and the kind of &ldquo;drams&rdquo; the returning community carried (Ezra 2:69). <span class="fg-credit">Metropolitan Museum of Art (CC0)</span></figcaption>
+</figure>
+
 <br>
 
 <hr>
@@ -112,6 +122,7 @@ draft: true
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}

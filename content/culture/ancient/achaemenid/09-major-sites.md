@@ -22,6 +22,19 @@ draft: true
 
 <br>
 
+<div class="fg-gallery">
+  <div class="fg-stage">
+    <span class="fg-counter" aria-hidden="true"></span>
+    <button class="fg-arrow fg-prev" type="button" aria-label="Previous image">&lsaquo;</button>
+    <button class="fg-arrow fg-next" type="button" aria-label="Next image">&rsaquo;</button>
+    <div class="fg-item" data-caption="The tomb of Cyrus the Great at Pasargadae &mdash; a plain gabled chamber on a stepped plinth, still standing after 2,500 years." data-credit="Truth Seeker &middot; Wikimedia Commons (CC BY-SA 3.0)"><img src="/images/culture/achaemenid/photos/tomb-of-cyrus-pasargadae.jpg" alt="The tomb of Cyrus the Great at Pasargadae" loading="lazy"></div>
+    <div class="fg-item" data-caption="The Gate of All Nations at Persepolis, built by Xerxes and guarded by colossal winged bulls &mdash; where the empire&rsquo;s subjects entered to bring tribute." data-credit="Skot &middot; Wikimedia Commons (CC BY-SA 4.0)"><img src="/images/culture/achaemenid/photos/persepolis-gate-of-nations.jpg" alt="The Gate of All Nations at Persepolis" loading="lazy"></div>
+    <div class="fg-item" data-caption="The ruined columns of the Apadana at Persepolis &mdash; the vast audience hall, burned by Alexander in 330 BC." data-credit="A. Davey &middot; Wikimedia Commons (CC BY 2.0)"><img src="/images/culture/achaemenid/photos/persepolis-apadana-ruins.jpg" alt="Ruins of the Apadana columns at Persepolis" loading="lazy"></div>
+  </div>
+  <p class="fg-cap"></p>
+  <div class="fg-dots"></div>
+</div>
+
 <h3>Pasargadae &mdash; Cyrus&rsquo;s Capital and Tomb</h3>
 
 <p><strong><a href="https://www.worldhistory.org/Pasargadae/" target="_blank">Pasargadae</a></strong>, in the highlands of Fars, was the first Achaemenid capital &mdash; founded by Cyrus the Great on the site of his victory over the Medes. Its scattered palaces, gardens, and columned halls introduced ideas the later capitals would magnify, including the walled royal <em>paradise</em> garden. But Pasargadae&rsquo;s enduring monument is the <strong>tomb of Cyrus</strong> &mdash; a simple, dignified gabled stone chamber raised on six broad steps, standing alone on the plain. It survives largely because, centuries later, Alexander the Great is said to have ordered it protected and restored, honoring the founder even as he ended the dynasty. That plain limestone tomb is the resting place of the man Isaiah called the LORD&rsquo;s &ldquo;shepherd&rdquo; and &ldquo;anointed&rdquo; (see <a href="/culture/ancient/achaemenid/05-cyrus-and-the-return/">Section 05</a>) &mdash; the deliverer who ended the exile. Its restraint is itself a kind of eloquence.</p>
@@ -137,6 +150,8 @@ draft: true
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
+<script src="/js/fg-gallery.js"></script>
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}

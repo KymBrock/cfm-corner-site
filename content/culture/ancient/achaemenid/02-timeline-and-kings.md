@@ -79,6 +79,11 @@ draft: true
 
 <br>
 
+<figure class="fg-figure" style="max-width:560px;">
+  <img src="/images/culture/achaemenid/photos/darius-xerxes-treasury-relief.jpg" alt="Persepolis relief of Darius the Great enthroned with crown prince Xerxes behind" loading="lazy">
+  <figcaption>Darius the Great enthroned, the crown prince <b>Xerxes</b> standing behind him &mdash; a relief from the Persepolis treasury. Between them these two carry much of the story here: Darius sees the temple finished (Ezra 6), and Xerxes is the <b>Ahasuerus</b> of Esther. <span class="fg-credit">Persepolis Treasury relief &middot; photo A. Davey, Wikimedia Commons (CC BY 2.0)</span></figcaption>
+</figure>
+
 <h3>Visual Timeline: Persia and the Return</h3>
 
 <div style="position: relative; margin: 32px 0 40px 0; padding-left: 40px;">
@@ -284,6 +289,7 @@ draft: true
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}

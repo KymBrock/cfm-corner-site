@@ -66,6 +66,11 @@ draft: true
 
 <p>One of the most vivid windows into this exact world comes not from Jerusalem but from the far southern edge of the empire. On the island of <strong>Elephantine</strong> in the Nile at Aswan, a colony of Jewish soldiers served in the Persian garrison guarding Egypt&rsquo;s frontier &mdash; and they left behind an archive of <strong>Aramaic papyri</strong> from the fifth century BC: letters, contracts, marriage documents, and legal records of an ordinary Jewish community living under Persian rule.</p>
 
+<figure class="fg-figure" style="max-width:520px;">
+  <img src="/images/culture/achaemenid/photos/elephantine-passover-ostracon.jpg" alt="An Aramaic ostracon from Elephantine mentioning the Passover" loading="lazy">
+  <figcaption>An Aramaic ostracon (inscribed potsherd) from <b>Elephantine</b>, the Jewish garrison colony on the Nile, c. 475 BC &mdash; this one mentioning the <b>Passover</b>. The Elephantine archive is an outside window onto ordinary Judean life at the empire&rsquo;s far edge. <span class="fg-credit">photo SpeakingArch, Wikimedia Commons (CC BY-SA 4.0)</span></figcaption>
+</figure>
+
 <p>The Elephantine papyri are precious for several reasons. They show Aramaic-speaking Jews (see <a href="/culture/ancient/achaemenid/03-how-the-empire-worked/">Section 03</a>) conducting daily life exactly as the biblical books imply &mdash; and they intersect the Bible directly: one papyrus is a letter from the colony <strong>appealing to the governor of Judah for help rebuilding their own temple</strong>, and it names officials known from Nehemiah&rsquo;s world, including <strong>Sanballat</strong> of Samaria (Nehemiah&rsquo;s chief antagonist) and the high-priestly family of Jerusalem. Here is external, dated documentation touching the very people and offices of the book of Nehemiah. The papyri also show the messier reality on the ground &mdash; this frontier community had its own temple (against the Deuteronomic centralization of worship in Jerusalem) and even paired the LORD with other divine names in some texts &mdash; a reminder that the reforms of Ezra and Nehemiah were correcting real, widespread laxity, not tilting at imaginary problems.</p>
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
@@ -103,6 +108,7 @@ draft: true
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}

@@ -45,6 +45,11 @@ draft: true
 
 <p>In 1879, excavators at Babylon unearthed a barrel-shaped clay cylinder covered in Akkadian cuneiform &mdash; a foundation deposit Cyrus had buried in the city&rsquo;s walls after taking it in 539 BC. The <strong><a href="https://www.britishmuseum.org/collection/object/W_1880-0617-1941" target="_blank">Cyrus Cylinder</a></strong>, now in the British Museum, is the king&rsquo;s own account of his conquest and his policy &mdash; and it independently confirms the <em>kind</em> of ruler the Bible describes.</p>
 
+<figure class="fg-figure" style="max-width:640px;">
+  <img src="/images/culture/achaemenid/photos/cyrus-cylinder-bm.jpg" alt="The Cyrus Cylinder, British Museum" loading="lazy">
+  <figcaption>The <b>Cyrus Cylinder</b> &mdash; Cyrus&rsquo;s own account of taking Babylon and letting captive peoples go home to rebuild their temples: the imperial policy behind the decree of <a href="https://www.blueletterbible.org/kjv/ezr/1/1/" target="_blank" data-ref="Ezra 1:1-4">Ezra 1</a>. <a href="https://www.livius.org/sources/content/cyrus-cylinder/cyrus-cylinder-translation/" target="_blank">Read the decree &rarr;</a> <span class="fg-credit">British Museum &middot; photo Prioryman, Wikimedia Commons (CC BY-SA 3.0)</span></figcaption>
+</figure>
+
 <p>On the cylinder, Cyrus presents himself not as a foreign conqueror but as the legitimate king chosen by Babylon&rsquo;s own god Marduk, who (Cyrus claims) took him by the hand and delivered the city to him without a battle because its last king had neglected the gods. And then comes the policy that matters: Cyrus declares that he <strong>returned the images of the gods</strong> that had been gathered into Babylon <strong>to their own cities and sanctuaries</strong>, and <strong>restored their peoples to their dwellings</strong>. In his own words, he gathered the displaced and &ldquo;returned them to their homes.&rdquo;</p>
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
@@ -106,6 +111,7 @@ draft: true
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}
