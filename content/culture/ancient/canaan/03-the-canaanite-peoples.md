@@ -48,43 +48,43 @@ description: "The 'seven nations' of Deuteronomy 7 — city-states, social struc
 <tbody>
 <tr style="background: #f0ebe5;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Hittites</strong></td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><em>Chitti</em> (<a href="https://www.blueletterbible.org/lexicon/h2850/kjv/wlc/0-1/" target="_blank">חִתִּי</a>)</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><em>Chitti</em> (חִתִּי)</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Hebron area; southern highlands</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Abraham bought the cave of Machpelah from Ephron the Hittite (<a href="https://www.blueletterbible.org/kjv/gen/23/10/" target="_blank" data-ref="Genesis 23:10">Genesis 23:10</a>). These &ldquo;Hittites&rdquo; in Canaan may represent a local Semitic group rather than the great Anatolian <a href="https://www.worldhistory.org/hittite/" target="_blank">Hittite Empire</a> &mdash; the relationship between the two is debated. Uriah the Hittite, David&rsquo;s loyal soldier, bore a YHWH-based name, suggesting integration into Israelite culture.</td>
 </tr>
 <tr style="background: white;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Girgashites</strong></td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><em>Girgashi</em> (<a href="https://www.blueletterbible.org/lexicon/h1622/kjv/wlc/0-1/" target="_blank">גִּרְגָּשִׁי</a>)</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><a href="https://www.blueletterbible.org/lexicon/h1622/kjv/wlc/0-1/" target="_blank" data-lexicon="Girgashite or Girgasite = &quot;dwelling on a clayey soil&quot;" data-strongs="H1622" data-translit="girgāšî" data-original="גִּרְגָּשִׁי" data-lang="hebrew" data-verse=""><em>Girgashi</em></a> (גִּרְגָּשִׁי)</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Unknown</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">The most obscure of the seven. No biblical narrative features them individually. Some scholars connect them to the &ldquo;Qarqisha&rdquo; mentioned in <a href="https://www.worldhistory.org/ugarit/" target="_blank">Ugaritic</a> texts, but the identification is uncertain. Their persistent appearance in the lists suggests they were a recognized group, even though their territory and history are lost.</td>
 </tr>
 <tr style="background: #f0ebe5;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Amorites</strong></td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><em>Emori</em> (<a href="https://www.blueletterbible.org/lexicon/h567/kjv/wlc/0-1/" target="_blank">אֱמֹרִי</a>)</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><a href="https://www.blueletterbible.org/lexicon/h567/kjv/wlc/0-1/" target="_blank" data-lexicon="Amorite = &quot;a sayer&quot;" data-strongs="H567" data-translit="ĕmōrî" data-original="אֱמֹרִי" data-lang="hebrew" data-verse=""><em>Emori</em></a> (אֱמֹרִי)</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Hill country; Transjordan</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">One of the most prominent groups. In Mesopotamian texts, &ldquo;Amurru&rdquo; meant &ldquo;westerners&rdquo; &mdash; a broad term for peoples from the Levant. In the Bible, &ldquo;Amorites&rdquo; often refers to the highland population generally. Sihon and Og, the Transjordanian kings defeated by Moses (<a href="https://www.blueletterbible.org/kjv/num/21/21/" target="_blank" data-ref="Numbers 21:21-35">Numbers 21:21&ndash;35</a>), were Amorite rulers. The five kings who attacked Gibeon were called Amorite (<a href="https://www.blueletterbible.org/kjv/jos/10/5/" target="_blank" data-ref="Joshua 10:5">Joshua 10:5</a>).</td>
 </tr>
 <tr style="background: white;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Canaanites</strong></td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><em>Kena&rsquo;ani</em> (<a href="https://www.blueletterbible.org/lexicon/h3669/kjv/wlc/0-1/" target="_blank">כְּנַעֲנִי</a>)</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><em>Kena&rsquo;ani</em> (כְּנַעֲנִי)</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Coastal plain; Jordan Valley; lowlands</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">The name is used both broadly (all the peoples of the land) and narrowly (a specific lowland group). In the narrow sense, &ldquo;Canaanites&rdquo; inhabited the fertile lowlands and valleys. Interestingly, the root <em>kena&rsquo;an</em> may be connected to the word for &ldquo;merchant&rdquo; or &ldquo;trader&rdquo; &mdash; reflecting the commercial character of the lowland cities.</td>
 </tr>
 <tr style="background: #f0ebe5;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Perizzites</strong></td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><em>Perizzi</em> (<a href="https://www.blueletterbible.org/lexicon/h6522/kjv/wlc/0-1/" target="_blank">פְּרִזִּי</a>)</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><em>Perizzi</em> (פְּרִזִּי)</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Central highlands; forested hill country</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Mentioned alongside the Canaanites multiple times (<a href="https://www.blueletterbible.org/kjv/gen/13/7/" target="_blank" data-ref="Genesis 13:7">Genesis 13:7</a>; <a href="https://www.blueletterbible.org/kjv/jdg/1/4/" target="_blank" data-ref="Judges 1:4-5">Judges 1:4&ndash;5</a>). Some scholars connect the name to <em>perazot</em> (פְּרָזוֹת &mdash; &ldquo;unwalled villages&rdquo;), suggesting they were rural, unfortified villagers rather than city-dwellers &mdash; a social description rather than an ethnic one.</td>
 </tr>
 <tr style="background: white;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Hivites</strong></td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><em>Chivvi</em> (<a href="https://www.blueletterbible.org/lexicon/h2340/kjv/wlc/0-1/" target="_blank">חִוִּי</a>)</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><em>Chivvi</em> (חִוִּי)</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Central hills (Gibeon area); Lebanon foothills</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Best known through the <strong>Gibeonites</strong>, who deceived Joshua into a treaty by pretending to be from a distant land (<a href="https://www.blueletterbible.org/kjv/jos/9/3/" target="_blank" data-ref="Joshua 9:3-27">Joshua 9:3&ndash;27</a>). That treaty, sworn in YHWH&rsquo;s name, proved unbreakable &mdash; centuries later, Saul&rsquo;s violation of it brought famine on Israel (<a href="https://www.blueletterbible.org/kjv/2sa/21/1/" target="_blank" data-ref="2 Samuel 21:1">2 Samuel 21:1</a>). Shechem was also a Hivite city (<a href="https://www.blueletterbible.org/kjv/gen/34/2/" target="_blank" data-ref="Genesis 34:2">Genesis 34:2</a>).</td>
 </tr>
 <tr style="background: #f0ebe5;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Jebusites</strong></td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><em>Yevusi</em> (<a href="https://www.blueletterbible.org/lexicon/h2983/kjv/wlc/0-1/" target="_blank">יְבוּסִי</a>)</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><em>Yevusi</em> (יְבוּסִי)</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Jerusalem (Jebus)</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">The inhabitants of Jebus &mdash; the pre-Israelite name for Jerusalem. Despite being listed for dispossession, they held the city until David conquered it centuries later (<a href="https://www.blueletterbible.org/kjv/2sa/5/6/" target="_blank" data-ref="2 Samuel 5:6-7">2 Samuel 5:6&ndash;7</a>). The note in <a href="https://www.blueletterbible.org/kjv/jos/15/63/" target="_blank" data-ref="Joshua 15:63">Joshua 15:63</a> &mdash; &ldquo;the Jebusites dwell with the children of Judah at Jerusalem unto this day&rdquo; &mdash; marks one of the most significant failures of the incomplete conquest.</td>
 </tr>
@@ -108,7 +108,7 @@ description: "The 'seven nations' of Deuteronomy 7 — city-states, social struc
 
 <h4>How a City-State Worked</h4>
 
-<p>Each city-state was ruled by a king &mdash; the Hebrew <em>melekh</em> (<a href="https://www.blueletterbible.org/lexicon/h4428/kjv/wlc/0-1/" target="_blank">מֶלֶךְ</a>), though &ldquo;king&rdquo; overstates the scale. These were local rulers, more like warlords or mayors of fortified towns than monarchs of nations. <a href="https://www.blueletterbible.org/kjv/jos/12/1/" target="_blank" data-ref="Joshua 12">Joshua 12</a> lists thirty-one kings defeated in the conquest &mdash; an astonishing number for such a small territory, and a clear indicator of how fragmented the political landscape was.</p>
+<p>Each city-state was ruled by a king &mdash; the Hebrew <a href="https://www.blueletterbible.org/lexicon/h4428/kjv/wlc/0-1/" target="_blank" data-lexicon="king" data-strongs="H4428" data-translit="melekh" data-original="מֶלֶךְ" data-lang="hebrew" data-verse="Genesis 14:18"><em>melekh</em></a> (מֶלֶךְ), though &ldquo;king&rdquo; overstates the scale. These were local rulers, more like warlords or mayors of fortified towns than monarchs of nations. <a href="https://www.blueletterbible.org/kjv/jos/12/1/" target="_blank" data-ref="Joshua 12">Joshua 12</a> lists thirty-one kings defeated in the conquest &mdash; an astonishing number for such a small territory, and a clear indicator of how fragmented the political landscape was.</p>
 
 <p>A typical Canaanite city-state consisted of:</p>
 
@@ -256,7 +256,7 @@ description: "The 'seven nations' of Deuteronomy 7 — city-states, social struc
 <li><strong>Edomites</strong> &mdash; Descendants of Esau, settled south and east of the Dead Sea. They refused Israel passage on the King&rsquo;s Highway (<a href="https://www.blueletterbible.org/kjv/num/20/18/" target="_blank" data-ref="Numbers 20:18">Numbers 20:18</a>).</li>
 <li><strong>Moabites</strong> &mdash; East of the Dead Sea. Balak hired Balaam to curse Israel (<a href="https://www.blueletterbible.org/kjv/num/22/1/" target="_blank" data-ref="Numbers 22:1-6">Numbers 22:1&ndash;6</a>). Ruth the Moabitess, like Rahab, became an ancestor of David and Christ.</li>
 <li><strong>Ammonites</strong> &mdash; Northeast of the Dead Sea. Persistent enemies during the Judges period; Jephthah fought them (<a href="https://www.blueletterbible.org/kjv/jdg/11/4/" target="_blank" data-ref="Judges 11:4-33">Judges 11:4&ndash;33</a>).</li>
-<li><strong>Rephaim / Anakim</strong> &mdash; The &ldquo;giants&rdquo; of the land. The ten spies feared them (<a href="https://www.blueletterbible.org/kjv/num/13/33/" target="_blank" data-ref="Numbers 13:33">Numbers 13:33</a>); Caleb drove them out of Hebron (<a href="https://www.blueletterbible.org/kjv/jos/14/12/" target="_blank" data-ref="Joshua 14:12">Joshua 14:12</a>); Goliath of Gath may have been a descendant. The term <em>Rephaim</em> (<a href="https://www.blueletterbible.org/lexicon/h7497/kjv/wlc/0-1/" target="_blank">רְפָאִים</a>) is also used in Ugaritic texts for the shades of the dead, creating an ambiguity between &ldquo;ancient warriors&rdquo; and &ldquo;the dead&rdquo; that may have been intentional.</li>
+<li><strong>Rephaim / Anakim</strong> &mdash; The &ldquo;giants&rdquo; of the land. The ten spies feared them (<a href="https://www.blueletterbible.org/kjv/num/13/33/" target="_blank" data-ref="Numbers 13:33">Numbers 13:33</a>); Caleb drove them out of Hebron (<a href="https://www.blueletterbible.org/kjv/jos/14/12/" target="_blank" data-ref="Joshua 14:12">Joshua 14:12</a>); Goliath of Gath may have been a descendant. The term <em>Rephaim</em> (רְפָאִים) is also used in Ugaritic texts for the shades of the dead, creating an ambiguity between &ldquo;ancient warriors&rdquo; and &ldquo;the dead&rdquo; that may have been intentional.</li>
 </ul>
 
 <br>
