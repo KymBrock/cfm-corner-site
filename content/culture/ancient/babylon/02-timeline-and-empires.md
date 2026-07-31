@@ -240,7 +240,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #c0392b; font-size: 0.9em;">556&ndash;539</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Nabonidus</strong>, the last king &mdash; a devotee of the moon god who abandons the capital for ten years, leaving his son <strong>Belshazzar</strong> as regent in Babylon (the arrangement behind Daniel 5)</span>
+<span style="flex: 1; font-size: 0.95em;"><strong>Nabonidus</strong>, the last king &mdash; a devotee of the moon god who abandons the capital for ten years, leaving his son <strong>Belshazzar</strong> as regent in Babylon (the arrangement behind <a href="https://www.blueletterbible.org/kjv/dan/5/1/" target="_blank" data-ref="Daniel 5">Daniel 5</a>)</span>
 </div>
 
 </div>
@@ -381,22 +381,22 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <tr style="background: #f0ebe5;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Nabopolassar</strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">626&ndash;605 BC</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Unnamed; his war ends Assyria (Nahum, Zephaniah 2:13)</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Unnamed; his war ends Assyria (Nahum, <a href="https://www.blueletterbible.org/kjv/zep/2/13/" target="_blank" data-ref="Zephaniah 2:13">Zephaniah 2:13</a>)</td>
 </tr>
 <tr style="background: white;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Nebuchadnezzar II</strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">605&ndash;562 BC</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">2 Kings 24&ndash;25; Jeremiah; Ezekiel; Daniel 1&ndash;4</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><a href="https://www.blueletterbible.org/kjv/2ki/24/1/" target="_blank" data-ref="2 Kings 24">2 Kings 24</a>&ndash;25; Jeremiah; Ezekiel; <a href="https://www.blueletterbible.org/kjv/dan/1/1/" target="_blank" data-ref="Daniel 1">Daniel 1</a>&ndash;4</td>
 </tr>
 <tr style="background: #f0ebe5;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Amel-Marduk</strong> (Evil-merodach)</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">562&ndash;560 BC</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Releases Jehoiachin (2 Kings 25:27&ndash;30)</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Releases Jehoiachin (<a href="https://www.blueletterbible.org/kjv/2ki/25/27/" target="_blank" data-ref="2 Kings 25:27">2 Kings 25:27&ndash;30</a>)</td>
 </tr>
 <tr style="background: white;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Neriglissar</strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">560&ndash;556 BC</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Likely the &ldquo;Nergal-sharezer&rdquo; of Jeremiah 39:3</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Likely the &ldquo;Nergal-sharezer&rdquo; of <a href="https://www.blueletterbible.org/kjv/jer/39/3/" target="_blank" data-ref="Jeremiah 39:3">Jeremiah 39:3</a></td>
 </tr>
 <tr style="background: #f0ebe5;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Labashi-Marduk</strong></td>
@@ -406,7 +406,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <tr style="background: white;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Nabonidus</strong> (with <strong>Belshazzar</strong> as regent)</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">556&ndash;539 BC</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Belshazzar&rsquo;s feast, Daniel 5</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Belshazzar&rsquo;s feast, <a href="https://www.blueletterbible.org/kjv/dan/5/1/" target="_blank" data-ref="Daniel 5">Daniel 5</a></td>
 </tr>
 </tbody>
 </table>
