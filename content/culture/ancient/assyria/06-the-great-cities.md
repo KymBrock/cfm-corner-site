@@ -1,6 +1,6 @@
 ---
 title: "The Great Cities"
-description: "Ashur the god&rsquo;s own city, Kalhu with its winged bulls, Sargon&rsquo;s abandoned dream at Khorsabad, and Nineveh &mdash; the &lsquo;exceeding great city&rsquo; whose royal gardens may be the real Hanging Gardens."
+description: "Ashur the god’s own city, Kalhu with its winged bulls, Sargon’s abandoned dream at Khorsabad, and Nineveh — the ‘exceeding great city’ whose royal gardens may be the real Hanging Gardens."
 draft: true
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "The Assyrian Heartland"
-description: "The rain-fed highland on the upper Tigris &mdash; Ashur, Nineveh, Kalhu, and Arbela &mdash; a secure breadbasket ringed by mountains and enemies, whose very exposure bred the empire that always came &lsquo;out of the north.&rsquo;"
+description: "The rain-fed highland on the upper Tigris — Ashur, Nineveh, Kalhu, and Arbela — a secure breadbasket ringed by mountains and enemies, whose very exposure bred the empire that always came ‘out of the north.’"
 draft: true
 ---
 

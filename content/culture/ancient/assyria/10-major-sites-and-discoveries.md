@@ -1,6 +1,6 @@
 ---
 title: "Major Sites & Discoveries"
-description: "How Assyria came back from the dead — Botta and Layard and Rassam pulling winged bulls out of the mounds, Rawlinson reading a cliff in Persia, and the reliefs of the empire the prophets condemned now lining the walls of the world&rsquo;s museums."
+description: "How Assyria came back from the dead — Botta and Layard and Rassam pulling winged bulls out of the mounds, Rawlinson reading a cliff in Persia, and the reliefs of the empire the prophets condemned now lining the walls of the world’s museums."
 draft: true
 ---
 
