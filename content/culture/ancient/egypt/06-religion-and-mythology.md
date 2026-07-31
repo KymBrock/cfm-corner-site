@@ -13,7 +13,7 @@ description: "The gods of Egypt, the afterlife journey, the Book of the Dead, an
 
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">Understanding the gods the plagues challenged, the afterlife the Book of the Dead described, and the traditions that preserved Abraham's name for millennia</p>
 
-<p>Egyptian religion was not a monolithic system imposed from above. It was a living, evolving tradition that developed over three thousand years, absorbing local cults, reinterpreting ancient myths, and adapting to new political realities. Yet certain core themes persisted from the Old Kingdom through the Roman period: the centrality of <em>ma'at</em> (cosmic order), the divine kingship of Pharaoh, the hope for eternal life, and the power of ritual to bridge the gap between human and divine.</p>
+<p>Egyptian religion was not a monolithic system imposed from above. It was a living, evolving tradition that developed over three thousand years, absorbing local cults, reinterpreting ancient myths, and adapting to new political realities. Yet certain core themes persisted from the Old Kingdom through the Roman period: the centrality of <a href="https://www.blueletterbible.org/lexicon/h4591/kjv/wlc/0-1/" target="_blank" data-lexicon="to be or become small, be few, be diminished (Qal) to diminish to be too small (Piel) to become few (Hiphil) to make ..." data-strongs="H4591" data-translit="māʿaṭ" data-original="מָעַט" data-lang="hebrew" data-verse=""><em>ma'at</em></a> (cosmic order), the divine kingship of Pharaoh, the hope for eternal life, and the power of ritual to bridge the gap between human and divine.</p>
 
 <p>For Latter-day Saint scripture students, Egyptian religion provides the essential background for understanding the plagues narrative, the Book of Abraham, and the funerary documents that would eventually reach Joseph Smith.</p>
 
@@ -327,7 +327,7 @@ description: "The gods of Egypt, the afterlife journey, the Book of the Dead, an
 
 <p>The Exodus narrative makes far more sense when read against the backdrop of Egyptian theology:</p>
 
-<p><strong>Pharaoh's divine status:</strong> The pharaoh was not merely a powerful king. He was the living Horus, the son of Ra, the embodiment of <em>ma'at</em> on earth. When Moses demanded that Pharaoh release the Israelites, he was asking a god to submit to a foreign deity. Pharaoh's repeated refusal was not just political stubbornness &mdash; it was theological: to yield to YHWH would be to admit that the entire Egyptian religious system was false.</p>
+<p><strong>Pharaoh's divine status:</strong> The pharaoh was not merely a powerful king. He was the living Horus, the son of Ra, the embodiment of <a href="https://www.blueletterbible.org/lexicon/h4591/kjv/wlc/0-1/" target="_blank" data-lexicon="to be or become small, be few, be diminished (Qal) to diminish to be too small (Piel) to become few (Hiphil) to make ..." data-strongs="H4591" data-translit="māʿaṭ" data-original="מָעַט" data-lang="hebrew" data-verse=""><em>ma'at</em></a> on earth. When Moses demanded that Pharaoh release the Israelites, he was asking a god to submit to a foreign deity. Pharaoh's repeated refusal was not just political stubbornness &mdash; it was theological: to yield to YHWH would be to admit that the entire Egyptian religious system was false.</p>
 
 <p><strong>The plagues as theological argument:</strong> Each plague systematically dismantled Egyptian religious claims. When the Nile turned to blood, it demonstrated YHWH's power over the source of Egyptian life. When darkness covered the land for three days, it silenced Ra, the sun god. When the firstborn died, it struck at the heart of Pharaoh's divine lineage. The message was not simply "let my people go" but "there is no god besides Me."</p>
 
@@ -352,7 +352,7 @@ description: "The gods of Egypt, the afterlife journey, the Book of the Dead, an
 <li><strong>Chaos</strong> (<em>isfet</em>) was ma'at's opposite &mdash; the constant threat of disorder that could overwhelm the world if the rituals ceased and the gods were neglected.</li>
 </ul>
 
-<p>The concept of ma'at resonates in interesting ways with biblical concepts of righteousness (<em>tsedaqah</em>) and justice (<em>mishpat</em>), though the theological frameworks are different. In Egyptian thought, ma'at was maintained by human ritual action; in biblical thought, righteousness flows from God's character and covenant.</p>
+<p>The concept of ma'at resonates in interesting ways with biblical concepts of righteousness (<a href="https://www.blueletterbible.org/lexicon/h6666/kjv/wlc/0-1/" target="_blank" data-lexicon="righteousness, justice" data-strongs="H6666" data-translit="tsedaqah" data-original="צְדָקָה" data-lang="hebrew" data-verse="Isaiah 5:7"><em>tsedaqah</em></a>) and justice (<a href="https://www.blueletterbible.org/lexicon/h4941/kjv/wlc/0-1/" target="_blank" data-lexicon="judgment, justice, legal decision" data-strongs="H4941" data-translit="mishpat" data-original="מִשְׁפָּט" data-lang="hebrew" data-verse="Isaiah 5:7"><em>mishpat</em></a>), though the theological frameworks are different. In Egyptian thought, ma'at was maintained by human ritual action; in biblical thought, righteousness flows from God's character and covenant.</p>
 
 <br>
 

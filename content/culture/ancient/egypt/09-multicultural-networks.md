@@ -84,7 +84,7 @@ description: "Egypt was never isolated — Canaanites, Minoans, Nubians, Hittite
 <p>Egypt's relationship with <strong>Nubia</strong> (modern Sudan) was among its oldest and most complex:</p>
 
 <ul>
-<li><strong>Trade:</strong> Nubia was Egypt's primary source of gold (the Egyptian word for gold, <em>nub</em>, may be the origin of the name "Nubia"), along with ivory, ebony, incense, exotic animals, and enslaved people.</li>
+<li><strong>Trade:</strong> Nubia was Egypt's primary source of gold (the Egyptian word for gold, <a href="https://www.blueletterbible.org/lexicon/h5107/kjv/wlc/0-1/" target="_blank" data-lexicon="to bear fruit(Qal) to bear fruit(Pilel) to make to flourish (fig.)" data-strongs="H5107" data-translit="nûḇ" data-original="נוּב" data-lang="hebrew" data-verse=""><em>nub</em></a>, may be the origin of the name "Nubia"), along with ivory, ebony, incense, exotic animals, and enslaved people.</li>
 <li><strong>Military campaigns:</strong> Egyptian pharaohs from the Old Kingdom onward launched campaigns into Nubia. The New Kingdom pharaohs built fortresses along the Nile between the first and fourth cataracts, and Abu Simbel's massive statues were designed partly to overawe the Nubian population.</li>
 <li><strong>The 25th Dynasty:</strong> In the 8th&ndash;7th centuries BC, the tables turned. <strong>Kushite</strong> kings from Nubia conquered Egypt and ruled as the 25th Dynasty, worshipping Amun more devoutly than some native Egyptian pharaohs. The Kushite pharaoh <strong>Taharqa</strong> is the "Tirhakah king of Ethiopia" mentioned in <a href="https://www.blueletterbible.org/kjv/2ki/19/9/" target="_blank" data-ref="2 Kings 19:9">2 Kings 19:9</a> and <a href="https://www.blueletterbible.org/kjv/isa/37/9/" target="_blank" data-ref="Isaiah 37:9">Isaiah 37:9</a>, who marched against the Assyrian king Sennacherib.</li>
 <li><strong>Cultural exchange:</strong> Nubian/Kushite civilization adopted Egyptian religious practices, built pyramids (more than 200 at Meroe alone &mdash; more than in Egypt itself), and wrote in Egyptian-derived scripts. The Kingdom of Kush survived until c. AD 350, long after the pharaonic tradition had ended in Egypt.</li>
@@ -131,7 +131,7 @@ description: "Egypt was never isolated — Canaanites, Minoans, Nubians, Hittite
 
 <h4>The "Sea Peoples" and the Bronze Age Collapse</h4>
 
-<p>Around 1200 BC, Egyptian records describe attacks by groups they called the <strong><a href="https://www.worldhistory.org/Sea_Peoples/" target="_blank">"Sea Peoples"</a></strong>. Ramesses III repelled their invasion of Egypt (c. 1178 BC, depicted in dramatic reliefs at Medinet Habu) and recorded the names of the groups he defeated: the <em>Peleset</em>, <em>Tjeker</em>, <em>Shekelesh</em>, <em>Denyen</em>, and <em>Weshesh</em>. Earlier pharaohs had encountered others &mdash; the <em>Sherden</em>, <em>Lukka</em>, <em>Ekwesh</em>, and <em>Teresh</em>.</p>
+<p>Around 1200 BC, Egyptian records describe attacks by groups they called the <strong><a href="https://www.worldhistory.org/Sea_Peoples/" target="_blank">"Sea Peoples"</a></strong>. Ramesses III repelled their invasion of Egypt (c. 1178 BC, depicted in dramatic reliefs at Medinet Habu) and recorded the names of the groups he defeated: the <em>Peleset</em>, <em>Tjeker</em>, <em>Shekelesh</em>, <em>Denyen</em>, and <em>Weshesh</em>. Earlier pharaohs had encountered others &mdash; the <em>Sherden</em>, <em>Lukka</em>, <em>Ekwesh</em>, and <a href="https://www.blueletterbible.org/lexicon/h8657/kjv/wlc/0-1/" target="_blank" data-lexicon="Teresh = &quot;strictness&quot;one of the 2 eunuchs who plotted to kill king Ahasuerus of Persia but whose plot was discovered ..." data-strongs="H8657" data-translit="tereš" data-original="תֶּרֶשׁ" data-lang="hebrew" data-verse=""><em>Teresh</em></a>.</p>
 
 <p>These were <strong>not a single people</strong>. Scholars have tentatively identified them as displaced populations from across the Mediterranean:</p>
 
@@ -175,7 +175,7 @@ description: "Egypt was never isolated — Canaanites, Minoans, Nubians, Hittite
 <td style="padding: 8px 14px; border-bottom: 1px solid #e0e0e0;">Southwest Anatolia</td>
 </tr>
 <tr style="background: #f0ebe5;">
-<td style="padding: 8px 14px; border-bottom: 1px solid #e0e0e0;"><em>Teresh</em></td>
+<td style="padding: 8px 14px; border-bottom: 1px solid #e0e0e0;"><a href="https://www.blueletterbible.org/lexicon/h8657/kjv/wlc/0-1/" target="_blank" data-lexicon="Teresh = &quot;strictness&quot;one of the 2 eunuchs who plotted to kill king Ahasuerus of Persia but whose plot was discovered ..." data-strongs="H8657" data-translit="tereš" data-original="תֶּרֶשׁ" data-lang="hebrew" data-verse=""><em>Teresh</em></a></td>
 <td style="padding: 8px 14px; border-bottom: 1px solid #e0e0e0;">Tyrrhenians (proto-Etruscans)</td>
 <td style="padding: 8px 14px; border-bottom: 1px solid #e0e0e0;">Anatolia / Italy</td>
 </tr>
