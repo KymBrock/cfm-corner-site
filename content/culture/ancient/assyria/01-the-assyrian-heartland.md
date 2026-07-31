@@ -14,6 +14,19 @@ draft: true
 
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">The rain-fed highland that raised the world&rsquo;s first empire &mdash; and why it could never rest</p>
 
+<!-- LISTEN PLAYER (section narration) -->
+<div class="listen-player">
+<div class="lp-head">
+<span class="lp-icon" aria-hidden="true"></span>
+<span class="lp-title">Listen to this section</span>
+</div>
+<audio controls preload="none">
+<source src="/audio/culture/assyria/01-the-assyrian-heartland.mp3" type="audio/mpeg">
+Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/assyria/01-the-assyrian-heartland.mp3">download the audio</a> instead.
+</audio>
+</div>
+<!-- /LISTEN PLAYER -->
+
 <p>Assyria was born on the upper reaches of a single river. Where Babylonia spread across the flat, irrigated floodplain of the far south (see the sister guide&rsquo;s <a href="/culture/ancient/babylon/01-the-land-between-the-rivers/">The Land Between the Rivers</a>), the Assyrian homeland lay hundreds of kilometers to the north, along the <strong>Tigris</strong> as it runs down out of the hills onto the rolling plains of what is now northern Iraq. This was rougher, higher, cooler country &mdash; the northern edge of the Fertile Crescent, where the mountains of the Zagros and the Armenian highlands begin to rise. It was a good land to farm and a hard land to hold, and both facts left their fingerprints on everything Assyria became.</p>
 
 <p>Understanding this landscape is the first step to understanding the empire &mdash; why its agriculture was secure while its borders never were, why a kingdom that began as a single trading city ended up conquering from Egypt to Iran, and why the Bible met Assyria before it met Babylon, always coming down the same road from the north. Geography did not make Assyria cruel; but it did make Assyria anxious, and an anxious power on an open frontier is a dangerous thing.</p>

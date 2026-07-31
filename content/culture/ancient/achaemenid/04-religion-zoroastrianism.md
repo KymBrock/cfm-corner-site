@@ -14,6 +14,19 @@ draft: true
 
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">The faith of the Persian kings &mdash; and the careful question of what, if anything, it shared with Israel</p>
 
+<!-- LISTEN PLAYER (section narration) -->
+<div class="listen-player">
+<div class="lp-head">
+<span class="lp-icon" aria-hidden="true"></span>
+<span class="lp-title">Listen to this section</span>
+</div>
+<audio controls preload="none">
+<source src="/audio/culture/achaemenid/04-religion-zoroastrianism.mp3" type="audio/mpeg">
+Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/achaemenid/04-religion-zoroastrianism.mp3">download the audio</a> instead.
+</audio>
+</div>
+<!-- /LISTEN PLAYER -->
+
 <p>The Jews who returned from exile lived, for the first time, under rulers who were neither idol-worshippers of the Babylonian kind nor followers of the God of Israel, but adherents of a third thing: an Iranian religion centered on a single great god of light and truth, with no temple statues, honoring fire on open-air altars. That religion &mdash; what we call <strong>Zoroastrianism</strong> &mdash; is the faith of Cyrus&rsquo;s heirs, and understanding it clears up much about the Persian world of Ezra, Nehemiah, Esther, and Daniel. It also raises one of the most delicate questions in the study of the Bible, which this page will handle carefully and honestly: did Persian religion <em>influence</em> Judaism?</p>
 
 <br>

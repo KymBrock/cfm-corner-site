@@ -14,6 +14,19 @@ draft: true
 
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">The empire scripture cannot stop arguing with &mdash; rod, defendant, and object of both judgment and mercy</p>
 
+<!-- LISTEN PLAYER (section narration) -->
+<div class="listen-player">
+<div class="lp-head">
+<span class="lp-icon" aria-hidden="true"></span>
+<span class="lp-title">Listen to this section</span>
+</div>
+<audio controls preload="none">
+<source src="/audio/culture/assyria/09-assyria-and-the-bible.mp3" type="audio/mpeg">
+Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/assyria/09-assyria-and-the-bible.mp3">download the audio</a> instead.
+</audio>
+</div>
+<!-- /LISTEN PLAYER -->
+
 <p>Before Babylon, there was Assyria. For most of two centuries the prophets of Israel and Judah wrote in its shadow, and scripture never quite made up its mind about it. Assyria is the empire God calls a tool in His own hand and then puts on trial for arrogance; the city He sends a prophet to destroy and then, to that prophet&rsquo;s fury, spares; the &ldquo;bloody city&rdquo; whose fall fills an entire book of the Bible, and the &ldquo;great city&rdquo; God says He cannot help but pity. No other foreign power draws so contradictory a response from the Hebrew Scriptures &mdash; and none is more thoroughly corroborated by its own monuments, which name the very Israelite kings the Bible names. This page walks the canonical and prophetic overview; for the historical destruction of the northern kingdom and the siege of 701 BC, the deep dives are next door in <a href="/culture/ancient/assyria/07-the-fall-of-the-north/">Section 07</a> and <a href="/culture/ancient/assyria/08-sennacherib-and-hezekiah/">Section 08</a>.</p>
 
 <br>

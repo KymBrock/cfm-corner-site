@@ -14,6 +14,19 @@ draft: true
 
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">The one campaign Assyria could not turn into a conquest &mdash; and the confidence it left behind</p>
 
+<!-- LISTEN PLAYER (section narration) -->
+<div class="listen-player">
+<div class="lp-head">
+<span class="lp-icon" aria-hidden="true"></span>
+<span class="lp-title">Listen to this section</span>
+</div>
+<audio controls preload="none">
+<source src="/audio/culture/assyria/08-sennacherib-and-hezekiah.mp3" type="audio/mpeg">
+Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/assyria/08-sennacherib-and-hezekiah.mp3">download the audio</a> instead.
+</audio>
+</div>
+<!-- /LISTEN PLAYER -->
+
 <p>Assyrian kings did not write about their failures. Their annals are victory monuments in prose &mdash; cities burned, kings flayed, tribute weighed, the enemy&rsquo;s land &ldquo;turned into ruin-heaps and mounds.&rdquo; So when the great hexagonal clay prism of <strong>Sennacherib</strong> reaches the year 701 BC and the little kingdom of Judah, something remarkable happens. The record boasts, at length and with relish, about everything the Assyrians did to Hezekiah &mdash; and then, at the one moment the reader waits for, it goes conspicuously quiet. It never says he took Jerusalem. On this single event, Assyria&rsquo;s own scribes and the books of Kings and Isaiah tell the same story, agree on the humiliation, and agree on the strangest part: the city did not fall. This page sets the two records side by side, lets the honest gaps stand where they stand, and then follows the deliverance forward &mdash; because the memory of 701 became one of the most consequential ideas in the Old Testament.</p>
 
 <br>

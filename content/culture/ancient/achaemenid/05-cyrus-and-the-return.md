@@ -14,6 +14,19 @@ draft: true
 
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">The decree that ended the exile &mdash; in the Bible and in Cyrus&rsquo;s own words</p>
 
+<!-- LISTEN PLAYER (section narration) -->
+<div class="listen-player">
+<div class="lp-head">
+<span class="lp-icon" aria-hidden="true"></span>
+<span class="lp-title">Listen to this section</span>
+</div>
+<audio controls preload="none">
+<source src="/audio/culture/achaemenid/05-cyrus-and-the-return.mp3" type="audio/mpeg">
+Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/achaemenid/05-cyrus-and-the-return.mp3">download the audio</a> instead.
+</audio>
+</div>
+<!-- /LISTEN PLAYER -->
+
 <p>The book of Kings ends in the dark: Jerusalem burned, the temple destroyed, the people carried to Babylon (see the <a href="/culture/ancient/babylon/07-the-exile-experience/">Babylon guide</a>). The Hebrew Bible, in its own arrangement, does not end there &mdash; it ends with a door swinging open. The very last words of 2 Chronicles are the decree of a Persian king telling the exiles to go home: &ldquo;The LORD God of heaven&hellip; hath charged me to build him an house in Jerusalem&hellip; let him go up&rdquo; (<a href="https://www.blueletterbible.org/kjv/2ch/36/23/" target="_blank" data-ref="2 Chronicles 36:23">2 Chronicles 36:23</a>). This page is about that decree &mdash; the single most important act of the entire Persian period for the Bible &mdash; and about the remarkable object that lets us hear Cyrus&rsquo;s policy in his own voice.</p>
 
 <br>

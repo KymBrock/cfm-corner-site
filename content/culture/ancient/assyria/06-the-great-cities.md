@@ -14,6 +14,19 @@ draft: true
 
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">&ldquo;Out of that land went forth Asshur, and builded Nineveh&hellip;&rdquo;</p>
 
+<!-- LISTEN PLAYER (section narration) -->
+<div class="listen-player">
+<div class="lp-head">
+<span class="lp-icon" aria-hidden="true"></span>
+<span class="lp-title">Listen to this section</span>
+</div>
+<audio controls preload="none">
+<source src="/audio/culture/assyria/06-the-great-cities.mp3" type="audio/mpeg">
+Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/assyria/06-the-great-cities.mp3">download the audio</a> instead.
+</audio>
+</div>
+<!-- /LISTEN PLAYER -->
+
 <p>Assyria did not have a capital so much as a succession of them &mdash; and each move was a sermon in stone. Where Babylon poured its whole imagination into one city on the Euphrates, the Assyrian kings built and abandoned capitals up and down the Tigris, each new one a fresh king&rsquo;s statement that the empire had outgrown the last. Ashur, Kalhu, Dur-Sharrukin, Nineveh: four cities, four reigns, one relentless upward reach. To walk them in order is to watch a kingdom talk to itself about power &mdash; and to arrive, at the end, at the city the Bible knew best.</p>
 
 <br>

@@ -14,6 +14,19 @@ draft: true
 
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">Assyria began the scattering &mdash; and the Restoration is the answer to it</p>
 
+<!-- LISTEN PLAYER (section narration) -->
+<div class="listen-player">
+<div class="lp-head">
+<span class="lp-icon" aria-hidden="true"></span>
+<span class="lp-title">Listen to this section</span>
+</div>
+<audio controls preload="none">
+<source src="/audio/culture/assyria/11-lds-connections.mp3" type="audio/mpeg">
+Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/assyria/11-lds-connections.mp3">download the audio</a> instead.
+</audio>
+</div>
+<!-- /LISTEN PLAYER -->
+
 <p>For Latter-day Saints, Assyria is where the great arc of the last days begins its first swing. The doctrine that fills the Restoration &mdash; the <em>gathering of Israel</em> &mdash; presupposes a scattering, and the scattering has a starting gun: the Assyrian deportations of the eighth century BC, when the ten northern tribes were marched off the map (see <a href="/culture/ancient/assyria/07-the-fall-of-the-north/">Section 07</a>). Assyria also bequeathed something subtler and more dangerous to Jerusalem &mdash; the conviction, born at the wall in 701 BC, that Zion simply could not fall (see <a href="/culture/ancient/assyria/08-sennacherib-and-hezekiah/">Section 08</a>). A century later that conviction had curdled into the false security the Book of Mormon opens by confronting. This page follows both threads from Nineveh to the Restoration.</p>
 
 <br>

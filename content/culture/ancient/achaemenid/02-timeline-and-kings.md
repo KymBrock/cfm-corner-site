@@ -14,6 +14,19 @@ draft: true
 
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">The Persian kings, and the biblical books that unfold within their reigns</p>
 
+<!-- LISTEN PLAYER (section narration) -->
+<div class="listen-player">
+<div class="lp-head">
+<span class="lp-icon" aria-hidden="true"></span>
+<span class="lp-title">Listen to this section</span>
+</div>
+<audio controls preload="none">
+<source src="/audio/culture/achaemenid/02-timeline-and-kings.mp3" type="audio/mpeg">
+Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/achaemenid/02-timeline-and-kings.mp3">download the audio</a> instead.
+</audio>
+</div>
+<!-- /LISTEN PLAYER -->
+
 <p>The Achaemenid Empire lasted about 220 years (559&ndash;330 BC) and was ruled by about a dozen kings, but the Bible cares about five of them &mdash; the ones whose reigns frame the entire post-exilic story. The great difficulty for readers of Ezra&ndash;Nehemiah is that these books are <em>not</em> arranged in tidy chronological order, and several kings share throne-names. This timeline sorts it out, king by king, so the biblical books fall into place.</p>
 
 <p>Persian chronology is unusually firm: Babylonian astronomical records, dated business tablets, and the kings&rsquo; own inscriptions let historians date most events to the year, and some to the day.</p>

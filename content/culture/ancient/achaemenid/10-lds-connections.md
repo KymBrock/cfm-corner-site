@@ -14,6 +14,19 @@ draft: true
 
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">The return from exile as the Bible&rsquo;s great pattern of gathering, restoration, and providence</p>
 
+<!-- LISTEN PLAYER (section narration) -->
+<div class="listen-player">
+<div class="lp-head">
+<span class="lp-icon" aria-hidden="true"></span>
+<span class="lp-title">Listen to this section</span>
+</div>
+<audio controls preload="none">
+<source src="/audio/culture/achaemenid/10-lds-connections.mp3" type="audio/mpeg">
+Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/achaemenid/10-lds-connections.mp3">download the audio</a> instead.
+</audio>
+</div>
+<!-- /LISTEN PLAYER -->
+
 <p>For Latter-day Saints, the Persian period is not a distant footnote &mdash; it is a working model of how God gathers His people, prepares kings and nations for His purposes, and rebuilds what has fallen. The Restoration reads its own mission in these very terms: a gathering of scattered Israel, a building of temples, a re-centering on scripture, and a divine hand moving quietly through the politics of empires. This page draws those threads together.</p>
 
 <br>

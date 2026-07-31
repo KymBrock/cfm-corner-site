@@ -14,6 +14,19 @@ draft: true
 
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">The administrative genius that governed the ancient world&rsquo;s first superpower</p>
 
+<!-- LISTEN PLAYER (section narration) -->
+<div class="listen-player">
+<div class="lp-head">
+<span class="lp-icon" aria-hidden="true"></span>
+<span class="lp-title">Listen to this section</span>
+</div>
+<audio controls preload="none">
+<source src="/audio/culture/achaemenid/03-how-the-empire-worked.mp3" type="audio/mpeg">
+Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/achaemenid/03-how-the-empire-worked.mp3">download the audio</a> instead.
+</audio>
+</div>
+<!-- /LISTEN PLAYER -->
+
 <p>The Achaemenid Empire was the largest the world had ever seen &mdash; at its height it held perhaps 40&ndash;50 million people, something like a third of humanity, across a span from the Balkans and Libya to the mountains of Afghanistan. No empire before it had ruled so many peoples, languages, and gods at once. The astonishing thing is not that it conquered all this, but that it <em>held</em> it, in relative peace, for two hundred years. The book of Esther captures the scale in its very first sentence: Ahasuerus &ldquo;reigned, from India even unto Ethiopia, over an hundred and seven and twenty provinces&rdquo; (<a href="https://www.blueletterbible.org/kjv/est/1/1/" target="_blank" data-ref="Esther 1:1">Esther 1:1</a>). This page is about the machinery behind that number &mdash; and why that machinery was, for Judah, the instrument of restoration.</p>
 
 <br>

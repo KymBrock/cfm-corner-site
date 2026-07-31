@@ -14,6 +14,19 @@ draft: true
 
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">Temple, law, and wall &mdash; the long, contested work of restoration</p>
 
+<!-- LISTEN PLAYER (section narration) -->
+<div class="listen-player">
+<div class="lp-head">
+<span class="lp-icon" aria-hidden="true"></span>
+<span class="lp-title">Listen to this section</span>
+</div>
+<audio controls preload="none">
+<source src="/audio/culture/achaemenid/06-rebuilding-jerusalem.mp3" type="audio/mpeg">
+Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/achaemenid/06-rebuilding-jerusalem.mp3">download the audio</a> instead.
+</audio>
+</div>
+<!-- /LISTEN PLAYER -->
+
 <p>The decree of Cyrus opened the door; walking through it took a century. The return was not a single triumphant homecoming but a slow, difficult, often discouraging rebuild &mdash; interrupted by opposition, poverty, and internal drift, and carried by a handful of remarkable leaders across four Persian reigns. Three things had to be restored to make Judah a people again: the <strong>temple</strong> (its worship), the <strong>law</strong> (its identity), and the <strong>wall</strong> (its security and dignity). This page follows all three.</p>
 
 <br>

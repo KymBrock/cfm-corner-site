@@ -14,6 +14,19 @@ draft: true
 
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">How the Persian empire wrote itself down &mdash; and how a cliff in Iran unlocked the ancient Near East</p>
 
+<!-- LISTEN PLAYER (section narration) -->
+<div class="listen-player">
+<div class="lp-head">
+<span class="lp-icon" aria-hidden="true"></span>
+<span class="lp-title">Listen to this section</span>
+</div>
+<audio controls preload="none">
+<source src="/audio/culture/achaemenid/08-writing-and-records.mp3" type="audio/mpeg">
+Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/achaemenid/08-writing-and-records.mp3">download the audio</a> instead.
+</audio>
+</div>
+<!-- /LISTEN PLAYER -->
+
 <p>The Persians wrote in several scripts and languages at once, and that habit turns out to matter enormously &mdash; both for understanding the empire and, unexpectedly, for our ability to read the entire ancient Near East. The books of Ezra and Esther are steeped in this documentary world of decrees, archives, and multilingual correspondence, and their accuracy about it is one more sign of how close their authors stood to the events. This page follows the empire&rsquo;s writing from the king&rsquo;s monumental cuneiform to the humble Aramaic of everyday administration.</p>
 
 <br>

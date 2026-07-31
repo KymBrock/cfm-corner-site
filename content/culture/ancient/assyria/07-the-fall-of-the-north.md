@@ -14,6 +14,19 @@ draft: true
 
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">The night ten tribes marched out of history &mdash; and the hope that has refused, ever since, to let them stay lost</p>
 
+<!-- LISTEN PLAYER (section narration) -->
+<div class="listen-player">
+<div class="lp-head">
+<span class="lp-icon" aria-hidden="true"></span>
+<span class="lp-title">Listen to this section</span>
+</div>
+<audio controls preload="none">
+<source src="/audio/culture/assyria/07-the-fall-of-the-north.mp3" type="audio/mpeg">
+Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/assyria/07-the-fall-of-the-north.mp3">download the audio</a> instead.
+</audio>
+</div>
+<!-- /LISTEN PLAYER -->
+
 <p>Of the twelve tribes of Israel, ten of them &mdash; the whole northern kingdom &mdash; disappear from the historical record in the space of a single generation. They did not die out in a plague or dissolve in a slow decline. They were <em>removed</em>, deliberately and administratively, by the Assyrian empire, and scattered so thoroughly across its provinces that no one has ever been able to point to their descendants with certainty since. This page tells how it happened, why the Bible says it happened, and what became of the peoples on both ends of the road &mdash; the Israelites marched out and the strangers marched in &mdash; including the tangled origin of the Samaritans and the long, stubborn hope that the lost tribes are only lost, not gone.</p>
 
 <p>The mechanics of Assyrian deportation &mdash; the two-way population engineering that dissolved conquered nations &mdash; are the subject of <a href="/culture/ancient/assyria/03-the-war-machine/">Section 03: The War Machine</a>. Here we watch that machine do its most consequential single piece of work, and we listen to how Israel&rsquo;s own prophets and historians made sense of the wreckage.</p>

@@ -14,6 +14,19 @@ draft: true
 
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">The god who was a city, a nation, and a war</p>
 
+<!-- LISTEN PLAYER (section narration) -->
+<div class="listen-player">
+<div class="lp-head">
+<span class="lp-icon" aria-hidden="true"></span>
+<span class="lp-title">Listen to this section</span>
+</div>
+<audio controls preload="none">
+<source src="/audio/culture/assyria/04-religion-and-the-god-ashur.mp3" type="audio/mpeg">
+Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/assyria/04-religion-and-the-god-ashur.mp3">download the audio</a> instead.
+</audio>
+</div>
+<!-- /LISTEN PLAYER -->
+
 <p>Every empire tells a story about why it deserves to rule. Assyria&rsquo;s story was theological. Its armies did not merely conquer for a king or for plunder; they marched, the royal inscriptions insist, to extend the dominion of a god &mdash; and that god was, uniquely in the ancient world, the deified state itself. To understand why Assyrian kings could describe the sack of a city as an act of worship, and why the officer at Jerusalem&rsquo;s wall could sneer that no nation&rsquo;s god had ever escaped the king of Assyria&rsquo;s hand, we have to begin with the strangest deity in the Near East.</p>
 
 <br>

@@ -14,6 +14,19 @@ draft: true
 
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">The capitals and monuments of the empire that sent Judah home</p>
 
+<!-- LISTEN PLAYER (section narration) -->
+<div class="listen-player">
+<div class="lp-head">
+<span class="lp-icon" aria-hidden="true"></span>
+<span class="lp-title">Listen to this section</span>
+</div>
+<audio controls preload="none">
+<source src="/audio/culture/achaemenid/09-major-sites.mp3" type="audio/mpeg">
+Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/achaemenid/09-major-sites.mp3">download the audio</a> instead.
+</audio>
+</div>
+<!-- /LISTEN PLAYER -->
+
 <p>The Achaemenid kings ruled from not one capital but several, moving with the seasons and the rhythms of state among a handful of great centers scattered across the Iranian plateau and Mesopotamia. Four of these &mdash; and one spectacular cliff &mdash; carry the story of Persia and the Bible. Several appear in Scripture by name; all can be visited today, most in Iran, and all reward knowing what happened there.</p>
 
 <br>

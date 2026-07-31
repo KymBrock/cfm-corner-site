@@ -14,6 +14,19 @@ draft: true
 
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">How a highland people on the edge of the map became the largest empire the world had yet seen</p>
 
+<!-- LISTEN PLAYER (section narration) -->
+<div class="listen-player">
+<div class="lp-head">
+<span class="lp-icon" aria-hidden="true"></span>
+<span class="lp-title">Listen to this section</span>
+</div>
+<audio controls preload="none">
+<source src="/audio/culture/achaemenid/01-from-persis-to-empire.mp3" type="audio/mpeg">
+Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/achaemenid/01-from-persis-to-empire.mp3">download the audio</a> instead.
+</audio>
+</div>
+<!-- /LISTEN PLAYER -->
+
 <p>When Judah went into exile, Persia was nobody &mdash; a cluster of herding and farming clans in the mountains of southwestern Iran, subjects of their more powerful cousins the Medes, barely a footnote in the archives of Babylon. Within the lifetime of a single man, that footnote became the master of the entire Near East, from the Aegean to the Indus, and the deliverer who sent Judah home. That man was <strong><a href="https://www.worldhistory.org/Cyrus_the_Great/" target="_blank">Cyrus the Great</a></strong>, and the empire he founded &mdash; the <strong>Achaemenid Empire</strong>, named for his ancestor Achaemenes (Old Persian <em>Haxāmaniš</em>) &mdash; is the world that Ezra, Nehemiah, Esther, and the later chapters of Daniel all move within.</p>
 
 <p>This guide is background for the return from exile &mdash; the second half of the story the <a href="/culture/ancient/babylon/">Babylon guide</a> begins. Babylon carried Judah away; Persia brought Judah back. Understanding Persia is understanding how the Old Testament ends: not in the ashes of Jerusalem, but in a rebuilt temple, a restored wall, and a Jewish queen in a foreign palace.</p>

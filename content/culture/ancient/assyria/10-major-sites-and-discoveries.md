@@ -14,6 +14,19 @@ draft: true
 
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">How the empire the prophets buried came back into the light</p>
 
+<!-- LISTEN PLAYER (section narration) -->
+<div class="listen-player">
+<div class="lp-head">
+<span class="lp-icon" aria-hidden="true"></span>
+<span class="lp-title">Listen to this section</span>
+</div>
+<audio controls preload="none">
+<source src="/audio/culture/assyria/10-major-sites-and-discoveries.mp3" type="audio/mpeg">
+Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/assyria/10-major-sites-and-discoveries.mp3">download the audio</a> instead.
+</audio>
+</div>
+<!-- /LISTEN PLAYER -->
+
 <p>For nearly two and a half thousand years, Assyria was a name without a face. The prophets had condemned it, the Greeks had half-remembered it, and travelers rode over the grassed mounds of its capitals without suspecting that a city lay beneath their horses&rsquo; hooves. The winged bulls were down there in the dark, the reliefs, the tens of thousands of tablets &mdash; but the script was unreadable and the sites were unmarked, and for all practical purposes the empire that had erased the northern kingdom of Israel had itself been erased. Then, in the space of a single astonishing generation in the middle of the nineteenth century, it all came back: the mounds were opened, the wedge-script was cracked, and Assyria walked out of the ground and onto the walls of London and Paris. This page tells that story &mdash; who dug, what they found, and where you can stand in front of it today.</p>
 
 <br>

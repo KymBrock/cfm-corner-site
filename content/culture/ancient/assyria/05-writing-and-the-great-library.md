@@ -14,6 +14,19 @@ draft: true
 
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">How the empire of the winged bull became the keeper of the world&rsquo;s oldest books</p>
 
+<!-- LISTEN PLAYER (section narration) -->
+<div class="listen-player">
+<div class="lp-head">
+<span class="lp-icon" aria-hidden="true"></span>
+<span class="lp-title">Listen to this section</span>
+</div>
+<audio controls preload="none">
+<source src="/audio/culture/assyria/05-writing-and-the-great-library.mp3" type="audio/mpeg">
+Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/assyria/05-writing-and-the-great-library.mp3">download the audio</a> instead.
+</audio>
+</div>
+<!-- /LISTEN PLAYER -->
+
 <p>Assyria is remembered for its cruelty &mdash; the flayings boasted of in its annals, the reliefs of impaled captives, the deportations that emptied whole nations. And yet the same empire assembled, in a palace at Nineveh, the first systematically collected library in human history, and buried it so well when the city burned that a Victorian engraver could dig its tablets back out and read to a stunned London a flood story older than Genesis. That library is Assyria&rsquo;s strangest legacy: a war machine that happened to become the great archive of the ancient Near East, preserving in fired clay the literature of a civilization that had been writing for two and a half thousand years.</p>
 
 <br>
