@@ -105,7 +105,7 @@ description: "From Joseph in Goshen to the Alexandrian Jewish quarter — three 
 <br>
 
 <h3>Abraham in Egypt</h3>
-<p><em>c. 2000&ndash;1850 BC &mdash; <a href="https://www.blueletterbible.org/kjv/gen/12/10/" target="_blank" data-ref="Genesis 12:10">Genesis 12:10&ndash;20</a>; Abraham 1&ndash;2</em></p>
+<p><em>c. 2000&ndash;1850 BC &mdash; <a href="https://www.blueletterbible.org/kjv/gen/12/10/" target="_blank" data-ref="Genesis 12:10">Genesis 12:10&ndash;20</a>; <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/1?lang=eng" target="_blank" data-ref="Abraham 1">Abraham 1</a>&ndash;2</em></p>
 
 <p>Abraham's sojourn in Egypt during a famine in Canaan (<a href="https://www.blueletterbible.org/kjv/gen/12/10/" target="_blank" data-ref="Genesis 12:10-20">Genesis 12:10&ndash;20</a>) is the first encounter between the covenant family and Egypt recorded in Genesis. The biblical account is brief &mdash; Abraham enters Egypt, presents Sarah as his sister, a ruler called "Pharaoh" takes her into his house, God sends plagues on the ruler's household, and Abraham is expelled with great wealth. (Whether this "Pharaoh" was the supreme ruler of Egypt or a powerful regional governor is not specified in the text &mdash; see our discussion in <a href="/culture/ancient/egypt/02-who-ruled-egypt/">Who Ruled Egypt</a>.)</p>
 

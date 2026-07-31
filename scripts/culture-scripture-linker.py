@@ -53,9 +53,12 @@ LDS_ALT = alt(LDS.keys())
 REF = r"(?P<bk>{bks})\s+(?P<ch>\d+)(?::(?P<v>\d+)(?:(?:-|–|&ndash;|&mdash;)\d+)?)?"
 TOKEN = re.compile(r'(<[^>]+>)')
 
+PGP_MAX={'abraham':5,'moses':8}  # real chapter counts; numbers above => a year/quantity, not the book
+
 def build_re(which):
     if which=='biblical': bks=BIB_ALT
     elif which=='lds':    bks=LDS_ALT
+    elif which=='pgp':    bks="Abraham|Moses"
     else:                 bks=BIB_ALT+"|"+LDS_ALT
     return re.compile(REF.format(bks=bks), re.IGNORECASE)
 
@@ -79,7 +82,10 @@ def linkify_text(txt, rx, counter):
     out=[]; last=0
     for m in rx.finditer(txt):
         low=m.group('bk').lower(); v=m.group('v')
-        if low in AMBIG and not v:      # skip ambiguous book-word with no verse
+        if low in PGP_MAX:              # Abraham/Moses: only the book's real chapter range
+            if int(m.group('ch')) > PGP_MAX[low]:
+                continue
+        elif low in AMBIG and not v:    # skip ambiguous book-word with no verse
             continue
         disp=DISP[low]
         out.append(txt[last:m.start()])
@@ -120,7 +126,7 @@ def _process_body_unused():
 def main():
     ap=argparse.ArgumentParser()
     ap.add_argument('--dry-run',action='store_true'); ap.add_argument('--write',action='store_true')
-    ap.add_argument('--guide',default='*'); ap.add_argument('--set',default='biblical',choices=['biblical','lds','all'])
+    ap.add_argument('--guide',default='*'); ap.add_argument('--set',default='biblical',choices=['biblical','lds','pgp','all'])
     ap.add_argument('--samples',type=int,default=0)
     a=ap.parse_args()
     rx=build_re(a.set)

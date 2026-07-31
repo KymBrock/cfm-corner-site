@@ -48,7 +48,7 @@ description: "The Joseph Smith Papyri, the Book of Abraham facsimiles, Kerry Muh
 <p>Joseph Smith began working with the papyri immediately. His journal records translation activity concentrated in two periods:</p>
 
 <ul>
-<li><strong>July&ndash;November 1835</strong> (Kirtland) &mdash; The most intensive period of translation work. By October, Joseph recorded that "the system of astronomy was unfolded" (likely Abraham 3 or Facsimile 2 content). The most concentrated week was November 19&ndash;26, with five days of documented translation.</li>
+<li><strong>July&ndash;November 1835</strong> (Kirtland) &mdash; The most intensive period of translation work. By October, Joseph recorded that "the system of astronomy was unfolded" (likely <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/3?lang=eng" target="_blank" data-ref="Abraham 3">Abraham 3</a> or Facsimile 2 content). The most concentrated week was November 19&ndash;26, with five days of documented translation.</li>
 <li><strong>March 1842</strong> (Nauvoo) &mdash; Joseph returned to the project after Brigham Young organized household help to free his time. The first installment (Facsimile 1 + <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/1?lang=eng&id=1" target="_blank" data-ref="Abraham 1:1">Abraham 1:1&ndash;2</a>:18) was published in the <em>Times and Seasons</em> on March 1 (or 4), 1842. The second installment (Facsimile 2 + remaining text) appeared on March 15. Facsimile 3 was published in May.</li>
 </ul>
 
@@ -183,7 +183,7 @@ description: "The Joseph Smith Papyri, the Book of Abraham facsimiles, Kerry Muh
 <li>Egyptian texts contain both <strong>biblical and extra-biblical Abraham traditions</strong> &mdash; stories and associations not found in Genesis but circulating independently.</li>
 <li><strong>Abraham and Osiris became interchangeable</strong> in some texts: scenes showing Osiris were adapted to show Abraham, Isaac, and Jacob. The formula "rest in the bosom of Abraham" replaced "rest in the presence of Osiris."</li>
 <li>An early <strong>Christian Egyptian papyrus calls Abraham "the pupil of the wedjat eye"</strong> &mdash; and the wedjat eye is connected to the hypocephalus (Facsimile 2). As Muhlestein notes, this means "we have Christian Egyptians associating this kind of drawing with Abraham, which turns out to be the case with all three facsimiles."</li>
-<li><strong>Josephus independently records</strong> that Abraham taught astronomy to the Egyptians (<em>Antiquities</em> 1.167&ndash;168) &mdash; aligning with Abraham 3 and Facsimile 3, though Josephus had no access to the Book of Abraham.</li>
+<li><strong>Josephus independently records</strong> that Abraham taught astronomy to the Egyptians (<em>Antiquities</em> 1.167&ndash;168) &mdash; aligning with <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/3?lang=eng" target="_blank" data-ref="Abraham 3">Abraham 3</a> and Facsimile 3, though Josephus had no access to the Book of Abraham.</li>
 </ul>
 
 <p>These findings do not "prove" the Book of Abraham in a scientific sense. But they establish that the association between Abraham and Egyptian religious documents &mdash; which critics have called absurd &mdash; was actually a well-attested phenomenon in the ancient world.</p>
