@@ -10,7 +10,7 @@ draft = false
 One entered from the **east** and moved **west** — through the porch, between the two
 bronze pillars, into the gold-walled Holy Place, and toward the windowless cube where
 the LORD dwelt in thick darkness. **Hover any room or object on the plan, then click to
-open its panel.** Every measurement is drawn from **1 Kings 6–7** and **2 Chronicles 3–4**.
+open its panel.** Every measurement is drawn from **<a href="https://www.blueletterbible.org/kjv/1ki/6/1/" target="_blank" data-ref="1 Kings 6">1 Kings 6</a>–7** and **<a href="https://www.blueletterbible.org/kjv/2ch/3/1/" target="_blank" data-ref="2 Chronicles 3">2 Chronicles 3</a>–4**.
 
 <div class="ft-video" style="max-width:760px;margin:1.7rem auto 0;">
   <iframe style="display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:12px;box-shadow:0 8px 26px rgba(56,55,49,.14);" src="https://www.youtube-nocookie.com/embed/Xt6lQAe8ues" title="Solomon's Temple Explained — Messages of Christ" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
