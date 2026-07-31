@@ -114,6 +114,11 @@ draft: true
 
 <p>The books of Kings read like a roll-call of Assyrian monarchs, and here the empire&rsquo;s own monuments do something remarkable: they name the same men, and in several cases the same events, from the other side. This is where honest study earns its confidence. The artifacts do not &ldquo;prove the Bible&rdquo; in any wholesale sense &mdash; they carry no covenant and no theology &mdash; but they establish that the historians of Israel and Judah knew exactly who was on the Assyrian throne, and when.</p>
 
+<figure class="fg-figure" style="max-width:560px;">
+  <img src="/images/culture/assyria/photos/black-obelisk-jehu.jpg" alt="The Jehu panel of the Black Obelisk of Shalmaneser III" loading="lazy">
+  <figcaption>The <b>Black Obelisk</b> of Shalmaneser III: the caption over the figure bowing to the dust reads &ldquo;<b>Jehu</b>, son of Omri&rdquo; (<a href="https://www.blueletterbible.org/kjv/2ki/9/1/" target="_blank" data-ref="2 Kings 9">2 Kings 9&ndash;10</a>) &mdash; the earliest surviving picture of a named Israelite, bringing tribute c. 841 BC. <a href="https://www.britishmuseum.org/collection/object/W_1848-1104-1" target="_blank">See it at the British Museum &rarr;</a> <span class="fg-credit">British Museum &middot; photo Osama S. M. Amin, Wikimedia Commons (CC BY-SA 4.0)</span></figcaption>
+</figure>
+
 <h4>Jehu on the Black Obelisk</h4>
 
 <p>The single most striking convergence is a black limestone monument of <strong>Shalmaneser III</strong>, found at Nimrud in 1846 and now in the British Museum: the <strong>Black Obelisk</strong>. One of its carved registers shows a figure bowing to the ground before the Assyrian king, and the cuneiform caption above it reads &mdash; in the standard scholarly translation &mdash; the tribute of &ldquo;Jehu, son of Omri.&rdquo; <strong>Jehu</strong> was king of Israel (<a href="https://www.blueletterbible.org/kjv/2ki/9/1/" target="_blank" data-ref="2 Kings 9-10">2 Kings 9&ndash;10</a>), and this relief &mdash; dated to 841 BC &mdash; is the earliest surviving image believed to depict a named Israelite king, or at the least his official envoy. A responsible caveat: the Assyrian caption calls Jehu &ldquo;son of Omri,&rdquo; using Omri&rsquo;s name as the standing Assyrian label for the whole kingdom of Israel, though Jehu was not of Omri&rsquo;s line. What the stone establishes is not a Bible verse but a person: an Israelite king the Bible names, kneeling in Assyrian stone within a few years of his reign.</p>
@@ -203,6 +208,7 @@ draft: true
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}

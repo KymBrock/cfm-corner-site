@@ -38,6 +38,11 @@ draft: true
 
 <p>In the ninth century BC, <strong>Ashurnasirpal II</strong> (r. 883&ndash;859 BC) did what Assyrian kings would do again and again: he refused to rule from his predecessors&rsquo; city and built his own. He chose <strong>Kalhu</strong> &mdash; the <strong>Calah</strong> of Genesis, modern <strong>Nimrud</strong> &mdash; and turned a provincial town into a capital fit for a world power. Scripture names it in the Table of Nations, in the very verses that catalogue Assyria&rsquo;s founding cities: Nineveh, &ldquo;the city Rehoboth, and Calah, and Resen between Nineveh and Calah: the same is a great city&rdquo; (<a href="https://www.blueletterbible.org/kjv/gen/10/11/" target="_blank" data-ref="Genesis 10:11-12">Genesis 10:11&ndash;12</a>).</p>
 
+<figure class="fg-figure">
+  <img src="/images/culture/assyria/photos/khorsabad-reliefs-bm.jpg" alt="The Assyrian sculpture gallery of the British Museum with Khorsabad reliefs and winged bulls" loading="lazy">
+  <figcaption>The Assyrian galleries of the British Museum &mdash; Khorsabad palace reliefs and the colossal <b>winged bulls</b> that Victorian excavators floated down the Tigris and shipped to London. <span class="fg-credit">British Museum &middot; Wikimedia Commons (CC BY-SA 3.0)</span></figcaption>
+</figure>
+
 <p>The centerpiece was the <strong>Northwest Palace</strong>, and it is one of the reasons the modern world knows Assyria at all. Its state apartments were lined, room after room, with carved <strong>alabaster relief cycles</strong> &mdash; slab upon slab of the king at war, at the hunt, and before the gods, the figures still crisp, many originally painted, several carrying the &ldquo;Standard Inscription&rdquo; of Ashurnasirpal running straight across the images. When Austen Henry Layard began digging here in the 1840s and shipped these reliefs to London, they reshaped Europe&rsquo;s picture of the biblical world overnight (the excavations are the story of <a href="/culture/ancient/assyria/10-major-sites-and-discoveries/">Section 10</a>). At the palace and temple gateways stood the guardians that have become the face of Assyria: the <strong>lamassu</strong>.</p>
 
 <div style="background: linear-gradient(135deg, #f2f0ec 0%, #e6e1d8 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
@@ -130,6 +135,7 @@ draft: true
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}

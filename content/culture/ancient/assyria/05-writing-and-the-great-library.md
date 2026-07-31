@@ -54,6 +54,11 @@ draft: true
 
 <p>When Nineveh fell to the Medes and Babylonians in 612 BC, its palaces burned &mdash; and the fire that destroyed the city <em>fired</em> the library, baking its clay tablets into near-permanence and sealing them under the collapsing walls. There they lay until the 1840s and 1850s, when Austen Henry Layard and his assistant Hormuzd Rassam dug into the mounds across the river from Mosul and shipped tens of thousands of tablets, most of them broken, back to the British Museum (see <a href="/culture/ancient/assyria/10-major-sites-and-discoveries/">Section 10</a>). For two decades they sat largely unread, a mountain of fragments waiting for someone patient enough to join the pieces.</p>
 
+<figure class="fg-figure" style="max-width:520px;">
+  <img src="/images/culture/assyria/photos/gilgamesh-flood-tablet.jpg" alt="The Flood Tablet, Tablet XI of the Epic of Gilgamesh, British Museum" loading="lazy">
+  <figcaption>The <b>Flood Tablet</b> (Tablet XI of Gilgamesh), recovered from Ashurbanipal&rsquo;s library at Nineveh &mdash; the Babylonian flood story whose 1872 decipherment by George Smith electrified Victorian London. <a href="https://www.britishmuseum.org/collection/object/W_K-3375" target="_blank">See it at the British Museum &rarr;</a> <span class="fg-credit">British Museum &middot; via Wikimedia Commons (CC0)</span></figcaption>
+</figure>
+
 <p>That someone was <strong>George Smith</strong> &mdash; a young man of working-class London who had trained as a bank-note engraver, taught himself cuneiform in his lunch hours from museum publications, and was eventually hired to sort and mend the tablets. In 1872, working through a broken tablet from Ashurbanipal&rsquo;s library, Smith realized he was reading an account of a great flood: a man instructed to build a vessel, the loading of living things, a deluge, the ship grounding on a mountain, and birds &mdash; a dove, then others &mdash; sent out to test whether the waters had fallen. It was, unmistakably, a version of the story of Noah, written centuries before the Hebrew text and buried in the rubble of an Assyrian palace. By a widely repeated (and no doubt polished) account, the ordinarily reserved Smith leapt up and rushed about the room in his excitement.</p>
 
 <p>On 3 December 1872 he read a paper on the tablet to the Society of Biblical Archaeology in London, with the Prime Minister, Gladstone, reportedly in the audience. The effect was a sensation. A newspaper, <em>The Daily Telegraph</em>, funded Smith to return to Nineveh to search for the missing lines &mdash; and, against very long odds, he found a fragment that filled part of the gap. The tablet he had read was the eleventh of twelve, and the epic it belonged to was <strong>Gilgamesh</strong>: the story of a king who, grieving his friend&rsquo;s death and terrified of his own, journeys to the ends of the earth to find the one man granted immortal life &mdash; the flood-survivor Utnapishtim &mdash; only to learn that he cannot keep even a plant of youth, and comes home to accept that the wall of his city is the immortality a man actually gets. The <em>Epic of Gilgamesh</em>, the oldest great poem in any human language, was recovered piece by piece from these tablets; the standard version we read today is still being reassembled from Nineveh fragments and their copies.</p>
@@ -139,6 +144,7 @@ draft: true
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}

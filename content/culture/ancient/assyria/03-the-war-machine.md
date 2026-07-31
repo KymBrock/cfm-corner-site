@@ -41,6 +41,11 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>Earlier Near Eastern armies were seasonal &mdash; farmers called up after the harvest, disbanded before planting. Assyria&rsquo;s genius was to build a core that never went home. By the height of the Neo-Assyrian empire, the king commanded a standing force built around the <em>kiṣir šarri</em>, the &ldquo;royal cohort,&rdquo; supplemented each campaign season by provincial levies and by contingents drawn from conquered peoples. It was paid, provisioned from imperial granaries, and organized into recognizable arms of service.</p>
 
+<figure class="fg-figure">
+  <img src="/images/culture/assyria/photos/assyrian-army-attacks-city.jpg" alt="Relief of Tiglath-pileser III's army storming a walled city, Nimrud" loading="lazy">
+  <figcaption>The war machine in action: <b>Tiglath-pileser III</b>&rsquo;s army storms a walled city &mdash; archers, cavalry, and a wheeled ram &mdash; carved on his palace at Nimrud. This was the first standing, professional army the world had seen. <span class="fg-credit">Central Palace, Nimrud; British Museum &middot; photo Osama S. M. Amin, Wikimedia Commons (CC BY-SA 4.0)</span></figcaption>
+</figure>
+
 <p>Three technical advantages compounded that organization. The first was <strong>iron</strong>. From the ninth century BC onward, Assyria equipped its infantry with iron weapons and armor on a scale earlier bronze-age powers could not match &mdash; iron was harder, cheaper once the metallurgy spread, and abundant enough to arm tens of thousands. The second was the <strong>chariot and, increasingly, the cavalry</strong>: Assyrian reliefs trace a shift over time from the heavy chariot to mounted archers and lancers who could range far ahead of the main column, screen its advance, and run down a broken enemy. The third &mdash; and the most decisive &mdash; was <strong>siege warfare</strong>.</p>
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
@@ -171,6 +176,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}

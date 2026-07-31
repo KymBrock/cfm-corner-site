@@ -52,6 +52,11 @@ draft: true
 
 <p>Anyone who has stood before the Assyrian reliefs in the British Museum has met the empire&rsquo;s most haunting religious image without a caption to explain it: a stylized <strong>sacred tree</strong> &mdash; a network of interlaced branches and palmettes &mdash; flanked by towering winged figures. Some are eagle-headed; some are human-faced with elaborate beards; in one hand they hold a cone, in the other a small bucket. Scholars call these beings <em>apkallu</em> &mdash; the primeval sages of Mesopotamian tradition, sometimes half-fish, sometimes bird-headed, the antediluvian bringers of civilization, here recast as protective genies. The gesture with cone and bucket seems to be one of purification or blessing, sprinkling the sacred tree &mdash; and, on the palace walls, the king who stands within the scene.</p>
 
+<figure class="fg-figure">
+  <img src="/images/culture/assyria/photos/sacred-tree-ashurnasirpal.jpg" alt="Relief of Ashurnasirpal II and a winged genie flanking the sacred tree, Nimrud" loading="lazy">
+  <figcaption><b>Ashurnasirpal II</b> and a winged genie flanking the <b>Sacred Tree</b> &mdash; a relief from his Northwest Palace at Nimrud. The stylized tree and its attendant spirits are among the most-discussed images in all Assyrian art. <span class="fg-credit">Northwest Palace, Nimrud; British Museum &middot; photo Osama S. M. Amin, Wikimedia Commons (CC BY-SA 4.0)</span></figcaption>
+</figure>
+
 <p>What the tree itself meant is still debated: a symbol of cosmic order, of the fertility the king&rsquo;s rule secured, perhaps of the divinely sustained life of the nation. Whatever its precise sense, its placement is not decorative. It clusters at the throne-room and the doorways &mdash; the points that most needed guarding &mdash; and again and again the composition centers on the king, tended by the winged sages, sometimes doubled and mirrored around him. The message is the same one Ashur&rsquo;s theology preached in stone: the monarch stands at the axis of the sacred order, sustained by heaven, the human hinge between the gods and the world they had entrusted to Assyria.</p>
 
 <br>
@@ -136,6 +141,7 @@ draft: true
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}

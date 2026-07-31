@@ -40,6 +40,11 @@ draft: true
 
 <p>Then Sennacherib came. The Bible states the scale bluntly: &ldquo;Now in the fourteenth year of king Hezekiah did Sennacherib king of Assyria come up against all the fenced cities of Judah, and took them&rdquo; (<a href="https://www.blueletterbible.org/kjv/2ki/18/13/" target="_blank" data-ref="2 Kings 18:13">2 Kings 18:13</a>). Sennacherib&rsquo;s own prism supplies the number the Bible leaves at &ldquo;all&rdquo;: <strong>forty-six</strong> of Hezekiah&rsquo;s walled cities, plus countless villages, conquered by siege-ramps and battering, with 200,150 people, he claims, driven out as spoil. Judah was systematically dismantled, fortress by fortress, until only Jerusalem was left.</p>
 
+<figure class="fg-figure">
+  <img src="/images/culture/assyria/photos/lachish-siege-engine.jpg" alt="Assyrian relief of a siege-engine attacking the wall of Lachish" loading="lazy">
+  <figcaption>An Assyrian siege-engine grinds against the wall of <b>Lachish</b> as defenders hurl down firebrands &mdash; from <b>Sennacherib</b>&rsquo;s own palace at Nineveh, his pictorial record of the 701 BC campaign that &ldquo;came up against all the fenced cities of Judah&rdquo; (<a href="https://www.blueletterbible.org/kjv/2ki/18/13/" target="_blank" data-ref="2 Kings 18:13">2 Kings 18:13</a>). <span class="fg-credit">South-West Palace, Nineveh; British Museum &middot; photo Osama S. M. Amin, Wikimedia Commons (CC BY-SA 4.0)</span></figcaption>
+</figure>
+
 <p>The centerpiece of that campaign was the siege of <strong>Lachish</strong>, Judah&rsquo;s second city and the great fortress guarding the approach from the coastal plain. The Bible mentions it almost in passing &mdash; Sennacherib is &ldquo;at Lachish&rdquo; and sends his officers &ldquo;from Lachish&rdquo; (<a href="https://www.blueletterbible.org/kjv/2ki/18/14/" target="_blank" data-ref="2 Kings 18:14-17">2 Kings 18:14, 17</a>) &mdash; but Sennacherib thought the conquest worth an entire room. When Austen Henry Layard excavated Sennacherib&rsquo;s &ldquo;Palace Without Rival&rdquo; at Nineveh, he found a suite whose walls were carved, floor to ceiling, with one continuous panorama: the storming of Lachish. Siege-engines climbing earthen ramps, archers and slingers, defenders hurling firebrands from the towers, and then the grim aftermath &mdash; captives filing out, families with their carts, prisoners impaled, and the king himself enthroned to receive the spoil, over a caption reading <em>&ldquo;Sennacherib, king of the world&hellip; sat upon a throne and the booty of Lachish passed before him.&rdquo;</em> No other biblical city has its fall preserved in such photographic Assyrian detail; the reliefs are now in the British Museum (they are toured in <a href="/culture/ancient/assyria/06-the-great-cities/">Section 06</a>). And the archaeology on the ground matches the picture stone for stone: at the site of Lachish, excavators found the Assyrian siege-ramp still heaped against the southwest corner, arrowheads, sling-stones, and the scorch of the burning &mdash; the only Assyrian siege-ramp ever recovered.</p>
 
 <p>Facing annihilation, Hezekiah did what vassals do: he sued for terms. &ldquo;I have offended,&rdquo; he sent word to Lachish; &ldquo;return from me: that which thou puttest on me will I bear.&rdquo; Sennacherib fixed the price at &ldquo;three hundred talents of silver and thirty talents of gold,&rdquo; and Hezekiah stripped the temple to pay it &mdash; &ldquo;all the silver that was found in the house of the LORD&rdquo; and even the gold he had himself overlaid on the temple doors (<a href="https://www.blueletterbible.org/kjv/2ki/18/14/" target="_blank" data-ref="2 Kings 18:14-16">2 Kings 18:14&ndash;16</a>). Here again the two records nearly touch: Sennacherib&rsquo;s prism lists Hezekiah&rsquo;s tribute as thirty talents of gold &mdash; the very figure &mdash; and eight hundred talents of silver, along with ivory, thrones, and his own daughters and palace women, sent after him to Nineveh. The gold agrees to the talent; the silver differs, and honest readers note it rather than smoothing it over &mdash; the round numbers may reflect different accounting, or the two sides may be tallying the payment at different moments of a drawn-out negotiation.</p>
@@ -53,6 +58,11 @@ draft: true
 <h3>Two Records, One Silence: &ldquo;Shut Up Like a Bird in a Cage&rdquo;</h3>
 
 <p>Now comes the famous passage &mdash; the one line of Assyrian royal prose that every student of the Bible learns by heart. Having reduced Judah and taken the tribute, Sennacherib turns to Hezekiah himself:</p>
+
+<figure class="fg-figure" style="max-width:400px;">
+  <img src="/images/culture/assyria/photos/taylor-prism-bm.jpg" alt="The Taylor Prism recording Sennacherib's annals, British Museum" loading="lazy">
+  <figcaption>The <b>Taylor Prism</b> &mdash; Sennacherib&rsquo;s own annals, boasting that he shut up Hezekiah &ldquo;like a bird in a cage&rdquo; in Jerusalem. Tellingly, it never claims he took the city. <a href="https://www.livius.org/sources/content/anet/287-the-sennacherib-prism/" target="_blank">Read the annals &rarr;</a> <span class="fg-credit">British Museum &middot; photo Gary Todd (CC0)</span></figcaption>
+</figure>
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
 <p style="margin: 0; font-style: italic;">&ldquo;As for Hezekiah the Judahite, who did not submit to my yoke: forty-six of his strong, walled cities&hellip; I besieged and took&hellip; He himself, like a caged bird I shut up in Jerusalem, his royal city. I threw up earthworks against him &mdash; the one coming out of the city-gate, I turned back to his misery.&rdquo;</p>
@@ -156,6 +166,7 @@ draft: true
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}

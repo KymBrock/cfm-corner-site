@@ -24,6 +24,11 @@ draft: true
 
 <br>
 
+<figure class="fg-figure" style="max-width:480px;">
+  <img src="/images/culture/assyria/photos/lamassu-winged-bull.jpg" alt="An Assyrian lamassu, a winged human-headed bull" loading="lazy">
+  <figcaption>A <b>lamassu</b> &mdash; the winged, human-headed bull that guarded the gateways of every Assyrian palace, carved with five legs so it stands firm from the front and strides forward from the side. To the peoples Assyria ruled, this was the face of the empire. <span class="fg-credit">photo Sanjar Alimov, Wikimedia Commons (CC BY-SA 4.0)</span></figcaption>
+</figure>
+
 <h3>The Rain That Made a Different Kingdom</h3>
 
 <p>The single most important fact about the Assyrian heartland is that it did not depend on irrigation. Southern Mesopotamia lies below the line where rainfall alone can raise a crop; there, as the Babylon guide describes, farming meant an endless labor of canals, dikes, and dredging, and the whole civilization organized itself around controlling water. The Assyrian core sat <em>above</em> that line &mdash; in the belt of hills and plains that receives enough winter and spring rain (roughly the 250-millimeter threshold that separates dry-farming country from desert) to grow barley and wheat straight from the sky.</p>
@@ -136,6 +141,7 @@ draft: true
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}

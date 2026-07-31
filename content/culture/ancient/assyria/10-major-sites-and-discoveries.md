@@ -58,6 +58,18 @@ draft: true
 
 <p>When Layard left archaeology for politics, the work passed to his former assistant, <strong>Hormuzd Rassam</strong> &mdash; a Mosul-born Assyrian Christian who had begun as Layard&rsquo;s local agent and became, in his own right, one of the great excavators of the century. In 1853, digging at Kuyunjik, Rassam uncovered the <strong>North Palace of Ashurbanipal</strong>, and with it two of the supreme treasures of Assyrian art and letters. The first was the series of <strong>lion-hunt reliefs</strong> &mdash; the wounded lioness dragging her paralyzed hindquarters, the beasts released from cages into the king&rsquo;s arena, the whole cycle carved with an observation of animal agony that has no equal in ancient art and stops modern visitors in their tracks. The second was another cache of the <strong>royal library tablets</strong> &mdash; the collection whose most famous single fragment, the flood tablet, a self-taught engraver named George Smith would read out to a stunned London two decades later (that story, and the library itself, are <a href="/culture/ancient/assyria/05-writing-and-the-great-library/">Section 05</a>). Rassam&rsquo;s career ran on to Babylon, where in 1879 he pulled the <strong>Cyrus Cylinder</strong> from the foundations &mdash; but his Nineveh year alone would have secured his place. It is worth naming him plainly, because the older tellings often folded his work into Layard&rsquo;s: a great deal of what fills the Assyrian galleries was found by an Iraqi.</p>
 
+<div class="fg-gallery">
+  <div class="fg-stage">
+    <span class="fg-counter" aria-hidden="true"></span>
+    <button class="fg-arrow fg-prev" type="button" aria-label="Previous image">&lsaquo;</button>
+    <button class="fg-arrow fg-next" type="button" aria-label="Next image">&rsaquo;</button>
+    <div class="fg-item" data-caption="The Lion Hunt of Ashurbanipal &mdash; the dying lioness, from the North Palace at Nineveh: the pinnacle of Assyrian relief art, carved for the king who built the great library." data-credit="Zunkir &middot; Wikimedia Commons (CC BY-SA 4.0)"><img src="/images/culture/assyria/photos/lion-hunt-ashurbanipal.jpg" alt="The dying lioness from the Lion Hunt of Ashurbanipal" loading="lazy"></div>
+    <div class="fg-item" data-caption="The mound of Kuyunjik &mdash; ancient Nineveh &mdash; today, on the edge of Mosul. Beneath it lay the palaces of Sennacherib and Ashurbanipal and the buried library." data-credit="Fredarch &middot; Wikimedia Commons (CC BY-SA 3.0)"><img src="/images/culture/assyria/photos/nineveh-kuyunjik-mound.jpg" alt="The mound of Kuyunjik, ancient Nineveh, today" loading="lazy"></div>
+  </div>
+  <p class="fg-cap"></p>
+  <div class="fg-dots"></div>
+</div>
+
 <br>
 
 <hr>
@@ -154,6 +166,8 @@ draft: true
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
+<script src="/js/fg-gallery.js"></script>
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}
