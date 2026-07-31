@@ -14,7 +14,7 @@ draft: true
 
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">Inside the Persian court at Susa, where a hidden Jewish queen saved her people</p>
 
-<p>Not every Jew went home. When Cyrus opened the door, many families &mdash; by then two or three generations settled in Mesopotamia &mdash; stayed in the lands of the empire, building the great <strong>diaspora</strong> that would flourish for over two thousand years. The book of Esther is the story of that community: Jews living not in Judah but deep inside Persia, in the imperial capital itself, navigating the dangers and opportunities of life under a foreign crown. To read Esther well is to walk the halls of the Persian court &mdash; and the book&rsquo;s astonishing accuracy about those halls is part of its power.</p>
+<p>Not every Jew went home. When Cyrus opened the door, many families &mdash; by then two or three generations settled in Mesopotamia &mdash; stayed in the lands of the empire, building the great <strong>diaspora</strong> &mdash; the scattered Jewish communities living outside the homeland &mdash; that would flourish for over two thousand years. The book of Esther is the story of that community: Jews living not in Judah but deep inside Persia, in the imperial capital itself, navigating the dangers and opportunities of life under a foreign crown. To read Esther well is to walk the halls of the Persian court &mdash; and the book&rsquo;s astonishing accuracy about those halls is part of its power.</p>
 
 <br>
 

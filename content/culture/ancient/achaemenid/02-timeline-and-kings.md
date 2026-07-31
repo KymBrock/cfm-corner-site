@@ -151,12 +151,12 @@ draft: true
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #4a6b52; font-size: 0.9em;">515 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>The Second Temple is finished</strong> &mdash; the third of Adar, Darius&rsquo;s sixth year (<a href="https://www.blueletterbible.org/kjv/ezr/6/15/" target="_blank" data-ref="Ezra 6:15">Ezra 6:15</a>); roughly seventy years after its destruction</span>
+<span style="flex: 1; font-size: 0.95em;"><strong>The Second Temple is finished</strong> &mdash; the third of Adar (a late-winter month), Darius&rsquo;s sixth year (<a href="https://www.blueletterbible.org/kjv/ezr/6/15/" target="_blank" data-ref="Ezra 6:15">Ezra 6:15</a>); roughly seventy years after its destruction</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #4a6b52; font-size: 0.9em;">490 BC</span>
-<span style="flex: 1; font-size: 0.95em;">Darius&rsquo;s invasion of Greece checked at <strong>Marathon</strong></span>
+<span style="flex: 1; font-size: 0.95em;">Darius&rsquo;s invasion of Greece stopped at the battle of <strong>Marathon</strong></span>
 </div>
 
 </div>
@@ -181,7 +181,7 @@ draft: true
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #c0392b; font-size: 0.9em;">480 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Xerxes invades Greece</strong> &mdash; Thermopylae and the burning of Athens, then defeat at Salamis; he returns home to the events of Esther 2</span>
+<span style="flex: 1; font-size: 0.95em;"><strong>Xerxes invades Greece</strong> &mdash; the battle of Thermopylae and the burning of Athens, then defeat at Salamis; he returns home to the events of Esther 2</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
@@ -231,7 +231,7 @@ draft: true
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #2c3e50; font-size: 0.9em;">331&ndash;330 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Alexander the Great</strong> destroys the empire &mdash; Darius III defeated at Gaugamela, Persepolis burned; the age Daniel foresaw as the &ldquo;he goat&hellip; from the west&rdquo; (<a href="https://www.blueletterbible.org/kjv/dan/8/5/" target="_blank" data-ref="Daniel 8:5">Daniel 8:5</a>), interpreted as &ldquo;the king of Grecia&rdquo; (<a href="https://www.blueletterbible.org/kjv/dan/8/21/" target="_blank" data-ref="Daniel 8:21">Daniel 8:21</a>)</span>
+<span style="flex: 1; font-size: 0.95em;"><strong>Alexander the Great</strong> destroys the empire &mdash; Darius III defeated at Gaugamela (the battle that ended the empire), Persepolis burned; the age Daniel foresaw as the &ldquo;he goat&hellip; from the west&rdquo; (<a href="https://www.blueletterbible.org/kjv/dan/8/5/" target="_blank" data-ref="Daniel 8:5">Daniel 8:5</a>), interpreted as &ldquo;the king of Grecia&rdquo; (<a href="https://www.blueletterbible.org/kjv/dan/8/21/" target="_blank" data-ref="Daniel 8:21">Daniel 8:21</a>)</span>
 </div>
 
 </div>

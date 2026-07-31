@@ -52,7 +52,7 @@ draft: true
 <li><strong>Babylon (539 BC)</strong> &mdash; the great prize. The Neo-Babylonian empire, ruled by the unpopular absentee king Nabonidus and his regent son Belshazzar, fell to Cyrus almost without a fight: one battle upriver at Opis, and the greatest walled city on earth opened its gates (see the <a href="/culture/ancient/babylon/03-nebuchadnezzar-and-the-kings/">Babylon kings page</a> and <a href="/culture/ancient/achaemenid/05-cyrus-and-the-return/">Section 05</a>).</li>
 </ul>
 
-<p>With Babylon fell everything Babylon had ruled &mdash; including the exiled community of Judah, who now had a new master. And this master, in his first regnal year, issued a decree that would change their history: return home and rebuild the house of your God (<a href="https://www.blueletterbible.org/kjv/ezr/1/1/" target="_blank" data-ref="Ezra 1:1-4">Ezra 1:1&ndash;4</a>).</p>
+<p>With Babylon fell everything Babylon had ruled &mdash; including the exiled community of Judah, who now had a new master. And this master, in his first year as king, issued a decree that would change their history: return home and rebuild the house of your God (<a href="https://www.blueletterbible.org/kjv/ezr/1/1/" target="_blank" data-ref="Ezra 1:1-4">Ezra 1:1&ndash;4</a>).</p>
 
 <br>
 
@@ -95,7 +95,7 @@ draft: true
 <tr style="background: white;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Cambyses II</strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">530&ndash;522</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Not named; conquered Egypt (background to the Elephantine Jews)</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Not named; conquered Egypt (background to the Elephantine Jews, a Jewish community in Egypt)</td>
 </tr>
 <tr style="background: #f0ebe5;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Darius I</strong> (the Great)</td>
