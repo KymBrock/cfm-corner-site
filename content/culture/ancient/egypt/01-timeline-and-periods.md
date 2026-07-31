@@ -160,7 +160,7 @@ description: "The major periods of Egyptian history from the Old Kingdom to the 
 </div>
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
-<p style="margin: 0;"><strong>Biblical note:</strong> Genesis 12 describes Abraham going down to Egypt during a famine. The Middle Kingdom is the period that best fits this narrative &mdash; a powerful, centralized Egypt with documented Semitic visitors. The pharaoh Abraham encountered would have ruled from a court that was sophisticated, literate, and accustomed to foreign diplomats and traders.</p>
+<p style="margin: 0;"><strong>Biblical note:</strong> <a href="https://www.blueletterbible.org/kjv/gen/12/1/" target="_blank" data-ref="Genesis 12">Genesis 12</a> describes Abraham going down to Egypt during a famine. The Middle Kingdom is the period that best fits this narrative &mdash; a powerful, centralized Egypt with documented Semitic visitors. The pharaoh Abraham encountered would have ruled from a court that was sophisticated, literate, and accustomed to foreign diplomats and traders.</p>
 </div>
 
 <br>
@@ -192,7 +192,7 @@ description: "The major periods of Egyptian history from the Old Kingdom to the 
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
 <p style="margin: 0 0 12px 0;"><strong>Biblical note:</strong> Most scholars who accept a historical Exodus place it in this period, either in the 15th century BC (early date, under Thutmose III or Amenhotep II, based on <a href="https://www.blueletterbible.org/kjv/1ki/6/1/" target="_blank" data-ref="1 Kings 6:1">1 Kings 6:1</a>) or the 13th century BC (late date, under Ramesses II, based on <a href="https://www.blueletterbible.org/kjv/exo/1/11/" target="_blank" data-ref="Exodus 1:11">Exodus 1:11</a>'s reference to the store cities Pithom and Ramesses).</p>
-<p style="margin: 0;">The New Kingdom's building projects &mdash; which required massive labor forces &mdash; provide the clearest historical context for the Israelites' forced labor described in Exodus 1. The city of Pi-Ramesses, built in the eastern Delta under Ramesses II, sits in the same region as biblical Goshen.</p>
+<p style="margin: 0;">The New Kingdom's building projects &mdash; which required massive labor forces &mdash; provide the clearest historical context for the Israelites' forced labor described in <a href="https://www.blueletterbible.org/kjv/exo/1/1/" target="_blank" data-ref="Exodus 1">Exodus 1</a>. The city of Pi-Ramesses, built in the eastern Delta under Ramesses II, sits in the same region as biblical Goshen.</p>
 </div>
 
 <br>

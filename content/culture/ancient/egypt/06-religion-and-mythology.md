@@ -84,7 +84,7 @@ description: "The gods of Egypt, the afterlife journey, the Book of the Dead, an
 <tr style="background: white;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Ptah</strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Creation, craftsmen, the spoken word</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Creator god of Memphis; created the world through the power of speech &mdash; a striking parallel to Genesis 1 and John 1</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Creator god of Memphis; created the world through the power of speech &mdash; a striking parallel to <a href="https://www.blueletterbible.org/kjv/gen/1/1/" target="_blank" data-ref="Genesis 1">Genesis 1</a> and <a href="https://www.blueletterbible.org/kjv/jhn/1/1/" target="_blank" data-ref="John 1">John 1</a></td>
 </tr>
 </tbody>
 </table>
@@ -185,7 +185,7 @@ description: "The gods of Egypt, the afterlife journey, the Book of the Dead, an
 <li><strong><a href="https://www.worldhistory.org/amun/" target="_blank">Amun</a> / Amaunet</strong> &mdash; hiddenness, the unseen</li>
 </ul>
 
-<p>These forces interacted to produce the first mound rising from the waters and the first sunrise &mdash; light emerging from darkness over the face of the deep. The verbal parallels with Genesis 1:1&ndash;3 are striking, though the theological frameworks differ fundamentally: the Ogdoad are impersonal forces, not a personal Creator.</p>
+<p>These forces interacted to produce the first mound rising from the waters and the first sunrise &mdash; light emerging from darkness over the face of the deep. The verbal parallels with <a href="https://www.blueletterbible.org/kjv/gen/1/1/" target="_blank" data-ref="Genesis 1:1">Genesis 1:1&ndash;3</a> are striking, though the theological frameworks differ fundamentally: the Ogdoad are impersonal forces, not a personal Creator.</p>
 
 <details style="margin: 24px 0;">
 <summary style="cursor: pointer; color: var(--sage-dark, #4a6b52); font-weight: bold;">Explore Further: Egyptian Creation Myths</summary>
