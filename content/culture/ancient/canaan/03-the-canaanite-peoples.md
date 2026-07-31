@@ -23,7 +23,7 @@ description: "The 'seven nations' of Deuteronomy 7 — city-states, social struc
 
 <br>
 
-<h3>The Seven Nations of Deuteronomy 7</h3>
+<h3>The Seven Nations of <a href="https://www.blueletterbible.org/kjv/deu/7/1/" target="_blank" data-ref="Deuteronomy 7">Deuteronomy 7</a></h3>
 
 <p>Moses named them explicitly:</p>
 
@@ -32,7 +32,7 @@ description: "The 'seven nations' of Deuteronomy 7 — city-states, social struc
 <p style="margin: 8px 0 0 0; text-align: right;">&mdash; <a href="https://www.blueletterbible.org/kjv/deu/7/1/" target="_blank" data-ref="Deuteronomy 7:1">Deuteronomy 7:1</a></p>
 </blockquote>
 
-<p>The number seven appears deliberate &mdash; representing completeness, as in &ldquo;all the peoples of the land.&rdquo; Other biblical lists vary: some include the Rephaim, some omit the Girgashites, and Genesis 15:19&ndash;21 lists ten peoples in God&rsquo;s covenant with Abraham. The seven-nation list was a standard way of saying &ldquo;the entire population of Canaan.&rdquo;</p>
+<p>The number seven appears deliberate &mdash; representing completeness, as in &ldquo;all the peoples of the land.&rdquo; Other biblical lists vary: some include the Rephaim, some omit the Girgashites, and <a href="https://www.blueletterbible.org/kjv/gen/15/19/" target="_blank" data-ref="Genesis 15:19">Genesis 15:19&ndash;21</a> lists ten peoples in God&rsquo;s covenant with Abraham. The seven-nation list was a standard way of saying &ldquo;the entire population of Canaan.&rdquo;</p>
 
 <p>What we know about each group varies enormously. Some left extensive archaeological traces; others are little more than a name.</p>
 
@@ -108,7 +108,7 @@ description: "The 'seven nations' of Deuteronomy 7 — city-states, social struc
 
 <h4>How a City-State Worked</h4>
 
-<p>Each city-state was ruled by a king &mdash; the Hebrew <em>melekh</em> (<a href="https://www.blueletterbible.org/lexicon/h4428/kjv/wlc/0-1/" target="_blank">מֶלֶךְ</a>), though &ldquo;king&rdquo; overstates the scale. These were local rulers, more like warlords or mayors of fortified towns than monarchs of nations. Joshua 12 lists thirty-one kings defeated in the conquest &mdash; an astonishing number for such a small territory, and a clear indicator of how fragmented the political landscape was.</p>
+<p>Each city-state was ruled by a king &mdash; the Hebrew <em>melekh</em> (<a href="https://www.blueletterbible.org/lexicon/h4428/kjv/wlc/0-1/" target="_blank">מֶלֶךְ</a>), though &ldquo;king&rdquo; overstates the scale. These were local rulers, more like warlords or mayors of fortified towns than monarchs of nations. <a href="https://www.blueletterbible.org/kjv/jos/12/1/" target="_blank" data-ref="Joshua 12">Joshua 12</a> lists thirty-one kings defeated in the conquest &mdash; an astonishing number for such a small territory, and a clear indicator of how fragmented the political landscape was.</p>
 
 <p>A typical Canaanite city-state consisted of:</p>
 
@@ -192,11 +192,11 @@ description: "The 'seven nations' of Deuteronomy 7 — city-states, social struc
 
 <figure style="margin: 28px 0; text-align: center;">
 <img src="/images/culture/canaan/sourced/03-hazor-aerial.jpg" alt="Aerial view of Tel Hazor, the largest Canaanite city — UNESCO World Heritage Site" class="lightbox-img" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">Aerial view of Tel Hazor &mdash; the largest Canaanite city, covering approximately 200 acres. Joshua 11:10 calls it &ldquo;the head of all those kingdoms.&rdquo; UNESCO World Heritage Site. <em>Photo: Abraham Graicer, Wikimedia Commons, CC BY-SA 4.0.</em></figcaption>
+<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">Aerial view of Tel Hazor &mdash; the largest Canaanite city, covering approximately 200 acres. <a href="https://www.blueletterbible.org/kjv/jos/11/10/" target="_blank" data-ref="Joshua 11:10">Joshua 11:10</a> calls it &ldquo;the head of all those kingdoms.&rdquo; UNESCO World Heritage Site. <em>Photo: Abraham Graicer, Wikimedia Commons, CC BY-SA 4.0.</em></figcaption>
 </figure>
 
 <ul>
-<li><strong>Hazor</strong> &mdash; The largest Canaanite city, covering approximately 200 acres at its peak. Joshua 11:10 calls it &ldquo;the head of all those kingdoms.&rdquo; Yigael Yadin&rsquo;s excavations (1955&ndash;1958, continued by Amnon Ben-Tor) revealed massive fortifications, temples, and a royal palace. A destruction layer dated to the 13th century BC is consistent with the biblical account of Joshua burning the city (<a href="https://www.blueletterbible.org/kjv/jos/11/11/" target="_blank" data-ref="Joshua 11:11">Joshua 11:11</a>).</li>
+<li><strong>Hazor</strong> &mdash; The largest Canaanite city, covering approximately 200 acres at its peak. <a href="https://www.blueletterbible.org/kjv/jos/11/10/" target="_blank" data-ref="Joshua 11:10">Joshua 11:10</a> calls it &ldquo;the head of all those kingdoms.&rdquo; Yigael Yadin&rsquo;s excavations (1955&ndash;1958, continued by Amnon Ben-Tor) revealed massive fortifications, temples, and a royal palace. A destruction layer dated to the 13th century BC is consistent with the biblical account of Joshua burning the city (<a href="https://www.blueletterbible.org/kjv/jos/11/11/" target="_blank" data-ref="Joshua 11:11">Joshua 11:11</a>).</li>
 <li><strong>Megiddo</strong> &mdash; Guarding the crucial pass where the Via Maris cut through the Carmel ridge, Megiddo was one of the most strategically important cities in the ancient world. Excavations have uncovered over twenty layers of occupation spanning thousands of years, including Late Bronze Age palaces, temples, and a sophisticated water system.</li>
 <li><strong>Lachish</strong> &mdash; A major fortified city in the Shephelah, guarding the approach to Hebron and the southern highlands. The site shows a massive Late Bronze Age destruction, followed by a gap in occupation &mdash; a pattern consistent with the conquest narrative.</li>
 <li><strong>Jericho</strong> &mdash; One of the most debated sites in biblical archaeology. Kathleen Kenyon&rsquo;s excavations (1950s) placed the city&rsquo;s destruction earlier than the traditional Exodus chronology. Bryant Wood later argued for a date more consistent with the biblical timeline. The debate continues, but the site confirms a fortified city at the western approach to the Jordan &mdash; exactly as the text describes.</li>
@@ -248,7 +248,7 @@ description: "The 'seven nations' of Deuteronomy 7 — city-states, social struc
 
 <h3>Peoples Beyond the Seven</h3>
 
-<p>The Deuteronomy 7 list focuses on the peoples <em>within</em> Canaan proper, but Israel also encountered and interacted with several peoples on the margins:</p>
+<p>The <a href="https://www.blueletterbible.org/kjv/deu/7/1/" target="_blank" data-ref="Deuteronomy 7">Deuteronomy 7</a> list focuses on the peoples <em>within</em> Canaan proper, but Israel also encountered and interacted with several peoples on the margins:</p>
 
 <ul>
 <li><strong>Philistines</strong> &mdash; <a href="https://www.worldhistory.org/Sea_Peoples/" target="_blank">Sea Peoples</a> who settled the southern coast around 1175 BC, establishing the five-city Pentapolis (Gaza, Ashkelon, Ashdod, Ekron, Gath). They became Israel&rsquo;s most persistent military rival during the Judges and early monarchy. (See <a href="/culture/ancient/canaan/06-the-philistines/">Section 06</a>.)</li>
@@ -309,7 +309,7 @@ description: "The 'seven nations' of Deuteronomy 7 — city-states, social struc
 
 <p><strong>Scripture Citations:</strong></p>
 <ul style="margin: 12px 0 0 0; padding-left: 24px;">
-<li>Genesis 13:7; 15:19&ndash;21; 23:10; 34:2 | Numbers 13:33; 20:18; 21:21&ndash;35; 22:1&ndash;6 | Deuteronomy 7:1 | Joshua 9:3&ndash;27; 10:3&ndash;5; 11:1&ndash;5, 10&ndash;11; 12; 14:12; 15:63 | Judges 1:4&ndash;5, 19, 27, 29, 30, 31&ndash;32, 33, 34; 2:21&ndash;22; 3:5&ndash;6; 8:23; 11:4&ndash;33 | 2 Samuel 5:6&ndash;7; 21:1 | 1 Kings 9:20&ndash;21</li>
+<li><a href="https://www.blueletterbible.org/kjv/gen/13/7/" target="_blank" data-ref="Genesis 13:7">Genesis 13:7</a>; 15:19&ndash;21; 23:10; 34:2 | <a href="https://www.blueletterbible.org/kjv/num/13/33/" target="_blank" data-ref="Numbers 13:33">Numbers 13:33</a>; 20:18; 21:21&ndash;35; 22:1&ndash;6 | <a href="https://www.blueletterbible.org/kjv/deu/7/1/" target="_blank" data-ref="Deuteronomy 7:1">Deuteronomy 7:1</a> | <a href="https://www.blueletterbible.org/kjv/jos/9/3/" target="_blank" data-ref="Joshua 9:3">Joshua 9:3&ndash;27</a>; 10:3&ndash;5; 11:1&ndash;5, 10&ndash;11; 12; 14:12; 15:63 | <a href="https://www.blueletterbible.org/kjv/jdg/1/4/" target="_blank" data-ref="Judges 1:4">Judges 1:4&ndash;5</a>, 19, 27, 29, 30, 31&ndash;32, 33, 34; 2:21&ndash;22; 3:5&ndash;6; 8:23; 11:4&ndash;33 | <a href="https://www.blueletterbible.org/kjv/2sa/5/6/" target="_blank" data-ref="2 Samuel 5:6">2 Samuel 5:6&ndash;7</a>; 21:1 | <a href="https://www.blueletterbible.org/kjv/1ki/9/20/" target="_blank" data-ref="1 Kings 9:20">1 Kings 9:20&ndash;21</a></li>
 </ul>
 
 </div>

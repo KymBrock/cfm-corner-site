@@ -291,7 +291,7 @@ description: "The Amarna Letters, the Habiru question, Egyptian vassalage in Can
 
 <p><strong>Scripture Citations:</strong></p>
 <ul style="margin: 12px 0 0 0; padding-left: 24px;">
-<li>Genesis 13:15; 14:13 | Exodus 2:6 | Joshua 24:1 | 2 Samuel 5:6&ndash;7 | 1 Kings 12:1</li>
+<li><a href="https://www.blueletterbible.org/kjv/gen/13/15/" target="_blank" data-ref="Genesis 13:15">Genesis 13:15</a>; 14:13 | <a href="https://www.blueletterbible.org/kjv/exo/2/6/" target="_blank" data-ref="Exodus 2:6">Exodus 2:6</a> | <a href="https://www.blueletterbible.org/kjv/jos/24/1/" target="_blank" data-ref="Joshua 24:1">Joshua 24:1</a> | <a href="https://www.blueletterbible.org/kjv/2sa/5/6/" target="_blank" data-ref="2 Samuel 5:6">2 Samuel 5:6&ndash;7</a> | <a href="https://www.blueletterbible.org/kjv/1ki/12/1/" target="_blank" data-ref="1 Kings 12:1">1 Kings 12:1</a></li>
 </ul>
 
 </div>

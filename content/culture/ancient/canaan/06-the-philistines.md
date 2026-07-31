@@ -155,23 +155,23 @@ description: "Sea Peoples, the Pentapolis, iron technology, and the rivals who s
 
 <p>The Philistine conflict defines the narrative arc from the late Judges period through the early monarchy. The escalation tells the story of Israel&rsquo;s transformation:</p>
 
-<h4>Samson (Judges 13&ndash;16)</h4>
+<h4>Samson (<a href="https://www.blueletterbible.org/kjv/jdg/13/1/" target="_blank" data-ref="Judges 13">Judges 13</a>&ndash;16)</h4>
 
 <p>Samson operated in the border zone between Dan and Philistia &mdash; the contested Shephelah frontier. His story is one of individual, Spirit-empowered exploits against the Philistines: killing a lion, burning their fields, slaying a thousand with a jawbone. But Samson never led an army. His victories were personal and temporary.</p>
 
 <p>Samson was a <em>nazir</em> (<a href="https://www.blueletterbible.org/lexicon/h5139/kjv/wlc/0-1/" target="_blank">נָזִיר</a>) &mdash; set apart from birth by divine vow (<a href="https://www.blueletterbible.org/kjv/jdg/13/5/" target="_blank" data-ref="Judges 13:5">Judges 13:5</a>). His uncut hair was not the source of his strength but the sign of his covenant &mdash; and when that sign was betrayed through Delilah, the Spirit departed (<a href="https://www.blueletterbible.org/kjv/jdg/16/20/" target="_blank" data-ref="Judges 16:20">Judges 16:20</a>). His final act &mdash; pulling down the temple of Dagon at Gaza &mdash; was both his greatest victory and his death. The Judges period ends as it began: with individual heroism that cannot solve the structural problem.</p>
 
-<h4>The Ark Crisis (1 Samuel 4&ndash;7)</h4>
+<h4>The Ark Crisis (<a href="https://www.blueletterbible.org/kjv/1sa/4/1/" target="_blank" data-ref="1 Samuel 4">1 Samuel 4</a>&ndash;7)</h4>
 
 <p>The turning point. The Philistines defeated Israel at the battle of Aphek, capturing the <strong>ark of the covenant</strong> itself. Eli&rsquo;s sons Hophni and Phinehas were killed; Eli collapsed and died upon hearing the news. The ark was taken to the temple of Dagon at Ashdod, where the idol fell before it &mdash; and plagues struck each Philistine city that housed it until the Philistines returned it on a new cart (<a href="https://www.blueletterbible.org/kjv/1sa/5/1/" target="_blank" data-ref="1 Samuel 5:1-12">1 Samuel 5&ndash;6</a>).</p>
 
 <p>The narrative makes a theological point: Israel&rsquo;s God was not defeated even when Israel was. The ark did not need Israel&rsquo;s army to demonstrate YHWH&rsquo;s superiority over Dagon. But the military reality was devastating &mdash; the Philistines now controlled the central hill country approaches and had garrisons deep in Israelite territory.</p>
 
-<h4>Saul and Jonathan (1 Samuel 9&ndash;31)</h4>
+<h4>Saul and Jonathan (<a href="https://www.blueletterbible.org/kjv/1sa/9/1/" target="_blank" data-ref="1 Samuel 9">1 Samuel 9</a>&ndash;31)</h4>
 
 <p>The Philistine threat was the immediate catalyst for the monarchy. Samuel&rsquo;s warning about kingship was given in the context of a people desperate for organized military leadership against Philistine pressure. Saul&rsquo;s reign began with Philistine conflict (Jonathan&rsquo;s attack on the Philistine garrison at Geba, <a href="https://www.blueletterbible.org/kjv/1sa/13/3/" target="_blank" data-ref="1 Samuel 13:3">1 Samuel 13:3</a>) and ended with it &mdash; Saul and Jonathan both died fighting the Philistines at Mount Gilboa (<a href="https://www.blueletterbible.org/kjv/1sa/31/1/" target="_blank" data-ref="1 Samuel 31:1-6">1 Samuel 31:1&ndash;6</a>).</p>
 
-<h4>David (1 Samuel 17 &mdash; 2 Samuel 5)</h4>
+<h4>David (<a href="https://www.blueletterbible.org/kjv/1sa/17/1/" target="_blank" data-ref="1 Samuel 17">1 Samuel 17</a> &mdash; <a href="https://www.blueletterbible.org/kjv/2sa/5/1/" target="_blank" data-ref="2 Samuel 5">2 Samuel 5</a>)</h4>
 
 <p>David&rsquo;s career is framed by the Philistines from beginning to end. His entry onto the national stage was the defeat of Goliath in the Valley of Elah (<a href="https://www.blueletterbible.org/kjv/1sa/17/49/" target="_blank" data-ref="1 Samuel 17:49-50">1 Samuel 17:49&ndash;50</a>) &mdash; a contest between Aegean heavy infantry and an Israelite shepherd with a sling. His years as a fugitive included serving as a Philistine vassal under Achish of Gath (<a href="https://www.blueletterbible.org/kjv/1sa/27/2/" target="_blank" data-ref="1 Samuel 27:2-7">1 Samuel 27:2&ndash;7</a>). His bodyguard included the Cherethites and Pelethites &mdash; almost certainly Philistine (Cretan) mercenaries (<a href="https://www.blueletterbible.org/kjv/2sa/8/18/" target="_blank" data-ref="2 Samuel 8:18">2 Samuel 8:18</a>).</p>
 
@@ -286,7 +286,7 @@ description: "Sea Peoples, the Pentapolis, iron technology, and the rivals who s
 
 <p><strong>Scripture Citations:</strong></p>
 <ul style="margin: 12px 0 0 0; padding-left: 24px;">
-<li>Judges 13:5; 14:19; 16:20&ndash;30 | 1 Samuel 5&ndash;6; 8:20; 13:3, 19&ndash;21; 17:4&ndash;7, 49&ndash;50; 21:10; 27:2&ndash;7; 31:1&ndash;6, 10 | 2 Samuel 5:11, 17&ndash;25; 8:18 | 2 Kings 1:2&ndash;3 | Amos 9:7 | Jeremiah 47:4</li>
+<li><a href="https://www.blueletterbible.org/kjv/jdg/13/5/" target="_blank" data-ref="Judges 13:5">Judges 13:5</a>; 14:19; 16:20&ndash;30 | <a href="https://www.blueletterbible.org/kjv/1sa/5/1/" target="_blank" data-ref="1 Samuel 5">1 Samuel 5</a>&ndash;6; 8:20; 13:3, 19&ndash;21; 17:4&ndash;7, 49&ndash;50; 21:10; 27:2&ndash;7; 31:1&ndash;6, 10 | <a href="https://www.blueletterbible.org/kjv/2sa/5/11/" target="_blank" data-ref="2 Samuel 5:11">2 Samuel 5:11</a>, 17&ndash;25; 8:18 | <a href="https://www.blueletterbible.org/kjv/2ki/1/2/" target="_blank" data-ref="2 Kings 1:2">2 Kings 1:2&ndash;3</a> | <a href="https://www.blueletterbible.org/kjv/amo/9/7/" target="_blank" data-ref="Amos 9:7">Amos 9:7</a> | <a href="https://www.blueletterbible.org/kjv/jer/47/4/" target="_blank" data-ref="Jeremiah 47:4">Jeremiah 47:4</a></li>
 </ul>
 
 </div>

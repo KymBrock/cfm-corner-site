@@ -99,7 +99,7 @@ From the Bronze Age collapse to the rise of Iron Age kingdoms &mdash; the extern
 
 **<a href="/culture/ancient/canaan/03-the-canaanite-peoples/">The Canaanite Peoples</a>**
 
-The "seven nations" of Deuteronomy 7 &mdash; Hittites, Girgashites, Amorites, Canaanites, Perizzites, Hivites, and Jebusites. Who were they? How were their city-states organized? What does archaeology tell us about their culture and daily life?
+The "seven nations" of <a href="https://www.blueletterbible.org/kjv/deu/7/1/" target="_blank" data-ref="Deuteronomy 7">Deuteronomy 7</a> &mdash; Hittites, Girgashites, Amorites, Canaanites, Perizzites, Hivites, and Jebusites. Who were they? How were their city-states organized? What does archaeology tell us about their culture and daily life?
 
 </div>
 </div>
