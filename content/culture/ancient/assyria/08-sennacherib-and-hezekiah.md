@@ -146,7 +146,7 @@ draft: true
 
 <ul style="margin: 12px 0; padding-left: 24px;">
 <li><strong>William R. Gallagher</strong>, <em>Sennacherib&rsquo;s Campaign to Judah: New Studies</em> (Brill, 1999) &mdash; The fullest modern reconstruction, weighing the Assyrian, biblical, and classical sources against one another.</li>
-<li><strong>Mordechai Cogan &amp; Hayim Tadmor</strong>, <em>II Kings</em>, Anchor Bible 11 (Doubleday, 1988) &mdash; The standard critical commentary on 2 Kings 18&ndash;19, with the Assyrian parallels laid out in full.</li>
+<li><strong>Mordechai Cogan &amp; Hayim Tadmor</strong>, <em>II Kings</em>, Anchor Bible 11 (Doubleday, 1988) &mdash; The standard critical commentary on <a href="https://www.blueletterbible.org/kjv/2ki/18/1/" target="_blank" data-ref="2 Kings 18">2 Kings 18</a>&ndash;19, with the Assyrian parallels laid out in full.</li>
 <li><strong>Eckart Frahm</strong>, <em>Assyria: The Rise and Fall of the World&rsquo;s First Empire</em> (Basic Books, 2023) &mdash; Current narrative history of the empire and of Sennacherib&rsquo;s reign.</li>
 <li><strong>Daniel D. Luckenbill</strong>, <em>The Annals of Sennacherib</em>, Oriental Institute Publications 2 (University of Chicago Press, 1924) &mdash; The edition and translation of the prism inscriptions (the &ldquo;bird in a cage&rdquo; passage).</li>
 <li><strong>David Ussishkin</strong>, <em>The Conquest of Lachish by Sennacherib</em> (Tel Aviv University, 1982) &mdash; The excavator&rsquo;s account of the siege-ramp and its match to the Nineveh reliefs.</li>

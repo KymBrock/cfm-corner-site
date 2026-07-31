@@ -34,7 +34,7 @@ draft: true
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
 <p style="margin: 0; font-style: italic;">&ldquo;And should not I spare Nineveh, that great city, wherein are more than sixscore thousand persons that cannot discern between their right hand and their left hand; and also much cattle?&rdquo;</p>
-<p style="margin: 12px 0 0 0; font-size: 0.85em; color: #666;">&mdash; Jonah 4:11, the last verse of the book</p>
+<p style="margin: 12px 0 0 0; font-size: 0.85em; color: #666;">&mdash; <a href="https://www.blueletterbible.org/kjv/jon/4/11/" target="_blank" data-ref="Jonah 4:11">Jonah 4:11</a>, the last verse of the book</p>
 </div>
 
 <p>The book ends there, on a question God never answers for us. &ldquo;Sixscore thousand&rdquo; is 120,000 &mdash; the innocent of the city, those &ldquo;that cannot discern between their right hand and their left hand,&rdquo; a phrase that most naturally means the children. God&rsquo;s final word about the capital of the cruelest empire of its age is not a threat but a plea for pity. It is scripture&rsquo;s most surprising sentence about Assyria: that the God of Israel would grieve to destroy even Nineveh. Whatever else the book is doing, it refuses to let its readers &mdash; ancient or modern &mdash; keep their enemies safely outside the circle of mercy.</p>
@@ -53,7 +53,7 @@ draft: true
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
 <p style="margin: 0; font-style: italic;">&ldquo;Woe to the bloody city! it is all full of lies and robbery; the prey departeth not.&rdquo;</p>
-<p style="margin: 12px 0 0 0; font-size: 0.85em; color: #666;">&mdash; Nahum 3:1</p>
+<p style="margin: 12px 0 0 0; font-size: 0.85em; color: #666;">&mdash; <a href="https://www.blueletterbible.org/kjv/nah/3/1/" target="_blank" data-ref="Nahum 3:1">Nahum 3:1</a></p>
 </div>
 
 <p>&ldquo;The bloody city&rdquo; &mdash; the phrase is exact justice, turned back on an empire that had made bloodshed a tool of statecraft. And then the sentence itself: <em>&ldquo;Nineveh is laid waste: who will bemoan her? whence shall I seek comforters for thee?&rdquo;</em> (<a href="https://www.blueletterbible.org/kjv/nah/3/7/" target="_blank" data-ref="Nahum 3:7">Nahum 3:7</a>). No one will mourn her, Nahum says &mdash; the very pity Jonah&rsquo;s God had extended is now withdrawn. History proved the oracle right. In <strong>612 BC</strong>, a coalition of Babylonians and Medes stormed and burned Nineveh, and the Assyrian empire was gone within a few years, never to rise again. The prophecy and the archaeology of that fall meet in <a href="/culture/ancient/assyria/10-major-sites-and-discoveries/">Section 10</a>, where the burn layers Nahum foretold still lie in the ground.</p>
@@ -70,7 +70,7 @@ draft: true
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
 <p style="margin: 0; font-style: italic;">&ldquo;O Assyrian, the rod of mine anger, and the staff in their hand is mine indignation. I will send him against an hypocritical nation&hellip; to take the spoil, and to take the prey.&rdquo;</p>
-<p style="margin: 12px 0 0 0; font-size: 0.85em; color: #666;">&mdash; Isaiah 10:5&ndash;6</p>
+<p style="margin: 12px 0 0 0; font-size: 0.85em; color: #666;">&mdash; <a href="https://www.blueletterbible.org/kjv/isa/10/5/" target="_blank" data-ref="Isaiah 10:5">Isaiah 10:5&ndash;6</a></p>
 </div>
 
 <p>Assyria is a <em>rod</em> &mdash; an instrument in the hand of God, sent to discipline a faithless people (<a href="https://www.blueletterbible.org/kjv/isa/10/5/" target="_blank" data-ref="Isaiah 10:5-6">Isaiah 10:5&ndash;6</a>). But a rod that begins to imagine itself the arm that swings it has forgotten what it is. Isaiah exposes exactly that self-deception: <em>&ldquo;Howbeit he meaneth not so, neither doth his heart think so; but it is in his heart to destroy and cut off nations not a few&rdquo;</em> (<a href="https://www.blueletterbible.org/kjv/isa/10/7/" target="_blank" data-ref="Isaiah 10:7">Isaiah 10:7</a>). Assyria thinks it conquers by its own strength &mdash; <em>&ldquo;By the strength of my hand I have done it, and by my wisdom&rdquo;</em> (<a href="https://www.blueletterbible.org/kjv/isa/10/13/" target="_blank" data-ref="Isaiah 10:13">Isaiah 10:13</a>) &mdash; and for that arrogance it will itself be judged: <em>&ldquo;I will punish the fruit of the stout heart of the king of Assyria, and the glory of his high looks&rdquo;</em> (<a href="https://www.blueletterbible.org/kjv/isa/10/12/" target="_blank" data-ref="Isaiah 10:12">Isaiah 10:12</a>).</p>
@@ -79,7 +79,7 @@ draft: true
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
 <p style="margin: 0; font-style: italic;">&ldquo;Shall the axe boast itself against him that heweth therewith? or shall the saw magnify itself against him that shaketh it? as if the rod should shake itself against them that lift it up.&rdquo;</p>
-<p style="margin: 12px 0 0 0; font-size: 0.85em; color: #666;">&mdash; Isaiah 10:15</p>
+<p style="margin: 12px 0 0 0; font-size: 0.85em; color: #666;">&mdash; <a href="https://www.blueletterbible.org/kjv/isa/10/15/" target="_blank" data-ref="Isaiah 10:15">Isaiah 10:15</a></p>
 </div>
 
 <p>This is the theological heart of scripture&rsquo;s whole quarrel with Assyria. God can use an unjust empire to accomplish a just purpose without excusing the empire&rsquo;s injustice &mdash; the axe is still answerable for its pride. The scholar Peter Machinist showed, in a landmark study of Isaiah&rsquo;s language, how closely the prophet&rsquo;s portrait of the boasting Assyrian tracks the actual rhetoric of the Assyrian royal inscriptions &mdash; the very self-glorification the kings carved into their own monuments becomes, in Isaiah, the evidence for the case against them. Assyria was so vivid a presence that it became scripture&rsquo;s archetype: the arrogant world-power judged for forgetting whose hand it was in.</p>
