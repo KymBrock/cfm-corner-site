@@ -43,17 +43,17 @@ draft: true
 <tr style="background: #f0ebe5;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Cyrus II the Great</strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">559&ndash;530</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Decree of return (Ezra 1; 2 Chr 36:22&ndash;23); temple foundation laid; Daniel serves on</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Decree of return (<a href="https://www.blueletterbible.org/kjv/ezr/1/1/" target="_blank" data-ref="Ezra 1">Ezra 1</a>; 2 Chr 36:22&ndash;23); temple foundation laid; Daniel serves on</td>
 </tr>
 <tr style="background: white;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Cambyses II</strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">530&ndash;522</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Unnamed; conquers Egypt (525); the &ldquo;Ahasuerus&rdquo;/&ldquo;Artaxerxes&rdquo; of Ezra 4:6&ndash;7 are debated</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Unnamed; conquers Egypt (525); the &ldquo;Ahasuerus&rdquo;/&ldquo;Artaxerxes&rdquo; of <a href="https://www.blueletterbible.org/kjv/ezr/4/6/" target="_blank" data-ref="Ezra 4:6">Ezra 4:6&ndash;7</a> are debated</td>
 </tr>
 <tr style="background: #f0ebe5;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Darius I the Great</strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">522&ndash;486</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Authorizes and completes the temple, 515 BC (Ezra 5&ndash;6; Haggai; Zechariah)</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Authorizes and completes the temple, 515 BC (<a href="https://www.blueletterbible.org/kjv/ezr/5/1/" target="_blank" data-ref="Ezra 5">Ezra 5</a>&ndash;6; Haggai; Zechariah)</td>
 </tr>
 <tr style="background: white;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Xerxes I</strong></td>
@@ -81,7 +81,7 @@ draft: true
 
 <figure class="fg-figure" style="max-width:560px;">
   <img src="/images/culture/achaemenid/photos/darius-xerxes-treasury-relief.jpg" alt="Persepolis relief of Darius the Great enthroned with crown prince Xerxes behind" loading="lazy">
-  <figcaption>Darius the Great enthroned, the crown prince <b>Xerxes</b> standing behind him &mdash; a relief from the Persepolis treasury. Between them these two carry much of the story here: Darius sees the temple finished (Ezra 6), and Xerxes is the <b>Ahasuerus</b> of Esther. <span class="fg-credit">Persepolis Treasury relief &middot; photo A. Davey, Wikimedia Commons (CC BY 2.0)</span></figcaption>
+  <figcaption>Darius the Great enthroned, the crown prince <b>Xerxes</b> standing behind him &mdash; a relief from the Persepolis treasury. Between them these two carry much of the story here: Darius sees the temple finished (<a href="https://www.blueletterbible.org/kjv/ezr/6/1/" target="_blank" data-ref="Ezra 6">Ezra 6</a>), and Xerxes is the <b>Ahasuerus</b> of Esther. <span class="fg-credit">Persepolis Treasury relief &middot; photo A. Davey, Wikimedia Commons (CC BY 2.0)</span></figcaption>
 </figure>
 
 <h3>Visual Timeline: Persia and the Return</h3>
@@ -181,7 +181,7 @@ draft: true
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #c0392b; font-size: 0.9em;">480 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Xerxes invades Greece</strong> &mdash; the battle of Thermopylae and the burning of Athens, then defeat at Salamis; he returns home to the events of Esther 2</span>
+<span style="flex: 1; font-size: 0.95em;"><strong>Xerxes invades Greece</strong> &mdash; the battle of Thermopylae and the burning of Athens, then defeat at Salamis; he returns home to the events of <a href="https://www.blueletterbible.org/kjv/est/2/1/" target="_blank" data-ref="Esther 2">Esther 2</a></span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
@@ -249,7 +249,7 @@ draft: true
 <p>Ezra&ndash;Nehemiah is genuinely confusing on first read, for three reasons worth naming plainly:</p>
 
 <ul>
-<li><strong>&ldquo;Artaxerxes&rdquo; and &ldquo;Ahasuerus&rdquo; are titles as much as names.</strong> Ezra 4 mentions correspondence under an &ldquo;Ahasuerus&rdquo; and an &ldquo;Artaxerxes&rdquo; (<a href="https://www.blueletterbible.org/kjv/ezr/4/6/" target="_blank" data-ref="Ezra 4:6-7">Ezra 4:6&ndash;7</a>) <em>before</em> returning to the temple story under Darius &mdash; because Ezra 4 gathers examples of opposition <em>topically</em>, jumping ahead in time to make a point, then resuming the narrative. Reading it as a strict sequence produces contradictions that vanish once you see it is a thematic digression.</li>
+<li><strong>&ldquo;Artaxerxes&rdquo; and &ldquo;Ahasuerus&rdquo; are titles as much as names.</strong> <a href="https://www.blueletterbible.org/kjv/ezr/4/1/" target="_blank" data-ref="Ezra 4">Ezra 4</a> mentions correspondence under an &ldquo;Ahasuerus&rdquo; and an &ldquo;Artaxerxes&rdquo; (<a href="https://www.blueletterbible.org/kjv/ezr/4/6/" target="_blank" data-ref="Ezra 4:6-7">Ezra 4:6&ndash;7</a>) <em>before</em> returning to the temple story under Darius &mdash; because <a href="https://www.blueletterbible.org/kjv/ezr/4/1/" target="_blank" data-ref="Ezra 4">Ezra 4</a> gathers examples of opposition <em>topically</em>, jumping ahead in time to make a point, then resuming the narrative. Reading it as a strict sequence produces contradictions that vanish once you see it is a thematic digression.</li>
 <li><strong>The temple and the wall are a lifetime apart.</strong> The temple is finished under Darius I (515 BC); Nehemiah&rsquo;s wall goes up under Artaxerxes I (445 BC) &mdash; seventy years and three kings later. Esther (under Xerxes, 480s BC) falls <em>between</em> them. Ezra the person arrives (458 BC) shortly before Nehemiah.</li>
 <li><strong>Daniel&rsquo;s &ldquo;Darius the Median&rdquo;</strong> (<a href="https://www.blueletterbible.org/kjv/dan/5/31/" target="_blank" data-ref="Daniel 5:31">Daniel 5:31</a>) is a separate and much-debated figure, distinct from the later Persian Dariuses &mdash; a puzzle addressed in the <a href="/culture/ancient/babylon/03-nebuchadnezzar-and-the-kings/">Babylon guide&rsquo;s</a> discussion of the fall of Babylon.</li>
 </ul>

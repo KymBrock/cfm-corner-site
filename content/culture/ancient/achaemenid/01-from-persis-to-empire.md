@@ -65,7 +65,7 @@ draft: true
 <p>Here the biblical text does something it does nowhere else: it names a pagan emperor, by name, and calls him the LORD&rsquo;s chosen instrument &mdash; in language written, on the traditional reading, generations before he was born. Isaiah calls Cyrus <strong>&ldquo;my shepherd&rdquo;</strong> who &ldquo;shall perform all my pleasure&rdquo; (<a href="https://www.blueletterbible.org/kjv/isa/44/28/" target="_blank" data-ref="Isaiah 44:28">Isaiah 44:28</a>), and &mdash; astonishingly &mdash; <strong>&ldquo;his anointed&rdquo;</strong>, the LORD&rsquo;s <em>mashiach</em> (<a href="https://www.blueletterbible.org/lexicon/h4899/kjv/wlc/0-1/" target="_blank">מָשִׁיחַ</a>, the word behind &ldquo;Messiah&rdquo;), &ldquo;whose right hand I have holden, to subdue nations before him&rdquo; (<a href="https://www.blueletterbible.org/kjv/isa/45/1/" target="_blank" data-ref="Isaiah 45:1">Isaiah 45:1</a>). It is the only time Scripture applies that title to a Gentile. The full weight of it &mdash; a foreign king as the Lord&rsquo;s anointed shepherd &mdash; belongs to <a href="/culture/ancient/achaemenid/10-lds-connections/">Section 10</a>; here it is enough to see that the Bible frames Persia&rsquo;s whole rise around a single purpose: &ldquo;he shall build my city, and he shall let go my captives&rdquo; (<a href="https://www.blueletterbible.org/kjv/isa/45/13/" target="_blank" data-ref="Isaiah 45:13">Isaiah 45:13</a>).</p>
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
-<p style="margin: 0;"><strong>A note on the scholarly conversation:</strong> because Isaiah 44&ndash;45 names Cyrus so precisely, critical scholars have long argued that Isaiah 40&ndash;66 was written by a later, exile-era author (&ldquo;Second Isaiah&rdquo;) after Cyrus had appeared. Others &mdash; including many Latter-day Saint readers, and the Book of Mormon&rsquo;s own witness that Isaiah&rsquo;s words were on the brass plates Lehi carried from Jerusalem c. 600 BC (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/19?lang=eng&amp;id=p23#p23" target="_blank">1 Nephi 19:23</a>; <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/25?lang=eng" target="_blank">2 Nephi 25</a>) &mdash; hold that this is genuine predictive prophecy. Either way, the theological claim the text is making is the same and is unmistakable: the rise of Persia was not an accident of history but the hand of God arranging deliverance for His covenant people. That is the lens this guide reads Persia through, while presenting the historical evidence honestly on its own terms.</p>
+<p style="margin: 0;"><strong>A note on the scholarly conversation:</strong> because <a href="https://www.blueletterbible.org/kjv/isa/44/1/" target="_blank" data-ref="Isaiah 44">Isaiah 44</a>&ndash;45 names Cyrus so precisely, critical scholars have long argued that <a href="https://www.blueletterbible.org/kjv/isa/40/1/" target="_blank" data-ref="Isaiah 40">Isaiah 40</a>&ndash;66 was written by a later, exile-era author (&ldquo;Second Isaiah&rdquo;) after Cyrus had appeared. Others &mdash; including many Latter-day Saint readers, and the Book of Mormon&rsquo;s own witness that Isaiah&rsquo;s words were on the brass plates Lehi carried from Jerusalem c. 600 BC (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/19?lang=eng&amp;id=p23#p23" target="_blank">1 Nephi 19:23</a>; <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/25?lang=eng" target="_blank">2 Nephi 25</a>) &mdash; hold that this is genuine predictive prophecy. Either way, the theological claim the text is making is the same and is unmistakable: the rise of Persia was not an accident of history but the hand of God arranging deliverance for His covenant people. That is the lens this guide reads Persia through, while presenting the historical evidence honestly on its own terms.</p>
 </div>
 
 <br>
@@ -90,7 +90,7 @@ draft: true
 <tr style="background: #f0ebe5;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Cyrus II</strong> (the Great)</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">559&ndash;530</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Decree of return; the temple foundation (Ezra 1; Isaiah 44&ndash;45; Daniel 1:21; 10:1)</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Decree of return; the temple foundation (<a href="https://www.blueletterbible.org/kjv/ezr/1/1/" target="_blank" data-ref="Ezra 1">Ezra 1</a>; <a href="https://www.blueletterbible.org/kjv/isa/44/1/" target="_blank" data-ref="Isaiah 44">Isaiah 44</a>&ndash;45; <a href="https://www.blueletterbible.org/kjv/dan/1/21/" target="_blank" data-ref="Daniel 1:21">Daniel 1:21</a>; 10:1)</td>
 </tr>
 <tr style="background: white;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Cambyses II</strong></td>
@@ -100,7 +100,7 @@ draft: true
 <tr style="background: #f0ebe5;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Darius I</strong> (the Great)</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">522&ndash;486</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Temple completed in his 6th year (Ezra 5&ndash;6; Haggai; Zechariah)</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Temple completed in his 6th year (<a href="https://www.blueletterbible.org/kjv/ezr/5/1/" target="_blank" data-ref="Ezra 5">Ezra 5</a>&ndash;6; Haggai; Zechariah)</td>
 </tr>
 <tr style="background: white;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Xerxes I</strong> (Ahasuerus)</td>
@@ -110,7 +110,7 @@ draft: true
 <tr style="background: #f0ebe5;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Artaxerxes I</strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">465&ndash;424</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Sends Ezra, then Nehemiah, to Jerusalem (Ezra 7; Nehemiah 2)</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Sends Ezra, then Nehemiah, to Jerusalem (<a href="https://www.blueletterbible.org/kjv/ezr/7/1/" target="_blank" data-ref="Ezra 7">Ezra 7</a>; <a href="https://www.blueletterbible.org/kjv/neh/2/1/" target="_blank" data-ref="Nehemiah 2">Nehemiah 2</a>)</td>
 </tr>
 </tbody>
 </table>

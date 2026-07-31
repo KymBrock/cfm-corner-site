@@ -95,7 +95,7 @@ draft: true
 
 <p><strong>Scripture:</strong></p>
 <ul style="margin: 12px 0 0 0; padding-left: 24px;">
-<li><strong>Isaiah 44&ndash;45; Ezra 1; 6; 7; Nehemiah 1&ndash;2; 8; Esther 4</strong> &mdash; the biblical spine of this guide.</li>
+<li><strong><a href="https://www.blueletterbible.org/kjv/isa/44/1/" target="_blank" data-ref="Isaiah 44">Isaiah 44</a>&ndash;45; <a href="https://www.blueletterbible.org/kjv/ezr/1/1/" target="_blank" data-ref="Ezra 1">Ezra 1</a>; 6; 7; <a href="https://www.blueletterbible.org/kjv/neh/1/1/" target="_blank" data-ref="Nehemiah 1">Nehemiah 1</a>&ndash;2; 8; <a href="https://www.blueletterbible.org/kjv/est/4/1/" target="_blank" data-ref="Esther 4">Esther 4</a></strong> &mdash; the biblical spine of this guide.</li>
 <li><strong>Doctrine &amp; Covenants 101:80; 110:11</strong>; <strong>Articles of Faith 1:10</strong>; <strong>2 Nephi 10:22; 25:17</strong> &mdash; the Restoration texts read on this page.</li>
 </ul>
 

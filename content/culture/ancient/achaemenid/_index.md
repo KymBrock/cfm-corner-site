@@ -143,7 +143,7 @@ Ahura Mazda, Zarathustra, and the fire altars of Persia — and a careful, hones
 
 **<a href="/culture/ancient/achaemenid/05-cyrus-and-the-return/">Cyrus &amp; the Return</a>**
 
-The Cyrus Cylinder beside Ezra 1 and Isaiah 45 — a Persian king's own account of releasing captive peoples, the decree that ended the exile, and the only Gentile Scripture ever calls the Lord's "anointed."
+The Cyrus Cylinder beside <a href="https://www.blueletterbible.org/kjv/ezr/1/1/" target="_blank" data-ref="Ezra 1">Ezra 1</a> and <a href="https://www.blueletterbible.org/kjv/isa/45/1/" target="_blank" data-ref="Isaiah 45">Isaiah 45</a> — a Persian king's own account of releasing captive peoples, the decree that ended the exile, and the only Gentile Scripture ever calls the Lord's "anointed."
 
 </div>
 </div>

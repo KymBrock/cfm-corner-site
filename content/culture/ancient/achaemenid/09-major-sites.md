@@ -105,12 +105,12 @@ draft: true
 <tr style="background: #f0ebe5;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Susa / Shushan</strong> (Shush)</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Winter capital; administration</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Esther; Nehemiah 1:1; Daniel 8:2</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Esther; <a href="https://www.blueletterbible.org/kjv/neh/1/1/" target="_blank" data-ref="Nehemiah 1:1">Nehemiah 1:1</a>; <a href="https://www.blueletterbible.org/kjv/dan/8/2/" target="_blank" data-ref="Daniel 8:2">Daniel 8:2</a></td>
 </tr>
 <tr style="background: white;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Ecbatana / Achmetha</strong> (Hamadan)</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Summer capital; archive</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Cyrus&rsquo;s decree found filed here (Ezra 6:2)</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Cyrus&rsquo;s decree found filed here (<a href="https://www.blueletterbible.org/kjv/ezr/6/2/" target="_blank" data-ref="Ezra 6:2">Ezra 6:2</a>)</td>
 </tr>
 <tr style="background: #f0ebe5;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Behistun</strong> (Bisotun)</td>
