@@ -86,7 +86,7 @@ description: "From Joseph in Goshen to the Alexandrian Jewish quarter — three 
 <br>
 
 <h3>Egypt's Founding &mdash; The Book of Abraham Account</h3>
-<p><em>Abraham 1:21&ndash;27</em></p>
+<p><em><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/1?lang=eng&id=21" target="_blank" data-ref="Abraham 1:21">Abraham 1:21&ndash;27</a></em></p>
 
 <p>Before Abraham ever set foot in Egypt, Latter-day Saint scripture places Noah's own family at the founding of Egyptian civilization. The Book of Abraham records that <strong>Egyptus</strong>, a daughter of Ham (son of Noah), "discovered the land" of Egypt while it was still under water and afterward settled her sons in it (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/1?lang=eng&amp;id=p23-p24#p23" target="_blank" data-ref="Abraham 1:23-24">Abraham 1:23&ndash;24</a>). Her eldest son, <strong>Pharaoh</strong>, established the first government of Egypt, patterning it after the patriarchal order of Ham (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/1?lang=eng&amp;id=p25#p25" target="_blank" data-ref="Abraham 1:25">Abraham 1:25</a>).</p>
 

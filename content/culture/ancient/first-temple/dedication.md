@@ -20,7 +20,7 @@ The text sets the dedication "at the feast in the seventh month" (<a href="https
 
 {{< scripture-echo id="gathering" >}}
 
-> **Interpretive layer.** A substantial strand of Latter-day Saint scholarship reads this same festival setting alongside **King Benjamin's** gathering of his people to the temple in Zarahemla (Mosiah 2), where the people likewise "pitched their tents round about the temple" at what appears to be a fall-festival coronation and covenant renewal. This is a recurring thread across Interpreter Foundation work — among others, Lynne Hilton Wilson, John A. Tvedtnes, Bradley J. Kramer, and Lynda Cherry have developed it. It is interpretive synthesis drawn from the festival timing, not a claim the biblical text makes — but it is a well-supported reading, not a lone conjecture.
+> **Interpretive layer.** A substantial strand of Latter-day Saint scholarship reads this same festival setting alongside **King Benjamin's** gathering of his people to the temple in Zarahemla (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/2?lang=eng" target="_blank" data-ref="Mosiah 2">Mosiah 2</a>), where the people likewise "pitched their tents round about the temple" at what appears to be a fall-festival coronation and covenant renewal. This is a recurring thread across Interpreter Foundation work — among others, Lynne Hilton Wilson, John A. Tvedtnes, Bradley J. Kramer, and Lynda Cherry have developed it. It is interpretive synthesis drawn from the festival timing, not a claim the biblical text makes — but it is a well-supported reading, not a lone conjecture.
 
 ## The Ark and What Was Missing
 
@@ -50,20 +50,20 @@ The descent of the cloud (<a href="https://www.blueletterbible.org/kjv/1ki/8/10/
   <figcaption>Solomon kneels before the altar, hands spread toward heaven, in the dedicatory prayer — “he kneeled down upon his knees… and spread forth his hands toward heaven” (1&nbsp;Kings&nbsp;8:54). <em>Original CFM Corner digital artwork.</em></figcaption>
 </figure>
 
-For Latter-day Saint readers, Solomon's dedicatory prayer rewards reading beside the dedicatory prayer of the **Kirtland Temple** (Doctrine and Covenants 109), which Joseph Smith received "by revelation" to read at the dedication. Set the two side by side and the shared language lights up:
+For Latter-day Saint readers, Solomon's dedicatory prayer rewards reading beside the dedicatory prayer of the **Kirtland Temple** (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/109?lang=eng" target="_blank" data-ref="Doctrine and Covenants 109">Doctrine and Covenants 109</a>), which Joseph Smith received "by revelation" to read at the dedication. Set the two side by side and the shared language lights up:
 
 {{< scripture-echo id="prayer" >}}
 
 <figure class="ft-figure" style="margin:1.7rem 0 0.6rem;">
   <img src="/images/culture/first-temple/kirtland-dedicatory-prayer.jpg" alt="Joseph Smith standing at the central pulpit of the Kirtland Temple, offering the dedicatory prayer before a seated congregation, the tiered white priesthood pulpits and arched windows behind him">
-  <figcaption>Joseph Smith offers the dedicatory prayer at the Kirtland Temple, March 1836 — the same covenant pattern of name and mercy, three thousand years after Solomon (Doctrine and Covenants 109). <em>Artistic depiction (no confirmed photograph of Joseph Smith exists); original CFM Corner digital artwork.</em></figcaption>
+  <figcaption>Joseph Smith offers the dedicatory prayer at the Kirtland Temple, March 1836 — the same covenant pattern of name and mercy, three thousand years after Solomon (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/109?lang=eng" target="_blank" data-ref="Doctrine and Covenants 109">Doctrine and Covenants 109</a>). <em>Artistic depiction (no confirmed photograph of Joseph Smith exists); original CFM Corner digital artwork.</em></figcaption>
 </figure>
 
 > **Latter-day Saint doctrinal layer.** The point is not that Joseph Smith copied Solomon, but that the same God, organizing temple worship in two dispensations, drew on the same pattern — covenant, name, presence, mercy toward the praying people. This is the guide's "deepens, not debunks" payoff: knowing the shape of an ancient temple dedication makes the Restoration's temple dedications legible as part of one continuous story.
 
 ## From the Bronze Sea to Living Water
 
-The dedication also reframes the Temple's most striking furnishing. The enormous bronze "sea" (<a href="https://www.blueletterbible.org/kjv/1ki/7/23/" target="_blank" data-ref="1 Kings 7:23">1 Kings 7:23–26</a>) — holding two to three thousand baths, more than ten thousand gallons, in a landlocked city fed only by the [Gihon spring](/culture/ancient/first-temple/city-of-david/) — stood for priestly washing. Latter-day Saint readers connect this to the Lord's instruction in Doctrine and Covenants 124:38–39 that "washings and… anointings" — ordinances "hid from before the world" — belong to the house He commands His people to build.
+The dedication also reframes the Temple's most striking furnishing. The enormous bronze "sea" (<a href="https://www.blueletterbible.org/kjv/1ki/7/23/" target="_blank" data-ref="1 Kings 7:23">1 Kings 7:23–26</a>) — holding two to three thousand baths, more than ten thousand gallons, in a landlocked city fed only by the [Gihon spring](/culture/ancient/first-temple/city-of-david/) — stood for priestly washing. Latter-day Saint readers connect this to the Lord's instruction in <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/124?lang=eng&id=38" target="_blank" data-ref="Doctrine and Covenants 124:38">Doctrine and Covenants 124:38–39</a> that "washings and… anointings" — ordinances "hid from before the world" — belong to the house He commands His people to build.
 
 {{< scripture-echo id="waters" >}}
 

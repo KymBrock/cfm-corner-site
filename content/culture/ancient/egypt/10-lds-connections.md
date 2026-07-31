@@ -49,7 +49,7 @@ description: "The Joseph Smith Papyri, the Book of Abraham facsimiles, Kerry Muh
 
 <ul>
 <li><strong>July&ndash;November 1835</strong> (Kirtland) &mdash; The most intensive period of translation work. By October, Joseph recorded that "the system of astronomy was unfolded" (likely Abraham 3 or Facsimile 2 content). The most concentrated week was November 19&ndash;26, with five days of documented translation.</li>
-<li><strong>March 1842</strong> (Nauvoo) &mdash; Joseph returned to the project after Brigham Young organized household help to free his time. The first installment (Facsimile 1 + Abraham 1:1&ndash;2:18) was published in the <em>Times and Seasons</em> on March 1 (or 4), 1842. The second installment (Facsimile 2 + remaining text) appeared on March 15. Facsimile 3 was published in May.</li>
+<li><strong>March 1842</strong> (Nauvoo) &mdash; Joseph returned to the project after Brigham Young organized household help to free his time. The first installment (Facsimile 1 + <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/1?lang=eng&id=1" target="_blank" data-ref="Abraham 1:1">Abraham 1:1&ndash;2</a>:18) was published in the <em>Times and Seasons</em> on March 1 (or 4), 1842. The second installment (Facsimile 2 + remaining text) appeared on March 15. Facsimile 3 was published in May.</li>
 </ul>
 
 <p>Joseph promised to publish more of the Book of Abraham but never did. The question of how much text existed beyond what was published remains open.</p>

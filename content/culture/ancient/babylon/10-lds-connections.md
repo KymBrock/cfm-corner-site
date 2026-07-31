@@ -132,7 +132,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <ul style="margin: 12px 0 0 0; padding-left: 24px;">
 <li><strong>Rainer Albertz</strong>, <em>Israel in Exile</em> (SBL, 2003) &mdash; The scholarly frame for the exile as covenant crucible (see <a href="/culture/ancient/babylon/07-the-exile-experience/">Section 07</a>).</li>
 <li><strong>Come, Follow Me &mdash; Old Testament</strong>, this week&rsquo;s lesson (<a href="https://www.blueletterbible.org/kjv/2ki/16/1/" target="_blank" data-ref="2 Kings 16">2 Kings 16</a>&ndash;25) &mdash; and the companion <a href="/culture/ancient/divided-kingdom/">Divided Kingdom Field Guide</a> on this site, which covers how the books of Kings were written.</li>
-<li><strong>Doctrine and Covenants 1; 65; 133</strong> &mdash; the Restoration&rsquo;s Babylon texts read on this page.</li>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/1?lang=eng" target="_blank" data-ref="Doctrine and Covenants 1">Doctrine and Covenants 1</a>; 65; 133</strong> &mdash; the Restoration&rsquo;s Babylon texts read on this page.</li>
 </ul>
 
 </div>

@@ -177,7 +177,7 @@ description: "Promised land theology, the difficult question of cherem, Rahab's 
 </tbody>
 </table>
 
-<h4>Nephi&rsquo;s Argument (1 Nephi 17:32&ndash;38)</h4>
+<h4>Nephi&rsquo;s Argument (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/17?lang=eng&id=32" target="_blank" data-ref="1 Nephi 17:32">1 Nephi 17:32&ndash;38</a>)</h4>
 
 <p>Nephi&rsquo;s argument about the Canaanite conquest is the most direct Book of Mormon commentary on Joshua. Speaking to his brothers &mdash; who object to building a ship and essentially to the entire enterprise of following God into the unknown &mdash; Nephi invokes the conquest as precedent:</p>
 
