@@ -65,7 +65,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <h3>Nebuchadnezzar II: The Empire in One Man (r. 605&ndash;562 BC)</h3>
 
-<p><strong><a href="https://www.worldhistory.org/Nebuchadnezzar_II/" target="_blank">Nebuchadnezzar</a></strong> &mdash; Akkadian <em>Nabu-kudurri-usur</em>, &ldquo;O Nabu, protect my heir&rdquo; &mdash; ruled for forty-three years and left a deeper mark on scripture than any foreign king. He appears by name well over a hundred times &mdash; more than any other Gentile ruler. Judah knew him first as a general (Carchemish, 605 BC), then as a tax collector, then as a destroyer, and finally &mdash; in Daniel &mdash; as something stranger: a tyrant God insisted on teaching.</p>
+<p><strong><a href="https://www.worldhistory.org/Nebuchadnezzar_II/" target="_blank">Nebuchadnezzar</a></strong> &mdash; Akkadian <em>Nabu-kudurri-usur</em>, &ldquo;O Nabu, protect my heir&rdquo; &mdash; ruled for forty-three years and left a deeper mark on scripture than any foreign king. He appears by name some ninety times &mdash; more than any other Gentile ruler. Judah knew him first as a general (Carchemish, 605 BC), then as a tax collector, then as a destroyer, and finally &mdash; in Daniel &mdash; as something stranger: a tyrant God insisted on teaching.</p>
 
 <h4>The general and the destroyer</h4>
 

@@ -60,7 +60,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <p>Over the next decade Cyrus conquered in every direction:</p>
 
 <ul>
-<li><strong>Lydia (c. 547 BC)</strong> &mdash; the fabulously wealthy kingdom of King <a href="https://www.worldhistory.org/croesus/" target="_blank">Croesus</a> in western Anatolia (modern Turkey), giving Persia the Greek cities of the Aegean coast and setting up the later Greco-Persian wars.</li>
+<li><strong>Lydia (c. 547/546 BC)</strong> &mdash; the fabulously wealthy kingdom of King <a href="https://www.worldhistory.org/croesus/" target="_blank">Croesus</a> in western Anatolia (modern Turkey), giving Persia the Greek cities of the Aegean coast and setting up the later Greco-Persian wars.</li>
 <li><strong>The eastern provinces</strong> &mdash; a sweep across the Iranian plateau to the edges of Central Asia and the Indus.</li>
 <li><strong>Babylon (539 BC)</strong> &mdash; the great prize. The Neo-Babylonian empire, ruled by the unpopular absentee king <a href="https://www.britannica.com/biography/Nabonidus" target="_blank">Nabonidus</a> and his regent son <a href="https://www.britannica.com/biography/Belshazzar" target="_blank">Belshazzar</a>, fell to Cyrus almost without a fight: one battle upriver at Opis, and the greatest walled city on earth opened its gates (see the <a href="/culture/ancient/babylon/03-nebuchadnezzar-and-the-kings/">Babylon kings page</a> and <a href="/culture/ancient/achaemenid/05-cyrus-and-the-return/">Section 05</a>).</li>
 </ul>
