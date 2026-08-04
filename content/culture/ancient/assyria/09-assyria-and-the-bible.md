@@ -60,7 +60,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <h3>Nahum: The Mirror Image</h3>
 
-<p>If Jonah is grace to Nineveh, Nahum is its judgment &mdash; and the two books were placed side by side in the same scroll that holds the twelve Minor Prophets &mdash; a deliberate pairing, two panels of one picture. Where Jonah is all narrative and no oracle, Nahum is all oracle and no narrative: three chapters that are nothing but the fall of the Assyrian capital, announced from the first line. <em>&ldquo;The burden of Nineveh. The book of the vision of Nahum the Elkoshite&rdquo;</em> (<a href="https://www.blueletterbible.org/kjv/nah/1/1/" target="_blank" data-ref="Nahum 1:1">Nahum 1:1</a>). This is a whole book aimed at a single city.</p>
+<p>If Jonah is grace to Nineveh, Nahum is its judgment &mdash; and the two books were bound into the same scroll that holds the twelve Minor Prophets &mdash; a deliberate pairing, two panels of one picture. Where Jonah is all narrative and no oracle, Nahum is all oracle and no narrative: three chapters that are nothing but the fall of the Assyrian capital, announced from the first line. <em>&ldquo;The burden of Nineveh. The book of the vision of Nahum the Elkoshite&rdquo;</em> (<a href="https://www.blueletterbible.org/kjv/nah/1/1/" target="_blank" data-ref="Nahum 1:1">Nahum 1:1</a>). This is a whole book aimed at a single city.</p>
 
 <p>Nahum writes with the repentance of Jonah&rsquo;s generation long spent and forgotten. The Assyria of his oracle is unrepentant, gorged on plunder, and doomed. His verdict opens with a cry that has echoed ever since:</p>
 
