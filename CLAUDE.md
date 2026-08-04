@@ -30,6 +30,20 @@ discretion; *recovery/origin* claims are not.
 6. If a script or tool would modify multiple week files, STOP and
    ask Kymber before proceeding.
 
+**What these rules protect (clarified 2026-08-04):** the danger is overwriting
+hand-crafted content that is **already published live**. These rules are NOT a ban
+on the normal content pipeline. For a **staged, unpublished week** (`draft: true`,
+not yet on the live site), the CORRECT workflow is **source-first**: edit the vault
+markdown source (e.g. `…/WeeklyLessons/Week_NN_…/02_Weekly_Insights/*.md`,
+`03_Study_Guide/*.md`), regenerate **that one week's** fragments with the converter
+(`--week NN --type study-guide|insights|resources`), `git diff`-review, and verify
+in the local preview before committing to the week's branch. That keeps the vault
+source (the true source of truth) and the generated fragment in sync — hand-editing
+a generated fragment silently diverges it from its source, so do it only for a tiny
+surgical fix. **Still forbidden:** regenerating to fix/edit an *already-published
+(live)* week's fragment (use a surgical anchor edit instead — see the lexicon-
+collision note below), and running the converter across multiple weeks at once.
+
 ## Violation History
 
 On 2026-02-21, commit `905fdfa` mass-regenerated all weeks 1–9 HTML,
