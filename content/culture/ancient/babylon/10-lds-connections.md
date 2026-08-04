@@ -27,7 +27,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </div>
 <!-- /LISTEN PLAYER -->
 
-<p>For Latter-day Saints, the Babylonian crisis is not background reading &mdash; it is the opening scene of the Book of Mormon. Two families of refugees from Nebuchadnezzar&rsquo;s Judah &mdash; Lehi&rsquo;s and Mulek&rsquo;s &mdash; carry the book&rsquo;s entire premise across the ocean. And at the other end of the dispensations, the Doctrine and Covenants adopts Babylon as its standing name for the world the Saints are called out of. This page draws those threads together.</p>
+<p>For Latter-day Saints, the Babylonian crisis is not background reading &mdash; it is the opening scene of the Book of Mormon. Two families of refugees from <a href="https://www.worldhistory.org/Nebuchadnezzar_II/" target="_blank">Nebuchadnezzar</a>&rsquo;s Judah &mdash; Lehi&rsquo;s and Mulek&rsquo;s &mdash; carry the book&rsquo;s entire premise across the ocean. And at the other end of the dispensations, the Doctrine and Covenants adopts Babylon as its standing name for the world the Saints are called out of. This page draws those threads together.</p>
 
 <br>
 

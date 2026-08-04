@@ -120,7 +120,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
     <circle class="exr-dot-jeru" cx="137" cy="304" r="6.5"/>
     <circle class="exr-dot" cx="300" cy="98" r="5.5"/>
     <text class="exr-lbl" x="312" y="94">Riblah</text>
-    <text class="exr-sub" x="312" y="110">Nebuchadnezzar&rsquo;s HQ</text>
+    <text class="exr-sub" x="312" y="110"><a href="https://www.worldhistory.org/Nebuchadnezzar_II/" target="_blank">Nebuchadnezzar</a>&rsquo;s HQ</text>
     <circle class="exr-ring" cx="872" cy="314" r="12"/>
     <circle class="exr-dot-end" cx="1050" cy="404" r="6"/>
     <text class="exr-lbl" x="1040" y="416" text-anchor="end">Chebar canal</text>

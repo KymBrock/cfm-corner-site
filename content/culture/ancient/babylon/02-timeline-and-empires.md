@@ -27,11 +27,11 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </div>
 <!-- /LISTEN PLAYER -->
 
-<p>Here is the surprise at the heart of Babylonian history. The empire that destroyed Jerusalem, carried Judah captive, and became scripture&rsquo;s enduring symbol of worldly power was a great power for less than <strong>seventy years</strong> &mdash; almost exactly the span Jeremiah gave it (<a href="https://www.blueletterbible.org/kjv/jer/25/11/" target="_blank" data-ref="Jeremiah 25:11-12">Jeremiah 25:11&ndash;12</a>). But behind that brief empire stood nearly two thousand years of accumulated prestige. When Nebuchadnezzar rebuilt Babylon, he was consciously restoring a city that was already ancient &mdash; older to him than the apostles are to us.</p>
+<p>Here is the surprise at the heart of Babylonian history. The empire that destroyed Jerusalem, carried Judah captive, and became scripture&rsquo;s enduring symbol of worldly power was a great power for less than <strong>seventy years</strong> &mdash; almost exactly the span Jeremiah gave it (<a href="https://www.blueletterbible.org/kjv/jer/25/11/" target="_blank" data-ref="Jeremiah 25:11-12">Jeremiah 25:11&ndash;12</a>). But behind that brief empire stood nearly two thousand years of accumulated prestige. When <a href="https://www.worldhistory.org/Nebuchadnezzar_II/" target="_blank">Nebuchadnezzar</a> rebuilt Babylon, he was consciously restoring a city that was already ancient &mdash; older to him than the apostles are to us.</p>
 
 <p>One note before we start. All dates before the first millennium BC are approximate &mdash; this guide follows the widely used &ldquo;middle chronology&rdquo;. But from the 8th century BC onward, Babylonian records let us date events to the day.</p>
 
-<p style="text-align: center; color: #666; font-style: italic; margin: 0 0 8px 0;">The whole arc at a glance &mdash; drag the slider from Hammurabi&rsquo;s Babylon (1800 BC) through the Assyrian centuries to Nebuchadnezzar&rsquo;s empire and its fall.</p>
+<p style="text-align: center; color: #666; font-style: italic; margin: 0 0 8px 0;">The whole arc at a glance &mdash; drag the slider from <a href="https://www.worldhistory.org/hammurabi/" target="_blank">Hammurabi</a>&rsquo;s Babylon (1800 BC) through the Assyrian centuries to Nebuchadnezzar&rsquo;s empire and its fall.</p>
 
 <link rel="stylesheet" href="/css/era-map-widget.css">
 <div class="era-map-widget" data-start-era="1800"></div>
@@ -67,7 +67,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <tr style="background: #f0ebe5;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Under Assyria&rsquo;s Shadow</strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">c. 900&ndash;626 BC</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>The divided kingdom&rsquo;s world</strong> &mdash; Israel falls to Assyria (722); Merodach-baladan courts Hezekiah</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>The divided kingdom&rsquo;s world</strong> &mdash; Israel falls to Assyria (722); <a href="https://www.britannica.com/biography/Merodach-Baladan-II" target="_blank">Merodach-baladan</a> courts Hezekiah</td>
 </tr>
 <tr style="background: white;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Neo-Babylonian Empire</strong></td>
@@ -77,7 +77,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <tr style="background: #f0ebe5;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Persian &amp; Hellenistic Babylon</strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">539 BC&ndash;1st c. AD</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>The return</strong> &mdash; Cyrus&rsquo;s decree; Babylon fades slowly into ruin, exactly as the prophets said</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>The return</strong> &mdash; <a href="https://www.worldhistory.org/Cyrus_the_Great/" target="_blank">Cyrus</a>&rsquo;s decree; Babylon fades slowly into ruin, exactly as the prophets said</td>
 </tr>
 </tbody>
 </table>
@@ -160,7 +160,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #4a6b52; font-size: 0.9em;">729 BC</span>
-<span style="flex: 1; font-size: 0.95em;">Tiglath-pileser III of Assyria takes the throne of Babylon in person &mdash; the two crowns joined under Assyrian power</span>
+<span style="flex: 1; font-size: 0.95em;"><a href="https://www.worldhistory.org/Tiglath_Pileser_III/" target="_blank">Tiglath-pileser III</a> of Assyria takes the throne of Babylon in person &mdash; the two crowns joined under Assyrian power</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
@@ -175,17 +175,17 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #4a6b52; font-size: 0.9em;">701 BC</span>
-<span style="flex: 1; font-size: 0.95em;">Sennacherib devastates Judah but fails to take Jerusalem (<a href="https://www.blueletterbible.org/kjv/2ki/19/35/" target="_blank" data-ref="2 Kings 19:35-36">2 Kings 19:35&ndash;36</a>)</span>
+<span style="flex: 1; font-size: 0.95em;"><a href="https://www.worldhistory.org/sennacherib/" target="_blank">Sennacherib</a> devastates Judah but fails to take Jerusalem (<a href="https://www.blueletterbible.org/kjv/2ki/19/35/" target="_blank" data-ref="2 Kings 19:35-36">2 Kings 19:35&ndash;36</a>)</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #4a6b52; font-size: 0.9em;">689 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Sennacherib destroys Babylon itself</strong> &mdash; diverts canals over the ruins; the act shocks even Assyria, and his son Esarhaddon spends his reign rebuilding the holy city</span>
+<span style="flex: 1; font-size: 0.95em;"><strong>Sennacherib destroys Babylon itself</strong> &mdash; diverts canals over the ruins; the act shocks even Assyria, and his son <a href="https://www.worldhistory.org/Esarhaddon/" target="_blank">Esarhaddon</a> spends his reign rebuilding the holy city</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #4a6b52; font-size: 0.9em;">652&ndash;648</span>
-<span style="flex: 1; font-size: 0.95em;">Civil war between Ashurbanipal of Assyria and his own brother, installed as king of Babylon &mdash; the empire wins, but bleeds</span>
+<span style="flex: 1; font-size: 0.95em;">Civil war between <a href="https://www.worldhistory.org/Ashurbanipal/" target="_blank">Ashurbanipal</a> of Assyria and his own brother, installed as king of Babylon &mdash; the empire wins, but bleeds</span>
 </div>
 
 </div>
@@ -200,7 +200,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #c0392b; font-size: 0.9em;">626 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Nabopolassar</strong>, a Chaldean general, seizes Babylon&rsquo;s throne and launches the war of independence against a weakening Assyria</span>
+<span style="flex: 1; font-size: 0.95em;"><strong><a href="https://www.britannica.com/biography/Nabopolassar" target="_blank">Nabopolassar</a></strong>, a Chaldean general, seizes Babylon&rsquo;s throne and launches the war of independence against a weakening Assyria</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
@@ -210,7 +210,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #c0392b; font-size: 0.9em;">609 BC</span>
-<span style="flex: 1; font-size: 0.95em;">Assyria&rsquo;s last remnant is extinguished at Harran. Pharaoh Necho II marches north to intervene &mdash; and <strong>King Josiah dies at Megiddo</strong> confronting him (<a href="https://www.blueletterbible.org/kjv/2ki/23/29/" target="_blank" data-ref="2 Kings 23:29">2 Kings 23:29</a>). Judah becomes an Egyptian vassal</span>
+<span style="flex: 1; font-size: 0.95em;">Assyria&rsquo;s last remnant is extinguished at Harran. Pharaoh <a href="https://www.britannica.com/biography/Necho-II" target="_blank">Necho II</a> marches north to intervene &mdash; and <strong>King Josiah dies at Megiddo</strong> confronting him (<a href="https://www.blueletterbible.org/kjv/2ki/23/29/" target="_blank" data-ref="2 Kings 23:29">2 Kings 23:29</a>). Judah becomes an Egyptian vassal</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
@@ -235,12 +235,12 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #c0392b; font-size: 0.9em;">562 BC</span>
-<span style="flex: 1; font-size: 0.95em;">Nebuchadnezzar dies after 43 years. His son Amel-Marduk (&ldquo;Evil-merodach&rdquo;) releases Jehoiachin from prison to eat at the royal table (<a href="https://www.blueletterbible.org/kjv/2ki/25/27/" target="_blank" data-ref="2 Kings 25:27-30">2 Kings 25:27&ndash;30</a>) &mdash; the quiet note of hope that closes the book of Kings</span>
+<span style="flex: 1; font-size: 0.95em;">Nebuchadnezzar dies after 43 years. His son <a href="https://www.britannica.com/biography/Awil-Marduk" target="_blank">Amel-Marduk</a> (&ldquo;Evil-merodach&rdquo;) releases Jehoiachin from prison to eat at the royal table (<a href="https://www.blueletterbible.org/kjv/2ki/25/27/" target="_blank" data-ref="2 Kings 25:27-30">2 Kings 25:27&ndash;30</a>) &mdash; the quiet note of hope that closes the book of Kings</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #c0392b; font-size: 0.9em;">556&ndash;539</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Nabonidus</strong>, the last king &mdash; a devotee of the moon god who abandons the capital for ten years, leaving his son <strong>Belshazzar</strong> as regent in Babylon (the arrangement behind <a href="https://www.blueletterbible.org/kjv/dan/5/1/" target="_blank" data-ref="Daniel 5">Daniel 5</a>)</span>
+<span style="flex: 1; font-size: 0.95em;"><strong><a href="https://www.britannica.com/biography/Nabonidus" target="_blank">Nabonidus</a></strong>, the last king &mdash; a devotee of the moon god who abandons the capital for ten years, leaving his son <strong><a href="https://www.britannica.com/biography/Belshazzar" target="_blank">Belshazzar</a></strong> as regent in Babylon (the arrangement behind <a href="https://www.blueletterbible.org/kjv/dan/5/1/" target="_blank" data-ref="Daniel 5">Daniel 5</a>)</span>
 </div>
 
 </div>
@@ -265,7 +265,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #2c3e50; font-size: 0.9em;">331 BC</span>
-<span style="flex: 1; font-size: 0.95em;">Alexander the Great takes Babylon &mdash; and dies there in 323, in Nebuchadnezzar&rsquo;s palace</span>
+<span style="flex: 1; font-size: 0.95em;"><a href="https://www.worldhistory.org/Alexander_the_Great/" target="_blank">Alexander the Great</a> takes Babylon &mdash; and dies there in 323, in Nebuchadnezzar&rsquo;s palace</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
@@ -394,7 +394,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Releases Jehoiachin (<a href="https://www.blueletterbible.org/kjv/2ki/25/27/" target="_blank" data-ref="2 Kings 25:27">2 Kings 25:27&ndash;30</a>)</td>
 </tr>
 <tr style="background: white;">
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Neriglissar</strong></td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong><a href="https://www.britannica.com/biography/Nergal-shar-usur" target="_blank">Neriglissar</a></strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">560&ndash;556 BC</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Likely the &ldquo;Nergal-sharezer&rdquo; of <a href="https://www.blueletterbible.org/kjv/jer/39/3/" target="_blank" data-ref="Jeremiah 39:3">Jeremiah 39:3</a></td>
 </tr>

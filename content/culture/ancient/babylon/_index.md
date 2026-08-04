@@ -74,7 +74,7 @@ The stoneless, treeless floodplain that produced the world's first cities &mdash
 
 **<a href="/culture/ancient/babylon/02-timeline-and-empires/">Timeline &amp; Empires</a>**
 
-Four thousand years in one arc: Hammurabi's first Babylon, the long centuries of prestige without power, the fires of the Assyrian era &mdash; and the seventy-year empire that took Judah captive, dated to the day by its own chronicles.
+Four thousand years in one arc: <a href="https://www.worldhistory.org/hammurabi/" target="_blank">Hammurabi</a>'s first Babylon, the long centuries of prestige without power, the fires of the Assyrian era &mdash; and the seventy-year empire that took Judah captive, dated to the day by its own chronicles.
 
 </div>
 </div>
@@ -116,7 +116,7 @@ Judah&rsquo;s last forty years turned on one question &mdash; Egypt or Babylon? 
 
 **<a href="/culture/ancient/babylon/03-nebuchadnezzar-and-the-kings/">Nebuchadnezzar &amp; the Kings of Babylon</a>**
 
-The rebel who courted Hezekiah, the founder who broke Assyria, the builder-king who burned Jerusalem &mdash; and Belshazzar, the regent the skeptics said never existed, until the tablets named him.
+The rebel who courted Hezekiah, the founder who broke Assyria, the builder-king who burned Jerusalem &mdash; and <a href="https://www.britannica.com/biography/Belshazzar" target="_blank">Belshazzar</a>, the regent the skeptics said never existed, until the tablets named him.
 
 </div>
 </div>
