@@ -27,7 +27,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </div>
 <!-- /LISTEN PLAYER -->
 
-<p>The Achaemenid Empire lasted about 220 years (559&ndash;330 BC) and was ruled by about a dozen kings, but the Bible cares about five of them &mdash; the ones whose reigns frame the entire post-exilic story. The great difficulty for readers of Ezra&ndash;Nehemiah is that these books are <em>not</em> arranged in tidy chronological order, and several kings share throne-names. This timeline sorts it out, king by king, so the biblical books fall into place.</p>
+<p>The Achaemenid Empire lasted about 220 years (559&ndash;330 BC) and was ruled by about a dozen kings. But the Bible cares about five of them &mdash; the ones whose reigns frame the entire post-exilic story. Here is the great difficulty for readers of Ezra&ndash;Nehemiah: these books are <em>not</em> arranged in tidy chronological order, and several kings share throne-names. This timeline sorts it out, king by king, so the biblical books fall into place.</p>
 
 <p>Persian chronology is unusually firm: Babylonian astronomical records, dated business tablets, and the kings&rsquo; own inscriptions let historians date most events to the year, and some to the day.</p>
 
@@ -169,7 +169,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #4a6b52; font-size: 0.9em;">490 BC</span>
-<span style="flex: 1; font-size: 0.95em;">Darius&rsquo;s invasion of Greece stopped at the battle of <strong>Marathon</strong></span>
+<span style="flex: 1; font-size: 0.95em;">Darius&rsquo;s invasion of Greece stopped at the battle of <strong>Marathon</strong> &mdash; the famous Greek upset</span>
 </div>
 
 </div>
@@ -194,7 +194,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #c0392b; font-size: 0.9em;">480 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Xerxes invades Greece</strong> &mdash; the battle of Thermopylae and the burning of Athens, then defeat at Salamis; he returns home to the events of <a href="https://www.blueletterbible.org/kjv/est/2/1/" target="_blank" data-ref="Esther 2">Esther 2</a></span>
+<span style="flex: 1; font-size: 0.95em;"><strong>Xerxes invades Greece</strong> &mdash; the famous last stand at Thermopylae, the burning of Athens, then defeat at Salamis, the sea battle that turned the war; he returns home to the events of <a href="https://www.blueletterbible.org/kjv/est/2/1/" target="_blank" data-ref="Esther 2">Esther 2</a></span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
@@ -239,12 +239,12 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #2c3e50; font-size: 0.9em;">424&ndash;336</span>
-<span style="flex: 1; font-size: 0.95em;">A century of able kings and palace intrigue &mdash; Darius II, Artaxerxes II &amp; III, and the &ldquo;Darius the Persian&rdquo; who closes the Old Testament&rsquo;s record (<a href="https://www.blueletterbible.org/kjv/neh/12/22/" target="_blank" data-ref="Nehemiah 12:22">Nehemiah 12:22</a>)</span>
+<span style="flex: 1; font-size: 0.95em;">A century of shrinking power and palace intrigue &mdash; Darius II, Artaxerxes II &amp; III, and the &ldquo;Darius the Persian&rdquo; who closes the Old Testament&rsquo;s record (<a href="https://www.blueletterbible.org/kjv/neh/12/22/" target="_blank" data-ref="Nehemiah 12:22">Nehemiah 12:22</a>)</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #2c3e50; font-size: 0.9em;">331&ndash;330 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Alexander the Great</strong> destroys the empire &mdash; Darius III defeated at Gaugamela (the battle that ended the empire), Persepolis burned; the age Daniel foresaw as the &ldquo;he goat&hellip; from the west&rdquo; (<a href="https://www.blueletterbible.org/kjv/dan/8/5/" target="_blank" data-ref="Daniel 8:5">Daniel 8:5</a>), interpreted as &ldquo;the king of Grecia&rdquo; (<a href="https://www.blueletterbible.org/kjv/dan/8/21/" target="_blank" data-ref="Daniel 8:21">Daniel 8:21</a>)</span>
+<span style="flex: 1; font-size: 0.95em;"><strong>Alexander the Great</strong> destroys the empire &mdash; Darius III defeated at Gaugamela (the battle that ended the empire), Persepolis burned. This is the age Daniel foresaw as the &ldquo;he goat&hellip; from the west&rdquo; (<a href="https://www.blueletterbible.org/kjv/dan/8/5/" target="_blank" data-ref="Daniel 8:5">Daniel 8:5</a>), interpreted as &ldquo;the king of Grecia&rdquo; (<a href="https://www.blueletterbible.org/kjv/dan/8/21/" target="_blank" data-ref="Daniel 8:21">Daniel 8:21</a>)</span>
 </div>
 
 </div>
