@@ -194,7 +194,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #c0392b; font-size: 0.9em;">480 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Xerxes invades Greece</strong> &mdash; the famous last stand at Thermopylae, the burning of Athens, then defeat at Salamis, the sea battle that turned the war; he returns home to the events of <a href="https://www.blueletterbible.org/kjv/est/2/1/" target="_blank" data-ref="Esther 2">Esther 2</a></span>
+<span style="flex: 1; font-size: 0.95em;"><strong>Xerxes invades Greece</strong> &mdash; the famous last stand at Thermopylae, the burning of Athens, then Xerxes&rsquo;s defeat at Salamis, the sea battle that turned the war; he returns home to the events of <a href="https://www.blueletterbible.org/kjv/est/2/1/" target="_blank" data-ref="Esther 2">Esther 2</a></span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
