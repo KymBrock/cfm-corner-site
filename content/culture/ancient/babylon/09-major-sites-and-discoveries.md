@@ -27,7 +27,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </div>
 <!-- /LISTEN PLAYER -->
 
-<p>For seventeen centuries Babylon was a rumor under the mounds of Iraq &mdash; a name in scripture and Herodotus, its location half-remembered, its script unreadable. The nineteenth and twentieth centuries reversed all of that in a rush: the wedge-script was deciphered, the mounds were opened, and the libraries of the Bible&rsquo;s great adversary began, tablet by tablet, to corroborate the Bible&rsquo;s account of it. This page maps the principal sites and the landmark finds &mdash; and tells you where each one sits today.</p>
+<p>For seventeen centuries, Babylon was a rumor under the mounds of Iraq &mdash; a name in scripture and Herodotus, its location half-remembered, its script unreadable. Then the nineteenth and twentieth centuries reversed all of that in a rush. The wedge-script was deciphered. The mounds were opened. And the libraries of the Bible&rsquo;s great adversary began, tablet by tablet, to corroborate the Bible&rsquo;s account of it. This page maps the principal sites and the landmark finds &mdash; and tells you where each one sits today.</p>
 
 <br>
 
@@ -37,7 +37,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <h3>Babylon Itself (Tell Babil, Iraq)</h3>
 
-<p>The ruin field lies on the Euphrates about 85 km south of Baghdad, near modern Hillah. Early explorers &mdash; Claudius Rich&rsquo;s surveys (1811, 1817), Austen Henry Layard&rsquo;s soundings &mdash; found the mudbrick mounds baffling and turned to the more photogenic Assyrian capitals. Babylon&rsquo;s real excavation was <strong>Robert Koldewey&rsquo;s German expedition of 1899&ndash;1917</strong>: eighteen continuous years, digging through Ottoman rule into a world war, that recovered the city of Nebuchadnezzar in plan &mdash; the double walls, the Processional Way, the Southern Palace (and, in its storerooms, the Jehoiachin ration tablets &mdash; see <a href="/culture/ancient/babylon/07-the-exile-experience/">Section 07</a>), the foundations of Etemenanki, and the glazed-brick masses of the <strong>Ishtar Gate</strong>, shipped to Berlin and reassembled there by 1930 (see <a href="/culture/ancient/babylon/06-the-city-itself/">Section 06</a>). Koldewey&rsquo;s methods &mdash; patient tracing of mudbrick architecture that earlier diggers had shoveled through unseen &mdash; helped found modern Near Eastern archaeology.</p>
+<p>The ruin field lies on the Euphrates about 85 km south of Baghdad, near modern Hillah. The early explorers found it baffling. Claudius Rich, the East India Company&rsquo;s Baghdad resident, surveyed the mounds in 1811 and 1817. Austen Henry Layard, the excavator of Nineveh, made test digs (soundings) here. But the mudbrick defeated them both, and they turned to the more photogenic Assyrian capitals instead. Babylon&rsquo;s real excavation was <strong>Robert Koldewey&rsquo;s German expedition of 1899&ndash;1917</strong> &mdash; eighteen continuous years, digging through Ottoman rule into a world war. It recovered the city of Nebuchadnezzar in plan: the double walls, the Processional Way, and the Southern Palace &mdash; with the Jehoiachin ration tablets in its storerooms (see <a href="/culture/ancient/babylon/07-the-exile-experience/">Section 07</a>). It uncovered the foundations of Etemenanki and the glazed-brick masses of the <strong>Ishtar Gate</strong>, shipped to Berlin and reassembled there by 1930 (see <a href="/culture/ancient/babylon/06-the-city-itself/">Section 06</a>). And Koldewey&rsquo;s methods &mdash; the patient tracing of mudbrick architecture that earlier diggers had shoveled through unseen &mdash; helped found modern Near Eastern archaeology.</p>
 
 <div class="fg-gallery">
   <div class="fg-stage">
@@ -52,7 +52,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
   <div class="fg-dots"></div>
 </div>
 
-<p>The site&rsquo;s modern history is its own cautionary tale. In the 1980s Saddam Hussein rebuilt walls and palace rooms directly on the ancient foundations &mdash; his bricks stamped, in conscious imitation of Nebuchadnezzar, with his own name as the city&rsquo;s restorer &mdash; and crowned a neighboring mound with a presidential palace. In 2003&ndash;2004, coalition forces made the ruins a military base (&ldquo;Camp Alpha&rdquo;), causing documented damage to the Processional Way and Ishtar Gate area that drew international protest. Conservation has since resumed under Iraqi and international programs, and in <strong>2019 Babylon was inscribed as a UNESCO World Heritage Site</strong>. Visitors today walk Processional-Way paving at the level of Nebuchadnezzar&rsquo;s street, pass a replica Ishtar Gate, and meet the basalt <strong>Lion of Babylon</strong> &mdash; the site&rsquo;s ancient mascot, still trampling its enemy after 2,600 years.</p>
+<p>The site&rsquo;s modern history is its own cautionary tale. In the 1980s, Saddam Hussein rebuilt walls and palace rooms directly on the ancient foundations, and crowned a neighboring mound with a presidential palace. In conscious imitation of Nebuchadnezzar, his bricks were stamped with his own name as the city&rsquo;s restorer. Then in 2003&ndash;2004, coalition forces made the ruins a military base (&ldquo;Camp Alpha&rdquo;). The documented damage to the Processional Way and Ishtar Gate area drew international protest. Conservation has since resumed under Iraqi and international programs, and in <strong>2019 Babylon was inscribed as a UNESCO World Heritage Site</strong>. Visitors today walk Processional-Way paving at the level of Nebuchadnezzar&rsquo;s street, pass a replica Ishtar Gate, and meet the basalt <strong>Lion of Babylon</strong> &mdash; the site&rsquo;s ancient mascot, still trampling its enemy after 2,600 years.</p>
 
 <br>
 
@@ -170,12 +170,12 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <tr style="background: white;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Borsippa</strong> (Birs Nimrud)</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Babylon&rsquo;s twin city, seat of Nabu</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Its vitrified ziggurat ruin towers so dramatically that centuries of travelers mistook <em>it</em> for the Tower of Babel; Nabu&rsquo;s statue traveled from here to Babylon each New Year (see <a href="/culture/ancient/babylon/04-religion-and-mythology/">Section 04</a>)</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Its vitrified (fire-glassed) ziggurat ruin towers so dramatically that centuries of travelers mistook <em>it</em> for the Tower of Babel; Nabu&rsquo;s statue traveled from here to Babylon each New Year (see <a href="/culture/ancient/babylon/04-religion-and-mythology/">Section 04</a>)</td>
 </tr>
 <tr style="background: #f0ebe5;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Sippar</strong> (Tell Abu Habbah)</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">City of the sun god Shamash</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Its Ebabbar temple yielded tens of thousands of Neo-Babylonian tablets &mdash; the day-to-day economy of Nebuchadnezzar&rsquo;s empire &mdash; plus a genuine temple library found in situ, jar-filed on its shelves</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Its Ebabbar temple yielded tens of thousands of Neo-Babylonian tablets &mdash; the day-to-day economy of Nebuchadnezzar&rsquo;s empire &mdash; plus a genuine temple library found in place, jar-filed on its shelves</td>
 </tr>
 <tr style="background: white;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Nineveh</strong> (Mosul)</td>
@@ -209,7 +209,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </ul>
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
-<p style="margin: 0;"><strong>A note on reading discoveries responsibly:</strong> the same century that gave us these finds also taught two hard lessons. First, <em>provenance matters</em>: tablets that surface on the market rather than in documented excavation (like the &#256;l-Y&#257;h&#363;du group) carry real questions about looting and, occasionally, forgery &mdash; which is why scholars flag them and why this guide does too. Second, <em>sensations need patience</em>: from Victorian &ldquo;Babel-und-Bibel&rdquo; debates over how much the Bible owed to Babylon, to modern headlines, first claims about Bible-related finds are routinely revised. The discoveries that endure &mdash; the chronicles, the ration tablets, the excavated bullae &mdash; endured precisely because careful people checked. That is a good model for faith-and-scholarship questions generally: neither credulity nor cynicism, but verification and time.</p>
+<p style="margin: 0;"><strong>A note on reading discoveries responsibly:</strong> the same century that gave us these finds also taught two hard lessons. First, <em>provenance matters</em>. Tablets that surface on the market rather than in documented excavation (like the &#256;l-Y&#257;h&#363;du group) carry real questions about looting and, occasionally, forgery &mdash; which is why scholars flag them, and why this guide does too. Second, <em>sensations need patience</em>. From the Victorian &ldquo;Babel-und-Bibel&rdquo; debates over how much the Bible owed to Babylon, down to modern headlines, first claims about Bible-related finds are routinely revised. The discoveries that endure &mdash; the chronicles, the ration tablets, the excavated bullae &mdash; endured precisely because careful people checked. That is a good model for faith-and-scholarship questions generally: neither credulity nor cynicism, but verification and time.</p>
 </div>
 
 <br>
