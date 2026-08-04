@@ -27,7 +27,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </div>
 <!-- /LISTEN PLAYER -->
 
-<p>The decree of Cyrus opened the door; walking through it took a century. The return was not a single triumphant homecoming but a slow, difficult, often discouraging rebuild &mdash; interrupted by opposition, poverty, and internal drift, and carried by a handful of remarkable leaders across four Persian reigns. Three things had to be restored to make Judah a people again: the <strong>temple</strong> (its worship), the <strong>law</strong> (its identity), and the <strong>wall</strong> (its security and dignity). This page follows all three.</p>
+<p>The decree of <a href="https://www.worldhistory.org/Cyrus_the_Great/" target="_blank">Cyrus</a> opened the door; walking through it took a century. The return was not a single triumphant homecoming but a slow, difficult, often discouraging rebuild &mdash; interrupted by opposition, poverty, and internal drift, and carried by a handful of remarkable leaders across four Persian reigns. Three things had to be restored to make Judah a people again: the <strong>temple</strong> (its worship), the <strong>law</strong> (its identity), and the <strong>wall</strong> (its security and dignity). This page follows all three.</p>
 
 <br>
 

@@ -55,14 +55,14 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <h3>The Rise of Cyrus (559&ndash;530 BC)</h3>
 
-<p>Cyrus II became king of Persis around 559 BC. He was still a vassal of the Median king Astyages &mdash; and, by later Greek tradition, Astyages was his own grandfather. Around 553 BC Cyrus rebelled. Then came a stroke that stunned the age: the Median army defected to him mid-battle. By 550 BC he had taken Ecbatana and the Median empire with it, uniting Medes and Persians under one crown. He was only beginning.</p>
+<p><a href="https://www.worldhistory.org/Cyrus_the_Great/" target="_blank">Cyrus</a> II became king of Persis around 559 BC. He was still a vassal of the Median king <a href="https://www.britannica.com/biography/Astyages" target="_blank">Astyages</a> &mdash; and, by later Greek tradition, Astyages was his own grandfather. Around 553 BC Cyrus rebelled. Then came a stroke that stunned the age: the Median army defected to him mid-battle. By 550 BC he had taken Ecbatana and the Median empire with it, uniting Medes and Persians under one crown. He was only beginning.</p>
 
 <p>Over the next decade Cyrus conquered in every direction:</p>
 
 <ul>
-<li><strong>Lydia (c. 547 BC)</strong> &mdash; the fabulously wealthy kingdom of King Croesus in western Anatolia (modern Turkey), giving Persia the Greek cities of the Aegean coast and setting up the later Greco-Persian wars.</li>
+<li><strong>Lydia (c. 547 BC)</strong> &mdash; the fabulously wealthy kingdom of King <a href="https://www.worldhistory.org/croesus/" target="_blank">Croesus</a> in western Anatolia (modern Turkey), giving Persia the Greek cities of the Aegean coast and setting up the later Greco-Persian wars.</li>
 <li><strong>The eastern provinces</strong> &mdash; a sweep across the Iranian plateau to the edges of Central Asia and the Indus.</li>
-<li><strong>Babylon (539 BC)</strong> &mdash; the great prize. The Neo-Babylonian empire, ruled by the unpopular absentee king Nabonidus and his regent son Belshazzar, fell to Cyrus almost without a fight: one battle upriver at Opis, and the greatest walled city on earth opened its gates (see the <a href="/culture/ancient/babylon/03-nebuchadnezzar-and-the-kings/">Babylon kings page</a> and <a href="/culture/ancient/achaemenid/05-cyrus-and-the-return/">Section 05</a>).</li>
+<li><strong>Babylon (539 BC)</strong> &mdash; the great prize. The Neo-Babylonian empire, ruled by the unpopular absentee king <a href="https://www.britannica.com/biography/Nabonidus" target="_blank">Nabonidus</a> and his regent son <a href="https://www.britannica.com/biography/Belshazzar" target="_blank">Belshazzar</a>, fell to Cyrus almost without a fight: one battle upriver at Opis, and the greatest walled city on earth opened its gates (see the <a href="/culture/ancient/babylon/03-nebuchadnezzar-and-the-kings/">Babylon kings page</a> and <a href="/culture/ancient/achaemenid/05-cyrus-and-the-return/">Section 05</a>).</li>
 </ul>
 
 <p>With Babylon fell everything Babylon had ruled &mdash; including the exiled community of Judah, who now had a new master. And this master, in his first year as king, issued a decree that would change their history: return home and rebuild the house of your God (<a href="https://www.blueletterbible.org/kjv/ezr/1/1/" target="_blank" data-ref="Ezra 1:1-4">Ezra 1:1&ndash;4</a>).</p>
@@ -108,22 +108,22 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Decree of return; the temple foundation (<a href="https://www.blueletterbible.org/kjv/ezr/1/1/" target="_blank" data-ref="Ezra 1">Ezra 1</a>; <a href="https://www.blueletterbible.org/kjv/isa/44/1/" target="_blank" data-ref="Isaiah 44">Isaiah 44</a>&ndash;45; <a href="https://www.blueletterbible.org/kjv/dan/1/21/" target="_blank" data-ref="Daniel 1:21">Daniel 1:21</a>; 10:1)</td>
 </tr>
 <tr style="background: white;">
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Cambyses II</strong></td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong><a href="https://www.worldhistory.org/Cambyses_II/" target="_blank">Cambyses II</a></strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">530&ndash;522</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Not named; conquered Egypt (background to the Elephantine Jews, a Jewish community in Egypt)</td>
 </tr>
 <tr style="background: #f0ebe5;">
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Darius I</strong> (the Great)</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong><a href="https://www.worldhistory.org/Darius_I/" target="_blank">Darius I</a></strong> (the Great)</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">522&ndash;486</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Temple completed in his 6th year (<a href="https://www.blueletterbible.org/kjv/ezr/5/1/" target="_blank" data-ref="Ezra 5">Ezra 5</a>&ndash;6; Haggai; Zechariah)</td>
 </tr>
 <tr style="background: white;">
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Xerxes I</strong> (Ahasuerus)</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong><a href="https://www.worldhistory.org/Xerxes_I/" target="_blank">Xerxes</a> I</strong> (Ahasuerus)</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">486&ndash;465</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">The king of the book of Esther</td>
 </tr>
 <tr style="background: #f0ebe5;">
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Artaxerxes I</strong></td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong><a href="https://www.worldhistory.org/Artaxerxes_I/" target="_blank">Artaxerxes I</a></strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">465&ndash;424</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Sends Ezra, then Nehemiah, to Jerusalem (<a href="https://www.blueletterbible.org/kjv/ezr/7/1/" target="_blank" data-ref="Ezra 7">Ezra 7</a>; <a href="https://www.blueletterbible.org/kjv/neh/2/1/" target="_blank" data-ref="Nehemiah 2">Nehemiah 2</a>)</td>
 </tr>

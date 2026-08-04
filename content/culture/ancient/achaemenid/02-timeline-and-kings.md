@@ -54,27 +54,27 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </thead>
 <tbody>
 <tr style="background: #f0ebe5;">
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Cyrus II the Great</strong></td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong><a href="https://www.worldhistory.org/Cyrus_the_Great/" target="_blank">Cyrus</a> II the Great</strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">559&ndash;530</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Decree of return (<a href="https://www.blueletterbible.org/kjv/ezr/1/1/" target="_blank" data-ref="Ezra 1">Ezra 1</a>; 2 Chr 36:22&ndash;23); temple foundation laid; Daniel serves on</td>
 </tr>
 <tr style="background: white;">
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Cambyses II</strong></td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong><a href="https://www.worldhistory.org/Cambyses_II/" target="_blank">Cambyses II</a></strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">530&ndash;522</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Unnamed; conquers Egypt (525); the &ldquo;Ahasuerus&rdquo;/&ldquo;Artaxerxes&rdquo; of <a href="https://www.blueletterbible.org/kjv/ezr/4/6/" target="_blank" data-ref="Ezra 4:6">Ezra 4:6&ndash;7</a> are debated</td>
 </tr>
 <tr style="background: #f0ebe5;">
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Darius I the Great</strong></td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong><a href="https://www.worldhistory.org/Darius_I/" target="_blank">Darius I</a> the Great</strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">522&ndash;486</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Authorizes and completes the temple, 515 BC (<a href="https://www.blueletterbible.org/kjv/ezr/5/1/" target="_blank" data-ref="Ezra 5">Ezra 5</a>&ndash;6; Haggai; Zechariah)</td>
 </tr>
 <tr style="background: white;">
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Xerxes I</strong></td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong><a href="https://www.worldhistory.org/Xerxes_I/" target="_blank">Xerxes</a> I</strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">486&ndash;465</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Ahasuerus</strong> of Esther; the invasion of Greece (480)</td>
 </tr>
 <tr style="background: #f0ebe5;">
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Artaxerxes I Longimanus</strong></td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong><a href="https://www.worldhistory.org/Artaxerxes_I/" target="_blank">Artaxerxes I</a> Longimanus</strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">465&ndash;424</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Sends Ezra (458) and Nehemiah (445); the wall rebuilt</td>
 </tr>
@@ -119,7 +119,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #8B7355; font-size: 0.9em;">547 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Lydia falls</strong> &mdash; Croesus defeated; Persia reaches the Aegean and the Greek cities</span>
+<span style="flex: 1; font-size: 0.95em;"><strong>Lydia falls</strong> &mdash; <a href="https://www.worldhistory.org/croesus/" target="_blank">Croesus</a> defeated; Persia reaches the Aegean and the Greek cities</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
@@ -244,7 +244,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #2c3e50; font-size: 0.9em;">331&ndash;330 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Alexander the Great</strong> destroys the empire &mdash; Darius III defeated at Gaugamela (the battle that ended the empire), Persepolis burned. This is the age Daniel foresaw as the &ldquo;he goat&hellip; from the west&rdquo; (<a href="https://www.blueletterbible.org/kjv/dan/8/5/" target="_blank" data-ref="Daniel 8:5">Daniel 8:5</a>), interpreted as &ldquo;the king of Grecia&rdquo; (<a href="https://www.blueletterbible.org/kjv/dan/8/21/" target="_blank" data-ref="Daniel 8:21">Daniel 8:21</a>)</span>
+<span style="flex: 1; font-size: 0.95em;"><strong><a href="https://www.worldhistory.org/Alexander_the_Great/" target="_blank">Alexander the Great</a></strong> destroys the empire &mdash; Darius III defeated at Gaugamela (the battle that ended the empire), Persepolis burned. This is the age Daniel foresaw as the &ldquo;he goat&hellip; from the west&rdquo; (<a href="https://www.blueletterbible.org/kjv/dan/8/5/" target="_blank" data-ref="Daniel 8:5">Daniel 8:5</a>), interpreted as &ldquo;the king of Grecia&rdquo; (<a href="https://www.blueletterbible.org/kjv/dan/8/21/" target="_blank" data-ref="Daniel 8:21">Daniel 8:21</a>)</span>
 </div>
 
 </div>

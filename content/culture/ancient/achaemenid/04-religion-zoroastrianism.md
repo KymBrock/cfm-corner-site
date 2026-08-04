@@ -27,7 +27,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </div>
 <!-- /LISTEN PLAYER -->
 
-<p>When the Jews came home from exile, they found themselves under a new kind of ruler. These kings were not idol-worshippers of the Babylonian kind. They were not followers of the God of Israel either. They belonged to a third thing entirely: an Iranian religion centered on a single great god of light and truth &mdash; a faith with no temple statues, honoring fire on open-air altars. We call it <strong>Zoroastrianism</strong>. It was the faith of Cyrus&rsquo;s heirs, and understanding it clears up much about the Persian world of Ezra, Nehemiah, Esther, and Daniel. It also raises one of the most delicate questions in the study of the Bible &mdash; one this page will handle carefully and honestly. Did Persian religion <em>influence</em> Judaism?</p>
+<p>When the Jews came home from exile, they found themselves under a new kind of ruler. These kings were not idol-worshippers of the Babylonian kind. They were not followers of the God of Israel either. They belonged to a third thing entirely: an Iranian religion centered on a single great god of light and truth &mdash; a faith with no temple statues, honoring fire on open-air altars. We call it <strong>Zoroastrianism</strong>. It was the faith of <a href="https://www.worldhistory.org/Cyrus_the_Great/" target="_blank">Cyrus</a>&rsquo;s heirs, and understanding it clears up much about the Persian world of Ezra, Nehemiah, Esther, and Daniel. It also raises one of the most delicate questions in the study of the Bible &mdash; one this page will handle carefully and honestly. Did Persian religion <em>influence</em> Judaism?</p>
 
 <br>
 
@@ -37,7 +37,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <h3>Ahura Mazda and Zarathustra</h3>
 
-<p>Open the inscriptions of the Persian kings, and one god stands at the center: <strong>Ahura Mazda</strong> (&ldquo;the Wise Lord&rdquo;). Darius the Great opens his great Behistun inscription by crediting him for everything: &ldquo;By the favor of Ahura Mazda I am king; Ahura Mazda bestowed the kingdom upon me.&rdquo; And notice what Ahura Mazda is <em>not</em>. He is not a statue. He is portrayed as the maker of heaven and earth, of humankind, and of happiness for humankind &mdash; a high creator-god of <strong>truth</strong> and <strong>light</strong>. His opposite is <em>drauga</em>, &ldquo;the Lie.&rdquo;</p>
+<p>Open the inscriptions of the Persian kings, and one god stands at the center: <strong>Ahura Mazda</strong> (&ldquo;the Wise Lord&rdquo;). <a href="https://www.worldhistory.org/Darius_I/" target="_blank">Darius the Great</a> opens his great Behistun inscription by crediting him for everything: &ldquo;By the favor of Ahura Mazda I am king; Ahura Mazda bestowed the kingdom upon me.&rdquo; And notice what Ahura Mazda is <em>not</em>. He is not a statue. He is portrayed as the maker of heaven and earth, of humankind, and of happiness for humankind &mdash; a high creator-god of <strong>truth</strong> and <strong>light</strong>. His opposite is <em>drauga</em>, &ldquo;the Lie.&rdquo;</p>
 
 <figure class="fg-figure">
   <img src="/images/culture/achaemenid/photos/faravahar-persepolis.jpg" alt="The winged Faravahar symbol carved at Persepolis" loading="lazy">
