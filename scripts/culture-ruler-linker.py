@@ -16,6 +16,14 @@ import re, glob, argparse, os
 WHE="https://www.worldhistory.org/"; BR="https://www.britannica.com/biography/"
 # (regex for the name as it appears, URL). Order: most-specific first.
 RULERS=[
+ # follow-up: secondary/numbered rulers (verified URLs, disambiguated by numeral)
+ (r'Tiglath-[Pp]ileser I(?![IVi])', WHE+"Tiglath_Pileser_I/"),
+ (r'Shalmaneser V(?![Ii])', BR+"Shalmaneser-V"),
+ (r'Ashur-uballit I(?![IVi])', BR+"Ashur-uballit-I"),
+ (r'Artaxerxes II(?![Ii])', WHE+"Artaxerxes_II/"),
+ (r'Darius III', BR+"Darius-III"),
+ (r'Darius II(?![Ii])', BR+"Darius-II-Ochus"),
+ (r'Nebuchadnezzar I(?![IVi])', BR+"Nebuchadrezzar-I"),
  (r'Alexander the Great', WHE+"Alexander_the_Great/"),
  (r'Tiglath-[Pp]ileser III', WHE+"Tiglath_Pileser_III/"),
  (r'Shalmaneser III', BR+"Shalmaneser-III"),

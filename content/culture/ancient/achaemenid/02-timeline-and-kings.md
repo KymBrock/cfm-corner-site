@@ -79,7 +79,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Sends Ezra (458) and Nehemiah (445); the wall rebuilt</td>
 </tr>
 <tr style="background: white;">
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Darius II &rarr; Darius III</strong></td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong><a href="https://www.britannica.com/biography/Darius-II-Ochus" target="_blank">Darius II</a> &rarr; <a href="https://www.britannica.com/biography/Darius-III" target="_blank">Darius III</a></strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">424&ndash;330</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">&ldquo;Darius the Persian&rdquo; (Neh 12:22); the empire&rsquo;s last century, ending with Alexander</td>
 </tr>
@@ -239,7 +239,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #2c3e50; font-size: 0.9em;">424&ndash;336</span>
-<span style="flex: 1; font-size: 0.95em;">A century of shrinking power and palace intrigue &mdash; Darius II, Artaxerxes II &amp; III, and the &ldquo;Darius the Persian&rdquo; who closes the Old Testament&rsquo;s record (<a href="https://www.blueletterbible.org/kjv/neh/12/22/" target="_blank" data-ref="Nehemiah 12:22">Nehemiah 12:22</a>)</span>
+<span style="flex: 1; font-size: 0.95em;">A century of shrinking power and palace intrigue &mdash; Darius II, <a href="https://www.worldhistory.org/Artaxerxes_II/" target="_blank">Artaxerxes II</a> &amp; III, and the &ldquo;Darius the Persian&rdquo; who closes the Old Testament&rsquo;s record (<a href="https://www.blueletterbible.org/kjv/neh/12/22/" target="_blank" data-ref="Nehemiah 12:22">Nehemiah 12:22</a>)</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">

@@ -145,7 +145,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #7a6a8a; font-size: 0.9em;">c. 1125&ndash;1104</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Nebuchadnezzar I</strong> (the great king&rsquo;s namesake) &mdash; defeats Elam and brings Marduk&rsquo;s statue home; Marduk&rsquo;s claim to kingship over the gods reaches its classic form around this era (see <a href="/culture/ancient/babylon/04-religion-and-mythology/">Section 04</a>)</span>
+<span style="flex: 1; font-size: 0.95em;"><strong><a href="https://www.britannica.com/biography/Nebuchadrezzar-I" target="_blank">Nebuchadnezzar I</a></strong> (the great king&rsquo;s namesake) &mdash; defeats Elam and brings Marduk&rsquo;s statue home; Marduk&rsquo;s claim to kingship over the gods reaches its classic form around this era (see <a href="/culture/ancient/babylon/04-religion-and-mythology/">Section 04</a>)</span>
 </div>
 
 </div>

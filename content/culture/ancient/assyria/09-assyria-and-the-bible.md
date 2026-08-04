@@ -158,7 +158,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </tr>
 <tr style="background: white;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Shalmaneser besieges Samaria (2 Kgs 17:3; 18:9)</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Shalmaneser V (ruled 727&ndash;722 BC), successor of Tiglath-pileser</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><a href="https://www.britannica.com/biography/Shalmaneser-V" target="_blank">Shalmaneser V</a> (ruled 727&ndash;722 BC), successor of Tiglath-pileser</td>
 </tr>
 <tr style="background: #f0ebe5;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Sargon (the fall of Samaria; Ashdod campaign) (Isa 20:1)</td>

@@ -61,7 +61,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <tr style="background: white;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Middle Assyrian Kingdom</strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">c. 1363&ndash;1050 BC</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Exodus through the Judges</strong> &mdash; the first surge under <a href="https://www.worldhistory.org/Tukulti-Ninurta_I/" target="_blank">Tukulti-Ninurta I</a> and Tiglath-Pileser I, then a long eclipse</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Exodus through the Judges</strong> &mdash; the first surge under <a href="https://www.worldhistory.org/Tukulti-Ninurta_I/" target="_blank">Tukulti-Ninurta I</a> and <a href="https://www.worldhistory.org/Tiglath_Pileser_I/" target="_blank">Tiglath-Pileser I</a>, then a long eclipse</td>
 </tr>
 <tr style="background: #f0ebe5;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Neo-Assyrian Empire</strong></td>
@@ -119,7 +119,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #7a6a8a; font-size: 0.9em;">c. 1363&ndash;1328</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Ashur-uballit I</strong> makes Assyria an independent kingdom and corresponds with Egypt&rsquo;s pharaohs as an equal (the cache of royal letters known as the Amarna Letters)</span>
+<span style="flex: 1; font-size: 0.95em;"><strong><a href="https://www.britannica.com/biography/Ashur-uballit-I" target="_blank">Ashur-uballit I</a></strong> makes Assyria an independent kingdom and corresponds with Egypt&rsquo;s pharaohs as an equal (the cache of royal letters known as the Amarna Letters)</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
@@ -164,7 +164,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #4a6b52; font-size: 0.9em;">722 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Samaria falls</strong> &mdash; Shalmaneser V besieges the northern capital and <a href="https://www.worldhistory.org/Sargon_II/" target="_blank">Sargon II</a> claims its capture; the ten tribes are deported (<a href="https://www.blueletterbible.org/kjv/2ki/17/6/" target="_blank" data-ref="2 Kings 17:6">2 Kings 17:6</a>). The kingdom of Israel ends (see <a href="/culture/ancient/assyria/07-the-fall-of-the-north/">The Fall of the North</a>)</span>
+<span style="flex: 1; font-size: 0.95em;"><strong>Samaria falls</strong> &mdash; <a href="https://www.britannica.com/biography/Shalmaneser-V" target="_blank">Shalmaneser V</a> besieges the northern capital and <a href="https://www.worldhistory.org/Sargon_II/" target="_blank">Sargon II</a> claims its capture; the ten tribes are deported (<a href="https://www.blueletterbible.org/kjv/2ki/17/6/" target="_blank" data-ref="2 Kings 17:6">2 Kings 17:6</a>). The kingdom of Israel ends (see <a href="/culture/ancient/assyria/07-the-fall-of-the-north/">The Fall of the North</a>)</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
