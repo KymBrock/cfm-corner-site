@@ -1,6 +1,6 @@
 ---
 title: "The Fall of the North & the Lost Tribes"
-description: "How the ten tribes of Israel vanished into the Assyrian empire — the piecemeal deportations, the three-year siege of Samaria, the chronicler's hard verdict on why, and the tangled question of the Samaritans and the tribes the world calls lost."
+description: "How the ten tribes of Israel vanished into the Assyrian empire — the piecemeal deportations, the three-year siege of Samaria, Scripture's hard verdict on why, and the tangled question of the Samaritans and the tribes the world calls lost."
 draft: true
 ---
 
@@ -161,7 +161,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <br>
 
-<h3>Why the North Fell: the Chronicler&rsquo;s Verdict</h3>
+<h3>Why the North Fell: Scripture&rsquo;s Verdict</h3>
 
 <p>Here 2 Kings does something no Assyrian inscription ever does. It stops the narrative and delivers a long, unsparing explanation of <em>why</em>. The historian is not interested in Assyrian strategy as a cause. For him, the armies were only the instrument. The cause was covenant failure, spelled out across seventeen verses (<a href="https://www.blueletterbible.org/kjv/2ki/17/7/" target="_blank" data-ref="2 Kings 17:7-23">2 Kings 17:7&ndash;23</a>). The indictment opens plainly:</p>
 
@@ -223,7 +223,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <h3>The Prophets Who Saw It Coming</h3>
 
-<p>The chronicler&rsquo;s charge that Israel &ldquo;would not hear&rdquo; the prophets is not a rhetorical flourish. We still have the sermons they refused. Two northern prophets in particular &mdash; <strong>Amos</strong> and <strong>Hosea</strong> &mdash; preached to Israel in its last decades. They named the coming ruin with painful exactness, decades before it arrived.</p>
+<p>Scripture&rsquo;s charge that Israel &ldquo;would not hear&rdquo; the prophets is not a rhetorical flourish. We still have the sermons they refused. Two northern prophets in particular &mdash; <strong>Amos</strong> and <strong>Hosea</strong> &mdash; preached to Israel in its last decades. They named the coming ruin with painful exactness, decades before it arrived.</p>
 
 <p><strong>Amos</strong> was a Judean shepherd sent north to the prosperous, complacent court of Jeroboam II. He announced captivity in a single unadorned sentence: &ldquo;Therefore will I cause you to go into captivity beyond Damascus, saith the LORD, whose name is The God of hosts&rdquo; (<a href="https://www.blueletterbible.org/kjv/amo/5/27/" target="_blank" data-ref="Amos 5:27">Amos 5:27</a>) &mdash; &ldquo;beyond Damascus&rdquo; meaning up the northern road and off into the empire, precisely the direction the deportees would go. He sang Israel&rsquo;s funeral while the nation still thought itself secure: &ldquo;The virgin of Israel is fallen; she shall no more rise&rdquo; (<a href="https://www.blueletterbible.org/kjv/amo/5/2/" target="_blank" data-ref="Amos 5:2">Amos 5:2</a>).</p>
 
