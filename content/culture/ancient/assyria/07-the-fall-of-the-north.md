@@ -39,7 +39,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <h3>The North Falls in Pieces, Not at Once</h3>
 
-<p>The northern kingdom did not fall in one blow. It was a decade-long amputation, limb by limb. It began under <strong>Tiglath-pileser III</strong>, the king who rebuilt the Assyrian war machine in the mid-eighth century BC. Around 733&ndash;732 BC, an anti-Assyrian coalition drew him into the region &mdash; and he sheared off Israel&rsquo;s entire northern and eastern territory. The record is unusually specific about which towns and regions went first:</p>
+<p>The northern kingdom did not fall in one blow. It was a decade-long amputation, limb by limb. It began under <strong><a href="https://www.worldhistory.org/Tiglath_Pileser_III/" target="_blank">Tiglath-pileser III</a></strong>, the king who rebuilt the Assyrian war machine in the mid-eighth century BC. Around 733&ndash;732 BC, an anti-Assyrian coalition drew him into the region &mdash; and he sheared off Israel&rsquo;s entire northern and eastern territory. The record is unusually specific about which towns and regions went first:</p>
 
 <p style="margin: 20px 0; padding-left: 20px; border-left: 3px solid #b8ccbb; font-style: italic; color: #444;">&ldquo;In the days of Pekah king of Israel came Tiglath-pileser king of Assyria, and took Ijon, and Abel-beth-maachah, and Janoah, and Kedesh, and Hazor, and Gilead, and Galilee, all the land of Naphtali, and carried them captive to Assyria&rdquo; (<a href="https://www.blueletterbible.org/kjv/2ki/15/29/" target="_blank" data-ref="2 Kings 15:29">2 Kings 15:29</a>).</p>
 

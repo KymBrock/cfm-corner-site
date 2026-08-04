@@ -97,7 +97,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>This is the theological heart of scripture&rsquo;s whole quarrel with Assyria. God can use an unjust empire to accomplish a just purpose without excusing the empire&rsquo;s injustice &mdash; the axe is still answerable for its pride. In a landmark study of Isaiah&rsquo;s language, the scholar Peter Machinist showed how closely the prophet&rsquo;s portrait of the boasting Assyrian tracks the actual rhetoric of the Assyrian royal inscriptions. The very self-glorification the kings carved into their own monuments becomes, in Isaiah, the evidence for the case against them. Assyria was so vivid a presence that it became scripture&rsquo;s archetype: the arrogant world-power judged for forgetting whose hand it was in.</p>
 
-<p>Isaiah also grounds all of this in datable fact. In one verse he names an Assyrian king by his own name and a specific campaign: <em>&ldquo;In the year that Tartan came unto Ashdod, (when Sargon the king of Assyria sent him,) and fought against Ashdod, and took it&rdquo;</em> (<a href="https://www.blueletterbible.org/kjv/isa/20/1/" target="_blank" data-ref="Isaiah 20:1">Isaiah 20:1</a>). &ldquo;Sargon&rdquo; here is Sargon II, and this is the only mention of him by name in the entire Bible &mdash; a king so obscure to later readers that some once doubted he existed, until his vast palace at Dur-Sharrukin (Khorsabad) was unearthed in the nineteenth century.</p>
+<p>Isaiah also grounds all of this in datable fact. In one verse he names an Assyrian king by his own name and a specific campaign: <em>&ldquo;In the year that Tartan came unto Ashdod, (when Sargon the king of Assyria sent him,) and fought against Ashdod, and took it&rdquo;</em> (<a href="https://www.blueletterbible.org/kjv/isa/20/1/" target="_blank" data-ref="Isaiah 20:1">Isaiah 20:1</a>). &ldquo;Sargon&rdquo; here is <a href="https://www.worldhistory.org/Sargon_II/" target="_blank">Sargon II</a>, and this is the only mention of him by name in the entire Bible &mdash; a king so obscure to later readers that some once doubted he existed, until his vast palace at Dur-Sharrukin (Khorsabad) was unearthed in the nineteenth century.</p>
 
 <br>
 
@@ -134,7 +134,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <h4>Jehu on the Black Obelisk</h4>
 
-<p>The single most striking convergence is a black limestone monument of <strong>Shalmaneser III</strong>, found at Nimrud in 1846 and now in the British Museum: the <strong>Black Obelisk</strong>. One of its carved registers shows a figure bowing to the ground before the Assyrian king, and the cuneiform caption above it reads &mdash; in the standard scholarly translation &mdash; the tribute of &ldquo;Jehu, son of Omri.&rdquo; <strong>Jehu</strong> was king of Israel (<a href="https://www.blueletterbible.org/kjv/2ki/9/1/" target="_blank" data-ref="2 Kings 9-10">2 Kings 9&ndash;10</a>), and this relief &mdash; dated to 841 BC &mdash; is the earliest surviving image believed to depict a named Israelite king, or at the least his official envoy. A responsible caveat: the Assyrian caption calls Jehu &ldquo;son of Omri,&rdquo; using Omri&rsquo;s name as the standing Assyrian label for the whole kingdom of Israel, though Jehu was not of Omri&rsquo;s line. What the stone establishes is not a Bible verse but a person: an Israelite king the Bible names, kneeling in Assyrian stone within a few years of his reign.</p>
+<p>The single most striking convergence is a black limestone monument of <strong><a href="https://www.britannica.com/biography/Shalmaneser-III" target="_blank">Shalmaneser III</a></strong>, found at Nimrud in 1846 and now in the British Museum: the <strong>Black Obelisk</strong>. One of its carved registers shows a figure bowing to the ground before the Assyrian king, and the cuneiform caption above it reads &mdash; in the standard scholarly translation &mdash; the tribute of &ldquo;Jehu, son of Omri.&rdquo; <strong>Jehu</strong> was king of Israel (<a href="https://www.blueletterbible.org/kjv/2ki/9/1/" target="_blank" data-ref="2 Kings 9-10">2 Kings 9&ndash;10</a>), and this relief &mdash; dated to 841 BC &mdash; is the earliest surviving image believed to depict a named Israelite king, or at the least his official envoy. A responsible caveat: the Assyrian caption calls Jehu &ldquo;son of Omri,&rdquo; using Omri&rsquo;s name as the standing Assyrian label for the whole kingdom of Israel, though Jehu was not of Omri&rsquo;s line. What the stone establishes is not a Bible verse but a person: an Israelite king the Bible names, kneeling in Assyrian stone within a few years of his reign.</p>
 
 <h4>Ahab at the Battle of Qarqar</h4>
 
@@ -154,7 +154,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <tbody>
 <tr style="background: #f0ebe5;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Pul / Tiglath-pileser takes tribute from Menahem &amp; Israel (2 Kgs 15:19, 15:29)</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Tiglath-pileser III (ruled 745&ndash;727 BC); his annals name &ldquo;Menahem of Samaria&rdquo; among tributaries</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><a href="https://www.worldhistory.org/Tiglath_Pileser_III/" target="_blank">Tiglath-pileser III</a> (ruled 745&ndash;727 BC); his annals name &ldquo;Menahem of Samaria&rdquo; among tributaries</td>
 </tr>
 <tr style="background: white;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Shalmaneser besieges Samaria (2 Kgs 17:3; 18:9)</td>
@@ -165,11 +165,11 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Sargon II (ruled 722&ndash;705 BC); his palace at Khorsabad and annals claim the capture of Samaria</td>
 </tr>
 <tr style="background: white;">
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Sennacherib invades Judah, besieges Jerusalem (2 Kgs 18&ndash;19; Isa 36&ndash;37)</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><a href="https://www.worldhistory.org/sennacherib/" target="_blank">Sennacherib</a> invades Judah, besieges Jerusalem (2 Kgs 18&ndash;19; Isa 36&ndash;37)</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Sennacherib (ruled 705&ndash;681 BC); his prism records shutting up Hezekiah &ldquo;like a bird in a cage&rdquo;</td>
 </tr>
 <tr style="background: #f0ebe5;">
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Esarhaddon succeeds the murdered Sennacherib (2 Kgs 19:37)</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><a href="https://www.worldhistory.org/Esarhaddon/" target="_blank">Esarhaddon</a> succeeds the murdered Sennacherib (2 Kgs 19:37)</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Esarhaddon (ruled 681&ndash;669 BC), son and successor of Sennacherib</td>
 </tr>
 </tbody>

@@ -31,7 +31,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>This page traces that long arc in four movements: the merchant city, the first surge, the world empire, and the sudden fall. Along the way, it marks the moments where Assyrian kings step by name into the Bible&rsquo;s own pages. Dates before the first millennium BC are approximate and debated. From the ninth century onward, though, the Assyrians kept meticulous records &mdash; annals, eponym lists (year-by-year registers, each named for a high official), even a recorded solar eclipse (763 BC) &mdash; that let us fix many events to the year.</p>
 
-<p style="text-align: center; color: #666; font-style: italic; margin: 1.5rem 0 0.5rem 0;">Drag the slider to watch the Near East change &mdash; set to 700 BC, the Neo-Assyrian Empire at its height, when Samaria had fallen and Sennacherib stood at the walls of Jerusalem.</p>
+<p style="text-align: center; color: #666; font-style: italic; margin: 1.5rem 0 0.5rem 0;">Drag the slider to watch the Near East change &mdash; set to 700 BC, the Neo-Assyrian Empire at its height, when Samaria had fallen and <a href="https://www.worldhistory.org/sennacherib/" target="_blank">Sennacherib</a> stood at the walls of Jerusalem.</p>
 <link rel="stylesheet" href="/css/era-map-widget.css">
 <div class="era-map-widget" data-start-era="700"></div>
 <script src="/js/era-map-widget.js"></script>
@@ -61,7 +61,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <tr style="background: white;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Middle Assyrian Kingdom</strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">c. 1363&ndash;1050 BC</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Exodus through the Judges</strong> &mdash; the first surge under Tukulti-Ninurta I and Tiglath-Pileser I, then a long eclipse</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Exodus through the Judges</strong> &mdash; the first surge under <a href="https://www.worldhistory.org/Tukulti-Ninurta_I/" target="_blank">Tukulti-Ninurta I</a> and Tiglath-Pileser I, then a long eclipse</td>
 </tr>
 <tr style="background: #f0ebe5;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Neo-Assyrian Empire</strong></td>
@@ -71,7 +71,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <tr style="background: white;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>The Height &amp; the Collapse</strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">681&ndash;609 BC</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Egypt conquered, then ruin</strong> &mdash; Esarhaddon and Ashurbanipal at the summit; Nineveh falls, the fall Nahum foresaw</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Egypt conquered, then ruin</strong> &mdash; <a href="https://www.worldhistory.org/Esarhaddon/" target="_blank">Esarhaddon</a> and <a href="https://www.worldhistory.org/Ashurbanipal/" target="_blank">Ashurbanipal</a> at the summit; Nineveh falls, the fall Nahum foresaw</td>
 </tr>
 </tbody>
 </table>
@@ -144,12 +144,12 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #4a6b52; font-size: 0.9em;">883&ndash;859 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Ashurnasirpal II</strong> rebuilds the empire and moves the capital to <strong>Kalhu</strong> (biblical Calah, modern Nimrud); his palace reliefs advertise a new policy of calculated terror (see <a href="/culture/ancient/assyria/03-the-war-machine/">The War Machine</a>)</span>
+<span style="flex: 1; font-size: 0.95em;"><strong><a href="https://www.worldhistory.org/Ashurnasirpal_II/" target="_blank">Ashurnasirpal II</a></strong> rebuilds the empire and moves the capital to <strong>Kalhu</strong> (biblical Calah, modern Nimrud); his palace reliefs advertise a new policy of calculated terror (see <a href="/culture/ancient/assyria/03-the-war-machine/">The War Machine</a>)</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #4a6b52; font-size: 0.9em;">853 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>The Battle of Qarqar</strong> &mdash; Shalmaneser III fights a coalition of western kings; his <em>Kurkh Monolith</em> names among his enemies &ldquo;Ahab the Israelite&rdquo; with 2,000 chariots &mdash; the earliest mention of an Israelite king outside the Bible</span>
+<span style="flex: 1; font-size: 0.95em;"><strong>The Battle of Qarqar</strong> &mdash; <a href="https://www.britannica.com/biography/Shalmaneser-III" target="_blank">Shalmaneser III</a> fights a coalition of western kings; his <em>Kurkh Monolith</em> names among his enemies &ldquo;Ahab the Israelite&rdquo; with 2,000 chariots &mdash; the earliest mention of an Israelite king outside the Bible</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
@@ -159,12 +159,12 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #4a6b52; font-size: 0.9em;">745&ndash;727 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Tiglath-Pileser III</strong> &mdash; the empire-builder; the Bible&rsquo;s &ldquo;Pul&rdquo; takes tribute from Menahem (<a href="https://www.blueletterbible.org/kjv/2ki/15/19/" target="_blank" data-ref="2 Kings 15:19">2 Kings 15:19</a>) and later deports Galilee and Gilead (<a href="https://www.blueletterbible.org/kjv/2ki/15/29/" target="_blank" data-ref="2 Kings 15:29">2 Kings 15:29</a>)</span>
+<span style="flex: 1; font-size: 0.95em;"><strong><a href="https://www.worldhistory.org/Tiglath_Pileser_III/" target="_blank">Tiglath-Pileser III</a></strong> &mdash; the empire-builder; the Bible&rsquo;s &ldquo;Pul&rdquo; takes tribute from Menahem (<a href="https://www.blueletterbible.org/kjv/2ki/15/19/" target="_blank" data-ref="2 Kings 15:19">2 Kings 15:19</a>) and later deports Galilee and Gilead (<a href="https://www.blueletterbible.org/kjv/2ki/15/29/" target="_blank" data-ref="2 Kings 15:29">2 Kings 15:29</a>)</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #4a6b52; font-size: 0.9em;">722 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Samaria falls</strong> &mdash; Shalmaneser V besieges the northern capital and Sargon II claims its capture; the ten tribes are deported (<a href="https://www.blueletterbible.org/kjv/2ki/17/6/" target="_blank" data-ref="2 Kings 17:6">2 Kings 17:6</a>). The kingdom of Israel ends (see <a href="/culture/ancient/assyria/07-the-fall-of-the-north/">The Fall of the North</a>)</span>
+<span style="flex: 1; font-size: 0.95em;"><strong>Samaria falls</strong> &mdash; Shalmaneser V besieges the northern capital and <a href="https://www.worldhistory.org/Sargon_II/" target="_blank">Sargon II</a> claims its capture; the ten tribes are deported (<a href="https://www.blueletterbible.org/kjv/2ki/17/6/" target="_blank" data-ref="2 Kings 17:6">2 Kings 17:6</a>). The kingdom of Israel ends (see <a href="/culture/ancient/assyria/07-the-fall-of-the-north/">The Fall of the North</a>)</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
