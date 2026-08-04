@@ -155,7 +155,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
         </tbody>
       </table>
     </div>
-    <div class="not-tally">Of the twelve adopted Hebrew month-names, exactly <strong>one</strong> carries a god&rsquo;s name &mdash; <strong>Tammuz</strong>. Of our twelve English months, <strong>eight</strong> honor a god or a deified emperor.</div>
+    <div class="not-tally">Of the twelve adopted Hebrew month-names, exactly <strong>one</strong> carries a god&rsquo;s name &mdash; <strong>Tammuz</strong>. Of our twelve English months, <strong>seven</strong> honor a god or a deified emperor.</div>
   </div>
 
   <div class="not-panel" id="not-panel-days">
