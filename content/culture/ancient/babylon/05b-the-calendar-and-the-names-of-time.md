@@ -156,13 +156,14 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
       </table>
     </div>
     <div class="not-tally">Of the twelve adopted Hebrew month-names, exactly <strong>one</strong> carries a god&rsquo;s name &mdash; <strong>Tammuz</strong>. Of our twelve English months, <strong>seven</strong> honor a god or a deified emperor.</div>
+    <p style="font-size: 0.82em; color: #777; margin: 10px 4px 0;">On the columns: several of these Akkadian month-name meanings are uncertain or debated. And because the Hebrew months are lunar, each one straddles two Gregorian months &mdash; the English column shows the one it mostly falls in.</p>
   </div>
 
   <div class="not-panel" id="not-panel-days">
     <div class="not-scroll">
       <table class="not-table">
         <thead>
-          <tr><th>Hebrew</th><th>English</th><th>Babylonian</th><th>Greek</th><th>Roman</th><th>Norse / Germanic</th></tr>
+          <tr><th>Hebrew</th><th>English</th><th>Babylonian planet-god</th><th>Greek</th><th>Roman</th><th>Norse / Germanic</th></tr>
         </thead>
         <tbody>
           <tr><td class="not-num">Yom Rishon &mdash; &ldquo;First Day&rdquo;</td><td>Sunday</td><td>Shamash (sun)</td><td>Helios</td><td>Sol</td><td>Sól</td></tr>

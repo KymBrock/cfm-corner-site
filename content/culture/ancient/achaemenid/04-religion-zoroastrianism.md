@@ -66,7 +66,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <li><strong>Purity and ethics.</strong> Zoroastrian practice put great weight on ritual purity and on the moral triad &ldquo;good thoughts, good words, good deeds.&rdquo;</li>
 </ul>
 
-<p>The Bible never describes Persian worship directly. But it does show the priesthood at work: Daniel is set over &ldquo;the wise men of Babylon&rdquo; including &ldquo;the magicians&rdquo; and &ldquo;the Chaldeans&rdquo; (<a href="https://www.blueletterbible.org/kjv/dan/2/48/" target="_blank" data-ref="Daniel 2:48">Daniel 2:48</a>) &mdash; the learned priestly class the magi belonged to &mdash; without ever adopting their arts.</p>
+<p>The Bible never describes Persian worship directly. But it does show the priesthood at work: Daniel is set over &ldquo;the wise men of Babylon&rdquo; including &ldquo;the magicians&rdquo; and &ldquo;the Chaldeans&rdquo; (<a href="https://www.blueletterbible.org/kjv/dan/2/48/" target="_blank" data-ref="Daniel 2:48">Daniel 2:48</a>) &mdash; the Babylonian scholar-priests, whose Persian counterparts were the magi &mdash; without ever adopting their arts.</p>
 
 <br>
 
