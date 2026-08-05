@@ -98,6 +98,98 @@ Era values: `500` = Persia, `600` = Babylon, `700` = Assyria.
 
 ---
 
+## Staging pipeline (branch `claude/staging-pipeline`)
+
+A 4-stage production pipeline was added so weeks and guides can be built weeks ahead.
+Full write-up: **`docs/staging-pipeline.md`**. Short version:
+
+- `draft:` is the hard public gate; `stage:` is the pipeline position
+  (`drafting` → `review` → `ready` → `live`). No `stage` = `live`, so existing content is unaffected.
+- `/pipeline/` is a staging-only dashboard listing everything in flight with its blockers.
+- Verified: a production build emits **0 pages and 0 sitemap entries** for all three staged
+  guides and no `/pipeline/`; the staging build shows everything.
+
+**This also fixed a real leak.** Achaemenid and Assyria had been set `draft: false`, which
+rendered **22 pages at public URLs and added them to `sitemap.xml`** even though their listing
+cards were hidden. *Hiding a card does not hide a page.* Both are now `draft: true` at
+`stage: ready`. They go `draft: false` only when all three guides ship together.
+
+### ⚠️ Cloudflare previews are NOT actually set up
+`scripts/deploy-preview.sh` and `scripts/cf-pages-build.sh` exist and are correct, but the
+Cloudflare side was never stood up: `wrangler` is not installed, there is no auth state, and
+both `cfm-corner-previews.pages.dev` and the branch alias return **404**. Until someone runs
+the one-time interactive `npx wrangler login` and creates the Pages project, the only staging
+surface is **local** (`hugo server -D`). Everything in the pipeline still works locally.
+
+### Two active branches
+- `claude/eager-jang-5baf4c` — field-guide verification work (Achaemenid, Assyria, Week 31)
+- `claude/staging-pipeline` — branched from the above; adds the staging system **and** the
+  draft-leak fix. This is the newer branch and contains everything.
+
+---
+
+## Narration script location — CONVENTION (decided 2026-07-26)
+
+Narration scripts live in **both** places, kept in sync:
+- **Vault** (canonical): `~/Obsidian/K Master Vault/.../Culture/<Guide>/_narration/<slug>.script.md`
+- **Repo**: `docs/narration/<guide>/<slug>.script.md`
+
+The vault is where the Narration Studio run reads from; the repo copy is for easy find/edit
+(e.g. github.dev from a phone). Edit one, update the other. 05b lives on the calendar branch
+(PR #2) in the repo until that PR merges.
+
+## Narration (added 2026-07-23)
+
+**Babylon audio: 11 of 12 sections live.** Sections 06-10 were pulled from the
+Narration Studio and wired in this session. Only `05b-the-calendar-and-the-names-of-time`
+has no episode yet.
+
+> **Encoding matters.** Studio exports are 160 kbps; the published files are
+> **mono / 48 kHz / 64 kbps**. Always re-encode before installing:
+> `ffmpeg -nostdin -v error -y -i <master>.mp3 -ac 1 -ar 48000 -b:a 64k -map_metadata -1 <dest>.mp3`
+> The destination filename **must equal the page's markdown filename** — studio
+> episode names are looser (e.g. `babylon-08-babylon-the-bible` -> `08-babylon-and-the-bible.mp3`).
+
+**21 narration scripts drafted** for Achaemenid (10) and Assyria (11), matching the
+Babylon format. They live in the **Obsidian vault**, not this repo:
+`~/Obsidian/K Master Vault/Master Project Folder/Ongoing/CFM Corner/OT_2026/Culture/<Guide>/_narration/`
+Committed and pushed to the private `KymBrock/K_Master_Vault` repo.
+
+**Not yet human-reviewed and not yet recorded.** To produce the audio, see
+**`docs/narration-studio-run.md`** — it holds a ready-to-paste prompt for a new
+Claude Code session **on the Mac** (the Studio is local-only), plus the outstanding
+human-review items.
+
+**Lexicon:** `~/Developer/narration-studio/lexicon.json` went 27 -> 154 entries with all
+the Persian/Assyrian terms and KJV traps (`cieled` = "seeld"). Committed and pushed to
+that repo's `origin/main`.
+
+## Assyria guide artwork (added 2026-07-23)
+
+**All 23 images complete** — 11 section heroes, 11 icons, and the guide banner, in
+`static/images/culture/assyria/` (63 MB). Generated to prompts in
+**`docs/assyria-image-prompts.md`**, which also documents the paper-cut style and the
+Assyrian-vs-Babylonian accuracy notes.
+
+Known cosmetic issues, all accepted rather than fixed:
+- `02-hero` and `09-hero` show **blue glazed brick gates** — Ishtar Gate vocabulary,
+  which is Babylonian, not Assyrian.
+- `05-icon` renders photorealistically where the other ten icons are flat paper-cut.
+- Style varies between flatter (01, 06, 08, 11) and denser (02-05) heroes.
+
+**Assyria pages 02 and 03 have listen players pointing at audio that does not exist**
+(404 on the preview). Deliberately left in place pending recording.
+
+## Working files organized (2026-07-23)
+
+The Perforce-workspace folder `.../Animation Studio References/To be named and Organized/`
+went from 38 items to empty. Everything was filed into `CFM Corner Field Guides/`,
+`Chroma-Keys repo communication/`, and `7 Moedim/Visual Assets/`, with every move logged
+line-by-line in `ORGANIZED-LOG.txt` in that folder (format: `NEW PATH <<< ORIGINAL NAME`).
+Two verified byte-identical duplicates are quarantined in
+`_VERIFIED-DUPLICATES-safe-to-delete/` with a README naming each original — deletion left
+to Kym.
+
 ## LOCAL-ONLY — exists only on this Mac, unreachable remotely
 
 Nothing below is in git or on GitHub. Do not assume it is available from another machine.

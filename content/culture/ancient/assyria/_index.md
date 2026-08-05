@@ -3,7 +3,12 @@ title: "Assyria: The Rod of the North"
 description: "A deep-dive cultural guide to Assyria — the militarized highland empire that erased the northern kingdom, scattered the ten tribes, invented mass deportation, and stood at Jerusalem's wall in 701 BC. Essential background for 2 Kings 15–19, Isaiah, Jonah, Nahum, and the confidence that Zion could never fall."
 hide_children: true
 card_icon: "/images/culture/assyria/assyria-guide-hero-icon.png"
-draft: false
+stage: ready
+stage_blockers:
+  - "Babylon guide (3 cross-links)"
+cascade:
+  stage: ready
+draft: true
 ---
 
 {{< rawhtml >}}

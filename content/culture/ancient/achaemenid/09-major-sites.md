@@ -1,7 +1,7 @@
 ---
 title: "Major Sites"
 description: "Pasargadae and the tomb of Cyrus, the ceremonial splendor of Persepolis, Susa the winter capital of Esther and Nehemiah, Ecbatana where Cyrus's decree was filed, and the Behistun cliff."
-draft: false
+draft: true
 ---
 
 {{< rawhtml >}}

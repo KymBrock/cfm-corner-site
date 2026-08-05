@@ -1,7 +1,7 @@
 ---
 title: "Religion & the God Ashur"
 description: "The one god who was also a city and a nation, the shared Mesopotamian pantheon, the sacred tree and winged genies, omens as state science, and the imperial theology the Rabshakeh flung at Jerusalem's wall."
-draft: false
+draft: true
 ---
 
 {{< rawhtml >}}

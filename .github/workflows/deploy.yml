@@ -22,8 +22,14 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: 'latest'
+          # Pinned to match the local dev machine and the Cloudflare preview
+          # build (HUGO_VERSION in scripts/cf-pages-build.sh). Bump all three
+          # together so what you see locally is what ships. See
+          # docs/working-remotely.md.
+          hugo-version: '0.156.0'
           extended: true
+      - name: Staging guard (block non-live pages missing draft:true)
+        run: sh scripts/check-staging.sh
       - name: Build
         run: hugo --minify --baseURL "https://www.cfmcorner.com/"
       - name: Build search index

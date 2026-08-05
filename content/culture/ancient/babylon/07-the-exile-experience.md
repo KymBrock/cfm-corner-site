@@ -14,6 +14,23 @@ draft: true
 
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">&ldquo;By the rivers of Babylon, there we sat down&rdquo; &mdash; and then, remarkably, stood back up</p>
 
+<!-- LISTEN PLAYER (section narration) -->
+<div class="listen-player" style="max-width: 750px; margin: 0 auto 1.75rem auto; background: linear-gradient(135deg, #f2f5f2 0%, #dce8dd 100%); border: 1px solid #cdddce; border-radius: 14px; padding: 16px 18px; box-shadow: 0 4px 12px rgba(74,107,82,0.08);">
+<div style="display: flex; align-items: center; gap: 14px; margin-bottom: 12px;">
+<span aria-hidden="true" style="flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: #4a6b52;">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f2f5f2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 14v-2a9 9 0 0 1 18 0v2"></path><path d="M21 15a2 2 0 0 1-2 2h-1v-5h1a2 2 0 0 1 2 2z"></path><path d="M3 15a2 2 0 0 0 2 2h1v-5H5a2 2 0 0 0-2 2z"></path></svg>
+</span>
+<div style="flex: 1; min-width: 0;">
+<div style="font-weight: 700; color: #3c5743; font-size: 1.02em; line-height: 1.2;">Listen to this section</div>
+</div>
+</div>
+<audio controls preload="none" style="width: 100%; height: 40px; border-radius: 8px;">
+<source src="/audio/culture/babylon/07-the-exile-experience.mp3" type="audio/mpeg">
+Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/babylon/07-the-exile-experience.mp3">download the audio</a> instead.
+</audio>
+</div>
+<!-- /LISTEN PLAYER -->
+
 <p>The exile is the hinge of the Old Testament &mdash; the catastrophe every prophet warned of and the furnace in which Israel&rsquo;s faith was refined into the form that survived. For centuries, readers could see it only from the inside, through Psalm 137&rsquo;s grief, Ezekiel&rsquo;s visions, and Jeremiah&rsquo;s letters. In the last hundred years &mdash; and dramatically in the last few decades &mdash; Babylonian clay has begun to show us the exile from the outside: ration lists naming Judah&rsquo;s captive king, and whole archives of ordinary contracts from a canal-side settlement the scribes called, simply, <strong>Judah-town</strong>.</p>
 
 <br>

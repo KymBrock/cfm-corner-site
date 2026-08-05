@@ -1,7 +1,7 @@
 ---
 title: "Writing & the Great Library"
 description: "Cuneiform and the two-script chancery, the scribal schools, and the library of Ashurbanipal at Nineveh — where a Victorian engraver read out a Babylonian flood story, recovered the Epic of Gilgamesh, and reopened the oldest conversation about the deluge."
-draft: false
+draft: true
 ---
 
 {{< rawhtml >}}

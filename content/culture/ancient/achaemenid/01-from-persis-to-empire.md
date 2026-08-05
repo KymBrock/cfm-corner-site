@@ -1,7 +1,7 @@
 ---
 title: "From Persis to Empire"
 description: "Who the Persians were, how a minor highland people under Cyrus the Great swallowed Babylon in a generation, and why Isaiah named their king a century before he was born."
-draft: false
+draft: true
 ---
 
 {{< rawhtml >}}
@@ -13,6 +13,23 @@ draft: false
 <h2 style="text-align: center;">From Persis to Empire</h2>
 
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">How a highland people on the edge of the map became the largest empire the world had yet seen</p>
+
+<!-- LISTEN PLAYER (section narration) -->
+<div class="listen-player" style="max-width: 750px; margin: 0 auto 1.75rem auto; background: linear-gradient(135deg, #f2f5f2 0%, #dce8dd 100%); border: 1px solid #cdddce; border-radius: 14px; padding: 16px 18px; box-shadow: 0 4px 12px rgba(74,107,82,0.08);">
+<div style="display: flex; align-items: center; gap: 14px; margin-bottom: 12px;">
+<span aria-hidden="true" style="flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: #4a6b52;">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f2f5f2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 14v-2a9 9 0 0 1 18 0v2"></path><path d="M21 15a2 2 0 0 1-2 2h-1v-5h1a2 2 0 0 1 2 2z"></path><path d="M3 15a2 2 0 0 0 2 2h1v-5H5a2 2 0 0 0-2 2z"></path></svg>
+</span>
+<div style="flex: 1; min-width: 0;">
+<div style="font-weight: 700; color: #3c5743; font-size: 1.02em; line-height: 1.2;">Listen to this section</div>
+</div>
+</div>
+<audio controls preload="none" style="width: 100%; height: 40px; border-radius: 8px;">
+<source src="/audio/culture/achaemenid/01-from-persis-to-empire.mp3" type="audio/mpeg">
+Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/achaemenid/01-from-persis-to-empire.mp3">download the audio</a> instead.
+</audio>
+</div>
+<!-- /LISTEN PLAYER -->
 
 <p>When Judah went into exile, Persia was nobody &mdash; a cluster of herding and farming clans in the mountains of southwestern Iran, subjects of their more powerful cousins the Medes, barely a footnote in the archives of Babylon. Within the lifetime of a single man, that footnote became the master of the entire Near East, from the Aegean to the Indus, and the deliverer who sent Judah home. That man was <strong><a href="https://www.worldhistory.org/Cyrus_the_Great/" target="_blank">Cyrus the Great</a></strong>, and the empire he founded &mdash; the <strong>Achaemenid Empire</strong>, named for his ancestor Achaemenes (Old Persian <em>Haxāmaniš</em>) &mdash; is the world that Ezra, Nehemiah, Esther, and the later chapters of Daniel all move within.</p>
 

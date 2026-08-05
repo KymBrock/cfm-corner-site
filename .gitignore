@@ -10,3 +10,10 @@ _source-maps/
 
 # Cloudflare wrangler local cache (contains account creds)
 .wrangler/
+
+# Claude Code worktrees & session checkpoints — never track these.
+# They had been committed as stray gitlinks (submodule refs) with no
+# .gitmodules entry, which made every `git clone --recurse-submodules`
+# fail — that is what broke Cloudflare Pages builds at the clone step.
+.claude/worktrees/
+.session-checkpoints/

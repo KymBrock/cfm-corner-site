@@ -1,7 +1,7 @@
 ---
 title: "Assyria & the Bible"
 description: "The empire scripture wrestles with most before Babylon — rod of God's anger and object of His mercy, sung to ruin by Nahum and spared alive by Jonah, with a named Israelite king still kneeling on an Assyrian monument to prove the roll-call real."
-draft: false
+draft: true
 ---
 
 {{< rawhtml >}}

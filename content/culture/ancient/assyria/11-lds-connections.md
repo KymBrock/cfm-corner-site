@@ -1,7 +1,7 @@
 ---
 title: "LDS Connections"
 description: "Assyria scattered the ten tribes into the north countries and hardened Jerusalem's belief that Zion could never fall — the very presumption Lehi confronts on the first page of the Book of Mormon, and the wound the latter-day gathering was promised to heal."
-draft: false
+draft: true
 ---
 
 {{< rawhtml >}}
