@@ -141,9 +141,9 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
         </thead>
         <tbody>
           <tr><td>&ldquo;First Month&rdquo; (Abib)</td><td>Nisānu</td><td>first fruits</td><td>Nisan</td><td>March</td><td class="not-god">Mars &mdash; war</td></tr>
-          <tr><td>&ldquo;Second Month&rdquo; (Zif)</td><td>Āru</td><td>blossoms / bull-month</td><td>Iyar</td><td>April</td><td class="not-god">Venus (Aphrodite)</td></tr>
-          <tr><td>&ldquo;Third Month&rdquo;</td><td>Simānu</td><td>brick-making season</td><td>Sivan</td><td>May</td><td class="not-god">Maia &mdash; growth</td></tr>
-          <tr class="not-row-flag"><td>&ldquo;Fourth Month&rdquo;</td><td>Duʾūzu</td><td class="not-god">a dying-and-rising god</td><td>Tammuz</td><td>June</td><td class="not-god">Juno &mdash; queen of gods</td></tr>
+          <tr><td>&ldquo;Second Month&rdquo; (Zif)</td><td>Āru</td><td>blossoms / bull-month</td><td>Iyar</td><td>April</td><td class="not-god">Venus? &mdash; or Latin <em>aperire</em>, &ldquo;to open&rdquo;</td></tr>
+          <tr><td>&ldquo;Third Month&rdquo;</td><td>Simānu</td><td>brick-making season</td><td>Sivan</td><td>May</td><td class="not-god">Maia? &mdash; or <em>maiores</em>, &ldquo;elders&rdquo;</td></tr>
+          <tr class="not-row-flag"><td>&ldquo;Fourth Month&rdquo;</td><td>Duʾūzu</td><td class="not-god">a dying-and-rising god</td><td>Tammuz</td><td>June</td><td class="not-god">Juno? &mdash; or <em>iuniores</em>, &ldquo;the young&rdquo;</td></tr>
           <tr><td>&ldquo;Fifth Month&rdquo;</td><td>Ābu</td><td>torches / summer heat</td><td>Av</td><td>July</td><td class="not-god">Julius Caesar (deified)</td></tr>
           <tr><td>&ldquo;Sixth Month&rdquo;</td><td>Ulūlu</td><td>purification</td><td>Elul</td><td>August</td><td class="not-god">Augustus Caesar (deified)</td></tr>
           <tr><td>&ldquo;Seventh Month&rdquo; (Ethanim)</td><td>Tašrītu</td><td>beginning / autumn</td><td>Tishrei</td><td>September</td><td class="not-num">&ldquo;seventh&rdquo;</td></tr>
@@ -155,7 +155,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
         </tbody>
       </table>
     </div>
-    <div class="not-tally">Of the twelve adopted Hebrew month-names, exactly <strong>one</strong> carries a god&rsquo;s name &mdash; <strong>Tammuz</strong>. Of our twelve English months, <strong>seven</strong> honor a god or a deified emperor.</div>
+    <div class="not-tally">Of the twelve adopted Hebrew month-names, exactly <strong>one</strong> carries a god&rsquo;s name &mdash; <strong>Tammuz</strong>. Of our twelve English months, <strong>four</strong> certainly honor a god or a deified emperor &mdash; Mars, Julius, Augustus, and Janus &mdash; and three more (April, May, June) are traditionally tied to goddesses, though those derivations are debated.</div>
     <p style="font-size: 0.82em; color: #777; margin: 10px 4px 0;">On the columns: several of these Akkadian month-name meanings are uncertain or debated. And because the Hebrew months are lunar, each one straddles two Gregorian months &mdash; the English column shows the one it mostly falls in.</p>
   </div>
 
