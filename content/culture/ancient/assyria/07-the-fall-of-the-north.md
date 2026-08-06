@@ -125,7 +125,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <script>
 (function(){
   var STEPS=[
-    {yr:"734 BC",nm:"The first bite",cap:"<b>734&ndash;732 BC &mdash; the first bite.</b> Tiglath-pileser III peels off the edges of the north &mdash; Galilee, the Jezreel corridor, and all of Transjordan (Gilead) &mdash; and carries them to Assyria (2&nbsp;Kings 15:29). Only the highland core around Samaria is left."},
+    {yr:"733 BC",nm:"The first bite",cap:"<b>733&ndash;732 BC &mdash; the first bite.</b> Tiglath-pileser III peels off the edges of the north &mdash; Galilee, the Jezreel corridor, and all of Transjordan (Gilead) &mdash; and carries them to Assyria (2&nbsp;Kings 15:29). Only the highland core around Samaria is left."},
     {yr:"722 BC",nm:"Samaria falls",cap:"<b>722 BC &mdash; Samaria falls.</b> After a three-year siege the Assyrians take the capital and carry Israel away (2&nbsp;Kings 17:6). The northern kingdom, ten tribes strong, simply ceases to exist."},
     {yr:"then",nm:"Scattered on purpose",cap:"<b>Scattered on purpose.</b> The deportees are resettled far from home and far from each other &mdash; in <b>Halah</b> and by the <b>Habor</b>, the river of Gozan, in the far north, and in the <b>cities of the Medes</b> to the east. Dispersed among strangers, they assimilate, and pass into memory as the &ldquo;lost ten tribes.&rdquo;"}
   ];
