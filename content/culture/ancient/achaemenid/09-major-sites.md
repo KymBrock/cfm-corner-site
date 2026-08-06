@@ -112,12 +112,12 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <tr style="background: #f0ebe5;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Pasargadae</strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Cyrus&rsquo;s first capital; his tomb</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Resting place of Isaiah&rsquo;s &ldquo;anointed&rdquo; (Isa 45:1)</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Resting place of Isaiah&rsquo;s &ldquo;anointed&rdquo; (<a href="https://www.blueletterbible.org/kjv/isa/45/1/" target="_blank" data-ref="Isaiah 45:1">Isa 45:1</a>)</td>
 </tr>
 <tr style="background: white;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Persepolis</strong> (Takht-e Jamshid)</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Ceremonial capital; New Year</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">The tribute of the &ldquo;127 provinces&rdquo; carved in stone; end of the empire (Dan 8)</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">The tribute of the &ldquo;127 provinces&rdquo; carved in stone; end of the empire (<a href="https://www.blueletterbible.org/kjv/dan/8/1/" target="_blank" data-ref="Daniel 8">Dan 8</a>)</td>
 </tr>
 <tr style="background: #f0ebe5;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Susa / Shushan</strong> (Shush)</td>

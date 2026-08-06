@@ -81,7 +81,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <tr style="background: white;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong><a href="https://www.britannica.com/biography/Darius-II-Ochus" target="_blank">Darius II</a> &rarr; <a href="https://www.britannica.com/biography/Darius-III" target="_blank">Darius III</a></strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">424&ndash;330</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">&ldquo;Darius the Persian&rdquo; (Neh 12:22); the empire&rsquo;s last century, ending with Alexander</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">&ldquo;Darius the Persian&rdquo; (<a href="https://www.blueletterbible.org/kjv/neh/12/22/" target="_blank" data-ref="Nehemiah 12:22">Neh 12:22</a>); the empire&rsquo;s last century, ending with Alexander</td>
 </tr>
 </tbody>
 </table>
