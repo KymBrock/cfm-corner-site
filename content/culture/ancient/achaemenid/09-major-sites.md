@@ -27,7 +27,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </div>
 <!-- /LISTEN PLAYER -->
 
-<p>The Achaemenid kings did not rule from one capital. They ruled from several, moving with the seasons and the rhythms of state among a handful of great centers scattered across the Iranian plateau and Mesopotamia. Four of these &mdash; and one spectacular cliff &mdash; carry the story of Persia and the Bible. Several appear in Scripture by name. All can be visited today, most in Iran. And all reward knowing what happened there.</p>
+<p>The Achaemenid kings did not rule from one capital. They ruled from several, moving with the seasons and the rhythms of state among a handful of great centers scattered across the Iranian plateau and Mesopotamia. Four of these &mdash; and one spectacular cliff &mdash; carry the story of Persia and the Bible. Several appear in Scripture by name. All can be visited today &mdash; every one of them in modern Iran. And all reward knowing what happened there.</p>
 
 <br>
 
