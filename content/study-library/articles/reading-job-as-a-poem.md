@@ -1,11 +1,11 @@
 ---
 title: "Reading Job as a Poem: How the Hebrew's Shape Preaches the Message"
-description: "Job is forty chapters of Hebrew poetry, and its shape does the teaching. A plain-language look at how repetition, the two-beat line, and a single repeated verb — 'know' — carry the book toward 'I know that my Redeemer liveth.' A gentle on-ramp to Hebrew poetry before the Psalms."
+description: "Almost all of Job's forty-two chapters are Hebrew poetry, and its shape does the teaching. A plain-language look at how repetition, the two-beat line, and a single repeated verb — 'know' — carry the book toward 'I know that my Redeemer liveth.' A gentle on-ramp to Hebrew poetry before the Psalms."
 weight: 11
 category: "Literary Tools"
 ---
 
-We meet Job as a story: a good man loses everything, three friends come to argue, and at last God answers out of a whirlwind. But after chapter 2, the story stops being *told* and starts being *sung*. From Job's first lament (chapter 3) to God's final word (chapter 42), the book is **Hebrew poetry** — roughly forty chapters of it. And in Hebrew poetry, the *shape* of the words is not decoration laid over the message. The shape **is** the message. Learning to see it changes how the book reads.
+We meet Job as a story: a good man loses everything, three friends come to argue, and at last God answers out of a whirlwind. But the story is only the frame. Job runs to **forty-two chapters**, and all but a short prose frame is *poetry*: the book opens as prose (the prologue, chapters 1–2) and closes as prose (the epilogue, 42:7–17), but everything between — from Job's first lament in **chapter 3** to his final answer just before the end of chapter 42 — is **Hebrew poetry**, some *forty* chapters of it. After chapter 2 the storytelling stops and the singing begins. And in Hebrew poetry, the *shape* of the words is not decoration laid over the message. The shape **is** the message. Learning to see it changes how the book reads.
 
 This is also a good week to learn the skill, because next week we open the Psalms — a hundred and fifty poems that ask the very same kind of listening. Job, one of the Bible's "wisdom" books, is the perfect place to practice. So before the Psalms, let's read Job the way a Hebrew ear would have heard it.
 
