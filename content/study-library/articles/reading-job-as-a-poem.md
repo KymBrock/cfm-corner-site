@@ -15,9 +15,9 @@ This is also a good week to pick up some of these skills, because next week we o
 
 ---
 
-## Skill 1: Hebrew Poetry repeats on purpose
+## Skill 1: Parallelism — the two-beat line
 
-English poetry rhymes *sounds*. Hebrew poetry rhymes *ideas* — it says a thing, then says it again from a new angle, or contrasts it, or presses it further. So the single most useful habit is this: **read every verse as a two-beat line, and listen for what the second beat does to the first.** Take the most famous couplet in the whole reading:
+English poetry rhymes *sounds*. Hebrew poetry rhymes *ideas*. This pairing of lines is called <span class="term-ref" data-ref="Parallelism" data-popup-kind="source" data-popup-text="The basic engine of Hebrew poetry: lines are set in pairs so the second answers, echoes, contrasts, or extends the first — rhyming ideas instead of sounds.">parallelism</span>, and it drives the whole tradition: a poet says a thing, then says it again from a new angle, or contrasts it, or presses it further. So the single most useful habit is this: **read every verse as a two-beat line, and listen for what the second beat does to the first.** Take the most famous couplet in the whole reading:
 
 <div class="jp-fig">
   <div class="jp-fig-cap">A two-beat line · Job 38:7</div>
@@ -40,9 +40,9 @@ Once you hear that doubling, you can't un-hear it — and the whirlwind speech t
 
 ---
 
-## Skill 2: The repeated key word — Job's duel over *know*
+## Skill 2: Leitwort — the repeated key word
 
-The simplest Hebrew move of all is to **take one key word and say it again and again**, until a reader cannot miss it. Job's whole argument runs on a single verb: *[yada](https://www.blueletterbible.org/lexicon/h3045/kjv/wlc/0-1/)* (יָדַע, "to know"). Read Job in English and you *feel* that argument. In Hebrew you can **count** it. The fight of the book is a fight over **who gets to say "I know."**
+The simplest Hebrew move of all is to **take one key word and say it again and again**, until a reader cannot miss it. Scholars call a word used this way a <span class="term-ref" data-ref="Leitwort" data-popup-kind="source" data-popup-text="German for 'leading word.' A single key word repeated on purpose across a passage — or a whole book — tying it together and carrying its theme.">Leitwort</span>, a "leading word." Job's whole argument runs on a single one: *[yada](https://www.blueletterbible.org/lexicon/h3045/kjv/wlc/0-1/)* (יָדַע, "to know"). Read Job in English and you *feel* that argument. In Hebrew you can **count** it. The fight of the book is a fight over **who gets to say "I know."**
 
 <div class="jp-fig">
   <div class="jp-fig-cap">The "know" duel · יָדַע (yada, <a href="https://www.blueletterbible.org/lexicon/h3045/kjv/wlc/0-1/">H3045</a>)</div>
@@ -64,9 +64,9 @@ That is not a trick of translation. It is built into the vocabulary, and it land
 
 ---
 
-## Skill 3: Repeated openings — the question cascade
+## Skill 3: Anaphora — repeated openings
 
-A third habit repeats not a key word but a **line-opening**. The poet starts phrase after phrase with the same word, the way waves keep coming. (When poets do this, we call it **anaphora**.) Job demanded a courtroom explanation. What he gets is not an argument but an **avalanche of questions**, and the Hebrew makes the pattern almost audible.
+A third habit repeats not a key word but a **line-opening**. The poet starts phrase after phrase with the same word, the way waves keep coming. (When poets do this, we call it <span class="term-ref" data-ref="Anaphora" data-popup-kind="source" data-popup-text="Beginning several lines in a row with the same word or phrase, so they build like waves — as in the whirlwind's repeated 'Who…?'">anaphora</span>.) Job demanded a courtroom explanation. What he gets is not an argument but an **avalanche of questions**, and the Hebrew makes the pattern almost audible.
 
 <div class="jp-fig">
   <div class="jp-fig-cap">The whirlwind's cascade · Job 38</div>
@@ -82,17 +82,17 @@ When you teach Job 38, the takeaway is not "here are the questions." It is: *rea
 
 ---
 
-## Skill 4: When repetition turns — the pivot of Job 19
+## Skill 4: Antithesis — the poetic turn
 
-Repetition can do more than press a point. It can build one feeling and then *reverse* it. Job 19 is the "Redeemer liveth" chapter, and its engine is one bitter, repeated word: everyone has become **a stranger** to Job. The root *[zur](https://www.blueletterbible.org/lexicon/h2114/kjv/wlc/0-1/)* (זוּר, "to be estranged / made strange") clusters **four times** as Job counts his abandonment. "Mine acquaintance are verily *estranged* from me" (19:13); "I am *an alien* in their sight" (19:15). Kin, servants, wife, and friends all turn *strange*.
+Repetition can do more than press a point. It can build one feeling and then *reverse* it — a sharp contrast the Greeks named <span class="term-ref" data-ref="Antithesis" data-popup-kind="source" data-popup-text="Setting two things in pointed contrast so each sharpens the other. You met it inside a single line in Skill 1 (antithetic parallelism); here it runs across a whole chapter.">antithesis</span>. You met it in miniature back in Skill 1, in the antithetic line; here it stretches across a whole chapter. Job 19 is the "Redeemer liveth" chapter, and its engine is one bitter, repeated word: everyone has become **a stranger** to Job. The root *[zur](https://www.blueletterbible.org/lexicon/h2114/kjv/wlc/0-1/)* (זוּר, "to be estranged / made strange") clusters **four times** as Job counts his abandonment. "Mine acquaintance are verily *estranged* from me" (19:13); "I am *an alien* in their sight" (19:15). Kin, servants, wife, and friends all turn *strange*.
 
 Then, out of that exact vocabulary — the horror of having no one near — Job cries **"I know that my [redeemer](https://www.blueletterbible.org/lexicon/h1350/kjv/wlc/0-1/) liveth."** The word is *go'el* (גֹּאֵל). It does not mean a distant rescuer. It means the **kinsman-redeemer**: the near relative bound by blood to buy you back, the very role Boaz plays for Ruth. So the chapter turns on a hinge. Every human tie has been made *strange* (*zur*); against that, Job names the one relative who will *never* be estranged. The estrangement is what makes the kinsman-word blaze. (This is the poetry behind the Study Guide's *go'el* word study — the repetition shows *why* Job reaches for that word right here.)
 
 ---
 
-## Skill 5: A whole family of words — the courtroom of Job 13
+## Skill 5: Semantic field — a borrowed vocabulary
 
-The last habit is the widest. Instead of one repeated word, a poet can reach for a whole **family of related words**: a vocabulary borrowed from one world and laid over another. Job 13 borrows the language of a courtroom. The Study Guide anchors Job 13:15, "though he slay me, yet will I trust in him." The Hebrew around it shows Job means this as a **legal stand**, not a sigh of resignation. The chapter is saturated with courtroom vocabulary, each word repeating four times:
+The last habit is the widest. Instead of one repeated word, a poet can reach for a whole **family of related words** from a single walk of life — what linguists call a <span class="term-ref" data-ref="Semantic field" data-popup-kind="source" data-popup-text="A family of words drawn from one area of life — here, the vocabulary of a courtroom — used together so a whole passage is cast in those terms.">semantic field</span>. Laid over another subject, that borrowed vocabulary becomes a sustained metaphor. Job 13 reaches for the language of a courtroom. The Study Guide anchors Job 13:15, "though he slay me, yet will I trust in him." The Hebrew around it shows Job means this as a **legal stand**, not a sigh of resignation. The chapter is saturated with courtroom vocabulary, each word repeating four times:
 
 <div class="jp-fig">
   <div class="jp-fig-cap">The courtroom of Job 13</div>
@@ -133,10 +133,10 @@ Pick a passage and watch its architecture come into view. Each map color-codes t
 Five habits, then, and every one is a form of listening:
 
 - **Parallelism** — read the second line as an answer to the first.
-- **The repeated key word** — notice when one word keeps coming back.
-- **The question cascade** — hear the same opening roll in like waves.
-- **Repetition that turns** — feel a mood build, then flip on a single word.
-- **A family of words** — catch a whole vocabulary borrowed from one world.
+- **Leitwort** (the repeated key word) — notice when one word keeps coming back.
+- **Anaphora** (repeated openings) — hear the same opening roll in like waves.
+- **Antithesis** (the turn) — feel a mood build, then flip on a single word.
+- **Semantic field** (a borrowed vocabulary) — catch a whole world's words at once.
 
 You do not need a word of Hebrew for any of this. The point is a habit of *listening*: read the second line as an answer to the first, notice when a word keeps coming back, and ask what the shape is doing. Do that, and Job stops being a wall of speeches and becomes what it is — a poem that carries a suffering man from *"where wast thou?"* all the way to *"I know that my Redeemer liveth."*
 
