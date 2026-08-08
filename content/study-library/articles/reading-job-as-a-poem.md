@@ -80,7 +80,7 @@ A third habit repeats not a key word but a **line-opening**. The poet starts phr
   <div class="jp-fig-note">Thirteen unanswerable <em>whos</em>, and the implied answer to every one is the same: <em>not you, Job — I did.</em> Notice the theme is not raw power in the abstract; it is God as the <strong>Setter of limits</strong>, the only One entitled to say to chaos, "thus far." The whirlwind speech <em>sounds</em> like a whirlwind — the form is doing the work of the content.</div>
 </div>
 
-When you teach Job 38, the takeaway is not "here are the questions." It is: *read the whole chapter aloud as two-beat couplets, and let the class hear the cascade.* The poem performs God's answer.
+Here is why that torrent of questions matters. Job had begged for an explanation — a reason for all he had suffered — and God never gives him one. Instead God asks question after question that Job cannot possibly answer, until the sheer flood of them settles everything. The cascade *is* the answer. God does not defend Himself; He simply lets Job feel the size of the One he is speaking to — the God who fixed the boundaries of the sea and stored up the snow. The point is not the information in any single question. It is the *experience* of the whole rush of them, which is why the poem was built as a rush and not a list. Read a stretch of Job 38 aloud and you feel what Job felt: not crushed, but quieted — small before God, and strangely at peace there.
 
 ---
 
