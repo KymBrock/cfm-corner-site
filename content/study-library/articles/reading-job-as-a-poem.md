@@ -5,15 +5,15 @@ weight: 11
 category: "Literary Tools"
 ---
 
-We meet Job as a story: a good man loses everything, three friends come to argue, and at last God answers out of a whirlwind. But the story is only the frame. Job runs to **forty-two chapters**, and all but a short prose frame is *poetry*: the book opens as prose (the prologue, chapters 1–2) and closes as prose (the epilogue, 42:7–17), but everything between — from Job's first lament in **chapter 3** to his final answer just before the end of chapter 42 — is **Hebrew poetry**, some *forty* chapters of it. After chapter 2 the storytelling stops and the singing begins. And in Hebrew poetry, the *shape* of the words is not decoration laid over the message. The shape **is** the message. Learning to see it changes how the book reads.
+We meet Job as a story: a good man loses everything, three friends come to argue, and at last God answers out of a whirlwind. But the story is only the frame. Job runs to **forty-two chapters**, and all but a short <span class="term-ref" data-ref="Prose" data-popup-kind="source" data-popup-text="Ordinary written or spoken language — the everyday way we tell a story or give information, without the rhythm, line breaks, and matched pairs of poetry.">prose</span> frame is *poetry*: the book opens as prose (the <span class="term-ref" data-ref="Prologue" data-popup-kind="source" data-popup-text="The opening section that sets the scene before the main action — here, the story of Job's testing in chapters 1–2.">prologue</span>, chapters 1–2) and closes as prose (the <span class="term-ref" data-ref="Epilogue" data-popup-kind="source" data-popup-text="The closing section that wraps things up after the main action — here, Job's restoration in 42:7–17.">epilogue</span>, 42:7–17), but everything between — from Job's first lament in **chapter 3** to his final answer just before the end of chapter 42 — is **Hebrew poetry**, some *forty* chapters of it. After chapter 2 the storytelling stops and the singing begins. And in Hebrew poetry, the *shape* of the words is not decoration laid over the message. The shape **is** the message. Learning to see it changes how the book reads.
 
-This is also a good week to learn the skill, because next week we open the Psalms — a hundred and fifty poems that ask the very same kind of listening. Job, one of the Bible's "wisdom" books, is the perfect place to practice. So before the Psalms, let's read Job the way a Hebrew ear would have heard it.
+This is also a good week to pick up some of these skills, because next week we open the Psalms — a hundred and fifty poems that require the very same kind of listening. Job, one of the Bible's "<span class="term-ref" data-ref="Wisdom literature" data-popup-kind="source" data-popup-text="The Old Testament's wisdom books — Job, Proverbs, and Ecclesiastes — which wrestle with how life actually works rather than telling Israel's history.">wisdom</span>" books, is the perfect place to practice. So before the Psalms, let's read Job the way a Hebrew ear would have heard it.
 
-*(Every count below was produced by running the tagged Hebrew text through a Scripture Poetry Analyzer and then checking it by hand, so the **numbers are verifiable** — each links to Blue Letter Bible so you can count them yourself. The **meanings** are offered as readings to weigh, not settled conclusions — the same care the Study Guide keeps.)*
+*(Every count below can be checked in the Hebrew text itself — each links to Blue Letter Bible, where you can look up the word and count the occurrences for yourself. The **numbers** are verifiable; the **meanings** are offered as readings to weigh, not settled conclusions — the same care the Study Guide keeps.)*
 
 ---
 
-## First, the one skill: Hebrew poetry repeats on purpose
+## Skill 1: Hebrew Poetry repeats on purpose
 
 English poetry rhymes *sounds*. Hebrew poetry rhymes *ideas* — it says a thing, then says it again from a new angle, or contrasts it, or presses it further. So the single most useful habit is this: **read every verse as a two-beat line, and listen for what the second beat does to the first.** Take the most famous couplet in the whole reading:
 
@@ -23,8 +23,16 @@ English poetry rhymes *sounds*. Hebrew poetry rhymes *ideas* — it says a thing
     <div class="jp-beat"><span class="jp-tag">beat 1</span> When the <span class="pmw-kw">morning stars</span> <span class="pmw-pr">sang together</span>,</div>
     <div class="jp-beat"><span class="jp-tag">beat 2</span> and all the <span class="pmw-kw">sons of God</span> <span class="pmw-pr">shouted for joy</span>.</div>
   </div>
-  <div class="jp-fig-note">The second beat doesn't add new information — it re-sounds the first. <em>Morning stars</em> answers <em>sons of God</em>; <em>sang together</em> answers <em>shouted for joy</em>. Saying it twice makes the joy feel total. This is <strong>synonymous parallelism</strong>, and Job 38 is built of it wall to wall.</div>
+  <div class="jp-fig-note">The second beat doesn't add new information — it re-sounds the first. <em>Morning stars</em> answers <em>sons of God</em>; <em>sang together</em> answers <em>shouted for joy</em>. Saying it twice makes the joy feel total. This is <strong>synonymous parallelism</strong> — and Job 38 is built of it wall to wall.</div>
 </div>
+
+That doubling — the second beat re-sounding the first — is the most common kind, called **synonymous** parallelism. But two paired lines can relate in three main ways, and it helps to have names for them:
+
+- **Synonymous** — the second line says the first over again in fresh words, so the thought lands twice. *("the morning stars sang together // the sons of God shouted for joy," 38:7.)*
+- **Antithetic** — the second line *contrasts* the first, drawing a boundary. When Job at last meets God he says, "I have heard of thee by the hearing of the ear: **but** now mine eye seeth thee" (42:5) — hearing set against seeing, the whole turn of the book in a single line.
+- **Synthetic** (or *building*) — the second line *advances* the first, adding the next step instead of mirroring it. "For I know that my redeemer liveth, **and that** he shall stand at the latter day upon the earth" (19:25): the thought moves forward, from a Redeemer who lives to what He will yet do.
+
+You don't need the labels to be moved by the lines — you just need the habit of reading the two beats *together*. (For these three, plus the larger shapes like chiasm and inclusio, see the companion guide, [How Hebrew Poems Are Built](/study-library/articles/how-hebrew-poems-are-built/).)
 
 Once you hear that doubling, you can't un-hear it — and the whirlwind speech turns from a lecture into music. But the deeper thing Job's poet does is *repeat single words* across a whole passage, the way a preacher leans on one phrase. In Hebrew you can literally count the leaning. And the counting tells the story of the book.
 
@@ -98,13 +106,11 @@ There's a quieter gem in the "tried gold" verse the lesson loves (23:10). In the
 
 ---
 
-## Where the tool stops honestly — and why that itself teaches
+## Read it honestly: claim what you can see
 
-One finding is as useful as any count: **the analyzer undercounts Job's parallelism, and it tells you so.**
+Here is a caution worth as much as any count. Job 38 is *wall-to-wall* synonymous parallelism — the "morning stars // sons of God" doubling runs through nearly every verse, and the chapter's couplets number in the *dozens*. But be honest about certainty: a handful are unmistakable, matched word for word; many more are real but looser, and a careful reader can only call those *likely*, not proven. Good study names that difference out loud — it **claims what it can clearly see, and holds the rest as a reasonable reading** rather than a settled fact.
 
-Job 38 is wall-to-wall synonymous parallelism (that "morning stars // sons of God" doubling). But the tool's strict detector — which only fires on a short list of *fixed, attested* word-pairs it can prove by rule — caught just **two** couplets in the whole chapter. When its proposal layer is allowed to *nominate* couplets and then re-check each against the text, it immediately surfaces **five more** in the same chapter, every term confirmed present — and the chapter's real total runs to *dozens*. The honest tool flags only what it can prove and openly declines to guess the rest.
-
-That restraint is worth handing to a class, because it models the exact posture faithful study asks for: **claim what you can verify, and be honest about the rest.** It is also the deepest lesson of Job's poetry — the book that refuses cheap answers is written by a poet who refuses cheap patterns.
+That posture is the deepest lesson of Job's poetry. The book that refuses cheap answers about suffering is written by a poet who refuses cheap patterns — and it asks the same care of us. So when you teach Job 38, the goal is not a tidy count of couplets. It is a habit: read every verse as a two-beat line, listen for how the second beat presses the first, and be honest about how sure you are.
 
 ---
 
@@ -116,7 +122,7 @@ Pick a passage and watch its architecture come into view. Each map color-codes t
 <div class="poetry-map-widget" data-set="job"></div>
 <script src="/js/poetry-map-widget.js"></script>
 
-*The maps above show the English architecture. The Hebrew word-by-word layer — the per-word tags and glosses — comes straight from the tagged Hebrew (OSHB) through the analyzer, and can be switched on here once exported.*
+*The maps above show the English architecture. A Hebrew word-by-word layer — per-word tags and glosses from the tagged Hebrew text — can be switched on here once it's added.*
 
 ---
 
@@ -127,6 +133,8 @@ You do not need a word of Hebrew to be changed by this. The point is a habit of 
 And it is the perfect warm-up for the Psalms. Everything you just practiced in Job — parallelism, repetition, the two-beat line — is the grammar of every psalm we are about to read. (For the fuller catalog of forms — chiasm, inclusio, the staircase, the acrostic — see the companion guide, **[How Hebrew Poems Are Built](/study-library/articles/how-hebrew-poems-are-built/)**.)
 
 <style>
+.term-ref{border-bottom:1px dotted var(--sage-dark,#4a6b52);cursor:help;text-decoration:none;color:inherit;}
+.jp-fig .term-ref{border-bottom-color:#7c9885;}
 .jp-fig{border:1px solid #d9ddd6;border-left:4px solid #7c9885;border-radius:8px;padding:16px 18px;margin:22px 0;background:rgba(124,152,133,0.05);}
 .jp-fig-cap{font-size:.78em;letter-spacing:.04em;text-transform:uppercase;color:#5a6d5f;font-weight:700;margin-bottom:10px;}
 .jp-fig-note{font-size:.92em;line-height:1.55;margin-top:12px;color:inherit;opacity:.92;}
