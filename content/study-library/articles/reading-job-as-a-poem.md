@@ -60,7 +60,9 @@ The simplest Hebrew move of all is to **take one key word and say it again and a
   <div class="jp-fig-note">God floods Job with things he <em>cannot</em> know — the storehouses of snow, the binding of the Pleiades, the birth of the sea — and Job answers not one of them. Yet the single thing Job never stops knowing is not a fact about the cosmos at all. It is a <strong>Person</strong>: <em>my</em> Redeemer. The book empties Job of every explanation and leaves him holding the only knowledge that saves — and the Hebrew makes that visible by counting.</div>
 </div>
 
-That is not a trick of translation. It is built into the vocabulary, and it lands exactly on the lesson's title verse. **Try this in a class:** put three lines side by side — 38:4 (God: *"where wast thou…?"*), 13:2 (*"I know also"*), and 19:25 (*"I know that my redeemer liveth"*) — and ask: *what does Job stop claiming to know, and what does he never stop knowing?*
+That is not a trick of translation. It is built into the vocabulary, and it lands exactly on the lesson's title verse.
+
+Set three lines side by side and the movement of the whole book comes into view. Twice Job insists that he *knows*: "I know also" (13:2), he tells his friends when they lecture him, and — even in the depths of his grief — "I know that my redeemer liveth" (19:25). Then God answers out of the whirlwind and turns the word back on him: "Where wast thou when I laid the foundations of the earth?" (38:4). One by one, the things Job thought he understood about how the world is run are shown to be far beyond him, and he lets that knowing go. But the *other* knowing never wavers. That is the point of the duel: Job stops claiming to know *how* God runs the universe, yet he never stops knowing *whom* he can trust — a living Redeemer.
 
 ---
 
