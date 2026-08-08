@@ -88,7 +88,25 @@ Here is why that torrent of questions matters. Job had begged for an explanation
 
 Repetition can do more than press a point. It can build one feeling and then *reverse* it — a sharp contrast the Greeks named <span class="term-ref" data-ref="Antithesis" data-popup-kind="source" data-popup-text="Setting two things in pointed contrast so each sharpens the other. You met it inside a single line in Skill 1 (antithetic parallelism); here it runs across a whole chapter.">antithesis</span>. You met it in miniature back in Skill 1, in the antithetic line; here it stretches across a whole chapter. Job 19 is the "Redeemer liveth" chapter, and its engine is one bitter, repeated word: everyone has become **a stranger** to Job. The root *[zur](https://www.blueletterbible.org/lexicon/h2114/kjv/wlc/0-1/)* (זוּר, "to be estranged / made strange") clusters **four times** as Job counts his abandonment. "Mine acquaintance are verily *estranged* from me" (19:13); "I am *an alien* in their sight" (19:15). Kin, servants, wife, and friends all turn *strange*.
 
-Then, out of that exact vocabulary — the horror of having no one near — Job cries **"I know that my [redeemer](https://www.blueletterbible.org/lexicon/h1350/kjv/wlc/0-1/) liveth."** The word is *go'el* (גֹּאֵל). It does not mean a distant rescuer. It means the **kinsman-redeemer**: the near relative bound by blood to buy you back, the very role Boaz plays for Ruth. So the chapter turns on a hinge. Every human tie has been made *strange* (*zur*); against that, Job names the one relative who will *never* be estranged. The estrangement is what makes the kinsman-word blaze. (This is the poetry behind the Study Guide's *go'el* word study — the repetition shows *why* Job reaches for that word right here.)
+Then, out of that exact vocabulary — the horror of having no one near — Job cries **"I know that my [redeemer](https://www.blueletterbible.org/lexicon/h1350/kjv/wlc/0-1/) liveth."** The word is *go'el* (גֹּאֵל). It does not mean a distant rescuer. It means the **kinsman-redeemer**: the near relative bound by blood to buy you back, the very role Boaz plays for Ruth.
+
+<div class="jp-fig">
+  <div class="jp-fig-cap">The antithesis of Job 19 · זוּר (<a href="https://www.blueletterbible.org/lexicon/h2114/kjv/wlc/0-1/">zur</a>) vs. גֹּאֵל (<a href="https://www.blueletterbible.org/lexicon/h1350/kjv/wlc/0-1/">go'el</a>)</div>
+  <div class="jp-vs">
+    <div class="jp-vs-side">
+      <div class="jp-vs-head">Everyone near has been made <em>strange</em> — <strong>4×</strong></div>
+      <div class="jp-vs-body">"Mine acquaintance are verily <span class="pmw-kw">estranged</span> from me" (19:13) · "I am <span class="pmw-kw">an alien</span> in their sight" (19:15)<br><span class="jp-refs">kin · servants · wife · friends</span></div>
+    </div>
+    <div class="jp-vs-mid">vs.</div>
+    <div class="jp-vs-side">
+      <div class="jp-vs-head">One kinsman will <em>never</em> be estranged</div>
+      <div class="jp-vs-body">"I know that my <span class="pmw-kw">redeemer</span> liveth" — <em>go'el</em>, גֹּאֵל (19:25)</div>
+    </div>
+  </div>
+  <div class="jp-fig-note">There is the antithesis, stretched across a whole chapter: every human tie made <em>strange</em>, set against the one Redeemer who never will be. The estrangement is what makes the kinsman-word blaze.</div>
+</div>
+
+So the chapter turns on a hinge. Every human tie has been made *strange* (*zur*); against that, Job names the one relative who will *never* be estranged. (This is the poetry behind the Study Guide's *go'el* word study — the repetition shows *why* Job reaches for that word right here.)
 
 ---
 
