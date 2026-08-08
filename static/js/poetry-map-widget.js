@@ -177,6 +177,55 @@
         notation: "א → ת &nbsp; (A to Z — then one more)",
         a: { Relation: "Each verse opens with the next Hebrew letter, aleph through tav.", Key: "22 letters = the whole alphabet · an ordered “A to Z” of prayer", Function: "Signals completeness — everything, start to finish, brought to God — and aids memory.", Claim: "strong", Caution: "Psalm 25’s acrostic is deliberately imperfect: vav folds into the he line, qof is skipped, resh repeats, and an extra pe is added at the end — a final cry, “Redeem Israel,” that breaks the alphabet on purpose." }
       }
+    ],
+    job: [
+      {
+        tab: "Job 38:7", tabsub: "Synonymous",
+        form: "Synonymous Parallelism", meta: "Bicolon · Job 38:7",
+        blurb: "The second line re-sounds the first, term for term. Read every verse of the whirlwind this way — as a two-beat line where the second beat presses the first.",
+        lines: [
+          { g: "A", role: "frame", ref: "38:7a", html: 'When the <span class="pmw-kw">morning stars</span> <span class="pmw-pr">sang together</span>,' },
+          { g: "A′", role: "frame", ref: "38:7b", html: 'and all the <span class="pmw-kw">sons of God</span> <span class="pmw-pr">shouted for joy</span>.' }
+        ],
+        notation: "A // A′",
+        a: { Relation: "One thought said twice in matched halves.", Key: "morning stars // sons of God · sang together // shouted for joy", Function: "Doubling makes the joy of creation feel total and unanimous — all heaven at once.", Claim: "strong", Caution: "The second colon is not filler; ‘sons of God’ quietly names who the ‘morning stars’ are." }
+      },
+      {
+        tab: "Job 38:5–8", tabsub: "Interrogation",
+        form: "Rhetorical Parallelism (‘Who…?’)", meta: "Question cascade · Job 38",
+        blurb: "God answers Job’s demand for an explanation not with an argument but with a cascade of unanswerable questions — thirteen ‘who’s in one chapter. The form performs the content: the whirlwind sounds like a whirlwind.",
+        lines: [
+          { g: "Q", role: "frame", ref: "38:5", html: '<span class="pmw-kw">Who</span> hath laid the measures thereof, if thou knowest?' },
+          { g: "Q", role: "frame", ref: "38:8", html: 'Or <span class="pmw-kw">who</span> shut up the sea with doors…?' },
+          { g: "Q", role: "frame", ref: "38:25", html: '<span class="pmw-kw">Who</span> hath divided a watercourse for the overflowing of waters…?' }
+        ],
+        notation: "Q · Q · Q … (×13)",
+        a: { Relation: "A repeated opening — ‘Who…?’ — stacks question on question.", Key: "‘Who…?’ ×13 in Job 38; implied answer each time: ‘not you — I did.’", Function: "The inventory of creation overwhelms Job’s courtroom demand; God is shown as the Setter of limits.", Claim: "strong (the ‘who’ count is mechanical); the rhetorical reading is standard", Caution: "These are separate verses grouped by their shared opening, not a single printed stanza." }
+      },
+      {
+        tab: "Job 19:13,25", tabsub: "Contrast / Hinge",
+        form: "Thematic Repetition & Reversal", meta: "Estrangement → Kinsman · Job 19",
+        blurb: "Job 19 leans four times on one word — ‘estranged / made strange’ — as every human tie fails him. Out of that exact vocabulary he names the one relative who never will be strange: the kinsman-Redeemer.",
+        lines: [
+          { g: "A", role: "frame", ref: "19:13", html: 'mine acquaintance are verily <span class="pmw-ct">estranged</span> from me.' },
+          { g: "A", role: "frame", ref: "19:15", html: 'I am <span class="pmw-ct">an alien</span> in their sight.' },
+          { g: "X", role: "center", ref: "19:25", html: 'For I know that my <span class="pmw-kw">redeemer</span> liveth — the <em>go’el</em>, the kinsman who is never estranged.' }
+        ],
+        notation: "estranged · estranged … &nbsp;→&nbsp; the Kinsman",
+        a: { Relation: "A cluster of ‘strange’ (zur, ×4) sets up its own reversal in the ‘redeemer’ (go’el).", Key: "kin, servants, wife, friends all made ‘strange’ ⟷ the one relative who cannot be", Function: "The estrangement is what makes the kinsman-word blaze; the poetry shows why Job reaches for go’el right here.", Claim: "moderate", Caution: "A thematic contrast across the chapter, not a printed A/A′ couplet; the zur count is mechanical, the reversal is the reading." }
+      },
+      {
+        tab: "Job 13:3–17", tabsub: "Courtroom",
+        form: "Legal Vocabulary Cluster", meta: "Trial diction · Job 13",
+        blurb: "‘Though he slay me’ is spoken in a courtroom, not a sickbed. The chapter repeats three legal verbs four times each — be silent, plead a case, hear — as Job, in effect, subpoenas God.",
+        lines: [
+          { g: "A", role: "frame", ref: "13:5", html: 'O that ye would altogether <span class="pmw-kw">hold your peace</span>! (charash ×4)' },
+          { g: "A", role: "frame", ref: "13:3", html: 'I desire to <span class="pmw-kw">reason</span> with God. (yakach ×4)' },
+          { g: "A", role: "frame", ref: "13:17", html: '<span class="pmw-kw">Hear</span> diligently my speech… (shama ×4)' }
+        ],
+        notation: "silence · plead · hear &nbsp;(each ×4)",
+        a: { Relation: "Three technical trial verbs, each repeated, build a courtroom in words.", Key: "hold-your-peace · reason/plead · hear — the vocabulary of a legal case", Function: "Turns ‘though he slay me’ from resignation into astonishing nerve: Job would rather die stating his case to God than live mouthing his friends’ theology.", Claim: "strong (the counts are mechanical); the courtroom reading is widely held", Caution: "Grouped by shared diction across the chapter, not one printed stanza." }
+      }
     ]
   };
 
