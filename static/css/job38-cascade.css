@@ -1,0 +1,472 @@
+#job38-cascade {
+      --ink: #27312d;
+      --muted: #64746c;
+      --paper: #fbfaf6;
+      --panel: #ffffff;
+      --sage: #6f8d78;
+      --sage-2: #e7efe9;
+      --sea: #2f6f8f;
+      --sea-soft: #e1eef3;
+      --gold: #a97826;
+      --gold-soft: #f5ead7;
+      --rose: #a74f55;
+      --rose-soft: #f4e1e3;
+      --violet: #665b91;
+      --violet-soft: #e7e3f2;
+      --parallel-a: #7b5f2a;
+      --parallel-a-soft: #f4ecd9;
+      --parallel-b: #2f6d63;
+      --parallel-b-soft: #e1efec;
+      --parallel-c: #704b82;
+      --parallel-c-soft: #eee3f2;
+      --line: #d8ddd8;
+      --shadow: 0 18px 44px rgba(39, 49, 45, 0.10); }
+
+#job38-cascade * { box-sizing: border-box; }
+
+#job38-cascade {
+      margin: 0;
+      background:
+        linear-gradient(180deg, rgba(231, 239, 233, 0.80), rgba(251, 250, 246, 0.98) 260px),
+        var(--paper);
+      color: var(--ink);
+      font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+      line-height: 1.55; }
+
+#job38-cascade main {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 34px 0 54px; }
+
+#job38-cascade header {
+      margin-bottom: 22px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line); }
+
+#job38-cascade h1, #job38-cascade h2, #job38-cascade h3, #job38-cascade p { margin-top: 0; }
+
+#job38-cascade h1 {
+      margin-bottom: 8px;
+      font-size: clamp(2rem, 4vw, 4.2rem);
+      line-height: 1;
+      letter-spacing: 0; }
+
+#job38-cascade .subtitle {
+      max-width: 780px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.08rem; }
+
+#job38-cascade .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 22px 0 0; }
+
+#job38-cascade .legend-note {
+      margin: 14px 0 0;
+      padding: 12px 14px;
+      border: 1px solid rgba(39, 49, 45, 0.12);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.68);
+      color: var(--muted);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92rem; }
+
+#job38-cascade .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      min-height: 34px;
+      padding: 6px 10px;
+      border: 1px solid rgba(39, 49, 45, 0.12);
+      border-radius: 6px;
+      background: var(--panel);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.86rem;
+      font-weight: 700; }
+
+#job38-cascade .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      display: inline-block; }
+
+#job38-cascade .dot.who { background: var(--sea); }
+
+#job38-cascade .dot.or { background: var(--gold); }
+
+#job38-cascade .dot.know { background: var(--rose); }
+
+#job38-cascade .dot.bound { background: var(--violet); }
+
+#job38-cascade .dot.frame { background: var(--sage); }
+
+#job38-cascade .dot.parallel { background: linear-gradient(90deg, var(--parallel-a) 0 33%, var(--parallel-b) 33% 66%, var(--parallel-c) 66%); }
+
+#job38-cascade .overview {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 24px 0; }
+
+#job38-cascade .metric {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: 0 8px 20px rgba(39, 49, 45, 0.05); }
+
+#job38-cascade .metric strong {
+      display: block;
+      font-size: 2rem;
+      line-height: 1;
+      margin-bottom: 6px;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+
+#job38-cascade .metric span {
+      color: var(--muted);
+      font-size: 0.94rem; }
+
+#job38-cascade .section {
+      margin: 28px 0;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: var(--shadow); }
+
+#job38-cascade .section h2 {
+      margin-bottom: 8px;
+      font-size: 1.55rem;
+      line-height: 1.15; }
+
+#job38-cascade .section-intro {
+      color: var(--muted);
+      margin-bottom: 18px; }
+
+#job38-cascade .cascade {
+      display: grid;
+      gap: 10px; }
+
+#job38-cascade .verse {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 13px 14px;
+      border: 1px solid rgba(39, 49, 45, 0.10);
+      border-radius: 8px;
+      background: var(--panel); }
+
+#job38-cascade .verse.who-card { border-left: 5px solid var(--sea); }
+
+#job38-cascade .verse.or-card { border-left: 5px solid var(--gold); }
+
+#job38-cascade .verse.know-card { border-left: 5px solid var(--rose); }
+
+#job38-cascade .verse.bound-card { border-left: 5px solid var(--violet); }
+
+#job38-cascade .verse.frame-card { border-left: 5px solid var(--sage); }
+
+#job38-cascade .ref {
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: 800;
+      color: var(--muted);
+      font-size: 0.84rem;
+      padding-top: 3px; }
+
+#job38-cascade .text {
+      font-size: clamp(1.06rem, 2vw, 1.32rem); }
+
+#job38-cascade .mark {
+      border-radius: 4px;
+      padding: 0 4px 1px;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+      font-weight: 700;
+      cursor: pointer;
+      transition: box-shadow 140ms ease, transform 140ms ease; }
+
+#job38-cascade .mark:hover, #job38-cascade .mark:focus-visible {
+      box-shadow: 0 0 0 3px rgba(123, 95, 42, 0.18);
+      outline: 0; }
+
+#job38-cascade .mark.who {
+      color: #174c67;
+      background: var(--sea-soft); }
+
+#job38-cascade .mark.or {
+      color: #735013;
+      background: var(--gold-soft); }
+
+#job38-cascade .mark.know {
+      color: #7b2930;
+      background: var(--rose-soft); }
+
+#job38-cascade .mark.bound {
+      color: #473e75;
+      background: var(--violet-soft); }
+
+#job38-cascade .mark.frame {
+      color: #46644f;
+      background: var(--sage-2); }
+
+#job38-cascade .mark.pa {
+      color: inherit;
+      background: transparent;
+      border-bottom: 1.5px solid var(--parallel-a); }
+
+#job38-cascade .mark.pb {
+      color: inherit;
+      background: transparent;
+      border-bottom: 1.5px solid var(--parallel-a); }
+
+#job38-cascade .mark.pc {
+      color: inherit;
+      background: transparent;
+      border-bottom: 1.5px solid var(--parallel-a); }
+
+#job38-cascade .parallel-card .mark.who, #job38-cascade .parallel-card .mark.or, #job38-cascade .parallel-card .mark.know, #job38-cascade .parallel-card .mark.bound, #job38-cascade .parallel-card .mark.frame {
+      border-bottom: 1.5px solid var(--parallel-a); }
+
+#job38-cascade .parallel-grid {
+      display: grid;
+      gap: 12px;
+      margin-top: 16px; }
+
+#job38-cascade .parallel-card {
+      border: 1px solid rgba(39, 49, 45, 0.12);
+      border-radius: 8px;
+      background: var(--panel);
+      overflow: hidden; }
+
+#job38-cascade .parallel-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 13px;
+      border-bottom: 1px solid rgba(39, 49, 45, 0.10);
+      background: rgba(231, 239, 233, 0.56);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.86rem;
+      font-weight: 800;
+      color: var(--muted); }
+
+#job38-cascade .parallel-lines {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0; }
+
+#job38-cascade .linebeat {
+      padding: 13px 14px;
+      min-height: 76px;
+      font-size: clamp(1rem, 1.8vw, 1.22rem); }
+
+#job38-cascade .linebeat:first-child {
+      border-right: 1px solid rgba(39, 49, 45, 0.10); }
+
+#job38-cascade .beat-label {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--muted);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em; }
+
+#job38-cascade .parallel-note {
+      padding: 10px 13px 12px;
+      border-top: 1px solid rgba(39, 49, 45, 0.10);
+      color: var(--muted);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.9rem; }
+
+#job38-cascade .parallel-type {
+      color: var(--ink);
+      font-weight: 800; }
+
+#job38-cascade .connection-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px; }
+
+#job38-cascade .connection-card {
+      padding: 15px;
+      border: 1px solid rgba(39, 49, 45, 0.12);
+      border-radius: 8px;
+      background: var(--panel); }
+
+#job38-cascade .connection-card h3 {
+      margin-bottom: 7px;
+      font-size: 1.06rem; }
+
+#job38-cascade .connection-card p {
+      margin-bottom: 9px; }
+
+#job38-cascade .connection-card p:last-child {
+      margin-bottom: 0; }
+
+#job38-cascade .connection-card ul {
+      margin: 8px 0 0 18px;
+      padding: 0; }
+
+#job38-cascade .connection-card li {
+      margin: 4px 0; }
+
+#job38-cascade .device-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      background: rgba(39, 49, 45, 0.34); }
+
+#job38-cascade .device-modal.is-open {
+      display: flex; }
+
+#job38-cascade .device-dialog {
+      width: min(560px, 100%);
+      max-height: min(78vh, 680px);
+      overflow: auto;
+      border: 1px solid rgba(39, 49, 45, 0.18);
+      border-radius: 8px;
+      background: var(--paper);
+      box-shadow: 0 24px 70px rgba(39, 49, 45, 0.25); }
+
+#job38-cascade .device-dialog-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 13px 15px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(244, 236, 217, 0.78);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+
+#job38-cascade .device-dialog-title {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 800; }
+
+#job38-cascade .device-close {
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border: 1px solid rgba(39, 49, 45, 0.18);
+      border-radius: 6px;
+      background: var(--panel);
+      color: var(--ink);
+      cursor: pointer;
+      font-size: 1.1rem;
+      line-height: 1; }
+
+#job38-cascade .device-dialog-body {
+      padding: 15px; }
+
+#job38-cascade .device-term {
+      display: inline-block;
+      margin-bottom: 8px;
+      padding: 3px 7px 4px;
+      border-radius: 5px;
+      background: var(--parallel-a-soft);
+      color: var(--parallel-a);
+      font-weight: 800; }
+
+#job38-cascade .device-note {
+      margin-top: 9px;
+      color: var(--muted);
+      font-size: 0.94rem;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+
+#job38-cascade .split {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 16px; }
+
+#job38-cascade .panel {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel); }
+
+#job38-cascade .panel h3 {
+      margin-bottom: 8px;
+      font-size: 1.1rem; }
+
+#job38-cascade .callout {
+      margin: 24px 0 0;
+      padding: 18px 20px;
+      border-left: 5px solid var(--sage);
+      border-radius: 8px;
+      background: rgba(231, 239, 233, 0.74);
+      font-size: 1.14rem; }
+
+#job38-cascade .small {
+      color: var(--muted);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.86rem; }
+
+#job38-cascade .hebrew-key {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin: 22px 0 0; }
+
+#job38-cascade .hebrew-item {
+      padding: 12px 13px;
+      border: 1px solid rgba(39, 49, 45, 0.12);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.76);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.9rem; }
+
+#job38-cascade .heb {
+      display: inline-block;
+      direction: rtl;
+      unicode-bidi: isolate;
+      font-family: "Times New Roman", Georgia, serif;
+      font-size: 1.14em;
+      font-weight: 800;
+      margin-right: 4px; }
+
+#job38-cascade .hebrew-item .heb {
+      display: block;
+      margin: 0 0 3px;
+      font-size: 1.45rem; }
+
+#job38-cascade .hebrew-note {
+      margin-top: 9px;
+      padding: 9px 10px;
+      border-radius: 7px;
+      background: rgba(231, 239, 233, 0.58);
+      color: var(--muted);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.88rem; }
+
+@media (max-width: 760px) {
+#job38-cascade main { width: min(100% - 20px, 1120px); padding-top: 22px; }
+
+#job38-cascade .overview { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+#job38-cascade .section { padding: 16px; }
+
+#job38-cascade .verse { grid-template-columns: 1fr; gap: 4px; }
+
+#job38-cascade .split { grid-template-columns: 1fr; }
+
+#job38-cascade .parallel-lines { grid-template-columns: 1fr; }
+
+#job38-cascade .linebeat:first-child { border-right: 0; border-bottom: 1px solid rgba(39, 49, 45, 0.10); }
+
+#job38-cascade .hebrew-key { grid-template-columns: 1fr; }
+
+#job38-cascade .connection-grid { grid-template-columns: 1fr; }
+ }
