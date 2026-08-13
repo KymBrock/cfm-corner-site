@@ -2,6 +2,26 @@
   "version": "0.0.1",
   "configurations": [
     {
+      "name": "hugo-week34-staging",
+      "runtimeExecutable": "hugo",
+      "runtimeArgs": [
+        "server",
+        "-D",
+        "--bind",
+        "0.0.0.0",
+        "--baseURL",
+        "http://100.110.3.21:1327/",
+        "--appendPort=false",
+        "--source",
+        "/Users/kymberbrockbank/Developer/cfm-week34",
+        "--noHTTPCache",
+        "--disableFastRender",
+        "--port",
+        "1327"
+      ],
+      "port": 1327
+    },
+    {
       "name": "hugo-weekly-preview",
       "runtimeExecutable": "hugo",
       "runtimeArgs": [
