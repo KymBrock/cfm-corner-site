@@ -5,6 +5,8 @@
 ## The one rule before you use anything
 Each individual file must be checked on **its own page** for its license — Wikimedia Commons holds a mix of Public Domain, CC0, CC-BY, and CC-BY-SA. Never assume a category's contents share one license. Record, for every asset you pull: **(1) the source URL, (2) the exact license, (3) the author/attribution string, (4) the date pulled.**
 
+**How to record it (the standard):** save those four fields in a plain-text sidecar named `<filename>.CREDIT.txt` next to the image itself (e.g. `lamassu.jpg` → `lamassu.jpg.CREDIT.txt`). This sidecar is the required provenance record for every **non-AI** (sourced/licensed) image; AI-generated art needs none. Keep the sidecar with the file through Vexel processing and into the repo.
+
 ## License cheat-sheet (what these mean for CFM Corner)
 - **Public Domain / CC0** — use freely, no attribution legally required (but credit anyway). *Best choice.*
 - **CC-BY** — free to use, must credit the author.

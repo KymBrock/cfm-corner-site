@@ -17,3 +17,7 @@ _source-maps/
 # fail — that is what broke Cloudflare Pages builds at the clone step.
 .claude/worktrees/
 .session-checkpoints/
+
+# Python bytecode — never tracked
+__pycache__/
+*.pyc
