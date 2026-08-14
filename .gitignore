@@ -21,3 +21,15 @@ _source-maps/
 # Python bytecode — never tracked
 __pycache__/
 *.pyc
+
+# Contractor and business material — NEVER in this repo.
+#
+# cfm-corner-site is PUBLIC, and shares one .git with the cfm-week34 worktree,
+# so anything committed here is world-readable immediately. On 2026-08-14 three
+# contractor documents — including a signed-form animation agreement — sat
+# untracked and UNIGNORED in the working tree, one `git add -A` away from being
+# published. Nothing had been committed; this closes the gap rather than fixing
+# a leak. Business documents belong in the private vault, not beside a Hugo site.
+Learning-Inspired-Contractor-Docs/
+*-Contractor-Agreement*.md
+*-Contractor-Intake*.md
