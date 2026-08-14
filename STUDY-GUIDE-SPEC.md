@@ -108,9 +108,57 @@ Sub-accordions per topic (e.g., "Ancient Near Eastern Setting", "The Akedah in J
 
 ---
 
+## Division of labour: the study guide vs Weekly Insights
+
+**This is the rule that stops the two files converging. Read it before writing either.**
+
+The study guide and the Weekly Insights essay cover the same passages. Left alone, they drift into
+saying the same things about them — because they are organised on the same axis. This has recurred
+for several weeks running and it is structural, not carelessness.
+
+| | Weekly Insights | Study Guide |
+|---|---|---|
+| Answers | **What does it mean for me?** | **How do we know?** |
+| Voice | devotional, second person, lands a point | instructional, shows the working |
+| Carries | the conclusion | the mechanism, the Hebrew, the counts, the method |
+| Reader arrives | wanting to be moved | wanting to check, or to learn the skill |
+
+**The test.** If a paragraph in the study guide could be pasted into Insights and nobody would
+notice, it is in the wrong file. Delete it from the study guide and let Insights own it.
+
+**What the study guide should carry instead**, in order of value:
+
+1. **Structure a reader can find themselves** — a frame, a turn, a refrain, a pronoun shift. Say
+   which verse, and say how to spot the same move elsewhere.
+2. **Where the Hebrew adds something English cannot** — and be specific about what is lost.
+3. **Counts, with their method attached.** Never print a number without saying *what* was counted
+   and *in which language*. Psalm 24 is the standing example: the root *nasa'* appears six times in
+   Hebrew but "lift up" appears four times in the KJV, and a reader who counts in English will
+   conclude the Hebrew count is wrong.
+4. **How a claim was verified** — the acrostic check, the manuscript question, the lemma-level
+   comparison. A reader who can repeat the check does not have to take our word for anything.
+5. **Honest limits.** Where a sense is lost (*al-alamoth*), where a reading is disputed
+   (Psalm 22:16), where a tool was silent for a mechanical reason rather than a real one.
+
+**Correct duplication exists.** Both files quote the same scripture, and both name the same psalms.
+Shared *verses* are fine. Shared *explanation* is the defect.
+
+**Measuring it.** Overlap can be checked mechanically by comparing 8-word runs between the two
+rendered files. Week 34 ran at 9.2%, rose to 11.6% when a passage was written by reusing the
+essay's prose, and came down to 5.7% once the passages were rewritten as method. Below roughly 6%
+the remainder is scripture quotation. Anything above about 10% means the study guide has started
+restating the essay.
+
+---
+
 ## Section 3: Key Passages Study
 
 Sub-accordions per passage (e.g., "Passage 1: The Theophany at Mamre (Genesis 18:1–15)").
+
+**Per-passage shape (revised 2026-08-13).** `The Insight` invited a restatement of the essay's
+conclusion and consistently produced one. Use **`How the Poem Works`** instead — mechanism, not
+meaning — and end the passage with study questions that ask the reader to *do* something in the
+text rather than reflect on a point already made.
 
 Each passage contains:
 
