@@ -123,8 +123,32 @@ for several weeks running and it is structural, not carelessness.
 | Carries | the conclusion | the mechanism, the Hebrew, the counts, the method |
 | Reader arrives | wanting to be moved | wanting to check, or to learn the skill |
 
-**The test.** If a paragraph in the study guide could be pasted into Insights and nobody would
-notice, it is in the wrong file. Delete it from the study guide and let Insights own it.
+**The real rule: show the mechanism and stop.**
+
+The study guide points at a feature of the text and says how a reader could find it. It does **not**
+then say what the feature means. That last step is the essay's, and doing it in both places is what
+makes a lesson read as preachy — the second telling implies the reader did not get it the first
+time, which is condescending whether or not the wording is new.
+
+Concretely, on Psalm 46:
+
+| | |
+|---|---|
+| ✅ study guide | "*'eretz*, 'earth', sounds five times: vv. 2, 6, 8, 9, 10. Mark those, then note which verse sits between the last two." |
+| ❌ study guide | "…so 'be still' sits inside a frame of the whole shaking earth." |
+| ✅ Insights | owns the meaning of that, and already says it better |
+
+The second version is not wrong — it is *already said*. Handing the reader the count and letting
+them see it lands harder than telling them twice.
+
+**Beware of paraphrase.** Rewriting the essay's sentence in different words does not fix redundancy;
+it only hides it from a word-overlap check. The 2026-08-13 revision initially kept "the alphabet is
+a handrail" and the whole shaking-earth conclusion while scoring well on overlap. **Redundancy is a
+question about concepts, not vocabulary.** Read the two files side by side and ask whether the
+reader learns a second thing — not whether the sentences differ.
+
+**The paste test still applies as a backstop.** If a study-guide paragraph could be pasted into
+Insights and nobody would notice, it belongs to Insights.
 
 **What the study guide should carry instead**, in order of value:
 
@@ -143,11 +167,11 @@ notice, it is in the wrong file. Delete it from the study guide and let Insights
 **Correct duplication exists.** Both files quote the same scripture, and both name the same psalms.
 Shared *verses* are fine. Shared *explanation* is the defect.
 
-**Measuring it.** Overlap can be checked mechanically by comparing 8-word runs between the two
-rendered files. Week 34 ran at 9.2%, rose to 11.6% when a passage was written by reusing the
-essay's prose, and came down to 5.7% once the passages were rewritten as method. Below roughly 6%
-the remainder is scripture quotation. Anything above about 10% means the study guide has started
-restating the essay.
+**A word-overlap check is a smoke alarm, not the standard.** Comparing 8-word runs between the two
+rendered files will catch copy-paste — Week 34 ran 9.2%, rose to 11.6% when a passage was written by
+reusing the essay's prose, and fell to 5.7% after rewriting. Useful, and it caught a real problem.
+But it passed a draft that still repeated every concept in fresh words. **Use it to catch the
+careless case; use the reading test above to catch the real one.**
 
 ---
 
