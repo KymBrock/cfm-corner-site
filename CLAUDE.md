@@ -264,6 +264,28 @@ unless Kymber explicitly asks.** The deployment checklist says to flip
 `current`, but that is a DEPLOYMENT step — not a content-generation step.
 Only flip flags when actually deploying to production.
 
+### 5a. An image's ORIGIN is declared by its directory — never judged per file
+
+**Ruled by Kymber 2026-08-15 (CFM-020).** See: `mc-intelligence/locate.py CFM-020`
+
+    static/images/culture/<topic>/*          ORIGINAL CFM Corner art.
+                                             No external credit. Source is the NAS.
+    static/images/culture/<topic>/sourced/   THIRD-PARTY — CREDIT sidecar REQUIRED
+                                .../photos/  THIRD-PARTY — CREDIT sidecar REQUIRED
+                                .../maps/    THIRD-PARTY — CREDIT sidecar REQUIRED
+
+Measured against the NAS the same day: **435 of 497** top-level images are on the NAS;
+**0 of 90** `sourced/`/`photos/`/`maps/` images are. The split is total.
+
+**Do not reason about whether a picture looks original.** The directory is the
+declaration. If a file is in the wrong one, move the file — do not re-classify it in prose.
+
+Kymber declared the sourced images are mostly AI-sourced and mostly from **Wikimedia
+Commons**. That is a **lead for finding each file's source page, not an attribution.**
+Commons carries both public-domain and CC-BY-SA works, and CC-BY-SA requires naming the
+author and the licence. Writing "Wikimedia Commons" into a credit line would be a
+fabricated attribution that happens to look plausible.
+
 ### 6. Hugo Static File Caching
 Hugo's `readFile` function caches static files at build time. After
 editing any file in `static/content/`, you MUST restart the Hugo server
