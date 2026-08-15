@@ -59,7 +59,7 @@ description: "Promised land theology, the difficult question of cherem, Rahab's 
 
 <h4>3. The Warning Applies to Israel Too</h4>
 
-<p>The prophets made clear that Israel was not exempt. Leviticus 18:28 warns directly: <em>&ldquo;That the land spue not you out also, when ye defile it, as it spued out the nations that were before you.&rdquo;</em> And this is precisely what happened &mdash; first to the northern kingdom (722 BC) and then to Judah (586 BC). The covenant cuts both ways.</p>
+<p>The prophets made clear that Israel was not exempt. <a href="https://www.blueletterbible.org/kjv/lev/18/28/" target="_blank" data-ref="Leviticus 18:28">Leviticus 18:28</a> warns directly: <em>&ldquo;That the land spue not you out also, when ye defile it, as it spued out the nations that were before you.&rdquo;</em> And this is precisely what happened &mdash; first to the northern kingdom (722 BC) and then to Judah (586 BC). The covenant cuts both ways.</p>
 
 <h4>4. The Difficulty Remains</h4>
 
@@ -73,13 +73,13 @@ description: "Promised land theology, the difficult question of cherem, Rahab's 
 
 <h3>Rahab: Faith, Conversion, and the Scarlet Thread</h3>
 
-<p>In the middle of the conquest narrative stands Rahab &mdash; a Canaanite, a woman, and what the English Bible calls &ldquo;a harlot&rdquo; &mdash; who is also a convert. Her story in Joshua 2 is one of the most remarkable in scripture.</p>
+<p>In the middle of the conquest narrative stands Rahab &mdash; a Canaanite, a woman, and what the English Bible calls &ldquo;a harlot&rdquo; &mdash; who is also a convert. Her story in <a href="https://www.blueletterbible.org/kjv/jos/2/1/" target="_blank" data-ref="Joshua 2">Joshua 2</a> is one of the most remarkable in scripture.</p>
 
 <h4>Understanding &ldquo;Harlot&rdquo; &mdash; the Word <em>Zonah</em></h4>
 
-<p>The Hebrew word applied to Rahab is <a href="https://www.blueletterbible.org/lexicon/h2181/kjv/wlc/0-1/" target="_blank"><em>zonah</em></a> (זוֹנָה). English translations render it &ldquo;harlot&rdquo; or &ldquo;prostitute,&rdquo; but the ancient reality was more complicated. The consonants <em>z-n-h</em> can be vocalized as either <em>zonah</em> (prostitute) or <em>zanah</em> (a woman who provides food and lodging) &mdash; and in the ancient world, these roles often overlapped. The first-century historian Josephus describes Rahab as an innkeeper. The Jewish commentator Rashi and the Christian scholar Adam Clarke both interpreted the term the same way.</p>
+<p>The Hebrew word applied to Rahab is <a href="https://www.blueletterbible.org/lexicon/h2181/kjv/wlc/0-1/" target="_blank"><em>zonah</em></a> (זוֹנָה). English translations render it &ldquo;harlot&rdquo; or &ldquo;prostitute,&rdquo; but the ancient reality was more complicated. The consonants <em>z-n-h</em> can be vocalized as either <em>zonah</em> (prostitute) or <a href="https://www.blueletterbible.org/lexicon/h2181/kjv/wlc/0-1/" target="_blank" data-lexicon="to commit fornication, be a harlot" data-strongs="H2181" data-translit="zânâh" data-original="זָנָה" data-lang="hebrew" data-verse=""><em>zanah</em></a> (a woman who provides food and lodging) &mdash; and in the ancient world, these roles often overlapped. The first-century historian Josephus describes Rahab as an innkeeper. The Jewish commentator Rashi and the Christian scholar Adam Clarke both interpreted the term the same way.</p>
 
-<p>This matters because the modern word &ldquo;prostitute&rdquo; carries assumptions that do not map cleanly onto the ancient Near East. In Canaanite society, women had virtually no legal right to own property, inherit wealth, or engage in trade independently. A woman without a husband or father to provide for her &mdash; a widow, a divorced woman, an abandoned woman &mdash; had almost no legitimate economic options. Women in this position who became <em>zonot</em> were often running what amounted to roadside inns or boarding houses, providing food, drink, and lodging to travelers. Some were also sex workers &mdash; not because they chose it freely, but because the social structure left them no alternative. It was survival, not scandal. For women who were mothers, the choice was starker still: provide for your children by any means available, or watch them die.</p>
+<p>This matters because the modern word &ldquo;prostitute&rdquo; carries assumptions that do not map cleanly onto the ancient Near East. In Canaanite society, women had virtually no legal right to own property, inherit wealth, or engage in trade independently. A woman without a husband or father to provide for her &mdash; a widow, a divorced woman, an abandoned woman &mdash; had almost no legitimate economic options. Women in this position who became <a href="https://www.blueletterbible.org/lexicon/h2185/kjv/wlc/0-1/" target="_blank" data-lexicon="fornicationsarmour (used in warfare not sanctioned by Jehovah) (fig.)" data-strongs="H2185" data-translit="zōnôṯ" data-original="זֹנוֹת" data-lang="hebrew" data-verse=""><em>zonot</em></a> were often running what amounted to roadside inns or boarding houses, providing food, drink, and lodging to travelers. Some were also sex workers &mdash; not because they chose it freely, but because the social structure left them no alternative. It was survival, not scandal. For women who were mothers, the choice was starker still: provide for your children by any means available, or watch them die.</p>
 
 <p>Rahab&rsquo;s house was built into the city wall of Jericho (<a href="https://www.blueletterbible.org/kjv/jos/2/15/" target="_blank" data-ref="Joshua 2:15">Joshua 2:15</a>) &mdash; the kind of location where an inn or lodging house would naturally operate, at the point where travelers entered the city. She had the space to hide men, access to the roof for drying flax (a commercial activity), and the social position to negotiate with both Canaanite authorities and foreign visitors. Whatever else she was, Rahab was a resourceful woman navigating a world that offered women like her almost nothing &mdash; and she did it with enough skill to keep her entire family alive.</p>
 
@@ -99,7 +99,7 @@ description: "Promised land theology, the difficult question of cherem, Rahab's 
 
 <h4>Rahab&rsquo;s Legacy</h4>
 
-<p>Rahab&rsquo;s story does not end at Jericho. The New Testament lists her in the genealogy of Christ (<a href="https://www.blueletterbible.org/kjv/mat/1/5/" target="_blank" data-ref="Matthew 1:5">Matthew 1:5</a>), making her one of only four women named in the lineage of the Messiah. She is also cited as an example of faith in both Hebrews 11:31 and James 2:25. A Canaanite woman, from the nation under the cherem, becomes an ancestor of the Savior.</p>
+<p>Rahab&rsquo;s story does not end at Jericho. The New Testament lists her in the genealogy of Christ (<a href="https://www.blueletterbible.org/kjv/mat/1/5/" target="_blank" data-ref="Matthew 1:5">Matthew 1:5</a>), making her one of only four women named in the lineage of the Messiah. She is also cited as an example of faith in both <a href="https://www.blueletterbible.org/kjv/heb/11/31/" target="_blank" data-ref="Hebrews 11:31">Hebrews 11:31</a> and <a href="https://www.blueletterbible.org/kjv/jam/2/25/" target="_blank" data-ref="James 2:25">James 2:25</a>. A Canaanite woman, from the nation under the cherem, becomes an ancestor of the Savior.</p>
 
 <p>For Latter-day Saint readers, Rahab embodies a core gospel principle: the covenant is not ethnic. Anyone &mdash; regardless of origin, background, or past &mdash; who exercises faith and acts on it can be gathered in. The conquest narrative is not about the destruction of a race; it is about the judgment of a culture. And even within that judgment, individual faith creates an exception.</p>
 
@@ -115,7 +115,7 @@ description: "Promised land theology, the difficult question of cherem, Rahab's 
 
 <h4>The Covenant Pattern</h4>
 
-<p>The Shechem ceremony follows a structure familiar to Latter-day Saints who study ancient covenant forms: a recitation of God&rsquo;s saving acts (Joshua 24:2&ndash;13), a call to commitment (vv. 14&ndash;15), the people&rsquo;s covenant response (vv. 16&ndash;18, 21, 24), and the establishment of witnesses and a memorial (vv. 22, 26&ndash;27). This pattern appears throughout scripture &mdash; from Sinai to King Benjamin&rsquo;s speech (<a href="https://www.blueletterbible.org/nkjv/mos/2/1/" target="_blank" data-ref="Mosiah 2-5">Mosiah 2&ndash;5</a>).</p>
+<p>The Shechem ceremony follows a structure familiar to Latter-day Saints who study ancient covenant forms: a recitation of God&rsquo;s saving acts (<a href="https://www.blueletterbible.org/kjv/jos/24/2/" target="_blank" data-ref="Joshua 24:2">Joshua 24:2&ndash;13</a>), a call to commitment (vv. 14&ndash;15), the people&rsquo;s covenant response (vv. 16&ndash;18, 21, 24), and the establishment of witnesses and a memorial (vv. 22, 26&ndash;27). This pattern appears throughout scripture &mdash; from Sinai to King Benjamin&rsquo;s speech (<a href="https://www.blueletterbible.org/nkjv/mos/2/1/" target="_blank" data-ref="Mosiah 2-5">Mosiah 2&ndash;5</a>).</p>
 
 <h4>&ldquo;Choose You This Day&rdquo;</h4>
 
@@ -177,7 +177,7 @@ description: "Promised land theology, the difficult question of cherem, Rahab's 
 </tbody>
 </table>
 
-<h4>Nephi&rsquo;s Argument (1 Nephi 17:32&ndash;38)</h4>
+<h4>Nephi&rsquo;s Argument (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/17?lang=eng&id=32" target="_blank" data-ref="1 Nephi 17:32">1 Nephi 17:32&ndash;38</a>)</h4>
 
 <p>Nephi&rsquo;s argument about the Canaanite conquest is the most direct Book of Mormon commentary on Joshua. Speaking to his brothers &mdash; who object to building a ship and essentially to the entire enterprise of following God into the unknown &mdash; Nephi invokes the conquest as precedent:</p>
 
@@ -238,7 +238,7 @@ description: "Promised land theology, the difficult question of cherem, Rahab's 
 <li><a href="https://www.blueletterbible.org/kjv/deu/7/1/" target="_blank" data-ref="Deuteronomy 7:1-6">Deuteronomy 7:1&ndash;6</a> &mdash; The cherem command and the seven nations</li>
 <li><a href="https://www.blueletterbible.org/kjv/lev/18/28/" target="_blank" data-ref="Leviticus 18:28">Leviticus 18:28</a> &mdash; The land spues out the wicked &mdash; including Israel</li>
 <li><a href="https://www.blueletterbible.org/kjv/mat/1/5/" target="_blank" data-ref="Matthew 1:5">Matthew 1:5</a> &mdash; Rahab in the genealogy of Christ</li>
-<li><a href="https://www.blueletterbible.org/nkjv/mos/2/1/" target="_blank" data-ref="Mosiah 2-5">Mosiah 2&ndash;5</a> &mdash; King Benjamin&rsquo;s covenant renewal (parallel to Joshua 24)</li>
+<li><a href="https://www.blueletterbible.org/nkjv/mos/2/1/" target="_blank" data-ref="Mosiah 2-5">Mosiah 2&ndash;5</a> &mdash; King Benjamin&rsquo;s covenant renewal (parallel to <a href="https://www.blueletterbible.org/kjv/jos/24/1/" target="_blank" data-ref="Joshua 24">Joshua 24</a>)</li>
 </ul>
 
 </div>
@@ -251,7 +251,7 @@ description: "Promised land theology, the difficult question of cherem, Rahab's 
 <p><strong>Rahab and the <em>Zonah</em> Question:</strong></p>
 <ul style="margin: 12px 0 24px 0; padding-left: 24px;">
 <li><strong>Josephus</strong>, <em>Antiquities of the Jews</em> 5.1.2 &mdash; Identifies Rahab as an innkeeper rather than a prostitute.</li>
-<li><strong>Rashi</strong> (Rabbi Shlomo Yitzchaki), commentary on Joshua 2:1 &mdash; Interprets <em>zonah</em> as a woman who sells food (<em>mazon</em>), i.e. an innkeeper.</li>
+<li><strong>Rashi</strong> (Rabbi Shlomo Yitzchaki), commentary on <a href="https://www.blueletterbible.org/kjv/jos/2/1/" target="_blank" data-ref="Joshua 2:1">Joshua 2:1</a> &mdash; Interprets <em>zonah</em> as a woman who sells food (<a href="https://www.blueletterbible.org/lexicon/h4202/kjv/wlc/0-1/" target="_blank" data-lexicon="food, sustenance" data-strongs="H4202" data-translit="māzôn" data-original="מָזוֹן" data-lang="hebrew" data-verse=""><em>mazon</em></a>), i.e. an innkeeper.</li>
 <li><a href="https://www.biblicalarchaeology.org/daily/people-cultures-in-the-bible/people-in-the-bible/rahab-the-harlot/" target="_blank"><strong>Biblical Archaeology Society</strong> &mdash; &ldquo;Rahab the Harlot?&rdquo;</a> &mdash; Scholarly discussion of the linguistic ambiguity of <em>z-n-h</em> (prostitute vs. provider of food/lodging) and the archaeological evidence for Rahab&rsquo;s house in the casemate wall.</li>
 <li><strong>Robert G. Boling</strong>, <em>Joshua</em> (Anchor Bible Commentary, Doubleday, 1982) &mdash; Notes that inns and brothels often occupied the same establishment in the ancient Near East; Rahab&rsquo;s location was ideal for intelligence-gathering.</li>
 </ul>

@@ -127,7 +127,7 @@ description: "The Amarna Letters, the Habiru question, Egyptian vassalage in Can
 <figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">An Amarna letter from Abdi-Heba of Jerusalem to Pharaoh Amenhotep III, 14th century BC. Akkadian cuneiform on clay. Vorderasiatisches Museum, Berlin. <em>Photo: Osama Shukir Muhammed Amin, Wikimedia Commons, CC BY-SA 4.0.</em></figcaption>
 </figure>
 
-<p>Abdi-Heba&rsquo;s name is itself revealing: it combines a Semitic element (<em>Abdi</em> &mdash; &ldquo;servant of&rdquo;) with a Hurrian deity name (<em>Heba</em> &mdash; the Hurrian goddess Hepat). This mixed-language name reflects the cosmopolitan character of Canaanite cities &mdash; a Semitic ruler bearing a name honoring a non-Semitic goddess in a city that would later become the center of YHWH worship.</p>
+<p>Abdi-Heba&rsquo;s name is itself revealing: it combines a Semitic element (<a href="https://www.blueletterbible.org/lexicon/h5660/kjv/wlc/0-1/" target="_blank" data-lexicon="Abdi = &quot;servant of Jehovah&quot;a Merarite Levite and ancestor of Ethan the singera Merarite Levite, father of Kish, in th..." data-strongs="H5660" data-translit="ʿaḇdî" data-original="עַבְדִּי" data-lang="hebrew" data-verse=""><em>Abdi</em></a> &mdash; &ldquo;servant of&rdquo;) with a Hurrian deity name (<em>Heba</em> &mdash; the Hurrian goddess Hepat). This mixed-language name reflects the cosmopolitan character of Canaanite cities &mdash; a Semitic ruler bearing a name honoring a non-Semitic goddess in a city that would later become the center of YHWH worship.</p>
 
 <blockquote style="border-left: 4px solid var(--sage-dark, #4a6b52); padding: 12px 20px; margin: 20px 0; background: #fafaf8;">
 <p style="margin: 0; font-style: italic;">&ldquo;Lost are the lands of the king. Do you not hear me? All the rulers are lost; the king, my lord, does not have a single ruler left. Let the king send troops. The king has no lands left. The &lsquo;Apiru plunder all the lands of the king. If archers are here this year, the lands of the king, my lord, will remain. But if archers are not here, the lands of the king, my lord, are lost.&rdquo;</p>
@@ -291,7 +291,7 @@ description: "The Amarna Letters, the Habiru question, Egyptian vassalage in Can
 
 <p><strong>Scripture Citations:</strong></p>
 <ul style="margin: 12px 0 0 0; padding-left: 24px;">
-<li>Genesis 13:15; 14:13 | Exodus 2:6 | Joshua 24:1 | 2 Samuel 5:6&ndash;7 | 1 Kings 12:1</li>
+<li><a href="https://www.blueletterbible.org/kjv/gen/13/15/" target="_blank" data-ref="Genesis 13:15">Genesis 13:15</a>; 14:13 | <a href="https://www.blueletterbible.org/kjv/exo/2/6/" target="_blank" data-ref="Exodus 2:6">Exodus 2:6</a> | <a href="https://www.blueletterbible.org/kjv/jos/24/1/" target="_blank" data-ref="Joshua 24:1">Joshua 24:1</a> | <a href="https://www.blueletterbible.org/kjv/2sa/5/6/" target="_blank" data-ref="2 Samuel 5:6">2 Samuel 5:6&ndash;7</a> | <a href="https://www.blueletterbible.org/kjv/1ki/12/1/" target="_blank" data-ref="1 Kings 12:1">1 Kings 12:1</a></li>
 </ul>
 
 </div>

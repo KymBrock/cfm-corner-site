@@ -237,7 +237,7 @@ description: "Geography, trade routes, climate, and why this narrow corridor bet
 
 <p><strong>Scripture Citations:</strong></p>
 <ul style="margin: 12px 0 0 0; padding-left: 24px;">
-<li>Genesis 12:7 | Exodus 3:8; 19:6 | Numbers 13:23; 20:17 | Deuteronomy 8:7&ndash;9; 11:10&ndash;12 | Joshua 3:14&ndash;17; 14:12; 18:1; 24:1 | Judges 1:19 | Isaiah 9:1 | Psalm 127:1</li>
+<li><a href="https://www.blueletterbible.org/kjv/gen/12/7/" target="_blank" data-ref="Genesis 12:7">Genesis 12:7</a> | <a href="https://www.blueletterbible.org/kjv/exo/3/8/" target="_blank" data-ref="Exodus 3:8">Exodus 3:8</a>; 19:6 | <a href="https://www.blueletterbible.org/kjv/num/13/23/" target="_blank" data-ref="Numbers 13:23">Numbers 13:23</a>; 20:17 | <a href="https://www.blueletterbible.org/kjv/deu/8/7/" target="_blank" data-ref="Deuteronomy 8:7">Deuteronomy 8:7&ndash;9</a>; 11:10&ndash;12 | <a href="https://www.blueletterbible.org/kjv/jos/3/14/" target="_blank" data-ref="Joshua 3:14">Joshua 3:14&ndash;17</a>; 14:12; 18:1; 24:1 | <a href="https://www.blueletterbible.org/kjv/jdg/1/19/" target="_blank" data-ref="Judges 1:19">Judges 1:19</a> | <a href="https://www.blueletterbible.org/kjv/isa/9/1/" target="_blank" data-ref="Isaiah 9:1">Isaiah 9:1</a> | <a href="https://www.blueletterbible.org/kjv/psa/127/1/" target="_blank" data-ref="Psalm 127:1">Psalm 127:1</a></li>
 </ul>
 
 </div>
