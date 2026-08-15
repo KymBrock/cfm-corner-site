@@ -86,14 +86,14 @@ description: "From Joseph in Goshen to the Alexandrian Jewish quarter — three 
 <br>
 
 <h3>Egypt's Founding &mdash; The Book of Abraham Account</h3>
-<p><em>Abraham 1:21&ndash;27</em></p>
+<p><em><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/1?lang=eng&id=21" target="_blank" data-ref="Abraham 1:21">Abraham 1:21&ndash;27</a></em></p>
 
 <p>Before Abraham ever set foot in Egypt, Latter-day Saint scripture places Noah's own family at the founding of Egyptian civilization. The Book of Abraham records that <strong>Egyptus</strong>, a daughter of Ham (son of Noah), "discovered the land" of Egypt while it was still under water and afterward settled her sons in it (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/1?lang=eng&amp;id=p23-p24#p23" target="_blank" data-ref="Abraham 1:23-24">Abraham 1:23&ndash;24</a>). Her eldest son, <strong>Pharaoh</strong>, established the first government of Egypt, patterning it after the patriarchal order of Ham (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/1?lang=eng&amp;id=p25#p25" target="_blank" data-ref="Abraham 1:25">Abraham 1:25</a>).</p>
 
 <p>This first Pharaoh is described as "a righteous man" who sought to imitate the priesthood order of the fathers, though he could not claim the priesthood itself because it did not pass through Ham's line (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/1?lang=eng&amp;id=p26-p27#p26" target="_blank" data-ref="Abraham 1:26-27">Abraham 1:26&ndash;27</a>). The text presents this as a matter of priesthood lineage and succession &mdash; not a judgment on the character or worthiness of Egypt's founders.</p>
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
-<p style="margin: 0;"><strong>On the name "Egyptus":</strong> In the earliest Kirtland-era manuscripts of the Book of Abraham, Ham's wife is called <strong>Zeptah</strong>, a name that Latter-day Saint Egyptologists Stephen O. Smoot, John Gee, Kerry Muhlestein, and John S. Thompson have argued plausibly derives from the Egyptian name <em>Siptah</em> ("son of Ptah") &mdash; a name attested in Egyptian records from roughly 2000&ndash;1800 BC. The name "Egyptus" itself derives from the Greek <em>Aigyptos</em> and may reflect a later scribal updating of the text. (See Smoot et al., "Zeptah and Egyptes," <em>BYU Studies</em> 61, no. 4 [2022].)</p>
+<p style="margin: 0;"><strong>On the name "Egyptus":</strong> In the earliest Kirtland-era manuscripts of the Book of Abraham, Ham's wife is called <strong>Zeptah</strong>, a name that Latter-day Saint Egyptologists Stephen O. Smoot, John Gee, Kerry Muhlestein, and John S. Thompson have argued plausibly derives from the Egyptian name <em>Siptah</em> ("son of Ptah") &mdash; a name attested in Egyptian records from roughly 2000&ndash;1800 BC. The name "Egyptus" itself derives from the Greek <a href="https://www.blueletterbible.org/lexicon/g125/kjv/tr/0-1/" target="_blank" data-lexicon="Egypt = &quot;double straits&quot; a country occupying the northeast angle of Africa metaph. Jerusalem, for the Jews persecutin..." data-strongs="G125" data-translit="aigyptos" data-original="" data-lang="greek" data-verse=""><em>Aigyptos</em></a> and may reflect a later scribal updating of the text. (See Smoot et al., "Zeptah and Egyptes," <em>BYU Studies</em> 61, no. 4 [2022].)</p>
 </div>
 
 <p>This founding account means that the covenant family's connection to Egypt does not begin with Abraham &mdash; it begins with Noah's immediate descendants. Egypt's very origins, in this telling, are intertwined with the patriarchal family.</p>
@@ -105,7 +105,7 @@ description: "From Joseph in Goshen to the Alexandrian Jewish quarter — three 
 <br>
 
 <h3>Abraham in Egypt</h3>
-<p><em>c. 2000&ndash;1850 BC &mdash; Genesis 12:10&ndash;20; Abraham 1&ndash;2</em></p>
+<p><em>c. 2000&ndash;1850 BC &mdash; <a href="https://www.blueletterbible.org/kjv/gen/12/10/" target="_blank" data-ref="Genesis 12:10">Genesis 12:10&ndash;20</a>; <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/1?lang=eng" target="_blank" data-ref="Abraham 1">Abraham 1</a>&ndash;2</em></p>
 
 <p>Abraham's sojourn in Egypt during a famine in Canaan (<a href="https://www.blueletterbible.org/kjv/gen/12/10/" target="_blank" data-ref="Genesis 12:10-20">Genesis 12:10&ndash;20</a>) is the first encounter between the covenant family and Egypt recorded in Genesis. The biblical account is brief &mdash; Abraham enters Egypt, presents Sarah as his sister, a ruler called "Pharaoh" takes her into his house, God sends plagues on the ruler's household, and Abraham is expelled with great wealth. (Whether this "Pharaoh" was the supreme ruler of Egypt or a powerful regional governor is not specified in the text &mdash; see our discussion in <a href="/culture/ancient/egypt/02-who-ruled-egypt/">Who Ruled Egypt</a>.)</p>
 
@@ -125,7 +125,7 @@ description: "From Joseph in Goshen to the Alexandrian Jewish quarter — three 
 <br>
 
 <h3>Joseph and the Settlement in Goshen</h3>
-<p><em>c. 1700&ndash;1550 BC &mdash; Genesis 37&ndash;50</em></p>
+<p><em>c. 1700&ndash;1550 BC &mdash; <a href="https://www.blueletterbible.org/kjv/gen/37/1/" target="_blank" data-ref="Genesis 37">Genesis 37</a>&ndash;50</em></p>
 
 <p>Joseph's story is the foundation for the Israelite presence in Egypt. Sold into slavery by his brothers, he rose to become vizier &mdash; second only to Pharaoh &mdash; and administered a grain-storage program that saved Egypt from famine (<a href="https://www.blueletterbible.org/kjv/gen/41/1/" target="_blank" data-ref="Genesis 41">Genesis 41</a>). He then settled his father Jacob and the entire family in the land of <strong>Goshen</strong>, in the eastern Nile Delta (<a href="https://www.blueletterbible.org/kjv/gen/47/6/" target="_blank" data-ref="Genesis 47:6">Genesis 47:6</a>).</p>
 
@@ -144,7 +144,7 @@ description: "From Joseph in Goshen to the Alexandrian Jewish quarter — three 
 <br>
 
 <h3>The Exodus</h3>
-<p><em>c. 1446 or c. 1250 BC &mdash; Exodus 1&ndash;15</em></p>
+<p><em>c. 1446 or c. 1250 BC &mdash; <a href="https://www.blueletterbible.org/kjv/exo/1/1/" target="_blank" data-ref="Exodus 1">Exodus 1</a>&ndash;15</em></p>
 
 <p>The Exodus is the defining event of Israel's national identity &mdash; the moment when an enslaved people became a covenant nation. After generations of forced labor under the New Kingdom pharaohs, Moses confronted Pharaoh with the demand: <em>"Let my people go, that they may serve me"</em> (<a href="https://www.blueletterbible.org/kjv/exo/8/1/" target="_blank" data-ref="Exodus 8:1">Exodus 8:1</a>).</p>
 
@@ -159,7 +159,7 @@ description: "From Joseph in Goshen to the Alexandrian Jewish quarter — three 
 <br>
 
 <h3>Solomon's Egyptian Alliance</h3>
-<p><em>c. 960 BC &mdash; 1 Kings 3:1; 9:16</em></p>
+<p><em>c. 960 BC &mdash; <a href="https://www.blueletterbible.org/kjv/1ki/3/1/" target="_blank" data-ref="1 Kings 3:1">1 Kings 3:1</a>; 9:16</em></p>
 
 <p>Solomon married a daughter of Pharaoh as a diplomatic alliance (<a href="https://www.blueletterbible.org/kjv/1ki/3/1/" target="_blank" data-ref="1 Kings 3:1">1 Kings 3:1</a>), and Pharaoh gave the city of Gezer as her dowry after conquering it (<a href="https://www.blueletterbible.org/kjv/1ki/9/16/" target="_blank" data-ref="1 Kings 9:16">1 Kings 9:16</a>). This was a remarkable diplomatic achievement &mdash; Egyptian pharaohs almost never married their daughters to foreign rulers. That a 21st Dynasty pharaoh did so for Solomon indicates either Israel's unusual prestige or Egypt's unusual weakness during this period (likely both).</p>
 
@@ -172,7 +172,7 @@ description: "From Joseph in Goshen to the Alexandrian Jewish quarter — three 
 <br>
 
 <h3>Jeremiah's Refugees</h3>
-<p><em>586 BC &mdash; Jeremiah 43&ndash;44</em></p>
+<p><em>586 BC &mdash; <a href="https://www.blueletterbible.org/kjv/jer/43/1/" target="_blank" data-ref="Jeremiah 43">Jeremiah 43</a>&ndash;44</em></p>
 
 <p>When Nebuchadnezzar destroyed Jerusalem and the First Temple in 586 BC, a group of Jewish survivors fled to Egypt, taking the prophet Jeremiah with them against his will (<a href="https://www.blueletterbible.org/kjv/jer/43/5/" target="_blank" data-ref="Jeremiah 43:5-7">Jeremiah 43:5&ndash;7</a>). They settled at <strong>Tahpanhes</strong> (a frontier city in the eastern Delta) and at <strong>Migdol</strong>, <strong>Memphis</strong>, and in the land of <strong>Pathros</strong> (Upper Egypt) (<a href="https://www.blueletterbible.org/kjv/jer/44/1/" target="_blank" data-ref="Jeremiah 44:1">Jeremiah 44:1</a>).</p>
 
@@ -202,7 +202,7 @@ description: "From Joseph in Goshen to the Alexandrian Jewish quarter — three 
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
 <p style="margin: 0 0 12px 0;"><strong>Why this matters:</strong> The Elephantine papyri are among the most important extrabiblical witnesses to Jewish life between the Old and New Testaments. They show that Jewish communities outside Judah maintained their identity while also adapting to local cultures &mdash; sometimes in ways that Jerusalem authorities would have found deeply troubling.</p>
-<p style="margin: 0;">The fact that these Jews had their own temple raises profound questions about the centralization of worship that Deuteronomy demands. Was the "one place" theology of Deuteronomy 12 already normative? Or did Jewish communities in the diaspora feel authorized to worship YHWH wherever they lived? This tension would resurface with the Onias temple two centuries later.</p>
+<p style="margin: 0;">The fact that these Jews had their own temple raises profound questions about the centralization of worship that Deuteronomy demands. Was the "one place" theology of <a href="https://www.blueletterbible.org/kjv/deu/12/1/" target="_blank" data-ref="Deuteronomy 12">Deuteronomy 12</a> already normative? Or did Jewish communities in the diaspora feel authorized to worship YHWH wherever they lived? This tension would resurface with the Onias temple two centuries later.</p>
 </div>
 
 <details style="margin: 24px 0;">
@@ -255,7 +255,7 @@ description: "From Joseph in Goshen to the Alexandrian Jewish quarter — three 
 
 <ul>
 <li><strong>The Septuagint</strong> (c. 280&ndash;250 BC) &mdash; The translation of the Torah into Greek, which made Jewish scripture accessible to the Greek-speaking world and became the Bible of the early Christian church. (See our <a href="/culture/ancient/egypt/05-the-septuagint/">dedicated section on the Septuagint</a>.)</li>
-<li><strong>Philo of Alexandria</strong> (c. 20 BC&ndash;AD 50) &mdash; The most sophisticated Jewish philosopher of antiquity, who blended Platonic philosophy with Torah interpretation. His concept of the <em>Logos</em> (divine Word/Reason as the mediating principle between God and creation) deeply influenced early Christian theology, particularly the Gospel of John's opening: <em>"In the beginning was the Word"</em> (<a href="https://www.blueletterbible.org/kjv/jhn/1/1/" target="_blank" data-ref="John 1:1">John 1:1</a>).</li>
+<li><strong>Philo of Alexandria</strong> (c. 20 BC&ndash;AD 50) &mdash; The most sophisticated Jewish philosopher of antiquity, who blended Platonic philosophy with Torah interpretation. His concept of the <a href="https://www.blueletterbible.org/lexicon/g3056/kjv/tr/0-1/" target="_blank" data-lexicon="of speech a word, uttered by a living voice, embodies a conception or idea what someone has said a word the sayings o..." data-strongs="G3056" data-translit="logos" data-original="λόγος" data-lang="greek" data-verse=""><em>Logos</em></a> (divine Word/Reason as the mediating principle between God and creation) deeply influenced early Christian theology, particularly the Gospel of John's opening: <em>"In the beginning was the Word"</em> (<a href="https://www.blueletterbible.org/kjv/jhn/1/1/" target="_blank" data-ref="John 1:1">John 1:1</a>).</li>
 <li><strong>Jewish literature in Greek</strong> &mdash; Works like the Wisdom of Solomon, 3 Maccabees, and the Letter of Aristeas were produced by Alexandrian Jews writing in Greek for a Greek-educated audience.</li>
 </ul>
 
@@ -402,7 +402,7 @@ description: "From Joseph in Goshen to the Alexandrian Jewish quarter — three 
 <br>
 
 <h3>The Holy Family's Flight to Egypt</h3>
-<p><em>c. 5&ndash;4 BC &mdash; Matthew 2:13&ndash;15</em></p>
+<p><em>c. 5&ndash;4 BC &mdash; <a href="https://www.blueletterbible.org/kjv/mat/2/13/" target="_blank" data-ref="Matthew 2:13">Matthew 2:13&ndash;15</a></em></p>
 
 <p>After the visit of the Magi, an angel warned Joseph in a dream to take the child Jesus and Mary and flee to Egypt to escape Herod's decree (<a href="https://www.blueletterbible.org/kjv/mat/2/13/" target="_blank" data-ref="Matthew 2:13">Matthew 2:13</a>). The family remained in Egypt until Herod's death, fulfilling what Matthew identifies as the prophecy of <a href="https://www.blueletterbible.org/kjv/hos/11/1/" target="_blank" data-ref="Hosea 11:1">Hosea 11:1</a>: <em>"Out of Egypt have I called my son."</em></p>
 

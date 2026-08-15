@@ -22,7 +22,7 @@ Enter the court and walk it as a worshipper would: through the bronze gates, pas
 
 ## The Sanctuary — the Holy Place
 
-Through the great gold doors lay the Holy Place — a windowless room walled in gold, lit only by lampfire, where the priests served daily. Solomon multiplied the Tabernacle's single set of furniture into *tens*: ten lampstands, ten tables, ranked five and five before the oracle (1 Kings 7:48–49; 2 Chronicles 4:7–8). Step inside and explore it.
+Through the great gold doors lay the Holy Place — a windowless room walled in gold, lit only by lampfire, where the priests served daily. Solomon multiplied the Tabernacle's single set of furniture into *tens*: ten lampstands, ten tables, ranked five and five before the oracle (<a href="https://www.blueletterbible.org/kjv/1ki/7/48/" target="_blank" data-ref="1 Kings 7:48">1 Kings 7:48–49</a>; <a href="https://www.blueletterbible.org/kjv/2ch/4/7/" target="_blank" data-ref="2 Chronicles 4:7">2 Chronicles 4:7–8</a>). Step inside and explore it.
 
 {{< temple-scene scene="holy-place" >}}
 

@@ -21,7 +21,7 @@ Babylon enters Israel's story late &mdash; and then takes it over. For most of t
 
 <br>
 
-Understanding Babylon is essential for reading the end of 2 Kings honestly &mdash; and for reading everything that end produced: Jeremiah's letters, Ezekiel's visions, Daniel's court stories, Psalm 137's grief, and the Book of Mormon's opening chapters, which begin in Zedekiah's Jerusalem with the Babylonian crisis already breaking. The exile was Israel's catastrophe; it was also, in the hands of the Lord, Israel's refining &mdash; the furnace out of which came a people of scripture, Sabbath, and covenant who could keep the faith anywhere on earth.
+Understanding Babylon is essential for reading the end of 2 Kings honestly &mdash; and for reading everything that end produced: Jeremiah's letters, Ezekiel's visions, Daniel's court stories, <a href="https://www.blueletterbible.org/kjv/psa/137/1/" target="_blank" data-ref="Psalm 137">Psalm 137</a>'s grief, and the Book of Mormon's opening chapters, which begin in Zedekiah's Jerusalem with the Babylonian crisis already breaking. The exile was Israel's catastrophe; it was also, in the hands of the Lord, Israel's refining &mdash; the furnace out of which came a people of scripture, Sabbath, and covenant who could keep the faith anywhere on earth.
 
 <br>
 
@@ -74,7 +74,7 @@ The stoneless, treeless floodplain that produced the world's first cities &mdash
 
 **<a href="/culture/ancient/babylon/02-timeline-and-empires/">Timeline &amp; Empires</a>**
 
-Four thousand years in one arc: Hammurabi's first Babylon, the long centuries of prestige without power, the fires of the Assyrian era &mdash; and the seventy-year empire that took Judah captive, dated to the day by its own chronicles.
+Four thousand years in one arc: <a href="https://www.worldhistory.org/hammurabi/" target="_blank">Hammurabi</a>'s first Babylon, the long centuries of prestige without power, the fires of the Assyrian era &mdash; and the seventy-year empire that took Judah captive, dated to the day by its own chronicles.
 
 </div>
 </div>
@@ -116,7 +116,7 @@ Judah&rsquo;s last forty years turned on one question &mdash; Egypt or Babylon? 
 
 **<a href="/culture/ancient/babylon/03-nebuchadnezzar-and-the-kings/">Nebuchadnezzar &amp; the Kings of Babylon</a>**
 
-The rebel who courted Hezekiah, the founder who broke Assyria, the builder-king who burned Jerusalem &mdash; and Belshazzar, the regent the skeptics said never existed, until the tablets named him.
+The rebel who courted Hezekiah, the founder who broke Assyria, the builder-king who burned Jerusalem &mdash; and <a href="https://www.britannica.com/biography/Belshazzar" target="_blank">Belshazzar</a>, the regent the skeptics said never existed, until the tablets named him.
 
 </div>
 </div>
@@ -238,7 +238,7 @@ What actually happened to Judah in Babylon: the deportations, "Judah-town" on th
 
 **<a href="/culture/ancient/babylon/08-babylon-and-the-bible/">Babylon &amp; the Bible</a>**
 
-The Babylonian Chronicle beside 2 Kings 24 &mdash; agreement to the day &mdash; the Lachish letters, the official found on a tax receipt, and how one city became scripture's name for the world, from Genesis 11 to Revelation 18.
+The Babylonian Chronicle beside <a href="https://www.blueletterbible.org/kjv/2ki/24/1/" target="_blank" data-ref="2 Kings 24">2 Kings 24</a> &mdash; agreement to the day &mdash; the Lachish letters, the official found on a tax receipt, and how one city became scripture's name for the world, from <a href="https://www.blueletterbible.org/kjv/gen/11/1/" target="_blank" data-ref="Genesis 11">Genesis 11</a> to <a href="https://www.blueletterbible.org/kjv/rev/18/1/" target="_blank" data-ref="Revelation 18">Revelation 18</a>.
 
 </div>
 </div>

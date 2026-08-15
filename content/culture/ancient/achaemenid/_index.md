@@ -19,7 +19,7 @@ draft: true
 
 ## A Note on This Guide
 
-If Babylon is the empire that carried Judah away, Persia is the empire that brought Judah back. The Achaemenid Empire — the first true world empire, founded by Cyrus the Great — is the stage on which the Old Testament reaches its resolution: the exile ends, the temple rises again, Jerusalem's walls are rebuilt, the law is restored, and a hidden Jewish queen saves her people in the palace of the king.
+If Babylon is the empire that carried Judah away, Persia is the empire that brought Judah back. The Achaemenid Empire — the first true world empire, founded by <a href="https://www.worldhistory.org/Cyrus_the_Great/" target="_blank">Cyrus</a> the Great — is the stage on which the Old Testament reaches its resolution: the exile ends, the temple rises again, Jerusalem's walls are rebuilt, the law is restored, and a hidden Jewish queen saves her people in the palace of the king.
 
 <br>
 
@@ -76,7 +76,7 @@ Who the Persians were, how Cyrus the Great swallowed Media, Lydia, and Babylon i
 
 **<a href="/culture/ancient/achaemenid/02-timeline-and-kings/">Timeline &amp; Kings</a>**
 
-Cyrus, Cambyses, Darius, Xerxes, Artaxerxes — the five kings who frame the whole post-exilic story, laid beside Ezra, Haggai, Zechariah, Esther, and Nehemiah, with the throne-names finally untangled.
+Cyrus, <a href="https://www.worldhistory.org/Cambyses_II/" target="_blank">Cambyses</a>, Darius, <a href="https://www.worldhistory.org/Xerxes_I/" target="_blank">Xerxes</a>, Artaxerxes — the five kings who frame the whole post-exilic story, laid beside Ezra, Haggai, Zechariah, Esther, and Nehemiah, with the throne-names finally untangled.
 
 </div>
 </div>
@@ -143,7 +143,7 @@ Ahura Mazda, Zarathustra, and the fire altars of Persia — and a careful, hones
 
 **<a href="/culture/ancient/achaemenid/05-cyrus-and-the-return/">Cyrus &amp; the Return</a>**
 
-The Cyrus Cylinder beside Ezra 1 and Isaiah 45 — a Persian king's own account of releasing captive peoples, the decree that ended the exile, and the only Gentile Scripture ever calls the Lord's "anointed."
+The Cyrus Cylinder beside <a href="https://www.blueletterbible.org/kjv/ezr/1/1/" target="_blank" data-ref="Ezra 1">Ezra 1</a> and <a href="https://www.blueletterbible.org/kjv/isa/45/1/" target="_blank" data-ref="Isaiah 45">Isaiah 45</a> — a Persian king's own account of releasing captive peoples, the decree that ended the exile, and the only Gentile Scripture ever calls the Lord's "anointed."
 
 </div>
 </div>

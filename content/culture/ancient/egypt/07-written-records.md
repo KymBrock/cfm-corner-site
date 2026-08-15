@@ -120,7 +120,7 @@ description: "The ancient writers who documented Egypt and its Jewish communitie
 
 <p><strong><a href="https://www.sefaria.org/The_Antiquities_of_the_Jews" target="_blank"><em>Antiquities of the Jews</em></a></strong> (c. AD 93&ndash;94): A comprehensive history of the Jewish people from creation through the 1st century AD. Josephus's retelling of the biblical narrative adds details and context that the Bible omits, including extensive accounts of:</p>
 <ul>
-<li>Abraham's time in Egypt, where Josephus says Abraham taught the Egyptians arithmetic and astronomy (<a href="https://www.sefaria.org/The_Antiquities_of_the_Jews" target="_blank"><em>Antiquities</em> 1.167&ndash;168</a>) &mdash; a tradition that resonates with Abraham 3 and Facsimile 3</li>
+<li>Abraham's time in Egypt, where Josephus says Abraham taught the Egyptians arithmetic and astronomy (<a href="https://www.sefaria.org/The_Antiquities_of_the_Jews" target="_blank"><em>Antiquities</em> 1.167&ndash;168</a>) &mdash; a tradition that resonates with <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/3?lang=eng" target="_blank" data-ref="Abraham 3">Abraham 3</a> and Facsimile 3</li>
 <li>Joseph's rise to power and the settlement in Goshen</li>
 <li>Moses's education in Egypt and his military campaign against Ethiopia (a tradition not found in the Bible)</li>
 <li>The Onias temple at Leontopolis (<em>Antiquities</em> 13.62&ndash;73)</li>

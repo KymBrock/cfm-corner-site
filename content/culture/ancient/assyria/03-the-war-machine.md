@@ -15,17 +15,12 @@ draft: true
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">The first empire built to conquer &mdash; and the first to advertise its own terror</p>
 
 <!-- LISTEN PLAYER (section narration) -->
-<div class="listen-player" style="max-width: 750px; margin: 0 auto 1.75rem auto; background: linear-gradient(135deg, #f2f5f2 0%, #dce8dd 100%); border: 1px solid #cdddce; border-radius: 14px; padding: 16px 18px; box-shadow: 0 4px 12px rgba(74,107,82,0.08);">
-<div style="display: flex; align-items: center; gap: 14px; margin-bottom: 12px;">
-<span aria-hidden="true" style="flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: #4a6b52;">
-<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f2f5f2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 14v-2a9 9 0 0 1 18 0v2"></path><path d="M21 15a2 2 0 0 1-2 2h-1v-5h1a2 2 0 0 1 2 2z"></path><path d="M3 15a2 2 0 0 0 2 2h1v-5H5a2 2 0 0 0-2 2z"></path></svg>
-</span>
-<div style="flex: 1; min-width: 0;">
-<div style="font-weight: 700; color: #3c5743; font-size: 1.02em; line-height: 1.2;">Listen to this section</div>
-<div style="color: #6a8470; font-size: 0.85em; margin-top: 2px;">Narrated in Kym&rsquo;s voice</div>
+<div class="listen-player">
+<div class="lp-head">
+<span class="lp-icon" aria-hidden="true"></span>
+<span class="lp-title">Listen to this section</span>
 </div>
-</div>
-<audio controls preload="none" style="width: 100%; height: 40px; border-radius: 8px;">
+<audio controls preload="none">
 <source src="/audio/culture/assyria/03-the-war-machine.mp3" type="audio/mpeg">
 Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/assyria/03-the-war-machine.mp3">download the audio</a> instead.
 </audio>
@@ -34,7 +29,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>Assyria was not the first kingdom to fight wars, nor the first to build an empire. What Assyria did &mdash; over roughly three centuries in the early first millennium BC &mdash; was turn conquest itself into a permanent institution of the state. It fielded the ancient world&rsquo;s first standing professional army, mastered the engineering needed to crack walled cities, and then did something no earlier power had attempted at that scale: it made <strong>terror a deliberate policy</strong> and <strong>mass deportation a routine administrative tool</strong>. The result was the first true military superpower, and the empire that swallowed the northern kingdom of Israel whole.</p>
 
-<p>The uncomfortable thing about the Assyrian machine is that we do not have to guess at its cruelty. The Assyrians documented it themselves &mdash; in their kings&rsquo; own annals and on the carved stone reliefs that lined their palace walls. This page reads that self-portrait soberly, and then turns to the way the prophets read it: as a rod in the hand of God, wielded and then broken.</p>
+<p>The uncomfortable thing about the Assyrian machine is that we do not have to guess at its cruelty. The Assyrians documented it themselves &mdash; in their kings&rsquo; own annals (the year-by-year royal war records) and on the carved stone reliefs that lined their palace walls. This page reads that self-portrait soberly, and then turns to the way the prophets read it: as a rod in the hand of God, wielded and then broken.</p>
 
 <br>
 
@@ -46,7 +41,12 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>Earlier Near Eastern armies were seasonal &mdash; farmers called up after the harvest, disbanded before planting. Assyria&rsquo;s genius was to build a core that never went home. By the height of the Neo-Assyrian empire, the king commanded a standing force built around the <em>kiṣir šarri</em>, the &ldquo;royal cohort,&rdquo; supplemented each campaign season by provincial levies and by contingents drawn from conquered peoples. It was paid, provisioned from imperial granaries, and organized into recognizable arms of service.</p>
 
-<p>Three technical advantages compounded that organization. The first was <strong>iron</strong>. From the ninth century BC onward, Assyria equipped its infantry with iron weapons and armor on a scale earlier bronze-age powers could not match &mdash; iron was harder, cheaper once the metallurgy spread, and abundant enough to arm tens of thousands. The second was the <strong>chariot and, increasingly, the cavalry</strong>: Assyrian reliefs trace a shift over time from the heavy chariot to mounted archers and lancers who could range far ahead of the main column, screen its advance, and run down a broken enemy. The third &mdash; and the most decisive &mdash; was <strong>siege warfare</strong>.</p>
+<figure class="fg-figure">
+  <img src="/images/culture/assyria/photos/assyrian-army-attacks-city.jpg" alt="Relief of Tiglath-pileser III's army storming a walled city, Nimrud" loading="lazy">
+  <figcaption>The war machine in action: <b>Tiglath-pileser III</b>&rsquo;s army storms a walled city &mdash; archers, cavalry, and a wheeled ram &mdash; carved on his palace at Nimrud. This was the first standing, professional army the world had seen. <span class="fg-credit">Central Palace, Nimrud; British Museum &middot; photo Osama S. M. Amin, Wikimedia Commons (CC BY-SA 4.0)</span></figcaption>
+</figure>
+
+<p>Three technical advantages compounded that organization. The first was <strong>iron</strong>. From the ninth century BC onward, Assyria equipped its infantry with iron weapons and armor on a scale earlier bronze-age powers could not match &mdash; iron was cheaper once the metallurgy spread, and abundant enough to arm tens of thousands. The second was the <strong>chariot and, increasingly, the cavalry</strong>: Assyrian reliefs trace a shift over time from the heavy chariot to mounted archers and lancers who could range far ahead of the main column, screen its advance, and run down a broken enemy. The third &mdash; and the most decisive &mdash; was <strong>siege warfare</strong>.</p>
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
 <p style="margin: 0;"><strong>Why the siege mattered:</strong> In the ancient Near East, a walled city was the unit of power. Break the wall and you took the state; fail to, and a campaign dissolved into a season of raiding. Most powers could not reliably take a fortified city at all &mdash; they blockaded and waited, sometimes for years. Assyria&rsquo;s ability to <em>storm</em> walls turned every fortress from a refuge into a trap, and it is the single capability that best explains why the empire kept growing.</p>
@@ -60,11 +60,11 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <h3>The Engineers of the Wall</h3>
 
-<p>Assyrian siegecraft was a system, not a stunt. Its palace reliefs &mdash; especially the great Lachish series carved for Sennacherib, which we walk through in <a href="/culture/ancient/assyria/08-sennacherib-and-hezekiah/">Section 08</a> &mdash; show the whole apparatus at work at once, like a technical diagram in stone.</p>
+<p>Assyrian siegecraft was a system, not a stunt. Its palace reliefs &mdash; especially the great Lachish series carved for <a href="https://www.worldhistory.org/sennacherib/" target="_blank">Sennacherib</a>, which we walk through in <a href="/culture/ancient/assyria/08-sennacherib-and-hezekiah/">Section 08</a> &mdash; show the whole apparatus at work at once, like a technical diagram in stone.</p>
 
-<p>At the center is the <strong>siege ram</strong>: a wheeled, armored engine housing a heavy beam tipped in metal, pushed up against the wall to lever out stones or batter a breach, its crew shielded from above by a wickerwork-and-hide superstructure. To bring the ram to the wall, an <strong>engineering corps</strong> built <strong>ramps</strong> &mdash; vast graded causeways of earth, rubble, and timber &mdash; raising the machines to the height of the defenses. (At Lachish, the archaeologists found the ramp itself: a real embankment of some 15,000&ndash;19,000 tons of stone and soil, the oldest siege ramp yet excavated anywhere.) Meanwhile <strong>sappers</strong> worked at the base of the wall with crowbars and picks to undermine it, <strong>archers</strong> laid down covering fire from behind tall wicker screens, and scaling ladders went up wherever the wall could be reached. It was combined-arms engineering of a kind the world had not seen &mdash; the ancestor of every siege train that followed for the next two thousand years.</p>
+<p>At the center is the <strong>siege ram</strong>: a wheeled, armored engine housing a heavy beam tipped in metal. It was pushed up against the wall to lever out stones or batter a breach. A roof of wickerwork and hides shielded its crew from above. To bring the ram to the wall, an <strong>engineering corps</strong> built <strong>ramps</strong>: vast graded causeways of earth, rubble, and timber. These raised the machines to the height of the defenses. (At Lachish, the archaeologists found the ramp itself: a real embankment of some 13,000&ndash;19,000 tons of stone and soil, the oldest siege ramp yet excavated anywhere.) Meanwhile <strong>sappers</strong> worked at the base of the wall with crowbars and picks to undermine it. <strong>Archers</strong> laid down covering fire from behind tall wicker screens. And scaling ladders went up wherever the wall could be reached. It was combined-arms engineering of a kind the world had not seen &mdash; every specialty working the same wall at once, each covering the others. And it was the ancestor of every siege train, every army&rsquo;s rolling kit of wall-breaking gear, for the next two thousand years.</p>
 
-<p>Nothing in the biblical record contradicts this picture; it fills it in. When the Rabshakeh stands before Jerusalem&rsquo;s wall and taunts Hezekiah, he is the herald of exactly this machine &mdash; a machine that had, in the same campaign, already reduced the fortified towns of Judah one after another (see <a href="/culture/ancient/assyria/08-sennacherib-and-hezekiah/">Section 08</a>).</p>
+<p>Nothing in the biblical record contradicts this picture; it fills it in. When the Rabshakeh &mdash; the Assyrian king&rsquo;s chief spokesman &mdash; stands before Jerusalem&rsquo;s wall and taunts Hezekiah, he is the herald of exactly this machine &mdash; a machine that had, in the same campaign, already reduced the fortified towns of Judah one after another (see <a href="/culture/ancient/assyria/08-sennacherib-and-hezekiah/">Section 08</a>).</p>
 
 <br>
 
@@ -74,7 +74,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <h3>Terror as Policy</h3>
 
-<p>Here the sources force a hard subject, and it must be handled honestly &mdash; neither flinched from nor sensationalized. The Assyrian kings did not merely commit atrocities in the heat of war; they <em>boasted</em> of them afterward, in carefully composed royal inscriptions meant to be read and reread. Ashurnasirpal II&rsquo;s ninth-century annals, for example, record in the king&rsquo;s own voice the flaying of rebel leaders, the impaling of captives, and the building of pillars of severed heads before conquered cities &mdash; recited not as regrettable excess but as the just and glorious reward of rebellion. These are the empire&rsquo;s own words about itself.</p>
+<p>The Assyrian kings did not merely commit atrocities in the heat of war; they <em>boasted</em> of them afterward, in carefully composed royal inscriptions meant to be read and reread. <a href="https://www.worldhistory.org/Ashurnasirpal_II/" target="_blank">Ashurnasirpal II</a>&rsquo;s ninth-century annals, for example, record in the king&rsquo;s own voice the flaying of rebel leaders, the impaling of captives, and the building of pillars of severed heads before conquered cities &mdash; presented not as regrettable excess but as the just and glorious punishment rebels deserved. These are the empire&rsquo;s own words about itself.</p>
 
 <p>The key to understanding this is that the cruelty was <strong>a message, not a mood</strong>. The horrors were concentrated on cities that had <em>revolted</em> after submitting &mdash; on oath-breakers &mdash; and they were publicized precisely so that the next city would calculate the cost of resistance and open its gates instead. The palace reliefs served the same function. They were not private art; they lined the throne rooms and audience halls where the king received tribute-bearers and foreign envoys. A delegation arriving to negotiate walked a corridor of carved conquest &mdash; walls breached, defenders impaled, captives led away in endless lines &mdash; before ever reaching the king. The message was inescapable and intentional: <em>this is what awaits those who break faith with Assyria; choose.</em></p>
 
@@ -106,7 +106,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>The inbound half followed at once: &ldquo;the king of Assyria brought men from Babylon, and from Cuthah, and from Ava, and from Hamath, and from Sepharvaim, and placed them in the cities of Samaria instead of the children of Israel&rdquo; (<a href="https://www.blueletterbible.org/kjv/2ki/17/24/" target="_blank" data-ref="2 Kings 17:24">2 Kings 17:24</a>). Five foreign populations, themselves deported from elsewhere, resettled in the emptied land. The mixed people that resulted &mdash; and the mixed worship the chapter goes on to describe &mdash; is the deep origin of the community later known as the Samaritans. In a single stroke of imperial policy, one covenant nation was dispersed and another population planted in its place. The theological and historical fallout of that event is the subject of <a href="/culture/ancient/assyria/07-the-fall-of-the-north/">Section 07: The Fall of the North</a>.</p>
 
-<p>Scripture registers the terror of it even before the end came. Hosea, prophesying to the north in its last decades, names Assyria as the coming master &mdash; &ldquo;the Assyrian shall be his king, because they refused to return&rdquo; (<a href="https://www.blueletterbible.org/kjv/hos/11/5/" target="_blank" data-ref="Hosea 11:5">Hosea 11:5</a>) &mdash; and Tiglath-pileser III had already begun the process a generation earlier, carrying off Galilee and Gilead (<a href="https://www.blueletterbible.org/kjv/2ki/15/29/" target="_blank" data-ref="2 Kings 15:29">2 Kings 15:29</a>). The machine did not arrive all at once; it ground north to south over decades.</p>
+<p>Scripture registers the terror of it even before the end came. Hosea, prophesying to the north in its last decades, names Assyria as the coming master &mdash; &ldquo;the Assyrian shall be his king, because they refused to return&rdquo; (<a href="https://www.blueletterbible.org/kjv/hos/11/5/" target="_blank" data-ref="Hosea 11:5">Hosea 11:5</a>) &mdash; and <a href="https://www.worldhistory.org/Tiglath_Pileser_III/" target="_blank">Tiglath-pileser III</a> had already begun the process a generation earlier, carrying off Galilee and Gilead (<a href="https://www.blueletterbible.org/kjv/2ki/15/29/" target="_blank" data-ref="2 Kings 15:29">2 Kings 15:29</a>). The machine did not arrive all at once; it ground north to south over decades.</p>
 
 <br>
 
@@ -176,6 +176,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}

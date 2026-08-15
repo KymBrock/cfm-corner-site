@@ -76,7 +76,7 @@ The rain-fed highland on the upper Tigris &mdash; Ashur, Nineveh, Kalhu, Arbela 
 
 **<a href="/culture/ancient/assyria/02-timeline-and-empire/">Timeline &amp; the Rise of Empire</a>**
 
-From merchant colonies to the first world empire: the kings whose names fill the annals &mdash; Tiglath-Pileser, Shalmaneser, Sargon, Sennacherib, Ashurbanipal &mdash; several of whom appear, dated and named, in the Books of Kings.
+From merchant colonies to the first world empire: the kings whose names fill the annals &mdash; Tiglath-Pileser, Shalmaneser, Sargon, <a href="https://www.worldhistory.org/sennacherib/" target="_blank">Sennacherib</a>, <a href="https://www.worldhistory.org/Ashurbanipal/" target="_blank">Ashurbanipal</a> &mdash; several of whom appear, dated and named, in the Books of Kings.
 
 </div>
 </div>

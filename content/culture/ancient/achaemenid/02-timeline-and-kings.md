@@ -14,7 +14,20 @@ draft: true
 
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">The Persian kings, and the biblical books that unfold within their reigns</p>
 
-<p>The Achaemenid Empire lasted about 220 years (559&ndash;330 BC) and was ruled by about a dozen kings, but the Bible cares about five of them &mdash; the ones whose reigns frame the entire post-exilic story. The great difficulty for readers of Ezra&ndash;Nehemiah is that these books are <em>not</em> arranged in tidy chronological order, and several kings share throne-names. This timeline sorts it out, king by king, so the biblical books fall into place.</p>
+<!-- LISTEN PLAYER (section narration) -->
+<div class="listen-player">
+<div class="lp-head">
+<span class="lp-icon" aria-hidden="true"></span>
+<span class="lp-title">Listen to this section</span>
+</div>
+<audio controls preload="none">
+<source src="/audio/culture/achaemenid/02-timeline-and-kings.mp3" type="audio/mpeg">
+Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/achaemenid/02-timeline-and-kings.mp3">download the audio</a> instead.
+</audio>
+</div>
+<!-- /LISTEN PLAYER -->
+
+<p>The Achaemenid Empire lasted about 220 years (559&ndash;330 BC) and was ruled by about a dozen kings. But the Bible cares about five of them &mdash; the ones whose reigns frame the entire post-exilic story. Here is the great difficulty for readers of Ezra&ndash;Nehemiah: these books are <em>not</em> arranged in tidy chronological order, and several kings share throne-names. This timeline sorts it out, king by king, so the biblical books fall into place.</p>
 
 <p>Persian chronology is unusually firm: Babylonian astronomical records, dated business tablets, and the kings&rsquo; own inscriptions let historians date most events to the year, and some to the day.</p>
 
@@ -41,34 +54,34 @@ draft: true
 </thead>
 <tbody>
 <tr style="background: #f0ebe5;">
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Cyrus II the Great</strong></td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong><a href="https://www.worldhistory.org/Cyrus_the_Great/" target="_blank">Cyrus</a> II the Great</strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">559&ndash;530</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Decree of return (Ezra 1; 2 Chr 36:22&ndash;23); temple foundation laid; Daniel serves on</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Decree of return (<a href="https://www.blueletterbible.org/kjv/ezr/1/1/" target="_blank" data-ref="Ezra 1">Ezra 1</a>; 2 Chr 36:22&ndash;23); temple foundation laid; Daniel serves on</td>
 </tr>
 <tr style="background: white;">
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Cambyses II</strong></td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong><a href="https://www.worldhistory.org/Cambyses_II/" target="_blank">Cambyses II</a></strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">530&ndash;522</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Unnamed; conquers Egypt (525); the &ldquo;Ahasuerus&rdquo;/&ldquo;Artaxerxes&rdquo; of Ezra 4:6&ndash;7 are debated</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Unnamed in the biblical return narrative; conquers Egypt (525)</td>
 </tr>
 <tr style="background: #f0ebe5;">
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Darius I the Great</strong></td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong><a href="https://www.worldhistory.org/Darius_I/" target="_blank">Darius I</a> the Great</strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">522&ndash;486</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Authorizes and completes the temple, 515 BC (Ezra 5&ndash;6; Haggai; Zechariah)</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Authorizes and completes the temple, 515 BC (<a href="https://www.blueletterbible.org/kjv/ezr/5/1/" target="_blank" data-ref="Ezra 5">Ezra 5</a>&ndash;6; Haggai; Zechariah)</td>
 </tr>
 <tr style="background: white;">
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Xerxes I</strong></td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong><a href="https://www.worldhistory.org/Xerxes_I/" target="_blank">Xerxes</a> I</strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">486&ndash;465</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Ahasuerus</strong> of Esther; the invasion of Greece (480)</td>
 </tr>
 <tr style="background: #f0ebe5;">
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Artaxerxes I Longimanus</strong></td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong><a href="https://www.worldhistory.org/Artaxerxes_I/" target="_blank">Artaxerxes I</a> Longimanus</strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">465&ndash;424</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Sends Ezra (458) and Nehemiah (445); the wall rebuilt</td>
 </tr>
 <tr style="background: white;">
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Darius II &rarr; Darius III</strong></td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong><a href="https://www.britannica.com/biography/Darius-II-Ochus" target="_blank">Darius II</a> &rarr; <a href="https://www.britannica.com/biography/Darius-III" target="_blank">Darius III</a></strong></td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0; text-align: center;">424&ndash;330</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">&ldquo;Darius the Persian&rdquo; (Neh 12:22); the empire&rsquo;s last century, ending with Alexander</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">&ldquo;Darius the Persian&rdquo; (<a href="https://www.blueletterbible.org/kjv/neh/12/22/" target="_blank" data-ref="Nehemiah 12:22">Neh 12:22</a>); the empire&rsquo;s last century, ending with Alexander</td>
 </tr>
 </tbody>
 </table>
@@ -78,6 +91,11 @@ draft: true
 <hr>
 
 <br>
+
+<figure class="fg-figure" style="max-width:560px;">
+  <img src="/images/culture/achaemenid/photos/darius-xerxes-treasury-relief.jpg" alt="Persepolis relief of Darius the Great enthroned with crown prince Xerxes behind" loading="lazy">
+  <figcaption>Darius the Great enthroned, the crown prince <b>Xerxes</b> standing behind him &mdash; a relief from the Persepolis treasury. Between them these two carry much of the story here: Darius sees the temple finished (<a href="https://www.blueletterbible.org/kjv/ezr/6/1/" target="_blank" data-ref="Ezra 6">Ezra 6</a>), and Xerxes is the <b>Ahasuerus</b> of Esther. <span class="fg-credit">Persepolis Treasury relief &middot; photo A. Davey, Wikimedia Commons (CC BY 2.0)</span></figcaption>
+</figure>
 
 <h3>Visual Timeline: Persia and the Return</h3>
 
@@ -101,7 +119,7 @@ draft: true
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #8B7355; font-size: 0.9em;">547 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Lydia falls</strong> &mdash; Croesus defeated; Persia reaches the Aegean and the Greek cities</span>
+<span style="flex: 1; font-size: 0.95em;"><strong>Lydia falls</strong> &mdash; <a href="https://www.worldhistory.org/croesus/" target="_blank">Croesus</a> defeated; Persia reaches the Aegean and the Greek cities</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
@@ -146,12 +164,12 @@ draft: true
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #4a6b52; font-size: 0.9em;">515 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>The Second Temple is finished</strong> &mdash; the third of Adar, Darius&rsquo;s sixth year (<a href="https://www.blueletterbible.org/kjv/ezr/6/15/" target="_blank" data-ref="Ezra 6:15">Ezra 6:15</a>); roughly seventy years after its destruction</span>
+<span style="flex: 1; font-size: 0.95em;"><strong>The Second Temple is finished</strong> &mdash; the third of Adar (a late-winter month), Darius&rsquo;s sixth year (<a href="https://www.blueletterbible.org/kjv/ezr/6/15/" target="_blank" data-ref="Ezra 6:15">Ezra 6:15</a>); roughly seventy years after its destruction</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #4a6b52; font-size: 0.9em;">490 BC</span>
-<span style="flex: 1; font-size: 0.95em;">Darius&rsquo;s invasion of Greece checked at <strong>Marathon</strong></span>
+<span style="flex: 1; font-size: 0.95em;">Darius&rsquo;s invasion of Greece stopped at the battle of <strong>Marathon</strong> &mdash; the famous Greek upset</span>
 </div>
 
 </div>
@@ -176,7 +194,7 @@ draft: true
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #c0392b; font-size: 0.9em;">480 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Xerxes invades Greece</strong> &mdash; Thermopylae and the burning of Athens, then defeat at Salamis; he returns home to the events of Esther 2</span>
+<span style="flex: 1; font-size: 0.95em;"><strong>Xerxes invades Greece</strong> &mdash; the famous last stand at Thermopylae, the burning of Athens, then Xerxes&rsquo;s defeat at Salamis, the sea battle that turned the war; he returns home to the events of <a href="https://www.blueletterbible.org/kjv/est/2/1/" target="_blank" data-ref="Esther 2">Esther 2</a></span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
@@ -221,12 +239,12 @@ draft: true
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #2c3e50; font-size: 0.9em;">424&ndash;336</span>
-<span style="flex: 1; font-size: 0.95em;">A century of able kings and palace intrigue &mdash; Darius II, Artaxerxes II &amp; III, and the &ldquo;Darius the Persian&rdquo; who closes the Old Testament&rsquo;s record (<a href="https://www.blueletterbible.org/kjv/neh/12/22/" target="_blank" data-ref="Nehemiah 12:22">Nehemiah 12:22</a>)</span>
+<span style="flex: 1; font-size: 0.95em;">A century of shrinking power and palace intrigue &mdash; Darius II, <a href="https://www.worldhistory.org/Artaxerxes_II/" target="_blank">Artaxerxes II</a> &amp; III, and the &ldquo;Darius the Persian&rdquo; who closes the Old Testament&rsquo;s record (<a href="https://www.blueletterbible.org/kjv/neh/12/22/" target="_blank" data-ref="Nehemiah 12:22">Nehemiah 12:22</a>)</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #2c3e50; font-size: 0.9em;">331&ndash;330 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Alexander the Great</strong> destroys the empire &mdash; Darius III defeated at Gaugamela, Persepolis burned; the age Daniel foresaw as the &ldquo;he goat&hellip; from the west&rdquo; (<a href="https://www.blueletterbible.org/kjv/dan/8/5/" target="_blank" data-ref="Daniel 8:5">Daniel 8:5</a>), interpreted as &ldquo;the king of Grecia&rdquo; (<a href="https://www.blueletterbible.org/kjv/dan/8/21/" target="_blank" data-ref="Daniel 8:21">Daniel 8:21</a>)</span>
+<span style="flex: 1; font-size: 0.95em;"><strong><a href="https://www.worldhistory.org/Alexander_the_Great/" target="_blank">Alexander the Great</a></strong> destroys the empire &mdash; Darius III defeated at Gaugamela (the battle that ended the empire), Persepolis burned. This is the age Daniel foresaw as the &ldquo;he goat&hellip; from the west&rdquo; (<a href="https://www.blueletterbible.org/kjv/dan/8/5/" target="_blank" data-ref="Daniel 8:5">Daniel 8:5</a>), interpreted as &ldquo;the king of Grecia&rdquo; (<a href="https://www.blueletterbible.org/kjv/dan/8/21/" target="_blank" data-ref="Daniel 8:21">Daniel 8:21</a>)</span>
 </div>
 
 </div>
@@ -244,8 +262,8 @@ draft: true
 <p>Ezra&ndash;Nehemiah is genuinely confusing on first read, for three reasons worth naming plainly:</p>
 
 <ul>
-<li><strong>&ldquo;Artaxerxes&rdquo; and &ldquo;Ahasuerus&rdquo; are titles as much as names.</strong> Ezra 4 mentions correspondence under an &ldquo;Ahasuerus&rdquo; and an &ldquo;Artaxerxes&rdquo; (<a href="https://www.blueletterbible.org/kjv/ezr/4/6/" target="_blank" data-ref="Ezra 4:6-7">Ezra 4:6&ndash;7</a>) <em>before</em> returning to the temple story under Darius &mdash; because Ezra 4 gathers examples of opposition <em>topically</em>, jumping ahead in time to make a point, then resuming the narrative. Reading it as a strict sequence produces contradictions that vanish once you see it is a thematic digression.</li>
-<li><strong>The temple and the wall are a lifetime apart.</strong> The temple is finished under Darius I (515 BC); Nehemiah&rsquo;s wall goes up under Artaxerxes I (445 BC) &mdash; seventy years and three kings later. Esther (under Xerxes, 480s BC) falls <em>between</em> them. Ezra the person arrives (458 BC) shortly before Nehemiah.</li>
+<li><strong>&ldquo;Artaxerxes&rdquo; and &ldquo;Ahasuerus&rdquo; are titles as much as names.</strong> <a href="https://www.blueletterbible.org/kjv/ezr/4/1/" target="_blank" data-ref="Ezra 4">Ezra 4</a> mentions correspondence under an &ldquo;Ahasuerus&rdquo; and an &ldquo;Artaxerxes&rdquo; (<a href="https://www.blueletterbible.org/kjv/ezr/4/6/" target="_blank" data-ref="Ezra 4:6-7">Ezra 4:6&ndash;7</a>) <em>before</em> returning to the temple story under Darius &mdash; because <a href="https://www.blueletterbible.org/kjv/ezr/4/1/" target="_blank" data-ref="Ezra 4">Ezra 4</a> gathers examples of opposition <em>topically</em>, jumping ahead in time to make a point, then resuming the narrative. Reading it as a strict sequence produces contradictions that vanish once you see it is a thematic digression.</li>
+<li><strong>The temple and the wall are a lifetime apart.</strong> The temple is finished under Darius I (515 BC); Nehemiah&rsquo;s wall goes up under Artaxerxes I (445 BC) &mdash; seventy years and three kings later. Esther (under Xerxes, 480s BC) falls <em>between</em> them. Ezra the person arrives in <strong>458 BC</strong> on the usual reckoning, shortly before Nehemiah &mdash; though some scholars date his mission later (428 or 398 BC), which would reverse the order.</li>
 <li><strong>Daniel&rsquo;s &ldquo;Darius the Median&rdquo;</strong> (<a href="https://www.blueletterbible.org/kjv/dan/5/31/" target="_blank" data-ref="Daniel 5:31">Daniel 5:31</a>) is a separate and much-debated figure, distinct from the later Persian Dariuses &mdash; a puzzle addressed in the <a href="/culture/ancient/babylon/03-nebuchadnezzar-and-the-kings/">Babylon guide&rsquo;s</a> discussion of the fall of Babylon.</li>
 </ul>
 
@@ -284,6 +302,7 @@ draft: true
 </div>
 
 
+<link rel="stylesheet" href="/css/fg-gallery.css">
 <script src="/js/image-lightbox.js"></script>
 
 {{< /rawhtml >}}

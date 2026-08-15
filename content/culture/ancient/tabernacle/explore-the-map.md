@@ -8,7 +8,7 @@ layout = "tabernacle"
 +++
 
 <div class="intro-callout">
-  <p class="intro-callout__eyebrow">Exodus 25:8</p>
+  <p class="intro-callout__eyebrow"><a href="https://www.blueletterbible.org/kjv/exo/25/8/" target="_blank" data-ref="Exodus 25:8">Exodus 25:8</a></p>
   <h2 class="intro-callout__title">"Let them make me a sanctuary, that I may dwell among them"</h2>
 </div>
 

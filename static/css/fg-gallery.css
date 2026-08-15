@@ -1,0 +1,104 @@
+/**
+ * fg-gallery — Field-Guide image slideshow / gallery
+ *
+ * A standalone, reusable slideshow for the culture field guides. Independent of
+ * the site-map-widget gallery (does not touch Egypt's map CSS/JS). Harmonizes
+ * with the site palette via CSS custom properties (falls back gracefully).
+ *
+ * Markup (see /js/fg-gallery.js):
+ *   <div class="fg-gallery">
+ *     <div class="fg-stage">
+ *       <span class="fg-counter"></span>
+ *       <button class="fg-arrow fg-prev" aria-label="Previous">‹</button>
+ *       <button class="fg-arrow fg-next" aria-label="Next">›</button>
+ *       <div class="fg-item" data-caption="…" data-credit="…"><img src="…" alt="…" loading="lazy"></div>
+ *       … more .fg-item …
+ *     </div>
+ *     <p class="fg-cap"></p>
+ *     <div class="fg-dots"></div>
+ *   </div>
+ */
+
+.fg-gallery { max-width: 720px; margin: 28px auto; }
+
+/* Single captioned figure (non-slideshow) */
+.fg-figure { max-width: 640px; margin: 26px auto; }
+.fg-figure img {
+  width: 100%; height: auto; display: block;
+  border-radius: 14px; box-shadow: var(--shadow-md, 0 4px 12px rgba(0,0,0,0.1));
+}
+.fg-figure figcaption {
+  text-align: center; font-size: .9em; line-height: 1.45;
+  color: var(--text-secondary, #4a5568); margin-top: 10px;
+}
+.fg-figure figcaption .fg-credit {
+  display: block; font-size: .8em; font-style: italic;
+  color: var(--text-muted, #718096); margin-top: 3px;
+}
+@media (prefers-color-scheme: dark) {
+  .fg-figure figcaption { color: #cabfae; }
+  .fg-figure figcaption .fg-credit { color: #a49b8c; }
+}
+
+.fg-stage {
+  position: relative;
+  height: 440px;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--sage-pale, #dce8dd), #e9e3d7);
+  box-shadow: var(--shadow-lg, 0 8px 24px rgba(0,0,0,0.12));
+}
+
+.fg-item {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity .45s ease; pointer-events: none;
+}
+.fg-item.active { opacity: 1; pointer-events: auto; }
+.fg-item img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+
+.fg-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 3;
+  width: 44px; height: 44px; border-radius: 50%; border: none; cursor: pointer;
+  background: rgba(74,107,82,.62); color: #fff; font-size: 1.5rem; line-height: 1;
+  display: flex; align-items: center; justify-content: center; transition: background .2s;
+}
+.fg-arrow:hover { background: var(--sage-dark, #4a6b52); }
+.fg-arrow.fg-prev { left: 12px; }
+.fg-arrow.fg-next { right: 12px; }
+
+.fg-counter {
+  position: absolute; top: 12px; right: 14px; z-index: 3;
+  font-size: .72rem; font-weight: 700; letter-spacing: .03em; color: #fff;
+  background: rgba(56,55,49,.6); padding: 3px 9px; border-radius: 999px;
+}
+
+.fg-cap {
+  text-align: center; font-size: .9em; line-height: 1.45;
+  color: var(--text-secondary, #4a5568); margin: 12px 8px 0; min-height: 2.6em;
+}
+.fg-cap .fg-credit {
+  display: block; font-size: .8em; font-style: italic;
+  color: var(--text-muted, #718096); margin-top: 3px;
+}
+
+.fg-dots { display: flex; gap: 8px; justify-content: center; margin-top: 12px; }
+.fg-dot {
+  width: 9px; height: 9px; border-radius: 50%; border: none; padding: 0; cursor: pointer;
+  background: var(--sage-light, #aac1a7); transition: background .2s, transform .2s;
+}
+.fg-dot.active { background: var(--gold, #d5a93c); transform: scale(1.25); }
+
+.fg-gallery:focus-visible { outline: 2px solid var(--sage-dark, #4a6b52); outline-offset: 4px; border-radius: 18px; }
+
+@media (max-width: 640px) {
+  .fg-stage { height: 300px; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .fg-stage { background: linear-gradient(135deg, #26231f, #1a1815); box-shadow: none; }
+  .fg-cap { color: #cabfae; }
+  .fg-cap .fg-credit { color: #a49b8c; }
+  .fg-dot { background: #4a443b; }
+}
