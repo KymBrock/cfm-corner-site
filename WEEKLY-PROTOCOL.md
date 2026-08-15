@@ -265,3 +265,36 @@ Output: `~/Desktop/cfm-email-weekNN.html`
 ---
 
 *Last updated: 2026-03-01*
+
+---
+
+## 🗂 SOURCES LEDGER + INTAKE PIPELINE — run these BEFORE drafting
+
+**Added 2026-08-15.** The Fable audit (K3) found this practice *written nowhere* — zero
+mentions across this file, `STUDY-GUIDE-SPEC.md` and both `CLAUDE.md` files, with a positive
+control confirming the zero was real. It exists only in weeks 32–34, which are the weeks the
+audit rates as the best craft in the corpus.
+
+    Week_NN_<slug>/Working/intake_A_interpreter.md
+                            intake_B_conference_talks.md
+                            intake_C_rabbinic.md
+                            intake_D_church_manuals.md
+                            intake_E_poetry_analyzer.md      (poetry weeks)
+
+    Week_NN_<slug>/02_Weekly_Insights/_SOURCES_Weekly_Insights_WeekNN.md
+
+**The intakes can be run MONTHS AHEAD.** Nothing in them depends on the week being current —
+which makes this the future-planning pipeline, not just a drafting step.
+
+**The sidecar is an editorial provenance ledger and is NOT published to readers.** It records
+each quote's source, what it was verified against, and the licence — Sefaria's William
+Davidson Talmud is CC BY-NC. Inline attribution appears at each quote in the text itself.
+
+Its own stated discipline: *"the essay draws where the tradition speaks and does not
+manufacture commentary where it is silent."*
+
+**Label every structural claim `verified` or `candidate`, and name the text it was checked
+against.** Week 34's poetry analyser reported 1 verified against 96 candidates and *declined*
+to certify a Psalm 31 acrostic — recorded as "the guardrail working, not a finding."
+
+Full spec: `OT_2026/Templates/SOURCES-AND-INTAKE-SPEC.md`

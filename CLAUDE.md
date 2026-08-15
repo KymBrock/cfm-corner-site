@@ -383,3 +383,23 @@ Hugo version pinning). This section is the quick map that ties them together.
   only when shipping (a deliberate desktop step, per `docs/working-remotely.md`).
 - `.claude/worktrees/` and `.session-checkpoints/` are gitignored — never commit
   them (a past incident committed them as gitlinks and broke Cloudflare clones).
+
+## ✂️ THE PASTE TEST — study guide vs Weekly Insights
+
+**Insights owns MEANING. The study guide owns METHOD.**
+
+> **If a study-guide paragraph could be pasted into Insights unnoticed, it belongs to
+> Insights.**
+
+The study guide points at a feature of the text and says how a reader could find it. It does
+**not** then say what the feature means — that step is the essay's. Doing it in both places
+is what makes a lesson read as preachy: the second telling implies the reader missed it the
+first time.
+
+⚠️ **Paraphrase hides redundancy from word-overlap checks but not from readers.** A rewritten
+sentence saying the same thing still fails the test.
+
+*Ruled by the 2026-08-13 rewrite (`43e1be0`, `b7b312e`). Measured: week 34's insights-prose
+overlap fell 275 → 52 of 2,939 shingles; Key Passages went 199 → 0. The full rule is in
+`STUDY-GUIDE-SPEC.md` § Division of labour — which lived only on a branch until 2026-08-15,
+which is why weeks 30–33 never had it.*
