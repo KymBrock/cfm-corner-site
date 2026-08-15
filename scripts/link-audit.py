@@ -15,7 +15,7 @@ Usage:  python3 scripts/link-audit.py
         python3 scripts/link-audit.py --fix --week week10     (auto-link only week10)
 """
 
-import re, glob, json, sys, os
+import re, glob, json, sys, os, subprocess
 
 SITE_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -227,6 +227,40 @@ def _check_cross_language_tables(content):
     return issues
 
 
+def _published_weeks_among(paths):
+    """Which of these files already exist on live `main`.
+
+    The guardrail this serves was ruled by Kymber on 2026-08-14 after
+    LEXICON-POPUP-SPEC.md v1.2 line 168 spent four months telling sessions to run
+    `--fix` on published weeks. Correcting that line is not enough: it was believed
+    and obeyed the whole time. The refusal lives here, in the tool.
+
+    Deliberately FAIL-CLOSED. If git cannot be consulted, every week is treated as
+    published and --fix refuses. A check that cannot answer must not return "safe" —
+    four checks on 2026-08-14 reported clean because the query was wrong, not because
+    the property held.
+    """
+    weeks = set()
+    for p in paths:
+        m = re.search(r'(week\d+)', p.replace(os.sep, '/'))
+        if m:
+            weeks.add(m.group(1))
+    if not weeks:
+        return set()
+
+    published = set()
+    for wk in weeks:
+        try:
+            r = subprocess.run(
+                ['git', 'ls-tree', '-r', '--name-only', 'main', f'static/content/{wk}/'],
+                cwd=SITE_ROOT, capture_output=True, text=True, timeout=20)
+            if r.returncode != 0 or r.stdout.strip():
+                published.add(wk)          # present on main, OR git could not tell us
+        except Exception:
+            published.add(wk)              # fail closed
+    return published
+
+
 def main():
     args = sys.argv[1:]
     week_filter = None
@@ -239,6 +273,31 @@ def main():
     if '--type' in args:
         idx = args.index('--type')
         type_filter = args[idx + 1]
+
+    # ── Refuse unrecognised arguments instead of ignoring them ──
+    # Only --week/--type/--fix were ever parsed, so `link-audit.py some/file.html`
+    # silently dropped the path and scanned EVERY week. The run then reported issues
+    # from across the site, which reads as "this file is broken" when the file is
+    # clean. Fable flagged this on 2026-08-14; both the week34 and cfm lanes
+    # confirmed it independently. A wrong answer delivered confidently is worse than
+    # an error, so this now stops rather than guessing what was meant.
+    _KNOWN_FLAGS = {'--fix', '--week', '--type', '--i-know-this-is-published'}
+    _consumed = set()
+    for _flag in ('--week', '--type'):
+        if _flag in args:
+            _consumed.add(args.index(_flag) + 1)  # its value
+    _stray = [a for i, a in enumerate(args)
+              if i not in _consumed and a not in _KNOWN_FLAGS]
+    if _stray:
+        print('\n🛑 REFUSED — unrecognised argument(s): ' + ', '.join(_stray) + '\n')
+        print('  This script takes FLAGS ONLY. It has never accepted a file or')
+        print('  directory path — a positional argument used to be dropped in')
+        print('  silence, and every week was scanned instead of the one you named.')
+        print('\n  Did you mean:')
+        print('    --week weekNN     audit one week')
+        print('    --type study-guide|insights|resources')
+        print('    --fix             auto-link bare terms (refused on published weeks)')
+        return 2
 
     lexicon = load_lexicon()
     known_translits = get_known_translits(lexicon)
@@ -266,6 +325,32 @@ def main():
     if not files:
         print(f"No files found. Searched for: {', '.join(file_types)}")
         return
+
+    # ── The published-week guard runs BEFORE the scan, deliberately ──
+    # It used to sit inside the `if fix_mode:` block far below, which the "All clear"
+    # early-return never reaches. So `--fix` on a published week stayed silent whenever
+    # that week happened to be clean — the guard fired only when it had something to
+    # refuse. The refusal is about INTENT, not about today's issue count: asking to
+    # --fix published content should be answered the same way every time.
+    if fix_mode:
+        blocked = _published_weeks_among(files)
+        if blocked and '--i-know-this-is-published' not in args:
+            print('\n🛑 REFUSED — --fix would rewrite PUBLISHED content.\n')
+            print('  Published on live main: ' + ', '.join(sorted(blocked)))
+            print('\n  --fix is an in-place mass auto-linker. On a published week it can')
+            print('  rewrite anchors that are already correct, and the live page is the')
+            print('  thing readers see. Kymber ruled on 2026-08-14 that published lessons')
+            print('  need a hard guardrail: "I do not want accidental rewrites... I do not')
+            print('  want that happening again."\n')
+            print('  For a PUBLISHED week, do this instead:')
+            print('    - replace only the specific wrong <a> anchor, by hand')
+            print('    - leave every surrounding byte untouched')
+            print('    - verify against the live page before and after\n')
+            print('  For a STAGED / unpublished week, --fix is fine — scope it:')
+            print('    python3 scripts/link-audit.py --fix --week weekNN\n')
+            print('  If you genuinely intend to rewrite published content, a PERSON must')
+            print('  type: --fix --i-know-this-is-published')
+            return 2
 
     print(f'Scanning {len(files)} files ({", ".join(file_types)})...\n')
 
@@ -298,6 +383,7 @@ def main():
 
     # ── --fix mode: auto-link bare terms in-place ──────────────────────────────
     if fix_mode:
+
         print('\n🔧 FIX MODE: applying auto-linkers to files with issues...\n')
         converter = _get_converter()
         if converter is None:
@@ -364,4 +450,7 @@ def _get_converter():
 
 
 if __name__ == '__main__':
-    main()
+    # main()'s return value must reach the shell. It was discarded, so a refusal
+    # printed a red banner and still exited 0 — and anything checking the exit code
+    # (a hook, a CI step, `&&` in a shell line) read that as success.
+    sys.exit(main() or 0)
