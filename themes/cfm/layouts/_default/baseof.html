@@ -128,6 +128,17 @@
       .blb-popup .bp-greek { font-family: 'SBL Greek', 'Times New Roman', serif; }
       .blb-popup .bp-strongs { color: #888; font-size: 0.85em; margin-left: 6px; }
       .blb-popup .bp-body { color: #222; }
+      /* Sense outline. Blue Letter Bible publishes a NESTED list; the Sept-2025
+         scrape flattened it into one string, which is why some entries still read
+         "wheatwheat (plant)wheat flour". Restored 2026-08-14 in Kymber's approved
+         format. Long entries scroll inside the popup rather than running off the
+         screen — G3022 is 328 characters once its truncation is undone. */
+      .blb-popup .bp-senses { margin: 0; padding: 0; list-style: none; max-height: 15em; overflow-y: auto; }
+      .blb-popup .bp-senses li { color: #222; }
+      .blb-popup .bp-senses > li { font-weight: 600; }
+      .blb-popup .bp-senses ul { list-style: none; margin: 3px 0 0; padding: 0 0 0 10px; border-left: 1px solid #ddd; }
+      .blb-popup .bp-senses ul li { font-weight: 400; margin-top: 2px; }
+      .blb-popup .bp-senses ul li::before { content: "\2014"; color: #999; margin-right: 5px; }
       .blb-popup .bp-ref { margin-top: 6px; font-size: 0.85em; color: #666; font-style: italic; }
       .blb-popup .bp-link { margin-top: 8px; font-size: 0.82em; }
       .blb-popup .bp-link a { color: var(--sage-dark, #4a6b52); text-decoration: underline; pointer-events: auto; }
@@ -482,6 +493,35 @@
         return hubData;
       }
 
+      // Render the nested sense outline, when an entry has one.
+      //
+      // Returns '' when there are no senses, so the caller falls back to the flat
+      // `definition` exactly as before — that is what keeps this additive. 113 of
+      // 14,271 entries carry senses today; the other 14,158 render unchanged.
+      //
+      // Escapes its input: the text came from a scrape of a third-party page and
+      // goes in via innerHTML, so it is not trusted even though it looks like
+      // plain words.
+      function escHtml(s) {
+        return String(s == null ? '' : s)
+          .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;');
+      }
+
+      function sensesHtml(senses) {
+        if (!senses || !senses.length) return '';
+        function level(items) {
+          var out = '';
+          for (var i = 0; i < items.length; i++) {
+            var it = items[i] || {};
+            var kids = (it.children && it.children.length) ? level(it.children) : '';
+            out += '<li>' + escHtml(it.text) + (kids ? '<ul>' + kids + '</ul>' : '') + '</li>';
+          }
+          return out;
+        }
+        return '<ul class="bp-senses">' + level(senses) + '</ul>';
+      }
+
       function normTerm(t) {
         return String(t || '').toLowerCase().replace(/[’']/g, "'").replace(/\s+/g, ' ').trim();
       }
@@ -581,7 +621,7 @@
             (code ? ' <span class="bp-strongs">(' + code + ')</span>' : '') +
             '</div>' +
             '<div class="bp-original ' + wordClass + '">' + original + '</div>' +
-            '<div class="bp-body">' + definition + '</div>' +
+            (sensesHtml(e.senses) || '<div class="bp-body">' + definition + '</div>') +
             (verse ? '<div class="bp-ref">' + verse + '</div>' : '') +
             '<div class="bp-link"><a href="' + el.href + '" target="_blank" rel="noopener">Full entry at Blue Letter Bible →</a></div>';
 
