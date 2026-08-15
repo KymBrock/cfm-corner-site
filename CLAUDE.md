@@ -403,3 +403,51 @@ sentence saying the same thing still fails the test.
 overlap fell 275 → 52 of 2,939 shingles; Key Passages went 199 → 0. The full rule is in
 `STUDY-GUIDE-SPEC.md` § Division of labour — which lived only on a branch until 2026-08-15,
 which is why weeks 30–33 never had it.*
+
+## 🔬 K4 — LABEL EVERY STRUCTURAL CLAIM
+
+**Label every structural claim `verified` or `candidate`, and name the text it was checked
+against.**
+
+A count that does not say which text it counted is not checkable. Qualify them — *"stated as
+**Hebrew** counts"* — and explain the versification offset where one exists.
+
+*Week 34's poetry analyser reported **1 verified against 96 candidates** across 20 psalms and
+DECLINED to certify a Psalm 31 acrostic — logged as "the guardrail working, not a finding."
+That discipline then reached the reader in Passage 5: "A detector that only matched a clean
+A-to-Z would fail this psalm. Reproducing the irregularities is the test that the method
+works." No rule required it. This line is the rule. (Fable audit K4.)*
+
+## 🛡 K6 — A HEDGE IN ONE SECTION BINDS THE OTHERS
+
+**When a claim is hedged or attributed in one section, propagate it to every section that
+states the same thing.** A guide that hedges in §09 and over-claims in §03 is inconsistent
+with itself, and the reader meets the over-claim first.
+
+Hedge at **drafting time**, not as a cleanup pass. The evidence: Canaan's first draft already
+carried **25 hedge-phrases across 7 of 11 files**; Achaemenid needed **a dozen commits** to
+reach 8. The later pass was catching up to a standard the earlier guide had from day one.
+
+*Includes retracting numeric over-claims — "seven English months honor a god" became "four
+certainly… three more debated". Interpretation calls go to Kymber (queue class C), not to a
+session. (Fable audit K6; `CULTURE-SPEC.md` contains none of this.)*
+
+## 🎙 K7 — NARRATION SCRIPTS LIVE IN TWO PLACES, KEPT IN SYNC
+
+**Convention decided 2026-07-26, rescued to `main` 2026-08-15** — it was committed in
+`2ed6617`, which is not an ancestor of `main`, so the rule has been invisible where lessons
+are built.
+
+    Vault (canonical)  ~/Obsidian/K Master Vault/.../Culture/<Guide>/_narration/<slug>.script.md
+    Repo               docs/narration/<guide>/<slug>.script.md
+
+The vault is what the Narration Studio run reads; the repo copy is for easy find/edit
+(github.dev from a phone). **Edit one, update the other.**
+
+**A guide is a SYSTEM — prose, widget JSON, and audio must agree with each other.** When text
+changes, announce the audio re-gen in the same commit ("Script synced; §04 queued for
+re-gen") and close the loop from the other side when it lands ("Text-only; narration already
+matched"). A stepper reading 734 BC against prose saying 733 is a defect in the guide, not in
+one file.
+
+*Ruled 2026-08-15 (HUB-058): the lane may create an episode; Kymber approves before it ships.*
