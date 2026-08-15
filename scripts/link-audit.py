@@ -15,7 +15,7 @@ Usage:  python3 scripts/link-audit.py
         python3 scripts/link-audit.py --fix --week week10     (auto-link only week10)
 """
 
-import re, glob, json, sys, os
+import re, glob, json, sys, os, subprocess
 
 SITE_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -227,6 +227,40 @@ def _check_cross_language_tables(content):
     return issues
 
 
+def _published_weeks_among(paths):
+    """Which of these files already exist on live `main`.
+
+    The guardrail this serves was ruled by Kymber on 2026-08-14 after
+    LEXICON-POPUP-SPEC.md v1.2 line 168 spent four months telling sessions to run
+    `--fix` on published weeks. Correcting that line is not enough: it was believed
+    and obeyed the whole time. The refusal lives here, in the tool.
+
+    Deliberately FAIL-CLOSED. If git cannot be consulted, every week is treated as
+    published and --fix refuses. A check that cannot answer must not return "safe" —
+    four checks on 2026-08-14 reported clean because the query was wrong, not because
+    the property held.
+    """
+    weeks = set()
+    for p in paths:
+        m = re.search(r'(week\d+)', p.replace(os.sep, '/'))
+        if m:
+            weeks.add(m.group(1))
+    if not weeks:
+        return set()
+
+    published = set()
+    for wk in weeks:
+        try:
+            r = subprocess.run(
+                ['git', 'ls-tree', '-r', '--name-only', 'main', f'static/content/{wk}/'],
+                cwd=SITE_ROOT, capture_output=True, text=True, timeout=20)
+            if r.returncode != 0 or r.stdout.strip():
+                published.add(wk)          # present on main, OR git could not tell us
+        except Exception:
+            published.add(wk)              # fail closed
+    return published
+
+
 def main():
     args = sys.argv[1:]
     week_filter = None
@@ -298,6 +332,25 @@ def main():
 
     # ── --fix mode: auto-link bare terms in-place ──────────────────────────────
     if fix_mode:
+        blocked = _published_weeks_among(files)
+        if blocked and '--i-know-this-is-published' not in args:
+            print('\n🛑 REFUSED — --fix would rewrite PUBLISHED content.\n')
+            print('  Published on live main: ' + ', '.join(sorted(blocked)))
+            print('\n  --fix is an in-place mass auto-linker. On a published week it can')
+            print('  rewrite anchors that are already correct, and the live page is the')
+            print('  thing readers see. Kymber ruled on 2026-08-14 that published lessons')
+            print('  need a hard guardrail: "I do not want accidental rewrites... I do not')
+            print('  want that happening again."\n')
+            print('  For a PUBLISHED week, do this instead:')
+            print('    - replace only the specific wrong <a> anchor, by hand')
+            print('    - leave every surrounding byte untouched')
+            print('    - verify against the live page before and after\n')
+            print('  For a STAGED / unpublished week, --fix is fine — scope it:')
+            print('    python3 scripts/link-audit.py --fix --week weekNN\n')
+            print('  If you genuinely intend to rewrite published content, a PERSON must')
+            print('  type: --fix --i-know-this-is-published')
+            sys.exit(2)
+
         print('\n🔧 FIX MODE: applying auto-linkers to files with issues...\n')
         converter = _get_converter()
         if converter is None:
