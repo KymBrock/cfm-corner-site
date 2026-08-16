@@ -264,21 +264,26 @@ unless Kymber explicitly asks.** The deployment checklist says to flip
 `current`, but that is a DEPLOYMENT step — not a content-generation step.
 Only flip flags when actually deploying to production.
 
-### 5a. An image's ORIGIN is declared by its directory — never judged per file
+### 5a. The directory PROVES third-party — it does not prove original
 
 **Ruled by Kymber 2026-08-15 (CFM-020).** See: `mc-intelligence/locate.py CFM-020`
+**The implication runs one way only.** Read both lines:
 
-    static/images/culture/<topic>/*          ORIGINAL CFM Corner art.
-                                             No external credit. Source is the NAS.
-    static/images/culture/<topic>/sourced/   THIRD-PARTY — CREDIT sidecar REQUIRED
-                                .../photos/  THIRD-PARTY — CREDIT sidecar REQUIRED
-                                .../maps/    THIRD-PARTY — CREDIT sidecar REQUIRED
+    <topic>/sourced/ /photos/ /maps/   THIRD-PARTY, ALWAYS — CREDIT sidecar REQUIRED
+                                       sound: 0 of 90 are on the NAS
 
-Measured against the NAS the same day: **435 of 497** top-level images are on the NAS;
-**0 of 90** `sourced/`/`photos/`/`maps/` images are. The split is total.
+    <topic>/*  (top level)             MOSTLY hers — but NOT proof of origin
+                                       435 of 497 are on the NAS; the other 62 are not,
+                                       and 10 of those are CC BY-SA or public domain
 
-**Do not reason about whether a picture looks original.** The directory is the
-declaration. If a file is in the wrong one, move the file — do not re-classify it in prose.
+A `sourced/` path is **sufficient to require** a credit. A top-level path is **not
+sufficient to skip** one — `first-temple/cypriot-laver-stand.jpg` sits at top level and is
+CC BY-SA 3.0 (Marcus Cyron). **No NAS copy is the flag that a human must look**; 31
+top-level images are in that state today with no sidecar.
+
+**TWO sidecar naming conventions exist.** Pre-existing files use `<stem>.CREDIT.txt`;
+`backfill_image_credits.py` writes `<filename>.CREDIT.txt`. **Check both** — checking one
+undercounts coverage and reports credited images as bare.
 
 Kymber declared the sourced images are mostly AI-sourced and mostly from **Wikimedia
 Commons**. That is a **lead for finding each file's source page, not an attribution.**
