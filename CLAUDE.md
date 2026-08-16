@@ -30,6 +30,21 @@ discretion; *recovery/origin* claims are not.
 6. If a script or tool would modify multiple week files, STOP and
    ask Kymber before proceeding.
 
+
+## Published lessons — the linking rule (RULED 2026-08-15)
+
+**Never `--fix` or regenerate a PUBLISHED fragment.** Surgical anchor replacement only —
+rewrite the wrong `<a>` and leave every surrounding byte alone. **Staged or unpublished:
+`--fix` is fine, scoped to one week** (`--fix --week weekNN`), then scan the rendered page.
+
+*Ruled by Kymber 2026-08-15 (HUB-056), from her own 2026-08-04 line: "Regeneration is fine
+— Week 33 isn't published yet." `LEXICON-POPUP-SPEC.md` told sessions the opposite for four
+months and was referenced from no CLAUDE.md, so nothing corrected it. `link-audit.py` now
+refuses `--fix` on any week present on live `main`; this is the rule the tool enforces.*
+
+**And do not chase zero.** A fully linked week is *not* zero BARE HEBREW — the intentional
+divine-name and rabbinic residual is expected. The audit is not a publication gate.
+
 ## Violation History
 
 On 2026-02-21, commit `905fdfa` mass-regenerated all weeks 1–9 HTML,
@@ -307,3 +322,55 @@ full strategy with code examples.
 
 6. **Only when deploying to production:** flip previous week's `current`
    flag to `false` and commit everything together
+
+---
+
+## Where things are — read this before searching
+
+**`~/Obsidian/Translation Hub/mc-intelligence/locations.json`** declares where everything
+is: repos, worktrees, the 20 dictionary builds, data files, the NAS, services and ports.
+
+```bash
+python3 mc-intelligence/locate.py <thing>    # where is it, with the caveats
+python3 mc-intelligence/locate.py --traps    # why your search will lie to you
+python3 mc-intelligence/locate.py --verify   # is every declared path still real
+```
+
+Conversation histories are declared separately in `scriptorium/session_archives.json`.
+
+**Absence is a claim that needs evidence.** On 2026-08-15 three things were reported
+missing that were not missing — the ChatGPT export, the memory-intake adapters, and four
+dictionary build directories. Each was a *correct search of the wrong place*, which
+returns "not found" with total confidence. Two of them reached Kymber as a false claim.
+
+If it is not in the registry, say **"the registry does not declare it"** — not "it does
+not exist."
+
+
+---
+
+## Before researching or writing ANY CFM week — the canonical files
+
+**`INSTRUCTIONS_FOR_CLAUDE.md` is canonical.** 1,775 lines, and it says of itself: *"If any
+other document contradicts this one, this file wins."* It carries REQUIRED READING, the
+SOURCE PRIORITY MODEL, and the RULINGS IN FORCE.
+
+    K Master Vault/.../CFM Corner/OT_2026/Templates/INSTRUCTIONS_FOR_CLAUDE.md
+
+**Three more, and the work is already in them — do not search the web first:**
+
+| file | what it already holds |
+|---|---|
+| `Research Library/00_MASTER_RESOURCE_HUB.md` | ~47,000 indexed files across six vaults — Sacred Texts ~25,000 (Talmud 5,035, Midrash 369, Targumim 567), Knowlchemy ~2,260, **529 Interpreter articles filed BY LESSON** |
+| `OT_2026/Resources/00_RESOURCE_LOCATION_INDEX.md` | every research source, declared since 2026-01-04 |
+| `OT_2026/WeeklyLessons/Week_NN_*/[01_Weekly_Resources\|Video_Resources]/VIDEO_URL_TRACKER.md` | **the week's own work** — found videos, per-video reasoning, the completion checklist |
+
+Also: `cfm-corner-tools/data/static_resource_map.json` resolves Unshaken, Line Upon Line,
+Scripture Gems and the Church series for **49 of 52 weeks**. It is a lookup. Never re-search
+those — they cover the whole year and never move.
+
+**Why this is here:** on 2026-08-15 a session spent hours sweeping videos and still missed
+sources sitting in the vault all year. The preflight gate in `hugo_converter` catches this
+at GENERATION — but that session never generated anything, so it never fired. This block
+loads whether or not anyone remembers, which is the only thing that has ever worked.
+
