@@ -371,7 +371,7 @@ async function enhanceWeeklyTerms() {
     if (window.__cfmWeeklyTermsEnhanced) return;
     window.__cfmWeeklyTermsEnhanced = true;
 
-    const lexiconResponse = await fetch('/data/lexicon-popups.json?v=20260220b', { cache: 'no-store' }).catch(() => null);
+    const lexiconResponse = await fetch('/data/lexicon-popups.json?v=20260220b').catch(() => null);
     const lexiconData = lexiconResponse && lexiconResponse.ok ? await lexiconResponse.json() : {};
 
     const normalizeLatin = (text) => String(text || '')

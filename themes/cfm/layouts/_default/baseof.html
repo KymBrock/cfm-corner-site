@@ -471,7 +471,7 @@
       async function ensureLexiconData() {
         if (lexiconData) return lexiconData;
         try {
-          var res = await fetch('/data/lexicon-popups.json?v=20260220b', { cache: 'no-store' });
+          var res = await fetch('/data/lexicon-popups.json?v=20260220b');
           lexiconData = res.ok ? await res.json() : {};
         } catch (_) {
           lexiconData = {};
@@ -482,7 +482,7 @@
       async function ensureGrammarData() {
         if (grammarData) return grammarData;
         try {
-          var res = await fetch('/data/hebrew-grammar-popups.json?v=20260220a', { cache: 'no-store' });
+          var res = await fetch('/data/hebrew-grammar-popups.json?v=20260220a');
           grammarData = res.ok ? await res.json() : {};
         } catch (_) {
           grammarData = {};
@@ -493,7 +493,7 @@
       async function ensureHubData() {
         if (hubData) return hubData;
         try {
-          var res = await fetch('/data/lexicon-hub-supplement.json?v=20260622a', { cache: 'no-store' });
+          var res = await fetch('/data/lexicon-hub-supplement.json?v=20260622a');
           hubData = res.ok ? await res.json() : {};
         } catch (_) {
           hubData = {};
@@ -520,19 +520,62 @@
         return null;
       }
 
+      // SCRIPTURE DATA IS LOADED PER WEEK. Fixed 2026-08-17, reported by Kymber:
+      // "the hover on the scripture links is not working... if I click on them, nothing
+      // happens."
+      //
+      // This used to fetch /data/scripture-verses.json — 92.1 MB, 194,575 keys — on EVERY
+      // page load, with cache:'no-store' so it could never even be reused. The browser had
+      // to download and parse all of it before any hover or click could resolve, so the
+      // handler intercepted the click and then waited on data that never arrived. On a
+      // phone it never finished. Production shipped this to every reader on all 33
+      // published weeks; it was not a week-34 regression.
+      //
+      // Each week now loads only the passages it references: ~115 KB average, 122 KB for
+      // week 34. Slices are built by verification/build_verse_slices.py in cfm-corner-tools.
+      //
+      // THE FULL FILE REMAINS THE FALLBACK, fetched lazily and only after a miss. That is
+      // what makes this safe on published weeks: if a slice is stale, incomplete or absent,
+      // the reader gets the old slow path rather than a blank popup. A missing slice cannot
+      // break a page.
+      var scriptureFullData = null;
+      var scriptureFullPromise = null;
+
+      function currentWeekNumber() {
+        var m = location.pathname.match(/\/weeks\/(\d+)/);
+        return m ? m[1] : null;
+      }
+
       async function ensureScriptureData() {
         if (scriptureData) return scriptureData;
-        try {
-          var res = await fetch('/data/scripture-verses.json?v=20260315', { cache: 'no-store' });
-          scriptureData = res.ok ? await res.json() : {};
-        } catch (_) { scriptureData = {}; }
+        var week = currentWeekNumber();
+        if (week) {
+          try {
+            // Cacheable on purpose. 'no-store' on the old path meant re-downloading the
+            // entire database on every navigation, even within the same week.
+            var res = await fetch('/data/scripture-verses-week' + week + '.json?v=20260817');
+            if (res.ok) { scriptureData = await res.json(); return scriptureData; }
+          } catch (_) { /* fall through to the full database */ }
+        }
+        scriptureData = await ensureFullScriptureData();
         return scriptureData;
       }
 
-      async function getVerse(ref) {
-        if (!ref) return null;
-        var db = await ensureScriptureData();
-        var candidates = getReferenceCandidates(ref);
+      async function ensureFullScriptureData() {
+        if (scriptureFullData) return scriptureFullData;
+        if (!scriptureFullPromise) {
+          scriptureFullPromise = (async function() {
+            try {
+              var res = await fetch('/data/scripture-verses.json?v=20260315');
+              scriptureFullData = res.ok ? await res.json() : {};
+            } catch (_) { scriptureFullData = {}; }
+            return scriptureFullData;
+          })();
+        }
+        return scriptureFullPromise;
+      }
+
+      function lookupVerse(db, candidates) {
         for (var i = 0; i < candidates.length; i++) {
           if (db[candidates[i]]) return db[candidates[i]];
           if (/^\S.* \d+$/.test(candidates[i])) {
@@ -545,6 +588,17 @@
             }
           }
         }
+        return null;
+      }
+
+      async function getVerse(ref) {
+        if (!ref) return null;
+        var candidates = getReferenceCandidates(ref);
+        var hit = lookupVerse(await ensureScriptureData(), candidates);
+        if (hit) return hit;
+        // Missed against the week slice — consult the complete database once.
+        var full = await ensureFullScriptureData();
+        if (full !== scriptureData) return lookupVerse(full, candidates);
         return null;
       }
 
@@ -901,7 +955,7 @@
       async function ensureData() {
         if (data) return data;
         try {
-          var r = await fetch('/data/lds-popups.json', { cache: 'no-store' });
+          var r = await fetch('/data/lds-popups.json');
           data = r.ok ? await r.json() : {};
         } catch (_) { data = {}; }
         return data;
