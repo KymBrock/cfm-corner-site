@@ -138,6 +138,20 @@
       .blb-popup .bp-senses ul { list-style: none; margin: 3px 0 0; padding: 0 0 0 10px; border-left: 1px solid #ddd; }
       .blb-popup .bp-senses ul li { font-weight: 400; margin-top: 2px; }
       .blb-popup .bp-senses ul li::before { content: "\2014"; color: #999; margin-right: 5px; }
+      /* Proper-name meaning. Sourced from public-domain lexica; the reliability tag
+         travels with it so a reader never sees the meaning without its weight. */
+      .blb-popup .bp-ety { margin-top: 7px; padding-top: 6px; border-top: 1px solid #e8e8e8; }
+      .blb-popup .bp-ety-label {
+        font-size: 0.66em; letter-spacing: 0.07em; text-transform: uppercase;
+        color: var(--sage-dark, #4a6b52); font-weight: 700; margin-right: 4px;
+      }
+      .blb-popup .bp-ety-src { margin-top: 3px; font-size: 0.74em; color: #777; }
+      .blb-popup .bp-rel {
+        font-size: 0.92em; font-weight: 700; margin-right: 5px; letter-spacing: 0.03em;
+      }
+      .blb-popup .bp-rel.standard { color: #2f6b4f; }
+      .blb-popup .bp-rel.derived  { color: #8a6114; }
+      .blb-popup .bp-rel.dated    { color: #4a5a78; }
       /* Liddell-Scott-Jones, on demand. The button must accept clicks — the popup itself
          is pointer-events:none until .visible, and this sits inside it. */
       .blb-popup .bp-lsj-wrap { margin-top: 8px; }
@@ -532,6 +546,36 @@
           .replace(/"/g, '&quot;');
       }
 
+      // The meaning of a proper name, with its source shown to the reader.
+      //
+      // The reliability label is not decoration. These come from three works of differing
+      // weight: Strong's states some outright; others follow Strong's own Hebrew
+      // cross-reference, which is our join and not his; and Hitchcock 1869 is devotional
+      // etymology, confident where modern philology hedges, with some folk etymologies
+      // among it. A reader deciding how much to lean on "Martha means bitter" deserves to
+      // know which of those they are reading.
+      //
+      // Only entries whose meaning already matches what the site showed are populated
+      // today — Kymber's call, 2026-08-15. The rest wait on the cognate work. 159 of
+      // 14,271 entries carry an etymology; every other entry renders unchanged.
+      var RELIABILITY = {
+        standard: 'stated directly in the source',
+        derived:  'inferred from the Hebrew root the source points to',
+        dated:    '19th-century etymology — traditional, not modern consensus'
+      };
+
+      function etymologyHtml(e) {
+        if (!e || !e.etymology) return '';
+        var rel = e.etymology_reliability || '';
+        var why = RELIABILITY[rel] || '';
+        return '<div class="bp-ety">' +
+          '<span class="bp-ety-label">name means</span> ' + escHtml(e.etymology) +
+          (rel ? '<div class="bp-ety-src" title="' + escHtml(e.etymology_source || '') + '">' +
+                 '<span class="bp-rel ' + escHtml(rel) + '">' + escHtml(rel) + '</span>' +
+                 escHtml(why) + '</div>' : '') +
+        '</div>';
+      }
+
       // Render the nested sense outline when an entry has one.
       //
       // Returns '' when there are none, so the caller falls back to the flat `definition`
@@ -751,6 +795,7 @@
             // definition exactly as before. Additive: 11,641 entries take the old path.
             (sensesHtml(e.senses) || '<div class="bp-body">' + definition + '</div>') +
             (verse ? '<div class="bp-ref">' + verse + '</div>' : '') +
+            etymologyHtml(e) +
             (e.has_lsj ? '<div class="bp-lsj-wrap"><button type="button" class="bp-lsj-btn" '
               + 'data-code="' + escHtml(code) + '">Full classical entry (LSJ) ▸</button>'
               + '<div class="bp-lsj-body" hidden></div></div>' : '') +
