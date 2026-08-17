@@ -753,6 +753,25 @@
 
         // scripture — unified handling for BLB, Church, and data-ref
         var ref = resolveScriptureRef(el);
+
+        // AN EARLY CLICK MUST NOT FAIL SILENTLY. Measured on live week 33 in a real
+        // browser: fetch 1,075 ms + JSON.parse 595 ms = ~1.7 s before any lookup can
+        // answer. A click inside that window used to hit this handler, await data that
+        // had not arrived, and show NOTHING — no spinner, no message. That silence is
+        // why Kymber reported the links as broken rather than slow; after three seconds
+        // they work perfectly.
+        //
+        // The per-week slice shortens the window; it does not remove it. A reader on
+        // cellular will still land inside it, and silence would still read as broken.
+        // So say something the moment the pointer arrives.
+        if (!scriptureData) {
+          popup.innerHTML =
+            '<div class="bp-title">' + ref + '</div>' +
+            '<div class="bp-body" style="color:#666;font-style:italic;">Loading scripture…</div>';
+          place(el);
+          popup.classList.add('visible');
+        }
+
         var txt = await getVerse(ref);
 
         if (!txt && el.dataset && el.dataset.popupText) {
