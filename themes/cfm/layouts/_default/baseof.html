@@ -128,6 +128,29 @@
       .blb-popup .bp-greek { font-family: 'SBL Greek', 'Times New Roman', serif; }
       .blb-popup .bp-strongs { color: #888; font-size: 0.85em; margin-left: 6px; }
       .blb-popup .bp-body { color: #222; }
+      /* Nested sense outline. Kymber approved this format 2026-08-14 after reviewing five
+         rendered examples — "Yes. That looks great." — and it has never been on the live
+         site until now. Long entries scroll inside the popup rather than running off the
+         screen: G3022 is 328 characters once its truncation is undone. */
+      .blb-popup .bp-senses { margin: 0; padding: 0; list-style: none; max-height: 15em; overflow-y: auto; }
+      .blb-popup .bp-senses li { color: #222; }
+      .blb-popup .bp-senses > li { font-weight: 600; }
+      .blb-popup .bp-senses ul { list-style: none; margin: 3px 0 0; padding: 0 0 0 10px; border-left: 1px solid #ddd; }
+      .blb-popup .bp-senses ul li { font-weight: 400; margin-top: 2px; }
+      .blb-popup .bp-senses ul li::before { content: "\2014"; color: #999; margin-right: 5px; }
+      /* Liddell-Scott-Jones, on demand. The button must accept clicks — the popup itself
+         is pointer-events:none until .visible, and this sits inside it. */
+      .blb-popup .bp-lsj-wrap { margin-top: 8px; }
+      .blb-popup .bp-lsj-btn {
+        pointer-events: auto; cursor: pointer; font: inherit; font-size: 0.82em;
+        background: none; border: 0; padding: 0; text-align: left;
+        color: var(--sage-dark, #4a6b52); text-decoration: underline;
+      }
+      .blb-popup .bp-lsj-body {
+        margin-top: 6px; padding-top: 6px; border-top: 1px solid #e2e2e2;
+        font-size: 0.86em; color: #333; line-height: 1.45;
+        max-height: 18em; overflow-y: auto; pointer-events: auto;
+      }
       .blb-popup .bp-ref { margin-top: 6px; font-size: 0.85em; color: #666; font-style: italic; }
       .blb-popup .bp-link { margin-top: 8px; font-size: 0.82em; }
       .blb-popup .bp-link a { color: var(--sage-dark, #4a6b52); text-decoration: underline; pointer-events: auto; }
@@ -501,6 +524,76 @@
         return hubData;
       }
 
+      // Escapes its input: this text came from a third-party lexicon file and goes in via
+      // innerHTML, so it is not trusted even though it looks like plain words.
+      function escHtml(s) {
+        return String(s == null ? '' : s)
+          .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;');
+      }
+
+      // Render the nested sense outline when an entry has one.
+      //
+      // Returns '' when there are none, so the caller falls back to the flat `definition`
+      // exactly as before — that is what keeps this additive. 2,630 of 14,271 entries
+      // carry senses; the other 11,641 render unchanged.
+      function sensesHtml(senses) {
+        if (!senses || !senses.length) return '';
+        function level(items) {
+          var out = '';
+          for (var i = 0; i < items.length; i++) {
+            var it = items[i] || {};
+            var kids = (it.children && it.children.length) ? level(it.children) : '';
+            out += '<li>' + escHtml(it.text) + (kids ? '<ul>' + kids + '</ul>' : '') + '</li>';
+          }
+          return out;
+        }
+        return '<ul class="bp-senses">' + level(senses) + '</ul>';
+      }
+
+      // Liddell-Scott-Jones on demand. STEPBible TFLSJ, CC BY 4.0; citations preserved.
+      // 15.6 MB, so it is NEVER fetched on page load — only when a reader clicks the
+      // button, and then cached for the rest of the visit. That is the whole point of
+      // keeping it out of lexicon-popups.json.
+      //
+      // One delegated listener rather than one per popup render: the popup's innerHTML is
+      // rebuilt on every hover, so per-render handlers would leak.
+      document.addEventListener('click', async function (ev) {
+        var btn = ev.target && ev.target.closest && ev.target.closest('.bp-lsj-btn');
+        if (!btn) return;
+        ev.preventDefault();
+        ev.stopPropagation();
+        var wrap = btn.parentNode;
+        var body = wrap.querySelector('.bp-lsj-body');
+        if (!body) return;
+        if (!body.hidden) {                       // collapse
+          body.hidden = true;
+          btn.textContent = 'Full classical entry (LSJ) ▸';
+          return;
+        }
+        if (!body.dataset.loaded) {
+          btn.textContent = 'Loading Liddell-Scott-Jones…';
+          var db = await ensureLsjData();
+          var txt = db[btn.dataset.code || ''] || '';
+          body.textContent = txt || 'No classical entry for this term.';
+          body.dataset.loaded = '1';
+        }
+        body.hidden = false;
+        btn.textContent = 'Full classical entry (LSJ) ▾';
+      }, true);
+
+      var lsjData = null;
+      async function ensureLsjData() {
+        if (lsjData) return lsjData;
+        try {
+          var res = await fetch('/data/lsj-full.json?v=20260814a');
+          lsjData = res.ok ? await res.json() : {};
+        } catch (_) {
+          lsjData = {};
+        }
+        return lsjData;
+      }
+
       function normTerm(t) {
         return String(t || '').toLowerCase().replace(/[’']/g, "'").replace(/\s+/g, ' ').trim();
       }
@@ -654,8 +747,13 @@
             (code ? ' <span class="bp-strongs">(' + code + ')</span>' : '') +
             '</div>' +
             '<div class="bp-original ' + wordClass + '">' + original + '</div>' +
-            '<div class="bp-body">' + definition + '</div>' +
+            // The nested sense outline when the entry has one, otherwise the flat
+            // definition exactly as before. Additive: 11,641 entries take the old path.
+            (sensesHtml(e.senses) || '<div class="bp-body">' + definition + '</div>') +
             (verse ? '<div class="bp-ref">' + verse + '</div>' : '') +
+            (e.has_lsj ? '<div class="bp-lsj-wrap"><button type="button" class="bp-lsj-btn" '
+              + 'data-code="' + escHtml(code) + '">Full classical entry (LSJ) ▸</button>'
+              + '<div class="bp-lsj-body" hidden></div></div>' : '') +
             '<div class="bp-link"><a href="' + el.href + '" target="_blank" rel="noopener">Full entry at Blue Letter Bible →</a></div>';
 
           place(el);
