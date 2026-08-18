@@ -132,6 +132,9 @@
          rendered examples — "Yes. That looks great." — and it has never been on the live
          site until now. Long entries scroll inside the popup rather than running off the
          screen: G3022 is 328 characters once its truncation is undone. */
+      .blb-popup .bp-let-src { font-size: 11px; font-weight: 700; letter-spacing: .04em;
+        text-transform: uppercase; color: #8a7a5c; margin: 8px 0 2px; }
+      .blb-popup .bp-let-src:first-of-type { margin-top: 4px; }
       .blb-popup .bp-senses { margin: 0; padding: 0; list-style: none; max-height: 15em; overflow-y: auto; }
       .blb-popup .bp-senses li { color: #222; }
       .blb-popup .bp-senses > li { font-weight: 600; }
@@ -301,6 +304,10 @@
         if (!el) return null;
         // data-hub is first-class: any element with data-hub is a Translation Hub (non-Strong's) term
         if (el.dataset && el.dataset.hub) return 'hub';
+        // data-letter is first-class: a NAMED LETTER of the Hebrew alphabet, which Strong's
+        // does not contain. Must come before the href tests — a letter has no BLB entry to
+        // link to, and resolving one by name is what produced "qoph = ape".
+        if (el.dataset && el.dataset.letter) return 'letter';
         if (el.dataset && el.dataset.popupKind === 'source') return 'popup-source';
         // data-ref is first-class: any element with data-ref is a scripture reference
         if (el.dataset && el.dataset.ref) return 'scripture-ref';
@@ -525,6 +532,32 @@
           grammarData = {};
         }
         return grammarData;
+      }
+
+      // The 22 letters, from Klein and Jastrow via Sefaria. Built by
+      // cfm-corner-tools/verification/build_hebrew_letters.py. ~35 KB, fetched only when a
+      // reader actually opens a letter — acrostic weeks need it, most weeks never will.
+      var letterData = null;
+      async function ensureLetterData() {
+        if (letterData) return letterData;
+        try {
+          var res = await fetch('/data/hebrew-letters.json?v=20260818');
+          letterData = res.ok ? await res.json() : {letters: {}, aliases: {}};
+        } catch (_) {
+          letterData = {letters: {}, aliases: {}};
+        }
+        return letterData;
+      }
+
+      // Accepts the Hebrew character or any spelling a writer might use — qof, qoph, koph.
+      function getLetterEntry(db, key) {
+        if (!db || !key) return null;
+        var k = String(key).trim();
+        var L = db.letters || {};
+        if (L[k]) return L[k];
+        var lower = k.toLowerCase().replace(/['’ʿʼ]/g, '');
+        var A = db.aliases || {};
+        return (A[lower] && L[A[lower]]) || null;
       }
 
       async function ensureHubData() {
@@ -806,6 +839,48 @@
           return;
         }
 
+        if (type === 'letter') {
+          var ldb = await ensureLetterData();
+          var le = getLetterEntry(ldb, el.dataset.letter);
+          if (!le) return;   // Say nothing rather than something wrong. That was the bug.
+
+          var ORD = ['','first','second','third','fourth','fifth','sixth','seventh','eighth',
+            'ninth','tenth','eleventh','twelfth','thirteenth','fourteenth','fifteenth',
+            'sixteenth','seventeenth','eighteenth','nineteenth','twentieth','twenty-first',
+            'twenty-second'];
+          var lName = (le.names && le.names[0]) || '';
+          lName = lName.charAt(0).toUpperCase() + lName.slice(1);
+
+          // Klein leads — it carries the letter-name etymology and covers all 22. Jastrow
+          // follows where it has a real letter entry, for the interchanges.
+          var body = '';
+          if (le.klein) {
+            body += '<div class="bp-let-src">Klein</div>'
+                 +  '<div class="bp-body">' + escHtml(le.klein) + '</div>';
+          }
+          if (le.jastrow) {
+            body += '<div class="bp-let-src">Jastrow</div>'
+                 +  '<div class="bp-body">' + escHtml(le.jastrow) + '</div>';
+          }
+
+          // CC BY-NC REQUIRES ATTRIBUTION. It is not decoration — it is the condition on
+          // which we are allowed to show this at all. If this line is ever dropped for
+          // space, the entries have to come out with it.
+          var works = (le.sources || []).map(function (s) { return s.work; }).join(' · ');
+
+          popup.innerHTML =
+            '<div class="bp-title">' + escHtml(lName) +
+            ' <span class="bp-strongs">' + ORD[le.position] + ' letter</span></div>' +
+            '<div class="bp-original bp-hebrew">' + escHtml(le.letter) + '</div>' +
+            body +
+            '<div class="bp-ref">' + escHtml(works) +
+            ', via Sefaria · CC BY-NC</div>';
+
+          place(el);
+          popup.classList.add('visible');
+          return;
+        }
+
         if (type === 'hub') {
           var hdb = await ensureHubData();
           var hentry = (hdb && el.dataset && hdb[el.dataset.hub]) || {};
@@ -969,7 +1044,9 @@
       }
 
       function getTargetAnchor(target) {
-        return target && target.closest ? target.closest('[data-ref], a[href*="blueletterbible.org/"], a[href*="sefaria.org/"], a[href*="churchofjesuschrist.org/study/scriptures/"]') : null;
+        // [data-letter] has no href to match on — a letter has nowhere to link, which is
+        // the whole point. It must be named here or the popup never fires for it.
+        return target && target.closest ? target.closest('[data-ref], [data-letter], a[href*="blueletterbible.org/"], a[href*="sefaria.org/"], a[href*="churchofjesuschrist.org/study/scriptures/"]') : null;
       }
 
       // Desktop hover — guard against events originating inside the popup itself
@@ -993,10 +1070,17 @@
         if (el) {
           e.preventDefault();
           e.stopPropagation();
-          // First tap/click shows popup, second tap/click opens the destination.
+          // First tap/click shows popup, second tap/click opens the destination — where
+          // there IS one. A letter has no destination (nothing to link to is why it needs
+          // a popup at all), and window.open(undefined) opens a blank tab; on mobile that
+          // means every second tap on a letter navigates the reader away to nothing.
           if (activeEl === el && popup.classList.contains('visible')) {
-            window.open(el.href, '_blank', 'noopener');
-            hideNow();
+            if (el.href) {
+              window.open(el.href, '_blank', 'noopener');
+              hideNow();
+            } else {
+              hideNow();
+            }
           } else {
             show(el);
           }

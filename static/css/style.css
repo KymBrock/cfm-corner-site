@@ -792,6 +792,13 @@ body {
 .embedded-content .term-ref-group {
     display: inline;
 }
+/* A named Hebrew letter. It is a <span>, not an <a>, because there is nowhere to send the
+   reader — Strong's has no entries for the letters, which is why the popup exists. Without
+   this the span keeps the plain text cursor and reads as undiscoverable. */
+.embedded-content .term-ref[data-letter] {
+    cursor: help;
+    border-bottom-style: dotted;
+}
 /* Scripture references styled by ScriptTagger */
 .embedded-content a.BLBScriptRef {
     color: var(--sage-dark) !important;

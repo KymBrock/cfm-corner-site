@@ -1,0 +1,547 @@
+{
+ "_source": "Jastrow and Klein via Sefaria; vault copies at 02_GLOSSARY_SYSTEMS/Sefaria_Dictionaries/",
+ "_licence": "CC BY-NC — attribution required, non-commercial use only",
+ "_licence_basis": "Kymber's standing position 2026-08-14 (decisions.json: noncommercial-use-position). NC is defined by the USE, not the licensee's tax status; CFM Corner is free with no revenue. Does NOT cover paid products or paywalled content.",
+ "_built": "by verification/build_hebrew_letters.py",
+ "letters": {
+  "א": {
+   "letter": "א",
+   "position": 1,
+   "names": [
+    "aleph",
+    "alef"
+   ],
+   "klein": "א The first letter of the Hebrew alphabet. The name of the letter is ‘Aleph’, and so called in allusion to its ancient Heb. form, representing the head of an ox (see אֶלֶף ᴵᴵ, אַלּוּף ⱽᴵ, and cp. Akka. alpu, Arab. alif, Phoen. אלף, whence Gk. Alpha). In PBH it has the numerical value of one. א alternates with other gutterals, as with ה (see e.g. אָמוֹן, Jer. 52:15, instead of הָמוֹן), and with ע (see e.g. מְתָאֵב, Amos 6:5, instead of מֽתָעֵב). It also alternates with י (see e.g. צְבָאִים and צֽבָיִים, pl. of צְבִי). For the interchangeability of א and ה see also in the conjugational system Heb. הִפֽעִיל and Aram. אַפְעֵל, Heb. הִתֽפַּעֵל and Aram. אִתְפַּעֵל. א is used to form secondary verbs and nouns (see e.g. אבטח, אבחן, אַבְטָחָה, אַבֽחָנָה). In Aram. it also serves as the definite article (see ◌ָא ᴵ) and as the most common subst. and adj. suff. (see ◌ָא ᴵᴵ).",
+   "jastrow": "א Aleph, the first letter of the alphabet, interchanging with other gutturals, e.g. אבב, הבב, חבב, עבב; אליתא, עליתא &c.",
+   "sources": [
+    {
+     "work": "Klein Dictionary",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    },
+    {
+     "work": "Jastrow",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    }
+   ]
+  },
+  "ב": {
+   "letter": "ב",
+   "position": 2,
+   "names": [
+    "bet",
+    "beth",
+    "vet"
+   ],
+   "klein": "ב The second letter of the Hebrew alphabet. Its name is ‘Beth’ (lit.: ‘house’); so called in allusion to the ancient Heb. form of this letter, representing a house. In PBH it has the numerical value two. ב alternates with מ: cp. e.g. the river name אֲבָנָה and אֲמָנָה; the place name דִּיבוֹן and דִּימוֹן; בָּרִיא (= healthy, fat), and מֽרִיא (= fatling); the place name יַבְנֶה in Heb. and יַמְנִין in Syr. (whence Gk. iamnia, iamneia). ב also alternates with פ: cp. e.g. בזר and פזר (= to scatter); Heb. נשׁף and נשׁב (= to blow); תבר and תפר (= to sew); Heb. בִּקְעָה (= valley) and Syr. פְּקַעַתָּא (of s.m.); Heb. הפך (= to turn), Akka. abāku (= to bring, turn).",
+   "jastrow": "ב Beth, the second letter of the Alphabet. Its sound lies betwen p (פ) and v (ו), whence its interchange with either, e.g. הפקר and הבקר; בָּא (אַבָּא) and וָוא.—ב also interchanges with מ, as בולטיתא a. מלטיתא; cmp. b. h. מָלַט a. פָּלַט.",
+   "sources": [
+    {
+     "work": "Klein Dictionary",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    },
+    {
+     "work": "Jastrow",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    }
+   ]
+  },
+  "ג": {
+   "letter": "ג",
+   "position": 3,
+   "names": [
+    "gimel",
+    "gimmel"
+   ],
+   "klein": "ג The third letter of the Hebrew alphabet. Its name is ‘Gimel’; so called in allusion to the ancient Heb. form of this letter, representing the neck of a גָּמָל (= camel). In PBH it has the numerical value three. ג alternates with כ and with ק; cp. e.g. גנן and כנן; גָּבִיעַ (= cup) and Arab. qub‘a (= calyx); גָּדִישׁ, Aram.–Syr. גְּדִישָׁא (= heap) and Arab. kadis (of s.m.); גּוּמָץ (= pit) and Aram. כּוּמְצָא, קּוּמְצָא (of s.m.); גָּפְרִית (= brimstone), Aram. כֻּבְרִיתָא, Syr. כֶּבְרִיתָא, and Arab. kibrit (of s.m.); זְגוּגִית and Aram. זְכוּכִיתָא; מִגְבָּעָה and כּוֹבַע, קוֹבַע (= helmet); מזג and מסך; סגר and סכר; רגל and רכל.",
+   "jastrow": "ג Gimmel, the third letter of the Alphabet. It interchanges with כ and ק; cmp. גשרא a. כשורא; גזז a. קצץ &c.; is related to ח, as גבב, חבב; v. letter ח.",
+   "sources": [
+    {
+     "work": "Klein Dictionary",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    },
+    {
+     "work": "Jastrow",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    }
+   ]
+  },
+  "ד": {
+   "letter": "ד",
+   "position": 4,
+   "names": [
+    "dalet",
+    "daleth"
+   ],
+   "klein": "ד The fourth letter of the Hebrew alphabet. Its name, ‘Daleth’, lit. means ‘door’ (see דֶּלֶת); so called in allusion to the ancient Heb. form of this letter, representing a house (cp. דֶּלְתָּא). In PBH it has the numerical value four. ד alternates with ז (cp. e.g. גדד and גזז, נדר and נזר, דרשׁ and זרשׁ, Heb. דְּבוֹרָה and JAram. זִיבּוֹרָא). It also alternates with ט (cp. Heb. דִּבָּה, Aram. טִבָּא and Syr. טֶבָּא). ד also alternates with ת (cp. e.g. בדל and בתל, בדק ᴵ and בתק). In Arab. the corresponding consonant is d, sometimes dh (cp. e.g. חדל with Arab. ḥadhala, נדר with Arab. nadhara, קדר with Arab. qadhara). For the interchangeability of ד and ל cp. L. lacruma, lacrima (= tear), from Old L. dacruma, which is a loan word from Gk. dakruma. cp. also L. Ulixes, equivalent to Gk. Odysseus.",
+   "jastrow": "ד Daleth, the fourth letter of the Alphabet; it interchanges dialectically with ז, e.g. זב, דב; with צ, e.g. אֶדְבַּע, אֶצְבַּע.—ד eliminated in אוּנָּא = אוּדְנָא, קַמָּא = קַדְמָא.",
+   "sources": [
+    {
+     "work": "Klein Dictionary",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    },
+    {
+     "work": "Jastrow",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    }
+   ]
+  },
+  "ה": {
+   "letter": "ה",
+   "position": 5,
+   "names": [
+    "he",
+    "hey",
+    "heh"
+   ],
+   "klein": "ה The fifth letter of the Hebrew alphabet. Its name, ‘He’, is of uncertain origin. In PBH it has the numerical value five. ה often alternates with other gutturals, as with א (see the introductory entry to letter א), and with ח if it corresponds to Arab. ḥ (see introductory entry to letter ח). Heb. ה corresponds to Akka. א; cp. e.g. Heb. הָלַךְ (= he went) with Akka. ’alāku (= to go). Rarely Heb. א corresponds to Akka. sh; cp. הוּא (= he), הִיא (= she), with Akka. shū, resp. shī. For the interchangeability of the gutturals cp. also in the conjugational system Heb. הִפְעִיל, BAram. הַפְעֵל, Aram. אַפְעֵל, Arab. ’af‘ala, OSArab. הפעלה. In ע״ו stems sometimes secondary forms develop with the change of ו to ה. cp. מהל, a secondary form of מול (= to circumcise), נהר (= to shine), which is related to נור (= to shine). cp. also the bases כון and כהן, קהל and קול, Heb. בושׁ and Aram.–Syr. בְּהֵת (= he was ashamed), Heb. רוּץ (= to run) and Aram. רְהַט, Syr. רְהֵט (= he ran), Heb. דּוֹר (= generation, period, age) and Arab. dahr (= long time, age), Heb. נהק (= to yawn) and Syr. פָּק, Arab. fāqa (= he sighed).]",
+   "jastrow": "ה He, the fifth letter of the Alphabet.—It interchanges dialectically with א as דָּה a. דָּא, הֵידֵיין a. אֵידֵין, הַגָּדָה a. אַגָּדָה &c.; with ח as דְּהַךְ a. דְּחַךְ, גָּהָה a. גָּחָה &c.; with ו as בְּהֵית a. בּוֹשׁ, רְהַט a. רוּץ &c.—ה a formative prefix of verbal nouns, e.g. הֶסְפֵּד, הוֹלָכָה &c.",
+   "sources": [
+    {
+     "work": "Klein Dictionary",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    },
+    {
+     "work": "Jastrow",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    }
+   ]
+  },
+  "ו": {
+   "letter": "ו",
+   "position": 6,
+   "names": [
+    "vav",
+    "waw"
+   ],
+   "klein": "ו The sixth letter of the Hebrew alphabet. The name of this letter ‘Waw’, means ‘hook’, ‘peg’ (see וָו ᴵ); so called in allusion to the ancient Heb. form of this letter. In PBH it has the numerical value six. At the beginning of West Sem. words (i.e. Heb., Aram., Ugar.), ו almost always becomes י. cp. e.g. Arab. walada, Heb. יָלַד, Aram. יְלֵד (= he begot), or Ethiop. warḥ, Heb. יֶרַח, Aram. יַרְחָא (= month). cp. also the introductory entries to letters י and ה.",
+   "jastrow": "ו Vav, the sixth letter of the Alphabet. It interchanges wit ב, as אִיסְטְבָא a. אִיסְטְוָוא, a. fr.; v. letter ב; also with ע as וָתִיק a. b. h. עָתֵק (v. וֶסֶה); v. also letter י. In inflections ו interchanges with, and is the equivalent of י. [To give ו the value of a consonant, וו is frequently used for ו, as וֶסֶת and וֶוסֶת.—For lexicographical purposes ignore the second ו in words beginning with וו.—As a vowel sign u or o (וּ, וֹ). In words of foreign derivation וּ (u) is frequently inserted where the originals have a, as גוּלְיָיר for galearis &c.]",
+   "sources": [
+    {
+     "work": "Klein Dictionary",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    },
+    {
+     "work": "Jastrow",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    }
+   ]
+  },
+  "ז": {
+   "letter": "ז",
+   "position": 7,
+   "names": [
+    "zayin"
+   ],
+   "klein": "ז The seventh letter of the Hebrew alphabet. In PBH it has the numerical value seven. It alternates with ס (cp. עלז and עלס), and with צ (cp. זעק and צעק, עלז and עלץ, זרב and צרב, זער and צער). Heb. ז corresponds Aram.-Syr. ד, Ugar. d, Arab. dh, Ethiop. z, Akka. z. cp. e.g. Heb. זֶבַח, Aram. דּֽבַח, דִּבְחָא, Ugar. dbḥ, Arab. dhibḥ, Ethiop. sebḥ, Akka. zību (= sacrifice). cp. also Heb. בִּזֵּר, פִּזֵּר, Aram. בַּדַר (= he scattered), whence Arab. badhara (= he disseminated). Heb. ז also corresponds Aram.-Syr. ז, Ugar. z, Arab. z, Ethiop. z, Akka. z. cp. e.g. Heb. זַָנֶה, Aram. זְנָא, Syr. zannī́, Arab. zanā (= he committed fornication), Ethiop. zeynat (= pollution). See זַיִן ᴵᴵ.",
+   "jastrow": "ז Zayin, the seventh letter of the Alphabet; it interchanges with ד, q. v.; with צ, as זהר a. צהר, זוודא a. צדה &c.; with ס a. שׂ, as זור a. סור, עלז a. עלס &c. ז as final formative (Palez = Pales), as אושפיזא, אטליז &c.",
+   "sources": [
+    {
+     "work": "Klein Dictionary",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    },
+    {
+     "work": "Jastrow",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    }
+   ]
+  },
+  "ח": {
+   "letter": "ח",
+   "position": 8,
+   "names": [
+    "chet",
+    "het",
+    "heth"
+   ],
+   "klein": "ח The eighth letter of the Hebrew alphabet (‘heth’). It has the numerical value eight. Both in Heb. and Aram. the letter ח represented originally two different gutteral sounds, to which correspond in Ugar. ḥ and ẖ, Arab. ḥ and kh, SArab. ח and חֿ. In Akka. the sound corresponding to Arab. kh remained, that corresponding to ḥ appears as spiritus lenis. Through comparisons with Arab., etc. it is possible to differentiate various bases which have coincided in Heb. and Aram. spelling (see e.g. the bases חבל, חבר, חלה, חלל). Heb. ח sometimes alternates with Aram. ע, Arab. ‘and gh (see חֹב, צבע and רעב.)",
+   "jastrow": "ח Ḥeth, eighth letter of the Alphabet. It interchanges with א. ה a. ע, v. letters א, a. ה; also with ג a. ק, as חבב, גבב, a. קבב; חָרָה a. גָּרָה &c.—For dialectical pronunciation, v. ה\"א a. חי\"ת.",
+   "sources": [
+    {
+     "work": "Klein Dictionary",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    },
+    {
+     "work": "Jastrow",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    }
+   ]
+  },
+  "ט": {
+   "letter": "ט",
+   "position": 9,
+   "names": [
+    "tet",
+    "teth"
+   ],
+   "klein": "ט The ninth letter of the Hebrew alphabet. In PBH it has the numerical value nine. The sound ט (ṭ = emphatic ṯ) occurs in all Sem. languages. ט alternates with ת (cp. תעה and טעה, חתף and חטף) and appears esp. in the vicinity of emphatic and guttural sounds. See טֵית.",
+   "jastrow": "ט Teth, the ninth letter of the Alphabet. It interchanges dialectically with צ, as טביא a. צבי, with ת, as חטף a. חתף; with ד, as דפף a. טפף.",
+   "sources": [
+    {
+     "work": "Klein Dictionary",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    },
+    {
+     "work": "Jastrow",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    }
+   ]
+  },
+  "י": {
+   "letter": "י",
+   "position": 10,
+   "names": [
+    "yod",
+    "yodh",
+    "yud"
+   ],
+   "klein": "י The tenth letter of the Hebrew alphabet. Its name ‘Yodh’, ‘Yod’, is related to יָד (= hand); so called in allusion to the ancient Hebrew form of this letter. In PBH it has the numerical value ten. Alternates sometimes with א (see the introductory article to letter א).",
+   "jastrow": "י Yod, the tenth letter of the Alphabet. It interchanges with ו, e.g. יָדַע a. וַדַּאי; with א as יבד a. אבד; with ה, v. letter ה.—י is frequently a mater lectionis for ē, ĕ, and ī, ĭ, e.g. לֵילֵךְ, לֵישֵׁב (for b. h. לָלֶכֶת, לָשֶׁבֶת); הֶיסֵּב = הֶסֵּיב, דִּיבּוּר = דִּבּוּר.—יי is frequently used to indicate the consonantal value of י, as הִתְיָירֵא = הִתְיָרֵא.",
+   "sources": [
+    {
+     "work": "Klein Dictionary",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    },
+    {
+     "work": "Jastrow",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    }
+   ]
+  },
+  "כ": {
+   "letter": "כ",
+   "position": 11,
+   "names": [
+    "kaf",
+    "kaph",
+    "khaf"
+   ],
+   "klein": "כ The eleventh letter of the Hebrew alphabet. The name of this letter, ‘Kaph’, means ‘hollow of the hand’; so called in allusion to the ancient Heb. form of this letter. It has a final form ך. In PBH כ has the numerical value of twenty, and ך has the numerical value of five hundred. כ alternates with ג (see the introductory article to letter ג) and with ק; cp. e.g. קוֹבַע, secondary form of כּוֹבַע (= helmet), and כשׁט, a collateral base of קשט (= to make straight, to arrange, to adorn, decorate, ornament, embellish). See קשׁט ᴵ and תַּכְשִׁיט.",
+   "jastrow": "כ, ך Kaf, the eleventh letter of the Alphabet. It interchanges with ג q. v.; with ק, e.g. כּוֹבַע a. קוֹבַע; with ח, cmp. חבש a. כבש a. derivatives.",
+   "sources": [
+    {
+     "work": "Klein Dictionary",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    },
+    {
+     "work": "Jastrow",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    }
+   ]
+  },
+  "ל": {
+   "letter": "ל",
+   "position": 12,
+   "names": [
+    "lamed",
+    "lamedh"
+   ],
+   "klein": "ל The twelfth letter of the Hebrew alphabet. The name of this letter, ‘Lamed’, prob. means ‘the rod (of the teacher)’, from למד, which prob. meant orig. ‘to prick, sting, incite, goad’. In PBH it has the numerical value of thirty. It alternates with נ and with ר. With נ: cp. the bases לחץ and נחץ and the words לִשְׁכָּה and נִשְׁכָּה, כַּלָּה ᴵ and Arab. kanna (= daughter-in-law, sister-in-law), צֶלֶם and Arab. ṣanam (= idol, image), dialectal Arab. naqama and Arab. laqama (= he obstructed), dialectal Arab. naqiya and Arab. laqiya (= he encountered, met), Gk. litron and nitron (= carbonate, natron), L. leptis and neptis (= granddaughter). With ר: cp. Heb. חֶלֶץ and Aram. חֲרַץ (= loin); Arab. qalb (= heart), which according to some scholars is related to Heb. קֶרֶב; Heb. שָׁלַח (= he sent), and Arab. saraḥa (= he sent forth); PBH שַׁלְשֶׁלֶת, a secondary form of Biblical Heb. שַׁרְשֶׁרֶת; Attic Gk. klibanos and Doric Gk. kribanos (= covered earthen vessel); It. albero (= tree) from L. arbor; It. pellegrino, Fren. pèlerin (= pilgrim); Fren. palefroi (= palfrey) from Med. L. palafrēdus, from Late L. paraverēdus; It. mercoledi (= Wednesday) from L. Mercuriī diēs (lit. ‘day of Mercurius’); Eng. plum from vulgar L. prūna, from L. prūnum; Eng. turtle (= dove) from L. turtur. The alternation of the consonants l and n, resp. l and r is in most cases due to dissimilation. The ל sometimes appears at the end of nouns as an additional consonant, as in גִּבְעֹל (= stalk, stem), כַּרְמֶל (= garden land).",
+   "jastrow": "ל Lamed, the twelfth letter of the Alphabet. It interchanges with the liquids, e. g. שַׁלְשֶׁלֶת a. שַׁרְשֶׁרֶת; נִדְנָה a. לִדְנָה &c.—ל as first radical letter often rejected in inflection, e. g. לָקַח, קַח, קִיחָה &c.",
+   "sources": [
+    {
+     "work": "Klein Dictionary",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    },
+    {
+     "work": "Jastrow",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    }
+   ]
+  },
+  "מ": {
+   "letter": "מ",
+   "position": 13,
+   "names": [
+    "mem"
+   ],
+   "klein": "מ ‘Mem’ — the thirteenth letter of the Hebrew alphabet. The origin of its name is supposed to be מַיִם (= water); so called in allusion to the ancient form of this letter resembling waves of water. מ alternates with the other labials, esp. בּ, פּ and נ. It has a final form: ם. In PBH it has the numerical value of forty (מ) and six hundred (ם).",
+   "jastrow": "מ Mem, the thirteenth letter of the Alphabet. It interchanges with נ, esp. in the plural termination ִים, (Chald.) ִין, e. g. קוֹרְאִין = קוֹרְאִים, חִטִּין = חִטִּים &c., with ב, v. letter ב.—מ is frequently inserted for emphasizing a succeeding labial, cmp. סַמְפִּירִינוֹן a. סַפִּיר, זַמְבְּלִיגָא a. זַבְלִיגָא &c.—מ as a preformative letter in denominatives, e. g. מִזְבֵּחַ from זבח, מַדְבְּחָא from דבח, מְאוֹרָע from ארע &c.",
+   "sources": [
+    {
+     "work": "Klein Dictionary",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    },
+    {
+     "work": "Jastrow",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    }
+   ]
+  },
+  "נ": {
+   "letter": "נ",
+   "position": 14,
+   "names": [
+    "nun"
+   ],
+   "klein": "נ The fourteenth letter of the Hebrew alphabet. The name of the letter, ‘Nun’, means ‘fish’; so called in allusion to its ancient Heb. form. It has a final form ן. In PBH נ has the numerical value of fifty and ן has the numerical value of seven hundred. נ alternates with ל and מ (see introductory entries to these letters). It also alternates with ר (cp. כָּנַע and כָּרַע; גָּהַר with Syr. גְּהֵן (= he bent, bowed, stooped); זָרַח with Aram. רְּנַח (= it rose, shone); טָמַן with Aram.-Syr. טֽמַר (= he hid under the earth); שֽׁנַיִם with Aram. תְּרֵין (= two); בֵּן with Aram. בַּר (= son). נ also alternates with י as the first radical letter (cp. the bases יצב and נצב (= to put, place); נקשׁ and יקשׁ (= to lay snares). The letter נ is frequently assimilated, as e.g. יִנְגַשׁ becomes יִגַּשׁ; יִנְתֵּן becomes יִתֵּן.",
+   "jastrow": "נ Nun, the fourteenth letter of the alphabet. It interchanges with מ q. v.; with ל, q. v.; with ר, cmp. זָרַח a. דְּנַח; שְׁנַיִם a. תְּרֵין; with י as preformative letter, cmp. יצב a. נצב.—נ frequently inserted, a) in place of Dagesh forte, e. g. מַנְדַּע = מַדַּע; מִנְדְּרוֹן = מִדְּרוֹן;—b) to avoid a hiatus, as אִינְהוּ, נִינְהוּ &c.—ָן, ַן, נָא—afformative, e. g. גַּזְלָן, גַּזְלָנָא.—ן, Nun emphaticum, as אוֹרַיְיתִין = אוֹרַיְיתִי; esp. epenthetic Nun between verb and suffix, e. g. בְּרָאנוּן, Targ. Gen. V, 2; a. fr.",
+   "sources": [
+    {
+     "work": "Klein Dictionary",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    },
+    {
+     "work": "Jastrow",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    }
+   ]
+  },
+  "ס": {
+   "letter": "ס",
+   "position": 15,
+   "names": [
+    "samech",
+    "samekh",
+    "samek"
+   ],
+   "klein": "ס The fifteenth letter of the Hebrew alphabet. The name of the letter, ‘Samekh’, prob. derives from סמך and lit. means ‘support, fulcrum’; so called in allusion to its ancient Heb. form. In PBH it has the numerical value of sixty. When (as in most cases) it is an independent sibilant (beside שׂ and שׁ), its Arab. correspondence is s; cp. e.g. אָסַר and Arab. ’asara (= he bound, tied). Sometimes, however, it is secondary standing for orig. שׂ, in which case its Arab. equivalent is sh; cp. e.g. Heb. סְתָו and Arab. shitā’ (= winter). This change of שׂ to ס is quite frequent in NH and in Aram.; in Syriac the שׂ has been replaced entirely by ס. ס alternates also with ז (see the introductory article to letter ז). It often becomes צ, esp. in the vicinity of ח or emphatic sounds; cp. e.g. סחן ᴵ (= to be strong), with Arab. ḥaṣuna (= was strong); קסם (= to practice divination), with Syr. קְצַם (= he practiced divination); פֶּסַח (= Passover) with Syr. פֶּצְחָא (of s.m.); עקץ (= to sting, prick) with Syr. עַקֵּס (= it stung, it pricked). In some rare cases ס represents orig. שׁ; cp. סִרְיוֹן, a secondary form of שִׁרְיוֹן (= coat of arms, armor); Heb. כָּנַס, BAram., Aram. and Syr. כְּנַשׁ (= he gathered, collected).",
+   "jastrow": "ס Samekh, the fifteenth letter of the Alphabet. It interchanges with שׂ, e.g. פָּרַס a. פָּרַשׂ, נָסָא a. נָשָׂא; a. fr.; with ז, q. v.; with צ, as סַוָּאר a. צַוָּאר.—ס preformative for Safel forms, as in סקבל, סרהב &c.",
+   "sources": [
+    {
+     "work": "Klein Dictionary",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    },
+    {
+     "work": "Jastrow",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    }
+   ]
+  },
+  "ע": {
+   "letter": "ע",
+   "position": 16,
+   "names": [
+    "ayin"
+   ],
+   "klein": "ע ‘Ayin’ — the sixteenth letter of the Hebrew alphabet. Lit. meaning ’eye‘, and so called in allusion to the ancient form of this letter. In PBH it has the numerical value seventy. ע alternates with א (see introductory entry to letter א), with ח (see introductory entry to letter ח) and with ק. cp. BAram. אַרְקָא and Aram. אַרֽעָא (= earth; see אֶרֶץ); Heb. קִטֵּר (= he caused to smoke), and Aram. עֲטַר (= it smoked); cp. also Arab. qaṭrān (= tar), borrowed from Aram. עִטֽרָנָא (of s.m.); עַטְלִיז, from אִטֽלִיז (= butcher shop), from Gk. katalysis. In some rare cases the ע disappeared: cp. private name רוּת, prob. contracted from רֽעוּת, and בִּי (= please), which was possibly contracted from בּֽעִי (see בִּי ᴵᴵ).",
+   "jastrow": "ע ‘Ayin, the sixteenth letter of the Alphabet. It interchanges with א, and ח, v. letters א a. ח; also with ו, v. letter ו; dialectically with צ, e.g. צֹאן and עָאן; with ק, e.g. אַרְעָא a. אַרְקָא.—ע elided, e.g. טוּנָא = טוּעֲנָא; מַדַּנִּים = מַעֲדַנִּים.—V. עי\"ין.",
+   "sources": [
+    {
+     "work": "Klein Dictionary",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    },
+    {
+     "work": "Jastrow",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    }
+   ]
+  },
+  "פ": {
+   "letter": "פ",
+   "position": 17,
+   "names": [
+    "pe",
+    "peh",
+    "fe"
+   ],
+   "klein": "פ The seventeenth letter of the Hebrew alphabet. The name of the letter ‘Pe’ is prob. derived from פֶּה (= mouth), and so called in allusion to the ancient form of this letter. It has a final form ף. In PBH פ has the numerical value of eighty and ף has the numerical value of eight hundred. פ alternates with ב and מ (see introductory entries to these letters). In Arab. it alternates also with th (see e.g. bases חנף and עשׁן, and cp. Russian Fedor and Foma, which derive from Gk. Theodoros and Thomas).",
+   "jastrow": "פ Pé, the seventeenth letter of the Alphabet. It interchanges with ב, ו, and מ; v. letter ב.",
+   "sources": [
+    {
+     "work": "Klein Dictionary",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    },
+    {
+     "work": "Jastrow",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    }
+   ]
+  },
+  "צ": {
+   "letter": "צ",
+   "position": 18,
+   "names": [
+    "tsadi",
+    "tsade",
+    "tzadi",
+    "sadhe"
+   ],
+   "klein": "צ The eighteenth letter of the Heb. alphabet. The name of the letter, ‘tzadeh’ or ‘tzade’ (צָדֵי), means lit. ‘fishing hook’ and prob. so called in allusion to the ancient form of this letter. It is also called צַדִּיק, ‘tzaddik’, prob. formed from צָדֵי and ק, the letter following it in the Heb. alphabet, under the influence of the word צַדִּיק. צ has a final form, ץ. In PBH צ has the numerical value of ninety and ץ has the numerical value of nine hundred. Heb. צ comprises three orig. different sounds. 1 It corresponds to Aram.-Syr. צ, Ugar. ṣ, Arab ṣ, OSArab. צ, Ethiop. ṣ, Akka. ṣ. cp. e.g. Heb. אֶצְבַּע, Aram. אֶצְבַּע, אֶצְבְּעָא, Ugar. ṣb, Syr. צֶבְעָא, Arab. iṣba‘, OSArab. אצבע (as a measure), Ethiop. ’ aṣbā‘t, Akka. ṣubū, iṣbiṭṭu (= finger). 2 צ also corresponds to Aram.-Syr. ט, Ugar. ẓ, Arab. ẓ, OSArab. ט. cp. e.g. Heb. צֵל, Aram. טְלָלָא, Ugar. ẓl, Arab. ẓill, Syr. טֶלָּלָא (= shadow, shade). 3 צ also corresponds to Aram. ע (sometimes ק), Syr. ע, Arab. ḍ, OSArab. צ, Ethiop. ḍ, Akka. ṣ. cp. e.g. Heb. יָצָא (= he went out), Aram. and Syr. יעא (= to go forth, bloom), Arab. waḍu’a (= was or became beautiful, neat or clean), OSArab. וצא (= to go out). Sometimes in this case the Aram. equivalent is צ (see צמד and צרך). If Aram.-Syr. ע, as the regular equivalent of Heb. צ (see above), is preceded or followed by another guttural, it is usually dissimilated into א. cp. e.g. Heb. עֵץ and Aram. אָע, for עָע (= wood); Heb. צֶלַע and Syr. אֶלְעָא, for עֶלְעָא (= rib), Syr. אַעְפָא, for עַעְפָא (= double), and base צעף ᴵ, whence also Heb. צָעִיף (= veil). צ alternates with ז and ס (see the introductory entries to these letters). It also alternates with שׂ. cp. שׂחק — a collateral form of צחק (= to laugh). The change of צ to ג in JAram.-Syr. גִּחֵךְ (= he laughed) is due to dissimilation. For the rare interchangeability of צ and ק see אֶרֶץ, צֹאן, מחץ, עֵץ and צֶמֶר.",
+   "jastrow": "צ Tsadé (Sadé), the eighteenth letter of the alphabet. It interchanges with ז, ט a. ס, q. v.; dialectically with ע, q. v.",
+   "sources": [
+    {
+     "work": "Klein Dictionary",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    },
+    {
+     "work": "Jastrow",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    }
+   ]
+  },
+  "ק": {
+   "letter": "ק",
+   "position": 19,
+   "names": [
+    "qof",
+    "qoph",
+    "koph",
+    "kof"
+   ],
+   "klein": "ק The nineteenth letter of the Heb. alphabet. The name of the letter, קוֹף or קוּף (‘koph’, ‘kuph’), means lit. ‘eye of a needle’; so called in allusion to the ancient Heb. form of this letter. In PBH it has the numerical value of one hundred. ק alternates with ג, ח and כ (see the introductory entries to these letters). cp. e.g. Mand. גטאר (= to bind), with Aram.–Syr. קֽטַר, and Heb. קָשַׁר (= he bound, tied). For the rare interchangeability of ק and צ see the introductory entry to letter צ.",
+   "jastrow": "ק ḳof, the nineteenth letter of the Alphabet. It interchanges with ג a. כ, q. v.; also with ח and with ע, q. v.",
+   "sources": [
+    {
+     "work": "Klein Dictionary",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    },
+    {
+     "work": "Jastrow",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    }
+   ]
+  },
+  "ר": {
+   "letter": "ר",
+   "position": 20,
+   "names": [
+    "resh"
+   ],
+   "klein": "ר The twentieth letter of the Heb. alphabet. The name of the letter, רֵישׁ (‘resh’), is Aram., and lit. means ‘head’; so called in allusion to the ancient form of this letter. In PBH it has the numerical value of two hundred. ר alternates with ל and נ (see the introductory entries to these letters). ר often serves for the dissimilation of the reduplication of a consonant. So, e.g., דַּרְמֶשֶׂק is a dissimilated form of דַּמֶשֶׂק (= Damascus). In this way many bases and words have been enlarged into quadriliterals; cp. e.g. BAram. כָּרֽסֵא (= chair), which is prob. a loan word from Akka. kussu (= chair, throne), whence prob. also Heb. כִּסֵּא; base כרסם (= to chew, gnaw, devour), dissimilated from כסם (= to shear, clip); שַׁרְבִיט (= scepter), enlarged from שֵׁבֶט (of s.m.); סַרֽעַפָּה (= branch), enlarged from סֽעַפָּה (of s.m.); שַׂרְעַפִּים (= thoughts), enlarged from שֽׂעִפִּים (of s.m.). Sometimes ר is assimilated to the following consonant; so כִּרֽכַּר becomes כִּכָּר (see כִּכָּר ᴵ, כִּכָּר ᴵᴵ, כִּכָּר ᴵᴵᴵ).",
+   "jastrow": "ר Resh, the twentieth letter of the alphabet. It interchanges with ל, v. ל; with ד, e. g. גָּרַר a. גָּרַד, צָרַד a. צָרַר.—It is frequently inserted between the first and the second radical letters, forming Parel verbs or nouns, e.g. גַּרְבֵּל, קִרְסֵם, שַׁרְבִיט. It is sometimes a formative letter added at the end, e. g. חֲלֵיטַר, קִנְטֵר.—ר dropped at the end, e. g. אֲמִי = אֲמַר.",
+   "sources": [
+    {
+     "work": "Klein Dictionary",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    },
+    {
+     "work": "Jastrow",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    }
+   ]
+  },
+  "ש": {
+   "letter": "ש",
+   "position": 21,
+   "names": [
+    "shin",
+    "sin"
+   ],
+   "klein": "ש The twenty-first letter of the Heb. alphabet. The name of the letter ‘shin’ is prob. derived from שֵׁן (= tooth), and so called in allusion to the ancient form of this letter. In PBH it has the numerical value of three hundred. The letter ש marks two different sounds: שׂ (‘sin’) and שׁ (‘shin’). Heb. שׂ corresponds to Aram. שׂ and ס, Syr. ס, Ugar. sh, Arab. sh, Ethiop. sh, Akka. sh. cp. e.g. Heb. נָשָׂא, BAram. נְשָׂא, Aram. נְסָא (= he lifted, took, carried), Ugar. nsh (= to lift), Arab. nasha’a (= he rose, was high, grew up), Ethiop. nash’a (= he lifted; he transferred), Syr. מַסַּאתָא (= scales), Akka. nashū (= to lift; to carry). There are exceptions to the rule according to which Arab. sh corresponds to Heb. שׂ and vice versa. These exceptions are due mainly to assimilation, partly also to the circumstance that Heb. שׂ sometimes stands for orig. ס (see שׂכך, שׂבר ᴵ, שׂתם). In earlier Aram. and in BAram. שׂ is generally preserved, but many words that have שׂ in Biblical Heb. are regularly spelled in MH with ס. Heb. שׁ corresponds to Aram.–Syr. שׁ, Ugar. sh, Arab. s, Ethiop. sh, Akka. sh. cp. e.g. Heb. שָׁלוֹם, Aram.–Syr. שְׁלָם, שְׁלָמָא, Ugar. shlm, Arab. salām, Akka. shalāmu, shulmu (= peace). The s in Arab. shams (= sun) is due to dissimilation (see שֶׁמֶשׁ). In many cases Heb. שׁ corresponds to Aram.–Syr. תּ, Arab. th, Ethiop. s. cp. e.g. Heb. שָׁלשׁ, Aram.–Syr. תּֽלָת, Arab. thalāth, Ethiop. shalās (= three). As shown above, the Akka. equivalent of Heb. שׁ is sh. However, in some rare cases Heb. שׁ corresponds to Akka. s (as in sābu, ‘to draw water’, which corresponds to שׁאב). Akka. sh may become l before a dental. cp. e.g. ḫamishtu and ḫamiltu (= five; see חמשׁ), lubushtu and lubultu (= dress; see לבשׁ); mashtītu and maltītu (= drink; see שׁתה).",
+   "jastrow": "",
+   "sources": [
+    {
+     "work": "Klein Dictionary",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    }
+   ]
+  },
+  "ת": {
+   "letter": "ת",
+   "position": 22,
+   "names": [
+    "tav",
+    "taw",
+    "tau"
+   ],
+   "klein": "ת The twenty-second letter of the Heb. alphabet. The name of the letter, תָּו or תָּיו (‘Tav’, also ‘Taw’), means ‘sign’, ‘mark’; so called in allusion to the ancient form of this letter. In PBH it has the numerical value of four hundred. In the Sem. languages ת alternates with ד, ט and שׁ (see the introductory entries to these letters). ת often appears as the first radical in secondary bases enlarged from primary ones; see תאב ᴵ, תוה, תחל, possibly also תהל (supposed to be the base of תָּהֳלָה). The ת in these cases is either traceable to the ת of the conjugation הִתְפַּעֵל, or is originally identical with the subst. pref. תּ◌ (see תַּ◌, תִּ◌, תּוֹ◌). See תבע.",
+   "jastrow": "ת Tav, the twenty-second letter of the alphabet.—It interchanges with ט, q. v.; dialectically with ש, e.g. שׁוּב, Chald. תּוּב; שָׁבַר, Chald. תְּבַר.—ת a preformative letter for verbal nouns, e.g. תַּבְשִׁיל, fr. בָּשַׁל; תְּרוּמָה, fr. רוּם; an afformative letter, e.g. תַּרְעוֹמֶת, fr. רָעַם. Secondary verbs are formed from such nouns, e.g. תָּרַם, fr. תְּרוּמָה; הִתְחִיל, fr. תְּחִלָּה; or from verbs, e.g. תָּאַב, fr. אָבָה.",
+   "sources": [
+    {
+     "work": "Klein Dictionary",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    },
+    {
+     "work": "Jastrow",
+     "via": "Sefaria",
+     "licence": "CC-BY-NC"
+    }
+   ]
+  }
+ },
+ "aliases": {
+  "aleph": "א",
+  "alef": "א",
+  "bet": "ב",
+  "beth": "ב",
+  "vet": "ב",
+  "gimel": "ג",
+  "gimmel": "ג",
+  "dalet": "ד",
+  "daleth": "ד",
+  "he": "ה",
+  "hey": "ה",
+  "heh": "ה",
+  "vav": "ו",
+  "waw": "ו",
+  "zayin": "ז",
+  "chet": "ח",
+  "het": "ח",
+  "heth": "ח",
+  "tet": "ט",
+  "teth": "ט",
+  "yod": "י",
+  "yodh": "י",
+  "yud": "י",
+  "kaf": "כ",
+  "kaph": "כ",
+  "khaf": "כ",
+  "lamed": "ל",
+  "lamedh": "ל",
+  "mem": "מ",
+  "nun": "נ",
+  "samech": "ס",
+  "samekh": "ס",
+  "samek": "ס",
+  "ayin": "ע",
+  "pe": "פ",
+  "peh": "פ",
+  "fe": "פ",
+  "tsadi": "צ",
+  "tsade": "צ",
+  "tzadi": "צ",
+  "sadhe": "צ",
+  "qof": "ק",
+  "qoph": "ק",
+  "koph": "ק",
+  "kof": "ק",
+  "resh": "ר",
+  "shin": "ש",
+  "sin": "ש",
+  "tav": "ת",
+  "taw": "ת",
+  "tau": "ת"
+ }
+}

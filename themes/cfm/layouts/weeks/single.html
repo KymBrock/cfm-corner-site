@@ -516,6 +516,11 @@ async function enhanceWeeklyTerms() {
     // deliberate link to H5126 (Nun) still works.
     const LETTER_NAMES = new Set([
         'aleph','alef','bet','beth','vet','gimel','gimmel','dalet','daleth',
+        // he/hey/heh — the FIFTH letter, absent from this set until 2026-08-18. It was
+        // masked rather than handled: 'he' is in COMMON_ENGLISH, which is tested first, so
+        // the lexicon path skipped it and nobody noticed ה could not be reached at all.
+        // It is ambiguous below, so it still only links when the author supplies the Hebrew.
+        'he','hey','heh',
         'vav','waw','zayin','chet','het','heth','tet','teth','yod','yodh','yud',
         'kaf','kaph','khaf','lamed','mem','nun','samech','samekh','samek',
         'ayin','pe','peh','fe','tsadi','tsade','sadhe','tzadi',
@@ -573,6 +578,46 @@ async function enhanceWeeklyTerms() {
         return anchor;
     };
 
+    // A LETTER NAME THAT IS ALSO AN ORDINARY WORD. Linking every italic letter name would
+    // trade the qoph-is-an-ape bug for its mirror image: in a Psalms guide the italic word
+    // *sin* is overwhelmingly the English noun, not the twenty-first letter. So is *he*.
+    // *nun* is a religious sister and Joshua's father; *pe*, *vet*, *fe*, *tau* all read as
+    // something else first.
+    //
+    // These link ONLY when the prose supplies the Hebrew character alongside — "*sin* (שׂ)".
+    // That hint is written by the author and is decisive. The unambiguous names — aleph,
+    // gimel, dalet, zayin, samekh, tsadi, qoph, resh and the rest — need no such proof.
+    // Each of these reads as something else FIRST: the pronoun, the transgression, a
+    // religious sister and Joshua's father, a mouth (H6310), a veterinarian, the Greek
+    // letter. mem, tet, kof and the rest are not English words and link unaided.
+    const LETTER_NAMES_AMBIGUOUS = new Set([
+        'he','hey','heh','sin','nun','pe','peh','fe','vet','tau'
+    ]);
+
+    // The letter itself, as the reader wrote it: "(ק)". A single Hebrew character in the
+    // hint IS the corroboration — strip the points, which authors include and vary.
+    const hintIsLetter = (hebrewHint) => {
+        const bare = (hebrewHint || '').replace(/[֑-ׇ‎‏\s]/g, '');
+        return bare.length === 1 ? bare : '';
+    };
+
+    const createLetterSpan = (termText, hebrewHint) => {
+        const key = termText.toLowerCase().replace(/['’ʿʼ]/g, '');
+        if (!LETTER_NAMES.has(key)) return null;
+        const bare = hintIsLetter(hebrewHint);
+        // Ambiguous names must be vouched for by the Hebrew; unambiguous ones stand alone.
+        if (LETTER_NAMES_AMBIGUOUS.has(key) && !bare) return null;
+        const span = document.createElement('span');
+        span.className = 'term-ref';
+        // The popup resolves the name through the alias map, so the linker needs no data
+        // of its own — it only has to say "this is a letter, and this is what it's called".
+        span.dataset.letter = bare || key;
+        const em = document.createElement('em');
+        em.textContent = termText;
+        span.appendChild(em);
+        return span;
+    };
+
     const buildCompoundNodes = (termText, hebrewHint) => {
         if (!/[\/\s]/.test(termText)) return null;
         const parts = termText.split(/(\s+|\/)/);
@@ -611,6 +656,13 @@ async function enhanceWeeklyTerms() {
             const termText = (em.textContent || '').trim();
             if (!termText || termText.length < 2) return;
             const hebrewHint = extractHebrewHint(em);
+            // Letters first. They are not in Strong's, so anything the lexicon path finds
+            // for a letter name is a different word that happens to share it.
+            const letterSpan = createLetterSpan(termText, hebrewHint);
+            if (letterSpan) {
+                em.replaceWith(letterSpan);
+                return;
+            }
             const compound = buildCompoundNodes(termText, hebrewHint);
             if (compound) {
                 em.replaceWith(compound);
