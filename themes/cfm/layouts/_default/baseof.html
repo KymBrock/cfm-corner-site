@@ -135,6 +135,9 @@
       .blb-popup .bp-let-src { font-size: 11px; font-weight: 700; letter-spacing: .04em;
         text-transform: uppercase; color: #8a7a5c; margin: 8px 0 2px; }
       .blb-popup .bp-let-src:first-of-type { margin-top: 4px; }
+      .blb-popup .bp-let-final { color: #999; margin-left: .25em; }
+      .blb-popup .bp-let-chain { line-height: 1.9; word-spacing: .1em; }
+      .blb-popup .bp-let-aside { font-size: 11px; color: #777; word-spacing: normal; }
       .blb-popup .bp-senses { margin: 0; padding: 0; list-style: none; max-height: 15em; overflow-y: auto; }
       .blb-popup .bp-senses li { color: #222; }
       .blb-popup .bp-senses > li { font-weight: 600; }
@@ -534,7 +537,7 @@
         return grammarData;
       }
 
-      // The 22 letters, from Klein and Jastrow via Sefaria. Built by
+      // The 22 letters, from Kymber's own MASTER_ALPHABET_CHART_REFINED.md. Built by
       // cfm-corner-tools/verification/build_hebrew_letters.py. ~35 KB, fetched only when a
       // reader actually opens a letter — acrostic weeks need it, most weeks never will.
       var letterData = null;
@@ -844,37 +847,58 @@
           var le = getLetterEntry(ldb, el.dataset.letter);
           if (!le) return;   // Say nothing rather than something wrong. That was the bug.
 
-          var ORD = ['','first','second','third','fourth','fifth','sixth','seventh','eighth',
-            'ninth','tenth','eleventh','twelfth','thirteenth','fourteenth','fifteenth',
-            'sixteenth','seventeenth','eighteenth','nineteenth','twentieth','twenty-first',
-            'twenty-second'];
-          var lName = (le.names && le.names[0]) || '';
-          lName = lName.charAt(0).toUpperCase() + lName.slice(1);
+          // The letter as the reader meets it, then what the sign showed, then how the
+          // letter behaves in words. Deliberately NOT the theological themes — Kymber,
+          // 2026-08-18: "let's keep things simple for the popups and hovers." A theme
+          // rendered in the same box as numeric values would read as reference data
+          // rather than as her reading.
+          var glyph = escHtml(le.letter) +
+            (le.final_form ? ' <span class="bp-let-final">' + escHtml(le.final_form) +
+              '</span>' : '');
 
-          // Klein leads — it carries the letter-name etymology and covers all 22. Jastrow
-          // follows where it has a real letter entry, for the interchanges.
-          var body = '';
-          if (le.klein) {
-            body += '<div class="bp-let-src">Klein</div>'
-                 +  '<div class="bp-body">' + escHtml(le.klein) + '</div>';
+          var meta = [];
+          if (le.numeric_value) meta.push('value ' + escHtml(le.numeric_value));
+          if (le.transliteration) meta.push(escHtml(le.transliteration));
+
+          var body = '<div class="bp-body">' + escHtml(le.definition || '') + '</div>';
+          if (le.sign_shows) {
+            body += '<div class="bp-let-src">The sign shows</div>' +
+                    '<div class="bp-body">' + escHtml(le.sign_shows) + '</div>';
           }
-          if (le.jastrow) {
-            body += '<div class="bp-let-src">Jastrow</div>'
-                 +  '<div class="bp-body">' + escHtml(le.jastrow) + '</div>';
+          if (le.grammar) {
+            body += '<div class="bp-let-src">How it is used</div>' +
+                    '<div class="bp-body">' + escHtml(le.grammar) + '</div>';
           }
 
-          // CC BY-NC REQUIRES ATTRIBUTION. It is not decoration — it is the condition on
-          // which we are allowed to show this at all. If this line is ever dropped for
-          // space, the entries have to come out with it.
-          var works = (le.sources || []).map(function (s) { return s.work; }).join(' · ');
+          // The script lineage, which is the thing no lexicon gives and the reason her
+          // chart is the better source. Proto-Sinaitic is absent on purpose: it has no
+          // Unicode block and needs a font whose web-embedding licence is unresolved.
+          var S = le.scripts || {};
+          var chain = ['egyptian', 'phoenician', 'aramaic_imperial', 'hebrew', 'greek',
+                       'latin'].filter(function (k) { return S[k]; })
+                     .map(function (k) { return escHtml(S[k]); });
+          if (chain.length > 2) {
+            body += '<div class="bp-let-src">Through the scripts</div>' +
+                    '<div class="bp-body bp-let-chain">' + chain.join(' &rarr; ') + '</div>';
+            // Samaritan sits OUTSIDE the arrows on purpose. It carries on the old
+            // Paleo-Hebrew letterform, while the square Hebrew above came through
+            // Aramaic — putting it in the chain would claim a descent that did not
+            // happen, and the whole point of these entries is not asserting things.
+            if (le.samaritan) {
+              body += '<div class="bp-body bp-let-chain">' + escHtml(le.samaritan) +
+                      ' &nbsp;<span class="bp-let-aside">Samaritan, which kept the older ' +
+                      'letterform rather than adopting the Aramaic square script</span>' +
+                      '</div>';
+            }
+          }
 
           popup.innerHTML =
-            '<div class="bp-title">' + escHtml(lName) +
-            ' <span class="bp-strongs">' + ORD[le.position] + ' letter</span></div>' +
-            '<div class="bp-original bp-hebrew">' + escHtml(le.letter) + '</div>' +
+            '<div class="bp-title">' + escHtml(le.name || '') +
+            ' <span class="bp-strongs">letter ' + le.position + ' of 22' +
+            (meta.length ? ' &middot; ' + meta.join(' &middot; ') : '') + '</span></div>' +
+            '<div class="bp-original bp-hebrew">' + glyph + '</div>' +
             body +
-            '<div class="bp-ref">' + escHtml(works) +
-            ', via Sefaria · CC BY-NC</div>';
+            '<div class="bp-ref">CFM Corner letter entries</div>';
 
           place(el);
           popup.classList.add('visible');

@@ -514,17 +514,20 @@ async function enhanceWeeklyTerms() {
     // transliterated terms live — which is exactly where a letter name appears when the
     // prose is walking an acrostic. An explicit data-strongs link is untouched, so a
     // deliberate link to H5126 (Nun) still works.
+    // KYMBER'S SPELLINGS ARE CANONICAL — Hey, Pey, Tzaddi, Quph, from her
+    // MASTER_ALPHABET_CHART_REFINED.md. Until 2026-08-18 this set contained none of those
+    // four and nothing at all for he/hey, so the fifth letter was unreachable by any route
+    // and four of her own spellings matched nothing. The definitive list is the alias table
+    // in static/data/hebrew-letters.json; this set must stay a superset of it.
     const LETTER_NAMES = new Set([
-        'aleph','alef','bet','beth','vet','gimel','gimmel','dalet','daleth',
-        // he/hey/heh — the FIFTH letter, absent from this set until 2026-08-18. It was
-        // masked rather than handled: 'he' is in COMMON_ENGLISH, which is tested first, so
-        // the lexicon path skipped it and nobody noticed ה could not be reached at all.
-        // It is ambiguous below, so it still only links when the author supplies the Hebrew.
-        'he','hey','heh',
-        'vav','waw','zayin','chet','het','heth','tet','teth','yod','yodh','yud',
-        'kaf','kaph','khaf','lamed','mem','nun','samech','samekh','samek',
-        'ayin','pe','peh','fe','tsadi','tsade','sadhe','tzadi',
-        'qof','qoph','koph','kof','resh','shin','sin','tav','taw','tau'
+        'aleph','alef','bet','beth','vet','bais','beis','gimel','gimmel',
+        'dalet','daled','daleth','he','hey','heh','hei','vav','waw','vov',
+        'zayin','zain','chet','het','heth','khet','tet','teth','yod','yodh','yud',
+        'kaf','kaph','khaf','chaf','lamed','lamedh','mem','nun',
+        'samech','samekh','samek','ayin','ain','pe','peh','pey','fe','feh',
+        'tsadi','tsade','tzade','tzaddi','tzadik','sadhe',
+        'qof','qoph','quph','koph','kof','kuf','resh','reish',
+        'shin','sin','tav','taw','tau','sav'
     ]);
     const resolveTargetFromText = (termText, hebrewHint) => {
         const hintKey = normalizeHebrew(hebrewHint || '');
@@ -590,8 +593,13 @@ async function enhanceWeeklyTerms() {
     // Each of these reads as something else FIRST: the pronoun, the transgression, a
     // religious sister and Joshua's father, a mouth (H6310), a veterinarian, the Greek
     // letter. mem, tet, kof and the rest are not English words and link unaided.
+    // chet/het/heth is here on MEASURED evidence: week 26 uses chet ten times as the noun
+    // חֵטְא, sin, seven already correctly linked to H2399. Treating it as a letter would
+    // rewrite that week's discussion of sin into "the eighth letter" — the qoph bug in
+    // mirror image. It was the only such name in the whole content tree.
     const LETTER_NAMES_AMBIGUOUS = new Set([
-        'he','hey','heh','sin','nun','pe','peh','fe','vet','tau'
+        'he','hey','heh','hei','sin','nun','pe','peh','pey','fe','feh','vet','tau',
+        'chet','het','heth','khet'
     ]);
 
     // The letter itself, as the reader wrote it: "(ק)". A single Hebrew character in the
