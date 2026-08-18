@@ -498,6 +498,29 @@ async function enhanceWeeklyTerms() {
     };
 
     const COMMON_ENGLISH = new Set(['a','an','the','is','as','at','be','by','do','he','if','in','it','me','my','no','of','on','or','so','to','up','us','we','oh','all','and','are','but','for','had','has','her','him','his','how','its','may','not','out','she','than','that','them','they','this','was','who','why','with','from','were','been','have','will','your','you','our','one','two','now','see','way','man','men','god','lord','latin','greek','hebrew','english','psalm','psalms']);
+    // HEBREW LETTER NAMES ARE NOT WORDS. Kymber, 2026-08-17: "qoph, instead of
+    // indicating this is a letter of the alphabet, it is saying it means ape."
+    //
+    // She is right and the link was actively misinforming. H6971 qôp̄ really does mean
+    // "ape" in Strong's — but the LETTER qoph is not in Strong's at all, so an acrostic
+    // discussion naming its lines aleph → tav had "qof" silently resolved to a monkey.
+    // In a Psalms week that is close to guaranteed: Psalms 25, 34, 37, 111, 112, 119 and
+    // 145 are acrostics and every one of them names its letters.
+    //
+    // Several of these ARE also ordinary words — nun is Joshua's father, ayin is an eye,
+    // pe a mouth, and yod is kin to yad, a hand. Blanket-excluding them everywhere would
+    // trade a wrong link for a missing one. This guard is narrow on purpose: it only
+    // applies to the ITALIC auto-linker, and italics in these guides are where
+    // transliterated terms live — which is exactly where a letter name appears when the
+    // prose is walking an acrostic. An explicit data-strongs link is untouched, so a
+    // deliberate link to H5126 (Nun) still works.
+    const LETTER_NAMES = new Set([
+        'aleph','alef','bet','beth','vet','gimel','gimmel','dalet','daleth',
+        'vav','waw','zayin','chet','het','heth','tet','teth','yod','yodh','yud',
+        'kaf','kaph','khaf','lamed','mem','nun','samech','samekh','samek',
+        'ayin','pe','peh','fe','tsadi','tsade','sadhe','tzadi',
+        'qof','qoph','koph','kof','resh','shin','sin','tav','taw','tau'
+    ]);
     const resolveTargetFromText = (termText, hebrewHint) => {
         const hintKey = normalizeHebrew(hebrewHint || '');
         if (hintKey) {
@@ -507,6 +530,7 @@ async function enhanceWeeklyTerms() {
         const candidates = buildCandidates(termText);
         for (const candidate of candidates) {
             if (COMMON_ENGLISH.has(candidate)) continue;
+            if (LETTER_NAMES.has(candidate)) continue;
             if (translitIndex[candidate]) return translitIndex[candidate];
         }
         return null;
