@@ -1,6 +1,12 @@
 ---
 draft: true
 stage: drafting
+# Blockers recorded 2026-08-21 on Kymber's ruling — "all of these guides need work".
+# This section previously recorded nothing about why it is held.
+stage_blockers:
+  - "Quality pass — to the standard being applied to the Come, Follow Me study guides"
+  - "Narration — pronunciation not yet usable; waiting on the live-narration recording specs"
+  - "Kymber's approval to publish the field guides at all"
 title: "Echoes of the First Tradition"
 description: "Comparative mythology and the biblical world — the flood, the sacred tree, the primordial waters, and the night sky, read as scattered fragments of one original tradition."
 hide_from_parent: false
