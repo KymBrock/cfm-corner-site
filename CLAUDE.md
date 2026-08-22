@@ -30,6 +30,19 @@ discretion; *recovery/origin* claims are not.
 6. If a script or tool would modify multiple week files, STOP and
    ask Kymber before proceeding.
 
+**What these rules protect (clarified 2026-08-04):** the danger is overwriting
+hand-crafted content that is **already published live**. These rules are NOT a ban
+on the normal content pipeline. For a **staged, unpublished week** (`draft: true`,
+not yet on the live site), the CORRECT workflow is **source-first**: edit the vault
+markdown source (e.g. `…/WeeklyLessons/Week_NN_…/02_Weekly_Insights/*.md`,
+`03_Study_Guide/*.md`), regenerate **that one week's** fragments with the converter
+(`--week NN --type study-guide|insights|resources`), `git diff`-review, and verify
+in the local preview before committing to the week's branch. That keeps the vault
+source (the true source of truth) and the generated fragment in sync — hand-editing
+a generated fragment silently diverges it from its source, so do it only for a tiny
+surgical fix. **Still forbidden:** regenerating to fix/edit an *already-published
+(live)* week's fragment (use a surgical anchor edit instead — see the lexicon-
+collision note below), and running the converter across multiple weeks at once.
 
 ## Published lessons — the linking rule (RULED 2026-08-15)
 
@@ -88,6 +101,8 @@ When deploying a new week, follow these steps in order:
 - For chapter-only references such as `Exodus 3`, use the full book + chapter in `data-ref`; do not rely on shorthand.
 - Do not invent glossary/term links. If a term is not in the approved glossary data, leave it plain or flag it for glossary expansion rather than fabricating a popup.
 - Plain transliterations that function as term notes or glosses should not be left floating when a source link exists nearby. Link them either to the verified lexicon/source entry or to the specific source passage being discussed.
+- **Link the transliteration, never the pointed Hebrew script.** The lexicon auto-linker attaches the popup to the *transliteration* (e.g. `torah`), leaving the vocalized script (תּוֹרָה) bare so niqqud stays legible. Many "bare Hebrew" audit hits are therefore correct, not defects.
+- **Lexicon collisions & mislinks.** Several Strong's entries can normalize to the same transliteration key (e.g. `torah` → H8451 "law" vs ṭōraḥ H2960 "burden"). The converter now resolves these to the plain-ASCII lemma automatically (`hugo_converter._translit_quality`). If a transliteration still links to the wrong homonym: (1) add/fix an entry in `cfm-corner-tools/data/translit-aliases.json` (`"translit": "H####"`), then (2) for an **already-published** fragment do a **surgical anchor replace** — rewrite only that `<a data-strongs=…>`'s attributes, preserving the inner text. **NEVER regenerate a published fragment to fix a link** (that risks the hand-crafted-content loss in §1). Verify the sense in context first — some collisions are legitimately the other word (e.g. `ba'al` as verb/owner, not the deity).
 - Every direct quote from a prophet or apostle in a touched file must link to a verified source. If the exact source cannot be verified, remove the quotation marks and flag it as `[QUOTE SOURCE PENDING VERIFICATION]` rather than leaving an unlinked quote.
 - Word studies in touched files must include linked Greek, Latin, and English cognates or close parallels where the format calls for them. Do not leave the Hebrew alone if the word-study pattern expects cross-language parallels.
 
@@ -263,31 +278,56 @@ unless Kymber explicitly asks.** The deployment checklist says to flip
 `current`, but that is a DEPLOYMENT step — not a content-generation step.
 Only flip flags when actually deploying to production.
 
+### 5a. The directory PROVES third-party — it does not prove original
+
+**Ruled by Kymber 2026-08-15 (CFM-020).** See: `mc-intelligence/locate.py CFM-020`
+**The implication runs one way only.** Read both lines:
+
+    <topic>/sourced/ /photos/ /maps/   THIRD-PARTY, ALWAYS — CREDIT sidecar REQUIRED
+                                       sound: 0 of 90 are on the NAS
+
+    <topic>/*  (top level)             MOSTLY hers — but NOT proof of origin
+                                       435 of 497 are on the NAS; the other 62 are not,
+                                       and 10 of those are CC BY-SA or public domain
+
+A `sourced/` path is **sufficient to require** a credit. A top-level path is **not
+sufficient to skip** one — `first-temple/cypriot-laver-stand.jpg` sits at top level and is
+CC BY-SA 3.0 (Marcus Cyron). **No NAS copy is the flag that a human must look**; 31
+top-level images are in that state today with no sidecar.
+
+**TWO sidecar naming conventions exist.** Pre-existing files use `<stem>.CREDIT.txt`;
+`backfill_image_credits.py` writes `<filename>.CREDIT.txt`. **Check both** — checking one
+undercounts coverage and reports credited images as bare.
+
+Kymber declared the sourced images are mostly AI-sourced and mostly from **Wikimedia
+Commons**. That is a **lead for finding each file's source page, not an attribution.**
+Commons carries both public-domain and CC-BY-SA works, and CC-BY-SA requires naming the
+author and the licence. Writing "Wikimedia Commons" into a credit line would be a
+fabricated attribution that happens to look plausible.
+
 ### 6. Hugo Static File Caching
 Hugo's `readFile` function caches static files at build time. After
 editing any file in `static/content/`, you MUST restart the Hugo server
 to see changes. Live reload does NOT pick up static file changes.
 
-### 7. macOS Dark Mode vs Tkinter (DIAGNOSED — NOT YET FIXED)
-Six styling attempts failed, but the root cause is NOT "macOS dark mode
-vs Tkinter" in general. The root cause is **global ttk style overrides**:
+### 7. macOS Dark Mode vs Tkinter (RESOLVED 2026-07-29)
+Fixed and launch-tested — the GUI renders legibly in macOS dark mode
+(cfm-corner-tools commit `11cc697`). The root cause was **global ttk style
+overrides**:
 - `style.configure(".", ...)` — overrides ALL widget colors, causes invisibility
 - `style.map(".", ...)` — same problem
 - `tk_setPalette()` — no effect on ttk, confuses widget rendering
 
-The current `hugo_gui.py` (restored from commit `dc55dd0`) has ZERO
-styling code and should render with default ttk appearance.
+The fix in `hugo_gui.py`:
+- Forces the `clam` theme (`s.theme_use('clam')`) — macOS `aqua` ignores ttk
+  background colors and goes unreadable in dark mode; `clam` respects them.
+- Uses ONLY named styles (`CFM.TFrame`, `CFM.TLabel`, `CFM.TButton`, …) plus a
+  hardcoded CFM palette — NEVER the global `style.configure(".", ...)`.
+- Adds a custom `MacButton` canvas widget for colored, legible action buttons.
 
-**Next session approach (test-first, minimal fix):**
-1. Run a single diagnostic test (bare ttk widgets, no styling) to confirm
-   default rendering works
-2. Launch the current GUI as-is (it has no styling)
-3. Only then add CFM branding using ONLY named styles (`CFM.TButton`, etc.)
-4. NEVER use `style.configure(".", ...)` — this is what broke everything
-5. Add `--no-style` flag for future debugging
-
-See `Session_Handoffs/2026-03-14_Week12_Session_Handoff.md` §4 for
-full strategy with code examples.
+⚠️ Do NOT reintroduce a global `style.configure(".", ...)` / `style.map(".", ...)`
+/ `tk_setPalette()` — that is exactly what broke the six prior attempts. The GUI
+is now the recommended way to generate content.
 
 ---
 
@@ -295,7 +335,9 @@ full strategy with code examples.
 
 ### Step-by-step for each new week:
 
-1. **Generate content via CLI** (not the GUI until dark mode is fixed):
+1. **Generate content** — the GUI (`python3 converters/hugo_gui.py`) now renders
+   correctly in dark mode (fixed 2026-07-29, see §7) and is the recommended path.
+   The CLI is equivalent:
    ```bash
    cd /path/to/cfm-corner-tools
    python3 -m converters.hugo_converter --week NN --type resources
@@ -324,6 +366,132 @@ full strategy with code examples.
    flag to `false` and commit everything together
 
 ---
+
+## Staging & Deployment Surfaces
+
+Two surfaces serve this site. Canonical detail lives in `docs/staging-pipeline.md`
+(the staging flag model) and `docs/working-remotely.md` (Cloudflare previews +
+Hugo version pinning). This section is the quick map that ties them together.
+
+### Production — GitHub Pages (NOT Cloudflare)
+- Built + deployed by `.github/workflows/deploy.yml` on every push to **`main`**
+  (and `workflow_dispatch`). Build: `hugo --minify --baseURL "https://www.cfmcorner.com/"`
+  → `./public`, then a Pagefind search index. Hugo pinned to **0.156.0**.
+- Live URL: **https://www.cfmcorner.com/** (custom domain via `static/CNAME`).
+- Pre-build guard `scripts/check-staging.sh` **fails CI** if any non-live page is
+  missing `draft: true` — a half-finished week cannot leak to production.
+- **Only `main` deploys to production.** Never commit staged/in-progress week
+  content straight to `main`; work on a branch (worktree convention below).
+
+### Previews — Cloudflare Pages (staging only, never production)
+- Project **`cfm-corner-previews`**, Git-connected through the Cloudflare
+  dashboard. There is **no `wrangler.toml` in the repo** — the project config is
+  dashboard-only. Dashboard build command: `sh scripts/cf-pages-build.sh`,
+  output `public`, `HUGO_VERSION = 0.156.0`.
+- Every branch push auto-builds a preview at
+  **`https://<branch-alias>.cfm-corner-previews.pages.dev/`**
+  (branch-alias = branch name lowercased, `/` and `_` → `-`, capped 28 chars).
+- `cf-pages-build.sh` builds **with drafts** (`hugo -D --config hugo.toml,config-preview.toml`)
+  for any non-`main` branch, and a **draft-free production mirror** for `main`
+  (smoke test). Every `*.pages.dev` build is **noindexed** (robots + `X-Robots-Tag`).
+- Manual one-off preview: `sh scripts/deploy-preview.sh` (wraps
+  `npx wrangler pages deploy public --project-name cfm-corner-previews --branch <branch>`;
+  needs a one-time `npx wrangler login`).
+
+### Local preview (`.claude/launch.json`)
+- **1314** — `hugo-weekly-preview` (no drafts, production-like).
+- **1315** — `hugo-drafts-preview` (`hugo server -D`; shows drafts + stage badges
+  + `/pipeline/`). **Use this to review a staged week.**
+- **1326** — `hugo-gui-converter` (matches `HUGO_PORT` in `hugo_gui.py`).
+- Reminder (§6): restart the server after editing any `static/content/` file —
+  Hugo's `readFile` caches those at build time and live-reload won't pick them up.
+
+### Staging flags — two gates (full detail in `docs/staging-pipeline.md`)
+- `draft:` is the **hard gate**: `draft: true` = not built for production at all.
+  This is the only flag that actually keeps a page off the live site.
+- `stage:` is **pipeline position** only (`drafting → review → ready → live`) —
+  drives badges, the `/pipeline/` dashboard, and staging-surface visibility, but
+  does NOT hide a page by itself. A page with **no** `stage:` defaults to `live`.
+- **Live** = `stage: live` AND `draft: false`. Shipping a week flips both and
+  merges its branch to `main`.
+
+### Worktree-per-week convention
+- Each in-progress week gets its own worktree + `claude/week-NN` branch:
+  `cfm-week31 → claude/week-31`, `cfm-week32 → claude/week-32`,
+  `cfm-week34 → claude/week-34`. Each carries weeks 01–29 plus that one staged
+  week's `content/weeks/NN.md` (`draft: true`, `stage: review`).
+- Push the branch → Cloudflare builds its preview automatically. Merge to `main`
+  only when shipping (a deliberate desktop step, per `docs/working-remotely.md`).
+- `.claude/worktrees/` and `.session-checkpoints/` are gitignored — never commit
+  them (a past incident committed them as gitlinks and broke Cloudflare clones).
+
+## ✂️ THE PASTE TEST — study guide vs Weekly Insights
+
+**Insights owns MEANING. The study guide owns METHOD.**
+
+> **If a study-guide paragraph could be pasted into Insights unnoticed, it belongs to
+> Insights.**
+
+The study guide points at a feature of the text and says how a reader could find it. It does
+**not** then say what the feature means — that step is the essay's. Doing it in both places
+is what makes a lesson read as preachy: the second telling implies the reader missed it the
+first time.
+
+⚠️ **Paraphrase hides redundancy from word-overlap checks but not from readers.** A rewritten
+sentence saying the same thing still fails the test.
+
+*Ruled by the 2026-08-13 rewrite (`43e1be0`, `b7b312e`). Measured: week 34's insights-prose
+overlap fell 275 → 52 of 2,939 shingles; Key Passages went 199 → 0. The full rule is in
+`STUDY-GUIDE-SPEC.md` § Division of labour — which lived only on a branch until 2026-08-15,
+which is why weeks 30–33 never had it.*
+
+## 🔬 K4 — LABEL EVERY STRUCTURAL CLAIM
+
+**Label every structural claim `verified` or `candidate`, and name the text it was checked
+against.**
+
+A count that does not say which text it counted is not checkable. Qualify them — *"stated as
+**Hebrew** counts"* — and explain the versification offset where one exists.
+
+*Week 34's poetry analyser reported **1 verified against 96 candidates** across 20 psalms and
+DECLINED to certify a Psalm 31 acrostic — logged as "the guardrail working, not a finding."
+That discipline then reached the reader in Passage 5: "A detector that only matched a clean
+A-to-Z would fail this psalm. Reproducing the irregularities is the test that the method
+works." No rule required it. This line is the rule. (Fable audit K4.)*
+
+## 🛡 K6 — A HEDGE IN ONE SECTION BINDS THE OTHERS
+
+**When a claim is hedged or attributed in one section, propagate it to every section that
+states the same thing.** A guide that hedges in §09 and over-claims in §03 is inconsistent
+with itself, and the reader meets the over-claim first.
+
+Hedge at **drafting time**, not as a cleanup pass. The evidence: Canaan's first draft already
+carried **25 hedge-phrases across 7 of 11 files**; Achaemenid needed **a dozen commits** to
+reach 8. The later pass was catching up to a standard the earlier guide had from day one.
+
+*Includes retracting numeric over-claims — "seven English months honor a god" became "four
+certainly… three more debated". Interpretation calls go to Kymber (queue class C), not to a
+session. (Fable audit K6; `CULTURE-SPEC.md` contains none of this.)*
+
+## 🎙 K7 — NARRATION SCRIPTS LIVE IN TWO PLACES, KEPT IN SYNC
+
+**Convention decided 2026-07-26, rescued to `main` 2026-08-15** — it was committed in
+`2ed6617`, which is not an ancestor of `main`, so the rule has been invisible where lessons
+are built.
+
+    Vault (canonical)  ~/Obsidian/K Master Vault/.../Culture/<Guide>/_narration/<slug>.script.md
+    Repo               docs/narration/<guide>/<slug>.script.md
+
+The vault is what the Narration Studio run reads; the repo copy is for easy find/edit
+(github.dev from a phone). **Edit one, update the other.**
+
+**A guide is a SYSTEM — prose, widget JSON, and audio must agree with each other.** When text
+changes, announce the audio re-gen in the same commit ("Script synced; §04 queued for
+re-gen") and close the loop from the other side when it lands ("Text-only; narration already
+matched"). A stepper reading 734 BC against prose saying 733 is a defect in the guide, not in
+one file.
+
+*Ruled 2026-08-15 (HUB-058): the lane may create an episode; Kymber approves before it ships.*
 
 ## Where things are — read this before searching
 
@@ -373,4 +541,3 @@ those — they cover the whole year and never move.
 sources sitting in the vault all year. The preflight gate in `hugo_converter` catches this
 at GENERATION — but that session never generated anything, so it never fired. This block
 loads whether or not anyone remembers, which is the only thing that has ever worked.
-
