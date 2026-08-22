@@ -331,6 +331,51 @@ is now the recommended way to generate content.
 
 ---
 
+## 🖼 IMAGE CREDIT — capture it when you take the image, not later
+
+**When you pull an image from a Church source, record the credit the Church
+publishes with it, in the same commit.**
+
+Church materials — the Come, Follow Me manual, the Gospel Media Library, the
+Gospel Library app — list the artist and title alongside their images. That
+information is available at the moment you take the file and is expensive to
+reconstruct afterwards. **Capture it then.**
+
+    artist:   the credited artist, exactly as the Church lists them
+    title:    the work's title as given
+    source:   which Church resource it came from, with the URL
+    retrieved: the date
+
+Record it in the page's front matter or the accompanying sources file, next to
+the image reference.
+
+**Why this rule exists.** Textual sources have been cited carefully — see
+`data/tabernacle/tabernacle_sources.yaml`, which records author, work, citation,
+tier and status per claim. Images have had no equivalent, and Church-sourced
+images across the site carry no attribution at all. Kymber flagged this on
+2026-08-15: *"we have not been on the ball about crediting the sources we get
+from the church… They have those sources listed with the images that we pull."*
+
+**This is a credit obligation, not a licensing one.** The Church permits
+non-commercial use and CFM Corner is free, so the right to use the image is not
+in question. What is missing is naming the artist — and an artist named on the
+Church's own page and unnamed on ours is a gap we introduced.
+
+**Do not retro-fit by guessing.** If an existing image's origin is unknown, mark
+it unknown and leave it for the provenance audit. A confidently wrong attribution
+is worse than an absent one.
+
+> **RESCUED TO main 2026-08-22.** This section was committed on 2026-08-15 as `58c91e2` and
+> lived on `claude/babylon-calendar-section-03zl57` and nowhere else — `git branch --contains`
+> returned only that branch. A squash-merge or a branch deletion would have taken it, and it is
+> the governing rule for a 59-file image-credit queue that fieldguide is holding. Found by
+> fieldguide on 2026-08-22 when it was woken and read its own standing rules.
+>
+> **It is the other half of §5a above.** Both were ruled by Kymber on 2026-08-15: §5a (CFM-020)
+> says WHEN a credit is required — the directory proves third-party. This says HOW and WHEN to
+> capture it, and not to guess. One day's ruling, split across a branch boundary, with half of
+> it invisible to every session working on main for a week.
+
 ## Weekly Content Generation Workflow
 
 ### Step-by-step for each new week:
