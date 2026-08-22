@@ -1,0 +1,178 @@
+<div class="cfm-insights" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+
+    <!-- Expand/Collapse Controls -->
+    <div style="text-align: center; margin: 20px 0 30px 0;">
+        <button onclick="expandAllInsights()" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 0 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">&#x229E; Expand All</button>
+        <button onclick="collapseAllInsights()" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 0 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">&#x229F; Collapse All</button>
+    </div>
+
+    <!-- Content Sections -->
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span><a href="https://www.blueletterbible.org/kjv/psa/49/1/s_527001" target="_blank" data-ref="Psalms 49">Psalms 49–51; 61–66; 69–72; 77–78; 85–86</a> | "Create in Me a Clean Heart" | August 24–30, 2026</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>The week the Psalms stop being beautiful</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">Last week the Psalter opened, and it was lovely. Blessed is the man. The heavens declare the glory of God. The Lord is my shepherd. If you had only ever read <a href="https://www.blueletterbible.org/kjv/psa/1/1/s_479001" target="_blank" data-ref="Psalms 1">Psalms 1</a> through 46 you might come away thinking this is a book of praise with some sadness in it.</p>
+<p style="margin-bottom: 15px;">This week the floor gives out.</p>
+<p style="margin-bottom: 15px;"><em>"Save me, O God; for the waters are come in unto my soul. I sink in deep mire, where there is no standing."</em> That is <a href="https://www.blueletterbible.org/kjv/psa/69/1/s_547001" target="_blank" data-ref="Psalm 69">Psalm 69</a>, and it does not resolve for another twenty verses. <em>"Will the Lord cast off for ever? and will he be favourable no more? Is his mercy clean gone for ever?"</em> That is <a href="https://www.blueletterbible.org/kjv/psa/77/1/s_555001" target="_blank" data-ref="Psalm 77">Psalm 77</a>, and those are not rhetorical questions — the man asking them cannot sleep and cannot speak. And in the middle of it all sits <a href="https://www.blueletterbible.org/kjv/psa/51/1/s_529001" target="_blank" data-ref="Psalm 51">Psalm 51</a>, written by a man who has done something no apology covers.</p>
+<p style="margin-bottom: 15px;">Here is the thing worth knowing before you start: <strong>this is not a detour.</strong> Roughly a third of the Psalms are laments, and they are the single largest kind of psalm in the book. The Psalter is called <a href="https://www.blueletterbible.org/lexicon/h8416/kjv/wlc/0-1/" target="_blank" data-lexicon="praise, song or hymn of praise (praise, adoration, thanksgiving (paid to God); act of general or public praise; praise-song (as title); praise (demanded by qualities or deeds or attributes of God); renown, fame, glory; of Damascus, God; object of praise, possessor of renown (fig))" data-strongs="H8416" data-translit="tᵊhillâ" data-original="תְּהִלָּה" data-lang="hebrew" data-verse=""><em>Tehillim</em></a> — Praises — and yet it spends more time crying than singing. Not because Israel was gloomy, but because the book was assembled by people who knew that most prayer does not begin in gratitude. It begins in trouble, and it has to be allowed to.</p>
+<p style="margin-bottom: 15px;">So this is the week the book earns its reputation. Anyone can sing <a href="https://www.blueletterbible.org/kjv/psa/23/1/s_501001" target="_blank" data-ref="Psalm 23">Psalm 23</a>. This week asks what you do with the other nights.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>The prayer that asks for the wrong thing</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;"><a href="https://www.blueletterbible.org/kjv/psa/51/1/s_529001" target="_blank" data-ref="Psalm 51">Psalm 51</a> is the center of the week, and its most famous line is the one we say fastest.</p>
+<p style="margin-bottom: 15px;"><em>"Create in me a clean heart, O God."</em></p>
+<p style="margin-bottom: 15px;">Look at the verb. <strong>It is the verb from <a href="https://www.blueletterbible.org/kjv/gen/1/1/s_1001" target="_blank" data-ref="Genesis 1">Genesis 1</a>.</strong> <a href="https://www.blueletterbible.org/lexicon/h1254/kjv/wlc/0-1/" target="_blank" data-lexicon="to create, shape, form ((Qal) to shape, fashion, create (always with God as subject); of heaven and earth; of individual man; of new conditions and circumstances; of transformations; (Niphal) to be created; of heaven and earth; of birth; of something new; of miracles; (Piel); to cut down; to cut out)" data-strongs="H1254" data-translit="bara" data-original="בָּרָא" data-lang="hebrew" data-verse="Genesis 1:1"><em>Bārāʾ</em></a> — the word used when God made light out of nothing, and used in the Hebrew Bible only ever with God as its subject. Nobody else creates in this sense. Human beings shape, build, form, assemble; God alone <em>creates</em>.</p>
+<p style="margin-bottom: 15px;">Which means David is not asking to be repaired. He has been caught in adultery and in arranging a man's death, and every instinct we would have in his place is to ask for a fix — a second chance, a clean record, an opportunity to make it up. He asks for none of those. He asks to be <em>made again</em>, from nothing, by the only one who can do it.</p>
+<p style="margin-bottom: 15px;">That is a strange prayer, and it is strange in a way worth sitting with. Most of our prayers ask God to change the situation. This one says: <strong>the situation is me.</strong></p>
+<p style="margin-bottom: 15px;">And it comes with a companion phrase we have half-domesticated. <em>"The sacrifices of God are a broken spirit: a broken and a contrite heart."</em> We hear <em>broken</em> and think shattered, ruined, devastated — a heart that has failed. But the image underneath it is agricultural. <strong>A seed has to break open before anything can grow out of it.</strong> Broken soil is soil that can finally receive something. So a broken heart in <a href="https://www.blueletterbible.org/kjv/psa/51/1/s_529001" target="_blank" data-ref="Psalm 51">Psalm 51</a> is not a heart that has been destroyed; it is a heart that has been opened, that has stopped defending itself, that is finally able to take something in.</p>
+<p style="margin-bottom: 15px;">There is one more layer, and it is hiding in a footnote. <em>"Purge me with hyssop, and I shall be clean."</em> Hyssop is a small plant, and if you follow the cross-reference to <a href="https://www.blueletterbible.org/kjv/num/19/1/s_136001" target="_blank" data-ref="Numbers 19">Numbers 19</a> you find where it was used: to cleanse someone who had touched a corpse. Not someone dirty — someone who had been in contact with <strong>death.</strong> David is not asking to be tidied up. He is asking to be brought back from the dead.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span><a href="https://www.blueletterbible.org/kjv/psa/77/1/s_555001" target="_blank" data-ref="Psalm 77">Psalm 77</a>, and a prayer for the nights you cannot pray</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">If <a href="https://www.blueletterbible.org/kjv/psa/51/1/s_529001" target="_blank" data-ref="Psalm 51">Psalm 51</a> is the week's most famous psalm, <a href="https://www.blueletterbible.org/kjv/psa/77/1/s_555001" target="_blank" data-ref="Psalm 77">Psalm 77</a> may be its most useful.</p>
+<p style="margin-bottom: 15px;">It opens badly and gets worse. <em>"I am so troubled that I cannot speak."</em> Then six questions in a row, each one darker: has God forgotten? is his mercy gone forever? has he shut up his tender mercies in anger? These are not the words of a man being faithless. They are the words of a man in the dark saying exactly what the dark says.</p>
+<p style="margin-bottom: 15px;">And then comes verse 10, which is one of the most quietly remarkable sentences in scripture:</p>
+<blockquote style="border-left: 4px solid #7c9885; padding-left: 20px; margin: 20px 0; font-style: italic; color: #4a4a4a;">
+<p><em>"And I said, This is my infirmity."</em></p>
+</blockquote>
+<p style="margin-bottom: 15px;">He stops and names it. Not <em>God has abandoned me</em> — <strong>the thought that God has abandoned me is a symptom.</strong> He is not arguing with the despair. He is not pretending it isn't there. He is identifying it, the way you might say: this is the fever talking.</p>
+<p style="margin-bottom: 15px;">Then he does four things, and they are printed right there in verses 11 and 12, and any of us can do them tonight:</p>
+<ol style="margin: 15px 0; padding-left: 25px;">
+<li style="margin-bottom: 8px;"><strong>Remember</strong> the years of the right hand of the Most High — go looking in your own past for the times you knew He was there.</li>
+<li style="margin-bottom: 8px;"><strong>Remember His works</strong> — if you cannot find them in your own life just now, look at what He has done for someone else. He is no respecter of persons.</li>
+<li style="margin-bottom: 8px;"><strong>Meditate</strong> on it — not a glance, a stay.</li>
+<li style="margin-bottom: 8px;"><strong>Talk about it out loud</strong> — the Hebrew is <em>muse</em> and <em>talk</em>, and the talking is the point. Say it to someone. Get it out of your own head, which is currently not a reliable narrator.</li>
+</ol>
+<p style="margin-bottom: 15px;">That is a psalm doing something a sermon cannot. It does not tell a suffering person to feel differently. It hands them a sequence.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>An experiment you can run in ten minutes</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">Open <a href="https://www.blueletterbible.org/kjv/psa/62/1/s_540001" target="_blank" data-ref="Psalm 62">Psalm 62</a> and read it aloud — but put a small stress on the word <strong>only</strong> each time it appears. It is there six times: verses 1, 2, 4, 5, 6, and 9.</p>
+<p style="margin-bottom: 15px;"><em>Truly my soul waiteth upon God… He only is my rock… They only consult to cast him down… My soul, wait thou only upon God… He only is my rock and my salvation… Surely men of low degree are vanity.</em></p>
+<p style="margin-bottom: 15px;">Two things surface. The first is the obvious one — the psalm is systematically removing every other place you might put your weight. Not God <em>and</em> savings. Not God <em>and</em> reputation. Only God.</p>
+<p style="margin-bottom: 15px;">The second is easy to miss and better. <strong>Verse 1 is a statement; verse 5 is a command.</strong> He begins by saying <em>my soul waits on God</em>, and four verses later he has to tell himself to do it: <em>my soul, wait thou only upon God.</em> Somewhere in the middle of his own psalm he lost it and had to say it again on purpose.</p>
+<p style="margin-bottom: 15px;">Which is worth knowing, because that is what most of us assume is a failure of faith. It is in the text. Trust is not a state he achieved in verse 1 and held. He chose it, drifted, and chose it again — inside eight verses.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Whose voice is it? A skill worth having</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;"><a href="https://www.blueletterbible.org/kjv/psa/69/1/s_547001" target="_blank" data-ref="Psalm 69">Psalm 69</a> is quoted in the New Testament more than almost any other psalm, and reading it after Gethsemane is difficult to do without hearing Him: the deep waters, the reproach that broke his heart, the gall and the vinegar, <em>they that hate me without a cause.</em></p>
+<p style="margin-bottom: 15px;">That instinct is right, and it deserves one piece of care.</p>
+<p style="margin-bottom: 15px;">The New Testament carries <a href="https://www.blueletterbible.org/kjv/psa/69/1/s_547001" target="_blank" data-ref="Psalm 69">Psalm 69</a> in three different ways, and telling them apart protects something. Sometimes <strong>He quotes it</strong> — <em>"They hated me without a cause"</em> in <a href="https://www.blueletterbible.org/kjv/jhn/15/25/s_1012025" target="_blank" data-ref="John 15:25">John 15:25</a>. Sometimes <strong>someone else quotes it about Him</strong> — Paul in <a href="https://www.blueletterbible.org/kjv/rom/15/3/s_1061003" target="_blank" data-ref="Romans 15:3">Romans 15:3</a>, Peter in <a href="https://www.blueletterbible.org/kjv/act/1/20/s_1019020" target="_blank" data-ref="Acts 1:20">Acts 1:20</a> speaking of Judas. And sometimes <strong>the scene simply fulfils it</strong> while nobody quotes anything at all — the vinegar at the cross in <a href="https://www.blueletterbible.org/kjv/mat/27/34/s_956034" target="_blank" data-ref="Matthew 27:34">Matthew 27:34</a> is narration, not a citation.</p>
+<p style="margin-bottom: 15px;">Of the twelve places <a href="https://www.blueletterbible.org/kjv/psa/69/1/s_547001" target="_blank" data-ref="Psalm 69">Psalm 69</a> surfaces in the New Testament, <strong>only two are His own words.</strong></p>
+<p style="margin-bottom: 15px;">This is not pedantry, and it is not a reason to hold the psalm at arm's length. It is the opposite. When we say <em>"Jesus said"</em> about something He did not say, we have put words in His mouth — and the words He <em>did</em> say lose a little of their weight, because now they are one item in a long list instead of the two places He reached into this psalm and made it His own. The precision is what keeps the moment sharp.</p>
+<p style="margin-bottom: 15px;">The same care pays elsewhere. In the wilderness, <a href="https://www.blueletterbible.org/kjv/psa/91/1/s_569001" target="_blank" data-ref="Psalm 91">Psalm 91</a> is quoted — <strong>by Satan.</strong> Knowing that changes the scene entirely.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Where the week lands</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;"><a href="https://www.blueletterbible.org/kjv/psa/49/1/s_527001" target="_blank" data-ref="Psalm 49">Psalm 49</a> asks a question that the whole week is built on: can anyone buy a life back? <em>"None of them can by any means redeem his brother, nor give to God a ransom for him: for the redemption of their soul is precious."</em> The Hebrew behind <em>precious</em> means <strong>costly</strong>, and behind <em>"it ceaseth for ever"</em> is something closer to <strong>it is never enough.</strong> No sum is ever enough. The psalm states the problem and cannot solve it.</p>
+<p style="margin-bottom: 15px;">Thirty-seven psalms later, <a href="https://www.blueletterbible.org/kjv/psa/86/1/s_564001" target="_blank" data-ref="Psalm 86">Psalm 86</a> says: <em>"Great is thy mercy toward me: and thou hast delivered my soul from the lowest hell."</em></p>
+<p style="margin-bottom: 15px;">The question and the answer are both in this week's reading. What sits between them, in <a href="https://www.blueletterbible.org/kjv/psa/78/1/s_556001" target="_blank" data-ref="Psalm 78">Psalm 78</a> — the long psalm about a nation that kept forgetting and kept being brought back — is this: <em>"But he, being full of compassion, forgave their iniquity, and destroyed them not."</em> A psalm that spends seventy-two verses cataloguing failure stops in the middle to say that mercy kept interrupting.</p>
+<p style="margin-bottom: 15px;">And centuries later a man would say that He came <em>"to give his life a ransom for many"</em> — using the exact word <a href="https://www.blueletterbible.org/kjv/psa/49/1/s_527001" target="_blank" data-ref="Psalm 49">Psalm 49</a> said no one could pay.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Why this week matters</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">You may be reading this in an ordinary week, and if you are, these psalms will feel like someone else's emergency. Keep them anyway. <a href="https://www.blueletterbible.org/kjv/psa/77/1/s_555001" target="_blank" data-ref="Psalm 77">Psalm 77</a> is not written to be read in the dark; it is written to be <em>known</em> before the dark, so that when the questions come you recognise them as questions instead of verdicts.</p>
+<p style="margin-bottom: 15px;">And if you are not reading this in an ordinary week — if something has happened that ordinary help cannot reach, or if you have done something you cannot undo — then this is the week the book was assembled for. The man who wrote <a href="https://www.blueletterbible.org/kjv/psa/51/1/s_529001" target="_blank" data-ref="Psalm 51">Psalm 51</a> had earned every consequence coming to him, and he did not ask to be let off. He asked to be made new. He was not told to feel better first.</p>
+<p style="margin-bottom: 15px;">There is a detail in this week's reading that I keep returning to. Several of these psalms are headed <em>"for the sons of Korah."</em> Korah was the man who led a rebellion against Moses and was swallowed by the earth. And <a href="https://www.blueletterbible.org/kjv/num/26/1/s_143001" target="_blank" data-ref="Numbers 26">Numbers 26</a> adds, almost in passing: <em>"Notwithstanding the children of Korah died not."</em></p>
+<p style="margin-bottom: 15px;">The rebel's descendants became the singers in the house of the Lord.</p>
+<p style="margin-bottom: 15px;">That is what this week is about. Not that the failure did not happen — it did, and the earth opened. But that it did not get the last word about the family, and it does not get the last word about you. <strong>Create in me a clean heart.</strong> He is the only one who can, and He is willing, and that is the whole reason we are still reading a book of praises that spends most of its time crying.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+
+</div>
