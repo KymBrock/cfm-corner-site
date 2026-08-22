@@ -69,6 +69,6 @@ For current and future generators:
 
 ## Related Files
 
-- `/Users/kymberbrockbank/Developer/cfm-corner-site/static/images/culture/holy-week/ICON_GENERATION_PROMPTS.md`
-- `/Users/kymberbrockbank/Developer/cfm-corner-site/static/images/culture/jewish-festivals/seven-species/ICON_GENERATION_PROMPTS.md`
-- `/Users/kymberbrockbank/Developer/cfm-corner-site/static/images/culture/jewish-festivals/BIBLICAL_ICON_STYLE_PROMPTS.md`
+- `/images/culture/holy-week/ICON_GENERATION_PROMPTS.md`
+- `/images/culture/jewish-festivals/seven-species/ICON_GENERATION_PROMPTS.md`
+- `/images/culture/jewish-festivals/BIBLICAL_ICON_STYLE_PROMPTS.md`

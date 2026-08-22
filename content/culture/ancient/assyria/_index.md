@@ -3,11 +3,16 @@ title: "Assyria: The Rod of the North"
 description: "A deep-dive cultural guide to Assyria — the militarized highland empire that erased the northern kingdom, scattered the ten tribes, invented mass deportation, and stood at Jerusalem's wall in 701 BC. Essential background for 2 Kings 15–19, Isaiah, Jonah, Nahum, and the confidence that Zion could never fall."
 hide_children: true
 card_icon: "/images/culture/assyria/assyria-guide-hero-icon.png"
-stage: ready
+stage: drafting
+# Blockers corrected 2026-08-21 on Kymber's ruling. The previous list named the Babylon
+# guide as the sole blocker; it is not the blocker. 3 cross-links into Babylon remain a
+# technical dependency, but they are not what is holding publication.
 stage_blockers:
-  - "Babylon guide (3 cross-links)"
+  - "Quality pass — to the standard being applied to the Come, Follow Me study guides"
+  - "Narration — pronunciation not yet usable; waiting on the live-narration recording specs"
+  - "Kymber's approval to publish the field guides at all"
 cascade:
-  stage: ready
+  stage: drafting
 draft: true
 ---
 

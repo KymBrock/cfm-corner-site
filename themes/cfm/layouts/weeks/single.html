@@ -67,11 +67,19 @@
     {{ with .Params.charts }}
     <div class="chart-grid">
         {{ range . }}
+        {{ if .coming_soon }}
+        <div class="chart-card chart-card-soon" aria-disabled="true" style="opacity: 0.72; cursor: default;">
+            {{ with .image }}<img src="{{ . | relURL }}" alt="" style="width: 100%; height: auto; border-radius: 8px 8px 0 0; display: block;">{{ end }}
+            <h3>{{ .title }} <span style="display: inline-block; background: var(--sage-dark, #4a6b52); color: #fff; font-size: 0.58em; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; padding: 3px 9px; border-radius: 10px; vertical-align: middle; margin-left: 6px; white-space: nowrap;">Coming Soon</span></h3>
+            <p>{{ .description }}</p>
+        </div>
+        {{ else }}
         <a href="{{ .url | relURL }}" class="chart-card">
             {{ with .image }}<img src="{{ . | relURL }}" alt="" style="width: 100%; height: auto; border-radius: 8px 8px 0 0; display: block;">{{ end }}
             <h3>{{ .title }}</h3>
             <p>{{ .description }}</p>
         </a>
+        {{ end }}
         {{ end }}
     </div>
     {{ end }}
@@ -363,7 +371,7 @@ async function enhanceWeeklyTerms() {
     if (window.__cfmWeeklyTermsEnhanced) return;
     window.__cfmWeeklyTermsEnhanced = true;
 
-    const lexiconResponse = await fetch('/data/lexicon-popups.json?v=20260220b', { cache: 'no-store' }).catch(() => null);
+    const lexiconResponse = await fetch('/data/lexicon-popups.json?v=20260220b').catch(() => null);
     const lexiconData = lexiconResponse && lexiconResponse.ok ? await lexiconResponse.json() : {};
 
     const normalizeLatin = (text) => String(text || '')
@@ -439,7 +447,19 @@ async function enhanceWeeklyTerms() {
         sela: 'H5553',
         sala: 'H5554',
         yehoshua: 'H3091',
-        marah: 'H4784'
+        marah: 'H4784',
+        // Week 32 (Esther) — names + word studies (verified vs lexicon)
+        esther: 'H635', hadassah: 'H1919', mordecai: 'H4782', haman: 'H2001',
+        ahasuerus: 'H325', vashti: 'H2060', pur: 'H6332', purim: 'H6332',
+        haphak: 'H2015', malkuth: 'H4438', malkut: 'H4438',
+        // Week 33 (Job) — names + word studies
+        job: 'H347', eliphaz: 'H464', bildad: 'H1085', zophar: 'H6691',
+        elihu: 'H453', uz: 'H5780', behemoth: 'H930', leviathan: 'H3882',
+        goel: 'H1350', gaal: 'H1350', satan: 'H7854', tam: 'H8535', nacham: 'H5162',
+        // Week 34 (Psalms) — names + word studies
+        david: 'H1732', asaph: 'H623', heman: 'H1968', jeduthun: 'H3038', korah: 'H7141',
+        torah: 'H8451', kavod: 'H3519', nephesh: 'H5315', chesed: 'H2617', hesed: 'H2617',
+        selah: 'H5542', halal: 'H1984'
     };
 
     Object.entries(explicitOverrides).forEach(([key, strongs]) => {
@@ -477,6 +497,38 @@ async function enhanceWeeklyTerms() {
         return candidates;
     };
 
+    const COMMON_ENGLISH = new Set(['a','an','the','is','as','at','be','by','do','he','if','in','it','me','my','no','of','on','or','so','to','up','us','we','oh','all','and','are','but','for','had','has','her','him','his','how','its','may','not','out','she','than','that','them','they','this','was','who','why','with','from','were','been','have','will','your','you','our','one','two','now','see','way','man','men','god','lord','latin','greek','hebrew','english','psalm','psalms']);
+    // HEBREW LETTER NAMES ARE NOT WORDS. Kymber, 2026-08-17: "qoph, instead of
+    // indicating this is a letter of the alphabet, it is saying it means ape."
+    //
+    // She is right and the link was actively misinforming. H6971 qôp̄ really does mean
+    // "ape" in Strong's — but the LETTER qoph is not in Strong's at all, so an acrostic
+    // discussion naming its lines aleph → tav had "qof" silently resolved to a monkey.
+    // In a Psalms week that is close to guaranteed: Psalms 25, 34, 37, 111, 112, 119 and
+    // 145 are acrostics and every one of them names its letters.
+    //
+    // Several of these ARE also ordinary words — nun is Joshua's father, ayin is an eye,
+    // pe a mouth, and yod is kin to yad, a hand. Blanket-excluding them everywhere would
+    // trade a wrong link for a missing one. This guard is narrow on purpose: it only
+    // applies to the ITALIC auto-linker, and italics in these guides are where
+    // transliterated terms live — which is exactly where a letter name appears when the
+    // prose is walking an acrostic. An explicit data-strongs link is untouched, so a
+    // deliberate link to H5126 (Nun) still works.
+    // KYMBER'S SPELLINGS ARE CANONICAL — Hey, Pey, Tzaddi, Quph, from her
+    // MASTER_ALPHABET_CHART_REFINED.md. Until 2026-08-18 this set contained none of those
+    // four and nothing at all for he/hey, so the fifth letter was unreachable by any route
+    // and four of her own spellings matched nothing. The definitive list is the alias table
+    // in static/data/hebrew-letters.json; this set must stay a superset of it.
+    const LETTER_NAMES = new Set([
+        'aleph','alef','bet','beth','vet','bais','beis','gimel','gimmel',
+        'dalet','daled','daleth','he','hey','heh','hei','vav','waw','vov',
+        'zayin','zain','chet','het','heth','khet','tet','teth','yod','yodh','yud',
+        'kaf','kaph','khaf','chaf','lamed','lamedh','mem','nun',
+        'samech','samekh','samek','ayin','ain','pe','peh','pey','fe','feh',
+        'tsadi','tsade','tzade','tzaddi','tzadik','sadhe',
+        'qof','qoph','quph','koph','kof','kuf','resh','reish',
+        'shin','sin','tav','taw','tau','sav'
+    ]);
     const resolveTargetFromText = (termText, hebrewHint) => {
         const hintKey = normalizeHebrew(hebrewHint || '');
         if (hintKey) {
@@ -485,6 +537,8 @@ async function enhanceWeeklyTerms() {
         }
         const candidates = buildCandidates(termText);
         for (const candidate of candidates) {
+            if (COMMON_ENGLISH.has(candidate)) continue;
+            if (LETTER_NAMES.has(candidate)) continue;
             if (translitIndex[candidate]) return translitIndex[candidate];
         }
         return null;
@@ -527,6 +581,51 @@ async function enhanceWeeklyTerms() {
         return anchor;
     };
 
+    // A LETTER NAME THAT IS ALSO AN ORDINARY WORD. Linking every italic letter name would
+    // trade the qoph-is-an-ape bug for its mirror image: in a Psalms guide the italic word
+    // *sin* is overwhelmingly the English noun, not the twenty-first letter. So is *he*.
+    // *nun* is a religious sister and Joshua's father; *pe*, *vet*, *fe*, *tau* all read as
+    // something else first.
+    //
+    // These link ONLY when the prose supplies the Hebrew character alongside — "*sin* (שׂ)".
+    // That hint is written by the author and is decisive. The unambiguous names — aleph,
+    // gimel, dalet, zayin, samekh, tsadi, qoph, resh and the rest — need no such proof.
+    // Each of these reads as something else FIRST: the pronoun, the transgression, a
+    // religious sister and Joshua's father, a mouth (H6310), a veterinarian, the Greek
+    // letter. mem, tet, kof and the rest are not English words and link unaided.
+    // chet/het/heth is here on MEASURED evidence: week 26 uses chet ten times as the noun
+    // חֵטְא, sin, seven already correctly linked to H2399. Treating it as a letter would
+    // rewrite that week's discussion of sin into "the eighth letter" — the qoph bug in
+    // mirror image. It was the only such name in the whole content tree.
+    const LETTER_NAMES_AMBIGUOUS = new Set([
+        'he','hey','heh','hei','sin','nun','pe','peh','pey','fe','feh','vet','tau',
+        'chet','het','heth','khet'
+    ]);
+
+    // The letter itself, as the reader wrote it: "(ק)". A single Hebrew character in the
+    // hint IS the corroboration — strip the points, which authors include and vary.
+    const hintIsLetter = (hebrewHint) => {
+        const bare = (hebrewHint || '').replace(/[֑-ׇ‎‏\s]/g, '');
+        return bare.length === 1 ? bare : '';
+    };
+
+    const createLetterSpan = (termText, hebrewHint) => {
+        const key = termText.toLowerCase().replace(/['’ʿʼ]/g, '');
+        if (!LETTER_NAMES.has(key)) return null;
+        const bare = hintIsLetter(hebrewHint);
+        // Ambiguous names must be vouched for by the Hebrew; unambiguous ones stand alone.
+        if (LETTER_NAMES_AMBIGUOUS.has(key) && !bare) return null;
+        const span = document.createElement('span');
+        span.className = 'term-ref';
+        // The popup resolves the name through the alias map, so the linker needs no data
+        // of its own — it only has to say "this is a letter, and this is what it's called".
+        span.dataset.letter = bare || key;
+        const em = document.createElement('em');
+        em.textContent = termText;
+        span.appendChild(em);
+        return span;
+    };
+
     const buildCompoundNodes = (termText, hebrewHint) => {
         if (!/[\/\s]/.test(termText)) return null;
         const parts = termText.split(/(\s+|\/)/);
@@ -565,6 +664,13 @@ async function enhanceWeeklyTerms() {
             const termText = (em.textContent || '').trim();
             if (!termText || termText.length < 2) return;
             const hebrewHint = extractHebrewHint(em);
+            // Letters first. They are not in Strong's, so anything the lexicon path finds
+            // for a letter name is a different word that happens to share it.
+            const letterSpan = createLetterSpan(termText, hebrewHint);
+            if (letterSpan) {
+                em.replaceWith(letterSpan);
+                return;
+            }
             const compound = buildCompoundNodes(termText, hebrewHint);
             if (compound) {
                 em.replaceWith(compound);
@@ -575,6 +681,65 @@ async function enhanceWeeklyTerms() {
             const anchor = createLexiconAnchor(termText, target);
             if (!anchor) return;
             em.replaceWith(anchor);
+        });
+    });
+
+    // Curated proper-name linker: wrap the FIRST occurrence of each known
+    // biblical name (whole word) with a lexicon popup. Curated-only — it never
+    // over-links ordinary English words the way full-lexicon matching would.
+    const nameStrongs = {
+        Esther: 'H635', Hadassah: 'H1919', Mordecai: 'H4782', Haman: 'H2001',
+        Ahasuerus: 'H325', Vashti: 'H2060', Job: 'H347', Eliphaz: 'H464',
+        Bildad: 'H1085', Zophar: 'H6691', Elihu: 'H453', Uz: 'H5780',
+        Behemoth: 'H930', Leviathan: 'H3882', David: 'H1732', Asaph: 'H623',
+        Heman: 'H1968', Jeduthun: 'H3038', Korah: 'H7141'
+    };
+    const nameList = Object.keys(nameStrongs).sort((a, b) => b.length - a.length);
+    const nameRe = new RegExp('\\b(' + nameList.join('|') + ')\\b');
+    const nameSeen = new Set();
+    const nameSkip = new Set(['A', 'BUTTON', 'CODE', 'PRE', 'SCRIPT', 'STYLE', 'TEXTAREA', 'H1', 'H2', 'H3']);
+    const createNameAnchor = (name, code) => {
+        const entry = lexiconData[code] || lexiconData[String(code).toLowerCase()];
+        const href = buildLexiconHref(code);
+        if (!entry || !href) return null;
+        const a = document.createElement('a');
+        a.className = 'term-ref';
+        a.href = href; a.target = '_blank'; a.rel = 'noopener noreferrer';
+        a.dataset.strongs = code;
+        a.dataset.translit = entry.translit || '';
+        a.dataset.original = entry.original || '';
+        a.dataset.lexicon = entry.definition || '';
+        a.dataset.lang = entry.lang || 'hebrew';
+        a.textContent = name;
+        return a;
+    };
+    contentRoot.forEach((section) => {
+        const walker = document.createTreeWalker(section, NodeFilter.SHOW_TEXT);
+        const textNodes = [];
+        let tn;
+        while ((tn = walker.nextNode())) textNodes.push(tn);
+        textNodes.forEach((node) => {
+            const parent = node.parentElement;
+            if (!parent || nameSkip.has(parent.tagName)) return;
+            if (parent.closest('a, button, .term-ref, .term-ref-group, [data-ref], h1, h2, h3, .header-section')) return;
+            const text = node.nodeValue;
+            const re = new RegExp('\\b(' + nameList.join('|') + ')\\b', 'g');
+            let m, last = 0, frag = null;
+            while ((m = re.exec(text))) {
+                const name = m[1];
+                if (nameSeen.has(name)) continue;
+                const anchor = createNameAnchor(name, nameStrongs[name]);
+                if (!anchor) continue;
+                nameSeen.add(name);
+                if (!frag) frag = document.createDocumentFragment();
+                if (m.index > last) frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+                frag.appendChild(anchor);
+                last = m.index + name.length;
+            }
+            if (frag) {
+                if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+                parent.replaceChild(frag, node);
+            }
         });
     });
 }

@@ -1,0 +1,1044 @@
+<style>
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+        .site-header {
+            background: linear-gradient(135deg, #d4c4a8 0%, #8B7355 100%);
+            color: white; padding: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px;
+        }
+        .site-header-content { max-width: 1000px; margin: 0 auto; padding: 0 20px; text-align: center; }
+        .site-title { font-size: 2em; margin-bottom: 5px; }
+        .site-subtitle { font-size: 1.1em; opacity: 0.9; }
+
+        .header-section {
+            background-color: #8B7355; color: white; padding: 40px; border-radius: 12px;
+            margin-bottom: 30px; text-align: center;
+        }
+        .header-section .week-label { font-size: 1em; text-transform: uppercase; letter-spacing: 2px; opacity: 0.9; margin-bottom: 10px; }
+        .header-section h1 { font-size: 2.5em; font-weight: 300; margin-bottom: 10px; }
+        .header-section .subtitle { font-size: 1.3em; font-style: italic; margin-bottom: 20px; }
+        .header-section .date-location { font-size: 1.1em; opacity: 0.95; }
+
+        .quick-links { text-align: center; margin: 20px 0; }
+        .quick-link {
+            display: inline-block; background: #8B7355; color: white; padding: 10px 20px;
+            border-radius: 8px; text-decoration: none; margin: 5px; transition: all 0.3s;
+        }
+        .quick-link:hover { background: #6B5344; transform: translateY(-2px); }
+
+        .button-container { text-align: center; margin: 30px 0; }
+        .expand-button {
+            background-color: #8B7355; color: white; border: none; padding: 12px 24px;
+            margin: 5px 10px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em;
+        }
+        .expand-button:hover { background-color: #6B5344; }
+
+        .sg-accordion-section {
+            background-color: #8B7355; color: white; cursor: pointer; padding: 18px; width: 100%;
+            border: none; text-align: left; font-size: 1.2em; font-weight: 600; font-family: Georgia, serif;
+            border-radius: 8px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center;
+        }
+        .sg-accordion-section:hover { background-color: #6B5344; }
+        .sg-accordion-section::after { content: '\25BC'; font-size: 0.9em; transition: transform 0.3s; }
+        .sg-accordion-section.active::after { transform: rotate(180deg); }
+
+        .sg-panel {
+            background-color: white; border-radius: 0 0 8px 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .sg-panel.active { display: block; }
+        .panel-content { padding: 30px; }
+        .panel-content h2 { color: #8B7355; margin-bottom: 20px; font-size: 1.8em; }
+        .panel-content h3 { color: #6B5344; margin-top: 25px; margin-bottom: 15px; font-size: 1.4em; }
+        .panel-content h4 { color: #5a4a3a; margin-top: 20px; margin-bottom: 12px; font-size: 1.2em; }
+        .panel-content ul, .panel-content ol { margin-left: 25px; margin-bottom: 15px; }
+        .panel-content li { margin-bottom: 8px; }
+        .panel-content p { margin-bottom: 15px; text-align: justify; }
+        .panel-content a { color: #8B7355; }
+        .panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .panel-content blockquote {
+            margin: 20px 0 20px 20px;
+            padding: 15px 20px;
+            border-left: 4px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 8px 8px 0;
+        }
+        .panel-content blockquote p { margin-bottom: 8px; }
+        .panel-content blockquote p:last-child { margin-bottom: 0; }
+        .panel-content blockquote cite {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #8B7355;
+            font-style: normal;
+        }
+
+        .panel-content strong { color: #6B5344; }
+        .panel-content em { color: #5a4a3a; }
+
+        .panel-content hr {
+            border: none;
+            border-top: 2px solid #e8e0d5;
+            margin: 25px 0;
+        }
+
+        .panel-content code {
+            background-color: #f5f0e8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #6B5344;
+        }
+
+        .info-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .info-table th, .info-table td { border: 1px solid #d4c4a8; padding: 12px; text-align: left; }
+        .info-table th { background-color: #f5f0e8; color: #6B5344; font-weight: bold; }
+        .info-table tr:nth-child(even) { background-color: #faf8f5; }
+
+        .sg-sub-accordion {
+            background-color: #f5f0e8;
+            color: #5a4a3a;
+            cursor: pointer;
+            padding: 14px 40px 14px 18px;
+            width: 100%;
+            text-align: left;
+            border: 1px solid #d4c4a8;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            margin-top: 10px;
+            position: relative;
+            transition: background-color 0.2s;
+        }
+
+        .sg-sub-accordion:hover {
+            background-color: #e8e0d4;
+        }
+
+        .sg-sub-accordion::after {
+            content: '\25BC';
+            font-size: 0.8em;
+            color: #8B7355;
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s;
+        }
+
+        .sg-sub-accordion.active::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .sg-sub-panel {
+            background-color: #fafafa;
+            border-radius: 0 0 6px 6px;
+            border: 1px solid #d4c4a8;
+            border-top: none;
+            display: none;
+            transition: max-height 0.3s ease-out;
+            margin-bottom: 10px;
+        }
+
+        .sg-sub-panel.active {
+            display: block;
+            overflow: visible;
+            transition: max-height 0.3s ease-in;
+        }
+
+        .sg-sub-panel-content {
+            padding: 20px 25px;
+        }
+
+        .sg-sub-panel-content h3 { color: #6B5344; margin-top: 20px; margin-bottom: 12px; font-size: 1.3em; }
+        .sg-sub-panel-content h4 { color: #5a4a3a; margin-top: 15px; margin-bottom: 10px; font-size: 1.15em; }
+        .sg-sub-panel-content p { margin-bottom: 12px; text-align: justify; }
+        .sg-sub-panel-content ul, .sg-sub-panel-content ol { margin-left: 25px; margin-bottom: 12px; }
+        .sg-sub-panel-content li { margin-bottom: 6px; }
+        .sg-sub-panel-content a { color: #8B7355; }
+        .sg-sub-panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .sg-sub-panel-content blockquote {
+            margin: 15px 0 15px 15px;
+            padding: 12px 18px;
+            border-left: 3px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 6px 6px 0;
+        }
+        .sg-sub-panel-content blockquote p { margin-bottom: 6px; }
+        .sg-sub-panel-content blockquote p:last-child { margin-bottom: 0; }
+        .sg-sub-panel-content strong { color: #6B5344; }
+        .sg-sub-panel-content hr { border: none; border-top: 1px solid #e8e0d5; margin: 20px 0; }
+
+        @media (max-width: 768px) {
+            .header-section h1 { font-size: 1.8em; }
+            .panel-content { padding: 20px; }
+            .sg-sub-panel-content { padding: 15px 18px; }
+        }
+
+        .sg-section-heading {
+            margin: 1.2em 0 0.6em 0;
+            padding: 0.4em 0 0.4em 0.8em;
+            border-left: 3px solid #8B9D77;
+            color: #5a6b4f;
+            font-size: 1.05em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+        }
+        .sg-section-actions {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 28px;
+        }
+        .sg-section-actions .sg-action-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.35);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            padding: 0;
+            line-height: 1;
+        }
+        .sg-section-actions .sg-action-btn:hover {
+            background: rgba(255,255,255,0.35);
+        }
+    </style>
+
+
+<div class="container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <p class="week-label">Week 32</p>
+            <h1>Esther (1–10) — Overview</h1>
+            <div class="subtitle">"For Such a Time as This"</div>
+            <div class="date-location"></div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/32?lang=eng" target="_blank" class="quick-link">CFM Manual</a>
+        </div>
+
+        <!-- Expand/Collapse Buttons -->
+        <div class="button-container">
+            <button class="expand-button" onclick="expandAll()"><span class="btn-icon">&#x229E;</span> Expand All</button>
+            <button class="expand-button" onclick="collapseAll()"><span class="btn-icon">&#x229F;</span> Collapse All</button>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 1: WEEK 32: OVERVIEW -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">1. Week 32: Overview</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Overview</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The book of Esther is the strangest book in the Old Testament — and one of its most quietly profound — because of what it never says. Across ten chapters of court intrigue, mortal danger, and last-minute rescue, <strong>the name of God is never mentioned once.</strong> No prayer is recorded as answered; no prophet speaks; no miracle parts a sea. And yet, from beginning to end, the reader watches an invisible hand arrange every "coincidence" — a Jewish orphan crowned queen just before the crisis, a loyal deed recorded and then forgotten until the exact night it was needed, a king who cannot sleep, a villain who walks into his own trap. Esther is the Bible's masterclass in <em>hidden providence</em>: the God who is never named is never absent.</p>
+<p>The story unfolds in the Persian court of <strong>Ahasuerus</strong>, who reigned "from India even unto Ethiopia, over an hundred and seven and twenty provinces" (1:1). When Queen Vashti is deposed, a Jewish girl named <strong>Esther</strong> (Hadassah), raised by her cousin <strong>Mordecai</strong>, is chosen as queen — her people kept secret. When the king's favorite, <strong>Haman</strong>, is enraged that Mordecai will not bow, he plots to destroy every Jew in the empire and casts <a href="https://www.blueletterbible.org/lexicon/h6332/kjv/wlc/0-1/" target="_blank" data-lexicon="Pur or Purim = &quot;lot&quot; or &quot;piece&quot;lota special feast among the post-exilic Jews, to celebrate their deliverance from Ham..." data-strongs="H6332" data-translit="pûr" data-original="פּוּר" data-lang="hebrew" data-verse=""><em>pur</em></a> — the lot — to fix the day (3:7). Into that death sentence comes the book's turning point: Mordecai's charge to Esther — <strong>"who knoweth whether thou art come to the kingdom for such a time as this?"</strong> (4:14) — and her answer, <strong>"if I perish, I perish"</strong> (4:16).</p>
+<p>What follows is a series of reversals so precise they can only be read as designed. Esther risks her life, is received, and springs her trap over two banquets. The gallows Haman built for Mordecai becomes Haman's own (7:10). The decree of doom is answered by a decree of deliverance, and on the very day the Jews' enemies "hoped to have power over them," the text says, "it was turned to the contrary" (9:1). The deliverance is memorialized forever in the feast of <strong>Purim</strong>. The book that never names God is, from first verse to last, a testimony that He governs history — most powerfully when He seems most hidden.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Scripture Range</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>All ten chapters are assigned this week.</strong> Use this table as a map — each block is discussed in the walkthrough below.</p>
+<table class="info-table">
+<tr><th>Chapter(s)</th><th>Content</th><th>Assigned</th></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/est/1/1/s_427001" target="_blank" data-ref="Esther 1">Esther 1</a></strong></td><td><strong>Ahasuerus's feast; Queen Vashti deposed</strong></td><td><strong>Yes</strong></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/est/2/1/s_428001" target="_blank" data-ref="Esther 2">Esther 2</a></strong></td><td><strong>Esther crowned queen; her people kept secret; Mordecai uncovers a plot</strong></td><td><strong>Yes</strong></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/est/3/1/s_429001" target="_blank" data-ref="Esther 3">Esther 3</a></strong></td><td>**Haman promoted; Mordecai will not bow; the <a href="https://www.blueletterbible.org/lexicon/h6332/kjv/wlc/0-1/" target="_blank" data-lexicon="Pur or Purim = &quot;lot&quot; or &quot;piece&quot;lota special feast among the post-exilic Jews, to celebrate their deliverance from Ham..." data-strongs="H6332" data-translit="pûr" data-original="פּוּר" data-lang="hebrew" data-verse=""><em>pur</em></a> cast; the decree against the Jews**</td><td><strong>Yes</strong></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/est/4/1/s_430001" target="_blank" data-ref="Esther 4">Esther 4</a></strong></td><td><strong>Mordecai's charge — "for such a time as this"; Esther's "if I perish, I perish"; the fast</strong></td><td><strong>Yes</strong></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/est/5/1/s_431001" target="_blank" data-ref="Esther 5">Esther 5</a></strong></td><td><strong>Esther risks the king's court; the golden sceptre; the banquets begin; Haman's gallows</strong></td><td><strong>Yes</strong></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/est/6/1/s_432001" target="_blank" data-ref="Esther 6">Esther 6</a></strong></td><td><strong>The sleepless king; Mordecai honored; Haman's humiliation</strong></td><td><strong>Yes</strong></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/est/7/1/s_433001" target="_blank" data-ref="Esther 7">Esther 7</a></strong></td><td><strong>Esther exposes Haman; Haman hanged on his own gallows</strong></td><td><strong>Yes</strong></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/est/8/1/s_434001" target="_blank" data-ref="Esther 8">Esther 8</a></strong></td><td><strong>Mordecai elevated; the counter-decree; the Jews permitted to defend themselves</strong></td><td><strong>Yes</strong></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/est/9/1/s_435001" target="_blank" data-ref="Esther 9">Esther 9</a></strong></td><td><strong>"It was turned to the contrary"; deliverance; Purim instituted</strong></td><td><strong>Yes</strong></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/est/10/1/s_436001" target="_blank" data-ref="Esther 10">Esther 10</a></strong></td><td><strong>The greatness of Mordecai</strong></td><td><strong>Yes</strong></td></tr>
+</table>
+<p><em>Note: The name of God does not appear in the Hebrew book of Esther. (The Greek Septuagint contains later "Additions to Esther" with prayers and God-language, but these are not part of the Hebrew or KJV text and are not this week's reading — see <strong>Historical Cultural Context</strong>.)</em></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Complete Narrative — The Hidden Hand</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3><strong>Vashti Deposed (Esther 1)</strong> — assigned</h3>
+<p>The story opens in extravagance: Ahasuerus, ruler of 127 provinces, throws a 180-day display of "the riches of his glorious kingdom" <a href="https://www.blueletterbible.org/kjv/est/1/4/s_427004" target="_blank" data-ref="Esther 1:4">(1:4)</a>, capped by a seven-day feast at Susa. On the seventh day, "merry with wine," he summons Queen <strong>Vashti</strong> to parade her beauty before the court; she refuses. Humiliated, and counseled that her defiance will embolden every wife in the empire, the king deposes her by irrevocable decree <a href="https://www.blueletterbible.org/kjv/est/1/19/s_427019" target="_blank" data-ref="Esther 1:19">(1:19)</a>. The vacancy on the throne is the first "accident" the story will use — a queen removed, a place prepared, before anyone knows a crisis is coming.</p>
+<h3><strong>Esther Becomes Queen (Esther 2)</strong> — assigned</h3>
+<p>In Susa lives <strong>Mordecai</strong>, a Jew of the Babylonian exile, who has raised his orphaned cousin <strong>Hadassah</strong> — <strong>Esther</strong> — "fair and beautiful" <a href="https://www.blueletterbible.org/kjv/est/2/7/s_428007" target="_blank" data-ref="Esther 2:7">(2:7)</a>. In the search for a new queen she is taken into the palace and, above all the others, "the king loved Esther… so that he set the royal crown upon her head" <a href="https://www.blueletterbible.org/kjv/est/2/17/s_428017" target="_blank" data-ref="Esther 2:17">(2:17)</a>. On Mordecai's instruction she keeps her people secret <a href="https://www.blueletterbible.org/kjv/est/2/10/s_428010" target="_blank" data-ref="Esther 2:10">(2:10, 20)</a>. Then a small, easily-missed detail: Mordecai overhears two officials plotting to kill the king, reports it through Esther, and the deed "was written in the book of the chronicles" <a href="https://www.blueletterbible.org/kjv/est/2/23/s_428023" target="_blank" data-ref="Esther 2:23">(2:23)</a> — and promptly forgotten. The reader files it away. So, it turns out, did heaven.</p>
+<h3><strong>Haman's Plot and the Lot (Esther 3)</strong> — assigned</h3>
+<p>The king promotes <strong>Haman</strong> above all his princes, and all bow to him — except Mordecai, who will not <a href="https://www.blueletterbible.org/kjv/est/3/2/s_429002" target="_blank" data-ref="Esther 3:2">(3:2)</a>. Enraged, and scorning to lay hands on Mordecai alone once he learns he is a Jew, Haman resolves "to destroy all the Jews… throughout the whole kingdom" <a href="https://www.blueletterbible.org/kjv/est/3/6/s_429006" target="_blank" data-ref="Esther 3:6">(3:6)</a>. He casts <strong>Pur, that is, the lot</strong> <a href="https://www.blueletterbible.org/kjv/est/3/7/s_429007" target="_blank" data-ref="Esther 3:7">(3:7)</a>, to select the day, and secures a sealed royal decree that on the thirteenth of Adar all Jews — "both young and old, little children and women, in one day" — are to be killed <a href="https://www.blueletterbible.org/kjv/est/3/13/s_429013" target="_blank" data-ref="Esther 3:13">(3:13)</a>. The death of an entire people now hangs on a courtier's wounded pride and the fall of a lot.</p>
+<h3><strong>"For Such a Time as This" (Esther 4)</strong> — assigned</h3>
+<p>Mordecai puts on sackcloth and mourns publicly, and sends the decree to Esther with a plea that she go to the king. Esther hesitates — to approach the king unbidden is death unless he extends his sceptre. Mordecai's reply is the theological center of the book: "Think not with thyself that thou shalt escape… For if thou altogether holdest thy peace at this time, then shall there enlargement and deliverance arise to the Jews from another place… and <strong>who knoweth whether thou art come to the kingdom for such a time as this?</strong>" <a href="https://www.blueletterbible.org/kjv/est/4/13-14/s_430013" target="_blank" data-ref="Esther 4:13-14">(4:13–14)</a>. Deliverance <em>will</em> come, Mordecai insists — the only question is whether Esther will be its instrument. Her answer is total: gather the Jews to fast three days, "and so will I go in unto the king, which is not according to the law: and <strong>if I perish, I perish</strong>" <a href="https://www.blueletterbible.org/kjv/est/4/16/s_430016" target="_blank" data-ref="Esther 4:16">(4:16)</a>.</p>
+<h3><strong>The Banquets and the Sleepless Night (Esther 5–6)</strong> — assigned</h3>
+<p>Esther approaches; the king extends the golden sceptre; she is received <a href="https://www.blueletterbible.org/kjv/est/5/2/s_431002" target="_blank" data-ref="Esther 5:2">(5:2)</a>. Rather than blurt out her petition, she invites the king and Haman to a banquet, and then to a second <a href="https://www.blueletterbible.org/kjv/est/5/4-8/s_431004" target="_blank" data-ref="Esther 5:4-8">(5:4–8)</a>. Haman leaves elated — and, goaded by his wife and friends, builds a gallows fifty cubits high for Mordecai <a href="https://www.blueletterbible.org/kjv/est/5/14/s_431014" target="_blank" data-ref="Esther 5:14">(5:14)</a>. That very night "could not the king sleep" <a href="https://www.blueletterbible.org/kjv/est/6/1/s_432001" target="_blank" data-ref="Esther 6:1">(6:1)</a>; he calls for the royal chronicles to be read, and hears the forgotten account of Mordecai's loyalty. When Haman arrives to request Mordecai's execution, the king asks him instead how to honor a man the king delights in — and Haman, sure it must be himself, prescribes a lavish public tribute, only to be ordered to lead Mordecai through the city in it <a href="https://www.blueletterbible.org/kjv/est/6/6-11/s_432006" target="_blank" data-ref="Esther 6:6-11">(6:6–11)</a>. The reversal has begun, engineered by a night's insomnia.</p>
+<h3><strong>Haman's Fall (Esther 7)</strong> — assigned</h3>
+<p>At the second banquet the king asks Esther's petition, and she at last reveals both her people and their peril: "we are sold, I and my people, to be destroyed" <a href="https://www.blueletterbible.org/kjv/est/7/4/s_433004" target="_blank" data-ref="Esther 7:4">(7:4)</a>. When the king demands who dares such a thing, she names him: "The adversary and enemy is this wicked Haman" <a href="https://www.blueletterbible.org/kjv/est/7/6/s_433006" target="_blank" data-ref="Esther 7:6">(7:6)</a>. In his rage the king orders Haman hanged — on the very gallows "that he had prepared for Mordecai" <a href="https://www.blueletterbible.org/kjv/est/7/10/s_433010" target="_blank" data-ref="Esther 7:10">(7:10)</a>. The trap has closed on the one who set it.</p>
+<h3><strong>The Reversal and Purim (Esther 8–10)</strong> — assigned</h3>
+<p>Because a Persian decree cannot be revoked <a href="https://www.blueletterbible.org/kjv/est/8/8/s_434008" target="_blank" data-ref="Esther 8:8">(8:8)</a>, the king authorizes a <em>counter</em>-decree: the Jews may gather and defend themselves <a href="https://www.blueletterbible.org/kjv/est/8/11/s_434011" target="_blank" data-ref="Esther 8:11">(8:11)</a>. Mordecai, now clothed in royal apparel, goes out to a city that "rejoiced and was glad" <a href="https://www.blueletterbible.org/kjv/est/8/15/s_434015" target="_blank" data-ref="Esther 8:15">(8:15)</a>. On the appointed day of their destruction the tables turn completely: "in the day that the enemies of the Jews hoped to have power over them, (though <strong>it was turned to the contrary</strong>, that the Jews had rule over them that hated them)" <a href="https://www.blueletterbible.org/kjv/est/9/1/s_435001" target="_blank" data-ref="Esther 9:1">(9:1)</a>. Mordecai and Esther establish the annual feast of <strong>Purim</strong> — "after the name of Pur" <a href="https://www.blueletterbible.org/kjv/est/9/26/s_435026" target="_blank" data-ref="Esther 9:26">(9:26)</a> — days "of feasting and joy, and of sending portions one to another, and gifts to the poor" <a href="https://www.blueletterbible.org/kjv/est/9/22/s_435022" target="_blank" data-ref="Esther 9:22">(9:22)</a>, so the deliverance would never be forgotten. The book closes with Mordecai second only to the king, "seeking the wealth of his people" <a href="https://www.blueletterbible.org/kjv/est/10/3/s_436003" target="_blank" data-ref="Esther 10:3">(10:3)</a>.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Central Insight</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<blockquote>
+<p><strong>"Who knoweth whether thou art come to the kingdom for such a time as this?"</strong></p>
+<p>— <a href="https://www.blueletterbible.org/kjv/est/4/14/s_430014" target="_blank" data-ref="Esther 4:14">Esther 4:14</a></p>
+</blockquote>
+<blockquote>
+<p><strong>"…in the day that the enemies of the Jews hoped to have power over them, (though it was turned to the contrary…)."</strong></p>
+<p>— <a href="https://www.blueletterbible.org/kjv/est/9/1/s_435001" target="_blank" data-ref="Esther 9:1">Esther 9:1</a></p>
+</blockquote>
+<p>Esther teaches faith for the seasons when God is silent. No voice from heaven tells Esther what to do; no miracle guarantees her safety. There is only a series of ordinary events — a beauty contest, a court record, a sleepless night — that, taken together, are too precise to be chance. The book asks its reader to trust that the same hidden hand is at work in their own unremarkable circumstances, and that they, too, may have been placed exactly where they are "for such a time as this." Providence and courage are not rivals here: God arranges the moment, and Esther still has to walk into the throne room.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Dramatic Arc</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<pre class="sg-diagram" style="background:#f4f7f5; border:1px solid #c6d4c8; border-radius:8px; padding:16px 20px; overflow-x:auto; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace; font-size:0.9em; line-height:1.55; color:#3a4a3f; white-space:pre; margin:16px 0;">1. THE THRONE EMPTIED (<a href="https://www.blueletterbible.org/kjv/est/1/1/s_427001" target="_blank" data-ref="Esther 1">Esther 1</a>)
+   Vashti deposed — a place prepared before the crisis appears
+        ↓
+2. THE QUEEN AND THE RECORD (<a href="https://www.blueletterbible.org/kjv/est/2/1/s_428001" target="_blank" data-ref="Esther 2">Esther 2</a>)
+   Esther crowned (people hidden); Mordecai's loyal deed written down and forgotten
+        ↓
+3. THE PLOT AND THE LOT (<a href="https://www.blueletterbible.org/kjv/est/3/1/s_429001" target="_blank" data-ref="Esther 3">Esther 3</a>)
+   Haman's decree of genocide; the pur cast for the day
+        ↓
+4. "FOR SUCH A TIME AS THIS" (<a href="https://www.blueletterbible.org/kjv/est/4/1/s_430001" target="_blank" data-ref="Esther 4">Esther 4</a>)
+   Mordecai's charge; Esther's "if I perish, I perish"; the fast
+        ↓
+5. BANQUETS &amp; A SLEEPLESS NIGHT (<a href="https://www.blueletterbible.org/kjv/est/5/1/s_431001" target="_blank" data-ref="Esther 5">Esther 5–6</a>)
+   Esther's two feasts; Haman's gallows; the king reads the chronicles; Mordecai honored
+        ↓
+6. THE TRAP CLOSES (<a href="https://www.blueletterbible.org/kjv/est/7/1/s_433001" target="_blank" data-ref="Esther 7">Esther 7</a>)
+   Haman exposed and hanged on his own gallows
+        ↓
+7. THE GREAT REVERSAL &amp; PURIM (<a href="https://www.blueletterbible.org/kjv/est/8/1/s_434001" target="_blank" data-ref="Esther 8">Esther 8–10</a>)
+   Counter-decree; "turned to the contrary"; deliverance memorialized in Purim</pre>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Why This Week Matters</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>It teaches faith when God seems silent.</strong> Esther is the book for every believer who has faced a crisis with no voice from heaven and no visible miracle. Its answer is not that God was absent, but that He was <em>hidden</em> — governing through events that only look like coincidence until you see them whole.</li>
+<li><strong>It shows providence and agency working together.</strong> "Deliverance shall arise… from another place," Mordecai says — God's purpose is sure; but Esther must still choose to act, at the risk of her life. The book refuses both fatalism ("nothing I do matters") and self-reliance ("it all depends on me").</li>
+<li><strong>It defines "for such a time as this."</strong> The verse has become shorthand for a true principle: that God places people — in a family, a job, a ward, a friendship, a nation — where their particular courage is needed. Position is a stewardship, not an accident.</li>
+<li><strong>It portrays the reversal of the wicked.</strong> Haman hanged on his own gallows, the lot of destruction "turned to the contrary" — the book is a sustained picture of God overturning the designs of those who would destroy His people, often by their own devices.</li>
+<li><strong>It commands remembering.</strong> Purim exists so that a deliverance would never fade from memory. The impulse to memorialize what God has done — in feasts, in records, in retelling — is one the covenant people have always shared, and one the Restoration renews in its own remembering.</li>
+</ol>
+<hr>
+<p><em>Next file: <a href="02_Historical_Cultural_Context.md" target="_blank">02_Historical_Cultural_Context.md</a></em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 2: WEEK 32: HISTORICAL & CULTURAL CONTEXT -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">2. Week 32: Historical & Cultural Context</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Introduction</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Esther is a story of the Jews who <em>stayed</em>. Last week's reading followed the exiles who went <strong>up</strong> — home to Jerusalem to rebuild the temple and the wall. But not everyone returned. A large Jewish community remained scattered across the Persian Empire, and Esther is their story: covenant people living far from the promised land, under a foreign crown, keeping (or hiding) their identity in a world that did not share their faith. The book is set in the royal city of <strong>Susa</strong> during the reign of a Persian king the Hebrew calls <strong>Ahasuerus</strong> — and it unfolds <em>inside</em> the very century Ezra and Nehemiah cover, in the long gap between the temple's completion and Ezra's arrival. This section fills in that Persian world.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>1. The King: Ahasuerus and Xerxes I</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The Hebrew names the king <strong>Ahasuerus</strong> (<a href="https://www.blueletterbible.org/lexicon/h325/kjv/wlc/0-1/" target="_blank" data-lexicon="Ahasuerus = &quot;I will be silent and poor&quot;" data-strongs="H325" data-translit="ăḥašvērôš" data-original="אֲחַשְׁוֵרוֹשׁ" data-lang="hebrew" data-verse="">אֲחַשְׁוֵרוֹשׁ</a>). He is <strong>most commonly identified with Xerxes I</strong> of Persia — the Achaemenid king who reigned <strong>c. 486–465 BC</strong> (World History Encyclopedia, <a href="https://www.worldhistory.org/Xerxes_I/" target="_blank"><em>Xerxes I</em></a>). "Ahasuerus" is the Hebrew rendering of the Old Persian throne name behind the Greek "Xerxes." The identification fits the book's chronology — Xerxes reigned <em>between</em> Darius I (who finished the temple, <a href="https://www.blueletterbible.org/kjv/ezr/6/1/s_409001" target="_blank" data-ref="Ezra 6">Ezra 6</a>) and Artaxerxes I (under whom Ezra and Nehemiah came up) — which places Esther's story squarely in the Ezra–Nehemiah era, among the Jews who had not returned.</p>
+<p>The king of Esther is drawn as impulsive and easily steered — deposing a queen in a fit of wounded pride (<a href="https://www.blueletterbible.org/kjv/est/1/1/s_427001" target="_blank" data-ref="Esther 1">Esther 1</a>), signing away an entire people on a favorite's word (<a href="https://www.blueletterbible.org/kjv/est/3/1/s_429001" target="_blank" data-ref="Esther 3">Esther 3</a>), unable to sleep and so stumbling onto the record that saves Mordecai (<a href="https://www.blueletterbible.org/kjv/est/6/1/s_432001" target="_blank" data-ref="Esther 6">Esther 6</a>). The book never editorializes about him; it simply lets an all-powerful, unreflective monarch become, again and again, the unwitting instrument of a deliverance he never intends.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>2. The Wars Behind the Story: Persia and Greece</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Here is a connection almost no one makes when they read Esther &mdash; and it changes how you see the whole book. King Ahasuerus is Xerxes, and Xerxes is one of the most famous kings in <em>Western</em> history, for a reason that has nothing to do with the Bible: he led the great Persian invasion of Greece. The battles of that war &mdash; <strong>Thermopylae</strong> (the stand of the 300 Spartans), the <strong>burning of Athens</strong>, and the sea-battle of <strong>Salamis</strong> &mdash; are the stuff of Western legend, taught in every world-history class. And they happened <em>during the book of Esther.</em></p>
+<p>Watch how the timeline fits. Esther opens with a staggering 180-day display of the empire's wealth and might, held in Xerxes' third year (<a href="https://www.blueletterbible.org/kjv/est/1/3/s_427003" target="_blank" data-ref="Esther 1:3">Esther 1:3</a>). The Greek historian <strong>Herodotus</strong> (<em>Histories</em>, Books 7&ndash;9) describes exactly such a gathering &mdash; the war-council where Xerxes rallied his empire to march on Greece. Then Esther's story quietly pauses: four years pass before a Jewish girl becomes queen in the king's seventh year (<a href="https://www.blueletterbible.org/kjv/est/2/16/s_428016" target="_blank" data-ref="Esther 2:16">Esther 2:16</a>). That four-year gap is not empty &mdash; it <em>is</em> the war. Xerxes marched west in 480 BC (Thermopylae, Athens burned, then a crushing naval defeat at Salamis) and came home, beaten, in 479 BC &mdash; to the very events of <a href="https://www.blueletterbible.org/kjv/est/2/1/s_428001" target="_blank" data-ref="Esther 2">Esther 2</a>. The rich, impulsive, easily-swayed king the book portrays is the same Xerxes the Greek historians knew.</p>
+<p>The famous battles the book sits between:</p>
+<ul>
+<li><strong>490 BC</strong> &mdash; Xerxes' father Darius invades Greece and is stopped at <strong>Marathon</strong>.</li>
+<li><strong>480 BC</strong> &mdash; Xerxes' own invasion: <strong>Thermopylae</strong>, Athens burned, defeat at <strong>Salamis</strong>.</li>
+<li><strong>479 BC</strong> &mdash; Persia is beaten for good at <strong>Plataea</strong>; Xerxes returns to the events of Esther.</li>
+</ul>
+<p>Why does this matter for a Latter-day Saint? Because it sets the covenant people at the exact hinge of world history. Xerxes' failure in Greece began the slow decline of Persia. A century and a half later, <strong>Alexander the Great</strong> swept east and destroyed the empire (331&ndash;330 BC) &mdash; the very empire of Esther &mdash; and out of his conquest came the Greek age of language and culture that would shape the world into which Jesus was born. The prophet Daniel, in this same Persian court, foresaw it: a "he goat" charging "from the west" (<a href="https://www.blueletterbible.org/kjv/dan/8/5/s_858005" target="_blank" data-ref="Daniel 8:5">Daniel 8:5</a>), which the angel names "the king of Grecia" (<a href="https://www.blueletterbible.org/kjv/dan/8/21/s_858021" target="_blank" data-ref="Daniel 8:21">Daniel 8:21</a>). The small, hidden story of a queen in Susa sits inside the loud story of empires rising and falling &mdash; and the same hidden hand governs both.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>3. Susa (Shushan): The Royal City</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The story is set in <strong>Shushan the palace</strong> (<a href="https://www.blueletterbible.org/kjv/est/1/2/s_427002" target="_blank" data-ref="Esther 1:2">Esther 1:2</a>) — <strong>Susa</strong>, one of the Achaemenid Empire's principal royal cities, in what is now southwestern Iran. An ancient city long predating the Persians, Susa was rebuilt into a grand administrative capital by <strong>Darius I</strong>, whose great palace and <em>apadana</em> (columned audience hall) stood there; the Persian kings wintered at Susa and summered at the higher, cooler Ecbatana and Persepolis (World History Encyclopedia, <a href="https://www.worldhistory.org/susa/" target="_blank"><em>Susa</em></a>). Susa is named in the Bible in Ezra, Nehemiah, and Daniel, but "most notably" in the book of Esther, whose whole drama plays out in its palace, its courts, and its city streets.</p>
+<p>The setting matters. Esther's world is not a Jewish world; it is the beating heart of a pagan empire — the throne room, the harem, the king's gate where Mordecai sits. The covenant people are a hidden minority inside it, and the book's tension comes from that fact: a Jewish queen who cannot reveal she is Jewish, in the most exposed and dangerous house in the empire.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>4. The Empire's Reach — and the Book's "127 Provinces"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The Achaemenid Empire (<strong>c. 550–330 BC</strong>) was the largest the world had yet seen, stretching, in Esther's own words, "from India even unto Ethiopia" (<a href="https://www.blueletterbible.org/kjv/est/1/1/s_427001" target="_blank" data-ref="Esther 1:1">Esther 1:1</a>). Historically, the empire was organized into a number of large <strong>satrapies</strong> — great provincial governorships, on the order of twenty, each under a satrap answerable to the king (World History Encyclopedia, <a href="https://www.worldhistory.org/Persian_Government/" target="_blank"><em>Persian Government</em></a>; <a href="https://www.worldhistory.org/Achaemenid_Empire/" target="_blank"><em>Achaemenid Empire</em></a>).</p>
+<p>The book of Esther, however, describes the realm as <strong>"an hundred and seven and twenty provinces"</strong> (<a href="https://www.blueletterbible.org/kjv/est/1/1/s_427001" target="_blank" data-ref="Esther 1:1">Esther 1:1</a>) — using the Hebrew <a href="https://www.blueletterbible.org/lexicon/h4083/kjv/wlc/0-1/" target="_blank" data-lexicon="district, province" data-strongs="H4083" data-translit="mᵊḏînâ" data-original="מְדִינָה" data-lang="hebrew" data-verse=""><em>medinah</em></a> (מְדִינָה), a smaller administrative district, not the great satrapy.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>5. "The Law of the Medes and Persians, Which Altereth Not"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>One of Esther's engines is the <strong>irrevocability of Persian law</strong>. When Vashti is deposed, it is written "among the laws of the Persians and the Medes, that it be not altered" (<a href="https://www.blueletterbible.org/kjv/est/1/19/s_427019" target="_blank" data-ref="Esther 1:19">Esther 1:19</a>). When Haman's decree of genocide goes out "sealed with the king's ring," the same principle traps the king himself: even after Haman falls, the first decree cannot simply be cancelled — "the writing which is written in the king's name, and sealed with the king's ring, may no man reverse" (<a href="https://www.blueletterbible.org/kjv/est/8/8/s_434008" target="_blank" data-ref="Esther 8:8">Esther 8:8</a>). So the Jews are saved not by revoking the death sentence but by a <em>counter</em>-decree permitting them to defend themselves. The whole plot turns on a law that, once sealed, cannot be unsealed.</p>
+<p>The <strong>king's signet ring</strong> (<a href="https://www.blueletterbible.org/kjv/est/3/10/s_429010" target="_blank" data-ref="Esther 3:10">Esther 3:10; 8:2</a>) is the era's instrument of absolute authority — a seal pressed into clay or wax that made a document the king's own irreversible word. When the king takes the ring from Haman and gives it to Mordecai <a href="https://www.blueletterbible.org/kjv/est/8/2/s_434002" target="_blank" data-ref="Esther 8:2">(8:2)</a>, the transfer of the ring <em>is</em> the transfer of power.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>6. The Jews of the Diaspora</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Esther's community is the Jewish <strong>diaspora</strong> — the descendants of those carried into exile who did not return to Judah when Cyrus opened the door. <strong>Mordecai</strong> is introduced as one "who had been carried away from Jerusalem with the captivity" (<a href="https://www.blueletterbible.org/kjv/est/2/6/s_428006" target="_blank" data-ref="Esther 2:6">Esther 2:6</a>), living in Susa generations into the dispersion. These are Jews fully embedded in the Persian world — Mordecai sits "in the king's gate" <a href="https://www.blueletterbible.org/kjv/est/2/19/s_428019" target="_blank" data-ref="Esther 2:19">(2:19)</a>, a place of officialdom; Esther can be taken into the royal house without her origins being known.</p>
+<p>That embeddedness is the book's quiet drama. It raises questions the returned community of Ezra–Nehemiah did not face in the same way: How does a covenant people survive when it is a scattered minority, its identity hideable, with no temple, no homeland underfoot, and no visible sign of God? Esther's answer is not a program but a person — a woman placed, providentially, exactly where her people's survival would be decided.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>7. The Book Where God Is Never Named</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The single most distinctive feature of Esther is a matter of the text itself: <strong>the name of God never appears in the Hebrew book of Esther.</strong> No divine title, no recorded prayer that is answered in so many words, no prophet, no miracle. The nearest the book comes is Mordecai's oblique certainty that "enlargement and deliverance" will "arise to the Jews from another place" (<a href="https://www.blueletterbible.org/kjv/est/4/14/s_430014" target="_blank" data-ref="Esther 4:14">Esther 4:14</a>) — a deliverance whose source he does not name. The book's entire theology is carried by <em>events</em>: coincidences too precise, and reversals too complete, to be read as chance. This silence is not an accident of transmission; it is the book's art. (It is discussed as the week's central insight in the <strong>Overview</strong> and traced in the rabbis' reading in <strong>Jewish Perspective</strong>.)</p>
+<p><strong>One thing to keep straight:</strong> the <strong>Greek Septuagint</strong> version of Esther contains six large "<strong>Additions to Esther</strong>" (labeled A–F) that are <em>not</em> in the Hebrew — including prayers of Mordecai and Esther, and explicit language about God. These Additions are <strong>deuterocanonical</strong>: they are not part of the Hebrew Bible or the King James Old Testament, and they are <strong>not this week's reading</strong>. The famous "God is unnamed" feature is a fact about the <strong>Hebrew/KJV</strong> book; do not read the Greek Additions' God-language back into it.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>8. Purim: The Feast That Remembers</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The book closes by founding a festival. Because the day the lot chose for the Jews' destruction became instead the day of their deliverance, Mordecai and Esther write to establish <strong>Purim</strong> — "after the name of Pur" (<a href="https://www.blueletterbible.org/kjv/est/9/26/s_435026" target="_blank" data-ref="Esther 9:26">Esther 9:26</a>) — as an annual observance "throughout every generation" <a href="https://www.blueletterbible.org/kjv/est/9/28/s_435028" target="_blank" data-ref="Esther 9:28">(9:28)</a>, kept with "feasting and joy, and of sending portions one to another, and gifts to the poor" <a href="https://www.blueletterbible.org/kjv/est/9/22/s_435022" target="_blank" data-ref="Esther 9:22">(9:22)</a>. Purim is unusual among biblical feasts: it commemorates not an exodus or a covenant at a mountain but a <em>hidden</em> rescue in a foreign court — a deliverance with no visible miracle at all. The Jewish tradition's rich observance of Purim, and its reading of the whole book, are treated in <strong>Jewish Perspective</strong>.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Source Table</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Source</th><th>Citation</th><th>Link</th></tr>
+<tr><td>World History Encyclopedia — <em>Xerxes I</em></td><td>Xerxes I, r. 486–465 BC; the king most commonly identified with Ahasuerus</td><td><a href="https://www.worldhistory.org/Xerxes_I/" target="_blank">worldhistory.org/Xerxes_I</a></td></tr>
+<tr><td>World History Encyclopedia — <a href="https://www.blueletterbible.org/lexicon/h5484/kjv/wlc/0-1/" target="_blank" data-lexicon="mare" data-strongs="H5484" data-translit="sûsâ" data-original="סוּסָה" data-lang="hebrew" data-verse=""><em>Susa</em></a></td><td>Susa = Hebrew Shushan; Achaemenid royal city rebuilt by Darius I; setting of Esther</td><td><a href="https://www.worldhistory.org/susa/" target="_blank">worldhistory.org/susa</a></td></tr>
+<tr><td>World History Encyclopedia — <em>Persian Government</em></td><td>Achaemenid administration by satrapies (≈20), each under a satrap</td><td><a href="https://www.worldhistory.org/Persian_Government/" target="_blank">worldhistory.org/Persian_Government</a></td></tr>
+<tr><td>World History Encyclopedia — <em>Achaemenid Empire</em></td><td>The empire c. 550–330 BC; "India even unto Ethiopia" scale</td><td><a href="https://www.worldhistory.org/Achaemenid_Empire/" target="_blank">worldhistory.org/Achaemenid_Empire</a></td></tr>
+</table>
+<hr>
+<p><em>Next file: <a href="03_Key_Passages_Study.md" target="_blank">03_Key_Passages_Study.md</a></em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 3: WEEK 32: KEY PASSAGES STUDY -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">3. Week 32: Key Passages Study</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Passage 1: Esther 4:14 — "For Such a Time as This"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p>"For if thou altogether holdest thy peace at this time, then shall there enlargement and deliverance arise to the Jews from another place; but thou and thy father's house shall be destroyed: and who knoweth whether thou art come to the kingdom for such a time as this?" <a href="https://www.blueletterbible.org/kjv/est/4/14/s_430014" target="_blank" data-ref="Esther 4:14">(4:14)</a></p>
+</blockquote>
+<h3>The Insight</h3>
+<p>This is the theological center of the book — and it holds two truths in tension. First, <strong>God's purpose is sure</strong>: "enlargement and deliverance" <em>will</em> come to the Jews, "from another place," whether Esther acts or not. The deliverance does not depend on her. Second, <strong>her calling is real</strong>: she has been brought "to the kingdom" — placed, at real cost, exactly where the crisis will be decided — and if she refuses the moment, she forfeits it (and perishes anyway). Mordecai names no divine agent; he simply assumes one. Behind the beauty contest and the palace politics stands a Providence that positions people. The verse has become shorthand for a principle: that God places His children — in a family, a calling, a friendship, a nation — where their particular courage is needed, and that position is a stewardship, not an accident.</p>
+<h3>Latter-day Saint Connections</h3>
+<ul>
+<li><strong>President Thomas S. Monson, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2009/04/may-you-have-courage?lang=eng" target="_blank">May You Have Courage</a>" (April 2009)</strong> — retelling Esther, he applies her moment to us: "But you are some of our Heavenly Father's strongest children, and He has saved you to come to the earth 'for such a time as this.'"</li>
+<li><strong>President James E. Faust, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2003/04/the-virtues-of-righteous-daughters-of-god?lang=eng" target="_blank">The Virtues of Righteous Daughters of God</a>" (April 2003):</strong> "These are challenging times. I believe your spirits may have been reserved for these latter days; that you, like Esther, have come to earth 'for such a time as this.'"</li>
+<li><strong>Scripture:</strong> "For behold, this is my work and my glory — to bring to pass the immortality and eternal life of man" (<a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=p39#p39" target="_blank" data-ref="Moses 1:39">Moses 1:39</a>) — the God who has a purpose in history is the God who has a purpose in placing you. Cf. <a href="https://www.blueletterbible.org/kjv/act/17/26/s_1035026" target="_blank" data-ref="Acts 17:26">Acts 17:26</a>, that God "hath determined the times before appointed, and the bounds of their habitation."</li>
+</ul>
+<h3>Study Questions</h3>
+<ol>
+<li>Mordecai says deliverance will come "from another place" <em>regardless</em> — yet still urges Esther to act. How does the book hold providence and personal responsibility together without collapsing one into the other?</li>
+<li>Where has God placed <em>you</em> — in what family, calling, or circumstance — "for such a time as this"? What courage might that placement be asking of you?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 2: Esther 4:16 — "If I Perish, I Perish"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p>"Go, gather together all the Jews that are present in Shushan, and fast ye for me, and neither eat nor drink three days, night or day: I also and my maidens will fast likewise; and so will I go in unto the king, which is not according to the law: and if I perish, I perish." <a href="https://www.blueletterbible.org/kjv/est/4/16/s_430016" target="_blank" data-ref="Esther 4:16">(4:16)</a></p>
+</blockquote>
+<h3>The Insight</h3>
+<p>Esther's answer is the courage that providence still requires. Nothing guarantees her safety — to approach the king unbidden is death unless he extends the golden sceptre <a href="https://www.blueletterbible.org/kjv/est/4/11/s_430011" target="_blank" data-ref="Esther 4:11">(4:11)</a>. She does not know how it will end; she only decides <em>how she will meet it</em>. Notice what her decision is made of: <strong>fasting</strong> (three days, the whole community with her), <strong>faith</strong> (she acts without a promise of the outcome), and <strong>surrender</strong> ("if I perish, I perish" — she gives the ending to God). It is the opposite of both fatalism and self-reliance: she neither shrinks back nor trusts her own cleverness. She turns herself over and walks in.</p>
+<p>And there is a pattern in that surrender worth naming. An intercessor who stands between a condemned people and a king's wrath, willing to die so they can live, is a figure the Old Testament reaches toward again and again — and it points forward. As the Interpreter Foundation's study aid observes, in offering her life for her people Esther "becomes a type of Jesus Christ, willing to die to save her people" (<em>Come, Follow Me… Study Aid</em>, Jonn Claybaugh, Interpreter Foundation, OT 2022).</p>
+<h3>Latter-day Saint Connections</h3>
+<ul>
+<li><strong>President Monson, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2009/04/may-you-have-courage?lang=eng" target="_blank">May You Have Courage</a>" (April 2009):</strong> "She declared, 'I [will] go in unto the king, which is not according to the law: and if I perish, I perish.' Esther had gathered her courage and would stand firm and immovable for that which was right." He concludes: "Esther, through fasting, faith, and courage, had saved a nation."</li>
+<li><strong>Sister Camille N. Johnson, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2021/10/42johnson" target="_blank">Invite Christ to Author Your Story</a>" (October 2021):</strong> "Esther is another beautiful example of letting God prevail. Rather than sticking with a cautious narrative of self-preservation, she exercised faith, turning herself completely over to the Lord." Johnson adds that "Esther was willing to let the Savior write her story even though, through the lens of mortality, the ending may have been tragic."</li>
+<li><strong>President Lorenzo Snow</strong> applied Esther's willingness directly to the covenant people in the last days: "It may become necessary in the future… for some of the Saints to act the part of Esther, the queen, and be willing to sacrifice anything and everything that is required of their hands for the purpose of working out the deliverance of the Latter-day Saints" (October 1882 general conference, <em>Journal of Discourses</em> 23:290).</li>
+<li><strong>Scripture:</strong> the three faithful young men before another royal death sentence — "our God whom we serve is able to deliver us… But if not… we will not serve thy gods" (<a href="https://www.blueletterbible.org/kjv/dan/3/17-18/s_853017" target="_blank" data-ref="Daniel 3:17-18">Daniel 3:17–18</a>) — the same faith that acts without a guaranteed rescue.</li>
+</ul>
+<h3>Study Questions</h3>
+<ol>
+<li>Esther's courage is built on fasting, faith, and surrender. Which of the three is hardest for you when you face a frightening decision?</li>
+<li>"Turning herself completely over to the Lord" — what does it mean to let God "author your story" when the ending, "through the lens of mortality," might not look like rescue?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 3: Esther 6:1 — The Sleepless Night</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p>"On that night could not the king sleep, and he commanded to bring the book of records of the chronicles; and they were read before the king." <a href="https://www.blueletterbible.org/kjv/est/6/1/s_432001" target="_blank" data-ref="Esther 6:1">(6:1)</a></p>
+</blockquote>
+<h3>The Insight</h3>
+<p>This is the hinge of the whole book, and it turns on nothing — a king who simply cannot sleep. Of all the scrolls in the royal archive, the ones read aloud that night happen to be the record of Mordecai's forgotten loyalty <a href="https://www.blueletterbible.org/kjv/est/2/21-23/s_428021" target="_blank" data-ref="Esther 2:21-23">(2:21–23)</a>. The timing is impossibly precise: Haman is at that very moment building a gallows for Mordecai, and arrives the next morning to request his execution — only to be ordered to <em>honor</em> him instead. Nothing supernatural happens. A man can't sleep; a clerk reads an old page. And yet the reader, having watched the whole book, can no longer call it coincidence. This is Esther's doctrine of <strong>hidden providence</strong> in a single verse: God governs most powerfully through events that look, from the inside, like ordinary accidents.</p>
+<h3>Latter-day Saint Connections</h3>
+<ul>
+<li><strong>Elder David A. Bednar, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2005/04/the-tender-mercies-of-the-lord?lang=eng" target="_blank">The Tender Mercies of the Lord</a>" (April 2005):</strong> "Some may count this experience as simply a nice coincidence, but I testify that the tender mercies of the Lord are real and that they do not occur randomly or merely by coincidence." (Elder Bednar is speaking of his own life, not of Esther — but the principle is exactly the book's.)</li>
+<li><strong>Scripture:</strong> "by small and simple things are great things brought to pass" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/37?lang=eng&id=p6#p6" target="_blank" data-ref="Alma 37:6">Alma 37:6</a>); "he counseleth in wisdom, and in justice, and in great mercy, over all his works" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/jacob/4?lang=eng&id=p10#p10" target="_blank" data-ref="Jacob 4:10">Jacob 4:10</a>). The unseen hand works through the small and the ordinary.</li>
+</ul>
+<h3>Study Questions</h3>
+<ol>
+<li>The rescue in <a href="https://www.blueletterbible.org/kjv/est/6/1/s_432001" target="_blank" data-ref="Esther 6">Esther 6</a> hangs on a sleepless night and a forgotten record. Where, looking back, can you see "coincidences" in your own life that were too precise to be chance?</li>
+<li>Why might God prefer to work through hidden, ordinary means rather than open miracles? What does that ask of our faith?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 4: Esther 7:10; 9:1 — The Great Reversal</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p>"So they hanged Haman on the gallows that he had prepared for Mordecai. Then was the king's wrath pacified." <a href="https://www.blueletterbible.org/kjv/est/7/10/s_433010" target="_blank" data-ref="Esther 7:10">(7:10)</a></p>
+</blockquote>
+<blockquote>
+<p>"…in the day that the enemies of the Jews hoped to have power over them, (though it was turned to the contrary, that the Jews had rule over them that hated them;)." <a href="https://www.blueletterbible.org/kjv/est/9/1/s_435001" target="_blank" data-ref="Esther 9:1">(9:1)</a></p>
+</blockquote>
+<h3>The Insight</h3>
+<p>The book is built on <strong>reversal</strong>. Haman erects a gallows fifty cubits high for Mordecai and is hanged on it himself. The lot (<a href="https://www.blueletterbible.org/lexicon/h6332/kjv/wlc/0-1/" target="_blank" data-lexicon="Pur or Purim = &quot;lot&quot; or &quot;piece&quot;lota special feast among the post-exilic Jews, to celebrate their deliverance from Ham..." data-strongs="H6332" data-translit="pûr" data-original="פּוּר" data-lang="hebrew" data-verse=""><em>pur</em></a>) cast to destroy the Jews names the day of their deliverance. The decree of doom is answered by a decree of rescue. The text states the pattern outright: "it was turned to the contrary" <a href="https://www.blueletterbible.org/kjv/est/9/1/s_435001" target="_blank" data-ref="Esther 9:1">(9:1)</a> — and it even gives the mechanism in its own words: the king "commanded by letters that his wicked device, which he devised against the Jews, should <strong>return upon his own head</strong>" <a href="https://www.blueletterbible.org/kjv/est/9/25/s_435025" target="_blank" data-ref="Esther 9:25">(9:25)</a>. That is not just poetic justice; it is a moral law the whole of scripture teaches — that the trap the wicked set for the righteous tends to close on the trap-setter.</p>
+<h3>Latter-day Saint Connections</h3>
+<ul>
+<li><strong>"Whoso diggeth a pit shall fall therein: and he that rolleth a stone, it will return upon him"</strong> (<a href="https://www.blueletterbible.org/kjv/pro/26/27/s_654027" target="_blank" data-ref="Proverbs 26:27">Proverbs 26:27</a>).</li>
+<li><strong>"He made a pit, and digged it, and is fallen into the ditch which he made. His mischief shall return upon his own head"</strong> (<a href="https://www.blueletterbible.org/kjv/psa/7/15-16/s_485015" target="_blank" data-ref="Psalm 7:15-16">Psalm 7:15–16</a>) — the very phrase <a href="https://www.blueletterbible.org/kjv/est/9/25/s_435025" target="_blank" data-ref="Esther 9:25">Esther 9:25</a> uses of Haman.</li>
+<li><strong>"Be not deceived; God is not mocked: for whatsoever a man soweth, that shall he also reap"</strong> (<a href="https://www.blueletterbible.org/kjv/gal/6/7/s_1097007" target="_blank" data-ref="Galatians 6:7">Galatians 6:7</a>).</li>
+<li><strong>Restoration canon:</strong> Nephi saw the same image — "that great pit which hath been digged for the destruction of men shall be filled by those who digged it" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/14?lang=eng&id=p3#p3" target="_blank" data-ref="1 Nephi 14:3">1 Nephi 14:3</a>).</li>
+<li><strong>The Prophet Joseph Smith</strong>, writing from Liberty Jail, turned Esther's reversal into a promise for the last days: "the Lord so ordered that Haman was hanged upon his own gallows. So shall it come to pass with poor Haman in the last days" (<em>Personal Writings of Joseph Smith</em>, p. 375). <em>(No general conference sermon squarely develops the reversal-of-the-wicked as a theme; the anchor is the scriptural principle above and this prophetic application.)</em></li>
+</ul>
+<h3>Study Questions</h3>
+<ol>
+<li><a href="https://www.blueletterbible.org/kjv/est/9/25/s_435025" target="_blank" data-ref="Esther 9:25">Esther 9:25</a> says Haman's "wicked device… should return upon his own head" — the same image as <a href="https://www.blueletterbible.org/kjv/psa/7/16/s_485016" target="_blank" data-ref="Psalm 7:16">Psalm 7:16</a>. Why does scripture return so often to the picture of the wicked caught in their own trap?</li>
+<li>The reversal in Esther is deliverance, not vengeance sought by the righteous — Esther and Mordecai never build the gallows. How does the book keep the reversal God's work rather than human revenge?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 5: Esther 9:20–28 — Purim and the Duty to Remember</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p>"…that they should keep the fourteenth day of the month Adar, and the fifteenth day of the same, yearly, As the days wherein the Jews rested from their enemies, and the month which was turned unto them from sorrow to joy… days of feasting and joy, and of sending portions one to another, and gifts to the poor." <a href="https://www.blueletterbible.org/kjv/est/9/21-22/s_435021" target="_blank" data-ref="Esther 9:21-22">(9:21–22)</a></p>
+</blockquote>
+<h3>The Insight</h3>
+<p>The book ends by building a memory. The deliverance is not left to fade; it is fixed in an annual feast — <strong>Purim</strong>, "after the name of Pur" <a href="https://www.blueletterbible.org/kjv/est/9/26/s_435026" target="_blank" data-ref="Esther 9:26">(9:26)</a> — so that "these days should be remembered and kept throughout every generation" <a href="https://www.blueletterbible.org/kjv/est/9/28/s_435028" target="_blank" data-ref="Esther 9:28">(9:28)</a>. It is a strikingly ordinary way to remember an extraordinary rescue: a shared meal, gifts to friends, gifts to the poor. And it fits the book perfectly. Esther has no pillar of fire to point back to, no parted sea — only a chain of "coincidences" that, retold each year, become a testimony. Remembering is how the hidden hand is made visible: you cannot see the providence while you live it; you can see it when you look back and tell the story.</p>
+<h3>Latter-day Saint Connections</h3>
+<ul>
+<li><strong>President Henry B. Eyring, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2007/10/o-remember-remember?lang=eng" target="_blank">O Remember, Remember</a>" (October 2007):</strong> "My point is to urge you to find ways to recognize and remember God's kindness. It will build our testimonies." He describes pausing each night to ask, "Have I seen the hand of God reaching out to touch us or our children or our family today?" — and closes, "it brings me joy to remember Him."</li>
+<li><strong>Scripture:</strong> the sacrament itself is a feast of remembering — the bread eaten "in remembrance of the body of thy Son… and always remember him" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/4?lang=eng&id=p3#p3" target="_blank" data-ref="Moroni 4:3">Moroni 4:3</a>; cf. <a href="https://www.blueletterbible.org/kjv/luk/22/19/s_995019" target="_blank" data-ref="Luke 22:19">Luke 22:19</a>, "this do in remembrance of me"); and the recurring Book of Mormon refrain, "O remember, remember" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/hel/5?lang=eng&id=p9#p9" target="_blank" data-ref="Helaman 5:9">Helaman 5:9</a>). To remember what God has done is a covenant discipline.</li>
+</ul>
+<h3>Study Questions</h3>
+<ol>
+<li>Purim remembers a rescue that had no visible miracle — only a story of "coincidences." How does <em>retelling</em> God's hand in the past strengthen faith for a silent present?</li>
+<li>President Eyring pauses nightly to ask whether he saw the hand of God that day. What practice of remembering could you build so that your own "Purim" deliverances are not forgotten?</li>
+</ol>
+<hr>
+<p><em>Next file: <a href="04_Word_Studies.md" target="_blank">04_Word_Studies.md</a></em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 4: WEEK 32: WORD STUDIES -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">4. Week 32: Word Studies</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Introduction</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The book of Esther is written entirely in <strong>Hebrew</strong> (unlike Ezra, parts of which are Aramaic). Four words carry its distinctive theology. A pagan casts a <strong>lot</strong> (<a href="https://www.blueletterbible.org/lexicon/h6332/kjv/wlc/0-1/" target="_blank" data-lexicon="Pur or Purim = &quot;lot&quot; or &quot;piece&quot;lota special feast among the post-exilic Jews, to celebrate their deliverance from Ham..." data-strongs="H6332" data-translit="pûr" data-original="פּוּר" data-lang="hebrew" data-verse=""><em>pur</em></a>) to pick a day of death — and the lot's day becomes the day of rescue. A cousin asks whether a queen has come to the throne for a particular <strong>time</strong> (<a href="https://www.blueletterbible.org/lexicon/h852/kjv/wlc/0-1/" target="_blank" data-lexicon="sign, miraculous signs, wonders" data-strongs="H852" data-translit="āṯ" data-original="אָת" data-lang="hebrew" data-verse=""><em>et</em></a>). The whole plot <strong>turns</strong> (<a href="https://www.blueletterbible.org/lexicon/h2015/kjv/wlc/0-1/" target="_blank" data-lexicon="to turn, overthrow, overturn (Qal) to overturn, overthrow to turn, turn about, turn over, turn around to change, tran..." data-strongs="H2015" data-translit="hāp̄aḵ" data-original="הָפַךְ" data-lang="hebrew" data-verse=""><em>haphak</em></a>) to the contrary. And it all hinges on a woman brought, providentially, to the <strong>kingdom</strong> (<a href="https://www.blueletterbible.org/lexicon/h4438/kjv/wlc/0-1/" target="_blank" data-lexicon="kingdom, royal dominion" data-strongs="H4438" data-translit="malkuth" data-original="מַלְכוּת" data-lang="hebrew" data-verse="Psalm 145:13"><em>malkuth</em></a>). Trace these four — <strong>lot, time, turn, kingdom</strong> — and you trace the book's argument: that a God who is never named governs even the fall of a lot and the timing of a sleepless night. (A fifth word, <a href="https://www.blueletterbible.org/lexicon/h5641/kjv/wlc/0-1/" target="_blank" data-lexicon="to hide, conceal(Niphal)to hide oneselfto be hidden, be concealed(Piel) to hide carefully(Pual) to be hidden carefull..." data-strongs="H5641" data-translit="sāṯar" data-original="סָתַר" data-lang="hebrew" data-verse=""><em>satar</em></a>, "to hide," belongs to the rabbis' reading of the book and is treated in <a href="05_Jewish_Perspective.md" target="_blank">Jewish Perspective</a>.)</p>
+<blockquote>
+<p><em>Note on the Greek: the Septuagint contains Esther, and its renderings are instructive — sometimes it preserves the Hebrew's wordplay, sometimes it loses it entirely (noted per word below). The LXX also has large "Additions" with God-language that are not in the Hebrew; none of the four verses studied here falls inside those Additions.</em></p>
+</blockquote>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>1. <em>Pur / Purim</em> (פּוּר / פּוּרִים) — "Lot"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Root and Form</h3>
+<p><a href="https://www.blueletterbible.org/lexicon/h6332/kjv/wlc/0-1/" target="_blank" data-lexicon="Pur or Purim = &quot;lot&quot; or &quot;piece&quot;lota special feast among the post-exilic Jews, to celebrate their deliverance from Ham..." data-strongs="H6332" data-translit="pûr" data-original="פּוּר" data-lang="hebrew" data-verse=""><em>Pûr</em></a> (פּוּר) is not a native Hebrew word but a <strong>loanword</strong> (probably from Akkadian <em>pūru</em>), which is exactly why the book has to explain it: "they cast <strong>Pur, that is, the lot</strong>" (<a href="https://www.blueletterbible.org/kjv/est/3/7/s_429007" target="_blank" data-ref="Esther 3:7">Esther 3:7</a>). Its plural, <a href="https://www.blueletterbible.org/lexicon/h6332/kjv/wlc/0-1/" target="_blank" data-lexicon="Pur or Purim = &quot;lot&quot; or &quot;piece&quot;lota special feast among the post-exilic Jews, to celebrate their deliverance from Ham..." data-strongs="H6332" data-translit="pûr" data-original="פּוּר" data-lang="hebrew" data-verse=""><em>pûrîm</em></a> (פּוּרִים), becomes the name of the feast. The book gives its own etymology — the one time a biblical festival is named, in the text, after a foreign word for a pagan's dice.</p>
+<h3>Appears</h3>
+<p><a href="https://www.blueletterbible.org/kjv/est/3/7/s_429007" target="_blank" data-ref="Esther 3:7">Esther 3:7</a> — Haman "cast Pur, that is, the lot" to fix the day of the Jews' destruction. <a href="https://www.blueletterbible.org/kjv/est/9/24-26/s_435024" target="_blank" data-ref="Esther 9:24-26">Esther 9:24–26</a> — the book's own naming: Haman "had cast Pur, that is, the lot, to consume them… Wherefore they called these days <strong>Purim</strong> after the name of Pur."</p>
+<h3>Meaning</h3>
+<p>The irony is the whole point. A <a href="https://www.blueletterbible.org/lexicon/g3091/kjv/tr/0-1/" target="_blank" data-lexicon="Lot = &quot;veil or covering&quot;the son of Haran and nephew to Abraham" data-strongs="G3091" data-translit="lōt" data-original="Λώτ" data-lang="greek" data-verse=""><em>lot</em></a> is the instrument of pure chance — Haman lets a rolling die choose which day to murder a people, as if the matter were random. And the day the "random" lot selects turns out to be the day of deliverance. Scripture's answer to the lot is stated flatly elsewhere: "The lot is cast into the lap; but the whole disposing thereof is of the Lord" (<a href="https://www.blueletterbible.org/kjv/pro/16/33/s_644033" target="_blank" data-ref="Proverbs 16:33">Proverbs 16:33</a>). Purim takes its name from a pagan's chance to declare, forever, that there is no such thing as chance where God's people are concerned.</p>
+<h3>Latter-day Saint Connection</h3>
+<p>"The lot is cast into the lap; but the whole disposing thereof is of the Lord" (<a href="https://www.blueletterbible.org/kjv/pro/16/33/s_644033" target="_blank" data-ref="Proverbs 16:33">Proverbs 16:33</a>) is Esther's doctrine in a single proverb. Even the apostolic church, choosing a twelfth apostle, "gave forth their lots; and the lot fell upon Matthias" (<a href="https://www.blueletterbible.org/kjv/act/1/26/s_1019026" target="_blank" data-ref="Acts 1:26">Acts 1:26</a>) — trusting the Lord to dispose what looked like chance. The Restoration teaches the same confidence: "all things must come to pass in their time" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/64?lang=eng&id=p32#p32" target="_blank" data-ref="D&C 64:32">D&C 64:32</a>); nothing in a disciple's life is finally at the mercy of the dice.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h6332/kjv/wlc/0-1/" target="_blank" data-lexicon="Pur or Purim = &quot;lot&quot; or &quot;piece&quot;lota special feast among the post-exilic Jews, to celebrate their deliverance from Ham..." data-strongs="H6332" data-translit="pûr" data-original="פּוּר" data-lang="hebrew" data-verse=""><em>pûr</em></a> (פּוּר) — "lot" (loanword, prob. Akkadian <em>pūru</em>); plural <a href="https://www.blueletterbible.org/lexicon/h6332/kjv/wlc/0-1/" target="_blank" data-lexicon="Pur or Purim = &quot;lot&quot; or &quot;piece&quot;lota special feast among the post-exilic Jews, to celebrate their deliverance from Ham..." data-strongs="H6332" data-translit="pûr" data-original="פּוּר" data-lang="hebrew" data-verse=""><em>pûrîm</em></a>, the feast</td><td><a href="https://www.blueletterbible.org/lexicon/h6332/kjv/wlc/0-1/" target="_blank" data-lexicon="Pur or Purim = "lot" or "piece"lota special feast among the post-exilic Jews, to celebrate their deliverance from Ham..." data-strongs="H6332" data-translit="pûr" data-original="פּוּר" data-lang="hebrew" data-verse="">BLB H6332</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g2819/kjv/tr/0-1/" target="_blank" data-lexicon="an object used in casting or drawing lots, which was either a pebble, or a potsherd, or a bit of woodthe lots of seve..." data-strongs="G2819" data-translit="klēros" data-original="κλῆρος" data-lang="greek" data-verse=""><em>klēros</em></a> (κλῆρος) — "lot" (LXX <a href="https://www.blueletterbible.org/kjv/est/3/7/s_429007" target="_blank" data-ref="Esther 3:7">Esther 3:7</a>, <em>ebalen klērous</em>, "he cast lots"); the feast is renamed <em>Phrourai</em> (Φρουραὶ), <strong>not</strong> transliterated as Purim</td><td><a href="https://www.blueletterbible.org/lexicon/g2819/kjv/tr/0-1/" target="_blank" data-lexicon="an object used in casting or drawing lots, which was either a pebble, or a potsherd, or a bit of woodthe lots of seve..." data-strongs="G2819" data-translit="klēros" data-original="κλῆρος" data-lang="greek" data-verse="">BLB G2819</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><em>phur</em> (transliterated), glossed <em>sors</em> "lot" (Vulgate <a href="https://www.blueletterbible.org/kjv/est/9/24/s_435024" target="_blank" data-ref="Esther 9:24">Esther 9:24</a>, <em>misit phur, quod… vertitur in sortem</em>; 9:26, <em>phurim, id est sortium</em>)</td><td><a href="https://logeion.uchicago.edu/sors" target="_blank">Logeion: sors</a></td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g3091/kjv/tr/0-1/" target="_blank" data-lexicon="Lot = &quot;veil or covering&quot;the son of Haran and nephew to Abraham" data-strongs="G3091" data-translit="lōt" data-original="Λώτ" data-lang="greek" data-verse=""><em>lot</em></a> — an object cast to decide by chance; <a href="https://www.blueletterbible.org/lexicon/h6332/kjv/wlc/0-1/" target="_blank" data-lexicon="Pur or Purim = &quot;lot&quot; or &quot;piece&quot;lota special feast among the post-exilic Jews, to celebrate their deliverance from Ham..." data-strongs="H6332" data-translit="pûr" data-original="פּוּר" data-lang="hebrew" data-verse=""><em>Purim</em></a> — the festival, a direct Hebrew loanword</td><td><a href="https://www.merriam-webster.com/dictionary/lot" target="_blank">Merriam-Webster</a> · <a href="https://webstersdictionary1828.com/Dictionary/lot" target="_blank">Webster's 1828</a> · <a href="https://www.etymonline.com/word/Purim" target="_blank">Etymonline</a></td></tr>
+</table>
+<p><em>Note: the Hebrew's self-naming wordplay (</em>pur<em> → </em>Purim<em>) is <strong>lost in the Greek</strong> — the Septuagint just says "lot" (</em>klēros<em>) and calls the feast </em>Phrourai<em> — but <strong>kept in the Latin</strong>, which transliterates </em>phur<em>/</em>phurim<em> and glosses each with </em>sors<em> ("lot"). A small window into what translation preserves and drops.</em></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>2. <em>Et</em> (עֵת) — "Time, Appointed Time"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Root and Form</h3>
+<p><a href="https://www.blueletterbible.org/lexicon/h852/kjv/wlc/0-1/" target="_blank" data-lexicon="sign, miraculous signs, wonders" data-strongs="H852" data-translit="āṯ" data-original="אָת" data-lang="hebrew" data-verse=""><em>ʿĒt</em></a> (עֵת) is the Hebrew word for "time" — but not time as mere duration. It is the <em>right</em> time, the appointed or opportune moment: the season for a thing, the hour a matter comes to its point.</p>
+<h3>Appears</h3>
+<p><a href="https://www.blueletterbible.org/kjv/est/4/14/s_430014" target="_blank" data-ref="Esther 4:14">Esther 4:14</a> — Mordecai's question: "who knoweth whether thou art come to the kingdom for such a <a href="https://www.blueletterbible.org/lexicon/g5092/kjv/tr/0-1/" target="_blank" data-lexicon="a valuing by which the price is fixedof the price itselfof the price paid or received for a person or thing bought or..." data-strongs="G5092" data-translit="timē" data-original="τιμή" data-lang="greek" data-verse=""><em>time</em></a> (<a href="https://www.blueletterbible.org/lexicon/h852/kjv/wlc/0-1/" target="_blank" data-lexicon="sign, miraculous signs, wonders" data-strongs="H852" data-translit="āṯ" data-original="אָת" data-lang="hebrew" data-verse=""><em>et</em></a>) as this?" The whole crisis is framed as a <em>moment</em> Esther has been brought to meet.</p>
+<h3>Meaning</h3>
+<p>Mordecai does not ask whether Esther has power, or a plan, or a chance of success. He asks whether <em>this moment</em> is the reason she is where she is. <a href="https://www.blueletterbible.org/lexicon/h852/kjv/wlc/0-1/" target="_blank" data-lexicon="sign, miraculous signs, wonders" data-strongs="H852" data-translit="āṯ" data-original="אָת" data-lang="hebrew" data-verse=""><em>Et</em></a> names a providential appointment — the conviction that some times are not accidents but assignments. Scripture is full of this sense of time: "To every thing there is a season, and a <a href="https://www.blueletterbible.org/lexicon/g5092/kjv/tr/0-1/" target="_blank" data-lexicon="a valuing by which the price is fixedof the price itselfof the price paid or received for a person or thing bought or..." data-strongs="G5092" data-translit="timē" data-original="τιμή" data-lang="greek" data-verse=""><em>time</em></a> to every purpose under the heaven" (<a href="https://www.blueletterbible.org/kjv/ecc/3/1/s_662001" target="_blank" data-ref="Ecclesiastes 3:1">Ecclesiastes 3:1</a>); "My <em>times</em> are in thy hand" (<a href="https://www.blueletterbible.org/kjv/psa/31/15/s_509015" target="_blank" data-ref="Psalm 31:15">Psalm 31:15</a>). Esther's <a href="https://www.blueletterbible.org/lexicon/h852/kjv/wlc/0-1/" target="_blank" data-lexicon="sign, miraculous signs, wonders" data-strongs="H852" data-translit="āṯ" data-original="אָת" data-lang="hebrew" data-verse=""><em>et</em></a> is the hinge of the book's theology of placement: God arranges not only <em>where</em> His people stand but <em>when</em>.</p>
+<h3>Latter-day Saint Connection</h3>
+<p>"My times are in thy hand" (<a href="https://www.blueletterbible.org/kjv/psa/31/15/s_509015" target="_blank" data-ref="Psalm 31:15">Psalm 31:15</a>) is the trust Esther is being asked to live. The Restoration frames life the same way — that God "hath determined the times before appointed, and the bounds of [our] habitation" (<a href="https://www.blueletterbible.org/kjv/act/17/26/s_1035026" target="_blank" data-ref="Acts 17:26">Acts 17:26</a>), and that "all things must come to pass in their time" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/64?lang=eng&id=p32#p32" target="_blank" data-ref="D&C 64:32">D&C 64:32</a>). To believe in <a href="https://www.blueletterbible.org/lexicon/h852/kjv/wlc/0-1/" target="_blank" data-lexicon="sign, miraculous signs, wonders" data-strongs="H852" data-translit="āṯ" data-original="אָת" data-lang="hebrew" data-verse=""><em>et</em></a> is to believe your moment is not random: that you may have been placed in this family, this calling, this decade, "for such a time as this."</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h852/kjv/wlc/0-1/" target="_blank" data-lexicon="sign, miraculous signs, wonders" data-strongs="H852" data-translit="āṯ" data-original="אָת" data-lang="hebrew" data-verse=""><em>ʿēt</em></a> (עֵת) — "time, appointed/opportune time, season"; <a href="https://www.blueletterbible.org/kjv/est/4/14/s_430014" target="_blank" data-ref="Esther 4:14">Esther 4:14</a> <em>lə·ʿēt</em> ("for a time")</td><td><a href="https://www.blueletterbible.org/lexicon/h6256/kjv/wlc/0-1/" target="_blank" data-lexicon="time, season, appointed moment" data-strongs="H6256" data-translit="et" data-original="עֵת" data-lang="hebrew" data-verse="Genesis 18:10">BLB H6256</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g2540/kjv/tr/0-1/" target="_blank" data-lexicon="due measurea measure of time, a larger or smaller portion of time, hence:a fixed and definite time, the time when thi..." data-strongs="G2540" data-translit="kairos" data-original="καιρός" data-lang="greek" data-verse=""><em>kairos</em></a> (καιρός) — the decisive, opportune moment (not mere clock-time <a href="https://www.blueletterbible.org/lexicon/g5550/kjv/tr/0-1/" target="_blank" data-lexicon="time either long or shortClick for Synonyms" data-strongs="G5550" data-translit="chronos" data-original="χρόνος" data-lang="greek" data-verse=""><em>chronos</em></a>); LXX <a href="https://www.blueletterbible.org/kjv/est/4/14/s_430014" target="_blank" data-ref="Esther 4:14">Esther 4:14</a>, <em>eis ton kairon touton</em> ("for this time")</td><td><a href="https://www.blueletterbible.org/lexicon/g2540/kjv/tr/0-1/" target="_blank" data-lexicon="due measurea measure of time, a larger or smaller portion of time, hence:a fixed and definite time, the time when thi..." data-strongs="G2540" data-translit="kairos" data-original="καιρός" data-lang="greek" data-verse="">BLB G2540</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><em>tempus</em> (<em>temporis</em>) — "time, occasion"; Vulgate <a href="https://www.blueletterbible.org/kjv/est/4/14/s_430014" target="_blank" data-ref="Esther 4:14">Esther 4:14</a>, <em>in tali tempore</em> ("at such a time")</td><td><a href="https://logeion.uchicago.edu/tempus" target="_blank">Logeion: tempus</a></td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g5092/kjv/tr/0-1/" target="_blank" data-lexicon="a valuing by which the price is fixedof the price itselfof the price paid or received for a person or thing bought or..." data-strongs="G5092" data-translit="timē" data-original="τιμή" data-lang="greek" data-verse=""><em>time</em></a> — a fixed or appointed moment; cf. <em><a href="https://www.blueletterbible.org/lexicon/g2540/kjv/tr/0-1/" target="_blank" data-lexicon="due measurea measure of time, a larger or smaller portion of time, hence:a fixed and definite time, the time when thi..." data-strongs="G2540" data-translit="kairos" data-original="καιρός" data-lang="greek" data-verse="">temporal</a></em>, <em>tempo</em> (from Latin <em>tempus</em>)</td><td><a href="https://www.merriam-webster.com/dictionary/time" target="_blank">Merriam-Webster</a> · <a href="https://webstersdictionary1828.com/Dictionary/time" target="_blank">Webster's 1828</a> · <a href="https://www.etymonline.com/word/time" target="_blank">Etymonline</a></td></tr>
+</table>
+<p><em>Note: the Septuagint's choice is telling — it renders </em>et<em> with <strong>καιρός</strong> (</em>kairos<em>), the loaded word for a decisive, God-given moment, rather than <strong>χρόνος</strong> (</em>chronos<em>), mere elapsed time. "For such a time as this" is, in the Greek, "for this </em>kairos<em>."</em></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>3. <em>Haphak</em> (הָפַךְ) — "To Turn, Overturn, Reverse"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Root and Form</h3>
+<p><a href="https://www.blueletterbible.org/lexicon/h2015/kjv/wlc/0-1/" target="_blank" data-lexicon="to turn, overthrow, overturn (Qal) to overturn, overthrow to turn, turn about, turn over, turn around to change, tran..." data-strongs="H2015" data-translit="hāp̄aḵ" data-original="הָפַךְ" data-lang="hebrew" data-verse=""><em>Hāp̄aḵ</em></a> (הָפַךְ) means "to turn over, overturn, reverse" — the verb of a thing flipped to its opposite. In <a href="https://www.blueletterbible.org/kjv/est/9/1/s_435001" target="_blank" data-ref="Esther 9:1">Esther 9:1</a> it appears in a dramatic form, <em>wə·na·hă·p̄ōḵ</em> (וְנַהֲפוֹךְ), which the Jewish tradition seized on as the very name of the book's theme: <em>venahafoch hu</em>, "and it was reversed."</p>
+<h3>Appears</h3>
+<p><a href="https://www.blueletterbible.org/kjv/est/9/1/s_435001" target="_blank" data-ref="Esther 9:1">Esther 9:1</a> — "in the day that the enemies of the Jews hoped to have power over them, (though it was <strong>turned</strong> (<a href="https://www.blueletterbible.org/lexicon/h2015/kjv/wlc/0-1/" target="_blank" data-lexicon="to turn, overthrow, overturn (Qal) to overturn, overthrow to turn, turn about, turn over, turn around to change, tran..." data-strongs="H2015" data-translit="hāp̄aḵ" data-original="הָפַךְ" data-lang="hebrew" data-verse=""><em>haphak</em></a>) to the contrary, that the Jews had rule over them that hated them)."</p>
+<h3>Meaning</h3>
+<p><a href="https://www.blueletterbible.org/lexicon/h2015/kjv/wlc/0-1/" target="_blank" data-lexicon="to turn, overthrow, overturn (Qal) to overturn, overthrow to turn, turn about, turn over, turn around to change, tran..." data-strongs="H2015" data-translit="hāp̄aḵ" data-original="הָפַךְ" data-lang="hebrew" data-verse=""><em>Haphak</em></a> is the book in one word. Everything is turned to its opposite: the gallows built for Mordecai holds Haman; the lot cast for slaughter names the day of rescue; the decree of death is answered by a decree of life; "the month which was turned unto them from sorrow to joy" <a href="https://www.blueletterbible.org/kjv/est/9/22/s_435022" target="_blank" data-ref="Esther 9:22">(9:22)</a>. The verb does not describe blind fortune's wheel — it describes a moral reversal, the wicked's device made to "return upon his own head" <a href="https://www.blueletterbible.org/kjv/est/9/25/s_435025" target="_blank" data-ref="Esther 9:25">(9:25)</a>. It is the same overturning the Psalms sing: "Thou hast <strong>turned</strong> for me my mourning into dancing" (<a href="https://www.blueletterbible.org/kjv/psa/30/11/s_508011" target="_blank" data-ref="Psalm 30:11">Psalm 30:11</a>). In Esther, God's hiddenness and God's justice meet in this one verb.</p>
+<h3>Latter-day Saint Connection</h3>
+<p>"Thou hast turned for me my mourning into dancing… and girded me with gladness" (<a href="https://www.blueletterbible.org/kjv/psa/30/11/s_508011" target="_blank" data-ref="Psalm 30:11">Psalm 30:11</a>) is <a href="https://www.blueletterbible.org/lexicon/h2015/kjv/wlc/0-1/" target="_blank" data-lexicon="to turn, overthrow, overturn (Qal) to overturn, overthrow to turn, turn about, turn over, turn around to change, tran..." data-strongs="H2015" data-translit="hāp̄aḵ" data-original="הָפַךְ" data-lang="hebrew" data-verse=""><em>haphak</em></a> as praise — the confidence that God can reverse any doom. The Restoration holds the same hope: that the Lord will "consecrate thine afflictions for thy gain" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/2?lang=eng&id=p2#p2" target="_blank" data-ref="2 Nephi 2:2">2 Nephi 2:2</a>), turning what was meant for harm into good. Esther's <em>venahafoch hu</em> is the Old Testament's picture of Joseph's word to his brothers made a governing principle: "ye thought evil against me; but God meant it unto good" (<a href="https://www.blueletterbible.org/kjv/gen/50/20/s_50020" target="_blank" data-ref="Genesis 50:20">Genesis 50:20</a>).</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h2015/kjv/wlc/0-1/" target="_blank" data-lexicon="to turn, overthrow, overturn (Qal) to overturn, overthrow to turn, turn about, turn over, turn around to change, tran..." data-strongs="H2015" data-translit="hāp̄aḵ" data-original="הָפַךְ" data-lang="hebrew" data-verse=""><em>hāp̄aḵ</em></a> (הָפַךְ) — "to turn, overturn, reverse"; <a href="https://www.blueletterbible.org/kjv/est/9/1/s_435001" target="_blank" data-ref="Esther 9:1">Esther 9:1</a> Niphal inf. abs. <em>wə·na·hă·p̄ōḵ</em> ("and it was reversed") → the Purim byword <em>venahafoch hu</em></td><td><a href="https://www.blueletterbible.org/lexicon/h2015/kjv/wlc/0-1/" target="_blank" data-lexicon="to turn, overthrow, overturn (Qal) to overturn, overthrow to turn, turn about, turn over, turn around to change, tran..." data-strongs="H2015" data-translit="hāp̄aḵ" data-original="הָפַךְ" data-lang="hebrew" data-verse="">BLB H2015</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><em>(no in-verse rendering — see note)</em>; the general LXX equivalent of <a href="https://www.blueletterbible.org/lexicon/h2015/kjv/wlc/0-1/" target="_blank" data-lexicon="to turn, overthrow, overturn (Qal) to overturn, overthrow to turn, turn about, turn over, turn around to change, tran..." data-strongs="H2015" data-translit="hāp̄aḵ" data-original="הָפַךְ" data-lang="hebrew" data-verse=""><em>haphak</em></a> is <em>strephō / metastrephō</em> (στρέφω / μεταστρέφω, "turn about")</td><td><a href="https://logeion.uchicago.edu/μεταστρέφω" target="_blank">Logeion: μεταστρέφω</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><em>verto</em> (<em>vertere</em>) — "to turn"; Vulgate <a href="https://www.blueletterbible.org/kjv/est/9/1/s_435001" target="_blank" data-ref="Esther 9:1">Esther 9:1</a>, <em>versa vice</em> ("by a reversed turn / the turn having been reversed")</td><td><a href="https://logeion.uchicago.edu/verto" target="_blank">Logeion: verto</a></td></tr>
+<tr><td><strong>English</strong></td><td><em>reverse</em> (Latin <em>re-</em> + <em>vertere</em>); <em>overturn</em>; cf. <em>convert, versatile</em></td><td><a href="https://www.merriam-webster.com/dictionary/reverse" target="_blank">Merriam-Webster</a> · <a href="https://webstersdictionary1828.com/Dictionary/reverse" target="_blank">Webster's 1828</a> · <a href="https://www.etymonline.com/word/reverse" target="_blank">Etymonline</a></td></tr>
+</table>
+<p><em>Note: strikingly, the <strong>Septuagint of <a href="https://www.blueletterbible.org/kjv/est/9/1/s_435001" target="_blank" data-ref="Esther 9:1">Esther 9:1</a> drops the reversal verb altogether</strong> — the Greek says only that the king's letters "were present" and never renders the Hebrew's climactic "it was turned to the contrary." The book's theological centerpiece is invisible in the Greek. The <strong>Vulgate</strong>, by contrast, captures it vividly as </em>versa vice<em>. (The Hebrew form itself — a Niphal infinitive absolute — is grammatically emphatic, chosen for dramatic weight.)</em></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>4. <em>Malkuth</em> (מַלְכוּת) — "Kingdom, Royalty, Reign"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Root and Form</h3>
+<p><a href="https://www.blueletterbible.org/lexicon/h4438/kjv/wlc/0-1/" target="_blank" data-lexicon="kingdom, royal dominion" data-strongs="H4438" data-translit="malkuth" data-original="מַלְכוּת" data-lang="hebrew" data-verse="Psalm 145:13"><em>Malḵûṯ</em></a> (מַלְכוּת) means "kingdom, royalty, royal power" — from the same root as <a href="https://www.blueletterbible.org/lexicon/h4429/kjv/wlc/0-1/" target="_blank" data-lexicon="Melech = &quot;king&quot; a Benjamite, the 2nd son of Micah and grandson of Mephibosheth" data-strongs="H4429" data-translit="meleḵ" data-original="מֶלֶךְ" data-lang="hebrew" data-verse=""><em>melek</em></a>, "king." In a book set entirely in a royal court, it is the air everyone breathes: the king's <em>kingdom</em>, the <em>royal</em> house, the queen's <em>royal</em> estate.</p>
+<h3>Appears</h3>
+<p><a href="https://www.blueletterbible.org/kjv/est/4/14/s_430014" target="_blank" data-ref="Esther 4:14">Esther 4:14</a> — "who knoweth whether thou art come to the <strong>kingdom</strong> (<a href="https://www.blueletterbible.org/lexicon/h4438/kjv/wlc/0-1/" target="_blank" data-lexicon="kingdom, royal dominion" data-strongs="H4438" data-translit="malkuth" data-original="מַלְכוּת" data-lang="hebrew" data-verse="Psalm 145:13"><em>malkuth</em></a>) for such a time as this?" The word frames the whole book: Esther has been brought into the seat of earthly power precisely so she can spend it for her people. (The related idea saturates the book — Vashti's "royal estate" given to another, 1:19; Esther's "royal apparel," 5:1.)</p>
+<h3>Meaning</h3>
+<p><a href="https://www.blueletterbible.org/lexicon/h4438/kjv/wlc/0-1/" target="_blank" data-lexicon="kingdom, royal dominion" data-strongs="H4438" data-translit="malkuth" data-original="מַלְכוּת" data-lang="hebrew" data-verse="Psalm 145:13"><em>Malkuth</em></a> is, on the surface, human power — the Persian throne, the most powerful court on earth. But Mordecai's question reframes it: Esther's place <em>in</em> the kingdom is not a prize to be guarded but a stewardship to be risked. Earthly royalty, in Esther, exists to be <em>spent</em> — laid on the line for others "for such a time as this." Behind the visible <a href="https://www.blueletterbible.org/lexicon/h4438/kjv/wlc/0-1/" target="_blank" data-lexicon="kingdom, royal dominion" data-strongs="H4438" data-translit="malkuth" data-original="מַלְכוּת" data-lang="hebrew" data-verse="Psalm 145:13"><em>malkuth</em></a> of Persia stands the invisible reign of the God who put a Jewish orphan on its throne. The disciple learns to read every position of influence the same way: not as a possession, but as a post.</p>
+<h3>Latter-day Saint Connection</h3>
+<p>Jesus taught His disciples to "seek ye first the <strong>kingdom</strong> of God, and his righteousness" (<a href="https://www.blueletterbible.org/kjv/mat/6/33/s_935033" target="_blank" data-ref="Matthew 6:33">Matthew 6:33</a>) — to hold every earthly <a href="https://www.blueletterbible.org/lexicon/h4438/kjv/wlc/0-1/" target="_blank" data-lexicon="kingdom, royal dominion" data-strongs="H4438" data-translit="malkuth" data-original="מַלְכוּת" data-lang="hebrew" data-verse="Psalm 145:13"><em>malkuth</em></a> loosely, in service of a greater reign. Behind Persia's throne stands the kingdom Daniel saw in the same era, which "the God of heaven [shall] set up… which shall never be destroyed" (<a href="https://www.blueletterbible.org/kjv/dan/2/44/s_852044" target="_blank" data-ref="Daniel 2:44">Daniel 2:44</a>). Esther's lesson is that a place in an earthly kingdom is given so it can serve the everlasting one — power held as trust, not treasure.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h4438/kjv/wlc/0-1/" target="_blank" data-lexicon="kingdom, royal dominion" data-strongs="H4438" data-translit="malkuth" data-original="מַלְכוּת" data-lang="hebrew" data-verse="Psalm 145:13"><em>malḵûṯ</em></a> (מַלְכוּת) — "kingdom, royalty, reign"; <a href="https://www.blueletterbible.org/kjv/est/4/14/s_430014" target="_blank" data-ref="Esther 4:14">Esther 4:14</a> <em>lam·mal·ḵûṯ</em> ("to the kingdom/royal position"); root <em>m-l-k</em>, "to be king"</td><td><a href="https://www.blueletterbible.org/lexicon/h4438/kjv/wlc/0-1/" target="_blank" data-lexicon="kingdom, royal dominion" data-strongs="H4438" data-translit="malkuth" data-original="מַלְכוּת" data-lang="hebrew" data-verse="Psalm 145:13">BLB H4438</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td>LXX <a href="https://www.blueletterbible.org/kjv/est/4/14/s_430014" target="_blank" data-ref="Esther 4:14">Esther 4:14</a> paraphrases with the <strong>verb</strong> <a href="https://www.blueletterbible.org/lexicon/g936/kjv/tr/0-1/" target="_blank" data-lexicon="to be king, to exercise kingly power, to reign of the governor of a province of the rule of the Messiah of the reign ..." data-strongs="G936" data-translit="basileuō" data-original="βασιλεύω" data-lang="greek" data-verse=""><em>basileuō</em></a> (βασιλεύω, "to reign/be queen"): <em>ebasileusas</em> ("you came to reign"); the noun equivalent of <a href="https://www.blueletterbible.org/lexicon/h4438/kjv/wlc/0-1/" target="_blank" data-lexicon="kingdom, royal dominion" data-strongs="H4438" data-translit="malkuth" data-original="מַלְכוּת" data-lang="hebrew" data-verse="Psalm 145:13"><em>malkuth</em></a> is <a href="https://www.blueletterbible.org/lexicon/g932/kjv/tr/0-1/" target="_blank" data-lexicon="royal power, kingship, dominion, rule not to be confused with an actual kingdom but rather the right or authority to ..." data-strongs="G932" data-translit="basileia" data-original="βασιλεία" data-lang="greek" data-verse=""><em>basileia</em></a> (βασιλεία)</td><td><a href="https://www.blueletterbible.org/lexicon/g936/kjv/tr/0-1/" target="_blank" data-lexicon="to be king, to exercise kingly power, to reign of the governor of a province of the rule of the Messiah of the reign ..." data-strongs="G936" data-translit="basileuō" data-original="βασιλεύω" data-lang="greek" data-verse="">BLB G936</a> · <a href="https://www.blueletterbible.org/lexicon/g932/kjv/tr/0-1/" target="_blank" data-lexicon="royal power, kingship, dominion, rule not to be confused with an actual kingdom but rather the right or authority to ..." data-strongs="G932" data-translit="basileia" data-original="βασιλεία" data-lang="greek" data-verse="">G932</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><em>regnum</em> (<em>regni</em>) — "kingdom, royal power"; Vulgate <a href="https://www.blueletterbible.org/kjv/est/4/14/s_430014" target="_blank" data-ref="Esther 4:14">Esther 4:14</a>, <em>ad regnum veneris</em> ("you came to the kingdom")</td><td><a href="https://logeion.uchicago.edu/regnum" target="_blank">Logeion: regnum</a></td></tr>
+<tr><td><strong>English</strong></td><td><em>kingdom</em>; and via Latin <em>regnum/regalis</em> — <em>royal, regal, reign</em></td><td><a href="https://www.merriam-webster.com/dictionary/royal" target="_blank">Merriam-Webster</a> · <a href="https://webstersdictionary1828.com/Dictionary/kingdom" target="_blank">Webster's 1828</a> · <a href="https://www.etymonline.com/word/royal" target="_blank">Etymonline</a></td></tr>
+</table>
+<p><em>Note: the Septuagint renders the Hebrew noun </em>malkuth<em> with a <strong>finite verb</strong> at 4:14 — ἐβασίλευσας, "you became queen" — a paraphrase rather than a word-for-word noun. The Vulgate keeps the noun, </em>regnum<em>, aligning more closely with the Hebrew.</em></p>
+<hr>
+<p><em>Next file: <a href="05_Jewish_Perspective.md" target="_blank">05_Jewish_Perspective.md</a></em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 5: WEEK 32: JEWISH PERSPECTIVE -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">5. Week 32: Jewish Perspective</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>1. The Hidden Name — and the Hidden Story</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The rabbis asked where a book that never says "God" could be hinted at in the Torah itself — and their answer is one of the most quoted lines in all of rabbinic literature:</p>
+<blockquote>
+<p>"They also asked Rav Mattana: From where in the Torah can one find an allusion to the events involving Esther? He replied to them that the verse states: '…And I will hide [<em>haster astir</em>] My face on that day for all the evil which they shall have wrought, in that they are turned to other gods' (<a href="https://www.blueletterbible.org/kjv/deu/31/17-18/s_184017" target="_blank" data-ref="Deuteronomy 31:17-18">Deuteronomy 31:17–18</a>)."</p>
+<p>— Babylonian Talmud, <a href="https://www.sefaria.org/Chullin.139b" target="_blank">Chullin 139b</a> (Sefaria, CC BY-NC)</p>
+</blockquote>
+<p>The wordplay is exact. The name <strong>Esther</strong> (<a href="https://www.blueletterbible.org/lexicon/h635/kjv/wlc/0-1/" target="_blank" data-lexicon="Esther = &quot;star&quot;" data-strongs="H635" data-translit="estēr" data-original="אֶסְתֵּר" data-lang="hebrew" data-verse="">אֶסְתֵּר</a>) sounds like the Hebrew <em>astir</em> (אַסְתִּיר), "I will hide," in the phrase <em>haster astir</em> — "I will surely hide" — of <a href="https://www.blueletterbible.org/kjv/deu/31/18/s_184018" target="_blank" data-ref="Deuteronomy 31:18">Deuteronomy 31:18</a>. The book of the hidden God is heard, by the rabbis, in God's own promise to <em>hide His face</em>. (This is a Hebrew word study belonging here rather than in Word Studies: <a href="https://www.blueletterbible.org/lexicon/h5641/kjv/wlc/0-1/" target="_blank" data-lexicon="to hide, conceal(Niphal)to hide oneselfto be hidden, be concealed(Piel) to hide carefully(Pual) to be hidden carefull..." data-strongs="H5641" data-translit="sāṯar" data-original="סָתַר" data-lang="hebrew" data-verse=""><em>satar</em></a>, סָתַר, "to hide, conceal" — <a href="https://www.blueletterbible.org/lexicon/h5641/kjv/wlc/0-1/" target="_blank" data-lexicon="to hide, conceal(Niphal)to hide oneselfto be hidden, be concealed(Piel) to hide carefully(Pual) to be hidden carefull..." data-strongs="H5641" data-translit="sāṯar" data-original="סָתַר" data-lang="hebrew" data-verse="">BLB H5641</a> — in the emphatic doubled form <a href="https://www.blueletterbible.org/lexicon/h6440/kjv/wlc/0-1/" target="_blank" data-lexicon="face, presence" data-strongs="H6440" data-translit="panim" data-original="פָּנִים" data-lang="hebrew" data-verse="Genesis 32:30"><em>hastēr ʾastîr</em></a>, "I will surely hide," paired with <a href="https://www.blueletterbible.org/lexicon/h6440/kjv/wlc/0-1/" target="_blank" data-lexicon="face, presence" data-strongs="H6440" data-translit="panim" data-original="פָּנִים" data-lang="hebrew" data-verse="Genesis 32:30"><em>panim</em></a>, "face." The rabbinic <em>hester panim</em>, "the hiding of the face," names the very condition the book of Esther dramatizes: God present but unseen. It is a <em>homiletic</em> connection to Esther's hiddenness, <strong>not</strong> the etymology of the name Esther, which is debated — perhaps Persian "star" or the goddess Ishtar.)</p>
+<p>And the same passage goes further: the whole cast of the drama is found hidden in the Torah. <strong>Haman</strong> is heard in God's question to Adam, "Have you eaten of [<em>ha-min</em>] the tree…?" (<a href="https://www.blueletterbible.org/kjv/gen/3/11/s_3011" target="_blank" data-ref="Genesis 3:11">Genesis 3:11</a>) — <em>hamin</em> spelled with the same letters as Haman. <strong>Mordecai</strong> is found in the "flowing myrrh" (<em>mor deror</em>) of <a href="https://www.blueletterbible.org/kjv/exo/30/23/s_80023" target="_blank" data-ref="Exodus 30:23">Exodus 30:23</a>, which the Aramaic renders <em>mira dakhya</em> — close to "Mordecai." Even <strong>Moses</strong> is present before his birth, by the numerical value of a word in <a href="https://www.blueletterbible.org/kjv/gen/6/3/s_6003" target="_blank" data-ref="Genesis 6:3">Genesis 6:3</a>. For a book about a God who hides, the rabbis found the whole story hidden in plain sight, waiting in the earliest pages of scripture.</p>
+<h3>LDS Connection</h3>
+<p>The rabbinic <em>hester panim</em> is scripture's own language: "Verily thou art a God that hidest thyself, O God of Israel, the Saviour" (<a href="https://www.blueletterbible.org/kjv/isa/45/15/s_724015" target="_blank" data-ref="Isaiah 45:15">Isaiah 45:15</a>). The God who hides His face is not the absent God but the saving one — hidden and working at once. Latter-day Saints know the same paradox in the veil that "hides" God precisely so that faith can grow; the book of Esther is its Old Testament classroom.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>2. Why "Esther"? The Name of Concealment</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The rabbis debated the queen's two names — Hadassah and Esther — and their reading of "Esther" fits the book perfectly:</p>
+<blockquote>
+<p>"Rabbi Yehuda differs and says: Hadassah was her real name. Why then was she called Esther? Because she concealed [<em>masteret</em>] the truth about herself, as it is stated: 'Esther had not yet made known her kindred nor her people' (<a href="https://www.blueletterbible.org/kjv/est/2/20/s_428020" target="_blank" data-ref="Esther 2:20">Esther 2:20</a>)."</p>
+<p>— Babylonian Talmud, <a href="https://www.sefaria.org/Megillah.13a" target="_blank">Megillah 13a</a> (Sefaria, CC BY-NC)</p>
+</blockquote>
+<p>The same passage preserves other readings: <strong>Rabbi Meir</strong> held that Esther was her real name and "Hadassah" the title — "on account of the righteous, who are called myrtles [<em>hadassim</em>]" (from <a href="https://www.blueletterbible.org/kjv/zec/1/8/s_912008" target="_blank" data-ref="Zechariah 1:8">Zechariah 1:8</a>). <strong>Rabbi Neḥemya</strong> connected "Esther" to <em>Istahar</em>, the Persian name for Venus, the morning star. The debate itself is a lesson in the book's central image: a queen whose very <em>name</em> means concealment, hiding her people in the most exposed place in the empire, until the moment came to reveal them.</p>
+<h3>LDS Connection</h3>
+<p>Esther's hidden identity — kept until "such a time as this" — is a picture of a truth held in reserve for its right hour. The covenant people have often had to keep their deepest identity quiet in hostile settings, trusting God for the moment of disclosure. The book honors both the hiding and the revealing: there is a season to conceal, and a season, at great risk, to stand up and say who you are.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>3. The Remedy Before the Blow</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Perhaps the deepest rabbinic reading of Esther's hidden providence is a single sentence about <em>timing</em> — that God prepares the rescue before the danger even appears:</p>
+<blockquote>
+<p>"As Reish Lakish said: The Holy One, Blessed be He, does not strike at the Jewish people unless He has already created a remedy for them beforehand, as it is stated: 'When I would have healed Israel, then the iniquity of Ephraim was uncovered' (<a href="https://www.blueletterbible.org/kjv/hos/7/1/s_869001" target="_blank" data-ref="Hosea 7:1">Hosea 7:1</a>)."</p>
+<p>— Babylonian Talmud, <a href="https://www.sefaria.org/Megillah.13b" target="_blank">Megillah 13b</a> (Sefaria, CC BY-NC)</p>
+</blockquote>
+<p>This is the book of Esther in miniature. Before Haman's plot is even conceived, the remedy is already in place: a Jewish queen is on the throne (<a href="https://www.blueletterbible.org/kjv/est/2/1/s_428001" target="_blank" data-ref="Esther 2">Esther 2</a>), and Mordecai's loyal deed is already written in the royal record <a href="https://www.blueletterbible.org/kjv/est/2/23/s_428023" target="_blank" data-ref="Esther 2:23">(2:23)</a>, waiting for the night it will be needed. The blow of Haman's decree (chapter 3) lands on a rescue God had positioned in chapters 1–2. The rabbis saw in Esther a governing rule of providence — the cure is planted before the wound.</p>
+<h3>LDS Connection</h3>
+<p>Reish Lakish's principle is the promise of <a href="https://www.blueletterbible.org/kjv/1co/10/13/s_1072013" target="_blank" data-ref="1 Corinthians 10:13">1 Corinthians 10:13</a> — that "God is faithful, who will not suffer you to be tempted above that ye are able; but will with the temptation also make a way to escape." Nephi says it as doctrine: "the Lord giveth no commandments unto the children of men, save he shall prepare a way for them that they may accomplish the thing which he commandeth them" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank" data-ref="1 Nephi 3:7">1 Nephi 3:7</a>). The queen was crowned before the crisis — the way was prepared before it was needed.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>4. The Megillah and the Women of the Miracle</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Purim's central act is the reading of the scroll — and the law of that reading carries a striking recognition:</p>
+<blockquote>
+<p>"A person is obligated to read the Megilla at night and then to repeat it [<em>lishnota</em>] during the day…"</p>
+<p>— Babylonian Talmud, <a href="https://www.sefaria.org/Megillah.4a" target="_blank">Megillah 4a</a> (Sefaria, CC BY-NC)</p>
+</blockquote>
+<p>And, on the same folio, a ruling that was not universal for other commandments:</p>
+<blockquote>
+<p>"Women are obligated in the reading of the Megilla, as they too were significant partners in that miracle."</p>
+<p>— Babylonian Talmud, <a href="https://www.sefaria.org/Megillah.4a" target="_blank">Megillah 4a</a> (Sefaria, CC BY-NC)</p>
+</blockquote>
+<p>The reasoning is beautiful: because a <em>woman</em> — Esther — was the human instrument of the deliverance, women are fully obligated to hear the story retold. The miracle came through her courage; the memory belongs to her daughters. Purim is a feast in which the decisive human actor is a woman, and the tradition built that fact into its very law of remembrance.</p>
+<h3>LDS Connection</h3>
+<p>Esther stands in a line of women through whom God worked deliverance — Miriam, Deborah, Ruth, Esther, Mary — "significant partners" in the story of salvation. The Restoration affirms the same: that God's work advances through the faith and courage of His daughters as much as His sons, and that their part in the miracle is to be remembered, not overlooked. The Latter-day Saint scholar Camille Fronk Olson counts Esther among the women who "significantly influence[d] the world for good" (<em>Women of the Old Testament</em>, cited in Scripture Central, "Why Were Women Important in Ancient Israel?").</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>5. "Write Me for Future Generations"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The rabbis preserve a remarkable tradition in which Esther herself petitions for her book to become Scripture:</p>
+<blockquote>
+<p>"Esther sent to the Sages: Write me for future generations and canonize my book as part of the Bible."</p>
+<p>— Babylonian Talmud, <a href="https://www.sefaria.org/Megillah.7a" target="_blank">Megillah 7a</a> (Sefaria, CC BY-NC)</p>
+</blockquote>
+<p>The passage goes on to a genuine debate over whether Esther belongs in the canon at all — whether the scroll "renders the hands ritually impure," the rabbinic test for a sacred book. That a book with no divine name in it had to <em>argue</em> its way into Scripture is fitting; and that it succeeded is its own quiet vindication. The tradition concluded that the hidden God of Esther was worth remembering forever.</p>
+<h3>LDS Connection</h3>
+<p>Esther's plea — "write me for future generations" — is the impulse behind all scripture-keeping: "these are written, that ye might believe" (<a href="https://www.blueletterbible.org/kjv/jhn/20/31/s_1017031" target="_blank" data-ref="John 20:31">John 20:31</a>); "whatsoever things were written aforetime were written for our learning, that we through patience and comfort of the scriptures might have hope" (<a href="https://www.blueletterbible.org/kjv/rom/15/4/s_1061004" target="_blank" data-ref="Romans 15:4">Romans 15:4</a>). Latter-day Saints, a record-keeping people, recognize the instinct: a deliverance unrecorded is a deliverance half-forgotten.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>6. <em>Venahafoch Hu</em> — The Great Reversal</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The midrash on the book's turning point gives Purim its byword:</p>
+<blockquote>
+<p>"'…on the day that the enemies of the Jews had hoped to have power over them and it was reversed [<em>venahafoch hu</em>] for them' (<a href="https://www.blueletterbible.org/kjv/est/9/1/s_435001" target="_blank" data-ref="Esther 9:1">Esther 9:1</a>)… this is the miracle that the Holy one blessed be He performed, the like of which has never been performed."</p>
+<p>— <a href="https://www.sefaria.org/Esther_Rabbah.10" target="_blank">Esther Rabbah 10</a> (Sefaria, CC BY-NC)</p>
+</blockquote>
+<p><em>Venahafoch <a href="https://www.blueletterbible.org/lexicon/h3541/kjv/wlc/0-1/" target="_blank" data-lexicon="thus, here, in this manner thus, so here, here and there until now, until now...until then, meanwhile" data-strongs="H3541" data-translit="kô" data-original="הוּא" data-lang="hebrew" data-verse="">hu</a></em> (וְנַהֲפוֹךְ הוּא) — "and it was reversed" — became the two-word summary of Purim: the day everything turned to its opposite. In Jewish observance the reversal is even acted out, in costumes and masks and merriment, celebrating a rescue in which the powerless were raised and the powerful undone. The midrash calls it a miracle "the like of which has never been performed" — high praise for a deliverance in which, once again, God never appears by name. (The Hebrew verb <a href="https://www.blueletterbible.org/lexicon/h2015/kjv/wlc/0-1/" target="_blank" data-lexicon="to turn, overthrow, overturn (Qal) to overturn, overthrow to turn, turn about, turn over, turn around to change, tran..." data-strongs="H2015" data-translit="hāp̄aḵ" data-original="הָפַךְ" data-lang="hebrew" data-verse=""><em>haphak</em></a> behind <em>venahafoch</em> is studied in <a href="04_Word_Studies.md" target="_blank">Word Studies</a>.)</p>
+<h3>LDS Connection</h3>
+<p><em>Venahafoch hu</em> is the hope every believer holds under a doom that seems fixed: the God who hides His face is the God who reverses — quietly, completely, and always in time. (The scriptural echoes of that reversal — "mourning into dancing," "God meant it unto good" — are gathered with the <a href="https://www.blueletterbible.org/lexicon/h2015/kjv/wlc/0-1/" target="_blank" data-lexicon="to turn, overthrow, overturn (Qal) to overturn, overthrow to turn, turn about, turn over, turn around to change, tran..." data-strongs="H2015" data-translit="hāp̄aḵ" data-original="הָפַךְ" data-lang="hebrew" data-verse=""><em>haphak</em></a> word study in <a href="04_Word_Studies.md" target="_blank">Word Studies</a>.)</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Source Table</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Source</th><th>Citation</th><th>Link</th></tr>
+<tr><td>Babylonian Talmud, Chullin 139b</td><td>Esther alluded to in <a href="https://www.blueletterbible.org/kjv/deu/31/18/s_184018" target="_blank" data-ref="Deuteronomy 31:18">Deut 31:18</a> (<em>haster astir</em>); Haman/Mordecai/Moses hidden in the Torah</td><td><a href="https://www.sefaria.org/Chullin.139b" target="_blank">Sefaria</a></td></tr>
+<tr><td>Babylonian Talmud, Megillah 13a</td><td>"Esther" = <em>masteret</em>, she concealed herself; the Hadassah/Esther name debate</td><td><a href="https://www.sefaria.org/Megillah.13a" target="_blank">Sefaria</a></td></tr>
+<tr><td>Babylonian Talmud, Megillah 13b</td><td>Reish Lakish: God creates the remedy before the blow (<a href="https://www.blueletterbible.org/kjv/hos/7/1/s_869001" target="_blank" data-ref="Hosea 7:1">Hosea 7:1</a>)</td><td><a href="https://www.sefaria.org/Megillah.13b" target="_blank">Sefaria</a></td></tr>
+<tr><td>Babylonian Talmud, Megillah 4a</td><td>Obligation to read the Megilla night and day; women "significant partners in that miracle"</td><td><a href="https://www.sefaria.org/Megillah.4a" target="_blank">Sefaria</a></td></tr>
+<tr><td>Babylonian Talmud, Megillah 7a</td><td>"Write me for future generations"; the debate over Esther's canonicity</td><td><a href="https://www.sefaria.org/Megillah.7a" target="_blank">Sefaria</a></td></tr>
+<tr><td>Esther Rabbah 10</td><td><em>Venahafoch hu</em> — the great reversal of <a href="https://www.blueletterbible.org/kjv/est/9/1/s_435001" target="_blank" data-ref="Esther 9:1">Esther 9:1</a></td><td><a href="https://www.sefaria.org/Esther_Rabbah.10" target="_blank">Sefaria</a></td></tr>
+</table>
+<p><em>All translations are Sefaria's (William Davidson Talmud; Midrash Rabbah), CC BY-NC — attributed via the links above. The Hebrew word </em>satar<em> (H5641) and its </em>hester panim<em> connection are the rabbinic reading of Esther's hiddenness, not the etymology of the name Esther (which is debated).</em></p>
+<hr>
+<p><em>Next file: <a href="06_Teaching_Applications.md" target="_blank">06_Teaching_Applications.md</a></em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 6: WEEK 32: TEACHING APPLICATIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">6. Week 32: Teaching Applications</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>1. Family</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ul>
+<li><strong>Read it as the drama it is.</strong> Assign parts — Ahasuerus, Vashti, Esther, Mordecai, Haman — and read or retell the story across the week. It has a cliffhanger built into nearly every chapter; children will want to know what happens next.</li>
+<li><strong>Play "spot the coincidence."</strong> As you read, have the family call out each "lucky" moment: the empty throne, the recorded deed, the sleepless night, Haman arriving at just the wrong time. Then ask: <em>were</em> they coincidences? Let the pile of them make the point.</li>
+<li><strong>"For such a time as this" — at your table.</strong> Ask each family member: where has God placed <em>you</em> right now — in our family, your class, your team — where your courage or kindness is needed? Position is a stewardship.</li>
+<li><strong>Keep a family Purim.</strong> Esther ends by founding a feast of remembering <a href="https://www.blueletterbible.org/kjv/est/9/22/s_435022" target="_blank" data-ref="Esther 9:22">(9:22)</a>. Share a treat, "send portions" (a small gift) to a neighbor, and each tell one time you saw God's quiet help this week.</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>2. Sunday School</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ul>
+<li><strong>Teach the book's silence first.</strong> Open by asking the class what is <em>missing</em> from Esther that appears in every other Old Testament book. (Answer: the name of God — no prayer answered aloud, no prophet, no miracle.) Then ask how a book with no God in it became Scripture. That question <em>is</em> the lesson.</li>
+<li><strong>Providence and agency together <a href="https://www.blueletterbible.org/kjv/est/4/14/s_430014" target="_blank" data-ref="Esther 4:14">(4:14)</a>.</strong> Discuss Mordecai's paradox: deliverance will come "from another place" <em>whether or not</em> Esther acts — yet she must still choose. How does the gospel hold God's sure purpose and our real agency together without collapsing either?</li>
+<li><strong>The reversal (7:10; 9:1).</strong> Trace how everything "turns to the contrary." Discuss why scripture returns so often to the wicked caught in their own trap (<a href="https://www.blueletterbible.org/kjv/pro/26/27/s_654027" target="_blank" data-ref="Proverbs 26:27">Proverbs 26:27</a>; <a href="https://www.blueletterbible.org/kjv/psa/7/16/s_485016" target="_blank" data-ref="Psalm 7:16">Psalm 7:16</a>), and how the book keeps the reversal <em>God's</em> doing rather than human revenge.</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>3. Primary</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ul>
+<li><strong>"Brave Queen Esther."</strong> Tell the story simply: a girl named Esther becomes queen; a wicked man wants to hurt her people; even though it was scary and dangerous, Esther was brave and went to the king to save them.</li>
+<li><strong>God's helping hand you can't see.</strong> Use a hidden-object idea: hide a helper (a hand cutout, a small toy) somewhere in the room and note that even when we can't see it, it's there. God was helping Esther the whole time, even though the story never says His name.</li>
+<li><strong>Being brave for what's right.</strong> Esther said, in effect, "I'll do the right thing even if it's hard." Ask the children about a time it was hard to do the right thing, and what helped them be brave.</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>4. Youth</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ul>
+<li><strong>Standing alone (Mordecai; Esther).</strong> Mordecai wouldn't bow when everyone else did; Esther risked everything to speak up. Discuss the courage to stand alone for what's right when the whole "court" is bowing — and where youth face that today.</li>
+<li><strong>"You have come… for such a time as this."</strong> President Monson and President Faust both applied <a href="https://www.blueletterbible.org/kjv/est/4/14/s_430014" target="_blank" data-ref="Esther 4:14">Esther 4:14</a> directly to today's youth — "He has saved you to come to the earth 'for such a time as this'" (Monson). Discuss: what might God be preparing <em>you</em> for, right where you are?</li>
+<li><strong>Hidden identity, revealed at the right time.</strong> Esther hid that she was one of God's covenant people until the moment came to stand up. Discuss the courage of eventually being known for what you believe — and how to carry your identity in settings that don't share it.</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>5. Institute</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ul>
+<li><strong>The theology of the hidden God.</strong> Explore Esther as scripture's fullest treatment of <em>hidden providence</em>: God governing entirely through "natural" causes and "coincidence." Compare with Joseph's "ye thought evil… but God meant it unto good" (<a href="https://www.blueletterbible.org/kjv/gen/50/20/s_50020" target="_blank" data-ref="Genesis 50:20">Genesis 50:20</a>) and the rabbinic reading that God "does not strike… unless He has already created a remedy… beforehand" (Megillah 13b).</li>
+<li><strong>The text and its versions.</strong> Discuss why God is unnamed in the Hebrew, and the Greek "Additions to Esther" (prayers, God-language) that are <em>not</em> in the Hebrew/KJV canon — a case study in canon, translation, and what the silence is meant to teach.</li>
+<li><strong>Providence without determinism.</strong> Use 4:14 to discuss how the book affirms God's sure purpose while insisting on genuine, costly human choice — and how that differs from fatalism.</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>6. Missionary Preparation</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ul>
+<li><strong>Courage to speak <a href="https://www.blueletterbible.org/kjv/gen/4/16/s_4016" target="_blank" data-ref="Genesis 4:16">(4:16)</a>.</strong> Esther had to approach a dangerous "king" uninvited, not knowing the outcome — "if I perish, I perish." Missionary work asks a smaller version of the same courage: to open your mouth when you don't know how it will be received.</li>
+<li><strong>God prepares the way before you.</strong> The remedy was in place before the crisis (a queen crowned, a deed recorded). Missionaries can trust the same: "the Lord… prepare[s] a way" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank" data-ref="1 Nephi 3:7">1 Nephi 3:7</a>) and "with the temptation also make[s] a way to escape" (<a href="https://www.blueletterbible.org/kjv/1co/10/13/s_1072013" target="_blank" data-ref="1 Corinthians 10:13">1 Corinthians 10:13</a>) — the doors are often opened before we arrive.</li>
+<li><strong>"For such a time as this."</strong> A mission is a providential placement — this companionship, this area, these people, this moment. Discuss reading an assignment as a stewardship rather than an accident.</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>7. Personal Study</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ul>
+<li><strong>Read your own life for the hidden hand.</strong> Take President Eyring's nightly question — "Have I seen the hand of God reaching out to touch us… today?" ("O Remember, Remember," Oct 2007) — and keep it for a week. Esther's providence is only visible in hindsight; so is yours.</li>
+<li><strong>Name your placement.</strong> Prayerfully ask where you have been brought "for such a time as this," and what courage that placement is asking of you now.</li>
+<li><strong>Build a "Purim."</strong> Esther's deliverance was memorialized so it would never be forgotten. Start a record — a line a day — of the quiet "coincidences" of God's kindness, so your own rescues are remembered.</li>
+</ul>
+<hr>
+<p><em>Next file: <a href="07_Study_Questions.md" target="_blank">07_Study_Questions.md</a></em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 7: WEEK 32: STUDY QUESTIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">7. Week 32: Study Questions</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>The Empty Throne (Esther 1)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li>The book opens with a deposed queen and an open place on the throne — long before anyone knows a crisis is coming. Looking back over your own life, can you see a "vacancy" that was quietly prepared before you knew you would need it?</li>
+<li>Vashti is removed by a law that "altereth not" <a href="https://www.blueletterbible.org/kjv/est/1/19/s_427019" target="_blank" data-ref="Esther 1:19">(1:19)</a>. How does the theme of irreversible decrees set up the danger — and the drama — of the rest of the book?</li>
+</ol>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Hidden Queen (Esther 2)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li>Esther keeps her people secret at Mordecai's charge <a href="https://www.blueletterbible.org/kjv/est/2/10/s_428010" target="_blank" data-ref="Esther 2:10">(2:10, 20)</a>. When is concealing your identity wisdom, and when is it fear? How do you tell the difference?</li>
+<li>Mordecai's loyal deed is recorded and then forgotten <a href="https://www.blueletterbible.org/kjv/est/2/21-23/s_428021" target="_blank" data-ref="Esther 2:21-23">(2:21–23)</a> — until exactly the right night. What "forgotten" kindnesses or preparations in your life turned out to matter later?</li>
+</ol>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Plot and the Lot (Esther 3)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li>Haman casts <a href="https://www.blueletterbible.org/lexicon/h6332/kjv/wlc/0-1/" target="_blank" data-lexicon="Pur or Purim = &quot;lot&quot; or &quot;piece&quot;lota special feast among the post-exilic Jews, to celebrate their deliverance from Ham..." data-strongs="H6332" data-translit="pûr" data-original="פּוּר" data-lang="hebrew" data-verse=""><em>pur</em></a> — the lot — to choose a day of destruction, treating the matter as pure chance <a href="https://www.blueletterbible.org/kjv/est/3/7/s_429007" target="_blank" data-ref="Esther 3:7">(3:7)</a>. How does "The lot is cast into the lap; but the whole disposing thereof is of the Lord" (<a href="https://www.blueletterbible.org/kjv/pro/16/33/s_644033" target="_blank" data-ref="Proverbs 16:33">Proverbs 16:33</a>) answer him?</li>
+<li>Haman's genocidal rage begins with one man who would not bow. What does the book suggest about how small offenses to pride can grow into great evils?</li>
+</ol>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>For Such a Time as This (Esther 4)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li>Mordecai insists deliverance will come "from another place" whether Esther acts or not — and yet urges her to act <a href="https://www.blueletterbible.org/kjv/est/4/14/s_430014" target="_blank" data-ref="Esther 4:14">(4:14)</a>. How do you hold God's sure purpose and your own real responsibility together?</li>
+<li>"If I perish, I perish" <a href="https://www.blueletterbible.org/kjv/est/4/16/s_430016" target="_blank" data-ref="Esther 4:16">(4:16)</a>. Esther acts without a promised outcome, backed by fasting and surrender. What decision are you facing that would ask that same kind of courage?</li>
+<li>Where has God placed <em>you</em> "for such a time as this"? What might that placement be asking of you right now?</li>
+</ol>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Banquets and the Sleepless Night (Esther 5–6)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li>The turning point is a king who simply cannot sleep <a href="https://www.blueletterbible.org/kjv/est/6/1/s_432001" target="_blank" data-ref="Esther 6:1">(6:1)</a>. Why do you think God so often works through ordinary, hidden means rather than open miracles? What does that ask of your faith?</li>
+<li>Esther waits, and invites the king to two banquets rather than blurting out her petition. What do her patience and timing teach about acting wisely, not just bravely?</li>
+</ol>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Great Reversal (Esther 7–9)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li>Haman is hanged on the gallows he built for Mordecai <a href="https://www.blueletterbible.org/kjv/est/7/10/s_433010" target="_blank" data-ref="Esther 7:10">(7:10)</a>; his "wicked device" returns "upon his own head" <a href="https://www.blueletterbible.org/kjv/est/9/25/s_435025" target="_blank" data-ref="Esther 9:25">(9:25)</a>. Why does scripture return again and again to the picture of the wicked caught in their own trap?</li>
+<li>Esther and Mordecai never build a gallows or seek revenge — the reversal is done <em>to</em> Haman, not <em>by</em> them. How does the book keep the great reversal God's work rather than human vengeance?</li>
+</ol>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Purim and Remembering (Esther 9–10)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li>The rescue is memorialized in a feast of "feasting and joy, and of sending portions one to another, and gifts to the poor" <a href="https://www.blueletterbible.org/kjv/est/9/22/s_435022" target="_blank" data-ref="Esther 9:22">(9:22)</a>. Why is <em>remembering</em> — retelling what God has done — so important to lasting faith?</li>
+<li>President Eyring pauses each night to ask, "Have I seen the hand of God reaching out to touch us… today?" What practice could help you remember your own quiet deliverances?</li>
+</ol>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Across the Whole Book</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li>God is never named in Esther. Did reading a book of hidden providence change how you notice God in your own "unremarkable" circumstances?</li>
+<li>The rabbis heard the whole story hidden in the Torah — even the name <em>Esther</em> in God's promise to "hide My face" (<a href="https://www.blueletterbible.org/kjv/deu/31/18/s_184018" target="_blank" data-ref="Deuteronomy 31:18">Deuteronomy 31:18</a>; Chullin 139b). What does it mean that the God who hides is also the God who saves?</li>
+<li>If you had to teach the book of Esther to someone in one sentence, what would you say it is about?</li>
+</ol>
+<hr>
+<p><em>Next file: <a href="../02_Weekly_Insights/" target="_blank">../02_Weekly_Insights/</a></em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+</div>

@@ -2,6 +2,24 @@
 
 Inline hover popups for Hebrew/Greek dictionary links, parallel to BLB ScriptTagger for scripture references.
 
+> **Read this before the checklist. Corrected 2026-08-15.**
+>
+> This document was written 2026-03-01 and **was not updated when the publishing rules
+> changed in late July**. For four months its checklist told sessions to run
+> `link-audit.py --fix` on published weeks, which is the exact mass-edit the collision
+> discipline forbids — and sessions followed it, because it was the instruction they
+> found. It is referenced from **no** `CLAUDE.md`, so nothing corrected it either.
+>
+> The rule it was missing: **a published fragment is never auto-fixed or regenerated.**
+> Surgical anchor replacement only. Staged weeks are unaffected.
+>
+> `link-audit.py` now refuses `--fix` on any week present on live `main`, so the tool no
+> longer depends on this document being read correctly.
+>
+> Related: `blb-scraping-prohibited` and `lexicon-popups-authority` in Translation Hub
+> `scriptorium/decisions.json`. The popup data is no longer sourced from Blue Letter
+> Bible — it is built from STEPBible, Strong's 1890 and Hitchcock 1869, all public domain.
+
 ---
 
 ## How It Works
@@ -164,8 +182,22 @@ This rule was established after Week 10 (March 2026), when 23 bare Hebrew terms 
 - [ ] **Every Hebrew/Greek Unicode character** in body text (outside `<button>` headings) has a lexicon link with all `data-*` attributes
 - [ ] Word study sections link all occurrences
 - [ ] Cross-Language tables include Greek lexicon links with popup attributes
-- [ ] Run `link-audit.py` on **all three** files (study-guide, insights, resources) — zero BARE HEBREW, BARE ROOT, and BARE BLB LINK issues
-- [ ] If issues found, run `link-audit.py --fix --week weekNN` to auto-link bare terms
+- [ ] Run `link-audit.py` on **all three** files (study-guide, insights, resources)
+- [ ] **Read the residual — do NOT chase zero.** A fully linked week is *not* zero BARE
+      HEBREW. Intentionally bare script is required beside transliterations, and divine
+      names and rabbinic terms stay bare on purpose. Week 26's correct residual is **14
+      flags** — the forms Kymber specified herself (`לַה׳`, `ה׳`, `גֵּט`, `חִלּוּל`,
+      `עֲגוּנָה`, `עֲגוּנוֹת`, `קְרִיעָה`). A session that drives this to zero will
+      "fix" text that was already right.
+- [ ] **If issues found, the FIRST question is whether the week is PUBLISHED.**
+  - **Published on live `main`** → **surgical anchor replacement only.** Rewrite the one
+    wrong `<a>`; leave every surrounding byte alone. **Never `--fix`, never regenerate.**
+    `link-audit.py --fix` refuses on a published week and exits non-zero — that guard
+    exists because this line told sessions to do the opposite for four months.
+  - **Staged / unpublished** → `link-audit.py --fix --week weekNN` is fine, scoped to the
+    one week. Kymber, 2026-08-04: *"Regeneration is fine — Week 33 isn't published yet."*
+- [ ] Verify any fix against the **live page**, with a positive control. Production
+      minifies HTML and strips attribute quotes, which has silently defeated greps here.
 - [ ] Test hover popups in local preview
 - [ ] Check for BLB lexicon `<a>` tags missing `data-lexicon` attributes (the audit script catches these as BARE BLB LINK)
 

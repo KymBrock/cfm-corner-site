@@ -35,18 +35,34 @@
   {{ end }}
 {{ end }}
 
-{{/* Field guides are the section pages under /culture/ancient/. Gathered by
-     path rather than via GetPage, because content/culture/ancient/ has no
-     _index.md of its own. */}}
+{{/* Guides are the section pages under /culture/. Gathered by path rather than
+     via GetPage, because content/culture/ancient/ has no _index.md of its own.
+
+     Matches ALL of /culture/, not just /culture/ancient/. It was limited to
+     ancient/ until 2026-08-15, which meant the Comparative Mythology guide —
+     staged at /culture/comparative-mythology/ — was invisible on the very board
+     meant to track it. A dashboard that silently omits work is worse than no
+     dashboard, because it reads as "nothing else in flight". The two excluded
+     paths below are the section roots themselves, not guides. */}}
 {{ range where site.Pages "Kind" "section" }}
-  {{ if and (hasPrefix .RelPermalink "/culture/ancient/") (ne .RelPermalink "/culture/ancient/") }}
+  {{ if and (hasPrefix .RelPermalink "/culture/") (not (in (slice "/culture/" "/culture/ancient/") .RelPermalink)) }}
+    {{/* Section is derived from the PATH, so a new guide lands in the right place
+         without anyone remembering to tag it. Kymber asked for the board organised by
+         area rather than only by stage — "CFM Corner Weekly Lessons, Culture, including
+         Field Guides, Moedim, Comparative Mythologies". */}}
+    {{ $g := "Field Guides" }}
+    {{ if hasPrefix .RelPermalink "/culture/comparative-mythology" }}{{ $g = "Comparative Mythology" }}
+    {{ else if or (hasPrefix .RelPermalink "/culture/jewish-festivals") (hasPrefix .RelPermalink "/culture/moedim") }}{{ $g = "Moedim & Festivals" }}
+    {{ else if hasPrefix .RelPermalink "/culture/jewish" }}{{ $g = "Jewish Tradition" }}
+    {{ else if hasPrefix .RelPermalink "/culture/holy-week" }}{{ $g = "Holy Week" }}
+    {{ end }}
     {{ $items = $items | append (dict
         "title" .Title
         "sub"   (printf "%d pages" (len .Pages))
         "url"   .RelPermalink
         "stage" (.Params.stage | default "live")
         "blockers" (.Params.stage_blockers | default slice)
-        "group" "Field Guides"
+        "group" $g
         "sortkey" .Title
     ) }}
   {{ end }}
@@ -55,7 +71,7 @@
 <div style="max-width: 900px; margin: 0 auto;">
 
 <h1 style="font-family: Georgia, serif; color: var(--sage-dark, #4a6b52); font-weight: normal; margin-bottom: 6px;">Production Pipeline</h1>
-<p style="color:#6a6a6a; font-size:0.95em; margin-top:0;">Everything in flight, by stage. This page exists only on staging builds &mdash; it is never published.</p>
+<p style="color:#6a6a6a; font-size:0.95em; margin-top:0;">Everything in flight, by area &mdash; work in progress sits at the top of its section, with what it is waiting on. This page exists only on staging builds and is never published.</p>
 
 {{/* ---- counts strip ---- */}}
 <div style="display:flex; flex-wrap:wrap; gap:10px; margin:22px 0 30px 0;">
@@ -70,35 +86,72 @@
   {{ end }}
 </div>
 
-{{/* ---- one block per stage, in pipeline order ---- */}}
-{{ range $order }}
-  {{ $s := . }}
-  {{ $m := index $meta $s }}
-  {{ $inStage := where $items "stage" $s }}
-  {{ if $inStage }}
+{{/* ---- one block per SECTION, with stage shown as a chip on each item ----
+
+     Organised by area rather than by stage. Stage still drives the colour and the counts
+     strip above, but the question this board answers first is "what is the state of the
+     weekly lessons" — not "what is in review across everything". Work in flight sorts
+     above finished work inside each section, so a section that is entirely live collapses
+     to a quiet list and the active items are always at the top of their area. */}}
+{{ $groupOrder := slice "Weekly Lessons" "Field Guides" "Comparative Mythology" "Moedim & Festivals" "Jewish Tradition" "Holy Week" }}
+{{ $seen := slice }}
+{{ range $groupOrder }}
+  {{ $g := . }}
+  {{ $inGroup := where $items "group" $g }}
+  {{ if $inGroup }}
+  {{ $seen = $seen | append $g }}
+  {{ $active := 0 }}
+  {{ range $inGroup }}{{ if ne .stage "live" }}{{ $active = add $active 1 }}{{ end }}{{ end }}
   <section style="margin-bottom:34px;">
-    <div style="display:flex; align-items:baseline; gap:10px; border-bottom:2px solid {{ $m.bd }}; padding-bottom:6px; margin-bottom:14px;">
-      <h2 style="margin:0; font-family:Georgia,serif; font-weight:normal; color:{{ $m.fg }}; font-size:1.35em;">{{ $m.label }}</h2>
-      <span style="color:#8a8a8a; font-size:0.85em; font-style:italic;">{{ $m.note }}</span>
+    <div style="display:flex; align-items:baseline; gap:10px; border-bottom:2px solid #d8d2c6; padding-bottom:6px; margin-bottom:14px;">
+      <h2 style="margin:0; font-family:Georgia,serif; font-weight:normal; color:#4a6b52; font-size:1.35em;">{{ $g }}</h2>
+      <span style="color:#8a8a8a; font-size:0.85em;">{{ len $inGroup }} item{{ if ne (len $inGroup) 1 }}s{{ end }}{{ if $active }} &middot; <strong style="color:#a5342a;">{{ $active }} in flight</strong>{{ end }}</span>
     </div>
 
-    {{ range sort $inStage "sortkey" "desc" }}
-    <a href="{{ .url }}" style="display:block; text-decoration:none; color:inherit; border:1px solid #e2ded6; border-left:4px solid {{ $m.bd }}; border-radius:8px; padding:12px 15px; margin-bottom:10px; background:#fff;">
-      <div style="display:flex; flex-wrap:wrap; align-items:baseline; gap:8px;">
-        <span style="font-weight:600; color:#3a3a3a;">{{ .title }}</span>
-        <span style="font-size:0.72em; color:#9a8f80; text-transform:uppercase; letter-spacing:0.05em;">{{ .group }}</span>
-      </div>
-      {{ with .sub }}<div style="color:#7a7a7a; font-size:0.88em; margin-top:3px;">{{ . }}</div>{{ end }}
-      {{ with .blockers }}
-      <div style="margin-top:8px; font-size:0.85em; color:{{ $m.fg }};">
-        <strong style="font-size:0.9em; letter-spacing:0.04em;">WAITING ON:</strong>
-        {{ range . }}<span style="display:inline-block; margin:2px 4px 2px 0; padding:1px 8px; border-radius:999px; background:{{ $m.bg }}; border:1px solid {{ $m.bd }};">{{ . }}</span>{{ end }}
-      </div>
+    {{/* in-flight first, then live; each bucket newest first */}}
+    {{ range $order }}
+      {{ $s := . }}
+      {{ $m := index $meta $s }}
+      {{ range sort (where $inGroup "stage" $s) "sortkey" "desc" }}
+      <a href="{{ .url }}" style="display:block; text-decoration:none; color:inherit; border:1px solid #e2ded6; border-left:4px solid {{ $m.bd }}; border-radius:8px; padding:12px 15px; margin-bottom:10px; background:#fff;">
+        <div style="display:flex; flex-wrap:wrap; align-items:baseline; gap:8px;">
+          <span style="font-weight:600; color:#3a3a3a;">{{ .title }}</span>
+          <span style="font-size:0.68em; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; padding:2px 8px; border-radius:999px; background:{{ $m.bg }}; color:{{ $m.fg }}; border:1px solid {{ $m.bd }};">{{ $m.label }}</span>
+        </div>
+        {{ with .sub }}<div style="color:#7a7a7a; font-size:0.88em; margin-top:3px;">{{ . }}</div>{{ end }}
+        {{ with .blockers }}
+        <div style="margin-top:8px; font-size:0.85em; color:{{ $m.fg }};">
+          <strong style="font-size:0.9em; letter-spacing:0.04em;">WAITING ON:</strong>
+          {{ range . }}<span style="display:inline-block; margin:2px 4px 2px 0; padding:1px 8px; border-radius:999px; background:{{ $m.bg }}; border:1px solid {{ $m.bd }};">{{ . }}</span>{{ end }}
+        </div>
+        {{ end }}
+      </a>
       {{ end }}
-    </a>
     {{ end }}
   </section>
   {{ end }}
+{{ end }}
+
+{{/* Anything whose group is not in $groupOrder still renders, rather than vanishing.
+     A dashboard that silently omits work reads as "nothing else in flight" — the same
+     failure this board already carries a comment about, when Comparative Mythology was
+     invisible on the very page meant to track it. */}}
+{{ $rest := slice }}
+{{ range $items }}{{ if not (in $seen .group) }}{{ $rest = $rest | append . }}{{ end }}{{ end }}
+{{ if $rest }}
+<section style="margin-bottom:34px;">
+  <div style="border-bottom:2px solid #d8d2c6; padding-bottom:6px; margin-bottom:14px;">
+    <h2 style="margin:0; font-family:Georgia,serif; font-weight:normal; color:#4a6b52; font-size:1.35em;">Other</h2>
+    <span style="color:#8a8a8a; font-size:0.85em;">not yet assigned a section — {{ len $rest }} item{{ if ne (len $rest) 1 }}s{{ end }}</span>
+  </div>
+  {{ range sort $rest "sortkey" "desc" }}
+    {{ $m := index $meta .stage }}
+    <a href="{{ .url }}" style="display:block; text-decoration:none; color:inherit; border:1px solid #e2ded6; border-left:4px solid {{ $m.bd }}; border-radius:8px; padding:12px 15px; margin-bottom:10px; background:#fff;">
+      <span style="font-weight:600; color:#3a3a3a;">{{ .title }}</span>
+      <span style="font-size:0.72em; color:#9a8f80; text-transform:uppercase; letter-spacing:0.05em; margin-left:8px;">{{ .group }}</span>
+    </a>
+  {{ end }}
+</section>
 {{ end }}
 
 <div style="margin-top:36px; padding:14px 16px; background:#f6f4f0; border-radius:8px; font-size:0.88em; color:#5f5b53; line-height:1.6;">

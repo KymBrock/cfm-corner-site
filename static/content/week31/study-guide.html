@@ -1,0 +1,1244 @@
+<style>
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+        .site-header {
+            background: linear-gradient(135deg, #d4c4a8 0%, #8B7355 100%);
+            color: white; padding: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px;
+        }
+        .site-header-content { max-width: 1000px; margin: 0 auto; padding: 0 20px; text-align: center; }
+        .site-title { font-size: 2em; margin-bottom: 5px; }
+        .site-subtitle { font-size: 1.1em; opacity: 0.9; }
+
+        .header-section {
+            background-color: #8B7355; color: white; padding: 40px; border-radius: 12px;
+            margin-bottom: 30px; text-align: center;
+        }
+        .header-section .week-label { font-size: 1em; text-transform: uppercase; letter-spacing: 2px; opacity: 0.9; margin-bottom: 10px; }
+        .header-section h1 { font-size: 2.5em; font-weight: 300; margin-bottom: 10px; }
+        .header-section .subtitle { font-size: 1.3em; font-style: italic; margin-bottom: 20px; }
+        .header-section .date-location { font-size: 1.1em; opacity: 0.95; }
+
+        .quick-links { text-align: center; margin: 20px 0; }
+        .quick-link {
+            display: inline-block; background: #8B7355; color: white; padding: 10px 20px;
+            border-radius: 8px; text-decoration: none; margin: 5px; transition: all 0.3s;
+        }
+        .quick-link:hover { background: #6B5344; transform: translateY(-2px); }
+
+        .button-container { text-align: center; margin: 30px 0; }
+        .expand-button {
+            background-color: #8B7355; color: white; border: none; padding: 12px 24px;
+            margin: 5px 10px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em;
+        }
+        .expand-button:hover { background-color: #6B5344; }
+
+        .sg-accordion-section {
+            background-color: #8B7355; color: white; cursor: pointer; padding: 18px; width: 100%;
+            border: none; text-align: left; font-size: 1.2em; font-weight: 600; font-family: Georgia, serif;
+            border-radius: 8px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center;
+        }
+        .sg-accordion-section:hover { background-color: #6B5344; }
+        .sg-accordion-section::after { content: '\25BC'; font-size: 0.9em; transition: transform 0.3s; }
+        .sg-accordion-section.active::after { transform: rotate(180deg); }
+
+        .sg-panel {
+            background-color: white; border-radius: 0 0 8px 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .sg-panel.active { display: block; }
+        .panel-content { padding: 30px; }
+        .panel-content h2 { color: #8B7355; margin-bottom: 20px; font-size: 1.8em; }
+        .panel-content h3 { color: #6B5344; margin-top: 25px; margin-bottom: 15px; font-size: 1.4em; }
+        .panel-content h4 { color: #5a4a3a; margin-top: 20px; margin-bottom: 12px; font-size: 1.2em; }
+        .panel-content ul, .panel-content ol { margin-left: 25px; margin-bottom: 15px; }
+        .panel-content li { margin-bottom: 8px; }
+        .panel-content p { margin-bottom: 15px; text-align: justify; }
+        .panel-content a { color: #8B7355; }
+        .panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .panel-content blockquote {
+            margin: 20px 0 20px 20px;
+            padding: 15px 20px;
+            border-left: 4px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 8px 8px 0;
+        }
+        .panel-content blockquote p { margin-bottom: 8px; }
+        .panel-content blockquote p:last-child { margin-bottom: 0; }
+        .panel-content blockquote cite {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #8B7355;
+            font-style: normal;
+        }
+
+        .panel-content strong { color: #6B5344; }
+        .panel-content em { color: #5a4a3a; }
+
+        .panel-content hr {
+            border: none;
+            border-top: 2px solid #e8e0d5;
+            margin: 25px 0;
+        }
+
+        .panel-content code {
+            background-color: #f5f0e8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #6B5344;
+        }
+
+        .info-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .info-table th, .info-table td { border: 1px solid #d4c4a8; padding: 12px; text-align: left; }
+        .info-table th { background-color: #f5f0e8; color: #6B5344; font-weight: bold; }
+        .info-table tr:nth-child(even) { background-color: #faf8f5; }
+
+        .sg-sub-accordion {
+            background-color: #f5f0e8;
+            color: #5a4a3a;
+            cursor: pointer;
+            padding: 14px 40px 14px 18px;
+            width: 100%;
+            text-align: left;
+            border: 1px solid #d4c4a8;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            margin-top: 10px;
+            position: relative;
+            transition: background-color 0.2s;
+        }
+
+        .sg-sub-accordion:hover {
+            background-color: #e8e0d4;
+        }
+
+        .sg-sub-accordion::after {
+            content: '\25BC';
+            font-size: 0.8em;
+            color: #8B7355;
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s;
+        }
+
+        .sg-sub-accordion.active::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .sg-sub-panel {
+            background-color: #fafafa;
+            border-radius: 0 0 6px 6px;
+            border: 1px solid #d4c4a8;
+            border-top: none;
+            display: none;
+            transition: max-height 0.3s ease-out;
+            margin-bottom: 10px;
+        }
+
+        .sg-sub-panel.active {
+            display: block;
+            overflow: visible;
+            transition: max-height 0.3s ease-in;
+        }
+
+        .sg-sub-panel-content {
+            padding: 20px 25px;
+        }
+
+        .sg-sub-panel-content h3 { color: #6B5344; margin-top: 20px; margin-bottom: 12px; font-size: 1.3em; }
+        .sg-sub-panel-content h4 { color: #5a4a3a; margin-top: 15px; margin-bottom: 10px; font-size: 1.15em; }
+        .sg-sub-panel-content p { margin-bottom: 12px; text-align: justify; }
+        .sg-sub-panel-content ul, .sg-sub-panel-content ol { margin-left: 25px; margin-bottom: 12px; }
+        .sg-sub-panel-content li { margin-bottom: 6px; }
+        .sg-sub-panel-content a { color: #8B7355; }
+        .sg-sub-panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .sg-sub-panel-content blockquote {
+            margin: 15px 0 15px 15px;
+            padding: 12px 18px;
+            border-left: 3px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 6px 6px 0;
+        }
+        .sg-sub-panel-content blockquote p { margin-bottom: 6px; }
+        .sg-sub-panel-content blockquote p:last-child { margin-bottom: 0; }
+        .sg-sub-panel-content strong { color: #6B5344; }
+        .sg-sub-panel-content hr { border: none; border-top: 1px solid #e8e0d5; margin: 20px 0; }
+
+        @media (max-width: 768px) {
+            .header-section h1 { font-size: 1.8em; }
+            .panel-content { padding: 20px; }
+            .sg-sub-panel-content { padding: 15px 18px; }
+        }
+
+        .sg-section-heading {
+            margin: 1.2em 0 0.6em 0;
+            padding: 0.4em 0 0.4em 0.8em;
+            border-left: 3px solid #8B9D77;
+            color: #5a6b4f;
+            font-size: 1.05em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+        }
+        .sg-section-actions {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 28px;
+        }
+        .sg-section-actions .sg-action-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.35);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            padding: 0;
+            line-height: 1;
+        }
+        .sg-section-actions .sg-action-btn:hover {
+            background: rgba(255,255,255,0.35);
+        }
+    </style>
+
+
+<div class="container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <p class="week-label">Week 31</p>
+            <h1>Ezra 1; 3–7; Nehemiah 2; 4–6; 8 — Overview</h1>
+            <div class="subtitle">"Let Us Rise Up and Build"</div>
+            <div class="date-location"></div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/31?lang=eng" target="_blank" class="quick-link">CFM Manual</a>
+        </div>
+
+        <!-- Expand/Collapse Buttons -->
+        <div class="button-container">
+            <button class="expand-button" onclick="expandAll()"><span class="btn-icon">&#x229E;</span> Expand All</button>
+            <button class="expand-button" onclick="collapseAll()"><span class="btn-icon">&#x229F;</span> Collapse All</button>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 1: WEEK 31: OVERVIEW -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">1. Week 31: Overview</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Overview</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>This week the exile ends. The story that closed in ruins at the end of 2 Kings — a burned temple, a scattered people, a broken wall — reopens with a decree: "The Lord God of heaven… hath charged me to build him an house at Jerusalem" (<a href="https://www.blueletterbible.org/kjv/ezr/1/2/s_404002" target="_blank" data-ref="Ezra 1:2">Ezra 1:2</a>). The words are spoken by <strong>Cyrus</strong>, a Persian king who did not worship Israel's God, and the narrator tells us why he spoke them: "the Lord stirred up the spirit of Cyrus" <a href="https://www.blueletterbible.org/kjv/ezr/1/1/s_404001" target="_blank" data-ref="Ezra 1:1">(1:1)</a>, "that the word of the Lord by the mouth of Jeremiah might be fulfilled." God keeps a seventy-year promise (<a href="https://www.blueletterbible.org/kjv/jer/29/10/s_774010" target="_blank" data-ref="Jeremiah 29:10">Jeremiah 29:10</a>) by moving the heart of an empire.</p>
+<p>What follows is the work of rebuilding — and the reading makes clear that restoration comes in <em>layers</em>. First the <strong>altar</strong> and the <strong>foundation</strong> of the temple (<a href="https://www.blueletterbible.org/kjv/ezr/3/1/s_406001" target="_blank" data-ref="Ezra 3">Ezra 3</a>). Then, after years of opposition, the <strong>temple</strong> itself, finished when the prophets Haggai and Zechariah stir the people back to the work (<a href="https://www.blueletterbible.org/kjv/ezr/5/1/s_408001" target="_blank" data-ref="Ezra 5">Ezra 5–6</a>). Then <strong>Ezra</strong> arrives with the law, "prepared his heart to seek the law of the Lord, and to do it, and to teach" <a href="https://www.blueletterbible.org/kjv/ezr/7/10/s_410010" target="_blank" data-ref="Ezra 7:10">(7:10)</a>. Then <strong>Nehemiah</strong> rebuilds the city <strong>wall</strong> in fifty-two days against relentless opposition (<a href="https://www.blueletterbible.org/kjv/neh/2/1/s_415001" target="_blank" data-ref="Nehemiah 2">Nehemiah 2; 4–6</a>). And finally, at the Water Gate, the whole community is re-formed around the <strong>word</strong> as Ezra reads the law aloud and the Levites "gave the sense, and caused them to understand" (<a href="https://www.blueletterbible.org/kjv/neh/8/8/s_421008" target="_blank" data-ref="Nehemiah 8:8">Nehemiah 8:8</a>).</p>
+<p>The theme verse is Nehemiah's rallying cry to a discouraged people surveying the rubble: <strong>"Let us rise up and build. So they strengthened their hands for this good work"</strong> <a href="https://www.blueletterbible.org/kjv/ezr/2/18/s_405018" target="_blank" data-ref="Ezra 2:18">(2:18)</a>. It is a week about doing the Lord's work amid mockery, threat, and weariness — with prayer in one hand and a trowel (or a sword) in the other — and about a God who turns kings' hearts, answers builders' prayers, and meets a returning people in the joy of His word: "the joy of the Lord is your strength" <a href="https://www.blueletterbible.org/kjv/ezr/8/10/s_411010" target="_blank" data-ref="Ezra 8:10">(8:10)</a>.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Scripture Range — The Full Outline of Ezra–Nehemiah</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Ezra and Nehemiah tell one continuous story of the return. The assigned blocks (<strong>✓</strong>) are the spine; the chapters between them fill in the community the week keeps pointing to. Each assigned block is discussed in the walkthrough below.</p>
+<table class="info-table">
+<tr><th>Chapters</th><th>Content</th><th>This week?</th><th>Why skipped / what's notable</th></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/ezr/1/1/s_404001" target="_blank" data-ref="Ezra 1">Ezra 1</a></strong></td><td>Cyrus's decree; the return authorized; the temple vessels restored</td><td><strong>✓ Yes</strong></td><td><em>This week.</em></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/ezr/2/1/s_405001" target="_blank" data-ref="Ezra 2">Ezra 2</a></strong></td><td>The register of the returnees — some 42,360 who came home; the priests who could not prove their genealogy "put from the priesthood" <a href="https://www.blueletterbible.org/kjv/ezr/2/62/s_405062" target="_blank" data-ref="Ezra 2:62">(2:62)</a></td><td>—</td><td>Not assigned, but <strong>significant:</strong> the genealogical boundary that reshapes the whole community begins here — see the Samaritan schism in <strong>Historical & Cultural Context</strong>.</td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/ezr/3/1/s_406001" target="_blank" data-ref="Ezra 3">Ezra 3</a></strong></td><td>The altar rebuilt; sacrifices resumed; the temple foundation laid — joy and weeping</td><td><strong>✓ Yes</strong></td><td><em>This week.</em></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/ezr/4/1/s_407001" target="_blank" data-ref="Ezra 4">Ezra 4</a></strong></td><td>Opposition; the adversaries frustrate the work; building halted</td><td><strong>✓ Yes</strong></td><td><em>This week.</em></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/ezr/5/1/s_408001" target="_blank" data-ref="Ezra 5">Ezra 5–6</a></strong></td><td>Haggai and Zechariah stir the work; Darius confirms Cyrus's decree; the temple finished and dedicated</td><td><strong>✓ Yes</strong></td><td><em>This week.</em></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/ezr/7/1/s_410001" target="_blank" data-ref="Ezra 7">Ezra 7</a></strong></td><td>Ezra the scribe comes with the law; "prepared his heart to seek… do… teach" <a href="https://www.blueletterbible.org/kjv/ezr/7/10/s_410010" target="_blank" data-ref="Ezra 7:10">(7:10)</a></td><td><strong>✓ Yes</strong></td><td><em>This week.</em></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/ezr/8/1/s_411001" target="_blank" data-ref="Ezra 8">Ezra 8</a></strong></td><td>Those who returned with Ezra; the fast at the river of Ahava for safe passage; the temple treasure delivered</td><td>—</td><td>Ezra's own journey up to Jerusalem — the bridge between his commission (ch. 7) and his reforms (chs. 9–10).</td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/ezr/9/1/s_412001" target="_blank" data-ref="Ezra 9">Ezra 9–10</a></strong></td><td>The intermarriage crisis; Ezra's prayer of confession; the covenant to "put away" foreign wives <a href="https://www.blueletterbible.org/kjv/ezr/10/3/s_413003" target="_blank" data-ref="Ezra 10:3">(10:3)</a></td><td>—</td><td>Not assigned, but <strong>significant:</strong> the "holy seed" separation <a href="https://www.blueletterbible.org/kjv/ezr/9/2/s_412002" target="_blank" data-ref="Ezra 9:2">(9:2)</a> is the sharp edge of the week's boundary theme.</td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/neh/1/1/s_414001" target="_blank" data-ref="Nehemiah 1">Nehemiah 1</a></strong></td><td>Nehemiah hears the wall lies in ruins; he weeps, fasts, and prays <a href="https://www.blueletterbible.org/kjv/ezr/1/4/s_404004" target="_blank" data-ref="Ezra 1:4">(1:4)</a></td><td>—</td><td>The opening of Nehemiah's story — the prayer that sets up the assigned chapter 2.</td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/neh/2/1/s_415001" target="_blank" data-ref="Nehemiah 2">Nehemiah 2</a></strong></td><td>Nehemiah sent to rebuild the wall; the night inspection; "let us rise up and build"</td><td><strong>✓ Yes</strong></td><td><em>This week.</em></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/neh/3/1/s_416001" target="_blank" data-ref="Nehemiah 3">Nehemiah 3</a></strong></td><td>The builders of the wall, gate by gate — from the high priest down to goldsmiths and merchants</td><td>—</td><td>A register of who built which section; the whole city shares the labor.</td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/neh/4/1/s_417001" target="_blank" data-ref="Nehemiah 4">Nehemiah 4</a></strong></td><td>Sanballat and Tobiah oppose; building with sword and trowel</td><td><strong>✓ Yes</strong></td><td><em>This week.</em></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/neh/5/1/s_418001" target="_blank" data-ref="Nehemiah 5">Nehemiah 5</a></strong></td><td>The usury crisis; Nehemiah's reform and example</td><td><strong>✓ Yes</strong></td><td><em>This week.</em></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/neh/6/1/s_419001" target="_blank" data-ref="Nehemiah 6">Nehemiah 6</a></strong></td><td>Plots against Nehemiah fail; the wall finished in fifty-two days</td><td><strong>✓ Yes</strong></td><td><em>This week.</em></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/neh/7/1/s_420001" target="_blank" data-ref="Nehemiah 7">Nehemiah 7</a></strong></td><td>The genealogical register found and repeated (paralleling <a href="https://www.blueletterbible.org/kjv/ezr/2/1/s_405001" target="_blank" data-ref="Ezra 2">Ezra 2</a>)</td><td>—</td><td>Not assigned, but ties to the week's boundary theme — descent again defines who belongs.</td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/neh/8/1/s_421001" target="_blank" data-ref="Nehemiah 8">Nehemiah 8</a></strong></td><td>Ezra reads the law at the Water Gate; "the joy of the Lord is your strength"; Tabernacles kept</td><td><strong>✓ Yes</strong></td><td><em>This week.</em></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/neh/9/1/s_422001" target="_blank" data-ref="Nehemiah 9">Nehemiah 9–10</a></strong></td><td>The great day of confession <a href="https://www.blueletterbible.org/kjv/ezr/9/1-2/s_412001" target="_blank" data-ref="Ezra 9:1-2">(9:1–2)</a>; the recital of God's dealings; the community seals a written covenant</td><td>—</td><td>The covenant-renewal climax — the people bind themselves to the law, the Sabbath, and temple support.</td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/neh/11/1/s_424001" target="_blank" data-ref="Nehemiah 11">Nehemiah 11–12</a></strong></td><td>Lots cast to repopulate Jerusalem, "one of ten" <a href="https://www.blueletterbible.org/kjv/ezr/11/1/s_414001" target="_blank" data-ref="Ezra 11:1">(11:1)</a>; the wall dedicated with two great thanksgiving choirs</td><td>—</td><td>The city refilled and the wall joyfully dedicated.</td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/neh/13/1/s_426001" target="_blank" data-ref="Nehemiah 13">Nehemiah 13</a></strong></td><td>Nehemiah's later reforms — the Ammonite and Moabite barred <a href="https://www.blueletterbible.org/kjv/ezr/13/1-3/s_416001" target="_blank" data-ref="Ezra 13:1-3">(13:1–3)</a>, the Sabbath enforced, foreign marriages confronted again <a href="https://www.blueletterbible.org/kjv/ezr/13/23/s_416023" target="_blank" data-ref="Ezra 13:23">(13:23)</a></td><td>—</td><td>Not assigned, but <strong>significant:</strong> the boundary of <a href="https://www.blueletterbible.org/kjv/ezr/9/1/s_412001" target="_blank" data-ref="Ezra 9">Ezra 9–10</a> hardens here into standing policy.</td></tr>
+</table>
+<p><em>Note: Portions of Ezra (<strong>4:8–6:18; 7:12–26</strong>) are written in <strong>Aramaic</strong> rather than Hebrew, the administrative language of the Persian court — see <strong>Word Studies</strong>.</em></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Continuity — Picking Up the Story, in Order</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>We begin exactly where last week ended.</strong> Last week, 2 Chronicles closed on Cyrus's decree — "let him go up… and build the house of the Lord" (<a href="https://www.blueletterbible.org/kjv/2ch/36/22-23/s_403022" target="_blank" data-ref="2 Chronicles 36:22-23">2 Chronicles 36:22–23</a>) — the final words of the Hebrew Bible, breaking off mid-invitation on the word <em>up</em>. This week, <a href="https://www.blueletterbible.org/kjv/ezr/1/1/s_404001" target="_blank" data-ref="Ezra 1">Ezra 1</a> opens with that same sentence and finishes it (<a href="https://www.blueletterbible.org/kjv/ezr/1/1-3/s_404001" target="_blank" data-ref="Ezra 1:1-3">Ezra 1:1–3</a>). The seam is deliberate: the whole long story of the kings, the exile, and the prophets has been waiting for that "go up." Now it comes.</p>
+<p><strong>One book, one century — read in order.</strong> In the Hebrew Bible, Ezra and Nehemiah are a <strong>single book</strong>, and its story runs in a clear forward line, even though a long quiet gap sits in the middle. Laid out in order, the century unfolds like this:</p>
+<ul>
+<li><strong>586 BC — Exile.</strong> Jerusalem burns; Judah is carried to Babylon for the "seventy years" Jeremiah foretold (<a href="https://www.blueletterbible.org/kjv/jer/29/10/s_774010" target="_blank" data-ref="Jeremiah 29:10">Jeremiah 29:10</a>). The prophets of these years — <strong>Daniel</strong> in the court, <strong>Ezekiel</strong> among the captives — come later in our reading year.</li>
+<li><strong>538 BC — The first return.</strong> Cyrus's decree frees the exiles. Zerubbabel leads the first group home; they rebuild the <strong>altar</strong> and lay the temple's <strong>foundation</strong> (<a href="https://www.blueletterbible.org/kjv/ezr/1/1/s_404001" target="_blank" data-ref="Ezra 1">Ezra 1; 3</a>).</li>
+<li><strong>~520–515 BC — The temple.</strong> After years of opposition stall the work, the prophets Haggai and Zechariah stir it back to life, and the <strong>temple is finished</strong> under Darius (<a href="https://www.blueletterbible.org/kjv/ezr/4/1/s_407001" target="_blank" data-ref="Ezra 4">Ezra 4–6</a>).</li>
+<li><strong>515–458 BC — The silent gap (Esther).</strong> Nearly sixty years pass with little recorded. It is <em>into this gap</em> that next week's book, <strong>Esther</strong>, falls — set under Ahasuerus (Xerxes I, r. 486–465 BC) — the story of the Jews who stayed in Persia rather than going up.</li>
+<li><strong>458 BC — Ezra.</strong> Two generations after the temple stands, <strong>Ezra the scribe</strong> comes up under Artaxerxes I with the law, to rebuild the <em>people</em> around the word (<a href="https://www.blueletterbible.org/kjv/ezr/7/1/s_410001" target="_blank" data-ref="Ezra 7">Ezra 7</a>).</li>
+<li><strong>445 BC — Nehemiah.</strong> A little later, <strong>Nehemiah</strong> arrives (also under Artaxerxes), rebuilds the city <strong>wall</strong> in fifty-two days, and the community gathers at the Water Gate to hear the law read and explained (<a href="https://www.blueletterbible.org/kjv/neh/2/1/s_415001" target="_blank" data-ref="Nehemiah 2">Nehemiah 2; 4–6; 8</a>).</li>
+</ul>
+<p>That single line — <strong>exile → return → temple → (Esther) → Ezra → Nehemiah</strong> — is the spine this week follows, and the walkthrough below moves along it in order. (The Scripture Range table above marks exactly which chapters the lesson reads and which it passes over, so the skipped material is accounted for there.)</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Complete Narrative — Rebuilding in Layers</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3><strong>The Decree and the Return (Ezra 1)</strong> — assigned</h3>
+<p>The book opens by tying the moment to prophecy: "in the first year of Cyrus king of Persia, that the word of the Lord by the mouth of Jeremiah might be fulfilled, the Lord stirred up the spirit of Cyrus" <a href="https://www.blueletterbible.org/kjv/ezr/1/1/s_404001" target="_blank" data-ref="Ezra 1:1">(1:1)</a>. Cyrus issues a written proclamation releasing the exiles to go up to Jerusalem and rebuild the house of the Lord, and he restores the very temple vessels Nebuchadnezzar had carried off <a href="https://www.blueletterbible.org/kjv/ezr/1/7-11/s_404007" target="_blank" data-ref="Ezra 1:7-11">(1:7–11)</a>. The God who had used Babylon to scatter now uses Persia to gather. The exiles who respond are those "whose spirit God had raised" <a href="https://www.blueletterbible.org/kjv/ezr/1/5/s_404005" target="_blank" data-ref="Ezra 1:5">(1:5)</a> — the return is God stirring kings and commoners alike.</p>
+<h3><strong>The Altar and the Foundation (Ezra 3)</strong> — assigned</h3>
+<p>Back in the land, the people's first act is worship: Jeshua the priest and Zerubbabel the governor rebuild the <strong>altar</strong> and resume the daily sacrifices "as it is written" <a href="https://www.blueletterbible.org/kjv/ezr/3/2-4/s_406002" target="_blank" data-ref="Ezra 3:2-4">(3:2–4)</a>, even "for fear was upon them because of the people of those countries." Then the <strong>foundation</strong> of the temple is laid, and the priests and Levites sing the ancient refrain — "because he is good, for his mercy endureth for ever toward Israel" <a href="https://www.blueletterbible.org/kjv/ezr/3/11/s_406011" target="_blank" data-ref="Ezra 3:11">(3:11)</a>, the same song sung at Solomon's temple and Jehoshaphat's deliverance. But the joy is mixed: the old men "that had seen the first house" weep aloud even as others shout for joy, "so that the people could not discern the noise of the shout of joy from the noise of the weeping" <a href="https://www.blueletterbible.org/kjv/ezr/3/12-13/s_406012" target="_blank" data-ref="Ezra 3:12-13">(3:12–13)</a>. Restoration and loss sound together.</p>
+<h3><strong>Opposition and Delay (Ezra 4)</strong> — assigned</h3>
+<p>The "adversaries of Judah and Benjamin" offer to help build; when they are refused, they "weakened the hands of the people of Judah, and troubled them in building," hiring counsellors "to frustrate their purpose" <a href="https://www.blueletterbible.org/kjv/ezr/4/1-5/s_407001" target="_blank" data-ref="Ezra 4:1-5">(4:1–5)</a>. Through official correspondence (the section where the text shifts into <strong>Aramaic</strong>), the work is stopped "unto the second year of the reign of Darius" <a href="https://www.blueletterbible.org/kjv/ezr/4/24/s_407024" target="_blank" data-ref="Ezra 4:24">(4:24)</a>. The first great lesson of the rebuilding is that opposition is not a sign the work is wrong — it is a fixture of the work.</p>
+<h3><strong>The Temple Finished (Ezra 5–6)</strong> — assigned</h3>
+<p>The work resumes when God sends prophets: "Then the prophets, Haggai the prophet, and Zechariah… prophesied unto the Jews" <a href="https://www.blueletterbible.org/kjv/ezr/5/1/s_408001" target="_blank" data-ref="Ezra 5:1">(5:1)</a>, and Zerubbabel and Jeshua "rose up and began to build." When the Persian authorities question the project, <strong>Darius</strong> orders a search of the royal archives, finds the original decree of Cyrus, and not only confirms it but funds it <a href="https://www.blueletterbible.org/kjv/ezr/6/1-12/s_409001" target="_blank" data-ref="Ezra 6:1-12">(6:1–12)</a>. The temple is finished "in the sixth year of the reign of Darius the king" <a href="https://www.blueletterbible.org/kjv/ezr/6/15/s_409015" target="_blank" data-ref="Ezra 6:15">(6:15)</a>, and the people keep the dedication "with joy" and then the Passover <a href="https://www.blueletterbible.org/kjv/ezr/6/16-22/s_409016" target="_blank" data-ref="Ezra 6:16-22">(6:16–22)</a>. The house is rebuilt because God moved a pagan king's records to defend it.</p>
+<h3><strong>Ezra Brings the Law (Ezra 7)</strong> — assigned</h3>
+<p>A generation later, <strong>Ezra</strong>, "a ready scribe in the law of Moses" <a href="https://www.blueletterbible.org/kjv/ezr/7/6/s_410006" target="_blank" data-ref="Ezra 7:6">(7:6)</a>, comes up from Babylon under Artaxerxes — "according to the good hand of his God upon him." The chapter's keynote defines the man and the week: "<strong>Ezra had prepared his heart to seek the law of the Lord, and to do it, and to teach in Israel statutes and judgments</strong>" <a href="https://www.blueletterbible.org/kjv/ezr/7/10/s_410010" target="_blank" data-ref="Ezra 7:10">(7:10)</a>. Seek, do, teach — in that order. The temple has been rebuilt; now the <em>people</em> must be rebuilt around the word.</p>
+<h3><strong>Nehemiah and the Wall (Nehemiah 2; 4–6)</strong> — assigned</h3>
+<p><strong>Nehemiah</strong>, cupbearer to Artaxerxes, hears that Jerusalem's wall is broken down and its gates burned. Before he answers the king's question, "so I prayed to the God of heaven" <a href="https://www.blueletterbible.org/kjv/ezr/2/4/s_405004" target="_blank" data-ref="Ezra 2:4">(2:4)</a>, and he is sent to rebuild. After a secret night inspection of the ruins <a href="https://www.blueletterbible.org/kjv/ezr/2/12-16/s_405012" target="_blank" data-ref="Ezra 2:12-16">(2:12–16)</a>, he turns to the discouraged people: "<strong>Let us rise up and build.</strong> So they strengthened their hands for this good work" <a href="https://www.blueletterbible.org/kjv/ezr/2/18/s_405018" target="_blank" data-ref="Ezra 2:18">(2:18)</a>. The opposition is immediate and escalating — Sanballat and Tobiah move from mockery ("will they fortify themselves?") to threats of attack. Nehemiah's answer is prayer <em>and</em> vigilance: "we made our prayer unto our God, and set a watch" <a href="https://www.blueletterbible.org/kjv/ezr/4/9/s_407009" target="_blank" data-ref="Ezra 4:9">(4:9)</a>; the builders work with a tool in one hand and "held a weapon" in the other <a href="https://www.blueletterbible.org/kjv/ezr/4/17/s_407017" target="_blank" data-ref="Ezra 4:17">(4:17)</a>. Chapter 5 exposes an <em>internal</em> threat — nobles charging usury against their own struggling brethren — and Nehemiah confronts it and models generosity himself. When enemies try to lure him into a "meeting" to stop the work, he sends the line that captures the whole week: "<strong>I am doing a great work, so that I cannot come down</strong>" <a href="https://www.blueletterbible.org/kjv/ezr/6/3/s_409003" target="_blank" data-ref="Ezra 6:3">(6:3)</a>. The wall is finished "in fifty and two days" <a href="https://www.blueletterbible.org/kjv/ezr/6/15/s_409015" target="_blank" data-ref="Ezra 6:15">(6:15)</a>, and even the enemies perceive "that this work was wrought of our God" <a href="https://www.blueletterbible.org/kjv/ezr/6/16/s_409016" target="_blank" data-ref="Ezra 6:16">(6:16)</a>.</p>
+<h3><strong>The Reading of the Law (Nehemiah 8)</strong> — assigned</h3>
+<p>With the city secure, the community gathers "as one man" at the <strong>Water Gate</strong>, and Ezra reads the law aloud "from the morning until midday" <a href="https://www.blueletterbible.org/kjv/ezr/8/1-3/s_411001" target="_blank" data-ref="Ezra 8:1-3">(8:1–3)</a>. The Levites move through the crowd and "gave the sense, and caused them to understand the reading" <a href="https://www.blueletterbible.org/kjv/ezr/8/8/s_411008" target="_blank" data-ref="Ezra 8:8">(8:8)</a> — the word is not only read but explained. The people weep as they hear how far they had fallen, but Nehemiah and Ezra redirect them: "mourn not, nor weep… for the joy of the Lord is your strength" <a href="https://www.blueletterbible.org/kjv/ezr/8/9-10/s_411009" target="_blank" data-ref="Ezra 8:9-10">(8:9–10)</a>. They keep the <strong>Feast of Tabernacles</strong> with a gladness not seen "since the days of Jeshua the son of Nun" — that is, Joshua <a href="https://www.blueletterbible.org/kjv/ezr/8/17/s_411017" target="_blank" data-ref="Ezra 8:17">(8:17)</a>. The restoration that began with an altar ends with an open book — a people re-formed around the word of God.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Central Insight</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<blockquote>
+<p><strong>"Let us rise up and build. So they strengthened their hands for this good work."</strong></p>
+<p>— <a href="https://www.blueletterbible.org/kjv/neh/2/18/s_415018" target="_blank" data-ref="Nehemiah 2:18">Nehemiah 2:18</a></p>
+</blockquote>
+<blockquote>
+<p><strong>"For this day is holy unto our Lord… for the joy of the Lord is your strength."</strong></p>
+<p>— <a href="https://www.blueletterbible.org/kjv/neh/8/10/s_421010" target="_blank" data-ref="Nehemiah 8:10">Nehemiah 8:10</a></p>
+</blockquote>
+<p>The week traces restoration as a work done in layers — altar, foundation, temple, wall, and finally the covenant community gathered around the law — and every layer is built the same way: God stirs the work (a king's heart, a prophet's voice, a people's resolve), opposition rises, and the builders answer with prayer <em>and</em> labor rather than one without the other. Ezra "prepared his heart to seek… do… teach"; Nehemiah "prayed… and set a watch"; and both refuse to "come down" from the work. The rubble does not get the last word. The last word is an open book and a people who understand it — and rejoice.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Dramatic Arc</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<pre class="sg-diagram" style="background:#f4f7f5; border:1px solid #c6d4c8; border-radius:8px; padding:16px 20px; overflow-x:auto; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace; font-size:0.9em; line-height:1.55; color:#3a4a3f; white-space:pre; margin:16px 0;">1. THE DECREE (<a href="https://www.blueletterbible.org/kjv/ezr/1/1/s_404001" target="_blank" data-ref="Ezra 1">Ezra 1</a>)
+   "The Lord stirred up the spirit of Cyrus" — the exile ends by prophecy fulfilled
+        ↓
+2. ALTAR &amp; FOUNDATION (<a href="https://www.blueletterbible.org/kjv/ezr/3/1/s_406001" target="_blank" data-ref="Ezra 3">Ezra 3</a>)
+   Worship first; the foundation laid; joy and weeping sound together
+        ↓
+3. OPPOSITION &amp; DELAY (<a href="https://www.blueletterbible.org/kjv/ezr/4/1/s_407001" target="_blank" data-ref="Ezra 4">Ezra 4</a>)
+   Adversaries frustrate the work; building halts until Darius
+        ↓
+4. THE TEMPLE FINISHED (<a href="https://www.blueletterbible.org/kjv/ezr/5/1/s_408001" target="_blank" data-ref="Ezra 5">Ezra 5–6</a>)
+   Haggai and Zechariah stir the work; Darius confirms Cyrus; the house is dedicated
+        ↓
+5. EZRA AND THE LAW (<a href="https://www.blueletterbible.org/kjv/ezr/7/1/s_410001" target="_blank" data-ref="Ezra 7">Ezra 7</a>)
+   "Ezra prepared his heart to seek… do… teach" — the people to be rebuilt around the word
+        ↓
+6. THE WALL (<a href="https://www.blueletterbible.org/kjv/neh/2/1/s_415001" target="_blank" data-ref="Nehemiah 2">Nehemiah 2; 4–6</a>)
+   "Let us rise up and build"; sword and trowel; "I am doing a great work"; finished in 52 days
+        ↓
+7. THE READING OF THE LAW (<a href="https://www.blueletterbible.org/kjv/neh/8/1/s_421001" target="_blank" data-ref="Nehemiah 8">Nehemiah 8</a>)
+   The Water Gate assembly; the word explained; "the joy of the Lord is your strength"</pre>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Why This Week Matters</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li><strong>It shows God working through unlikely instruments.</strong> A Persian emperor issues the decree; a later king funds the temple from his own treasury; a cupbearer rebuilds a wall. As the reading insists from its opening verse, God moves history — including its pagan kings — to keep His promises to His people.</li>
+</ol>
+<ol>
+<li><strong>It normalizes opposition to good work.</strong> Every stage of the rebuilding draws resistance — refusal, ridicule, political maneuvering, threats, even internal injustice. The builders never treat opposition as evidence they are wrong; they meet it with prayer, watchfulness, and steady work. "I am doing a great work, so that I cannot come down" (<a href="https://www.blueletterbible.org/kjv/neh/6/3/s_419003" target="_blank" data-ref="Nehemiah 6:3">Nehemiah 6:3</a>).</li>
+</ol>
+<ol>
+<li><strong>It pairs prayer with action.</strong> Nehemiah prays <em>and</em> sets a watch <a href="https://www.blueletterbible.org/kjv/ezr/4/9/s_407009" target="_blank" data-ref="Ezra 4:9">(4:9)</a>; the people build <em>and</em> stand guard <a href="https://www.blueletterbible.org/kjv/ezr/4/17/s_407017" target="_blank" data-ref="Ezra 4:17">(4:17)</a>. The reading refuses the false choice between trusting God and doing the work — faith here looks like a trowel in one hand and a prayer on the lips.</li>
+</ol>
+<ol>
+<li><strong>It puts the word of God at the center of a restored people.</strong> The temple is rebuilt in Ezra; the <em>people</em> are rebuilt in <a href="https://www.blueletterbible.org/kjv/neh/8/1/s_421001" target="_blank" data-ref="Nehemiah 8">Nehemiah 8</a>, when the law is read and explained until they understand. Ezra's pattern — seek, do, teach <a href="https://www.blueletterbible.org/kjv/ezr/7/10/s_410010" target="_blank" data-ref="Ezra 7:10">(7:10)</a> — and the Water Gate assembly model a community re-formed around scripture rightly understood.</li>
+</ol>
+<ol>
+<li><strong>It is a type of gathering and restoration.</strong> The return from Babylon, the rebuilding of the house of the Lord, and the reconstitution of the covenant people around the word prefigure the latter-day gathering of Israel and the Restoration of the gospel. To read Ezra and Nehemiah is to watch, in miniature, a scattered people brought home to build.</li>
+</ol>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 2: WEEK 31: HISTORICAL & CULTURAL CONTEXT -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">2. Week 31: Historical & Cultural Context</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>1. A New Kind of Empire — Persia After Babylon</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>For two centuries the great powers of the Near East had ruled by <strong>deportation</strong> — Assyria and Babylon uprooted conquered peoples and scattered them (see Week 29). The empire that ends the exile reverses that policy. Cyrus the Great founded the <a href="https://www.worldhistory.org/Achaemenid_Empire/" target="_blank">Achaemenid Persian Empire</a> (c. 550–330 BC), and after his conquest of Babylon he allowed deported peoples to go home and rebuild their sanctuaries. As World History Encyclopedia summarizes, "After Cyrus' conquest of Babylonia in 539 BCE, these Judean exiles were allowed to return home" (<a href="https://www.worldhistory.org/article/2022/cyrus-the-greats-conquests/" target="_blank">Cyrus the Great's Conquests</a>). The God who had used Babylon to scatter now uses Persia to gather — exactly as <a href="https://www.blueletterbible.org/kjv/ezr/1/1/s_404001" target="_blank" data-ref="Ezra 1:1">Ezra 1:1</a> claims.</p>
+<p><em>(Note on dating: reputable sources date the fall of Babylon to <strong>539 BC</strong>; the traditional date of Cyrus's decree and the first return is <strong>538 BC</strong>, the year after. Both are standard and not in conflict.)</em></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>2. The Cyrus Cylinder — and What It Does and Doesn't Say</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The most famous artifact of this policy is the <a href="https://www.worldhistory.org/article/166/the-cyrus-cylinder/" target="_blank">Cyrus Cylinder</a>, a barrel-shaped clay cylinder inscribed in Akkadian cuneiform, discovered in the ruins of Babylon in 1879 and now in the British Museum. In it Cyrus proclaims a policy of restoration: "the gods who dwelt there I returned to their home."</p>
+<p>It is tempting to read the Cylinder as the very decree of <a href="https://www.blueletterbible.org/kjv/ezr/1/1/s_404001" target="_blank" data-ref="Ezra 1">Ezra 1</a> — but honesty requires a limit. <strong>The Cylinder does not name the Jews, Judah, or Jerusalem.</strong> It records Cyrus's <em>general</em> practice of returning captive peoples and their gods to their cities, and scholars connect that policy to the biblical decree; but as Livius.org notes, "it was once believed that it confirmed what the Bible says… [that] Cyrus the Great had allowed the Jews to return" — a return that is not actually stated in the Cylinder's own text (<a href="https://www.livius.org/sources/content/cyrus-cylinder/" target="_blank">Livius: Cyrus Cylinder</a>). So the Cylinder is powerful <em>background</em> for <a href="https://www.blueletterbible.org/kjv/ezr/1/1/s_404001" target="_blank" data-ref="Ezra 1">Ezra 1</a> — evidence that the policy the Bible describes was real and characteristic of Cyrus — but it is not the decree itself.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>3. The Return and the Layers of Rebuilding</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The reading covers roughly a century, in stages (the <em>italicized</em> rows are chronological signposts — books read in other weeks — placed here to show where they fall, not part of this week's reading):</p>
+<table class="info-table">
+<tr><th>Stage</th><th>Approx. date</th><th>Event</th></tr>
+<tr><td><em>Daniel (read later this year)</em></td><td><em>c. 605–536 BC</em></td><td><em>The exile prophet, carried to Babylon c. 605 BC and serving "unto the first year of king Cyrus" (<a href="https://www.blueletterbible.org/kjv/dan/1/1/s_851001" target="_blank" data-ref="Daniel 1:1">Daniel 1:1, 21</a>). At Babylon's fall (c. 539 BC) he serves under "<strong>Darius the Mede</strong>" (<a href="https://www.blueletterbible.org/kjv/dan/5/31/s_855031" target="_blank" data-ref="Daniel 5:31">Daniel 5:31; 6:1–3; 9:1</a>) — a different king from the temple's Darius; see the note below</em></td></tr>
+<tr><td>First return</td><td>c. 538 BC</td><td>Zerubbabel (governor) and Jeshua (high priest) lead exiles home (<a href="https://www.blueletterbible.org/kjv/ezr/1/1/s_404001" target="_blank" data-ref="Ezra 1">Ezra 1–2</a>)</td></tr>
+<tr><td>Altar & foundation</td><td>c. 536 BC</td><td>Worship resumes; temple foundation laid (<a href="https://www.blueletterbible.org/kjv/ezr/3/1/s_406001" target="_blank" data-ref="Ezra 3">Ezra 3</a>)</td></tr>
+<tr><td>Work halted</td><td>—</td><td>Opposition stops the building "unto the second year of the reign of Darius" (<a href="https://www.blueletterbible.org/kjv/ezr/4/24/s_407024" target="_blank" data-ref="Ezra 4:24">Ezra 4:24</a>)</td></tr>
+<tr><td>Temple completed</td><td>c. 515/516 BC</td><td>Finished in the sixth year of Darius; dedicated (<a href="https://www.blueletterbible.org/kjv/ezr/6/15/s_409015" target="_blank" data-ref="Ezra 6:15">Ezra 6:15</a>)</td></tr>
+<tr><td><em>Esther (next week)</em></td><td><em>c. 483–473 BC</em></td><td><em>Not part of this week's reading — shown to mark where next week's book falls: the Jews who stayed in Persia, under Ahasuerus (Xerxes I, r. 486–465 BC), in the long gap between the temple and Ezra (<a href="https://www.blueletterbible.org/kjv/est/1/3/s_427003" target="_blank" data-ref="Esther 1:3">Esther 1:3; 2:16; 3:7</a>)</em></td></tr>
+<tr><td>Ezra's mission</td><td>c. 458 BC</td><td>Ezra brings the law under Artaxerxes (<a href="https://www.blueletterbible.org/kjv/ezr/7/1/s_410001" target="_blank" data-ref="Ezra 7">Ezra 7</a>)</td></tr>
+<tr><td>Nehemiah's wall</td><td>c. 445 BC</td><td>The wall rebuilt in fifty-two days (<a href="https://www.blueletterbible.org/kjv/neh/2/1/s_415001" target="_blank" data-ref="Nehemiah 2">Nehemiah 2; 4–6</a>)</td></tr>
+</table>
+<p><em>(The temple's completion "in the sixth year of Darius" [<a href="https://www.blueletterbible.org/kjv/ezr/6/15/s_409015" target="_blank" data-ref="Ezra 6:15">Ezra 6:15</a>] is traditionally <strong>516 BC</strong>; World History Encyclopedia rounds the Second Temple's completion to "<strong>approximately 515 BCE</strong>" — a one-year difference, not a real dispute.)</em></p>
+<p><em>(Two different kings named Darius appear in this table. <strong>Darius the Mede</strong> (<a href="https://www.blueletterbible.org/kjv/dan/5/31/s_855031" target="_blank" data-ref="Daniel 5:31">Daniel 5:31; 6</a>) reigns at Babylon's fall, c. 539 BC, and his historical identity is debated — scholars have variously linked him to Cyrus himself or to a subordinate governor. <strong>Darius I of Persia</strong> (r. 522–486 BC), in the "Work halted" and "Temple completed" rows, is the later king who confirms Cyrus's decree and completes the temple. They are not the same man.)</em></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>4. The Opposition — and the Aramaic of Ezra</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The rebuilding draws immediate resistance. In <a href="https://www.blueletterbible.org/kjv/ezr/4/1/s_407001" target="_blank" data-ref="Ezra 4">Ezra 4</a> the "adversaries of Judah and Benjamin" offer to help build, claiming, "we seek your God, as ye do; and we do sacrifice unto him since the days of Esar-haddon king of Assur, which brought us up hither" <a href="https://www.blueletterbible.org/kjv/ezr/4/2/s_407002" target="_blank" data-ref="Ezra 4:2">(4:2)</a>. These were the peoples Assyria had resettled in the north after 722/721 BC — the community whose mixed worship Week 29 traced (<a href="https://www.blueletterbible.org/kjv/2ki/17/24-41/s_330024" target="_blank" data-ref="2 Kings 17:24-41">2 Kings 17:24–41</a>). The historian Josephus calls them the Cutheans, "called in the Hebrew tongue Cutheans, but in the Greek tongue Samaritans" (<em>Antiquities</em> 9.14.3). When Zerubbabel refuses their help — "Ye have nothing to do with us to build an house unto our God" (<a href="https://www.blueletterbible.org/kjv/ezr/4/3/s_407003" target="_blank" data-ref="Ezra 4:3">Ezra 4:3</a>) — the breach opens that would harden into the <strong>Samaritan schism</strong>. Josephus traces its climax to a marriage a century later: when Manasseh, brother of the high priest, wed the daughter of Sanballat the Samaritan governor, Jerusalem's elders forced the choice — "divorce his wife, or not to approach the altar" — and Sanballat answered by building a rival temple on Mount Gerizim (<em>Antiquities</em> 11.7–8). By Jesus' day the division was proverbial: "the Jews have no dealings with the Samaritans" (<a href="https://www.blueletterbible.org/kjv/jhn/4/9/s_1001009" target="_blank" data-ref="John 4:9">John 4:9</a>). <em>(Two honest notes: <a href="https://www.blueletterbible.org/kjv/ezr/4/2/s_407002" target="_blank" data-ref="Ezra 4:2">Ezra 4:2</a> names the resettling king "Esar-haddon," while Josephus, retelling the episode, names Shalmaneser; and historians debate his dating of this Sanballat. The shape of the story — a rebuffed people and a rival sanctuary — is the record's own.)</em></p>
+<p>One note worth holding with compassion: the boundary did not only fall on outsiders — it cut inward, too. In the same register of returnees, ordinary Israelite families (not only priests) "could not shew their father's house, and their seed, whether they were of Israel" (<a href="https://www.blueletterbible.org/kjv/ezr/2/59-62/s_405059" target="_blank" data-ref="Ezra 2:59-62">Ezra 2:59–62</a>); the exile had scattered some so thoroughly that they could no longer prove their own descent. And the northern people refused here had first come <em>offering to help</em>, professing the same God (<a href="https://www.blueletterbible.org/kjv/ezr/4/2/s_407002" target="_blank" data-ref="Ezra 4:2">Ezra 4:2</a>) — a mixed but partly Israelite remnant, the human aftermath of the Assyrian catastrophe that shattered the ten tribes. From the returning community's side the refusal was a matter of survival and purity; but many whom it wounded were the scattered of Israel themselves. (The Weekly Insights, "The Wall That Was Built, and the Wall Christ Broke," follows this forward to Christ's gathering of the scattered and the shut-out.)</p>
+<p>That opposition is why a large portion of Ezra — <strong>4:8 through 6:18, and again 7:12–26</strong> — is written not in Hebrew but in <strong>Aramaic</strong>, the administrative and diplomatic language of the Persian Empire. The letters to and from the Persian court are preserved in the imperial language in which they would actually have been written. (This matters for <strong>Word Studies</strong>: for terms drawn from those chapters, the "original language" is Aramaic, not Hebrew.)</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>5. Darius and the Completion of the Temple</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The work resumes when the prophets Haggai and Zechariah stir the people (<a href="https://www.blueletterbible.org/kjv/ezr/5/1/s_408001" target="_blank" data-ref="Ezra 5:1">Ezra 5:1</a>), and it is secured by an unlikely ally: the Persian king <a href="https://www.worldhistory.org/Darius_I/" target="_blank">Darius I</a> (r. 522–486 BC). When local officials challenge the project, Darius orders a search of the royal archives, the original scroll of Cyrus's decree is found at Ecbatana, and Darius not only upholds it but commands that the work be funded from the royal revenue (<a href="https://www.blueletterbible.org/kjv/ezr/6/1-12/s_409001" target="_blank" data-ref="Ezra 6:1-12">Ezra 6:1–12</a>). The temple is finished "in the sixth year of the reign of Darius" <a href="https://www.blueletterbible.org/kjv/ezr/6/15/s_409015" target="_blank" data-ref="Ezra 6:15">(6:15)</a>. <em>(World History Encyclopedia confirms Darius's reign dates, consistent with the temple's completion; the detail of his confirming Cyrus's decree comes from the biblical text itself.)</em></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>6. Ezra, Nehemiah, and Artaxerxes</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Two generations after the first return, both Ezra and Nehemiah are sent by the same king, <a href="https://www.worldhistory.org/Artaxerxes_I/" target="_blank">Artaxerxes I</a> (r. 465–424 BC) — the reference point that anchors the second half of the reading. World History Encyclopedia notes that Artaxerxes I "is the central character of the biblical Book of Ezra and also appears in the Book of Nehemiah": Ezra "was sent by Artaxerxes I… to Jerusalem in order to standardize the Law of Moses" (<a href="https://www.blueletterbible.org/kjv/ezr/7/1/s_410001" target="_blank" data-ref="Ezra 7">Ezra 7</a>, c. 458 BC), and Nehemiah, "his cupbearer," was later appointed "Governor of Judea" (<a href="https://www.blueletterbible.org/kjv/neh/2/1/s_415001" target="_blank" data-ref="Nehemiah 2">Nehemiah 2</a>, c. 445 BC). A <strong>cupbearer</strong> was no mere servant — he tasted the king's wine against poison and enjoyed the king's ear, a position of trust that explains how a Jewish exile could gain a royal commission to rebuild a city wall.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>7. Temple, Tribute, and Tax — the Empire's Money</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The return ran on Persian money, and the reading is unusually frank about it. Darius had already ordered the temple funded "of the king's goods, even of the tribute beyond the river" (<a href="https://www.blueletterbible.org/kjv/ezr/6/8/s_409008" target="_blank" data-ref="Ezra 6:8">Ezra 6:8</a>; see §5). Artaxerxes went a step further: in the same letter that sent Ezra up, he exempted the temple's staff from imperial taxation — "it shall not be lawful to impose toll, tribute, or custom" upon "the priests and Levites, singers, porters, Nethinims, or ministers of this house of God" (<a href="https://www.blueletterbible.org/kjv/ezr/7/24/s_410024" target="_blank" data-ref="Ezra 7:24">Ezra 7:24</a>). The people who served the house of God were, by royal decree, tax-free.</p>
+<p>This was not a unique favor to the Jews but standard Achaemenid policy: Persian kings routinely shielded temples and their sacred personnel from taxes and forced labor. The clearest documented parallel is the <strong>Letter to Gadatas</strong>, in which Darius I rebukes a provincial official for taxing the sacred gardeners of Apollo and forcing them onto profane ground, confirming their freedom from tribute and labor. <em>(Honest caution: the Gadatas inscription survives only as a later Greek copy of a claimed Achaemenid original, and a minority of scholars question its authenticity; it is best cited as a Persian-period parallel, not a contemporary document.)</em></p>
+<p>Because the empire ran on revenue, money was also a weapon. When the northern peoples wanted the rebuilding stopped, they argued not theology but the treasury, warning the king that a rebuilt Jerusalem "will not pay toll, tribute, and custom, and so thou shalt endamage the revenue of the kings" (<a href="https://www.blueletterbible.org/kjv/ezr/4/13/s_407013" target="_blank" data-ref="Ezra 4:13">Ezra 4:13</a>). The argument worked: the king ordered the work halted (<a href="https://www.blueletterbible.org/kjv/ezr/4/21/s_407021" target="_blank" data-ref="Ezra 4:21">Ezra 4:21</a>). The single most effective attack on the temple in the whole book is a claim about lost tax revenue — the fiscal weapon of the opposition met in §4.</p>
+<p><strong>A New Testament echo.</strong> The same kind of weapon — a tax question sprung as a legal trap — reappears against Jesus. Pharisees and pro-Roman Herodians (natural opponents, briefly allied) come "that they might entangle him in his talk," asking, "Is it lawful to give tribute unto Caesar, or not?" (<a href="https://www.blueletterbible.org/kjv/mat/22/15-17/s_951015" target="_blank" data-ref="Matthew 22:15-17">Matthew 22:15–17</a>). His answer slips the snare without denying either claim: "Render therefore unto Caesar the things which are Caesar's; and unto God the things that are God's" (<a href="https://www.blueletterbible.org/kjv/mat/22/21/s_951021" target="_blank" data-ref="Matthew 22:21">Matthew 22:21</a>).</p>
+<p><em>(An interpretive reflection, flagged as such: because the tax-exempt status of <a href="https://www.blueletterbible.org/kjv/ezr/7/24/s_410024" target="_blank" data-ref="Ezra 7:24">Ezra 7:24</a> belonged to a class one had to prove membership in by genealogy, it is tempting to read the strict bloodline-boundary as partly a guard on that fiscal privilege — anyone who could claim Israelite descent could, in theory, claim the exemption. No source states this causal link, and the scriptures give purity, not revenue, as the reason for the boundary; treat it as a thought, not established history. The Weekly Insights develops this money-and-boundary thread devotionally in "The Weapon Was Money.")</em></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>8. Building a Wall Under Threat</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Nehemiah's wall is a military and civic project as much as a spiritual one. A walled city was a defensible, self-governing city; an unwalled Jerusalem was exposed and "a reproach" (<a href="https://www.blueletterbible.org/kjv/neh/2/17/s_415017" target="_blank" data-ref="Nehemiah 2:17">Nehemiah 2:17</a>). The opposition of Sanballat (a regional governor) and Tobiah escalates from ridicule to threats of armed attack, forcing the builders to work with a tool in one hand and a weapon in the other <a href="https://www.blueletterbible.org/kjv/ezr/4/17/s_407017" target="_blank" data-ref="Ezra 4:17">(4:17)</a>. The wall's completion "in fifty and two days" <a href="https://www.blueletterbible.org/kjv/ezr/6/15/s_409015" target="_blank" data-ref="Ezra 6:15">(6:15)</a> — remarkably fast for such a project — is read by friend and foe alike as evidence "that this work was wrought of our God" <a href="https://www.blueletterbible.org/kjv/ezr/6/16/s_409016" target="_blank" data-ref="Ezra 6:16">(6:16)</a>.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>9. The Word at the Center — a People Re-Formed</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The reading's climax (<a href="https://www.blueletterbible.org/kjv/neh/8/1/s_421001" target="_blank" data-ref="Nehemiah 8">Nehemiah 8</a>) is not architectural but scriptural: the assembled people hear the law read and explained "distinctly… and gave the sense, and caused them to understand" <a href="https://www.blueletterbible.org/kjv/ezr/8/8/s_411008" target="_blank" data-ref="Ezra 8:8">(8:8)</a>. The rabbis heard in that word "distinctly" the practice of <strong>Targum</strong> — turning the Hebrew into the Aramaic the returned community now spoke, since two generations in Babylon had worn away fluent Hebrew (the very reason stretches of this book are themselves written in Aramaic; see <a href="05_Jewish_Perspective.md" target="_blank">Jewish Perspective</a> §4). This public reading and interpretation of the law marks a turning point — the restored community organizes itself not around a king (there is none) but around the <strong>word of God</strong> taught and understood. It is the seed of the synagogue and of the ongoing tradition of public Torah reading. For the rabbinic memory of Ezra as the one who fixed public Torah reading, restored the script, and stood at the head of the age of the scribes, see <strong>Jewish Perspective</strong>.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Learn More — the World Behind the Return</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>For readers who want to go deeper on the empire, the rulers, and the people behind this week's reading, these external reference articles open a window onto the Persian world in which the exile ended and the temple and city were rebuilt.</p>
+<p><strong>The rulers and the empire</strong></p>
+<ul>
+<li><a href="https://www.worldhistory.org/Cyrus_the_Great/" target="_blank">Cyrus the Great</a> — the king who issued the decree of return (World History Encyclopedia)</li>
+<li><a href="https://www.worldhistory.org/Darius_I/" target="_blank">Darius I</a> — who confirmed and funded the temple (World History Encyclopedia)</li>
+<li><a href="https://www.worldhistory.org/Artaxerxes_I/" target="_blank">Artaxerxes I</a> — who sent both Ezra and Nehemiah (World History Encyclopedia)</li>
+<li><a href="https://www.worldhistory.org/Achaemenid_Empire/" target="_blank">The Achaemenid (Persian) Empire</a> — the empire that reversed the policy of deportation (World History Encyclopedia)</li>
+<li><a href="https://www.worldhistory.org/Susa/" target="_blank">Susa (Shushan)</a> — the Persian capital where Nehemiah served as cupbearer (World History Encyclopedia)</li>
+</ul>
+<p><strong>The exile, the decree, and the temple</strong></p>
+<ul>
+<li><a href="https://www.worldhistory.org/Babylonian_Captivity/" target="_blank">The Babylonian Captivity</a> — the exile that this week's return brings to an end (World History Encyclopedia)</li>
+<li><a href="https://www.worldhistory.org/article/166/the-cyrus-cylinder/" target="_blank">The Cyrus Cylinder</a> — Cyrus's own record of restoring captive peoples (World History Encyclopedia) · <a href="https://www.livius.org/sources/content/cyrus-cylinder/" target="_blank">Livius: analysis and cautions</a></li>
+<li><a href="https://www.jewishvirtuallibrary.org/the-cyrus-declaration" target="_blank">The Cyrus Declaration</a> — a Jewish encyclopedia's treatment of the decree (Jewish Virtual Library)</li>
+<li><a href="https://www.worldhistory.org/Second_Temple/" target="_blank">The Second Temple</a> — the house rebuilt in <a href="https://www.blueletterbible.org/kjv/ezr/3/1/s_406001" target="_blank" data-ref="Ezra 3">Ezra 3–6</a> (World History Encyclopedia)</li>
+</ul>
+<p><strong>The people of the return</strong></p>
+<ul>
+<li><a href="https://www.worldhistory.org/Ezra/" target="_blank">Ezra</a> — the scribe who brought the law (World History Encyclopedia)</li>
+<li><a href="https://www.jewishvirtuallibrary.org/nehemiah" target="_blank">Nehemiah</a> — the cupbearer who rebuilt the wall (Jewish Virtual Library)</li>
+<li><a href="https://www.jewishvirtuallibrary.org/zerubbabel" target="_blank">Zerubbabel</a> — the governor of the first return (Jewish Virtual Library)</li>
+</ul>
+<p><strong>Primary source behind Section 4 (the Samaritan schism)</strong></p>
+<ul>
+<li><a href="https://www.sefaria.org/Josephus%2C_Antiquities_of_the_Jews" target="_blank">Josephus, <em>Antiquities</em> 11</a> — the Samaritan schism (Sanballat, the marriage of Manasseh, the rival temple on Mount Gerizim) and the genealogy of the returning priests (Josephus, 1st c. AD; via Sefaria)</li>
+</ul>
+<blockquote>
+<p><strong>About these sources.</strong> These are respected general and Jewish reference works — the <strong>World History Encyclopedia</strong>, the <strong>Jewish Virtual Library</strong>, and <strong>Livius.org</strong> — and <strong>not Latter-day Saint publications.</strong> They are valuable for history, geography, archaeology, and the Persian-period record, but they do not share this guide's covenant framing or its doctrinal conclusions. Read them for background, and weigh their interpretation against the scriptures and the words of latter-day prophets.</p>
+</blockquote>
+<hr>
+<p><em>Next file: <a href="03_Key_Passages_Study.md" target="_blank">03_Key_Passages_Study.md</a></em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 3: WEEK 31: KEY PASSAGES STUDY -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">3. Week 31: Key Passages Study</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Passage 1: Ezra 1:1–3 — "The Lord Stirred Up the Spirit of Cyrus"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p>"Now in the first year of Cyrus king of Persia, that the word of the Lord by the mouth of Jeremiah might be fulfilled, the Lord stirred up the spirit of Cyrus king of Persia, that he made a proclamation throughout all his kingdom." <a href="https://www.blueletterbible.org/kjv/ezr/1/1/s_404001" target="_blank" data-ref="Ezra 1:1">(1:1)</a></p>
+</blockquote>
+<blockquote>
+<p>"Thus saith Cyrus king of Persia, The Lord God of heaven hath given me all the kingdoms of the earth; and he hath charged me to build him an house at Jerusalem, which is in Judah." <a href="https://www.blueletterbible.org/kjv/ezr/1/2/s_404002" target="_blank" data-ref="Ezra 1:2">(1:2)</a></p>
+</blockquote>
+<h3>The Insight</h3>
+<p>The book of Ezra opens by naming the real actor behind the decree — not Cyrus but the Lord, who "stirred up the spirit" of a Persian emperor to fulfill a promise made through Jeremiah decades earlier (<a href="https://www.blueletterbible.org/kjv/jer/29/10/s_774010" target="_blank" data-ref="Jeremiah 29:10">Jeremiah 29:10</a>, the seventy years). The exile had felt like the end of the covenant; here God shows that even Babylon and Persia are instruments in His hand. The most powerful king on earth issues a decree he credits to "the Lord God of heaven," and the restoration begins — on God's timetable, "that the word of the Lord… might be fulfilled."</p>
+<h3>Latter-day Saint Connections</h3>
+<ul>
+<li><strong><a href="https://www.blueletterbible.org/kjv/pro/21/1/s_649001" target="_blank" data-ref="Proverbs 21:1">Proverbs 21:1</a></strong> — "The king's heart is in the hand of the Lord, as the rivers of water: he turneth it whithersoever he will." <a href="https://www.blueletterbible.org/kjv/ezr/1/1/s_404001" target="_blank" data-ref="Ezra 1:1">Ezra 1:1</a> is this proverb enacted on the largest possible stage.</li>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/58?lang=eng&id=p22#p22" target="_blank" data-ref="D&C 58:22">D&C 58:22</a></strong> — "Wherefore, be subject to the powers that be, until he reigns whose right it is to reign, and subdues all enemies under his feet." God works through, and ultimately over, earthly powers.</li>
+</ul>
+<p><strong>General Conference — Elder Ezra Taft Benson, "<a href="https://www.churchofjesuschrist.org/study/general-conference/1972/04/civic-standards-for-the-faithful-saints" target="_blank">Civic Standards for the Faithful Saints</a>" (April 1972):</strong> "The Bible states how 'the Lord stirred up the spirit of Cyrus, King of Persia.' … Cyrus … gave them permission to return to Jerusalem, and directed that Jehovah's temple should be rebuilt." Benson takes up this very passage and draws the principle behind it: "God, the Father of us all, uses the men of the earth, especially good men, to accomplish his purposes."</p>
+<h3>Study Questions</h3>
+<ol>
+<li>The narrator credits the decree to God, not Cyrus. Where have you seen God work through people and events that seemed entirely "secular"?</li>
+<li>God kept a seventy-year promise exactly. How does His faithfulness over long spans of time change the way you wait on Him?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 2: Ezra 3:11–13 — The Foundation Laid: Joy and Weeping Together</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p>"And they sang together by course in praising and giving thanks unto the Lord; because he is good, for his mercy endureth for ever toward Israel. And all the people shouted with a great shout, when they praised the Lord, because the foundation of the house of the Lord was laid." <a href="https://www.blueletterbible.org/kjv/ezr/3/11/s_406011" target="_blank" data-ref="Ezra 3:11">(3:11)</a></p>
+</blockquote>
+<blockquote>
+<p>"But many of the priests and Levites and chief of the fathers, who were ancient men, that had seen the first house, when the foundation of this house was laid before their eyes, wept with a loud voice; and many shouted aloud for joy: So that the people could not discern the noise of the shout of joy from the noise of the weeping." <a href="https://www.blueletterbible.org/kjv/ezr/3/12-13/s_406012" target="_blank" data-ref="Ezra 3:12-13">(3:12–13)</a></p>
+</blockquote>
+<h3>The Insight</h3>
+<p>When the temple foundation is laid, the people sing the oldest refrain in Israel's worship — "he is good, for his mercy endureth for ever" (compare <a href="https://www.blueletterbible.org/kjv/2ch/5/13/s_372013" target="_blank" data-ref="2 Chronicles 5:13">2 Chronicles 5:13; 20:21</a>; <a href="https://www.blueletterbible.org/kjv/psa/136/1/s_614001" target="_blank" data-ref="Psalm 136">Psalm 136</a>). But the sound of the moment is <em>mixed</em>: the young shout for joy at what is beginning, while the old men who remembered Solomon's glorious temple weep at how much smaller this one is. Joy and grief become indistinguishable. Restoration rarely arrives as simple triumph; it often means rejoicing in a new beginning while grieving what was lost — and God receives both the shout and the tears as worship.</p>
+<h3>Latter-day Saint Connections</h3>
+<ul>
+<li><strong><a href="https://www.blueletterbible.org/kjv/hag/2/3/s_911003" target="_blank" data-ref="Haggai 2:3">Haggai 2:3, 9</a></strong> — To this same generation, Haggai acknowledges the second temple seemed "as nothing" by comparison, yet promises, "The glory of this latter house shall be greater than of the former." God is not finished when the beginning looks small.</li>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/128?lang=eng&id=p24#p24" target="_blank" data-ref="D&C 128:24">D&C 128:24</a></strong> — the Lord's people offering "an offering in righteousness" in His house connects temple building across dispensations.</li>
+</ul>
+<p><strong>General Conference — Elder David E. Sorensen, "<a href="https://www.churchofjesuschrist.org/study/general-conference/1998/10/small-temples-large-blessings" target="_blank">Small Temples—Large Blessings</a>" (October 1998):</strong> "Watching these new temples being built, I believe that we too will have occasion to praise the Lord and weep for joy." Sorensen draws directly on <a href="https://www.blueletterbible.org/kjv/ezr/3/1/s_406001" target="_blank" data-ref="Ezra 3">Ezra 3</a> — the mingling of praise and tears at the laying of a foundation — and applies it to the building of temples in our own day.</p>
+<h3>Study Questions</h3>
+<ol>
+<li>The old men wept while the young rejoiced. When has a good new beginning also carried real loss for you? Can both be worship?</li>
+<li>Haggai told this generation the "latter house" would be greater. Where are you tempted to despise a small beginning?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 3: Ezra 7:10 — "Ezra Prepared His Heart"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p>"For Ezra had prepared his heart to seek the law of the Lord, and to do it, and to teach in Israel statutes and judgments." <a href="https://www.blueletterbible.org/kjv/ezr/7/10/s_410010" target="_blank" data-ref="Ezra 7:10">(7:10)</a></p>
+</blockquote>
+<blockquote>
+<p>"This Ezra went up from Babylon; and he was a ready scribe in the law of Moses… and the king granted him all his request, according to the hand of the Lord his God upon him." <a href="https://www.blueletterbible.org/kjv/ezr/7/6/s_410006" target="_blank" data-ref="Ezra 7:6">(7:6)</a></p>
+</blockquote>
+<h3>The Insight</h3>
+<p>This single verse defines Ezra and names a pattern for every disciple. He "prepared his heart" — the seeking was deliberate, not accidental — and the sequence matters: <strong>seek</strong>, then <strong>do</strong>, then <strong>teach</strong>. He studied the law, he lived it, and only then did he teach it. Ezra does not teach what he has not first obeyed; he does not obey what he has not first sought. The restoration of the <em>people</em> (as opposed to the building) begins with one man ordering his own heart around the word of God.</p>
+<h3>Latter-day Saint Connections</h3>
+<ul>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/11?lang=eng&id=p21#p21" target="_blank" data-ref="D&C 11:21">D&C 11:21</a></strong> — "Seek not to declare my word, but first seek to obtain my word, and then shall your tongue be loosed." This is <a href="https://www.blueletterbible.org/kjv/ezr/7/10/s_410010" target="_blank" data-ref="Ezra 7:10">Ezra 7:10</a> as a commandment: obtain the word before declaring it.</li>
+<li><strong><a href="https://www.blueletterbible.org/kjv/jhn/7/17/s_1004017" target="_blank" data-ref="John 7:17">John 7:17</a></strong> — "If any man will do his will, he shall know of the doctrine." Doing precedes fully knowing — Ezra's middle step.</li>
+</ul>
+<p><strong>General Conference — Elder Spencer J. Condie, "<a href="https://www.churchofjesuschrist.org/study/general-conference/1990/04/some-scriptural-lessons-on-leadership" target="_blank">Some Scriptural Lessons on Leadership</a>" (April 1990):</strong> "One of the great teachers and prophet-leaders in Israel was Ezra, who 'had prepared his heart to seek the law of the Lord, and to do it, and to teach in Israel statutes and judgments' (<a href="https://www.blueletterbible.org/kjv/ezr/7/10/s_410010" target="_blank" data-ref="Ezra 7:10">Ezra 7:10</a>)." Condie holds Ezra up as the pattern of the leader who first seeks and lives the word before teaching it.</p>
+<h3>Study Questions</h3>
+<ol>
+<li>Ezra's order was seek → do → teach. Which of the three do you tend to skip? What happens when the order is reversed?</li>
+<li>What does it mean to <em>prepare</em> your heart to seek — as a deliberate act rather than a mood?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 4: Nehemiah 2:17–18 — "Let Us Rise Up and Build"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p>"Then said I unto them, Ye see the distress that we are in, how Jerusalem lieth waste, and the gates thereof are burned with fire: come, and let us build up the wall of Jerusalem, that we be no more a reproach." <a href="https://www.blueletterbible.org/kjv/ezr/2/17/s_405017" target="_blank" data-ref="Ezra 2:17">(2:17)</a></p>
+</blockquote>
+<blockquote>
+<p>"Then I told them of the hand of my God which was good upon me… And they said, Let us rise up and build. So they strengthened their hands for this good work." <a href="https://www.blueletterbible.org/kjv/ezr/2/18/s_405018" target="_blank" data-ref="Ezra 2:18">(2:18)</a></p>
+</blockquote>
+<h3>The Insight</h3>
+<p>Nehemiah does not motivate the people with a program; he first shows them the ruin honestly ("ye see the distress that we are in") and then testifies of "the hand of my God which was good upon me." Vision plus testimony produces resolve: "Let us rise up and build. So they strengthened their hands for this good work." The verb is corporate — <em>us</em>, <em>they</em> — the work of restoration is shared. And note what precedes the call: in the same chapter, when the king asks what he wants, Nehemiah first prays ("so I prayed to the God of heaven," 2:4) and only then answers. Prayer, honest assessment, testimony, and then collective work.</p>
+<h3>Latter-day Saint Connections</h3>
+<ul>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=p39#p39" target="_blank" data-ref="Moses 1:39">Moses 1:39</a> / <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/4?lang=eng&id=p2#p2" target="_blank" data-ref="D&C 4:2">D&C 4:2</a></strong> — the "good work" of God is the salvation of souls; disciples are called to serve "with all your heart, might, mind and strength."</li>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/17?lang=eng&id=p50#p50" target="_blank" data-ref="1 Nephi 17:50">1 Nephi 17:50</a></strong> — Nephi's confidence to build: "If God had commanded me to do all things I could do them." The same rise-up-and-build faith.</li>
+</ul>
+<p><strong>General Conference — President Boyd K. Packer, "<a href="https://www.churchofjesuschrist.org/study/general-conference/1980/10/the-circle-of-sisters" target="_blank">The Circle of Sisters</a>" (October 1980):</strong> "Then came Nehemiah the prophet, known now as 'the wall builder.' He rallied the Israelites to their own defense." Packer recalls Nehemiah rallying a discouraged people to rise up together and rebuild — the collective, consecrated response to a good work.</p>
+<h3>Study Questions</h3>
+<ol>
+<li>Nehemiah showed the ruin <em>and</em> testified of God's hand before calling for work. Why are both needed to move people from discouragement to action?</li>
+<li>"They strengthened their hands." What does it look like to strengthen your hands for a good work you've been avoiding?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 5: Nehemiah 6:1–3 — "I Am Doing a Great Work"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p>"That Sanballat and Geshem sent unto me, saying, Come, let us meet together… But they thought to do me mischief." <a href="https://www.blueletterbible.org/kjv/ezr/6/2/s_409002" target="_blank" data-ref="Ezra 6:2">(6:2)</a></p>
+</blockquote>
+<blockquote>
+<p>"And I sent messengers unto them, saying, I am doing a great work, so that I cannot come down: why should the work cease, whilst I leave it, and come down to you?" <a href="https://www.blueletterbible.org/kjv/ezr/6/3/s_409003" target="_blank" data-ref="Ezra 6:3">(6:3)</a></p>
+</blockquote>
+<h3>The Insight</h3>
+<p>With the wall nearly finished, Nehemiah's enemies change tactics — no longer threats of force but an invitation to "meet," a distraction dressed as diplomacy. Four times they send; four times he answers the same way <a href="https://www.blueletterbible.org/kjv/ezr/6/4/s_409004" target="_blank" data-ref="Ezra 6:4">(6:4)</a>: "I am doing a great work, so that I cannot come down." He recognizes that some invitations are traps not because they are evil on their face but because they would pull him <em>down</em> from the essential work to the peripheral. Discernment here is not about telling good from evil but about telling the great work from the lesser thing that would interrupt it.</p>
+<h3>Latter-day Saint Connections</h3>
+<ul>
+<li><strong><a href="https://www.blueletterbible.org/kjv/luk/9/62/s_982062" target="_blank" data-ref="Luke 9:62">Luke 9:62</a></strong> — "No man, having put his hand to the plough, and looking back, is fit for the kingdom of God." The refusal to come down.</li>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/64?lang=eng&id=p33#p33" target="_blank" data-ref="D&C 64:33">D&C 64:33</a></strong> — "be not weary in well-doing… out of small things proceedeth that which is great." The wall rose stone by stone amid constant pressure to stop.</li>
+</ul>
+<p><strong>General Conference — President Dieter F. Uchtdorf, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2009/04/we-are-doing-a-great-work-and-cannot-come-down" target="_blank">We Are Doing a Great Work and Cannot Come Down</a>" (April 2009):</strong> "In response to every temptation to lose focus or lower our standards—the standards of God, we responded, 'I am doing a great work and cannot come down.'" Uchtdorf's entire message is built on <a href="https://www.blueletterbible.org/kjv/neh/6/3/s_419003" target="_blank" data-ref="Nehemiah 6:3">Nehemiah 6:3</a> as the answer to every distraction that would pull us from the work that matters most. <em>(See also Elder Russell M. Nelson, "<a href="https://www.churchofjesuschrist.org/study/general-conference/1994/04/teach-us-tolerance-and-love" target="_blank">Teach Us Tolerance and Love</a>," April 1994, who cites the same verse.)</em></p>
+<h3>Study Questions</h3>
+<ol>
+<li>Nehemiah's temptation was not obvious evil — it was a <em>distraction</em> from the great work. What "come down and meet" invitations pull you off your most important work?</li>
+<li>How do you tell the difference between a distraction to refuse and a legitimate need to answer?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 6: Nehemiah 8:8–10 — The Word Understood; the Joy of the Lord</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p>"So they read in the book in the law of God distinctly, and gave the sense, and caused them to understand the reading." <a href="https://www.blueletterbible.org/kjv/ezr/8/8/s_411008" target="_blank" data-ref="Ezra 8:8">(8:8)</a></p>
+</blockquote>
+<blockquote>
+<p>"For all the people wept, when they heard the words of the law… Then he said unto them, Go your way, eat the fat, and drink the sweet… for this day is holy unto our Lord: neither be ye sorry; for the joy of the Lord is your strength." <a href="https://www.blueletterbible.org/kjv/ezr/8/9-10/s_411009" target="_blank" data-ref="Ezra 8:9-10">(8:9–10)</a></p>
+</blockquote>
+<h3>The Insight</h3>
+<p>The climax of the whole week is not the finished temple or the finished wall but an open book. The people gather "as one man," Ezra reads the law aloud, and the Levites move through the crowd to give "the sense" — the word is not merely read but <em>explained until understood</em> <a href="https://www.blueletterbible.org/kjv/ezr/8/8/s_411008" target="_blank" data-ref="Ezra 8:8">(8:8)</a>. Understanding pierces them, and they weep at how far they had fallen. But Ezra and Nehemiah redirect the grief: "the joy of the Lord is your strength" <a href="https://www.blueletterbible.org/kjv/ezr/8/10/s_411010" target="_blank" data-ref="Ezra 8:10">(8:10)</a>. Conviction is not the destination; joy is. The restored community is finally re-formed not around a wall but around the word of God rightly understood — and the proper response to understanding it is not despair but joy.</p>
+<h3>A Deeper Layer — the Rabbis on "the Sense"</h3>
+<p>The rabbis read <a href="https://www.blueletterbible.org/kjv/neh/8/8/s_421008" target="_blank" data-ref="Nehemiah 8:8">Nehemiah 8:8</a> as a compact description of the whole art of public Torah reading, parsing its phrases into the Scripture text, the Aramaic <strong>Targum</strong> ("distinctly"), the division into verses ("gave the sense"), and the <strong>cantillation</strong> that makes the meaning land ("caused them to understand") — Babylonian Talmud, <em>Megillah 3a</em> and <em>Nedarim 37b</em>. That the reading needed a Targum at all is a quiet marker of the exile's cost: many who came home now spoke Aramaic, not Hebrew, and could not follow the Hebrew text without it. See <a href="05_Jewish_Perspective.md" target="_blank">Jewish Perspective §4</a> for the full treatment — including the line the tradition draws from Ezra's chanted reading to the synagogue reading of Jesus' own day.</p>
+<h3>Latter-day Saint Connections</h3>
+<ul>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/4?lang=eng&id=p15-p16#p15" target="_blank" data-ref="2 Nephi 4:15-16">2 Nephi 4:15–16</a></strong> — "my soul delighteth in the scriptures, and my heart pondereth them." The delight <a href="https://www.blueletterbible.org/kjv/neh/8/1/s_421001" target="_blank" data-ref="Nehemiah 8">Nehemiah 8</a> commands.</li>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/19?lang=eng&id=p23#p23" target="_blank" data-ref="D&C 19:23">D&C 19:23</a></strong> — "Learn of me, and listen to my words… and you shall have peace in me." Understanding the word yields joy and strength, not only duty.</li>
+</ul>
+<p><strong>General Conference — Sister Cheryl C. Lant, "<a href="https://www.churchofjesuschrist.org/study/general-conference/2005/10/my-soul-delighteth-in-the-scriptures" target="_blank">My Soul Delighteth in the Scriptures</a>" (October 2005):</strong> "Joy fills my heart as I receive encouragement, direction, comfort, strength, and answers to my needs." Lant ties the understanding of scripture directly to joy and strength — the very pairing of <a href="https://www.blueletterbible.org/kjv/neh/8/10/s_421010" target="_blank" data-ref="Nehemiah 8:10">Nehemiah 8:10</a>.</p>
+<h3>Study Questions</h3>
+<ol>
+<li>The Levites "gave the sense, and caused them to understand." What's the difference between hearing scripture read and actually understanding it? Who has "given you the sense"?</li>
+<li>The people were told their grief should turn to joy. When has understanding a hard truth from scripture led you not to despair but to strength?</li>
+</ol>
+<hr>
+<p><em>Next file: <a href="04_Word_Studies.md" target="_blank">04_Word_Studies.md</a></em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 4: WEEK 31: WORD STUDIES -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">4. Week 31: Word Studies</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Introduction</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The vocabulary of this week is the vocabulary of restoration, and five words carry it. Two of them are bolted together in the theme verse — <a href="https://www.blueletterbible.org/lexicon/h6965/kjv/wlc/0-1/" target="_blank" data-lexicon="to rise, arise, stand, rise up, stand up (Qal) to arise to arise (hostile sense) to arise, become powerful to arise, ..." data-strongs="H6965" data-translit="qûm" data-original="קוֹלָיָה" data-lang="hebrew" data-verse=""><em>qum</em></a>, "to rise up," and <a href="https://www.blueletterbible.org/lexicon/h1129/kjv/wlc/0-1/" target="_blank" data-lexicon="to build" data-strongs="H1129" data-translit="banah" data-original="בָּנָה" data-lang="hebrew" data-verse="Genesis 8:20"><em>banah</em></a>, "to build" (<a href="https://www.blueletterbible.org/kjv/neh/2/18/s_415018" target="_blank" data-ref="Nehemiah 2:18">Nehemiah 2:18</a>) — the call from rubble to work. A third names what makes the building possible: <a href="https://www.blueletterbible.org/lexicon/h3027/kjv/wlc/0-1/" target="_blank" data-lexicon="hand" data-strongs="H3027" data-translit="yad" data-original="יָד" data-lang="hebrew" data-verse="Genesis 3:22"><em>yad</em></a>, the "hand" of God that is "good upon" His servant. A fourth names what the rebuilt people finally gather around: <a href="https://www.blueletterbible.org/lexicon/h8451/kjv/wlc/0-1/" target="_blank" data-lexicon="instruction, law" data-strongs="H8451" data-translit="torah" data-original="תּוֹרָה" data-lang="hebrew" data-verse=""><em>torah</em></a>, the "law" read and understood at the Water Gate. And a fifth names the man who brings it: <a href="https://www.blueletterbible.org/lexicon/h5608/kjv/wlc/0-1/" target="_blank" data-lexicon="scribe, writer" data-strongs="H5608" data-translit="sofer" data-original="סֹפֵר" data-lang="hebrew" data-verse="2 Samuel 8:17"><em>sofer</em></a>, the "scribe," Ezra. <strong>Rise, build, by God's hand, around the law, through the scribe</strong> — trace these five words and you have traced the whole arc of the return.</p>
+<p>Those five trace the week's <em>arc</em>. Three more open up its <em>climax</em> — the single verse where the law is at last read and understood at the Water Gate (<a href="https://www.blueletterbible.org/kjv/neh/8/8/s_421008" target="_blank" data-ref="Nehemiah 8:8">Nehemiah 8:8</a>). The rabbis heard in that one verse a description of the whole craft of public reading, and three of its words carry the layered meaning: <em>meforash</em>, "distinctly" — the <strong>Targum</strong>, or translation; <a href="https://www.blueletterbible.org/lexicon/h5529/kjv/wlc/0-1/" target="_blank" data-lexicon="folly" data-strongs="H5529" data-translit="seḵel" data-original="סֶכֶל" data-lang="hebrew" data-verse=""><em>sekhel</em></a>, "the sense" — the division into <strong>verses</strong>; and <a href="https://www.blueletterbible.org/lexicon/h995/kjv/wlc/0-1/" target="_blank" data-lexicon="to discern, understand, consider" data-strongs="H995" data-translit="bîn" data-original="בִּין" data-lang="hebrew" data-verse=""><em>bin</em></a>, "understand" — the <strong>cantillation</strong> that makes meaning land (see <a href="05_Jewish_Perspective.md" target="_blank">Jewish Perspective</a> §4). Studied together, they show how a people who had largely lost their Hebrew were brought to <em>understand</em> the word again.</p>
+<blockquote>
+<p><em>Note on language: <a href="https://www.blueletterbible.org/kjv/ezr/4/8-6/s_407008" target="_blank" data-ref="Ezra 4:8-6">Ezra 4:8–6</a>:18 and 7:12–26 are written in <strong>Biblical Aramaic</strong>, not Hebrew. The words below are all studied from their <strong>Hebrew</strong> occurrences (Nehemiah and the Hebrew portions of Ezra); where a related Aramaic form appears in the Aramaic chapters, it is noted as a cognate, not treated as Hebrew.</em></p>
+</blockquote>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>1. <em>Banah</em> (בָּנָה) — "To Build"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Root and Form</h3>
+<p>The root is <a href="https://www.blueletterbible.org/lexicon/h1129/kjv/wlc/0-1/" target="_blank" data-lexicon="to build" data-strongs="H1129" data-translit="banah" data-original="בָּנָה" data-lang="hebrew" data-verse="Genesis 8:20"><em>b-n-h</em></a> (בנה): to build, rebuild, establish. It is the signature verb of the week, spanning the whole reading — the altar and temple in Ezra, the wall in Nehemiah. Related nouns include <a href="https://www.blueletterbible.org/lexicon/h997/kjv/wlc/0-1/" target="_blank" data-lexicon="between" data-strongs="H997" data-translit="bên" data-original="בֵּין" data-lang="hebrew" data-verse=""><em>ben</em></a> (son) and <a href="https://www.blueletterbible.org/lexicon/h1004/kjv/wlc/0-1/" target="_blank" data-lexicon="house" data-strongs="H1004" data-translit="bayit" data-original="בַּיִת" data-lang="hebrew" data-verse="Genesis 7:1"><em>bayit</em></a> (house); to <em>build</em> is to make a house, a family, a future.</p>
+<h3>Appears</h3>
+<p><a href="https://www.blueletterbible.org/kjv/neh/2/18/s_415018" target="_blank" data-ref="Nehemiah 2:18">Nehemiah 2:18</a> — "Let us rise up and <a href="https://www.blueletterbible.org/lexicon/h1129/kjv/wlc/0-1/" target="_blank" data-lexicon="to build" data-strongs="H1129" data-translit="banah" data-original="בָּנָה" data-lang="hebrew" data-verse="Genesis 8:20"><em>build</em></a> (<a href="https://www.blueletterbible.org/lexicon/h1129/kjv/wlc/0-1/" target="_blank" data-lexicon="to build" data-strongs="H1129" data-translit="banah" data-original="בָּנָה" data-lang="hebrew" data-verse="Genesis 8:20"><em>banah</em></a>)." <a href="https://www.blueletterbible.org/kjv/neh/4/6/s_417006" target="_blank" data-ref="Nehemiah 4:6">Nehemiah 4:6</a> — "So <em>built</em> we the wall." The temple-building of <a href="https://www.blueletterbible.org/kjv/ezr/3/1/s_406001" target="_blank" data-ref="Ezra 3">Ezra 3–6</a> uses the same idea (the Aramaic chapters render it with the cognate <a href="https://www.blueletterbible.org/lexicon/h1124/kjv/wlc/0-1/" target="_blank" data-lexicon="to build" data-strongs="H1124" data-translit="bᵊnā&#x27;" data-original="בְּנָא" data-lang="hebrew" data-verse=""><em>benā</em></a>, בְּנָא, of the temple's construction, e.g. <a href="https://www.blueletterbible.org/kjv/ezr/5/2/s_408002" target="_blank" data-ref="Ezra 5:2">Ezra 5:2</a>). From altar to wall, the reading is one long act of building.</p>
+<h3>Meaning</h3>
+<p><a href="https://www.blueletterbible.org/lexicon/h1129/kjv/wlc/0-1/" target="_blank" data-lexicon="to build" data-strongs="H1129" data-translit="banah" data-original="בָּנָה" data-lang="hebrew" data-verse="Genesis 8:20"><em>Banah</em></a> in these chapters is never merely construction; it is covenant reconstruction. What is built — an altar, a temple, a wall, a people around the law — is the visible form of a restored relationship with God. And it is built <em>against resistance</em>: every occurrence sits inside a story of opposition. To build, here, is to do the slow, contested, God-commanded work of putting back together what sin and exile tore down.</p>
+<h3>Latter-day Saint Connection</h3>
+<p>"Remember that it is upon the rock of our Redeemer… that ye must <em>build</em> your foundation" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/hel/5?lang=eng&id=p12#p12" target="_blank" data-ref="Helaman 5:12">Helaman 5:12</a>) — the same verb of construction turned to the building of a life. The Restoration is itself a <em>building</em> project: "establish a house, even a house of prayer, a house of… glory… a house of God" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/88?lang=eng&id=p119#p119" target="_blank" data-ref="D&C 88:119">D&C 88:119</a>). Nehemiah's "let us rise up and build" is the disciple's charge in every dispensation.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h1129/kjv/wlc/0-1/" target="_blank" data-lexicon="to build" data-strongs="H1129" data-translit="banah" data-original="בָּנָה" data-lang="hebrew" data-verse="Genesis 8:20"><em>banah</em></a> (בָּנָה) — to build, rebuild, establish; root <a href="https://www.blueletterbible.org/lexicon/h1129/kjv/wlc/0-1/" target="_blank" data-lexicon="to build" data-strongs="H1129" data-translit="banah" data-original="בָּנָה" data-lang="hebrew" data-verse="Genesis 8:20"><em>b-n-h</em></a> (בנה)</td><td><a href="https://www.blueletterbible.org/lexicon/h1129/kjv/wlc/0-1/" target="_blank" data-lexicon="to build" data-strongs="H1129" data-translit="banah" data-original="בָּנָה" data-lang="hebrew" data-verse="Genesis 8:20">BLB H1129</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g3618/kjv/tr/0-1/" target="_blank" data-lexicon="to build a house, erect a building to build (up from the foundation) to restore by building, to rebuild, repair metap..." data-strongs="G3618" data-translit="oikodomeō" data-original="οἰκοδομέω" data-lang="greek" data-verse=""><em>oikodomeō</em></a> (οἰκοδομέω) — to build, build up (LXX Neh 2:18, <em>oikodomēsōmen</em>, "let us build")</td><td><a href="https://www.blueletterbible.org/lexicon/g3618/kjv/tr/0-1/" target="_blank" data-lexicon="to build a house, erect a building to build (up from the foundation) to restore by building, to rebuild, repair metap..." data-strongs="G3618" data-translit="oikodomeō" data-original="οἰκοδομέω" data-lang="greek" data-verse="">BLB G3618</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><em>aedificare</em> — to build, construct (Vulgate Neh [2 Esdras] 2:18, <em>aedificemus</em>, "let us build")</td><td><a href="https://logeion.uchicago.edu/aedifico" target="_blank">Logeion: aedifico</a></td></tr>
+<tr><td><strong>English</strong></td><td><em>build</em> — to construct by putting parts together; to establish, develop</td><td><a href="https://www.merriam-webster.com/dictionary/build" target="_blank">Merriam-Webster</a> · <a href="https://webstersdictionary1828.com/Dictionary/build" target="_blank">Webster's 1828</a> · <a href="https://www.etymonline.com/word/build" target="_blank">Etymonline</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>2. <em>Qum</em> (קוּם) — "To Rise Up / Arise"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Root and Form</h3>
+<p>The root is <a href="https://www.blueletterbible.org/lexicon/h3351/kjv/wlc/0-1/" target="_blank" data-lexicon="living substance, that which stands or exists, existence, substance" data-strongs="H3351" data-translit="yᵊqûm" data-original="קוּם" data-lang="hebrew" data-verse=""><em>q-w-m</em></a> (קום): to arise, stand up, get up, take a stand. It is the verb of getting to one's feet — physically, and then figuratively, of rising to act. In <a href="https://www.blueletterbible.org/kjv/neh/2/18/s_415018" target="_blank" data-ref="Nehemiah 2:18">Nehemiah 2:18</a> it is the word that turns discouragement into motion.</p>
+<h3>Appears</h3>
+<p><a href="https://www.blueletterbible.org/kjv/neh/2/18/s_415018" target="_blank" data-ref="Nehemiah 2:18">Nehemiah 2:18</a> — "And they said, Let us <em>rise up</em> (<a href="https://www.blueletterbible.org/lexicon/h6965/kjv/wlc/0-1/" target="_blank" data-lexicon="to rise, arise, stand, rise up, stand up (Qal) to arise to arise (hostile sense) to arise, become powerful to arise, ..." data-strongs="H6965" data-translit="qûm" data-original="קוֹלָיָה" data-lang="hebrew" data-verse=""><em>qum</em></a>) and build." The two verbs come together: you cannot build lying down; the work begins with rising. The same root underlies the standing-up-to-act that runs through Nehemiah's leadership (e.g. 2:12, Nehemiah <em>arose</em> in the night to survey the ruins).</p>
+<h3>Meaning</h3>
+<p><a href="https://www.blueletterbible.org/lexicon/h6965/kjv/wlc/0-1/" target="_blank" data-lexicon="to rise, arise, stand, rise up, stand up (Qal) to arise to arise (hostile sense) to arise, become powerful to arise, ..." data-strongs="H6965" data-translit="qûm" data-original="קוֹלָיָה" data-lang="hebrew" data-verse=""><em>Qum</em></a> is the hinge between seeing a problem and doing something about it. The people have seen the ruin <a href="https://www.blueletterbible.org/kjv/ezr/2/17/s_405017" target="_blank" data-ref="Ezra 2:17">(2:17)</a>; <a href="https://www.blueletterbible.org/lexicon/h6965/kjv/wlc/0-1/" target="_blank" data-lexicon="to rise, arise, stand, rise up, stand up (Qal) to arise to arise (hostile sense) to arise, become powerful to arise, ..." data-strongs="H6965" data-translit="qûm" data-original="קוֹלָיָה" data-lang="hebrew" data-verse=""><em>qum</em></a> is their decision to stop surveying and start working — "let us <em>rise up</em> and build." Restoration always requires this moment: the shift from lament to labor. It is not enough to grieve the rubble; someone has to rise.</p>
+<h3>Latter-day Saint Connection</h3>
+<p>"<em>Arise</em> and shine forth, that thy light may be a standard for the nations" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/115?lang=eng&id=p5#p5" target="_blank" data-ref="D&C 115:5">D&C 115:5</a>) — the same call to rise and be about the work. The gospel repeatedly summons disciples to their feet: to rise from sin, from discouragement, from passivity, and build. Nehemiah's people model the answer — they heard the call, and "they <em>strengthened their hands</em> for this good work" <a href="https://www.blueletterbible.org/kjv/ezr/2/18/s_405018" target="_blank" data-ref="Ezra 2:18">(2:18)</a>.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h6965/kjv/wlc/0-1/" target="_blank" data-lexicon="to rise, arise, stand, rise up, stand up (Qal) to arise to arise (hostile sense) to arise, become powerful to arise, ..." data-strongs="H6965" data-translit="qûm" data-original="קוֹלָיָה" data-lang="hebrew" data-verse=""><em>qum</em></a> (קוּם) — to arise, stand up, take a stand; root <a href="https://www.blueletterbible.org/lexicon/h3351/kjv/wlc/0-1/" target="_blank" data-lexicon="living substance, that which stands or exists, existence, substance" data-strongs="H3351" data-translit="yᵊqûm" data-original="קוּם" data-lang="hebrew" data-verse=""><em>q-w-m</em></a> (קום)</td><td><a href="https://www.blueletterbible.org/lexicon/h6965/kjv/wlc/0-1/" target="_blank" data-lexicon="to rise, arise, stand, rise up, stand up (Qal) to arise to arise (hostile sense) to arise, become powerful to arise, ..." data-strongs="H6965" data-translit="qûm" data-original="קוּם" data-lang="hebrew" data-verse="">BLB H6965</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g450/kjv/tr/0-1/" target="_blank" data-lexicon="to cause to rise up, raise up raise up from laying down to raise up from the dead to raise up, cause to be born, to c..." data-strongs="G450" data-translit="anistēmi" data-original="ἀνίστημι" data-lang="greek" data-verse=""><em>anistēmi</em></a> (ἀνίστημι) — to rise up, stand up, raise (LXX Neh 2:18, <em>anastōmen</em>, "let us rise up")</td><td><a href="https://www.blueletterbible.org/lexicon/g450/kjv/tr/0-1/" target="_blank" data-lexicon="to cause to rise up, raise up raise up from laying down to raise up from the dead to raise up, cause to be born, to c..." data-strongs="G450" data-translit="anistēmi" data-original="ἀνίστημι" data-lang="greek" data-verse="">BLB G450</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><em>surgere</em> — to rise, get up, stand up (Vulgate Neh [2 Esdras] 2:18, <em>surgamus</em>, "let us rise up")</td><td><a href="https://logeion.uchicago.edu/surgo" target="_blank">Logeion: surgo</a></td></tr>
+<tr><td><strong>English</strong></td><td><em>rise / arise</em> — to get up; to move upward; to take action; to come into being</td><td><a href="https://www.merriam-webster.com/dictionary/rise" target="_blank">Merriam-Webster</a> · <a href="https://webstersdictionary1828.com/Dictionary/rise" target="_blank">Webster's 1828</a> · <a href="https://www.etymonline.com/word/rise" target="_blank">Etymonline</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>3. <em>Torah</em> (תּוֹרָה) — "Law / Instruction"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Root and Form</h3>
+<p><a href="https://www.blueletterbible.org/lexicon/h8451/kjv/wlc/0-1/" target="_blank" data-lexicon="instruction, law" data-strongs="H8451" data-translit="torah" data-original="תּוֹרָה" data-lang="hebrew" data-verse=""><em>Torah</em></a> comes from the root <a href="https://www.blueletterbible.org/lexicon/h3138/kjv/wlc/0-1/" target="_blank" data-lexicon="early rain, autumn shower rain which falls in Palestine from late October until early December" data-strongs="H3138" data-translit="yôrâ" data-original="יָרָה" data-lang="hebrew" data-verse=""><em>y-r-h</em></a> (ירה), "to throw, shoot, point, direct" — and so "to instruct." At its root, <a href="https://www.blueletterbible.org/lexicon/h8451/kjv/wlc/0-1/" target="_blank" data-lexicon="instruction, law" data-strongs="H8451" data-translit="torah" data-original="תּוֹרָה" data-lang="hebrew" data-verse=""><em>torah</em></a> is not a cold legal code but <em>direction</em>: the pointing of an arrow, the teaching that aims a life. It is the word for the law read aloud at the Water Gate.</p>
+<h3>Appears</h3>
+<p><a href="https://www.blueletterbible.org/kjv/neh/8/8/s_421008" target="_blank" data-ref="Nehemiah 8:8">Nehemiah 8:8</a> — "So they read in the book in the <a href="https://www.blueletterbible.org/lexicon/h8451/kjv/wlc/0-1/" target="_blank" data-lexicon="instruction, law" data-strongs="H8451" data-translit="torah" data-original="תּוֹרָה" data-lang="hebrew" data-verse=""><em>law</em></a> (<a href="https://www.blueletterbible.org/lexicon/h8451/kjv/wlc/0-1/" target="_blank" data-lexicon="instruction, law" data-strongs="H8451" data-translit="torah" data-original="תּוֹרָה" data-lang="hebrew" data-verse=""><em>torah</em></a>) of God distinctly." <a href="https://www.blueletterbible.org/kjv/ezr/7/10/s_410010" target="_blank" data-ref="Ezra 7:10">Ezra 7:10</a> — Ezra prepared his heart "to seek the <a href="https://www.blueletterbible.org/lexicon/h8451/kjv/wlc/0-1/" target="_blank" data-lexicon="instruction, law" data-strongs="H8451" data-translit="torah" data-original="תּוֹרָה" data-lang="hebrew" data-verse=""><em>law</em></a> (<a href="https://www.blueletterbible.org/lexicon/h8451/kjv/wlc/0-1/" target="_blank" data-lexicon="instruction, law" data-strongs="H8451" data-translit="torah" data-original="תּוֹרָה" data-lang="hebrew" data-verse=""><em>torah</em></a>) of the Lord." The word frames the climax of the week: the restored community is re-formed around the <a href="https://www.blueletterbible.org/lexicon/h8451/kjv/wlc/0-1/" target="_blank" data-lexicon="instruction, law" data-strongs="H8451" data-translit="torah" data-original="תּוֹרָה" data-lang="hebrew" data-verse=""><em>torah</em></a> read, explained, and understood.</p>
+<h3>Meaning</h3>
+<p>Because <a href="https://www.blueletterbible.org/lexicon/h8451/kjv/wlc/0-1/" target="_blank" data-lexicon="instruction, law" data-strongs="H8451" data-translit="torah" data-original="תּוֹרָה" data-lang="hebrew" data-verse=""><em>torah</em></a> means "instruction," <a href="https://www.blueletterbible.org/kjv/neh/8/1/s_421001" target="_blank" data-ref="Nehemiah 8">Nehemiah 8</a> is not merely a public recitation of rules but a <em>teaching</em> — which is why the Levites "gave the sense, and caused them to understand" <a href="https://www.blueletterbible.org/kjv/ezr/8/8/s_411008" target="_blank" data-ref="Ezra 8:8">(8:8)</a>. The law aims a people the way an arrow is aimed; but an arrow must be understood to fly true. The joy of that chapter ("the joy of the Lord is your strength," 8:10) comes not from hearing the <a href="https://www.blueletterbible.org/lexicon/h8451/kjv/wlc/0-1/" target="_blank" data-lexicon="instruction, law" data-strongs="H8451" data-translit="torah" data-original="תּוֹרָה" data-lang="hebrew" data-verse=""><em>torah</em></a> but from <em>understanding</em> it — from being rightly directed.</p>
+<h3>Latter-day Saint Connection</h3>
+<p>"The <em>law</em> of the Lord is perfect, converting the soul" (<a href="https://www.blueletterbible.org/kjv/psa/19/7/s_497007" target="_blank" data-ref="Psalm 19:7">Psalm 19:7</a>). Torah-as-instruction matches the Restoration's emphasis on the word not as burden but as guidance: "man doth not live by bread only, but by every word that proceedeth out of the mouth of the Lord" (<a href="https://www.blueletterbible.org/kjv/deu/8/3/s_161003" target="_blank" data-ref="Deuteronomy 8:3">Deuteronomy 8:3</a>; cf. <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84?lang=eng&id=p44#p44" target="_blank" data-ref="D&C 84:44">D&C 84:44</a>). The word aims the disciple; understanding it is what turns duty into joy.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h8451/kjv/wlc/0-1/" target="_blank" data-lexicon="instruction, law" data-strongs="H8451" data-translit="torah" data-original="תּוֹרָה" data-lang="hebrew" data-verse=""><em>torah</em></a> (תּוֹרָה) — instruction, direction, law; from <a href="https://www.blueletterbible.org/lexicon/h3404/kjv/wlc/0-1/" target="_blank" data-lexicon="Jerijah or Jeriah = &quot; taught by Jehovah&quot;a Kohathite Levite and chief of the house of Hebron when David organised the ..." data-strongs="H3404" data-translit="yᵊrîyâ" data-original="יָרָה" data-lang="hebrew" data-verse=""><em>yarah</em></a> (יָרָה), to point/teach</td><td><a href="https://www.blueletterbible.org/lexicon/h8451/kjv/wlc/0-1/" target="_blank" data-lexicon="instruction, law" data-strongs="H8451" data-translit="torah" data-original="תּוֹרָה" data-lang="hebrew" data-verse="Deuteronomy 4:44">BLB H8451</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g3551/kjv/tr/0-1/" target="_blank" data-lexicon="anything established, anything received by usage, a custom, a law, a commandof any law whatsoevera law or rule produc..." data-strongs="G3551" data-translit="nomos" data-original="νόμος" data-lang="greek" data-verse=""><em>nomos</em></a> (νόμος) — law, that which is assigned, custom (LXX Neh 8:8, <em>nomou</em>, "the law of God")</td><td><a href="https://www.blueletterbible.org/lexicon/g3551/kjv/tr/0-1/" target="_blank" data-lexicon="anything established, anything received by usage, a custom, a law, a commandof any law whatsoevera law or rule produc..." data-strongs="G3551" data-translit="nomos" data-original="νόμος" data-lang="greek" data-verse="">BLB G3551</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><em>lex</em> (<em>legis</em>) — law, statute, principle (Vulgate Neh [2 Esdras] 8:8, <em>libro legis Dei</em>, "the book of the law of God")</td><td><a href="https://logeion.uchicago.edu/lex" target="_blank">Logeion: lex</a></td></tr>
+<tr><td><strong>English</strong></td><td><em>law</em> — a rule of conduct; a body of instruction or principle; direction</td><td><a href="https://www.merriam-webster.com/dictionary/law" target="_blank">Merriam-Webster</a> · <a href="https://webstersdictionary1828.com/Dictionary/law" target="_blank">Webster's 1828</a> · <a href="https://www.etymonline.com/word/law" target="_blank">Etymonline</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>4. <em>Yad</em> (יָד) — "Hand"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Root and Form</h3>
+<p><a href="https://www.blueletterbible.org/lexicon/h3027/kjv/wlc/0-1/" target="_blank" data-lexicon="hand" data-strongs="H3027" data-translit="yad" data-original="יָד" data-lang="hebrew" data-verse="Genesis 3:22"><em>Yad</em></a> (יָד) is the ordinary word for "hand," but in Ezra–Nehemiah it becomes a theological refrain: "the <em>hand</em> of the Lord… upon" a person, meaning His favor, power, and protective providence made effective in that person's life.</p>
+<h3>Appears</h3>
+<p>The motif runs through the whole reading: <a href="https://www.blueletterbible.org/kjv/ezr/7/6/s_410006" target="_blank" data-ref="Ezra 7:6">Ezra 7:6</a> — "according to the <em>hand</em> of the Lord his God upon him"; 7:9 — "the good <em>hand</em> of his God upon him"; <a href="https://www.blueletterbible.org/kjv/neh/2/8/s_415008" target="_blank" data-ref="Nehemiah 2:8">Nehemiah 2:8</a> — "according to the good <em>hand</em> of my God upon me"; <a href="https://www.blueletterbible.org/kjv/neh/2/18/s_415018" target="_blank" data-ref="Nehemiah 2:18">Nehemiah 2:18</a> — "I told them of the <em>hand</em> of my God which was good upon me." At the theme verse the word appears twice: the <em>hand</em> of God upon Nehemiah, and then the people's own <em>hands</em> strengthened for the work.</p>
+<h3>Meaning</h3>
+<p><a href="https://www.blueletterbible.org/lexicon/h3027/kjv/wlc/0-1/" target="_blank" data-lexicon="hand" data-strongs="H3027" data-translit="yad" data-original="יָד" data-lang="hebrew" data-verse="Genesis 3:22"><em>Yad</em></a> ties the two halves of the week together — divine action and human action. It is "the <em>hand</em> of my God which was good upon me" that authorizes and empowers the work; and it is the people's <em>hands</em> that then do it: "they strengthened their <em>hands</em> for this good work" <a href="https://www.blueletterbible.org/kjv/ezr/2/18/s_405018" target="_blank" data-ref="Ezra 2:18">(2:18)</a>. Providence and effort are not rivals in this reading; they are two hands. God's hand makes the work possible, and the worker's hands take it up.</p>
+<h3>Latter-day Saint Connection</h3>
+<p>"I will go before your face. I will be on your right hand and on your left, and my Spirit shall be in your hearts, and mine angels round about you" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84?lang=eng&id=p88#p88" target="_blank" data-ref="D&C 84:88">D&C 84:88</a>) — the "good hand of God" made a covenant promise. Nehemiah's testimony ("the hand of my God which was good upon me") is the confidence every disciple is offered: that the work God assigns, God's own hand attends. Our part is to strengthen our hands for it.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h3027/kjv/wlc/0-1/" target="_blank" data-lexicon="hand" data-strongs="H3027" data-translit="yad" data-original="יָד" data-lang="hebrew" data-verse="Genesis 3:22"><em>yad</em></a> (יָד) — hand; (figuratively) power, agency, favor</td><td><a href="https://www.blueletterbible.org/lexicon/h3027/kjv/wlc/0-1/" target="_blank" data-lexicon="hand" data-strongs="H3027" data-translit="yad" data-original="יָד" data-lang="hebrew" data-verse="Genesis 3:22">BLB H3027</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g5495/kjv/tr/0-1/" target="_blank" data-lexicon="by the help or agency of any one, by means of any one fig. applied to God symbolising his might, activity, power in c..." data-strongs="G5495" data-translit="cheir" data-original="χείρ" data-lang="greek" data-verse=""><em>cheir</em></a> (χείρ) — hand; power, agency (LXX Neh 2:8, 2:18, <em>cheir/cheira tou theou</em>, "the hand of God")</td><td><a href="https://www.blueletterbible.org/lexicon/g5495/kjv/tr/0-1/" target="_blank" data-lexicon="by the help or agency of any one, by means of any one fig. applied to God symbolising his might, activity, power in c..." data-strongs="G5495" data-translit="cheir" data-original="χείρ" data-lang="greek" data-verse="">BLB G5495</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><em>manus</em> — hand; power, means (Vulgate Neh [2 Esdras] 2:8, <em>manum Dei mei bonam</em>, "the good hand of my God")</td><td><a href="https://logeion.uchicago.edu/manus" target="_blank">Logeion: manus</a></td></tr>
+<tr><td><strong>English</strong></td><td><em>hand</em> — the grasping organ; (figuratively) agency, control, help</td><td><a href="https://www.merriam-webster.com/dictionary/hand" target="_blank">Merriam-Webster</a> · <a href="https://webstersdictionary1828.com/Dictionary/hand" target="_blank">Webster's 1828</a> · <a href="https://www.etymonline.com/word/hand" target="_blank">Etymonline</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>5. <em>Sofer</em> (סֹפֵר) — "Scribe"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Root and Form</h3>
+<p><a href="https://www.blueletterbible.org/lexicon/h5608/kjv/wlc/0-1/" target="_blank" data-lexicon="scribe, writer" data-strongs="H5608" data-translit="sofer" data-original="סֹפֵר" data-lang="hebrew" data-verse="2 Samuel 8:17"><em>Sofer</em></a> (סֹפֵר) is the active participle of <a href="https://www.blueletterbible.org/lexicon/h6852/kjv/wlc/0-1/" target="_blank" data-lexicon="(Qal) to go early, depart earlymeaning dubious" data-strongs="H6852" data-translit="ṣāp̄ar" data-original="צָפַר" data-lang="hebrew" data-verse=""><em>safar</em></a> (סָפַר), "to count, recount, number, tell" — and it is kin to <a href="https://www.blueletterbible.org/lexicon/h5612/kjv/wlc/0-1/" target="_blank" data-lexicon="feminine noun book masculine noun missive, document, writing, book missive letter (of instruction), written order, co..." data-strongs="H5612" data-translit="sēp̄er" data-original="סֵפֶר" data-lang="hebrew" data-verse=""><em>sefer</em></a> (סֵפֶר), a "scroll" or "book." A <a href="https://www.blueletterbible.org/lexicon/h5608/kjv/wlc/0-1/" target="_blank" data-lexicon="scribe, writer" data-strongs="H5608" data-translit="sofer" data-original="סֹפֵר" data-lang="hebrew" data-verse="2 Samuel 8:17"><em>sofer</em></a> is therefore not merely a copyist but a <em>master of the record</em> — one who knows, counts, and can recount the sacred text. It is Ezra's title.</p>
+<h3>Appears</h3>
+<p><a href="https://www.blueletterbible.org/kjv/ezr/7/6/s_410006" target="_blank" data-ref="Ezra 7:6">Ezra 7:6</a> — "This Ezra… was a ready <a href="https://www.blueletterbible.org/lexicon/h5608/kjv/wlc/0-1/" target="_blank" data-lexicon="scribe, writer" data-strongs="H5608" data-translit="sofer" data-original="סֹפֵר" data-lang="hebrew" data-verse="2 Samuel 8:17"><em>scribe</em></a> (<a href="https://www.blueletterbible.org/lexicon/h5608/kjv/wlc/0-1/" target="_blank" data-lexicon="scribe, writer" data-strongs="H5608" data-translit="sofer" data-original="סֹפֵר" data-lang="hebrew" data-verse="2 Samuel 8:17"><em>sofer</em></a>) in the law of Moses." The Hebrew phrase is <em>sofer mahir</em> — a <em>skilled</em>, <em>ready</em> scribe. The word marks Ezra's authority: not a king, not a prophet in the old mold, but a <em>scribe</em> — the new kind of leader for the age after prophecy, whose power is his mastery of the word.</p>
+<h3>Meaning</h3>
+<p><a href="https://www.blueletterbible.org/lexicon/h5608/kjv/wlc/0-1/" target="_blank" data-lexicon="scribe, writer" data-strongs="H5608" data-translit="sofer" data-original="סֹפֵר" data-lang="hebrew" data-verse="2 Samuel 8:17"><em>Sofer</em></a> names a turning point in the history of God's people. With Ezra, leadership passes to the one who <em>knows the book</em> — who can read it, explain it, and teach it (<a href="https://www.blueletterbible.org/kjv/neh/8/8/s_421008" target="_blank" data-ref="Nehemiah 8:8">Nehemiah 8:8</a>). The scribe embodies the whole week's movement from temple to text: the restored community will be held together not by a throne but by the faithful keeping and teaching of the written word. Ezra is the first great <a href="https://www.blueletterbible.org/lexicon/h5608/kjv/wlc/0-1/" target="_blank" data-lexicon="scribe, writer" data-strongs="H5608" data-translit="sofer" data-original="סֹפֵר" data-lang="hebrew" data-verse="2 Samuel 8:17"><em>sofer</em></a>, and <a href="https://www.blueletterbible.org/kjv/neh/8/1/s_421001" target="_blank" data-ref="Nehemiah 8">Nehemiah 8</a> is his hour.</p>
+<h3>Latter-day Saint Connection</h3>
+<p>The honor Ezra earns as a <em>ready scribe</em> dignifies the whole work of keeping and teaching sacred records — the labor the Restoration prizes in its scriptures, its record-keeping, and its teachers (cf. <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/21?lang=eng&id=p1#p1" target="_blank" data-ref="D&C 21:1">D&C 21:1; 128:24</a>, the "book containing the records of our dead"). Ezra's greatness is that he "prepared his heart to seek the law… and to teach" <a href="https://www.blueletterbible.org/kjv/ezr/7/10/s_410010" target="_blank" data-ref="Ezra 7:10">(7:10)</a>: the scribe is the disciple who has so mastered the word that he can hand it, whole, to others.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h5608/kjv/wlc/0-1/" target="_blank" data-lexicon="scribe, writer" data-strongs="H5608" data-translit="sofer" data-original="סֹפֵר" data-lang="hebrew" data-verse="2 Samuel 8:17"><em>sofer</em></a> (סֹפֵר) — scribe, secretary; one who counts/records; from <a href="https://www.blueletterbible.org/lexicon/h6852/kjv/wlc/0-1/" target="_blank" data-lexicon="(Qal) to go early, depart earlymeaning dubious" data-strongs="H6852" data-translit="ṣāp̄ar" data-original="צָפַר" data-lang="hebrew" data-verse=""><em>safar</em></a> (סָפַר), to count/recount; kin to <a href="https://www.blueletterbible.org/lexicon/h5612/kjv/wlc/0-1/" target="_blank" data-lexicon="feminine noun book masculine noun missive, document, writing, book missive letter (of instruction), written order, co..." data-strongs="H5612" data-translit="sēp̄er" data-original="סֵפֶר" data-lang="hebrew" data-verse=""><em>sefer</em></a> (book)</td><td><a href="https://www.blueletterbible.org/lexicon/h5608/kjv/wlc/0-1/" target="_blank" data-lexicon="scribe, writer" data-strongs="H5608" data-translit="sofer" data-original="סֹפֵר" data-lang="hebrew" data-verse="2 Samuel 8:17">BLB H5608</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g1122/kjv/tr/0-1/" target="_blank" data-lexicon="a clerk, scribe, esp.a public servant, secretary, recorder, whose office and influence differed in different states i..." data-strongs="G1122" data-translit="grammateus" data-original="γραμματεύς" data-lang="greek" data-verse=""><em>grammateus</em></a> (γραμματεύς) — scribe, secretary, expert in the law (LXX <a href="https://www.blueletterbible.org/kjv/ezr/7/6/s_410006" target="_blank" data-ref="Ezra 7:6">Ezra 7:6</a>, <a href="https://www.blueletterbible.org/lexicon/g1122/kjv/tr/0-1/" target="_blank" data-lexicon="a clerk, scribe, esp.a public servant, secretary, recorder, whose office and influence differed in different states i..." data-strongs="G1122" data-translit="grammateus" data-original="γραμματεύς" data-lang="greek" data-verse=""><em>grammateus</em></a>)</td><td><a href="https://www.blueletterbible.org/lexicon/g1122/kjv/tr/0-1/" target="_blank" data-lexicon="a clerk, scribe, esp.a public servant, secretary, recorder, whose office and influence differed in different states i..." data-strongs="G1122" data-translit="grammateus" data-original="γραμματεύς" data-lang="greek" data-verse="">BLB G1122</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><em>scriba</em> — scribe, clerk, secretary (Vulgate Ezra [1 Esdras] 7:6, <em>scriba velox</em>, "a ready scribe")</td><td><a href="https://logeion.uchicago.edu/scriba" target="_blank">Logeion: scriba</a></td></tr>
+<tr><td><strong>English</strong></td><td><em>scribe</em> — a copier or keeper of records; an expert teacher of the law</td><td><a href="https://www.merriam-webster.com/dictionary/scribe" target="_blank">Merriam-Webster</a> · <a href="https://webstersdictionary1828.com/Dictionary/scribe" target="_blank">Webster's 1828</a> · <a href="https://www.etymonline.com/word/scribe" target="_blank">Etymonline</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>6. <em>Meforash</em> (מְפֹרָשׁ) — "Distinctly" (the Targum)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Root and Form</h3>
+<p><a href="https://www.blueletterbible.org/lexicon/h4666/kjv/wlc/0-1/" target="_blank" data-lexicon="spreading out, thing spread out" data-strongs="H4666" data-translit="mip̄rāś" data-original="מִפְרָשׂ" data-lang="hebrew" data-verse=""><em>Meforash</em></a> (מְפֹרָשׁ) is a passive participle of the root <a href="https://www.blueletterbible.org/lexicon/h6567/kjv/wlc/0-1/" target="_blank" data-lexicon="to make distinct, declare, distinguish, separate(Qal) to declare, clarify(Pual) to be distinctly declared(Hiphil) to ..." data-strongs="H6567" data-translit="pāraš" data-original="פָּרַשׁ" data-lang="hebrew" data-verse=""><em>parash</em></a> (פָּרַשׁ), "to separate, make distinct, make plain." It describes a text not merely read aloud but <em>distinguished</em> — set apart and rendered clear to the hearer. It is the first of three words the rabbis heard in <a href="https://www.blueletterbible.org/kjv/neh/8/8/s_421008" target="_blank" data-ref="Nehemiah 8:8">Nehemiah 8:8</a> as describing how the law was read at the Water Gate.</p>
+<h3>Appears</h3>
+<p><a href="https://www.blueletterbible.org/kjv/neh/8/8/s_421008" target="_blank" data-ref="Nehemiah 8:8">Nehemiah 8:8</a> — "So they read in the book in the law of God <em>distinctly</em> (<em>meforash</em>)." The Babylonian Talmud (Megillah 3a; Nedarim 37b) read <em>meforash</em> as pointing to the <strong>Targum</strong> — the Aramaic translation of the Hebrew text (see <a href="05_Jewish_Perspective.md" target="_blank">Jewish Perspective</a> §4).</p>
+<h3>Meaning</h3>
+<p>To read "distinctly" was to make the word <em>understood</em> — and for a community two generations removed from fluent Hebrew, a people who now spoke Aramaic, making it plain meant translating it. That is why the tradition tied <em>meforash</em> to the Targum. The Septuagint catches the same idea, turning the Hebrew participle into a verb — <em>diestellen</em>, "he distinguished, set it forth distinctly" — and the Vulgate renders it <em>distincte</em>, "distinctly, clearly." The word is about closing the gap between a text and a hearer: not just sound, but sense.</p>
+<h3>Latter-day Saint Connection</h3>
+<p>The impulse behind <em>meforash</em> — that scripture must be made plain, in the hearer's own tongue — runs straight through the Restoration. Nephi read Isaiah to his people and testifies, "I did liken all scriptures unto us, that it might be for our profit and learning" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/19?lang=eng&id=p23#p23" target="_blank" data-ref="1 Nephi 19:23">1 Nephi 19:23</a>). The Book of Mormon is itself scripture rendered "distinctly" — the word carried across a language barrier "by the gift and power of God" so a people could understand.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h4666/kjv/wlc/0-1/" target="_blank" data-lexicon="spreading out, thing spread out" data-strongs="H4666" data-translit="mip̄rāś" data-original="מִפְרָשׂ" data-lang="hebrew" data-verse=""><em>meforash</em></a> (מְפֹרָשׁ) — made distinct, made plain; passive participle of <a href="https://www.blueletterbible.org/lexicon/h6567/kjv/wlc/0-1/" target="_blank" data-lexicon="to make distinct, declare, distinguish, separate(Qal) to declare, clarify(Pual) to be distinctly declared(Hiphil) to ..." data-strongs="H6567" data-translit="pāraš" data-original="פָּרַשׁ" data-lang="hebrew" data-verse=""><em>parash</em></a> (פָּרַשׁ), to separate/declare</td><td><a href="https://www.blueletterbible.org/lexicon/h6567/kjv/wlc/0-1/" target="_blank" data-lexicon="to make distinct, declare, distinguish, separate(Qal) to declare, clarify(Pual) to be distinctly declared(Hiphil) to ..." data-strongs="H6567" data-translit="pāraš" data-original="פָּרַשׁ" data-lang="hebrew" data-verse="">BLB H6567</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g1291/kjv/tr/0-1/" target="_blank" data-lexicon="to draw asunder, divide, distinguish, dispose, order to open one&#x27;s self i.e. one&#x27;s mind, to set forth distinctly to a..." data-strongs="G1291" data-translit="diastellō" data-original="διαστέλλω" data-lang="greek" data-verse=""><em>diastellō</em></a> (διαστέλλω) — to set apart, distinguish, set forth distinctly (LXX Neh 8:8 [2 Esdras 18:8], <em>diestellen</em>, "he distinguished")</td><td><a href="https://www.blueletterbible.org/lexicon/g1291/kjv/tr/0-1/" target="_blank" data-lexicon="to draw asunder, divide, distinguish, dispose, order to open one's self i.e. one's mind, to set forth distinctly to a..." data-strongs="G1291" data-translit="diastellō" data-original="διαστέλλω" data-lang="greek" data-verse="">BLB G1291</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><em>distincte</em> — distinctly, clearly (adverb of <em>distinctus</em>, from <em>distinguere</em>); Vulgate Neh 8:8, <em>distincte</em></td><td><a href="https://logeion.uchicago.edu/distinguo" target="_blank">Logeion: distinguo</a></td></tr>
+<tr><td><strong>English</strong></td><td><em>distinct</em> / <em>explain</em> — set clearly apart; to make plain</td><td><a href="https://www.merriam-webster.com/dictionary/distinct" target="_blank">Merriam-Webster</a> · <a href="https://webstersdictionary1828.com/Dictionary/distinct" target="_blank">Webster's 1828</a> · <a href="https://www.etymonline.com/word/distinct" target="_blank">Etymonline</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>7. <em>Sekhel</em> (שֶׂכֶל) — "The Sense" (the division into verses)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Root and Form</h3>
+<p><a href="https://www.blueletterbible.org/lexicon/h5529/kjv/wlc/0-1/" target="_blank" data-lexicon="folly" data-strongs="H5529" data-translit="seḵel" data-original="סֶכֶל" data-lang="hebrew" data-verse=""><em>Sekhel</em></a> (שֶׂכֶל) is a noun meaning "insight, prudence, good sense, understanding," from the root <a href="https://www.blueletterbible.org/lexicon/h5528/kjv/wlc/0-1/" target="_blank" data-lexicon="to be foolish, be a fool(Piel) to make foolish, turn into foolishness(Niphal) to act or do foolishly(Hiphil) to do fo..." data-strongs="H5528" data-translit="sāḵal" data-original="סָכַל" data-lang="hebrew" data-verse=""><em>sakal</em></a> (שָׂכַל), "to be prudent, to have insight." In <a href="https://www.blueletterbible.org/kjv/neh/8/8/s_421008" target="_blank" data-ref="Nehemiah 8:8">Nehemiah 8:8</a> it stands in the phrase <em>ve-som sekhel</em> — "and setting insight." (The "giving" is a separate verb, <a href="https://www.blueletterbible.org/lexicon/h6684/kjv/wlc/0-1/" target="_blank" data-lexicon="(Qal) to abstain from food, fast" data-strongs="H6684" data-translit="ṣûm" data-original="צוּם" data-lang="hebrew" data-verse=""><em>sum</em></a>, "to set, put"; <a href="https://www.blueletterbible.org/lexicon/h5529/kjv/wlc/0-1/" target="_blank" data-lexicon="folly" data-strongs="H5529" data-translit="seḵel" data-original="סֶכֶל" data-lang="hebrew" data-verse=""><em>sekhel</em></a> is the insight that is set before the hearer.)</p>
+<h3>Appears</h3>
+<p><a href="https://www.blueletterbible.org/kjv/neh/8/8/s_421008" target="_blank" data-ref="Nehemiah 8:8">Nehemiah 8:8</a> — "and gave the <a href="https://www.blueletterbible.org/lexicon/h5529/kjv/wlc/0-1/" target="_blank" data-lexicon="folly" data-strongs="H5529" data-translit="seḵel" data-original="סֶכֶל" data-lang="hebrew" data-verse=""><em>sense</em></a> (<a href="https://www.blueletterbible.org/lexicon/h5529/kjv/wlc/0-1/" target="_blank" data-lexicon="folly" data-strongs="H5529" data-translit="seḵel" data-original="סֶכֶל" data-lang="hebrew" data-verse=""><em>sekhel</em></a>)." The Levites did not only read the words; they set <em>insight</em> before the people. The Talmud (Megillah 3a; Nedarim 37b) heard in "gave the sense" the <strong>division of the text into verses</strong> — the phrasing that groups words into units of meaning (see <a href="05_Jewish_Perspective.md" target="_blank">Jewish Perspective</a> §4).</p>
+<h3>Meaning</h3>
+<p><a href="https://www.blueletterbible.org/lexicon/h5529/kjv/wlc/0-1/" target="_blank" data-lexicon="folly" data-strongs="H5529" data-translit="seḵel" data-original="סֶכֶל" data-lang="hebrew" data-verse=""><em>Sekhel</em></a> is understanding of the practical, sense-making kind — the insight that lets a hearer grasp what a text actually means. To "give the sense" is to hand over not just the sounds but the shape of the meaning: where one thought ends and the next begins. The Talmud's link to verse-division fits the word exactly — a run of unbroken words is hard to follow; break it into its sense-units, and insight can land. Tellingly, both ancient translations declined to render <a href="https://www.blueletterbible.org/lexicon/h5529/kjv/wlc/0-1/" target="_blank" data-lexicon="folly" data-strongs="H5529" data-translit="seḵel" data-original="סֶכֶל" data-lang="hebrew" data-verse=""><em>sekhel</em></a> as a tidy noun: the Septuagint folds the phrase into "explained <em>with knowledge</em>" (<em>epistēmē</em>), and the Vulgate turns it into "<em>aptly</em>, for understanding" (<em>adposite ad intellegendum</em>). The idea resists a single word because it names an event — meaning made graspable.</p>
+<h3>Latter-day Saint Connection</h3>
+<p>"The glory of God is intelligence" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/93?lang=eng&id=p36#p36" target="_blank" data-ref="D&C 93:36">D&C 93:36</a>), and the Lord's way of teaching is to give <a href="https://www.blueletterbible.org/lexicon/h5529/kjv/wlc/0-1/" target="_blank" data-lexicon="folly" data-strongs="H5529" data-translit="seḵel" data-original="סֶכֶל" data-lang="hebrew" data-verse=""><em>sekhel</em></a> — insight — not merely information: "I will tell you in your mind and in your heart, by the Holy Ghost" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/8?lang=eng&id=p2#p2" target="_blank" data-ref="D&C 8:2">D&C 8:2</a>). To "study it out in your mind" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/9?lang=eng&id=p8#p8" target="_blank" data-ref="D&C 9:8">D&C 9:8</a>) is to seek the <em>sense</em>, not just the sounds. The Levites' work at the Water Gate is the ancient model of teaching that aims past hearing at insight.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h5529/kjv/wlc/0-1/" target="_blank" data-lexicon="folly" data-strongs="H5529" data-translit="seḵel" data-original="סֶכֶל" data-lang="hebrew" data-verse=""><em>sekhel</em></a> (שֶׂכֶל) — insight, prudence, good sense; noun from root <a href="https://www.blueletterbible.org/lexicon/h5528/kjv/wlc/0-1/" target="_blank" data-lexicon="to be foolish, be a fool(Piel) to make foolish, turn into foolishness(Niphal) to act or do foolishly(Hiphil) to do fo..." data-strongs="H5528" data-translit="sāḵal" data-original="סָכַל" data-lang="hebrew" data-verse=""><em>sakal</em></a> (שָׂכַל), to be prudent/have insight</td><td><a href="https://www.blueletterbible.org/lexicon/h7922/kjv/wlc/0-1/" target="_blank" data-lexicon="prudence, insight, understandingprudence, good senseinsight, understandingcunning, craft (bad sense)" data-strongs="H7922" data-translit="śēḵel" data-original="שֵׂכֶל" data-lang="hebrew" data-verse="">BLB H7922</a> · <a href="https://www.blueletterbible.org/lexicon/h7919/kjv/wlc/0-1/" target="_blank" data-lexicon="to be prudent, be circumspect, wisely understand, prosper (Qal) to be prudent, be circumspect (Hiphil) to look at or ..." data-strongs="H7919" data-translit="śāḵal" data-original="שָׂכַל" data-lang="hebrew" data-verse="">root H7919</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><em>epistēmē</em> (ἐπιστήμη) — knowledge, understanding, skill (LXX Neh 8:8 [2 Esdras 18:8], <em>epistēmē</em>, "with knowledge" — the phrase is paraphrased; see note)</td><td><a href="https://logeion.uchicago.edu/ἐπιστήμη" target="_blank">Logeion: ἐπιστήμη (LSJ)</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><em>apposite</em> (<em>adposite</em>) — aptly, suitably (adverb, from <em>apponere</em>); Vulgate Neh 8:8, <em>adposite ad intellegendum</em>, "aptly for understanding"</td><td><a href="https://logeion.uchicago.edu/appono" target="_blank">Logeion: appono</a></td></tr>
+<tr><td><strong>English</strong></td><td><em>sense</em> / <em>insight</em> — the faculty of grasping meaning; understanding</td><td><a href="https://www.merriam-webster.com/dictionary/sense" target="_blank">Merriam-Webster</a> · <a href="https://webstersdictionary1828.com/Dictionary/sense" target="_blank">Webster's 1828</a> · <a href="https://www.etymonline.com/word/sense" target="_blank">Etymonline</a></td></tr>
+</table>
+<p><em>Note: the Hebrew phrase "gave the sense" (</em>ve-som sekhel<em>) is paraphrased, not rendered word-for-word, in both ancient versions — the Septuagint as "explained with knowledge [of the Lord]," the Vulgate as "aptly, for understanding." Greek </em>epistēmē<em> carries no Strong's number, as it does not occur in the New Testament; it is cited here from the standard lexicon.</em></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>8. <em>Bin</em> (בִּין) — "Understand" (the cantillation)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>Root and Form</h3>
+<p><a href="https://www.blueletterbible.org/lexicon/h995/kjv/wlc/0-1/" target="_blank" data-lexicon="to discern, understand, consider" data-strongs="H995" data-translit="bîn" data-original="בִּין" data-lang="hebrew" data-verse=""><em>Bin</em></a> (בִּין) is the verb "to discern, understand, perceive" — to grasp a thing clearly, to tell one thing from another. In <a href="https://www.blueletterbible.org/kjv/neh/8/8/s_421008" target="_blank" data-ref="Nehemiah 8:8">Nehemiah 8:8</a> it appears as <em>vayavinu</em> (וַיָּבִינוּ), a <strong>causative</strong> (Hiphil) form: the Levites "caused them to understand." Understanding here is not left to chance; it is <em>produced</em> in the hearer.</p>
+<h3>Appears</h3>
+<p><a href="https://www.blueletterbible.org/kjv/neh/8/8/s_421008" target="_blank" data-ref="Nehemiah 8:8">Nehemiah 8:8</a> — "and caused them to <em>understand</em> (<em>vayavinu</em>) the <em>reading</em>." The Talmud (Megillah 3a; Nedarim 37b) tied this last clause — "understand the reading" — to the <strong>cantillation</strong> (<em>te'amim</em>), the traditional chant-marks that carry the melody of public reading and punctuate the sentence so its meaning lands (see <a href="05_Jewish_Perspective.md" target="_blank">Jewish Perspective</a> §4). The "reading" itself is <a href="https://www.blueletterbible.org/lexicon/h4744/kjv/wlc/0-1/" target="_blank" data-lexicon="convocation, convoking, reading, a calling together convocation, sacred assembly convoking reading" data-strongs="H4744" data-translit="miqrā&#x27;" data-original="מִקְרָא" data-lang="hebrew" data-verse=""><em>mikra</em></a> (מִקְרָא), from <a href="https://www.blueletterbible.org/lexicon/h7086/kjv/wlc/0-1/" target="_blank" data-lexicon="dish, platter" data-strongs="H7086" data-translit="qᵊʿārâ" data-original="קְעָרָה" data-lang="hebrew" data-verse=""><em>qara</em></a>, "to call, to read aloud" — the very word that became the Jewish name for Scripture.</p>
+<h3>Meaning</h3>
+<p><a href="https://www.blueletterbible.org/lexicon/h995/kjv/wlc/0-1/" target="_blank" data-lexicon="to discern, understand, consider" data-strongs="H995" data-translit="bîn" data-original="בִּין" data-lang="hebrew" data-verse=""><em>Bin</em></a> is the goal the whole verse drives toward: not merely that the law was read, or translated, or phrased — but that the people <em>understood</em>. And the Hebrew is causative: someone labored to make that understanding happen. The tradition's link to cantillation fits, because the chant is not decoration — the <em>te'amim</em> group and divide the words so the ear hears where the sense turns. Both the Septuagint (<a href="https://www.blueletterbible.org/lexicon/h995/kjv/wlc/0-1/" target="_blank" data-lexicon="to discern, understand, consider" data-strongs="H995" data-translit="bîn" data-original="בִּין" data-lang="hebrew" data-verse=""><em>synēken</em></a>, "understood") and the Vulgate (<a href="https://www.blueletterbible.org/lexicon/h995/kjv/wlc/0-1/" target="_blank" data-lexicon="to discern, understand, consider" data-strongs="H995" data-translit="bîn" data-original="בִּין" data-lang="hebrew" data-verse=""><em>intellexerunt</em></a>, "they understood") soften the Hebrew's causative into a simple "the people understood," but the Hebrew keeps the Levites in the frame: understanding was <em>given</em>. Scripture read but not understood is not yet finished; <a href="https://www.blueletterbible.org/lexicon/h995/kjv/wlc/0-1/" target="_blank" data-lexicon="to discern, understand, consider" data-strongs="H995" data-translit="bîn" data-original="בִּין" data-lang="hebrew" data-verse=""><em>bin</em></a> is where the reading arrives.</p>
+<h3>Latter-day Saint Connection</h3>
+<p>Understanding, in the Restoration, is a gift God causes: the risen Christ "opened… their understanding, that they might understand the scriptures" (<a href="https://www.blueletterbible.org/kjv/luk/24/45/s_997045" target="_blank" data-ref="Luke 24:45">Luke 24:45</a>) — the same causative gift the Levites gave at the Water Gate. When we lack it, we are told to ask: "If any of you lack wisdom, let him ask of God" (<a href="https://www.blueletterbible.org/kjv/jas/1/5/s_1147005" target="_blank" data-ref="James 1:5">James 1:5</a>) — the verse that sent a boy into a grove. And its fruit is the quiet certainty of revelation: "Did I not speak peace to your mind concerning the matter? What greater witness can you have than from God?" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?lang=eng&id=p22-p23#p22" target="_blank" data-ref="D&C 6:22-23">D&C 6:22–23</a>).</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h995/kjv/wlc/0-1/" target="_blank" data-lexicon="to discern, understand, consider" data-strongs="H995" data-translit="bîn" data-original="בִּין" data-lang="hebrew" data-verse=""><em>bin</em></a> (בִּין) — to discern, understand, perceive; Neh 8:8 Hiphil <em>vayavinu</em>, "caused to understand"; root <em>b-y-n</em></td><td><a href="https://www.blueletterbible.org/lexicon/h995/kjv/wlc/0-1/" target="_blank" data-lexicon="to discern, understand, consider" data-strongs="H995" data-translit="bîn" data-original="בִּין" data-lang="hebrew" data-verse="">BLB H995</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g4920/kjv/tr/0-1/" target="_blank" data-lexicon="to set or bring togetherin a hostile sense, of combatantsto put (as it were) the perception with the thing perceivedt..." data-strongs="G4920" data-translit="syniēmi" data-original="συνίημι" data-lang="greek" data-verse=""><em>syniēmi</em></a> (συνίημι) — to comprehend, understand (LXX Neh 8:8 [2 Esdras 18:8], <em><a href="https://www.blueletterbible.org/lexicon/h4744/kjv/wlc/0-1/" target="_blank" data-lexicon="convocation, convoking, reading, a calling together convocation, sacred assembly convoking reading" data-strongs="H4744" data-translit="miqrā&#x27;" data-original="מִקְרָא" data-lang="hebrew" data-verse="">synēken</a></em>, "understood")</td><td><a href="https://www.blueletterbible.org/lexicon/g4920/kjv/tr/0-1/" target="_blank" data-lexicon="to set or bring togetherin a hostile sense, of combatantsto put (as it were) the perception with the thing perceivedt..." data-strongs="G4920" data-translit="syniēmi" data-original="συνίημι" data-lang="greek" data-verse="">BLB G4920</a></td></tr>
+<tr><td><strong>Latin (Vulgate)</strong></td><td><em>intellegere</em> — to understand, perceive (Vulgate Neh 8:8, <em>ad intellegendum</em> / <em>intellexerunt</em>, "they understood")</td><td><a href="https://logeion.uchicago.edu/intellego" target="_blank">Logeion: intellego</a></td></tr>
+<tr><td><strong>English</strong></td><td><em>understand</em> / <em>discern</em> — to grasp the meaning of; to perceive, distinguish</td><td><a href="https://www.merriam-webster.com/dictionary/understand" target="_blank">Merriam-Webster</a> · <a href="https://webstersdictionary1828.com/Dictionary/understand" target="_blank">Webster's 1828</a> · <a href="https://www.etymonline.com/word/understand" target="_blank">Etymonline</a></td></tr>
+</table>
+<p><em>Note: the "reading" of this clause is </em>mikra<em> (מִקְרָא, <a href="https://www.blueletterbible.org/lexicon/h4744/kjv/wlc/0-1/" target="_blank" data-lexicon="convocation, convoking, reading, a calling together convocation, sacred assembly convoking reading" data-strongs="H4744" data-translit="miqrā'" data-original="מִקְרָא" data-lang="hebrew" data-verse="">BLB H4744</a>), rendered </em>anagnōsis<em> (ἀνάγνωσις) in the Septuagint and by the verb </em>legere<em> ("when it was read") in the Vulgate. The Hebrew </em>vayavinu<em> is causative ("caused them to understand"), but both ancient versions render it intransitively — "the people understood."</em></p>
+<hr>
+<p><em>Next file: <a href="05_Jewish_Perspective.md" target="_blank">05_Jewish_Perspective.md</a></em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 5: WEEK 31: JEWISH PERSPECTIVE -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">5. Week 31: Jewish Perspective</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Introduction</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>If the reading's Christian and Latter-day Saint emphasis falls on rebuilding — temple, wall, community — the rabbinic tradition fastens on the man who rebuilt the people around the <strong>book</strong>. In the rabbis' telling, Ezra is not merely a scribe who returned with a scroll; he is the hinge between the age of prophecy and the age of the sages, the one through whom the Torah was, in a sense, given a second time.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>1. Ezra, a Second Moses</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The Talmud pays Ezra the highest compliment it can pay any mortal — it compares him to Moses:</p>
+<blockquote>
+<p>"Rabbi Yosei says: Ezra was suitable, given his greatness, for the Torah to be given by him to the Jewish people, had Moses not come first and received the Torah already."</p>
+<p>— Babylonian Talmud, <a href="https://www.sefaria.org/Sanhedrin.21b" target="_blank">Sanhedrin 21b</a></p>
+</blockquote>
+<p>The same passage adds that although the Torah was not given <em>through</em> Ezra, "the script of the Torah was changed by him" (see §2). The rabbis are reaching for a way to say that Ezra's restoration of the law was a founding act on the order of Sinai — that when the exiles came home spiritually adrift, Ezra re-gave them their Torah. The biblical portrait supports the instinct: "Ezra had prepared his heart to seek the law of the Lord, and to do it, and to teach in Israel" (<a href="https://www.blueletterbible.org/kjv/ezr/7/10/s_410010" target="_blank" data-ref="Ezra 7:10">Ezra 7:10</a>).</p>
+<h3>LDS Connection</h3>
+<p>The reverence Judaism holds for Ezra as a restorer of the law rhymes with the Latter-day Saint conviction that God raises up prepared individuals to bring His word to a people who have lost it. Ezra's seek–do–teach pattern <a href="https://www.blueletterbible.org/kjv/ezr/7/10/s_410010" target="_blank" data-ref="Ezra 7:10">(7:10)</a> is the discipleship every teacher of the word is called to — "seek not to declare my word, but first seek to obtain my word" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/11?lang=eng&id=p21#p21" target="_blank" data-ref="D&C 11:21">D&C 11:21</a>). What Moses received and Ezra restored, the Restoration receives again: a covenant people re-formed around scripture.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>2. The Script Restored</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The rabbis preserve a striking tradition that Ezra changed the very letters in which the Torah was written:</p>
+<blockquote>
+<p>"Initially, the Torah was given to the Jewish people in Ivrit script… It was given to them again in the days of Ezra in Ashurit script and the Aramaic tongue."</p>
+<p>— Babylonian Talmud, <a href="https://www.sefaria.org/Sanhedrin.21b" target="_blank">Sanhedrin 21b</a></p>
+</blockquote>
+<p>"Ivrit" here means the old paleo-Hebrew script; "Ashurit" (Assyrian) is the square script in which Hebrew is still written today. The tradition is not unanimous — on the next folio, <a href="https://www.sefaria.org/Sanhedrin.22a" target="_blank">Sanhedrin 22a</a> records Rabbi Yehuda HaNasi's dissent that the Torah was <em>originally</em> given in Ashurit, changed after Israel sinned, and <em>restored</em> by Ezra. Either way, the rabbis remember Ezra as the guardian of the text's very form — the one who re-established how the sacred words themselves would be preserved.</p>
+<h3>LDS Connection</h3>
+<p>That a covenant people could lose or alter the outward form of their own scripture, and need it restored, is a familiar theme: the Book of Mormon describes how "plain and precious things" were "taken away" from the record over time (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/13?lang=eng&id=p24-p29#p24" target="_blank" data-ref="1 Nephi 13:24-29">1 Nephi 13:24–29</a>), and the eighth Article of Faith affirms the Bible "as far as it is translated correctly." The rabbinic memory of Ezra safeguarding the text is a Jewish witness to the same concern — that scripture's transmission must be guarded, and sometimes restored.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>3. Ezra and the Public Reading of the Torah</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><a href="https://www.blueletterbible.org/kjv/neh/8/1/s_421001" target="_blank" data-ref="Nehemiah 8">Nehemiah 8</a> shows Ezra reading the law aloud to the assembled people. The rabbis credit him with making that a permanent institution. A baraita lists ten ordinances (<em>takkanot</em>) enacted by Ezra:</p>
+<blockquote>
+<p>"The Sages taught that Ezra the Scribe instituted ten ordinances: He instituted that communities read the Torah on Shabbat in the afternoon; and they also read the Torah on every Monday and Thursday; and the courts convene and judge every Monday and Thursday…"</p>
+<p>— Babylonian Talmud, <a href="https://www.sefaria.org/Bava_Kamma.82a" target="_blank">Bava Kamma 82a</a></p>
+</blockquote>
+<p>The rhythm of Jewish life for the next two and a half millennia — Torah read publicly on Mondays, Thursdays, and Shabbat — is traced by the tradition back to Ezra. What <a href="https://www.blueletterbible.org/kjv/neh/8/1/s_421001" target="_blank" data-ref="Nehemiah 8">Nehemiah 8</a> narrates as a single great assembly at the Water Gate, the rabbis remember as the birth of a permanent practice: the word of God regularly read, and explained, before the whole community.</p>
+<h3>LDS Connection</h3>
+<p>Ezra's instinct — that a covenant people stays covenant by returning again and again to the word, on a fixed and frequent rhythm — is the same instinct behind daily and weekly scripture study, family study, and a curriculum like <em>Come, Follow Me</em>. "Search the scriptures… they are they which testify of me" (<a href="https://www.blueletterbible.org/kjv/jhn/5/39/s_1002039" target="_blank" data-ref="John 5:39">John 5:39</a>); "feast upon the words of Christ" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/32?lang=eng&id=p3#p3" target="_blank" data-ref="2 Nephi 32:3">2 Nephi 32:3</a>). The Water Gate assembly is the ancient charter of a people organized around the regular hearing of the word.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>4. The Reading in Layers: Scripture, Targum, and the Chant</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The rabbis lingered over a single verse of that assembly — "So they read in the book in the law of God distinctly, and gave the sense, and caused them to understand the reading" (<a href="https://www.blueletterbible.org/kjv/neh/8/8/s_421008" target="_blank" data-ref="Nehemiah 8:8">Nehemiah 8:8</a>) — and heard in it a description of <em>how</em> Torah is read in public. Each phrase, they taught, names a distinct layer of the reading:</p>
+<blockquote>
+<p>"'And they read in the book, the Torah of God' — this is the scriptural text; 'distinctly' — this is the translation [Targum]… 'and they gave the sense' — these are the divisions of the text into separate verses; 'and they caused them to understand the reading' — these are the cantillation notes; and some say — these are the Masoretic traditions."</p>
+<p>— Babylonian Talmud, <a href="https://www.sefaria.org/Megillah.3a" target="_blank">Megillah 3a</a>; parallel at <a href="https://www.sefaria.org/Nedarim.37b" target="_blank">Nedarim 37b</a></p>
+</blockquote>
+<p>Two of those layers open a window onto the returned community — and, centuries later, onto a synagogue in Nazareth.</p>
+<p><strong>"Distinctly" — the Targum.</strong> The word rendered "distinctly" (Hebrew <em>meforash</em>) the rabbis identified with the <strong>Targum</strong>, the Aramaic rendering of the Hebrew text. There is a plain historical reason the tradition reaches for translation right here. Two generations in Babylon had made <strong>Aramaic</strong>, not Hebrew, the everyday language of many who came home — the very reason long stretches of the book of Ezra are themselves preserved in Aramaic (see <a href="02_Historical_Cultural_Context.md" target="_blank">Historical & Cultural Context</a>). A congregation that could no longer follow fluent Hebrew needed the reading turned into the tongue they actually spoke. To read "distinctly," on this reading, was to make the word <em>understood</em> — precisely what the verse says the reading achieved: it "caused them to understand."</p>
+<p><strong>"Caused them to understand" — the chant.</strong> The final phrase the rabbis tied to the <strong>cantillation</strong> (<em>te'amim</em>) — the traditional chant-marks that carry the melody of public reading and, just as importantly, punctuate the sentence, grouping and dividing the words so the sense lands. Jewish musical scholarship has long read <a href="https://www.blueletterbible.org/kjv/neh/8/8/s_421008" target="_blank" data-ref="Nehemiah 8:8">Nehemiah 8:8</a> as an early witness to this: Joshua Jacobson notes that the Talmud, commenting on this very passage, presents Ezra as reading the text with the <em>te'amim</em> — the cantillation — and points to both Megillah 3a and Nedarim 37b (<em>Chanting the Hebrew Bible</em>, 2nd ed., 2019, p. 445). <em>(An honest caution Jacobson himself raises: reading the fully developed chant back into Ezra's own day may be retrojection — a later, developed practice projected onto an earlier era. The tradition ties the chant to Ezra; the careful historian holds the date loosely.)</em></p>
+<p><strong>The chant still sounding in Jesus' day.</strong> A.Z. Idelsohn argues that the ancient manner of reading Scripture aloud in public was cantillation — chanted rather than merely spoken — a practice he traces at least to the first century (<em>Jewish Music in Its Historical Development</em>, 1967, p. 35). As evidence of how old the public reading of the Prophets is, he points to the Gospel account of Jesus being invited to read from the Prophets in the synagogue, citing <a href="https://www.blueletterbible.org/kjv/luk/4/17/s_977017" target="_blank" data-ref="Luke 4:17">Luke 4:17</a> (p. 38). Put those two observations together and a quiet bridge appears to this week's central insight: the scene in which Jesus stands in the Nazareth synagogue and reads Isaiah's "acceptable year of the Lord" (<a href="https://www.blueletterbible.org/kjv/luk/4/16-21/s_977016" target="_blank" data-ref="Luke 4:16-21">Luke 4:16–21</a>) would, by the custom Idelsohn describes, have been <em>chanted</em> aloud — in the same <em>te'amim</em> the tradition traces back to Ezra's Water Gate. <em>(That final step — that Jesus specifically chanted the Isaiah scroll — is a reasonable inference from Idelsohn's two claims, not a sentence he writes. Hold it as an illuminating connection, not a documented fact.)</em></p>
+<h3>LDS Connection</h3>
+<p>The layered reading of <a href="https://www.blueletterbible.org/kjv/neh/8/8/s_421008" target="_blank" data-ref="Nehemiah 8:8">Nehemiah 8:8</a> is, at heart, a theology of <em>understanding</em>: the word is not merely pronounced but translated, divided, and chanted so that hearers grasp its sense. That is the same instinct behind "the sense" the Levites gave <a href="https://www.blueletterbible.org/kjv/ezr/8/8/s_411008" target="_blank" data-ref="Ezra 8:8">(8:8)</a> and behind modern scripture teaching that presses past reading to comprehension — "study it out in your mind" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/9?lang=eng&id=p8#p8" target="_blank" data-ref="D&C 9:8">D&C 9:8</a>); the word carried "unto the understanding" (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/31?lang=eng&id=p3#p3" target="_blank" data-ref="2 Nephi 31:3">2 Nephi 31:3</a>). The oldest tradition and the newest curriculum agree: a reading that is not understood is not yet finished.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>5. Ezra and the Men of the Great Assembly</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The rabbis place Ezra at the dawn of the age of the sages — the era of the <strong>Men of the Great Assembly</strong> (<em>Anshei Knesset HaGedolah</em>), to whom tradition credits the shaping of the canon and liturgy. The Talmud names their editorial work and Ezra's own authorship together:</p>
+<blockquote>
+<p>"The members of the Great Assembly wrote [several books]… Ezra wrote his own book and the genealogy of the book of Chronicles until his period."</p>
+<p>— Babylonian Talmud, <a href="https://www.sefaria.org/Bava_Batra.15a" target="_blank">Bava Batra 15a</a></p>
+</blockquote>
+<p>The Great Assembly stands in the chain of transmission (<em>mesorah</em>) that Pirkei Avot traces from Sinai: the prophets handed the tradition "to the Men of the Great Assembly," who "said three things: Be patient in [the administration of] justice, raise many disciples and make a fence round the Torah" (<a href="https://www.sefaria.org/Pirkei_Avot.1.1" target="_blank">Pirkei Avot 1:1–2</a>). <em>(A note for accuracy: the vault sources credit Ezra with authorship and place the Great Assembly in the chain of transmission, but they do not state that Ezra personally founded or led it; this guide claims only what the sources say.)</em></p>
+<h3>LDS Connection</h3>
+<p>"Raise many disciples, and make a fence round the Torah" is a philosophy of preservation through teaching — guard the word by handing it, carefully, to the next generation. Latter-day Saints recognize the pattern in the unbroken concern to teach and transmit the gospel: "teach one another the doctrine of the kingdom" (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/88?lang=eng&id=p77#p77" target="_blank" data-ref="D&C 88:77">D&C 88:77</a>). Restoration is not only receiving the word but building the structures that keep it taught.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>6. Why the Book Is Not Named for Nehemiah</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>One of the most sobering rabbinic readings of the week concerns not Ezra but <strong>Nehemiah</strong> — and it is a lesson in humility drawn from an otherwise heroic figure. The rabbis ask why Nehemiah's memoir was subsumed under the name of Ezra:</p>
+<blockquote>
+<p>"Rabbi Yirmeya bar Abba says: The book was not named for Nehemiah because he took credit for himself and boasted about his good deeds, as it is stated: 'Remember me, God, for good' (<a href="https://www.blueletterbible.org/kjv/neh/13/31/s_426031" target="_blank" data-ref="Nehemiah 13:31">Nehemiah 13:31</a>)."</p>
+<p>— Babylonian Talmud, <a href="https://www.sefaria.org/Sanhedrin.93b" target="_blank">Sanhedrin 93b</a></p>
+</blockquote>
+<p>The same passage adds a second reason (Rav Yosef): that Nehemiah "spoke in denigration of his predecessors," pointing to his remark that "the former governors… placed burdens upon the people." Whether or not one accepts the rabbis' verdict, the reading is a striking act of moral attention: even a man who prayed and built and reformed can, in the rabbis' eyes, blur his witness by keeping one eye on his own credit.</p>
+<h3>LDS Connection</h3>
+<p>The caution lands close to the Sermon on the Mount: "Take heed that ye do not your alms before men, to be seen of them" (<a href="https://www.blueletterbible.org/kjv/mat/6/1/s_935001" target="_blank" data-ref="Matthew 6:1">Matthew 6:1</a>; cf. <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/13?lang=eng&id=p1#p1" target="_blank" data-ref="3 Nephi 13:1">3 Nephi 13:1</a>). It echoes the warning that when we "aspire to the honors of men" or seek "to gratify our pride," heaven's confirmation withdraws (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?lang=eng&id=p34-p37#p34" target="_blank" data-ref="D&C 121:34-37">D&C 121:34–37</a>). Nehemiah's "let us rise up and build" is exactly right; the rabbinic footnote simply reminds the builder to leave the remembering to God — "the joy of the Lord," not the credit of men, "is your strength" (<a href="https://www.blueletterbible.org/kjv/neh/8/10/s_421010" target="_blank" data-ref="Nehemiah 8:10">Nehemiah 8:10</a>).</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Source Table</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Source</th><th>Citation</th><th>Link</th></tr>
+<tr><td>Babylonian Talmud, Sanhedrin 21b</td><td>Ezra worthy that the Torah could have been given through him</td><td><a href="https://www.sefaria.org/Sanhedrin.21b" target="_blank">Sefaria</a></td></tr>
+<tr><td>Babylonian Talmud, Sanhedrin 21b–22a</td><td>The Torah's script re-given/restored in Ezra's day (Ashurit); Rebbi's dissent</td><td><a href="https://www.sefaria.org/Sanhedrin.22a" target="_blank">Sefaria</a></td></tr>
+<tr><td>Babylonian Talmud, Bava Kamma 82a</td><td>Ezra's ten ordinances; public Torah reading (Mon/Thu/Shabbat)</td><td><a href="https://www.sefaria.org/Bava_Kamma.82a" target="_blank">Sefaria</a></td></tr>
+<tr><td>Babylonian Talmud, Bava Batra 15a</td><td>The Great Assembly's writing; Ezra wrote his own book + Chronicles genealogy</td><td><a href="https://www.sefaria.org/Bava_Batra.15a" target="_blank">Sefaria</a></td></tr>
+<tr><td>Mishnah, Pirkei Avot 1:1–2</td><td>The Men of the Great Assembly in the chain of transmission; their three maxims</td><td><a href="https://www.sefaria.org/Pirkei_Avot.1.1" target="_blank">Sefaria</a></td></tr>
+<tr><td>Babylonian Talmud, Sanhedrin 93b</td><td>Why the book is not named for Nehemiah (self-credit; disparaging predecessors)</td><td><a href="https://www.sefaria.org/Sanhedrin.93b" target="_blank">Sefaria</a></td></tr>
+<tr><td>Babylonian Talmud, Megillah 3a</td><td><a href="https://www.blueletterbible.org/kjv/neh/8/8/s_421008" target="_blank" data-ref="Nehemiah 8:8">Nehemiah 8:8</a> parsed as Scripture / Targum / verse-division / cantillation (te'amim)</td><td><a href="https://www.sefaria.org/Megillah.3a" target="_blank">Sefaria</a></td></tr>
+<tr><td>Babylonian Talmud, Nedarim 37b</td><td>Parallel parsing of <a href="https://www.blueletterbible.org/kjv/neh/8/8/s_421008" target="_blank" data-ref="Nehemiah 8:8">Nehemiah 8:8</a> (Targum; verse-division; te'amim / masoret)</td><td><a href="https://www.sefaria.org/Nedarim.37b" target="_blank">Sefaria</a></td></tr>
+<tr><td>Joshua R. Jacobson, <em>Chanting the Hebrew Bible</em> (2nd ed., 2019), p. 445</td><td>The Talmud's parse tied to Ezra's chanting; cites Megillah 3a & Nedarim 37b (with a retrojection caveat)</td><td>NAS library (EPUB)</td></tr>
+<tr><td>A.Z. Idelsohn, <em>Jewish Music in Its Historical Development</em> (1967), pp. 35, 38</td><td>First-century public reading as cantillation; Jesus invited to read the Prophets (cites <a href="https://www.blueletterbible.org/kjv/luk/4/17/s_977017" target="_blank" data-ref="Luke 4:17">Luke 4:17</a>)</td><td>NAS library (EPUB)</td></tr>
+</table>
+<hr>
+<p><em>All six sections are verified against Sacred Texts vault sources; §4 additionally draws on two NAS-library works (Jacobson, Idelsohn), cited with page numbers. Next file: <a href="06_Teaching_Applications.md" target="_blank">06_Teaching_Applications.md</a></em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 6: WEEK 31: TEACHING APPLICATIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">6. Week 31: Teaching Applications</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>1. Family</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ul>
+<li><strong>Build it in layers.</strong> Restoration came in stages — altar, foundation, temple, wall, and finally the word (<a href="https://www.blueletterbible.org/kjv/ezr/3/1/s_406001" target="_blank" data-ref="Ezra 3">Ezra 3; 6</a>; <a href="https://www.blueletterbible.org/kjv/neh/6/1/s_419001" target="_blank" data-ref="Nehemiah 6">Nehemiah 6; 8</a>). Build something together stone by stone (blocks, cans, even a snack tower), naming one thing your family is "building" with each layer (faith, kindness, a habit). Connect to "Let us rise up and build… So they strengthened their hands for this good work" (<a href="https://www.blueletterbible.org/kjv/neh/2/18/s_415018" target="_blank" data-ref="Nehemiah 2:18">Nehemiah 2:18</a>).</li>
+<li><strong>"Prayer and a watch."</strong> Nehemiah "made our prayer unto our God, and set a watch" <a href="https://www.blueletterbible.org/kjv/ezr/4/9/s_407009" target="_blank" data-ref="Ezra 4:9">(4:9)</a> — he prayed <em>and</em> acted. Pick one family challenge and decide together on both a prayer <em>and</em> a practical step. Talk about why we need both.</li>
+<li><strong>Younger children:</strong> act out the wall-builders who worked "with one of his hands… and with the other hand held a weapon" <a href="https://www.blueletterbible.org/kjv/ezr/4/17/s_407017" target="_blank" data-ref="Ezra 4:17">(4:17)</a>. Let them build with one hand while "guarding" — then talk about how we keep doing good even when it's hard.</li>
+</ul>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>2. Sunday School</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ul>
+<li><strong>Why does restoration come in stages?</strong> Chart the layers — altar → foundation → temple → wall → the word read and understood (<a href="https://www.blueletterbible.org/kjv/neh/8/1/s_421001" target="_blank" data-ref="Nehemiah 8">Nehemiah 8</a>). Ask: why might God rebuild a people gradually rather than all at once? What "stage" is the class in?</li>
+<li><strong>Seek, do, teach.</strong> Put <a href="https://www.blueletterbible.org/kjv/ezr/7/10/s_410010" target="_blank" data-ref="Ezra 7:10">Ezra 7:10</a> on the board and trace its order (see <strong>Key Passages</strong>). Discuss what happens when we reverse it — teaching what we haven't lived, or trying to obey what we haven't sought.</li>
+<li><strong>Distraction vs. opposition.</strong> Nehemiah faced ridicule, threats, <em>and</em> a "come, let us meet together" distraction <a href="https://www.blueletterbible.org/kjv/ezr/6/2-3/s_409002" target="_blank" data-ref="Ezra 6:2-3">(6:2–3)</a>. Discuss the difference between opposition to endure, a need to answer, and a distraction to refuse — and how "I am doing a great work" helps us tell them apart.</li>
+</ul>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>3. Primary</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ul>
+<li><strong>"Let us rise up and build!"</strong> Build a wall of blocks together, each child adding a block for a good thing they can help build (a happy home, a friendship, faith). Sing a song "as the builders."</li>
+<li>**Nehemiah prayed <em>and</em> worked.** Teach simply: Nehemiah prayed to Heavenly Father <a href="https://www.blueletterbible.org/kjv/ezr/2/4/s_405004" target="_blank" data-ref="Ezra 2:4">(2:4)</a> <em>and</em> did his part <a href="https://www.blueletterbible.org/kjv/ezr/2/18/s_405018" target="_blank" data-ref="Ezra 2:18">(2:18)</a>. We can do both — pray, then help.</li>
+<li><strong>The happiest reading day.</strong> Tell the story of the people gathered to hear the scriptures at the Water Gate (<a href="https://www.blueletterbible.org/kjv/neh/8/1/s_421001" target="_blank" data-ref="Nehemiah 8">Nehemiah 8</a>), and that they were told, "the joy of the Lord is your strength" <a href="https://www.blueletterbible.org/kjv/ezr/8/10/s_411010" target="_blank" data-ref="Ezra 8:10">(8:10)</a>. The scriptures can make us happy and strong.</li>
+</ul>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>4. Youth</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ul>
+<li><strong>"I am doing a great work… I cannot come down" (<a href="https://www.blueletterbible.org/kjv/neh/6/3/s_419003" target="_blank" data-ref="Nehemiah 6:3">Nehemiah 6:3</a>).</strong> Name the "great work" of these years (building testimony, preparing, real friendships) and the "come down and meet" invitations that pull teens off it (endless scrolling, drama, lowering a standard "just this once"). Pair with President Uchtdorf's talk (see <strong>Key Passages</strong>). What is one thing you will refuse to "come down" for this week?</li>
+<li><strong>Seek → do → teach.</strong> Ezra "prepared his heart to seek… to do… and to teach" <a href="https://www.blueletterbible.org/kjv/ezr/7/10/s_410010" target="_blank" data-ref="Ezra 7:10">(7:10)</a>. Which step do you skip? Challenge each youth to move one notch — from consuming the word, to living it, to sharing it.</li>
+<li><strong>Building while mocked.</strong> Sanballat and Tobiah ridiculed the builders (<a href="https://www.blueletterbible.org/kjv/neh/4/1/s_417001" target="_blank" data-ref="Nehemiah 4">Nehemiah 4</a>). How do you keep doing something good when people online or in person make fun of it?</li>
+</ul>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>5. Institute</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ul>
+<li><strong>Providence and the "secular" record.</strong> Cyrus's decree, the Cyrus Cylinder, and the Persian policy of return (see <strong>Historical Cultural Context</strong>) let a class discuss how Latter-day Saints see God's hand in history — <em>and</em> how to do so honestly, without over-reading an artifact (the Cylinder does not name the Jews). "The Lord stirred up the spirit of Cyrus" (<a href="https://www.blueletterbible.org/kjv/ezr/1/1/s_404001" target="_blank" data-ref="Ezra 1:1">Ezra 1:1</a>) — how do we discern providence responsibly?</li>
+<li><strong>Ezra, the second Moses.</strong> The rabbinic reverence for Ezra as restorer of the law and founder of public Torah reading (see <strong>Jewish Perspective</strong>) opens a discussion of the <em>word</em> at the center of a restored covenant people — and the parallels to the Restoration.</li>
+<li><strong>The Nehemiah caution.</strong> The rabbis ask why the book is not named for Nehemiah and answer: he kept one eye on his own credit (Sanhedrin 93b; see <strong>Jewish Perspective</strong>). Discuss doing genuinely great work while leaving the remembering to God.</li>
+</ul>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>6. Missionary Preparation</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ul>
+<li>**Prayer <em>and</em> action.** Before Nehemiah answered the king he "prayed to the God of heaven" <a href="https://www.blueletterbible.org/kjv/ezr/2/4/s_405004" target="_blank" data-ref="Ezra 2:4">(2:4)</a>; as he built he "made our prayer… and set a watch" <a href="https://www.blueletterbible.org/kjv/ezr/4/9/s_407009" target="_blank" data-ref="Ezra 4:9">(4:9)</a>. Practice pairing real prayer with real effort — the posture of effective missionary work.</li>
+<li><strong>Staying on the wall.</strong> "I am doing a great work, so that I cannot come down" <a href="https://www.blueletterbible.org/kjv/ezr/6/3/s_409003" target="_blank" data-ref="Ezra 6:3">(6:3)</a>. Missionaries face constant invitations to lose focus. Discuss how to stay on the essential work amid distraction, discouragement, and mockery.</li>
+<li><strong>Teach what you have lived.</strong> Ezra's seek→do→teach <a href="https://www.blueletterbible.org/kjv/ezr/7/10/s_410010" target="_blank" data-ref="Ezra 7:10">(7:10)</a>: you teach the gospel most powerfully after you have sought and lived it. Practice bearing testimony of something you have actually done, not only believe.</li>
+</ul>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>7. Personal Study</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ul>
+<li><strong>The layers of your own rebuilding (<a href="https://www.blueletterbible.org/kjv/ezr/3/1/s_406001" target="_blank" data-ref="Ezra 3">Ezra 3–6</a>; <a href="https://www.blueletterbible.org/kjv/neh/6/1/s_419001" target="_blank" data-ref="Nehemiah 6">Nehemiah 6; 8</a>).</strong> Ask where you are in the stages: is your "altar" (daily worship) rebuilt? Your "wall" (the boundaries that protect you)? Your "word" (understanding, not just reading)? Name the next layer to build.</li>
+<li><strong>A "great work" audit (<a href="https://www.blueletterbible.org/kjv/neh/6/3/s_419003" target="_blank" data-ref="Nehemiah 6:3">Nehemiah 6:3</a>).</strong> Write down the great work God has given you right now, and the specific "come down and meet" invitations that most often pull you off it. Decide your answer in advance.</li>
+<li><strong>From reading to understanding to joy (<a href="https://www.blueletterbible.org/kjv/neh/8/8-10/s_421008" target="_blank" data-ref="Nehemiah 8:8-10">Nehemiah 8:8–10</a>).</strong> Take one passage this week and don't just read it — give "the sense" to yourself (look up a word, cross-reference, restate it plainly). Notice whether understanding turns duty into "the joy of the Lord."</li>
+</ul>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 7: WEEK 31: STUDY QUESTIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">7. Week 31: Study Questions</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>God's Hand and the Decree (Ezra 1)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li>The narrator says "the Lord stirred up the spirit of Cyrus" <a href="https://www.blueletterbible.org/kjv/ezr/1/1/s_404001" target="_blank" data-ref="Ezra 1:1">(1:1)</a> — crediting God, not the king, for the decree. Where in your own life have you later recognized God's hand in events that felt entirely ordinary or "secular" at the time?</li>
+</ol>
+<ol>
+<li>God kept a seventy-year promise (<a href="https://www.blueletterbible.org/kjv/jer/29/10/s_774010" target="_blank" data-ref="Jeremiah 29:10">Jeremiah 29:10</a>) precisely, "that the word of the Lord… might be fulfilled" <a href="https://www.blueletterbible.org/kjv/ezr/1/1/s_404001" target="_blank" data-ref="Ezra 1:1">(1:1)</a>. How does watching God keep a long promise change the way you wait on promises that haven't been fulfilled yet?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Small Beginnings (Ezra 3)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li>When the foundation was laid, the young shouted for joy while the old men wept, "so that the people could not discern the noise of the shout of joy from the noise of the weeping" <a href="https://www.blueletterbible.org/kjv/ezr/3/12-13/s_406012" target="_blank" data-ref="Ezra 3:12-13">(3:12–13)</a>. When has a good new beginning also carried real grief for you? Can both be offered to God as worship?</li>
+</ol>
+<ol>
+<li>To this same generation, Haggai promised the "latter house" would be greater though it looked smaller (<a href="https://www.blueletterbible.org/kjv/hag/2/3/s_911003" target="_blank" data-ref="Haggai 2:3">Haggai 2:3, 9</a>). Where are you tempted to despise a small beginning — in the Church, in a relationship, in yourself?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Ezra: Seek, Do, Teach (Ezra 7)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li>Ezra "prepared his heart to seek the law of the Lord, and to do it, and to teach" <a href="https://www.blueletterbible.org/kjv/ezr/7/10/s_410010" target="_blank" data-ref="Ezra 7:10">(7:10)</a>. Which of the three — seek, do, teach — do you most often skip? What breaks down when the order is reversed?</li>
+</ol>
+<ol>
+<li>Ezra <em>prepared</em> his heart to seek, as a deliberate act. What does preparing your heart to seek look like, practically, before you open the scriptures?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Rise Up and Build (Nehemiah 2)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li>Nehemiah showed the people the ruins honestly <em>and</em> testified of "the hand of my God" before calling them to build <a href="https://www.blueletterbible.org/kjv/ezr/2/17-18/s_405017" target="_blank" data-ref="Ezra 2:17-18">(2:17–18)</a>. Why are both the honest assessment and the testimony needed to move people from discouragement to action?</li>
+</ol>
+<ol>
+<li>Before Nehemiah answered the king, "so I prayed to the God of heaven" <a href="https://www.blueletterbible.org/kjv/ezr/2/4/s_405004" target="_blank" data-ref="Ezra 2:4">(2:4)</a> — a prayer that fit between a question and its answer. What would it change to weave short, silent prayers into your ordinary conversations and decisions?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Great Work (Nehemiah 4; 6)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li>The builders worked with a tool in one hand and a weapon in the other, and "made our prayer unto our God, and set a watch" <a href="https://www.blueletterbible.org/kjv/ezr/4/9/s_407009" target="_blank" data-ref="Ezra 4:9">(4:9, 17)</a>. Where in your life are you tempted to choose <em>either</em> prayer <em>or</em> practical effort, when God asks for both?</li>
+</ol>
+<ol>
+<li>Nehemiah's hardest temptation was not a threat but a distraction — "come, let us meet together" <a href="https://www.blueletterbible.org/kjv/ezr/6/2/s_409002" target="_blank" data-ref="Ezra 6:2">(6:2)</a>. His answer: "I am doing a great work, so that I cannot come down" <a href="https://www.blueletterbible.org/kjv/ezr/6/3/s_409003" target="_blank" data-ref="Ezra 6:3">(6:3)</a>. What are the "come down and meet" invitations that most pull you off your most important work?</li>
+</ol>
+<ol>
+<li>How do you tell the difference between a distraction to refuse and a legitimate need you should answer? What helps you know which is which in the moment?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Word Understood (Nehemiah 8)</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li>The Levites "gave the sense, and caused them to understand the reading" <a href="https://www.blueletterbible.org/kjv/ezr/8/8/s_411008" target="_blank" data-ref="Ezra 8:8">(8:8)</a>. What is the difference between hearing scripture read and actually understanding it? Who has "given you the sense" of the scriptures?</li>
+</ol>
+<ol>
+<li>The people wept when they understood how far they had fallen, but were told, "the joy of the Lord is your strength… neither be ye sorry" <a href="https://www.blueletterbible.org/kjv/ezr/8/9-10/s_411009" target="_blank" data-ref="Ezra 8:9-10">(8:9–10)</a>. When has understanding a hard truth in scripture led you not to despair but to strength?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Across the Whole Week</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ol>
+<li>The restoration came in layers — altar, foundation, temple, wall, and finally the word read and understood. Trace the "layers" of your own spiritual rebuilding: which is solid, and which still needs building?</li>
+</ol>
+<ol>
+<li>Every stage of the work drew opposition — refusal, ridicule, threats, even internal injustice (<a href="https://www.blueletterbible.org/kjv/ezr/4/1/s_407001" target="_blank" data-ref="Ezra 4">Ezra 4</a>; <a href="https://www.blueletterbible.org/kjv/neh/4/1/s_417001" target="_blank" data-ref="Nehemiah 4">Nehemiah 4–6</a>) — yet none of it stopped the builders. What does this week teach you about how to read opposition to a good work, rather than treating it as a sign you should quit?</li>
+</ol>
+</div>
+</div>
+
+            </div>
+        </div>
+
+</div>
