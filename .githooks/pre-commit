@@ -1,0 +1,8 @@
+#!/bin/bash
+WEEK_FILES=$(git diff --cached --name-only | grep -c "content/week")
+if [ "$WEEK_FILES" -gt 5 ]; then
+    echo "⛔ BLOCKED: This commit modifies $WEEK_FILES week content files."
+    echo "Mass regeneration of week files is not allowed."
+    echo "Use --no-verify to override if you're sure."
+    exit 1
+fi

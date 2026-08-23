@@ -1,0 +1,4 @@
+#!/bin/sh
+# post-commit hook: auto-update Obsidian Developer Code Index after every commit
+cd /Users/kymberbrockbank/Developer/cfm-corner-tools
+.venv/bin/python3 scripts/update_code_index.py

@@ -1,0 +1,80 @@
+#!/bin/sh
+#
+# Refuse to publish the live site by accident.
+#
+# WHY THIS EXISTS
+#   cfm-corner-site, cfm-corner-staging and cfm-week34 are THREE WORKTREES ON ONE .git,
+#   sharing one object store and one remote. `git push origin main` needs no checkout, so
+#   ANY of the three can publish main even though only cfm-corner-staging has it checked out.
+#
+#   On 2026-08-23 nine commits of week 35/36 work sat unpushed on main under Kymber's
+#   standing rule — "I do not want anything pushed live until I have reviewed and authorized
+#   it." That hold was three separate sessions each choosing correctly, every time, forever.
+#   fieldguide put the real shape of it best: the hold is not "nobody pushes", it is
+#   "nobody pushes MAIN specifically", which is a narrower thing to hold and easier to trip.
+#
+#   This turns the discipline into a mechanism. It does not decide anything; it refuses to
+#   let main go out unless someone states plainly that they mean it.
+#
+# WHAT IT DOES NOT DO
+#   It does not block feature branches or PR pushes. Only main, only when unauthorised.
+#
+# TO PUBLISH DELIBERATELY, after Kymber has authorised it:
+#   CFM_PUBLISH_AUTHORISED="kymber-said-yes" git push origin main
+#
+# CONTROL: run `.git/hooks/pre-push --self-test` — it proves the hook can REFUSE, not just
+# that it can pass. A guard that has only ever been seen to allow is not known to work.
+
+PROTECTED="refs/heads/main"
+TOKEN="kymber-said-yes"
+
+if [ "$1" = "--self-test" ]; then
+  fail=0
+  out=$(printf 'refs/heads/main aaa refs/heads/main bbb\n' | CFM_PUBLISH_AUTHORISED="" "$0" origin url 2>&1)
+  case "$?" in
+    0) echo "  CONTROL FAILED: an unauthorised main push was ALLOWED"; fail=1 ;;
+    *) echo "  ok: unauthorised main push refused" ;;
+  esac
+  printf 'refs/heads/feature aaa refs/heads/feature bbb\n' | CFM_PUBLISH_AUTHORISED="" "$0" origin url >/dev/null 2>&1
+  case "$?" in
+    0) echo "  ok: a feature branch is not blocked" ;;
+    *) echo "  CONTROL FAILED: a non-main push was refused"; fail=1 ;;
+  esac
+  printf 'refs/heads/main aaa refs/heads/main bbb\n' | CFM_PUBLISH_AUTHORISED="$TOKEN" "$0" origin url >/dev/null 2>&1
+  case "$?" in
+    0) echo "  ok: an authorised main push is allowed" ;;
+    *) echo "  CONTROL FAILED: the authorised path is blocked — the hook cannot be satisfied"; fail=1 ;;
+  esac
+  [ "$fail" -eq 0 ] && echo "  3 of 3 controls pass (1 refusal, 2 admissions proved)"
+  exit "$fail"
+fi
+
+pushing_main=0
+while read -r _local_ref _local_sha remote_ref _remote_sha; do
+  [ "$remote_ref" = "$PROTECTED" ] && pushing_main=1
+done
+
+[ "$pushing_main" -eq 0 ] && exit 0
+[ "$CFM_PUBLISH_AUTHORISED" = "$TOKEN" ] && exit 0
+
+cat >&2 <<'MSG'
+
+  REFUSED — this push would publish the live site.
+
+  main is the published branch. All three cfm worktrees share one .git and one remote,
+  so this push reaches cfmcorner.com regardless of which directory you are standing in.
+
+  Kymber's standing rule: "I do not want anything pushed live until I have reviewed and
+  authorized it."
+
+  NOTE: `draft:` does NOT gate static/. Files under static/ are served directly, so a
+  fragment there publishes at a public URL the moment main lands.
+
+  If she HAS authorised this push:
+
+      CFM_PUBLISH_AUTHORISED="kymber-said-yes" git push origin main
+
+  If you are not sure whether she has, she has not.
+
+MSG
+exit 1
