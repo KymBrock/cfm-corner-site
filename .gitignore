@@ -25,3 +25,10 @@ _source-maps/
 # disk so the staging preview at /weeks/36/ keeps working.
 # TO RESTORE: delete these lines, then `git add -f static/content/week36/study-guide.html`
 static/content/week36/study-guide.html
+
+# Lexicon backups are working artefacts and must NEVER be published. static/ is served
+# directly, so a .bak at /data/ is publicly fetchable — and this one carried the 28
+# CORRUPT theophoric entries the repair had just fixed, i.e. a public copy of the
+# divine name resolving to a man. Written by verification/repair_theophoric_originals.py.
+static/data/*.bak-*
+static/data/*.json.bak*
