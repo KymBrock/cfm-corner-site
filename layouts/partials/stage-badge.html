@@ -25,8 +25,27 @@
 {{- $m := index $meta $stage -}}
 {{- if $m -}}
 <span class="stage-badge stage-badge--{{ $stage }}" style="display:inline-block; vertical-align:middle; margin-left:8px; padding:2px 9px; border-radius:999px; font-size:0.68em; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; background:{{ $m.bg }}; color:{{ $m.fg }}; border:1px solid {{ $m.bd }}; white-space:nowrap;">{{ $m.label }}</span>
+{{- /*
+  Blockers render as a BLOCK below the badge, one item per line.
+
+  They used to be an inline-block span with vertical-align:middle sitting beside the
+  badge — written for a short note like "waiting on: videos". Week 35 carries four
+  blockers, one of them 300+ characters. An inline-block that tall grows the header's
+  line box, so WEEK 35, the dates and the badge were dragged out of alignment and the
+  note swallowed the card. And `delimit ", "` joined four items with commas while the
+  items themselves contain commas and em-dashes, so the boundaries vanished and four
+  notes read as one run-on sentence.
+
+  display:block on a <span> keeps the markup valid inside a heading, which a <div>
+  would not. Still staging-only: the enclosing `if` gates on isPreview/IsServer.
+*/ -}}
 {{- with .Params.stage_blockers }}
-<span class="stage-blockers" style="display:inline-block; vertical-align:middle; margin-left:6px; font-size:0.72em; color:#7a6a55; font-style:italic;">waiting on: {{ delimit . ", " }}</span>
+<span class="stage-blockers" style="display:block; margin:8px 0 0 0; font-size:0.78em; line-height:1.5; color:#7a6a55; font-style:normal; text-align:left; max-width:70ch;">
+  <span style="display:block; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; font-size:0.85em; color:#8a6116; margin-bottom:3px;">waiting on — {{ len . }} item{{ if ne (len .) 1 }}s{{ end }}</span>
+  {{- range . }}
+  <span style="display:block; padding-left:14px; text-indent:-14px; margin-bottom:2px;">•&nbsp;{{ . }}</span>
+  {{- end }}
+</span>
 {{- end }}
 {{- end -}}
 {{- end -}}
