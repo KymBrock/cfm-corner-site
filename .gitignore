@@ -17,3 +17,11 @@ _source-maps/
 # fail — that is what broke Cloudflare Pages builds at the clone step.
 .claude/worktrees/
 .session-checkpoints/
+
+# HELD BACK BY KYMBER'S DECISION, 2026-08-24 — restore after Friday's videos.
+# static/ is served DIRECTLY and is NOT gated by draft:, so pushing this file makes
+# cfmcorner.com/content/week36/study-guide.html publicly fetchable — 1,125 lines of a
+# week she has said she is still working on. Untracked, NOT deleted: the file stays on
+# disk so the staging preview at /weeks/36/ keeps working.
+# TO RESTORE: delete these lines, then `git add -f static/content/week36/study-guide.html`
+static/content/week36/study-guide.html
