@@ -146,6 +146,27 @@
       .blb-popup .bp-senses ul li::before { content: "\2014"; color: #999; margin-right: 5px; }
       /* Proper-name meaning. Sourced from public-domain lexica; the reliability tag
          travels with it so a reader never sees the meaning without its weight. */
+      /* "In the Septuagint, renders" — the Greek→Hebrew correspondence.
+         Kymber, 2026-08-24: "I would like to also see how the LXX compares to the Tanakh.
+         What are the associated Hebrew words between the two?"
+         Every pair is verified word-by-word in the open Rahlfs LXX against OSHB Hebrew;
+         the count is how many verses actually show the pairing. */
+      .blb-popup .bp-lxx { margin-top: 8px; padding-top: 7px; border-top: 1px dashed #e0dccf; }
+      .blb-popup .bp-lxx-label {
+        font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+        color: #8a6116; margin-bottom: 4px;
+      }
+      .blb-popup .bp-lxx-row { display: flex; gap: 7px; align-items: baseline; margin: 2px 0; font-size: 0.9em; }
+      .blb-popup .bp-lxx-heb {
+        font-family: 'SBL Hebrew', 'Ezra SIL', 'Times New Roman', serif; direction: rtl;
+        font-size: 1.1em; min-width: 4.6em;
+      }
+      .blb-popup .bp-lxx-tr { font-style: italic; color: var(--sage-dark, #4a6b52); min-width: 4.6em; }
+      .blb-popup .bp-lxx-tr a { color: inherit; text-decoration: none; border-bottom: 1px dotted #9ab894; pointer-events: auto; }
+      .blb-popup .bp-lxx-gl { color: #444; flex: 1; }
+      .blb-popup .bp-lxx-ct { color: #a2957f; font-size: 0.8em; }
+      .blb-popup .bp-lxx-row.unconfirmed { opacity: .72; }
+      .blb-popup .bp-lxx-row.unconfirmed .bp-lxx-gl { font-style: italic; color: #8d8578; }
       .blb-popup .bp-ety { margin-top: 7px; padding-top: 6px; border-top: 1px solid #e8e8e8; }
       .blb-popup .bp-ety-label {
         font-size: 0.66em; letter-spacing: 0.07em; text-transform: uppercase;
@@ -631,6 +652,50 @@
         return '<ul class="bp-senses">' + level(senses) + '</ul>';
       }
 
+      // "In the Septuagint, renders" — which Hebrew word(s) a Greek word translates.
+      //
+      // Returns '' when the entry has no `lxx`, so every other entry renders exactly as
+      // before. Same additive shape as sensesHtml above: 11 of 14,271 entries carry this
+      // today, and the other 14,260 take the old path untouched.
+      //
+      // PROVENANCE. Each pair is CONFIRMED word-by-word against two open sources — the
+      // Rahlfs LXX (Strong's tagging from Open Scriptures GreekResources) and OSHB
+      // (CC BY 4.0) — by requiring that some verse actually carries the Greek number and
+      // the Hebrew number together. Kymber, 2026-08-24: "this is a matter of fact, not
+      // copyright... that can be verified, with or without the CCATS." It can, and this is
+      // that verification. Nothing restricted is read or shipped.
+      //
+      // WHY EVIDENCE AND NOT SPELLING. Resolving these by matching consonants put padah at
+      // H3301 "Iphdeiah", a proper name in Chronicles, on week 35's own redemption word
+      // study. Co-occurrence kills that: Iphdeiah never appears in a verse where lytroo
+      // does. A word we cannot confirm renders UNLINKED rather than guessed — unlinked and
+      // right beats linked and wrong.
+      function lxxHtml(e) {
+        if (!e || !e.lxx || !e.lxx.length) return '';
+        var rows = '';
+        for (var i = 0; i < e.lxx.length; i++) {
+          var x = e.lxx[i] || {};
+          if (x.linked && x.strongs) {
+            var href = 'https://www.blueletterbible.org/lexicon/'
+                     + String(x.strongs).toLowerCase() + '/kjv/wlc/0-1/';
+            rows += '<div class="bp-lxx-row">'
+                 +   '<span class="bp-lxx-heb">' + escHtml(x.heb || '') + '</span>'
+                 +   '<span class="bp-lxx-tr"><a href="' + href + '" target="_blank" rel="noopener">'
+                 +     escHtml(x.translit || '') + '</a></span>'
+                 +   '<span class="bp-lxx-gl">' + escHtml(x.gloss || '') + '</span>'
+                 +   (x.count ? '<span class="bp-lxx-ct">' + x.count + '×</span>' : '')
+                 + '</div>';
+          } else {
+            rows += '<div class="bp-lxx-row unconfirmed">'
+                 +   '<span class="bp-lxx-heb">' + escHtml(x.heb || '') + '</span>'
+                 +   '<span class="bp-lxx-gl">not confirmed — shown unlinked</span>'
+                 + '</div>';
+          }
+        }
+        return '<div class="bp-lxx"><div class="bp-lxx-label">In the Septuagint, renders</div>'
+             + rows + '</div>';
+      }
+
       // Liddell-Scott-Jones on demand. STEPBible TFLSJ, CC BY 4.0; citations preserved.
       // 15.6 MB, so it is NEVER fetched on page load — only when a reader clicks the
       // button, and then cached for the rest of the visit. That is the whole point of
@@ -832,6 +897,7 @@
             (sensesHtml(e.senses) || '<div class="bp-body">' + definition + '</div>') +
             (verse ? '<div class="bp-ref">' + verse + '</div>' : '') +
             etymologyHtml(e) +
+            lxxHtml(e) +
             (e.has_lsj ? '<div class="bp-lsj-wrap"><button type="button" class="bp-lsj-btn" '
               + 'data-code="' + escHtml(code) + '">Full classical entry (LSJ) ▸</button>'
               + '<div class="bp-lsj-body" hidden></div></div>' : '') +
