@@ -105,3 +105,19 @@ Each word study (Section 4) must include ALL of the following:
 ---
 
 *Version 1.2 — 2026-03-01*
+
+---
+
+## INSIGHTS-SPEC.md — the weekly Insights essay  *(added 2026-08-15, PROPOSED)*
+
+**Path:** `K Master Vault/.../OT_2026/Templates/INSIGHTS-SPEC.md`
+
+The ninth spec, and arguably the one that should have come first: `insights.html` is
+Kymber's favourite deliverable and had **no spec at all** — this index listed eight, none
+covering it beyond a directory mention (Fable audit, finding K1).
+
+Derived from weeks 30–34 rather than invented: three fixed openers, 5–9 week-specific
+sections, `The Invitation` as the closer. Also carries the outbound-link lanes (including
+maps) and the image-credit requirement.
+
+**Awaiting her sign-off** — codifying taste is a content decision.

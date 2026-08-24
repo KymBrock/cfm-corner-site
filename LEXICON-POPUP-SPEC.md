@@ -166,6 +166,94 @@ This file grows as new terms are introduced each week. The converter reads it du
 
 ---
 
+## ⚖️ THE LINK GOES ON THE TRANSLITERATION — Kymber, 2026-08-21
+
+> *"Links should always be added to the transliteration, not the Hebrew because I do not want
+> the niqqud obstructed."*
+
+**This governs, and it resolves an ambiguity that has been in this file for months.** Link
+styling — underline, colour, hover state — sits directly on top of the vowel points, which are
+the smallest marks on the page and the ones a reader most needs to see.
+
+**CORRECT** — link on the transliteration, Hebrew bare beside it:
+
+```html
+<a href="…/h1254/…" data-lexicon data-strongs="H1254" data-translit="bārāʾ"
+   data-original="בָּרָא" data-lang="hebrew"><em>bārāʾ</em></a> (בָּרָא)
+```
+
+**WRONG** — link wrapping the Hebrew, niqqud obstructed:
+
+```html
+<em>bārāʾ</em> (<a href="…/h1254/…" …>בָּרָא</a>)
+```
+
+### How this reconciles with the Comprehensive Coverage Rule below
+
+The rule below says every Hebrew character in body text must sit inside a lexicon `<a>`. **Read
+literally that contradicts this section, and it is the reason 13 Hebrew terms on week 35 shipped
+with links on the script** — יְהוָה, אֱלֹהִים, נְגִינָה, מַשְׂכִּיל, סֶלָה.
+
+**The reconciliation is already in this file**, in the "do NOT chase zero" bullet: *"Intentionally
+bare script is required beside transliterations."*
+
+So the coverage rule means: **every Hebrew term must be COVERED by a lexicon link — not that the
+link must wrap the Hebrew itself.** Where a transliteration stands beside the Hebrew, the link
+goes on the transliteration and the script stays bare. **A bare Hebrew word beside a linked
+transliteration is correct and must not be "fixed."**
+
+---
+
+## ⚖️ MULTI-WORD PHRASES — every word gets its own link
+
+**Kymber, 2026-08-21:** *"There should be a segment on how phrases need to be divided word for
+word so every word is accounted for."*
+
+A Hebrew phrase is not one lexicon entry. **Each word has its own Strong's number, its own
+meaning, and its own popup** — and a reader who hovers a two-word phrase and gets one definition
+has been told less than the text contains.
+
+**CORRECT** — `ʾerek ʾappayim (אֶרֶךְ אַפַּיִם)`, "slow to anger," is **two words**:
+
+```html
+<a … data-strongs="H750" data-translit="ʾerek" data-original="אֶרֶךְ"><em>ʾerek</em></a>
+<a … data-strongs="H639" data-translit="ʾappayim" data-original="אַפַּיִם"><em>ʾappayim</em></a>
+(אֶרֶךְ אַפַּיִם)
+```
+
+**WRONG** — the phrase linked once, to whichever word the lookup happened to find:
+
+```html
+<a … data-strongs="H750">ʾerek ʾappayim</a> (אֶרֶךְ אַפַּיִם)
+```
+
+### Rules
+
+1. **Split on the Hebrew word boundary, not on the English gloss.** *"Slow to anger"* is three
+   English words and two Hebrew ones. **Follow the Hebrew.**
+2. **Every word gets an entry**, including the ones that look unimportant — the definite
+   article, the conjunction, the preposition. If a word is in the phrase it is in the text, and
+   *"every word is accounted for."*
+3. **The gloss belongs to the phrase; the definitions belong to the words.** Give the phrase's
+   meaning in the prose — *"long of nostril"* — and let each popup carry its own word.
+4. **A hyphenated compound is still two words** where Hebrew treats it as two:
+   *halelû-yāh* is *halelû* (H1984) + *Yāh* (H3050).
+5. **Where a word repeats in the phrase, link each occurrence.** A reader may hover either.
+6. **If a word has no Strong's number** — some particles do not — say so rather than attaching a
+   neighbouring number. A wrong Strong's number is worse than a missing link, because the popup
+   will confidently show a different word.
+
+### Worked examples from live weeks
+
+| phrase | words | Strong's |
+|---|---|---|
+| *ʾerek ʾappayim* (אֶרֶךְ אַפַּיִם) | *ʾerek* · *ʾappayim* | H750 · H639 |
+| *nishmat chayyim* (נִשְׁמַת חַיִּים) | *nishmat* · *chayyim* | H5397 · H2416 |
+| *halelû-yāh* (הַלְלוּ־יָהּ) | *halelû* · *Yāh* | H1984 · H3050 |
+| *lēb ṭāhôr* (לֵב טָהוֹר) | *lēb* · *ṭāhôr* | H3820 · H2889 |
+
+---
+
 ## Comprehensive Coverage Rule
 
 > **Every occurrence of Hebrew/Greek Unicode characters in body text must be inside a lexicon `<a>` tag with full `data-*` attributes.** The only exception is accordion `<button>` headings, where nesting `<a>` inside `<button>` causes click-handler conflicts.
