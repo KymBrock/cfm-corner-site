@@ -1,0 +1,1131 @@
+<style>
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+        .site-header {
+            background: linear-gradient(135deg, #d4c4a8 0%, #8B7355 100%);
+            color: white; padding: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px;
+        }
+        .site-header-content { max-width: 1000px; margin: 0 auto; padding: 0 20px; text-align: center; }
+        .site-title { font-size: 2em; margin-bottom: 5px; }
+        .site-subtitle { font-size: 1.1em; opacity: 0.9; }
+
+        .header-section {
+            background-color: #8B7355; color: white; padding: 40px; border-radius: 12px;
+            margin-bottom: 30px; text-align: center;
+        }
+        .header-section .week-label { font-size: 1em; text-transform: uppercase; letter-spacing: 2px; opacity: 0.9; margin-bottom: 10px; }
+        .header-section h1 { font-size: 2.5em; font-weight: 300; margin-bottom: 10px; }
+        .header-section .subtitle { font-size: 1.3em; font-style: italic; margin-bottom: 20px; }
+        .header-section .date-location { font-size: 1.1em; opacity: 0.95; }
+
+        .quick-links { text-align: center; margin: 20px 0; }
+        .quick-link {
+            display: inline-block; background: #8B7355; color: white; padding: 10px 20px;
+            border-radius: 8px; text-decoration: none; margin: 5px; transition: all 0.3s;
+        }
+        .quick-link:hover { background: #6B5344; transform: translateY(-2px); }
+
+        .button-container { text-align: center; margin: 30px 0; }
+        .expand-button {
+            background-color: #8B7355; color: white; border: none; padding: 12px 24px;
+            margin: 5px 10px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.1em;
+        }
+        .expand-button:hover { background-color: #6B5344; }
+
+        .sg-accordion-section {
+            background-color: #8B7355; color: white; cursor: pointer; padding: 18px; width: 100%;
+            border: none; text-align: left; font-size: 1.2em; font-weight: 600; font-family: Georgia, serif;
+            border-radius: 8px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center;
+        }
+        .sg-accordion-section:hover { background-color: #6B5344; }
+        .sg-accordion-section::after { content: '\25BC'; font-size: 0.9em; transition: transform 0.3s; }
+        .sg-accordion-section.active::after { transform: rotate(180deg); }
+
+        .sg-panel {
+            background-color: white; border-radius: 0 0 8px 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .sg-panel.active { display: block; }
+        .panel-content { padding: 30px; }
+        .panel-content h2 { color: #8B7355; margin-bottom: 20px; font-size: 1.8em; }
+        .panel-content h3 { color: #6B5344; margin-top: 25px; margin-bottom: 15px; font-size: 1.4em; }
+        .panel-content h4 { color: #5a4a3a; margin-top: 20px; margin-bottom: 12px; font-size: 1.2em; }
+        .panel-content ul, .panel-content ol { margin-left: 25px; margin-bottom: 15px; }
+        .panel-content li { margin-bottom: 8px; }
+        .panel-content p { margin-bottom: 15px; text-align: justify; }
+        .panel-content a { color: #8B7355; }
+        .panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .panel-content blockquote {
+            margin: 20px 0 20px 20px;
+            padding: 15px 20px;
+            border-left: 4px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 8px 8px 0;
+        }
+        .panel-content blockquote p { margin-bottom: 8px; }
+        .panel-content blockquote p:last-child { margin-bottom: 0; }
+        .panel-content blockquote cite {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #8B7355;
+            font-style: normal;
+        }
+
+        .panel-content strong { color: #6B5344; }
+        .panel-content em { color: #5a4a3a; }
+
+        .panel-content hr {
+            border: none;
+            border-top: 2px solid #e8e0d5;
+            margin: 25px 0;
+        }
+
+        .panel-content code {
+            background-color: #f5f0e8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #6B5344;
+        }
+
+        .info-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .info-table th, .info-table td { border: 1px solid #d4c4a8; padding: 12px; text-align: left; }
+        .info-table th { background-color: #f5f0e8; color: #6B5344; font-weight: bold; }
+        .info-table tr:nth-child(even) { background-color: #faf8f5; }
+
+        /* Sparse columns fold away on a phone (Kymber, 2026-08-19). The toggle button is
+           hidden on wide screens and the columns are simply shown, so a desktop reader never
+           knows this exists. On narrow screens the button appears and the columns start
+           hidden — reversible in one tap, never a one-way door. */
+        .table-fold { margin: 20px 0; }
+        .table-fold > summary {
+            cursor: pointer;
+            list-style: none;
+            font-size: 0.85em;
+            color: #8B7355;
+            padding: 6px 0;
+            user-select: none;
+        }
+        .table-fold > summary::-webkit-details-marker { display: none; }
+        .table-fold > summary::before { content: "BE  "; }
+        .table-fold:not([open]) > summary::before { content: "B8  "; }
+        .table-fold:not([open]) > summary { color: #6B5344; font-weight: bold; }
+        .table-fold > summary:hover { color: #6B5344; }
+        .table-fold > .info-table, .table-fold > .table-wrap { margin-top: 4px; }
+
+        .table-wrap { margin: 20px 0; }
+        .col-toggle-cb { position: absolute; opacity: 0; pointer-events: none; }
+        .col-toggle { display: none; }
+        .col-toggle::before { content: attr(data-show); }
+        .col-toggle-cb:checked + .col-toggle::before { content: attr(data-hide); }
+        @media (max-width: 768px) {
+            .col-toggle {
+                display: inline-block;
+                margin: 0 0 8px;
+                padding: 7px 13px;
+                font-size: 0.85em;
+                background: #f5f0e8;
+                color: #6B5344;
+                border: 1px solid #d4c4a8;
+                border-radius: 6px;
+                cursor: pointer;
+                -webkit-tap-highlight-color: transparent;
+            }
+            .col-toggle-cb:focus-visible + .col-toggle { outline: 2px solid #7c9885; }
+            .has-optional-cols th.col-optional,
+            .has-optional-cols td.col-optional { display: none; }
+            .col-toggle-cb:checked ~ .has-optional-cols th.col-optional,
+            .col-toggle-cb:checked ~ .has-optional-cols td.col-optional { display: table-cell; }
+            .info-table th, .info-table td { padding: 9px; }
+        }
+
+        .sg-sub-accordion {
+            background-color: #f5f0e8;
+            color: #5a4a3a;
+            cursor: pointer;
+            padding: 14px 40px 14px 18px;
+            width: 100%;
+            text-align: left;
+            border: 1px solid #d4c4a8;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+            margin-top: 10px;
+            position: relative;
+            transition: background-color 0.2s;
+        }
+
+        .sg-sub-accordion:hover {
+            background-color: #e8e0d4;
+        }
+
+        .sg-sub-accordion::after {
+            content: '\25BC';
+            font-size: 0.8em;
+            color: #8B7355;
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s;
+        }
+
+        .sg-sub-accordion.active::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .sg-sub-panel {
+            background-color: #fafafa;
+            border-radius: 0 0 6px 6px;
+            border: 1px solid #d4c4a8;
+            border-top: none;
+            display: none;
+            transition: max-height 0.3s ease-out;
+            margin-bottom: 10px;
+        }
+
+        .sg-sub-panel.active {
+            display: block;
+            overflow: visible;
+            transition: max-height 0.3s ease-in;
+        }
+
+        .sg-sub-panel-content {
+            padding: 20px 25px;
+        }
+
+        .sg-sub-panel-content h3 { color: #6B5344; margin-top: 20px; margin-bottom: 12px; font-size: 1.3em; }
+        .sg-sub-panel-content h4 { color: #5a4a3a; margin-top: 15px; margin-bottom: 10px; font-size: 1.15em; }
+        .sg-sub-panel-content p { margin-bottom: 12px; text-align: justify; }
+        .sg-sub-panel-content ul, .sg-sub-panel-content ol { margin-left: 25px; margin-bottom: 12px; }
+        .sg-sub-panel-content li { margin-bottom: 6px; }
+        .sg-sub-panel-content a { color: #8B7355; }
+        .sg-sub-panel-content a:hover { color: #6B5344; text-decoration: underline; }
+
+        .sg-sub-panel-content blockquote {
+            margin: 15px 0 15px 15px;
+            padding: 12px 18px;
+            border-left: 3px solid #8B7355;
+            background-color: #faf8f5;
+            font-style: italic;
+            color: #5a4a3a;
+            border-radius: 0 6px 6px 0;
+        }
+        .sg-sub-panel-content blockquote p { margin-bottom: 6px; }
+        .sg-sub-panel-content blockquote p:last-child { margin-bottom: 0; }
+        .sg-sub-panel-content strong { color: #6B5344; }
+        .sg-sub-panel-content hr { border: none; border-top: 1px solid #e8e0d5; margin: 20px 0; }
+
+        @media (max-width: 768px) {
+            .header-section h1 { font-size: 1.8em; }
+            .panel-content { padding: 20px; }
+            .sg-sub-panel-content { padding: 15px 18px; }
+        }
+
+        .sg-section-heading {
+            margin: 1.2em 0 0.6em 0;
+            padding: 0.4em 0 0.4em 0.8em;
+            border-left: 3px solid #8B9D77;
+            color: #5a6b4f;
+            font-size: 1.05em;
+            font-weight: 600;
+            font-family: Georgia, serif;
+        }
+        .sg-section-actions {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 28px;
+        }
+        .sg-section-actions .sg-action-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.35);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            padding: 0;
+            line-height: 1;
+        }
+        .sg-section-actions .sg-action-btn:hover {
+            background: rgba(255,255,255,0.35);
+        }
+    </style>
+
+
+<div class="container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <p class="week-label">Week 36</p>
+            <h1>Psalms 102–103; 110; 116–119; 127–128; 135–139; 146–150 — Overview</h1>
+            <div class="subtitle">"Let Every Thing That Hath Breath Praise the Lord"</div>
+            <div class="date-location"></div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/36?lang=eng" target="_blank" class="quick-link">CFM Manual</a>
+        </div>
+
+        <!-- Expand/Collapse Buttons -->
+        <div class="button-container">
+            <button class="expand-button" onclick="expandAll()"><span class="btn-icon">&#x229E;</span> Expand All</button>
+            <button class="expand-button" onclick="collapseAll()"><span class="btn-icon">&#x229F;</span> Collapse All</button>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 1: WEEK 36: OVERVIEW -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">1. Week 36: Overview</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>The Book Ends in Praise</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Every book of Psalms you have read so far has been building toward this week, and most readers never notice.</p>
+<p>The Hebrew name for the book is <a href="https://www.blueletterbible.org/lexicon/h8416/kjv/wlc/0-1/" target="_blank" data-lexicon="praise, song or hymn of praise (praise, adoration, thanksgiving (paid to God); act of general or public praise; praise-song (as title); praise (demanded by qualities or deeds or attributes of God); renown, fame, glory; of Damascus, God; object of praise, possessor of renown (fig))" data-strongs="H8416" data-translit="tᵊhillâ" data-original="תְּהִלָּה" data-lang="hebrew" data-verse=""><em>Tehillim</em></a> — <strong>"Praises."</strong> That has been a slightly odd name all along, because roughly a third of the Psalms are laments: people in trouble, saying so plainly. Last week you read the worst of them — a man who had done something no offering covered, another lying awake asking whether God had stopped caring. If you had to name that book from its contents, <em>Praises</em> is not the word you would choose.</p>
+<p><strong>This week is why it is called that.</strong> The Psalter — the old name for the whole book of Psalms — does not simply stop; it <em>climbs</em>. The last five psalms — 146 through 150 — each open and close with the same two words, <em>"Praise ye the LORD,"</em> and they get shorter and louder until the very last verse of the very last psalm, which is one line long:</p>
+<blockquote>
+<p><em>"Let every thing that hath breath praise the LORD."</em> <a href="https://www.blueletterbible.org/kjv/psa/150/6/s_628006" target="_blank" data-ref="Psalms 150:6">(150:6)</a></p>
+</blockquote>
+<p>That is the end of a book that spent a hundred and forty-nine chapters being honest about how hard life is. It does not arrive at praise by pretending the laments away. It arrives by going through them — which is the only route any of us gets.</p>
+<p>And on the way there, this week hands you some of the most-loved lines in scripture. <em>"Bless the LORD, O my soul"</em> <a href="https://www.blueletterbible.org/kjv/psa/103/1/s_581001" target="_blank" data-ref="Psalms 103:1">(103:1)</a>. <em>"As far as the east is from the west, so far hath he removed our transgressions from us"</em> <a href="https://www.blueletterbible.org/kjv/psa/103/12/s_581012" target="_blank" data-ref="Psalms 103:12">(103:12)</a>. <em>"Thy word is a lamp unto my feet"</em> <a href="https://www.blueletterbible.org/kjv/psa/119/105/s_597105" target="_blank" data-ref="Psalms 119:105">(119:105)</a>. <em>"Except the LORD build the house, they labour in vain that build it"</em> <a href="https://www.blueletterbible.org/kjv/psa/127/1/s_605001" target="_blank" data-ref="Psalms 127:1">(127:1)</a>. <em>"This is the day which the LORD hath made"</em> <a href="https://www.blueletterbible.org/kjv/psa/118/24/s_596024" target="_blank" data-ref="Psalms 118:24">(118:24)</a>. If you have sung a hymn or heard a talk in the last month, you have probably met one of them already.</p>
+<p><strong>One more thing before you begin, and it is the reason this week matters most.</strong> <a href="https://www.blueletterbible.org/kjv/psa/113/1/s_591001" target="_blank" data-ref="Psalms 113">Psalms 113</a> through 118 are a set the Jews call the <strong>Hallel</strong> — the praise psalms, sung together at Passover, still sung at Passover today. <strong>Three of them are in your reading.</strong> And on the night before He died, at the end of the Passover supper, Matthew records something easy to read past: <em>"And when they had sung an hymn, they went out into the mount of Olives"</em> (<a href="https://www.blueletterbible.org/kjv/mat/26/30/s_955030" target="_blank" data-ref="Matthew 26:30">Matthew 26:30</a>).</p>
+<p>The hymn was almost certainly these psalms. <strong>So this week you are not only reading about the Savior — you are reading the words He sang, hours before Gethsemane.</strong></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Four Things Worth a Second Look</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>The psalm the Savior used to end an argument.</strong> <a href="https://www.blueletterbible.org/kjv/psa/110/1/s_588001" target="_blank" data-ref="Psalm 110">Psalm 110</a> is short and it is quoted in the New Testament more than almost any other. Its first line is strange in English: <em>"The LORD said unto my Lord, Sit thou at my right hand"</em> <a href="https://www.blueletterbible.org/kjv/psa/110/1/s_588001" target="_blank" data-ref="Psalms 110:1">(110:1)</a> — two different words, both printed <em>Lord</em>. The Savior asked the Pharisees about exactly that. If the Messiah is simply David's descendant, why does David call Him <em>my Lord</em>? <em>"And no man was able to answer him a word"</em> (<a href="https://www.blueletterbible.org/kjv/mat/22/46/s_951046" target="_blank" data-ref="Matthew 22:46">Matthew 22:46</a>). He was pointing at a psalm and asking them to notice that David was writing about someone greater than himself.</p>
+<p><strong>And verse 4 is why this psalm matters so much to us:</strong> <em>"Thou art a priest for ever after the order of Melchizedek."</em> It is the only place outside Genesis that the Old Testament mentions Melchizedek at all, and the book of Hebrews builds its argument about Christ's priesthood on it. <strong>And the reason we call the higher priesthood by that name is not left to inference — it was revealed.</strong> <em>"Before his day it was called the Holy Priesthood, after the Order of the Son of God. But out of respect or reverence to the name of the Supreme Being, to avoid the too frequent repetition of his name, they, the church, in ancient days, called that priesthood after Melchizedek"</em> (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107?lang=eng&id=p3-p4#p3" target="_blank">D&C 107:3–4</a>). <strong>Its real name is the Holy Priesthood after the Order of the Son of God. "Melchizedek" is what reverence chose to say instead.</strong></p>
+<p><strong>The longest chapter in the Bible is built out of the alphabet.</strong> <a href="https://www.blueletterbible.org/kjv/psa/119/1/s_597001" target="_blank" data-ref="Psalm 119">Psalm 119</a> runs 176 verses, and its shape is not decoration — it is the argument. <strong>Twenty-two stanzas, one for each letter of the Hebrew alphabet, eight verses each, and in Hebrew every verse of a stanza begins with that stanza's letter.</strong> Your King James Bible prints the letter names right in the text; look at verse 105 and you will see <strong>NUN</strong> sitting above <em>"Thy word is a lamp unto my feet."</em></p>
+<p>Why build a poem that way? Because the psalm is about loving God's word, and it says so using <strong>every letter there is</strong> — the whole alphabet, the raw material of writing itself, turned toward one subject. A poem about scripture, made out of the building blocks of scripture. And it ends, after 175 verses of devotion to God's law, with the most human line imaginable: <em>"I have gone astray like a lost sheep; seek thy servant"</em> <a href="https://www.blueletterbible.org/kjv/psa/119/176/s_597176" target="_blank" data-ref="Psalms 119:176">(119:176)</a>.</p>
+<p><strong>The last word of the Psalter is "breath," and it is the same breath God breathed into Adam.</strong></p>
+<p><a href="https://www.blueletterbible.org/kjv/psa/150/1/s_628001" target="_blank" data-ref="Psalm 150">Psalm 150</a> ends: <em>"Let every thing that hath breath praise the LORD."</em> The Hebrew for <em>breath</em> there is <a href="https://www.blueletterbible.org/lexicon/h5397/kjv/wlc/0-1/" target="_blank" data-lexicon="breath, spirit (breath (of God); breath (of man); every breathing thing; spirit (of man)); Aramaic equivalent: nish.ma (נִשְׁמָא &quot;breath&quot; H5396)" data-strongs="H5397" data-translit="nᵊšāmâ" data-original="נְשָׁמָה" data-lang="hebrew" data-verse=""><em>neshāmâ</em></a> (הַנְּשָׁמָה) — and it is the same word Genesis uses when God <em>"breathed into his nostrils the breath of life"</em> (<a href="https://www.blueletterbible.org/kjv/gen/2/7/s_2007" target="_blank" data-ref="Genesis 2:7">Genesis 2:7</a>, <em>nishmat chayyim</em>, נִשְׁמַת חַיִּים). <strong>The book of Praises ends by calling on everything that carries the breath God gave it to give some of that breath back.</strong></p>
+<p>The old translators heard it. Jerome's Latin renders the line <em>"Omnis <strong>spiritus</strong> laudet Dominum"</em> — and <em>spiritus</em>, like the Greek <a href="https://www.blueletterbible.org/lexicon/g4151/kjv/tr/0-1/" target="_blank" data-lexicon="πνεῦμα, -τος, τό,; [in LXX chiefly and very frequently for רוּחַ ;]; __1. of air in motion;; __(a) wind: Jhn.3:8; pl., Heb.1:7 (LXX);; __(b) breath: π. ζωῆς, Rev.11:11; π. τοῦ στόματος, figuratively, 2Th.2:8 (cf. Ps 32 (33)6).; __2. Of the vital principle, the spirit (Arist., Polyb., al.): Luk.8:55, Jhn.19:30, Act.7:59, al.; opposite to σάρξ, Mat.26:41, Mrk.14:38, 1Co.5:5, al.; to σῶμα, Rom.8:10, 1Co.6:17 7:34, 1Pe.4:6; to ψυχή, Php.1:27, Heb.4:12; τὸ π. καὶ ἡ ψ. καὶ τ. σῶμα, 1Th.5:23 (M, Th., in l.); dative, τῷ π., in spirit, Mrk.2:8 8:12, Jhn.11:33 13:21, Act.18:25, Rom.12:11, 1Co.7:34, 1Pe.3:18, al.; of the human spirit of Christ, Rom.1:4, 1Ti.3:16.; __3. spirit, i.e. frame of mind, disposition, influence: Luk.1:17, Rom.8:15, 1Co.4:21, Gal 6:1, Eph.2:2, 2Ti.1:7, 1Jn.4:6, al.; __4. An incorporeal being, a spirit: Luk.24:37, 39 Act.23:8; π. ὁ θεός, God is spirit, Jhn.4:24; πατὴρ τῶν π., Heb.12:9; of disembodied human beings, Heb.12:23, 1Pe.3:19 (ICC, in l.; DB, iii, 795); of angels. Heb.1:14; of demons or evil spirits, Mat.8:16, Mrk.9:20, Luk.9:39, al.; π. πύθυωνα, Act.16:16; πνεύματα δαιμονίων, Rev.16:14; π. δαιμονίου ἀκαθάρτου, Luk.4:33; π. ἀσθενείας (Bl., §35, 5), Luk.13:11; π. ἀκάθαρτον, Mat.10:1, Mrk.1:23, Luk.4:36, Act.5:16; π. ἄλαλον (καὶ κωφόν), Mrk.9:17, 25; πονηρόν, Luk.7:21, Act.19:12, al.; __5. Of the Holy Spirit, π. ἅγιον, τὸ ἅ. π., τὸ π. τὸ ἅ. τὸ π., π. (the article as a rule being used when the Spirit is regarded as a Person or a Divine Power, and omitted when the reference is to an operation, influence or gift of the Spirit; see WM, 151:5; Bl., §46, 7): anarth., Mat.1:18 3:11, 16 4:1, Mrk.1:8 (Swete, in l.), ib.10, Luk.1:15, Jhn.7:39, Act.19:2, Rom.5:5, 1Co.2:4, al.; with art., Mat.4:1 12:31, 32 Mrk.1:10 3:29, Luk.2:26, Jhn.7:36 14:26, Act.4:31 5:3, Rom.8:16, al.; (τὸ) π. (τοῦ) θεοῦ, Mat.3:16, Rom.8:9, Eph.3:16, 1Jn.4:2, al.; τὸ π. τ. πατρός, Mat.10:20; π. θεοῦ ζῶντος, 2Co.3:3; (τὸ) π. τοῦ κυρίου, Luk.4:18, Act.5:9 8:39; τὸ π. Ἰησοῦ, Act.16:7; Χριστοῦ, Rom.8:9; Ἰησοῦ Χριστοῦ, Php.1:19; τὸ π. τ. ἀληθείας, Jhn.15:26 16:13, 1Jn.4:6; λείγει (μαρτυρεῖ) τὸ π. (τὸ ἅγιον), Act.21:11 28:25, 1Ti.4:1, Heb.3:7 10:15, Rev.14:13; before τ. ἐκκλησίαις,  Rev.2:7, 11 17, 29, 3:6, 12, 22; ἐν τ. π., Luk.2:27; κατὰ πνεῦμα, Rom.8:4, 5; ἐξ ὕδατος καὶ π., Jhn.3:5, διὰ πνεύματος αἰωνίου, Heb.9:14; ἐν ἁγιασμῷ πνεύματος, 2Th.2:13, 1Pe.1:2; ἓν π., 1Co.12:13, Eph.2:18 4:4; ὁ δὲ κύριος τὸ π. ἐστιν, 2Co.3:17; of that which is effected or governed by the Spirit, opposite to γράμμα, Rom.2:29 7:6, 2Co.3:6.; SYN.: νοῦς, which in NT is contrasted with π. as &quot;the action of the understanding in man with that of the spiritual or ecstatic impulse&quot; (DB, iv, 612); ψυχή — the usual term in cl. psychology—in NT, &quot;expresses man as apart from God, a separate individual, π. expresses man as drawing his life from God&quot; (DB, 1-vol., 872). (AS)" data-strongs="G4151" data-translit="pneuma" data-original="πνεῦμα" data-lang="greek" data-verse=""><em>pneuma</em></a> (πνεῦμα), means <strong>breath and Spirit at once.</strong> That double meaning is not a stretch; it is why the Holy Ghost is called what He is called. Breath, wind, Spirit — one word, in both languages.</p>
+<p><strong>And there is a connection worth mentioning honestly, because it is lovely and it is not settled.</strong> The Latin word for a musical note in medieval chant is <em>neume</em> — the marks written above the words of a psalm to show how to sing it. It is traditionally derived from that same Greek <a href="https://www.blueletterbible.org/lexicon/g4151/kjv/tr/0-1/" target="_blank" data-lexicon="πνεῦμα, -τος, τό,; [in LXX chiefly and very frequently for רוּחַ ;]; __1. of air in motion;; __(a) wind: Jhn.3:8; pl., Heb.1:7 (LXX);; __(b) breath: π. ζωῆς, Rev.11:11; π. τοῦ στόματος, figuratively, 2Th.2:8 (cf. Ps 32 (33)6).; __2. Of the vital principle, the spirit (Arist., Polyb., al.): Luk.8:55, Jhn.19:30, Act.7:59, al.; opposite to σάρξ, Mat.26:41, Mrk.14:38, 1Co.5:5, al.; to σῶμα, Rom.8:10, 1Co.6:17 7:34, 1Pe.4:6; to ψυχή, Php.1:27, Heb.4:12; τὸ π. καὶ ἡ ψ. καὶ τ. σῶμα, 1Th.5:23 (M, Th., in l.); dative, τῷ π., in spirit, Mrk.2:8 8:12, Jhn.11:33 13:21, Act.18:25, Rom.12:11, 1Co.7:34, 1Pe.3:18, al.; of the human spirit of Christ, Rom.1:4, 1Ti.3:16.; __3. spirit, i.e. frame of mind, disposition, influence: Luk.1:17, Rom.8:15, 1Co.4:21, Gal 6:1, Eph.2:2, 2Ti.1:7, 1Jn.4:6, al.; __4. An incorporeal being, a spirit: Luk.24:37, 39 Act.23:8; π. ὁ θεός, God is spirit, Jhn.4:24; πατὴρ τῶν π., Heb.12:9; of disembodied human beings, Heb.12:23, 1Pe.3:19 (ICC, in l.; DB, iii, 795); of angels. Heb.1:14; of demons or evil spirits, Mat.8:16, Mrk.9:20, Luk.9:39, al.; π. πύθυωνα, Act.16:16; πνεύματα δαιμονίων, Rev.16:14; π. δαιμονίου ἀκαθάρτου, Luk.4:33; π. ἀσθενείας (Bl., §35, 5), Luk.13:11; π. ἀκάθαρτον, Mat.10:1, Mrk.1:23, Luk.4:36, Act.5:16; π. ἄλαλον (καὶ κωφόν), Mrk.9:17, 25; πονηρόν, Luk.7:21, Act.19:12, al.; __5. Of the Holy Spirit, π. ἅγιον, τὸ ἅ. π., τὸ π. τὸ ἅ. τὸ π., π. (the article as a rule being used when the Spirit is regarded as a Person or a Divine Power, and omitted when the reference is to an operation, influence or gift of the Spirit; see WM, 151:5; Bl., §46, 7): anarth., Mat.1:18 3:11, 16 4:1, Mrk.1:8 (Swete, in l.), ib.10, Luk.1:15, Jhn.7:39, Act.19:2, Rom.5:5, 1Co.2:4, al.; with art., Mat.4:1 12:31, 32 Mrk.1:10 3:29, Luk.2:26, Jhn.7:36 14:26, Act.4:31 5:3, Rom.8:16, al.; (τὸ) π. (τοῦ) θεοῦ, Mat.3:16, Rom.8:9, Eph.3:16, 1Jn.4:2, al.; τὸ π. τ. πατρός, Mat.10:20; π. θεοῦ ζῶντος, 2Co.3:3; (τὸ) π. τοῦ κυρίου, Luk.4:18, Act.5:9 8:39; τὸ π. Ἰησοῦ, Act.16:7; Χριστοῦ, Rom.8:9; Ἰησοῦ Χριστοῦ, Php.1:19; τὸ π. τ. ἀληθείας, Jhn.15:26 16:13, 1Jn.4:6; λείγει (μαρτυρεῖ) τὸ π. (τὸ ἅγιον), Act.21:11 28:25, 1Ti.4:1, Heb.3:7 10:15, Rev.14:13; before τ. ἐκκλησίαις,  Rev.2:7, 11 17, 29, 3:6, 12, 22; ἐν τ. π., Luk.2:27; κατὰ πνεῦμα, Rom.8:4, 5; ἐξ ὕδατος καὶ π., Jhn.3:5, διὰ πνεύματος αἰωνίου, Heb.9:14; ἐν ἁγιασμῷ πνεύματος, 2Th.2:13, 1Pe.1:2; ἓν π., 1Co.12:13, Eph.2:18 4:4; ὁ δὲ κύριος τὸ π. ἐστιν, 2Co.3:17; of that which is effected or governed by the Spirit, opposite to γράμμα, Rom.2:29 7:6, 2Co.3:6.; SYN.: νοῦς, which in NT is contrasted with π. as &quot;the action of the understanding in man with that of the spiritual or ecstatic impulse&quot; (DB, iv, 612); ψυχή — the usual term in cl. psychology—in NT, &quot;expresses man as apart from God, a separate individual, π. expresses man as drawing his life from God&quot; (DB, 1-vol., 872). (AS)" data-strongs="G4151" data-translit="pneuma" data-original="πνεῦμα" data-lang="greek" data-verse=""><em>pneuma</em></a>, breath; <strong>but the derivation is contested</strong>, and other scholars trace it instead to Greek <em>neuma</em>, "a nod" or "a sign," which fits a written mark just as well. Our own sources do not settle it, and this guide will not pretend to. <strong>Take it as a suggested connection rather than an established one</strong> — the kind of thing worth knowing about and worth being careful with.</p>
+<p>What is <em>not</em> in doubt is the thing underneath it: singing is done on the breath, breath and Spirit are the same word in the languages of scripture, and the Lord told Emma Smith that <em>"the song of the righteous is a prayer unto me"</em> (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/25?lang=eng&id=p12#p12" target="_blank" data-ref="D&C 25:12">D&C 25:12</a>). <strong>A psalm sung is breath returned to the God who gave it — which is as close to a definition of worship as you are likely to find.</strong></p>
+<p><strong>A psalm sung by two choirs.</strong> <a href="https://www.blueletterbible.org/kjv/psa/136/1/s_614001" target="_blank" data-ref="Psalm 136">Psalm 136</a> is called the Great Hallel, and it has one feature you can see at a glance: <strong>every single verse — all twenty-six — ends with <em>"for his mercy endureth for ever."</em></strong> That was not a printing quirk. One voice sang the line, and everyone else answered with the refrain, over and over, twenty-six times. Read it out loud with your family, one person taking the first half and everyone else the response, and you will have done exactly what Israel did with it.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>The Chapter Map — Psalms 102 through 150</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>Two things to know before the table.</p>
+<p><strong>The Psalms are five books, and this week you are finishing the last one.</strong> Book Five runs from <a href="https://www.blueletterbible.org/kjv/psa/107/1/s_585001" target="_blank" data-ref="Psalm 107">Psalm 107</a> to the end, and it is where the Psalter gathers its collections for the close: the Hallel (113–118), the Songs of Ascents (120–134), and the final Hallelujah psalms (146–150). Most of this week sits inside it. <em>(The five-book structure is explained in <strong>Historical & Cultural Context</strong>.)</em></p>
+<p><strong>The Songs of Ascents belonged to the temple before they belonged to the road.</strong> The Mishnah describes fifteen steps rising from the Court of the Women to the Court of Israel, <em>"corresponding to the fifteen [songs of] ascents mentioned in the Book of Psalms, and upon which the Levites used to sing"</em> (<em>Middot</em> 2:5) — one psalm to a step, as liturgy. <a href="https://www.blueletterbible.org/kjv/psa/120/1/s_598001" target="_blank" data-ref="Psalms 120">Psalms 120–134</a> were also sung by pilgrims going up to Jerusalem for the festivals, up because the city sits on a height and you climbed to reach it, and the two are not rival explanations: the families climbing the road were coming up to meet the very songs the Levites sang at the top. <strong><a href="https://www.blueletterbible.org/kjv/psa/127/1/s_605001" target="_blank" data-ref="Psalms 127">Psalms 127</a> and 128 are in your reading</strong>, and they are family songs: the house, the children, the bread you eat. Ordinary people singing about ordinary life on the road to the temple.</p>
+<p>Every psalm in the range is listed. <strong>Bold rows are this week's assignment</strong>; rows marked <em>Bridge</em> fall between the assigned blocks and are given briefly so the reading has no gaps.</p>
+<details class="table-fold" open><summary class="table-fold-sum">24 rows &mdash; click to collapse</summary><table class="info-table">
+<tr><th>Psalm</th><th>In the reading?</th><th>Collection · also known as</th><th>What it is — and why it matters</th></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/psa/102/1/s_580001" target="_blank" data-ref="Psalm 102">Psalm 102</a></strong></td><td><strong>Yes</strong></td><td>Book IV · one of the seven Penitential Psalms</td><td><strong>A prayer written by someone at the end of their strength — <em>"I watch, and am as a sparrow alone upon the house top"</em> <a href="https://www.blueletterbible.org/kjv/psa/102/7/s_580007" target="_blank" data-ref="Psalms 102:7">(102:7)</a>. Then it lifts: the earth wears out like a garment, but God does not.</strong></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/psa/103/1/s_581001" target="_blank" data-ref="Psalm 103">Psalm 103</a></strong></td><td><strong>Yes</strong></td><td>Book IV · Davidic</td><td><strong>The week's warmest psalm, and possibly the Psalter's. <em>"Bless the LORD, O my soul"</em> · <em>"as far as the east is from the west"</em> · and the tenderest line about God's patience in scripture: <em>"he knoweth our frame; he remembereth that we are dust"</em> <a href="https://www.blueletterbible.org/kjv/psa/103/14/s_581014" target="_blank" data-ref="Psalms 103:14">(103:14)</a>.</strong></td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/psa/104/1/s_582001" target="_blank" data-ref="Psalm 104">Psalm 104–109</a></td><td>Bridge</td><td>Books IV–V</td><td>Creation in full colour (104), Israel's story told twice (105–106), the storm stilled at sea (107).</td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/psa/110/1/s_588001" target="_blank" data-ref="Psalm 110">Psalm 110</a></strong></td><td><strong>Yes</strong></td><td>Book V · Davidic</td><td><strong>The most quoted psalm in the New Testament. <em>"The LORD said unto my Lord"</em> — the verse that silenced the Pharisees — and <em>"a priest for ever after the order of Melchizedek."</em></strong></td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/psa/111/1/s_589001" target="_blank" data-ref="Psalm 111">Psalm 111–115</a></td><td>Bridge</td><td>Book V · <strong>113–115 begin the Hallel</strong></td><td>Two acrostics (111, 112), then the Passover psalms open: <em>"Not unto us, O LORD, not unto us, but unto thy name give glory"</em> <a href="https://www.blueletterbible.org/kjv/psa/115/1/s_593001" target="_blank" data-ref="Psalms 115:1">(115:1)</a>.</td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/psa/116/1/s_594001" target="_blank" data-ref="Psalm 116">Psalm 116</a></strong></td><td><strong>Yes</strong></td><td>Book V · <strong>Hallel</strong></td><td><strong>A psalm of someone who nearly died and lived: <em>"I love the LORD, because he hath heard my voice"</em> <a href="https://www.blueletterbible.org/kjv/psa/116/1/s_594001" target="_blank" data-ref="Psalms 116:1">(116:1)</a>. And the line read at Latter-day Saint funerals: <em>"Precious in the sight of the LORD is the death of his saints"</em> <a href="https://www.blueletterbible.org/kjv/psa/116/15/s_594015" target="_blank" data-ref="Psalms 116:15">(116:15)</a>.</strong></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/psa/117/1/s_595001" target="_blank" data-ref="Psalm 117">Psalm 117</a></strong></td><td><strong>Yes</strong></td><td>Book V · <strong>Hallel</strong></td><td><strong>The shortest chapter in the Bible — two verses — and it calls <em>all ye nations</em> to praise. Paul quotes it to prove the gospel was always meant for everyone (<a href="https://www.blueletterbible.org/kjv/rom/15/11/s_1061011" target="_blank" data-ref="Romans 15:11">Romans 15:11</a>).</strong></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/psa/118/1/s_596001" target="_blank" data-ref="Psalm 118">Psalm 118</a></strong></td><td><strong>Yes</strong></td><td>Book V · <strong>Hallel</strong> · the last psalm of the Passover meal</td><td><strong>The stone the builders refused becomes the cornerstone <a href="https://www.blueletterbible.org/kjv/psa/118/22/s_596022" target="_blank" data-ref="Psalms 118:22">(118:22)</a> — the Savior applied it to Himself. <em>"This is the day which the LORD hath made."</em> And <em>"Blessed is he that cometh in the name of the Lord"</em> — shouted at Him on Palm Sunday.</strong></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/psa/119/1/s_597001" target="_blank" data-ref="Psalm 119">Psalm 119</a></strong></td><td><strong>Yes</strong></td><td>Book V · the alphabet psalm</td><td><strong>176 verses, eight for each Hebrew letter. <em>"Thy word have I hid in mine heart"</em> · <em>"Thy word is a lamp unto my feet."</em> Ends: <em>"I have gone astray like a lost sheep."</em></strong></td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/psa/120/1/s_598001" target="_blank" data-ref="Psalm 120">Psalm 120–126</a></td><td>Bridge</td><td><strong>Songs of Ascents</strong></td><td>Temple songs, sung on the road up. <em>"I will lift up mine eyes unto the hills"</em> (121) · <em>"I was glad when they said unto me, Let us go into the house of the LORD"</em> (122).</td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/psa/127/1/s_605001" target="_blank" data-ref="Psalm 127">Psalm 127</a></strong></td><td><strong>Yes</strong></td><td><strong>Songs of Ascents</strong> · ascribed to Solomon</td><td><strong>The house psalm. <em>"Except the LORD build the house, they labour in vain"</em> — and a line for anyone exhausted: <em>"he giveth his beloved sleep"</em> <a href="https://www.blueletterbible.org/kjv/psa/127/2/s_605002" target="_blank" data-ref="Psalms 127:2">(127:2)</a>.</strong></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/psa/128/1/s_606001" target="_blank" data-ref="Psalm 128">Psalm 128</a></strong></td><td><strong>Yes</strong></td><td><strong>Songs of Ascents</strong></td><td><strong>Its companion: the family at the table, the ordinary blessing of a life lived in the fear of the Lord.</strong></td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/psa/129/1/s_607001" target="_blank" data-ref="Psalm 129">Psalm 129–134</a></td><td>Bridge</td><td><strong>Songs of Ascents</strong></td><td><em>"Out of the depths have I cried unto thee"</em> (130) · <em>"Behold, how good and how pleasant it is for brethren to dwell together in unity"</em> (133).</td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/psa/135/1/s_613001" target="_blank" data-ref="Psalm 135">Psalm 135</a></strong></td><td><strong>Yes</strong></td><td>Book V</td><td><strong>Praise set against the idols: <em>"the work of men's hands"</em> — they have mouths and cannot speak. What you worship, you become.</strong></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/psa/136/1/s_614001" target="_blank" data-ref="Psalm 136">Psalm 136</a></strong></td><td><strong>Yes</strong></td><td>Book V · <strong>the Great Hallel</strong></td><td><strong>Twenty-six verses, and every one of them ends <em>"for his mercy endureth for ever."</em> Sung antiphonally — one voice, then everyone.</strong></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/psa/137/1/s_615001" target="_blank" data-ref="Psalm 137">Psalm 137</a></strong></td><td><strong>Yes</strong></td><td>Book V</td><td><strong>The exile's lament, and one of the saddest things in scripture: <em>"By the rivers of Babylon, there we sat down, yea, we wept, when we remembered Zion"</em> · <em>"How shall we sing the LORD'S song in a strange land?"</em></strong></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/psa/138/1/s_616001" target="_blank" data-ref="Psalm 138">Psalm 138</a></strong></td><td><strong>Yes</strong></td><td>Book V · Davidic</td><td><strong>Thanksgiving, and the promise that God <em>"hath respect unto the lowly"</em> — He looks at the people nobody else looks at.</strong></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/psa/139/1/s_617001" target="_blank" data-ref="Psalm 139">Psalm 139</a></strong></td><td><strong>Yes</strong></td><td>Book V · Davidic</td><td><strong>God knows you completely and there is nowhere to go from Him: <em>"Whither shall I go from thy spirit?"</em> · <em>"I am fearfully and wonderfully made"</em> · and it ends by asking for the very thing that could be frightening: <em>"Search me, O God, and know my heart."</em></strong></td></tr>
+<tr><td><a href="https://www.blueletterbible.org/kjv/psa/140/1/s_618001" target="_blank" data-ref="Psalm 140">Psalm 140–145</a></td><td>Bridge</td><td>Book V</td><td>David's last psalms, closing with the acrostic 145 — <a href="https://www.blueletterbible.org/lexicon/h835/kjv/wlc/0-1/" target="_blank" data-lexicon="happiness, blessedness (often used as interjection; blessed are)" data-strongs="H835" data-translit="&#x27;ešer" data-original="אֶשֶׁר" data-lang="hebrew" data-verse=""><em>Ashrei</em></a>, prayed daily in Jewish practice.</td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/psa/146/1/s_624001" target="_blank" data-ref="Psalm 146">Psalm 146</a></strong></td><td><strong>Yes</strong></td><td>Book V · <strong>the Hallelujah psalms begin</strong></td><td><strong>Do not trust princes; trust the God who keeps truth for ever, who feeds the hungry and lifts the bowed down.</strong></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/psa/147/1/s_625001" target="_blank" data-ref="Psalm 147">Psalm 147</a></strong></td><td><strong>Yes</strong></td><td>Book V · Hallelujah</td><td><strong>Two things in one verse-pair: <em>"He telleth the number of the stars; he calleth them all by their names"</em> <a href="https://www.blueletterbible.org/kjv/psa/147/4/s_625004" target="_blank" data-ref="Psalms 147:4">(147:4)</a> — and just before it, <em>"He healeth the broken in heart"</em> <a href="https://www.blueletterbible.org/kjv/psa/147/3/s_625003" target="_blank" data-ref="Psalms 147:3">(147:3)</a>. The God of the galaxies is the God of your grief.</strong></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/psa/148/1/s_626001" target="_blank" data-ref="Psalm 148">Psalm 148</a></strong></td><td><strong>Yes</strong></td><td>Book V · Hallelujah</td><td><strong>Everything is called to praise — angels, sun, moon, weather, mountains, animals, kings, children. The whole creation, in one list.</strong></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/psa/149/1/s_627001" target="_blank" data-ref="Psalm 149">Psalm 149</a></strong></td><td><strong>Yes</strong></td><td>Book V · Hallelujah</td><td><strong>A new song, and praise that includes dancing and instruments. Joy that moves.</strong></td></tr>
+<tr><td><strong><a href="https://www.blueletterbible.org/kjv/psa/150/1/s_628001" target="_blank" data-ref="Psalm 150">Psalm 150</a></strong></td><td><strong>Yes</strong></td><td>Book V · <strong>the last psalm</strong></td><td><strong>Six verses, thirteen commands to praise, every instrument named — and the final line of the whole Psalter: <em>"Let every thing that hath breath praise the LORD."</em></strong></td></tr>
+</table></details>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Following the Reading</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<ul>
+<li><strong>When you are at the end of your strength (102–103).</strong> <a href="https://www.blueletterbible.org/kjv/psa/102/1/s_580001" target="_blank" data-ref="Psalm 102">Psalm 102</a> is written by someone who feels like the last bird on an empty roof. <a href="https://www.blueletterbible.org/kjv/psa/103/1/s_581001" target="_blank" data-ref="Psalm 103">Psalm 103</a> answers it — not by arguing, but by remembering what God is like: <em>"he knoweth our frame; he remembereth that we are dust."</em> He is not disappointed that you are tired. He made you, and He knows.</li>
+<li><strong>The Savior's own psalm (110).</strong> Short, strange, and central. He used it in argument, Peter used it at Pentecost to explain the Resurrection, and Hebrews builds the whole doctrine of His priesthood on its fourth verse.</li>
+<li><strong>What He sang before Gethsemane (116–118).</strong> Read these knowing where they were sung. <a href="https://www.blueletterbible.org/kjv/psa/116/1/s_594001" target="_blank" data-ref="Psalm 116">Psalm 116</a> is a man rescued from death; <a href="https://www.blueletterbible.org/kjv/psa/118/1/s_596001" target="_blank" data-ref="Psalm 118">Psalm 118</a> ends the Passover meal with the rejected stone becoming the cornerstone. He sang that, and then walked out to the garden.</li>
+<li><strong>A week with the word (119).</strong> You do not have to read all 176 verses at once — read one stanza, eight verses, a letter a day. That is how it was built to be taken.</li>
+<li><strong>The songs of the road (127–128).</strong> Family psalms sung walking uphill. <em>"Except the LORD build the house"</em> is about more than architecture, and <em>"he giveth his beloved sleep"</em> is for whoever needs it this week.</li>
+<li><strong>Honesty before praise (135–139).</strong> <a href="https://www.blueletterbible.org/kjv/psa/137/1/s_615001" target="_blank" data-ref="Psalm 137">Psalm 137</a> weeps by a foreign river; <a href="https://www.blueletterbible.org/kjv/psa/139/1/s_617001" target="_blank" data-ref="Psalm 139">Psalm 139</a> says there is no foreign place — <em>"whither shall I go from thy spirit?"</em> The Psalter does not skip the exile on its way to the praise.</li>
+<li><strong>The ending (146–150).</strong> Read these five out loud, in order, in one sitting. It takes about six minutes. Watch them get shorter and louder.</li>
+</ul>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Why It Matters</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>There is a reason the Psalms end this way, and it is worth carrying past this week.</p>
+<p>The book could have ended at <a href="https://www.blueletterbible.org/kjv/psa/137/1/s_615001" target="_blank" data-ref="Psalm 137">Psalm 137</a>, by the rivers of Babylon, with the harps hung up in the trees and nobody able to sing. That would have been an honest ending — and for a while it was the true one. Instead it ends with every instrument named and every breathing thing called to praise. <strong>Not because the grief was cancelled, but because it was not the last word.</strong></p>
+<p>That order matters. A hundred and forty-nine chapters of praise and lament, argument and repentance, exile and homecoming — and then the doxology. The Psalms earn their ending. They do not hand it to you on the first page, and they do not pretend you can skip to it.</p>
+<p>And the Savior is in every part of that climb. He is the <em>my Lord</em> of <a href="https://www.blueletterbible.org/kjv/psa/110/1/s_588001" target="_blank" data-ref="Psalm 110">Psalm 110</a> that David could not fully explain. He is the stone the builders refused in <a href="https://www.blueletterbible.org/kjv/psa/118/1/s_596001" target="_blank" data-ref="Psalm 118">Psalm 118</a>, and He said so out loud. He is the priest after the order of Melchizedek — the order whose name the priesthood in your ward carries. He sang <a href="https://www.blueletterbible.org/kjv/psa/116/1/s_594001" target="_blank" data-ref="Psalms 116">Psalms 116</a> through 118 with His Apostles on the last night of His life — praise psalms, at a table, hours before the garden. <strong>He praised God on the way to Gethsemane.</strong> If He could sing that night, the ending of this book is not naive. It is the truth learned the hardest way anyone has ever learned it.</p>
+<p>So take this week as it comes. If you are somewhere in <a href="https://www.blueletterbible.org/kjv/psa/102/1/s_580001" target="_blank" data-ref="Psalm 102">Psalm 102</a>, at the end of what you have, that is a real place and the Psalter has a chapter for it. If you are somewhere in <a href="https://www.blueletterbible.org/kjv/psa/137/1/s_615001" target="_blank" data-ref="Psalm 137">Psalm 137</a>, unable to sing in a strange land, that is here too, and nobody edited it out.</p>
+<p>But read to the end. <em>"Let every thing that hath breath praise the LORD"</em> — and the point of that last line is its reach. Not everything that understands. Not everything that has it figured out. <strong>Everything that breathes.</strong> Which, this morning, includes you.</p>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 2: WEEK 36: HISTORICAL & CULTURAL CONTEXT -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">2. Week 36: Historical & Cultural Context</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>How the Psalter Ends</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><em>This section must stay a <code>##</code> — see the maintenance note in the source.</em></p>
+<p><!-- MAINTENANCE, not reader-facing: this section must stay a '## ' heading. The converter      renders only '## ' blocks and silently discards prose above the first one. --></p>
+<p>This week you finish the book. Understanding how it was assembled makes the last psalms land harder, because the ending was <em>built</em> — somebody chose to put those five psalms there.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>1. Book Five, and Why the Ending Is Deliberate</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The Psalms are five collections, not one. Week 35 introduced that; here is what matters for this week: <strong>Book Five runs from <a href="https://www.blueletterbible.org/kjv/psa/107/1/s_585001" target="_blank" data-ref="Psalm 107">Psalm 107</a> to <a href="https://www.blueletterbible.org/kjv/psa/150/1/s_628001" target="_blank" data-ref="Psalm 150">Psalm 150</a></strong>, and it is where the Psalter gathers its groups for the close.</p>
+<table class="info-table">
+<tr><th>inside Book Five</th><th>psalms</th><th>in this week's reading</th></tr>
+<tr><td><strong>The Hallel</strong></td><td>113–118</td><td><strong>116, 117, 118</strong></td></tr>
+<tr><td><strong>The Songs of Ascents</strong></td><td>120–134</td><td><strong>127, 128</strong></td></tr>
+<tr><td><strong>The Great Hallel</strong></td><td>136</td><td><strong>136</strong></td></tr>
+<tr><td><strong>The closing Hallelujah psalms</strong></td><td>146–150</td><td><strong>all five</strong></td></tr>
+</table>
+<p>Every one of the first four books ends the same way — a short burst of praise tacked on to the last psalm, which scholars call a <strong>doxology</strong> (from Greek <a href="https://www.blueletterbible.org/lexicon/g1391/kjv/tr/0-1/" target="_blank" data-lexicon="δόξα, -ης, ἡ; (δοκέω), [in LXX very frequently for כָּבוֹד, also for הוֹד ,פִּפְאֶרֶת, etc., 25 words in all ;]; in cl.,; __1. expectation, judgment, opinion (4Ma.5:18).; __2. opinion, estimation in which one is held, repute; in NT, always good opinion, hence reputation, praise, honour, glory: Luk.14:10, Jhn.12:43, Heb.3:3; opposite to αἰσχύνη, Php.3:19; to ἀτιμία, 2Co.6:8; δ. κ. τιμή, Rom.2:7, 10 1Pe.1:7, 2Pe.1:17; ζητεῖν, Jhn.5:44 7:18 8:50, 1Th.2:6; λαμβάνειν, Jhn.5:41, 2Pe.1:17, Rev.5:12; διδόναι δ. τ. θεῷ (cf. נָתַן כָּבוֹד לַיהוָֹה, Jer.13:16, al.), Luk.17:18, Jhn.9:24, Act.12:23, Rom.4:20, Rev.4:9; εἰς (τ.) δ. θεοῦ, Rom.3:7 15:7, Php.1:11, al.; in doxologies, τ. θεῷ (ᾧ) ἡ δ., Luk.2:14, Rom.11:36 16:27, Gal.1:5, Eph.3:21, al.; __3. Later also (not cl.) as in LXX (= הוֹד, Job.39:20, 1Ch.29:25; כָּבוֹד, Job.19:9, Est.5:11, al.), visible brightness, splendour, glory: of light, Act.22:11; of heavenly bodies, 1Co.15:40ff.; esp. that wh. radiates from God&#x27;s presence, as manifested in the pillar of cloud and in the Holy of Holies (= כָּבוֹד, Exo.16:10 25:22 40:34, al.; and new Heb. שְׁכִינָה, 2Ma.2:8; see DB, iv, 489b), Rom.9:4, Jas.2:1 (see Hort, Mayor, in l.); hence of the manifested glory of God, Rom.1:23, Col.1:11 Eph.1:6, 12 17 3:16; of the same as communicated to man through Christ, 2Co.3:18 4:6; and of the glorious condition into which Christians shall enter hereafter, Rom.8:18, 21 9:23, 2Ti.2:10, al.; SYN.: ἔπαινος τιμή (see Hort on 1Pe.1:7). (AS)" data-strongs="G1391" data-translit="doxa" data-original="δόξα" data-lang="greek" data-verse=""><em>doxa</em></a>, "glory," and <a href="https://www.blueletterbible.org/lexicon/g3056/kjv/tr/0-1/" target="_blank" data-lexicon="λόγος, -ου, ὁ (λέγω); [in LXX chiefly for  דָּבָר, also for מִלָּה ,אֵמֶר, etc. ;]; __I. Of that by which the inward thought is expressed, Lat. oratio, sermo, vox, verbum.; __1. a word, not in the grammatical sense of a mere name (ἔπος, ὄνομα, ῥῆμα), but a word as  embodying a conception or idea: Mat.8:8, Luk.7:7, 1Co.14:9, 19 Heb.12:19, al.; __2. a saying, statement, declaration: Mat.19:22 (T om.), Mrk.5:36 7:29, Luk.1:29, Jhn.2:22 6:60, Act.7:29, al.; with genitive attrib., Act.13:15, Rom.9:9, Heb.7:28, al.; of the sayings, commands, promises, etc., of teachers, Mat.7:24 10:14, Mrk.8:38, Luk.9:4, Jhn.14:24, al.; λ. κενοί, Eph.5:6; ἀληθινοί, Rev.19:9; πιστοί, Rev.22:6; esp. of the precepts, decrees and promises of God, ὁ λ. τ. θεοῦ, the word of God: Mrk.7:13, Jhn.10:35, Rom.13:9, 1Co.14:36, Php.1:14, al.; absol., ὁ λ., Mat.13:21, 22 Mrk.16:[20], Luk.1:2, Act.6:4, Heb.4:12, al.; __3. speech, discourse: Act.14:12, 2Co.10:10, Jas.3:2; opposite to ἐπιστολή, 2Th.2:15; disting, from σοφία, 1Co.2:1; ἀναστροφή, 1Ti.4:12; δύναμις, 1Co.4:19, 1Th.1:5; ἔργον, Rom.15:18; οὐδενὸς λ. τίμιον (not worthy of mention), Act.20:24; of the faculty of speech, Luk.24:19, 2Co.11:6; of the style of speech, Mat.5:37, 1Co.1:5; of instruction, Col.4:3, 1Pe.3:1; with genitive of person(s), Jhn.5:24 8:52, Act.2:41, al.; ὁ λ. ὁ ἐμός, Jhn.8:31; with genitive obj. (τ.) ἀληθείας, 2Co.6:7, Col.1:5, Jas.1:18; τ. καταλλαγῆς, 2Co.5:19; τ. σταυροῦ, 1Co.1:18; of mere talk, 1Co.4:19, 2o, Col.2:23, 1Jn.3:18; of the talk which one occasions, hence, repute: Col.2:23.; __4. subject-matter, hence, teaching, doctrine: Act.18:15, 2Ti.2:17, al.; esp. of Christian doctrine: Mat.13:20-23, Mrk.4:14-20 8:32, Luk.1:2, Act.8:4, Gal.6:6, 1Th.1:6, al.; with genitive of person(s), τ. θεοῦ, Luk.5:1, Jhn.17:6, Act.4:29, 1Co.14:36, I Jhn.1:10, Rev.6:9, al.; τ. Κυρίου, Act.8:25, 1Th.1:8, al.; τ. Χριστοῦ, Col.3:16, Rev.3:8; with genitive appos., Act.15:7; with genitive attrib., Heb.5:13.; __5. a story, tale, narrative: Mat.28:15, Jhn.21:23, Act.1:1 11:22; before περί, Luk.5:15.; __6. That which is spoken of (Plat., al.; V. Kennedy, Sources, 124), matter, affair, thing: Mat.21:24, Mrk.1:45 11:29, Luk.20:3, Act.8:21; of a matter in dispute, as a case or suit at law, Act.19:38; pl. (1Ma.7:33, al.), Luk.1:4.; __II. Of the inward thought itself, Lat. ratio.; __1. reason,; __(a) of the mental faculty (Hdt., Plat., al.): κατὰ λόγον, Act.18:14;; __(b) a reason, cause: τίνι λόγῳ, Act.10:29; παρεκτὸς λόγου πορνείας, Mat.5:32 19:9, WH, mg., R, mg.; __2. account,; __(a) regard: Act.20:24, Rec.;; __(b) reckoning: Php.4:15, 17; συναίρειν (which see) λ., Mat.18:23 25:19; in forensic sense, Rom.14:12, Heb.13:17, 1Pe.4:5; with genitive of thing(s), Luk.16:2; before περί, Mat.12:36, Act.19:40, 1Pe.3:15.; __3. proportion, analogy: Php.2:16 (Field, Notes, 193 f.).; __III. ὁ λ., the Divine Word or Logos: Jhn.1:1, 14; τ. ζωῆς, 1Jn.1:1; τ. θεοῦ, Rev.19:13 (see Westc, Swete, CGT, in ll.; reff. in Artt., Logos, DB, DCG).; (AS)" data-strongs="G3056" data-translit="logos" data-original="λόγος" data-lang="greek" data-verse=""><em>logos</em></a>, "word": a word of glory). <a href="https://www.blueletterbible.org/kjv/psa/41/1/s_519001" target="_blank" data-ref="Psalm 41">Psalm 41</a> ends <em>"Blessed be the LORD God of Israel… Amen, and Amen."</em> So do <a href="https://www.blueletterbible.org/kjv/psa/72/1/s_550001" target="_blank" data-ref="Psalms 72">Psalms 72, 89</a> and 106.</p>
+<p><strong>Book Five does not end with a doxology. It ends with five of them.</strong> <a href="https://www.blueletterbible.org/kjv/psa/146/1/s_624001" target="_blank" data-ref="Psalms 146">Psalms 146</a> through 150 each open and close with <em>"Praise ye the LORD"</em> — the Hebrew is one word, <em>halelû-yāh</em> (הַלְלוּ־יָהּ), <em>"praise Yah,"</em> using the short form of the divine name. The book does not finish; it accelerates.</p>
+<p><strong>And it is not a coincidence of length.</strong> Read them in order and watch them get shorter: <a href="https://www.blueletterbible.org/kjv/psa/146/1/s_624001" target="_blank" data-ref="Psalm 146">Psalm 146</a> has ten verses, 147 has twenty, 148 fourteen, 149 nine, <strong>150 has six</strong> — and the last of those six is a single line. A book of a hundred and fifty poems ends on one sentence.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>2. The Hallel — What the Savior Sang</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong><a href="https://www.blueletterbible.org/kjv/psa/113/1/s_591001" target="_blank" data-ref="Psalms 113">Psalms 113–118</a> are sung together at Passover</strong>, and have been for a very long time. Jewish practice calls them the <strong>Hallel</strong> — simply "the praise" — and splits them around the meal: 113–114 before, 115–118 after.</p>
+<p>Three of them are in your reading, and <strong>118 is the last one</strong>, the psalm that ends the meal.</p>
+<p>Now set that beside Matthew's account of the Last Supper. It was a Passover meal (<a href="https://www.blueletterbible.org/kjv/mat/26/17-19/s_955017" target="_blank" data-ref="Matthew 26:17-19">Matthew 26:17–19</a>). And when it was over: <strong>"And when they had sung an hymn, they went out into the mount of Olives"</strong> (<a href="https://www.blueletterbible.org/kjv/mat/26/30/s_955030" target="_blank" data-ref="Matthew 26:30">Matthew 26:30</a>).</p>
+<p><strong>The hymn was almost certainly the Hallel</strong> — which means the last thing the Savior sang before Gethsemane included these words:</p>
+<blockquote>
+<p><em>"The stone which the builders refused is become the head stone of the corner."</em> <a href="https://www.blueletterbible.org/kjv/psa/118/22/s_596022" target="_blank" data-ref="Psalms 118:22">(118:22)</a></p>
+<p><em>"This is the day which the LORD hath made; we will rejoice and be glad in it."</em> <a href="https://www.blueletterbible.org/kjv/psa/118/24/s_596024" target="_blank" data-ref="Psalms 118:24">(118:24)</a></p>
+<p><em>"O give thanks unto the LORD; for he is good: for his mercy endureth for ever."</em> <a href="https://www.blueletterbible.org/kjv/psa/118/29/s_596029" target="_blank" data-ref="Psalms 118:29">(118:29)</a></p>
+</blockquote>
+<p>He sang about the rejected stone, and about rejoicing in the day, on the night He was betrayed.</p>
+<p><strong>A caution about certainty.</strong> The Gospels do not name the hymn. That it was the Hallel is a strong inference from Passover practice, not a stated fact, and this guide will not pretend otherwise. <strong>What is certain is that He sang</strong> — Matthew says so — <strong>and that the psalms sung at that meal were these.</strong></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>3. The Songs of Ascents — Walking Songs</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong><a href="https://www.blueletterbible.org/kjv/psa/120/1/s_598001" target="_blank" data-ref="Psalms 120">Psalms 120–134</a> all carry the same heading</strong>: <em>"A Song of degrees"</em> in the King James, or <em>"of ascents"</em> — Hebrew <em>maʿălôt</em> (מַעֲלוֹת), "goings up."</p>
+<p>Three explanations have been offered and they are not exclusive:</p>
+<ul>
+<li><strong>Pilgrims sang them going up to Jerusalem.</strong> The city sits on a ridge, so you <em>ascended</em> to</li>
+</ul>
+<p>  it from any direction. Israelites travelled there three times a year for the festivals.</p>
+<ul>
+<li><strong>The Levites sang them on the fifteen steps</strong> of the temple — one psalm per step, and there</li>
+</ul>
+<p>  are fifteen psalms.</p>
+<ul>
+<li><strong>They were sung by the exiles going up from Babylon.</strong></li>
+</ul>
+<p><strong><a href="https://www.blueletterbible.org/kjv/psa/127/1/s_605001" target="_blank" data-ref="Psalms 127">Psalms 127</a> and 128 are your two</strong>, and they are domestic — the house, the children, the bread. Ordinary family life, sung on a journey to worship. That combination is the point: these are not psalms about home ALONE. The Levites sang them as temple liturgy, and families sang them on the road — so these are psalms about home carried into worship, which is why the domestic detail matters rather than sitting oddly beside the ritual.</p>
+<p><strong><a href="https://www.blueletterbible.org/kjv/psa/127/1/s_605001" target="_blank" data-ref="Psalm 127">Psalm 127</a> carries a heading no other Song of Ascents has:</strong> <em>"for Solomon."</em> The psalm about building a house is attributed to the man who built the temple — and it opens by saying the builder is not the one who matters: <em>"Except the LORD build the house, they labour in vain that build it."</em></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>4. Psalm 110 and Melchizedek</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><a href="https://www.blueletterbible.org/kjv/psa/110/1/s_588001" target="_blank" data-ref="Psalm 110">Psalm 110</a> is short, strange, and quoted in the New Testament more than almost any other psalm.</p>
+<p><strong>Its opening line is confusing in English on purpose.</strong> <em>"The LORD said unto my Lord"</em> <a href="https://www.blueletterbible.org/kjv/psa/110/1/s_588001" target="_blank" data-ref="Psalms 110:1">(110:1)</a> — two different Hebrew words behind the two Lords. The first is the covenant name; the second is <a href="https://www.blueletterbible.org/lexicon/h113/kjv/wlc/0-1/" target="_blank" data-lexicon="firm, strong, lord, master (lord, master; reference to men (superintendent of household, of affairs; master; king); reference to God (the Lord God; Lord of the whole earth); lords, kings; reference to men (proprietor of hill of Samaria; master; husband; prophet; governor; prince; king); reference to God (Lord of lords (probably = &quot;thy husband, Yahweh&quot;)); my lord, my master; reference to men (master; husband; prophet; prince; king; father; Moses; priest; theophanic angel; captain; general recognition of superiority); reference to God (my Lord, my Lord and my God; Adonai (parallel with Yahweh)))" data-strongs="H113" data-translit="&#x27;āḏôn" data-original="אָדוֹן" data-lang="hebrew" data-verse=""><em>ʾādôn</em></a> (אָדוֹן), an ordinary word for a master or superior. <strong>David, the king, is calling someone else <em>my Lord</em></strong> — and that is the whole puzzle.</p>
+<p>The Savior put it to the Pharisees directly. If the Messiah is simply David's son, <em>"how then doth David in spirit call him Lord?"</em> (<a href="https://www.blueletterbible.org/kjv/mat/22/43-45/s_951043" target="_blank" data-ref="Matthew 22:43-45">Matthew 22:43–45</a>). <strong>"And no man was able to answer him a word"</strong> <a href="https://www.blueletterbible.org/kjv/psa/22/46/s_500046" target="_blank" data-ref="Psalms 22:46">(22:46)</a>.</p>
+<p><strong>Verse 4 is why this psalm matters so much to Latter-day Saints:</strong> <em>"Thou art a priest for ever after the order of Melchizedek."</em> Outside <a href="https://www.blueletterbible.org/kjv/gen/14/1/s_14001" target="_blank" data-ref="Genesis 14">Genesis 14</a>, this is <strong>the only place the Old Testament mentions Melchizedek at all</strong>. The book of Hebrews builds its entire argument about Christ's priesthood on it (<a href="https://www.blueletterbible.org/kjv/heb/5/6/s_1138006" target="_blank" data-ref="Hebrews 5:6">Hebrews 5:6; 7:17</a>).</p>
+<p><strong>Why the higher priesthood carries that name is not an inference from these verses — it was revealed, and the answer is not what most members expect:</strong></p>
+<blockquote>
+<p><em>"Before his day it was called the Holy Priesthood, after the Order of the Son of God. But out of respect or reverence to the name of the Supreme Being, to avoid the too frequent repetition of his name, they, the church, in ancient days, called that priesthood after Melchizedek, or the Melchizedek Priesthood."</em></p>
+<p>— <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107?lang=eng&id=p3-p4#p3" target="_blank">Doctrine and Covenants 107:3–4</a></p>
+</blockquote>
+<p><strong>The priesthood's own name is the Holy Priesthood after the Order of the Son of God.</strong> "Melchizedek Priesthood" is a reverential substitute — the same instinct that led Israel to say <em>Adonai</em> rather than pronounce the divine name. <strong>The Old Testament witness and the Hebrews argument are real and they matter; they are simply not the stated reason for the name.</strong></p>
+<p><em>(The Interpreter Foundation's article on Melchizedek treats <a href="https://www.blueletterbible.org/kjv/psa/110/4/s_588004" target="_blank" data-ref="Psalm 110:4">Psalm 110:4</a> directly — it is filed under the <a href="https://www.blueletterbible.org/kjv/gen/18/1/s_18001" target="_blank" data-ref="Genesis 18">Genesis 18–23</a> lesson rather than a Psalms one, which is why it is easy to miss.)</em></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>5. Psalm 119 and the Alphabet</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>176 verses, twenty-two stanzas, eight verses each.</strong> Twenty-two is the number of letters in the Hebrew alphabet, and in Hebrew <strong>every verse of a stanza begins with that stanza's letter</strong> — eight verses starting with <span class="term-ref" data-letter="aleph"><em>aleph</em></span>, then eight with <span class="term-ref" data-letter="beth"><em>beth</em></span>, and so on to <span class="term-ref" data-letter="tav"><em>tav</em></span>.</p>
+<p>Your King James Bible prints the letter names as headings, so you can see the structure without reading Hebrew. Look above verse 105 and you will find <strong>NUN</strong>.</p>
+<p><strong>Why write a poem that way?</strong> Two reasons usually given, and they work together:</p>
+<ul>
+<li><strong>It is a memory aid.</strong> An acrostic is far easier to memorise, and this is a psalm about</li>
+</ul>
+<p>  keeping God's word in the heart <a href="https://www.blueletterbible.org/kjv/psa/119/11/s_597011" target="_blank" data-ref="Psalms 119:11">(119:11)</a>.</p>
+<ul>
+<li><strong>It is a claim about completeness.</strong> Every letter, <span class="term-ref" data-letter="aleph"><em>aleph</em></span> to <span class="term-ref" data-letter="tav"><em>tav</em></span> — the whole alphabet</li>
+</ul>
+<p>  turned toward one subject. Everything language can say, said about the word of God.</p>
+<p><strong>Nearly every verse mentions God's word</strong> under one of eight terms — law, testimonies, precepts, statutes, commandments, judgments, word, ways. Eight terms, eight verses per stanza. Whether that is deliberate is debated; that the psalm is saturated with them is not.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>6. What Psalm 137 Is Doing Here</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong><a href="https://www.blueletterbible.org/kjv/psa/137/1/s_615001" target="_blank" data-ref="Psalm 137">Psalm 137</a> is the one psalm in this week that does not praise.</strong> <em>"By the rivers of Babylon, there we sat down, yea, we wept, when we remembered Zion"</em> <a href="https://www.blueletterbible.org/kjv/psa/137/1/s_615001" target="_blank" data-ref="Psalms 137:1">(137:1)</a>. The exiles have been asked to perform their temple songs for their captors, and they refuse: <em>"How shall we sing the LORD'S song in a strange land?"</em> <a href="https://www.blueletterbible.org/kjv/psa/137/4/s_615004" target="_blank" data-ref="Psalms 137:4">(137:4)</a>.</p>
+<p>It is worth noticing where the editors put it. <strong><a href="https://www.blueletterbible.org/kjv/psa/137/1/s_615001" target="_blank" data-ref="Psalm 137">Psalm 137</a> sits in Book Five, on the way to the Hallelujah psalms</strong> — not edited out, not softened, and not last. The book that ends in praise keeps the psalm about being unable to sing.</p>
+<p><strong>Its final verses are the hardest in the Psalter</strong>, invoking violence against Babylon's children. This guide does not soften them and does not recommend them as a prayer. They are the words of people who had watched exactly that done to their own city. <strong>Reading them honestly means recognising real grief and real rage in scripture, spoken to God rather than acted on</strong> — which is what the Psalms consistently do with both.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>7. The Terms in This Section, in One Place</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Term</th><th>What it means</th></tr>
+<tr><td><strong>Book Five</strong></td><td><a href="https://www.blueletterbible.org/kjv/psa/107/1/s_585001" target="_blank" data-ref="Psalms 107">Psalms 107–150</a>, the last of the Psalter's five divisions.</td></tr>
+<tr><td><strong>doxology</strong></td><td>A short burst of praise closing a section — Greek <a href="https://www.blueletterbible.org/lexicon/g1391/kjv/tr/0-1/" target="_blank" data-lexicon="δόξα, -ης, ἡ; (δοκέω), [in LXX very frequently for כָּבוֹד, also for הוֹד ,פִּפְאֶרֶת, etc., 25 words in all ;]; in cl.,; __1. expectation, judgment, opinion (4Ma.5:18).; __2. opinion, estimation in which one is held, repute; in NT, always good opinion, hence reputation, praise, honour, glory: Luk.14:10, Jhn.12:43, Heb.3:3; opposite to αἰσχύνη, Php.3:19; to ἀτιμία, 2Co.6:8; δ. κ. τιμή, Rom.2:7, 10 1Pe.1:7, 2Pe.1:17; ζητεῖν, Jhn.5:44 7:18 8:50, 1Th.2:6; λαμβάνειν, Jhn.5:41, 2Pe.1:17, Rev.5:12; διδόναι δ. τ. θεῷ (cf. נָתַן כָּבוֹד לַיהוָֹה, Jer.13:16, al.), Luk.17:18, Jhn.9:24, Act.12:23, Rom.4:20, Rev.4:9; εἰς (τ.) δ. θεοῦ, Rom.3:7 15:7, Php.1:11, al.; in doxologies, τ. θεῷ (ᾧ) ἡ δ., Luk.2:14, Rom.11:36 16:27, Gal.1:5, Eph.3:21, al.; __3. Later also (not cl.) as in LXX (= הוֹד, Job.39:20, 1Ch.29:25; כָּבוֹד, Job.19:9, Est.5:11, al.), visible brightness, splendour, glory: of light, Act.22:11; of heavenly bodies, 1Co.15:40ff.; esp. that wh. radiates from God&#x27;s presence, as manifested in the pillar of cloud and in the Holy of Holies (= כָּבוֹד, Exo.16:10 25:22 40:34, al.; and new Heb. שְׁכִינָה, 2Ma.2:8; see DB, iv, 489b), Rom.9:4, Jas.2:1 (see Hort, Mayor, in l.); hence of the manifested glory of God, Rom.1:23, Col.1:11 Eph.1:6, 12 17 3:16; of the same as communicated to man through Christ, 2Co.3:18 4:6; and of the glorious condition into which Christians shall enter hereafter, Rom.8:18, 21 9:23, 2Ti.2:10, al.; SYN.: ἔπαινος τιμή (see Hort on 1Pe.1:7). (AS)" data-strongs="G1391" data-translit="doxa" data-original="δόξα" data-lang="greek" data-verse=""><em>doxa</em></a> "glory" + <a href="https://www.blueletterbible.org/lexicon/g3056/kjv/tr/0-1/" target="_blank" data-lexicon="λόγος, -ου, ὁ (λέγω); [in LXX chiefly for  דָּבָר, also for מִלָּה ,אֵמֶר, etc. ;]; __I. Of that by which the inward thought is expressed, Lat. oratio, sermo, vox, verbum.; __1. a word, not in the grammatical sense of a mere name (ἔπος, ὄνομα, ῥῆμα), but a word as  embodying a conception or idea: Mat.8:8, Luk.7:7, 1Co.14:9, 19 Heb.12:19, al.; __2. a saying, statement, declaration: Mat.19:22 (T om.), Mrk.5:36 7:29, Luk.1:29, Jhn.2:22 6:60, Act.7:29, al.; with genitive attrib., Act.13:15, Rom.9:9, Heb.7:28, al.; of the sayings, commands, promises, etc., of teachers, Mat.7:24 10:14, Mrk.8:38, Luk.9:4, Jhn.14:24, al.; λ. κενοί, Eph.5:6; ἀληθινοί, Rev.19:9; πιστοί, Rev.22:6; esp. of the precepts, decrees and promises of God, ὁ λ. τ. θεοῦ, the word of God: Mrk.7:13, Jhn.10:35, Rom.13:9, 1Co.14:36, Php.1:14, al.; absol., ὁ λ., Mat.13:21, 22 Mrk.16:[20], Luk.1:2, Act.6:4, Heb.4:12, al.; __3. speech, discourse: Act.14:12, 2Co.10:10, Jas.3:2; opposite to ἐπιστολή, 2Th.2:15; disting, from σοφία, 1Co.2:1; ἀναστροφή, 1Ti.4:12; δύναμις, 1Co.4:19, 1Th.1:5; ἔργον, Rom.15:18; οὐδενὸς λ. τίμιον (not worthy of mention), Act.20:24; of the faculty of speech, Luk.24:19, 2Co.11:6; of the style of speech, Mat.5:37, 1Co.1:5; of instruction, Col.4:3, 1Pe.3:1; with genitive of person(s), Jhn.5:24 8:52, Act.2:41, al.; ὁ λ. ὁ ἐμός, Jhn.8:31; with genitive obj. (τ.) ἀληθείας, 2Co.6:7, Col.1:5, Jas.1:18; τ. καταλλαγῆς, 2Co.5:19; τ. σταυροῦ, 1Co.1:18; of mere talk, 1Co.4:19, 2o, Col.2:23, 1Jn.3:18; of the talk which one occasions, hence, repute: Col.2:23.; __4. subject-matter, hence, teaching, doctrine: Act.18:15, 2Ti.2:17, al.; esp. of Christian doctrine: Mat.13:20-23, Mrk.4:14-20 8:32, Luk.1:2, Act.8:4, Gal.6:6, 1Th.1:6, al.; with genitive of person(s), τ. θεοῦ, Luk.5:1, Jhn.17:6, Act.4:29, 1Co.14:36, I Jhn.1:10, Rev.6:9, al.; τ. Κυρίου, Act.8:25, 1Th.1:8, al.; τ. Χριστοῦ, Col.3:16, Rev.3:8; with genitive appos., Act.15:7; with genitive attrib., Heb.5:13.; __5. a story, tale, narrative: Mat.28:15, Jhn.21:23, Act.1:1 11:22; before περί, Luk.5:15.; __6. That which is spoken of (Plat., al.; V. Kennedy, Sources, 124), matter, affair, thing: Mat.21:24, Mrk.1:45 11:29, Luk.20:3, Act.8:21; of a matter in dispute, as a case or suit at law, Act.19:38; pl. (1Ma.7:33, al.), Luk.1:4.; __II. Of the inward thought itself, Lat. ratio.; __1. reason,; __(a) of the mental faculty (Hdt., Plat., al.): κατὰ λόγον, Act.18:14;; __(b) a reason, cause: τίνι λόγῳ, Act.10:29; παρεκτὸς λόγου πορνείας, Mat.5:32 19:9, WH, mg., R, mg.; __2. account,; __(a) regard: Act.20:24, Rec.;; __(b) reckoning: Php.4:15, 17; συναίρειν (which see) λ., Mat.18:23 25:19; in forensic sense, Rom.14:12, Heb.13:17, 1Pe.4:5; with genitive of thing(s), Luk.16:2; before περί, Mat.12:36, Act.19:40, 1Pe.3:15.; __3. proportion, analogy: Php.2:16 (Field, Notes, 193 f.).; __III. ὁ λ., the Divine Word or Logos: Jhn.1:1, 14; τ. ζωῆς, 1Jn.1:1; τ. θεοῦ, Rev.19:13 (see Westc, Swete, CGT, in ll.; reff. in Artt., Logos, DB, DCG).; (AS)" data-strongs="G3056" data-translit="logos" data-original="λόγος" data-lang="greek" data-verse=""><em>logos</em></a> "word."</td></tr>
+<tr><td><strong>Hallel</strong></td><td><a href="https://www.blueletterbible.org/kjv/psa/113/1/s_591001" target="_blank" data-ref="Psalms 113">Psalms 113–118</a>, "the praise," sung at Passover.</td></tr>
+<tr><td><strong>Great Hallel</strong></td><td><a href="https://www.blueletterbible.org/kjv/psa/136/1/s_614001" target="_blank" data-ref="Psalm 136">Psalm 136</a>, whose refrain runs through all twenty-six verses.</td></tr>
+<tr><td><strong>Hallelujah</strong></td><td>Hebrew <em>halelû-yāh</em> (הַלְלוּ־יָהּ), "praise Yah" — one word, not two.</td></tr>
+<tr><td><strong>Songs of Ascents</strong></td><td><a href="https://www.blueletterbible.org/kjv/psa/120/1/s_598001" target="_blank" data-ref="Psalms 120">Psalms 120–134</a>, <em>maʿălôt</em> (מַעֲלוֹת), "goings up" — temple liturgy sung by the Levites on the fifteen steps, and sung by pilgrims on the road up.</td></tr>
+<tr><td><strong>acrostic</strong></td><td>A poem whose lines begin with successive letters of the alphabet.</td></tr>
+<tr><td><strong>Melchizedek</strong></td><td>The priest-king of <a href="https://www.blueletterbible.org/kjv/gen/14/1/s_14001" target="_blank" data-ref="Genesis 14">Genesis 14</a>; named again only in <a href="https://www.blueletterbible.org/kjv/psa/110/4/s_588004" target="_blank" data-ref="Psalm 110:4">Psalm 110:4</a>.</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 3: WEEK 36: KEY PASSAGES STUDY -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">3. Week 36: Key Passages Study</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Five Passages</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><!-- MAINTENANCE, not reader-facing: keep this a '## ' heading. Prose above the first '## '      is silently discarded by the converter. --></p>
+<p>Five passages carry this week. Each is given its text, what it is doing, and where it connects.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 1: Psalm 103:8–14 — How God Deals With Us</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p><strong>8</strong> The LORD is merciful and gracious, slow to anger, and plenteous in mercy.</p>
+<p><strong>10</strong> He hath not dealt with us after our sins; nor rewarded us according to our iniquities.</p>
+<p><strong>12</strong> As far as the east is from the west, so far hath he removed our transgressions from us.</p>
+<p><strong>13</strong> Like as a father pitieth his children, so the LORD pitieth them that fear him.</p>
+<p><strong>14</strong> For he knoweth our frame; he remembereth that we are dust.</p>
+</blockquote>
+<h3>How the Passage Works</h3>
+<p><strong>Verse 10 is the hinge, and it is easy to read past.</strong> <em>"He hath not dealt with us after our sins."</em> That is not saying God overlooks sin. It is saying He does not give us what the transaction would require — which is the whole difference between justice alone and mercy.</p>
+<p><strong>Verse 12 is a deliberately unmeasurable distance.</strong> East and west never meet. Had the psalmist said <em>north and south</em> he would have given you two poles and a fixed span between them; east and west run away from each other forever. <strong>The removal has no far side.</strong></p>
+<p><strong>And verse 14 is the tenderest line about God's patience in scripture.</strong> <em>"He knoweth our frame; he remembereth that we are dust."</em> Not <em>He tolerates</em> that we are dust — He <strong>remembers</strong> it. The word for <em>frame</em> is <a href="https://www.blueletterbible.org/lexicon/h3336/kjv/wlc/0-1/" target="_blank" data-lexicon="form, framing, purpose, framework (form; pottery; graven image; man (as formed from the dust); purpose, imagination, device (intellectual framework))" data-strongs="H3336" data-translit="yēṣer" data-original="יָצַר" data-lang="hebrew" data-verse=""><em>yēṣer</em></a> (יֵצֶר), from the verb used of a potter shaping clay, the same verb in <a href="https://www.blueletterbible.org/kjv/gen/2/7/s_2007" target="_blank" data-ref="Genesis 2:7">Genesis 2:7</a> when God <em>formed</em> man of the dust. <strong>God remembers what He made us out of, and is gentle accordingly.</strong></p>
+<p>Verse 8's <em>"slow to anger"</em> is, in Hebrew, <em>"long of nostril"</em> — the flaring nose being how the language pictures anger, so a long one is a long fuse. <em>(Full study: <strong>Word Studies</strong>, study 4.)</em></p>
+<h3>Latter-day Saint Connections</h3>
+<ul>
+<li><strong>Doctrine and Covenants 58:42</strong> — <em>"Behold, he who has repented of his sins, the same is forgiven, and I, the Lord, remember them no more."</em> <a href="https://www.blueletterbible.org/kjv/psa/103/12/s_581012" target="_blank" data-ref="Psalm 103:12">Psalm 103:12</a> removes the sin; <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/58?lang=eng&id=p42#p42" target="_blank" data-ref="D&C 58:42">D&C 58:42</a></li>
+</ul>
+<p>  says the Lord's memory goes with it. The same promise, a hundred generations apart.</p>
+<ul>
+<li><strong>Verse 13's fatherhood is doctrine, not metaphor, for us.</strong> <em>"Like as a father pitieth his children"</em> reads differently when the Father is literally that. The psalm's comfort rests on</li>
+</ul>
+<p>  a family relationship we affirm as real.</p>
+<ul>
+<li><strong>Elder Jeffrey R. Holland</strong>, on the reach of that mercy, in a talk built on the labourers</li>
+</ul>
+<p>  hired at the eleventh hour: <em>"It is never too late so long as the Master of the vineyard says there is time"</em> (<a href="https://www.churchofjesuschrist.org/study/general-conference/2012/04/the-laborers-in-the-vineyard?lang=eng" target="_blank">The Laborers in the Vineyard</a>,   April 2012). <strong>A thematic parallel rather than a treatment of this psalm</strong> — he does not cite   <a href="https://www.blueletterbible.org/kjv/psa/103/1/s_581001" target="_blank" data-ref="Psalm 103">Psalm 103</a> — but it is the same claim about how God deals with people who have fallen behind.</p>
+<h3>Study Questions</h3>
+<ol>
+<li>Verse 10 says God has not dealt with us <em>after our sins</em>. What would it look like if He did?</li>
+<li>Why <em>east and west</em> rather than any other pair of directions?</li>
+<li>What changes if you read verse 14 as God <strong>remembering</strong> rather than merely tolerating?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 2: Psalm 110:1–4 — The Psalm That Ended the Argument</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p><strong>1</strong> The LORD said unto my Lord, Sit thou at my right hand, until I make thine enemies thy footstool.</p>
+<p><strong>4</strong> The LORD hath sworn, and will not repent, Thou art a priest for ever after the order of Melchizedek.</p>
+</blockquote>
+<h3>How the Passage Works</h3>
+<p><strong>Two different words are printed <em>Lord</em> in verse 1</strong>, and the difference is the point. The first is the covenant name; the second is <a href="https://www.blueletterbible.org/lexicon/h113/kjv/wlc/0-1/" target="_blank" data-lexicon="firm, strong, lord, master (lord, master; reference to men (superintendent of household, of affairs; master; king); reference to God (the Lord God; Lord of the whole earth); lords, kings; reference to men (proprietor of hill of Samaria; master; husband; prophet; governor; prince; king); reference to God (Lord of lords (probably = &quot;thy husband, Yahweh&quot;)); my lord, my master; reference to men (master; husband; prophet; prince; king; father; Moses; priest; theophanic angel; captain; general recognition of superiority); reference to God (my Lord, my Lord and my God; Adonai (parallel with Yahweh)))" data-strongs="H113" data-translit="&#x27;āḏôn" data-original="אָדוֹן" data-lang="hebrew" data-verse=""><em>ʾādôn</em></a> (אָדוֹן), a title for a superior. So the line reads: <em>the LORD said to my master.</em> <strong>David — Israel's king, with no earthly superior — is calling someone else his master.</strong></p>
+<p>The Savior used exactly that to close an argument. Asked whose son the Messiah is, He quoted this verse and asked: <em>"If David then call him Lord, how is he his son?"</em> (<a href="https://www.blueletterbible.org/kjv/mat/22/45/s_951045" target="_blank" data-ref="Matthew 22:45">Matthew 22:45</a>). <strong>"And no man was able to answer him a word."</strong></p>
+<p><strong>Verse 4 opens a second door.</strong> <em>"Thou art a priest for ever after the order of Melchizedek."</em> Melchizedek appears in <a href="https://www.blueletterbible.org/kjv/gen/14/1/s_14001" target="_blank" data-ref="Genesis 14">Genesis 14</a> — a priest-king of Salem who blesses Abraham — and then vanishes from the Old Testament except here. A single verse, in a short psalm, becomes the foundation of the book of Hebrews' argument that Christ holds a priesthood older and greater than Aaron's (<a href="https://www.blueletterbible.org/kjv/heb/5/6/s_1138006" target="_blank" data-ref="Hebrews 5:6">Hebrews 5:6; 7:17</a>).</p>
+<p><strong>And it is why the priesthood in your ward has that name.</strong></p>
+<h3>Latter-day Saint Connections</h3>
+<ul>
+<li><strong>Doctrine and Covenants 107:2–4</strong> — <em>"Why the first is called the Melchizedek Priesthood is because Melchizedek was such a great high priest… out of respect or reverence to the name of the Supreme Being, to avoid the too frequent repetition of his name."</em> <strong>A direct treatment</strong></li>
+</ul>
+<p>  of why this name attached to this priesthood.</p>
+<ul>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/13?lang=eng&id=p14-p19#p14" target="_blank" data-ref="Alma 13:14-19">Alma 13:14–19</a></strong> treats Melchizedek at greater length than the entire Old Testament does —</li>
+</ul>
+<p>  a king who <em>"did preach repentance unto his people"</em> and established peace.</p>
+<ul>
+<li><strong>Elder Dallin H. Oaks</strong>, <em><a href="https://www.churchofjesuschrist.org/study/general-conference/2020/04/33oaks?lang=eng" target="_blank">The Melchizedek Priesthood and the Keys</a></em></li>
+</ul>
+<p>  (April 2020) — <strong>a direct treatment</strong> of the priesthood this psalm names.</p>
+<h3>Study Questions</h3>
+<ol>
+<li>Why could no one answer the Savior's question about verse 1?</li>
+<li>What does <em>"a priest for ever"</em> claim that an Aaronic, inherited priesthood could not?</li>
+<li>Why might the Lord have sworn an oath about this, when scripture says elsewhere He does not repent?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 3: Psalm 118:19–29 — What He Sang Before Gethsemane</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p><strong>22</strong> The stone which the builders refused is become the head stone of the corner.</p>
+<p><strong>24</strong> This is the day which the LORD hath made; we will rejoice and be glad in it.</p>
+<p><strong>26</strong> Blessed be he that cometh in the name of the LORD.</p>
+<p><strong>29</strong> O give thanks unto the LORD; for he is good: for his mercy endureth for ever.</p>
+</blockquote>
+<h3>How the Passage Works</h3>
+<p><strong><a href="https://www.blueletterbible.org/kjv/psa/118/1/s_596001" target="_blank" data-ref="Psalm 118">Psalm 118</a> is the last psalm of the Passover meal</strong>, and Matthew records that after the Last Supper <em>"when they had sung an hymn, they went out into the mount of Olives"</em> (<a href="https://www.blueletterbible.org/kjv/mat/26/30/s_955030" target="_blank" data-ref="Matthew 26:30">Matthew 26:30</a>). <em>(Why that is almost certainly this psalm: <strong>Historical & Cultural Context</strong>, section 2.)</em></p>
+<p><strong>Verse 22 is a builder's image.</strong> A stone is rejected as unusable, and turns out to be the one the whole corner rests on. The Savior applied it to Himself, out loud, in the temple, days before He died — and then asked the chief priests, <em>"Did ye never read in the scriptures…?"</em> (<a href="https://www.blueletterbible.org/kjv/mat/21/42/s_950042" target="_blank" data-ref="Matthew 21:42">Matthew 21:42</a>). Peter used it again before the very council that had condemned Him (<a href="https://www.blueletterbible.org/kjv/act/4/11/s_1022011" target="_blank" data-ref="Acts 4:11">Acts 4:11</a>).</p>
+<p><strong>Verse 26 is spoken twice in the Gospels, by opposite parties, and this is worth slowing down for.</strong> The crowd shouts it at Him on Palm Sunday: <em>"Blessed is he that cometh in the name of the Lord"</em> (<a href="https://www.blueletterbible.org/kjv/mat/21/9/s_950009" target="_blank" data-ref="Matthew 21:9">Matthew 21:9</a>). Days later He says it back to them — as a prophecy about a city that would not receive Him: <em>"Ye shall not see me henceforth, till ye shall say, Blessed is he that cometh in the name of the Lord"</em> (<a href="https://www.blueletterbible.org/kjv/mat/23/39/s_952039" target="_blank" data-ref="Matthew 23:39">Matthew 23:39</a>).</p>
+<p><strong>Verse 24 is the one you have heard in a hundred talks</strong> — <em>"This is the day which the LORD hath made"</em> — and it belongs to this setting. It was sung at the table on the night of the betrayal.</p>
+<h3>Latter-day Saint Connections</h3>
+<ul>
+<li><strong><a href="https://www.blueletterbible.org/kjv/eph/2/20/s_1099020" target="_blank" data-ref="Ephesians 2:20">Ephesians 2:20</a></strong> — Christ as <em>"the chief corner stone."</em> Paul is reading this psalm.</li>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/jacob/4?lang=eng&id=p15-p17#p15" target="_blank" data-ref="Jacob 4:15-17">Jacob 4:15–17</a></strong> treats the same image at length: the Jews <em>"by the stumbling of the Jews they will reject the stone upon which they might build and have safe foundation."</em> The Book</li>
+</ul>
+<p>  of Mormon works <a href="https://www.blueletterbible.org/kjv/psa/118/1/s_596001" target="_blank" data-ref="Psalm 118">Psalm 118</a>'s image into a prophecy of its own.</p>
+<ul>
+<li><strong>Verse 24 as a discipline, not a mood.</strong> The psalm does not say <em>this is a good day.</em> It says</li>
+</ul>
+<p>  God made it, and therefore we will rejoice in it — a decision rather than a feeling.</p>
+<h3>Study Questions</h3>
+<ol>
+<li>What does it mean that He sang verse 24 hours before Gethsemane?</li>
+<li>Why does He quote verse 26 back to Jerusalem in <a href="https://www.blueletterbible.org/kjv/mat/23/39/s_952039" target="_blank" data-ref="Matthew 23:39">Matthew 23:39</a> — what is He promising?</li>
+<li>When has something you rejected turned out to be what everything rested on?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 4: Psalm 119:9–16, 105 — A Poem Made of the Alphabet</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p><strong>9</strong> Wherewithal shall a young man cleanse his way? by taking heed thereto according to thy word.</p>
+<p><strong>11</strong> Thy word have I hid in mine heart, that I might not sin against thee.</p>
+<p><strong>105</strong> Thy word is a lamp unto my feet, and a light unto my path.</p>
+</blockquote>
+<h3>How the Passage Works</h3>
+<p><strong>The longest chapter in the Bible is built out of the Hebrew alphabet</strong> — twenty-two stanzas, eight verses each, every verse of a stanza beginning with that stanza's letter. Your King James Bible prints the letter names; <strong>NUN</strong> stands above verse 105. <em>(Full structure: <strong>Historical & Cultural Context</strong>, section 5.)</em></p>
+<p><strong>Verse 105's image is smaller than it sounds.</strong> A lamp in that world was a clay dish of oil with a wick — enough light for the next few steps, not for the whole road. <strong>The psalm does not promise to show you the destination.</strong> It promises light where your foot is about to land.</p>
+<p><strong>Verse 11 is about storage, not study.</strong> <em>"Hid in mine heart"</em> — put somewhere it cannot be taken and will be there when needed. That is why the psalm is an acrostic: an alphabet poem is built to be memorised.</p>
+<p><strong>And the psalm ends where you would not expect.</strong> After 175 verses of devotion to God's law, the last is: <em>"I have gone astray like a lost sheep; seek thy servant; for I do not forget thy commandments"</em> <a href="https://www.blueletterbible.org/kjv/psa/119/176/s_597176" target="_blank" data-ref="Psalms 119:176">(119:176)</a>. <strong>The longest love song to scripture in the world ends with the singer admitting he is lost and asking to be found.</strong></p>
+<h3>Latter-day Saint Connections</h3>
+<ul>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/15?lang=eng&id=p23-p24#p23" target="_blank" data-ref="1 Nephi 15:23-24">1 Nephi 15:23–24</a></strong> — the iron rod is <em>"the word of God"</em>, and those who hold fast <em>"never could perish."</em> Lehi's dream and <a href="https://www.blueletterbible.org/kjv/psa/119/1/s_597001" target="_blank" data-ref="Psalm 119">Psalm 119</a> are making the same claim about the same thing.</li>
+<li><strong>The eight terms</strong> the psalm cycles through — law, testimonies, precepts, statutes,</li>
+</ul>
+<p>  commandments, judgments, word, ways — are worth noticing as eight angles on one thing, the   way <em>scriptures</em>, <em>the gospel</em>, and <em>the doctrine</em> are for us.</p>
+<ul>
+<li><strong>A verse-a-day, a letter-a-week practice</strong>: eight verses is a stanza. The psalm was built to</li>
+</ul>
+<p>  be taken in pieces.</p>
+<h3>Study Questions</h3>
+<ol>
+<li>What is the difference between studying scripture and <em>hiding it in your heart</em>?</li>
+<li>Why might God give a lamp for your feet rather than a light for the whole road?</li>
+<li>What does it mean that the psalm ends with <em>"I have gone astray"</em>?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Passage 5: Psalm 150 — Six Verses, and the End of the Book</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<h3>The Text</h3>
+<blockquote>
+<p><strong>1</strong> Praise ye the LORD. Praise God in his sanctuary: praise him in the firmament of his power.</p>
+<p><strong>2</strong> Praise him for his mighty acts: praise him according to his excellent greatness.</p>
+<p><strong>6</strong> Let every thing that hath breath praise the LORD. Praise ye the LORD.</p>
+</blockquote>
+<h3>How the Passage Works</h3>
+<p><strong>Thirteen commands to praise in six verses</strong>, and they answer four questions in order: <em>where</em> (the sanctuary, the firmament), <em>why</em> (His mighty acts, His greatness), <em>how</em> (trumpet, psaltery, harp, timbrel, dance, strings, organs, cymbals), and finally <em>who</em>.</p>
+<p><strong>The answer to <em>who</em> is the last line of the Psalter</strong>: <em>"Let every thing that hath breath praise the LORD."</em></p>
+<p><strong>The word for <em>breath</em> is the same word as the breath of life.</strong> Hebrew <a href="https://www.blueletterbible.org/lexicon/h5397/kjv/wlc/0-1/" target="_blank" data-lexicon="breath, spirit (breath (of God); breath (of man); every breathing thing; spirit (of man)); Aramaic equivalent: nish.ma (נִשְׁמָא &quot;breath&quot; H5396)" data-strongs="H5397" data-translit="nᵊšāmâ" data-original="נְשָׁמָה" data-lang="hebrew" data-verse=""><em>neshāmâ</em></a> (הַנְּשָׁמָה) — and <a href="https://www.blueletterbible.org/kjv/gen/2/7/s_2007" target="_blank" data-ref="Genesis 2:7">Genesis 2:7</a> says God <em>"breathed into his nostrils the breath of life"</em> (<em>nishmat chayyim</em>, נִשְׁמַת חַיִּים). <strong>The book ends by calling on everything that carries the breath God gave it to give some of that breath back.</strong></p>
+<p>Jerome's Latin heard it and rendered the line <em>"Omnis <strong>spiritus</strong> laudet Dominum"</em> — <em>spiritus</em> meaning breath and spirit at once, exactly as Greek <a href="https://www.blueletterbible.org/lexicon/g4151/kjv/tr/0-1/" target="_blank" data-lexicon="πνεῦμα, -τος, τό,; [in LXX chiefly and very frequently for רוּחַ ;]; __1. of air in motion;; __(a) wind: Jhn.3:8; pl., Heb.1:7 (LXX);; __(b) breath: π. ζωῆς, Rev.11:11; π. τοῦ στόματος, figuratively, 2Th.2:8 (cf. Ps 32 (33)6).; __2. Of the vital principle, the spirit (Arist., Polyb., al.): Luk.8:55, Jhn.19:30, Act.7:59, al.; opposite to σάρξ, Mat.26:41, Mrk.14:38, 1Co.5:5, al.; to σῶμα, Rom.8:10, 1Co.6:17 7:34, 1Pe.4:6; to ψυχή, Php.1:27, Heb.4:12; τὸ π. καὶ ἡ ψ. καὶ τ. σῶμα, 1Th.5:23 (M, Th., in l.); dative, τῷ π., in spirit, Mrk.2:8 8:12, Jhn.11:33 13:21, Act.18:25, Rom.12:11, 1Co.7:34, 1Pe.3:18, al.; of the human spirit of Christ, Rom.1:4, 1Ti.3:16.; __3. spirit, i.e. frame of mind, disposition, influence: Luk.1:17, Rom.8:15, 1Co.4:21, Gal 6:1, Eph.2:2, 2Ti.1:7, 1Jn.4:6, al.; __4. An incorporeal being, a spirit: Luk.24:37, 39 Act.23:8; π. ὁ θεός, God is spirit, Jhn.4:24; πατὴρ τῶν π., Heb.12:9; of disembodied human beings, Heb.12:23, 1Pe.3:19 (ICC, in l.; DB, iii, 795); of angels. Heb.1:14; of demons or evil spirits, Mat.8:16, Mrk.9:20, Luk.9:39, al.; π. πύθυωνα, Act.16:16; πνεύματα δαιμονίων, Rev.16:14; π. δαιμονίου ἀκαθάρτου, Luk.4:33; π. ἀσθενείας (Bl., §35, 5), Luk.13:11; π. ἀκάθαρτον, Mat.10:1, Mrk.1:23, Luk.4:36, Act.5:16; π. ἄλαλον (καὶ κωφόν), Mrk.9:17, 25; πονηρόν, Luk.7:21, Act.19:12, al.; __5. Of the Holy Spirit, π. ἅγιον, τὸ ἅ. π., τὸ π. τὸ ἅ. τὸ π., π. (the article as a rule being used when the Spirit is regarded as a Person or a Divine Power, and omitted when the reference is to an operation, influence or gift of the Spirit; see WM, 151:5; Bl., §46, 7): anarth., Mat.1:18 3:11, 16 4:1, Mrk.1:8 (Swete, in l.), ib.10, Luk.1:15, Jhn.7:39, Act.19:2, Rom.5:5, 1Co.2:4, al.; with art., Mat.4:1 12:31, 32 Mrk.1:10 3:29, Luk.2:26, Jhn.7:36 14:26, Act.4:31 5:3, Rom.8:16, al.; (τὸ) π. (τοῦ) θεοῦ, Mat.3:16, Rom.8:9, Eph.3:16, 1Jn.4:2, al.; τὸ π. τ. πατρός, Mat.10:20; π. θεοῦ ζῶντος, 2Co.3:3; (τὸ) π. τοῦ κυρίου, Luk.4:18, Act.5:9 8:39; τὸ π. Ἰησοῦ, Act.16:7; Χριστοῦ, Rom.8:9; Ἰησοῦ Χριστοῦ, Php.1:19; τὸ π. τ. ἀληθείας, Jhn.15:26 16:13, 1Jn.4:6; λείγει (μαρτυρεῖ) τὸ π. (τὸ ἅγιον), Act.21:11 28:25, 1Ti.4:1, Heb.3:7 10:15, Rev.14:13; before τ. ἐκκλησίαις,  Rev.2:7, 11 17, 29, 3:6, 12, 22; ἐν τ. π., Luk.2:27; κατὰ πνεῦμα, Rom.8:4, 5; ἐξ ὕδατος καὶ π., Jhn.3:5, διὰ πνεύματος αἰωνίου, Heb.9:14; ἐν ἁγιασμῷ πνεύματος, 2Th.2:13, 1Pe.1:2; ἓν π., 1Co.12:13, Eph.2:18 4:4; ὁ δὲ κύριος τὸ π. ἐστιν, 2Co.3:17; of that which is effected or governed by the Spirit, opposite to γράμμα, Rom.2:29 7:6, 2Co.3:6.; SYN.: νοῦς, which in NT is contrasted with π. as &quot;the action of the understanding in man with that of the spiritual or ecstatic impulse&quot; (DB, iv, 612); ψυχή — the usual term in cl. psychology—in NT, &quot;expresses man as apart from God, a separate individual, π. expresses man as drawing his life from God&quot; (DB, 1-vol., 872). (AS)" data-strongs="G4151" data-translit="pneuma" data-original="πνεῦμα" data-lang="greek" data-verse=""><em>pneuma</em></a> does.</p>
+<p><strong>Notice the reach of that last line.</strong> Not everything that understands. Not everything that has its life in order. <strong>Everything that breathes.</strong></p>
+<h3>Latter-day Saint Connections</h3>
+<ul>
+<li><strong>Doctrine and Covenants 25:12</strong> — <em>"For my soul delighteth in the song of the heart; yea, the song of the righteous is a prayer unto me."</em> <strong>A direct treatment</strong> of what this whole book</li>
+</ul>
+<p>  has been doing. A psalm sung is a prayer, and <a href="https://www.blueletterbible.org/kjv/psa/150/1/s_628001" target="_blank" data-ref="Psalm 150">Psalm 150</a> is the instruction to sing it.</p>
+<ul>
+<li><strong>The instruments matter.</strong> Verses 3–5 name eight, including dance. Praise here is physical,</li>
+</ul>
+<p>  loud, and communal — not only quiet and interior.</p>
+<ul>
+<li><strong><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/5?lang=eng&id=p26#p26" target="_blank" data-ref="Alma 5:26">Alma 5:26</a></strong> — <em>"if ye have felt to sing the song of redeeming love, I would ask, can ye feel so now?"</em></li>
+</ul>
+<p>  Alma treats the song as evidence of a converted heart, which is <a href="https://www.blueletterbible.org/kjv/psa/150/1/s_628001" target="_blank" data-ref="Psalm 150">Psalm 150</a>'s assumption.</p>
+<h3>Study Questions</h3>
+<ol>
+<li>Why might the Psalter end with instruments and dancing rather than a doctrinal summary?</li>
+<li>What does the psalm assume about who is qualified to praise God?</li>
+<li>You have breath this morning. What does the last verse of the Psalms ask of you because of it?</li>
+</ol>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 4: WEEK 36: WORD STUDIES -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">4. Week 36: Word Studies</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>How to Read These Word Studies</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><!-- MAINTENANCE, not reader-facing: keep this a '## ' heading. Prose above the first '## '      is silently discarded by the converter. --></p>
+<p><strong>A note on verse numbers.</strong> Hebrew Bibles count a psalm's header line as verse 1, so the Hebrew reference is often one higher than your English one. Both are given.</p>
+<p><strong>The tables.</strong> Each study ends with a <strong>Cross-Language Connections</strong> table following one word through four languages. You need not read any of them — the point is to watch what each translation understood the Hebrew to mean.</p>
+<table class="info-table">
+<tr><th>Row</th><th>What it is</th></tr>
+<tr><td><strong>Hebrew</strong></td><td>The original. The number (H1254) is its <strong>Strong's number</strong>, a standard index to every word in the Hebrew Bible, so you can look one up without knowing the alphabet.</td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td>The <strong>Septuagint</strong>, the Greek translation made about two centuries before Christ. <strong>LXX</strong> is its abbreviation — the Roman numeral seventy. This is the version most often quoted in the New Testament.</td></tr>
+<tr><td><strong>Latin</strong></td><td>The <strong>Vulgate</strong>, Jerome's Latin Bible. Here for etymology — usually the road by which a Hebrew idea reached English — not as an authority on meaning.</td></tr>
+<tr><td><strong>English</strong></td><td>Where our word came from, and what it used to mean.</td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 1: neshāmâ (נְשָׁמָה) — "Breath"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong><a href="https://www.blueletterbible.org/kjv/psa/150/6/s_628006" target="_blank" data-ref="Psalm 150:6">Psalm 150:6</a></strong> — <em>"Let every thing that hath <strong>breath</strong> praise the LORD"</em></p>
+<blockquote>
+<p>כֹּל הַנְּשָׁמָה תְּהַלֵּל יָהּ</p>
+</blockquote>
+<p><strong>This is the last word of substance in the Psalter</strong>, and it is not the ordinary word for breathing. <a href="https://www.blueletterbible.org/lexicon/h5397/kjv/wlc/0-1/" target="_blank" data-lexicon="breath, spirit (breath (of God); breath (of man); every breathing thing; spirit (of man)); Aramaic equivalent: nish.ma (נִשְׁמָא &quot;breath&quot; H5396)" data-strongs="H5397" data-translit="nᵊšāmâ" data-original="נְשָׁמָה" data-lang="hebrew" data-verse=""><em>Neshāmâ</em></a> is the breath that makes something alive — and its most famous use is <a href="https://www.blueletterbible.org/kjv/gen/2/7/s_2007" target="_blank" data-ref="Genesis 2:7">Genesis 2:7</a>, where God <em>"breathed into his nostrils the <strong>breath</strong> of life"</em> (<em>nishmat chayyim</em>, נִשְׁמַת חַיִּים). <strong>Same root.</strong></p>
+<p>So the book of Praises ends by calling on everything that carries the breath God gave it to give some of that breath back. <strong>Praise, in this psalm's final line, is what you do with the thing that makes you alive.</strong></p>
+<p><strong>Jerome heard it.</strong> The Vulgate renders the line <em>"Omnis <strong>spiritus</strong> laudet Dominum"</em> — and <em>spiritus</em>, like Greek <a href="https://www.blueletterbible.org/lexicon/g4151/kjv/tr/0-1/" target="_blank" data-lexicon="πνεῦμα, -τος, τό,; [in LXX chiefly and very frequently for רוּחַ ;]; __1. of air in motion;; __(a) wind: Jhn.3:8; pl., Heb.1:7 (LXX);; __(b) breath: π. ζωῆς, Rev.11:11; π. τοῦ στόματος, figuratively, 2Th.2:8 (cf. Ps 32 (33)6).; __2. Of the vital principle, the spirit (Arist., Polyb., al.): Luk.8:55, Jhn.19:30, Act.7:59, al.; opposite to σάρξ, Mat.26:41, Mrk.14:38, 1Co.5:5, al.; to σῶμα, Rom.8:10, 1Co.6:17 7:34, 1Pe.4:6; to ψυχή, Php.1:27, Heb.4:12; τὸ π. καὶ ἡ ψ. καὶ τ. σῶμα, 1Th.5:23 (M, Th., in l.); dative, τῷ π., in spirit, Mrk.2:8 8:12, Jhn.11:33 13:21, Act.18:25, Rom.12:11, 1Co.7:34, 1Pe.3:18, al.; of the human spirit of Christ, Rom.1:4, 1Ti.3:16.; __3. spirit, i.e. frame of mind, disposition, influence: Luk.1:17, Rom.8:15, 1Co.4:21, Gal 6:1, Eph.2:2, 2Ti.1:7, 1Jn.4:6, al.; __4. An incorporeal being, a spirit: Luk.24:37, 39 Act.23:8; π. ὁ θεός, God is spirit, Jhn.4:24; πατὴρ τῶν π., Heb.12:9; of disembodied human beings, Heb.12:23, 1Pe.3:19 (ICC, in l.; DB, iii, 795); of angels. Heb.1:14; of demons or evil spirits, Mat.8:16, Mrk.9:20, Luk.9:39, al.; π. πύθυωνα, Act.16:16; πνεύματα δαιμονίων, Rev.16:14; π. δαιμονίου ἀκαθάρτου, Luk.4:33; π. ἀσθενείας (Bl., §35, 5), Luk.13:11; π. ἀκάθαρτον, Mat.10:1, Mrk.1:23, Luk.4:36, Act.5:16; π. ἄλαλον (καὶ κωφόν), Mrk.9:17, 25; πονηρόν, Luk.7:21, Act.19:12, al.; __5. Of the Holy Spirit, π. ἅγιον, τὸ ἅ. π., τὸ π. τὸ ἅ. τὸ π., π. (the article as a rule being used when the Spirit is regarded as a Person or a Divine Power, and omitted when the reference is to an operation, influence or gift of the Spirit; see WM, 151:5; Bl., §46, 7): anarth., Mat.1:18 3:11, 16 4:1, Mrk.1:8 (Swete, in l.), ib.10, Luk.1:15, Jhn.7:39, Act.19:2, Rom.5:5, 1Co.2:4, al.; with art., Mat.4:1 12:31, 32 Mrk.1:10 3:29, Luk.2:26, Jhn.7:36 14:26, Act.4:31 5:3, Rom.8:16, al.; (τὸ) π. (τοῦ) θεοῦ, Mat.3:16, Rom.8:9, Eph.3:16, 1Jn.4:2, al.; τὸ π. τ. πατρός, Mat.10:20; π. θεοῦ ζῶντος, 2Co.3:3; (τὸ) π. τοῦ κυρίου, Luk.4:18, Act.5:9 8:39; τὸ π. Ἰησοῦ, Act.16:7; Χριστοῦ, Rom.8:9; Ἰησοῦ Χριστοῦ, Php.1:19; τὸ π. τ. ἀληθείας, Jhn.15:26 16:13, 1Jn.4:6; λείγει (μαρτυρεῖ) τὸ π. (τὸ ἅγιον), Act.21:11 28:25, 1Ti.4:1, Heb.3:7 10:15, Rev.14:13; before τ. ἐκκλησίαις,  Rev.2:7, 11 17, 29, 3:6, 12, 22; ἐν τ. π., Luk.2:27; κατὰ πνεῦμα, Rom.8:4, 5; ἐξ ὕδατος καὶ π., Jhn.3:5, διὰ πνεύματος αἰωνίου, Heb.9:14; ἐν ἁγιασμῷ πνεύματος, 2Th.2:13, 1Pe.1:2; ἓν π., 1Co.12:13, Eph.2:18 4:4; ὁ δὲ κύριος τὸ π. ἐστιν, 2Co.3:17; of that which is effected or governed by the Spirit, opposite to γράμμα, Rom.2:29 7:6, 2Co.3:6.; SYN.: νοῦς, which in NT is contrasted with π. as &quot;the action of the understanding in man with that of the spiritual or ecstatic impulse&quot; (DB, iv, 612); ψυχή — the usual term in cl. psychology—in NT, &quot;expresses man as apart from God, a separate individual, π. expresses man as drawing his life from God&quot; (DB, 1-vol., 872). (AS)" data-strongs="G4151" data-translit="pneuma" data-original="πνεῦμα" data-lang="greek" data-verse=""><em>pneuma</em></a> (πνεῦμα), means <strong>breath and spirit at once</strong>. That double meaning is why the Holy Ghost is called what He is called: breath, wind, Spirit, one word.</p>
+<p><em>A connection worth mentioning honestly:</em> the medieval notation marks written above chant are called <strong>neumes</strong>, and they are traditionally derived from that same <a href="https://www.blueletterbible.org/lexicon/g4151/kjv/tr/0-1/" target="_blank" data-lexicon="πνεῦμα, -τος, τό,; [in LXX chiefly and very frequently for רוּחַ ;]; __1. of air in motion;; __(a) wind: Jhn.3:8; pl., Heb.1:7 (LXX);; __(b) breath: π. ζωῆς, Rev.11:11; π. τοῦ στόματος, figuratively, 2Th.2:8 (cf. Ps 32 (33)6).; __2. Of the vital principle, the spirit (Arist., Polyb., al.): Luk.8:55, Jhn.19:30, Act.7:59, al.; opposite to σάρξ, Mat.26:41, Mrk.14:38, 1Co.5:5, al.; to σῶμα, Rom.8:10, 1Co.6:17 7:34, 1Pe.4:6; to ψυχή, Php.1:27, Heb.4:12; τὸ π. καὶ ἡ ψ. καὶ τ. σῶμα, 1Th.5:23 (M, Th., in l.); dative, τῷ π., in spirit, Mrk.2:8 8:12, Jhn.11:33 13:21, Act.18:25, Rom.12:11, 1Co.7:34, 1Pe.3:18, al.; of the human spirit of Christ, Rom.1:4, 1Ti.3:16.; __3. spirit, i.e. frame of mind, disposition, influence: Luk.1:17, Rom.8:15, 1Co.4:21, Gal 6:1, Eph.2:2, 2Ti.1:7, 1Jn.4:6, al.; __4. An incorporeal being, a spirit: Luk.24:37, 39 Act.23:8; π. ὁ θεός, God is spirit, Jhn.4:24; πατὴρ τῶν π., Heb.12:9; of disembodied human beings, Heb.12:23, 1Pe.3:19 (ICC, in l.; DB, iii, 795); of angels. Heb.1:14; of demons or evil spirits, Mat.8:16, Mrk.9:20, Luk.9:39, al.; π. πύθυωνα, Act.16:16; πνεύματα δαιμονίων, Rev.16:14; π. δαιμονίου ἀκαθάρτου, Luk.4:33; π. ἀσθενείας (Bl., §35, 5), Luk.13:11; π. ἀκάθαρτον, Mat.10:1, Mrk.1:23, Luk.4:36, Act.5:16; π. ἄλαλον (καὶ κωφόν), Mrk.9:17, 25; πονηρόν, Luk.7:21, Act.19:12, al.; __5. Of the Holy Spirit, π. ἅγιον, τὸ ἅ. π., τὸ π. τὸ ἅ. τὸ π., π. (the article as a rule being used when the Spirit is regarded as a Person or a Divine Power, and omitted when the reference is to an operation, influence or gift of the Spirit; see WM, 151:5; Bl., §46, 7): anarth., Mat.1:18 3:11, 16 4:1, Mrk.1:8 (Swete, in l.), ib.10, Luk.1:15, Jhn.7:39, Act.19:2, Rom.5:5, 1Co.2:4, al.; with art., Mat.4:1 12:31, 32 Mrk.1:10 3:29, Luk.2:26, Jhn.7:36 14:26, Act.4:31 5:3, Rom.8:16, al.; (τὸ) π. (τοῦ) θεοῦ, Mat.3:16, Rom.8:9, Eph.3:16, 1Jn.4:2, al.; τὸ π. τ. πατρός, Mat.10:20; π. θεοῦ ζῶντος, 2Co.3:3; (τὸ) π. τοῦ κυρίου, Luk.4:18, Act.5:9 8:39; τὸ π. Ἰησοῦ, Act.16:7; Χριστοῦ, Rom.8:9; Ἰησοῦ Χριστοῦ, Php.1:19; τὸ π. τ. ἀληθείας, Jhn.15:26 16:13, 1Jn.4:6; λείγει (μαρτυρεῖ) τὸ π. (τὸ ἅγιον), Act.21:11 28:25, 1Ti.4:1, Heb.3:7 10:15, Rev.14:13; before τ. ἐκκλησίαις,  Rev.2:7, 11 17, 29, 3:6, 12, 22; ἐν τ. π., Luk.2:27; κατὰ πνεῦμα, Rom.8:4, 5; ἐξ ὕδατος καὶ π., Jhn.3:5, διὰ πνεύματος αἰωνίου, Heb.9:14; ἐν ἁγιασμῷ πνεύματος, 2Th.2:13, 1Pe.1:2; ἓν π., 1Co.12:13, Eph.2:18 4:4; ὁ δὲ κύριος τὸ π. ἐστιν, 2Co.3:17; of that which is effected or governed by the Spirit, opposite to γράμμα, Rom.2:29 7:6, 2Co.3:6.; SYN.: νοῦς, which in NT is contrasted with π. as &quot;the action of the understanding in man with that of the spiritual or ecstatic impulse&quot; (DB, iv, 612); ψυχή — the usual term in cl. psychology—in NT, &quot;expresses man as apart from God, a separate individual, π. expresses man as drawing his life from God&quot; (DB, 1-vol., 872). (AS)" data-strongs="G4151" data-translit="pneuma" data-original="πνεῦμα" data-lang="greek" data-verse=""><em>pneuma</em></a>, breath. <strong>The derivation is contested</strong> — others trace it to Greek <em>neuma</em>, "a nod, a sign," which suits a written mark just as well, and our sources do not settle it. <strong>Take it as a suggested connection, not an established one.</strong> What is certain is the thing underneath: singing is done on the breath, and in the languages of scripture breath and Spirit are one word.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h5397/kjv/wlc/0-1/" target="_blank" data-lexicon="breath, spirit (breath (of God); breath (of man); every breathing thing; spirit (of man)); Aramaic equivalent: nish.ma (נִשְׁמָא &quot;breath&quot; H5396)" data-strongs="H5397" data-translit="nᵊšāmâ" data-original="נְשָׁמָה" data-lang="hebrew" data-verse=""><em>neshāmâ</em></a> (נְשָׁמָה) — breath, the breath of life; the same word as <a href="https://www.blueletterbible.org/kjv/gen/2/7/s_2007" target="_blank" data-ref="Genesis 2:7">Genesis 2:7</a></td><td><a href="https://www.blueletterbible.org/lexicon/h5397/kjv/wlc/0-1/" target="_blank" data-lexicon="breath, spirit (breath (of God); breath (of man); every breathing thing; spirit (of man)); Aramaic equivalent: nish.ma (נִשְׁמָא "breath" H5396)" data-strongs="H5397" data-translit="nᵊšāmâ" data-original="נְשָׁמָה" data-lang="hebrew" data-verse="">BLB H5397</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g4157/kjv/tr/0-1/" target="_blank" data-lexicon="πνοή, -ῆς, ή; (πνέω), [in LXX chiefly for נְשָׁמָה ;]; __1. a blowing, blast, wind: Act.2:2.; __2. a breathing, breath: Act.17:25 (Gen.2:7, al.).†; (AS)" data-strongs="G4157" data-translit="pnoē" data-original="πνοή" data-lang="greek" data-verse=""><em>pnoē</em></a> (πνοή) — breath, wind; from the same root as <a href="https://www.blueletterbible.org/lexicon/g4151/kjv/tr/0-1/" target="_blank" data-lexicon="πνεῦμα, -τος, τό,; [in LXX chiefly and very frequently for רוּחַ ;]; __1. of air in motion;; __(a) wind: Jhn.3:8; pl., Heb.1:7 (LXX);; __(b) breath: π. ζωῆς, Rev.11:11; π. τοῦ στόματος, figuratively, 2Th.2:8 (cf. Ps 32 (33)6).; __2. Of the vital principle, the spirit (Arist., Polyb., al.): Luk.8:55, Jhn.19:30, Act.7:59, al.; opposite to σάρξ, Mat.26:41, Mrk.14:38, 1Co.5:5, al.; to σῶμα, Rom.8:10, 1Co.6:17 7:34, 1Pe.4:6; to ψυχή, Php.1:27, Heb.4:12; τὸ π. καὶ ἡ ψ. καὶ τ. σῶμα, 1Th.5:23 (M, Th., in l.); dative, τῷ π., in spirit, Mrk.2:8 8:12, Jhn.11:33 13:21, Act.18:25, Rom.12:11, 1Co.7:34, 1Pe.3:18, al.; of the human spirit of Christ, Rom.1:4, 1Ti.3:16.; __3. spirit, i.e. frame of mind, disposition, influence: Luk.1:17, Rom.8:15, 1Co.4:21, Gal 6:1, Eph.2:2, 2Ti.1:7, 1Jn.4:6, al.; __4. An incorporeal being, a spirit: Luk.24:37, 39 Act.23:8; π. ὁ θεός, God is spirit, Jhn.4:24; πατὴρ τῶν π., Heb.12:9; of disembodied human beings, Heb.12:23, 1Pe.3:19 (ICC, in l.; DB, iii, 795); of angels. Heb.1:14; of demons or evil spirits, Mat.8:16, Mrk.9:20, Luk.9:39, al.; π. πύθυωνα, Act.16:16; πνεύματα δαιμονίων, Rev.16:14; π. δαιμονίου ἀκαθάρτου, Luk.4:33; π. ἀσθενείας (Bl., §35, 5), Luk.13:11; π. ἀκάθαρτον, Mat.10:1, Mrk.1:23, Luk.4:36, Act.5:16; π. ἄλαλον (καὶ κωφόν), Mrk.9:17, 25; πονηρόν, Luk.7:21, Act.19:12, al.; __5. Of the Holy Spirit, π. ἅγιον, τὸ ἅ. π., τὸ π. τὸ ἅ. τὸ π., π. (the article as a rule being used when the Spirit is regarded as a Person or a Divine Power, and omitted when the reference is to an operation, influence or gift of the Spirit; see WM, 151:5; Bl., §46, 7): anarth., Mat.1:18 3:11, 16 4:1, Mrk.1:8 (Swete, in l.), ib.10, Luk.1:15, Jhn.7:39, Act.19:2, Rom.5:5, 1Co.2:4, al.; with art., Mat.4:1 12:31, 32 Mrk.1:10 3:29, Luk.2:26, Jhn.7:36 14:26, Act.4:31 5:3, Rom.8:16, al.; (τὸ) π. (τοῦ) θεοῦ, Mat.3:16, Rom.8:9, Eph.3:16, 1Jn.4:2, al.; τὸ π. τ. πατρός, Mat.10:20; π. θεοῦ ζῶντος, 2Co.3:3; (τὸ) π. τοῦ κυρίου, Luk.4:18, Act.5:9 8:39; τὸ π. Ἰησοῦ, Act.16:7; Χριστοῦ, Rom.8:9; Ἰησοῦ Χριστοῦ, Php.1:19; τὸ π. τ. ἀληθείας, Jhn.15:26 16:13, 1Jn.4:6; λείγει (μαρτυρεῖ) τὸ π. (τὸ ἅγιον), Act.21:11 28:25, 1Ti.4:1, Heb.3:7 10:15, Rev.14:13; before τ. ἐκκλησίαις,  Rev.2:7, 11 17, 29, 3:6, 12, 22; ἐν τ. π., Luk.2:27; κατὰ πνεῦμα, Rom.8:4, 5; ἐξ ὕδατος καὶ π., Jhn.3:5, διὰ πνεύματος αἰωνίου, Heb.9:14; ἐν ἁγιασμῷ πνεύματος, 2Th.2:13, 1Pe.1:2; ἓν π., 1Co.12:13, Eph.2:18 4:4; ὁ δὲ κύριος τὸ π. ἐστιν, 2Co.3:17; of that which is effected or governed by the Spirit, opposite to γράμμα, Rom.2:29 7:6, 2Co.3:6.; SYN.: νοῦς, which in NT is contrasted with π. as &quot;the action of the understanding in man with that of the spiritual or ecstatic impulse&quot; (DB, iv, 612); ψυχή — the usual term in cl. psychology—in NT, &quot;expresses man as apart from God, a separate individual, π. expresses man as drawing his life from God&quot; (DB, 1-vol., 872). (AS)" data-strongs="G4151" data-translit="pneuma" data-original="πνεῦμα" data-lang="greek" data-verse=""><em>pneuma</em></a> (πνεῦμα), breath/Spirit</td><td><a href="https://www.blueletterbible.org/lexicon/g4157/kjv/tr/0-1/" target="_blank" data-lexicon="πνοή, -ῆς, ή; (πνέω), [in LXX chiefly for נְשָׁמָה ;]; __1. a blowing, blast, wind: Act.2:2.; __2. a breathing, breath: Act.17:25 (Gen.2:7, al.).†; (AS)" data-strongs="G4157" data-translit="pnoē" data-original="πνοή" data-lang="greek" data-verse="">BLB G4157</a></td></tr>
+<tr><td><strong>Latin</strong></td><td><em>spiritus</em> — breath, breathing, spirit; Jerome's choice here, carrying both senses</td><td><a href="https://logeion.uchicago.edu/spiritus" target="_blank">Logeion: spiritus</a></td></tr>
+<tr><td><strong>English</strong></td><td><em>spirit</em> — from Latin <em>spiritus</em> via Old French; <em>inspire</em> and <em>expire</em> are the same root, and both are about breathing</td><td><a href="https://www.merriam-webster.com/dictionary/spirit" target="_blank">Merriam-Webster</a> · <a href="https://webstersdictionary1828.com/Dictionary/spirit" target="_blank">Webster's 1828</a> · <a href="https://www.etymonline.com/word/spirit" target="_blank">Etymonline</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 2: ḥesed (חֶסֶד) — "Mercy"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong><a href="https://www.blueletterbible.org/kjv/psa/136/1/s_614001" target="_blank" data-ref="Psalm 136:1">Psalm 136:1</a></strong> — <em>"O give thanks unto the LORD; for he is good: for his <strong>mercy</strong> endureth for ever"</em></p>
+<blockquote>
+<p>כִּי לְעוֹלָם חַסְדּוֹ</p>
+</blockquote>
+<p><strong>This is the word repeated twenty-six times in <a href="https://www.blueletterbible.org/kjv/psa/136/1/s_614001" target="_blank" data-ref="Psalm 136">Psalm 136</a></strong> — once in every verse, without exception — and it is one of the hardest words in the Old Testament to put into English.</p>
+<p><a href="https://www.blueletterbible.org/lexicon/h2617/kjv/wlc/0-1/" target="_blank" data-lexicon="goodness, kindness, faithfulness" data-strongs="H2617" data-translit="ḥeseḏ" data-original="חֶסֶד" data-lang="hebrew" data-verse=""><em>Ḥesed</em></a> is not mercy as leniency. It is <strong>the loyalty owed inside a covenant</strong> — the kindness of someone who has bound themselves to you and will not walk away. Translators have reached for <em>mercy</em>, <em>lovingkindness</em>, <em>steadfast love</em>, <em>covenant faithfulness</em>, and none of them is quite it. The King James chose <em>mercy</em> here; it chose <em>lovingkindness</em> elsewhere for the same word.</p>
+<p><strong>Why it matters that it is this word in this psalm.</strong> <a href="https://www.blueletterbible.org/kjv/psa/136/1/s_614001" target="_blank" data-ref="Psalm 136">Psalm 136</a> recites history — creation, the Exodus, the wilderness, the land — and after each event the congregation answers <em>for his <a href="https://www.blueletterbible.org/lexicon/h2617/kjv/wlc/0-1/" target="_blank" data-lexicon="goodness, kindness, faithfulness" data-strongs="H2617" data-translit="ḥeseḏ" data-original="חֶסֶד" data-lang="hebrew" data-verse="">ḥesed</a> endureth for ever.</em> The claim is not that God is generally nice. <strong>It is that the same covenant loyalty ran through every one of those events, and has not lapsed.</strong></p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h2617/kjv/wlc/0-1/" target="_blank" data-lexicon="goodness, kindness, faithfulness" data-strongs="H2617" data-translit="ḥeseḏ" data-original="חֶסֶד" data-lang="hebrew" data-verse=""><em>ḥesed</em></a> (חֶסֶד) — covenant loyalty, steadfast love; the kindness owed within a bound relationship</td><td><a href="https://www.blueletterbible.org/lexicon/h2617/kjv/wlc/0-1/" target="_blank" data-lexicon="goodness, kindness, faithfulness" data-strongs="H2617" data-translit="ḥeseḏ" data-original="חֶסֶד" data-lang="hebrew" data-verse="">BLB H2617</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g1656/kjv/tr/0-1/" target="_blank" data-lexicon="ἔλεος, -ους, τό; (cl. -ου, ὁ, and so Rec., Mat.9:13 12:7 23:23, Tit.3:5, Heb.4:16; on the Hellenistic form τό ἔ., see WH, App., 158; M, Pr., 60; Mayser, 277; Kühner, i, 515), [in LXX chiefly for חֶסֶד ;]; mercy, pity, compassion;; __1. of men: Mat.9:13 (LXX) Mat.12:7 23:23; ποιεῖν ἔ. (and id. before μετά, with genitive; cf. Heb. עִם חֶסֶד עָשָׂה, Gen.21:23, al.), Luk.10:37, Jas.2:13 3:17.; __2. Of God: Luk.1:50, 54 1:58, Rom.15:9, Eph.2:4, 2Ti.1:16 1:18, Tit.3:5, Heb.4:16, 1Pe.1:3; esp. in benedictions, Gal.6:16, 1Ti.1:2, 2Ti.1:2, 2Jn.3, Ju 2; σκευὴ ἐλέους, Rom.9:23; σπλάγχνα ἐλέους, Luk.1:78; ποιεῖν ἔ. (see supr.), Luk.1:72; τ. ὑμετέρῳ ἐλέει, Rom.11:31.; __3. Of Christ: Ju 21.†; SYN.: οἰκτιρμός (see: ἐλεέω)  (AS)" data-strongs="G1656" data-translit="eleos" data-original="ἔλεος" data-lang="greek" data-verse=""><em>eleos</em></a> (ἔλεος) — mercy, pity; the NT's word in <em>"Blessed are the merciful"</em> (<a href="https://www.blueletterbible.org/kjv/mat/5/7/s_934007" target="_blank" data-ref="Matthew 5:7">Matthew 5:7</a>)</td><td><a href="https://www.blueletterbible.org/lexicon/g1656/kjv/tr/0-1/" target="_blank" data-lexicon="ἔλεος, -ους, τό; (cl. -ου, ὁ, and so Rec., Mat.9:13 12:7 23:23, Tit.3:5, Heb.4:16; on the Hellenistic form τό ἔ., see WH, App., 158; M, Pr., 60; Mayser, 277; Kühner, i, 515), [in LXX chiefly for חֶסֶד ;]; mercy, pity, compassion;; __1. of men: Mat.9:13 (LXX) Mat.12:7 23:23; ποιεῖν ἔ. (and id. before μετά, with genitive; cf. Heb. עִם חֶסֶד עָשָׂה, Gen.21:23, al.), Luk.10:37, Jas.2:13 3:17.; __2. Of God: Luk.1:50, 54 1:58, Rom.15:9, Eph.2:4, 2Ti.1:16 1:18, Tit.3:5, Heb.4:16, 1Pe.1:3; esp. in benedictions, Gal.6:16, 1Ti.1:2, 2Ti.1:2, 2Jn.3, Ju 2; σκευὴ ἐλέους, Rom.9:23; σπλάγχνα ἐλέους, Luk.1:78; ποιεῖν ἔ. (see supr.), Luk.1:72; τ. ὑμετέρῳ ἐλέει, Rom.11:31.; __3. Of Christ: Ju 21.†; SYN.: οἰκτιρμός (see: ἐλεέω)  (AS)" data-strongs="G1656" data-translit="eleos" data-original="ἔλεος" data-lang="greek" data-verse="">BLB G1656</a></td></tr>
+<tr><td><strong>Latin</strong></td><td><em>misericordia</em> — literally a <em>miserable heart</em>, from <em>miser</em> (wretched) + <em>cor</em> (heart): a heart moved by another's misery</td><td><a href="https://logeion.uchicago.edu/misericordia" target="_blank">Logeion: misericordia</a></td></tr>
+<tr><td><strong>English</strong></td><td><em>mercy</em> — from Old French <em>merci</em>, from Latin <em>merces</em>, "wages, reward" — which drifted to mean a favour given rather than earned</td><td><a href="https://www.merriam-webster.com/dictionary/mercy" target="_blank">Merriam-Webster</a> · <a href="https://webstersdictionary1828.com/Dictionary/mercy" target="_blank">Webster's 1828</a> · <a href="https://www.etymonline.com/word/mercy" target="_blank">Etymonline</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 3: dābār (דָּבָר) — "Word"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong><a href="https://www.blueletterbible.org/kjv/psa/119/105/s_597105" target="_blank" data-ref="Psalm 119:105">Psalm 119:105</a></strong> — <em>"Thy <strong>word</strong> is a lamp unto my feet"</em></p>
+<blockquote>
+<p>נֵר־לְרַגְלִי דְבָרֶךָ</p>
+</blockquote>
+<p><strong><a href="https://www.blueletterbible.org/kjv/psa/119/1/s_597001" target="_blank" data-ref="Psalm 119">Psalm 119</a> cycles through eight terms for God's instruction</strong> — law, testimonies, precepts, statutes, commandments, judgments, word, ways — and <em>dābār</em> is the broadest of them.</p>
+<p>It means <strong>word</strong>, and it also means <strong>thing</strong> or <strong>matter</strong>. Hebrew does not separate the saying from the deed as cleanly as English does: what God says and what God does are the same noun. That is why the Ten Commandments are, in Hebrew, <em>"the ten <strong>words</strong>"</em> (<em>ʿăśeret haddebārîm</em>).</p>
+<p><strong>So "thy word is a lamp" is not only about text.</strong> It is about what God has said <em>and</em> done — His speech and His acts together — being the thing that shows you where to put your foot.</p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h1697/kjv/wlc/0-1/" target="_blank" data-lexicon=": word/speech/command; speech, word, speaking, thing (speech; saying, utterance; word, words; business, occupation, acts, matter, case, something, manner (by extension))" data-strongs="H1697" data-translit="davar" data-original="דָּבָר" data-lang="hebrew" data-verse="Genesis 18:14"><em>dābār</em></a> (דָּבָר) — word, speech, thing, matter; the "ten words" of <a href="https://www.blueletterbible.org/kjv/exo/34/28/s_84028" target="_blank" data-ref="Exodus 34:28">Exodus 34:28</a></td><td><a href="https://www.blueletterbible.org/lexicon/h1697/kjv/wlc/0-1/" target="_blank" data-lexicon=": word/speech/command; speech, word, speaking, thing (speech; saying, utterance; word, words; business, occupation, acts, matter, case, something, manner (by extension))" data-strongs="H1697" data-translit="davar" data-original="דָּבָר" data-lang="hebrew" data-verse="Genesis 18:14">BLB H1697</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g3056/kjv/tr/0-1/" target="_blank" data-lexicon="λόγος, -ου, ὁ (λέγω); [in LXX chiefly for  דָּבָר, also for מִלָּה ,אֵמֶר, etc. ;]; __I. Of that by which the inward thought is expressed, Lat. oratio, sermo, vox, verbum.; __1. a word, not in the grammatical sense of a mere name (ἔπος, ὄνομα, ῥῆμα), but a word as  embodying a conception or idea: Mat.8:8, Luk.7:7, 1Co.14:9, 19 Heb.12:19, al.; __2. a saying, statement, declaration: Mat.19:22 (T om.), Mrk.5:36 7:29, Luk.1:29, Jhn.2:22 6:60, Act.7:29, al.; with genitive attrib., Act.13:15, Rom.9:9, Heb.7:28, al.; of the sayings, commands, promises, etc., of teachers, Mat.7:24 10:14, Mrk.8:38, Luk.9:4, Jhn.14:24, al.; λ. κενοί, Eph.5:6; ἀληθινοί, Rev.19:9; πιστοί, Rev.22:6; esp. of the precepts, decrees and promises of God, ὁ λ. τ. θεοῦ, the word of God: Mrk.7:13, Jhn.10:35, Rom.13:9, 1Co.14:36, Php.1:14, al.; absol., ὁ λ., Mat.13:21, 22 Mrk.16:[20], Luk.1:2, Act.6:4, Heb.4:12, al.; __3. speech, discourse: Act.14:12, 2Co.10:10, Jas.3:2; opposite to ἐπιστολή, 2Th.2:15; disting, from σοφία, 1Co.2:1; ἀναστροφή, 1Ti.4:12; δύναμις, 1Co.4:19, 1Th.1:5; ἔργον, Rom.15:18; οὐδενὸς λ. τίμιον (not worthy of mention), Act.20:24; of the faculty of speech, Luk.24:19, 2Co.11:6; of the style of speech, Mat.5:37, 1Co.1:5; of instruction, Col.4:3, 1Pe.3:1; with genitive of person(s), Jhn.5:24 8:52, Act.2:41, al.; ὁ λ. ὁ ἐμός, Jhn.8:31; with genitive obj. (τ.) ἀληθείας, 2Co.6:7, Col.1:5, Jas.1:18; τ. καταλλαγῆς, 2Co.5:19; τ. σταυροῦ, 1Co.1:18; of mere talk, 1Co.4:19, 2o, Col.2:23, 1Jn.3:18; of the talk which one occasions, hence, repute: Col.2:23.; __4. subject-matter, hence, teaching, doctrine: Act.18:15, 2Ti.2:17, al.; esp. of Christian doctrine: Mat.13:20-23, Mrk.4:14-20 8:32, Luk.1:2, Act.8:4, Gal.6:6, 1Th.1:6, al.; with genitive of person(s), τ. θεοῦ, Luk.5:1, Jhn.17:6, Act.4:29, 1Co.14:36, I Jhn.1:10, Rev.6:9, al.; τ. Κυρίου, Act.8:25, 1Th.1:8, al.; τ. Χριστοῦ, Col.3:16, Rev.3:8; with genitive appos., Act.15:7; with genitive attrib., Heb.5:13.; __5. a story, tale, narrative: Mat.28:15, Jhn.21:23, Act.1:1 11:22; before περί, Luk.5:15.; __6. That which is spoken of (Plat., al.; V. Kennedy, Sources, 124), matter, affair, thing: Mat.21:24, Mrk.1:45 11:29, Luk.20:3, Act.8:21; of a matter in dispute, as a case or suit at law, Act.19:38; pl. (1Ma.7:33, al.), Luk.1:4.; __II. Of the inward thought itself, Lat. ratio.; __1. reason,; __(a) of the mental faculty (Hdt., Plat., al.): κατὰ λόγον, Act.18:14;; __(b) a reason, cause: τίνι λόγῳ, Act.10:29; παρεκτὸς λόγου πορνείας, Mat.5:32 19:9, WH, mg., R, mg.; __2. account,; __(a) regard: Act.20:24, Rec.;; __(b) reckoning: Php.4:15, 17; συναίρειν (which see) λ., Mat.18:23 25:19; in forensic sense, Rom.14:12, Heb.13:17, 1Pe.4:5; with genitive of thing(s), Luk.16:2; before περί, Mat.12:36, Act.19:40, 1Pe.3:15.; __3. proportion, analogy: Php.2:16 (Field, Notes, 193 f.).; __III. ὁ λ., the Divine Word or Logos: Jhn.1:1, 14; τ. ζωῆς, 1Jn.1:1; τ. θεοῦ, Rev.19:13 (see Westc, Swete, CGT, in ll.; reff. in Artt., Logos, DB, DCG).; (AS)" data-strongs="G3056" data-translit="logos" data-original="λόγος" data-lang="greek" data-verse=""><em>logos</em></a> (λόγος) — word, reason, account; the word John uses of Christ Himself (<a href="https://www.blueletterbible.org/kjv/jhn/1/1/s_998001" target="_blank" data-ref="John 1:1">John 1:1</a>)</td><td><a href="https://www.blueletterbible.org/lexicon/g3056/kjv/tr/0-1/" target="_blank" data-lexicon="λόγος, -ου, ὁ (λέγω); [in LXX chiefly for  דָּבָר, also for מִלָּה ,אֵמֶר, etc. ;]; __I. Of that by which the inward thought is expressed, Lat. oratio, sermo, vox, verbum.; __1. a word, not in the grammatical sense of a mere name (ἔπος, ὄνομα, ῥῆμα), but a word as  embodying a conception or idea: Mat.8:8, Luk.7:7, 1Co.14:9, 19 Heb.12:19, al.; __2. a saying, statement, declaration: Mat.19:22 (T om.), Mrk.5:36 7:29, Luk.1:29, Jhn.2:22 6:60, Act.7:29, al.; with genitive attrib., Act.13:15, Rom.9:9, Heb.7:28, al.; of the sayings, commands, promises, etc., of teachers, Mat.7:24 10:14, Mrk.8:38, Luk.9:4, Jhn.14:24, al.; λ. κενοί, Eph.5:6; ἀληθινοί, Rev.19:9; πιστοί, Rev.22:6; esp. of the precepts, decrees and promises of God, ὁ λ. τ. θεοῦ, the word of God: Mrk.7:13, Jhn.10:35, Rom.13:9, 1Co.14:36, Php.1:14, al.; absol., ὁ λ., Mat.13:21, 22 Mrk.16:[20], Luk.1:2, Act.6:4, Heb.4:12, al.; __3. speech, discourse: Act.14:12, 2Co.10:10, Jas.3:2; opposite to ἐπιστολή, 2Th.2:15; disting, from σοφία, 1Co.2:1; ἀναστροφή, 1Ti.4:12; δύναμις, 1Co.4:19, 1Th.1:5; ἔργον, Rom.15:18; οὐδενὸς λ. τίμιον (not worthy of mention), Act.20:24; of the faculty of speech, Luk.24:19, 2Co.11:6; of the style of speech, Mat.5:37, 1Co.1:5; of instruction, Col.4:3, 1Pe.3:1; with genitive of person(s), Jhn.5:24 8:52, Act.2:41, al.; ὁ λ. ὁ ἐμός, Jhn.8:31; with genitive obj. (τ.) ἀληθείας, 2Co.6:7, Col.1:5, Jas.1:18; τ. καταλλαγῆς, 2Co.5:19; τ. σταυροῦ, 1Co.1:18; of mere talk, 1Co.4:19, 2o, Col.2:23, 1Jn.3:18; of the talk which one occasions, hence, repute: Col.2:23.; __4. subject-matter, hence, teaching, doctrine: Act.18:15, 2Ti.2:17, al.; esp. of Christian doctrine: Mat.13:20-23, Mrk.4:14-20 8:32, Luk.1:2, Act.8:4, Gal.6:6, 1Th.1:6, al.; with genitive of person(s), τ. θεοῦ, Luk.5:1, Jhn.17:6, Act.4:29, 1Co.14:36, I Jhn.1:10, Rev.6:9, al.; τ. Κυρίου, Act.8:25, 1Th.1:8, al.; τ. Χριστοῦ, Col.3:16, Rev.3:8; with genitive appos., Act.15:7; with genitive attrib., Heb.5:13.; __5. a story, tale, narrative: Mat.28:15, Jhn.21:23, Act.1:1 11:22; before περί, Luk.5:15.; __6. That which is spoken of (Plat., al.; V. Kennedy, Sources, 124), matter, affair, thing: Mat.21:24, Mrk.1:45 11:29, Luk.20:3, Act.8:21; of a matter in dispute, as a case or suit at law, Act.19:38; pl. (1Ma.7:33, al.), Luk.1:4.; __II. Of the inward thought itself, Lat. ratio.; __1. reason,; __(a) of the mental faculty (Hdt., Plat., al.): κατὰ λόγον, Act.18:14;; __(b) a reason, cause: τίνι λόγῳ, Act.10:29; παρεκτὸς λόγου πορνείας, Mat.5:32 19:9, WH, mg., R, mg.; __2. account,; __(a) regard: Act.20:24, Rec.;; __(b) reckoning: Php.4:15, 17; συναίρειν (which see) λ., Mat.18:23 25:19; in forensic sense, Rom.14:12, Heb.13:17, 1Pe.4:5; with genitive of thing(s), Luk.16:2; before περί, Mat.12:36, Act.19:40, 1Pe.3:15.; __3. proportion, analogy: Php.2:16 (Field, Notes, 193 f.).; __III. ὁ λ., the Divine Word or Logos: Jhn.1:1, 14; τ. ζωῆς, 1Jn.1:1; τ. θεοῦ, Rev.19:13 (see Westc, Swete, CGT, in ll.; reff. in Artt., Logos, DB, DCG).; (AS)" data-strongs="G3056" data-translit="logos" data-original="λόγος" data-lang="greek" data-verse="">BLB G3056</a></td></tr>
+<tr><td><strong>Latin</strong></td><td><em>verbum</em> — word; hence <em>verbal</em>, and the Vulgate's <em>In principio erat Verbum</em></td><td><a href="https://logeion.uchicago.edu/verbum" target="_blank">Logeion: verbum</a></td></tr>
+<tr><td><strong>English</strong></td><td><em>word</em> — Old English <em>word</em>, from the same Indo-European root as Latin <em>verbum</em></td><td><a href="https://www.merriam-webster.com/dictionary/word" target="_blank">Merriam-Webster</a> · <a href="https://webstersdictionary1828.com/Dictionary/word" target="_blank">Webster's 1828</a> · <a href="https://www.etymonline.com/word/word" target="_blank">Etymonline</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 4: ʾerek ʾappayim (אֶרֶךְ אַפַּיִם) — "Slow to Anger"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong><a href="https://www.blueletterbible.org/kjv/psa/103/8/s_581008" target="_blank" data-ref="Psalm 103:8">Psalm 103:8</a></strong> — <em>"The LORD is merciful and gracious, <strong>slow to anger</strong>, and plenteous in mercy"</em></p>
+<blockquote>
+<p>רַחוּם וְחַנּוּן יְהוָה אֶרֶךְ אַפַּיִם</p>
+</blockquote>
+<p><strong>Read literally, the Hebrew says "long of nostril."</strong></p>
+<p><a href="https://www.blueletterbible.org/lexicon/h639/kjv/wlc/0-1/" target="_blank" data-lexicon="anger; nostril, nose, face; anger" data-strongs="H639" data-translit="&#x27;ap̄" data-original="אַף" data-lang="hebrew" data-verse=""><em>ʾAph</em></a> (אַף) means <strong>nose</strong> — and it means <strong>anger</strong>. The same word does both jobs, because Hebrew names the feeling by what the body does with it: the nostrils flare, the face heats. To be angry, in Hebrew, is for your nose to burn.</p>
+<p><strong>So "slow to anger" is "long of nostril" — a long fuse.</strong> It is a picture, not an abstraction: the distance between provocation and the flare.</p>
+<p><strong>The phrase is a formula</strong>, and it comes from a particular moment. It is what the Lord proclaims about Himself to Moses on Sinai (<a href="https://www.blueletterbible.org/kjv/exo/34/6/s_84006" target="_blank" data-ref="Exodus 34:6">Exodus 34:6</a>, where the King James renders it <em>"longsuffering"</em>), and it echoes through the Old Testament afterward. <strong>When <a href="https://www.blueletterbible.org/kjv/psa/103/1/s_581001" target="_blank" data-ref="Psalm 103">Psalm 103</a> says it, the psalm is quoting God's own description of Himself</strong> — and then, four verses later, saying what it produces: <em>"as far as the east is from the west."</em></p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><em><a href="https://www.blueletterbible.org/lexicon/h750/kjv/wlc/0-1/" target="_blank" data-lexicon="long, slow (as in slow to anger)" data-strongs="H750_ALT_EREKH" data-translit="erekh" data-original="אֶרֶךְ" data-lang="hebrew" data-verse="">ʾerek</a> <a href="https://www.blueletterbible.org/lexicon/h639/kjv/wlc/0-1/" target="_blank" data-lexicon="nostrils, face, anger" data-strongs="H639_ALT_אַפ" data-translit="appayim" data-original="אַפַּיִם" data-lang="hebrew" data-verse="">ʾappayim</a></em> (אֶרֶךְ אַפַּיִם) — "long of nostrils"; slow to anger. <em>ʾaph</em> = nose, anger</td><td><a href="https://www.blueletterbible.org/lexicon/h750/kjv/wlc/0-1/" target="_blank" data-lexicon="long (pinions); patient, slow to anger" data-strongs="H750" data-translit="'ārēḵ" data-original="אָרֵךְ" data-lang="hebrew" data-verse="">BLB H750</a> · <a href="https://www.blueletterbible.org/lexicon/h639/kjv/wlc/0-1/" target="_blank" data-lexicon=": anger; nostril, nose, face; anger" data-strongs="H639" data-translit="'ap̄" data-original="אַף" data-lang="hebrew" data-verse="">BLB H639</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g3116/kjv/tr/0-1/" target="_blank" data-lexicon="μακροθύμως; adv.,; with forbearance, patiently: Act.26:3.†; (AS)" data-strongs="G3116" data-translit="makrothymōs" data-original="μακροθύμως" data-lang="greek" data-verse=""><em>makrothymos</em></a> (μακρόθυμος) — literally "long-tempered"; the NT's <a href="https://www.blueletterbible.org/kjv/gal/5/22/s_1096022" target="_blank" data-ref="Galatians 5:22"><em>longsuffering</em></a>, a fruit of the Spirit (<a href="https://www.blueletterbible.org/kjv/gal/5/22/s_1096022" target="_blank" data-ref="Galatians 5:22">Galatians 5:22</a>)</td><td><a href="https://www.blueletterbible.org/lexicon/g3116/kjv/tr/0-1/" target="_blank" data-lexicon="μακροθύμως; adv.,; with forbearance, patiently: Act.26:3.†; (AS)" data-strongs="G3116" data-translit="makrothymōs" data-original="μακροθύμως" data-lang="greek" data-verse="">BLB G3116</a></td></tr>
+<tr><td><strong>Latin</strong></td><td><em>patiens</em> — enduring, bearing; the root of <em>patience</em> and of <em>patient</em>, one who bears</td><td><a href="https://logeion.uchicago.edu/patiens" target="_blank">Logeion: patiens</a></td></tr>
+<tr><td><strong>English</strong></td><td><em>longsuffering</em> — a literal English calque of the Greek, coined by the early translators to carry the idea whole</td><td><a href="https://www.merriam-webster.com/dictionary/longsuffering" target="_blank">Merriam-Webster</a> · <a href="https://webstersdictionary1828.com/Dictionary/longsuffering" target="_blank">Webster's 1828</a> · <a href="https://www.etymonline.com/word/longsuffering" target="_blank">Etymonline</a></td></tr>
+</table>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Word Study 5: halelû-yāh (הַלְלוּ־יָהּ) — "Praise Ye the Lord"</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong><a href="https://www.blueletterbible.org/kjv/psa/150/6/s_628006" target="_blank" data-ref="Psalm 150:6">Psalm 150:6</a></strong> — <em>"<strong>Praise ye the LORD</strong>"</em></p>
+<p><strong>This is one word in Hebrew, not four</strong>, and you already know it: <strong>hallelujah</strong>.</p>
+<p><em>Halelû</em> is a command — <em>praise</em> — addressed to more than one person. <a href="https://www.blueletterbible.org/lexicon/h3050/kjv/wlc/0-1/" target="_blank" data-lexicon="A shortened form of the  name  ye.ho.vah (יהוה &quot;LORD&quot; H3068); used in many compounds as  the letters &#x27;Je&#x27;  or &#x27;jah&#x27;" data-strongs="H3050" data-translit="Yah" data-original="יָהּ" data-lang="hebrew" data-verse="Psalm 150:1"><em>Yāh</em></a> is the short form of the divine name. So the word is an <strong>imperative shouted at a crowd</strong>: <em>all of you, praise Yah.</em></p>
+<p><strong>It is not a feeling and it is not a statement.</strong> Nobody in the Psalter says "I feel like praising." The psalms give an order, usually to a group, often to people with no obvious reason to comply. <strong><a href="https://www.blueletterbible.org/kjv/psa/146/1/s_624001" target="_blank" data-ref="Psalms 146">Psalms 146–150</a> each begin and end with it</strong> — the Psalter's last word is a command given ten times over.</p>
+<p><strong>And English never translated it.</strong> <a href="https://www.blueletterbible.org/lexicon/h1984/kjv/wlc/0-1/" target="_blank" data-lexicon="to shine ((Qal) to shine (fig. of God&#x27;s favour); (Hiphil) to flash forth light)" data-strongs="H1984" data-translit="halal / hallelu" data-original="הָלַל / הַלְלוּ" data-lang="hebrew" data-verse="Psalm 150:1"><em>Hallelujah</em></a> came into Greek, then Latin, then English as sound rather than sense — which is why it is one of a handful of Hebrew words an English speaker knows without knowing it is Hebrew. <em>(The others in common use: </em>amen<em>, </em>hosanna<em>, </em>sabbath<em>.)</em></p>
+<h3>Cross-Language Connections</h3>
+<table class="info-table">
+<tr><th>Language</th><th>Term</th><th>Source</th></tr>
+<tr><td><strong>Hebrew</strong></td><td><em>halelû-yāh</em> (הַלְלוּ־יָהּ) — "praise Yah"; plural imperative of <a href="https://www.blueletterbible.org/lexicon/h2490/kjv/wlc/0-1/" target="_blank" data-lexicon="to wound (fatally), bore through, pierce, bore ((Qal) to pierce; (Pual) to be slain; (Poel) to wound, pierce; (Poal) to be wounded)" data-strongs="H2490" data-translit="ḥālal" data-original="חָלַל" data-lang="hebrew" data-verse=""><em>hālal</em></a> + the short divine name</td><td><a href="https://www.blueletterbible.org/lexicon/h1984/kjv/wlc/0-1/" target="_blank" data-lexicon="to shine ((Qal) to shine (fig. of God's favour); (Hiphil) to flash forth light)" data-strongs="H1984" data-translit="halal / hallelu" data-original="הָלַל / הַלְלוּ" data-lang="hebrew" data-verse="Psalm 150:1">BLB H1984</a></td></tr>
+<tr><td><strong>Greek (LXX)</strong></td><td><a href="https://www.blueletterbible.org/lexicon/g239/kjv/tr/0-1/" target="_blank" data-lexicon="ἁλληλουιά; (Rec. ἀλληλούϊα; Heb. הָלַל יָהּ, praise the Lord), [in LXX in the titles of certain Psa (104 (105), al.), and at the end of Psa.150:1-6; also Tob.13:18, 3Ma.7:13 ;]; hallelujah, alleluia: Rev.19:1, 3-4 19:6.†; (AS)" data-strongs="G239" data-translit="hallēlouia" data-original="ἁλληλουϊά" data-lang="greek" data-verse=""><em>allēlouia</em></a> (ἀλληλουϊά) — not translated but transliterated; it appears this way in <a href="https://www.blueletterbible.org/kjv/rev/19/1/s_1186001" target="_blank" data-ref="Revelation 19">Revelation 19</a></td><td><a href="https://www.blueletterbible.org/lexicon/g239/kjv/tr/0-1/" target="_blank" data-lexicon="ἁλληλουιά; (Rec. ἀλληλούϊα; Heb. הָלַל יָהּ, praise the Lord), [in LXX in the titles of certain Psa (104 (105), al.), and at the end of Psa.150:1-6; also Tob.13:18, 3Ma.7:13 ;]; hallelujah, alleluia: Rev.19:1, 3-4 19:6.†; (AS)" data-strongs="G239" data-translit="hallēlouia" data-original="ἁλληλουϊά" data-lang="greek" data-verse="">BLB G239</a></td></tr>
+<tr><td><strong>Latin</strong></td><td><em>alleluia</em> — Jerome kept the sound too; the form the Vulgate uses at <a href="https://www.blueletterbible.org/kjv/psa/150/6/s_628006" target="_blank" data-ref="Psalm 150:6">Psalm 150:6</a></td><td><a href="https://logeion.uchicago.edu/alleluia" target="_blank">Logeion: alleluia</a></td></tr>
+<tr><td><strong>English</strong></td><td><a href="https://www.blueletterbible.org/lexicon/h1984/kjv/wlc/0-1/" target="_blank" data-lexicon="to shine ((Qal) to shine (fig. of God&#x27;s favour); (Hiphil) to flash forth light)" data-strongs="H1984" data-translit="halal / hallelu" data-original="הָלַל / הַלְלוּ" data-lang="hebrew" data-verse="Psalm 150:1"><em>hallelujah</em></a> — borrowed whole, never translated; <em>praise ye the LORD</em> is the King James rendering of what the word means</td><td><a href="https://www.merriam-webster.com/dictionary/hallelujah" target="_blank">Merriam-Webster</a> · <a href="https://webstersdictionary1828.com/Dictionary/halleluiah" target="_blank">Webster's 1828</a> · <a href="https://www.etymonline.com/word/hallelujah" target="_blank">Etymonline</a></td></tr>
+</table>
+<hr>
+<p><em>The Latin lane in each table is etymological support for the English word — the road by which the Hebrew idea reached your vocabulary — rather than a quotation from the Latin Bible.</em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 5: WEEK 36: JEWISH PERSPECTIVE -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">5. Week 36: Jewish Perspective</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Before You Begin — What You Are Reading, and What You Are Not</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><!-- MAINTENANCE, not reader-facing: keep this a '## ' heading. --></p>
+<p>Most of this week's material comes from <strong>rabbinic sources</strong> — the collected discussions of Jewish teachers, written down between roughly the third and twelfth centuries. Two collections appear below:</p>
+<ul>
+<li><strong>The Talmud</strong> — the great record of rabbinic debate. A citation like <em>"Pesachim 118a"</em> means</li>
+</ul>
+<p>  the tractate (<em>Pesachim</em>, on Passover), the folio, and the side of the page.</p>
+<ul>
+<li><strong>Midrash</strong> — commentary that works by <em>association</em>: a rabbi reads one verse, hears another</li>
+</ul>
+<p>  answering it, and sets the two side by side.</p>
+<p><strong>None of this is Latter-day Saint doctrine, and none of it is offered as a practice to adopt.</strong> It is here because these are the readers who lived closest to this text, in its own language, for the longest time — and because this week in particular, <strong>they are the ones who can tell us what the Savior was doing at the Last Supper.</strong> The Hallel — the psalms sung at Passover, 113 through 118 — is their liturgy. Every citation below links to Sefaria, a free digital library of Jewish texts.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>1. The Hallel — and What Was Sung at the Table</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><a href="https://www.blueletterbible.org/kjv/psa/113/1/s_591001" target="_blank" data-ref="Psalms 113">Psalms 113–118</a> are sung at Passover, and the practice is old enough that the Talmud debates its details rather than establishing them. <strong>Tractate Pesachim, which our source sweep surfaced for this week, is the Passover tractate</strong>, and it discusses which psalms are said when, and who answers whom.</p>
+<p>The relevant structure is simple: <strong><a href="https://www.blueletterbible.org/kjv/psa/113/1/s_591001" target="_blank" data-ref="Psalms 113">Psalms 113–114</a> before the meal, 115–118 after it.</strong> <a href="https://www.blueletterbible.org/kjv/psa/118/1/s_596001" target="_blank" data-ref="Psalm 118">Psalm 118</a> is the last.</p>
+<p><strong>Why this matters to a Latter-day Saint reader.</strong> Matthew says that after the Last Supper <em>"when they had sung an hymn, they went out into the mount of Olives"</em> (<a href="https://www.blueletterbible.org/kjv/mat/26/30/s_955030" target="_blank" data-ref="Matthew 26:30">Matthew 26:30</a>). The Gospels do not name the hymn — but the meal was Passover, and this is what is sung at the end of Passover. <strong>The Jewish sources are how we know what those words most likely were.</strong></p>
+<h3>Latter-day Saint Connection</h3>
+<p>We do not sing the Hallel. But we do something structurally identical: <strong>we close the sacrament with a hymn</strong>, and the hymn is chosen to carry the meaning of what was just done. When we sing after the emblems, we are doing what He did after the bread and the cup — praising, in a set form, at the end of a covenant meal.</p>
+<p>And the content is worth sitting with. If the hymn was <a href="https://www.blueletterbible.org/kjv/psa/118/1/s_596001" target="_blank" data-ref="Psalm 118">Psalm 118</a>, then the last thing He sang before Gethsemane was <em>"The stone which the builders refused is become the head stone of the corner"</em> — a line about being rejected and vindicated, sung by the person it was about, hours before the rejection.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>2. Psalm 136 and the Congregation's Half</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><a href="https://www.blueletterbible.org/kjv/psa/136/1/s_614001" target="_blank" data-ref="Psalm 136">Psalm 136</a> has one feature nobody can miss: <strong>twenty-six verses, and every one of them ends <em>"for his mercy endureth for ever."</em></strong></p>
+<p>Jewish tradition calls it the <strong>Great Hallel</strong> and reads it as <strong>antiphonal</strong> — sung by two parties, not one. A leader sings the first half of each line; <strong>everyone else answers with the refrain.</strong> Twenty-six times.</p>
+<p>That changes what the psalm is. Read silently it looks repetitive. Sung as designed, <strong>the repetition is the congregation's part</strong> — the thing they came to say, and the thing they say about every event in the list, from creation through the Exodus to the land.</p>
+<h3>Latter-day Saint Connection</h3>
+<p>The nearest thing in our practice is the <strong>sacrament prayers</strong>, which are the only prayers we say in a fixed form, word for word, every week. We do not usually pray in set words — but for the covenant, we do, and the fixedness is the point: <strong>the same words, so that everyone is saying the same thing.</strong></p>
+<p><a href="https://www.blueletterbible.org/kjv/psa/136/1/s_614001" target="_blank" data-ref="Psalm 136">Psalm 136</a> works the same way. It is not that the congregation had nothing of their own to say. It is that they had one thing to say together, and said it twenty-six times.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>3. Psalm 119 and the Alphabet as Devotion</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The rabbis had a strong instinct that <strong>the letters of the Hebrew alphabet are not neutral</strong> — that the alphabet is itself a subject worth contemplating, letter by letter. It is often assumed that this belongs to later mystical writing. <strong>It does not start there.</strong></p>
+<p>The <em>Talmud</em> — the collected discussions of the rabbis, compiled by about the sixth century AD — records a scene in a study hall. Teachers report, with some astonishment, that the children learning their letters had begun reading meaning into them: <span class="term-ref" data-letter="aleph"><em>aleph</em></span> and <span class="term-ref" data-letter="bet"><em>bet</em></span> together sound like <em>elaf binah</em>, "learn wisdom"; <span class="term-ref" data-letter="gimel"><em>gimel</em></span> and <span class="term-ref" data-letter="dalet"><em>dalet</em></span> like <em>gemol dalim</em>, "show kindness to the poor." One of the teachers says the children had said <em>"things the likes of which were not said even in the days of Joshua."</em> (<a href="https://www.sefaria.org/Shabbat.104a" target="_blank">Shabbat 104a</a> — that is tractate, page, and side; every rabbinic citation works that way, and each one links to Sefaria, where you can read the passage in full.)</p>
+<p><strong>That is roughly seven centuries before the Kabbalistic works this instinct usually gets attributed to</strong> — and it is not a mystic's private vision. It is what schoolchildren were being taught.</p>
+<p><a href="https://www.blueletterbible.org/kjv/psa/119/1/s_597001" target="_blank" data-ref="Psalm 119">Psalm 119</a> is the biblical version of that instinct: <strong>twenty-two stanzas, one per letter, eight verses each.</strong> A poem about loving God's word, made out of every letter available.</p>
+<p><strong>A traditional reading of why:</strong> an acrostic is built to be memorised, and this is a psalm about hiding God's word in the heart <a href="https://www.blueletterbible.org/kjv/psa/119/11/s_597011" target="_blank" data-ref="Psalms 119:11">(119:11)</a>. <strong>The form serves the content.</strong> You do not carry a book with you everywhere; you carry what you have learned by heart, and an alphabet poem is designed to be carried.</p>
+<p>The same Talmud passage says as much about the alphabet itself — one of the readings it gives for <span class="term-ref" data-letter="samekh"><em>samekh</em></span> and <span class="term-ref" data-letter="ayin"><em>ayin</em></span> is <em>simanim aseh</em>, "make signs to remember the Torah by." <strong>Jewish tradition holds both at once: the letters are a memory device, and they are worth reading.</strong> This study guide stays with the first. The second is a longer road.</p>
+<h3>Latter-day Saint Connection</h3>
+<p><em>"Treasure up in your minds continually the words of life"</em> (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84?lang=eng&id=p85#p85" target="_blank" data-ref="D&C 84:85">D&C 84:85</a>). The promise there is about what will be given <em>"in the very hour"</em> it is needed — which assumes something has been stored beforehand. <strong><a href="https://www.blueletterbible.org/kjv/psa/119/1/s_597001" target="_blank" data-ref="Psalm 119">Psalm 119</a> is 176 verses about that storage</strong>, written in a form built for it, by someone who ends up saying <em>"I have gone astray like a lost sheep"</em> anyway <a href="https://www.blueletterbible.org/kjv/psa/119/176/s_597176" target="_blank" data-ref="Psalms 119:176">(119:176)</a>.</p>
+<p>Memorising did not make him perfect. It gave him something to say when he was lost.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>4. Psalm 137 — What Jewish Readers Do With the Hard Ending</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><a href="https://www.blueletterbible.org/kjv/psa/137/1/s_615001" target="_blank" data-ref="Psalm 137">Psalm 137</a> is the exile's psalm: <em>"By the rivers of Babylon, there we sat down, yea, we wept."</em> It is read in Jewish practice on <strong>Tisha B'Av</strong>, the fast day commemorating the destruction of both temples — the day set aside for national grief.</p>
+<p><strong>Its last verses are the hardest in the Psalter</strong>, calling for violence against Babylon's children. Jewish commentators have not smoothed them over, and neither should we. What they have generally said is that the psalm records <strong>what the exiles felt</strong>, in the presence of God, having watched precisely that done to Jerusalem — and that bringing such a thing to God is categorically different from doing it.</p>
+<h3>Latter-day Saint Connection</h3>
+<p>We have our own text of this kind. <strong>Doctrine and Covenants 121 opens with Joseph Smith in Liberty Jail asking <em>"O God, where art thou?"</em> and continues <em>"how long shall thy hand be stayed?"</em></strong> — a prophet's raw grievance, preserved in scripture rather than edited out. The answer, when it comes, does not rebuke the question.</p>
+<p><strong><a href="https://www.blueletterbible.org/kjv/psa/137/1/s_615001" target="_blank" data-ref="Psalm 137">Psalm 137</a> belongs to the same category</strong>: scripture is willing to hold what people actually felt. The Psalter does not require you to arrive at praise before you are allowed to speak.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>5. Why the Book Ends in Praise — the Name of the Book</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p>The Hebrew name for the Psalms is <a href="https://www.blueletterbible.org/lexicon/h8416/kjv/wlc/0-1/" target="_blank" data-lexicon="praise, song or hymn of praise (praise, adoration, thanksgiving (paid to God); act of general or public praise; praise-song (as title); praise (demanded by qualities or deeds or attributes of God); renown, fame, glory; of Damascus, God; object of praise, possessor of renown (fig))" data-strongs="H8416" data-translit="tᵊhillâ" data-original="תְּהִלָּה" data-lang="hebrew" data-verse=""><em>Tehillim</em></a> (תְּהִלִּים) — <em>"Praises."</em></p>
+<p><strong>Jewish readers have long noticed the oddity</strong>: perhaps a third of the book is lament. If you named the collection from its contents, <em>Praises</em> is not what you would pick. The traditional answer is that a book is named for where it arrives, not for the middle of the journey — and this book arrives at <a href="https://www.blueletterbible.org/kjv/psa/150/1/s_628001" target="_blank" data-ref="Psalm 150">Psalm 150</a>.</p>
+<h3>Latter-day Saint Connection</h3>
+<p>The Lord told Emma Smith that <em>"the song of the righteous is a prayer unto me"</em> (<a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/25?lang=eng&id=p12#p12" target="_blank" data-ref="D&C 25:12">D&C 25:12</a>), and that same revelation asked her to make a selection of hymns for the Church. <strong>We are, in that sense, a people who were given a hymnbook by revelation</strong> — and our hymnbook has the same shape as theirs: it holds <em>Come, Come, Ye Saints</em> and <em>Abide with Me,</em> and it is not called <em>Laments</em>.</p>
+<p>The Psalter's title is a claim about where the road goes. So is ours.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>Source Table</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<table class="info-table">
+<tr><th>Source</th><th>What it is</th><th>Where</th></tr>
+<tr><td><strong>Pesachim 118a</strong></td><td>Talmudic discussion of the Passover Hallel</td><td><a href="https://www.sefaria.org/Pesachim.118a" target="_blank">Sefaria</a></td></tr>
+<tr><td><strong>Pesachim 117a</strong></td><td>On the Hallel and its recitation</td><td><a href="https://www.sefaria.org/Pesachim.117a" target="_blank">Sefaria</a></td></tr>
+<tr><td><strong>Tehillim</strong></td><td>The Hebrew name of the Psalms, "Praises"</td><td>—</td></tr>
+<tr><td><strong>Tisha B'Av</strong></td><td>Fast day for the destruction of the temples; <a href="https://www.blueletterbible.org/kjv/psa/137/1/s_615001" target="_blank" data-ref="Psalm 137">Psalm 137</a> is read</td><td>—</td></tr>
+</table>
+<p><em>Verse numbers are given in both English and Hebrew where they differ, because Hebrew Bibles count a psalm's header line as verse 1.</em></p>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 6: WEEK 36: TEACHING APPLICATIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">6. Week 36: Teaching Applications</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>How to Use This Section</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><!-- MAINTENANCE, not reader-facing: keep this a '## ' heading. --></p>
+<p><strong>Seven settings, and you are not meant to use all of them.</strong> Each takes one idea from the week and does something with it. Nothing here needs preparation beyond the study guide — no handouts, no slides, and in most cases nothing to buy. Pick the one that matches who is in front of you.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>1. Family</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Sing <a href="https://www.blueletterbible.org/kjv/psa/136/1/s_614001" target="_blank" data-ref="Psalm 136">Psalm 136</a> the way it was built.</strong> One person reads the first half of each verse; everyone else answers <em>"for his mercy endureth for ever."</em> All twenty-six. It takes three minutes and children get it immediately, because their job never changes. Then ask: <strong>why would God want the same sentence twenty-six times?</strong></p>
+<p><strong>The breath activity, for the last verse of the Psalms.</strong> Have everyone take one deep breath and hold it. Then read <a href="https://www.blueletterbible.org/kjv/psa/150/6/s_628006" target="_blank" data-ref="Psalm 150:6">Psalm 150:6</a> — <em>"Let every thing that hath breath praise the LORD."</em> The Hebrew word for breath there is the same word as the breath God breathed into Adam in <a href="https://www.blueletterbible.org/kjv/gen/2/7/s_2007" target="_blank" data-ref="Genesis 2:7">Genesis 2:7</a>. <strong>The point lands without explanation: the breath you are holding is the one He gave you.</strong></p>
+<p><strong>A quieter option.</strong> <a href="https://www.blueletterbible.org/kjv/psa/103/14/s_581014" target="_blank" data-ref="Psalm 103:14">Psalm 103:14</a> — <em>"he knoweth our frame; he remembereth that we are dust."</em> For a family having a hard week, that is the whole lesson. God is not disappointed that you are tired. He made you, and He remembers what out of.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>2. Sunday School</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Open with the hymn nobody names.</strong> Read <a href="https://www.blueletterbible.org/kjv/mat/26/30/s_955030" target="_blank" data-ref="Matthew 26:30">Matthew 26:30</a> aloud — <em>"when they had sung an hymn, they went out into the mount of Olives"</em> — and ask what the hymn was. Most classes have never wondered. Then walk them to <a href="https://www.blueletterbible.org/kjv/psa/116/1/s_594001" target="_blank" data-ref="Psalms 116">Psalms 116–118</a>: the <strong>Hallel</strong>, the group of praise psalms sung at Passover, of which 118 closes the meal. <strong>Read <a href="https://www.blueletterbible.org/kjv/psa/118/22-24/s_596022" target="_blank" data-ref="Psalm 118:22-24">Psalm 118:22–24</a> and let them sit with the fact that He sang it that night.</strong></p>
+<p><strong>The question that carries the hour:</strong> the last thing He sang before Gethsemane was <em>"This is the day which the LORD hath made; we will rejoice and be glad in it."</em> What does that tell you about rejoicing?</p>
+<p><strong>A second route.</strong> <a href="https://www.blueletterbible.org/kjv/psa/110/1/s_588001" target="_blank" data-ref="Psalm 110:1">Psalm 110:1</a> — <em>"The LORD said unto my Lord."</em> Put <a href="https://www.blueletterbible.org/kjv/mat/22/41-46/s_951041" target="_blank" data-ref="Matthew 22:41-46">Matthew 22:41–46</a> beside it and let the class work out why nobody could answer Him. It is one of the few places where you can watch the Savior teach directly from a psalm, and win.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>3. Primary</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Hallelujah is one word.</strong> Teach that <em>"Praise ye the LORD"</em> is a single Hebrew word, <a href="https://www.blueletterbible.org/lexicon/h1984/kjv/wlc/0-1/" target="_blank" data-lexicon="to shine ((Qal) to shine (fig. of God&#x27;s favour); (Hiphil) to flash forth light)" data-strongs="H1984" data-translit="halal / hallelu" data-original="הָלַל / הַלְלוּ" data-lang="hebrew" data-verse="Psalm 150:1"><em>hallelujah</em></a> — a word they already know, and it means exactly that. Then read <a href="https://www.blueletterbible.org/kjv/psa/146/1/s_624001" target="_blank" data-ref="Psalms 146">Psalms 146–150</a> and have them raise a hand every time they hear it. <strong>It opens and closes all five.</strong></p>
+<p><strong>Count with <a href="https://www.blueletterbible.org/kjv/psa/150/1/s_628001" target="_blank" data-ref="Psalm 150">Psalm 150</a>.</strong> Six verses, and it names instruments — trumpet, harp, timbrel, strings, organs, cymbals. Bring anything that makes noise. Praise in the last psalm is loud, and children are relieved to learn that.</p>
+<p><strong><a href="https://www.blueletterbible.org/kjv/psa/127/1/s_605001" target="_blank" data-ref="Psalm 127">Psalm 127</a> for the little ones.</strong> <em>"Except the LORD build the house."</em> Build a tower together, then talk about who builds families.</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>4. Youth</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>A book that does not pretend.</strong> Show them <a href="https://www.blueletterbible.org/kjv/psa/137/1/s_615001" target="_blank" data-ref="Psalm 137">Psalm 137</a> — <em>"How shall we sing the LORD'S song in a strange land?"</em> — and then show them where it sits: a few pages before the book erupts in praise. <strong>Scripture kept the psalm about being unable to sing.</strong> That is worth saying plainly to teenagers who have been told that faithful people are always cheerful.</p>
+<p><strong><a href="https://www.blueletterbible.org/kjv/psa/119/1/s_597001" target="_blank" data-ref="Psalm 119">Psalm 119</a> as a challenge.</strong> 176 verses, eight per Hebrew letter, the whole alphabet. Ask them why someone would build a poem that way. Then give them the real answer — <strong>it is built to be memorised</strong> — and ask what they have hidden in their hearts that they did not mean to.</p>
+<p><strong>A discussion question that usually goes somewhere.</strong> <a href="https://www.blueletterbible.org/kjv/psa/119/1/s_597001" target="_blank" data-ref="Psalm 119">Psalm 119</a> is the longest chapter in the Bible about loving God's word, and its last verse is <em>"I have gone astray like a lost sheep."</em> What does it mean that the psalm ends there?</p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>5. Institute / Adult Study</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong><a href="https://www.blueletterbible.org/kjv/psa/110/1/s_588001" target="_blank" data-ref="Psalm 110">Psalm 110</a> and the Melchizedek Priesthood.</strong> Trace it: the psalm names a priesthood <em>"for ever after the order of Melchizedek"</em> <a href="https://www.blueletterbible.org/kjv/psa/110/4/s_588004" target="_blank" data-ref="Psalms 110:4">(110:4)</a> · the Old Testament mentions Melchizedek nowhere else but <a href="https://www.blueletterbible.org/kjv/gen/14/1/s_14001" target="_blank" data-ref="Genesis 14">Genesis 14</a> · Hebrews builds its argument on it (5:6; 7:17) · <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/13?lang=eng" target="_blank" data-ref="Alma 13">Alma 13</a> treats him at more length than the whole Old Testament · and <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/107?lang=eng&id=p2-p4#p2" target="_blank" data-ref="D&C 107:2-4">D&C 107:2–4</a> explains why the priesthood carries his name rather than the Lord's. <strong>Five texts, one verse at the centre.</strong></p>
+<p><strong>How the Psalter — the whole book of Psalms — was assembled to end.</strong> Each of the first four books closes with a short doxology. Book Five closes with five whole psalms of it, getting shorter and louder — 10 verses, 20, 14, 9, then 6. Let the class find the pattern themselves by looking at the lengths.</p>
+<p><strong><a href="https://www.blueletterbible.org/kjv/psa/103/8/s_581008" target="_blank" data-ref="Psalm 103:8">Psalm 103:8</a> and the flare of the nostril.</strong> <em>"Slow to anger"</em> is, in Hebrew, <em>"long of nostril."</em> It is the formula God uses of Himself to Moses at Sinai (<a href="https://www.blueletterbible.org/kjv/exo/34/6/s_84006" target="_blank" data-ref="Exodus 34:6">Exodus 34:6</a>, where the King James says <em>"longsuffering"</em>). <a href="https://www.blueletterbible.org/kjv/psa/103/1/s_581001" target="_blank" data-ref="Psalm 103">Psalm 103</a> quotes God's own self-description, then says what it produces four verses later: <em>"as far as the east is from the west."</em></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>6. Missionary Preparation</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong><a href="https://www.blueletterbible.org/kjv/psa/117/1/s_595001" target="_blank" data-ref="Psalm 117">Psalm 117</a> is the shortest chapter in the Bible and it is a missionary text.</strong> Two verses, addressed to <em>"all ye nations."</em> Paul quotes it precisely to prove the gospel was always meant for everyone (<a href="https://www.blueletterbible.org/kjv/rom/15/11/s_1061011" target="_blank" data-ref="Romans 15:11">Romans 15:11</a>). <strong>The universality is not a New Testament innovation; it is in the hymnbook.</strong></p>
+<p><strong><a href="https://www.blueletterbible.org/kjv/psa/119/105/s_597105" target="_blank" data-ref="Psalm 119:105">Psalm 119:105</a> for a teaching model.</strong> <em>"A lamp unto my feet"</em> — a clay dish of oil, light enough for the next few steps. <strong>Investigators are rarely given the whole road.</strong> They are given enough for the next step, which is what a lamp is for, and that is worth saying out loud to someone who wants the entire answer before they will move.</p>
+<p><strong><a href="https://www.blueletterbible.org/kjv/psa/150/6/s_628006" target="_blank" data-ref="Psalm 150:6">Psalm 150:6</a> on who qualifies.</strong> <em>"Every thing that hath breath."</em> Not everyone who understands, not everyone who has their life sorted. Everything that breathes. <strong>A missionary who has that verse in mind will knock on doors differently.</strong></p>
+<hr>
+</div>
+</div>
+
+<button class="sg-sub-accordion"><span>7. Personal Study</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><strong>Read <a href="https://www.blueletterbible.org/kjv/psa/146/1/s_624001" target="_blank" data-ref="Psalms 146">Psalms 146–150</a> out loud, in order, in one sitting.</strong> It takes about six minutes. Watch them get shorter and louder. That is the ending of the book, and it was built to be heard.</p>
+<p><strong>Take <a href="https://www.blueletterbible.org/kjv/psa/119/1/s_597001" target="_blank" data-ref="Psalm 119">Psalm 119</a> a stanza a day.</strong> Eight verses, one Hebrew letter. Twenty-two days. The psalm was built in exactly those pieces.</p>
+<p><strong>If this is a hard season, start at <a href="https://www.blueletterbible.org/kjv/psa/102/1/s_580001" target="_blank" data-ref="Psalm 102">Psalm 102</a>.</strong> <em>"I watch, and am as a sparrow alone upon the house top."</em> Then read 103 straight after. The Psalter puts them in that order deliberately, and you are allowed to need the first one for a while.</p>
+<p><strong>And a question worth carrying.</strong> <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/25?lang=eng&id=p12#p12" target="_blank" data-ref="D&C 25:12">D&C 25:12</a> says <em>"the song of the righteous is a prayer unto me."</em> Which hymn, sung honestly this week, would be your prayer?</p>
+<hr>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 7: WEEK 36: STUDY QUESTIONS -->
+        <!-- ============================================================ -->
+        <div class="sg-accordion-section" onclick="toggleSection(this)"><span class="sg-section-title">7. Week 36: Study Questions</span><span class="sg-section-actions"><button class="sg-action-btn" title="Expand all subsections" onclick="event.stopPropagation(); expandSection(this)">&#x229E;</button><button class="sg-action-btn" title="Collapse all subsections" onclick="event.stopPropagation(); collapseSection(this)">&#x229F;</button></span></div>
+        <div class="sg-panel" style="display: none;">
+            <div class="panel-content">
+
+<button class="sg-sub-accordion"><span>Content</span></button>
+<div class="sg-sub-panel" style="display: block;">
+<div class="sg-sub-panel-content">
+<p><em>Seven questions. They are meant to be sat with rather than answered quickly, and several have no settled answer.</em></p>
+<p><!-- MAINTENANCE, not reader-facing: keep the heading above as '## '. --></p>
+<hr>
+<h3>1. Why is a book that is a third lament called <em>Praises</em>?</h3>
+<p>The Hebrew name for the Psalms is <a href="https://www.blueletterbible.org/lexicon/h8416/kjv/wlc/0-1/" target="_blank" data-lexicon="praise, song or hymn of praise (praise, adoration, thanksgiving (paid to God); act of general or public praise; praise-song (as title); praise (demanded by qualities or deeds or attributes of God); renown, fame, glory; of Damascus, God; object of praise, possessor of renown (fig))" data-strongs="H8416" data-translit="tᵊhillâ" data-original="תְּהִלָּה" data-lang="hebrew" data-verse=""><em>Tehillim</em></a> — "Praises." Perhaps a third of the book is complaint, grief, or protest, and last week you read some of the rawest of it.</p>
+<p><strong>What does it mean to name a collection for where it ends rather than for most of its contents?</strong> And what would change if it had been called <em>Laments</em> instead?</p>
+<hr>
+<h3>2. He sang, on that night. What do you make of that?</h3>
+<p>The Last Supper was a Passover meal, and Matthew records that <em>"when they had sung an hymn, they went out into the mount of Olives"</em> (<a href="https://www.blueletterbible.org/kjv/mat/26/30/s_955030" target="_blank" data-ref="Matthew 26:30">Matthew 26:30</a>). The hymn at the end of Passover is <a href="https://www.blueletterbible.org/kjv/psa/118/1/s_596001" target="_blank" data-ref="Psalm 118">Psalm 118</a>, which includes <em>"This is the day which the LORD hath made; we will rejoice and be glad in it."</em></p>
+<p><strong>What does it do to that verse to know when He sang it?</strong> And what does it ask of you the next time you say it on an ordinary morning?</p>
+<hr>
+<h3>3. Why could no one answer Him?</h3>
+<p>The Savior asked the Pharisees a question from <a href="https://www.blueletterbible.org/kjv/psa/110/1/s_588001" target="_blank" data-ref="Psalm 110:1">Psalm 110:1</a> — if the Messiah is David's son, why does David call him <em>my Lord</em>? — and <em>"no man was able to answer him a word"</em> (<a href="https://www.blueletterbible.org/kjv/mat/22/46/s_951046" target="_blank" data-ref="Matthew 22:46">Matthew 22:46</a>).</p>
+<p><strong>Why was that question unanswerable to them?</strong> And what does it show about how He read the Psalms?</p>
+<hr>
+<h3>4. What is the difference between studying scripture and hiding it in your heart?</h3>
+<p><a href="https://www.blueletterbible.org/kjv/psa/119/11/s_597011" target="_blank" data-ref="Psalm 119:11">Psalm 119:11</a> says <em>"Thy word have I hid in mine heart, that I might not sin against thee."</em> The psalm is an acrostic — built, deliberately, to be memorised.</p>
+<p><strong>What have you actually stored, as opposed to read?</strong> And notice where the psalm ends, after 175 verses of devotion to God's law: <em>"I have gone astray like a lost sheep."</em> <strong>What does it mean that memorising did not prevent that?</strong></p>
+<hr>
+<h3>5. Why is Psalm 137 still in the book?</h3>
+<p><em>"By the rivers of Babylon, there we sat down, yea, we wept."</em> It is the one psalm this week that cannot praise, and its final verses are the hardest in the Psalter. It was not edited out, and it was not put last — it sits a few pages before the book erupts in praise.</p>
+<p><strong>What is scripture doing by keeping it?</strong> And what does that permit you to bring to God?</p>
+<hr>
+<h3>6. God remembers that we are dust. Is that comforting or diminishing?</h3>
+<p><a href="https://www.blueletterbible.org/kjv/psa/103/14/s_581014" target="_blank" data-ref="Psalm 103:14">Psalm 103:14</a> — <em>"For he knoweth our frame; he remembereth that we are dust."</em> The word for <em>frame</em> comes from the verb used of a potter shaping clay, the same verb used when God formed man from the ground.</p>
+<p><strong>Does it comfort you that God remembers what He made you out of, or does it sting?</strong> And what would change if you remembered it about yourself — or about someone who has disappointed you?</p>
+<hr>
+<h3>7. Everything that breathes. Including you.</h3>
+<p>The last line of the Psalter is <em>"Let every thing that hath breath praise the LORD"</em> <a href="https://www.blueletterbible.org/kjv/psa/150/6/s_628006" target="_blank" data-ref="Psalms 150:6">(150:6)</a>. The word for breath is the same one used when God breathed into Adam.</p>
+<p><strong>Notice who is not excluded.</strong> Not everything that understands, not everything that has its life in order, not everything that feels like it. <strong>Everything that breathes.</strong></p>
+<p><strong>So: what is the praise you owe today, on the strength of nothing more than being alive?</strong></p>
+<hr>
+<p><em>A last one, if you want it. <a href="https://www.blueletterbible.org/kjv/psa/146/1/s_624001" target="_blank" data-ref="Psalms 146">Psalms 146</a> through 150 each open and close with the same word — </em>hallelujah<em>, one word in Hebrew, a command shouted at a crowd. It is an order, not a mood. When has praising God been something you decided rather than something you felt — and what happened?</em></p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+</div>

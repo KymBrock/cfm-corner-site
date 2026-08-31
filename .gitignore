@@ -18,14 +18,6 @@ _source-maps/
 .claude/worktrees/
 .session-checkpoints/
 
-# HELD BACK BY KYMBER'S DECISION, 2026-08-24 — restore after Friday's videos.
-# static/ is served DIRECTLY and is NOT gated by draft:, so pushing this file makes
-# cfmcorner.com/content/week36/study-guide.html publicly fetchable — 1,125 lines of a
-# week she has said she is still working on. Untracked, NOT deleted: the file stays on
-# disk so the staging preview at /weeks/36/ keeps working.
-# TO RESTORE: delete these lines, then `git add -f static/content/week36/study-guide.html`
-static/content/week36/study-guide.html
-
 # Lexicon backups are working artefacts and must NEVER be published. static/ is served
 # directly, so a .bak at /data/ is publicly fetchable — and this one carried the 28
 # CORRUPT theophoric entries the repair had just fixed, i.e. a public copy of the

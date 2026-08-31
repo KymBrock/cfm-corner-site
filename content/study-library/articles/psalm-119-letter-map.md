@@ -3,7 +3,7 @@ title: "The Alef-Bet and Psalm 119: An Interactive Map"
 description: "Psalm 119 gives one stanza to every letter of the Hebrew alphabet. Explore all twenty-two — what each letter's ancient sign was drawn from, how it works in Hebrew, and the eight verses of its stanza with the opening word marked and linked to the lexicon."
 weight: 5
 category: "Literary Tools"
-draft: true  # Kymber flips this. The article is a week-36 publish gate; do not remove.
+draft: false  # Flipped 2026-08-31 on Kymber's instruction. Week-36 publish gate.
 ---
 
 ---
@@ -1950,9 +1950,13 @@ It reads the **shapes** as well as the names. Why does the leg of the *gimel* re
 
 **Why this belongs in a reader's map.** It shows that reading meaning in the letters is not a modern habit or a one-off. It is **systematic** — it runs the whole alphabet — and it is **old**, recorded in a mainstream legal compilation roughly seven hundred years before the medieval period it is sometimes credited to.
 
-**A word about method, because this is easy to misuse.** Nothing in this article is offered as *the* meaning of a letter. The passages above are cited as historical witnesses to how the alphabet has been read and taught — the same frame used for the *gimel* example — and the tradition is not ours; nothing in it is offered as a practice to adopt.
+**A word about method, because this is easy to misuse.** This article does identify the letters. Their names are ordinary Hebrew words — *aleph* an ox, *bet* a house, *mem* water, *ayin* an eye — and the ancient signs are pictures of those same things. That is lexicography and archaeology, it is on every card above, and you can check all of it.
 
-The caution worth carrying is about **support**. Letters are suggestive, and suggestion is easy to run away with: a shape or a name can be made to mean very nearly anything by someone determined enough, and people have taken it a long way — sometimes harmlessly, sometimes into claims scripture will not carry, and occasionally into real harm. **The test is context.** A reading the passage itself supports is worth having; one that survives only because nobody checked it against the text is not. What makes the examples above worth citing is precisely that they are attested, dated and public — you can open the page and read them for yourself.
+What it does not do is advance a definitive symbolic interpretation of them. That a letter carries deeper significance beyond its name and its picture is attested, but it is not conclusive. Where the passages above draw a lesson out of a letter, that is reported as what the Talmud teaches, demonstrating that this was a traditional practice. However, the degree to which this extends, and how such interpretations were intended, is a subject of debate and can be misused, leading to significant confusion — and that is not the purpose of this article. Whether the alphabet holds more than its plain sense is a real question, and a genuinely open one, heavily contested among scholars and within the Jewish community itself. This piece is an introduction, and it leaves that question as something the curious reader can search out and discover for themselves.
+
+These are Jewish sources, and they are quoted here as evidence rather than as authority. They show what was taught, when, and something of how it developed — not what a Latter-day Saint reader is obliged to conclude. Many readers may find connections that resonate with Christian and Latter-day Saint doctrine, but they should do so cautiously, making sure the context and history are verifiable to ensure accuracy and to avoid confusion and misunderstanding. And this kind of study takes a lot of research and practice.
+
+Introducing the letters here is not a judgement on their value, nor on how any community understands them. But a witness this old, this specific and this significant is worth taking seriously — which is exactly why it is cited.
 
 And notice the last row, because it lands where this article started. One reading of *samech ayin* is ***simanim aseh*** — "make signs to remember the Torah." **The Talmud's own alphabet lesson says the letters are a device for holding scripture in the memory.** Which is precisely what Psalm 119 is.
 
