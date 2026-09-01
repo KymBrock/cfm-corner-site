@@ -1348,10 +1348,15 @@
   "translit": "hallēlouia",
   "original": "ἁλληλουϊά",
   "lang": "greek",
-  "definition": "ἁλληλουιά; (Rec. ἀλληλούϊα; Heb. הָלַל יָהּ, praise the Lord), [in LXX in the titles of certain Psa (104 (105), al.), and at the end of Psa.150:1-6; also Tob.13:18, 3Ma.7:13 ;]; hallelujah, alleluia: Rev.19:1, 3-4 19:6.†; (AS)",
+  "definition": "praise ye the Lord — Hallelujah",
   "verse": "",
-  "source": "stepbible-tbesg",
-  "has_lsj": true
+  "source": "thayers-1889-kymber",
+  "has_lsj": true,
+  "senses": [
+   {
+    "text": "praise ye the Lord — Hallelujah"
+   }
+  ]
  },
  "G240": {
   "translit": "allēlōn",
@@ -12042,10 +12047,59 @@
   "translit": "doxa",
   "original": "δόξα",
   "lang": "greek",
-  "definition": "δόξα, -ης, ἡ; (δοκέω), [in LXX very frequently for כָּבוֹד, also for הוֹד ,פִּפְאֶרֶת, etc., 25 words in all ;]; in cl.,; __1. expectation, judgment, opinion (4Ma.5:18).; __2. opinion, estimation in which one is held, repute; in NT, always good opinion, hence reputation, praise, honour, glory: Luk.14:10, Jhn.12:43, Heb.3:3; opposite to αἰσχύνη, Php.3:19; to ἀτιμία, 2Co.6:8; δ. κ. τιμή, Rom.2:7, 10 1Pe.1:7, 2Pe.1:17; ζητεῖν, Jhn.5:44 7:18 8:50, 1Th.2:6; λαμβάνειν, Jhn.5:41, 2Pe.1:17, Rev.5:12; διδόναι δ. τ. θεῷ (cf. נָתַן כָּבוֹד לַיהוָֹה, Jer.13:16, al.), Luk.17:18, Jhn.9:24, Act.12:23, Rom.4:20, Rev.4:9; εἰς (τ.) δ. θεοῦ, Rom.3:7 15:7, Php.1:11, al.; in doxologies, τ. θεῷ (ᾧ) ἡ δ., Luk.2:14, Rom.11:36 16:27, Gal.1:5, Eph.3:21, al.; __3. Later also (not cl.) as in LXX (= הוֹד, Job.39:20, 1Ch.29:25; כָּבוֹד, Job.19:9, Est.5:11, al.), visible brightness, splendour, glory: of light, Act.22:11; of heavenly bodies, 1Co.15:40ff.; esp. that wh. radiates from God's presence, as manifested in the pillar of cloud and in the Holy of Holies (= כָּבוֹד, Exo.16:10 25:22 40:34, al.; and new Heb. שְׁכִינָה, 2Ma.2:8; see DB, iv, 489b), Rom.9:4, Jas.2:1 (see Hort, Mayor, in l.); hence of the manifested glory of God, Rom.1:23, Col.1:11 Eph.1:6, 12 17 3:16; of the same as communicated to man through Christ, 2Co.3:18 4:6; and of the glorious condition into which Christians shall enter hereafter, Rom.8:18, 21 9:23, 2Ti.2:10, al.; SYN.: ἔπαινος τιμή (see Hort on 1Pe.1:7). (AS)",
+  "definition": "opinion, judgment · splendour, brightness · majesty · a most glorious condition",
   "verse": "",
-  "source": "stepbible-tbesg",
-  "has_lsj": true
+  "source": "thayers-1889-kymber",
+  "has_lsj": true,
+  "senses": [
+   {
+    "text": "opinion, judgment, view",
+    "children": [
+     {
+      "text": "opinion, estimate, whether good or bad concerning someone"
+     },
+     {
+      "text": "in the NT always a good opinion concerning one, resulting in praise, honour, and glory"
+     }
+    ]
+   },
+   {
+    "text": "splendour, brightness",
+    "children": [
+     {
+      "text": "of the moon, sun, stars"
+     },
+     {
+      "text": "magnificence, excellence, preeminence, dignity, grace"
+     }
+    ]
+   },
+   {
+    "text": "majesty",
+    "children": [
+     {
+      "text": "a thing belonging to God — the kingly majesty which belongs to him as supreme ruler; the absolute perfection of the deity"
+     },
+     {
+      "text": "a thing belonging to Christ — the kingly majesty of the Messiah; the absolutely perfect inward or personal excellency of Christ"
+     },
+     {
+      "text": "the majesty of the angels, as apparent in their exterior brightness"
+     }
+    ]
+   },
+   {
+    "text": "a most glorious condition, most exalted state",
+    "children": [
+     {
+      "text": "of that condition with God the Father in heaven to which Christ was raised after he had achieved his work on earth"
+     },
+     {
+      "text": "the glorious condition of blessedness into which true Christians shall enter after their Saviour's return from heaven"
+     }
+    ]
+   }
+  ]
  },
  "G1392": {
   "translit": "doxazō",
@@ -14441,10 +14495,26 @@
   "translit": "eleos",
   "original": "ἔλεος",
   "lang": "greek",
-  "definition": "ἔλεος, -ους, τό; (cl. -ου, ὁ, and so Rec., Mat.9:13 12:7 23:23, Tit.3:5, Heb.4:16; on the Hellenistic form τό ἔ., see WH, App., 158; M, Pr., 60; Mayser, 277; Kühner, i, 515), [in LXX chiefly for חֶסֶד ;]; mercy, pity, compassion;; __1. of men: Mat.9:13 (LXX) Mat.12:7 23:23; ποιεῖν ἔ. (and id. before μετά, with genitive; cf. Heb. עִם חֶסֶד עָשָׂה, Gen.21:23, al.), Luk.10:37, Jas.2:13 3:17.; __2. Of God: Luk.1:50, 54 1:58, Rom.15:9, Eph.2:4, 2Ti.1:16 1:18, Tit.3:5, Heb.4:16, 1Pe.1:3; esp. in benedictions, Gal.6:16, 1Ti.1:2, 2Ti.1:2, 2Jn.3, Ju 2; σκευὴ ἐλέους, Rom.9:23; σπλάγχνα ἐλέους, Luk.1:78; ποιεῖν ἔ. (see supr.), Luk.1:72; τ. ὑμετέρῳ ἐλέει, Rom.11:31.; __3. Of Christ: Ju 21.†; SYN.: οἰκτιρμός (see: ἐλεέω)  (AS)",
+  "definition": "mercy — kindness or good will towards the miserable and the afflicted, joined with a desire to help them",
   "verse": "",
-  "source": "stepbible-tbesg",
-  "has_lsj": true
+  "source": "thayers-1889-kymber",
+  "has_lsj": true,
+  "senses": [
+   {
+    "text": "mercy: kindness or good will towards the miserable and the afflicted, joined with a desire to help them",
+    "children": [
+     {
+      "text": "of men towards men: to exercise the virtue of mercy, show one's self merciful"
+     },
+     {
+      "text": "of God towards men: in general providence; the mercy and clemency of God in providing and offering to men salvation by Christ"
+     },
+     {
+      "text": "the mercy of Christ, whereby at his return to judgment he will bless true Christians with eternal life"
+     }
+    ]
+   }
+  ]
  },
  "G1657": {
   "translit": "eleutheria",
@@ -27540,10 +27610,104 @@
   "translit": "logos",
   "original": "λόγος",
   "lang": "greek",
-  "definition": "λόγος, -ου, ὁ (λέγω); [in LXX chiefly for  דָּבָר, also for מִלָּה ,אֵמֶר, etc. ;]; __I. Of that by which the inward thought is expressed, Lat. oratio, sermo, vox, verbum.; __1. a word, not in the grammatical sense of a mere name (ἔπος, ὄνομα, ῥῆμα), but a word as  embodying a conception or idea: Mat.8:8, Luk.7:7, 1Co.14:9, 19 Heb.12:19, al.; __2. a saying, statement, declaration: Mat.19:22 (T om.), Mrk.5:36 7:29, Luk.1:29, Jhn.2:22 6:60, Act.7:29, al.; with genitive attrib., Act.13:15, Rom.9:9, Heb.7:28, al.; of the sayings, commands, promises, etc., of teachers, Mat.7:24 10:14, Mrk.8:38, Luk.9:4, Jhn.14:24, al.; λ. κενοί, Eph.5:6; ἀληθινοί, Rev.19:9; πιστοί, Rev.22:6; esp. of the precepts, decrees and promises of God, ὁ λ. τ. θεοῦ, the word of God: Mrk.7:13, Jhn.10:35, Rom.13:9, 1Co.14:36, Php.1:14, al.; absol., ὁ λ., Mat.13:21, 22 Mrk.16:[20], Luk.1:2, Act.6:4, Heb.4:12, al.; __3. speech, discourse: Act.14:12, 2Co.10:10, Jas.3:2; opposite to ἐπιστολή, 2Th.2:15; disting, from σοφία, 1Co.2:1; ἀναστροφή, 1Ti.4:12; δύναμις, 1Co.4:19, 1Th.1:5; ἔργον, Rom.15:18; οὐδενὸς λ. τίμιον (not worthy of mention), Act.20:24; of the faculty of speech, Luk.24:19, 2Co.11:6; of the style of speech, Mat.5:37, 1Co.1:5; of instruction, Col.4:3, 1Pe.3:1; with genitive of person(s), Jhn.5:24 8:52, Act.2:41, al.; ὁ λ. ὁ ἐμός, Jhn.8:31; with genitive obj. (τ.) ἀληθείας, 2Co.6:7, Col.1:5, Jas.1:18; τ. καταλλαγῆς, 2Co.5:19; τ. σταυροῦ, 1Co.1:18; of mere talk, 1Co.4:19, 2o, Col.2:23, 1Jn.3:18; of the talk which one occasions, hence, repute: Col.2:23.; __4. subject-matter, hence, teaching, doctrine: Act.18:15, 2Ti.2:17, al.; esp. of Christian doctrine: Mat.13:20-23, Mrk.4:14-20 8:32, Luk.1:2, Act.8:4, Gal.6:6, 1Th.1:6, al.; with genitive of person(s), τ. θεοῦ, Luk.5:1, Jhn.17:6, Act.4:29, 1Co.14:36, I Jhn.1:10, Rev.6:9, al.; τ. Κυρίου, Act.8:25, 1Th.1:8, al.; τ. Χριστοῦ, Col.3:16, Rev.3:8; with genitive appos., Act.15:7; with genitive attrib., Heb.5:13.; __5. a story, tale, narrative: Mat.28:15, Jhn.21:23, Act.1:1 11:22; before περί, Luk.5:15.; __6. That which is spoken of (Plat., al.; V. Kennedy, Sources, 124), matter, affair, thing: Mat.21:24, Mrk.1:45 11:29, Luk.20:3, Act.8:21; of a matter in dispute, as a case or suit at law, Act.19:38; pl. (1Ma.7:33, al.), Luk.1:4.; __II. Of the inward thought itself, Lat. ratio.; __1. reason,; __(a) of the mental faculty (Hdt., Plat., al.): κατὰ λόγον, Act.18:14;; __(b) a reason, cause: τίνι λόγῳ, Act.10:29; παρεκτὸς λόγου πορνείας, Mat.5:32 19:9, WH, mg., R, mg.; __2. account,; __(a) regard: Act.20:24, Rec.;; __(b) reckoning: Php.4:15, 17; συναίρειν (which see) λ., Mat.18:23 25:19; in forensic sense, Rom.14:12, Heb.13:17, 1Pe.4:5; with genitive of thing(s), Luk.16:2; before περί, Mat.12:36, Act.19:40, 1Pe.3:15.; __3. proportion, analogy: Php.2:16 (Field, Notes, 193 f.).; __III. ὁ λ., the Divine Word or Logos: Jhn.1:1, 14; τ. ζωῆς, 1Jn.1:1; τ. θεοῦ, Rev.19:13 (see Westc, Swete, CGT, in ll.; reff. in Artt., Logos, DB, DCG).; (AS)",
+  "definition": "of speech: a word · discourse · as respects the mind: reason, account · in John, the Word of God",
   "verse": "",
-  "source": "stepbible-tbesg",
-  "has_lsj": true
+  "source": "thayers-1889-kymber",
+  "has_lsj": true,
+  "senses": [
+   {
+    "text": "of speech",
+    "children": [
+     {
+      "text": "a word, uttered by a living voice, embodying a conception or idea"
+     },
+     {
+      "text": "what someone has said"
+     },
+     {
+      "text": "the sayings of God"
+     },
+     {
+      "text": "decree, mandate or order"
+     },
+     {
+      "text": "of the moral precepts given by God"
+     },
+     {
+      "text": "Old Testament prophecy given by the prophets"
+     },
+     {
+      "text": "what is declared — a thought, declaration, aphorism, a weighty saying, a dictum, a maxim"
+     }
+    ]
+   },
+   {
+    "text": "discourse",
+    "children": [
+     {
+      "text": "the act of speaking, speech"
+     },
+     {
+      "text": "the faculty of speech, skill and practice in speaking"
+     },
+     {
+      "text": "a kind or style of speaking"
+     },
+     {
+      "text": "a continuous speaking discourse — instruction"
+     },
+     {
+      "text": "doctrine, teaching"
+     },
+     {
+      "text": "anything reported in speech; a narration, narrative"
+     },
+     {
+      "text": "matter under discussion, thing spoken of, affair; a matter in dispute, case, suit at law"
+     },
+     {
+      "text": "the thing spoken of or talked about; event, deed"
+     }
+    ]
+   },
+   {
+    "text": "as respects the mind alone",
+    "children": [
+     {
+      "text": "reason, the mental faculty of thinking, meditating, reasoning, calculating"
+     },
+     {
+      "text": "account — regard, consideration"
+     },
+     {
+      "text": "account — reckoning, score"
+     },
+     {
+      "text": "account — answer or explanation in reference to judgment"
+     },
+     {
+      "text": "relation — with whom as judge we stand in relation"
+     },
+     {
+      "text": "reason, cause, ground"
+     }
+    ]
+   },
+   {
+    "text": "in John, the essential Word of God — Jesus Christ",
+    "children": [
+     {
+      "text": "the personal wisdom and power in union with God, his minister in creation and government of the universe"
+     },
+     {
+      "text": "the cause of all the world's life, both physical and ethical"
+     },
+     {
+      "text": "who for the procurement of man's salvation put on human nature in the person of Jesus the Messiah"
+     }
+    ]
+   }
+  ]
  },
  "G3057": {
   "translit": "logchē",
@@ -28238,10 +28402,15 @@
   "translit": "makrothymōs",
   "original": "μακροθύμως",
   "lang": "greek",
-  "definition": "μακροθύμως; adv.,; with forbearance, patiently: Act.26:3.†; (AS)",
+  "definition": "patiently, with longanimity",
   "verse": "",
-  "source": "stepbible-tbesg",
-  "has_lsj": true
+  "source": "thayers-1889-kymber",
+  "has_lsj": true,
+  "senses": [
+   {
+    "text": "patiently — with longanimity"
+   }
+  ]
  },
  "G3117": {
   "translit": "makros",
@@ -29028,15 +29197,28 @@
   "translit": "melchisedek",
   "original": "Μελχισέδεκ",
   "lang": "greek",
-  "definition": "Μελχισεδέκ  indecl., ὁ (Heb. מַלְכִּי־צֶדֶק),; Melchizedek: Heb.5:6, 10 6:20 7:1, 10-11 7:15, 17.†; (AS)",
+  "definition": "Melchizedek = \"king of righteousness\" — king of Salem and priest of the most high God",
   "verse": "",
-  "source": "stepbible-tbesg",
+  "source": "thayers-1889-kymber",
   "has_lsj": true,
   "etymology": "king of right",
   "etymology_basis": "derived-hebrew-root",
   "etymology_source": "Strong's Exhaustive Concordance, 1890 — Greek entry cross-referenced to its Hebrew root by Strong. Public domain.",
   "etymology_reliability": "derived",
-  "etymology_root": "H4442"
+  "etymology_root": "H4442",
+  "senses": [
+   {
+    "text": "Melchizedek = \"king of righteousness\"",
+    "children": [
+     {
+      "text": "the king of Salem and priest of the most high God"
+     },
+     {
+      "text": "who lived in the days of Abraham"
+     }
+    ]
+   }
+  ]
  },
  "G3199": {
   "translit": "melei",
@@ -37852,10 +38034,76 @@
   "translit": "pneuma",
   "original": "πνεῦμα",
   "lang": "greek",
-  "definition": "πνεῦμα, -τος, τό,; [in LXX chiefly and very frequently for רוּחַ ;]; __1. of air in motion;; __(a) wind: Jhn.3:8; pl., Heb.1:7 (LXX);; __(b) breath: π. ζωῆς, Rev.11:11; π. τοῦ στόματος, figuratively, 2Th.2:8 (cf. Ps 32 (33)6).; __2. Of the vital principle, the spirit (Arist., Polyb., al.): Luk.8:55, Jhn.19:30, Act.7:59, al.; opposite to σάρξ, Mat.26:41, Mrk.14:38, 1Co.5:5, al.; to σῶμα, Rom.8:10, 1Co.6:17 7:34, 1Pe.4:6; to ψυχή, Php.1:27, Heb.4:12; τὸ π. καὶ ἡ ψ. καὶ τ. σῶμα, 1Th.5:23 (M, Th., in l.); dative, τῷ π., in spirit, Mrk.2:8 8:12, Jhn.11:33 13:21, Act.18:25, Rom.12:11, 1Co.7:34, 1Pe.3:18, al.; of the human spirit of Christ, Rom.1:4, 1Ti.3:16.; __3. spirit, i.e. frame of mind, disposition, influence: Luk.1:17, Rom.8:15, 1Co.4:21, Gal 6:1, Eph.2:2, 2Ti.1:7, 1Jn.4:6, al.; __4. An incorporeal being, a spirit: Luk.24:37, 39 Act.23:8; π. ὁ θεός, God is spirit, Jhn.4:24; πατὴρ τῶν π., Heb.12:9; of disembodied human beings, Heb.12:23, 1Pe.3:19 (ICC, in l.; DB, iii, 795); of angels. Heb.1:14; of demons or evil spirits, Mat.8:16, Mrk.9:20, Luk.9:39, al.; π. πύθυωνα, Act.16:16; πνεύματα δαιμονίων, Rev.16:14; π. δαιμονίου ἀκαθάρτου, Luk.4:33; π. ἀσθενείας (Bl., §35, 5), Luk.13:11; π. ἀκάθαρτον, Mat.10:1, Mrk.1:23, Luk.4:36, Act.5:16; π. ἄλαλον (καὶ κωφόν), Mrk.9:17, 25; πονηρόν, Luk.7:21, Act.19:12, al.; __5. Of the Holy Spirit, π. ἅγιον, τὸ ἅ. π., τὸ π. τὸ ἅ. τὸ π., π. (the article as a rule being used when the Spirit is regarded as a Person or a Divine Power, and omitted when the reference is to an operation, influence or gift of the Spirit; see WM, 151:5; Bl., §46, 7): anarth., Mat.1:18 3:11, 16 4:1, Mrk.1:8 (Swete, in l.), ib.10, Luk.1:15, Jhn.7:39, Act.19:2, Rom.5:5, 1Co.2:4, al.; with art., Mat.4:1 12:31, 32 Mrk.1:10 3:29, Luk.2:26, Jhn.7:36 14:26, Act.4:31 5:3, Rom.8:16, al.; (τὸ) π. (τοῦ) θεοῦ, Mat.3:16, Rom.8:9, Eph.3:16, 1Jn.4:2, al.; τὸ π. τ. πατρός, Mat.10:20; π. θεοῦ ζῶντος, 2Co.3:3; (τὸ) π. τοῦ κυρίου, Luk.4:18, Act.5:9 8:39; τὸ π. Ἰησοῦ, Act.16:7; Χριστοῦ, Rom.8:9; Ἰησοῦ Χριστοῦ, Php.1:19; τὸ π. τ. ἀληθείας, Jhn.15:26 16:13, 1Jn.4:6; λείγει (μαρτυρεῖ) τὸ π. (τὸ ἅγιον), Act.21:11 28:25, 1Ti.4:1, Heb.3:7 10:15, Rev.14:13; before τ. ἐκκλησίαις,  Rev.2:7, 11 17, 29, 3:6, 12, 22; ἐν τ. π., Luk.2:27; κατὰ πνεῦμα, Rom.8:4, 5; ἐξ ὕδατος καὶ π., Jhn.3:5, διὰ πνεύματος αἰωνίου, Heb.9:14; ἐν ἁγιασμῷ πνεύματος, 2Th.2:13, 1Pe.1:2; ἓν π., 1Co.12:13, Eph.2:18 4:4; ὁ δὲ κύριος τὸ π. ἐστιν, 2Co.3:17; of that which is effected or governed by the Spirit, opposite to γράμμα, Rom.2:29 7:6, 2Co.3:6.; SYN.: νοῦς, which in NT is contrasted with π. as \"the action of the understanding in man with that of the spiritual or ecstatic impulse\" (DB, iv, 612); ψυχή — the usual term in cl. psychology—in NT, \"expresses man as apart from God, a separate individual, π. expresses man as drawing his life from God\" (DB, 1-vol., 872). (AS)",
+  "definition": "the Holy Spirit · the spirit that animates the body · a spirit · disposition or influence · a movement of air, breath",
   "verse": "",
-  "source": "stepbible-tbesg",
-  "has_lsj": true
+  "source": "thayers-1889-kymber",
+  "has_lsj": true,
+  "senses": [
+   {
+    "text": "the third person of the triune God, the Holy Spirit, coequal and coeternal with the Father and the Son",
+    "children": [
+     {
+      "text": "sometimes emphasising his personality and character (the “Holy” Spirit)"
+     },
+     {
+      "text": "sometimes emphasising his work and power (the Spirit of “Truth”)"
+     },
+     {
+      "text": "never referred to as a depersonalised force"
+     }
+    ]
+   },
+   {
+    "text": "the spirit — the vital principle by which the body is animated",
+    "children": [
+     {
+      "text": "the rational spirit, the power by which the human being feels, thinks, decides"
+     },
+     {
+      "text": "the soul"
+     }
+    ]
+   },
+   {
+    "text": "a spirit — a simple essence, possessed of the power of knowing, desiring, deciding and acting",
+    "children": [
+     {
+      "text": "a life-giving spirit"
+     },
+     {
+      "text": "a human soul that has left the body"
+     },
+     {
+      "text": "a spirit higher than man but lower than God, i.e. an angel"
+     },
+     {
+      "text": "used of demons, or evil spirits"
+     },
+     {
+      "text": "the spiritual nature of Christ, higher than the highest angels and equal to God"
+     }
+    ]
+   },
+   {
+    "text": "the disposition or influence which fills and governs the soul of any one",
+    "children": [
+     {
+      "text": "the efficient source of any power, affection, emotion, desire"
+     }
+    ]
+   },
+   {
+    "text": "a movement of air (a gentle blast)",
+    "children": [
+     {
+      "text": "of the wind, hence the wind itself"
+     },
+     {
+      "text": "breath of nostrils or mouth"
+     }
+    ]
+   }
+  ]
  },
  "G4152": {
   "translit": "pneumatikos",
@@ -37906,10 +38154,23 @@
   "translit": "pnoē",
   "original": "πνοή",
   "lang": "greek",
-  "definition": "πνοή, -ῆς, ή; (πνέω), [in LXX chiefly for נְשָׁמָה ;]; __1. a blowing, blast, wind: Act.2:2.; __2. a breathing, breath: Act.17:25 (Gen.2:7, al.).†; (AS)",
+  "definition": "breath, breath of life; wind",
   "verse": "",
-  "source": "stepbible-tbesg",
-  "has_lsj": true
+  "source": "thayers-1889-kymber",
+  "has_lsj": true,
+  "senses": [
+   {
+    "text": "breath",
+    "children": [
+     {
+      "text": "breath of life"
+     }
+    ]
+   },
+   {
+    "text": "wind"
+   }
+  ]
  },
  "G4158": {
   "translit": "podērēs",
@@ -177016,5 +177277,14 @@
   "verse": "Genesis 14:18",
   "source": "blb",
   "base": "H4428"
+ },
+ "H4609_alt_maalot": {
+  "original": "מַעֲלוֹת",
+  "translit": "maʿălôt",
+  "lang": "hebrew",
+  "definition": "ascents, goings up; the steps of a stairway — the plural in the heading of Psalms 120–134",
+  "verse": "Psalms 120:1",
+  "source": "blb",
+  "base": "H4609"
  }
 }
