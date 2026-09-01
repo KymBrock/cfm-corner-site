@@ -131,7 +131,9 @@ def audit_file(fpath, known_translits):
         term = m.group(1).strip().lower().replace("'", "\u2019")
         if term in known_translits:
             context = stripped[max(0, m.start()-40):m.end()+40].replace('\n', ' ').strip()
-            issues.append(('BARE TRANSLIT', m.group(1), context))
+            # skip terms already carried by the letter mechanism (see RESIDUAL note)
+            if 'term-ref' not in context and 'data-letter' not in context:
+                issues.append(('BARE TRANSLIT', m.group(1), context))
 
     # 4. BLB lexicon links missing data-lexicon attribute
     for m in re.finditer(r'<a [^>]*href="[^"]*blueletterbible\.org/lexicon/[^"]*"[^>]*>.*?</a>', content, flags=re.DOTALL):
@@ -373,10 +375,48 @@ def main():
                     print(f'  ...{ctx[:120]}...')
             total_issues += len(issues)
 
+    # ── TWO BUCKETS, NOT ONE TOTAL, 2026-09-01 ────────────────────────────────
+    # This printed a single "TOTAL: N issues". On week 36 it printed 40, jenna read
+    # them as the residual `fix-lesson-links` says not to chase, and week 36 shipped
+    # with 11 bare transliterations. Kymber found them on the live page:
+    #   "I am still seeing foreign terms that have not gotten links. This should have
+    #    been caught prior to publication."
+    # She had made the same correction on week 35, thirteen days earlier.
+    #
+    # THE RULE IS REAL AND IT WAS APPLIED TO THE WRONG CATEGORY. "A fully linked week
+    # is not zero BARE HEBREW" is about bare SCRIPT — the divine-name and rabbinic tail,
+    # 14 flags on week 26. It says nothing about bare TRANSLITERATIONS, which RUL-000
+    # requires to carry the link. One number could not tell those apart, so the tool
+    # made the mistake available and a reader took it.
+    RESIDUAL = {'BARE HEBREW', 'BARE ROOT'}      # expected; do NOT chase to zero
+    # A term already inside <span class="term-ref" data-letter="…"> is LINKED, by the
+    # letter mechanism rather than the lexicon one. style.css says so in its own words:
+    # "data-letter is first-class: a NAMED LETTER of the Hebrew alphabet … a letter has
+    # nowhere to link." Counting those as defects would put three permanent false
+    # positives in the DEFECTS column — and a defect count that is never zero teaches
+    # the reader to ignore it, which is the exact failure this split was made to end.
+    from collections import Counter
+    kinds = Counter(k for f in files for k, _, _ in audit_file(f, known_translits))
+    residual = sum(n for k, n in kinds.items() if k in RESIDUAL)
+    defects  = sum(n for k, n in kinds.items() if k not in RESIDUAL)
+
     print(f'\n{"="*60}')
-    print(f'TOTAL: {total_issues} issues across {files_with_issues} files')
+    print(f'  DEFECTS — every one must be fixed: {defects}')
+    for k, n in sorted(kinds.items()):
+        if k not in RESIDUAL:
+            print(f'      {k:<22} {n}')
+    print(f'\n  EXPECTED RESIDUAL — do NOT chase to zero: {residual}')
+    for k, n in sorted(kinds.items()):
+        if k in RESIDUAL:
+            print(f'      {k:<22} {n}')
+    print(f'\n  (week 26\'s correct residual is 14: divine names and rabbinic terms.)')
+    print(f'  TOTAL: {total_issues} across {files_with_issues} files'
+          f'  — DO NOT READ THIS NUMBER ALONE.')
     print(f'{"="*60}')
 
+    if defects == 0 and residual:
+        print(f'\n✅ No defects. {residual} residual flag(s) remain and are expected.')
+        return
     if total_issues == 0:
         print('\n✅ All clear — no unlinked terms found.')
         return
