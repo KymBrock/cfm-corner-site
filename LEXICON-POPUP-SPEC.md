@@ -163,12 +163,49 @@ This file grows as new terms are introduced each week. The converter reads it du
 that failure by name, and a fifth lane repeated it on 2026-09-03. **A commit message is not a
 findable home for a standing rule.** Read `git log -1 49d2001` for the full context.
 
-### ⛔ RESTRICTED — DO NOT USE
+### ⚖️ THE GOVERNING PRINCIPLE — READ THIS BEFORE MARKING ANYTHING RESTRICTED
 
-| source | why |
+**Kymber, 2026-09-03, correcting an over-restriction in the first draft of this very section:**
+
+> *"I have been told so many things about what we can use and what we can't use, and much of it we
+> can use. And it has been marked that we can't use it because someone didn't read the print closely
+> enough or the scope was narrowed. The biggest thing that has come through this is that **facts are
+> not copyrightable. It's only glosses that are copyrightable.** So we can use information to help us
+> reference what we need… Our glosses are not coming verbatim from copyrighted sources, but the facts
+> are still the facts. **We can still parse specific words. We can still identify how different words
+> are translated in different Bibles and different languages.** We have also been able to trace the
+> sources for licensed materials to find that the licensed materials were directly quoting public
+> domain sources."*
+
+**⇒ COPYRIGHT PROTECTS EXPRESSION AND ARRANGEMENT. IT DOES NOT PROTECT FACTS.**
+
+| ✅ FACTS — usable regardless of where you first saw them | ⛔ EXPRESSION — not reproducible verbatim |
 |---|---|
-| **CATSS / CCATS** | **Its licence requires a signed declaration. Nothing from it has been read, and nothing may be.** The 349,434-pair Hebrew↔Greek alignment on disk is NOT available to this project. A 2026-09-03 handoff recommended building the Greek row from it; that recommendation was struck. |
-| **LSJ (`lsj_senses.json`)** | Not a licensing bar — a **correctness** bar. It is properly structured **and semantically wrong for a Bible reader**: classical *ktizō* is "found, build"; biblical is "create". **A structured source that is wrong is more dangerous than an unstructured one, because it looks like an upgrade.** |
+| A word's **parsing / morphology** — stem, tense, person, gender, number | Someone's **definition or gloss**, copied as written |
+| **Which Greek word renders which Hebrew word** in a given verse | A curated **essay, note, or commentary** |
+| **How different Bibles and languages translate a word** | An editor's **arrangement** of an entry, reproduced wholesale |
+| **Verse references, occurrence counts, cross-references** | |
+| A word's **Strong's number** and the text it appears in | |
+
+**Two working rules that follow:**
+
+1. **WRITE OUR OWN GLOSS.** The fact of a word's meaning is not owned; one scholar's *phrasing* of it
+   is. **Our glosses are ours.**
+2. **TRACE THE PROVENANCE BEFORE ACCEPTING A RESTRICTION.** Licensed compilations frequently quote
+   **public-domain** sources. A restriction on the compilation is not a restriction on what it
+   quotes. **Read the fine print; do not inherit someone else's summary of it.**
+
+> **⚠ THE FAILURE THIS BLOCK EXISTS TO PREVENT is over-restriction — a lane narrowing the scope or
+> skim-reading a licence, marking usable material as forbidden, and blocking work that was always
+> permitted. That has happened repeatedly, and the first draft of this section did it again.**
+
+### ⚠️ SOURCES WITH ACTUAL CONSTRAINTS — and what the constraint really is
+
+| source | the real constraint |
+|---|---|
+| **CATSS / CCATS** | **Its licence requires a signed declaration, so we do not distribute or build from THEIR FILE.** ⚠ **This is NOT a bar on the alignment facts themselves.** Which Greek word renders which Hebrew word in a verse **is a fact** and is obtained from open sources — Rahlfs LXX + OSHB — which is exactly what was done. **Kymber, 2026-08-24:** *"this is a matter of fact, not copyright. That is what appears in the Septuagint, and that can be verified, with or without the CCATS."* |
+| **LSJ (`lsj_senses.json`)** | **Not a licensing bar at all — a CORRECTNESS bar.** Properly structured **and semantically wrong for a Bible reader**: classical *ktizō* is "found, build"; biblical is "create". **A structured source that is wrong is more dangerous than an unstructured one, because it looks like an upgrade.** |
+| **`Sacred_Texts/RESTRICTED/`** | Copyrighted **expression** — use for sourcing and verification; **quoting into published lessons is Kymber's decision.** Facts drawn from it remain facts. |
 
 ### ✅ THE CLEAN SOURCES
 
