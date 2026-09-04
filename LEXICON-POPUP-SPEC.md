@@ -156,6 +156,71 @@ This file grows as new terms are introduced each week. The converter reads it du
 
 ---
 
+## ⚖️ WHERE THE POPUP DATA COMES FROM — AND WHAT MAY NOT BE USED
+
+**Moved here 2026-09-03 at Kymber's instruction.** This reasoning was recorded in full in commit
+`49d2001` (2026-08-24) and **four lanes re-derived it anyway** — `INSTRUCTIONS_FOR_CLAUDE` records
+that failure by name, and a fifth lane repeated it on 2026-09-03. **A commit message is not a
+findable home for a standing rule.** Read `git log -1 49d2001` for the full context.
+
+### ⛔ RESTRICTED — DO NOT USE
+
+| source | why |
+|---|---|
+| **CATSS / CCATS** | **Its licence requires a signed declaration. Nothing from it has been read, and nothing may be.** The 349,434-pair Hebrew↔Greek alignment on disk is NOT available to this project. A 2026-09-03 handoff recommended building the Greek row from it; that recommendation was struck. |
+| **LSJ (`lsj_senses.json`)** | Not a licensing bar — a **correctness** bar. It is properly structured **and semantically wrong for a Bible reader**: classical *ktizō* is "found, build"; biblical is "create". **A structured source that is wrong is more dangerous than an unstructured one, because it looks like an upgrade.** |
+
+### ✅ THE CLEAN SOURCES
+
+| source | licence | note |
+|---|---|---|
+| **Kymber's own dictionary** | **Thayer's 1889, public domain by age**, plus her and her son's edits | **Carries no critical apparatus, so nothing needs stripping.** Entries tagged `thayers-1889-kymber` are hers — **a bulk sync must not overwrite them.** |
+| **OSHB** (Open Scriptures Hebrew Bible) | **CC BY 4.0** | Source of the Hebrew side of the LXX correspondence, and of per-word morphology. |
+| **Rahlfs LXX** | Open Scriptures | `text_accented` + `final_Strongs`. |
+| **STEPBible TBESG / TBESH / TFLSJ** | **CC BY 4.0 — ATTRIBUTION REQUIRED** | Attribution is live site-wide in `baseof.html`: *"STEPBible TFLSJ, CC BY 4.0; citations preserved."* **Do not remove it.** |
+
+**Kymber, 2026-08-24, on why the LXX↔Hebrew correspondence is legitimate without CATSS:**
+
+> *"This is a matter of fact, not copyright. That is what appears in the Septuagint, and that can be
+> verified, with or without the CCATS."*
+
+Copyright protects expression and arrangement, **not the reading of two ancient texts.** A pair is
+linked only where a real verse carries both the Greek number and the Hebrew number.
+
+### ⚠️ THREE FIXES ALREADY TRIED ON THE STEPBible DUMP — ALL FAILED. DO NOT RETRY.
+
+    splitting on ';'    left a manuscript siglum as charis's OPENING definition — 3 of 4 broken
+    lsj_senses.json     structured but semantically wrong (see above)
+    token-stripping     left "(1Es, l.with)" and ate verse refs — 1Co.11:9 became Co.11:9
+
+**The fix that worked was SWAPPING THE SOURCE, not cleaning the dump.** Sense splits are
+**hand-authored** — eleven entries, read one at a time, because a wrong split changes a sense.
+
+### ⚠️ DO NOT MERGE FLAT GREEK SENSES
+
+Running the STEPBible builder for Greek yields 5,431 entries with `senses` and **zero nested ones** —
+the headword as sense 1, an LXX note as sense 2. Measured once already: **11,428 flat lists were
+produced, found redundant with `definition`, and dropped.** They also took a file loaded on **every
+page** from **2.98 MB to 11.06 MB.**
+
+### ⚠️ RESOLVE BY EVIDENCE, NEVER BY SPELLING
+
+Matching Hebrew words to Strong's numbers **by consonants was wrong 3 times in 9.** The worst:
+*padah* → **H3301 *Iphdeiah***, a proper name in Chronicles. **Requiring co-occurrence in a real verse
+kills all three without special-casing.**
+
+    padah  -> H6299   37 verses      (not H3301 Iphdeiah)
+    yatsar -> H3335    4 verses      (not H3334 "be distressed")
+    qanah  -> H7069    4 verses      (not H7066, Aramaic)
+
+**One word stays UNLINKED** — *pidyom* under *lytron*, absent from OSHB's lemma index. It renders as
+plain Hebrew. **Unlinked and right beats linked and wrong.**
+
+*(Independently re-derived 2026-09-03 as the* yāšar */* yāsar *collision — H3474 vs H3256 — by a lane
+that did not know this was already recorded. **Join on the Strong's number, never the string.**)*
+
+---
+
 ## Non-Lexicon Links (Do NOT Popup)
 
 - **Logeion links** (`logeion.uchicago.edu`) — Latin dictionary, regular navigation
@@ -163,6 +228,94 @@ This file grows as new terms are introduced each week. The converter reads it du
 - **Scripture references** — Handled by BLB ScriptTagger (separate system)
 - **Webster's 1828 links** (`webstersdictionary1828.com`) — Historical English dictionary, regular navigation, always paired with Merriam-Webster link in format: `word (1828)`
 - **Any link without `data-lexicon`** — Normal behavior
+
+---
+
+## ⚖️ THE LINK GOES ON THE TRANSLITERATION — Kymber, 2026-08-21
+
+> *"Links should always be added to the transliteration, not the Hebrew because I do not want
+> the niqqud obstructed."*
+
+**This governs, and it resolves an ambiguity that has been in this file for months.** Link
+styling — underline, colour, hover state — sits directly on top of the vowel points, which are
+the smallest marks on the page and the ones a reader most needs to see.
+
+**CORRECT** — link on the transliteration, Hebrew bare beside it:
+
+```html
+<a href="…/h1254/…" data-lexicon data-strongs="H1254" data-translit="bārāʾ"
+   data-original="בָּרָא" data-lang="hebrew"><em>bārāʾ</em></a> (בָּרָא)
+```
+
+**WRONG** — link wrapping the Hebrew, niqqud obstructed:
+
+```html
+<em>bārāʾ</em> (<a href="…/h1254/…" …>בָּרָא</a>)
+```
+
+### How this reconciles with the Comprehensive Coverage Rule below
+
+The rule below says every Hebrew character in body text must sit inside a lexicon `<a>`. **Read
+literally that contradicts this section, and it is the reason 13 Hebrew terms on week 35 shipped
+with links on the script** — יְהוָה, אֱלֹהִים, נְגִינָה, מַשְׂכִּיל, סֶלָה.
+
+**The reconciliation is already in this file**, in the "do NOT chase zero" bullet: *"Intentionally
+bare script is required beside transliterations."*
+
+So the coverage rule means: **every Hebrew term must be COVERED by a lexicon link — not that the
+link must wrap the Hebrew itself.** Where a transliteration stands beside the Hebrew, the link
+goes on the transliteration and the script stays bare. **A bare Hebrew word beside a linked
+transliteration is correct and must not be "fixed."**
+
+---
+
+## ⚖️ MULTI-WORD PHRASES — every word gets its own link
+
+**Kymber, 2026-08-21:** *"There should be a segment on how phrases need to be divided word for
+word so every word is accounted for."*
+
+A Hebrew phrase is not one lexicon entry. **Each word has its own Strong's number, its own
+meaning, and its own popup** — and a reader who hovers a two-word phrase and gets one definition
+has been told less than the text contains.
+
+**CORRECT** — `ʾerek ʾappayim (אֶרֶךְ אַפַּיִם)`, "slow to anger," is **two words**:
+
+```html
+<a … data-strongs="H750" data-translit="ʾerek" data-original="אֶרֶךְ"><em>ʾerek</em></a>
+<a … data-strongs="H639" data-translit="ʾappayim" data-original="אַפַּיִם"><em>ʾappayim</em></a>
+(אֶרֶךְ אַפַּיִם)
+```
+
+**WRONG** — the phrase linked once, to whichever word the lookup happened to find:
+
+```html
+<a … data-strongs="H750">ʾerek ʾappayim</a> (אֶרֶךְ אַפַּיִם)
+```
+
+### Rules
+
+1. **Split on the Hebrew word boundary, not on the English gloss.** *"Slow to anger"* is three
+   English words and two Hebrew ones. **Follow the Hebrew.**
+2. **Every word gets an entry**, including the ones that look unimportant — the definite
+   article, the conjunction, the preposition. If a word is in the phrase it is in the text, and
+   *"every word is accounted for."*
+3. **The gloss belongs to the phrase; the definitions belong to the words.** Give the phrase's
+   meaning in the prose — *"long of nostril"* — and let each popup carry its own word.
+4. **A hyphenated compound is still two words** where Hebrew treats it as two:
+   *halelû-yāh* is *halelû* (H1984) + *Yāh* (H3050).
+5. **Where a word repeats in the phrase, link each occurrence.** A reader may hover either.
+6. **If a word has no Strong's number** — some particles do not — say so rather than attaching a
+   neighbouring number. A wrong Strong's number is worse than a missing link, because the popup
+   will confidently show a different word.
+
+### Worked examples from live weeks
+
+| phrase | words | Strong's |
+|---|---|---|
+| *ʾerek ʾappayim* (אֶרֶךְ אַפַּיִם) | *ʾerek* · *ʾappayim* | H750 · H639 |
+| *nishmat chayyim* (נִשְׁמַת חַיִּים) | *nishmat* · *chayyim* | H5397 · H2416 |
+| *halelû-yāh* (הַלְלוּ־יָהּ) | *halelû* · *Yāh* | H1984 · H3050 |
+| *lēb ṭāhôr* (לֵב טָהוֹר) | *lēb* · *ṭāhôr* | H3820 · H2889 |
 
 ---
 
