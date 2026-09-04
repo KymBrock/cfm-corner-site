@@ -161,7 +161,13 @@ This file grows as new terms are introduced each week. The converter reads it du
 **Moved here 2026-09-03 at Kymber's instruction.** This reasoning was recorded in full in commit
 `49d2001` (2026-08-24) and **four lanes re-derived it anyway** — `INSTRUCTIONS_FOR_CLAUDE` records
 that failure by name, and a fifth lane repeated it on 2026-09-03. **A commit message is not a
-findable home for a standing rule.** Read `git log -1 49d2001` for the full context.
+findable home for a standing rule.** Read it — **and name the repo, because three worktrees share one `.git` and it does NOT exist in
+`cfm-corner-tools`, which is where the tooling lives and where a reader is most likely standing:**
+
+```bash
+git -C ~/Developer/cfm-corner-staging log -1 49d2001
+```
+
 
 ### ⚖️ THE GOVERNING PRINCIPLE — READ THIS BEFORE MARKING ANYTHING RESTRICTED
 
