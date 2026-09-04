@@ -60,11 +60,10 @@ Two are worth watching for as you explore — and the criterion is a narrow one:
 .lm-meta{font-size:var(--text-xs,.75em);color:var(--lm-muted);margin-top:3px;
   font-variant-numeric:tabular-nums}
 .lm-def{font-size:var(--text-sm,.85em);color:var(--lm-body);margin:0 0 12px;line-height:1.6}
-.lm-sign,.lm-gram,.lm-theme{font-size:var(--text-sm,.85em);line-height:1.55;padding:8px 11px;
+.lm-sign,.lm-gram{font-size:var(--text-sm,.85em);line-height:1.55;padding:8px 11px;
   border-radius:6px;margin:0 0 9px;background:var(--lm-bg)}
 .lm-sign{border-left:3px solid var(--lm-terra)}
 .lm-gram{border-left:3px solid var(--lm-slate)}
-.lm-theme{border-left:3px solid var(--lm-gold);font-style:italic}
 .lm-glab,.lm-wlab{display:block;font-size:.68em;text-transform:uppercase;letter-spacing:.08em;
   color:var(--lm-muted);margin-bottom:3px;font-weight:600;font-style:normal}
 .lm-chain{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;margin:12px 0 10px}
@@ -118,7 +117,6 @@ Two are worth watching for as you explore — and the criterion is a narrow one:
 <div class="lm-legend">
 <div><span class="lm-sw" style="background:var(--terracotta,#c65528)"></span> what the ancient sign shows</div>
 <div><span class="lm-sw" style="background:var(--slate,#57899c)"></span> how the letter is used in Hebrew</div>
-<div><span class="lm-sw" style="background:var(--gold,#d5a93c)"></span> the theme of its Psalm 119 stanza</div>
 </div>
 
 <div class="lm-grid">
