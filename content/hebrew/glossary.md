@@ -409,6 +409,33 @@ Click on any Hebrew or Greek term to study it at Blue Letter Bible. Use the **fl
 </div>
 </details>
 
+<details class="seder-dropdown">
+<summary>Week 37: Proverbs 1–4; 15–16; 22; 31; Ecclesiastes 1–3; 11–12 — "He Shall Direct Thy Paths"</summary>
+<div class="seder-dropdown-body">
+
+{{< flashcards section="week37" >}}
+
+| Hebrew | Transliteration | Meaning |
+|:------:|-----------------|---------|
+| חָכְמָה | <a href="https://www.blueletterbible.org/lexicon/h2451/kjv/wlc/0-1/" target="_blank">*ḥāḵmâ*</a> | wisdom — skill in living; the same word used of the craftsmen who built the tabernacle |
+| יִרְאָה | <a href="https://www.blueletterbible.org/lexicon/h3374/kjv/wlc/0-1/" target="_blank">*yirʾâ*</a> | fear, reverence, awe — the range runs from dread to reverence; in Proverbs 1:7 and 31:30 it is the awe of a creature before God, not alarm |
+| רֵאשִׁית | <a href="https://www.blueletterbible.org/lexicon/h7225/kjv/wlc/0-1/" target="_blank">*rēʾšît*</a> | beginning — the word that opens Genesis; it also names the firstfruits, the first and best of the harvest |
+| מוּסָר | <a href="https://www.blueletterbible.org/lexicon/h4148/kjv/wlc/0-1/" target="_blank">*mûsār*</a> | instruction, discipline, correction — what Proverbs 1:2 says the book is for |
+| שָׁעַן | <a href="https://www.blueletterbible.org/lexicon/h8172/kjv/wlc/0-1/" target="_blank">*šāʿan*</a> | to lean your weight on something, the way you lean on a staff or a wall (Proverbs 3:5) |
+| בִּינָה | <a href="https://www.blueletterbible.org/lexicon/h998/kjv/wlc/0-1/" target="_blank">*bînâ*</a> | discernment, insight — the ability to tell one thing from another; your best judgement, not your ignorance |
+| יָדַע | <a href="https://www.blueletterbible.org/lexicon/h3045/kjv/wlc/0-1/" target="_blank">*yāḏaʿ*</a> | to know — the ordinary verb for knowing, used across the range from facts to persons; Proverbs 3:6 reads “in all thy ways know him”, the sense used of knowing a person |
+| יָשַׁר | <a href="https://www.blueletterbible.org/lexicon/h3474/kjv/wlc/0-1/" target="_blank">*yāšar*</a> | to make straight, to make level — what you do to a road. Behind "he shall direct thy paths" |
+| תּוֹצָאוֹת | <a href="https://www.blueletterbible.org/lexicon/h8444/kjv/wlc/0-1/" target="_blank">*tôṣā'ôṯ*</a> | outgoings — the source a stream comes from. "Out of it are the issues of life" (Proverbs 4:23) |
+| שׁוּב | <a href="https://www.blueletterbible.org/lexicon/h7725/kjv/wlc/0-1/" target="_blank">*šûḇ*</a> | to return, turn back — a soft answer causes wrath to turn back, rather than being absorbed (Proverbs 15:1) |
+| דֶּרֶךְ | <a href="https://www.blueletterbible.org/lexicon/h1870/kjv/wlc/0-1/" target="_blank">*dereḵ*</a> | road, way, manner of living. Proverbs 22:6 is literally "according to his own way" |
+| חַיִל | <a href="https://www.blueletterbible.org/lexicon/h2428/kjv/wlc/0-1/" target="_blank">*ḥayil*</a> | strength, might, army — the military word behind “virtuous woman” in Proverbs 31:10 |
+| הֶבֶל | <a href="https://www.blueletterbible.org/lexicon/h1892/kjv/wlc/0-1/" target="_blank">*heḇel*</a> | vapour, breath, mist — the word printed five times in Ecclesiastes 1:2 as "vanity" |
+| קֹהֶלֶת | <a href="https://www.blueletterbible.org/lexicon/h6953/kjv/wlc/0-1/" target="_blank">*qōheleṯ*</a> | one who gathers an assembly — the speaker's name, rendered "the Preacher" |
+| עוֹלָם | <a href="https://www.blueletterbible.org/lexicon/h5769/kjv/wlc/0-1/" target="_blank">*ʿôlām*</a> | eternity, enduring duration — "he hath set the world in their heart" is eternity (Ecclesiastes 3:11) |
+
+</div>
+</details>
+
 ---
 
 ## Special Topics

@@ -401,6 +401,13 @@ async function enhanceWeeklyTerms() {
 
     const translitIndex = {};
     const originalIndex = {};
+    // How many lexicon entries fold onto each key. `normalizeLatin` strips the pointing and
+    // the diacritics, so DISTINCT WORDS COLLIDE: measured 2026-09-06, 1,476 keys carry more
+    // than one entry and 2,716 entries sit hidden behind a first-wins pick. On week 37 that
+    // silently resolved ḥayil→H2426 (rampart, not army), šāʿan→H5431, yāšar→H3256 and
+    // yāḏaʿ→H3034 — four of the week's central words, all confidently wrong.
+    const translitKeyCounts = {};
+    const originalKeyCounts = {};
     Object.entries(lexiconData || {}).forEach(([strongs, entry]) => {
         if (!entry) return;
         const translitKey = normalizeLatin(entry.translit || '');
@@ -413,8 +420,14 @@ async function enhanceWeeklyTerms() {
             verse: entry.verse || '',
             lang: entry.lang || (String(strongs || '').toUpperCase().startsWith('G') ? 'greek' : 'hebrew')
         };
+        if (translitKey) translitKeyCounts[translitKey] = (translitKeyCounts[translitKey] || 0) + 1;
+        if (originalKey) originalKeyCounts[originalKey] = (originalKeyCounts[originalKey] || 0) + 1;
         if (translitKey && !translitIndex[translitKey]) translitIndex[translitKey] = target;
         if (originalKey && !originalIndex[originalKey]) originalIndex[originalKey] = target;
+    });
+    // A pointed Hebrew hint is not permission to choose a namesake or homograph.
+    Object.keys(originalIndex).forEach((key) => {
+        if (originalKeyCounts[key] > 1) delete originalIndex[key];
     });
 
     const explicitOverrides = {
@@ -459,13 +472,80 @@ async function enhanceWeeklyTerms() {
         // Week 34 (Psalms) — names + word studies
         david: 'H1732', asaph: 'H623', heman: 'H1968', jeduthun: 'H3038', korah: 'H7141',
         torah: 'H8451', kavod: 'H3519', nephesh: 'H5315', chesed: 'H2617', hesed: 'H2617',
-        selah: 'H5542', halal: 'H1984'
+        selah: 'H5542', halal: 'H1984',
+        // Week 37 (Proverbs / Ecclesiastes) — every number verified against
+        // lexicon-popups.json before it was written here, per W37-R1. Each of these folds
+        // onto a COLLIDING key, so without this block the guard above leaves them unlinked
+        // and without the guard they resolved to the wrong word entirely.
+        hayil: 'H2428',    // ⚠ NOT H2426 (חֵיל rampart). H2428 חַיִל = strength, army.
+        saan: 'H8172',     // šāʿan, "to lean" — Proverbs 3:5. Shares its key with H5431,
+                           // H6813 and H7599. ⚠ WAS WRITTEN 'aan' AND MATCHED NOTHING —
+                           // corrected 2026-09-06 after Kymber questioned the folded keys.
+        yada: 'H3045',     // yāḏaʿ, "to know" — Proverbs 3:6. Key also holds H3034 yāḏâ.
+        hebel: 'H1892',    // heḇel, "vapour, breath" — the word Ecclesiastes turns on.
+        bina: 'H998',      // bînâ, "discernment" — Proverbs 3:5.
+        hakma: 'H2451'     // ḥāḵmâ, wisdom — the tabernacle craftsmen's word.
+        // ⚠ 'yaar' IS DELIBERATELY ABSENT, and an earlier version of this block had it
+        // pointing at H3474. THAT WAS WRONG AND ACTIVELY HARMFUL: yaʿar (H3293) is a
+        // FOREST, it owns the key 'yaar' outright, and the override would have made
+        // "forest" open a popup for "to make level."
+        // ⚠ 'yasar' IS ALSO DELIBERATELY ABSENT. It is the genuinely ambiguous one —
+        // ṣ, s and š all fold to s, so the key holds FOUR DISTINCT ROOTS:
+        //     H3256 yāsar  chasten   (the root of mûsār — used in this week)
+        //     H3334/5 yāṣar  form, fashion
+        //     H3474 yāšar  be level  (Proverbs 3:6 — also used in this week)
+        //     H3477 yāšār  upright
+        // THIS WEEK USES TWO OF THEM, so no single override can be right. The guard
+        // leaves it unlinked and both are authored explicitly in the markdown.
     };
 
+    // Built AFTER the overrides object so a declared word is never treated as ambiguous.
+    const overriddenTranslitKeys = new Set(Object.keys(explicitOverrides));
+    const ambiguousTranslitKeys = new Set(
+        Object.keys(translitKeyCounts).filter((k) => translitKeyCounts[k] > 1)
+    );
+
+    // ⚠ STORE UNDER THE FOLDED KEY. Lookup folds the page's text before consulting this
+    // index, so an override whose key is NOT already in folded form can never be reached.
+    // Measured 2026-09-06: TWELVE of these were unreachable for exactly that reason,
+    // including chokhmah (folds to 'hokmah'), chesed ('hesed'), ruach ('ruah') and
+    // nachash ('nahash') — some of the most-used words in the corpus, silently inert.
+    // Found because Kymber asked what the folded key actually was.
+    const overrideClaimed = new Set();
+    const pendingAcademic = [];
     Object.entries(explicitOverrides).forEach(([key, strongs]) => {
         const entry = lexiconData[strongs] || lexiconData[String(strongs).toLowerCase()];
         if (!entry) return;
-        translitIndex[key] = {
+        const foldedKey = normalizeLatin(key) || key;
+        // ⚠ REGISTER THE ACADEMIC SPELLING TOO. These keys are English-style
+        // (chesed, shaqed, tzitzit) but CLAUDE.md rules that the guides PRINT the
+        // academic form with diacritics (ḥeseḏ, šāqēḏ, ṣîṣiṯ) — which folds to a
+        // DIFFERENT key (hesed vs hesed is fine; shaked vs saked is not). Measured
+        // 2026-09-06: 42 of 72 overrides diverge this way. Many are deliberate
+        // (kohanim→kōhēn, meraglim→rāḡal map a plural onto its root), but where the
+        // divergence is only a spelling convention the override never fired on the
+        // form we actually publish. Claimed only if free, so a deliberate
+        // disambiguation is never silently overwritten.
+        const academicKey = normalizeLatin(entry.translit || '');
+        if (academicKey && academicKey !== foldedKey && !overrideClaimed.has(academicKey)) {
+            overrideClaimed.add(academicKey);
+            pendingAcademic.push([academicKey, strongs, entry]);
+        }
+        overrideClaimed.add(foldedKey);
+        translitIndex[foldedKey] = {
+            strongs: String(strongs).toUpperCase(),
+            translit: entry.translit || '',
+            original: entry.original || '',
+            definition: entry.definition || '',
+            verse: entry.verse || '',
+            lang: entry.lang || 'hebrew'
+        };
+    });
+
+    // Flush the academic spellings AFTER the main pass, so an explicit English-keyed
+    // override always wins over an academic alias derived from a different entry.
+    pendingAcademic.forEach(([academicKey, strongs, entry]) => {
+        translitIndex[academicKey] = {
             strongs: String(strongs).toUpperCase(),
             translit: entry.translit || '',
             original: entry.original || '',
@@ -497,7 +577,23 @@ async function enhanceWeeklyTerms() {
         return candidates;
     };
 
-    const COMMON_ENGLISH = new Set(['a','an','the','is','as','at','be','by','do','he','if','in','it','me','my','no','of','on','or','so','to','up','us','we','oh','all','and','are','but','for','had','has','her','him','his','how','its','may','not','out','she','than','that','them','they','this','was','who','why','with','from','were','been','have','will','your','you','our','one','two','now','see','way','man','men','god','lord','latin','greek','hebrew','english','psalm','psalms']);
+    const COMMON_ENGLISH = new Set(['a','an','the','is','as','at','be','by','do','he','if','in','it','me','my','no','of','on','or','so','to','up','us','we','oh','all','and','are','but','for','had','has','her','him','his','how','its','may','not','out','she','than','that','them','they','this','was','who','why','with','from','were','been','have','will','your','you','our','one','two','now','see','way','man','men','god','lord','latin','greek','hebrew','english','psalm','psalms',
+        // Added 2026-09-06. Ordinary English words that fold onto a Greek or Hebrew lemma.
+        // 'time' folded onto Greek timē (G5092, "honor, price") and four plain English
+        // italics on week 37 — Ecclesiastes 3, Alma 40:8, "a time to weep" — opened a
+        // popup about the price paid for a thing. Found by Max in the rendered DOM.
+        // ⚠ This list is ENGLISH words only. Do NOT add real original-language terms to it:
+        // sophia (G4678) is a correct, wanted popup and must keep working.
+        'time','times','tone','tones','ton','pain','peace','rest','part','parts',
+        // Construct forms are not lexemes. 'eset' is ēšet (construct of ʾiššâ, H802) and
+        // collides with ʿešeṯ (H6247, "plate, slab") — the ēšet ḥayil of Proverbs 31 and
+        // Ruth 3:11 was being published as a metal plate. Blocked in the converter too.
+        'eset']);
+    const isEnglishProseSpan = (text, hebrewHint) => {
+        if (hebrewHint) return false;
+        const words = String(text || '').match(/\p{L}[\p{L}\p{M}'’ʿʾ]*/gu) || [];
+        return words.length > 1 && words.some((word) => COMMON_ENGLISH.has(word.toLowerCase()));
+    };
     // HEBREW LETTER NAMES ARE NOT WORDS. Kymber, 2026-08-17: "qoph, instead of
     // indicating this is a letter of the alphabet, it is saying it means ape."
     //
@@ -535,10 +631,19 @@ async function enhanceWeeklyTerms() {
             if (originalIndex[hintKey]) return originalIndex[hintKey];
             if (hintKey.length > 1 && originalIndex[hintKey.slice(1)]) return originalIndex[hintKey.slice(1)];
         }
+        // English homographs need an authored link or Hebrew context, not a spelling match.
+        const unquoted = String(termText || '').trim().replace(/^["'“”‘’]+|["'“”‘’]+$/g, '');
+        if (/^(more|day)$/i.test(unquoted)) return null;
         const candidates = buildCandidates(termText);
         for (const candidate of candidates) {
             if (COMMON_ENGLISH.has(candidate)) continue;
             if (LETTER_NAMES.has(candidate)) continue;
+            // AN AMBIGUOUS KEY DOES NOT GET TO PICK A WINNER. If several lexicon entries fold
+            // onto this key and nothing has declared which one is meant, leave the word
+            // unlinked. A missing popup is recoverable; a confident wrong one is what ships,
+            // and it is what a reader trusts. Declare the word in `explicitOverrides` (or
+            // author the link in the markdown) to make it resolve.
+            if (ambiguousTranslitKeys.has(candidate) && !overriddenTranslitKeys.has(candidate)) continue;
             if (translitIndex[candidate]) return translitIndex[candidate];
         }
         return null;
@@ -660,10 +765,30 @@ async function enhanceWeeklyTerms() {
     const contentRoot = document.querySelectorAll('.embedded-content');
     contentRoot.forEach((section) => {
         section.querySelectorAll('em').forEach((em) => {
-            if (em.closest('a, button, .term-ref')) return;
+            // Markdown may render either <a><em> or <em><a>. Both already declare
+            // identity; a fallback must never overwrite the author's Strong's link.
+            if (em.closest('a, button, .term-ref') || em.querySelector('a, [data-strongs], [data-letter]')) return;
             const termText = (em.textContent || '').trim();
             if (!termText || termText.length < 2) return;
+            // ⚠ LANGUAGE GUARD — a term introduced as a word of a NON-biblical language must
+            // never acquire a Strong's number, however well it matches once diacritics are
+            // stripped. `normalizeLatin` above folds Greek heortē and Old English heorte onto
+            // the SAME KEY, so the Cross-Language table's English row was being linked to
+            // G1859 "a feast, festival" — under the Old English word for HEART.
+            //
+            // FOUND IN A BROWSER BY MAX, 2026-09-06, AFTER the converter-side fix had been
+            // made and verified on disk. ⇒ THERE ARE TWO LINKING PATHS. The server emits a
+            // plain <em>, and this JS re-adds the wrong link at page load, so a fix that
+            // checks only the deployed HTML reports success while the reader still sees the
+            // defect. The same guard has to exist in BOTH.
+            if (/\b(?:old|middle|proto-)?\s?(?:english|german(?:ic)?|norse|french|saxon|dutch)\b|\blatin\b|\bsanskrit\b|\bakkadian\b|\bugaritic\b|\begyptian\b|\bpersian\b|\barabic\b/i
+                    .test((em.previousSibling && em.previousSibling.textContent || '').slice(-64))) {
+                return;
+            }
             const hebrewHint = extractHebrewHint(em);
+            // Italics also mark English quotations. Two dictionary hits do not make a
+            // sentence a transliterated phrase (e.g. "shineth more and more ... day").
+            if (isEnglishProseSpan(termText, hebrewHint)) return;
             // Letters first. They are not in Strong's, so anything the lexicon path finds
             // for a letter name is a different word that happens to share it.
             const letterSpan = createLetterSpan(termText, hebrewHint);
@@ -684,64 +809,8 @@ async function enhanceWeeklyTerms() {
         });
     });
 
-    // Curated proper-name linker: wrap the FIRST occurrence of each known
-    // biblical name (whole word) with a lexicon popup. Curated-only — it never
-    // over-links ordinary English words the way full-lexicon matching would.
-    const nameStrongs = {
-        Esther: 'H635', Hadassah: 'H1919', Mordecai: 'H4782', Haman: 'H2001',
-        Ahasuerus: 'H325', Vashti: 'H2060', Job: 'H347', Eliphaz: 'H464',
-        Bildad: 'H1085', Zophar: 'H6691', Elihu: 'H453', Uz: 'H5780',
-        Behemoth: 'H930', Leviathan: 'H3882', David: 'H1732', Asaph: 'H623',
-        Heman: 'H1968', Jeduthun: 'H3038', Korah: 'H7141'
-    };
-    const nameList = Object.keys(nameStrongs).sort((a, b) => b.length - a.length);
-    const nameRe = new RegExp('\\b(' + nameList.join('|') + ')\\b');
-    const nameSeen = new Set();
-    const nameSkip = new Set(['A', 'BUTTON', 'CODE', 'PRE', 'SCRIPT', 'STYLE', 'TEXTAREA', 'H1', 'H2', 'H3']);
-    const createNameAnchor = (name, code) => {
-        const entry = lexiconData[code] || lexiconData[String(code).toLowerCase()];
-        const href = buildLexiconHref(code);
-        if (!entry || !href) return null;
-        const a = document.createElement('a');
-        a.className = 'term-ref';
-        a.href = href; a.target = '_blank'; a.rel = 'noopener noreferrer';
-        a.dataset.strongs = code;
-        a.dataset.translit = entry.translit || '';
-        a.dataset.original = entry.original || '';
-        a.dataset.lexicon = entry.definition || '';
-        a.dataset.lang = entry.lang || 'hebrew';
-        a.textContent = name;
-        return a;
-    };
-    contentRoot.forEach((section) => {
-        const walker = document.createTreeWalker(section, NodeFilter.SHOW_TEXT);
-        const textNodes = [];
-        let tn;
-        while ((tn = walker.nextNode())) textNodes.push(tn);
-        textNodes.forEach((node) => {
-            const parent = node.parentElement;
-            if (!parent || nameSkip.has(parent.tagName)) return;
-            if (parent.closest('a, button, .term-ref, .term-ref-group, [data-ref], h1, h2, h3, .header-section')) return;
-            const text = node.nodeValue;
-            const re = new RegExp('\\b(' + nameList.join('|') + ')\\b', 'g');
-            let m, last = 0, frag = null;
-            while ((m = re.exec(text))) {
-                const name = m[1];
-                if (nameSeen.has(name)) continue;
-                const anchor = createNameAnchor(name, nameStrongs[name]);
-                if (!anchor) continue;
-                nameSeen.add(name);
-                if (!frag) frag = document.createDocumentFragment();
-                if (m.index > last) frag.appendChild(document.createTextNode(text.slice(last, m.index)));
-                frag.appendChild(anchor);
-                last = m.index + name.length;
-            }
-            if (frag) {
-                if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
-                parent.replaceChild(frag, node);
-            }
-        });
-    });
+    // Plain names do not identify biblical people: "David" may be a modern author
+    // and "Job" a book title. Keep deliberate source links; never infer name identity.
 }
 
 function enhanceWeeklyShorthandScriptures() {
@@ -797,12 +866,33 @@ function enhanceWeeklyShorthandScriptures() {
     const bookAbbr = blbBookMap[primaryBook.toLowerCase()];
     if (!bookAbbr) return;
 
+    // ⚠ A MULTI-BOOK WEEK MUST NOT GUESS THE BOOK.
+    // Until 2026-09-06 every bare (N:N) on the page was linked to primaryBook — the FIRST
+    // book of the reading. On week 37 (Proverbs + Ecclesiastes) that sent 21 of 49
+    // shorthand refs to the wrong book, and check_citations.py could not see it because
+    // these anchors are built in the browser, not in the markdown. Found by Max,
+    // 2026-09-06, in the rendered DOM. Same two-path shape as the `heorte` homograph.
+    // Now: resolve each ref against the nearest PRECEDING book name in document order,
+    // and when nothing has established a book, leave it as plain text. A missing link is
+    // recoverable; a confident wrong one is what ships.
+    const escapeRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const bookKeys = Object.keys(blbBookMap).sort((a, b) => b.length - a.length);
+    const bookScanRegex = new RegExp('\\b(' + bookKeys.map(escapeRe).join('|') + ')\\b', 'gi');
+    const titleCase = (s) => s.replace(/\b[a-z]/g, (c) => c.toUpperCase());
+    const booksInReading = bookKeys.filter(
+        (k) => new RegExp('\\b' + escapeRe(k) + '\\b', 'i').test(readingText)
+    );
+    // The Week 37 release does not change shorthand destinations in published weeks.
+    const resolveMultipleBooks = {{ eq (string .Params.week_num) "37" }};
+    const multiBook = resolveMultipleBooks && booksInReading.length > 1;
+    let currentBook = multiBook ? null : primaryBook;
+
     const shorthandRegex = /\((\d{1,3}:\d{1,3}(?:[–-]\d{1,3})?)\)/g;
     const skipTags = new Set(['A', 'BUTTON', 'CODE', 'PRE', 'SCRIPT', 'STYLE', 'TEXTAREA']);
 
-    const buildBlbSearchHref = (ref) => {
+    const buildBlbSearchHref = (book, ref) => {
         return 'https://www.blueletterbible.org/search/search.cfm?Criteria=' +
-            encodeURIComponent(primaryBook + ' ' + ref) + '&t=KJV';
+            encodeURIComponent(book + ' ' + ref) + '&t=KJV';
     };
 
     const walkerRoots = document.querySelectorAll('.embedded-content');
@@ -820,7 +910,21 @@ function enhanceWeeklyShorthandScriptures() {
             if (skipTags.has(parent.tagName)) return;
             if (parent.closest('a, button, [data-ref]')) return;
             const text = node.textContent;
-            if (!text || !shorthandRegex.test(text)) return;
+            if (!text) return;
+
+            // Track book mentions FIRST — a node with no shorthand can still name the book
+            // that governs the refs after it, so this must run before any early return.
+            const bookMarks = [];
+            bookScanRegex.lastIndex = 0;
+            let bookMatch;
+            while (resolveMultipleBooks && (bookMatch = bookScanRegex.exec(text))) {
+                bookMarks.push({ index: bookMatch.index, book: titleCase(bookMatch[1].toLowerCase()) });
+            }
+
+            if (!shorthandRegex.test(text)) {
+                if (bookMarks.length) currentBook = bookMarks[bookMarks.length - 1].book;
+                return;
+            }
             shorthandRegex.lastIndex = 0;
 
             const fragment = document.createDocumentFragment();
@@ -832,14 +936,23 @@ function enhanceWeeklyShorthandScriptures() {
                     fragment.appendChild(document.createTextNode(text.slice(lastIndex, match.index)));
                 }
 
-                const anchor = document.createElement('a');
-                anchor.className = 'scripture-ref';
-                anchor.href = buildBlbSearchHref(ref);
-                anchor.target = '_blank';
-                anchor.rel = 'noopener noreferrer';
-                anchor.dataset.ref = primaryBook + ' ' + ref;
-                anchor.textContent = fullMatch;
-                fragment.appendChild(anchor);
+                for (const mark of bookMarks) {
+                    if (mark.index < match.index) currentBook = mark.book;
+                }
+
+                if (currentBook) {
+                    const anchor = document.createElement('a');
+                    anchor.className = 'scripture-ref';
+                    anchor.href = buildBlbSearchHref(currentBook, ref);
+                    anchor.target = '_blank';
+                    anchor.rel = 'noopener noreferrer';
+                    anchor.dataset.ref = currentBook + ' ' + ref;
+                    anchor.textContent = fullMatch;
+                    fragment.appendChild(anchor);
+                } else {
+                    // Multi-book week, no book established yet: plain text, not a guess.
+                    fragment.appendChild(document.createTextNode(fullMatch));
+                }
 
                 lastIndex = match.index + fullMatch.length;
             }
@@ -847,6 +960,8 @@ function enhanceWeeklyShorthandScriptures() {
             if (lastIndex < text.length) {
                 fragment.appendChild(document.createTextNode(text.slice(lastIndex)));
             }
+
+            if (bookMarks.length) currentBook = bookMarks[bookMarks.length - 1].book;
 
             node.parentNode.replaceChild(fragment, node);
         });

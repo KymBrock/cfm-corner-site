@@ -892,6 +892,11 @@
             (code ? ' <span class="bp-strongs">(' + code + ')</span>' : '') +
             '</div>' +
             '<div class="bp-original ' + wordClass + '">' + original + '</div>' +
+            // THE MORPHOLOGICAL PARSE of this occurrence, when the page supplies one.
+            // Kymber, 2026-08-19: "Morphological Parse is Fact. It is part of the word
+            // structure itself. We should be able to use this." Additive and gated on a
+            // data-parse attribute nothing else sets, so every existing popup is unchanged.
+            (d.parse ? '<div class="bp-ref">' + escHtml(d.parse) + '</div>' : '') +
             // The nested sense outline when the entry has one, otherwise the flat
             // definition exactly as before. Additive: 11,641 entries take the old path.
             (sensesHtml(e.senses) || '<div class="bp-body">' + definition + '</div>') +

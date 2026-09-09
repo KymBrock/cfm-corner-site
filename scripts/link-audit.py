@@ -122,7 +122,25 @@ def audit_file(fpath, known_translits):
         issues.append(('BARE ROOT', m.group(), context))
 
     # 2. Bare scripture references
+    #
+    # ⚠ A VIDEO'S OWN TITLE IS A NAME, NOT A CITATION. Titles like
+    # "Mere Intelligence or True Wisdom? (Proverbs 1-7)" carry a scripture range
+    # because the publisher put it there; we do not get to rewrite someone's title,
+    # and linking inside it would be wrong. Added 2026-09-06 after a merge of new
+    # video popups turned a real title into a reported defect. This skips ONLY the
+    # value of a *_title JSON field — prose in "focus" and "topics" is still checked,
+    # which is where the genuine bare references live.
+    title_spans = [
+        (m.start(1), m.end(1))
+        for m in re.finditer(r'"[a-z_]*title"\s*:\s*"((?:[^"\\]|\\.)*)"', stripped)
+    ]
+
+    def _inside_title(pos):
+        return any(a <= pos < b for a, b in title_spans)
+
     for m in BARE_SCRIPTURE_RE.finditer(stripped):
+        if _inside_title(m.start()):
+            continue
         context = stripped[max(0, m.start()-50):m.end()+50].replace('\n', ' ').strip()
         issues.append(('BARE SCRIPTURE', m.group(), context))
 
@@ -215,16 +233,38 @@ def _check_cross_language_tables(content):
         if not has_latin:
             issues.append(('MISSING CROSS-LANG', ws_title, 'Table missing Latin row (no Logeion link)'))
 
-        # Check for English row with MW + 1828 links
-        has_1828 = bool(re.search(r'webstersdictionary1828\.com', cl_section))
-        has_mw = bool(re.search(r'merriam-webster\.com', cl_section))
-        if not has_mw or not has_1828:
-            missing = []
-            if not has_mw:
-                missing.append('Merriam-Webster')
-            if not has_1828:
-                missing.append("Webster's 1828")
-            issues.append(('MISSING CROSS-LANG', ws_title, f'Table missing English links: {", ".join(missing)}'))
+        # ── ENGLISH ROW: ALL THREE SOURCES. Fixed 2026-09-05 on Kymber's ruling.
+        #
+        # ⚠ THIS CHECK NEVER LOOKED AT ETYMONLINE. `etymonline` appeared ZERO times in
+        #   this file, so a table carrying Webster's 1828 AND Merriam-Webster passed the
+        #   English row as complete with Etymonline absent.
+        #
+        # ⚠⚠ CORRECTED 2026-09-06 BY MAX, and my original comment here was FALSE. I wrote
+        #   that "a table carrying ONLY Merriam-Webster passed." IT DID NOT — the old
+        #   condition was `if not has_mw or not has_1828`, which FAILS when EITHER is
+        #   absent. Tested: MW alone FAILED · 1828 alone FAILED · MW+1828 without
+        #   Etymonline PASSED. Max verified this against git HEAD before I did.
+        #   ⇒ THE ETYMONLINE GAP WAS REAL. The "MW alone" claim was mine and wrong, and
+        #     it sat in this file as a false statement about the code above it.
+        #   Week 37 measured 14 of 15 English links missing — the case she called out:
+        #
+        #       Kymber, 2026-09-05: "I'm not opposed to using all three... But just
+        #       including the Merriam-Webster and ignoring the other two is not okay."
+        #
+        # ⚠ AND IT WAS ENFORCING A RULE THE CANONICAL FILE DOES NOT SET.
+        #   INSTRUCTIONS_FOR_CLAUDE.md — which wins over every other document — lists
+        #   the etymological sources as Sefaria · WEBSTER'S 1828 · ETYMONLINE · Logeion.
+        #   Merriam-Webster is absent from it. This checker demanded MW and ignored
+        #   Etymonline: wrong in both directions, and confident enough to be relayed.
+        SOURCES = [("webstersdictionary1828\\.com", "Webster's 1828"),
+                   ("etymonline\\.com",             "Etymonline"),
+                   ("merriam-webster\\.com",        "Merriam-Webster")]
+        missing = [label for pat, label in SOURCES
+                   if not re.search(pat, cl_section)]
+        if missing:
+            issues.append(('MISSING CROSS-LANG', ws_title,
+                           f'Table missing English links: {", ".join(missing)} '
+                           f'({3 - len(missing)}/3 present)'))
 
     return issues
 
