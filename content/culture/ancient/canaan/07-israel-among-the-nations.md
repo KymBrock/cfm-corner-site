@@ -47,7 +47,7 @@ description: "From Joshua's crossing of the Jordan to the chaos of Judges — th
 
 <figure style="margin: 28px 0; text-align: center;">
 <img src="/images/culture/canaan/sourced/07-jericho-walls.jpg" alt="Excavated walls and tower of ancient Jericho (Tell es-Sultan)" class="lightbox-img" style="width: 100%; max-width: 450px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">The excavated tower and walls of ancient Jericho (Tell es-Sultan) &mdash; one of the oldest fortified settlements in the world and the first city Israel conquered. <em>Photo: Daniel Case, Wikimedia Commons, CC BY-SA 3.0.</em></figcaption>
+<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">The excavated tower and walls of ancient Jericho (Tell es-Sultan) &mdash; one of the oldest fortified settlements in the world and the first city Israel conquered. <em>Photo: Daniel Case, <a href="https://commons.wikimedia.org/wiki/File:Excavated_walls_of_Jericho.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>.</em></figcaption>
 </figure>
 
 <ul>

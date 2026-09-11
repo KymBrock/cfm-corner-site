@@ -39,7 +39,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <figure class="fg-figure" style="max-width:480px;">
   <img src="/images/culture/assyria/photos/lamassu-winged-bull.jpg" alt="An Assyrian lamassu, a winged human-headed bull" loading="lazy">
-  <figcaption>A <b>lamassu</b> &mdash; the winged, human-headed bull that guarded the gateways of every Assyrian palace, carved with five legs so it stands firm from the front and strides forward from the side. To the peoples Assyria ruled, this was the face of the empire. <span class="fg-credit">photo Sanjar Alimov, Wikimedia Commons (CC BY-SA 4.0)</span></figcaption>
+  <figcaption>A <b>lamassu</b> &mdash; the winged, human-headed bull that guarded the gateways of every Assyrian palace, carved with five legs so it stands firm from the front and strides forward from the side. To the peoples Assyria ruled, this was the face of the empire. <span class="fg-credit">photo Sanjar Alimov, <a href="https://commons.wikimedia.org/wiki/File:Assyrian_Winged_Bull.jpg">Wikimedia Commons</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>)</span></figcaption>
 </figure>
 
 <h3>The Rain That Made a Different Kingdom</h3>

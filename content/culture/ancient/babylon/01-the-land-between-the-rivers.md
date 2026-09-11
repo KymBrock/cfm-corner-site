@@ -96,7 +96,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <figure class="fg-figure">
   <img src="/images/culture/babylon/photos/palm-grove-babylon.jpg" alt="A date-palm grove beside the Euphrates at Babylon" loading="lazy">
-  <figcaption>A date-palm grove at <b>Babylon</b> on the Euphrates. The southern plain had almost no stone, metal, or building timber &mdash; but mud, reed, and the date palm were inexhaustible, and the palm alone gave food, fiber, and the one local timber a builder could count on. <span class="fg-credit">Palm grove at Babylon &middot; photo Hamody al-iraqi, Wikimedia Commons (CC BY-SA 4.0)</span></figcaption>
+  <figcaption>A date-palm grove at <b>Babylon</b> on the Euphrates. The southern plain had almost no stone, metal, or building timber &mdash; but mud, reed, and the date palm were inexhaustible, and the palm alone gave food, fiber, and the one local timber a builder could count on. <span class="fg-credit">Palm grove at Babylon &middot; photo Hamody al-iraqi, <a href="https://commons.wikimedia.org/wiki/File:Palm_grove_in_babylon.jpg">Wikimedia Commons</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>)</span></figcaption>
 </figure>
 
 <br>
@@ -156,7 +156,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <figure class="fg-figure">
   <img src="/images/culture/babylon/photos/ziggurat-of-ur.jpg" alt="The ziggurat of Ur" loading="lazy">
-  <figcaption>The ziggurat of Ur &mdash; the best-preserved of Mesopotamia&rsquo;s stepped temple-towers, and the kind of structure that rose at Babylon as Etemenanki. <span class="fg-credit">Hardnfast &middot; Wikimedia Commons (CC BY 3.0)</span></figcaption>
+  <figcaption>The ziggurat of Ur &mdash; the best-preserved of Mesopotamia&rsquo;s stepped temple-towers, and the kind of structure that rose at Babylon as Etemenanki. <span class="fg-credit">Hardnfast &middot; <a href="https://upload.wikimedia.org/wikipedia/commons/9/93/Ancient_ziggurat_at_Ali_Air_Base_Iraq_2005.jpg">Source</a> (<a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>)</span></figcaption>
 </figure>
 
 <p>In other words, Scripture&rsquo;s story is bracketed by this land between the rivers. A covenant family is called out of Mesopotamia at the beginning. A covenant nation is carried back into it at the end &mdash; so that the return from Babylon could become the Bible&rsquo;s great image of every redemption after it.</p>

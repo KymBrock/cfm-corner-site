@@ -129,7 +129,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <figure class="fg-figure" style="max-width:560px;">
   <img src="/images/culture/assyria/photos/black-obelisk-jehu.jpg" alt="The Jehu panel of the Black Obelisk of Shalmaneser III" loading="lazy">
-  <figcaption>The <b>Black Obelisk</b> of Shalmaneser III: the caption over the figure bowing to the dust reads &ldquo;<b>Jehu</b>, son of Omri&rdquo; (<a href="https://www.blueletterbible.org/kjv/2ki/9/1/" target="_blank" data-ref="2 Kings 9">2 Kings 9&ndash;10</a>) &mdash; the earliest surviving picture of a named Israelite, bringing tribute c. 841 BC. <a href="https://www.britishmuseum.org/collection/object/W_1848-1104-1" target="_blank">See it at the British Museum &rarr;</a> <span class="fg-credit">British Museum &middot; photo Osama S. M. Amin, Wikimedia Commons (CC BY-SA 4.0)</span></figcaption>
+  <figcaption>The <b>Black Obelisk</b> of Shalmaneser III: the caption over the figure bowing to the dust reads &ldquo;<b>Jehu</b>, son of Omri&rdquo; (<a href="https://www.blueletterbible.org/kjv/2ki/9/1/" target="_blank" data-ref="2 Kings 9">2 Kings 9&ndash;10</a>) &mdash; the earliest surviving picture of a named Israelite, bringing tribute c. 841 BC. <a href="https://www.britishmuseum.org/collection/object/W_1848-1104-1" target="_blank">See it at the British Museum &rarr;</a> <span class="fg-credit">British Museum &middot; photo Osama S. M. Amin, <a href="https://commons.wikimedia.org/wiki/File%3AJehu_of_the_House_of_Omri_bows_before_the_Assyrian_king_Shalmaneser_III%2C_The_Black_Obelisk..JPG">Wikimedia Commons</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>)</span></figcaption>
 </figure>
 
 <h4>Jehu on the Black Obelisk</h4>

@@ -94,7 +94,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <figure class="fg-figure" style="max-width:560px;">
   <img src="/images/culture/achaemenid/photos/darius-xerxes-treasury-relief.jpg" alt="Persepolis relief of Darius the Great enthroned with crown prince Xerxes behind" loading="lazy">
-  <figcaption>Darius the Great enthroned, the crown prince <b>Xerxes</b> standing behind him &mdash; a relief from the Persepolis treasury. Between them these two carry much of the story here: Darius sees the temple finished (<a href="https://www.blueletterbible.org/kjv/ezr/6/1/" target="_blank" data-ref="Ezra 6">Ezra 6</a>), and Xerxes is the <b>Ahasuerus</b> of Esther. <span class="fg-credit">Persepolis Treasury relief &middot; photo A. Davey, Wikimedia Commons (CC BY 2.0)</span></figcaption>
+  <figcaption>Darius the Great enthroned, the crown prince <b>Xerxes</b> standing behind him &mdash; a relief from the Persepolis treasury. Between them these two carry much of the story here: Darius sees the temple finished (<a href="https://www.blueletterbible.org/kjv/ezr/6/1/" target="_blank" data-ref="Ezra 6">Ezra 6</a>), and Xerxes is the <b>Ahasuerus</b> of Esther. <span class="fg-credit">Persepolis Treasury relief &middot; photo A. Davey, <a href="https://commons.wikimedia.org/wiki/File:The_Treasury_Reliefs_(Best_Viewed_in_%22Original%22_Size)_(4734172156).jpg">Wikimedia Commons</a> (<a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>)</span></figcaption>
 </figure>
 
 <h3>Visual Timeline: Persia and the Return</h3>

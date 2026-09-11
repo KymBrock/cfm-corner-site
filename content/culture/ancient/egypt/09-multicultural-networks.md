@@ -118,7 +118,7 @@ description: "Egypt was never isolated — Canaanites, Minoans, Nubians, Hittite
 
 <div style="max-width: 600px; margin: 20px auto;">
 <img class="lightbox-img" src="/images/culture/egypt/09-keftiu-rekhmire.jpg" alt="Keftiu (Minoan) tribute bearers in the Tomb of Rekhmire, Thebes" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-<p style="text-align: center; font-size: 0.85em; color: #666; margin-top: 8px;">Keftiu (Minoan) tribute bearers carrying distinctive vessels, from the Tomb of Rekhmire at Thebes (c. 1479&ndash;1425 BC). The Minoans are shown in their characteristic clothing and hairstyles, bearing gifts that include the bull-headed vessels (rhyta) typical of Minoan craftsmanship. <em>Facsimile by Nina de Garis Davies. Metropolitan Museum of Art, CC0.</em></p>
+<p style="text-align: center; font-size: 0.85em; color: #666; margin-top: 8px;">Keftiu (Minoan) tribute bearers carrying distinctive vessels, from the Tomb of Rekhmire at Thebes (c. 1479&ndash;1425 BC). The Minoans are shown in their characteristic clothing and hairstyles, bearing gifts that include the bull-headed vessels (rhyta) typical of Minoan craftsmanship. <em>Facsimile: Nina de Garis Davies &middot; <a href="https://www.metmuseum.org/art/collection/search/544611">Metropolitan Museum of Art</a> (Public domain; Met Open Access)</em></p>
 </div>
 
 <h4>The Collapse of Minoan Civilization</h4>

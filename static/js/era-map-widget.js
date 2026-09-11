@@ -48,6 +48,41 @@
   ];
 
   var BASE_PATH = '/images/culture/egypt/maps/';
+  var SOURCES = {
+  "ane-0001ad.svg": "https://commons.wikimedia.org/wiki/File:Alter_Orient_0001AD.svg",
+  "ane-0100ad.svg": "https://commons.wikimedia.org/wiki/File:Alter_Orient_0100AD.svg",
+  "ane-0100bc.svg": "https://commons.wikimedia.org/wiki/File:Alter_Orient_0100BC.svg",
+  "ane-0200ad.svg": "https://commons.wikimedia.org/wiki/File:Alter_Orient_0200AD.svg",
+  "ane-0200bc.svg": "https://commons.wikimedia.org/wiki/File:Alter_Orient_0200BC.svg",
+  "ane-0300ad.svg": "https://commons.wikimedia.org/wiki/File:Alter_Orient_0300AD.svg",
+  "ane-0300bc.svg": "https://commons.wikimedia.org/wiki/File:Alter_Orient_0300BC.svg",
+  "ane-0400ad.svg": "https://commons.wikimedia.org/wiki/File:Alter_Orient_0400AD.svg",
+  "ane-0400bc.svg": "https://commons.wikimedia.org/wiki/File:Alter_Orient_0400BC.svg",
+  "ane-0500ad.svg": "https://commons.wikimedia.org/wiki/File:Alter_Orient_0500AD.svg",
+  "ane-0500bc.svg": "https://commons.wikimedia.org/wiki/File:Alter_Orient_0500BC.svg",
+  "ane-0600ad.svg": "https://commons.wikimedia.org/wiki/File:Alter_Orient_0600AD.svg",
+  "ane-0600bc.svg": "https://commons.wikimedia.org/wiki/File:Alter_Orient_0600BC.svg",
+  "ane-0700bc.svg": "https://commons.wikimedia.org/wiki/File:Ancient_Near_East_0700BC.svg",
+  "ane-0800bc.svg": "https://commons.wikimedia.org/wiki/File:Ancient_Near_East_0800BC.svg",
+  "ane-0900bc.svg": "https://commons.wikimedia.org/wiki/File:Ancient_Near_East_0900BC.svg",
+  "ane-1000bc.svg": "https://commons.wikimedia.org/wiki/File:Ancient_Near_East_1000BC.svg",
+  "ane-1100bc.svg": "https://commons.wikimedia.org/wiki/File:Ancient_Near_East_1100BC.svg",
+  "ane-1200bc.svg": "https://commons.wikimedia.org/wiki/File:Ancient_Near_East_1200BC.svg",
+  "ane-1300bc.svg": "https://commons.wikimedia.org/wiki/File:Ancient_Near_East_1300BC.svg",
+  "ane-1400bc.svg": "https://commons.wikimedia.org/wiki/File:Ancient_Near_East_1400BC.svg",
+  "ane-1500bc.svg": "https://commons.wikimedia.org/wiki/File:Ancient_Near_East_1500BC.svg",
+  "ane-1600bc.svg": "https://commons.wikimedia.org/wiki/File:Ancient_Near_East_1600BC.svg",
+  "ane-1700bc.svg": "https://commons.wikimedia.org/wiki/File:Ancient_Near_East_1700BC.svg",
+  "ane-1800bc.svg": "https://commons.wikimedia.org/wiki/File:Ancient_Near_East_1800BC.svg",
+  "ane-1900bc.svg": "https://commons.wikimedia.org/wiki/File:Ancient_Near_East_1900BC.svg",
+  "ane-2000bc.svg": "https://commons.wikimedia.org/wiki/File:Ancient_Near_East_2000BC.svg",
+  "ane-2100bc.svg": "https://commons.wikimedia.org/wiki/File:Ancient_Near_East_2100BC.svg",
+  "ane-2200bc.svg": "https://commons.wikimedia.org/wiki/File:Ancient_Near_East_2200BC.svg",
+  "ane-2300bc.svg": "https://commons.wikimedia.org/wiki/File:Ancient_Near_East_2300BC.svg",
+  "ane-2400bc.svg": "https://commons.wikimedia.org/wiki/File:Ancient_Near_East_2400BC.svg",
+  "ane-2500bc.svg": "https://commons.wikimedia.org/wiki/File:Ancient_Near_East_2500BC.svg",
+  "ane-2600bc.svg": "https://commons.wikimedia.org/wiki/File:Ancient_Near_East_2600BC.svg"
+};
 
   function findIndex(startEra) {
     for (var i = 0; i < ERAS.length; i++) {
@@ -90,7 +125,7 @@
     html += '<p class="era-map-desc"></p>';
 
     // Attribution
-    html += '<p class="era-map-attribution">Maps by <a href="https://commons.wikimedia.org/wiki/User:Enyavar" target="_blank">Enyavar</a> \u00b7 <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> \u00b7 Wikimedia Commons</p>';
+    html += '<p class="era-map-attribution">Maps by <a href="https://commons.wikimedia.org/wiki/User:Enyavar" target="_blank">Enyavar</a> \u00b7 <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> \u00b7 <a class="era-map-source" target="_blank">Wikimedia Commons</a></p>';
 
     html += '</div>';
     container.innerHTML = html;
@@ -105,6 +140,7 @@
     function update() {
       var era = ERAS[currentIndex];
       img.src = BASE_PATH + era.file;
+      container.querySelector('.era-map-source').href = SOURCES[era.file];
       img.alt = 'Ancient Near East \u2014 ' + era.label;
       title.textContent = era.label;
       desc.textContent = era.desc;

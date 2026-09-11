@@ -36,7 +36,7 @@ description: "Sea Peoples, the Pentapolis, iron technology, and the rivals who s
 
 <figure style="margin: 28px 0; text-align: center;">
 <img src="/images/culture/canaan/sourced/06-sea-peoples-relief.jpg" alt="Drawing of the Medinet Habu relief showing Ramesses III defeating the Sea Peoples in a naval battle" class="lightbox-img" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">The naval battle against the Sea Peoples, from the walls of Ramesses III&rsquo;s mortuary temple at Medinet Habu (c. 1178 BC). Note the distinctive feathered headdresses of the Sea Peoples warriors. <em>Wikimedia Commons, PD.</em></figcaption>
+<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">The naval battle against the Sea Peoples, from the walls of Ramesses III&rsquo;s mortuary temple at Medinet Habu (c. 1178 BC). Note the distinctive feathered headdresses of the Sea Peoples warriors. <em>Cropped reproduction after Alfred Bollacher, The Epigraphic Survey, <a href="https://isac.uchicago.edu/research/publications/oip/medinet-habu-volume-i-earlier-historical-records-ramses-iii">Medinet Habu I (1930), plate 37</a>; <a href="https://commons.wikimedia.org/wiki/File:Medinet_Habu_Ramses_III._Tempel_Nordostwand_Abzeichnung_01.jpg">Wikimedia Commons</a>.</em></figcaption>
 </figure>
 
 <p>Ramesses III defeated the Sea Peoples in both a land battle in southern Canaan and a famous naval battle in the Nile Delta. But &ldquo;defeated&rdquo; is relative &mdash; Egypt could not push them back. Instead, the <strong>Peleset</strong> (Egyptian: <em>P-r-s-t</em>) were settled &mdash; whether by Egyptian policy or their own force &mdash; along the southern coastal plain of Canaan.</p>
@@ -56,7 +56,7 @@ description: "Sea Peoples, the Pentapolis, iron technology, and the rivals who s
 
 <figure style="margin: 28px 0; text-align: center;">
 <img src="/images/culture/canaan/sourced/06-sea-peoples-map.jpg" alt="Map of Sea Peoples invasion routes across the Aegean and Eastern Mediterranean" class="lightbox-img" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">Sea Peoples migration routes at the end of the Late Bronze Age. The Peleset (Philistines) settled on the southern coast of Canaan. <em>Map: Kaniewski et al., Wikimedia Commons, CC BY 2.5.</em></figcaption>
+<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">Sea Peoples migration routes at the end of the Late Bronze Age. The Peleset (Philistines) settled on the southern coast of Canaan. <em>Map: David Kaniewski, Elise Van Campo, Karel Van Lerberghe, Tom Boiy, Klaas Vansteenhuyse, Greta Jans, Karin Nys, Harvey Weiss &middot; <a href="https://commons.wikimedia.org/wiki/File:Map_of_the_Sea_People_invasions_in_the_Aegean_Sea_and_Eastern_Mediterranean_at_the_end_of_the_Late_Bronze_Age.jpg">Wikimedia Commons</a> (<a href="https://creativecommons.org/licenses/by/2.5">CC BY 2.5</a>)</em></figcaption>
 </figure>
 
 <p>Archaeology confirms the connection. Early Philistine pottery at Ekron, Ashkelon, and Ashdod is strikingly similar to <strong>Mycenaean IIIC:1b</strong> ware &mdash; a locally made version of Aegean pottery styles. Philistine dietary remains include pig bones in proportions unusual for Canaan but typical of the Aegean. Architectural features, including hearths and cultic installations, parallel Aegean models. DNA analysis from the Philistine cemetery at Ashkelon (published 2019) confirmed significant European-derived ancestry in the early Philistine population, with subsequent generations showing increasing local genetic admixture.</p>
@@ -110,12 +110,12 @@ description: "Sea Peoples, the Pentapolis, iron technology, and the rivals who s
 
 <figure style="margin: 28px 0; text-align: center;">
 <img src="/images/culture/canaan/sourced/06-pentapolis-map.jpg" alt="Map of the Philistine Pentapolis showing Gaza, Ashkelon, Ashdod, Ekron, and Gath" class="lightbox-img" style="width: 100%; max-width: 500px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">The five cities of the Philistine Pentapolis along the southern coastal plain. <em>Wikimedia Commons, CC0.</em></figcaption>
+<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">The five cities of the Philistine Pentapolis along the southern coastal plain. <em>Cush · <a href="https://commons.wikimedia.org/wiki/File:Philistines_pentapolis.jpg">Wikimedia Commons</a> · <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></em></figcaption>
 </figure>
 
 <figure style="margin: 28px 0; text-align: center;">
 <img src="/images/culture/canaan/sourced/06-tell-es-safi-gath.jpg" alt="Panoramic view of Tell es-Safi, the site of ancient Gath" class="lightbox-img" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">Tell es-Safi (Tel Zafit) &mdash; the site of ancient Gath, Goliath&rsquo;s city and the largest Philistine city yet discovered. <em>Photo: McKaby, Wikimedia Commons, CC0.</em></figcaption>
+<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">Tell es-Safi (Tel Zafit) &mdash; the site of ancient Gath, Goliath&rsquo;s city and the largest Philistine city yet discovered. <em>McKaby · <a href="https://commons.wikimedia.org/wiki/File:Tel_Zafit_1.jpg">Wikimedia Commons</a> · <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></em></figcaption>
 </figure>
 
 <p>The Pentapolis controlled the southern coastal plain and the western Shephelah &mdash; precisely the lowland areas that Israel could not take during the incomplete conquest (see <a href="/culture/ancient/canaan/03-the-canaanite-peoples/">Section 03</a>). The boundary between Philistine and Israelite territory ran through the Shephelah foothills &mdash; a contested frontier that produced many of the Bible&rsquo;s most famous narratives.</p>
@@ -219,11 +219,11 @@ description: "Sea Peoples, the Pentapolis, iron technology, and the rivals who s
 <div style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin: 28px 0;">
 <figure style="flex: 1; min-width: 240px; max-width: 48%; text-align: center; margin: 0;">
 <img src="/images/culture/canaan/sourced/06-philistine-pottery.jpg" alt="Philistine painted pottery from the 12th-11th century BC, Israel Museum" class="lightbox-img" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">Philistine painted pottery, 12th&ndash;11th century BC. <em>Gary Todd, Israel Museum. CC0.</em></figcaption>
+<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">Philistine painted pottery, 12th&ndash;11th century BC. <em>Gary Todd, Israel Museum. <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a>. &middot; <a href="https://commons.wikimedia.org/wiki/File:Philistine_Painted_Pottery,_12th-11th_Century_BC_(41406615550).jpg">Source</a></em></figcaption>
 </figure>
 <figure style="flex: 1; min-width: 240px; max-width: 48%; text-align: center; margin: 0;">
 <img src="/images/culture/canaan/sourced/06-philistine-beer-jug.jpg" alt="Philistine beer jug from Tel Eton with birds, fish, and geometric motifs" class="lightbox-img" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">Philistine beer jug from Tel Eton, 12th century BC &mdash; birds, fish, and geometric motifs in the distinctive bichrome style. <em>Photo: Hanay, CC BY-SA 3.0.</em></figcaption>
+<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">Philistine beer jug from Tel Eton, 12th century BC &mdash; birds, fish, and geometric motifs in the distinctive bichrome style. <em>Photo: Hanay, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>. &middot; <a href="https://commons.wikimedia.org/wiki/File:Philistine_pottery_beer_Jug.JPG">Source</a></em></figcaption>
 </figure>
 </div>
 

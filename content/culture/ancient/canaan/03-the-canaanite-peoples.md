@@ -192,7 +192,7 @@ description: "The 'seven nations' of Deuteronomy 7 — city-states, social struc
 
 <figure style="margin: 28px 0; text-align: center;">
 <img src="/images/culture/canaan/sourced/03-hazor-aerial.jpg" alt="Aerial view of Tel Hazor, the largest Canaanite city — UNESCO World Heritage Site" class="lightbox-img" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">Aerial view of Tel Hazor &mdash; the largest Canaanite city, covering approximately 200 acres. <a href="https://www.blueletterbible.org/kjv/jos/11/10/" target="_blank" data-ref="Joshua 11:10">Joshua 11:10</a> calls it &ldquo;the head of all those kingdoms.&rdquo; UNESCO World Heritage Site. <em>Photo: Abraham Graicer, Wikimedia Commons, CC BY-SA 4.0.</em></figcaption>
+<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">Aerial view of Tel Hazor &mdash; the largest Canaanite city, covering approximately 200 acres. <a href="https://www.blueletterbible.org/kjv/jos/11/10/" target="_blank" data-ref="Joshua 11:10">Joshua 11:10</a> calls it &ldquo;the head of all those kingdoms.&rdquo; UNESCO World Heritage Site. <em>Photo: Abraham Graicer, <a href="https://commons.wikimedia.org/wiki/File:TEL_HATZOR_AERIAL.JPG">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>.</em></figcaption>
 </figure>
 
 <ul>
