@@ -56,7 +56,7 @@ description: "El, Baal, Asherah, Anat, Mot, Dagon — the Canaanite pantheon rev
 
 <figure style="margin: 28px 0; text-align: center;">
 <img src="/images/culture/canaan/sourced/04-baal-stele.jpg" alt="Baal with Thunderbolt — limestone stele from Ugarit, 15th century BC, Louvre Museum" class="lightbox-img" style="width: 100%; max-width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">Baal with Thunderbolt &mdash; limestone stele from <a href="https://www.worldhistory.org/ugarit/" target="_blank">Ugarit</a>, 15th century BC. The storm god raises his arm to strike, embodying his role as lord of rain and fertility. Louvre Museum (AO 15775). <em>Photo: Marie-Lan Nguyen, Wikimedia Commons, CC0.</em></figcaption>
+<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">Baal with Thunderbolt &mdash; limestone stele from <a href="https://www.worldhistory.org/ugarit/" target="_blank">Ugarit</a>, 15th century BC. The storm god raises his arm to strike, embodying his role as lord of rain and fertility. Louvre Museum (AO 15775). <em>Photo: Marie-Lan Nguyen, <a href="https://commons.wikimedia.org/wiki/File:Baal_thunderbolt_Louvre_AO15775.jpg">Wikimedia Commons</a>, Public domain.</em></figcaption>
 </figure>
 
 <table style="width:100%; border-collapse: collapse; margin: 24px 0;">

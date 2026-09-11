@@ -107,7 +107,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <figure class="fg-figure">
   <img src="/images/culture/babylon/photos/tel-megiddo.jpg" alt="The ruins of Tel Megiddo, Israel" loading="lazy">
-  <figcaption>Tel Megiddo &mdash; the strategic mound guarding the pass where Josiah rode out to stop Necho in 609 BC, and was killed. Its Greek name, Armageddon, became scripture&rsquo;s word for the last battle. <span class="fg-credit">Photo &copy; Anagoria, Wikimedia Commons (CC BY 3.0)</span></figcaption>
+  <figcaption>Tel Megiddo &mdash; the strategic mound guarding the pass where Josiah rode out to stop Necho in 609 BC, and was killed. Its Greek name, Armageddon, became scripture&rsquo;s word for the last battle. <span class="fg-credit">Photo &copy; Anagoria, <a href="https://commons.wikimedia.org/wiki/File:20191028_120303_Tel_Megiddo_Israel_anagoria.JPG">Wikimedia Commons</a> (<a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>)</span></figcaption>
 </figure>
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">

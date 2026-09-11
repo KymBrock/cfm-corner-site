@@ -277,7 +277,7 @@ description: "From Abraham's Middle Bronze Age to the Iron Age dawn — the empi
 <img src="/images/culture/canaan/sourced/02-sumerian-metrology.svg" alt="Sumerian Metrology — the nested hierarchy of base-60 timekeeping from the Ur III Calendar of Nippur" class="lightbox-img" style="width: 100%; height: auto; background: white;">
 <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 80px; background: linear-gradient(transparent, white); pointer-events: none;"></div>
 </div>
-<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">Sumerian Metrology &mdash; the Ur III Calendar of Nippur showing the nested base-60 hierarchy: the 19-year Great Year (Metonic cycle) down through year, month, day, watch, and geš. Every level divides into 360 units &mdash; the same mathematics that organized time also governed astronomy, geometry, and (as scholars have noted) musical intervals. <strong>Click to view full diagram.</strong> <em>Diagram: Lamassu Design, Wikimedia Commons, CC BY-SA 3.0.</em></figcaption>
+<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">Sumerian Metrology &mdash; the Ur III Calendar of Nippur showing the nested base-60 hierarchy: the 19-year Great Year (Metonic cycle) down through year, month, day, watch, and geš. Every level divides into 360 units &mdash; the same mathematics that organized time also governed astronomy, geometry, and (as scholars have noted) musical intervals. <strong>Click to view full diagram.</strong> <em>Diagram: Lamassu Design, <a href="https://commons.wikimedia.org/wiki/File:Sumerian_metrology.svg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>.</em></figcaption>
 </figure>
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
@@ -378,22 +378,22 @@ description: "From Abraham's Middle Bronze Age to the Iron Age dawn — the empi
     {
       src: '/images/culture/canaan/sourced/02-abrahams-journey.svg',
       bg: '#ffffff',
-      caption: '<strong>Abraham\u2019s Journey to Canaan</strong> \u2014 from Ur through Haran and south into the promised land. The northern Ur hypothesis would shorten the first leg dramatically, placing Abraham\u2019s origin near Haran itself. <em>Map: DEGA MD, Wikimedia Commons, CC BY-SA 4.0.</em>'
+      caption: '<strong>Abraham\u2019s Journey to Canaan</strong> \u2014 from Ur through Haran and south into the promised land. The northern Ur hypothesis would shorten the first leg dramatically, placing Abraham\u2019s origin near Haran itself. <em>DEGA MD; topographic map by Sémhur · <a href="https://commons.wikimedia.org/wiki/File:Abraham%27s_Journey_(en).svg">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></em>'
     },
     {
       src: '/images/culture/canaan/sourced/02-mesopotamia-syria-map.svg',
       bg: '#ffffff',
-      caption: '<strong>Mesopotamia &amp; Syria</strong> \u2014 showing the locations of Ur (far south), Nuzi (east of the Tigris), and Mari (middle Euphrates). All three sites produced archives confirming details of the patriarchal era. <em>Map: Goran tek-en, Wikimedia Commons, CC BY-SA 4.0.</em>'
+      caption: '<strong>Mesopotamia &amp; Syria</strong> \u2014 showing the locations of Ur (far south), Nuzi (east of the Tigris), and Mari (middle Euphrates). All three sites produced archives confirming details of the patriarchal era. <em>Goran tek-en · <a href="https://commons.wikimedia.org/wiki/File:N-Mesopotamia_and_Syria_english.svg">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></em>'
     },
     {
       src: '/images/culture/canaan/sourced/02-syria-2mil-map.jpg',
       bg: '#ffffff',
-      caption: '<strong>Syria in the 2nd Millennium BC</strong> \u2014 showing Harran (the Haran of Genesis), Ebla (archives with possible \u201cOlishem\u201d connection), and Mari. These northern sites cluster in the region where the alternative identification places Abraham\u2019s origin. <em>Map: Zunkir, Wikimedia Commons, PD.</em>'
+      caption: '<strong>Syria in the 2nd Millennium BC</strong> \u2014 showing Harran (the Haran of Genesis), Ebla (archives with possible \u201cOlishem\u201d connection), and Mari. These northern sites cluster in the region where the alternative identification places Abraham\u2019s origin. <em>Map: Zunkir (assumed by Commons, not asserted) &middot; <a href="https://commons.wikimedia.org/wiki/File:Syria2mil.JPG">Wikimedia Commons</a> (Public domain)</em>'
     },
     {
       src: '/images/culture/canaan/sourced/02-merneptah-stele.jpg',
       bg: '#2a2a2a',
-      caption: '<strong>The Merneptah Stele</strong> (c. 1208 BC), Egyptian Museum, Cairo \u2014 the earliest known reference to \u201cIsrael\u201d outside the Bible. The hieroglyphic determinative identifies Israel as a <em>people</em>, not a place. <em>Photo: Webscribe, Wikimedia Commons, CC BY-SA 3.0.</em>'
+      caption: '<strong>The Merneptah Stele</strong> (c. 1208 BC), Egyptian Museum, Cairo \u2014 the earliest known reference to \u201cIsrael\u201d outside the Bible. The hieroglyphic determinative identifies Israel as a <em>people</em>, not a place. <em>Webscribe · <a href="https://commons.wikimedia.org/wiki/File:Merenptah_Israel_Stele_Cairo.jpg">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></em>'
     }
   ];
 
@@ -505,7 +505,7 @@ description: "From Abraham's Middle Bronze Age to the Iron Age dawn — the empi
     {
       src: '/images/culture/canaan/sourced/02-minoan-crete-map.svg',
       bg: '#ffffff',
-      caption: '<strong>Minoan Crete</strong> \u2014 the island civilization that dominated Mediterranean maritime trade from c. 2000\u20131450 BC. Palace centers at Knossos, Phaistos, and Malia coordinated a trading network reaching Egypt, the Levant, and the Aegean. <em>Map: Bibi Saint-Pol, Wikimedia Commons, CC BY-SA 3.0.</em>'
+      caption: '<strong>Minoan Crete</strong> \u2014 the island civilization that dominated Mediterranean maritime trade from c. 2000\u20131450 BC. Palace centers at Knossos, Phaistos, and Malia coordinated a trading network reaching Egypt, the Levant, and the Aegean. <em>Bibi Saint-Pol · <a href="https://commons.wikimedia.org/wiki/File:Map_Minoan_Crete-en.svg">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></em>'
     },
     {
       src: '/images/culture/canaan/sourced/02-minoan-trade-routes-painting.webp',
@@ -525,22 +525,22 @@ description: "From Abraham's Middle Bronze Age to the Iron Age dawn — the empi
     {
       src: '/images/culture/canaan/sourced/02-cretans-bringing-gifts.jpg',
       bg: '#2a2a2a',
-      caption: '<strong>Cretans Bringing Gifts to Egypt</strong> \u2014 Minoan (Keftiu) tribute bearers depicted in the Tomb of Rekhmire (TT100), Thebes, c. 1479\u20131425 BC. The figures wear distinctive Minoan kilts and carry Aegean goods, documenting direct diplomatic contact between Crete and Egypt. <em>Facsimile: Nina M. Davies, Metropolitan Museum of Art. CC0.</em>'
+      caption: '<strong>Cretans Bringing Gifts to Egypt</strong> \u2014 Minoan (Keftiu) tribute bearers depicted in the Tomb of Rekhmire (TT100), Thebes, c. 1479\u20131425 BC. The figures wear distinctive Minoan kilts and carry Aegean goods, documenting direct diplomatic contact between Crete and Egypt. <em>Facsimile: Nina de Garis Davies, Metropolitan Museum of Art · <a href="https://commons.wikimedia.org/wiki/File:Cretans_Bringing_Gifts,_Tomb_of_Rekhmire_MET_DT10883.jpg">Wikimedia Commons</a> · <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a></em>'
     },
     {
       src: '/images/culture/canaan/sourced/02-keftiu-tribute.jpg',
       bg: '#2a2a2a',
-      caption: '<strong>Gifts from the Keftiu</strong> \u2014 Minoan goods and vessels depicted in the Tomb of Rekhmire, including bull-headed <em>rhyta</em> (ritual pouring vessels) characteristic of Aegean craftsmanship. These objects have been found archaeologically at sites across the Levant. <em>Facsimile: Nina M. Davies, Metropolitan Museum of Art. CC0.</em>'
+      caption: '<strong>Gifts from the Keftiu</strong> \u2014 Minoan goods and vessels depicted in the Tomb of Rekhmire, including bull-headed <em>rhyta</em> (ritual pouring vessels) characteristic of Aegean craftsmanship. These objects have been found archaeologically at sites across the Levant. <em>Facsimile: Nina de Garis Davies &middot; <a href="https://www.metmuseum.org/art/collection/search/544611">Metropolitan Museum of Art</a> (Public domain; Met Open Access)</em>'
     },
     {
       src: '/images/culture/canaan/sourced/02-ladies-in-blue.jpg',
       bg: '#2a2a2a',
-      caption: '<strong>\u201cLadies in Blue\u201d Fresco</strong> \u2014 from the Palace of Knossos, c. 1600\u20131450 BC. Minoan women in elaborate dress with distinctive open bodices, tiered skirts, and jewelry. Minoan fashion and artistic conventions influenced cultures across the eastern Mediterranean. Heraklion Archaeological Museum. <em>Photo: Carole Raddato, CC BY-SA 2.0.</em>'
+      caption: '<strong>\u201cLadies in Blue\u201d Fresco</strong> \u2014 from the Palace of Knossos, c. 1600\u20131450 BC. Minoan women in elaborate dress with distinctive open bodices, tiered skirts, and jewelry. Minoan fashion and artistic conventions influenced cultures across the eastern Mediterranean. Heraklion Archaeological Museum. <em>Carole Raddato · <a href="https://commons.wikimedia.org/wiki/File:The_%27Ladies_in_Blue%27_fresco,_from_Knossos,_1600-1450_BC,_Heraklion_Archaeological_Museum.jpg">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></em>'
     },
     {
       src: '/images/culture/canaan/sourced/02-bull-leaping-fresco.jpg',
       bg: '#2a2a2a',
-      caption: '<strong>Bull-Leaping Fresco</strong> \u2014 from the Palace of Knossos, c. 1600\u20131450 BC. Acrobats vault over a charging bull in one of the most iconic images of Minoan civilization. The bull cult was central to Minoan religion and culture \u2014 the same tradition echoed in the Canaanite worship of the bull-associated god El. Heraklion Archaeological Museum. <em>Photo: Gleb Simonov, CC0.</em>'
+      caption: '<strong>Bull-Leaping Fresco</strong> \u2014 from the Palace of Knossos, c. 1600\u20131450 BC. Acrobats vault over a charging bull in one of the most iconic images of Minoan civilization. The bull cult was central to Minoan religion and culture \u2014 the same tradition echoed in the Canaanite worship of the bull-associated god El. Heraklion Archaeological Museum. <em>Gleb Simonov · <a href="https://commons.wikimedia.org/wiki/File:Knossos_bull_leaping_fresco.jpg">Wikimedia Commons</a> · <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a></em>'
     }
   ];
 

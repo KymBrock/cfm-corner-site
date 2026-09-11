@@ -124,7 +124,7 @@ description: "The Amarna Letters, the Habiru question, Egyptian vassalage in Can
 
 <figure style="margin: 28px 0; text-align: center;">
 <img src="/images/culture/canaan/sourced/09-abdi-heba-letter.jpg" alt="Amarna letter from Abdi-Heba of Jerusalem to Pharaoh Amenhotep III, cuneiform on clay tablet" class="lightbox-img" style="width: 100%; max-width: 400px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">An Amarna letter from Abdi-Heba of Jerusalem to Pharaoh Amenhotep III, 14th century BC. Akkadian cuneiform on clay. Vorderasiatisches Museum, Berlin. <em>Photo: Osama Shukir Muhammed Amin, Wikimedia Commons, CC BY-SA 4.0.</em></figcaption>
+<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">An Amarna letter from Abdi-Heba of Jerusalem to Pharaoh Amenhotep III, 14th century BC. Akkadian cuneiform on clay. Vorderasiatisches Museum, Berlin. <em>Photo: Osama Shukir Muhammed Amin, <a href="https://commons.wikimedia.org/wiki/File:One_of_the_Amarna_letters._A_letter_from_Abdi-Heba_of_Jerusalem_to_the_Egyptian_Pharaoh_Amenhotep_III._1st_half_of_the_14th_century_BCE._From_Tell_el-Amarna,_Egypt._Vorderasiatisches_Museum,_Berlin.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>.</em></figcaption>
 </figure>
 
 <p>Abdi-Heba&rsquo;s name is itself revealing: it combines a Semitic element (<a href="https://www.blueletterbible.org/lexicon/h5660/kjv/wlc/0-1/" target="_blank" data-lexicon="Abdi = &quot;servant of Jehovah&quot;a Merarite Levite and ancestor of Ethan the singera Merarite Levite, father of Kish, in th..." data-strongs="H5660" data-translit="ʿaḇdî" data-original="עַבְדִּי" data-lang="hebrew" data-verse=""><em>Abdi</em></a> &mdash; &ldquo;servant of&rdquo;) with a Hurrian deity name (<em>Heba</em> &mdash; the Hurrian goddess Hepat). This mixed-language name reflects the cosmopolitan character of Canaanite cities &mdash; a Semitic ruler bearing a name honoring a non-Semitic goddess in a city that would later become the center of YHWH worship.</p>
@@ -180,7 +180,7 @@ description: "The Amarna Letters, the Habiru question, Egyptian vassalage in Can
 
 <figure style="margin: 28px 0; text-align: center;">
 <img src="/images/culture/canaan/sourced/09-habiru-activity-map.svg" alt="Map showing areas of Habiru activity as documented in the Amarna Letters" class="lightbox-img" style="width: 100%; max-width: 600px; height: auto; background: white; padding: 8px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">Areas of <em>Habiru</em> activity as documented in the Amarna Letters (LBIIA period, c. 14th century BC). <em>Map: PioGal, Wikimedia Commons, CC BY-SA 3.0.</em></figcaption>
+<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">Areas of <em>Habiru</em> activity as documented in the Amarna Letters (LBIIA period, c. 14th century BC). <em>Map: PioGal; components: © Sémhur / Wikimedia Commons / <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>; © Sweet Publishing / CC BY-SA 3.0; Metropolitan Museum of Art / CC0 &middot; <a href="https://commons.wikimedia.org/wiki/File:AreasOfHabiruActivityInAmarnaLettersLBIIA.svg">Wikimedia Commons</a> (CC BY-SA 3.0)</em></figcaption>
 </figure>
 
 <br>
@@ -199,7 +199,7 @@ description: "The Amarna Letters, the Habiru question, Egyptian vassalage in Can
 
 <figure style="margin: 28px 0; text-align: center;">
 <img src="/images/culture/canaan/sourced/09-canaanite-city-states-map.svg" alt="Map of the major Canaanite city-states in the Bronze Age" class="lightbox-img" style="width: 100%; max-width: 450px; height: auto; background: white; padding: 8px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">The major Canaanite city-states in the Bronze Age &mdash; each an independent polity with its own king, army, and foreign policy. <em>Map: IYY, Wikimedia Commons, CC BY-SA 4.0.</em></figcaption>
+<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">The major Canaanite city-states in the Bronze Age &mdash; each an independent polity with its own king, army, and foreign policy. <em>Map: IYY, <a href="https://commons.wikimedia.org/wiki/File:Canaanite_City_States_In_The_Bronze_Age.svg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>.</em></figcaption>
 </figure>
 
 <h4>Chronic Warfare</h4>

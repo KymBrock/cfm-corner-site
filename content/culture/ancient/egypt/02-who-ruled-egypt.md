@@ -167,7 +167,7 @@ description: "From native pharaohs to Hyksos invaders to Persian conquerors to G
 
 <div style="max-width: 400px; margin: 20px auto;">
 <img src="/images/culture/egypt/01-merneptah-stele.jpg" alt="Merneptah Stele containing the earliest known reference to Israel" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-<p style="text-align: center; font-size: 0.85em; color: #666; margin-top: 8px;">The Merneptah Stele (c. 1208 BC) &mdash; the earliest known reference to "Israel" outside the Bible. Cairo, NMEC. <em>Photo: Wikimedia Commons, CC-BY-SA 3.0.</em></p>
+<p style="text-align: center; font-size: 0.85em; color: #666; margin-top: 8px;">The Merneptah Stele (c. 1208 BC) &mdash; the earliest known reference to "Israel" outside the Bible. Cairo, NMEC. <em>Webscribe · <a href="https://commons.wikimedia.org/wiki/File:Merenptah_Israel_Stele_Cairo.jpg">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></em></p>
 </div>
 
 <p><strong>Ramesses III</strong> (c. 1186&ndash;1155 BC, 20th Dynasty) &mdash; The last great warrior pharaoh. Successfully repelled invasions by the <strong><a href="https://www.worldhistory.org/Sea_Peoples/" target="_blank">Sea Peoples</a></strong> (depicted in dramatic reliefs at <strong>Medinet Habu</strong>) and Libyan tribes, but Egypt was weakening. His assassination by a harem conspiracy is documented in the Judicial Papyrus of Turin. After his death, the New Kingdom entered a long decline.</p>

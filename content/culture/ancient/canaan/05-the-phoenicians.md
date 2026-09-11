@@ -62,12 +62,12 @@ description: "Tyre, Sidon, the alphabet, and the sea traders who connected the a
 
 <figure style="margin: 28px 0; text-align: center;">
 <img src="/images/culture/canaan/sourced/05-phoenicia-map.svg" alt="Map of Phoenicia showing the major city-states along the Levantine coast" class="lightbox-img" style="width: 100%; max-width: 500px; height: auto; border-radius: 8px;">
-<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">The Phoenician city-states along the Levantine coast. <em>Map: Kordas, Wikimedia Commons, CC BY 3.0.</em></figcaption>
+<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">The Phoenician city-states along the Levantine coast. <em>Kordas, based on work by Alvaro · <a href="https://commons.wikimedia.org/wiki/File:Phoenicia_map-en.svg">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></em></figcaption>
 </figure>
 
 <figure style="margin: 28px 0; text-align: center;">
 <img src="/images/culture/canaan/sourced/05-byblos-ruins.jpg" alt="Ancient ruins of the Phoenician city of Byblos, Lebanon" class="lightbox-img" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">Ruins of ancient Byblos &mdash; one of the oldest continuously inhabited cities in the world, with occupation dating to at least 3200 BC and Egyptian trade connections reaching back to the Old Kingdom. Byblos supplied the cedars of Lebanon that built Egypt&rsquo;s pyramids and temples. <em>Photo: Vyacheslav Argenberg, Wikimedia Commons, CC BY 4.0.</em></figcaption>
+<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">Ruins of ancient Byblos &mdash; one of the oldest continuously inhabited cities in the world, with occupation dating to at least 3200 BC and Egyptian trade connections reaching back to the Old Kingdom. Byblos supplied the cedars of Lebanon that built Egypt&rsquo;s pyramids and temples. <em>Photo: Vyacheslav Argenberg, <a href="https://commons.wikimedia.org/wiki/File:Byblos_ancient_ruins,_old_Phoenician_city_of_Byblos,_Lebanon.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>.</em></figcaption>
 </figure>
 
 <br>
@@ -90,7 +90,7 @@ description: "Tyre, Sidon, the alphabet, and the sea traders who connected the a
 
 <figure style="margin: 28px 0; text-align: center;">
 <img src="/images/culture/canaan/sourced/05-alphabet-5lang.svg" alt="Phoenician alphabet compared to Latin, Greek, Hebrew, and Arabic" class="lightbox-img" style="width: 100%; max-width: 400px; height: auto; background: white; padding: 12px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">The Phoenician alphabet (center) compared to Latin, Greek, Hebrew, and Arabic &mdash; all descended from the same source. <em>Wikimedia Commons, PD.</em></figcaption>
+<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">The Phoenician alphabet (center) compared to Latin, Greek, Hebrew, and Arabic &mdash; all descended from the same source. <em>Zander Schubert · <a href="https://commons.wikimedia.org/wiki/File:Ph%C3%B6nizisch-5Sprachen.svg">Wikimedia Commons</a> · Public domain</em></figcaption>
 </figure>
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
@@ -122,7 +122,7 @@ description: "Tyre, Sidon, the alphabet, and the sea traders who connected the a
 
 <figure style="margin: 28px 0; text-align: center;">
 <img src="/images/culture/canaan/sourced/05-murex-shell.jpg" alt="Bolinus brandaris — the purple dye murex snail" class="lightbox-img" style="width: 100%; max-width: 350px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;"><em>Bolinus brandaris</em> &mdash; the murex snail whose hypobranchial gland produced the famous Tyrian purple dye. <em>Photo: James St. John, Wikimedia Commons, CC BY 2.0.</em></figcaption>
+<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;"><em>Bolinus brandaris</em> &mdash; the murex snail whose hypobranchial gland produced the famous Tyrian purple dye. <em>Photo: James St. John, <a href="https://commons.wikimedia.org/wiki/File:Bolinus_brandaris_(purple_dye_murex_snail)_(24757422736).jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>.</em></figcaption>
 </figure>
 
 <p>The Phoenicians may not have originated these techniques. Archaeological evidence of earlier purple dye production has been found on <a href="https://www.worldhistory.org/Minoan_Civilization/" target="_blank">Minoan</a> Crete, suggesting that the Phoenicians likely adopted and refined the process from their Aegean trading partners before scaling it into the industry that made them famous.</p>
@@ -230,7 +230,7 @@ description: "Tyre, Sidon, the alphabet, and the sea traders who connected the a
 
 <figure style="margin: 28px 0; text-align: center;">
 <img src="/images/culture/canaan/sourced/05-trade-routes-map.svg" alt="Map of Phoenician trade routes across the Mediterranean" class="lightbox-img" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">Phoenician trade routes across the Mediterranean, c. 1200&ndash;800 BC. Colonies stretched from Lebanon to Spain. <em>Map: Rodrigo/Reedside, Wikimedia Commons, CC BY-SA 3.0.</em></figcaption>
+<figcaption style="margin-top: 8px; font-size: 0.85em; color: #888; font-style: italic;">Phoenician trade routes across the Mediterranean, c. 1200&ndash;800 BC. Colonies stretched from Lebanon to Spain. <em>Rodrigo (Spanish original); Reedside (English version) · <a href="https://commons.wikimedia.org/wiki/File:Phoenician_trade_routes_(eng).svg">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></em></figcaption>
 </figure>
 
 <p>Herodotus reports that the Egyptian Pharaoh Necho II (c. 600 BC) commissioned Phoenician sailors to circumnavigate Africa &mdash; and that they succeeded, a voyage of approximately three years. Herodotus himself doubted the story because the sailors reported that the sun was on their right as they sailed westward around the southern tip &mdash; which is, of course, exactly what would happen south of the equator, lending the account unexpected credibility.</p>

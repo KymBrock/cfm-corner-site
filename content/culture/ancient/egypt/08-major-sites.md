@@ -70,11 +70,11 @@ description: "The Pyramids, the Valley of the Kings, Karnak, Alexandria, Elephan
       </div>
       <div class="smw-gallery-item">
         <img class="lightbox-img" src="/images/culture/egypt/08-bibliotheca-interior.jpg" alt="Interior of the modern Bibliotheca Alexandrina">
-        <p class="smw-img-caption">The reading hall of the Bibliotheca Alexandrina (opened 2002). <em>Wikimedia Commons, CC BY-SA.</em></p>
+        <p class="smw-img-caption">The reading hall of the Bibliotheca Alexandrina (opened 2002). <em>Randa Mostafa1 &middot; <a href="https://commons.wikimedia.org/wiki/File:Library_of_Alexandria_(1).jpg">Wikimedia Commons</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>)</em></p>
       </div>
       <div class="smw-gallery-item">
         <img class="lightbox-img" src="/images/culture/egypt/08-bibliotheca-exterior.jpg" alt="Exterior of the Bibliotheca Alexandrina with hieroglyphic wall">
-        <p class="smw-img-caption">The Bibliotheca Alexandrina's exterior wall, carved with characters from writing systems around the world. <em>Wikimedia Commons, CC BY-SA.</em></p>
+        <p class="smw-img-caption">The Bibliotheca Alexandrina's exterior wall, carved with characters from writing systems around the world. <em>Ahmed Sherif &middot; <a href="https://commons.wikimedia.org/wiki/File:View_of_Bibliotheca_Alexandrina.jpg">Wikimedia Commons</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>)</em></p>
       </div>
       <div class="smw-gallery-item">
         <img class="lightbox-img" src="/images/culture/egypt/08-bibliotheca-palms.jpg" alt="Bibliotheca Alexandrina exterior">
@@ -161,11 +161,11 @@ description: "The Pyramids, the Valley of the Kings, Karnak, Alexandria, Elephan
     <div class="smw-gallery-track">
       <div class="smw-gallery-item active">
         <img class="lightbox-img" src="/images/culture/egypt/08-all-giza-pyramids.jpg" alt="All three pyramids of Giza">
-        <p class="smw-img-caption">The three great pyramids of Giza &mdash; Khufu, Khafre, and Menkaure. <em>Wikimedia Commons, CC BY-SA.</em></p>
+        <p class="smw-img-caption">The three great pyramids of Giza &mdash; Khufu, Khafre, and Menkaure. <em>Ricardo Liberato &middot; <a href="https://en.wikipedia.org/wiki/Egyptian_pyramids#/media/File:All_Gizah_Pyramids.jpg">Source</a> (<a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a>)</em></p>
       </div>
       <div class="smw-gallery-item">
         <img class="lightbox-img" src="/images/culture/egypt/08-sphinx-giza.jpg" alt="The Great Sphinx of Giza">
-        <p class="smw-img-caption">The Great Sphinx, with the Pyramid of Khafre behind. <em>CC-BY-SA.</em></p>
+        <p class="smw-img-caption">The Great Sphinx, with the Pyramid of Khafre behind. <em>Barcex &middot; <a href="https://om.wikipedia.org/wiki/File:Great_Sphinx_of_Giza_-_20080716a.jpg">Source</a> (<a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>)</em></p>
       </div>
       <div class="smw-gallery-item">
         <img class="lightbox-img" src="/images/culture/egypt/08-sphinx-closeup.jpg" alt="Close-up of the Great Sphinx">
@@ -200,7 +200,7 @@ description: "The Pyramids, the Valley of the Kings, Karnak, Alexandria, Elephan
     <div class="smw-gallery-track">
       <div class="smw-gallery-item active">
         <img class="lightbox-img" src="/images/culture/egypt/08-saqqara-step-pyramid.jpg" alt="The Step Pyramid of Djoser at Saqqara">
-        <p class="smw-img-caption">The Step Pyramid of Djoser (c. 2670 BC) &mdash; the world's oldest monumental stone structure. <em>CC-BY-SA.</em></p>
+        <p class="smw-img-caption">The Step Pyramid of Djoser (c. 2670 BC) &mdash; the world's oldest monumental stone structure. <em>Charles J. Sharp &middot; <a href="https://commons.wikimedia.org/wiki/File:Saqqara_pyramid_ver_2.jpg">Wikimedia Commons</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>)</em></p>
       </div>
       <div class="smw-gallery-item">
         <img class="lightbox-img" src="/images/culture/egypt/08-saqqara-closeup.jpg" alt="Step Pyramid close-up">
@@ -332,11 +332,11 @@ description: "The Pyramids, the Valley of the Kings, Karnak, Alexandria, Elephan
     <div class="smw-gallery-track">
       <div class="smw-gallery-item active">
         <img class="lightbox-img" src="/images/culture/egypt/08-old-cairo-coptic.jpg" alt="Coptic Cairo">
-        <p class="smw-img-caption">Coptic Cairo &mdash; one of the oldest Christian quarters in the world. <em>CC-BY-SA.</em></p>
+        <p class="smw-img-caption">Coptic Cairo &mdash; one of the oldest Christian quarters in the world. <em>John Frederick Lewis &middot; <a href="https://commons.wikimedia.org/wiki/File:John_Frederick_Lewis_-_Study_for_%27The_Courtyard_of_the_Coptic_Patriarch%27s_House_in_Cairo%27_-_Google_Art_Project.jpg">Wikimedia Commons</a> (Public domain)</em></p>
       </div>
       <div class="smw-gallery-item">
         <img class="lightbox-img" src="/images/culture/egypt/08-ben-ezra-synagogue.jpg" alt="Ben Ezra Synagogue">
-        <p class="smw-img-caption">The Ben Ezra Synagogue, site of the Cairo Genizah discovery. <em>Wikimedia Commons, CC BY-SA 4.0.</em></p>
+        <p class="smw-img-caption">The Ben Ezra Synagogue, site of the Cairo Genizah discovery. <em>herr müller &middot; <a href="https://es.wikipedia.org/wiki/Archivo:Cairo_-_Coptic_area_-_Ben_Ezra_Synagogue.JPG">Source</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>)</em></p>
       </div>
       <div class="smw-gallery-item">
         <img class="lightbox-img" src="/images/culture/egypt/08-hanging-church.jpg" alt="The Hanging Church">
@@ -654,7 +654,7 @@ description: "The Pyramids, the Valley of the Kings, Karnak, Alexandria, Elephan
     <div class="smw-gallery-track">
       <div class="smw-gallery-item active">
         <img class="lightbox-img" src="/images/culture/egypt/08-karnak-hypostyle.jpg" alt="The Great Hypostyle Hall at Karnak">
-        <p class="smw-img-caption">The Great Hypostyle Hall &mdash; 134 columns, the largest reaching 69 feet. <em>Wikimedia Commons, CC-BY-SA.</em></p>
+        <p class="smw-img-caption">The Great Hypostyle Hall &mdash; 134 columns, the largest reaching 69 feet. <em>Jon Bodsworth &middot; <a href="https://commons.wikimedia.org/wiki/File:Hypostyle_hall,_Karnak_temple.jpg">Wikimedia Commons</a> (Copyrighted free use)</em></p>
       </div>
       <div class="smw-gallery-item">
         <img class="lightbox-img" src="/images/culture/egypt/08-karnak-hypostyle-hdr.jpg" alt="Hypostyle Hall columns looking up">
@@ -866,7 +866,7 @@ description: "The Pyramids, the Valley of the Kings, Karnak, Alexandria, Elephan
     <div class="smw-gallery-track">
       <div class="smw-gallery-item active">
         <img class="lightbox-img" src="/images/culture/egypt/08-hatshepsut-temple.jpg" alt="Mortuary Temple of Hatshepsut">
-        <p class="smw-img-caption">Hatshepsut's terraced mortuary temple at Deir el-Bahri. <em>CC-BY-SA.</em></p>
+        <p class="smw-img-caption">Hatshepsut's terraced mortuary temple at Deir el-Bahri. <em>Diego Delso &middot; <a href="https://commons.wikimedia.org/wiki/File:Templo_funerario_de_Hatshepsut,_Luxor,_Egipto,_2022-04-03,_DD_13.jpg">Wikimedia Commons</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>)</em></p>
       </div>
       <div class="smw-gallery-item">
         <img class="lightbox-img" src="/images/culture/egypt/08-hatshepsut-panorama.jpg" alt="Panoramic view of Hatshepsut's temple">
@@ -874,7 +874,7 @@ description: "The Pyramids, the Valley of the Kings, Karnak, Alexandria, Elephan
       </div>
       <div class="smw-gallery-item">
         <img class="lightbox-img" src="/images/culture/egypt/08-hatshepsut-front-view.jpg" alt="Front view of Hatshepsut's temple">
-        <p class="smw-img-caption">The terraced facade of Hatshepsut's mortuary temple. <em>Wikimedia Commons.</em></p>
+        <p class="smw-img-caption">The terraced facade of Hatshepsut's mortuary temple. <em>Diego Delso &middot; <a href="https://commons.wikimedia.org/wiki/File:Templo_funerario_de_Hatshepsut,_Luxor,_Egipto,_2022-04-03,_DD_13.jpg">Wikimedia Commons</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>)</em></p>
       </div>
       <div class="smw-gallery-item">
         <img class="lightbox-img" src="/images/culture/egypt/08-hatshepsut-osirian.jpg" alt="Osirian statues at Hatshepsut's temple">
@@ -910,7 +910,7 @@ description: "The Pyramids, the Valley of the Kings, Karnak, Alexandria, Elephan
       </div>
       <div class="smw-gallery-item">
         <img class="lightbox-img" src="/images/culture/egypt/08-hatshepsut-landscape.jpg" alt="Hatshepsut's temple in landscape">
-        <p class="smw-img-caption">The temple set against the dramatic western cliffs of Thebes. <em>Wikimedia Commons.</em></p>
+        <p class="smw-img-caption">The temple set against the dramatic western cliffs of Thebes. <em>Diego Delso &middot; <a href="https://commons.wikimedia.org/wiki/File:Templo_funerario_de_Hatshepsut,_Luxor,_Egipto,_2022-04-03,_DD_13.jpg">Wikimedia Commons</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>)</em></p>
       </div>
       <div class="smw-gallery-item">
         <img class="lightbox-img" src="/images/culture/egypt/08-hatshepsut-closeup.jpg" alt="Detail of Hatshepsut's temple">
@@ -941,7 +941,7 @@ description: "The Pyramids, the Valley of the Kings, Karnak, Alexandria, Elephan
     <div class="smw-gallery-track">
       <div class="smw-gallery-item active">
         <img class="lightbox-img" src="/images/culture/egypt/08-edfu-temple.jpg" alt="Temple of Horus at Edfu">
-        <p class="smw-img-caption">The Temple of Horus at Edfu &mdash; the second-largest Egyptian temple. <em>Wikimedia Commons, CC-BY-SA.</em></p>
+        <p class="smw-img-caption">The Temple of Horus at Edfu &mdash; the second-largest Egyptian temple. <em>Ad Meskens &middot; <a href="https://en.wikipedia.org/wiki/Horus#/media/File:Temple_of_Edfu_05.jpg">Source</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>)</em></p>
       </div>
       <div class="smw-gallery-item">
         <img class="lightbox-img" src="/images/culture/egypt/08-edfu-horus.jpg" alt="Statue of Horus at Edfu">
@@ -1004,7 +1004,7 @@ description: "The Pyramids, the Valley of the Kings, Karnak, Alexandria, Elephan
     <div class="smw-gallery-track">
       <div class="smw-gallery-item active">
         <img class="lightbox-img" src="/images/culture/egypt/08-kom-ombo.jpg" alt="Temple of Kom Ombo">
-        <p class="smw-img-caption">The double temple at Kom Ombo. <em>CC-BY-SA.</em></p>
+        <p class="smw-img-caption">The double temple at Kom Ombo. <em>Dababy312 &middot; <a href="https://commons.wikimedia.org/wiki/File:Temple_of_Kom_Ombo.jpg">Wikimedia Commons</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>)</em></p>
       </div>
       <div class="smw-gallery-item">
         <img class="lightbox-img" src="/images/culture/egypt/08-komombo-front.jpg" alt="Front view of Kom Ombo Temple">
@@ -1205,7 +1205,7 @@ description: "The Pyramids, the Valley of the Kings, Karnak, Alexandria, Elephan
     <div class="smw-gallery-track">
       <div class="smw-gallery-item active">
         <img class="lightbox-img" src="/images/culture/egypt/08-abu-simbel-facade.jpg" alt="The Great Temple of Abu Simbel">
-        <p class="smw-img-caption">The Great Temple of Abu Simbel &mdash; four colossal seated figures of Ramesses II, each 66 feet tall. <em>Wikimedia Commons, CC BY-SA 3.0.</em></p>
+        <p class="smw-img-caption">The Great Temple of Abu Simbel &mdash; four colossal seated figures of Ramesses II, each 66 feet tall. <em>Steve F-E-Cameron (Merlin-UK) &middot; <a href="https://commons.wikimedia.org/wiki/File:SFEC_EGYPT_ABUSIMBEL_2006-003.JPG">Wikimedia Commons</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>)</em></p>
       </div>
       <div class="smw-gallery-item">
         <img class="lightbox-img" src="/images/culture/egypt/08-abusimbel-panorama.jpg" alt="Panorama of both Abu Simbel temples">
