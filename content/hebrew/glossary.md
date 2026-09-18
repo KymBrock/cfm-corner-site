@@ -438,6 +438,33 @@ Click on any Hebrew or Greek term to study it at Blue Letter Bible. Use the **fl
 
 ---
 
+<details class="seder-dropdown" id="week38-vocabulary">
+<summary>Week 38: Isaiah 1–12 — "God Is My Salvation"</summary>
+<div class="seder-dropdown-body">
+
+{{< flashcards section="week38" >}}
+
+<div style="overflow-x:auto;max-width:100%;">
+
+| Transliteration | Original | Language | Meaning |
+|-----------------|----------|----------|---------|
+| <a href="https://www.blueletterbible.org/lexicon/h3722/kjv/wlc/0-1/" target="_blank"><em>kāp̄ar</em></a> | כָּפַר | Hebrew | to cover, to make atonement, to purge |
+| <a href="https://www.blueletterbible.org/lexicon/h6918/kjv/wlc/0-1/" target="_blank"><em>qāḏôš</em></a> | קָדוֹשׁ | Hebrew | holy, set apart, separate |
+| <a href="https://www.blueletterbible.org/lexicon/h4941/kjv/wlc/0-1/" target="_blank"><em>mišpāṭ</em></a> | מִשְׁפָּט | Hebrew | judgement, justice |
+| <a href="https://www.blueletterbible.org/lexicon/h1503/kjv/wlc/0-1/" target="_blank"><em>gezaʿ</em></a> | גֶּזַע | Hebrew | stem, trunk, stock of a tree |
+| <a href="https://www.blueletterbible.org/lexicon/h3444/kjv/wlc/0-1/" target="_blank"><em>yᵊšûʿâ</em></a> | יְשׁוּעָה | Hebrew | salvation, deliverance |
+| <a href="https://www.blueletterbible.org/lexicon/g2511/kjv/tr/0-1/" target="_blank"><em>katharizō</em></a> | καθαρίζω | Greek | to cleanse |
+| <a href="https://www.blueletterbible.org/lexicon/g40/kjv/tr/0-1/" target="_blank"><em>hagios</em></a> | ἅγιος | Greek | holy |
+| <a href="https://www.blueletterbible.org/lexicon/g2920/kjv/tr/0-1/" target="_blank"><em>krisis</em></a> | κρίσις | Greek | judgement, decision |
+| <a href="https://www.blueletterbible.org/lexicon/g4491/kjv/tr/0-1/" target="_blank"><em>rhiza</em></a> | ῥίζα | Greek | root |
+| <a href="https://www.blueletterbible.org/lexicon/g4991/kjv/tr/0-1/" target="_blank"><em>sōtēria</em></a> | σωτηρία | Greek | salvation, deliverance |
+
+</div>
+
+</div>
+</details>
+
+
 ## Special Topics
 
 <details class="seder-dropdown">

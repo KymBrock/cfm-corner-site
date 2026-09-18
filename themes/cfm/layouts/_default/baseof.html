@@ -842,15 +842,41 @@
 
       function place(el) {
         var r = el.getBoundingClientRect();
-        var w = Math.min(420, window.innerWidth - 20);
-        var left = r.left + window.scrollX;
-        var top = r.bottom + window.scrollY + 6;
-        if (left + w > window.innerWidth) left = window.innerWidth - w - 10;
-        if (left < 10) left = 10;
-        if (isTouch) left = Math.max(10, (window.innerWidth - w) / 2);
+        // Mobile layout bounds can exceed the visible area, including during zoom.
+        // Keep both the anchor and visual viewport in document coordinates.
+        var view = window.visualViewport;
+        var vx = window.scrollX + (view ? view.offsetLeft : 0);
+        var vy = window.scrollY + (view ? view.offsetTop : 0);
+        var vw = view ? view.width : document.documentElement.clientWidth;
+        var vh = view ? view.height : document.documentElement.clientHeight;
+        var w = Math.max(1, Math.min(420, vw - 20));
+        popup.style.boxSizing = 'border-box';
+        popup.style.minWidth = Math.min(200, w) + 'px';
         popup.style.maxWidth = w + 'px';
+        popup.style.maxHeight = Math.max(1, vh - 20) + 'px';
+        popup.style.overflowY = 'auto';
+        // Measure at an in-bounds origin, not at the previous popup's position.
+        popup.style.left = (vx + 10) + 'px';
+        popup.style.top = (vy + 10) + 'px';
+        var pw = popup.offsetWidth;
+        var ph = popup.offsetHeight;
+        var left = isTouch ? vx + (vw - pw) / 2 : r.left + window.scrollX;
+        left = Math.max(vx + 10, Math.min(left, vx + vw - pw - 10));
+        var top = r.bottom + window.scrollY + 6;
+        if (top + ph > vy + vh - 10) top = r.top + window.scrollY - ph - 6;
+        top = Math.max(vy + 10, Math.min(top, vy + vh - ph - 10));
         popup.style.left = left + 'px';
         popup.style.top = top + 'px';
+      }
+
+      function repositionVisiblePopup() {
+        if (activeEl && popup.classList.contains('visible')) place(activeEl);
+      }
+      window.addEventListener('resize', repositionVisiblePopup);
+      window.addEventListener('scroll', repositionVisiblePopup, { passive: true });
+      if (window.visualViewport) {
+        window.visualViewport.addEventListener('resize', repositionVisiblePopup);
+        window.visualViewport.addEventListener('scroll', repositionVisiblePopup);
       }
 
       async function show(el) {
@@ -1145,12 +1171,14 @@
       }
 
       // Desktop hover — guard against events originating inside the popup itself
-      document.addEventListener('mouseover', function(e) {
+      document.addEventListener('pointerover', function(e) {
+        if (e.pointerType === 'touch') return;
         if (popup.contains(e.target)) return;
         var el = getTargetAnchor(e.target);
         if (el) { e.preventDefault(); show(el); }
       });
-      document.addEventListener('mouseout', function(e) {
+      document.addEventListener('pointerout', function(e) {
+        if (e.pointerType === 'touch') return;
         if (popup.contains(e.target)) return;
         var el = getTargetAnchor(e.target);
         if (el) hide();

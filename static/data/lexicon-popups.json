@@ -48,7 +48,10 @@
   "lang": "greek",
   "definition": "ἅγιος, -α, ον; (τό ἅγός, religious awe; ἅζω, to venerate), [in LXX chiefly for קֹ֫דֶשׁ ;]; primarily, dedicated to the gods, sacred (Hdt.; rare in Att., never in Hom., Hes. and Trag., who use ἁγνός), hence, holy, characteristic of God, separated to God, worthy of veneration.; __1.  Its highest application is to God himself, in his purity, majesty, and glory: Luk.1:49, Jhn.17:11, Rev.4:8. Hence; __(a) of things and places which have a claim to reverence as sacred to God, e.g. the Temple: Mat.24:15, Heb.9:1;; __(b) of persons employed by him, as angels: 1Th.3:13; prophets, Luk.1:70; apostles, Eph.3:5.; __2. Applied to persons as separated to God's service:; __(a) of Christ, Mrk.1:24, Jhn.6:69, Act.4:30;; __(b) of Christians, Act.9:13, Rom.1:7, Heb.6:10, Rev.5:8.; __3. In the moral sense of sharing God's purity: Mrk.6:20, Jhn.17:11, Act.3:14, Rev.3:7.; __4. Of pure, clean sacrifices and offerings: 1Co.7:14, Eph.1:4.; SYN.: ἁγνός, pure, both in ceremonial and spiritual sense; ἱερός (sacer), sacred, that which is inviolable because of its (external) relation to God; ὅσιος (sanctus as opposite to nefas), that which is based on everlasting ordinances of right. (Cf. Tr., Syn., §lxxxviii; DB, ii, 399 f.; Cremer, 34, 594-601; MM, VGT, see word) (AS)",
   "source": "stepbible-tbesg",
-  "has_lsj": true
+  "has_lsj": true,
+  "senses": [{"text": "holy — primarily 'dedicated to the gods, sacred'; hence characteristic of God, separated to God, worthy of veneration", "children": [{"text": "its highest application is to God himself, in his purity, majesty and glory (Luke 1:49; John 17:11; Rev 4:8)", "children": [{"text": "of things and places having a claim to reverence as sacred to God, e.g. the Temple (Matt 24:15; Heb 9:1)"}, {"text": "of persons employed by him — angels (1 Thess 3:13), prophets (Luke 1:70), apostles (Eph 3:5)"}]}, {"text": "applied to persons as separated to God's service", "children": [{"text": "of Christ (Mark 1:24; John 6:69; Acts 4:30)"}, {"text": "of Christians (Acts 9:13; Rom 1:7; Heb 6:10; Rev 5:8); and of the purpose for which they are chosen (Eph 1:4)"}, {"text": "of children in a household with a believing parent, called holy in 1 Cor 7:14; the passage does not say that every household member is a believer"}]}, {"text": "in the moral sense of sharing God's purity (Mark 6:20; John 17:11; Acts 3:14; Rev 3:7)"}, {"text": "distinguished from: ἁγνός pure, ceremonially and spiritually; ἱερός sacred, inviolable by its external relation to God; ὅσιος, resting on everlasting ordinances of right"}]}],
+  "senses_notes": "Adapted outline. Upstream sacrifices/offerings label omitted because its cited passages concern people. Household placement is an editorial interpretation of 1 Cor 7:12-16, not an upstream sense label; hagios describes the children, while the spouse uses the related verb. Raw source preserved.",
+  "senses_source": "stepbible-tbesg (Abbott-Smith); adapted outline reviewed by Harrison and MAX, 2026-09-08"
  },
  "G42": {
   "translit": "hagiōsýnē",
@@ -22473,7 +22476,10 @@
   "definition": "καθαρίζω; (Hellenistic-FlJ, Inscr.-for Attic καθαίρω, which see, on the vulgar -ερ-, Mat.8:3, Mrk.1:42, see Bl., § 6, 1; Thackeray, Gr., 74) [in LXX chiefly for טָהֵר ;]; to cleanse, make clean.; __1. In physical sense: with accusative of thing(s), figuratively, Mat.23:25-26, Luk.11:39; of disease (leprosy), with accusative of person(s), Mat.8:2-3 10:8 11:5, Mrk.1:40-42 Luk.4:27 5:12-13 7:22 17:14, 17; ἡ λέπρα ἐκαθερίσθη (on the spelling see supr.), Mat.8:3.; __2. In ethical sense: τ. καρδίας, Act.15:9 (cf. Sir.38:10); τ. χεῖρας, Jas.4:8; λαὸν ἑαυτῷ, Tit.2:14; τ. ἐκκλησίαν, Eph.5:26; with accusative of person(s) (of thing(s)), before ἀπό (131., § 36, 9; Deiss., BS, 216 f.), 2Co.7:1, Heb.9:14, 1Jn.1:7 Jn 1:9.; __3. In ceremonial sense: Mrk.7:19, Act.10:15 11:9, Heb.9:22-23 10:2 (cf. δια-καθαρίζω).†; (AS)",
   "verse": "",
   "source": "stepbible-tbesg",
-  "has_lsj": true
+  "has_lsj": true,
+  "senses": [{"text": "to cleanse, to make clean", "children": [{"text": "in the physical sense — of vessels, figuratively (Matt 23:25–26; Luke 11:39); and of disease, of a leper, to cleanse by healing (Matt 8:2–3; 10:8; 11:5; Mark 1:40–42; Luke 17:14)"}, {"text": "in the ethical sense — the heart (Acts 15:9), the hands (James 4:8), a people for himself (Titus 2:14), the church (Eph 5:26); to cleanse from sin (2 Cor 7:1; Heb 9:14; 1 John 1:7, 9)"}, {"text": "in the ceremonial sense - cleansing, or declaring and pronouncing clean (Mark 7:19; Acts 10:15; 11:9; Heb 9:22-23; 10:2)"}]}],
+  "senses_notes": "Ceremonial and ethical senses remain siblings. Source Jn 1:9 cross-checked as 1 John 1:9, where cleansing from sin is explicit; source text unchanged.",
+  "senses_source": "stepbible-tbesg (Abbott-Smith); adapted outline reviewed by Harrison and MAX, 2026-09-08"
  },
  "G2512": {
   "translit": "katharismos",
@@ -26290,7 +26296,10 @@
   "definition": "κρίσις, -εως, ἡ; (κρίνω), [in LXX chiefly for מִשְׁפָּט, also for רִיב, etc. ;]; __1. a seperating, selection (Arist., al.); __2. a decision, judgment (cl.): Jhn.8:16, 1Ti.5:24, 2Pe.2:11, Ju 9; κ. κρίνειν, Jhn.7:24; in forensic sense, Act.8:33 (LXX) (see Page, in l); esp. of the Divine judgment, Jhn.3:19 5:24, 27 5:29-30 12:31 16:8, 11, 2Th.1:5, Heb.10:27, Jas.2:13 5:12, 2Pe.2:4, Rev.18:10; pl., Rev.16:7 19:2; of the last judgment, Mat.10:15 11:22, 24 12:36, 41-42 Luk.10:14 11:31-32, Heb.9:27, 2Pe.2:9 3:7, 1Jn.4:17, Ju 6 15; τῆς γεέννης, Mat.23:33.; __3. By meton. (as in LXX for מִשְׁפָּט, Isa.5:7, al.; דִּישׁוֹן, Dan.7:10), of the standard of judgment, right, justice: Mat.12:18, 20 (LXX, Isa 42:43) Isa 23:23, Luk.11:42; of the tribunal (a local court), Mat.5:21-22†; (AS)",
   "verse": "",
   "source": "stepbible-tbesg",
-  "has_lsj": true
+  "has_lsj": true,
+  "senses": [{"text": "a separating, a selection"}, {"text": "a decision, a judgment", "children": [{"text": "in the forensic sense — a trial or verdict (John 7:24; Acts 8:33)"}, {"text": "especially of the divine judgment (John 3:19; 5:24; 2 Thess 1:5; Heb 10:27; James 2:13)"}, {"text": "of the last judgment (Matt 10:15; 11:22; 12:36; Heb 9:27; 2 Pet 3:7)"}]}, {"text": "by metonymy, the standard of judgment — right, justice (Matt 12:18, 20; Luke 11:42)", "children": [{"text": "and so the tribunal itself — the local court (Matt 5:21–22)"}]}],
+  "senses_notes": "Impossible upstream references Isa 42:43 and Isa 23:23 omitted from the outline, not guessed or repaired in the source.",
+  "senses_source": "stepbible-tbesg (Abbott-Smith); adapted outline reviewed by Harrison and MAX, 2026-09-08"
  },
  "G2921": {
   "translit": "krispos",
@@ -41220,13 +41229,16 @@
   "has_lsj": true
  },
  "G4491": {
-  "translit": "riza",
+  "translit": "rhiza",
   "original": "ῥίζα",
   "lang": "greek",
   "definition": "ῥίζα, -ης, ἡ; [in LXX chiefly for שָׁרַשׁ ;]; a root: Mat.3:10, Luk.3:9; ἐκ ῥιζῶν, Mrk.11:20; ῥ. ἔχειν, Mat.13:6, Mrk.4:6; id. before ἐν ἑαυτῷ, figuratively, Mat.13:21, Mrk.4:17, Luk.8:13. Metaphorical (as in various senses in cl.), of cause, origin, source, etc.;; __(a) of things, ῥ. πάντων τ. κακῶν (Eur.), 1Ti.6:10;; __(b) of persons: of ancestors, Rom.11:16-18; ῥ. πικρίας, Heb.12:15. Of that which springs from a root, a shoot; metaphorically, of offspring, Rom.15:12 (LXX) Rev.5:5 22:16.†; (AS)",
   "verse": "",
   "source": "stepbible-tbesg",
-  "has_lsj": true
+  "has_lsj": true,
+  "senses": [{"text": "a root (Matt 3:10; Luke 3:9); 'from the roots' (Mark 11:20); to have root (Matt 13:6; Mark 4:6), and figuratively to have root in oneself (Matt 13:21; Mark 4:17; Luke 8:13)"}, {"text": "metaphorically, of cause, origin or source", "children": [{"text": "of things — 'a root of all evils' (1 Tim 6:10)"}, {"text": "of persons", "children": [{"text": "of ancestors (Rom 11:16–18)"}, {"text": "of one who becomes a source of harm — 'a root of bitterness springing up' (Heb 12:15)"}]}]}, {"text": "of that which springs from a root — a shoot; and metaphorically, offspring (Rom 15:12; Rev 5:5; 22:16)"}],
+  "senses_notes": "Heb 12:15 source-of-harm metaphor separated from Rom 11 ancestry; both remain under the source's persons branch.",
+  "senses_source": "stepbible-tbesg (Abbott-Smith); adapted outline reviewed by Harrison and MAX, 2026-09-08"
  },
  "G4492": {
   "translit": "rizoō",
@@ -45867,7 +45879,10 @@
   "definition": "σωτήρ, -ῆρος, ὁ; (σώζω), [in LXX for יָשַׁע and cognate forms ;]; saviour, deliverer, preserver, a frequently epithet of kings in the Ptolemaic and Rom. periods (Deiss., BS, 83; LAE, 368 f.; MM, xxiv), in NT,; __(a) of God (as LXX: Psa.24:5, Isa.12:2, al.): Luk.1:47, 1Ti.1:1 2:3 4:10, Tit.1:3 2:10 3:4, Ju 25;; __(b) of Christ: Luk.2:11, Act.5:31 13:23, Php.3:20; τ. κόσμου, Jhn.4:42, 1Jn.4:14 (for the general use of the word, see Westc., in l); ἡμῶν, 2Ti.1:10, Tit.1:4 3:6; θεὸς (κύριος) καὶ σ. (see Deiss., LAE, 348.4; M, Pr., 84), Tit.2:13, 2Pe.1:1 1:11 2:20 3:2 3:18; σ. τοῦ σώματος (i.e. of the Church; see: σῶμα, 5), Eph.5:23.†; (AS)",
   "verse": "",
   "source": "stepbible-tbesg",
-  "has_lsj": true
+  "has_lsj": true,
+  "senses": [{"text": "saviour, deliverer, preserver", "children": [{"text": "of God — as in the Septuagint (Ps 24:5; Isa 12:2) — Luke 1:47; 1 Tim 1:1; 2:3; 4:10; Titus 1:3; 2:10; 3:4"}, {"text": "of Christ (Luke 2:11; Acts 5:31; 13:23; Phil 3:20); 'saviour of the world' (John 4:42; 1 John 4:14); 'God and saviour' (Titus 2:13; 2 Pet 1:1)"}]}, {"text": "Historical usage: a frequent epithet of kings in the Ptolemaic and Roman periods — Deissmann, Bible Studies 83 and Light from the Ancient East 368f.; Moulton–Milligan xxiv"}],
+  "senses_notes": "Historical usage retained as context, not a second Christian doctrinal definition.",
+  "senses_source": "stepbible-tbesg (Abbott-Smith); adapted outline reviewed by Harrison and MAX, 2026-09-08"
  },
  "G4991": {
   "translit": "sōtēria",
@@ -45876,7 +45891,10 @@
   "definition": "σωτηρία, -ας, ἡ; (σωτήρ), [in LXX for יֶשַׁע, יְשׁוּעָה, תְּשׁוּעָה, פְּלֵיטָה, etc. ;]; deliverance, preservation, salvation, safety (Lat. salus): Act.7:25 27:34, Heb.11:7; ἐξ ἐχθρῶν, Luk.1:71. In NT esp. of Messianic and spiritual salvation (see: σώζω): Luk.19:9, Jhn.4:22, Act.4:12 13:47, Rom.11:11,  2Th.2:13, 2Ti.3:15, Heb.2:3 6:9, 2Pe.3:15, Ju 3; opposite to ἀπηώλεια, Php.1:28; αἰώνιος-., Heb.5:9; ὁ λόγος (τὸ εὐαγγέλιον) τῆς σ., Act.13:26, Eph.1:13; ὁδὸς σωτηρίας, Act.16:17; κέρας σωτηρίας, Luk.1:69; ἡμέρα σωτηρίας, 2Co.6:2 (LXX); κατεργάζεσθαι τὴν ἑαυτοῦ σ., Php.2:12; κληρονομεῖν σ., Heb.1:14; ὁ ἀρχηγὸς τῆς σ., Heb.2:10; εἰς σ., Rom.1:16 10:1, 10, 1Pe.2:2; σ. as a present possession (see: σώζω), Luk.1:77, 2Co.1:6 7:10, Php.1:19, 2Ti.2:10; as more fully realized in the future: Rom.13:11, 1Th.5:8-9, Heb.9:28, 1Pe.1:5 1:9-10, Rev.7:10 12:10 19:1.†; (AS)",
   "verse": "",
   "source": "stepbible-tbesg",
-  "has_lsj": true
+  "has_lsj": true,
+  "senses": [{"text": "deliverance, preservation, safety, salvation (Acts 7:25; 27:34; Heb 11:7); deliverance from enemies (Luke 1:71)"}, {"text": "in the New Testament especially of Messianic and spiritual salvation (Luke 19:9; John 4:22; Acts 4:12; Rom 11:11; 2 Tim 3:15; Heb 2:3)", "children": [{"text": "as a present possession (Luke 1:77; 2 Cor 1:6; 7:10; Phil 1:19; 2 Tim 2:10)"}, {"text": "as more fully realized in the future (Rom 13:11; 1 Thess 5:8–9; Heb 9:28; 1 Pet 1:5, 9–10; Rev 7:10; 12:10)"}]}],
+  "senses_notes": "Present and future salvation retained. Pink's later fourfold commentary is not a lexical sense and remains untouched in the Hub dictionary.",
+  "senses_source": "stepbible-tbesg (Abbott-Smith); adapted outline reviewed by Harrison and MAX, 2026-09-08"
  },
  "G4992": {
   "translit": "sōtērios",
@@ -75999,37 +76017,10 @@
   "translit": "dereḵ",
   "original": "דֶּרֶךְ",
   "lang": "hebrew",
-  "definition": ": conduct/lifestyle; way, road, distance, journey, manner (road, way, path; journey; direction; manner, habit, way; of course of life (fig.); of moral character (fig.))",
+  "definition": "conduct/lifestyle; way, road, distance, journey, manner (road, way, path; journey; direction; manner, habit, way; of course of life (fig.); of moral character (fig.))",
   "verse": "",
   "source": "stepbible-tbesh",
-  "senses": [
-   {
-    "text": ": conduct/lifestyle"
-   },
-   {
-    "text": "way, road, distance, journey, manner",
-    "children": [
-     {
-      "text": "road, way, path"
-     },
-     {
-      "text": "journey"
-     },
-     {
-      "text": "direction"
-     },
-     {
-      "text": "manner, habit, way"
-     },
-     {
-      "text": "of course of life (fig.)"
-     },
-     {
-      "text": "of moral character (fig.)"
-     }
-    ]
-   }
-  ],
+  "senses": [{"text": "conduct/lifestyle"}, {"text": "way, road, distance, journey, manner", "children": [{"text": "road, way, path"}, {"text": "journey"}, {"text": "direction"}, {"text": "manner, habit, way"}, {"text": "of course of life (fig.)"}, {"text": "of moral character (fig.)"}]}],
   "description": "The Way of Holiness, a prophesied highway in Isaiah, reserved for the redeemed and leading to Zion (Isa. 35:8).",
   "description_source": "stepbible-tipnr"
  },
@@ -80786,25 +80777,10 @@
   "translit": "zâqên",
   "original": "זָקֵן",
   "lang": "hebrew",
-  "definition": ": elder/leader; old (old (of humans); elder (of those having authority))",
+  "definition": "elder/leader; old (old (of humans); elder (of those having authority))",
   "verse": "",
   "source": "stepbible-tbesh",
-  "senses": [
-   {
-    "text": ": elder/leader"
-   },
-   {
-    "text": "old",
-    "children": [
-     {
-      "text": "old (of humans)"
-     },
-     {
-      "text": "elder (of those having authority)"
-     }
-    ]
-   }
-  ]
+  "senses": [{"text": "elder/leader"}, {"text": "old", "children": [{"text": "old (of humans)"}, {"text": "elder (of those having authority)"}]}]
  },
  "H2206": {
   "translit": "zāqān",
@@ -83204,111 +83180,10 @@
   "translit": "ḥāzaq",
   "original": "חָזַק",
   "lang": "hebrew",
-  "definition": ": strengthen/support/encourage; to strengthen, prevail, harden, be strong, become strong, be courageous, be firm, grow firm, be resolute, be sore ((Qal); to be strong, grow strong (to prevail, prevail upon; to be firm, be caught fast, be secure; to press, be urgent; to grow stout, grow rigid, grow hard (bad sense); to be severe, be grievous); to strengthen; (Piel); to make strong; to restore to strength, give strength; to strengthen, sustain, encourage; to make strong, make bold, encourage; to make firm; to make rigid, make hard; (Hiphil); to make strong, strengthen; to make firm; to display strength; to make severe; to support; to repair; to prevail, prevail upon; to have or take or keep hold of, retain, hold up, sustain, support; to hold, contain; (Hithpael); to strengthen oneself; to put forth strength, use one's strength; to withstand; to hold strongly with)",
+  "definition": "strengthen/support/encourage; to strengthen, prevail, harden, be strong, become strong, be courageous, be firm, grow firm, be resolute, be sore ((Qal); to be strong, grow strong (to prevail, prevail upon; to be firm, be caught fast, be secure; to press, be urgent; to grow stout, grow rigid, grow hard (bad sense); to be severe, be grievous); to strengthen; (Piel); to make strong; to restore to strength, give strength; to strengthen, sustain, encourage; to make strong, make bold, encourage; to make firm; to make rigid, make hard; (Hiphil); to make strong, strengthen; to make firm; to display strength; to make severe; to support; to repair; to prevail, prevail upon; to have or take or keep hold of, retain, hold up, sustain, support; to hold, contain; (Hithpael); to strengthen oneself; to put forth strength, use one's strength; to withstand; to hold strongly with)",
   "verse": "",
   "source": "stepbible-tbesh",
-  "senses": [
-   {
-    "text": ": strengthen/support/encourage"
-   },
-   {
-    "text": "to strengthen, prevail, harden, be strong, become strong, be courageous, be firm, grow firm, be resolute, be sore",
-    "children": [
-     {
-      "text": "(Qal)"
-     },
-     {
-      "text": "to be strong, grow strong",
-      "children": [
-       {
-        "text": "to prevail, prevail upon"
-       },
-       {
-        "text": "to be firm, be caught fast, be secure"
-       },
-       {
-        "text": "to press, be urgent"
-       },
-       {
-        "text": "to grow stout, grow rigid, grow hard (bad sense)"
-       },
-       {
-        "text": "to be severe, be grievous"
-       }
-      ]
-     },
-     {
-      "text": "to strengthen"
-     },
-     {
-      "text": "(Piel)"
-     },
-     {
-      "text": "to make strong"
-     },
-     {
-      "text": "to restore to strength, give strength"
-     },
-     {
-      "text": "to strengthen, sustain, encourage"
-     },
-     {
-      "text": "to make strong, make bold, encourage"
-     },
-     {
-      "text": "to make firm"
-     },
-     {
-      "text": "to make rigid, make hard"
-     },
-     {
-      "text": "(Hiphil)"
-     },
-     {
-      "text": "to make strong, strengthen"
-     },
-     {
-      "text": "to make firm"
-     },
-     {
-      "text": "to display strength"
-     },
-     {
-      "text": "to make severe"
-     },
-     {
-      "text": "to support"
-     },
-     {
-      "text": "to repair"
-     },
-     {
-      "text": "to prevail, prevail upon"
-     },
-     {
-      "text": "to have or take or keep hold of, retain, hold up, sustain, support"
-     },
-     {
-      "text": "to hold, contain"
-     },
-     {
-      "text": "(Hithpael)"
-     },
-     {
-      "text": "to strengthen oneself"
-     },
-     {
-      "text": "to put forth strength, use one's strength"
-     },
-     {
-      "text": "to withstand"
-     },
-     {
-      "text": "to hold strongly with"
-     }
-    ]
-   }
-  ]
+  "senses": [{"text": "strengthen/support/encourage"}, {"text": "to strengthen, prevail, harden, be strong, become strong, be courageous, be firm, grow firm, be resolute, be sore", "children": [{"text": "(Qal)"}, {"text": "to be strong, grow strong", "children": [{"text": "to prevail, prevail upon"}, {"text": "to be firm, be caught fast, be secure"}, {"text": "to press, be urgent"}, {"text": "to grow stout, grow rigid, grow hard (bad sense)"}, {"text": "to be severe, be grievous"}]}, {"text": "to strengthen"}, {"text": "(Piel)"}, {"text": "to make strong"}, {"text": "to restore to strength, give strength"}, {"text": "to strengthen, sustain, encourage"}, {"text": "to make strong, make bold, encourage"}, {"text": "to make firm"}, {"text": "to make rigid, make hard"}, {"text": "(Hiphil)"}, {"text": "to make strong, strengthen"}, {"text": "to make firm"}, {"text": "to display strength"}, {"text": "to make severe"}, {"text": "to support"}, {"text": "to repair"}, {"text": "to prevail, prevail upon"}, {"text": "to have or take or keep hold of, retain, hold up, sustain, support"}, {"text": "to hold, contain"}, {"text": "(Hithpael)"}, {"text": "to strengthen oneself"}, {"text": "to put forth strength, use one's strength"}, {"text": "to withstand"}, {"text": "to hold strongly with"}]}]
  },
  "H2389": {
   "translit": "ḥāzāq",
@@ -84874,7 +84749,7 @@
  },
  "H2483": {
   "translit": "ḥŏlî",
-  "original": "חָלָה",
+  "original": "חֳלִי",
   "lang": "hebrew",
   "definition": "sickness",
   "verse": "",
@@ -96318,55 +96193,10 @@
   "translit": "yāṣā'",
   "original": "יָצָא",
   "lang": "hebrew",
-  "definition": ": come/go_out/escape; to go out, come out, exit, go forth ((Qal); to go or come out or forth, depart; to go forth (to a place); to go forward, proceed to (to or toward something); to come or go forth (with purpose or for result); to come out of; (Hiphil); to cause to go or come out, bring out, lead out; to bring out of; to lead out; to deliver; (Hophal) to be brought out or forth)",
+  "definition": "come/go_out/escape; to go out, come out, exit, go forth ((Qal); to go or come out or forth, depart; to go forth (to a place); to go forward, proceed to (to or toward something); to come or go forth (with purpose or for result); to come out of; (Hiphil); to cause to go or come out, bring out, lead out; to bring out of; to lead out; to deliver; (Hophal) to be brought out or forth)",
   "verse": "",
   "source": "stepbible-tbesh",
-  "senses": [
-   {
-    "text": ": come/go_out/escape"
-   },
-   {
-    "text": "to go out, come out, exit, go forth",
-    "children": [
-     {
-      "text": "(Qal)"
-     },
-     {
-      "text": "to go or come out or forth, depart"
-     },
-     {
-      "text": "to go forth (to a place)"
-     },
-     {
-      "text": "to go forward, proceed to (to or toward something)"
-     },
-     {
-      "text": "to come or go forth (with purpose or for result)"
-     },
-     {
-      "text": "to come out of"
-     },
-     {
-      "text": "(Hiphil)"
-     },
-     {
-      "text": "to cause to go or come out, bring out, lead out"
-     },
-     {
-      "text": "to bring out of"
-     },
-     {
-      "text": "to lead out"
-     },
-     {
-      "text": "to deliver"
-     },
-     {
-      "text": "(Hophal) to be brought out or forth"
-     }
-    ]
-   }
-  ]
+  "senses": [{"text": "come/go_out/escape"}, {"text": "to go out, come out, exit, go forth", "children": [{"text": "(Qal)"}, {"text": "to go or come out or forth, depart"}, {"text": "to go forth (to a place)"}, {"text": "to go forward, proceed to (to or toward something)"}, {"text": "to come or go forth (with purpose or for result)"}, {"text": "to come out of"}, {"text": "(Hiphil)"}, {"text": "to cause to go or come out, bring out, lead out"}, {"text": "to bring out of"}, {"text": "to lead out"}, {"text": "to deliver"}, {"text": "(Hophal) to be brought out or forth"}]}]
  },
  "H3319": {
   "translit": "yᵊṣā'",
@@ -98110,13 +97940,15 @@
  },
  "H3442": {
   "translit": "yēšûaʿ",
-  "original": "יְהוֹשׁוּעַ",
+  "original": "יֵשׁוּעַ",
   "lang": "hebrew",
   "definition": "A man living at the time of Divided Monarchy, first mentioned at 1Ch.24.11;; son of: Jozadak (H3136); § Jeshua = \"he is saved\"; son of Nun of the tribe of Ephraim and successor to Moses as the leader of the children of Israel; led the conquest of Canaan; son of Jehozadak and high priest after the restoration; a priest in the time of David who had charge of the 9th course; a Levite in the reign of Hezekiah; head of a Levitical house which returned from captivity in Babylon; father of a builder of the wall of Jerusalem in the time of Nehemiah; a town in southern Judah reinhabited by the people of Judah after the return from captivity",
   "verse": "",
   "source": "stepbible-tbesh",
   "description": "Jeshua was the head of a priestly family that returned to Jerusalem from the Babylonian exile.",
-  "description_source": "stepbible-tipnr"
+  "description_source": "stepbible-tipnr",
+  "senses": [{"text": "Jeshua (\"he is saved\"): a name used for several people and a town, not a single biography.", "children": [{"text": "Son of Nun, of the tribe of Ephraim; Moses' successor, who led the conquest of Canaan. Nehemiah 8:17 uses this short form of Joshua's name."}, {"text": "Son of Jehozadak; the high priest after the return from exile."}, {"text": "A priest in David's time, assigned the ninth priestly division."}, {"text": "A Levite during Hezekiah's reign."}, {"text": "Head of a Levitical house that returned from Babylonian captivity."}, {"text": "Father of a builder of Jerusalem's wall in Nehemiah's time."}, {"text": "A town in southern Judah resettled after the return from captivity; a place rather than a person."}]}],
+  "senses_source": "stepbible-tbesh; seven-part name outline, checked against OSHB Neh.8.17"
  },
  "H3443": {
   "translit": "yēšûaʿ",
@@ -98456,8 +98288,8 @@
   "description_source": "stepbible-tipnr"
  },
  "H3470": {
-  "translit": "yᵊšaʿyâ",
-  "original": "יָשַׁע",
+  "translit": "yᵊšaʿyāhû",
+  "original": "יְשַׁעְיָהוּ",
   "lang": "hebrew",
   "definition": "A prophet living at the time of Divided Monarchy, first mentioned at 2Ki.19.2;; son of: Amoz (H0531);; father of: Shear-jashub (H7610), Maher-shalal-hash-baz (H4122); Also named: Hēsaias (Ἡσαΐας \"Isaiah\" G2268); § Isaiah or Jesaiah or Jeshaiah = \"Jehovah has saved\"; the major prophet, son of Amoz, who prophesied concerning Judah and Jerusalem during the days of kings Uzziah, Jotham, Ahaz, and Hezekiah of Judah; author of the prophetic book by his name; tradition has it that he was sawn asunder in the trunk of a carob tree by king Manasseh and that this is the incident referred to in Heb 11:37; one of the 6 sons of Jeduthun; son of Rehabiah, a descendant of Moses through Gershom, and an ancestor of a Levite treasurer in the time of David",
   "verse": "",
@@ -119477,58 +119309,10 @@
   "translit": "mishpat",
   "original": "מִשְׁפָּט",
   "lang": "hebrew",
-  "definition": ": judgement/punishment; judgment, justice, ordinance (judgment; act of deciding a case; place, court, seat of judgment; process, procedure, litigation (before judges); case, cause (presented for judgment); sentence, decision (of judgment); execution (of judgment); time (of judgment); justice, right, rectitude (attributes of God or man); ordinance; decision (in law); right, privilege, due (legal); proper, fitting, measure, fitness, custom, manner, plan)",
+  "definition": "judgement/punishment; judgment, justice, ordinance (judgment; act of deciding a case; place, court, seat of judgment; process, procedure, litigation (before judges); case, cause (presented for judgment); sentence, decision (of judgment); execution (of judgment); time (of judgment); justice, right, rectitude (attributes of God or man); ordinance; decision (in law); right, privilege, due (legal); proper, fitting, measure, fitness, custom, manner, plan)",
   "verse": "Isaiah 5:7",
   "source": "stepbible-tbesh",
-  "senses": [
-   {
-    "text": ": judgement/punishment"
-   },
-   {
-    "text": "judgment, justice, ordinance",
-    "children": [
-     {
-      "text": "judgment"
-     },
-     {
-      "text": "act of deciding a case"
-     },
-     {
-      "text": "place, court, seat of judgment"
-     },
-     {
-      "text": "process, procedure, litigation (before judges)"
-     },
-     {
-      "text": "case, cause (presented for judgment)"
-     },
-     {
-      "text": "sentence, decision (of judgment)"
-     },
-     {
-      "text": "execution (of judgment)"
-     },
-     {
-      "text": "time (of judgment)"
-     },
-     {
-      "text": "justice, right, rectitude (attributes of God or man)"
-     },
-     {
-      "text": "ordinance"
-     },
-     {
-      "text": "decision (in law)"
-     },
-     {
-      "text": "right, privilege, due (legal)"
-     },
-     {
-      "text": "proper, fitting, measure, fitness, custom, manner, plan"
-     }
-    ]
-   }
-  ]
+  "senses": [{"text": "judgement/punishment"}, {"text": "judgment, justice, ordinance", "children": [{"text": "judgment"}, {"text": "act of deciding a case"}, {"text": "place, court, seat of judgment"}, {"text": "process, procedure, litigation (before judges)"}, {"text": "case, cause (presented for judgment)"}, {"text": "sentence, decision (of judgment)"}, {"text": "execution (of judgment)"}, {"text": "time (of judgment)"}, {"text": "justice, right, rectitude (attributes of God or man)"}, {"text": "ordinance"}, {"text": "decision (in law)"}, {"text": "right, privilege, due (legal)"}, {"text": "proper, fitting, measure, fitness, custom, manner, plan"}]}]
  },
  "H4942": {
   "translit": "mišpᵊṯayim",
@@ -135840,7 +135624,7 @@
   "translit": "ʿimmānû'ēl",
   "original": "עִמָּנוּאֵל",
   "lang": "hebrew",
-  "definition": "A man living at the time of Divided Monarchy, first mentioned at Isa.7.14;; son of: Joseph (G2501) and Mary (G3137);; brother of: James (G2385I), Joseph (G2500), Simon (G4613H) and Jude (G2455I); Also named: Emmanouēl (Ἐμμανουήλ \"Immanuel\" G1694); § Immanuel = \"God with us\" or \"with us is God\"; symbolic and prophetic name of the Messiah, the Christ, prophesying that He would be born of a virgin and would be 'God with us'",
+  "definition": "Immanuel = \"God with us\" or \"with us is God\"; symbolic and prophetic name of the Messiah, the Christ, prophesying that He would be born of a virgin and would be 'God with us'",
   "verse": "",
   "source": "stepbible-tbesh"
  },
@@ -148545,7 +148329,7 @@
   "translit": "qadosh",
   "original": "קָדוֹשׁ",
   "lang": "hebrew",
-  "definition": ": holy; sacred, holy, Holy One, saint, set apart",
+  "definition": "holy; sacred, holy, Holy One, saint, set apart",
   "verse": "Isaiah 6:3",
   "source": "stepbible-tbesh"
  },
@@ -153096,79 +152880,10 @@
   "translit": "ra'ah",
   "original": "רָאָה",
   "lang": "hebrew",
-  "definition": ": see/show; to see, look at, inspect, perceive, consider ((Qal); to see; to see, perceive; to see, have vision; to look at, see, regard, look after, see after, learn about, observe, watch, look upon, look out, find out; to see, observe, consider, look at, give attention to, discern, distinguish; to look at, gaze at; to provide, choose; (Niphal); to appear, present oneself; to be seen; to be visible; (Pual) to be seen; (Hiphil); to cause to see, show; to cause to look intently at, behold, cause to gaze at; (Hophal); to be caused to see, be shown; to be exhibited to; (Hithpael) to look at each other, face)",
+  "definition": "see/show; to see, look at, inspect, perceive, consider ((Qal); to see; to see, perceive; to see, have vision; to look at, see, regard, look after, see after, learn about, observe, watch, look upon, look out, find out; to see, observe, consider, look at, give attention to, discern, distinguish; to look at, gaze at; to provide, choose; (Niphal); to appear, present oneself; to be seen; to be visible; (Pual) to be seen; (Hiphil); to cause to see, show; to cause to look intently at, behold, cause to gaze at; (Hophal); to be caused to see, be shown; to be exhibited to; (Hithpael) to look at each other, face)",
   "verse": "Genesis 22:14",
   "source": "stepbible-tbesh",
-  "senses": [
-   {
-    "text": ": see/show"
-   },
-   {
-    "text": "to see, look at, inspect, perceive, consider",
-    "children": [
-     {
-      "text": "(Qal)"
-     },
-     {
-      "text": "to see"
-     },
-     {
-      "text": "to see, perceive"
-     },
-     {
-      "text": "to see, have vision"
-     },
-     {
-      "text": "to look at, see, regard, look after, see after, learn about, observe, watch, look upon, look out, find out"
-     },
-     {
-      "text": "to see, observe, consider, look at, give attention to, discern, distinguish"
-     },
-     {
-      "text": "to look at, gaze at"
-     },
-     {
-      "text": "to provide, choose"
-     },
-     {
-      "text": "(Niphal)"
-     },
-     {
-      "text": "to appear, present oneself"
-     },
-     {
-      "text": "to be seen"
-     },
-     {
-      "text": "to be visible"
-     },
-     {
-      "text": "(Pual) to be seen"
-     },
-     {
-      "text": "(Hiphil)"
-     },
-     {
-      "text": "to cause to see, show"
-     },
-     {
-      "text": "to cause to look intently at, behold, cause to gaze at"
-     },
-     {
-      "text": "(Hophal)"
-     },
-     {
-      "text": "to be caused to see, be shown"
-     },
-     {
-      "text": "to be exhibited to"
-     },
-     {
-      "text": "(Hithpael) to look at each other, face"
-     }
-    ]
-   }
-  ]
+  "senses": [{"text": "see/show"}, {"text": "to see, look at, inspect, perceive, consider", "children": [{"text": "(Qal)"}, {"text": "to see"}, {"text": "to see, perceive"}, {"text": "to see, have vision"}, {"text": "to look at, see, regard, look after, see after, learn about, observe, watch, look upon, look out, find out"}, {"text": "to see, observe, consider, look at, give attention to, discern, distinguish"}, {"text": "to look at, gaze at"}, {"text": "to provide, choose"}, {"text": "(Niphal)"}, {"text": "to appear, present oneself"}, {"text": "to be seen"}, {"text": "to be visible"}, {"text": "(Pual) to be seen"}, {"text": "(Hiphil)"}, {"text": "to cause to see, show"}, {"text": "to cause to look intently at, behold, cause to gaze at"}, {"text": "(Hophal)"}, {"text": "to be caused to see, be shown"}, {"text": "to be exhibited to"}, {"text": "(Hithpael) to look at each other, face"}]}]
  },
  "H7201": {
   "translit": "rā'â",
@@ -165617,46 +165332,10 @@
   "translit": "shalom",
   "original": "שָׁלוֹם",
   "lang": "hebrew",
-  "definition": ": peace; completeness, soundness, welfare, peace (completeness (in number); safety, soundness (in body); welfare, health, prosperity; peace, quiet, tranquillity, contentment; peace, friendship; of human relationships; with God especially in covenant relationship; peace (from war); peace (as adjective))",
+  "definition": "peace; completeness, soundness, welfare, peace (completeness (in number); safety, soundness (in body); welfare, health, prosperity; peace, quiet, tranquillity, contentment; peace, friendship; of human relationships; with God especially in covenant relationship; peace (from war); peace (as adjective))",
   "verse": "Numbers 6:26",
   "source": "stepbible-tbesh",
-  "senses": [
-   {
-    "text": ": peace"
-   },
-   {
-    "text": "completeness, soundness, welfare, peace",
-    "children": [
-     {
-      "text": "completeness (in number)"
-     },
-     {
-      "text": "safety, soundness (in body)"
-     },
-     {
-      "text": "welfare, health, prosperity"
-     },
-     {
-      "text": "peace, quiet, tranquillity, contentment"
-     },
-     {
-      "text": "peace, friendship"
-     },
-     {
-      "text": "of human relationships"
-     },
-     {
-      "text": "with God especially in covenant relationship"
-     },
-     {
-      "text": "peace (from war)"
-     },
-     {
-      "text": "peace (as adjective)"
-     }
-    ]
-   }
-  ]
+  "senses": [{"text": "peace"}, {"text": "completeness, soundness, welfare, peace", "children": [{"text": "completeness (in number)"}, {"text": "safety, soundness (in body)"}, {"text": "welfare, health, prosperity"}, {"text": "peace, quiet, tranquillity, contentment"}, {"text": "peace, friendship"}, {"text": "of human relationships"}, {"text": "with God especially in covenant relationship"}, {"text": "peace (from war)"}, {"text": "peace (as adjective)"}]}]
  },
  "H7966": {
   "translit": "šillûm",
@@ -168228,74 +167907,12 @@
  },
  "H8104": {
   "translit": "šāmar",
-  "original": "שִׁמְצָה",
+  "original": "שָׁמַר",
   "lang": "hebrew",
-  "definition": ": obey/observe; to keep, guard, observe, give heed ((Qal); to keep, have charge of; to keep, guard, keep watch and ward, protect, save life (watch, watchman (participle)); to watch for, wait for; to watch, observe; to keep, retain, treasure up (in memory); to keep (within bounds), restrain; to observe, celebrate, keep (sabbath or covenant or commands), perform (vow); to keep, preserve, protect; to keep, reserve; (Niphal); to be on one's guard, take heed, take care, beware; to keep oneself, refrain, abstain; to be kept, be guarded; (Piel) to keep, pay heed; (Hithpael) to keep oneself from)",
+  "definition": "obey/observe; to keep, guard, observe, give heed ((Qal); to keep, have charge of; to keep, guard, keep watch and ward, protect, save life (watch, watchman (participle)); to watch for, wait for; to watch, observe; to keep, retain, treasure up (in memory); to keep (within bounds), restrain; to observe, celebrate, keep (sabbath or covenant or commands), perform (vow); to keep, preserve, protect; to keep, reserve; (Niphal); to be on one's guard, take heed, take care, beware; to keep oneself, refrain, abstain; to be kept, be guarded; (Piel) to keep, pay heed; (Hithpael) to keep oneself from)",
   "verse": "",
   "source": "stepbible-tbesh",
-  "senses": [
-   {
-    "text": ": obey/observe"
-   },
-   {
-    "text": "to keep, guard, observe, give heed",
-    "children": [
-     {
-      "text": "(Qal)"
-     },
-     {
-      "text": "to keep, have charge of"
-     },
-     {
-      "text": "to keep, guard, keep watch and ward, protect, save life",
-      "children": [
-       {
-        "text": "watch, watchman (participle)"
-       }
-      ]
-     },
-     {
-      "text": "to watch for, wait for"
-     },
-     {
-      "text": "to watch, observe"
-     },
-     {
-      "text": "to keep, retain, treasure up (in memory)"
-     },
-     {
-      "text": "to keep (within bounds), restrain"
-     },
-     {
-      "text": "to observe, celebrate, keep (sabbath or covenant or commands), perform (vow)"
-     },
-     {
-      "text": "to keep, preserve, protect"
-     },
-     {
-      "text": "to keep, reserve"
-     },
-     {
-      "text": "(Niphal)"
-     },
-     {
-      "text": "to be on one's guard, take heed, take care, beware"
-     },
-     {
-      "text": "to keep oneself, refrain, abstain"
-     },
-     {
-      "text": "to be kept, be guarded"
-     },
-     {
-      "text": "(Piel) to keep, pay heed"
-     },
-     {
-      "text": "(Hithpael) to keep oneself from"
-     }
-    ]
-   }
-  ]
+  "senses": [{"text": "obey/observe"}, {"text": "to keep, guard, observe, give heed", "children": [{"text": "(Qal)"}, {"text": "to keep, have charge of"}, {"text": "to keep, guard, keep watch and ward, protect, save life", "children": [{"text": "watch, watchman (participle)"}]}, {"text": "to watch for, wait for"}, {"text": "to watch, observe"}, {"text": "to keep, retain, treasure up (in memory)"}, {"text": "to keep (within bounds), restrain"}, {"text": "to observe, celebrate, keep (sabbath or covenant or commands), perform (vow)"}, {"text": "to keep, preserve, protect"}, {"text": "to keep, reserve"}, {"text": "(Niphal)"}, {"text": "to be on one's guard, take heed, take care, beware"}, {"text": "to keep oneself, refrain, abstain"}, {"text": "to be kept, be guarded"}, {"text": "(Piel) to keep, pay heed"}, {"text": "(Hithpael) to keep oneself from"}]}]
  },
  "H8105": {
   "translit": "šemer",
@@ -176803,7 +176420,7 @@
   "base": "H1212"
  },
  "H3725_alt_kippur": {
-  "original": "כְּפוֹר",
+  "original": "כִּפֻּר",
   "translit": "kippur",
   "lang": "hebrew",
   "definition": "atonement, expiation",

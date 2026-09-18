@@ -11,7 +11,10 @@
 
 <div id="{{ $id }}" class="flashcard-container"></div>
 
+{{ if not (.Page.Store.Get "cfmFlashcardsScriptLoaded") }}
 <script src="/js/flashcards.js"></script>
+{{ .Page.Store.Set "cfmFlashcardsScriptLoaded" true }}
+{{ end }}
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     initFlashcards('{{ $id }}', '{{ $section }}');

@@ -821,6 +821,13 @@ body {
     body { background: white; }
 }
 
+@media (min-width: 601px) and (max-width: 1100px) {
+    .nav-top { gap: 12px; }
+    .nav-right { min-width: 0; }
+    .nav-links { flex-wrap: wrap; justify-content: flex-end; }
+    .nav-search { max-width: 100%; }
+}
+
 /* === Tablet (601–768px) — compact nav but keep links visible === */
 @media (max-width: 768px) {
     .nav-top { padding: 10px 16px; }
