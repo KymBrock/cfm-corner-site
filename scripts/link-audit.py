@@ -101,7 +101,27 @@ def get_known_translits(lexicon):
             translits.add(t.lower().replace("'", "\u2019"))
     return translits
 
-def audit_file(fpath, known_translits):
+def load_translit_exemptions():
+    """Load narrowly scoped, reviewed non-link decisions for the audit.
+
+    An exemption must name the generated week, file, and exact display term, with
+    a reason.  This prevents the audit from converting a known false lexical
+    identity into an apparent fix while keeping all other occurrences auditable.
+    """
+    path = f'{SITE_ROOT}/static/data/link-audit-exemptions.json'
+    try:
+        with open(path, encoding='utf-8') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return {}
+
+def translit_exemption_for(fpath, term, exemptions):
+    week = os.path.basename(os.path.dirname(fpath))
+    filename = os.path.basename(fpath)
+    return exemptions.get(week, {}).get(filename, {}).get(term)
+
+def audit_file(fpath, known_translits, exemptions=None):
+    exemptions = exemptions or {}
     with open(fpath, encoding='utf-8') as f:
         content = f.read()
 
@@ -144,14 +164,16 @@ def audit_file(fpath, known_translits):
         context = stripped[max(0, m.start()-50):m.end()+50].replace('\n', ' ').strip()
         issues.append(('BARE SCRIPTURE', m.group(), context))
 
-    # 3. Bare <em> with known Hebrew transliterations
-    for m in re.finditer(r'<em>([^<]{2,35})</em>', stripped):
-        term = m.group(1).strip().lower().replace("'", "\u2019")
+    # 3. Bare <em> with known Hebrew transliterations.
+    for m in re.finditer(r'<em(?P<attrs>[^>]*)>(?P<term>[^<]{2,35})</em>', stripped):
+        if translit_exemption_for(fpath, m.group('term'), exemptions):
+            continue
+        term = m.group('term').strip().lower().replace("'", "\u2019")
         if term in known_translits:
             context = stripped[max(0, m.start()-40):m.end()+40].replace('\n', ' ').strip()
             # skip terms already carried by the letter mechanism (see RESIDUAL note)
             if 'term-ref' not in context and 'data-letter' not in context:
-                issues.append(('BARE TRANSLIT', m.group(1), context))
+                issues.append(('BARE TRANSLIT', m.group('term'), context))
 
     # 4. BLB lexicon links missing data-lexicon attribute
     for m in re.finditer(r'<a [^>]*href="[^"]*blueletterbible\.org/lexicon/[^"]*"[^>]*>.*?</a>', content, flags=re.DOTALL):
@@ -343,6 +365,7 @@ def main():
 
     lexicon = load_lexicon()
     known_translits = get_known_translits(lexicon)
+    exemptions = load_translit_exemptions()
 
     # ── Determine which HTML files to scan ──
     file_types = []
@@ -403,7 +426,7 @@ def main():
         week = fpath.split('/')[-2]
         fname = os.path.basename(fpath)
         label = f'{week}/{fname}'
-        issues = audit_file(fpath, known_translits)
+        issues = audit_file(fpath, known_translits, exemptions)
         if issues:
             files_with_issues += 1
             print(f'\n{"="*60}')
@@ -436,7 +459,7 @@ def main():
     # positives in the DEFECTS column — and a defect count that is never zero teaches
     # the reader to ignore it, which is the exact failure this split was made to end.
     from collections import Counter
-    kinds = Counter(k for f in files for k, _, _ in audit_file(f, known_translits))
+    kinds = Counter(k for f in files for k, _, _ in audit_file(f, known_translits, exemptions))
     residual = sum(n for k, n in kinds.items() if k in RESIDUAL)
     defects  = sum(n for k, n in kinds.items() if k not in RESIDUAL)
 
@@ -472,7 +495,7 @@ def main():
 
         fixed_files = 0
         for fpath in files:
-            issues = audit_file(fpath, known_translits)
+            issues = audit_file(fpath, known_translits, exemptions)
             if not issues:
                 continue
 
@@ -499,7 +522,7 @@ def main():
         print('\n── Re-auditing after fix ──\n')
         remaining = 0
         for fpath in files:
-            issues = audit_file(fpath, known_translits)
+            issues = audit_file(fpath, known_translits, exemptions)
             if issues:
                 week = fpath.split('/')[-2]
                 fname = os.path.basename(fpath)

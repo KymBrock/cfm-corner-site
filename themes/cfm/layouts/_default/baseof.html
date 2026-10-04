@@ -202,7 +202,7 @@
         text-decoration-thickness: 1px;
         text-underline-offset: 2px;
       }
-      a[href*="blueletterbible.org/"], a[href*="sefaria.org/"] { cursor: help; }
+      a[href*="blueletterbible.org/"], a[href*="sefaria.org/"][href*="q="] { cursor: help; }
       .scripture-ref {
         color: var(--sage-dark, #4a6b52);
         cursor: help;
@@ -1167,7 +1167,10 @@
       function getTargetAnchor(target) {
         // [data-letter] has no href to match on — a letter has nowhere to link, which is
         // the whole point. It must be named here or the popup never fires for it.
-        return target && target.closest ? target.closest('[data-ref], [data-letter], a[href*="blueletterbible.org/"], a[href*="sefaria.org/"], a[href*="churchofjesuschrist.org/study/scriptures/"]') : null;
+        var el = target && target.closest ? target.closest('[data-ref], [data-letter], a[href*="blueletterbible.org/"], a[href*="sefaria.org/"], a[href*="churchofjesuschrist.org/study/scriptures/"]') : null;
+        // Source citations have no grammar query; let their normal links open directly.
+        if (el && el.href && /sefaria\.org\//i.test(el.href) && !parseSefariaQuery(el.href)) return null;
+        return el;
       }
 
       // Desktop hover — guard against events originating inside the popup itself
