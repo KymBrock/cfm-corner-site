@@ -137,7 +137,7 @@ The fourth cup is then drunk, and the evening ends with what Edersheim calls "th
 
 Psalm 118 — the climax of the Hallel — contains the very words the crowds had shouted days earlier at His triumphal entry: "Blessed be he that cometh in the name of the Lord" (Psalm 118:26). And the declaration: "The stone which the builders refused is become the head stone of the corner" (Psalm 118:22). The rejected one would be exalted — but first, He would walk from this table into the garden.
 
-*Sources: Edersheim, The Temple: Its Ministry and Services, Ch. 11-12; POM Extract 16*
+*Sources: Edersheim, The Temple: Its Ministry and Services, Ch. 11-12*
 
 </div>
 </details>
