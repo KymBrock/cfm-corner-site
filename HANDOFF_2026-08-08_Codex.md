@@ -161,6 +161,6 @@ for s in reading-job-as-a-poem how-hebrew-poems-are-built; do for k in icon hero
 - **Never cite Wikipedia** — use it only to find the primary source, then link that.
 - **Don't flip `current:` flags** except as a deliberate deployment step with Kymber's go.
 - **Always `git diff` and review before committing; show the diff.** Push to origin after committing (backup).
-- **POM ↔ CFM firewall:** keep the "Parable of Music" project entirely out of CFM.
+- **Project firewall:** keep Kymber's separate private project entirely out of CFM; see the scope section at the top of `CLAUDE.md`.
 
 *End of handoff.*

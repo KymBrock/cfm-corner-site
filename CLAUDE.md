@@ -1,16 +1,14 @@
 # Claude Code Safety Rules for cfm-corner-site
 
-## ⚠️ Project scope & firewall — CFM Corner ≠ The Parable of Music
+## ⚠️ Project scope & firewall — CFM Corner only
 
 This repo is **CFM Corner** (free, mainstream Come-Follow-Me scripture study, cfmcorner.com).
-**The Parable of Music / Alphabet Book** is a **separate, exploratory, premium** project — its
-master map is `~/Developer/alphabet-music-study/WHERE-EVERYTHING-IS.md` (read it before any POM
-work). Do **NOT** import POM thesis material into CFM: the letter↔constellation mapping, the
-`4-1-5-2-6-3-7` pattern, ChromaKeys / the color-key system, the banded "readings," or the
-**Parable of Music name/brand** (CFM→POM is *total silence* — no funnel, no credit). Shared
-*attested* infrastructure only (Translation Hub dictionaries, standard etymologies,
-Proto-Sinaitic script facts, core music theory). Devotional music *metaphor* is author's
-discretion; *recovery/origin* claims are not.
+Kymber also has a **separate, private project**. Its master map, which lists exactly what may not
+cross into CFM, is `~/Developer/alphabet-music-study/WHERE-EVERYTHING-IS.md`: read it before any
+cross-project work. Nothing from that project is imported into CFM, and CFM never names, links,
+promotes or credits it (*total silence*: no funnel, no credit). Shared *attested* infrastructure
+only (Translation Hub dictionaries, standard etymologies, Proto-Sinaitic script facts, core music
+theory). Devotional music *metaphor* is author's discretion; *recovery/origin* claims are not.
 
 ⛔ CRITICAL SAFETY RULES — DO NOT VIOLATE ⛔
 
