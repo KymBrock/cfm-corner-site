@@ -1,0 +1,192 @@
+<div class="cfm-insights" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+
+    <!-- Expand/Collapse Controls -->
+    <div style="text-align: center; margin: 20px 0 30px 0;">
+        <button onclick="expandAllInsights()" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 0 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">&#x229E; Expand All</button>
+        <button onclick="collapseAllInsights()" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-family: Georgia, serif; font-size: 1.05em; margin: 0 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">&#x229F; Collapse All</button>
+    </div>
+
+    <!-- Content Sections -->
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>First, a Word About Where We Are</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">Last week was <a href="https://www.blueletterbible.org/kjv/isa/40/1/s_719001" target="_blank" data-ref="Isaiah 40">Isaiah 40–49</a>. It opened with comfort announced twice, watched Babylon's gods loaded onto tired animals, and ended with a promise about hands.</p>
+<p style="margin-bottom: 15px;">This week is <a href="https://www.blueletterbible.org/kjv/isa/50/1/s_729001" target="_blank" data-ref="Isaiah 50">Isaiah 50</a> to 57, and the first thing to notice is that there are no gaps. Most weeks of this reading skip — three chapters here, then a jump, then five more. <strong>This week runs straight through, eight chapters in order.</strong> You can read it as one continuous argument, because that is what it is. The <a href="#sg-file-01_Week_Overview" onclick="var h=document.getElementById(&#x27;sg-file-01_Week_Overview&#x27;);if(!h)return true;var t=document.querySelector(&#x27;.tab-btn[onclick&#42;=&quot;study-guide&quot;]&#x27;);if(t)t.click();var b=h.querySelector(&#x27;.sg-action-btn&#x27;);if(b)b.click();var d=document.getElementById(&#x27;sg-file-01_Week_Overview&#x27;)||h;d.style.scrollMarginTop=&#x27;120px&#x27;;d.scrollIntoView({block:&#x27;start&#x27;});return false;">Overview</a> follows that argument chapter by chapter.</p>
+<p style="margin-bottom: 15px;">In the middle of it sits <a href="https://www.blueletterbible.org/kjv/isa/53/1/s_732001" target="_blank" data-ref="Isaiah 53">Isaiah 53</a>.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Spoiler Alert: You Already Know the Answer</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">There is an Ethiopian official in Acts riding home from Jerusalem with a scroll open on his lap. Philip joins him, and the official asks: <em>"of whom speaketh the prophet this? of himself, or of some other man?"</em> (<a href="https://www.blueletterbible.org/kjv/act/8/27-34/s_1026027" target="_blank" data-ref="Acts 8:27-34">Acts 8:27–34</a>)</p>
+<p style="margin-bottom: 15px;">He did not know. <strong>You do.</strong> Almost everyone who opens <a href="https://www.blueletterbible.org/kjv/isa/53/1/s_732001" target="_blank" data-ref="Isaiah 53">Isaiah 53</a> this week has heard it read at Easter, or sung in <em>Messiah</em>, or quoted in a testimony meeting. The chapter's surprise was spent before you reached it.</p>
+<p style="margin-bottom: 15px;">That is worth naming, because it changes what the week can give you. <strong>You are not going to discover who the Servant is. What is still available is everything familiarity skates over</strong> — and in this chapter that turns out to be most of the detail.</p>
+<p style="margin-bottom: 15px;">Here is one worth stopping on. The two details Isaiah gives at the beginning of his portrait are not what a reader expects. He has <em>"no form nor comeliness… no beauty that we should desire him."</em> Isaiah is not saying that the Servant lacked worth or that He was ugly. He is saying that nothing in His outward appearance made people desire Him or recognize His importance. He did not come with the visible signals people often associate with importance: wealth, power, spectacle, status, or a presence that makes someone impossible to ignore. He could be overlooked.</p>
+<p style="margin-bottom: 15px;">And when He was afflicted, <em>"he opened not his mouth."</em> The portrait is neither shallow nor weak; it overturns expectation. The One who bears griefs and carries sorrows comes without display and receives contempt without defending Himself. He can be overlooked or ignored unless we learn to see Him—and choose to pay attention.</p>
+<p style="margin-bottom: 15px;">Knowing how a passage ends is not the same as studying it. A chapter you have already settled is frequently the hardest kind to read slowly, and this one rewards the added effort.</p>
+<p style="margin-bottom: 15px;"><em>(The four ancient answers to the Ethiopian's question — and they are genuinely four — are in <a href="#sg-file-05_Jewish_Perspective" onclick="var h=document.getElementById(&#x27;sg-file-05_Jewish_Perspective&#x27;);if(!h)return true;var t=document.querySelector(&#x27;.tab-btn[onclick&#42;=&quot;study-guide&quot;]&#x27;);if(t)t.click();var b=h.querySelector(&#x27;.sg-action-btn&#x27;);if(b)b.click();var d=document.getElementById(&#x27;sg-file-05_Jewish_Perspective&#x27;)||h;d.style.scrollMarginTop=&#x27;120px&#x27;;d.scrollIntoView({block:&#x27;start&#x27;});return false;">Jewish Perspective</a>, section 3.)</em></p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>The Word That Runs Both Ways</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">Here is the discovery of the week, and it is one root.</p>
+<p style="margin-bottom: 15px;">In <a href="https://www.blueletterbible.org/kjv/isa/53/5/s_732005" target="_blank" data-ref="Isaiah 53:5">Isaiah 53:5</a> the King James says the Servant was <strong>bruised</strong> for our iniquities. In <a href="https://www.blueletterbible.org/kjv/isa/57/15/s_736015" target="_blank" data-ref="Isaiah 57:15">Isaiah 57:15</a> it says the high and lofty One dwells with the person of a <strong>contrite</strong> spirit.</p>
+<p style="margin-bottom: 15px;"><strong>The shared Hebrew root is <a href="https://www.blueletterbible.org/lexicon/h1792/kjv/wlc/0-1/" target="_blank" data-lexicon="to crush, be crushed, be contrite, be broken ((Niphal); to be crushed; to be contrite (fig.); (Piel) to crush; (Pual); to be crushed, be shattered; to be made contrite; (Hithpael) to allow oneself to be crushed)" data-strongs="H1792" data-translit="dāḵā&#x27;" data-original="דָּכָא" data-lang="hebrew" data-verse=""><em>dāḵā'</em></a> (דָּכָא), “to crush.”</strong> <a href="#sg-file-04_Word_Studies" onclick="var h=document.getElementById(&#x27;sg-file-04_Word_Studies&#x27;);if(!h)return true;var t=document.querySelector(&#x27;.tab-btn[onclick&#42;=&quot;study-guide&quot;]&#x27;);if(t)t.click();var b=h.querySelector(&#x27;.sg-action-btn&#x27;);if(b)b.click();var d=document.getElementById(&#x27;sg-file-04_Word_Studies&#x27;)||h;d.style.scrollMarginTop=&#x27;120px&#x27;;d.scrollIntoView({block:&#x27;start&#x27;});return false;">Word Studies</a>, study 3, sets out the evidence and the bounds; what matters here is what it does to the week.</p>
+<p style="margin-bottom: 15px;">The root carries that meaning into both verses in different forms: <a href="https://www.blueletterbible.org/kjv/isa/53/1/s_732001" target="_blank" data-ref="Isaiah 53">Isaiah 53</a> uses a verb, for what was done to Him, and <a href="https://www.blueletterbible.org/kjv/isa/57/1/s_736001" target="_blank" data-ref="Isaiah 57">Isaiah 57</a> an adjective and a verb form side by side, for the people God chooses to live with. <strong><a href="https://www.blueletterbible.org/kjv/isa/53/1/s_732001" target="_blank" data-ref="Isaiah 53">Isaiah 53</a> names the Servant’s crushing, and <a href="https://www.blueletterbible.org/kjv/isa/57/1/s_736001" target="_blank" data-ref="Isaiah 57">Isaiah 57</a> says God keeps house with the crushed</strong> — and it is one vocabulary, not two.</p>
+<p style="margin-bottom: 15px;">That connection is more than a play on words. <a href="https://www.blueletterbible.org/kjv/isa/53/5/s_732005" target="_blank" data-ref="Isaiah 53:5">Isaiah 53:5</a> says the Servant was <strong>bruised</strong>—crushed—for our iniquities; <a href="https://www.blueletterbible.org/kjv/isa/57/15/s_736015" target="_blank" data-ref="Isaiah 57:15">Isaiah 57:15</a> says that God dwells with the <strong>contrite</strong>—crushed—and humble in spirit. English gives us two different words, but the Hebrew joins them. So when <a href="https://www.blueletterbible.org/kjv/isa/57/15/s_736015" target="_blank" data-ref="Isaiah 57:15">Isaiah 57:15</a> describes a spirit that has truly been broken, <a href="https://www.blueletterbible.org/kjv/isa/53/5/s_732005" target="_blank" data-ref="Isaiah 53:5">Isaiah 53:5</a> is not only someone else’s suffering for us to admire from a distance. It tells us that the One who was crushed for our iniquities is not distant from the crushed. God draws near to revive them.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>A Promise Larger Than the Verdict You Fear</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;"><a href="https://www.blueletterbible.org/kjv/isa/56/1/s_735001" target="_blank" data-ref="Isaiah 56">Isaiah 56</a> begins with a promise: <em>"Keep ye judgment, and do justice: for my salvation is near to come, and my righteousness to be revealed."</em> Before the chapter speaks to the foreigner and the eunuch, it announces that God’s saving work is near. That promise matters for people who had reason to fear they did not belong.</p>
+<blockquote style="border-left: 4px solid #7c9885; padding-left: 20px; margin: 20px 0; font-style: italic; color: #4a4a4a;">
+<p><em>"neither let the son of the stranger… speak, saying, The LORD hath utterly separated me from his people: neither let the eunuch say, Behold, I am a dry tree."</em></p>
+</blockquote>
+<p style="margin-bottom: 15px;">These are not words Isaiah gives in order to shame either man for naming his situation. They are the fears the chapter answers: one fears permanent separation from God’s people; the other sees a future with no descendants and calls himself a dry tree.</p>
+<p style="margin-bottom: 15px;">The circumstances behind those fears were real. The law bore on both men, and <a href="#sg-file-02_Historical_Cultural_Context" onclick="var h=document.getElementById(&#x27;sg-file-02_Historical_Cultural_Context&#x27;);if(!h)return true;var t=document.querySelector(&#x27;.tab-btn[onclick&#42;=&quot;study-guide&quot;]&#x27;);if(t)t.click();var b=h.querySelector(&#x27;.sg-action-btn&#x27;);if(b)b.click();var d=document.getElementById(&#x27;sg-file-02_Historical_Cultural_Context&#x27;)||h;d.style.scrollMarginTop=&#x27;120px&#x27;;d.scrollIntoView({block:&#x27;start&#x27;});return false;">Historical & Cultural Context</a> sets out how. Isaiah does not ask them to pretend otherwise. He asks them to receive a larger word about what God intends for them.</p>
+<p style="margin-bottom: 15px;">What follows is support, not denial: <em>"a place and a name better than of sons and of daughters."</em> The promise does not erase the pain or the limits these men know. It says those limits do not have the final word about their place in God’s house.</p>
+<p style="margin-bottom: 15px;">If your circumstances have taught you to expect less belonging, <a href="https://www.blueletterbible.org/kjv/isa/56/1/s_735001" target="_blank" data-ref="Isaiah 56">Isaiah 56</a> begins with hope. God’s salvation is near, and His righteousness is about to be revealed—not to dismiss what is hard, but to show that exclusion and loss are not the last word.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>Free, and Not Empty</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;"><a href="https://www.blueletterbible.org/kjv/isa/55/1/s_734001" target="_blank" data-ref="Isaiah 55">Isaiah 55</a> is built from repeated invitations. <em>Come.</em> <em>Buy.</em> <em>Eat.</em> <em>Hearken.</em> <em>Incline your ear.</em> <em>Come unto me.</em> The words gather one after another, like a seller calling people closer—but the people called have no money, and the food has no price.</p>
+<p style="margin-bottom: 15px;">Then the chapter turns to a second set of paired commands:</p>
+<blockquote style="border-left: 4px solid #7c9885; padding-left: 20px; margin: 20px 0; font-style: italic; color: #4a4a4a;">
+<p><em>"Seek ye the LORD while he may be found, call ye upon him while he is near: let the wicked forsake his way, and the unrighteous man his thoughts: and let him return unto the LORD."</em></p>
+</blockquote>
+<p style="margin-bottom: 15px;">The two movements belong together. The first tells hungry people that what God gives cannot be bought. The second tells them what coming to Him looks like: seeking, calling, leaving a destructive way, and returning.</p>
+<p style="margin-bottom: 15px;">That is not a price placed on the invitation. It is the direction the invitation takes. Isaiah does not ask people to purchase their place at God’s table; he calls them away from what does not satisfy and toward the One who can give life.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>The Questions This Week Raises — and Where Each One Is Answered</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">Some of these have settled answers and some do not. Knowing which is which is part of reading a prophet well.</p>
+<table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em;">
+<thead><tr style="background: #7c9885; color: white;">
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">The question</th>
+<th style="padding: 12px 15px; text-align: left; font-weight: 600;">Where it is taken up</th>
+</tr></thead><tbody>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Who is the Servant, and did ancient readers agree?</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="#sg-file-05_Jewish_Perspective" onclick="var h=document.getElementById(&#x27;sg-file-05_Jewish_Perspective&#x27;);if(!h)return true;var t=document.querySelector(&#x27;.tab-btn[onclick&#42;=&quot;study-guide&quot;]&#x27;);if(t)t.click();var b=h.querySelector(&#x27;.sg-action-btn&#x27;);if(b)b.click();var d=document.getElementById(&#x27;sg-file-05_Jewish_Perspective&#x27;)||h;d.style.scrollMarginTop=&#x27;120px&#x27;;d.scrollIntoView({block:&#x27;start&#x27;});return false;">Jewish Perspective</a>, section 3 — four ancient answers, and they differ</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Are the "Servant Songs" something Isaiah marked out?</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="#sg-file-02_Historical_Cultural_Context" onclick="var h=document.getElementById(&#x27;sg-file-02_Historical_Cultural_Context&#x27;);if(!h)return true;var t=document.querySelector(&#x27;.tab-btn[onclick&#42;=&quot;study-guide&quot;]&#x27;);if(t)t.click();var b=h.querySelector(&#x27;.sg-action-btn&#x27;);if(b)b.click();var d=document.getElementById(&#x27;sg-file-02_Historical_Cultural_Context&#x27;)||h;d.style.scrollMarginTop=&#x27;120px&#x27;;d.scrollIntoView({block:&#x27;start&#x27;});return false;">Historical & Cultural Context</a>, section 5 — a modern convention, not his</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Do <em>bruised</em> in 53:5 and <em>contrite</em> in 57:15 come from the same Hebrew root?</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="#sg-file-04_Word_Studies" onclick="var h=document.getElementById(&#x27;sg-file-04_Word_Studies&#x27;);if(!h)return true;var t=document.querySelector(&#x27;.tab-btn[onclick&#42;=&quot;study-guide&quot;]&#x27;);if(t)t.click();var b=h.querySelector(&#x27;.sg-action-btn&#x27;);if(b)b.click();var d=document.getElementById(&#x27;sg-file-04_Word_Studies&#x27;)||h;d.style.scrollMarginTop=&#x27;120px&#x27;;d.scrollIntoView({block:&#x27;start&#x27;});return false;">Word Studies</a>, study 3</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Why is <em>"I am a dry tree"</em> such a severe thing to say?</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="#sg-file-02_Historical_Cultural_Context" onclick="var h=document.getElementById(&#x27;sg-file-02_Historical_Cultural_Context&#x27;);if(!h)return true;var t=document.querySelector(&#x27;.tab-btn[onclick&#42;=&quot;study-guide&quot;]&#x27;);if(t)t.click();var b=h.querySelector(&#x27;.sg-action-btn&#x27;);if(b)b.click();var d=document.getElementById(&#x27;sg-file-02_Historical_Cultural_Context&#x27;)||h;d.style.scrollMarginTop=&#x27;120px&#x27;;d.scrollIntoView({block:&#x27;start&#x27;});return false;">Historical & Cultural Context</a>, section 1</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Why does <a href="https://www.blueletterbible.org/kjv/isa/56/1/s_735001" target="_blank" data-ref="Isaiah 56">Isaiah 56</a> keep returning to the sabbath?</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="#sg-file-02_Historical_Cultural_Context" onclick="var h=document.getElementById(&#x27;sg-file-02_Historical_Cultural_Context&#x27;);if(!h)return true;var t=document.querySelector(&#x27;.tab-btn[onclick&#42;=&quot;study-guide&quot;]&#x27;);if(t)t.click();var b=h.querySelector(&#x27;.sg-action-btn&#x27;);if(b)b.click();var d=document.getElementById(&#x27;sg-file-02_Historical_Cultural_Context&#x27;)||h;d.style.scrollMarginTop=&#x27;120px&#x27;;d.scrollIntoView({block:&#x27;start&#x27;});return false;">Historical & Cultural Context</a>, section 3</td>
+</tr>
+<tr style="background: #f9fafb;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">Which New Testament quotations are the Savior's own words, and which are somebody else's?</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="#sg-file-01_Week_Overview" onclick="var h=document.getElementById(&#x27;sg-file-01_Week_Overview&#x27;);if(!h)return true;var t=document.querySelector(&#x27;.tab-btn[onclick&#42;=&quot;study-guide&quot;]&#x27;);if(t)t.click();var b=h.querySelector(&#x27;.sg-action-btn&#x27;);if(b)b.click();var d=document.getElementById(&#x27;sg-file-01_Week_Overview&#x27;)||h;d.style.scrollMarginTop=&#x27;120px&#x27;;d.scrollIntoView({block:&#x27;start&#x27;});return false;">Overview</a>, the chapter map — the two are marked differently</td>
+</tr>
+<tr style="background: white;">
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;">What does the Book of Mormon do with these chapters?</td>
+<td style="padding: 10px 15px; border-bottom: 1px solid #e5e7eb;"><a href="#sg-file-03_Key_Passages_Study" onclick="var h=document.getElementById(&#x27;sg-file-03_Key_Passages_Study&#x27;);if(!h)return true;var t=document.querySelector(&#x27;.tab-btn[onclick&#42;=&quot;study-guide&quot;]&#x27;);if(t)t.click();var b=h.querySelector(&#x27;.sg-action-btn&#x27;);if(b)b.click();var d=document.getElementById(&#x27;sg-file-03_Key_Passages_Study&#x27;)||h;d.style.scrollMarginTop=&#x27;120px&#x27;;d.scrollIntoView({block:&#x27;start&#x27;});return false;">Key Passages</a> — Abinadi answers with <a href="https://www.blueletterbible.org/kjv/isa/53/1/s_732001" target="_blank" data-ref="Isaiah 53">Isaiah 53</a>, and the risen Christ quotes <a href="https://www.blueletterbible.org/kjv/isa/54/1/s_733001" target="_blank" data-ref="Isaiah 54">Isaiah 54</a> whole</td>
+</tr>
+</tbody></table>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cfm-insights-section" style="border: 2px solid #c6d4c8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+            <div class="section-header" onclick="toggleInsightsSection(this)" style="background: linear-gradient(135deg, #7c9885 0%, #5a6d5f 100%); color: white; padding: 18px 25px; cursor: pointer; font-family: Georgia, serif; font-size: 1.4em; font-weight: normal; display: flex; justify-content: space-between; align-items: center;">
+                <span>One Verse to Take With You</span>
+                <span class="sg-section-actions" style="display: inline-flex; gap: 4px; margin-right: 8px;"><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Expand all subsections" onclick="event.stopPropagation(); expandInsightsSection(this)">&#x229E;</button><button class="sg-action-btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); color: white; width: 28px; height: 28px; border-radius: 4px; cursor: pointer; font-size: 0.85em; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" title="Collapse all subsections" onclick="event.stopPropagation(); collapseInsightsSection(this)">&#x229F;</button></span> <span class="arrow" style="font-size: 1em; transition: transform 0.3s ease;">&#9654;&#xFE0E;</span>
+            </div>
+            <div class="section-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: transparent;">
+                <div style="padding: 25px; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8;">
+                    
+<p style="margin-bottom: 15px;">Not from chapter 53. From the beginning of the week, in the first thing the Servant says about himself:</p>
+<blockquote style="border-left: 4px solid #7c9885; padding-left: 20px; margin: 20px 0; font-style: italic; color: #4a4a4a;">
+<p><em>"The Lord GOD hath given me the tongue of the learned, that I should know how to speak a word in season to him that is weary."</em> — <a href="https://www.blueletterbible.org/kjv/isa/50/4/s_729004" target="_blank" data-ref="Isaiah 50:4">Isaiah 50:4</a></p>
+</blockquote>
+<p style="margin-bottom: 15px;">Read what he says he was given. Not strength. Not endurance, and not the courage that shows up three verses later when he sets his face like a flint. <strong>The first gift named in the passage is knowing what to say to a tired person.</strong></p>
+<p style="margin-bottom: 15px;">And the verse says where it came from: <em>"he wakeneth morning by morning, he wakeneth mine ear to hear."</em> It was taught to him, one morning at a time, before any of the rest of it.</p>
+<p style="margin-bottom: 15px;">Nephi gives one reason Isaiah mattered so deeply to him: <em>"my soul delighteth in his words,"</em> he says, because Isaiah <em>"verily saw my Redeemer, even as I have seen him"</em> (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/11?lang=eng&amp;id=2" target="_blank">2 Nephi 11:2</a>). Isaiah was not merely a source Nephi could quote. He was another witness who knew the Lord, whose lips had been cleansed and who had learned to speak what the Lord gave him (<a href="https://www.blueletterbible.org/kjv/isa/6/6-9/s_685006" target="_blank" data-ref="Isaiah 6:6-9">Isaiah 6:6–9</a>).</p>
+<p style="margin-bottom: 15px;">That gift is not held back for Isaiah alone. Moses wished that all the Lord's people were prophets, with the Lord's Spirit upon them (<a href="https://www.blueletterbible.org/kjv/num/11/29/s_128029" target="_blank" data-ref="Numbers 11:29">Numbers 11:29</a>). Nephi teaches that angels speak by the power of the Holy Ghost and invites disciples to receive that same power (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/32?lang=eng&amp;id=2-3" target="_blank">2 Nephi 32:2–3</a>). Later in this week's reading, Isaiah's invitation to come without money and without price makes the same point in another form: what God gives cannot be bought, but it can be received by those who come, hear, seek, and return (<a href="https://www.blueletterbible.org/kjv/isa/55/1-7/s_734001" target="_blank" data-ref="Isaiah 55:1-7">Isaiah 55:1–7</a>).</p>
+<p style="margin-bottom: 15px;">There is somebody weary near you this week; it may even be you. The question is not whether you can manufacture the right words—or hear them all at once. It is whether you are willing to be taught morning by morning, line upon line: diligently, consistently, and humbly seeking true instruction from the Lord until you can learn to speak His words in season.</p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+<p style="margin-bottom: 15px;"><em>Return to the <strong><a href="#sg-file-01_Week_Overview" onclick="var h=document.getElementById(&#x27;sg-file-01_Week_Overview&#x27;);if(!h)return true;var t=document.querySelector(&#x27;.tab-btn[onclick&#42;=&quot;study-guide&quot;]&#x27;);if(t)t.click();var b=h.querySelector(&#x27;.sg-action-btn&#x27;);if(b)b.click();var d=document.getElementById(&#x27;sg-file-01_Week_Overview&#x27;)||h;d.style.scrollMarginTop=&#x27;120px&#x27;;d.scrollIntoView({block:&#x27;start&#x27;});return false;">Week Overview</a></strong>, or continue in the study guide with <strong><a href="#sg-file-07_Study_Questions" onclick="var h=document.getElementById(&#x27;sg-file-07_Study_Questions&#x27;);if(!h)return true;var t=document.querySelector(&#x27;.tab-btn[onclick&#42;=&quot;study-guide&quot;]&#x27;);if(t)t.click();var b=h.querySelector(&#x27;.sg-action-btn&#x27;);if(b)b.click();var d=document.getElementById(&#x27;sg-file-07_Study_Questions&#x27;)||h;d.style.scrollMarginTop=&#x27;120px&#x27;;d.scrollIntoView({block:&#x27;start&#x27;});return false;">Study Questions</a></strong>.</em></p>
+<hr style="border: none; border-top: 2px solid #c6d4c8; margin: 30px 0;">
+
+                </div>
+            </div>
+        </div>
+
+
+</div>
