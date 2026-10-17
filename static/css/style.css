@@ -1679,6 +1679,12 @@ a.RTBData:hover, a.BLBST_a:hover {
     font-style: italic;
     margin-top: 8px;
 }
+.culture-article-content figure.nun-letter-figure img,
+.library-article-content figure.nun-letter-figure img {
+    display: block;
+    width: min(100%, 180px);
+    margin: 0.75em auto;
+}
 
 /* Strong/em within article paragraphs */
 .culture-article-content strong,

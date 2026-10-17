@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1810" width="1100" height="1810" role="img" aria-labelledby="ps67-title ps67-desc">
+  <title id="ps67-title">Psalm 67: blessing, praise, and God's just rule</title>
+  <desc id="ps67-desc">An original teaching diagram of a seven-branched menorah turned on its side. The seven English-numbered verses of Psalm 67 appear along its seven branches. Five poetic movements are labelled A, B, C, B-prime, A-prime. A groups verses 1 and 2, blessing made known; B is verse 3, praise; C is verse 4 at the center, God's just rule; B-prime is verse 5, the same praise; A-prime groups verses 6 and 7, blessing reaching outward. Matching blue blessing movements and green praise movements lead toward the gold center. Solid underlines mark repeated words and paired theme labels. Dotted underlines connect saving health among all nations in verse 2 with the earth yielding her increase in verse 6 as thematic partners, not identical expressions. The repeated earth in those verses is also marked. This is a modern illustration, not a historical manuscript layout.</desc>
+  <style>
+    text { font-family: Georgia, 'Times New Roman', serif; fill: #24343b; }
+    .verse { font-size: 32px; }
+    .label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 27px; font-weight: 600; }
+    .blessing { fill: #345a73; }
+    .praise { fill: #34634f; }
+    .center { fill: #7e541f; }
+    .paired { text-decoration: underline; }
+    .thematic { fill: #345a73; }
+    .stroke-blessing { stroke: #345a73; }
+    .stroke-praise { stroke: #34634f; }
+    .branch { fill: none; stroke: #aa8b50; stroke-width: 7; stroke-linecap: round; }
+    .cup { fill: #fbf8f0; stroke: #aa8b50; stroke-width: 5; }
+  </style>
+  <rect width="1100" height="1810" fill="#fbf8f0"/>
+  <text x="42" y="53" font-size="38" font-weight="700">Psalm 67</text>
+  <text x="42" y="92" font-size="27">A menorah turned on its side</text>
+
+  <!-- The movement colors mirror one another around the gold center. -->
+  <rect x="350" y="106" width="675" height="390" rx="8" fill="#eaf0f5"/>
+  <rect x="350" y="566" width="675" height="134" rx="8" fill="#e8f0e9"/>
+  <rect x="350" y="740" width="675" height="190" rx="8" fill="#eee1bd"/>
+  <rect x="350" y="1026" width="675" height="134" rx="8" fill="#e8f0e9"/>
+  <rect x="350" y="1256" width="675" height="390" rx="8" fill="#eaf0f5"/>
+
+  <!-- One central shaft, three upper branches, and three lower branches. -->
+  <g class="branch">
+    <path d="M 77 940 H 1014"/>
+    <path class="stroke-blessing" d="M 160 940 C 160 630 160 250 410 250 H 1014"/>
+    <path class="stroke-blessing" d="M 215 940 C 215 715 215 480 430 480 H 1014"/>
+    <path class="stroke-praise" d="M 270 940 C 270 815 270 710 465 710 H 1014"/>
+    <path class="stroke-praise" d="M 270 940 C 270 1065 270 1170 465 1170 H 1014"/>
+    <path class="stroke-blessing" d="M 215 940 C 215 1165 215 1400 430 1400 H 1014"/>
+    <path class="stroke-blessing" d="M 160 940 C 160 1250 160 1630 410 1630 H 1014"/>
+  </g>
+  <rect x="55" y="860" width="22" height="160" rx="4" fill="#aa8b50"/>
+  <path d="M 42 860 H 91 M 42 1020 H 91" stroke="#aa8b50" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- Five units in seven verses: outer groups each contain two verses. -->
+  <path d="M 348 118 H 331 V 489 H 348" fill="none" stroke="#345a73" stroke-width="4"/>
+  <path d="M 348 1268 H 331 V 1639 H 348" fill="none" stroke="#345a73" stroke-width="4"/>
+
+  <g class="label">
+    <text x="365" y="140" class="blessing">A — <tspan class="paired">Blessing</tspan> made known · 1–2</text>
+    <text x="365" y="600" class="praise">B — <tspan class="paired">Praise</tspan> · 3</text>
+    <text x="365" y="777" class="center">C — At the center: just rule · 4</text>
+    <text x="365" y="1060" class="praise">B′ — <tspan class="paired">Praise</tspan> · 5</text>
+    <text x="365" y="1290" class="blessing">A′ — <tspan class="paired">Blessing</tspan> reaching outward · 6–7</text>
+  </g>
+
+  <g class="verse" data-verse="1">
+    <text x="365" y="188">1  God be merciful unto us, and <tspan class="paired blessing">bless us</tspan>;</text>
+    <text x="365" y="226">and cause his face to shine upon us; Selah.</text>
+  </g>
+  <g class="verse" data-verse="2">
+    <text x="365" y="418">2  That thy way may be known upon <tspan class="paired blessing">earth</tspan>,</text>
+    <text x="365" y="456">thy <tspan class="thematic">saving health among all nations</tspan>.</text>
+  </g>
+  <g class="verse" data-verse="3">
+    <text x="365" y="648">3  <tspan class="paired praise">Let the people praise thee, O God;</tspan></text>
+    <text x="365" y="686"><tspan class="paired praise">let all the people praise thee.</tspan></text>
+  </g>
+  <g class="verse" data-verse="4">
+    <text x="365" y="820">4  O let the nations be glad and sing</text>
+    <text x="365" y="854">for joy: for thou shalt judge the people</text>
+    <text x="365" y="888">righteously, and govern the nations</text>
+    <text x="365" y="922">upon earth. Selah.</text>
+  </g>
+  <g class="verse" data-verse="5">
+    <text x="365" y="1108">5  <tspan class="paired praise">Let the people praise thee, O God;</tspan></text>
+    <text x="365" y="1146"><tspan class="paired praise">let all the people praise thee.</tspan></text>
+  </g>
+  <g class="verse" data-verse="6">
+    <text x="365" y="1338">6  Then shall the <tspan class="paired blessing">earth</tspan> <tspan class="thematic">yield her increase</tspan>;</text>
+    <text x="365" y="1376">and God, even our own God, shall <tspan class="paired blessing">bless us</tspan>.</text>
+  </g>
+  <g class="verse" data-verse="7">
+    <text x="365" y="1568">7  God shall <tspan class="paired blessing">bless us</tspan>; and all the ends</text>
+    <text x="365" y="1606">of the earth shall fear him.</text>
+  </g>
+
+  <!-- Explicit dotted strokes survive raster export; CSS dotted text-decoration does not. -->
+  <g fill="none" stroke="#345a73" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 6" aria-label="Thematic partners, not identical words">
+    <path d="M 418 463 H 865"/>
+    <path d="M 681 1345 H 928"/>
+  </g>
+
+  <!-- The seven lamp cups and sideways flames. -->
+  <g class="cup">
+    <path class="stroke-blessing" d="M 1030 228 Q 998 250 1030 272"/>
+    <path class="stroke-blessing" d="M 1030 458 Q 998 480 1030 502"/>
+    <path class="stroke-praise" d="M 1030 688 Q 998 710 1030 732"/>
+    <path d="M 1030 918 Q 998 940 1030 962"/>
+    <path class="stroke-praise" d="M 1030 1148 Q 998 1170 1030 1192"/>
+    <path class="stroke-blessing" d="M 1030 1378 Q 998 1400 1030 1422"/>
+    <path class="stroke-blessing" d="M 1030 1608 Q 998 1630 1030 1652"/>
+  </g>
+  <g fill="#345a73">
+    <path d="M 1037 250 Q 1056 229 1080 250 Q 1056 271 1037 250 Z"/>
+    <path d="M 1037 480 Q 1056 459 1080 480 Q 1056 501 1037 480 Z"/>
+    <path d="M 1037 1400 Q 1056 1379 1080 1400 Q 1056 1421 1037 1400 Z"/>
+    <path d="M 1037 1630 Q 1056 1609 1080 1630 Q 1056 1651 1037 1630 Z"/>
+  </g>
+  <g fill="#34634f">
+    <path d="M 1037 710 Q 1056 689 1080 710 Q 1056 731 1037 710 Z"/>
+    <path d="M 1037 1170 Q 1056 1149 1080 1170 Q 1056 1191 1037 1170 Z"/>
+  </g>
+  <path d="M 1037 940 Q 1056 919 1080 940 Q 1056 961 1037 940 Z" fill="#7e541f"/>
+
+  <text x="42" y="1706" font-size="24">Solid underline: repeated words · Dotted underline: related themes</text>
+  <text x="42" y="1748" font-size="26">A → B → C → B′ → A′ · seven verses, five poetic movements</text>
+  <text x="42" y="1790" font-size="24">Psalm 67 · King James Version · Teaching illustration by CFM Corner</text>
+</svg>

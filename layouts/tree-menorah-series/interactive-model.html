@@ -1,0 +1,24 @@
+{{ define "main" }}
+<style>
+  .series-model{max-width:1180px;margin:0 auto;padding:24px 20px 64px}
+  .series-model .review-state{margin:0 0 16px;color:#794c29;font-weight:700;font-size:.88rem}
+  .series-model-nav{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 22px;padding-bottom:12px;border-bottom:1px solid #cbd6cd}
+  .series-model-nav a{color:#315941;text-decoration:none;font-size:.9rem;font-weight:600}
+  .series-model-nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:3px}
+  .series-model h1{margin:0 0 8px;font-size:2.25rem;line-height:1.12}
+  .series-model .intro{max-width:72ch;margin:0 0 22px;color:#52645c;line-height:1.6}
+  .series-model-frame{display:block;width:100%;min-height:1450px;border:1px solid #cbd6cd;border-radius:8px;background:#faf7ee}
+  @media(max-width:700px){.series-model{padding:18px 16px 48px}.series-model-nav a{font-size:.82rem}.series-model h1{font-size:1.9rem}.series-model-frame{min-height:2350px}}
+</style>
+<div class="series-model" data-pagefind-body>
+  {{ if or .Draft .Params.private_draft }}<p class="review-state">Hugo staging draft. Not published or approved for release.</p>{{ end }}
+  <nav class="series-model-nav" aria-label="Series parts">
+    <a href="{{ .Parent.RelPermalink }}">Series contents</a>
+    {{ range .Parent.Pages.ByParam "part" }}{{ if .Params.part }}<a href="{{ .RelPermalink }}">Part {{ .Params.part }}</a>{{ end }}{{ end }}
+    <a href="{{ .RelPermalink }}" aria-current="page">Interactive Model</a>
+  </nav>
+  <h1>Explore the Interactive Model</h1>
+  <p class="intro">Use the model to compare one Hebrew root across recurring verb patterns. It supplements Part 2; it does not replace the article’s explanation or its historical cautions.</p>
+  <iframe class="series-model-frame" src="/charts/binyan-model/" title="Interactive model of Hebrew roots and verb patterns"></iframe>
+</div>
+{{ end }}

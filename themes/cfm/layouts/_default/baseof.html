@@ -539,7 +539,7 @@
       async function ensureLexiconData() {
         if (lexiconData) return lexiconData;
         try {
-          var res = await fetch('/data/lexicon-popups.json?v=20261012a');
+          var res = await fetch('/data/lexicon-popups.json?v=a9282ec8c781443735f23a57006ff08292beb2c44d947b5d6d12fb1afd11c0ab');
           lexiconData = res.ok ? await res.json() : {};
         } catch (_) {
           lexiconData = {};

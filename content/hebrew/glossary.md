@@ -464,6 +464,28 @@ Click on any Hebrew or Greek term to study it at Blue Letter Bible. Use the **fl
 </div>
 </details>
 
+<details class="seder-dropdown" id="week43-vocabulary">
+<summary>Week 43: Jeremiah 1–3; 7; 16–18; 20 — "Before I Formed Thee in the Belly I Knew Thee"</summary>
+<div class="seder-dropdown-body">
+
+{{< flashcards section="week43" >}}
+
+<div style="overflow-x:auto;max-width:100%;">
+
+| Transliteration | Original | Language | Meaning |
+|-----------------|----------|----------|---------|
+| <a href="https://www.blueletterbible.org/lexicon/h8247/kjv/wlc/0-1/" target="_blank"><em>šāqēḏ</em></a> | שָׁקֵד | Hebrew | almond tree |
+| <a href="https://www.blueletterbible.org/lexicon/h8245/kjv/wlc/0-1/" target="_blank"><em>šāqaḏ</em></a> | שָׁקַד | Hebrew | to watch, be wakeful over |
+| <a href="https://www.blueletterbible.org/lexicon/h4726/kjv/wlc/0-1/" target="_blank"><em>māqôr</em></a> | מָקוֹר | Hebrew | spring, fountain, source |
+| <a href="https://www.blueletterbible.org/lexicon/h4878/kjv/wlc/0-1/" target="_blank"><em>mᵊšûḇâ</em></a> | מְשׁוּבָה | Hebrew | turning away, backsliding |
+| <a href="https://www.blueletterbible.org/lexicon/h7726/kjv/wlc/0-1/" target="_blank"><em>šôḇāḇ</em></a> | שׁוֹבָב | Hebrew | backsliding, turning away |
+| <a href="https://www.blueletterbible.org/lexicon/h3201/kjv/wlc/0-1/" target="_blank"><em>yāḵōl</em></a> | יָכֹל | Hebrew | to be able, prevail, overcome |
+
+</div>
+
+</div>
+</details>
+
 
 ## Special Topics
 

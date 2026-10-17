@@ -1,0 +1,59 @@
+{{ define "main" }}
+<style>
+  .series-article{max-width:930px;margin:0 auto;padding:24px 20px 64px}
+  .series-article .review-state{margin:0 0 16px;color:#794c29;font-weight:700;font-size:.88rem}
+  .series-nav{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 22px;padding-bottom:12px;border-bottom:1px solid #cbd6cd}
+  .series-nav a{color:#315941;text-decoration:none;font-size:.9rem;font-weight:600}
+  .series-nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:3px}
+  .series-article-title{margin:0 0 18px;font-size:2.25rem;line-height:1.12}
+  .series-article-visual{margin:0 0 38px}
+  .series-article-hero{margin:0}.series-article-hero img{display:block;width:100%;height:auto;aspect-ratio:2/1;object-fit:cover}
+  .series-article--part-1 .library-article-content>h1:first-child,.series-article--part-2 .library-article-content>h1:first-child{display:none}
+  .series-article-chart-card{position:relative;width:min(84%,760px);margin:-28px auto 0;padding:5px;background:#f7f5ec;border:1px solid #d9d3c0;border-radius:8px;box-shadow:0 8px 20px rgba(25,36,34,.16)}
+  .series-article-chart-card picture,.series-article-chart-card img{display:block;width:100%;height:auto}
+  .series-article-chart-card figcaption{font-size:.83rem;line-height:1.5;color:#52645c;margin:8px 10px 6px;text-align:center}
+  .series-article--part-1 .library-article-content .chalkboard,.series-article--part-2 .library-article-content .chalkboard{display:none}
+  .series-article .library-article-content img{max-width:100%;height:auto}
+  .series-article .chalkboard{margin:1.2em 0 1.6em}.series-article .chalkboard img{display:block;width:100%}
+  .series-article .chalkboard figcaption{font-size:.83rem;line-height:1.5;color:#52645c;margin-top:7px}
+  .series-article .model-link{margin:1.4em 0;padding:14px 18px;border-left:3px solid #496b53;background:#edf2ee}
+  .series-article .model-link a{color:#315941;font-weight:700}
+  .series-article .library-article-content table{display:block;overflow-x:auto;border-collapse:collapse;width:100%;margin:1.2em 0}
+  .series-article .library-article-content th,.series-article .library-article-content td{border:1px solid #d2d9d3;padding:7px 10px;vertical-align:top}
+  .series-article .library-article-content th{background:#315941;color:#fff}
+  .series-article .library-article-content sup a.footnote-ref{color:#315941;font-weight:700;text-decoration:none;padding:0 2px}
+  .series-article .library-article-content .footnotes{margin:2.6rem 0 0;padding:1.1rem 1.25rem .8rem;border-top:2px solid #78917e;background:#f4f7f4;font-size:.9rem;line-height:1.58}
+  .series-article .library-article-content .footnotes::before{content:"Notes";display:block;margin:0 0 .55rem;color:#315941;font-size:1.05rem;font-weight:700}
+  .series-article .library-article-content .footnotes hr{display:none}
+  .series-article .library-article-content .footnotes ol{margin:.4rem 0 0;padding-left:1.35rem}
+  .series-article .library-article-content .footnotes li{margin:0 0 .75rem;padding-left:.15rem}
+  .series-article .library-article-content a.footnote-backref{color:#315941;text-decoration:none;font-weight:700}
+  .series-article .provenance{margin-top:32px;padding-top:12px;border-top:1px solid #cbd6cd;font-size:.76rem;color:#5d6d61;overflow-wrap:anywhere}
+  @media(max-width:600px){.series-article{padding:18px 16px 48px}.series-nav a{font-size:.82rem}.series-article-title{font-size:1.9rem}.series-article-visual{margin-bottom:30px}.series-article-chart-card{width:92%;margin-top:-16px;padding:3px}.series-article-chart-card figcaption{font-size:.78rem;margin:6px 7px 4px}}
+</style>
+<div class="series-article series-article--part-{{ .Params.part }} library-article-page" data-pagefind-body>
+  {{ if or .Draft .Params.private_draft }}<p class="review-state">Hugo staging draft. Not published or approved for release.</p>{{ end }}
+  <nav class="series-nav" aria-label="Series parts">
+    <a href="{{ .Parent.RelPermalink }}">Series contents</a>
+    {{ range .Parent.Pages.ByParam "part" }}{{ if .Params.part }}<a href="{{ .RelPermalink }}"{{ if eq .Params.part $.Params.part }} aria-current="page"{{ end }}>Part {{ .Params.part }}</a>{{ end }}{{ end }}
+    <a href="{{ .Parent.RelPermalink }}interactive-model/">Interactive Model</a>
+  </nav>
+  {{ if or (eq .Params.part 1) (eq .Params.part 2) }}
+  <h1 class="series-article-title">{{ .Params.card_title | default .Title }}</h1>
+  <section class="series-article-visual" aria-label="Roots, branches, and Hebrew verb patterns">
+    {{ $hero := printf "media/hero-%s.png" .Params.image_slug }}
+    {{ with .Parent.Resources.GetMatch $hero }}<figure class="series-article-hero"><img src="{{ .RelPermalink }}" alt="" aria-hidden="true"></figure>{{ end }}
+    <figure class="series-article-chart-card">
+      <picture><source media="(max-width: 600px)" srcset="/study-library/articles/tree-menorah-series/media/binyanim-chalkboard-mobile.svg">
+      <img src="/study-library/articles/tree-menorah-series/media/binyanim-chalkboard.svg" width="1000" height="370" alt="Chalkboard-style teaching diagram with seven branches labeled Niphal, Pual, Hophal, Hitpael, Hiphil, Piel, and Qal."></picture>
+      <figcaption>A simplified teaching map of seven common verb patterns, not a reconstructed ancient chart. A root need not occur in every pattern.</figcaption>
+    </figure>
+  </section>
+  {{ else }}
+  {{ $hero := printf "media/hero-%s.png" .Params.image_slug }}
+  {{ with .Parent.Resources.GetMatch $hero }}<figure class="series-article-hero"><img src="{{ .RelPermalink }}" alt="" aria-hidden="true"></figure>{{ end }}
+  {{ end }}
+  <div class="library-article-content">{{ .Content }}</div>
+  {{ if or .Draft .Params.private_draft }}<p class="provenance">Review copy: {{ .Params.source_file }} · SHA-256 {{ .Params.source_sha256 }}</p>{{ end }}
+</div>
+{{ end }}

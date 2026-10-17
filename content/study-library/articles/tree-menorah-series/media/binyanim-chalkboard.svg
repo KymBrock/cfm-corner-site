@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 370" role="img" aria-labelledby="title desc">
+  <title id="title">Seven common Hebrew verb patterns</title>
+  <desc id="desc">A chalkboard-style seven-branched teaching diagram. From left to right: Niphal, Pual, Hophal, Hitpael, Hiphil, Piel, and Qal.</desc>
+  <rect width="1000" height="370" rx="5" fill="#765b3a"/>
+  <rect x="12" y="12" width="976" height="346" rx="2" fill="#203e36" stroke="#a58455" stroke-width="3"/>
+  <text x="500" y="52" text-anchor="middle" fill="#f2e9cb" font-family="Georgia,serif" font-size="29">BINYANIM</text>
+  <text x="500" y="75" text-anchor="middle" fill="#d5dfd6" font-family="Arial,sans-serif" font-size="15">SEVEN COMMON VERB PATTERNS</text>
+  <g fill="#f2e9cb" font-family="Georgia,serif" font-size="19" text-anchor="middle">
+    <text x="105" y="118">Niphal</text>
+    <text x="235" y="118">Pual</text>
+    <text x="365" y="118">Hophal</text>
+    <text x="500" y="118">Hitpael</text>
+    <text x="635" y="118">Hiphil</text>
+    <text x="765" y="118">Piel</text>
+    <text x="895" y="118">Qal</text>
+  </g>
+  <g fill="none" stroke="#e9d9a7" stroke-linecap="round" stroke-linejoin="round" stroke-width="7">
+    <path d="M105 143v13c0 113 177 162 395 162s395-49 395-162v-13"/>
+    <path d="M235 143v13c0 77 119 119 265 119s265-42 265-119v-13"/>
+    <path d="M365 143v13c0 40 61 75 135 75s135-35 135-75v-13"/>
+    <path d="M500 143v194"/>
+    <path d="M459 339h82"/>
+  </g>
+  <g fill="#f2e9cb">
+    <circle cx="105" cy="142" r="5"/><circle cx="235" cy="142" r="5"/>
+    <circle cx="365" cy="142" r="5"/><circle cx="500" cy="142" r="5"/>
+    <circle cx="635" cy="142" r="5"/><circle cx="765" cy="142" r="5"/>
+    <circle cx="895" cy="142" r="5"/>
+  </g>
+</svg>

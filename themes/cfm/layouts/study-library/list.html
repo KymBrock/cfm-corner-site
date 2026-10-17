@@ -17,7 +17,13 @@
     {{ if $sections }}
     <div class="library-sections">
         {{ range $sections }}
+        {{- $sec := . }}{{ $icon := false }}{{ with .Params.card_icon }}{{ $icon = $sec.Resources.GetMatch . }}{{ end }}
         <a href="{{ .RelPermalink }}" class="library-section-card">
+            {{- with $icon }}
+            <div class="la-icon-wrap" style="margin-bottom: 12px;">
+                <img src="{{ .RelPermalink }}" alt="" class="la-icon" loading="lazy" aria-hidden="true">
+            </div>
+            {{- end }}
             <div class="ls-title">{{ .Title }}</div>
             <div class="ls-desc">{{ .Description }}</div>
             {{ $count := len .RegularPages }}

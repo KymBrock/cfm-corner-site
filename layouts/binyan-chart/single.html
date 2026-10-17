@@ -1,0 +1,4 @@
+{{/* Draft-only page owns this output; the asset is never independently published. */}}
+{{ $model := (resources.Get "articles/roots-branches-and-light/model.html").Content -}}
+{{ if not (or .Draft .Params.private_draft) }}{{ $model = replace $model "Private review draft · " "" }}{{ end -}}
+{{ $model | safeHTML }}
