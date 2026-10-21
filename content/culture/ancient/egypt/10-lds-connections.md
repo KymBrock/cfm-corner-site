@@ -1,4 +1,5 @@
 ---
+weight: 10
 title: "LDS-Specific Connections"
 description: "The Joseph Smith Papyri, the Book of Abraham facsimiles, Kerry Muhlestein's research, and how Egyptian studies illuminate Latter-day Saint scripture."
 ---

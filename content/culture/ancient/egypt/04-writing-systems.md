@@ -1,4 +1,5 @@
 ---
+weight: 4
 title: "Writing Systems"
 description: "From hieroglyphs to Coptic — five writing systems spanning three millennia, and how the Rosetta Stone brought the ancient scripts back to life."
 ---

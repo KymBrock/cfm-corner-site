@@ -1,4 +1,5 @@
 ---
+weight: 2
 title: "Who Ruled Egypt and When"
 description: "From native pharaohs to Hyksos invaders to Persian conquerors to Greek kings to Roman emperors — and how each transition shaped the world of the Bible."
 ---

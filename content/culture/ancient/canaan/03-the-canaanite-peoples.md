@@ -1,4 +1,5 @@
 ---
+weight: 3
 title: "The Canaanite Peoples"
 description: "The 'seven nations' of Deuteronomy 7 — city-states, social structure, and the archaeological evidence for the peoples Israel encountered."
 ---

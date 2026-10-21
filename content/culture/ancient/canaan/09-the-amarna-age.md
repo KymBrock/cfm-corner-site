@@ -1,4 +1,5 @@
 ---
+weight: 9
 title: "The Amarna Age"
 description: "The Amarna Letters, the Habiru question, Egyptian vassalage in Canaan, and what diplomatic correspondence reveals about the land before Israel."
 ---

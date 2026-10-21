@@ -1,4 +1,5 @@
 ---
+weight: 4
 title: "Ugarit & Canaanite Religion"
 description: "El, Baal, Asherah, Anat, Mot, Dagon — the Canaanite pantheon revealed by the Ugaritic texts from Ras Shamra, and the fundamental contrast between YHWH worship and the fertility cult."
 ---

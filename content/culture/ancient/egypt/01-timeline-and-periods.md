@@ -1,4 +1,5 @@
 ---
+weight: 1
 title: "Egyptian Timeline & Periods"
 description: "The major periods of Egyptian history from the Old Kingdom to the Roman era, with dates and connections to biblical chronology."
 ---

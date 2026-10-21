@@ -1,4 +1,5 @@
 ---
+weight: 9
 title: "Multicultural Networks"
 description: "Egypt was never isolated — Canaanites, Minoans, Nubians, Hittites, Mesopotamians, Greeks, and Romans all intersected along the Nile."
 ---

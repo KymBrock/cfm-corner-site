@@ -1,4 +1,5 @@
 ---
+weight: 7
 title: "Israel Among the Nations"
 description: "From Joshua's crossing of the Jordan to the chaos of Judges — the conquest that was never complete, the coexistence that led to syncretism, and the cycle of apostasy and deliverance."
 ---

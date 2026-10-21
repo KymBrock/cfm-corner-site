@@ -1,7 +1,8 @@
 ---
 title: "Religion & the God Ashur"
+weight: 4
 description: "The one god who was also a city and a nation, the shared Mesopotamian pantheon, the sacred tree and winged genies, omens as state science, and the imperial theology the Rabshakeh flung at Jerusalem's wall."
-draft: true
+draft: false
 ---
 
 {{< rawhtml >}}
@@ -15,6 +16,7 @@ draft: true
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">The god who was a city, a nation, and a war</p>
 
 <!-- LISTEN PLAYER (section narration) -->
+<!-- AUDIO HIDDEN for text-first publication (Kymber 2026-10-20); restore when narration is recorded and approved
 <div class="listen-player">
 <div class="lp-head">
 <span class="lp-icon" aria-hidden="true"></span>
@@ -25,9 +27,10 @@ draft: true
 Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/assyria/04-religion-and-the-god-ashur.mp3">download the audio</a> instead.
 </audio>
 </div>
+-->
 <!-- /LISTEN PLAYER -->
 
-<p>Every empire tells a story about why it deserves to rule. Assyria&rsquo;s story was theological. Its armies did not merely conquer for a king or for plunder. They marched, the royal inscriptions insist, to extend the dominion of a god &mdash; and that god was, uniquely in the ancient world, the deified state itself. That one idea explains a great deal. It explains why Assyrian kings could describe the sack of a city as an act of worship. It explains why the Rabshakeh &mdash; the Assyrian king&rsquo;s field spokesman &mdash; could stand at Jerusalem&rsquo;s wall and sneer that no nation&rsquo;s god had ever escaped the king of Assyria&rsquo;s hand. To understand any of it, we have to begin with the strangest deity in the Near East.</p>
+<p>Every empire tells a story about why it deserves to rule. Assyria&rsquo;s story was theological. Its armies did not merely conquer for a king or for plunder. They marched, the royal inscriptions insist, to extend the dominion of a god &mdash; and that god was, uniquely in the ancient world, the deified state itself. That one idea explains a great deal. It explains why Assyrian kings could describe the sack of a city as an act of worship. It explains why the Rabshakeh &mdash; the Assyrian king&rsquo;s field spokesman &mdash; could stand at <a href="https://www.worldhistory.org/jerusalem/" target="_blank">Jerusalem</a>&rsquo;s wall and sneer that no nation&rsquo;s god had ever escaped the king of Assyria&rsquo;s hand. To understand any of it, we have to begin with the strangest deity in the Near East.</p>
 
 <br>
 
@@ -41,7 +44,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>This is not a scholarly abstraction; it is the engine of Assyrian history. Watch how concrete it gets. Assyrian royal annals often take the literary form of a letter <em>to the god Ashur</em>, describing the year&rsquo;s campaign as tribute laid at his feet. The king reported his conquests back to the god like a servant rendering accounts. Now follow the logic. If the god simply <em>is</em> the state, then to worship him and to enlarge the state are the same act. The god&rsquo;s glory grows as his borders grow. Warfare becomes liturgy &mdash; holy war in the most literal sense, waged to bring more of the world under the peace and order of Ashur (the campaigns themselves are the subject of <a href="/culture/ancient/assyria/03-the-war-machine/">Section 03</a>). The king was Ashur&rsquo;s chief priest and earthly viceroy, the god&rsquo;s appointed steward who ruled &ldquo;by the command of Ashur&rdquo; &mdash; and rebellion against Assyria was therefore not politics but sacrilege. The king punished it as a priest purges a defilement.</p>
 
-<p>Over time Ashur absorbed the trappings of greater gods to match his people&rsquo;s ambitions. Assyrian theologians recast him as the true king of the gods, and in a remarkable move a version of the Babylonian creation epic was rewritten with Ashur&rsquo;s name swapped in for Marduk&rsquo;s (a move eased by Ashur&rsquo;s likeness to Anshar, a primordial god already in the story) &mdash; the cosmos re-founded, on fresh clay, under a northern king. You can see this theology in the palace reliefs, too. A winged disk hovers over Assyrian kings, an archer within its ring. It is most often understood as Ashur (or the sun-god Shamash) accompanying the monarch into battle: the god riding to war above his viceroy.</p>
+<p>Over time Ashur absorbed the trappings of greater gods to match his people&rsquo;s ambitions. Assyrian theologians recast him as the true king of the gods, and in a remarkable move a version of the Babylonian creation epic was rewritten with Ashur&rsquo;s name swapped in for <a href="https://www.worldhistory.org/Marduk/" target="_blank">Marduk</a>&rsquo;s (a move eased by Ashur&rsquo;s likeness to Anshar, a primordial god already in the story) &mdash; the cosmos re-founded, on fresh clay, under a northern king. You can see this theology in the palace reliefs, too. A winged disk hovers over Assyrian kings, an archer within its ring. It is most often understood as Ashur (or the sun-god Shamash) accompanying the monarch into battle: the god riding to war above his viceroy.</p>
 
 <br>
 
@@ -51,9 +54,9 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <h3>The Shared Pantheon</h3>
 
-<p>Above and around Ashur stood a crowd of gods Assyria had inherited, almost wholesale, from the older civilization of the south. Assyrian and Babylonian religion drew on one Mesopotamian tradition. The great deities of Babylon &mdash; catalogued in <a href="/culture/ancient/babylon/04-religion-and-mythology/">the Babylon guide&rsquo;s religion section</a> &mdash; were worshipped in the north under the same names and offices. What Assyria added was a martial coloring: the same gods, armed.</p>
+<p>Above and around Ashur stood a crowd of gods Assyria had inherited, almost wholesale, from the older civilization of the south. Assyrian and Babylonian religion drew on one Mesopotamian tradition. The great deities of <a href="https://www.worldhistory.org/babylon/" target="_blank">Babylon</a> were worshipped in the north under the same names and offices. What Assyria added was a martial coloring: the same gods, armed.</p>
 
-<p>No deity shows this more clearly than <strong>Ishtar</strong>. Throughout Mesopotamia she was the goddess of love and war and the planet Venus. In Assyria she was above all the ferocious lady of battle, worshipped in two great northern shrines with two distinct personalities &mdash; the <strong>Ishtar of Nineveh</strong> and the <strong>Ishtar of Arbela</strong> (modern Erbil). It was Ishtar of Arbela who, in the surviving prophetic oracles, speaks reassurance to kings like <a href="https://www.worldhistory.org/Esarhaddon/" target="_blank">Esarhaddon</a> on the eve of war: &ldquo;Fear not,&rdquo; the goddess says through her prophets, &ldquo;I am with you.&rdquo; Beside her stood the familiar company. There was <strong>Nabu</strong>, god of writing and wisdom, whose cult grew enormously in the empire&rsquo;s last centuries. There was <strong>Shamash</strong>, the sun, guarantor of justice and &mdash; crucially for a divining culture &mdash; the god who answered the oracle-questions. There were <strong>Sin</strong>, the moon; <strong>Adad</strong>, the storm; and <strong>Ninurta</strong> and <strong>Nergal</strong>, the war-gods whose violence suited the empire&rsquo;s temper. The great cities each guarded a god&rsquo;s house. And beside the temples rose the stepped <strong>ziggurats</strong> that were Mesopotamia&rsquo;s signature &mdash; at Ashur, at Nimrud (Calah), at Nineveh &mdash; the artificial mountains where heaven and earth were imagined to touch.</p>
+<p>No deity shows this more clearly than <strong><a href="https://www.worldhistory.org/ishtar/" target="_blank">Ishtar</a></strong>. Throughout Mesopotamia she was the goddess of love and war and the planet Venus. In Assyria she was above all the ferocious lady of battle, worshipped in two great northern shrines with two distinct personalities &mdash; the <strong>Ishtar of <a href="https://www.worldhistory.org/nineveh/" target="_blank">Nineveh</a></strong> and the <strong>Ishtar of <a href="https://whc.unesco.org/en/list/1437" target="_blank">Arbela</a></strong> (modern Erbil). It was Ishtar of Arbela who, in the surviving prophetic oracles, speaks reassurance to kings like <a href="https://www.worldhistory.org/Esarhaddon/" target="_blank">Esarhaddon</a> on the eve of war: &ldquo;Fear not,&rdquo; the goddess says through her prophets, &ldquo;I am with you.&rdquo; Beside her stood the familiar company. There was <strong><a href="https://www.worldhistory.org/Nabu/" target="_blank">Nabu</a></strong>, god of writing and wisdom, whose cult grew enormously in the empire&rsquo;s last centuries. There was <strong>Shamash</strong>, the sun, guarantor of justice and &mdash; crucially for a divining culture &mdash; the god who answered the oracle-questions. There were <strong>Sin</strong>, the moon; <strong>Adad</strong>, the storm; and <strong><a href="https://www.worldhistory.org/Ninurta/" target="_blank">Ninurta</a></strong> and <strong><a href="https://www.worldhistory.org/Nergal/" target="_blank">Nergal</a></strong>, the war-gods whose violence suited the empire&rsquo;s temper. The great cities each guarded a god&rsquo;s house. And beside the temples rose the stepped <strong>ziggurats</strong> that were Mesopotamia&rsquo;s signature &mdash; at Ashur, at <a href="https://www.worldhistory.org/Kalhu/" target="_blank">Nimrud</a> (Calah), at Nineveh &mdash; the artificial mountains where heaven and earth were imagined to touch.</p>
 
 <br>
 
@@ -67,7 +70,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <figure class="fg-figure">
   <img src="/images/culture/assyria/photos/sacred-tree-ashurnasirpal.jpg" alt="Relief of Ashurnasirpal II and a winged genie flanking the sacred tree, Nimrud" loading="lazy">
-  <figcaption><b>Ashurnasirpal II</b> and a winged genie flanking the <b>Sacred Tree</b> &mdash; a relief from his Northwest Palace at Nimrud. The stylized tree and its attendant spirits are among the most-discussed images in all Assyrian art. <span class="fg-credit">Northwest Palace, Nimrud; British Museum &middot; photo Osama S. M. Amin, Wikimedia Commons (CC BY-SA 4.0)</span></figcaption>
+  <figcaption><b>Ashurnasirpal II</b> and a winged genie flanking the <b>Sacred Tree</b> &mdash; a relief from his Northwest Palace at Nimrud. The stylized tree and its attendant spirits are among the most-discussed images in all Assyrian art. <span class="fg-credit">Northwest Palace, Nimrud; British Museum &middot; photo Osama S. M. Amin, <a href="https://commons.wikimedia.org/wiki/File:Ashurnasirpal_II,_religious_ritual_before_the_sacred_tree,_flanked_by_Apkallus._9th_century_BC,_from_Nimrud,_Iraq._The_British_Museum.jpg">Wikimedia Commons</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>)</span></figcaption>
 </figure>
 
 <p>What the tree itself meant is still debated: a symbol of cosmic order, of the fertility the king&rsquo;s rule secured, perhaps of the divinely sustained life of the nation. Whatever its precise sense, its placement is not decorative. It clusters at the throne-room and the doorways &mdash; the points that most needed guarding. And again and again the composition centers on the king, tended by the winged sages, sometimes doubled and mirrored around him. The message is the same one Ashur&rsquo;s theology preached in stone: the monarch stands at the axis of the sacred order, sustained by heaven, the human hinge between the gods and the world they had entrusted to Assyria.</p>

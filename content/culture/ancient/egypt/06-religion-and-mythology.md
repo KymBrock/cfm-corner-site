@@ -1,4 +1,5 @@
 ---
+weight: 6
 title: "Egyptian Religion & Mythology"
 description: "The gods of Egypt, the afterlife journey, the Book of the Dead, and how Egyptian religious thought intersected with Jewish and Christian traditions."
 ---

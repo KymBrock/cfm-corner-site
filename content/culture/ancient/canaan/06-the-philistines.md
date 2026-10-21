@@ -1,4 +1,5 @@
 ---
+weight: 6
 title: "The Philistines"
 description: "Sea Peoples, the Pentapolis, iron technology, and the rivals who shaped Israel from Samson through David."
 ---

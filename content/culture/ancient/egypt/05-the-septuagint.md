@@ -1,4 +1,5 @@
 ---
+weight: 5
 title: "The Septuagint"
 description: "When seventy-two Jewish elders translated the Torah into Greek, it changed everything — for Judaism, for Christianity, and for how we read scripture today."
 ---

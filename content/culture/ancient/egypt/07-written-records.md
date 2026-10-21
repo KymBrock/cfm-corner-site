@@ -1,4 +1,5 @@
 ---
+weight: 7
 title: "Written Records About Egypt"
 description: "The ancient writers who documented Egypt and its Jewish communities — Josephus, Philo, Manetho, Herodotus, and others."
 ---

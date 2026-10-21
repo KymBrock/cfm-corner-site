@@ -1,4 +1,5 @@
 ---
+weight: 8
 title: "Major Sites & Geography"
 description: "The Pyramids, the Valley of the Kings, Karnak, Alexandria, Elephantine, and the Nile corridor — where biblical and Egyptian history happened."
 ---

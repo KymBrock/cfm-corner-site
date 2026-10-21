@@ -1,4 +1,5 @@
 ---
+weight: 10
 title: "LDS Connections"
 description: "Promised land theology, the difficult question of cherem, Rahab's faith, covenant renewal at Shechem, and how the Book of Mormon reads the Canaanite conquest."
 ---

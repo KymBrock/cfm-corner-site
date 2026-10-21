@@ -1,4 +1,5 @@
 ---
+weight: 3
 title: "Jewish Communities in Egypt Across Time"
 description: "From Joseph in Goshen to the Alexandrian Jewish quarter — three thousand years of Jewish life along the Nile."
 ---

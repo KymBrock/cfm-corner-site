@@ -1,4 +1,5 @@
 ---
+weight: 8
 title: "Major Sites"
 description: "An interactive map of Canaan's key archaeological sites — from Ugarit and Hazor to Jericho and the Philistine Pentapolis."
 ---

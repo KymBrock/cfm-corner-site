@@ -1,7 +1,8 @@
 ---
 title: "Timeline & the Rise of Empire"
+weight: 2
 description: "From the merchant city of Ashur to the first world empire and its overnight collapse — the long arc of Assyrian power, and the kings who march, named and dated, through the Books of Kings."
-draft: true
+draft: false
 ---
 
 {{< rawhtml >}}
@@ -15,6 +16,7 @@ draft: true
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">Two thousand years in the making, and gone in a single generation</p>
 
 <!-- LISTEN PLAYER (section narration) -->
+<!-- AUDIO HIDDEN for text-first publication (Kymber 2026-10-20); restore when narration is recorded and approved
 <div class="listen-player">
 <div class="lp-head">
 <span class="lp-icon" aria-hidden="true"></span>
@@ -25,9 +27,10 @@ draft: true
 Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/assyria/02-timeline-and-empire.mp3">download the audio</a> instead.
 </audio>
 </div>
+-->
 <!-- /LISTEN PLAYER -->
 
-<p>Assyria is one of the oldest names in the record of civilization. The city of <strong>Ashur</strong> was already a going concern when Abraham&rsquo;s world was young &mdash; a merchant town trading tin and textiles across the Anatolian plateau. That was centuries before it had an empire, or an army worth fearing. Yet the Assyria that scripture knows &mdash; the terror that Isaiah, Hosea, Amos, Jonah, and Nahum wrestle with &mdash; belongs almost entirely to a single furious stretch: the roughly three centuries of the <strong>Neo-Assyrian Empire</strong> (911&ndash;609 BC). It was the first state in history to rule from the Persian mountains to the Nile. And then, having swallowed the world, it vanished &mdash; so completely and so fast that within a few generations, travelers could walk over the ruins of Nineveh and not know a city had ever stood there.</p>
+<p>Assyria is one of the oldest names in the record of civilization. The city of <strong>Ashur</strong> was already a going concern when Abraham&rsquo;s world was young &mdash; a merchant town trading tin and textiles across the Anatolian plateau. That was centuries before it had an empire, or an army worth fearing. Yet the Assyria that scripture knows &mdash; the terror that Isaiah, Hosea, Amos, Jonah, and Nahum wrestle with &mdash; belongs almost entirely to a single furious stretch: the roughly three centuries of the <strong><a href="https://www.worldhistory.org/Neo-Assyrian_Empire/" target="_blank">Neo-Assyrian Empire</a></strong> (911&ndash;609 BC). It was the first state in history to rule from the Persian mountains to the Nile. And then, having swallowed the world, it vanished &mdash; so completely and so fast that within a few generations, travelers could walk over the ruins of Nineveh and not know a city had ever stood there.</p>
 
 <p>This page traces that long arc in four movements: the merchant city, the first surge, the world empire, and the sudden fall. Along the way, it marks the moments where Assyrian kings step by name into the Bible&rsquo;s own pages. Dates before the first millennium BC are approximate and debated. From the ninth century onward, though, the Assyrians kept meticulous records &mdash; annals, eponym lists (year-by-year registers, each named for a high official), even a recorded solar eclipse (763 BC) &mdash; that let us fix many events to the year.</p>
 
@@ -83,6 +86,13 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <br>
 
 <h3>Visual Timeline: From the Merchant City to the Fall of Nineveh</h3>
+<!-- FIELD GUIDE MAP: assyria-capitals-v01 -->
+<figure style="margin:1.5rem 0;">
+<a href="/images/culture/assyria/map-review-v01/assyria-capitals-v01.svg"><img src="/images/culture/assyria/map-review-v01/assyria-capitals-v01.png" alt="Four successive royal capitals: Ashur, Kalhu, Dur-Sharrukin and Nineveh, located along and near the Tigris" loading="lazy" style="width:100%;height:auto;border-radius:12px;"></a>
+<figcaption style="font-size:0.95rem;line-height:1.5;margin-top:0.75rem;">The changing location of the royal court. Numbers indicate succession, not a road or campaign route; Ashur continued as a religious centre. <a href="/images/culture/assyria/map-review-v01/assyria-capitals-v01.svg">View larger map</a>.<br><small>Adapted from <a href="https://commons.wikimedia.org/wiki/File:Middle_East_topographic_map-blank.svg">Sémhur’s terrain and river map</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>; cropped and relabeled. Modern relief and generalized rivers; exact ancient banks are not reconstructed. Coordinates: <a href="https://oracc.museum.upenn.edu/geonames/cbd/qpn/D.html">ORACC: Dur-Sharrukin</a>, <a href="https://oracc.museum.upenn.edu/geonames/cbd/qpn/x000002140.html">Nineveh</a>, <a href="https://oracc.museum.upenn.edu/geonames/cbd/qpn/x000002130.html">Kalhu</a>, <a href="https://whc.unesco.org/en/list/1130/">UNESCO: Ashur</a>. Chronology: <a href="https://oracc.museum.upenn.edu/saao/aebp/essentials/kings/sargonii/">Sargon’s new capital</a> and <a href="https://discovery.ucl.ac.uk/id/eprint/10085697/1/Ancient-Knowledge-Networks.pdf">Eleanor Robson, Ancient Knowledge Networks</a>.</small></figcaption>
+</figure>
+<!-- /FIELD GUIDE MAP -->
+
 
 <div style="position: relative; margin: 32px 0 40px 0; padding-left: 40px;">
 
@@ -99,12 +109,12 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #8B7355; font-size: 0.9em;">c. 1950&ndash;1750</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>The merchant colonies</strong> &mdash; Assyrian traders run a caravan network from the city of Ashur to <a href="https://www.worldhistory.org/kanesh/" target="_blank">Kanesh</a> (Kane&scaron;) in Anatolia; thousands of clay tablets from the <em>karum</em> (trading post) record tin, textiles, loans, and lawsuits &mdash; a commercial republic, not an empire</span>
+<span style="flex: 1; font-size: 0.95em;"><strong>The merchant colonies</strong> &mdash; Assyrian traders run a caravan network from the city of Ashur to <a href="https://whc.unesco.org/en/tentativelists/5905" target="_blank">Kanesh</a> (Kane&scaron;) in Anatolia; thousands of clay tablets from the <em>karum</em> (trading post) record tin, textiles, loans, and lawsuits &mdash; a commercial republic, not an empire</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #8B7355; font-size: 0.9em;">c. 1808&ndash;1776</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Shamshi-Adad I</strong> briefly forges a kingdom across upper Mesopotamia &mdash; a first taste of Assyrian ambition that dies with him and leaves Ashur a modest city again</span>
+<span style="flex: 1; font-size: 0.95em;"><strong><a href="https://oracc.museum.upenn.edu/riao/Q005651/" target="_blank">Shamshi-Adad I</a></strong> briefly forges a kingdom across upper Mesopotamia &mdash; a first taste of Assyrian ambition that dies with him and leaves Ashur a modest city again</span>
 </div>
 
 </div>
@@ -119,12 +129,12 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #7a6a8a; font-size: 0.9em;">c. 1363&ndash;1328</span>
-<span style="flex: 1; font-size: 0.95em;"><strong><a href="https://www.britannica.com/biography/Ashur-uballit-I" target="_blank">Ashur-uballit I</a></strong> makes Assyria an independent kingdom and corresponds with Egypt&rsquo;s pharaohs as an equal (the cache of royal letters known as the Amarna Letters)</span>
+<span style="flex: 1; font-size: 0.95em;"><strong><a href="https://www.britannica.com/biography/Ashur-uballit-I" target="_blank">Ashur-uballit I</a></strong> makes Assyria an independent kingdom and corresponds with <a href="https://www.worldhistory.org/egypt/" target="_blank">Egypt</a>&rsquo;s pharaohs as an equal (the cache of royal letters known as the <a href="https://www.worldhistory.org/Amarna_Letters/" target="_blank">Amarna Letters</a>)</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #7a6a8a; font-size: 0.9em;">c. 1243&ndash;1207</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Tukulti-Ninurta I</strong> &mdash; the first great Assyrian conqueror; he defeats Babylon and carries off the statue of Marduk &mdash; Babylon&rsquo;s chief god &mdash; and may stand behind the biblical memory of <a href="https://www.blueletterbible.org/kjv/gen/10/11/" target="_blank" data-ref="Genesis 10:11">Nimrod, the mighty hunter</a></span>
+<span style="flex: 1; font-size: 0.95em;"><strong>Tukulti-Ninurta I</strong> &mdash; the first great Assyrian conqueror; he defeats <a href="https://www.worldhistory.org/babylon/" target="_blank">Babylon</a> and carries off the statue of <a href="https://www.worldhistory.org/Marduk/" target="_blank">Marduk</a> &mdash; Babylon&rsquo;s chief god &mdash; and may stand behind the biblical memory of <a href="https://www.blueletterbible.org/kjv/gen/10/11/" target="_blank" data-ref="Genesis 10:11">Nimrod, the mighty hunter</a></span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
@@ -144,7 +154,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #4a6b52; font-size: 0.9em;">883&ndash;859 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong><a href="https://www.worldhistory.org/Ashurnasirpal_II/" target="_blank">Ashurnasirpal II</a></strong> rebuilds the empire and moves the capital to <strong>Kalhu</strong> (biblical Calah, modern Nimrud); his palace reliefs advertise a new policy of calculated terror (see <a href="/culture/ancient/assyria/03-the-war-machine/">The War Machine</a>)</span>
+<span style="flex: 1; font-size: 0.95em;"><strong><a href="https://www.worldhistory.org/Ashurnasirpal_II/" target="_blank">Ashurnasirpal II</a></strong> rebuilds the empire and moves the capital to <strong>Kalhu</strong> (biblical Calah, modern <a href="https://www.worldhistory.org/Kalhu/" target="_blank">Nimrud</a>); his palace reliefs advertise a new policy of calculated terror (see <a href="/culture/ancient/assyria/03-the-war-machine/">The War Machine</a>)</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
@@ -164,7 +174,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #4a6b52; font-size: 0.9em;">722 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Samaria falls</strong> &mdash; <a href="https://www.britannica.com/biography/Shalmaneser-V" target="_blank">Shalmaneser V</a> besieges the northern capital and <a href="https://www.worldhistory.org/Sargon_II/" target="_blank">Sargon II</a> claims its capture; the ten tribes are deported (<a href="https://www.blueletterbible.org/kjv/2ki/17/6/" target="_blank" data-ref="2 Kings 17:6">2 Kings 17:6</a>). The kingdom of Israel ends (see <a href="/culture/ancient/assyria/07-the-fall-of-the-north/">The Fall of the North</a>)</span>
+<span style="flex: 1; font-size: 0.95em;"><strong><a href="https://whc.unesco.org/en/list/1809/" target="_blank">Samaria</a> falls</strong> &mdash; <a href="https://www.britannica.com/biography/Shalmaneser-V" target="_blank">Shalmaneser V</a> besieges the northern capital and <a href="https://www.worldhistory.org/Sargon_II/" target="_blank">Sargon II</a> claims its capture; the ten tribes are deported (<a href="https://www.blueletterbible.org/kjv/2ki/17/6/" target="_blank" data-ref="2 Kings 17:6">2 Kings 17:6</a>). The kingdom of Israel ends (see <a href="/culture/ancient/assyria/07-the-fall-of-the-north/">The Fall of the North</a>)</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
@@ -174,7 +184,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #4a6b52; font-size: 0.9em;">701 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Sennacherib invades Judah</strong> (<a href="https://www.blueletterbible.org/kjv/2ki/18/13/" target="_blank" data-ref="2 Kings 18:13">2 Kings 18:13</a>), devastates its cities and besieges Jerusalem &mdash; but the city is delivered (<a href="https://www.blueletterbible.org/kjv/2ki/19/35/" target="_blank" data-ref="2 Kings 19:35">2 Kings 19:35</a>). The whole crisis is told in <a href="/culture/ancient/assyria/08-sennacherib-and-hezekiah/">Sennacherib &amp; Hezekiah</a></span>
+<span style="flex: 1; font-size: 0.95em;"><strong>Sennacherib invades Judah</strong> (<a href="https://www.blueletterbible.org/kjv/2ki/18/13/" target="_blank" data-ref="2 Kings 18:13">2 Kings 18:13</a>), devastates its cities and besieges <a href="https://www.worldhistory.org/jerusalem/" target="_blank">Jerusalem</a> &mdash; but the city is delivered (<a href="https://www.blueletterbible.org/kjv/2ki/19/35/" target="_blank" data-ref="2 Kings 19:35">2 Kings 19:35</a>). The whole crisis is told in <a href="/culture/ancient/assyria/08-sennacherib-and-hezekiah/">Sennacherib &amp; Hezekiah</a></span>
 </div>
 
 </div>
@@ -204,7 +214,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #c0392b; font-size: 0.9em;">614 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Ashur falls</strong> &mdash; the Medes storm and sack Assyria&rsquo;s ancient religious capital, the city that gave the empire and its god their name</span>
+<span style="flex: 1; font-size: 0.95em;"><strong>Ashur falls</strong> &mdash; the <a href="https://www.worldhistory.org/Medes/" target="_blank">Medes</a> storm and sack Assyria&rsquo;s ancient religious capital, the city that gave the empire and its god their name</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
@@ -229,7 +239,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <h3>The Merchant City: Ashur Before the Army (c. 2000&ndash;1750 BC)</h3>
 
-<p>Assyria did not begin as a military state. It first appears in history as a <strong>trading city</strong>: Ashur, perched on a rocky bluff over the Tigris. Its merchants ran one of the earliest long-distance commercial networks we can document. From colonies planted hundreds of miles away in central Anatolia &mdash; the largest at <a href="https://www.worldhistory.org/kanesh/" target="_blank">Kanesh</a> &mdash; Assyrian families shipped tin and fine woolen textiles by donkey caravan, and shipped back silver and gold. Tens of thousands of their letters, contracts, and account tablets survive. They read astonishingly like the paperwork of any modern firm: partnerships, interest rates, insurance against bandits, exasperated notes from wives at home to husbands away too long on the road.</p>
+<p>Assyria did not begin as a military state. It first appears in history as a <strong>trading city</strong>: Ashur, perched on a rocky bluff over the Tigris. Its merchants ran one of the earliest long-distance commercial networks we can document. From colonies planted hundreds of miles away in central Anatolia &mdash; the largest at <a href="https://whc.unesco.org/en/tentativelists/5905" target="_blank">Kanesh</a> &mdash; Assyrian families shipped tin and fine woolen textiles by donkey caravan, and shipped back silver and gold. Tens of thousands of their letters, contracts, and account tablets survive. They read astonishingly like the paperwork of any modern firm: partnerships, interest rates, insurance against bandits, exasperated notes from wives at home to husbands away too long on the road.</p>
 
 <p>Politically, this Old Assyrian Ashur was a compact city-state. Its assembly and hereditary ruler answered, in theory, to the god Ashur himself &mdash; the deity who was, uniquely, identical with the city. There was as yet no empire, no standing army, no ambition beyond the next caravan. This is the Assyria contemporary with the patriarchs &mdash; a world away from the war machine that would later bear its name. For a few decades the conqueror <strong>Shamshi-Adad I</strong> stitched together a short-lived kingdom across northern Mesopotamia. But it dissolved at his death, and Ashur settled back into a comfortable, mercantile obscurity that lasted for centuries.</p>
 
@@ -255,7 +265,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>The Neo-Assyrian Empire is the Assyria the prophets knew. Beginning around 911 BC, a line of aggressive kings rebuilt Assyrian power and then pushed it far beyond anything before. And they did it with a new and deliberate brutality, boasting in their own inscriptions of flayed rebels and cities turned to rubble. <strong>Ashurnasirpal II</strong> (883&ndash;859 BC) moved the capital to a rebuilt <strong>Kalhu</strong> &mdash; the Calah of <a href="https://www.blueletterbible.org/kjv/gen/10/1/" target="_blank" data-ref="Genesis 10">Genesis 10</a>, modern Nimrud. He lined its palace walls with the carved reliefs that first showed the world Assyria&rsquo;s calculated use of terror as policy (the subject of <a href="/culture/ancient/assyria/03-the-war-machine/">The War Machine</a>).</p>
 
-<p>His son <strong>Shalmaneser III</strong> (859&ndash;824 BC) turned that army west, into Israel&rsquo;s neighborhood &mdash; and here Assyrian stone and biblical history touch for the first time. At the <strong>Battle of Qarqar</strong> in 853 BC, Shalmaneser fought a coalition of Syrian and Palestinian kings. His victory stele (a tall inscribed stone), the <em>Kurkh Monolith</em>, lists among his opponents &ldquo;Ahab the Israelite&rdquo; fielding two thousand chariots. The Bible never mentions this battle at all. Yet here is Ahab, king of Israel, named in an enemy&rsquo;s war record &mdash; the earliest reference to an Israelite monarch anywhere outside scripture. A dozen years later the same Shalmaneser left an even more striking monument: the Black Obelisk, where an Israelite king appears in the picture itself.</p>
+<p>His son <strong>Shalmaneser III</strong> (859&ndash;824 BC) turned that army west, into Israel&rsquo;s neighborhood &mdash; and here Assyrian stone and biblical history touch for the first time. At the <strong>Battle of Qarqar</strong> in 853 BC, Shalmaneser fought a coalition of Syrian and Palestinian kings. His victory stele (a tall inscribed stone), the <em>Kurkh Monolith</em>, lists among his opponents &ldquo;Ahab the Israelite&rdquo; fielding two thousand chariots. The Bible never mentions this battle at all. Yet here is Ahab, king of Israel, named in an enemy&rsquo;s war record &mdash; the earliest reference to an Israelite monarch anywhere outside scripture. A dozen years later the same Shalmaneser left an even more striking monument: the <a href="https://oracc.museum.upenn.edu/nimrud/livesofobjects/blackobelisk/index.html" target="_blank">Black Obelisk</a>, where an Israelite king appears in the picture itself.</p>
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
 <p style="margin: 0;"><strong>Jehu on the Black Obelisk:</strong> Shalmaneser III&rsquo;s <em>Black Obelisk</em>, now in the British Museum, carries the earliest surviving <em>picture</em> of a named Israelite. A caption identifies the figure bowing to the ground before the Assyrian king as &ldquo;Jehu, son of Omri&rdquo; &mdash; the very Jehu of <a href="https://www.blueletterbible.org/kjv/2ki/9/1/" target="_blank" data-ref="2 Kings 9">2 Kings 9&ndash;10</a>, though scholars debate whether the kneeling figure is the king in person or his envoy. The figure brings silver, gold, and vessels as tribute around 841 BC. (The Assyrians called Israel &ldquo;the house of Omri&rdquo; long after Omri&rsquo;s dynasty had fallen.) It is a humbling image for anyone who has read Kings: the reforming, blood-soaked usurper of the northern throne, face to the dust before the empire that would one day carry his people away.</p>
@@ -266,7 +276,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <p>They finished under his successors. <strong>Shalmaneser V</strong> (727&ndash;722 BC) laid the final siege to <strong>Samaria</strong>, and either he or his successor <strong>Sargon II</strong> (722&ndash;705 BC) took it. The Bible attributes the capture to an unnamed &ldquo;king of Assyria,&rdquo; Sargon&rsquo;s own inscriptions claim it, and the timing straddles the change of reign. Either way the result was the same and it was final: &ldquo;the king of Assyria took Samaria, and carried Israel away into Assyria&rdquo; (<a href="https://www.blueletterbible.org/kjv/2ki/17/6/" target="_blank" data-ref="2 Kings 17:6">2 Kings 17:6</a>). The northern kingdom of Israel, ten tribes strong, ceased to exist in 722 BC &mdash; the story told in full in <a href="/culture/ancient/assyria/07-the-fall-of-the-north/">The Fall of the North &amp; the Lost Tribes</a>.</p>
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
-<p style="margin: 0;"><strong>Sargon, the king who wasn&rsquo;t there:</strong> for most of the nineteenth century, skeptics treated the mighty Sargon II as a biblical error. He is named in scripture exactly once &mdash; &ldquo;when Sargon the king of Assyria sent&rdquo; his commander against Ashdod (<a href="https://www.blueletterbible.org/kjv/isa/20/1/" target="_blank" data-ref="Isaiah 20:1">Isaiah 20:1</a>) &mdash; and he appeared in no other ancient record at all. Then in 1843 Paul-&Eacute;mile Botta&rsquo;s excavations at Khorsabad uncovered Sargon&rsquo;s own vast palace, its walls covered with his annals. A king known from a single Bible verse turned out to have built one of the largest palaces in the ancient world. It is a parable, often repeated, of how Assyriology has treated the Old Testament&rsquo;s incidental details.</p>
+<p style="margin: 0;"><strong>Sargon, the king who wasn&rsquo;t there:</strong> for generations, skeptics treated the mighty Sargon II as a biblical error. He is named in scripture exactly once &mdash; &ldquo;when Sargon the king of Assyria sent&rdquo; his commander against Ashdod (<a href="https://www.blueletterbible.org/kjv/isa/20/1/" target="_blank" data-ref="Isaiah 20:1">Isaiah 20:1</a>) &mdash; and he appeared in no other ancient record at all. Then in 1843 Paul-&Eacute;mile Botta&rsquo;s excavations at <a href="https://www.worldhistory.org/Dur-Sharrukin/" target="_blank">Khorsabad</a> uncovered Sargon&rsquo;s own vast palace, its walls covered with his annals. A king known from a single Bible verse turned out to have built one of the largest palaces in the ancient world. It is a parable, often repeated, of how Assyriology has treated the Old Testament&rsquo;s incidental details.</p>
 </div>
 
 <!-- ===== EMPIRES IN SEQUENCE (ers) ===== -->
@@ -297,7 +307,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div class="ers">
   <div class="ers-head"><h4>The Empires in Sequence</h4>
-  <p>Slide from Assyria&rsquo;s height through its fall to the powers that replaced it &mdash; Babylon, then Persia.</p></div>
+  <p>Slide from Assyria&rsquo;s height through its fall to the powers that replaced it &mdash; Babylon, then <a href="https://www.worldhistory.org/Persia/" target="_blank">Persia</a>.</p></div>
   <div class="ers-stage" id="ers-stage">
     <span class="ers-yrbadge" id="ers-badge"></span>
     <img class="ers-map" src="/images/culture/babylon/maps/era-700bc.jpg" alt="The Assyrian empire at its height, c. 700 BC" loading="lazy">
@@ -343,9 +353,9 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p>Under Sargon&rsquo;s son <strong>Sennacherib</strong> (705&ndash;681 BC), Assyria stood at Jerusalem&rsquo;s wall. His campaign of 701 BC devastated Judah &mdash; &ldquo;Sennacherib king of Assyria come up against all the fenced cities of Judah, and took them&rdquo; (<a href="https://www.blueletterbible.org/kjv/2ki/18/13/" target="_blank" data-ref="2 Kings 18:13">2 Kings 18:13</a>) &mdash; and his own prism boasts of shutting up Hezekiah &ldquo;like a bird in a cage.&rdquo; But Jerusalem did not fall. The siege broke, in the deliverance recounted in <a href="https://www.blueletterbible.org/kjv/2ki/19/35/" target="_blank" data-ref="2 Kings 19:35">2 Kings 19:35</a>, and Sennacherib &ldquo;departed, and went and returned, and dwelt at Nineveh.&rdquo; That single night &mdash; the whole subject of <a href="/culture/ancient/assyria/08-sennacherib-and-hezekiah/">Sennacherib &amp; Hezekiah</a> &mdash; planted a conviction in Judah that Zion could never be taken.</p>
 
-<p>The empire kept growing after Jerusalem was spared. Sennacherib&rsquo;s son <strong>Esarhaddon</strong> (681&ndash;669 BC) did what no Mesopotamian king had ever managed: he conquered <strong>Egypt</strong>, taking Memphis in 671 BC. His son <strong>Ashurbanipal</strong> (669&ndash;c. 631 BC) pushed on to sack Thebes itself in 663 BC. Then, at the height of his power, he turned to assembling the great <strong>library of Nineveh</strong>, sending scribes across the empire to copy every text worth keeping. When the mounds of Nineveh were opened in the 1850s, it was Ashurbanipal&rsquo;s library that gave the modern world the Epic of Gilgamesh and its startlingly familiar flood story (see <a href="/culture/ancient/assyria/05-writing-and-the-great-library/">Writing &amp; the Great Library</a>).</p>
+<p>The empire kept growing after Jerusalem was spared. Sennacherib&rsquo;s son <strong>Esarhaddon</strong> (681&ndash;669 BC) did what no Mesopotamian king had ever managed: he conquered <strong>Egypt</strong>, taking Memphis in 671 BC. His son <strong>Ashurbanipal</strong> (669&ndash;c. 631 BC) pushed on to sack Thebes itself in 663 BC. Then, at the height of his power, he turned to assembling the great <strong>library of Nineveh</strong>, sending scribes across the empire to copy every text worth keeping. When the mounds of Nineveh were opened in the 1850s, it was Ashurbanipal&rsquo;s library that gave the modern world the Epic of <a href="https://www.worldhistory.org/article/192/the-eternal-life-of-gilgamesh/" target="_blank">Gilgamesh</a> and its startlingly familiar flood story (see <a href="/culture/ancient/assyria/05-writing-and-the-great-library/">Writing &amp; the Great Library</a>).</p>
 
-<p>And then it ended, with a speed that still astonishes historians. Ashurbanipal died around 631 BC. Within a generation, the empire that ruled from the Nile to Persia simply came apart &mdash; civil war among his heirs, revolt in Babylonia under Nabopolassar (a Babylonian general who founded the empire that would replace Assyria), and the rise of the Medes on the eastern frontier. The two powers made common cause. In 614 BC the Medes stormed <strong>Ashur</strong>, the old holy city. In 612 BC the allied armies took <strong>Nineveh</strong> itself, the &ldquo;bloody city&rdquo; of Nahum&rsquo;s vision, and burned it &mdash; the fall the prophet had sung of in advance: &ldquo;Nineveh is laid waste: who will bemoan her?&rdquo; (<a href="https://www.blueletterbible.org/kjv/nah/3/7/" target="_blank" data-ref="Nahum 3:7">Nahum 3:7</a>). A last Assyrian claimant held out at Harran until 609 BC. Then the name that had terrified the ancient world for three centuries was simply gone. When Xenophon, the Greek soldier-writer, marched his Greek mercenaries past the ruins two hundred years later, no one could even tell him what city had once stood there.</p>
+<p>And then it ended, with a speed that still astonishes historians. Ashurbanipal died around 631 BC. Within a generation, the empire that ruled from the Nile to Persia simply came apart &mdash; civil war among his heirs, revolt in Babylonia under Nabopolassar (a Babylonian general who founded the empire that would replace Assyria), and the rise of the Medes on the eastern frontier. The two powers made common cause. In 614 BC the Medes stormed <strong>Ashur</strong>, the old holy city. In 612 BC the allied armies took <strong>Nineveh</strong> itself, the &ldquo;bloody city&rdquo; of Nahum&rsquo;s vision, and burned it &mdash; the fall the prophet had sung of in advance: &ldquo;Nineveh is laid waste: who will bemoan her?&rdquo; (<a href="https://www.blueletterbible.org/kjv/nah/3/7/" target="_blank" data-ref="Nahum 3:7">Nahum 3:7</a>). A last Assyrian claimant held out at Harran until 609 BC. Then the name that had terrified the ancient world for three centuries was simply gone. When <a href="https://www.worldhistory.org/xenophon/" target="_blank">Xenophon</a>, the Greek soldier-writer, marched his Greek mercenaries past the ruins two hundred years later, no one could even tell him what city had once stood there.</p>
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
 <p style="margin: 0;"><strong>The rod and the woodcutter:</strong> the prophets never saw Assyria as merely a military problem. Isaiah calls the empire &ldquo;the rod of mine anger&rdquo; (<a href="https://www.blueletterbible.org/kjv/isa/10/5/" target="_blank" data-ref="Isaiah 10:5">Isaiah 10:5</a>) &mdash; a tool in God&rsquo;s hand to discipline his people. Then, in the same breath, he warns that the rod would itself be broken for its arrogance &mdash; as if an axe should boast against the one who swings it. Assyria&rsquo;s whole arc, from the trading city to the world empire to the ash of Nineveh, became for Israel a case study in exactly that: a nation used, and then a nation judged, on a timescale a prophet could announce before it happened. The empire that seemed eternal from beneath its walls lasted, as a world power, barely three hundred years &mdash; and as the master of Israel&rsquo;s fate, barely one.</p>

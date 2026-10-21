@@ -1,4 +1,5 @@
 ---
+weight: 2
 title: "Timeline & Empires"
 description: "From Abraham's Middle Bronze Age to the Iron Age dawn — the empires that controlled Canaan, the trade networks that connected it, and the collapse that opened the promised land."
 ---

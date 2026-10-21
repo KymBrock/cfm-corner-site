@@ -1,4 +1,5 @@
 ---
+weight: 1
 title: "The Land of Canaan"
 description: "Geography, trade routes, climate, and why this narrow corridor between empires became the most contested land in ancient history."
 ---

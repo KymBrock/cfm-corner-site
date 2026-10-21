@@ -3,7 +3,7 @@ title: "Assyria: The Rod of the North"
 description: "A deep-dive cultural guide to Assyria — the militarized highland empire that erased the northern kingdom, scattered the ten tribes, invented mass deportation, and stood at Jerusalem's wall in 701 BC. Essential background for 2 Kings 15–19, Isaiah, Jonah, Nahum, and the confidence that Zion could never fall."
 hide_children: true
 card_icon: "/images/culture/assyria/assyria-guide-hero-icon.png"
-stage: drafting
+stage: live
 # Blockers corrected 2026-08-21 on Kymber's ruling. The previous list named the Babylon
 # guide as the sole blocker; it is not the blocker. 3 cross-links into Babylon remain a
 # technical dependency, but they are not what is holding publication.
@@ -13,7 +13,7 @@ stage_blockers:
   - "Kymber's approval to publish the field guides at all"
 cascade:
   stage: drafting
-draft: true
+draft: false
 ---
 
 {{< rawhtml >}}
@@ -24,15 +24,15 @@ draft: true
 
 ## A Note on This Guide
 
-Before Babylon, there was Assyria &mdash; and for the prophets of Israel, no name carried more terror. For three centuries the empire on the upper Tigris was the great power of the world, and it perfected something new: conquest as a science, and deportation as a policy. It was Assyria that swallowed the northern kingdom of Israel, marched ten tribes into an exile from which they never returned, and repopulated Samaria with strangers. And it was Assyria that stood at the wall of Jerusalem in 701 BC &mdash; only to break, overnight, in the greatest deliverance of Hezekiah's reign.
+Assyria was the great power before Babylon, and for the prophets of Israel, no name carried more terror. For three centuries this empire on the upper Tigris dominated its world, and it perfected something new: conquest as a science, and deportation as a policy. It was Assyria that swallowed the northern kingdom of Israel, carried many of its people into exile, and repopulated Samaria with strangers. That was the beginning of the story of <a href="/culture/ancient/assyria/07-the-fall-of-the-north/">the tribes the world calls lost</a>. And it was Assyria that stood at the wall of Jerusalem in 701 BC, only to break overnight in the greatest deliverance of Hezekiah's reign.
 
 <br>
 
-Understanding Assyria is essential for reading the second half of 2 Kings, the oracles of Isaiah, Hosea, Amos, Micah, Jonah, and Nahum &mdash; and for understanding a conviction that outlived the empire itself: the belief, born the night the angel passed through the Assyrian camp, that Zion could never be destroyed. A century later that same confidence had curdled into false security, and Lehi and Jeremiah spent their lives preaching against it. The Book of Mormon opens on the far side of that argument.
+Understanding Assyria unlocks much of the Old Testament: the second half of 2 Kings and the prophets Isaiah, Hosea, Amos, Micah, Jonah, and Nahum. It also explains a belief that outlived the empire. After the night the angel passed through the Assyrian camp, many in Judah concluded that God would never let Zion fall. A century later that belief had hardened into false security (&ldquo;The temple of the LORD, The temple of the LORD,&rdquo; <a href="https://www.blueletterbible.org/kjv/jer/7/4/" target="_blank" data-ref="Jeremiah 7:4">Jeremiah 7:4</a>), and Jeremiah preached against it. The Book of Mormon opens in the middle of that same argument, as Lehi warns that Jerusalem will be destroyed and the people mock him for it (<a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/1?lang=eng" target="_blank" data-ref="1 Nephi 1">1 Nephi 1</a>).
 
 <br>
 
-We approach Assyria's history, religion, and terrible machinery with respect for the evidence &mdash; the palace reliefs that advertised its cruelty, the royal annals, the excavated cities, and the scriptures that named it "the rod of mine anger" &mdash; and with an eye toward the God who used even an empire like this one, and then broke it exactly as his prophets said he would.
+We approach Assyria's history, religion, and terrible machinery in two ways. First, with respect for the evidence: the palace reliefs that advertised its cruelty, the royal annals, and the excavated cities. Second, through the scriptures that named it &ldquo;the rod of mine anger&rdquo; (<a href="https://www.blueletterbible.org/kjv/isa/10/5/" target="_blank" data-ref="Isaiah 10:5">Isaiah 10:5</a>), with an eye toward the God who used even an empire like this one, and then broke it, as his prophets said he would.
 
 <br>
 

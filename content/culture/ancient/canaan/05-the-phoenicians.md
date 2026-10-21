@@ -1,4 +1,5 @@
 ---
+weight: 5
 title: "The Phoenicians"
 description: "Tyre, Sidon, the alphabet, and the sea traders who connected the ancient world — from Hiram's Temple timber to Jezebel's imported cult."
 ---
