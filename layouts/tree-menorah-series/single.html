@@ -37,6 +37,7 @@
     <a href="{{ .Parent.RelPermalink }}">Series contents</a>
     {{ range .Parent.Pages.ByParam "part" }}{{ if .Params.part }}<a href="{{ .RelPermalink }}"{{ if eq .Params.part $.Params.part }} aria-current="page"{{ end }}>Part {{ .Params.part }}</a>{{ end }}{{ end }}
     <a href="{{ .Parent.RelPermalink }}interactive-model/">Interactive Model</a>
+    <a href="{{ .Parent.RelPermalink }}sources/">Sources and Further Reading</a>
   </nav>
   {{ if or (eq .Params.part 1) (eq .Params.part 2) }}
   <h1 class="series-article-title">{{ .Params.card_title | default .Title }}</h1>

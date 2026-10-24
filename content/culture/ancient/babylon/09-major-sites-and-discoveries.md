@@ -1,7 +1,8 @@
 ---
 title: "Major Sites & Discoveries"
+weight: 11
 description: "Babylon's mounds from Koldewey to UNESCO, Ur and Uruk and Nippur, and the shelf of discoveries — the flood tablet, Hammurabi's stele, the chronicles — that reopened Babylon to the world."
-draft: true
+draft: false
 ---
 
 {{< rawhtml >}}
@@ -15,6 +16,7 @@ draft: true
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">Where Babylon&rsquo;s story surfaced &mdash; the mounds, the digs, and the museum halls</p>
 
 <!-- LISTEN PLAYER (section narration) -->
+<!-- AUDIO HIDDEN for text-first publication (Kymber 2026-10-20); restore when narration is recorded and approved
 <div class="listen-player">
 <div class="lp-head">
 <span class="lp-icon" aria-hidden="true"></span>
@@ -25,9 +27,10 @@ draft: true
 Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/babylon/09-major-sites-and-discoveries.mp3">download the audio</a> instead.
 </audio>
 </div>
+-->
 <!-- /LISTEN PLAYER -->
 
-<p>For seventeen centuries, Babylon was a rumor under the mounds of Iraq &mdash; a name in scripture and Herodotus, its location half-remembered, its script unreadable. Then the nineteenth and twentieth centuries reversed all of that in a rush. The wedge-script was deciphered. The mounds were opened. And the libraries of the Bible&rsquo;s great adversary began, tablet by tablet, to corroborate the Bible&rsquo;s account of it. This page maps the principal sites and the landmark finds &mdash; and tells you where each one sits today.</p>
+<p>For seventeen centuries, Babylon was a rumor under the mounds of Iraq: a name in scripture and <a href="https://www.worldhistory.org/herodotus/" target="_blank">Herodotus</a>, its location half-remembered, its script unreadable. Then the nineteenth and twentieth centuries reversed all of that in a rush. The wedge-script was deciphered. The mounds were opened. And the libraries of the Bible&rsquo;s great adversary began, tablet by tablet, to corroborate the Bible&rsquo;s account of it. This page maps the principal sites and the landmark finds, and tells you where each one sits today.</p>
 
 <br>
 
@@ -37,7 +40,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <h3>Babylon Itself (Tell Babil, Iraq)</h3>
 
-<p>The ruin field lies on the Euphrates about 85 km south of Baghdad, near modern Hillah. The early explorers found it baffling. Claudius Rich, the East India Company&rsquo;s Baghdad resident, surveyed the mounds in 1811 and 1817. Austen Henry Layard, the excavator of Nineveh, made test digs (soundings) here. But the mudbrick defeated them both, and they turned to the more photogenic Assyrian capitals instead. Babylon&rsquo;s real excavation was <strong>Robert Koldewey&rsquo;s German expedition of 1899&ndash;1917</strong> &mdash; eighteen continuous years, digging through Ottoman rule into a world war. It recovered the city of <a href="https://www.worldhistory.org/Nebuchadnezzar_II/" target="_blank">Nebuchadnezzar</a> in plan: the double walls, the Processional Way, and the Southern Palace &mdash; with the Jehoiachin ration tablets in its storerooms (see <a href="/culture/ancient/babylon/07-the-exile-experience/">Section 07</a>). It uncovered the foundations of Etemenanki and the glazed-brick masses of the <strong>Ishtar Gate</strong>, shipped to Berlin and reassembled there by 1930 (see <a href="/culture/ancient/babylon/06-the-city-itself/">Section 06</a>). And Koldewey&rsquo;s methods &mdash; the patient tracing of mudbrick architecture that earlier diggers had shoveled through unseen &mdash; helped found modern Near Eastern archaeology.</p>
+<p>The ruin field lies on the Euphrates about 85 km south of Baghdad, near modern Hillah. The early explorers found it baffling. <a href="https://www.qdl.qa/en/claudius-james-rich-administrator-traveller-author-and-collector-manuscripts-and-antiquities" target="_blank">Claudius Rich</a>, the East India Company&rsquo;s Baghdad resident, surveyed the mounds in 1811 and 1817. <a href="https://www.nationalgallery.org.uk/about-us/history/collectors-and-benefactors/austen-henry-layard" target="_blank">Austen Henry Layard</a>, the excavator of <a href="https://www.worldhistory.org/nineveh/" target="_blank">Nineveh</a>, made test digs (soundings) here. But the mudbrick defeated them both, and they turned to the more photogenic Assyrian capitals instead. Babylon&rsquo;s real excavation was <strong>Robert Koldewey&rsquo;s German expedition of 1899&ndash;1917</strong>: eighteen continuous years, digging through Ottoman rule into a world war. It recovered the city of <a href="https://www.worldhistory.org/Nebuchadnezzar_II/" target="_blank">Nebuchadnezzar</a> in plan: the double walls, the Processional Way, and the Southern Palace, with the Jehoiachin ration tablets in its storerooms (see <a href="/culture/ancient/babylon/07-the-exile-experience/">Section 07</a>). It uncovered the foundations of Etemenanki and the glazed-brick masses of the <strong><a href="https://www.worldhistory.org/Ishtar_Gate/" target="_blank">Ishtar Gate</a></strong>, shipped to Berlin and reassembled there by 1930 (see <a href="/culture/ancient/babylon/06-the-city-itself/">Section 06</a>). And Koldewey&rsquo;s methods (the patient tracing of mudbrick architecture that earlier diggers had shoveled through unseen) helped found modern Near Eastern archaeology.</p>
 
 <div class="fg-gallery">
   <div class="fg-stage">
@@ -45,14 +48,16 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
     <button class="fg-arrow fg-prev" type="button" aria-label="Previous image">&lsaquo;</button>
     <button class="fg-arrow fg-next" type="button" aria-label="Next image">&rsaquo;</button>
     <div class="fg-item" data-caption="Babylon today &mdash; the reconstructed walls of Nebuchadnezzar&rsquo;s Southern Palace rise above the excavated mounds." data-credit="MohammadHuzam &middot; Wikimedia Commons (CC BY-SA 4.0)"><img src="/images/culture/babylon/photos/babylon-site-today-2016.jpg" alt="The reconstructed walls of Babylon today" loading="lazy"></div>
-    <div class="fg-item" data-caption="The Lion of Babylon &mdash; a worn basalt statue that has stood on the site for more than two millennia." data-credit="Hamody al-iraqi &middot; Wikimedia Commons (CC BY-SA 4.0)"><img src="/images/culture/babylon/photos/lion-of-babylon-statue.jpg" alt="The basalt Lion of Babylon statue" loading="lazy"></div>
-    <div class="fg-item" data-caption="A plate from Koldewey&rsquo;s 1914 excavation report comparing the Ishtar Gate&rsquo;s dragon reliefs." data-credit="Robert Koldewey, 1914 &middot; public domain"><img src="/images/culture/babylon/photos/koldewey-sirrush-1914.png" alt="Koldewey's 1914 sirrush comparison plate" loading="lazy"></div>
+    <div class="fg-item" data-caption="The Lion of Babylon &mdash; a worn basalt statue that has stood on the site for more than two millennia." data-credit="Hamody al-iraqi · &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Babylon_lion_2.jpg&quot;&gt;Wikimedia Commons&lt;/a&gt; (&lt;a href=&quot;https://creativecommons.org/licenses/by-sa/4.0&quot;&gt;CC BY-SA 4.0&lt;/a&gt;)"><img src="/images/culture/babylon/photos/lion-of-babylon-statue.jpg" alt="The basalt Lion of Babylon statue" loading="lazy"></div>
+    <div class="fg-item" data-caption="A plate from Koldewey&rsquo;s 1914 excavation report comparing the Ishtar Gate&rsquo;s dragon reliefs." data-credit="Robert Koldewey, 1914 · public domain &amp;middot; &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Ishtar_gate_sirrush_comparison_in_Koldewey_1914.png&quot;&gt;Source&lt;/a&gt;"><img src="/images/culture/babylon/photos/koldewey-sirrush-1914.png" alt="Koldewey's 1914 sirrush comparison plate" loading="lazy"></div>
   </div>
   <p class="fg-cap"></p>
   <div class="fg-dots"></div>
 </div>
 
 <p>The site&rsquo;s modern history is its own cautionary tale. In the 1980s, Saddam Hussein rebuilt walls and palace rooms directly on the ancient foundations, and crowned a neighboring mound with a presidential palace. In conscious imitation of Nebuchadnezzar, Saddam&rsquo;s bricks were stamped with his own name as the city&rsquo;s restorer. Then in 2003&ndash;2004, coalition forces made the ruins a military base (&ldquo;Camp Alpha&rdquo;). The documented damage to the Processional Way and Ishtar Gate area drew international protest. Conservation has since resumed under Iraqi and international programs, and in <strong>2019 Babylon was inscribed as a UNESCO World Heritage Site</strong>. Visitors today walk Processional-Way paving at the level of Nebuchadnezzar&rsquo;s street, pass a replica Ishtar Gate, and meet the basalt <strong>Lion of Babylon</strong> &mdash; the site&rsquo;s ancient mascot, still trampling its enemy after 2,600 years.</p>
+
+<p>Babylon&rsquo;s latest chapter is still being written. When war broke out across the region in early 2026, drone and rocket attacks forced every foreign excavation team in Iraq to leave, among them the dig at Nippur, but as of October 2026 no damage to Babylon or its sister cities has been reported.</p>
 
 <br>
 
@@ -119,7 +124,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 (function(){
   var SITES={
     babylon:{name:"Babylon",sub:"Tell Babil, near Hillah",what:"The capital itself",why:"Robert Koldewey&rsquo;s 1899&ndash;1917 dig recovered Nebuchadnezzar&rsquo;s city &mdash; the double walls, the Processional Way, the Southern Palace, and the Ishtar Gate (rebuilt in Berlin). A UNESCO World Heritage Site since 2019.",link:"/culture/ancient/babylon/06-the-city-itself/",linkText:"The City Itself &rarr;"},
-    sippar:{name:"Sippar",sub:"Tell Abu Habbah",what:"City of the sun-god Shamash",why:"Its Ebabbar temple yielded tens of thousands of Neo-Babylonian tablets &mdash; the day-to-day economy of the empire &mdash; plus a genuine temple library found in place (in situ), still jar-filed on its shelves. The Babylonian Map of the World was found here too.",link:"/culture/ancient/babylon/05-writing-and-learning/",linkText:"Writing &amp; Learning &rarr;"},
+    sippar:{name:"Sippar",sub:"Tell Abu Habbah",what:"City of the sun-god Shamash",why:"Its Ebabbar temple yielded tens of thousands of Neo-Babylonian tablets (the day-to-day economy of the empire), plus a genuine temple library found in place (in situ), still jar-filed on its shelves. The Babylonian Map of the World was found here too.",link:"/culture/ancient/babylon/05-writing-and-learning/",linkText:"Writing &amp; Learning &rarr;"},
     kish:{name:"Kish",sub:"on the Euphrates, east of Babylon",what:"One of the great cities of the plain",why:"Like Ur, Uruk, Nippur, and Babylon itself, Kish grew up along the <b>Euphrates</b> rather than the wilder Tigris &mdash; the river whose gentle, gravity-fed flow made the southern cities possible.",link:"/culture/ancient/babylon/01-the-land-between-the-rivers/",linkText:"The Land Between the Rivers &rarr;"},
     nippur:{name:"Nippur",sub:"holy city of Enlil",what:"A religious capital, never a political one",why:"The countryside around Nippur is where Judah&rsquo;s exiles were settled &mdash; the <b>Chebar canal</b>, the <b>&#256;l-Y&#257;h&#363;du</b> (&ldquo;Judah-town&rdquo;) district, and the Mura&scaron;&ucirc; archive all belong to its region.",link:"/culture/ancient/babylon/07-the-exile-experience/",linkText:"The Exile Experience &rarr;"},
     uruk:{name:"Uruk",sub:"Warka; biblical Erech",what:"The world&rsquo;s first true city",why:"The birthplace of writing (c. 3400&ndash;3300 BC) and of monumental urban life &mdash; Gilgamesh&rsquo;s city, and one of the cities named in Nimrod&rsquo;s kingdom (Genesis 10:10).",link:"/culture/ancient/babylon/05-writing-and-learning/",linkText:"Writing &amp; Learning &rarr;"},
@@ -180,7 +185,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <tr style="background: white;">
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;"><strong>Nineveh</strong> (Mosul)</td>
 <td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">The Assyrian capital</td>
-<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Included here for one reason: <strong>Ashurbanipal&rsquo;s library</strong>, where Babylon&rsquo;s classics &mdash; the flood tablet, the En&#363;ma Eli&scaron; &mdash; were found (see <a href="/culture/ancient/babylon/05-writing-and-learning/">Section 05</a>)</td>
+<td style="padding: 10px 16px; border-bottom: 1px solid #e0e0e0;">Included here for one reason: <strong>Ashurbanipal&rsquo;s library</strong>, where Babylon&rsquo;s classics (the flood tablet, the En&#363;ma Eli&scaron;) were found (see <a href="/culture/ancient/babylon/05-writing-and-learning/">Section 05</a>)</td>
 </tr>
 </tbody>
 </table>
@@ -196,20 +201,20 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <p>A short list of the finds that carry this guide&rsquo;s story, with their present addresses:</p>
 
 <ul>
-<li><strong>The Flood Tablet</strong> (Gilgamesh XI, from Nineveh) &mdash; the tablet George Smith deciphered in 1872, electrifying the Victorian public with a Babylonian deluge; <em>British Museum</em>. (See <a href="/culture/ancient/babylon/04-religion-and-mythology/">Section 04</a>.)</li>
-<li><strong>The Code of Hammurabi stele</strong> &mdash; carried off to Susa by Elamite raiders c. 1155 BC and excavated there by French archaeologists in 1901&ndash;02; <em>Louvre, Paris</em>. (See <a href="/culture/ancient/babylon/02-timeline-and-empires/">Section 02</a>.)</li>
+<li><strong>The Flood Tablet</strong> (<a href="https://www.worldhistory.org/article/192/the-eternal-life-of-gilgamesh/" target="_blank">Gilgamesh</a> XI, from Nineveh) &mdash; the tablet George Smith deciphered in 1872, electrifying the Victorian public with a Babylonian deluge; <em>British Museum</em>. (See <a href="/culture/ancient/babylon/04-religion-and-mythology/">Section 04</a>.)</li>
+<li><strong>The <a href="https://www.worldhistory.org/Code_of_Hammurabi/" target="_blank">Code of Hammurabi</a> stele</strong> &mdash; carried off to <a href="https://www.worldhistory.org/susa/" target="_blank">Susa</a> by Elamite raiders c. 1155 BC and excavated there by French archaeologists in 1901&ndash;02; <em>Louvre, Paris</em>. (See <a href="/culture/ancient/babylon/02-timeline-and-empires/">Section 02</a>.)</li>
 <li><strong>The Ishtar Gate and Processional Way</strong> &mdash; excavated 1899&ndash;1917, rebuilt from original glazed bricks; <em>Pergamon Museum (Vorderasiatisches Museum), Berlin</em>, with panels dispersed to museums worldwide, including the Metropolitan Museum in New York and the Oriental Institute (now ISAC) in Chicago.</li>
-<li><strong>The Babylonian Chronicles</strong>, including the <strong>Jerusalem Chronicle</strong> (BM 21946) dating Jerusalem&rsquo;s capture to March 16, 597 BC; <em>British Museum</em>. (See <a href="/culture/ancient/babylon/08-babylon-and-the-bible/">Section 08</a>.)</li>
+<li><strong>The Babylonian Chronicles</strong>, including the <strong>Jerusalem Chronicle</strong> (BM 21946) dating <a href="https://www.worldhistory.org/jerusalem/" target="_blank">Jerusalem</a>&rsquo;s capture to March 16, 597 BC; <em>British Museum</em>. (See <a href="/culture/ancient/babylon/08-babylon-and-the-bible/">Section 08</a>.)</li>
 <li><strong>The Jehoiachin ration tablets</strong> &mdash; from Nebuchadnezzar&rsquo;s Southern Palace; <em>Vorderasiatisches Museum, Berlin</em>. (See <a href="/culture/ancient/babylon/07-the-exile-experience/">Section 07</a>.)</li>
 <li><strong>The Nabonidus Cylinder of Ur</strong> &mdash; the prayer naming &ldquo;Belshazzar, the eldest son, my offspring&rdquo;; <em>British Museum</em>. (See <a href="/culture/ancient/babylon/03-nebuchadnezzar-and-the-kings/">Section 03</a>.)</li>
-<li><strong>The Cyrus Cylinder</strong> &mdash; found in Babylon&rsquo;s foundations by Hormuzd Rassam in 1879; Cyrus&rsquo;s own account of taking the city and returning captive peoples and their gods &mdash; the Persian policy behind <a href="https://www.blueletterbible.org/kjv/ezr/1/2/" target="_blank" data-ref="Ezra 1:2-4">Ezra 1</a>; <em>British Museum</em>. (It belongs to the next guide in this series &mdash; the Achaemenid Empire.)</li>
+<li><strong>The Cyrus Cylinder</strong> &mdash; found in Babylon&rsquo;s foundations by Hormuzd Rassam in 1879; Cyrus&rsquo;s own account of taking the city and returning captive peoples and their gods: the Persian policy behind <a href="https://www.blueletterbible.org/kjv/ezr/1/2/" target="_blank" data-ref="Ezra 1:2-4">Ezra 1</a>; <em>British Museum</em>. (It belongs to the next guide in this series: the Achaemenid Empire.)</li>
 <li><strong>The Babylonian Map of the World</strong> &mdash; the 6th-century BC disk-map with Babylon at the center; <em>British Museum</em>. (See <a href="/culture/ancient/babylon/05-writing-and-learning/">Section 05</a>.)</li>
-<li><strong>The &#256;l-Y&#257;h&#363;du (&ldquo;Judah-town&rdquo;) tablets</strong> &mdash; the Judean exile community&rsquo;s documents, published 2014; unprovenanced (acquired on the antiquities market), now largely in private collections, with groups exhibited at the Bible Lands Museum, Jerusalem. (See <a href="/culture/ancient/babylon/07-the-exile-experience/">Section 07</a> &mdash; including why the provenance caveat matters.)</li>
+<li><strong>The &#256;l-Y&#257;h&#363;du (&ldquo;Judah-town&rdquo;) tablets</strong> &mdash; the Judean exile community&rsquo;s documents, published 2014; unprovenanced (acquired on the antiquities market), now largely in private collections, with groups exhibited at the Bible Lands Museum, Jerusalem. (See <a href="/culture/ancient/babylon/07-the-exile-experience/">Section 07</a>, including why the provenance caveat matters.)</li>
 <li><strong>The Lachish Letters</strong> &mdash; Judah&rsquo;s final war correspondence, excavated 1935; principal group in the <em>British Museum</em>, others in the <em>Rockefeller Museum, Jerusalem</em>. (See <a href="/culture/ancient/babylon/08-babylon-and-the-bible/">Section 08</a>.)</li>
 </ul>
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
-<p style="margin: 0;"><strong>A note on reading discoveries responsibly:</strong> the same century that gave us these finds also taught two hard lessons. First, <em>provenance matters</em>. Tablets that surface on the market rather than in documented excavation (like the &#256;l-Y&#257;h&#363;du group) carry real questions about looting and, occasionally, forgery &mdash; which is why scholars flag them, and why this guide does too. Second, <em>sensations need patience</em>. From the Victorian &ldquo;Babel-und-Bibel&rdquo; debates over how much the Bible owed to Babylon, down to modern headlines, first claims about Bible-related finds are routinely revised. The discoveries that endure &mdash; the chronicles, the ration tablets, the excavated bullae &mdash; endured precisely because careful people checked. That is a good model for faith-and-scholarship questions generally: neither credulity nor cynicism, but verification and time.</p>
+<p style="margin: 0;"><strong>A note on reading discoveries responsibly:</strong> the same century that gave us these finds also taught two hard lessons. First, <em>provenance matters</em>. Tablets that surface on the market rather than in documented excavation (like the &#256;l-Y&#257;h&#363;du group) carry real questions about looting and, occasionally, forgery, which is why scholars flag them, and why this guide does too. Second, <em>sensations need patience</em>. From the Victorian &ldquo;Babel-und-Bibel&rdquo; debates over how much the Bible owed to Babylon, down to modern headlines, first claims about Bible-related finds are routinely revised. The discoveries that endure (the chronicles, the ration tablets, the excavated bullae) endured precisely because careful people checked. That is a good model for faith-and-scholarship questions generally: neither credulity nor cynicism, but verification and time.</p>
 </div>
 
 <br>
@@ -224,8 +229,8 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <ul>
 <li><strong>Pergamon Museum, Berlin</strong> &mdash; the Ishtar Gate and Processional Way, plus the throne-room fa&ccedil;ade. (Check current status: the museum is undergoing a long phased renovation.)</li>
-<li><strong>British Museum, London</strong> &mdash; the deepest Babylon shelf anywhere: flood tablet, chronicles, Nabonidus and Cyrus cylinders, the Map of the World, Lachish letters, and the Ashurbanipal library galleries.</li>
-<li><strong>Louvre, Paris</strong> &mdash; the Code of Hammurabi, and the Mesopotamian galleries that frame it.</li>
+<li><strong>British Museum, London</strong> &mdash; the deepest Babylon shelf anywhere: flood tablet, chronicles, Nabonidus and Cyrus cylinders, the Map of the World, Lachish letters, and the <a href="https://www.worldhistory.org/Ashurbanipal/" target="_blank">Ashurbanipal</a> library galleries.</li>
+<li><strong>Louvre, Paris</strong> &mdash; the Code of <a href="https://www.worldhistory.org/hammurabi/" target="_blank">Hammurabi</a>, and the Mesopotamian galleries that frame it.</li>
 <li><strong>Metropolitan Museum of Art, New York</strong> &mdash; Processional Way lion panels and a superb ancient Near East collection.</li>
 <li><strong>Institute for the Study of Ancient Cultures (ISAC, formerly the Oriental Institute), Chicago</strong> &mdash; excavation-based collections from Nippur and beyond, and America&rsquo;s strongest teaching gallery for this material.</li>
 <li><strong>Iraq Museum, Baghdad</strong> &mdash; the homeland collection, recovering and rebuilding after the 2003 looting; and the <strong>Bible Lands Museum, Jerusalem</strong>, for exile-era exhibitions.</li>

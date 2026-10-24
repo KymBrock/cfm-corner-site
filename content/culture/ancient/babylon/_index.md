@@ -3,7 +3,7 @@ title: "Babylon: The Empire and the Exile"
 description: "A deep-dive cultural guide to Babylon — the land, the kings, the religion, the learning, the city, and the exile that reshaped Israel forever. Essential background for 2 Kings 24–25, Jeremiah, Ezekiel, Daniel, and the opening of the Book of Mormon."
 hide_children: true
 card_icon: "/images/culture/babylon/babylon-guide-hero-icon.png"
-stage: drafting
+stage: live
 # Blockers recorded 2026-08-21 on Kymber's ruling — "all of these guides need work".
 # This section previously recorded nothing about why it is held.
 stage_blockers:
@@ -12,7 +12,7 @@ stage_blockers:
   - "Kymber's approval to publish the field guides at all"
 cascade:
   stage: drafting
-draft: true
+draft: false
 ---
 
 {{< rawhtml >}}
@@ -23,15 +23,15 @@ draft: true
 
 ## A Note on This Guide
 
-Babylon enters Israel's story late &mdash; and then takes it over. For most of the Old Testament, the great city on the Euphrates is a distant name: the plain of Shinar, the tower, the homeland Abraham left. Then, in a single generation, it becomes everything &mdash; the army at the wall, the road into exile, the rivers where Judah wept, and the empire whose fall the prophets staked their credibility on.
+Babylon enters Israel's story late &mdash; and then takes it over. For most of the Old Testament, the great city on the Euphrates is a distant name: the plain of Shinar, the tower, the homeland Abraham left. Then, in a single generation, it becomes everything: the army at the wall, the road into exile, the rivers where Judah wept, and the empire whose fall the prophets staked their credibility on.
 
 <br>
 
-Understanding Babylon is essential for reading the end of 2 Kings honestly &mdash; and for reading everything that end produced: Jeremiah's letters, Ezekiel's visions, Daniel's court stories, <a href="https://www.blueletterbible.org/kjv/psa/137/1/" target="_blank" data-ref="Psalm 137">Psalm 137</a>'s grief, and the Book of Mormon's opening chapters, which begin in Zedekiah's Jerusalem with the Babylonian crisis already breaking. The exile was Israel's catastrophe; it was also, in the hands of the Lord, Israel's refining &mdash; the furnace out of which came a people of scripture, Sabbath, and covenant who could keep the faith anywhere on earth.
+Understanding Babylon is essential for reading the end of 2 Kings honestly, and for reading everything that end produced: Jeremiah's letters, Ezekiel's visions, Daniel's court stories, <a href="https://www.blueletterbible.org/kjv/psa/137/1/" target="_blank" data-ref="Psalm 137">Psalm 137</a>'s grief, and the Book of Mormon's opening chapters, which begin in Zedekiah's Jerusalem with the Babylonian crisis already breaking. The exile was Israel's catastrophe; it was also, in the hands of the Lord, Israel's refining &mdash; the furnace out of which came a people of scripture, Sabbath, and covenant who could keep the faith anywhere on earth.
 
 <br>
 
-We approach Babylon's history, religion, and scholarship with respect for the evidence &mdash; archaeological, textual, and scriptural &mdash; and with an eye toward what that evidence reveals about the God who called his people out of Ur at the beginning, sustained them by the Chebar in the middle, and still says, in the latest of the latter days, *go ye out from Babylon*.
+We approach Babylon's history, religion, and scholarship with respect for the evidence (archaeological, textual, and scriptural) and with an eye toward what that evidence reveals about the God who called his people out of Ur at the beginning, sustained them by the Chebar in the middle, and still says, in the latest of the latter days, *go ye out from Babylon*.
 
 <br>
 
@@ -41,7 +41,7 @@ We approach Babylon's history, religion, and scholarship with respect for the ev
 
 ## How This Guide Is Organized
 
-This supplement is divided into twelve sections. The first two build the framework &mdash; the land and the long arc of its history &mdash; and everything else stands on them. Read in order, or jump to whatever pulls at you.
+This supplement is divided into twelve sections. The first two build the framework (the land and the long arc of its history), and everything else stands on them. Read them in the order shown, or jump to whatever pulls at you.
 
 <br>
 
@@ -63,7 +63,7 @@ This supplement is divided into twelve sections. The first two build the framewo
 
 **<a href="/culture/ancient/babylon/01-the-land-between-the-rivers/">The Land Between the Rivers</a>**
 
-The stoneless, treeless floodplain that produced the world's first cities &mdash; two unruly rivers, the canal civilization they demanded, and why every army from Babylon reached Jerusalem "out of the north."
+The stoneless, treeless floodplain that produced the world's first cities: two unruly rivers, the canal civilization they demanded, and why every army from Babylon reached Jerusalem "out of the north."
 
 </div>
 </div>
@@ -139,7 +139,7 @@ The rebel who courted Hezekiah, the founder who broke Assyria, the builder-king 
 
 **<a href="/culture/ancient/babylon/06-the-city-itself/">The City Itself</a>**
 
-The largest city in the world: walls no army could storm, the lapis-blue Ishtar Gate, the ziggurat behind the Tower of Babel story, a bridge over the Euphrates &mdash; and the puzzle of the Hanging Gardens.
+The largest city in the world: walls no army could storm, the lapis-blue Ishtar Gate, the ziggurat behind the Tower of Babel story, a bridge over the Euphrates, and the puzzle of the Hanging Gardens.
 
 </div>
 </div>
@@ -164,7 +164,7 @@ The largest city in the world: walls no army could storm, the lapis-blue Ishtar 
 
 **<a href="/culture/ancient/babylon/04-religion-and-mythology/">Religion &amp; Mythology</a>**
 
-Marduk's rise, the En&#363;ma Eli&scaron; and Genesis, the flood before the flood story, gods who had to be fed and carried &mdash; and the New Year festival where even the emperor was slapped to his knees.
+Marduk's rise, the En&#363;ma Eli&scaron; and Genesis, the flood before the flood story, gods who had to be fed and carried, and the New Year festival where even the emperor was slapped to his knees.
 
 </div>
 </div>
@@ -202,7 +202,7 @@ Cuneiform and the tablet-house, the world's first libraries, base-60 mathematics
 
 **<a href="/culture/ancient/babylon/05b-the-calendar-and-the-names-of-time/">The Calendar &amp; the Names of Time</a>**
 
-How Babylon measured the heavens &mdash; the base-60 circle still riding in every clock and compass &mdash; and how the exiles carried its month-names home, Tammuz among them, in a calendar still far less god-haunted than our own week.
+How Babylon measured the heavens (the base-60 circle still riding in every clock and compass) and how the exiles carried its month-names home, Tammuz among them, in a calendar still far less god-haunted than our own week.
 
 </div>
 </div>
@@ -227,7 +227,7 @@ How Babylon measured the heavens &mdash; the base-60 circle still riding in ever
 
 **<a href="/culture/ancient/babylon/07-the-exile-experience/">The Exile Experience</a>**
 
-What actually happened to Judah in Babylon: the deportations, "Judah-town" on the canals, Jehoiachin's ration tablets, Jeremiah's letter &mdash; and the quiet revolution of Sabbath, scripture, and assembly that saved a people.
+What actually happened to Judah in Babylon: the deportations, "Judah-town" on the canals, Jehoiachin's ration tablets, Jeremiah's letter, and the quiet revolution of Sabbath, scripture, and assembly that saved a people.
 
 </div>
 </div>
@@ -244,7 +244,7 @@ What actually happened to Judah in Babylon: the deportations, "Judah-town" on th
 
 **<a href="/culture/ancient/babylon/08-babylon-and-the-bible/">Babylon &amp; the Bible</a>**
 
-The Babylonian Chronicle beside <a href="https://www.blueletterbible.org/kjv/2ki/24/1/" target="_blank" data-ref="2 Kings 24">2 Kings 24</a> &mdash; agreement to the day &mdash; the Lachish letters, the official found on a tax receipt, and how one city became scripture's name for the world, from <a href="https://www.blueletterbible.org/kjv/gen/11/1/" target="_blank" data-ref="Genesis 11">Genesis 11</a> to <a href="https://www.blueletterbible.org/kjv/rev/18/1/" target="_blank" data-ref="Revelation 18">Revelation 18</a>.
+The Babylonian Chronicle beside <a href="https://www.blueletterbible.org/kjv/2ki/24/1/" target="_blank" data-ref="2 Kings 24">2 Kings 24</a> (agreement to the year, and a day the Bible never gives), the Lachish letters, the official found on a tax receipt, and how one city became scripture's name for the world, from <a href="https://www.blueletterbible.org/kjv/gen/11/1/" target="_blank" data-ref="Genesis 11">Genesis 11</a> to <a href="https://www.blueletterbible.org/kjv/rev/18/1/" target="_blank" data-ref="Revelation 18">Revelation 18</a>.
 
 </div>
 </div>
@@ -269,7 +269,7 @@ The Babylonian Chronicle beside <a href="https://www.blueletterbible.org/kjv/2ki
 
 **<a href="/culture/ancient/babylon/09-major-sites-and-discoveries/">Major Sites &amp; Discoveries</a>**
 
-Babylon's mounds from Koldewey to UNESCO, the sister cities of Ur, Uruk, and Nippur, and the shelf of great finds &mdash; the flood tablet, Hammurabi's stele, the chronicles &mdash; with a museum-visit guide.
+Babylon's mounds from Koldewey to UNESCO, the sister cities of Ur, Uruk, and Nippur, and the shelf of great finds (the flood tablet, Hammurabi's stele, the chronicles) with a museum-visit guide.
 
 </div>
 </div>

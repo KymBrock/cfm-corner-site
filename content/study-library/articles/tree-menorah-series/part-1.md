@@ -8,8 +8,8 @@ private_draft: false
 part: 1
 image_slug: "roots-branches-and-light"
 source_file: "DRAFT_1_Roots_Branches_and_Light.md"
-source_sha256: "c5963ce5e5c7e86c90387048b70e40e4e717069abcd81d6a748a3c55d22f6af9"
-source_bytes: 27165
+source_sha256: "ab411492ee71fe01a4f3a9c91399530e175c430733dadf69eb64d9eaa4f0dbf6"
+source_bytes: 27339
 ---
 
 # Roots, Branches, and Light
@@ -157,6 +157,8 @@ Those are questions a reader can act on now, while the history of the diagram go
 *Part 2 sets the chart aside and shows how Hebrew actually builds words from roots and patterns — the grammar the chart is trying to teach.*
 
 ## Sources
+
+*For every source in this series, with links and a note on what each one supports, see [Sources and Further Reading](/study-library/articles/tree-menorah-series/sources/).*
 
 **Scripture.** Psalm 119:105 · 1 Nephi 11:21–25; 15:23–25 · Exodus 25:31–37 · Zechariah 4:1–14 · Proverbs 3:18; 15:4; 6:23 ·
 Isaiah 5:20, 24; 6:5–9, 13; 11:1–4; 12 · Alma 32:28–42, together with the further

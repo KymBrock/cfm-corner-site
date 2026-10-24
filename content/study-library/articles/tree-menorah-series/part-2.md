@@ -8,8 +8,8 @@ private_draft: false
 part: 2
 image_slug: "how-hebrew-builds-meaning"
 source_file: "DRAFT_2_How_Hebrew_Builds_Meaning.md"
-source_sha256: "0f69f63fe5b41a24a25ea347377eecd51792b238dc6da8e547073d592df8a460"
-source_bytes: 24196
+source_sha256: "b65625a7bda373ac9ce720ee1d952e5467baf79d3ba2752a3fc9ca203ac91876"
+source_bytes: 24374
 ---
 
 # How Hebrew Builds Meaning
@@ -102,7 +102,7 @@ David Kimhi (c. 1160–1235) was a medieval Hebrew grammarian whose works preser
 
 Kimhi is therefore an important witness to an inherited grammar vocabulary. His work does not provide evidence for the modern menorah diagram itself, but it helps us see the grammatical tradition on which that diagram draws. The chart remains a teaching arrangement: it makes recurring relationships easier to see and remember, but it is not a definitive map of how Hebrew developed. It offers a useful first framework for recurring verbal structures, yet it cannot account for every root or every irregular form. Nor do these patterns and structures prove an ancient menorah-based system. We cannot yet trace the root-and-pattern system, or its terminology, to a menorah arrangement; the historical record has too many gaps. What Kimhi gives us is a glimpse of the medieval scholarly tradition within which a later diagram like this became intelligible—and that is worth contemplating.[^kimhi-count]
 
-[^learning-measuring]: **Why the phonetic comparison is worth pursuing, but remains open.** The early Greek alphabet retained separate letter-lines from Semitic **dalet**, **tet**, and **tav** as delta, theta, and tau. The Greeks adapted those letters to their own sound system; they did not merge the three into one. In the Biblical Hebrew reading tradition, the *begadkefat* letters preserve stop and fricative variants, including dalet /d/ and /ð/ and tav /t/ and /θ/. Greek delta later moved toward /ð/ in some Koine and later contexts, while theta followed its own path from aspirated /tʰ/ toward /θ/. These are recurrent possibilities for sounds made in neighboring dental positions, but they do not by themselves establish a shared word origin. Establishing cognacy requires systematic correspondences, chronology, and evidence of contact beyond a single pair of words. The standard Greek lexicon treats <a href="https://www.blueletterbible.org/lexicon/g3129/kjv/tr/0-1/" target="_blank" data-lexicon="to learn, esp. by inquiry" data-strongs="G3129" data-translit="manthanō" data-original="μανθάνω" data-lang="greek">*manthanō*</a> within an Indo-European word family; the historical connection proposed here therefore remains a question rather than a conclusion. [Greek alphabet](https://www-old.phil.uoa.gr/fileadmin/phil.uoa.gr/uploads/linguistics/Pdf/papers/Pantelidis_2014_The_Greek_Alphabet___Scriptura_Mundi.pdf); [Biblical Hebrew pronunciation](https://fr.wikisource.org/wiki/Page%3APaul_Jo%C3%BOn_-_Grammaire_de_l%E2%80%99h%C3%A9breu_biblique%2C_2e_%C3%A9d._1947.djvu/29); [Greek lexicon: *manthanō*](https://cld.bbaw.de/lemma/grc/%CE%BC%CE%B1%CE%BD%CE%B8%CE%AC%CE%BD%CF%89).
+[^learning-measuring]: **Why the phonetic comparison is worth pursuing, but remains open.** The early Greek alphabet retained separate letter-lines from Semitic **dalet**, **tet**, and **tav** as delta, theta, and tau. The Greeks adapted those letters to their own sound system; they did not merge the three into one. In the Biblical Hebrew reading tradition, the *begadkefat* letters preserve stop and fricative variants, including dalet /d/ and /ð/ and tav /t/ and /θ/. Greek delta later moved toward /ð/ in some Koine and later contexts, while theta followed its own path from aspirated /tʰ/ toward /θ/. These are recurrent possibilities for sounds made in neighboring dental positions, but they do not by themselves establish a shared word origin. Establishing cognacy requires systematic correspondences, chronology, and evidence of contact beyond a single pair of words. The standard Greek lexicon treats <a href="https://www.blueletterbible.org/lexicon/g3129/kjv/tr/0-1/" target="_blank" data-lexicon="to learn, esp. by inquiry" data-strongs="G3129" data-translit="manthanō" data-original="μανθάνω" data-lang="greek">*manthanō*</a> within an Indo-European word family; the historical connection proposed here therefore remains a question rather than a conclusion. [Greek alphabet](https://www-old.phil.uoa.gr/fileadmin/phil.uoa.gr/uploads/linguistics/Pdf/papers/Pantelidis_2014_The_Greek_Alphabet___Scriptura_Mundi.pdf); [Biblical Hebrew pronunciation](https://fr.wikisource.org/wiki/Page%3APaul_Jo%C3%BCon_-_Grammaire_de_l%E2%80%99h%C3%A9breu_biblique%2C_2e_%C3%A9d.%2C_1947.djvu/29); [Greek lexicon: *manthanō*](https://cld.bbaw.de/lemma/grc/%CE%BC%CE%B1%CE%BD%CE%B8%CE%AC%CE%BD%CF%89).
 
 [^lmd-forms]: **The three forms in the table.** *Elmad* is Qal imperfect, first-person singular: “I may learn.” *Melammed* is a masculine singular Piel active participle: “one teaching.” *Melummadah* is a feminine singular Pual passive participle: “being taught.” Psalm 18 is numbered 18:34 in English Bibles and 18:35 in the Hebrew text. Brown–Driver–Briggs lists Qal “learn” at Psalm 119:71, Piel “teach” at Psalm 18:35, and Pual “taught, trained” at Isaiah 29:13 and 1 Chronicles 25:7. [L–M–D entry](https://biblehub.com/hebrew/3925.htm).
 
@@ -121,6 +121,8 @@ Kimhi is therefore an important witness to an inherited grammar vocabulary. His 
 *Part 3 turns to the older tradition of reading the lampstand as a figure for the word, and asks how much of it can be connected to the modern chart.*
 
 ## Sources
+
+*For every source in this series, with links and a note on what each one supports, see [Sources and Further Reading](/study-library/articles/tree-menorah-series/sources/).*
 
 **Works cited.**
 

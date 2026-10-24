@@ -1,7 +1,8 @@
 ---
 title: "Timeline & Empires"
+weight: 2
 description: "Four thousand years in one arc — Hammurabi's Babylon, the long Assyrian shadow, the Chaldean century of revolt, and the seventy-year empire that took Judah captive."
-draft: true
+draft: false
 ---
 
 {{< rawhtml >}}
@@ -15,6 +16,7 @@ draft: true
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">Babylon was ancient before it was mighty &mdash; and mighty for barely a lifetime</p>
 
 <!-- LISTEN PLAYER (section narration) -->
+<!-- AUDIO HIDDEN for text-first publication (Kymber 2026-10-20); restore when narration is recorded and approved
 <div class="listen-player">
 <div class="lp-head">
 <span class="lp-icon" aria-hidden="true"></span>
@@ -25,9 +27,10 @@ draft: true
 Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/babylon/02-timeline-and-empires.mp3">download the audio</a> instead.
 </audio>
 </div>
+-->
 <!-- /LISTEN PLAYER -->
 
-<p>Here is the surprise at the heart of Babylonian history. The empire that destroyed Jerusalem, carried Judah captive, and became scripture&rsquo;s enduring symbol of worldly power was a great power for less than <strong>seventy years</strong> &mdash; almost exactly the span Jeremiah gave it (<a href="https://www.blueletterbible.org/kjv/jer/25/11/" target="_blank" data-ref="Jeremiah 25:11-12">Jeremiah 25:11&ndash;12</a>). But behind that brief empire stood nearly two thousand years of accumulated prestige. When <a href="https://www.worldhistory.org/Nebuchadnezzar_II/" target="_blank">Nebuchadnezzar</a> rebuilt Babylon, he was consciously restoring a city that was already ancient &mdash; older to him than the apostles are to us.</p>
+<p>Here is the surprise at the heart of Babylonian history. The empire that destroyed <a href="https://www.worldhistory.org/jerusalem/" target="_blank">Jerusalem</a>, carried Judah captive, and became scripture&rsquo;s enduring symbol of worldly power was a great power for less than <strong>seventy years</strong> &mdash; almost exactly the span Jeremiah gave it (<a href="https://www.blueletterbible.org/kjv/jer/25/11/" target="_blank" data-ref="Jeremiah 25:11-12">Jeremiah 25:11&ndash;12</a>). But behind that brief empire stood a far older inheritance of prestige. When <a href="https://www.worldhistory.org/Nebuchadnezzar_II/" target="_blank">Nebuchadnezzar</a> rebuilt Babylon, he was consciously restoring a city that was already ancient, more than a thousand years old before he laid a brick.</p>
 
 <p>One note before we start. All dates before the first millennium BC are approximate &mdash; this guide follows the widely used &ldquo;middle chronology&rdquo;. But from the 8th century BC onward, Babylonian records let us date events to the day.</p>
 
@@ -135,17 +138,17 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #7a6a8a; font-size: 0.9em;">c. 1570&ndash;1155</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>The Kassite dynasty</strong> &mdash; newcomers from the mountains rule Babylonia for four centuries, the longest dynasty in its history, and become thoroughly Babylonian. Babylon writes to Egypt as an equal in the Amarna Letters (the royal diplomatic correspondence of the age)</span>
+<span style="flex: 1; font-size: 0.95em;"><strong>The Kassite dynasty</strong> &mdash; newcomers from the mountains rule Babylonia for four centuries, the longest dynasty in its history, and become thoroughly Babylonian. Babylon writes to <a href="https://www.worldhistory.org/egypt/" target="_blank">Egypt</a> as an equal in the Amarna Letters (the royal diplomatic correspondence of the age)</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #7a6a8a; font-size: 0.9em;">c. 1155 BC</span>
-<span style="flex: 1; font-size: 0.95em;">Elamite invaders end the Kassite dynasty &mdash; and haul the statue of Marduk <em>and</em> Hammurabi&rsquo;s law stele off to Susa as trophies</span>
+<span style="flex: 1; font-size: 0.95em;">Elamite invaders end the Kassite dynasty &mdash; and haul the statue of <a href="https://www.worldhistory.org/Marduk/" target="_blank">Marduk</a> <em>and</em> Hammurabi&rsquo;s law stele off to <a href="https://www.worldhistory.org/susa/" target="_blank">Susa</a> as trophies</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #7a6a8a; font-size: 0.9em;">c. 1125&ndash;1104</span>
-<span style="flex: 1; font-size: 0.95em;"><strong><a href="https://www.britannica.com/biography/Nebuchadrezzar-I" target="_blank">Nebuchadnezzar I</a></strong> (the great king&rsquo;s namesake) &mdash; defeats Elam and brings Marduk&rsquo;s statue home; Marduk&rsquo;s claim to kingship over the gods reaches its classic form around this era (see <a href="/culture/ancient/babylon/04-religion-and-mythology/">Section 04</a>)</span>
+<span style="flex: 1; font-size: 0.95em;"><strong><a href="https://www.britannica.com/biography/Nebuchadrezzar-I" target="_blank">Nebuchadnezzar I</a></strong> (the great king&rsquo;s namesake) &mdash; defeats <a href="https://www.worldhistory.org/elam/" target="_blank">Elam</a> and brings Marduk&rsquo;s statue home; Marduk&rsquo;s claim to kingship over the gods reaches its classic form around this era (see <a href="/culture/ancient/babylon/04-religion-and-mythology/">Section 04</a>)</span>
 </div>
 
 </div>
@@ -160,7 +163,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #4a6b52; font-size: 0.9em;">729 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><a href="https://www.worldhistory.org/Tiglath_Pileser_III/" target="_blank">Tiglath-pileser III</a> of Assyria takes the throne of Babylon in person &mdash; the two crowns joined under Assyrian power</span>
+<span style="flex: 1; font-size: 0.95em;"><a href="https://www.worldhistory.org/Tiglath_Pileser_III/" target="_blank">Tiglath-pileser III</a> of <a href="https://www.worldhistory.org/assyria/" target="_blank">Assyria</a> takes the throne of Babylon in person &mdash; the two crowns joined under Assyrian power</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
@@ -170,7 +173,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #4a6b52; font-size: 0.9em;">721&ndash;710, 703</span>
-<span style="flex: 1; font-size: 0.95em;"><strong><a href="https://www.worldhistory.org/Merodach-Baladan/" target="_blank">Merodach-baladan</a></strong>, Chaldean chieftain, twice seizes Babylon&rsquo;s throne in defiance of Assyria &mdash; and sends envoys to Hezekiah in Jerusalem (<a href="https://www.blueletterbible.org/kjv/2ki/20/12/" target="_blank" data-ref="2 Kings 20:12">2 Kings 20:12</a>), fishing for allies</span>
+<span style="flex: 1; font-size: 0.95em;"><strong><a href="https://oracc.museum.upenn.edu/ribo/Q006305?list=withatf" target="_blank">Merodach-baladan</a></strong>, Chaldean chieftain, twice seizes Babylon&rsquo;s throne in defiance of Assyria &mdash; and sends envoys to Hezekiah in Jerusalem (<a href="https://www.blueletterbible.org/kjv/2ki/20/12/" target="_blank" data-ref="2 Kings 20:12">2 Kings 20:12</a>), fishing for allies</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
@@ -205,7 +208,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #c0392b; font-size: 0.9em;">612 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Nineveh falls</strong> to the Babylonians and Medes together &mdash; the event the prophet Nahum celebrates (<a href="https://www.blueletterbible.org/kjv/nah/3/7/" target="_blank" data-ref="Nahum 3:7">Nahum 3:7</a>)</span>
+<span style="flex: 1; font-size: 0.95em;"><strong><a href="https://www.worldhistory.org/nineveh/" target="_blank">Nineveh</a> falls</strong> to the Babylonians and <a href="https://www.worldhistory.org/Medes/" target="_blank">Medes</a> together &mdash; the event the prophet Nahum celebrates (<a href="https://www.blueletterbible.org/kjv/nah/3/7/" target="_blank" data-ref="Nahum 3:7">Nahum 3:7</a>)</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
@@ -255,12 +258,12 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #2c3e50; font-size: 0.9em;">539 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Babylon falls to Cyrus of Persia</strong> &mdash; after one battle upriver at Opis, the capital opens its gates without a siege. The seventy-year empire is over</span>
+<span style="flex: 1; font-size: 0.95em;"><strong>Babylon falls to Cyrus of <a href="https://www.worldhistory.org/Persia/" target="_blank">Persia</a></strong> &mdash; after one battle upriver at Opis, the capital opens its gates without a siege. The seventy-year empire is over</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #2c3e50; font-size: 0.9em;">538 BC</span>
-<span style="flex: 1; font-size: 0.95em;">Cyrus decrees that captive peoples may return home and rebuild their temples &mdash; including Judah (<a href="https://www.blueletterbible.org/kjv/ezr/1/2/" target="_blank" data-ref="Ezra 1:2-3">Ezra 1:2&ndash;3</a>). The story continues in the Achaemenid Empire Field Guide</span>
+<span style="flex: 1; font-size: 0.95em;">Cyrus decrees that captive peoples may return home and rebuild their temples &mdash; including Judah (<a href="https://www.blueletterbible.org/kjv/ezr/1/2/" target="_blank" data-ref="Ezra 1:2-3">Ezra 1:2&ndash;3</a>). The story continues in the coming Achaemenid Empire guide</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
@@ -285,18 +288,18 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <h3>The First Babylon: Hammurabi&rsquo;s Moment (c. 1792&ndash;1750 BC)</h3>
 
-<p>Babylon&rsquo;s first rise was the work of one extraordinarily patient man. <strong><a href="https://www.worldhistory.org/hammurabi/" target="_blank">Hammurabi</a></strong> was the sixth king of an Amorite dynasty ruling a modest city-state. For thirty years he played the careful junior partner among stronger kings. Then, in a single decade, he outmaneuvered and absorbed every one of them &mdash; from Mari on the middle Euphrates to Larsa near the Gulf. For the first time since the great Sumerian dynasties, southern Mesopotamia answered to one ruler. And that ruler sat at Babylon &mdash; a city that never again let anyone forget it.</p>
+<p>Babylon&rsquo;s first rise was the work of one extraordinarily patient man. <strong><a href="https://www.worldhistory.org/hammurabi/" target="_blank">Hammurabi</a></strong> was the sixth king of an Amorite dynasty ruling a modest city-state. For thirty years he played the careful junior partner among stronger kings. Then, in a single decade, he outmaneuvered and absorbed every one of them, from <a href="https://www.worldhistory.org/mari/" target="_blank">Mari</a> on the middle Euphrates to Larsa near the Gulf. For the first time since the great Sumerian dynasties, southern Mesopotamia answered to one ruler. And that ruler sat at Babylon &mdash; a city that never again let anyone forget it.</p>
 
 <figure class="fg-figure" style="max-width:720px;">
   <img src="/images/culture/babylon/photos/babylonia-cities-map.png" alt="Map of Babylonia and its cities at the time of Hammurabi, with his conquests marked" loading="lazy">
-  <figcaption>Babylonia at the time of Hammurabi. His conquests (the arrows, dated 1792 and 1750 BC) swept from Mari on the middle Euphrates to Larsa near the Gulf, uniting the southern plain under Babylon for the first time. <span class="fg-credit">Map &copy; MapMaster, Wikimedia Commons (CC BY-SA 4.0)</span></figcaption>
+  <figcaption>Babylonia at the time of Hammurabi. His conquests (the arrows, dated 1792 and 1750 BC) swept from Mari on the middle Euphrates to Larsa near the Gulf, uniting the southern plain under Babylon for the first time. <span class="fg-credit">Map &copy; MapMaster, <a href="https://en.wikipedia.org/wiki/Babylonia#/media/File:Hammurabi&#x27;s_Babylonia_1.svg">Source</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>)</span></figcaption>
 </figure>
 
-<p>Hammurabi is best remembered for his <strong>law code</strong>: 282 judgments carved on a two-meter stele (a tall inscribed stone) of black diorite. Above the laws stands an image of the king receiving the symbols of justice from the sun god Shamash. The laws follow a simple case-by-case formula &mdash; <em>if a man does X, then Y</em>. That is the same style found in the covenant law of Exodus (compare <a href="https://www.blueletterbible.org/kjv/exo/21/28/" target="_blank" data-ref="Exodus 21:28-29">Exodus 21:28&ndash;29</a> with the code&rsquo;s famous goring-ox laws). And the code&rsquo;s stated ideal &mdash; &ldquo;that the strong might not oppress the weak&rdquo; &mdash; echoes through all later Near Eastern law. The resemblances are real. So are the differences: biblical law grounds justice in covenant with God rather than royal boast, values persons over property more consistently, and applies one standard across social classes far more often. Scholars generally see both codes as drawing on a shared, older legal culture &mdash; the common law of the ancient Near East &mdash; rather than direct copying. (More on scribal law in <a href="/culture/ancient/babylon/05-writing-and-learning/">Section 05</a>.)</p>
+<p>Hammurabi is best remembered for his <strong>law code</strong>: 282 judgments carved on a two-meter stele (a tall inscribed stone) of black diorite. Above the laws stands an image of the king receiving the symbols of justice from the sun god Shamash. The laws follow a simple case-by-case formula: <em>if a man does X, then Y</em>. That is the same style found in the covenant law of Exodus (compare <a href="https://www.blueletterbible.org/kjv/exo/21/28/" target="_blank" data-ref="Exodus 21:28-29">Exodus 21:28&ndash;29</a> with the code&rsquo;s famous goring-ox laws). And the code&rsquo;s stated ideal, &ldquo;that the strong might not oppress the weak,&rdquo; echoes through all later Near Eastern law. The resemblances are real. So are the differences: biblical law grounds justice in covenant with God rather than royal boast, values persons over property more consistently, and applies one standard across social classes far more often. Scholars generally see both codes as drawing on a shared, older legal culture (the common law of the ancient Near East) rather than direct copying. (More on the scribal culture that produced it in <a href="/culture/ancient/babylon/05-writing-and-learning/">Section 05</a>.)</p>
 
 <figure class="fg-figure" style="max-width:520px;">
   <img src="/images/culture/babylon/photos/code-of-hammurabi-louvre.jpg" alt="The law stele of Hammurabi, Louvre" loading="lazy">
-  <figcaption>The stele of Hammurabi&rsquo;s laws (c. 1750 BC) &mdash; the king receives his commission from the sun-god Shamash, above 282 laws in cuneiform. <a href="https://avalon.law.yale.edu/ancient/hamframe.asp" target="_blank">Read the laws &rarr;</a> <span class="fg-credit">Louvre; photo Mbzt &middot; Wikimedia Commons (CC BY 3.0)</span></figcaption>
+  <figcaption>The stele of Hammurabi&rsquo;s laws (c. 1750 BC) &mdash; the king receives his commission from the sun-god Shamash, above 282 laws in cuneiform. <a href="https://avalon.law.yale.edu/ancient/hamframe.asp" target="_blank">Read the laws &rarr;</a> <span class="fg-credit">Louvre; photo Mbzt &middot; <a href="https://commons.wikimedia.org/wiki/File:P1050763_Louvre_code_Hammurabi_face_rwk.JPG">Wikimedia Commons</a> (<a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>)</span></figcaption>
 </figure>
 
 <p>Politically, Hammurabi&rsquo;s empire barely outlived him. But something more durable had happened. His dynasty made Babylon the seat of the god Marduk, and Marduk&rsquo;s city became the religious and intellectual capital of Mesopotamia. It held that position, through conquest and catastrophe, for the next 1,700 years.</p>
@@ -309,14 +312,14 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <h3>The Long Middle: Prestige Without Power (c. 1595&ndash;900 BC)</h3>
 
-<p>After the Hittite raid ended Hammurabi&rsquo;s line, the <strong>Kassites</strong> &mdash; a people from the eastern mountains &mdash; took the throne and held it for four hundred years, the longest single dynasty in Babylonian history. Their era looks quiet in the chronicles, and that is the point. The Kassites became more Babylonian than the Babylonians. They tended the temples, supported the scribal schools, and wrote to Egypt&rsquo;s pharaohs as acknowledged equals in the <a href="https://www.worldhistory.org/Amarna_Letters/" target="_blank">Amarna Letters</a>. It was during and after this long middle period that Babylon&rsquo;s scholars standardized the great works of Mesopotamian literature and science &mdash; and that <strong>Marduk</strong>, Babylon&rsquo;s city god, rose from local patron to king of the gods (the story told in <a href="/culture/ancient/babylon/04-religion-and-mythology/">Section 04</a>).</p>
+<p>After the Hittite raid ended Hammurabi&rsquo;s line, the <strong><a href="https://www.worldhistory.org/kassite/" target="_blank">Kassites</a></strong>, a people from the eastern mountains, took the throne and held it for four hundred years, the longest single dynasty in Babylonian history. Their era looks quiet in the chronicles, and that is the point. The Kassites became more Babylonian than the Babylonians. They tended the temples, supported the scribal schools, and wrote to Egypt&rsquo;s pharaohs as acknowledged equals in the <a href="https://www.worldhistory.org/Amarna_Letters/" target="_blank">Amarna Letters</a>. It was during and after this long middle period that Babylon&rsquo;s scholars standardized the great works of Mesopotamian literature and science &mdash; and that <strong>Marduk</strong>, Babylon&rsquo;s city god, rose from local patron to king of the gods (the story told in <a href="/culture/ancient/babylon/04-religion-and-mythology/">Section 04</a>).</p>
 
 <figure class="fg-figure" style="max-width:600px;">
   <img src="/images/culture/babylon/photos/marduk-kudurru-kassite-louvre.jpg" alt="A Kassite-period Babylonian kudurru (boundary stone) carved with divine symbols, Louvre" loading="lazy">
-  <figcaption>A <b>kudurru</b> (boundary stone) of the Kassite period &mdash; the signature legal artifact of Babylon&rsquo;s long middle. Its carved registers of enthroned gods, altars, and divine emblems witnessed a royal land grant and placed it under the gods&rsquo; protection. It was in exactly this era that <b>Marduk</b>, Babylon&rsquo;s city god, rose to head that divine hierarchy. <span class="fg-credit">Kassite kudurru, Louvre &middot; Ywpark2003, Wikimedia Commons (CC0)</span></figcaption>
+  <figcaption>A <b>kudurru</b> (boundary stone) of the Kassite period &mdash; the signature legal artifact of Babylon&rsquo;s long middle. Its carved registers of enthroned gods, altars, and divine emblems witnessed a royal land grant and placed it under the gods&rsquo; protection. It was in exactly this era that <b>Marduk</b>, Babylon&rsquo;s city god, rose to head that divine hierarchy. <span class="fg-credit">Kassite kudurru, Louvre &middot; Ywpark2003, <a href="https://commons.wikimedia.org/wiki/File:Babylonian_Kassite_Kudurru_Boundary_Stone_Louvre_Museum.jpg">Wikimedia Commons</a> (<a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a>)</span></figcaption>
 </figure>
 
-<p>For Israel&rsquo;s story, what matters most about this era is what Babylon was <em>not</em>. From the Exodus through David and Solomon, Babylon was no threat to anyone. The superpowers of that world were Egypt and the Hittites &mdash; and then, after the great Bronze Age collapse (c. 1200 BC), nobody at all. That power vacuum is the space where Israel&rsquo;s united monarchy briefly flourished. When Babylon finally appears in the historical books, it enters not as an empire but as a holy city under someone else&rsquo;s boot.</p>
+<p>For Israel&rsquo;s story, what matters most about this era is what Babylon was <em>not</em>. From the Exodus through David and Solomon, Babylon was no threat to anyone. The superpowers of that world were Egypt and the <a href="https://www.worldhistory.org/hittite/" target="_blank">Hittites</a> &mdash; and then, after the great Bronze Age collapse (c. 1200 BC), nobody at all. That power vacuum is the space where Israel&rsquo;s united monarchy briefly flourished. When Babylon finally appears in the historical books, it enters not as an empire but as a holy city under someone else&rsquo;s boot.</p>
 
 <br>
 
@@ -326,28 +329,28 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <h3>Babylon Under Assyria: A Century of Fire (729&ndash;626 BC)</h3>
 
-<p>From the ninth century BC the rising power was <strong>Assyria</strong>, Babylon&rsquo;s northern sibling &mdash; and Assyria had a Babylon problem it never solved. Babylon was too holy to treat like other conquests. Assyrian kings shared its gods, honored its shrines, and craved coronation there. But Babylonia kept rising up. Stiffened by the Chaldean tribes of the southern marshes, it revolted with every change of Assyrian king. The result was a century-long cycle of revolt, punishment, and guilty rebuilding:</p>
+<p>From the ninth century BC the rising power was <strong>Assyria</strong>, Babylon&rsquo;s northern sibling &mdash; and Assyria had a Babylon problem it never solved. Babylon was too holy to treat like other conquests. Assyrian kings shared its gods, honored its shrines, and craved coronation there. But Babylonia kept rising up. Stiffened by the Chaldean tribes of the southern marshes, it revolted with every change of Assyrian king. The result was a century-long cycle of revolt, punishment, and rebuilding:</p>
 
 <ul>
-<li><strong>729 BC</strong> &mdash; <a href="https://www.worldhistory.org/Tiglath_Pileser_III/" target="_blank">Tiglath-pileser III</a>, the Assyrian king who forged the ancient world&rsquo;s first great empire, had himself crowned king of Babylon as well &mdash; performing Babylon&rsquo;s own coronation rite, &ldquo;taking the hands of Bel&rdquo; &mdash; so that from then on one man ruled both Assyria and Babylon directly, instead of leaving a puppet king on the southern throne.</li>
-<li><strong>721&ndash;710 and 703 BC</strong> &mdash; the Chaldean chieftain <strong><a href="https://www.britannica.com/biography/Merodach-Baladan-II" target="_blank">Merodach-baladan</a></strong> twice seized the throne, holding it for over a decade the first time. His embassy to Hezekiah (<a href="https://www.blueletterbible.org/kjv/2ki/20/12/" target="_blank" data-ref="2 Kings 20:12-19">2 Kings 20:12&ndash;19</a>) belonged to this struggle &mdash; a rebel recruiting allies on Assyria&rsquo;s western flank. Isaiah saw exactly where that flattery would lead (see <a href="/culture/ancient/babylon/03-nebuchadnezzar-and-the-kings/">Section 03</a>).</li>
-<li><strong>689 BC</strong> &mdash; <a href="https://www.worldhistory.org/sennacherib/" target="_blank">Sennacherib</a>, the Assyrian king remembered for his siege of Jerusalem, exhausted by revolts (one cost him his crown prince, captured and carried to Elam), did the unthinkable: he razed Babylon, temples included, and diverted canals over the ruins. Even Assyrian tradition regarded this as a sacrilege; his own inscriptions&rsquo; boast of it was quietly abandoned by his successors.</li>
+<li><strong>729 BC</strong> &mdash; <a href="https://www.worldhistory.org/Tiglath_Pileser_III/" target="_blank">Tiglath-pileser III</a>, the Assyrian king who forged the ancient world&rsquo;s first great empire, had himself crowned king of Babylon as well, performing Babylon&rsquo;s own coronation rite (&ldquo;taking the hands of Bel&rdquo;), so that from then on one man ruled both Assyria and Babylon directly, instead of leaving a puppet king on the southern throne.</li>
+<li><strong>721&ndash;710 and 703 BC</strong> &mdash; the Chaldean chieftain <strong><a href="https://www.britannica.com/biography/Merodach-Baladan-II" target="_blank">Merodach-baladan</a></strong> twice seized the throne, holding it for over a decade the first time. His embassy to Hezekiah (<a href="https://www.blueletterbible.org/kjv/2ki/20/12/" target="_blank" data-ref="2 Kings 20:12-19">2 Kings 20:12&ndash;19</a>) belonged to this struggle: a rebel recruiting allies on Assyria&rsquo;s western flank. Isaiah saw exactly where that flattery would lead (see <a href="/culture/ancient/babylon/03-nebuchadnezzar-and-the-kings/">Section 03</a>).</li>
+<li><strong>689 BC</strong> &mdash; <a href="https://www.worldhistory.org/sennacherib/" target="_blank">Sennacherib</a>, the Assyrian king remembered for his siege of Jerusalem, exhausted by revolts (one cost him his crown prince, captured and carried to Elam), did the unthinkable: he razed Babylon, temples included, and diverted canals over the ruins. Later tradition may have regarded this as a sacrilege; his successors did not repeat the boast.</li>
 <li><strong>680&ndash;669 BC</strong> &mdash; Sennacherib&rsquo;s son <a href="https://www.worldhistory.org/Esarhaddon/" target="_blank">Esarhaddon</a> rebuilt the holy city with conspicuous piety, presenting Babylon&rsquo;s destruction as Marduk&rsquo;s own decree of seventy years of desolation, mercifully shortened.</li>
 <li><strong>652&ndash;648 BC</strong> &mdash; the great civil war: <a href="https://www.worldhistory.org/Ashurbanipal/" target="_blank">Ashurbanipal</a> of Assyria, the empire&rsquo;s last great king, against his own brother <a href="https://www.britannica.com/biography/Shamash-shum-ukin" target="_blank">Shamash-shum-ukin</a>, whom their father had made king of Babylon. Babylon endured a brutal two-year siege before it fell. Assyria won &mdash; but the war so drained the victor that Assyria itself never truly recovered, and within a generation the empire was gone.</li>
 </ul>
 
 <figure class="fg-figure" style="max-width:560px;">
   <img src="/images/culture/babylon/photos/tiglath-pileser-iii-nimrud-bm.jpg" alt="Assyrian palace relief of king Tiglath-pileser III in profile, from Nimrud" loading="lazy">
-  <figcaption><b>Tiglath-pileser III</b> of Assyria, carved in his palace at Nimrud &mdash; the king who in 729 BC &ldquo;took the hands of Bel&rdquo; and ruled Babylon in person, joining the two crowns under Assyrian power. <span class="fg-credit">Central Palace, Nimrud; British Museum &middot; photo SpeakingArch, Wikimedia Commons (CC BY-SA 4.0)</span></figcaption>
+  <figcaption><b>Tiglath-pileser III</b> of Assyria, carved in his palace at Nimrud &mdash; the king who in 729 BC &ldquo;took the hands of Bel&rdquo; and ruled Babylon in person, joining the two crowns under Assyrian power. <span class="fg-credit">Central Palace, Nimrud; British Museum &middot; photo SpeakingArch, <a href="https://commons.wikimedia.org/wiki/File:Tiglath-Pileser,_728_BCE,_Nimrud,_Central_Palace,_British_Museum.jpg">Wikimedia Commons</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>)</span></figcaption>
 </figure>
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
-<p style="margin: 0;"><strong>Why this matters for reading Kings:</strong> when Judah watched Assyria destroy Israel in 722 BC, Babylon was not the coming menace. It was a fellow victim, crushed again and again by the same empire. That is what makes Isaiah&rsquo;s response to Merodach-baladan&rsquo;s envoys so startling. With Assyria at the door, the prophet announced that the real judgment would come from <em>Babylon</em> &mdash; then a broken rebel state &mdash; and that Hezekiah&rsquo;s own descendants would serve in its palace (<a href="https://www.blueletterbible.org/kjv/2ki/20/17/" target="_blank" data-ref="2 Kings 20:17-18">2 Kings 20:17&ndash;18</a>). A century later it happened exactly so.</p>
+<p style="margin: 0;"><strong>Why this matters for reading Kings:</strong> when Judah watched Assyria destroy Israel in 722 BC, Babylon was not the coming menace. It was a fellow victim, crushed again and again by the same empire. That is what makes Isaiah&rsquo;s response to Merodach-baladan&rsquo;s envoys so startling. With Assyria at the door, the prophet announced that the real judgment would come from <em>Babylon</em>, then a broken rebel state, and that Hezekiah&rsquo;s own descendants would serve in its palace (<a href="https://www.blueletterbible.org/kjv/2ki/20/17/" target="_blank" data-ref="2 Kings 20:17-18">2 Kings 20:17&ndash;18</a>). A century later it happened exactly so.</p>
 </div>
 
 <figure class="fg-figure" style="max-width:520px;">
   <img src="/images/culture/babylon/photos/merodach-baladan-kudurru.jpg" alt="Boundary-stone relief of Marduk-apla-iddina II (Merodach-baladan) before an official, beneath divine emblems" loading="lazy">
-  <figcaption><b>Merodach-baladan</b> (Marduk-apla-iddina II) on his own boundary-stone &mdash; by the Berlin museum&rsquo;s account the <em>only known likeness</em> of the king. Carved in his seventh regnal year (c.&nbsp;715 BC), it records a grant of royal land to his loyal servant <b>Bel-ahhe-eriba</b>, who stands at right in respectfully diminished scale, barefoot, hand raised; sixteen divine emblems along the top &mdash; Marduk, Ea, Nabu and others &mdash; guarantee the grant. This is the Chaldean chieftain who twice seized Babylon from Assyria, and whose envoys to Hezekiah drew Isaiah&rsquo;s warning. <span class="fg-credit">Kudurru of Marduk-apla-iddina II, <a href="https://smb.museum-digital.de/object/141781" target="_blank">Vorderasiatisches Museum Berlin, VA 2663</a>; 1902 engraving, public domain via Wikimedia Commons</span></figcaption>
+  <figcaption><b>Merodach-baladan</b> (Marduk-apla-iddina II) on his own boundary-stone, by the Berlin museum&rsquo;s account the <em>only known likeness</em> of the king. Carved in his seventh regnal year (c.&nbsp;715 BC), it records a grant of royal land to his loyal servant <b>Bel-ahhe-eriba</b>, who stands at right in respectfully diminished scale, barefoot, hand raised; sixteen divine emblems along the top (Marduk, Ea, Nabu and others) guarantee the grant. This is the Chaldean chieftain who twice seized Babylon from Assyria, and whose envoys to Hezekiah drew Isaiah&rsquo;s warning. <span class="fg-credit">Kudurru of Marduk-apla-iddina II, <a href="https://smb.museum-digital.de/object/141781" target="_blank">Vorderasiatisches Museum Berlin, VA 2663</a>; 1902 engraving, public domain via Wikimedia Commons</span></figcaption>
 </figure>
 
 <br>
@@ -356,18 +359,18 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <br>
 
-<h3>The Seventy-Year Empire (626&ndash;539 BC)</h3>
+<h3>The Neo-Babylonian Empire (626&ndash;539 BC)</h3>
 
-<p>Assyria&rsquo;s fall was astonishingly fast. In 626 BC the Chaldean general <strong>Nabopolassar</strong> took Babylon&rsquo;s throne. By 612, allied with the Medes, he had burned Nineveh itself. By 609 Assyria no longer existed. The victors divided the world: the Medes took the mountains, Babylon took the Fertile Crescent &mdash; on paper. In practice, Egypt under Necho II moved up the coast to grab the Assyrian west. So for four years it was Egypt &mdash; not Babylon &mdash; that ruled Judah, deposing one king and installing another as its tax collector (<a href="https://www.blueletterbible.org/kjv/2ki/23/33/" target="_blank" data-ref="2 Kings 23:33-35">2 Kings 23:33&ndash;35</a>).</p>
+<p>Assyria&rsquo;s fall was astonishingly fast. In 626 BC the Chaldean general <strong>Nabopolassar</strong> took Babylon&rsquo;s throne. By 612, allied with the Medes, he had burned Nineveh itself. By 609 Assyria no longer existed. The victors divided the world: the Medes took the mountains, Babylon took the <a href="https://www.worldhistory.org/Fertile_Crescent/" target="_blank">Fertile Crescent</a> &mdash; on paper. In practice, Egypt under Necho II moved up the coast to grab the Assyrian west. So for four years it was Egypt, not Babylon, that ruled Judah, deposing one king and installing another as its tax collector (<a href="https://www.blueletterbible.org/kjv/2ki/23/33/" target="_blank" data-ref="2 Kings 23:33-35">2 Kings 23:33&ndash;35</a>).</p>
 
 <figure class="fg-figure" style="max-width:560px;">
   <img src="/images/culture/babylon/photos/nabopolassar-cylinder.jpg" alt="Terracotta foundation cylinder of Nabopolassar recording work on Babylon's walls" loading="lazy">
-  <figcaption>A terracotta cylinder recording <b>Nabopolassar</b>&rsquo;s work on the walls of Babylon (Neo-Babylonian, 625&ndash;605 BC). No likeness of the dynasty&rsquo;s founder survives &mdash; like most Babylonian kings, he reaches us through his building inscriptions rather than his face. <a href="https://www.britishmuseum.org/collection/object/W_1898-0514-81" target="_blank">See it at the British Museum &rarr;</a> <span class="fg-credit">British Museum, BM 26263 &middot; photo Osama S. M. Amin, Wikimedia Commons (CC BY-SA 4.0)</span></figcaption>
+  <figcaption>A terracotta cylinder recording <b>Nabopolassar</b>&rsquo;s work on the walls of Babylon (Neo-Babylonian, 625&ndash;605 BC). No likeness of the dynasty&rsquo;s founder survives &mdash; like most Babylonian kings, he reaches us through his building inscriptions rather than his face. <a href="https://www.britishmuseum.org/collection/object/W_1898-0514-81" target="_blank">See it at the British Museum &rarr;</a> <span class="fg-credit">British Museum, BM 26263 &middot; photo Osama S. M. Amin, <a href="https://commons.wikimedia.org/wiki/File%3ACylinder_of_Nabopolassar_from_Babylon%2C_Mesopotamia..JPG">Wikimedia Commons</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>)</span></figcaption>
 </figure>
 
-<p>Then came <strong>Carchemish</strong> (605 BC). There the crown prince Nebuchadnezzar shattered the Egyptian army and chased its remnant south. Within months his father died, and Nebuchadnezzar crossed the desert by forced march to claim the crown. After that he returned west year after year to collect the tribute of &ldquo;all the kings of Hatti-land,&rdquo; as his chronicle calls Syria and Palestine. Judah&rsquo;s last four kings lived and died inside that annual rhythm: submission, temptation from Egypt, revolt, and retribution. The cycle ran through the deportation of 597, the destruction of 586, and beyond. (The kings themselves &mdash; Babylon&rsquo;s and Judah&rsquo;s &mdash; are profiled in <a href="/culture/ancient/babylon/03-nebuchadnezzar-and-the-kings/">Section 03</a>; the fall of Jerusalem as the Babylonian records tell it is in <a href="/culture/ancient/babylon/08-babylon-and-the-bible/">Section 08</a>.)</p>
+<p>Then came <strong>Carchemish</strong> (605 BC). There the crown prince Nebuchadnezzar shattered the Egyptian army and chased its remnant south. Within months his father died, and Nebuchadnezzar crossed the desert by forced march to claim the crown. After that he returned west year after year to collect the tribute of &ldquo;all the kings of Hatti-land,&rdquo; as his chronicle calls Syria and Palestine. Judah&rsquo;s last four kings lived and died inside that annual rhythm: submission, temptation from Egypt, revolt, and retribution. The cycle ran through the deportation of 597, the destruction of 586, and beyond. (The kings themselves, Babylon&rsquo;s and Judah&rsquo;s, are profiled in <a href="/culture/ancient/babylon/03-nebuchadnezzar-and-the-kings/">Section 03</a>; the fall of Jerusalem as the Babylonian records tell it is in <a href="/culture/ancient/babylon/08-babylon-and-the-bible/">Section 08</a>.)</p>
 
-<p>And then, almost as fast as it rose, the empire ended. Nebuchadnezzar&rsquo;s heirs lasted six years between them. The throne passed to <strong>Nabonidus</strong>, an elderly outsider devoted to the moon god Sin &mdash; a king who left Babylon for the Arabian oasis of Teima for a decade while his son <strong>Belshazzar</strong> governed at home. When <strong>Cyrus</strong> of Persia marched in 539 BC, Babylonia fell in a matter of weeks. One battle at Opis &mdash; and the gates of the greatest walled city on earth opened without a siege. The book of Daniel remembers the last night of that last regent (<a href="https://www.blueletterbible.org/kjv/dan/5/30/" target="_blank" data-ref="Daniel 5:30-31">Daniel 5:30&ndash;31</a>). The Babylonian chronicles and Cyrus&rsquo;s own cylinder confirm the same picture: a capital that changed hands almost quietly, its priesthood alienated from its absentee king.</p>
+<p>And then, almost as fast as it rose, the empire ended. Nebuchadnezzar&rsquo;s heirs lasted six years between them. The throne passed to <strong>Nabonidus</strong>, an elderly outsider devoted to the moon god Sin, a king who left Babylon for the Arabian oasis of Teima for a decade while his son <strong>Belshazzar</strong> governed at home. When <strong>Cyrus</strong> of Persia marched in 539 BC, Babylonia fell in a matter of weeks. One battle at Opis &mdash; and the gates of the greatest walled city on earth opened without a siege. The book of Daniel remembers the last night of that last regent (<a href="https://www.blueletterbible.org/kjv/dan/5/30/" target="_blank" data-ref="Daniel 5:30">Daniel 5:30</a>). The Babylonian chronicles and Cyrus&rsquo;s own cylinder confirm the same picture: a capital that changed hands almost quietly, its priesthood alienated from its absentee king.</p>
 
 <table style="width:100%; border-collapse: collapse; margin: 24px 0;">
 <thead>
@@ -438,7 +441,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <p><strong>Online Resources:</strong></p>
 <ul style="margin: 12px 0 0 0; padding-left: 24px;">
-<li><a href="https://www.worldhistory.org/Neo-Babylonian_Empire/" target="_blank"><strong>WHE</strong> &mdash; Neo-Babylonian Empire</a> (CC BY-NC-SA 4.0)</li>
+<li><a href="https://www.metmuseum.org/essays/babylon" target="_blank"><strong>WHE</strong> &mdash; Neo-Babylonian Empire</a> (CC BY-NC-SA 4.0)</li>
 <li><a href="https://www.worldhistory.org/hammurabi/" target="_blank"><strong>WHE</strong> &mdash; Hammurabi</a></li>
 <li><a href="https://www.livius.org/articles/place/babylon/" target="_blank"><strong>Livius.org</strong> &mdash; Babylon</a> &mdash; Jona Lendering&rsquo;s well-sourced articles, including the chronicles in translation.</li>
 </ul>

@@ -8,8 +8,8 @@ private_draft: false
 part: 3
 image_slug: "menorah-word-and-teaching-diagrams"
 source_file: "DRAFT_3_Menorah_Word_and_Teaching_Diagrams.md"
-source_sha256: "3c2de52b380ebd639dfb5b4ed1add0e110dd545ed8dd6ce75bbab9c2e69d6e1e"
-source_bytes: 59409
+source_sha256: "dc6c4db0ddaba4d095a859ae6cba08d738092833987d7d7aaa18f3a80ee04e32"
+source_bytes: 59586
 ---
 
 # When the Lampstand Became a Figure for the Word
@@ -297,13 +297,15 @@ The plaque is an ancient Near Eastern object made in the form of a branching tre
 
 ## Sources
 
+*For every source in this series, with links and a note on what each one supports, see [Sources and Further Reading](/study-library/articles/tree-menorah-series/sources/).*
+
 **Scripture.** [Psalm 67](https://www.churchofjesuschrist.org/study/scriptures/ot/ps/67?lang=eng); [Genesis 1:1](https://www.churchofjesuschrist.org/study/scriptures/ot/gen/1?lang=eng&id=p1#p1); [Genesis 2:9](https://www.churchofjesuschrist.org/study/scriptures/ot/gen/2?lang=eng&id=p9#p9); [Exodus 3:1–6](https://www.churchofjesuschrist.org/study/scriptures/ot/ex/3?lang=eng&id=p1-p6#p1); [Exodus 25:8–9, 40](https://www.churchofjesuschrist.org/study/scriptures/ot/ex/25?lang=eng&id=p8-p9,p40#p8); [Exodus 25:31–37](https://www.churchofjesuschrist.org/study/scriptures/ot/ex/25?lang=eng&id=p31-p37#p31); [John 1:1–14](https://www.churchofjesuschrist.org/study/scriptures/nt/john/1?lang=eng&id=p1-p14#p1); [Joseph Smith Translation, John 1](https://www.churchofjesuschrist.org/study/scriptures/jst/jst-john/1?lang=eng); [Hebrews 8:5](https://www.churchofjesuschrist.org/study/scriptures/nt/heb/8?lang=eng&id=p5#p5); [Revelation 1:12–20](https://www.churchofjesuschrist.org/study/scriptures/nt/rev/1?lang=eng&id=p12-p20#p12); [19:13](https://www.churchofjesuschrist.org/study/scriptures/nt/rev/19?lang=eng&id=p13#p13); [22:1–5](https://www.churchofjesuschrist.org/study/scriptures/nt/rev/22?lang=eng&id=p1-p5#p1), [13](https://www.churchofjesuschrist.org/study/scriptures/nt/rev/22?lang=eng&id=p13#p13), [16](https://www.churchofjesuschrist.org/study/scriptures/nt/rev/22?lang=eng&id=p16#p16); [1 Nephi 8:10–12](https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/8?lang=eng&id=p10-p12#p10), [19–24](https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/8?lang=eng&id=p19-p24#p19); [11:8–25](https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/11?lang=eng&id=p8-p25#p8), including [11:21–25](https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/11?lang=eng&id=p21-p25#p21); [15:23–24](https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/15?lang=eng&id=p23-p24#p23), [23–25](https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/15?lang=eng&id=p23-p25#p23); [Alma 32:28–42](https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/32?lang=eng&id=p28-p42#p28), [41–43](https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/32?lang=eng&id=p41-p43#p41); [33:22–23](https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/33?lang=eng&id=p22-p23#p22); [Doctrine and Covenants 7:1–3](https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/7?lang=eng&id=p1-p3#p1); [93:8–11](https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/93?lang=eng&id=p8-p11#p8); [110:2–4](https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/110?lang=eng&id=p2-p4#p2).
 
 **Works cited.**
 
 - Philo of Alexandria, *Who Is the Heir of Divine Things?* 215–220.
 - National Library of Russia, *First Leningrad Pentateuch*, Evr. II B 17.
-- Eep Talstra and Rudi Bosma, “Psalm 67: Blessing, Harvest and History: A Proposal for Exegetical Methodology.”
+- Eep Talstra and Carl J. Bosma, “Psalm 67: Blessing, Harvest and History: A Proposal for Exegetical Methodology.”
 - Babylonian Talmud, Bava Batra 25b:8.
 - Bahya ben Asher, Torah commentary, Exodus 25:31:4.
 - Abudarham, *Weekday Prayers*, Post Amidah 43.
