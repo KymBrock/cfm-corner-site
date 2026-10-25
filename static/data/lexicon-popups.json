@@ -2786,7 +2786,23 @@
   "definition": "ἀνατολή, -ῆς, ἡ; (ἀνατέλλω), [in LXX chiefly for מִזְרָח קָדִים ;]; __1. a rising: of light, Luk.1:78.; __2. the sun-rising, the east (MM, VGT, see word): Mat.2:2, 9, Rev.21:13; ἀ. ἡλίου, Rev.7:2 16:12 (WΗ, p1.); pl., Mat.2:1 8:11 24:27, Luk.13:29.†; (AS)",
   "verse": "",
   "source": "stepbible-tbesg",
-  "has_lsj": true
+  "has_lsj": true,
+  "senses": [
+   {
+    "text": "a rising, as of light: \"the dayspring from on high\" (Luke 1:78)"
+   },
+   {
+    "text": "the place where the sun rises: the east",
+    "children": [
+     {
+      "text": "with \"sun\" added, literally the rising of the sun, which the King James Version renders \"the east\" (Revelation 7:2)"
+     },
+     {
+      "text": "plural: the east, the eastern lands, as with the wise men \"from the east\" (Matthew 2:1)"
+     }
+    ]
+   }
+  ]
  },
  "G396": {
   "translit": "anatrepō",
@@ -10711,7 +10727,28 @@
   "definition": "διαθήκη, -ης, ἡ; (διατίθημι), [frequently in LXX, and nearly always for בְּרִית ;]; __1. as usually in cl., a disposition, testament, will (Plat., al.): Gal.3:15 (R, mg., but see Lft., in l.), Heb.9:16, 17 (R, txt.; MM, Exp., xi; Milligan, NTD, 75; Abbott, Essays, 107; Deiss., LAE, 341; but see infr.).; __2. As in LXX (for בְּרִית) = cl. συνθήκη, a convention, arrangement, covenant (exc. in the disputed cases mentioned above, always between God and man, \"perhaps with the feeling that the δια- compound was more suitable than the συν- for a covenant with God---συνθ. might suggest equal terms,\" MM, Exp., l.with): Gal.3:15 (R, txt., but see supr., and cf. Thayer, see word), Heb.9:16, 17 (R, mg., Westc., in l.; Hatch, Essays, 47; but see supr.), Mat.26:28, Mrk.14:24, Luk.1:72, Act.3:25 7:8, Rom.11:27\" (LXX), 2Co.3:14, Gal.3:17, Heb.7:22 8:6, ib. 9, 10\" (LXX) 9:4, 15-17 20\" (LXX) 10:16 (LXX), 29 12:24 13:20, Rev.11:19; καινὴ δ., Mat.26:28, and Mrk.14:24 (R, mg.), Luk.22:20, 1Co.11:25, 2Co.3:6, Heb.8:8\" (LXX) 9:15; pl. Rom.9:4, Gal.4:24, Eph.2:12.†; (AS)",
   "verse": "",
   "source": "stepbible-tbesg",
-  "has_lsj": true
+  "has_lsj": true,
+  "senses": [
+   {
+    "text": "a will or testament: the settled arrangement a person makes for their property (the usual sense in classical Greek)",
+    "children": [
+     {
+      "text": "so read by some at Galatians 3:15 and Hebrews 9:16–17, where interpreters differ between \"will\" and \"covenant\""
+     }
+    ]
+   },
+   {
+    "text": "a covenant or binding arrangement: in the Greek Old Testament the regular word for Hebrew bᵊrîṯ, and in the New Testament nearly always a covenant God makes with people",
+    "children": [
+     {
+      "text": "the new covenant (kainē diathēkē), as at the Last Supper and in Hebrews 8"
+     },
+     {
+      "text": "plural: the covenants given to Israel (Romans 9:4)"
+     }
+    ]
+   }
+  ]
  },
  "G1243": {
   "translit": "diairesis",
@@ -22778,7 +22815,29 @@
   "definition": "καινός, -ή, -όν; [in LXX (Eze.11:19, al.) for חָדָשׁ, exc. Isa.65:15 (אַחֵר) ;]; of that which is unused or unaccustomed, new in respect to form or quality, fresh, unused, novel: opposite to παλαιός, ἀρχαῖος, Mat.9:17 13:52, Mrk.2:21-22 Luk.5:36, 38, 2Co.5:17, Eph.4:24; πλήρωμα, Mrk.2:21; μνημεῖον, Mat.27:60, Jhn.19:41; διαθήκη (T, WH, R, txt., omit), Luk.22:20, 1Co.11:25, 2Co.3:6, Heb.8:8\" (LXX), Heb.8:13 9:15; οὐρανοί, γῆ, 2Pe.3:13, Rev.21:1\" (LXX)  Ἰερουσαλήμ, Rev.3:12 21:2; ἄνθρωπος, Eph.2:15 (cf. Eze.18:31); πάντα, Rev.21:5; γέννημα τ. ἀμπέλου, Mat.26:29, Mrk.14:25; διδαχή, Mrk.1:27, Act.17:19; ἐντολή, Jhn.13:34, 1Jn.2:7-8, 2Jn.5; ὄνομα, Rev.2:17 (LXX); ᾠδή, Rev.5:9 14:3 (of. Psa.144:9); κτίσις, 2Co.5:17, Gal.6:15; γλῶσσαι, Mrk.16:17; compar., Act.17:21.†; SYN.: νέος, \"the new primarily in reference to time, the young, recent; κ. . the new primarily in reference to quality, the fresh, unworn\". Cf. Tr., Syn., § lx (the distinction, however, is less marked in late Gk.; cf. Heb.12:24 with He, ll. with supr., and see MM, Exp., xv)  (AS)",
   "verse": "",
   "source": "stepbible-tbesg",
-  "has_lsj": true
+  "has_lsj": true,
+  "senses": [
+   {
+    "text": "new in kind or quality: fresh, unused, not known before, as opposed to old or worn out",
+    "children": [
+     {
+      "text": "of things not yet used: a new tomb, a new garment, new wineskins"
+     },
+     {
+      "text": "of what God makes new: a new covenant, a new creation and a new self, a new heaven and a new earth, a new Jerusalem, a new name, \"all things new\" (Revelation 21:5)"
+     },
+     {
+      "text": "of the redeemed: the \"new song\" they sing (Revelation 5:9; 14:3)"
+     },
+     {
+      "text": "of a teaching or commandment that is new or unheard of"
+     },
+     {
+      "text": "compare neos, new in time or young; kainos stresses newness of quality (the line is less sharp in later Greek)"
+     }
+    ]
+   }
+  ]
  },
  "G2538": {
   "translit": "kainotēs",
@@ -35436,7 +35495,33 @@
   "definition": "παρακαλέω, -ῶ,; [in LXX chiefly for נחם ni., pi. ;]; __1. to call to one, call for, summon: Act.28:20 (R, mg.; R, txt., entreat); hence (of the gods: Dem., Xen., al.), to invoke, call on, beseech, entreat: τ. πατέρα μου, Mat.26:53; τ. κύριον, 2Co.12:8; in late writers (Polyb., Diod., al.; rarely in LXX; in π., see Deiss., LAE, 176.14), also of men: absol., Phm 9; with accusative, Mat.8:5, Mrk.1:40, Act.16:9, al.; with inf., Mrk.5:17, Luk.8:41, Act.8:31, al.; before ἵνα (see M, Pr., 205, 208), Mt 14\"36, Mrk.5:18, Luk.8:31, al.; __2. to admonish, exhort: absol., Luk.3:18, Rom.12:8, 2Ti.4:2, al.; with accusative, Act.15:32, 1Th.2:11, Heb.3:13, al.; id. before inf., Act.11:23, Rom.12:1, Php.4:2, 1Th.4:10, al.; before ἵνα (see M, Pr., l.with), 1Co.1:10, 2Co.8:6, 1Th.4:1, al.; __3. to cheer, encourage, comfort (Plut., LXX: Jb 43, Isa.35:3, Sir.43:24, al.): with accusative, 2Co.1:6, Eph.6:22, Col.2:2, al.; id. before ἐν, 1Th.4:18; διά, 2Co.1:4; pass., Mat.5:4, Luk.16:25, Act.20:12.; SYN.: παραμυθέω (cf. M, Th., 25). (AS)",
   "verse": "",
   "source": "stepbible-tbesg",
-  "has_lsj": true
+  "has_lsj": true,
+  "senses": [
+   {
+    "text": "to call someone to one's side: to summon",
+    "children": [
+     {
+      "text": "hence to call on, plead with, beg: of praying to God, and of asking people, often followed by what is asked"
+     }
+    ]
+   },
+   {
+    "text": "to urge or exhort someone to act",
+    "children": [
+     {
+      "text": "often followed by what they are urged to do"
+     }
+    ]
+   },
+   {
+    "text": "to comfort, cheer, encourage someone in distress",
+    "children": [
+     {
+      "text": "passive: to be comforted, as in \"they shall be comforted\" (Matthew 5:4)"
+     }
+    ]
+   }
+  ]
  },
  "G3871": {
   "translit": "parakalyptō",
@@ -35481,7 +35566,20 @@
   "definition": "παρά-κλητος, -ον; (παρακαλεω), [in Aq., Th.: Job.16:2 * ;]; called to one's aid in a judicial cause (Dion. Cass.); hence, most frequently as subst., ὁ π., an advocate, pleader, intercessor (Dem., al.; so in Rabbinic  lit., פְּרַקְלִיטָא), \"a friend of the accused person, called to speak to his character, or otherwise enlist sympathy in his favour\" (Field, Notes, 102). In NT, specif., ὁ π.,; __(a) of Christ, 1Jn.2:1 (see ICC, Jo. Epp., 23 ff.);; __(b) of the Holy Spirit (AV, comforter; but see opp. with), Jhn.14:16, 26 15:26 16:7 (cf. also Abbott, Essays, 86, 97; Deiss., LAE, 339 f.; MM, xviii; Westc., Jo., ii, 188); (AS)",
   "verse": "",
   "source": "stepbible-tbesg",
-  "has_lsj": true
+  "has_lsj": true,
+  "senses": [
+   {
+    "text": "one called to another's side to help, especially in a legal case: an advocate, intercessor, one who pleads another's cause",
+    "children": [
+     {
+      "text": "of Christ, our advocate with the Father (1 John 2:1)"
+     },
+     {
+      "text": "of the Holy Spirit, the \"Comforter\" of the King James Version (John 14:16, 26; 15:26; 16:7)"
+     }
+    ]
+   }
+  ]
  },
  "G3876": {
   "translit": "parakoē",
