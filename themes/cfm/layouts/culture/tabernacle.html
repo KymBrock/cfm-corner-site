@@ -855,7 +855,7 @@
         const ensureSharedLexiconIndex = async () => {
           if (Object.keys(sharedLexiconByNormalizedTranslit).length) return sharedLexiconByNormalizedTranslit;
           if (!sharedLexiconLoadPromise) {
-            sharedLexiconLoadPromise = fetch('/data/lexicon-popups.json?v=ca0d394f6317e477192cc36b566599782bc98059a611ae7b60351aef5f8e7897')
+            sharedLexiconLoadPromise = fetch('/data/lexicon-popups.json?v=2ddcfd039bec4926bb6e6a4bc641304775af1b671e5199a47c1f9eb10bfe6811')
               .then((response) => (response.ok ? response.json() : {}))
               .catch(() => ({}))
               .then((data) => {
