@@ -587,7 +587,7 @@
       async function ensureHubData() {
         if (hubData) return hubData;
         try {
-          var res = await fetch('/data/lexicon-hub-supplement.json?v=20260622a');
+          var res = await fetch('/data/lexicon-hub-supplement.json?v=a0785bc6657cea4183eb45b78b9ceea7220d99a719fa65058eb58dacbb7d8cb6');
           hubData = res.ok ? await res.json() : {};
         } catch (_) {
           hubData = {};
@@ -1003,30 +1003,42 @@
         }
 
         if (type === 'hub') {
+          // A Translation Hub term: a word with no BLB entry of its OWN. Kymber, 2026-10-29:
+          // "Some of these should have BLB info? ... I want these to include the same details
+          // that past cards have included." So where a biblical word or root stands behind the
+          // term (related_strongs), the card IS a BLB card: same title, Strong's number, sense
+          // outline and BLB link. The later meaning (Jastrow 1903, or a CFM Corner gloss) is added
+          // as its own labelled block, never in place of the BLB entry.
           var hdb = await ensureHubData();
           var hentry = (hdb && el.dataset && hdb[el.dataset.hub]) || {};
-          var hTranslit = hentry.translit || (el.textContent || '').trim() || 'Hub Term';
-          var hOriginal = hentry.original || (el.textContent || '').trim();
-          var hLang = hentry.lang || 'hebrew';
+          var rel = hentry.related_strongs ? String(hentry.related_strongs).toUpperCase().trim() : '';
+          var hre = {};
+          if (rel) { var ldb = await ensureLexiconData(); hre = getLexiconEntry(ldb, rel) || {}; }
+          var hTranslit = escHtml(hentry.translit || (el.textContent || '').trim() || hre.translit || 'Hub Term');
+          var hOriginal = escHtml(hentry.original || (el.textContent || '').trim());
+          var hLang = hentry.lang || hre.lang || 'hebrew';
           var hWordClass = hLang === 'greek' ? 'bp-greek' : 'bp-hebrew';
-          var hDef = hentry.definition || 'Translation Hub entry preview unavailable.';
-          var hRootLink = '';
-          if (hentry.related_strongs) {
-            var rs = String(hentry.related_strongs).toLowerCase();
-            hRootLink = '<div class="bp-link"><a href="https://www.blueletterbible.org/lexicon/' + rs +
-              '/kjv/wlc/0-1/" target="_blank" rel="noopener">Biblical root ' +
-              String(hentry.related_strongs).toUpperCase() + ' at Blue Letter Bible →</a></div>';
+          var hLabel = hentry.gloss_label ||
+            (hentry.source_id === 'jastrow_dictionary_1903' ? (rel ? 'later Hebrew · Jastrow 1903' : 'meaning · Jastrow 1903')
+                                                             : 'CFM Corner gloss');
+          var biblical = '';
+          if (rel) {
+            biblical =
+              (hentry.relation ? '<div class="bp-ref">' + escHtml(hentry.relation) + '</div>' : '') +
+              (sensesHtml(hre.senses) || (hre.definition ? '<div class="bp-body">' + escHtml(hre.definition) + '</div>' : ''));
           }
-
+          var later = hentry.definition
+            ? '<div class="' + (rel ? 'bp-ety' : '') + '"><span class="bp-ety-label">' + escHtml(hLabel) + '</span> ' +
+                escHtml(hentry.definition) +
+                (hentry.source ? '<div class="bp-ety-src">Source: ' + escHtml(hentry.source) + '</div>' : '') +
+              '</div>'
+            : '';
           popup.innerHTML =
-            '<div class="bp-title">' + hTranslit +
-            (hentry.stratum ? ' <span class="bp-strongs">' + hentry.stratum + '</span>' : '') +
-            '</div>' +
+            '<div class="bp-title">' + hTranslit + (rel ? ' <span class="bp-strongs">(' + rel + ')</span>' : '') + '</div>' +
             (hOriginal ? '<div class="bp-original ' + hWordClass + '">' + hOriginal + '</div>' : '') +
-            '<div class="bp-body">' + hDef + '</div>' +
-            (hentry.source ? '<div class="bp-ref">Source: ' + hentry.source + '</div>' : '') +
-            hRootLink;
-
+            biblical + later +
+            (rel ? '<div class="bp-link"><a href="https://www.blueletterbible.org/lexicon/' + rel.toLowerCase() +
+                   '/kjv/wlc/0-1/" target="_blank" rel="noopener">Full entry at Blue Letter Bible →</a></div>' : '');
           place(el);
           popup.classList.add('visible');
           return;
@@ -1167,7 +1179,7 @@
       function getTargetAnchor(target) {
         // [data-letter] has no href to match on — a letter has nowhere to link, which is
         // the whole point. It must be named here or the popup never fires for it.
-        var el = target && target.closest ? target.closest('[data-ref], [data-letter], a[href*="blueletterbible.org/"], a[href*="sefaria.org/"], a[href*="churchofjesuschrist.org/study/scriptures/"]') : null;
+        var el = target && target.closest ? target.closest('[data-ref], [data-letter], [data-hub], a[href*="blueletterbible.org/"], a[href*="sefaria.org/"], a[href*="churchofjesuschrist.org/study/scriptures/"]') : null;
         // Source citations have no grammar query; let their normal links open directly.
         if (el && el.href && /sefaria\.org\//i.test(el.href) && !parseSefariaQuery(el.href)) return null;
         return el;

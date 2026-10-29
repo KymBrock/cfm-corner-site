@@ -352,7 +352,7 @@ The plain, literal meaning—historical context and narrative clarity.
 
 R
 
-[Remez](https://www.sefaria.org/Jastrow%2C_%D7%A8%D6%B8%D7%9E%D6%B7%D7%96?ven=english%7CLondon,_Luzac,_1903&lang=bi) (רֶמֶז)
+[Remez](https://www.sefaria.org/Jastrow%2C_%D7%A8%D6%B8%D7%9E%D6%B7%D7%96?ven=english%7CLondon,_Luzac,_1903&lang=bi) (<span class="term-ref" data-hub="hub-ce5f7568dc">רֶמֶז</span>)
 
 Hints or symbolic meanings—allegorical and prophetic layers.
 

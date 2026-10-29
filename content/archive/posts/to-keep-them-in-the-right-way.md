@@ -426,7 +426,7 @@ Verses 1-3: Christ’s Instructions to the Disciples
 
 #### Laying on of Hands
 
-- Hebrew word: סְמִיכָה (Semichah, from root [Samach](https://www.blueletterbible.org/lexicon/h5564/tr/wlc/0-1/)) — "Laying on of hands," "to sustain." Greek word: στηρίζω ([stērízō](https://www.blueletterbible.org/lexicon/g4741/lxx/lxx/0-1/)) "set apart," "strengthen,"  "Make stable," "confirm"
+- Hebrew word: <span class="term-ref" data-hub="hub-76a6d60e23">סְמִיכָה</span> (Semichah, from root [Samach](https://www.blueletterbible.org/lexicon/h5564/tr/wlc/0-1/)) — "Laying on of hands," "to sustain." Greek word: στηρίζω ([stērízō](https://www.blueletterbible.org/lexicon/g4741/lxx/lxx/0-1/)) "set apart," "strengthen,"  "Make stable," "confirm"
 
 - Semichah in ancient Israel was used to confer blessings, authority, or responsibility. The act of laying hands in this ordinance represents the transmission of divine power through priesthood authority.
 

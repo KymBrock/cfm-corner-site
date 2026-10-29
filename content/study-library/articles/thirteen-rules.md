@@ -230,7 +230,7 @@ If you've read the [PaRDeS article](/study-library/articles/understanding-the-ol
 | Level | Hebrew | Meaning | What You're Looking For |
 |-------|--------|---------|------------------------|
 | **P** | [*Peshat*](https://www.blueletterbible.org/lexicon/h6584/kjv/wlc/0-1/) (פְּשָׁט) | Plain | The literal, contextual meaning |
-| **R** | [*Remez*](https://www.blueletterbible.org/lexicon/h7169/kjv/wlc/0-1/) (רֶמֶז) | Hint | Allegorical or hinted meaning beneath the surface |
+| **R** | [*Remez*](https://www.blueletterbible.org/lexicon/h7169/kjv/wlc/0-1/) (<span class="term-ref" data-hub="hub-ce5f7568dc">רֶמֶז</span>) | Hint | Allegorical or hinted meaning beneath the surface |
 | **D** | [*Derash*](https://www.blueletterbible.org/lexicon/h1875/kjv/wlc/0-1/) (דְּרָשׁ) | Search | Homiletical, interpretive meaning drawn out through comparison |
 | **S** | [*Sod*](https://www.blueletterbible.org/lexicon/h5475/kjv/wlc/0-1/) (סוֹד) | Secret | Mystical or hidden meaning, often associated with Kabbalah |
 
