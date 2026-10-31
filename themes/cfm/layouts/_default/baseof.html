@@ -1180,6 +1180,19 @@
         // [data-letter] has no href to match on — a letter has nowhere to link, which is
         // the whole point. It must be named here or the popup never fires for it.
         var el = target && target.closest ? target.closest('[data-ref], [data-letter], [data-hub], a[href*="blueletterbible.org/"], a[href*="sefaria.org/"], a[href*="churchofjesuschrist.org/study/scriptures/"]') : null;
+        // Plain reference-library links navigate normally; they have no verse preview.
+        // Explicit popup data still takes priority over the destination's URL shape.
+        if (el && el.href && !(el.dataset && (el.dataset.ref || el.dataset.letter || el.dataset.hub || el.dataset.popupKind === 'source'))) {
+          try {
+            var plainUrl = new URL(el.href, window.location.origin);
+            if (/(^|\.)blueletterbible\.org$/i.test(plainUrl.hostname) &&
+                plainUrl.pathname === '/' &&
+                !(plainUrl.searchParams.get('Criteria') || plainUrl.searchParams.get('criteria') || '').trim()) return null;
+            if (/(^|\.)churchofjesuschrist\.org$/i.test(plainUrl.hostname) &&
+                /^\/study\/scriptures\//i.test(plainUrl.pathname) &&
+                !/^\/study\/scriptures\/(?:ot|nt|bofm|dc-testament|pgp)\/[^/]+\/\d+\/?$/i.test(plainUrl.pathname)) return null;
+          } catch (_) { /* Keep the existing handler for an unparseable destination. */ }
+        }
         // Source citations have no grammar query; let their normal links open directly.
         if (el && el.href && /sefaria\.org\//i.test(el.href) && !parseSefariaQuery(el.href)) return null;
         return el;
