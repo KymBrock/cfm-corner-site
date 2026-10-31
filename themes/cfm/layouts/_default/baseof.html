@@ -539,7 +539,7 @@
       async function ensureLexiconData() {
         if (lexiconData) return lexiconData;
         try {
-          var res = await fetch('/data/lexicon-popups.json?v=2ddcfd039bec4926bb6e6a4bc641304775af1b671e5199a47c1f9eb10bfe6811');
+          var res = await fetch('/data/lexicon-popups.json?v={{ readFile "static/data/lexicon-popups.json" | sha256 }}');
           lexiconData = res.ok ? await res.json() : {};
         } catch (_) {
           lexiconData = {};
@@ -897,7 +897,7 @@
           var original = d.original || e.original || (el.textContent || '').trim();
           var dataDef = d.lexicon || '';
           if (dataDef && /preview unavailable/i.test(dataDef)) dataDef = '';
-          var definition = dataDef || e.definition || '';
+          var definition = String(dataDef || e.definition || '').replace(/^\s*:\s*/, '');
           var verse = d.verse || e.verse || '';
           var lang = d.lang || e.lang || 'hebrew';
 
