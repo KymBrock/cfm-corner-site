@@ -1,0 +1,49 @@
+.am-widget { --am-ink:#263f36; --am-paper:#f8f6f0; --am-line:#d7dacc; color:var(--am-ink); font-family:system-ui,sans-serif; margin:1.5rem 0; }
+.am-widget [hidden] { display:none !important; }
+.am-widget * { box-sizing:border-box; }
+.am-widget a { color:#315d49; text-underline-offset:3px; }
+.am-widget button,.am-choice { min-height:44px; font:inherit; }
+.am-widget button { border:1px solid #9ba99c; border-radius:6px; background:#fffdf7; color:#263f36; padding:.55rem .8rem; cursor:pointer; }
+.am-widget :focus-visible { outline:3px solid #a96119; outline-offset:3px; }
+.am-intro { font-size:1rem; line-height:1.6; }
+.am-tools { display:flex; flex-wrap:wrap; gap:.5rem; margin:.5rem 0; }
+.am-tools [aria-pressed=true] { background:#e7d6b7; border-color:#96753f; }
+.am-viewport { overflow:auto; border:1px solid var(--am-line); border-radius:8px; background:var(--am-paper); }
+.am-svg { display:block; width:100%; height:auto; }
+.am-canvas { width:100%; }
+.am-enlarged .am-canvas { width:180%; min-width:1150px; }
+.am-map-pin { cursor:pointer; }
+.am-map-pin:hover text,.am-map-pin:focus-visible text,.am-map-pin.is-selected text { fill:#763c0d; stroke:#fff8cf; stroke-width:10; }
+.am-map-pin.is-selected circle:not(.am-hit) { fill:#a65a16; }
+.am-map-pin .am-hit { pointer-events:all; }
+.am-context,.am-note,.am-source,.am-credits { font-size:.85rem; line-height:1.6; }
+.am-list { border-top:1px solid var(--am-line); border-bottom:1px solid var(--am-line); padding:.9rem 0; margin:1rem 0; }
+.am-list summary,.am-credits summary,.am-excerpts summary { cursor:pointer; min-height:36px; }
+.am-choices { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.35rem .8rem; }
+.am-choice { display:flex; align-items:center; gap:.6rem; text-decoration:none; border-radius:6px; padding:.35rem .5rem; }
+.am-choice span { font-size:.75rem; display:inline-grid; place-items:center; min-width:24px; height:24px; border-radius:50%; background:#e4e9df; }
+.am-choice:hover,.am-choice.is-selected { background:#e8deca; }
+.am-dialog { margin:auto; padding:0; border:1px solid #acb49f; border-radius:14px; width:min(490px,calc(100vw - 32px)); max-height:82vh; max-height:82dvh; color:var(--am-ink); background:#fffdf7; box-shadow:0 18px 65px #142b2b55; overflow:hidden; }
+.am-dialog::backdrop { background:rgba(21,34,29,.27); }
+.am-dialog-scroll { max-height:82vh; max-height:82dvh; overflow:auto; padding:1.5rem; }
+.am-close { float:right; position:sticky; top:0; z-index:2; margin:-.4rem -.4rem .6rem 1rem; }
+.am-photo { clear:both; margin:0 0 1.2rem; }
+.am-photo img { display:block; width:100%; height:auto; max-height:240px; object-fit:contain; background:#eeece4; border-radius:6px; }
+.am-photo img:not([src]) { display:none; }
+.am-photo figcaption { margin:.5rem 0 0; font-size:.8rem; line-height:1.5; color:#526149; }
+.am-photo-credit { display:block; margin-top:.25rem; font-size:.72rem; }
+.am-period { font-size:.76rem; text-transform:uppercase; letter-spacing:.07em; margin:.1rem 0 .6rem; color:#6b684e; }
+.am-widget h3 { font-family:Georgia,serif; color:#263f36; font-size:1.8rem; margin:0 0 1rem; line-height:1.15; }
+.am-copy { clear:both; font-family:Georgia,serif; line-height:1.65; font-size:1.06rem; }
+.am-copy p { margin:.75rem 0; }
+.am-read { padding-top:.9rem; border-top:1px solid var(--am-line); font-weight:600; line-height:1.55; }
+.am-inline { margin-top:1rem; border:1px solid var(--am-line); border-left:4px solid #a47c3c; background:#fffdf7; padding:1.5rem; border-radius:7px; }
+.am-excerpts details { border-bottom:1px solid var(--am-line); padding:.5rem 0; }
+@media(max-width:600px) {
+ .am-photo img { max-height:190px; }
+ .am-choices { grid-template-columns:repeat(2,minmax(0,1fr)); gap:.25rem; font-size:.88rem; }
+ .am-dialog { width:100%; max-width:100%; margin:auto 0 0; border-radius:16px 16px 0 0; max-height:78vh; max-height:78dvh; }
+ .am-dialog-scroll { padding:1.2rem 1.2rem max(1.2rem,env(safe-area-inset-bottom)); max-height:78vh; max-height:78dvh; }
+ .am-widget h3 { font-size:1.6rem; }
+}
+@media print { .am-tools,.am-dialog,.am-choices {display:none!important} .am-excerpts[hidden] {display:block!important} .am-canvas {width:100%!important} }

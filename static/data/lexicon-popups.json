@@ -1656,7 +1656,8 @@
   "definition": "ἀλίσγημα, -τος, τό; (late ἀλισγέω, to pollute); pollution: Act.15:20.†; (AS)",
   "verse": "",
   "source": "stepbible-tbesg",
-  "has_lsj": true
+  "has_lsj": true,
+  "senses": [{"text": "pollution, as of idols"}]
  },
  "G235": {
   "translit": "alla",
@@ -3733,40 +3734,87 @@
    "source": "stepbible-tbesg",
    "has_lsj": true,
    "senses": [
-     {
-       "text": "a human being, male or female (Latin homo)",
+    {
+     "text": "a human being, male or female (Latin homo)",
+     "children": [
+      {
+       "text": "in the Greek Old Testament chiefly for Hebrew ʾāḏām and ʾîš, also ʾĕnôš"
+      },
+      {
+       "text": "in contrast to God; also in contrast to animals",
        "children": [
-         {
-           "text": "in the Greek Old Testament chiefly for Hebrew ʾāḏām and ʾîš, also ʾĕnôš"
-         },
-         {
-           "text": "in contrast to God: “What therefore God hath joined together, let not man put asunder” (Matthew 19:6); also in contrast to animals"
-         },
-         {
-           "text": "with a note of human weakness: “the wisdom of men” (1 Corinthians 2:5)"
-         },
-         {
-           "text": "of a person's nature: the inward man (Romans 7:22), the old man and the new man (Ephesians 4:22, 24)"
-         },
-         {
-           "text": "plural: men, people"
-         }
+        {
+         "text": "Example: “What therefore God hath joined together, let not man put asunder” (Matthew 19:6)"
+        }
        ]
-     },
-     {
-       "text": "someone, a certain man, used indefinitely: “A certain man planted a vineyard” (Mark 12:1)"
-     },
-     {
-       "text": "a particular person, with the article: this man, that man",
+      },
+      {
+       "text": "with a note of human weakness",
        "children": [
-         {
-           "text": "the man of God (1 Timothy 6:11), after the Hebrew ʾîš ʾĕlōhîm"
-         },
-         {
-           "text": "for “the Son of man”, see huios"
-         }
+        {
+         "text": "Example: “the wisdom of men” (1 Corinthians 2:5)"
+        }
        ]
-     }
+      },
+      {
+       "text": "of a person's nature",
+       "children": [
+        {
+         "text": "Examples",
+         "children": [
+          {
+           "text": "the inward man (Romans 7:22)"
+          },
+          {
+           "text": "the old man and the new man (Ephesians 4:22, 24)"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "text": "plural",
+       "children": [
+        {
+         "text": "men, people"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "text": "indefinite use",
+     "children": [
+      {
+       "text": "someone, a certain man"
+      },
+      {
+       "text": "Example: “A certain man planted a vineyard” (Mark 12:1)"
+      }
+     ]
+    },
+    {
+     "text": "with the article",
+     "children": [
+      {
+       "text": "a particular person"
+      },
+      {
+       "text": "Examples",
+       "children": [
+        {
+         "text": "this man, that man"
+        },
+        {
+         "text": "the man of God (1 Timothy 6:11), after the Hebrew ʾîš ʾĕlōhîm"
+        }
+       ]
+      },
+      {
+       "text": "for “the Son of man”, see huios"
+      }
+     ]
+    }
    ]
  },
  "G445": {
@@ -8389,7 +8437,8 @@
   "definition": "ἀ-χειρο-ποίητος, -ον; (χειροποίητος); not made by hands: Mrk.14:58, 2Co.5:1; metaphorically, περιτομή ἀ. (i.e. spiritual ), Col.2:11 (MM, see word).†; (AS)",
   "verse": "",
   "source": "stepbible-tbesg",
-  "has_lsj": true
+  "has_lsj": true,
+  "senses": [{"text": "not made by hands"}, {"text": "figuratively, spiritual, of the circumcision made without hands"}]
  },
  "G887": {
   "translit": "achlys",
@@ -18461,7 +18510,8 @@
   "definition": "ἐξ-αιρέω -ῶ; [in LXX chiefly for נָצַל hi. ;]; to take out: with accusative, ὀφθαλμόν, Mat.5:29 18:9; mid.; __(a) to take out for oneself, choose: Act.26:17 (Thayer, see word; Page, Ac., l.with, but see infr.);; __(b) to deliver: Act.7:10, 34\" (LXX) Act.12:11 Act.23:27 Act.26:17 (EV, but see supr.), Gal.1:4.†; (AS)",
   "verse": "",
   "source": "stepbible-tbesg",
-  "has_lsj": true
+  "has_lsj": true,
+  "senses": [{"text": "with accusative", "children": [{"text": "to take out or remove"}]}, {"text": "mid.", "children": [{"text": "to take out for oneself, choose"}, {"text": "to deliver"}]}]
  },
  "G1808": {
   "translit": "exairō",
@@ -47997,7 +48047,32 @@
   "verse": "",
   "source": "stepbible-tbesg",
   "has_lsj": true,
-  "senses": [{"text": "to draw to oneself; hence, to rescue, deliver", "children": [{"text": "to deliver from someone or something"}, {"text": "as a noun: “the deliverer”"}, {"text": "passive: to be delivered"}]}]
+  "senses": [
+   {
+    "text": "to draw to oneself; hence, to rescue, deliver",
+    "children": [
+     {
+      "text": "to deliver from someone or something"
+     },
+     {
+      "text": "used as a noun",
+      "children": [
+       {
+        "text": "“the deliverer”"
+       }
+      ]
+     },
+     {
+      "text": "passive voice",
+      "children": [
+       {
+        "text": "to be delivered"
+       }
+      ]
+     }
+    ]
+   }
+  ]
  },
  "G4507": {
   "translit": "ryparia",
@@ -68295,8 +68370,8 @@
   ]
  },
  "H606": {
-  "translit": "'ēneš",
-  "original": "אֵנֶשׁ",
+  "translit": "ʾĕnāš",
+  "original": "אֱנָשׁ",
   "lang": "hebrew",
   "definition": "man, human being; mankind (collective); Aramaic of e.nosh (אֱנוֹשׁ \"human\" H0582)",
   "verse": "",
@@ -70257,14 +70332,15 @@
   "description_source": "stepbible-tipnr"
  },
  "H762": {
-  "translit": "ărāmy",
-  "original": "אֲרָמי",
+  "translit": "ʾărāmîṯ",
+  "original": "אֲרָמִית",
   "lang": "hebrew",
   "definition": "§ Aramaic = \"language\"; the language of Aram, Aramaic",
   "verse": "",
   "source": "stepbible-tbesh",
   "description": "Aramaic and Hebrew are Semitic languages used in various passages of the Bible, with Hebrew being the primary language of the Old Testament and Aramaic appearing in some later texts.",
-  "description_source": "stepbible-tipnr"
+  "description_source": "stepbible-tipnr",
+  "senses": [{"text": "the language of Aram, Aramaic"}]
  },
  "H763": {
   "translit": "ăram nahărayim",
@@ -76563,7 +76639,8 @@
   "lang": "hebrew",
   "definition": "plain; Aramaic of biq.ah (בִּקְעָה \"valley\" H1237K)",
   "verse": "",
-  "source": "stepbible-tbesh"
+  "source": "stepbible-tbesh",
+  "senses": [{"text": "plain"}, {"text": "Aramaic form of בִּקְעָה, “valley”"}]
  },
  "H1237": {
   "translit": "biqʿâ",
@@ -78407,19 +78484,44 @@
     "text": "to defile, pollute, desecrate",
     "children": [
      {
-      "text": "(Niphal) to be defiled, be polluted"
+      "text": "Niphal",
+      "children": [
+       {
+        "text": "to be defiled, be polluted"
+       }
+      ]
      },
      {
-      "text": "(Piel) to pollute, desecrate"
+      "text": "Piel",
+      "children": [
+       {
+        "text": "to pollute, desecrate"
+       }
+      ]
      },
      {
-      "text": "(Pual) to be desecrated (of removal from priesthood)"
+      "text": "Pual",
+      "children": [
+       {
+        "text": "to be desecrated (of removal from priesthood)"
+       }
+      ]
      },
      {
-      "text": "(Hiphil) to pollute, stain"
+      "text": "Hiphil",
+      "children": [
+       {
+        "text": "to pollute, stain"
+       }
+      ]
      },
      {
-      "text": "(Hithpael) to defile oneself"
+      "text": "Hithpael",
+      "children": [
+       {
+        "text": "to defile oneself"
+       }
+      ]
      }
     ]
    }
@@ -80567,10 +80669,20 @@
     "text": "to cut, determine",
     "children": [
      {
-      "text": "(P'al) determiner (participle)"
+      "text": "P'al (participle)",
+      "children": [
+       {
+        "text": "determiner"
+       }
+      ]
      },
      {
-      "text": "(Ithp'al) to be cut out"
+      "text": "Ithp'al",
+      "children": [
+       {
+        "text": "to be cut out"
+       }
+      ]
      }
     ]
    }
@@ -122005,7 +122117,7 @@
  },
  "H4437": {
   "translit": "malkû",
-  "original": "מַלְכּוּ",
+  "original": "מַלְכוּ",
   "lang": "hebrew",
   "definition": "royalty, reign, kingdom (royalty, kingship, kingly authority; kingdom; realm (of territory); reign (of time))",
   "verse": "",
@@ -122661,8 +122773,8 @@
   "source": "stepbible-tbesh"
  },
  "H4483": {
-  "translit": "mᵊnā'",
-  "original": "מְנָא",
+  "translit": "mᵊnâ",
+  "original": "מְנָה",
   "lang": "hebrew",
   "definition": "to number, reckon ((P'al) to number; (Pael) to appoint)",
   "verse": "",
@@ -122672,10 +122784,20 @@
     "text": "to number, reckon",
     "children": [
      {
-      "text": "(P'al) to number"
+      "text": "P'al",
+      "children": [
+       {
+        "text": "to number"
+       }
+      ]
      },
      {
-      "text": "(Pael) to appoint"
+      "text": "Pael",
+      "children": [
+       {
+        "text": "to appoint"
+       }
+      ]
      }
     ]
    }
@@ -135811,7 +135933,8 @@
   "lang": "hebrew",
   "definition": "(Aphel) to rescue, extricate, deliver; Aramaic of na.tsal (נָצַל \"to rescue\" H5337)",
   "verse": "",
-  "source": "stepbible-tbesh"
+  "source": "stepbible-tbesh",
+  "senses": [{"text": "Aphel", "children": [{"text": "to rescue, extricate, deliver"}]}, {"text": "Aramaic form of נָצַל, “to rescue”"}]
  },
  "H5339": {
   "translit": "niṣṣān",
@@ -145265,7 +145388,8 @@
   "lang": "hebrew",
   "definition": "perpetuity, antiquity, for ever; Aramaic of o.lam (עוֹלָם \": old\" H5769J)",
   "verse": "",
-  "source": "stepbible-tbesh"
+  "source": "stepbible-tbesh",
+  "senses": [{"text": "perpetuity, antiquity, for ever"}, {"text": "Aramaic form of עוֹלָם, “old”"}]
  },
  "H5958": {
   "translit": "ʿelem",
@@ -149653,7 +149777,8 @@
   "lang": "hebrew",
   "definition": "ancient, advanced, aged, old, taken away; Aramaic of at.tiq (עַתִּיק \"ancient/taken\" H6267)",
   "verse": "",
-  "source": "stepbible-tbesh"
+  "source": "stepbible-tbesh",
+  "senses": [{"text": "ancient, advanced, aged, old"}, {"text": "Aramaic form of עַתִּיק, “ancient”"}]
  },
  "H6269": {
   "translit": "ʿăṯāḵ",
@@ -153608,7 +153733,8 @@
   "lang": "hebrew",
   "definition": "v; (P'al) to break in two, divide; Aramaic of pa.ras (פָּרַס \"to divide\" H6536)",
   "verse": "",
-  "source": "stepbible-tbesh"
+  "source": "stepbible-tbesh",
+  "senses": [{"text": "P'al", "children": [{"text": "to break in two, divide"}]}, {"text": "Aramaic form of פָּרַס, “to divide”"}]
  },
  "H6538": {
   "translit": "peres",
@@ -171427,10 +171553,20 @@
     "text": "to leave, let alone",
     "children": [
      {
-      "text": "(P'al) to leave, let alone"
+      "text": "P'al",
+      "children": [
+       {
+        "text": "to leave, let alone"
+       }
+      ]
      },
      {
-      "text": "(Ithpael) to be left"
+      "text": "Ithpael",
+      "children": [
+       {
+        "text": "to be left"
+       }
+      ]
      }
     ]
    }
@@ -173207,12 +173343,22 @@
        },
        {
         "text": "to make, make for, transform into, constitute, fashion, work, bring to pass, appoint, give"
-       },
+       }
+      ]
+     },
+     {
+      "text": "Hiphil",
+      "children": [
        {
-        "text": "(Hiphil) to set or make for a sign"
-       },
+        "text": "to set or make for a sign"
+       }
+      ]
+     },
+     {
+      "text": "Hophal",
+      "children": [
        {
-        "text": "(Hophal) to be set"
+        "text": "to be set"
        }
       ]
      }

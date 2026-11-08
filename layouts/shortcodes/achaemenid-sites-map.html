@@ -1,0 +1,57 @@
+{{- $uid := printf "achaemenid-map-%d" .Ordinal -}}
+{{- $data := index site.Data "achaemenid-map" -}}
+{{- $css := resources.Get "achaemenid-map/map.css" | fingerprint -}}
+{{- $js := resources.Get "achaemenid-map/map.js" | fingerprint -}}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+<section class="am-widget" data-am-widget aria-label="Explore the Achaemenid guide by location">
+  <p class="am-intro">Choose a place on the map or in the list to read its story in the guide.</p>
+  <div class="am-tools" hidden>
+    <button type="button" data-am-zoom aria-pressed="false">Enlarge map</button>
+    <button type="button" data-am-extent aria-pressed="true">Empire shading</button>
+  </div>
+  <div class="am-viewport" tabindex="0" aria-label="Map; scroll horizontally when enlarged">
+    <div class="am-canvas">{{ replace (resources.Get "achaemenid-map/map.svg").Content "__MAP_ID__" $uid | safeHTML }}</div>
+  </div>
+  <div class="am-inline" hidden tabindex="-1" aria-live="polite"></div>
+  <p class="am-context">Shading shows the empire’s approximate extent around 500 BC. The marked places span the different periods discussed in this guide.</p>
+  <details class="am-list" open><summary>Explore all 18 locations</summary>
+    <div class="am-choices">
+    {{ range $data.sites }}<a class="am-choice" data-am-site="{{ .id }}" href="#{{ $uid }}-excerpt-{{ .id }}"><span>{{ .number }}</span>{{ .name }}</a>{{ end }}
+    </div>
+  </details>
+  <dialog class="am-dialog" aria-labelledby="{{ $uid }}-dialog-title">
+    <div class="am-dialog-scroll">
+      <button class="am-close" type="button" data-am-close aria-label="Close location details">Close ×</button>
+      <div class="am-dialog-content"></div>
+    </div>
+  </dialog>
+  <div class="am-excerpts">
+    {{ range $data.sites }}
+    <details id="{{ $uid }}-excerpt-{{ .id }}" data-am-excerpt="{{ .id }}">
+      <summary>{{ .name }}</summary>
+      <article data-am-content>
+        <p class="am-period">{{ .period }}</p>
+        <h3 data-am-title>{{ .name }}</h3>
+        {{ with .image }}
+        {{ $photo := (resources.Get .asset).Fit "960x640 webp q82" }}
+        <figure class="am-photo">
+          <a href="{{ .sourceUrl }}" target="_blank" rel="noopener" aria-label="View photograph and source: {{ .caption }}">
+            <img data-am-src="{{ $photo.RelPermalink }}" width="{{ $photo.Width }}" height="{{ $photo.Height }}" alt="{{ .alt }}" decoding="async">
+            <noscript><img src="{{ $photo.RelPermalink }}" width="{{ $photo.Width }}" height="{{ $photo.Height }}" alt="{{ .alt }}" loading="lazy"></noscript>
+          </a>
+          <figcaption>{{ .caption }}<span class="am-photo-credit">{{ .author }} · <a href="{{ .sourceUrl }}" target="_blank" rel="noopener">Source</a> · <a href="{{ .licenseUrl }}" target="_blank" rel="noopener">{{ .license }}</a>{{ with .additionalEvidence }} · <a href="{{ . }}" target="_blank" rel="noopener">About this image</a>{{ end }}</span></figcaption>
+        </figure>
+        {{ end }}
+        <div class="am-copy">{{ .bodyHtml | safeHTML }}</div>
+        {{ with .note }}<p class="am-note">{{ . }}</p>{{ end }}
+        <p class="am-read"><a href="{{ .readUrl }}">Read more: {{ .sectionTitle }} →</a></p>
+        <p class="am-source"><a href="{{ .coordinateSource }}" target="_blank" rel="noopener">Location source ↗</a></p>
+      </article>
+    </details>
+    {{ end }}
+  </div>
+  <details class="am-credits"><summary>Map sources and credits</summary>
+    <p>Relief: © Sémhur, <a href="https://commons.wikimedia.org/wiki/File:Middle_East_topographic_map-blank.svg">Middle East topographic map</a>. Imperial extent: Enyavar, <a href="https://commons.wikimedia.org/wiki/File:Alter_Orient%2BPersien_500BC.svg">Near East and Persia, 500 BC</a>. Adapted for CFM Corner under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Place locations: Pleiades and UNESCO (linked in each entry). Excerpts are drawn from the Achaemenid field guide.</p>
+  </details>
+</section>
+<script src="{{ $js.RelPermalink }}" defer></script>

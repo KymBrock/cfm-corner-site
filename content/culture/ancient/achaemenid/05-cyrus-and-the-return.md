@@ -1,7 +1,8 @@
 ---
 title: "Cyrus & the Return"
+weight: 5
 description: "The Cyrus Cylinder beside Ezra 1 and Isaiah 45 — a Persian king's own account of releasing captive peoples, and the decree that sent Judah home to rebuild the temple."
-draft: true
+draft: false
 ---
 
 {{< rawhtml >}}
@@ -14,20 +15,8 @@ draft: true
 
 <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 2rem;">The decree that ended the exile &mdash; in the Bible and in <a href="https://www.worldhistory.org/Cyrus_the_Great/" target="_blank">Cyrus</a>&rsquo;s own words</p>
 
-<!-- LISTEN PLAYER (section narration) -->
-<div class="listen-player">
-<div class="lp-head">
-<span class="lp-icon" aria-hidden="true"></span>
-<span class="lp-title">Listen to this section</span>
-</div>
-<audio controls preload="none">
-<source src="/audio/culture/achaemenid/05-cyrus-and-the-return.mp3" type="audio/mpeg">
-Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/culture/achaemenid/05-cyrus-and-the-return.mp3">download the audio</a> instead.
-</audio>
-</div>
-<!-- /LISTEN PLAYER -->
 
-<p>The book of Kings ends in the dark. Jerusalem burned, the temple destroyed, the people carried to Babylon (see the <a href="/culture/ancient/babylon/07-the-exile-experience/">Babylon guide</a>). But the Hebrew Bible, in its own arrangement, does not end there. It ends with a door swinging open. The very last words of 2 Chronicles are the decree of a Persian king telling the exiles to go home: &ldquo;The LORD God of heaven&hellip; hath charged me to build him an house in Jerusalem&hellip; let him go up&rdquo; (<a href="https://www.blueletterbible.org/kjv/2ch/36/23/" target="_blank" data-ref="2 Chronicles 36:23">2 Chronicles 36:23</a>). This page is about that decree &mdash; the single most important act of the entire Persian period for the Bible. It is also about the remarkable object that lets us hear Cyrus&rsquo;s policy in his own voice.</p>
+<p>The book of Kings ends in the dark. <a href="https://www.worldhistory.org/jerusalem/" target="_blank">Jerusalem</a> burned, the temple destroyed, the people carried to <a href="https://www.worldhistory.org/babylon/" target="_blank">Babylon</a> (see the <a href="/culture/ancient/babylon/07-the-exile-experience/">Babylon guide</a>). But the Hebrew Bible, in its own arrangement, does not end there. It ends with a door swinging open. The very last words of 2 Chronicles are the decree of a Persian king telling the exiles to go home: &ldquo;The LORD God of heaven&hellip; hath charged me to build him an house in Jerusalem&hellip; let him go up&rdquo; (<a href="https://www.blueletterbible.org/kjv/2ch/36/23/" target="_blank" data-ref="2 Chronicles 36:23">2 Chronicles 36:23</a>). This page is about that decree &mdash; the single most important act of the entire Persian period for the Bible. It is also about the remarkable object that lets us hear Cyrus&rsquo;s policy in his own voice.</p>
 
 <br>
 
@@ -60,10 +49,10 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <figure class="fg-figure" style="max-width:640px;">
   <img src="/images/culture/achaemenid/photos/cyrus-cylinder-bm.jpg" alt="The Cyrus Cylinder, British Museum" loading="lazy">
-  <figcaption>The <b>Cyrus Cylinder</b> &mdash; Cyrus&rsquo;s own account of taking Babylon and letting captive peoples go home to rebuild their temples: the imperial policy behind the decree of <a href="https://www.blueletterbible.org/kjv/ezr/1/1/" target="_blank" data-ref="Ezra 1:1-4">Ezra 1</a>. <a href="https://www.livius.org/sources/content/cyrus-cylinder/cyrus-cylinder-translation/" target="_blank">Read the decree &rarr;</a> <span class="fg-credit">British Museum &middot; photo Prioryman, Wikimedia Commons (CC BY-SA 3.0)</span></figcaption>
+  <figcaption>The <b>Cyrus Cylinder</b> &mdash; Cyrus&rsquo;s own account of taking Babylon and letting captive peoples go home to rebuild their temples: the imperial policy behind the decree of <a href="https://www.blueletterbible.org/kjv/ezr/1/1/" target="_blank" data-ref="Ezra 1:1-4">Ezra 1</a>. <a href="https://www.livius.org/sources/content/cyrus-cylinder/cyrus-cylinder-translation/" target="_blank">Read the decree &rarr;</a> <span class="fg-credit">British Museum &middot; photo Prioryman, <a href="https://commons.wikimedia.org/wiki/File:Cyrus_Cylinder_front.jpg">Wikimedia Commons</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>)</span></figcaption>
 </figure>
 
-<p>On the cylinder, Cyrus presents himself not as a foreign conqueror but as the legitimate king chosen by Babylon&rsquo;s own god Marduk. Marduk, Cyrus claims, took him by the hand and delivered the city to him without a battle, because its last king had neglected the gods. And then comes the policy that matters. Cyrus declares that he <strong>returned the images of the gods</strong> that had been gathered into Babylon <strong>to their own cities and sanctuaries</strong>, and <strong>restored their peoples to their dwellings</strong>. In his own words, he gathered the displaced and &ldquo;returned them to their homes.&rdquo;</p>
+<p>On the cylinder, Cyrus presents himself not as a foreign conqueror but as the legitimate king chosen by Babylon&rsquo;s own god <a href="https://www.worldhistory.org/Marduk/" target="_blank">Marduk</a>. Marduk, Cyrus claims, took him by the hand and delivered the city to him without a battle, because its last king had neglected the gods. And then comes the policy that matters. Cyrus declares that he <strong>returned the images of the gods</strong> that had been gathered into Babylon <strong>to their own cities and sanctuaries</strong>, and <strong>restored their peoples to their dwellings</strong>. In his own words, he &ldquo;gathered all their inhabitants and returned to them their dwellings.&rdquo;</p>
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
 <p style="margin: 0;"><strong>What the cylinder does and doesn&rsquo;t prove:</strong> it is important to be precise here, because the cylinder is sometimes over-claimed. It has even been called &ldquo;the first charter of human rights,&rdquo; which reads modern ideals back into an ancient royal boast.</p>
@@ -94,7 +83,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 
 <h3>Why the Return Matters</h3>
 
-<p>Everything downstream in the Bible depends on this decree. Without the return there is no Second Temple &mdash; and so no temple for Zechariah and Malachi to prophesy in, none for Ezra to teach in, none standing when Jesus is presented as an infant and later teaches in its courts. Without the return there is no restored Jerusalem for Nehemiah to wall, no re-gathered people to receive the law, no continuous community to carry the scriptures forward to the meridian of time &mdash; the time of Christ&rsquo;s mortal ministry. The exile could have ended Israel the way Assyria&rsquo;s deportations ended the northern kingdom &mdash; scattered and absorbed. Instead, a Persian decree turned the exile into a <em>return</em>, and the return became the Bible&rsquo;s enduring template of hope. Captivity is not the end of the covenant story. God can move the heart of the most powerful man on earth to bring His people home (<a href="/culture/ancient/achaemenid/10-lds-connections/">Section 10</a> follows this thread into Latter-day Saint thought).</p>
+<p>Everything downstream in the Bible depends on this decree. Without the return there is no <a href="https://www.worldhistory.org/article/852/the-temple-in-jerusalem/" target="_blank">Second Temple</a> &mdash; and so no temple for Zechariah and Malachi to prophesy in, none for Ezra to teach in, none standing when Jesus is presented as an infant and later teaches in its courts. Without the return there is no restored Jerusalem for Nehemiah to wall, no re-gathered people to receive the law, no continuous community to carry the scriptures forward to the meridian of time &mdash; the time of Christ&rsquo;s mortal ministry. The exile could have ended Israel the way <a href="https://www.worldhistory.org/assyria/" target="_blank">Assyria</a>&rsquo;s deportations ended the northern kingdom &mdash; scattered and absorbed. Instead, a Persian decree turned the exile into a <em>return</em>, and the return became the Bible&rsquo;s enduring template of hope. Captivity is not the end of the covenant story. God can move the heart of the most powerful man on earth to bring His people home (<a href="/culture/ancient/achaemenid/10-lds-connections/">Section 10</a> follows this thread into Latter-day Saint thought).</p>
 
 <br>
 
@@ -117,7 +106,7 @@ Your browser doesn&rsquo;t support the audio element &mdash; <a href="/audio/cul
 <p><strong>Online Resources:</strong></p>
 <ul style="margin: 12px 0 0 0; padding-left: 24px;">
 <li><a href="https://www.britishmuseum.org/collection/object/W_1880-0617-1941" target="_blank"><strong>British Museum</strong> &mdash; the Cyrus Cylinder</a> (with full translation)</li>
-<li><a href="https://www.worldhistory.org/Cyrus_Cylinder/" target="_blank"><strong>WHE</strong> &mdash; The Cyrus Cylinder</a> (CC BY-NC-SA 4.0)</li>
+<li><a href="https://www.worldhistory.org/article/166/the-cyrus-cylinder/" target="_blank"><strong>WHE</strong> &mdash; The Cyrus Cylinder</a> (CC BY-NC-SA 4.0)</li>
 <li><a href="https://www.livius.org/sources/content/cyrus-cylinder/" target="_blank"><strong>Livius.org</strong> &mdash; Cyrus Cylinder</a> (text and commentary)</li>
 </ul>
 
