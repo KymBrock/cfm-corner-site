@@ -1056,5 +1056,817 @@
   "sefaria_rid": "S00123",
   "related_strongs": "H6942",
   "relation": "From the biblical root קָדַשׁ, to be holy"
+ },
+ "w46-gr-alisgeō": {
+  "translit": "alisgeō",
+  "original": "ἀλισγέω",
+  "lang": "greek",
+  "definition": "ἀλισγέω , pollute, LXX Da. 1.8 , al.",
+  "senses": [
+   {
+    "text": "to pollute"
+   }
+  ],
+  "source": "Liddell–Scott–Jones, A Greek-English Lexicon, s.v. ἀλισγέω",
+  "source_id": "lsj_logeion",
+  "source_url": "https://logeion.uchicago.edu/ἀλισγέω",
+  "gloss_label": "Greek · LSJ"
+ },
+ "w46-gr-symmolynō": {
+  "translit": "symmolynō",
+  "original": "συμμολύνω",
+  "lang": "greek",
+  "definition": "συμμολύνω [ῡ] , defile or disgrace together, ἑαυτὸν καὶ τὴν αἵρεσιν Phld. Herc. 1289p.60V. :— Pass. , LXX Da. 1.8 , Iamb. Comm.Math. 4 .",
+  "senses": [
+   {
+    "text": "to defile or disgrace together"
+   },
+   {
+    "text": "pass.",
+    "children": [
+     {
+      "text": "Daniel 1:8 in the Septuagint"
+     }
+    ]
+   }
+  ],
+  "source": "Liddell–Scott–Jones, A Greek-English Lexicon, s.v. συμμολύνω",
+  "source_id": "lsj_logeion",
+  "source_url": "https://logeion.uchicago.edu/συμμολύνω",
+  "gloss_label": "Greek · LSJ"
+ },
+ "w46-la-neque": {
+  "translit": "neque",
+  "original": "neque",
+  "lang": "latin",
+  "definition": "nor [neque..neque=>neither..nor; neque solum..sed etiam=>not only..but also]",
+  "senses": [
+   {
+    "text": "conjunction",
+    "children": [
+     {
+      "text": "nor [neque..neque=>neither..nor"
+     },
+     {
+      "text": "neque solum..sed etiam=>not only..but also]"
+     }
+    ]
+   }
+  ],
+  "source": "William Whitaker, WORDS, dictionary entry neque; existing local Latin dictionary source",
+  "source_id": "whitaker_words",
+  "source_url": "https://logeion.uchicago.edu/neque",
+  "gloss_label": "Latin · WORDS"
+ },
+ "w46-la-enim": {
+  "translit": "enim",
+  "original": "enim",
+  "lang": "latin",
+  "definition": "namely (postpos.); indeed; in fact; for; I mean, for instance, that is to say",
+  "senses": [
+   {
+    "text": "conjunction",
+    "children": [
+     {
+      "text": "namely (postpos.)"
+     },
+     {
+      "text": "indeed"
+     },
+     {
+      "text": "in fact"
+     },
+     {
+      "text": "for"
+     },
+     {
+      "text": "I mean, for instance, that is to say"
+     }
+    ]
+   }
+  ],
+  "source": "William Whitaker, WORDS, dictionary entry enim; existing local Latin dictionary source",
+  "source_id": "whitaker_words",
+  "source_url": "https://logeion.uchicago.edu/enim",
+  "gloss_label": "Latin · WORDS"
+ },
+ "w46-la-sum": {
+  "translit": "sum",
+  "original": "sum",
+  "lang": "latin",
+  "definition": "be, exist, live; happen, occur; be made/done; (auxiliary)",
+  "senses": [
+   {
+    "text": "verb",
+    "children": [
+     {
+      "text": "be, exist, live"
+     },
+     {
+      "text": "happen, occur"
+     },
+     {
+      "text": "be made/done"
+     },
+     {
+      "text": "(auxiliary)"
+     }
+    ]
+   }
+  ],
+  "source": "William Whitaker, WORDS, dictionary entry sum; existing local Latin dictionary source",
+  "source_id": "whitaker_words",
+  "source_url": "https://logeion.uchicago.edu/sum",
+  "gloss_label": "Latin · WORDS"
+ },
+ "w46-la-deus": {
+  "translit": "deus",
+  "original": "deus",
+  "lang": "latin",
+  "definition": "God (Christian text); god; divine essence/being, supreme being; statue of god",
+  "senses": [
+   {
+    "text": "noun",
+    "children": []
+   }
+  ],
+  "source": "William Whitaker, WORDS, dictionary entry deus; existing local Latin dictionary source",
+  "source_id": "whitaker_words",
+  "source_url": "https://logeion.uchicago.edu/deus",
+  "gloss_label": "Latin · WORDS"
+ },
+ "w46-la-alius": {
+  "translit": "alius",
+  "original": "alius",
+  "lang": "latin",
+  "definition": "other, another; different, changed; [alii...alii => some...others]; (A+G)",
+  "senses": [
+   {
+    "text": "adjective",
+    "children": [
+     {
+      "text": "other, another"
+     },
+     {
+      "text": "different, changed"
+     },
+     {
+      "text": "[alii...alii => some...others]"
+     },
+     {
+      "text": "(A+G)"
+     }
+    ]
+   }
+  ],
+  "source": "William Whitaker, WORDS, dictionary entry alius; existing local Latin dictionary source",
+  "source_id": "whitaker_words",
+  "source_url": "https://logeion.uchicago.edu/alius",
+  "gloss_label": "Latin · WORDS"
+ },
+ "w46-la-qui": {
+  "translit": "qui",
+  "original": "qui",
+  "lang": "latin",
+  "definition": "who; that; which, what; of which kind/degree; person/thing/time/point that; any; anyone/anything, any such; unspecified some; (after si/sin/sive/ne); who?, which?, what?; what kind of?; who; that; which, what; of which kind/degree; person/thing/time/point that; any; anyone/anything, any such; unspecified some; (after si/sin/sive/ne); who?, which?, what?; what kind of?; any; anyone/anything, any such; unspecified some; (after si/sin/sive/ne); who; that; which, what; of which kind/degree; person/thing/time/point that; any; anyone/anything, any such; unspecified some; (after si/sin/sive/ne); who?, which?, what?; what kind of?; who; that; which, what; of which kind/degree; person/thing/time/point that; any; anyone/anything, any such; unspecified some; (after si/sin/sive/ne); who?, which?, what?; what kind of?; any; anyone/anything, any such; unspecified some; (after si/sin/sive/ne); who; that; which, what; of which kind/degree; person/thing/time/point that; who?, which?, what?; what kind of?",
+  "senses": [
+   {
+    "text": "pronoun",
+    "children": [
+     {
+      "text": "who"
+     },
+     {
+      "text": "that"
+     },
+     {
+      "text": "which, what"
+     },
+     {
+      "text": "of which kind/degree"
+     },
+     {
+      "text": "person/thing/time/point that"
+     },
+     {
+      "text": "any"
+     },
+     {
+      "text": "anyone/anything, any such"
+     },
+     {
+      "text": "unspecified some"
+     },
+     {
+      "text": "(after si/sin/sive/ne)"
+     },
+     {
+      "text": "who?, which?, what?"
+     },
+     {
+      "text": "what kind of?"
+     }
+    ]
+   }
+  ],
+  "source": "William Whitaker, WORDS, dictionary entry qui; existing local Latin dictionary source",
+  "source_id": "whitaker_words",
+  "source_url": "https://logeion.uchicago.edu/qui",
+  "gloss_label": "Latin · WORDS"
+ },
+ "w46-la-possum": {
+  "translit": "possum",
+  "original": "possum",
+  "lang": "latin",
+  "definition": "be able, can; [multum  posse => have much/more/most influence/power]",
+  "senses": [
+   {
+    "text": "verb",
+    "children": [
+     {
+      "text": "be able, can"
+     },
+     {
+      "text": "[multum  posse => have much/more/most influence/power]"
+     }
+    ]
+   }
+  ],
+  "source": "William Whitaker, WORDS, dictionary entry possum; existing local Latin dictionary source",
+  "source_id": "whitaker_words",
+  "source_url": "https://logeion.uchicago.edu/possum",
+  "gloss_label": "Latin · WORDS"
+ },
+ "w46-la-ita": {
+  "translit": "ita",
+  "original": "ita",
+  "lang": "latin",
+  "definition": "thus, so; therefore",
+  "senses": [
+   {
+    "text": "adverb",
+    "children": [
+     {
+      "text": "thus, so"
+     },
+     {
+      "text": "therefore"
+     }
+    ]
+   }
+  ],
+  "source": "William Whitaker, WORDS, dictionary entry ita; existing local Latin dictionary source",
+  "source_id": "whitaker_words",
+  "source_url": "https://logeion.uchicago.edu/ita",
+  "gloss_label": "Latin · WORDS"
+ },
+ "w46-la-salvo": {
+  "translit": "salvo",
+  "original": "salvo",
+  "lang": "latin",
+  "definition": "save",
+  "senses": [
+   {
+    "text": "verb",
+    "children": [
+     {
+      "text": "save"
+     }
+    ]
+   }
+  ],
+  "source": "William Whitaker, WORDS, dictionary entry salvo; existing local Latin dictionary source",
+  "source_id": "whitaker_words",
+  "source_url": "https://logeion.uchicago.edu/salvo",
+  "gloss_label": "Latin · WORDS"
+ },
+ "w46-la-propono": {
+  "translit": "propono",
+  "original": "propono",
+  "lang": "latin",
+  "definition": "display; propose; relate; put or place forward",
+  "senses": [
+   {
+    "text": "verb",
+    "children": [
+     {
+      "text": "display"
+     },
+     {
+      "text": "propose"
+     },
+     {
+      "text": "relate"
+     },
+     {
+      "text": "put or place forward"
+     }
+    ]
+   }
+  ],
+  "source": "William Whitaker, WORDS, dictionary entry propono; existing local Latin dictionary source",
+  "source_id": "whitaker_words",
+  "source_url": "https://logeion.uchicago.edu/propono",
+  "gloss_label": "Latin · WORDS"
+ },
+ "w46-la-autem": {
+  "translit": "autem",
+  "original": "autem",
+  "lang": "latin",
+  "definition": "but (postpositive), on the other hand/contrary; while, however; moreover, also",
+  "senses": [
+   {
+    "text": "conjunction",
+    "children": [
+     {
+      "text": "but (postpositive), on the other hand/contrary"
+     },
+     {
+      "text": "while, however"
+     },
+     {
+      "text": "moreover, also"
+     }
+    ]
+   }
+  ],
+  "source": "William Whitaker, WORDS, dictionary entry autem; existing local Latin dictionary source",
+  "source_id": "whitaker_words",
+  "source_url": "https://logeion.uchicago.edu/autem",
+  "gloss_label": "Latin · WORDS"
+ },
+ "w46-la-in": {
+  "translit": "in",
+  "original": "in",
+  "lang": "latin",
+  "definition": "in, on, at (space); in accordance with/regard to/the case of; within (time); into; about, in the midst of; according to, after (manner); for; to, among",
+  "senses": [
+   {
+    "text": "preposition",
+    "children": [
+     {
+      "text": "with ablative",
+      "children": [
+       {
+        "text": "in, on, at (space)"
+       },
+       {
+        "text": "in accordance with/regard to/the case of"
+       },
+       {
+        "text": "within (time)"
+       }
+      ]
+     },
+     {
+      "text": "with accusative",
+      "children": [
+       {
+        "text": "into"
+       },
+       {
+        "text": "about, in the midst of"
+       },
+       {
+        "text": "according to, after (manner)"
+       },
+       {
+        "text": "for"
+       },
+       {
+        "text": "to, among"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "source": "William Whitaker, WORDS, dictionary entry in; existing local Latin dictionary source",
+  "source_id": "whitaker_words",
+  "source_url": "https://logeion.uchicago.edu/in",
+  "gloss_label": "Latin · WORDS"
+ },
+ "w46-la-cor": {
+  "translit": "cor",
+  "original": "cor",
+  "lang": "latin",
+  "definition": "heart; mind/soul/spirit; intellect/judgment; sweetheart; souls/persons (pl.)",
+  "senses": [
+   {
+    "text": "noun",
+    "children": [
+     {
+      "text": "heart"
+     },
+     {
+      "text": "mind/soul/spirit"
+     },
+     {
+      "text": "intellect/judgment"
+     },
+     {
+      "text": "sweetheart"
+     },
+     {
+      "text": "souls/persons (pl.)"
+     }
+    ]
+   }
+  ],
+  "source": "William Whitaker, WORDS, dictionary entry cor; existing local Latin dictionary source",
+  "source_id": "whitaker_words",
+  "source_url": "https://logeion.uchicago.edu/cor",
+  "gloss_label": "Latin · WORDS"
+ },
+ "w46-la-suus": {
+  "translit": "suus",
+  "original": "suus",
+  "lang": "latin",
+  "definition": "his/one's (own), her (own), hers, its (own); (pl.) their (own), theirs",
+  "senses": [
+   {
+    "text": "adjective",
+    "children": [
+     {
+      "text": "his/one's (own), her (own), hers, its (own)"
+     },
+     {
+      "text": "(pl.) their (own), theirs"
+     }
+    ]
+   }
+  ],
+  "source": "William Whitaker, WORDS, dictionary entry suus; existing local Latin dictionary source",
+  "source_id": "whitaker_words",
+  "source_url": "https://logeion.uchicago.edu/suus",
+  "gloss_label": "Latin · WORDS"
+ },
+ "w46-la-ne": {
+  "translit": "ne",
+  "original": "ne",
+  "lang": "latin",
+  "definition": "that not, lest; (for negative of IMP)",
+  "senses": [
+   {
+    "text": "conjunction",
+    "children": [
+     {
+      "text": "that not, lest"
+     },
+     {
+      "text": "(for negative of IMP)"
+     }
+    ]
+   }
+  ],
+  "source": "William Whitaker, WORDS, dictionary entry ne; existing local Latin dictionary source",
+  "source_id": "whitaker_words",
+  "source_url": "https://logeion.uchicago.edu/ne",
+  "gloss_label": "Latin · WORDS"
+ },
+ "w46-la-polluo": {
+  "translit": "polluo",
+  "original": "polluo",
+  "lang": "latin",
+  "definition": "soil/foul/dirty/stain/pollute; infect (w/disease); make impure; break (fast) violate; dishonor/defile/degrade (w/illicit sexual conduct/immoral actions)",
+  "senses": [
+   {
+    "text": "verb",
+    "children": [
+     {
+      "text": "soil/foul/dirty/stain/pollute"
+     },
+     {
+      "text": "infect (w/disease)"
+     },
+     {
+      "text": "make impure"
+     },
+     {
+      "text": "break (fast) violate"
+     },
+     {
+      "text": "dishonor/defile/degrade (w/illicit sexual conduct/immoral actions)"
+     }
+    ]
+   }
+  ],
+  "source": "William Whitaker, WORDS, dictionary entry polluo; existing local Latin dictionary source",
+  "source_id": "whitaker_words",
+  "source_url": "https://logeion.uchicago.edu/polluo",
+  "gloss_label": "Latin · WORDS"
+ },
+ "w46-la-contamino": {
+  "translit": "contamino",
+  "original": "contamino",
+  "lang": "latin",
+  "definition": "corrupt, defile (w/filth/intercourse), stain, befoul spoil; ruin, dishonor debase w/mixture of inferior material; contaminate, infect; pollute (morally)",
+  "senses": [
+   {
+    "text": "verb",
+    "children": [
+     {
+      "text": "corrupt, defile (w/filth/intercourse), stain, befoul spoil"
+     },
+     {
+      "text": "ruin, dishonor debase w/mixture of inferior material"
+     },
+     {
+      "text": "contaminate, infect"
+     },
+     {
+      "text": "pollute (morally)"
+     }
+    ]
+   }
+  ],
+  "source": "William Whitaker, WORDS, dictionary entry contamino; existing local Latin dictionary source",
+  "source_id": "whitaker_words",
+  "source_url": "https://logeion.uchicago.edu/contamino",
+  "gloss_label": "Latin · WORDS"
+ },
+ "w46-la-abscido": {
+  "translit": "abscido",
+  "original": "abscido",
+  "lang": "latin",
+  "definition": "hew/cut off/away/out; fell/cut down; remove, separate/cut off/destroy, divide take away violently; expel/banish; destroy (hope); amputate; prune; cut short",
+  "senses": [
+   {
+    "text": "verb",
+    "children": [
+     {
+      "text": "hew/cut off/away/out"
+     },
+     {
+      "text": "fell/cut down"
+     },
+     {
+      "text": "remove, separate/cut off/destroy, divide take away violently"
+     },
+     {
+      "text": "expel/banish"
+     },
+     {
+      "text": "destroy (hope)"
+     },
+     {
+      "text": "amputate"
+     },
+     {
+      "text": "prune"
+     },
+     {
+      "text": "cut short"
+     }
+    ]
+   }
+  ],
+  "source": "William Whitaker, WORDS, dictionary entry abscido; existing local Latin dictionary source",
+  "source_id": "whitaker_words",
+  "source_url": "https://logeion.uchicago.edu/abscido",
+  "gloss_label": "Latin · WORDS"
+ },
+ "w46-la-lapis": {
+  "translit": "lapis",
+  "original": "lapis",
+  "lang": "latin",
+  "definition": "stone; milestone; jewel; stone; milestone; jewel",
+  "senses": [
+   {
+    "text": "noun",
+    "children": [
+     {
+      "text": "stone"
+     },
+     {
+      "text": "milestone"
+     },
+     {
+      "text": "jewel"
+     }
+    ]
+   }
+  ],
+  "source": "William Whitaker, WORDS, dictionary entry lapis; existing local Latin dictionary source",
+  "source_id": "whitaker_words",
+  "source_url": "https://logeion.uchicago.edu/lapis",
+  "gloss_label": "Latin · WORDS"
+ },
+ "w46-la-sine": {
+  "translit": "sine",
+  "original": "sine",
+  "lang": "latin",
+  "definition": "without; (sometimes after object); lack; [Johannis sine Terra => John Lackland]",
+  "senses": [
+   {
+    "text": "preposition",
+    "children": [
+     {
+      "text": "with ablative",
+      "children": [
+       {
+        "text": "without"
+       },
+       {
+        "text": "(sometimes after object)"
+       },
+       {
+        "text": "lack"
+       },
+       {
+        "text": "[Johannis sine Terra => John Lackland]"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "source": "William Whitaker, WORDS, dictionary entry sine; existing local Latin dictionary source",
+  "source_id": "whitaker_words",
+  "source_url": "https://logeion.uchicago.edu/sine",
+  "gloss_label": "Latin · WORDS"
+ },
+ "w46-la-manus": {
+  "translit": "manus",
+  "original": "manus",
+  "lang": "latin",
+  "definition": "hand, fist; team; gang, band of soldiers; handwriting; (elephant's) trunk",
+  "senses": [
+   {
+    "text": "noun",
+    "children": [
+     {
+      "text": "hand, fist"
+     },
+     {
+      "text": "team"
+     },
+     {
+      "text": "gang, band of soldiers"
+     },
+     {
+      "text": "handwriting"
+     },
+     {
+      "text": "(elephant's) trunk"
+     }
+    ]
+   }
+  ],
+  "source": "William Whitaker, WORDS, dictionary entry manus; existing local Latin dictionary source",
+  "source_id": "whitaker_words",
+  "source_url": "https://logeion.uchicago.edu/manus",
+  "gloss_label": "Latin · WORDS"
+ },
+ "w46-la-quasi": {
+  "translit": "quasi",
+  "original": "quasi",
+  "lang": "latin",
+  "definition": "as if, just as if, as though; as it were; about",
+  "senses": [
+   {
+    "text": "adverb",
+    "children": [
+     {
+      "text": "as if, just as if, as though"
+     },
+     {
+      "text": "as it were"
+     },
+     {
+      "text": "about"
+     }
+    ]
+   }
+  ],
+  "source": "William Whitaker, WORDS, dictionary entry quasi; existing local Latin dictionary source",
+  "source_id": "whitaker_words",
+  "source_url": "https://logeion.uchicago.edu/quasi",
+  "gloss_label": "Latin · WORDS"
+ },
+ "w46-la-filius": {
+  "translit": "filius",
+  "original": "filius",
+  "lang": "latin",
+  "definition": "son",
+  "senses": [
+   {
+    "text": "noun",
+    "children": [
+     {
+      "text": "son"
+     }
+    ]
+   }
+  ],
+  "source": "William Whitaker, WORDS, dictionary entry filius; existing local Latin dictionary source",
+  "source_id": "whitaker_words",
+  "source_url": "https://logeion.uchicago.edu/filius",
+  "gloss_label": "Latin · WORDS"
+ },
+ "w46-la-homo": {
+  "translit": "homo",
+  "original": "homo",
+  "lang": "latin",
+  "definition": "man, human being, person, fellow; [novus homo => nouveau riche]",
+  "senses": [
+   {
+    "text": "noun",
+    "children": [
+     {
+      "text": "man, human being, person, fellow"
+     },
+     {
+      "text": "[novus homo => nouveau riche]"
+     }
+    ]
+   }
+  ],
+  "source": "William Whitaker, WORDS, dictionary entry homo; existing local Latin dictionary source",
+  "source_id": "whitaker_words",
+  "source_url": "https://logeion.uchicago.edu/homo",
+  "gloss_label": "Latin · WORDS"
+ },
+ "w46-la-antiquus": {
+  "translit": "antiquus",
+  "original": "antiquus",
+  "lang": "latin",
+  "definition": "old/ancient/aged; time-honored; simple/classic; venerable; archaic/outdated",
+  "senses": [
+   {
+    "text": "adjective",
+    "children": [
+     {
+      "text": "old/ancient/aged"
+     },
+     {
+      "text": "time-honored"
+     },
+     {
+      "text": "simple/classic"
+     },
+     {
+      "text": "venerable"
+     },
+     {
+      "text": "archaic/outdated"
+     }
+    ]
+   }
+  ],
+  "source": "William Whitaker, WORDS, dictionary entry antiquus; existing local Latin dictionary source",
+  "source_id": "whitaker_words",
+  "source_url": "https://logeion.uchicago.edu/antiquus",
+  "gloss_label": "Latin · WORDS"
+ },
+ "w46-la-dies": {
+  "translit": "dies",
+  "original": "dies",
+  "lang": "latin",
+  "definition": "day; daylight; (sunlit hours); (24 hours from midnight); open sky; weather specific day; day in question; date of letter; festival; lifetime, age; time",
+  "senses": [
+   {
+    "text": "noun",
+    "children": [
+     {
+      "text": "day"
+     },
+     {
+      "text": "daylight"
+     },
+     {
+      "text": "(sunlit hours)"
+     },
+     {
+      "text": "(24 hours from midnight)"
+     },
+     {
+      "text": "open sky"
+     },
+     {
+      "text": "weather specific day"
+     },
+     {
+      "text": "day in question"
+     },
+     {
+      "text": "date of letter"
+     },
+     {
+      "text": "festival"
+     },
+     {
+      "text": "lifetime, age"
+     },
+     {
+      "text": "time"
+     }
+    ]
+   }
+  ],
+  "source": "William Whitaker, WORDS, dictionary entry dies; existing local Latin dictionary source",
+  "source_id": "whitaker_words",
+  "source_url": "https://logeion.uchicago.edu/dies",
+  "gloss_label": "Latin · WORDS"
  }
 }

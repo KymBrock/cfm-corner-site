@@ -1657,7 +1657,12 @@
   "verse": "",
   "source": "stepbible-tbesg",
   "has_lsj": true,
-  "senses": [{"text": "pollution, as of idols"}]
+  "senses": [
+   {
+    "text": "pollution, as of idols"
+   }
+  ],
+  "card_language": "Greek"
  },
  "G235": {
   "translit": "alla",
@@ -3579,7 +3584,18 @@
   "definition": "ἄνευ; prep. with genitive (rarer than χωρίς, which see; cf. Ellic. on Eph.2:12; MM, VGT, 42),; without: Mat.10:29, 1Pe.3:1 4:9.†; (AS)",
   "verse": "",
   "source": "stepbible-tbesg",
-  "has_lsj": true
+  "has_lsj": true,
+  "senses": [
+   {
+    "text": "preposition with genitive",
+    "children": [
+     {
+      "text": "without"
+     }
+    ]
+   }
+  ],
+  "card_language": "Greek"
  },
  "G428": {
   "translit": "aneuthetos",
@@ -3726,96 +3742,97 @@
   "has_lsj": true
  },
  "G444": {
-   "translit": "anthrōpos",
-   "original": "ἄνθρωπος",
-   "lang": "greek",
-   "definition": "ἄνθρωπος, -ου, ὁ,; [in LXX chiefly for אִישׁ ,אָדָם, also for אֱנוֹשׁ, etc. ;]; man:; __1. generically, a human being, male or female (Lat. homo): Jhn.16:21; with art., Mat.4:4 12:35, Mrk.2:27, Jhn.2:25, Rom.7:1, al; disting. from God, Mat.19:6, Jhn.10:33, Col.3:23, al.; from animals, etc., Mat.4:19, Luk.5:10, Rev.9:4, al.; implying human frailty and imperfection, 1Co.3:4; σοφία ἀνθρώπων, 1Co.2:5; ἀνθρώπων ἐπιθυμίαι, 1Pe.4:2; κατὰ ἄνθρωπον περιπατεῖν, 1Co.3:3; κατὰ ἄ. λέγειν (λαλεῖν), Rom.3:5, 1Co.9:8; κατὰ ἄ- λέγειν, Gal.3:15 (cf. 1Co.15:32, Gal.1:11); by meton., of man's nature or condition, ὁ ἔσω (ἔξω) ἄ., Rom.7:22, Eph.3:16, 2Co.4:16 (cf. 1Pe.3:4); ὁ παλαιὸς, καινὸς, νέος ἄ., Rom.6:6, Eph.2:15 4:22, 24 Col.3:9, 10; joined with another subst., ἄ. ἔμπορος, a merchant, Mat.13:45 (WH, txt. om. ἄ.); οἰκοδεσπότης, Mat.13:52; βασιλεύς, 18:23; φάγος, 11:19; with name of nation, Κυρηναῖος, Mat.27:32; Ἰουδαῖος, Act.21:39; Ῥωμαῖος, Act.16:37; pl. οἱ ἄ., men, people: Mat.5:13, 16 Mrk.8:24, Jhn.4:28; οὐδεὶς ἀνθρώπων, Mrk.11:2, 1Ti.6:16.; __2. Indef., ἄ. = τις, some one, a man: Mat.17:14, Mrk.12:1, al.; τις ἄ., Mat.18:12, Jhn.5:5, al.; indef. one (Fr. on), Rom.3:28, Gal.2:16, al.; opposite to women, servants, etc., Mat.10:36 19:10, Jhn.7:22, 23.; __3. Definitely, with art., of some particular person; Mat.12:13, Mrk.3:5, al.; οὗτος ὁ ἄ., Luk.14:30; ὁ ἄ οὗτος, ἐκεῖνος, Mrk.14:71, Mat.12:45; ὁ ἄ. τ. ἀνομίας, 2Th.2:3; ἄ τ. θεοῦ (of Heb. אִישׁ אֱלֹהִים), 1Ti.6:11, 2Ti.3:17, 2Pe.1:21; ὁ υἰὸς τοῦ ἀ., see: υἱός.; SYN.: ἀνήρ, which see (and cf. MM, VGT, 44; Cremer, 103, 635). (AS)",
-   "verse": "",
-   "source": "stepbible-tbesg",
-   "has_lsj": true,
-   "senses": [
-    {
-     "text": "a human being, male or female (Latin homo)",
-     "children": [
-      {
-       "text": "in the Greek Old Testament chiefly for Hebrew ʾāḏām and ʾîš, also ʾĕnôš"
-      },
-      {
-       "text": "in contrast to God; also in contrast to animals",
-       "children": [
-        {
-         "text": "Example: “What therefore God hath joined together, let not man put asunder” (Matthew 19:6)"
-        }
-       ]
-      },
-      {
-       "text": "with a note of human weakness",
-       "children": [
-        {
-         "text": "Example: “the wisdom of men” (1 Corinthians 2:5)"
-        }
-       ]
-      },
-      {
-       "text": "of a person's nature",
-       "children": [
-        {
-         "text": "Examples",
-         "children": [
-          {
-           "text": "the inward man (Romans 7:22)"
-          },
-          {
-           "text": "the old man and the new man (Ephesians 4:22, 24)"
-          }
-         ]
-        }
-       ]
-      },
-      {
-       "text": "plural",
-       "children": [
-        {
-         "text": "men, people"
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "text": "indefinite use",
-     "children": [
-      {
-       "text": "someone, a certain man"
-      },
-      {
-       "text": "Example: “A certain man planted a vineyard” (Mark 12:1)"
-      }
-     ]
-    },
-    {
-     "text": "with the article",
-     "children": [
-      {
-       "text": "a particular person"
-      },
-      {
-       "text": "Examples",
-       "children": [
-        {
-         "text": "this man, that man"
-        },
-        {
-         "text": "the man of God (1 Timothy 6:11), after the Hebrew ʾîš ʾĕlōhîm"
-        }
-       ]
-      },
-      {
-       "text": "for “the Son of man”, see huios"
-      }
-     ]
-    }
-   ]
+  "translit": "anthrōpos",
+  "original": "ἄνθρωπος",
+  "lang": "greek",
+  "definition": "ἄνθρωπος, -ου, ὁ,; [in LXX chiefly for אִישׁ ,אָדָם, also for אֱנוֹשׁ, etc. ;]; man:; __1. generically, a human being, male or female (Lat. homo): Jhn.16:21; with art., Mat.4:4 12:35, Mrk.2:27, Jhn.2:25, Rom.7:1, al; disting. from God, Mat.19:6, Jhn.10:33, Col.3:23, al.; from animals, etc., Mat.4:19, Luk.5:10, Rev.9:4, al.; implying human frailty and imperfection, 1Co.3:4; σοφία ἀνθρώπων, 1Co.2:5; ἀνθρώπων ἐπιθυμίαι, 1Pe.4:2; κατὰ ἄνθρωπον περιπατεῖν, 1Co.3:3; κατὰ ἄ. λέγειν (λαλεῖν), Rom.3:5, 1Co.9:8; κατὰ ἄ- λέγειν, Gal.3:15 (cf. 1Co.15:32, Gal.1:11); by meton., of man's nature or condition, ὁ ἔσω (ἔξω) ἄ., Rom.7:22, Eph.3:16, 2Co.4:16 (cf. 1Pe.3:4); ὁ παλαιὸς, καινὸς, νέος ἄ., Rom.6:6, Eph.2:15 4:22, 24 Col.3:9, 10; joined with another subst., ἄ. ἔμπορος, a merchant, Mat.13:45 (WH, txt. om. ἄ.); οἰκοδεσπότης, Mat.13:52; βασιλεύς, 18:23; φάγος, 11:19; with name of nation, Κυρηναῖος, Mat.27:32; Ἰουδαῖος, Act.21:39; Ῥωμαῖος, Act.16:37; pl. οἱ ἄ., men, people: Mat.5:13, 16 Mrk.8:24, Jhn.4:28; οὐδεὶς ἀνθρώπων, Mrk.11:2, 1Ti.6:16.; __2. Indef., ἄ. = τις, some one, a man: Mat.17:14, Mrk.12:1, al.; τις ἄ., Mat.18:12, Jhn.5:5, al.; indef. one (Fr. on), Rom.3:28, Gal.2:16, al.; opposite to women, servants, etc., Mat.10:36 19:10, Jhn.7:22, 23.; __3. Definitely, with art., of some particular person; Mat.12:13, Mrk.3:5, al.; οὗτος ὁ ἄ., Luk.14:30; ὁ ἄ οὗτος, ἐκεῖνος, Mrk.14:71, Mat.12:45; ὁ ἄ. τ. ἀνομίας, 2Th.2:3; ἄ τ. θεοῦ (of Heb. אִישׁ אֱלֹהִים), 1Ti.6:11, 2Ti.3:17, 2Pe.1:21; ὁ υἰὸς τοῦ ἀ., see: υἱός.; SYN.: ἀνήρ, which see (and cf. MM, VGT, 44; Cremer, 103, 635). (AS)",
+  "verse": "",
+  "source": "stepbible-tbesg",
+  "has_lsj": true,
+  "senses": [
+   {
+    "text": "a human being, male or female (Latin homo)",
+    "children": [
+     {
+      "text": "in the Greek Old Testament chiefly for Hebrew ʾāḏām and ʾîš, also ʾĕnôš"
+     },
+     {
+      "text": "in contrast to God; also in contrast to animals",
+      "children": [
+       {
+        "text": "Example: “What therefore God hath joined together, let not man put asunder” (Matthew 19:6)"
+       }
+      ]
+     },
+     {
+      "text": "with a note of human weakness",
+      "children": [
+       {
+        "text": "Example: “the wisdom of men” (1 Corinthians 2:5)"
+       }
+      ]
+     },
+     {
+      "text": "of a person's nature",
+      "children": [
+       {
+        "text": "Examples",
+        "children": [
+         {
+          "text": "the inward man (Romans 7:22)"
+         },
+         {
+          "text": "the old man and the new man (Ephesians 4:22, 24)"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "text": "plural",
+      "children": [
+       {
+        "text": "men, people"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "text": "indefinite use",
+    "children": [
+     {
+      "text": "someone, a certain man"
+     },
+     {
+      "text": "Example: “A certain man planted a vineyard” (Mark 12:1)"
+     }
+    ]
+   },
+   {
+    "text": "with the article",
+    "children": [
+     {
+      "text": "a particular person"
+     },
+     {
+      "text": "Examples",
+      "children": [
+       {
+        "text": "this man, that man"
+       },
+       {
+        "text": "the man of God (1 Timothy 6:11), after the Hebrew ʾîš ʾĕlōhîm"
+       }
+      ]
+     },
+     {
+      "text": "for “the Son of man”, see huios"
+     }
+    ]
+   }
+  ],
+  "card_language": "Greek"
  },
  "G445": {
   "translit": "anthypateuō",
@@ -8438,7 +8455,15 @@
   "verse": "",
   "source": "stepbible-tbesg",
   "has_lsj": true,
-  "senses": [{"text": "not made by hands"}, {"text": "figuratively, spiritual, of the circumcision made without hands"}]
+  "senses": [
+   {
+    "text": "not made by hands"
+   },
+   {
+    "text": "figuratively, spiritual, of the circumcision made without hands"
+   }
+  ],
+  "card_language": "Greek"
  },
  "G887": {
   "translit": "achlys",
@@ -14164,7 +14189,20 @@
   "verse": "",
   "source": "stepbible-tbesg",
   "has_lsj": true,
-  "senses": [{"text": "to be able, have power, whether by personal ability, permission, or opportunity", "children": [{"text": "with an object (accusative): to be able to do something"}, {"text": "used without an object: to be able, capable, powerful"}]}]
+  "senses": [
+   {
+    "text": "to be able, have power, whether by personal ability, permission, or opportunity",
+    "children": [
+     {
+      "text": "with an object (accusative): to be able to do something"
+     },
+     {
+      "text": "used without an object: to be able, capable, powerful"
+     }
+    ]
+   }
+  ],
+  "card_language": "Greek"
  },
  "G1411": {
   "translit": "dynamis",
@@ -15229,43 +15267,35 @@
   "has_lsj": true,
   "senses": [
    {
-    "text": "to be, with as many uses as the English verb"
-   },
-   {
-    "text": "to be, exist",
+    "text": "as a substantive verb",
     "children": [
      {
-      "text": "of persons and things: to be, exist; he who is and who was"
+      "text": "to be, exist"
      },
      {
-      "text": "of times and events: to be, happen, take place"
+      "text": "to happen, take place"
      },
      {
-      "text": "to be present, be in a place, have come"
+      "text": "to be present"
      },
      {
-      "text": "impersonal: there is, there was; it is possible"
+      "text": "impersonal: there is; it is possible"
      }
     ]
    },
    {
-    "text": "joining subject and predicate",
+    "text": "as a copula",
     "children": [
      {
-      "text": "of identity or equivalence"
+      "text": "joins subject and predicate: to be"
      },
      {
-      "text": "of meaning, in parable, figure or type: that is, which is; akin to this, the sacramental usage: “this is my body”"
-     },
-     {
-      "text": "with a genitive: of quality, part, possession, or of belonging to a person or party"
-     },
-     {
-      "text": "with the predicate left out: I am"
+      "text": "with participles: forms a periphrastic verbal expression"
      }
     ]
    }
-  ]
+  ],
+  "card_language": "Greek"
  },
  "G1511": {
   "translit": "einai",
@@ -18511,7 +18541,28 @@
   "verse": "",
   "source": "stepbible-tbesg",
   "has_lsj": true,
-  "senses": [{"text": "with accusative", "children": [{"text": "to take out or remove"}]}, {"text": "mid.", "children": [{"text": "to take out for oneself, choose"}, {"text": "to deliver"}]}]
+  "senses": [
+   {
+    "text": "with accusative",
+    "children": [
+     {
+      "text": "to take out or remove"
+     }
+    ]
+   },
+   {
+    "text": "mid.",
+    "children": [
+     {
+      "text": "to take out for oneself, choose"
+     },
+     {
+      "text": "to deliver"
+     }
+    ]
+   }
+  ],
+  "card_language": "Greek"
  },
  "G1808": {
   "translit": "exairō",
@@ -21427,7 +21478,29 @@
   "definition": "ἕτερος, -α, -ον,; [in LXX chiefly for אַחֵר ;]; distributive pron., prop. dual (BL, §13, 5; 51, 6),  denoting the second of a pair, but in late Gk. encroaching on ἄλλος (M, Pr., 79f.);; __1. of number, other; with art., the other;; __(a) of two, Luk.5:7 9:56, al.; opposite to ὁ πρῶτος, Mat.21:30; ὁ εἷς, Mat.6:24, Luk.7:41, Act.23:6, al.; ἕ. μὲν . . . ἕ. δέ, the one . . . the other: 1Co.15:40; the next: Luk.6:6 9:56 (sc. ἡμέρα, Xen.), Act.20:15 27:3; = ὁ πλησίον, one's neighbour: Rom.2:1 13:8, 1Co.6:1, al.;; __(b) of more than two, another: Mat.8:21 11:3, Luk.6:6 22:65, Jhn.19:37, Rom.8:39, al.; pl., Act.2:13; οἱ μὲν . . . ἄλλοι δὲ . . . ἕ. δέ, Mat.16:14; τινὲς . . . ἕ. δέ, Luk.11:16.; __2. Of kind or quality, other, another, different (Plat., Dem., al.): Mrk.16:[12], Luk.9:29, Act.2:4, 1Co.14:21, 2Co.11:4, Gal.1:6, al. (cf. ἑτερό-γλωσσος, -διδασκαλέω, -ζυγέω).; SYN.: ἄλλος, which see (see reff. ut supr., also Robertson, Gr., 748ff.). (AS)",
   "verse": "",
   "source": "stepbible-tbesg",
-  "has_lsj": true
+  "has_lsj": true,
+  "senses": [
+   {
+    "text": "of number",
+    "children": [
+     {
+      "text": "other, the other of two"
+     },
+     {
+      "text": "another of several; the next"
+     }
+    ]
+   },
+   {
+    "text": "of kind or quality",
+    "children": [
+     {
+      "text": "other, different"
+     }
+    ]
+   }
+  ],
+  "card_language": "Greek"
  },
  "G2088": {
   "translit": "heterōs",
@@ -23926,29 +23999,16 @@
   "has_lsj": true,
   "senses": [
    {
-    "text": "a god, a deity; God"
+    "text": "a god; a deity"
    },
    {
-    "text": "in the polytheistic sense, a god; gods"
+    "text": "God, the one true God"
    },
    {
-    "text": "the one true God",
-    "children": [
-     {
-      "text": "without the article, especially after prepositions: from God, of God, with God, according to God"
-     },
-     {
-      "text": "with the article, God; my God; God and Father"
-     },
-     {
-      "text": "the things of God; things pertaining to God"
-     }
-    ]
-   },
-   {
-    "text": "“I said, Ye are gods”"
+    "text": "Hebraistically, of judges (Psalm 82:6; John 10:34–35)"
    }
-  ]
+  ],
+  "card_language": "Greek"
  },
  "G2317": {
   "translit": "theosebeia",
@@ -31888,7 +31948,8 @@
      }
     ]
    }
-  ]
+  ],
+  "card_language": "Greek"
  },
  "G3038": {
   "translit": "lithostrōtos",
@@ -39848,7 +39909,27 @@
   "definition": "ὅστις, ἥτις, ὅ τι (also written ὅ, τι and ὅτι; see LS, see word; WH, §411; Tdf., Pr., 111), in NT scarcely ever except in nom. (M, Pr., 91), the only instance of the oblique cases being found in ἕως ὅτου (see: ἕως), relative of indef. reference (related to simple ὅς as Lat. quisquis to qui),; whoever, anyone who;; __(a) of an indef. person or thing: in general statements, Mat.5:39, 41 13:12, and freq., Luk.14:27, Gal.5:4, al.; in relative sentences, Mat.7:26, Luk.15:7, Php.3:7, al.; πᾶς, with indic., Mat.7:24 10:32; ὅ ἄν (ἐάν), with subjc., Mat.12:50 13:12, Jhn.14:13, 1Co.16:2, Gal.5:10, al.;; __(b) of a definite person or thing, indicating quality, \"either  generic, which, as other like things, or essential, which by its very nature\" (Hort on 1Pe.2:11), who is such as: Mat.2:6 7:26, Luk.2:10 7:37, Jhn.8:53, Act.7:53, Rom.6:2, 1Co.3:17, Gal.4:24, Eph.1:23, al.;; __(with) where the relative sentence expresses a reason, consequence, etc. (M, Pr., 92), seeing that he (it, they), and he (it, they): Luk.8:3 10:42, Act.10:47 11:28, Php.4:3, al.;; __(d) as in Ionic and late Greek (Bl., §50, 1; M, Pr., l.with), differing but little from ὅς: Luk.2:4 9:30, Act.17:10, Rev.12:13.; (AS)",
   "verse": "",
   "source": "stepbible-tbesg",
-  "has_lsj": true
+  "has_lsj": true,
+  "senses": [
+   {
+    "text": "indefinite relative pronoun",
+    "children": [
+     {
+      "text": "whoever, anyone who"
+     },
+     {
+      "text": "of a definite person or thing: who is such as"
+     },
+     {
+      "text": "in a relative clause expressing a reason or consequence: seeing that he; and he"
+     },
+     {
+      "text": "sometimes used much like the simple relative pronoun: who, which"
+     }
+    ]
+   }
+  ],
+  "card_language": "Greek"
  },
  "G3749": {
   "translit": "ostrakinos",
@@ -39920,7 +40001,27 @@
   "definition": "οὐ, before a vowel with smooth breathing οὐκ, before one with rough breathing οὐχ (but improperly οὐχ ἰδού, Act.2:7, WH, mg.; cf. WH, Intr., §409; M, Pr., 44, 244),; [in LXX for אֵין ,אַיִן ,לֹא ;]; neg. particle,; not, no, used generally with indic, and for a denial of fact (cf . μή);; __1. absol. (accented), οὔ, no: Mat.13:29 Jhn.1:21 21:5; οὒ οὕ, Mat.5:37 Jas.5:12.; __2. Most frequently negativing a verb or other word, Mat.1:25 10:26, 38, Mrk.3:25 9:37, Jhn.8:29, Act.7:5, Rom.1:16, Php.3:3, al.; in litotes, οὐκ ὀλίγοι (i.e. very many), Act.17:4, al.; οὐκ ἄσημος, Act.21:39; πᾶς . . . οὐ, with verb, (like Heb. כֹּל . . . לֹא), no, none, Mat.24:22, Mrk.13:20, Luk.1:37, Eph.5:5, al.; in disjunctive statements, οὐκ . . . ἀλλά, Luk.8:52 Jhn.1:33 Rom.8:2o, al.; with 2 of person(s) fut. (like Heb. לֹא, with impf.), as emphatic prohibition, Mat.4:7, Luk.4:12, Rom.7:7, al.; __3. With another negative,; __(a) strengthening the negation: Mrk.5:37, Jhn.8:15 12:19, Act.8:39, al.;; __(b) making an affirmative: Act.4:20, 1Co.12:15.; __4. With other particles: οὐ μή (see: μή); οὐ μηκέτι, Mat.21:19; with μή interrog., Rom.10:18, 1Co.9:4, 5 11:22.; __5. Interrogative, expecting an affirmative answer (Lat. nonne): Mat.6:26, Mrk.4:21, Luk.11:40, Jhn.4:35, Rom.9:21, al.; (AS)",
   "verse": "",
   "source": "stepbible-tbesg",
-  "has_lsj": true
+  "has_lsj": true,
+  "senses": [
+   {
+    "text": "negative particle",
+    "children": [
+     {
+      "text": "not, no"
+     },
+     {
+      "text": "used to deny a statement or negate a verb"
+     },
+     {
+      "text": "with another negative: may strengthen the negation or form an affirmative"
+     },
+     {
+      "text": "in questions expecting an affirmative answer"
+     }
+    ]
+   }
+  ],
+  "card_language": "Greek"
  },
  "G3757": {
   "translit": "hou",
@@ -40181,7 +40282,27 @@
   "definition": "οὕτως, rarely (Bl., §5, 4; WH, App., 146f.) οὕτω, adv.; (οὗτος), [in LXX chiefly for כֵּן ;]; in this way, so, thus;; __1. referring to what precedes: Mat.5:16 6:30, Mrk.10:43 14:59, Luk.1:25 2:48 15:7, Jhn.3:8, Rom.1:15, 1Co.8:12, al.; οὕτως καί, Mat.17:12, Mrk.13:29, al.; pleonastically, resuming a ptcp. (cl.; see Bl., §74, 6), Act.20:11 27:17.; __2. Referring to what follows: Mat.1:18 6:9, Luk.19:31, Jhn.21:1, 1Pe.2:15; bef. quotations from OT, Mat.2:5, Act.7:6, 1Co.15:45, Heb.4:4.; __3. C. adj. (marking intensity): Heb.12:21, Rev.16:18; similarly with adv., Gal.1:6 (cl.).; __4. As a predicate (Bl., §76, 1): Mat.1:18 9:33, Mrk.2:1, 2 4:26, Rom.4:18 9:20, I Pe  2:15; οὕ ἔχειν (Lat. sic or ita se habere), Act.7:1, al.; ἐκαθέζετο (as he was, without delay or preparation), Jhn.4:6.; __5. In comparison, with correlative adv.: καθάπερ . . . οὕ., Rom.12:4, 5 al.; καθὼς . . . οὕ., Luk.11:30, al.; οὕ. . . . καθώς, Luk.24:24, al.; ὡς . . . οὕ., Rom.5:15, al.; οὕ . . . ὡς, Mrk.4:26, al; ὥσπερ . . . οὕ., Mat.12:40, al.; οὕ. . . . οὕ., 1Co.7:7.; (AS)",
   "verse": "",
   "source": "stepbible-tbesg",
-  "has_lsj": true
+  "has_lsj": true,
+  "senses": [
+   {
+    "text": "adverb",
+    "children": [
+     {
+      "text": "in this way, so, thus"
+     },
+     {
+      "text": "referring to what precedes or follows"
+     },
+     {
+      "text": "with an adjective or adverb: marks degree or intensity"
+     },
+     {
+      "text": "in comparisons: so, in the same way"
+     }
+    ]
+   }
+  ],
+  "card_language": "Greek"
  },
  "G3780": {
   "translit": "ouchi",
@@ -48072,7 +48193,8 @@
      }
     ]
    }
-  ]
+  ],
+  "card_language": "Greek"
  },
  "G4507": {
   "translit": "ryparia",
@@ -48193,7 +48315,8 @@
    {
     "text": "sabachthani: you have forsaken me"
    }
-  ]
+  ],
+  "card_language": "Greek"
  },
  "G4519": {
   "translit": "sabaōth",
@@ -55567,7 +55690,8 @@
      }
     ]
    }
-  ]
+  ],
+  "card_language": "Greek"
  },
  "G5208": {
   "translit": "hylē",
@@ -58800,7 +58924,8 @@
      }
     ]
    }
-  ]
+  ],
+  "card_language": "Greek"
  },
  "G5496": {
   "translit": "cheiragōgeō",
@@ -60097,7 +60222,35 @@
   "definition": "ὡς, adverbial form of the relative pron. ὅς, ἥ, ὅ.; __I. As relat. adv. of manner, as, like as, just as, even as;; __1. with a demonstrative, like οὕτως, expressed or understood: οὕτως . . . ὡς, Mrk.4:26, 1Co.3:15, Eph.5:28, Jas.2:12, al.; ὡς . . . οὕτως, Act.8:32, 1Co.7:17, al.; elliptically (sc. οὕτως, οὕτω), with nom., Mat.6:29, al.; with accusative, Mat.19:19, Mrk.12:31, al.; with prep., Mat.26:55, Mrk.14:48, Luk.22:52, Jhn.7:10, al.; with verb., Jhn.15:6, 2Co.3:1, Eph.2:3, 1Th.5:6, al.; with ptcp. (the ptcp. however not having the special force wh. it has in cl.; see Bl., §73, 5; 74, 6), Mat.7:29, Mrk.1:22, Heb.13:17, al.; freq implying opinion or belief, Rom.9:32;  so esp, with genitive absol., 1Co.4:18, 2Co.5:20, 1Pe.4:12, 2Pe.1:3.; __2. Before numerals, about, nearly: Mrk.5:13, Jhn.1:40, Act.5:7, al.; __3. Before adjectives and adverbs, how: Rom.10:15 11:33, 1Th.2:10; with superl., ὡς τάχιστα, as quickly as possible, Act.17:15.; __II. As conjunction;; __1. temporal,; __(a) as, when, since: Mrk.9:21 14:72, Luk.1:23, Jhn.2:9, al.;; __(b) while, when, as long as: Luk.12:58, Jhn.12:36, Gal.6:10 (Field, Notes, 191); ὡς ἄν (M, Pr., 167, and see: ἄν), Rom.15:24, 1Co.11:34, Php.2:23.; __2. Final, in order that; with inf., in order to (M, Pr., 204n), Luk.9:52, Act.20:24, Heb.7:9.; (AS)",
   "verse": "",
   "source": "stepbible-tbesg",
-  "has_lsj": true
+  "has_lsj": true,
+  "senses": [
+   {
+    "text": "relative adverb of manner",
+    "children": [
+     {
+      "text": "as, like as, just as"
+     },
+     {
+      "text": "before numerals: about, nearly"
+     },
+     {
+      "text": "before adjectives or adverbs: how"
+     }
+    ]
+   },
+   {
+    "text": "conjunction",
+    "children": [
+     {
+      "text": "temporal: as, when, while, since"
+     },
+     {
+      "text": "final: in order that; with infinitive, in order to"
+     }
+    ]
+   }
+  ],
+  "card_language": "Greek"
  },
  "G5614": {
   "translit": "hōsanna",
@@ -61061,7 +61214,7 @@
  "H69": {
   "translit": "eḇen",
   "original": "אֶבֶן",
-  "lang": "hebrew",
+  "lang": "aramaic",
   "definition": "stone (a (the) stone; stone, material of idols and buildings)",
   "verse": "",
   "source": "stepbible-tbesh",
@@ -61077,7 +61230,8 @@
      }
     ]
    }
-  ]
+  ],
+  "card_language": "Aramaic"
  },
  "H70": {
   "translit": "ōḇen",
@@ -68372,7 +68526,7 @@
  "H606": {
   "translit": "ʾĕnāš",
   "original": "אֱנָשׁ",
-  "lang": "hebrew",
+  "lang": "aramaic",
   "definition": "man, human being; mankind (collective); Aramaic of e.nosh (אֱנוֹשׁ \"human\" H0582)",
   "verse": "",
   "source": "stepbible-tbesh",
@@ -68386,7 +68540,8 @@
    {
     "text": "Aramaic form of אֱנוֹשׁ, “human”"
    }
-  ]
+  ],
+  "card_language": "Aramaic"
  },
  "H607": {
   "translit": "'antâ",
@@ -70340,7 +70495,12 @@
   "source": "stepbible-tbesh",
   "description": "Aramaic and Hebrew are Semitic languages used in various passages of the Bible, with Hebrew being the primary language of the Old Testament and Aramaic appearing in some later texts.",
   "description_source": "stepbible-tipnr",
-  "senses": [{"text": "the language of Aram, Aramaic"}]
+  "senses": [
+   {
+    "text": "the language of Aram, Aramaic"
+   }
+  ],
+  "card_language": "Hebrew"
  },
  "H763": {
   "translit": "ăram nahărayim",
@@ -76636,11 +76796,19 @@
  "H1236": {
   "translit": "biqʿā'",
   "original": "בִּקְעָא",
-  "lang": "hebrew",
+  "lang": "aramaic",
   "definition": "plain; Aramaic of biq.ah (בִּקְעָה \"valley\" H1237K)",
   "verse": "",
   "source": "stepbible-tbesh",
-  "senses": [{"text": "plain"}, {"text": "Aramaic form of בִּקְעָה, “valley”"}]
+  "senses": [
+   {
+    "text": "plain"
+   },
+   {
+    "text": "Aramaic form of בִּקְעָה, “valley”"
+   }
+  ],
+  "card_language": "Aramaic"
  },
  "H1237": {
   "translit": "biqʿâ",
@@ -76650,7 +76818,17 @@
   "verse": "",
   "source": "stepbible-tbesh",
   "description": "The Jericho Valley, the location of the ancient city of Jericho (Deu.34.3).",
-  "description_source": "stepbible-tipnr"
+  "description_source": "stepbible-tipnr",
+  "senses": [
+   {
+    "text": "valley"
+   },
+   {
+    "text": "plain, level valley"
+   }
+  ],
+  "outline_source": "Blue Letter Bible, H1237, Outline of Biblical Usage",
+  "card_language": "Hebrew"
  },
  "H1238": {
   "translit": "bāqaq",
@@ -76836,7 +77014,7 @@
  "H1247": {
   "translit": "bar",
   "original": "בַּר",
-  "lang": "hebrew",
+  "lang": "aramaic",
   "definition": "son; Aramaic of ben (בֵּן \": child\" H1121)",
   "verse": "",
   "source": "stepbible-tbesh",
@@ -76847,7 +77025,8 @@
    {
     "text": "Aramaic form of בֵּן, “child”"
    }
-  ]
+  ],
+  "card_language": "Aramaic"
  },
  "H1247_alt_בַּ": {
   "original": "בַּר־אַבָּא",
@@ -78470,7 +78649,8 @@
      }
     ]
    }
-  ]
+  ],
+  "card_language": "Hebrew"
  },
  "H1351": {
   "translit": "gā'al",
@@ -78525,7 +78705,8 @@
      }
     ]
    }
-  ]
+  ],
+  "card_language": "Hebrew"
  },
  "H1352": {
   "translit": "gō'el",
@@ -80660,7 +80841,7 @@
  "H1505": {
   "translit": "gᵊzar",
   "original": "גְּזַר",
-  "lang": "hebrew",
+  "lang": "aramaic",
   "definition": "to cut, determine ((P'al) determiner (participle); (Ithp'al) to be cut out)",
   "verse": "",
   "source": "stepbible-tbesh",
@@ -80686,7 +80867,8 @@
      }
     ]
    }
-  ]
+  ],
+  "card_language": "Aramaic"
  },
  "H1506": {
   "translit": "gezer",
@@ -113367,7 +113549,8 @@
    }
   ],
   "description": "Leb-kamai, a cryptic name for Chaldea (Babylonia) in a prophecy of Jeremiah (Jeremiah 51:1).",
-  "description_source": "stepbible-tipnr"
+  "description_source": "stepbible-tipnr",
+  "card_language": "Hebrew"
  },
  "H3821": {
   "translit": "lēḇ",
@@ -122118,7 +122301,7 @@
  "H4437": {
   "translit": "malkû",
   "original": "מַלְכוּ",
-  "lang": "hebrew",
+  "lang": "aramaic",
   "definition": "royalty, reign, kingdom (royalty, kingship, kingly authority; kingdom; realm (of territory); reign (of time))",
   "verse": "",
   "source": "stepbible-tbesh",
@@ -122140,7 +122323,8 @@
      }
     ]
    }
-  ]
+  ],
+  "card_language": "Aramaic"
  },
  "H4438": {
   "translit": "malkuth",
@@ -122775,7 +122959,7 @@
  "H4483": {
   "translit": "mᵊnâ",
   "original": "מְנָה",
-  "lang": "hebrew",
+  "lang": "aramaic",
   "definition": "to number, reckon ((P'al) to number; (Pael) to appoint)",
   "verse": "",
   "source": "stepbible-tbesh",
@@ -122801,7 +122985,8 @@
      }
     ]
    }
-  ]
+  ],
+  "card_language": "Aramaic"
  },
  "H4484": {
   "translit": "mᵊnē'",
@@ -135930,11 +136115,26 @@
  "H5338": {
   "translit": "nᵊṣal",
   "original": "נְצַל",
-  "lang": "hebrew",
+  "lang": "aramaic",
   "definition": "(Aphel) to rescue, extricate, deliver; Aramaic of na.tsal (נָצַל \"to rescue\" H5337)",
   "verse": "",
   "source": "stepbible-tbesh",
-  "senses": [{"text": "Aphel", "children": [{"text": "to rescue, extricate, deliver"}]}, {"text": "Aramaic form of נָצַל, “to rescue”"}]
+  "senses": [
+   {
+    "text": "Aphel · Aramaic causative stem",
+    "children": [
+     {
+      "text": "to rescue, extricate, deliver"
+     }
+    ]
+   },
+   {
+    "text": "Aramaic form of נָצַל, “to rescue”"
+   }
+  ],
+  "stem_label_source": "Blue Letter Bible H5338, Outline of Biblical Usage labels this Aphel; its BDB section describes Haph. forms.",
+  "stem_label_source_url": "https://www.blueletterbible.org/lexicon/h5338/wlc/wlc",
+  "card_language": "Aramaic"
  },
  "H5339": {
   "translit": "niṣṣān",
@@ -144874,7 +145074,8 @@
      }
     ]
    }
-  ]
+  ],
+  "card_language": "Hebrew"
  },
  "H5922": {
   "translit": "ʿal",
@@ -145385,11 +145586,19 @@
  "H5957": {
   "translit": "ʿālam",
   "original": "עָלַם",
-  "lang": "hebrew",
+  "lang": "aramaic",
   "definition": "perpetuity, antiquity, for ever; Aramaic of o.lam (עוֹלָם \": old\" H5769J)",
   "verse": "",
   "source": "stepbible-tbesh",
-  "senses": [{"text": "perpetuity, antiquity, for ever"}, {"text": "Aramaic form of עוֹלָם, “old”"}]
+  "senses": [
+   {
+    "text": "perpetuity, antiquity, for ever"
+   },
+   {
+    "text": "Aramaic form of עוֹלָם, “old”"
+   }
+  ],
+  "card_language": "Aramaic"
  },
  "H5958": {
   "translit": "ʿelem",
@@ -149774,11 +149983,19 @@
  "H6268": {
   "translit": "ʿatîq",
   "original": "עַתִּיק",
-  "lang": "hebrew",
+  "lang": "aramaic",
   "definition": "ancient, advanced, aged, old, taken away; Aramaic of at.tiq (עַתִּיק \"ancient/taken\" H6267)",
   "verse": "",
   "source": "stepbible-tbesh",
-  "senses": [{"text": "ancient, advanced, aged, old"}, {"text": "Aramaic form of עַתִּיק, “ancient”"}]
+  "senses": [
+   {
+    "text": "ancient, advanced, aged, old"
+   },
+   {
+    "text": "Aramaic form of עַתִּיק, “ancient”"
+   }
+  ],
+  "card_language": "Aramaic"
  },
  "H6269": {
   "translit": "ʿăṯāḵ",
@@ -153730,11 +153947,24 @@
  "H6537": {
   "translit": "pᵊras",
   "original": "פְּרַס",
-  "lang": "hebrew",
+  "lang": "aramaic",
   "definition": "v; (P'al) to break in two, divide; Aramaic of pa.ras (פָּרַס \"to divide\" H6536)",
   "verse": "",
   "source": "stepbible-tbesh",
-  "senses": [{"text": "P'al", "children": [{"text": "to break in two, divide"}]}, {"text": "Aramaic form of פָּרַס, “to divide”"}]
+  "senses": [
+   {
+    "text": "P'al",
+    "children": [
+     {
+      "text": "to break in two, divide"
+     }
+    ]
+   },
+   {
+    "text": "Aramaic form of פָּרַס, “to divide”"
+   }
+  ],
+  "card_language": "Aramaic"
  },
  "H6538": {
   "translit": "peres",
@@ -171544,7 +171774,7 @@
  "H7662": {
   "translit": "šᵊḇaq",
   "original": "שְׁבַק",
-  "lang": "hebrew",
+  "lang": "aramaic",
   "definition": "to leave, let alone ((P'al) to leave, let alone; (Ithpael) to be left)",
   "verse": "",
   "source": "stepbible-tbesh",
@@ -171570,7 +171800,8 @@
      }
     ]
    }
-  ]
+  ],
+  "card_language": "Aramaic"
  },
  "H7663": {
   "translit": "śāḇar",
@@ -173364,7 +173595,8 @@
      }
     ]
    }
-  ]
+  ],
+  "card_language": "Hebrew"
  },
  "H7761": {
   "translit": "śûm",
@@ -187046,7 +187278,7 @@
  "H8625": {
   "translit": "tᵊqal",
   "original": "תְּקַל",
-  "lang": "hebrew",
+  "lang": "aramaic",
   "definition": "v; to weigh ((P'il) to be weighed)",
   "verse": "",
   "source": "stepbible-tbesh",
@@ -187062,7 +187294,8 @@
      }
     ]
    }
-  ]
+  ],
+  "card_language": "Aramaic"
  },
  "H8626": {
   "translit": "tāqan",
