@@ -17,6 +17,16 @@ description: "About Come Follow Me Corner"
 
 </div>
 
+<div style="max-width: 650px; margin: 0 auto 2em; line-height: 1.7; color: #2d3748; font-size: 0.95em;">
+
+<h2 id="credits" style="font-family: Georgia, serif; color: #1e3a4f; font-weight: normal; font-size: 1.35em; margin-bottom: 10px;">Credits and sources</h2>
+
+<p style="margin-bottom: 1em;">The Hebrew and Greek word popups are adapted from data created by <a href="https://github.com/STEPBible/STEPBible-Data" target="_blank" rel="noopener" style="color: #4a6b52; text-decoration: underline;">STEPBible.org</a> based on work at Tyndale House Cambridge, licensed <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color: #4a6b52; text-decoration: underline;">CC BY 4.0</a>. Our popups rework those entries into plain-language outlines; the Greek outlines draw on the Abbott-Smith lexicon (1922, public domain) that STEPBible's Greek data is based on. The "Full classical entry (LSJ)" button shows STEPBible's edition of Liddell–Scott–Jones (CC BY 4.0).</p>
+
+<p style="margin-bottom: 1em;">Hebrew–Septuagint correspondences use the Open Scriptures Hebrew Bible (CC BY 4.0). Name meanings draw on Strong's dictionaries (1890; the Greek dictionary as digitised by Open Scriptures) and Hitchcock's Bible Names (1869), both public domain. "Full entry" links go to Blue Letter Bible, and Greek popups also link to Logeion (University of Chicago).</p>
+
+</div>
+
 ---
 
 <div style="margin-top: 40px; background: linear-gradient(135deg, #f5ecd0 0%, #ffffff 100%); border: 1px solid #c6d4c8; border-radius: 12px; padding: 35px 30px; text-align: center;">

@@ -220,7 +220,7 @@ git -C ~/Developer/cfm-corner-staging log -1 49d2001
 | **Kymber's own dictionary** | **Thayer's 1889, public domain by age**, plus her and her son's edits | **Carries no critical apparatus, so nothing needs stripping.** Entries tagged `thayers-1889-kymber` are hers — **a bulk sync must not overwrite them.** |
 | **OSHB** (Open Scriptures Hebrew Bible) | **CC BY 4.0** | Source of the Hebrew side of the LXX correspondence, and of per-word morphology. |
 | **Rahlfs LXX** | Open Scriptures | `text_accented` + `final_Strongs`. |
-| **STEPBible TBESG / TBESH / TFLSJ** | **CC BY 4.0 — ATTRIBUTION REQUIRED** | Attribution is live site-wide in `baseof.html`: *"STEPBible TFLSJ, CC BY 4.0; citations preserved."* **Do not remove it.** |
+| **STEPBible TBESG / TBESH / TFLSJ** | **CC BY 4.0 — ATTRIBUTION REQUIRED** | Attribution: a visible credit line in every STEPBible-sourced lexicon popup (`baseof.html`, `.bp-credit`) and a "Credits and sources" section on /about/ (Kymber 2026-11-06, `stepbible-cc-by-credit-popup-and-about-20261106`). The code comment at `baseof.html` "STEPBible TFLSJ, CC BY 4.0" is NOT attribution — readers never see it (corrected 2026-11-06). **Do not remove the visible credits.** |
 
 **Kymber, 2026-08-24, on why the LXX↔Hebrew correspondence is legitimate without CATSS:**
 

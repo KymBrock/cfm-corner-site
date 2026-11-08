@@ -195,6 +195,8 @@
       .blb-popup .bp-ref { margin-top: 6px; font-size: 0.85em; color: #666; font-style: italic; }
       .blb-popup .bp-link { margin-top: 8px; font-size: 0.82em; }
       .blb-popup .bp-link a { color: var(--sage-dark, #4a6b52); text-decoration: underline; pointer-events: auto; }
+      .blb-popup .bp-credit { margin-top: 6px; font-size: 0.72em; line-height: 1.35; color: #6b7280; }
+      .blb-popup .bp-credit a { color: inherit; text-decoration: underline; pointer-events: auto; }
       a[href*="blueletterbible.org/"],
       a[href*="churchofjesuschrist.org/study/"] {
         color: var(--sage-dark, #4a6b52);
@@ -962,7 +964,17 @@
             (e.has_lsj ? '<div class="bp-lsj-wrap"><button type="button" class="bp-lsj-btn" '
               + 'data-code="' + escHtml(code) + '">Full classical entry (LSJ) ▸</button>'
               + '<div class="bp-lsj-body" hidden></div></div>' : '') +
-            '<div class="bp-link"><a href="' + el.href + '" target="_blank" rel="noopener">Full entry at Blue Letter Bible →</a></div>';
+            '<div class="bp-link"><a href="' + el.href + '" target="_blank" rel="noopener">Full entry at Blue Letter Bible →</a>' +
+            // Greek popups also link the headword at Logeion (Kymber 2026-11-06). Link only.
+            // Headwords with a space or parentheses (phrases, optional letters) are NOT linked:
+            // tested 2026-11-07, Logeion falls back to a different word for them. Others are
+            // linked in NFC form, which was tested to land on the right page.
+            ((lang === 'greek' && (e.original || original) && !/[\s()]/.test(String(e.original || original).trim())) ? ' · <a href="https://logeion.uchicago.edu/' + encodeURIComponent(String(e.original || original).trim().normalize('NFC')) + '" target="_blank" rel="noopener">Logeion →</a>' : '') +
+            '</div>' +
+            // STEPBible CC BY 4.0 attribution, visible to readers (Kymber 2026-11-06,
+            // stepbible-cc-by-credit-popup-and-about-20261106). Shown only on entries whose
+            // source is STEPBible; wording follows STEPBible's own licence header.
+            (String(e.source || '').indexOf('stepbible') === 0 ? '<div class="bp-credit">Lexicon data adapted from <a href="https://github.com/STEPBible/STEPBible-Data" target="_blank" rel="noopener">STEPBible.org</a>, based on work at Tyndale House Cambridge (CC BY 4.0)</div>' : '');
 
           present(el, mapOwner);
           return;
