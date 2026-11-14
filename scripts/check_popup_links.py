@@ -17,7 +17,7 @@ ALIAS_RULES = [
     (re.compile(r"^Psalm\s+", re.I), "Psalms "),
     (re.compile(r"^Prov\.\s+", re.I), "Proverbs "),
     (re.compile(r"^Eccl\.\s+", re.I), "Ecclesiastes "),
-    (re.compile(r"^Song\s+", re.I), "Song of Solomon "),
+    (re.compile(r"^Song\s+(?=\d)", re.I), "Song of Solomon "),
     (re.compile(r"^Ex\.\s+", re.I), "Exodus "),
     (re.compile(r"^Lev\.\s+", re.I), "Leviticus "),
     (re.compile(r"^Num\.\s+", re.I), "Numbers "),
