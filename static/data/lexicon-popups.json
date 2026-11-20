@@ -116598,20 +116598,15 @@
   "translit": "miḡdāl",
   "original": "מִגְדָּל",
   "lang": "hebrew",
-  "definition": "Combined with cha.nan.el (חֲנַנְאֵל \" of Hananel\" H2606); This name means  tower",
+  "definition": "tower; elevated stage or pulpit; raised bed",
   "verse": "",
   "source": "stepbible-tbesh",
-  "description": "The Tower of the Hundred, a tower in Jerusalem's wall, rebuilt during Nehemiah's restoration of the city (Neh. 3:1; 12:39).",
-  "description_source": "stepbible-tipnr",
   "senses": [
    {
     "text": "tower",
     "children": [
      {
-      "text": "tower"
-     },
-     {
-      "text": "elevated stage, pulpit"
+      "text": "elevated stage or pulpit"
      },
      {
       "text": "raised bed"
@@ -145612,22 +145607,9 @@
   "translit": "ʿalmâ",
   "original": "עַלְמָה",
   "lang": "hebrew",
-  "definition": "virgin, young woman (of marriageable age; maid or newly married)",
+  "definition": "young woman of marriageable age. The Greek Septuagint translates it \"virgin\" (parthenos) at Isaiah 7:14, the verse Matthew 1:23 quotes.",
   "verse": "",
-  "source": "stepbible-tbesh",
-  "senses": [
-   {
-    "text": "virgin, young woman",
-    "children": [
-     {
-      "text": "of marriageable age"
-     },
-     {
-      "text": "maid or newly married"
-     }
-    ]
-   }
-  ]
+  "source": "stepbible-tbesh"
  },
  "H5960": {
   "translit": "ʿalmôn",
@@ -146283,7 +146265,7 @@
   "translit": "ʿimmānû'ēl",
   "original": "עִמָּנוּאֵל",
   "lang": "hebrew",
-  "definition": "Immanuel = \"God with us\" or \"with us is God\"; symbolic and prophetic name of the Messiah, the Christ, prophesying that He would be born of a virgin and would be 'God with us'",
+  "definition": "\"God with us\" or \"with us is God.\" Matthew 1:23 applies this name to Jesus Christ, born of the virgin Mary.",
   "verse": "",
   "source": "stepbible-tbesh"
  },
@@ -168446,9 +168428,25 @@
   "translit": "rāʿâ",
   "original": "רָעָה",
   "lang": "hebrew",
-  "definition": "Ra'ah = \"pasturing\"; perh. \"binding-house of the shepherds\"",
+  "definition": "to pasture, tend, graze, or feed; to shepherd",
   "verse": "",
-  "source": "stepbible-tbesh"
+  "source": "stepbible-tbesh",
+  "senses": [
+   {
+    "text": "to pasture, tend, graze, or feed",
+    "children": [
+     {
+      "text": "to shepherd or tend a flock"
+     },
+     {
+      "text": "to feed or graze, as of animals"
+     },
+     {
+      "text": "figuratively, to guide or care for people"
+     }
+    ]
+   }
+  ]
  },
  "H7463": {
   "translit": "rēʿê",
