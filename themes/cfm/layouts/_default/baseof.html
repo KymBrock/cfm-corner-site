@@ -1265,7 +1265,7 @@
           } catch (_) { /* Keep the existing handler for an unparseable destination. */ }
         }
         // Source citations have no grammar query; let their normal links open directly.
-        if (el && el.href && /sefaria\.org\//i.test(el.href) && !parseSefariaQuery(el.href)) return null;
+        if (el && el.href && /sefaria\.org\//i.test(el.href) && !(el.dataset && el.dataset.popupKind === 'source') && !parseSefariaQuery(el.href)) return null;
         return el;
       }
 

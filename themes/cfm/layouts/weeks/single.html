@@ -41,6 +41,58 @@
     </div>
 </div>
 
+<style data-cfm-phone-study-row>
+@media (max-width: 640px) {
+    #tab-resources .video-grid:has(> [data-bibleproject-group="hero-books"]) {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 12px !important;
+    }
+
+    #tab-resources .video-grid:has(> [data-bibleproject-group="hero-books"]) > a,
+    #tab-resources .video-grid:has(> [data-bibleproject-group="hero-books"]) > a > div {
+        height: 100%;
+    }
+
+    #tab-resources .video-grid:has(> [data-bibleproject-group="hero-books"]) > a > div > div {
+        box-sizing: border-box;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 10px !important;
+    }
+
+    #tab-resources [data-bibleproject-group="hero-books"] {
+        grid-column: 1 / -1;
+    }
+
+    #tab-resources [data-bibleproject-group="hero-books"] > div:nth-child(2) {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+
+    #tab-resources [data-bibleproject-group="hero-books"] > div:nth-child(2) span {
+        font-size: 0.75em !important;
+        line-height: 1.3;
+        overflow-wrap: anywhere;
+    }
+
+    #tab-resources:has([data-bibleproject-group="hero-books"]) div:has(> button[onclick^="toggleAll"]) {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #tab-resources:has([data-bibleproject-group="hero-books"]) div:has(> button[onclick^="toggleAll"]) > button {
+        flex: 1 1 0;
+        min-width: 0;
+        margin: 0 !important;
+        padding: 12px 8px !important;
+        font-size: 0.95em !important;
+    }
+}
+</style>
+
 {{ $insightsFile := printf "static/content/week%s/insights.html" $weekNum }}
 <div id="tab-insights" class="tab-content">
     <div class="content-panel embedded-content">
@@ -167,7 +219,7 @@ function setupAccordions(selector) {
 setupAccordions('.sg-sub-accordion');
 
 // Insights accordions
-setupAccordions('.section-header');
+setupAccordions('.section-header:not([onclick^=toggleResourcesSection])');
 setupAccordions('.sub-accordion');
 
 // Section-level toggle (for div-based accordion headers with onclick)
