@@ -26,13 +26,13 @@ Below is each rule with its Hebrew name, a plain-English explanation, and a bibl
 
 ---
 
-### Rule 1: [*Kal*](https://www.blueletterbible.org/lexicon/h7031/kjv/wlc/0-1/) *Va-*[*Chomer*](https://www.blueletterbible.org/lexicon/h2563/kjv/wlc/0-1/) (קַל וָחֹמֶר) — "Light and Heavy" | [concept →](https://www.jewishencyclopedia.com/articles/14215-talmud-hermeneutics)
+### Rule 1: [*Kal*](https://www.blueletterbible.org/lexicon/h7031/kjv/wlc/0-1/) *Va-*[*Chomer*](https://www.sefaria.org/Jastrow%2C_%D7%97%D7%95%D6%B9%D7%9E%D6%B6%D7%A8_I.1?ven=english%7CLondon,_Luzac,_1903&lang=bi) (קַל וָחֹמֶר) — "Light and Heavy" | [concept →](https://www.jewishencyclopedia.com/articles/14215-talmud-hermeneutics)
 
 **Plain English:** If something is true in a lesser case, it is certainly true in a greater case. The English equivalent is "how much more so."
 
 **The Logic:** If A is true in the smaller situation, then A is *certainly* true in the bigger situation.
 
-**Biblical Example:** God told Moses to speak to the children of Israel, and Moses protested: "Behold, the children of Israel have not hearkened unto me; how then shall Pharaoh hear me?" ([Exodus 6:12](https://www.blueletterbible.org/kjv/exo/6/12/)). If Israel — who should be receptive — won't listen, *how much more* will Pharaoh — who has no reason to listen — refuse? This is [*kal*](https://www.blueletterbible.org/lexicon/h7031/kjv/wlc/0-1/) *va-*[*chomer*](https://www.blueletterbible.org/lexicon/h2563/kjv/wlc/0-1/): light (Israel's refusal) to heavy (Pharaoh's certain refusal).
+**Biblical Example:** God told Moses to speak to the children of Israel, and Moses protested: "Behold, the children of Israel have not hearkened unto me; how then shall Pharaoh hear me?" ([Exodus 6:12](https://www.blueletterbible.org/kjv/exo/6/12/)). If Israel — who should be receptive — won't listen, *how much more* will Pharaoh — who has no reason to listen — refuse? This is [*kal*](https://www.blueletterbible.org/lexicon/h7031/kjv/wlc/0-1/) *va-*[*chomer*](https://www.sefaria.org/Jastrow%2C_%D7%97%D7%95%D6%B9%D7%9E%D6%B6%D7%A8_I.1?ven=english%7CLondon,_Luzac,_1903&lang=bi): light (Israel's refusal) to heavy (Pharaoh's certain refusal).
 
 **Why It Matters:** This is the most common of the thirteen rules and the easiest to spot. Once you recognize it, you'll see it everywhere — in the Psalms, in the Prophets, in Jesus' teaching, in Paul's letters, and in the Book of Mormon.
 
@@ -129,7 +129,7 @@ Jesus was not a Greek philosopher. He was a Jewish teacher operating within the 
 
 Matthew L. Bowen (BYU Religious Studies Center) documents this pattern in ["Jewish Hermeneutics in the New Testament Period"](https://rsc.byu.edu/sites/default/files/pub_content/pdf/6%20Jewish%20Hermeneutics%20in%20the%20New%20Testament%20Period.pdf) (*New Testament History, Culture, and Society*, ed. Blumell, Deseret Book/RSC, 2019, 84-106). Richard Longenecker provides the comprehensive academic treatment in *Biblical Exegesis in the Apostolic Period* (2nd ed., Eerdmans, 1999).
 
-### Jesus Uses [*Kal*](https://www.blueletterbible.org/lexicon/h7031/kjv/wlc/0-1/) *Va-*[*Chomer*](https://www.blueletterbible.org/lexicon/h2563/kjv/wlc/0-1/) (Rule 1)
+### Jesus Uses [*Kal*](https://www.blueletterbible.org/lexicon/h7031/kjv/wlc/0-1/) *Va-*[*Chomer*](https://www.sefaria.org/Jastrow%2C_%D7%97%D7%95%D6%B9%D7%9E%D6%B6%D7%A8_I.1?ven=english%7CLondon,_Luzac,_1903&lang=bi) (Rule 1)
 
 This is Jesus' most frequently used middah. He returns to it again and again:
 
@@ -157,7 +157,7 @@ For Latter-day Saints, who understand the spirit world as a real, active realm w
 
 Paul was trained as a Pharisee under Gamaliel ([Acts 22:3](https://www.blueletterbible.org/kjv/act/22/3/)), one of the leading teachers of the [*middot*](https://www.blueletterbible.org/lexicon/h4060/kjv/wlc/0-1/). His letters are dense with rabbinic reasoning that his Jewish readers would have recognized immediately. Dan Cohn-Sherbok traces this systematically in ["Paul and Rabbinic Exegesis"](https://www.cambridge.org/core/journals/scottish-journal-of-theology/article/abs/paul-and-rabbinic-exegesis/96C8DF816AEA6348828D5A2497EF69B6) (*Scottish Journal of Theology* 35:2, 1982, 117-132).
 
-### Paul's [*Kal*](https://www.blueletterbible.org/lexicon/h7031/kjv/wlc/0-1/) *Va-*[*Chomer*](https://www.blueletterbible.org/lexicon/h2563/kjv/wlc/0-1/) in [Romans 5:12-21](https://www.blueletterbible.org/kjv/rom/5/12/)
+### Paul's [*Kal*](https://www.blueletterbible.org/lexicon/h7031/kjv/wlc/0-1/) *Va-*[*Chomer*](https://www.sefaria.org/Jastrow%2C_%D7%97%D7%95%D6%B9%D7%9E%D6%B6%D7%A8_I.1?ven=english%7CLondon,_Luzac,_1903&lang=bi) in [Romans 5:12-21](https://www.blueletterbible.org/kjv/rom/5/12/)
 
 This is the greatest *kal va-chomer* in the New Testament — and arguably in all of scripture. Paul's argument:
 
@@ -176,7 +176,7 @@ Paul cites the muzzled ox ([Deuteronomy 25:4](https://www.blueletterbible.org/kj
 
 ### Hebrews — A [*Middot*](https://www.blueletterbible.org/lexicon/h4060/kjv/wlc/0-1/) Masterclass
 
-The book of Hebrews (whether written by Paul or another Jewish-Christian author) employs [*kal*](https://www.blueletterbible.org/lexicon/h7031/kjv/wlc/0-1/) *va-*[*chomer*](https://www.blueletterbible.org/lexicon/h2563/kjv/wlc/0-1/) as its structural backbone. The entire argument of Hebrews 1-10 is: if the Levitical priesthood, the earthly tabernacle, and animal sacrifices accomplished certain things (the lesser), *how much more* does Christ's priesthood, the heavenly sanctuary, and His self-sacrifice accomplish (the greater)? Every "how much more" in Hebrews is a *kal va-chomer*:
+The book of Hebrews (whether written by Paul or another Jewish-Christian author) employs [*kal*](https://www.blueletterbible.org/lexicon/h7031/kjv/wlc/0-1/) *va-*[*chomer*](https://www.sefaria.org/Jastrow%2C_%D7%97%D7%95%D6%B9%D7%9E%D6%B6%D7%A8_I.1?ven=english%7CLondon,_Luzac,_1903&lang=bi) as its structural backbone. The entire argument of Hebrews 1-10 is: if the Levitical priesthood, the earthly tabernacle, and animal sacrifices accomplished certain things (the lesser), *how much more* does Christ's priesthood, the heavenly sanctuary, and His self-sacrifice accomplish (the greater)? Every "how much more" in Hebrews is a *kal va-chomer*:
 
 - [Hebrews 2:2-3](https://www.blueletterbible.org/kjv/heb/2/2/) — "If the word spoken by angels was stedfast... how shall we escape, if we neglect so great salvation?"
 - [Hebrews 9:13-14](https://www.blueletterbible.org/kjv/heb/9/13/) — "If the blood of bulls and of goats... sanctifieth to the purifying of the flesh: how much more shall the blood of Christ... purge your conscience?"
@@ -191,7 +191,7 @@ The author of Hebrews uses *kal va-chomer* so systematically that the entire let
 
 No published study has systematically catalogued the thirteen [*middot*](https://www.blueletterbible.org/lexicon/h4060/kjv/wlc/0-1/) in the Book of Mormon. What follows is exploratory — these are patterns we observe in the text, offered for further study rather than as settled scholarship. The Book of Mormon was written by prophets operating in a Hebrew literary tradition, and it would be surprising if these reasoning patterns were absent.
 
-### [*Kal*](https://www.blueletterbible.org/lexicon/h7031/kjv/wlc/0-1/) *Va-*[*Chomer*](https://www.blueletterbible.org/lexicon/h2563/kjv/wlc/0-1/) in the Book of Mormon
+### [*Kal*](https://www.blueletterbible.org/lexicon/h7031/kjv/wlc/0-1/) *Va-*[*Chomer*](https://www.sefaria.org/Jastrow%2C_%D7%97%D7%95%D6%B9%D7%9E%D6%B6%D7%A8_I.1?ven=english%7CLondon,_Luzac,_1903&lang=bi) in the Book of Mormon
 
 The "how much more so" pattern appears throughout:
 
@@ -248,11 +248,11 @@ When we read the Gospels through the lens of the [*middot*](https://www.bluelett
 
 ### 2. It Makes Paul Accessible
 
-Paul's letters are notoriously dense. Much of the difficulty evaporates when you recognize his rabbinic methods. The "therefore... how much more" pattern in Romans is not arbitrary rhetoric — it is [*kal*](https://www.blueletterbible.org/lexicon/h7031/kjv/wlc/0-1/) *va-*[*chomer*](https://www.blueletterbible.org/lexicon/h2563/kjv/wlc/0-1/), the first rule of the thirteen, applied systematically. Seeing the structure makes the argument clear.
+Paul's letters are notoriously dense. Much of the difficulty evaporates when you recognize his rabbinic methods. The "therefore... how much more" pattern in Romans is not arbitrary rhetoric — it is [*kal*](https://www.blueletterbible.org/lexicon/h7031/kjv/wlc/0-1/) *va-*[*chomer*](https://www.sefaria.org/Jastrow%2C_%D7%97%D7%95%D6%B9%D7%9E%D6%B6%D7%A8_I.1?ven=english%7CLondon,_Luzac,_1903&lang=bi), the first rule of the thirteen, applied systematically. Seeing the structure makes the argument clear.
 
 ### 3. It Illuminates the Book of Mormon's Hebraic Roots
 
-The Book of Mormon claims to be a record written by Hebrew-speaking prophets. If that claim is true, we should expect to find Hebrew reasoning patterns in the text — not because the authors read Rabbi Ishmael (who lived centuries later) but because the [*middot*](https://www.blueletterbible.org/lexicon/h4060/kjv/wlc/0-1/) reflect reasoning patterns embedded in Hebrew culture long before they were formally codified. The [*kal*](https://www.blueletterbible.org/lexicon/h7031/kjv/wlc/0-1/) *va-*[*chomer*](https://www.blueletterbible.org/lexicon/h2563/kjv/wlc/0-1/) pattern in Alma, the [*gezerah*](https://www.blueletterbible.org/lexicon/h1504/kjv/wlc/0-1/) [*shavah*](https://www.blueletterbible.org/lexicon/h7737/kjv/wlc/0-1/) links in Nephi, and the Rule 13 structure of the Restoration itself are all consistent with a text rooted in Hebraic thought.
+The Book of Mormon claims to be a record written by Hebrew-speaking prophets. If that claim is true, we should expect to find Hebrew reasoning patterns in the text — not because the authors read Rabbi Ishmael (who lived centuries later) but because the [*middot*](https://www.blueletterbible.org/lexicon/h4060/kjv/wlc/0-1/) reflect reasoning patterns embedded in Hebrew culture long before they were formally codified. The [*kal*](https://www.blueletterbible.org/lexicon/h7031/kjv/wlc/0-1/) *va-*[*chomer*](https://www.sefaria.org/Jastrow%2C_%D7%97%D7%95%D6%B9%D7%9E%D6%B6%D7%A8_I.1?ven=english%7CLondon,_Luzac,_1903&lang=bi) pattern in Alma, the [*gezerah*](https://www.blueletterbible.org/lexicon/h1504/kjv/wlc/0-1/) [*shavah*](https://www.blueletterbible.org/lexicon/h7737/kjv/wlc/0-1/) links in Nephi, and the Rule 13 structure of the Restoration itself are all consistent with a text rooted in Hebraic thought.
 
 ### 4. It Explains the Restoration's Own Hermeneutic
 
@@ -260,7 +260,7 @@ Rule 13 — "two contradictory passages resolved by a third" — is the engine t
 
 ### 5. It Changes How You Study
 
-Once you know these rules, you read differently. When you encounter "how much more" in scripture, you recognize [*kal*](https://www.blueletterbible.org/lexicon/h7031/kjv/wlc/0-1/) *va-*[*chomer*](https://www.blueletterbible.org/lexicon/h2563/kjv/wlc/0-1/). When you notice the same word in two passages, you look for [*gezerah*](https://www.blueletterbible.org/lexicon/h1504/kjv/wlc/0-1/) [*shavah*](https://www.blueletterbible.org/lexicon/h7737/kjv/wlc/0-1/). When two scriptures seem to contradict, you search for a third that reconciles them instead of choosing one over the other. The [*middot*](https://www.blueletterbible.org/lexicon/h4060/kjv/wlc/0-1/) don't replace the Spirit — they give you a framework for the kind of close, careful reading that the Spirit rewards.
+Once you know these rules, you read differently. When you encounter "how much more" in scripture, you recognize [*kal*](https://www.blueletterbible.org/lexicon/h7031/kjv/wlc/0-1/) *va-*[*chomer*](https://www.sefaria.org/Jastrow%2C_%D7%97%D7%95%D6%B9%D7%9E%D6%B6%D7%A8_I.1?ven=english%7CLondon,_Luzac,_1903&lang=bi). When you notice the same word in two passages, you look for [*gezerah*](https://www.blueletterbible.org/lexicon/h1504/kjv/wlc/0-1/) [*shavah*](https://www.blueletterbible.org/lexicon/h7737/kjv/wlc/0-1/). When two scriptures seem to contradict, you search for a third that reconciles them instead of choosing one over the other. The [*middot*](https://www.blueletterbible.org/lexicon/h4060/kjv/wlc/0-1/) don't replace the Spirit — they give you a framework for the kind of close, careful reading that the Spirit rewards.
 
 ---
 
@@ -268,7 +268,7 @@ Once you know these rules, you read differently. When you encounter "how much mo
 
 | # | Hebrew | Plain English | Key Signal |
 |---|--------|---------------|------------|
-| 1 | [*Kal*](https://www.blueletterbible.org/lexicon/h7031/kjv/wlc/0-1/) *va-*[*chomer*](https://www.blueletterbible.org/lexicon/h2563/kjv/wlc/0-1/) | Light to heavy: "how much more so" | "How much more..." |
+| 1 | [*Kal*](https://www.blueletterbible.org/lexicon/h7031/kjv/wlc/0-1/) *va-*[*chomer*](https://www.sefaria.org/Jastrow%2C_%D7%97%D7%95%D6%B9%D7%9E%D6%B6%D7%A8_I.1?ven=english%7CLondon,_Luzac,_1903&lang=bi) | Light to heavy: "how much more so" | "How much more..." |
 | 2 | [*Gezerah*](https://www.blueletterbible.org/lexicon/h1504/kjv/wlc/0-1/) [*shavah*](https://www.blueletterbible.org/lexicon/h7737/kjv/wlc/0-1/) | Verbal analogy: same word links passages | Same key word in two texts |
 | 3 | [*Binyan*](https://www.blueletterbible.org/lexicon/h1147/kjv/wlc/0-1/) [*av*](https://www.blueletterbible.org/lexicon/h1/kjv/wlc/0-1/) (one verse) | One verse establishes a general principle | One case applied broadly |
 | 4 | [*Binyan*](https://www.blueletterbible.org/lexicon/h1147/kjv/wlc/0-1/) [*av*](https://www.blueletterbible.org/lexicon/h1/kjv/wlc/0-1/) (two verses) | Two verses confirm and generalize a principle | Two independent witnesses |
