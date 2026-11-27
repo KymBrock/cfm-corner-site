@@ -89,8 +89,8 @@ description: "From Abraham's Middle Bronze Age to the Iron Age dawn — the empi
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
-<span style="min-width: 100px; font-weight: bold; color: #8B7355; font-size: 0.9em;">c. 2000&ndash;1450</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Minoan Crete</strong> dominates Mediterranean sea trade &mdash; Levantine ports (Byblos, Ugarit, Sidon) are nodes in the network</span>
+<span style="min-width: 100px; font-weight: bold; color: #8B7355; font-size: 0.9em;">c. 1900&ndash;1450</span>
+<span style="flex: 1; font-size: 0.95em;"><strong>Minoan Crete</strong>&rsquo;s palaces at their height &mdash; active trade with Egypt and the Levant, where Minoan objects reach Ugarit</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
@@ -104,8 +104,8 @@ description: "From Abraham's Middle Bronze Age to the Iron Age dawn — the empi
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
-<span style="min-width: 100px; font-weight: bold; color: #8B7355; font-size: 0.9em;">c. 1650&ndash;1550</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Thera erupts</strong> (Santorini) &mdash; Minoan trade network weakened; Mycenaeans rising</span>
+<span style="min-width: 100px; font-weight: bold; color: #8B7355; font-size: 0.9em;">c. 1625&ndash;1500</span>
+<span style="flex: 1; font-size: 0.95em;"><strong>Thera erupts</strong> (Santorini) &mdash; exact date debated; Crete goes on prospering for a time as Mycenaean influence grows</span>
 </div>
 
 </div>
@@ -125,7 +125,7 @@ description: "From Abraham's Middle Bronze Age to the Iron Age dawn — the empi
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
 <span style="min-width: 100px; font-weight: bold; color: #4a6b52; font-size: 0.9em;">c. 1450 BC</span>
-<span style="flex: 1; font-size: 0.95em;"><strong>Mycenaeans seize Crete</strong> &mdash; replace Minoan trade dominance across the Mediterranean</span>
+<span style="flex: 1; font-size: 0.95em;"><strong>Destructions across Crete</strong> &mdash; cause debated; only Knossos carries on as a palace. Trade dominance in the southern Aegean passes to the mainland only after Knossos burns, c. 1385&ndash;1375</span>
 </div>
 
 <div style="display: flex; align-items: baseline; margin: 10px 0;">
@@ -480,9 +480,9 @@ description: "From Abraham's Middle Bronze Age to the Iron Age dawn — the empi
 
 <h4>The Minoan Sea Network</h4>
 
-<p>While the overland routes connected Canaan to Egypt and Mesopotamia, the maritime routes connected it to the Aegean world. The <strong><a href="https://www.worldhistory.org/Minoan_Civilization/" target="_blank">Minoans</a></strong> of Crete &mdash; called <em>Keftiu</em> by the Egyptians &mdash; dominated Mediterranean maritime trade from roughly 2000 to 1450 BC. Their powerful navy controlled the sea routes that connected Egypt, the Levant, and the Aegean.</p>
+<p>While the overland routes connected Canaan to Egypt and Mesopotamia, the maritime routes connected it to the Aegean world. The <strong><a href="https://www.worldhistory.org/Minoan_Civilization/" target="_blank">Minoans</a></strong> of Crete, called <em>Keftiu</em> by the Egyptians, carried on active trade around the Mediterranean while their palaces were at their height, from about 1900 to 1450 BC. Cretan goods reached Egypt, the Levant, and the Aegean islands.</p>
 
-<p>This was not distant commerce. Minoan trade goods appear at Canaanite and Egyptian sites. Egyptian objects appear on Crete. The tomb paintings at Thebes show Keftiu tribute bearers carrying distinctive bull-headed vessels (<em>rhyta</em>) in Minoan clothing and hairstyles. The Levantine port cities &mdash; Byblos, Ugarit, Sidon &mdash; were nodes in this network, shipping cedar, textiles, and metals west to Crete and receiving Aegean pottery, metalwork, and luxury goods in return.</p>
+<p>This was not distant commerce. Minoan trade goods appear at Canaanite and Egyptian sites. Egyptian objects appear on Crete. The tomb paintings at Thebes show Keftiu tribute bearers carrying distinctive bull-headed vessels (<em>rhyta</em>) in Minoan clothing and hairstyles. On the Levantine coast, Minoan objects are firmly attested at Ugarit (Ras Shamra), one node in this network.</p>
 
 <!-- Minoan Sea Network Slideshow -->
 <div id="minoan-slideshow" style="margin: 28px 0; position: relative; background: #f5f3f0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
@@ -506,7 +506,7 @@ description: "From Abraham's Middle Bronze Age to the Iron Age dawn — the empi
     {
       src: '/images/culture/canaan/sourced/02-minoan-crete-map.svg',
       bg: '#ffffff',
-      caption: '<strong>Minoan Crete</strong> \u2014 the island civilization that dominated Mediterranean maritime trade from c. 2000\u20131450 BC. Palace centers at Knossos, Phaistos, and Malia coordinated a trading network reaching Egypt, the Levant, and the Aegean. <em>Map: Bibi Saint-Pol, Wikimedia Commons, CC BY-SA 3.0.</em>'
+      caption: '<strong>Minoan Crete</strong> \u2014 the island civilization whose palaces, at their height from about 1900 to 1450 BC, carried on active trade around the Mediterranean. Palace centers at Knossos, Phaistos, and Malia concentrated political and economic power, and Cretan goods reached Egypt, the Levant, and the Aegean islands. <em>Map: Bibi Saint-Pol, Wikimedia Commons, CC BY-SA 3.0.</em>'
     },
     {
       src: '/images/culture/canaan/sourced/02-minoan-trade-routes-painting.webp',
@@ -521,7 +521,7 @@ description: "From Abraham's Middle Bronze Age to the Iron Age dawn — the empi
     {
       src: '/images/culture/canaan/sourced/02-bronze-age-trade-map.png',
       bg: '#2a2a2a',
-      caption: '<strong>Late Bronze Age Trade Networks</strong>, c. 1400\u20131200 BC \u2014 the full international system connecting Egypt, the Levant, the Aegean, Anatolia, and Mesopotamia. By this period the Mycenaeans had replaced the Minoans as the dominant Aegean power. Canaan sat at the crossroads where all these networks converged. <em>Map: Simeon Netchev, <a href="https://www.worldhistory.org/image/14880/map-of-trade-networks-of-the-late-bronze-age-medit/" target="_blank">World History Encyclopedia</a>, CC BY-NC-ND.</em>'
+      caption: '<strong>Late Bronze Age Trade Networks</strong>, c. 1400\u20131200 BC \u2014 the full international system connecting Egypt, the Levant, the Aegean, Anatolia, and Mesopotamia. By this period trade dominance in the southern Aegean, and probably political dominance too, had passed from Crete to the Mycenaean kingdoms of the mainland. Canaan sat at the crossroads where all these networks converged. <em>Map: Simeon Netchev, <a href="https://www.worldhistory.org/image/14880/map-of-trade-networks-of-the-late-bronze-age-medit/" target="_blank">World History Encyclopedia</a>, CC BY-NC-ND.</em>'
     },
     {
       src: '/images/culture/canaan/sourced/02-cretans-bringing-gifts.jpg',
@@ -582,9 +582,9 @@ description: "From Abraham's Middle Bronze Age to the Iron Age dawn — the empi
 
 <h4>The Collapse of Minoan Power</h4>
 
-<p>Sometime between 1650 and 1550 BC, the volcanic eruption of <strong><a href="https://www.worldhistory.org/thera/" target="_blank">Thera</a></strong> (modern Santorini) &mdash; one of the most catastrophic natural disasters in recorded history &mdash; devastated the island and generated massive tsunamis that struck the northern coast of Crete. The eruption did not destroy Minoan civilization outright, but research by Knappett, Rivers, and Evans (<em>Antiquity</em>, 2011) has shown that the loss of Thera as a critical maritime hub gradually increased transport costs across the Aegean, weakening the economic network that sustained Minoan power.</p>
+<p>The volcano on the island of <strong><a href="https://www.worldhistory.org/thera/" target="_blank">Thera</a></strong> (modern Santorini) erupted sometime between about 1625 and 1500 BC. For decades archaeologists and radiocarbon specialists gave different dates. A 2018 tree-ring study gives a range that overlaps the archaeologists&rsquo;, but no single year has been fixed. The eruption buried the town of Akrotiri under meters of ash and pumice and left a thin layer of ash on eastern Crete. Whether it also sent a great sea wave against Crete is disputed. It did not destroy Minoan civilization outright. Its ash turns up in layers from an earlier pottery phase than the great destructions on Crete, and for a while Crete went on prospering. A 2011 network model by Knappett, Rivers, and Evans (<em>Antiquity</em>) suggests how the eruption may still have mattered: losing Thera as a port of call could have raised transport costs across the Aegean and, over time, weakened the network that sustained Minoan power.</p>
 
-<p>Approximately a century later (c. 1450 BC), the mainland <strong><a href="https://www.worldhistory.org/Mycenaean_Civilization/" target="_blank">Mycenaeans</a></strong> exploited this weakness. They seized control of Knossos, replaced Linear A with their own script (Linear B), and took over the trade routes. The Minoans &mdash; who had been the major merchant hub for much of the ancient world &mdash; were absorbed under Mycenaean domination.</p>
+<p>Mycenaean influence from the Greek mainland had been growing on Crete after 1500 BC, and around 1450 BC came widespread destruction on the island. The palaces at Phaistos, Mallia and Zakro were never rebuilt as palaces; only Knossos carried on. What caused the destructions is still argued. The archaeologist Jeremy Rutter sets out the main readings. Some blame the eruption and its aftermath. Others blame earthquakes, or <strong><a href="https://www.worldhistory.org/Mycenaean_Civilization/" target="_blank">Mycenaean</a></strong> invaders who took over Knossos. A middle position combines them. On one such reading, the eruption and its aftermath weakened Crete, and Mycenaeans from the mainland took advantage. Knossos itself changed character, and its surviving palace records are written in Linear B, the Mycenaean Greeks&rsquo; script, adapted from the Minoans&rsquo; Linear A. Who ruled there is uncertain. After the palace at Knossos burned, around 1385 to 1375 BC, Rutter writes, trade dominance in the southern Aegean, and probably political dominance too, passed from Crete to the kingdoms of the southern Greek mainland.</p>
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
 <p style="margin: 0;"><strong>Why this matters for the biblical story:</strong> The Minoan-Mycenaean transition reshaped the entire eastern Mediterranean. The Levantine port cities that had traded with the Minoans now dealt with Mycenaean merchants. The goods, styles, and cultural influences flowing through Canaan shifted. And the long-term destabilization of Aegean trade networks was one of several converging forces &mdash; alongside Egyptian imperial overreach, Hittite-Egyptian rivalry, climate-driven famine, and internal social upheaval &mdash; that would eventually produce the catastrophic Bronze Age Collapse. No single event opened the promised land; it was the convergence of all of them that shattered the power structures holding Canaan in place.</p>
@@ -710,7 +710,7 @@ description: "From Abraham's Middle Bronze Age to the Iron Age dawn — the empi
 <p>The <strong>Philistines</strong> (<em>Peleset</em>) &mdash; Israel&rsquo;s persistent adversaries in Judges and Samuel &mdash; were among these displaced groups. After being repelled from Egypt, they settled on the southern Canaanite coast. Archaeological evidence from Ashkelon, Ekron, and Gath shows Mycenaean-style pottery, Aegean temple designs, and Mycenaean loom weights in their earliest levels. The Bible itself preserves this connection: <a href="https://www.blueletterbible.org/kjv/amo/9/7/" target="_blank" data-ref="Amos 9:7">Amos 9:7</a> and <a href="https://www.blueletterbible.org/kjv/jer/47/4/" target="_blank" data-ref="Jeremiah 47:4">Jeremiah 47:4</a> associate the Philistines with <strong>Caphtor</strong> &mdash; a name linguistically related to the Egyptian <em>Keftiu</em>, both pointing to Crete and the Aegean world. (See <a href="/culture/ancient/canaan/06-the-philistines/">Section 06: The Philistines</a>.)</p>
 
 <div style="background: linear-gradient(135deg, #f5f3f0 0%, #ebe7e1 100%); padding: 20px 24px; border-radius: 8px; margin: 24px 0;">
-<p style="margin: 0 0 12px 0;"><strong>For Latter-day Saint readers:</strong> The Bronze Age Collapse is not merely ancient geopolitics &mdash; it is the event that opened the promised land. For centuries, Canaan had been under the firm control of Egypt and its network of vassal kings. The Hittites dominated the north. The Mycenaean-Minoan trade network linked the coasts. As long as these great powers held, no tribal confederation could have taken and held the land.</p>
+<p style="margin: 0 0 12px 0;"><strong>For Latter-day Saint readers:</strong> The Bronze Age Collapse is not merely ancient geopolitics &mdash; it is the event that opened the promised land. For centuries, Canaan had been under the firm control of Egypt and its network of vassal kings. The Hittites dominated the north. The Mycenaean trade network linked the coasts. As long as these great powers held, no tribal confederation could have taken and held the land.</p>
 <p style="margin: 0;">But when the system collapsed &mdash; when Egypt withdrew its garrisons, the Hittite Empire vanished, the coastal cities burned, and the established power structures disintegrated &mdash; a power vacuum opened across the very territory God had promised to Abraham&rsquo;s descendants. The Israelites entered Canaan not into a thriving empire but into a fractured landscape of weakened city-states, exactly the conditions in which a covenant people led by Joshua could take possession of the land (<a href="https://www.blueletterbible.org/kjv/jos/1/2/" target="_blank" data-ref="Joshua 1:2-4">Joshua 1:2&ndash;4</a>). The timing was not coincidental &mdash; it was providential.</p>
 </div>
 
