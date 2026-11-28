@@ -284,7 +284,7 @@ Transpolation is where Scripture is reconfigured to apply to a new context.  For
 
 Charaz
 
-In Jewish tradition, [Charaz](https://biblehub.com/hebrew/2737.htm) (חרוז, meaning “stringing pearls”) is a rabbinic method of linking scriptures together in a woven pattern, helping the reader see the bigger picture.
+In Jewish tradition, [Charaz](https://www.blueletterbible.org/lexicon/h2737/kjv/wlc/0-1/) (חרוז, meaning “stringing pearls”) is a rabbinic method of linking scriptures together in a woven pattern, helping the reader see the bigger picture.
 
 The Lord applies this collage-like pattern in D&C 6, where He takes phrases from multiple biblical sources, connecting them to new revelation so that Joseph and Oliver (and future readers) can see history repeating itself and recognize the broader divine pattern.
 
