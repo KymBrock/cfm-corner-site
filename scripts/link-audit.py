@@ -178,7 +178,10 @@ def audit_file(fpath, known_translits, exemptions=None):
     # 4. BLB lexicon links missing data-lexicon attribute
     for m in re.finditer(r'<a [^>]*href="[^"]*blueletterbible\.org/lexicon/[^"]*"[^>]*>.*?</a>', content, flags=re.DOTALL):
         tag = m.group()
-        if 'data-lexicon' not in tag:
+        # B3 r2 (correction b): the page script opens every BLB anchor as a popup
+        # (baseof getTargetAnchor matches a[href*="blueletterbible.org/"]), so an anchor
+        # carrying data-strongs or data-popup-kind is linked even without data-lexicon.
+        if 'data-lexicon' not in tag and 'data-strongs' not in tag and 'data-popup-kind' not in tag:
             url_m = re.search(r'href="([^"]+)"', tag)
             url = url_m.group(1) if url_m else '?'
             inner = re.sub(r'<[^>]+>', '', tag).strip()
@@ -388,8 +391,9 @@ def main():
 
     files = sorted(files)
     if not files:
+        # B3 (gap audit 2026-11-27): nothing scanned is not a pass. Exit 2 = cannot vouch.
         print(f"No files found. Searched for: {', '.join(file_types)}")
-        return
+        return 2
 
     # ── The published-week guard runs BEFORE the scan, deliberately ──
     # It used to sit inside the `if fix_mode:` block far below, which the "All clear"
@@ -484,6 +488,13 @@ def main():
         print('\n✅ All clear — no unlinked terms found.')
         return
 
+    # B3 (gap audit 2026-11-27): DEFECTS used to be printed and the run still exited 0,
+    # so no caller could stop on them. Now any DEFECT exits 1. The EXPECTED RESIDUAL
+    # (bare divine-name/rabbinic script) never does — that rule stands: do not chase it.
+    if not fix_mode:
+        print(f'\n❌ {defects} DEFECT(S) — exit 1.')
+        return 1
+
     # ── --fix mode: auto-link bare terms in-place ──────────────────────────────
     if fix_mode:
 
@@ -491,7 +502,7 @@ def main():
         converter = _get_converter()
         if converter is None:
             print('  ❌ Could not load HugoConverter — fix mode unavailable.')
-            return
+            return 2   # B3 r2: defects remain and nothing was fixed — cannot vouch
 
         fixed_files = 0
         for fpath in files:
@@ -534,6 +545,9 @@ def main():
             print('  ✅ All clear after fix — zero issues remain.')
         else:
             print(f'\n  ⚠️  {remaining} issues remain (may need manual attention).')
+        left = Counter(k for f in files for k, _, _ in audit_file(f, known_translits, exemptions))
+        if any(n for k, n in left.items() if k not in RESIDUAL):
+            return 1
 
 
 def _get_converter():

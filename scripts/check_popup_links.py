@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import re
 from pathlib import Path
@@ -103,6 +104,18 @@ def candidates(ref: str) -> list[str]:
     m = re.match(r"^(.*?\d+:\d+)-\d+$", base)
     if m:
         out.append(m.group(1))
+    # B3 r2: judge a list or a range by its first reference, the way the popup opens it.
+    #   "Jeremiah 2:18, 36" → "Jeremiah 2:18";  "Proverbs 22:17-24:22" → "Proverbs 22:17";
+    #   "Genesis 37-50" (chapters) → "Genesis 37".
+    m = re.match(r"^(.*?\d+(?::\d+)?)\s*[,;]", base)
+    if m:
+        out.append(m.group(1))
+    m = re.match(r"^(.*?\d+:\d+)-\d+:\d+$", base)
+    if m:
+        out.append(m.group(1))
+    m = re.match(r"^(.*?\s\d+)-\d+$", base)
+    if m and ":" not in base:
+        out.append(m.group(1))
     seen = []
     for item in out:
         if item not in seen:
@@ -127,6 +140,13 @@ def check_file(path: Path) -> list[str]:
 
     for ref in DATA_REF_RE.findall(text):
         if "${" in ref:
+            continue
+        # B3: decode entities first (`D&amp;C 77:2-4` is `D&C 77:2-4`). Skip only refs
+        # with NO digit at all: word data-refs such as `qərê (קְרֵי)` or `Leitwort` are not
+        # scripture. Anything with a digit is judged, so corrupted refs like `1 <a href=`
+        # (W17) and a bare `11` (Egypt guide) still fail. (r2.)
+        ref = html.unescape(ref)
+        if not re.search(r"[0-9]", ref):
             continue
         if not resolves(ref):
             problems.append(f"unresolved data-ref: {ref}")
@@ -156,12 +176,19 @@ def main() -> int:
         if target.is_dir():
             file_paths.extend(p for p in target.rglob("*") if p.suffix in {".md", ".html"})
 
+    if not file_paths:
+        # B3: nothing scanned is not a pass. Exit 2 = cannot vouch.
+        print("No files scanned — check the path. Exit 2 (cannot vouch).")
+        return 2
+
     total = 0
+    blocking = 0
     for path in sorted(file_paths):
         problems = check_file(path)
         if not problems:
             continue
         total += len(problems)
+        blocking += sum(1 for p in problems if p.startswith("unresolved data-ref"))
         print(f"\n{path.relative_to(ROOT)}")
         for problem in problems[:20]:
             print(f"  - {problem}")
@@ -172,6 +199,13 @@ def main() -> int:
         print("No popup-link issues detected.")
     else:
         print(f"\nFound {total} potential popup-link issues.")
+    # B3 (gap audit 2026-11-27): a popup whose scripture ref does not resolve is a broken
+    # popup a reader sees — exit 1. "missing book name" and "suspicious prefix" are
+    # pattern guesses with many correct hits (e.g. "(66:20)" after the book is named),
+    # so they stay advisory and do not fail the run.
+    if blocking:
+        print(f"{blocking} unresolved scripture popup ref(s) — exit 1.")
+        return 1
     return 0
 
 

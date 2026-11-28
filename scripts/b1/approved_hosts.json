@@ -1,0 +1,7 @@
+{
+  "_about": "ONE approved-host list for every CFM link reader: the B1 pre-publish check and the Lesson Builder. Hosts are exact hostnames. Popup list = Kymber's answer, 2026-11-27. Ordinary links: only 'refused' is refused. 'media' covers audio/image URLs inside shared data files only.",
+  "refused": ["biblehub.com"],
+  "popup": ["www.blueletterbible.org", "www.stepbible.org", "logeion.uchicago.edu", "www.sefaria.org", "www.churchofjesuschrist.org", "www.merriam-webster.com", "webstersdictionary1828.com", "vulgate.org", "bohuslav.me"],
+  "media": ["upload.wikimedia.org"],
+  "pending_her_choice": {}
+}

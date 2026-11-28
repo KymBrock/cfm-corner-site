@@ -15,7 +15,40 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # B1 content check (stage 3). The same pinned checker as the local pre-push hook.
+  # The hook can be skipped with --no-verify; this job cannot, because build needs it.
+  # Its base is the last DEPLOYED commit, which equals github.event.before in a normal
+  # push; see scripts/b1/ci_content_check.sh for why and what it prints when they differ.
+  content-check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          # Matches the local hook's interpreter (/opt/homebrew/bin/python3).
+          python-version: '3.14'
+      - name: Find the last deployed commit
+        id: last
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          sha=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow deploy.yml --branch main \
+                --status success --limit 1 --json headSha --jq '.[0].headSha // ""')
+          echo "sha=$sha" >> "$GITHUB_OUTPUT"
+      - name: B1 content check (Bible Hub, popup hosts, video sections, visible URLs)
+        env:
+          TREE: ${{ github.sha }}
+          BEFORE: ${{ github.event.before }}
+          LAST: ${{ steps.last.outputs.sha }}
+        run: sh scripts/b1/ci_content_check.sh "$TREE" "$BEFORE" "$LAST"
+
   build:
+    needs: content-check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
